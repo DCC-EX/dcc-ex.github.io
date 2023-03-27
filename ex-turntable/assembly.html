@@ -556,14 +556,15 @@
 <li><p><a class="reference internal" href="#connect-power-and-test" id="id9">6. Connect power and test</a></p></li>
 <li><p><a class="reference internal" href="#load-the-ex-turntable-software" id="id10">7. Load the EX-Turntable software</a></p>
 <ul>
-<li><p><a class="reference internal" href="#first-start-and-automatic-calibration" id="id11">First start and automatic calibration</a></p></li>
+<li><p><a class="reference internal" href="#configuration-for-two-wire-stepper-drivers-eg-a4988-drv8825" id="id11">Configuration for two wire stepper drivers (eg. A4988/DRV8825)</a></p></li>
+<li><p><a class="reference internal" href="#first-start-and-automatic-calibration" id="id12">First start and automatic calibration</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#add-the-ex-turntable-device-driver-to-ex-commandstation" id="id12">8. Add the EX-Turntable device driver to EX-CommandStation</a></p></li>
-<li><p><a class="reference internal" href="#connect-ex-turntable-to-your-ex-commandstation" id="id13">9. Connect EX-Turntable to your EX-CommandStation</a></p></li>
+<li><p><a class="reference internal" href="#add-the-ex-turntable-device-driver-to-ex-commandstation" id="id13">8. Add the EX-Turntable device driver to EX-CommandStation</a></p></li>
+<li><p><a class="reference internal" href="#connect-ex-turntable-to-your-ex-commandstation" id="id14">9. Connect EX-Turntable to your EX-CommandStation</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#now-you-re-ready" id="id14">Now you’re ready!</a></p></li>
+<li><p><a class="reference internal" href="#now-you-re-ready" id="id15">Now you’re ready!</a></p></li>
 </ul>
 </nav>
 </aside>
@@ -826,8 +827,42 @@
 <p>Once the software is loaded successfully on to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span>, the stepper motor should automatically start rotating in an attempt to find its “home” position, which will be activated when the magnet at one end of the turntable comes in close proximity to the hall effect sensor.</p>
 <p>If you don’t have the magnet installed at this point, or if it is too far from the sensor, <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> will rotate several turns prior to flagging that homing has failed, and will then cease turning. The automatic calibration process will not commence if homing has failed.</p>
 <p>If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See <a class="reference internal" href="../support/ex-tt-troubleshooting.html"><span class="doc">EX-Turntable FAQ and Troubleshooting</span></a> for further assistance if required.</p>
+<section id="configuration-for-two-wire-stepper-drivers-eg-a4988-drv8825">
+<h4><a class="toc-backref" href="#id11" role="doc-backlink">Configuration for two wire stepper drivers (eg. A4988/DRV8825)</a><a class="headerlink" href="#configuration-for-two-wire-stepper-drivers-eg-a4988-drv8825" title="Permalink to this heading"></a></h4>
+<p>If using a two wire stepper driver such as the A4988 or DRV8825 with a bipolar stepper motor such as a NEMA17 or similar, you will need to update “config.h” to reflect this.</p>
+<p>While the provided “config.example.h” file includes instructions, they are repeated here for clarity, as well as being outlined on the <a class="reference internal" href="configure.html"><span class="doc">Configuration options</span></a> page.</p>
+<p>Locate this section in “config.h”, comment out the line defining the use of “ULN2003_HALF_CW” by adding <code class="docutils literal notranslate"><span class="pre">//</span></code>, and uncomment the line defining the use of “A4988” by removing <code class="docutils literal notranslate"><span class="pre">//</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/////////////////////////////////////////////////////////////////////////////////////</span>
+<span class="c1">//  Define the stepper controller in use according to those available below, refer to the</span>
+<span class="c1">//  documentation for further details on which to select for your application.</span>
+<span class="c1">//</span>
+<span class="c1">//  ULN2003_HALF_CW     : ULN2003 in half step mode, clockwise homing/calibration</span>
+<span class="c1">//  ULN2003_HALF_CCW    : ULN2003 in half step mode, counter clockwise homing/calibration</span>
+<span class="c1">//  ULN2003_FULL_CW     : ULN2003 in full step mode, clockwise homing/calibration</span>
+<span class="c1">//  ULN2003_FULL_CCW    : ULN2003 in full step mode, counter clockwise homing/calibration</span>
+<span class="c1">//  A4988               : Two wire drivers (eg. A4988, DRV8825)</span>
+<span class="c1">//  A4988_INV           : Two wire drivers (eg. A4988, DRV8825), with enable pin inverted</span>
+<span class="c1">//</span>
+<span class="c1">//  NOTE: If you are using a different controller than those already defined, refer to</span>
+<span class="c1">//  the documentation to define the appropriate configuration variables. Note there are</span>
+<span class="c1">//  some controllers that are pin-compatible with an existing defined controller, and</span>
+<span class="c1">//  in those instances, no custom configuration would be required.</span>
+<span class="c1">//</span>
+<span class="c1">// #define STEPPER_DRIVER ULN2003_HALF_CW</span>
+<span class="c1">// #define STEPPER_DRIVER ULN2003_HALF_CCW</span>
+<span class="c1">// #define STEPPER_DRIVER ULN2003_FULL_CW</span>
+<span class="c1">// #define STEPPER_DRIVER ULN2003_FULL_CCW</span>
+<span class="cp">#define STEPPER_DRIVER A4988</span>
+<span class="c1">// #define STEPPER_DRIVER A4988_INV</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If operating EX-Turntable does not disable the stepper driver after movements complete, you will likely hear a buzzing or humming from the driver. In this instance, you may find you need to have the “Enable” pin inverted, so you will need to use the “A4988_INV” option instead (<code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">STEPPER_DRIVER</span> <span class="pre">A4988_INV</span></code>).</p>
+</div>
+</section>
 <section id="first-start-and-automatic-calibration">
-<h4><a class="toc-backref" href="#id11" role="doc-backlink">First start and automatic calibration</a><a class="headerlink" href="#first-start-and-automatic-calibration" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id12" role="doc-backlink">First start and automatic calibration</a><a class="headerlink" href="#first-start-and-automatic-calibration" title="Permalink to this heading"></a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you have loaded the code too soon, and the automatic calibration has succeeded and recorded an inaccurate step count, then have no fear as there is a command you can run on the CommandStation to reinitiate the calibration sequence which is outlined in the <a class="reference internal" href="test-and-tune.html#ex-turntable-commands"><span class="std std-ref">Ex-Turntable commands</span></a> section.</p>
@@ -861,7 +896,7 @@ Turntable homed successfully
 </section>
 </section>
 <section id="add-the-ex-turntable-device-driver-to-ex-commandstation">
-<h3><a class="toc-backref" href="#id12" role="doc-backlink">8. Add the EX-Turntable device driver to EX-CommandStation</a><a class="headerlink" href="#add-the-ex-turntable-device-driver-to-ex-commandstation" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">8. Add the EX-Turntable device driver to EX-CommandStation</a><a class="headerlink" href="#add-the-ex-turntable-device-driver-to-ex-commandstation" title="Permalink to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>As mentioned previously, your CommandStation needs to be running the “add-turntable-controller” branch of <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller">EX-CommandStation</a>.</p>
@@ -934,7 +969,7 @@ Turntable homed successfully
 <p>Note there is no point in checking the driver at this stage as <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> is not connected, and will show as “OFFLINE”.</p>
 </section>
 <section id="connect-ex-turntable-to-your-ex-commandstation">
-<h3><a class="toc-backref" href="#id13" role="doc-backlink">9. Connect EX-Turntable to your EX-CommandStation</a><a class="headerlink" href="#connect-ex-turntable-to-your-ex-commandstation" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">9. Connect EX-Turntable to your EX-CommandStation</a><a class="headerlink" href="#connect-ex-turntable-to-your-ex-commandstation" title="Permalink to this heading"></a></h3>
 <p>To control <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> from your CommandStation, you will need a connection to the I<sup>2</sup>C (SDA, SCL) pins.</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
@@ -967,7 +1002,7 @@ Turntable homed successfully
 </section>
 </section>
 <section id="now-you-re-ready">
-<h2><a class="toc-backref" href="#id14" role="doc-backlink">Now you’re ready!</a><a class="headerlink" href="#now-you-re-ready" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">Now you’re ready!</a><a class="headerlink" href="#now-you-re-ready" title="Permalink to this heading"></a></h2>
 <p>At this point, you should have a fully assembled <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> with the software loaded, a default configuration, and the device driver installed and configured in your CommandStation.</p>
 <p>In addition, <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> should be connected to your CommandStation ready to test, tune your turntable positions, and configure EX-RAIL ready for use on your layout.</p>
 <p>Click the “next” button to get cracking!</p>

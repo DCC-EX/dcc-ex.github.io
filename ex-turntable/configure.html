@@ -541,9 +541,34 @@
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#standard-configuration-options" id="id1">Standard configuration options</a></p></li>
-<li><p><a class="reference internal" href="#advanced-configuration-options" id="id2">Advanced configuration options</a></p></li>
-<li><p><a class="reference internal" href="#defining-custom-stepper-drivers" id="id3">Defining custom stepper drivers</a></p></li>
+<li><p><a class="reference internal" href="#standard-configuration-options" id="id1">Standard configuration options</a></p>
+<ul>
+<li><p><a class="reference internal" href="#i2c-address" id="id2">I2C_ADDRESS</a></p></li>
+<li><p><a class="reference internal" href="#turntable-ex-mode" id="id3">TURNTABLE_EX_MODE</a></p></li>
+<li><p><a class="reference internal" href="#sensor-testing" id="id4">SENSOR_TESTING</a></p></li>
+<li><p><a class="reference internal" href="#home-sensor-active-state" id="id5">HOME_SENSOR_ACTIVE_STATE</a></p></li>
+<li><p><a class="reference internal" href="#limit-sensor-active-state" id="id6">LIMIT_SENSOR_ACTIVE_STATE</a></p></li>
+<li><p><a class="reference internal" href="#relay-active-state" id="id7">RELAY_ACTIVE_STATE</a></p></li>
+<li><p><a class="reference internal" href="#phase-switching" id="id8">PHASE_SWITCHING</a></p></li>
+<li><p><a class="reference internal" href="#phase-switch-angle" id="id9">PHASE_SWITCH_ANGLE</a></p></li>
+<li><p><a class="reference internal" href="#stepper-driver" id="id10">STEPPER_DRIVER</a></p></li>
+<li><p><a class="reference internal" href="#disable-outputs-idle" id="id11">DISABLE_OUTPUTS_IDLE</a></p></li>
+<li><p><a class="reference internal" href="#stepper-max-speed" id="id12">STEPPER_MAX_SPEED</a></p></li>
+<li><p><a class="reference internal" href="#stepper-acceleration" id="id13">STEPPER_ACCELERATION</a></p></li>
+<li><p><a class="reference internal" href="#led-fast" id="id14">LED_FAST</a></p></li>
+<li><p><a class="reference internal" href="#led-slow" id="id15">LED_SLOW</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#advanced-configuration-options" id="id16">Advanced configuration options</a></p>
+<ul>
+<li><p><a class="reference internal" href="#debug" id="id17">DEBUG</a></p></li>
+<li><p><a class="reference internal" href="#sanity-steps" id="id18">SANITY_STEPS</a></p></li>
+<li><p><a class="reference internal" href="#home-sensitivity" id="id19">HOME_SENSITIVITY</a></p></li>
+<li><p><a class="reference internal" href="#full-step-count" id="id20">FULL_STEP_COUNT</a></p></li>
+<li><p><a class="reference internal" href="#debounce-delay" id="id21">DEBOUNCE_DELAY</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#defining-custom-stepper-drivers" id="id22">Defining custom stepper drivers</a></p></li>
 </ul>
 </nav>
 </aside>
@@ -553,126 +578,126 @@
 <section id="standard-configuration-options">
 <h2><a class="toc-backref" href="#id1" role="doc-backlink">Standard configuration options</a><a class="headerlink" href="#standard-configuration-options" title="Permalink to this heading"></a></h2>
 <section id="i2c-address">
-<h3>I2C_ADDRESS<a class="headerlink" href="#i2c-address" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id2" role="doc-backlink">I2C_ADDRESS</a><a class="headerlink" href="#i2c-address" title="Permalink to this heading"></a></h3>
 <p><cite>Default: 0x60</cite></p>
 <p>This is the address that <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> will occupy on the I<sup>2</sup>C bus. The default address has been chosen as it is not expected to conflict with any of the existing know I/O expander modules or other known i2c devices.</p>
 <p>If you need to change this for any reason, ensure that the I<sup>2</sup>C address in “myHal.cpp” in the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software is also changed to the same value.</p>
 <p>Multiple instances of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> can be controlled by the same CommandStation by ensuring each has its own unique I<sup>2</sup>C address.</p>
 </section>
 <section id="turntable-ex-mode">
-<h3>TURNTABLE_EX_MODE<a class="headerlink" href="#turntable-ex-mode" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">TURNTABLE_EX_MODE</a><a class="headerlink" href="#turntable-ex-mode" title="Permalink to this heading"></a></h3>
 <p><cite>Default: TURNTABLE</cite></p>
 <p><cite>Valid values: TURNTABLE, TRAVERSER</cite></p>
 <p>This option can be used to enable support for horizontal or vertical traversers, as well as limited rotation turntables that cannot rotate a full 360 degrees.</p>
 <p>Be sure to read the documentation carefully and ensure both home and limit sensors are functioning correctly.</p>
 </section>
 <section id="sensor-testing">
-<h3>SENSOR_TESTING<a class="headerlink" href="#sensor-testing" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">SENSOR_TESTING</a><a class="headerlink" href="#sensor-testing" title="Permalink to this heading"></a></h3>
 <p><cite>Default: disabled</cite></p>
 <p>To enable sensor testing, uncomment this line by removing the “//” from in front of “#define”.</p>
 <p>When sensor testing is enabled, all <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> operations are disabled. The state changes of HOME and LIMIT sensors are printed to the serial console when activated/deactivated, and no other activity is possible.</p>
 <p>This is ideal for ensuring sensors are functional prior to enabling TRAVERSER mode.</p>
 </section>
 <section id="home-sensor-active-state">
-<h3>HOME_SENSOR_ACTIVE_STATE<a class="headerlink" href="#home-sensor-active-state" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">HOME_SENSOR_ACTIVE_STATE</a><a class="headerlink" href="#home-sensor-active-state" title="Permalink to this heading"></a></h3>
 <p><cite>Default: LOW</cite></p>
 <p><cite>Valid values: LOW, HIGH</cite></p>
 <p>This is the state that the homing sensor reports to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> when activated. Use LOW for sensors that activate by pulling the sensor output to ground, and HIGH for sensors that pull the output to 5V.</p>
 </section>
 <section id="limit-sensor-active-state">
-<h3>LIMIT_SENSOR_ACTIVE_STATE<a class="headerlink" href="#limit-sensor-active-state" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">LIMIT_SENSOR_ACTIVE_STATE</a><a class="headerlink" href="#limit-sensor-active-state" title="Permalink to this heading"></a></h3>
 <p><cite>Default: LOW</cite></p>
 <p><cite>Valid values: LOW, HIGH</cite></p>
 <p>This is the state that the limit sensor reports to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> when activated. Use LOW for sensors that activate by pulling the sensor output to ground, and HIGH for sensors that pull the output to 5V.</p>
 <p>The limit sensor is only used when <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> is set to TRAVERSER mode.</p>
 </section>
 <section id="relay-active-state">
-<h3>RELAY_ACTIVE_STATE<a class="headerlink" href="#relay-active-state" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">RELAY_ACTIVE_STATE</a><a class="headerlink" href="#relay-active-state" title="Permalink to this heading"></a></h3>
 <p><cite>Default: HIGH</cite></p>
 <p><cite>Valid values: HIGH, LOW</cite></p>
 <p>This is the state that the phase inversion relays need to be set to in order to activate, or invert the phase. Use HIGH for relays that require 5V to activate, and LOW for those that require the input to be grounded to activate.</p>
 </section>
 <section id="phase-switching">
-<h3>PHASE_SWITCHING<a class="headerlink" href="#phase-switching" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">PHASE_SWITCHING</a><a class="headerlink" href="#phase-switching" title="Permalink to this heading"></a></h3>
 <p><cite>Default: AUTO</cite></p>
 <p><cite>Valid values: AUTO, MANUAL</cite></p>
 <p>When set to AUTO, phase switching happens automatically as the turntable rotates. The point at which phase inversion happens is determined by the PHASE_SWITCH_ANGLE (see below), and it will automatically revert 180 degrees later.</p>
 </section>
 <section id="phase-switch-angle">
-<h3>PHASE_SWITCH_ANGLE<a class="headerlink" href="#phase-switch-angle" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">PHASE_SWITCH_ANGLE</a><a class="headerlink" href="#phase-switch-angle" title="Permalink to this heading"></a></h3>
 <p><cite>Default: 45</cite></p>
 <p><cite>Valid values: 0 - 179</cite></p>
 <p>This is the angle in degrees that the turntable needs to rotate away from the home position in order to trigger DCC phase inversion by activating the phase inversion relays. Once the turntable rotates a further 180 degrees, the phase will revert by deactivating the phase inversion relays.</p>
 </section>
 <section id="stepper-driver">
-<h3>STEPPER_DRIVER<a class="headerlink" href="#stepper-driver" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">STEPPER_DRIVER</a><a class="headerlink" href="#stepper-driver" title="Permalink to this heading"></a></h3>
 <p><cite>Default: ULN2003_HALF_CW</cite></p>
 <p><cite>Valid values:</cite></p>
 <ul class="simple">
-<li><p>ULN2003_HALF_CW - ULN2003 stepper driver with a 28BYJ-48 motor, configured for half step mode defaulting to a clockwise rotation</p></li>
+<li><p>ULN2003_HALF_CW  - ULN2003 stepper driver with a 28BYJ-48 motor, configured for half step mode defaulting to a clockwise rotation</p></li>
 <li><p>ULN2003_HALF_CCW - ULN2003 stepper driver with a 28BYJ-48 motor, configured for half step mode defaulting to a counter-clockwise rotation</p></li>
-<li><p>ULN2003_FULL_CW - ULN2003 stepper driver with a 28BYJ-48 motor, configured for full step mode defaulting to a clockwise rotation</p></li>
+<li><p>ULN2003_FULL_CW  - ULN2003 stepper driver with a 28BYJ-48 motor, configured for full step mode defaulting to a clockwise rotation</p></li>
 <li><p>ULN2003_FULL_CCW - ULN2003 stepper driver with a 28BYJ-48 motor, configured for full step mode defaulting to a counter-clockwise rotation</p></li>
-<li><p>TWO_WIRE - Two wire stepper driver (eg. A4988, DRV8825) with a NEMA17 motor</p></li>
-<li><p>TWO_WIRE_INV - Two wire stepper driver (eg. A4988, DRV8825) with a NEMA17 motor, with the driver’s enable pin inverted</p></li>
+<li><p>A4988            - Two wire stepper driver (eg. A4988, DRV8825) with a NEMA17 motor</p></li>
+<li><p>A4988_INV        - Two wire stepper driver (eg. A4988, DRV8825) with a NEMA17 motor, with the driver’s enable pin inverted</p></li>
 </ul>
 <p>While the pre-defined stepper driver/motor combinations above will likely be sufficient for most use cases, it is possible to define your own stepper driver configuration providing it is supported by the AccelStepper() Arduino library. Refer to <a class="reference internal" href="#defining-custom-stepper-drivers">defining custom stepper drivers</a>.</p>
 </section>
 <section id="disable-outputs-idle">
-<h3>DISABLE_OUTPUTS_IDLE<a class="headerlink" href="#disable-outputs-idle" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">DISABLE_OUTPUTS_IDLE</a><a class="headerlink" href="#disable-outputs-idle" title="Permalink to this heading"></a></h3>
 <p><cite>Default: enabled</cite></p>
 <p>When defined, this option will ensure that the stepper driver outputs are disabled when the stepper stops rotating. This can prevent stepper drivers and motors from becoming warm during idle time.</p>
 <p>To disable this option, simply comment the line out by adding “//” before the “#define”.</p>
 </section>
 <section id="stepper-max-speed">
-<h3>STEPPER_MAX_SPEED<a class="headerlink" href="#stepper-max-speed" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">STEPPER_MAX_SPEED</a><a class="headerlink" href="#stepper-max-speed" title="Permalink to this heading"></a></h3>
 <p><cite>Default: 200</cite></p>
 <p><cite>Valid values: 1 - 1000</cite></p>
 <p>This is the maximum speed that the turntable will rotate at, in steps per second.</p>
 </section>
 <section id="stepper-acceleration">
-<h3>STEPPER_ACCELERATION<a class="headerlink" href="#stepper-acceleration" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">STEPPER_ACCELERATION</a><a class="headerlink" href="#stepper-acceleration" title="Permalink to this heading"></a></h3>
 <p><cite>Default: 25</cite></p>
 <p><cite>Valid values: &gt; 0</cite></p>
 <p>The acceleration rate of the turntable, which is defined as steps per second, per second. This is what gives <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> a more prototypical acceleration/deceleration rate when rotating.</p>
 </section>
 <section id="led-fast">
-<h3>LED_FAST<a class="headerlink" href="#led-fast" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">LED_FAST</a><a class="headerlink" href="#led-fast" title="Permalink to this heading"></a></h3>
 <p><cite>Default: 100</cite></p>
 <p><cite>Valid values: 0 to long time</cite></p>
 <p>This is the time in milliseconds that the LED is on and off when the set to a fast blink. With the default, it will be on for 100ms, then off for 100ms.</p>
 </section>
 <section id="led-slow">
-<h3>LED_SLOW<a class="headerlink" href="#led-slow" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">LED_SLOW</a><a class="headerlink" href="#led-slow" title="Permalink to this heading"></a></h3>
 <p><cite>Default: 500</cite></p>
 <p><cite>Valid values: 0 to long time</cite></p>
 <p>This is the time in milliseconds that the LED is on and off when the set to a slow blink. With the default, it will be on for 500ms, then off for 500ms.</p>
 </section>
 </section>
 <section id="advanced-configuration-options">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">Advanced configuration options</a><a class="headerlink" href="#advanced-configuration-options" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id16" role="doc-backlink">Advanced configuration options</a><a class="headerlink" href="#advanced-configuration-options" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <section id="debug">
-<h3>DEBUG<a class="headerlink" href="#debug" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">DEBUG</a><a class="headerlink" href="#debug" title="Permalink to this heading"></a></h3>
 <p><cite>Default: Disabled</cite></p>
 <p>If debug level output is requested as part of a support ticket or when troubleshooting in general, uncomment this line by removing the “//” from in front of “#define”.</p>
 </section>
 <section id="sanity-steps">
-<h3>SANITY_STEPS<a class="headerlink" href="#sanity-steps" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">SANITY_STEPS</a><a class="headerlink" href="#sanity-steps" title="Permalink to this heading"></a></h3>
 <p><cite>Default: 10000 (Disabled)</cite></p>
 <p><cite>Valid values: 1 to 65535</cite></p>
 <p>This is the maximum number of steps the stepper motor will move during homing and calibration before flagging a failure.</p>
 <p>If you have a stepper driver/motor combination that is configured for a large number of steps, or if you have a gear ratio that results in a high number of steps, you may need to increase this number in order for the calibration process to succeed.</p>
 </section>
 <section id="home-sensitivity">
-<h3>HOME_SENSITIVITY<a class="headerlink" href="#home-sensitivity" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id19" role="doc-backlink">HOME_SENSITIVITY</a><a class="headerlink" href="#home-sensitivity" title="Permalink to this heading"></a></h3>
 <p><cite>Default: 150 (Disabled)</cite></p>
 <p><cite>Valid values: 1 to 65535</cite></p>
 <p>This is the minimum number of steps required for the turntable to rotate away from the homing sensor before it deactivates, which is used during the calibration sequence.</p>
 <p>If you have a stepper driver/motor combination that is configured for a large number of steps, or if you have a gear ratio that results in a high number of steps, you may need to increase this number in order for the calibration process to succeed.</p>
 </section>
 <section id="full-step-count">
-<h3>FULL_STEP_COUNT<a class="headerlink" href="#full-step-count" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id20" role="doc-backlink">FULL_STEP_COUNT</a><a class="headerlink" href="#full-step-count" title="Permalink to this heading"></a></h3>
 <p><cite>Default: 4096 (Disabled)</cite></p>
 <p><cite>Valid values: 1 to 65535</cite></p>
 <p>If for some reason the automatic calibration sequence is not recording the correct number of steps required for a full 360 degree rotation, or if there is some other requirement to override this value, then uncomment this line and define the desired number of steps.</p>
@@ -680,7 +705,7 @@
 <p>You can initiate the calibration command manually while this option is enabled, it will perform the calibration sequence and record the calibrated step count in EEPROM, and that setting will take effect whilst <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> is running. However, the calibrated value in EEPROM will be overridden at the next startup unless this option is disabled.</p>
 </section>
 <section id="debounce-delay">
-<h3>DEBOUNCE_DELAY<a class="headerlink" href="#debounce-delay" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id21" role="doc-backlink">DEBOUNCE_DELAY</a><a class="headerlink" href="#debounce-delay" title="Permalink to this heading"></a></h3>
 <p><cite>Default: 10 (Disabled)</cite> - TRAVERSER mode</p>
 <p><cite>Default: 0 (Disabled)</cite> - TURNTABLE mode</p>
 <p><cite>Valid values: 0 to 50</cite> (any higher and you will compromise the response time of the limit sensors)</p>
@@ -689,7 +714,7 @@
 </section>
 </section>
 <section id="defining-custom-stepper-drivers">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">Defining custom stepper drivers</a><a class="headerlink" href="#defining-custom-stepper-drivers" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id22" role="doc-backlink">Defining custom stepper drivers</a><a class="headerlink" href="#defining-custom-stepper-drivers" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

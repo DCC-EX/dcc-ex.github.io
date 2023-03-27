@@ -6,7 +6,7 @@
 <meta content="DCC DCC++ EX DCC++EX DCC-EX" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Extra, extra, read all about it! Introducing DCC-EX News! &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>Version 5 progress and a breaking change in the development branch &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
@@ -14,7 +14,7 @@
       <link rel="stylesheet" href="../../_static/css/big_picture_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/sphinx_design_overrides.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-    <link rel="canonical" href="https://dcc-ex.com/news/posts/20230309.html" />
+    <link rel="canonical" href="https://dcc-ex.com/news/posts/20230327.html" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -514,11 +514,11 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Extra, extra, read all about it! Introducing DCC-EX News!</li>
+      <li class="breadcrumb-item active">Version 5 progress and a breaking change in the development branch</li>
   
     
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/news/posts/20230309.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/news/posts/20230327.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   
 
@@ -529,27 +529,26 @@
            <div itemprop="articleBody">
              
 <a class="image-product-logo-float-right reference internal image-reference" href="../../_images/product-logo-news.png"><img alt="DCC-EX News" class="image-product-logo-float-right" src="../../_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /></a>
-<section id="extra-extra-read-all-about-it-introducing-dcc-ex-news">
-<h1>Extra, extra, read all about it! Introducing DCC-EX News!<a class="headerlink" href="#extra-extra-read-all-about-it-introducing-dcc-ex-news" title="Permalink to this heading"></a></h1>
-<p>Yep, that’s right, the DCC-EX team are now publishing updates regularly with our new “DCC-EX News” feed!</p>
-<p>We’ve come to realise we can do much better in communicating the various different projects the team is working on, when we are releasing new versions, when we’ve found/fixed bugs, and when we have news or announcements to share with all our users.</p>
-<p>So, without further adieu, we are sharing this very first post, and these will continue regularly as we have news to share.</p>
-<p>Here’s what’s happening at the moment:</p>
+<section id="version-5-progress-and-a-breaking-change-in-the-development-branch">
+<h1>Version 5 progress and a breaking change in the development branch<a class="headerlink" href="#version-5-progress-and-a-breaking-change-in-the-development-branch" title="Permalink to this heading"></a></h1>
+<p>We are full steam ahead to a v5.0 release, making sure what’s in there is well tested to the limits of our resources, and has documentation available as we go. Amongst other things, this has resulted in one potentially “breaking” change for users of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>’s capability to run sequences/routes on startup.</p>
+<p><strong>Breaking change:</strong> The implicit AUTOSTART at the beginning of the “myAutomation.h” file for <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> has been disabled, as we have found it confuses a great many first time users.</p>
+<p>What does this mean?</p>
+<p>Previously, when your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> started up with a “myAutomation.h” file present, anything defined prior to the very first <code class="docutils literal notranslate"><span class="pre">DONE</span></code> statement would execute automatically. This was used to do things like set turnouts/points to a known startup position, automatically start routes or sequences for fully automated layouts, and so forth.</p>
+<p>As of v4.2.31, this behaviour is disabled, meaning nothing defined in “myAutomation.h” will automatically start unless preceded by the <code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code> directive (see <a class="reference internal" href="../../ex-rail/EX-RAIL-reference.html#ex-rail-functions"><span class="std std-ref">EX-RAIL Functions</span></a>).</p>
+<p>At the time of writing, we are currently at v4.2.37 of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> development release, and these updates are continuing multiple times a week as we find/fix bugs and refine the software.</p>
+<p>Here are some more highlights of what’s been done since the last news update:</p>
 <ul class="simple">
-<li><p>We’re continuing to work towards our next major release which will be v5.0.0, and will include some great new features:</p>
-<ul>
-<li><p>Track Manager (formerly called DC Districts), allowing you to run more than two motor driver outputs in DCC, DC, or programming track modes</p></li>
-<li><p>Support for newer generation, 32bit microcontrollers from STMicroelectronics</p></li>
-<li><p>Improvements to I<sup>2</sup>C connectivity including better timeout handling, the ability to reset the bus without rebooting the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, and support for multiplexors</p></li>
-<li><p>Included device drivers for <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span>, <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;FastClock</span></span>, and <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span></p></li>
+<li><p>New &lt;JG&gt; and &lt;JI&gt; commands for multi-track gauges such as current sensing (v4.2.20)</p></li>
+<li><p>Static IP address now configurable for Ethernet shields (v4.2.24)</p></li>
+<li><p>SAMD21 had a bug in EX-RAIL due to memory alignment, this likely improves 32-bit support for various microcontrollers (v4.2.25)</p></li>
+<li><p>Improved stability/reliability of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device driver (v4.2.26) and bug fix for analogue inputs (v4.2.34)</p></li>
+<li><p>Updated the DFPlayer code to cope with a new variant of the popular sound board seen in the wild, and mods to the HCRS04 ultrasonic driver so it uses less CPU loop time (v4.2.28)</p></li>
+<li><p>Various LCD bug fixes (latest in v4.2.29)</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">&lt;z&gt;</span></code> direct I/O pin manipulation command (v4.2.35)</p></li>
+<li><p>Add new “FLAGS” device to the HAL to communicate Vpin changes outside of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> to software such as <a class="reference internal" href="../../reference/glossary.html"><span class="doc">JMRI</span></a> (v4.2.37)</p></li>
 </ul>
-</li>
-<li><p>We’re continuing to review and improve our website and ways to keep you informed (hence this news feed)</p></li>
-<li><p>We’re working on new, open source hardware options to make the entry point to DCC-EX simpler for those who aren’t up to the level of DIY currently required</p></li>
-</ul>
-<p>If you wish to follow “DCC-EX News”, we will have the latest few posts published on the front page of our website, along with the <a class="reference external" href="https://dcc-ex.com/news.html">complete list here</a>.</p>
-<p>If you use an RSS/Atom feed reader, you can add “DCC-EX News” by the URL “<a class="reference external" href="https://dcc-ex.com/news/atom.xml">https://dcc-ex.com/news/atom.xml</a>”.</p>
-<p>We look forward to sharing more news and information with you all!</p>
+<p>Some of the above new features and fixes are currently undocumented which we will fix in the coming weeks. In the meantime, feel free to jump onto Discord and chat with the developers and keep up to date (<a class="reference internal" href="../../support/contact-us.html"><span class="doc">Contact Us</span></a>).</p>
 </section>
 
 <div class="section ablog__blog_comments">
@@ -561,24 +560,16 @@
   <span class="ablog__prev">
     
     
-    <a href="20230309a.html">
+    <a href="20230309.html">
       
       <i class="fa fa-arrow-circle-left"></i>
       
-      <span>EX-Toolbox released on the Play Store</span>
+      <span>Extra, extra, read all about it! Introducing DCC-EX News!</span>
     </a>
     
   </span>
   <span class="ablog__spacer">&nbsp;</span>
   <span class="ablog__next">
-    
-    
-    <a href="20230327.html">
-      <span>Version 5 progress and a breaking change in the development branch</span>
-      
-      <i class="fa fa-arrow-circle-right" ></i>
-      
-    </a>
     
   </span>
 </div>

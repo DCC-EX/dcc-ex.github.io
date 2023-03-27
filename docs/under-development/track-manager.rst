@@ -371,7 +371,7 @@ Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (An
 
 **DCC-EX Commands, scroll-able**
 
-.. figure:: /_static/images/track_manager/trackmanager_engine_driver_1.png
+.. figure:: /_static/images/track_manager/trackmanager_engine_driver_2.png
   :alt: Track Manager
   :scale: 50%
 
@@ -413,3 +413,12 @@ Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (An
 .. image:: /_static/images/track_manager/trackmanager_engine_driver_7.png
   :alt: Track Manager handoff/set
   :scale: 50%
+
+
+
+EXRAIL Functions Displaying on Smartphone Apps
+----------------------------------------------
+
+The Engine Driver EXRAIL screens shown above are all created through user defined EXRAIL Automation(n) and Route(n) scripts which are automatically passed to both Engine Driver & WiThrottle screens.
+
+Please see the specific Smartphone App instructions on how to enable their Preferences and Route screens. 

@@ -43,7 +43,7 @@ You can also add user defined ATC Automatic Throttle Control Jython.py scripts t
 .. rst-class:: dcclink
 
 Download DCC-EX Commands.py script (zip) files for JMRI to display DCC-EX Command Summary Lists through the JMRI Script Output Window. 
-   `DCC-EX Commands JMRI Script </_static/documents/DCCEX_Commands_3.1.py.zip>`_
+   `DCC-EX Commands JMRI Script </_static/documents/DCC-EX_Commands_4.1.zip>`_
 
 .. rst-class:: clearer
 
@@ -61,15 +61,15 @@ You can have the command references for |DCC-EX| shown through the Script Output
    
 .. rst-class:: dcclink
 
-   `DCC-EX + JMRI Custom Buttons SetUp </_static/documents/DCCEX_31_JMRI_Script+Button_Instructions.pdf>`_
+   `DCC-EX + JMRI Custom GUI Buttons SetUp </_static/documents/DCC-EX_4.1_JMRI_Script+Button_Instructions.pdf>`_
 
 .. rst-class:: clearer
 
 
-Comprehensive DCC-EX & JMRI Getting Started Guide PDF
-=====================================================
+Comprehensive DCC-EX & JMRI DecoderPro Getting Started Guide PDF
+================================================================
 
-For a more extensive overview of setting up |EX-CS| with JMRI DecoderPro please download and review the 
+For a more extensive overview of setting up |EX-CS| with JMRI DecoderPro please download and review
 
 .. image:: /_static/images/icons/pdf_logo_sm.png
    :alt: EX-CS & JMRI Getting Started Guide
@@ -78,7 +78,7 @@ For a more extensive overview of setting up |EX-CS| with JMRI DecoderPro please 
    
 .. rst-class:: dcclink
 
-   `EX-CommandStation 3.1 & JMRI DecoderPro 2.24 Getting Started Guide.pdf version 1.0 </_static/documents/DCCEX_3.1_and_JMRI_Decoder_Pro_4.24-_Getting_Started_Guide-1.pdf>`_
+   `EX-CommandStation 4.1 & JMRI DecoderPro 5.2 Getting Started Guide.pdf version 4.0 </_static/documents/Updated_DCC-EX_4.1_and_JMRI_DecoderPro_5.2_-_Getting_Started_Guide.pdf>`_
 
 .. rst-class:: clearer
 

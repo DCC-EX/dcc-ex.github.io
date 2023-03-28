@@ -41,3 +41,8 @@ When you're finished editing, you need to write the changes to the decoder. To d
 Note that this really is just scratching the surface of the capabilities of DecoderPro, and we highly recommend you read the full documentation on the `JMRI website <https://www.jmri.org/help/en/html/apps/DecoderPro/index.shtml>`_.
 
 Even if you don't intend to use |JMRi| to control your layout, it still has the best decoder programming functionality by far.
+
+DCC-EX & JMRI DecoderPro Getting Started Guide
+----------------------------------------------
+
+To assist you in setting up a DCC-EX & JMRI DecoderPro Programming Station please download and follow the :ref:`reference/downloads/documents:comprehensive dcc-ex & jmri decoderpro getting started guide pdf`.

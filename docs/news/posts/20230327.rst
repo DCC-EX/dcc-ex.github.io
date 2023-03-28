@@ -1,0 +1,42 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+
+:blogpost: true
+:date: 27 March, 2023
+:author: peteGSX
+:category: News
+:tags: ex-commandstation, exrail, ex-ioexpander
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+Version 5 progress and a breaking change in the development branch
+==================================================================
+
+We are full steam ahead to a v5.0 release, making sure what's in there is well tested to the limits of our resources, and has documentation available as we go. Amongst other things, this has resulted in one potentially "breaking" change for users of |EX-R|'s capability to run sequences/routes on startup.
+
+**Breaking change:** The implicit AUTOSTART at the beginning of the "myAutomation.h" file for |EX-R| has been disabled, as we have found it confuses a great many first time users.
+
+What does this mean?
+
+Previously, when your |EX-CS| started up with a "myAutomation.h" file present, anything defined prior to the very first ``DONE`` statement would execute automatically. This was used to do things like set turnouts/points to a known startup position, automatically start routes or sequences for fully automated layouts, and so forth.
+
+As of v4.2.31, this behaviour is disabled, meaning nothing defined in "myAutomation.h" will automatically start unless preceded by the ``AUTOSTART`` directive (see :ref:`ex-rail/ex-rail-reference:ex-rail functions`).
+
+At the time of writing, we are currently at v4.2.37 of the |EX-CS| development release, and these updates are continuing multiple times a week as we find/fix bugs and refine the software.
+
+Here are some more highlights of what's been done since the last news update:
+
+- New <JG> and <JI> commands for multi-track gauges such as current sensing (v4.2.20)
+- Static IP address now configurable for Ethernet shields (v4.2.24)
+- SAMD21 had a bug in EX-RAIL due to memory alignment, this likely improves 32-bit support for various microcontrollers (v4.2.25)
+- Improved stability/reliability of the |EX-IO| device driver (v4.2.26) and bug fix for analogue inputs (v4.2.34)
+- Updated the DFPlayer code to cope with a new variant of the popular sound board seen in the wild, and mods to the HCRS04 ultrasonic driver so it uses less CPU loop time (v4.2.28)
+- Various LCD bug fixes (latest in v4.2.29)
+- Add ``<z>`` direct I/O pin manipulation command (v4.2.35)
+- Add new "FLAGS" device to the HAL to communicate Vpin changes outside of |EX-R| to software such as |JMRi| (v4.2.37)
+
+Some of the above new features and fixes are currently undocumented which we will fix in the coming weeks. In the meantime, feel free to jump onto Discord and chat with the developers and keep up to date (:doc:`/support/contact-us`).

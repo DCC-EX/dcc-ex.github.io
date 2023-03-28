@@ -31,27 +31,27 @@ What you need for EX-Turntable
 
   If you wish to make use of the traverser feature, there is further information on what is required to enable this on the :doc:`/ex-turntable/traverser` page.
 
-.. image:: /_static/images/turntable-ex/nano-v3.png
+.. image:: /_static/images/ex-turntable/nano-v3.png
   :alt: Nano V3
   :scale: 50%
 
-.. image:: /_static/images/turntable-ex/uln2003-28byj-48.png
+.. image:: /_static/images/ex-turntable/uln2003-28byj-48.png
   :alt: ULN2003/28BYJ-48 Stepper combo
   :scale: 50%
 
-.. image:: /_static/images/turntable-ex/hall-effect.png
+.. image:: /_static/images/ex-turntable/hall-effect.png
   :alt: Hall Effect sensor
   :scale: 40%
 
-.. image:: /_static/images/turntable-ex/dual-relay.png
+.. image:: /_static/images/ex-turntable/dual-relay.png
   :alt: Dual Relay
   :scale: 40%
 
-.. image:: /_static/images/turntable-ex/nano-shield1.png
+.. image:: /_static/images/ex-turntable/nano-shield1.png
   :alt: Nano Prototype Shield
   :scale: 40%
 
-.. image:: /_static/images/turntable-ex/dupont.png
+.. image:: /_static/images/ex-turntable/dupont.png
   :alt: Dupont male to female
   :scale: 30%
 

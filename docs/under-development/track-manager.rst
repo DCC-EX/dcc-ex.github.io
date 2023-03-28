@@ -198,7 +198,7 @@ New Engine Driver DCC-EX Native mode features now available today via Google Pla
 TrackManager Commands
 ======================
 
-Sending commands from the Arduino IDE Serial Monitor or JMRI Send Command Line.
+Sending commands from the Arduino IDE Serial Monitor or JMRI Send Command Line or a Engine Driver WiFi Throttle.
 
 To display the current TrackManager configuration, use the command ``<=>`` an equal sign looks like a track.
 
@@ -239,10 +239,11 @@ my.Automation.h file
     SET_TRACK(B, DCX)
     SET_TRACK(C, DC)
 
-Create EX-RAIL list of Track Manager Functions for Engine Driver Automatically Assign (Handoff) buttons
+Create EX-RAIL list of Track Manager Functions for Engine Driver Automatically Assign [Handoff] buttons
 -------------------------------------------------------------------------------------------------------
 
 In a |EX-R| Automation script we could assign a track mode to DC and wait for a Engine Driver throttle to Assign the Current Selected Active Engine Address and drive Manually through the district on the layout.
+ See the third Engine DriverThrottle image 'Districts A thru B with [Set] buttons at the end.
 
 .. code-block:: 
 
@@ -268,21 +269,22 @@ In a |EX-R| Automation script we could assign a track mode to DC and wait for a 
  Copy and repeat AUTOMATION(506-510, District B  mode)
   and create any additional combinations or tracks C - H as you add more motor boards.
 
-Create EX-RAIL Track Manager Functions for Engine Driver Throttle Automation (Handoff) buttons
+Create EX-RAIL Track Manager Functions for Engine Driver Throttle Automation [Handoff] buttons
 ----------------------------------------------------------------------------------------------
 
 In a |EX-R| Automation script we could a Set a Loco Address to a specific track in DC mode and have it run on Automation through the layout.
+ See the sixth Engine DriverThrottle image 'EXRAIL 202 Roundhouse to Turntable Back & Forth - Timed' [Handoff] button at the end.
 
 .. code-block::
 
- AUTOMATION(1225,"Roundhouse to Turntable Back & Forth")
+ AUTOMATION(202,"Roundhouse to Turntable Back & Forth -Timed")
    SETLOCO(1225)
    SET_TRACK(B,DC)
    Run a your Roundhouse script blow whistle, run Forward delay wait and run Reverse delay stop       
    DELAYRANDOM(msec, msec) // randomize the run time between runs
    DONE
 
-Create EX-RAIL Track Manager Functions for Engine Driver Throttle Route (Set) buttons
+Create EX-RAIL Track Manager Functions for Engine Driver Throttle Route [Set] buttons
 -------------------------------------------------------------------------------------
 
 In an EXRAIL Automation script we could Set a Loco Address to a specific track in DC mode and Manually run a preassigned address on the layout.

@@ -555,9 +555,9 @@
 <li><p><a class="reference internal" href="#trackmanager-commands" id="id8">TrackManager Commands</a></p>
 <ul>
 <li><p><a class="reference internal" href="#create-ex-rail-scripts-to-change-track-modes" id="id9">Create EX-RAIL Scripts to Change Track modes</a></p></li>
-<li><p><a class="reference internal" href="#create-ex-rail-list-of-track-manager-functions-for-engine-driver-automatically-assign-handoff-buttons" id="id10">Create EX-RAIL list of Track Manager Functions for Engine Driver Automatically Assign (Handoff) buttons</a></p></li>
-<li><p><a class="reference internal" href="#create-ex-rail-track-manager-functions-for-engine-driver-throttle-automation-handoff-buttons" id="id11">Create EX-RAIL Track Manager Functions for Engine Driver Throttle Automation (Handoff) buttons</a></p></li>
-<li><p><a class="reference internal" href="#create-ex-rail-track-manager-functions-for-engine-driver-throttle-route-set-buttons" id="id12">Create EX-RAIL Track Manager Functions for Engine Driver Throttle Route (Set) buttons</a></p></li>
+<li><p><a class="reference internal" href="#create-ex-rail-list-of-track-manager-functions-for-engine-driver-automatically-assign-handoff-buttons" id="id10">Create EX-RAIL list of Track Manager Functions for Engine Driver Automatically Assign [Handoff] buttons</a></p></li>
+<li><p><a class="reference internal" href="#create-ex-rail-track-manager-functions-for-engine-driver-throttle-automation-handoff-buttons" id="id11">Create EX-RAIL Track Manager Functions for Engine Driver Throttle Automation [Handoff] buttons</a></p></li>
+<li><p><a class="reference internal" href="#create-ex-rail-track-manager-functions-for-engine-driver-throttle-route-set-buttons" id="id12">Create EX-RAIL Track Manager Functions for Engine Driver Throttle Route [Set] buttons</a></p></li>
 <li><p><a class="reference internal" href="#dcc-ex-command-station-with-ex-rail-trackmanager" id="id13">DCC-EX Command Station with EX-RAIL &amp; TrackManager</a></p></li>
 <li><p><a class="reference internal" href="#modular-layouts" id="id14">Modular Layouts</a></p></li>
 <li><p><a class="reference internal" href="#using-the-new-trackmanager-function-commands-you-can-run-the-whole-layout-as" id="id15">Using the New TrackManager Function commands you can run the whole layout as</a></p></li>
@@ -743,7 +743,7 @@ They will all run on that section of track.</p>
 </section>
 <section id="trackmanager-commands">
 <h2><a class="toc-backref" href="#id8" role="doc-backlink">TrackManager Commands</a><a class="headerlink" href="#trackmanager-commands" title="Permalink to this heading"></a></h2>
-<p>Sending commands from the Arduino IDE Serial Monitor or JMRI Send Command Line.</p>
+<p>Sending commands from the Arduino IDE Serial Monitor or JMRI Send Command Line or a Engine Driver WiFi Throttle.</p>
 <p>To display the current TrackManager configuration, use the command <code class="docutils literal notranslate"><span class="pre">&lt;=&gt;</span></code> an equal sign looks like a track.</p>
 <p>The Serial Monitor will show current status, example; Track A as Main and Track B as DC</p>
 <blockquote>
@@ -785,8 +785,11 @@ my.Automation.h file</p>
 </div>
 </section>
 <section id="create-ex-rail-list-of-track-manager-functions-for-engine-driver-automatically-assign-handoff-buttons">
-<h3><a class="toc-backref" href="#id10" role="doc-backlink">Create EX-RAIL list of Track Manager Functions for Engine Driver Automatically Assign (Handoff) buttons</a><a class="headerlink" href="#create-ex-rail-list-of-track-manager-functions-for-engine-driver-automatically-assign-handoff-buttons" title="Permalink to this heading"></a></h3>
-<p>In a <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> Automation script we could assign a track mode to DC and wait for a Engine Driver throttle to Assign the Current Selected Active Engine Address and drive Manually through the district on the layout.</p>
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Create EX-RAIL list of Track Manager Functions for Engine Driver Automatically Assign [Handoff] buttons</a><a class="headerlink" href="#create-ex-rail-list-of-track-manager-functions-for-engine-driver-automatically-assign-handoff-buttons" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>In a <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> Automation script we could assign a track mode to DC and wait for a Engine Driver throttle to Assign the Current Selected Active Engine Address and drive Manually through the district on the layout.</dt><dd><p>See the third Engine DriverThrottle image ‘Districts A thru B with [Set] buttons at the end.</p>
+</dd>
+</dl>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AUTOMATION(500, &quot;Districts A MAIN _ B PROG Default&quot;)// Reset Default back to DCC Main &amp; PROG
  SET_TRACK(A,MAIN) PRINT(&quot;Default Districts Tracks MAIN A &amp; PROG B&quot;)
  SET_TRACK(B,PROG)
@@ -812,9 +815,12 @@ Copy and repeat AUTOMATION(506-510, District B  mode)
 </div>
 </section>
 <section id="create-ex-rail-track-manager-functions-for-engine-driver-throttle-automation-handoff-buttons">
-<h3><a class="toc-backref" href="#id11" role="doc-backlink">Create EX-RAIL Track Manager Functions for Engine Driver Throttle Automation (Handoff) buttons</a><a class="headerlink" href="#create-ex-rail-track-manager-functions-for-engine-driver-throttle-automation-handoff-buttons" title="Permalink to this heading"></a></h3>
-<p>In a <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> Automation script we could a Set a Loco Address to a specific track in DC mode and have it run on Automation through the layout.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AUTOMATION(1225,&quot;Roundhouse to Turntable Back &amp; Forth&quot;)
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Create EX-RAIL Track Manager Functions for Engine Driver Throttle Automation [Handoff] buttons</a><a class="headerlink" href="#create-ex-rail-track-manager-functions-for-engine-driver-throttle-automation-handoff-buttons" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>In a <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> Automation script we could a Set a Loco Address to a specific track in DC mode and have it run on Automation through the layout.</dt><dd><p>See the sixth Engine DriverThrottle image ‘EXRAIL 202 Roundhouse to Turntable Back &amp; Forth - Timed’ [Handoff] button at the end.</p>
+</dd>
+</dl>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AUTOMATION(202,&quot;Roundhouse to Turntable Back &amp; Forth -Timed&quot;)
   SETLOCO(1225)
   SET_TRACK(B,DC)
   Run a your Roundhouse script blow whistle, run Forward delay wait and run Reverse delay stop
@@ -824,7 +830,7 @@ Copy and repeat AUTOMATION(506-510, District B  mode)
 </div>
 </section>
 <section id="create-ex-rail-track-manager-functions-for-engine-driver-throttle-route-set-buttons">
-<h3><a class="toc-backref" href="#id12" role="doc-backlink">Create EX-RAIL Track Manager Functions for Engine Driver Throttle Route (Set) buttons</a><a class="headerlink" href="#create-ex-rail-track-manager-functions-for-engine-driver-throttle-route-set-buttons" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Create EX-RAIL Track Manager Functions for Engine Driver Throttle Route [Set] buttons</a><a class="headerlink" href="#create-ex-rail-track-manager-functions-for-engine-driver-throttle-route-set-buttons" title="Permalink to this heading"></a></h3>
 <p>In an EXRAIL Automation script we could Set a Loco Address to a specific track in DC mode and Manually run a preassigned address on the layout.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ROUTE(1225,&quot;Set track B to DC 1225&quot;)
   SETLOCO(1225)    // Assign Loco 1225

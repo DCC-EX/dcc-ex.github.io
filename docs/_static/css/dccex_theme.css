@@ -116,6 +116,7 @@ table.intro-table {
 
 .command-table tbody tr:first-child td p code {
   white-space: nowrap !important;
+  font-size: 110% !important;
 }
 
 .command-table tbody tr td p {

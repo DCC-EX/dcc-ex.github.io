@@ -563,15 +563,16 @@
 <li><p><a class="reference internal" href="#configuring-the-ex-commandstation-turnouts-points" id="id17">Configuring the EX-CommandStation - Turnouts/Points</a></p></li>
 <li><p><a class="reference internal" href="#configuring-the-ex-commandstation-sensors" id="id18">Configuring the EX-CommandStation - Sensors</a></p></li>
 <li><p><a class="reference internal" href="#configuring-the-ex-commandstation-servos" id="id19">Configuring the EX-CommandStation - Servos</a></p></li>
-<li><p><a class="reference internal" href="#outputs" id="id20">Outputs</a></p></li>
+<li><p><a class="reference internal" href="#configuring-the-ex-commandstation-outputs" id="id20">Configuring the EX-CommandStation - Outputs</a></p></li>
 <li><p><a class="reference internal" href="#configuring-the-ex-commandstation-eeprom-management" id="id21">Configuring the EX-CommandStation - EEPROM management</a></p></li>
 <li><p><a class="reference internal" href="#configuring-the-ex-commandstation-diagnostic-programming-commands" id="id22">Configuring the EX-CommandStation - Diagnostic programming commands</a></p></li>
 <li><p><a class="reference internal" href="#diagnostic-traces" id="id23">Diagnostic traces</a></p></li>
 <li><p><a class="reference internal" href="#i-o-hal-diagnostics" id="id24">I/O (HAL) Diagnostics</a></p></li>
-<li><p><a class="reference internal" href="#other" id="id25">Other</a></p></li>
+<li><p><a class="reference internal" href="#write-direct-dcc-packet" id="id25">Write direct DCC packet</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#more-information" id="id26">More Information</a></p></li>
+<li><p><a class="reference internal" href="#other" id="id26">Other</a></p></li>
+<li><p><a class="reference internal" href="#more-information" id="id27">More Information</a></p></li>
 </ul>
 </nav>
 </aside>
@@ -607,23 +608,20 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;onOff</span> <span class="pre">[track]&gt;</span></code></p></td>
-<td><p><strong>Turns power on and off to the MAIN and PROG tracks together or independently. Also allows joining the MAIN and PROG tracks together.</strong> <br /> <br /> <em>Parameters:</em> <br /> onOff: <br />  1 = on <br />  0 = off <br /> track: <br />  blank = Both Main and Programming Tracks  <br />  MAIN = Main track  <br />  PROG = Programming Track  <br />  JOIN = Join the Main and Programming tracks temporarily <br /> <br /> e.g. <br /> all tracks off: <strong>&lt;0&gt;</strong> <br /> all tracks on <strong>&lt;1&gt;</strong> <br /> join: <strong>&lt;1 JOIN&gt;</strong> <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /> <em>Notes:</em> <br /> The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work. If you drive onto a programming track that is “joined” and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout! <br /> <br /> In some split motor shield hardware configurations JOIN will not be able to work. <br /> <br /></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RESET&gt;</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RESET&gt;</span></code></p></td>
 <td><p><strong>Re-boot the command Station</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;J</span> <span class="pre">G&gt;</span></code></p></td>
-<td><p><strong>Request max current</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> repeated for each Channel/Track: <strong>&lt;j IG track currentmax&gt;</strong> <br /> <br /> track:  channel/track <br /> currentmax: current in milliamps <br /> <br />
-<em>Version Introduced: 4.2.19</em> <br /></p></td>
-</tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;J</span> <span class="pre">I&gt;</span></code></p></td>
-<td><p><strong>Request current status</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> repeated for each Channel/Track: <strong>&lt;j I track current&gt;</strong> <br /> <br /> track:  channel/track <br /> current: current in milliamps <br /> <br />
-<em>Version Introduced: 4.2.19</em> <br /></p></td>
+<td><p><strong>Request current status</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> repeated for each Channel/Track: <strong>&lt;j I track current&gt;</strong> <br /> <br /> <strong>track:</strong>  channel/track <br /> <strong>current:</strong> current in milliamps <br /> <br /> <em>Version Introduced: 4.2.19</em> <br /></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;J</span> <span class="pre">G&gt;</span></code></p></td>
+<td><p><strong>Request max current</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> repeated for each Channel/Track: <strong>&lt;j IG track currentmax&gt;</strong> <br /> <br /> <strong>track:</strong>  channel/track <br /> <strong>currentmax:</strong> current in milliamps <br /> <br /> <em>Version Introduced: 4.2.19</em> <br /></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;onOff</span> <span class="pre">[track]&gt;</span></code></p></td>
+<td><p><strong>Turns power on and off to the MAIN and PROG tracks together or independently. Also allows joining the MAIN and PROG tracks together.</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>onOff:</strong> one of <br />  1 = on <br />  0 = off <br /> <strong>track:</strong> one of <br />  blank = Both Main and Programming Tracks  <br />  MAIN = Main track  <br />  PROG = Programming Track  <br />  JOIN = Join the Main and Programming tracks temporarily <br /> <br /> e.g. <br /> all tracks off: <strong>&lt;0&gt;</strong> <br /> all tracks on <strong>&lt;1&gt;</strong> <br /> join: <strong>&lt;1 JOIN&gt;</strong> <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /> <em>Notes:</em> <br /> The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work. If you drive onto a programming track that is “joined” and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout! <br /> <br /> In some split motor shield hardware configurations JOIN will not be able to work. <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
-<p>—</p>
 </section>
 <section id="cab-loco-commands">
 <h3><a class="toc-backref" href="#id4" role="doc-backlink">Cab (Loco) Commands</a><a class="headerlink" href="#cab-loco-commands" title="Permalink to this heading"></a></h3>
@@ -638,39 +636,38 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;-</span> <span class="pre">[cab]&gt;</span></code></p></td>
-<td><p><strong>Remove one or all locos from reminders</strong> <br /> <br /> <em>Parameters:</em> <br /> cab: <br />  blank = all locos  <br />  No. = Cab (loco) to forget <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /> <em>Notes:</em> <br /> Forgets one or all locos. The “cab” parameter is optional.  <br /> Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending <strong>&lt;- cab&gt;</strong> will forget/clear that loco. Sending <strong>&lt;-&gt;</strong> will clear all the locos. This doesn’t do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands. <br /> <br /></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">byte1</span> <span class="pre">[byte2]]&gt;</span></code></p></td>
+<td><p><strong>Decoder Functions - Legacy command.</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>cab:</strong> DCC Address of the decoder/loco <br /> <strong>byte1 byte2:</strong> DCC function bytes as sent to decoders (up to F28)  <br /> <br /> <em>Response:</em> <br /> Success: nothing; Fail: <strong>&lt;X&gt;</strong> <br /> <br /> <em>Notes:</em> <br /> Used by the sniffer <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;!&gt;</span></code></p></td>
 <td><p><strong>Emergency Stop</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> Repeated for each loco in the reminders list <strong>&lt;l cab reg speedByte functMap&gt;</strong>  <br /> <br /></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">speedSteps&gt;</span></code></p></td>
-<td><p><strong>Switch between 28 and 128 speed steps</strong> <br /> <br /> <em>Parameters:</em> <br /> speedsteps: <br />  SPEED28 = <br />  SPEED128 = <br /> <br /> <em>Response:</em> <br /> Response sent to the Serial Monitor only (not wifi clients). <br /> One of: <br />  28 Speedsteps <br />  128 Speedsteps <br /> <br /></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">byte1</span> <span class="pre">[byte2]]&gt;</span></code></p></td>
-<td><p><strong>Legacy function. Deprecated, please use &lt;W cv value&gt; instead</strong> <br /> <br /> <strong>Deprecated</strong> <br /> <em>Parameters:</em> <br /> ??? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">funct</span> <span class="pre">onOff&gt;</span></code></p></td>
-<td><p><strong>Turns loco decoder functions ON and OFF</strong> <br /> <br /> <em>Parameters:</em> <br /> cab: DCC Address of the decoder/loco <br /> funct: 0-28 (F29-F68 (Support for the RCN-212 Functions) <br /> onOff:  <br />  1=on  <br />  0=off <br /> <br /> <em>Response:</em> <br /> <strong>&lt;l cab reg speedByte functMap&gt;</strong> <br /> <br /> <em>Notes:</em> <br /> Setting requests are transmitted directly to mobile loco decoder. <br /> Current state of loco functions (as known by commands issued since power on) is stored by the CommandStation - All functions within a group get set all at once per NMRA DCC standards. <br /> The command station knows about the previous settings in the same group and will not, for example, unset F2 because you change F1. If, however, you have never set F2, then changing F1 WILL unset F2. <br /> <br /></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;-</span> <span class="pre">[cab]&gt;</span></code></p></td>
+<td><p><strong>Remove one or all locos from reminders</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>cab:</strong> one of <br />  blank = all locos  <br />  No. = Cab (loco) to forget <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /> <em>Notes:</em> <br /> Forgets one or all locos. The “cab” parameter is optional.  <br /> Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending <strong>&lt;- cab&gt;</strong> will forget/clear that loco. Sending <strong>&lt;-&gt;</strong> will clear all the locos. This doesn’t do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands. <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;J</span> <span class="pre">R</span> <span class="pre">id&gt;</span></code></p></td>
-<td><p><strong>Request details of a specific Roster Entry</strong> <br /> <br /> <em>Parameters:</em> <br /> id: unique id of the Cab/s (Loco/s) in the roster <br /> <br /> <em>Response:</em> <br /> <strong>&lt;jR id ˮˮ|ˮdescˮ ˮˮ|ˮfunct1/funct2/funct3/…ˮ&gt;</strong> <br /> id:  unique id of the Cab/s (Loco/s) in the roster <br /> desc: description of the Loco <br /> funct0-28: Label for each function 0-28 <br /> <br /> e.g.  <br /> Response (id is in Roster): <strong>&lt;jR id ˮdescˮ ˮfunct1/funct2/funct3/…ˮ&gt;</strong> <br /> Response (id is not in Roster): <strong>&lt;jR id ˮˮ ˮˮ&gt;</strong> <br /> <br /></p></td>
+<td><p><strong>Request details of a specific Roster Entry</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>id:</strong> unique id of the Cab/s (Loco/s) in the roster <br /> <br /> <em>Response:</em> <br /> <strong>&lt;jR id ˮˮ|ˮdescˮ ˮˮ|ˮfunct1/funct2/funct3/…ˮ&gt;</strong> <br /> <strong>id:</strong>  unique id of the Cab/s (Loco/s) in the roster <br /> <strong>desc:</strong> description of the Loco <br /> <strong>funct?:</strong> Label for each function 0-28 <br /> <br /> e.g.  <br /> Response (id is in Roster): <strong>&lt;jR id ˮdescˮ ˮfunct1/funct2/funct3/…ˮ&gt;</strong> <br /> Response (id is not in Roster): <strong>&lt;jR id ˮˮ ˮˮ&gt;</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;J</span> <span class="pre">R&gt;</span></code></p></td>
-<td><p><strong>Request the list defined Roster Entry IDs</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> <strong>&lt;jR [id1 id2 id3 …]&gt;</strong> <br /> id?: unique id of the Cab/s (Loco/s) in the roster <br /> <br /> e.g. <br /> Response (roster exists): <strong>&lt;jR id1 id2 id3 …&gt;</strong> <br /> Response (no roster exists): <strong>&lt;jR&gt;</strong> <br /> <br /></p></td>
+<td><p><strong>Request the list defined Roster Entry IDs</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> <strong>&lt;jR [id1 id2 id3 …]&gt;</strong> <br /> <strong>id?:</strong> unique id of the Cab/s (Loco/s) in the roster <br /> <br /> e.g. <br /> Response (roster exists): <strong>&lt;jR id1 id2 id3 …&gt;</strong> <br /> Response (no roster exists): <strong>&lt;jR&gt;</strong> <br /> <br /></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code></p></td>
-<td><p><strong>Set Cab (Loco) Speed</strong> <br /> <br /> <em>Parameters:</em> <br /> cab: DCC Address of the decoder/loco <br /> speed: 0-127 <br /> dir:  <br />  1=forward  <br />  0=reverse <br /> <br /> <em>Response:</em> <br /> The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <br /> <strong>&lt;l cab reg speedByte functMap&gt;</strong> <br /> cab: DCC Address of the decoder/loco <br /> speedbyte: Speed in DCC speedstep format . <br />  reverse - 2-127 = speed 1-126, 0 = stop  <br />  forward - 130-255 = speed 1-126,  128 = stop <br /> FunctiMap: individual function states represented by the the bits in a byte <br /> <br /> <em>Version Introduced: 4.1.1</em> <br /> <em>Notes:</em> <br /> The <em>speedbyte</em> value is different to the <em>speed</em> sent, as it is an encoded (1,7 bits)  byte. <br /> This starts a reminder process for any external updates to the cab’s (loco’s) status. <br /> <br /></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cab&gt;</span></code></p></td>
+<td><p><strong>Requests a deliberate update on the cab speed/functions in the same format as the cab (loco) broadcast.</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>cab:</strong> DCC Address of the decoder/loco <br /> <br /> <em>Response:</em> <br /> The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <br /> <strong>&lt;l cab reg speedByte functMap&gt;</strong> <br /> <strong>cab:</strong> DCC Address of the decoder/loco <br /> <strong>speedbyte:</strong> Speed in DCC speedstep format . <br />  reverse - 2-127 = speed 1-126, 0 = stop  <br />  forward - 130-255 = speed 1-126,  128 = stop <br /> <strong>FunctiMap:</strong> individual function states represented by the the bits in a byte <br /> <br /> <em>Notes:</em> <br /> The <em>speedbyte</em> value is different to the <em>speed</em> sent, as it is an encoded (1,7 bits)  byte. <br /> This starts a reminder process for any external updates to the cab’s (loco’s) status. <br /> <br /></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cab&gt;</span></code></p></td>
-<td><p><strong>Requests a deliberate update on the cab speed/functions in the same format as the cab (loco) broadcast.</strong> <br /> <br /> <em>Parameters:</em> <br /> cab: DCC Address of the decoder/loco <br /> <br /> <em>Response:</em> <br /> The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <br /> <strong>&lt;l cab reg speedByte functMap&gt;</strong> <br /> cab: DCC Address of the decoder/loco <br /> speedbyte: Speed in DCC speedstep format . <br />  reverse - 2-127 = speed 1-126, 0 = stop  <br />  forward - 130-255 = speed 1-126,  128 = stop <br /> FunctiMap: individual function states represented by the the bits in a byte <br /> <br /> <em>Notes:</em> <br /> The <em>speedbyte</em> value is different to the <em>speed</em> sent, as it is an encoded (1,7 bits)  byte. <br /> This starts a reminder process for any external updates to the cab’s (loco’s) status. <br /> <br /></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code></p></td>
+<td><p><strong>Set Cab (Loco) Speed</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>cab:</strong> DCC Address of the decoder/loco <br /> <strong>speed:</strong> 0-127 <br /> <strong>dir:</strong> one of <br />  1=forward  <br />  0=reverse <br /> <br /> <em>Response:</em> <br /> The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <br /> <strong>&lt;l cab reg speedByte functMap&gt;</strong> <br /> <strong>cab:</strong> DCC Address of the decoder/loco <br /> <strong>speedbyte:</strong> Speed in DCC speedstep format . <br />  reverse - 2-127 = speed 1-126, 0 = stop  <br />  forward - 130-255 = speed 1-126,  128 = stop <br /> <strong>FunctiMap:</strong> individual function states represented by the the bits in a byte <br /> <br /> <em>Version Introduced: 4.1.1</em> <br /> <em>Notes:</em> <br /> The <em>speedbyte</em> value is different to the <em>speed</em> sent, as it is an encoded (1,7 bits)  byte. <br /> This starts a reminder process for any external updates to the cab’s (loco’s) status. <br /> <br /></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">speedsteps&gt;</span></code></p></td>
+<td><p><strong>Switch between 28 and 128 speed steps</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>speedsteps:</strong> <br />  SPEED28 = use 28 speed steps <br />  SPEED128 = use 128 speed steps <br /> <br /> <em>Response:</em> <br /> Response sent to the Serial Monitor only (not wifi clients). <br /> One of: <br />  <em>28 Speedsteps</em> <br />  <em>128 Speedsteps</em> <br /> <br /></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">funct</span> <span class="pre">state&gt;</span></code></p></td>
+<td><p><strong>Turns loco decoder functions ON and OFF</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>cab:</strong> DCC Address of the decoder/loco <br /> <strong>funct:</strong> 0-28 (F29-F68 (Support for the RCN-212 Functions) <br /> <strong>state:</strong>  <br />  1=on  <br />  0=off <br /> <br /> <em>Response:</em> <br /> The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <br /> <strong>&lt;l cab reg speedByte functMap&gt;</strong> <br /> <strong>cab:</strong> DCC Address of the decoder/loco <br /> <strong>speedbyte:</strong> Speed in DCC speedstep format . <br />  reverse - 2-127 = speed 1-126, 0 = stop  <br />  forward - 130-255 = speed 1-126,  128 = stop <br /> <strong>FunctiMap:</strong> individual function states represented by the the bits in a byte <br /> <br /> <em>Notes:</em> <br /> Setting requests are transmitted directly to mobile loco decoder. <br /> Current state of loco functions (as known by commands issued since power on) is stored by the CommandStation - All functions within a group get set all at once per NMRA DCC standards. <br /> The command station knows about the previous settings in the same group and will not, for example, unset F2 because you change F1. If, however, you have never set F2, then changing F1 WILL unset F2. <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">reg</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code></p></td>
-<td><p><strong>Set Cab (Loco) Speed</strong> <br /> <br /> <strong>Deprecated</strong> <br /> <em>Parameters:</em> <br /> reg: not used <br /> cab: DCC Address of the decoder/loco <br /> speed: 0-127 <br /> dir:  <br />  1=forward  <br />  0=reverse <br /> <br /> <em>Response:</em> <br /> The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <br /> <strong>&lt;l cab reg speedByte functMap&gt;</strong> <br /> cab: DCC Address of the decoder/loco <br /> reg: redundant. Not used. <br /> speedbyte: Speed in DCC speedstep format . <br />  reverse - 2-127 = speed 1-126, 0 = stop  <br />  forward - 130-255 = speed 1-126,  128 = stop <br /> FunctMap: individual function states represented by the the bits in a byte <br /> <br /> Legacy response: Deprecated|BR| <strong>&lt;T reg speed dir&gt;</strong> - do not rely on this response <br /> <br /> <em>Version Deprecated: 4.1.1</em> <br /> <em>Notes:</em> <br /> The <em>speedbyte</em> value is different to the <em>speed</em> sent, as it is an encoded (1,7 bits)  byte. <br /> This starts a reminder process for any external updates to the cab’s (loco’s) status. <br /> <br /></p></td>
+<td><p><strong>Set Cab (Loco) Speed - Legacy command</strong> <br /> <br /> <span style="font-weight: bold; font-style: italic; color:red">Deprecated</span> <br /> <em>Parameters:</em> <br /> <strong>reg:</strong> not used <br /> <strong>cab:</strong> DCC Address of the decoder/loco <br /> <strong>speed:</strong> 0-127 <br /> <strong>dir:</strong> one of  <br />  1=forward  <br />  0=reverse <br /> <br /> <em>Response:</em> <br /> The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <br /> <strong>&lt;l cab reg speedByte functMap&gt;</strong> <br /> <strong>cab:</strong> DCC Address of the decoder/loco <br /> <strong>reg:</strong> redundant. Not used. <br /> <strong>speedbyte:</strong> Speed in DCC speedstep format . <br />  reverse - 2-127 = speed 1-126, 0 = stop  <br />  forward - 130-255 = speed 1-126,  128 = stop <br /> FunctMap: individual function states represented by the the bits in a byte <br /> <br /> Legacy response: <strong>Deprecated</strong> <br /> <strong>&lt;T reg speed dir&gt;</strong> - do not rely on this response <br /> <br /> <em>Version Deprecated: 4.1.1</em> <br /> <em>Notes:</em> <br /> The <em>speedbyte</em> value is different to the <em>speed</em> sent, as it is an encoded (1,7 bits)  byte. <br /> This starts a reminder process for any external updates to the cab’s (loco’s) status. <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
-<p>—</p>
 </section>
 <section id="turnout-points">
 <h3><a class="toc-backref" href="#id5" role="doc-backlink">Turnout/Points</a><a class="headerlink" href="#turnout-points" title="Permalink to this heading"></a></h3>
@@ -685,24 +682,23 @@
 </tr>
 </thead>
 <tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id&gt;</span></code></p></td>
+<td><p><strong>Delete defined turnout/point</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>id:</strong> identifier of the Turnout/Point <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code></p></td>
+<td><p><strong>Request a list all defined turnouts/Points</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> Repeated for each defined Turnout/Point <br /> Response (DCC Accessories): <strong>&lt;H id DCC address subaddress state&gt;</strong> <br /> Response (Servos): <strong>&lt;H id SERVO vpin thrown_position closed_position profile state&gt;</strong> <br /> Response (VPIN): <strong>&lt;H id VPIN vpin state&gt;</strong> <br /> Response (LCN): <strong>&lt;H id LCN state&gt;</strong> <br /> Response (fail): ? <br /> Response (no defined turnouts/points): ? <br /> <br /> state - 0=closed 1=thrown <br /> <br /></p></td>
+</tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;J</span> <span class="pre">T</span> <span class="pre">id&gt;</span></code></p></td>
-<td><p><strong>Request details of a specific Turnout/Point</strong> <br /> <br /> <em>Parameters:</em> <br /> id:  unique id of the Turnout/Point  <br /> <br /> <em>Response:</em> <br /> <strong>&lt;jT id X|state |ˮ[desc]ˮ&gt;</strong> <br /> id:  unique id of the Turnout/Point  <br /> state: one of <br />  C = Closed <br />  T = Thrown <br />  X = unknown id <br /> desc: one of  <br />  ˮdescˮ = description of the Turnout(Point) (including surrounding quotes) <br />  blank = unknown id <br /> <br /> e.g. <br /> Response (id is defined): <strong>&lt;jT id state ˮ[desc]ˮ&gt;</strong> <br /> Response (id not defined): <strong>&lt;jT id X&gt;</strong> <br /> <br /></p></td>
+<td><p><strong>Request details of a specific Turnout/Point</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>id:</strong>  unique id of the Turnout/Point  <br /> <br /> <em>Response:</em> <br /> <strong>&lt;jT id X|state |ˮ[desc]ˮ&gt;</strong> <br /> <strong>id:</strong> unique id of the Turnout/Point  <br /> <strong>state:</strong> one of <br />  C = Closed <br />  T = Thrown <br />  X = unknown id <br /> <strong>desc:</strong> one of  <br />  ˮdescˮ = description of the Turnout(Point) (including surrounding quotes) <br />  blank = unknown id <br /> <br /> e.g. <br /> Response (id is defined): <strong>&lt;jT id state ˮ[desc]ˮ&gt;</strong> <br /> Response (id not defined): <strong>&lt;jT id X&gt;</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;J</span> <span class="pre">T&gt;</span></code></p></td>
-<td><p><strong>Request the list of defined turnout/Point IDs</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> <strong>&lt;jT [id1 id2 id3 …]&gt;</strong> <br /> id:  unique id of the Turnout/s(Point/s) <br /> <br /> e.g. <br /> Response (has defined Turnouts/Points): <strong>&lt;jT id1 id2 id3 …&gt;</strong> <br /> Response (no defined Turnouts/Points): <strong>&lt;jT&gt;</strong> <br /> <br /></p></td>
+<td><p><strong>Request the list of defined turnout/Point IDs</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> <strong>&lt;jT [id1 id2 id3 …]&gt;</strong> <br /> <strong>id:</strong> unique id of the Turnout/s(Point/s) <br /> <br /> e.g. <br /> Response (has defined Turnouts/Points): <strong>&lt;jT id1 id2 id3 …&gt;</strong> <br /> Response (no defined Turnouts/Points): <strong>&lt;jT&gt;</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">state&gt;</span></code></p></td>
-<td><p><strong>Throw (1 or T) or close(0 or C) a defined turnout/point</strong> <br /> <br /> <em>Parameters:</em> <br /> id: identifier of the Turnout/Point <br /> state: one of <br />  1=Throw,  <br />  T=Throw,  <br />  0=Close,  <br />  C=Close  <br /> <br /> <em>Response:</em> <br /> <strong>&lt;H id state&gt;</strong> <br /> id: one of <br />  identifier of the Turnout/Point, or  <br />  X if the command fails <br /> state: one of <br />  1 = Thrown,  <br />  0 = Closed  <br />  blank = command failed <br /> <br /> e.g. <br /> Response (successful): <strong>&lt;H id 0|1&gt;</strong> <br /> Response (fail): <strong>&lt;X&gt;</strong> <br /> <br /></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id&gt;</span></code></p></td>
-<td><p><strong>Delete defined turnout/point</strong> <br /> <br /> <em>Parameters:</em> <br /> id: identifier of the Turnout/Point <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code></p></td>
-<td><p><strong>Request a list all defined turnouts/Points</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> Repeated for each defined Turnout/Point <br /> Response (DCC Accessories): <strong>&lt;H id DCC address subaddress state&gt;</strong> <br /> Response (Servos): <strong>&lt;H id SERVO vpin thrown_position closed_position profile state&gt;</strong> <br /> Response (VPIN): <strong>&lt;H id VPIN vpin state&gt;</strong> <br /> Response (LCN): <strong>&lt;H id LCN state&gt;</strong> <br /> Response (fail): ? <br /> Response (no defined turnouts/points): ? <br /> <br /> state - 0=closed 1=thrown <br /> <br /></p></td>
+<td><p><strong>Throw (1 or T) or close(0 or C) a defined turnout/point</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>id:</strong> identifier of the Turnout/Point <br /> <strong>state:</strong> one of <br />  1=Throw,  <br />  T=Throw,  <br />  0=Close,  <br />  C=Close  <br /> <br /> <em>Response:</em> <br /> <strong>&lt;H id state&gt;</strong> <br /> <strong>id:</strong> one of <br />  identifier of the Turnout/Point, or  <br />  X if the command fails <br /> <strong>state:</strong> one of <br />  1 = Thrown,  <br />  0 = Closed  <br />  blank = command failed <br /> <br /> e.g. <br /> Response (successful): <strong>&lt;H id 0|1&gt;</strong> <br /> Response (fail): <strong>&lt;X&gt;</strong> <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
-<p>—</p>
 </section>
 <section id="routes-automations">
 <h3><a class="toc-backref" href="#id6" role="doc-backlink">Routes/Automations</a><a class="headerlink" href="#routes-automations" title="Permalink to this heading"></a></h3>
@@ -717,15 +713,14 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;J</span> <span class="pre">A</span> <span class="pre">id&gt;</span></code></p></td>
-<td><p><strong>Requests information for a route/automation</strong> <br /> <br /> <em>Parameters:</em> <br /> id: identifier of the Route/Automation <br /> <br /> <em>Response:</em> <br /> <strong>&lt;jA id X|type |ˮdescˮ&gt;</strong> <br /> id: identifier of the Route/Automation <br /> type: ‘R’= Route ‘A’=Automation <br /> “desc”: Textual description of the route/automation always surrounded in quotes (“) <br /> <br /> e.g. <br /> Response (successful): <strong>&lt;jA id type ˮdescˮ&gt;</strong> <br /> Response (fail - is not defined): <strong>&lt;jA id X&gt;</strong> <br /> <br /> <br /></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;J</span> <span class="pre">A&gt;</span></code></p></td>
+<td><p><strong>Request a list of Automations/Routes</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> <strong>&lt;jA [id0 id1 id2 ..]&gt;</strong> <br /> <strong>id?:</strong> identifier of the Route/Automation(s) <br /> <br /> e.g. <br /> Response (successful turnouts/point exist): <strong>&lt;jA id0 id1 id2 ..&gt;</strong> <br /> Response (successful turnouts/point don’t exist): <strong>&lt;jA.&gt;</strong> <br /> Response (fail): ??? <br /> <br /></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;J</span> <span class="pre">A&gt;</span></code></p></td>
-<td><p><strong>Request a list of Automations/Routes</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> <strong>&lt;jA [id0 id1 id2 ..]&gt;</strong> <br /> id?: identifier of the Route/Automation(s) <br /> <br /> e.g. <br /> Response (successful turnouts/point exist): <strong>&lt;jA id0 id1 id2 ..&gt;</strong> <br /> Response (successful turnouts/point don’t exist): <strong>&lt;jA.&gt;</strong> <br /> Response (fail): ??? <br /> <br /></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;J</span> <span class="pre">A</span> <span class="pre">id&gt;</span></code></p></td>
+<td><p><strong>Requests information for a route/automation</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>id:</strong> identifier of the Route/Automation <br /> <br /> <em>Response:</em> <br /> <strong>&lt;jA id X|type |ˮdescˮ&gt;</strong> <br /> <strong>id:</strong> identifier of the Route/Automation <br /> <strong>type:</strong> one of <br />  ‘R’= Route  <br />  ‘A’=Automation <br /> <strong>“desc”:</strong> Textual description of the route/automation always surrounded in quotes (“) <br /> <br /> e.g. <br /> Response (successful): <strong>&lt;jA id type ˮdescˮ&gt;</strong> <br /> Response (fail - is not defined): <strong>&lt;jA id X&gt;</strong> <br /> <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
-<p>—</p>
 </section>
 <section id="system-information">
 <h3><a class="toc-backref" href="#id7" role="doc-backlink">System Information</a><a class="headerlink" href="#system-information" title="Permalink to this heading"></a></h3>
@@ -740,18 +735,17 @@
 </tr>
 </thead>
 <tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;c&gt;</span></code></p></td>
+<td><p><strong>Request Current on the Track(s)</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> <strong>&lt;c ˮCurrentMAINˮ current C ˮMilliˮ ˮ0ˮ max_ma ˮ1ˮ trip_ma&gt;</strong> <br /> <strong>ˮCurrentMAINˮ:</strong> Static text for software like JMRI <br /> <strong>current</strong>: Current in MilliAmps <br /> <strong>C</strong>: Designator to signify this is a current meter (V would be for voltage) <br /> <strong>ˮMilliˮ</strong>: Unit of measure for external software with a meter like JMRI (Milli, Kilo, etc.) <br /> <strong>ˮ0ˮ:</strong> numbered parameter for external software (1,2,3, etc.) <br /> <strong>max_ma</strong>: The maximum current handling of the motor controller in MilliAmps <br /> <strong>ˮ1ˮ</strong>: number parameter for external software (we use 2 parameters here, 0 and 1) <br /> <strong>trip_ma</strong> - The overcurrent limit that will trip the software circuit breaker in mA <br /> <br /> <em>Version Introduced: ??.</em> <br /></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code></p></td>
+<td><p><strong>Requests the DCC-EX version and hardware info, along with listing defined turnouts.</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> <strong>&lt;iDCCEX version / microprocessorType / MotorControllerType / buildNumber&gt;</strong> <br /> (repeated for each defined Turnout/Point): <strong>&lt;H id state&gt;</strong> <br /> <br /> <strong>version:</strong> Command Station version <br /> <strong>microprocessorType:</strong>  microprocessor type (e.g. MEGA) <br /> <strong>MotorControllerType:</strong>  Motor controller type (e.g. SATNDARD_MOTOR_SHIELD) <br /> <strong>buildNumber:</strong>  Command Station build number <br /> <strong>id:</strong> unique identifier for the Turnout/Point <br /> <strong>state:</strong> one of  <br />  1=thrown  <br />  0=Closed <br /> <br /></p></td>
+</tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;#&gt;</span></code></p></td>
-<td><p><strong>Requests the number of supported cabs(locos)</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> <strong>&lt;# noCabs&gt;</strong> <br /> noCabs: maximum number of Cabs(Locos) supported by the command station <br /> <br /> Will return one of <strong>&lt;# 20&gt;</strong>, <strong>&lt;# 30&gt;</strong>, or <strong>&lt;# 50&gt;</strong> <br /> <br /> <em>Notes:</em> <br /> This will display the number of available cab slots. This will typically be <strong>&lt;# 20&gt;</strong>, <strong>&lt;# 30&gt;</strong>, or <strong>&lt;# 50&gt;</strong> depending on how much memory your EX‑CommandStation has available.  <br /> This is a design limit based on the memory limitations of the particular hardware and a compromise with other features that require memory such as WiFI. If you need more slots and are comfortable with code changes you can adjust this by changing MAX_LOCOS in “DCC.h”, knowing that each new slot will take approximately 8 bytes of memory. The <strong>&lt;D RAM&gt;</strong> command will display the amount of free memory. If you fill the available slots, the “Forget Locos” command (<strong>&lt;- [CAB]&gt;</strong>) will free up unused locos. Currently there is no automatic purging of unused locos. <br /> <br /></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;c&gt;</span></code></p></td>
-<td><p><strong>Request Current on the Track(s)</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> <strong>&lt;c ˮCurrentMAINˮ current C ˮMilliˮ ˮ0ˮ max_ma ˮ1ˮ trip_ma&gt;</strong> <br /> CurrentMAIN: Static text for software like JMRI <br /> current - Current in MilliAmps <br /> C - Designator to signify this is a current meter (V would be for voltage) <br /> Milli - Unit of measure for external software with a meter like JMRI (Milli, Kilo, etc.) <br /> 0 - numbered parameter for external software (1,2,3, etc.) <br /> max_ma - The maximum current handling of the motor controller in MilliAmps <br /> 1 - number parameter for external software (we use 2 parameters here, 0 and 1) <br /> trip_ma - The overcurrent limit that will trip the software circuit breaker in mA <br /> <br /> <em>Version Introduced: ??.</em> <br /></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code></p></td>
-<td><p><strong>Requests the DCC-EX version and hardware info, along with listing defined turnouts.</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> <strong>&lt;iDCCEX version / microprocessorType / MotorControllerType / buildNumber&gt;</strong> <br /> (repeated for each defined Turnout/Point): <strong>&lt;H id state&gt;</strong> <br /> <br /> version: Command Station version <br /> microprocessorType:  microprocessor type (e.g. MEGA) <br /> MotorControllerType:  Motor controller type (e.g. SATNDARD_MOTOR_SHIELD) <br /> buildNumber:  Command Station build number <br /> id: unique identifier for the Turnout/Point <br /> state:  <br />  1=thrown  <br />  0=Closed <br /> <br /></p></td>
+<td><p><strong>Requests the number of supported cabs(locos)</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> <strong>&lt;# noCabs&gt;</strong> <br /> <strong>noCabs:</strong> maximum number of Cabs(Locos) supported by the command station <br /> <br /> <br /> <em>Notes:</em> <br /> This will display the number of available cab slots. This will typically be <strong>&lt;# 20&gt;</strong>, <strong>&lt;# 30&gt;</strong>, or <strong>&lt;# 50&gt;</strong> depending on how much memory your EX‑CommandStation has available.  <br /> This is a design limit based on the memory limitations of the particular hardware and a compromise with other features that require memory such as WiFI. If you need more slots and are comfortable with code changes you can adjust this by changing MAX_LOCOS in “DCC.h”, knowing that each new slot will take approximately 8 bytes of memory. The <strong>&lt;D RAM&gt;</strong> command will display the amount of free memory. If you fill the available slots, the “Forget Locos” command (<strong>&lt;- [CAB]&gt;</strong>) will free up unused locos. Currently there is no automatic purging of unused locos. <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
-<p>—</p>
 </section>
 <section id="writing-cvs-program-on-the-main">
 <h3><a class="toc-backref" href="#id8" role="doc-backlink">Writing CVs - Program on the main</a><a class="headerlink" href="#writing-cvs-program-on-the-main" title="Permalink to this heading"></a></h3>
@@ -767,17 +761,13 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;b</span> <span class="pre">address</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">value&gt;</span></code></p></td>
-<td><p><strong>Write CV bit on main track</strong> <br /> <br /> <em>Parameters:</em> <br /> address: DCC Address of the decoder/loco <br /> CV: CV number <br /> bit: ???  <br /> value: value to change the CV to <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+<td><p><strong>Write CV bit on main track</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>address:</strong> DCC Address of the decoder/loco <br /> <strong>cv:</strong> CV number <br /> <strong>bit:</strong> ???  <br /> <strong>value:</strong> value to change the CV to <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;M</span> <span class="pre">register</span> <span class="pre">hex1</span> <span class="pre">hex2</span> <span class="pre">[hex3</span> <span class="pre">[hex4</span> <span class="pre">[hex5]]]&gt;</span></code></p></td>
-<td><p><strong>Write a DCC packet the MAIN track</strong> <br /> <br /> <em>Parameters:</em> <br /> register: an internal register number, from 0 through MAX_MAIN_REGISTERS (inclusive), to write (if REGISTER=0) or write and store (if REGISTER&gt;**0) the packet <br /> byte1:  first hexadecimal byte in the packet <br /> byte2:  second hexadecimal byte in the packet <br /> byte3:  optional third hexadecimal byte in the packet <br /> byte4:  optional fourth hexadecimal byte in the packet <br /> byte5:  optional fifth hexadecimal byte in the packet <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;w</span> <span class="pre">address</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code></p></td>
-<td><p><strong>Write CV on main track</strong> <br /> <br /> <em>Parameters:</em> <br /> address: DCC Address of the decoder/loco <br /> cv: CV number <br /> value: value to change the CV to <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;w</span> <span class="pre">address</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code></p></td>
+<td><p><strong>Write CV on main track</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>address:</strong> DCC Address of the decoder/loco <br /> <strong>cv:</strong> CV number <br /> <strong>value:</strong> value to change the CV to <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
-<p>—</p>
 </section>
 <section id="reading-writing-cvs-programming-track">
 <h3><a class="toc-backref" href="#id9" role="doc-backlink">Reading/Writing CVs - Programming track</a><a class="headerlink" href="#reading-writing-cvs-programming-track" title="Permalink to this heading"></a></h3>
@@ -792,39 +782,38 @@
 </tr>
 </thead>
 <tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;R</span> <span class="pre">cv&gt;</span></code></p></td>
+<td><p><strong>Read CV</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>cv:</strong> CV number <br /> <br /> <em>Response:</em> <br /> <strong>&lt;r cv value&gt;</strong> <br /> <strong>cv:</strong> CV number <br /> <strong>value:</strong> one of <br />  value of the CV <br />  -1: if the write failed <br /> <br /></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code></p></td>
+<td><p><strong>Read DCC decoder address</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> <strong>&lt;r -cab&gt;</strong> <br /> <strong>cab:</strong> <br />  DCC Address of the decoder/loco <br />  -1 = failed read <br /> <br /> e.g. <br /> Response (successful): <strong>&lt;r cab&gt;</strong> <br /> Response (fail): <strong>&lt;r -1&gt;</strong> <br /> <br /></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">onOff&gt;</span></code></p></td>
+<td><p><strong>Verify/Read bit of CV with guessed value</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>cv:</strong> CV number <br /> <strong>bit:</strong> bit to verify in the CV <br /> <strong>onOff:</strong> one of <br />  1=on  <br />  0=off <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code></p></td>
+<td><p><strong>Verify/Read of CV with guessed value</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>cv:</strong> CV number <br /> <strong>value:</strong>  value to verify <br /> <br /> <em>Response:</em> <br /> <strong>&lt;v cv value&gt;</strong> <br /> <strong>cv:</strong> CV number <br /> <strong>value:</strong> one of <br />  actual value of the CV <br />  -1: if the write failed <br /> <br /> <em>Notes:</em> <br /> Additional Notes <br /> <br /></p></td>
+</tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;B</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">onOff&gt;</span></code></p></td>
-<td><p><strong>Write bit to CV</strong> <br /> <br /> <em>Parameters:</em> <br /> cv: CV number <br /> bit: bit to change in the CV <br /> onOff:  <br />  1=on  <br />  0=off <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+<td><p><strong>Write bit to CV</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>cv:</strong> CV number <br /> <strong>bit:</strong> bit to change in the CV <br /> <strong>onOff:</strong> one of  <br />  1=on  <br />  0=off <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;B</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">value</span> <span class="pre">callbacknum</span> <span class="pre">callbacksub&gt;</span></code></p></td>
-<td><p><strong>Deprecated, please use &lt;W cv value&gt; instead</strong> <br /> <br /> <strong>Deprecated</strong> <br /> <em>Parameters:</em> <br /> cv: CV to write <br /> bit: bit of the CV to change <br /> value: value to chnage the bit of CV to <br /> callbacknum: ??? <br /> callbacksub: ??? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /> <em>Version Deprecated: ???</em> <br /></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">cv</span> <span class="pre">value</span> <span class="pre">&gt;</span></code></p></td>
+<td><p><strong>Write CV</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>cv:</strong> CV number <br /> <strong>value:</strong> value to change the CV to <br /> <br /> <em>Response:</em> <br /> <strong>&lt;w cv value&gt;</strong> <br /> <strong>cv:</strong> CV number <br /> <strong>value:</strong> one of <br />  value CV was changed to <br />  -1: if the write failed <br /> <br /></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;P</span> <span class="pre">register</span> <span class="pre">hex1</span> <span class="pre">hex2</span> <span class="pre">[hex3</span> <span class="pre">[hex4</span> <span class="pre">[hex5]]]&gt;</span></code></p></td>
-<td><p><strong>Writes a DCC packet to the PROG track</strong> <br /> <br /> <em>Parameters:</em> <br /> register: an internal register number, from 0 through MAX_MAIN_REGISTERS (inclusive), to write (if REGISTER=0) or write and store (if REGISTER&gt;**0) the packet <br /> byte1:  first hexadecimal byte in the packet <br /> byte2:  second hexadecimal byte in the packet <br /> byte3:  optional third hexadecimal byte in the packet <br /> byte4:  optional fourth hexadecimal byte in the packet <br /> byte5:  optional fifth hexadecimal byte in the packet <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">address&gt;</span></code></p></td>
+<td><p><strong>Write DCC address to cab (loco)</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>address:</strong> DCC Address of the decoder/loco <br /> <br /> <em>Response:</em> <br /> <strong>&lt;w address&gt;</strong> <br /> <strong>address:</strong> one of <br />  DCC Address of the decoder/loco <br />  -1 = failed read <br /> <br /> Response (successful): <strong>&lt;w cab&gt;</strong> <br /> Response (fail): <strong>&lt;w -1&gt;</strong> <br /> <br /> <em>Notes:</em> <br /> Writes, and then verifies, the address to decoder of an engine on the programming track. This involves clearing any consist and automatically setting a long or short address. This is an easy way to put a loco in a known state to test for issues like not responding to throttle commands when it is on the main track. <br /> <br /></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;R</span> <span class="pre">cv&gt;</span></code></p></td>
-<td><p><strong>Read CV</strong> <br /> <br /> <em>Parameters:</em> <br /> cv: CV number <br /> <br /> <em>Response:</em> <br /> <strong>&lt;r cv value&gt;</strong> <br /> cv: CV number <br /> value: one of <br />  value of the CV <br />  -1: if the write failed <br /> <br /></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;P</span> <span class="pre">register</span> <span class="pre">hex1</span> <span class="pre">hex2</span> <span class="pre">[hex3</span> <span class="pre">[hex4</span> <span class="pre">[hex5]]]&gt;</span></code></p></td>
+<td><p><strong>Writes a DCC packet to the PROG track</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>register:</strong> an internal register number, from 0 through MAX_MAIN_REGISTERS (inclusive), to write (if REGISTER=0) or write and store (if REGISTER&gt;**0) the packet <br /> <strong>byte1:</strong>  first hexadecimal byte in the packet <br /> <strong>byte2:</strong>  second hexadecimal byte in the packet <br /> <strong>byte3:</strong>  optional third hexadecimal byte in the packet <br /> <strong>byte4:</strong>  optional fourth hexadecimal byte in the packet <br /> <strong>byte5:</strong>  optional fifth hexadecimal byte in the packet <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code></p></td>
-<td><p><strong>Read DCC decoder address</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> <strong>&lt;r -cab&gt;</strong> <br /> cab:  <br />  DCC Address of the decoder/loco <br />  -1 = failed read <br /> <br /> e.g. <br /> Response (successful): <strong>&lt;r cab&gt;</strong> <br /> Response (fail): <strong>&lt;r -1&gt;</strong> <br /> <br /></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">onOff&gt;</span></code></p></td>
-<td><p><strong>Verify/Read bit of CV with guessed value</strong> <br /> <br /> <em>Parameters:</em> <br /> cv: CV number <br /> bit: bit to verify in the CV <br /> onOff:  <br />  1=on  <br />  0=off <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code></p></td>
-<td><p><strong>Verify/Read of CV with guessed value</strong> <br /> <br /> <em>Parameters:</em> <br /> cv: CV number <br /> value:  value to verify <br /> <br /> <em>Response:</em> <br /> <strong>&lt;v cv value&gt;</strong> <br /> cv: CV number <br /> value: one of <br />  actual value of the CV <br />  -1: if the write failed <br /> <br /> <em>Notes:</em> <br /> Additional Notes <br /> <br /></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">address&gt;</span></code></p></td>
-<td><p><strong>Write DCC address to cab (loco)</strong> <br /> <br /> <em>Parameters:</em> <br /> address: DCC Address of the decoder/loco <br /> <br /> <em>Response:</em> <br /> <strong>&lt;w address&gt;</strong> <br /> address: one of <br />  DCC Address of the decoder/loco <br />  -1 = failed read <br /> <br /> Response (successful): <strong>&lt;w cab&gt;</strong> <br /> Response (fail): <strong>&lt;w -1&gt;</strong> <br /> <br /> <em>Notes:</em> <br /> Writes, and then verifies, the address to decoder of an engine on the programming track. This involves clearing any consist and automatically setting a long or short address. This is an easy way to put a loco in a known state to test for issues like not responding to throttle commands when it is on the main track. <br /> <br /></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">cv</span> <span class="pre">value</span> <span class="pre">&gt;</span></code></p></td>
-<td><p><strong>Write CV</strong> <br /> <br /> <em>Parameters:</em> <br /> cv: CV number <br /> value: value to change the CV to <br /> <br /> <em>Response:</em> <br /> <strong>&lt;w cv value&gt;</strong> <br /> cv: CV number <br /> value: one of <br />  value CV was changed to <br />  -1: if the write failed <br /> <br /></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;B</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">value</span> <span class="pre">callbacknum</span> <span class="pre">callbacksub&gt;</span></code></p></td>
+<td><p><strong>Deprecated, please use &lt;W cv value&gt; instead</strong> <br /> <br /> <span style="font-weight: bold; font-style: italic; color:red">Deprecated</span> <br /> <em>Parameters:</em> <br /> <strong>cv:</strong> CV to write <br /> <strong>bit:</strong> bit of the CV to change <br /> <strong>value:</strong> value to chnage the bit of CV to <br /> <strong>callbacknum:</strong> ??? <br /> <strong>callbacksub:</strong> ??? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /> <em>Version Deprecated: ???</em> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">cv</span> <span class="pre">value</span> <span class="pre">callbacknum</span> <span class="pre">callbacksub&gt;</span></code></p></td>
-<td><p><strong>Deprecated, please use &lt;w cv value&gt; instead</strong> <br /> <br /> <strong>Deprecated</strong> <br /> <em>Parameters:</em> <br /> cv: CV to write <br /> value: value to change the CV to <br /> callbacknum: ??? <br /> callbacksub: ??? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /> <em>Version Deprecated: ???</em> <br /></p></td>
+<td><p><strong>Deprecated, please use &lt;w cv value&gt; instead</strong> <br /> <br /> <span style="font-weight: bold; font-style: italic; color:red">Deprecated</span> <br /> <em>Parameters:</em> <br /> <strong>cv:</strong> CV to write <br /> <strong>value:</strong> value to change the CV to <br /> <strong>callbacknum:</strong> ??? <br /> <strong>callbacksub:</strong> ??? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /> <em>Version Deprecated: ???</em> <br /></p></td>
 </tr>
 </tbody>
 </table>
-<p>—</p>
 </section>
 <section id="writing-cvs-programming-track-tuning">
 <h3><a class="toc-backref" href="#id10" role="doc-backlink">Writing CVs - Programming track - Tuning</a><a class="headerlink" href="#writing-cvs-programming-track-tuning" title="Permalink to this heading"></a></h3>
@@ -839,24 +828,14 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">LIMIT</span> <span class="pre">mA&gt;</span></code></p></td>
-<td><p><strong>Override ACK processing mA pulse size</strong> <br /> <br /> <em>Parameters:</em> <br /> mA: millamps <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">RETRY</span> <span class="pre">x&gt;</span></code></p></td>
+<td><p><strong>Adjust ACK retries to number x (default is 2)</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>x:</strong> ??? <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MAX</span> <span class="pre">uS&gt;</span></code></p></td>
-<td><p><strong>Override ACK processing max pulse width</strong> <br /> <br /> <em>Parameters:</em> <br /> uS: microseconds <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MIN</span> <span class="pre">uS&gt;</span></code></p></td>
-<td><p><strong>Override ACK processing minimum pulse width</strong> <br /> <br /> <em>Parameters:</em> <br /> uS: microseconds <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">RETRY</span> <span class="pre">x&gt;</span></code></p></td>
-<td><p><strong>Adjust ACK retries to number x (default is 2)</strong> <br /> <br /> <em>Parameters:</em> <br /> x: ??? <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code></p></td>
 <td><p><strong>Override 250mA prog track limit while idle</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
-<p>—</p>
 </section>
 <section id="dcc-accessories">
 <h3><a class="toc-backref" href="#id11" role="doc-backlink">DCC Accessories</a><a class="headerlink" href="#dcc-accessories" title="Permalink to this heading"></a></h3>
@@ -872,14 +851,13 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">addr</span> <span class="pre">subaddr</span> <span class="pre">activate&gt;</span></code></p></td>
-<td><p><strong>Control an Accessory Decoder</strong> <br /> <br /> <em>Parameters:</em> <br /> addr: the primary address of the decoder controlling the turnout (0-511) <br /> subaddr: the subaddress of the decoder controlling this turnout (0-3) <br /> activate:  <br />  0=off, deactivate, straight or Closed  <br />  1=on, activate, turn or thrown <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+<td><p><strong>Control an Accessory Decoder</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>addr:</strong> the primary address of the decoder controlling the turnout (0-511) <br /> <strong>subaddr:</strong> the subaddress of the decoder controlling this turnout (0-3) <br /> <strong>activate:</strong> one of  <br />  0=off, deactivate, straight or Closed  <br />  1=on, activate, turn or thrown <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">linear_addr</span> <span class="pre">activate&gt;</span></code></p></td>
-<td><p><strong>Control an Accessory Decoder</strong> <br /> <br /> <em>Parameters:</em> <br /> linear_addr: linear address of the decoder controlling this turnout (1-2044) <br /> activate:  <br />  0=off, deactivate, straight or Closed  <br />  1=on, activate, turn or thrown <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+<td><p><strong>Control an Accessory Decoder</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>linear_addr:</strong> linear address of the decoder controlling this turnout (1-2044) <br /> <strong>activate:</strong> one of  <br />  0=off, deactivate, straight or Closed  <br />  1=on, activate, turn or thrown <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
-<p>—</p>
 </section>
 <section id="sensors">
 <h3><a class="toc-backref" href="#id12" role="doc-backlink">Sensors</a><a class="headerlink" href="#sensors" title="Permalink to this heading"></a></h3>
@@ -898,11 +876,10 @@
 <td><p><strong>Lists Status of all sensors</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> Repeat for each defined sensor: <strong>&lt;q id&gt;</strong> <br /> <br /> e.g. <br /> Response (successful) Repeat for each defined sensor: <strong>&lt;q id&gt;</strong> <br /> Response (fail): N/A <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code></p></td>
-<td><p><strong>Requests a definition list of all defined sensors</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> Repeated for each defined sensor: <strong>&lt;Q id vpin pullup&gt;</strong> <br /> id: identifier of the Sensor. (0-32767) <br /> vpin pin number of the input to be controlled by the sensor object <br /> pullup: one of <br />  1=Use pull-up resistor ACTIVE=LOW  <br />  0=don’t use pull-up resistor ACTIVE=HIGH <br /> <br /> e.g. <br /> Response (successful) Repeated for each defined sensor: <strong>&lt;Q id vpin pullup&gt;</strong> <br /> Response (fail): <strong>&lt;X&gt;</strong> <br /> <br /></p></td>
+<td><p><strong>Requests a definition list of all defined sensors</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> Repeated for each defined sensor: <strong>&lt;Q id vpin pullup&gt;</strong> <br /> <strong>id:</strong> identifier of the Sensor. (0-32767) <br /> <strong>vpin:</strong> pin number of the input to be controlled by the sensor object <br /> <strong>pullup:</strong> one of <br />  1=Use pull-up resistor ACTIVE=LOW  <br />  0=don’t use pull-up resistor ACTIVE=HIGH <br /> <br /> e.g. <br /> Response (successful) Repeated for each defined sensor: <strong>&lt;Q id vpin pullup&gt;</strong> <br /> Response (fail): <strong>&lt;X&gt;</strong> <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
-<p>—</p>
 </section>
 <section id="wifi-control">
 <h3><a class="toc-backref" href="#id13" role="doc-backlink">WiFi Control</a><a class="headerlink" href="#wifi-control" title="Permalink to this heading"></a></h3>
@@ -917,15 +894,17 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;+command&gt;</span></code></p></td>
-<td><p><strong>Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)</strong> <br /> <br /> <em>Parameters:</em> <br /> command: ??? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code></p></td>
 <td><p><strong>Force the Command Station into “WiFi Connected” mode</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;+command&gt;</span></code></p></td>
+<td><p><strong>Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>command:</strong> what you want to append after AT+ and send to the AT processor. <br /> <br /> <em>Response:</em> <br /> <br /> <br /> <em>Notes:</em> <br /> <strong>&lt;+X&gt;</strong> would send AT+X to the ESP <br /> <br /></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;+&gt;</span></code></p></td>
+<td><p><strong>Switch to direct communication with WiFi AT processor</strong> <br /> <br /> <em>Parameters:</em> <br /> None <br /> <br /> <em>Response:</em> <br /> All input and output from this point is the direct communication with the Wifi AT software this mode is ended by typing ! (exclamationmark). <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
-<p>—</p>
 </section>
 <section id="track-manager-formally-dc-district">
 <h3><a class="toc-backref" href="#id14" role="doc-backlink">Track Manager (Formally DC-District)</a><a class="headerlink" href="#track-manager-formally-dc-district" title="Permalink to this heading"></a></h3>
@@ -942,14 +921,13 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">trackletter</span> <span class="pre">mode</span> <span class="pre">[cab]&gt;</span></code></p></td>
-<td><p><strong>Configure Track Manager  Note: since only one channel can be PROG, changing a second channel to PROG, will force the other to OFF</strong> <br /> <br /> <em>Parameters:</em> <br /> trackletter: A through H and represents one of the outputs of the/a motor shield. <br /> mode: one of  <br />  MAIN <br />  PROG <br />  DC <br />  DCX = DC reversed polarity <br />  OFF (DCX is DC with reversed polarity) <br /> id: the cab ID required when specifying DC or DCX <br /> <br /> <em>Response:</em> <br /> (for each track/channel that has changed) <strong>&lt;= trackletter state cab&gt;</strong> <br /> <br /> trackletter: A-H <br /> state:  PROG, MAIN DC, DCX <br /> cab: cab(loco) equivalent to a fake DCC Address <br /> <br /></p></td>
+<td><p><strong>Configure Track Manager Note: since only one channel can be PROG, changing a second channel to PROG, will force the other to OFF</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>trackletter:</strong> A through H and represents one of the outputs of the/a motor shield. <br /> <strong>mode:</strong> one of  <br />  MAIN <br />  PROG <br />  DC <br />  DCX = DC reversed polarity <br />  OFF (DCX is DC with reversed polarity) <br /> <strong>id:</strong> the cab ID. <em>Required when specifying DC or DCX</em> <br /> <br /> <em>Response:</em> <br /> (for each track/channel that has changed) <strong>&lt;= trackletter state cab&gt;</strong> <br /> <br /> <strong>trackletter:</strong> A-H <br /> <strong>state:</strong>  PROG, MAIN DC, DCX <br /> <strong>cab:</strong> cab(loco) equivalent to a fake DCC Address <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;=&gt;</span></code></p></td>
-<td><p><strong>Request the current Track Manager configuration</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> for each track/channel supported by the motor shield <strong>&lt;= trackletter state cab&gt;</strong> <br /> <br /> trackletter: A-H <br /> state:  PROG, MAIN DC, DCX <br /> cab: cab(loco) equivalent to a fake DCC Address <br /> <br /></p></td>
+<td><p><strong>Request the current Track Manager configuration</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> for each track/channel supported by the motor shield <strong>&lt;= trackletter state cab&gt;</strong> <br /> <br /> <strong>trackletter:</strong> A-H <br /> <strong>state:</strong> PROG, MAIN DC, DCX <br /> <strong>cab:</strong> cab(loco) equivalent to a fake DCC Address <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
-<p>—</p>
 </section>
 <section id="ex-rail">
 <h3><a class="toc-backref" href="#id15" role="doc-backlink">EX-RAIL</a><a class="headerlink" href="#ex-rail" title="Permalink to this heading"></a></h3>
@@ -964,32 +942,20 @@
 </tr>
 </thead>
 <tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">KILL</span> <span class="pre">taskId&gt;</span></code></p></td>
+<td><p><strong>Kills a currently running script task by ID (use to list task IDs)</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>taskId:</strong> ?? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">LATCH</span> <span class="pre">sensorId&gt;</span></code></p></td>
+<td><p><strong>Lock sensor ON, preventing external influence</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>sensorId:</strong>  ??  valid ids and in the range 0-255 <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /> <strong>&lt;* Opcode=L params=2 *&gt;</strong> <br /> <strong>&lt;* p[0]=-7906 (0xE11E) *&gt;</strong> <br /> <strong>&lt;* p[1]=24 (0x18) *&gt;</strong> <br /> <strong>&lt;X&gt;</strong> <br /> <br /></p></td>
+</tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">FREE</span> <span class="pre">blockId&gt;</span></code></p></td>
-<td><p><strong>Manually frees a virtual track Block</strong> <br /> <br /> <em>Parameters:</em> <br /> block_id: ?? valid ids and in the range 0-255 <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+<td><p><strong>Manually frees a virtual track Block</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>blockId:</strong> ?? valid ids and in the range 0-255 <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">KILL</span> <span class="pre">taskId&gt;</span></code></p></td>
-<td><p><strong>Kills a currently running script task by ID (use to list task IDs)</strong> <br /> <br /> <em>Parameters:</em> <br /> task_id: ?? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">RESERVE</span> <span class="pre">blockId&gt;</span></code></p></td>
+<td><p><strong>Manually reserves a virtual track Block</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>blockId:</strong> ?? valid ids and in the range 0-255 <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">LATCH</span> <span class="pre">sensorId&gt;</span></code></p></td>
-<td><p><strong>Lock sensor ON, preventing external influence</strong> <br /> <br /> <em>Parameters:</em> <br /> sensor_id:  ??  valid ids and in the range 0-255 <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /> <strong>&lt;* Opcode=L params=2 *&gt;</strong> <br /> <strong>&lt;* p[0]=-7906 (0xE11E) *&gt;</strong> <br /> <strong>&lt;* p[1]=24 (0x18) *&gt;</strong> <br /> <strong>&lt;X&gt;</strong> <br /> <br /></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">PAUSE&gt;</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">PAUSE&gt;</span></code></p></td>
 <td><p><strong>Pauses ALL EX-RAIL automation actvites, including sending an E-STOP to all locos.</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">RESERVE</span> <span class="pre">blockId&gt;</span></code></p></td>
-<td><p><strong>Manually reserves a virtual track Block</strong> <br /> <br /> <em>Parameters:</em> <br /> block_id: ?? valid ids and in the range 0-255 <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">RESUME&gt;</span></code></p></td>
-<td><p><strong>Resumes ALL EX-RAIL automation actvites, and resumes all locos at the same speed at which they were paused.</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">ROUTES&gt;</span></code></p></td>
-<td><p><strong>Request the Routes &amp; Automations control list in wiThrottle Protocol format.</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> <strong>&lt;X&gt;</strong> <br /> <br /></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">START</span> <span class="pre">[locoAddr]</span> <span class="pre">routeId&gt;</span></code></p></td>
-<td><p><strong>Starts a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence</strong> <br /> <br /> <em>Parameters:</em> <br /> locoAddr: DCC address of the loco <br /> routeId: id of the rout to start <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">UNLATCH</span> <span class="pre">sensorId&gt;</span></code></p></td>
-<td><p><strong>Unlock sensor, returning to current external state</strong> <br /> <br /> <em>Parameters:</em> <br /> sensor_id: ??  valid ids and in the range 0-255 <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /> <strong>&lt;* Opcode=U params=2 *&gt;</strong> <br /> <strong>&lt;* p[0]=23772 (0x5CDC) *&gt;</strong> <br /> <strong>&lt;* p[1]=24 (0x18) *&gt;</strong> <br /> <strong>&lt;X&gt;</strong> <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;/&gt;</span></code></p></td>
 <td><p><strong>Request EX-RAIL running task information.</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> <strong>&lt;* EXRAIL STATUS |BR|
@@ -999,12 +965,23 @@
 |_| RED[110] |BR|
 |_| RED[113] *&gt;</strong> <br /> <br /> <br /> <br /></p></td>
 </tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">ROUTES&gt;</span></code></p></td>
+<td><p><strong>Request the Routes &amp; Automations control list in wiThrottle Protocol format.</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> <strong>&lt;X&gt;</strong> <br /> <br /></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">RESUME&gt;</span></code></p></td>
+<td><p><strong>Resumes ALL EX-RAIL automation actvites, and resumes all locos at the same speed at which they were paused.</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">START</span> <span class="pre">[locoAddr]</span> <span class="pre">routeId&gt;</span></code></p></td>
+<td><p><strong>Starts a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence</strong> <br /> <br /> <em>Parameters:</em> <br /> locoAddr: DCC address of the loco <br /> routeId: id of the rout to start <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">UNLATCH</span> <span class="pre">sensorId&gt;</span></code></p></td>
+<td><p><strong>Unlock sensor, returning to current external state</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>sensor_id:</strong> ??  valid ids and in the range 0-255 <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /> <strong>&lt;* Opcode=U params=2 *&gt;</strong> <br /> <strong>&lt;* p[0]=23772 (0x5CDC) *&gt;</strong> <br /> <strong>&lt;* p[1]=24 (0x18) *&gt;</strong> <br /> <strong>&lt;X&gt;</strong> <br /> <br /></p></td>
+</tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">EXRAIL</span> <span class="pre">state&gt;</span></code></p></td>
-<td><p><strong>When the CommandStation is connected to a serial monitor, EX-RAIL script logging can be Enabled or Disabled</strong> <br /> <br /> <em>Parameters:</em> <br /> state: one of <br />  ON <br />  OFF <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /></p></td>
+<td><p><strong>When the CommandStation is connected to a serial monitor, EX-RAIL script logging can be Enabled or Disabled</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>state:</strong> one of <br />  ON <br />  OFF <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
-<p>—</p>
 </section>
 </section>
 <section id="configuring-the-ex-commandstation">
@@ -1022,34 +999,34 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">addr</span> <span class="pre">subaddr&gt;</span></code></p></td>
-<td><p><strong>Legacy command format for defining a turnout on a DCC Accessory Decoder with the specified address and subaddress.</strong> <br /> <br /> <strong>Deprecated</strong> <br /> <em>Parameters:</em> <br /> id: ??? <br /> addr: ??? <br /> subaddr: ??? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /> <em>Version Deprecated: ???</em> <br /></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">addr</span> <span class="pre">subaddr&gt;</span></code></p></td>
+<td><p><strong>Define turnout on a DCC Accessory Decoder with the specified address and subaddress</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>id:</strong> identifier of the Turnout/Point <br /> <strong>addr:</strong> ??? <br /> <strong>subaddr:</strong> ??? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">addr</span> <span class="pre">subaddr&gt;</span></code></p></td>
-<td><p><strong>Define turnout on a DCC Accessory Decoder with the specified address and subaddress</strong> <br /> <br /> <em>Parameters:</em> <br /> id: identifier of the Turnout/Point <br /> addr:: ??? <br /> subaddr: ??? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">linearAddr&gt;</span></code></p></td>
+<td><p><strong>Define turnout on a DCC Accessory Decoder with the specified linear address</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>id:</strong> identifier of the Turnout/Point <br /> <strong>linearAddr:</strong> ??? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">linearAddr&gt;</span></code></p></td>
-<td><p><strong>Define turnout on a DCC Accessory Decoder with the specified linear address</strong> <br /> <br /> <em>Parameters:</em> <br /> id: identifier of the Turnout/Point <br /> linearAddr: ??? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">VPIN</span> <span class="pre">vpin&gt;</span></code></p></td>
+<td><p><strong>Define turnout output on specified vpin.</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>id:</strong> unique Id for the servo <br /> <strong>vpin:</strong> vpin to which the servo is attached <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /> <em>Notes:</em> <br /> This may be used for controlling Arduino digital output pins or pins on an I/O Extender. <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">thrownPos</span> <span class="pre">closedPos</span> <span class="pre">profile&gt;</span></code></p></td>
-<td><p><strong>Define turnout servo (PWM) on specified vpin  Note: Servos are not supported on the minimal HAL (Uno or Nano target).</strong> <br /> <br /> <em>Parameters:</em> <br /> id: unique Id for the servo <br /> vpin: vpin to which the servo is attached <br /> thrownPos: position for the servo when thrown <br /> closedPos: position for the servo when closed <br /> profile: one of <br />  0=Instant,  <br />  1=Fast (0.5 sec),  <br />  2=Medium (1 sec),  <br />  3=Slow (2 sec) and  <br />  4=Bounce (subject to revision). <br /> <br /> <em>Response:</em> <br /> <strong>&lt;X|O&gt;</strong> <br /> <br /> Response (successful): <strong>&lt;O&gt;</strong> <br /> Response (fail): <strong>&lt;X&gt;</strong> <br /> <br /> <em>Notes:</em> <br /> The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM). The limits for an SG90 servo are about 102 to 490. The standard range of 1ms to 2ms pulses correspond to values 205 to 409.
-<br /> Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec) and 4=Bounce (subject to revision).
-<br /> <br /></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">activePos</span>
-<span class="pre">inactivePos&gt;</span></code></p></td>
-<td><p><strong>Legacy command format for defining a turnout servo on specified vpin. The positions are the same as for the turnout servo command above. Note: Servos are not supported on the minimal HAL (Uno or Nano target).</strong> <br /> <br /> <strong>Deprecated</strong> <br /> <em>Parameters:</em> <br /> id: identifier of the Turnout/Point <br /> vpin: pin number of the input to be controlled by the sensor object <br /> activePos: ??? <br /> inactivePos: ??? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /> <em>Version Deprecated: ???</em> <br /></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">VPIN</span> <span class="pre">vpin&gt;</span></code></p></td>
-<td><p><strong>Define turnout output on specified vpin.</strong> <br /> <br /> <em>Parameters:</em> <br /> id: unique Id for the servo <br /> vpin: vpin to which the servo is attached <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /> <em>Notes:</em> <br /> This may be used for controlling Arduino digital output pins or pins on an I/O Extender. <br /> <br /></p></td>
+<td><p><strong>Define turnout servo (PWM) on specified vpin Note: Servos are not supported on the minimal HAL (Uno or Nano target).</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>id:</strong> unique Id for the servo <br /> <strong>vpin:</strong> vpin to which the servo is attached <br /> <strong>thrownPos:</strong> position for the servo when thrown <br /> <strong>closedPos:</strong> position for the servo when closed <br /> <strong>profile:</strong> one of <br />  0=Instant,  <br />  1=Fast (0.5 sec),  <br />  2=Medium (1 sec),  <br />  3=Slow (2 sec) and  <br />  4=Bounce (subject to revision). <br /> <br /> <em>Response:</em> <br /> <strong>&lt;X|O&gt;</strong> <br /> <br /> Response (successful): <strong>&lt;O&gt;</strong> <br /> Response (fail): <strong>&lt;X&gt;</strong> <br /> <br /> <em>Notes:</em> <br /> The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM). The limits for an SG90 servo are about 102 to 490. The standard range of 1ms to 2ms pulses correspond to values 205 to 409. <br /> Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec) and 4=Bounce (subject to revision). <br /> <br /> <br /></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id&gt;</span></code></p></td>
-<td><p><strong>Define VPIN turnout</strong> <br /> <br /> <em>Parameters:</em> <br /> id: unique Id for the servod <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+<td><p><strong>Deletes a turnout by Id.</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>id:</strong> unique Id for the servod <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">value</span> <span class="pre">[profile]&gt;</span></code></p></td>
+<td><p><strong>Set servo position to value on pin vpin.</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>vpin:</strong> vpin to which the servo is attached <br /> <strong>value:</strong>  position to mve the servo to <br /> <strong>profile:</strong>  one of <br />  0 = instant <br />  1 = fast <br />  2 = medium <br />  3 = slow <br />  4 = bounce <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">addr</span> <span class="pre">subaddr&gt;</span></code></p></td>
+<td><p><strong>Define a turnout on a DCC Accessory Decoder with the specified address and subaddress - Legacy command</strong> <br /> <br /> <span style="font-weight: bold; font-style: italic; color:red">Deprecated</span> <br /> <em>Parameters:</em> <br /> <strong>id:</strong> identifier of the Turnout/Point <br /> <strong>addr:</strong> ??? <br /> <strong>subaddr:</strong> ??? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /> <em>Version Deprecated: ???</em> <br /></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">activePos</span>
+<span class="pre">inactivePos&gt;</span></code></p></td>
+<td><p><strong>Define a turnout servo on specified vpin - Legacy command</strong> <br /> <br /> <span style="font-weight: bold; font-style: italic; color:red">Deprecated</span> <br /> <em>Parameters:</em> <br /> <strong>id:</strong> identifier of the Turnout/Point <br /> <strong>vpin:</strong> vpin of the input to be controlled by the sensor object <br /> <strong>activePos:</strong> ??? <br /> <strong>inactivePos:</strong> ??? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /> <em>Version Deprecated: ???</em> <br /> <em>Notes:</em> <br /> The positions are the same as for the turnout servo command above. Note: Servos are not supported on the minimal HAL (Uno or Nano target). <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
 <p>Once all turnout/points have been properly defined, you can use the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> (upper case E) command to store their definitions to EEPROM.</p>
-<p>—</p>
 </section>
 <section id="configuring-the-ex-commandstation-sensors">
 <h3><a class="toc-backref" href="#id18" role="doc-backlink">Configuring the EX-CommandStation - Sensors</a><a class="headerlink" href="#configuring-the-ex-commandstation-sensors" title="Permalink to this heading"></a></h3>
@@ -1065,15 +1042,14 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">pullup&gt;</span></code></p></td>
-<td><p><strong>Create a new sensor ID</strong> <br /> <br /> <em>Parameters:</em> <br /> id: identifier of the Sensor (0-32767) <br /> vpin: pin number of the input to be controlled by the sensor object <br /> pullup: one of  <br />  1=Use pull-up resistor ACTIVE=LOW  <br />  0=don’t use pull-up resistor ACTIVE=HIGH <br /> <br /> <em>Response:</em> <br /> <strong>&lt;O&gt;</strong> <br /> <br /> Response (successful): <strong>&lt;O&gt;</strong> <br /> Response (fail): ???? <br /> <br /> <em>Notes:</em> <br /> Once defined, the EX-CS will send a <strong>&lt;Q id&gt;</strong> response anytime the sensor is activated, and a <strong>&lt;q id&gt;</strong> response when deactivated. <br /> <br /></p></td>
+<td><p><strong>Create a new sensor ID</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>id:</strong> identifier of the Sensor (0-32767) <br /> <strong>vpin:</strong> vpin of the input to be controlled by the sensor object <br /> <strong>pullup:</strong> one of  <br />  1=Use pull-up resistor ACTIVE=LOW  <br />  0=don’t use pull-up resistor ACTIVE=HIGH <br /> <br /> <em>Response:</em> <br /> <strong>&lt;O&gt;</strong> <br /> <br /> Response (successful): <strong>&lt;O&gt;</strong> <br /> Response (fail): ???? <br /> <br /> <em>Notes:</em> <br /> Once defined, the EX-CS will send a <strong>&lt;Q id&gt;</strong> response anytime the sensor is activated, and a <strong>&lt;q id&gt;</strong> response when deactivated. <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id&gt;</span></code></p></td>
-<td><p><strong>Delete defined sensor</strong> <br /> <br /> <em>Parameters:</em> <br /> id: identifier of the Sensor (0-32767) <br /> <br /> <em>Response:</em> <br /> <strong>&lt;O|X&gt;</strong> <br /> <br /> Response (successful): <strong>&lt;O&gt;</strong> <br /> Response (fail): <strong>&lt;X&gt;</strong> <br /> <br /></p></td>
+<td><p><strong>Delete defined sensor</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>id:</strong> identifier of the Sensor (0-32767) <br /> <br /> <em>Response:</em> <br /> <strong>&lt;O|X&gt;</strong> <br /> <br /> Response (successful): <strong>&lt;O&gt;</strong> <br /> Response (fail): <strong>&lt;X&gt;</strong> <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
 <p>Once all sensors have been properly defined, you can use the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> (upper case E) command to store their definitions to EEPROM.</p>
-<p>—</p>
 </section>
 <section id="configuring-the-ex-commandstation-servos">
 <h3><a class="toc-backref" href="#id19" role="doc-backlink">Configuring the EX-CommandStation - Servos</a><a class="headerlink" href="#configuring-the-ex-commandstation-servos" title="Permalink to this heading"></a></h3>
@@ -1089,17 +1065,16 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id</span> <span class="pre">pin</span> <span class="pre">state&gt;</span></code></p></td>
-<td><p><strong>Creates a new sensor ID, with specified PIN and PULLUP</strong> <br /> <br /> <em>Parameters:</em> <br /> id: identifier of the Sensor (0-32767) <br /> pin: ??? <br /> state: one of <br />  0= ???   <br />  1=??? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+<td><p><strong>Creates a new sensor ID, with specified PIN and PULLUP</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>id:</strong> identifier of the Sensor (0-32767) <br /> <strong>pin:</strong> pin the sensor is connected to <br /> <strong>state:</strong> one of <br />  0= ???   <br />  1=??? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id&gt;</span></code></p></td>
-<td><p><strong>Deletes definition of sensor</strong> <br /> <br /> <em>Parameters:</em> <br /> id: identifier of the Sensor (0-32767) <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+<td><p><strong>Deletes definition of sensor</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>id:</strong> identifier of the Sensor (0-32767) <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
-<p>—</p>
 </section>
-<section id="outputs">
-<h3><a class="toc-backref" href="#id20" role="doc-backlink">Outputs</a><a class="headerlink" href="#outputs" title="Permalink to this heading"></a></h3>
+<section id="configuring-the-ex-commandstation-outputs">
+<h3><a class="toc-backref" href="#id20" role="doc-backlink">Configuring the EX-CommandStation - Outputs</a><a class="headerlink" href="#configuring-the-ex-commandstation-outputs" title="Permalink to this heading"></a></h3>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
 <col style="width: 25%" />
@@ -1112,20 +1087,19 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">pin</span> <span class="pre">iflag&gt;</span></code></p></td>
-<td><p><strong>Creates a new output ID, with specified PIN and IFLAG values</strong> <br /> <br /> <em>Parameters:</em> <br /> ifflag, bit 0: <br />  0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW) <br />  1 = inverted operation (ACTIVE=LOW / INACTIVE=HIGH) <br /> <br /> ifflag, bit 1: <br />  0 = state of pin restored on power-up to either ACTIVE or INACTIVE depending on state before power-down. <br />  1 = state of pin set on power-up, or when first created, to either ACTIVE of INACTIVE depending on IFLAG, bit 2 <br /> <br /> ifflag, bit 2:  <br />  0 = state of pin set to INACTIVE upon power-up or when first created <br />  1 = state of pin set to ACTIVE upon power-up or when first created <br /> <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+<td><p><strong>Creates a new output ID, with specified PIN and IFLAG values</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>id:</strong> identifier of the output <br /> <strong>pin:</strong> pin to which the output will be connected <br /> <strong>iflag:</strong> see below <br /> <br /> iflag, bit 0: <br />  0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW) <br />  1 = inverted operation (ACTIVE=LOW / INACTIVE=HIGH) <br /> iflag, bit 1: <br />  0 = state of pin restored on power-up to either ACTIVE or INACTIVE depending on state before power-down. <br />  1 = state of pin set on power-up, or when first created, to either ACTIVE of INACTIVE depending on IFLAG, bit 2 <br /> iflag, bit 2:  <br />  0 = state of pin set to INACTIVE upon power-up or when first created <br />  1 = state of pin set to ACTIVE upon power-up or when first created <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id&gt;</span></code></p></td>
+<td><p><strong>Deletes definition of output ID</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>id:</strong> identifier of the output to delete <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code></p></td>
+<td><p><strong>Lists all defined output pins</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">state&gt;</span></code></p></td>
-<td><p><strong>Sets output ID to either INACTIVE or ACTIVE state</strong> <br /> <br /> <em>Parameters:</em> <br /> id: ??? <br /> state:  <br />  0= ???  <br />  1= ??? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id&gt;</span></code></p></td>
-<td><p><strong>Deletes definition of output ID</strong> <br /> <br /> <em>Parameters:</em> <br /> id: ??? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code></p></td>
-<td><p><strong>Lists all defined output pins</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+<td><p><strong>Sets output ID to either INACTIVE or ACTIVE state</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>id:</strong> identifier of the output <br /> <strong>state:</strong> one of  <br />  0= ???  <br />  1= ??? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
-<p>—</p>
 </section>
 <section id="configuring-the-ex-commandstation-eeprom-management">
 <h3><a class="toc-backref" href="#id21" role="doc-backlink">Configuring the EX-CommandStation - EEPROM management</a><a class="headerlink" href="#configuring-the-ex-commandstation-eeprom-management" title="Permalink to this heading"></a></h3>
@@ -1143,15 +1117,14 @@
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">EEPROM&gt;</span></code></p></td>
 <td><p><strong>Diagnostic dump eeprom contents</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code></p></td>
-<td><p><strong>Store definitions to EEPROM</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> <strong>&lt;O&gt;</strong> <br /> <br /></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code></p></td>
 <td><p><strong>Erase ALL (turnouts, sensors, and outputs) from EEPROM</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> <strong>&lt;O&gt;</strong> <br /> <br /></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code></p></td>
+<td><p><strong>Store definitions to EEPROM</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> <strong>&lt;O&gt;</strong> <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
-<p>—</p>
 </section>
 <section id="configuring-the-ex-commandstation-diagnostic-programming-commands">
 <h3><a class="toc-backref" href="#id22" role="doc-backlink">Configuring the EX-CommandStation - Diagnostic programming commands</a><a class="headerlink" href="#configuring-the-ex-commandstation-diagnostic-programming-commands" title="Permalink to this heading"></a></h3>
@@ -1166,21 +1139,20 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">LIMIT</span> <span class="pre">mA&gt;</span></code></p></td>
-<td><p><strong>Sets the ACK limit</strong> <br /> <br /> <em>Parameters:</em> <br /> mA: currently limit in milliamps <br /> <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /> <em>Notes:</em> <br /> The Ack current limit is set according to the DCC standard(s) of 60mA. Most decoders send a quick back and forth current pulse to the motor to generate this ACK. However, some modern motors (N and Z scales) may not be able to draw that amount of current. You can adjust down this limit. Or, if for some reasons your acks seem to be too “trigger happy” you can make it less sensitive by raising this limit. <br /> <br /></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MAX</span> <span class="pre">µS&gt;</span></code></p></td>
-<td><p><strong>Sets the ACK pulse maximum</strong> <br /> <br /> <em>Parameters:</em> <br /> µS: ??? <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MIN</span> <span class="pre">µS&gt;</span></code></p></td>
-<td><p><strong>Sets the ACK pulse minimum</strong> <br /> <br /> <em>Parameters:</em> <br /> µS: ACK pulsedureation in milliseconds <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /> <em>Notes:</em> <br /> The NMRA specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so DCC-EX extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters. <br /> <br /></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">PROGBOOST&gt;</span></code></p></td>
 <td><p><strong>Override 250mA prog track limit while idle</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /> <em>Notes:</em> <br /> When the programming track is switched on with <strong>&lt;1&gt;</strong> or <strong>&lt;1 PROG&gt;</strong> it will normally be restricted to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. <strong>&lt;D PROGBOOST&gt;</strong> temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with <strong>&lt;0&gt;</strong> or <strong>&lt;0 PROG&gt;</strong> or the Command Station is reset. <br /> <br /></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">LIMIT</span> <span class="pre">mA&gt;</span></code></p></td>
+<td><p><strong>Sets the ACK limit</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>mA:</strong> currently limit in milliamps <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /> <em>Notes:</em> <br /> The Ack current limit is set according to the DCC standard(s) of 60mA. Most decoders send a quick back and forth current pulse to the motor to generate this ACK. However, some modern motors (N and Z scales) may not be able to draw that amount of current. You can adjust down this limit. Or, if for some reasons your acks seem to be too “trigger happy” you can make it less sensitive by raising this limit. <br /> <br /></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MAX</span> <span class="pre">µS&gt;</span></code></p></td>
+<td><p><strong>Sets the ACK pulse maximum</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>µS:</strong> ACK pulsedureation in milliseconds upper bound <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /> <em>Notes:</em> <br /> see MIN <br /> <br /></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">MIN</span> <span class="pre">µS&gt;</span></code></p></td>
+<td><p><strong>Sets the ACK pulse minimum</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>µS:</strong> ACK pulsedureation in milliseconds lower bound <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /> <em>Notes:</em> <br /> The NMRA specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so DCC-EX extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters. <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
-<p>—</p>
 </section>
 <section id="diagnostic-traces">
 <h3><a class="toc-backref" href="#id23" role="doc-backlink">Diagnostic traces</a><a class="headerlink" href="#diagnostic-traces" title="Permalink to this heading"></a></h3>
@@ -1196,36 +1168,34 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">state&gt;</span></code></p></td>
-<td><p><strong>Enables ACK diagnostics</strong> <br /> <br /> <em>Parameters:</em> <br /> state: one of <br />  ON <br />  OFF <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /> <em>Notes:</em> <br /> This will turn ACK diagnostics ON and then try to read the appropriate CVs to determine your loco address
-<br /> <br /> <br /></p></td>
+<td><p><strong>Enables ACK diagnostics</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>state:</strong> one of <br />  ON <br />  OFF <br /> <br /> <em>Response:</em> <br /> ˮAck diag onˮ or ˮAck diag offˮ <br /> Displayed on the serial monitor only. <br /> <br /> <em>Notes:</em> <br /> This will turn ACK diagnostics ON and then try to read the appropriate CVs to determine your loco address. <br /> <br /></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CABS&gt;</span></code></p></td>
-<td><p><strong>Shows cab numbers and speed in reminder tables</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CMD</span> <span class="pre">state&gt;</span></code></p></td>
+<td><p><strong>Enables Command Parser diagnostics</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>state:</strong> one of <br />  ON <br />  OFF <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /> <em>Notes:</em> <br /> When enabled, diagnostic messages will be shown on the the serial monitor. <br /> <br /></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CMD</span> <span class="pre">state&gt;</span></code></p></td>
-<td><p><strong>Enables Command Parser diagnostics</strong> <br /> <br /> <em>Parameters:</em> <br /> state: one of <br />  ON <br />  OFF <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ETHERNET</span> <span class="pre">state&gt;</span></code></p></td>
-<td><p><strong>Enables Ethernet diagnostics</strong> <br /> <br /> <em>Parameters:</em> <br /> state: one of <br />  ON <br />  OFF <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code></p></td>
-<td><p><strong>Shows configured servo board and GPIO extender board config and used pins</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ETHERNET</span> <span class="pre">state&gt;</span></code></p></td>
+<td><p><strong>Enables Ethernet diagnostics</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>state:</strong> one of <br />  ON <br />  OFF <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /> <em>Notes:</em> <br /> When enabled, diagnostic messages will be shown on the the serial monitor. <br /> <br /></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">LCN</span> <span class="pre">state&gt;</span></code></p></td>
-<td><p><strong>Enables LCN interface diagnostics</strong> <br /> <br /> <em>Parameters:</em> <br /> ??? <br /> <br /> state: one of <br />  ON <br />  OFF <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+<td><p><strong>Enables LCN interface diagnostics</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>state:</strong> one of <br />  ON <br />  OFF <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">WIFI</span> <span class="pre">state&gt;</span></code></p></td>
+<td><p><strong>Enables WiFi diagnostics</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>state:</strong> one of <br />  ON <br />  OFF <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /> <em>Notes:</em> <br /> When enabled, diagnostic messages will be shown on the the serial monitor. <br /> <br /></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">WIT</span> <span class="pre">state&gt;</span></code></p></td>
+<td><p><strong>Enables WiThrottle diagnostics</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>state:</strong> one of <br />  ON <br />  OFF <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /> <em>Notes:</em> <br /> When enabled, diagnostic messages will be shown on the the serial monitor. <br /> <br /></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">CABS&gt;</span></code></p></td>
+<td><p><strong>Shows cab numbers and speed in reminder tables</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> ˮUsed=xxx, max=yyyˮ <br /> Displayed on the serial monitor only. <br /> <br /></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code></p></td>
+<td><p><strong>Shows configured servo board and GPIO extender board config and used pins</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RAM&gt;</span></code></p></td>
-<td><p><strong>Shows remaining RAM (Free Memory)</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">WIFI</span> <span class="pre">state&gt;</span></code></p></td>
-<td><p><strong>Enables WiFi diagnostics</strong> <br /> <br /> <em>Parameters:</em> <br /> ??? <br /> <br /> state: one of <br />  ON <br />  OFF <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">WIT</span> <span class="pre">state&gt;</span></code></p></td>
-<td><p><strong>Enables WiThrottle diagnostics</strong> <br /> <br /> <em>Parameters:</em> <br /> ??? <br /> <br /> state: one of <br />  ON <br />  OFF <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+<td><p><strong>Shows remaining RAM (Free Memory)</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> ˮFree memory=xxxxˮ <br /> Displayed on the serial monitor only. <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
-<p>—</p>
 </section>
 <section id="i-o-hal-diagnostics">
 <h3><a class="toc-backref" href="#id24" role="doc-backlink">I/O (HAL) Diagnostics</a><a class="headerlink" href="#i-o-hal-diagnostics" title="Permalink to this heading"></a></h3>
@@ -1240,24 +1210,43 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ANIN</span> <span class="pre">vpin&gt;</span></code></p></td>
-<td><p><strong>Read and display pin vpin’s analogue value.</strong> <br /> <br /> <em>Parameters:</em> <br /> vpin: ?? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ANOUT</span> <span class="pre">vpin</span> <span class="pre">value</span> <span class="pre">[param2]&gt;</span></code></p></td>
-<td><p><strong>Write value to analogue pin vpin, supplying param2 to the driver.</strong> <br /> <br /> <em>Parameters:</em> <br /> vpin: <br /> value: <br /> param2: <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
-</tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">HAL</span> <span class="pre">SHOW&gt;</span></code></p></td>
 <td><p><strong>List HAL devices and allocated VPINs</strong> <br /> <br /> <em>Parameters:</em> <br /> N/A <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">value</span> <span class="pre">[profile]&gt;</span></code></p></td>
-<td><p><strong>Set servo position to value on pin vpin.</strong> <br /> <br /> <em>Parameters:</em> <br /> vpin: <br /> value: <br /> profile: <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ANIN</span> <span class="pre">vpin&gt;</span></code></p></td>
+<td><p><strong>Read and display pin vpin’s analogue value.</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>vpin:</strong> ?? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ANOUT</span> <span class="pre">vpin</span> <span class="pre">value</span> <span class="pre">[param2]&gt;</span></code></p></td>
+<td><p><strong>Write value to analogue pin vpin, supplying param2 to the driver.</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>vpin:</strong> ?? <br /> <strong>value:</strong>  ?? <br /> <strong>param2:</strong> ?? <br /> <br /> <em>Response:</em> <br /> ??? <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
-<p>—</p>
+</section>
+<section id="write-direct-dcc-packet">
+<h3><a class="toc-backref" href="#id25" role="doc-backlink">Write direct DCC packet</a><a class="headerlink" href="#write-direct-dcc-packet" title="Permalink to this heading"></a></h3>
+<table class="command-table docutils align-default" style="width: 100%">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Description / Response</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;M</span> <span class="pre">register</span> <span class="pre">hex1</span> <span class="pre">hex2</span> <span class="pre">[hex3</span> <span class="pre">[hex4</span> <span class="pre">[hex5]]]&gt;</span></code></p></td>
+<td><p><strong>Write a DCC packet the MAIN track</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>register:</strong> ignored <br /> <strong>byte1:</strong>  first hexadecimal byte in the packet <br /> <strong>byte2:</strong>  second hexadecimal byte in the packet <br /> <strong>byte3:</strong>  optional third hexadecimal byte in the packet <br /> <strong>byte4:</strong>  optional fourth hexadecimal byte in the packet <br /> <strong>byte5:</strong>  optional fifth hexadecimal byte in the packet <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /> <em>Notes:</em> <br /> register for backwards compat (can not be removed because number of arguments is unknown) <br /> <br /></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;P</span> <span class="pre">register</span> <span class="pre">hex1</span> <span class="pre">hex2</span> <span class="pre">[hex3</span> <span class="pre">[hex4</span> <span class="pre">[hex5]]]&gt;</span></code></p></td>
+<td><p><strong>Write a DCC packet the MAIN track</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>register:</strong> ignored <br /> <strong>byte1:</strong>  first hexadecimal byte in the packet <br /> <strong>byte2:</strong>  second hexadecimal byte in the packet <br /> <strong>byte3:</strong>  optional third hexadecimal byte in the packet <br /> <strong>byte4:</strong>  optional fourth hexadecimal byte in the packet <br /> <strong>byte5:</strong>  optional fifth hexadecimal byte in the packet <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /> <em>Notes:</em> <br /> register for backwards compat (can not be removed because number of arguments is unknown) <br /> <br /></p></td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 <section id="other">
-<h3><a class="toc-backref" href="#id25" role="doc-backlink">Other</a><a class="headerlink" href="#other" title="Permalink to this heading"></a></h3>
+<h2><a class="toc-backref" href="#id26" role="doc-backlink">Other</a><a class="headerlink" href="#other" title="Permalink to this heading"></a></h2>
 <table class="command-table docutils align-default" style="width: 100%">
 <colgroup>
 <col style="width: 25%" />
@@ -1270,15 +1259,13 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;U</span> <span class="pre">cmd&gt;</span></code></p></td>
-<td><p><strong>Is reserved for user commands (through user filter)</strong> <br /> <br /> <em>Parameters:</em> <br /> cmd: user defined command <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /></p></td>
+<td><p><strong>Is reserved for user commands (through user filter)</strong> <br /> <br /> <em>Parameters:</em> <br /> <strong>cmd:</strong> user defined command <br /> <br /> <em>Response:</em> <br /> N/A <br /> <br /></p></td>
 </tr>
 </tbody>
 </table>
-<p>—</p>
-</section>
 </section>
 <section id="more-information">
-<h2><a class="toc-backref" href="#id26" role="doc-backlink">More Information</a><a class="headerlink" href="#more-information" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id27" role="doc-backlink">More Information</a><a class="headerlink" href="#more-information" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><dl class="simple">
 <dt><strong>For a detailed command reference, see…</strong></dt><dd><p><a class="reference internal" href="command-reference.html"><span class="doc">Command Reference</span></a></p>

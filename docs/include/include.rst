@@ -65,6 +65,10 @@
    
   <span style="color:red">This feature is not available in the current 'Production' version</span>
 ..
+.. |DEPRECATED| raw:: html
+   
+  <span style="font-weight: bold; font-style: italic; color:red">Deprecated</span>
+..
 .. |I2C| replace:: I\ :sup:`2`\ C
 ..
 .. ................................................

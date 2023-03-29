@@ -118,6 +118,10 @@ table.intro-table {
   white-space: nowrap !important;
 }
 
+.command-table tbody tr td p code {
+  font-size: 110% !important;
+}
+
 .command-table tbody tr td p {
   font-size: 90% !important;
 }

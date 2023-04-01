@@ -268,9 +268,9 @@ Created by `Espressif Systems <https://www.espressif.com/>`_, ESP32 is a low-cos
 Adding ESP32 support to the Arduino IDE
 ----------------------------------------
 
-In order to compile for the Espressif ESP32 platforms, you will need to add the boards to the Arduino IDE.
+In order to compile for the Espressif ESP32 platforms, you will need to add the board to the Arduino IDE.
 
-To do this, navigate to "File" -> "Preferences" and install the "esp32" package.
+To do this, follow the instructions on the `official Espressif guide <https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide>`_.
 
 .. note::
     esp32 board package version 2.0.0 or greater is required.

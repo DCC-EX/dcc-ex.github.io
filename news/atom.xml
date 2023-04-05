@@ -2,37 +2,46 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2023-03-29T11:04:09.392830+00:00</updated>
+  <updated>2023-04-05T19:22:38.582836+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.io/" version="0.11.1">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.io/" version="0.11.2">ABlog</generator>
   <entry>
-    <id>https://dcc-ex.com/news/posts/20230309a.html</id>
-    <title>EX-Toolbox released on the Play Store</title>
-    <updated>2023-03-09T00:00:00+00:00</updated>
+    <id>https://dcc-ex.com/news/posts/20230327.html</id>
+    <title>Version 5 progress and a breaking change in the development branch</title>
+    <updated>2023-03-27T00:00:00+00:00</updated>
     <author>
-      <name>flash62au (Peter)</name>
+      <name>peteGSX</name>
     </author>
     <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
-&lt;section id="ex-toolbox-released-on-the-play-store"&gt;
+&lt;section id="version-5-progress-and-a-breaking-change-in-the-development-branch"&gt;
 
-&lt;p&gt;&lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/span&gt; is a free, open source, Android app to help setup and configure your EX-CommandStation.&lt;/p&gt;
-&lt;p&gt;&lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/span&gt; can be installed on you phone or table via the &lt;a class="reference external" href="https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox"&gt;Google Play Store&lt;/a&gt; . (Or search in the Play Store for “EX-Toolbox”, including the quotes.)&lt;/p&gt;
-&lt;p&gt;With &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/span&gt; you can perform:&lt;/p&gt;
+&lt;p&gt;We are full steam ahead to a v5.0 release, making sure what’s in there is well tested to the limits of our resources, and has documentation available as we go. Amongst other things, this has resulted in one potentially “breaking” change for users of &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;RAIL&lt;/span&gt;&lt;/span&gt;’s capability to run sequences/routes on startup.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Breaking change:&lt;/strong&gt; The implicit AUTOSTART at the beginning of the “myAutomation.h” file for &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;RAIL&lt;/span&gt;&lt;/span&gt; has been disabled, as we have found it confuses a great many first time users.&lt;/p&gt;
+&lt;p&gt;What does this mean?&lt;/p&gt;
+&lt;p&gt;Previously, when your &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/span&gt; started up with a “myAutomation.h” file present, anything defined prior to the very first &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;DONE&lt;/span&gt;&lt;/code&gt; statement would execute automatically. This was used to do things like set turnouts/points to a known startup position, automatically start routes or sequences for fully automated layouts, and so forth.&lt;/p&gt;
+&lt;p&gt;As of v4.2.31, this behaviour is disabled, meaning nothing defined in “myAutomation.h” will automatically start unless preceded by the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;AUTOSTART&lt;/span&gt;&lt;/code&gt; directive (see &lt;a class="reference internal" href="ex-rail/EX-RAIL-reference.html#ex-rail-functions"&gt;&lt;span class="std std-ref"&gt;EX-RAIL Functions&lt;/span&gt;&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;At the time of writing, we are currently at v4.2.37 of the &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/span&gt; development release, and these updates are continuing multiple times a week as we find/fix bugs and refine the software.&lt;/p&gt;
+&lt;p&gt;Here are some more highlights of what’s been done since the last news update:&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;CV Programming in the programming track (Service Mode)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;CV Programming in the main track (Operation Mode)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Servo motor testing and adjustment&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Sensor testing&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Current Meter (Only available when connected to EX-CommandStation version 4.2.20 and above.)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Track Manager (Only available when connected to EX-CommandStation version 4.2.7 and above.)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;New &amp;lt;JG&amp;gt; and &amp;lt;JI&amp;gt; commands for multi-track gauges such as current sensing (v4.2.20)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Static IP address now configurable for Ethernet shields (v4.2.24)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;SAMD21 had a bug in EX-RAIL due to memory alignment, this likely improves 32-bit support for various microcontrollers (v4.2.25)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Improved stability/reliability of the &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;IOExpander&lt;/span&gt;&lt;/span&gt; device driver (v4.2.26) and bug fix for analogue inputs (v4.2.34)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Updated the DFPlayer code to cope with a new variant of the popular sound board seen in the wild, and mods to the HCRS04 ultrasonic driver so it uses less CPU loop time (v4.2.28)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Various LCD bug fixes (latest in v4.2.29)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;&amp;lt;z&amp;gt;&lt;/span&gt;&lt;/code&gt; direct I/O pin manipulation command (v4.2.35)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add new “FLAGS” device to the HAL to communicate Vpin changes outside of &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;RAIL&lt;/span&gt;&lt;/span&gt; to software such as &lt;a class="reference internal" href="reference/glossary.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; (v4.2.37)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Some of the above new features and fixes are currently undocumented which we will fix in the coming weeks. In the meantime, feel free to jump onto Discord and chat with the developers and keep up to date (&lt;a class="reference internal" href="support/contact-us.html"&gt;&lt;span class="doc"&gt;Contact Us&lt;/span&gt;&lt;/a&gt;).&lt;/p&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20230309a.html" rel="alternate"/>
-    <summary>&lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/span&gt; is a free, open source, Android app to help setup and configure your EX-CommandStation.</summary>
-    <category term="ex-toolbox" label="ex-toolbox"/>
-    <published>2023-03-09T00:00:00+00:00</published>
+    <link href="https://dcc-ex.com/news/posts/20230327.html" rel="alternate"/>
+    <summary>We are full steam ahead to a v5.0 release, making sure what’s in there is well tested to the limits of our resources, and has documentation available as we go. Amongst other things, this has resulted in one potentially “breaking” change for users of &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;RAIL&lt;/span&gt;&lt;/span&gt;’s capability to run sequences/routes on startup.</summary>
+    <category term="ex-commandstation" label="ex-commandstation"/>
+    <category term="ex-ioexpander" label="ex-ioexpander"/>
+    <category term="exrail" label="exrail"/>
+    <published>2023-03-27T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>https://dcc-ex.com/news/posts/20230309.html</id>
@@ -72,40 +81,31 @@
     <published>2023-03-09T00:00:00+00:00</published>
   </entry>
   <entry>
-    <id>https://dcc-ex.com/news/posts/20230327.html</id>
-    <title>Version 5 progress and a breaking change in the development branch</title>
-    <updated>2023-03-27T00:00:00+00:00</updated>
+    <id>https://dcc-ex.com/news/posts/20230309a.html</id>
+    <title>EX-Toolbox released on the Play Store</title>
+    <updated>2023-03-09T00:00:00+00:00</updated>
     <author>
-      <name>peteGSX</name>
+      <name>flash62au (Peter)</name>
     </author>
     <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
-&lt;section id="version-5-progress-and-a-breaking-change-in-the-development-branch"&gt;
+&lt;section id="ex-toolbox-released-on-the-play-store"&gt;
 
-&lt;p&gt;We are full steam ahead to a v5.0 release, making sure what’s in there is well tested to the limits of our resources, and has documentation available as we go. Amongst other things, this has resulted in one potentially “breaking” change for users of &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;RAIL&lt;/span&gt;&lt;/span&gt;’s capability to run sequences/routes on startup.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Breaking change:&lt;/strong&gt; The implicit AUTOSTART at the beginning of the “myAutomation.h” file for &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;RAIL&lt;/span&gt;&lt;/span&gt; has been disabled, as we have found it confuses a great many first time users.&lt;/p&gt;
-&lt;p&gt;What does this mean?&lt;/p&gt;
-&lt;p&gt;Previously, when your &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/span&gt; started up with a “myAutomation.h” file present, anything defined prior to the very first &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;DONE&lt;/span&gt;&lt;/code&gt; statement would execute automatically. This was used to do things like set turnouts/points to a known startup position, automatically start routes or sequences for fully automated layouts, and so forth.&lt;/p&gt;
-&lt;p&gt;As of v4.2.31, this behaviour is disabled, meaning nothing defined in “myAutomation.h” will automatically start unless preceded by the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;AUTOSTART&lt;/span&gt;&lt;/code&gt; directive (see &lt;a class="reference internal" href="ex-rail/EX-RAIL-reference.html#ex-rail-functions"&gt;&lt;span class="std std-ref"&gt;EX-RAIL Functions&lt;/span&gt;&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;At the time of writing, we are currently at v4.2.37 of the &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/span&gt; development release, and these updates are continuing multiple times a week as we find/fix bugs and refine the software.&lt;/p&gt;
-&lt;p&gt;Here are some more highlights of what’s been done since the last news update:&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/span&gt; is a free, open source, Android app to help setup and configure your EX-CommandStation.&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/span&gt; can be installed on you phone or table via the &lt;a class="reference external" href="https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox"&gt;Google Play Store&lt;/a&gt; . (Or search in the Play Store for “EX-Toolbox”, including the quotes.)&lt;/p&gt;
+&lt;p&gt;With &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/span&gt; you can perform:&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;New &amp;lt;JG&amp;gt; and &amp;lt;JI&amp;gt; commands for multi-track gauges such as current sensing (v4.2.20)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Static IP address now configurable for Ethernet shields (v4.2.24)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;SAMD21 had a bug in EX-RAIL due to memory alignment, this likely improves 32-bit support for various microcontrollers (v4.2.25)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Improved stability/reliability of the &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;IOExpander&lt;/span&gt;&lt;/span&gt; device driver (v4.2.26) and bug fix for analogue inputs (v4.2.34)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Updated the DFPlayer code to cope with a new variant of the popular sound board seen in the wild, and mods to the HCRS04 ultrasonic driver so it uses less CPU loop time (v4.2.28)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Various LCD bug fixes (latest in v4.2.29)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;&amp;lt;z&amp;gt;&lt;/span&gt;&lt;/code&gt; direct I/O pin manipulation command (v4.2.35)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Add new “FLAGS” device to the HAL to communicate Vpin changes outside of &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;RAIL&lt;/span&gt;&lt;/span&gt; to software such as &lt;a class="reference internal" href="reference/glossary.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; (v4.2.37)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;CV Programming in the programming track (Service Mode)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;CV Programming in the main track (Operation Mode)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Servo motor testing and adjustment&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sensor testing&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Current Meter (Only available when connected to EX-CommandStation version 4.2.20 and above.)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Track Manager (Only available when connected to EX-CommandStation version 4.2.7 and above.)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Some of the above new features and fixes are currently undocumented which we will fix in the coming weeks. In the meantime, feel free to jump onto Discord and chat with the developers and keep up to date (&lt;a class="reference internal" href="support/contact-us.html"&gt;&lt;span class="doc"&gt;Contact Us&lt;/span&gt;&lt;/a&gt;).&lt;/p&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20230327.html" rel="alternate"/>
-    <summary>We are full steam ahead to a v5.0 release, making sure what’s in there is well tested to the limits of our resources, and has documentation available as we go. Amongst other things, this has resulted in one potentially “breaking” change for users of &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;RAIL&lt;/span&gt;&lt;/span&gt;’s capability to run sequences/routes on startup.</summary>
-    <category term="ex-commandstation" label="ex-commandstation"/>
-    <category term="ex-ioexpander" label="ex-ioexpander"/>
-    <category term="exrail" label="exrail"/>
-    <published>2023-03-27T00:00:00+00:00</published>
+    <link href="https://dcc-ex.com/news/posts/20230309a.html" rel="alternate"/>
+    <summary>&lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/span&gt; is a free, open source, Android app to help setup and configure your EX-CommandStation.</summary>
+    <category term="ex-toolbox" label="ex-toolbox"/>
+    <published>2023-03-09T00:00:00+00:00</published>
   </entry>
 </feed>

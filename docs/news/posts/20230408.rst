@@ -20,4 +20,8 @@ This is the last release of |EX-CS| before we move to version 5
 
 This is just a minor bugfix release from the previous version 4.1.2. This release is a Bugfix release to fix the initialization order to benefit Ethernet boards, to fix GitHub issue #299 related to TurnoutDescription, and to fix command parsing for LCN (the Layout Control Nodes Accessory Network).
 
-Look for some major new featurs soon in version 5.0!
+There is also 'Updated' DCC-EX 4.1 & JMRI DecoderPro 5.2+ Getting Started Guide.pdf in our documents downloads page on the Website here:
+
+  https://dcc-ex.com/reference/downloads/documents.html#
+
+**Look for some major new featurs soon in version 5.0!**

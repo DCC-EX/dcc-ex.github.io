@@ -104,7 +104,7 @@ DCC Manufacture Decoder Identification
 Stationary Decoder Address Table (xlsx Spreadsheet)
 ===================================================
 
-With EX-CommandStation's new linear address function, there is no need to have to convert back and forth between linear addresses and the 2-part address, subaddress format. However, if you use the old format or have a decoder to a switch that uses it, this table can come in handy.
+With EX-CommandStation's new linear address function, there is no need to have to convert back and forth between linear addresses and the 2-part address, subaddress format. However, if you use the old format or have a decoder to a switch that uses it, this table can come in handy. Credit to Tom Busza for putting this together for |JMRi| and |DCC-EX| users!
 
 .. image:: ../../_static/documents/acc_conv_sheet_thumbnail.png
    :alt: Accessory conversion sheet thumbnail

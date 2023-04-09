@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2023-04-09T20:45:18.823333+00:00</updated>
+  <updated>2023-04-09T20:53:41.584672+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.2">ABlog</generator>
@@ -18,6 +18,7 @@
 
 &lt;p&gt;We’re excited to announce the final version 4 release of &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/span&gt; before we move to version 5!&lt;/p&gt;
 &lt;p&gt;This is just a minor bugfix release from the previous version 4.1.2. This release is a Bugfix release to fix the initialisation order to benefit Ethernet boards, to fix GitHub issue &lt;a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/issues/299"&gt;#299&lt;/a&gt; related to TurnoutDescription, and to fix command parsing for LCN (the Layout Control Nodes Accessory Network).&lt;/p&gt;
+&lt;p&gt;To get the latest version, see the &lt;a class="reference internal" href="download/ex-commandstation.html#latest-ex-commandstation-official-release"&gt;&lt;span class="std std-ref"&gt;Latest EX-CommandStation Official Release&lt;/span&gt;&lt;/a&gt; section.&lt;/p&gt;
 &lt;p&gt;There is also an updated &lt;a class="reference internal" href="reference/downloads/documents.html#comprehensive-dcc-ex-jmri-decoderpro-getting-started-guide-pdf"&gt;&lt;span class="std std-ref"&gt;Comprehensive DCC-EX &amp;amp; JMRI DecoderPro Getting Started Guide PDF&lt;/span&gt;&lt;/a&gt; available for download to help you get up and running with &lt;a class="reference internal" href="reference/glossary.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; DecoderPro and &lt;span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; "&gt;DCC-&lt;span style="color: #00a3b9;"&gt;EX&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Look for some major new features soon in version 5.0!&lt;/strong&gt;&lt;/p&gt;
 &lt;/section&gt;

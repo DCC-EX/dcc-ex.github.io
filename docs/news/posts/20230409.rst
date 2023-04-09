@@ -1,0 +1,25 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+
+:blogpost: true
+:date: 9 April, 2023
+:author: Fred (FrightRisk)
+:category: News
+:tags: ex-commandstation, release, production
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+Final Version 4 Release (v4.1.5)
+================================
+
+We're excited to announce the final version 4 release of |EX-CS| before we move to version 5!
+
+This is just a minor bugfix release from the previous version 4.1.2. This release is a Bugfix release to fix the initialisation order to benefit Ethernet boards, to fix GitHub issue `#299 <https://github.com/DCC-EX/CommandStation-EX/issues/299>`_ related to TurnoutDescription, and to fix command parsing for LCN (the Layout Control Nodes Accessory Network).
+
+There is also an updated :ref:`reference/downloads/documents:comprehensive dcc-ex & jmri decoderpro getting started guide pdf` available for download to help you get up and running with |JMRi| DecoderPro and |DCC-EX|.
+
+**Look for some major new features soon in version 5.0!**

@@ -78,16 +78,20 @@ Connecting via |I2C| involves a HAL driver file to the |EX-CS| as well as adding
     
   .. code-block:: 
 
-  //  #include "IO_EXFastClock.h"  // FastClock driver
+    //  #include "IO_EXFastClock.h"  // FastClock driver
+
 
 * Uncomment the following line near the end of the file
 
-.. code-block:: 
+  .. code-block:: 
 
-  //  EXFastClock::create(0x55);
+    //  EXFastClock::create(0x55);
   
+
   0x55 (decimal 85) is the default address but needs to match that in the FastClock code (see below).
+  
 * Using Dupont connectors connect SDA/SCL/Gnd on the clock to SDA/SCL/Gnd on the |EX-CS|
+  
 * Include the following code in your Fastlock code:
 
   Near the top of the sketch:

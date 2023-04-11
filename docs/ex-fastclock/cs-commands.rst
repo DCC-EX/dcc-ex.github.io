@@ -66,7 +66,9 @@ Testing Timed Sequences
 
 If one is testing out a sequence using a timed command it can be done quickly without using the clock.  The following command can be entered from the System Monitor:
 
-<JC mmmm ss> 
+  .. code-block:: 
+
+    <JC mmmm ss> 
 
 where mmmm is the time in minutes since midnight.  This is (hours * 60) + mins and is how the time is held within |EX-CS|.  So for the time in the example above (6:15) the following:
 

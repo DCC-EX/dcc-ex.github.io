@@ -43,7 +43,7 @@ If you want to give public clinics you can display screens on a touchscreen lapt
 
 The following image is a Windows computer running multiple "instances" of Engine Driver on the same computer. 
 
-.. image:: /_static/images/media-resources/Engine_Driver_on_a_Windows_PC_via_BlueStack.jpg
+.. image:: /_static/images/media-resources/engine_driver_windows_pc_via_bluestack.jpg
    :alt: Engine Driver on BlueStack
    :scale: 25%
    :align: right

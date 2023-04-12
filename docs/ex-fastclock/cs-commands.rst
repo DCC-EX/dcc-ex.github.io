@@ -20,7 +20,7 @@ Controlling EX-RAIL by Time
 Time Command
 ============
 
-The additional commands added to |EX-R| allow events to be controlled by the clock.  The basic form of the nex clock command is:
+The additional commands added to |EX-R| allow events to be controlled by the clock.  The basic form of the new clock command is:
 
 .. code-block:: 
 
@@ -59,6 +59,52 @@ Sequences built this way can only be run via a clock command.  If it was require
   DONE
 
 This event could either be run by the clock or could be selected at will from Engine Driver.  To stop the |EX-CS| from running timed commands to switch to manual running, simply pause the clock.
+
+Repeating Time events
+=====================
+
+Some users may wish to repeat an event at the same time every hour - e.g. to play a recording of a clock chime.  It is possible to achieve this as follows:
+
+.. code-block:: 
+
+    ONCLOCKMINS( mins )
+
+This is an event based command that will activate at the same time each hour as in the example below:
+
+.. code-block:: 
+
+  ONCLOCKMINS(15) 
+
+    SET(1000)             // Start playing first MP3 file
+    AT(-1000)             // Wait for playing to finish
+
+    RESET(1000)           // Stop player 
+    ....
+    .... Do some other stuff
+    ....
+    DONE
+
+The sequence above will repeat at 15 munites past the hour per FastClock time.  It would also be possible to make these routines be selectable from Engine Driver by configuring them as follows:
+
+  .. code-block:: 
+
+    ONCLOCKMINS(15) FOLLOW(10) DONE
+
+    SEQUENCE(10)
+      SET(1000)             // Start playing first MP3 file
+      AT(-1000)             // Wait for playing to finish
+
+      RESET(1000)           // Stop player 
+      ....
+      .... Do some other stuff
+      ....
+    DONE
+
+In that way the Sequence 10 can either be run by the clock, or if the clock is not running may be selected manually from Engine Driver.
+
+NB:  See the following page for details on running sound files.
+
+:doc:`/reference/developers/hal-config`
 
 
 Testing Timed Sequences

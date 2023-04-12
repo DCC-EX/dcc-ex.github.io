@@ -537,22 +537,23 @@
 <section id="teensy">
 <h1>Teensy<a class="headerlink" href="#teensy" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
-<p>The Teensy Series by PJRC is a next generation microcontroller. It has loads of RAM, a faster clock speed and a host of add-ons.</p>
-<p>It’s teensy because it is even smaller than a Nano, but it is even more powerful than a Nano Every. This is not an Arduino, it is from a company called PJRC. Since it is a different processor, there are a lot of changes in the software that load onto the teensy when you select that as your processor.</p>
-<p>There are several versions 3.2, 3.5, 3.6, 4.0, 4.1. <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> will run on all these boards. The biggest difference is size/number of pins. You can also purchase the boards with or without the headers soldered on.</p>
+<p>The Teensy 3.x/4.x Series by PJRC are next generation ARM-based microcontrollers. They have loads of RAM, a faster clock speed and a host of add-ons.</p>
+<p>It’s teensy because it is even smaller than a Nano, but it is even more powerful than a Nano Every. This is not an Arduino, it is from a company called PJRC. Since they use different processors, there are a lot of changes in the software that load onto the teensy when you select that as your processor.</p>
+<p>There are several versions 3.2, 3.5, 3.6, 4.0, 4.1. with the biggest difference being the size/number of pins. You can also purchase the boards with or without the headers soldered on.</p>
 <a class="reference internal image-reference" href="../../../_images/teensy_3_2.jpg"><img alt="Teensy 3.2" class="align-center" src="../../../_images/teensy_3_2.jpg" style="width: 196.8px; height: 184.0px;" /></a>
 <p>The above is a Teensy 3.2 compared to a quarter. Below is a Teensy 3.6 if you need more GPIO pins</p>
 <a class="reference internal image-reference" href="../../../_images/teensy_3_6.png"><img alt="Teensy 3.6" class="align-center" src="../../../_images/teensy_3_6.png" style="width: 256.0px; height: 256.0px;" /></a>
 <p>There are even expansion boards to add WiFi and Ethernet. There is a Mega form factor board available to allow you to use 3.3V shields.</p>
 <a class="reference internal image-reference" href="../../../_images/teensy41_ethernet2.jpg"><img alt="Teensy Ethernet" class="align-left" src="../../../_images/teensy41_ethernet2.jpg" style="width: 320.0px; height: 357.20000000000005px;" /></a>
 <a class="reference internal image-reference" href="../../../_images/teensy_4_expansion_brd.jpg"><img alt="Teensy WiFi Expansion Board" class="align-left" src="../../../_images/teensy_4_expansion_brd.jpg" style="width: 498.0px; height: 280.2px;" /></a>
-<section class="clearer" id="teensy-specifications">
-<h2>Teensy Specifications<a class="headerlink" href="#teensy-specifications" title="Permalink to this heading"></a></h2>
+<section class="clearer" id="teensy-3-6-specifications">
+<h2>Teensy 3.6 Specifications<a class="headerlink" href="#teensy-3-6-specifications" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>180 MHz ARM Cortex-M4 with Floating Point Unit</p></li>
 <li><p>1M Flash, 256K RAM, 4K EEPROM</p></li>
 <li><p>Microcontroller Chip MK66FX1M0VMD18</p></li>
-<li><p>MK66FX1M0VMD18 USB High Speed (480 Mbit/sec) Port</p></li>
+<li><p>MK66FX1M0VMD18</p></li>
+<li><p>USB High Speed (480 Mbit/sec) Port</p></li>
 <li><p>2 CAN Bus Ports</p></li>
 <li><p>32 General Purpose DMA Channels</p></li>
 <li><p>22 PWM Outputs</p></li>
@@ -561,21 +562,30 @@
 <li><p>62 I/O Pins (42 breadboard friendly)</p></li>
 <li><p>25 Analog Inputs to 2 ADCs with 13 bits resolution</p></li>
 <li><p>2 Analog Outputs (DACs) with 12 bit resolution</p></li>
-<li><p>22 PWM Outputs USB Full Speed (12 Mbit/sec)</p></li>
+<li><p>22 PWM Outputs</p></li>
+<li><p>USB Full Speed (12 Mbit/sec)</p></li>
 <li><p>Port Ethernet mac, capable of full 100 Mbit/sec speed</p></li>
 <li><p>Native (4 bit SDIO)</p></li>
 <li><p>micro SD card port</p></li>
 <li><p>I2S Audio Port</p></li>
 <li><p>4 Channel Digital Audio Input &amp; Output</p></li>
-<li><p>14 Hardware Timers</p></li>
+<li><p>19 Hardware Timers</p></li>
 <li><p>Cryptographic Acceleration Unit</p></li>
 <li><p>Random Number Generator</p></li>
 <li><p>CRC Computation Unit</p></li>
 <li><p>6 Serial Ports (2 with FIFO &amp; Fast Baud Rates)</p></li>
 <li><p>3 SPI Ports (1 with FIFO)</p></li>
-<li><p>4 I<sup>2</sup>C Ports Real Time Clock</p></li>
+<li><p>Real Time Clock</p></li>
 </ul>
-<p>The only downside is that PJRC is a very small company, it doesn’t have the resources or the staff of Arduino or Espressif. The board is also 3.3V, so you have to be careful that anything connected to the GPIO ports is also 3.3V</p>
+<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> will run on all these boards, however the following caveats apply:</p>
+<ul class="simple">
+<li><p>Teensys are strictly 3.3V, so you have to be careful that anything connected to the GPIO ports is also 3.3V (see also <a class="reference internal" href="../../../under-development/microcontrollers.html"><span class="doc">other 3.3v microcontrollers</span></a>)</p></li>
+<li><p>Teensy 3.x models are all now considered “legacy” products by PCJR and marked “Not recommended for new designs or projects”, with only Teensy 4.0/4.1 recommended by PCJR</p></li>
+<li><p>Version 3.1, development versions 4.2.4 and beyond, and upcoming 5.x releases of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> can compile for the Teensy models listed above, but have not been extensively tested</p></li>
+<li><p>Teensy I<sup>2</sup>C peripheral uses the blocking Arduino Wire library, as there is no <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> native non-blocking I<sup>2</sup>C driver for any of the Teensy range presently available, or planned. This will limit performance somewhat when using I<sup>2</sup>C peripherals attached to your Teensy.</p></li>
+<li><p>Note that no further development and testing efforts by the core development team will be directed to Teensy models under the current <a class="reference internal" href="../../../about/roadmap.html"><span class="doc">roadmap</span></a></p></li>
+</ul>
+<p>The major downside to all Teensy models is that PJRC is a very small company so as such it simply doesn’t have the resources or the staff of major manufacturers like Arduino, Espressif or ST Microelectronics.</p>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
 <p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/424">LOW - Hardware</a> - Add pinouts and motor shield wiring diagrams</p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2023-04-09T20:53:41.584672+00:00</updated>
+  <updated>2023-04-12T09:16:58.725090+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.io/" version="0.11.2">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.io/" version="0.11.3">ABlog</generator>
   <entry>
     <id>https://dcc-ex.com/news/posts/20230409.html</id>
     <title>Final Version 4 Release (v4.1.5)</title>
@@ -13,7 +13,7 @@
     <author>
       <name>Fred (FrightRisk)</name>
     </author>
-    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
 &lt;section id="final-version-4-release-v4-1-5"&gt;
 
 &lt;p&gt;We’re excited to announce the final version 4 release of &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/span&gt; before we move to version 5!&lt;/p&gt;
@@ -37,7 +37,7 @@
     <author>
       <name>peteGSX</name>
     </author>
-    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
 &lt;section id="version-5-progress-and-a-breaking-change-in-the-development-branch"&gt;
 
 &lt;p&gt;We are full steam ahead to a v5.0 release, making sure what’s in there is well tested to the limits of our resources, and has documentation available as we go. Amongst other things, this has resulted in one potentially “breaking” change for users of &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;RAIL&lt;/span&gt;&lt;/span&gt;’s capability to run sequences/routes on startup.&lt;/p&gt;
@@ -74,7 +74,7 @@
     <author>
       <name>peteGSX</name>
     </author>
-    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
 &lt;section id="extra-extra-read-all-about-it-introducing-dcc-ex-news"&gt;
 
 &lt;p&gt;Yep, that’s right, the DCC-EX team are now publishing updates regularly with our new “DCC-EX News” feed!&lt;/p&gt;
@@ -111,7 +111,7 @@
     <author>
       <name>flash62au (Peter)</name>
     </author>
-    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
 &lt;section id="ex-toolbox-released-on-the-play-store"&gt;
 
 &lt;p&gt;&lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/span&gt; is a free, open source, Android app to help setup and configure your EX-CommandStation.&lt;/p&gt;

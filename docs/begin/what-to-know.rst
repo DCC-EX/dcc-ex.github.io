@@ -58,10 +58,10 @@ Our list of free, open source software products currently include:
       - A separate stepper based turntable controller
       - Use additional microcontrollers to expand I/O port capability
     * - |EX-DCCI-LOGO-SMALL|
-      - 
+      - |EX-FC-LOGO-SMALL|
       - 
     * - A separate DCC packet sniffing tool
-      - 
+      - A FastClock to enable time based events
       - 
 
 .. list-table::

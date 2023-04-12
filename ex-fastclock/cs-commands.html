@@ -540,13 +540,14 @@
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#time-command" id="id1">Time Command</a></p></li>
-<li><p><a class="reference internal" href="#testing-timed-sequences" id="id2">Testing Timed Sequences</a></p></li>
+<li><p><a class="reference internal" href="#repeating-time-events" id="id2">Repeating Time events</a></p></li>
+<li><p><a class="reference internal" href="#testing-timed-sequences" id="id3">Testing Timed Sequences</a></p></li>
 </ul>
 </nav>
 </aside>
 <section id="time-command">
 <h2><a class="toc-backref" href="#id1" role="doc-backlink">Time Command</a><a class="headerlink" href="#time-command" title="Permalink to this heading"></a></h2>
-<p>The additional commands added to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> allow events to be controlled by the clock.  The basic form of the nex clock command is:</p>
+<p>The additional commands added to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> allow events to be controlled by the clock.  The basic form of the new clock command is:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ONCLOCKTIME( hour, mins)
 </pre></div>
 </div>
@@ -580,10 +581,53 @@ DONE
 </div>
 <p>This event could either be run by the clock or could be selected at will from Engine Driver.  To stop the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> from running timed commands to switch to manual running, simply pause the clock.</p>
 </section>
+<section id="repeating-time-events">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Repeating Time events</a><a class="headerlink" href="#repeating-time-events" title="Permalink to this heading"></a></h2>
+<p>Some users may wish to repeat an event at the same time every hour - e.g. to play a recording of a clock chime.  It is possible to achieve this as follows:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ONCLOCKMINS( mins )
+</pre></div>
+</div>
+<p>This is an event based command that will activate at the same time each hour as in the example below:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ONCLOCKMINS(15)
+
+  SET(1000)             // Start playing first MP3 file
+  AT(-1000)             // Wait for playing to finish
+
+  RESET(1000)           // Stop player
+  ....
+  .... Do some other stuff
+  ....
+  DONE
+</pre></div>
+</div>
+<p>The sequence above will repeat at 15 munites past the hour per FastClock time.  It would also be possible to make these routines be selectable from Engine Driver by configuring them as follows:</p>
+<blockquote>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ONCLOCKMINS(15) FOLLOW(10) DONE
+
+SEQUENCE(10)
+  SET(1000)             // Start playing first MP3 file
+  AT(-1000)             // Wait for playing to finish
+
+  RESET(1000)           // Stop player
+  ....
+  .... Do some other stuff
+  ....
+DONE
+</pre></div>
+</div>
+</div></blockquote>
+<p>In that way the Sequence 10 can either be run by the clock, or if the clock is not running may be selected manually from Engine Driver.</p>
+<p>NB:  See the following page for details on running sound files.</p>
+<p><a class="reference internal" href="../reference/developers/hal-config.html"><span class="doc">I/O Device Drivers and HAL</span></a></p>
+</section>
 <section id="testing-timed-sequences">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">Testing Timed Sequences</a><a class="headerlink" href="#testing-timed-sequences" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Testing Timed Sequences</a><a class="headerlink" href="#testing-timed-sequences" title="Permalink to this heading"></a></h2>
 <p>If one is testing out a sequence using a timed command it can be done quickly without using the clock.  The following command can be entered from the System Monitor:</p>
-<p>&lt;JC mmmm ss&gt;</p>
+<blockquote>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;JC mmmm ss&gt;
+</pre></div>
+</div>
+</div></blockquote>
 <p>where mmmm is the time in minutes since midnight.  This is (hours * 60) + mins and is how the time is held within <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.  So for the time in the example above (6:15) the following:</p>
 <blockquote>
 <div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;JC 375 4&gt;

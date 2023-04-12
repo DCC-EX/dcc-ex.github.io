@@ -136,6 +136,8 @@ Object definitions
       -  Same as signal but for active-HIGH LEDs
     * -  TURNOUT( id, addr, sub_addr [, "description"] )
       -  Define DCC Accessory turnout/point
+    * -  TURNOUTL( id, addr [, "description"] )
+      -  Define DCC Accessory turnout/point using linear address (needs version 4.2.42 or above)
     * -  PIN_TURNOUT( id, pin [, "description"] )
       -  Define pin operated turnout
     * -  SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )
@@ -365,6 +367,10 @@ Event handlers
     * -  ONCHANGE( id )
       -  | Event handler for a sensor changing state
          | |NOT-IN-PROD-VERSION|
+    * -  ONCLOCKTIME( hh, mm )
+      -  | Event handler for an event based on a time generated using EX-FastClock
+         | |NOT-IN-PROD-VERSION|
+  
 
 |
 

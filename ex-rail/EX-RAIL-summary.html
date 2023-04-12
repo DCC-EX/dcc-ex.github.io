@@ -717,16 +717,19 @@
 <tr class="row-odd"><td><p>TURNOUT( id, addr, sub_addr [, “description”] )</p></td>
 <td><p>Define DCC Accessory turnout/point</p></td>
 </tr>
-<tr class="row-even"><td><p>PIN_TURNOUT( id, pin [, “description”] )</p></td>
+<tr class="row-even"><td><p>TURNOUTL( id, addr [, “description”] )</p></td>
+<td><p>Define DCC Accessory turnout/point using linear address (needs version 4.2.42 or above)</p></td>
+</tr>
+<tr class="row-odd"><td><p>PIN_TURNOUT( id, pin [, “description”] )</p></td>
 <td><p>Define pin operated turnout</p></td>
 </tr>
-<tr class="row-odd"><td><p>SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, “description”] )</p></td>
+<tr class="row-even"><td><p>SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, “description”] )</p></td>
 <td><p>Define a servo turnout (profile is one of Instant, Fast, Medium, Slow, or Bounce - bounce is probably not ideal for turnouts/points!), noting the profile name is case sensitive</p></td>
 </tr>
-<tr class="row-even"><td><p>VIRTUAL_TURNOUT( id [, “description”] )</p></td>
+<tr class="row-odd"><td><p>VIRTUAL_TURNOUT( id [, “description”] )</p></td>
 <td><p>Define a virtual turnout that will be visible to throttles, but refer to an automation sequence rather than a physical turnout/point.</p></td>
 </tr>
-<tr class="row-odd"><td><p>SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)</p></td>
+<tr class="row-even"><td><p>SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)</p></td>
 <td><p>Define a servo signal</p></td>
 </tr>
 </tbody>
@@ -1068,6 +1071,13 @@
 <tr class="row-even"><td><p>ONCHANGE( id )</p></td>
 <td><div class="line-block">
 <div class="line">Event handler for a sensor changing state</div>
+<div class="line"><span style="color:red">This feature is not available in the current 'Production' version</span></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>ONCLOCKTIME( hh, mm )</p></td>
+<td><div class="line-block">
+<div class="line">Event handler for an event based on a time generated using EX-FastClock</div>
 <div class="line"><span style="color:red">This feature is not available in the current 'Production' version</span></div>
 </div>
 </td>

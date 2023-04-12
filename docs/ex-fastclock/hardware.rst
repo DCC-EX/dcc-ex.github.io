@@ -18,7 +18,7 @@ Hardware
 What you need for EX-FastClock
 ==============================
 
-* An |EX-CS| running the "devel" branch of `EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX/tree/devel>`_ (this displays as version 4.2.9rc1)
+* An |EX-CS| running the "devel" branch of `EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX/tree/devel>`_ (minimum level 4.2.9rc1)
 * An Arduino Uno microcontroller
 * An MCUFRIEND type plug in sheild TFT touchscreen
 * A suitable power supply

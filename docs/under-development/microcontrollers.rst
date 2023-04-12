@@ -52,7 +52,7 @@ ALL 3v3 microcontrollers require analog inputs to be restricted to no more than 
 STMicroelectronics STM32 NUCLEO series
 ======================================
 
-STMicroelectronics has a range of ARM based microcontrollers that are generally available, sold from reputable global resellers such as Digi-Key and Mouser, and have exceptional build quality for their price (often lower than clone Arduino models!)
+STMicroelectronics has a range of ARM based microcontrollers that are generally available, sold from reputable global resellers such as Digi-Key and Mouser, and have exceptional build quality for their price (often lower than clone Arduino Mega models, and presently lower than all genuine Arduino Mega prices.)
 
 Further to this, the NUCLEO series of development boards also provide Arduino Uno compatible header sockets, meaning existing motor (and other) shields can just plug straight in, providing they are 3v3 compatible (see note above).
 
@@ -94,10 +94,10 @@ The F429ZI has the same large footprint, however it has the added benefit of onb
 
   While the F429ZI is supported by the Arduino IDE, the F412ZG and F446ZE cannot be selected as build targets from within the Arduino IDE at present, and you will need to request the variant files and get some support from the |DCC-EX| dev team via Discord. The plan is to submit the F412ZG and F446ZE variant files to the STM32duino GitHub repo for inclusion once they are validated and debugged.
 
-Install the STLink drivers
---------------------------
+Install the STLink drivers for Windows
+--------------------------------------
 
-When using any of the NUCLEO series microcontrollers, you will need to install their STLink USB drivers in order to be able to upload software to them and use the serial monitor in either PlatformIO or the Arduino IDE.
+When using any of the NUCLEO series microcontrollers with Microsoft Windows, you will need to install their STLink USB drivers in order to be able to upload software to them and use the serial monitor in either PlatformIO or the Arduino IDE.
 
 .. note:: 
 
@@ -255,3 +255,167 @@ You will need to connect the Rx pin on your NUCLEO to the Tx pin of your WiFi de
 .. image:: /_static/images/nucleo/nucleo-f411re-f446re-wifi-serial1.png
   :alt: NUCLEO F411RE/F446RE Serial1 Rx/Tx Connections
   :scale: 50%
+
+Espressif ESP32 series
+======================
+
+Espressif have for some years now made impressive WiFi and Bluetooth capable microcontroller modules. DCC-EX has made use of their original ESP8266 offering as the means to provide WiFi capablility to the EX-CS.
+
+Espressif's newer ESP32 range has either WiFi alone or WiFi and Bluetooth capability built in. Espressif's product naming is not the easiest to follow, but DCC-EX has been ported to the original ESP32-WROOM-32 module, which has the following capabilities:
+
+- Dual Xtensa 32-bit LX6 CPU cores
+- 448KB of ROM for boot and core functions
+- 520KB of RAM
+- WiFi: 802.11b/g/n up to 150Mbps
+- Bluetooth v4.2 BR/EDR and BLE
+- WiFi STA mode and AP mode
+- WiFi WPA/WPA2/WPA2-Enterprise/WPS support
+- Encryption AES/RSA/ECC/SHA
+- IPv4, IPv6, SSL, TCP/UDP/HTTP/FTP/MQTT
+- Hardware interfaces: SD-card, UART, SPI, SDIO, |I2C|, LED PWM, Motor  PWM, I2S , IR, GPIO, capacitive touch sensor, ADC, DAC, Hall sensor, temperature sensor
+
+The appeal of the ESP32 series is that they are very compact and come with WiFi capability built in. However, during porting to the ESP32-WROOM-32 we discovered they have some limitations, namely:
+
+- WiFi is implemented in a blob of code from Espressif, which takes over interrupts, making DCC signal generation difficult
+- To generate a clean DCC signal you need to program the special RMT hardware, normally used for IR remote controls
+- Once we had done this, the DCC signal was very good
+
+The port is currently considered acceptable for beta testing, for tinkerers and engineers only.
+
+.. note:: 
+  DCC-EX can only run on the ESP32-WROOM-32 module, and none of the other ESP32 modules (S2, S3, C3 etc.) are supported at present. This is because other ESP32 modules do not have the necessary RMT hardware, or do not have enough such hardware to run DCC-EX.
+
+ESP32-WROOM-32 boards tested
+----------------------------
+
+The ESP32 development boards that have been tested include the WeMos D1 R32/ESPDUINO-32, the GRobotronics ESP32 DEVKIT V1, the OLIMEX ESP32 DEVKIT LIPO, and the LILYGO® TTGO T-Energy T18 V3.0 ESP32-WROVER-E development board. Note that although the last one is an ESP32-WROVER-E board, not the WROOM, it does appear to work for one user, but more testing is required.
+
+.. image:: /_static/images/esp32/espduino-32.jpg
+  :alt: WeMos D1 R32/ESPDUINO-32 UNO form factor
+  :scale: 25%
+
+.. image:: /_static/images/esp32/grobotronics-esp32-devkit-v1.jpeg
+  :alt: GRobotronics ESP32 DEVKIT V1
+  :scale: 15%
+
+.. image:: /_static/images/esp32/olimex-esp32-devkit-lipo.jpeg
+  :alt: Olimex ESP32 Devkit LiPo
+  :scale: 25%
+
+.. image:: /_static/images/esp32/liligo-t18-v3-esp32-wrover.jpg
+  :alt: LILYGO® TTGO T-Energy T18 V3.0 ESP32-WROVER-E
+  :scale: 15%
+
+WeMos D1 R32/ESPDUINO-32 board
+------------------------------
+
+The recommended hardware for now is the WeMos D1 R32, also referred to as the ESPDUINO-32.
+This consists of an `ESP32-WROOM-32 <https://www.espressif.com/en/products/modules/esp32>`_ module mounted on a UNO form factor board with UNO R3 style connectors. Pictured here:
+
+.. image:: /_static/images/esp32/espduino-32.jpg
+  :alt: ESPDUINO-32 UNO form factor
+  :scale: 50%
+
+Sharing the same form factor as the Arduino UNO it can make use of the :doc:`Arduino Motor Shield R3 </reference/hardware/motorboards/arduino-motor-shield>` or the :doc:`Deek-Robot Motor Shield </reference/hardware/motorboards/deek-robot-motor-shield>`.
+Note however that there are some hardware issues to be aware of, and to remedy before using this board.
+
+It is a bit frustrating to find the following obvious hardware errors in popular boards like the ESPDUINO-32:
+
+- Pullup voltage to the IO0 pin is too high (4.2v instead of 3.3-3.8v) which leads to unreliable WiFi!
+- IOREF pin does **not** output 3v3, but instead breaches the UNO R3 specification and outputs 5V!
+- A0 and A1 analog input pins for current sensing should not be used, as they cannot be used on ESP32-WROOM modules when using WiFi!
+
+All these issues can be fixed with a soldering iron and/or a jumper but that's not what one expects from a released product.
+
+Hardware setup notes for a WeMos D1 R32/ESPDUINO-32 |EX-CS|
+-----------------------------------------------------------
+
+To fix the IO0 pin voltage, install a resistor of between 250 to 300 Ohms between 3.3V and IO0 to pull it back down to 3.3V. This is easiest to do on the back side of the board, like so:
+
+.. image:: /_static/images/esp32/espduino-32-resistor.jpg
+  :alt: ESPDUINO-32 resister modification, underside of PCB
+  :scale: 10%
+
+From top to bottom the pins are: `IO0`, `5V` (not `IOREF` on this board, as it ought to be for proper Arduino UNO R3 compliance), `RESET`, `3.3V`, `5V`, `GND`, `GND`, `VIN` as seen here:
+
+.. image:: /_static/images/esp32/espduino-32-header-closeup.jpg
+  :alt: ESPDUINO-32 power header closeup, component side
+  :scale: 10%
+
+To avoid damaging the ESP32's analog inputs, the `IOREF` pin on the motor shield must be bent outwards, or cut so it will not go into the ESPDUINO-32 socket. Then use a jumper from the `3.3v` pin to `IOREF` on the motor shield itself.
+
+For DCC current sensing bend or cut the `A0` and `A1` pins because by default they are connected to `GPIO2` and `GPIO4` on the ESP32 which are not useable at the same time as WiFi.
+Instead, on the top of the Motor Shield connect `A0` to `A2` and `A1` to `A3` via jumpers then change the MotorShield definition to suit in MotorDrivers.h.
+
+.. image:: /_static/images/esp32/espduino-32-motor-shield-fritzing.png
+  :alt: MotorShield configuration for ESP32
+  :scale: 50%
+
+
+Finally, the ESP32 needs more testing and development of a |DCC-EX| |I2C| non-blocking native driver implementation in particular. |I2C| peripheral performance will be limited until such time.
+
+WeMos D1 R32/ESPDUINO-32 with Microsoft Windows - CH340 drivers
+---------------------------------------------------------------
+
+When using the WeMos D1 R32/ESPDUINO-32 board with Microsoft Windows, you will need to install the CH340 USB drivers in order to be able to upload software to it and use the serial monitor in either PlatformIO or the Arduino IDE.
+
+Adding ESP32 support to the Arduino IDE
+----------------------------------------
+
+In order to compile for the Espressif ESP32 platforms, you will need to add the board definitions to the Arduino IDE.
+
+To do this, follow the instructions on the `official Espressif guide <https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide>`_.
+
+When using VS Code and PlatformIO it will auto-configure from the entry in the platformio.ini file when you select the ESP32 target to be built.
+
+.. note::
+    The ESP32 board package version 2.0.0 or greater is required.
+
+Microchip SAMD21 series
+=======================
+
+Microchip's SAMD21 series of ARM Cortex-M0+ enabled microcontrollers offer significantly more resources than the Mega. The Arduino Zero uses Microchip's SAMD21G18A in an UNO R3 compatible form factor. A variety of manufacturers have produced clones of this design, usually omitting the Embedded Debugger (EBDG) of the original Arduino Zero design.
+
+- ATSAMD21G18 32-bit/48MHz ARM Cortex-M0+
+- 256KB Flash Memory
+- 32KB SRAM
+- 30 GPIO
+- 14-channel 12-bit resolution ADC
+- 1 10-bit resolution DAC
+- 6 serial ports, any combination of UART, |I2C| and SPI (separate from the USB serial)
+- 3 16-bit timer/counters
+- 32-bit Real-Time Clock and Calendar
+- 20 PWM capable outputs
+- Full Speed USB device and embedded host capability
+
+The appeal of the SAMD21 series is their relatively high performance, low cost and low power consumption.
+
+.. note::
+  A strong limitation however is that their GPIO are 3v3 compatible **only** and not 5v-tolerant like the STM32F4xx range. Another is an apparent bug in the USB CDC serial driver library code for the console. For these reasons whilst support is included, we are not pursuing this line as a long term support goal for now.
+
+
+SAMD21G18 boards tested
+-----------------------
+
+So far, the Arduino Zero, SparkFun SAMD21 Dev Breakout, Sparkfun RedBoard Turbo, and SAMD21 M0 Mini (originally RobotDyn, but clones exist too) have been tested. The Arduino Zero, and both Sparkfun boards are more conveniently in the UNO R3 form factor:
+
+.. image:: /_static/images/samd21/arduino_zero.jpeg
+  :alt: Arduino Zero
+  :scale: 12%
+
+.. image:: /_static/images/samd21/samd21_dev_breakout.jpeg
+  :alt: Sparkfun SAMD21 Dev Breakout
+  :scale: 25%
+
+.. image:: /_static/images/samd21/redboard_turbo.jpeg
+  :alt: Sparkfun RedBoard Turbo
+  :scale: 30%
+
+.. image:: /_static/images/samd21/robotdyn_m0_mini.jpeg
+  :alt: RobotDyn M0 Mini
+  :scale: 25%
+
+.. note::
+  Please note that the barrel jack on the Sparkfun SAMD21 Dev Breakout is not fitted by the factory and is NOT more than 6VDC capable. We strongly suggest you triple-check voltages before using this connector. It may give less scope for error to stick to powering the board via the Micro-USB connector for power.
+
+

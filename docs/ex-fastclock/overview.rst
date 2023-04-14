@@ -19,7 +19,7 @@ What is EX-FastClock?
 =====================
 
 
-|EX-FC| is a standalone microprocessor based fast adjustable speed clock, using an additional Arduino Uno in conjuction with a sheild based TFT touchscreen. Features have been added to |EX-CS| to allow the clock to integrate to the |EX-CS| and control |EX-R| based on time events.
+|EX-FC| is a standalone microprocessor based fast adjustable speed clock, using an additional Arduino Uno in conjuction with a shield based TFT touchscreen. Features have been added to |EX-CS| to allow the clock to integrate to the |EX-CS| and control |EX-R| based on time events.
 
 Each time the time changes the |EX-CS| looks for a time change event and if it finds a match it executes the commands recorded for that event as defined in the |EX-R| myAutomation.h file.  Additionally the |EX-CS| will issue a time broadcast so that other devices such as clock repeaters can capture the time.  Also where WiThrottle devices are connected a WiThrottle broadcast is made which means that connected devices such as Engine Driver can display the time.
 

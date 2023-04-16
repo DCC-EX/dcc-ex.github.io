@@ -14,9 +14,11 @@ jobs:
       - name: Requirements
         # Allow sphinx-rtd-theme to choose the versions of sphinx & docutils
         run: |
-          # pip3 install sphinx-rtd-theme==1.2.0 \
-            # sphinx-sitemap sphinxcontrib-spelling sphinx-toolbox ablog sphinx-design
+          pwd
+          ls -al
           pip3 install -r requirements.txt
+        # pip3 install sphinx-rtd-theme==1.2.0 \
+            # sphinx-sitemap sphinxcontrib-spelling sphinx-toolbox ablog sphinx-design
       - name: Checkout repo
         uses: actions/checkout@v3
       - name: Build docs

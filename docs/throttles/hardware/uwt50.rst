@@ -1,8 +1,8 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-**********************
-TCS UWT-50 (Physical)
-**********************
+**********************************************
+TCS UWT-50 & UWT-100 WiFi Throttles (Physical)
+**********************************************
 
 |conductor|
 
@@ -12,7 +12,20 @@ TCS UWT-50 (Physical)
       :depth: 2
       :local:
 
-Train Control Systems (TCS) makes a nice line of physical hardware based controllers. Since they support the |WiThrottle protocol|, they work with the |EX-CS|. Currently, the UWT-50 is the only one we have tested.
+Train Control Systems (TCS) makes a nice line of physical tactile hardware based controllers. 
+Since they support the |WiThrottle protocol|, they work seemlessly with the |EX-CS|. 
+Recently preliminary testing on both the UWT-50 and the UWT-100 WiFi Throttles are very encouraging.
+
+Some of the major benefits of |EX-CS| for TCS UWT-Throttle users are;
+
+* Direct WiFi connection of TCS UWT-Throttles to the |EX-CS|.
+* |WiThrottle protocol| built into DCC-EX EX-Command Station giving access to all the EXRAIL maacro scripts.  No JMRI connection required
+* EXRAIL macros run on the Command Station and do not need a PC connected in order to operate engines and accessories on the layout.
+* JMRI WiThrottle Server Protocol compliant
+* JMRI Routes can be created to point to existing EXRAIL macros residing on DCC-EX  and be run through the WiThrottle Server connection
+* EXRAIL scripts are simpler more powerful & easier to write than JMRI Jython/Python.py scripts.
+* Both DCC & DC Layouts can use TCS UWT-WiFi Throttles and other smartphone WiFi Throttle Apps together with DCC-EX and our new TrackManager.
+
 
 .. image:: /_static/images/throttles/uwt50_a.png
    :alt: UTW-50 Throttle
@@ -55,6 +68,50 @@ Scroll through the list and select the one that begins with DCCEX:
    :scale: 30%
    :align: center
 
-|
-   
-Visit the TCS website here: https://tcsdcc.com/uwt-50
+
+
+The |EX-CS| has the ability to automatically upload EXRAIL Automation, Routes & Command macros to the TCS UWT-Throttles.
+
+Examples of UWT-100 Throttle and DCC-EX |EX-CS| in action;
+
+
+DCC-EX Commands Cmd Power On|Off, and Join Programming Track < == > Main line, and DCC-EX Turnout Control
+
+.. image:: /_static/images/throttles/TCS_UWT-100_&_DCC-EX_Cmd_JOIN_01.jpg
+   :alt: UTW-100 Throttle
+   :scale: 70%
+   :align: left
+
+
+.. image:: /_static/images/throttles/TCS_UWT-100_&_DCC-EX_Turnouts_02.jpg
+   :alt: UTW-100 Throttle
+   :scale: 70%
+   :align: center
+
+
+.. image:: /_static/images/throttles/TCS_UWT-100_&_DCC-EX_EXRAIL202_Roundouse_03.jpg
+   :alt: UTW-100 Throttle
+   :scale: 70%
+   :align: right
+
+
+
+
+DCC-EX Cmd to Pause & Resume EXRAIL maco scripts, and DCC-EX Cmd to Reboot Command Station
+
+.. image:: /_static/images/throttles/TCS_UWT-100_&_DCC-EX_Cmd_Resume_EXRAIL_04.jpg
+   :alt: UTW-100 Throttle
+   :scale: 70%
+   :align: left
+
+
+.. image:: /_static/images/throttles/TCS_UWT-100_&_DCC-EX_Cmd_Reboot_CS_05.jpg
+   :alt: UTW-100 Throttle
+   :scale: 70%
+   :align: center
+  
+  
+Visit the TCS website here:
+ https://tcsdcc.com/uwt-50 
+
+ https://www.tcsdcc.com/uwt-100 

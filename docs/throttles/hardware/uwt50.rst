@@ -19,7 +19,7 @@ Recently preliminary testing on both the UWT-50 and the UWT-100 WiFi Throttles a
 Some of the major benefits of |EX-CS| for TCS UWT-Throttle users are;
 
 * Direct WiFi connection of TCS UWT-Throttles to the |EX-CS|.
-* |WiThrottle protocol| built into DCC-EX EX-Command Station giving access to all the EXRAIL maacro scripts.  No JMRI connection required
+* |WiThrottle protocol| built into DCC-EX EX-Command Station giving access to all the EXRAIL macro scripts.  No JMRI connection required
 * EXRAIL macros run on the Command Station and do not need a PC connected in order to operate engines and accessories on the layout.
 * JMRI WiThrottle Server Protocol compliant
 * JMRI Routes can be created to point to existing EXRAIL macros residing on DCC-EX  and be run through the WiThrottle Server connection
@@ -89,7 +89,7 @@ DCC-EX Commands Cmd Power On|Off, and Join Programming Track < == > Main line, a
    :align: center
 
 
-.. image:: /_static/images/throttles/TCS_UWT-100_&_DCC-EX_EXRAIL202_Roundouse_03.jpg
+.. image:: /_static/images/throttles/TCS_UWT-100_&_DCC-EX_EXRAIL_202_Roundhouse_03.jpg
    :alt: UTW-100 Throttle
    :scale: 70%
    :align: right

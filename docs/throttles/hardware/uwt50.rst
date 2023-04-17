@@ -97,7 +97,7 @@ DCC-EX Commands Cmd Power On|Off, and Join Programming Track < == > Main line, a
 
 
 
-DCC-EX Cmd to Pause & Resume EXRAIL maco scripts, and DCC-EX Cmd to Reboot Command Station
+DCC-EX Cmd to Pause & Resume EXRAIL macro scripts, and DCC-EX Cmd to Reboot Command Station
 
 .. image:: /_static/images/throttles/TCS_UWT-100_&_DCC-EX_Cmd_Resume_EXRAIL_04.jpg
    :alt: UTW-100 Throttle

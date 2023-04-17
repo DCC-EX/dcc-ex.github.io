@@ -33,12 +33,17 @@ Trains can be run using a Chromium-based browser (Chrome or Edge) and a USB cabl
    :alt: EX-WebThrottle
    :scale: 80%
 
-Instructions for using EX-WebThrottle here: :doc:`/ex-commandstation/get-started\testing`
+Instructions for using EX-WebThrottle here: :doc:`/ex-commandstation/get-started/testing`
+
+Engine Driver
+--------------
+
+Those with an Android phone or tablet can use the Engine Driver App from the Play Store. Engine Driver is developed alongside the |EX-CS| and can talk to the CS via the WiThrottle protocol or the direct DCC-EX protocol. The phone can be held in the shot or a mirroring app like Phone Link can be used to display the phone screen on the computer that is recording the session. If you don't have an Android phone, or want to actually run Engine Driver on a computer, be sure to read the section below on using the BlueStack Android Emulator before getting started.
 
 BlueStack Android Emulator
 ---------------------------
 
-But what if you don't have an Android phone? Or, what if you just want to use a computer instead? Engine Driver is arguably the premier phone throttle app available, especially when considering all of its enhancements and features specifically tailored for the |EX-CS|. An Android Emulator, like BlueStacks, is the answer. A Google email account to download the free BlueStacks software and a fairly "modern" laptop is needed. Once installed, virtually any Android phone App, eg Engine Driver, can be downloaded from the Google Play Store and run on your computer via Bluestacks, no phone necessary.
+What if you don't have an Android phone? Or, what if you just want to use a computer instead? Engine Driver is arguably the premier phone throttle app available, especially when considering all of its enhancements and features specifically tailored for the |EX-CS|. An Android Emulator, like BlueStacks, is the answer. A Google email account to download the free BlueStacks software and a fairly "modern" laptop or computer is all that is needed. Once installed, virtually any Android phone App, eg Engine Driver, can be downloaded from the Google Play Store and run on a computer via Bluestacks, no phone necessary.
 
 The following image is a Windows computer running multiple "instances" of Engine Driver on the same computer. 
 

@@ -95,4 +95,5 @@ DCC-EX Model Railroading
    under-development/index
    reference/index
    projects/index
+   media-resources/index
    about/index

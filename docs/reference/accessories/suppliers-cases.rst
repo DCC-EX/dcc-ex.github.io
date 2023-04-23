@@ -68,3 +68,28 @@ Created by Neil McKechnie, one of the the DCC-EX Team developers, this is a rack
    :align: left
 
 `Neil's DCC++/EX Controller Case <https://wakwak2popo.wordpress.com/2021/01/04/dcc-controller-case/>`_
+
+Sumner's Mega Dual Configuration Case (3D Print)
+--------------------------------------------------
+
+.. image:: /_static/images/suppliers/flag_us.jpg
+   :alt: US Flag
+   :scale: 100%
+   :align: left
+
+.. rst-class:: clearer
+
+Created by Sumner Patterson, this is a range of Mega Command Station cases with different configurations and different tops at different height to handle your board:
+
+* Uno and Motor Shield Case
+* Mega and Motor Shield Case
+* Mega, Motor Shield, and WiFi Board Case
+* Mega, Motor Shield, and Raspberry Pi Case (for JMRI Users)
+
+
+.. image:: /_static/images/suppliers/sumner_pi_case.png
+   :alt: Sumner Command Station Cases
+   :scale: 50%
+   :align: left
+
+   `Sumner's Thingiverse Case Page <https://www.thingiverse.com/thing:4763767/files>`_

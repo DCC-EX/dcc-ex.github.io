@@ -391,7 +391,7 @@ Microchip's SAMD21 series of ARM Cortex-M0+ enabled microcontrollers offer signi
 The appeal of the SAMD21 series is their relatively high performance, low cost and low power consumption.
 
 .. note::
-  A strong limitation however is that their GPIO are 3v3 compatible **only** and not 5v-tolerant like the STM32F4xx range. Another is an apparent bug in the USB CDC serial driver library code for the console. For these reasons whilst support is included, we are not pursuing this line as a long term support goal for now.
+  A strong limitation however is that their GPIO are 3v3 compatible **only** and not 5v-tolerant like the STM32F4xx range. Another is an apparent bug in the USB CDC serial driver library code for the console, and lack of intent by Arduino to issue the fix we suggest. For these reasons whilst support is included, we are not pursuing this line as a long term support goal for now.
 
 
 SAMD21G18 boards tested
@@ -418,4 +418,36 @@ So far, the Arduino Zero, SparkFun SAMD21 Dev Breakout, Sparkfun RedBoard Turbo,
 .. note::
   Please note that the barrel jack on the Sparkfun SAMD21 Dev Breakout is not fitted by the factory and is NOT more than 6VDC capable. We strongly suggest you triple-check voltages before using this connector. It may give less scope for error to stick to powering the board via the Micro-USB connector for power.
 
+Dropped character on USB CDC fix
+---------------------------------
 
+The USB CDC driver code for Arduino SAMD core implementation seems broken as it is both slow and loses characters. This issue had already been reported to the Arduino SAMD GitHub pages as issue #538, and was then backed up with details from the DCC-EX dev team (https://github.com/arduino/ArduinoCore-samd/issues/538).
+
+You will need to edit some code in the Arduino Core library for SAMD to fix this temporarily. Where the file to be fixed resides depends on the OS and development environment you are using.
+
+When running Arduino IDE: look for the file USBCore.cpp in one of these locations:
+
+- Windows: C:\\Users\\____\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\samd\\1.8.13\\cores\\arduino\\USB\\USBCore.cpp
+- MacOS: ~/Library/Arduino15/packages/arduino/hardware/samd/1.8.13/cores/arduino/USB/USBCore.cpp
+- Linux: ~/.arduino15/packages/arduino/hardware/samd/1.8.13/cores/arduino/USB/USBCore.cpp
+
+When running VS Code/PlatformIO: look for the file USBCore.cpp in one of these locations:
+
+- Windows: C:\\Users\\____\\.platformio\\packages\\framework-arduino-samd\\cores\\arduino\\USB\\USBCore.cpp
+- MacOS: ~/.platformio/packages/framework-arduino-samd/cores/arduino/USB/USBCore.cpp
+- Linux: ~/.platformio/packages/framework-arduino-samd/cores/arduino/USB/USBCore.cpp
+
+Look for the code shaded in dark blue, and replace it per the suggestion in light blue at the top (code for which is shown below for easy copy/paste):
+
+.. image:: /_static/images/samd21/samd21_arduino_cdc_fix.jpeg
+  :alt: Arduino SAMD21 Core CDC driver fix - replace this code
+
+And replace it with:
+::
+
+  while (usbd.epBank1IsReady(ep) && !usbd.epBank1IsTransferComplete(ep)) {
+  // optional timeout code here
+  };
+
+.. note::
+  You will need to do this every time the SAMD Arduino core code is updated unless our fix has been incorporated. We will change our documentation to reflect is if/when it happens.

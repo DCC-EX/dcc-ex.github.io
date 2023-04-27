@@ -423,9 +423,9 @@ Dropped character on USB CDC fix
 
 The USB CDC driver code for Arduino SAMD core implementation seems broken as it is both slow and loses characters. This issue had already been reported to the Arduino SAMD GitHub pages as issue #538, and was then backed up with details from the DCC-EX dev team (https://github.com/arduino/ArduinoCore-samd/issues/538).
 
-You will need to edit some code in the Arduino Core library for SAMD to fix this temporarily. Where the file to be fixed resides depends on the OS and development environment you are using.
+You will need to edit some code in the Arduino Core library for SAMD to fix this temporarily. Where the file to be fixed resides depends on the particular SAMD21 board you have, the OS and development environment you are using.
 
-When running Arduino IDE: look for the file USBCore.cpp in one of these locations:
+When running Arduino IDE: look for the file USBCore.cpp in one of these locations, in this case for the Arduino Zero:
 
 - Windows: C:\\Users\\____\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\samd\\1.8.13\\cores\\arduino\\USB\\USBCore.cpp
 - MacOS: ~/Library/Arduino15/packages/arduino/hardware/samd/1.8.13/cores/arduino/USB/USBCore.cpp
@@ -448,6 +448,11 @@ And replace it with:
   while (usbd.epBank1IsReady(ep) && !usbd.epBank1IsTransferComplete(ep)) {
   // optional timeout code here
   };
+
+For boards such as the Sparkun SAMD21 Dev Breakout or Redboard Turbo, you will need to look in the Sparkfun directories for the appropriate USBCore.cpp file to alter, for example:
+
+- For PlatformIO this is: .platformio/packages/framework-arduino-samd/cores/arduino/USB/USBCore.cpp
+- For Arduino IDE this is: Arduino15/packages/SparkFun/hardware/samd/1.8.3/cores/arduino/USBCore.cpp
 
 .. note::
   You will need to do this every time the SAMD Arduino core code is updated unless our fix has been incorporated. We will change our documentation to reflect is if/when it happens.

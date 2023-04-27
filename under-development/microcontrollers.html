@@ -827,8 +827,8 @@ Instead, on the top of the Motor Shield connect <cite>A0</cite> to <cite>A2</cit
 <section id="dropped-character-on-usb-cdc-fix">
 <h3><a class="toc-backref" href="#id20" role="doc-backlink">Dropped character on USB CDC fix</a><a class="headerlink" href="#dropped-character-on-usb-cdc-fix" title="Permalink to this heading"></a></h3>
 <p>The USB CDC driver code for Arduino SAMD core implementation seems broken as it is both slow and loses characters. This issue had already been reported to the Arduino SAMD GitHub pages as issue #538, and was then backed up with details from the DCC-EX dev team (<a class="reference external" href="https://github.com/arduino/ArduinoCore-samd/issues/538">https://github.com/arduino/ArduinoCore-samd/issues/538</a>).</p>
-<p>You will need to edit some code in the Arduino Core library for SAMD to fix this temporarily. Where the file to be fixed resides depends on the OS and development environment you are using.</p>
-<p>When running Arduino IDE: look for the file USBCore.cpp in one of these locations:</p>
+<p>You will need to edit some code in the Arduino Core library for SAMD to fix this temporarily. Where the file to be fixed resides depends on the particular SAMD21 board you have, the OS and development environment you are using.</p>
+<p>When running Arduino IDE: look for the file USBCore.cpp in one of these locations, in this case for the Arduino Zero:</p>
 <ul class="simple">
 <li><p>Windows: C:\Users\____\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.8.13\cores\arduino\USB\USBCore.cpp</p></li>
 <li><p>MacOS: ~/Library/Arduino15/packages/arduino/hardware/samd/1.8.13/cores/arduino/USB/USBCore.cpp</p></li>
@@ -848,6 +848,11 @@ Instead, on the top of the Motor Shield connect <cite>A0</cite> to <cite>A2</cit
 };
 </pre></div>
 </div>
+<p>For boards such as the Sparkun SAMD21 Dev Breakout or Redboard Turbo, you will need to look in the Sparkfun directories for the appropriate USBCore.cpp file to alter, for example:</p>
+<ul class="simple">
+<li><p>For PlatformIO this is: .platformio/packages/framework-arduino-samd/cores/arduino/USB/USBCore.cpp</p></li>
+<li><p>For Arduino IDE this is: Arduino15/packages/SparkFun/hardware/samd/1.8.3/cores/arduino/USBCore.cpp</p></li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You will need to do this every time the SAMD Arduino core code is updated unless our fix has been incorporated. We will change our documentation to reflect is if/when it happens.</p>

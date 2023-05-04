@@ -56,11 +56,11 @@ Arduino Mega2560
   * - Pin(s)
     - Details
   * - SDA/SCL (20/21)
-    - |I2C| connection for use with |I2C| displays, I/O expanders, etc.
+    - |I2C| connection for use with |I2C| displays, I/O expanders, etc., **not for general I/O**
   * - SDA/SCL (near USB)
-    - |I2C| connection for use with |I2C| displays, I/O expanders, etc.
+    - |I2C| connection for use with |I2C| displays, I/O expanders, etc., **not for general I/O**
   * - Tx1/Rx1/Tx2/Rx2/Tx3/Rx3
-    - Additional serial ports available for use
+    - Additional serial ports available for use, **not for general I/O**
   * - A8 - A15
     - Analogue I/O pins available for use
   * - 2
@@ -104,7 +104,7 @@ Arduino Uno
   * - 10 - 13
     - Digial I/O pins commonly used by motor shields
 
-.. list-table:: Mega2560 Pins to use
+.. list-table:: Uno Pins to use
   :widths: auto
   :header-rows: 1
   :class: command-table
@@ -112,13 +112,13 @@ Arduino Uno
   * - Pin(s)
     - Details
   * - SDA/SCL (A4/A5)
-    - |I2C| connection for use with |I2C| displays, I/O expanders, etc.
+    - |I2C| connection for use with |I2C| displays, I/O expanders, etc., **not for general I/O**
   * - SDA/SCL (near USB)
-    - |I2C| connection for use with |I2C| displays, I/O expanders, etc.
+    - |I2C| connection for use with |I2C| displays, I/O expanders, etc., **not for general I/O**
   * - 2
     - Digital I/O pin available for use
 
-.. list-table:: Mega2560 Pins to use with caution
+.. list-table:: Uno Pins to use with caution
   :widths: auto
   :header-rows: 1
   :class: command-table

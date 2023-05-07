@@ -33,7 +33,7 @@ Here is an example listing for shirts where you need to choose the correct descr
    :align: center
    :scale: 65%
 
-And here is an order page where you can select your size and color for the T-Shirts, Long-Sleeve Shirts, Hoodies, etc.
+And here is an example of an order page where you can select your size and color for the T-Shirts, Long-Sleeve Shirts, Hoodies, etc.
 
 .. image:: /_static/images/merch/ex_merch_page.png
    :target: https://dccex.creator-spring.com/
@@ -41,7 +41,7 @@ And here is an order page where you can select your size and color for the T-Shi
    :align: center
    :scale: 55%
 
-We also have 2 kinds of hats, a mug, a sticker, and several different types of shirts
+We also have 2 kinds of hats, a mug, a sticker, and several different types of shirts. You can click on an image to go directly to that section in the store.
 
 .. image:: /_static/images/merch/ex_hat.png
    :target: https://dccex.creator-spring.com/hats/
@@ -66,11 +66,7 @@ We also have 2 kinds of hats, a mug, a sticker, and several different types of s
    :alt: Sticker
    :align: left
    :scale: 20%
-   
-|
-|
-|
-|
-|
+
+.. rst-class:: clearer
 
 `DCC-EX Merchandise Store <https://dccex.creator-spring.com/>`_

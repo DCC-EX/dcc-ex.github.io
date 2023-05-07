@@ -69,6 +69,8 @@ Created by Neil McKechnie, one of the the DCC-EX Team developers, this is a rack
 
 `Neil's DCC++/EX Controller Case <https://wakwak2popo.wordpress.com/2021/01/04/dcc-controller-case/>`_
 
+.. rst-class:: clearer
+
 Sumner's Mega Dual Configuration Case (3D Print)
 --------------------------------------------------
 
@@ -79,7 +81,7 @@ Sumner's Mega Dual Configuration Case (3D Print)
 
 .. rst-class:: clearer
 
-Created by Sumner Patterson, this is a range of Mega Command Station cases with different configurations and different tops at different height to handle your board:
+Created by Sumner Patterson, this is a range of Mega Command Station cases with different configurations and different tops at different heights to handle your boards:
 
 * Uno and Motor Shield Case
 * Mega and Motor Shield Case

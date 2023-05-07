@@ -67,6 +67,5 @@ We also have 2 kinds of hats, a mug, a sticker, and several different types of s
    :align: left
    :scale: 20%
 
-.. rst-class:: clearer
 
 `DCC-EX Merchandise Store <https://dccex.creator-spring.com/>`_

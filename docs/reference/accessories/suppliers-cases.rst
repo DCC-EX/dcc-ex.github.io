@@ -97,4 +97,4 @@ Created by Sumner Patterson, this is a range of Mega Command Station cases with 
    
 `Sumner's Thingiverse Case Page <https://www.thingiverse.com/thing:4763767/files>`_
 
-`See a list of his 3D printed cases here: <https://1fatgmc.com/RailRoad/3D-Printer/3D-Printer-Index.html>`_
+`List of Sumner's 3D printed cases <https://1fatgmc.com/RailRoad/3D-Printer/3D-Printer-Index.html>`_

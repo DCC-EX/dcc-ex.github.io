@@ -29,32 +29,32 @@ NOTE: There are 3 styles of shirts, plain back, "I'm a DCC-EX Tinkerer" on the b
    :align: center
    :scale: 50%
 
-   .. image:: /_static/images/merch/ex_hat.png
+.. image:: /_static/images/merch/ex_hat.png
    :alt: Baseball Cap
    :align: center
    :scale: 50%
 
-   .. image:: /_static/images/merch/ex_hoodie.png
+.. image:: /_static/images/merch/ex_hoodie.png
    :alt: Hoodie
    :align: center
    :scale: 50%
 
-   .. image:: /_static/images/merch/ex_mug.png
+.. image:: /_static/images/merch/ex_mug.png
    :alt: Mug
    :align: center
    :scale: 50%
 
-      .. image:: /_static/images/merch/ex_sticker.png
+.. image:: /_static/images/merch/ex_sticker.png
    :alt: Sticker
    :align: center
    :scale: 50%
 
-   .. image:: /_static/images/merch/ex_merch_page.png
+.. image:: /_static/images/merch/ex_merch_page.png
    :alt: DCC-EX example merchandise page
    :align: center
    :scale: 50%
 
-  
+ 
 
 
 

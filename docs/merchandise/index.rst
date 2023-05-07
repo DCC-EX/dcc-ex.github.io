@@ -66,6 +66,7 @@ We also have 2 kinds of hats, a mug, a sticker, and several different types of s
    :alt: Sticker
    :align: left
    :scale: 20%
+   
 |
 |
 |

@@ -94,6 +94,7 @@ Created by Sumner Patterson, this is a range of Mega Command Station cases with 
    :scale: 50%
    :align: left
 
+.. rst-class:: clearer
    
 `Sumner's Thingiverse Case Page <https://www.thingiverse.com/thing:4763767/files>`_
 

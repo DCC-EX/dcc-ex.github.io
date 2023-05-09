@@ -45,6 +45,7 @@ Easy to use boards
 .. toctree::
     :maxdepth: 1
 
+    DCC-EX EX-MotorShield8874 - 5A [RECOMMENDED] </reference/hardware/motorboards/ex-motor-shield-8874>
     Arduino Motor Shield - 1.5A [RECOMMENDED] </reference/hardware/motorboards/arduino-motor-shield>
     Deek-Robot - 1.5A [RECOMMENDED] </reference/hardware/motorboards/deek-robot-motor-shield>
     Flashtree - 1.5A </reference/hardware/motorboards/flashtree-motor-shield>

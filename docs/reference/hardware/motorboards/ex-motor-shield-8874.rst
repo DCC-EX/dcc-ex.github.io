@@ -78,4 +78,4 @@ Notice that A (MAIN) is on the left as you look at the connectors, and B (PROG) 
 Next Steps
 ==========
 
-Click :doc:`here </ex-commandstation/get-started/wifi-setup>` to learn how to connect the WiFi shield to your |EX-CS|, or *alternately* connect a controller like |JMRI| or our |EX-WT| by using the serial cable to connect between your computer and the |EX-CS| :doc:`here /ex-commandstation/get-started/installer`.
+Click :doc:`here </ex-commandstation/get-started/wifi-setup>` to learn how to connect the WiFi shield to your |EX-CS|, or *alternatively* connect a controller like |JMRI| or our |EX-WT| by using the serial cable to connect between your computer and the |EX-CS| as outlined in the :ref:`ex-installer/installing:1. getting ready` section of the |EX-I| page.

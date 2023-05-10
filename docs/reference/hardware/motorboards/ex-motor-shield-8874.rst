@@ -12,7 +12,7 @@ DCC-EX EX-MotorShield8874 RevA
     :depth: 1
     :local:
 
-Designed in conjunction with the |DCC-EX| development team, the EX-MotorShield8874 is extremely simple to use with all generations of |EX-CS| hardware. It also powers the Command Station motherboard via the same single barrel jack DC input voltage that powers the track. It is rated at a very generous true 5A of load per channel and does not require a heatsink or fan as it runs cool due to the Texas Instruments DRV8874 MOSFET technology. This board is the new standard by which we compare other boards.
+Designed in conjunction with the |DCC-EX| development team, the EX-MotorShield8874 is extremely simple to use with all current and future generations of |EX-CS| hardware. It also safely powers the Command Station motherboard via the same single barrel jack DC input voltage that powers the track. It is rated at a very generous peak 5A of load per channel using Texas Instruments DRV8874 MOSFET technology. This board is the new standard by which we compare other boards.
 
 .. image:: /_static/images/motorboards/ex_motorshield8874.jpeg
    :alt: DCC-EX EX-MotorShield8874 RevA Semify
@@ -24,16 +24,16 @@ Designed in conjunction with the |DCC-EX| development team, the EX-MotorShield88
 
 .. note:: 
 
-   While this board is designed by and licensed to Semify, the hardware design has graciously been made open source and the schematics are available on the `Semify GitHub <https://github.com/semify-eda/motor-shield/blob/main/motor-shield.pdf>`_.
+   Whilst the EX-MotorShield8874 was designed by Semify who license it to manufacturers, the hardware design has graciously been made open source for individual users and the schematics are available on the `DCC-EX GitHub <https://github.com/DCC-EX/EX-Hardware/tree/main/EX-Motorshield8874>`_.
 
 How can I get one?
 ==================
 
-For quantities of 10 or less, you may utilise a service such as JLCPCB without licensing fees payable to Semify blah blah blah
+Units may be purchased from Semify's `Tindie store <https://www.tindie.com/products/semify/semify-dcc-ex-motor-shield/>`_ and other manufacturers licensed to provide it.
 
-You can purchse from... blah blah blah
+For quantities of 10 or less per annum, you may utilise a PCB manufacturing and assembly service such as JLCPCB without licensing fees. The production files are available on the `DCC-EX GitHub <https://github.com/DCC-EX/EX-Hardware/tree/main/EX-Motorshield8874>`_.
 
-Add note here on license terms with Semify, dontation to DCC-EX etc.
+Entrepreneurs wanting to use the design to offer commercial quantities to their local communities should contact Semify (service@semify-eda.com) to arrange a bulk purchase or license to manufacture. Licensing includes donating a royalty to DCC-EX per board sold. Semify have been exempted from this due to their funding of the prototyping and work on verifying the design.
 
 Assembly with EX-MotorShield8874
 ================================
@@ -64,14 +64,16 @@ The EX-MotorShield8874 accepts a standard 2.5mm DC barrel jack for DC power, wit
    
 
 .. note::
-  **DO NOT** connect power to the underlying Arduino motherboard via its DC barrel jack as you may damage your Arduino and/or EX-MotorShield8874!! <BR> The EX-MotorShield8874 supplies power to the underlying |EX-CS| via the VIN pin. This voltage is carefully regulated on the EX-MotorShield8874 to a safe 7.2VDC which will mean all Command Station motherboards will stay cool and work well. There is no need to power the Command Station via its barrel jack, or USB power. It is safe, however, to connect the USB cable as it will not create a conflict.
+  **DO NOT** connect power to BOTH the EX-MotorShield8874 barrel jack and the underlying Arduino motherboard via its DC barrel jack as you may damage your Arduino and/or EX-MotorShield8874!!
+
+The EX-MotorShield8874's DC barrel jack is the only power source required to power both the tracks and the |EX-CS| into which it is plugged. It supplies carefully regulated 7.2V DC power to the underlying Arduino R3 compatible motherboard via the VIN pin. This voltage is safely regulated down from the track power input to ensure Command Station motherboards will stay cool and work well. There is no need to power the Command Station via its barrel jack, or USB power. It is safe, however, to connect the USB cable as it will not create a conflict.
 
 We suggest 10-12VDC for Z & N Scale, 14-16VDC for OO, HO, and 18-19VDC for O, or up to 24V for G scales because the EX-MotorShield8874 does not drop voltage like the standard L298 based motor shields. Note that good quality, fully-enclosed and double-insulated switch mode power supplies are best, and we suggest laptop power bricks as ideal in this role as they typically output 3-20A easily and safely.
 
 .. note::
    Please note that as the EX-MotorShield8874 can supply up to 5A of track power per channel, a power supply of more than 10A capacity is required to run both channels at full current and have power left for the Command Station.
 
-2. Turn on Power to the Motor Driver
+1. Turn on Power to the Motor Driver
 ------------------------------------
 
 Once satisfied the EX-MotorShield8874 is seated properly on the Command Station motherboard, you can apply power to the |EX-CS|. You ought to see a green LED light up indicating power is being supplied to the motherboard.

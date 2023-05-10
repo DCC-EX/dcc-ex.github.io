@@ -71,7 +71,7 @@ The EX-MotorShield8874's DC barrel jack is the only power source required to pow
 We suggest 10-12VDC for Z & N Scale, 14-16VDC for OO, HO, and 18-19VDC for O, or up to 24V for G scales because the EX-MotorShield8874 does not drop voltage like the standard L298 based motor shields. Note that good quality, fully-enclosed and double-insulated switch mode power supplies are best, and we suggest laptop power bricks as ideal in this role as they typically output 3-20A easily and safely.
 
 .. note::
-   Please note that as the EX-MotorShield8874 can supply up to 5A of track power per channel, a power supply of more than 10A capacity is required to run both channels at full current and have power left for the Command Station.
+   Please note that as the EX-MotorShield8874 can supply up to 5A of track power per channel, a power supply of more than 10A peak capacity is required to run both channels at full peak current and have power left for the Command Station.
 
 1. Turn on Power to the Motor Driver
 ------------------------------------

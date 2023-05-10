@@ -6,7 +6,13 @@ DCC-EX EX-MotorShield8874 RevA
 
 |conductor|
 
-Designed in conjection with the DCC-EX development team, the EX-MotorShield8874 is extremely simple to use with all generations of |EX-CS| hardware. It also powers the Command Station motherboard via the same single barrel jack DC input voltage that powers the track. It is rated at a very generous true 5A of load per channel and does not require heatsink or fan as it runs cool with Texas Instruments DRV8874 MOSFET technology. This board is the new standard by which we compare other boards.
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
+
+Designed in conjunction with the |DCC-EX| development team, the EX-MotorShield8874 is extremely simple to use with all generations of |EX-CS| hardware. It also powers the Command Station motherboard via the same single barrel jack DC input voltage that powers the track. It is rated at a very generous true 5A of load per channel and does not require a heatsink or fan as it runs cool due to the Texas Instruments DRV8874 MOSFET technology. This board is the new standard by which we compare other boards.
 
 .. image:: /_static/images/motorboards/ex_motorshield8874.jpeg
    :alt: DCC-EX EX-MotorShield8874 RevA Semify
@@ -16,7 +22,18 @@ Designed in conjection with the DCC-EX development team, the EX-MotorShield8874 
    :alt: DCC-EX EX-MotorShield8874 RevA Millennium Engineering
    :scale: 10%
 
-Schematics are available on the `Semify GitHub <https://github.com/semify-eda/motor-shield/blob/main/motor-shield.pdf>`_.
+.. note:: 
+
+   While this board is designed by and licensed to Semify, the hardware design has graciously been made open source and the schematics are available on the `Semify GitHub <https://github.com/semify-eda/motor-shield/blob/main/motor-shield.pdf>`_.
+
+How can I get one?
+==================
+
+For quantities of 10 or less, you may utilise a service such as JLCPCB without licensing fees payable to Semify blah blah blah
+
+You can purchse from... blah blah blah
+
+Add note here on license terms with Semify, dontation to DCC-EX etc.
 
 Assembly with EX-MotorShield8874
 ================================
@@ -75,7 +92,7 @@ Track power for A (MAIN) and B (PROG) tracks can be connected now using the gree
    
 Notice that A (MAIN) is on the left as you look at the connectors, and B (PROG) is on the right, next to the DC barrel jack.
 
-Next Steps
+Next steps
 ==========
 
 Click :doc:`here </ex-commandstation/get-started/wifi-setup>` to learn how to connect the WiFi shield to your |EX-CS|, or *alternatively* connect a controller like |JMRI| or our |EX-WT| by using the serial cable to connect between your computer and the |EX-CS| as outlined in the :ref:`ex-installer/installing:1. getting ready` section of the |EX-I| page.

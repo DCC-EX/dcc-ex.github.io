@@ -96,4 +96,5 @@ DCC-EX Model Railroading
    reference/index
    projects/index
    media-resources/index
+   merchandise/index
    about/index

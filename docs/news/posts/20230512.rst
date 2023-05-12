@@ -2,7 +2,7 @@
 .. include:: /include/include-l2.rst
 
 :blogpost: true
-:date: 11th April, 2023
+:date: 12th May, 2023
 :author: Paul Antoine
 :category: News, Release
 :tags: ex-commandstation

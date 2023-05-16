@@ -232,11 +232,15 @@ Notes on the Arduino connectors on the NUCLEO range
   :scale: 25%
 
 
-Here is the NUCLEO-F411RE with a genuine Arduino Motor Shield R3 installed:
+Here is the NUCLEO-F411RE with on the left a genuine Arduino Motor Shield R3 installed, and on the right a |DCC-EX| EX-MotorShield8874 installed:
 
 .. image:: /_static/images/nucleo/nucleo-f411re-with-motor-shield.png
   :alt: STM Nucleo-F411RE with genuine Arduino Motor Shield R3 installed
-  :scale: 25%
+  :scale: 30%
+
+.. image:: /_static/images/motorboards/ex_motorshield8874_nucleo_f411.jpg
+  :alt: STM Nucleo-F411RE with DCC-EX EX-MotorShield8874 installed
+  :scale: 17%
 
 Serial for WiFi, for F411RE and F446RE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -336,13 +340,16 @@ To fix the IO0 pin voltage, install a resistor of between 250 to 300 Ohms betwee
   :alt: ESPDUINO-32 resister modification, underside of PCB
   :scale: 10%
 
-From top to bottom the pins are: `IO0`, `5V` (not `IOREF` on this board, as it ought to be for proper Arduino UNO R3 compliance), `RESET`, `3.3V`, `5V`, `GND`, `GND`, `VIN` as seen here:
+From top to bottom the pins are: `IO0`, `5V` (incorrectly labelled `IOREF` on this board, so not Arduino UNO R3 compliant), `RESET`, `3.3V`, `5V`, `GND`, `GND`, `VIN` as seen here:
 
 .. image:: /_static/images/esp32/espduino-32-header-closeup.jpg
   :alt: ESPDUINO-32 power header closeup, component side
   :scale: 10%
 
-To avoid damaging the ESP32's analog inputs, the `IOREF` pin on the motor shield must be bent outwards, or cut so it will not go into the ESPDUINO-32 socket. Then use a jumper from the `3.3v` pin to `IOREF` on the motor shield itself.
+
+Using an Arduino Motor Shield R3 or clone
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+To avoid damaging the ESP32's analog inputs, the `IOREF` pin on must be bent outwards or cut so it will not go into the ESPDUINO-32 socket. Then use a jumper from the `3.3v` pin to `IOREF` on the motor shield itself.
 
 For DCC current sensing bend or cut the `A0` and `A1` pins because by default they are connected to `GPIO2` and `GPIO4` on the ESP32 which are not useable at the same time as WiFi.
 Instead, on the top of the Motor Shield connect `A0` to `A2` and `A1` to `A3` via jumpers then change the MotorShield definition to suit in MotorDrivers.h.
@@ -351,6 +358,12 @@ Instead, on the top of the Motor Shield connect `A0` to `A2` and `A1` to `A3` vi
   :alt: MotorShield configuration for ESP32
   :scale: 50%
 
+Using a |DCC-EX| EX-MotorShield8874
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To avoid damaging the ESP32's analog inputs, alter the IOREF jumper on the bottom of the EX-MotorShield8874 to take power from the 3v3 supply instead of IOREF as described in `Power Configuration PCB Jumpers <https://github.com/DCC-EX/EX-Hardware/tree/main/EX-Motorshield8874#power-configuration-pcb-jumpers>`_.
+
+For DCC current sensing with the EX-MotorShield8874, use the alternate pin assignment jumpers for current sense to switch sensing to A2/A3 as described in `Alternate Pin Assignment PCB Jumpers <https://github.com/DCC-EX/EX-Hardware/tree/main/EX-Motorshield8874#aternate-pin-assignment-pcb-jumpers>`_.
 
 Finally, the ESP32 needs more testing and development of a |DCC-EX| |I2C| non-blocking native driver implementation in particular. |I2C| peripheral performance will be limited until such time.
 
@@ -416,7 +429,7 @@ So far, the Arduino Zero, SparkFun SAMD21 Dev Breakout, Sparkfun RedBoard Turbo,
   :scale: 25%
 
 .. note::
-  Please note that the barrel jack on the Sparkfun SAMD21 Dev Breakout is not fitted by the factory and is NOT more than 6VDC capable. We strongly suggest you triple-check voltages before using this connector. It may give less scope for error to stick to powering the board via the Micro-USB connector for power.
+  Please note that the barrel jack on the Sparkfun SAMD21 Dev Breakout is not fitted by the factory and the board itself **CANNOT handle more than 6VDC**. We strongly suggest you triple-check voltages before using this connector. It may give less scope for error to stick to powering the board via the Micro-USB connector for power. |br| |br| Note also that the |DCC-EX| EX-MotorShield8874's onboard regulator is by default set **too high** for the SAMD21 Dev Breakout at 7.2VDC. Adjustments to resistor R206 will be needed to lower the output to a safe 6V instead.
 
 Dropped character on USB CDC fix
 ---------------------------------

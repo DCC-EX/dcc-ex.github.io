@@ -33,7 +33,7 @@ Units may be purchased from Semify's `Tindie store <https://www.tindie.com/produ
 
 For quantities of 10 or less per annum, you may utilise a PCB manufacturing and assembly service such as JLCPCB without licensing fees. The production files are available on the `DCC-EX GitHub <https://github.com/DCC-EX/EX-Hardware/tree/main/EX-Motorshield8874>`_.
 
-Entrepreneurs wanting to use the design to offer commercial quantities to their local communities should contact Semify (service@semify-eda.com) to arrange a bulk purchase or license to manufacture. Licensing includes donating a royalty to DCC-EX per board sold. Semify have been exempted from this due to their funding of the prototyping and work on verifying the design.
+Entrepreneurs wanting to use the design to offer commercial quantities to their local communities should contact Semify (service @ semify-eda.com) to arrange a bulk purchase or DCC-EX (support @ dcc-ex.com) for a license to manufacture. Licensing includes donating a royalty to DCC-EX per board sold. Semify have been exempted from this due to their funding of the prototyping and work on verifying the design.
 
 Assembly with EX-MotorShield8874
 ================================

@@ -29,7 +29,7 @@ Designed in conjunction with the |DCC-EX| development team, the EX-MotorShield88
 How can I get one?
 ==================
 
-Units may be purchased from Semify's `Tindie store <https://www.tindie.com/products/semify/semify-dcc-ex-motor-shield/>`_ and other manufacturers licensed to provide it.
+EX-MotorShield8874 is available immediately for purchase in the EU, USA and Canada via Semify's Tindie store (https://www.tindie.com/products/semify/semify-dcc-ex-motor-shield/) for $US34.90 each, and in Australia, New Zealand and South East Asia from Millennium Engineering Pty Ltd (orders @ milleng.com.au) for $AU55, plus shipping. It will also be available shortly in the UK through Chesterfield Model Making & Miniature Electronics (https://chesterfield-models.co.uk/product/semify-dcc-ex-motor-shield/), for £29.99 plus shipping. Expect further announcements re local availability in the US through DCC-EX directly and Smart Hobby LLC, with other countries to follow.
 
 For quantities of 10 or less per annum, you may utilise a PCB manufacturing and assembly service such as JLCPCB without licensing fees. The production files are available on the `DCC-EX GitHub <https://github.com/DCC-EX/EX-Hardware/tree/main/EX-Motorshield8874>`_.
 

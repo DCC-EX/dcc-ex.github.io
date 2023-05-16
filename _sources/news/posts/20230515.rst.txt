@@ -22,6 +22,10 @@ The EX-MotorShield8874 addresses the needs of DCC-EX users wanting to run multip
 
 The EX-MotorShield8874 is the first offering in the DCC-EX open source hardware ecosystem specifically designed for model railroaders, and is a direct result of the strong community engagement DCC-EX strives to inspire. DCC-EX hardware lead Paul Antoine says "the open source vision for hardware designs from the DCC-EX community means individual users can order small batch manufacturing of all DCC-EX endorsed designs for themselves, friends and fellow club members. Or they have the choice to buy the same quality of product from licensed local resellers in their countries of origin.”
 
+.. image:: /_static/images/motorboards/ex_motorshield8874.jpeg
+   :alt: DCC-EX EX-MotorShield8874 RevA Semify
+   :scale: 25%
+
 Featuring dual 5A output Texas Instruments DRV8874 MOSFET H-Bridge ICs, the EX-MotorShield8874 shield is fully drop-in compatible with the industry standard Arduino Motor Shield R3 due to additional logic onboard, along with plenty of new features. As a result, it can immediately replace older L298 based boards without software modifications. There is no need to have to cut traces or bend out pins, and the EX-MotorShield8874 can power your EX-CommmandStation too! The DRV8874 H-Bridge ICs also include hardware overcurrent protection monitored by EX-CommandStation, in addition to the existing software-based overload protection.
 
 DCC-EX specific features include single 2.1mm barrel jack DC power for both the DCC/DC output and to supply the underlying Command Station motherboard with inbuilt polarity protection. This eliminates the need for a separate power supply for the Command Station motherboard. An onboard switching power supply regulates the DCC track input voltage to a safe 7.2VDC to the motherboard via the VIN pin, ensuring its linear 5V and 3.3V regulators stay as cool as possible.
@@ -38,8 +42,8 @@ Erwin and Semify have graciously provided the design files for the EX-MotorShiel
 
 Entrepreneurs wanting to offer commercial quantities to their local communities should contact Semify (service @ semify-eda.com) to arrange a bulk purchase, or DCC-EX (support @ dcc-ex.com) when looking to use the design to manufacture. Licensing includes donating a royalty to DCC-EX per board sold. Semify has a separate arrangement with DCC-EX due to their funding of the prototyping and work on verifying and testing the design.
 
-EX-MotorShield8874 is available immediately for purchase in the EU, USA and Canada via Semify's Tindie store (https://www.tindie.com/products/semify/semify-dcc-ex-motor-shield/) for $US34.90 each, and in Australia, New Zealand and South East Asia from Millennium Engineering Pty Ltd (orders @ milleng.com.au) for $AU55, plus shipping. It will also be available shortly in the UK through Chesterfield Model Making & Miniature Electronics (https://chesterfield-models.co.uk/product/semify-dcc-ex-motor-shield/), for £29.99 plus shipping. Expect further announcements re local availability in the US through DCC-EX directly and Smart Hobby LLC, with other countries to follow.
+EX-MotorShield8874 is available immediately for purchase in the EU, USA and Canada via Semify's Tindie store (https://www.tindie.com/products/semify/semify-dcc-ex-motor-shield/) starting at $US34.90 each, and in Australia, New Zealand and South East Asia from Millennium Engineering Pty Ltd (orders @ milleng.com.au) for $AU55, plus shipping. It will also be available shortly in the UK through Chesterfield Model Making & Miniature Electronics (https://chesterfield-models.co.uk/product/semify-dcc-ex-motor-shield/), for £29.99 plus shipping. Expect further announcements re local availability in the US through DCC-EX directly and Smart Hobby LLC, with other countries to follow.
 
-Design files and initial hardware documentation are at: https://github.com/DCC-EX/EX-Hardware/tree/main/EX-Motorshield8874
+Design files and initial hardware documentation are at: https://github.com/DCC-EX/EX-Hardware/tree/main/EX-Motorshield8874 and installation details at: https://dcc-ex.com/reference/hardware/motorboards/ex-motor-shield-8874.html
 
-DCC-EX Website will have documentation for the EX-MotorShield8874 arriving shortly, and extended support in software will be included in the upcoming EX-CommandStation v5.0 release scheduled for May 2023.
+DCC-EX Website will have further documentation for the EX-MotorShield8874, and extended support in software will be included in the upcoming EX-CommandStation v5.0 release scheduled for late May 2023.

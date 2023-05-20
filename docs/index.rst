@@ -79,6 +79,7 @@ DCC-EX Model Railroading
 
    begin/what-to-know
    begin/levels
+   :caption: Products
    ex-commandstation/index
    ex-installer/index
    ex-webthrottle/index
@@ -88,10 +89,13 @@ DCC-EX Model Railroading
    ex-dccinspector/index
    ex-fastclock/index
    ex-toolbox/index
+   :caption: Support & Info
    support/index
    big-picture/index
    throttles/index
+   :caption: Download
    download/index
+   :caption: Reference
    under-development/index
    reference/index
    projects/index

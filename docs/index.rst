@@ -107,7 +107,7 @@ DCC-EX Model Railroading
 .. toctree::
    :hidden:
    :maxdepth: 4
-   :caption: Download
+   :caption: Downloads
 
    download/index
 
@@ -116,14 +116,15 @@ DCC-EX Model Railroading
    :maxdepth: 4
    :caption: Reference
 
-   under-development/index
    reference/index
+   under-development/index
+   projects/index
 
 .. toctree::
    :hidden:
    :maxdepth: 4
-   
-   projects/index
+   :caption: The DCC-EX Project
+
    media-resources/index
    merchandise/index
    about/index

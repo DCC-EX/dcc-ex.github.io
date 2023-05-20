@@ -30,7 +30,7 @@ We currently support LCDs based on the PCF8574 backpack:
 
 The LCD displays require a "backpack" that converts the raw display to |I2C|. |I2C| allows us to use just 2 lines (SDA (serial data) and clock (SCL)) to send text to the display. Without this board, we wouldn't have enough pins, especially on an Uno, to use a display. 
 
-.. warning:: You MUST make sure to order TWO (2) parts for your LCD Displays. You need the display AND a backpack based on the PCF7584 controller chip. Some displays come with this already soldered together. Make sure before you buy!
+.. warning:: You MUST make sure to order TWO (2) parts for your LCD Displays. You need the display AND a backpack based on the PCF8574 controller chip. Some displays come with this already soldered together. Make sure before you buy!
 
 Examples of compatible displays
 ================================

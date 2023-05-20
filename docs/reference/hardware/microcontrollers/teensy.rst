@@ -8,11 +8,11 @@ Teensy
 
 |tinkerer| |engineer|
 
-The Teensy Series by PJRC is a next generation microcontroller. It has loads of RAM, a faster clock speed and a host of add-ons. 
+The Teensy 3.x/4.x Series by PJRC are next generation ARM-based microcontrollers. They have loads of RAM, a faster clock speed and a host of add-ons. 
 
-It's teensy because it is even smaller than a Nano, but it is even more powerful than a Nano Every. This is not an Arduino, it is from a company called PJRC. Since it is a different processor, there are a lot of changes in the software that load onto the teensy when you select that as your processor.
+It's teensy because it is even smaller than a Nano, but it is even more powerful than a Nano Every. This is not an Arduino, it is from a company called PJRC. Since they use different processors, there are a lot of changes in the software that load onto the teensy when you select that as your processor.
 
-There are several versions 3.2, 3.5, 3.6, 4.0, 4.1. |EX-CS| will run on all these boards. The biggest difference is size/number of pins. You can also purchase the boards with or without the headers soldered on.
+There are several versions 3.2, 3.5, 3.6, 4.0, 4.1. with the biggest difference being the size/number of pins. You can also purchase the boards with or without the headers soldered on.
 
 .. image:: /_static/images/microcontrollers/teensy_3_2.jpg
    :alt: Teensy 3.2
@@ -40,13 +40,14 @@ There are even expansion boards to add WiFi and Ethernet. There is a Mega form f
 
 .. rst-class:: clearer
 
-Teensy Specifications
-=======================
+Teensy 3.6 Specifications
+=========================
 
 * 180 MHz ARM Cortex-M4 with Floating Point Unit
 * 1M Flash, 256K RAM, 4K EEPROM
 * Microcontroller Chip MK66FX1M0VMD18
-* MK66FX1M0VMD18 USB High Speed (480 Mbit/sec) Port 
+* MK66FX1M0VMD18
+* USB High Speed (480 Mbit/sec) Port 
 * 2 CAN Bus Ports 
 * 32 General Purpose DMA Channels 
 * 22 PWM Outputs 
@@ -55,20 +56,29 @@ Teensy Specifications
 * 62 I/O Pins (42 breadboard friendly) 
 * 25 Analog Inputs to 2 ADCs with 13 bits resolution 
 * 2 Analog Outputs (DACs) with 12 bit resolution 
-* 22 PWM Outputs USB Full Speed (12 Mbit/sec) 
+* 22 PWM Outputs
+* USB Full Speed (12 Mbit/sec) 
 * Port Ethernet mac, capable of full 100 Mbit/sec speed 
 * Native (4 bit SDIO) 
 * micro SD card port 
 * I2S Audio Port 
 * 4 Channel Digital Audio Input & Output 
-* 14 Hardware Timers 
+* 19 Hardware Timers 
 * Cryptographic Acceleration Unit 
 * Random Number Generator 
 * CRC Computation Unit 
 * 6 Serial Ports (2 with FIFO & Fast Baud Rates) 
-* 3 SPI Ports (1 with FIFO) 
-* 4 |I2C| Ports Real Time Clock
+* 3 SPI Ports (1 with FIFO)
+* Real Time Clock
 
-The only downside is that PJRC is a very small company, it doesn't have the resources or the staff of Arduino or Espressif. The board is also 3.3V, so you have to be careful that anything connected to the GPIO ports is also 3.3V 
+|EX-CS| will run on all these boards, however the following caveats apply:
+
+- Teensys are strictly 3.3V, so you have to be careful that anything connected to the GPIO ports is also 3.3V (see also :doc:`other 3.3v microcontrollers </under-development/microcontrollers>`)
+- Teensy 3.x models are all now considered "legacy" products by PCJR and marked "Not recommended for new designs or projects", with only Teensy 4.0/4.1 recommended by PCJR
+- Version 3.1, development versions 4.2.4 and beyond, and upcoming 5.x releases of |EX-CS| can compile for the Teensy models listed above, but have not been extensively tested
+- Teensy |I2C| peripheral uses the blocking Arduino Wire library, as there is no |DCC-EX| native non-blocking |I2C| driver for any of the Teensy range presently available, or planned. This will limit performance somewhat when using |I2C| peripherals attached to your Teensy.
+- Note that no further development and testing efforts by the core development team will be directed to Teensy models under the current :doc:`roadmap </about/roadmap>`
+
+The major downside to all Teensy models is that PJRC is a very small company so as such it simply doesn't have the resources or the staff of major manufacturers like Arduino, Espressif or ST Microelectronics.
 
 .. TODO:: `LOW - Hardware <https://github.com/DCC-EX/dcc-ex.github.io/issues/424>`_ - Add pinouts and motor shield wiring diagrams

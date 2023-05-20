@@ -19,7 +19,11 @@ Supported Motor Drivers
 
 If you have trouble finding a particular board from the list, try searching based on it's name or the type of chip on the board and the terms "H-Bridge" or "Motor Shield". There are often many places that sell these, especially the Chinese sites like AliExpress and Banggood.
 
-**TL;DR** (aka short version): We currently recommend the Arduino Motor Shield R3 or a supported clone board like the Deek-Robot.
+**TL;DR** (aka short version): We currently recommend the |DCC-EX| EX-MotorShield8874, and the Arduino Motor Shield R3 or a supported clone like the Deek-Robot.
+
+.. image:: /_static/images/motorboards/ex_motorshield8874.jpeg
+   :alt: DCC-EX EX-MotorShield8874 RevA
+   :scale: 15%
 
 .. image:: /_static/images/deek_robot1_sm.jpg
    :alt: Deek Robot Motor Shield
@@ -45,6 +49,7 @@ Easy to use boards
 .. toctree::
     :maxdepth: 1
 
+    DCC-EX EX-MotorShield8874 - 5A [RECOMMENDED] </reference/hardware/motorboards/ex-motor-shield-8874>
     Arduino Motor Shield - 1.5A [RECOMMENDED] </reference/hardware/motorboards/arduino-motor-shield>
     Deek-Robot - 1.5A [RECOMMENDED] </reference/hardware/motorboards/deek-robot-motor-shield>
     Flashtree - 1.5A </reference/hardware/motorboards/flashtree-motor-shield>

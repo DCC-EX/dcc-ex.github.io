@@ -257,7 +257,9 @@ All the below turnout/point definitions will define turnouts/points that are adv
 
 "description" is an optional parameter, and must be enclosed in quotes "". If you don't wish this turnout/point to be advertised to throttles, then substitute the word HIDDEN (with no "") instead of the description.
 
-``TURNOUT( id, addr, sub_addr [, "description"] )``	Define a DCC accessory turnout/point. Note that DCC linear addresses are not supported, and must be converted to address/subaddress in order to be defined. Refer to the :ref:`reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)` for help on these conversions.
+``TURNOUT( id, addr, sub_addr [, "description"] )``	Define a DCC accessory turnout/point. Note that DCC linear addresses are not supported, and must be converted to address/subaddress in order to be defined. Refer to the :ref:`reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)` for help on these conversions. (or see TURNOUTL below).
+
+``TURNOUTL( id, addr [, "description"] )``	Define a DCC accessory turnout/point  This macro will convert a linera address to the address/subaddress format using the TURNOUT command above. Only available from V4.2.42 and above.
 
 Note when providing the name of the profile that the profile names are case sensitive, and must be written exactly as they appear (eg. Bounce, not bounce or BOUNCE).
 

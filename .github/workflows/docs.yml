@@ -11,13 +11,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
       - name: Requirements
         # Allow sphinx-rtd-theme to choose the versions of sphinx & docutils
         run: |
-          pip3 install sphinx-rtd-theme==1.2.0 \
-            sphinx-sitemap sphinxcontrib-spelling sphinx-toolbox ablog sphinx-design
-      - name: Checkout repo
-        uses: actions/checkout@v3
+          pip3 install -r requirements.txt
+        # pip3 install sphinx-rtd-theme==1.2.0 \
+            # sphinx-sitemap sphinxcontrib-spelling sphinx-toolbox ablog sphinx-design
       - name: Build docs
         run: |
           make github

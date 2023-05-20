@@ -79,6 +79,12 @@ DCC-EX Model Railroading
 
    begin/what-to-know
    begin/levels
+
+.. toctree::
+   :hidden:
+   :maxdepth: 4
+   :caption: Products
+
    ex-commandstation/index
    ex-installer/index
    ex-webthrottle/index
@@ -88,13 +94,37 @@ DCC-EX Model Railroading
    ex-dccinspector/index
    ex-fastclock/index
    ex-toolbox/index
+
+.. toctree::
+   :hidden:
+   :maxdepth: 4
+   :caption: Support & Info
+
    support/index
    big-picture/index
    throttles/index
+
+.. toctree::
+   :hidden:
+   :maxdepth: 4
+   :caption: Downloads
+
    download/index
-   under-development/index
+
+.. toctree::
+   :hidden:
+   :maxdepth: 4
+   :caption: Reference
+
    reference/index
+   under-development/index
    projects/index
+
+.. toctree::
+   :hidden:
+   :maxdepth: 4
+   :caption: The DCC-EX Project
+
    media-resources/index
    merchandise/index
    about/index

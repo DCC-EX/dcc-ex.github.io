@@ -579,13 +579,13 @@
 <li><p><a class="reference internal" href="#create-ex-rail-track-manager-functions-for-engine-driver-throttle-route-set-buttons" id="id12">Create EX-RAIL Track Manager Functions for Engine Driver Throttle Route [Set] buttons</a></p></li>
 <li><p><a class="reference internal" href="#dcc-ex-command-station-with-ex-rail-trackmanager" id="id13">DCC-EX Command Station with EX-RAIL &amp; TrackManager</a></p></li>
 <li><p><a class="reference internal" href="#modular-layouts" id="id14">Modular Layouts</a></p></li>
-<li><p><a class="reference internal" href="#using-the-new-trackmanager-function-commands-you-can-run-the-whole-layout-as" id="id15">Using the New TrackManager Function commands you can run the whole layout as</a></p></li>
+<li><p><a class="reference internal" href="#using-the-new-trackmanager-function-commands-you-can-run-the-any-layout-as" id="id15">Using the New TrackManager Function commands you can run the any layout as</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference internal" href="#how-do-i-get-on-board-with-dcc-ex-trackmanager" id="id16">How Do I Get On Board with DCC-EX TrackManager ?</a></p>
 <ul>
 <li><p><a class="reference internal" href="#example-of-user-defined-exrail-scripts-running-on-engine-driver-throttle-app-android" id="id17">Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (Android):</a></p></li>
-<li><p><a class="reference internal" href="#exrail-functions-displaying-on-smartphone-apps" id="id18">EXRAIL Functions Displaying on Smartphone Apps</a></p></li>
+<li><p><a class="reference internal" href="#exrail-functions-displaying-on-smartphone-apps-universal-wifi-throttles" id="id18">EXRAIL Functions Displaying on Smartphone Apps &amp; Universal WiFi Throttles</a></p></li>
 </ul>
 </li>
 </ul>
@@ -611,7 +611,7 @@
 <li><p>DC track modes of DC, DCX (DC Reversed Polarity), and OFF</p></li>
 </ul>
 </div></blockquote>
-<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> development version v.4.2.30+ supports both DCC (PWM) and DC (PWM) Pulse Width Modulation modes as an <em>embedded standard feature</em>.
+<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> development version v.4.2.50+ supports both DCC (PWM) and DC (PWM) Pulse Width Modulation modes as an <em>embedded standard feature</em>.
 TrackManager allows you to set up and operate up to eight separate dual insulated sections of track/districts in either DCC (PWM) and or DC (PWM) as tracks A - H.</p>
 <p>An Arduino Mega (with or without WiFi) and Standard L298P Motor Shield <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> has two ready to run Tracks A &amp; B which can be configured as:</p>
 <blockquote>
@@ -678,7 +678,7 @@ TrackManager allows you to set up and operate up to eight separate dual insulate
 And no we’re not using another Expensive DCC decoder under the table on each Track/District/Block to address that section of track.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When specifying a DC or DCX cab ID, do not use one of your existing locomotive DCC addresses or road number IDs, otherwise a command sent to control a Cab on that DC or DCX track will also operate your DCC Loco with the same address.</p>
+<p>When specifying a DC or DCX cab ID, do not use one of your existing locomotive DCC addresses or road number IDs, otherwise a command sent to control a Cab on that DC or DCX track will also operate your DCC Loco with the same address, unless you intentinally do so.</p>
 </div>
 </section>
 <section id="hardware-requirements-and-technical-notes">
@@ -732,8 +732,8 @@ They will all run on that section of track.</p>
 <blockquote>
 <div><ol class="arabic simple">
 <li><p>Command Line via PC with Arduino IDE Serial Monitor or JMRI serial Traffic Monitor and it is sent through your USB connected cable.</p></li>
-<li><p>Create an EXRAIL myAutomation.h file Scripts for Track Manager assigned commands and they automatically appear in Engine Driver as GUI Automation [Handoff] and Route [Set] buttons, and in WiThrottle WiFi Throttle iOS as [Route] buttons</p></li>
-<li><p>Enhanced <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> WiFi Throttle Android app v2.34.163+ features;</p></li>
+<li><p>Create an EXRAIL myAutomation.h file Scripts for Track Manager assigned commands and they automatically appear in Engine Driver as GUI Automation [Handoff] and Route [Set] buttons, and in WiThrottle WiFi Throttle iOS as [Route] buttons, and on TCS Universal UWT-50 &amp; 100 WiFi Throttle [Select Accry] lines.</p></li>
+<li><p>Enhanced <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> WiFi Throttle Android app v2.35.169+ features;</p></li>
 </ol>
 <blockquote>
 <div><ul class="simple">
@@ -764,11 +764,11 @@ They will all run on that section of track.</p>
 <h2><a class="toc-backref" href="#id8" role="doc-backlink">TrackManager Commands</a><a class="headerlink" href="#trackmanager-commands" title="Permalink to this heading"></a></h2>
 <p>Sending commands from the Arduino IDE Serial Monitor or JMRI Send Command Line or a Engine Driver WiFi Throttle.</p>
 <p>To display the current TrackManager configuration, use the command <code class="docutils literal notranslate"><span class="pre">&lt;=&gt;</span></code> an equal sign looks like a track.</p>
-<p>The Serial Monitor will show current status, example; Track A as Main and Track B as DC</p>
+<p>The Serial Monitor will show current status, example; Track A as Main and Track B as PROG</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>&lt;= A MAIN&gt;</p></li>
-<li><p>&lt;= B DC&gt;</p></li>
+<li><p>&lt;= B PROG&gt;</p></li>
 </ul>
 </div></blockquote>
 <p>To change or configure the current track modes use the new command <code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">trackletter</span> <span class="pre">mode</span> <span class="pre">[address]&gt;</span></code> which has been added for Track Manager, where:</p>
@@ -776,16 +776,16 @@ They will all run on that section of track.</p>
 <div><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">trackletter</span></code> is A through H</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> is one of MAIN, PROG, DC, DCX, or OFF (DCX is DC with opposite polarity)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> is the cab ID is only required when specifying DC or DCX</p></li>
-<li><p>Note that the “address” parameter is only required for DC or DCX modes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> is the Cab ID and is only required when specifying DC or DCX modes</p></li>
 </ul>
 </div></blockquote>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;= A MAIN&gt;     // Set track A to MAIN DCC mode
-&lt;= B PROG&gt;     // Set track B to PROG DCC mode
-&lt;= A DC 1234&gt;  // Set track A to DC mode with address 1234
-&lt;= B DCX 4321&gt; // Set track B to DC mode Opposite Polarity address 4321
-               // or any number you assign from 1 to 10239
-&lt;= B OFF&gt;      // Set track B OFF, like a staging yard when it gets too noisy.
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> &lt;= A MAIN&gt;     // Set track A to MAIN DCC mode
+ &lt;= B PROG&gt;     // Set track B to PROG DCC mode
+or
+ &lt;= A DC 1234&gt;  // Set track A to DC mode with address 1234
+ &lt;= B DCX 4321&gt; // Set track B to DC mode Opposite Polarity address 4321
+                // or any number you assign from 1 to 10239
+ &lt;= B OFF&gt;      // Set track B OFF, like a staging yard when it gets too noisy.
 </pre></div>
 </div>
 <div class="admonition note">
@@ -798,8 +798,9 @@ They will all run on that section of track.</p>
 my.Automation.h file</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>//SET_TRACK(id,mode)
   SET_TRACK(A, MAIN)
-  SET_TRACK(B, DCX)
+  SET_TRACK(B, PROG)
   SET_TRACK(C, DC)
+  SET_TRACK(D, DCX)
 </pre></div>
 </div>
 </section>
@@ -866,13 +867,13 @@ No DPDT Switches are required, all waveform mode switching is done by Track Mana
 </section>
 <section id="dcc-ex-command-station-with-ex-rail-trackmanager">
 <h3><a class="toc-backref" href="#id13" role="doc-backlink">DCC-EX Command Station with EX-RAIL &amp; TrackManager</a><a class="headerlink" href="#dcc-ex-command-station-with-ex-rail-trackmanager" title="Permalink to this heading"></a></h3>
-<p>Cool thing is the new EXRAIL the Automation(n) &amp; Routes(n) work the same with DCC engines on MAIN tracks and the DC engines on DC or DCX tracks, and with the Sensors, Servos /Turnouts, Signals &amp; MP3 Sound DFPlayer triggers with little or no script changes other than maybe the FWD(n) &amp; REV (n) Speeds.</p>
+<p>Cool thing is the new EXRAIL Automation(n) &amp; Routes(n) work the same with DCC engines on MAIN tracks and the DC engines on DC or DCX tracks, along with the Sensors, Servos /Turnouts, Signals &amp; MP3 Sound DFPlayer triggers with little or no script changes other than maybe the FWD(n) &amp; REV (n) Speeds.</p>
 <p>With the new DCC-EX direct WiFi Discovered Server you can connect Engine Driver &amp; other WiThrottle app based throttles directly and have EXRAIL [Handoff] &amp; [Set] buttons to run EXRAIL scripts from the throttles.</p>
-<p>These are DCC-EX Major feature/benefits because with other systems you’ll have to use a PC computer or Pi processor &amp; JMRI for WiThrottle Server throttle access and you have to write two different JMRI Jython.py scripts for and then Setup Routes for DCC and for DC automation &amp; routes.</p>
+<p>These are DCC-EX Major feature/benefits because with other systems you’ll have to use a PC computer or Pi processor &amp; JMRI for WiThrottle Server throttle access and you have to write two different JMRI Jython.py scripts and then Setup Tools&gt; Tables&gt; Routes for for both DCC and DC automation &amp; routes runs.</p>
 </section>
 <section id="modular-layouts">
 <h3><a class="toc-backref" href="#id14" role="doc-backlink">Modular Layouts</a><a class="headerlink" href="#modular-layouts" title="Permalink to this heading"></a></h3>
-<p>DCC-EX TrackManager 4.2.30+ is perfect for NMRA DCC Standards Modular Layouts which have two MAIN tracks/districts,
+<p>DCC-EX TrackManager 4.2.50+ is perfect for NMRA DCC Standards Modular Layouts which have two MAIN tracks/districts,
 Track A and Track B with sidings;</p>
 <ul class="simple">
 <li><p>Track A (east bound) wired rails L-  R+</p></li>
@@ -885,10 +886,10 @@ Track A and Track B with sidings;</p>
 </ul>
 <p>DCX is Opposite Polarity and is what you set Block B to when you want it in DC mode because it is wired to NMRA Modular DCC Standards L+, R-.</p>
 </section>
-<section id="using-the-new-trackmanager-function-commands-you-can-run-the-whole-layout-as">
-<h3><a class="toc-backref" href="#id15" role="doc-backlink">Using the New TrackManager Function commands you can run the whole layout as</a><a class="headerlink" href="#using-the-new-trackmanager-function-commands-you-can-run-the-whole-layout-as" title="Permalink to this heading"></a></h3>
+<section id="using-the-new-trackmanager-function-commands-you-can-run-the-any-layout-as">
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">Using the New TrackManager Function commands you can run the any layout as</a><a class="headerlink" href="#using-the-new-trackmanager-function-commands-you-can-run-the-any-layout-as" title="Permalink to this heading"></a></h3>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Track A &amp; Track B
-  MAIN &amp; PROG
+  MAIN &amp; PROG    (Use JOIN function for a Programming track to make a MagicTrack)
   MAIN &amp; MAIN
   PROG &amp; MAIN
   MAIN &amp; DC
@@ -897,8 +898,6 @@ Track A and Track B with sidings;</p>
     DC &amp; PROG
     DC &amp; DC
     DC &amp; DCX
-  MAIN &amp; DCX
-  PROG &amp; DCX  (Use JOIN on A Programming track to make a MagicTrack)
 or any combination with up to 8 separate dual insulated tracks/districts from A - H.
 </pre></div>
 </div>
@@ -952,10 +951,11 @@ or any combination with up to 8 separate dual insulated tracks/districts from A 
 <p><strong>FX Special Effects [Set] continued and Route [Set] buttons</strong></p>
 <a class="reference internal image-reference" href="../_images/trackmanager_engine_driver_7.png"><img alt="Track Manager handoff/set" src="../_images/trackmanager_engine_driver_7.png" style="width: 250.0px; height: 400.0px;" /></a>
 </section>
-<section id="exrail-functions-displaying-on-smartphone-apps">
-<h3><a class="toc-backref" href="#id18" role="doc-backlink">EXRAIL Functions Displaying on Smartphone Apps</a><a class="headerlink" href="#exrail-functions-displaying-on-smartphone-apps" title="Permalink to this heading"></a></h3>
-<p>The Engine Driver EXRAIL screens shown above are all created through user defined EXRAIL Automation(n) and Route(n) scripts which are automatically passed to both Engine Driver &amp; WiThrottle screens.</p>
-<p>Please see the specific Smartphone App instructions on how to enable their Preferences and Route screens.</p>
+<section id="exrail-functions-displaying-on-smartphone-apps-universal-wifi-throttles">
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">EXRAIL Functions Displaying on Smartphone Apps &amp; Universal WiFi Throttles</a><a class="headerlink" href="#exrail-functions-displaying-on-smartphone-apps-universal-wifi-throttles" title="Permalink to this heading"></a></h3>
+<p>The Engine Driver EXRAIL screens shown above are all created through user defined EXRAIL Automation(n) and Route(n) scripts which are automatically passed to both Engine Driver &amp; WiThrottle App screens as well as the Train Control Systems TCS Universal WiFi UWT-50 and UWT-100 tactile throttles all via direct connect DCC-EX WiThrottle Protocol interface.</p>
+<p>Please see the specific Smartphone App &amp; Universal WiFi Throttle instructions on how to enable their Preferences and Route screens.
+<a class="reference external" href="https://dcc-ex.com/throttles/index.html#withrottle-protocol-based-throttles">https://dcc-ex.com/throttles/index.html#withrottle-protocol-based-throttles</a></p>
 </section>
 </section>
 </section>

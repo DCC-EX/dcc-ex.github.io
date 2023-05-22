@@ -83,17 +83,22 @@ DCC-EX Model Railroading
 .. toctree::
    :hidden:
    :maxdepth: 4
-   :caption: Products
+   :caption: Core Products
 
    ex-commandstation/index
    ex-installer/index
    ex-webthrottle/index
+   ex-dccinspector/index
+   ex-toolbox/index
+
+.. toctree::
+   :hidden:
+   :maxdepth: 4
+   :caption: EX-CommandStation Extensions
    ex-rail/index
    ex-turntable/index
    ex-ioexpander/index
-   ex-dccinspector/index
    ex-fastclock/index
-   ex-toolbox/index
 
 .. toctree::
    :hidden:

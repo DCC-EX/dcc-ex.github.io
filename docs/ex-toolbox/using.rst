@@ -228,13 +228,13 @@ To access the Servo configuration screen either:
 * Swipe Left from the CV Programming Screen
 * Select 'Servos' from the Menu
 
-On the Servo moto Screen, 
+On the Servo motor Screen, 
 
-# Enter the VPin of the servo motor you want adjustment
-# Enter any known starting values for Close, Mid, Throw
-# Test the Close, Mid, Throw positions buy pressing the appropriate button. The servo will move to that position.
-# Fine adjust any of the three positions by using the :guilabel:`+` or :guilabel:`-` buttons |BR| The servo will gradually move.
-# when you are happy, record the three values
+* Enter the VPin of the servo motor you want adjustment
+* Enter any known starting values for Close, Mid, Throw
+* Test the Close, Mid, Throw positions by pressing the appropriate button. The servo will move to that position.
+* Fine adjust any of the three positions by using the :guilabel:`+` or :guilabel:`-` buttons |BR| The servo will gradually move.
+* when you are happy, record the three values
 
 
 ----

@@ -224,7 +224,7 @@ Notes on the Arduino connectors on the NUCLEO range
 
 - Whilst the I/O pins are 5v-tolerant for digital IO, for the moment we recommend using 3v3 friendly Arduino R3 spec shields where you can.
 - The analog pins are NOT 5v-tolerant and accept a maximum of 3v3. We recommend using the genuine Ardiuno Motor Shield R3 revision (and only the R3!) for the moment. Instructions for modifying the earlier R2 version and the Deek Robot Motor Shield will follow in due course.
-- By default the Rx/Tx Arduino pins (D0/D1) are NOT connected to any of the NUCLEO's pins. There are jumpers underneath to connect them to Serial2, but this isn't recommended (see steps for serial connection below)
+- By default the Rx/Tx Arduino pins (D0/D1) are NOT connected to any of the NUCLEO's pins. There are jumpers underneath to connect them to Serial2, but this isn't recommended (see steps for serial connections below)
 - The Morpho pins extend both above AND below the Nucleo-64 series boards! Please be very wary of shorting any of these pins, especially those that protrude below. We recommend mounting 10mm M3 screw hex standoffs into the 3 mounting holes on the main PCB for your safety. See pic here:
 
 .. image:: /_static/images/nucleo/nucleo-f411re-bottom-spacers.png
@@ -251,10 +251,15 @@ To connect an ESP8266 via either a WiFi shield or ESP01 module, you must use Ser
 
 The |DCC-EX| source code currently maps the Serial1 port pins to:
 
-- F411RE: Rx CN7 pin 17, Tx CN7 pin 21
-- F446RE: Rx CN10 pin 33, Tx CN10 pin 17
+- F411RE: Rx CN7 PA15 pin 17, Tx CN7 PB7 pin 21
+- F446RE: Rx CN7 PC11 pin 2, Tx CN7 PC10 pin 1
 
-You will need to connect the Rx pin on your NUCLEO to the Tx pin of your WiFi device, and the Tx pin of the NUCLEO to the Rx pin of the WiFi device. Below are pics of the positions of each:
+Also defined in |DCC-EX| is an additional serial port, Serial3 which appears on the following pins:
+
+- F411RE Rx CN10 PA12 pin 12, Tx CN10 PA11 pin 13
+- F446RE Rx CN7 PD2 pin 4, Tx CN10 PC12 pin 3
+
+You will need to connect the Serial1 Rx pin on your NUCLEO to the Tx pin of your WiFi device, and the Tx pin of the NUCLEO to the Rx pin of the WiFi device. Below are pics of the positions of each:
 
 .. image:: /_static/images/nucleo/nucleo-f411re-f446re-wifi-serial1.png
   :alt: NUCLEO F411RE/F446RE Serial1 Rx/Tx Connections

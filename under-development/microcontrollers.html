@@ -714,7 +714,7 @@
 <ul class="simple">
 <li><p>Whilst the I/O pins are 5v-tolerant for digital IO, for the moment we recommend using 3v3 friendly Arduino R3 spec shields where you can.</p></li>
 <li><p>The analog pins are NOT 5v-tolerant and accept a maximum of 3v3. We recommend using the genuine Ardiuno Motor Shield R3 revision (and only the R3!) for the moment. Instructions for modifying the earlier R2 version and the Deek Robot Motor Shield will follow in due course.</p></li>
-<li><p>By default the Rx/Tx Arduino pins (D0/D1) are NOT connected to any of the NUCLEO’s pins. There are jumpers underneath to connect them to Serial2, but this isn’t recommended (see steps for serial connection below)</p></li>
+<li><p>By default the Rx/Tx Arduino pins (D0/D1) are NOT connected to any of the NUCLEO’s pins. There are jumpers underneath to connect them to Serial2, but this isn’t recommended (see steps for serial connections below)</p></li>
 <li><p>The Morpho pins extend both above AND below the Nucleo-64 series boards! Please be very wary of shorting any of these pins, especially those that protrude below. We recommend mounting 10mm M3 screw hex standoffs into the 3 mounting holes on the main PCB for your safety. See pic here:</p></li>
 </ul>
 <a class="reference internal image-reference" href="../_images/nucleo-f411re-bottom-spacers.png"><img alt="STM Nucleo-F411RE underneath face with 10mm M3 standoffs" src="../_images/nucleo-f411re-bottom-spacers.png" style="width: 208.25px; height: 256.0px;" /></a>
@@ -728,10 +728,15 @@
 <p>To connect an ESP8266 via either a WiFi shield or ESP01 module, you must use Serial1, which appears on different Morpho pins for the F411RE and F446RE.</p>
 <p>The <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> source code currently maps the Serial1 port pins to:</p>
 <ul class="simple">
-<li><p>F411RE: Rx CN7 pin 17, Tx CN7 pin 21</p></li>
-<li><p>F446RE: Rx CN10 pin 33, Tx CN10 pin 17</p></li>
+<li><p>F411RE: Rx CN7 PA15 pin 17, Tx CN7 PB7 pin 21</p></li>
+<li><p>F446RE: Rx CN7 PC11 pin 2, Tx CN7 PC10 pin 1</p></li>
 </ul>
-<p>You will need to connect the Rx pin on your NUCLEO to the Tx pin of your WiFi device, and the Tx pin of the NUCLEO to the Rx pin of the WiFi device. Below are pics of the positions of each:</p>
+<p>Also defined in <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> is an additional serial port, Serial3 which appears on the following pins:</p>
+<ul class="simple">
+<li><p>F411RE Rx CN10 PA12 pin 12, Tx CN10 PA11 pin 13</p></li>
+<li><p>F446RE Rx CN7 PD2 pin 4, Tx CN10 PC12 pin 3</p></li>
+</ul>
+<p>You will need to connect the Serial1 Rx pin on your NUCLEO to the Tx pin of your WiFi device, and the Tx pin of the NUCLEO to the Rx pin of the WiFi device. Below are pics of the positions of each:</p>
 <a class="reference internal image-reference" href="../_images/nucleo-f411re-f446re-wifi-serial1.png"><img alt="NUCLEO F411RE/F446RE Serial1 Rx/Tx Connections" src="../_images/nucleo-f411re-f446re-wifi-serial1.png" style="width: 727.0px; height: 566.0px;" /></a>
 </section>
 </section>

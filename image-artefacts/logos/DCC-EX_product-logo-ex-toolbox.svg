@@ -3,7 +3,7 @@
    inkscape:export-ydpi="17.060751"
    inkscape:export-xdpi="17.060751"
    inkscape:export-filename="..\..\docs\_static\images\logos\product-logo-ex-toolbox.png"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="DCC-EX_product-logo-ex-toolbox.svg"
    id="svg40"
    version="1.1"
@@ -35,15 +35,15 @@
      showguides="true"
      inkscape:current-layer="svg40"
      inkscape:window-maximized="1"
-     inkscape:window-y="-7"
-     inkscape:window-x="-8"
-     inkscape:cy="1375.3839"
-     inkscape:cx="1618.9724"
-     inkscape:zoom="0.16831664"
+     inkscape:window-y="-11"
+     inkscape:window-x="2869"
+     inkscape:cy="550.33768"
+     inkscape:cx="1193.0985"
+     inkscape:zoom="0.23803567"
      showgrid="false"
      id="namedview42"
-     inkscape:window-height="816"
-     inkscape:window-width="1600"
+     inkscape:window-height="1244"
+     inkscape:window-width="2400"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
      guidetolerance="10"
@@ -291,9 +291,11 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan2224"><tspan
+       id="tspan3627"><tspan
          style="fill:#00a3b9"
-         id="tspan2222">EX-Toolbox</tspan></tspan></text>
+         id="tspan3623">EX</tspan><tspan
+         style="fill:#00353d"
+         id="tspan3625">-Toolbox</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text2480-6-0-6-4"
@@ -304,11 +306,11 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan2230"><tspan
+       id="tspan3633"><tspan
          style="fill:#00353d"
-         id="tspan2226">DCC-</tspan><tspan
+         id="tspan3629">DCC-</tspan><tspan
          style="fill:#00a3b9"
-         id="tspan2228">EX</tspan></tspan></text>
+         id="tspan3631">EX</tspan></tspan></text>
   <path
      d="M 910.02466,466.51298 H 2096.0679"
      stroke="#000000"
@@ -364,12 +366,4 @@
          d="M 570.647,491.57 C 862.849,264.379 565.999,11.7512 558.694,5.39221 M 616.47,-10.0282 c 8.675,4.88406 398.99,283.9262 168.016,559.4082 l -44.441,45.157" />
     </g>
   </g>
-  <text
-     xml:space="preserve"
-     id="text1727"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.02853px;line-height:1.25;font-family:Stencil;-inkscape-font-specification:'Stencil, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1729-6);fill:#e6e6e6;fill-opacity:1;stroke:#333333;stroke-width:0.07707388;stroke-miterlimit:4;stroke-dasharray:none"
-     transform="matrix(36.970019,18.89477,-18.89477,36.970019,-104784.31,-25693.6)"><tspan
-       x="2598.668"
-       y="-622.92884"
-       id="tspan2232">Beta</tspan></text>
 </svg>

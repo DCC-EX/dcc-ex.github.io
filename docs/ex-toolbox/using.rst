@@ -228,7 +228,7 @@ To access the Servo configuration screen either:
 * Swipe Left from the CV Programming Screen
 * Select 'Servos' from the Menu
 
-On the Servo motor Screen, 
+On the Servo motor screen, 
 
 * Enter the VPin of the servo motor you want adjustment
 * Enter any known starting values for Close, Mid, Throw
@@ -236,6 +236,7 @@ On the Servo motor Screen,
 * Fine adjust any of the three positions by using the :guilabel:`+` or :guilabel:`-` buttons |BR| The servo will gradually move.
 * when you are happy, record the three values
 
+|EX-TB| remembers the servos that you have changed (up to 10) in this and previous sessions, and you can select one of the previous servos from the drop down list.  |EX-TB| will restore the last settings you used for the selected servo to the main fields.
 
 ----
 
@@ -255,7 +256,7 @@ To access the Sensor Testing configuration screen either:
 * Swipe Left from the CV Servos Screen
 * Select 'Sensors' from the Menu
 
-When the screen opens the first 10 servos found will be shown. Activity on the sensors will be shown on the screen.
+When the screen opens the first 100 sensors found will be shown. Activity on the sensors will be shown on the screen.  Scroll down to if needed.
 
 The :guilabel:`Watch` button is generally not needed, but will force |EX-TB| to check the available sensors on the |EX-CS| again.
 
@@ -271,7 +272,7 @@ Current Meter
    :scale: 50%
    :align: right
 
-The Current Status screen will show you the current values for eight channels on the motor shield on your |EX-CS|.
+The Current Status screen will show you the current values for up to eight channels on the motor shield on your |EX-CS|.
 
 To access the Current Meter screen either:
 

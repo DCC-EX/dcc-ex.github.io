@@ -51,7 +51,7 @@ Power management
       |_| *Response:* |BR|
       |_| N/A |BR| |BR|
 
-  * - ``<J I>``
+  * - ``<J I>`` |BR| ``<JI>``
     - **Request current status** |BR| |BR|
       |_| *Parameters:* |BR|
       |_| N/A |BR| |BR|
@@ -62,7 +62,7 @@ Power management
       |_| **current:** current in milliamps |BR| |BR|
       |_| *Version Introduced: 4.2.19* |BR|
 
-  * - ``<J G>``
+  * - ``<J G>``  |BR| ``<JG>``
     - **Request max current** |BR| |BR|
       |_| *Parameters:* |BR|
       |_| N/A |BR| |BR|
@@ -113,7 +113,8 @@ Cab (Loco) Commands
       |_| **cab:** DCC Address of the decoder/loco |BR|
       |_| **byte1 byte2:** DCC function bytes as sent to decoders (up to F28)  |BR| |BR|
       |_| *Response:* |BR|
-      |_| Success: nothing; Fail: **<X>** |BR| |BR|
+      |_| |_| Success: nothing |BR|
+      |_| |_| Fail: **<X>** |BR| |BR|
       |_| *Notes:* |BR|
       |_| Used by the sniffer |BR| |BR|
 
@@ -136,7 +137,7 @@ Cab (Loco) Commands
       |_| Forgets one or all locos. The “cab” parameter is optional.  |BR|
       |_| Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending **<- cab>** will forget/clear that loco. Sending **<->** will clear all the locos. This doesn't do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands. |BR| |BR|
 
-  * - ``<J R id>``
+  * - ``<J R id>`` |BR| ``<JR id>``
     - **Request details of a specific Roster Entry** |BR| |BR|
       |_| *Parameters:* |BR|
       |_| **id:** unique id of the Cab/s (Loco/s) in the roster |BR| |BR|
@@ -150,7 +151,7 @@ Cab (Loco) Commands
       |_| Response (id is in Roster): **<jR id ˮdescˮ ˮfunct1/funct2/funct3/...ˮ>** |BR|
       |_| Response (id is not in Roster): **<jR id ˮˮ ˮˮ>** |BR| |BR|
 
-  * - ``<J R>``
+  * - ``<J R>`` |BR| ``<JR>``
     - **Request the list defined Roster Entry IDs** |BR| |BR|
       |_| *Parameters:* |BR|
       |_| N/A |BR| |BR|
@@ -296,7 +297,7 @@ Turnout/Points
       |_|  |BR|
       |_| state - 0=closed 1=thrown |BR| |BR|
 
-  * - ``<J T id>``
+  * - ``<J T id>`` |BR| ``<JT id>``
     - **Request details of a specific Turnout/Point** |BR| |BR|
       |_| *Parameters:* |BR|
       |_| **id:**  unique id of the Turnout/Point  |BR| |BR|
@@ -315,7 +316,7 @@ Turnout/Points
       |_| Response (id is defined): **<jT id state ˮ[desc]ˮ>** |BR|
       |_| Response (id not defined): **<jT id X>** |BR| |BR|
 
-  * - ``<J T>``
+  * - ``<J T>`` |BR| ``<JT>``
     - **Request the list of defined turnout/Point IDs** |BR| |BR|
       |_| *Parameters:* |BR|
       |_| N/A |BR| |BR|
@@ -374,7 +375,7 @@ Routes/Automations
       |_| Response (successful turnouts/point don't exist): **<jA.>** |BR|
       |_| Response (fail): ??? |BR| |BR|
 
-  * - ``<J A id>``
+  * - ``<J A id>`` |BR| ``<JA id>``
     - **Requests information for a route/automation** |BR| |BR|
       |_| *Parameters:* |BR|
       |_| **id:** identifier of the Route/Automation |BR| |BR|
@@ -740,7 +741,7 @@ WiFi Control
       |_| *Parameters:* |BR|
       |_| None |BR| |BR|
       |_| *Response:* |BR|
-      |_| All input and output from this point is the direct communication with the Wifi AT software this mode is ended by typing ! (exclamationmark). |BR| |BR|
+      |_| All input and output from this point is the direct communication with the Wifi AT software this mode is ended by typing ! (exclamation mark). |BR| |BR|
 
 Track Manager (Formally DC-District)
 ------------------------------------
@@ -758,7 +759,7 @@ Note: this is not available yet in the Production release of |EX-CS|
   * - ``<= trackletter mode [cab]>``
     - **Configure Track Manager Note: since only one channel can be PROG, changing a second channel to PROG, will force the other to OFF** |BR| |BR|
       |_| *Parameters:* |BR|
-      |_| **trackletter:** A through H and represents one of the outputs of the/a motor shield. |BR|
+      |_| **trackletter:** 'A' through 'H' represent one of the outputs of the/a motor shield. |BR|
       |_| **mode:** one of  |BR|
       |_|  |_| MAIN |BR|
       |_|  |_| PROG |BR|
@@ -947,10 +948,8 @@ Configuring the EX-CommandStation - Turnouts/Points
       |_|  |_| 3=Slow (2 sec) and  |BR|
       |_|  |_| 4=Bounce (subject to revision). |BR| |BR|
       |_| *Response:* |BR|
-      |_| **<X|O>** |BR|
-      |_|  |BR|
-      |_| Response (successful): **<O>** |BR|
-      |_| Response (fail): **<X>** |BR| |BR|
+      |_| Successful: **<O>** |BR|
+      |_| Fail: **<X>** |BR| |BR|
       |_| *Notes:* |BR|
       |_| The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM). The limits for an SG90 servo are about 102 to 490. The standard range of 1ms to 2ms pulses correspond to values 205 to 409. |BR|
       |_| Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec) and 4=Bounce (subject to revision). |BR|
@@ -1025,10 +1024,8 @@ Configuring the EX-CommandStation - Sensors
       |_|  |_| 1=Use pull-up resistor ACTIVE=LOW  |BR|
       |_|  |_| 0=don't use pull-up resistor ACTIVE=HIGH |BR| |BR|
       |_| *Response:* |BR|
-      |_| **<O>** |BR|
-      |_|  |BR|
-      |_| Response (successful): **<O>** |BR|
-      |_| Response (fail): ???? |BR| |BR|
+      |_| Successful: **<O>** |BR|
+      |_| Fail: ???? |BR| |BR|
       |_| *Notes:* |BR|
       |_| Once defined, the EX-CS will send a **<Q id>** response anytime the sensor is activated, and a **<q id>** response when deactivated. |BR| |BR|
 
@@ -1037,10 +1034,8 @@ Configuring the EX-CommandStation - Sensors
       |_| *Parameters:* |BR|
       |_| **id:** identifier of the Sensor (0-32767) |BR| |BR|
       |_| *Response:* |BR|
-      |_| **<O|X>** |BR|
-      |_|  |BR|
-      |_| Response (successful): **<O>** |BR|
-      |_| Response (fail): **<X>** |BR| |BR|
+      |_| Successful: **<O>** |BR|
+      |_| Fail: **<X>** |BR| |BR|
 
 Once all sensors have been properly defined, you can use the ``<E>`` (upper case E) command to store their definitions to EEPROM. 
 

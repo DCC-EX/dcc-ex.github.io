@@ -26,21 +26,31 @@ Designed in conjunction with the |DCC-EX| development team, the EX-MotorShield88
 
 .. note:: 
 
-   Whilst the EX-MotorShield8874 was designed by Semify who license it to manufacturers, the hardware design has graciously been made open source for individual users and the schematics are available on the `DCC-EX GitHub <https://github.com/DCC-EX/EX-Hardware/tree/main/EX-Motorshield8874>`_.
+   The EX-MotorShield8874 was created through the gracious support and design facilities of Semify, who, along with DCC-EX, license it to manufacturers. The hardware design has been made open source for individual users and the schematics are available on the `DCC-EX GitHub <https://github.com/DCC-EX/EX-Hardware/tree/main/EX-Motorshield8874>`_ repository.
 
 How can I get one?
 ==================
 
-EX-MotorShield8874 is available immediately for purchase in the EU, USA and Canada via Semify's Tindie store (https://www.tindie.com/products/semify/semify-dcc-ex-motor-shield/) for $US34.90 each, and in Australia, New Zealand and South East Asia from Millennium Engineering Pty Ltd (orders @ milleng.com.au) for $AU55, plus shipping. It will also be available shortly in the UK through Chesterfield Model Making & Miniature Electronics (https://chesterfield-models.co.uk/product/semify-dcc-ex-motor-shield/), for £29.99 plus shipping. Expect further announcements re local availability in the US through DCC-EX directly and Smart Hobby LLC, with other countries to follow.
+Units may be purchased from the following sources:
+
+* In the US from the `DCC-EX Tindie Store <https://www.tindie.com/products/dccex/ex-motorshield8874/>`_ or...
+* from `Smart Hobby, LLC <https://www.smarthobbyllc.com/>`_. You can also find Smart Hobby on Facebook
+* In the UK from `Chesterfield Model Making & Miniature Electronics <https://chesterfield-models.co.uk/product/semify-dcc-ex-motor-shield/>`_
+* In Europe from `Semify's Tindie store <https://www.tindie.com/products/semify/semify-dcc-ex-motor-shield/>`_ (based in Austria)
+* In Australia and New Zealand and South East Asia from Millennium Engineering Pty Ltd (orders @ milleng.com.au)
+* and other manufacturers licensed by DCC-EX.
+
+There are different options for the board such as fully assembled or in kit form where connectors and headers need to be soldered onto the board. Prices vary from around $34.95 to $39.90 in the US, to approximately £29.99 in the UK, €37 in Europe, and from Australia for $AU55.00. Prices do not include tax and shipping.
 
 For quantities of 10 or less per annum, you may utilise a PCB manufacturing and assembly service such as JLCPCB without licensing fees. A donation to DCC-EX would be appreciated, so click the DONATE button! The production files are available on the `DCC-EX GitHub <https://github.com/DCC-EX/EX-Hardware/tree/main/EX-Motorshield8874>`_.
 
-Entrepreneurs wanting to use the design to offer commercial quantities to their local communities should contact Semify (service @ semify-eda.com) to arrange a bulk purchase or DCC-EX (support @ dcc-ex.com) for a license to manufacture. Licensing includes donating a royalty to DCC-EX per board sold. Semify have been exempted from this due to their funding of the prototyping and work on verifying the design.
+Entrepreneurs wanting to use the design to offer commercial quantities to their local communities should contact Semify (service @ semify-eda.com) to arrange a bulk purchase or DCC-EX (support @ dcc-ex.com) for a license to manufacture. Licensing includes donating a royalty to DCC-EX per board sold.
+
 
 Assembly with EX-MotorShield8874
 ================================
 
-Aseembly with the EX-MotorShield8874 is extremely simple, just plug the motor shield into your choice of Command Station motherboard.  Unlike other motor shields, the EX-MotorShield8874 needs no jumpering, trace cutting, or pin bending! Just plug it in.
+Assembly with the EX-MotorShield8874 is extremely simple, just plug the motor shield into your choice of Command Station motherboard.  Unlike other motor shields, the EX-MotorShield8874 needs no jumpering, trace cutting, or pin bending! Just plug it in.
 
 Shown here are examples of the shield plugged into Mega+WiFi, Nucleo-F411RE:
 
@@ -58,7 +68,7 @@ Example pics here!
 1. Connect DC Power to Motor Driver
 ------------------------------------
 
-The EX-MotorShield8874 accepts a standard 2.5mm DC barrel jack for DC power, with centre pin positive, and polarity protected for your safety. Acceptable voltages for correct DCC operation include 10-24VDC, but the shield can cope with 9-30VDC.
+The EX-MotorShield8874 accepts a standard 2.1mm inside diameter DC barrel jack for DC power, with centre pin positive, and polarity protected for your safety. Acceptable voltages for correct DCC operation include 10-24VDC, but the shield can cope with 9-30VDC.
 
 .. image:: /_static/images/motorboards/ex_motorshield8874_purple_megawifi.jpg
    :alt: DCC-EX EX-MotorShield8874 RevA on Mega+WiFi with power and track connectors

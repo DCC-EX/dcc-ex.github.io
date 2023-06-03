@@ -35,7 +35,7 @@ Units may be purchased from the following sources:
 
 * In the US from the `DCC-EX Tindie Store <https://www.tindie.com/products/dccex/ex-motorshield8874/>`_ or...
 * from `Smart Hobby, LLC <https://www.smarthobbyllc.com/>`_. You can also find Smart Hobby on Facebook
-* In the UK from `Chesterfield Model Making & Miniature Electronics <https://chesterfield-models.co.uk/product/semify-dcc-ex-motor-shield/`_
+* In the UK from `Chesterfield Model Making & Miniature Electronics <https://chesterfield-models.co.uk/product/semify-dcc-ex-motor-shield/>`_
 * In Europe from `Semify's Tindie store <https://www.tindie.com/products/semify/semify-dcc-ex-motor-shield/>`_ (based in Austria)
 * In Australia and New Zealand and South East Asia from Millennium Engineering Pty Ltd (orders @ milleng.com.au)
 * and other manufacturers licensed by DCC-EX.

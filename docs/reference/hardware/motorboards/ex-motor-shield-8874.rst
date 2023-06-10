@@ -30,11 +30,12 @@ What Is It?
 The EX-Motorshield8874 is pin compatible with the original Arduino Motor Shield Rev3 but provides significantly improved electrical performance for driving higher loads, and improved usability.
 
 * Rated for 5 Amps of continuous output current
+* No need to cut traces or bend out pins for stacking on the EX-CommandStation
 * 2 outputs (Main and Programming Track or 2 Mains)
 * Single power supply input powers the shield, the Arduino, and the track (motor output)!
 * 5V and 3.3V compatible
 * Virtually no voltage drop, even at high currents
-* I2C header for connecting accessories
+* I2C header and STEMMA Qwiic connector for accessories (displays, port expanders, servo boards, etc.)
 * Reverse polarity protection
 * Fault detection in addition to overcurrent reporting for extra safety
 * Alternative power in and out solder pads for different connector types

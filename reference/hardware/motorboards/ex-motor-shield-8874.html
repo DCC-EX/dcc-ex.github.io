@@ -563,21 +563,49 @@
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#how-can-i-get-one" id="id2">How can I get one?</a></p></li>
-<li><p><a class="reference internal" href="#assembly-with-ex-motorshield8874" id="id3">Assembly with EX-MotorShield8874</a></p></li>
-<li><p><a class="reference internal" href="#next-steps" id="id4">Next steps</a></p></li>
+<li><p><a class="reference internal" href="#what-is-it" id="id2">What Is It?</a></p></li>
+<li><p><a class="reference internal" href="#why-did-we-make-it" id="id3">Why did we make it?</a></p></li>
+<li><p><a class="reference internal" href="#how-can-i-get-one" id="id4">How can I get one?</a></p></li>
+<li><p><a class="reference internal" href="#assembly-with-ex-motorshield8874" id="id5">Assembly with EX-MotorShield8874</a></p></li>
+<li><p><a class="reference internal" href="#next-steps" id="id6">Next steps</a></p></li>
 </ul>
 </nav>
 </aside>
-<p>Designed in conjunction with the <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> development team, the EX-MotorShield8874 is extremely simple to use with all current and future generations of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> hardware. It also safely powers the Command Station motherboard via the same single barrel jack DC input voltage that powers the track. It is rated at a very generous peak 5A of load per channel using Texas Instruments DRV8874 MOSFET technology. This board is the new standard by which we compare other boards.</p>
+<p>TL;DR - Designed in conjunction with the <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> development team, the EX-MotorShield8874 is extremely simple to use with all current and future generations of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> hardware. It also safely powers the Command Station motherboard via the same single barrel jack DC input voltage that powers the track. It is rated at a very generous peak 5A of load per channel using Texas Instruments DRV8874 MOSFET technology. This board is the new standard by which we compare other boards.</p>
 <a class="reference internal image-reference" href="../../../_images/ex_motorshield8874.jpeg"><img alt="DCC-EX EX-MotorShield8874 RevA Semify" src="../../../_images/ex_motorshield8874.jpeg" style="width: 300.0px; height: 200.0px;" /></a>
 <a class="reference internal image-reference" href="../../../_images/ex_motorshield8874_purple_side.jpg"><img alt="DCC-EX EX-MotorShield8874 RevA Millennium Engineering" src="../../../_images/ex_motorshield8874_purple_side.jpg" style="width: 198.4px; height: 135.4px;" /></a>
+<section id="what-is-it">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">What Is It?</a><a class="headerlink" href="#what-is-it" title="Permalink to this heading"></a></h2>
+<p>The EX-Motorshield8874 is pin compatible with the original Arduino Motor Shield Rev3 but provides significantly improved electrical performance for driving higher loads, and improved usability.</p>
+<ul class="simple">
+<li><p>Rated for 5 Amps of continuous output current</p></li>
+<li><p>No need to cut traces or bend out pins for stacking on the EX-CommandStation</p></li>
+<li><p>2 outputs (Main and Programming Track or 2 Mains)</p></li>
+<li><p>Single power supply input powers the shield, the Arduino, and the track (motor output)!</p></li>
+<li><p>5V and 3.3V compatible</p></li>
+<li><p>Virtually no voltage drop, even at high currents</p></li>
+<li><p>I2C header and STEMMA Qwiic connector for accessories (displays, port expanders, servo boards, etc.)</p></li>
+<li><p>Reverse polarity protection</p></li>
+<li><p>Fault detection in addition to overcurrent reporting for extra safety</p></li>
+<li><p>Alternative power in and out solder pads for different connector types</p></li>
+<li><p>Stackable (Support multiple Power Districts)</p></li>
+<li><p>Optional OLED header to connect a display directly to the shield</p></li>
+</ul>
+<p>The EX-Motorshield8874 is based on two DRV8874 H-bridge motor drivers with integrated current sensing from Texas Instruments (TI). It is used to drive inductive loads like relays, solenoids, DC and stepping motors, as well as provide the DCC signal and power to the model railroad tracks.</p>
+<p>Powering of Arduino boards is possible due to the on board DC/DC buck converter, supporting a wide input supply range from 9 to 30V. The reverse polarity protection prevents damage to the circuit and its components in case the power supply is accidentally connected backwards.</p>
+<p>The board’s 5V and 3V3 friendly design makes it suitable for a broad range of Arduino compatible platforms, with an override that compensates for designs with incomplete support (such as an incorrect IORef voltage).</p>
+<p>This Shield features a status LED for supply, which provides a visual indication of the power supply status in addition to LEDs to show each side of the A and B power outputs.</p>
+</section>
+<section id="why-did-we-make-it">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Why did we make it?</a><a class="headerlink" href="#why-did-we-make-it" title="Permalink to this heading"></a></h2>
+<p>EX-Motorshield8874 is specifically designed for use with DCC-EX Command Station for controlling model railroads, but can also be used as generally better replacement for Arduino Motor Shield R3 in any device that needs to control a motor. We needed higher current capacity to power more motors/trains and have little to no voltage drop due to advanced MOSFET driver technology.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The EX-MotorShield8874 was created through the gracious support and design facilities of Semify, who, along with DCC-EX, license it to manufacturers. The hardware design has been made open source for individual users and the schematics are available on the <a class="reference external" href="https://github.com/DCC-EX/EX-Hardware/tree/main/EX-Motorshield8874">DCC-EX GitHub</a> repository.</p>
 </div>
+</section>
 <section id="how-can-i-get-one">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">How can I get one?</a><a class="headerlink" href="#how-can-i-get-one" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">How can I get one?</a><a class="headerlink" href="#how-can-i-get-one" title="Permalink to this heading"></a></h2>
 <p>Units may be purchased from the following sources:</p>
 <ul class="simple">
 <li><p>In the US from the <a class="reference external" href="https://www.tindie.com/products/dccex/ex-motorshield8874/">DCC-EX Tindie Store</a> or…</p></li>
@@ -592,7 +620,7 @@
 <p>Entrepreneurs wanting to use the design to offer commercial quantities to their local communities should contact Semify (service &#64; semify-eda.com) to arrange a bulk purchase or DCC-EX (support &#64; dcc-ex.com) for a license to manufacture. Licensing includes donating a royalty to DCC-EX per board sold.</p>
 </section>
 <section id="assembly-with-ex-motorshield8874">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">Assembly with EX-MotorShield8874</a><a class="headerlink" href="#assembly-with-ex-motorshield8874" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Assembly with EX-MotorShield8874</a><a class="headerlink" href="#assembly-with-ex-motorshield8874" title="Permalink to this heading"></a></h2>
 <p>Assembly with the EX-MotorShield8874 is extremely simple, just plug the motor shield into your choice of Command Station motherboard.  Unlike other motor shields, the EX-MotorShield8874 needs no jumpering, trace cutting, or pin bending! Just plug it in.</p>
 <p>Shown here are examples of the shield plugged into Mega+WiFi, Nucleo-F411RE:</p>
 <a class="reference internal image-reference" href="../../../_images/ex_motorshield8874_mega.jpg"><img alt="DCC-EX EX-MotorShield8874 RevA on Mega+WiFi" src="../../../_images/ex_motorshield8874_mega.jpg" style="width: 373.5px; height: 229.04999999999998px;" /></a>
@@ -626,8 +654,9 @@
 </section>
 </section>
 <section id="next-steps">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink">Next steps</a><a class="headerlink" href="#next-steps" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Next steps</a><a class="headerlink" href="#next-steps" title="Permalink to this heading"></a></h2>
 <p>Click <a class="reference internal" href="../../../ex-commandstation/get-started/wifi-setup.html"><span class="doc">here</span></a> to learn how to connect the WiFi shield to your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, or <em>alternatively</em> connect a controller like <a class="reference internal" href="../../glossary.html"><span class="doc">JMRI</span></a> or our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span> by using the serial cable to connect between your computer and the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> as outlined in the <a class="reference internal" href="../../../ex-installer/installing.html#getting-ready"><span class="std std-ref">1. Getting Ready</span></a> section of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span> page. Note that when configuring the EX-CommandStation you will want to select <cite>EX8874_SHIELD</cite> as the motor board during configuration.</p>
+<p>For more detailed and technical information, follow the link to the <a class="reference external" href="https://dcc-ex.com/reference/hardware/motorboards/ex-motor-shield-8874.html#dcc-ex-ex-motorshield8874-reva">EX-MotorShield8874 on Github</a> It also includes the schematic and the KiCad project files.</p>
 </section>
 </section>
 

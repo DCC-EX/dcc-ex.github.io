@@ -14,7 +14,7 @@ DCC-EX EX-MotorShield8874 RevA
     :depth: 1
     :local:
 
-Designed in conjunction with the |DCC-EX| development team, the EX-MotorShield8874 is extremely simple to use with all current and future generations of |EX-CS| hardware. It also safely powers the Command Station motherboard via the same single barrel jack DC input voltage that powers the track. It is rated at a very generous peak 5A of load per channel using Texas Instruments DRV8874 MOSFET technology. This board is the new standard by which we compare other boards.
+TL;DR - Designed in conjunction with the |DCC-EX| development team, the EX-MotorShield8874 is extremely simple to use with all current and future generations of |EX-CS| hardware. It also safely powers the Command Station motherboard via the same single barrel jack DC input voltage that powers the track. It is rated at a very generous peak 5A of load per channel using Texas Instruments DRV8874 MOSFET technology. This board is the new standard by which we compare other boards.
 
 .. image:: /_static/images/motorboards/ex_motorshield8874.jpeg
    :alt: DCC-EX EX-MotorShield8874 RevA Semify
@@ -23,6 +23,38 @@ Designed in conjunction with the |DCC-EX| development team, the EX-MotorShield88
 .. image:: /_static/images/motorboards/ex_motorshield8874_purple_side.jpg
    :alt: DCC-EX EX-MotorShield8874 RevA Millennium Engineering
    :scale: 10%
+
+What Is It?
+============
+
+The EX-Motorshield8874 is pin compatible with the original Arduino Motor Shield Rev3 but provides significantly improved electrical performance for driving higher loads, and improved usability.
+
+* Rated for 5 Amps of continuous output current
+* No need to cut traces or bend out pins for stacking on the EX-CommandStation
+* 2 outputs (Main and Programming Track or 2 Mains)
+* Single power supply input powers the shield, the Arduino, and the track (motor output)!
+* 5V and 3.3V compatible
+* Virtually no voltage drop, even at high currents
+* I2C header and STEMMA Qwiic connector for accessories (displays, port expanders, servo boards, etc.)
+* Reverse polarity protection
+* Fault detection in addition to overcurrent reporting for extra safety
+* Alternative power in and out solder pads for different connector types
+* Stackable (Support multiple Power Districts)
+* Optional OLED header to connect a display directly to the shield
+  
+The EX-Motorshield8874 is based on two DRV8874 H-bridge motor drivers with integrated current sensing from Texas Instruments (TI). It is used to drive inductive loads like relays, solenoids, DC and stepping motors, as well as provide the DCC signal and power to the model railroad tracks.
+
+Powering of Arduino boards is possible due to the on board DC/DC buck converter, supporting a wide input supply range from 9 to 30V. The reverse polarity protection prevents damage to the circuit and its components in case the power supply is accidentally connected backwards.
+
+The board's 5V and 3V3 friendly design makes it suitable for a broad range of Arduino compatible platforms, with an override that compensates for designs with incomplete support (such as an incorrect IORef voltage).
+
+This Shield features a status LED for supply, which provides a visual indication of the power supply status in addition to LEDs to show each side of the A and B power outputs.
+
+Why did we make it?
+====================
+
+EX-Motorshield8874 is specifically designed for use with DCC-EX Command Station for controlling model railroads, but can also be used as generally better replacement for Arduino Motor Shield R3 in any device that needs to control a motor. We needed higher current capacity to power more motors/trains and have little to no voltage drop due to advanced MOSFET driver technology.
+
 
 .. note:: 
 
@@ -110,3 +142,5 @@ Next steps
 ==========
 
 Click :doc:`here </ex-commandstation/get-started/wifi-setup>` to learn how to connect the WiFi shield to your |EX-CS|, or *alternatively* connect a controller like |JMRI| or our |EX-WT| by using the serial cable to connect between your computer and the |EX-CS| as outlined in the :ref:`ex-installer/installing:1. getting ready` section of the |EX-I| page. Note that when configuring the EX-CommandStation you will want to select `EX8874_SHIELD` as the motor board during configuration.
+
+For more detailed and technical information, follow the link to the `EX-MotorShield8874 on Github <https://dcc-ex.com/reference/hardware/motorboards/ex-motor-shield-8874.html#dcc-ex-ex-motorshield8874-reva>`_ It also includes the schematic and the KiCad project files.

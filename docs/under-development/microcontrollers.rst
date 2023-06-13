@@ -257,7 +257,7 @@ The |DCC-EX| source code currently maps the Serial1 port pins to:
 Also defined in |DCC-EX| is an additional serial port, Serial3 which appears on the following pins:
 
 - F411RE Rx CN10 PA12 pin 12, Tx CN10 PA11 pin 13
-- F446RE Rx CN7 PD2 pin 4, Tx CN10 PC12 pin 3
+- F446RE Rx CN7 PD2 pin 4, Tx CN7 PC12 pin 3
 
 You will need to connect the Serial1 Rx pin on your NUCLEO to the Tx pin of your WiFi device, and the Tx pin of the NUCLEO to the Rx pin of the WiFi device. Below are pics of the positions of each:
 

@@ -11,6 +11,14 @@ Using the Installer
 
 |tinkerer| |engineer| |githublink-ex-installer-button2|
 
+.. warning:: 
+
+  Please be advised that our installer currently does not work reliably on Linux or macOS which is a known issue.
+
+  For Linux users we recommend using the Arduino IDE. You can find instructions on the :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page.
+
+  We hope to have a new version available soon.
+
 .. sidebar::
 
    .. contents:: On this page

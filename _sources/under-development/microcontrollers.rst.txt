@@ -223,7 +223,7 @@ Notes on the Arduino connectors on the NUCLEO range
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Whilst the I/O pins are 5v-tolerant for digital IO, for the moment we recommend using 3v3 friendly Arduino R3 spec shields where you can.
-- The analog pins are NOT 5v-tolerant and accept a maximum of 3v3. We recommend using the genuine Ardiuno Motor Shield R3 revision (and only the R3!) for the moment. Instructions for modifying the earlier R2 version and the Deek Robot Motor Shield will follow in due course.
+- The analog pins are NOT 5v-tolerant and accept a maximum of 3v3. We recommend using the new EX-MotorShield8874, or a genuine Ardiuno Motor Shield R3 revision (and only the R3!) for the moment. Instructions for modifying the earlier R2 version and the Deek Robot Motor Shield will follow in due course.
 - By default the Rx/Tx Arduino pins (D0/D1) are NOT connected to any of the NUCLEO's pins. There are jumpers underneath to connect them to Serial2, but this isn't recommended (see steps for serial connections below)
 - The Morpho pins extend both above AND below the Nucleo-64 series boards! Please be very wary of shorting any of these pins, especially those that protrude below. We recommend mounting 10mm M3 screw hex standoffs into the 3 mounting holes on the main PCB for your safety. See pic here:
 
@@ -241,6 +241,15 @@ Here is the NUCLEO-F411RE with on the left a genuine Arduino Motor Shield R3 ins
 .. image:: /_static/images/motorboards/ex_motorshield8874_nucleo_f411.jpg
   :alt: STM Nucleo-F411RE with DCC-EX EX-MotorShield8874 installed
   :scale: 17%
+
+Notes on using the EX-MotorShield8874 with Nucleo
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In order to take advantage of the EX-MotorShield8874's single power source capability, you will need to move the Nucleo jumper JP5 from the U5V position (pins 1+2 jumpered, USB 5V source being used) to the E5V position (pins 2+3 jumpered).
+
+This will power your Nucleo-64 unit using the EX-MotorShield8874's onboard switch mode power supply of 7.2V to the VIN pin, and allows some 800mA of 5V power to be available for the Nucleo and peripherals.
+
+NB: once you do this it will mean you need both the EX-MotorShield8874 barrel jack to be powered AND the USB cable to enable programming. Or you can temporarily move JP5 back to U5V whilst uploading |EX-CS|.
 
 Serial for WiFi, for F411RE and F446RE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

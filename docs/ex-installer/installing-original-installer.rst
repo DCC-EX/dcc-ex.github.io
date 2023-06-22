@@ -70,7 +70,7 @@ Requirements (for installing)
 
 * Download the :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app |BR| depending on your computer's operating system it will automatically determine the version you need and download it
 * Find the folder in which the Installer was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
-* Extract the downloaded **Installer** into its own folder with your favorite unzip program |BR| |BR|
+* Extract the downloaded **Installer** into its own folder with your favourite unzip program |BR| |BR|
 * For Microsoft Windows:
   
   * Open File Manager

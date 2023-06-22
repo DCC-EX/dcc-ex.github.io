@@ -13,7 +13,7 @@ Using the Installer (Windows x64)
 
 .. warning::
 
-   The instructions on this page refer to the new |EX-I|.  This is currently only supported on Microsoft x64 Windows Computers. |BR| If you have a Microsoft Windows x32, Apple MacOS or Linux based computer use the :doc:`original Installer </ex-installer/installing-original-installer>` instead.
+   The instructions on this page refer to the *new* |EX-I|.  This is currently only supported on Microsoft x64 Windows Computers. |BR| If you have a Microsoft Windows x32, Apple MacOS or Linux based computer use the :doc:`original Installer </ex-installer/installing-original-installer>` instead.
 
 
 .. sidebar::
@@ -48,14 +48,12 @@ Requirements (for installing)
 1. Getting Ready 
 ================
 
-**For Windows x64**
-
 .. warning::
    :class: warning-float-right
    
    **Antivirus Software** |BR| You *may* need to turn off your antivirus software before you try to install. |BR| Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
 
-* **Connect** your |EX-CS| to your computer
+* **Connect** your |EX-CS| hardware to your computer via USB.
 
 2. Download and Run EX-Installer 
 ================================
@@ -81,7 +79,7 @@ a. The EX-Installer Welcome screen
 
 This screen provides some basic information about the process.
 
-It also provides a debugging option. If enabled this provides additional information about what is happening during the loading process. Unless you are having difficulties, or have been requested to enable this by one of our team, you do not need to select this.
+There is *debugging* option on this page. If enabled this provides additional information about what is happening during the loading process. Unless you are having difficulties, or have been requested to enable this by one of our team, you do not need to select this.
 
 To proceed, click the ::guilabel:`Manage Arduino CLI` button.
 
@@ -95,11 +93,11 @@ b. Manage CLI screen
    :scale: 40%
    :align: left
 
-This screen allows you to Install or update the Arduino Command Line Interface (CLI).
+This screen allows you to install or update the *Arduino Command Line Interface (CLI)*.
 
-We use the Arduino Command Line Interface (CLI) to upload the DCC-EX products to your Arduino.  The CLI eliminates the need to install the more daunting Arduino IDE.  EX-Installer is able to manage the installation and updating of the Arduino CLI for you at the click of a button.
+We use the *Arduino Command Line Interface (CLI)* to upload the DCC-EX products to your Arduino.  The CLI eliminates the need to install the more daunting Arduino IDE.  EX-Installer is able to manage the installation and updating of the Arduino CLI for you at the click of a button.
 
-If you have not installed the CLi previously you will see a ::guilabel:`Install Arduino CLI` button. 
+If you have not installed the CLI previously you will see a ::guilabel:`Install Arduino CLI` button. 
 
 If have previously installed the CLI you will see a ::guilabel:`Refresh Arduino CLI` button.
 
@@ -188,68 +186,131 @@ i) Select EX-CommandStation Version screen
 
 *Which version*
 
+Select which version of the |EX-CS| software to load onto your hardware.  If you are unsure, or have been directed by the support team, select ``Latest Production``.
+
+Options are:
+
 * Latest Production - Recommended!
 * Latest Development
 * Select a specific version
 
 *How to configure*
 
+Select how you wish to configure your |EX-CS|. If you are updating a previous version, or have manually made configuration changes, select ``Configure options on the next screen``
+
+Options are:
+
 * Configure options on the next screen
 * Use my existing configuration files
 
+If you select ``Use my existing configuration files`` your will be propted to find the folder where the configuration files are located.
 
-Once you have selected version and chose how to configure, To proceed, click the :guilabel:`xxx` button.
+If you have selected ``Configure options on the next screen``, to proceed, click the :guilabel:`Configure EX-CommandStation` button.
+
+If you have selected ``Use my existing configuration files``, to proceed, click the :guilabel:`Complie and Upload` button.
+
 
 |force-break|
 
 ii) Install EX-CommandStation - Configuration screen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 .. figure:: /_static/images/ex-installer/ex_cs_configure.png
    :alt: EX-Installer - EX-CommandStation Configuration
    :scale: 40%
    :align: left
 
-stuff goes here
+If you have selected ``Configure options on the next screen`` on the previous screen you will be present with this screen. 
+
+On this screen you can select some of the flexible and optional feature of the |EX-CS|.
 
 |force-break|
+
+**Motor Driver**
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_motor_shield.png
    :alt: EX-Installer - EX-CommandStation - Configure Motor Driver
    :scale: 30%
 
-Select your motor driver
+You must select your motor driver that you have installed.  The installer can't detect this, so you must select the correct board or the |EX-CS| may not work. 
+
+The options include:
+
+* STANDARD_MOTOR_SHIELD
+* EX8874_SHIELD
+* POLOLU_MOTOR_SHIELD
+* FIREBOX_MK1
+* FIREBOX_MK1S
+* FUNDUMOTO_SHIELD
+* IBT_2_WITH_ARDUINO
+* YFROBOT_MOTOR_SHIELD
+* ORION_UNO_INTEGRATED_SHIELD
+* NANOEVERY_EXAMPLE
+
+**Optional Display**
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_screen.png
    :alt: EX-Installer - EX-CommandStation - Configure Display Driver
    :scale: 30%
 
-I have a display
+If you have installed and optional OLED or LED display, enable the ``I have a display`` option, which will present you with a drop down list to select the type of display you have.
 
+The options include:
 
-I have WiFi
+* LCD - 16 columns x 2 rows
+* LCD - 16 columns x 4 rows
+* OLED 128 x 32
+* OLED 128 x 64
+
+**WiFi**
+
+If you have installed and optional WiFi board, or are using a microcontoller board with integrated WiFi, enable the ``I have WiFi`` option, which will present you with additional options.
+
+You can configure the WiFi for EX-CommandStation two ways:
+
+* Access Point mode |BR| Select ``Use my EX-CommandStation as an Access Point`` |BR| You can configure for EX-CommandStation to have its own, completely isolated, WiFi Network. This is referred to as *Access Point Mode*. (Most useful if your layout is away from the house, or you transport your layout frequently.)
+* Station mode |BR| Select ``Connect my EX-CommandStation to my existing wireless network`` |BR| The EX-CommandStation can be setup so that it connects to your existing home WiFi Network. This is referred to as Station Mode. 
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_access_point.png
    :alt: EX-Installer - EX-CommandStation - Configure WiFi Access Point
    :scale: 30%
 
-Use my EX-CommandStation as an Access Point
+   **Use my EX-CommandStation as an Access Point**
 
-  Select WiFi Channel
+   If ``Use my EX-CommandStation as an Access Point`` is selected, two additional options are presented:
+
+   * WiFi Password
+   * WiFi Channel
+
+   *WiFi Password* is optional.  If not entered it will default to "PASS_xxxxx" where 'xxxxx' id will be the same as the SSID that will be automatically configured.
+
+   *WiFi Channel* can be any value from 1-11.  If possible choose a channel that is unused by other networks around your location.
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_station.png
    :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
    :scale: 30%
 
-Connect my EX-CommandStation to my existing wireless network
+   **Connect my EX-CommandStation to my existing wireless network** 
 
-   Wifi SSID
-   WiFi Password
-   
+   If ``Connect my EX-CommandStation to my existing wireless network`` is selected, two additional options are presented:
+
+   * Wifi SSID
+   * WiFi Password
+
+   Both are required, Though it is possible, but unlikely, that the WiFi Password for your network is blank.
+
+   *Wifi SSID* is the name of your home network.
+
+   *WiFi Password* is the password for your home network.
+
+   **I have Ethernet**   
+
+   If you have installed and Ethernet board, select this option.
+
+   Note that it is not possible to have both WiFi and Ethernet enabled at the same time.
 
 
-To proceed, click the :guilabel:`Complie and Load` button.
+To proceed, click the :guilabel:`Compile and Load` button.
 
 |force-break|
 

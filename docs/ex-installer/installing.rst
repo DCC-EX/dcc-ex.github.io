@@ -26,8 +26,8 @@ Using the Installer (Windows x64)
 Requirements (for installing)
 ==============================
 
-* a Windows x64  **computer**
-* a |EX-CS|
+* a Microsoft Windows x64  **computer**
+* |EX-CS| hardware, comprising of:
 
   * an Arduino microprocessor, based on any of:
     
@@ -83,7 +83,7 @@ This screen provides some basic information about the process.
 
 It also provides a debugging option. If enabled this provides additional information about what is happening during the loading process. Unless you are having difficulties, or have been requested to enable this by one of our team, you do not need to select this.
 
-To proceed, click the ::guilabel:`Manage CLI` button.
+To proceed, click the ::guilabel:`Manage Arduino CLI` button.
 
 |force-break|
 
@@ -126,17 +126,17 @@ c. Select Your Device screen
    :scale: 40%
    :align: left
 
-On this screen you will need to a) select the type of device you wish to load the |EX-CS| software onto, and b) the USB port you have connected the device to on your computer.
+On this screen you will need to |BR| a) select the type of device you wish to load the |EX-CS| software onto, and |BR| b) the USB port you have connected the device to on your computer.
 
 |EX-I| will attempt to work out both of these for you, but it may need assistance.
 
-Click on the ::guilabel:`Scan for Devices` button. 
+Click on the :guilabel:`Scan for Devices` button. 
 
 If you see **No devices found** to means that you either a) have not connected the device to the computer, or b) the device was not recognised by the computer.
 
-If you have not connected the device, connect it now and click the button again.
+If you have not connected the device, connect it now and click the :guilabel:`Scan for Devices` button again.
 
-::todo:  If the device is not recognised.
+.. todo::  If the device is not recognised.
 
 .. figure:: /_static/images/ex-installer/select_device_multiple_devices.png
    :alt: EX-Installer - Select Device - Multiple Devices
@@ -148,50 +148,127 @@ If more than one device (on different USB ports) is found, you will need to sele
    :alt: EX-Installer - Select Device - Selection
    :scale: 30%
 
-|EX-I| will attempt to work out what type of Arduino you have selected but some cases (especially with cheap clone devices) it will not be able to do so.
+|EX-I| will attempt to work out what type of Arduino you have connect but some cases (especially with cheap clone devices) it will not be able to do so.
 
-Check and select the appropriate board for the drop down list.
+Check and select the appropriate board from the drop down list.
 
-Once you have a port and device type selected, To proceed, click the ::guilabel:`Select product to install` button.
+Once you have a port and device type selected, to proceed, click the :guilabel:`Select product to install` button.
 
 |force-break|
 
 d. Select the Product to Install screen
 ---------------------------------------
 
+.. figure:: /_static/images/ex-installer/select_product.png
+   :alt: EX-Installer - Select Product
+   :scale: 40%
+   :align: left
 
-Once you have Product, To proceed, click the ::guilabel:`xxx` button.
+Currently only the |EX-CS| product can be installed by the |EX-I|.
 
+Click on the |EX-CS| logo to proceed.
 
-e. products
------------
+|force-break|
+
+e. Product Specific screens
+---------------------------
 
 Currently only the installation of the |EX-CS| is supported.
 
+EX-CommandStation
+^^^^^^^^^^^^^^^^^
+
 i) Select EX-CommandStation Version screen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Once you have selected version and chose how to configure, To proceed, click the ::guilabel:`xxx` button.
+.. figure:: /_static/images/ex-installer/select_cs_version.png
+   :alt: EX-Installer - Select EX-CommandStation version
+   :scale: 40%
+   :align: left
+
+*Which version*
+
+* Latest Production - Recommended!
+* Latest Development
+* Select a specific version
+
+*How to configure*
+
+* Configure options on the next screen
+* Use my existing configuration files
+
+
+Once you have selected version and chose how to configure, To proceed, click the :guilabel:`xxx` button.
 
 |force-break|
 
-ii) Configure screen
-^^^^^^^^^^^^^^^^^^^^
+ii) Install EX-CommandStation - Configuration screen
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To proceed, click the ::guilabel:`xxx` button.
+
+.. figure:: /_static/images/ex-installer/ex_cs_configure.png
+   :alt: EX-Installer - EX-CommandStation Configuration
+   :scale: 40%
+   :align: left
+
+stuff goes here
 
 |force-break|
 
-f. Load screen
---------------
+.. figure:: /_static/images/ex-installer/ex_cs_configure_motor_shield.png
+   :alt: EX-Installer - EX-CommandStation - Configure Motor Driver
+   :scale: 30%
+
+Select your motor driver
+
+.. figure:: /_static/images/ex-installer/ex_cs_configure_screen.png
+   :alt: EX-Installer - EX-CommandStation - Configure Display Driver
+   :scale: 30%
+
+I have a display
 
 
-.. figure:: /_static/images/ex-installer/load.png
+I have WiFi
+
+.. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_access_point.png
+   :alt: EX-Installer - EX-CommandStation - Configure WiFi Access Point
+   :scale: 30%
+
+Use my EX-CommandStation as an Access Point
+
+  Select WiFi Channel
+
+.. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_station.png
+   :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
+   :scale: 30%
+
+Connect my EX-CommandStation to my existing wireless network
+
+   Wifi SSID
+   WiFi Password
+   
+
+
+To proceed, click the :guilabel:`Complie and Load` button.
+
+|force-break|
+
+iii) Compile and Load screen
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: /_static/images/ex-installer/ex_cs_load.png
    :alt: EX-Installer - Load
    :scale: 40%
    :align: left
 
-To proceed, click the ::guilabel:`xxx` button.
+To proceed, click the :guilabel:`Load` button.
+
+Results are in the lower half of the screen
+
+
+If there are no errors, you can proceed to testing you setup.
+
+.. todo:: if there are errors
 
 
 ----

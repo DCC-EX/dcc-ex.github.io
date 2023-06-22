@@ -25,6 +25,21 @@ Welcome to the |EX-CS| download page. You have several choices:
 EX-Installer
 =============
 
+For Microsoft Windows x64 computers
+-----------------------------------
+
+.. note:: This is the new version of the EX-Installer which is currently only supported on Microsoft windows x64 computers. |BR| Clicking on the link below will download a self contained app that can load automatically load the software to your Arduino or other supported board. Click here for :doc:`EX-Installer installation instructions </ex-commandstation/get-started/installer>`.
+
+.. rst-class:: dcclink
+
+   `EX-Installer <https://github.com/DCC-EX/EX-Installer/raw/main/dist/EX-Installer-Win64.exe>`_
+
+|
+
+
+For Microsoft Windows x32, Apple MacOS or Linux based computer 
+--------------------------------------------------------------
+
 .. note:: Clicking on the link below will automatically find the correct version for your Computer and Operating system (Windows, Mac, Linux) and download it. After unzipping the files to a folder on your computer and running the "EX-Installer" program, you will have the opportunity to select either |EX-CS| or BaseStation-Classic, and options, such as your Arduino type and motor driver type. It will automatically upload the software to your Arduino or other supported board. Click here for :doc:`EX-Installer installation instructions </ex-commandstation/get-started/installer>`. If you have an issue with the web page getting you the correct version, click on the `Latest EX-CommandStation Official Release`_ button in the next section to manually download the correct version.
 
 .. raw:: html 
@@ -32,6 +47,7 @@ EX-Installer
    <p class="dcclink"><a onclick="getLink()"><span class="problematic">Automated Installer</span></a></p>
 
 |
+
 
 Latest EX-CommandStation Official Release
 =========================================
@@ -43,6 +59,7 @@ Latest EX-CommandStation Official Release
   `Official Release page <https://github.com/DCC-EX/CommandStation-EX/releases>`_
 
 |
+
 
 Latest EX-CommandStation Unreleased Development Version
 =======================================================

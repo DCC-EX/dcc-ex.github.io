@@ -23,6 +23,7 @@ To make it as simple as possible we have created the |EX-I| app.
     :maxdepth: 1
 
     installing
+    installing-original-installer
     testing
 
 ----

@@ -5,28 +5,39 @@
 .. include:: /include/include-l1.rst
 |EX-I-LOGO|
 
-*******************
-Using the Installer 
-*******************
+*********************************
+Using the Installer (Windows x64) 
+*********************************
 
 |tinkerer| |engineer| |githublink-ex-installer-button2|
+
+.. warning::
+
+   The instructions on this page refer to the new |EX-I|.  This is currently only supported on Microsoft x64 Windows Computers. |BR| If you have a Microsoft Windows x32, Apple MacOS or Linux based computer use the :doc:`original Installer </ex-installer/installing-original-installer>` instead.
+
 
 .. sidebar::
 
    .. contents:: On this page
-      :depth: 2
+      :depth: 3
       :local:
+
 
 Requirements (for installing)
 ==============================
 
-* a Windows, Linux or MacOS X **Computer**
+* a Windows x64  **computer**
 * a |EX-CS|
 
-  * Arduino Mega or Arduino Uno 
-  * Motor shield
-  * optional WiFi shield or ethernet shield
-  * optional LCD or oLED display
+  * an Arduino microprocessor, based on any of:
+    
+    * Arduino Mega, Arduino Uno or Nano
+    * Expressif ESP32
+    * STMicroelectronicsm Nucleo/STM32
+
+  * a motor shield
+  * optionally, a WiFi shield or ethernet shield
+  * optionally, an LCD or oLED display
   
 * a **USB cable** to connect your computer to the Microcontroller
 
@@ -37,7 +48,7 @@ Requirements (for installing)
 1. Getting Ready 
 ================
 
-**(for Windows, Mac OS X, and Linux (including the Raspberry Pi))**
+**For Windows x64**
 
 .. warning::
    :class: warning-float-right
@@ -45,169 +56,145 @@ Requirements (for installing)
    **Antivirus Software** |BR| You *may* need to turn off your antivirus software before you try to install. |BR| Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
 
 * **Connect** your |EX-CS| to your computer
-* Determine which COM Port the |EX-CS| is plugged into 
-
-  * for Microsoft Windows:
-
-    * open (run) the 'Device Manager' app and look at the 'Ports (COM & LPT)' as you plug or unplug the |EX-CS|
-    * take note of the COM number (in brackets after the name of the device)
-
-  * for Mac OS or Linux:
-  
-    * Open a command terminal and run the command ``ls /dev/tty.usbmodem*``
-    * The device will have a name such as ``/dev/tty.usbmodem12033``
-    * if there are more than one devices listed, unplug |EX-CS|, re-run the command to note the device that remains, then plug |EX-CS| back in again to obtain the correct device name
 
 2. Download and Run EX-Installer 
 ================================
 
-* Download the :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app |BR| depending on your computer's operating system it will automatically determine the version you need and download it
-* Extract the downloaded **Installer** into its own folder with your favorite unzip program |BR| |BR|
-* For Microsoft Windows:
+* Download the new :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app.
+* For Microsoft Windows x64:
   
-  * Open File Manager
-  * **Run** ``exInstaller.exe`` |BR| |BR|
-
-* For Mac OS or Linux:
-
-  * Open a terminal window and navigate to that folder
-  * **Run the installer with** the following command: ``./exInstaller`` |BR| |BR|
+  * Open the Windows *File Manager*
+  * Find the folder in which the **EX-Installer-Win64.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
+  * **Run** ``EX-Installer-Win64.exe`` |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern.
 
 * You will be presented with the following screen...
 
-3. The EX-Installer Window
-==========================
+|force-break|
 
-.. warning:: **Wait!**
-   :class: warning-float-right
-   
-   The |EX-I| takes a little while to load everything it needs, so wait till you have seen about a dozen lines of text appear in the right pane before you try to select anything in the drop down menus.
+a. The EX-Installer Welcome screen
+----------------------------------
 
-.. figure:: /_static/images/installer/installer.png
-   :alt: EX-Installer
+.. figure:: /_static/images/ex-installer/welcome.png
+   :alt: EX-Installer - Welcome
+   :scale: 40%
+   :align: left
+
+This screen provides some basic information about the process.
+
+It also provides a debugging option. If enabled this provides additional information about what is happening during the loading process. Unless you are having difficulties, or have been requested to enable this by one of our team, you do not need to select this.
+
+To proceed, click the ::guilabel:`Manage CLI` button.
+
+|force-break|
+
+b. Manage CLI screen
+--------------------
+
+.. figure:: /_static/images/ex-installer/manage_cli.png
+   :alt: EX-Installer - Manage CLI
+   :scale: 40%
+   :align: left
+
+This screen allows you to Install or update the Arduino Command Line Interface (CLI).
+
+We use the Arduino Command Line Interface (CLI) to upload the DCC-EX products to your Arduino.  The CLI eliminates the need to install the more daunting Arduino IDE.  EX-Installer is able to manage the installation and updating of the Arduino CLI for you at the click of a button.
+
+If you have not installed the CLi previously you will see a ::guilabel:`Install Arduino CLI` button. 
+
+If have previously installed the CLI you will see a ::guilabel:`Refresh Arduino CLI` button.
+
+.. note::
+   :class: note-float-right
+
+   Enabling additional platforms is likely to add several minutes to the installation process. Maybe grab a cup of tea or a coffee!
+
+If you are using an Espressif or STMicroelectronics device, as opposed to the more common Uno or Mega based Arduinos, you will need to enable support for these by selecting the appropriate additional platform option.
+
+You must have Arduino CLI installed to proceed, simply click the ::guilabel:`Install Arduino CLI` button if it is showing.
+
+If you already have the Arduino CLI installed, it is recommended to refresh it periodically (e.g. weekly) to ensure support for the various devices is kept up to date. To refresh the CLI, simply click the ::guilabel:`Refresh Arduino CLI` button.
+
+Once the CLI is installed, To proceed, click the ::guilabel:`Select your device` button.
+
+|force-break|
+
+c. Select Your Device screen
+----------------------------
+
+.. figure:: /_static/images/ex-installer/select_device.png
+   :alt: EX-Installer - Select Device
+   :scale: 40%
+   :align: left
+
+On this screen you will need to a) select the type of device you wish to load the |EX-CS| software onto, and b) the USB port you have connected the device to on your computer.
+
+|EX-I| will attempt to work out both of these for you, but it may need assistance.
+
+Click on the ::guilabel:`Scan for Devices` button. 
+
+If you see **No devices found** to means that you either a) have not connected the device to the computer, or b) the device was not recognised by the computer.
+
+If you have not connected the device, connect it now and click the button again.
+
+::todo:  If the device is not recognised.
+
+.. figure:: /_static/images/ex-installer/select_device_multiple_devices.png
+   :alt: EX-Installer - Select Device - Multiple Devices
    :scale: 30%
 
-   Installer Window
+If more than one device (on different USB ports) is found, you will need to select which one you wish to work with.
 
-There will be a lot of information appearing in the log window, which can help us debug things if anything goes wrong. The installer needs to connect online to download the latest packages to support your hardware. It will take a few seconds to complete; this is normal. If you have a very slow internet connection it will take longer.
-
-Choose your options
--------------------
-
-
-In the left side options pane, use the dropdown selector boxes to choose the following options:
-
-.. figure:: /_static/images/installer/installer-options.png
-   :alt: Options Pane
-   :scale: 60%
-
-   Options Pane
-
-.. sidebar:: 
-
-   |BSC| is now only in a maintenance support state only.  If you are still using it, we recommend that you move to |EX-CS|.  It will function on the same hardware a |BSC|.
-
-1. Select your **Command Station Type** |BR| This should (almost always) be **'Command Station EX'**
-2. Select your **Arduino Board Type**
-3. Select your **Motor Shield** |BR|
-4. Select your **COM Port** |BR| The installer will usually find it for you but check against the COM port your took note of earlier
-5. Check the checkbox for your networking method if you have a Network Shield or WiFi Shield installed
-6. Check the checkbox for your display type if using an LCD or OLED display
-7. Check the Free Mem warning if you need to diagnose memory issues
-8. Press the :guilabel:`Compile and Upload` button
-
-WiFi Checkbox
-^^^^^^^^^^^^^
-
-MAKE SURE THIS BOX IS CHECKED - If you want WiFi, this box **must** be checked. If you don't want WiFi, you can leave it checked anyway so that if you add WiFi later, you won't have to upload the sketch again. The WiFi check only takes a few seconds, after which it will report no WiFi was found and start the Command Station. If you aren't using WiFi and want to save a few seconds of boot time, you can uncheck the box. If you need extra memory on the Arduino and aren't going to use WiFi, unchecking the box will free about 10kb of progmem and about 2kb of RAM.
-
-If you have installed a WiFi board, |EX-CS| will scan all the serial ports on your Mega and find it. If you wish to use Access Point Mode (aka AP Mode), this will set up the Command Station to be its own network router. To use it, you connect your phone or other WiFi device to this network instead of your home network. You will see a new network when you use the connect option on your phone that looks like "DCC-EX-xxxxxx", where the "xxxxxx" are the last 6 characters of the MAC address of your WiFi board. Simply connect to that network and you have a direct connection to your CS.
-
-If you wish to connect to your home network instead (connect to your router using "Station Mode"), then check this box. You will then need to enter your credentials to login to your network just like you would from any of your other WiFi devices:
-
-
-.. figure:: /_static/images/installer/wifi.png
-   :alt: WiFi Options
+.. figure:: /_static/images/ex-installer/select_device_selection.png
+   :alt: EX-Installer - Select Device - Selection
    :scale: 30%
 
-   Wifi Options
+|EX-I| will attempt to work out what type of Arduino you have selected but some cases (especially with cheap clone devices) it will not be able to do so.
 
-* **WiFi SSID** - The name of your home network.\ 
+Check and select the appropriate board for the drop down list.
 
-* **WiFi Password** - The password required to connect to your home network.\ 
+Once you have a port and device type selected, To proceed, click the ::guilabel:`Select product to install` button.
 
-* **Host Name** - If your WiFi Board supports it, this name can be used in addition to the IP address.\ 
+|force-break|
 
-* **Server Port** - This is the communication port our internal |WiThrottle server| uses to communicate with devices like |Engine Driver|. We recommend leaving it set to 2560 because |JMRI| also uses that port should you ever want to use |JMRI|.\ 
+d. Select the Product to Install screen
+---------------------------------------
 
-* **IP Address** - Normally, the DHCP server for your network will assign an IP address and you should leave this blank. But if you want to assign an IP address so the Command Station always uses the same one, you can enter it here.\ 
 
-Ethernet Checkbox
-^^^^^^^^^^^^^^^^^
+Once you have Product, To proceed, click the ::guilabel:`xxx` button.
 
-If you have an Ethernet shield and check this box, you will see options to change the following settings:
 
-.. figure:: /_static/images/installer/ethernet.jpg
-   :alt: Ethernet Options
-   :scale: 90%
+e. products
+-----------
 
-   Ethernet Options
+Currently only the installation of the |EX-CS| is supported.
 
-* **Host Name** - If your Ethernet Board supports it, this name can be used in addition to the IP address.\ 
+i) Select EX-CommandStation Version screen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* **Server Port** - This is the communication port our internal |WiThrottle server| uses to communicate with devices like |Engine Driver|. We recommend leaving it set to 2560 because JMRI also uses that port should you ever want to use |JMRI|.\ 
+Once you have selected version and chose how to configure, To proceed, click the ::guilabel:`xxx` button.
 
-* **MAC Address** - This is the unique identifier for your Ethernet Shield. We recommend leaving this setting as is. If you ever have more than one Ethernet shield on your network and there is a conflict, you can change this setting.
+|force-break|
 
-* **IP Address** - Normally, the DHCP server for your network will assign an IP address and you should leave this blank. But if you want to assign an IP address so the Command Station always uses the same one, you can enter it here.\ 
-
-LCD Checkbox
-^^^^^^^^^^^^
-
-If you have a 2 or 4 line LCD display connected and check this box, you will see the following options you can edit for your display:
-
-.. figure:: /_static/images/installer/lcd.jpg
-   :alt: LCD Options
-   :scale: 90%
-
-   LCD Options
-
-* **LCD Address (in Decimal format)** - This is the address of your display, it is usually 39 (for 0x27) or 63 (for 0x3F)
-
-* **LCD Columns** - The number of vertical columns on your display
-
-* **LCD Rows** - The number of horizontal rows or lines on your display
-
-For more information about using displays, see :doc:`I2C Displays </reference/hardware/i2c-displays>`
-
-OLED CheckBox
-^^^^^^^^^^^^^
-
-If you have an OLED display connected and check this box, you will see the following options you can edit for your display:
-
-.. figure:: /_static/images/installer/oled.jpg
-   :alt: OLED Options
-   :scale: 90%
-
-   OLED Options
-
-* **OLED Width (in pixels)** - Enter the width or number of horizontal pixels on your display
-
-* **OLED Height (in pixels)** - Enter the height or number of vertical pixels on your display
-
-For more information about using displays, see :doc:`I2C Displays </reference/hardware/i2c-displays>`
-
-Refresh Ports Button
+ii) Configure screen
 ^^^^^^^^^^^^^^^^^^^^
 
-This button allows you to refresh the serial ports in case you didn't have the Arduino connected when you opened the program, or if you will be programming multiple Arduinos. When you plug in a new board, refresh the ports so it can find your device.
+To proceed, click the ::guilabel:`xxx` button.
 
-Compile and Upload
-------------------
+|force-break|
 
-:guilabel:`Compile and Upload` **Button**
+f. Load screen
+--------------
 
-Once you have configured your options, press this button to compile all the source code and upload it to your Command Station.
+
+.. figure:: /_static/images/ex-installer/load.png
+   :alt: EX-Installer - Load
+   :scale: 40%
+   :align: left
+
+To proceed, click the ::guilabel:`xxx` button.
+
+
+----
 
 .. note:: 
 

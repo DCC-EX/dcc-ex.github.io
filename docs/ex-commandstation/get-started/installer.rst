@@ -35,6 +35,11 @@ Requirements (for installing)
 * a |EX-CS| (Arduino Mega/Uno + Motor shield and optional WiFi shield)
 * a **USB cable** to connect your computer to the Microcontroller
 
+.. note:: 
+
+   The new |EX-I| is currently only supported on Microsoft Windows x64 computers.
+   If you have a Microsoft Windows x32, Apple MacOS or Linux based computer you will need use the old installer for now.
+
 1. Getting Ready 
 ================
 
@@ -48,7 +53,9 @@ Requirements (for installing)
 * **Connect** your |EX-CS| to your computer
 * Determine which COM Port the |EX-CS| is plugged into 
 
-  * for Microsoft Windows:
+  * This step is not required for the new EX-Installer (on Microsoft Windows x64 computers).
+
+  * for Microsoft x32 Windows (using the original installer):
 
     * open (run) the 'Device Manager' app and look at the 'Ports (COM & LPT)' as you plug or unplug the |EX-CS|
     * take note of the COM number (in brackets after the name of the device)
@@ -62,8 +69,10 @@ Requirements (for installing)
 2. Download and Run EX-Installer 
 ================================
 
-* Download the :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app |BR| depending on your computer's operating system it will automatically determine the version you need and download it
-* Extract the downloaded **Installer** into its own folder with your favorite unzip program |BR| |BR|
+* Download the :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app 
+
+|BR| depending on your computer's operating system it will automatically determine the version you need and download it
+* Extract the downloaded **Installer** into its own folder with your favourite unzip program |BR| |BR|
 * For Microsoft Windows:
   
   * Open File Manager

@@ -69,8 +69,8 @@ Requirements (for installing)
 
 |force-break|
 
-a. The EX-Installer Welcome screen
-----------------------------------
+a. The 'EX-Installer Welcome' screen
+------------------------------------
 
 .. figure:: /_static/images/ex-installer/welcome.png
    :alt: EX-Installer - Welcome
@@ -81,12 +81,12 @@ This screen provides some basic information about the process.
 
 There is *debugging* option on this page. If enabled this provides additional information about what is happening during the loading process. Unless you are having difficulties, or have been requested to enable this by one of our team, you do not need to select this.
 
-To proceed, click the ::guilabel:`Manage Arduino CLI` button.
+To proceed, click the :guilabel:`Manage Arduino CLI` button.
 
 |force-break|
 
-b. Manage CLI screen
---------------------
+b. 'Manage CLI' screen
+----------------------
 
 .. figure:: /_static/images/ex-installer/manage_cli.png
    :alt: EX-Installer - Manage CLI
@@ -97,9 +97,9 @@ This screen allows you to install or update the *Arduino Command Line Interface 
 
 We use the *Arduino Command Line Interface (CLI)* to upload the DCC-EX products to your Arduino.  The CLI eliminates the need to install the more daunting Arduino IDE.  EX-Installer is able to manage the installation and updating of the Arduino CLI for you at the click of a button.
 
-If you have not installed the CLI previously you will see a ::guilabel:`Install Arduino CLI` button. 
+If you have not installed the CLI previously you will see a :guilabel:`Install Arduino CLI` button. 
 
-If have previously installed the CLI you will see a ::guilabel:`Refresh Arduino CLI` button.
+If have previously installed the CLI you will see a :guilabel:`Refresh Arduino CLI` button.
 
 .. note::
    :class: note-float-right
@@ -108,7 +108,7 @@ If have previously installed the CLI you will see a ::guilabel:`Refresh Arduino 
 
 If you are using an Espressif or STMicroelectronics device, as opposed to the more common Uno or Mega based Arduinos, you will need to enable support for these by selecting the appropriate additional platform option.
 
-You must have Arduino CLI installed to proceed, simply click the ::guilabel:`Install Arduino CLI` button if it is showing.
+You must have Arduino CLI installed to proceed, simply click the :guilabel:`Install Arduino CLI` button if it is showing.
 
 If you already have the Arduino CLI installed, it is recommended to refresh it periodically (e.g. weekly) to ensure support for the various devices is kept up to date. To refresh the CLI, simply click the ::guilabel:`Refresh Arduino CLI` button.
 
@@ -116,8 +116,8 @@ Once the CLI is installed, To proceed, click the ::guilabel:`Select your device`
 
 |force-break|
 
-c. Select Your Device screen
-----------------------------
+c. 'Select Your Device' screen
+------------------------------
 
 .. figure:: /_static/images/ex-installer/select_device.png
    :alt: EX-Installer - Select Device
@@ -154,8 +154,8 @@ Once you have a port and device type selected, to proceed, click the :guilabel:`
 
 |force-break|
 
-d. Select the Product to Install screen
----------------------------------------
+d. 'Select the Product to Install' screen
+-----------------------------------------
 
 .. figure:: /_static/images/ex-installer/select_product.png
    :alt: EX-Installer - Select Product
@@ -176,8 +176,8 @@ Currently only the installation of the |EX-CS| is supported.
 EX-CommandStation
 ^^^^^^^^^^^^^^^^^
 
-i) Select EX-CommandStation Version screen
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+i) 'Select EX-CommandStation Version' screen
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-installer/select_cs_version.png
    :alt: EX-Installer - Select EX-CommandStation version
@@ -212,8 +212,8 @@ If you have selected ``Use my existing configuration files``, to proceed, click 
 
 |force-break|
 
-ii) Install EX-CommandStation - Configuration screen
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ii) 'Install EX-CommandStation' - Configuration screen
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure.png
    :alt: EX-Installer - EX-CommandStation Configuration
@@ -309,13 +309,12 @@ You can configure the WiFi for EX-CommandStation two ways:
 
    Note that it is not possible to have both WiFi and Ethernet enabled at the same time.
 
-
 To proceed, click the :guilabel:`Compile and Load` button.
 
 |force-break|
 
-iii) Compile and Load screen
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+iii) 'Compile and Load' screen
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-installer/ex_cs_load.png
    :alt: EX-Installer - Load

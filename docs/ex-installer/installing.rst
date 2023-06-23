@@ -19,7 +19,7 @@ Using the Installer (Windows x64)
 .. sidebar::
 
    .. contents:: On this page
-      :depth: 3
+      :depth: 4
       :local:
 
 
@@ -27,17 +27,17 @@ Requirements (for installing)
 ==============================
 
 * a Microsoft Windows x64  **computer**
-* |EX-CS| hardware, comprising of:
+* |EX-CS| **hardware**, comprising of:
 
-  * an Arduino microprocessor, based on any of:
+  * an **Arduino microprocessor**, based on any of:
     
     * Arduino Mega, Arduino Uno or Nano
     * Expressif ESP32
     * STMicroelectronicsm Nucleo/STM32
 
-  * a motor shield
-  * optionally, a WiFi shield or ethernet shield
-  * optionally, an LCD or oLED display
+  * a **motor shield**
+  * optionally, a **WiFi shield** or ethernet shield
+  * optionally, an **LCD or oLED display**
   
 * a **USB cable** to connect your computer to the Microcontroller
 
@@ -53,12 +53,12 @@ Requirements (for installing)
    
    **Antivirus Software** |BR| You *may* need to turn off your antivirus software before you try to install. |BR| Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
 
-* **Connect** your |EX-CS| hardware to your computer via USB.
+* **Connect** your |EX-CS| **hardware** to your computer via USB.
 
 2. Download and Run EX-Installer 
 ================================
 
-* Download the new :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app.
+* Download the **new** :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app.
 * For Microsoft Windows x64:
   
   * Open the Windows *File Manager*
@@ -77,7 +77,7 @@ a. The 'EX-Installer Welcome' screen
    :scale: 40%
    :align: left
 
-This screen provides some basic information about the process.
+This screen provides some basic information about the process of loading the Software.
 
 There is *debugging* option on this page. If enabled this provides additional information about what is happening during the loading process. Unless you are having difficulties, or have been requested to enable this by one of our team, you do not need to select this.
 
@@ -85,8 +85,8 @@ To proceed, click the :guilabel:`Manage Arduino CLI` button.
 
 |force-break|
 
-b. 'Manage CLI' screen
-----------------------
+b. 'Manage Arduino CLI' screen
+------------------------------
 
 .. figure:: /_static/images/ex-installer/manage_cli.png
    :alt: EX-Installer - Manage CLI
@@ -108,9 +108,9 @@ If have previously installed the CLI you will see a :guilabel:`Refresh Arduino C
 
 If you are using an Espressif or STMicroelectronics device, as opposed to the more common Uno or Mega based Arduinos, you will need to enable support for these by selecting the appropriate additional platform option.
 
-You must have Arduino CLI installed to proceed, simply click the :guilabel:`Install Arduino CLI` button if it is showing.
+You *must* have Arduino CLI installed to proceed, simply click the :guilabel:`Install Arduino CLI` button if it is showing.
 
-If you already have the Arduino CLI installed, it is recommended to refresh it periodically (e.g. weekly) to ensure support for the various devices is kept up to date. To refresh the CLI, simply click the ::guilabel:`Refresh Arduino CLI` button.
+If you already have the Arduino CLI installed, it is recommended that you refresh it periodically (e.g. weekly) to ensure support for the various device details are kept up to date. To refresh the CLI, simply click the ::guilabel:`Refresh Arduino CLI` button.
 
 Once the CLI is installed, To proceed, click the ::guilabel:`Select your device` button.
 
@@ -140,13 +140,13 @@ If you have not connected the device, connect it now and click the :guilabel:`Sc
    :alt: EX-Installer - Select Device - Multiple Devices
    :scale: 30%
 
-If more than one device (on different USB ports) is found, you will need to select which one you wish to work with.
+If more than one device is found (on different USB ports), you will need to select which one you wish to load the software on to.
 
 .. figure:: /_static/images/ex-installer/select_device_selection.png
    :alt: EX-Installer - Select Device - Selection
    :scale: 30%
 
-|EX-I| will attempt to work out what type of Arduino you have connect but some cases (especially with cheap clone devices) it will not be able to do so.
+|EX-I| will attempt to work out what type of Arduino you have connected, but some cases it will not be able to do so. (This is especially common with cheap clone devices.) 
 
 Check and select the appropriate board from the drop down list.
 
@@ -184,9 +184,14 @@ i) 'Select EX-CommandStation Version' screen
    :scale: 40%
    :align: left
 
+On this screen you need to select:
+
+* Which version of the EX-CommandStation software you wish to load
+* How you wish to configure the software
+
 *Which version*
 
-Select which version of the |EX-CS| software to load onto your hardware.  If you are unsure, or have been directed by the support team, select ``Latest Production``.
+Select which version of the |EX-CS| software to load onto your hardware.  If you are unsure, or unless you have been otherwise directed by the support team, we recommend you select ``Latest Production``.
 
 Options are:
 
@@ -196,19 +201,18 @@ Options are:
 
 *How to configure*
 
-Select how you wish to configure your |EX-CS|. If you are updating a previous version, or have manually made configuration changes, select ``Configure options on the next screen``
+Select how you wish to configure your |EX-CS|. Unless you are updating a previous version that you manually configured, or want to manually make advanced configuration changes, select ``Configure options on the next screen``
 
 Options are:
 
 * Configure options on the next screen
 * Use my existing configuration files
 
-If you select ``Use my existing configuration files`` your will be propted to find the folder where the configuration files are located.
+If you select ``Use my existing configuration files`` your will be prompted to find the folder where the configuration files are located.
 
 If you have selected ``Configure options on the next screen``, to proceed, click the :guilabel:`Configure EX-CommandStation` button.
 
 If you have selected ``Use my existing configuration files``, to proceed, click the :guilabel:`Complie and Upload` button.
-
 
 |force-break|
 
@@ -220,9 +224,14 @@ ii) 'Install EX-CommandStation' - Configuration screen
    :scale: 40%
    :align: left
 
-If you have selected ``Configure options on the next screen`` on the previous screen you will be present with this screen. 
+Only if you have selected ``Configure options on the next screen`` on the previous screen will you be presented with this screen. 
 
-On this screen you can select some of the flexible and optional feature of the |EX-CS|.
+On this screen you can select some of the flexible and optional features of the |EX-CS|:abbr:
+
+* Motor Driver type
+* LCD or oLED display
+* Wifi
+* Ethernet
 
 |force-break|
 
@@ -232,7 +241,7 @@ On this screen you can select some of the flexible and optional feature of the |
    :alt: EX-Installer - EX-CommandStation - Configure Motor Driver
    :scale: 30%
 
-You must select your motor driver that you have installed.  The installer can't detect this, so you must select the correct board or the |EX-CS| may not work. 
+You *must* select the motor driver type that you have installed.  The installer can't detect this, so you must select the correct board or the |EX-CS| may not work. 
 
 The options include:
 
@@ -253,7 +262,7 @@ The options include:
    :alt: EX-Installer - EX-CommandStation - Configure Display Driver
    :scale: 30%
 
-If you have installed and optional OLED or LED display, enable the ``I have a display`` option, which will present you with a drop down list to select the type of display you have.
+If you have installed and optional oLED or LED display, enable the ``I have a display`` option, which will present you with a drop down list to select the type of display you have.
 
 The options include:
 
@@ -264,12 +273,12 @@ The options include:
 
 **WiFi**
 
-If you have installed and optional WiFi board, or are using a microcontoller board with integrated WiFi, enable the ``I have WiFi`` option, which will present you with additional options.
+If you have installed and optional WiFi board, or are using a microcontroller board with integrated WiFi, enable the ``I have WiFi`` option, which will present you with additional options.
 
 You can configure the WiFi for EX-CommandStation two ways:
 
 * Access Point mode |BR| Select ``Use my EX-CommandStation as an Access Point`` |BR| You can configure for EX-CommandStation to have its own, completely isolated, WiFi Network. This is referred to as *Access Point Mode*. (Most useful if your layout is away from the house, or you transport your layout frequently.)
-* Station mode |BR| Select ``Connect my EX-CommandStation to my existing wireless network`` |BR| The EX-CommandStation can be setup so that it connects to your existing home WiFi Network. This is referred to as Station Mode. 
+* Station mode |BR| Select ``Connect my EX-CommandStation to my existing wireless network`` |BR| The EX-CommandStation can be setup so that it connects to your existing home WiFi Network. This is referred to as *Station Mode*. 
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_access_point.png
    :alt: EX-Installer - EX-CommandStation - Configure WiFi Access Point
@@ -323,10 +332,10 @@ iii) 'Compile and Load' screen
 
 To proceed, click the :guilabel:`Load` button.
 
-Results are in the lower half of the screen
+Results are shown in the lower half of the screen.
 
 
-If there are no errors, you can proceed to testing you setup.
+If there are no errors, you can proceed to testing your setup.
 
 .. todo:: if there are errors
 

@@ -71,28 +71,30 @@ Requirements (for installing)
 2. Download and Run EX-Installer 
 ================================
 
-Note that currently there are two version of the EX-Installer.
-The *new* version currently is only supported on Microsoft x64 Windows Computers. 
-If you have a Microsoft Windows x32, Apple MacOS or Linux based computer use the *original* Installer.
+.. warning::
+   
+   Note that currently there are two versions of the EX-Installer. |BR| The *new* version currently is only supported on **Microsoft x64 Windows Computers**. 
+   If you have a Microsoft Windows x32, Apple MacOS or Linux based computer use the *original* Installer.
 
 * Download the correct :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app |BR| depending on your computer's operating system.
 
 
-* For Microsoft Windows x64:
+* For **Microsoft Windows x64**:
 
   * Open the Windows *File Manager*
   * Find the folder in which the **EX-Installer-Win64.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
   * **Run** ``EX-Installer-Win64.exe`` |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern. |BR| |BR|
+  * You will be presented with the following screens...
 
-* for Microsoft Windows x32:
+* for **Microsoft Windows x32**:
 
-  * Extract the downloaded **Installer** into its own folder with your favourite unzip program
+  * Extract the downloaded **Installer** into its own folder with your favourite unzip program.
   * Open *File Manager*
   * **Run** ``exInstaller.exe`` |BR| |BR|
 
-* For Mac OS or Linux:
+* For **Mac OS or Linux**:
 
-  * Open a terminal window and navigate to that folder
+  * Open a terminal window and navigate to that folder.
   * **Run the installer with** the following command: ``./exInstaller`` |BR| |BR|
 
 * You will be presented with the following screen...

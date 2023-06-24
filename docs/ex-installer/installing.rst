@@ -15,13 +15,11 @@ Using the Installer (Windows x64)
 
    The instructions on this page refer to the *new* |EX-I|.  This is currently only supported on Microsoft x64 Windows Computers. |BR| If you have a Microsoft Windows x32, Apple MacOS or Linux based computer use the :doc:`original Installer </ex-installer/installing-original-installer>` instead.
 
-
 .. sidebar::
 
    .. contents:: On this page
       :depth: 4
       :local:
-
 
 Requirements (for installing)
 ==============================
@@ -77,6 +75,8 @@ a. The 'EX-Installer Welcome' screen
    :scale: 40%
    :align: left
 
+   EX-Installer - Welcome
+
 This screen provides some basic information about the process of loading the Software.
 
 There is *debugging* option on this page. If enabled this provides additional information about what is happening during the loading process. Unless you are having difficulties, or have been requested to enable this by one of our team, you do not need to select this.
@@ -92,6 +92,8 @@ b. 'Manage Arduino CLI' screen
    :alt: EX-Installer - Manage CLI
    :scale: 40%
    :align: left
+
+   Manage CLI
 
 This screen allows you to install or update the *Arduino Command Line Interface (CLI)*.
 
@@ -124,6 +126,8 @@ c. 'Select Your Device' screen
    :scale: 40%
    :align: left
 
+   EX-Installer - Select Device
+
 On this screen you will need to |BR| a) select the type of device you wish to load the |EX-CS| software onto, and |BR| b) the USB port you have connected the device to on your computer.
 
 |EX-I| will attempt to work out both of these for you, but it may need assistance.
@@ -140,11 +144,15 @@ If you have not connected the device, connect it now and click the :guilabel:`Sc
    :alt: EX-Installer - Select Device - Multiple Devices
    :scale: 30%
 
+   Select Device - Multiple Devices
+
 If more than one device is found (on different USB ports), you will need to select which one you wish to load the software on to.
 
 .. figure:: /_static/images/ex-installer/select_device_selection.png
    :alt: EX-Installer - Select Device - Selection
    :scale: 30%
+
+   Select Device - Selection
 
 |EX-I| will attempt to work out what type of Arduino you have connected, but some cases it will not be able to do so. (This is especially common with cheap clone devices.) 
 
@@ -158,9 +166,11 @@ d. 'Select the Product to Install' screen
 -----------------------------------------
 
 .. figure:: /_static/images/ex-installer/select_product.png
-   :alt: EX-Installer - Select Product
+   :alt: EX-Installer - Select EX-CommandStation version
    :scale: 40%
    :align: left
+
+   Select EX-CommandStation version
 
 Currently only the |EX-CS| product can be installed by the |EX-I|.
 
@@ -183,6 +193,8 @@ i) 'Select EX-CommandStation Version' screen
    :alt: EX-Installer - Select EX-CommandStation version
    :scale: 40%
    :align: left
+
+   Select EX-CommandStation version
 
 On this screen you need to select:
 
@@ -224,6 +236,8 @@ ii) 'Install EX-CommandStation' - Configuration screen
    :scale: 40%
    :align: left
 
+   EX-CommandStation Configuration
+
 Only if you have selected ``Configure options on the next screen`` on the previous screen will you be presented with this screen. 
 
 On this screen you can select some of the flexible and optional features of the |EX-CS|:abbr:
@@ -232,6 +246,8 @@ On this screen you can select some of the flexible and optional features of the 
 * LCD or oLED display
 * Wifi
 * Ethernet
+* Set track modes
+* Advanced Config
 
 |force-break|
 
@@ -239,7 +255,9 @@ On this screen you can select some of the flexible and optional features of the 
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_motor_shield.png
    :alt: EX-Installer - EX-CommandStation - Configure Motor Driver
-   :scale: 30%
+   :scale: 70%
+
+   Configure Motor Driver
 
 You *must* select the motor driver type that you have installed.  The installer can't detect this, so you must select the correct board or the |EX-CS| may not work. 
 
@@ -260,7 +278,9 @@ The options include:
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_screen.png
    :alt: EX-Installer - EX-CommandStation - Configure Display Driver
-   :scale: 30%
+   :scale: 70%
+
+   Configure Display Driver
 
 If you have installed and optional oLED or LED display, enable the ``I have a display`` option, which will present you with a drop down list to select the type of display you have.
 
@@ -280,11 +300,13 @@ You can configure the WiFi for EX-CommandStation two ways:
 * Access Point mode |BR| Select ``Use my EX-CommandStation as an Access Point`` |BR| You can configure for EX-CommandStation to have its own, completely isolated, WiFi Network. This is referred to as *Access Point Mode*. (Most useful if your layout is away from the house, or you transport your layout frequently.)
 * Station mode |BR| Select ``Connect my EX-CommandStation to my existing wireless network`` |BR| The EX-CommandStation can be setup so that it connects to your existing home WiFi Network. This is referred to as *Station Mode*. 
 
-.. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_access_point.png
-   :alt: EX-Installer - EX-CommandStation - Configure WiFi Access Point
-   :scale: 30%
+**Use my EX-CommandStation as an Access Point**
 
-   **Use my EX-CommandStation as an Access Point**
+.. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_access_point.png
+   :alt: EX-Installer - EX-CommandStation - Configure WiFi - Access Point
+   :scale: 70%
+
+   Configure WiFi - Access Point
 
    If ``Use my EX-CommandStation as an Access Point`` is selected, two additional options are presented:
 
@@ -295,11 +317,13 @@ You can configure the WiFi for EX-CommandStation two ways:
 
    *WiFi Channel* can be any value from 1-11.  If possible choose a channel that is unused by other networks around your location.
 
+**Connect my EX-CommandStation to my existing wireless network** 
+
 .. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_station.png
    :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
-   :scale: 30%
+   :scale: 70%
 
-   **Connect my EX-CommandStation to my existing wireless network** 
+   Configure Wifi - Station Mode
 
    If ``Connect my EX-CommandStation to my existing wireless network`` is selected, two additional options are presented:
 
@@ -312,17 +336,56 @@ You can configure the WiFi for EX-CommandStation two ways:
 
    *WiFi Password* is the password for your home network.
 
-   **I have Ethernet**   
+**I have Ethernet**   
 
    If you have installed and Ethernet board, select this option.
 
    Note that it is not possible to have both WiFi and Ethernet enabled at the same time.
 
-To proceed, click the :guilabel:`Compile and Load` button.
+**Set track modes**
+
+.. figure:: /_static/images/ex-installer/ex_cs_configure_set_track_mode_options.png
+   :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
+   :scale: 70%
+
+The tracks (channels) on your motor driver can be configured in a variety of different ways.
+
+* MAIN - DCC main
+* PROG - DCC Programming Track
+* DC
+* DCCX - DC with the positive/negative inverted
+* OFF
+
+By default track (channel) A will default to DCC-MAIN and Track (channel).
+
+**Advanced Config**
+
+.. figure:: /_static/images/ex-installer/ex_cs_configure_advanced_config.png
+   :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
+   :scale: 70%
+
+If you wish to edit the 'config' files directly, select this option.  An additional screen will be presented for to edit the main config files.
+
+Unless you have selected *Advanced Config*, to proceed, click the :guilabel:`Compile and Load` button. See *iv* below.
+
+If you have selected *Advanced Config*, to proceed, click the :guilabel:`Advanced Config` button.  See *iii* below.
 
 |force-break|
 
-iii) 'Compile and Load' screen
+iii) 'Advanced Configuration' screen
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: /_static/images/ex-installer/ex_cs_advanced_config.png
+   :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
+   :scale: 40%
+
+Only if you have selected ``Advanced Config`` on the previous screen will you be presented with this screen. 
+
+On this screen you can edit the two main configuration files.
+
+To proceed, click the :guilabel:`Compile and Load` button. See *iv* below.
+
+iv) 'Compile and Load' screen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-installer/ex_cs_load.png
@@ -338,7 +401,6 @@ Results are shown in the lower half of the screen.
 If there are no errors, you can proceed to testing your setup.
 
 .. todo:: if there are errors
-
 
 ----
 

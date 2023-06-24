@@ -235,8 +235,10 @@ On this screen you can select some of the flexible and optional features of the 
 * LCD or oLED display
 * Wifi
 * Ethernet
+* Set track modes
+* Advanced Config
 
-Only the Motor Driver and WiFi will be covered here.  If you have installed different hardware to that recommended, see the :doc:`/ex-installer/installing` page for instructions.
+Only the Motor Driver and WiFi will be covered here.  If you have installed different hardware to that recommended, see the :doc:`/ex-installer/installing` page for instructions on the additional configuration options.
 
 |force-break|
 

@@ -353,7 +353,7 @@ The tracks (channels) on your motor driver can be configured in a variety of dif
 * MAIN - DCC main
 * PROG - DCC Programming Track
 * DC
-* DCCX - DC with the positive/negative inverted
+* DCX - DC with the positive/negative inverted
 * OFF
 
 By default track (channel) A will default to DCC-MAIN and Track (channel).

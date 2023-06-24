@@ -378,12 +378,15 @@ iii) 'Advanced Configuration' screen
 .. figure:: /_static/images/ex-installer/ex_cs_advanced_config.png
    :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
    :scale: 40%
+   :align: left
 
 Only if you have selected ``Advanced Config`` on the previous screen will you be presented with this screen. 
 
 On this screen you can edit the two main configuration files.
 
 To proceed, click the :guilabel:`Compile and Load` button. See *iv* below.
+
+|force-break|
 
 iv) 'Compile and Load' screen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

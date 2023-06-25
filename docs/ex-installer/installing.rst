@@ -224,7 +224,7 @@ If you select ``Use my existing configuration files`` your will be prompted to f
 
 If you have selected ``Configure options on the next screen``, to proceed, click the :guilabel:`Configure EX-CommandStation` button.
 
-If you have selected ``Use my existing configuration files``, to proceed, click the :guilabel:`Complie and Upload` button.
+If you have selected ``Use my existing configuration files``, to proceed, click the :guilabel:`Advanced Config` button.  In this case you will be presented with the 'Advanced Config' screen.
 
 |force-break|
 

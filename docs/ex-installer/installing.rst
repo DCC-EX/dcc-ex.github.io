@@ -19,10 +19,6 @@ Using the Installer (Windows x64)
 
   We hope to have a new version available soon.
 
-.. warning::
-
-   The instructions on this page refer to the *new* |EX-I|.  This is currently only supported on Microsoft x64 Windows Computers. |BR| If you have a Microsoft Windows x32, Apple MacOS or Linux based computer use the :doc:`original Installer </ex-installer/installing-original-installer>` instead.
-
 .. sidebar::
 
    .. contents:: On this page

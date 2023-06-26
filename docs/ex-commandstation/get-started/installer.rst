@@ -128,6 +128,8 @@ To proceed, click the :guilabel:`Manage Arduino CLI` button.
    :scale: 40%
    :align: left
 
+   EX-Installer - Welcome screen
+
 This screen allows you to install or update the *Arduino Command Line Interface (CLI)*.
 
 We use the *Arduino Command Line Interface (CLI)* to upload the DCC-EX products to your Arduino.
@@ -150,27 +152,41 @@ Once the CLI is installed, To proceed, click the ::guilabel:`Select your device`
    :scale: 40%
    :align: left
 
+   EX-Installer - Device screen
+
 On this screen you will need to |BR| a) select the type of device you wish to load the |EX-CS| software onto, and |BR| b) the USB port you have connected the device to on your computer.
 
 |EX-I| will attempt to work out both of these for you, but it may need assistance.
 
 Click on the :guilabel:`Scan for Devices` button. 
 
-If you see **No devices found** to means that you either a) have not connected the device to the computer, or b) the device was not recognised by the computer.
+**No Devices Found**
 
-If you have not connected the device, connect it now and click the :guilabel:`Scan for Devices` button again.
+After you have clicked on the :guilabel:`Scan for Devices` button, if you see **No devices found** to means that you either a) have not connected the device to the computer, or b) the device was not recognised by the computer.
+
+If you have not connected the device, connect it now then click the :guilabel:`Scan for Devices` button again.
+
+If the device *is* connected but not found, you may need to install the devices drivers for it.
 
 .. todo::  If the device is not recognised.
 
+**Multiple Devices Found**
+
 .. figure:: /_static/images/ex-installer/select_device_multiple_devices.png
    :alt: EX-Installer - Select Device - Multiple Devices
-   :scale: 30%
+   :scale: 50%
+   :align: center
+
+   EX-Installer - Device - Multiple Devices
 
 If more than one device is found (on different USB ports), you will need to select which one you wish to load the software on to.
 
 .. figure:: /_static/images/ex-installer/select_device_selection.png
    :alt: EX-Installer - Select Device - Selection
-   :scale: 30%
+   :scale: 50%
+   :align: center
+
+   EX-Installer - Device - Selection
 
 |EX-I| will attempt to work out what type of Arduino you have connected, but some cases it will not be able to do so. (This is especially common with cheap clone devices.) 
 
@@ -188,6 +204,8 @@ Once you have a port and device type selected, to proceed, click the :guilabel:`
    :scale: 40%
    :align: left
 
+   EX-Installer - Product Screen
+
 Currently only the |EX-CS| product can be installed by the |EX-I|.
 
 Click on the |EX-CS| logo to proceed.
@@ -201,6 +219,8 @@ Click on the |EX-CS| logo to proceed.
    :alt: EX-Installer - Select EX-CommandStation version
    :scale: 40%
    :align: left
+
+   EX-Installer - Select EX-CommandStation version screen
 
 On this screen you need to select:
 
@@ -229,6 +249,8 @@ If you have selected ``Configure options on the next screen``, to proceed, click
    :scale: 40%
    :align: left
 
+   EX-Installer - EX-CommandStation Configuration screen
+
 On this screen you can select some of the flexible and optional features of the |EX-CS|:abbr:
 
 * Motor Driver type
@@ -238,7 +260,7 @@ On this screen you can select some of the flexible and optional features of the 
 * Set track modes
 * Advanced Config
 
-Only the Motor Driver and WiFi will be covered here.  If you have installed different hardware to that recommended, see the :doc:`/ex-installer/installing` page for instructions on the additional configuration options.
+Only the *Motor Driver* and *WiFi* will be covered on this page.  If you have installed different hardware to that recommended, see the :doc:`/ex-installer/installing` page for instructions on all the available configuration options.
 
 |force-break|
 
@@ -246,9 +268,22 @@ Only the Motor Driver and WiFi will be covered here.  If you have installed diff
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_motor_shield.png
    :alt: EX-Installer - EX-CommandStation - Configure Motor Driver
-   :scale: 30%
+   :scale: 60%
+   :align: center
+
+   EX-Installer - Configure Motor Driver
 
 You *must* select the motor driver type that you have installed.  The installer can't detect this, so you must select the correct board or the |EX-CS| may not work. If you have installed the recommended Motor Driver, select `STANDARD_MOTOR_SHIELD`.
+
+.. sidebar:: Station Mode VS Access Point Mode
+
+   |conductor| |BR| There is no right or wrong selection here. Both options here may be valid for you to use, depending on how you wish to use your |EX-CS|.
+
+   If a) your layout is close to you home WiFi network, b) you don't transport the layout around, c) you need to use more that four WiFi controllers at a time, and/or d) you are not likely to, or have no concerns about letting visitors access your home WiFi (for them to use their own devices on your layout), then **Station Mode** is probably a better option.
+
+   If the above is not generally true, then **Access Point Mode** may be a better choice.
+
+   You must choose one of these options now, but you can always come back later and re-load the software with a different option.
 
 **WiFi**
 
@@ -256,40 +291,46 @@ If you have installed and optional WiFi board, or are using a microcontroller bo
 
 You can configure the WiFi for EX-CommandStation two ways:
 
-* Access Point mode |BR| Select ``Use my EX-CommandStation as an Access Point`` |BR| You can configure for EX-CommandStation to have its own, completely isolated, WiFi Network. This is referred to as *Access Point Mode*. (Most useful if your layout is away from the house, or you transport your layout frequently.)
-* Station mode |BR| Select ``Connect my EX-CommandStation to my existing wireless network`` |BR| The EX-CommandStation can be setup so that it connects to your existing home WiFi Network. This is referred to as *Station Mode*. 
+* **Access Point mode** |BR| You can configure for EX-CommandStation to have its own, completely isolated, WiFi Network. This is referred to as *Access Point Mode*. (Most useful if your layout is away from the house, or you transport your layout frequently.) |BR| To enable, select ``Use my EX-CommandStation as an Access Point`` 
+* **Station mode**  |BR| The EX-CommandStation can be setup so that it connects to your existing home WiFi Network. This is referred to as *Station Mode*. |BR| To enable, select  ``Connect my EX-CommandStation to my existing wireless network`` 
+
+**Use my EX-CommandStation as an Access Point**
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_access_point.png
    :alt: EX-Installer - EX-CommandStation - Configure WiFi Access Point
-   :scale: 30%
+   :scale: 50%
+   :align: center
 
-   **Use my EX-CommandStation as an Access Point**
+   EX-Installer - Configure WiFi - Access Point
 
-   If ``Use my EX-CommandStation as an Access Point`` is selected, two additional options are presented:
+If ``Use my EX-CommandStation as an Access Point`` is selected, two additional options are presented:
 
-   * WiFi Password
-   * WiFi Channel
+* WiFi Password
+* WiFi Channel
 
-   *WiFi Password* is optional.  If not entered it will default to "PASS_xxxxx" where 'xxxxx' id will be the same as the SSID that will be automatically configured.
+*WiFi Password* is optional.  |BR| **We recommend you leave this field blank.** |BR| If this field is left blank the password will default to "PASS_xxxxx" where 'xxxxx' will be the same as the SSID *name* that will be automatically configured.
 
-   *WiFi Channel* can be any value from 1-11.  If possible choose a channel that is unused by other networks around your location.
+*WiFi Channel* can be any value from 1-11. |BR| If possible choose a channel that is unused (or least used) by other WiFi networks around your location.
+
+**Connect my EX-CommandStation to my existing wireless network** 
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_station.png
    :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
-   :scale: 30%
+   :scale: 60%
+   :align: center
 
-   **Connect my EX-CommandStation to my existing wireless network** 
+   EX-Installer - Configure Wifi - Station Mode
 
-   If ``Connect my EX-CommandStation to my existing wireless network`` is selected, two additional options are presented:
+If ``Connect my EX-CommandStation to my existing wireless network`` is selected, two additional options are presented:
 
-   * Wifi SSID
-   * WiFi Password
+* Wifi SSID
+* WiFi Password
 
-   Both are required, Though it is possible, but unlikely, that the WiFi Password for your network is blank.
+Both are required, Though it is possible, but unlikely, that the WiFi Password for your network is blank.  If so, leave the field blank.
 
-   *Wifi SSID* is the name of your home network.
+*Wifi SSID* is the name of your home network.
 
-   *WiFi Password* is the password for your home network.
+*WiFi Password* is the password for your home network.
 
 To proceed, click the :guilabel:`Compile and Load` button.
 
@@ -302,6 +343,8 @@ To proceed, click the :guilabel:`Compile and Load` button.
    :alt: EX-Installer - Load
    :scale: 40%
    :align: left
+
+   EX-Installer - Compile and Load Screen
 
 To proceed, click the :guilabel:`Load` button.
 
@@ -318,11 +361,16 @@ If there are no errors, you can proceed to testing your setup.
 3b. For Windows x32, Apple MacOS or Linux computers
 ===================================================
 
+.. warning::
+
+   The instructions below refer to the original installer.  This is no longer recommended for use on Microsoft Windows x64 computers.
+
+   Use the instructions above instead for Microsoft Windows x64 computers.
+
 The EX-Installer Window
 -----------------------
 
 .. warning:: **Wait!**
-   :class: warning-float-right-narrow
    
    The |EX-I| takes a little while to load everything it needs, so wait till you have seen about a dozen lines of text appear in the right pane before you try to select anything in the drop down menus.
 
@@ -330,7 +378,7 @@ The EX-Installer Window
    :alt: EX-Installer
    :scale: 75%
 
-   Installer Window
+   Original EX-Installer - Installer Window
 
 There will be a lot of information appearing in the log window, which can help us debug things if anything goes wrong. The installer needs to connect online to download the latest packages to support your hardware. It will take a few seconds to complete; this is normal. If you have a very slow internet connection it will take longer.
 
@@ -343,14 +391,14 @@ In the left side options pane, use the dropdown selector boxes to choose the fol
    :alt: Options Pane
    :scale: 75%
 
-   Options Pane
+   Original EX-Installer - Options Pane
 
 .. sidebar:: Refresh Ports Button
    
    The :guilabel:`Refresh Ports` button allows you to refresh the serial ports in case you didn't have the Arduino connected when you opened the program. When you plug in a new board, refresh the ports so it can find your device.
 
-1. Select your **Command Station (Base Station) Type** |BR| If you are |conductor-text| following our recommended instructions, choose ``Command Station EX`` |br| |br|
-2. Select your **Arduino Board Type** |BR| If you are |conductor-text| following our recommended instructions, choose ``Mega`` |br| |br|
+1. Select your **Command Station (Base Station) Type** |BR| If you are |conductor-text| following our recommended instructions, choose ``Command Station EX`` |BR| |BR|
+2. Select your **Arduino Board Type** |BR| If you are |conductor-text| following our recommended instructions, choose ``Mega`` |BR| |BR|
 3. Select your **Motor Shield** |BR| If you are |conductor-text| following our recommended instructions, choose ``Arduino Motor Shield`` |br| |br|
 4. Select your **COM Port** |BR| The installer will usually find it for you but check against the COM port your took not of earlier |br| |br|
 5. If you have installed an optional a **WiFi Shield** you MUST check the **WiFi box** |br| If you are a |conductor-text| following our recommended instructions, check this box regardless (see below) |br| |br|
@@ -394,7 +442,7 @@ Check the ``WiFi`` box.  That's it, there is nothing more to do here.
       :alt: WiFi Options
       :scale: 90%
 
-      Wifi Options
+      Original EX-Installer - Wifi Options
 
 Even if you didn't install a WiFi shield, we recommend that this box be checked. If left checked and later you add a WiFi Shield, you won't have to upload the sketch again. The WiFi check only takes a few seconds, after which it will report no WiFi was found and start the Command Station.  (If you aren't using WiFi and want to save a few seconds of boot time, you can uncheck the box.)
 

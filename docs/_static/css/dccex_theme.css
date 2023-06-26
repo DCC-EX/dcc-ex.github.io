@@ -86,6 +86,14 @@ h6, .h6 {
   background-color: #E0E0E0;
 }
 
+.caption-number {
+  font-size: small !important;
+}
+
+.caption-text {
+  font-size: small !important;
+}
+
 .rst-content code {
   font-size: 90% !important;
 }

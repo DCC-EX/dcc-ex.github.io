@@ -17,6 +17,13 @@ Using the Installer (Windows x32, MacOS or Linux)
 
    Use the :doc:`new EX-Installer <installing>` instead for Microsoft Windows x64 computers.
 
+.. warning:: 
+
+  Please be advised that our installer currently does not work reliably on Linux or macOS which is a known issue.
+
+  For Linux users we recommend using the Arduino IDE. You can find instructions on the :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page.
+
+  We hope to have a new version available soon.
 
 .. sidebar::
 

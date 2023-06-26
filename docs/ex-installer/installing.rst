@@ -11,13 +11,9 @@ Using the Installer (Windows x64)
 
 |tinkerer| |engineer| |githublink-ex-installer-button2|
 
-.. warning:: 
+.. warning::
 
-  Please be advised that our installer currently does not work reliably on Linux or macOS which is a known issue.
-
-  For Linux users we recommend using the Arduino IDE. You can find instructions on the :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page.
-
-  We hope to have a new version available soon.
+   The instructions on this page refer to the *new* |EX-I|.  This is currently only supported on Microsoft x64 Windows Computers. |BR| If you have a Microsoft Windows x32, Apple MacOS or Linux based computer use the :doc:`original Installer </ex-installer/installing-original-installer>` instead.
 
 .. sidebar::
 

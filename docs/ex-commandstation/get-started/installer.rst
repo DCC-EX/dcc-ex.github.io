@@ -83,8 +83,8 @@ Requirements (for installing)
 
   * Open the Windows *File Manager*
   * Find the folder in which the **EX-Installer-Win64.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
-  * **Run** ``EX-Installer-Win64.exe`` |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern. |BR| |BR|
-  * You will be presented with the following screens...
+  * **Run** ``EX-Installer-Win64.exe`` |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern.
+  * You will be presented with the following screens... |BR| |BR|
 
 * for **Microsoft Windows x32**:
 

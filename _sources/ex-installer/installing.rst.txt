@@ -65,6 +65,7 @@ Requirements (for installing)
     * Open a command terminal and run the command ``ls /dev/tty.usbmodem*``
     * The device will have a name such as ``/dev/tty.usbmodem12033``
     * if there are more than one devices listed, unplug |EX-CS|, re-run the command to note the device that remains, then plug |EX-CS| back in again to obtain the correct device name
+    * For Linux you *will* need add yourself to the dialout group to gain permissions access to the serial devices. The easiest way is to run the command ``sudo adduser yourusername dialout`` with your Linux username inserted
 
 2. Download and Run EX-Installer 
 ================================

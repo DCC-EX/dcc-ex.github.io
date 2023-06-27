@@ -625,6 +625,7 @@
 <li><p>Open a command terminal and run the command <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">/dev/tty.usbmodem*</span></code></p></li>
 <li><p>The device will have a name such as <code class="docutils literal notranslate"><span class="pre">/dev/tty.usbmodem12033</span></code></p></li>
 <li><p>if there are more than one devices listed, unplug <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, re-run the command to note the device that remains, then plug <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> back in again to obtain the correct device name</p></li>
+<li><p>For Linux you <em>will</em> need add yourself to the dialout group to gain permissions access to the serial devices. The easiest way is to run the command <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">adduser</span> <span class="pre">yourusername</span> <span class="pre">dialout</span></code> with your Linux username inserted</p></li>
 </ul>
 </li>
 </ul>

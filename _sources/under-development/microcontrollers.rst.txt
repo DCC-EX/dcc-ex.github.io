@@ -254,25 +254,25 @@ NB: once you do this it will mean you need both the EX-MotorShield8874 barrel ja
 Serial for WiFi, for F411RE and F446RE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The default serial port used for console communications for the F411RE and F446RE is Serial2, which has open solder pads to the Arduino Rx/Tx pins of D0/D1. Therefore there is no serial port connected to Arduino pins D0/D1 by default, and in any case we cannot use Serial2 for WiFi. As D0/D1 are completely unconnected, they do not interfere with any jumpers you install on a WiFi shield per the instructions below.
+To connect an ESP8266 via either a WiFi shield or ESP01 module, you may use any of the available serial ports, which appear on different Morpho pins for the F411RE and F446RE.
 
-To connect an ESP8266 via either a WiFi shield or ESP01 module, you must use Serial1, which appears on different Morpho pins for the F411RE and F446RE.
+The |EX-CS| source code currently maps the first additional serial port pins to:
 
-The |DCC-EX| source code currently maps the Serial1 port pins to:
+- F411RE: Rx/PA15 on CN7 pin 17, Tx/PB7 on CN7 pin 21 - known as Serial1
+- F446RE: Rx/PC11 on CN7 pin 2, Tx/PC10 on CN7 pin 1 - known as Serial3
 
-- F411RE: Rx CN7 PA15 pin 17, Tx CN7 PB7 pin 21
-- F446RE: Rx CN7 PC11 pin 2, Tx CN7 PC10 pin 1
+Also defined in |EX-CS| is an additional serial port which appears on the following pins:
 
-Also defined in |DCC-EX| is an additional serial port, Serial3 which appears on the following pins:
+- F411RE Rx CN10 PA12 pin 12, Tx CN10 PA11 pin 13 - known as Serial6
+- F446RE Rx CN7 PD2 pin 4, Tx CN7 PC12 pin 3 - known as Serial5
 
-- F411RE Rx CN10 PA12 pin 12, Tx CN10 PA11 pin 13
-- F446RE Rx CN7 PD2 pin 4, Tx CN7 PC12 pin 3
-
-You will need to connect the Serial1 Rx pin on your NUCLEO to the Tx pin of your WiFi device, and the Tx pin of the NUCLEO to the Rx pin of the WiFi device. Below are pics of the positions of each:
+You will need to select a serial port to use, and connect the Rx pin on your NUCLEO to the Tx pin of your WiFi device, and the Tx pin of the NUCLEO to the Rx pin of the WiFi device. We recommend using Serial1 for the F411RE and Serial3 for F446RE. Below are pics of the positions of all available mapped serial ports:
 
 .. image:: /_static/images/nucleo/nucleo-f411re-f446re-wifi-serial1.png
   :alt: NUCLEO F411RE/F446RE Serial1 Rx/Tx Connections
   :scale: 50%
+
+NB: The default serial port used for console communications for the F411RE and F446RE is Serial2, which is not connected to the Arduino Rx/Tx pins of D0/D1. Because the D0/D1 pads on the F411RE and F446RE are completely unconnected, you can happily jumper your chosen WiFi serial port pins above to D0/D1 with dupont connectors or permanently soldered wires.
 
 Espressif ESP32 series
 ======================
@@ -366,7 +366,7 @@ Using an Arduino Motor Shield R3 or clone
 To avoid damaging the ESP32's analog inputs, the `IOREF` pin on must be bent outwards or cut so it will not go into the ESPDUINO-32 socket. Then use a jumper from the `3.3v` pin to `IOREF` on the motor shield itself.
 
 For DCC current sensing bend or cut the `A0` and `A1` pins because by default they are connected to `GPIO2` and `GPIO4` on the ESP32 which are not useable at the same time as WiFi.
-Instead, on the top of the Motor Shield connect `A0` to `A2` and `A1` to `A3` via jumpers then change the MotorShield definition to suit in MotorDrivers.h.
+Instead, on the top of the Motor Shield connect `A0` to `A2` and `A1` to `A3` via jumpers. This will then automatically work when you select STANDARD_MOTOR_SHIELD as the MotorShield in config.h because the definition is in place when ESP32 is selected as the build target.
 
 .. image:: /_static/images/esp32/espduino-32-motor-shield-fritzing.png
   :alt: MotorShield configuration for ESP32
@@ -377,7 +377,7 @@ Using a |DCC-EX| EX-MotorShield8874
 
 To avoid damaging the ESP32's analog inputs, alter the IOREF jumper on the bottom of the EX-MotorShield8874 to take power from the 3v3 supply instead of IOREF as described in `Power Configuration PCB Jumpers <https://github.com/DCC-EX/EX-Hardware/tree/main/EX-Motorshield8874#power-configuration-pcb-jumpers>`_.
 
-For DCC current sensing with the EX-MotorShield8874, use the alternate pin assignment jumpers for current sense to switch sensing to A2/A3 as described in `Alternate Pin Assignment PCB Jumpers <https://github.com/DCC-EX/EX-Hardware/tree/main/EX-Motorshield8874#aternate-pin-assignment-pcb-jumpers>`_.
+For DCC current sensing with the EX-MotorShield8874, use the alternate pin assignment jumpers for current sense to switch sensing to A2/A3 as described in `Alternate Pin Assignment PCB Jumpers <https://github.com/DCC-EX/EX-Hardware/tree/main/EX-Motorshield8874#aternate-pin-assignment-pcb-jumpers>`_. Once this is done, simply select EX8874 in config.h as your MotorShield.
 
 Finally, the ESP32 needs more testing and development of a |DCC-EX| |I2C| non-blocking native driver implementation in particular. |I2C| peripheral performance will be limited until such time.
 

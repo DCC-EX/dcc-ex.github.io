@@ -13,8 +13,8 @@
   :scale: 40%
   :class: image-product-logo-float-right
 
-DCC++ VS DCC-EX? [Oct 2020]
-===========================
+DCC++ VS DCC-EX?
+================
 
 Everything you loved is still there...
 

@@ -13,10 +13,10 @@
   :scale: 40%
   :class: image-product-logo-float-right
 
-DCC-EX Releases 5A EX-MotorShield8874
-=====================================
+DCC-EX Releases 5amp EX-MotorShield8874
+=======================================
 
-DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the first of our open source hardware products: the EX-MotorShield8874 providing dual 5 amp DCC and DC PWM (pulse width modulation) output for DCC-EX Command Stations.
+DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the first of our open source hardware products: the EX-MotorShield8874, providing dual 5 amp DCC and DC PWM (pulse width modulation) output for DCC-EX Command Stations.
 
 The EX-MotorShield8874 addresses the needs of DCC-EX users wanting to run multiple locos, across multiple power districts without requiring expensive DCC boosters. A DCC-EX Command Station can now outperform commercial DCC command stations which typically have single 3-3.5A or 5A output capabilities, and doing so at a fraction of the cost and with more advanced features.
 

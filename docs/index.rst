@@ -51,16 +51,14 @@ DCC-EX Model Railroading
     :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
     :img-top: /_static/images/logos/product-logo-news-cropped.png 
     
-    .. postlist:: 3
+    .. postlist:: 2
       :format: {date} - {title}
       :date: %d %b %Y
       :list-style: none
       :excerpts:
       :expand: Continue reading...
 
-    Read the full DCC-EX News feed `here <news.html>`_.
-
-    Subscribe to the DCC-EX News RSS/Atom feed using "https://dcc-ex.com/news/atom.xml".
+    Read the full DCC-EX News feed `here <news.html>`_. |BR| Subscribe to the DCC-EX News RSS/Atom feed using :dcc-ex-text-size-80pct:`"https://dcc-ex.com/news/atom.xml"`.
 
   .. grid-item-card:: 
     :columns: 12

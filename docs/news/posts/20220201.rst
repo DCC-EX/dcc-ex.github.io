@@ -1,13 +1,22 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-|EX-AN-LOGO|
 
-****************************************
-EX-CommandStation 4.0 Release [Feb 2022]
-****************************************
+:blogpost: true
+:date: 1st Feb, 2022
+:author: Fred Decker
+:category: News, Release
+:tags: ex-commandstation
+:image: 0
 
-Announcing version 4.0 of its EX-CommandStation software with EX-RAIL automation and accessory control
-======================================================================================================
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+EX-CommandStation 4.0 Release
+=============================
+
+Announcing version 4.0 of its EX-CommandStation software with EX-RAIL automation and accessory control.
 
 *Operators can now have a fully automated model railroad or a separate accessory control bus for their entire layout and read CVs up to 8 times faster*
 

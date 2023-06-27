@@ -2,23 +2,16 @@
 .. include:: /include/include-l1.rst
 |donate-button|
 
-***************************
-About, Press & Contributing
-***************************
+************************
+About Us and the Project
+************************
 
-Find out about who we are and what's different and new in |DCC-EX| as well as a little history of how this all came about.
+Find out about who we are as well as a little history of how this all came about.
 
 .. toctree::
     :maxdepth: 1
 
-    about
-    press/index
-
-.. toctree::
-    :maxdepth: 2
-
-    contributing/donate
-    contributing/index
+    Meet the Team <about>
 
 .. toctree::
     :maxdepth: 1

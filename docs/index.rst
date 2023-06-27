@@ -131,6 +131,12 @@ DCC-EX Model Railroading
    :maxdepth: 4
    :caption: The DCC-EX Project
 
-   media-resources/index
+   About Us and the Project<about/index>
+   about/index-contributing
+
+.. toctree::
+   :hidden:
+   :maxdepth: 4
+   :caption: Merchandise & News
+
    merchandise/index
-   about/index

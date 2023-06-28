@@ -51,7 +51,20 @@ Requirements (for installing)
    
    **Antivirus Software** |BR| You *may* need to turn off your antivirus software before you try to install. |BR| Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
 
- **Connect** your |EX-CS| **hardware** to your computer via USB.
+* **Connect** your |EX-CS| to your computer
+* Determine which COM Port the |EX-CS| is plugged into 
+
+  * for Microsoft Windows:
+
+    * open (run) the 'Device Manager' app and look at the 'Ports (COM & LPT)' as you plug or unplug the |EX-CS|
+    * take note of the COM number (in brackets after the name of the device)
+
+  * for Mac OS or Linux:
+  
+    * Open a command terminal and run the command ``ls /dev/tty.usbmodem*``
+    * The device will have a name such as ``/dev/tty.usbmodem12033``
+    * if there are more than one devices listed, unplug |EX-CS|, re-run the command to note the device that remains, then plug |EX-CS| back in again to obtain the correct device name
+    * For Linux you *will* need add yourself to the dialout group to gain permissions access to the serial devices. The easiest way is to run the command ``sudo adduser yourusername dialout`` with your Linux username inserted
 
 2. Download and Run EX-Installer 
 ================================

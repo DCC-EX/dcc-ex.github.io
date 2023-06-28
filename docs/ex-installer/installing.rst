@@ -66,8 +66,6 @@ Requirements (for installing)
     * if there are more than one devices listed, unplug |EX-CS|, re-run the command to note the device that remains, then plug |EX-CS| back in again to obtain the correct device name
     * For Linux you *will* need add yourself to the dialout group to gain permissions access to the serial devices. The easiest way is to run the command ``sudo adduser yourusername dialout`` with your Linux username inserted
 
- **Connect** your |EX-CS| **hardware** to your computer via USB.
-
 2. Download and Run EX-Installer 
 ================================
 

@@ -37,24 +37,20 @@ Requirements (for installing)
   * optionally, a **WiFi shield** or ethernet shield
   * optionally, an **LCD or oLED display**
   
-* a **USB cable** to connect your computer to the Microcontroller
-
-.. sidebar:: **USB Cable**
-   
-   Make sure your USB Cable is connected from your computer to the |EX-CS|. Make sure no other programs (like the Arduino IDE) are using the same USB port.
+* a **USB cable** to connect your computer to the Microcontroller   
 
 1. Getting Ready 
 ================
 
-.. warning::
-   :class: warning-float-right
-   
-   **Antivirus Software** |BR| You *may* need to turn off your antivirus software before you try to install. |BR| Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
-
- **Connect** your |EX-CS| **hardware** to your computer via USB.
+**Connect** your |EX-CS| **hardware** to your computer via USB. |BR| Make sure your USB Cable is connected from your computer to the EX-CommandStation. Make sure no other programs (like the Arduino IDE) are using the same USB port.
 
 2. Download and Run EX-Installer 
 ================================
+
+.. warning:: 
+   :class: warning-float-right
+  
+   **Antivirus Software** |BR| You *may* need to turn off your antivirus software before you try to install. |BR| Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
 
 * Download the **new** :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app.
 * For Microsoft Windows x64:
@@ -140,10 +136,7 @@ If you see **No devices found** to means that you either a) have not connected t
 
 If you have not connected the device, connect it now then click the :guilabel:`Scan for Devices` button again.
 
-If the device *is* connected but not found, you may need to install the devices drivers for it.
-
-.. todo::  If the device is not recognised.
-
+If the device *is* connected but not found refer to the :doc:`/support/ex-cs-diagnose` page for assistance.
 
 **Multiple Devices Found**
 
@@ -191,6 +184,8 @@ e. Product Specific screens
 ---------------------------
 
 Currently only the installation of the |EX-CS| is supported.
+
+----
 
 EX-CommandStation
 ^^^^^^^^^^^^^^^^^
@@ -313,41 +308,41 @@ You can configure the WiFi for **EX-CommandStation** two ways:
 
 **Use my EX-CommandStation as an Access Point**
 
-.. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_access_point.png
-   :alt: EX-Installer - EX-CommandStation - Configure WiFi - Access Point
-   :scale: 50%
-   :align: center
+   .. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_access_point.png
+      :alt: EX-Installer - EX-CommandStation - Configure WiFi - Access Point
+      :scale: 50%
+      :align: center
 
-   EX-Installer - Configure WiFi - Access Point
+      EX-Installer - Configure WiFi - Access Point
 
-If ``Use my EX-CommandStation as an Access Point`` is selected, two additional options are presented:
+   If ``Use my EX-CommandStation as an Access Point`` is selected, two additional options are presented:
 
-* WiFi Password
-* WiFi Channel
+   * WiFi Password
+   * WiFi Channel
 
-*WiFi Password* is optional. |BR| If this field is left blank the password will default to "PASS_xxxxx" where 'xxxxx' will be the same as the SSID *name* that will be automatically configured.
+   **WiFi Password** is optional. |BR| If this field is left blank the password will default to 'PASS_xxxxx' where 'xxxxx' will be the same as the SSID *name* that will be automatically configured.
 
-*WiFi Channel* can be any value from 1-11. |BR| If possible choose a channel that is unused (or least used) by other WiFi networks around your location.
+   **WiFi Channel** can be any value from 1-11. |BR| If possible choose a channel that is unused (or least used) by other WiFi networks around your location.
 
 **Connect my EX-CommandStation to my existing wireless network** 
 
-.. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_station.png
-   :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
-   :scale: 60%
-   :align: center
+   .. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_station.png
+      :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
+      :scale: 60%
+      :align: center
 
-   EX-Installer - Configure Wifi - Station Mode
+      EX-Installer - Configure Wifi - Station Mode
 
-If ``Connect my EX-CommandStation to my existing wireless network`` is selected, two additional options are presented:
+   If ``Connect my EX-CommandStation to my existing wireless network`` is selected, two additional options are presented:
 
-* Wifi SSID
-* WiFi Password
+   * Wifi SSID
+   * WiFi Password
 
-Both are required, Though it is possible, but unlikely, that the WiFi Password for your network is blank. If so, leave the field blank.
+   Both are required, though it is possible, but unlikely, that the WiFi Password for your network is blank. If so, leave the field blank.
 
-*Wifi SSID* is the name of your home network.
+   *Wifi SSID* is the name of your home network.
 
-*WiFi Password* is the password for your home network.
+   *WiFi Password* is the password for your home network.
 
 **I have Ethernet**   
 
@@ -394,6 +389,11 @@ If you have selected *Advanced Config*, to proceed, click the :guilabel:`Advance
 iii) 'Advanced Configuration' screen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. warning:: 
+   :class: warning-float-right
+   
+   EX-Installer creates then maintains a folder (<home>\ex-installer) to hold the information it needs.  Because it manages the the content, anything a user manually does in that folder may be overwritten or deleted at any time.
+
 .. figure:: /_static/images/ex-installer/ex_cs_advanced_config.png
    :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
    :scale: 40%
@@ -403,7 +403,7 @@ iii) 'Advanced Configuration' screen
 
 Only if you have selected ``Advanced Config`` on the previous screen will you be presented with this screen. 
 
-On this screen you can edit the two main configuration files.
+On this screen you can edit the main configuration files.
 
 To proceed, click the :guilabel:`Compile and Load` button. See *iv* below.
 

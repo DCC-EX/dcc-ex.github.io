@@ -511,6 +511,13 @@ img.sd-card-img-top {
   margin-right: auto !important;
 }
 
+/* code */
+.rst-content code.literal, .rst-content tt.literal {
+  color: #ba2121 !important;
+}
+
+/* general purpose */
+
 .dcc-ex-red {
   color:red;
 }

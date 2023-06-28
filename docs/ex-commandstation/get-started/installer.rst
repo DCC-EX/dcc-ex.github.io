@@ -168,9 +168,8 @@ After you have clicked on the :guilabel:`Scan for Devices` button, if you see **
 
 If you have not connected the device, connect it now then click the :guilabel:`Scan for Devices` button again.
 
-If the device *is* connected but not found, you may need to install the devices drivers for it.
+If the device *is* connected but not found refer to the :doc:`/support/ex-cs-diagnose` page for assistance.
 
-.. todo::  If the device is not recognised.
 
 **Multiple Devices Found**
 
@@ -298,41 +297,41 @@ You can configure the WiFi for EX-CommandStation two ways:
 
 **Use my EX-CommandStation as an Access Point**
 
-.. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_access_point.png
-   :alt: EX-Installer - EX-CommandStation - Configure WiFi Access Point
-   :scale: 50%
-   :align: center
+   .. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_access_point.png
+      :alt: EX-Installer - EX-CommandStation - Configure WiFi Access Point
+      :scale: 50%
+      :align: center
 
-   EX-Installer - Configure WiFi - Access Point
+      EX-Installer - Configure WiFi - Access Point
 
-If ``Use my EX-CommandStation as an Access Point`` is selected, two additional options are presented:
+   If ``Use my EX-CommandStation as an Access Point`` is selected, two additional options are presented:
 
-* WiFi Password
-* WiFi Channel
+   * WiFi Password
+   * WiFi Channel
 
-*WiFi Password* is optional.  |BR| **We recommend you leave this field blank.** |BR| If this field is left blank the password will default to "PASS_xxxxx" where 'xxxxx' will be the same as the SSID *name* that will be automatically configured.
+   **WiFi Password** is optional.  |BR| **We recommend you leave this field blank.** |BR| If this field is left blank the password will default to "PASS_xxxxx" where 'xxxxx' will be the same as the SSID *name* that will be automatically configured.
 
-*WiFi Channel* can be any value from 1-11. |BR| If possible choose a channel that is unused (or least used) by other WiFi networks around your location.
+   **WiFi Channel** can be any value from 1-11. |BR| If possible choose a channel that is unused (or least used) by other WiFi networks around your location.
 
 **Connect my EX-CommandStation to my existing wireless network** 
 
-.. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_station.png
-   :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
-   :scale: 60%
-   :align: center
+   .. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_station.png
+      :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
+      :scale: 60%
+      :align: center
 
-   EX-Installer - Configure Wifi - Station Mode
+      EX-Installer - Configure Wifi - Station Mode
 
-If ``Connect my EX-CommandStation to my existing wireless network`` is selected, two additional options are presented:
+   If ``Connect my EX-CommandStation to my existing wireless network`` is selected, two additional options are presented:
 
-* Wifi SSID
-* WiFi Password
+   * Wifi SSID
+   * WiFi Password
 
-Both are required, Though it is possible, but unlikely, that the WiFi Password for your network is blank.  If so, leave the field blank.
+   Both are required, Though it is possible, but unlikely, that the WiFi Password for your network is blank.  If so, leave the field blank.
 
-*Wifi SSID* is the name of your home network.
+   *Wifi SSID* is the name of your home network.
 
-*WiFi Password* is the password for your home network.
+   *WiFi Password* is the password for your home network.
 
 To proceed, click the :guilabel:`Compile and Load` button.
 

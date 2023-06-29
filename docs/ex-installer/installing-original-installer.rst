@@ -13,7 +13,7 @@ Using the Installer (Windows x32, MacOS or Linux)
 
 .. warning::
 
-   The instructions on this page refer to the original installer.  This is no longer recommended for use on Microsoft Windows x64 computers.
+   The instructions on this page refer to the *original* installer.  This is no longer recommended for use on Microsoft Windows x64 computers.
 
    Use the :doc:`new EX-Installer <installing>` instead for Microsoft Windows x64 computers.
 

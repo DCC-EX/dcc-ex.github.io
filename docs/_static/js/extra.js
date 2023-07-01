@@ -1,6 +1,47 @@
 /*
   This script is tied to the command station download page and automatically modifies the download
-  link in order to supply the user with the correct download for their Operating System. To do this,
+  link in order to supply the user with the correct download of the new installer for their Operating System and append the apprppriate text to the end of this URL.
+  
+   https://github.com/DCC-EX/EX-Installer/raw/main/dist/EX-Installer-
+
+*/
+function getNewLink() {
+	needed = "not supported";
+	switch (platform.os.family) {
+		case "Windows":
+			if (platform.os.architecture == 32) {
+				needed = "Win32.exe";
+			} else if (platform.os.architecture == 64) {
+				needed = "Win64.exe";
+			}
+			break;
+		case "Red Hat":
+		case "CentOS":
+		case "Ubuntu":
+		case "Debian":
+		case "Fedora":
+		case "Linux":
+			if (platform.os.architecture == 64) {
+				needed = "Linux64";
+			}
+			break;
+		case "OS X":
+			if (platform.os.architecture == 64) {
+				needed = "macOS";
+			}
+	}
+	if (needed === "not supported") {
+		alert("OS Version not supported at this time");
+		return;
+	} else {
+		window.open("https://github.com/DCC-EX/EX-Installer/raw/main/dist/EX-Installer-"+needed, "_blank");
+	}
+}
+
+
+/*
+  This script is tied to the command station download page and automatically modifies the download
+  link in order to supply the user with the correct download of the original installer for their Operating System. To do this,
   it goes to the JSON version of the GitHub API here: 
   
    https://api.github.com/repos/DCC-EX/exInstaller/releases

@@ -5,15 +5,11 @@
 .. include:: /include/include-l1.rst
 |EX-I-LOGO|
 
-*********************************
-Using the Installer (Windows x64) 
-*********************************
+*******************
+Using the Installer 
+*******************
 
 |tinkerer| |engineer| |githublink-ex-installer-button2|
-
-.. warning::
-
-   The instructions on this page refer to the *new* |EX-I|.  This is currently only supported on Microsoft x64 Windows Computers. |BR| If you have a Microsoft Windows x32, Apple MacOS or Linux based computer use the :doc:`original Installer </ex-installer/installing-original-installer>` instead.
 
 .. sidebar::
 
@@ -24,7 +20,7 @@ Using the Installer (Windows x64)
 Requirements (for installing)
 ==============================
 
-* a Microsoft Windows x64  **computer**
+* a Microsoft Windows, Apple MacOS or Linux based **computer**
 * |EX-CS| **hardware**, comprising of:
 
   * an **Arduino microprocessor**, based on any of:
@@ -53,11 +49,16 @@ Requirements (for installing)
    **Antivirus Software** |BR| You *may* need to turn off your antivirus software before you try to install. |BR| Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
 
 * Download the **new** :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app.
-* For Microsoft Windows x64:
+* For Microsoft Windows:
   
   * Open the Windows *File Manager*
   * Find the folder in which the **EX-Installer-Win64.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
-  * **Run** ``EX-Installer-Win64.exe`` |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern.
+  * **Run** ``EX-Installer-Win64.exe`` |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern. |BR| |BR|
+
+* For Mac OS or Linux:
+
+  * Open a terminal window and navigate to that folder
+  * **Run the installer with** the following command: ``./exInstaller`` |BR| |BR|
 
 * You will be presented with the following screen...
 

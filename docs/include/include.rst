@@ -248,7 +248,7 @@
 ..
 .. |githublink-ex-installer-button| raw:: html
 
-  <a href="https://github.com/DCC-EX/exInstaller/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 50%; height: 50%;" /></a>
+  <a href="https://github.com/DCC-EX/EX-Installer/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 50%; height: 50%;" /></a>
 ..
 .. |githublink-ex-commandstation-button| raw:: html
 

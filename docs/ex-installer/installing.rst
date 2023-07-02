@@ -57,7 +57,7 @@ Download and Run EX-Installer
 
 * For **Apple macOS**:
 
-  * Open a terminal window and navigate to that folder
+  * :dcc-ex-red:`The instructions here are incomplete.  This will be updated shortly.` Open a terminal window and navigate to that folder
   * **Run the installer with** the following command: ``./EX-Installer-macOS`` |BR| |BR|
 
 * For **Linux**:

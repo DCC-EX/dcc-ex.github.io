@@ -108,7 +108,7 @@ If have previously installed the CLI you will see a :guilabel:`Refresh Arduino C
 .. note::
    :class: note-float-right
 
-   Enabling additional platforms is likely to add several minutes to the installation process. Maybe grab a cup of tea or a coffee!
+   Enabling additional platforms will take more space on your hard drive and is likely to add several minutes to the installation process. Maybe grab a cup of tea or a coffee!
 
 If you are using an Espressif or STMicroelectronics device, as opposed to the more common Uno or Mega based Arduinos, you will need to enable support for these by selecting the appropriate additional platform option.
 

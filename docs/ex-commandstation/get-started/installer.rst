@@ -70,8 +70,8 @@ You will be presented with the following screen...
 
 ----
 
-3a. For Microsoft Windows x64 computers
-=======================================
+3. Installer Screens
+====================
 
 The 'EX-Installer Welcome' screen
 ---------------------------------

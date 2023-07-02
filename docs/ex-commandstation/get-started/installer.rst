@@ -59,12 +59,18 @@ Requirements (for installing)
 
   * Open the Windows *File Manager*
   * Find the folder in which the **EX-Installer-Win64.exe** or **EX-Installer-Win32.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
-  * **Run** ``EX-Installer-Win64.exe`` |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern. |BR| |BR|
+  * **Run** ``EX-Installer-Win64.exe`` or **EX-Installer-Win32.exe** or **EX-Installer-Win32.exe** |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern. |BR| |BR|
 
-* For **Mac OS or Linux**:
+* For **Apple macOS**:
 
-  * Open a terminal window and navigate to that folder.
-  * **Run the installer with** the following command: ``./exInstaller`` |BR| |BR|
+  * Open a terminal window and navigate to that folder
+  * **Run the installer with** the following command: ``./EX-Installer-macOS`` |BR| |BR|
+
+* For **Linux**:
+
+  * Open a terminal window and navigate to that folder
+  * **Run the installer with** the following command: ``./EX-Installer-Linux64`` |BR| |BR|
+
 
 You will be presented with the following screen...
 

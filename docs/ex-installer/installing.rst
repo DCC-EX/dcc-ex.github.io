@@ -49,16 +49,21 @@ Download and Run EX-Installer
    **Antivirus Software** |BR| You *may* need to turn off your antivirus software before you try to install. |BR| Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
 
 * Download the **new** :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app. |BR| |BR|
-* For Microsoft Windows:
+* For **Microsoft Windows**:
   
   * Open the Windows *File Manager*
   * Find the folder in which the **EX-Installer-Win64.exe** or **EX-Installer-Win32.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
-  * **Run** ``EX-Installer-Win64.exe`` |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern. 
+  * **Run** ``EX-Installer-Win64.exe`` (or **EX-Installer-Win32.exe**) |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern. 
 
-* For Apple macOS or Linux:
+* For **Apple macOS**:
 
   * Open a terminal window and navigate to that folder
-  * **Run the installer with** the following command: ``./exInstaller`` |BR| |BR|
+  * **Run the installer with** the following command: ``./EX-Installer-macOS`` |BR| |BR|
+
+* For **Linux**:
+
+  * Open a terminal window and navigate to that folder
+  * **Run the installer with** the following command: ``./EX-Installer-Linux64`` |BR| |BR|
 
 You will be presented with the following screen...
 
@@ -181,18 +186,14 @@ Click on the |EX-CS| logo to proceed.
 
 |force-break|
 
-e. Product Specific screens
----------------------------
+e. Product Specific screens - EX-CommandStation
+-----------------------------------------------
 
 Currently only the installation of the |EX-CS| is supported.
 
-----
-
-EX-CommandStation
-^^^^^^^^^^^^^^^^^
 
 i) 'Select EX-CommandStation Version' screen
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: /_static/images/ex-installer/select_cs_version.png
    :alt: EX-Installer - Select EX-CommandStation version
@@ -234,7 +235,7 @@ If you have selected ``Use my existing configuration files``, to proceed, click 
 |force-break|
 
 ii) 'Install EX-CommandStation' - Configuration screen
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure.png
    :alt: EX-Installer - EX-CommandStation Configuration
@@ -257,7 +258,7 @@ On this screen you can select some of the flexible and optional features of the 
 |force-break|
 
 Motor Driver
-''''''''''''
+~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_motor_shield.png
    :alt: EX-Installer - EX-CommandStation - Configure Motor Driver
@@ -282,7 +283,7 @@ The options include:
 * NANOEVERY_EXAMPLE
 
 Optional Display
-''''''''''''''''
+~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_screen.png
    :alt: EX-Installer - EX-CommandStation - Configure Display Driver
@@ -355,14 +356,14 @@ You can configure the WiFi for **EX-CommandStation** two ways:
    *WiFi Password* is the password for your home network.
 
 I have Ethernet
-''''''''''''''''
+~~~~~~~~~~~~~~~
 
 If you have installed and Ethernet board, select this option.
 
 Note that it is not possible to have both WiFi and Ethernet enabled at the same time.
 
 Set track modes
-'''''''''''''''
+~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_set_track_mode_options.png
    :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
@@ -382,7 +383,7 @@ The tracks (channels) on your motor driver can be configured in a variety of dif
 By default track (channel) **A** will default to ``MAIN`` and Track (channel) **B** to ``PROG``.
 
 Advanced Config
-'''''''''''''''
+~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_advanced_config.png
    :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
@@ -400,7 +401,7 @@ If you have selected *Advanced Config*, to proceed, click the :guilabel:`Advance
 |force-break|
 
 iii) 'Advanced Configuration' screen
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. warning:: 
    :class: warning-float-right
@@ -423,7 +424,7 @@ To proceed, click the :guilabel:`Compile and Load` button. See *iv* below.
 |force-break|
 
 iv) 'Compile and Load' screen
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: /_static/images/ex-installer/ex_cs_load.png
    :alt: EX-Installer - Load

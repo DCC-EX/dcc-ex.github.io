@@ -35,27 +35,27 @@ Requirements (for installing)
   
 * a **USB cable** to connect your computer to the Microcontroller   
 
-1. Getting Ready 
-================
+Getting Ready 
+=============
 
 **Connect** your |EX-CS| **hardware** to your computer via USB. |BR| Make sure your USB Cable is connected from your computer to the EX-CommandStation. Make sure no other programs (like the Arduino IDE) are using the same USB port.
 
-2. Download and Run EX-Installer 
-================================
+Download and Run EX-Installer 
+=============================
 
 .. warning:: 
    :class: warning-float-right
   
    **Antivirus Software** |BR| You *may* need to turn off your antivirus software before you try to install. |BR| Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
 
-* Download the **new** :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app.
+* Download the **new** :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app. |BR| |BR|
 * For Microsoft Windows:
   
   * Open the Windows *File Manager*
-  * Find the folder in which the **EX-Installer-Win64.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
-  * **Run** ``EX-Installer-Win64.exe`` |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern. |BR| |BR|
+  * Find the folder in which the **EX-Installer-Win64.exe** or **EX-Installer-Win32.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
+  * **Run** ``EX-Installer-Win64.exe`` |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern. 
 
-* For Mac OS or Linux:
+* For Apple macOS or Linux:
 
   * Open a terminal window and navigate to that folder
   * **Run the installer with** the following command: ``./exInstaller`` |BR| |BR|
@@ -256,7 +256,8 @@ On this screen you can select some of the flexible and optional features of the 
 
 |force-break|
 
-**Motor Driver**
+Motor Driver
+''''''''''''
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_motor_shield.png
    :alt: EX-Installer - EX-CommandStation - Configure Motor Driver
@@ -280,7 +281,8 @@ The options include:
 * ORION_UNO_INTEGRATED_SHIELD
 * NANOEVERY_EXAMPLE
 
-**Optional Display**
+Optional Display
+''''''''''''''''
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_screen.png
    :alt: EX-Installer - EX-CommandStation - Configure Display Driver
@@ -298,7 +300,8 @@ The options include:
 * OLED 128 x 32
 * OLED 128 x 64
 
-**WiFi**
+WiFi
+''''
 
 If you have installed and optional WiFi board, or are using a microcontroller board with integrated WiFi, enable the ``I have WiFi`` option, which will present you with additional options.
 
@@ -316,6 +319,12 @@ You can configure the WiFi for **EX-CommandStation** two ways:
 
       EX-Installer - Configure WiFi - Access Point
 
+   .. note::
+      :class: note-float-right
+
+      If possible choose a channel that is unused (or least used) by other WiFi networks around your location. There are numerious phone apps that can help you determine which channels are being used by other networks |BR| 
+      For Android, 'Wifi Analyzer' is one that works.  For iOS 'Netspot' is suitable (you don't need to purchase WiPry device they mention.)
+
    If ``Use my EX-CommandStation as an Access Point`` is selected, two additional options are presented:
 
    * WiFi Password
@@ -323,7 +332,7 @@ You can configure the WiFi for **EX-CommandStation** two ways:
 
    **WiFi Password** is optional. |BR| If this field is left blank the password will default to 'PASS_xxxxx' where 'xxxxx' will be the same as the SSID *name* that will be automatically configured.
 
-   **WiFi Channel** can be any value from 1-11. |BR| If possible choose a channel that is unused (or least used) by other WiFi networks around your location.
+   **WiFi Channel** can be any value from 1-11.
 
 **Connect my EX-CommandStation to my existing wireless network** 
 
@@ -345,13 +354,15 @@ You can configure the WiFi for **EX-CommandStation** two ways:
 
    *WiFi Password* is the password for your home network.
 
-**I have Ethernet**   
+I have Ethernet
+''''''''''''''''
 
 If you have installed and Ethernet board, select this option.
 
 Note that it is not possible to have both WiFi and Ethernet enabled at the same time.
 
-**Set track modes**
+Set track modes
+'''''''''''''''
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_set_track_mode_options.png
    :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
@@ -370,7 +381,8 @@ The tracks (channels) on your motor driver can be configured in a variety of dif
 
 By default track (channel) **A** will default to ``MAIN`` and Track (channel) **B** to ``PROG``.
 
-**Advanced Config**
+Advanced Config
+'''''''''''''''
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_advanced_config.png
    :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode

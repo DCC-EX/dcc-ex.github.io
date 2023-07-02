@@ -350,7 +350,7 @@ To program any other features, refer to the `DecoderPro user guide <https://www.
 JMRI (Programming Decoders)
 ---------------------------
 
-|JMRI| is a PC based app that runs on Windows, Apple OSX, and Linux (including Raspberry Pi's Raspbian (RasPi)).
+|JMRI| is a PC based app that runs on Windows, Apple macOS, and Linux (including Raspberry Pi's Raspbian (RasPi)).
 
 It relies on the |EX-CS| being connected to the PC running |JMRI|, normally by the USB cable. (It can be done over WiFi, but is not recommended).  This means that, even if you setup your |EX-CS| for Wifi you will need to connect it to the PC.  Don't worry, this will work without having to load the software on the |EX-CS| again.
 

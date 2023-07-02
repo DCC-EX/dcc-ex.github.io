@@ -53,12 +53,12 @@ Requirements (for installing)
    
    **Antivirus Software** |BR| You *may* need to turn off your antivirus software before you try to install. |BR| Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
 
-* Download the :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app |BR| depending on your computer's operating system. |BR| |BR|
+* Download the :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app. |BR| |BR|
 
 * For **Microsoft Windows**:
 
   * Open the Windows *File Manager*
-  * Find the folder in which the **EX-Installer-Win64.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
+  * Find the folder in which the **EX-Installer-Win64.exe** or **EX-Installer-Win32.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
   * **Run** ``EX-Installer-Win64.exe`` |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern. |BR| |BR|
 
 * For **Mac OS or Linux**:
@@ -271,6 +271,13 @@ You can configure the WiFi for EX-CommandStation two ways:
 
       EX-Installer - Configure WiFi - Access Point
 
+   .. note::
+      :class: note-float-right
+
+      If possible choose a channel that is unused (or least used) by other WiFi networks around your location. There are numerious phone apps that can help you determine which channels are being used by other networks |BR| 
+      For Android, 'Wifi Analyzer' is one that works.  For iOS 'Netspot' is suitable (you don't need to purchase WiPry device they mention.)
+   
+
    If ``Use my EX-CommandStation as an Access Point`` is selected, two additional options are presented:
 
    * WiFi Password
@@ -278,7 +285,7 @@ You can configure the WiFi for EX-CommandStation two ways:
 
    **WiFi Password** is optional.  |BR| **We recommend you leave this field blank.** |BR| If this field is left blank the password will default to "PASS_xxxxx" where 'xxxxx' will be the same as the SSID *name* that will be automatically configured.
 
-   **WiFi Channel** can be any value from 1-11. |BR| If possible choose a channel that is unused (or least used) by other WiFi networks around your location.
+   **WiFi Channel** can be any value from 1-11.
 
 **Connect my EX-CommandStation to my existing wireless network** 
 

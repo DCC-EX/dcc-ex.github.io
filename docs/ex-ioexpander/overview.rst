@@ -214,6 +214,11 @@ This example is for an Arduino Nano configured starting at Vpin 800:
   |808 =>  10|809 =>  11|810 =>  12|811 =>  13|812 =>  14|813 =>  15|814 =>  16|815 =>  17|
   |816 =>  20|817 =>  21|
 
+Viewing the Vpin map
+^^^^^^^^^^^^^^^^^^^^
+
+When connected to the |EX-IO| device's serial console, you can enter the command `<V>` to view the current Vpin to physical pin map.
+
 EX-CommandStation device driver
 -------------------------------
 
@@ -247,11 +252,8 @@ Using "myAutomation.h":
 
 .. code-block:: cpp
 
-  void halSetup() {
-    ...
-    HAL(EXIOExpander, 800, 18, 0x65)
-    HAL(EXIOExpander, 820, 16, 0x66)
-  }
+  HAL(EXIOExpander, 800, 18, 0x65)
+  HAL(EXIOExpander, 820, 16, 0x66)
 
 I2C_ADDRESS
 -----------
@@ -319,7 +321,9 @@ If for some reason serial input is not working as expected, test modes can be en
 
 Only enable one test mode at a time. If multiple are enabled, only the last one defined will take effect.
 
-Refer to :ref:`ex-ioexpander/testing:testing commands` for details on the testing each option enables.
+It is preferable, however, to use the testing commands available in the serial console.
+
+Refer to :ref:`ex-ioexpander/testing:testing commands` for details of what test each option enables and the associated serial commands.
 
 DISABLE_I2C_PULLUPS
 -------------------

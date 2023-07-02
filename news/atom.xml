@@ -2,10 +2,41 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2023-07-02T21:03:28.023270+00:00</updated>
+  <updated>2023-07-02T21:30:27.428006+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.3">ABlog</generator>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20230702.html</id>
+    <title>DCC-EX has a new installer!</title>
+    <updated>2023-07-02T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="dcc-ex-has-a-new-installer"&gt;
+
+&lt;p&gt;Yes, that’s right, the &lt;span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; "&gt;DCC-&lt;span style="color: #00a3b9;"&gt;EX&lt;/span&gt;&lt;/span&gt; team is announcing we have an updated &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/span&gt;!&lt;/p&gt;
+&lt;p&gt;The previous version has been a welcome addition to the family and served many users well, however only caters for &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/span&gt;, and has recently had issues for our Linux and macOS users, meaning it was time for a refresh.&lt;/p&gt;
+&lt;p&gt;Our new installer has been written in Python with a view to being portable across as many operating systems as possible and continues to use the Arduino Command Line Interface (CLI) in the background to manage loading the &lt;span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; "&gt;DCC-&lt;span style="color: #00a3b9;"&gt;EX&lt;/span&gt;&lt;/span&gt; software onto your Arduino device.&lt;/p&gt;
+&lt;p&gt;Further to this, the new &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/span&gt; has been written in a way that will allow you to install our other Arduino based products with it in the future, including &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;IOExpander&lt;/span&gt;&lt;/span&gt;, &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Turntable&lt;/span&gt;&lt;/span&gt;, &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;FastClock&lt;/span&gt;&lt;/span&gt;, and &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;DCCInspector&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;You just need to download one file for either Windows, Linux, or macOS in order to get up and running with the new &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/span&gt;, and it will take care of downloading our software and managing your Arduino device. &lt;a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"&gt;&lt;span class="fn-bracket"&gt;[&lt;/span&gt;1&lt;span class="fn-bracket"&gt;]&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For instructions on how to get the new &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/span&gt; and how to use it, head over to the &lt;a class="reference internal" href="ex-installer/index.html"&gt;&lt;span class="doc"&gt;EX-Installer&lt;/span&gt;&lt;/a&gt; page.&lt;/p&gt;
+&lt;img alt="New version" src="https://dcc-ex.com/_images/new-version.png" style="width: 401.0px; height: 319.5px;" /&gt;
+&lt;aside class="footnote-list brackets"&gt;
+&lt;aside class="footnote brackets" id="id2" role="note"&gt;
+&lt;span class="label"&gt;&lt;span class="fn-bracket"&gt;[&lt;/span&gt;&lt;a role="doc-backlink" href="#id1"&gt;1&lt;/a&gt;&lt;span class="fn-bracket"&gt;]&lt;/span&gt;&lt;/span&gt;
+&lt;p&gt;For Windows users with generic or clone Arduino devices, you will still need to install suitable USB to serial drivers (eg. CH340/341) as the Arduino CLI only provides drivers for genuine Arduino devices.&lt;/p&gt;
+&lt;/aside&gt;
+&lt;/aside&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20230702.html" rel="alternate"/>
+    <summary>Yes, that’s right, the &lt;span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; "&gt;DCC-&lt;span style="color: #00a3b9;"&gt;EX&lt;/span&gt;&lt;/span&gt; team is announcing we have an updated &lt;span style="font-weight: bold; color: #00a3b9; font-size: 110%;"&gt;EX&lt;span style="color: #00353d;"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/span&gt;!</summary>
+    <category term="ex-installer" label="ex-installer"/>
+    <category term="news" label="news"/>
+    <published>2023-07-02T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>https://dcc-ex.com/news/posts/20230515.html</id>
     <title>DCC-EX Releases 5amp EX-MotorShield8874</title>

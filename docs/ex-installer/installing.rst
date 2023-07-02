@@ -60,7 +60,7 @@ Requirements (for installing)
   * Open a terminal window and navigate to that folder
   * **Run the installer with** the following command: ``./exInstaller`` |BR| |BR|
 
-* You will be presented with the following screen...
+You will be presented with the following screen...
 
 |force-break|
 

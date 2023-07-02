@@ -22,7 +22,7 @@ This page is specifically intended for a |conductor-text| who has installed *jus
 
 ----
 
-Once you have assembled your |EX-CS| hardware you need to load our software onto it make is usable. |br| To make it as simple as possible we have created the |EX-I| app.
+Once you have assembled your |EX-CS| hardware you need to load our software onto it make is usable. |BR| To make it as simple as possible we have created the |EX-I| app.
 
 |force-break|
 
@@ -59,15 +59,14 @@ Requirements (for installing)
 
   * Open the Windows *File Manager*
   * Find the folder in which the **EX-Installer-Win64.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
-  * **Run** ``EX-Installer-Win64.exe`` |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern.
-  * You will be presented with the following screens... |BR| |BR|
+  * **Run** ``EX-Installer-Win64.exe`` |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern. |BR| |BR|
 
 * For **Mac OS or Linux**:
 
   * Open a terminal window and navigate to that folder.
   * **Run the installer with** the following command: ``./exInstaller`` |BR| |BR|
 
-* You will be presented with the following screen...
+You will be presented with the following screen...
 
 ----
 

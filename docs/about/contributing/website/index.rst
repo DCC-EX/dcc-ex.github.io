@@ -11,6 +11,7 @@ Contributing to the Documentation
 .. toctree::
     :maxdepth: 1
 
+    requirements
     getting-started
     structure
     basic-rst

@@ -1,12 +1,20 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-|EX-AN-LOGO|
 
-******************************************
-EX-CommandStation 4.1.2 Release [Oct 2022]
-******************************************
+:blogpost: true
+:date: 29th Oct, 2022
+:author: Fred Decker
+:category: News, Release
+:tags: ex-commandstation
+:image: 0
 
-29 October 2022
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+EX-CommandStation 4.1.2 Release
+===============================
 
 The DCC-EX Team is pleased to release CommandStation-EX v4.1.2 as a Production Release for the general public.
 This release is a Minor release with many significant EX-RAIL enhancements and new automation features in addition to some bug fixes.

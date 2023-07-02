@@ -46,7 +46,7 @@ Either using the |EX-I| to the Arduino IDE.
 
   * - "Failed to upload because uploading error:"
     - Go to Question 2.
-    - (a) Have you selected the correct COM port? |BR| See :ref:`ex-installer/installing:1. getting ready` for information on finding the correct COM port.
+    - (a) Have you selected the correct COM port? |BR| See :ref:`ex-installer/installing:getting ready` for information on finding the correct COM port.
       (b) Have you selected the correct Arduino board type?
   
   * - 2. Have you selected the correct Baud rate?

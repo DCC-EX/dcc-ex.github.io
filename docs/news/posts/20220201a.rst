@@ -1,13 +1,22 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-|EX-AN-LOGO|
 
-************************
-Release Notes [Feb 2022]
-************************
+:blogpost: true
+:date: 1st Feb, 2022
+:author: Fred Decker
+:category: News, Release
+:tags: ex-commandstation
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+Release Notes
+=============
 
 What's New in Version 4.0
-==========================
 
 You may notice the jump from version 3.x to 4.0, this is because 4.0 is a MAJOR release. There are huge additions and changes. Here is a list of the highlights. To see the full release notes, continue to the link below.
 

@@ -31,12 +31,16 @@ Diagnostic commands
 Testing commands
 ================
 
-``<A>`` - Issue this command to toggle analogue input testing on and off. When enabled, all defined analogue input pins are enabled as analogue inputs, with their values displayed via the diagnostic output in the serial console. Enabling this will also enable diagnostic output.
+``<T A>`` - Issue this command to toggle analogue input testing on and off. When enabled, all defined analogue input pins are enabled as analogue inputs, with their values displayed via the diagnostic output in the serial console. Enabling this will also enable diagnostic output.
 
-``<I>`` - Issue this command to toggle digital input testing (with pullups disabled) on and off. When enabled, all defined digital input pins are enabled as digital inputs (including analogue pins capable of digital input), with their values displayed via the diagnostic output in the serial console. Enabling this will also enable diagnostic output.
+``<T I>`` - Issue this command to toggle digital input testing (with pullups disabled) on and off. When enabled, all defined digital input pins are enabled as digital inputs (including analogue pins capable of digital input), with their values displayed via the diagnostic output in the serial console. Enabling this will also enable diagnostic output.
 
-``<O>`` - Issue this command to toggle digital output testing on and off. When enabled, all defined digital output pins are enabled as outputs (including analogue pins capable of digital output). All output pins will cycle between high and low output at half second intervals, allowing a device such as an LED to be connected to validate the output is correct (don't forget a current limiting resistor). Enabling this will also enable diagnostic output.
+``<T O>`` - Issue this command to toggle digital output testing on and off. When enabled, all defined digital output pins are enabled as outputs (including analogue pins capable of digital output). All output pins will cycle between high and low output at half second intervals, allowing a device such as an LED to be connected to validate the output is correct (don't forget a current limiting resistor). Enabling this will also enable diagnostic output.
 
-``<P>`` - Issue this command to toggle digital input testing with pullups enabled on and off. When enabled, all defined digital input pins are enabled as digital inputs with pullups (including analogue pins capable of digital input), with their values displayed via the diagnostic output in the serial console. Enabling this will also enable diagnostic output.
+``<T P>`` - Issue this command to toggle digital input testing with pullups enabled on and off. When enabled, all defined digital input pins are enabled as digital inputs with pullups (including analogue pins capable of digital input), with their values displayed via the diagnostic output in the serial console. Enabling this will also enable diagnostic output.
 
 ``<T>`` - Issue this command to to display which test mode is in progress.
+
+.. note:: 
+
+  Testing disables I2C connectivity to your |EX-CS|, so it is best to perform testing with your |EX-IO| device disconnected, and you will need to reboot it once testing is complete before it will be able to be connected again.

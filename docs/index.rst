@@ -86,6 +86,7 @@ DCC-EX Model Railroading
    ex-commandstation/index
    ex-installer/index
    ex-webthrottle/index
+   EX-MotorShield8874 <reference/hardware/motorboards/ex-motor-shield-8874>
    ex-dccinspector/index
    ex-toolbox/index
 

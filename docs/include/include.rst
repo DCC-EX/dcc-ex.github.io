@@ -42,6 +42,10 @@
 
   <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Toolbox</span></span>
 ..
+.. |EX-MS| raw:: html
+
+  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;MotorShield8874</span></span>
+..
 .. |BSC| raw:: html
 
   <span style="font-weight: bold; color: #00353d; font-size: 100%;">BaseStationClassic (DCC++)</span>
@@ -120,6 +124,11 @@
 ..
 .. |EX-TB-LOGO| image:: /_static/images/logos/product-logo-ex-toolbox.png
       :alt: EX-Toolbox
+      :scale: 40%
+      :class: image-product-logo-float-right
+..
+.. |EX-MS-LOGO| image:: /_static/images/logos/product-logo-ex-motorshield8874.png
+      :alt: EX-MotorShield8874
       :scale: 40%
       :class: image-product-logo-float-right
 ..

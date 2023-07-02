@@ -60,6 +60,12 @@
       :class: image-min-width-144
       :target: ../ex-toolbox/index.html
 ..
+.. |EX-MS-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-motorshield8874.png
+      :alt: EX-MotorShield8874
+      :scale: 30%
+      :class: image-min-width-144
+      :target: ../reference/hardware/motorboards/ex-motor-shield-8874.html
+..
 .. ................................................
 ..
 .. |donate-button| image:: /_static/images/icons/donate_button_blue.png

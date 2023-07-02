@@ -5,7 +5,7 @@
 :date: 15th May, 2023
 :author: Paul Antoine
 :category: News, Release
-:tags: ex-commandstation
+:tags: ex-commandstation ex-motorshield8874
 :image: 0
 
 .. image:: /_static/images/logos/product-logo-news.png
@@ -16,11 +16,11 @@
 DCC-EX Releases 5amp EX-MotorShield8874
 =======================================
 
-DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the first of our open source hardware products: the EX-MotorShield8874, providing dual 5 amp DCC and DC PWM (pulse width modulation) output for DCC-EX Command Stations.
+DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the first of our open source hardware products: the |EX-MS|, providing dual 5 amp DCC and DC PWM (pulse width modulation) output for DCC-EX Command Stations.
 
-The EX-MotorShield8874 addresses the needs of DCC-EX users wanting to run multiple locos, across multiple power districts without requiring expensive DCC boosters. A DCC-EX Command Station can now outperform commercial DCC command stations which typically have single 3-3.5A or 5A output capabilities, and doing so at a fraction of the cost and with more advanced features.
+The |EX-MS| addresses the needs of DCC-EX users wanting to run multiple locos, across multiple power districts without requiring expensive DCC boosters. A DCC-EX Command Station can now outperform commercial DCC command stations which typically have single 3-3.5A or 5A output capabilities, and doing so at a fraction of the cost and with more advanced features.
 
-The EX-MotorShield8874 is the first offering in the DCC-EX open source hardware ecosystem specifically designed for model railroaders, and is a direct result of the strong community engagement DCC-EX strives to inspire. DCC-EX hardware lead Paul Antoine says "the open source vision for hardware designs from the DCC-EX community means individual users can order small batch manufacturing of all DCC-EX endorsed designs for themselves, friends and fellow club members. Or they have the choice to buy the same quality of product from licensed local resellers in their countries of origin.”
+The |EX-MS| is the first offering in the DCC-EX open source hardware ecosystem specifically designed for model railroaders, and is a direct result of the strong community engagement DCC-EX strives to inspire. DCC-EX hardware lead Paul Antoine says "the open source vision for hardware designs from the DCC-EX community means individual users can order small batch manufacturing of all DCC-EX endorsed designs for themselves, friends and fellow club members. Or they have the choice to buy the same quality of product from licensed local resellers in their countries of origin.”
 
 .. image:: /_static/images/motorboards/ex_motorshield8874.jpeg
    :alt: DCC-EX EX-MotorShield8874 RevA Semify

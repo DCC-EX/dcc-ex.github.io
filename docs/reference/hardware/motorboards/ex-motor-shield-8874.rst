@@ -1,6 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
-|donate-button|
+|EX-MS-LOGO| |donate-button|
 
 ********************************
 DCC-EX EX-MotorShield8874 RevA
@@ -14,7 +14,7 @@ DCC-EX EX-MotorShield8874 RevA
     :depth: 1
     :local:
 
-TL;DR - Designed in conjunction with the |DCC-EX| development team, the EX-MotorShield8874 is extremely simple to use with all current and future generations of |EX-CS| hardware. It also safely powers the Command Station motherboard via the same single barrel jack DC input voltage that powers the track. It is rated at a very generous peak 5A of load per channel using Texas Instruments DRV8874 MOSFET technology. This board is the new standard by which we compare other boards.
+Designed in conjunction with the |DCC-EX| development team, the |EX-MS| is extremely simple to use with all current and future generations of |EX-CS| hardware. It also safely powers the Command Station motherboard via the same single barrel jack DC input voltage that powers the track. It is rated at a very generous peak 5A of load per channel using Texas Instruments DRV8874 MOSFET technology. This board is the new standard by which we compare other boards.
 
 .. image:: /_static/images/motorboards/ex_motorshield8874.jpeg
    :alt: DCC-EX EX-MotorShield8874 RevA Semify

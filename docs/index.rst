@@ -88,6 +88,7 @@ DCC-EX Model Railroading
    ex-webthrottle/index
    ex-dccinspector/index
    ex-toolbox/index
+   EX-MotorShield8874 <reference/hardware/motorboards/ex-motor-shield-8874>
 
 .. toctree::
    :hidden:

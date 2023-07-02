@@ -85,6 +85,8 @@ Our list of free, open source software products currently include:
       -  A DCC packet sniffing tool
     * - |EX-FC-LOGO-SMALL| 
       -  A FastClock to enable time based events
+    * - |EX-TB-LOGO-SMALL| 
+      -  An Android app to help configure your EX-CommandStation
 
 I'm interested in DCC but have a very small budget
 ==================================================

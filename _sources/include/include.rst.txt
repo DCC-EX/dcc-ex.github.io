@@ -50,6 +50,11 @@
 
   <br />
 ..
+.. role:: dcc-ex-red
+.. role:: dcc-ex-red-bold
+..
+.. role:: dcc-ex-text-size-80pct
+..
 .. |_| unicode:: 0xA0
   :trim:
 ..

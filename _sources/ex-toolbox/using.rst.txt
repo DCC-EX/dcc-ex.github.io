@@ -18,13 +18,13 @@ EX-Toolbox - Installing and Using
 Installing
 ==========
 
-|EX-TB| can be installed on you phone or table via the `Google Play Store <https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox>`_ .
+|EX-TB| can be installed on your phone or tablet via the `Google Play Store <https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox>`_ .
 
-Open the Play Store app on your phone or tablet and search for "EX-Toolbox".
+Open the *Play Store* app on your phone or tablet and search for "EX-Toolbox".
 
 Once installed, open |EX-TB| and it will go through the initial setup wizard where it will ask for one permission, and for which which theme you would like to use.
 
-After you complete the setup wizard, you will be shown the 'Connection' Screen
+After you complete the setup wizard, you will be shown the 'Connection' Screen.
 
 |force-break|
 

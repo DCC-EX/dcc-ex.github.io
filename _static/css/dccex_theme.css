@@ -86,6 +86,14 @@ h6, .h6 {
   background-color: #E0E0E0;
 }
 
+.caption-number {
+  font-size: small !important;
+}
+
+.caption-text {
+  font-size: small !important;
+}
+
 .rst-content code {
   font-size: 90% !important;
 }
@@ -470,15 +478,30 @@ section#dcc-ex-model-railroading aside p.sidebar-title {
 p.ablog-post-title {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
   font-size: 90% !important;
-  line-height: 140% !important;
+  line-height: 130% !important;
   margin-bottom: 0px !important;
+  font-weight: bold !important;
 }
 
-p.ablog-post-excerpt, p.ablog-post-expand {
+p.ablog-post-excerpt {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  font-size: 90% !important;
+  line-height: 130% !important;
+  margin-bottom: 0px !important;
+  margin-top: 6px !important;
+}
+
+p.ablog-post-expand {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
   font-size: 80% !important;
   line-height: 130% !important;
-  margin-bottom: 0px !important;
+  margin-bottom: 6px !important;
+  margin-top: 6px !important;
+}
+
+li.ablog-post {
+  list-style-type: none !important;
+  margin: 0px !important;
 }
 
 img.sd-card-img-top {
@@ -486,6 +509,26 @@ img.sd-card-img-top {
   display: block !important;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+/* code */
+.rst-content code.literal, .rst-content tt.literal {
+  color: #ba2121 !important;
+}
+
+/* general purpose */
+
+.dcc-ex-red {
+  color:red;
+}
+
+.dcc-ex-red-bold {
+  color:red;
+  font-weight: bold !important;
+}
+
+.dcc-ex-text-size-80pct {
+  font-size: 80% !important;
 }
 
 /* *************************************** */

@@ -11,16 +11,6 @@ EX-Installer
 
 |tinkerer| |engineer|
 
-.. warning:: 
-
-  Please be advised that our installer currently does not work reliably on Linux or macOS which is a known issue.
-
-  For Linux users we recommend using the Arduino IDE. You can find instructions on the :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page.
-
-  We hope to have a new version available soon.
-
-This page describes all the feature and options of the |EX-I|.  If you identify as an a |conductor-text| and have installed only the recommended hardware we suggest that you look at the simplified instructions on the :doc:`/ex-commandstation/get-started/installer` page.
-
 ----
 
 Once you have assembled your |EX-CS| hardware you need to load our software onto it make is usable.  

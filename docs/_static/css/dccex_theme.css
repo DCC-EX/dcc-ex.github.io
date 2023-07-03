@@ -531,6 +531,10 @@ img.sd-card-img-top {
   font-size: 80% !important;
 }
 
+.dcc-ex-text-size-60pct {
+  font-size: 80% !important;
+}
+
 /* *************************************** */
 
 @media not screen and (max-width: 900px) {

@@ -114,9 +114,9 @@ If you are using an Espressif or STMicroelectronics device, as opposed to the mo
 
 You *must* have Arduino CLI installed to proceed, simply click the :guilabel:`Install Arduino CLI` button if it is showing.
 
-If you already have the Arduino CLI installed, it is recommended that you refresh it periodically (e.g. weekly) to ensure support for the various device details are kept up to date. To refresh the CLI, simply click the ::guilabel:`Refresh Arduino CLI` button.
+If you already have the Arduino CLI installed, it is recommended that you refresh it periodically (e.g. weekly) to ensure support for the various device details are kept up to date. To refresh the CLI, simply click the :guilabel:`Refresh Arduino CLI` button.
 
-Once the CLI is installed, To proceed, click the ::guilabel:`Select your device` button.
+Once the CLI is installed, To proceed, click the :guilabel:`Select your device` button.
 
 |force-break|
 

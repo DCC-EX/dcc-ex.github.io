@@ -51,6 +51,10 @@ h6, .h6 {
   clear: both;
 }
 
+.wy-nav-side {
+  background: #031214 !important;
+}
+
 .wy-nav-top {
   background:#00a3b9ff !important;
   font-size: 80% !important; 

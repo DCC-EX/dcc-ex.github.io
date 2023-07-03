@@ -52,7 +52,12 @@ h6, .h6 {
 }
 
 .wy-nav-side {
-  background: #031214 !important;
+  background: #031c20 !important;
+  /* background: #031214 !important; */
+}
+
+.caption-text {
+  color: #00a3b9ff !important;
 }
 
 .wy-nav-top {

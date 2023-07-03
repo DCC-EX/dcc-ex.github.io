@@ -324,7 +324,7 @@ You can configure the WiFi for **EX-CommandStation** two ways:
       :class: note-float-right
 
       If possible choose a channel that is unused (or least used) by other WiFi networks around your location. There are numerious phone apps that can help you determine which channels are being used by other networks |BR| 
-      For Android, 'Wifi Analyzer' is one that works.  For iOS 'Netspot' is suitable (you don't need to purchase WiPry device they mention.)
+      For Android, 'Wifi Analyzer' is one that works.  For iOS 'Netspot' is suitable :dcc-ex-text-size-60pct:`(you don't need to purchase WiPry device they mention)`.
 
    If ``Use my EX-CommandStation as an Access Point`` is selected, two additional options are presented:
 
@@ -437,22 +437,22 @@ To proceed, click the :guilabel:`Load` button.
 
 Results are shown in the lower half of the screen.
 
+If there are **no errors**, you can proceed to :doc:`testing your setup </ex-installer/testing>`.
 
-If there are no errors, you can proceed to testing your setup.
-
-.. todo:: if there are errors
+If there **are errors** or you are having difficulties check the :doc:`/support/ex-cs-troubleshooting` page for assistance.
 
 |force-break|
-
-----
-
-.. note:: 
-
-   If you have any difficulties check the :doc:`/support/ex-cs-troubleshooting` page for assistance.
 
 ----
 
 Next Steps - Test your setup
 ============================
 
-.. NOTE:: The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.
+.. NOTE:: 
+   :class: note-float-right
+
+   The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.
+
+Click :doc:`here </ex-installer/testing>` or click the "next" button to learn how to test and use your |EX-CS|.
+
+|force-break|

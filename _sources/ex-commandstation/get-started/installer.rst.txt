@@ -247,7 +247,7 @@ Only the *Motor Driver* and *WiFi* will be covered on this page.  If you have in
 
    EX-Installer - Configure Motor Driver
 
-You *must* select the motor driver type that you have installed.  The installer can't detect this, so you must select the correct board or the |EX-CS| may not work. If you have installed the recommended Motor Driver, select `STANDARD_MOTOR_SHIELD`.
+You *must* select the motor driver type that you have installed.  The installer can't detect this, so you must select the correct board or the |EX-CS| may not work. If you have installed the recommended Motor Driver, select `STANDARD_MOTOR_SHIELD` if you purchased the **Arduino Motor Shield Rev3**, or `EX8874_SHIELD` if you purchased our **EX-MotorShield8874**.
 
 .. sidebar:: Station Mode VS Access Point Mode
 
@@ -281,7 +281,7 @@ You can configure the WiFi for EX-CommandStation two ways:
       :class: note-float-right
 
       If possible choose a channel that is unused (or least used) by other WiFi networks around your location. There are numerious phone apps that can help you determine which channels are being used by other networks |BR| 
-      For Android, 'Wifi Analyzer' is one that works.  For iOS 'Netspot' is suitable (you don't need to purchase WiPry device they mention.)
+      For Android, 'Wifi Analyzer' is one that works.  For iOS 'Netspot' is suitable :dcc-ex-text-size-60pct:`(you don't need to purchase WiPry device they mention)`.
    
 
    If ``Use my EX-CommandStation as an Access Point`` is selected, two additional options are presented:
@@ -332,8 +332,9 @@ To proceed, click the :guilabel:`Load` button.
 Results are shown in the lower half of the screen.
 
 
-If there are no errors, you can proceed to testing your setup.
+If there are **no errors**, you can proceed to :doc:`testing your setup <controllers>`.
 
+If there **are errors** or you are having difficulties check the :doc:`/support/ex-cs-troubleshooting` page for assistance.
 
 |force-break|
 
@@ -342,8 +343,11 @@ If there are no errors, you can proceed to testing your setup.
 Next Steps - Selecting a Throttle (Controller) 
 ==============================================
 
+.. NOTE:: 
+   :class: note-float-right
+   
+   The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.
+
 Click :doc:`here <controllers>` or click the "next" button to learn how to select a throttle (controller) suitable to test and use your |EX-CS|.
 
-----
-
-.. todo:: `LOW - need to update installer screenshots <https://github.com/DCC-EX/dcc-ex.github.io/issues/417>`_
+|force-break|

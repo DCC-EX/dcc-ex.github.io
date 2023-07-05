@@ -62,6 +62,7 @@ Download and Run EX-Installer
 
 * For **Linux**:
 
+  * Right-click on the file, go to Properties, then the Permissions tab, and check "Allow executing file as program"
   * Open a terminal window and navigate to that folder
   * **Run the installer with** the following command: ``./EX-Installer-Linux64`` |BR| |BR|
 
@@ -406,7 +407,7 @@ iii) 'Advanced Configuration' screen
 .. warning:: 
    :class: warning-float-right
    
-   EX-Installer creates then maintains a folder (<home>\ex-installer) to hold the information it needs.  Because it manages the the content, anything a user manually does in that folder may be overwritten or deleted at any time.
+   EX-Installer creates then maintains a folder (<home>\\ex-installer) to hold the information it needs. :dcc-ex-red-bold:`Do not directly modify anything in this folder` as it may be overwritten or deleted by the installer at any time.
 
 .. figure:: /_static/images/ex-installer/ex_cs_advanced_config.png
    :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode

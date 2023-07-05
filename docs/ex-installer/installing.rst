@@ -81,7 +81,7 @@ a. The 'EX-Installer Welcome' screen
 
 This screen provides some basic information about the process of loading the Software.
 
-There is *debugging* option on this page. If enabled this provides additional information about what is happening during the loading process. Unless you are having difficulties, or have been requested to enable this by one of our team, you do not need to select this.
+There is a *debugging* option on this page. If enabled this provides additional information about what is happening during the loading process. Unless you are having difficulties, or have been requested to enable this by one of our team, you do not need to select this.
 
 To proceed, click the :guilabel:`Manage Arduino CLI` button.
 

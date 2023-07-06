@@ -225,7 +225,7 @@ After flashing, the ESP8266 Log will show it uploaded them all successfully and 
 
 - Disconnect the USB cable.
 
-Skip ahead to :ref:`reference/hardware/microcontrollers/wifi-mega:c. Set the switches on your Mega for flashing`
+Skip ahead to :ref:`reference/hardware/microcontrollers/wifi-mega:e. Set the switches for run/sketch mode`
 
 With esptool.py
 ~~~~~~~~~~~~~~~

@@ -68,6 +68,7 @@ Requirements (for installing)
 
 * For **Linux**:
 
+  * Right-click on the file, go to Properties, then the Permissions tab, and check "Allow executing file as program"
   * Open a terminal window and navigate to that folder
   * **Run the installer with** the following command: ``./EX-Installer-Linux64`` |BR| |BR|
 

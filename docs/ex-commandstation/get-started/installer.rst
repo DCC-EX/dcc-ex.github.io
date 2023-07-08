@@ -22,7 +22,7 @@ This page is specifically intended for a |conductor-text| who has installed *jus
 
 ----
 
-Once you have assembled your |EX-CS| hardware you need to load our software onto it make is usable. |BR| To make it as simple as possible we have created the |EX-I| app.
+Once you have assembled your |EX-CS| hardware you need to load our software onto it to make it usable. |BR| To make it as simple as possible we have created the |EX-I| app.
 
 |force-break|
 
@@ -90,7 +90,7 @@ The 'EX-Installer Welcome' screen
 
 This screen provides some basic information about the process of loading the Software.
 
-If you are using the recommended Mega hardware, you should not need to adjust the other setting on this page.
+If you are using the recommended Mega hardware, you should not need to adjust the other settings on this page.
 
 To proceed, click the :guilabel:`Manage Arduino CLI` button.
 
@@ -254,7 +254,7 @@ You *must* select the motor driver type that you have installed.  The installer 
 
    |conductor| |BR| There is no right or wrong selection here. Both options here may be valid for you to use, depending on how you wish to use your |EX-CS|.
 
-   If a) your layout is close to you home WiFi network, b) you don't transport the layout around, c) you need to use more that four WiFi controllers at a time, and/or d) you are not likely to, or have no concerns about letting visitors access your home WiFi (for them to use their own devices on your layout), then **Station Mode** is probably a better option.
+   If a) your layout is close to your home WiFi network, b) you don't transport the layout around, c) you need to use more than four WiFi controllers at a time, and/or d) you are not likely to, or have no concerns about letting visitors access your home WiFi (for them to use their own devices on your layout), then **Station Mode** is probably a better option.
 
    If the above is not generally true, then **Access Point Mode** may be a better choice.
 

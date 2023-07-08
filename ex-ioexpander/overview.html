@@ -633,6 +633,7 @@
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>When using servos or fading LEDs with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>, you <em>must use values between 0 and 255</em> to control them, not the values documented for the PCA9685 servo modules, as those values are designed specifically for those modules.</p>
+<p>You must also ensure you provide sufficient power to run the servos, as well as have a large electrolytic capacitor across the 5V and Ground pins to ensure servo movements don’t cause the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device to reset due to brownouts in the power supply. A capacitor in the realm of 1000uF is recommended. It is not sufficient to power the servos from the USB interface, and an external 5V power supply must be used in the same way as outlined on the <a class="reference internal" href="../reference/hardware/servo-module.html"><span class="doc">Connecting a Servo Module</span></a> page.</p>
 </div>
 <p>You can only use pins defined as PWM hardware pins, as the current implementation uses the Arduino analogWrite() function, which relies on a hardware PWM pin being available. We outline which pins have hardware PWM support available on the <a class="reference internal" href="supported-devices.html"><span class="doc">Supported Devices</span></a> page.</p>
 </section>

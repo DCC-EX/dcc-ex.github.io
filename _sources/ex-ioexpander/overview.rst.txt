@@ -84,6 +84,8 @@ There is experimental PWM support to be used to drive servos and control LED bri
 
   When using servos or fading LEDs with |EX-IO|, you *must use values between 0 and 255* to control them, not the values documented for the PCA9685 servo modules, as those values are designed specifically for those modules.
 
+  You must also ensure you provide sufficient power to run the servos, as well as have a large electrolytic capacitor across the 5V and Ground pins to ensure servo movements don't cause the |EX-IO| device to reset due to brownouts in the power supply. A capacitor in the realm of 1000uF is recommended. It is not sufficient to power the servos from the USB interface, and an external 5V power supply must be used in the same way as outlined on the :doc:`/reference/hardware/servo-module` page.
+
 You can only use pins defined as PWM hardware pins, as the current implementation uses the Arduino analogWrite() function, which relies on a hardware PWM pin being available. We outline which pins have hardware PWM support available on the :doc:`/ex-ioexpander/supported-devices` page.
 
 Configuration

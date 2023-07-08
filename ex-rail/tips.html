@@ -657,11 +657,11 @@
 <span class="n">DONE</span>
 
 <span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">9101</span><span class="p">)</span><span class="w">                                </span><span class="c1">// When closing the virtual turnout:</span>
-<span class="n">GREEN</span><span class="p">(</span><span class="n">MainlineSignal</span><span class="p">)</span><span class="w">                        </span><span class="c1">// Set a green signal.</span>
+<span class="n">RED</span><span class="p">(</span><span class="n">ShuntingSignal</span><span class="p">)</span><span class="w">                        </span><span class="c1">// Set a green signal.</span>
 <span class="n">DELAY</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span><span class="w">                                  </span><span class="c1">// Wait for the signalman to move to the turnout lever.</span>
 <span class="n">CLOSE</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w">                                   </span><span class="c1">// Close the real turnout.</span>
 <span class="n">DELAY</span><span class="p">(</span><span class="mi">7500</span><span class="p">)</span><span class="w">                                  </span><span class="c1">// Wait again for the signalman to move to the other signal lever.</span>
-<span class="n">RED</span><span class="p">(</span><span class="n">ShuntingSignal</span><span class="p">)</span><span class="w">                          </span><span class="c1">// Set a red signal.</span>
+<span class="n">GREEN</span><span class="p">(</span><span class="n">MainlineSignal</span><span class="p">)</span><span class="w">                          </span><span class="c1">// Set a red signal.</span>
 <span class="n">DONE</span>
 </pre></div>
 </div>

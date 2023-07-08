@@ -123,11 +123,11 @@ For example:
    DONE
 
    ONCLOSE(9101)                                // When closing the virtual turnout:
-   GREEN(MainlineSignal)                        // Set a green signal.
+   RED(ShuntingSignal)                        // Set a green signal.
    DELAY(5000)                                  // Wait for the signalman to move to the turnout lever.
    CLOSE(101)                                   // Close the real turnout.
    DELAY(7500)                                  // Wait again for the signalman to move to the other signal lever.
-   RED(ShuntingSignal)                          // Set a red signal.
+   GREEN(MainlineSignal)                          // Set a red signal.
    DONE
 
 A virtual turnout may be used in any circumstance where the turnout process is handled in EX-RAIL rather than the normal process, for example a solenoid turnout requiring a pin or relay to be manipulated.

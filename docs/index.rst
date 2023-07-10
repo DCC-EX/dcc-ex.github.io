@@ -21,14 +21,14 @@ DCC-EX Model Railroading
     :columns: 12 12 12 4
     :class-card: sd-shadow-md sd-rounded-3 sd-width-auto sd-text-center
 
-    Releases
+    EX-CommandStation Releases
     ^^^
     
     .. rst-class:: dcclink
 
-      :ref:`Production <download/ex-commandstation:latest ex-commandstation official release>`
-
-      :ref:`Development <download/ex-commandstation:latest ex-commandstation unreleased development version>`
+      :dcc-ex-text-size-60pct:`Automated:` :ref:`EX-Installer <download/ex-commandstation:EX-Installer>` 
+      
+      :dcc-ex-text-size-60pct:`Manual:` :ref:`Prod <download/ex-commandstation:latest ex-commandstation official release>` , :ref:`Devel <download/ex-commandstation:latest ex-commandstation unreleased development version>`
 
   .. grid-item-card:: 
     :columns: 12 12 12 7

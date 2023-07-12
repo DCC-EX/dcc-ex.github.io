@@ -281,8 +281,8 @@ You can configure the WiFi for EX-CommandStation two ways:
    .. note::
       :class: note-float-right
 
-      If possible choose a channel that is unused (or least used) by other WiFi networks around your location. There are numerious phone apps that can help you determine which channels are being used by other networks |BR| 
-      For Android, 'Wifi Analyzer' is one that works.  For iOS 'Netspot' is suitable :dcc-ex-text-size-60pct:`(you don't need to purchase WiPry device they mention)`.
+      If possible, choose a channel that is unused (or least used) by other WiFi networks around your location. |BR|      
+      There are numerous phone apps that can help you determine which channels are being used by other networks. For Android, *'Wifi Analyzer'* is one that works.  For iOS *'Netspot'* is suitable :dcc-ex-text-size-60pct:`(you don't need to purchase WiPry device they mention)`.
    
 
    If ``Use my EX-CommandStation as an Access Point`` is selected, two additional options are presented:
@@ -315,6 +315,10 @@ You can configure the WiFi for EX-CommandStation two ways:
    *WiFi Password* is the password for your home network.
 
 To proceed, click the :guilabel:`Compile and Load` button.
+
+.. note::
+
+   See the :doc:`/ex-commandstation/advanced-setup/supported-wifi/wifi-config` page if you wish to find more detailed information on the the WiFi options.
 
 |force-break|
 

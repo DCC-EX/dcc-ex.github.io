@@ -135,9 +135,9 @@ On this screen you will need to |BR| a) select the type of device you wish to lo
 
 |EX-I| will attempt to work out both of these for you, but it may need assistance.
 
-Click on the :guilabel:`Scan for Devices` button. 
+When navigating to this page, a scan for devices will start automatically.
 
-If you see **No devices found** to means that you either a) have not connected the device to the computer, or b) the device was not recognised by the computer.
+If you see **No devices found** it means that you either a) have not connected the device to the computer, or b) the device was not recognised by the computer.
 
 **No Devices Found**
 
@@ -163,7 +163,7 @@ If more than one device is found (on different USB ports), you will need to sele
 
    EX-Installer - Device - Selection
 
-|EX-I| will attempt to work out what type of Arduino you have connected, but some cases it will not be able to do so. (This is especially common with cheap clone devices.) 
+|EX-I| will attempt to work out what type of Arduino you have connected, but in some cases it will not be able to do so. (This is especially common with cheap clone devices.) 
 
 Check and select the appropriate board from the drop down list.
 
@@ -181,7 +181,7 @@ d. 'Select the Product to Install' screen
 
    EX-Installer - Product Screen
 
-Currently only the |EX-CS| product can be installed by the |EX-I|.
+Currently, |EX-CS|, |EX-IO|, and |EX-TT| can be installed by the |EX-I|, however this page will focus only on |EX-CS|. For the other products, refer to the relevant documentation section.
 
 Click on the |EX-CS| logo to proceed.
 
@@ -190,16 +190,13 @@ Click on the |EX-CS| logo to proceed.
 e. Product Specific screens - EX-CommandStation
 -----------------------------------------------
 
-Currently only the installation of the |EX-CS| is supported.
-
-
 i) 'Select EX-CommandStation Version' screen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: /_static/images/ex-installer/select_cs_version.png
    :alt: EX-Installer - Select EX-CommandStation version
    :scale: 40%
-   :align: left
+   :align: right
 
    EX-Installer - EX-CommandStation version screen
 
@@ -238,7 +235,7 @@ If you have selected ``Use my existing configuration files``, to proceed, click 
 ii) 'Install EX-CommandStation' - Configuration screen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: /_static/images/ex-installer/ex_cs_configure.png
+.. figure:: /_static/images/ex-installer/ex_cs_configure-general.png
    :alt: EX-Installer - EX-CommandStation Configuration
    :scale: 40%
    :align: left
@@ -270,7 +267,7 @@ Motor Driver
 
 You *must* select the motor driver type that you have installed.  The installer can't detect this, so you must select the correct board or the |EX-CS| may not work. 
 
-The options include:
+These options are determined from the chosen version of |EX-CS|, and may include:
 
 * STANDARD_MOTOR_SHIELD
 * EX8874_SHIELD
@@ -282,6 +279,8 @@ The options include:
 * YFROBOT_MOTOR_SHIELD
 * ORION_UNO_INTEGRATED_SHIELD
 * NANOEVERY_EXAMPLE
+
+This list will change over time as new motor drivers are added, and any older ones no longer supported are removed.
 
 Optional Display
 ~~~~~~~~~~~~~~~~
@@ -298,14 +297,21 @@ If you have installed and optional oLED or LED display, enable the ``I have a di
 The options include:
 
 * LCD - 16 columns x 2 rows
-* LCD - 16 columns x 4 rows
+* LCD - 20 columns x 4 rows
 * OLED 128 x 32
 * OLED 128 x 64
 
 WiFi
 ''''
 
-If you have installed and optional WiFi board, or are using a microcontroller board with integrated WiFi, enable the ``I have WiFi`` option, which will present you with additional options.
+If you have installed and optional WiFi board, or are using a microcontroller board with integrated WiFi, enable the ``I have WiFi`` option, which will enable the WiFi Options tab, allowing you to configure the WiFi settings.
+
+.. figure:: /_static/images/ex-installer/ex_cs_enable_wifi.png
+   :alt: EX-Installer - EX-CommandStation - Enable WiFi
+   :scale: 70%
+   :align: center
+
+   EX-Installer - EX-CommandStation - Enable WiFi
 
 You can configure the WiFi for **EX-CommandStation** two ways:
 
@@ -316,7 +322,7 @@ You can configure the WiFi for **EX-CommandStation** two ways:
 
    .. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_access_point.png
       :alt: EX-Installer - EX-CommandStation - Configure WiFi - Access Point
-      :scale: 50%
+      :scale: 70%
       :align: center
 
       EX-Installer - Configure WiFi - Access Point
@@ -340,7 +346,7 @@ You can configure the WiFi for **EX-CommandStation** two ways:
 
    .. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_station.png
       :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
-      :scale: 60%
+      :scale: 70%
       :align: center
 
       EX-Installer - Configure Wifi - Station Mode
@@ -350,11 +356,13 @@ You can configure the WiFi for **EX-CommandStation** two ways:
    * Wifi SSID
    * WiFi Password
 
-   Both are required, though it is possible, but unlikely, that the WiFi Password for your network is blank. If so, leave the field blank.
+   Both are required.
 
    *Wifi SSID* is the name of your home network.
 
    *WiFi Password* is the password for your home network.
+
+   Additionally, if you choose, you may customise the WiFi hostname, or leave it as the default "dccex".
 
 I have Ethernet
 ~~~~~~~~~~~~~~~
@@ -366,12 +374,32 @@ Note that it is not possible to have both WiFi and Ethernet enabled at the same 
 Set track modes
 ~~~~~~~~~~~~~~~
 
-.. figure:: /_static/images/ex-installer/ex_cs_configure_set_track_mode_options.png
-   :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
+If you have selected an appropriate version of |EX-CS|, you will be able to enable the option to configure TrackManager. If the ``Configure TrackManager`` switch is disabled, you have not selected a version that includes the TrackManager feature.
+
+Enabling this option will enable the TrackManager Config tab.
+
+.. figure:: /_static/images/ex-installer/ex_cs_configure_enable_trackmanager.png
+   :alt: EX-Installer - EX-CommandStation - Enable TrackManager
    :scale: 60%
    :align: center
 
-   EX-Installer - Configure Set Track Modes
+   EX-Installer - Enable TrackManager
+
+.. figure:: /_static/images/ex-installer/ex_cs_configure_set_track_mode_options.png
+   :alt: EX-Installer - EX-CommandStation - Configure TrackManager
+   :scale: 60%
+   :align: left
+
+   EX-Installer - Select Track Modes
+
+.. figure:: /_static/images/ex-installer/ex_cs_configure_set_track_mode.png
+   :alt: EX-Installer - EX-CommandStation - Configure TrackManager
+   :scale: 60%
+   :align: center
+
+   EX-Installer - Configure Track Modes
+
+|
 
 The tracks (channels) on your motor driver can be configured in a variety of different ways.
 
@@ -382,6 +410,8 @@ The tracks (channels) on your motor driver can be configured in a variety of dif
 * OFF
 
 By default track (channel) **A** will default to ``MAIN`` and Track (channel) **B** to ``PROG``.
+
+When selecting ``DC`` or ``DCX`` modes, you can customer the associated loco/cab ID.
 
 Advanced Config
 ~~~~~~~~~~~~~~~

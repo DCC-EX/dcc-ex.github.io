@@ -66,6 +66,10 @@ Download and Run EX-Installer
   * Open a terminal window and navigate to that folder
   * **Run the installer with** the following command: ``./EX-Installer-Linux64`` |BR| |BR|
 
+.. warning:: 
+   
+   EX-Installer creates then maintains a folder (<home>\\ex-installer) to hold the information it needs. :dcc-ex-red-bold:`Do not directly modify anything in this folder` as it may be overwritten or deleted by the installer at any time.
+
 You will be presented with the following screen...
 
 |force-break|
@@ -399,7 +403,7 @@ Enabling this option will enable the TrackManager Config tab.
 
    EX-Installer - Configure Track Modes
 
-|
+|force-break|
 
 The tracks (channels) on your motor driver can be configured in a variety of different ways.
 
@@ -417,7 +421,7 @@ Advanced Config
 ~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_advanced_config.png
-   :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
+   :alt: EX-Installer - EX-CommandStation - Advanced Config
    :scale: 60%
    :align: center
 
@@ -434,11 +438,6 @@ If you have selected *Advanced Config*, to proceed, click the :guilabel:`Advance
 iii) 'Advanced Configuration' screen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. warning:: 
-   :class: warning-float-right
-   
-   EX-Installer creates then maintains a folder (<home>\\ex-installer) to hold the information it needs. :dcc-ex-red-bold:`Do not directly modify anything in this folder` as it may be overwritten or deleted by the installer at any time.
-
 .. figure:: /_static/images/ex-installer/ex_cs_advanced_config.png
    :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
    :scale: 40%
@@ -446,9 +445,18 @@ iii) 'Advanced Configuration' screen
 
    EX-Installer - Advanced Config Screen
 
-Only if you have selected ``Advanced Config`` on the previous screen will you be presented with this screen. 
+.. figure:: /_static/images/ex-installer/ex_cs_advanced_config_multifiles.png
+   :alt: EX-Installer - EX-CommandStation - Advanced Config with multiple files
+   :scale: 40%
+   :align: center
 
-On this screen you can edit the main configuration files.
+   EX-Installer - Advance Config - more than two files
+
+|force-break|
+
+If you have selected ``Advanced Config`` on the previous screen, or if you chose to copy your existing configuration files, you will be presented with this screen. 
+
+On this screen you can edit the main configuration files. If you have more than two files to edit, they will be separated into tabs as shown in the second figure above.
 
 To proceed, click the :guilabel:`Compile and Load` button. See *iv* below.
 
@@ -471,6 +479,36 @@ Results are shown in the lower half of the screen.
 If there are **no errors**, you can proceed to :doc:`testing your setup </ex-installer/testing>`.
 
 If there **are errors** or you are having difficulties check the :doc:`/support/ex-cs-troubleshooting` page for assistance.
+
+|force-break|
+
+Backup
+~~~~~~
+
+After loading the software onto your device, you can optionally copy the generated configuration files to a folder of your choice as a backup by clicking the :guilabel:`Backup config files` button.
+
+.. figure:: /_static/images/ex-installer/ex_cs_backup.png
+   :alt: EX-Installer - Backup
+   :scale: 40%
+   :align: center
+
+   EX-Installer - Backup Option
+
+You will be prompted to select a folder, and if the chosen folder already contains config files, you can overwrite these, or you can select an alternative location.
+
+.. figure:: /_static/images/ex-installer/ex_cs_backup_select.png
+   :alt: EX-Installer - Backup select folder
+   :scale: 40%
+   :align: left
+
+   EX-Installer - Select backup folder
+
+.. figure:: /_static/images/ex-installer/ex_cs_backup_overwrite.png
+   :alt: EX-Installer - Overwrite existing files
+   :scale: 40%
+   :align: center
+
+   EX-Installer - Overwrite existing backup
 
 |force-break|
 

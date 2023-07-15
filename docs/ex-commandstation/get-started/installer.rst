@@ -219,7 +219,7 @@ If you have selected ``Configure options on the next screen``, to proceed, click
 'Install EX-CommandStation' - Configuration screen
 --------------------------------------------------
 
-.. figure:: /_static/images/ex-installer/ex_cs_configure.png
+.. figure:: /_static/images/ex-installer/ex_cs_configure-general.png
    :alt: EX-Installer - EX-CommandStation Configuration
    :scale: 40%
    :align: left

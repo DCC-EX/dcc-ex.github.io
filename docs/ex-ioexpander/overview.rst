@@ -53,6 +53,8 @@ In addition, you will require the |EX-IO| software which can be found here:
 
   `EX-IOExpander Github Repository <https://github.com/DCC-EX/EX-IOExpander>`_
 
+It is now possible to install |EX-IO| via |EX-I|, see :ref:`ex-ioexpander/overview:installation via ex-installer`.
+
 Hardware requirements
 =====================
 
@@ -97,6 +99,43 @@ Configuration changes for |EX-IO| are made by editing a "myConfig.h" file or wri
 
 Software installation process
 -----------------------------
+
+Installation via EX-Installer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|EX-I| can be used to install both |EX-CS| and |EX-IO|. The process is the same for both, with the exception of the configuration options, therefore we will only outline the configuration options here. Refer to :doc:`/ex-installer/installing` for the full documentation on using |EX-I|.
+
+When you reach the "Select Product" screen, select |EX-IO|.
+
+.. figure:: /_static/images/ex-installer/select_product.png
+   :alt: EX-Installer - Select Product
+   :scale: 40%
+   :align: center
+
+   EX-Installer - Product Screen
+
+We always recommend selecting the latest available version for |EX-IO| unless advised otherwise, but note you will only see Development versions while it remains in Alpha testing.
+
+.. figure:: /_static/images/ex-installer/select_io_version.png
+   :alt: EX-Installer - Select Version
+   :scale: 40%
+   :align: center
+
+   EX-Installer - Product Screen
+
+Once the version has been selected, you will be able to configure the necessary options.
+
+.. figure:: /_static/images/ex-installer/ex_io-expander.png
+   :alt: EX-Installer - Configure EX-IOExpander
+   :scale: 40%
+   :align: center
+
+   EX-Installer - EX-IOExpander configuration
+
+Continue through the rest of the |EX-I| process to load the software on to your device.
+
+Manual installation
+^^^^^^^^^^^^^^^^^^^
 
 This is a brief overview of the software installation and configuration process:
 

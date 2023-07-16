@@ -298,11 +298,57 @@ To validate the hall effect sensor is connected correctly, put a magnet in close
 
   Please read through this entire section prior to loading any software onto your Arduino. It is also recommended that the turntable is able to trigger the homing sensor correctly to ensure the automatic calibration works correctly at first startup.
 
+Installing with EX-Installer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|EX-I| can be used to install both |EX-CS| and |EX-TT|. The process is the same for both, with the exception of the configuration options, therefore we will only outline the configuration options here. Refer to :doc:`/ex-installer/installing` for the full documentation on using |EX-I|.
+
+When you reach the "Select Product" screen, select |EX-TT|.
+
+.. figure:: /_static/images/ex-installer/select_product.png
+   :alt: EX-Installer - Select Product
+   :scale: 40%
+   :align: center
+
+   EX-Installer - Product Screen
+
+We always recommend selecting the latest available version for |EX-TT| unless advised otherwise, but note you will only see Development versions while it remains in Beta testing.
+
+.. figure:: /_static/images/ex-installer/select_tt_version.png
+   :alt: EX-Installer - Select Version
+   :scale: 40%
+   :align: center
+
+   EX-Installer - Product Screen
+
+Once the version has been selected, you will be able to configure the necessary options.
+
+.. figure:: /_static/images/ex-installer/ex_turntable.png
+   :alt: EX-Installer - Configure EX-Turntable
+   :scale: 40%
+   :align: center
+
+   EX-Installer - EX-Turntable configuration
+
+If you have a need to configure any other settings, you can enable ``Advanced Config`` and edit the config file on the following page. You will need to do this if you intend to manually specify the steps per rotation for the stepper.
+
+.. figure:: /_static/images/ex-installer/ex_turntable_advanced.png
+   :alt: EX-Installer - EX-Turntable advanced config
+   :scale: 40%
+   :align: center
+
+   EX-Installer - EX-Turntable Advanced Config
+
+Continue through the rest of the |EX-I| process to load the software on to your device, then skip to :ref:`ex-turntable/assembly:first start and automatic calibration` to continue.
+
+Installing with the Arduino IDE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
   Further to this, note that you will need to end up with two separate folders; one containing the |EX-CS| software as per  :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide`, and an additional folder containing the |EX-TT| software. The |EX-TT| software is not a component of |EX-CS| or vice versa, and as such they should not exist in the same folder.
 
-At the time of writing, there is no installer for |EX-TT| like there is for the CommandStation, so you will need to install the Arduino IDE and load the software onto the Arduino manually.
+We recommend using |EX-I| to install |EX-TT| as outlined above, however you can use the Arduino IDE to load the software onto the Arduino manually.
 
-As noted in the tip above, you should have a |EX-TT| folder alongside the |EX-TT| folder, and neither should reside in the other (the |EX-TT| software is required in the next step):
+As noted in the tip above, you should have a |EX-TT| folder alongside the |EX-CS| folder, and neither should reside in the other (the |EX-TT| software is required in the next step):
 
 .. image:: /_static/images/ex-turntable/two-folders.png
   :alt: Two folders
@@ -419,6 +465,21 @@ You can now safely power off |EX-TT| and remove the USB cable from your PC as it
 
 8. Add the EX-Turntable device driver to EX-CommandStation
 ----------------------------------------------------------
+
+Add with EX-Installer
+^^^^^^^^^^^^^^^^^^^^^
+
+If you are using |EX-I| to load software, you can add your |EX-TT| device and routes on the Advanced Configuration screen by adding them to your myAutomation.h file.
+
+.. figure:: /_static/images/ex-installer/ex_cs_advanced_turntable.png
+   :alt: EX-Installer - Configure EX-Turntable in myAutomation.h
+   :scale: 40%
+   :align: center
+
+   EX-Installer - Add EX-Turntable support in myAutomation.h
+
+Add manually
+^^^^^^^^^^^^
 
 .. note:: 
 

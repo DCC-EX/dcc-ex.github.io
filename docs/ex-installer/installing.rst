@@ -66,6 +66,10 @@ Download and Run EX-Installer
   * Open a terminal window and navigate to that folder
   * **Run the installer with** the following command: ``./EX-Installer-Linux64`` |BR| |BR|
 
+.. warning:: 
+   
+   EX-Installer creates then maintains a folder (<home>\\ex-installer) to hold the information it needs. :dcc-ex-red-bold:`Do not directly modify anything in this folder` as it may be overwritten or deleted by the installer at any time.
+
 You will be presented with the following screen...
 
 |force-break|
@@ -135,9 +139,9 @@ On this screen you will need to |BR| a) select the type of device you wish to lo
 
 |EX-I| will attempt to work out both of these for you, but it may need assistance.
 
-Click on the :guilabel:`Scan for Devices` button. 
+When navigating to this page, a scan for devices will start automatically.
 
-If you see **No devices found** to means that you either a) have not connected the device to the computer, or b) the device was not recognised by the computer.
+If you see **No devices found** it means that you either a) have not connected the device to the computer, or b) the device was not recognised by the computer.
 
 **No Devices Found**
 
@@ -163,7 +167,7 @@ If more than one device is found (on different USB ports), you will need to sele
 
    EX-Installer - Device - Selection
 
-|EX-I| will attempt to work out what type of Arduino you have connected, but some cases it will not be able to do so. (This is especially common with cheap clone devices.) 
+|EX-I| will attempt to work out what type of Arduino you have connected, but in some cases it will not be able to do so. (This is especially common with cheap clone devices.) 
 
 Check and select the appropriate board from the drop down list.
 
@@ -181,7 +185,7 @@ d. 'Select the Product to Install' screen
 
    EX-Installer - Product Screen
 
-Currently only the |EX-CS| product can be installed by the |EX-I|.
+Currently, |EX-CS|, |EX-IO|, and |EX-TT| can be installed by the |EX-I|, however this page will focus only on |EX-CS|. For the other products, refer to the relevant documentation section.
 
 Click on the |EX-CS| logo to proceed.
 
@@ -190,16 +194,13 @@ Click on the |EX-CS| logo to proceed.
 e. Product Specific screens - EX-CommandStation
 -----------------------------------------------
 
-Currently only the installation of the |EX-CS| is supported.
-
-
 i) 'Select EX-CommandStation Version' screen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: /_static/images/ex-installer/select_cs_version.png
    :alt: EX-Installer - Select EX-CommandStation version
    :scale: 40%
-   :align: left
+   :align: right
 
    EX-Installer - EX-CommandStation version screen
 
@@ -238,7 +239,7 @@ If you have selected ``Use my existing configuration files``, to proceed, click 
 ii) 'Install EX-CommandStation' - Configuration screen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: /_static/images/ex-installer/ex_cs_configure.png
+.. figure:: /_static/images/ex-installer/ex_cs_configure-general.png
    :alt: EX-Installer - EX-CommandStation Configuration
    :scale: 40%
    :align: left
@@ -270,7 +271,7 @@ Motor Driver
 
 You *must* select the motor driver type that you have installed.  The installer can't detect this, so you must select the correct board or the |EX-CS| may not work. 
 
-The options include:
+These options are determined from the chosen version of |EX-CS|, and may include:
 
 * STANDARD_MOTOR_SHIELD
 * EX8874_SHIELD
@@ -282,6 +283,8 @@ The options include:
 * YFROBOT_MOTOR_SHIELD
 * ORION_UNO_INTEGRATED_SHIELD
 * NANOEVERY_EXAMPLE
+
+This list will change over time as new motor drivers are added, and any older ones no longer supported are removed.
 
 Optional Display
 ~~~~~~~~~~~~~~~~
@@ -298,14 +301,21 @@ If you have installed and optional oLED or LED display, enable the ``I have a di
 The options include:
 
 * LCD - 16 columns x 2 rows
-* LCD - 16 columns x 4 rows
+* LCD - 20 columns x 4 rows
 * OLED 128 x 32
 * OLED 128 x 64
 
 WiFi
 ~~~~
 
-If you have installed and optional WiFi board, or are using a microcontroller board with integrated WiFi, enable the ``I have WiFi`` option, which will present you with additional options.
+If you have installed and optional WiFi board, or are using a microcontroller board with integrated WiFi, enable the ``I have WiFi`` option, which will enable the WiFi Options tab, allowing you to configure the WiFi settings.
+
+.. figure:: /_static/images/ex-installer/ex_cs_enable_wifi.png
+   :alt: EX-Installer - EX-CommandStation - Enable WiFi
+   :scale: 70%
+   :align: center
+
+   EX-Installer - EX-CommandStation - Enable WiFi
 
 You can configure the WiFi for **EX-CommandStation** two ways:
 
@@ -316,7 +326,7 @@ You can configure the WiFi for **EX-CommandStation** two ways:
 
    .. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_access_point.png
       :alt: EX-Installer - EX-CommandStation - Configure WiFi - Access Point
-      :scale: 50%
+      :scale: 70%
       :align: center
 
       EX-Installer - Configure WiFi - Access Point
@@ -340,7 +350,7 @@ You can configure the WiFi for **EX-CommandStation** two ways:
 
    .. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_station.png
       :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
-      :scale: 60%
+      :scale: 70%
       :align: center
 
       EX-Installer - Configure Wifi - Station Mode
@@ -350,11 +360,13 @@ You can configure the WiFi for **EX-CommandStation** two ways:
    * Wifi SSID
    * WiFi Password
 
-   Both are required, though it is possible, but unlikely, that the WiFi Password for your network is blank. If so, leave the field blank.
+   Both are required.
 
    *Wifi SSID* is the name of your home network.
 
    *WiFi Password* is the password for your home network.
+
+   Additionally, if you choose, you may customise the WiFi hostname, or leave it as the default "dccex".
 
    .. note::
 
@@ -370,12 +382,32 @@ Note that it is not possible to have both WiFi and Ethernet enabled at the same 
 Set track modes
 ~~~~~~~~~~~~~~~
 
-.. figure:: /_static/images/ex-installer/ex_cs_configure_set_track_mode_options.png
-   :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
+If you have selected an appropriate version of |EX-CS|, you will be able to enable the option to configure TrackManager. If the ``Configure TrackManager`` switch is disabled, you have not selected a version that includes the TrackManager feature.
+
+Enabling this option will enable the TrackManager Config tab.
+
+.. figure:: /_static/images/ex-installer/ex_cs_configure_enable_trackmanager.png
+   :alt: EX-Installer - EX-CommandStation - Enable TrackManager
    :scale: 60%
    :align: center
 
-   EX-Installer - Configure Set Track Modes
+   EX-Installer - Enable TrackManager
+
+.. figure:: /_static/images/ex-installer/ex_cs_configure_set_track_mode_options.png
+   :alt: EX-Installer - EX-CommandStation - Configure TrackManager
+   :scale: 60%
+   :align: left
+
+   EX-Installer - Select Track Modes
+
+.. figure:: /_static/images/ex-installer/ex_cs_configure_set_track_mode.png
+   :alt: EX-Installer - EX-CommandStation - Configure TrackManager
+   :scale: 60%
+   :align: center
+
+   EX-Installer - Configure Track Modes
+
+|force-break|
 
 The tracks (channels) on your motor driver can be configured in a variety of different ways.
 
@@ -387,11 +419,13 @@ The tracks (channels) on your motor driver can be configured in a variety of dif
 
 By default track (channel) **A** will default to ``MAIN`` and Track (channel) **B** to ``PROG``.
 
+When selecting ``DC`` or ``DCX`` modes, you can customer the associated loco/cab ID.
+
 Advanced Config
 ~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_advanced_config.png
-   :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
+   :alt: EX-Installer - EX-CommandStation - Advanced Config
    :scale: 60%
    :align: center
 
@@ -408,11 +442,6 @@ If you have selected *Advanced Config*, to proceed, click the :guilabel:`Advance
 iii) 'Advanced Configuration' screen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. warning:: 
-   :class: warning-float-right
-   
-   EX-Installer creates then maintains a folder (<home>\\ex-installer) to hold the information it needs. :dcc-ex-red-bold:`Do not directly modify anything in this folder` as it may be overwritten or deleted by the installer at any time.
-
 .. figure:: /_static/images/ex-installer/ex_cs_advanced_config.png
    :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
    :scale: 40%
@@ -420,9 +449,18 @@ iii) 'Advanced Configuration' screen
 
    EX-Installer - Advanced Config Screen
 
-Only if you have selected ``Advanced Config`` on the previous screen will you be presented with this screen. 
+.. figure:: /_static/images/ex-installer/ex_cs_advanced_config_multifiles.png
+   :alt: EX-Installer - EX-CommandStation - Advanced Config with multiple files
+   :scale: 40%
+   :align: center
 
-On this screen you can edit the main configuration files.
+   EX-Installer - Advance Config - more than two files
+
+|force-break|
+
+If you have selected ``Advanced Config`` on the previous screen, or if you chose to copy your existing configuration files, you will be presented with this screen. 
+
+On this screen you can edit the main configuration files. If you have more than two files to edit, they will be separated into tabs as shown in the second figure above.
 
 To proceed, click the :guilabel:`Compile and Load` button. See *iv* below.
 
@@ -445,6 +483,36 @@ Results are shown in the lower half of the screen.
 If there are **no errors**, you can proceed to :doc:`testing your setup </ex-installer/testing>`.
 
 If there **are errors** or you are having difficulties check the :doc:`/support/ex-cs-troubleshooting` page for assistance.
+
+|force-break|
+
+Backup
+~~~~~~
+
+After loading the software onto your device, you can optionally copy the generated configuration files to a folder of your choice as a backup by clicking the :guilabel:`Backup config files` button.
+
+.. figure:: /_static/images/ex-installer/ex_cs_backup.png
+   :alt: EX-Installer - Backup
+   :scale: 40%
+   :align: center
+
+   EX-Installer - Backup Option
+
+You will be prompted to select a folder, and if the chosen folder already contains config files, you can overwrite these, or you can select an alternative location.
+
+.. figure:: /_static/images/ex-installer/ex_cs_backup_select.png
+   :alt: EX-Installer - Backup select folder
+   :scale: 40%
+   :align: left
+
+   EX-Installer - Select backup folder
+
+.. figure:: /_static/images/ex-installer/ex_cs_backup_overwrite.png
+   :alt: EX-Installer - Overwrite existing files
+   :scale: 40%
+   :align: center
+
+   EX-Installer - Overwrite existing backup
 
 |force-break|
 

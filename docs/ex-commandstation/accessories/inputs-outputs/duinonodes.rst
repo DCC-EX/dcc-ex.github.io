@@ -1,13 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
   
-************************************************
-*Under Development:* Lew's Duino Gear duinoNodes
-************************************************
+***************************
+Lew's Duino Gear duinoNodes
+***************************
 
 |tinkerer| |engineer| |githublink-ex-commandstation-button2|
 
-|NOT-IN-PROD-VERSION|
+|NEW-IN-V5|
 
 .. sidebar::
 

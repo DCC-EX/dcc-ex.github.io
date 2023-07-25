@@ -96,6 +96,7 @@ DCC-EX Model Railroading
    :caption: EX-CommandStation Add-Ons
 
    ex-rail/index
+   trackmanager/index
    ex-turntable/index
    ex-ioexpander/index
    ex-fastclock/index

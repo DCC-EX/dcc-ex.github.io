@@ -75,6 +75,10 @@
    
   <span style="color:red">This feature is not available in the current 'Production' version</span>
 ..
+.. |NEW-IN-V5| raw:: html
+
+  <span style="color:blue">New in version 5!</span>
+..
 .. |DEPRECATED| raw:: html
    
   <span style="font-weight: bold; font-style: italic; color:red">Deprecated</span>

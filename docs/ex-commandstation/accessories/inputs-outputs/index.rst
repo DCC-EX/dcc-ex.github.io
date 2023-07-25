@@ -21,3 +21,4 @@ These pages outline the various different options available to expand the capabi
   /reference/hardware/gpio-module
   /reference/hardware/servo-module
   /ex-ioexpander/index
+  duinonodes

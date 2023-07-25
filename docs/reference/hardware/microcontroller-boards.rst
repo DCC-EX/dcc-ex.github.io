@@ -28,11 +28,12 @@ Current list of Microcontrollers
     /reference/hardware/microcontrollers/nano-every
     /reference/hardware/microcontrollers/teensy
     /reference/hardware/microcontrollers/wifi-mega
+    /reference/hardware/microcontrollers/microcontrollers
 
 Will you support other microcontrollers in the future?
 =======================================================
 
-Yes, that is on our :doc:`roadmap </about/roadmap>`, and the current state of progress can be found in our :doc:`features under development </under-development/index>` area. New microcontrollers being ported to include ESP32, SAMD21, and the STM32F4xx range as can be seen in :doc:`under development microcontrollers</under-development/microcontrollers>`.
+Yes, that is on our :doc:`roadmap </about/roadmap>`, and the current state of progress can be found in our :doc:`features under development </under-development/index>` area. New microcontrollers being ported to include ESP32, SAMD21, and the STM32F4xx range as can be seen in :doc:`/reference/hardware/microcontrollers/microcontrollers`.
 
 Boards that will NOT work
 ==========================

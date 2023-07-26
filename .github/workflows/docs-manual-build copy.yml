@@ -1,4 +1,4 @@
-name: v5 Docs - (manual)
+name: Version 5 Docs - (manual)
 
 on:
   workflow_dispatch:

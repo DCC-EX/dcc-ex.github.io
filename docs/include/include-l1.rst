@@ -70,7 +70,7 @@
       :alt: EX-MotorShield8874
       :scale: 30%
       :class: image-min-width-144
-      :target: ../this_needs_to_go_somewhere.html
+      :target: ../news/posts/20230806.html
 ..
 .. ................................................
 ..

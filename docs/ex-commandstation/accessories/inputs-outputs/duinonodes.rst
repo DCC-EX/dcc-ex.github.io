@@ -7,7 +7,7 @@ Lew's Duino Gear duinoNodes
 
 |tinkerer| |engineer| |githublink-ex-commandstation-button2|
 
-|NEW-IN-V5|
+|NEW-IN-V5-LOGO-SMALL|
 
 .. sidebar::
 

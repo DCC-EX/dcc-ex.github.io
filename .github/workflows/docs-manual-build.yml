@@ -1,8 +1,8 @@
-name: Version 5 Docs - (manual)
+name: Docs - (manual)
 
 on:
   workflow_dispatch:
-    branches: [ v5-release-docs ]
+    branches: [ sphinx ]
 
 jobs:
   build:

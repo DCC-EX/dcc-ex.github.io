@@ -1,6 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
-  
+|TRACKMANAGER-LOGO|
+
 *******************
 DCC-EX TrackManager
 *******************
@@ -355,7 +356,7 @@ All done through the free |DCC-EX| TrackManager commands.
 How Do I Get On Board with DCC-EX TrackManager ?
 =================================================
 
-To use TrackManger, you will need the current development version of |EX-CS| which you can obtain by following the directions in our :ref:`download/ex-commandstation:latest ex-commandstation unreleased development version` section.
+To use TrackManager, you will need the current development version of |EX-CS| which you can obtain by following the directions in our :ref:`download/ex-commandstation:latest ex-commandstation unreleased development version` section.
 
 We highly encourage you to join our Discord server to keep up to date on developments. Refer to :ref:`support/contact-us:contact us` for details on how to join.
 

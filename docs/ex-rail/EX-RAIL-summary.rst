@@ -144,8 +144,9 @@ Object definitions
       -  Define a virtual turnout that will be visible to throttles, but refer to an automation sequence rather than a physical turnout/point.
     * -  SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
       -  Define a servo signal
+    * -  DCC-SIGNAL(id, addr, sub_addr )
+      -  |NEW-IN-V5| The SIGNAL (and DCC_SIGNAL etc) are used to define a signal object which can be later set to RED /AMBER/GREEN and tested for state (IFRED etc). 
 
-|
 
 Flow control functions
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -199,8 +200,9 @@ Flow control functions
       -  Provides alternative logic to any IF related command returning False
     * -  ENDIF
       -  Required to end an IF/IFNOT/etc (Used in all IF.. functions)
-
-|
+    * -  IFLOCO( loco_id )
+      -  |NEW-IN-V5| Within an Automation sequence the IFLOCO(loco_id) provides a branch or alternate path or action for specified loco
+  
 
 Command Station functions
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -238,8 +240,16 @@ Command Station functions
       -  Writes direct to Serial2
     * -  SERIAL3( msg )
       -  Writes direct to Serial3
+    * -  SERIAL4( msg )
+      -  |NEW-IN-V5| Writes direct to Serial4 on ESP type microcontrollers
+    * -  SERIAL5( msg )
+      -  |NEW-IN-V5| Writes direct to Serial5 on ESP type microcontrollers
+    * -  Serial6( msg )
+      -  |NEW-IN-V5| Writes direct to Serial6 on ESP type microcontrollers
+    * -  KILLALL
+      -  |NEW-IN-V5| Immediately stops all automations and stops all locos on the tracks.
+ 
 
-|
 
 EX-RAIL functions
 ^^^^^^^^^^^^^^^^^
@@ -270,7 +280,9 @@ EX-RAIL functions
     * -  PARSE ( command_string)
       -  |NEW-IN-V5| Processes the command_string as if it had been sent in by a throttle or typed into the USB serial e.g. PARSE("<1 JOIN>")
          | This is much less efficient than using an equivalent EXRAIL command. So don't use it for anything that EX-RAIL can do directly. 
-
+    * -  DRIVE( analog_pin )
+      -  | ***Under Construction*** Not complete, DO NOT USE 
+         | |NOT-IN-PROD-VERSION|
 
 |
 
@@ -357,12 +369,19 @@ Event handlers
     * -  ONDEACTIVATEL( linear )
       -  Event handler for linear DCC accessory packet value 0
     * -  ONCHANGE( id )
-      -  | Event handler for a sensor changing state
-         | |NOT-IN-PROD-VERSION|
+      -  |NEW-IN-V5| Event handler for a sensor changing state
     * -  ONCLOCKTIME( hh, mm )
-      -  | Event handler for an event based on a time generated using EX-FastClock
-         | |NOT-IN-PROD-VERSION|
-  
+      -  |NEW-IN-V5| Event handler for an event based on a time generated using EX-FastClock
+    * -  ONCLOCKMINS( mins )
+      -  |NEW-IN-V5| Event handler for an event based on a time generated using EX-FastClock
+    * -  ONTIME( value )
+      -  |NEW-IN-V5| Event handler for an event based on system time
+    * -  ONRED( signal_id )
+      -  |NEW-IN-V5| Event handler for a signal changing state
+    * -  ONAMBER( signal_id )
+      -  |NEW-IN-V5| Event handler for a signal changing state 
+    * -  ONGREEN( signal_id )
+      -  |NEW-IN-V5| Event handler for a signal changing state
 
 |
 
@@ -412,3 +431,4 @@ Action output functions
       -  Sends a DCC accessory packet with value 0
     * -  DEACTIVATEL( addr )
       -  Sends a DCC accessory packet with value 0 to a linear address
+

@@ -20,22 +20,22 @@ Welcome to DCC-EX TrackManager
 
 A first for the DCC & DC model railroading world.
 
-A Dual Digital Command & Control Station for both (DCC) and analogue (DC) layouts.
+A Dual Digital Command & Control Station for both **DCC** and **analogue (DC)** layouts.
 
 With just a single |EX-CS| and a |DCC-EX| compatible throttle you can simultaneously run both your DCC Locos and analogue DC Locos or 'Cabs' with road number IDs as throttle addresses from 1 to 10239 to control and drive them on multiple separate insulated tracks/districts.
 
-Throttle Compatibility
+Any throttle that connect to an |EX-CS| can control analogue (DC) locos just as easily as DCC locos. Throttle Compatibility:
 
-  * WiFi Throttles
-  * The DCC-EX  browser based EX-WebThrottle
+  * WiFi Throttles (e.g. |Engine Driver|, |wiThrottle| and many others)
+  * The DCC-EX browser based |EX-WT|
   * Other wired throttles to operate your DCC layout and your DC layout, either separately or a simultaneous combination of the two modes
 
 |EX-CS| with TrackManager includes the following features: 
 
-  * DCC track modes of MAIN, PROG, and OFF
-  * DC track modes of DC, DCX (DC Reversed Polarity), and OFF
+  * DCC track modes of ``MAIN``, ``PROG``, and ``OFF``
+  * DC track modes of ``DC``, ``DCX`` (DC Reversed Polarity), and ``OFF``
 
-|EX-CS| development version v.4.2.50+ supports both DCC (PWM) and DC (PWM) Pulse Width Modulation modes as an *embedded standard feature*.
+|EX-CS| development version v.4.2.50+ and |EX-CS| **production version 5.0+** support both DCC (PWM) and DC (PWM) Pulse Width Modulation modes as an *embedded standard feature*.
 TrackManager allows you to set up and operate up to eight separate dual insulated sections of track/districts in either DCC (PWM) and or DC (PWM) as tracks A - H.
 
 An Arduino Mega (with or without WiFi) and Standard L298P Motor Shield |EX-CS| has two ready to run Tracks A & B which can be configured as:
@@ -50,7 +50,7 @@ One key difference to note in comparing DCC vs. DC is that in DCC mode, forward/
 
 .. warning:: 
 
-  This feature is under active development, meaning commands, features, and behavior may change without notice. While we endeavor to keep these features functional, our development releases are updated regularly and we cannot guarantee there are no bugs that will have unexpected results.
+  This feature is under active development, meaning commands, features, and behaviour may change without notice. While we endeavour to keep these features functional, our development releases are updated regularly and we cannot guarantee there are no bugs that will have unexpected results.
 
   If using our development release and, especially, the TrackManager feature, we highly recommend keeping in touch with conversations and developments via our `Discord server <https://discord.gg/PuPnNMp8Qf>`_.
 
@@ -117,7 +117,7 @@ And no we’re not using another Expensive DCC decoder under the table on each T
 
 .. note:: 
   
-  When specifying a DC or DCX cab ID, do not use one of your existing locomotive DCC addresses or road number IDs, otherwise a command sent to control a Cab on that DC or DCX track will also operate your DCC Loco with the same address, unless you intentinally do so.
+  When specifying a DC or DCX cab ID, do not use one of your existing locomotive DCC addresses or road number IDs, otherwise a command sent to control a Cab on that DC or DCX track will also operate your DCC Loco with the same address, unless you intentionally do so.
 
 Hardware Requirements and Technical Notes
 =========================================
@@ -149,7 +149,7 @@ Using TrackManager with simple easy commands from a throttle or from a serial mo
 
 This allows a throttle on track B set to DCX to operate in forward and reverse correctly for west bound engines
 
-So, you can take a standard DC motor only engines Cab road number on the side of the engine and assign it to one or more of up to 8 tracks/districts/blocks labeled A thru H then enter that same number into a throttle and control that Loco Cab # on each and every one of the assigned tracks.
+So, you can take a standard DC motor only engines Cab road number on the side of the engine and assign it to one or more of up to 8 tracks/districts/blocks labelled A thru H then enter that same number into a throttle and control that Loco Cab # on each and every one of the assigned tracks.
 
   * Valid Cab addresses are 1 to 10239.
   * Invalid Cab address is 0 zero.

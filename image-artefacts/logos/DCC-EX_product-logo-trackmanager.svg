@@ -30,7 +30,7 @@
      inkscape:window-y="-11"
      inkscape:window-x="2869"
      inkscape:cy="567.14189"
-     inkscape:cx="-138.63468"
+     inkscape:cx="747.78709"
      inkscape:zoom="0.23803567"
      showgrid="false"
      id="namedview42"
@@ -237,9 +237,9 @@
      inkscape:export-ydpi="27.552528"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan8754"><tspan
+       id="tspan8822"><tspan
          style="fill:#00353d"
-         id="tspan8752">Track Manager</tspan></tspan></text><text
+         id="tspan8820">TrackManager</tspan></tspan></text><text
      xml:space="preserve"
      id="text2480-6-0-6-4"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:88.1171px;line-height:1.25;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect2482-4-7-6-3);display:inline;fill:#000000;fill-opacity:1;stroke:none"
@@ -249,11 +249,11 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan8760"><tspan
+       id="tspan8828"><tspan
          style="fill:#00353d"
-         id="tspan8756">DCC-</tspan><tspan
+         id="tspan8824">DCC-</tspan><tspan
          style="fill:#00a3b9"
-         id="tspan8758">EX</tspan></tspan></text><path
+         id="tspan8826">EX</tspan></tspan></text><path
      d="M 910.02466,466.51298 H 2096.0679"
      stroke="#000000"
      stroke-width="5.45568"

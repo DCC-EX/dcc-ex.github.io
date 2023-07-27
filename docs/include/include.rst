@@ -50,6 +50,9 @@
 
   <span style="font-weight: bold; color: #00353d; font-size: 100%;">BaseStationClassic (DCC++)</span>
 ..
+.. |TM| raw:: html
+
+  <span style="font-weight: bold; color: #00353d; font-size: 110%;">TrackManager</span>
 .. |br| raw:: html
 
   <br />

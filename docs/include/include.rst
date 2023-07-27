@@ -184,6 +184,11 @@
       :scale: 40%
       :class: image-product-logo-float-right
 ..
+.. |TRACKMANAGER-LOGO| image:: /_static/images/logos/product-logo-trackmanager.png
+      :alt: DCC-EX Track Manager
+      :scale: 40%
+      :class: image-product-logo-float-right
+..
 .. ................................................
 ..
 .. |EX-BP-LOGO-SMALL| image:: /_static/images/logos/product-logo-bigpicture.png

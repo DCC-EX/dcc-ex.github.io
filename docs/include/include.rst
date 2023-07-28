@@ -50,6 +50,9 @@
 
   <span style="font-weight: bold; color: #00353d; font-size: 100%;">BaseStationClassic (DCC++)</span>
 ..
+.. |TM| raw:: html
+
+  <span style="font-weight: bold; color: #00353d; font-size: 110%;">TrackManager</span>
 .. |br| raw:: html
 
   <br />
@@ -184,6 +187,11 @@
       :scale: 40%
       :class: image-product-logo-float-right
 ..
+.. |TRACKMANAGER-LOGO| image:: /_static/images/logos/product-logo-trackmanager.png
+      :alt: DCC-EX Track Manager
+      :scale: 40%
+      :class: image-product-logo-float-right
+..
 .. ................................................
 ..
 .. |EX-BP-LOGO-SMALL| image:: /_static/images/logos/product-logo-bigpicture.png
@@ -232,6 +240,14 @@
 .. |Station Mode| replace::
 
     :doc:`Station Mode </reference/glossary>`
+..
+.. |Arduino IDE| replace::
+
+    :doc:`Arduino IDE </reference/glossary>`
+..
+.. |VSC| replace::
+
+    :doc:`Visual Studio Code (VSC) </reference/glossary>`
 ..
 .. ...............................................
 ..

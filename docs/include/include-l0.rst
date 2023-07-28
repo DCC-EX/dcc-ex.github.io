@@ -66,6 +66,12 @@
       :class: image-min-width-144
       :target: ./reference/hardware/motorboards/ex-motor-shield-8874.html
 ..
+.. |TRACKMANAGER-LOGO-SMALL| image:: /_static/images/logos/product-logo-trackmanager.png
+      :alt: DCC-EX TrackManager
+      :scale: 30%
+      :class: image-min-width-144
+      :target: ./trackmanager/index.html
+..
 .. |NEW-IN-V5-LOGO-SMALL| image:: /_static/images/logos/new_in_version_5.png
       :alt: EX-MotorShield8874
       :scale: 30%

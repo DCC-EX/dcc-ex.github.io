@@ -13,6 +13,7 @@
    width="4500"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -37,9 +38,9 @@
      inkscape:window-maximized="1"
      inkscape:window-y="-11"
      inkscape:window-x="2869"
-     inkscape:cy="-96.624174"
-     inkscape:cx="1972.3935"
-     inkscape:zoom="0.23803567"
+     inkscape:cy="674.32432"
+     inkscape:cx="2263.5909"
+     inkscape:zoom="0.33663327"
      showgrid="false"
      id="namedview42"
      inkscape:window-height="1244"
@@ -77,6 +78,30 @@
   </mask>
   <defs
      id="defs38">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3778">
+      <stop
+         style="stop-color:#00a3b9;stop-opacity:0;"
+         offset="0"
+         id="stop3776" />
+      <stop
+         style="stop-color:#00a3b9;stop-opacity:1;"
+         offset="1"
+         id="stop3774" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2942">
+      <stop
+         style="stop-color:#00353d;stop-opacity:1;"
+         offset="0"
+         id="stop2938" />
+      <stop
+         style="stop-color:#00a3b9;stop-opacity:1;"
+         offset="1"
+         id="stop2940" />
+    </linearGradient>
     <rect
        x="-647.58897"
        y="1099.1189"
@@ -269,6 +294,26 @@
        width="1039.0117"
        height="116.82903"
        id="rect2482-4-7-6-6" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2942"
+       id="linearGradient2944"
+       x1="204.56807"
+       y1="1388.7152"
+       x2="663.57908"
+       y2="1388.7152"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3778"
+       id="radialGradient3782"
+       cx="492.96515"
+       cy="442.70355"
+       fx="492.96515"
+       fy="442.70355"
+       r="406.07108"
+       gradientTransform="matrix(1,0,0,0.9994076,0,0.26225672)"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <rect
      style="fill:#ffffff;fill-opacity:1;stroke:#00353d;stroke-width:26.9056;stroke-dasharray:none;stop-color:#000000;stroke-opacity:1"
@@ -281,6 +326,14 @@
      inkscape:export-filename="..\..\docs\_static\images\logos\rect46006.png"
      inkscape:export-xdpi="17.060751"
      inkscape:export-ydpi="17.060751" />
+  <path
+     style="fill:none;stroke:#00353d;stroke-width:38;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 301.47533,116.74601 116.0276,54.146 75.9454,-106.182701 73.1326,104.776301 114.6211,-49.2236 11.2513,123.0594 126.5754,13.3609 -51.3332,116.0276 103.36987,74.539 -106.18267,72.4293 54.146,114.6212 -127.9818,12.6574 -10.1965,124.8177 -114.9727,-50.9819 -74.8906,100.5574 -72.4294,-100.5574 -116.3792,52.7399 -10.8994,-126.5757 -128.6853,-11.9542 52.0367,-115.3244 -100.5574,-75.2422 101.9638,-73.1325 -54.1463,-116.7308 129.0369,-9.4933 z"
+     id="path18441" />
+  <path
+     style="fill:url(#radialGradient3782);stroke:none;stroke-width:32.127;stroke-dasharray:none;fill-opacity:1"
+     d="m 301.47533,116.74601 116.0276,54.146 75.9454,-106.182701 73.1326,104.776301 114.6211,-49.2236 11.2513,123.0594 126.5754,13.3609 -51.3332,116.0276 103.36987,74.539 -106.18267,72.4293 54.146,114.6212 -127.9818,12.6574 -10.1965,124.8177 -114.9727,-50.9819 -74.8906,100.5574 -72.4294,-100.5574 -116.3792,52.7399 -10.8994,-126.5757 -128.6853,-11.9542 52.0367,-115.3244 -100.5574,-75.2422 101.9638,-73.1325 -54.1463,-116.7308 129.0369,-9.4933 z"
+     id="path441" />
   <text
      xml:space="preserve"
      id="text4021"
@@ -295,45 +348,40 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan2902"><tspan
+       id="tspan4754"><tspan
          style="font-size:66.3716px;stroke:none"
-         id="tspan2894">in</tspan><tspan
+         id="tspan4746">in</tspan><tspan
          style="font-size:66.3716px"
-         id="tspan2896"> </tspan><tspan
+         id="tspan4748"> </tspan><tspan
          style="fill:#00a3b9;stroke:none"
-         id="tspan2898">EX-</tspan><tspan
-         style="stroke:#00353d"
-         id="tspan2900">CommandStation</tspan></tspan></text>
+         id="tspan4750">EX-</tspan><tspan
+         style="fill:#00353d;stroke:#00353d"
+         id="tspan4752">CommandStation</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text2480-6-0-6-9"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:88.1171px;line-height:1.25;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect2482-4-7-6-6);display:inline;fill:#000000;fill-opacity:1;stroke:#00a3b9;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:88.1171px;line-height:1.25;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect2482-4-7-6-6);display:inline;fill:url(#linearGradient2944);fill-opacity:1;stroke:none;stroke-opacity:1"
      transform="matrix(5.6160942,0,0,5.6160942,-157.33484,-7216.1725)"
      inkscape:export-filename="D:\users\akers\documents\_personal -D\DCC-EX\product-logo-ex-turntable.png"
      inkscape:export-xdpi="18.431187"
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan2906"><tspan
-         style="fill:#00a3b9"
-         id="tspan2904">Version 5</tspan></tspan></text>
+       id="tspan4756">Version 5</tspan></text>
   <text
      xml:space="preserve"
      id="text4777"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:Impact;-inkscape-font-specification:Impact;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect4779);display:inline;fill:#000000;fill-opacity:1;stroke:none" />
-  <path
-     style="fill:none;stroke:#00a3b9;stroke-width:32.127;stroke-dasharray:none"
-     d="m 301.47533,116.74601 116.0276,54.146 75.9454,-106.182701 73.1326,104.776301 114.6211,-49.2236 11.2513,123.0594 126.5754,13.3609 -51.3332,116.0276 103.36987,74.539 -106.18267,72.4293 54.146,114.6212 -127.9818,12.6574 -10.1965,124.8177 -114.9727,-50.9819 -74.8906,100.5574 -72.4294,-100.5574 -116.3792,52.7399 -10.8994,-126.5757 -128.6853,-11.9542 52.0367,-115.3244 -100.5574,-75.2422 101.9638,-73.1325 -54.1463,-116.7308 129.0369,-9.4933 z"
-     id="path441" />
   <text
      xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:285.82px;font-family:Arial;-inkscape-font-specification:'Arial, Italic Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:none;stroke:#00a3b9;stroke-width:16.1593"
-     x="245.23874"
-     y="554.96375"
-     id="text497"><tspan
+     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:300.013px;font-family:Arial;-inkscape-font-specification:'Arial, Italic Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:11.085;stroke-dasharray:none;stroke-opacity:1"
+     x="267.95862"
+     y="506.63174"
+     id="text497"
+     transform="scale(0.88713812,1.1272202)"><tspan
        sodipodi:role="line"
        id="tspan495"
-       x="245.23874"
-       y="554.96375"
-       style="stroke-width:16.1593">New</tspan></text>
+       x="267.95862"
+       y="506.63174"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:300.013px;font-family:Arial;-inkscape-font-specification:'Arial, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:11.085;stroke-dasharray:none;stroke-opacity:1">NEW</tspan></text>
 </svg>

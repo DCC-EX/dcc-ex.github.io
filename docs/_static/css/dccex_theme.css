@@ -536,6 +536,17 @@ img.sd-card-img-top {
   font-weight: bold !important;
 }
 
+.dcc-ex-red-bold-italic {
+  color:red;
+  font-weight: bold !important;
+  font-style: italic !important;
+}
+
+.dcc-ex-code {
+  color:#ba2121;
+  font-weight: bold !important;
+}
+
 .dcc-ex-text-size-80pct {
   font-size: 80% !important;
 }

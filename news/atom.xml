@@ -2,10 +2,35 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2023-07-21T09:09:43.749022+00:00</updated>
+  <updated>2023-07-28T22:05:27.138008+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.3">ABlog</generator>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20230728.html</id>
+    <title>No support planned for the Uno R4 or Giga</title>
+    <updated>2023-07-28T00:00:00+00:00</updated>
+    <author>
+      <name>Fred (FrightRisk)</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="no-support-planned-for-the-uno-r4-or-giga"&gt;
+
+&lt;p&gt;Like you, we get excited when a new product is announced and can’t wait to play with it. As beta testers (called the Arduino Early Experience Program), we are privileged to test these boards before they are released. While both the Uno R4 and Giga are advancements to the Arduino platform, and great products, DCC-EX has no plans to support them at this time. You, however, are free to work with the team on a port and we will provide you with support and help if you feel up to the task. For why it does not make sense for us to support these boards (at least right now), continue reading.&lt;/p&gt;
+&lt;p&gt;It is unfortunate (for us) that Arduino chose to carry on the “Uno” name with the Uno R4 board. The “R4” designator would create the impression that this is just “rev 4” of the old Uno Rev3. We all know from experience with versions of things that 4 comes after 3 and so this is just a faster, better Uno, right? Not quite. At least the new Giga was not called the Mega R4, though at $73 US, it is cost prohibitive for a command station.&lt;/p&gt;
+&lt;p&gt;The Uno R4 is about as similar to the old Uno as a PC is to a Mac. It is the same size and has the same orientation of GPIO for attaching shields, but uses a completely different microcontroller (2 actually), from completely different manufacturers, using completely different architectures.&lt;/p&gt;
+&lt;p&gt;It is one thing to run a blink sketch on these new boards, but a completely different task trying to port software as involved at the hardware level as the EX-CommandStation. The R4 uses a different core library with limited support since many libraries still have to be rewritten. So it will take some time for support to build.&lt;/p&gt;
+&lt;p&gt;With design limitations of the R4, only a modest increase in memory and speed, and higher cost ($28 US), it isn’t the best option when we already support the faster, less expensive ESPDuino32 (only $5-$10). We are also currently in beta test with the ST Micro Nucleo boards, including one with 144 GPIO pins and an Ethernet connection. These cost just $12 to $24 depending on the board and have an integrated debugger with a separate processor right on the board!&lt;/p&gt;
+&lt;p&gt;All that said, we would still enjoy being able to run on Arduino boards whenever possible. As mentioned above, we are open to working with anyone with the time and talent who thinks they can port our software to these new boards. We can provide direction, code snippets, code reviews, and access to the team. In the meantime, we encourage everyone to take a look at our list of &lt;a class="reference external" href="https://dcc-ex.com/ex-commandstation/advanced-setup/supported-microcontrollers/index.html#supported-microcontrollers"&gt;Supported Microcontrollers&lt;/a&gt;&lt;/p&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20230728.html" rel="alternate"/>
+    <summary>Like you, we get excited when a new product is announced and can’t wait to play with it. As beta testers (called the Arduino Early Experience Program), we are privileged to test these boards before they are released. While both the Uno R4 and Giga are advancements to the Arduino platform, and great products, DCC-EX has no plans to support them at this time. You, however, are free to work with the team on a port and we will provide you with support and help if you feel up to the task. For why it does not make sense for us to support these boards (at least right now), continue reading.</summary>
+    <category term="dcc-ex" label="dcc-ex"/>
+    <category term="ex-commandstation" label="ex-commandstation"/>
+    <category term="news" label="news"/>
+    <published>2023-07-28T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>https://dcc-ex.com/news/posts/20230702.html</id>
     <title>DCC-EX has a new installer!</title>

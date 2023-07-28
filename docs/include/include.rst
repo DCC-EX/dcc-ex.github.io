@@ -241,6 +241,14 @@
 
     :doc:`Station Mode </reference/glossary>`
 ..
+.. |Arduino IDE| replace::
+
+    :doc:`Arduino IDE </reference/glossary>`
+..
+.. |VSC| replace::
+
+    :doc:`Visual Studio Code (VSC) </reference/glossary>`
+..
 .. ...............................................
 ..
 .. |githublink-ex-turntable| raw:: html

@@ -42,7 +42,7 @@ Conventions used on this page
 - CAPITALISED words - These are EX-RAIL commands and are case sensitive
 - lowercase words within () - These are EX-RAIL parameters that must be provided, with multiple parameters separated by a comma ",", for example SEQUENCE(id) or DELAYRANDOM(min_delay, max_delay)
 - Quoted "text" - Text within quote marks "" are used as descriptions, and must include the quote characters, for example ROUTE(id, "description") becomes ROUTE(1, "This is the route description")
-- Square brackets [] - Parameters within square brackets [] are optional and may be ommitted. If specifying these parameters, do not include the square brackets themselves, for example ALIAS(name[, value]) becomes ALIAS(MY_ALIAS) or ALIAS(MY_ALIAS, 3)
+- Square brackets [] - Parameters within square brackets [] are optional and may be omitted. If specifying these parameters, do not include the square brackets themselves, for example ALIAS(name[, value]) becomes ALIAS(MY_ALIAS) or ALIAS(MY_ALIAS, 3)
 - \| - Use of the \| character means you need to provide one of the provided options only, for example ``<D POWER ON|OFF>`` becomes either ``<D POWER ON>`` or ``<D POWER OFF>``
 
 Command Summary
@@ -83,8 +83,6 @@ There are some diagnostic and control commands added to the <tag> language norma
       -  Lock sensor ON, preventing external influence
     * -  </ UNLATCH sensor_id>
       -  Unlock sensor, returning to current external state
-    * -  </ ROUTES>
-      -  ***Under Construction*** Returns the Routes & Automations control list in WiThrottle format. JMRI integration only!
     * -  </ RED signal_id>
       -  Set the specified signal red
     * -  </ AMBER signal_id>
@@ -131,7 +129,7 @@ Object definitions
     * -  ALIAS( name[, value ])
       -  Assign names to values. Can go anywhere in the script
     * -  SIGNAL( red_pin, amber_pin, green_pin )
-      -  Define a signal (RED/AMBER/GREEN commands always use the first red_pin as the signal_id for All signal colors)
+      -  Define a signal (RED/AMBER/GREEN commands always use the first red_pin as the signal_id for All signal colours)
     * -  SIGNALH(redpin, amberpin, greenpin)
       -  Same as signal but for active-HIGH LEDs
     * -  TURNOUT( id, addr, sub_addr [, "description"] )
@@ -197,7 +195,7 @@ Flow control functions
       -  Tests if signal is green
     * -  IFRE( id, value )
       -  | Tests if a rotary encoder is at the specified position
-         | |NOT-IN-PROD-VERSION|
+         | |NEW-IN-V5|
     * -  ELSE
       -  Provides alternative logic to any IF related command returning False
     * -  ENDIF
@@ -217,10 +215,10 @@ Command Station functions
       -  Description
     * -  POWERON
       -  | Power on track, will UNJOIN programming from main
-         | |NOT-IN-PROD-VERSION|
+         | |NEW-IN-V5|
     * -  POWEROFF
       -  | Power off track
-         | |NOT-IN-PROD-VERSION|
+         | |NEW-IN-V5|
     * -  JOIN
       -  Joins PROG and MAIN track outputs to send the same MAIN DCC signal on both tracks
     * -  UNJOIN
@@ -275,10 +273,7 @@ EX-RAIL functions
     * -  PARSE ( command_string)
       -  | Processes the command_string as if it had been sent in by a throttle or typed into the USB serial e.g. PARSE("<1 JOIN>")
          | This is much less efficient than using an equivalent EXRAIL command. So don't use it for anything that EX-RAIL can do directly.
-         | |NOT-IN-PROD-VERSION|     
-    * -  DRIVE( analog_pin )
-      -  | ***Under Construction*** Not complete, DO NOT USE 
-         | |NOT-IN-PROD-VERSION|
+         | |NEW-IN-V5|     
 
 |
 
@@ -365,11 +360,14 @@ Event handlers
     * -  ONDEACTIVATEL( linear )
       -  Event handler for linear DCC accessory packet value 0
     * -  ONCHANGE( id )
-      -  | Event handler for a sensor changing state
-         | |NOT-IN-PROD-VERSION|
+      -  | Event handler for a sensor changing state (Rotary Encoder Only)
+         | |NEW-IN-V5|
     * -  ONCLOCKTIME( hh, mm )
       -  | Event handler for an event based on a time generated using EX-FastClock
-         | |NOT-IN-PROD-VERSION|
+         | |NEW-IN-V5|
+    * -  ONCLOCKMINS( mm )
+      -  | Event handler for an event based on a time generated using EX-FastClock. eEvent called every hour at "mins" past the hour.
+         | |NEW-IN-V5|
   
 
 |

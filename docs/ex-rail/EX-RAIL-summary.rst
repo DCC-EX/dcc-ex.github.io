@@ -280,9 +280,7 @@ EX-RAIL functions
     * -  PARSE ( command_string)
       -  |NEW-IN-V5| Processes the command_string as if it had been sent in by a throttle or typed into the USB serial e.g. PARSE("<1 JOIN>")
          | This is much less efficient than using an equivalent EXRAIL command. So don't use it for anything that EX-RAIL can do directly. 
-    * -  DRIVE( analog_pin )
-      -  | ***Under Construction*** Not complete, DO NOT USE 
-         | |NOT-IN-PROD-VERSION|
+
 
 |
 

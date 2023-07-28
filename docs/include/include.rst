@@ -59,6 +59,8 @@
 ..
 .. role:: dcc-ex-red
 .. role:: dcc-ex-red-bold
+.. role:: dcc-ex-red-bold-italic
+.. role:: dcc-ex-code
 ..
 .. role:: dcc-ex-text-size-80pct
 .. role:: dcc-ex-text-size-60pct

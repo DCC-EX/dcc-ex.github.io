@@ -1,0 +1,29 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+
+:blogpost: true
+:date: 28 July, 2023
+:author: Fred (FrightRisk)
+:category: News
+:tags: news, dcc-ex, ex-commandstation
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+No support planned for the Uno R4 or Giga
+============================================
+
+Like you, we get excited when a new product is announced and can't wait to play with it. As beta testers (called the Arduino Early Experience Program), we are privileged to test these boards before they are released. While both the Uno R4 and Giga are advancements to the Arduino platform, and great products, DCC-EX has no plans to support them at this time. You, however, are free to work with the team on a port and we will provide you with support and help if you feel up to the task. For why it does not make sense for us to support these boards (at least right now), continue reading.
+
+It is unfortunate (for us) that Arduino chose to carry on the "Uno" name with the Uno R4 board. The "R4" designator would create the impression that this is just "rev 4" of the old Uno Rev3. We all know from experience with versions of things that 4 comes after 3 and so this is just a faster, better Uno, right? Not quite. At least the new Giga was not called the Mega R4, though at $73 US, it is cost prohibitive for a command station.
+
+The Uno R4 is about as similar to the old Uno as a PC is to a Mac. It is the same size and has the same orientation of GPIO for attaching shields, but uses a completely different microcontroller (2 actually), from completely different manufacturers, using completely different architectures.
+
+It is one thing to run a blink sketch on these new boards, but a completely different task trying to port software as involved at the hardware level as the EX-CommandStation. The R4 uses a different core library with limited support since many libraries still have to be rewritten. So it will take some time for support to build.
+
+With design limitations of the R4, only a modest increase in memory and speed, and higher cost ($28 US), it isn't the best option when we already support the faster, less expensive ESPDuino32 (only $5-$10). We are also currently in beta test with the ST Micro Nucleo boards, including one with 144 GPIO pins and an Ethernet connection. These cost just $12 to $24 depending on the board and have an integrated debugger with a separate processor right on the board!
+
+All that said, we would still enjoy being able to run on Arduino boards whenever possible. As mentioned above, we are open to working with anyone with the time and talent who thinks they can port our software to these new boards. We can provide direction, code snippets, code reviews, and access to the team. In the meantime, we encourage everyone to take a look at our list of `Supported Microcontrollers <https://dcc-ex.com/ex-commandstation/advanced-setup/supported-microcontrollers/index.html#supported-microcontrollers>`_

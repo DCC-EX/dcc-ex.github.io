@@ -2,9 +2,9 @@
 .. include:: /include/include-l1.rst
 |TRACKMANAGER-LOGO|
 
-*******************
-DCC-EX TrackManager
-*******************
+***********************
+TrackManager (DCC & DC)
+***********************
 
 |tinkerer| |engineer| |githublink-ex-commandstation-button2|
 
@@ -19,11 +19,11 @@ DCC-EX TrackManager
 Welcome to DCC-EX TrackManager
 ===============================
 
-A first for the DCC & DC model railroading world.
+*A first for the DCC & DC model railroading world.*
 
-A Dual Digital Command & Control Station for both **DCC** and **analogue (DC)** layouts.
+|EX-CS| is now a dual **Command Station** for both **Digital Command Control (DCC)** and **analogue (DC)** layouts.
 
-With just a single |EX-CS| and a |DCC-EX| compatible throttle you can simultaneously run both your DCC Locos and analogue DC Locos or 'Cabs' with road number IDs as throttle addresses from 1 to 10239 to control and drive them on multiple separate insulated tracks/districts.
+With just a single |EX-CS| and a compatible throttle you can simultaneously run both your DCC Locos and analogue DC Locos with road number IDs as throttle addresses from 1 to 10239 to control and drive them on multiple separate insulated tracks/districts.
 
 Any throttle that connect to an |EX-CS| can control analogue (DC) locos just as easily as DCC locos. Throttle Compatibility:
 
@@ -36,7 +36,7 @@ Any throttle that connect to an |EX-CS| can control analogue (DC) locos just as 
   * DCC track modes of ``MAIN``, ``PROG``, and ``OFF``
   * DC track modes of ``DC``, ``DCX`` (DC Reversed Polarity), and ``OFF``
 
-|EX-CS| development version v.4.2.50+ and |EX-CS| **production version 5.0+** support both DCC (PWM) and DC (PWM) Pulse Width Modulation modes as an *embedded standard feature*.
+|EX-CS| **production version 5.0+** (devel v4.2.50+) supports both DCC (PWM) and DC (PWM) Pulse Width Modulation modes as an *embedded standard feature*.
 TrackManager allows you to set up and operate up to eight separate dual insulated sections of track/districts in either DCC (PWM) and or DC (PWM) as tracks A - H.
 
 An Arduino Mega (with or without WiFi) and Standard L298P Motor Shield |EX-CS| has two ready to run Tracks (**A** & **B**) which can be configured as:

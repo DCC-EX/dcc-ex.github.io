@@ -194,8 +194,7 @@ Flow control functions
     * -  IFGREEN( signal_id )
       -  Tests if signal is green
     * -  IFRE( id, value )
-      -  | Tests if a rotary encoder is at the specified position
-         | |NEW-IN-V5|
+      -  |NEW-IN-V5| Tests if a rotary encoder is at the specified position
     * -  ELSE
       -  Provides alternative logic to any IF related command returning False
     * -  ENDIF
@@ -214,11 +213,9 @@ Command Station functions
     * -  EX-RAIL Functions
       -  Description
     * -  POWERON
-      -  | Power on track, will UNJOIN programming from main
-         | |NEW-IN-V5|
+      -  |NEW-IN-V5| Power on track, will UNJOIN programming from main
     * -  POWEROFF
-      -  | Power off track
-         | |NEW-IN-V5|
+      -  |NEW-IN-V5| Power off track
     * -  JOIN
       -  Joins PROG and MAIN track outputs to send the same MAIN DCC signal on both tracks
     * -  UNJOIN
@@ -271,9 +268,8 @@ EX-RAIL functions
     * -  AUTOSTART
       -  A task is automatically started at this point during startup
     * -  PARSE ( command_string)
-      -  | Processes the command_string as if it had been sent in by a throttle or typed into the USB serial e.g. PARSE("<1 JOIN>")
-         | This is much less efficient than using an equivalent EXRAIL command. So don't use it for anything that EX-RAIL can do directly.
-         | |NEW-IN-V5|     
+      -  |NEW-IN-V5| Processes the command_string as if it had been sent in by a throttle or typed into the USB serial e.g. PARSE("<1 JOIN>")
+         | This is much less efficient than using an equivalent EXRAIL command. So don't use it for anything that EX-RAIL can do directly.      
 
 |
 

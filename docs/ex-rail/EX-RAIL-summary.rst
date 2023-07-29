@@ -357,14 +357,11 @@ Event handlers
     * -  ONDEACTIVATEL( linear )
       -  Event handler for linear DCC accessory packet value 0
     * -  ONCHANGE( id )
-      -  | Event handler for a sensor changing state (Rotary Encoder Only)
-         | |NEW-IN-V5|
+      -  | Event handler for a sensor changing state
+         | |NOT-IN-PROD-VERSION|
     * -  ONCLOCKTIME( hh, mm )
       -  | Event handler for an event based on a time generated using EX-FastClock
-         | |NEW-IN-V5|
-    * -  ONCLOCKMINS( mm )
-      -  | Event handler for an event based on a time generated using EX-FastClock. eEvent called every hour at "mins" past the hour.
-         | |NEW-IN-V5|
+         | |NOT-IN-PROD-VERSION|
   
 
 |

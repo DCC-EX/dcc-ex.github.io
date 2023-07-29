@@ -269,7 +269,7 @@ EX-RAIL functions
       -  A task is automatically started at this point during startup
     * -  PARSE ( command_string)
       -  |NEW-IN-V5| Processes the command_string as if it had been sent in by a throttle or typed into the USB serial e.g. PARSE("<1 JOIN>")
-         | This is much less efficient than using an equivalent EXRAIL command. So don't use it for anything that EX-RAIL can do directly.      
+         | This is much less efficient than using an equivalent EXRAIL command. So don't use it for anything that EX-RAIL can do directly. 
 
 
 |

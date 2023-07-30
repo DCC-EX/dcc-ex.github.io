@@ -274,6 +274,11 @@ svg {
   width: 20%;
 }
 
+.warning-float-right-wide {
+  float: right;
+  width: 60%;
+}
+
 .note-float-right {
   float: right;
   width: 40%;

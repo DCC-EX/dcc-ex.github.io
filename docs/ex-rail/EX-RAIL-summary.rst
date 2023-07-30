@@ -42,7 +42,7 @@ Conventions used on this page
 - CAPITALISED words - These are EX-RAIL commands and are case sensitive
 - lowercase words within () - These are EX-RAIL parameters that must be provided, with multiple parameters separated by a comma ",", for example SEQUENCE(id) or DELAYRANDOM(min_delay, max_delay)
 - Quoted "text" - Text within quote marks "" are used as descriptions, and must include the quote characters, for example ROUTE(id, "description") becomes ROUTE(1, "This is the route description")
-- Square brackets [] - Parameters within square brackets [] are optional and may be ommitted. If specifying these parameters, do not include the square brackets themselves, for example ALIAS(name[, value]) becomes ALIAS(MY_ALIAS) or ALIAS(MY_ALIAS, 3)
+- Square brackets [] - Parameters within square brackets [] are optional and may be omitted. If specifying these parameters, do not include the square brackets themselves, for example ALIAS(name[, value]) becomes ALIAS(MY_ALIAS) or ALIAS(MY_ALIAS, 3)
 - \| - Use of the \| character means you need to provide one of the provided options only, for example ``<D POWER ON|OFF>`` becomes either ``<D POWER ON>`` or ``<D POWER OFF>``
 
 Command Summary
@@ -129,7 +129,7 @@ Object definitions
     * -  ALIAS( name[, value ])
       -  Assign names to values. Can go anywhere in the script
     * -  SIGNAL( red_pin, amber_pin, green_pin )
-      -  Define a signal (RED/AMBER/GREEN commands always use the first red_pin as the signal_id for All signal colors)
+      -  Define a signal (RED/AMBER/GREEN commands always use the first red_pin as the signal_id for All signal colours)
     * -  SIGNALH(redpin, amberpin, greenpin)
       -  Same as signal but for active-HIGH LEDs
     * -  TURNOUT( id, addr, sub_addr [, "description"] )

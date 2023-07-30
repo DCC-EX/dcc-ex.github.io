@@ -59,6 +59,8 @@
 ..
 .. role:: dcc-ex-red
 .. role:: dcc-ex-red-bold
+.. role:: dcc-ex-red-bold-italic
+.. role:: dcc-ex-code
 ..
 .. role:: dcc-ex-text-size-80pct
 .. role:: dcc-ex-text-size-60pct
@@ -80,7 +82,7 @@
 ..
 .. |NEW-IN-V5| raw:: html
 
-  <span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5!</span>
+  <span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span>
 ..
 .. |DEPRECATED| raw:: html
    

@@ -282,7 +282,6 @@ EX-RAIL functions
          | This is much less efficient than using an equivalent EXRAIL command. So don't use it for anything that EX-RAIL can do directly. 
 
 
-
 |
 
 Loco DCC functions

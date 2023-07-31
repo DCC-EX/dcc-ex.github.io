@@ -119,11 +119,19 @@ DCC-EX Model Railroading
 .. toctree::
    :hidden:
    :maxdepth: 4
-   :caption: Reference
+   :caption: Detailed Information
 
    reference/index
    under-development/index
    projects/index
+
+.. toctree::
+   :hidden:
+   :maxdepth: 4
+   :caption: External References
+
+   external-references/index
+   reference/accessories/index
 
 .. toctree::
    :hidden:

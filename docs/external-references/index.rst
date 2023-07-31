@@ -28,5 +28,5 @@ Kevin C Smith
 
 If you're using Engine Driver direct WiFi connection then you can see a simple unedited TrackManager and EXRAIL demo here.
 
-* `DCC-EX Command Station with EXRAIL & TrackManager Part 1<https://m.youtube.com/watch?v=q58SyQ0eA7c>`_
-* `DCC-EX Command Station with EXRAIL & TrackManager Part 2<https://m.youtube.com/watch?v=-W-5n19eDOk>`_
+* `DCC-EX Command Station with EXRAIL & TrackManager Part 1 <https://m.youtube.com/watch?v=q58SyQ0eA7c>`_
+* `DCC-EX Command Station with EXRAIL & TrackManager Part 2 <https://m.youtube.com/watch?v=-W-5n19eDOk>`_

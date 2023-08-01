@@ -582,20 +582,21 @@
 <li><p><a class="reference internal" href="#hardware-requirements" id="id8">Hardware requirements</a></p></li>
 <li><p><a class="reference internal" href="#theory-of-operation" id="id9">Theory of operation</a></p>
 <ul>
-<li><p><a class="reference internal" href="#experimental-servo-and-led-fading" id="id10">Experimental Servo and LED fading</a></p></li>
+<li><p><a class="reference internal" href="#servo-control" id="id10">Servo control</a></p></li>
+<li><p><a class="reference internal" href="#led-dimming" id="id11">LED dimming</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#configuration" id="id11">Configuration</a></p>
+<li><p><a class="reference internal" href="#configuration" id="id12">Configuration</a></p>
 <ul>
-<li><p><a class="reference internal" href="#software-installation-process" id="id12">Software installation process</a></p></li>
-<li><p><a class="reference internal" href="#configure-i2c-address-via-serial" id="id13">Configure I2C address via serial</a></p></li>
-<li><p><a class="reference internal" href="#pin-vpin-allocation" id="id14">Pin/Vpin allocation</a></p></li>
-<li><p><a class="reference internal" href="#ex-commandstation-device-driver" id="id15">EX-CommandStation device driver</a></p></li>
-<li><p><a class="reference internal" href="#i2c-address" id="id16">I2C_ADDRESS</a></p></li>
-<li><p><a class="reference internal" href="#diag" id="id17">DIAG</a></p></li>
-<li><p><a class="reference internal" href="#diag-config-delay" id="id18">DIAG_CONFIG_DELAY</a></p></li>
-<li><p><a class="reference internal" href="#test-mode" id="id19">TEST_MODE</a></p></li>
-<li><p><a class="reference internal" href="#disable-i2c-pullups" id="id20">DISABLE_I2C_PULLUPS</a></p></li>
+<li><p><a class="reference internal" href="#software-installation-process" id="id13">Software installation process</a></p></li>
+<li><p><a class="reference internal" href="#configure-i2c-address-via-serial" id="id14">Configure I2C address via serial</a></p></li>
+<li><p><a class="reference internal" href="#pin-vpin-allocation" id="id15">Pin/Vpin allocation</a></p></li>
+<li><p><a class="reference internal" href="#ex-commandstation-device-driver" id="id16">EX-CommandStation device driver</a></p></li>
+<li><p><a class="reference internal" href="#i2c-address" id="id17">I2C_ADDRESS</a></p></li>
+<li><p><a class="reference internal" href="#diag" id="id18">DIAG</a></p></li>
+<li><p><a class="reference internal" href="#diag-config-delay" id="id19">DIAG_CONFIG_DELAY</a></p></li>
+<li><p><a class="reference internal" href="#test-mode" id="id20">TEST_MODE</a></p></li>
+<li><p><a class="reference internal" href="#disable-i2c-pullups" id="id21">DISABLE_I2C_PULLUPS</a></p></li>
 </ul>
 </li>
 </ul>
@@ -604,9 +605,15 @@
 <section id="introduction">
 <h2><a class="toc-backref" href="#id6" role="doc-backlink">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> is an additional microcontroller utilised to expand the I/O port capability of an <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> and connecting via I<sup>2</sup>C.</p>
-<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> can utilise digital input and output pins as well as analogue input pins, depending on the chosen microcontroller.</p>
-<p>There is also work in progress to enable using PWM capable pins to drive servos and control LED brightness.</p>
-<p>Rather than emulate any specific type of existing I/O expander, <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> has been written to integrate directly with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> via its own device driver, which is how both digital and analogue pins can easily be utilised on the same device, as well as utilising a device’s PWM capability to control servos and variable brightness LEDs.</p>
+<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> can be used for various different functions depending on the microcontroller in use:</p>
+<ul class="simple">
+<li><p>Reading from digital input pins</p></li>
+<li><p>Writing to digital output pins</p></li>
+<li><p>Reading from analogue input pins</p></li>
+<li><p>Controlling servos via the Arduino Servo library (Uno, Nano, and Mega only)</p></li>
+<li><p>Dimming LEDs</p></li>
+</ul>
+<p>Rather than emulate any specific type of existing I/O expander, <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> has been written to integrate directly with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> via its own device driver, which is how both digital and analogue pins can easily be utilised on the same device, as well as control servos and variable brightness LEDs.</p>
 <p>This page provides the general overview of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>, as well as outlining the configuration options available.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -637,23 +644,31 @@
 <p>To ensure the devices start with I/O pins in the safest possible state, all defined pins are set to input mode with pullups disabled by default. The pins stay in this state until they are configured explicitly via the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> device driver.</p>
 </div>
 <p>As per other I/O devices, <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> can function with both the <code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">...&gt;</span></code> sensor/input and <code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">...&gt;</span></code> output <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> commands, as well as the various <code class="docutils literal notranslate"><span class="pre">AT(),</span> <span class="pre">IF(),</span> <span class="pre">ATGTE(),</span> <span class="pre">IFGTE()</span></code> type <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> commands.</p>
-<section id="experimental-servo-and-led-fading">
-<h3><a class="toc-backref" href="#id10" role="doc-backlink">Experimental Servo and LED fading</a><a class="headerlink" href="#experimental-servo-and-led-fading" title="Permalink to this heading"></a></h3>
-<p>There is experimental PWM support to be used to drive servos and control LED brightness, enabling use of the <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SERVO</span> <span class="pre">...&gt;</span></code> command, along with the <code class="docutils literal notranslate"><span class="pre">SERVO()</span></code>, <code class="docutils literal notranslate"><span class="pre">SERVO_TURNOUT()</span></code>, <code class="docutils literal notranslate"><span class="pre">SERVO_SIGNAL()</span></code>, and <code class="docutils literal notranslate"><span class="pre">FADE()</span></code> <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> commands.</p>
+<section id="servo-control">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Servo control</a><a class="headerlink" href="#servo-control" title="Permalink to this heading"></a></h3>
+<p>There is now support for controlling servos via the Arduino Servo library for Arduino AVR platforms (Uno, Nano, and Mega only), or via hardware PWM pins on other platforms.</p>
+<p>This enables the use of the <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SERVO</span> <span class="pre">...&gt;</span></code> command, along with the <code class="docutils literal notranslate"><span class="pre">SERVO()</span></code>, <code class="docutils literal notranslate"><span class="pre">SERVO_TURNOUT()</span></code>, and <code class="docutils literal notranslate"><span class="pre">SERVO_SIGNAL()</span></code> <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> commands, along with being able to define servo based turnout objects on these devices.</p>
+<p>When using AVR based platforms that utilise the Servo library, the reported values for servo movements are from 544 to 2400, which is significantly different to the 100 to 400 in use by the PCA9685 servo modules. Experimentation will be required to determine the correct values for your servos. If you’re familiar with the library, we use the writeMicroseconds() function. Any digital pin can be used to control servos.</p>
+<p>When using other platforms, only hardware PWM pins can be used which need values from 0 to 255, and again experimentation will be required to determine the correct values for your servos. Note that using analogWrite() and direct hardware PWM pins is not an ideal scenario for operating servos, so we would recommend considering if there is a better solution for your needs. We outline which pins have hardware PWM support available on the <a class="reference internal" href="supported-devices.html"><span class="doc">Supported Devices</span></a> page.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>When using servos or fading LEDs with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>, you <em>must use values between 0 and 255</em> to control them, not the values documented for the PCA9685 servo modules, as those values are designed specifically for those modules.</p>
+<p>When using servos or fading LEDs with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>, you <em>must use the values as indicated above</em> to control them, not the values documented for the PCA9685 servo modules, as those values are designed specifically for those modules.</p>
+<p>Attempts were made to provide some sane mapping between the PCA9685 values and those required by the Servo library and hardware PWM pins, however the results were vastly different. It would be misleading to imply a value that works on one device could safely be mapped to a different value on a different and result in the same servo angle, even with the same exact servo in use.</p>
 <p>You must also ensure you provide sufficient power to run the servos, as well as have a large electrolytic capacitor across the 5V and Ground pins to ensure servo movements don’t cause the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device to reset due to brownouts in the power supply. A capacitor in the realm of 1000uF is recommended. It is not sufficient to power the servos from the USB interface, and an external 5V power supply must be used in the same way as outlined on the <a class="reference internal" href="../reference/hardware/servo-module.html"><span class="doc">Connecting a Servo Module</span></a> page.</p>
 </div>
-<p>You can only use pins defined as PWM hardware pins, as the current implementation uses the Arduino analogWrite() function, which relies on a hardware PWM pin being available. We outline which pins have hardware PWM support available on the <a class="reference internal" href="supported-devices.html"><span class="doc">Supported Devices</span></a> page.</p>
+</section>
+<section id="led-dimming">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">LED dimming</a><a class="headerlink" href="#led-dimming" title="Permalink to this heading"></a></h3>
+<p>Dimming LEDs is also possible utilising <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>, enabling the use of the <code class="docutils literal notranslate"><span class="pre">FADE()</span></code> <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> command.</p>
+<p>Valid values for LED brightness are from 0 (off) to 255 (fully on), and any digital pin on any platform can be used.</p>
 </section>
 </section>
 <section id="configuration">
-<h2><a class="toc-backref" href="#id11" role="doc-backlink">Configuration</a><a class="headerlink" href="#configuration" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Configuration</a><a class="headerlink" href="#configuration" title="Permalink to this heading"></a></h2>
 <p>Aside from configuring the I<sup>2</sup>C address of your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device, the device driver loaded in your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> will perform the necessary run time configuration at startup, meaning you should only ever need to update the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> software when a new version is available.</p>
 <p>Configuration changes for <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> are made by editing a “myConfig.h” file or writing to EEPROM if supported. An example “myConfig.example.h” file is included that can be copied and edited to suit. The only configuration item you should really need to consider is <a class="reference internal" href="#i2c-address"><span class="std std-ref">I2C_ADDRESS</span></a>.</p>
 <section id="software-installation-process">
-<h3><a class="toc-backref" href="#id12" role="doc-backlink">Software installation process</a><a class="headerlink" href="#software-installation-process" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Software installation process</a><a class="headerlink" href="#software-installation-process" title="Permalink to this heading"></a></h3>
 <section id="installation-via-ex-installer">
 <h4>Installation via EX-Installer<a class="headerlink" href="#installation-via-ex-installer" title="Permalink to this heading"></a></h4>
 <p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span> can be used to install both <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> and <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>. The process is the same for both, with the exception of the configuration options, therefore we will only outline the configuration options here. Refer to <a class="reference internal" href="../ex-installer/installing.html"><span class="doc">Using the Installer</span></a> for the full documentation on using <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span>.</p>
@@ -695,7 +710,7 @@
 </section>
 </section>
 <section id="configure-i2c-address-via-serial">
-<h3><a class="toc-backref" href="#id13" role="doc-backlink">Configure I2C address via serial</a><a class="headerlink" href="#configure-i2c-address-via-serial" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Configure I2C address via serial</a><a class="headerlink" href="#configure-i2c-address-via-serial" title="Permalink to this heading"></a></h3>
 <p>For devices with EEPROM support (Arduino Uno, Nano, and Mega), it is possible to configure the I<sup>2</sup>C address via the serial console rather than having to update “myConfig.h”, and therefore you should be able to simply upload the software without needing to edit any files at all.</p>
 <p>Be aware that this address will override any address defined in “myConfig.h”, and if using these devices, you do not need a “myConfig.h” file at all for normal operation.</p>
 <div class="admonition warning">
@@ -727,7 +742,7 @@
 </table>
 </section>
 <section id="pin-vpin-allocation">
-<h3><a class="toc-backref" href="#id14" role="doc-backlink">Pin/Vpin allocation</a><a class="headerlink" href="#pin-vpin-allocation" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">Pin/Vpin allocation</a><a class="headerlink" href="#pin-vpin-allocation" title="Permalink to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>It has been reported that on non-genuine Arduino Uno devices (and potentially Nano) using pin D13 as an input may not work as expected due to the onboard LED causing the pin to remain low when using it as an input pin with pullups enabled. A suggested workaround is to add an external 1K pullup resistor to 5V for this pin if this is experienced.</p>
@@ -892,24 +907,26 @@
 </div>
 <p>Providing the device driver is configured correctly and the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device is online, the serial console of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device will also display the Vpin to physical pin map once the configuration information is successfully received from the device driver.</p>
 <p>This example is for an Arduino Nano configured starting at Vpin 800:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>DCC-EX EX-IOExpander v0.0.14
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>DCC-EX EX-IOExpander v0.0.23
 Detected device: Nano
-Available at I2C address 0x71
+Available at I2C address 0x65
+Servo library support for up to 12 servos
+SuperPin support to dim up to 16 LEDs
 Initialised all pins as input only
 Received correct pin count: 18, starting at Vpin: 800
 Vpin to physical pin mappings (Vpin =&gt; physical pin):
-|800 =&gt;   2|801 =&gt;   3|802 =&gt;   4|803 =&gt;   5|804 =&gt;   6|805 =&gt;   7|806 =&gt;   8|807 =&gt;   9|
-|808 =&gt;  10|809 =&gt;  11|810 =&gt;  12|811 =&gt;  13|812 =&gt;  14|813 =&gt;  15|814 =&gt;  16|815 =&gt;  17|
-|816 =&gt;  20|817 =&gt;  21|
+|800  =&gt;   D2|801  =&gt;   D3|802  =&gt;   D4|803  =&gt;   D5|804  =&gt;   D6|805  =&gt;   D7|806  =&gt;   D8|807  =&gt;   D9|
+|808  =&gt;  D10|809  =&gt;  D11|810  =&gt;  D12|811  =&gt;  D13|812  =&gt;   A0|813  =&gt;   A1|814  =&gt;   A2|815  =&gt;   A3|
+|816  =&gt;   A6|817  =&gt;   A7|
 </pre></div>
 </div>
 <section id="viewing-the-vpin-map">
 <h4>Viewing the Vpin map<a class="headerlink" href="#viewing-the-vpin-map" title="Permalink to this heading"></a></h4>
-<p>When connected to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device’s serial console, you can enter the command <cite>&lt;V&gt;</cite> to view the current Vpin to physical pin map.</p>
+<p>When connected to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device’s serial console, you can enter the command <code class="docutils literal notranslate"><span class="pre">&lt;V&gt;</span></code> to view the current Vpin to physical pin map, which will also repeat the startup display including the version, device type, and so forth as per the example above.</p>
 </section>
 </section>
 <section id="ex-commandstation-device-driver">
-<h3><a class="toc-backref" href="#id15" role="doc-backlink">EX-CommandStation device driver</a><a class="headerlink" href="#ex-commandstation-device-driver" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">EX-CommandStation device driver</a><a class="headerlink" href="#ex-commandstation-device-driver" title="Permalink to this heading"></a></h3>
 <p>To enable support for <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>, you need to create the device in either “myHal.cpp” or “myAutomation.h” in your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. The device driver is included by default, so you simply need to create the device(s).</p>
 <p>You will find an example included in the “myHal.cpp_example.txt” file included with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software.</p>
 <p>To create the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device in “myHal.cpp”, the syntax is <code class="docutils literal notranslate"><span class="pre">EXIOExpander::create(vpin,</span> <span class="pre">npins,</span> <span class="pre">address);</span></code> where:</p>
@@ -936,7 +953,7 @@ Vpin to physical pin mappings (Vpin =&gt; physical pin):
 </div>
 </section>
 <section id="i2c-address">
-<h3><a class="toc-backref" href="#id16" role="doc-backlink">I2C_ADDRESS</a><a class="headerlink" href="#i2c-address" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">I2C_ADDRESS</a><a class="headerlink" href="#i2c-address" title="Permalink to this heading"></a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/////////////////////////////////////////////////////////////////////////////////////</span>
 <span class="c1">//  Define I2C address</span>
 <span class="c1">//  Default 0x65, can be any valid, available I2C address</span>
@@ -948,7 +965,7 @@ Vpin to physical pin mappings (Vpin =&gt; physical pin):
 <p>If the device has EEPROM support, and a valid address is defined in EEPROM, the address defined in EEPROM will always override the address defined in “myConfig.h”.</p>
 </section>
 <section id="diag">
-<h3><a class="toc-backref" href="#id17" role="doc-backlink">DIAG</a><a class="headerlink" href="#diag" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">DIAG</a><a class="headerlink" href="#diag" title="Permalink to this heading"></a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/////////////////////////////////////////////////////////////////////////////////////</span>
 <span class="c1">//  Uncomment to enable diag output</span>
 <span class="c1">//</span>
@@ -959,7 +976,7 @@ Vpin to physical pin mappings (Vpin =&gt; physical pin):
 <p>You can also configure this via the serial console using the <code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> command (see <a class="reference internal" href="testing.html#diagnostic-commands"><span class="std std-ref">Diagnostic commands</span></a>).</p>
 </section>
 <section id="diag-config-delay">
-<h3><a class="toc-backref" href="#id18" role="doc-backlink">DIAG_CONFIG_DELAY</a><a class="headerlink" href="#diag-config-delay" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id19" role="doc-backlink">DIAG_CONFIG_DELAY</a><a class="headerlink" href="#diag-config-delay" title="Permalink to this heading"></a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/////////////////////////////////////////////////////////////////////////////////////</span>
 <span class="c1">//  Delay between dumping the status of the port config if DIAG enabled</span>
 <span class="c1">//</span>
@@ -970,7 +987,7 @@ Vpin to physical pin mappings (Vpin =&gt; physical pin):
 <p>You can also configure this via the serial console using the <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">delay&gt;</span></code> command (see <a class="reference internal" href="testing.html#diagnostic-commands"><span class="std std-ref">Diagnostic commands</span></a>).</p>
 </section>
 <section id="test-mode">
-<h3><a class="toc-backref" href="#id19" role="doc-backlink">TEST_MODE</a><a class="headerlink" href="#test-mode" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id20" role="doc-backlink">TEST_MODE</a><a class="headerlink" href="#test-mode" title="Permalink to this heading"></a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/////////////////////////////////////////////////////////////////////////////////////</span>
 <span class="c1">//  Enable test mode - ensure only one test mode is active at one time.</span>
 <span class="c1">//  This is handy if serial input doesn&#39;t work for commands for some reason.</span>
@@ -992,7 +1009,7 @@ Vpin to physical pin mappings (Vpin =&gt; physical pin):
 <p>Refer to <a class="reference internal" href="testing.html#testing-commands"><span class="std std-ref">Testing commands</span></a> for details of what test each option enables and the associated serial commands.</p>
 </section>
 <section id="disable-i2c-pullups">
-<h3><a class="toc-backref" href="#id20" role="doc-backlink">DISABLE_I2C_PULLUPS</a><a class="headerlink" href="#disable-i2c-pullups" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id21" role="doc-backlink">DISABLE_I2C_PULLUPS</a><a class="headerlink" href="#disable-i2c-pullups" title="Permalink to this heading"></a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/////////////////////////////////////////////////////////////////////////////////////</span>
 <span class="c1">//  Uncomment to disable internal I2C pullup resistors</span>
 <span class="c1">//  NOTE: This will not apply to all supported devices, refer to the documentation</span>

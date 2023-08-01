@@ -28,11 +28,15 @@ Introduction
 
 |EX-IO| is an additional microcontroller utilised to expand the I/O port capability of an |EX-CS| and connecting via |I2C|.
 
-|EX-IO| can utilise digital input and output pins as well as analogue input pins, depending on the chosen microcontroller.
+|EX-IO| can be used for various different functions depending on the microcontroller in use:
 
-There is also work in progress to enable using PWM capable pins to drive servos and control LED brightness.
+- Reading from digital input pins
+- Writing to digital output pins
+- Reading from analogue input pins
+- Controlling servos via the Arduino Servo library (Uno, Nano, and Mega only)
+- Dimming LEDs
 
-Rather than emulate any specific type of existing I/O expander, |EX-IO| has been written to integrate directly with |EX-CS| via its own device driver, which is how both digital and analogue pins can easily be utilised on the same device, as well as utilising a device's PWM capability to control servos and variable brightness LEDs.
+Rather than emulate any specific type of existing I/O expander, |EX-IO| has been written to integrate directly with |EX-CS| via its own device driver, which is how both digital and analogue pins can easily be utilised on the same device, as well as control servos and variable brightness LEDs.
 
 This page provides the general overview of |EX-IO|, as well as outlining the configuration options available.
 
@@ -77,18 +81,31 @@ Pins capable of both digital and analogue can be used for either purpose.
 
 As per other I/O devices, |EX-IO| can function with both the ``<S ...>`` sensor/input and ``<Z ...>`` output |DCC-EX| commands, as well as the various ``AT(), IF(), ATGTE(), IFGTE()`` type |EX-R| commands.
 
-Experimental Servo and LED fading
----------------------------------
+Servo control
+-------------
 
-There is experimental PWM support to be used to drive servos and control LED brightness, enabling use of the ``<D SERVO ...>`` command, along with the ``SERVO()``, ``SERVO_TURNOUT()``, ``SERVO_SIGNAL()``, and ``FADE()`` |EX-R| commands.
+There is now support for controlling servos via the Arduino Servo library for Arduino AVR platforms (Uno, Nano, and Mega only), or via hardware PWM pins on other platforms.
+
+This enables the use of the ``<D SERVO ...>`` command, along with the ``SERVO()``, ``SERVO_TURNOUT()``, and ``SERVO_SIGNAL()`` |EX-R| commands, along with being able to define servo based turnout objects on these devices.
+
+When using AVR based platforms that utilise the Servo library, the reported values for servo movements are from 544 to 2400, which is significantly different to the 100 to 400 in use by the PCA9685 servo modules. Experimentation will be required to determine the correct values for your servos. If you're familiar with the library, we use the writeMicroseconds() function. Any digital pin can be used to control servos.
+
+When using other platforms, only hardware PWM pins can be used which need values from 0 to 255, and again experimentation will be required to determine the correct values for your servos. Note that using analogWrite() and direct hardware PWM pins is not an ideal scenario for operating servos, so we would recommend considering if there is a better solution for your needs. We outline which pins have hardware PWM support available on the :doc:`/ex-ioexpander/supported-devices` page.
 
 .. warning:: 
 
-  When using servos or fading LEDs with |EX-IO|, you *must use values between 0 and 255* to control them, not the values documented for the PCA9685 servo modules, as those values are designed specifically for those modules.
+  When using servos or fading LEDs with |EX-IO|, you *must use the values as indicated above* to control them, not the values documented for the PCA9685 servo modules, as those values are designed specifically for those modules.
+
+  Attempts were made to provide some sane mapping between the PCA9685 values and those required by the Servo library and hardware PWM pins, however the results were vastly different. It would be misleading to imply a value that works on one device could safely be mapped to a different value on a different and result in the same servo angle, even with the same exact servo in use.
 
   You must also ensure you provide sufficient power to run the servos, as well as have a large electrolytic capacitor across the 5V and Ground pins to ensure servo movements don't cause the |EX-IO| device to reset due to brownouts in the power supply. A capacitor in the realm of 1000uF is recommended. It is not sufficient to power the servos from the USB interface, and an external 5V power supply must be used in the same way as outlined on the :doc:`/reference/hardware/servo-module` page.
 
-You can only use pins defined as PWM hardware pins, as the current implementation uses the Arduino analogWrite() function, which relies on a hardware PWM pin being available. We outline which pins have hardware PWM support available on the :doc:`/ex-ioexpander/supported-devices` page.
+LED dimming
+-----------
+
+Dimming LEDs is also possible utilising |EX-IO|, enabling the use of the ``FADE()`` |EX-R| command.
+
+Valid values for LED brightness are from 0 (off) to 255 (fully on), and any digital pin on any platform can be used.
 
 Configuration
 =============
@@ -254,20 +271,22 @@ This example is for an Arduino Nano configured starting at Vpin 800:
 
 .. code-block:: 
 
-  DCC-EX EX-IOExpander v0.0.14
+  DCC-EX EX-IOExpander v0.0.23
   Detected device: Nano
-  Available at I2C address 0x71
+  Available at I2C address 0x65
+  Servo library support for up to 12 servos
+  SuperPin support to dim up to 16 LEDs
   Initialised all pins as input only
   Received correct pin count: 18, starting at Vpin: 800
   Vpin to physical pin mappings (Vpin => physical pin):
-  |800 =>   2|801 =>   3|802 =>   4|803 =>   5|804 =>   6|805 =>   7|806 =>   8|807 =>   9|
-  |808 =>  10|809 =>  11|810 =>  12|811 =>  13|812 =>  14|813 =>  15|814 =>  16|815 =>  17|
-  |816 =>  20|817 =>  21|
+  |800  =>   D2|801  =>   D3|802  =>   D4|803  =>   D5|804  =>   D6|805  =>   D7|806  =>   D8|807  =>   D9|
+  |808  =>  D10|809  =>  D11|810  =>  D12|811  =>  D13|812  =>   A0|813  =>   A1|814  =>   A2|815  =>   A3|
+  |816  =>   A6|817  =>   A7|
 
 Viewing the Vpin map
 ^^^^^^^^^^^^^^^^^^^^
 
-When connected to the |EX-IO| device's serial console, you can enter the command `<V>` to view the current Vpin to physical pin map.
+When connected to the |EX-IO| device's serial console, you can enter the command `<V>` to view the current Vpin to physical pin map, which will also repeat the startup display including the version, device type, and so forth as per the example above.
 
 EX-CommandStation device driver
 -------------------------------

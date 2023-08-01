@@ -201,7 +201,9 @@ STMicroelectronics NUCLEO-F411RE
   :alt: Nucleo F411RE pin out
   :scale: 60%
 
-The Nucleo F411RE is a 3v3 microcontroller with more available I/O pins than an Arduino Uno. The pin numbers used are defined using the Morpho pin names, in ascending order of the pin number for each Morpho connector, hence the pin names aren't sequential.
+The Nucleo F411RE is a 3v3 microcontroller with more available I/O pins than an Arduino Uno in a similar, but slightly larger form factor. The pin numbers used are defined using the Morpho pin names associated with connectors CN7 and CN10.
+
+Vpins are allocated in ascending order from the STLink/USB connector end of each Morpho connector, with the odd numbered pin row first, then the even number row, hence the pin names aren't sequential.
 
 Numerous I/O pins are connected to other devices or perform multiple functions which result in pin conflicts, so the only pins included are those that are able to successfully be set to input mode on startup.
 
@@ -230,26 +232,26 @@ Numerous I/O pins are connected to other devices or perform multiple functions w
   :stub-columns: 1
 
   Vpin,Pin,Digital,Analogue,PWM,Vpin,Pin,Digital,Analogue,PWM
-  800,PC10,Y,N,N,820,PA12,Y,N,N
-  801,PC11,Y,N,N,821,PA6,Y,Y,Y
-  802,PC12,Y,N,N,822,PA11,Y,N,Y
-  803,PD2,Y,N,N,823,PA7,Y,N,Y
-  804,PA15,Y,N,Y,824,PB12,Y,N,N
-  805,PB7,Y,N,Y,825,PB6,Y,N,Y
-  806,PC15,Y,N,N,826,PC7,Y,N,Y
-  807,PA0,Y,Y,Y,827,PA9,Y,N,Y
-  808,PA1,Y,Y,Y,828,PB2,Y,N,N
-  809,PA4,Y,Y,N,829,PA8,Y,N,Y
-  810,PB0,Y,Y,Y,830,PB1,Y,Y,Y
-  811,PC2,Y,Y,N,831,PB10,Y,N,Y
-  812,PC1,Y,Y,N,832,PB15,Y,N,Y
-  813,PC3,Y,Y,N,833,PB4,Y,N,Y
-  814,PC0,Y,Y,N,834,PB14,Y,N,Y
-  815,PC9,Y,N,Y,835,PB5,Y,N,Y
-  816,PC8,Y,N,Y,836,PB13,Y,N,Y
-  817,PC6,Y,N,Y,837,PB3,Y,N,Y
-  818,PC5,Y,Y,N,838,PA10,Y,N,Y
-  819,PA5,Y,Y,Y,839,PC4,Y,Y,N
+  800,PC10,Y,N,N,820,PC7,Y,N,N
+  801,PC12,Y,N,N,821,PA9,Y,Y,Y
+  802,PA15,Y,N,N,822,PA8,Y,N,Y
+  803,PB7,Y,N,N,823,PB10,Y,N,Y
+  804,PC15,Y,N,Y,824,PB4,Y,N,N
+  805,PC2,Y,N,Y,825,PB5,Y,N,Y
+  806,PC3,Y,N,N,826,PB3,Y,N,Y
+  807,PC11,Y,Y,Y,827,PA10,Y,N,Y
+  808,PD2,Y,Y,Y,828,PC8,Y,N,N
+  809,PA0,Y,Y,N,829,PC6,Y,N,Y
+  810,PA1,Y,Y,Y,830,PC5,Y,Y,Y
+  811,PA4,Y,Y,N,831,PA12,Y,N,Y
+  812,PB0,Y,Y,N,832,PA11,Y,N,Y
+  813,PC1,Y,Y,N,833,PB12,Y,N,Y
+  814,PC0,Y,Y,N,834,PB2,Y,N,Y
+  815,PC9,Y,N,Y,835,PB1,Y,N,Y
+  816,PA5,Y,N,Y,836,PB15,Y,N,Y
+  817,PA6,Y,N,Y,837,PB14,Y,N,Y
+  818,PA7,Y,Y,N,838,PB13,Y,N,Y
+  819,PB6,Y,Y,Y,839,PC4,Y,Y,N
 
 |
 

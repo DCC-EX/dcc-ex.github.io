@@ -92,6 +92,8 @@ When using AVR based platforms that utilise the Servo library, the reported valu
 
 When using other platforms, only hardware PWM pins can be used which need values from 0 to 255, and again experimentation will be required to determine the correct values for your servos. Note that using analogWrite() and direct hardware PWM pins is not an ideal scenario for operating servos, so we would recommend considering if there is a better solution for your needs. We outline which pins have hardware PWM support available on the :doc:`/ex-ioexpander/supported-devices` page.
 
+For experimenting with different values for servo angles, we highly recommend trying out :doc:`/ex-toolbox/index`.
+
 .. warning:: 
 
   When using servos or fading LEDs with |EX-IO|, you *must use the values as indicated above* to control them, not the values documented for the PCA9685 servo modules, as those values are designed specifically for those modules.

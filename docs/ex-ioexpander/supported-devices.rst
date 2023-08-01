@@ -195,7 +195,9 @@ STMicroelectronics NUCLEO-F411RE
 
 .. warning:: 
 
-  Support for the F411RE is experimental at best right now. While the software compiles and it appears to operate normally, no actual I/O testing has been performed.
+  Support for the F411RE is experimental at best right now. While the software compiles and it appears to operate normally, only basic I/O testing has been performed.
+
+  Note also that as a 3.3V microcontroller, not all pins are 5V tolerant.
 
 .. image:: /_static/images/nucleo/nucleo-f411re-pinout.png
   :alt: Nucleo F411RE pin out
@@ -229,7 +231,7 @@ Numerous I/O pins are connected to other devices or perform multiple functions w
 
 .. csv-table:: F411RE EX-IOExpander pin map at Vpin 800
   :widths: auto
-  :stub-columns: 1
+  :header-rows: 1
 
   Vpin,Pin,Digital,Analogue,PWM,Vpin,Pin,Digital,Analogue,PWM
   800,PC10,Y,N,N,820,PC7,Y,N,N
@@ -260,9 +262,13 @@ STMicroelectronics NUCLEO-F412ZG
 
 .. warning:: 
 
-  Support for the F412ZG is experimental at best right now. While the software compiles and it appears to operate normally, no actual I/O testing has been performed.
+  Support for the F412ZG is experimental at best right now. While the software compiles and it appears to operate normally, only basic I/O testing has been performed.
 
-The Nucleo F412ZG is a 3v3 microcontroller with significantly more available I/O pins than an Arduino Mega. The pin numbers used are defined using the Morpho pin names, in ascending order of the pin number for each Morpho connector, hence the pin names aren't sequential.
+  Note also that as a 3.3V microcontroller, not all pins are 5V tolerant.
+
+The Nucleo F412ZG is a 3v3 microcontroller with significantly more available I/O pins than an Arduino Mega. The pin numbers used are defined using the Morpho pin names associated with connectors CN11 and CN12.
+
+Vpins are allocated in ascending order from the STLink/USB connector end of each Morpho connector, with the odd numbered pin row first, then the even number row, hence the pin names aren't sequential.
 
 Numerous I/O pins are connected to other devices or perform multiple functions which result in pin conflicts, so the only pins included are those that are able to successfully be set to input mode on startup.
 
@@ -288,58 +294,58 @@ Numerous I/O pins are connected to other devices or perform multiple functions w
 
 .. csv-table:: F412ZG EX-IOExpander pin map at Vpin 800
   :widths: auto
-  :stub-columns: 1
+  :header-rows: 1
 
   Vpin,Pin,Digital,Analogue,PWM,Vpin,Pin,Digital,Analogue,PWM
-  800,PC10,Y,N,N,849,PA5,Y,Y,Y
-  801,PC11,Y,N,N,850,PA6,Y,Y,Y
-  802,PC12,Y,N,N,851,PA7,Y,Y,Y
-  803,PD2,Y,N,N,852,PB12,Y,N,N
-  804,PF6,Y,N,Y,853,PB6,Y,N,Y
-  805,PF7,Y,N,Y,854,PB11,Y,N,Y
-  806,PA15,Y,N,Y,855,PC7,Y,N,Y
-  807,PB7,Y,N,Y,856,PB2,Y,N,N
-  808,PC13,Y,N,N,857,PB1,Y,Y,Y
-  809,PA0,Y,Y,Y,858,PB10,Y,N,Y
-  810,PA1,Y,Y,Y,859,PB15,Y,N,Y
-  811,PA4,Y,Y,N,860,PB4,Y,N,Y
-  812,PB0,Y,Y,Y,861,PB14,Y,N,Y
-  813,PC2,Y,Y,N,862,PB5,Y,N,Y
-  814,PC1,Y,Y,N,863,PB13,Y,N,Y
-  815,PC3,Y,Y,N,864,PB3,Y,N,Y
-  816,PC0,Y,Y,N,865,PC4,Y,Y,N
-  817,PD4,Y,N,N,866,PA2,Y,Y,Y
-  818,PD3,Y,N,N,867,PF5,Y,N,N
-  819,PD5,Y,N,N,868,PA3,Y,Y,Y
-  820,PG2,Y,N,N,869,PF4,Y,N,N
-  821,PD6,Y,N,N,870,PE8,Y,N,Y
-  822,PG3,Y,N,N,871,PD13,Y,N,Y
-  823,PD7,Y,N,N,872,PF10,Y,N,N
-  824,PE2,Y,N,N,873,PD12,Y,N,Y
-  825,PE3,Y,N,N,874,PE7,Y,N,N
-  826,PE4,Y,N,N,875,PD11,Y,N,N
-  827,PE5,Y,N,Y,876,PD14,Y,N,Y
-  828,PF1,Y,N,N,877,PE10,Y,N,Y
-  829,PF2,Y,N,N,878,PD15,Y,N,Y
-  830,PF0,Y,N,N,879,PE12,Y,N,Y
-  831,PF8,Y,N,Y,880,PF14,Y,N,N
-  832,PD1,Y,N,N,881,PE14,Y,N,Y
-  833,PF9,Y,N,Y,882,PE9,Y,N,Y
-  834,PD0,Y,N,N,883,PE15,Y,N,N
-  835,PG1,Y,N,N,884,PE13,Y,N,Y
-  836,PG0,Y,N,N,885,PE11,Y,N,Y
-  837,PE1,Y,N,N,886,PF13,Y,N,N
-  838,PE6,Y,N,Y,887,PF3,Y,N,N
-  839,PG9,Y,N,N,888,PF12,Y,N,N
-  840,PG15,Y,N,N,889,PF15,Y,N,N
-  841,PG12,Y,N,N,890,PG14,Y,N,N
-  842,PG10,Y,N,N,891,PF11,Y,N,N
-  843,PG13,Y,N,N,892,PE0,Y,N,N
-  844,PG11,Y,N,N,893,PD10,Y,N,N
-  845,PC9,Y,N,Y,894,PG8,Y,N,N
-  846,PC8,Y,N,Y,895,PG5,Y,N,N
-  847,PC6,Y,N,Y,896,PG4,Y,N,N
-  848,PC5,Y,Y,N
+  800,PC10,Y,N,N,849,PB6,Y,Y,Y
+  801,PC12,Y,N,N,850,PC7,Y,Y,Y
+  802,PF6,Y,N,N,851,PB10,Y,Y,Y
+  803,PF7,Y,N,N,852,PB4,Y,N,N
+  804,PA15,Y,N,Y,853,PB5,Y,N,Y
+  805,PB7,Y,N,Y,854,PB3,Y,N,Y
+  806,PC13,Y,N,Y,855,PA2,Y,N,Y
+  807,PC2,Y,N,Y,856,PA3,Y,N,N
+  808,PC3,Y,N,N,857,PD13,Y,Y,Y
+  809,PD4,Y,Y,Y,858,PD12,Y,N,Y
+  810,PD5,Y,Y,Y,859,PD11,Y,N,Y
+  811,PD6,Y,Y,N,860,PE10,Y,N,Y
+  812,PD7,Y,Y,Y,861,PE12,Y,N,Y
+  813,PE3,Y,Y,N,862,PE14,Y,N,Y
+  814,PF1,Y,Y,N,863,PE15,Y,N,Y
+  815,PF0,Y,Y,N,864,PE13,Y,N,Y
+  816,PD1,Y,Y,N,865,PF13,Y,Y,N
+  817,PD0,Y,N,N,866,PF12,Y,Y,Y
+  818,PG0,Y,N,N,867,PG14,Y,N,N
+  819,PE1,Y,N,N,868,PD10,Y,Y,Y
+  820,PG9,Y,N,N,869,PG4,Y,N,N
+  821,PG12,Y,N,N,870,PC8,Y,N,Y
+  822,PC11,Y,N,N,871,PC6,Y,N,Y
+  823,PD2,Y,N,N,872,PC5,Y,N,N
+  824,PA0,Y,N,N,873,PB12,Y,N,Y
+  825,PA1,Y,N,N,874,PB11,Y,N,N
+  826,PA4,Y,N,N,875,PB2,Y,N,N
+  827,PB0,Y,N,Y,876,PB1,Y,N,Y
+  828,PC1,Y,N,N,877,PB15,Y,N,Y
+  829,PC0,Y,N,N,878,PB14,Y,N,Y
+  830,PD3,Y,N,N,879,PB13,Y,N,Y
+  831,PG2,Y,N,Y,880,PC4,Y,N,N
+  832,PG3,Y,N,N,881,PF5,Y,N,Y
+  833,PE2,Y,N,Y,882,PF4,Y,N,Y
+  834,PE4,Y,N,N,883,PE8,Y,N,N
+  835,PE5,Y,N,N,884,PF10,Y,N,Y
+  836,PF2,Y,N,N,885,PE7,Y,N,Y
+  837,PF8,Y,N,N,886,PD14,Y,N,N
+  838,PF9,Y,N,Y,887,PD15,Y,N,N
+  839,PG1,Y,N,N,888,PF14,Y,N,N
+  840,PE6,Y,N,N,889,PE9,Y,N,N
+  841,PG15,Y,N,N,890,PE11,Y,N,N
+  842,PG10,Y,N,N,891,PF3,Y,N,N
+  843,PG13,Y,N,N,892,PF15,Y,N,N
+  844,PG11,Y,N,N,893,PF11,Y,N,N
+  845,PC9,Y,N,Y,894,PE0,Y,N,N
+  846,PA5,Y,N,Y,895,PG8,Y,N,N
+  847,PA6,Y,N,Y,896,PG5,Y,N,N
+  848,PA7,Y,Y,N
 
 |
 

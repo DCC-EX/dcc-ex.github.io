@@ -286,7 +286,7 @@ This example is for an Arduino Nano configured starting at Vpin 800:
 Viewing the Vpin map
 ^^^^^^^^^^^^^^^^^^^^
 
-When connected to the |EX-IO| device's serial console, you can enter the command `<V>` to view the current Vpin to physical pin map, which will also repeat the startup display including the version, device type, and so forth as per the example above.
+When connected to the |EX-IO| device's serial console, you can enter the command ``<V>`` to view the current Vpin to physical pin map, which will also repeat the startup display including the version, device type, and so forth as per the example above.
 
 EX-CommandStation device driver
 -------------------------------

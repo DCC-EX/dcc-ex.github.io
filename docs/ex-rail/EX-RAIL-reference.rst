@@ -599,7 +599,7 @@ TrackManager Functions
 ``SET_TRACK( track, mode )`` Configures the mode of the selected track, refer also to :doc:`/trackmanager/index`
 
 - track - The track to configure, valid options are A to H
-- mode - The mode to set the track to, valid options for DCC are ``MAIN``, ``PROG``, or ``OFF``, and valid options for DC are ``DC``, ``DCX``, or ``OFF``
+- mode - The mode to set the track to, valid options for DCC are ``MAIN`` or ``PROG``, and valid options for DC are ``DC``, ``DCX``. If a track is unused, it can be set to ``NONE``
 
 When setting at track mode to either DC or DCX, you must use the ``SET_LOCO( loco )`` command first to specify the loco ID that will be used for the DC track then SET_TRACK()
 

@@ -244,12 +244,25 @@ Command Station functions
       -  |NEW-IN-V5| Writes direct to Serial4 on ESP type microcontrollers
     * -  SERIAL5( msg )
       -  |NEW-IN-V5| Writes direct to Serial5 on ESP type microcontrollers
-    * -  Serial6( msg )
+    * -  SERIAL6( msg )
       -  |NEW-IN-V5| Writes direct to Serial6 on ESP type microcontrollers
     * -  KILLALL
       -  |NEW-IN-V5| Immediately stops all automations and stops all locos on the tracks.
  
+TrackManager functions
+^^^^^^^^^^^^^^^^^^^^^^
 
+|NEW-IN-V5-LOGO-SMALL|
+
+.. list-table::
+    :widths: 30 70
+    :header-rows: 1
+    :class: command-table
+
+    * -  EX-RAIL Functions
+      -  Description
+    * -  SET_TRACK( track, mode )
+      -  Configures the mode of the selected track
 
 EX-RAIL functions
 ^^^^^^^^^^^^^^^^^

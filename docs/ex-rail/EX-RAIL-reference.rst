@@ -585,6 +585,40 @@ Command Station Functions
 
 ``SERIAL3( msg )``	Writes direct to Serial3
 
+``SERIAL4( msg )``	|NEW-IN-V5| Writes direct to Serial4
+
+``SERIAL5( msg )``	|NEW-IN-V5| Wri1tes direct to Seria5
+
+``SERIAL6( msg )``	|NEW-IN-V5| Writes direct to Serial6
+
+TrackManager Functions
+======================
+
+|NEW-IN-V5-LOGO-SMALL|
+
+``SET_TRACK( track, mode )`` Configures the mode of the selected track, refer also to :doc:`/trackmanager/index`
+
+- track - The track to configure, valid options are A to H
+- mode - The mode to set the track to, valid options for DCC are ``MAIN`` or ``PROG``, and valid options for DC are ``DC``, ``DCX``. If a track is unused, it can be set to ``NONE``
+
+When setting at track mode to either DC or DCX, you must use the ``SET_LOCO( loco )`` command first to specify the loco ID that will be used for the DC track then SET_TRACK()
+
+Examples:
+
+.. code-block:: cpp
+
+  // Set both tracks A and B to be main DCC tracks
+  AUTOSTART
+  SET_TRACK(A, MAIN)
+  SET_TRACK(B, MAIN)
+  DONE
+
+  // Set track A to be a DC track with loco ID 1, and track B to be a DCC programming track
+  AUTOSTART
+  SET_LOCO(1) SET_TRACK(A, DC)
+  SET_TRACK(B, PROG)
+  DONE
+
 EX-RAIL Functions
 ==================
 
@@ -599,8 +633,6 @@ EX-RAIL Functions
 ``SENDLOCO( cab, route )``	Start a new task send a given loco along given route/sequence
 
 ``AUTOSTART``	A task is automatically started at this point during startup
-
-``DRIVE( analog_pin )``	Not complete, DO NOT USE |BR| |NOT-IN-PROD-VERSION|
 
 ``ROSTER( cab, name, func_map )``	Provide roster info for WiThrottle
 

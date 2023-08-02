@@ -585,6 +585,24 @@ Command Station Functions
 
 ``SERIAL3( msg )``	Writes direct to Serial3
 
+``SERIAL4( msg )``	|NEW-IN-V5| Writes direct to Serial4
+
+``SERIAL5( msg )``	|NEW-IN-V5| Wri1tes direct to Seria5
+
+``SERIAL6( msg )``	|NEW-IN-V5| Writes direct to Serial6
+
+TrackManager Functions
+======================
+
+|NEW-IN-V5-LOGO-SMALL|
+
+``SET_TRACK( track, mode )`` Configures the mode of the selected track
+
+- Track - A to H
+- Mode - MAIN | PROG | DC | DCX
+
+When setting DC/DCX, use SET_LOCO() then SET_TRACK()
+
 EX-RAIL Functions
 ==================
 
@@ -599,8 +617,6 @@ EX-RAIL Functions
 ``SENDLOCO( cab, route )``	Start a new task send a given loco along given route/sequence
 
 ``AUTOSTART``	A task is automatically started at this point during startup
-
-``DRIVE( analog_pin )``	Not complete, DO NOT USE |BR| |NOT-IN-PROD-VERSION|
 
 ``ROSTER( cab, name, func_map )``	Provide roster info for WiThrottle
 

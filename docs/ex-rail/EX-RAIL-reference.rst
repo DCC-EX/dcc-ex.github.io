@@ -596,12 +596,28 @@ TrackManager Functions
 
 |NEW-IN-V5-LOGO-SMALL|
 
-``SET_TRACK( track, mode )`` Configures the mode of the selected track
+``SET_TRACK( track, mode )`` Configures the mode of the selected track, refer also to :doc:`/trackmanager/index`
 
-- Track - A to H
-- Mode - MAIN | PROG | DC | DCX
+- track - The track to configure, valid options are A to H
+- mode - The mode to set the track to, valid options for DCC are ``MAIN``, ``PROG``, or ``OFF``, and valid options for DC are ``DC``, ``DCX``, or ``OFF``
 
-When setting DC/DCX, use SET_LOCO() then SET_TRACK()
+When setting at track mode to either DC or DCX, you must use the ``SET_LOCO( loco )`` command first to specify the loco ID that will be used for the DC track then SET_TRACK()
+
+Examples:
+
+.. code-block:: cpp
+
+  // Set both tracks A and B to be main DCC tracks
+  AUTOSTART
+  SET_TRACK(A, MAIN)
+  SET_TRACK(B, MAIN)
+  DONE
+
+  // Set track A to be a DC track with loco ID 1, and track B to be a DCC programming track
+  AUTOSTART
+  SET_LOCO(1) SET_TRACK(A, DC)
+  SET_TRACK(B, PROG)
+  DONE
 
 EX-RAIL Functions
 ==================

@@ -262,7 +262,7 @@ TrackManager functions
     * -  EX-RAIL Functions
       -  Description
     * -  SET_TRACK( track, mode )
-      -  |NEW-IN-V5| Configures the mode of the selected track
+      -  Configures the mode of the selected track
 
 EX-RAIL functions
 ^^^^^^^^^^^^^^^^^

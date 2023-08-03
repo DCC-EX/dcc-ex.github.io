@@ -389,8 +389,56 @@ Arduino Zero (or SAMD based clone)
 
 |
 
-STMicroelectronics STM32F103C8Tx (Bluepill)
+STMicroelectronics STM32F103C8T6 (Bluepill)
 ===========================================
+
+.. warning:: 
+
+  Support for the STM32F103C8T6 Bluepill is experimental at best right now. While the software compiles and it appears to operate normally, only basic I/O testing has been performed.
+
+  Note also that as a 3.3V microcontroller, not all pins are 5V tolerant.
+
+.. image:: /_static/images/ex-ioexpander/stm32f103c8t6_pinout_voltage01.png
+  :alt: EX-IOExpander on STM32F103C8T6 Bluepill
+  :scale: 50%
+
+Image courtesy of `arm MBED <https://os.mbed.com/users/hudakz/code/STM32F103C8T6_Hello/>`_
+
+.. list-table:: STM32F103C8T6 Bluepill pin allocations
+  :widths: auto
+  :stub-columns: 1
+  :class: command-table
+
+  * - Total pins
+    - 28
+  * - Digital capable pins
+    - 28
+  * - Analogue capable pins
+    - 10
+  * - PWM capable pins
+    - 19
+
+.. csv-table:: STM32F103C8T6 Bluepill EX-IOExpander pin map at Vpin 800
+  :widths: auto
+  :header-rows: 1
+
+  Vpin,Pin,Digital,Analogue,PWM,Vpin,Pin,Digital,Analogue,PWM
+  800,PC13,Y,N,N,814,PB11,Y,N,Y
+  801,PC14,Y,N,N,815,PB9,Y,N,N
+  802,PA15,Y,N,N,816,PB8,Y,N,N
+  803,PA0,Y,Y,N,817,PB5,Y,N,Y
+  804,PA1,Y,Y,Y,818,PB4,Y,N,Y
+  805,PA2,Y,Y,Y,819,PB3,Y,N,Y
+  806,PA3,Y,Y,Y,820,PA15,Y,N,Y
+  807,PA4,Y,Y,N,821,PA10,Y,N,Y
+  808,PA5,Y,Y,N,822,PA9,Y,N,Y
+  809,PA6,Y,Y,Y,823,PA8,Y,N,Y
+  810,PA7,Y,Y,Y,824,PB15,Y,N,Y
+  811,PB0,Y,Y,Y,825,PB14,Y,N,Y
+  812,PB1,Y,Y,Y,826,PB13,Y,N,Y
+  813,PB10,Y,N,Y,827,PB12,Y,N,N
+
+|
 
 Adding new devices
 ==================

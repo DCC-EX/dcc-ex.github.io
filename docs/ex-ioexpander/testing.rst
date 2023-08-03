@@ -39,6 +39,8 @@ Testing commands
 
 ``<T P>`` - Issue this command to toggle digital input testing with pullups enabled on and off. When enabled, all defined digital input pins are enabled as digital inputs with pullups (including analogue pins capable of digital input), with their values displayed via the diagnostic output in the serial console. Enabling this will also enable diagnostic output.
 
+``<T S vpin value profile>`` - Issue this command to test a servo or LED dimming. The value is as per :ref:`ex-ioexpander/overview:servo control` or :ref:`ex-ioexpander/overview:led dimming`, and profile is a number from 0 (instant) to 4 (bounce), and 128 to correctly dim an LED. For example, ``<T S 0 600 4>`` will "bounce" a servo on the first vpin, and ``<T S 2 255 128>`` will set an LED to full brightness. The Vpin number can be obtained via the ``<V>`` command which will display the physical pin each Vpin is mapped to.
+
 ``<T>`` - Issue this command to to display which test mode is in progress.
 
 .. note:: 

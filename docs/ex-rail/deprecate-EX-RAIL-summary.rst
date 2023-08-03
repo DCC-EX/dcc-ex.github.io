@@ -1,3 +1,5 @@
+:orphan:
+
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 |EX-R-LOGO|
@@ -289,7 +291,8 @@ EX-RAIL functions
     * -  SENDLOCO( loco, route )
       -  Start a new task send a given loco along given route/sequence
     * -  AUTOSTART
-      -  A task is automatically started at this point during startup
+      -  | A task is automatically started at this point during startup
+         | |NEW-IN-V5| If you have previously relied on the implied AUTOSTART to run things immediately, you must now add this explicitly to the beginning of myAutomation.h
     * -  PARSE ( command_string)
       -  |NEW-IN-V5| Processes the command_string as if it had been sent in by a throttle or typed into the USB serial e.g. PARSE("<1 JOIN>")
          | This is much less efficient than using an equivalent EXRAIL command. So don't use it for anything that EX-RAIL can do directly. 

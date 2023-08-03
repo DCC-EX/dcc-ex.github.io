@@ -1,3 +1,5 @@
+:orphan:
+
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 |EX-R-LOGO|
@@ -15,14 +17,14 @@ EX-RAIL Detailed Reference
     :local:
 
 
-This is a detailed reference. For a summary version, please see :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`.
+This is a detailed reference. For a summary version, please see :doc:`/ex-rail/deprecate-EX-RAIL-summary`.
 
 `EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX>`_ Provides full automation and accessory control through the Extended Railroad Automation Instruction Language (EX-RAIL). First, make sure you have the latest release of the `EX-CommandStation Firmware <https://github.com/DCC-EX/CommandStation-EX>`_.
 
 See Also:
 
 - :doc:`Introduction to EX-RAIL <getting-started>` 
-- :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`
+- :doc:`/ex-rail/deprecate-EX-RAIL-summary`
 
 Notes
 =====
@@ -147,7 +149,7 @@ LATCH/UNLATCH
 
 ``</ UNLATCH sensor_id>``	Unlock sensor, returning to current external state, valid IDs are in the range 0 - 255.
 
-Refer to the LATCH/UNLATCH commands in the :ref:`ex-rail/ex-rail-reference:sensors/inputs` section below for further details.
+Refer to the LATCH/UNLATCH commands in the :ref:`ex-rail/deprecate-ex-rail-reference:sensors/inputs` section below for further details.
 
 Routes, automations, and sequences
 ===================================
@@ -633,6 +635,8 @@ EX-RAIL Functions
 ``SENDLOCO( cab, route )``	Start a new task send a given loco along given route/sequence
 
 ``AUTOSTART``	A task is automatically started at this point during startup
+
+|NEW-IN-V5| If you have previously relied on the implied AUTOSTART to run things immediately, you must now add this explicitly to the beginning of myAutomation.h
 
 ``ROSTER( cab, name, func_map )``	Provide roster info for WiThrottle
 

@@ -11,7 +11,7 @@ EX-RAIL Command Reference
 .. sidebar::
 
   .. contents:: On this page
-    :depth: 1
+    :depth: 2
     :local:
 
 |EX-CS| provides full automation and accessory control through the Extended Railroad Automation Instruction Language (|EX-R|).
@@ -23,8 +23,13 @@ See Also:
 - :doc:`Introduction to EX-RAIL <getting-started>` 
 - :doc:`/ex-rail/examples`
 
+----
+
+Introductory Information
+========================
+
 Conventions used on this page
-=============================
+-----------------------------
 
 - CAPITALISED words - These are EX-RAIL commands and are case sensitive
 - lowercase words within brackets/braces ``()`` - These are EX-RAIL parameters that must be provided, with multiple parameters separated by a comma ``,``, for example ``SEQUENCE(id)`` or ``DELAYRANDOM(min_delay, max_delay)``
@@ -33,7 +38,7 @@ Conventions used on this page
 - ``|`` - Use of the ``|`` character means you need to provide one of the provided options only, for example ``<D POWER ON|OFF>`` becomes either ``<D POWER ON>`` or ``<D POWER OFF>``
 
 Handy information
-=================
+-----------------
 
 - COMMANDS are case sensitive. i.e. they must be in uppercase. Text parameters you provide (aliases,  descriptions) are not
 - *AUTOMATION*, *ROUTE*, and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them
@@ -55,7 +60,7 @@ Handy information
   Therefore, you can have an AUTOMATION, a turnout/point, a Vpin, and a virtual block all defined with the same ID without issue as these will not relate to each other. This is probably a great reason to consider aliases to avoid confusion.
 
 Correct use of DONE, ENDIF, and FOLLOW() statements
-===================================================
+---------------------------------------------------
 
  Every |EX-R| automation/route/sequence, event handler, and conditional statement must be terminated by one of these three directives.
 
@@ -65,36 +70,38 @@ On this page, you will see various references to the use of ``DONE``, ``ENDIF``,
 - Every group of commands within a ROUTE, AUTOMATION, or SEQUENCE must be terminated by either ``DONE`` or ``FOLLOW(id)``
 - Every event handler (all directives starting with the word ``ON``) must be terminated by ``DONE``
 
-Examples:
+  .. collapse:: For example: (click to show)
 
-.. code-block:: cpp
+    .. code-block:: cpp
 
-  // Valid use of a ROUTE with a nested IF statement
-  ROUTE(1)
-    IF(46)
-      // Things to be done when sensor ID 46 is active
-    ELSE
-      // Things to be done when sensor ID 46 is inactive
-    ENDIF
-    DONE
+      // Valid use of a ROUTE with a nested IF statement
+      ROUTE(1)
+        IF(46)
+          // Things to be done when sensor ID 46 is active
+        ELSE
+          // Things to be done when sensor ID 46 is inactive
+        ENDIF
+        DONE
 
-  // Validate use of a sequence that needs to run continuously
-  // DONE is not required in this instance
-  SEQUENCE(2)
-    IF(46)
-      // Things to be done when sensor ID 46 is active
-    ELSE
-      // Things to be done when sensor ID 46 is inactive
-    ENDIF
-    FOLLOW(2)
+      // Validate use of a sequence that needs to run continuously
+      // DONE is not required in this instance
+      SEQUENCE(2)
+        IF(46)
+          // Things to be done when sensor ID 46 is active
+        ELSE
+          // Things to be done when sensor ID 46 is inactive
+        ENDIF
+        FOLLOW(2)
 
-  // Validate use of a turnout event handler for turnout ID 200
-  ONCLOSE(200)
-    // Things to be done when turnout 200 is closed
-    DONE
+      // Validate use of a turnout event handler for turnout ID 200
+      ONCLOSE(200)
+        // Things to be done when turnout 200 is closed
+        DONE
+
+|force-break|
 
 AT() or AFTER() versus IF()
-===========================
+---------------------------
 
 When defining conditions, the behaviour of ``AT()`` and ``AFTER()`` is quite different to using conditional ``IF()`` statements.
 
@@ -104,33 +111,35 @@ When using ``AT()`` or ``AFTER()``, this is a blocking activity, meaning the seq
 
 When using ``IF`` conditional statements, these will not block if the condition is not met, allowing the sequence of activities to continue.
 
-Examples:
+  .. collapse:: For example: (click to show)
 
-.. code-block:: cpp
+    .. code-block:: cpp
 
-  // Use of AT() to prevent doing anything until a sensor is activated
-  // This sequence will continue to run until the sensor is activated, in which case those activities will be performed, and it will end
-  SEQUENCE(1)
-    AT(46)
-      // Things to do when sensor 46 is activated
-    DONE
+      // Use of AT() to prevent doing anything until a sensor is activated
+      // This sequence will continue to run until the sensor is activated, in which case those activities will be performed, and it will end
+      SEQUENCE(1)
+        AT(46)
+          // Things to do when sensor 46 is activated
+        DONE
 
-  // Use of IF() to continuously monitor a number of sensors
-  // This sequence will continually loop to monitor the sensors, meaning the activities related to each sensor are not blocked by the state of other sensors
-  SEQUENCE(2)
-    IF(46)
-      // Things to do if sensor 46 is activated
-    ENDIF
-    IF(47)
-      // Things to do if sensor 47 is activated
-    ENDIF
-    IF(48)
-      // Things to do if sensor 48 is activated
-    ENDIF
-    FOLLOW(2)
+      // Use of IF() to continuously monitor a number of sensors
+      // This sequence will continually loop to monitor the sensors, meaning the activities related to each sensor are not blocked by the state of other sensors
+      SEQUENCE(2)
+        IF(46)
+          // Things to do if sensor 46 is activated
+        ENDIF
+        IF(47)
+          // Things to do if sensor 47 is activated
+        ENDIF
+        IF(48)
+          // Things to do if sensor 48 is activated
+        ENDIF
+        FOLLOW(2)
+
+|force-break|
 
 Interactive diagnostics and control
-====================================
+-----------------------------------
 
 Various diagnostic and control commands have been added to control and interact with |EX-R|, including the various sequences and objects once they have been defined in myAutomation.h and uploaded to the |EX-CS|.
 
@@ -138,46 +147,54 @@ These commands can be run interactively via the serial console or over Ethernet/
 
 ``<D EXRAIL ON|OFF>`` When the CommandStation is connected to a serial monitor, EX-RAIL script logging can be turned on or off (Enabled or Disabled).
 
-Example output from :ref:`ex-rail/examples:Point to Point Shuttle` running SEQUENCE(13) with loco ID 18:
+  .. collapse:: For example: (click to show)
 
-.. code-block:: 
+    Example output from :ref:`ex-rail/examples:Point to Point Shuttle` running SEQUENCE(13) with loco ID 18:
 
-  <D EXRAIL ON>
-  <p1 MAIN>
-  PPA1
-  <1 18 0 178 0>
-  <* EXRAIL Sensor 42 hit *>
-  <* EXRAIL Sensor 42 hit *>
-  <* EXRAIL drive 18 0 1 *>
-  <1 18 0 128 0>
-  <* EXRAIL drive 18 20 0 *>
-  <1 18 0 20 0>
-  <* EXRAIL Sensor 41 hit *>
-  <* EXRAIL Sensor 41 hit *>
-  <* EXRAIL drive 18 0 0 *>
-  <1 18 0 0 0>
-  <* EXRAIL begin(13) *>
-  <* EXRAIL begin(13) *>
-  <* EXRAIL drive 18 50 1 *>
-  <1 18 0 178 0>
-  
+    .. code-block:: 
+
+      <D EXRAIL ON>
+      <p1 MAIN>
+      PPA1
+      <1 18 0 178 0>
+      <* EXRAIL Sensor 42 hit *>
+      <* EXRAIL Sensor 42 hit *>
+      <* EXRAIL drive 18 0 1 *>
+      <1 18 0 128 0>
+      <* EXRAIL drive 18 20 0 *>
+      <1 18 0 20 0>
+      <* EXRAIL Sensor 41 hit *>
+      <* EXRAIL Sensor 41 hit *>
+      <* EXRAIL drive 18 0 0 *>
+      <1 18 0 0 0>
+      <* EXRAIL begin(13) *>
+      <* EXRAIL begin(13) *>
+      <* EXRAIL drive 18 50 1 *>
+      <1 18 0 178 0>
+
+|force-break|
+
 ``</PAUSE>`` Pauses **ALL** EX-RAIL automation activities, including sending an E-STOP to all locos.
 
 ``</RESUME>`` Resumes **ALL** EX-RAIL automation activities, and resumes all locos at the same speed at which they were paused.
 
 ``</>`` Displays EX-RAIL running task information
 
-Example outputs also using :ref:`ex-rail/examples:Point to Point Shuttle`:
+  .. collapse:: For example: (click to show)
 
-* Leaving right side of the shuttle sequence with speed 50F (forward):
+    Example outputs also using :ref:`ex-rail/examples:Point to Point Shuttle`:
 
-.. code-block:: 
-  
-  </>
-  <1 18 0 178 0>
-  <* EXRAIL STATUS
-  ID=0,PC=12,LOCO=0 ,SPEED=0F
-  ID=1,PC=12,LOCO=18 ,SPEED=50F *>
+    * Leaving right side of the shuttle sequence with speed 50F (forward):
+
+    .. code-block:: 
+      
+      </>
+      <1 18 0 178 0>
+      <* EXRAIL STATUS
+      ID=0,PC=12,LOCO=0 ,SPEED=0F
+      ID=1,PC=12,LOCO=18 ,SPEED=50F *>
+
+|force-break|
 
 ``</ START [loco_addr] route_id>``	Starts a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence
 
@@ -191,10 +208,58 @@ Example outputs also using :ref:`ex-rail/examples:Point to Point Shuttle`:
 
 ``</ UNLATCH sensor_id>``	Unlock sensor, returning to current external state, valid IDs are in the range 0 - 255.
 
-Refer to the LATCH/UNLATCH commands in the :ref:`ex-rail/ex-rail-command-reference:reading and responding to sensors/inputs` section below for further details.
+Refer to the LATCH/UNLATCH commands in the :ref:`ex-rail/ex-rail-command-reference:sensors/inputs - reading and responding` section below for further details.
 
-Script/sequence types and control
-=================================
+Aliases
+-------
+
+``ALIAS( name[, value] )``	Aliases assigns names to values. They can go anywhere in the script. If a value is not assigned, a unique ID will be assigned based on the alias "name" text.
+
+This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout/point is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.
+
+If you simply need a unique identifier for an object used internally to the script, such as a turnout/point, route, automation, or sequence, you don't even need to provide an ID, EX-RAIL will generate one automatically when you omit the value parameter. We recommend using this for all your routes, sequences, and other internal objects so you don't have to try to remember or keep a list of numbers you've used. This also prevents you from assigning the same number to more than one object.
+
+REMEMBER: IDs for RESERVE/FREE, LATCH/UNLATCH, and pins must be explicitly defined.
+
+To put this another way, if you connect an LED to pin 23 and want to turn it on and off, you have to explicitly set its pin number, so `ALIAS(TOWER_LED, 23)` lets you equate "23" to TOWER_LED. But if you created a route to run your train around an oval, you don't really need to set the number or even know it. Just use `ALIAS(OVAL)` and let EX assign a number internally. If you ever wanted to know what number it assigns, you can enter `<? OVAL>` from the serial monitor with the Command Station running and it will tell you next to "Opcode=". Since this "hash", as it is called, is generated by the alias name word, it is always unique and always the same for that word even if you have not created the alias yet. Fun fact, "OVAL" will always equal 27500.
+
+Alias naming rules:
+
+- **Must not** be an existing EX-RAIL command name or other reserved word.
+- **Should be** reasonably short but descriptive.
+- **Must start** with letters A-Z, a-z, or underscore _ (case sensitive!).
+- **May then** also contain numbers.
+- **Must not** contain spaces or special characters.
+
+  .. collapse:: For example: (click to show)
+
+    Defining a pin turnout/point without an alias:
+
+    .. code-block:: cpp
+
+      PIN_TURNOUT(1, 25, "Coal Yard")
+
+    Defining a pin turnout/point with aliases:
+
+    .. code-block:: cpp
+      
+      ALIAS(COAL_YARD)
+      ALIAS(COAL_YARD_PIN, 25)
+      PIN_TURNOUT(COAL_YARD, COAL_YARD_PIN, "Coal Yard")
+
+|force-break|
+
+Note that you could have used the command `ALIAS(COAL_YARD, 1)` in the example above to explicitly set the number, but unless you have a reason to use specific numbers, let the Command Station do it for you. 
+
+In this simple example, aliases seem like overkill, however consider the case where you need to have the "Coal Yard" turnout/point closed or thrown in various different automation sequences, and you will soon see why it's easier to understand you're throwing the COAL_YARD turnout/point rather than turnout/point ID 12345.
+
+----
+
+Flow Control
+============
+
+Scripts/Sequences - Types and Control
+-------------------------------------
 
 ``AUTOSTART``	A task is automatically started at this point during startup
 
@@ -220,57 +285,63 @@ Say, for example, you have an AUTOMATION you initiate the sends a train through 
 
 You could write a very long AUTOMATION sequence to do this, or you could write the sound SEQUENCE once, then call it at each station:
 
-.. code-block:: cpp
+  .. collapse:: For example: (click to show)
 
-  AUTOMATION(21, "Station loop")    // Our station loop sequence
-    FWD(30)
-    AT(101)                         // At station 1 entrance sensor, call our sequence
-    CALL(22)
-    AT(102)                         // At station 2 entrance sensor, call our sequence
-    CALL(22)
-    AT(103)                         // At station 3 entrance sensor, call our sequence
-    CALL(22)
-    AT(104)                         // At station 4 entrance sensor, call our sequence
-    CALL(22)
-    FOLLOW(21)                      // Keep looping through the stations (see FOLLOW command reference below)
+    .. code-block:: cpp
 
-  SEQUENCE(22, "Station sequence")  // Our station sequence
-    FON(2)                         // Blow the horn
-    FON(3)                         // Break squeal
-    STOP                            // Stop at the station
-    FON(4)                         // Let out a hiss from the air breaks for a second
-    DELAY(1000)
-    FOFF(4)
-    DELAYRANDOM(2000, 10000)        // Wait between 2 and 10 seconds for passengers
-    FON(2)                         // Blow the horn again
-    FWD(30)                         // On our way to the next station
-    RETURN                          // Return to the calling sequence
+      AUTOMATION(21, "Station loop")    // Our station loop sequence
+        FWD(30)
+        AT(101)                         // At station 1 entrance sensor, call our sequence
+        CALL(22)
+        AT(102)                         // At station 2 entrance sensor, call our sequence
+        CALL(22)
+        AT(103)                         // At station 3 entrance sensor, call our sequence
+        CALL(22)
+        AT(104)                         // At station 4 entrance sensor, call our sequence
+        CALL(22)
+        FOLLOW(21)                      // Keep looping through the stations (see FOLLOW command reference below)
+
+      SEQUENCE(22, "Station sequence")  // Our station sequence
+        FON(2)                         // Blow the horn
+        FON(3)                         // Break squeal
+        STOP                            // Stop at the station
+        FON(4)                         // Let out a hiss from the air breaks for a second
+        DELAY(1000)
+        FOFF(4)
+        DELAYRANDOM(2000, 10000)        // Wait between 2 and 10 seconds for passengers
+        FON(2)                         // Blow the horn again
+        FWD(30)                         // On our way to the next station
+        RETURN                          // Return to the calling sequence
+
+|force-break|
 
 ``FOLLOW( route )``	Branch or Follow a numbered sequence. This lets us do clever things like performing a different sequence depending on whether a turnout/point is CLOSED or THROWN, as well as simple things such as the example above where we keep looping through the same sequence.
 
-For example:
+  .. collapse:: For example: (click to show)
 
-.. code-block:: cpp
+    .. code-block:: cpp
 
-  AUTOMATION(23, "Choose your own adventure") // This let's someone control the sequence by throwing a turnout/point (or not)
-    FWD(30)
-    AFTER(105)
-    IFTHROWN(106)
-      FOLLOW(24)
-    ELSE
-      FOLLOW(25)
-    ENDIF
-    DONE
+      AUTOMATION(23, "Choose your own adventure") // This let's someone control the sequence by throwing a turnout/point (or not)
+        FWD(30)
+        AFTER(105)
+        IFTHROWN(106)
+          FOLLOW(24)
+        ELSE
+          FOLLOW(25)
+        ENDIF
+        DONE
 
-  SEQUENCE(24, "Adventure 1")                 // Quite a boring adventure to stop in a siding after sensor 106 has activated/deactivated
-    AFTER(106)
-    FON(2)
-    FON(3)
-    STOP
-    DONE
+      SEQUENCE(24, "Adventure 1")                 // Quite a boring adventure to stop in a siding after sensor 106 has activated/deactivated
+        AFTER(106)
+        FON(2)
+        FON(3)
+        STOP
+        DONE
 
-  SEQUENCE(25, "Adventure 2")                 // If we don't throw the turnout/point, let's do our station loop from the example above
-    FOLLOW(21)
+      SEQUENCE(25, "Adventure 2")                 // If we don't throw the turnout/point, let's do our station loop from the example above
+        FOLLOW(21)
+
+|force-break|
 
 ``PAUSE``	E-STOP all locos and PAUSE all other EX-RAIL tasks until RESUMEd
 
@@ -284,35 +355,41 @@ For example:
 
 ``DELAYRANDOM( min_delay, max_delay )``	Delay a random time between min and max milliseconds, see :ref:`ex-rail/examples:Multiple inter-connected trains` for good examples.
 
-Delay examples:
+  .. collapse:: Delay examples: (click to show)
 
-.. code-block:: cpp
+    .. code-block:: cpp
 
-  ONCLOSE(102)      // When turnout 102 closed, wait 2 seconds, then set signal 101 green.
-    DELAY(2000)
-    GREEN(101)
-    DONE
+      ONCLOSE(102)      // When turnout 102 closed, wait 2 seconds, then set signal 101 green.
+        DELAY(2000)
+        GREEN(101)
+        DONE
 
-  AT(123)           // When sensor 123 is activated, set signal 102 red, wait 1 minute, then set signal 102 green.
-    RED(102)
-    DELAYMINS(1)
-    GREEN(102)
-    DONE
+      AT(123)           // When sensor 123 is activated, set signal 102 red, wait 1 minute, then set signal 102 green.
+        RED(102)
+        DELAYMINS(1)
+        GREEN(102)
+        DONE
+
+|force-break|
 
 ``IFRANDOM( percent )``	Runs commands in IF block a random percentage of the time. This is handy for more realism by enabling automations that don't have to run on a schedule.
 
-.. code-block:: cpp
+  .. collapse:: For example: (click to show)
 
-  AT(165)           // When sensor 165 is activated, set a lineside merry-go-round in action for 1 minute 50% of the time.
-    IFRANDOM(50)
-      SET(166)
-      DELAYMINS(1)
-      RESET(166)
-    ENDIF
-    DONE
+    .. code-block:: cpp
 
-Conditional statements
-=======================
+      AT(165)           // When sensor 165 is activated, set a lineside merry-go-round in action for 1 minute 50% of the time.
+        IFRANDOM(50)
+          SET(166)
+          DELAYMINS(1)
+          RESET(166)
+        ENDIF
+        DONE
+
+|force-break|
+
+Conditional Statements
+----------------------
 
 There are numerous conditional statements available to influence activities based on the states of sensors, signals, turnouts/points, and other items.
 
@@ -326,55 +403,19 @@ Refer also to :ref:`ex-rail/ex-rail-command-reference:correct use of done, endif
 
 ``ENDIF``	Required to end an IF/IFNOT/etc. (Used in all IF.. functions).
 
-Aliases
-========
+----
 
-``ALIAS( name[, value] )``	Aliases assigns names to values. They can go anywhere in the script. If a value is not assigned, a unique ID will be assigned based on the alias "name" text.
+Objects - Definition and Control
+================================
 
-This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout/point is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.
-
-If you simply need a unique identifier for an object used internally to the script, such as a turnout/point, route, automation, or sequence, you don't even need to provide an ID, EX-RAIL will generate one automatically when you omit the value parameter. We recommend using this for all your routes, sequences, and other internal objects so you don't have to try to remember or keep a list of numbers you've used. This also prevents you from assigning the same number to more than one object.
-
-REMEMBER: IDs for RESERVE/FREE, LATCH/UNLATCH, and pins must be explicitly defined.
-
-To put this another way, if you connect an LED to pin 23 and want to turn it on and off, you have to explicitly set its pin number, so `ALIAS(TOWER_LED, 23)` lets you equate "23" to TOWER_LED. But if you created a route to run your train around an oval, you don't really need to set the number or even know it. Just use `ALIAS(OVAL)` and let EX assign a number internally. If you ever wanted to know what number it assigns, you can enter `<? OVAL>` from the serial monitor with the Command Station running and it will tell you next to "Opcode=". Since this "hash", as it is called, is generated by the alias name word, it is always unique and always the same for that word even if you have not created the alias yet. Fun fact, "OVAL" will always equal 27500.
-
-Alias naming rules:
-
-- **Must not** be an existing EX-RAIL command name or other reserved word.
-- **Should be** reasonably short but descriptive.
-- **Must start** with letters A-Z, a-z, or underscore _ (case sensitive!).
-- **May then** also contain numbers.
-- **Must not** contain spaces or special characters.
-
-Examples:
-
-Defining a pin turnout/point without an alias:
-
-.. code-block:: cpp
-
-  PIN_TURNOUT(1, 25, "Coal Yard")
-
-Defining a pin turnout/point with aliases:
-
-.. code-block:: cpp
-  
-  ALIAS(COAL_YARD)
-  ALIAS(COAL_YARD_PIN, 25)
-  PIN_TURNOUT(COAL_YARD, COAL_YARD_PIN, "Coal Yard")
-
-Note that you could have used the command `ALIAS(COAL_YARD, 1)` in the example above to explicity set the number, but unless you have a reason to use specific numbers, let the Command Station do it for you. 
-
-In this simple example, aliases seem like overkill, however consider the case where you need to have the "Coal Yard" turnout/point closed or thrown in various different automation sequences, and you will soon see why it's easier to understand you're throwing the COAL_YARD turnout/point rather than turnout/point ID 12345.
-
-Signal objects and control
-==========================
+Signal Objects - Definition and Control
+---------------------------------------
 
 ``SIGNAL( red_pin, amber_pin, green_pin )``	Define a pin based signal, which requires three active low pins to be defined to correspond with red, amber, and green lights. Active low means they are activated when the associated pins are set to 0V or ground.
 
 ``SIGNALH( red_pin, amber_pin, green_pin )`` As above to define a pin based signal, but with active high pins instead. Active high means they are activated when the associated pins are set to 5V (or 3.3V if using a 3.3V device)
 
-For both the SIGNAL/SIGNALH commands, signal colour is set using the pin defined for the red pin. If the signal only has two colours (eg. RED/GREEN), set the unused colour's pin to 0
+For both the SIGNAL/SIGNALH commands, signal colour is set using the pin defined for the red pin. If the signal only has two colours (e.g. RED/GREEN), set the unused colour's pin to 0
 
 ``SERVO_SIGNAL( vpin, red_pos, amber_pos, green_pos )`` Define a servo based signal, such as semaphore signals. Each position is an angle to turn the servo to, similar to the SERVO/SERVO2 commands, and SERVO_TURNOUT
 
@@ -400,20 +441,22 @@ For both the SIGNAL/SIGNALH commands, signal colour is set using the pin defined
 
 ``ONRED( signal_id)`` |NEW-IN-V5| Define an event handler for when a signal is set to the red aspect
 
-Signal examples:
+  .. collapse:: Sibnal example: (click to show)
 
-.. code-block:: cpp
+    .. code-block:: cpp
 
-  SIGNAL(25, 26, 27)                // Active low red/amber/green signal using pins 25/26/27 directly on the CommandStation.
-  SIGNALH(164 ,0, 165)              // Active high red/green signal using the first two pins of an MCP23017 I/O expander module.
-  SERVO_SIGNAL(101, 100, 250, 400)  // Servo based signal using the first PCA9685 servo module.
+      SIGNAL(25, 26, 27)                // Active low red/amber/green signal using pins 25/26/27 directly on the CommandStation.
+      SIGNALH(164 ,0, 165)              // Active high red/green signal using the first two pins of an MCP23017 I/O expander module.
+      SERVO_SIGNAL(101, 100, 250, 400)  // Servo based signal using the first PCA9685 servo module.
 
-  GREEN(25)                         // Sets our active low signal to green.
-  GREEN(164)                         // Sets our active high signal to green.
-  GREEN(101)                        // Sets our servo based signal to green.
+      GREEN(25)                         // Sets our active low signal to green.
+      GREEN(164)                         // Sets our active high signal to green.
+      GREEN(101)                        // Sets our servo based signal to green.
 
-Turnout/Point objects and control
-=================================
+|force-break|
+
+Turnout/Point Objects - Definition and Control
+----------------------------------------------
 
 All the below turnout/point definitions will define turnouts/points that are advertised to |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI|, unless the HIDDEN keyword is used.
 
@@ -421,9 +464,9 @@ All the below turnout/point definitions will define turnouts/points that are adv
 
 ``TURNOUT( id, addr, sub_addr [, "description"] )``	Define a DCC accessory turnout/point. Note that DCC linear addresses are not supported, and must be converted to address/subaddress in order to be defined. Refer to the :ref:`reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)` for help on these conversions. (or see TURNOUTL below).
 
-``TURNOUTL( id, addr [, "description"] )`` |NEW-IN-V5| Define a DCC accessory turnout/point  This macro will convert a linera address to the address/subaddress format using the TURNOUT command above.
+``TURNOUTL( id, addr [, "description"] )`` |NEW-IN-V5| Define a DCC accessory turnout/point  This macro will convert a linear address to the address/subaddress format using the TURNOUT command above.
 
-Note when providing the name of the profile that the profile names are case sensitive, and must be written exactly as they appear (eg. Bounce, not bounce or BOUNCE).
+Note when providing the name of the profile that the profile names are case sensitive, and must be written exactly as they appear (e.g. Bounce, not bounce or BOUNCE).
 
 ``PIN_TURNOUT( id, pin [, "description"] )``	Define a pin operated turnout. When sending a CLOSE command, the pin will be HIGH, and a THROW command will set the pin LOW.
 
@@ -443,17 +486,19 @@ Note when providing the name of the profile that the profile names are case sens
 
 ``THROW( id )``	Throw a defined turnout/point
 
-Examples:
+  .. collapse:: For example: (click to show)
 
-.. code-block:: cpp
+    .. code-block:: cpp
 
-  TURNOUT(100, 26, 0, "Coal Yard")                  // DCC accessory turnout at linear address 101.
-  PIN_TURNOUT(101, 164, "Switching Yard")           // Pin turnout on an MCP23017 I/O expander module.
-  SERVO_TURNOUT(102, 102, 400, 100, Slow, HIDDEN)   // A servo turnout on a PCA9685 servo module that is hidden from throttles.
-  VIRTUAL_TURNOUT(103, "Lumber Yard")               // A virtual turnout which will trigger an automation sequence when CLOSE or THROW is sent.
+      TURNOUT(100, 26, 0, "Coal Yard")                  // DCC accessory turnout at linear address 101.
+      PIN_TURNOUT(101, 164, "Switching Yard")           // Pin turnout on an MCP23017 I/O expander module.
+      SERVO_TURNOUT(102, 102, 400, 100, Slow, HIDDEN)   // A servo turnout on a PCA9685 servo module that is hidden from throttles.
+      VIRTUAL_TURNOUT(103, "Lumber Yard")               // A virtual turnout which will trigger an automation sequence when CLOSE or THROW is sent.
 
-Reading and responding to sensors/inputs
-========================================
+|force-break|
+
+Sensors/Inputs - Reading and Responding
+---------------------------------------
 
 ``AT( sensor_id )`` An event handler that defines what to do when a sensor is active/triggered.
 
@@ -469,12 +514,14 @@ Reading and responding to sensors/inputs
 
 Note that with the sensor commands `IF()`, `IFNOT()`, `IFTIMEOUT()`, `AT()`, `ATTIMEOUT()`, and `AFTER()`, you can use negative values to enable the use of active HIGH sensors.
 
-For example:
+  .. collapse:: For example: (click to show)
 
-.. code-block:: cpp
+    .. code-block:: cpp
 
-  AT(40)        // Wait for pin 40 to go low.
-  AT(-40)       // Wait for pin 40 to go high.
+      AT(40)        // Wait for pin 40 to go low.
+      AT(-40)       // Wait for pin 40 to go high.
+
+|force-break|
 
 ``ATGTE( analogpin, value )``  Waits for an analog pin to reach the specified value.
 
@@ -486,31 +533,33 @@ For example:
 
 All the `IFGTE()`, `IFLT()`, `ATGTE()`and `ATLT()` commands read the analog value from an analog input pin (A0 - A5 on an Arduino Mega) or an analog input from an I/O expander module. Valid values are defined by the capability of the analog to digital converter in use.
 
-Sensor examples:
+  .. collapse:: Sensor examples: (click to show)
 
-.. code-block:: cpp
+    .. code-block:: cpp
 
-  IF(25)          // If sensor on the Command Station pin 25 is activated, set a signal red, wait 10 seconds, then close a turnout/point.
-    RED(101)
-    DELAY(10)
-    CLOSE(200)
-  ENDIF
+      IF(25)          // If sensor on the Command Station pin 25 is activated, set a signal red, wait 10 seconds, then close a turnout/point.
+        RED(101)
+        DELAY(10)
+        CLOSE(200)
+      ENDIF
 
-  IFNOT(26)       // If sensor on the Command Station pin 26 is not activated, keep our pedestrian crossing light at 102 green, else set it red.
-    GREEN(102)
-  ELSE
-    RED(102)
-  ENDIF
+      IFNOT(26)       // If sensor on the Command Station pin 26 is not activated, keep our pedestrian crossing light at 102 green, else set it red.
+        GREEN(102)
+      ELSE
+        RED(102)
+      ENDIF
 
-  IFGTE(A2, 512)  // If reading the analog input from a photoelectric light sensor exceeds 512, it's bright enough to turn the street lights off.
-    RESET(164)
-  ENDIF
+      IFGTE(A2, 512)  // If reading the analog input from a photoelectric light sensor exceeds 512, it's bright enough to turn the street lights off.
+        RESET(164)
+      ENDIF
 
-  IFLT(A3, 10)   // If current sensing from an analog occupancy detector had dropped below the threshold, turn off our mimic panel light, otherwise turn it on.
-    RESET(165)
-  ELSE
-    SET(165)
-  ENDIF
+      IFLT(A3, 10)   // If current sensing from an analog occupancy detector had dropped below the threshold, turn off our mimic panel light, otherwise turn it on.
+        RESET(165)
+      ELSE
+        SET(165)
+      ENDIF
+
+|force-break|
 
 LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used to trigger a virtual sensor to act as a state flag for EX-RAIL. As this effects the state of a sensor, it can be tested via IF/IFNOT and will also work with AT/AFTER.
 
@@ -518,31 +567,35 @@ LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used
 
 ``UNLATCH( sensor_id )``	Remove LATCH on sensor.
 
-In this example, LATCH/UNLATCH is used to toggle between two different activities each time the ROUTE is selected in a WiThrottle:
+  .. collapse:: For example: (click to show)
 
-.. code-block::
+    In this example, LATCH/UNLATCH is used to toggle between two different activities each time the ROUTE is selected in a WiThrottle:
 
-  TURNOUT(17, 30, 1, "Bay to Shed") // DCC turnout/point with linear address 117
+    .. code-block::
 
-  ALIAS(BayExitStarter, 107)        // Starter Signal with Route board
-  ALIAS(ROUTE_TOGGLE, 11)           // State flag to toggle
+      TURNOUT(17, 30, 1, "Bay to Shed") // DCC turnout/point with linear address 117
 
-  ROUTE(11, "Bay to Shed")
-    IF(ROUTE_TOGGLE)             // If ROUTE_TOGGLE is active, reset the route
-      DEACTIVATEL(BayExitStarter)
-      DELAY(20)
-      CLOSE(17)
-      UNLATCH(ROUTE_TOGGLE)           // UNLATCH (Clear) ROUTE_TOGGLE
-    ELSE                            // LATCH is not active, so set route and LATCH
-      THROW(17)
-      DELAY(20)
-      ACTIVATEL(BayExitStarter)
-      LATCH(ROUTE_TOGGLE)         // LATCH ROUTE_TOGGLE to indicate route set
-    ENDIF
-  DONE
+      ALIAS(BayExitStarter, 107)        // Starter Signal with Route board
+      ALIAS(ROUTE_TOGGLE, 11)           // State flag to toggle
+
+      ROUTE(11, "Bay to Shed")
+        IF(ROUTE_TOGGLE)             // If ROUTE_TOGGLE is active, reset the route
+          DEACTIVATEL(BayExitStarter)
+          DELAY(20)
+          CLOSE(17)
+          UNLATCH(ROUTE_TOGGLE)           // UNLATCH (Clear) ROUTE_TOGGLE
+        ELSE                            // LATCH is not active, so set route and LATCH
+          THROW(17)
+          DELAY(20)
+          ACTIVATEL(BayExitStarter)
+          LATCH(ROUTE_TOGGLE)         // LATCH ROUTE_TOGGLE to indicate route set
+        ENDIF
+      DONE
+
+|force-break|
 
 Output and LED control
-======================
+----------------------
 
 ``SET( pin )``	Set an output pin HIGH
 
@@ -552,8 +605,8 @@ Output and LED control
 
 ``LCN( msg )``	Send message to LCN Accessory Network
 
-Servo control
-=============
+Servo Control
+-------------
 
 ``SERVO( id, position, profile )``	Move an animation servo. Do NOT use for Turnouts/points. (profile is one of Instant, Fast, Medium, Slow or Bounce)
 
@@ -561,124 +614,107 @@ Servo control
 
 ``WAITFOR( pin )``	The WAITFOR() command instructs EX-RAIL to wait for a servo motion to complete prior to continuing.
 
-A couple of examples:
+  .. collapse:: A couple of examples: (click to show)
 
-.. code-block:: cpp
+    .. code-block:: cpp
 
-  // First example defines a servo turnout/point for the coal yard and a signal for the main line.
-  TURNOUT(100, 26, 0, "Coal Yard")
-  SIGNAL(25, 26, 27)
+      // First example defines a servo turnout/point for the coal yard and a signal for the main line.
+      TURNOUT(100, 26, 0, "Coal Yard")
+      SIGNAL(25, 26, 27)
 
-  // When our turnout/point is closed, the main line is open, so the signal is green.
-  ONCLOSE(100)
-    GREEN(25)
-  DONE
+      // When our turnout/point is closed, the main line is open, so the signal is green.
+      ONCLOSE(100)
+        GREEN(25)
+      DONE
 
-  // When our turnout is closed, the main line is interrupted, so the signal is red.
-  ONTHROW(100)
-    RED(25)
-  DONE
+      // When our turnout is closed, the main line is interrupted, so the signal is red.
+      ONTHROW(100)
+        RED(25)
+      DONE
 
-  // This example triggers an automation sequence when a DCC accessory decoder is activated, including waiting for SERVO motions to complete.
-  ONACTIVATEL(100)            // Activating DCC accessory decoder with linear address 100 commences the sequence.
-    SERVO(101, 400, Slow)     // Move the first servo and wait.
-    WAITFOR(101)
-    SERVO(102, 300, Medium)   // Move the second servo and wait.
-    WAITFOR(102)
-    SET(165)                  // Activate a Vpin to turn an LED on.
-    SET(166)                  // Activate a second Vpin to turn a second LED on.
-  DONE
+      // This example triggers an automation sequence when a DCC accessory decoder is activated, including waiting for SERVO motions to complete.
+      ONACTIVATEL(100)            // Activating DCC accessory decoder with linear address 100 commences the sequence.
+        SERVO(101, 400, Slow)     // Move the first servo and wait.
+        WAITFOR(101)
+        SERVO(102, 300, Medium)   // Move the second servo and wait.
+        WAITFOR(102)
+        SET(165)                  // Activate a Vpin to turn an LED on.
+        SET(166)                  // Activate a second Vpin to turn a second LED on.
+      DONE
 
-Virtual block control
-=====================
+|force-break|
 
-``RESERVE( block_id )``	Reserve a block (0-255). If already reserved, current loco will STOP and script waits for block to become free
+DCC Accessory Decoder Control
+------------------------------
 
-``FREE( block_id )``	Free previously reserved block
+``ONACTIVATE( addr, sub_addr )``	Event handler for 2 part DCC accessory packet value 1
 
-``IFRESERVE( block )``	If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF
+``ONACTIVATEL( linear )``	Event handler for linear DCC accessory packet value 1
 
-Communication and display functions
-===================================
+``ONDEACTIVATE( addr, sub_addr )``	Event handler for 2 part DCC accessory packet value 0
 
-``LCD( row, msg )``	Write message on LCD/OLED if fitted
+``ONDEACTIVATEL( linear )``	Event handler for linear DCC accessory packet value 0
 
-``BROADCAST( msg )`` Broadcast to all throttles/JMRI on serial and WiFi
+``ACTIVATE( addr, sub_addr )``	Sends a DCC accessory packet with value 1
 
-``PRINT( msg )``	Print diagnostic message to Serial Monitor
+``ACTIVATEL( linear )``	Sends a DCC accessory packet with value 1 to a linear address
 
-``SERIAL( msg )``	Writes direct to Serial (Serial0/USB)
+``DEACTIVATE( addr, sub_addr )``	Sends a DCC accessory packet with value 0
 
-``SERIAL1( msg )``	Writes direct to Serial1
+``DEACTIVATEL( addr )``	Sends a DCC accessory packet with value 0 to a linear address
 
-``SERIAL2( msg )``	Wri1tes direct to Seria2
+``XFON( cab, func )``	Send DCC function ON to specific cab (eg coach lights) Not for Loco use - use FON instead!
 
-``SERIAL3( msg )``	Writes direct to Serial3
+``XFOFF( cab, func )``	Send DCC function OFF to specific cab (eg coach lights) Not for Loco use - use FON instead!
 
-``SERIAL4( msg )``	|NEW-IN-V5| Writes direct to Serial4
+All the above "ON" commands are event handlers that trigger a sequence of commands to run when the event occurs. These can vary from the most basic tasks such as setting signals when turnouts are closed or thrown, to triggering complete automation sequences via a DCC accessory decoder.
 
-``SERIAL5( msg )``	|NEW-IN-V5| Wri1tes direct to Seria5
-
-``SERIAL6( msg )``	|NEW-IN-V5| Writes direct to Serial6
-
-``WITHROTTLE( msg )`` |NEW-IN-V5| Writes a message to DCC-EX clients (alias of ``PRINT``)
-
-``SCREEN( display, row, msg )`` |NEW-IN-V5| Writes a message to the specified display on the specified row
-
-CommandStation functions
-========================
-
-``POWERON`` |NEW-IN-V5| Power on track and UNJOIN
-
-``POWEROFF``  |NEW-IN-V5| Power off track
-
-``JOIN``	Joins PROG and MAIN track outputs to send the same MAIN DCC signal
-
-``UNJOIN``	Disconnect prog track from main
-
-``HAL( device, parameters )`` |NEW-IN-V5| Create a HAL device in myAutomation.h rather than needing to use myHal.cpp
-
-Example:
-
-.. code-block:: cpp
-
-  // Define a Mega2560 based EX-IOExpander device starting at Vpin 800 at the default address of 0x65
-  HAL(EXIOExpander, 800, 62, 0x65)
-
-``KILLALL`` |NEW-IN-V5| Kills all running |EX-R| activities
-
-``PARSE( msg )`` |NEW-IN-V5| Allows parsing of a DCC-EX API command via myAutomation.h
-
-TrackManager functions
-======================
+EX-Turntable Control
+--------------------
 
 |NEW-IN-V5-LOGO-SMALL|
 
-``SET_TRACK( track, mode )`` Configures the mode of the selected track, refer also to :doc:`/trackmanager/index`
+Also refer to :ref:`ex-turntable/test-and-tune:ex-rail automation`.
 
-- track - The track to configure, valid options are A to H
-- mode - The mode to set the track to, valid options for DCC are ``MAIN`` or ``PROG``, and valid options for DC are ``DC``, ``DCX``. If a track is unused, it can be set to ``NONE``
+``MOVETT( id, steps, activity )`` |NEW-IN-V5| Move the specified |EX-TT| to the provided step position and perform the specified activity
 
-When setting at track mode to either DC or DCX, you must use the ``SETLOCO( loco )`` command first to specify the loco ID that will be used for the DC track then SET_TRACK()
+``IFRE ( id, value )`` |NEW-IN-V5| Test if a rotary encoder has been set to the specified value
 
-Examples:
+``ONCHANGE( id )`` |NEW-IN-V5| Detects a rotary encoder has changed position
 
-.. code-block:: cpp
+  .. collapse:: For example: (click to show)
 
-  // Set both tracks A and B to be main DCC tracks
-  AUTOSTART
-  SET_TRACK(A, MAIN)
-  SET_TRACK(B, MAIN)
-  DONE
+    .. code-block:: 
 
-  // Set track A to be a DC track with loco ID 1, and track B to be a DCC programming track
-  AUTOSTART
-  SETLOCO(1) SET_TRACK(A, DC)
-  SET_TRACK(B, PROG)
-  DONE
+      ONCHANGE(700)     // If rotary encoder ID 700 change state do this sequence
+        IFRE(700, 1)    // If rotary encoder ID 700 is at position 1, start ROUTE ID 123
+          START(123)
+        ENDIF
+        IFRE(700, 2)    // If rotary encoder ID 700 is at position 2, start ROUTE ID 124
+          START(124)
+        ENDIF
+        DONE
 
-Locomotive control and definition
-=================================
+|force-break|
+
+EX-FastClock Event Handlers
+---------------------------
+
+|NEW-IN-V5-LOGO-SMALL|
+
+Also refer to :ref:`ex-fastclock/cs-commands:controlling ex-rail by time`.
+
+``ONCLOCKTIME( hours, mins )`` |NEW-IN-V5| Event handler for when the specified clock time is reached
+
+``ONCLOCKMINS( mins )`` |NEW-IN-V5| Event handler to be repeated the same time every hour
+
+----
+
+Locos and Tracks
+================
+
+Locos - Definition and Control
+------------------------------
 
 ``ESTOP``	Emergency stops all locomotives
 
@@ -708,75 +744,115 @@ Locomotive control and definition
 
 ``IFLOCO( loco )`` |NEW-IN-V5| If the specified loco ID is defined for this sequence, perform the defined activities
 
-Example:
+  .. collapse:: For example: (click to show)
 
-.. code-block:: cpp
+    .. code-block:: cpp
 
-  // A defined automation sequence that will do activities only if loco ID 123 is in use
-  AUTOSTART AUTOMATION(1, "Do stuff for loco 123")
-    IFLOCO(123)
-      // Define activities here eg. blow horn or whistle
-    ENDIF
-    DONE
+      // A defined automation sequence that will do activities only if loco ID 123 is in use
+      AUTOSTART AUTOMATION(1, "Do stuff for loco 123")
+        IFLOCO(123)
+          // Define activities here eg. blow horn or whistle
+        ENDIF
+        DONE
+
+|force-break|
 
 ``FORGET( loco )`` |NEW-IN-V5| Forget the provided the loco, resulting in it being removed from the reminders table
 
-DCC Accessory decoder commands
-===============================
-
-``ONACTIVATE( addr, sub_addr )``	Event handler for 2 part DCC accessory packet value 1
-
-``ONACTIVATEL( linear )``	Event handler for linear DCC accessory packet value 1
-
-``ONDEACTIVATE( addr, sub_addr )``	Event handler for 2 part DCC accessory packet value 0
-
-``ONDEACTIVATEL( linear )``	Event handler for linear DCC accessory packet value 0
-
-``ACTIVATE( addr, sub_addr )``	Sends a DCC accessory packet with value 1
-
-``ACTIVATEL( linear )``	Sends a DCC accessory packet with value 1 to a linear address
-
-``DEACTIVATE( addr, sub_addr )``	Sends a DCC accessory packet with value 0
-
-``DEACTIVATEL( addr )``	Sends a DCC accessory packet with value 0 to a linear address
-
-``XFON( cab, func )``	Send DCC function ON to specific cab (eg coach lights) Not for Loco use - use FON instead!
-
-``XFOFF( cab, func )``	Send DCC function OFF to specific cab (eg coach lights) Not for Loco use - use FON instead!
-
-All the above "ON" commands are event handlers that trigger a sequence of commands to run when the event occurs. These can vary from the most basic tasks such as setting signals when turnouts are closed or thrown, to triggering complete automation sequences via a DCC accessory decoder.
-
-EX-Turntable control
-====================
+TrackManager Control
+--------------------
 
 |NEW-IN-V5-LOGO-SMALL|
 
-Also refer to :ref:`ex-turntable/test-and-tune:ex-rail automation`.
+``SET_TRACK( track, mode )`` Configures the mode of the selected track, refer also to :doc:`/trackmanager/index`
 
-``MOVETT( id, steps, activity )`` |NEW-IN-V5| Move the specified |EX-TT| to the provided step position and perform the specified activity
+- track - The track to configure, valid options are A to H
+- mode - The mode to set the track to, valid options for DCC are ``MAIN`` or ``PROG``, and valid options for DC are ``DC``, ``DCX``. If a track is unused, it can be set to ``NONE``
 
-``IFRE ( id, value )`` |NEW-IN-V5| Test if a rotary encoder has been set to the specified value
+When setting at track mode to either DC or DCX, you must use the ``SETLOCO( loco )`` command first to specify the loco ID that will be used for the DC track then SET_TRACK()
 
-``ONCHANGE( id )`` |NEW-IN-V5| Detects a rotary encoder has changed position
+  .. collapse:: For example: (click to show)
 
-.. code-block:: 
+    .. code-block:: cpp
 
-  ONCHANGE(700)     // If rotary encoder ID 700 change state do this sequence
-    IFRE(700, 1)    // If rotary encoder ID 700 is at position 1, start ROUTE ID 123
-      START(123)
-    ENDIF
-    IFRE(700, 2)    // If rotary encoder ID 700 is at position 2, start ROUTE ID 124
-      START(124)
-    ENDIF
-    DONE
+      // Set both tracks A and B to be main DCC tracks
+      AUTOSTART
+      SET_TRACK(A, MAIN)
+      SET_TRACK(B, MAIN)
+      DONE
 
-EX-FastClock event handlers
-===========================
+      // Set track A to be a DC track with loco ID 1, and track B to be a DCC programming track
+      AUTOSTART
+      SETLOCO(1) SET_TRACK(A, DC)
+      SET_TRACK(B, PROG)
+      DONE
 
-|NEW-IN-V5-LOGO-SMALL|
+|force-break|
 
-Also refer to :ref:`ex-fastclock/cs-commands:controlling ex-rail by time`.
+Virtual Block Control
+---------------------
 
-``ONCLOCKTIME( hours, mins )`` |NEW-IN-V5| Event handler for when the specified clock time is reached
+``RESERVE( block_id )``	Reserve a block (0-255). If already reserved, current loco will STOP and script waits for block to become free
 
-``ONCLOCKMINS( mins )`` |NEW-IN-V5| Event handler to be repeated the same time every hour
+``FREE( block_id )``	Free previously reserved block
+
+``IFRESERVE( block )``	If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF
+
+----
+
+System
+======
+
+Communication and Display Functions
+-----------------------------------
+
+``LCD( row, msg )``	Write message on LCD/OLED if fitted
+
+``BROADCAST( msg )`` Broadcast to all throttles/JMRI on serial and WiFi
+
+``PRINT( msg )``	Print diagnostic message to Serial Monitor
+
+``SERIAL( msg )``	Writes direct to Serial (Serial0/USB)
+
+``SERIAL1( msg )``	Writes direct to Serial1
+
+``SERIAL2( msg )``	Wri1tes direct to Seria2
+
+``SERIAL3( msg )``	Writes direct to Serial3
+
+``SERIAL4( msg )``	|NEW-IN-V5| Writes direct to Serial4
+
+``SERIAL5( msg )``	|NEW-IN-V5| Wri1tes direct to Seria5
+
+``SERIAL6( msg )``	|NEW-IN-V5| Writes direct to Serial6
+
+``WITHROTTLE( msg )`` |NEW-IN-V5| Writes a message to DCC-EX clients (alias of ``PRINT``)
+
+``SCREEN( display, row, msg )`` |NEW-IN-V5| Writes a message to the specified display on the specified row
+
+CommandStation Functions
+------------------------
+
+``POWERON`` |NEW-IN-V5| Power on track and UNJOIN
+
+``POWEROFF``  |NEW-IN-V5| Power off track
+
+``JOIN``	Joins PROG and MAIN track outputs to send the same MAIN DCC signal
+
+``UNJOIN``	Disconnect prog track from main
+
+``HAL( device, parameters )`` |NEW-IN-V5| Create a HAL device in myAutomation.h rather than needing to use myHal.cpp
+
+  .. collapse:: For example: (click to show)
+
+    .. code-block:: cpp
+
+      // Define a Mega2560 based EX-IOExpander device starting at Vpin 800 at the default address of 0x65
+      HAL(EXIOExpander, 800, 62, 0x65)
+
+|force-break|
+
+``KILLALL`` |NEW-IN-V5| Kills all running |EX-R| activities
+
+``PARSE( msg )`` |NEW-IN-V5| Allows parsing of a DCC-EX API command via myAutomation.h
+

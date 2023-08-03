@@ -54,7 +54,7 @@ Turnouts/Points
 
 Two turnouts/points are used in this first stage of our RMFT layout to allow trains to enter and exit the station siding, or continue along the main track.
 
-For further reading on turnouts/points, you can refer to the :ref:`ex-rail/ex-rail-command-reference:turnout/point objects and control` section of the EX-RAIL reference and :ref:`reference/software/command-reference:defining (setting up) a turnout` in the DCC-EX Command reference.
+For further reading on turnouts/points, you can refer to the :ref:`ex-rail/ex-rail-command-reference:turnout/point objects - definition and control` section of the EX-RAIL reference and :ref:`reference/software/command-reference:defining (setting up) a turnout` in the DCC-EX Command reference.
 
 Turnout/Point definitions
 -------------------------
@@ -502,7 +502,7 @@ Exiting block 1 - station entry or main track?
 
 In order to safely exit block 1, the first decision to be made is if the train will go straight through to continue on the main track, or if it will switch on to the station siding.
 
-Using the ``LATCH()`` command gives us a way to automatically alternate between the main track and the station siding. ``LATCH()`` simply sets the state of a pin (either real or virtual) which can then be tested by an ``IF()`` statement. In this particular case, we have defined pin 60 (alias "CHOOSE_BLK2") to be latched and unlatched, as this pin does not exist on the Mega2560, nor does it exist on any of our I/O expander boards. Further reading on ``LATCH()`` and ``UNLATCH()`` can be found in the :ref:`ex-rail/ex-rail-command-reference:reading and responding to sensors/inputs` section of the EX-RAIL reference.
+Using the ``LATCH()`` command gives us a way to automatically alternate between the main track and the station siding. ``LATCH()`` simply sets the state of a pin (either real or virtual) which can then be tested by an ``IF()`` statement. In this particular case, we have defined pin 60 (alias "CHOOSE_BLK2") to be latched and unlatched, as this pin does not exist on the Mega2560, nor does it exist on any of our I/O expander boards. Further reading on ``LATCH()`` and ``UNLATCH()`` can be found in the :ref:`ex-rail/ex-rail-command-reference:sensors/inputs - reading and responding` section of the EX-RAIL reference.
 
 When our CommandStation starts up, virtual pin 60 will not be set, and therefore evaluating the IF() statement ``IF(CHOOSE_BLK2)`` will return false, with our sequence then latching this virtual pin, meaning the next time this sequence is called, ``IF(CHOOSE_BLK2)`` will return true.
 

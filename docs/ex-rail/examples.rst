@@ -278,7 +278,7 @@ number. So now our route looks like this:
    :align: center
    :scale: 100%
 
-Assuming that you have defined your turnouts as per :ref:`ex-rail/ex-rail-command-reference:turnout/point objects and control`
+Assuming that you have defined your turnouts as per :ref:`ex-rail/ex-rail-command-reference:turnout/point objects - definition and control`
 
 .. code-block:: cpp
 

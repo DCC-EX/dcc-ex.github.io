@@ -26,6 +26,7 @@ breaking |EX-CS| for other users.  So there are various drivers available for yo
 * |I2C|-connected Servo Controller (PCA9685);
 * |I2C|-connected laser proximity detector (Time-of-Flight) (VL53L0X);
 * |I2C|-connected Analogue input modules (ADS111x);
+* |NEW-IN-V5| |I2C| multiplexer support (TCA9547, TCA9548);
 * Serial-port-connected DFPlayer MP3 player;
 * Ultrasound proximity detector (HC-SR04);
 * :doc:`/ex-ioexpander/index`
@@ -125,14 +126,17 @@ will be 0x27.
      | 0x27    | ON  | ON  | ON  |
      +---------+-----+-----+-----+
 
-The same address settings apply for the MCP23017 and MCP23008 devices, which also have three address jumpers A2-A0 and use the 
-same address range 0x20-0x27.
+The same address settings apply for the MCP23017 and MCP23008 devices, which also have three address jumpers A2-A0 and use the same address range 0x20-0x27.
 
-One device notably uses software to configure the |I2C| address - the VL53L01 Time-Of-Flight sensor.  It is pre-programmed
-with an address of 0x29, which you may use if you only have one TOF device.  But if you have two or more devices, then at least one
-of them has to be programmed with a different address.  This is achieved through an additional wire per module, connected to the
-module's XSHUT pin. By operating the XSHUT pins, the device driver is able to programme one device at a time, while the remaining 
-unprogrammed devices are held in the 'shutdown' state.  So each device can use any |I2C| address!
+One device notably uses software to configure the |I2C| address - the VL53L01 Time-Of-Flight sensor.  It is pre-programmed with an address of 0x29, which you may use if you only have one TOF device.  But if you have two or more devices, then at least one of them has to be programmed with a different address.  This is achieved through an additional wire per module, connected to the module's XSHUT pin. By operating the XSHUT pins, the device driver is able to programme one device at a time, while the remaining unprogrammed devices are held in the 'shutdown' state.  So each device can use any |I2C| address!
+
+|NEW-IN-V5-LOGO-SMALL|
+
+There are a number of |I2C| devices on the market that can only ever use one pre-defined |I2C| address, and with devices such as the MCP23017 I/O expander there are only eight addresses available for use, limiting the ability to add more devices. Further to this, there are devices with address conflicts that also cannot be overcome easily.
+
+To alleviate these issues, it is possible to use an |I2C| multiplexer, which has eight buses, allowing eight different devices with conflicting addresses to be used.
+
+See :doc:`/reference/hardware/i2c-multiplexers` for information on how to use these devices.
 
 Connector Styles
 =================

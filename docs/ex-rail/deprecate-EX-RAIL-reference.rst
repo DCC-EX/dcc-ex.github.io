@@ -1,3 +1,5 @@
+:orphan:
+
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 |EX-R-LOGO|
@@ -15,14 +17,14 @@ EX-RAIL Detailed Reference
     :local:
 
 
-This is a detailed reference. For a summary version, please see :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`.
+This is a detailed reference. For a summary version, please see :doc:`/ex-rail/deprecate-EX-RAIL-summary`.
 
 `EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX>`_ Provides full automation and accessory control through the Extended Railroad Automation Instruction Language (EX-RAIL). First, make sure you have the latest release of the `EX-CommandStation Firmware <https://github.com/DCC-EX/CommandStation-EX>`_.
 
 See Also:
 
 - :doc:`Introduction to EX-RAIL <getting-started>` 
-- :doc:`EX-RAIL Command Summary <EX-RAIL-summary>`
+- :doc:`/ex-rail/deprecate-EX-RAIL-summary`
 
 Notes
 =====
@@ -147,7 +149,7 @@ LATCH/UNLATCH
 
 ``</ UNLATCH sensor_id>``	Unlock sensor, returning to current external state, valid IDs are in the range 0 - 255.
 
-Refer to the LATCH/UNLATCH commands in the :ref:`ex-rail/ex-rail-reference:sensors/inputs` section below for further details.
+Refer to the LATCH/UNLATCH commands in the :ref:`ex-rail/deprecate-ex-rail-reference:sensors/inputs` section below for further details.
 
 Routes, automations, and sequences
 ===================================
@@ -585,6 +587,40 @@ Command Station Functions
 
 ``SERIAL3( msg )``	Writes direct to Serial3
 
+``SERIAL4( msg )``	|NEW-IN-V5| Writes direct to Serial4
+
+``SERIAL5( msg )``	|NEW-IN-V5| Wri1tes direct to Seria5
+
+``SERIAL6( msg )``	|NEW-IN-V5| Writes direct to Serial6
+
+TrackManager Functions
+======================
+
+|NEW-IN-V5-LOGO-SMALL|
+
+``SET_TRACK( track, mode )`` Configures the mode of the selected track, refer also to :doc:`/trackmanager/index`
+
+- track - The track to configure, valid options are A to H
+- mode - The mode to set the track to, valid options for DCC are ``MAIN`` or ``PROG``, and valid options for DC are ``DC``, ``DCX``. If a track is unused, it can be set to ``NONE``
+
+When setting at track mode to either DC or DCX, you must use the ``SET_LOCO( loco )`` command first to specify the loco ID that will be used for the DC track then SET_TRACK()
+
+Examples:
+
+.. code-block:: cpp
+
+  // Set both tracks A and B to be main DCC tracks
+  AUTOSTART
+  SET_TRACK(A, MAIN)
+  SET_TRACK(B, MAIN)
+  DONE
+
+  // Set track A to be a DC track with loco ID 1, and track B to be a DCC programming track
+  AUTOSTART
+  SET_LOCO(1) SET_TRACK(A, DC)
+  SET_TRACK(B, PROG)
+  DONE
+
 EX-RAIL Functions
 ==================
 
@@ -600,7 +636,7 @@ EX-RAIL Functions
 
 ``AUTOSTART``	A task is automatically started at this point during startup
 
-``DRIVE( analog_pin )``	Not complete, DO NOT USE |BR| |NOT-IN-PROD-VERSION|
+|NEW-IN-V5| If you have previously relied on the implied AUTOSTART to run things immediately, you must now add this explicitly to the beginning of myAutomation.h
 
 ``ROSTER( cab, name, func_map )``	Provide roster info for WiThrottle
 

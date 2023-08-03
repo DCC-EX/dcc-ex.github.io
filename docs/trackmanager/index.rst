@@ -33,8 +33,8 @@ Any throttle that connect to an |EX-CS| can control analogue (DC) locos just as 
 
 |EX-CS| with |TM| includes the following features: 
 
-  * DCC track modes of ``MAIN``, ``PROG``, and ``OFF``
-  * DC track modes of ``DC``, ``DCX`` (DC Reversed Polarity), and ``OFF``
+  * DCC track modes of ``MAIN``, ``PROG``, and ``NONE``
+  * DC track modes of ``DC``, ``DCX`` (DC Reversed Polarity), and ``NONE``
 
 |EX-CS| **production version 5.0+** (devel v4.2.50+) supports both DCC (PWM) and DC (PWM) Pulse Width Modulation modes as an *embedded standard feature*.
 TrackManager allows you to set up and operate up to eight separate dual insulated sections of track/districts in either DCC (PWM) and or DC (PWM) as tracks A - H.
@@ -43,7 +43,7 @@ An Arduino Mega (with or without WiFi) and Standard L298P Motor Shield |EX-CS| h
 
   * DCC (PWM) modes MAIN for mainline tracks and PROG for a programming track
   * DC (PWM) modes for DC or DCX (opposite polarity)
-  * Each track/district can also be OFF
+  * Each track/district can also be disabled by setting to "NONE"
 
 No additional external DCC decoders are required for DC (PWM) track assignments, and a single |EX-CS| is the only hardware needed for full functionality.
 
@@ -148,8 +148,8 @@ How do you run a EX-CommandStation in DC (PWM) mode?
 
 Using TrackManager with simple easy commands from a throttle or from a serial monitor we can change any insulated track A-H from DCC (PWM) to DC (PWM) and back in real time.
 
-  * Valid DCC modes are MAIN, PROG, and OFF
-  * Valid DC modes are DC, DCX, and OFF
+  * Valid DCC modes are MAIN, PROG, and NONE
+  * Valid DC modes are DC, DCX, and NONE
   * DCX is DC with an opposite polarity like NMRA modular layout track B which is wired left rail positive (+) and right rail negative (-)
 
 This allows a throttle on track B set to DCX to operate in forward and reverse correctly for west bound engines
@@ -216,7 +216,7 @@ The Serial Monitor will show current status, example; Track A as Main and Track 
 To change or configure the current track modes use the new command ``<= trackletter mode [address]>`` which has been added for Track Manager, where:
 
   * ``trackletter`` is A through H
-  * ``mode`` is one of MAIN, PROG, DC, DCX, or OFF (DCX is DC with opposite polarity)
+  * ``mode`` is one of MAIN, PROG, DC, DCX, or NONE (DCX is DC with opposite polarity)
   * ``address`` is the Cab ID and is only required when specifying DC or DCX modes
 
 .. code-block::
@@ -227,7 +227,7 @@ To change or configure the current track modes use the new command ``<= tracklet
   <= A DC 1234>  // Set track A to DC mode with address 1234
   <= B DCX 4321> // Set track B to DC mode Opposite Polarity address 4321
                  // or any number you assign from 1 to 10239
-  <= B OFF>      // Set track B OFF, like a staging yard when it gets too noisy.
+  <= B NONE>      // Set track B disabled, like a staging yard when it gets too noisy.
 
 .. note:: 
 
@@ -264,14 +264,16 @@ In a |EX-R| Automation script we could assign a track mode to DC and wait for a 
  AUTOMATION(502, "District A PROG")   // Alternate DCC PROG track A
   SET_TRACK(A,PROG) PRINT("District A PROG")
   DONE
- AUTOMATION(503, "District A DC")     // Alternate DC track A
+ AUTOMATION(503, "District A DC")     // Alternate DC track A with loco ID 1
+  SET_LOCO(1)
   SET_TRACK(A,DC) PRINT("District A DC")
   DONE
- AUTOMATION(504, "District A DCX")    // Alternate DCX track A Changed to Opposite Polarity 
+ AUTOMATION(504, "District A DCX")    // Alternate DCX track A Changed to Opposite Polarity
+  SET_LOCO(1)
   SET_TRACK(A,DCX) PRINT("District A DCX Opposite Polarity") // Track A Opposite Polarity DC    
   DONE
- AUTOMATION(505, "District A OFF")    // A Track OFF
-  SET_TRACK(A, OFF) PRINT ("District A OFF")
+ AUTOMATION(505, "District A NONE")    // A Track disabled
+  SET_TRACK(A, NONE) PRINT ("District A disabled")
   DONE
  Copy and repeat AUTOMATION(506-510, District B  mode)
   and create any additional combinations or tracks C - H as you add more motor boards.
@@ -333,8 +335,8 @@ Track A and Track B with sidings;
 
 You can set each district separately as mode
 
-* DCC for MAIN, PROG or OFF
-* analogue for DC, DCX or OFF
+* DCC for MAIN, PROG or NONE
+* analogue for DC, DCX or NONE
 
 DCX is Opposite Polarity and is what you set Block B to when you want it in DC mode because it is wired to NMRA Modular DCC Standards L+, R-.
 

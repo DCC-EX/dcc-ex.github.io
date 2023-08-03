@@ -82,7 +82,7 @@ The recommended way to define turnout objects is to define these using the |EX-R
 
 For information on using the ``<T ...>`` commands, refer to the :doc:`/reference/software/command-summary` and :doc:`/reference/software/command-reference`.
 
-For information on using the |EX-R| commands in "myAutomation.h" refer to the :doc:`/ex-rail/EX-RAIL-summary`, :doc:`/ex-rail/EX-RAIL-reference`, and :ref:`ex-rail/creating-elements:adding turnouts/points`.
+For information on using the |EX-R| commands in "myAutomation.h" refer to the :doc:`/ex-rail/EX-RAIL-command-reference`.
 
 Turnout/point control, hardware, and configuration
 ==================================================

@@ -26,7 +26,7 @@ breaking |EX-CS| for other users.  So there are various drivers available for yo
 * |I2C|-connected Servo Controller (PCA9685);
 * |I2C|-connected laser proximity detector (Time-of-Flight) (VL53L0X);
 * |I2C|-connected Analogue input modules (ADS111x);
-* |NEW-IN-V5| |I2C| multiplexer support (TCA9547, TCA9548);
+* |NEW-IN-V5| :doc:`/reference/hardware/i2c-multiplexers` support (TCA9547, TCA9548);
 * Serial-port-connected DFPlayer MP3 player;
 * Ultrasound proximity detector (HC-SR04);
 * :doc:`/ex-ioexpander/index`

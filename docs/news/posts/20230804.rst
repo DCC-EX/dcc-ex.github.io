@@ -1,0 +1,30 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+
+:blogpost: true
+:date: 4 August, 2023
+:author: flash62au
+:category: News, Release
+:tags: new-in-version-5, version-5, news
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+Version 5 is here!
+==================
+
+|NEW-IN-V5| Yep, that's right, the much anticipated |EX-CS| version 5 release is here at last! This is a huge release, adding significant new features like |TM|, enhancing existing capabilities, introducting new and enhanced I/O support, along with other associated products such as |EX-FC|, |EX-TT|, and |EX-IO|.
+
+We highly recommend upgrading to version 5 to take advantage of the improvements we've made, and especially for those users who are using our new |EX-MS|, as we've improved how it deals with inrush current amongst other enhancements.
+
+|NEW-IN-V5-LOGO-SMALL|
+
+Here's a quick list of all the new features, enhancements, and extended I/O capability in version 5:
+
+- |TM| - Run both DC and DCC trains from the same controller and switch your tracks between DC and DCC modes live! See :doc:`/trackmanager/index` for all the details
+- |EX-FC| :doc:`/ex-fastclock/index`
+- |EX-IO| :doc:`/ex-ioexpander/index`
+- |EX-TT| :doc:`/ex-turntable/index`

@@ -14,10 +14,6 @@ DCC-EX HAL Architecture
     :depth: 1
     :local:
 
-.. attention::
-   17 Feb 2022: *Now included* in **EX-CommandStation 4.0!**
-   Available to download and use now!
-
 Introduction
 ============
 

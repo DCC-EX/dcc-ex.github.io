@@ -25,6 +25,10 @@ html[data-theme='dark'] h2, .h2 {
   color: #ffffff !important;
   text-shadow: 1px 1px #00353d;
 }
+html[data-theme='dark'] h2 a, 
+html[data-theme='dark'] h2 a:visited {
+  color: #00a3b9ff !important;
+}
 
 h3, .h3 {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
@@ -38,7 +42,10 @@ html[data-theme='dark'] h3, .h3 {
   color: #ffffff !important;
   text-shadow: 1px 1px #00353d;
 }
-
+html[data-theme='dark'] h3 a, 
+html[data-theme='dark'] h3 a:visited {
+  color: #00a3b9ff !important;
+}
 h4, .h4 {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
   color: #00353d !important;
@@ -50,7 +57,10 @@ html[data-theme='dark'] h4, .h4 {
   color: #ffffff !important;
   text-shadow: 1px 1px #00353d;
 }
-
+html[data-theme='dark'] h4 a, 
+html[data-theme='dark'] h4 a:visited {
+  color: #00a3b9ff !important;
+}
 h5, .h5 {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
   color: #00a3b9ff !important;

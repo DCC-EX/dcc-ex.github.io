@@ -7,7 +7,11 @@ h1, .h1 {
   color: #00353d !important;
   /* font-size: 200% !important; */
   font-size: 180% !important;
-  text-shadow: 3px 3px #00a3b915;
+  text-shadow: 1px 1px #ffffff78;
+}
+html[data-theme='dark'] h1, .h1 {
+  color: #ffffff !important;
+  text-shadow: 1px 1px #00353d;
 }
 
 h2, .h2 {
@@ -15,7 +19,11 @@ h2, .h2 {
   color: #00353d !important;
   /* font-size: 190% !important; */
   font-size: 160% !important;
-  text-shadow: 3px 3px #00a3b915;
+  text-shadow: 1px 1px #ffffff78;
+}
+html[data-theme='dark'] h2, .h2 {
+  color: #ffffff !important;
+  text-shadow: 1px 1px #00353d;
 }
 
 h3, .h3 {
@@ -24,6 +32,11 @@ h3, .h3 {
   /* font-size: 160% !important; */
   font-size: 140% !important;
   font-style: italic !important;
+  text-shadow: 1px 1px #ffffff78;
+}
+html[data-theme='dark'] h3, .h3 {
+  color: #ffffff !important;
+  text-shadow: 1px 1px #00353d;
 }
 
 h4, .h4 {
@@ -31,6 +44,11 @@ h4, .h4 {
   color: #00353d !important;
   /* font-size: 130% !important; */
   font-size: 120% !important;
+  text-shadow: 1px 1px #ffffff78;
+}
+html[data-theme='dark'] h4, .h4 {
+  color: #ffffff !important;
+  text-shadow: 1px 1px #00353d;
 }
 
 h5, .h5 {
@@ -93,6 +111,9 @@ h6, .h6 {
 
 .rst-content table.docutils:not(.field-list) tr:nth-child(2n-1) td {
   background-color: #E0E0E0;
+}
+html[data-theme='dark'] .rst-content table.docutils:not(.field-list) tr:nth-child(2n-1) td {
+  background-color: #ffffff08 !important;
 }
 
 .caption-number {
@@ -163,6 +184,9 @@ table.intro-table {
 .command-table tr:nth-child(even) {
   background-color: #f8f8f8 !important;  
 }
+html[data-theme='dark']  .command-table tr:nth-child(even) {
+  background-color: #ffffff08 !important;
+}
 
 .command-table td {
   background-color: #ffffff00  !important;  
@@ -173,7 +197,7 @@ table.intro-table {
 .dcclink a {
   background-color: #00a3b9ff;
   box-shadow: 0 2px 0 #00353dff;
-  color: white;
+  color: white !important;
   padding: 0.5em 0.5em;
   position: relative;
   text-decoration: none;
@@ -184,7 +208,7 @@ table.intro-table {
 .dcclink-right a {
   background-color: #00a3b9ff;
   box-shadow: 0 2px 0 #00353dff;
-  color: white;
+  color: white !important;
   padding: 0.5em 0.5em;
   position: relative;
   text-decoration: none;
@@ -195,7 +219,7 @@ table.intro-table {
 }
 
 .dcclink a:visited {
-  color: whitesmoke
+  color: whitesmoke !important;
 }
 
 .dcclink a:hover {
@@ -206,6 +230,10 @@ table.intro-table {
 .dcclink a:active {
   box-shadow: none;
   top: 5px;
+}
+
+html[data-theme='dark'] .rst-content .guilabel {
+  color: black;
 }
 
 /* *************************************** */
@@ -299,27 +327,47 @@ svg {
   background: #f7fcff !important;
   clear: none !important;
 }
+html[data-theme='dark'] .note {
+  background: #ffffff24 !important;
+}
 
 .note p.admonition-title {
   background: #cbe1ef !important;
+}
+html[data-theme='dark'] .note p.admonition-title {
+  background: #256a97 !important;
 }
 
 .tip {
   background: #eef5f4 !important;
   clear: none !important;
 }
+html[data-theme='dark'] .tip {
+  background: #ffffff24 !important;
+  clear: none !important;
+}
 
 .tip p.admonition-title {
   background: #9cd7cb !important;
+}
+html[data-theme='dark'] .tip p.admonition-title {
+  background: #256a97 !important;
 }
 
 .admonition-todo {
   background: #f9f0e0 !important;
   clear: none !important;
 }
+html[data-theme='dark'] .admonition-todo {
+  background: #ffffff24 !important;
+  clear: none !important;
+}
 
 .admonition-todo p.admonition-title {
   background: #f7d1b0 !important;
+}
+html[data-theme='dark'] .admonition-todo p.admonition-title {
+  background: #ca6105 !important;
 }
 
 /* *************************************** */
@@ -347,6 +395,9 @@ svg {
   border-style: none !important;
   border-width:0px !important;
 }
+html[data-theme='dark'] tr:nth-child(odd), .table-grid-homepage tr:nth-child(odd), .table-list-homepage tr:nth-child(odd) {
+  background-color: #ffffff08 !important;
+}
 
 .table-wrap-text tr:nth-child(even), .table-grid-homepage tr:nth-child(even), .table-list-homepage tr:nth-child(even) {
   background-color: #ffffff00 !important;  
@@ -358,6 +409,9 @@ svg {
   background-color: white !important;  
   border-style: none !important;
   border-width:0px !important;
+}
+html[data-theme='dark'] .table-wrap-text td {
+  background-color: ffffff08 !important;  
 }
 
 .table-grid-homepage td, .table-list-homepage td {
@@ -478,6 +532,12 @@ nav#on-this-page {
   padding: 12px 24px 12px 24px !important;
 }
 
+html[data-theme='dark'] .rst-content .sidebar {
+  background: #000000ff !important;
+  border:#000000ff !important;
+}
+
+
 /* news */
 section#dcc-ex-model-railroading aside p.sidebar-title {	
   font-size: 110% !important;
@@ -529,6 +589,9 @@ img.sd-card-img-top {
 .rst-content code.literal, .rst-content tt.literal {
   color: #ba2121 !important;
 }
+html[data-theme='dark'] .rst-content code.literal, .rst-content tt.literal {
+  color: #ff6000 !important;
+}
 
 /* general purpose */
 
@@ -573,6 +636,10 @@ img.sd-card-img-top {
     border-color: white !important;
     border: 4px solid;
     transform: translateX(50%);
+  }
+  html[data-theme='dark'] div.rst-footer-buttons {
+    border-color: #141414 !important;
+    background: #c9c9c92e;
   }
   footer {
     padding-bottom: 40px;

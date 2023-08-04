@@ -5,7 +5,7 @@
    viewBox="0 0 799.99998 212.52001"
    version="1.1"
    sodipodi:docname="level_icons_conductor_text.svg"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    width="800"
    height="212.52"
    inkscape:export-filename="..\..\docs\_static\images\level_icons\conductor-level.png"
@@ -26,12 +26,12 @@
      inkscape:deskcolor="#505050"
      showgrid="false"
      inkscape:zoom="0.89439959"
-     inkscape:cx="370.08067"
-     inkscape:cy="183.92227"
-     inkscape:window-width="1600"
-     inkscape:window-height="816"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:cx="72.674452"
+     inkscape:cy="180.00903"
+     inkscape:window-width="2400"
+     inkscape:window-height="1244"
+     inkscape:window-x="2869"
+     inkscape:window-y="-11"
      inkscape:window-maximized="1"
      inkscape:current-layer="Camada_2" />
   <defs
@@ -50,7 +50,39 @@
        width="292.0011"
        height="103.99635"
        id="rect6323-5" />
+    <rect
+       x="243.5029"
+       y="30.042564"
+       width="548.03882"
+       height="177.78886"
+       id="rect6323-0" />
+    <rect
+       x="243.5029"
+       y="30.042564"
+       width="292.0011"
+       height="103.99635"
+       id="rect6323-5-9" />
   </defs>
+  <text
+     xml:space="preserve"
+     id="text6321-2"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.05;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect6323-0);display:inline;fill:#ffffff;fill-opacity:0.470588;stroke:none"
+     transform="translate(4)"><tspan
+       x="243.50195"
+       y="99.491674"
+       id="tspan1680"><tspan
+         style="font-size:86.6667px"
+         id="tspan1678">Conductor </tspan></tspan></text>
+  <text
+     xml:space="preserve"
+     id="text6321-1-5"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.05;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect6323-5-9);display:inline;fill:#ffffff;fill-opacity:0.470588;stroke:none"
+     transform="translate(4,84)"><tspan
+       x="243.50195"
+       y="94.149439"
+       id="tspan1684"><tspan
+         style="font-size:66.6667px"
+         id="tspan1682">Level</tspan></tspan></text>
   <rect
      class="cls-3"
      x="26.299999"
@@ -125,9 +157,9 @@
      transform="translate(0,-4)"><tspan
        x="243.50195"
        y="99.491674"
-       id="tspan6987"><tspan
+       id="tspan1688"><tspan
          style="font-size:86.6667px;fill:#00a3b9"
-         id="tspan6985">Conductor </tspan></tspan></text>
+         id="tspan1686">Conductor </tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text6321-1"
@@ -135,7 +167,7 @@
      transform="translate(0,80)"><tspan
        x="243.50195"
        y="94.149439"
-       id="tspan6991"><tspan
+       id="tspan1692"><tspan
          style="font-size:66.6667px"
-         id="tspan6989">Level</tspan></tspan></text>
+         id="tspan1690">Level</tspan></tspan></text>
 </svg>

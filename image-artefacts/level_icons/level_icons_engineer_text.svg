@@ -5,7 +5,7 @@
    viewBox="0 0 799.99999 212.52001"
    version="1.1"
    sodipodi:docname="level_icons_engineer_text.svg"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    width="800"
    height="212.52"
    inkscape:export-filename="..\..\docs\_static\images\level_icons\engineer-level.png"
@@ -26,12 +26,12 @@
      inkscape:deskcolor="#505050"
      showgrid="false"
      inkscape:zoom="0.89439959"
-     inkscape:cx="499.77662"
-     inkscape:cy="231.99921"
-     inkscape:window-width="1600"
-     inkscape:window-height="816"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:cx="339.89282"
+     inkscape:cy="232.55825"
+     inkscape:window-width="2400"
+     inkscape:window-height="1244"
+     inkscape:window-x="2869"
+     inkscape:window-y="-11"
      inkscape:window-maximized="1"
      inkscape:current-layer="Camada_2" />
   <defs
@@ -50,7 +50,39 @@
        width="292.00111"
        height="103.99635"
        id="rect6323-5" />
+    <rect
+       x="243.5029"
+       y="30.042564"
+       width="544.68457"
+       height="186.73341"
+       id="rect6323-58" />
+    <rect
+       x="243.5029"
+       y="30.042564"
+       width="292.0011"
+       height="103.99635"
+       id="rect6323-5-0" />
   </defs>
+  <text
+     xml:space="preserve"
+     id="text6321-0"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.05;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect6323-58);display:inline;fill:#ffffff;fill-opacity:0.470588;stroke:none"
+     transform="translate(4,-2)"><tspan
+       x="243.50195"
+       y="99.491674"
+       id="tspan1020"><tspan
+         style="font-size:86.6667px"
+         id="tspan1018">Engineer    </tspan></tspan></text>
+  <text
+     xml:space="preserve"
+     id="text6321-1-1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.05;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect6323-5-0);display:inline;fill:#ffffff;fill-opacity:0.470588;stroke:none"
+     transform="translate(4,84)"><tspan
+       x="243.50195"
+       y="94.149439"
+       id="tspan1024"><tspan
+         style="font-size:66.6667px"
+         id="tspan1022">Level</tspan></tspan></text>
   <path
      class="cls-1"
      d="M 204.71537,50.068981 147.17898,15.977272 a 8.582233,8.591899 0 0 0 -4.35017,-1.192224 H 70.726246 a 8.582233,8.591899 0 0 0 -4.350168,1.192224 L 8.8593692,50.068981 A 8.542865,8.5524866 0 0 0 6.2118684,62.326232 L 33.769497,101.73861 h 75.409483 70.5869 l 27.55763,-39.412378 a 8.533023,8.5426335 0 0 0 -2.60814,-12.257251 z"
@@ -396,9 +428,9 @@
      transform="translate(0,-6)"><tspan
        x="243.50195"
        y="99.491674"
-       id="tspan6230"><tspan
+       id="tspan1028"><tspan
          style="font-size:86.6667px;fill:#00a3b9"
-         id="tspan6228">Engineer    </tspan></tspan></text>
+         id="tspan1026">Engineer    </tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text6321-1"
@@ -406,7 +438,7 @@
      transform="translate(0,80)"><tspan
        x="243.50195"
        y="94.149439"
-       id="tspan6234"><tspan
+       id="tspan1032"><tspan
          style="font-size:66.6667px"
-         id="tspan6232">Level</tspan></tspan></text>
+         id="tspan1030">Level</tspan></tspan></text>
 </svg>

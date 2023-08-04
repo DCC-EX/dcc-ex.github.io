@@ -142,6 +142,44 @@ table.intro-table {
   overflow: visible;
 }
 
+/* product titles */
+.ex-prefix {
+  font-weight: bold; 
+  color: #00a3b9; 
+  font-size: 110%;
+}
+.ex-suffix {
+  font-weight: bold; 
+  color: #00353d;
+  font-size: 110%;
+}
+html[data-theme='dark'] .ex-suffix {
+  font-weight: bold; 
+  color: #006979;
+  font-size: 110%;
+}
+
+/* main dcc-ex text only */
+.dccex-prefix {
+  font-family: Audiowide,Helvetica,Arial,sans-serif;
+  font-weight: 600; 
+  color: #00353d;
+  font-size: 110%;
+}
+html[data-theme='dark'] .dccex-prefix {
+  font-family: Audiowide,Helvetica,Arial,sans-serif;
+  font-weight: 600; 
+  color: #006979;
+  font-size: 110%;
+}
+.dccex-suffix {
+  font-family: Audiowide,Helvetica,Arial,sans-serif;
+  font-weight: 600; 
+  color: #00a3b9; 
+  font-size: 110%;
+}
+
+
 .command-table thead th {
   text-align: center;
 }

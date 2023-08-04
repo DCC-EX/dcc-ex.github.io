@@ -4,55 +4,56 @@
 ..
 .. |DCC-EX| raw:: html
 
-  <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span>
+  <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span>
 ..
 .. |EX-CS| raw:: html
 
-  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>
 ..
 .. |EX-WT| raw:: html
 
-  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span>
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span>
 ..
 .. |EX-R| raw:: html
 
-  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span>
 ..
 .. |EX-I| raw:: html
    
-  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span>
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span>
 ..
 .. |EX-TT| raw:: html
 
-  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span>
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span>
 ..
 .. |EX-FC| raw:: html
 
-  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;FastClock</span></span>
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;FastClock</span>
 ..
 .. |EX-DCCI| raw:: html
 
-  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;DCCInspector</span></span>
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;DCCInspector</span>
 ..
 .. |EX-IO| raw:: html
 
-  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span>
 ..
 .. |EX-TB| raw:: html
 
-  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Toolbox</span></span>
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span>
 ..
 .. |EX-MS| raw:: html
 
-  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;MotorShield8874</span></span>
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span>
 ..
 .. |BSC| raw:: html
 
-  <span style="font-weight: bold; color: #00353d; font-size: 100%;">BaseStationClassic (DCC++)</span>
+  <span class="ex-suffix">BaseStationClassic (DCC++)</span>
 ..
 .. |TM| raw:: html
 
-  <span style="font-weight: bold; color: #00353d; font-size: 110%;">TrackManager</span>
+  <span class="ex-suffix">TrackManager</span>
+..
 .. |br| raw:: html
 
   <br />

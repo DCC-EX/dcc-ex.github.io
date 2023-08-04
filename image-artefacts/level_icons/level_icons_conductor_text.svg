@@ -25,9 +25,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
      showgrid="false"
-     inkscape:zoom="0.89439959"
-     inkscape:cx="72.674452"
-     inkscape:cy="180.00903"
+     inkscape:zoom="2.5297441"
+     inkscape:cx="439.96546"
+     inkscape:cy="215.04152"
      inkscape:window-width="2400"
      inkscape:window-height="1244"
      inkscape:window-x="2869"
@@ -65,24 +65,14 @@
   </defs>
   <text
      xml:space="preserve"
-     id="text6321-2"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.05;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect6323-0);display:inline;fill:#ffffff;fill-opacity:0.470588;stroke:none"
-     transform="translate(4)"><tspan
-       x="243.50195"
-       y="99.491674"
-       id="tspan1680"><tspan
-         style="font-size:86.6667px"
-         id="tspan1678">Conductor </tspan></tspan></text>
-  <text
-     xml:space="preserve"
      id="text6321-1-5"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.05;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect6323-5-9);display:inline;fill:#ffffff;fill-opacity:0.470588;stroke:none"
      transform="translate(4,84)"><tspan
        x="243.50195"
        y="94.149439"
-       id="tspan1684"><tspan
+       id="tspan342"><tspan
          style="font-size:66.6667px"
-         id="tspan1682">Level</tspan></tspan></text>
+         id="tspan340">Level</tspan></tspan></text>
   <rect
      class="cls-3"
      x="26.299999"
@@ -157,9 +147,9 @@
      transform="translate(0,-4)"><tspan
        x="243.50195"
        y="99.491674"
-       id="tspan1688"><tspan
+       id="tspan346"><tspan
          style="font-size:86.6667px;fill:#00a3b9"
-         id="tspan1686">Conductor </tspan></tspan></text>
+         id="tspan344">Conductor </tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text6321-1"
@@ -167,7 +157,7 @@
      transform="translate(0,80)"><tspan
        x="243.50195"
        y="94.149439"
-       id="tspan1692"><tspan
+       id="tspan350"><tspan
          style="font-size:66.6667px"
-         id="tspan1690">Level</tspan></tspan></text>
+         id="tspan348">Level</tspan></tspan></text>
 </svg>

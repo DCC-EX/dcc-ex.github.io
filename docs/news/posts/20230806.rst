@@ -15,7 +15,7 @@
 
 |NEW-IN-V5-LOGO-SMALL|
 
-New in Version 5
-================
+Version 5 is here!
+==================
 
-Placeholder
+Yep, that's right, the much anticipated |EX-CS| version 5 release is here at last! This is a huge release, adding significant new features, enhancing existing capabilities, introducting new and enhanced I/O support, along with other associated products such as |EX-FC|, |EX-TT|, and |EX-IO|.

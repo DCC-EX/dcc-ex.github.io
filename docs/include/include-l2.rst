@@ -45,7 +45,7 @@
 .. |EX-IO-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-ioexpander.png
       :alt: EX-IOExpander
       :scale: 30%
-      :class: image-product-logo-float-right
+      :class: image-min-width-144
       :target: ../../ex-ioexpander/index.html
 ..
 .. |EX-BSC-LOGO-SMALL| image:: /_static/images/logos/product-logo-basestationclassic.png

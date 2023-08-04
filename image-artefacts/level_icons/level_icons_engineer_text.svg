@@ -25,9 +25,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
      showgrid="false"
-     inkscape:zoom="0.89439959"
-     inkscape:cx="339.89282"
-     inkscape:cy="232.55825"
+     inkscape:zoom="14.310393"
+     inkscape:cx="590.75944"
+     inkscape:cy="101.04544"
      inkscape:window-width="2400"
      inkscape:window-height="1244"
      inkscape:window-x="2869"
@@ -65,14 +65,14 @@
   </defs>
   <text
      xml:space="preserve"
-     id="text6321-0"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.05;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect6323-58);display:inline;fill:#ffffff;fill-opacity:0.470588;stroke:none"
-     transform="translate(4,-2)"><tspan
+     id="text6321"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.05;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect6323);display:inline;fill:#000000;fill-opacity:1;stroke:none"
+     transform="translate(0,-6)"><tspan
        x="243.50195"
        y="99.491674"
-       id="tspan1020"><tspan
-         style="font-size:86.6667px"
-         id="tspan1018">Engineer    </tspan></tspan></text>
+       id="tspan408"><tspan
+         style="font-size:86.6667px;fill:#00a3b9"
+         id="tspan406">Engineer    </tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text6321-1-1"
@@ -80,9 +80,9 @@
      transform="translate(4,84)"><tspan
        x="243.50195"
        y="94.149439"
-       id="tspan1024"><tspan
+       id="tspan412"><tspan
          style="font-size:66.6667px"
-         id="tspan1022">Level</tspan></tspan></text>
+         id="tspan410">Level</tspan></tspan></text>
   <path
      class="cls-1"
      d="M 204.71537,50.068981 147.17898,15.977272 a 8.582233,8.591899 0 0 0 -4.35017,-1.192224 H 70.726246 a 8.582233,8.591899 0 0 0 -4.350168,1.192224 L 8.8593692,50.068981 A 8.542865,8.5524866 0 0 0 6.2118684,62.326232 L 33.769497,101.73861 h 75.409483 70.5869 l 27.55763,-39.412378 a 8.533023,8.5426335 0 0 0 -2.60814,-12.257251 z"
@@ -423,22 +423,12 @@
      y="0.18565905" />
   <text
      xml:space="preserve"
-     id="text6321"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.05;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect6323);display:inline;fill:#000000;fill-opacity:1;stroke:none"
-     transform="translate(0,-6)"><tspan
-       x="243.50195"
-       y="99.491674"
-       id="tspan1028"><tspan
-         style="font-size:86.6667px;fill:#00a3b9"
-         id="tspan1026">Engineer    </tspan></tspan></text>
-  <text
-     xml:space="preserve"
      id="text6321-1"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.05;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect6323-5);display:inline;fill:#00353d;fill-opacity:1;stroke:none"
      transform="translate(0,80)"><tspan
        x="243.50195"
        y="94.149439"
-       id="tspan1032"><tspan
+       id="tspan416"><tspan
          style="font-size:66.6667px"
-         id="tspan1030">Level</tspan></tspan></text>
+         id="tspan414">Level</tspan></tspan></text>
 </svg>

@@ -5,7 +5,7 @@
    viewBox="0 0 799.99999 212.52001"
    version="1.1"
    sodipodi:docname="level_icons_tinkerer_text.svg"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    width="800"
    height="212.52"
    inkscape:export-filename="..\..\docs\_static\images\level_icons\tinkerer-level.png"
@@ -26,12 +26,12 @@
      inkscape:deskcolor="#505050"
      showgrid="false"
      inkscape:zoom="1.264872"
-     inkscape:cx="536.81321"
-     inkscape:cy="212.27444"
-     inkscape:window-width="1600"
-     inkscape:window-height="816"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:cx="422.9677"
+     inkscape:cy="212.66974"
+     inkscape:window-width="2400"
+     inkscape:window-height="1244"
+     inkscape:window-x="2869"
+     inkscape:window-y="-11"
      inkscape:window-maximized="1"
      inkscape:current-layer="Camada_2" />
   <defs
@@ -50,7 +50,39 @@
        width="292.0011"
        height="103.99635"
        id="rect6323-5" />
+    <rect
+       x="243.5029"
+       y="30.042564"
+       width="550.2533"
+       height="181.04599"
+       id="rect6323-7" />
+    <rect
+       x="243.5029"
+       y="30.042564"
+       width="292.0011"
+       height="103.99635"
+       id="rect6323-5-5" />
   </defs>
+  <text
+     xml:space="preserve"
+     id="text6321-2"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.05;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect6323-7);display:inline;fill:#ffffff;fill-opacity:0.47058824;stroke:none"
+     transform="translate(4,-2)"><tspan
+       x="243.50195"
+       y="99.491674"
+       id="tspan1674"><tspan
+         style="font-size:86.6667px"
+         id="tspan1672">Tinkerer </tspan></tspan></text>
+  <text
+     xml:space="preserve"
+     id="text6321-1-1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1.05;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect6323-5-5);display:inline;fill:#ffffff;fill-opacity:0.47058824;stroke:none"
+     transform="translate(4,84)"><tspan
+       x="243.50195"
+       y="94.149439"
+       id="tspan1678"><tspan
+         style="font-size:66.6667px"
+         id="tspan1676">Level</tspan></tspan></text>
   <path
      class="cls-1"
      d="M 179.95,140.39 H 32.09 a 5.8,5.8 0 0 1 -5.79,-5.8 c 0,0 3.21,-83 80.19,-83 76.98,0 79.25,83 79.25,83 a 5.8,5.8 0 0 1 -5.79,5.8 z"
@@ -97,9 +129,9 @@
      transform="translate(0,-6)"><tspan
        x="243.50195"
        y="99.491674"
-       id="tspan6169"><tspan
+       id="tspan1682"><tspan
          style="font-size:86.6667px;fill:#00a3b9"
-         id="tspan6167">Tinkerer </tspan></tspan></text>
+         id="tspan1680">Tinkerer </tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text6321-1"
@@ -107,7 +139,7 @@
      transform="translate(0,80)"><tspan
        x="243.50195"
        y="94.149439"
-       id="tspan6173"><tspan
+       id="tspan1686"><tspan
          style="font-size:66.6667px"
-         id="tspan6171">Level</tspan></tspan></text>
+         id="tspan1684">Level</tspan></tspan></text>
 </svg>

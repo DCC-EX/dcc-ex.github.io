@@ -45,6 +45,7 @@ extensions = [
     'ablog',
     'sphinx.ext.intersphinx',
     'sphinx_design',
+    'sphinx_rtd_dark_mode'
 ]
 
 autosectionlabel_prefix_document = True

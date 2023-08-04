@@ -3,7 +3,7 @@
    inkscape:export-ydpi="17.060751"
    inkscape:export-xdpi="17.060751"
    inkscape:export-filename="..\..\docs\_static\images\logos\product-logo-contributing.png"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="DCC-EX_product-contributing.svg"
    id="svg40"
    version="1.1"
@@ -35,15 +35,15 @@
      showguides="true"
      inkscape:current-layer="svg40"
      inkscape:window-maximized="1"
-     inkscape:window-y="-8"
-     inkscape:window-x="-8"
-     inkscape:cy="413.80353"
-     inkscape:cx="1449.3626"
-     inkscape:zoom="0.23803567"
+     inkscape:window-y="-11"
+     inkscape:window-x="2869"
+     inkscape:cy="-84.021021"
+     inkscape:cx="659.56501"
+     inkscape:zoom="0.47607134"
      showgrid="false"
      id="namedview42"
-     inkscape:window-height="996"
-     inkscape:window-width="1920"
+     inkscape:window-height="1244"
+     inkscape:window-width="2400"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
      guidetolerance="10"
@@ -257,7 +257,50 @@
          stop-color="white"
          offset="1" />
     </linearGradient>
+    <rect
+       x="205.28384"
+       y="1341.9482"
+       width="1039.0117"
+       height="116.82903"
+       id="rect2482-4-7-6-1" />
+    <rect
+       x="205.28384"
+       y="1341.9482"
+       width="499.55878"
+       height="133.90031"
+       id="rect2482-4-7-6-3-6" />
   </defs>
+  <text
+     xml:space="preserve"
+     id="text2480-6-0-6-7"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:88.1171px;line-height:1.25;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect2482-4-7-6-1);display:inline;fill:#ffffff;fill-opacity:0.470588;stroke:none"
+     transform="matrix(3.4802183,0,0,3.4802183,112.67054,-4189.4634)"
+     inkscape:export-filename="D:\users\akers\documents\_personal -D\DCC-EX\product-logo-ex-turntable.png"
+     inkscape:export-xdpi="18.431187"
+     inkscape:export-ydpi="18.431187"><tspan
+       x="205.2832"
+       y="1421.3719"
+       id="tspan1030">Contributing</tspan></text>
+  <text
+     xml:space="preserve"
+     id="text2480-6-0-6-4-3"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:88.1171px;line-height:1.25;font-family:Audiowide;-inkscape-font-specification:'Audiowide, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect2482-4-7-6-3-6);display:inline;fill:#ffffff;fill-opacity:0.470588;stroke:none"
+     transform="matrix(3.4802183,0,0,3.4802183,112.67083,-4555.0201)"
+     inkscape:export-filename="D:\users\akers\documents\_personal -D\DCC-EX\product-logo-ex-commandstation.png"
+     inkscape:export-xdpi="18.431187"
+     inkscape:export-ydpi="18.431187"><tspan
+       x="205.2832"
+       y="1421.3719"
+       id="tspan1032">DCC-EX</tspan></text>
+  <path
+     d="M 916.02466,472.51298 H 2102.0679"
+     stroke="#000000"
+     stroke-width="5.45568"
+     id="path31-1-8"
+     style="fill:#ffffff;fill-opacity:0.470588;stroke:#ffffff;stroke-opacity:0.47058824"
+     inkscape:export-filename="D:\users\akers\documents\_personal -D\DCC-EX\product-logo-ex-commandstation.png"
+     inkscape:export-xdpi="18.431187"
+     inkscape:export-ydpi="18.431187" />
   <rect
      style="fill:none;fill-opacity:1;stroke-width:0.377953;-inkscape-stroke:none;stop-color:#000000;stroke:none"
      id="rect46006"
@@ -279,9 +322,9 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan1162"><tspan
+       id="tspan1036"><tspan
          style="fill:#00353d"
-         id="tspan1160">Contributing</tspan></tspan></text>
+         id="tspan1034">Contributing</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text2480-6-0-6-4"
@@ -292,11 +335,11 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan1168"><tspan
+       id="tspan1042"><tspan
          style="fill:#00353d"
-         id="tspan1164">DCC-</tspan><tspan
+         id="tspan1038">DCC-</tspan><tspan
          style="fill:#00a3b9"
-         id="tspan1166">EX</tspan></tspan></text>
+         id="tspan1040">EX</tspan></tspan></text>
   <path
      d="M 910.02466,466.51298 H 2096.0679"
      stroke="#000000"

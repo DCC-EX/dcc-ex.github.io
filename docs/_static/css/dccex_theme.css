@@ -232,6 +232,13 @@ html[data-theme='dark']  .command-table tr:nth-child(even) {
 
 /* *************************************** */
 
+html[data-theme='dark'] .sd-card {
+  background-color: #0000008a;
+}
+
+
+/* *************************************** */
+
 .dcclink a {
   background-color: #00a3b9ff;
   box-shadow: 0 2px 0 #00353dff;

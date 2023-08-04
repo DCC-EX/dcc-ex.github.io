@@ -2,7 +2,7 @@
 <svg
    inkscape:export-ydpi="17.060751"
    inkscape:export-xdpi="17.060751"
-   inkscape:export-filename="..\..\docs\_static\images\logos\product-logo-ex-webthrottle.png"
+   inkscape:export-filename="..\..\docs\_static\images\logos\product-logo-ex-support.png"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="DCC-EX_product-logo-ex-support.svg"
    id="svg40"
@@ -37,8 +37,8 @@
      inkscape:window-maximized="1"
      inkscape:window-y="-11"
      inkscape:window-x="2869"
-     inkscape:cy="726.78182"
-     inkscape:cx="2310.578"
+     inkscape:cy="726.78183"
+     inkscape:cx="1077.5696"
      inkscape:zoom="0.23803567"
      showgrid="false"
      id="namedview42"
@@ -280,7 +280,7 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan1760">EX-Support</tspan></text>
+       id="tspan347">EX-Support</tspan></text>
   <text
      xml:space="preserve"
      id="text2480-6-0-6-4-0"
@@ -291,7 +291,7 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan1762">DCC-EX</tspan></text>
+       id="tspan349">DCC-EX</tspan></text>
   <path
      d="M 916.02466,472.51298 H 2102.0679"
      stroke="#000000"
@@ -322,11 +322,11 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan1768"><tspan
+       id="tspan355"><tspan
          style="fill:#00a3b9"
-         id="tspan1764">EX-</tspan><tspan
+         id="tspan351">EX-</tspan><tspan
          style="fill:#00353d"
-         id="tspan1766">Support</tspan></tspan></text>
+         id="tspan353">Support</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text2480-6-0-6-4"
@@ -337,11 +337,11 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan1774"><tspan
+       id="tspan361"><tspan
          style="fill:#00353d"
-         id="tspan1770">DCC-</tspan><tspan
+         id="tspan357">DCC-</tspan><tspan
          style="fill:#00a3b9"
-         id="tspan1772">EX</tspan></tspan></text>
+         id="tspan359">EX</tspan></tspan></text>
   <path
      d="M 910.02466,466.51298 H 2096.0679"
      stroke="#000000"

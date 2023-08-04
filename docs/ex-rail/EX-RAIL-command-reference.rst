@@ -281,11 +281,11 @@ All of these script types must be terminated by either a ``DONE``, ``FOLLOW(id)`
 
 ``RETURN``	Return to the calling sequence when completed (no DONE required).
 
-Say, for example, you have an AUTOMATION you initiate the sends a train through your layout with multiple station stops, and you want to do the same things at each station.
-
-You could write a very long AUTOMATION sequence to do this, or you could write the sound SEQUENCE once, then call it at each station:
-
   .. collapse:: For example: (click to show)
+
+    Say, for example, you have an AUTOMATION you initiate the sends a train through your layout with multiple station stops, and you want to do the same things at each station.
+
+    You could write a very long AUTOMATION sequence to do this, or you could write the sound SEQUENCE once, then call it at each station:
 
     .. code-block:: cpp
 

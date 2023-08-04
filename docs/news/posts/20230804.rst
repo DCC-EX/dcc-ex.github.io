@@ -20,11 +20,42 @@ Version 5 is here!
 
 We highly recommend upgrading to version 5 to take advantage of the improvements we've made, and especially for those users who are using our new |EX-MS|, as we've improved how it deals with inrush current amongst other enhancements.
 
+We've outlined the key updates below but this is not an exhaustive list, for that we suggest reading through the release notes.
+
 |NEW-IN-V5-LOGO-SMALL|
 
-Here's a quick list of all the new features, enhancements, and extended I/O capability in version 5:
+EX-CommandStation features, fixes, and enhancements
+---------------------------------------------------
 
-- |TM| - Run both DC and DCC trains from the same controller and switch your tracks between DC and DCC modes live! See :doc:`/trackmanager/index` for all the details
-- |EX-FC| :doc:`/ex-fastclock/index`
-- |EX-IO| :doc:`/ex-ioexpander/index`
-- |EX-TT| :doc:`/ex-turntable/index`
+- |TM| - Run both DC and DCC trains from the same controller and switch your tracks between DC and DCC modes live, see :doc:`/trackmanager/index`
+- Beta support for new, 32 bit microcontrollers including ESP32 Wroom and some STMicroelectronics Nucleo, see :doc:`/reference/hardware/microcontrollers/microcontrollers`
+- Add support for our new fast clock |EX-FC|, see :doc:`/ex-fastclock/index`
+- Add support for our new I/O expander |EX-IO|, see :doc:`/ex-ioexpander/index`
+- Add support for our new turntable controller |EX-TT|, see :doc:`/ex-turntable/index`
+- Add support for duinoNodes, see :doc:`/ex-commandstation/accessories/inputs-outputs/duinonodes`
+- Add support for a rotary encoder, see :ref:`ex-turntable/test-and-tune:controlling ex-turntable with a rotary encoder`
+- Add support for PCF8575 and PCA/TCA9555 GPIO devices
+- Enhanced overcurrent detection, including enhancing the behaviour to deal with inrush current issues
+- Moved startup of the HAL earlier in the boot sequence
+- Improved performance for ADC (analogue to digital) reads
+- Enhancements to |I2C| bus retries and timeouts
+- Support for |I2C| multiplexers to help with devices with static or limited address ranges
+- Support for multiple |I2C| displays
+- Add ``<JG>`` and ``<JI>`` for multi-track gauges to support |TM|
+- Improved stability for the VL53L0X ToF sensor
+- Bugfix for signals being inverted (active high was actually active low and vice versa)
+- Bugfix for Ethernet allowing a static IP address to be set
+
+EXRAIL enhancements
+-------------------
+
+- **BREAKING CHANGE** Removed implicit ``AUTOSTART`` from myAutomation.h, simply add ``AUTOSTART`` to the beginning of the file to restore this, see :ref:`ex-rail/ex-rail-command-reference:scripts/sequences - types and control`
+- Enhance ``SPEED`` command to respond to external direction changes
+- Add ``DCC_SIGNAL`` command to control DCC Accessory based signals
+- Add ``VIRTUAL_SIGNAL`` command to enable user-defined signal sequences
+- Add ``ONGREEN``, ``ONAMBER``, and ``ONRED`` signal event handlers to respond to signal changes
+- Add ``TURNOUTL`` command to enable using a linear DCC address for DCC Accessory turnouts
+- Add ``MOVETT`` command to enable controlling an |EX-TT|
+- Add ``IFRE`` command to test the position of a rotary encoder
+- Add ``ONCHANGE`` event handler to respond to a position change of a rotary encoder
+- Add ``ONCLOCKTIME`` and ``ONCLOCKMINS`` event handlers to respond to |EX-FC| clock times

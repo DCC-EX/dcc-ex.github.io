@@ -415,6 +415,10 @@ html[data-theme='dark'] .admonition-todo p.admonition-title {
   background: #ca6105 !important;
 }
 
+html[data-theme='dark'] .sidebar-title {
+  background: #002735 !important;
+}
+
 /* *************************************** */
 
 .menuselection {

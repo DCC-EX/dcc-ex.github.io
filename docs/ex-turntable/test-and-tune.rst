@@ -343,7 +343,7 @@ The EX-RAIL equivalent to the above would be:
 Controlling EX-Turntable with a rotary encoder
 ==============================================
 
-|NOT-IN-PROD-VERSION|
+|NEW-IN-V5-LOGO-SMALL|
 
 It is possible to use a rotary encoder to select turntable positions if desired, which is handy for use with mimic panels and so forth.
 

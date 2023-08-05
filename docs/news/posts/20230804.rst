@@ -1,0 +1,86 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+
+:blogpost: true
+:date: 4 August, 2023
+:author: flash62au
+:category: News, Release
+:tags: new-in-version-5, version-5, news
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+Version 5 is here!
+==================
+
+|NEW-IN-V5| Yep, that's right, the much anticipated |EX-CS| version 5 release is here at last! This is a huge release, adding significant new features like |TM|, enhancing existing capabilities, introducting new and enhanced I/O support, along with other associated products such as |EX-FC|, |EX-TT|, and |EX-IO|.
+
+We highly recommend upgrading to version 5 to take advantage of the improvements we've made, and especially for those users who are using our new |EX-MS|, as we've improved how it deals with overloads and inrush current amongst other enhancements.
+
+To get your hands on this latest release, select ``Latest Production`` when running |EX-I| (see :ref:`ex-installer/installing:download and run ex-installer`), or you can download it manually by following the directions in :ref:`download/ex-commandstation:latest ex-commandstation official release`.
+
+We've outlined the key updates below but this is not an exhaustive list.
+
+|NEW-IN-V5-LOGO-SMALL|
+
+EX-CommandStation features, fixes, and enhancements
+---------------------------------------------------
+
+- |TM| - Run both DC and DCC trains from the same controller and switch your tracks between DC and DCC modes live, see :doc:`/trackmanager/index`
+- Beta support for new, 32 bit microcontrollers including ESP32 Wroom and some STMicroelectronics Nucleo, see :doc:`/reference/hardware/microcontrollers/microcontrollers`
+- Extensive optimisation of HIGHMEM useage to free up PROGMEM below the 64kb and increase the useful life of the AVR Mega2560 platform
+- Add option to disable programming to allow limited platforms such as the Arduino Uno to run limited |EX-R| scripts
+- Add support for our new fast clock |EX-FC|, see :doc:`/ex-fastclock/index`
+- Add support for our new I/O expander |EX-IO|, see :doc:`/ex-ioexpander/index`
+- Add support for our new turntable controller |EX-TT|, see :doc:`/ex-turntable/index`
+- Add support for duinoNodes, see :doc:`/ex-commandstation/accessories/inputs-outputs/duinonodes`
+- Add support for a rotary encoder, see :ref:`ex-turntable/test-and-tune:controlling ex-turntable with a rotary encoder`
+- Add support for PCF8575 and PCA/TCA9555 GPIO devices
+- Enhanced overcurrent detection, including enhancing the behaviour to deal with inrush current issues
+- Moved startup of the HAL earlier in the boot sequence
+- Improved performance for ADC (analogue to digital) reads
+- Enhancements to |I2C| bus retries and timeouts
+- Support for |I2C| multiplexers to help with devices with static or limited address ranges
+- Support for multiple |I2C| displays
+- Improved handling of conflicting |I2C| addresses and Vpin allocations
+- Enhanced DFPlayer error handling
+- Add ``<JG>`` and ``<JI>`` for multi-track gauges to support |TM|
+- Improved stability for the VL53L0X ToF sensor
+- Bugfix for signals being inverted (active high was actually active low and vice versa)
+- Bugfix for Ethernet allowing a static IP address to be set
+
+EXRAIL enhancements
+-------------------
+
+For details on these changes and new commands, refer to our new, consolidated :doc:`/ex-rail/EX-RAIL-command-reference`.
+
+- **BREAKING CHANGE** Removed implicit ``AUTOSTART`` from myAutomation.h, simply add ``AUTOSTART`` to the beginning of the file to restore this, see :ref:`ex-rail/ex-rail-command-reference:scripts/sequences - types and control`
+- Enhance ``SPEED`` command to respond to external direction changes
+- Add ``DCC_SIGNAL`` command to control DCC Accessory based signals
+- Add ``VIRTUAL_SIGNAL`` command to enable user-defined signal sequences
+- Add ``ONGREEN``, ``ONAMBER``, and ``ONRED`` signal event handlers to respond to signal changes
+- Add ``TURNOUTL`` command to enable using a linear DCC address for DCC Accessory turnouts
+- Add ``MOVETT`` command to enable controlling an |EX-TT|
+- Add ``IFRE`` command to test the position of a rotary encoder
+- Add ``ONCHANGE`` event handler to respond to a position change of a rotary encoder
+- Add ``ONCLOCKTIME`` and ``ONCLOCKMINS`` event handlers to respond to |EX-FC| times
+- Add ``IFLOCO`` command to test if the provided loco ID is used in the sequence
+- Add ``FORGET`` command to drop the provided loco ID from reminder tables
+- Add ``SET_TRACK`` command to configure |TM| in sequences
+- Add ``SERIAL4``, ``SERIAL5``, and ``SERIAL6`` to support newer microcontrollers with more/different interfaces
+- Add ``SCREEN`` command to display messages on multiple displays
+- Add ``POWERON`` and ``POWEROFF`` commands to control track power
+
+Website enhancements
+--------------------
+
+As always, we are continuing to ensure our website is updated, and endeavour to make it easier to use and find information.
+
+.. image:: /_static/images/dark_mode.png
+  :alt: Dark mode icon
+  :align: right
+
+The big change is that you can now choose "dark mode" by clicking the icon in bottom right corner.

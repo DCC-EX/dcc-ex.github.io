@@ -45,7 +45,7 @@ For a simple example, to set a signal at pin 28 red when turnout ID 201 is throw
     GREEN(28)
   DONE
 
-For further information on controlling signals refer to :ref:`ex-rail/ex-rail-reference:signals`, and for some examples refer to :doc:`/big-picture/index`.
+For further information on controlling signals refer to :ref:`ex-rail/ex-rail-command-reference:signal objects - definition and control`, and for some examples refer to :doc:`/big-picture/index`.
 
 Signal event handlers
 ---------------------
@@ -76,7 +76,7 @@ For example, if you wish to set aspects on an advance signal according to a dist
 - When the distant signal 100 changes to amber, this will likely be followed by a red signal, so the advance signal 101 is also set to amber to warn approaching trains.
 - When the distant signal 100 changes to red, this also sets the advance signal 101 to amber to warn approaching trains.
 
-For further information on controlling signals refer to :ref:`ex-rail/ex-rail-reference:signals`, and for some examples refer to :doc:`/big-picture/index`.
+For further information on controlling signals refer to :ref:`ex-rail/ex-rail-command-reference:signal objects - definition and control`, and for some examples refer to :doc:`/big-picture/index`.
 
 Controlling DCC accessory signals
 =================================
@@ -86,7 +86,7 @@ If using DCC accessory signals, these are controlled as per any other DCC access
 - ``ACTIVATE(addr, sub_addr)`` - Activate (value 1) DCC accessory at the provided address and sub address
 - ``DEACTIVATE(addr, sub_addr)`` - Deactivate (value 0) DCC accessory at the provided address and sub address
 - ``ACTIVATEL(addr)`` - Activate (value 1) DCC accessory at the provided linear address
-- ``DEACTIVATEL(addr)`` - Dectivate (value 0) DCC accessory at the provided linear address
+- ``DEACTIVATEL(addr)`` - Deactivate (value 0) DCC accessory at the provided linear address
 
 As per defining and connecting DCC accessory signals, you will need to refer to the manufacturer's information on how to control the specific signals you're using.
 
@@ -104,7 +104,7 @@ For a simple example, in order to have a red aspect set when turnout ID 201 is t
     ACTIVATEL(103)
   DONE
 
-For further information on controlling DCC accessories including signals refer to :ref:`ex-rail/ex-rail-reference:dcc accessory decoder commands`.
+For further information on controlling DCC accessories including signals refer to :ref:`ex-rail/ex-rail-command-reference:dcc accessory decoder control`.
 
 DCC accessory event handlers
 ----------------------------
@@ -136,7 +136,7 @@ For example, if you wish to set aspects on an advance signal according to a dist
 - When the distant signal changes to amber (address 102), this will likely be followed by a red signal, so the advance signal is set to amber (address 106).
 - When the distant signal changes to red (address 101), this also sets the advance signal to amber (address 106) to warn approaching trains.
 
-For further information on controlling DCC accessories including signals refer to :ref:`ex-rail/ex-rail-reference:dcc accessory decoder commands`.
+For further information on controlling DCC accessories including signals refer to :ref:`ex-rail/ex-rail-command-reference:dcc accessory decoder control`.
 
 Controlling signals with more than three aspects
 ================================================

@@ -48,7 +48,7 @@ Connect Everything:
 * Connect wires from the MAIN Terminals of the motor shield (output A) to your **MAIN track**
 * Plug in the power supply for the motor shield **only**
 * Reconnect the |EX-CS| to the computer
-* wait for about 30 seconds
+* Wait for about 30 seconds for the CS to run through its startup sequence
 
 .. NOTE:: 
    :class: note-float-right-narrow
@@ -84,12 +84,15 @@ Connect Everything:
 * Now you are ready to run trains! |BR| |BR|
 * Place your loco on the **MAIN track**, a loco will NOT run on a programming track 
 * Click the :guilabel:`Power Slider` button to turn on power to your track
-* You should see lights on your Arduino Motor Shield and an indication that your loco has power
+* You should see lights on your Arduino Motor Shield or EX-MotorShield8874 and an indication that your loco has power
 * Next go to the ``Locomotive ID`` textbox 
 * Enter the DCC address of your loco
 * Then press the :guilabel:`Acquire` button
 * You should now have full control over your loco
 * The circular control or vertical slider (chosen by the throttle select slider) can be moved by clicking and holding down the mouse button and dragging, clicking at a spot where you want the throttle to move, or clicking the + and - buttons
+
+.. note:: 
+   If you did not see the LEDs light near the A and B outputs on the Motor Shield, try pushing down on the motor shield to make sure that the pins are properly seated into the Arduino. If that did not work, scroll down to the very bottom of this page and click on the "next" button for troubleshooting help.
 
 .. sidebar:: 
 
@@ -111,8 +114,9 @@ Connect Everything:
 
 * Disconnect the |EX-CS| from the computer (that you used to load the software)
 * Connect the wires from the 'MAIN' terminals of the motor shield (output A) to your MAIN track
-* Plug in the two power supplies (The one for the Arduino and the the one for the motor shield)
-* wait for about 30 seconds for the Arduino to run through the initial startup sequence
+* If you are using the DCC-EX EX-MotorShield8874, plug in your single power supply to the shield
+* If you are using the Arduino Motor Shield, plug in the two power supplies (The one for the Arduino and the one for the motor shield). Make sure to not plug the higher voltage power supply into the Arduino by mistake
+* Wait for about 30 seconds for the Arduino to run through the initial startup sequence
 
 .. image:: /_static/images/throttles/throttle_wifi_direct.png
    :alt:  WiFi Throttle Direct to CS
@@ -179,6 +183,9 @@ You will need to install |Engine Driver| on your mobile device and then connect 
 * Back on the 'Throttle screen' you can now use the sliders to move your train on the MAIN track.
 
 See :doc:`Engine Driver Page </throttles/software/engine-driver>` for details on how to install and run |Engine Driver|.
+
+.. note:: 
+   If you did not see the LEDs near the A and B outputs light on the Motor Shield, try pushing down on the motor shield to make sure that the pins are properly seated into the Arduino. If that did not work, scroll down to the very bottom of this page and click on the "next" button for troubleshooting help.
 
 Using wiThrottle (Apple iOS)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -256,4 +263,4 @@ We suggest that you look at the :doc:`/big-picture/index` to get some additional
 
 You might also like to look at the other :doc:`Throttles (Controllers) </ex-commandstation/advanced-setup/controllers>` that are available.
 
-If you are still having difficulties click :guilabel:`Next`.
+If you are still having difficulties click :guilabel:`Next` below.

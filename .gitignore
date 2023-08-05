@@ -49,3 +49,8 @@ Thumbs.db
 ########################
 *.drawio.bkp
 *.dtmp
+
+# virtualenv files #
+####################
+venv
+venv/*

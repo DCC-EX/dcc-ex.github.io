@@ -32,7 +32,7 @@ Throughout this exercise, we will be defining turnout/point objects, and for con
 
 This way, the various possible variations of each type of object will be defined with the same ID, meaning the same |EX-R| sequences will apply, no matter how the objects are defined.
 
-For further information on IDs used in |EX-R|, refer to the :ref:`ex-rail/ex-rail-reference:notes` section of the |EX-R| reference page.
+For further information on IDs used in |EX-R|, refer to the :ref:`ex-rail/ex-rail-command-reference:handy information` section of the |EX-R| reference page.
 
 DCC addresses
 -------------
@@ -195,7 +195,7 @@ Adding a Block
 
 .. sidebar:: 
    
-   You can also refer to :ref:`ex-rail/ex-rail-reference:blocks` for more information.
+   You can also refer to :ref:`ex-rail/ex-rail-command-reference:virtual block control` for more information.
 
 Blocks in EX-RAIL are a virtual concept only, and they do not relate in any way to the concept of block occupancy detection.
 

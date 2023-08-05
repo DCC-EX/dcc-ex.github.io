@@ -56,9 +56,16 @@ You will need to find or purchase:
 #. some **wire** (18 to 16 AWG twisted pair recommended [#wire]_.) |BR| |BR|
 #. a 'known' working **DCC-equipped locomotive**
 
+.. warning::
+  :class: warning-float-right-wide
+
+  **Uno R4 is not supported** |BR| If you choose to purchase an Arduino Uno (not recommended), it is vital that you purchase the **Revision 3 (R3)** version, :dcc-ex-red-bold:`not` the **Revision 4 (R4)** version.  The |EX-CS| :dcc-ex-red-bold:`cannot run` on the R4 version.  :doc:`See here from more informtion</news/posts/20230728>`.
+
 .. note:: 
 
   You can also find more detailed hardware information in the :doc:`/reference/hardware/index` section.
+
+|force-break|
 
 Software
 --------

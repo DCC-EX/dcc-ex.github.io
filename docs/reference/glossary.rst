@@ -15,12 +15,14 @@ Glossary
 
     * - Term
       - Meaning
-    * - Motor Driver 
-      - Same as "Motor Shield" "Motor Board" "Motorboard" |BR| See :doc:`/reference/hardware/motor-boards`
+    * - Arduino IDE
+      - A free app running on your PC, specifically designed to install software onto Arduino microprocessors. |BR| https://www.arduino.cc/en/software
     * - Command Station |BR| DCC Command Station |BR| DCC Base Station
       - See https://dccwiki.com/Command_Station
     * - Consist |BR| Multiple Unit
       - Multiple locos hauling a singe train. see https://dccwiki.com/Multiple_Unit_Consisting
+    * - Cab
+      - A Cab can refer to a throttle (or controller) as well as a loco or locomotive |BR| In the context of DCC-EX commands, `cab` refers to a loco
     * - DC
       - Direct Current
     * - DCC
@@ -29,14 +31,16 @@ Glossary
       - Android app for controlling DCC locos using the wiThrottle Protocol |BR| See :doc:`/throttles/software/engine-driver`
     * - JMRI
       - `Java Model Railroad Interface <https://www.jmri.org/>`_
-    * - Cab
-      - A Cab can refer to a throttle (or controller) as well as a loco or locomotive |BR| In the context of DCC-EX commands, `cab` refers to a loco
+    * - Motor Driver 
+      - Same as "Motor Shield" "Motor Board" "Motorboard" |BR| See :doc:`/reference/hardware/motor-boards`
     * - Switching |BR| Shunting
       - The process of moving individual carriages to/from specific locations on yards or sidings.
     * - Turnouts |BR| Points
       - A mechanical device to guide a train from one track to another
     * - USB
       - Universal Serial Bus
+    * - Visual Studio Code (VSC)
+      - A free app running on your PC that, among other capabilities, can install software onto Arduino microprocessors |BR| https://code.visualstudio.com/
     * - WiThrottle
       - \ 1. Trademark owned by Brett Hoffman |BR|\ 2. proprietary iOS app developed by Brett Hoffman. See :doc:`/throttles/software/withrottle`
     * - WiThrottle Protocol

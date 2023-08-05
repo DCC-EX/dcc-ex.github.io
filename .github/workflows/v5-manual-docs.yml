@@ -1,6 +1,10 @@
-name: Version 5 Docs - (manual)
+name: Version 5 Docs V1 - (manual)
 
 on:
+  push:
+    branches: [ v5-release-docs ]
+  pull_request:
+    branches: [ v5-release-docs ]
   workflow_dispatch:
     branches: [ v5-release-docs ]
 
@@ -14,8 +18,6 @@ jobs:
         # Allow sphinx-rtd-theme to choose the versions of sphinx & docutils
         run: |
           pip3 install -r requirements.txt
-        # pip3 install sphinx-rtd-theme==1.2.0 \
-            # sphinx-sitemap sphinxcontrib-spelling sphinx-toolbox ablog sphinx-design
       - name: Build docs
         run: |
           make github

@@ -1,4 +1,4 @@
-name: Version 5 Docs - (manual)
+name: Version 5 Docs V1 - (manual)
 
 on:
   workflow_dispatch:
@@ -8,22 +8,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
       - name: Requirements
         # Allow sphinx-rtd-theme to choose the versions of sphinx & docutils
         run: |
-          # pip3 install sphinx-rtd-theme==1.2.0 \
-            # sphinx-sitemap sphinxcontrib-spelling sphinx-toolbox ablog sphinx-design
           pip3 install -r requirements.txt
-      - name: Checkout repo
-        uses: actions/checkout@v3
       - name: Build docs
         run: |
           make github
           echo 'dcc-ex.com' > docs/_build/html/CNAME
           touch docs/_build/html/.nojekyll
       - name: Deploy
-        if: github.ref == 'refs/heads/flash62au-restruct'
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        if: github.ref == 'refs/heads/v5-release-docs'
+        uses: JamesIves/github-pages-deploy-action@ba1486788b0490a235422264426c45848eac35c6  # v4.4.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages  # The branch the action should deploy to.

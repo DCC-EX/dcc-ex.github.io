@@ -31,6 +31,8 @@ EX-CommandStation features, fixes, and enhancements
 
 - |TM| - Run both DC and DCC trains from the same controller and switch your tracks between DC and DCC modes live, see :doc:`/trackmanager/index`
 - Beta support for new, 32 bit microcontrollers including ESP32 Wroom and some STMicroelectronics Nucleo, see :doc:`/reference/hardware/microcontrollers/microcontrollers`
+- Extensive optimisation of HIGHMEM useage to free up PROGMEM below the 64kb and increase the useful life of the AVR Mega2560 platform
+- Add option to disable programming to allow limited platforms such as the Arduino Uno to run limited |EX-R| scripts
 - Add support for our new fast clock |EX-FC|, see :doc:`/ex-fastclock/index`
 - Add support for our new I/O expander |EX-IO|, see :doc:`/ex-ioexpander/index`
 - Add support for our new turntable controller |EX-TT|, see :doc:`/ex-turntable/index`

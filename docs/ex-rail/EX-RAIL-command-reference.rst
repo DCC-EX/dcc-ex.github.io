@@ -603,7 +603,7 @@ Output and LED control
 
 ``FADE( pin, value, ms )``	Fade an LED on a servo driver to given value taking given time
 
-``LCN( msg )``	Send message to LCN Accessory Network
+``LCN( "msg" )``	Send message to LCN Accessory Network
 
 Servo Control
 -------------
@@ -806,29 +806,29 @@ System
 Communication and Display Functions
 -----------------------------------
 
-``LCD( row, msg )``	Write message on LCD/OLED if fitted
+``LCD( row, "msg" )``	Write message on LCD/OLED if fitted
 
-``BROADCAST( msg )`` Broadcast to all throttles/JMRI on serial and WiFi
+``SCREEN( display, row, "msg" )`` |NEW-IN-V5| Writes a message to the specified display on the specified row
 
-``PRINT( msg )``	Print diagnostic message to Serial Monitor
+``BROADCAST( "msg" )`` Broadcast to all throttles/JMRI on serial and WiFi
 
-``SERIAL( msg )``	Writes direct to Serial (Serial0/USB)
+``PRINT( "msg" )``	Print diagnostic message to Serial Monitor
 
-``SERIAL1( msg )``	Writes direct to Serial1
+``SERIAL( "msg" )``	Writes direct to Serial (Serial0/USB)
 
-``SERIAL2( msg )``	Wri1tes direct to Seria2
+``SERIAL1( "msg" )``	Writes direct to Serial1
 
-``SERIAL3( msg )``	Writes direct to Serial3
+``SERIAL2( "msg" )``	Writes direct to Serial2
 
-``SERIAL4( msg )``	|NEW-IN-V5| Writes direct to Serial4
+``SERIAL3( "msg" )``	Writes direct to Serial3
 
-``SERIAL5( msg )``	|NEW-IN-V5| Wri1tes direct to Seria5
+``SERIAL4( "msg" )``	|NEW-IN-V5| Writes direct to Serial4
 
-``SERIAL6( msg )``	|NEW-IN-V5| Writes direct to Serial6
+``SERIAL5( "msg" )``	|NEW-IN-V5| Writes direct to Serial5
 
-``WITHROTTLE( msg )`` |NEW-IN-V5| Writes a message to DCC-EX clients (alias of ``PRINT``)
+``SERIAL6( "msg" )``	|NEW-IN-V5| Writes direct to Serial6
 
-``SCREEN( display, row, msg )`` |NEW-IN-V5| Writes a message to the specified display on the specified row
+``WITHROTTLE( "msg" )`` |NEW-IN-V5| Writes a message to DCC-EX clients (alias of ``PRINT``)
 
 CommandStation Functions
 ------------------------
@@ -854,5 +854,5 @@ CommandStation Functions
 
 ``KILLALL`` |NEW-IN-V5| Kills all running |EX-R| activities
 
-``PARSE( msg )`` |NEW-IN-V5| Allows parsing of a DCC-EX API command via myAutomation.h
+``PARSE( "msg" )`` |NEW-IN-V5| Allows parsing of a DCC-EX API command via myAutomation.h
 

@@ -51,7 +51,8 @@ Power management
       |_| *Response:* |BR|
       |_| N/A |BR|
 
-  * - ``<J I>`` |BR| ``<JI>``
+  * - | ``<J I>``
+      | ``<JI>``
     - **Request current status** |BR| |BR|
       |_| *Parameters:* |BR|
       |_| N/A |BR| |BR|
@@ -62,7 +63,8 @@ Power management
       |_| **current:** current in milliamps |BR| |BR|
       |_| *Version Introduced: 4.2.19* |BR|
 
-  * - ``<J G>``  |BR| ``<JG>``
+  * - | ``<J G>``
+      | ``<JG>``
     - **Request max current** |BR| |BR|
       |_| *Parameters:* |BR|
       |_| N/A |BR| |BR|
@@ -137,7 +139,8 @@ Cab (Loco) Commands
       |_| Forgets one or all locos. The "cab" parameter is optional.  |BR|
       |_| Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending **<- cab>** will forget/clear that loco. Sending **<->** will clear all the locos. This doesn't do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands. |BR|
 
-  * - ``<J R id>`` |BR| ``<JR id>``
+  * - | ``<J R id>``
+      | ``<JR id>``
     - **Request details of a specific Roster Entry** |BR| |BR|
       |_| *Parameters:* |BR|
       |_| **id:** unique id of the Cab/s (Loco/s) in the roster |BR| |BR|
@@ -151,7 +154,8 @@ Cab (Loco) Commands
       |_| Response (id is in Roster): ``<jR id "desc" "funct1/funct2/funct3/...">`` |BR|
       |_| Response (id is not in Roster): ``<jR id "" "">`` |BR|
 
-  * - ``<J R>`` |BR| ``<JR>``
+  * - | ``<J R>``
+      | ``<JR>``
     - **Request the list defined Roster Entry IDs** |BR| |BR|
       |_| *Parameters:* |BR|
       |_| N/A |BR| |BR|
@@ -297,7 +301,8 @@ Turnout/Points
       |_|  |BR|
       |_| state - 0=closed 1=thrown |BR|
 
-  * - ``<J T id>`` |BR| ``<JT id>``
+  * - | ``<J T id>``
+      | ``<JT id>``
     - **Request details of a specific Turnout/Point** |BR| |BR|
       |_| *Parameters:* |BR|
       |_| **id:**  unique id of the Turnout/Point  |BR| |BR|
@@ -316,7 +321,8 @@ Turnout/Points
       |_| Response (id is defined): ``<jT id state "[desc]">`` |BR|
       |_| Response (id not defined): ``<jT id X>`` |BR|
 
-  * - ``<J T>`` |BR| ``<JT>``
+  * - | ``<J T>``
+      | ``<JT>``
     - **Request the list of defined turnout/Point IDs** |BR| |BR|
       |_| *Parameters:* |BR|
       |_| N/A |BR| |BR|
@@ -375,7 +381,8 @@ Routes/Automations
       |_| Response (successful turnouts/point don't exist): ``<jA.>`` |BR|
       |_| Response (fail): ??? |BR|
 
-  * - ``<J A id>`` |BR| ``<JA id>``
+  * - | ``<J A id>``
+      | ``<JA id>``
     - **Requests information for a route/automation** |BR| |BR|
       |_| *Parameters:* |BR|
       |_| **id:** identifier of the Route/Automation |BR| |BR|

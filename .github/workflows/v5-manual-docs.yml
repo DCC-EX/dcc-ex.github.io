@@ -1,10 +1,6 @@
 name: Version 5 Docs V1 - (manual)
 
 on:
-  push:
-    branches: [ v5-release-docs ]
-  pull_request:
-    branches: [ v5-release-docs ]
   workflow_dispatch:
     branches: [ v5-release-docs ]
 

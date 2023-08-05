@@ -148,6 +148,10 @@ table.intro-table {
   margin: 5% 15%;
 }
 
+html[data-theme='dark'] .btn-neutral {
+  color: #c1c1c1 !important;
+}
+
 #ex-rail-command-summary .wy-table-responsive {
   overflow: visible;
 }
@@ -189,6 +193,7 @@ html[data-theme='dark'] .dccex-prefix {
   font-size: 110%;
 }
 
+/***************************/
 
 .command-table thead th {
   text-align: center;
@@ -238,6 +243,23 @@ html[data-theme='dark']  .command-table tr:nth-child(even) {
 
 .command-table td {
   background-color: #ffffff00  !important;  
+}
+
+/* html[data-theme='dark'] .rst-content table.docutils tr:nth-child(odd) {
+  background-color: #ffffff08 !important;
+} */
+html[data-theme='dark'] .rst-content table.docutils td, .wy-table-bordered-all td {
+  background-color: #fff40000 !important;
+}
+/* html[data-theme='dark']  .rst-content table.docutils .row-odd {
+  background-color: #36ff0000 !important;
+} */
+
+html[data-theme='dark'] .rst-content table.docutils th {
+  background-color: #36ff0000 !important;
+  color: white !important;
+  font-style: italic !important;;
+  font-weight: 700 !important;;
 }
 
 /* *************************************** */

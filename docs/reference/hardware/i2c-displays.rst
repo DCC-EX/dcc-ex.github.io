@@ -106,14 +106,13 @@ OLED displays come in more varieties than LCD displays. The library to run them 
   :alt: Adafruit .96" OLED
   :scale: 80%
 
-  Adafruit .96" OLED
+Adafruit .96" OLED
 
 .. image:: /_static/images/display/makerfocus_oled_sm.jpg
   :alt: Makerfocus OLED Display
   :scale: 80%
 
-  Makerfocus OLED Display
-
+Makerfocus OLED Display
 
 Soldering Wires to the Display
 ------------------------------

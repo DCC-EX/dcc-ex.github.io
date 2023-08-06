@@ -105,7 +105,7 @@ A simplified representation of what the dual (PWM) signals might look like throu
   The known PWM frequencies are:
 
     * Mega2560 - 122.55Hz
-    * ESP32      - variable
+    * ESP32         - 131Hz
     * STM32 Nucleo - typically 1000Hz
 
 Replacing or Integrating Into Your Current Layout

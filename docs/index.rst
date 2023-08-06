@@ -58,7 +58,7 @@ DCC-EX Model Railroading
       :excerpts:
       :expand: Continue reading...
 
-    Read the full DCC-EX News feed `here <news.html>`_. |BR| Subscribe to the DCC-EX News RSS/Atom feed using :dcc-ex-text-size-80pct:`"https://dcc-ex.com/news/atom.xml"`.
+    Read the full DCC-EX News feed `here <news.html>`_. |BR| :dcc-ex-text-size-80pct:`Subscribe to the RSS/Atom feed using "https://dcc-ex.com/news/atom.xml"`.
 
   .. grid-item-card:: 
     :columns: 12

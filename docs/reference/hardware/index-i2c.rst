@@ -13,3 +13,4 @@ I2C Hardware
     i2c-devices
     gpio-module
     servo-module
+    i2c-multiplexers

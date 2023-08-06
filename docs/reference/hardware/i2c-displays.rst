@@ -11,15 +11,17 @@ I2C Displays
 .. sidebar::
 
   .. contents:: On this page
-    :depth: 1
+    :depth: 2
     :local:
 
 
 |EX-CS| is designed to accommodate a display. You don't need a display since the Control Station is often hidden away under the layout. However, if you like the idea of a nice visual display for your panel, just about any |I2C| (serial to parallel interface) display will work. We recommend either a 20 character by 2 line or 4 line display. The code is easily configurable in order to change the display settings, as well as add or change what is printed on the display.
 
-.. image:: /_static/images/display/I2C_LCD_Display_wired.jpg
+.. figure:: /_static/images/display/I2C_LCD_Display_wired.jpg
   :alt: Example: 4 line |I2C| Display
   :scale: 80%
+
+  Example: 4 line |I2C| Display
 
 We currently support LCDs based on the PCF8574 backpack:
 
@@ -35,23 +37,28 @@ The LCD displays require a "backpack" that converts the raw display to |I2C|. |I
 Examples of compatible displays
 ================================
 
-Here is an example of a 20 x 4 LCD screen. They come in different colors like blue and green. The controller board (backpack) is shown before soldering it to the back of the display. Soldering is very simple since you just match the two boards together and quickly solder the pins. Though there are 16 of them.
+Here is an example of a 20 x 4 LCD screen. They come in different colours like blue and green. The controller board (backpack) is shown before soldering it to the back of the display. Soldering is very simple since you just match the two boards together and quickly solder the pins. Though there are 16 of them.
 
+20 x 4 LCD with backpack
+------------------------
 
-.. image:: /_static/images/display/lcd_20x4_backpack.jpg
+.. figure:: /_static/images/display/lcd_20x4_backpack.jpg
   :alt: 20 x 4 LCD
   :scale: 80%
 
-20 x 4 LCD with backpack
+  20 x 4 LCD
 
 And here is an example of a 16 x 2 Display with its backpack sitting above it. Remember to either order a display with the backpack already soldered or two order both pieces from your vendor and solder it yourself:
 
+16 x 2 LCD with backpack
+------------------------
 
-.. image:: /_static/images/display/lcd_16x2_backpack.jpg
+.. figure:: /_static/images/display/lcd_16x2_backpack.jpg
   :alt: 16 x 2 LCD
   :scale: 80%
 
-16 x 2 LCD with backpack
+  16 x 2 LCD
+
 
 Connecting an LCD Display
 ==========================
@@ -62,11 +69,14 @@ Soldering on the Backpack (if you purchased separate pieces)
 And here is a picture of the board after soldering or if you purchase a board already soldered (or "welded" as some of the Chinese sites call it)
 
 
-.. image:: /_static/images/display/lcd_soldered.jpg
+LCD with backpack soldered to the back
+
+.. figure:: /_static/images/display/lcd_soldered.jpg
   :alt: Backpack Soldered to LCD
   :scale: 80%
 
-LCD with backpack soldered to the back
+  Backpack Soldered to LCD
+
 
 Connecting the Jumper Wires
 ---------------------------
@@ -102,19 +112,24 @@ Connecting an OLED display
 
 OLED displays come in more varieties than LCD displays. The library to run them also takes more memory. Therefore, OLED displays won't work with an UNO and you will require a Mega. Here are some examples of OLED displays:
 
+Adafruit .96" OLED Display
+--------------------------
 
-.. image:: /_static/images/display/adafruit_96in_oled_sm.jpg
+.. figure:: /_static/images/display/adafruit_96in_oled_sm.jpg
   :alt: Adafruit .96" OLED
   :scale: 80%
 
-Adafruit .96" OLED Display
+  Adafruit .96" OLED
 
+Makerfocus 128x32 .91" OLED Display
+-----------------------------------
 
-.. image:: /_static/images/display/makerfocus_oled_sm.jpg
+.. figure:: /_static/images/display/makerfocus_oled_sm.jpg
   :alt: Makerfocus OLED Display
   :scale: 80%
 
-Makerfocus 128x32 .91" OLED Display
+  Makerfocus OLED Display
+
 
 Soldering Wires to the Display
 ------------------------------
@@ -126,15 +141,19 @@ Connecting to your EX-CommandStation
 
 Physically connecting an |I2C| OLED display to your |EX-CS| is relatively straight forward, with SDA connecting to the CommandStation's SDA pin, SCL to SCL, VCC to 5V, and GND to GND.
 
-.. image:: /_static/images/display/mega-with-i2c-oled.png
+.. figure:: /_static/images/display/mega-with-i2c-oled.png
   :alt: Mega2560 with |I2C| OLED
   :scale: 30%
+
+  Mega2560 with |I2C| OLED
 
 You can also connect the display to the motor shield's |I2C| headers.
 
-.. image:: /_static/images/display/mega-with-i2c-oled-twi.png
+.. figure:: /_static/images/display/mega-with-i2c-oled-twi.png
   :alt: Mega2560 with |I2C| OLED
   :scale: 30%
+
+  Mega2560 with |I2C| OLED
 
 Configuring the software for an OLED
 ------------------------------------

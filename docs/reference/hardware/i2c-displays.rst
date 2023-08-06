@@ -14,15 +14,11 @@ I2C Displays
     :depth: 1
     :local:
 
-|NEW-IN-V5-LOGO-SMALL|
+|EX-CS| supports both LCD and OLED to display status and other user-defined information. While a command station is typically hidden away under a layout, if you like the idea of a nice visual display for your panel, several different |I2C| displays will work. You can use either a 20 character by 2 line or 4 line LCD display, or an OLED display capable of up to 8 lines.
 
-|EX-CS| has had the ability to accommodate one display to be able to write status information. But now |EX-CS| can support more than one display and indeed write to them from within |EX-R| for fancy lineside or auxilliary displays. You don't strictly need a display at all since the command station is often hidden away under a layout. However, if you like the idea of a nice visual display for your panel, several different |I2C| displays will work. You can use either a 20 character by 2 line or 4 line LCD display, or an OLED display capable of up to 8 lines.
+|NEW-IN-V5| |EX-CS| can support more than one display and indeed write to them from within |EX-R| for fancy lineside or auxilliary displays.
 
-The new EX-Installer can now configure the main status display during installation making adding a display very simple. The command station code is also easily configurable in order to add more displays, change the display settings, as well as add or change what is printed on the display.
-
-.. image:: /_static/images/display/I2C_LCD_Display_wired.jpg
-  :alt: Example: 4 line |I2C| Display
-  :scale: 80%
+Further to this, the new |EX-I| can now configure the main status display during installation making adding a display very simple. The command station code is also easily configurable in order to add more displays, change the display settings, as well as add or change what is printed on the display.
 
 We currently support various displays:
 
@@ -68,6 +64,10 @@ Adafruit 0.96" 128x64 OLED, and Makerfocus 128x32 .91" OLED.
 Connecting an LCD Display
 ==========================
 
+.. warning:: 
+
+  |I2C| displays come in all shapes and sizes, and often have variations in design and pinouts between different vendors and manufacturers. Be sure to check the correct orientation of pins and connectors prior to connecting your display, we cannot cover every possible scenario of connection available. Just because two displays look identical at a quick glance, they may not be.
+
 Soldering on the Backpack (if you purchased separate pieces)
 ------------------------------------------------------------
 
@@ -97,13 +97,11 @@ Connecting an OLED display
 
 OLED displays come in more varieties than LCD displays. The library to run them also takes more memory. Therefore, OLED displays won't work with an UNO and you will require a Mega. Here are some examples of OLED displays:
 
-
 .. image:: /_static/images/display/adafruit_96in_oled_sm.jpg
   :alt: Adafruit .96" OLED
   :scale: 80%
 
 Adafruit .96" OLED Display
-
 
 .. image:: /_static/images/display/makerfocus_oled_sm.jpg
   :alt: Makerfocus OLED Display
@@ -135,13 +133,44 @@ You can also connect the display to the motor shield's |I2C| headers.
 Reconfigure your Command Station to use a single display
 --------------------------------------------------------
 
-**REPLACE this with description of using EX-Installer to enable LCD or OLED main display!!**
+If installing with |EX-I|, refer to :ref:`ex-installer/installing:optional display` to configure a single display with your |EX-CS|.
 
+If you are using the Arduino IDE or VSCode with PlatformIO, you will need to edit "config.h" to enable your display option. Look for this section in "config.example.h" to define the display:
+
+.. code-block:: cpp
+
+  /////////////////////////////////////////////////////////////////////////////////////
+  //
+  // DEFINE LCD SCREEN USAGE BY THE BASE STATION
+  //
+  // Note: This feature requires an I2C enabled LCD screen using a Hitachi HD44780
+  //       controller and a commonly available PCF8574 based I2C 'backpack'.
+  // To enable, uncomment one of the #define lines below
+
+  // define LCD_DRIVER for I2C address 0x27, 16 cols, 2 rows
+  // #define LCD_DRIVER  0x27,16,2
+
+  //OR define OLED_DRIVER width,height[,address] in pixels (address auto detected if not supplied)
+  // 128x32 or 128x64 I2C SSD1306-based devices are supported.
+  // Use 132,64 for a SH1106-based I2C device with a 128x64 display.
+  // #define OLED_DRIVER 0x3c,128,32
+
+  // Define scroll mode as 0, 1 or 2
+  //  *  #define SCROLLMODE 0 is scroll continuous (fill screen if poss),
+  //  *  #define SCROLLMODE 1 is by page (alternate between pages),
+  //  *  #define SCROLLMODE 2 is by row (move up 1 row at a time).
+  #define SCROLLMODE 1
+
+Uncomment or edit the appropriate line for your display type.
 
 Combine IP address and port on OLED
 ===================================
 
 |tinkerer| |engineer|
+
+.. note:: 
+
+  As this requires modifying part of the |EX-CS| software, exercise caution with these edits, and note that it will also prevent installing via |EX-I| as you will be effectively preventing it from managing the software for you.
 
 To use OLED displays with your |EX-CS|, you can save line LCD5 used for the port number and combine it with line LCD4 IP address.
 
@@ -179,12 +208,12 @@ If you have custom messages you wish to display, you can do this by adding the l
   LCD(7,F("Line 7 custom text"));
 
 
-|NEW-IN-V5-LOGO-SMALL|
-
 Configuring Additional Displays
 ===============================
 
-Apart from the main status display (display '0') |EX-CS| allows definition of many more additional displays which can be any mix of LCD and OLED |I2C| displays. These displays can show all manner of output, including SCREEN() commands issued from within EX-RAIL scripts. Here is an OLED showing train departure times on a station building:
+|NEW-IN-V5-LOGO-SMALL|
+
+Apart from the main status display (display '0'), |EX-CS| allows definition of many more additional displays which can be any mix of LCD and OLED |I2C| displays. These displays can show all manner of output, including using ``SCREEN()`` commands issued from within |EX-R| scripts. Here is an OLED showing train departure times on a station building:
 
 .. image:: /_static/images/display/polar_express_oled.jpg
   :alt: OLED showing train departure times
@@ -205,4 +234,4 @@ In order to configure additional displays, you will need to add lines to "myHal.
   HALDisplay<LiquidCrystal>(2, 0x27, 20, 4);
 
 
-As you can see from the comments in this code, both of these displays can now be written to from |EX-R| using the SCREEN() directive. See the |EX-R| command reference for notes on using it.
+As you can see from the comments in this code, both of these displays can now be written to from |EX-R| using the ``SCREEN()`` directive. See the |EX-R| :ref:`ex-rail/ex-rail-command-reference:communication and display functions` for more information.

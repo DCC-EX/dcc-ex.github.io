@@ -50,6 +50,9 @@ extensions = [
 
 autosectionlabel_prefix_document = True
 
+# Don't make dark mode the user default
+default_dark_mode = False
+
 spelling_lang='en_UK'
 tokenizer_lang='en_UK'
 spelling_word_list_filename = ['spelling_wordlist.txt']

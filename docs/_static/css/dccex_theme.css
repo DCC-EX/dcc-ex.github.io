@@ -266,6 +266,7 @@ html[data-theme='dark'] .rst-content table.docutils th {
 
 html[data-theme='dark'] .sd-card {
   background-color: #0000008a;
+  box-shadow: 0 0.5rem 1rem rgb(32 88 91 / 25%) !important;
 }
 
 
@@ -447,10 +448,6 @@ html[data-theme='dark'] .admonition-todo p.admonition-title {
   background: #ca6105 !important;
 }
 
-html[data-theme='dark'] .sidebar-title {
-  background: #002735 !important;
-}
-
 /* *************************************** */
 
 .menuselection {
@@ -611,12 +608,23 @@ nav#on-this-page {
 /* sidebars */
 .rst-content .sidebar {
   padding: 12px 24px 12px 24px !important;
+  border-radius: 10px;
 }
 
 html[data-theme='dark'] .rst-content .sidebar {
   background: #000000ff !important;
   border:#000000ff !important;
 }
+
+.sidebar-title {
+  border-radius: 10px;
+}
+
+html[data-theme='dark'] .sidebar-title {
+  background: #002735 !important;
+}
+
+
 
 
 /* news */

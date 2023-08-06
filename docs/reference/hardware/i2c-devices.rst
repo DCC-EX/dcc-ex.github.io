@@ -14,14 +14,15 @@ I2C Devices
       :depth: 1
       :local:
 
-With the advent of the Hardware Abstraction Layer (HAL), |EX-CS| now has the capability for
+With the advent of the Hardware Abstraction Layer (HAL), |EX-CS| now has the capability for software
 support for new I/O devices to be added without any change to the base software.  By I/O
-devices I mean the things that are controlled through Sensors, Outputs and Turnouts (and 
+devices I mean the things that are controlled through Displays, Sensors, Outputs and Turnouts (and 
 more recently by commands in EX-RAIL too).  Motor shields are not included in the HAL at present.
 
-As a consequence of this, it is much easier to write a device driver, without the risk of
-breaking |EX-CS| for other users.  So there are various drivers available for you to use:
+As a consequence of this, it is much easier to write a device driver for a new device, without the risk of
+breaking |EX-CS| for other users.  There are various drivers already available for you to use:
 
+* |I2C|-connected Displays (LCD, OLED);
 * |I2C|-connected GPIO Expanders (MCP23017, MPC23008, PCF8574);
 * |I2C|-connected Servo Controller (PCA9685);
 * |I2C|-connected laser proximity detector (Time-of-Flight) (VL53L0X);
@@ -29,7 +30,7 @@ breaking |EX-CS| for other users.  So there are various drivers available for yo
 * |NEW-IN-V5| :doc:`/reference/hardware/i2c-multiplexers` support (TCA9547, TCA9548);
 * Serial-port-connected DFPlayer MP3 player;
 * Ultrasound proximity detector (HC-SR04);
-* :doc:`/ex-ioexpander/index`
+* |NEW-IN-V5| :doc:`/ex-ioexpander/index`
 
 and others.
 
@@ -130,11 +131,16 @@ The same address settings apply for the MCP23017 and MCP23008 devices, which als
 
 One device notably uses software to configure the |I2C| address - the VL53L01 Time-Of-Flight sensor.  It is pre-programmed with an address of 0x29, which you may use if you only have one TOF device.  But if you have two or more devices, then at least one of them has to be programmed with a different address.  This is achieved through an additional wire per module, connected to the module's XSHUT pin. By operating the XSHUT pins, the device driver is able to programme one device at a time, while the remaining unprogrammed devices are held in the 'shutdown' state.  So each device can use any |I2C| address!
 
+Extending Addressing with Multiplexor Support
+=============================================
+
 |NEW-IN-V5-LOGO-SMALL|
 
 There are a number of |I2C| devices on the market that can only ever use one pre-defined |I2C| address, and with devices such as the MCP23017 I/O expander there are only eight addresses available for use, limiting the ability to add more devices. Further to this, there are devices with address conflicts that also cannot be overcome easily.
 
-To alleviate these issues, it is possible to use an |I2C| multiplexer, which has eight buses, allowing eight different devices with conflicting addresses to be used.
+To alleviate these issues, it is possible to use an |I2C| multiplexer which essentially takes the single |I2C| bus of the |EX-CS| and splits it into typically 4 or 8 more entirely independent sub-buses. This allows multiple devices with conflicting addresses to be used by placing the conflicting ones on separate sub-buses of the multiplexor. You can even use multiple |I2C| multiplexors for very complex IO needs.
+
+To support multiplexors in |EX-CS| we have introduced new ways to configure |i2C| devices to locate them on the bus and tell the software how to find them. So now you will see all of our |i2C| configuration examples include options for when a device you want to configure is sitting on a port of a multiplexor. Don't worry though if you're not using a multiplexor because all your old configurations will continue to work as is.
 
 See :doc:`/reference/hardware/i2c-multiplexers` for information on how to use these devices.
 
@@ -169,6 +175,9 @@ they are a different size and are not interchangeable.
 
    From left-to-right, JST-XH connectors, Dupont connector shells, Dupont cable, and Grove converter cable.
 
+Newer microcontrollers are using miniature JST-PH fine-pitch STEMMA QT or Qwiic standard for |I2C| connection for 3.3v based systems. These are harder to make DIY cables for, but you can buy many varying lengths of premade cables that makes connection of |I2C| devices very quick and easy!
+
+**ADD PIC HERE**
 
 Connecting Devices
 ===================

@@ -52,6 +52,11 @@ EX-CommandStation features, fixes, and enhancements
 - Bugfix for signals being inverted (active high was actually active low and vice versa)
 - Bugfix for Ethernet allowing a static IP address to be set
 
+Known Issues
+------------
+
+- We have one known issue in version 5 where DFPlayer doesn't work correctly in some circumstances, which we are investigating and will fix soon
+
 EXRAIL enhancements
 -------------------
 

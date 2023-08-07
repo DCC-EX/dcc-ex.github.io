@@ -33,6 +33,8 @@ What you need to Acquire
 
   |tinkerer| |engineer| |BR| |EX-CS| is also supported on a variety of different hardware that you might also consider
 
+  To help choose a suitable microcontroller, try our handy new table here: :ref:`reference/hardware/microcontroller-boards:choosing a microcontroller`
+  
   - Supported :doc:`Arduino boards </reference/hardware/microcontroller-boards>`
   - Supported :doc:`motor shields </reference/hardware/motor-boards>`
   - Supported :doc:`ESP8266 WiFi shield </reference/hardware/wifi-boards>`

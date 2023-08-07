@@ -23,6 +23,7 @@ As a consequence of this, it is much easier to write a device driver for a new d
 breaking |EX-CS| for other users.  There are various drivers already available for you to use:
 
 * |I2C|-connected Displays (LCD, OLED);
+* |NEW-IN-V5| support for :ref:`multiple LCD/OLED displays <reference/hardware/i2c-displays:configuring additional displays>`;
 * |I2C|-connected GPIO Expanders (MCP23017, MPC23008, PCF8574);
 * |I2C|-connected Servo Controller (PCA9685);
 * |I2C|-connected laser proximity detector (Time-of-Flight) (VL53L0X);

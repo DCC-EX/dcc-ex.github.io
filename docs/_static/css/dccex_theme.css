@@ -692,6 +692,10 @@ html[data-theme='dark'] .sd-card-header {
   border-bottom: 1px solid rgb(255 253 253 / 13%);
 }
 
+.sd-card-body ul li p {
+  margin-bottom: 5px !important;
+}
+
 .sd-card-text {
   margin: 0 0 12px !important;
 }

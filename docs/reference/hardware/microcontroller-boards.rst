@@ -79,6 +79,15 @@ We've compiled this simple summary table to help with this:
     - No
     - DCC only [2]_
     - Similar to Uno, but without the convenient Uno footprint
+  * - Mega+WiFi
+    - Supported [6]_
+    - Yes
+    - Yes
+    - Yes
+    - Yes
+    - Yes
+    - DCC and DC [2]_
+    - This is our stable, well supported platform, with WiFi on board, but beware quality issues
   * - STM32 Nucleo
     - Beta [4]_
     - Yes [5]_
@@ -106,15 +115,6 @@ We've compiled this simple summary table to help with this:
     - Yes [1]_
     - DCC only [2]_
     - Modern, 32 bit architecture but several caveats around voltage and USB connectivity
-  * - Mega+WiFi
-    - Limited [6]_
-    - Yes
-    - Yes
-    - Yes
-    - Yes
-    - Yes
-    - DCC and DC [2]_
-    - This is our stable, well supported platform, with WiFi on board, but beware quality issues
   * - Nano Every
     - Limited [7]_
     - Yes

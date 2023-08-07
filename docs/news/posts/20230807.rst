@@ -2,8 +2,8 @@
 .. include:: /include/include-l2.rst
 
 :blogpost: true
-:date: 4 August, 2023
-:author: flash62au
+:date: 7 August, 2023
+:author: peteGSX
 :category: News, Release
 :tags: new-in-version-5, version-5, news
 :image: 0

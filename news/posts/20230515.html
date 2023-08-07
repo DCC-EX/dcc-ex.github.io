@@ -13,6 +13,8 @@
       <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/big_picture_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/sphinx_design_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/news/posts/20230515.html" />
   <!--[if lt IE 9]>
@@ -28,6 +30,8 @@
         <script src="../../_static/design-tabs.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
+        <script src="../../_static/dark_mode_js/default_light.js"></script>
+        <script src="../../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -201,6 +205,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-turntable/index.html">EX-Turntable</a><ul>
@@ -242,11 +247,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/getting-started.html">Sequences - an Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-summary.html">EX-RAIL Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/about.html">About and History</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ex-turntable/index.html">EX-Turntable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/purchasing.html">Purchasing</a></li>
@@ -368,9 +373,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/nano-every.html">Nano Every</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/teensy.html">Teensy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
@@ -422,6 +428,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/i2c-multiplexers.html">I2C Multiplexers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/accessory-controllers.html">Accessory Controllers</a></li>
@@ -467,12 +474,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../under-development/index.html">Features under development</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/track-manager.html"><em>Under Development:</em> DCC-EX TrackManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../under-development/index.html">Features under development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
@@ -560,9 +562,9 @@
 <a class="image-product-logo-float-right reference internal image-reference" href="../../_images/product-logo-news.png"><img alt="DCC-EX News" class="image-product-logo-float-right" src="../../_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /></a>
 <section id="dcc-ex-releases-5amp-ex-motorshield8874">
 <h1>DCC-EX Releases 5amp EX-MotorShield8874<a class="headerlink" href="#dcc-ex-releases-5amp-ex-motorshield8874" title="Permalink to this heading"></a></h1>
-<p>DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the first of our open source hardware products: the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;MotorShield8874</span></span>, providing dual 5 amp DCC and DC PWM (pulse width modulation) output for DCC-EX Command Stations.</p>
-<p>The <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;MotorShield8874</span></span> addresses the needs of DCC-EX users wanting to run multiple locos, across multiple power districts without requiring expensive DCC boosters. A DCC-EX Command Station can now outperform commercial DCC command stations which typically have single 3-3.5A or 5A output capabilities, and doing so at a fraction of the cost and with more advanced features.</p>
-<p>The <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;MotorShield8874</span></span> is the first offering in the DCC-EX open source hardware ecosystem specifically designed for model railroaders, and is a direct result of the strong community engagement DCC-EX strives to inspire. DCC-EX hardware lead Paul Antoine says “the open source vision for hardware designs from the DCC-EX community means individual users can order small batch manufacturing of all DCC-EX endorsed designs for themselves, friends and fellow club members. Or they have the choice to buy the same quality of product from licensed local resellers in their countries of origin.”</p>
+<p>DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the first of our open source hardware products: the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span>, providing dual 5 amp DCC and DC PWM (pulse width modulation) output for DCC-EX Command Stations.</p>
+<p>The <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span> addresses the needs of DCC-EX users wanting to run multiple locos, across multiple power districts without requiring expensive DCC boosters. A DCC-EX Command Station can now outperform commercial DCC command stations which typically have single 3-3.5A or 5A output capabilities, and doing so at a fraction of the cost and with more advanced features.</p>
+<p>The <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span> is the first offering in the DCC-EX open source hardware ecosystem specifically designed for model railroaders, and is a direct result of the strong community engagement DCC-EX strives to inspire. DCC-EX hardware lead Paul Antoine says “the open source vision for hardware designs from the DCC-EX community means individual users can order small batch manufacturing of all DCC-EX endorsed designs for themselves, friends and fellow club members. Or they have the choice to buy the same quality of product from licensed local resellers in their countries of origin.”</p>
 <a class="reference internal image-reference" href="../../_images/ex_motorshield8874.jpeg"><img alt="DCC-EX EX-MotorShield8874 RevA Semify" src="../../_images/ex_motorshield8874.jpeg" style="width: 750.0px; height: 500.0px;" /></a>
 <p>Featuring dual 5A output Texas Instruments DRV8874 MOSFET H-Bridge ICs, the EX-MotorShield8874 shield is fully drop-in compatible with the industry standard Arduino Motor Shield R3 due to additional logic onboard, along with plenty of new features. As a result, it can immediately replace older L298 based boards without software modifications. There is no need to have to cut traces or bend out pins, and the EX-MotorShield8874 can power your EX-CommmandStation too! The DRV8874 H-Bridge ICs also include hardware overcurrent protection monitored by EX-CommandStation, in addition to the existing software-based overload protection.</p>
 <p>DCC-EX specific features include single 2.1mm barrel jack DC power for both the DCC/DC output and to supply the underlying Command Station motherboard with inbuilt polarity protection. This eliminates the need for a separate power supply for the Command Station motherboard. An onboard switching power supply regulates the DCC track input voltage to a safe 7.2VDC to the motherboard via the VIN pin, ensuring its linear 5V and 3.3V regulators stay as cool as possible.</p>

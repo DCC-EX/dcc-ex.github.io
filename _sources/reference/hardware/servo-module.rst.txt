@@ -16,9 +16,11 @@ Connecting a Servo Module
 
 To connect a servo module to |EX-CS|, you first need to get a module, based on the PCA9685 chip.
 
-.. image:: /_static/images/i2c/pca9685.jpg
+.. figure:: /_static/images/i2c/pca9685.png
    :alt: PCA9685 Servo Module
    :scale: 40%
+
+   PCA9685 Servo Module
 
 These are widely available from eBay, Amazon, etc. for a few dollars.
 
@@ -34,9 +36,11 @@ consume more current than the Arduino is able to supply, and so a separate 5V su
 
 Connections to the Arduino are made with four jumper wires (+5V power and GND, and SCL and SDA), as shown on the following diagram:
 
-.. image:: /_static/images/i2c/ArduinoMegaServo.png
-   :alt: PCA9685 Servo Module
+.. figure:: /_static/images/i2c/ArduinoMegaServo.png
+   :alt: Mega with PCA9685 Servo Module
    :scale: 30%
+
+   Mega with PCA9685 Servo Module
 
 In |EX-CS|, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.
 
@@ -50,16 +54,20 @@ Try `<D SERVO 100 450 3>` and the servo should move slowly back.
 
 You can use the servo to control turnouts, semaphore signals, engine shed doors, and other layout components, to make your layout more dynamic and exciting.  In the picture below, you can see a servo mounted below the baseboard with a piece of wire passing through a slot cut in the baseboard, to operate a turnout.
 
-.. image:: /_static/images/i2c/TurnoutServoMount.jpg
+.. figure:: /_static/images/i2c/TurnoutServoMount.jpg
    :alt: Servo mount to operate a turnout
    :scale: 60%
+
+   Servo mount to operate a turnout
 
 And in the next picture you can see a servo that operates a semaphore signal.  The signal, and its
 servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.
 
-.. image:: /_static/images/i2c/SemaphoreSignal.jpg
+.. figure:: /_static/images/i2c/SemaphoreSignal.jpg
    :alt: Servo mount to operate a Semaphore Signal
    :scale: 60%
+
+   Servo mount to operate a Semaphore Signal
 
 Using Servos with EX-RAIL
 ==========================
@@ -157,9 +165,11 @@ Using a servo module for LEDs
 
 Another use case for the PCA9685 is to drive LEDs using PWM to control the intensity of the LEDs. The intensity of the LEDs can vary from 0 (off) to 4095 (100%).
 
-.. image:: ../../_static/images/accessories/led.png
+.. figure:: ../../_static/images/accessories/led.png
    :alt: LED
    :scale: 60%
+
+   LED
 
 .. note:: 
 

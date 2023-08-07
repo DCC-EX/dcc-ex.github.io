@@ -13,6 +13,8 @@
       <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/big_picture_theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/sphinx_design_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/ex-rail/examples.html" />
   <!--[if lt IE 9]>
@@ -28,6 +30,8 @@
         <script src="../_static/design-tabs.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
+        <script src="../_static/dark_mode_js/default_light.js"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -203,6 +207,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-turntable/index.html">EX-Turntable</a><ul>
@@ -244,11 +249,11 @@
 <li class="toctree-l2"><a class="reference internal" href="getting-started.html">Sequences - an Introduction</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="EX-RAIL-summary.html">EX-RAIL Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="about.html">About and History</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ex-turntable/index.html">EX-Turntable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ex-turntable/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-turntable/purchasing.html">Purchasing</a></li>
@@ -370,9 +375,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano-every.html">Nano Every</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/teensy.html">Teensy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
@@ -424,6 +430,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-multiplexers.html">I2C Multiplexers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/accessory-controllers.html">Accessory Controllers</a></li>
@@ -469,12 +476,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../under-development/index.html">Features under development</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/track-manager.html"><em>Under Development:</em> DCC-EX TrackManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../under-development/index.html">Features under development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
@@ -584,7 +586,7 @@
 </ul>
 </nav>
 </aside>
-<p>On this page are a number of examples of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> sequences that you can lean from.  <a class="reference internal" href="../big-picture/big-picture.html"><span class="doc">How it All Works Together</span></a> section of this web site also contains numerous more complex examples.</p>
+<p>On this page are a number of examples of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> sequences that you can lean from.  <a class="reference internal" href="../big-picture/big-picture.html"><span class="doc">How it All Works Together</span></a> section of this web site also contains numerous more complex examples.</p>
 <p>We will be using these objects in the examples:</p>
 <ul class="simple">
 <li><p>A three aspect signal connected to Mega2560 I/O pins 22 (red), 23 (amber), and 24 (green)</p></li>
@@ -596,7 +598,7 @@
 <hr class="docutils" />
 <section id="turn-track-power-on-at-startup">
 <h2><a class="toc-backref" href="#id2" role="doc-backlink">Turn Track Power On at Startup</a><a class="headerlink" href="#turn-track-power-on-at-startup" title="Permalink to this heading"></a></h2>
-<p>The current production release of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> does not have commands for turning track power on or off, but if you assign a speed to a loco in a sequence it will automatically turn the track power on.  Using this feature we can fudge turning the track power on at startup.</p>
+<p>The current production release of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> does not have commands for turning track power on or off, but if you assign a speed to a loco in a sequence it will automatically turn the track power on.  Using this feature we can fudge turning the track power on at startup.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// if this is at the start of myAutomation.h  This will act like an AUTOSTART sequence</span>
 <span class="n">SETLOCO</span><span class="p">(</span><span class="mi">9999</span><span class="p">)</span><span class="w">   </span><span class="c1">// select loco 9999</span>
 <span class="n">SPEED</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w">        </span><span class="c1">// set the speed to 0.  This will turn the tarck power on</span>
@@ -615,7 +617,7 @@
 </section>
 <section id="defining-servo-turnouts">
 <h2><a class="toc-backref" href="#id4" role="doc-backlink">Defining Servo Turnouts</a><a class="headerlink" href="#defining-servo-turnouts" title="Permalink to this heading"></a></h2>
-<p>As per the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> reference, turnouts/points are defined with the following syntax:</p>
+<p>As per the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> reference, turnouts/points are defined with the following syntax:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example</span>
 <span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Example slow turnout/point definition&quot;</span><span class="p">)</span>
 
@@ -788,7 +790,7 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 Let’s add a passing place between A and B. S= Sensors, T=Turnout
 number. So now our route looks like this:</p>
 <a class="reference internal image-reference" href="../_images/Example_7a_diagram.png"><img alt="Simple example 4" class="align-center" src="../_images/Example_7a_diagram.png" style="width: 944.0px; height: 188.0px;" /></a>
-<p>Assuming that you have defined your turnouts with <a class="reference internal" href="EX-RAIL-summary.html#automations-routes-and-sequences"><span class="std std-ref">TURNOUT commands.</span></a></p>
+<p>Assuming that you have defined your turnouts as per <a class="reference internal" href="EX-RAIL-command-reference.html#turnout-point-objects-definition-and-control"><span class="std std-ref">Turnout/Point Objects - Definition and Control</span></a></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
 <span class="w">   </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span><span class="mi">20000</span><span class="p">)</span><span class="w"> </span><span class="c1">// random wait between 10 and 20 seconds</span>
 <span class="w">   </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -918,7 +920,7 @@ number. So now our route looks like this:</p>
 <hr class="docutils" />
 <section id="next-steps-detailed-reference">
 <h2><a class="toc-backref" href="#id14" role="doc-backlink">Next Steps - Detailed Reference</a><a class="headerlink" href="#next-steps-detailed-reference" title="Permalink to this heading"></a></h2>
-<p>The previous pages have only been a small taste of what is possible with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>. Click <a class="reference internal" href="EX-RAIL-reference.html"><span class="doc">here</span></a> or click the <span class="guilabel">Next</span> button to explore the full capabilities of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>.</p>
+<p>The previous pages have only been a small taste of what is possible with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span>. See the <a class="reference internal" href="EX-RAIL-command-reference.html"><span class="doc">EX-RAIL Command Reference</span></a> or click the <span class="guilabel">Next</span> button to explore the full capabilities of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span>.</p>
 </section>
 </section>
 

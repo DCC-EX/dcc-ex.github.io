@@ -351,7 +351,7 @@ Refer to :doc:`/ex-turntable/index` for further information.
 DCC-EX rotary encoder
 ---------------------
 
-|NOT-IN-PROD-VERSION|
+|NEW-IN-V5-LOGO-SMALL|
 
 .. note:: 
 

@@ -65,6 +65,7 @@ Dedicated Hardware
 Personal Computers
 ------------------
 
+- :doc:`EX-WebThrottle <software/ex-webthrottle>`
 - :doc:`JMRI (Windows, iOS, Linux) <software/jmri>`
 
 ----
@@ -79,10 +80,11 @@ General
 
 - :doc:`WiThrottle Server, Web Server, DCC++ API Explained <protocols>`
 
-DCC-EX (Native <DCC++> commands>)
----------------------------------
+DCC-EX (Native <DCC++> commands)
+--------------------------------
 
-- :doc:`EX-Web-Throttle <software/ex-webthrottle>`
+- :doc:`EX-WebThrottle <software/ex-webthrottle>`
+- :doc:`Engine Driver (Android)<software/engine-driver>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`miniThrottle (Physical) <hardware/minithrottle>`
 - :doc:`JMRI <software/jmri>`
@@ -101,6 +103,11 @@ wiThrottle Protocol Based Throttles
 - :doc:`WiTcontroller (Physical) <hardware/witcontroller>`
 - :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
 - :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
+
+USB Based Throttles
+-------------------------------
+
+- :doc:`EX-WebThrottle <software/ex-webthrottle>`
 
 JMRI Web Server Based Throttles
 -------------------------------

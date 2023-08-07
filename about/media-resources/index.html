@@ -13,6 +13,8 @@
       <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/big_picture_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/sphinx_design_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/about/media-resources/index.html" />
   <!--[if lt IE 9]>
@@ -28,6 +30,8 @@
         <script src="../../_static/design-tabs.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
+        <script src="../../_static/dark_mode_js/default_light.js"></script>
+        <script src="../../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -203,6 +207,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-turntable/index.html">EX-Turntable</a><ul>
@@ -244,11 +249,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/getting-started.html">Sequences - an Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-summary.html">EX-RAIL Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/about.html">About and History</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ex-turntable/index.html">EX-Turntable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/purchasing.html">Purchasing</a></li>
@@ -370,9 +375,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/nano-every.html">Nano Every</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/teensy.html">Teensy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
@@ -424,6 +430,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/i2c-multiplexers.html">I2C Multiplexers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/accessory-controllers.html">Accessory Controllers</a></li>
@@ -469,12 +476,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../under-development/index.html">Features under development</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/track-manager.html"><em>Under Development:</em> DCC-EX TrackManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../under-development/index.html">Features under development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
@@ -580,7 +582,7 @@
 <p>There are a few tools that can help you include live shots of throttles running on your computer, here are two great solutions</p>
 <section id="ex-webthrottle">
 <h3>EX-WebThrottle<a class="headerlink" href="#ex-webthrottle" title="Permalink to this heading"></a></h3>
-<p>Trains can be run using a Chromium-based browser (Chrome or Edge) and a USB cable from the computer to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span></p>
+<p>Trains can be run using a Chromium-based browser (Chrome or Edge) and a USB cable from the computer to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></p>
 <figure class="align-default">
 <a class="reference internal image-reference" href="../../_images/exwebthrottle.jpg"><img alt="EX-WebThrottle" src="../../_images/exwebthrottle.jpg" style="width: 480.0px; height: 351.20000000000005px;" /></a>
 </figure>
@@ -588,17 +590,17 @@
 </section>
 <section id="engine-driver">
 <h3>Engine Driver<a class="headerlink" href="#engine-driver" title="Permalink to this heading"></a></h3>
-<p>Those with an Android phone or tablet can use the Engine Driver App from the Play Store. Engine Driver is developed alongside the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> and can talk to the CS via the WiThrottle protocol or the direct DCC-EX protocol. The phone can be held in the shot or a mirroring app like Phone Link can be used to display the phone screen on the computer that is recording the session. If you don’t have an Android phone, or want to actually run Engine Driver on a computer, be sure to read the section below on using the BlueStack Android Emulator before getting started.</p>
+<p>Those with an Android phone or tablet can use the Engine Driver App from the Play Store. Engine Driver is developed alongside the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> and can talk to the CS via the WiThrottle protocol or the direct DCC-EX protocol. The phone can be held in the shot or a mirroring app like Phone Link can be used to display the phone screen on the computer that is recording the session. If you don’t have an Android phone, or want to actually run Engine Driver on a computer, be sure to read the section below on using the BlueStack Android Emulator before getting started.</p>
 </section>
 <section id="bluestack-android-emulator">
 <h3>BlueStack Android Emulator<a class="headerlink" href="#bluestack-android-emulator" title="Permalink to this heading"></a></h3>
-<p>What if you don’t have an Android phone? Or, what if you just want to use a computer instead? Engine Driver is arguably the premier phone throttle app available, especially when considering all of its enhancements and features specifically tailored for the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. An Android Emulator, like BlueStacks, is the answer. A Google email account to download the free BlueStacks software and a fairly “modern” laptop or computer is all that is needed. Once installed, virtually any Android phone App, eg Engine Driver, can be downloaded from the Google Play Store and run on a computer via Bluestacks, no phone necessary.</p>
+<p>What if you don’t have an Android phone? Or, what if you just want to use a computer instead? Engine Driver is arguably the premier phone throttle app available, especially when considering all of its enhancements and features specifically tailored for the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>. An Android Emulator, like BlueStacks, is the answer. A Google email account to download the free BlueStacks software and a fairly “modern” laptop or computer is all that is needed. Once installed, virtually any Android phone App, eg Engine Driver, can be downloaded from the Google Play Store and run on a computer via Bluestacks, no phone necessary.</p>
 <p>The following image is a Windows computer running multiple “instances” of Engine Driver on the same computer.</p>
 <a class="reference internal image-reference" href="../../_images/engine_driver_windows_pc_via_bluestack.jpg"><img alt="Engine Driver on BlueStack" class="align-right" src="../../_images/engine_driver_windows_pc_via_bluestack.jpg" style="width: 415.5px; height: 235.25px;" /></a>
 <p>All ED screens function the same as on the Android Smartphone except they are running on your computer. You can even “swipe” the screens back and forth to get to routes and CV programming modes. Imagine making an Operational Dispatcher Station to manage the Track Ids and assignments on a 32” monitor!</p>
 <p>Tip.  For those who intend on using more than one instance of Engine Driver, as shown in the screenshot above…  Create the first instance; install ED and then customize preferences, including server, throttles and so on.. Then replicate the initial instance for as many Android-ED throttles desired.</p>
 <p>In addition to operating a model railroad, the BlueStacks-Engine Driver combination can enhance demonstration and training applications including small groups and remote meetings.</p>
-<p>In local group settings, both the presenter’s Engine Driver throttle running on a computer and connected via WiFi to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> and participants using their own smartphone ED throttle can all work together at the same time.  Public clinics can incorporate display screens on a touchscreen laptop, computer with mouse, large display, or a video projector. If you are producing videos, the entire process can be performed on a single computer.</p>
+<p>In local group settings, both the presenter’s Engine Driver throttle running on a computer and connected via WiFi to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> and participants using their own smartphone ED throttle can all work together at the same time.  Public clinics can incorporate display screens on a touchscreen laptop, computer with mouse, large display, or a video projector. If you are producing videos, the entire process can be performed on a single computer.</p>
 <p>Remote meeting software like Zoom or WebEx, expands CS or Throttle functionality to global audiences and participants.</p>
 <p>Performance, and the number of instances will vary, dependent upon a number of variables such as; the laptop’s (or desktop with WiFi) speed, RAM and storage.</p>
 </section>

@@ -19,12 +19,9 @@ We always have new features under development for |EX-CS| and |EX-R|, and as the
 
 To obtain the development branch code, refer to :ref:`download/ex-commandstation:latest ex-commandstation unreleased development version`
 
-.. toctree::
-  :maxdepth: 1
+.. note:: 
 
-  microcontrollers
-  track-manager
-  duinonodes
+  With v5 being a brand new release, there's nothing to see here just yet, but stay tuned as we start work on new features!
 
 Looking for some help with EX-CommandStation?
 =============================================

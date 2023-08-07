@@ -17,11 +17,11 @@ Engine Driver
    :scale: 60%
    :align: left
 
-**Engine Driver** (ED) is an Android App that uses the |WiThrottle Protocol| to either connect directly to the |EX-CS| or connect to the JMRI WiThrottle Server via WiFi. 
-
-If you wish to connect Engine Driver to |JMRI|, you need to start the |wiThrottle Server| and (optionally [#]_) the Web Server in JMRI on the computer running |JMRI|. The |JMRI| computer must be connected to the |EX-CS| using a USB cable. 
+**Engine Driver** (ED) is an Android App that uses the |WiThrottle Protocol| *or* the **Native (DCC++) Protocol** to connect directly to the |EX-CS| via WiFi. It can also connect to the JMRI WiThrottle Server via WiFi using the |WiThrottle Protocol|. 
 
 If you wish to connect Engine Driver directly to |EX-CS|, you need to add a WiFi option to your |EX-CS| as explained here: :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`.
+
+If you wish to connect Engine Driver to |JMRI|, you need to start the |wiThrottle Server| and (optionally [#]_) the Web Server in JMRI on the computer running |JMRI|. The |JMRI| computer must be connected to the |EX-CS| using a USB cable. 
 
 .. _ed-platforms:
 
@@ -47,6 +47,7 @@ Extensive help is available at the `Engine Driver Home <https://flash62au.github
 
 Standard Features (all wiThrottle servers)
 ==========================================
+
 * Control one to six locomotives or consists
 * Speed and direction control
 * Up to 29 DCC functions
@@ -60,10 +61,19 @@ Standard Features (all wiThrottle servers)
 
 EX-CommandStation Specific or Advantageous Features
 ===================================================
+
 * DCC-EX EXRAIL Automation {Handoff}, Route {Set} and EX-RAIL Command function buttons
 * Able to select local images for roster locos
 * New 'Request Loco ID' & 'Drive Away' feature from a Program track onto Mainline track with |EX-CS|
 
+EX-CommandStation Specific Features - when using the Native (DCC++) protocol
+============================================================================
+
+* Read and write DCC addresses on the Programming Track
+* Read and write CVs of decoders on the Programming Track
+* Write CVs of decoders on the Main Track
+* Issue Native commands to the |EX-CS|
+* TrackManager control - able to change the type and state of each Track/Channel (e.g DCC and DC))
 
 :doc:`/throttles/driveaway`
 

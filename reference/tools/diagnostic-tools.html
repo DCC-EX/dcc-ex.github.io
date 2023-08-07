@@ -13,6 +13,8 @@
       <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/big_picture_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/sphinx_design_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/reference/tools/diagnostic-tools.html" />
   <!--[if lt IE 9]>
@@ -28,6 +30,8 @@
         <script src="../../_static/design-tabs.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
+        <script src="../../_static/dark_mode_js/default_light.js"></script>
+        <script src="../../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -203,6 +207,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-turntable/index.html">EX-Turntable</a><ul>
@@ -244,11 +249,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/getting-started.html">Sequences - an Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-summary.html">EX-RAIL Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/about.html">About and History</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ex-turntable/index.html">EX-Turntable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/purchasing.html">Purchasing</a></li>
@@ -370,9 +375,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/nano-every.html">Nano Every</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/teensy.html">Teensy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
@@ -424,6 +430,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../hardware/i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/i2c-multiplexers.html">I2C Multiplexers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/accessory-controllers.html">Accessory Controllers</a></li>
@@ -469,12 +476,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../under-development/index.html">Features under development</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/track-manager.html"><em>Under Development:</em> DCC-EX TrackManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../under-development/index.html">Features under development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
@@ -592,7 +594,7 @@
 <figure class="align-default" id="id1">
 <img alt="../../_images/pixel.png" src="../../_images/pixel.png" />
 <figcaption>
-<p><span class="caption-number">Figure 133 </span><span class="caption-text">Example outputs of a DCC Sniffer below. Click on any of the images to view them full size.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 153 </span><span class="caption-text">Example outputs of a DCC Sniffer below. Click on any of the images to view them full size.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 <div class="legend">
 <a class="reference internal image-reference" href="../../_images/sniffer_out1.png"><img alt="Example Sniffer Output 1" class="align-left" src="../../_images/sniffer_out1.png" style="width: 257.25px; height: 247.45px;" /></a>
 <a class="reference internal image-reference" href="../../_images/sniffer_out2.jpg"><img alt="Example Sniffer Output 2" class="align-left" src="../../_images/sniffer_out2.jpg" style="width: 279.5px; height: 181.5px;" /></a>
@@ -607,7 +609,7 @@
 <figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="../../_images/dccpp_ex_acc_packet.jpg"><img alt="DCC Signal Analyzer output" src="../../_images/dccpp_ex_acc_packet.jpg" style="width: 405.0px; height: 131.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 134 </span><span class="caption-text">Example Logic Analyzer output</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 154 </span><span class="caption-text">Example Logic Analyzer output</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -620,7 +622,7 @@
 <figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="../../_images/iowa_scale_eng_dcc_board.jpg"><img alt="Iowa Scale Engineering DCC Sniffer/Decoder Board" src="../../_images/iowa_scale_eng_dcc_board.jpg" style="width: 300.0px; height: 300.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 135 </span><span class="caption-text">Iowa Scale Engineering DCC Sniffer/Decoder Board</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 155 </span><span class="caption-text">Iowa Scale Engineering DCC Sniffer/Decoder Board</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p><a class="reference external" href="https://www.iascaled.com/store/ARD-DCCSHIELD">https://www.iascaled.com/store/ARD-DCCSHIELD</a></p>
@@ -630,12 +632,12 @@
 </section>
 <section id="build-it">
 <h3>Build It<a class="headerlink" href="#build-it" title="Permalink to this heading"></a></h3>
-<p>Now things get fun! A DCC sniffer is a very simple device that contains only 2 or 3 simple sections. Tinkerers and Engineers will have no trouble cobbling one together or buying a board and soldering on a few parts. You don’t even need anything other than an Arduino or an ESP8266 or ESP32 if you connect to the signal pin of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> instead of to the track.</p>
+<p>Now things get fun! A DCC sniffer is a very simple device that contains only 2 or 3 simple sections. Tinkerers and Engineers will have no trouble cobbling one together or buying a board and soldering on a few parts. You don’t even need anything other than an Arduino or an ESP8266 or ESP32 if you connect to the signal pin of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> instead of to the track.</p>
 <p>You will need to upload our <a class="reference internal" href="../../download/ex-dccinspector.html"><span class="doc">EX-DCCInspector</span></a> software to whatever microcontroller you choose.</p>
 <figure class="align-center" id="id4">
 <a class="reference internal image-reference" href="../../_images/sniffer_block_diag.png"><img alt="Packet Sniffer Block Diagram" src="../../_images/sniffer_block_diag.png" style="width: 599.9px; height: 322.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 136 </span><span class="caption-text">DCC Packet Sniffer Block Diagram</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 156 </span><span class="caption-text">DCC Packet Sniffer Block Diagram</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -660,22 +662,22 @@
 <figure class="align-center" id="id5">
 <a class="reference internal image-reference" href="../../_images/dcc_interface_1.png"><img alt="Minimum recommended circuit" src="../../_images/dcc_interface_1.png" style="width: 581.4px; height: 201.6px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 137 </span><span class="caption-text">Minimum recommended circuit</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 157 </span><span class="caption-text">Minimum recommended circuit</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>The circuit above represents the minimal number of components to potentially interface the track signal to the microcontroller running your sniffer software. It has been tested and eliminates the issues with many of the circuits available on the web. There should also ideally be a .1µF capacitor across pins 8 and 5 as close to the pins as possible. If you have one, a 1.3k resistor for R1 gives a little better range for track voltages from 10V up to 18V and a LED can be substituted for D1 as a track voltage indicator, though our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;DCCInspector</span></span> sketch uses the pin 13 LED to provide the same function.</p>
+<p>The circuit above represents the minimal number of components to potentially interface the track signal to the microcontroller running your sniffer software. It has been tested and eliminates the issues with many of the circuits available on the web. There should also ideally be a .1µF capacitor across pins 8 and 5 as close to the pins as possible. If you have one, a 1.3k resistor for R1 gives a little better range for track voltages from 10V up to 18V and a LED can be substituted for D1 as a track voltage indicator, though our <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;DCCInspector</span> sketch uses the pin 13 LED to provide the same function.</p>
 <p><strong>Another tested circuit (courtesy of Geoff Bunza)</strong></p>
 <figure class="align-center" id="id6">
 <a class="reference internal image-reference" href="../../_images/dcc_fe2_schematic.jpg"><img alt="Geoff Bunza DCC Interface Schematic" src="../../_images/dcc_fe2_schematic.jpg" style="width: 560.0px; height: 208.95px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 138 </span><span class="caption-text">Geoff Bunza DCC Interface Schematic</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 158 </span><span class="caption-text">Geoff Bunza DCC Interface Schematic</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>The above is actually a simple circuit to build. To make it easy, Geoff has provided the CAD files that you can download, unzip, and then send the board file to one of many fabricators (like OSH Park) and have them make boards for you. <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> may be selling these, so keep checking back. Here is what the boards look like:</p>
+<p>The above is actually a simple circuit to build. To make it easy, Geoff has provided the CAD files that you can download, unzip, and then send the board file to one of many fabricators (like OSH Park) and have them make boards for you. <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> may be selling these, so keep checking back. Here is what the boards look like:</p>
 <figure class="align-center" id="id7">
 <a class="reference internal image-reference" href="../../_images/bunza_dcc_interface.jpg"><img alt="Geoff Bunza DCC Interface Board" src="../../_images/bunza_dcc_interface.jpg" style="width: 397.8px; height: 137.4px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 139 </span><span class="caption-text">Geoff Bunza DCC Interface Board</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 159 </span><span class="caption-text">Geoff Bunza DCC Interface Board</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>All you need to create your DCC Sniffer is to solder up this board and connect it to an Arduino. You can wire it to an Uno or Mega, but we like to use an Arduino Nano or ESP32 because you can connect the microcontroller and interface both on another carrier board or mount them in a case. The Nano and ESP32 are powered from the USB connection to your computer running a serial monitor, and it, in turn, can send that power to the DCC Interface Board.</p>
@@ -686,7 +688,7 @@
 <p>If you always intend to have your computer or laptop connected via the USB port to read the decoded DCC packets, then you can power everything from the 5V coming out of your USB port. But if you want something standalone, for example a sniffer with a display or that has wireless capability, then you are either going to have to power it from a 5V power supply (like a wall charger) or take your power from the track.</p>
 <p>Showing you how to build a power supply here wouldn’t make much sense when you see Geoff Bunza’s 17 function decoder board. It already has everything on it you need, power, optoisolator and space for an Arduino Pro Mini or Nano! You can use that little board to do just about anything you would ever want to do on your layout. Not only can it be programmed to be a DCC Sniffer, but it can be a fully functional decoder with up to 17 functions. It even has the option to have an H-Bridge chip (motor controller) right on the board to power motors!</p>
 <p><strong>Geoff Bunza’s 17 Function Decoder AND Sniffer</strong></p>
-<p>If you just need the power supply for your own board, use the schematic to get what you need. Here at <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span>, we use lots of these decoders and solder just the components we need. If we need a DCC interface, we just solder those components. If we need to connect it to the track, we add the rectifier and voltage regulator components.</p>
+<p>If you just need the power supply for your own board, use the schematic to get what you need. Here at <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span>, we use lots of these decoders and solder just the components we need. If we need a DCC interface, we just solder those components. If we need to connect it to the track, we add the rectifier and voltage regulator components.</p>
 <p><strong>Ready made circuit boards</strong></p>
 <ul class="simple">
 <li><p>17 function decoder</p></li>
@@ -694,11 +696,11 @@
 <p><a class="reference external" href="http://www.modelrailroadcontrolsystems.com/improved-geoff-bunzas-low-cost-17-channel-dcc-decoder-bare-board/">http://www.modelrailroadcontrolsystems.com/improved-geoff-bunzas-low-cost-17-channel-dcc-decoder-bare-board/</a></p>
 <p><a class="reference external" href="https://www.tindie.com/products/tanner87661/dcc-interface-breakout-board-with-grove-port/">https://www.tindie.com/products/tanner87661/dcc-interface-breakout-board-with-grove-port/</a></p>
 <p><strong>Build it in a case with a display!</strong></p>
-<p>And if you want to get into the development of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;DCCInspector</span></span> and why we recommend the circuits we do, and see how to add a display and put it in a neat little case, please visit <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> team member Neil McKechnie’s blog. This version has plans for a 3D printed case and uses an ESP32 development board with an OLED display attached.</p>
+<p>And if you want to get into the development of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;DCCInspector</span> and why we recommend the circuits we do, and see how to add a display and put it in a neat little case, please visit <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> team member Neil McKechnie’s blog. This version has plans for a 3D printed case and uses an ESP32 development board with an OLED display attached.</p>
 <figure class="align-center" id="id8">
 <a class="reference internal image-reference" href="../../_images/neil_sniffer.png"><img alt="Neil's DCC-EX Sniffer" src="../../_images/neil_sniffer.png" style="width: 267.0px; height: 145.2px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 140 </span><span class="caption-text">Neil’s DCC-EX Sniffer in a 3D Printed Case</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 160 </span><span class="caption-text">Neil’s DCC-EX Sniffer in a 3D Printed Case</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>HERE:
@@ -714,7 +716,7 @@
 <figure class="align-center" id="id9">
 <a class="reference internal image-reference" href="../../_images/logic_analyzer.jpg"><img alt="Logic Analyzer" src="../../_images/logic_analyzer.jpg" style="width: 300.0px; height: 220.5px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 141 </span><span class="caption-text">Logic Analyzer</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 161 </span><span class="caption-text">Logic Analyzer</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>No need to make this yourself, simply buy it. You will need the following items. They are available under many manufacturer names from many suppliers. eBay and AliExpress are good sources:</p>
@@ -732,7 +734,7 @@
 <figure class="align-center" id="id10">
 <a class="reference internal image-reference" href="../../_images/logic_probes.jpg"><img alt="Logic probes" src="../../_images/logic_probes.jpg" style="width: 270.0px; height: 270.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 142 </span><span class="caption-text">Logic Probes</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 162 </span><span class="caption-text">Logic Probes</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <section id="install-pulseview">
@@ -754,7 +756,7 @@
 <figure class="align-center" id="id11">
 <a class="reference internal image-reference" href="../../_images/pv_install_folder.jpg"><img alt="Installing the DCC protocol decoder" src="../../_images/pv_install_folder.jpg" style="width: 551.0px; height: 153.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 143 </span><span class="caption-text">Installing the DCC protocol decoder</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 163 </span><span class="caption-text">Installing the DCC protocol decoder</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>On Linux:</p>
@@ -809,7 +811,7 @@ for a “0”. It then immediately switches and does the same thing on the other
 <figure class="align-center" id="id12">
 <a class="reference internal image-reference" href="../../_images/dcc_signal.png"><img alt="DCC Waveform" src="../../_images/dcc_signal.png" style="width: 440.65px; height: 281.04999999999995px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 144 </span><span class="caption-text">DCC Waveform</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 164 </span><span class="caption-text">DCC Waveform</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>But those familiar with how DC and AC voltage works might look at that and see a square wave where there is positive and negative voltage. That isn’t what is happening, there is never any negative voltage! Only the current changes direction inside something connected to the track, like the decoder in your loco. There is no “ground”, only the voltage present on one rail with respect to the other.</p>
@@ -817,28 +819,28 @@ for a “0”. It then immediately switches and does the same thing on the other
 <figure class="align-center" id="id13">
 <a class="reference internal image-reference" href="../../_images/dcc_pulse_train1.png"><img alt="DCC Pulse Train" src="../../_images/dcc_pulse_train1.png" style="width: 247.25px; height: 390.25px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 145 </span><span class="caption-text">DCC Pulse Train</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 165 </span><span class="caption-text">DCC Pulse Train</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Now let’s see things from a different perspective, both literally and figuratively by tilting the track away from you and imagining the pulse train operating like your model train and riding down the track.</p>
 <figure class="align-center" id="id14">
 <a class="reference internal image-reference" href="../../_images/dcc_pulse_train2.png"><img alt="DCC Pulse Train in Perspective" src="../../_images/dcc_pulse_train2.png" style="width: 500.0px; height: 375.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 146 </span><span class="caption-text">DCC Pulse Train in Perspective</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 166 </span><span class="caption-text">DCC Pulse Train in Perspective</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>If it helps, you can think in the analog/DC world again for the purposes of connecting one piece of track in one block to a piece of track in another. Each rail is like a wire connected to our power supply, we have just cut it to length and are connecting to another piece that is connected to a different power supply. Here is the Command Station on the left connected to one section of track and a booster connected to another section of track with the two track sections isolated from each other by a small gap.</p>
 <figure class="align-center" id="id15">
 <a class="reference internal image-reference" href="../../_images/booster_setup.png"><img alt="DCC Booster Setup" src="../../_images/booster_setup.png" style="width: 603.5px; height: 364.75px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 147 </span><span class="caption-text">DCC Booster Setup</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 167 </span><span class="caption-text">DCC Booster Setup</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>At any given instant, one rail or the other is at our full 12-24 Volts and the other is at zero. If our loco is rolling over the gap from one block or power district to another, we need to make sure that the signal, and therefore voltage, is at the same level on both sides. We call this being “in phase”. So if there is +15V on Rail A of the first block, we need that same +15V on Rail A of the next block. If not, and rail A on block 1 is at 15V and Rail A on block 2 is at 0V, and the metal wheels of our loco temporarily connect those two rails as they roll over them, we have a short circuit. Thus, if the rails of two blocks are out of phase with each other, then they are always at at a the opposite potential (except for a tiny transition period) and will represent a short circuit when crossing from one to the other.</p>
 <figure class="align-center" id="id16">
 <a class="reference internal image-reference" href="../../_images/dcc_phasing.png"><img alt="DCC Phasing Diagram" src="../../_images/dcc_phasing.png" style="width: 674.0px; height: 404.75px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 148 </span><span class="caption-text">DCC Phasing Diagram</span><a class="headerlink" href="#id16" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 168 </span><span class="caption-text">DCC Phasing Diagram</span><a class="headerlink" href="#id16" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>So how can we check our phase? We can use any of the simple circuits below or a more complicated one listed at the end.</p>
@@ -885,7 +887,7 @@ for a “0”. It then immediately switches and does the same thing on the other
 <figure class="align-center" id="id17">
 <a class="reference internal image-reference" href="../../_images/dcc_phase_checker1.png"><img alt="2 Diode Phase Checker" src="../../_images/dcc_phase_checker1.png" style="width: 288.0px; height: 337.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 149 </span><span class="caption-text">2 Diode Phase Checker</span><a class="headerlink" href="#id17" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 169 </span><span class="caption-text">2 Diode Phase Checker</span><a class="headerlink" href="#id17" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p><strong>Pros</strong> - Just 4 components, small, simple</p>
@@ -896,7 +898,7 @@ for a “0”. It then immediately switches and does the same thing on the other
 <figure class="align-center" id="id18">
 <a class="reference internal image-reference" href="../../_images/dcc_phase_checker2.png"><img alt="Diode Phase Checker" src="../../_images/dcc_phase_checker2.png" style="width: 248.0px; height: 316.5px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 150 </span><span class="caption-text">Diode Phase Checker</span><a class="headerlink" href="#id18" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 170 </span><span class="caption-text">Diode Phase Checker</span><a class="headerlink" href="#id18" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>

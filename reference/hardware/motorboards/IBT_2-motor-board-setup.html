@@ -13,6 +13,8 @@
       <link rel="stylesheet" href="../../../_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/big_picture_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/sphinx_design_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/reference/hardware/motorboards/IBT_2-motor-board-setup.html" />
   <!--[if lt IE 9]>
@@ -28,6 +30,8 @@
         <script src="../../../_static/design-tabs.js"></script>
         <script src="../../../_static/js/platform.js"></script>
         <script src="../../../_static/js/extra.js"></script>
+        <script src="../../../_static/dark_mode_js/default_light.js"></script>
+        <script src="../../../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -203,6 +207,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../../../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../ex-turntable/index.html">EX-Turntable</a><ul>
@@ -244,11 +249,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/getting-started.html">Sequences - an Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/EX-RAIL-summary.html">EX-RAIL Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/about.html">About and History</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ex-turntable/index.html">EX-Turntable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/purchasing.html">Purchasing</a></li>
@@ -370,9 +375,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../microcontrollers/nano-every.html">Nano Every</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../microcontrollers/teensy.html">Teensy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
@@ -424,6 +430,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../i2c-multiplexers.html">I2C Multiplexers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../accessory-controllers.html">Accessory Controllers</a></li>
@@ -469,12 +476,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../under-development/index.html">Features under development</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../under-development/track-manager.html"><em>Under Development:</em> DCC-EX TrackManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../under-development/index.html">Features under development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
@@ -595,7 +597,7 @@
 <li><p>An Arduino Mega or clone (or an Uno if you don’t need WiFi or Ethernet)</p></li>
 <li><p>An Arduino Motor Shield (or another board for your service track for the upgrade option)</p></li>
 <li><p>An IBT_2 Motor Board (1 board for the upgrade option, 2 for the replace option)</p></li>
-<li><p>Version 3.1.0 or later of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> Software</p></li>
+<li><p>Version 3.1.0 or later of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> Software</p></li>
 <li><p>10k or a even a 1k Resistor (Optional)</p></li>
 <li><p>Some Jumper Wires</p></li>
 </ul>
@@ -606,7 +608,7 @@
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>We can’t say it enough, this board can pump out some Amps. Be careful! Put fuses on the connection to each rail and limit the current to a safe level in your config.h file. We have a saying at <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span>, if you need more than 5 Amps to run locos, then you need to add power districts, not more Amps. The voltage to the track will be 2 to 3 volts higher using the same power supply than it is with Arduino type (L298) motor boards.</p>
+<p>We can’t say it enough, this board can pump out some Amps. Be careful! Put fuses on the connection to each rail and limit the current to a safe level in your config.h file. We have a saying at <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span>, if you need more than 5 Amps to run locos, then you need to add power districts, not more Amps. The voltage to the track will be 2 to 3 volts higher using the same power supply than it is with Arduino type (L298) motor boards.</p>
 </div>
 <p>The IBT_2 uses N-Channel Power MOSFETS (a type of Transistor) inside its 2 BTS7960B Integrated Circuits. Each of those ICs makes is just a half H-Bridge circuit, it takes two of them to make the full H-Bridge. Don’t be confused, each of these boards can only handle one track. The Arduino board is a DUAL full H-Bridge, that is how it can handle 2 tracks.</p>
 <p>Anything with MOSFETS in them is more efficient than something with Bipolar Junction Transistors (BJTs) like the L298 on the Arduino and Deek Robot Motor Shields. That means <strong>there is no voltage drop to the tracks</strong> like there is for those boards. Keep that in mind because that means <strong>there can be an extra 2 to 3 volts to your track</strong>. Your trains will run faster than they did before and things could overheat if they were able to handle the 12V reaching the track from a 14.5V power supply, but don’t like the full 14+ volts.</p>

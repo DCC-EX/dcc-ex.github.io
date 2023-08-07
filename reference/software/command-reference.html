@@ -13,6 +13,8 @@
       <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/big_picture_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/sphinx_design_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/reference/software/command-reference.html" />
   <!--[if lt IE 9]>
@@ -28,6 +30,8 @@
         <script src="../../_static/design-tabs.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
+        <script src="../../_static/dark_mode_js/default_light.js"></script>
+        <script src="../../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -203,6 +207,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-turntable/index.html">EX-Turntable</a><ul>
@@ -244,11 +249,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/getting-started.html">Sequences - an Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-summary.html">EX-RAIL Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/about.html">About and History</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ex-turntable/index.html">EX-Turntable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/purchasing.html">Purchasing</a></li>
@@ -370,9 +375,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/nano-every.html">Nano Every</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/teensy.html">Teensy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
@@ -424,6 +430,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../hardware/i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hardware/i2c-multiplexers.html">I2C Multiplexers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/accessory-controllers.html">Accessory Controllers</a></li>
@@ -469,12 +476,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../under-development/index.html">Features under development</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/track-manager.html"><em>Under Development:</em> DCC-EX TrackManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../under-development/index.html">Features under development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
@@ -604,7 +606,7 @@
 <p>This is a detailed reference. For a summary version, please see <a class="reference internal" href="command-summary.html"><span class="doc">Command Summary</span></a></p>
 <p><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">EX-CommandStation</a> Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several “front end” controllers are available or you can easily create your own. Here are some examples:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../throttles/software/ex-webthrottle.html"><span class="doc">EX-WebThrottle</span></a> - Our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span> browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span> itself!</p></li>
+<li><p><a class="reference internal" href="../../throttles/software/ex-webthrottle.html"><span class="doc">EX-WebThrottle</span></a> - Our <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span> browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span> itself!</p></li>
 <li><p><a class="reference external" href="https://enginedriver.mstevetodd.com/">Engine Driver</a> - Cellphone App WiFi Throttle</p></li>
 <li><p><a class="reference external" href="http://www.jmri.org/">JMRI (Java Model Railroad Interface)</a></p></li>
 <li><p>A serial console, like the Arduino Serial Monitor or PuTTY</p></li>
@@ -686,7 +688,7 @@
 </div>
 <p><strong>Show number of supported cabs</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;#&gt;</span></code> - Will display the number of available cab slots. This will typically be <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">20&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">30&gt;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">50&gt;</span></code> depending on how much memory your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> has available. This is a design limit based on the memory limitations of the particular hardware and a compromise with other features that require memory such as WiFI. If you need more slots and are comfortable with code changes you can adjust this by changing <code class="docutils literal notranslate"><span class="pre">MAX_LOCOS</span></code> in “DCC.h”, knowing that each new slot will take approximately 8 bytes of memory. The <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RAM&gt;</span></code> command will display the amount of free memory. If you fill the available slots, the “Forget Locos” command (<code class="docutils literal notranslate"><span class="pre">&lt;-</span> <span class="pre">[CAB]&gt;</span></code>) will free up unused locos. Currently there is no automatic purging of unused locos.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;#&gt;</span></code> - Will display the number of available cab slots. This will typically be <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">20&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">30&gt;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&lt;#</span> <span class="pre">50&gt;</span></code> depending on how much memory your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> has available. This is a design limit based on the memory limitations of the particular hardware and a compromise with other features that require memory such as WiFI. If you need more slots and are comfortable with code changes you can adjust this by changing <code class="docutils literal notranslate"><span class="pre">MAX_LOCOS</span></code> in “DCC.h”, knowing that each new slot will take approximately 8 bytes of memory. The <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RAM&gt;</span></code> command will display the amount of free memory. If you fill the available slots, the “Forget Locos” command (<code class="docutils literal notranslate"><span class="pre">&lt;-</span> <span class="pre">[CAB]&gt;</span></code>) will free up unused locos. Currently there is no automatic purging of unused locos.</p></li>
 </ul>
 <p><strong>Forget Locos</strong></p>
 <ul class="simple">
@@ -867,20 +869,20 @@ settings in the same group and will not, for example, unset F2 because you chang
 <p>Other notes:</p>
 <ul class="simple">
 <li><p>CAB Functions do not get stored in the EX-CommandStation</p></li>
-<li><p>Each group does not effect the other groups. To turn on F0 and F22 you would need to send two separate commands to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. One for F0 on and another for F22 on.</p></li>
+<li><p>Each group does not effect the other groups. To turn on F0 and F22 you would need to send two separate commands to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>. One for F0 on and another for F22 on.</p></li>
 </ul>
 </section>
 </section>
 <section id="stationary-accessory-decoder-turnout-commands">
 <h3><a class="toc-backref" href="#id6" role="doc-backlink">Stationary Accessory Decoder &amp; Turnout Commands</a><a class="headerlink" href="#stationary-accessory-decoder-turnout-commands" title="Permalink to this heading"></a></h3>
-<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).</p>
+<p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).</p>
 <p>All decoders that are not in an engine are accessory decoders including turnouts.</p>
 <p>Any DCC Accessory Decoder based turnouts, as well as any other DCC accessories connected in this fashion, can always be operated using the DCC COMMAND STATION Accessory command:</p>
 <section id="accessory-decoder-commands">
 <h4>Accessory Decoder Commands<a class="headerlink" href="#accessory-decoder-commands" title="Permalink to this heading"></a></h4>
 <p>There are two interchangeable commands for controlling Accessory Decoders, the Address/Subaddress method (aka “Dual-Coil” method) and linear addressing method.
 You can either specify an address and its subaddress (Addresses 0-511 with Subaddresses from 0-3) or the straight linear address (Addresses from 1-2044).</p>
-<p>In the mapping used by <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, linear addresses range from linear address 1, which is address 1 subaddress 0, up to linear address 2040 which is address 510 subaddress 3.
+<p>In the mapping used by <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, linear addresses range from linear address 1, which is address 1 subaddress 0, up to linear address 2040 which is address 510 subaddress 3.
 Decoder address 511 (linear addresses 2041-2044) is reserved for use as a broadcast address and should not be used for decoders.
 Decoder address 0 does not have a corresponding linear address.  This seems strange, but it is the mapping used by many, but not all, commercial manufacturers.
 If your decoder does not respond on the expected linear address, try adding and subtracting 4 to see if it works.  Or use the address/subaddress versions of the commands.</p>
@@ -996,7 +998,7 @@ You can also <strong>ERASE everything; (turnouts, sensors, and outputs)</strong>
 <div><blockquote>
 <div><p>Example: You have a turnout on your main line going to warehouse industry. The turnout is controlled by an accessory decoder with a address of 123 and is wired to output 3.
 You want it to have the ID of 10.
-You would send the following command to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>:
+You would send the following command to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>:
 <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">10</span> <span class="pre">DCC</span> <span class="pre">123</span> <span class="pre">3&gt;</span></code></p>
 <ul class="simple">
 <li><p>This Command means:</p></li>
@@ -1009,7 +1011,7 @@ You would send the following command to the <span style="font-weight: bold; colo
 </ul>
 </div></blockquote>
 <div class="line-block">
-<div class="line">Next you would send the following command to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>:
+<div class="line">Next you would send the following command to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>:
 <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code></div>
 </div>
 <blockquote>
@@ -1021,7 +1023,7 @@ You would send the following command to the <span style="font-weight: bold; colo
 </div></blockquote>
 </div></blockquote>
 <p>If turnout definitions are stored in EEPROM, the turnout thrown/closed state is also written to EEPROM whenever the turnout is switched.
-Consequently, when the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> is restarted the turnout outputs may be set to their last known state (applicable for Servo and VPIN turnouts).
+Consequently, when the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> is restarted the turnout outputs may be set to their last known state (applicable for Servo and VPIN turnouts).
 This is intended so that the servos don’t perform a sweep on power-on when their physical position does not match initial position in the CommandStation.</p>
 <section id="controlling-a-defined-turnout">
 <h4>Controlling a Defined Turnout<a class="headerlink" href="#controlling-a-defined-turnout" title="Permalink to this heading"></a></h4>
@@ -1040,7 +1042,7 @@ To throw turnout 10 so an engine can go to the warehouse siding you would send t
 <li><p><code class="docutils literal notranslate"><span class="pre">T</span></code> : (Upper case T) Throw a turnout.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">10</span></code> : ID number of the defined turnout I want to control.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> : Set turnout to Thrown (turned, on) position.</p></li>
-<li><p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> should return <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">10</span> <span class="pre">1&gt;</span></code>  Meaning Command was Successful</p>
+<li><p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> should return <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">10</span> <span class="pre">1&gt;</span></code>  Meaning Command was Successful</p>
 <p>NOTE: The <code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code> command by itself with no parameters will list all turnout definitions and their directions</p>
 </li>
 </ul>
@@ -1052,7 +1054,7 @@ To throw turnout 10 so an engine can go to the warehouse siding you would send t
 </section>
 <section id="sensors-input-commands">
 <h2><a class="toc-backref" href="#id8" role="doc-backlink">Sensors (Input) Commands</a><a class="headerlink" href="#sensors-input-commands" title="Permalink to this heading"></a></h2>
-<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> supports Sensor inputs that can be connected to any Arduino Pin not in use by this program, as well as pins on external I/O expanders
+<p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> supports Sensor inputs that can be connected to any Arduino Pin not in use by this program, as well as pins on external I/O expanders
 and other devices.
 Physical sensors can be of any type (infrared, magnetic, mechanical…).  They may be configured to pull-up or not.
 When configured for pull-up, the input is connected (within the CS) to
@@ -1107,12 +1109,12 @@ found to have transitioned from one state to another, one of the following seria
 </section>
 <section id="outputs-dio-pin-commands">
 <h2><a class="toc-backref" href="#id9" role="doc-backlink">Outputs (DIO Pin) Commands</a><a class="headerlink" href="#outputs-dio-pin-commands" title="Permalink to this heading"></a></h2>
-<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> supports optional OUTPUT control of any unused Arduino Pins for custom purposes. Pins can be activated or de-activated.
+<p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> supports optional OUTPUT control of any unused Arduino Pins for custom purposes. Pins can be activated or de-activated.
 The default is to set ACTIVE pins HIGH and INACTIVE pins LOW. However, this default behavior can be inverted for any pin in which case ACTIVE=LOW and INACTIVE=HIGH.</p>
 <p>Definitions and state (ACTIVE/INACTIVE) for pins are retained in EEPROM and restored on power-up.
 The default is to set each defined pin to active or inactive according to its restored state.
 However, the default behavior can be modified so that any pin can be forced to be either active or inactive upon power-up regardless of its previous state before power-down.</p>
-<p>To have <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> utilize one or more Arduino pins as custom outputs, first define/edit/delete output definitions using the following variation of the <code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code> command:</p>
+<p>To have <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> utilize one or more Arduino pins as custom outputs, first define/edit/delete output definitions using the following variation of the <code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code> command:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">iflag&gt;</span></code> : Creates a new output ID, with specified <code class="docutils literal notranslate"><span class="pre">vpin</span></code> and <code class="docutils literal notranslate"><span class="pre">iflag</span></code> values.</p>
 <ul>
@@ -1164,7 +1166,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 </li>
 </ul>
 <p>When controlled as such, the Arduino updates and stores the direction of each output in EEPROM so that it is retained even without power.
-A list of the current states of each output in the form <code class="docutils literal notranslate"><span class="pre">&lt;Y</span> <span class="pre">id</span> <span class="pre">state&gt;</span></code> is generated by <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> whenever the <code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code>
+A list of the current states of each output in the form <code class="docutils literal notranslate"><span class="pre">&lt;Y</span> <span class="pre">id</span> <span class="pre">state&gt;</span></code> is generated by <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> whenever the <code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code>
 status command is invoked. This provides an efficient way of initializing the state of any outputs being monitored or controlled by a separate interface or GUI program.</p>
 </section>
 <section id="storing-and-erasing-turnouts-sensors-and-outputs-in-eeprom">

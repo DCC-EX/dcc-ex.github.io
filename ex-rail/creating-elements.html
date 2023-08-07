@@ -13,6 +13,8 @@
       <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/big_picture_theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/sphinx_design_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/ex-rail/creating-elements.html" />
   <!--[if lt IE 9]>
@@ -28,6 +30,8 @@
         <script src="../_static/design-tabs.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
+        <script src="../_static/dark_mode_js/default_light.js"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -203,6 +207,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-turntable/index.html">EX-Turntable</a><ul>
@@ -244,11 +249,11 @@
 <li class="toctree-l2"><a class="reference internal" href="getting-started.html">Sequences - an Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="EX-RAIL-summary.html">EX-RAIL Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="about.html">About and History</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ex-turntable/index.html">EX-Turntable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ex-turntable/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-turntable/purchasing.html">Purchasing</a></li>
@@ -370,9 +375,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano-every.html">Nano Every</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/teensy.html">Teensy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
@@ -424,6 +430,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-multiplexers.html">I2C Multiplexers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/accessory-controllers.html">Accessory Controllers</a></li>
@@ -469,12 +476,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../under-development/index.html">Features under development</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/track-manager.html"><em>Under Development:</em> DCC-EX TrackManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../under-development/index.html">Features under development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
@@ -609,8 +611,8 @@
 <p>The process for creating these objects consists of:</p>
 <ul class="simple">
 <li><p>Adding the hardware (not strictly applicable to the roster)</p></li>
-<li><p>Configuring <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> by modifying ‘myAutomation.h’ so that it knows about the object</p></li>
-<li><p>Re-uploading the software to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span></p></li>
+<li><p>Configuring <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> by modifying ‘myAutomation.h’ so that it knows about the object</p></li>
+<li><p>Re-uploading the software to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -622,7 +624,7 @@
 <p>EX-RAIL has a <code class="docutils literal notranslate"><span class="pre">ROSTER()</span></code> function to allow you to define all of your locomotives with a list of their defined functions which is advertised to WiThrottle applications, just like turnouts/points and routes.</p>
 <p>The functions can simply be listed as “F” numbers, or you can provide a text description of the function. Prefacing the function with a “*” indicates it is momentary, meaning it is only activated while holding that function button down.</p>
 <p>In a text editor (e.g. notepad) create a new text file named ‘myAutomation.h’. (Note the capital ‘A’ in the name.  The case of all the characters is important.)</p>
-<p>If you are already using <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> and have a myAutomation.h, then just the add <code class="docutils literal notranslate"><span class="pre">ROSTER(...)</span></code> lines near the top of the file.</p>
+<p>If you are already using <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> and have a myAutomation.h, then just the add <code class="docutils literal notranslate"><span class="pre">ROSTER(...)</span></code> lines near the top of the file.</p>
 <p>Add a line that looks like:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">999</span><span class="p">,</span><span class="s">&quot;Loco Name&quot;</span><span class="p">,</span><span class="s">&quot;F0/F1/*F2/F3/F4/F5/F6/F7/F8&quot;</span><span class="p">)</span>
 </pre></div>
@@ -681,7 +683,7 @@
 <h3><a class="toc-backref" href="#id7" role="doc-backlink">DCC Turnouts/Points</a><a class="headerlink" href="#dcc-turnouts-points" title="Permalink to this heading"></a></h3>
 <section id="adding-the-hardware-dcc-turnouts-points">
 <h4>Adding the Hardware -  DCC Turnouts/Points<a class="headerlink" href="#adding-the-hardware-dcc-turnouts-points" title="Permalink to this heading"></a></h4>
-<p>If you have installed turnouts/points using DCC accessory decoders, you can config the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> so that it knows about it and you can control in in your sequences.</p>
+<p>If you have installed turnouts/points using DCC accessory decoders, you can config the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> so that it knows about it and you can control in in your sequences.</p>
 <blockquote>
 <div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TURNOUT</span><span class="p">(</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">addr</span><span class="p">,</span><span class="w"> </span><span class="n">sub_addr</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
@@ -713,7 +715,7 @@
 <aside class="sidebar">
 <p>You can also refer to <a class="reference internal" href="../reference/hardware/servo-module.html"><span class="doc">Connecting a Servo Module</span></a> for more information.</p>
 </aside>
-<p>To connect a servo to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, you first need to get a module, based on the PCA9685 chip.</p>
+<p>To connect a servo to <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, you first need to get a module, based on the PCA9685 chip.</p>
 <a class="reference internal image-reference" href="../_images/pca9685.jpg"><img alt="PCA9685 Servo Module" src="../_images/pca9685.jpg" style="width: 432.8px; height: 174.0px;" /></a>
 <p>These are widely available from eBay, Amazon, etc. for a few dollars.</p>
 <p>Note the pin connectors along the left side of the module - these are where you connect to the Arduino.</p>
@@ -721,7 +723,7 @@
 <p>The servo module itself is powered from the Arduino, but the servos themselves contain motors that consume more current than the Arduino is able to supply, and so a separate 5V supply is required for the servos.  This is connected to the green terminal block at the top of the module, with terminals labelled V+ and GND. The V+ terminal is connected to 5V and the GND to the 0V (ground) wire of the supply.</p>
 <p>Connections to the Arduino are made with four jumper wires (Arduino: +5V, GND, SCL, SDA to servo module: <strong>VCC</strong>, GND, SCL, SDA), as shown on the following diagram:</p>
 <a class="reference internal image-reference" href="../_images/ArduinoMegaServo.png"><img alt="PCA9685 Servo Module" src="../_images/ArduinoMegaServo.png" style="width: 555.3px; height: 370.8px;" /></a>
-<p>In <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.</p>
+<p>In <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.</p>
 <p>Once you’ve made all of the connections, apply power to the Arduino.</p>
 <p>Then, in the Serial Monitor, enter the command <cite>&lt;D SERVO 100 450&gt;</cite>.  The servo should move, as long as it isn’t (by some fluke) already in that position.</p>
 <p>Enter <cite>&lt;D SERVO 100 110&gt;</cite> and this time it should definitely move.  For the last parameter (servo position) you can use any value between about 105 and 490.</p>
@@ -733,7 +735,7 @@
 </section>
 <section id="configure-myautomation-h-servo-turnouts-points">
 <h4>Configure myAutomation.h - Servo Turnouts/Points<a class="headerlink" href="#configure-myautomation-h-servo-turnouts-points" title="Permalink to this heading"></a></h4>
-<p>The myAutomation.h file needs to be altered so that the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> knows about each Turnout/Point.</p>
+<p>The myAutomation.h file needs to be altered so that the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> knows about each Turnout/Point.</p>
 <p>EX-RAIL supports three methods of controlling servos:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="#controlling-servos-for-turnouts-points">Turnouts via the SERVO_TURNOUT directive</a></p></li>
@@ -743,7 +745,7 @@
 <section id="controlling-servos-for-turnouts-points">
 <h5>Controlling Servos for Turnouts/Points<a class="headerlink" href="#controlling-servos-for-turnouts-points" title="Permalink to this heading"></a></h5>
 <p>The <code class="docutils literal notranslate"><span class="pre">SERVO_TURNOUT</span></code> directive defines a servo based turnout/point in EX-RAIL, which will appear in <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> apps, <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, and <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> in addition to being defined as a turnout/point within the CommandStation.</p>
-<p>As per the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> reference, turnouts/points are defined with the following syntax:</p>
+<p>As per the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> reference, turnouts/points are defined with the following syntax:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example</span>
 <span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">pin</span><span class="p">,</span><span class="w"> </span><span class="n">active_angle</span><span class="p">,</span><span class="w"> </span><span class="n">inactive_angle</span><span class="p">,</span><span class="w"> </span><span class="n">profile</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">])</span>
 </pre></div>
@@ -772,7 +774,7 @@
 <p>See above for information on installing the servo hardware (it is the same as for a turnout/point).</p>
 <section id="configure-myautomation-h-servos-for-signals-an-animations">
 <h3><a class="toc-backref" href="#id11" role="doc-backlink">Configure myAutomation.h - Servos for Signals an Animations</a><a class="headerlink" href="#configure-myautomation-h-servos-for-signals-an-animations" title="Permalink to this heading"></a></h3>
-<p>The myAutomation.h file needs to be altered so that the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> knows about each servo.</p>
+<p>The myAutomation.h file needs to be altered so that the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> knows about each servo.</p>
 <p>EX-RAIL supports two methods of controlling servos that are not related to turnouts/points:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="#servos-for-signals">Signals via the SERVO_SIGNAL directive</a></p></li>
@@ -780,7 +782,7 @@
 </ul>
 <section id="servos-for-signals">
 <h4>Servos for Signals<a class="headerlink" href="#servos-for-signals" title="Permalink to this heading"></a></h4>
-<p>The <code class="docutils literal notranslate"><span class="pre">SERVO_SIGNAL</span></code> directive defines a servo based signal in <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> to drive semaphore type signals as part of sequences or routes, or simply be set via a signal or similar.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">SERVO_SIGNAL</span></code> directive defines a servo based signal in <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> to drive semaphore type signals as part of sequences or routes, or simply be set via a signal or similar.</p>
 <p>Similar to pin based signals, servo signals are controlled by the ID of the red pin only.</p>
 <p>Unlike servo based turnouts/points, there is no ID or description (they don’t appear in throttles), and they use the “Bounce” profile with no other options available at the present time:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
@@ -802,9 +804,9 @@
 </section>
 <section id="servos-for-animations">
 <h4>Servos for Animations<a class="headerlink" href="#servos-for-animations" title="Permalink to this heading"></a></h4>
-<p>The <code class="docutils literal notranslate"><span class="pre">SERVO</span></code> and <code class="docutils literal notranslate"><span class="pre">SERVO2</span></code> directives allow for servos to be used in various automations within <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>.</p>
-<p>Note that unlike a <code class="docutils literal notranslate"><span class="pre">SERVO_TURNOUT</span></code> these are not definitions that appear within WiThrottle apps, <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, or <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>, but are instead actions designed to be used within <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> automations.</p>
-<p>As per the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> reference, these are defined with the following syntax:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">SERVO</span></code> and <code class="docutils literal notranslate"><span class="pre">SERVO2</span></code> directives allow for servos to be used in various automations within <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span>.</p>
+<p>Note that unlike a <code class="docutils literal notranslate"><span class="pre">SERVO_TURNOUT</span></code> these are not definitions that appear within WiThrottle apps, <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, or <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>, but are instead actions designed to be used within <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> automations.</p>
+<p>As per the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> reference, these are defined with the following syntax:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">profile</span><span class="p">)</span>
 <span class="n">SERVO2</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">duration</span><span class="p">)</span>
 </pre></div>
@@ -857,13 +859,13 @@
 <section id="configure-myautomation-h-sensors">
 <h3><a class="toc-backref" href="#id14" role="doc-backlink">Configure myAutomation.h - Sensors</a><a class="headerlink" href="#configure-myautomation-h-sensors" title="Permalink to this heading"></a></h3>
 <p>You don’t actually require anything special to be added to myAutomation.h in advance of using them in an sequence.</p>
-<p>Handling sensors in sequences is made easy because <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> throws away the concept of interrupts (“oh… sensor 22 has been detected… which loco was that and whatever do I do now?”) and instead has the sequences work on the basis of “do nothing, maintain speed until sensor 22 triggers, and then carry on in the script”.</p>
+<p>Handling sensors in sequences is made easy because <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> throws away the concept of interrupts (“oh… sensor 22 has been detected… which loco was that and whatever do I do now?”) and instead has the sequences work on the basis of “do nothing, maintain speed until sensor 22 triggers, and then carry on in the script”.</p>
 <p>Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardware Abstraction Layer. For a Mega onboard GPIO pin, this is the same as the digital pin number. Other pin ranges refer to I/O expanders etc.</p>
 <div class="note-float-right admonition note">
 <p class="admonition-title">Note</p>
 <p>Hall effect sensors work for some layouts, but beware of how you detect the back end of a train approaching the buffers in a siding, or knowing when the last car has cleared a crossing.</p>
 </div>
-<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> allows for sensors that are <strong>Active Low or Active High</strong>. This is particularly important for IR sensors that have been converted to detect by broken beam, rather than reflection. By making the sensor number negative, the sensor state is inverted. e.g. <code class="docutils literal notranslate"><span class="pre">AT(-22)</span></code>.</p>
+<p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> allows for sensors that are <strong>Active Low or Active High</strong>. This is particularly important for IR sensors that have been converted to detect by broken beam, rather than reflection. By making the sensor number negative, the sensor state is inverted. e.g. <code class="docutils literal notranslate"><span class="pre">AT(-22)</span></code>.</p>
 <p>Sensors with ID’s 0 to 255 may be LATCHED/UNLATCHED in your script. If a sensor is latched on by the script, it can only be set off by the script… so <code class="docutils literal notranslate"><span class="pre">AT(22)</span> <span class="pre">LATCH(22)</span></code> for example effectively latches the sensor 22 on when detected once.</p>
 <p>Sensor polling by JMRI is independent of this, and may continue if <code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code> commands are used.</p>
 </section>
@@ -873,12 +875,12 @@
 <h2><a class="toc-backref" href="#id15" role="doc-backlink">Adding Signals</a><a class="headerlink" href="#adding-signals" title="Permalink to this heading"></a></h2>
 <section id="adding-the-hardware-signals">
 <h3><a class="toc-backref" href="#id16" role="doc-backlink">Adding the Hardware - Signals</a><a class="headerlink" href="#adding-the-hardware-signals" title="Permalink to this heading"></a></h3>
-<p>To connect a servo to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, you first need to get a module, based on the PCA9685 chip.</p>
+<p>To connect a servo to <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, you first need to get a module, based on the PCA9685 chip.</p>
 <a class="reference internal image-reference" href="../_images/pca9685.jpg"><img alt="PCA9685 Servo Module" src="../_images/pca9685.jpg" style="width: 432.8px; height: 174.0px;" /></a>
 <p>These are widely available from eBay, Amazon, etc. for a few dollars.</p>
 <p>Note the pin connectors along the left side of the module - these are where you connect to the Arduino.</p>
 <p>The 16 columns of three pins along the bottom of the module are where you connect the LEDs.</p>
-<p>In <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115.</p>
+<p>In <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115.</p>
 <p>On the PCA9685 Servo Signal Board:</p>
 <ul class="simple">
 <li><p>Connect individual LEDs on vpins 101, 102 … 115 as needed</p></li>
@@ -887,7 +889,7 @@
 </section>
 <section id="configure-myautomation-h-signals">
 <h3><a class="toc-backref" href="#id17" role="doc-backlink">Configure myAutomation.h - Signals</a><a class="headerlink" href="#configure-myautomation-h-signals" title="Permalink to this heading"></a></h3>
-<p>The myAutomation.h file needs to be altered so that the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> knows about each Signal.</p>
+<p>The myAutomation.h file needs to be altered so that the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> knows about each Signal.</p>
 <p>Signals setup on vpins 101, 102 … 115</p>
 <p>For each signal add a line in myAutomation.h in the form:</p>
 <p>SIGNAL(red_pin, amber_pin, green_pin)</p>

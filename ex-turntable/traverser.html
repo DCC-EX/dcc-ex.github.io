@@ -13,6 +13,8 @@
       <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/big_picture_theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/sphinx_design_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/ex-turntable/traverser.html" />
   <!--[if lt IE 9]>
@@ -28,6 +30,8 @@
         <script src="../_static/design-tabs.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
+        <script src="../_static/dark_mode_js/default_light.js"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -203,6 +207,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">EX-Turntable</a><ul class="current">
@@ -244,11 +249,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/getting-started.html">Sequences - an Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-summary.html">EX-RAIL Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/about.html">About and History</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">EX-Turntable</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="purchasing.html">Purchasing</a></li>
@@ -370,9 +375,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano-every.html">Nano Every</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/teensy.html">Teensy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
@@ -424,6 +430,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-multiplexers.html">I2C Multiplexers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/accessory-controllers.html">Accessory Controllers</a></li>
@@ -469,12 +476,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../under-development/index.html">Features under development</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/track-manager.html"><em>Under Development:</em> DCC-EX TrackManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../under-development/index.html">Features under development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
@@ -580,12 +582,12 @@
 </aside>
 <section id="overview">
 <h2><a class="toc-backref" href="#id2" role="doc-backlink">Overview</a><a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
-<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> has the ability to cater for both horizontal and vertical traversers, as well as turntables that do not rotate a full 360 degrees.</p>
+<p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> has the ability to cater for both horizontal and vertical traversers, as well as turntables that do not rotate a full 360 degrees.</p>
 <p>The primary difference from the standard full rotation turntable mode is the addition of a limit sensor to indicate when the traverser or limited rotation turntable reaches the end of its range of movement.</p>
 <figure class="align-right" id="id1">
 <a class="reference internal image-reference" href="../_images/heljan-traverser.jpg"><img alt="Heljan Traverser" src="../_images/heljan-traverser.jpg" style="width: 400.0px; height: 233.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 121 </span><span class="caption-text">A horizontal traverser by Heljan</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 132 </span><span class="caption-text">A horizontal traverser by Heljan</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The home sensor takes on an additional purpose in this mode, so in addition to flagging the home position, it also operates as a limit sensor.</p>
@@ -593,7 +595,7 @@
 <p>You will note we’ve rated the traverser feature as Tinkerer level. This is primarily due to the additional complexity of ensuring the mechanical aspects of the traverser are taken into consideration such as the home and limit sensors.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This page has been written as an addendum to the general <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> documentation and focuses on the changes required to enable traverser mode. Please ensure you are familiar with the other existing documentation also.</p>
+<p>This page has been written as an addendum to the general <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> documentation and focuses on the changes required to enable traverser mode. Please ensure you are familiar with the other existing documentation also.</p>
 </div>
 <section id="what-you-need-for-traverser-mode">
 <h3>What you need for traverser mode<a class="headerlink" href="#what-you-need-for-traverser-mode" title="Permalink to this heading"></a></h3>
@@ -721,10 +723,10 @@
 <p>Refer to <a class="reference internal" href="configure.html#sanity-steps"><span class="std std-ref">SANITY_STEPS</span></a>.</p>
 </div>
 <p>Once “config.h” is updated, you can continue to load the software onto the Arduino.</p>
-<p>Once the software is loaded and <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> starts, the stepper will start rotating in an attempt to activate the homing sensor, and this is an ideal opportunity to observe the direction of the stepper to understand whether the default directional rotation is clockwise, or counter clockwise.</p>
+<p>Once the software is loaded and <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> starts, the stepper will start rotating in an attempt to activate the homing sensor, and this is an ideal opportunity to observe the direction of the stepper to understand whether the default directional rotation is clockwise, or counter clockwise.</p>
 <section id="sensor-testing-mode">
 <h3>Sensor testing mode<a class="headerlink" href="#sensor-testing-mode" title="Permalink to this heading"></a></h3>
-<p>Prior to proceeding any further, it is recommended to validate the HOME and LIMIT sensors operate correctly, and that they are connected to the correct pins of the Arduino. A new SENSOR_TESTING mode has been added to allow the sensors to be tested, with all other <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> functionality disabled.</p>
+<p>Prior to proceeding any further, it is recommended to validate the HOME and LIMIT sensors operate correctly, and that they are connected to the correct pins of the Arduino. A new SENSOR_TESTING mode has been added to allow the sensors to be tested, with all other <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> functionality disabled.</p>
 <p>To enable SENSOR_TESTING mode, you will need to edit “config.h” again, and this time remove the “//” from the beginning of the <cite>#define SENSOR_TESTING`</cite> line (Refer to <a class="reference internal" href="configure.html#sensor-testing"><span class="std std-ref">SENSOR_TESTING</span></a> to enable sensor testing mode.):</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/////////////////////////////////////////////////////////////////////////////////////</span>
 <span class="c1">//  Enable sensor testing only, prevents all EX-Turntable operations.</span>
@@ -734,7 +736,7 @@
 <span class="cp">#define SENSOR_TESTING                                      &lt;&lt;== After removing </span><span class="c1">//</span>
 </pre></div>
 </div>
-<p>Once enabled, load the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> software again, and once <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> starts you should see this displayed in the serial console:</p>
+<p>Once enabled, load the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> software again, and once <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> starts you should see this displayed in the serial console:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>License GPLv3 fsf.org (c) dcc-ex.com
 EX-TurntableX version 0.4.0-Beta
 Available at I2C address 0x60
@@ -753,7 +755,7 @@ Limit sensor DEACTIVATED
 </div>
 <p>If the sensors report an inverted status (ie. ACIVATED when they are DEACTIVATED), then you likely need to review <cite>HOME_SENSOR_ACTIVE_STATE</cite> and <cite>LIMIT_SENSOR_ACTIVE_STATE</cite> in “config.h”. If the sensors connect to ground when activated, they must be set to <cite>LOW</cite>, if they connect to 5V they must be set to <cite>HIGH</cite>.</p>
 <p>If activating HOME activates LIMIT or vice versa, then swap the Arduino pin connections. HOME connects to pin 5, LIMIT connects to pin 2.</p>
-<p>When sensor testing is complete, you can add the “//” back in front of the <cite>#define SENSOR_TESTING</cite> line in “config.h” to disable SENSOR_TESTING mode, and re-load the software to revert to normal <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span> operations.</p>
+<p>When sensor testing is complete, you can add the “//” back in front of the <cite>#define SENSOR_TESTING</cite> line in “config.h” to disable SENSOR_TESTING mode, and re-load the software to revert to normal <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> operations.</p>
 </section>
 <section id="automatic-calibration">
 <h3>Automatic calibration<a class="headerlink" href="#automatic-calibration" title="Permalink to this heading"></a></h3>
@@ -788,7 +790,7 @@ Turntable homed successfully
 </section>
 <section id="traverser-mode-is-ready">
 <h2><a class="toc-backref" href="#id6" role="doc-backlink">Traverser mode is ready!</a><a class="headerlink" href="#traverser-mode-is-ready" title="Permalink to this heading"></a></h2>
-<p>Now that you have enabled traverser mode in <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span>, confirmed your HOME and LIMIT sensors are operating correctly, and calibration has completed, you can return to <a class="reference internal" href="test-and-tune.html"><span class="doc">Testing, Tuning, and Control</span></a> as the tuning steps and control commands are the same in both turntable and traverser modes.</p>
+<p>Now that you have enabled traverser mode in <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span>, confirmed your HOME and LIMIT sensors are operating correctly, and calibration has completed, you can return to <a class="reference internal" href="test-and-tune.html"><span class="doc">Testing, Tuning, and Control</span></a> as the tuning steps and control commands are the same in both turntable and traverser modes.</p>
 </section>
 </section>
 

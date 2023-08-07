@@ -13,6 +13,8 @@
       <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/big_picture_theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/sphinx_design_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/about/roadmap.html" />
   <!--[if lt IE 9]>
@@ -28,6 +30,8 @@
         <script src="../_static/design-tabs.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
+        <script src="../_static/dark_mode_js/default_light.js"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -203,6 +207,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-turntable/index.html">EX-Turntable</a><ul>
@@ -244,11 +249,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/getting-started.html">Sequences - an Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-summary.html">EX-RAIL Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/about.html">About and History</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ex-turntable/index.html">EX-Turntable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ex-turntable/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-turntable/purchasing.html">Purchasing</a></li>
@@ -370,9 +375,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano-every.html">Nano Every</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/teensy.html">Teensy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
@@ -424,6 +430,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-multiplexers.html">I2C Multiplexers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/accessory-controllers.html">Accessory Controllers</a></li>
@@ -469,12 +476,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../under-development/index.html">Features under development</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/track-manager.html"><em>Under Development:</em> DCC-EX TrackManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../under-development/index.html">Features under development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
@@ -569,30 +571,30 @@
 <li><p>Documentation enhancements:</p>
 <ul>
 <li><p>Continuing to make information easier to find especially for new users</p></li>
-<li><p>Add an <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> Cookbook, with Recipes as building blocks</p></li>
+<li><p>Add an <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> Cookbook, with Recipes as building blocks</p></li>
 </ul>
 </li>
-<li><p>Release <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> v5.0.0 including:</p>
+<li><p>Release <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> v5.0.0 including:</p>
 <ul>
 <li><p>Track Manager/DC districts</p></li>
 <li><p>Support for newer generation microcontrollers</p></li>
 <li><p>Fast clock support</p></li>
-<li><p>Additional automation and animation features with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span></p></li>
+<li><p>Additional automation and animation features with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></p></li>
 <li><p>See <a class="reference internal" href="../under-development/index.html"><span class="doc">Features under development</span></a></p></li>
 </ul>
 </li>
-<li><p>Add additional connection methods to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> beyond I<sup>2</sup>C</p></li>
+<li><p>Add additional connection methods to <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span> beyond I<sup>2</sup>C</p></li>
 </ul>
 </section>
 <section id="looking-ahead">
 <h2>Looking ahead<a class="headerlink" href="#looking-ahead" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Add I<sup>2</sup>C multiplexer support to the HAL</p></li>
-<li><p>Expand wireless connectivity between <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> and accessories beyond just throttles</p></li>
-<li><p>Design an all-in-one <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> hardware platform that can be purchased through resellers, or assembled at home</p></li>
-<li><p>Develop a new installer that can maintain pace with the development of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software</p></li>
+<li><p>Expand wireless connectivity between <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> and accessories beyond just throttles</p></li>
+<li><p>Design an all-in-one <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> hardware platform that can be purchased through resellers, or assembled at home</p></li>
+<li><p>Develop a new installer that can maintain pace with the development of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software</p></li>
 <li><p>Release a new EX-WebThrottle version supporting accessories, routes, etc.</p></li>
-<li><p>Complete the Big Picture fictional layout with components and <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> scripts</p></li>
+<li><p>Complete the Big Picture fictional layout with components and <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> scripts</p></li>
 </ul>
 </section>
 <hr class="docutils" />
@@ -677,11 +679,6 @@
 <p class="todo-source">(The <a class="reference internal" href="../reference/hardware/microcontrollers/nano.html#id5"><em>original entry</em></a> is located in /home/runner/work/dcc-ex.github.io/dcc-ex.github.io/docs/reference/hardware/microcontrollers/nano.rst, line 86.)</p>
 <div class="admonition-todo admonition">
 <p class="admonition-title">Todo</p>
-<p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/424">LOW - Hardware</a> - Add pinouts and motor shield wiring diagrams</p>
-</div>
-<p class="todo-source">(The <a class="reference internal" href="../reference/hardware/microcontrollers/teensy.html#id1"><em>original entry</em></a> is located in /home/runner/work/dcc-ex.github.io/dcc-ex.github.io/docs/reference/hardware/microcontrollers/teensy.rst, line 84.)</p>
-<div class="admonition-todo admonition">
-<p class="admonition-title">Todo</p>
 <p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/426">LOW - Hardware</a> - Fritzing image of 2 ibt 2 boards here</p>
 </div>
 <p class="todo-source">(The <a class="reference internal" href="../reference/hardware/motorboards/IBT_2-motor-board-setup.html#id1"><em>original entry</em></a> is located in /home/runner/work/dcc-ex.github.io/dcc-ex.github.io/docs/reference/hardware/motorboards/IBT_2-motor-board-setup.rst, line 198.)</p>
@@ -753,6 +750,11 @@
 <p class="todo-source">(The <a class="reference internal" href="../reference/hardware/wifi-boards/hc12-bridge.html#id1"><em>original entry</em></a> is located in /home/runner/work/dcc-ex.github.io/dcc-ex.github.io/docs/reference/hardware/wifi-boards/hc12-bridge.rst, line 17.)</p>
 <div class="admonition-todo admonition">
 <p class="admonition-title">Todo</p>
+<p>Programming CVs with Engine Driver</p>
+</div>
+<p class="todo-source">(The <a class="reference internal" href="../reference/software/programming-locos.html#id1"><em>original entry</em></a> is located in /home/runner/work/dcc-ex.github.io/dcc-ex.github.io/docs/reference/software/programming-locos.rst, line 64.)</p>
+<div class="admonition-todo admonition">
+<p class="admonition-title">Todo</p>
 <p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/433">MEDIUM - Diagnosing</a> - EX-CommandStation Software fails to load</p>
 </div>
 <p class="todo-source">(The <a class="reference internal" href="../support/ex-cs-diagnose.html#id1"><em>original entry</em></a> is located in /home/runner/work/dcc-ex.github.io/dcc-ex.github.io/docs/support/ex-cs-diagnose.rst, line 34.)</p>
@@ -775,7 +777,7 @@
 <p class="admonition-title">Todo</p>
 <p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/436">LOW - Software</a> - Give some setup tutorial here. Need a video to match since ED is the top used software</p>
 </div>
-<p class="todo-source">(The <a class="reference internal" href="../throttles/software/engine-driver.html#id2"><em>original entry</em></a> is located in /home/runner/work/dcc-ex.github.io/dcc-ex.github.io/docs/throttles/software/engine-driver.rst, line 108.)</p>
+<p class="todo-source">(The <a class="reference internal" href="../throttles/software/engine-driver.html#id2"><em>original entry</em></a> is located in /home/runner/work/dcc-ex.github.io/dcc-ex.github.io/docs/throttles/software/engine-driver.rst, line 118.)</p>
 </section>
 </section>
 

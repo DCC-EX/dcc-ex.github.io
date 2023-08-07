@@ -13,6 +13,8 @@
       <link rel="stylesheet" href="../../../_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/big_picture_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/sphinx_design_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/reference/hardware/motorboards/ex-motor-shield-8874.html" />
   <!--[if lt IE 9]>
@@ -28,6 +30,8 @@
         <script src="../../../_static/design-tabs.js"></script>
         <script src="../../../_static/js/platform.js"></script>
         <script src="../../../_static/js/extra.js"></script>
+        <script src="../../../_static/dark_mode_js/default_light.js"></script>
+        <script src="../../../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -203,6 +207,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../../../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../ex-turntable/index.html">EX-Turntable</a><ul>
@@ -244,11 +249,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/getting-started.html">Sequences - an Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/EX-RAIL-summary.html">EX-RAIL Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/about.html">About and History</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ex-turntable/index.html">EX-Turntable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/purchasing.html">Purchasing</a></li>
@@ -370,9 +375,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../microcontrollers/nano-every.html">Nano Every</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../microcontrollers/teensy.html">Teensy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
@@ -424,6 +430,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../i2c-multiplexers.html">I2C Multiplexers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../accessory-controllers.html">Accessory Controllers</a></li>
@@ -469,12 +476,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../under-development/index.html">Features under development</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../under-development/track-manager.html"><em>Under Development:</em> DCC-EX TrackManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../under-development/index.html">Features under development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
@@ -578,7 +580,7 @@
 </ul>
 </nav>
 </aside>
-<p>Designed in conjunction with the <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> development team, the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;MotorShield8874</span></span> is extremely simple to use with all current and future generations of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> hardware. It also safely powers the Command Station motherboard via the same single barrel jack DC input voltage that powers the track. It is rated at a very generous peak 5A of load per channel using Texas Instruments DRV8874 MOSFET technology. This board is the new standard by which we compare other boards.</p>
+<p>Designed in conjunction with the <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> development team, the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span> is extremely simple to use with all current and future generations of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> hardware. It also safely powers the Command Station motherboard via the same single barrel jack DC input voltage that powers the track. It is rated at a very generous peak 5A of load per channel using Texas Instruments DRV8874 MOSFET technology. This board is the new standard by which we compare other boards.</p>
 <a class="reference internal image-reference" href="../../../_images/ex_motorshield8874.jpeg"><img alt="DCC-EX EX-MotorShield8874 RevA Semify" src="../../../_images/ex_motorshield8874.jpeg" style="width: 300.0px; height: 200.0px;" /></a>
 <a class="reference internal image-reference" href="../../../_images/ex_motorshield8874_purple_side.jpg"><img alt="DCC-EX EX-MotorShield8874 RevA Millennium Engineering" src="../../../_images/ex_motorshield8874_purple_side.jpg" style="width: 198.4px; height: 135.4px;" /></a>
 <section id="what-is-it">
@@ -641,7 +643,7 @@
 <p class="admonition-title">Note</p>
 <p><strong>DO NOT</strong> connect power to BOTH the EX-MotorShield8874 barrel jack and the underlying Arduino motherboard via its DC barrel jack as you may damage your Arduino and/or EX-MotorShield8874!!</p>
 </div>
-<p>The EX-MotorShield8874’s DC barrel jack is the only power source required to power both the tracks and the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> into which it is plugged. It supplies carefully regulated 7.2V DC power to the underlying Arduino R3 compatible motherboard via the VIN pin. This voltage is safely regulated down from the track power input to ensure Command Station motherboards will stay cool and work well. There is no need to power the Command Station via its barrel jack, or USB power. It is safe, however, to connect the USB cable as it will not create a conflict.</p>
+<p>The EX-MotorShield8874’s DC barrel jack is the only power source required to power both the tracks and the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> into which it is plugged. It supplies carefully regulated 7.2V DC power to the underlying Arduino R3 compatible motherboard via the VIN pin. This voltage is safely regulated down from the track power input to ensure Command Station motherboards will stay cool and work well. There is no need to power the Command Station via its barrel jack, or USB power. It is safe, however, to connect the USB cable as it will not create a conflict.</p>
 <p>We suggest 10-12VDC for Z &amp; N Scale, 14-16VDC for OO, HO, and 18-19VDC for O, or up to 24V for G scales because the EX-MotorShield8874 does not drop voltage like the standard L298 based motor shields. Note that good quality, fully-enclosed and double-insulated switch mode power supplies are best, and we suggest laptop power bricks as ideal in this role as they typically output 3-20A easily and safely.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -650,19 +652,19 @@
 </section>
 <section id="turn-on-power-to-the-motor-driver">
 <h3>1. Turn on Power to the Motor Driver<a class="headerlink" href="#turn-on-power-to-the-motor-driver" title="Permalink to this heading"></a></h3>
-<p>Once satisfied the EX-MotorShield8874 is seated properly on the Command Station motherboard, you can apply power to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. You ought to see a green LED light up indicating power is being supplied to the motherboard.</p>
+<p>Once satisfied the EX-MotorShield8874 is seated properly on the Command Station motherboard, you can apply power to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>. You ought to see a green LED light up indicating power is being supplied to the motherboard.</p>
 <a class="reference internal image-reference" href="../../../_images/ex_motorshield8874_purple_megawifi_LED_on.jpg"><img alt="DCC-EX EX-MotorShield8874 RevA on Mega+WiFi with power LED on" src="../../../_images/ex_motorshield8874_purple_megawifi_LED_on.jpg" style="width: 380.70000000000005px; height: 185.9px;" /></a>
 </section>
 <section id="connect-track-to-motor-driver">
 <h3>3. Connect Track to Motor Driver<a class="headerlink" href="#connect-track-to-motor-driver" title="Permalink to this heading"></a></h3>
-<p>Track power for A (MAIN) and B (PROG) tracks can be connected now using the green track connectors. These unplug conveniently to allow easy swapping in and out of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. Make sure to tighten the screws onto the wire in the connectors before applying power.</p>
+<p>Track power for A (MAIN) and B (PROG) tracks can be connected now using the green track connectors. These unplug conveniently to allow easy swapping in and out of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>. Make sure to tighten the screws onto the wire in the connectors before applying power.</p>
 <a class="reference internal image-reference" href="../../../_images/ex_motorshield8874_purple_connector_closeup.jpg"><img alt="DCC-EX EX-MotorShield8874 RevA connectors" src="../../../_images/ex_motorshield8874_purple_connector_closeup.jpg" style="width: 444.3px; height: 188.7px;" /></a>
 <p>Notice that A (MAIN) is on the left as you look at the connectors, and B (PROG) is on the right, next to the DC barrel jack.</p>
 </section>
 </section>
 <section id="next-steps">
 <h2><a class="toc-backref" href="#id6" role="doc-backlink">Next steps</a><a class="headerlink" href="#next-steps" title="Permalink to this heading"></a></h2>
-<p>Click <a class="reference internal" href="../../../ex-commandstation/get-started/wifi-setup.html"><span class="doc">here</span></a> to learn how to connect the WiFi shield to your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, or <em>alternatively</em> connect a controller like <a class="reference internal" href="../../glossary.html"><span class="doc">JMRI</span></a> or our <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span> by using the serial cable to connect between your computer and the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> as outlined in the <a class="reference internal" href="../../../ex-installer/installing.html#getting-ready"><span class="std std-ref">Getting Ready</span></a> section of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span> page. Note that when configuring the EX-CommandStation you will want to select <cite>EX8874_SHIELD</cite> as the motor board during configuration.</p>
+<p>Click <a class="reference internal" href="../../../ex-commandstation/get-started/wifi-setup.html"><span class="doc">here</span></a> to learn how to connect the WiFi shield to your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, or <em>alternatively</em> connect a controller like <a class="reference internal" href="../../glossary.html"><span class="doc">JMRI</span></a> or our <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span> by using the serial cable to connect between your computer and the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> as outlined in the <a class="reference internal" href="../../../ex-installer/installing.html#getting-ready"><span class="std std-ref">Getting Ready</span></a> section of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> page. Note that when configuring the EX-CommandStation you will want to select <cite>EX8874_SHIELD</cite> as the motor board during configuration.</p>
 <p>For more detailed and technical information, follow the link to the <a class="reference external" href="https://github.com/DCC-EX/EX-MotorShield8874">EX-MotorShield8874 on Github</a> It also includes the schematic and the KiCad project files.</p>
 </section>
 </section>

@@ -16,6 +16,8 @@
       <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/big_picture_theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/sphinx_design_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/support/ex-cs-troubleshooting.html" />
   <!--[if lt IE 9]>
@@ -31,6 +33,8 @@
         <script src="../_static/design-tabs.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
+        <script src="../_static/dark_mode_js/default_light.js"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -206,6 +210,7 @@
 <li class="toctree-l5"><a class="reference internal" href="ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-turntable/index.html">EX-Turntable</a><ul>
@@ -247,11 +252,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/getting-started.html">Sequences - an Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-summary.html">EX-RAIL Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/about.html">About and History</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ex-turntable/index.html">EX-Turntable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ex-turntable/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-turntable/purchasing.html">Purchasing</a></li>
@@ -373,9 +378,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano-every.html">Nano Every</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/teensy.html">Teensy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
@@ -427,6 +433,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-multiplexers.html">I2C Multiplexers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/accessory-controllers.html">Accessory Controllers</a></li>
@@ -472,12 +479,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../under-development/index.html">Features under development</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/track-manager.html"><em>Under Development:</em> DCC-EX TrackManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../under-development/index.html">Features under development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
@@ -591,8 +593,8 @@
 </ul>
 </nav>
 </aside>
-<p>In this section, you will find some tips on troubleshooting the various issues encountered with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
-<p>If you have just assembled your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> and it is not working as expected, we recommend you start with the <a class="reference internal" href="ex-cs-diagnose.html"><span class="doc">Diagnosing Basic Problems</span></a> page.</p>
+<p>In this section, you will find some tips on troubleshooting the various issues encountered with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>.</p>
+<p>If you have just assembled your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> and it is not working as expected, we recommend you start with the <a class="reference internal" href="ex-cs-diagnose.html"><span class="doc">Diagnosing Basic Problems</span></a> page.</p>
 <hr class="docutils" />
 <section id="troubleshooting-tips">
 <h2><a class="toc-backref" href="#id1" role="doc-backlink">Troubleshooting tips</a><a class="headerlink" href="#troubleshooting-tips" title="Permalink to this heading"></a></h2>
@@ -611,9 +613,10 @@
 <tbody>
 <tr class="row-even"><td><p>Locomotive doesn’t respond to throttle settings</p></td>
 <td><ol class="loweralpha simple">
-<li><p>Track power has not been turned on - Issue <code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> in the serial console, or use the <span class="guilabel">Power</span> button in <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> or <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>.</p></li>
+<li><p>Track power has not been turned on - Issue <code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> in the serial console, or use the <span class="guilabel">Power</span> button in <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> or <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> or the power slider in <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span>.</p></li>
 <li><p>Locomotive is on the PROGRAMMING track - Issue <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code> in the serial console, or use the <span class="guilabel">Request Loco ID</span> button in <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>.</p></li>
-<li><p>Power has not been supplied to the motor board - Check to ensure power supply is connected securely witht the correct polarity, is plugged in at the wall, and turned on.</p></li>
+<li><p>Power has not been supplied to the motor board - Check to ensure power supply is connected securely with the correct voltage, polarity, and current rating and is plugged in at the wall, and turned on.</p></li>
+<li><p>Ensure the motor shield is securely seated onto the Arduino.</p></li>
 </ol>
 </td>
 </tr>
@@ -637,7 +640,7 @@
 <p>Manually entering the expected IP address and port does not successfully connect</p>
 </td>
 <td><ol class="loweralpha simple">
-<li><p>CommandStation is configured for Access Point mode, but <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> or <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> device is connected to a different WiFi network - Connect the device directly the CommandStation’s WiFi network</p></li>
+<li><p>CommandStation is configured for Access Point mode, but <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> or <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> device is connected to a different WiFi network - Connect the device to the CommandStation’s WiFi network</p></li>
 <li><p>CommandStation is configured for Station Mode and connects to the WiFi network, but <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> or <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> device is connected to a different WiFi network - Connect the device to the correct WiFi network</p></li>
 <li><p>WifI shield is connected incorrectly to the CommandStation - The Rx pin of the WiFi shield must connect to the Tx pin on the CommandStation, and Tx to the Rx pin</p></li>
 </ol>
@@ -651,27 +654,32 @@
 <h2><a class="toc-backref" href="#id4" role="doc-backlink">Diagnostics</a><a class="headerlink" href="#diagnostics" title="Permalink to this heading"></a></h2>
 <section id="is-it-plugged-in-is-it-turned-on">
 <h3><a class="toc-backref" href="#id5" role="doc-backlink">Is it Plugged In, Is it Turned On?</a><a class="headerlink" href="#is-it-plugged-in-is-it-turned-on" title="Permalink to this heading"></a></h3>
-<p>Yes, we need to start with the basics. If you have 12V DC or less connected to the input power of the Arduino and did not cut the power connect trace underneath the Motor Controller, then the Motor Controller and the Arduino can be powered from the one power supply connected to the barrel jack of the Motor Shield. If you cut the trace (which we highly recommend), then you will need two power supplies, a 7-9V DC power supply to the Arduino and a 12-18V DC (based on the scale of your locomotives) power supply for the Motor Controller.</p>
+<p>Yes, we need to start with the basics.</p>
+<p><strong>If you are using the EX-MotorShield8874</strong> - This paragraph is for the EX-MotorShield8874. If you have a different motor shield, see the next paragraph! You can connect your 12-18V DC (based on the scale of your locomotives) power supply directly to the barrel jack (power input) of the shield. Do not connect power to the Arduino and the motor shield at the same time! You should see the power indicator LED illuminate and power should flow down to the Arduino and illuminate its power LED indicator. If you don’t see the power light on the Arduino, check that the shield is seated and making a good connection into the Arduino’s sockets (called headers).</p>
 <ul class="simple">
-<li><p>If you have one power supply, is it plugged into the wall and is it at least capable of delivering 2 Amps of current?</p></li>
-<li><p>If you have two power supplies, see above for the Motor Controller board and add a 7-9V DC power supply for the Arduino of at least 1 Amp. Anything less than 7 Volts will cause unreliable operation</p></li>
-<li><p>Do you see a green led marked <code class="docutils literal notranslate"><span class="pre">`on`</span></code> on the Arduino board glowing to indicate the Arduino has power? If not, there is a power issue</p></li>
+<li><p>The EX-MotorShield8874 power supply should have at least a 2A rating. Ensure it is plugged into the wall.</p></li>
 </ul>
+<p><strong>If you are using the Arduino Motor Shield, Deek-Robot, or other compatible shield</strong> - Make sure you have bent out the Vin pin (or cut the trace underneath the motor shield). You will need TWO power supplies, a 7-9V DC power supply to the Arduino and a 12-18V DC (based on the scale of your locomotives) power supply for the Motor Controller.</p>
+<ul class="simple">
+<li><p>Ensure the 7-9V DC power supply for the Arduino has at least 1 Amp. Anything less than 7 Volts and 1A will cause unreliable operation. Ensure that the Motor Shield power supply is rated for at least 2 Amps.</p></li>
+</ul>
+<p>For all type of motor drivers, do you see a green led marked <code class="docutils literal notranslate"><span class="pre">`on`</span></code> on the Arduino board glowing to indicate the Arduino has power? If not, there is a power issue.</p>
 </section>
 <section id="testing">
 <h3><a class="toc-backref" href="#id6" role="doc-backlink">Testing</a><a class="headerlink" href="#testing" title="Permalink to this heading"></a></h3>
+<p>We are going to use the Arduino IDE for this section. If you are unfamiliar with the Arduino IDE or do not yet have it installed, see the section about how to use the Arduino IDE to install the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> here: <a class="reference internal" href="../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">Using the Arduino IDE</span></a>, or just download the Legacy IDE 1.8.19 version here: <a class="reference external" href="https://www.arduino.cc/en/software">Arduino IDE</a> . Scroll down to find the 1.8.19 version.</p>
 <ol class="arabic simple">
 <li><p>Remove the Motor Shield —we are going to test just the Arduino first.</p></li>
 <li><p>Download and install the most current version of <a class="reference internal" href="../download/ex-commandstation.html#latest-ex-commandstation-official-release"><span class="std std-ref">EX-CommandStation</span></a></p></li>
-<li><p>Open the Serial Monitor Window in the Arduino IDE and establish communication with the Arduino. You will need to set the serial data rate to <code class="docutils literal notranslate"><span class="pre">115200</span> <span class="pre">baud</span></code> and make sure you have set <code class="docutils literal notranslate"><span class="pre">Both</span> <span class="pre">CR</span> <span class="pre">&amp;</span> <span class="pre">NL</span></code> from the dropdown so that commands are accepted. If you see gibberish (garbage characters), this is usually an indication that the baud rate is incorrect. You should see “DCC-EX” and the software version as well as other log lines that mention WiFi. If you don’t see anything in the log, it could be that the software did not upload correctly, less than 7 Volts DC to the Arduino, or be an issue with the connection between your computer and the Arduino. Check your serial port and try a different USB cable.</p></li>
+<li><p>Open the Serial Monitor Window in the Arduino IDE and establish communication with the Arduino. You will need to set the serial data rate to <code class="docutils literal notranslate"><span class="pre">115200</span> <span class="pre">baud</span></code> and make sure you have set <code class="docutils literal notranslate"><span class="pre">Both</span> <span class="pre">CR</span> <span class="pre">&amp;</span> <span class="pre">NL</span></code> from the dropdown so that commands are accepted. If you see gibberish (garbage characters), this is usually an indication that the baud rate is incorrect. You should see “DCC-EX” and the software version as well as other log lines that mention WiFi. If you don’t see anything in the log, it could be that the software did not upload correctly, there is less than 7 Volts DC to the Arduino, or there is an issue with the connection between your computer and the Arduino. Check your serial port and try a different USB cable.</p></li>
 </ol>
 </section>
 <section id="testing-the-arduino-and-ex-commandstation-code">
 <h3><a class="toc-backref" href="#id7" role="doc-backlink">Testing the Arduino and EX-CommandStation code</a><a class="headerlink" href="#testing-the-arduino-and-ex-commandstation-code" title="Permalink to this heading"></a></h3>
-<p>Validating the Arduino and <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> code is functional is a pretty straight forward exercise.</p>
+<p>Validating the Arduino and <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> code is functional is a pretty straight forward exercise.</p>
 <ol class="arabic simple">
-<li><p>From the serial monitor window, type <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RESET&gt;</span></code> to restart the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> and monitor the startup logs. Once it has started, ensure the version you expect is displayed, and that the motor driver you have configured is also displayed. Look for a line similar to <code class="docutils literal notranslate"><span class="pre">&lt;iDCC-EX</span> <span class="pre">V-4.2.3</span> <span class="pre">rc1</span> <span class="pre">/</span> <span class="pre">STM32</span> <span class="pre">/</span> <span class="pre">STANDARD_MOTOR_SHIELD</span> <span class="pre">G-PORTX-HAL-20220828&gt;</span></code> which translates to <code class="docutils literal notranslate"><span class="pre">&lt;Version</span> <span class="pre">/</span> <span class="pre">Microcontroller</span> <span class="pre">/</span> <span class="pre">Motor</span> <span class="pre">shield</span> <span class="pre">definition&gt;</span></code>. If these differ from what you expect, the software hasn’t loaded correctly, or your “config.h” file may not have been updated prior to uploading the software.</p></li>
-<li><p>If there are obvious issues noted from these startup logs, review “config.h”, make sure you have downloaded the correct version of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, and upload the software again.</p></li>
+<li><p>From the serial monitor window, type <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">RESET&gt;</span></code> to restart the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> and monitor the startup logs. Once it has started, ensure the version you expect is displayed, and that the motor driver you have configured is also displayed. Look for a line similar to <code class="docutils literal notranslate"><span class="pre">&lt;iDCC-EX</span> <span class="pre">V-4.2.3</span> <span class="pre">rc1</span> <span class="pre">/</span> <span class="pre">STM32</span> <span class="pre">/</span> <span class="pre">STANDARD_MOTOR_SHIELD</span> <span class="pre">G-PORTX-HAL-20220828&gt;</span></code> which translates to <code class="docutils literal notranslate"><span class="pre">&lt;Version</span> <span class="pre">/</span> <span class="pre">Microcontroller</span> <span class="pre">/</span> <span class="pre">Motor</span> <span class="pre">shield</span> <span class="pre">definition&gt;</span></code>. If these differ from what you expect, the software hasn’t loaded correctly, or your “config.h” file may not have been updated prior to uploading the software.</p></li>
+<li><p>If there are obvious issues noted from these startup logs, review “config.h”, make sure you have downloaded the correct version of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, and upload the software again.</p></li>
 </ol>
 </section>
 <section id="testing-the-motor-shield">
@@ -687,13 +695,17 @@
 <li><p>All 4 lights next to the outputs of the Motor Shield should be on.</p></li>
 </ol>
 <p>If neither of the LEDs attached to one of the output channels comes on when you send a <code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> command, this indicates you are not correctly mapping either the SIGNAL_ENABLE_PIN_MAIN or SIGNAL_ENABLE_PIN_PROG pins from the Arduino (depending on which output channel does not appear to be working). Make sure you did not change any of the default settings in the config.h file.</p>
-<p>If only one of the LEDs attached to the one of the output channels comes on when you send a <code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> command, but the other does not, this suggests that either the DCC signal is not getting through to the Motor Shield, in which case it is a mapping/wiring/jumper problem, OR that the signal is getting through but the H-bridge on the Motor Shield itself is not functioning (and the Motor Shield may need to be replaced).</p>
-<p>If you still need help, please find us on Discord or send an email to <a class="reference external" href="mailto:support&#37;&#52;&#48;dcc-ex&#46;com">support<span>&#64;</span>dcc-ex<span>&#46;</span>com</a></p>
+<p>If only one of the LEDs attached to the one of the output channels comes on when you send a <code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> command, but the other does not, this suggests that either the DCC signal is not getting through to the Motor Shield, in which case it is a mapping/wiring/jumper/connection problem, OR that the signal is getting through but the H-bridge on the Motor Shield itself is not functioning (and the Motor Shield may need to be replaced).</p>
+<p>Once you have sent the power on command (<code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code>), you should read 5V DC on each of an Arduino’s enable pins (power_pin in the motor board definition) with a multimeter. For the STANDARD_MOTOR_SHIELD, these are pins 3 for main and 11 for prog.</p>
+<p>Whether you have sent the power on command or not, the DCC signal is always present at the signal pins (signal_pin in the motor board definition). For the STANDARD_MOTOR_SHIELD, these are pins 12 for main and 13 for prog.</p>
+<p>If you are using a 3.3V board for your CS, like a Nucleo or ESPDuino32, then these voltages will be 3.3V and 1.65V DC.</p>
+<p>There is more information about the pins and how they are used on the <a class="reference internal" href="../reference/hardware/motorboards/motor-board-config.html"><span class="doc">Motor Driver Configuration</span></a> page.</p>
+<p>If you still need help, please find us on <a class="reference external" href="https://discord.gg/y2sB4Fp">The DCC-EX Discord</a> or send an email to <a class="reference external" href="mailto:support&#37;&#52;&#48;dcc-ex&#46;com">support<span>&#64;</span>dcc-ex<span>&#46;</span>com</a></p>
 </section>
 <section id="testing-the-dcc-signal">
 <h3><a class="toc-backref" href="#id9" role="doc-backlink">Testing the DCC signal</a><a class="headerlink" href="#testing-the-dcc-signal" title="Permalink to this heading"></a></h3>
 <p>Now the fun part – we are going to test the generation of the DCC signal itself.</p>
-<p>The easiest way to do this is using a Multi-meter that can read AC voltage. You can measure that 12V DC is going INTO the Motor Shield, but you have to use the <strong>AC setting</strong> to measure the bipolar square wave signal. With one lead of either probe connected to one track and the other probe connected to the other track, you should read an AC voltage in the range of 15-24V depending on our input voltage and a few other factors. An N-Scale track with 12V DC input to the motor shield is usually around 14VAC. If you read zero volts or a very small AC voltage (1V or less) then either you are still using the DC setting on your meter, or there is something wrong with your wiring, motor shield, or config.h settings.</p>
+<p>The easiest way to do this is using a Multi-meter that can read AC voltage. You can measure that 12V DC is going INTO the Motor Shield, but you have to use the <strong>AC setting</strong> to measure the bipolar square wave signal at the output. With one lead of either probe connected to one track and the other probe connected to the other track, you should read an AC voltage in the range of 15-24V depending on your input voltage and a few other factors. An N-Scale track with 12V DC input to the motor shield is usually around 14VAC. If you read zero volts or a very small AC voltage (1V or less) then either you are still using the DC setting on your meter, or there is something wrong with your wiring, motor shield, or config.h settings.</p>
 </section>
 </section>
 <section id="loco-programming-issues-1-or-jmri-308-error">
@@ -702,7 +714,7 @@
 <ol class="arabic simple">
 <li><p><strong>Current sense issue</strong> - From the Arduino Serial monitor with <code class="docutils literal notranslate"><span class="pre">115200</span> <span class="pre">baud</span></code> set and <code class="docutils literal notranslate"><span class="pre">Both</span> <span class="pre">CR</span> <span class="pre">&amp;</span> <span class="pre">NL</span></code> selected in the dropdown, put a loco on the MAIN track. Enter the &lt;1&gt; command to turn on power. Then enter the &lt;C&gt; command and check the response. You should see a valid number for current.</p></li>
 <li><p>Check the analog input pins to make sure there are no bent pins. If you wired your own motor board, make sure you have current sense capability on that board, that you have wires going to the correct analog pin on the Arduino, and that if pin A0, for example, is your current sense for the MAIN track, that your motorboard definition matches that pin.</p></li>
-<li><p><strong>Out of spec. decoder (most likely)</strong> - You will need to run a test and then modify a setting or two. Please go to the <a class="reference internal" href="../reference/tools/diagnostic-d-ack-command.html"><span class="doc">&lt;Diagnostic &lt;D ACK&gt;</span></a>. Send us your log.</p></li>
+<li><p><strong>Out of spec. decoder (most likely)</strong> - You will need to run a test and then modify a setting or two. Please go to the <a class="reference internal" href="../reference/tools/diagnostic-d-ack-command.html"><span class="doc">Diagnostic &lt;D ACK&gt;</span></a>. Send us your log.</p></li>
 </ol>
 <p>If you continue to have issues reading decoders on the programming track with multiple different decoders, it’s worthwhile reviewing the <a class="reference internal" href="../reference/hardware/motorboards/motor-board-config.html"><span class="doc">Motor Driver Configuration</span></a> page, especially all information relating to current sensing. If current sensing is not configured and functioning correctly, you will not be able to read any decoders via the programming track.</p>
 </section>

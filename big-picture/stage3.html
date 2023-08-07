@@ -13,6 +13,8 @@
       <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/big_picture_theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/sphinx_design_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/big-picture/stage3.html" />
   <!--[if lt IE 9]>
@@ -28,6 +30,8 @@
         <script src="../_static/design-tabs.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
+        <script src="../_static/dark_mode_js/default_light.js"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -203,6 +207,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-turntable/index.html">EX-Turntable</a><ul>
@@ -244,11 +249,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/getting-started.html">Sequences - an Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-summary.html">EX-RAIL Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/about.html">About and History</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ex-turntable/index.html">EX-Turntable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ex-turntable/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-turntable/purchasing.html">Purchasing</a></li>
@@ -370,9 +375,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano-every.html">Nano Every</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/teensy.html">Teensy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
@@ -424,6 +430,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-multiplexers.html">I2C Multiplexers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/accessory-controllers.html">Accessory Controllers</a></li>
@@ -469,12 +476,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../under-development/index.html">Features under development</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/track-manager.html"><em>Under Development:</em> DCC-EX TrackManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../under-development/index.html">Features under development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
@@ -582,8 +584,8 @@
 <section id="turnout-point-object-ids">
 <h3>Turnout/point object IDs<a class="headerlink" href="#turnout-point-object-ids" title="Permalink to this heading"></a></h3>
 <p>Throughout this exercise, we will be defining turnout/point objects, and for consistency will be using IDs in the range of 100 to 199 for these.</p>
-<p>This way, the various possible variations of each type of object will be defined with the same ID, meaning the same <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> sequences will apply, no matter how the objects are defined.</p>
-<p>For further information on IDs used in <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>, refer to the <a class="reference internal" href="../ex-rail/EX-RAIL-reference.html#notes"><span class="std std-ref">Notes</span></a> section of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> reference page.</p>
+<p>This way, the various possible variations of each type of object will be defined with the same ID, meaning the same <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> sequences will apply, no matter how the objects are defined.</p>
+<p>For further information on IDs used in <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span>, refer to the <a class="reference internal" href="../ex-rail/EX-RAIL-command-reference.html#handy-information"><span class="std std-ref">Handy information</span></a> section of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> reference page.</p>
 </section>
 <section id="dcc-addresses">
 <h3>DCC addresses<a class="headerlink" href="#dcc-addresses" title="Permalink to this heading"></a></h3>
@@ -625,14 +627,14 @@ IF(-SNS1)         // If activie high sensor 1 is triggered
 </aside>
 <section id="adding-the-hardware-turnouts-points">
 <h3>Adding the Hardware -  Turnouts/points<a class="headerlink" href="#adding-the-hardware-turnouts-points" title="Permalink to this heading"></a></h3>
-<p>To connect a servo to <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, you first need to get a module, based on the PCA9685 chip.</p>
+<p>To connect a servo to <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, you first need to get a module, based on the PCA9685 chip.</p>
 <a class="reference internal image-reference" href="../_images/pca9685.jpg"><img alt="PCA9685 Servo Module" src="../_images/pca9685.jpg" style="width: 432.8px; height: 174.0px;" /></a>
 <p>Note the pin connectors along the left side of the module - these are where you connect to the Arduino.</p>
 <p>The 16 columns of three pins along the bottom of the module are where you connect the servos. The pins are arranged so that you can just plug a servo connector directly onto them, but be sure that the wire colours match the colours of the pins, i.e. yellow to yellow, red to red and black to black.</p>
 <p>The servo module itself is powered from the Arduino, but the servos themselves contain motors that consume more current than the Arduino is able to supply, and so a separate 5V supply is required for the servos.  This is connected to the green terminal block at the top of the module, with terminals labelled V+ and GND. The V+ terminal is connected to 5V and the GND to the 0V (ground) wire of the supply.</p>
 <p>Connections to the Arduino are made with four jumper wires (+5V power and GND, and SCL and SDA), as shown on the following diagram:</p>
 <a class="reference internal image-reference" href="../_images/ArduinoMegaServo.png"><img alt="PCA9685 Servo Module" src="../_images/ArduinoMegaServo.png" style="width: 555.3px; height: 370.8px;" /></a>
-<p>In <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.</p>
+<p>In <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.</p>
 <p>Once you’ve made all of the connections, apply power to the Arduino.</p>
 <p>Then, in the Serial Monitor, enter the command <cite>&lt;D SERVO 100 450&gt;</cite>.  The servo should move, as long as it isn’t (by some fluke) already in that position.</p>
 <p>Enter <cite>&lt;D SERVO 100 110&gt;</cite> and this time it should definitely move.  For the last parameter (servo position) you can use any value between about 105 and 490.</p>
@@ -644,7 +646,7 @@ IF(-SNS1)         // If activie high sensor 1 is triggered
 </section>
 <section id="configure-the-software-myautomation-h-turnouts-points">
 <h3>Configure the software - myAutomation.h - Turnouts/points<a class="headerlink" href="#configure-the-software-myautomation-h-turnouts-points" title="Permalink to this heading"></a></h3>
-<p>The myAutomation.h file needs to be altered so that the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> knows about each Turnout/Point.</p>
+<p>The myAutomation.h file needs to be altered so that the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> knows about each Turnout/Point.</p>
 <p>EX-RAIL supports three methods of controlling servos:</p>
 <ul class="simple">
 <li><p>Turnouts via the SERVO_TURNOUT directive</p></li>
@@ -652,7 +654,7 @@ IF(-SNS1)         // If activie high sensor 1 is triggered
 <li><p>Animations via the SERVO or SERVO2 directives</p></li>
 </ul>
 <p>The SERVO_TURNOUT directive defines a servo based turnout in EX-RAIL, which will appear in <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> apps, <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, and <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> in addition to being defined as a turnout within the CommandStation.</p>
-<p>As per the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> reference, turnouts are defined with the following syntax:</p>
+<p>As per the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> reference, turnouts are defined with the following syntax:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">pin</span><span class="p">,</span><span class="w"> </span><span class="n">active_angle</span><span class="p">,</span><span class="w"> </span><span class="n">inactive_angle</span><span class="p">,</span><span class="w"> </span><span class="n">profile</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -679,7 +681,7 @@ IF(-SNS1)         // If activie high sensor 1 is triggered
 </aside>
 <p>IR sensors typically require three connections: 5V (or VCC), Ground, and output (OUT or S).</p>
 <a class="reference internal image-reference" href="../_images/ir-sensor.png"><img alt="IR Sensor microcontroller-boards" src="../_images/ir-sensor.png" style="width: 252.0px; height: 86.0px;" /></a>
-<p>To add a sensor, simply connect VCC to 5V, GND to ground, and OUT (or S) to an available digital I/O pin on your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. Typically D22 through to D49 are available for use.</p>
+<p>To add a sensor, simply connect VCC to 5V, GND to ground, and OUT (or S) to an available digital I/O pin on your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>. Typically D22 through to D49 are available for use.</p>
 <p>If you are using I/O expander modules, then connect OUT (or S) to an available pin on the appropriate module, and you will need to reference the sensor by that vpin.</p>
 <p>Note that some users prefer to desolder one or both LEDs and mount them on wire with one on each side of the track to modify the sensor to become a broken beam type. In this scenario, the sensor will become active high.</p>
 <section id="configure-the-software-myautomation-h-sensors">
@@ -691,7 +693,7 @@ IF(-SNS1)         // If activie high sensor 1 is triggered
 <section id="adding-a-block">
 <h2>Adding a Block<a class="headerlink" href="#adding-a-block" title="Permalink to this heading"></a></h2>
 <aside class="sidebar">
-<p>You can also refer to <a class="reference internal" href="../ex-rail/EX-RAIL-reference.html#blocks"><span class="std std-ref">Blocks</span></a> for more information.</p>
+<p>You can also refer to <a class="reference internal" href="../ex-rail/EX-RAIL-command-reference.html#virtual-block-control"><span class="std std-ref">Virtual Block Control</span></a> for more information.</p>
 </aside>
 <p>Blocks in EX-RAIL are a virtual concept only, and they do not relate in any way to the concept of block occupancy detection.</p>
 <p>A block is represented by an ID from 0 to 255 and is used to logically reserve a section of track in automation sequences to ensure only one train can enter a block at any given time to avoid collisions.</p>

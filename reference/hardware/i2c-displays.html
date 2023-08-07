@@ -13,6 +13,8 @@
       <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/big_picture_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/sphinx_design_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/reference/hardware/i2c-displays.html" />
   <!--[if lt IE 9]>
@@ -28,6 +30,8 @@
         <script src="../../_static/design-tabs.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
+        <script src="../../_static/dark_mode_js/default_light.js"></script>
+        <script src="../../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -203,6 +207,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-turntable/index.html">EX-Turntable</a><ul>
@@ -244,11 +249,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/getting-started.html">Sequences - an Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-summary.html">EX-RAIL Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/about.html">About and History</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ex-turntable/index.html">EX-Turntable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/purchasing.html">Purchasing</a></li>
@@ -370,9 +375,10 @@
 <li class="toctree-l4"><a class="reference internal" href="microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="microcontrollers/microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="microcontrollers/nano-every.html">Nano Every</a></li>
 <li class="toctree-l4"><a class="reference internal" href="microcontrollers/teensy.html">Teensy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
@@ -424,6 +430,7 @@
 <li class="toctree-l4"><a class="reference internal" href="i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="i2c-multiplexers.html">I2C Multiplexers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="accessory-controllers.html">Accessory Controllers</a></li>
@@ -469,12 +476,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../under-development/index.html">Features under development</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/track-manager.html"><em>Under Development:</em> DCC-EX TrackManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../under-development/index.html">Features under development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
@@ -570,48 +572,82 @@
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#examples-of-compatible-displays" id="id1">Examples of compatible displays</a></p></li>
-<li><p><a class="reference internal" href="#connecting-an-lcd-display" id="id2">Connecting an LCD Display</a></p></li>
-<li><p><a class="reference internal" href="#connecting-an-oled-display" id="id3">Connecting an OLED display</a></p></li>
-<li><p><a class="reference internal" href="#combine-ip-address-and-port-on-oled" id="id4">Combine IP address and port on OLED</a></p></li>
+<li><p><a class="reference internal" href="#examples-of-compatible-displays" id="id3">Examples of compatible displays</a></p>
+<ul>
+<li><p><a class="reference internal" href="#x-4-lcd-with-backpack" id="id4">20 x 4 LCD with backpack</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#connecting-an-lcd-display" id="id5">Connecting an LCD Display</a></p>
+<ul>
+<li><p><a class="reference internal" href="#soldering-on-the-backpack-if-you-purchased-separate-pieces" id="id6">Soldering on the Backpack (if you purchased separate pieces)</a></p></li>
+<li><p><a class="reference internal" href="#connecting-the-jumper-wires" id="id7">Connecting the Jumper Wires</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#connecting-an-oled-display" id="id8">Connecting an OLED display</a></p>
+<ul>
+<li><p><a class="reference internal" href="#soldering-wires-to-the-display" id="id9">Soldering Wires to the Display</a></p></li>
+<li><p><a class="reference internal" href="#connecting-to-your-ex-commandstation" id="id10">Connecting to your EX-CommandStation</a></p></li>
+<li><p><a class="reference internal" href="#reconfigure-your-command-station-to-use-a-single-display" id="id11">Reconfigure your Command Station to use a single display</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#combine-ip-address-and-port-on-oled" id="id12">Combine IP address and port on OLED</a></p></li>
+<li><p><a class="reference internal" href="#configuring-additional-displays" id="id13">Configuring Additional Displays</a></p></li>
 </ul>
 </nav>
 </aside>
-<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> is designed to accommodate a display. You don’t need a display since the Control Station is often hidden away under the layout. However, if you like the idea of a nice visual display for your panel, just about any I<sup>2</sup>C (serial to parallel interface) display will work. We recommend either a 20 character by 2 line or 4 line display. The code is easily configurable in order to change the display settings, as well as add or change what is printed on the display.</p>
-<a class="reference internal image-reference" href="../../_images/I2C_LCD_Display_wired.jpg"><img alt="Example: 4 line |I2C| Display" src="../../_images/I2C_LCD_Display_wired.jpg" style="width: 512.0px; height: 331.20000000000005px;" /></a>
-<p>We currently support LCDs based on the PCF8574 backpack:</p>
+<p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> supports both LCD and OLED to display status and other user-defined information. While a command station is typically hidden away under a layout, if you like the idea of a nice visual display for your panel, several different I<sup>2</sup>C displays will work. You can use either a 20 character by 2 line or 4 line LCD display, or an OLED display capable of up to 8 lines.</p>
+<p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> can support more than one display and indeed write to them from within <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> for fancy lineside or auxilliary displays.</p>
+<p>Further to this, the new <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> can now configure the main status display during installation making adding a display very simple. The command station code is also easily configurable in order to add more displays, change the display settings, as well as add or change what is printed on the display.</p>
+<p>We currently support various displays:</p>
 <ul class="simple">
-<li><p>16 column by 2 row (16x2) and 20 column by 4 row (20x4) LCD displays</p></li>
-<li><p>.96” and 1.3” OLED displays.</p></li>
+<li><p>LCDs based on the PCF8574 backpack with 16 column by 2 row (16x2) and 20 column by 4 row (20x4) displays attached</p></li>
+<li><p>OLED displays in .96” and 1.3” formats based on SSD1306 and SH1106 display controllers</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Do NOT modify any code related to displays without contacting us. We use our own included code, NOT an external library you have to download. The code was written to support LCD and OLED displays and to fit on a Mega <em>and</em> an Uno. It has a custom font table and the LCD macro works to output diagnostics even if there is no display. If your display is not supported, let us know and we can take a look.</p>
 </div>
-<p>The LCD displays require a “backpack” that converts the raw display to I<sup>2</sup>C. I<sup>2</sup>C allows us to use just 2 lines (SDA (serial data) and clock (SCL)) to send text to the display. Without this board, we wouldn’t have enough pins, especially on an Uno, to use a display.</p>
+<p>The LCD displays require a “backpack” that converts the raw display to I<sup>2</sup>C. I<sup>2</sup>C allows us to use just 2 lines (SDA (serial data) and clock (SCL)) to send text to the display. Without this board, we wouldn’t have enough pins, especially on an Uno, to use a display. The OLED displays natively support I<sup>2</sup>C and can be wired directly.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>You MUST make sure to order TWO (2) parts for your LCD Displays. You need the display AND a backpack based on the PCF8574 controller chip. Some displays come with this already soldered together. Make sure before you buy!</p>
+<p>You MUST make sure to order TWO (2) parts for your LCD Displays. You need the display AND a backpack based on the PCF8574 controller chip. Some displays come with this already soldered together. Also note that <strong>some</strong> OLED displays use the SPI standard or are configured for it, so make sure to buy the I<sup>2</sup>C enabled ones, or ones that can be configured for I<sup>2</sup>C use. Make sure to check before you buy!</p>
 </div>
 <section id="examples-of-compatible-displays">
-<h2><a class="toc-backref" href="#id1" role="doc-backlink">Examples of compatible displays</a><a class="headerlink" href="#examples-of-compatible-displays" title="Permalink to this heading"></a></h2>
-<p>Here is an example of a 20 x 4 LCD screen. They come in different colors like blue and green. The controller board (backpack) is shown before soldering it to the back of the display. Soldering is very simple since you just match the two boards together and quickly solder the pins. Though there are 16 of them.</p>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Examples of compatible displays</a><a class="headerlink" href="#examples-of-compatible-displays" title="Permalink to this heading"></a></h2>
+<p>Here is an example of a 20 x 4 LCD screen. They come in different colours like blue and green. The controller board (backpack) is shown before soldering it to the back of the display. Soldering is very simple since you just match the two boards together and quickly solder the pins. Though there are 16 of them.</p>
+<section id="x-4-lcd-with-backpack">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">20 x 4 LCD with backpack</a><a class="headerlink" href="#x-4-lcd-with-backpack" title="Permalink to this heading"></a></h3>
+<figure class="align-default">
 <a class="reference internal image-reference" href="../../_images/lcd_20x4_backpack.jpg"><img alt="20 x 4 LCD" src="../../_images/lcd_20x4_backpack.jpg" style="width: 320.0px; height: 291.2px;" /></a>
-<p>20 x 4 LCD with backpack</p>
-<p>And here is an example of a 16 x 2 Display with its backpack sitting above it. Remember to either order a display with the backpack already soldered or two order both pieces from your vendor and solder it yourself:</p>
+</figure>
 <a class="reference internal image-reference" href="../../_images/lcd_16x2_backpack.jpg"><img alt="16 x 2 LCD" src="../../_images/lcd_16x2_backpack.jpg" style="width: 320.0px; height: 276.8px;" /></a>
-<p>16 x 2 LCD with backpack</p>
+<p>On the left is 20x4 LCD with backpack, and on the right is a 16x2 LCD.</p>
+<p>Remember to either order an LCD display with the backpack already soldered or two order both pieces from your vendor and solder it yourself (see below.)</p>
+<p>Some examples of supported OLED displays:</p>
+<a class="reference internal image-reference" href="../../_images/adafruit_96in_oled_sm.jpg"><img alt="Adafruit .96&quot; OLED" src="../../_images/adafruit_96in_oled_sm.jpg" style="width: 160.0px; height: 153.60000000000002px;" /></a>
+<a class="reference internal image-reference" href="../../_images/makerfocus_oled_sm.jpg"><img alt="Makerfocus OLED Display" src="../../_images/makerfocus_oled_sm.jpg" style="width: 160.0px; height: 113.60000000000001px;" /></a>
+<p>Adafruit 0.96” 128x64 OLED, and Makerfocus 128x32 .91” OLED.</p>
+</section>
 </section>
 <section id="connecting-an-lcd-display">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">Connecting an LCD Display</a><a class="headerlink" href="#connecting-an-lcd-display" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Connecting an LCD Display</a><a class="headerlink" href="#connecting-an-lcd-display" title="Permalink to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>I<sup>2</sup>C displays come in all shapes and sizes, and often have variations in design and pinouts between different vendors and manufacturers. Be sure to check the correct orientation of pins and connectors prior to connecting your display, we cannot cover every possible scenario of connection available. Just because two displays look identical at a quick glance, they may not be.</p>
+</div>
 <section id="soldering-on-the-backpack-if-you-purchased-separate-pieces">
-<h3>Soldering on the Backpack (if you purchased separate pieces)<a class="headerlink" href="#soldering-on-the-backpack-if-you-purchased-separate-pieces" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Soldering on the Backpack (if you purchased separate pieces)</a><a class="headerlink" href="#soldering-on-the-backpack-if-you-purchased-separate-pieces" title="Permalink to this heading"></a></h3>
 <p>And here is a picture of the board after soldering or if you purchase a board already soldered (or “welded” as some of the Chinese sites call it)</p>
-<a class="reference internal image-reference" href="../../_images/lcd_soldered.jpg"><img alt="Backpack Soldered to LCD" src="../../_images/lcd_soldered.jpg" style="width: 400.0px; height: 400.0px;" /></a>
 <p>LCD with backpack soldered to the back</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/lcd_soldered.jpg"><img alt="Backpack Soldered to LCD" src="../../_images/lcd_soldered.jpg" style="width: 400.0px; height: 400.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 113 </span><span class="caption-text">Backpack Soldered to LCD</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 <section id="connecting-the-jumper-wires">
-<h3>Connecting the Jumper Wires<a class="headerlink" href="#connecting-the-jumper-wires" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Connecting the Jumper Wires</a><a class="headerlink" href="#connecting-the-jumper-wires" title="Permalink to this heading"></a></h3>
 <p>To connect the Display to the Command Station, you will need 4 male to female jumper wires:</p>
 <ol class="arabic simple">
 <li><p>Connect a wire from +5V on the Motor Shield or WiFi Board to Vcc on the backpack</p></li>
@@ -624,65 +660,72 @@
 <p>Look closely on the Uno or Mega for markings, including on the inside or outside of the black header. SCA and SCL are usually clearly labeled.</p>
 </div>
 </section>
-<section id="upload-the-sketch-to-your-cs">
-<h3>Upload the sketch to your CS<a class="headerlink" href="#upload-the-sketch-to-your-cs" title="Permalink to this heading"></a></h3>
-<p>To upload the new sketch on your Command Station</p>
-<ol class="arabic simple">
-<li><p>Open the Arduino IDE</p></li>
-<li><p>Open the CommandStation-EX project</p></li>
-<li><p>Open the config.h file (If you haven’t renamed config.example.h to config.h do this now)</p></li>
-<li><p>Find the line that says: <code class="docutils literal notranslate"><span class="pre">//</span> <span class="pre">define</span> <span class="pre">LCD_DRIVER</span> <span class="pre">for</span> <span class="pre">i2c</span> <span class="pre">LCD</span> <span class="pre">address</span> <span class="pre">0x3f,16</span> <span class="pre">cols,</span> <span class="pre">2</span> <span class="pre">rows</span>
-<span class="pre">#define</span> <span class="pre">LCD_DRIVER</span>&#160; <span class="pre">0x3F,16,2</span></code></p></li>
-<li><p>make sure to uncomment this line if it has 2 slashes in front of it by removing them.</p></li>
-<li><p>Find the 4 characters that start with <code class="docutils literal notranslate"><span class="pre">0x</span></code> and add the address for your I<sup>2</sup>C backpack after it. We default to 3F, but your display may be 27. The text would read <code class="docutils literal notranslate"><span class="pre">0x27</span></code> if that was the case.</p></li>
-<li><p>In the next field, enter the number of columns in your display. The default is 16. If you have a 20 column display, enter that instead.</p></li>
-<li><p>In the last field, enter the number of rows in your display. We default to a 2 row display. If you have a 4 row display, change this to 4.</p></li>
-<li><p>Save the file</p></li>
-<li><p>Make sure to connect the Arduino to your computer with the USB cable and click the upload button to compile and upload the updated Command Station sketch.</p></li>
-</ol>
-</section>
 </section>
 <section id="connecting-an-oled-display">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">Connecting an OLED display</a><a class="headerlink" href="#connecting-an-oled-display" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Connecting an OLED display</a><a class="headerlink" href="#connecting-an-oled-display" title="Permalink to this heading"></a></h2>
 <p>OLED displays come in more varieties than LCD displays. The library to run them also takes more memory. Therefore, OLED displays won’t work with an UNO and you will require a Mega. Here are some examples of OLED displays:</p>
 <a class="reference internal image-reference" href="../../_images/adafruit_96in_oled_sm.jpg"><img alt="Adafruit .96&quot; OLED" src="../../_images/adafruit_96in_oled_sm.jpg" style="width: 160.0px; height: 153.60000000000002px;" /></a>
-<p>Adafruit .96” OLED Display</p>
+<p>Adafruit .96” OLED</p>
 <a class="reference internal image-reference" href="../../_images/makerfocus_oled_sm.jpg"><img alt="Makerfocus OLED Display" src="../../_images/makerfocus_oled_sm.jpg" style="width: 160.0px; height: 113.60000000000001px;" /></a>
-<p>Makerfocus 128x32 .91” OLED Display</p>
+<p>Makerfocus OLED Display</p>
 <section id="soldering-wires-to-the-display">
-<h3>Soldering Wires to the Display<a class="headerlink" href="#soldering-wires-to-the-display" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Soldering Wires to the Display</a><a class="headerlink" href="#soldering-wires-to-the-display" title="Permalink to this heading"></a></h3>
 <p>For any of these boards you can buy male header pins (either straight or 90 angle) and solder them to the display to then use jumper wires, or you can solder your wires directly to the holes on the board.</p>
 </section>
 <section id="connecting-to-your-ex-commandstation">
-<h3>Connecting to your EX-CommandStation<a class="headerlink" href="#connecting-to-your-ex-commandstation" title="Permalink to this heading"></a></h3>
-<p>Physically connecting an I<sup>2</sup>C OLED display to your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> is relatively straight forward, with SDA connecting to the CommandStation’s SDA pin, SCL to SCL, VCC to 5V, and GND to GND.</p>
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Connecting to your EX-CommandStation</a><a class="headerlink" href="#connecting-to-your-ex-commandstation" title="Permalink to this heading"></a></h3>
+<p>Physically connecting an I<sup>2</sup>C OLED display to your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> is relatively straight forward, with SDA connecting to the CommandStation’s SDA pin, SCL to SCL, VCC to 5V, and GND to GND.</p>
+<figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../../_images/mega-with-i2c-oled.png"><img alt="Mega2560 with |I2C| OLED" src="../../_images/mega-with-i2c-oled.png" style="width: 538.5px; height: 242.7px;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 114 </span><span class="caption-text">Mega2560 with I<sup>2</sup>C OLED</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>You can also connect the display to the motor shield’s I<sup>2</sup>C headers.</p>
+<figure class="align-default">
 <a class="reference internal image-reference" href="../../_images/mega-with-i2c-oled-twi.png"><img alt="Mega2560 with |I2C| OLED" src="../../_images/mega-with-i2c-oled-twi.png" style="width: 538.5px; height: 279.59999999999997px;" /></a>
+</figure>
 </section>
-<section id="configuring-the-software-for-an-oled">
-<h3>Configuring the software for an OLED<a class="headerlink" href="#configuring-the-software-for-an-oled" title="Permalink to this heading"></a></h3>
-<p>To enable an OLED display with your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, you need to make some edits to your “config.h” file and then upload the software again.</p>
-<p>Look for the LCD section in “config.h” which looks like this:</p>
+<section id="reconfigure-your-command-station-to-use-a-single-display">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Reconfigure your Command Station to use a single display</a><a class="headerlink" href="#reconfigure-your-command-station-to-use-a-single-display" title="Permalink to this heading"></a></h3>
+<p>If installing with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span>, refer to <a class="reference internal" href="../../ex-installer/installing.html#optional-display"><span class="std std-ref">Optional Display</span></a> to configure a single display with your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>.</p>
+<p>If you are using the Arduino IDE or VSCode with PlatformIO, you will need to edit “config.h” to enable your display option. Look for this section in “config.example.h” to define the display:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">/////////////////////////////////////////////////////////////////////////////////////</span>
 <span class="c1">//</span>
 <span class="c1">// DEFINE LCD SCREEN USAGE BY THE BASE STATION</span>
+<span class="c1">//</span>
+<span class="c1">// Note: This feature requires an I2C enabled LCD screen using a Hitachi HD44780</span>
+<span class="c1">//       controller and a commonly available PCF8574 based I2C &#39;backpack&#39;.</span>
+<span class="c1">// To enable, uncomment one of the #define lines below</span>
+
+<span class="c1">// define LCD_DRIVER for I2C address 0x27, 16 cols, 2 rows</span>
+<span class="c1">// #define LCD_DRIVER  0x27,16,2</span>
+
+<span class="c1">//OR define OLED_DRIVER width,height[,address] in pixels (address auto detected if not supplied)</span>
+<span class="c1">// 128x32 or 128x64 I2C SSD1306-based devices are supported.</span>
+<span class="c1">// Use 132,64 for a SH1106-based I2C device with a 128x64 display.</span>
+<span class="c1">// #define OLED_DRIVER 0x3c,128,32</span>
+
+<span class="c1">// Define scroll mode as 0, 1 or 2</span>
+<span class="c1">//  *  #define SCROLLMODE 0 is scroll continuous (fill screen if poss),</span>
+<span class="c1">//  *  #define SCROLLMODE 1 is by page (alternate between pages),</span>
+<span class="c1">//  *  #define SCROLLMODE 2 is by row (move up 1 row at a time).</span>
+<span class="cp">#define SCROLLMODE 1</span>
 </pre></div>
 </div>
-<p>Make sure any line beginning with <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">LCD_DRIVER</span></code> is commented out by adding <code class="docutils literal notranslate"><span class="pre">//</span></code>.</p>
-<p>You will need to know if your OLED has a 128 x 64 or 128 x 32 pixel resolution, and add the appropriate line:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define OLED_DRIVER 128,32      </span><span class="c1">// Define for 128 x 32 displays</span>
-<span class="cp">#define OLED_DRIVER 128,64      </span><span class="c1">// Define for 128 x 64 displays</span>
-</pre></div>
-</div>
+<p>Uncomment or edit the appropriate line for your display type.</p>
 </section>
 </section>
 <section id="combine-ip-address-and-port-on-oled">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink">Combine IP address and port on OLED</a><a class="headerlink" href="#combine-ip-address-and-port-on-oled" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Combine IP address and port on OLED</a><a class="headerlink" href="#combine-ip-address-and-port-on-oled" title="Permalink to this heading"></a></h2>
 <p><a class="reference external" href="../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
-<p>To use OLED displays with your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, you can save line LCD5 used for the port number and combine it with line LCD4 IP address.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As this requires modifying part of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software, exercise caution with these edits, and note that it will also prevent installing via <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> as you will be effectively preventing it from managing the software for you.</p>
+</div>
+<p>To use OLED displays with your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, you can save line LCD5 used for the port number and combine it with line LCD4 IP address.</p>
 <p>Be aware that the combined IP address and port number can easily exceed 20 characters, which will exceed the display width.</p>
-<p>To accomplish this, you will need to edit “WifiInterface.cpp” included with the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software. Each time you want to upgrade the software, you will need to repeat this edit.</p>
+<p>To accomplish this, you will need to edit “WifiInterface.cpp” included with the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software. Each time you want to upgrade the software, you will need to repeat this edit.</p>
 <p>In “WifiInterface.cpp”, you need to locate the <code class="docutils literal notranslate"><span class="pre">LCD(4...)</span></code> line (should be around line #313):</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">LCD</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">),</span><span class="n">ipString</span><span class="p">);</span><span class="w">  </span><span class="c1">// There is not enough room on some LCDs to put a title to this</span>
 </pre></div>
@@ -703,6 +746,25 @@
 <span class="n">LCD</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="n">F</span><span class="p">(</span><span class="s">&quot;Line 7 custom text&quot;</span><span class="p">));</span>
 </pre></div>
 </div>
+</section>
+<section id="configuring-additional-displays">
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Configuring Additional Displays</a><a class="headerlink" href="#configuring-additional-displays" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="../../news/posts/20230806.html"><img alt="EX-MotorShield8874" class="image-min-width-144" src="../../_images/new_in_version_5.png" style="width: 240.0px; height: 48.0px;" /></a></p>
+<p>Apart from the main status display (display ‘0’), <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> allows definition of many more additional displays which can be any mix of LCD and OLED I<sup>2</sup>C displays. These displays can show all manner of output, including using <code class="docutils literal notranslate"><span class="pre">SCREEN()</span></code> commands issued from within <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> scripts. Here is an OLED showing train departure times on a station building:</p>
+<a class="reference internal image-reference" href="../../_images/polar_express_oled.jpg"><img alt="OLED showing train departure times" src="../../_images/polar_express_oled.jpg" style="width: 366.0px; height: 366.0px;" /></a>
+<p>In order to configure additional displays, you will need to add lines to “myHal.cpp” in order to create the displays when the command station is running. Below we configure an additional OLED display as display #1, and an LCD as display #2:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a 128x32 OLED display device as display number 1</span>
+<span class="c1">// (line 0 is written by EX-RAIL &#39;SCREEN(1, 0, &quot;text&quot;)&#39;).</span>
+
+<span class="n">HALDisplay</span><span class="o">&lt;</span><span class="n">OLED</span><span class="o">&gt;::</span><span class="n">create</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x3d</span><span class="p">,</span><span class="w"> </span><span class="mi">128</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">);</span>
+
+<span class="c1">// Create a 20x4 LCD display device as display number 2</span>
+<span class="c1">// (line 0 is written by EX-RAIL &#39;SCREEN(2, 0, &quot;text&quot;)&#39;).</span>
+
+<span class="n">HALDisplay</span><span class="o">&lt;</span><span class="n">LiquidCrystal</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mh">0x27</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>As you can see from the comments in this code, both of these displays can now be written to from <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> using the <code class="docutils literal notranslate"><span class="pre">SCREEN()</span></code> directive. See the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> <a class="reference internal" href="../../ex-rail/EX-RAIL-command-reference.html#communication-and-display-functions"><span class="std std-ref">Communication and Display Functions</span></a> for more information.</p>
 </section>
 </section>
 

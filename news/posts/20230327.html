@@ -13,6 +13,8 @@
       <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/big_picture_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/sphinx_design_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/news/posts/20230327.html" />
   <!--[if lt IE 9]>
@@ -28,6 +30,8 @@
         <script src="../../_static/design-tabs.js"></script>
         <script src="../../_static/js/platform.js"></script>
         <script src="../../_static/js/extra.js"></script>
+        <script src="../../_static/dark_mode_js/default_light.js"></script>
+        <script src="../../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -201,6 +205,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-turntable/index.html">EX-Turntable</a><ul>
@@ -242,11 +247,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/getting-started.html">Sequences - an Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-summary.html">EX-RAIL Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/about.html">About and History</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ex-turntable/index.html">EX-Turntable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-turntable/purchasing.html">Purchasing</a></li>
@@ -368,9 +373,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/nano-every.html">Nano Every</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/teensy.html">Teensy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
@@ -422,6 +428,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/hardware/i2c-multiplexers.html">I2C Multiplexers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../reference/hardware/accessory-controllers.html">Accessory Controllers</a></li>
@@ -467,12 +474,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../under-development/index.html">Features under development</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/track-manager.html"><em>Under Development:</em> DCC-EX TrackManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../under-development/index.html">Features under development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
@@ -561,24 +563,24 @@
 <section id="version-5-progress-and-a-breaking-change-in-the-development-branch">
 <h1>Version 5 progress and a breaking change in the development branch<a class="headerlink" href="#version-5-progress-and-a-breaking-change-in-the-development-branch" title="Permalink to this heading"></a></h1>
 <p>We are full steam ahead to a v5.0 release, making sure what’s in there is well tested to the limits of our resources, and has documentation available as we go.</p>
-<p>Amongst other things, this has resulted in one potentially “breaking” change for users of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>’s capability to run sequences/routes on start-up.</p>
-<p><strong>Breaking change:</strong> The implicit AUTOSTART at the beginning of the “myAutomation.h” file for <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> has been disabled, as we have found it confuses a great many first time users.</p>
+<p>Amongst other things, this has resulted in one potentially “breaking” change for users of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span>’s capability to run sequences/routes on start-up.</p>
+<p><strong>Breaking change:</strong> The implicit AUTOSTART at the beginning of the “myAutomation.h” file for <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> has been disabled, as we have found it confuses a great many first time users.</p>
 <blockquote>
 <div><p>What does this mean?</p>
-<p>Previously, when your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> started up with a “myAutomation.h” file present, anything defined prior to the very first <code class="docutils literal notranslate"><span class="pre">DONE</span></code> statement would execute automatically. This was used to do things like set turnouts/points to a known startup position, automatically start routes or sequences for fully automated layouts, and so forth.</p>
-<p>As of v4.2.31, this behaviour is disabled, meaning nothing defined in “myAutomation.h” will automatically start unless preceded by the <code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code> directive (see <a class="reference internal" href="../../ex-rail/EX-RAIL-reference.html#ex-rail-functions"><span class="std std-ref">EX-RAIL Functions</span></a>).</p>
+<p>Previously, when your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> started up with a “myAutomation.h” file present, anything defined prior to the very first <code class="docutils literal notranslate"><span class="pre">DONE</span></code> statement would execute automatically. This was used to do things like set turnouts/points to a known startup position, automatically start routes or sequences for fully automated layouts, and so forth.</p>
+<p>As of v4.2.31, this behaviour is disabled, meaning nothing defined in “myAutomation.h” will automatically start unless preceded by the <code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code> directive (see <a class="reference internal" href="../../ex-rail/EX-RAIL-command-reference.html#scripts-sequences-types-and-control"><span class="std std-ref">Scripts/Sequences - Types and Control</span></a>).</p>
 </div></blockquote>
-<p>At the time of writing, we are currently at v4.2.37 of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> development release, and these updates are continuing multiple times a week as we find/fix bugs and refine the software.</p>
+<p>At the time of writing, we are currently at v4.2.37 of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> development release, and these updates are continuing multiple times a week as we find/fix bugs and refine the software.</p>
 <p>Here are some more highlights of what’s been done since the last news update:</p>
 <ul class="simple">
 <li><p>New &lt;JG&gt; and &lt;JI&gt; commands for multi-track gauges such as current sensing (v4.2.20)</p></li>
 <li><p>Static IP address now configurable for Ethernet shields (v4.2.24)</p></li>
 <li><p>SAMD21 had a bug in EX-RAIL due to memory alignment, this likely improves 32-bit support for various microcontrollers (v4.2.25)</p></li>
-<li><p>Improved stability/reliability of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span> device driver (v4.2.26) and bug fix for analogue inputs (v4.2.34)</p></li>
+<li><p>Improved stability/reliability of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span> device driver (v4.2.26) and bug fix for analogue inputs (v4.2.34)</p></li>
 <li><p>Updated the DFPlayer code to cope with a new variant of the popular sound board seen in the wild, and mods to the HCRS04 ultrasonic driver so it uses less CPU loop time (v4.2.28)</p></li>
 <li><p>Various LCD bug fixes (latest in v4.2.29)</p></li>
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">&lt;z&gt;</span></code> direct I/O pin manipulation command (v4.2.35)</p></li>
-<li><p>Add new “FLAGS” device to the HAL to communicate Vpin changes outside of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> to software such as <a class="reference internal" href="../../reference/glossary.html"><span class="doc">JMRI</span></a> (v4.2.37)</p></li>
+<li><p>Add new “FLAGS” device to the HAL to communicate Vpin changes outside of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> to software such as <a class="reference internal" href="../../reference/glossary.html"><span class="doc">JMRI</span></a> (v4.2.37)</p></li>
 </ul>
 <p>Some of the above new features and fixes are currently undocumented which we will fix in the coming weeks. In the meantime, feel free to jump onto Discord and chat with the developers and keep up to date (<a class="reference internal" href="../../support/contact-us.html"><span class="doc">Contact Us</span></a>).</p>
 </section>

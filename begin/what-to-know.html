@@ -14,6 +14,8 @@
       <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/big_picture_theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/sphinx_design_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/begin/what-to-know.html" />
   <!--[if lt IE 9]>
@@ -29,6 +31,8 @@
         <script src="../_static/design-tabs.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
+        <script src="../_static/dark_mode_js/default_light.js"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -204,6 +208,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-turntable/index.html">EX-Turntable</a><ul>
@@ -245,11 +250,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/getting-started.html">Sequences - an Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-summary.html">EX-RAIL Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/about.html">About and History</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ex-turntable/index.html">EX-Turntable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ex-turntable/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-turntable/purchasing.html">Purchasing</a></li>
@@ -371,9 +376,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano-every.html">Nano Every</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/teensy.html">Teensy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
@@ -425,6 +431,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-multiplexers.html">I2C Multiplexers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/accessory-controllers.html">Accessory Controllers</a></li>
@@ -470,12 +477,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../under-development/index.html">Features under development</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/track-manager.html"><em>Under Development:</em> DCC-EX TrackManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../under-development/index.html">Features under development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
@@ -587,10 +589,10 @@
 <p>For those who have come across our website and don’t really know or understand what Digital Command Control (DCC) is or does, then in a very short summary, it is essentially a way to control multiple trains on the same piece of track independently of one another (it is also much, much more than that).</p>
 <p>With DCC, there is no need for multiple electrically isolated blocks to control multiple trains independently any more.</p>
 <p>To get a more in depth introduction to the DCC standand and protocol, you can read the <a class="reference external" href="https://en.wikipedia.org/wiki/Digital_Command_Control">Wikipedia</a> and <a class="reference external" href="https://dccwiki.com/Introduction_to_DCC">DCC Wiki</a> introduction pages.</p>
-<p>However, if you just want to know how DCC, and in particular <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span>, can help you run your trains and also add more realism to your layouts, then continue reading here.</p>
+<p>However, if you just want to know how DCC, and in particular <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span>, can help you run your trains and also add more realism to your layouts, then continue reading here.</p>
 <section id="dcc-is-for-more-than-just-controlling-trains">
 <h3><a class="toc-backref" href="#id2" role="doc-backlink">DCC is for more than just controlling trains</a><a class="headerlink" href="#dcc-is-for-more-than-just-controlling-trains" title="Permalink to this heading"></a></h3>
-<p>DCC, and in particular our flagship product <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, can also be used to control accessories (think turnouts/points, signals, sensors to monitor things, and lineside feature animation to name a few). DCC is not just about running trains!</p>
+<p>DCC, and in particular our flagship product <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, can also be used to control accessories (think turnouts/points, signals, sensors to monitor things, and lineside feature animation to name a few). DCC is not just about running trains!</p>
 <p>Of course you don’t need to use any of these features if you simply want to run trains.</p>
 <p>Read on to understand which of our products and features will help you achieve your DCC dreams…</p>
 </section>
@@ -612,9 +614,9 @@
 <td><p>Our user friendly command station software installer</p></td>
 <td><p>The built-in scripting language for automating your model railroad</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="../ex-webthrottle/index.html"><img alt="EX-WebThrottle" class="image-min-width-144" src="../_images/product-logo-ex-webthrottle.png" style="width: 240.0px; height: 20.099999999999998px;" /></a></p></td>
+<tr class="row-odd"><td><p><a class="reference external" href="../ex-webthrottle/index.html"><img alt="EX-WebThrottle" class="image-min-width-144" src="../_images/product-logo-ex-webthrottle.png" style="width: 240.0px; height: 48.0px;" /></a></p></td>
 <td><p><a class="reference external" href="../ex-turntable/index.html"><img alt="EX-Turntable" class="image-min-width-144" src="../_images/product-logo-ex-turntable.png" style="width: 240.0px; height: 48.0px;" /></a></p></td>
-<td><p><a class="reference external" href="../ex-ioexpander/index.html"><img alt="EX-IOExpander" class="image-product-logo-float-right" src="../_images/product-logo-ex-ioexpander.png" style="width: 240.0px; height: 48.0px;" /></a></p></td>
+<td><p><a class="reference external" href="../ex-ioexpander/index.html"><img alt="EX-IOExpander" class="image-min-width-144" src="../_images/product-logo-ex-ioexpander.png" style="width: 240.0px; height: 48.0px;" /></a></p></td>
 </tr>
 <tr class="row-even"><td><p>A simple web browser based throttle for your command station</p></td>
 <td><p>A separate stepper based turntable controller</p></td>
@@ -645,13 +647,13 @@
 <tr class="row-odd"><td><p><a class="reference external" href="../ex-rail/index.html"><img alt="EX-RAIL" class="image-min-width-144" src="../_images/product-logo-ex-rail.png" style="width: 240.0px; height: 48.0px;" /></a></p></td>
 <td><p>The built-in scripting language for automating your model railroad</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="../ex-webthrottle/index.html"><img alt="EX-WebThrottle" class="image-min-width-144" src="../_images/product-logo-ex-webthrottle.png" style="width: 240.0px; height: 20.099999999999998px;" /></a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="../ex-webthrottle/index.html"><img alt="EX-WebThrottle" class="image-min-width-144" src="../_images/product-logo-ex-webthrottle.png" style="width: 240.0px; height: 48.0px;" /></a></p></td>
 <td><p>A simple web browser based throttle for your command station</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="../ex-turntable/index.html"><img alt="EX-Turntable" class="image-min-width-144" src="../_images/product-logo-ex-turntable.png" style="width: 240.0px; height: 48.0px;" /></a></p></td>
 <td><p>A separate stepper based turntable controller</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="../ex-ioexpander/index.html"><img alt="EX-IOExpander" class="image-product-logo-float-right" src="../_images/product-logo-ex-ioexpander.png" style="width: 240.0px; height: 48.0px;" /></a></p></td>
+<tr class="row-even"><td><p><a class="reference external" href="../ex-ioexpander/index.html"><img alt="EX-IOExpander" class="image-min-width-144" src="../_images/product-logo-ex-ioexpander.png" style="width: 240.0px; height: 48.0px;" /></a></p></td>
 <td><p>Use additional microcontrollers to expand I/O port capability</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="../ex-dccinspector/index.html"><img alt="EX-DCCInspector" class="image-min-width-144" src="../_images/product-logo-ex-dccinspector.png" style="width: 240.0px; height: 48.0px;" /></a></p></td>
@@ -669,7 +671,7 @@
 </section>
 <section id="i-m-interested-in-dcc-but-have-a-very-small-budget">
 <h2><a class="toc-backref" href="#id4" role="doc-backlink">I’m interested in DCC but have a very small budget</a><a class="headerlink" href="#i-m-interested-in-dcc-but-have-a-very-small-budget" title="Permalink to this heading"></a></h2>
-<p>The <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> project is free and open source software, using consumer grade, inexpensive microcontrollers and components to provide full feature DCC train control, and more.</p>
+<p>The <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> project is free and open source software, using consumer grade, inexpensive microcontrollers and components to provide full feature DCC train control, and more.</p>
 <p>You will get more features from our software than you will from many commercial DCC controllers, with the hardware components able to be purchased at a fraction of the price of these commercial systems.</p>
 <p>At the moment, we don’t offer our own ready-to-run solutions, but may do so in partnership with more resellers down the track, so for the moment a willingness to do some DIY is required. There is currently one option we know of in the UK who may be able to help you with this. See <a class="reference internal" href="../projects/railsnail-bluetooth.html"><span class="doc">RailSnail’s Complete Bluetooth EX-CommandStation</span></a> for details.</p>
 <p>The only things we can’t help you with are the layout and the DCC equiped locos!</p>
@@ -677,35 +679,35 @@
 </section>
 <section id="i-just-want-to-run-my-trains">
 <h2><a class="toc-backref" href="#id5" role="doc-backlink">I just want to run my trains</a><a class="headerlink" href="#i-just-want-to-run-my-trains" title="Permalink to this heading"></a></h2>
-<p>If you simply want a system to run your DCC trains, then you only need to concern yourself with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, as this is our core digital controller product. While it can also do a lot more, you don’t need to know about any other features or capabilities in order to use it to control trains only.</p>
+<p>If you simply want a system to run your DCC trains, then you only need to concern yourself with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, as this is our core digital controller product. While it can also do a lot more, you don’t need to know about any other features or capabilities in order to use it to control trains only.</p>
 <p>Note that you will need some sort of throttle or controller to connect to it also.</p>
-<p>You will need to read through the <a class="reference internal" href="../ex-commandstation/index.html"><span class="doc">EX-CommandStation</span></a> documentation, and it will be helpful also to read through the <a class="reference internal" href="../throttles/index.html"><span class="doc">Throttles (Controllers)</span></a> section to become familiar with what throttle options are available (including our very own open source <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span>).</p>
-<p>This provides a very cost effective introduction to DCC train control using inexpensive consumer grade hardware and our (free) open source <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> software.</p>
+<p>You will need to read through the <a class="reference internal" href="../ex-commandstation/index.html"><span class="doc">EX-CommandStation</span></a> documentation, and it will be helpful also to read through the <a class="reference internal" href="../throttles/index.html"><span class="doc">Throttles (Controllers)</span></a> section to become familiar with what throttle options are available (including our very own open source <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span>).</p>
+<p>This provides a very cost effective introduction to DCC train control using inexpensive consumer grade hardware and our (free) open source <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software.</p>
 </section>
 <section id="i-want-to-operate-my-turnouts-points-and-run-dcc-trains">
 <h2><a class="toc-backref" href="#id6" role="doc-backlink">I want to operate my turnouts/points and run DCC trains</a><a class="headerlink" href="#i-want-to-operate-my-turnouts-points-and-run-dcc-trains" title="Permalink to this heading"></a></h2>
-<p>If you want your turnouts/points to also be controlled by <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span>, then this same <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> product has the capability to enable this also.</p>
+<p>If you want your turnouts/points to also be controlled by <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span>, then this same <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> product has the capability to enable this also.</p>
 <p>In addition to what you need to be familiar with for just running trains above, there is further information available on how to add and control turnouts/points in the <a class="reference internal" href="../ex-commandstation/accessories/turnouts/index.html"><span class="doc">Turnouts/points</span></a> section.</p>
 </section>
 <section id="i-want-to-control-all-my-accessories-and-run-dcc-trains">
 <h2><a class="toc-backref" href="#id7" role="doc-backlink">I want to control all my accessories and run DCC trains</a><a class="headerlink" href="#i-want-to-control-all-my-accessories-and-run-dcc-trains" title="Permalink to this heading"></a></h2>
-<p>Further to just operating turnouts/points, <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> has the capability to control all your other various accessories including signals, turntables (including our own <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span>), loco and rolling stock lighting, scenic accessories, and pretty much anything else that can be controlled digitally.</p>
+<p>Further to just operating turnouts/points, <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> has the capability to control all your other various accessories including signals, turntables (including our own <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span>), loco and rolling stock lighting, scenic accessories, and pretty much anything else that can be controlled digitally.</p>
 <p>This is simply an extension of operating trains and controlling turnouts/points covered above, with further information available in our <a class="reference internal" href="../ex-commandstation/accessories/index.html"><span class="doc">Adding and Controlling Accessories</span></a> section.</p>
 </section>
 <section id="i-want-some-extra-automated-animated-realism">
 <h2><a class="toc-backref" href="#id8" role="doc-backlink">I want some extra automated/animated realism</a><a class="headerlink" href="#i-want-some-extra-automated-animated-realism" title="Permalink to this heading"></a></h2>
-<p>To start adding extra realism to your layout, such as controlling signal aspects when turnouts/points are closed or thrown, activating level crossing boom gates and lights as trains approach, or turning street lights off or on according to the time of day, this can be accomplished using the automation/animation capabilities of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> which we call <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>.</p>
-<p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> is an acronym for “<strong>EX</strong>tended <strong>R</strong>ailroad <strong>A</strong>utomation <strong>I</strong>nstruction <strong>L</strong>anguage”, and is an easy and powerful way to create simple to complex animation/automation sequences to control locos, sensors, signals, turnouts/points, and other layout or scenic accessories. <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>’s English based commands and functions are designed for all levels of experience, from novice or non-programmers to experienced users, to have fun in making their layouts come to life.</p>
-<p>Anyone can use <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>, and over time we are building out practical examples to demonstrate how you can use this to automate or animate various aspects of your layout. We will also be publishing a series of “recipes” on this website as a sort of building block approach.</p>
-<p>In addition to having your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> up and running, with some sort of throttle or controller (see <a class="reference internal" href="../throttles/index.html"><span class="doc">Throttles (Controllers)</span></a>) to control your trains, you’ll also need to add some accessories to use with your automation/animation sequences as outlined in <a class="reference internal" href="../ex-commandstation/accessories/index.html"><span class="doc">Adding and Controlling Accessories</span></a>.</p>
-<p>To make the most of <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> you should read through the <a class="reference internal" href="../ex-rail/index.html"><span class="doc">EX-RAIL (Automation/Animation)</span></a> section as well as see the practical examples in <a class="reference internal" href="../big-picture/index.html"><span class="doc">The Big Picture</span></a>.</p>
+<p>To start adding extra realism to your layout, such as controlling signal aspects when turnouts/points are closed or thrown, activating level crossing boom gates and lights as trains approach, or turning street lights off or on according to the time of day, this can be accomplished using the automation/animation capabilities of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> which we call <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span>.</p>
+<p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> is an acronym for “<strong>EX</strong>tended <strong>R</strong>ailroad <strong>A</strong>utomation <strong>I</strong>nstruction <strong>L</strong>anguage”, and is an easy and powerful way to create simple to complex animation/automation sequences to control locos, sensors, signals, turnouts/points, and other layout or scenic accessories. <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span>’s English based commands and functions are designed for all levels of experience, from novice or non-programmers to experienced users, to have fun in making their layouts come to life.</p>
+<p>Anyone can use <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span>, and over time we are building out practical examples to demonstrate how you can use this to automate or animate various aspects of your layout. We will also be publishing a series of “recipes” on this website as a sort of building block approach.</p>
+<p>In addition to having your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> up and running, with some sort of throttle or controller (see <a class="reference internal" href="../throttles/index.html"><span class="doc">Throttles (Controllers)</span></a>) to control your trains, you’ll also need to add some accessories to use with your automation/animation sequences as outlined in <a class="reference internal" href="../ex-commandstation/accessories/index.html"><span class="doc">Adding and Controlling Accessories</span></a>.</p>
+<p>To make the most of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> you should read through the <a class="reference internal" href="../ex-rail/index.html"><span class="doc">EX-RAIL (Automation/Animation)</span></a> section as well as see the practical examples in <a class="reference internal" href="../big-picture/index.html"><span class="doc">The Big Picture</span></a>.</p>
 </section>
 <section id="i-want-a-fully-automated-exhibition-layout-for-my-club">
 <h2><a class="toc-backref" href="#id9" role="doc-backlink">I want a fully automated exhibition layout for my club</a><a class="headerlink" href="#i-want-a-fully-automated-exhibition-layout-for-my-club" title="Permalink to this heading"></a></h2>
 <p>Are your club members sick and tired of having to perform repetitive, manual operations during club open days or exhibitions?</p>
-<p>To take your demonstration layouts to the next level, spend more time talking to your visitors and potential club members by using <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span> to automate your layout.</p>
+<p>To take your demonstration layouts to the next level, spend more time talking to your visitors and potential club members by using <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> to automate your layout.</p>
 <p>This can be anywhere from a simple loop to stop and start trains at stations with automated arrival and departure announcements all the way through to multiple trains running throughout the layout, closing/throwing turnouts/points as required, setting signals, and crossing paths without collisions.</p>
-<p>To achieve this level of automation, you’ll need to understand more than just how to get your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> up and running, and will also need to have a good understanding of the accessories that can be added as outlined in <a class="reference internal" href="../ex-commandstation/accessories/index.html"><span class="doc">Adding and Controlling Accessories</span></a>.</p>
+<p>To achieve this level of automation, you’ll need to understand more than just how to get your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> up and running, and will also need to have a good understanding of the accessories that can be added as outlined in <a class="reference internal" href="../ex-commandstation/accessories/index.html"><span class="doc">Adding and Controlling Accessories</span></a>.</p>
 <p>As per our automated/animated realism information above, be sure to familiarise yourself with <a class="reference internal" href="../ex-rail/index.html"><span class="doc">EX-RAIL (Automation/Animation)</span></a> and <a class="reference internal" href="../big-picture/index.html"><span class="doc">The Big Picture</span></a>.</p>
 </section>
 </section>

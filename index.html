@@ -13,6 +13,8 @@
       <link rel="stylesheet" href="_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/big_picture_theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/sphinx_design_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/index.html" />
   <!--[if lt IE 9]>
@@ -28,6 +30,8 @@
         <script src="_static/design-tabs.js"></script>
         <script src="_static/js/platform.js"></script>
         <script src="_static/js/extra.js"></script>
+        <script src="_static/dark_mode_js/default_light.js"></script>
+        <script src="_static/dark_mode_js/theme_switcher.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -202,6 +206,7 @@
 <li class="toctree-l5"><a class="reference internal" href="support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="ex-turntable/index.html">EX-Turntable</a><ul>
@@ -243,11 +248,11 @@
 <li class="toctree-l2"><a class="reference internal" href="ex-rail/getting-started.html">Sequences - an Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ex-rail/examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ex-rail/tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ex-rail/EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ex-rail/EX-RAIL-summary.html">EX-RAIL Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ex-rail/about.html">About and History</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ex-turntable/index.html">EX-Turntable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ex-turntable/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ex-turntable/purchasing.html">Purchasing</a></li>
@@ -369,9 +374,10 @@
 <li class="toctree-l4"><a class="reference internal" href="reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/hardware/microcontrollers/microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/hardware/microcontrollers/nano-every.html">Nano Every</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/hardware/microcontrollers/teensy.html">Teensy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
@@ -423,6 +429,7 @@
 <li class="toctree-l4"><a class="reference internal" href="reference/hardware/i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/hardware/i2c-multiplexers.html">I2C Multiplexers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="reference/hardware/accessory-controllers.html">Accessory Controllers</a></li>
@@ -468,12 +475,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="under-development/index.html">Features under development</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="under-development/track-manager.html"><em>Under Development:</em> DCC-EX TrackManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="under-development/index.html">Features under development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
@@ -566,7 +568,7 @@
 <div class="sd-col sd-d-flex-row sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-8 docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-shadow-md sd-rounded-3 sd-width-auto docutils">
 <div class="sd-card-body docutils">
-<p class="sd-card-text"><span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> is a team of dedicated enthusiasts producing open source <em>DCC solutions</em> for you to run your complete model railroad layout. Our easy to use, do-it-yourself, and free open source products run on off-the-shelf Arduino technology and are supported by numerous third party hardware and apps like <a class="reference internal" href="reference/glossary.html"><span class="doc">JMRI</span></a>, <a class="reference internal" href="throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, <a class="reference internal" href="throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a>, Rocrail and more.</p>
+<p class="sd-card-text"><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> is a team of dedicated enthusiasts producing open source <em>DCC solutions</em> for you to run your complete model railroad layout. Our easy to use, do-it-yourself, and free open source products run on off-the-shelf Arduino technology and are supported by numerous third party hardware and apps like <a class="reference internal" href="reference/glossary.html"><span class="doc">JMRI</span></a>, <a class="reference internal" href="throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, <a class="reference internal" href="throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a>, Rocrail and more.</p>
 </div>
 </div>
 </div>
@@ -584,7 +586,7 @@
 <div class="sd-col sd-d-flex-row sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-7 docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-shadow-md sd-rounded-3 sd-width-auto docutils">
 <div class="sd-card-body docutils">
-<p class="sd-card-text">If you are just starting with <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> then the sections below are intended to help you understand how our products might suit your needs. We’ve curated this guidance based on feedback from our users:</p>
+<p class="sd-card-text">If you are just starting with <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> then the sections below are intended to help you understand how our products might suit your needs. We’ve curated this guidance based on feedback from our users:</p>
 <ul class="simple">
 <li><p class="sd-card-text"><a class="reference internal" href="begin/what-to-know.html#what-is-dcc-and-dcc-ex"><span class="std std-ref">What is DCC and DCC-EX?</span></a></p></li>
 <li><p class="sd-card-text"><a class="reference internal" href="begin/what-to-know.html#i-m-interested-in-dcc-but-have-a-very-small-budget"><span class="std std-ref">I’m interested in DCC but have a limited budget</span></a></p></li>
@@ -603,16 +605,16 @@
 <img alt="card-img-top" class="sd-card-img-top" src="_images/product-logo-news-cropped.png" />
 <div class="sd-card-body docutils">
 <ul class="postlist-style-none postlist">
+<li class="ablog-post"><p class="ablog-post-title">07 Aug 2023 - <a class="reference internal" href="news/posts/20230807.html">Version 5 is here!</a></p>
+<p class="ablog-post-excerpt"><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Yep, that’s right, the much anticipated <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> version 5 release is here at last! This is a huge release, adding significant new features like <span class="ex-suffix">TrackManager</span>, enhancing existing capabilities, introducting new and enhanced I/O support, along with other associated products such as <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;FastClock</span>, <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span>, and <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span>.</p>
+<p class="ablog-post-expand"><a class="reference internal" href="news/posts/20230807.html"><em>Continue reading...</em></a></p>
+</li>
 <li class="ablog-post"><p class="ablog-post-title">28 Jul 2023 - <a class="reference internal" href="news/posts/20230728.html">No support planned for the Uno R4 or Giga</a></p>
-<p class="ablog-post-excerpt">Like you, we get excited when a new product is announced and can’t wait to play with it. As beta testers (called the Arduino Early Experience Program), we are privileged to test these boards before they are released. While both the Uno R4 and Giga are advancements to the Arduino platform, and great products, DCC-EX has no plans to support them at this time. You, however, are free to work with the team on a port and we will provide you with support and help if you feel up to the task. For why it does not make sense for us to support these boards (at least right now), continue reading.</p>
+<p class="ablog-post-excerpt"><strong>DCC-EX</strong> has no plans to support the <em>Uno R4</em> or <em>Giga</em> at this time. For an explanation as to why it does not make sense for us to support these boards (at least right now), continue reading.</p>
 <p class="ablog-post-expand"><a class="reference internal" href="news/posts/20230728.html"><em>Continue reading...</em></a></p>
 </li>
-<li class="ablog-post"><p class="ablog-post-title">02 Jul 2023 - <a class="reference internal" href="news/posts/20230702.html">DCC-EX has a new installer!</a></p>
-<p class="ablog-post-excerpt">Yes, that’s right, the <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> team is announcing we have an updated <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span>!</p>
-<p class="ablog-post-expand"><a class="reference internal" href="news/posts/20230702.html"><em>Continue reading...</em></a></p>
-</li>
 </ul>
-<p class="sd-card-text">Read the full DCC-EX News feed <a class="reference external" href="news.html">here</a>. <br /> Subscribe to the DCC-EX News RSS/Atom feed using <span class="dcc-ex-text-size-80pct">“https://dcc-ex.com/news/atom.xml”</span>.</p>
+<p class="sd-card-text">Read the full DCC-EX News feed <a class="reference external" href="news.html">here</a>. <span class="dcc-ex-text-size-80pct">RSS/Atom feed - Subscribe with “https://dcc-ex.com/news/atom.xml”</span>.</p>
 </div>
 </div>
 </div>
@@ -622,7 +624,7 @@
 <p class="sd-card-text">Where to next?</p>
 </div>
 <div class="sd-card-body docutils">
-<p class="sd-card-text">It is important to understand that different <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> products, and options within those products are targeted at different levels of users, from those who don’t know anything about electronics or software, through to those with a lot of knowledge and experience.</p>
+<p class="sd-card-text">It is important to understand that different <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> products, and options within those products are targeted at different levels of users, from those who don’t know anything about electronics or software, through to those with a lot of knowledge and experience.</p>
 <p class="sd-card-text">We have tagged the pages to help you understand who they are aimed at.  The <a class="reference internal" href="begin/levels.html"><span class="doc">Choose Your Comfort Level</span></a> page explains those levels. Keep an eye out on our pages to see at which level of experience our documentation is aimed at.</p>
 </div>
 </div>

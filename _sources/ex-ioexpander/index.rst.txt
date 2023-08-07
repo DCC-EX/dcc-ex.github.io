@@ -15,9 +15,11 @@ EX-IOExpander
 
   |EX-IO| is currently in its infancy and as such is considered to be in Alpha testing, so could (and likely will) change without notice, and possibly even be broken in some scenarios.
 
-|NOT-IN-PROD-VERSION|
+|NEW-IN-V5-LOGO-SMALL|
 
 |EX-IO| is an additional microcontroller utilised to expand the I/O port capability of an |EX-CS| and connecting via |I2C|.
+
+It can be used to increase the number of available pins on your command station or run devices/objects at a greater distance away from it without having to run a lot of wires back to the command station. This is accomplished by using just two |I2C| bus wires to connect to one or many micro controllers running the |EX-IO| software.
 
 .. toctree::
   :hidden: 

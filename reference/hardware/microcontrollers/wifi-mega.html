@@ -13,6 +13,8 @@
       <link rel="stylesheet" href="../../../_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/big_picture_theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/sphinx_design_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/reference/hardware/microcontrollers/wifi-mega.html" />
   <!--[if lt IE 9]>
@@ -28,6 +30,8 @@
         <script src="../../../_static/design-tabs.js"></script>
         <script src="../../../_static/js/platform.js"></script>
         <script src="../../../_static/js/extra.js"></script>
+        <script src="../../../_static/dark_mode_js/default_light.js"></script>
+        <script src="../../../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -203,6 +207,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../../../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../../../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../ex-turntable/index.html">EX-Turntable</a><ul>
@@ -244,11 +249,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/getting-started.html">Sequences - an Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/EX-RAIL-summary.html">EX-RAIL Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-rail/about.html">About and History</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ex-turntable/index.html">EX-Turntable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../ex-turntable/purchasing.html">Purchasing</a></li>
@@ -370,9 +375,10 @@
 <li class="toctree-l4"><a class="reference internal" href="arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arduino-uno.html">Arduino Uno Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Mega+WiFi Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="nano-every.html">Nano Every</a></li>
 <li class="toctree-l4"><a class="reference internal" href="teensy.html">Teensy</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Mega+WiFi Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
@@ -424,6 +430,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../i2c-multiplexers.html">I2C Multiplexers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../accessory-controllers.html">Accessory Controllers</a></li>
@@ -469,12 +476,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../under-development/index.html">Features under development</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../under-development/track-manager.html"><em>Under Development:</em> DCC-EX TrackManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../under-development/index.html">Features under development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
@@ -617,7 +619,7 @@
 <h2><a class="toc-backref" href="#id10" role="doc-backlink">What You Will Need</a><a class="headerlink" href="#what-you-will-need" title="Permalink to this heading"></a></h2>
 <p>This is our tested and proven configuration</p>
 <ul class="simple">
-<li><p><span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> 3.0.6 or greater</p></li>
+<li><p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> 3.0.6 or greater</p></li>
 <li><p>ATMega2560 + ESP8266 WiFi - Combo Board</p></li>
 <li><p>Deek-Robot L298P Standard Motor Shield (or other <a class="reference internal" href="../motor-boards.html"><span class="doc">approved motor controller</span></a>)</p></li>
 <li><p>12-16V DC Laptop power supply to the Motor Shield (16V provides 14.5Vdc to the tracks for HO Gauge)*</p></li>
@@ -632,7 +634,7 @@
 <h2><a class="toc-backref" href="#id11" role="doc-backlink">What You Will Do</a><a class="headerlink" href="#what-you-will-do" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Flash the ESP8266 chip (requiring downloading of the ESP Files)</p></li>
-<li><p>Edit your config file and Load the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> v3.0.6 to the Mega2560 chip</p></li>
+<li><p>Edit your config file and Load the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> v3.0.6 to the Mega2560 chip</p></li>
 <li><p>Setup your Throttle</p></li>
 </ol>
 <div class="admonition note">
@@ -799,15 +801,15 @@
 </section>
 <section id="decide-if-you-want-access-point-mode-or-station-mode">
 <h2><a class="toc-backref" href="#id18" role="doc-backlink">2. Decide if you want Access Point Mode or Station Mode</a><a class="headerlink" href="#decide-if-you-want-access-point-mode-or-station-mode" title="Permalink to this heading"></a></h2>
-<p>Access Point (AP) Mode (the default) makes the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> an Access Point. That is a direct connection from your Throttle (Phone) to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> as a Local Intranet. There is no Internet access.  Station Mode connects the Command Station to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> so your Throttles (Controllers) can find it on your network.</p>
-<p>If you choose to use AP mode, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>. Go directly to step 5.</p>
+<p>Access Point (AP) Mode (the default) makes the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> an Access Point. That is a direct connection from your Throttle (Phone) to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> as a Local Intranet. There is no Internet access.  Station Mode connects the Command Station to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> so your Throttles (Controllers) can find it on your network.</p>
+<p>If you choose to use AP mode, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>. Go directly to step 5.</p>
 <p>If you are going to want to connect to your WiFi router, you just need to enter your login information. Take a look at the <a class="reference internal" href="#short-version-of-network-setup">Short Version of Network Setup</a> below before proceeding to step 5. But keep in mind, you can always install, make changes, and install again.</p>
 </section>
 <section id="configure-the-ex-commandstation-software">
 <h2><a class="toc-backref" href="#id19" role="doc-backlink">3. Configure the EX-CommandStation Software</a><a class="headerlink" href="#configure-the-ex-commandstation-software" title="Permalink to this heading"></a></h2>
 <section id="short-version-of-network-setup">
 <h3><a class="toc-backref" href="#id20" role="doc-backlink">Short Version of Network Setup</a><a class="headerlink" href="#short-version-of-network-setup" title="Permalink to this heading"></a></h3>
-<p>Download and install <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> from by using the Automated exInstaller or using the Arduino IDE by choosing one of the links below.</p>
+<p>Download and install <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> from by using the Automated exInstaller or using the Arduino IDE by choosing one of the links below.</p>
 <p><a class="reference internal" href="../../../ex-commandstation/get-started/installer.html"><span class="doc">How to install using the installer</span></a></p>
 <p><a class="reference internal" href="../../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">How to install using the Arduino IDE</span></a></p>
 <p><a class="reference internal" href="../../../download/ex-commandstation.html"><span class="doc">I know what I’m doing, just point me to the downloads page!</span></a></p>
@@ -853,11 +855,11 @@
 </section>
 <section id="operate-your-ex-commandstation">
 <h2><a class="toc-backref" href="#id25" role="doc-backlink">5. Operate Your EX-CommandStation</a><a class="headerlink" href="#operate-your-ex-commandstation" title="Permalink to this heading"></a></h2>
-<p>After the Arduino IDE uploads <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> sketch, make sure the serial port switch is set to RxD3/TxD3 and dip switch pins 1-4 are ON and 5-7 are OFF.</p>
+<p>After the Arduino IDE uploads <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> sketch, make sure the serial port switch is set to RxD3/TxD3 and dip switch pins 1-4 are ON and 5-7 are OFF.</p>
 <p>If not already connected to power, connect the Arduino ATMega2560 + ESP8266 WiFi board by Either a USB cable, or for Standalone Operations (no USB) you can use a 7-9vdc power supply in the Arduino 2.1mm female barrel jack.</p>
 <ul class="simple">
 <li><p>When powered on through a USB cable, check the Arduino IDE Tools &gt; Serial Monitor.</p></li>
-<li><p>It should show the ATMega2560 &amp; ESP8266 WiFi communicating and assigning a xxx.xxx.x.xxx IP Address and Port 2560 to the new <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p></li>
+<li><p>It should show the ATMega2560 &amp; ESP8266 WiFi communicating and assigning a xxx.xxx.x.xxx IP Address and Port 2560 to the new <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>.</p></li>
 <li><p>You should see <cite>++ Wifi Setup CONNECTED ++</cite></p></li>
 </ul>
 </section>
@@ -875,7 +877,7 @@
 <li><p>Start your Smart Phone (Android) <a class="reference internal" href="../../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> App Or (Apple iOS) <a class="reference internal" href="../../../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> App and enter the IP address XXX.XXX.X.XXX assigned in the Arduino Serial Monitor above and Port 2560. For AP mode, it will usually be 192.168.4.1. For STA mode, it will be whatever your router assigned it.</p></li>
 </ul>
 <p>If the <a class="reference internal" href="../../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> fails to connect the first time with the Command Station just press the Mega’s red Reset button and try the IP/Port connection again.</p>
-<p>You should have a direct Throttle connection to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> 3.0.5+ Standalone WiFi Command Station Via your home router.</p>
+<p>You should have a direct Throttle connection to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> 3.0.5+ Standalone WiFi Command Station Via your home router.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is an Operations only config, the <a class="reference internal" href="../../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> Power button only powers on the Main track, Not the Prog track. Function Keys are only local Default Function Settings, and are Not transferred from the <a class="reference internal" href="../../glossary.html"><span class="doc">JMRI</span></a> Server Roster.</p>

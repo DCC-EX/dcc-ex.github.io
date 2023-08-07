@@ -13,6 +13,8 @@
       <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/big_picture_theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/sphinx_design_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/big-picture/stage1.html" />
   <!--[if lt IE 9]>
@@ -28,6 +30,8 @@
         <script src="../_static/design-tabs.js"></script>
         <script src="../_static/js/platform.js"></script>
         <script src="../_static/js/extra.js"></script>
+        <script src="../_static/dark_mode_js/default_light.js"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -203,6 +207,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-turntable/index.html">EX-Turntable</a><ul>
@@ -244,11 +249,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/getting-started.html">Sequences - an Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-reference.html">EX-RAIL Detailed Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-summary.html">EX-RAIL Command List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-rail/about.html">About and History</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ex-turntable/index.html">EX-Turntable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ex-turntable/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-turntable/purchasing.html">Purchasing</a></li>
@@ -370,9 +375,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano.html">Arduino Nano Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/microcontrollers.html">Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/nano-every.html">Nano Every</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/teensy.html">Teensy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html">Mega+WiFi Setup</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
@@ -424,6 +430,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/gpio-module.html">I2C GPIO Expander Modules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/servo-module.html">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../reference/hardware/i2c-multiplexers.html">I2C Multiplexers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/accessory-controllers.html">Accessory Controllers</a></li>
@@ -469,12 +476,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../under-development/index.html">Features under development</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/microcontrollers.html"><em>Under Development:</em> Microcontrollers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/track-manager.html"><em>Under Development:</em> DCC-EX TrackManager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../under-development/duinonodes.html"><em>Under Development:</em> Lew’s Duino Gear duinoNodes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../under-development/index.html">Features under development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
@@ -602,16 +604,16 @@
 <section id="throttle-options">
 <h2><a class="toc-backref" href="#id2" role="doc-backlink">Throttle options</a><a class="headerlink" href="#throttle-options" title="Permalink to this heading"></a></h2>
 <p>There are a lot of different throttle otions available to control your trains and layout, including software applications available for your smart phone or computer and physical hardware options, both wired and wireless.</p>
-<p>Going in to any detail on the myriad of options available is well outside the scope of this exercise, so on this page we will be focusing on the four options most commonly used with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>: <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span>, <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a>, and <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>.</p>
+<p>Going in to any detail on the myriad of options available is well outside the scope of this exercise, so on this page we will be focusing on the four options most commonly used with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>: <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span>, <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a>, and <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>.</p>
 <p>For other throttle options, refer to the <a class="reference internal" href="../ex-commandstation/advanced-setup/controllers.html"><span class="doc">Choosing a Throttle (Controller) - Advanced</span></a> page for further information on choosing a throttle, and you can also refer to the  <a class="reference internal" href="../throttles/index.html"><span class="doc">Throttles (Controllers)</span></a> section for more information on the various throttle options available.</p>
 </section>
 <section id="what-to-expect-to-learn-from-stage-1">
 <h2><a class="toc-backref" href="#id3" role="doc-backlink">What to expect to learn from stage 1</a><a class="headerlink" href="#what-to-expect-to-learn-from-stage-1" title="Permalink to this heading"></a></h2>
 <p>At the end of this stage, we expect you will have learnt the following:</p>
 <ul class="simple">
-<li><p>How to run a train on your direct connected <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span></p></li>
-<li><p>How to run a train on your WiFi enabled <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span></p></li>
-<li><p>How to run a train on your <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> connected <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span></p></li>
+<li><p>How to run a train on your direct connected <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span></p></li>
+<li><p>How to run a train on your WiFi enabled <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></p></li>
+<li><p>How to run a train on your <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> connected <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></p></li>
 <li><p>How to run more than one train (Individual or Consist/Multiple Units)</p></li>
 <li><p>How to program a decoder using <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a></p></li>
 </ul>
@@ -619,14 +621,14 @@
 <hr class="docutils" />
 <section id="run-a-train-using-ex-webthrottle">
 <h2><a class="toc-backref" href="#id4" role="doc-backlink">Run a train using EX-WebThrottle</a><a class="headerlink" href="#run-a-train-using-ex-webthrottle" title="Permalink to this heading"></a></h2>
-<p>If you’re just starting out with <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>, or have a minimal system with no WiFi or Ethernet connection options, then a great way to start simply is by using <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span> via your direct USB connection.</p>
-<p>This is by far the simplest option to verify your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> is set up and working correctly, as you don’t need to install any software or worry about any network connections to get your first train running on your layout.</p>
-<p>While there is a lot more detail on the <a class="reference internal" href="../ex-webthrottle/index.html"><span class="doc">EX-WebThrottle</span></a> page, we will give you a very quick start guide here to get a single train running with your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>.</p>
+<p>If you’re just starting out with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, or have a minimal system with no WiFi or Ethernet connection options, then a great way to start simply is by using <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span> via your direct USB connection.</p>
+<p>This is by far the simplest option to verify your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> is set up and working correctly, as you don’t need to install any software or worry about any network connections to get your first train running on your layout.</p>
+<p>While there is a lot more detail on the <a class="reference internal" href="../ex-webthrottle/index.html"><span class="doc">EX-WebThrottle</span></a> page, we will give you a very quick start guide here to get a single train running with your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>.</p>
 <p>Firstly, launch <span class="guilabel">EX-WebThrottle</span> in your Chromium based web browser (Google Chrome, Microsoft Edge, or Opera).</p>
 <p class="dcclink"><a class="reference external" href="https://DCC-EX.github.io/WebThrottle-EX">Try It Now</a></p>
-<p>Once you have <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span> opened in your browser, follow these steps to get your train running:</p>
+<p>Once you have <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span> opened in your browser, follow these steps to get your train running:</p>
 <ul class="simple">
-<li><p>Ensure your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> is connected to your computer via the USB cable</p></li>
+<li><p>Ensure your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> is connected to your computer via the USB cable</p></li>
 <li><p>In the top right corner, ensure “Serial” is selected from the pull down menu, then click the <span class="guilabel">Connect DCC++ EX</span> button</p></li>
 <li><p>A pop up window should appear, prompting you to choose your COM port</p></li>
 <li><p>Select the COM port then click the <span class="guilabel">Connect</span> button, and the button in the top right corner should change to <span class="guilabel">Disconnect DCC++ EX</span> with a green circle to the left</p></li>
@@ -640,7 +642,7 @@
 <hr class="docutils" />
 <section id="run-a-train-on-your-wifi-enabled-ex-commandstation">
 <h2><a class="toc-backref" href="#id5" role="doc-backlink">Run a train on your WiFi enabled EX-CommandStation</a><a class="headerlink" href="#run-a-train-on-your-wifi-enabled-ex-commandstation" title="Permalink to this heading"></a></h2>
-<p>If when you assembled your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> with one of the common configuration options, then you will have a WiFi enabled Command Station, which will allow to run your trains with a smart phone. We are only going to cover two common options here:</p>
+<p>If when you assembled your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> with one of the common configuration options, then you will have a WiFi enabled Command Station, which will allow to run your trains with a smart phone. We are only going to cover two common options here:</p>
 <ul class="simple">
 <li><p>Engine Driver - For Android phones</p></li>
 <li><p>wiThrottle - for Apple iOS phones</p></li>
@@ -648,10 +650,10 @@
 <section id="engine-driver-android">
 <h3><a class="toc-backref" href="#id6" role="doc-backlink">Engine Driver (Android)</a><a class="headerlink" href="#engine-driver-android" title="Permalink to this heading"></a></h3>
 <ul>
-<li><p>If you have set up your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> in <a class="reference internal" href="../reference/glossary.html"><span class="doc">Access Point Mode</span></a> (The Recommended approach)</p>
+<li><p>If you have set up your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> in <a class="reference internal" href="../reference/glossary.html"><span class="doc">Access Point Mode</span></a> (The Recommended approach)</p>
 <ul class="simple">
 <li><p>Open the network settings on you phone</p></li>
-<li><p>Change to the network of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span></p>
+<li><p>Change to the network of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></p>
 <ul>
 <li><p>SSID (Network name) : ‘DCCEX_xxxxxx’ <br /> where the x’s are the last 6 digits of your device’ MAC address (unique to each device)</p></li>
 <li><p>Password: ‘PASS_xxxxxx’ <br /> where the x’s are the last 6 digits of your device’ MAC address (same as above)</p></li>
@@ -659,7 +661,7 @@
 </li>
 </ul>
 </li>
-<li><p>If you have set up your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> in <a class="reference internal" href="../reference/glossary.html"><span class="doc">Station Mode</span></a> (The alternate approach)</p>
+<li><p>If you have set up your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> in <a class="reference internal" href="../reference/glossary.html"><span class="doc">Station Mode</span></a> (The alternate approach)</p>
 <ul class="simple">
 <li><p>open the network settings on you phone</p></li>
 <li><p>change to your home network</p>
@@ -674,7 +676,7 @@
 <li><p>On the ‘Connection screen’</p>
 <ul class="simple">
 <li><p>You should see ‘DCCEX_xxxxxx’ (as above) in the discovered servers list</p></li>
-<li><p>Click on this. <br /> (As long as you did not change the IP address of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> when you ran <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span> then this should connect</p></li>
+<li><p>Click on this. <br /> (As long as you did not change the IP address of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> when you ran <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> then this should connect</p></li>
 </ul>
 </li>
 <li><p>You should now be on the the ‘Throttle screen’</p></li>
@@ -711,10 +713,10 @@
 <p>The paid version WiThrottle can control multiple locos, can create and control consists, can control turnouts and routes, and can control DCC track power.</p>
 </div>
 <ul>
-<li><p>If you have set up your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> in <a class="reference internal" href="../reference/glossary.html"><span class="doc">Access Point Mode</span></a> (The Recommended approach)</p>
+<li><p>If you have set up your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> in <a class="reference internal" href="../reference/glossary.html"><span class="doc">Access Point Mode</span></a> (The Recommended approach)</p>
 <ul class="simple">
 <li><p>Open the network settings on you phone</p></li>
-<li><p>Change to the network of the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span></p>
+<li><p>Change to the network of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></p>
 <ul>
 <li><p>SSID (Network name) : ‘DCCEX_xxxxxx’ <br /> where the x’s are the last 6 digits of your device’ MAC address (unique to each device)</p></li>
 <li><p>Password: ‘PASS_xxxxxx’ <br /> where the x’s are the last 6 digits of your device’ MAC address (same as above)</p></li>
@@ -722,7 +724,7 @@
 </li>
 </ul>
 </li>
-<li><p>If you have set up your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> in <a class="reference internal" href="../reference/glossary.html"><span class="doc">Station Mode</span></a> (The alternate approach)</p>
+<li><p>If you have set up your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> in <a class="reference internal" href="../reference/glossary.html"><span class="doc">Station Mode</span></a> (The alternate approach)</p>
 <ul class="simple">
 <li><p>Open the network settings on you phone</p></li>
 <li><p>Change to your home network</p>
@@ -733,7 +735,7 @@
 </ul>
 </li>
 <li><p>Start the <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> App</p></li>
-<li><p><a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> will try to find the <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Server</span></a> on the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span></p></li>
+<li><p><a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> will try to find the <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Server</span></a> on the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></p></li>
 <li><p>If you are using <a class="reference internal" href="../reference/glossary.html"><span class="doc">Access Point Mode</span></a></p>
 <ul class="simple">
 <li><p>It will not find the <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Server</span></a> automatically</p></li>
@@ -773,7 +775,7 @@
 <hr class="docutils" />
 <section id="run-a-train-on-your-jmri-connected-ex-commandstation">
 <h2><a class="toc-backref" href="#id8" role="doc-backlink">Run a train on your JMRI connected EX-CommandStation</a><a class="headerlink" href="#run-a-train-on-your-jmri-connected-ex-commandstation" title="Permalink to this heading"></a></h2>
-<p>If when you assembled your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> configurated to Connect to JMRI, then you will have the ability to connect to your Command Station directly (using JMRI) to run your trains, or you can use smart phone. We are only going to cover three common options here:</p>
+<p>If when you assembled your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> configurated to Connect to JMRI, then you will have the ability to connect to your Command Station directly (using JMRI) to run your trains, or you can use smart phone. We are only going to cover three common options here:</p>
 <ul class="simple">
 <li><p>JMRI - PC (Windows, Apple OSX, Linux)</p></li>
 <li><p>Engine Driver - For Android phones</p></li>
@@ -845,7 +847,7 @@
 <li><p>Open the network settings on your phone</p></li>
 <li><p>Change to same network of the PC that JMRI is on</p></li>
 <li><p>Start the <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> App</p></li>
-<li><p><a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> will try to find the <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Server</span></a> on the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span></p>
+<li><p><a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> will try to find the <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Server</span></a> on the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></p>
 <ul class="simple">
 <li><p>It should find the <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Server</span></a> in <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> and automatically connect to it</p></li>
 </ul>
@@ -908,14 +910,14 @@
 <hr class="docutils" />
 <section id="program-a-decoder-s-dcc-address">
 <h2><a class="toc-backref" href="#id15" role="doc-backlink">Program a decoder’s DCC address</a><a class="headerlink" href="#program-a-decoder-s-dcc-address" title="Permalink to this heading"></a></h2>
-<p><span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span> provides an Android app <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Toolbox</span></span> with a basic interface for programming DCC decoders, but it requires that you connect to the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> over wifi or Ethernet. (USB is not supported.)</p>
+<p><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> provides an Android app <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span> with a basic interface for programming DCC decoders, but it requires that you connect to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> over wifi or Ethernet. (USB is not supported.)</p>
 <p>There are three Android apps that can program decoders:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../ex-toolbox/index.html"><span class="doc">EX-Toolbox</span></a> can program decoders over wifi or Ethernet.</p></li>
 <li><p><a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> can program decoders over wifi or Ethernet.</p></li>
 <li><p><a class="reference internal" href="../throttles/software/rtdrive-dccpp.html"><span class="doc">RtDrive Dcc++</span></a> can program decoders but it is not particularly user friendly to do so.</p></li>
 </ul>
-<p>We also recommend using <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> DecoderPro for programming decoders.  It works for USB connected a <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> and it provides plain English descriptions of all the CVs of a huge number of different decoders, is very well supported, runs on the major PC operating systems, and is free and open source.</p>
+<p>We also recommend using <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> DecoderPro for programming decoders.  It works for USB connected a <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> and it provides plain English descriptions of all the CVs of a huge number of different decoders, is very well supported, runs on the major PC operating systems, and is free and open source.</p>
 <section id="programming-options">
 <h3><a class="toc-backref" href="#id16" role="doc-backlink">Programming options</a><a class="headerlink" href="#programming-options" title="Permalink to this heading"></a></h3>
 <p>There are two basic methods for programming decoders</p>
@@ -932,11 +934,11 @@
 <section id="jmri-programming-decoders">
 <h3><a class="toc-backref" href="#id17" role="doc-backlink">JMRI (Programming Decoders)</a><a class="headerlink" href="#jmri-programming-decoders" title="Permalink to this heading"></a></h3>
 <p><a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> is a PC based app that runs on Windows, Apple macOS, and Linux (including Raspberry Pi’s Raspbian (RasPi)).</p>
-<p>It relies on the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> being connected to the PC running <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>, normally by the USB cable. (It can be done over WiFi, but is not recommended).  This means that, even if you setup your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> for Wifi you will need to connect it to the PC.  Don’t worry, this will work without having to load the software on the <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> again.</p>
+<p>It relies on the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> being connected to the PC running <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>, normally by the USB cable. (It can be done over WiFi, but is not recommended).  This means that, even if you setup your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> for Wifi you will need to connect it to the PC.  Don’t worry, this will work without having to load the software on the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> again.</p>
 <section id="installing-jmri">
 <h4>Installing JMRI<a class="headerlink" href="#installing-jmri" title="Permalink to this heading"></a></h4>
 <p>To install <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>, refer to the installation instructions on the <a class="reference external" href="https://www.jmri.org/help/en/manual/DecoderPro3/Installing_JMRI.shtml">JMRI</a> website.</p>
-<p>Once <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> is installed, launch DecoderPro. If you haven’t previously used DecoderPro or any <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> applications, you will need to setup your <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span> connection. Refer to the <a class="reference external" href="https://www.jmri.org/help/en/html/hardware/dccpp/index.shtml">JMRi help page</a> for instructions on how to accomplish this.</p>
+<p>Once <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> is installed, launch DecoderPro. If you haven’t previously used DecoderPro or any <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> applications, you will need to setup your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> connection. Refer to the <a class="reference external" href="https://www.jmri.org/help/en/html/hardware/dccpp/index.shtml">JMRi help page</a> for instructions on how to accomplish this.</p>
 </section>
 <section id="using-the-programming-track-service-mode">
 <h4>Using the programming track (service mode)<a class="headerlink" href="#using-the-programming-track-service-mode" title="Permalink to this heading"></a></h4>

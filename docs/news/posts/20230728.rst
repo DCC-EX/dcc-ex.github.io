@@ -16,9 +16,11 @@
 No support planned for the Uno R4 or Giga
 =========================================
 
-Like you, we get excited when a new product is announced and can't wait to play with it. As beta testers (called the Arduino Early Experience Program), we are privileged to test these boards before they are released. While both the **Uno R4** and **Giga** are advancements to the Arduino platform, and are great products, **DCC-EX** has no plans to support them at this time. For an explanation as to why it does not make sense for us to support these boards (at least right now), continue reading.
+**DCC-EX** has no plans to support the *Uno R4* or *Giga* at this time. For an explanation as to why it does not make sense for us to support these boards (at least right now), continue reading.
 
 Firstly it is worth noting that while the DCC-EX team is not working on it, you are free to work with the team on a port and we will provide you with support and help if you feel up to the task. 
+
+Like you, we get excited when a new product is announced and can't wait to play with it. As beta testers (called the Arduino Early Experience Program), we are privileged to test these boards before they are released. While both the **Uno R4** and **Giga** are advancements to the Arduino platform, and are great products, 
 
 It is unfortunate (for us) that Arduino chose to carry on the "Uno" name with the Uno R4 board. The "R4" designator would create the impression that this is just "rev 4" of the old Uno Rev3. We all know from experience with versions of things that 4 comes after 3 and so this is just a faster, better Uno, right? Not quite. At least the new Giga was not called the Mega R4, though at $73 US, it is cost prohibitive for a command station.
 

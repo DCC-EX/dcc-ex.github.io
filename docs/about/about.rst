@@ -67,6 +67,13 @@ Developers
 * Neil McKechnie -  Worcestershire, UK
 * Fred Decker - Holly Springs, NC, USA
 
+EX-Toolbox
+==========
+
+Developers
+
+* Peter Akers - Brisbane, QLD, Australia (flash62au)
+
 DCC++ Classic
 ==============
 
@@ -141,11 +148,11 @@ Related Software
 
 Making sure this software works well with |EX-CS|
 
-* JMRI
+* |JMRI|
   
   * M Steve Todd - USA
 
-* Engine Driver (ED)
+* |Engine Driver| (ED)
   
   * M Steve Todd - USA
   * Peter Akers - Brisbane, QLD, Australia (flash62au)

@@ -679,13 +679,21 @@ img.sd-card-img-top {
 
 .sd-card-header {
   margin-bottom: -10px !important;
-  margin-top: 5px !important;
+  margin-top: 10px !important;
   padding-top: 0px !important;
   padding-bottom: 0px !important;
 }
 
+.sd-card-header p {
+  line-height: 18px !important;
+}
+
 html[data-theme='dark'] .sd-card-header {
   border-bottom: 1px solid rgb(255 253 253 / 13%);
+}
+
+.sd-card-body ul li p {
+  margin-bottom: 5px !important;
 }
 
 .sd-card-text {

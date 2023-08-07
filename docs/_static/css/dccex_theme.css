@@ -684,6 +684,10 @@ img.sd-card-img-top {
   padding-bottom: 0px !important;
 }
 
+.sd-card-header p {
+  line-height: 18px !important;
+}
+
 html[data-theme='dark'] .sd-card-header {
   border-bottom: 1px solid rgb(255 253 253 / 13%);
 }

@@ -88,9 +88,12 @@ To upload the new sketch on your Command Station
 #. Open the Arduino IDE
 #. Open the CommandStation-EX project
 #. Open the config.h file (If you haven't renamed config.example.h to config.h do this now)
-#. Find the line that says: ``// define LCD_DRIVER for i2c LCD address 0x3f,16 cols, 2 rows
-   #define LCD_DRIVER  0x3F,16,2`` 
-#. make sure to uncomment this line if it has 2 slashes in front of it by removing them.
+#. Find the lines that says:
+  ``// define LCD_DRIVER for i2c LCD address 0x3f,16 cols, 2 rows
+        #define LCD_DRIVER  0x3F,16,2``
+  ``// define LCD_DRIVER for i2c LCD address 0x3f,20 cols, 4 rows
+      //#define LCD_DRIVER  0x3F,20,4``
+#. make sure to uncomment on of this 3define lines if it has 2 slashes in front of it by removing them.
 #. Find the 4 characters that start with ``0x`` and add the address for your |I2C| backpack after it. We default to 3F, but your display may be 27. The text would read ``0x27`` if that was the case.
 #. In the next field, enter the number of columns in your display. The default is 16. If you have a 20 column display, enter that instead.
 #. In the last field, enter the number of rows in your display. We default to a 2 row display. If you have a 4 row display, change this to 4.
@@ -169,7 +172,7 @@ Be aware that the combined IP address and port number can easily exceed 20 chara
 
 To accomplish this, you will need to edit "WifiInterface.cpp" included with the |EX-CS| software. Each time you want to upgrade the software, you will need to repeat this edit.
 
-In "WifiInterface.cpp", you need to locate the ``LCD(4...)`` line (should be around line #313):
+In "WifiInterface.cpp", you need to locate the ``LCD(4...)`` line (should be around line #350):
 
 .. code-block:: cpp
 

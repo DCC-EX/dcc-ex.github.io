@@ -106,8 +106,8 @@ We've compiled this simple summary table to help with this:
     - Yes
     - DCC and DC [2]_
     - Inexpensive and includes both WiFi and Bluetooth connectivity, limited in I/O pins
-  * - SAMD
-    - Beta [4]_
+  * - SAMD21
+    - Limited [4]_ [8]_
     - Yes [5]_
     - No
     - Yes
@@ -141,6 +141,7 @@ We've compiled this simple summary table to help with this:
 .. [5] HAL/|I2C| connectivity is only available via the blocking Arduino Wire library at present
 .. [6] While the Mega+WiFi boards seem like a good option and are based on our well-known, stable Mega2560 platform, there are many reports of quality issues with these, so buyer beware
 .. [7] The core development team no longer have access to these, and testing is limited to ensuring the software compiles for the board type
+.. [8] The core Arduino library has a bug affecting serial console output which can be patched but renders the device unsuited for future development until fixed in the main Arduino core library for SAMD21
 
 Will you support other microcontrollers in the future?
 =======================================================

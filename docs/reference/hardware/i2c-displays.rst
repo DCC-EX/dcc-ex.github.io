@@ -223,7 +223,7 @@ Apart from the main status display (display '0'), |EX-CS| allows definition of m
 
 .. image:: /_static/images/display/polar_express_oled.jpg
   :alt: OLED showing train departure times
-  :scale: 10%
+  :scale: 60%
 
 In order to configure additional displays, you will need to add lines to "myHal.cpp" in order to create the displays when the command station is running. Below we configure an additional OLED display as display #1, and an LCD as display #2:
 

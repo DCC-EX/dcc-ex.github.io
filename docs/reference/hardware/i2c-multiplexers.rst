@@ -23,7 +23,7 @@ In simple terms in the context of |I2C| communication, a multiplexer allows for 
 
 This enables:
 
-- Using multiple devices with the same, hard coded |I2C| address
+- Using multiple devices with the same, hard coded |I2C| address (including displays)
 - Being able to use more devices than normal due to limited address ranges
 - Split an |I2C| bus electrically to overcome capacitance/resistance issues which can dramatically improve reliability
 

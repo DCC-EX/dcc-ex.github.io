@@ -757,7 +757,7 @@ Locos - Definition and Control
 
 |force-break|
 
-``FORGET( loco )`` |NEW-IN-V5| Forget the provided the loco, resulting in it being removed from the reminders table
+``FORGET`` |NEW-IN-V5| Forget the loco in the running automation/sequence
 
 TrackManager Control
 --------------------

@@ -37,7 +37,7 @@ To define solenoid/coil based turnouts using |EX-R| (whether or not they are to 
 - ``VIRTUAL_TURNOUT(id [, "description"])`` - use this command when you need to define a custom macro that controls the various pins and duration required to switch a turnout
 - ``TURNOUT(id, addr, sub_addr [, "description"])`` - use this command when using DCC accessory decoders to control the servos
 
-Refer to :ref:`ex-rail/ex-rail-reference:turnouts/points` for details on these commands, along with :ref:`ex-rail/creating-elements:adding turnouts/points` for some further information and examples.
+Refer to :ref:`ex-rail/ex-rail-command-reference:turnout/point objects - definition and control` for details on these commands, along with :ref:`ex-rail/creating-elements:adding turnouts/points` for some further information and examples.
 
 Connecting and controlling the hardware
 =======================================

@@ -56,7 +56,7 @@ This is a simple substitution that lets you have readable names for things in yo
       THROW(COAL_YARD_TURNOUT)
       GREEN(COAL_YARD_SIGNAL_3)
 
-Refer to :ref:`ex-rail/ex-rail-reference:aliases` for more information.
+Refer to :ref:`ex-rail/ex-rail-command-reference:aliases` for more information.
 
 Alias names:
 

@@ -278,7 +278,7 @@ number. So now our route looks like this:
    :align: center
    :scale: 100%
 
-Assuming that you have defined your turnouts with :ref:`TURNOUT commands. <ex-rail/EX-RAIL-summary:Automations, Routes and Sequences>`
+Assuming that you have defined your turnouts as per :ref:`ex-rail/ex-rail-command-reference:turnout/point objects - definition and control`
 
 .. code-block:: cpp
 
@@ -432,4 +432,4 @@ The READ_LOCO reads the loco address from the PROG track and the current route t
 Next Steps - Detailed Reference
 ===============================
 
-The previous pages have only been a small taste of what is possible with |EX-R|. Click :doc:`here </ex-rail/EX-RAIL-reference>` or click the :guilabel:`Next` button to explore the full capabilities of |EX-R|.
+The previous pages have only been a small taste of what is possible with |EX-R|. See the :doc:`/ex-rail/EX-RAIL-command-reference` or click the :guilabel:`Next` button to explore the full capabilities of |EX-R|.

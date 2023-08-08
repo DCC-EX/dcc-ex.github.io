@@ -631,7 +631,7 @@ so this section is an introduction to what I<sup>2</sup>C is and how to use it.<
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/pcf8574.jpg"><img alt="PCF8574 GPIO Expander Module" src="../../_images/pcf8574.jpg" style="width: 261.59999999999997px; height: 90.6px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 101 </span><span class="caption-text">PCF8574 GPIO Expander Module</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 102 </span><span class="caption-text">PCF8574 GPIO Expander Module</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <table class="docutils align-default" id="id2">
@@ -707,7 +707,7 @@ so this section is an introduction to what I<sup>2</sup>C is and how to use it.<
 <figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="../../_images/connectors.jpg"><img alt="JST-XH, Dupont, and Grove connectors" src="../../_images/connectors.jpg" style="width: 512.0px; height: 384.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 102 </span><span class="caption-text">From left-to-right, JST-XH connectors, Dupont connector shells, Dupont cable, and Grove converter cable.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 103 </span><span class="caption-text">From left-to-right, JST-XH connectors, Dupont connector shells, Dupont cable, and Grove converter cable.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Newer microcontrollers are using miniature JST-PH fine-pitch STEMMA QT or Qwiic standard for I<sup>2</sup>C connection for 3.3v based systems. These are harder to make DIY cables for, but you can buy many varying lengths of premade cables that makes connection of I<sup>2</sup>C devices very quick and easy!</p>
@@ -723,41 +723,41 @@ so this section is an introduction to what I<sup>2</sup>C is and how to use it.<
 <figure class="align-default" id="id4">
 <a class="reference internal image-reference" href="../../_images/mega_i2cpins.png"><img alt="Arduino Mega/Uno |I2C| pins" src="../../_images/mega_i2cpins.png" style="width: 527.2px; height: 243.20000000000002px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 103 </span><span class="caption-text">Arduino Mega/Uno I<sup>2</sup>C pins</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 104 </span><span class="caption-text">Arduino Mega/Uno I<sup>2</sup>C pins</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Some motor shields come with header pins for the I<sup>2</sup>C connections, for example the Arduino motor shield and the DeekRobot equivalent.  The header pins are labelled, and are ringed in the images below.</p>
 <figure class="align-default" id="id5">
 <a class="reference internal image-reference" href="../../_images/deek_robot.jpg"><img alt="Motor shield |I2C| pins" src="../../_images/deek_robot.jpg" style="width: 400.0px; height: 400.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 104 </span><span class="caption-text">Motor Shield I<sup>2</sup>C pins</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 105 </span><span class="caption-text">Motor Shield I<sup>2</sup>C pins</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The next image shows an Arduino Mega and Deekrobot motor shield mounted in a 3D-printed 6-inch rack case, with one set of I<sup>2</sup>C pins connected to an OLED display on the front of the case, and one set of I<sup>2</sup>C pins connected to two external connectors at the rear of the case.  The orange wires connect four LEDs (with current-limiting series resistors) that provide panel indications of incoming 5V and 14V power, and of outgoing DCC power to the Main and Programming tracks.  I’ve also mounted a small self-adhesive aluminium heat sink onto the L298P device.</p>
 <figure class="align-default" id="id6">
 <a class="reference internal image-reference" href="../../_images/deekrobot_motor_shield.jpg"><img alt="Motor shield |I2C| pins" src="../../_images/deekrobot_motor_shield.jpg" style="width: 300.8px; height: 272.8px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 105 </span><span class="caption-text">Motor Shield I<sup>2</sup>C pins</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 106 </span><span class="caption-text">Motor Shield I<sup>2</sup>C pins</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>I<sup>2</sup>C devices are all effectively connected in parallel to the bus.  If you only have one device, you can just run a four-wire connector between the pins on the Arduino, or on the motor shield, if you have one, to the device.  Be sure to check that you connect SDA to SDA, SCL to SCL, Vcc to Vcc and GND to GND though - they are almost always in a different order on each device!</p>
 <figure class="align-default" id="id7">
 <a class="reference internal image-reference" href="../../_images/ArduinoMegaOLED.png"><img alt="Arduino Mega with OLED Display" src="../../_images/ArduinoMegaOLED.png" style="width: 451.8px; height: 295.2px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 106 </span><span class="caption-text">Connecting an OLED Display to an Arduino Mega</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 107 </span><span class="caption-text">Connecting an OLED Display to an Arduino Mega</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id8">
 <a class="reference internal image-reference" href="../../_images/ArduinoMegaServo.png"><img alt="Arduino Mega with one servo controllers" src="../../_images/ArduinoMegaServo.png" style="width: 555.3px; height: 370.8px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 107 </span><span class="caption-text">Connecting a PCA9685 Servo Controller to an Arduino Mega</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 108 </span><span class="caption-text">Connecting a PCA9685 Servo Controller to an Arduino Mega</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>If you have more than one device, then there are a few options open to you.  Some modules (PCA9685 and PCF8574 for example) have I<sup>2</sup>C pins at both ends of the PCB, so you can use one set of pins to connect to the Arduino and the other set to connect to another device.  You can chain multiple devices, subject to the restrictions described in sections for Cabling and Pull-ups.</p>
 <figure class="align-default" id="id9">
 <a class="reference internal image-reference" href="../../_images/ArduinoMega2xServo.png"><img alt="Arduino Mega with two servo controllers" src="../../_images/ArduinoMega2xServo.png" style="width: 661.5px; height: 409.5px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 108 </span><span class="caption-text">Connecting Two Servo Controllers</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 109 </span><span class="caption-text">Connecting Two Servo Controllers</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Alternatively, you can use an I<sup>2</sup>C hub, which you can purchase (<a class="reference external" href="https://www.seeedstudio.com/Grove-I2C-Hub.html">SeeedStudio do one</a>, but check that you have compatible connectors - it uses Grove connectors); or you can make one.  You can use a breadboard with jumpers, or a stripboard with 4 rows of pins.  Just ensure that the strips separately connect all the SCL pins together, all the SDA together, all the Vcc together and all the GND together.  SeeedStudio also sell 4-wire cables with three connectors (also Grove), allowing a single connector to ‘fan out’ to two devices; by connecting another cable, you can add another device, and so on.</p>
@@ -765,14 +765,14 @@ so this section is an introduction to what I<sup>2</sup>C is and how to use it.<
 <figure class="align-default" id="id10">
 <a class="reference internal image-reference" href="../../_images/i2chub.jpg"><img alt="Home-brew |I2C| Passive Hub" src="../../_images/i2chub.jpg" style="width: 384.0px; height: 288.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 109 </span><span class="caption-text">Home-brew I<sup>2</sup>C Hub, on Vero Stripboard (strips running left-to-right)</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 110 </span><span class="caption-text">Home-brew I<sup>2</sup>C Hub, on Vero Stripboard (strips running left-to-right)</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>If you just want a temporary hookup for multiple I<sup>2</sup>C devices, then you can use a small piece of breadboard. The board shown has space for five Dupont connectors in each half row.</p>
 <figure class="align-default" id="id11">
 <a class="reference internal image-reference" href="../../_images/breadboard-hub.jpg"><img alt="Bread-board based |I2C| Passive Hub" src="../../_images/breadboard-hub.jpg" style="width: 512.0px; height: 384.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 110 </span><span class="caption-text">I<sup>2</sup>C Hub on Breadboard</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 111 </span><span class="caption-text">I<sup>2</sup>C Hub on Breadboard</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -789,13 +789,13 @@ so this section is an introduction to what I<sup>2</sup>C is and how to use it.<
 <figure class="align-default" id="id12">
 <a class="reference internal image-reference" href="../../_images/pca9685_pullups.jpg"><img alt="PCA9685 pull-up resistors" src="../../_images/pca9685_pullups.jpg" style="width: 329.09999999999997px; height: 133.2px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 111 </span><span class="caption-text">Location of Pull-up Resistors for PCA9685 Module (ringed in red)</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 112 </span><span class="caption-text">Location of Pull-up Resistors for PCA9685 Module (ringed in red)</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id13">
 <a class="reference internal image-reference" href="../../_images/pcf8574_pullups.jpg"><img alt="PCF8574 pull-up resistors" src="../../_images/pcf8574_pullups.jpg" style="width: 436.0px; height: 151.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 112 </span><span class="caption-text">Location of Pull-up Resistors for PCF8574 Module (ringed in red)</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 113 </span><span class="caption-text">Location of Pull-up Resistors for PCF8574 Module (ringed in red)</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Check the PCB tracks from the SDA and SCL pin connectors; one side of each resistors will be connected to one of these, and the other side of both will be connected to the Vcc supply.</p>

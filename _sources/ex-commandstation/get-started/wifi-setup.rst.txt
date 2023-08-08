@@ -22,6 +22,12 @@ This page is specifically intended for a |conductor-text| who intends to install
 
 ----
 
+.. warning:: 
+
+    Please be aware that the Espressif firmware provided with your device **may not immediately work** with |EX-CS| as there are many different versions which behave quite differently.
+
+    We highly recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 available on our :doc:`/download/esp8266` download page prior to reaching out for support from the team.
+
 The purpose of adding WiFi to your |EX-CS| is allow connection up to 5 WiFi throttles (e.g. phones) DIRECTLY to it, eliminating the need for a computer and another software controller. 
 
 However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to the |EX-CS| using the |JMRI| application (or similar), you can :doc:`skip ahead to the next page <installer>`.

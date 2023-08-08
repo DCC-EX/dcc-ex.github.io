@@ -228,7 +228,20 @@ Options are:
 * Configure options on the next screen
 * Use my existing configuration files
 
-If you select ``Use my existing configuration files`` your will be prompted to find the folder where the configuration files are located.
+.. figure:: /_static/images/ex-installer/ex_cs_select_existing_config.png
+   :alt: EX-Installer - EX-CommandStation select existing config
+   :scale: 40%
+   :align: right
+
+   EX-Installer - Select existing configuration files
+
+If you select ``Use my existing configuration files`` you will be prompted to find the folder where the configuration files are located:
+
+* Click the :guilabel:`Browse` button and navigate through your computer's folders and files to select the location containing your existing configuration files
+* Select one of the files in the folder and click the :guilabel:`Open` button to select it
+* The chosen folder will be displayed
+
+|FORCE-BREAK|
 
 If you have selected ``Configure options on the next screen``, to proceed, click the :guilabel:`Configure EX-CommandStation` button.
 
@@ -433,6 +446,8 @@ Advanced Config
 
 If you wish to edit the 'config' files directly, select this option.  An additional screen will be presented for to edit the main config files.
 
+Note there is an additional option ``Create myAutomation.h`` that allows a blank myAutomation.h file to be created, which you can edit on the following *Advanced Config* screen. Leaving this option disabled means a myAutomation.h file will not be generated if it is not required, which saves memory on your |EX-CS| device.
+
 Unless you have selected *Advanced Config*, to proceed, click the :guilabel:`Compile and Load` button. See *iv* below.
 
 If you have selected *Advanced Config*, to proceed, click the :guilabel:`Advanced Config` button.  See *iii* below.
@@ -460,7 +475,9 @@ iii) 'Advanced Configuration' screen
 
 If you have selected ``Advanced Config`` on the previous screen, or if you chose to copy your existing configuration files, you will be presented with this screen. 
 
-On this screen you can edit the main configuration files. If you have more than two files to edit, they will be separated into tabs as shown in the second figure above.
+On this screen you can edit the configuration files. If you have more than two files to edit, they will be separated into tabs as shown in the second figure above.
+
+Note that if you did not enable any options requiring myAutomation.h, and did not enable ``Create myAutomation.h``, you will only be able to edit config.h on this screen.
 
 To proceed, click the :guilabel:`Compile and Load` button. See *iv* below.
 

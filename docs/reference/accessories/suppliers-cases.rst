@@ -39,7 +39,7 @@ Chesterfield Cases
 
 .. rst-class:: clearer
 
-Chesterfield sells a case to fit the Mega DCC-EX Command Station as well as a tiny decoder adapter board (The Dave Falkenburg optoisolator board to pickup the DCC signal from the tracks) that can connect to a microcontroller and operate as a decoder or DCC packet sniffer with the right sketch `See the Myna Bay Website <http://www.mynabay.com/dcc_monitor>`_ .
+Chesterfield sells a case to fit the Mega DCC-EX Command Station along with complete controllers and related products.
 
 .. image:: /_static/images/suppliers/command_station_case.jpg
     :alt: Chesterfield Command Station Case

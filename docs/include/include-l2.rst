@@ -76,7 +76,7 @@
       :alt: EX-MotorShield8874
       :scale: 30%
       :class: image-min-width-144
-      :target: ../../news/posts/20230806.html
+      :target: ../../news/posts/20230807.html
 ..
 .. ................................................
 ..

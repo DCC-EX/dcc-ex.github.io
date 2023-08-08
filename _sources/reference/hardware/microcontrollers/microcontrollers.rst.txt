@@ -109,7 +109,7 @@ You can obtain the zip file containing these from our website here:
 
 .. rst-class:: dcclink
 
-  `Nucleo USB drivers and diagnostic firmware <../../_static/files/nucleo/st_micro_nucleo_drivers.zip>`_
+  `Nucleo USB drivers and diagnostic firmware <../../../_static/files/nucleo/st_micro_nucleo_drivers.zip>`_
 
 Once you download and extract this zip file, you will need to install the STLink drivers located in the "en.stsw-linik009" folder.
 

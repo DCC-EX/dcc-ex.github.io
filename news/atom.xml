@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2023-08-08T21:56:20.981032+00:00</updated>
+  <updated>2023-08-08T23:01:25.649492+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.3">ABlog</generator>
@@ -20,7 +20,7 @@
 &lt;p&gt;We highly recommend upgrading to version 5 to take advantage of the improvements we’ve made, and especially for those users who are using our new &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;MotorShield8874&lt;/span&gt;, as we’ve improved how it deals with overloads and inrush current amongst other enhancements.&lt;/p&gt;
 &lt;p&gt;To get your hands on this latest release, select &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Latest&lt;/span&gt; &lt;span class="pre"&gt;Production&lt;/span&gt;&lt;/code&gt; when running &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt; (see &lt;a class="reference internal" href="ex-installer/installing.html#download-and-run-ex-installer"&gt;&lt;span class="std std-ref"&gt;Download and Run EX-Installer&lt;/span&gt;&lt;/a&gt;), or you can download it manually by following the directions in &lt;a class="reference internal" href="download/ex-commandstation.html#latest-ex-commandstation-official-release"&gt;&lt;span class="std std-ref"&gt;Latest EX-CommandStation Official Release&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;We’ve outlined the key updates below but this is not an exhaustive list.&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="../../news/posts/20230806.html"&gt;&lt;img alt="EX-MotorShield8874" class="image-min-width-144" src="https://dcc-ex.com/_images/new_in_version_5.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="../../news/posts/20230807.html"&gt;&lt;img alt="EX-MotorShield8874" class="image-min-width-144" src="https://dcc-ex.com/_images/new_in_version_5.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;section id="ex-commandstation-features-fixes-and-enhancements"&gt;
 &lt;h2&gt;EX-CommandStation features, fixes, and enhancements&lt;/h2&gt;
 &lt;ul class="simple"&gt;
@@ -420,7 +420,6 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 &lt;p&gt;23 October 2022 - 21:00 USA - Eastern Standard Time&lt;/p&gt;
 &lt;p&gt;With a drum roll playing in the background, I am please to announce that the DCC-EX team has released version 4.1.1.&lt;/p&gt;
 &lt;p&gt;As of last night that is the new official version available for download from our web side. This is considered a minor update but it does include a few bug fixes, the primary one being able to read long loco id’s. Included as well are several technical updates and for the one percent that understand the meaning, I saw coding words such as ACK, ATGTE and ATLT. For the 99 percent of us out there, some of the new features include the ability to fade an led when using a pca9685 board, a KILLALL function that stops all EX-Rail as well as diagnostic command, and new commands to help throttle developers.&lt;/p&gt;
-&lt;p&gt;To view a more complete list, here is a link to the &lt;a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/blob/master/Release_Notes/release_notes_v4.1.1.md"&gt;release notes&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;An interesting thought occurred to me as I was planning the writing of the update. Before it is published it gets the approval from multiple team members. Looking at it in a different light, approval came from the United Kingdom, Sweden, Australia, Canada, as well as the United States. That illustrates why DCC-EX is becoming a dominant player in the control of model railroads. Keep the downloads coming!!&lt;/p&gt;
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;Contact info:&lt;/div&gt;

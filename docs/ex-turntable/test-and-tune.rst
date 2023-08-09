@@ -366,9 +366,7 @@ The rotary encoder software can be downloaded from:
 
   `dcc-ex-rotary-encoder GitHub repository <https://github.com/peteGSX-Projects/dcc-ex-rotary-encoder>`_
 
-To utilise |EX-IO|, you must be running the latest unreleased Development version of |EX-CS|.
-
-Refer to :ref:`download/ex-commandstation:latest ex-commandstation unreleased development version` on how to obtain this.
+To utilise this rotary encoder, you must be running version 5.0.0 or later of |EX-CS|.
 
 Enabling the device driver
 --------------------------

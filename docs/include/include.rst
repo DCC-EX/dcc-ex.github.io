@@ -252,6 +252,14 @@
 
     :doc:`Visual Studio Code (VSC) </reference/glossary>`
 ..
+.. |DCC-EX Native Commands| raw:: html
+   
+  <div title="Previously referred to as <DCC++> commands."><a href="/dcc-ex.github.io/reference/glossary.html">DCC-EX Native Commands</a></span>
+..
+.. |DCC-EX Native Protocol| raw:: html
+   
+  <div title="Including the DCC-EX Native API. Uses the DCC-EX Native Commands. (Previously referred to as DCC++ protocol.)"><a href="/dcc-ex.github.io/reference/glossary.html">DCC-EX Native Commands</a></span>
+..
 .. ...............................................
 ..
 .. |githublink-ex-turntable| raw:: html

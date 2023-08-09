@@ -81,9 +81,9 @@ Operation
 
 To use the program, you can either click on the "Serial" dropdown button and select "Emulator" to run in emulator mode or after making sure your hardware is properly connected, select "Serial".
 
-Next, click on the "Connect DCC++ EX" button. 
+Next, click on the "Connect DCC-EX" button. 
 
-If you are in "emulator mode", you can skip to the next step. When using the serial connection, if the program finds a compatible device, it will open a popup a window showing you a selection. It may show a line at the top such as "Arduino Mega 2560 (COM3)". Your com port may vary. Click on your board to select it and then click the "Connect DCC++ EX" button.
+If you are in "emulator mode", you can skip to the next step. When using the serial connection, if the program finds a compatible device, it will open a popup a window showing you a selection. It may show a line at the top such as "Arduino Mega 2560 (COM3)". Your com port may vary. Click on your board to select it and then click the "Connect DCC-EX" button.
 
 
 .. raw:: html

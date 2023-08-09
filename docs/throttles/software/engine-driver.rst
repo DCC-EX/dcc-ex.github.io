@@ -17,7 +17,7 @@ Engine Driver
    :scale: 60%
    :align: left
 
-**Engine Driver** (ED) is an Android App that uses the |WiThrottle Protocol| *or* the **Native (DCC++) Protocol** to connect directly to the |EX-CS| via WiFi. It can also connect to the JMRI WiThrottle Server via WiFi using the |WiThrottle Protocol|. 
+**Engine Driver** (ED) is an Android App that uses the |WiThrottle Protocol| *or* the |DCC-EX Native Commands| to connect directly to the |EX-CS| via WiFi. It can also connect to the JMRI WiThrottle Server via WiFi using the |WiThrottle Protocol|. 
 
 If you wish to connect Engine Driver directly to |EX-CS|, you need to add a WiFi option to your |EX-CS| as explained here: :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`.
 
@@ -66,8 +66,8 @@ EX-CommandStation Specific or Advantageous Features
 * Able to select local images for roster locos
 * New 'Request Loco ID' & 'Drive Away' feature from a Program track onto Mainline track with |EX-CS|
 
-EX-CommandStation Specific Features - when using the Native (DCC++) protocol
-============================================================================
+EX-CommandStation Specific Features - when using the DCC-EX Native Protocol
+===========================================================================
 
 * Read and write DCC addresses on the Programming Track
 * Read and write CVs of decoders on the Programming Track

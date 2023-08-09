@@ -68,12 +68,12 @@ Connect Everything:
    `Run EX-WebThrottle Now <https://DCC-EX.github.io/WebThrottle-EX>`_
 
 * Click on the "Serial" dropdown button and select "Serial"
-* Click on the :guilabel:`Connect DCC++ EX` button 
+* Click on the :guilabel:`Connect DCC-EX` button 
 * If the program finds a compatible device,
 
   * It will open a popup a window showing you a selection. |BR| It may show a line at the top such as "Arduino Mega 2560 (COM3)". (The COM port will vary)
   * Click on your board to select it
-  * Then click the :guilabel:`Connect DCC++ EX` button
+  * Then click the :guilabel:`Connect DCC-EX` button
   
 * You should then be connected to the |EX-CS| and should see the response from the Command Station in the log textbox of the debug console at the bottom of the throttle window. |BR| Make sure your debug console is open. If it isn't, use the slider button in the lower left to open it. You can also open the DevTools window in your browser to see more developer logging
 * Once you are connected, you can:   

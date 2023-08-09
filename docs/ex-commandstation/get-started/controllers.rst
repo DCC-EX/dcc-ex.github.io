@@ -126,8 +126,8 @@ Compatible USB Throttles
 
 There is currently only one USB compatible Throttle (Controller) for the |EX-CS|.
 
-Our EX-WebThrottle (DCC++ | USB/Serial)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Our EX-WebThrottle (DCC-EX Native Commands | USB/Serial)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The simplest option is to just use a throttle connected directly to the Command Station. The simplest of all is arguably |EX-WT|, connected via a USB cable from your computer and web browser directly to the Command Station. You have control of multiple locomotives and can operate turnouts. There is a way to replace the USB cable with a wireless connection, but we will cover that later in the Wireless USB Bridge section. Below is a picture of |EX-WT| with the side menu open. You can click on the image to see it full size.
 

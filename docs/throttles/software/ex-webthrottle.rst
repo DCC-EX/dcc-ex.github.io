@@ -75,9 +75,9 @@ Operation
 
 To use the program, you can either click on the "Serial" dropdown button and select "Emulator" to run in emulator mode or after making sure your hardware is properly connected, select "Serial".
 
-Next, click on the "Connect DCC++ EX" button. 
+Next, click on the "Connect DCC-EX" button. 
 
-If you are in "emulator mode", you can skip to the next step. When using the serial connection, if the program finds a compatible device, it will open a popup a window showing you a selection. It may show a line at the top such as "Arduino Mega 2560 (COM3)". Your com port may vary. Click on your board to select it and then click the "Connect DCC++ EX" button.
+If you are in "emulator mode", you can skip to the next step. When using the serial connection, if the program finds a compatible device, it will open a popup a window showing you a selection. It may show a line at the top such as "Arduino Mega 2560 (COM3)". Your com port may vary. Click on your board to select it and then click the "Connect DCC-EX" button.
 
 
 .. raw:: html
@@ -95,7 +95,7 @@ You should then be connected to the |EX-CS| and should see the response from the
 
 
 
-Once you are connected, you can enter the ``<s>`` command in the "direct command" textbox to get status information from your |EX-CS|. To do this just enter ``s`` (without the quotes) and press the SEND button. You can send any DCC++ API command in this way. You should see <iDCC++...> returned in the log window with your version, type of Arduino, type of motor shield, and some other information.
+Once you are connected, you can enter the ``<s>`` command in the "direct command" textbox to get status information from your |EX-CS|. To do this just enter ``s`` (without the quotes) and press the SEND button. You can send any |DCC-EX Native Commands| in this way. You should see <iDCC++...> returned in the log window with your version, type of Arduino, type of motor shield, and some other information.
 
 
 .. raw:: html

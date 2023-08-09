@@ -152,7 +152,7 @@ There are three ways to load & store your Locomotive Icon Image in Engine Driver
 
   Requirements for this to work:
 
-    * Have identical names (from JMRI Roster ID to DCC++EX EXRAIL Roster ID)  example ID;    "PE 1225"
+    * Have identical names (from JMRI Roster ID to |DCC-EX| |EX-R| Roster ID)  example ID;    "PE 1225"
     * Have image icons displayed for the locomotives
 
 2. **Manually entered directly into your Android Engine Driver folder**

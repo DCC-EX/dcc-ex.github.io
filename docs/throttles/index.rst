@@ -16,7 +16,7 @@ This page contains lists of compatible Throttles (Controllers) that currently su
 
 
 * :ref:`By Client Technology <throttles/index:throttles - by client technology>`  (e.g. Android, iOS, Web Browser, PC)
-* :ref:`By Communication Technology <throttles/index:throttles - by communication technology>` (e.g. Native DCC++ commands, wiThrottle Protocol)
+* :ref:`By Communication Technology <throttles/index:throttles - by communication technology>` (e.g. |DCC-EX Native Commands|, wiThrottle Protocol)
 
 |conductor|
 
@@ -78,10 +78,10 @@ Throttles - By Communication technology
 General
 -------
 
-- :doc:`WiThrottle Server, Web Server, DCC++ API Explained <protocols>`
+- :doc:`WiThrottle Server, Web Server, DCC-EX Native Commands Explained <protocols>`
 
-DCC-EX (Native <DCC++> commands)
---------------------------------
+DCC-EX (DCC-EX Native Commands)
+-------------------------------
 
 - :doc:`EX-WebThrottle <software/ex-webthrottle>`
 - :doc:`Engine Driver (Android)<software/engine-driver>`

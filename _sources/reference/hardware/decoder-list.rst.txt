@@ -45,7 +45,7 @@ If you wish to add to this list, please fill out the DCC Decoder Feedback form a
   * 3/3 - Works exactly as expected.
 * Comments - Any other relevant information discovered during testing or support tickets.
 
-Note to manufacturers: This list is not designed in any way to disparage or favour specific manufacturers, and is simply a factual observation of what the DCC++ EX team have noted while helping people get up and running with various DCC decoders.
+Note to manufacturers: This list is not designed in any way to disparage or favour specific manufacturers, and is simply a factual observation of what the DCC-EX team have noted while helping people get up and running with various DCC decoders.
 
 .. list-table:: Decoder List
   :widths: auto

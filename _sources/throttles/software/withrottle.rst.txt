@@ -23,7 +23,7 @@ Please visit their website: https://www.withrottle.com
 
 You can find it in the App Store: `WiThrottle <http://itunes.apple.com/app/id344172578>`_
 
-For more information more information about these protocols, see :doc:`WiThrottle Server, Web Server, DCC++ API Explained </throttles/protocols>`
+For more information more information about these protocols, see :doc:`WiThrottle Server, Web Server, DCC-EX Native Commands Explained </throttles/protocols>`
 
 .. _withrottle-features:
 

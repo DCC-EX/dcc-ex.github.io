@@ -81,7 +81,7 @@ Meta Keywords
 
 The meta keywords help search entries find find the page based on key words. 
 
-By using the recommended includes (below) several key meta keywords are included in all pages.  i.e. ``DCC DCC++ EX DCC++EX DCC-EX``
+By using the recommended includes (below) several key meta keywords are included in all pages.  i.e. ``DCC-EX DCC DCC++ EX DCC++EX``
 Generally each page should start with any additional meta keywords that are appropriate to the page.
 
 

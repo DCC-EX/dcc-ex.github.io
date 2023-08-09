@@ -34,6 +34,7 @@ Hardware, Software, tools
     hardware/index
     software/index
     software/index-dcpp-commands
+    /ex-rail/EX-RAIL-command-reference
     developers/index
     accessories/index
     tools/index

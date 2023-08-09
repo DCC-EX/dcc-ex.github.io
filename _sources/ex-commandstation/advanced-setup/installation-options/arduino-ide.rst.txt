@@ -28,8 +28,8 @@ Rather than go into details that are already covered in great detail on the Ardu
 
 `Arduino IDE Guide <https://www.arduino.cc/en/Guide>`_
 
-Download the DCC++ EX ZIP file
-===============================
+Download the DCC-EX ZIP file
+============================
 
 Use the link to either the ZIP or TAR file at the bottom of our GitHub page here:
 

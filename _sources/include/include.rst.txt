@@ -252,6 +252,14 @@
 
     :doc:`Visual Studio Code (VSC) </reference/glossary>`
 ..
+.. |DCC-EX Native Commands| replace::
+   
+    :doc:`DCC-EX Native Commands </reference/glossary>`
+..
+.. |DCC-EX Native Protocol| replace::
+   
+    :doc:`DCC-EX Native Protocol </reference/glossary>`
+..
 .. ...............................................
 ..
 .. |githublink-ex-turntable| raw:: html

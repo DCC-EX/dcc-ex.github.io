@@ -29,6 +29,10 @@ Glossary
       - Digital Command Control.  NMRA Specification for controlling trains. |BR| See https://dccwiki.com/NMRA/NMRA_Standards
     * - Engine Driver |BR| Engine Driver Throttle
       - Android app for controlling DCC locos using the wiThrottle Protocol |BR| See :doc:`/throttles/software/engine-driver`
+    * - DCC++ Commands |BR| <DCC++> |BR| DCC++ Protocol |BR| DCC++ API
+      - Old name for the DCC-EX Native Commands / DCC-EX Native Protocol. |BR| Some references to this still remain for backward compatibility. i.e. JMRI still refers to DCC++.
+    * - DCC-EX Native Commands |BR| DCC-EX Native Protocol |BR| DCC-EX Native API
+      - New name for the DCC++ Commands/Protocol/API. |BR| Refer to :doc:`/reference/software/command-summary-consolidated` for details.
     * - JMRI
       - `Java Model Railroad Interface <https://www.jmri.org/>`_
     * - Motor Driver 

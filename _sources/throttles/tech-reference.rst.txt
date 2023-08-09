@@ -14,7 +14,7 @@ Technical Reference for Throttle Developers
     :depth: 3
     :local:
 
-This page is intended to capture relevant information to assist those who develop throttles compatible with |EX-CS| using the Native (DCC++) protocol, not the WiThrottle protocol.
+This page is intended to capture relevant information to assist those who develop throttles compatible with |EX-CS| using the |DCC-EX Native Protocol|, not the WiThrottle protocol.
 
 This page should be read in conjunction with the :doc:`/reference/developers/api` in order to understand how to send and parse |DCC-EX| API commands correctly, and ignore any irrelevant commands.
 
@@ -124,7 +124,7 @@ Obtaining loco (cab) status
 
   * cabid = Loco's DCC address
   * slot = Position in the reminders table (for the convenience of slot managers later)
-  * speedbyte = The DCC packet speed bye including the direction bit (NOT the same as the DCC++ speed)
+  * speedbyte = The DCC packet speed bye including the direction bit (NOT the same as the DCC-EX speed)
 
       * reverse - 2-127 = speed 1-126, 0 = stop
       * forward - 130-255 = speed 1-126, 128 = stop

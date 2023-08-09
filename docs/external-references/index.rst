@@ -34,7 +34,7 @@ Little Wicket Railway
 Toms Trains and Things
 ----------------------
 
-* 8 August 2023 - `Run DC & DCC From Your Cell Phone With DCC-EX V5.0 <https://www.youtube.com/watch?v=jboDYsF3EoE>`
+* 8 August 2023 - `Run DC & DCC From Your Cell Phone With DCC-EX V5.0 <https://www.youtube.com/watch?v=jboDYsF3EoE>`_
 
 Kevin C Smith
 -------------

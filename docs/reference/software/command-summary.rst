@@ -2,9 +2,9 @@
 .. include:: /include/include-l2.rst
 |EX-REF-LOGO|
 
-**********************
-DCC-EX Command Summary
-**********************
+*****************************
+DCC-EX Native Command Summary
+*****************************
 
 |engineer|
 

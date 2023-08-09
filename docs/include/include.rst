@@ -252,13 +252,13 @@
 
     :doc:`Visual Studio Code (VSC) </reference/glossary>`
 ..
-.. |DCC-EX Native Commands| raw:: html
+.. |DCC-EX Native Commands| replace::
    
-  <div title="Previously referred to as <DCC++> commands."><a href="/dcc-ex.github.io/reference/glossary.html">DCC-EX Native Commands</a></span>
+    :doc:`DCC-EX Native Commands </reference/glossary>`
 ..
-.. |DCC-EX Native Protocol| raw:: html
+.. |DCC-EX Native Protocol| replace::
    
-  <div title="Including the DCC-EX Native API. Uses the DCC-EX Native Commands. (Previously referred to as DCC++ protocol.)"><a href="/dcc-ex.github.io/reference/glossary.html">DCC-EX Native Commands</a></span>
+    :doc:`DCC-EX Native Protocol </reference/glossary>`
 ..
 .. ...............................................
 ..

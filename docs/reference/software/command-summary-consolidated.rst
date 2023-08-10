@@ -17,14 +17,14 @@ DCC-EX Native Commands - Consolidated Summary
 **This is a summary, for a detailed command, see...**
   :doc:`Command Reference <command-reference>`
 
-This page describes all the DCC-EX commands that the |EX-CS| supports.
+This page describes all the |DCC-EX Native commands| that the |EX-CS| supports.
 
 Conventions used on this page
 =============================
 
 - ``<`` and ``>`` - All DCC-EX commands are surrounded by these characters to indicate the beginning and end, these must always be included
 - First letter or number - These are called OPCODES, are case sensitive, and must be specified as directed, eg. ``1``, ``c``, or ``-``
-- CAPITALISED words - These are parameters referdepro to as keywords, and should be specified as directed, eg. ``MAIN`` (note these are not case sensitive, however capitalising makes them easier to distinguish from other parameters)
+- CAPITALISED words - These are parameters referred to as keywords, and should be specified as directed, eg. ``MAIN`` (note these are not case sensitive, however capitalising makes them easier to distinguish from other parameters)
 - lowercase words - These are parameters that must be provided or are returned, with multiple parameters separated by a space " ", eg. ``cab``
 - Square brackets ``[]`` - Parameters within square brackets ``[]`` are optional and may be omitted, and if specifying these parameters, do not include the square brackets themselves
 - \| - Use of the \| character means you need to provide one of the provided options only, for example ``<0|1 MAIN|PROG|JOIN>`` becomes either ``<0 MAIN>`` or ``<1 MAIN>``
@@ -58,7 +58,7 @@ Power management
   *Parameters:*  N/A
   
   *Response:* |BR|
-  |_| repeated for each Channel/Track: ``<j IG track currentmax>`` |BR|
+  |_| repeated for each Channel/Track: ``<j G track currentmax>`` |BR|
   |_| > **track:**  channel/track |BR|
   |_| > **currentmax:** current in milliamps
   
@@ -93,20 +93,6 @@ Power management
 
 Cab (Loco) Commands
 -------------------
-
-``<f cab byte1 [byte2]]>`` - **Decoder Functions - Legacy command.**
-
-  *Parameters:* |BR|
-  |_| > **cab:** DCC Address of the decoder/loco |BR|
-  |_| > **byte1 byte2:** DCC function bytes as sent to decoders (up to F28)
-
-  *Response:* |BR|
-  |_| |_| Success: nothing |BR|
-  |_| |_| Fail: ``<X>``
-
-  *Notes:*
-  
-    Used by the sniffer
 
 ``<!>`` - **Emergency Stop**
 
@@ -193,8 +179,9 @@ Cab (Loco) Commands
   |_| > **speedbyte:** Speed in DCC speedstep format . |BR|
   |_|  |_| - reverse - 2-127 = speed 1-126, 0 = stop  |BR|
   |_|  |_| - forward - 130-255 = speed 1-126,  128 = stop |BR|
-  |_| > **FunctiMap:** individual function states represented by the the bits in a byte |BR| |BR|
-  |_| *Version Introduced: 4.1.1* 
+  |_| > **FunctiMap:** individual function states represented by the the bits in a byte
+
+  *Version Introduced: 4.1.1* 
   
   *Notes:*
    
@@ -227,17 +214,27 @@ Cab (Loco) Commands
   |_| The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question.
   |_|  |BR|
   |_| ``<l cab reg speedByte functMap>`` |BR|
-  |_| > **cab:** DCC Address of the decoder/loco |BR|
-  |_| > **speedbyte:** Speed in DCC speedstep format . |BR|
-  |_|  |_| - reverse - 2-127 = speed 1-126, 0 = stop  |BR|
-  |_|  |_| - forward - 130-255 = speed 1-126,  128 = stop |BR|
-  |_| > **FunctiMap:** individual function states represented by the the bits in a byte
+  |_| refer to the <t > command above for details
   
   *Notes:*
 
     Setting requests are transmitted directly to mobile loco decoder. |BR|
     Current state of loco functions (as known by commands issued since power on) is stored by the CommandStation - All functions within a group get set all at once per NMRA DCC standards. |BR|
     The command station knows about the previous settings in the same group and will not, for example, unset F2 because you change F1. If, however, you have never set F2, then changing F1 WILL unset F2. |BR|
+
+``<f cab byte1 [byte2]]>`` - **Decoder Functions - Legacy command.** |DEPRECATED|
+
+  *Parameters:* |BR|
+  |_| > **cab:** DCC Address of the decoder/loco |BR|
+  |_| > **byte1 byte2:** DCC function bytes as sent to decoders (up to F28)
+
+  *Response:* |BR|
+  |_| |_| Success: nothing |BR|
+  |_| |_| Fail: ``<X>``
+
+  *Notes:*
+  
+    Used by the sniffer
 
 ``<t reg cab speed dir>`` - **Set Cab (Loco) Speed - Legacy command** |DEPRECATED|
 
@@ -252,12 +249,7 @@ Cab (Loco) Commands
   *Response:* |BR|
   The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. |BR|
   |_| ``<l cab reg speedByte functMap>`` |BR|
-  |_| > **cab:** DCC Address of the decoder/loco |BR|
-  |_| > **reg:** redundant. Not used. |BR|
-  |_| > **speedbyte:** Speed in DCC speedstep format . |BR|
-  |_|  |_| - reverse - 2-127 = speed 1-126, 0 = stop  |BR|
-  |_|  |_| - forward - 130-255 = speed 1-126,  128 = stop |BR|
-  |_| FunctMap: individual function states represented by the the bits in a byte |BR|
+  |_| refer to the <t > command above for details
   |_|  |BR|
   Legacy response: |Deprecated| |BR|
   |_| ``<T reg speed dir>`` - do not rely on this response
@@ -500,7 +492,9 @@ Reading/Writing CVs - Programming track
   |_|  |_| - 1=on  |BR|
   |_|  |_| - 0=off
  
-  *Response:* ???
+  *Response:* |BR|
+  |_| Response (successful): 0 | 1 |BR|
+  |_| Response (fail): **<V -1>**
 
 ``<V cv value>`` - **Verify/Read of CV with guessed value**
   

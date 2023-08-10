@@ -40,13 +40,13 @@ Power management
 
 ``<D RESET>`` - **Re-boot the command Station**
 
-  *Parameters:* N/A
-
+  *Parameters:* N/A |BR|
   *Response:* N/A
 
 ``<J I>`` ``<JI>`` - **Request current status**
 
-  *Parameters:* N/A |BR|
+  *Parameters:* N/A
+
   *Response:* Repeated for each Channel/Track: ``<j I track current>`` |BR|
   |_| **track:**  channel/track |BR|
   |_| **current:** current in milliamps |BR| |BR|
@@ -59,8 +59,9 @@ Power management
   *Response:* |BR|
   |_| repeated for each Channel/Track: ``<j IG track currentmax>`` |BR|
   |_| **track:**  channel/track |BR|
-  |_| **currentmax:** current in milliamps |BR| |BR|
-  |_| *Version Introduced: 4.2.19*
+  |_| **currentmax:** current in milliamps |BR|
+  
+  *Version Introduced: 4.2.19*
 
 ``<onOff [track]>`` - **Turns power on and off to the MAIN and PROG tracks together or independently. Also allows joining the MAIN and PROG tracks together.**
 
@@ -86,6 +87,8 @@ Power management
     The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work. If you drive onto a programming track that is "joined" and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!
   
     In some split motor shield hardware configurations JOIN will not be able to work.
+
+----
 
 Cab (Loco) Commands
 -------------------
@@ -249,7 +252,6 @@ Cab (Loco) Commands
 
   *Response:* |BR|
   The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. |BR|
-  |_|  |BR|
   |_| ``<l cab reg speedByte functMap>`` |BR|
   |_| **cab:** DCC Address of the decoder/loco |BR|
   |_| **reg:** redundant. Not used. |BR|
@@ -266,6 +268,8 @@ Cab (Loco) Commands
   
     The *speedbyte* value is different to the *speed* sent, as it is an encoded (1,7 bits)  byte. |BR|
     This starts a reminder process for any external updates to the cab's (loco's) status.
+
+----
 
 Turnout/Points
 --------------
@@ -349,6 +353,8 @@ Turnout/Points
   |_| Response (successful): ``<H id 0|1>`` |BR|
   |_| Response (fail): ``<X>``
 
+----
+
 Routes/Automations
 ------------------
 
@@ -381,6 +387,8 @@ Routes/Automations
   |_| e.g. |BR|
   |_| Response (successful): ``<jA id type "desc">`` |BR|
   |_| Response (fail - is not defined): ``<jA id X>``
+
+----
 
 System Information
 ------------------
@@ -430,6 +438,8 @@ System Information
   
     This will display the number of available cab slots. This will typically be **<# 20>**, **<# 30>**, or **<# 50>** depending on how much memory your EX‑CommandStation has available.  |BR| This is a design limit based on the memory limitations of the particular hardware and a compromise with other features that require memory such as WiFI. If you need more slots and are comfortable with code changes you can adjust this by changing MAX_LOCOS in "DCC.h", knowing that each new slot will take approximately 8 bytes of memory. The **<D RAM>** command will display the amount of free memory. If you fill the available slots, the "Forget Locos" command (**<- [CAB]>**) will free up unused locos. Currently there is no automatic purging of unused locos.
 
+----
+
 Writing CVs - Program on the main
 ---------------------------------
 
@@ -452,6 +462,8 @@ Writing CVs - Program on the main
   |_| **value:** value to change the CV to |BR| |BR|
   
   *Response:* N/A
+
+----
 
 Reading/Writing CVs - Programming track
 ---------------------------------------
@@ -507,10 +519,6 @@ Reading/Writing CVs - Programming track
   |_|  |_| actual value of the CV |BR|
   |_|  |_| -1: if the write failed
   
-  *Notes:*
-  
-    Additional Notes
-
 ``<B cv bit onOff>`` - **Write bit to CV**
 
   *Parameters:* |BR|
@@ -580,7 +588,6 @@ Reading/Writing CVs - Programming track
   |_| ??? |BR| |BR|
   |_| *Version Deprecated: ???*
 
-
 ``<W cv value callbacknum callbacksub>`` - :dcc-ex-red-bold-italic:`Deprecated, please use <w cv value> instead`
 
   *Parameters:* |BR|
@@ -591,6 +598,8 @@ Reading/Writing CVs - Programming track
   |_| *Response:* |BR|
   |_| ??? |BR| |BR|
   |_| *Version Deprecated: ???*
+
+----
 
 Writing CVs - Programming track - Tuning
 ----------------------------------------
@@ -606,6 +615,8 @@ Writing CVs - Programming track - Tuning
 
   *Parameters:* N/A |BR|
   *Response:* N/A
+
+----
 
 DCC Accessories
 ---------------
@@ -632,6 +643,8 @@ DCC Accessories
 
   *Response:* |BR|
   |_| ???
+
+----
 
 Sensors
 -------
@@ -663,6 +676,8 @@ Sensors
   |_| Response (successful) Repeated for each defined sensor: ``<Q id vpin pullup>`` |BR|
   |_| Response (fail): ``<X>``
 
+----
+
 WiFi Control
 ------------
 
@@ -691,6 +706,8 @@ WiFi Control
 
   *Response:* |BR|
   |_| All input and output from this point is the direct communication with the Wifi AT software this mode is ended by typing ! (exclamation mark).
+
+----
 
 Track Manager (Formally DC-District)
 ------------------------------------
@@ -724,6 +741,8 @@ Track Manager (Formally DC-District)
   |_| **trackletter:** A-H |BR|
   |_| **state:** PROG, MAIN DC, DCX |BR|
   |_| **cab:** cab(loco) equivalent to a fake DCC Address
+
+----
 
 EX-RAIL
 -------
@@ -824,6 +843,8 @@ EX-RAIL
   |_|  |_| OFF
   
   *Response:* N/A
+
+----
 
 Configuring the EX-CommandStation
 =================================
@@ -941,6 +962,8 @@ Configuring the EX-CommandStation - Turnouts/Points
 
 Once all turnout/points have been properly defined, you can use the ``<E>`` (upper case E) command to store their definitions to EEPROM. 
 
+----
+
 Configuring the EX-CommandStation - Sensors
 -------------------------------------------
 
@@ -972,6 +995,8 @@ Configuring the EX-CommandStation - Sensors
 
 Once all sensors have been properly defined, you can use the ``<E>`` (upper case E) command to store their definitions to EEPROM. 
 
+----
+
 Configuring the EX-CommandStation - Servos
 ------------------------------------------
 
@@ -994,6 +1019,8 @@ Configuring the EX-CommandStation - Servos
   
   *Response:* |BR|
   |_| ???
+
+----
 
 Configuring the EX-CommandStation - Outputs
 -------------------------------------------
@@ -1044,6 +1071,8 @@ Configuring the EX-CommandStation - Outputs
   *Response:* |BR|
   |_| ???
 
+----
+
 Configuring the EX-CommandStation - EEPROM management
 -----------------------------------------------------
 
@@ -1067,6 +1096,8 @@ Configuring the EX-CommandStation - EEPROM management
   
   *Response:* |BR|
   |_| ``<O>``
+
+----
 
 Configuring the EX-CommandStation - Diagnostic programming commands
 -------------------------------------------------------------------
@@ -1112,6 +1143,8 @@ Configuring the EX-CommandStation - Diagnostic programming commands
   *Notes:*
   
     The NMRA specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so DCC-EX extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters.
+
+----
 
 Diagnostic traces
 -----------------
@@ -1219,6 +1252,8 @@ Diagnostic traces
   |_| "Free memory=xxxx" |BR|
   |_| Displayed on the serial monitor only.
 
+----
+
 I/O (HAL) Diagnostics
 ---------------------
 
@@ -1246,6 +1281,8 @@ I/O (HAL) Diagnostics
   
   *Response:* |BR|
   |_| ???
+
+----
 
 Write direct DCC packet
 -----------------------
@@ -1284,6 +1321,8 @@ Write direct DCC packet
 
     register for backwards compat (can not be removed because number of arguments is unknown)
 
+----
+
 Other
 =====
 
@@ -1293,6 +1332,8 @@ Other
   |_| **cmd:** user defined command
   
   *Response:* N/A
+
+----
 
 More Information
 ================

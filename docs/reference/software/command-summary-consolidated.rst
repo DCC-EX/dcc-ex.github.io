@@ -447,7 +447,7 @@ Writing CVs - Program on the main
   |_| > **address:** DCC Address of the decoder/loco |BR|
   |_| > **cv:** CV number |BR|
   |_| > **bit:** ???  |BR|
-  |_| > **value:** value to change the CV to |BR| |BR|
+  |_| > **value:** value to change the CV to
   
   *Response:* ???
 
@@ -456,7 +456,7 @@ Writing CVs - Program on the main
   *Parameters:* |BR|
   |_| > **address:** DCC Address of the decoder/loco |BR|
   |_| > **cv:** CV number |BR|
-  |_| > **value:** value to change the CV to |BR| |BR|
+  |_| > **value:** value to change the CV to
   
   *Response:* N/A
 
@@ -781,7 +781,7 @@ EX-RAIL
   |_| ID=2,PC=267,LOCO=0 ,SPEED=0F |BR|
   |_| ID=1,PC=228,LOCO=0 ,SPEED=0F |BR|
   |_| RED[110] |BR|
-  |_| RED[113] *>** |BR|
+  |_| RED[113] *>**
 
 ``</ ROUTES>`` - **Request the Routes & Automations control list in wiThrottle Protocol format.**
 
@@ -790,7 +790,7 @@ EX-RAIL
   *Response:* |BR|
   |_| ``<X>``
 
-``</ RESUME>`` - **Resumes ALL EX-RAIL automation actvites, and resumes all locos at the same speed at which they were paused.**
+``</ RESUME>`` - **Resumes ALL EX-RAIL automation activities, and resumes all locos at the same speed at which they were paused.**
 
   *Parameters:* N/A |BR|
   *Response:* N/A
@@ -879,7 +879,7 @@ Configuring the EX-CommandStation - Turnouts/Points
   |_| Successful: ``<O>`` |BR|
   |_| Fail: ``<X>``
 
-  *Notes:* |BR|
+  *Notes:*
   
     The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM). The limits for an SG90 servo are about 102 to 490. The standard range of 1ms to 2ms pulses correspond to values 205 to 409. |BR|
     Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec) and 4=Bounce (subject to revision).
@@ -987,6 +987,7 @@ Configuring the EX-CommandStation - Servos
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the Sensor (0-32767)
+
   *Response:* ???
 
 ----
@@ -1066,7 +1067,7 @@ Configuring the EX-CommandStation - Diagnostic programming commands
 
 ``<D PROGBOOST>`` - **Override 250mA prog track limit while idle**
 
-  *Parameters:* N/A
+  *Parameters:* N/A |BR|
   *Response:* N/A
   
   *Notes:*

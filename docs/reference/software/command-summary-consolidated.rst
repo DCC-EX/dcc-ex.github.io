@@ -106,7 +106,8 @@ Cab (Loco) Commands
   *Parameters:* N/A
   
   *Response:* |BR|
-  |_| Repeated for each loco in the reminders list **<l cab reg speedByte functMap>**
+  |_| Repeated for each loco in the reminders list ``<l cab reg speedByte functMap>`` |BR|
+  |_| Refer to the ``<t ..>`` commmand for details on this response.
 
 |hr-dashed|
 

@@ -670,7 +670,7 @@ In some split motor shield hardware configurations JOIN will not be able to work
 <p><code class="docutils literal notranslate"><span class="pre">&lt;!&gt;</span></code> - <strong>Emergency Stop</strong></p>
 <blockquote>
 <div><p><em>Parameters:</em> N/A</p>
-<p><em>Response:</em> <br /> Repeated for each loco in the reminders list <strong>&lt;l cab reg speedByte functMap&gt;</strong></p>
+<p><em>Response:</em> <br /> Repeated for each loco in the reminders list <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br /> Refer to the <code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">..&gt;</span></code> commmand for details on this response.</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;-</span> <span class="pre">[cab]&gt;</span></code> - <strong>Remove one or all locos from reminders</strong></p>
@@ -699,7 +699,7 @@ Once you send a throttle command to any loco, throttle commands to that loco wil
 <p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cab&gt;</span></code> - <strong>Requests a deliberate update on the cab speed/functions in the same format as the cab (loco) broadcast.</strong></p>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco</p>
-<p><em>Response:</em> <br /> The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>speedbyte:</strong> Speed in DCC speedstep format . <br />  - reverse - 2-127 = speed 1-126, 0 = stop  <br />  - forward - 130-255 = speed 1-126,  128 = stop <br /> &gt; <strong>FunctiMap:</strong> individual function states represented by the the bits in a byte</p>
+<p><em>Response:</em> <br /> The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>speedbyte:</strong> Speed in DCC speedstep format . <br />  - reverse - 2-127 = speed 1-126, 0 = stop  <br />  - forward - 130-255 = speed 1-126,  128 = stop <br /> &gt; <strong>FunctiMap:</strong> individual function states represented by the bits in a byte</p>
 <p><em>Notes:</em></p>
 <blockquote>
 <div><p>The <em>speedbyte</em> value is different to the <em>speed</em> sent, as it is an encoded (1,7 bits)  byte. <br />
@@ -727,7 +727,7 @@ This starts a reminder process for any external updates to the cab’s (loco’s
 <p><hr class="hr-dashed" /></p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">funct</span> <span class="pre">state&gt;</span></code> - <strong>Turns loco decoder functions ON and OFF</strong></p>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>funct:</strong> 0-28 (F29-F68 (Support for the RCN-212 Functions)) <br /> &gt; <strong>state:</strong>  <br />  - 1=on  <br />  - 0=off</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco (short (1-127) or long (128-10293)) <br /> &gt; <strong>funct:</strong> 0-68 (Support for the RCN-212 Functions)) <br /> &gt; <strong>state:</strong>  <br />  - 1=on  <br />  - 0=off</p>
 <p><em>Response:</em> <br /> The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br /> refer to the &lt;t &gt; command above for details</p>
 <p><em>Notes:</em></p>
 <blockquote>
@@ -735,7 +735,13 @@ This starts a reminder process for any external updates to the cab’s (loco’s
 Current state of loco functions (as known by commands issued since power on) is stored by the CommandStation - All functions within a group get set all at once per NMRA DCC standards. <br />
 The command station knows about the previous settings in the same group and will not, for example, unset F2 because you change F1. If, however, you have never set F2, then changing F1 WILL unset F2. <br /></p>
 </div></blockquote>
-</div></blockquote>
+<details class="summary-examples-click-to-show">
+<summary>Examples: (click to show)</summary><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">3</span> <span class="pre">0</span> <span class="pre">1&gt;</span></code> Turns the headlight ON for CAB (loco address) 3</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">126</span> <span class="pre">0</span> <span class="pre">0&gt;</span></code> Turns the headlight OFF for CAB 126</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">1330</span> <span class="pre">1</span> <span class="pre">1&gt;</span></code> Turns the horn ON for CAB 1330</p></li>
+</ul>
+</details></div></blockquote>
 <p><hr class="hr-dashed" /></p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">byte1</span> <span class="pre">[byte2]]&gt;</span></code> - <strong>Decoder Functions - Legacy command.</strong> <span style="font-weight: bold; font-style: italic; color:red">Deprecated</span></p>
 <blockquote>
@@ -745,7 +751,92 @@ The command station knows about the previous settings in the same group and will
 <blockquote>
 <div><p>Used by the sniffer</p>
 </div></blockquote>
-</div></blockquote>
+<details class="summary-additional-information-for-byte1-click-to-show">
+<summary>Additional Information for byte1: (click to show)</summary><p>To make “byte1” add the values of what you want ON together, the ones that you want OFF do not get added to the base value of 128.</p>
+<ul class="simple">
+<li><p>F0 (Light)=16, F1 (Bell)=1, F2 (Horn)=2, F3=4, F4=8</p></li>
+<li><p>All off = 128</p></li>
+<li><p>Light on 128 + 16 = 144</p></li>
+<li><p>Light and bell on 128 + 16 + 1 = 145</p></li>
+<li><p>Light and horn on 128 + 16 + 2 = 146</p></li>
+<li><p>Just horn 128 + 2 = 130</p></li>
+</ul>
+<p>If light is on (144), Then you turn on bell with light (145), Bell back off but light on (144)</p>
+<p><hr class="hr-dashed" /></p>
+</details><details class="summary-examples-click-to-show">
+<summary>Examples: (click to show)</summary><p><strong>Breakdown for this example:</strong> <code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">3265</span> <span class="pre">144&gt;</span></code></p>
+<ul class="simple">
+<li><p><strong>f</strong> = (lower case f) This command is for a CAB,s function i.e.: Lights, horn, bell</p></li>
+<li><p><strong>3265</strong> = CAB: the short (1-127) or long (128-10293) address of the engine decoder</p></li>
+<li><p><strong>144</strong> = Turn on headlight</p></li>
+</ul>
+<p><strong>To set functions F5-F8 on=(1) or off=(0):</strong> <code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">byte1</span> <span class="pre">[byte2]&gt;</span></code></p>
+<ul class="simple">
+<li><p><strong>f</strong> = (lower case f) This command is for a CAB,s function.</p></li>
+<li><p><strong>byte1</strong> = 176 + F5*1 + F6*2 + F7*4 + F8*8</p>
+<ul>
+<li><p>ADD 176 + the ones you want ON together</p></li>
+<li><p>Add 1 for F5 ON</p></li>
+<li><p>Add 2 for F6 ON</p></li>
+<li><p>Add 4 for F7 ON</p></li>
+<li><p>Add 8 for F8 ON</p></li>
+<li><p>176 Alone Turns OFF F5-F8</p></li>
+</ul>
+</li>
+<li><p><strong>byte2</strong> = omitted</p></li>
+</ul>
+<p><strong>To set functions F9-F12 on=(1) or off=(0):</strong> <cite>&lt;f cab byte1 [byte2]&gt;`</cite></p>
+<ul>
+<li><p>f = (lower case f) This command is for a CAB,s function.</p></li>
+<li><p><strong>byte1</strong> = 160 + F9*1 +F10*2 + F11*4 + F12*8</p>
+<p>ADD 160 + the ones you want ON together
+Add 1 for F9 ON
+Add 2 for F10 ON
+Add 4 for F11 ON
+Add 8 for F12 ON
+160 Alone Turns OFF F9-F12</p>
+</li>
+</ul>
+<p><strong>byte2</strong> = omitted</p>
+<p><strong>To set functions F13-F20 on=(1) or off=(0):</strong> <code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">byte1</span> <span class="pre">[byte2]&gt;</span></code></p>
+<ul class="simple">
+<li><p><strong>f</strong> = (lower case f) This command is for a CAB,s function.</p></li>
+<li><p><strong>byte1</strong> = 222</p></li>
+<li><p><strong>byte2</strong> = F13*1 + F14*2 + F15*4 + F16*8 + F17*16 + F18*32 + F19*64 + F20*128</p>
+<ul>
+<li><p>ADD the ones you want ON together</p></li>
+<li><p>Add 1 for F13 ON</p></li>
+<li><p>Add 2 for F14 ON</p></li>
+<li><p>Add 4 for F15 ON</p></li>
+<li><p>Add 8 for F16 ON</p></li>
+<li><p>Add 16 for F17 ON</p></li>
+<li><p>Add 32 for F18 ON</p></li>
+<li><p>Add 64 for F19 ON</p></li>
+<li><p>Add 128 for F20 ON</p></li>
+<li><p>0 Alone Turns OFF F13-F20</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>To set functions F21-F28 on=(1) or off=(0):</strong> <code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">byte1</span> <span class="pre">[byte2]&gt;</span></code></p>
+<ul class="simple">
+<li><p><strong>f</strong> = (lower case f) This command is for a CAB function.</p></li>
+<li><p><strong>byte1</strong> = 223</p></li>
+<li><p><strong>byte2</strong> = F21*1 + F22*2 + F23*4 + F24*8 + F25*16 + F26*32 + F27*64 + F28*128</p>
+<ul>
+<li><p>ADD the ones you want ON together</p></li>
+<li><p>Add 1 for F21 ON</p></li>
+<li><p>Add 2 for F22 ON</p></li>
+<li><p>Add 4 for F23 ON</p></li>
+<li><p>Add 8 for F24 ON</p></li>
+<li><p>Add 16 for F25 ON</p></li>
+<li><p>Add 32 for F26 ON</p></li>
+<li><p>Add 64 for F27 ON</p></li>
+<li><p>Add 128 for F28 ON</p></li>
+<li><p>0 Alone Turns OFF F21-F28</p></li>
+</ul>
+</li>
+</ul>
+</details></div></blockquote>
 <p><hr class="hr-dashed" /></p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">reg</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code> - <strong>Set Cab (Loco) Speed - Legacy command</strong> <span style="font-weight: bold; font-style: italic; color:red">Deprecated</span></p>
 <blockquote>
@@ -764,12 +855,6 @@ This starts a reminder process for any external updates to the cab’s (loco’s
 <hr class="docutils" />
 <section id="turnout-points">
 <h3><a class="toc-backref" href="#id5" role="doc-backlink">Turnout/Points</a><a class="headerlink" href="#turnout-points" title="Permalink to this heading"></a></h3>
-<p><hr class="hr-dashed" /></p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id&gt;</span></code> - <strong>Delete defined turnout/point</strong></p>
-<blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> identifier of the Turnout/Point</p>
-<p><em>Response:</em> ???</p>
-</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code> - <strong>Request a list all defined turnouts/Points</strong></p>
 <blockquote>
@@ -873,12 +958,20 @@ This starts a reminder process for any external updates to the cab’s (loco’s
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>cv:</strong> CV number <br /> &gt; <strong>bit:</strong> bit to verify in the CV <br /> &gt; <strong>onOff:</strong> one of <br />  - 1=on  <br />  - 0=off</p>
 <p><em>Response:</em> <br /> Response (successful): <strong>0 | 1</strong> <br /> Response (fail): <strong>&lt;V -1&gt;</strong></p>
+<p><em>Notes:</em></p>
+<blockquote>
+<div><p>This command is designed to offer faster verification of the value held in a CV and can be used instead of the <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply “read”. If the verify fails, it will perform a read bit command (see above) and return the value read.</p>
+</div></blockquote>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code> - <strong>Verify/Read of CV with guessed value</strong></p>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>cv:</strong> CV number <br /> &gt; <strong>value:</strong>  value to verify</p>
 <p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;v</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code> <br /> &gt; <strong>cv:</strong> CV number <br /> &gt; <strong>value:</strong> one of <br />  - actual value of the CV <br />  - -1: if the write failed</p>
+<p><em>Notes:</em></p>
+<blockquote>
+<div><p>This command is designed to offer faster verification of the value held in a CV and can be used instead of the <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> commands. Instead of reading a byte value or looking at each bit, it compares the byte to an expected value. It will attempt to verify the value first, and if it is successful, will return the value as if it was simply “read”. If the verify fails, it will perform a read byte command (see above) and return the value read.</p>
+</div></blockquote>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;B</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">onOff&gt;</span></code> - <strong>Write bit to CV</strong></p>
@@ -940,6 +1033,14 @@ This starts a reminder process for any external updates to the cab’s (loco’s
 <hr class="docutils" />
 <section id="dcc-accessories">
 <h3><a class="toc-backref" href="#id11" role="doc-backlink">DCC Accessories</a><a class="headerlink" href="#dcc-accessories" title="Permalink to this heading"></a></h3>
+<p>EX-CS| can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).</p>
+<p>All decoders that are not in an engine are accessory decoders including turnouts.</p>
+<p>Any DCC Accessory Decoder based turnouts, as well as any other DCC accessories connected in this fashion, can always be operated using the DCC COMMAND STATION Accessory command:</p>
+<p><hr class="hr-dashed" /></p>
+<p>There are two interchangeable commands for controlling Accessory Decoders, the Address/Subaddress method (aka “Dual-Coil” method) and linear addressing method. You can either specify an address and its subaddress (Addresses 0-511 with Subaddresses from 0-3) or the straight linear address (Addresses from 1-2044).</p>
+<p>In the mapping used by EX-CS|, linear addresses range from linear address 1, which is address 1 subaddress 0, up to linear address 2040 which is address 510 subaddress 3. Decoder address 511 (linear addresses 2041-2044) is reserved for use as a broadcast address and should not be used for decoders. Decoder address 0 does not have a corresponding linear address. This seems strange, but it is the mapping used by many, but not all, commercial manufacturers. If your decoder does not respond on the expected linear address, try adding and subtracting 4 to see if it works. Or use the address/subaddress versions of the commands.</p>
+<p>Here is a spreadsheet in .XLSX format to help you: <a class="reference internal" href="../downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet"><span class="std std-ref">Stationary Decoder Address Table (xlsx Spreadsheet)</span></a>.</p>
+<p>NOTE: Both the following commands do the same thing. Pick the one that works for your needs.</p>
 <p><hr class="hr-dashed" /></p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">addr</span> <span class="pre">subaddr</span> <span class="pre">activate&gt;</span></code> - <strong>Control an Accessory Decoder</strong></p>
 <blockquote>
@@ -951,6 +1052,10 @@ This starts a reminder process for any external updates to the cab’s (loco’s
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>linear_addr:</strong> linear address of the decoder controlling this turnout (1-2044) <br /> &gt; <strong>activate:</strong> one of  <br />  - 0=off, deactivate, straight or Closed  <br />  - 1=on, activate, turn or thrown</p>
 <p><em>Response:</em> ???</p>
+<p><em>Note</em></p>
+<blockquote>
+<div><p>This general command simply sends the appropriate DCC instruction packet to the main tracks to operate connected accessories. It does not store or retain any information regarding the current status of that accessory.</p>
+</div></blockquote>
 </div></blockquote>
 </section>
 <hr class="docutils" />
@@ -1091,33 +1196,59 @@ This starts a reminder process for any external updates to the cab’s (loco’s
 <h2><a class="toc-backref" href="#id16" role="doc-backlink">Configuring the EX-CommandStation</a><a class="headerlink" href="#configuring-the-ex-commandstation" title="Permalink to this heading"></a></h2>
 <section id="configuring-the-ex-commandstation-turnouts-points">
 <h3><a class="toc-backref" href="#id17" role="doc-backlink">Configuring the EX-CommandStation - Turnouts/Points</a><a class="headerlink" href="#configuring-the-ex-commandstation-turnouts-points" title="Permalink to this heading"></a></h3>
+<p>The Turnout commands provide a more flexible and more functional way of operating turnouts. It requires that the turnout be pre-defined through the <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">...&gt;</span></code> commands, described below.</p>
+<p>Turnouts may be in either of two states: Closed or Thrown. The turnout commands below use the values <code class="docutils literal notranslate"><span class="pre">1</span></code> for <code class="docutils literal notranslate"><span class="pre">Throw</span></code> or <code class="docutils literal notranslate"><span class="pre">Thrown</span></code> and <code class="docutils literal notranslate"><span class="pre">0</span></code> for <code class="docutils literal notranslate"><span class="pre">Close</span></code> or <code class="docutils literal notranslate"><span class="pre">Closed</span></code>.</p>
+<p><em>General notes:</em></p>
+<p><strong>vpin:</strong> is the pin number of the output to be controlled by the turnout/point object. For Arduino output pins, this is the same as the digital pin number. For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.</p>
 <p><hr class="hr-dashed" /></p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">addr</span> <span class="pre">subaddr&gt;</span></code> - <strong>Define turnout on a DCC Accessory Decoder with the specified address and subaddress</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">addr</span> <span class="pre">subaddr&gt;</span></code> - <strong>Define turnout/point on a DCC Accessory Decoder with the specified address and subaddress</strong></p>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> identifier of the Turnout/Point <br /> &gt; <strong>addr:</strong> ??? <br /> &gt; <strong>subaddr:</strong> ???</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> identifier of the Turnout/Point <br /> &gt; <strong>addr:</strong> ranges from 0 to 511 <br /> &gt; <strong>subaddr:</strong> ranges from 0 to 3</p>
 <p><em>Response:</em> ???</p>
+<details class="summary-examples-click-to-show">
+<summary>Examples: (click to show)</summary><p><em>Example:</em> <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">23</span> <span class="pre">DCC</span> <span class="pre">5</span> <span class="pre">0&gt;</span></code></p>
+<p><em>Example:</em> You have a turnout on your main line going to warehouse industry. The turnout is controlled by an accessory decoder with a address of 123 and is wired to output 3. You want it to have the ID of 10. You would send the following command to the CommandStation: <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">10</span> <span class="pre">DCC</span> <span class="pre">123</span> <span class="pre">3&gt;</span></code></p>
+<p>This Command means:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>T</strong> = (Upper case T) Define a Turnout</p></li>
+<li><p><strong>DCC</strong> = The turnout is DCC Accessory Decoder based</p></li>
+<li><p><strong>10</strong> = ID number I am setting to use this turnout</p></li>
+<li><p><strong>123</strong> = The accessory decoders address</p></li>
+<li><p><strong>3</strong> = The turnout is wired to output 3</p></li>
+</ul>
+</div></blockquote>
+<p>Next you would send the following command to the EX-CS: <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code></p>
+<p>This Command means:</p>
+<ul class="simple">
+<li><p>E : (Upper case E) Store (save) this definition to EEPROM</p></li>
+</ul>
+</details></div></blockquote>
+<p><hr class="hr-dashed" /></p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">linearAddr&gt;</span></code> - <strong>Define turnout/point on a DCC Accessory Decoder with the specified linear address</strong></p>
+<blockquote>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> identifier of the Turnout/Point <br /> &gt; <strong>linearAddr:</strong> ranges from 1 (address 1/subaddress 0) to 2044 (address 511/subaddress 3).</p>
+<p><em>Response:</em> ???</p>
+<p><em>Example:</em> <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">23</span> <span class="pre">DCC</span> <span class="pre">44&gt;</span></code> (corresponds to address 11 subaddress 3).</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">linearAddr&gt;</span></code> - <strong>Define turnout on a DCC Accessory Decoder with the specified linear address</strong></p>
-<blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> identifier of the Turnout/Point <br /> &gt; <strong>linearAddr:</strong> ???</p>
-<p><em>Response:</em> ???</p>
-</div></blockquote>
-<p><hr class="hr-dashed" /></p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">VPIN</span> <span class="pre">vpin&gt;</span></code> - <strong>Define turnout output on specified vpin.</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">VPIN</span> <span class="pre">vpin&gt;</span></code> - <strong>Define turnout/point output on specified vpin.</strong></p>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> unique Id for the servo <br /> &gt; <strong>vpin:</strong> vpin to which the servo is attached</p>
 <p><em>Response:</em> ???</p>
+<p><em>Example:</em> <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">25</span> <span class="pre">VPIN</span> <span class="pre">30&gt;</span></code> defines a turnout/point that operates Arduino digital output pin D30. <br />
+<em>Example:</em> <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">26</span> <span class="pre">VPIN</span> <span class="pre">164&gt;</span></code> defines a turnout/point that operates the first pin on the first MCP23017 GPIO expander (if present).</p>
 <p><em>Notes:</em></p>
 <blockquote>
 <div><p>This may be used for controlling Arduino digital output pins or pins on an I/O Extender.</p>
 </div></blockquote>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">thrownPos</span> <span class="pre">closedPos</span> <span class="pre">profile&gt;</span></code> - <strong>Define turnout servo (PWM) on specified vpin Note: Servos are not supported on the minimal HAL (Uno or Nano target).</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">thrownPos</span> <span class="pre">closedPos</span> <span class="pre">profile&gt;</span></code> - <strong>Define turnout/point servo (PWM) on specified vpin Note: Servos are not supported on the minimal HAL (Uno or Nano target).</strong></p>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> unique Id for the servo <br /> &gt; <strong>vpin:</strong> vpin to which the servo is attached <br /> &gt; <strong>thrownPos:</strong> position for the servo when thrown <br /> &gt; <strong>closedPos:</strong> position for the servo when closed <br /> &gt; <strong>profile:</strong> one of <br />  - 0=Instant,  <br />  - 1=Fast (0.5 sec),  <br />  - 2=Medium (1 sec),  <br />  - 3=Slow (2 sec) and  <br />  - 4=Bounce (subject to revision).</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> unique Id for the servo <br /> &gt; <strong>vpin:</strong> vpin to which the servo is attached <br /> &gt; <strong>thrownPos:</strong> the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490 <br /> &gt; <strong>closedPos:</strong> the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490 <br /> &gt; <strong>profile:</strong> one of <br />  - 0=Instant,  <br />  - 1=Fast (0.5 sec),  <br />  - 2=Medium (1 sec),  <br />  - 3=Slow (2 sec) and  <br />  - 4=Bounce (subject to revision).</p>
 <p><em>Response:</em> <br /> Successful: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> <br /> Fail: <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code></p>
+<p><em>Example:</em> &lt;<code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">24</span> <span class="pre">SERVO</span> <span class="pre">100</span> <span class="pre">410</span> <span class="pre">205</span> <span class="pre">2&gt;</span></code> defines a servo turnout/point on the first PCA9685 pin, moving at medium speed between positions 205 and 410.</p>
 <p><em>Notes:</em></p>
 <blockquote>
 <div><p>The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM). The limits for an SG90 servo are about 102 to 490. The standard range of 1ms to 2ms pulses correspond to values 205 to 409. <br />
@@ -1128,7 +1259,7 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
 <p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id&gt;</span></code> - <strong>Deletes a turnout by Id.</strong></p>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> unique Id for the servod</p>
-<p><em>Response:</em> ???</p>
+<p><em>Response:</em> <br /> Successful: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> <br /> Fail: <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code>  (Id does not exist)</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 <blockquote>
@@ -1146,25 +1277,32 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
 <p><em>Version Deprecated: ???</em></p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">activePos</span> <span class="pre">inactivePos&gt;</span></code> - <strong>Define a turnout servo on specified vpin - Legacy command</strong> <span style="font-weight: bold; font-style: italic; color:red">Deprecated</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">activePos</span> <span class="pre">inactivePos&gt;</span></code> - <strong>Define a turnout/point servo on specified vpin - Legacy command</strong> <span style="font-weight: bold; font-style: italic; color:red">Deprecated</span></p>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> identifier of the Turnout/Point <br /> &gt; <strong>vpin:</strong> vpin of the input to be controlled by the sensor object <br /> &gt; <strong>activePos:</strong> ??? <br /> &gt; <strong>inactivePos:</strong> ???</p>
 <p><em>Response:</em> ???</p>
 <p><em>Version Deprecated: ???</em></p>
 <p><em>Notes:</em></p>
 <blockquote>
-<div><p>The positions are the same as for the turnout servo command above. Note: Servos are not supported on the minimal HAL (Uno or Nano target).</p>
+<div><p>The positions are the same as for the turnout/point servo command above. Note: Servos are not supported on the minimal HAL (Uno or Nano target).</p>
 </div></blockquote>
 </div></blockquote>
-<p>Once all turnout/points have been properly defined, you can use the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> (upper case E) command to store their definitions to EEPROM.</p>
+<p><hr class="hr-dashed" /></p>
+<p>Once all turnouts have been properly defined, Use the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> command to store their definitions to EEPROM. If you later make edits/additions/deletions to the turnout definitions, you must invoke the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> command if you want those new definitions updated in the EEPROM. You can also ERASE everything; (turnouts, sensors, and outputs) stored in the EEPROM by invoking the <code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> (lower case e) command. WARNING: (There is no Un-Delete)</p>
+<p>If turnout definitions are stored in EEPROM, the turnout thrown/closed state is also written to EEPROM whenever the turnout is switched. Consequently, when the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> is restarted the turnout outputs may be set to their last known state (applicable for Servo and VPIN turnouts). This is intended so that the servos don’t perform a sweep on power-on when their physical position does not match initial position in the CommandStation.</p>
 </section>
 <hr class="docutils" />
 <section id="configuring-the-ex-commandstation-sensors">
 <h3><a class="toc-backref" href="#id18" role="doc-backlink">Configuring the EX-CommandStation - Sensors</a><a class="headerlink" href="#configuring-the-ex-commandstation-sensors" title="Permalink to this heading"></a></h3>
+<p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> supports Sensor inputs that can be connected to any Arduino Pin not in use by this program, as well as pins on external I/O expanders and other devices. Physical sensors can be of any type (infrared, magnetic, mechanical…). They may be configured to pull-up or not. When configured for pull-up, the input is connected (within the CS) to +5V via a resistor. This sort of input is suited to sensors that have two wires (a switch or relay contacts, or a device with an ‘open collector’ or ‘open drain’ output. Some sensors may be sensitive to the pull-up resistor and not operate as expected - in this case you can turn off the pull-up.</p>
+<p>The sensor is considered INACTIVE when at +5V potential, and ACTIVE when the pin is pulled down to 0V.</p>
+<p>To ensure proper voltage levels, some part of the Sensor circuitry MUST be tied back to the same ground as used by the Arduino.</p>
+<p>The Sensor code utilizes debouncing logic to eliminate contact ‘bounce’ generated by mechanical switches on transitions. This avoids the need to create smoothing circuitry for each sensor. You may need to change the parameters in Sensor.cpp through trial and error for your specific sensors, but the default parameters protect against contact bounces for up to 20 milliseconds, which should be adequate for almost all mechanical switches and all electronic sensors.</p>
+<p>To have this sketch monitor one or more Arduino pins for sensor triggers, first define/edit/delete sensor definitions using the following variation of the <code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code> command:</p>
 <p><hr class="hr-dashed" /></p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">pullup&gt;</span></code> - <strong>Create a new sensor ID</strong></p>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> identifier of the Sensor (0-32767) <br /> &gt; <strong>vpin:</strong> vpin of the input to be controlled by the sensor object <br /> &gt; <strong>pullup:</strong> one of  <br />  - 1=Use pull-up resistor ACTIVE=LOW  <br />  - 0=don’t use pull-up resistor ACTIVE=HIGH</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> identifier of the Sensor (0-32767) <br /> &gt; <strong>vpin:</strong> vpin of the input to be controlled by the sensor object For Arduino input pins, this is the same as the digital pin number. For servo inputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.|BR| &gt; <strong>pullup:</strong> one of  <br />  - 1=Use pull-up resistor ACTIVE=LOW  <br />  - 0=don’t use pull-up resistor ACTIVE=HIGH</p>
 <p><em>Response:</em> <br /> Successful: <strong>&lt;O&gt;</strong> <br /> Fail: ????</p>
 <p><em>Notes:</em></p>
 <blockquote>
@@ -1177,7 +1315,14 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
 <div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> identifier of the Sensor (0-32767)</p>
 <p><em>Response:</em> <br /> Successful: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> <br /> Fail: <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code></p>
 </div></blockquote>
-<p>Once all sensors have been properly defined, you can use the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> (upper case E) command to store their definitions to EEPROM.</p>
+<p><hr class="hr-dashed" /></p>
+<p>Once all sensors have been properly defined, use the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> (upper case E) command to store their definitions to EEPROM. If you later make edits/additions/deletions to the sensor definitions, you must invoke the <code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> (upper case E) command if you want those new definitions updated in the EEPROM. You can also clear everything (turnouts, sensors, and outputs) stored in the EEPROM by invoking the <code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> (lower case e) command. (There is NO UN-Delete)</p>
+<p>All sensors defined as per above are repeatedly and sequentially checked within the main loop of this sketch. If a Sensor Pin is found to have transitioned from one state to another, one of the following serial messages are generated:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">id&gt;</span></code> - for transition of Sensor ID from INACTIVE state to ACTIVE state (i.e. the sensor is triggered)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;q</span> <span class="pre">id&gt;</span></code> - for transition of Sensor ID from ACTIVE state to INACTIVE state (i.e. the sensor is no longer triggered)</p></li>
+</ul>
+<p>Depending on whether the physical sensor is acting as an “event-trigger” or a “detection-sensor”, you may decide to ignore the <code class="docutils literal notranslate"><span class="pre">&lt;q</span> <span class="pre">id&gt;</span></code> return and only react to <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">id&gt;</span></code> triggers.</p>
 </section>
 <hr class="docutils" />
 <section id="configuring-the-ex-commandstation-servos">

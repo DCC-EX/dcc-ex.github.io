@@ -38,26 +38,32 @@ There is another version where the "more" in "more info" is spelled "moer" and "
 
 If these 2 transistors are labelled "JIY" you are lucky and the board with work with no modifications. If they are labelled "J3Y", you have two choices to get this to work:
 
- 1. **Tinkerer way** - You could bypass the header connections and use jumpers to wire directly to the debug pins of the ESP8266, but that bypasses the Tx/Rx level shifters. The ESP8266 Tx/Rx pins are 5V tolerant, but it is always best if you can to shift 5V from the Arduino to 3.3V. You could also make a small 2 resistor voltage divider to connect to the debug header Rx pin. The Tx pin to the Arduino will be fine as is.
+.. warning:: 
 
- .. figure:: /_static/images/wifi/wangtongze_jumpered.jpg
-    :alt: Wangtongze Jumpering to the debug header
-    :scale: 30%
+   As per the red rectangle in the image below, you will need to bend out the two pins associated with D0 and D1, otherwise this board will interfere with the USB connection to your |EX-CS| and you will not be able to load software on to it, nor view the serial monitor.
+   
+   We **do not recommend** this board due to the various issues listed on this page.
 
-    Using Jumpers Directly to the Debug Header
+1. **Tinkerer way** - You could bypass the header connections and use jumpers to wire directly to the debug pins of the ESP8266, but that bypasses the Tx/Rx level shifters. The ESP8266 Tx/Rx pins are 5V tolerant, but it is always best if you can to shift 5V from the Arduino to 3.3V. You could also make a small 2 resistor voltage divider to connect to the debug header Rx pin. The Tx pin to the Arduino will be fine as is.
+
+.. figure:: /_static/images/wifi/wangtongze_jumpered.jpg
+   :alt: Wangtongze Jumpering to the debug header
+   :scale: 30%
+
+   Using Jumpers Directly to the Debug Header
 
 
 
- And here is a voltage divider with just two resistors you can use as a signal level shifter circuit:
+And here is a voltage divider with just two resistors you can use as a signal level shifter circuit:
 
- .. figure:: /_static/images/wifi/esp_level_shifter.png
-    :alt: 
-    :scale: 70%
+.. figure:: /_static/images/wifi/esp_level_shifter.png
+   :alt: 
+   :scale: 70%
 
-    Voltage Divider Level Shifter for ESP8255 Rx Debug Header Pin
+   Voltage Divider Level Shifter for ESP8255 Rx Debug Header Pin
 
- 2. **Engineer way** - You can buy the correct surface mount transistors and replace two of them using a magnifier as we did when we had nothing better to do that day, but that's a lot of trouble to go through unless this is the only board you can find. If they are labelled "J3Y", you can order "J1Y" replacements, remove the old ones, and solder in the new ones. This is a job for a skilled solderer.
+2. **Engineer way** - You can buy the correct surface mount transistors and replace two of them using a magnifier as we did when we had nothing better to do that day, but that's a lot of trouble to go through unless this is the only board you can find. If they are labelled "J3Y", you can order "J1Y" replacements, remove the old ones, and solder in the new ones. This is a job for a skilled solderer.
 
-The bottom line is that we don't recommend this board because you would have to be very careful and know which one you are buying. That said, we can provide more information on these boards if you have one and want to get it to work.
+The bottom line is that we don't recommend this board because you would have to be very careful and know which one you are buying.
 
 Here is a link to the `Video and info from Wang Tongze himself <https://www.youtube.com/watch?v=LJcYgR479Vw>`_

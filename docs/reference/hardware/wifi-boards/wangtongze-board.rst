@@ -65,5 +65,3 @@ And here is a voltage divider with just two resistors you can use as a signal le
 2. **Engineer way** - You can buy the correct surface mount transistors and replace two of them using a magnifier as we did when we had nothing better to do that day, but that's a lot of trouble to go through unless this is the only board you can find. If they are labelled "J3Y", you can order "J1Y" replacements, remove the old ones, and solder in the new ones. This is a job for a skilled solderer.
 
 The bottom line is that we don't recommend this board because you would have to be very careful and know which one you are buying.
-
-Here is a link to the `Video and info from Wang Tongze himself <https://www.youtube.com/watch?v=LJcYgR479Vw>`_

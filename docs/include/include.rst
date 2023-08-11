@@ -260,6 +260,10 @@
    
     :doc:`DCC-EX Native Protocol </reference/glossary>`
 ..
+.. |hr-dashed| raw:: html
+
+   <hr class="hr-dashed" />
+..
 .. ...............................................
 ..
 .. |githublink-ex-turntable| raw:: html

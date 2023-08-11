@@ -134,10 +134,6 @@ html[data-theme='dark'] .rst-content table.docutils:not(.field-list) tr:nth-chil
   font-size: small !important;
 }
 
-.rst-content code {
-  font-size: 90% !important;
-}
-
 table.intro-table {
   max-width: 600px;
 }
@@ -312,6 +308,15 @@ html[data-theme='dark'] .sd-card {
 
 html[data-theme='dark'] .rst-content .guilabel {
   color: black;
+}
+
+.hr-dashed {
+  margin: -10px 0px -10px 0px; 
+  border-top: 1px dashed #d2dfe3;
+}
+
+html[data-theme='dark'] .hr-dashed {
+  border-top: 1px dashed #114759;
 }
 
 /* *************************************** */
@@ -701,8 +706,12 @@ html[data-theme='dark'] .sd-card-header {
 }
 
 /* code */
+.rst-content code {
+  font-size: 100% !important;
+}
 .rst-content code.literal, .rst-content tt.literal {
   color: #ba2121 !important;
+  font-size: 100% important;
 }
 html[data-theme='dark'] .rst-content code.literal, .rst-content tt.literal {
   color: #ff6000 !important;

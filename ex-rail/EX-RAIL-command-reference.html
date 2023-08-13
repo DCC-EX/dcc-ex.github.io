@@ -449,7 +449,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/developers/index.html">Developer and API reference</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../throttles/tech-reference.html">Technical Reference for Throttle Developers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/developers/api.html">EX-CommandStation API Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/developers/api.html">DCC-EX Native API Reference</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/developers/hal.html">DCC-EX HAL Architecture</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/developers/hal-config.html">I/O Device Drivers and HAL</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/developers/writing-hal-driver.html">Writing a HAL Driver</a></li>
@@ -733,9 +733,9 @@
 <p class="topic-title">In This Section</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#d-exrail-state-enable-or-disable-ex-rail-script-logging" id="id42"><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">EXRAIL</span> <span class="pre">state&gt;</span></code> - Enable or disable EX-RAIL script logging</a></p></li>
-<li><p><a class="reference internal" href="#pause-pauses-all-ex-rail-automation-activities" id="id43"><code class="docutils literal notranslate"><span class="pre">&lt;/PAUSE&gt;</span></code> - Pauses ALL EX-RAIL automation activities</a></p></li>
-<li><p><a class="reference internal" href="#resume-resumes-all-ex-rail-automation-activities" id="id44"><code class="docutils literal notranslate"><span class="pre">&lt;/RESUME&gt;</span></code> - Resumes <strong>ALL</strong> EX-RAIL automation activities</a></p></li>
-<li><p><a class="reference internal" href="#displays-ex-rail-running-task-information" id="id45"><code class="docutils literal notranslate"><span class="pre">&lt;/&gt;</span></code> - Displays EX-RAIL running task information</a></p></li>
+<li><p><a class="reference internal" href="#pause-pause-all-ex-rail-automation-activities" id="id43"><code class="docutils literal notranslate"><span class="pre">&lt;/PAUSE&gt;</span></code> - Pause ALL EX-RAIL automation activities</a></p></li>
+<li><p><a class="reference internal" href="#resume-resume-all-ex-rail-automation-activities" id="id44"><code class="docutils literal notranslate"><span class="pre">&lt;/RESUME&gt;</span></code> - Resume <strong>ALL</strong> EX-RAIL automation activities</a></p></li>
+<li><p><a class="reference internal" href="#display-ex-rail-running-task-information" id="id45"><code class="docutils literal notranslate"><span class="pre">&lt;/&gt;</span></code> - Display EX-RAIL running task information</a></p></li>
 <li><p><a class="reference internal" href="#start-loco-addr-route-id-starts-a-new-task-to-send-a-loco-onto-a-route-or-activate-a-non-loco-animation-or-sequence" id="id46"><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">START</span> <span class="pre">[loco_addr]</span> <span class="pre">route_id&gt;</span></code> - Starts a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence</a></p></li>
 <li><p><a class="reference internal" href="#kill-task-id-kills-a-currently-running-script-task-by-id-use-to-list-task-ids" id="id47"><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">KILL</span> <span class="pre">task_id&gt;</span></code> - Kills a currently running script task by ID (use to list task IDs)</a></p></li>
 <li><p><a class="reference internal" href="#reserve-block-id-manually-reserves-a-virtual-track-block" id="id48"><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">RESERVE</span> <span class="pre">block_id&gt;</span></code> - Manually reserves a virtual track Block</a></p></li>
@@ -749,7 +749,8 @@
 <p><hr class="hr-dashed" /></p>
 <section id="d-exrail-state-enable-or-disable-ex-rail-script-logging">
 <h4><a class="toc-backref" href="#id42" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">EXRAIL</span> <span class="pre">state&gt;</span></code> - Enable or disable EX-RAIL script logging</a><a class="headerlink" href="#d-exrail-state-enable-or-disable-ex-rail-script-logging" title="Permalink to this heading"></a></h4>
-<p>When the CommandStation is connected to a serial monitor, EX-RAIL script logging can be turned on or off (Enabled or Disabled).</p>
+<blockquote>
+<div><p>When the CommandStation is connected to a serial monitor, EX-RAIL script logging can be turned on or off (Enabled or Disabled).</p>
 <blockquote>
 <div><details class="summary-for-example-click-to-show">
 <summary>For example: (click to show)</summary><p>Example output from <a class="reference internal" href="examples.html#point-to-point-shuttle"><span class="std std-ref">Point to Point Shuttle</span></a> running SEQUENCE(13) with loco ID 18:</p>
@@ -774,20 +775,25 @@ PPA1
 </pre></div>
 </div>
 </details></div></blockquote>
+</div></blockquote>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="pause-pauses-all-ex-rail-automation-activities">
-<h4><a class="toc-backref" href="#id43" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;/PAUSE&gt;</span></code> - Pauses ALL EX-RAIL automation activities</a><a class="headerlink" href="#pause-pauses-all-ex-rail-automation-activities" title="Permalink to this heading"></a></h4>
-<p>Pauses <strong>ALL</strong> EX-RAIL automation activities, including sending an E-STOP to all locos.</p>
+<section id="pause-pause-all-ex-rail-automation-activities">
+<h4><a class="toc-backref" href="#id43" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;/PAUSE&gt;</span></code> - Pause ALL EX-RAIL automation activities</a><a class="headerlink" href="#pause-pause-all-ex-rail-automation-activities" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><p>Pauses <strong>ALL</strong> EX-RAIL automation activities, including sending an E-STOP to all locos.</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="resume-resumes-all-ex-rail-automation-activities">
-<h4><a class="toc-backref" href="#id44" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;/RESUME&gt;</span></code> - Resumes <strong>ALL</strong> EX-RAIL automation activities</a><a class="headerlink" href="#resume-resumes-all-ex-rail-automation-activities" title="Permalink to this heading"></a></h4>
-<p>Resumes <strong>ALL</strong> EX-RAIL automation activities, and resumes all locos at the same speed at which they were paused.</p>
+<section id="resume-resume-all-ex-rail-automation-activities">
+<h4><a class="toc-backref" href="#id44" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;/RESUME&gt;</span></code> - Resume <strong>ALL</strong> EX-RAIL automation activities</a><a class="headerlink" href="#resume-resume-all-ex-rail-automation-activities" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><p>Resume <strong>ALL</strong> EX-RAIL automation activities, and resumes all locos at the same speed at which they were paused.</p>
+</div></blockquote>
 </section>
-<section id="displays-ex-rail-running-task-information">
-<h4><a class="toc-backref" href="#id45" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;/&gt;</span></code> - Displays EX-RAIL running task information</a><a class="headerlink" href="#displays-ex-rail-running-task-information" title="Permalink to this heading"></a></h4>
+<section id="display-ex-rail-running-task-information">
+<h4><a class="toc-backref" href="#id45" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;/&gt;</span></code> - Display EX-RAIL running task information</a><a class="headerlink" href="#display-ex-rail-running-task-information" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><details class="summary-for-example-click-to-show">
 <summary>For example: (click to show)</summary><p>Example outputs also using <a class="reference internal" href="examples.html#point-to-point-shuttle"><span class="std std-ref">Point to Point Shuttle</span></a>:</p>
@@ -815,31 +821,40 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 </section>
 <section id="reserve-block-id-manually-reserves-a-virtual-track-block">
 <h4><a class="toc-backref" href="#id48" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">RESERVE</span> <span class="pre">block_id&gt;</span></code> - Manually reserves a virtual track Block</a><a class="headerlink" href="#reserve-block-id-manually-reserves-a-virtual-track-block" title="Permalink to this heading"></a></h4>
-<p>Manually reserves a virtual track Block, valid IDs are in the range 0 - 255</p>
+<blockquote>
+<div><p>Manually reserves a virtual track Block, valid IDs are in the range 0 - 255</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="free-block-id-manually-frees-a-virtual-track-block">
 <h4><a class="toc-backref" href="#id49" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">FREE</span> <span class="pre">block_id&gt;</span></code> - Manually frees a virtual track Block</a><a class="headerlink" href="#free-block-id-manually-frees-a-virtual-track-block" title="Permalink to this heading"></a></h4>
-<p>Manually frees a virtual track Block, valid IDs are in the range 0 - 255.</p>
+<blockquote>
+<div><p>Manually frees a virtual track Block, valid IDs are in the range 0 - 255.</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="latch-sensor-id-lock-sensor-on-preventing-external-influence">
 <h4><a class="toc-backref" href="#id50" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">LATCH</span> <span class="pre">sensor_id&gt;</span></code> - Lock sensor ON, preventing external influence</a><a class="headerlink" href="#latch-sensor-id-lock-sensor-on-preventing-external-influence" title="Permalink to this heading"></a></h4>
-<p>Lock sensor ON, preventing external influence, valid IDs are in the range 0 - 255.</p>
+<blockquote>
+<div><p>Lock sensor ON, preventing external influence, valid IDs are in the range 0 - 255.</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="unlatch-sensor-id-unlock-sensor-returning-to-current-external-state">
 <h4><a class="toc-backref" href="#id51" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">UNLATCH</span> <span class="pre">sensor_id&gt;</span></code> - Unlock sensor, returning to current external state</a><a class="headerlink" href="#unlatch-sensor-id-unlock-sensor-returning-to-current-external-state" title="Permalink to this heading"></a></h4>
-<p>Unlock sensor, returning to current external state, valid IDs are in the range 0 - 255.</p>
+<blockquote>
+<div><p>Unlock sensor, returning to current external state, valid IDs are in the range 0 - 255.</p>
 <p>Refer to the LATCH/UNLATCH commands in the <a class="reference internal" href="#sensors-inputs-reading-and-responding"><span class="std std-ref">Sensors/Inputs - Reading and Responding</span></a> section below for further details.</p>
+</div></blockquote>
 </section>
 </section>
 <hr class="docutils" />
 <section id="aliases">
 <h3><a class="toc-backref" href="#id22" role="doc-backlink">Aliases</a><a class="headerlink" href="#aliases" title="Permalink to this heading"></a></h3>
-<section id="alias-name-value-aliases-assigns-names-to-values">
-<h4><code class="docutils literal notranslate"><span class="pre">ALIAS(</span> <span class="pre">name[,</span> <span class="pre">value]</span> <span class="pre">)</span></code> - Aliases assigns names to values<a class="headerlink" href="#alias-name-value-aliases-assigns-names-to-values" title="Permalink to this heading"></a></h4>
-<p>Aliases assigns names to values. They can go anywhere in the script. If a value is not assigned, a unique ID will be assigned based on the alias “name” text.</p>
+<section id="alias-name-value-assigns-name-to-a-value">
+<h4><code class="docutils literal notranslate"><span class="pre">ALIAS(</span> <span class="pre">name[,</span> <span class="pre">value]</span> <span class="pre">)</span></code> - Assigns name to a value<a class="headerlink" href="#alias-name-value-assigns-name-to-a-value" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><p>Aliases assigns names to values. They can go anywhere in the script. If a value is not assigned, a unique ID will be assigned based on the alias “name” text.</p>
 <p>This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout/point is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.</p>
 <p>If you simply need a unique identifier for an object used internally to the script, such as a turnout/point, route, automation, or sequence, you don’t even need to provide an ID, EX-RAIL will generate one automatically when you omit the value parameter. We recommend using this for all your routes, sequences, and other internal objects so you don’t have to try to remember or keep a list of numbers you’ve used. This also prevents you from assigning the same number to more than one object.</p>
 <p>REMEMBER: IDs for RESERVE/FREE, LATCH/UNLATCH, and pins must be explicitly defined.</p>
@@ -862,11 +877,12 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 <span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="n">COAL_YARD</span><span class="p">,</span><span class="w"> </span><span class="n">COAL_YARD_PIN</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Coal Yard&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</details></li>
-</ul>
-<p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 <p>Note that you could have used the command <cite>ALIAS(COAL_YARD, 1)</cite> in the example above to explicitly set the number, but unless you have a reason to use specific numbers, let the Command Station do it for you.</p>
 <p>In this simple example, aliases seem like overkill, however consider the case where you need to have the “Coal Yard” turnout/point closed or thrown in various different automation sequences, and you will soon see why it’s easier to understand you’re throwing the COAL_YARD turnout/point rather than turnout/point ID 12345.</p>
+</details></li>
+</ul>
+</div></blockquote>
+<p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
 </section>
 </section>
@@ -898,7 +914,9 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 <p><hr class="hr-dashed" /></p>
 <section id="autostart-a-task-is-automatically-started-at-this-point-during-startup">
 <h4><a class="toc-backref" href="#id52" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code> - A task is automatically started at this point during startup</a><a class="headerlink" href="#autostart-a-task-is-automatically-started-at-this-point-during-startup" title="Permalink to this heading"></a></h4>
-<p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> If you have previously relied on the implied AUTOSTART to run things immediately, you must now add this explicitly to the beginning of myAutomation.h</p>
+<blockquote>
+<div><p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> If you have previously relied on the implied AUTOSTART to run things immediately, you must now add this explicitly to the beginning of myAutomation.h</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 <p>There are three options to define <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> scripts or sequences:</p>
 <ul class="simple">
@@ -910,35 +928,46 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 </section>
 <section id="automation-id-description-define-an-automation-sequence-that-is-advertised-to-withrottles-to-send-a-train-along">
 <h4><a class="toc-backref" href="#id53" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AUTOMATION(</span> <span class="pre">id,</span> <span class="pre">&quot;description&quot;</span> <span class="pre">)</span></code> - Define an automation sequence that is advertised to WiThrottles to send a train along.</a><a class="headerlink" href="#automation-id-description-define-an-automation-sequence-that-is-advertised-to-withrottles-to-send-a-train-along" title="Permalink to this heading"></a></h4>
-<p>See <a class="reference internal" href="examples.html#stopping-at-a-station-simple-loop"><span class="std std-ref">Stopping at a Station (simple loop)</span></a> for a simple example.</p>
+<blockquote>
+<div><p>See <a class="reference internal" href="examples.html#stopping-at-a-station-simple-loop"><span class="std std-ref">Stopping at a Station (simple loop)</span></a> for a simple example.</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="route-id-description-define-a-route-that-is-advertised-to-withrottles">
 <h4><a class="toc-backref" href="#id54" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ROUTE(</span> <span class="pre">id,</span> <span class="pre">&quot;description&quot;</span> <span class="pre">)</span></code> - Define a route that is advertised to WiThrottles</a><a class="headerlink" href="#route-id-description-define-a-route-that-is-advertised-to-withrottles" title="Permalink to this heading"></a></h4>
-<p>Define a route that is advertised to WiThrottles. This can be used to initiate automation sequences such as setting turnouts/points and signals to allow a train to be driven through a specific route on the layout. See <a class="reference internal" href="examples.html#creating-routes"><span class="std std-ref">Creating Routes</span></a> for various examples.</p>
+<blockquote>
+<div><p>Define a route that is advertised to WiThrottles. This can be used to initiate automation sequences such as setting turnouts/points and signals to allow a train to be driven through a specific route on the layout. See <a class="reference internal" href="examples.html#creating-routes"><span class="std std-ref">Creating Routes</span></a> for various examples.</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="sequence-id-a-general-purpose-automation-sequence-that-is-not-advertised-to-withrottles">
 <h4><a class="toc-backref" href="#id55" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SEQUENCE(</span> <span class="pre">id</span> <span class="pre">)</span></code> - A general purpose automation sequence that is not advertised to WiThrottles</a><a class="headerlink" href="#sequence-id-a-general-purpose-automation-sequence-that-is-not-advertised-to-withrottles" title="Permalink to this heading"></a></h4>
-<p>A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activites. See <a class="reference internal" href="examples.html#automating-various-non-track-items"><span class="std std-ref">Automating various non-track items</span></a>, <a class="reference internal" href="examples.html#point-to-point-shuttle"><span class="std std-ref">Point to Point Shuttle</span></a>, and <a class="reference internal" href="examples.html#multiple-inter-connected-trains"><span class="std std-ref">Multiple inter-connected trains</span></a> for further examples.</p>
+<blockquote>
+<div><p>A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activites. See <a class="reference internal" href="examples.html#automating-various-non-track-items"><span class="std std-ref">Automating various non-track items</span></a>, <a class="reference internal" href="examples.html#point-to-point-shuttle"><span class="std std-ref">Point to Point Shuttle</span></a>, and <a class="reference internal" href="examples.html#multiple-inter-connected-trains"><span class="std std-ref">Multiple inter-connected trains</span></a> for further examples.</p>
+</div></blockquote>
+<p><hr class="hr-dashed" /></p>
 <p>All of these script types must be terminated by either a <code class="docutils literal notranslate"><span class="pre">DONE</span></code>, <code class="docutils literal notranslate"><span class="pre">FOLLOW(id)</span></code>, or <code class="docutils literal notranslate"><span class="pre">RETURN</span></code> statement. If you use <code class="docutils literal notranslate"><span class="pre">FOLLOW(id)</span></code> or <code class="docutils literal notranslate"><span class="pre">RETURN</span></code>, you do not also need a <code class="docutils literal notranslate"><span class="pre">DONE</span></code> statement as any of these terms will tell <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> that the sequence of events has ended.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="done-completes-a-sequence-route-animation-event-handler-and-any-other-automation-definition">
 <h4><a class="toc-backref" href="#id56" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">DONE</span></code> - Completes a Sequence/Route/Animation/Event handler, and any other automation definition</a><a class="headerlink" href="#done-completes-a-sequence-route-animation-event-handler-and-any-other-automation-definition" title="Permalink to this heading"></a></h4>
-<p>Completes a Sequence/Route/Animation/Event handler, and any other automation definition as shown in the various examples on this page and elsewhere in the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> documentation.</p>
+<blockquote>
+<div><p>Completes a Sequence/Route/Animation/Event handler, and any other automation definition as shown in the various examples on this page and elsewhere in the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> documentation.</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="call-route-branch-to-a-separate-sequence">
 <h4><a class="toc-backref" href="#id57" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">CALL(</span> <span class="pre">route</span> <span class="pre">)</span></code> - Branch to a separate sequence</a><a class="headerlink" href="#call-route-branch-to-a-separate-sequence" title="Permalink to this heading"></a></h4>
-<p>Branch to a separate sequence, which will need to RETURN when complete.</p>
+<blockquote>
+<div><p>Branch to a separate sequence, which will need to RETURN when complete.</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="return-return-to-the-calling-sequence-when-completed">
 <h4><a class="toc-backref" href="#id58" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">RETURN</span></code> - Return to the calling sequence when completed</a><a class="headerlink" href="#return-return-to-the-calling-sequence-when-completed" title="Permalink to this heading"></a></h4>
-<p>Return to the calling sequence when completed (no DONE required).</p>
 <blockquote>
-<div><details class="summary-for-example-click-to-show">
+<div><p>Return to the calling sequence when completed (no DONE required).</p>
+<details class="summary-for-example-click-to-show">
 <summary>For example: (click to show)</summary><p>Say, for example, you have an AUTOMATION you initiate the sends a train through your layout with multiple station stops, and you want to do the same things at each station.</p>
 <p>You could write a very long AUTOMATION sequence to do this, or you could write the sound SEQUENCE once, then call it at each station:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station loop&quot;</span><span class="p">)</span><span class="w">    </span><span class="c1">// Our station loop sequence</span>
@@ -972,9 +1001,9 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 </section>
 <section id="follow-route-branch-or-follow-a-numbered-sequence">
 <h4><a class="toc-backref" href="#id59" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">FOLLOW(</span> <span class="pre">route</span> <span class="pre">)</span></code> - Branch or Follow a numbered sequence</a><a class="headerlink" href="#follow-route-branch-or-follow-a-numbered-sequence" title="Permalink to this heading"></a></h4>
-<p>Branch or Follow a numbered sequence. This lets us do clever things like performing a different sequence depending on whether a turnout/point is CLOSED or THROWN, as well as simple things such as the example above where we keep looping through the same sequence.</p>
 <blockquote>
-<div><details class="summary-for-example-click-to-show">
+<div><p>Branch or Follow a numbered sequence. This lets us do clever things like performing a different sequence depending on whether a turnout/point is CLOSED or THROWN, as well as simple things such as the example above where we keep looping through the same sequence.</p>
+<details class="summary-for-example-click-to-show">
 <summary>For example: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Choose your own adventure&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// This let&#39;s someone control the sequence by throwing a turnout/point (or not)</span>
 <span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
 <span class="w">  </span><span class="n">AFTER</span><span class="p">(</span><span class="mi">105</span><span class="p">)</span>
@@ -1022,9 +1051,9 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 </section>
 <section id="delayrandom-min-delay-max-delay-delay-a-random-time-between-min-and-max-milliseconds">
 <h4><a class="toc-backref" href="#id65" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">DELAYRANDOM(</span> <span class="pre">min_delay,</span> <span class="pre">max_delay</span> <span class="pre">)</span></code> - Delay a random time between min and max milliseconds</a><a class="headerlink" href="#delayrandom-min-delay-max-delay-delay-a-random-time-between-min-and-max-milliseconds" title="Permalink to this heading"></a></h4>
-<p>Delay a random time between min and max milliseconds, see <a class="reference internal" href="examples.html#multiple-inter-connected-trains"><span class="std std-ref">Multiple inter-connected trains</span></a> for good examples.</p>
 <blockquote>
-<div><details class="summary-delay-examples-click-to-show">
+<div><p>Delay a random time between min and max milliseconds, see <a class="reference internal" href="examples.html#multiple-inter-connected-trains"><span class="std std-ref">Multiple inter-connected trains</span></a> for good examples.</p>
+<details class="summary-delay-examples-click-to-show">
 <summary>Delay examples: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ONCLOSE</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span><span class="w">      </span><span class="c1">// When turnout 102 closed, wait 2 seconds, then set signal 101 green.</span>
 <span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
 <span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
@@ -1043,9 +1072,9 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 </section>
 <section id="ifrandom-percent-runs-commands-in-if-block-a-random-percentage-of-the-time">
 <h4><a class="toc-backref" href="#id66" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFRANDOM(</span> <span class="pre">percent</span> <span class="pre">)</span></code> - Runs commands in IF block a random percentage of the time</a><a class="headerlink" href="#ifrandom-percent-runs-commands-in-if-block-a-random-percentage-of-the-time" title="Permalink to this heading"></a></h4>
-<p>Runs commands in IF block a random percentage of the time. This is handy for more realism by enabling automations that don’t have to run on a schedule.</p>
 <blockquote>
-<div><details class="summary-for-example-click-to-show">
+<div><p>Runs commands in IF block a random percentage of the time. This is handy for more realism by enabling automations that don’t have to run on a schedule.</p>
+<details class="summary-for-example-click-to-show">
 <summary>For example: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AT</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span><span class="w">           </span><span class="c1">// When sensor 165 is activated, set a lineside merry-go-round in action for 1 minute 50% of the time.</span>
 <span class="w">  </span><span class="n">IFRANDOM</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
 <span class="w">    </span><span class="n">SET</span><span class="p">(</span><span class="mi">166</span><span class="p">)</span>
@@ -1085,7 +1114,9 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 </section>
 <section id="endif-required-to-end-an-if-ifnot-etc">
 <h4><a class="toc-backref" href="#id69" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ENDIF</span></code> - Required to end an IF/IFNOT/etc.</a><a class="headerlink" href="#endif-required-to-end-an-if-ifnot-etc" title="Permalink to this heading"></a></h4>
-<p>Required to end an IF/IFNOT/etc. (Used in all IF.. functions).</p>
+<blockquote>
+<div><p>Required to end an IF/IFNOT/etc. (Used in all IF.. functions).</p>
+</div></blockquote>
 </section>
 </section>
 </section>
@@ -1116,18 +1147,24 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 <p><hr class="hr-dashed" /></p>
 <section id="signal-red-pin-amber-pin-green-pin-define-a-pin-based-signal">
 <h4><a class="toc-backref" href="#id70" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SIGNAL(</span> <span class="pre">red_pin,</span> <span class="pre">amber_pin,</span> <span class="pre">green_pin</span> <span class="pre">)</span></code> - Define a pin based signal</a><a class="headerlink" href="#signal-red-pin-amber-pin-green-pin-define-a-pin-based-signal" title="Permalink to this heading"></a></h4>
-<p>Define a pin based signal, which requires three active low pins to be defined to correspond with red, amber, and green lights. Active low means they are activated when the associated pins are set to 0V or ground.</p>
+<blockquote>
+<div><p>Define a pin based signal, which requires three active low pins to be defined to correspond with red, amber, and green lights. Active low means they are activated when the associated pins are set to 0V or ground.</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="signalh-red-pin-amber-pin-green-pin-as-above-to-define-a-pin-based-signal-but-with-active-high-pins-instead">
 <h4><a class="toc-backref" href="#id71" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SIGNALH(</span> <span class="pre">red_pin,</span> <span class="pre">amber_pin,</span> <span class="pre">green_pin</span> <span class="pre">)</span></code> - As above to define a pin based signal, but with active high pins instead</a><a class="headerlink" href="#signalh-red-pin-amber-pin-green-pin-as-above-to-define-a-pin-based-signal-but-with-active-high-pins-instead" title="Permalink to this heading"></a></h4>
-<p>As above to define a pin based signal, but with active high pins instead. Active high means they are activated when the associated pins are set to 5V (or 3.3V if using a 3.3V device)</p>
+<blockquote>
+<div><p>As above to define a pin based signal, but with active high pins instead. Active high means they are activated when the associated pins are set to 5V (or 3.3V if using a 3.3V device)</p>
 <p>For both the SIGNAL/SIGNALH commands, signal colour is set using the pin defined for the red pin. If the signal only has two colours (e.g. RED/GREEN), set the unused colour’s pin to 0</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="servo-signal-vpin-red-pos-amber-pos-green-pos-define-a-servo-based-signal">
 <h4><a class="toc-backref" href="#id72" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERVO_SIGNAL(</span> <span class="pre">vpin,</span> <span class="pre">red_pos,</span> <span class="pre">amber_pos,</span> <span class="pre">green_pos</span> <span class="pre">)</span></code> - Define a servo based signal</a><a class="headerlink" href="#servo-signal-vpin-red-pos-amber-pos-green-pos-define-a-servo-based-signal" title="Permalink to this heading"></a></h4>
-<p>Define a servo based signal, such as semaphore signals. Each position is an angle to turn the servo to, similar to the SERVO/SERVO2 commands, and SERVO_TURNOUT</p>
+<blockquote>
+<div><p>Define a servo based signal, such as semaphore signals. Each position is an angle to turn the servo to, similar to the SERVO/SERVO2 commands, and SERVO_TURNOUT</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="dcc-signal-id-addr-sub-addr-define-a-dcc-accessory-signal">
@@ -1216,28 +1253,40 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 <p><hr class="hr-dashed" /></p>
 <section id="turnout-id-addr-sub-addr-description-define-a-dcc-accessory-turnout-point">
 <h4><a class="toc-backref" href="#id84" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">TURNOUT(</span> <span class="pre">id,</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> - Define a DCC accessory turnout/point</a><a class="headerlink" href="#turnout-id-addr-sub-addr-description-define-a-dcc-accessory-turnout-point" title="Permalink to this heading"></a></h4>
-<p>Define a DCC accessory turnout/point. Note that DCC linear addresses are not supported, and must be converted to address/subaddress in order to be defined. Refer to the <a class="reference internal" href="../reference/downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet"><span class="std std-ref">Stationary Decoder Address Table (xlsx Spreadsheet)</span></a> for help on these conversions. (or see TURNOUTL below).</p>
+<blockquote>
+<div><p>Define a DCC accessory turnout/point. Note that DCC linear addresses are not supported, and must be converted to address/subaddress in order to be defined. Refer to the <a class="reference internal" href="../reference/downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet"><span class="std std-ref">Stationary Decoder Address Table (xlsx Spreadsheet)</span></a> for help on these conversions. (or see TURNOUTL below).</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="turnoutl-id-addr-description-define-a-dcc-accessory-turnout-point">
 <h4><a class="toc-backref" href="#id85" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">TURNOUTL(</span> <span class="pre">id,</span> <span class="pre">addr</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> - Define a DCC accessory turnout/point</a><a class="headerlink" href="#turnoutl-id-addr-description-define-a-dcc-accessory-turnout-point" title="Permalink to this heading"></a></h4>
-<p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Define a DCC accessory turnout/point.  This macro will convert a linear address to the address/subaddress format using the TURNOUT command above.</p>
+<blockquote>
+<div><p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Define a DCC accessory turnout/point.  This macro will convert a linear address to the address/subaddress format using the TURNOUT command above.</p>
 <p>Note when providing the name of the profile that the profile names are case sensitive, and must be written exactly as they appear (e.g. Bounce, not bounce or BOUNCE).</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="pin-turnout-id-pin-description-define-a-pin-operated-turnout">
 <h4><a class="toc-backref" href="#id86" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">PIN_TURNOUT(</span> <span class="pre">id,</span> <span class="pre">pin</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> - Define a pin operated turnout</a><a class="headerlink" href="#pin-turnout-id-pin-description-define-a-pin-operated-turnout" title="Permalink to this heading"></a></h4>
-<p>Define a pin operated turnout. When sending a CLOSE command, the pin will be HIGH, and a THROW command will set the pin LOW.</p>
+<blockquote>
+<div><p>Define a pin operated turnout. When sending a CLOSE command, the pin will be HIGH, and a THROW command will set the pin LOW.</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="servo-turnout-id-pin-active-angle-inactive-angle-profile-description-define-a-servo-turnout-point">
 <h4><a class="toc-backref" href="#id87" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERVO_TURNOUT(</span> <span class="pre">id,</span> <span class="pre">pin,</span> <span class="pre">active_angle,</span> <span class="pre">inactive_angle,</span> <span class="pre">profile</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> - Define a servo turnout/point</a><a class="headerlink" href="#servo-turnout-id-pin-active-angle-inactive-angle-profile-description-define-a-servo-turnout-point" title="Permalink to this heading"></a></h4>
-<p>Define a servo turnout/point. “active_angle” is for THROW, “inactive_angle” is for CLOSE, and profile is one of Instant, Fast, Medium, Slow or Bounce (although clearly we don’t recommend Bounce for turnouts/points!). Refer to <a class="reference internal" href="../reference/hardware/servo-module.html"><span class="doc">Connecting a Servo Module</span></a> for more information.</p>
+<blockquote>
+<div><p>Define a servo turnout/point. “active_angle” is for THROW, “inactive_angle” is for CLOSE, and profile is one of Instant, Fast, Medium, Slow or Bounce (although clearly we don’t recommend Bounce for turnouts/points!).</p>
+<p>Refer to <a class="reference internal" href="../reference/hardware/servo-module.html"><span class="doc">Connecting a Servo Module</span></a> for more information.</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="virtual-turnout-id-description-define-a-virtual-turnout-which-is-backed-by-another-automation-sequence">
 <h4><a class="toc-backref" href="#id88" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">VIRTUAL_TURNOUT(</span> <span class="pre">id</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> - Define a virtual turnout, which is backed by another automation sequence</a><a class="headerlink" href="#virtual-turnout-id-description-define-a-virtual-turnout-which-is-backed-by-another-automation-sequence" title="Permalink to this heading"></a></h4>
-<p>Define a virtual turnout, which is backed by another automation sequence. For a good example of this refer to <a class="reference internal" href="tips.html#realistic-turnout-sequences"><span class="std std-ref">Realistic turnout sequences</span></a>.</p>
+<blockquote>
+<div><p>Define a virtual turnout, which is backed by another automation sequence.</p>
+<p>For a good example of this refer to <a class="reference internal" href="tips.html#realistic-turnout-sequences"><span class="std std-ref">Realistic turnout sequences</span></a>.</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="ifclosed-turnout-id-test-if-a-turnout-is-closed">
@@ -1250,12 +1299,16 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 </section>
 <section id="onclose-turnout-id-event-handler-for-when-a-turnout-point-is-sent-a-close-command">
 <h4><a class="toc-backref" href="#id91" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONCLOSE(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code> - Event handler for when a turnout/point is sent a close command</a><a class="headerlink" href="#onclose-turnout-id-event-handler-for-when-a-turnout-point-is-sent-a-close-command" title="Permalink to this heading"></a></h4>
-<p>Event handler for when a turnout/point is sent a close command. Note that there can be only one defined ONCLOSE event for a specific turnout/point.</p>
+<blockquote>
+<div><p>Event handler for when a turnout/point is sent a close command. Note that there can be only one defined ONCLOSE event for a specific turnout/point.</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="onthrow-turnout-id-event-handler-for-when-a-turnout-point-is-sent-a-throw-command">
 <h4><a class="toc-backref" href="#id92" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONTHROW(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code> - Event handler for when a turnout/point is sent a throw command</a><a class="headerlink" href="#onthrow-turnout-id-event-handler-for-when-a-turnout-point-is-sent-a-throw-command" title="Permalink to this heading"></a></h4>
-<p>Event handler for when a turnout/point is sent a throw command. Note that there can be only one defined ONTHROW event for a specific turnout/point.</p>
+<blockquote>
+<div><p>Event handler for when a turnout/point is sent a throw command. Note that there can be only one defined ONTHROW event for a specific turnout/point.</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="close-turnout-id-close-a-defined-turnout-point">
@@ -1283,8 +1336,8 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 <p class="topic-title">In This Section</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#at-sensor-id-an-event-handler-that-defines-what-to-do-when-a-sensor-is-active-triggered" id="id95"><code class="docutils literal notranslate"><span class="pre">AT(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - An event handler that defines what to do when a sensor is active/triggered</a></p></li>
-<li><p><a class="reference internal" href="#after-sensor-id-an-event-handler-that-defines-what-to-do-after-a-sensor-has-been-triggered-and-then-is-off" id="id96"><code class="docutils literal notranslate"><span class="pre">AFTER(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - An event handler that defines what to do after a sensor has been triggered and then is off</a></p></li>
-<li><p><a class="reference internal" href="#attimeout-sensor-id-timeout-ms-a-time-based-event-handler-that-defines-what-to-do-when-a-sensor-is-active-triggered-or-if-the-timer-runs-out" id="id97"><code class="docutils literal notranslate"><span class="pre">ATTIMEOUT(</span> <span class="pre">sensor_id,</span> <span class="pre">timeout_ms</span> <span class="pre">)</span></code> - A time based event handler that defines what to do when a sensor is active/triggered or if the timer runs out</a></p></li>
+<li><p><a class="reference internal" href="#after-sensor-id-define-an-event-handler-for-what-to-do-after-a-sensor-has-been-triggered" id="id96"><code class="docutils literal notranslate"><span class="pre">AFTER(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - Define an event handler for what to do after a sensor has been triggered</a></p></li>
+<li><p><a class="reference internal" href="#attimeout-sensor-id-timeout-ms-define-a-time-based-event-handler-for-what-to-do-when-a-sensor-is-active-triggered-or-if-the-timer-runs-out" id="id97"><code class="docutils literal notranslate"><span class="pre">ATTIMEOUT(</span> <span class="pre">sensor_id,</span> <span class="pre">timeout_ms</span> <span class="pre">)</span></code> - Define a time based event handler for what to do when a sensor is active/triggered or if the timer runs out</a></p></li>
 <li><p><a class="reference internal" href="#if-sensor-id-if-sensor-activated-or-latched-continue" id="id98"><code class="docutils literal notranslate"><span class="pre">IF(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - If sensor activated or latched, continue</a></p></li>
 <li><p><a class="reference internal" href="#ifnot-sensor-id-if-sensor-not-activated-and-not-latched-continue" id="id99"><code class="docutils literal notranslate"><span class="pre">IFNOT(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - If sensor NOT activated and NOT latched, continue</a></p></li>
 <li><p><a class="reference internal" href="#iftimeout-tests-if-timed-out-flag-has-been-set-by-an-attimeout-sensor-reading-attempt" id="id100"><code class="docutils literal notranslate"><span class="pre">IFTIMEOUT</span></code> - Tests if “timed out” flag has been set by an ATTIMEOUT() sensor reading attempt</a></p></li>
@@ -1301,24 +1354,32 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 <h4><a class="toc-backref" href="#id95" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AT(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - An event handler that defines what to do when a sensor is active/triggered</a><a class="headerlink" href="#at-sensor-id-an-event-handler-that-defines-what-to-do-when-a-sensor-is-active-triggered" title="Permalink to this heading"></a></h4>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="after-sensor-id-an-event-handler-that-defines-what-to-do-after-a-sensor-has-been-triggered-and-then-is-off">
-<h4><a class="toc-backref" href="#id96" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AFTER(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - An event handler that defines what to do after a sensor has been triggered and then is off</a><a class="headerlink" href="#after-sensor-id-an-event-handler-that-defines-what-to-do-after-a-sensor-has-been-triggered-and-then-is-off" title="Permalink to this heading"></a></h4>
-<p>An event handler that defines what to do after a sensor has been triggered and then is off for 0.5 seconds.</p>
+<section id="after-sensor-id-define-an-event-handler-for-what-to-do-after-a-sensor-has-been-triggered">
+<h4><a class="toc-backref" href="#id96" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AFTER(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - Define an event handler for what to do after a sensor has been triggered</a><a class="headerlink" href="#after-sensor-id-define-an-event-handler-for-what-to-do-after-a-sensor-has-been-triggered" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><p>An event handler that defines what to do after a sensor has been triggered and then is off for 0.5 seconds.</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="attimeout-sensor-id-timeout-ms-a-time-based-event-handler-that-defines-what-to-do-when-a-sensor-is-active-triggered-or-if-the-timer-runs-out">
-<h4><a class="toc-backref" href="#id97" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ATTIMEOUT(</span> <span class="pre">sensor_id,</span> <span class="pre">timeout_ms</span> <span class="pre">)</span></code> - A time based event handler that defines what to do when a sensor is active/triggered or if the timer runs out</a><a class="headerlink" href="#attimeout-sensor-id-timeout-ms-a-time-based-event-handler-that-defines-what-to-do-when-a-sensor-is-active-triggered-or-if-the-timer-runs-out" title="Permalink to this heading"></a></h4>
-<p>A time based event handler that defines what to do when a sensor is active/triggered or if the timer runs out, then continues and sets a testable “timed out” flag.</p>
+<section id="attimeout-sensor-id-timeout-ms-define-a-time-based-event-handler-for-what-to-do-when-a-sensor-is-active-triggered-or-if-the-timer-runs-out">
+<h4><a class="toc-backref" href="#id97" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ATTIMEOUT(</span> <span class="pre">sensor_id,</span> <span class="pre">timeout_ms</span> <span class="pre">)</span></code> - Define a time based event handler for what to do when a sensor is active/triggered or if the timer runs out</a><a class="headerlink" href="#attimeout-sensor-id-timeout-ms-define-a-time-based-event-handler-for-what-to-do-when-a-sensor-is-active-triggered-or-if-the-timer-runs-out" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><p>A time based event handler that defines what to do when a sensor is active/triggered or if the timer runs out, then continues and sets a testable “timed out” flag.</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="if-sensor-id-if-sensor-activated-or-latched-continue">
 <h4><a class="toc-backref" href="#id98" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IF(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - If sensor activated or latched, continue</a><a class="headerlink" href="#if-sensor-id-if-sensor-activated-or-latched-continue" title="Permalink to this heading"></a></h4>
-<p>If sensor activated or latched, continue. Otherwise skip to ELSE or matching ENDIF.</p>
+<blockquote>
+<div><p>If sensor activated or latched, continue. Otherwise skip to ELSE or matching ENDIF.</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="ifnot-sensor-id-if-sensor-not-activated-and-not-latched-continue">
 <h4><a class="toc-backref" href="#id99" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFNOT(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - If sensor NOT activated and NOT latched, continue</a><a class="headerlink" href="#ifnot-sensor-id-if-sensor-not-activated-and-not-latched-continue" title="Permalink to this heading"></a></h4>
-<p>If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or matching ENDIF.</p>
+<blockquote>
+<div><p>If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or matching ENDIF.</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="iftimeout-tests-if-timed-out-flag-has-been-set-by-an-attimeout-sensor-reading-attempt">
@@ -1350,7 +1411,9 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 </section>
 <section id="iflt-sensor-id-value-test-if-analog-pin-reading-is-less-than-value">
 <h4><a class="toc-backref" href="#id104" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFLT(</span> <span class="pre">sensor_id,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Test if analog pin reading is less than value</a><a class="headerlink" href="#iflt-sensor-id-value-test-if-analog-pin-reading-is-less-than-value" title="Permalink to this heading"></a></h4>
-<p>Test if analog pin reading is less than value (&lt;).</p>
+<blockquote>
+<div><p>Test if analog pin reading is less than value (&lt;).</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 <p>All the <cite>IFGTE()</cite>, <cite>IFLT()</cite>, <cite>ATGTE()`and `ATLT()</cite> commands read the analog value from an analog input pin (A0 - A5 on an Arduino Mega) or an analog input from an I/O expander module. Valid values are defined by the capability of the analog to digital converter in use.</p>
 <blockquote>
@@ -1380,13 +1443,14 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 </div>
 </details></div></blockquote>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
-<p><hr class="hr-dashed" /></p>
 <p>LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used to trigger a virtual sensor to act as a state flag for EX-RAIL. As this effects the state of a sensor, it can be tested via IF/IFNOT and will also work with AT/AFTER.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="latch-sensor-id-latches-a-sensor-on">
 <h4><a class="toc-backref" href="#id105" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">LATCH(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - Latches a sensor on</a><a class="headerlink" href="#latch-sensor-id-latches-a-sensor-on" title="Permalink to this heading"></a></h4>
-<p>Latches a sensor on (Sensors 0-255 only).</p>
+<blockquote>
+<div><p>Latches a sensor on (Sensors 0-255 only).</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="unlatch-sensor-id-remove-latch-on-sensor">
@@ -1436,7 +1500,9 @@ DONE
 </section>
 <section id="reset-pin-reset-output-pin">
 <h4><a class="toc-backref" href="#id108" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">RESET(</span> <span class="pre">pin</span> <span class="pre">)</span></code> - Reset output pin</a><a class="headerlink" href="#reset-pin-reset-output-pin" title="Permalink to this heading"></a></h4>
-<p>Reset output pin (set to LOW)</p>
+<blockquote>
+<div><p>Reset output pin (set to LOW)</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="fade-pin-value-ms-fade-an-led-on-a-servo-driver-to-given-value-taking-given-time">
@@ -1445,7 +1511,9 @@ DONE
 </section>
 <section id="lcn-msg-send-message-to-lcn-accessory-network">
 <h4><a class="toc-backref" href="#id110" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">LCN(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Send message to LCN Accessory Network</a><a class="headerlink" href="#lcn-msg-send-message-to-lcn-accessory-network" title="Permalink to this heading"></a></h4>
-<p>Send message to LCN Accessory Network</p>
+<blockquote>
+<div><p>Send message to LCN Accessory Network</p>
+</div></blockquote>
 </section>
 </section>
 <hr class="docutils" />
@@ -1462,12 +1530,16 @@ DONE
 <p><hr class="hr-dashed" /></p>
 <section id="servo-id-position-profile-move-an-animation-servo">
 <h4><a class="toc-backref" href="#id111" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERVO(</span> <span class="pre">id,</span> <span class="pre">position,</span> <span class="pre">profile</span> <span class="pre">)</span></code> - Move an animation servo</a><a class="headerlink" href="#servo-id-position-profile-move-an-animation-servo" title="Permalink to this heading"></a></h4>
-<p>Move an animation servo. Do NOT use for Turnouts/points. (profile is one of Instant, Fast, Medium, Slow or Bounce)</p>
+<blockquote>
+<div><p>Move an animation servo. Do NOT use for Turnouts/points. (profile is one of Instant, Fast, Medium, Slow or Bounce)</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="servo2-id-position-duration-move-an-animation-servo-taking-duration">
 <h4><a class="toc-backref" href="#id112" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERVO2(</span> <span class="pre">id,</span> <span class="pre">position,</span> <span class="pre">duration</span> <span class="pre">)</span></code> - Move an animation servo taking duration</a><a class="headerlink" href="#servo2-id-position-duration-move-an-animation-servo-taking-duration" title="Permalink to this heading"></a></h4>
-<p>Move an animation servo taking duration in ms. Do NOT use for Turnouts/points</p>
+<blockquote>
+<div><p>Move an animation servo taking duration in ms. Do NOT use for Turnouts/points</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="waitfor-pin-the-waitfor-command-instructs-ex-rail-to-wait-for-a-servo-motion-to-complete-prior-to-continuing">
@@ -1556,13 +1628,17 @@ DONE
 </section>
 <section id="xfon-cab-func-send-dcc-function-on-to-specific-cab">
 <h4><a class="toc-backref" href="#id122" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">XFON(</span> <span class="pre">cab,</span> <span class="pre">func</span> <span class="pre">)</span></code> - Send DCC function ON to specific cab</a><a class="headerlink" href="#xfon-cab-func-send-dcc-function-on-to-specific-cab" title="Permalink to this heading"></a></h4>
-<p>Send DCC function ON to specific cab (eg coach lights) <em>Not for Loco use - use FON instead!</em></p>
+<blockquote>
+<div><p>Send DCC function ON to specific cab (eg coach lights) <em>Not for Loco use - use FON instead!</em></p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="xfoff-cab-func-send-dcc-function-off-to-specific-cab">
 <h4><a class="toc-backref" href="#id123" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">XFOFF(</span> <span class="pre">cab,</span> <span class="pre">func</span> <span class="pre">)</span></code> - Send DCC function OFF to specific cab</a><a class="headerlink" href="#xfoff-cab-func-send-dcc-function-off-to-specific-cab" title="Permalink to this heading"></a></h4>
-<p>Send DCC function OFF to specific cab (eg coach lights) Not for Loco use - use FON instead!</p>
+<blockquote>
+<div><p>Send DCC function OFF to specific cab (eg coach lights) Not for Loco use - use FON instead!</p>
 <p>All the above “ON” commands are event handlers that trigger a sequence of commands to run when the event occurs. These can vary from the most basic tasks such as setting signals when turnouts are closed or thrown, to triggering complete automation sequences via a DCC accessory decoder.</p>
+</div></blockquote>
 </section>
 </section>
 <hr class="docutils" />
@@ -1581,19 +1657,23 @@ DONE
 <p><hr class="hr-dashed" /></p>
 <section id="movett-id-steps-activity-move-the-specified-ex-tt-to-the-provided-step-position-and-perform-the-specified-activity">
 <h4><a class="toc-backref" href="#id124" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">MOVETT(</span> <span class="pre">id,</span> <span class="pre">steps,</span> <span class="pre">activity</span> <span class="pre">)</span></code> - Move the specified <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> to the provided step position and perform the specified activity</a><a class="headerlink" href="#movett-id-steps-activity-move-the-specified-ex-tt-to-the-provided-step-position-and-perform-the-specified-activity" title="Permalink to this heading"></a></h4>
-<p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Move the specified <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> to the provided step position and perform the specified activity</p>
+<blockquote>
+<div><p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Move the specified <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> to the provided step position and perform the specified activity</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="ifre-id-value-test-if-a-rotary-encoder-has-been-set-to-the-specified-value">
 <h4><a class="toc-backref" href="#id125" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFRE</span> <span class="pre">(</span> <span class="pre">id,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Test if a rotary encoder has been set to the specified value</a><a class="headerlink" href="#ifre-id-value-test-if-a-rotary-encoder-has-been-set-to-the-specified-value" title="Permalink to this heading"></a></h4>
-<p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Test if a rotary encoder has been set to the specified value</p>
+<blockquote>
+<div><p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Test if a rotary encoder has been set to the specified value</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="onchange-id-detects-a-rotary-encoder-has-changed-position">
 <h4><a class="toc-backref" href="#id126" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONCHANGE(</span> <span class="pre">id</span> <span class="pre">)</span></code> - Detects a rotary encoder has changed position</a><a class="headerlink" href="#onchange-id-detects-a-rotary-encoder-has-changed-position" title="Permalink to this heading"></a></h4>
-<p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Detects a rotary encoder has changed position</p>
 <blockquote>
-<div><details class="summary-for-example-click-to-show">
+<div><p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Detects a rotary encoder has changed position</p>
+<details class="summary-for-example-click-to-show">
 <summary>For example: (click to show)</summary><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ONCHANGE(700)     // If rotary encoder ID 700 change state do this sequence
   IFRE(700, 1)    // If rotary encoder ID 700 is at position 1, start ROUTE ID 123
     START(123)
@@ -1623,12 +1703,16 @@ DONE
 <p><hr class="hr-dashed" /></p>
 <section id="onclocktime-hours-mins-event-handler-for-when-the-specified-clock-time-is-reached">
 <h4><a class="toc-backref" href="#id127" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONCLOCKTIME(</span> <span class="pre">hours,</span> <span class="pre">mins</span> <span class="pre">)</span></code> - Event handler for when the specified clock time is reached</a><a class="headerlink" href="#onclocktime-hours-mins-event-handler-for-when-the-specified-clock-time-is-reached" title="Permalink to this heading"></a></h4>
-<p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Event handler for when the specified clock time is reached</p>
+<blockquote>
+<div><p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Event handler for when the specified clock time is reached</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="onclockmins-mins-event-handler-to-be-repeated-the-same-time-every-hour">
 <h4><a class="toc-backref" href="#id128" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONCLOCKMINS(</span> <span class="pre">mins</span> <span class="pre">)</span></code> - Event handler to be repeated the same time every hour</a><a class="headerlink" href="#onclockmins-mins-event-handler-to-be-repeated-the-same-time-every-hour" title="Permalink to this heading"></a></h4>
-<p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Event handler to be repeated the same time every hour</p>
+<blockquote>
+<div><p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Event handler to be repeated the same time every hour</p>
+</div></blockquote>
 </section>
 </section>
 </section>
@@ -1688,12 +1772,16 @@ DONE
 </section>
 <section id="speed-speed-drive-loco-in-current-direction-at-dcc-speed">
 <h4><a class="toc-backref" href="#id135" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SPEED(</span> <span class="pre">speed</span> <span class="pre">)</span></code> - Drive loco in current direction at DCC speed</a><a class="headerlink" href="#speed-speed-drive-loco-in-current-direction-at-dcc-speed" title="Permalink to this heading"></a></h4>
-<p>Drive loco in current direction at DCC speed (0-127)</p>
+<blockquote>
+<div><p>Drive loco in current direction at DCC speed (0-127)</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="stop-set-loco-speed-to-0">
 <h4><a class="toc-backref" href="#id136" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">STOP</span></code> - Set loco speed to 0</a><a class="headerlink" href="#stop-set-loco-speed-to-0" title="Permalink to this heading"></a></h4>
-<p>Set loco speed to 0 (same as SPEED(0))</p>
+<blockquote>
+<div><p>Set loco speed to 0 (same as SPEED(0))</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="fon-func-turn-on-loco-function">
@@ -1714,14 +1802,16 @@ DONE
 </section>
 <section id="pom-cv-value-program-cv-value-on-main">
 <h4><a class="toc-backref" href="#id141" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">POM(</span> <span class="pre">cv,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Program CV value on main</a><a class="headerlink" href="#pom-cv-value-program-cv-value-on-main" title="Permalink to this heading"></a></h4>
-<p>Program CV value on main, must be proceeded by setting the loco ID with <code class="docutils literal notranslate"><span class="pre">SETLOCO(</span> <span class="pre">loco</span> <span class="pre">)</span></code></p>
+<blockquote>
+<div><p>Program CV value on main, must be proceeded by setting the loco ID with <code class="docutils literal notranslate"><span class="pre">SETLOCO(</span> <span class="pre">loco</span> <span class="pre">)</span></code></p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="ifloco-loco-if-the-specified-loco-id-is-defined-for-this-sequence-perform-the-defined-activities">
 <h4><a class="toc-backref" href="#id142" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFLOCO(</span> <span class="pre">loco</span> <span class="pre">)</span></code> - If the specified loco ID is defined for this sequence, perform the defined activities</a><a class="headerlink" href="#ifloco-loco-if-the-specified-loco-id-is-defined-for-this-sequence-perform-the-defined-activities" title="Permalink to this heading"></a></h4>
-<p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> If the specified loco ID is defined for this sequence, perform the defined activities</p>
 <blockquote>
-<div><details class="summary-for-example-click-to-show">
+<div><p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> If the specified loco ID is defined for this sequence, perform the defined activities</p>
+<details class="summary-for-example-click-to-show">
 <summary>For example: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// A defined automation sequence that will do activities only if loco ID 123 is in use</span>
 <span class="n">AUTOSTART</span><span class="w"> </span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Do stuff for loco 123&quot;</span><span class="p">)</span>
 <span class="w">  </span><span class="n">IFLOCO</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
@@ -1736,7 +1826,9 @@ DONE
 </section>
 <section id="forget-forget-the-loco-in-the-running-automation-sequence">
 <h4><a class="toc-backref" href="#id143" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">FORGET</span></code> - Forget the loco in the running automation/sequence</a><a class="headerlink" href="#forget-forget-the-loco-in-the-running-automation-sequence" title="Permalink to this heading"></a></h4>
-<p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Forget the loco in the running automation/sequence</p>
+<blockquote>
+<div><p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Forget the loco in the running automation/sequence</p>
+</div></blockquote>
 </section>
 </section>
 <hr class="docutils" />
@@ -1752,14 +1844,14 @@ DONE
 <p><hr class="hr-dashed" /></p>
 <section id="set-track-track-mode-configures-the-mode-of-the-selected-track">
 <h4><a class="toc-backref" href="#id144" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SET_TRACK(</span> <span class="pre">track,</span> <span class="pre">mode</span> <span class="pre">)</span></code> - Configures the mode of the selected track</a><a class="headerlink" href="#set-track-track-mode-configures-the-mode-of-the-selected-track" title="Permalink to this heading"></a></h4>
-<p>Configures the mode of the selected track, refer also to <a class="reference internal" href="../trackmanager/index.html"><span class="doc">TrackManager (DCC &amp; DC)</span></a></p>
+<blockquote>
+<div><p>Configures the mode of the selected track, refer also to <a class="reference internal" href="../trackmanager/index.html"><span class="doc">TrackManager (DCC &amp; DC)</span></a></p>
 <ul class="simple">
 <li><p>track - The track to configure, valid options are A to H</p></li>
 <li><p>mode - The mode to set the track to, valid options for DCC are <code class="docutils literal notranslate"><span class="pre">MAIN</span></code> or <code class="docutils literal notranslate"><span class="pre">PROG</span></code>, and valid options for DC are <code class="docutils literal notranslate"><span class="pre">DC</span></code>, <code class="docutils literal notranslate"><span class="pre">DCX</span></code>. If a track is unused, it can be set to <code class="docutils literal notranslate"><span class="pre">NONE</span></code></p></li>
 </ul>
 <p>When setting at track mode to either DC or DCX, you must use the <code class="docutils literal notranslate"><span class="pre">SETLOCO(</span> <span class="pre">loco</span> <span class="pre">)</span></code> command first to specify the loco ID that will be used for the DC track then SET_TRACK()</p>
-<blockquote>
-<div><details class="summary-for-example-click-to-show">
+<details class="summary-for-example-click-to-show">
 <summary>For example: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Set both tracks A and B to be main DCC tracks</span>
 <span class="n">AUTOSTART</span>
 <span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">MAIN</span><span class="p">)</span>
@@ -1791,7 +1883,9 @@ DONE
 <p><hr class="hr-dashed" /></p>
 <section id="reserve-block-id-reserve-a-block">
 <h4><a class="toc-backref" href="#id145" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">RESERVE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Reserve a block</a><a class="headerlink" href="#reserve-block-id-reserve-a-block" title="Permalink to this heading"></a></h4>
-<p>Reserve a block (0-255). If already reserved, current loco will STOP and script waits for block to become free</p>
+<blockquote>
+<div><p>Reserve a block (0-255). If already reserved, current loco will STOP and script waits for block to become free</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="free-block-id-free-previously-reserved-block">
@@ -1800,7 +1894,9 @@ DONE
 </section>
 <section id="ifreserve-block-if-block-is-not-reserved-reserves-it-and-run-commands-in-if-block">
 <h4><a class="toc-backref" href="#id147" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFRESERVE(</span> <span class="pre">block</span> <span class="pre">)</span></code> - If block is NOT reserved, reserves it and run commands in IF block</a><a class="headerlink" href="#ifreserve-block-if-block-is-not-reserved-reserves-it-and-run-commands-in-if-block" title="Permalink to this heading"></a></h4>
-<p>If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF</p>
+<blockquote>
+<div><p>If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF</p>
+</div></blockquote>
 </section>
 </section>
 </section>
@@ -1863,22 +1959,30 @@ DONE
 </section>
 <section id="serial4-msg-writes-direct-to-serial4">
 <h4><a class="toc-backref" href="#id156" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL4(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial4</a><a class="headerlink" href="#serial4-msg-writes-direct-to-serial4" title="Permalink to this heading"></a></h4>
-<p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Writes direct to Serial4</p>
+<blockquote>
+<div><p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Writes direct to Serial4</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="serial5-msg-writes-direct-to-serial5">
 <h4><a class="toc-backref" href="#id157" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL5(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial5</a><a class="headerlink" href="#serial5-msg-writes-direct-to-serial5" title="Permalink to this heading"></a></h4>
-<p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Writes direct to Serial5</p>
+<blockquote>
+<div><p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Writes direct to Serial5</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="serial6-msg-writes-direct-to-serial6">
 <h4><a class="toc-backref" href="#id158" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL6(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial6</a><a class="headerlink" href="#serial6-msg-writes-direct-to-serial6" title="Permalink to this heading"></a></h4>
-<p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Writes direct to Serial6</p>
+<blockquote>
+<div><p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Writes direct to Serial6</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="withrottle-msg-writes-a-message-to-dcc-ex-clients">
 <h4><a class="toc-backref" href="#id159" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">WITHROTTLE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to DCC-EX clients</a><a class="headerlink" href="#withrottle-msg-writes-a-message-to-dcc-ex-clients" title="Permalink to this heading"></a></h4>
-<p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Writes a message to DCC-EX clients (alias of <code class="docutils literal notranslate"><span class="pre">PRINT</span></code>)</p>
+<blockquote>
+<div><p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Writes a message to DCC-EX clients (alias of <code class="docutils literal notranslate"><span class="pre">PRINT</span></code>)</p>
+</div></blockquote>
 </section>
 </section>
 <hr class="docutils" />
@@ -1899,12 +2003,16 @@ DONE
 <p><hr class="hr-dashed" /></p>
 <section id="poweron-power-on-track-and-unjoin">
 <h4><a class="toc-backref" href="#id160" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">POWERON</span></code> - Power on track and UNJOIN</a><a class="headerlink" href="#poweron-power-on-track-and-unjoin" title="Permalink to this heading"></a></h4>
-<p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Power on track and UNJOIN</p>
+<blockquote>
+<div><p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Power on track and UNJOIN</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="poweroff-power-off-track">
 <h4><a class="toc-backref" href="#id161" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">POWEROFF</span></code> - Power off track</a><a class="headerlink" href="#poweroff-power-off-track" title="Permalink to this heading"></a></h4>
-<p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Power off track</p>
+<blockquote>
+<div><p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Power off track</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="join-join-prog-and-main-track-outputs-to-send-the-same-main-dcc-signal">
@@ -1917,9 +2025,9 @@ DONE
 </section>
 <section id="hal-device-parameters-create-a-hal-device-in-myautomation-h">
 <h4><a class="toc-backref" href="#id164" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">HAL(</span> <span class="pre">device,</span> <span class="pre">parameters</span> <span class="pre">)</span></code> - Create a HAL device in myAutomation.h</a><a class="headerlink" href="#hal-device-parameters-create-a-hal-device-in-myautomation-h" title="Permalink to this heading"></a></h4>
-<p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Create a HAL device in myAutomation.h rather than needing to use myHal.cpp</p>
 <blockquote>
-<div><details class="summary-for-example-click-to-show">
+<div><p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Create a HAL device in myAutomation.h rather than needing to use myHal.cpp</p>
+<details class="summary-for-example-click-to-show">
 <summary>For example: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Define a Mega2560 based EX-IOExpander device starting at Vpin 800 at the default address of 0x65</span>
 <span class="n">HAL</span><span class="p">(</span><span class="n">EXIOExpander</span><span class="p">,</span><span class="w"> </span><span class="mi">800</span><span class="p">,</span><span class="w"> </span><span class="mi">62</span><span class="p">,</span><span class="w"> </span><span class="mh">0x65</span><span class="p">)</span>
 </pre></div>
@@ -1930,12 +2038,16 @@ DONE
 </section>
 <section id="killall-kills-all-running-ex-r-activities">
 <h4><a class="toc-backref" href="#id165" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">KILLALL</span></code> - Kills all running <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> activities</a><a class="headerlink" href="#killall-kills-all-running-ex-r-activities" title="Permalink to this heading"></a></h4>
-<p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Kills all running <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> activities</p>
+<blockquote>
+<div><p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Kills all running <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> activities</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="parse-msg-allows-parsing-of-a-dcc-ex-api-command-via-myautomation-h">
 <h4><a class="toc-backref" href="#id166" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">PARSE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Allows parsing of a DCC-EX API command via myAutomation.h</a><a class="headerlink" href="#parse-msg-allows-parsing-of-a-dcc-ex-api-command-via-myautomation-h" title="Permalink to this heading"></a></h4>
-<p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Allows parsing of a DCC-EX API command via myAutomation.h</p>
+<blockquote>
+<div><p><span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span> Allows parsing of a DCC-EX API command via myAutomation.h</p>
+</div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 </section>

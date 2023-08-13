@@ -6,7 +6,7 @@
 <meta content="DCC-EX DCC DCC++ EX DCC++EX" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EX-CommandStation API Reference &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>DCC-EX Native API Reference &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
@@ -449,7 +449,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Developer and API reference</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../throttles/tech-reference.html">Technical Reference for Throttle Developers</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">EX-CommandStation API Reference</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">DCC-EX Native API Reference</a></li>
 <li class="toctree-l3"><a class="reference internal" href="hal.html">DCC-EX HAL Architecture</a></li>
 <li class="toctree-l3"><a class="reference internal" href="hal-config.html">I/O Device Drivers and HAL</a></li>
 <li class="toctree-l3"><a class="reference internal" href="writing-hal-driver.html">Writing a HAL Driver</a></li>
@@ -545,7 +545,7 @@
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Reference</a></li>
           <li class="breadcrumb-item"><a href="index.html">Developer and API reference</a></li>
-      <li class="breadcrumb-item active">EX-CommandStation API Reference</li>
+      <li class="breadcrumb-item active">DCC-EX Native API Reference</li>
   
     
       <li class="wy-breadcrumbs-aside">
@@ -560,8 +560,8 @@
            <div itemprop="articleBody">
              
 <p><a class="image-product-logo-float-right reference internal" href="../../_images/product-logo-reference.png"><img alt="Reference" class="image-product-logo-float-right" src="../../_images/product-logo-reference.png" style="width: 320.0px; height: 64.0px;" /></a></p>
-<section id="ex-commandstation-api-reference">
-<h1>EX-CommandStation API Reference<a class="headerlink" href="#ex-commandstation-api-reference" title="Permalink to this heading"></a></h1>
+<section id="dcc-ex-native-api-reference">
+<h1>DCC-EX Native API Reference<a class="headerlink" href="#dcc-ex-native-api-reference" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
 <nav class="contents local" id="on-this-page">
@@ -579,19 +579,6 @@
 </ul>
 </nav>
 </aside>
-<table class="docutils align-default">
-<tbody>
-<tr class="row-odd"><th class="stub"><p>Document status</p></th>
-<td><p>Draft</p></td>
-</tr>
-<tr class="row-even"><th class="stub"><p>Document version</p></th>
-<td><p>0.3</p></td>
-</tr>
-<tr class="row-odd"><th class="stub"><p>Last update</p></th>
-<td><p>24th June 2022</p></td>
-</tr>
-</tbody>
-</table>
 <p>This page documents the API syntax and usage for <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>.</p>
 <p>The current API has resulted from a mix of new commands and commands inherited from the original DCC++ code base, and therefore there are some noted exceptions to the syntax, however all new commands and responses must conform to the correct syntax.</p>
 <div class="admonition note">
@@ -599,7 +586,7 @@
 <p>Legacy commands and responses that do not comply with this documented syntax will be deprecated in future versions.</p>
 </div>
 <p>If you are looking for information on the WiThrottle protocol, you will find that documented on the <a class="reference external" href="https://www.jmri.org/help/en/package/jmri/jmrit/withrottle/Protocol.shtml">JMRI website</a>.</p>
-<p>For detailed information on the various commands and responses available with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, refer to the <a class="reference internal" href="../software/command-reference.html"><span class="doc">DCC-EX Native Command Reference</span></a> page.</p>
+<p>For detailed information on the various commands and responses available with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, refer to the <a class="reference internal" href="../software/command-summary-consolidated.html"><span class="doc">DCC-EX Native Commands - Consolidated Reference</span></a> page.</p>
 <section id="api-client-definition">
 <h2><a class="toc-backref" href="#id1" role="doc-backlink">1. API Client definition</a><a class="headerlink" href="#api-client-definition" title="Permalink to this heading"></a></h2>
 <p>This API reference applies to any API client that makes use of these commands and responses.</p>
@@ -679,7 +666,7 @@
 <p>To obtain the parameters:</p>
 <section id="b-1-obtain-the-opcode">
 <h3>B.1. Obtain the OPCODE<a class="headerlink" href="#b-1-obtain-the-opcode" title="Permalink to this heading"></a></h3>
-<p>The first level of parsing is to obtain the single character, case sensitive OPCODE which is preceeded by a <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> character.</p>
+<p>The first level of parsing is to obtain the single character, case sensitive OPCODE which is preceded by a <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> character.</p>
 </section>
 <section id="b-2-obtain-the-parameters">
 <h3>B.2. Obtain the parameters<a class="headerlink" href="#b-2-obtain-the-parameters" title="Permalink to this heading"></a></h3>

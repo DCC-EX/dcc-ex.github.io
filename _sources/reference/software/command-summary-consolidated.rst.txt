@@ -470,8 +470,8 @@ Roster Commands
 
 ----
 
-Turnout/Points
---------------
+Turnouts/Points
+---------------
 
 .. contents:: In This Section
     :depth: 4
@@ -585,7 +585,9 @@ Routes/Automations
     :local:
     :class: in-this-section
 
-For details on how to configure turnouts/points see: :doc:`/ex-rail/EX-RAIL-command-reference`
+For details on how to configure routes/automations see: :doc:`/ex-rail/EX-RAIL-command-reference`
+
+Also see the `EX-RAIL` section below for activating routes.
 
 |hr-dashed|
 
@@ -762,8 +764,8 @@ Sensors
 
 |hr-dashed|
 
-``<S>`` - Requests a list of all defined sensors
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<S>`` - Request a list of all defined sensors
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| Repeated for each defined sensor: ``<Q id vpin pullup>`` |BR|
@@ -843,6 +845,46 @@ EX-RAIL
 
 |hr-dashed|
 
+``</ ROUTES>`` ``</ROUTES>`` - Request the Routes & Automations list
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Request the Routes & Automations control list in wiThrottle Protocol format.
+
+  *Response:* |BR|
+  |_| ``<X>``
+
+|hr-dashed|
+
+``</ START [locoAddr] routeId>`` - Start a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| locoAddr: DCC address of the loco |BR|
+  |_| routeId: id of the rout to start
+  
+  *Response:* ???
+
+|hr-dashed|
+
+``</ PAUSE>`` - Pauses ALL EX-RAIL automation activities
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Including sending an E-STOP to all locos.
+
+  *Response:* N/A
+
+|hr-dashed|
+
+``</ RESUME>`` ``</RESUME>`` - Resumes ALL EX-RAIL automation activities
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Also resumes all locos at the same speed at which they were paused.
+
+  *Parameters:* N/A |BR|
+  *Response:* N/A
+
+|hr-dashed|
+
 ``</ KILL taskId>`` - Kills a currently running script task by ID (use to list task IDs)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -868,13 +910,18 @@ EX-RAIL
 
 |hr-dashed|
 
-``</ FREE blockId>`` - Manually frees a virtual track Block
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``</ UNLATCH sensorId>`` - Unlock sensor, returning to current external state
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
-  |_| > **blockId:** ?? valid ids and in the range 0-255
-
-  *Response:* ???
+  |_| > **sensor_id:** ??  valid ids and in the range 0-255
+  
+  *Response:* ??? |BR|
+  |_|  |BR|
+  |_| ``<* Opcode=U params=2 *>`` |BR|
+  |_| ``<* p[0]=23772 (0x5CDC) *>`` |BR|
+  |_| ``<* p[1]=24 (0x18) *>`` |BR|
+  |_| ``<X>``
 
 |hr-dashed|
 
@@ -888,13 +935,15 @@ EX-RAIL
 
 |hr-dashed|
 
-``</ PAUSE>`` - Pauses ALL EX-RAIL automation activities
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``</ FREE blockId>`` - Manually frees a virtual track Block
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  Including sending an E-STOP to all locos.
+  *Parameters:* |BR|
+  |_| > **blockId:** ?? valid ids and in the range 0-255
 
-  *Response:* N/A
+  *Response:* ???
 
+|hr-dashed|
 
 ``</>`` - Request EX-RAIL running task information
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -906,50 +955,6 @@ EX-RAIL
   |_| ID=1,PC=228,LOCO=0 ,SPEED=0F |BR|
   |_| RED[110] |BR|
   |_| RED[113] *>**
-
-|hr-dashed|
-
-``</ ROUTES>`` - Request the Routes & Automations control list in wiThrottle Protocol format
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  *Response:* |BR|
-  |_| ``<X>``
-
-|hr-dashed|
-
-``</ RESUME>`` - Resumes ALL EX-RAIL automation activities
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  Also resumes all locos at the same speed at which they were paused.
-
-  *Parameters:* N/A |BR|
-  *Response:* N/A
-
-|hr-dashed|
-
-``</ START [locoAddr] routeId>`` - Start a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  *Parameters:* |BR|
-  |_| locoAddr: DCC address of the loco |BR|
-  |_| routeId: id of the rout to start
-  
-  *Response:* ???
-
-|hr-dashed|
-
-``</ UNLATCH sensorId>`` - Unlock sensor, returning to current external state
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  *Parameters:* |BR|
-  |_| > **sensor_id:** ??  valid ids and in the range 0-255
-  
-  *Response:* ??? |BR|
-  |_|  |BR|
-  |_| ``<* Opcode=U params=2 *>`` |BR|
-  |_| ``<* p[0]=23772 (0x5CDC) *>`` |BR|
-  |_| ``<* p[1]=24 (0x18) *>`` |BR|
-  |_| ``<X>``
 
 |hr-dashed|
 

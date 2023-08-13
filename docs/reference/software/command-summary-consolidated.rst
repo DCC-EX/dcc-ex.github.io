@@ -690,7 +690,7 @@ DCC Accessories
     :local:
     :class: in-this-section
 
-EX-CS| can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).
+|EX-CS| can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).
 
 All decoders that are not in an engine are accessory decoders including turnouts.
 

@@ -59,7 +59,7 @@ html[data-theme='dark'] h4, .h4 {
 }
 html[data-theme='dark'] h4 a, 
 html[data-theme='dark'] h4 a:visited {
-  color: #00a3b9ff !important;
+  color: #ffffff !important;
 }
 h5, .h5 {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
@@ -796,6 +796,20 @@ html[data-theme='dark'] .rst-content code.literal, .rst-content tt.literal {
 
 .dcc-ex-text-size-60pct {
   font-size: 80% !important;
+}
+
+.new-in-v5 {
+  font-family: Audiowide,Helvetica,Arial,sans-serif;  
+  font-weight: bold; 
+  font-style: italic; 
+  color: #00a3b9; 
+  font-size: 110%; 
+}
+
+html[data-theme='dark'] .new-in-v5 {
+  font-weight: normal; 
+  color: #ffffff; 
+  text-shadow: 0px 0px 10px #00a3b9;
 }
 
 /* *************************************** */

@@ -2,9 +2,9 @@
 .. include:: /include/include-l2.rst
 |EX-REF-LOGO|
 
-*********************************************
-DCC-EX Native Commands - Consolidated Summary
-*********************************************
+***********************************************
+DCC-EX Native Commands - Consolidated Reference
+***********************************************
 
 |engineer|
 
@@ -14,18 +14,15 @@ DCC-EX Native Commands - Consolidated Summary
     :depth: 2
     :local:
 
-**This is a summary, for a detailed command, see...**
-  :doc:`Command Reference <command-reference>`
-
 This page describes all the |DCC-EX Native commands| that the |EX-CS| supports.
 
 Conventions used on this page
 =============================
 
 - ``<`` and ``>`` - All DCC-EX commands are surrounded by these characters to indicate the beginning and end, these must always be included
-- First letter or number - These are called OPCODES, are case sensitive, and must be specified as directed, eg. ``1``, ``c``, or ``-``
-- CAPITALISED words - These are parameters referred to as keywords, and should be specified as directed, eg. ``MAIN`` (note these are not case sensitive, however capitalising makes them easier to distinguish from other parameters)
-- lowercase words - These are parameters that must be provided or are returned, with multiple parameters separated by a space " ", eg. ``cab``
+- First letter or number - These are called OPCODES, are case sensitive, and must be specified as directed, e.g. ``1``, ``c``, or ``-``
+- CAPITALISED words - These are parameters referred to as keywords, and should be specified as directed, e.g. ``MAIN`` (note these are not case sensitive, however capitalising makes them easier to distinguish from other parameters)
+- lowercase words - These are parameters that must be provided or are returned, with multiple parameters separated by a space " ", e.g. ``cab``
 - Square brackets ``[]`` - Parameters within square brackets ``[]`` are optional and may be omitted, and if specifying these parameters, do not include the square brackets themselves
 - \| - Use of the \| character means you need to provide one of the provided options only, for example ``<0|1 MAIN|PROG|JOIN>`` becomes either ``<0 MAIN>`` or ``<1 MAIN>``
 - ``0|1`` DIRECTION: 1=forward, 0=reverse.
@@ -38,39 +35,12 @@ Controlling the EX-CommandStation
 Power management
 ----------------
 
-|hr-dashed|
-
-``<D RESET>`` - **Re-boot the command Station**
-
-  *Parameters:* N/A |BR|
-  *Response:* N/A
-
-``<J I>`` ``<JI>`` - **Request current status**
-
-  *Parameters:* N/A
-
-  *Response:* Repeated for each Channel/Track: ``<j I track current>`` |BR|
-  |_| > **track:**  channel/track |BR|
-  |_| > **current:** current in milliamps
-    
-    *Version Introduced: 4.2.19* 
-
-|hr-dashed|
-
-``<J G>`` ``<JG>`` - **Request max current** |BR|
-
-  *Parameters:*  N/A
-  
-  *Response:* |BR|
-  |_| repeated for each Channel/Track: ``<j G track currentmax>`` |BR|
-  |_| > **track:**  channel/track |BR|
-  |_| > **currentmax:** current in milliamps
-    
-    *Version Introduced: 4.2.19*
+Also see `System Information`_ for retrieve command station power information:
 
 |hr-dashed|
 
 ``<onOff [track]>`` - **Turns power on and off to the MAIN and PROG tracks together or independently. Also allows joining the MAIN and PROG tracks together.**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **onOff:** one of |BR|
@@ -81,18 +51,87 @@ Power management
   |_|  |_| - MAIN = Main track  |BR|
   |_|  |_| - PROG = Programming Track  |BR|
   |_|  |_| - JOIN = Join the Main and Programming tracks temporarily |BR|
-  |_|  |BR|
-  |_| e.g. |BR|
-  |_| all tracks off: ``<0>`` |BR|
-  |_| all tracks on ``<1>`` |BR|
-  |_| join: ``<1 JOIN>`` |BR|
-    
+
   *Response:*  N/A
 
   *Notes:*
 
-  The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work. If you drive onto a programming track that is "joined" and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout! |BR|
-  In some split motor shield hardware configurations JOIN will not be able to work.
+    The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work. If you drive onto a programming track that is "joined" and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!
+
+    In some split motor shield hardware configurations JOIN will not be able to work.
+
+  *Examples:* |BR|
+  |_| all tracks off: ``<0>`` |BR|
+  |_| all tracks on ``<1>`` |BR|
+  |_| join: ``<1 JOIN>``
+
+|hr-dashed|
+
+``<D RESET>`` - **Re-boot the command Station**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Response:* N/A
+
+``<J I>`` ``<JI>`` - **Request current status**
+
+  *Response:* Repeated for each Channel/Track: ``<j I track current>`` |BR|
+  |_| > **track:**  channel/track |BR|
+  |_| > **current:** current in milliamps
+    
+    *Version Introduced: 4.2.19* 
+
+|hr-dashed|
+
+``<J G>`` ``<JG>`` - **Request max current**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Response:* |BR|
+  |_| repeated for each Channel/Track: ``<j G track currentmax>`` |BR|
+  |_| > **track:**  channel/track |BR|
+  |_| > **currentmax:** current in milliamps
+    
+    *Version Introduced: 4.2.19*
+
+----
+
+Track Manager
+-------------
+
+Note:  Previously referred to as 'DC-District'.
+
+|hr-dashed|
+
+``<= trackletter mode [cab]>`` - **Configure Track Manager Note: since only one channel can be PROG, changing a second channel to PROG, will force the other to OFF**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **trackletter:** 'A' through 'H' represent one of the outputs of the/a motor shield. |BR|
+  |_| > **mode:** one of  |BR|
+  |_|  |_| - MAIN |BR|
+  |_|  |_| - PROG |BR|
+  |_|  |_| - DC |BR|
+  |_|  |_| - DCX = DC reversed polarity |BR|
+  |_|  |_| - OFF (DCX is DC with reversed polarity) |BR|
+  |_| > **id:** the cab ID. *Required when specifying DC or DCX*
+  
+  *Response:* |BR|
+  |_| (for each track/channel that has changed) ``<= trackletter state cab>`` |BR|
+  |_|  |BR|
+  |_| > **trackletter:** A-H |BR|
+  |_| > **state:**  PROG, MAIN DC, DCX |BR|
+  |_| > **cab:** cab(loco) equivalent to a fake DCC Address
+
+|hr-dashed|
+
+``<=>`` - **Request the current Track Manager configuration**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Response:* |BR|
+  |_| for each track/channel supported by the motor shield ``<= trackletter state cab>`` |BR|
+  |_|  |BR|
+  |_| > **trackletter:** A-H |BR|
+  |_| > **state:** PROG, MAIN DC, DCX |BR|
+  |_| > **cab:** cab(loco) equivalent to a fake DCC Address
 
 ----
 
@@ -101,64 +140,8 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
-``<!>`` - **Emergency Stop**
-
-  *Parameters:* N/A
-  
-  *Response:* |BR|
-  |_| Repeated for each loco in the reminders list ``<l cab reg speedByte functMap>`` |BR|
-  |_| Refer to the ``<t ..>`` commmand for details on this response.
-
-|hr-dashed|
-
-``<- [cab]>`` - **Remove one or all locos from reminders**
-
-  *Parameters:* |BR|
-  |_| > **cab:** one of |BR|
-  |_|  |_| - blank = all locos  |BR|
-  |_|  |_| - No. = Cab (loco) to forget
-  
-  *Response:* N/A
-  
-  *Notes:*
-  
-    Forgets one or all locos. The "cab" parameter is optional.  |BR|
-    Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending **<- cab>** will forget/clear that loco. Sending **<->** will clear all the locos. This doesn't do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands.
-
-|hr-dashed|
-
-``<J R id>`` ``<JR id>`` - **Request details of a specific Roster Entry**
-
-  *Parameters:* |BR|
-  |_| > **id:** unique id of the Cab/s (Loco/s) in the roster
-  
-  *Response:* |BR|
-  |_| ``<jR id ""|"desc" ""|"funct1/funct2/funct3/...">`` |BR|
-  |_| > **id:**  unique id of the Cab/s (Loco/s) in the roster |BR|
-  |_| > **desc:** description of the Loco |BR|
-  |_| > **funct?:** Label for each function 0-28 |BR|
-  |_|  |BR|
-  |_| e.g.  |BR|
-  |_| Response (id is in Roster): ``<jR id "desc" "funct1/funct2/funct3/...">`` |BR|
-  |_| Response (id is not in Roster): ``<jR id "" "">``
-
-|hr-dashed|
-
-``<J R>`` ``<JR>`` - **Request the list defined Roster Entry IDs**
-
-  *Parameters:* N/A |BR| 
-
-  *Response:* |BR|
-  |_| ``<jR [id1 id2 id3 ...]>`` |BR|
-  |_| > **id?:** unique id of the Cab/s (Loco/s) in the roster |BR|
-  |_|  |BR|
-  |_| e.g. |BR|
-  |_| Response (roster exists): ``<jR id1 id2 id3 ...>`` |BR|
-  |_| Response (no roster exists): ``<jR>``
-
-|hr-dashed|
-
-``<t cab>`` - **Requests a deliberate update on the cab speed/functions in the same format as the cab (loco) broadcast.**
+``<t cab>`` - **Requests a deliberate update on the cab (loco) speed/functions**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **cab:** DCC Address of the decoder/loco
@@ -167,7 +150,8 @@ Cab (Loco) Commands
   |_| The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. |BR|
   |_|  |BR|
   |_| ``<l cab reg speedByte functMap>`` |BR|
-  |_| > **cab:** DCC Address of the decoder/loco |BR|
+  |_| > **cab:** DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder (this has to be already programmed in the decoder) |BR|
+  |_| > **reg:** not used. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.
   |_| > **speedbyte:** Speed in DCC speedstep format . |BR|
   |_|  |_| - reverse - 2-127 = speed 1-126, 0 = stop  |BR|
   |_|  |_| - forward - 130-255 = speed 1-126,  128 = stop |BR|
@@ -178,9 +162,11 @@ Cab (Loco) Commands
     The *speedbyte* value is different to the *speed* sent, as it is an encoded (1,7 bits)  byte. |BR|
     This starts a reminder process for any external updates to the cab's (loco's) status.
 
+
 |hr-dashed|
 
 ``<t cab speed dir>`` - **Set Cab (Loco) Speed**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **cab:** DCC Address of the decoder/loco |BR|
@@ -208,22 +194,17 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
-``<D speedsteps>`` - **Switch between 28 and 128 speed steps**
+``<!>`` - **Emergency Stop**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Parameters:* |BR|
-  |_| > **speedsteps:** |BR|
-  |_|  |_| - SPEED28 = use 28 speed steps |BR|
-  |_|  |_| - SPEED128 = use 128 speed steps
-  
   *Response:* |BR|
-  |_| Response sent to the Serial Monitor only (not wifi clients). |BR|
-  |_| One of: |BR|
-  |_|  |_| - *28 Speedsteps* |BR|
-  |_|  |_| - *128 Speedsteps*
+  |_| Repeated for each loco in the reminders list ``<l cab reg speedByte functMap>`` |BR|
+  |_| Refer to the ``<t ..>`` command for details on this response.
 
 |hr-dashed|
 
-``<F cab funct state>`` - **Turns loco decoder functions ON and OFF**
+``<F cab funct state>`` - **Turns loco decoder functions ON or OFF**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **cab:** DCC Address of the decoder/loco (short (1-127) or long (128-10293)) |BR|
@@ -253,6 +234,7 @@ Cab (Loco) Commands
 |hr-dashed|
 
 ``<f cab byte1 [byte2]]>`` - **Decoder Functions - Legacy command.** |DEPRECATED|
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **cab:** DCC Address of the decoder/loco |BR|
@@ -355,6 +337,7 @@ Cab (Loco) Commands
 |hr-dashed|
 
 ``<t reg cab speed dir>`` - **Set Cab (Loco) Speed - Legacy command** |DEPRECATED|
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **reg:** not used |BR|
@@ -379,17 +362,96 @@ Cab (Loco) Commands
     The *speedbyte* value is different to the *speed* sent, as it is an encoded (1,7 bits)  byte. |BR|
     This starts a reminder process for any external updates to the cab's (loco's) status.
 
+|hr-dashed|
+
+``<- [cab]>`` - **Remove one or all locos from reminders**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **cab:** one of |BR|
+  |_|  |_| - blank = all locos  |BR|
+  |_|  |_| - No. = Cab (loco) to forget
+  
+  *Response:* N/A
+  
+  *Notes:*
+  
+    Forgets one or all locos. The "cab" parameter is optional.
+
+    Once you send a throttle command to any loco, throttle commands to that loco will continue to be sent to the track. If you remove the loco, or for testing purposes need to clear the loco from repeating messages to the track, you can use this command. Sending **<- cab>** will forget/clear that loco. Sending **<->** will clear all the locos. This doesn't do anything destructive or erase any loco settings, it just clears the speed reminders from being sent to the track. As soon as a controller sends another throttle command, it will go back to repeating those commands.
+
+  *Examples:*
+
+    ``<- 74>`` - Forgets loco at address 74 |BR|
+    ``<->`` - Forgets all locos
+
+|hr-dashed|
+
+``<D speedsteps>`` - **Switch between 28 and 128 speed steps**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **speedsteps:** |BR|
+  |_|  |_| - SPEED28 = use 28 speed steps |BR|
+  |_|  |_| - SPEED128 = use 128 speed steps
+  
+  *Response:* |BR|
+  |_| Response sent to the Serial Monitor only (not wifi clients). |BR|
+  |_| One of: |BR|
+  |_|  |_| - *28 Speedsteps* |BR|
+  |_|  |_| - *128 Speedsteps*
+
+
+----
+
+Roster Commands
+-------------------
+
+|hr-dashed|
+
+``<J R>`` ``<JR>`` - **Request the list defined Roster Entry IDs**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* N/A |BR| 
+
+  *Response:* |BR|
+  |_| ``<jR [id1 id2 id3 ...]>`` |BR|
+  |_| > **id?:** unique id of the Cab/s (Loco/s) in the roster |BR|
+  |_|  |BR|
+  |_| *Example Responses:* |BR|
+  |_| Response (roster exists): ``<jR id1 id2 id3 ...>`` |BR|
+  |_| Response (no roster exists): ``<jR>``
+
+|hr-dashed|
+
+``<J R id>`` ``<JR id>`` - **Request details of a specific Roster Entry**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **id:** unique id of the Cab/s (Loco/s) in the roster
+  
+  *Response:* |BR|
+  |_| ``<jR id ""|"desc" ""|"funct1/funct2/funct3/...">`` |BR|
+  |_| > **id:**  unique id of the Cab/s (Loco/s) in the roster |BR|
+  |_| > **desc:** description of the Loco |BR|
+  |_| > **funct?:** Label for each function 0-28 |BR|
+  |_|  |BR|
+  |_| *Example Responses:*  |BR|
+  |_| Response (id is in Roster): ``<jR id "desc" "funct1/funct2/funct3/...">`` |BR|
+  |_| Response (id is not in Roster): ``<jR id "" "">``
+
 ----
 
 Turnout/Points
 --------------
 
+For details on how to configure turnouts/points see: `Turnouts/Points (Configuring the EX-CommandStation)`_
+
 |hr-dashed|
 
 ``<T>`` - **Request a list all defined turnouts/Points**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Parameters:* N/A
-  
   *Response:* |BR|
   |_| Repeated for each defined Turnout/Point |BR|
   |_| Response (DCC Accessories): ``<H id DCC address subaddress state>`` |BR|
@@ -399,11 +461,28 @@ Turnout/Points
   |_| Response (fail): ? |BR|
   |_| Response (no defined turnouts/points): ? |BR|
   |_|  |BR|
-  |_| state - 0=closed 1=thrown
+  |_| state - 0 = closed 1 = thrown
+
+  .. collapse:: Response - Additional Details: (click to show)
+
+      * ``id`` : The numeric ID (0-32767) of the turnout to control.  
+
+      * (NOTE: You pick the ID. IDs are shared between Turnouts/Points, Sensors and Outputs)
+
+      * ``address`` is the primary address of a DCC accessory decoder controlling a turnout/point (0-511)
+      * ``subaddress`` is the subaddress of a DCC accessory decoder controlling a turnout/point (0-3)
+      * ``vpin`` is the pin number of the output to be controlled by the turnout/point object.  For Arduino output pins, this is the same as the digital pin number.  For 
+        servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
+        116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.
+      * ``thrown`` - "0" is closed.  "1" is thrown.
+      * ``thrown_position`` : the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490.
+      * ``closed_position`` : the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490.
+      * ``profile`` : the profile for the transition between states.  0=Immediate, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec), 3=Bounce (for semaphore signals).
 
 |hr-dashed|
 
 ``<J T id>`` ``<JT id>`` - **Request details of a specific Turnout/Point**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:**  unique id of the Turnout/Point
@@ -419,27 +498,27 @@ Turnout/Points
   |_|  |_| - "desc" = description of the Turnout(Point) (including surrounding quotes) |BR|
   |_|  |_| - blank = unknown id |BR|
   |_|  |BR|
-  |_| e.g. |BR|
+  |_| *Example Responses:* |BR|
   |_| Response (id is defined): ``<jT id state "[desc]">`` |BR|
   |_| Response (id not defined): ``<jT id X>``
 
 |hr-dashed|
 
 ``<J T>`` ``<JT>`` - **Request the list of defined turnout/Point IDs**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Parameters:* N/A
-  
   *Response:*
   |_| ``<jT [id1 id2 id3 ...]>`` |BR|
   |_| > **id:** unique id of the Turnout/s(Point/s) |BR|
   |_|  |BR|
-  |_| e.g. |BR|
+  |_| *Example Responses:* |BR|
   |_| Response (has defined Turnouts/Points): ``<jT id1 id2 id3 ...>`` |BR|
   |_| Response (no defined Turnouts/Points): ``<jT>``
 
 |hr-dashed|
 
 ``<T id state>`` - **Throw (1 or T) or close(0 or C) a defined turnout/point**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the Turnout/Point |BR|
@@ -459,7 +538,7 @@ Turnout/Points
   |_|  |_| - 0 = Closed  |BR|
   |_|  |_| - blank = command failed |BR|
   |_|  |BR|
-  |_| e.g. |BR|
+  |_| *Example Responses:* |BR|
   |_| Response (successful): ``<H id 0|1>`` |BR|
   |_| Response (fail): ``<X>``
 
@@ -468,17 +547,18 @@ Turnout/Points
 Routes/Automations
 ------------------
 
+For details on how to configure turnouts/points see: :doc:`/ex-rail/EX-RAIL-command-reference`
+
 |hr-dashed|
 
 ``<J A>`` - **Request a list of Automations/Routes**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Parameters:* N/A
-  
   *Response:* |BR|
   |_| ``<jA [id0 id1 id2 ..]>`` |BR|
   |_| > **id?:** identifier of the Route/Automation(s) |BR|
   |_|  |BR|
-  |_| e.g. |BR|
+  |_| *Example Responses:* |BR|
   |_| Response (successful turnouts/point exist): ``<jA id0 id1 id2 ..>`` |BR|
   |_| Response (successful turnouts/point don't exist): ``<jA.>`` |BR|
   |_| Response (fail): ??? |BR|
@@ -486,6 +566,7 @@ Routes/Automations
 |hr-dashed|
 
 ``<J A id>`` ``<JA id>`` - **Requests information for a route/automation**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the Route/Automation
@@ -498,7 +579,7 @@ Routes/Automations
   |_|  |_| -  ‘A'=Automation |BR|
   |_| > **"desc":** Textual description of the route/automation always surrounded in quotes (") |BR|
   |_|  |BR|
-  |_| e.g. |BR|
+  |_| *Example Responses:* |BR|
   |_| Response (successful): ``<jA id type "desc">`` |BR|
   |_| Response (fail - is not defined): ``<jA id X>``
 
@@ -510,9 +591,8 @@ System Information
 |hr-dashed|
 
 ``<c>`` - **Request Current on the Track(s)**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Parameters:* N/A 
-  
   *Response:* |BR|
   |_| ``<c "CurrentMAIN" current C "Milli" "0" max_ma "1" trip_ma>`` |BR|
   |_| > **"CurrentMAIN":** Static text for software like JMRI |BR|
@@ -527,8 +607,7 @@ System Information
 |hr-dashed|
 
 ``<s>`` - **Requests the DCC-EX version and hardware info, along with listing defined turnouts.**
-
-  *Parameters:* N/A
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| ``<iDCCEX version / microprocessorType / MotorControllerType / buildNumber>`` |BR|
@@ -536,7 +615,7 @@ System Information
   |_|  |BR|
   |_| > **version:** Command Station version |BR|
   |_| > **microprocessorType:**  microprocessor type (e.g. MEGA) |BR|
-  |_| > **MotorControllerType:**  Motor controller type (e.g. SATNDARD_MOTOR_SHIELD) |BR|
+  |_| > **MotorControllerType:**  Motor controller type (e.g. STANDARD_MOTOR_SHIELD) |BR|
   |_| > **buildNumber:**  Command Station build number |BR|
   |_| > **id:** unique identifier for the Turnout/Point |BR|
   |_| > **state:** one of  |BR|
@@ -546,8 +625,7 @@ System Information
 |hr-dashed|
 
 ``<#>`` - **Requests the number of supported cabs(locos)**
-
-  *Parameters:* N/A
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| ``<# noCabs>`` |BR|
@@ -556,216 +634,6 @@ System Information
   *Notes:*
   
     This will display the number of available cab slots. This will typically be **<# 20>**, **<# 30>**, or **<# 50>** depending on how much memory your EX‑CommandStation has available.  |BR| This is a design limit based on the memory limitations of the particular hardware and a compromise with other features that require memory such as WiFI. If you need more slots and are comfortable with code changes you can adjust this by changing MAX_LOCOS in "DCC.h", knowing that each new slot will take approximately 8 bytes of memory. The **<D RAM>** command will display the amount of free memory. If you fill the available slots, the "Forget Locos" command (**<- [CAB]>**) will free up unused locos. Currently there is no automatic purging of unused locos.
-
-----
-
-Writing CVs - Program on the main
----------------------------------
-
-|hr-dashed|
-
-``<b address cv bit value>`` - **Write CV bit on main track**
-
-  *Parameters:* |BR|
-  |_| > **address:** DCC Address of the decoder/loco |BR|
-  |_| > **cv:** CV number |BR|
-  |_| > **bit:** ???  |BR|
-  |_| > **value:** value to change the CV to
-  
-  *Response:* ???
-
-|hr-dashed|
-
-``<w address cv value>`` - **Write CV on main track**
-
-  *Parameters:* |BR|
-  |_| > **address:** DCC Address of the decoder/loco |BR|
-  |_| > **cv:** CV number |BR|
-  |_| > **value:** value to change the CV to
-  
-  *Response:* N/A
-
-----
-
-Reading/Writing CVs - Programming track
----------------------------------------
-
-|hr-dashed|
-
-``<R cv>`` - **Read CV**
-
-  *Parameters:* |BR|
-  |_| > **cv:** CV number
-
-  *Response:* |BR|
-  |_| ``<r cv value>`` |BR|
-  |_| > **cv:** CV number |BR|
-  |_| > **value:** one of |BR|
-  |_|  |_| - value of the CV |BR|
-  |_|  |_| - -1: if the write failed
-
-|hr-dashed|
-
-``<R>`` - **Read DCC decoder address**
-
-  *Parameters:* N/A
-
-  *Response:* |BR|
-  |_| ``<r -cab>`` |BR|
-  |_| > **cab:** |BR|
-  |_|  |_| - DCC Address of the decoder/loco |BR|
-  |_|  |_| - -1 = failed read |BR|
-  |_|  |BR|
-  |_| e.g. |BR|
-  |_| Response (successful): **<r cab>** |BR|
-  |_| Response (fail): **<r -1>**
-
-|hr-dashed|
-
-``<V cv bit onOff>`` - **Verify/Read bit of CV with guessed value**
-
-  *Parameters:* |BR|
-  |_| > **cv:** CV number |BR|
-  |_| > **bit:** bit to verify in the CV |BR|
-  |_| > **onOff:** one of |BR|
-  |_|  |_| - 1=on  |BR|
-  |_|  |_| - 0=off
- 
-  *Response:* |BR|
-  |_| Response (successful): **0 | 1** |BR|
-  |_| Response (fail): **<V -1>**
-
-  *Notes:*
-
-    This command is designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply “read”. If the verify fails, it will perform a read bit command (see above) and return the value read.
-
-
-|hr-dashed|
-
-``<V cv value>`` - **Verify/Read of CV with guessed value**
-  
-  *Parameters:* |BR|
-  |_| > **cv:** CV number |BR|
-  |_| > **value:**  value to verify
-
-  *Response:* |BR|
-  |_| ``<v cv value>`` |BR|
-  |_| > **cv:** CV number |BR|
-  |_| > **value:** one of |BR|
-  |_|  |_| - actual value of the CV |BR|
-  |_|  |_| - -1: if the write failed
-
-  *Notes:*
-
-    This command is designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a byte value or looking at each bit, it compares the byte to an expected value. It will attempt to verify the value first, and if it is successful, will return the value as if it was simply “read”. If the verify fails, it will perform a read byte command (see above) and return the value read.
-
-|hr-dashed|
-
-``<B cv bit onOff>`` - **Write bit to CV**
-
-  *Parameters:* |BR|
-  |_| > **cv:** CV number |BR|
-  |_| > **bit:** bit to change in the CV |BR|
-  |_| > **onOff:** one of  |BR|
-  |_|  |_| - 1=on  |BR|
-  |_|  |_| - 0=off
-  
-  *Response:* ???
-
-|hr-dashed|
-
-``<W cv value >`` - **Write CV**
-
-  *Parameters:* |BR|
-  |_| > **cv:** CV number |BR|
-  |_| > **value:** value to change the CV to
-
-  *Response:* |BR|
-  |_| ``<w cv value>`` |BR|
-  |_| > **cv:** CV number |BR|
-  |_| > **value:** one of |BR|
-  |_|  |_| - value CV was changed to |BR|
-  |_|  |_| - -1: if the write failed
-
-|hr-dashed|
-
-``<W address>`` - **Write DCC address to cab (loco)**
-
-  *Parameters:* |BR|
-  |_| > **address:** DCC Address of the decoder/loco
-  
-  *Response:* |BR|
-  |_| ``<w address>`` |BR|
-  |_| > **address:** one of |BR|
-  |_|  |_| - DCC Address of the decoder/loco |BR|
-  |_|  |_| - -1 = failed read |BR|
-  |_|  |BR|
-  |_| Response (successful): **<w cab>** |BR|
-  |_| Response (fail): **<w -1>**
-  
-  *Notes:*
-  
-    Writes, and then verifies, the address to decoder of an engine on the programming track. This involves clearing any consist and automatically setting a long or short address. This is an easy way to put a loco in a known state to test for issues like not responding to throttle commands when it is on the main track. |BR|
-
-|hr-dashed|
-
-``<P register hex1 hex2 [hex3 [hex4 [hex5]]]>`` - **Writes a DCC packet to the PROG track**
-
-  *Parameters:* |BR|
-  |_| > **register:** an internal register number, from 0 through MAX_MAIN_REGISTERS (inclusive), to write (if REGISTER=0) or write and store (if REGISTER>**0) the packet |BR|
-  |_| > **byte1:**  first hexadecimal byte in the packet |BR|
-  |_| > **byte2:**  second hexadecimal byte in the packet |BR|
-  |_| > **byte3:**  optional third hexadecimal byte in the packet |BR|
-  |_| > **byte4:**  optional fourth hexadecimal byte in the packet |BR|
-  |_| > **byte5:**  optional fifth hexadecimal byte in the packet
-  
-  *Response:* ???
-
-|hr-dashed|
-
-``<B cv bit value callbacknum callbacksub>`` - :dcc-ex-red-bold-italic:`Deprecated, please use <W cv value> instead`
-
-  *Parameters:* |BR|
-  |_| > **cv:** CV to write |BR|
-  |_| > **bit:** bit of the CV to change |BR|
-  |_| > **value:** value to change the bit of CV to |BR|
-  |_| > **callbacknum:** ??? |BR|
-  |_| > **callbacksub:** ???
-
-  *Response:* ???
-
-|hr-dashed|
-
-``<W cv value callbacknum callbacksub>`` - :dcc-ex-red-bold-italic:`Deprecated, please use <w cv value> instead`
-
-  *Parameters:* |BR|
-  |_| > **cv:** CV to write |BR|
-  |_| > **value:** value to change the CV to |BR|
-  |_| > **callbacknum:** ??? |BR|
-  |_| > **callbacksub:** ???
-
-  *Response:* ???
-
-----
-
-Writing CVs - Programming track - Tuning
-----------------------------------------
-
-|hr-dashed|
-
-``<D ACK RETRY x>`` - **Adjust ACK retries to number x (default is 2)**
-
-  *Parameters:* |BR|
-  |_| > **x:** Number of times to retry
-  
-  *Response:* N/A
-
-|hr-dashed|
-
-``<D PROGBOOST>`` - **Override 250mA prog track limit while idle**
-
-  *Parameters:* N/A |BR|
-  *Response:* N/A
 
 ----
 
@@ -791,6 +659,7 @@ NOTE: Both the following commands do the same thing. Pick the one that works for
 |hr-dashed|
 
 ``<a addr subaddr activate>`` - **Control an Accessory Decoder**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **addr:** the primary address of the decoder controlling the turnout (0-511) |BR|
@@ -804,6 +673,7 @@ NOTE: Both the following commands do the same thing. Pick the one that works for
 |hr-dashed|
 
 ``<a linear_addr activate>`` - **Control an Accessory Decoder**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **linear_addr:** linear address of the decoder controlling this turnout (1-2044) |BR|
@@ -825,8 +695,7 @@ Sensors
 |hr-dashed|
 
 ``<Q>`` - **Lists Status of all sensors**
-
-  *Parameters:* N/A
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| Repeat for each defined sensor: ``<q id>`` |BR|
@@ -837,9 +706,8 @@ Sensors
 
 |hr-dashed|
 
-``<S>`` - **Requests a definition list of all defined sensors**
-
-  *Parameters:* N/A
+``<S>`` - **Requests a list of all defined sensors**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| Repeated for each defined sensor: ``<Q id vpin pullup>`` |BR|
@@ -861,70 +729,46 @@ WiFi Control
 |hr-dashed|
 
 ``<+X>`` - **Force the Command Station into "WiFi Connected" mode**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Parameters:* N/A |BR|
+A special command to force the "connected" flag (WiFi Connected Mode) to on inside the Command Station so that our loop will start seeing network traffic. If your code creates a connection outside of our normal WiFi code, this provides a way for you to notify the Command Station that it needs to process commands on a connection you created and so you can send your own AT commands.
+
   *Response:* ???
+
+  *Examples:*
+
+    <+GMR> - Sends the "AT+GMR" command that prints version information from the WiFi device. |BR|
+    <+CIFSR> - Gets the local IP Address.
+
+  *Notes:*
+
+    :doc:`DCC-EX WiFi Configuration </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
+
+    `Espressif AT Command Set PDF File (Exressif makes the ESP8266) <https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf>`_
 
 |hr-dashed|
 
 ``<+command>`` - **Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **command:** what you want to append after AT+ and send to the AT processor.
   
   *Response:* ???
 
+  *Example:* ``<+X>`` would send AT+X to the ESP
+
   *Notes:*
-   
-    ``<+X>`` would send AT+X to the ESP
+
+    Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the :doc:`mySetup.h file </ex-commandstation/advanced-setup/startup-config>`. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.
 
 |hr-dashed|
 
 ``<+>`` - **Switch to direct communication with WiFi AT processor**
-
-  *Parameters:* N/A
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| All input and output from this point is the direct communication with the Wifi AT software this mode is ended by typing ! (exclamation mark).
-
-----
-
-Track Manager (Formally DC-District)
-------------------------------------
-
-|hr-dashed|
-
-``<= trackletter mode [cab]>`` - **Configure Track Manager Note: since only one channel can be PROG, changing a second channel to PROG, will force the other to OFF**
-
-  *Parameters:* |BR|
-  |_| > **trackletter:** 'A' through 'H' represent one of the outputs of the/a motor shield. |BR|
-  |_| > **mode:** one of  |BR|
-  |_|  |_| - MAIN |BR|
-  |_|  |_| - PROG |BR|
-  |_|  |_| - DC |BR|
-  |_|  |_| - DCX = DC reversed polarity |BR|
-  |_|  |_| - OFF (DCX is DC with reversed polarity) |BR|
-  |_| > **id:** the cab ID. *Required when specifying DC or DCX*
-  
-  *Response:* |BR|
-  |_| (for each track/channel that has changed) ``<= trackletter state cab>`` |BR|
-  |_|  |BR|
-  |_| > **trackletter:** A-H |BR|
-  |_| > **state:**  PROG, MAIN DC, DCX |BR|
-  |_| > **cab:** cab(loco) equivalent to a fake DCC Address
-
-|hr-dashed|
-
-``<=>`` - **Request the current Track Manager configuration**
-
-  *Parameters:* N/A
-  
-  *Response:* |BR|
-  |_| for each track/channel supported by the motor shield ``<= trackletter state cab>`` |BR|
-  |_|  |BR|
-  |_| > **trackletter:** A-H |BR|
-  |_| > **state:** PROG, MAIN DC, DCX |BR|
-  |_| > **cab:** cab(loco) equivalent to a fake DCC Address
 
 ----
 
@@ -934,6 +778,7 @@ EX-RAIL
 |hr-dashed|
 
 ``</ KILL taskId>`` - **Kills a currently running script task by ID (use to list task IDs)**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **taskId:** ??
@@ -943,6 +788,7 @@ EX-RAIL
 |hr-dashed|
 
 ``</ LATCH sensorId>`` - **Lock sensor ON, preventing external influence**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **sensorId:**  ??  valid ids and in the range 0-255
@@ -957,6 +803,7 @@ EX-RAIL
 |hr-dashed|
 
 ``</ FREE blockId>`` - **Manually frees a virtual track Block**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **blockId:** ?? valid ids and in the range 0-255
@@ -966,6 +813,7 @@ EX-RAIL
 |hr-dashed|
 
 ``</ RESERVE blockId>`` - **Manually reserves a virtual track Block**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **blockId:** ?? valid ids and in the range 0-255
@@ -975,13 +823,11 @@ EX-RAIL
 |hr-dashed|
 
 ``</ PAUSE>`` - **Pauses ALL EX-RAIL automation activities, including sending an E-STOP to all locos.**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Parameters:* N/A |BR|
   *Response:* N/A
 
 ``</>`` - **Request EX-RAIL running task information.**
-
-  *Parameters:* N/A
 
   *Response:* |BR|
   |_| > **<* EXRAIL STATUS |BR|
@@ -994,15 +840,15 @@ EX-RAIL
 |hr-dashed|
 
 ``</ ROUTES>`` - **Request the Routes & Automations control list in wiThrottle Protocol format.**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Parameters:* N/A
-  
   *Response:* |BR|
   |_| ``<X>``
 
 |hr-dashed|
 
 ``</ RESUME>`` - **Resumes ALL EX-RAIL automation activities, and resumes all locos at the same speed at which they were paused.**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* N/A |BR|
   *Response:* N/A
@@ -1010,6 +856,7 @@ EX-RAIL
 |hr-dashed|
 
 ``</ START [locoAddr] routeId>`` - **Starts a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| locoAddr: DCC address of the loco |BR|
@@ -1020,6 +867,7 @@ EX-RAIL
 |hr-dashed|
 
 ``</ UNLATCH sensorId>`` - **Unlock sensor, returning to current external state**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **sensor_id:** ??  valid ids and in the range 0-255
@@ -1034,6 +882,7 @@ EX-RAIL
 |hr-dashed|
 
 ``<D EXRAIL state>`` - **When the CommandStation is connected to a serial monitor, EX-RAIL script logging can be Enabled or Disabled**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **state:** one of |BR|
@@ -1044,23 +893,388 @@ EX-RAIL
 
 ----
 
+Writing Configuration Variable (CVs)
+====================================
+
+
+Writing CVs - Program on the main
+---------------------------------
+
+|hr-dashed|
+
+``<b cab cv bit value>`` - **Write CV bit on main track**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **cab:** DCC Address of the decoder/loco.  The short (1-127) or long (128-10293) address of the engine decoder |BR|
+  |_| > **cv:** The number of the Configuration Variable memory location in the decoder to write to (1-1024) |BR|
+  |_| > **bit:** ???  |BR|
+  |_| > **value:** The value to be written to the Configuration Variable memory location (0-255)
+  
+  *Response:* ???
+
+|hr-dashed|
+
+``<w cab cv value>`` - **Write CV on main track**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **cab:** DCC Address of the decoder/loco.  The short (1-127) or long (128-10293) address of the engine decoder |BR|
+  |_| > **cv:** The number of the Configuration Variable memory location in the decoder to write to (1-1024) |BR|
+  |_| > **value:** The value to be written to the Configuration Variable memory location (0-255)
+  
+  *Response:* N/A
+
+----
+
+Reading/Writing CVs - Programming track
+---------------------------------------
+
+**Note**
+
+By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don't let the little 'jumps' you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an 'ACK' (acknowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
+
+|hr-dashed|
+
+``<R cv>`` - **Read CV**
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **cv:** CV number
+
+  *Response:* |BR|
+  |_| ``<r cv value>`` |BR|
+  |_| > **cv:** The number of the Configuration Variable memory location in the decoder to write to (1-1024) |BR|
+  |_| > **value:** one of |BR|
+  |_|  |_| - value of the CV |BR|
+  |_|  |_| - -1: if the write failed
+
+  *Example:* ``<r 3450>`` shows that Loco with ID **3450** is on the programming track.
+
+|hr-dashed|
+
+``<R>`` - **Read DCC decoder (cab) address**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Response:* |BR|
+  |_| ``<r -cab>`` |BR|
+  |_| > **cab:** |BR|
+  |_|  |_| - DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder |BR|
+  |_|  |_| - -1 = failed read |BR|
+  |_|  |BR|
+  |_| *Example Responses:* |BR|
+  |_| Response (successful): **<r cab>** |BR|
+  |_| Response (fail): **<r -1>**
+
+  *Notes:*
+
+    **IMPORTANT:** If the loco is on a consist, the address returned will be the consist address
+
+    When combined with the ``<D ACK ON>`` Command, the ``<R>`` Command (with or without parameters) can be used for diagnostics, for example when you get a "-1" response. (See `Diagnosing Issues <https://github.com/DCC-EX/CommandStation-EX/wiki/Diagnosing-Issues>`_\ ** for more help)
+
+|hr-dashed|
+
+``<V cv bit onOff>`` - **Verify/Read bit of CV with guessed value**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **cv:** CV number |BR|
+  |_| > **bit:** bit to verify in the CV |BR|
+  |_| > **onOff:** one of |BR|
+  |_|  |_| - 1=on  |BR|
+  |_|  |_| - 0=off
+ 
+  *Response:* |BR|
+  |_| Response (successful): **0 | 1** |BR|
+  |_| Response (fail): **<V -1>**
+
+  *Notes:*
+
+    This command is designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply “read”. If the verify fails, it will perform a read bit command (see above) and return the value read.
+
+
+|hr-dashed|
+
+``<V cv value>`` - **Verify/Read of CV with guessed value**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **cv:** CV number |BR|
+  |_| > **value:**  value to verify
+
+  *Response:* |BR|
+  |_| ``<v cv value>`` |BR|
+  |_| > **cv:** CV number |BR|
+  |_| > **value:** one of |BR|
+  |_|  |_| - actual value of the CV |BR|
+  |_|  |_| - -1: if the write failed
+
+  *Notes:*
+
+    This command is designed to offer faster verification of the value held in a CV and can be used instead of the ``<R>`` commands. Instead of reading a byte value or looking at each bit, it compares the byte to an expected value. It will attempt to verify the value first, and if it is successful, will return the value as if it was simply “read”. If the verify fails, it will perform a read byte command (see above) and return the value read.
+
+|hr-dashed|
+
+``<B cv bit onOff>`` - **Write bit to CV**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **cv:** CV number |BR|
+  |_| > **bit:** bit to change in the CV |BR|
+  |_| > **onOff:** one of  |BR|
+  |_|  |_| - 1=on  |BR|
+  |_|  |_| - 0=off
+  
+  *Response:* ???
+
+|hr-dashed|
+
+``<W cv value >`` - **Write CV**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **cv:** CV number |BR|
+  |_| > **value:** value to change the CV to
+
+  *Response:* |BR|
+  |_| ``<w cv value>`` |BR|
+  |_| > **cv:** CV number |BR|
+  |_| > **value:** one of |BR|
+  |_|  |_| - value CV was changed to |BR|
+  |_|  |_| - -1: if the write failed
+
+|hr-dashed|
+
+``<W address>`` - **Write DCC address to cab (loco)**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **address:** DCC Address of the decoder/loco
+  
+  *Response:* |BR|
+  |_| ``<w address>`` |BR|
+  |_| > **address:** one of |BR|
+  |_|  |_| - DCC Address of the decoder/loco |BR|
+  |_|  |_| - -1 = failed read |BR|
+  |_|  |BR|
+  |_| Response (successful): **<w cab>** |BR|
+  |_| Response (fail): **<w -1>**
+  
+  *Notes:*
+  
+    Writes, and then verifies, the address to decoder of an engine on the programming track. This involves clearing any consist and automatically setting a long or short address. This is an easy way to put a loco in a known state to test for issues like not responding to throttle commands when it is on the main track. |BR|
+
+|hr-dashed|
+
+``<P register hex1 hex2 [hex3 [hex4 [hex5]]]>`` - **Writes a DCC packet to the PROG track**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **register:** an internal register number, from 0 through MAX_MAIN_REGISTERS (inclusive), to write (if REGISTER=0) or write and store (if REGISTER>**0) the packet |BR|
+  |_| > **byte1:**  first hexadecimal byte in the packet |BR|
+  |_| > **byte2:**  second hexadecimal byte in the packet |BR|
+  |_| > **byte3:**  optional third hexadecimal byte in the packet |BR|
+  |_| > **byte4:**  optional fourth hexadecimal byte in the packet |BR|
+  |_| > **byte5:**  optional fifth hexadecimal byte in the packet
+  
+  *Response:* ???
+
+|hr-dashed|
+
+``<B cv bit value callbacknum callbacksub>`` - :dcc-ex-red-bold-italic:`Deprecated, please use <W cv value> instead`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **cv:** The number of the Configuration Variable memory location in the decoder to write to (1-1024 ). |BR|
+  |_| > **bit:** The bit number of the Configuration Variable memory location to write (0-7) |BR|
+  |_| > **value:** The value to be written to the Configuration Variable memory location (0-255) |BR|
+  |_| > **callbacknum:** An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function. |BR|
+  |_| > **callbacksub:** a second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function.
+
+  *Response:* ``<r callbacknum|callbacksub|cv value>``
+
+|hr-dashed|
+
+``<W cv value callbacknum callbacksub>`` - :dcc-ex-red-bold-italic:`Deprecated, please use <w cv value> instead`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **cv:** The number of the Configuration Variable memory location in the decoder to write to (1-1024 ). |BR|
+  |_| > **value:** The value to be written to the Configuration Variable memory location (0-255) |BR|
+  |_| > **callbacknum:** An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function. |BR|
+  |_| > **callbacksub:** a second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function.
+
+  *Response:* ``<r callbacknum|callbacksub|cv value>``
+
+|hr-dashed|
+
+``<R cv callbacknum callbacksub>`` - Read Configuration variable byte
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **cv:** The number of the Configuration Variable memory location in the decoder to write to (1-1024 ). |BR|
+  |_| > **callbacknum:** An arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs that call this function. |BR|
+  |_| > **callbacksub:** a second arbitrary integer (0-32767) that is ignored by the Command Station and is simply echoed back in the output - useful for external programs (e.g. DCC-EX Interface) that call this function.
+
+  *Response:* ``<r callbacknum|callbacksub|cv value>``
+
+  *Notes:*
+
+    If specified with parameters, reads a Configuration Variable from the decoder of an engine on the programming track. If no parameters are specified, it returns the Address of the loco on the programming track.
+
+----
+
+Write direct DCC packet
+-----------------------
+
+.. Warning:: THESE ARE FOR DEBUGGING AND TESTING PURPOSES ONLY.  DO NOT USE UNLESS YOU KNOW HOW TO CONSTRUCT NMRA DCC PACKETS - YOU CAN INADVERTENTLY RE-PROGRAM YOUR ENGINE DECODER
+
+|hr-dashed|
+
+``<M register hex1 hex2 [hex3 [hex4 [hex5]]]>`` - **Write a DCC packet the MAIN track**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Writes a DCC packet of two, three, four, or five hexadecimal bytes to a register driving the selected track
+
+  *Parameters:* |BR|
+  |_| > **register:** ignored |BR|
+  |_| > **byte1:**  first hexadecimal byte in the packet |BR|
+  |_| > **byte2:**  second hexadecimal byte in the packet |BR|
+  |_| > **byte3:**  optional third hexadecimal byte in the packet |BR|
+  |_| > **byte4:**  optional fourth hexadecimal byte in the packet |BR|
+  |_| > **byte5:**  optional fifth hexadecimal byte in the packet
+
+  *Response:* |BR|
+  |_| N/A
+  
+  *Notes:*
+  
+    register for backwards compat (can not be removed because number of arguments is unknown)
+    
+|hr-dashed|
+
+``<P register hex1 hex2 [hex3 [hex4 [hex5]]]>`` - **Write a DCC packet the MAIN track**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Writes a DCC packet of two, three, four, or five hexadecimal bytes to a register driving the selected track
+
+  *Parameters:* |BR|
+  |_| > **register:** ignored |BR|
+  |_| > **byte1:**  first hexadecimal byte in the packet |BR|
+  |_| > **byte2:**  second hexadecimal byte in the packet |BR|
+  |_| > **byte3:**  optional third hexadecimal byte in the packet |BR|
+  |_| > **byte4:**  optional fourth hexadecimal byte in the packet |BR|
+  |_| > **byte5:**  optional fifth hexadecimal byte in the packet
+
+  *Response:* |BR|
+  |_| N/A
+
+  *Notes:*
+
+    register for backwards compat (can not be removed because number of arguments is unknown)
+
+----
+
+Programming track - Tuning
+--------------------------
+
+|hr-dashed|
+
+``<D ACK LIMIT mA>`` - **Sets the ACK limit**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ Use this command to override the minimum milliamps (mA) required to detect the ACK pulse, e.g. ``<D ACK LIMIT 30>`` means a minimum 30mA pulse would be accepted.
+ 
+  *Parameters:* |BR|
+  |_| > **mA:** currently limit in milliamps
+
+  *Response:* N/A
+
+  *Notes:*
+      
+    The Ack current limit is set according to the DCC standard(s) of 60mA. Most decoders send a quick back and forth current pulse to the motor to generate this ACK. However, some modern motors (N and Z scales) may not be able to draw that amount of current. You can adjust down this limit. Or, if for some reasons your acks seem to be too "trigger happy" you can make it less sensitive by raising this limit.
+
+|hr-dashed|
+
+``<D ACK MIN µS>`` - **Sets the ACK pulse minimum**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ As above, however overriding the maximum amount of time for a pulse, e.g. ``<D ACK MAX 20000>`` means a pulse up to 20ms would be accepted.
+
+  *Parameters:* |BR|
+  |_| > **µS:** ACK pulsedureation in milliseconds lower bound
+  
+  *Response:* N/A
+
+  *Notes:*
+  
+    The NMRA specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so DCC-EX extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters.
+
+|hr-dashed|
+
+``<D ACK MAX µS>`` - **Sets the ACK pulse maximum**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Use this command to override the minimum amount of time in microseconds (uS) the pulse needs to be active for, e.g. ``<D ACK MIN 2000>`` means a pulse of 2ms or more would be accepted.
+
+  *Parameters:* |BR|
+  |_| > **µS:** ACK pulse duration in milliseconds upper bound
+  
+  *Response:* |BR|
+  |_| N/A |BR| |BR|
+  |_| *Notes:* |BR|
+  |_| see MIN
+
+|hr-dashed|
+
+``<D ACK RETRY x>`` - **Adjust ACK retries to number x (default is 2)**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When reading/writing CVs, the program will try again upon failure.  The default is ``<D ACK RETRY 2>``, which means 3 attempts before a failure is reported.  Each of the unsuccessful attempts is reported in the serial monitor or JMRI monitor log.  The last unsuccessful attempt remains on the display if in use.  To reset the running total, send the command manually: ``<D ACK RETRY 2>``.
+
+  *Parameters:* |BR|
+  |_| > **x:** Number of times to retry
+  
+  *Response:* N/A
+
+
+  *Notes:*
+
+    When combined with the ``<D ACK ON>`` Command, the ``<R>`` Command (with or without parameters) can be used for diagnostics, for example when you get a "-1" response. (See `Diagnosing Issues <https://github.com/DCC-EX/CommandStation-EX/wiki/Diagnosing-Issues>`_\ ** for more help)
+
+|hr-dashed|
+
+``<D PROGBOOST>`` - **Override 250mA prog track limit while idle**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+By default, the programming track has a current limit enabled of 250mA, so any programming activities requiring more than this value will cause power to the programming track to be cut for 100ms. Run this command to override this if programming decoders trigger current limiting on the programming track.
+
+  *Response:* N/A
+  
+  *Notes:*
+  
+    When the programming track is switched on with **<1>** or **<1 PROG>** it will normally be restricted to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. **<D PROGBOOST>** temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with **<0>** or **<0 PROG>** or the Command Station is reset.
+
+----
+
 Configuring the EX-CommandStation
 =================================
 
-Configuring the EX-CommandStation - Turnouts/Points
+Turnouts/Points (Configuring the EX-CommandStation)
 ---------------------------------------------------
 
-The Turnout commands provide a more flexible and more functional way of operating turnouts. It requires that the turnout be pre-defined through the ``<T ...>`` commands, described below.
+The Turnout/Point commands provide a more flexible and more functional way of operating turnouts/points. It requires that the turnout/point be pre-defined through the ``<T ...>`` commands, described below.
 
-Turnouts may be in either of two states: Closed or Thrown. The turnout commands below use the values ``1`` for ``Throw`` or ``Thrown`` and ``0`` for ``Close`` or ``Closed``.
+Turnouts may be in either of two states: Closed or Thrown. The turnout/point commands below use the values ``1`` for ``Throw`` or ``Thrown`` and ``0`` for ``Close`` or ``Closed``.
 
 *General notes:*
 
-**vpin:** is the pin number of the output to be controlled by the turnout/point object. For Arduino output pins, this is the same as the digital pin number. For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.
+  **vpin** is the pin number of the output to be controlled by the turnout/point object. For Arduino output pins, this is the same as the digital pin number. For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.
 
 |hr-dashed|
 
 ``<T id DCC addr subaddr>`` - **Define turnout/point on a DCC Accessory Decoder with the specified address and subaddress**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the Turnout/Point |BR|
@@ -1092,6 +1306,7 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout commands 
 |hr-dashed|
 
 ``<T id DCC linearAddr>`` - **Define turnout/point on a DCC Accessory Decoder with the specified linear address**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the Turnout/Point |BR|
@@ -1104,23 +1319,29 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout commands 
 |hr-dashed|
 
 ``<T id VPIN vpin>`` - **Define turnout/point output on specified vpin.**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** unique Id for the servo |BR|
   |_| > **vpin:** vpin to which the servo is attached
 
-  *Response:* ???
+  *Response:* |BR|
+  |_| Successful: ``<O>`` |BR|
+  |_| Fail: ``<X>``
 
   *Example:* ``<T 25 VPIN 30>`` defines a turnout/point that operates Arduino digital output pin D30. |BR|
   *Example:* ``<T 26 VPIN 164>`` defines a turnout/point that operates the first pin on the first MCP23017 GPIO expander (if present).
 
   *Notes:*
       
+    See vpin notes above.
+    
     This may be used for controlling Arduino digital output pins or pins on an I/O Extender.
 
 |hr-dashed|
 
-``<T id SERVO vpin thrownPos closedPos profile>`` - **Define turnout/point servo (PWM) on specified vpin Note: Servos are not supported on the minimal HAL (Uno or Nano target).**
+``<T id SERVO vpin thrownPos closedPos profile>`` - **Define turnout/point servo (PWM) on specified vpin**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** unique Id for the servo |BR|
@@ -1141,13 +1362,18 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout commands 
   *Example:* <``T 24 SERVO 100 410 205 2>`` defines a servo turnout/point on the first PCA9685 pin, moving at medium speed between positions 205 and 410.
 
   *Notes:*
-  
+
+    *Servos are not supported on the minimal HAL (Uno or Nano target).*
+
+    See vpin notes above.
+    
     The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM). The limits for an SG90 servo are about 102 to 490. The standard range of 1ms to 2ms pulses correspond to values 205 to 409. |BR|
     Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec) and 4=Bounce (subject to revision).
 
 |hr-dashed|
 
 ``<T id>`` - **Deletes a turnout by Id.**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** unique Id for the servod
@@ -1158,7 +1384,8 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout commands 
 
 |hr-dashed|
 
- ``<D SERVO vpin value [profile]>`` - **Set servo position to value on pin vpin.**
+``<D SERVO vpin value [profile]>`` - **Set servo position to value on pin vpin.**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  
   *Parameters:* |BR|
   |_| > **vpin:** vpin to which the servo is attached |BR|
@@ -1172,9 +1399,14 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout commands 
   
   *Response:* N/A
 
+  *Notes:*
+  
+    See vpin notes above.
+
 |hr-dashed|
 
 ``<T id addr subaddr>`` - **Define a turnout on a DCC Accessory Decoder with the specified address and subaddress - Legacy command** |DEPRECATED|
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the Turnout/Point |BR|
@@ -1183,11 +1415,12 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout commands 
 
   *Response:* ???
   
-  *Version Deprecated: ???*
+  *Version Deprecated:* ???
 
 |hr-dashed|
 
 ``<T id vpin activePos inactivePos>`` - **Define a turnout/point servo on specified vpin - Legacy command** |DEPRECATED|
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the Turnout/Point |BR|
@@ -1201,6 +1434,8 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout commands 
 
   *Notes:*
   
+    See vpin notes above.
+
     The positions are the same as for the turnout/point servo command above. Note: Servos are not supported on the minimal HAL (Uno or Nano target).
 
 |hr-dashed|
@@ -1211,7 +1446,7 @@ If turnout definitions are stored in EEPROM, the turnout thrown/closed state is 
 
 ----
 
-Configuring the EX-CommandStation - Sensors
+Sensors (Configuring the EX-CommandStation)
 -------------------------------------------
 
 |EX-CS| supports Sensor inputs that can be connected to any Arduino Pin not in use by this program, as well as pins on external I/O expanders and other devices. Physical sensors can be of any type (infrared, magnetic, mechanical…). They may be configured to pull-up or not. When configured for pull-up, the input is connected (within the CS) to +5V via a resistor. This sort of input is suited to sensors that have two wires (a switch or relay contacts, or a device with an 'open collector' or 'open drain' output. Some sensors may be sensitive to the pull-up resistor and not operate as expected - in this case you can turn off the pull-up.
@@ -1222,14 +1457,15 @@ To ensure proper voltage levels, some part of the Sensor circuitry MUST be tied 
 
 The Sensor code utilizes debouncing logic to eliminate contact ‘bounce’ generated by mechanical switches on transitions. This avoids the need to create smoothing circuitry for each sensor. You may need to change the parameters in Sensor.cpp through trial and error for your specific sensors, but the default parameters protect against contact bounces for up to 20 milliseconds, which should be adequate for almost all mechanical switches and all electronic sensors.
 
-To have this sketch monitor one or more Arduino pins for sensor triggers, first define/edit/delete sensor definitions using the following variation of the ``<S>`` command:
+To monitor one or more Arduino pins for sensor triggers, first define/edit/delete sensor definitions using the following variation of the ``<S>`` command:
 
 |hr-dashed|
 
 ``<S id vpin pullup>`` - **Create a new sensor ID**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
-  |_| > **id:** identifier of the Sensor (0-32767) |BR|
+  |_| > **id:** identifier of the Sensor (0-32767) (You pick the ID & they are shared between Turnouts, Sensors and Outputs) |BR|
   |_| > **vpin:** vpin of the input to be controlled by the sensor object For Arduino input pins, this is the same as the digital pin number. For servo inputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.|BR|
   |_| > **pullup:** one of  |BR|
   |_|  |_| - 1=Use pull-up resistor ACTIVE=LOW  |BR|
@@ -1237,7 +1473,7 @@ To have this sketch monitor one or more Arduino pins for sensor triggers, first 
   
   *Response:* |BR|
   |_| Successful: **<O>** |BR|
-  |_| Fail: ????
+  |_| Fail: **<X>** (e.g. out of memory)
   
   *Notes:*
   
@@ -1246,13 +1482,14 @@ To have this sketch monitor one or more Arduino pins for sensor triggers, first 
 |hr-dashed|
 
 ``<S id>`` - **Delete defined sensor**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the Sensor (0-32767)
   
   *Response:* |BR|
   |_| Successful: ``<O>`` |BR|
-  |_| Fail: ``<X>``
+  |_| Fail: ``<X>`` (e.g. ID does not exist)
 
 |hr-dashed|
 
@@ -1265,15 +1502,15 @@ All sensors defined as per above are repeatedly and sequentially checked within 
 
 Depending on whether the physical sensor is acting as an "event-trigger" or a "detection-sensor", you may decide to ignore the ``<q id>`` return and only react to ``<Q id>`` triggers.
 
-
 ----
 
-Configuring the EX-CommandStation - Servos
+Servos (Configuring the EX-CommandStation)
 ------------------------------------------
 
 |hr-dashed|
 
 ``<S id pin state>`` - **Creates a new sensor ID, with specified PIN and PULLUP**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the Sensor (0-32767) |BR|
@@ -1287,6 +1524,7 @@ Configuring the EX-CommandStation - Servos
 |hr-dashed|
 
 ``<S id>`` - **Deletes definition of sensor**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the Sensor (0-32767)
@@ -1295,16 +1533,26 @@ Configuring the EX-CommandStation - Servos
 
 ----
 
-Configuring the EX-CommandStation - Outputs
+Outputs (Configuring the EX-CommandStation)
 -------------------------------------------
+
+|EX-CS| supports optional OUTPUT control of any unused Arduino Pins for custom purposes. Pins can be activated or de-activated. 
+The default is to set ACTIVE pins HIGH and INACTIVE pins LOW. However, this default behavior can be inverted for any pin in which case ACTIVE=LOW and INACTIVE=HIGH.  
+
+Definitions and state (ACTIVE/INACTIVE) for pins are retained in EEPROM and restored on power-up.
+The default is to set each defined pin to active or inactive according to its restored state. 
+However, the default behaviour can be modified so that any pin can be forced to be either active or inactive upon power-up regardless of its previous state before power-down.  
+
+To have |EX-CS| utilize one or more Arduino pins as custom outputs, first define/edit/delete output definitions using the following variation of the ``<Z>`` command:  
 
 |hr-dashed|
 
-``<Z id pin iflag>`` - **Creates a new output ID, with specified PIN and IFLAG values**
+``<Z id vpin iflag>`` - **Creates a new output ID, with specified PIN and IFLAG values**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the output |BR|
-  |_| > **pin:** pin to which the output will be connected |BR|
+  |_| > **vpin:** the pin number of the output to be controlled by the output object. For Arduino output pins, this is the same as the digital pin number. For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module. |BR|
   |_| > **iflag:** see below |BR|
   |_|  |BR|
   |_| iflag, bit 0: |BR|
@@ -1317,128 +1565,100 @@ Configuring the EX-CommandStation - Outputs
   |_|  |_| - 0 = state of pin set to INACTIVE upon power-up or when first created |BR|
   |_|  |_| - 1 = state of pin set to ACTIVE upon power-up or when first created
 
-  *Response:* ???
+  *Response:* |BR|
+  |_| Successful: ``<O>``  |BR|
+  |_| Fail: ``<X>`` (e.g. out of memory).
+
+  *Notes:*
+
+    if output ID already exists, it is updated with specified vpin and iflag.
+
+    Output state will be immediately set to ACTIVE/INACTIVE and pin will be set to HIGH/LOW according to iflag value specified (see below).
 
 |hr-dashed|
 
 ``<Z id>`` - **Deletes definition of output ID**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the output to delete
   
-  *Response:* ???
+  *Response:* |BR|
+  |_| Successful: ``<O>`` |BR|
+  |_| Fail: ``<X>``  (e.g. ID does not exist)
 
 |hr-dashed|
 
 ``<Z>`` - **Lists all defined output pins**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Parameters:* N/A |BR|
-  *Response:* ???
+  *Response:* |BR|
+  |_| Successful: ``<Y id vpin iflag state>`` repeated for each defined output pin |BR|
+  |_| Fail: ``<X>``  (e.g. ID does not exist)
 
 |hr-dashed|
 
 ``<Z id state>`` - **Sets output ID to either INACTIVE or ACTIVE state**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the output |BR|
   |_| > **state:** one of  |BR|
-  |_|  |_| - 0= ???  |BR|
-  |_|  |_| - 1= ???
+  |_|  |_| - 0= INACTIVE  |BR|
+  |_|  |_| - 1= INACTIVE
 
-  *Response:* ???
+  *Response:* |BR|
+  |_| Successful: ``<Y id state>`` |BR|
+  |_| Fail: ``<X>`` if output ID does not exist
+
+  *Notes:* 
+
+    When controlled as such, the Arduino updates and stores the direction of each output in EEPROM so that it is retained even without power. A list of the current states of each output in the form ``<Y id state>`` is generated by |EX-CS| whenever the ``<s>`` status command is invoked. This provides an efficient way of initializing the state of any outputs being monitored or controlled by a separate interface or GUI program.
 
 ----
 
-Configuring the EX-CommandStation - EEPROM management
+Once all outputs have been properly defined, use the ``<E>`` Upper Case "E" command to store their definitions to EEPROM.
+If you later make edits/additions/deletions to the output definitions, you must invoke the ``<E>`` command if you want those new definitions updated in the EEPROM.
+You can also **ERASE everything (turnouts, sensors, and outputs)** stored in the EEPROM by invoking the ``<e>`` (lower case e) command.
+**(There is no Un-Delete)**  
+
+|hr-dashed|
+
+EEPROM management (Configuring the EX-CommandStation)
 -----------------------------------------------------
 
 |hr-dashed|
 
 ``<D EEPROM>`` - **Diagnostic dump eeprom contents** 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Parameters:* N/A |BR|
   *Response:* ???
 
 |hr-dashed|
 
 ``<e>`` - **Erase ALL (turnouts, sensors, and outputs) from EEPROM**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Parameters:* N/A
-  
   *Response:* |BR|
   |_| ``<O>``
 
 |hr-dashed|
 
 ``<E>`` - **Store definitions to EEPROM**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Parameters:* N/A
-  
   *Response:* |BR|
   |_| ``<O>``
 
 ----
 
-Configuring the EX-CommandStation - Diagnostic programming commands
+Diagnostic programming commands (Configuring the EX-CommandStation)
 -------------------------------------------------------------------
 
 |hr-dashed|
 
-``<D PROGBOOST>`` - **Override 250mA prog track limit while idle**
-
-  *Parameters:* N/A |BR|
-  *Response:* N/A
-  
-  *Notes:*
-  
-    When the programming track is switched on with **<1>** or **<1 PROG>** it will normally be restricted to 250mA according to NMRA standards. Some loco decoders require more than this, especially sound versions. **<D PROGBOOST>** temporarily removes this limit to allow the decoder to use more power. The normal limit will be re-imposed when the programming track is switched off with **<0>** or **<0 PROG>** or the Command Station is reset.
-
-|hr-dashed|
-
-``<D ACK LIMIT mA>`` - **Sets the ACK limit**
-
-  *Parameters:* |BR|
-  |_| > **mA:** currently limit in milliamps
-
-  *Response:* N/A
-
-  *Notes:*
-      
-    The Ack current limit is set according to the DCC standard(s) of 60mA. Most decoders send a quick back and forth current pulse to the motor to generate this ACK. However, some modern motors (N and Z scales) may not be able to draw that amount of current. You can adjust down this limit. Or, if for some reasons your acks seem to be too "trigger happy" you can make it less sensitive by raising this limit.
-
-|hr-dashed|
-
-``<D ACK MAX µS>`` - **Sets the ACK pulse maximum**
-
-  *Parameters:* |BR|
-  |_| > **µS:** ACK pulse duration in milliseconds upper bound
-  
-  *Response:* |BR|
-  |_| N/A |BR| |BR|
-  |_| *Notes:* |BR|
-  |_| see MIN
-
-|hr-dashed|
-
-``<D ACK MIN µS>`` - **Sets the ACK pulse minimum**
-
-  *Parameters:* |BR|
-  |_| > **µS:** ACK pulsedureation in milliseconds lower bound
-  
-  *Response:* N/A
-
-  *Notes:*
-  
-    The NMRA specifies that the ACK pulse duration should be 6 milliseconds, which is 6000 microseconds (µS), give or take 1000 µS. That means the minimum pulse duration is 5000 µS and the maximum is 7000 µS. There are many poorly designed decoders in existence so DCC-EX extends this range from 4000 to 8500 µS. If you have any decoders that still do not function within this range, you can adjust the ACK MIN and ACK MAX parameters.
-
-----
-
-Diagnostic traces
------------------
-
-|hr-dashed|
-
 ``<D ACK state>`` - **Enables ACK diagnostics**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **state:** one of |BR|
@@ -1456,6 +1676,7 @@ Diagnostic traces
 |hr-dashed|
 
 ``<D CMD state>`` - **Enables Command Parser diagnostics**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **state:** one of |BR|
@@ -1471,6 +1692,7 @@ Diagnostic traces
 |hr-dashed|
 
 ``<D ETHERNET state>`` - **Enables Ethernet diagnostics**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **state:** one of |BR|
@@ -1486,6 +1708,7 @@ Diagnostic traces
 |hr-dashed|
 
 ``<D LCN state>`` - **Enables LCN interface diagnostics**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **state:** one of |BR|
@@ -1497,6 +1720,7 @@ Diagnostic traces
 |hr-dashed|
 
 ``<D WIFI state>`` - **Enables WiFi diagnostics**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **state:** one of |BR|
@@ -1512,6 +1736,7 @@ Diagnostic traces
 |hr-dashed|
 
 ``<D WIT state>`` - **Enables WiThrottle diagnostics**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **state:** one of |BR|
@@ -1527,9 +1752,8 @@ Diagnostic traces
 |hr-dashed|
 
 ``<D CABS>`` - **Shows cab numbers and speed in reminder tables**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Parameters:* N/A
-  
   *Response:* |BR|
   |_| "Used=xxx, max=yyy" |BR|
   |_| Displayed on the serial monitor only.
@@ -1537,16 +1761,26 @@ Diagnostic traces
 |hr-dashed|
 
 ``<D HAL SHOW>`` - **Shows configured servo board and GPIO extender board config and used pins**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Parameters:* N/A |BR|
-  *Response:* ???
+  *Response:* |BR|
+  |_| List the configured I/O drivers in the Hardware Abstraction Layer (HAL). This command is available from Version 3.2.0.
+
+  *Examples*
+
+    Example output showing a connected PCA9685 Servo controller and an MCP23017 I/O expander: |BR|
+    <* PARSING:D HAL SHOW * > |BR|
+    <* Arduino Vpins:2-69 * > |BR|
+    <* PCA9685 I2C:x40 Configured on Vpins:100-115 * > |BR|
+    <* PCA9685 I2C:x41 Configured on Vpins:116-131 OFFLINE * > |BR|
+    <* MCP23017 I2C:x20 Configured on Vpins:164-179 * > |BR|
+    <* MCP23017 I2C:x21 Configured on Vpins:180-195 * >
 
 |hr-dashed|
 
 ``<D RAM>`` - **Shows remaining RAM (Free Memory)**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Parameters:* N/A
-  
   *Response:* |BR|
   |_| "Free memory=xxxx" |BR|
   |_| Displayed on the serial monitor only.
@@ -1559,13 +1793,14 @@ I/O (HAL) Diagnostics
 |hr-dashed|
 
 ``<D HAL SHOW>`` - **List HAL devices and allocated VPINs**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Parameters:* N/A |BR|
   *Response:* ???
 
 |hr-dashed|
 
 ``<D ANIN vpin>`` - **Read and display pin vpin’s analogue value.**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **vpin:** ??
@@ -1575,6 +1810,7 @@ I/O (HAL) Diagnostics
 |hr-dashed|
 
 ``<D ANOUT vpin value [param2]>`` - **Write value to analogue pin vpin, supplying param2 to the driver.**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **vpin:** ?? |BR|
@@ -1585,65 +1821,19 @@ I/O (HAL) Diagnostics
 
 ----
 
-Write direct DCC packet
------------------------
-
-|hr-dashed|
-
-``<M register hex1 hex2 [hex3 [hex4 [hex5]]]>`` - **Write a DCC packet the MAIN track**
-
-  *Parameters:* |BR|
-  |_| > **register:** ignored |BR|
-  |_| > **byte1:**  first hexadecimal byte in the packet |BR|
-  |_| > **byte2:**  second hexadecimal byte in the packet |BR|
-  |_| > **byte3:**  optional third hexadecimal byte in the packet |BR|
-  |_| > **byte4:**  optional fourth hexadecimal byte in the packet |BR|
-  |_| > **byte5:**  optional fifth hexadecimal byte in the packet
-
-  *Response:* |BR|
-  |_| N/A
-  
-  *Notes:*
-  
-    register for backwards compat (can not be removed because number of arguments is unknown)
-    
-|hr-dashed|
-
-``<P register hex1 hex2 [hex3 [hex4 [hex5]]]>`` - **Write a DCC packet the MAIN track**
-
-  *Parameters:* |BR|
-  |_| > **register:** ignored |BR|
-  |_| > **byte1:**  first hexadecimal byte in the packet |BR|
-  |_| > **byte2:**  second hexadecimal byte in the packet |BR|
-  |_| > **byte3:**  optional third hexadecimal byte in the packet |BR|
-  |_| > **byte4:**  optional fourth hexadecimal byte in the packet |BR|
-  |_| > **byte5:**  optional fifth hexadecimal byte in the packet
-
-  *Response:* |BR|
-  |_| N/A
-
-  *Notes:*
-
-    register for backwards compat (can not be removed because number of arguments is unknown)
-
-----
-
 Other
 =====
+
+Other Commands
+--------------
 
 |hr-dashed|
 
 ``<U cmd>`` - **Is reserved for user commands (through user filter)**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **cmd:** user defined command
   
   *Response:* N/A
 
-----
-
-More Information
-================
-
- **For a detailed command reference, see...**
-  :doc:`Command Reference <command-reference>`

@@ -32,15 +32,21 @@ Conventions used on this page
 Controlling the EX-CommandStation
 =================================
 
+
 Power Management
 ----------------
+
+.. contents:: In this Section
+    :depth: 4
+    :local:
+    :class: in-this-section
 
 Also see `System Information`_ for retrieve command station power information.
 
 |hr-dashed|
 
-``<onOff [track]>`` - **Turns power on and off to the MAIN and PROG tracks together or independently.**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<onOff [track]>`` - Turn power on or off to the MAIN and PROG tracks
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Also allows joining the MAIN and PROG tracks together.
 
@@ -69,13 +75,13 @@ Also allows joining the MAIN and PROG tracks together.
 
 |hr-dashed|
 
-``<D RESET>`` - **Re-boot the command Station**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D RESET>`` - Re-boot the command Station
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* N/A
 
-``<J I>`` ``<JI>`` - **Request current status**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<J I>`` ``<JI>`` - Request current status
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* Repeated for each Channel/Track: ``<j I track current>`` |BR|
   |_| > **track:**  channel/track |BR|
@@ -85,8 +91,8 @@ Also allows joining the MAIN and PROG tracks together.
 
 |hr-dashed|
 
-``<J G>`` ``<JG>`` - **Request max current**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<J G>`` ``<JG>`` - Request max current
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| repeated for each Channel/Track: ``<j G track currentmax>`` |BR|
@@ -102,10 +108,15 @@ Track Manager
 
 Note:  Previously referred to as 'DC-District'.
 
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 |hr-dashed|
 
-``<= trackletter mode [cab]>`` - **Configure Track Manager** 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<= trackletter mode [cab]>`` - Configure Track Manager 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **trackletter:** 'A' through 'H' represent one of the outputs of the/a motor shield. |BR|
@@ -130,8 +141,8 @@ Note:  Previously referred to as 'DC-District'.
 
 |hr-dashed|
 
-``<=>`` - **Request the current Track Manager configuration**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<=>`` - Request the current Track Manager configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| for each track/channel supported by the motor shield ``<= trackletter state cab>`` |BR|
@@ -145,10 +156,15 @@ Note:  Previously referred to as 'DC-District'.
 Cab (Loco) Commands
 -------------------
 
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 |hr-dashed|
 
-``<t cab>`` - **Requests a deliberate update on the cab (loco) speed/functions**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<t cab>`` - Request a deliberate update on the cab (loco) speed/functions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **cab:** DCC Address of the decoder/loco
@@ -172,8 +188,8 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
-``<t cab speed dir>`` - **Set Cab (Loco) Speed**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<t cab speed dir>`` - Set Cab (Loco) Speed
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **cab:** DCC Address of the decoder/loco |BR|
@@ -201,8 +217,8 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
-``<!>`` - **Emergency Stop**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<!>`` - Emergency Stop
+^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| Repeated for each loco in the reminders list ``<l cab reg speedByte functMap>`` |BR|
@@ -210,8 +226,8 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
-``<F cab funct state>`` - **Turns loco decoder functions ON or OFF**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<F cab funct state>`` - Turn loco decoder functions ON or OFF
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **cab:** DCC Address of the decoder/loco (short (1-127) or long (128-10293)) |BR|
@@ -240,8 +256,8 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
-``<f cab byte1 [byte2]]>`` - **Decoder Functions - Legacy command.** |DEPRECATED|
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<f cab byte1 [byte2]]>`` - Decoder Functions - Legacy command |DEPRECATED|
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **cab:** DCC Address of the decoder/loco |BR|
@@ -343,8 +359,8 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
-``<t reg cab speed dir>`` - **Set Cab (Loco) Speed - Legacy command** |DEPRECATED|
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<t reg cab speed dir>`` - Set Cab (Loco) Speed - Legacy command |DEPRECATED|
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **reg:** not used |BR|
@@ -371,8 +387,8 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
-``<- [cab]>`` - **Remove one or all locos from reminders**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<- [cab]>`` - Remove one or all locos from reminders
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **cab:** one of |BR|
@@ -394,8 +410,8 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
-``<D speedsteps>`` - **Switch between 28 and 128 speed steps**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D speedsteps>`` - Switch between 28 and 128 speed steps
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **speedsteps:** |BR|
@@ -414,10 +430,15 @@ Cab (Loco) Commands
 Roster Commands
 ---------------
 
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 |hr-dashed|
 
-``<J R>`` ``<JR>`` - **Request the list defined Roster Entry IDs**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<J R>`` ``<JR>`` - Request the list defined Roster Entry IDs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* N/A |BR| 
 
@@ -431,8 +452,8 @@ Roster Commands
 
 |hr-dashed|
 
-``<J R id>`` ``<JR id>`` - **Request details of a specific Roster Entry**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<J R id>`` ``<JR id>`` - Request details of a specific Roster Entry
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** unique id of the Cab/s (Loco/s) in the roster
@@ -452,12 +473,17 @@ Roster Commands
 Turnout/Points
 --------------
 
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 For details on how to configure turnouts/points see: `Turnouts/Points (Configuring the EX-CommandStation)`_
 
 |hr-dashed|
 
-``<T>`` - **Request a list all defined turnouts/Points**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<T>`` - Request a list all defined turnouts/Points
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| Repeated for each defined Turnout/Point |BR|
@@ -488,8 +514,8 @@ For details on how to configure turnouts/points see: `Turnouts/Points (Configuri
 
 |hr-dashed|
 
-``<J T id>`` ``<JT id>`` - **Request details of a specific Turnout/Point**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<J T id>`` ``<JT id>`` - Request details of a specific Turnout/Point
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:**  unique id of the Turnout/Point
@@ -511,8 +537,8 @@ For details on how to configure turnouts/points see: `Turnouts/Points (Configuri
 
 |hr-dashed|
 
-``<J T>`` ``<JT>`` - **Request the list of defined turnout/Point IDs**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<J T>`` ``<JT>`` - Request the list of defined turnout/Point IDs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:*
   |_| ``<jT [id1 id2 id3 ...]>`` |BR|
@@ -524,8 +550,8 @@ For details on how to configure turnouts/points see: `Turnouts/Points (Configuri
 
 |hr-dashed|
 
-``<T id state>`` - **Throw (1 or T) or close(0 or C) a defined turnout/point**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<T id state>`` - Throw or Close a defined turnout/point
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the Turnout/Point |BR|
@@ -554,12 +580,17 @@ For details on how to configure turnouts/points see: `Turnouts/Points (Configuri
 Routes/Automations
 ------------------
 
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 For details on how to configure turnouts/points see: :doc:`/ex-rail/EX-RAIL-command-reference`
 
 |hr-dashed|
 
-``<J A>`` - **Request a list of Automations/Routes**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<J A>`` - Request a list of Automations/Routes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| ``<jA [id0 id1 id2 ..]>`` |BR|
@@ -572,8 +603,8 @@ For details on how to configure turnouts/points see: :doc:`/ex-rail/EX-RAIL-comm
 
 |hr-dashed|
 
-``<J A id>`` ``<JA id>`` - **Requests information for a route/automation**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<J A id>`` ``<JA id>`` - Request information for a route/automation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the Route/Automation
@@ -595,10 +626,15 @@ For details on how to configure turnouts/points see: :doc:`/ex-rail/EX-RAIL-comm
 System Information
 ------------------
 
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 |hr-dashed|
 
-``<c>`` - **Request Current on the Track(s)**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<c>`` - Request Current on the Track(s)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| ``<c "CurrentMAIN" current C "Milli" "0" max_ma "1" trip_ma>`` |BR|
@@ -613,8 +649,8 @@ System Information
 
 |hr-dashed|
 
-``<s>`` - **Requests the DCC-EX version and hardware info, along with listing defined turnouts.**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<s>`` - Request the DCC-EX version and hardware info, along with listing defined turnouts
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| ``<iDCCEX version / microprocessorType / MotorControllerType / buildNumber>`` |BR|
@@ -631,8 +667,8 @@ System Information
 
 |hr-dashed|
 
-``<#>`` - **Requests the number of supported cabs(locos)**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<#>`` - Request the number of supported cabs(locos)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| ``<# noCabs>`` |BR|
@@ -648,6 +684,11 @@ System Information
 
 DCC Accessories
 ---------------
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
 
 EX-CS| can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).
 
@@ -667,8 +708,8 @@ NOTE: Both the following commands do the same thing. Pick the one that works for
 
 |hr-dashed|
 
-``<a addr subaddr activate>`` - **Control an Accessory Decoder**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<a addr subaddr activate>`` - Control an Accessory Decoder
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **addr:** the primary address of the decoder controlling the turnout (0-511) |BR|
@@ -681,8 +722,8 @@ NOTE: Both the following commands do the same thing. Pick the one that works for
 
 |hr-dashed|
 
-``<a linear_addr activate>`` - **Control an Accessory Decoder**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<a linear_addr activate>`` - Control an Accessory Decoder
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **linear_addr:** linear address of the decoder controlling this turnout (1-2044) |BR|
@@ -703,8 +744,8 @@ Sensors
 
 |hr-dashed|
 
-``<Q>`` - **Lists Status of all sensors**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<Q>`` - Lists Status of all sensors
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| Repeat for each defined sensor: ``<q id>`` |BR|
@@ -715,8 +756,8 @@ Sensors
 
 |hr-dashed|
 
-``<S>`` - **Requests a list of all defined sensors**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<S>`` - Requests a list of all defined sensors
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| Repeated for each defined sensor: ``<Q id vpin pullup>`` |BR|
@@ -735,10 +776,15 @@ Sensors
 WiFi Control
 ------------
 
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 |hr-dashed|
 
-``<+X>`` - **Force the Command Station into "WiFi Connected" mode**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<+X>`` - Force the Command Station into "WiFi Connected" mode
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   A special command to force the "connected" flag (WiFi Connected Mode) to on inside the Command Station so that our loop will start seeing network traffic. If your code creates a connection outside of our normal WiFi code, this provides a way for you to notify the Command Station that it needs to process commands on a connection you created and so you can send your own AT commands.
 
@@ -757,8 +803,8 @@ WiFi Control
 
 |hr-dashed|
 
-``<+command>`` - **Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<+command>`` - Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **command:** what you want to append after AT+ and send to the AT processor.
@@ -773,8 +819,8 @@ WiFi Control
 
 |hr-dashed|
 
-``<+>`` - **Switch to direct communication with WiFi AT processor**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<+>`` - Switch to direct communication with WiFi AT processor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| All input and output from this point is the direct communication with the Wifi AT software this mode is ended by typing ! (exclamation mark).
@@ -786,8 +832,8 @@ EX-RAIL
 
 |hr-dashed|
 
-``</ KILL taskId>`` - **Kills a currently running script task by ID (use to list task IDs)**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``</ KILL taskId>`` - Kills a currently running script task by ID (use to list task IDs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **taskId:** ??
@@ -796,8 +842,8 @@ EX-RAIL
 
 |hr-dashed|
 
-``</ LATCH sensorId>`` - **Lock sensor ON, preventing external influence**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``</ LATCH sensorId>`` - Lock sensor ON, preventing external influence
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **sensorId:**  ??  valid ids and in the range 0-255
@@ -811,8 +857,8 @@ EX-RAIL
 
 |hr-dashed|
 
-``</ FREE blockId>`` - **Manually frees a virtual track Block**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``</ FREE blockId>`` - Manually frees a virtual track Block
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **blockId:** ?? valid ids and in the range 0-255
@@ -821,8 +867,8 @@ EX-RAIL
 
 |hr-dashed|
 
-``</ RESERVE blockId>`` - **Manually reserves a virtual track Block**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``</ RESERVE blockId>`` - Manually reserves a virtual track Block
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **blockId:** ?? valid ids and in the range 0-255
@@ -831,16 +877,16 @@ EX-RAIL
 
 |hr-dashed|
 
-``</ PAUSE>`` - **Pauses ALL EX-RAIL automation activities**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``</ PAUSE>`` - Pauses ALL EX-RAIL automation activities
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   Including sending an E-STOP to all locos.
 
   *Response:* N/A
 
 
-``</>`` - **Request EX-RAIL running task information.**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``</>`` - Request EX-RAIL running task information
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| > **<* EXRAIL STATUS |BR|
@@ -852,16 +898,16 @@ EX-RAIL
 
 |hr-dashed|
 
-``</ ROUTES>`` - **Request the Routes & Automations control list in wiThrottle Protocol format**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``</ ROUTES>`` - Request the Routes & Automations control list in wiThrottle Protocol format
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| ``<X>``
 
 |hr-dashed|
 
-``</ RESUME>`` - **Resumes ALL EX-RAIL automation activities**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``</ RESUME>`` - Resumes ALL EX-RAIL automation activities
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   Also resumes all locos at the same speed at which they were paused.
 
@@ -870,8 +916,8 @@ EX-RAIL
 
 |hr-dashed|
 
-``</ START [locoAddr] routeId>`` - **Starts a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``</ START [locoAddr] routeId>`` - Start a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| locoAddr: DCC address of the loco |BR|
@@ -881,8 +927,8 @@ EX-RAIL
 
 |hr-dashed|
 
-``</ UNLATCH sensorId>`` - **Unlock sensor, returning to current external state**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``</ UNLATCH sensorId>`` - Unlock sensor, returning to current external state
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **sensor_id:** ??  valid ids and in the range 0-255
@@ -896,8 +942,8 @@ EX-RAIL
 
 |hr-dashed|
 
-``<D EXRAIL state>`` - **Enable or disbale EX-RAIL script logging**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D EXRAIL state>`` - Enable or disable EX-RAIL script logging
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   When the CommandStation is connected to a serial monitor, EX-RAIL script logging can be Enabled or Disabled
 
@@ -917,10 +963,15 @@ Writing Configuration Variable (CVs)
 Writing CVs - Program on the main
 ---------------------------------
 
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 |hr-dashed|
 
-``<b cab cv bit value>`` - **Write CV bit on main track**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<b cab cv bit value>`` - Write Configuration Variable (CV) bit on main track
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **cab:** DCC Address of the decoder/loco.  The short (1-127) or long (128-10293) address of the engine decoder |BR|
@@ -932,8 +983,8 @@ Writing CVs - Program on the main
 
 |hr-dashed|
 
-``<w cab cv value>`` - **Write CV on main track**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<w cab cv value>`` - Write Configuration Variable (CV) on main track
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **cab:** DCC Address of the decoder/loco.  The short (1-127) or long (128-10293) address of the engine decoder |BR|
@@ -944,8 +995,13 @@ Writing CVs - Program on the main
 
 ----
 
-Reading/Writing CVs - Programming track
----------------------------------------
+Reading/Writing Configuration Variables (CVs) - Programming track
+-----------------------------------------------------------------
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
 
 **Note**
 
@@ -953,8 +1009,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
-``<R cv>`` - **Read CV**
-^^^^^^^^^^^^^^^^^^^^^^^^
+``<R cv>`` - Read Configuration Variables (CVs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **cv:** CV number
@@ -970,8 +1026,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
-``<R>`` - **Read DCC decoder (cab) address**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<R>`` - Read DCC decoder (cab) address
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| ``<r -cab>`` |BR|
@@ -991,8 +1047,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
-``<V cv bit onOff>`` - **Verify/Read bit of CV with guessed value**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<V cv bit onOff>`` - Verify/Read bit of Configuration Variable (CV) with guessed value
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **cv:** CV number |BR|
@@ -1012,8 +1068,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
-``<V cv value>`` - **Verify/Read of CV with guessed value**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<V cv value>`` - Verify/Read of Configuration Variable (CV) with guessed value
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **cv:** CV number |BR|
@@ -1032,8 +1088,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
-``<B cv bit onOff>`` - **Write bit to CV**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<B cv bit onOff>`` - Write bit to Configuration Variable (CV)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **cv:** CV number |BR|
@@ -1046,8 +1102,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
-``<W cv value >`` - **Write CV**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<W cv value >`` - Write Configuration Variable (CV)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **cv:** CV number |BR|
@@ -1062,8 +1118,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
-``<W address>`` - **Write DCC address to cab (loco)**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<W address>`` - Write DCC address to cab (loco)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **address:** DCC Address of the decoder/loco
@@ -1083,8 +1139,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
-``<P register hex1 hex2 [hex3 [hex4 [hex5]]]>`` - **Writes a DCC packet to the PROG track**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<P register hex1 hex2 [hex3 [hex4 [hex5]]]>`` - Writes a DCC packet to the PROG track
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **register:** an internal register number, from 0 through MAX_MAIN_REGISTERS (inclusive), to write (if REGISTER=0) or write and store (if REGISTER>**0) the packet |BR|
@@ -1146,10 +1202,15 @@ Write direct DCC packet
 
 .. Warning:: THESE ARE FOR DEBUGGING AND TESTING PURPOSES ONLY.  DO NOT USE UNLESS YOU KNOW HOW TO CONSTRUCT NMRA DCC PACKETS - YOU CAN INADVERTENTLY RE-PROGRAM YOUR ENGINE DECODER
 
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 |hr-dashed|
 
-``<M register hex1 hex2 [hex3 [hex4 [hex5]]]>`` - **Write a DCC packet the MAIN track**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<M register hex1 hex2 [hex3 [hex4 [hex5]]]>`` - Write a DCC packet the MAIN track
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   Writes a DCC packet of two, three, four, or five hexadecimal bytes to a register driving the selected track.
 
@@ -1170,8 +1231,8 @@ Write direct DCC packet
     
 |hr-dashed|
 
-``<P register hex1 hex2 [hex3 [hex4 [hex5]]]>`` - **Write a DCC packet the MAIN track**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<P register hex1 hex2 [hex3 [hex4 [hex5]]]>`` - Write a DCC packet the MAIN track
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   Writes a DCC packet of two, three, four, or five hexadecimal bytes to a register driving the selected track.
 
@@ -1195,10 +1256,15 @@ Write direct DCC packet
 Programming track - Tuning
 --------------------------
 
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 |hr-dashed|
 
-``<D ACK LIMIT mA>`` - **Sets the ACK limit**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D ACK LIMIT mA>`` - Sets the ACK limit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   Use this command to override the minimum milliamps (mA) required to detect the ACK pulse, e.g. ``<D ACK LIMIT 30>`` means a minimum 30mA pulse would be accepted.
  
@@ -1213,8 +1279,8 @@ Programming track - Tuning
 
 |hr-dashed|
 
-``<D ACK MIN µS>`` - **Sets the ACK pulse minimum**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D ACK MIN µS>`` - Sets the ACK pulse minimum
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   As above, however overriding the maximum amount of time for a pulse, e.g. ``<D ACK MAX 20000>`` means a pulse up to 20ms would be accepted.
 
@@ -1229,8 +1295,8 @@ Programming track - Tuning
 
 |hr-dashed|
 
-``<D ACK MAX µS>`` - **Sets the ACK pulse maximum**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D ACK MAX µS>`` - Sets the ACK pulse maximum
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   Use this command to override the minimum amount of time in microseconds (uS) the pulse needs to be active for, e.g. ``<D ACK MIN 2000>`` means a pulse of 2ms or more would be accepted.
 
@@ -1244,8 +1310,8 @@ Programming track - Tuning
 
 |hr-dashed|
 
-``<D ACK RETRY x>`` - **Adjust ACK retries**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D ACK RETRY x>`` - Adjust ACK retries
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   When reading/writing CVs, the program will try again upon failure.  The default is ``<D ACK RETRY 2>``, which means 3 attempts before a failure is reported.  Each of the unsuccessful attempts is reported in the serial monitor or JMRI monitor log.  The last unsuccessful attempt remains on the display if in use.  To reset the running total, send the command manually: ``<D ACK RETRY 2>``.
 
@@ -1261,8 +1327,8 @@ Programming track - Tuning
 
 |hr-dashed|
 
-``<D PROGBOOST>`` - **Override prog track limit while idle**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D PROGBOOST>`` - Override prog track limit while idle
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   By default, the programming track has a current limit enabled of 250mA, so any programming activities requiring more than this value will cause power to the programming track to be cut for 100ms. Run this command to override this if programming decoders trigger current limiting on the programming track.
 
@@ -1280,6 +1346,11 @@ Configuring the EX-CommandStation
 Turnouts/Points (Configuring the EX-CommandStation)
 ---------------------------------------------------
 
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 The Turnout/Point commands provide a more flexible and more functional way of operating turnouts/points. It requires that the turnout/point be pre-defined through the ``<T ...>`` commands, described below.
 
 Turnouts may be in either of two states: Closed or Thrown. The turnout/point commands below use the values ``1`` for ``Throw`` or ``Thrown`` and ``0`` for ``Close`` or ``Closed``.
@@ -1290,8 +1361,8 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
-``<T id DCC addr subaddr>`` - **Define turnout/point on a DCC Accessory Decoder with the specified address and subaddress**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<T id DCC addr subaddr>`` - Define turnout/point on a DCC Accessory Decoder with the specified address and subaddress
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the Turnout/Point |BR|
@@ -1322,8 +1393,8 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
-``<T id DCC linearAddr>`` - **Define turnout/point on a DCC Accessory Decoder with the specified linear address**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<T id DCC linearAddr>`` - Define turnout/point on a DCC Accessory Decoder with the specified linear address
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the Turnout/Point |BR|
@@ -1331,12 +1402,12 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
   *Response:* ???
 
-  *Example:* ``<T 23 DCC 44>`` (corresponds to address 11 subaddress 3).
+  *Example:* ``<T 23 DCC 44>`` (corresponds to address 11 subaddress 3)
 
 |hr-dashed|
 
-``<T id VPIN vpin>`` - **Define turnout/point output on specified vpin.**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<T id VPIN vpin>`` - Define turnout/point output on specified vpin
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** unique Id for the servo |BR|
@@ -1357,8 +1428,8 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
-``<T id SERVO vpin thrownPos closedPos profile>`` - **Define turnout/point servo (PWM) on specified vpin**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<T id SERVO vpin thrownPos closedPos profile>`` - Define turnout/point servo (PWM) on specified vpin
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** unique Id for the servo |BR|
@@ -1370,7 +1441,7 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
   |_| |_| |_| |_| - 1=Fast (0.5 sec),  |BR|
   |_| |_| |_| |_| - 2=Medium (1 sec),  |BR|
   |_| |_| |_| |_| - 3=Slow (2 sec) and  |BR|
-  |_| |_| |_| |_| - 4=Bounce (subject to revision).
+  |_| |_| |_| |_| - 4=Bounce (subject to revision)
   
   *Response:* |BR|
   |_| Successful: ``<O>`` |BR|
@@ -1389,8 +1460,8 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
-``<T id>`` - **Deletes a turnout by Id**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<T id>`` - Deletes a turnout by Id
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** unique Id for the servod
@@ -1401,8 +1472,8 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
-``<D SERVO vpin value [profile]>`` - **Set servo position to value on pin vpin**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D SERVO vpin value [profile]>`` - Set servo position to value on pin vpin
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  
   *Parameters:* |BR|
   |_| > **vpin:** vpin to which the servo is attached |BR|
@@ -1422,8 +1493,8 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
-``<T id addr subaddr>`` - **Define a turnout on a DCC Accessory Decoder with the specified address and subaddress - Legacy command** |DEPRECATED|
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<T id addr subaddr>`` - Define a turnout on a DCC Accessory Decoder with the specified address and subaddress - Legacy command |DEPRECATED|
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the Turnout/Point |BR|
@@ -1436,8 +1507,8 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
-``<T id vpin activePos inactivePos>`` - **Define a turnout/point servo on specified vpin - Legacy command** |DEPRECATED|
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<T id vpin activePos inactivePos>`` - Define a turnout/point servo on specified vpin - Legacy command |DEPRECATED|
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the Turnout/Point |BR|
@@ -1466,6 +1537,11 @@ If turnout definitions are stored in EEPROM, the turnout thrown/closed state is 
 Sensors (Configuring the EX-CommandStation)
 -------------------------------------------
 
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 |EX-CS| supports Sensor inputs that can be connected to any Arduino Pin not in use by this program, as well as pins on external I/O expanders and other devices. Physical sensors can be of any type (infrared, magnetic, mechanical…). They may be configured to pull-up or not. When configured for pull-up, the input is connected (within the CS) to +5V via a resistor. This sort of input is suited to sensors that have two wires (a switch or relay contacts, or a device with an 'open collector' or 'open drain' output. Some sensors may be sensitive to the pull-up resistor and not operate as expected - in this case you can turn off the pull-up.
 
 The sensor is considered INACTIVE when at +5V potential, and ACTIVE when the pin is pulled down to 0V.
@@ -1478,8 +1554,8 @@ To monitor one or more Arduino pins for sensor triggers, first define/edit/delet
 
 |hr-dashed|
 
-``<S id vpin pullup>`` - **Create a new sensor ID**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<S id vpin pullup>`` - Create a new sensor ID
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the Sensor (0-32767) (You pick the ID & they are shared between Turnouts, Sensors and Outputs) |BR|
@@ -1498,8 +1574,8 @@ To monitor one or more Arduino pins for sensor triggers, first define/edit/delet
 
 |hr-dashed|
 
-``<S id>`` - **Delete defined sensor**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<S id>`` - Delete defined sensor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the Sensor (0-32767)
@@ -1524,10 +1600,15 @@ Depending on whether the physical sensor is acting as an "event-trigger" or a "d
 Servos (Configuring the EX-CommandStation)
 ------------------------------------------
 
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 |hr-dashed|
 
-``<S id pin state>`` - **Creates a new sensor ID, with specified PIN and PULLUP**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<S id pin state>`` - Creates a new sensor ID, with specified PIN and PULLUP
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the Sensor (0-32767) |BR|
@@ -1540,8 +1621,8 @@ Servos (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-``<S id>`` - **Deletes definition of sensor**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<S id>`` - Deletes definition of sensor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the Sensor (0-32767)
@@ -1552,6 +1633,11 @@ Servos (Configuring the EX-CommandStation)
 
 Outputs (Configuring the EX-CommandStation)
 -------------------------------------------
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
 
 |EX-CS| supports optional OUTPUT control of any unused Arduino Pins for custom purposes. Pins can be activated or de-activated. 
 The default is to set ACTIVE pins HIGH and INACTIVE pins LOW. However, this default behavior can be inverted for any pin in which case ACTIVE=LOW and INACTIVE=HIGH.  
@@ -1564,8 +1650,8 @@ To have |EX-CS| utilize one or more Arduino pins as custom outputs, first define
 
 |hr-dashed|
 
-``<Z id vpin iflag>`` - **Creates a new output ID, with specified PIN and IFLAG values**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<Z id vpin iflag>`` - Creates a new output ID, with specified PIN and IFLAG values
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the output |BR|
@@ -1594,8 +1680,8 @@ To have |EX-CS| utilize one or more Arduino pins as custom outputs, first define
 
 |hr-dashed|
 
-``<Z id>`` - **Deletes definition of output ID**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<Z id>`` - Deletes definition of output ID
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the output to delete
@@ -1606,8 +1692,8 @@ To have |EX-CS| utilize one or more Arduino pins as custom outputs, first define
 
 |hr-dashed|
 
-``<Z>`` - **Lists all defined output pins**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<Z>`` -Lists all defined output pins
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| Successful: ``<Y id vpin iflag state>`` repeated for each defined output pin |BR|
@@ -1615,8 +1701,8 @@ To have |EX-CS| utilize one or more Arduino pins as custom outputs, first define
 
 |hr-dashed|
 
-``<Z id state>`` - **Sets output ID to either INACTIVE or ACTIVE state**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<Z id state>`` - Sets output ID to either INACTIVE or ACTIVE state
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** identifier of the output |BR|
@@ -1644,25 +1730,30 @@ You can also **ERASE everything (turnouts, sensors, and outputs)** stored in the
 EEPROM Management (Configuring the EX-CommandStation)
 -----------------------------------------------------
 
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 |hr-dashed|
 
-``<D EEPROM>`` - **Diagnostic dump eeprom contents** 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D EEPROM>`` - Diagnostic dump EEPROM contents
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* ???
 
 |hr-dashed|
 
-``<e>`` - **Erase ALL (turnouts, sensors, and outputs) from EEPROM**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<e>`` - Erase ALL (turnouts, sensors, and outputs) from EEPROM
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| ``<O>``
 
 |hr-dashed|
 
-``<E>`` - **Store definitions to EEPROM**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<E>`` - Store definitions to EEPROM
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| ``<O>``
@@ -1672,10 +1763,15 @@ EEPROM Management (Configuring the EX-CommandStation)
 Diagnostic Programming Commands (Configuring the EX-CommandStation)
 -------------------------------------------------------------------
 
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 |hr-dashed|
 
-``<D ACK state>`` - **Enables ACK diagnostics**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D ACK state>`` - Enables ACK diagnostics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **state:** one of |BR|
@@ -1692,8 +1788,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-``<D CMD state>`` - **Enables Command Parser diagnostics**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D CMD state>`` - Enables Command Parser diagnostics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **state:** one of |BR|
@@ -1708,8 +1804,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-``<D ETHERNET state>`` - **Enables Ethernet diagnostics**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D ETHERNET state>`` - Enables Ethernet diagnostics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **state:** one of |BR|
@@ -1724,8 +1820,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-``<D LCN state>`` - **Enables LCN interface diagnostics**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D LCN state>`` - Enables LCN interface diagnostics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **state:** one of |BR|
@@ -1736,8 +1832,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-``<D WIFI state>`` - **Enables WiFi diagnostics**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D WIFI state>`` - Enables WiFi diagnostics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **state:** one of |BR|
@@ -1752,8 +1848,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-``<D WIT state>`` - **Enables WiThrottle diagnostics**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D WIT state>`` - Enables WiThrottle diagnostics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **state:** one of |BR|
@@ -1768,8 +1864,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-``<D CABS>`` - **Shows cab numbers and speed in reminder tables**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D CABS>`` - Shows cab numbers and speed in reminder tables
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| "Used=xxx, max=yyy" |BR|
@@ -1777,8 +1873,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-``<D HAL SHOW>`` - **Shows configured servo board and GPIO extender board config and used pins**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D HAL SHOW>`` - Shows configured servo board and GPIO extender board config and used pins
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| List the configured I/O drivers in the Hardware Abstraction Layer (HAL). This command is available from Version 3.2.0.
@@ -1795,8 +1891,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-``<D RAM>`` - **Shows remaining RAM (Free Memory)**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D RAM>`` - Shows remaining RAM (Free Memory)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| "Free memory=xxxx" |BR|
@@ -1807,17 +1903,22 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 I/O (HAL) Diagnostics
 ---------------------
 
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 |hr-dashed|
 
-``<D HAL SHOW>`` - **List HAL devices and allocated VPINs**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D HAL SHOW>`` - List HAL devices and allocated VPINs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* ???
 
 |hr-dashed|
 
-``<D ANIN vpin>`` - **Read and display pin vpin’s analogue value.**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D ANIN vpin>`` - Read and display pin vpin's analogue value
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **vpin:** ??
@@ -1826,8 +1927,10 @@ I/O (HAL) Diagnostics
 
 |hr-dashed|
 
-``<D ANOUT vpin value [param2]>`` - **Write value to analogue pin vpin, supplying param2 to the driver.**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D ANOUT vpin value [param2]>`` - Write value to analogue vpin
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Write value to analogue pin vpin, supplying param2 to the driver.
 
   *Parameters:* |BR|
   |_| > **vpin:** ?? |BR|
@@ -1844,10 +1947,15 @@ Other
 Other Commands
 --------------
 
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 |hr-dashed|
 
-``<U cmd>`` - **Is reserved for user commands (through user filter)**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<U cmd>`` - Is reserved for user commands (through user filter)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **cmd:** user defined command

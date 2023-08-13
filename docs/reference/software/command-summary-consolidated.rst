@@ -708,8 +708,8 @@ NOTE: Both the following commands do the same thing. Pick the one that works for
 
 |hr-dashed|
 
-``<a addr subaddr activate>`` - Control an Accessory Decoder
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<a addr subaddr activate>`` - Control an Accessory Decoder with Address and Subaddress
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **addr:** the primary address of the decoder controlling the turnout (0-511) |BR|
@@ -722,8 +722,8 @@ NOTE: Both the following commands do the same thing. Pick the one that works for
 
 |hr-dashed|
 
-``<a linear_addr activate>`` - Control an Accessory Decoder
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<a linear_addr activate>`` - Control an Accessory Decoder with linear address
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **linear_addr:** linear address of the decoder controlling this turnout (1-2044) |BR|
@@ -741,6 +741,12 @@ NOTE: Both the following commands do the same thing. Pick the one that works for
 
 Sensors
 -------
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 
 |hr-dashed|
 
@@ -829,6 +835,11 @@ WiFi Control
 
 EX-RAIL
 -------
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
 
 |hr-dashed|
 

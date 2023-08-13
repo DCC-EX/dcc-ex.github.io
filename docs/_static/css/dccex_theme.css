@@ -610,6 +610,57 @@ nav#on-this-page {
   margin-bottom: 10px !important;
 }
 
+
+/* in-this-section level 3 bullet points */
+nav.in-this-section ul.simple li ul li p {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  font-size: 80% !important;
+  line-height: 120% !important;
+  margin-bottom: 0px !important;
+}
+
+/* in-this-section level 3 bullet points */
+nav.in-this-section ul.simple li ul li {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  line-height: 120% !important;
+  margin-bottom: 0px !important;
+}
+
+/* in-this-section level 2 bullet points */
+nav.in-this-section ul.simple li p {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  font-size: 80% !important;
+  line-height: 120% !important;
+  margin-bottom: 0px !important;
+}
+
+/* in-this-section level 2 bullet points */
+nav.in-this-section ul.simple li {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  line-height: 120% !important;
+  margin-bottom: 0px !important;
+}
+
+nav.in-this-section ul.simple {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  margin-bottom: 0px !important;
+}
+
+nav.in-this-section p {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  font-style: italic;
+  font-size: 90%;
+  margin-top: 0px !important;
+  margin-bottom: 6px !important;
+  margin-left: -30px;
+}
+
+nav.in-this-section {
+  margin-bottom: 20px !important;
+  margin-left: 30px;
+}
+
+
 /* sidebars */
 .rst-content .sidebar {
   padding: 12px 24px 12px 24px !important;

@@ -33,7 +33,7 @@ Hardware, Software, tools
     downloads/index
     hardware/index
     software/index
-    software/index-dcpp-commands
+    software/command-summary-consolidated
     /ex-rail/EX-RAIL-command-reference
     developers/index
     accessories/index

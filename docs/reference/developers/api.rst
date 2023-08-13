@@ -2,9 +2,9 @@
 .. include:: /include/include-l2.rst
 |EX-REF-LOGO|
 
-*******************************
-EX-CommandStation API Reference
-*******************************
+***************************
+DCC-EX Native API Reference
+***************************
 
 |engineer|
 
@@ -13,17 +13,6 @@ EX-CommandStation API Reference
   .. contents:: On this page
     :depth: 1
     :local:
-
-.. list-table:: 
-  :widths: auto
-  :stub-columns: 1
-
-  * - Document status
-    - Draft
-  * - Document version
-    - 0.3
-  * - Last update
-    - 24th June 2022
 
 This page documents the API syntax and usage for |EX-CS|.
 
@@ -35,7 +24,7 @@ The current API has resulted from a mix of new commands and commands inherited f
 
 If you are looking for information on the WiThrottle protocol, you will find that documented on the `JMRI website <https://www.jmri.org/help/en/package/jmri/jmrit/withrottle/Protocol.shtml>`_.
 
-For detailed information on the various commands and responses available with |EX-CS|, refer to the :doc:`/reference/software/command-reference` page.
+For detailed information on the various commands and responses available with |EX-CS|, refer to the :doc:`/reference/software/command-summary-consolidated` page.
 
 1. API Client definition
 =========================
@@ -145,7 +134,7 @@ To obtain the parameters:
 B.1. Obtain the OPCODE
 ----------------------
 
-The first level of parsing is to obtain the single character, case sensitive OPCODE which is preceeded by a ``<`` character.
+The first level of parsing is to obtain the single character, case sensitive OPCODE which is preceded by a ``<`` character.
 
 B.2. Obtain the parameters
 --------------------------

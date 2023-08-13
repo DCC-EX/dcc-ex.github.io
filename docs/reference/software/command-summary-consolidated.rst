@@ -32,15 +32,17 @@ Conventions used on this page
 Controlling the EX-CommandStation
 =================================
 
-Power management
+Power Management
 ----------------
 
-Also see `System Information`_ for retrieve command station power information:
+Also see `System Information`_ for retrieve command station power information.
 
 |hr-dashed|
 
-``<onOff [track]>`` - **Turns power on and off to the MAIN and PROG tracks together or independently. Also allows joining the MAIN and PROG tracks together.**
+``<onOff [track]>`` - **Turns power on and off to the MAIN and PROG tracks together or independently.**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Also allows joining the MAIN and PROG tracks together.
 
   *Parameters:* |BR|
   |_| > **onOff:** one of |BR|
@@ -73,6 +75,7 @@ Also see `System Information`_ for retrieve command station power information:
   *Response:* N/A
 
 ``<J I>`` ``<JI>`` - **Request current status**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* Repeated for each Channel/Track: ``<j I track current>`` |BR|
   |_| > **track:**  channel/track |BR|
@@ -101,8 +104,8 @@ Note:  Previously referred to as 'DC-District'.
 
 |hr-dashed|
 
-``<= trackletter mode [cab]>`` - **Configure Track Manager Note: since only one channel can be PROG, changing a second channel to PROG, will force the other to OFF**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<= trackletter mode [cab]>`` - **Configure Track Manager** 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **trackletter:** 'A' through 'H' represent one of the outputs of the/a motor shield. |BR|
@@ -120,6 +123,10 @@ Note:  Previously referred to as 'DC-District'.
   |_| > **trackletter:** A-H |BR|
   |_| > **state:**  PROG, MAIN DC, DCX |BR|
   |_| > **cab:** cab(loco) equivalent to a fake DCC Address
+
+  *Notes:*
+
+    since only one channel can be PROG, changing a second channel to PROG, will force the other to OFF**
 
 |hr-dashed|
 
@@ -633,7 +640,9 @@ System Information
   
   *Notes:*
   
-    This will display the number of available cab slots. This will typically be **<# 20>**, **<# 30>**, or **<# 50>** depending on how much memory your EX‑CommandStation has available.  |BR| This is a design limit based on the memory limitations of the particular hardware and a compromise with other features that require memory such as WiFI. If you need more slots and are comfortable with code changes you can adjust this by changing MAX_LOCOS in "DCC.h", knowing that each new slot will take approximately 8 bytes of memory. The **<D RAM>** command will display the amount of free memory. If you fill the available slots, the "Forget Locos" command (**<- [CAB]>**) will free up unused locos. Currently there is no automatic purging of unused locos.
+    This will display the number of available cab slots. This will typically be **<# 20>**, **<# 30>**, or **<# 50>** depending on how much memory your |EX-CS| has available.
+    
+    This is a design limit based on the memory limitations of the particular hardware and a compromise with other features that require memory such as WiFI. If you need more slots and are comfortable with code changes you can adjust this by changing MAX_LOCOS in "DCC.h", knowing that each new slot will take approximately 8 bytes of memory. The **<D RAM>** command will display the amount of free memory. If you fill the available slots, the "Forget Locos" command (**<- [CAB]>**) will free up unused locos. Currently there is no automatic purging of unused locos.
 
 ----
 
@@ -822,12 +831,16 @@ EX-RAIL
 
 |hr-dashed|
 
-``</ PAUSE>`` - **Pauses ALL EX-RAIL automation activities, including sending an E-STOP to all locos.**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``</ PAUSE>`` - **Pauses ALL EX-RAIL automation activities**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Including sending an E-STOP to all locos.
 
   *Response:* N/A
 
+
 ``</>`` - **Request EX-RAIL running task information.**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| > **<* EXRAIL STATUS |BR|
@@ -839,16 +852,18 @@ EX-RAIL
 
 |hr-dashed|
 
-``</ ROUTES>`` - **Request the Routes & Automations control list in wiThrottle Protocol format.**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``</ ROUTES>`` - **Request the Routes & Automations control list in wiThrottle Protocol format**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| ``<X>``
 
 |hr-dashed|
 
-``</ RESUME>`` - **Resumes ALL EX-RAIL automation activities, and resumes all locos at the same speed at which they were paused.**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``</ RESUME>`` - **Resumes ALL EX-RAIL automation activities**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Also resumes all locos at the same speed at which they were paused.
 
   *Parameters:* N/A |BR|
   *Response:* N/A
@@ -881,8 +896,10 @@ EX-RAIL
 
 |hr-dashed|
 
-``<D EXRAIL state>`` - **When the CommandStation is connected to a serial monitor, EX-RAIL script logging can be Enabled or Disabled**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D EXRAIL state>`` - **Enable or disbale EX-RAIL script logging**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When the CommandStation is connected to a serial monitor, EX-RAIL script logging can be Enabled or Disabled
 
   *Parameters:* |BR|
   |_| > **state:** one of |BR|
@@ -916,7 +933,7 @@ Writing CVs - Program on the main
 |hr-dashed|
 
 ``<w cab cv value>`` - **Write CV on main track**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **cab:** DCC Address of the decoder/loco.  The short (1-127) or long (128-10293) address of the engine decoder |BR|
@@ -1227,8 +1244,8 @@ Use this command to override the minimum amount of time in microseconds (uS) the
 
 |hr-dashed|
 
-``<D ACK RETRY x>`` - **Adjust ACK retries to number x (default is 2)**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D ACK RETRY x>`` - **Adjust ACK retries**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When reading/writing CVs, the program will try again upon failure.  The default is ``<D ACK RETRY 2>``, which means 3 attempts before a failure is reported.  Each of the unsuccessful attempts is reported in the serial monitor or JMRI monitor log.  The last unsuccessful attempt remains on the display if in use.  To reset the running total, send the command manually: ``<D ACK RETRY 2>``.
 
@@ -1244,8 +1261,8 @@ When reading/writing CVs, the program will try again upon failure.  The default 
 
 |hr-dashed|
 
-``<D PROGBOOST>`` - **Override 250mA prog track limit while idle**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D PROGBOOST>`` - **Override prog track limit while idle**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 By default, the programming track has a current limit enabled of 250mA, so any programming activities requiring more than this value will cause power to the programming track to be cut for 100ms. Run this command to override this if programming decoders trigger current limiting on the programming track.
 
@@ -1372,8 +1389,8 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
-``<T id>`` - **Deletes a turnout by Id.**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<T id>`` - **Deletes a turnout by Id**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:** unique Id for the servod
@@ -1384,8 +1401,8 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
-``<D SERVO vpin value [profile]>`` - **Set servo position to value on pin vpin.**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D SERVO vpin value [profile]>`` - **Set servo position to value on pin vpin**
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  
   *Parameters:* |BR|
   |_| > **vpin:** vpin to which the servo is attached |BR|
@@ -1455,7 +1472,7 @@ The sensor is considered INACTIVE when at +5V potential, and ACTIVE when the pin
 
 To ensure proper voltage levels, some part of the Sensor circuitry MUST be tied back to the same ground as used by the Arduino.
 
-The Sensor code utilizes debouncing logic to eliminate contact ‘bounce’ generated by mechanical switches on transitions. This avoids the need to create smoothing circuitry for each sensor. You may need to change the parameters in Sensor.cpp through trial and error for your specific sensors, but the default parameters protect against contact bounces for up to 20 milliseconds, which should be adequate for almost all mechanical switches and all electronic sensors.
+The Sensor code utilizes debouncing logic to eliminate contact 'bounce' generated by mechanical switches on transitions. This avoids the need to create smoothing circuitry for each sensor. You may need to change the parameters in Sensor.cpp through trial and error for your specific sensors, but the default parameters protect against contact bounces for up to 20 milliseconds, which should be adequate for almost all mechanical switches and all electronic sensors.
 
 To monitor one or more Arduino pins for sensor triggers, first define/edit/delete sensor definitions using the following variation of the ``<S>`` command:
 

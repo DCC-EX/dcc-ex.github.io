@@ -416,17 +416,17 @@ Using *SerialToIPGUI* (For Microsoft Windows) (Recommended):
 
       SerialToIPGUI
 
-   # start SerialToIPGUI
-   # Enter the correct COM port. (Whatever 'COM' number appears in the Device Manager)
-   # Enter the port of '2560' 
-   # Click :guilabel:`Start`.
+   * start SerialToIPGUI
+   * Enter the correct COM port. (Whatever 'COM' number appears in the Device Manager)
+   * Enter the port of '2560' 
+   * Click :guilabel:`Start`.
 
    Once started...
    
-   # Open |EX-TB| on your Android device
-   # Enter the IP address of your PC 
-   # Enter the port of '2560' 
-   # Click :guilabel:`connect`.
+   * Open |EX-TB| on your Android device
+   * Enter the IP address of your PC 
+   * Enter the port of '2560' 
+   * Click :guilabel:`connect`.
 
 .. warning::
 

@@ -1,8 +1,10 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-******************
+.. include:: /include/throttles.rst
+
+*************
 Engine Driver
-******************
+*************
 
 |conductor| |tinkerer| |engineer|
 

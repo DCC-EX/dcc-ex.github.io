@@ -1,10 +1,12 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-*************************
-WiTcontroller (Physical)
-*************************
+.. include:: /include/throttles.rst
 
-|tinkerer|
+************************
+WiTcontroller (Physical)
+************************
+
+|tinkerer| |engineer|
 
 .. sidebar:: 
 

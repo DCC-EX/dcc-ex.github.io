@@ -1,10 +1,12 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-***********
-WiThrottle
-***********
+.. include:: /include/throttles.rst
 
-|conductor|
+**********
+WiThrottle
+**********
+
+|conductor| |tinkerer| |engineer|
 
 .. sidebar:: 
 

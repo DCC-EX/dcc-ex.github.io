@@ -363,7 +363,7 @@ This screen displays
 Connecting via USB
 ==================
 
-|EX-TB| can't normally connect to an |EX-CS| via USB, however it is possible to temporary create a USB to IP connection on you PC using tools like *socat* or *SerialToIPGUI* (for windows).
+|EX-TB| can't normally connect to an |EX-CS| via USB, however it is possible to temporarily create a USB to IP connection on you PC using tools like *socat* or *SerialToIPGUI* (for windows).
 
 Using *socat* in linux:
 
@@ -396,10 +396,7 @@ Using *SerialToIPGUI* (For Microsoft Windows):
 
       SerialToIPGUI
 
-   enter the port of '2560' and click :guilabel:`Start`
-
-
-Once started, open |EX-TB|, enter the IP address of your PC and the port of '2560' then click :guilabel:`connect`.
+   Once started, open |EX-TB|, enter the IP address of your PC and the port of '2560' then click :guilabel:`connect`.
 
 Downloads
 

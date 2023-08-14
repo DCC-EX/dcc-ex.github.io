@@ -357,3 +357,50 @@ This screen displays
 * Information about |EX-TB| 
 * Information about the |EX-CS| it is currently connected to (if any)
 * A page of basic information about |EX-CS|
+
+Connecting via USB
+==================
+
+|EX-TB| can't normally connect to an |EX-CS| via USB, however it is possible to temporary create a USB to IP connection on you PC using tools like *socat* or *SerialToIPGUI* (for windows).
+
+Using *socat* in linux:
+
+   ``socat TCP4-LISTEN:2560 /dev/ttyUSB0,b115200,raw,echo=0``
+
+   or (to provide more information)
+
+   ``socat -d -d -d TCP4-LISTEN:2560 /dev/ttyUSB0,b115200,raw,echo=0``
+
+   Note: Change 'dev/ttyUSB0' to the appropriate USB port that the microprocessor is connected to.
+
+Using *socat* in Microsoft Windows:
+
+   ``socat TCP-LISTEN:2560 /dev/ttyS11,b115200,raw,echo=0``
+
+   or (to provide more information)
+
+   ``socat -d -d -d TCP-LISTEN:2560 /dev/ttyS11,b115200,raw,echo=0``
+
+
+   Note: Change S11 to the appropriate USB port.  Whatever 'COM' number appears in the Device Manager, subtract 1.  |BR|
+   i.e. 'COM12' in theDevice Manager becomes '/dev/ttyS11'
+
+
+Using *SerialToIPGUI* (For Microsoft Windows):
+
+   .. figure:: /_static/images/SerialToIPGUI/SerialToIPGUI.png
+      :alt: SerialToIPGUI
+      :class: responsive-image
+
+      SerialToIPGUI
+
+   enter the port of '2560' and click :guilabel:`Start`
+
+
+Once started, open |EX-TB|, enter the IP address of your PC and the port of '2560' then click :guilabel:`connect`.
+
+Downloads
+
+ * *SerialToIPGUI*  - https://sourceforge.net/projects/serialtoip/
+ * *socat* for windows requires downloading the 'cgywin' and installing the optional 'socat' package when you install - https://www.cygwin.com/ 
+ 

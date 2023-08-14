@@ -358,6 +358,8 @@ This screen displays
 * Information about the |EX-CS| it is currently connected to (if any)
 * A page of basic information about |EX-CS|
 
+----
+
 Connecting via USB
 ==================
 
@@ -403,4 +405,3 @@ Downloads
 
  * *SerialToIPGUI*  - https://sourceforge.net/projects/serialtoip/
  * *socat* for windows requires downloading the 'cgywin' and installing the optional 'socat' package when you install - https://www.cygwin.com/ 
- 

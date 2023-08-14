@@ -33,10 +33,12 @@ After you complete the setup wizard, you will be shown the 'Connection' Screen.
 Connecting
 ==========
 
-.. image:: /_static/images/ex-toolbox/connect.png
+.. figure:: /_static/images/ex-toolbox/connect.png
    :alt: Connecting
    :scale: 50%
    :align: right
+
+   EX-Toolbox Connecting
 
 Other than the very first time you start |EX-TB|, when the app opens you will be shown the 'Connection' screen.
 
@@ -75,10 +77,12 @@ IP Address and Port
 CV Programming
 ==============
 
-.. image:: /_static/images/ex-toolbox/cv_programmer_menu.png
+.. figure:: /_static/images/ex-toolbox/cv_programmer_menu.png
    :alt: Connecting
    :scale: 25%
    :align: right
+
+   EX-Toolbox Connecting
 
 DCC Decoder CV programming is available:
 
@@ -90,10 +94,12 @@ By default |EX-TB| shows the Service Mode options.  To switch to Operation Mode,
 CV Programming (Service Mode)
 -----------------------------
 
-.. image:: /_static/images/ex-toolbox/cv_programmer.png
+.. figure:: /_static/images/ex-toolbox/cv_programmer.png
    :alt: Connecting
    :scale: 50%
    :align: right
+
+   EX-Toolbox Connecting
 
 Service Mode CV Programing is available form the 'CV Programming' screen, when 'Programming Track (ServiceMode)' is selected in the drop down list at the top of the screen.
 
@@ -129,10 +135,12 @@ See below for issuing DCC-EX commands.
 CV Programming (Operation Mode)
 -------------------------------
 
-.. image:: /_static/images/ex-toolbox/cv_programmer_ops_mode.png
+.. figure:: /_static/images/ex-toolbox/cv_programmer_ops_mode.png
    :alt: CV Programming (Operation Mode) 
    :scale: 50%
    :align: right
+
+   EX-Toolbox CV Programming (Operation Mode) 
 
 Operation Mode CV Programing is available form the 'CV Programming' screen, when 'Program on Main (Operation Mode)' is selected in the drop down list at the top of the screen.
 
@@ -180,10 +188,12 @@ Track Manager
 
 (Only available when connected to EX-CommandStation version 4.2.7 and above.)
 
-.. image:: /_static/images/ex-toolbox/track_manager.png
+.. figure:: /_static/images/ex-toolbox/track_manager.png
    :alt: Track Manager
    :scale: 50%
    :align: right
+
+   EX-Toolbox Track Manager
 
 To access the Track Manager either:
 
@@ -215,10 +225,12 @@ Note. Only one channel can be ``PROG``. If you select more that one, one will tu
 Servo motor testing and adjustment
 ==================================
 
-.. image:: /_static/images/ex-toolbox/servos.png
+.. figure:: /_static/images/ex-toolbox/servos.png
    :alt: Servos Screen
    :scale: 50%
    :align: right
+
+   EX-Toolbox Servos Screen
 
 THe servo motor test screen will allow you to test and fine tune the settings needed for configuring servo motors attached to the |EX-CS|.  This is intended to be temporary.  To permanently configure a servo motor you will need to record the values and include the in the configuration of your |EX-CS|.
 
@@ -243,10 +255,12 @@ On the Servo motor screen,
 Sensor testing
 ==============
 
-.. image:: /_static/images/ex-toolbox/servos.png
+.. figure:: /_static/images/ex-toolbox/servos.png
    :alt: Sensors Screen
    :scale: 50%
    :align: right
+
+   EX-Toolbox Sensors Screen
 
 The Sensor test screen will allow you to test any sensors configured in your |EX-CS|.
 
@@ -267,10 +281,12 @@ Current Meter
 
 (Only available when connected to EX-CommandStation version 4.2.20 and above.)
 
-.. image:: /_static/images/ex-toolbox/currents.png
+.. figure:: /_static/images/ex-toolbox/currents.png
    :alt: Current Meter Screen
    :scale: 50%
    :align: right
+
+   EX-Toolbox Current Meter Screen
 
 The Current Status screen will show you the current values for up to eight channels on the motor shield on your |EX-CS|.
 
@@ -300,16 +316,19 @@ Secondary Screens
 Power
 -----
 
-.. image:: /_static/images/ex-toolbox/power.png
+.. figure:: /_static/images/ex-toolbox/power.png
    :alt: Power Screen
    :scale: 50%
    :align: right
 
+   EX-Toolbox Power Screen
 
-.. image:: /_static/images/ex-toolbox/power_menu.png
+.. figure:: /_static/images/ex-toolbox/power_menu.png
    :alt: Power menu
    :scale: 50%
    :align: right
+
+   EX-Toolbox Power menu
 
 **Turning Track Power On**
 
@@ -365,7 +384,7 @@ Connecting via USB
 
 |EX-TB| can't normally connect to an |EX-CS| via USB, however it is possible to temporarily create a USB to IP connection on you PC using tools like *socat* or *SerialToIPGUI* (for windows).
 
-Using *socat* in linux:
+Using *socat* in Linux:
 
    ``socat TCP4-LISTEN:2560 /dev/ttyUSB0,b115200,raw,echo=0``
 
@@ -373,7 +392,7 @@ Using *socat* in linux:
 
    ``socat -d -d -d TCP4-LISTEN:2560 /dev/ttyUSB0,b115200,raw,echo=0``
 
-   Note: Change 'dev/ttyUSB0' to the appropriate USB port that the microprocessor is connected to.
+   Note: Change 'dev/ttyUSB0' to the appropriate USB port that the command station is connected to.
 
 Using *socat* in Microsoft Windows:
 
@@ -385,20 +404,33 @@ Using *socat* in Microsoft Windows:
 
 
    Note: Change S11 to the appropriate USB port.  Whatever 'COM' number appears in the Device Manager, subtract 1.  |BR|
-   i.e. 'COM12' in theDevice Manager becomes '/dev/ttyS11'
+   i.e. 'COM12' in the Windows Device Manager becomes '/dev/ttyS11'
 
 
 Using *SerialToIPGUI* (For Microsoft Windows) (Recommended):
 
    .. figure:: /_static/images/SerialToIPGUI/SerialToIPGUI.png
       :alt: SerialToIPGUI
+      :scale: 50%
       :class: responsive-image
 
       SerialToIPGUI
 
-   Enter the port of '2560' and click :guilabel:`Start`.
+   # start SerialToIPGUI
+   # Enter the correct COM port. (Whatever 'COM' number appears in the Device Manager)
+   # Enter the port of '2560' 
+   # Click :guilabel:`Start`.
 
-   Once started, open |EX-TB| on you Andorid device, enter the IP address of your PC and the port of '2560' then click :guilabel:`connect`.
+   Once started...
+   
+   # Open |EX-TB| on your Android device
+   # Enter the IP address of your PC 
+   # Enter the port of '2560' 
+   # Click :guilabel:`connect`.
+
+.. warning::
+
+   This 'trick' only supports a single connection at a time.  So it is important that JMRI (if you are using it), or the Arduino IDE serial monitor, or anything else that might be using the COM (USB) port are shut down first.
 
 Downloads
 ---------

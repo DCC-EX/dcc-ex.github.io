@@ -388,7 +388,7 @@ Using *socat* in Microsoft Windows:
    i.e. 'COM12' in theDevice Manager becomes '/dev/ttyS11'
 
 
-Using *SerialToIPGUI* (For Microsoft Windows):
+Using *SerialToIPGUI* (For Microsoft Windows) (Recommended):
 
    .. figure:: /_static/images/SerialToIPGUI/SerialToIPGUI.png
       :alt: SerialToIPGUI
@@ -396,9 +396,12 @@ Using *SerialToIPGUI* (For Microsoft Windows):
 
       SerialToIPGUI
 
-   Once started, open |EX-TB|, enter the IP address of your PC and the port of '2560' then click :guilabel:`connect`.
+   Enter the port of '2560' and click :guilabel:`Start`.
+
+   Once started, open |EX-TB| on you Andorid device, enter the IP address of your PC and the port of '2560' then click :guilabel:`connect`.
 
 Downloads
+---------
 
  * *SerialToIPGUI*  - https://sourceforge.net/projects/serialtoip/
  * *socat* for windows requires downloading the 'cgywin' and installing the optional 'socat' package when you install - https://www.cygwin.com/ 

@@ -119,7 +119,7 @@ For example:
 .. note:: 
   :class: note-float-right
 
-  The 'include-desctition.rst' will add a generic HTML meta *description* to the page.  You can alternately make use of one the the other include files,or create a new one, to have different descrption for the page.
+  The 'include-description.rst' will add a generic HTML meta *description* to the page.  You can alternately make use of one the the other include files,or create a new one, to have different description for the page.
 
 Product Icon
 ------------
@@ -131,7 +131,6 @@ For example:
 .. admonition:: Example
 
   ::
-
 
     .. include:: /include/include.rst
     .. include:: /include/include-l3.rst

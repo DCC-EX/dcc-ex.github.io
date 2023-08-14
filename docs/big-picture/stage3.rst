@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-description.rst
 ********************************************************
 Stage 3 - Turnouts/Points, Accessories, Sensors & Blocks
 ********************************************************

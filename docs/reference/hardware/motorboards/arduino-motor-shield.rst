@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+.. include:: /include/include-description.rst
 **************************
 Arduino Motor Shield R3
 **************************

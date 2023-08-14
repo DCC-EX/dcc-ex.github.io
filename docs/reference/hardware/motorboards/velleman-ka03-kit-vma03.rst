@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+.. include:: /include/include-description.rst
 ************************************
 Velleman KA03 (kit) VMA03 (soldered)
 ************************************

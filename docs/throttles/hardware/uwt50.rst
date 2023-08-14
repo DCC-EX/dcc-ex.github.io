@@ -1,7 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-.. include:: /include/throttles.rst
-   
+.. include:: /include/include-throttles.rst
 **********************************************
 TCS UWT-50 & UWT-100 WiFi Throttles (Physical)
 **********************************************

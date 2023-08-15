@@ -80,6 +80,7 @@ General
 -------
 
 - :doc:`WiThrottle Server, Web Server, DCC-EX Native Commands Explained <protocols>`
+- :doc:`connect_wifi_throttle_via_usb`
 
 DCC-EX (DCC-EX Native Commands)
 -------------------------------
@@ -109,6 +110,7 @@ USB Based Throttles
 -------------------------------
 
 - :doc:`EX-WebThrottle <software/ex-webthrottle>`
+- Also see: :doc:`connect_wifi_throttle_via_usb`
 
 JMRI Web Server Based Throttles
 -------------------------------
@@ -121,7 +123,6 @@ JMRI Web Server Based Throttles
 Reference
 =========
 
-- :doc:`connect_wifi_throttle_via_usb`
 - :doc:`Technical Reference for Throttle Developers <tech-reference>`
 
 

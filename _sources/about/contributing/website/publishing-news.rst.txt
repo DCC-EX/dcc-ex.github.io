@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+.. include:: /include/include-description.rst
 |EX-CONTRIBUTING-LOGO|
 
 ****************************
@@ -43,6 +44,7 @@ The content of the file should start like this:
 
   .. include:: /include/include.rst
   .. include:: /include/include-l2.rst
+  .. include:: /include/include-description.rst
 
   :blogpost: true
   :date: <date in format day month, year eg. 8 March, 2023>

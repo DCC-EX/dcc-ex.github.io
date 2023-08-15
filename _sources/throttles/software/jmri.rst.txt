@@ -1,10 +1,11 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-****
-JMRI
-****
+.. include:: /include/include-throttles.rst
+************************************
+JMRI (Java Model Railroad Interface)
+************************************
 
-|conductor|
+|conductor| |tinkerer| |engineer|
 
 .. sidebar:: 
 
@@ -12,7 +13,7 @@ JMRI
     :depth: 2
     :local:
 
-|JMRi| is quite a powerful suite of software applications, and can be as simple or as complex as you wish to make it.
+|JMRI| is quite a powerful suite of software applications, and can be as simple or as complex as you wish to make it.
 
 On this page, we will focus on utilising |JMRi| as a throttle only.
 
@@ -26,7 +27,7 @@ If you haven't done so already, follow the instructions outlined in the `JMRi he
 Create a new throttle
 =====================
 
-Once you have your connection to |JMRi| configured, you can launch a new throttle using either the DecoderPro or PanelPro applications.
+Once you have your connection to |JMRI| configured, you can launch a new throttle using either the DecoderPro or PanelPro applications.
 
 DecoderPro
 ----------

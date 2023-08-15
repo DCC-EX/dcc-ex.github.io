@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-throttles.rst
 |EX-THROTTLES-LOGO|
 
 ***********************
@@ -120,6 +121,7 @@ JMRI Web Server Based Throttles
 Reference
 =========
 
+- :doc:`connect_wifi_throttle_via_usb`
 - :doc:`Technical Reference for Throttle Developers <tech-reference>`
 
 
@@ -130,4 +132,6 @@ Reference
     protocols
     software/index
     hardware/index
+    connect_wifi_throttle_via_usb
     tech-reference
+

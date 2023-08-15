@@ -1,9 +1,9 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
 .. include:: /include/include-ex-cs.rst
 .. meta::
    :keywords: EX-CommandStation Command Station Assembly
 
-.. include:: /include/include.rst
-.. include:: /include/include-l2.rst
 |EX-CS-LOGO|
 
 ****************

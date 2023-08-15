@@ -2,7 +2,7 @@
 .. include:: /include/include-l2.rst
 .. include:: /include/include-ex-cs.rst
 .. meta::
-   :keywords: EX-CommandStation Command Station Testing
+   :keywords: Testing
 
 |EX-CS-LOGO|
 

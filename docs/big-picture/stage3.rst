@@ -1,6 +1,8 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
-.. include:: /include/include-description.rst
+.. include:: /include/include-ex-bp.rst
+|EX-BP-LOGO|
+
 ********************************************************
 Stage 3 - Turnouts/Points, Accessories, Sensors & Blocks
 ********************************************************

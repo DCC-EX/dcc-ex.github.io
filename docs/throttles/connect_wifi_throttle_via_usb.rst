@@ -78,11 +78,11 @@ Downloads
 Troubleshooting (Windows)
 =========================
 
-In Microsoft Windows, if see a "command not found" error, Here is what you need to do to fix it:
+In Microsoft Windows, if you see a "command not found" error, Here is what you need to do to fix it:
 
 * Right click on "My Computer" -> Properties -> Advanced -> Environment Variables
 * Add a new environment variable, called ``CYGWIN_HOME`` and set its value to ``C:\cygwin``
 * Edit the PATH environment variable and add ``C:\cygwin\bin`` to it (usually separated by a ';').
 * Just click okay, exit any command prompts or bash shells (over cygwin) you may have open, and open it again - it'll work!
 
-Note that if you installed cgywin to a folder *other than "C:\cgywin"* (e.g. c:\cgywin64), use that folder name instead in the change above.
+Note that if you installed cgywin to a folder *other than "C:\\cgywin"* (e.g. c:\\cgywin64), use that folder name instead in the change above.

@@ -15,14 +15,16 @@ WiThrottle Server, Web Server, DCC-EX Native Protocol Explained
     :depth: 2
     :local:
 
-There are several competing standards and ways to connect external software such as Throttles to the |EX-CS| or to JMRI. These standards are called "protocols" and the definition and instructions for how to implement them is called an API (Application Programming Interface). There is the |WiThrottle Protocol| API using a |WiThrottle Server|, the JMRI API using a Web Server, and the DCC-EX API using |DCC-EX Native Commands|. You need to know that the language your throttle uses will work with how you want to connect to your Command Station.
+There are several competing standards and ways to connect external software such as Throttles (Controllers) to the |EX-CS| directly or indirectly through |JMRI|. These standards are called "protocols" and the definition and instructions for how to implement them is called an API (Application Programming Interface). There is the |WiThrottle Protocol| API using a |WiThrottle Server|, the JMRI API using a Web Server, and the DCC-EX API using |DCC-EX Native Commands|. You need to know that the language your throttle uses will work with how you want to connect to your Command Station.
 
 The DCC-EX Native Protocol
 ==========================
 
 The first way to connect to |EX-CS| is to use our |DCC-EX Native Protocol|. This is the set of commands that tell the Command Station how to control your trains. |EX-CS| understands simple command surrounded by brackets like this: "<1 MAIN>". That command turns your main track power on.
 
-Since this is just sending characters back and forth across a serial connection, anything that can connect to an Arduino through a USB cable or one of the other serial ports using WiFi of Bluetooth can send |DCC-EX Native Commands| to the Command Station. This method is fast, direct, and can take advantage of special features that exist only in |EX-CS|. You can even connect using the Arduino Serial Monitor or connect to our WiFi with a terminal program like PuTTY and type |DCC-EX Native Commands| manually. Our |EX-WT|, |JMRI| and CABs like DCCpp CAB and DigiTrainsPro send commands in DCC-EX format.
+Since this is just sending characters back and forth across a serial connection, anything that can connect to an Arduino through a USB cable or one of the other serial ports using WiFi of Bluetooth can send |DCC-EX Native Commands| to the Command Station. This method is fast, direct, and can take advantage of special features that exist only in |EX-CS|. You can even connect using the Arduino Serial Monitor or connect to our WiFi with a terminal program like PuTTY and type |DCC-EX Native Commands| manually. Our |EX-WT|, |JMRI| and throttles (controllers) like |Engine Driver|, *DCCpp CAB* and *DigiTrainsPro* send commands in DCC-EX Native format.  
+
+Refer to :ref:`this list <throttles/index:dcc-ex (dcc-ex native commands)>` for the Throttles (Controllers) that are known to support the DCC-EX Native Protocol.
 
 The WiThrottle Server
 =====================
@@ -31,10 +33,14 @@ The |WiThrottle Protocol| is the proprietary protocol developed by Brett Hoffman
 
 |EX-CS| allows you to use the "|WiThrottle server|" built into |JMRI| and other software and have them connect to your Command Station via a USB or serial connection, but |EX-CS| also implements a |WiThrottle Protocol| server in our Command Station software itself. A "server" is just a fancy way of saying that there is software running inside JMRI and |EX-CS| that can understand WiThrottle commands and "serve" or "service" clients that want to connect and send WiThrottle commands. The ability of |EX-CS| to natively "speak" WiThrottle means you can directly connect a |WiThrottle protocol| compatible Throttle (aka CAB) via Wifi or Bluetooth to the Command Station and run trains. But you can still connect to JMRI WiThrottle instead and connect JMRI to |EX-CS| with a USB cable. So |EX-CS| is bi-lingual, we speak DCC-EX AND |WiThrottle Protocol|! Apps like |Engine Driver| and |WiThrottle| for iOS send commands in the WiThrottle format.
 
+Refer to :ref:`this list <throttles/index:wiThrottle Protocol Based Throttles>` for the Throttles (Controllers) that are known to support the wiThrottle Protocol.
+
 The JMRI WEB Server
 ====================
 
 |JMRI| has two kinds of servers you can connect to built into the |JMRI| software. We already mentioned the |WiThrottle server|, but |JMRI| also has a WEB Server. Devices can connect to |JMRI| and send commands like it would to a WEB page. This is yet another protocol and is supported by throttles like DigiTrainsPro. When connecting using a throttle that uses the WEB Server, you connect your throttle to that via WiFi, and then connect to |EX-CS| with a USB or Serial connection.
+
+Refer to :ref:`this list <throttles/index:JMRI Web Server Based Throttles>` for the Throttles (Controllers) that are known to support the JMRI Web Server Protocol.
 
 A Note about WiFi Dropped Connections
 =======================================

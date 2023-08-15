@@ -973,6 +973,44 @@ Request the Routes & Automations control list in wiThrottle Protocol format.
 
 ----
 
+EX-FastClock
+------------
+
+These commands require the optional |EX-FC| hardware to the installed along with the |EX-CS| to function.
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
+|hr-dashed|
+
+``<JC minutes speed>`` - Start the fast clock with a specified time
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| **minutes:** = time in minutes since midnight. i.e. (hours * 60) + mins |BR|
+  |_| **speed:** = the perceived speed factor
+  
+  *Response:* ``<jC minutes>`` |BR|
+  |_| where |BR|
+  |_| **minutes:** = time in minutes since midnight. i.e. (hours * 60) + mins |BR|
+
+  *Example:*
+
+    ``<JC 375 4>`` Will set the fast clock time as 6:15am with the percieved speed factor of 1 minutes every 15 seconds (4 times actual).
+
+|hr-dashed|
+
+``<JC>`` - Request the fast clock current time
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Response:* ``<jC minutes>`` |BR|
+  |_| where |BR|
+  |_| **minutes:** = time in minutes since midnight. i.e. (hours * 60) + mins |BR|
+
+----
+
 Writing Configuration Variable (CVs)
 ====================================
 

@@ -1,10 +1,11 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-throttles.rst
 **********************************************
 TCS UWT-50 & UWT-100 WiFi Throttles (Physical)
 **********************************************
 
-|conductor|
+|conductor| |tinkerer| |engineer|
 
 Train Control Systems (TCS) makes a nice line of physical tactile hardware based controllers. 
 Since they support the |WiThrottle protocol|, they work seemlessly with the |EX-CS|. 

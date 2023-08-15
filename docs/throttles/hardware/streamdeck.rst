@@ -1,10 +1,11 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-throttles.rst
 ******************
 Elgato Stream Deck
 ******************
 
-|tinkerer|
+|tinkerer| |engineer|
 
 .. figure:: /_static/images/throttles/streamdeck1.jpg
    :alt: Stream Deck Unit

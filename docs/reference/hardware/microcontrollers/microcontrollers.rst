@@ -1,6 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
-  
+.. include:: /include/include-description.rst
 *****************************************************
 Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD
 *****************************************************

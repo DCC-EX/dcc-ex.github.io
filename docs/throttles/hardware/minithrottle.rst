@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-throttles.rst
 **************************
 miniThrottle (Physical)
 **************************

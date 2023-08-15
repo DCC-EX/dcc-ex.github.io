@@ -1,7 +1,7 @@
 
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
-
+.. include:: /include/include-description.rst
 .. meta::
   :description: Articles and videos created by people in and outside the |DCC-EX| project which you may fine useful or interesting
 

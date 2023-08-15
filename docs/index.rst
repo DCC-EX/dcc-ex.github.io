@@ -1,5 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l0.rst
+.. include:: /include/include-description.rst
+
 |donate-button|
 
 ************************
@@ -106,9 +108,9 @@ DCC-EX Model Railroading
    :maxdepth: 4
    :caption: Support & Info
 
+   throttles/index
    support/index
    big-picture/index
-   throttles/index
 
 .. toctree::
    :hidden:

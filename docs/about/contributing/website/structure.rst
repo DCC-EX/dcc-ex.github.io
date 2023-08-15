@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+.. include:: /include/include-description.rst
 |EX-CONTRIBUTING-LOGO|
 
 *************************
@@ -112,12 +113,13 @@ For example:
 
     .. include:: /include/include.rst
     .. include:: /include/include-l2.rst
+    .. include:: /include/include-description.rst
 
 
 .. note:: 
   :class: note-float-right
 
-  The expansion must be followed by a blank line.
+  The 'include-description.rst' will add a generic HTML meta *description* to the page.  You can alternately make use of one the the other include files,or create a new one, to have different description for the page.
 
 Product Icon
 ------------
@@ -130,9 +132,9 @@ For example:
 
   ::
 
-
     .. include:: /include/include.rst
     .. include:: /include/include-l3.rst
+    .. include:: /include/include-description.rst
     |EX-CS-LOGO|
 
     ***************************************

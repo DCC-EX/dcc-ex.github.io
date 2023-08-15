@@ -1,6 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
-
+.. include:: /include/include-ex-tb.rst
 |EX-TB-LOGO|
 
 *********************************
@@ -417,16 +417,16 @@ Using *SerialToIPGUI* (For Microsoft Windows) (Recommended):
       SerialToIPGUI
 
    * start SerialToIPGUI
-   * Enter the correct COM port. (Whatever 'COM' number appears in the Device Manager)
+   * Select the correct COM port for the command station
    * Enter the port of '2560' 
-   * Click :guilabel:`Start`.
+   * Click :guilabel:`Start`
 
    Once started...
    
    * Open |EX-TB| on your Android device
-   * Enter the IP address of your PC 
+   * Enter the IP address of your PC (The one running socat or SerialToIPGUI)
    * Enter the port of '2560' 
-   * Click :guilabel:`connect`.
+   * Click :guilabel:`connect`
 
 .. warning::
 

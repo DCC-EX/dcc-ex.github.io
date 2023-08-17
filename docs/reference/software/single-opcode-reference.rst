@@ -19,11 +19,11 @@ For information on |DCC-EX| native commands, refer to the :doc:`/reference/softw
 
   Character, Usage
   /, |EX-R| interactive commands
-  -, Remove from reminder table
+  \-, Remove from reminder table
   =, |TM| configuration
   !, Emergency stop
   #, Request number of supported cabs/locos
-  +, WiFi AT commands
+  \+, WiFi AT commands
   0, Track power off
   1, Track power on
   a, DCC accessory control

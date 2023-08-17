@@ -55,7 +55,7 @@ For information on |DCC-EX| native commands, refer to the :doc:`/reference/softw
   n,
   N,
   o,
-  O,
+  O, Output broadcast
   p, Broadcast power state
   P, Write DCC packet
   q, Sensor deactivated
@@ -75,6 +75,6 @@ For information on |DCC-EX| native commands, refer to the :doc:`/reference/softw
   x,
   X, Invalid command
   y,
-  Y,
+  Y, Output broadcast
   z,
   Z, Output configuration/control

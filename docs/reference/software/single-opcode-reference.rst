@@ -58,11 +58,11 @@ For information on |DCC-EX| native commands, refer to the :doc:`/reference/softw
   N,
   o,
   O,
-  p,
+  p, Broadcast power state
   P, Write DCC packet
   q, Sensor deactivated
   Q, Sensor activated
-  r,
+  r, Broadcast address read on programming track
   R, Read CVs
   s, Display status
   S, Sensor configuration

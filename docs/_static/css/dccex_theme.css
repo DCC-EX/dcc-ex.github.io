@@ -59,7 +59,7 @@ html[data-theme='dark'] h4, .h4 {
 }
 html[data-theme='dark'] h4 a, 
 html[data-theme='dark'] h4 a:visited {
-  color: #00a3b9ff !important;
+  color: #ffffff !important;
 }
 h5, .h5 {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
@@ -132,10 +132,6 @@ html[data-theme='dark'] .rst-content table.docutils:not(.field-list) tr:nth-chil
 
 .caption-text {
   font-size: small !important;
-}
-
-.rst-content code {
-  font-size: 90% !important;
 }
 
 table.intro-table {
@@ -312,6 +308,15 @@ html[data-theme='dark'] .sd-card {
 
 html[data-theme='dark'] .rst-content .guilabel {
   color: black;
+}
+
+.hr-dashed {
+  margin: -10px 0px -10px 0px; 
+  border-top: 1px dashed #d2dfe3;
+}
+
+html[data-theme='dark'] .hr-dashed {
+  border-top: 1px dashed #114759;
 }
 
 /* *************************************** */
@@ -605,6 +610,57 @@ nav#on-this-page {
   margin-bottom: 10px !important;
 }
 
+
+/* in-this-section level 3 bullet points */
+nav.in-this-section ul.simple li ul li p {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  font-size: 80% !important;
+  line-height: 120% !important;
+  margin-bottom: 0px !important;
+}
+
+/* in-this-section level 3 bullet points */
+nav.in-this-section ul.simple li ul li {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  line-height: 120% !important;
+  margin-bottom: 0px !important;
+}
+
+/* in-this-section level 2 bullet points */
+nav.in-this-section ul.simple li p {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  font-size: 80% !important;
+  line-height: 120% !important;
+  margin-bottom: 0px !important;
+}
+
+/* in-this-section level 2 bullet points */
+nav.in-this-section ul.simple li {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  line-height: 120% !important;
+  margin-bottom: 0px !important;
+}
+
+nav.in-this-section ul.simple {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  margin-bottom: 0px !important;
+}
+
+nav.in-this-section p {
+  font-family: Roboto,Helvetica,Arial,sans-serif !important;
+  font-style: italic;
+  font-size: 90%;
+  margin-top: 0px !important;
+  margin-bottom: 6px !important;
+  margin-left: -30px;
+}
+
+nav.in-this-section {
+  margin-bottom: 20px !important;
+  margin-left: 30px;
+}
+
+
 /* sidebars */
 .rst-content .sidebar {
   padding: 12px 24px 12px 24px !important;
@@ -679,13 +735,21 @@ img.sd-card-img-top {
 
 .sd-card-header {
   margin-bottom: -10px !important;
-  margin-top: 5px !important;
+  margin-top: 10px !important;
   padding-top: 0px !important;
   padding-bottom: 0px !important;
 }
 
+.sd-card-header p {
+  line-height: 18px !important;
+}
+
 html[data-theme='dark'] .sd-card-header {
   border-bottom: 1px solid rgb(255 253 253 / 13%);
+}
+
+.sd-card-body ul li p {
+  margin-bottom: 5px !important;
 }
 
 .sd-card-text {
@@ -693,8 +757,12 @@ html[data-theme='dark'] .sd-card-header {
 }
 
 /* code */
+.rst-content code {
+  font-size: 100% !important;
+}
 .rst-content code.literal, .rst-content tt.literal {
   color: #ba2121 !important;
+  font-size: 100% important;
 }
 html[data-theme='dark'] .rst-content code.literal, .rst-content tt.literal {
   color: #ff6000 !important;
@@ -728,6 +796,20 @@ html[data-theme='dark'] .rst-content code.literal, .rst-content tt.literal {
 
 .dcc-ex-text-size-60pct {
   font-size: 80% !important;
+}
+
+.new-in-v5 {
+  font-family: Audiowide,Helvetica,Arial,sans-serif;  
+  font-weight: bold; 
+  font-style: italic; 
+  color: #00a3b9; 
+  font-size: 110%; 
+}
+
+html[data-theme='dark'] .new-in-v5 {
+  font-weight: normal; 
+  color: #ffffff; 
+  text-shadow: 0px 0px 10px #00a3b9;
 }
 
 /* *************************************** */

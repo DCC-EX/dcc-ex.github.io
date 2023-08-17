@@ -1,6 +1,6 @@
-.. include:: /include/include-ex-cs.rst
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-throttles.rst
 |EX-CS-LOGO|
    
 *******************************************
@@ -87,7 +87,7 @@ For those who want the power of |JMRI| to operate a complex layout, you would in
 Command Language (API)
 ======================
 
-There are at least 3 ways for a throttle to 'talk' to a Command Station; the DCC++ command language, |WiThrottle Protocol| command language, and via the |JMRI| Web Server command language. For an explanation of what these terms mean, and what that means to you, please see :doc:`Protocols: WiThrottle, DCC++, and Web Servers Explained </throttles/protocols>`. |EX-CS| natively understands our own DCC++ API and the |WiThrottle Protocol| API, and will work with a direct connection to these throttles. However, you can connect throttles to the computer running |JMRI|, and use |JMRI| as the middleware to send commands to |EX-CS|. |JMRI| uses DCC++ commands when speaking to the Command Station.
+There are at least 3 ways for a throttle to 'talk' to a Command Station; the |DCC-EX Native Commands|, |WiThrottle Protocol| command language, and via the |JMRI| Web Server command language. For an explanation of what these terms mean, and what that means to you, please see :doc:`Protocols: WiThrottle, DCC-EX Native Commands, and Web Servers Explained </throttles/protocols>`. |EX-CS| natively understands our own |DCC-EX Native Commands| and the |WiThrottle Protocol| API, and will work with a direct connection to these throttles. However, you can connect throttles to the computer running |JMRI|, and use |JMRI| as the middleware to send commands to |EX-CS|. |JMRI| uses DCC++ commands when speaking to the Command Station.
 
 Compatible Throttles (Controllers)
 ==================================
@@ -129,10 +129,10 @@ The second method is to use |JMRI| and connect |Engine Driver| (ED) to the compu
 See :doc:`Engine Driver Page </throttles/software/engine-driver>`
 
 
-DCCpp CAB (Android | DCC++ | WiFi, Bluetooth)
-----------------------------------------------
+DCCpp CAB (Android | DCC-EX Native Commands | WiFi, Bluetooth)
+--------------------------------------------------------------
 
-DCCpp CAB is a throttle that natively speaks the <DCC++> command language (API). It can connect via WiFi or Bluetooth! If you don't need software like |JMRI| running on a computer, DCCpp CAB lets you connect directly to the |EX-CS|.
+DCCpp CAB is a throttle that natively speaks the |DCC-EX Native Commands|. It can connect via WiFi or Bluetooth! If you don't need software like |JMRI| running on a computer, DCCpp CAB lets you connect directly to the |EX-CS|.
 
 See :doc:`DCCpp CAB Page </throttles/software/dccpp-cab>`
 
@@ -146,21 +146,21 @@ See :doc:`WiThrottle Page </throttles/software/withrottle>`
 Locontrol (iOS | JMRI Web Server, DCC++ | WiFi)
 ------------------------------------------------
 
-Locontrol is a beautiful and functional throttle that uses the |JMRI| Web Server to connect. Soon it will be able to connect directly to the |EX-CS| by using the <DCC++> Command set.
+Locontrol is a beautiful and functional throttle that uses the |JMRI| Web Server to connect. Soon it will be able to connect directly to the |EX-CS| by using the |DCC-EX Native Commands| set.
 
 See :doc:`Locontrol Page </throttles/software/locontrol>`
 
-DigiTrainsPro (Android, iOS, Windows | WiThrottle, DCC++ | WiFi)
------------------------------------------------------------------
+DigiTrainsPro (Android, iOS, Windows | WiThrottle, DCC-EX Native Commands | WiFi)
+---------------------------------------------------------------------------------
 
 This is the only throttle with a Windows App. It also has a beautiful user interface. Soon it will be able to speak directly to |EX-CS| using our command language.
 
 See :doc:`DigiTrainsPro Page </throttles/software/digitrainspro>`
 
-SRCPClient (iOS | WiThrottle, DCC++ | WiFi)
---------------------------------------------
+SRCPClient (iOS | WiThrottle, DCC-EX Native Commands | WiFi)
+------------------------------------------------------------
 
-Operate up to 3 locos from your iOS device. It supports both |WiThrottle Protocol| AND the DCC++ APIs.
+Operate up to 3 locos from your iOS device. It supports both |WiThrottle Protocol| AND the DCC-EX Native Commands.
 
 See :doc:`SRCPClient Page </throttles/software/srcpclient>`
 

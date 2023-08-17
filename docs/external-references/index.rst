@@ -1,5 +1,9 @@
+
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-description.rst
+.. meta::
+  :description: Articles and videos created by people in and outside the |DCC-EX| project which you may fine useful or interesting
 
 *******************
 Articles and Videos
@@ -19,13 +23,18 @@ Videos
 Jimmy from 'DIY and Digital Railroad'
 -------------------------------------
 
-* 31 August 2023 - `Cheap and Amazing! DCC-EX 2 Years Later <https://www.youtube.com/watch?v=5WXPA0uVFXw>`_
+* 31 July 2023 - `Cheap and Amazing! DCC-EX 2 Years Later <https://www.youtube.com/watch?v=5WXPA0uVFXw>`_
 * ~ 2021 - `DCC++EX: A Cheap DIY DCC System?!?! This is a Model Railroad Game Changer <https://www.youtube.com/watch?v=DVDNi9U_K68&t=0s>`_
 
 Little Wicket Railway
 ---------------------
 
 * ~ March 2023  - `DCC EX - Amazing Digital Controller for Under £50 <https://youtu.be/mYjLO4yM60E>`_
+
+Toms Trains and Things
+----------------------
+
+* 8 August 2023 - `Run DC & DCC From Your Cell Phone With DCC-EX V5.0 <https://www.youtube.com/watch?v=jboDYsF3EoE>`_
 
 Kevin C Smith
 -------------

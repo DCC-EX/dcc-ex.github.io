@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-ex-r.rst
 |EX-R-LOGO|
 
 *******************
@@ -137,7 +138,7 @@ Make your own EX-RAIL macro or command
 
 One of the cunning features of EX-RAIL is enabling users to define macros, or what is effectively your very own EX-RAIL command.
 
-To do this, you're actually making use of some C++ code in addition to the clever programming in DCC++ EX.
+To do this, you're actually making use of some C++ code in addition to the clever programming in DCC-EX.
 
 (Yes, we just called ourselves cunning and clever. Our talent is superseded only by our modesty ;) )
 

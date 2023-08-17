@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-description.rst
 ***********************
 Programming Locos (CVs)
 ***********************
@@ -14,6 +15,12 @@ Requirements
 * A motor shield or motor driver with current sense capability
 
 .. NOTE:: The default EX-CommandStation with a dual output Arduino Motor shield has everything you need, a main track output, a programming track output, and a configuration that handles current sense for programming a loco on output B and current sense for overlimit detection on output A.
+
+There are a number of ways you can program decoders with the |EX-CS| including:
+
+* `JMRI DecoderPro`_
+* `Programming CVs with EX-Toolbox app`_
+* `Programming CVs with Engine Driver app`_ 
 
 JMRI DecoderPro
 ===============
@@ -46,3 +53,13 @@ DCC-EX & JMRI DecoderPro Getting Started Guide
 ----------------------------------------------
 
 To assist you in setting up a DCC-EX & JMRI DecoderPro Programming Station please download and follow the :ref:`reference/downloads/documents:comprehensive dcc-ex & jmri decoderpro getting started guide pdf`.
+
+Programming CVs with EX-Toolbox app
+===================================
+
+Refer to the :ref:`EX-Toolbox page <ex-toolbox/using:cv programming>` for information on how to program CVs with EX-Toolbox app.
+
+Programming CVs with Engine Driver app
+======================================
+
+.. todo:: Programming CVs with Engine Driver

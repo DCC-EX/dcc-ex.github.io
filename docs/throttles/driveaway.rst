@@ -2,6 +2,7 @@
 
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-throttles.rst
 |EX-THROTTLES-LOGO|
 
 **********************************
@@ -42,7 +43,7 @@ This Standalone WiFi configuration works Without the use of any additional PC, M
 How it works
 =============
 
-|EX-CS| version 3.1 and above has a new software implementation logic that in a sense replaces a hardwired DPDT switch and combines multiple DCC++ commands in a sequence to perform the magic dubbed "DriveAway(tm)". It triggers a <R> read the CV1 Short or CV 17 & 18 Long address and CV8 Mfr ID, and CV29 Setup and then returns and automatically loads the Loco# into the WiFi throttle. 
+|EX-CS| version 3.1 and above has a new software implementation logic that in a sense replaces a hardwired DPDT switch and combines multiple |DCC-EX Native Commands| in a sequence to perform the magic dubbed "DriveAway(tm)". It triggers a <R> read the CV1 Short or CV 17 & 18 Long address and CV8 Mfr ID, and CV29 Setup and then returns and automatically loads the Loco# into the WiFi throttle. 
 The Command Station then automatically sets ``<1 JOIN>`` command to switch the PROG track to MAIN DCC signal and allows your |Engine Driver| App to drive it away onto the main line tracks.
 
 Logic Programming Protection;

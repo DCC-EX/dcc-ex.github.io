@@ -1,5 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l0.rst
+.. include:: /include/include-description.rst
+
 |donate-button|
 
 ************************
@@ -58,7 +60,7 @@ DCC-EX Model Railroading
       :excerpts:
       :expand: Continue reading...
 
-    Read the full DCC-EX News feed `here <news.html>`_. |BR| :dcc-ex-text-size-80pct:`Subscribe to the RSS/Atom feed using "https://dcc-ex.com/news/atom.xml"`.
+    Read the full DCC-EX News feed `here <news.html>`_. :dcc-ex-text-size-80pct:`RSS/Atom feed - Subscribe with "https://dcc-ex.com/news/atom.xml"`.
 
   .. grid-item-card:: 
     :columns: 12
@@ -106,9 +108,9 @@ DCC-EX Model Railroading
    :maxdepth: 4
    :caption: Support & Info
 
+   throttles/index
    support/index
    big-picture/index
-   throttles/index
 
 .. toctree::
    :hidden:

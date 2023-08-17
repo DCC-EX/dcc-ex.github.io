@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+.. include:: /include/include-description.rst
 ************************
 L298N Motor Driver Setup
 ************************

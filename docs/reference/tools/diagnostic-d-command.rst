@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-description.rst
 |EX-REF-LOGO|
 
 ****************************
@@ -18,7 +19,7 @@ These commands either enable diagnostics or allow settings to be changed. There 
 
 **The** ``<D>`` **commands are intended for diagnostics only which means that their behaviour can change from one release to another without warning**
 
-These commands can be entered directly via the USB serial console or through a Wifi connection to the command station with a tool such as Telnet or Putty. |JMRI| includes the DCC++ traffic monitor which lets you insert DCC++ serial commands as well. (links required)
+These commands can be entered directly via the USB serial console or through a Wifi connection to the command station with a tool such as Telnet or Putty. |JMRI| includes the DCC++ traffic monitor which lets you insert serial |DCC-EX Native Commands| as well. (links required)
 
 Speed Step Configuration
 ========================

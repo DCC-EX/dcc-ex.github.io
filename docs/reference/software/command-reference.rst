@@ -1,10 +1,11 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-description.rst
 |EX-REF-LOGO|
 
-************************
-DCC-EX Command Reference
-************************
+*******************************
+DCC-EX Native Command Reference
+*******************************
 
 |engineer|
 
@@ -109,7 +110,7 @@ Breakdown for this example ``<t 1 03 20 1>`` is:
 .. code-block::
 
    RETURNS: "<T 1 20 1>" if the command was successful, meaning :
-   "T" = (upper case T) DCC++ EX Cab command was sent from the Command Station
+   "T" = (upper case T) DCC-EX Cab command was sent from the Command Station
    "1" = register 1 was changed
    "20" = set to speed 20
    "1" = forward direction

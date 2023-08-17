@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-description.rst
 |donate-button|
 
 *************************
@@ -21,7 +22,7 @@ railroad Command Station using an Arduino Uno and a Motor Driver.
 
 You can seek us out here:
 
-* `DCC++ EX Discord Server <https://discord.gg/y2sB4Fp>`_
+* `DCC-EX Discord Server <https://discord.gg/y2sB4Fp>`_
 * `TrainBoard DCC++ Forum <https://www.trainboard.com/highball/index.php?forums/dcc.177/>`_
 
 *Names below in parentheses are screen names on TrainBoard and Discord*

@@ -1,6 +1,5 @@
 .. meta::
-  :description: DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout.
-  :keywords: DCC DCC++ EX DCC++EX DCC-EX
+  :keywords: DCC-EX DCC DCC++ EX DCC++EX 
 ..
 .. |DCC-EX| raw:: html
 
@@ -83,7 +82,7 @@
 ..
 .. |NEW-IN-V5| raw:: html
 
-  <span style="font-family: Audiowide,Helvetica,Arial,sans-serif;  font-weight: bold; font-style: italic; color: #00a3b9; font-size: 110%;">New in version 5 </span>
+  <span class="new-in-v5">New in version 5 </span>
 ..
 .. |DEPRECATED| raw:: html
    
@@ -251,6 +250,18 @@
 .. |VSC| replace::
 
     :doc:`Visual Studio Code (VSC) </reference/glossary>`
+..
+.. |DCC-EX Native Commands| replace::
+   
+    :doc:`DCC-EX Native Commands </reference/glossary>`
+..
+.. |DCC-EX Native Protocol| replace::
+   
+    :doc:`DCC-EX Native Protocol </reference/glossary>`
+..
+.. |hr-dashed| raw:: html
+
+   <hr class="hr-dashed" />
 ..
 .. ...............................................
 ..

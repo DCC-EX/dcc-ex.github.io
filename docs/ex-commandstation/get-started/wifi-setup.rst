@@ -1,9 +1,9 @@
-.. include:: /include/include-ex-cs.rst
-.. meta::
-   :keywords: EX-CommandStation Command Station WiFi setup
-
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-ex-cs.rst
+.. meta::
+   :keywords: WiFi setup
+
 |EX-CS-LOGO|
 
 ***********
@@ -21,6 +21,12 @@ Adding WiFi
 This page is specifically intended for a |conductor-text| who intends to install *just* the recommended hardware. If you are a |tinkerer-text| or |engineer-text| or want to install some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`/ex-commandstation/advanced-setup/supported-connections/wifi-setup` page for the full list of WiFi options.
 
 ----
+
+.. warning:: 
+
+    Please be aware that the Espressif firmware provided with your device **may not immediately work** with |EX-CS| as there are many different versions which behave quite differently.
+
+    We highly recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 available on our :doc:`/download/esp8266` download page prior to reaching out for support from the team.
 
 The purpose of adding WiFi to your |EX-CS| is allow connection up to 5 WiFi throttles (e.g. phones) DIRECTLY to it, eliminating the need for a computer and another software controller. 
 

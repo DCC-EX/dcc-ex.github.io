@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-throttles.rst
 |EX-THROTTLES-LOGO|
 
 ***********************
@@ -16,7 +17,7 @@ This page contains lists of compatible Throttles (Controllers) that currently su
 
 
 * :ref:`By Client Technology <throttles/index:throttles - by client technology>`  (e.g. Android, iOS, Web Browser, PC)
-* :ref:`By Communication Technology <throttles/index:throttles - by communication technology>` (e.g. Native DCC++ commands, wiThrottle Protocol)
+* :ref:`By Communication Technology <throttles/index:throttles - by communication technology>` (e.g. |DCC-EX Native Commands|, wiThrottle Protocol)
 
 |conductor|
 
@@ -65,6 +66,7 @@ Dedicated Hardware
 Personal Computers
 ------------------
 
+- :doc:`EX-WebThrottle <software/ex-webthrottle>`
 - :doc:`JMRI (Windows, iOS, Linux) <software/jmri>`
 
 ----
@@ -77,12 +79,14 @@ Throttles - By Communication technology
 General
 -------
 
-- :doc:`WiThrottle Server, Web Server, DCC++ API Explained <protocols>`
+- :doc:`WiThrottle Server, Web Server, DCC-EX Native Commands Explained <protocols>`
+- :doc:`connect_wifi_throttle_via_usb`
 
-DCC-EX (Native <DCC++> commands>)
----------------------------------
+DCC-EX (DCC-EX Native Commands)
+-------------------------------
 
-- :doc:`EX-Web-Throttle <software/ex-webthrottle>`
+- :doc:`EX-WebThrottle <software/ex-webthrottle>`
+- :doc:`Engine Driver (Android)<software/engine-driver>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`miniThrottle (Physical) <hardware/minithrottle>`
 - :doc:`JMRI <software/jmri>`
@@ -101,6 +105,12 @@ wiThrottle Protocol Based Throttles
 - :doc:`WiTcontroller (Physical) <hardware/witcontroller>`
 - :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
 - :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
+
+USB Based Throttles
+-------------------------------
+
+- :doc:`EX-WebThrottle <software/ex-webthrottle>`
+- Also see: :doc:`connect_wifi_throttle_via_usb`
 
 JMRI Web Server Based Throttles
 -------------------------------
@@ -123,4 +133,6 @@ Reference
     protocols
     software/index
     hardware/index
+    connect_wifi_throttle_via_usb
     tech-reference
+

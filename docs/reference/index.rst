@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-description.rst
 |EX-REF-LOGO|
 
 *********
@@ -33,7 +34,8 @@ Hardware, Software, tools
     downloads/index
     hardware/index
     software/index
-    software/index-dcpp-commands
+    software/command-summary-consolidated
+    /ex-rail/EX-RAIL-command-reference
     developers/index
     accessories/index
     tools/index

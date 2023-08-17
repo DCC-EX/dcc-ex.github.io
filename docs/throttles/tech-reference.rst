@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-throttles.rst
 |EX-THROTTLES-LOGO|
 
 ********************************************
@@ -14,14 +15,14 @@ Technical Reference for Throttle Developers
     :depth: 3
     :local:
 
-This page is intended to capture relevant information to assist those who develop throttles compatible with |EX-CS| using the Native (DCC++) protocol, not the WiThrottle protocol.
+This page is intended to capture relevant information to assist those who develop throttles compatible with |EX-CS| using the |DCC-EX Native Protocol|, not the WiThrottle protocol.
 
 This page should be read in conjunction with the :doc:`/reference/developers/api` in order to understand how to send and parse |DCC-EX| API commands correctly, and ignore any irrelevant commands.
 
 Considerations for throttle developers
 ======================================
 
-For anyone developing a throttle or controller application, these considerations must be taken into account:
+For anyone developing a throttle or controller application, these considerations should be taken into account:
 
 - Refer to the :doc:`/reference/developers/api`
 - Refer to the :doc:`/reference/software/command-summary-consolidated`
@@ -35,35 +36,30 @@ Responding to appropriate information
 
 In addition to understanding the specific throttle commands details on this page, throttles/controllers also must understand and respond appropriately to **broadcasts** sent from the |DCC-EX| API.
 
-These are the key broadcast commands that should be understood if used by the throttle, or discarded if irrelevant:
+These are the *key* broadcast responses that should be understood:
 
-- ``<p X [MAIN|PROG|JOIN]>`` - When a throttle issues a track power command, this response is sent as a broadcast (see :ref:`reference/software/command-reference:track power commands`)
-- ``<r address>`` - When a loco address is read on the programming track, the address is sent as a broadcast (see :ref:`reference/software/command-reference:read loco address on programming track`)
-- ``<l cab slot speed/dir func>`` - When throttles send loco commands, this is sent as a broadcast (see :ref:`reference/software/command-reference:cab functions`)
-- ``<H id [DCC|SERVO|VPIN|LCN] ... [0|1]>`` - When turnouts are closed/thrown, this response is broadcast (see :ref:`reference/software/command-reference:defining (setting up) a turnout`)
-- ``<[q|Q] id>`` - When sensors are deactivated/activated, this response is broadcast (see :ref:`reference/software/command-reference:sensors (input) commands`)
+- ``<p X [MAIN|PROG|JOIN]>`` - When a throttle issues a track power command, this response is sent as a broadcast (see :ref:`reference/software/command-summary-consolidated:power management`)
+- ``<r address>`` - When a loco address is read on the programming track, the address is sent as a broadcast (see :ref:`reference/software/command-summary-consolidated:reading/writing configuration variables (cvs) - programming track`)
+- ``<l cab slot speed/dir func>`` - When throttles send loco commands, this is sent as a broadcast (see :ref:`reference/software/command-summary-consolidated:cab (loco) commands`)
+
+These broadcast responses should be understood if your controller deals with turnouts/points and sensors.
+- ``<H id [DCC|SERVO|VPIN|LCN] ... [0|1]>`` - When turnouts are closed/thrown, this response is broadcast (see :ref:`reference/software/command-summary-consolidated:turnouts/points`)
+- ``<[q|Q] id>`` - When sensors are deactivated/activated, this response is broadcast (see :ref:`reference/software/command-summary-consolidated:sensors`)
 
 Working with track power states
 -------------------------------
 
-As above, track power can be On, Off, or Unknown. There is no broadcast of an Unknown power state though, meaning a throttle/controller must start with track power flagged as Unknown.
+Track power can be On, Off, or Unknown. There is no broadcast of an Unknown power state though, meaning a throttle/controller must start with track power flagged as Unknown.
 
 The throttle should only flag the power state as On or Off when either:
 
 - A power broadcast is received from the |EX-CS| ``<p...>``
 - The throttle user selects to turn track power on or off
 
-Additional throttle commands
-============================
+Key Throttle commands
+---------------------
 
-Release 4.0.2 provides a number of additional throttle information commands that have been implemented to assist throttle authors to obtain information from the Command Station in order to implement turnout, route/automation, and roster features which are already found in the |wiThrottle Server| implementations. 
-
-These commands are new and do not overlap with the existing commands (which are probably due to be obsoleted as they are over complex and unfit for purpose).
-
-Throttle command summary
-------------------------
-
-Key throttle specific commands are summarised here, refer below for elaboration on the details with examples.
+Key throttle specific commands are summarised here, refer below for elaboration on the details with examples.  Refer to the :doc:`/reference/software/command-summary-consolidated` for detailed information.
 
 .. list-table:: 
   :widths: auto
@@ -75,34 +71,38 @@ Key throttle specific commands are summarised here, refer below for elaboration 
     - Description
   * - ``<t cabid speed dir>``
     - ``<l cabid slot speedbyte functionMap>`` (Broadcast)
-    - Sets a cab (loco) speed and direction.
+    - Sets a cab (loco) speed and direction. (See below for the response)
   * - ``<t cabid>``
     - ``<l cabid slot speedbyte functionMap>`` (Broadcast)
-    - Requests a deliberate update of cab (loco) speed/functions in the same format as the cab broadcast.
+    - Requests a deliberate update of cab (loco) speed/functions
   * - ``<F cab funct state>``
     - ``<l cabid slot speedbyte functionMap>`` (Broadcast)
-    - Turns cab (loco) decoder functions ON and OFF
+    - Turns cab (loco) decoder functions ON and OFF (See below for the response.)
   * - ``<JT>``
     - ``<jT id1 id2 id3 ...>``
-    - Returns the defined turnout IDs.
+    - Returns the defined turnout IDs
   * - ``<JT id>``
     - ``<jT id state "[description]">``
-    - Returns the ID, state, and description of the specified turnout ID.
+    - Returns the ID, state, and description of the specified turnout ID
   * - ``<JA>``
     - ``<jA id1 id2 id3 ...>``
-    - Returns the defined automation and route IDs.
+    - Returns the defined automation and route IDs
   * - ``<JA id>``
     - ``<jA id type "[description]">``
-    - Returns the ID, type (A=automation or R=route), and description of the specified automation/route ID.
+    - Returns the ID, type (A=automation or R=route), and description of the specified automation/route ID
   * - ``<JR>``
     - ``<jR id1 id2 id3 ...>``
-    - Returns the defined roster entry IDs.
+    - Returns the defined roster entry IDs
   * - ``<JR id>``
     - ``<jR id "description" "function1/function2/function3/...">``
-    - Returns the ID, description, and function map of the specified roster entry ID.
+    - Returns the ID, description, and function map of the specified roster entry ID
 
-Detailed Command Reference
---------------------------
+----
+
+Additional Details
+------------------
+
+Refer to the :doc:`/reference/software/command-summary-consolidated` for detailed information on these commands.
 
 Setting cab (loco) status
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -124,7 +124,7 @@ Obtaining loco (cab) status
 
   * cabid = Loco's DCC address
   * slot = Position in the reminders table (for the convenience of slot managers later)
-  * speedbyte = The DCC packet speed bye including the direction bit (NOT the same as the DCC++ speed)
+  * speedbyte = The DCC packet speed bye including the direction bit (NOT the same as the DCC-EX speed)
 
       * reverse - 2-127 = speed 1-126, 0 = stop
       * forward - 130-255 = speed 1-126, 128 = stop
@@ -133,8 +133,8 @@ Obtaining loco (cab) status
 
   The above is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question.
 
-Turnouts
-^^^^^^^^
+Turnouts/Points
+^^^^^^^^^^^^^^^
 
 The conventional turnout definition commands and the ``<H>`` responses do not contain information about the turnout description which may have been provided in an EX-RAIL script. A turnout description is much more user friendly than the identifier (eg. T123), and having a list helps the throttle UI build a suitable set of buttons.
 
@@ -210,6 +210,4 @@ Commands to avoid
 * ``<f cab func1 func2>`` - Use ``<F cab function 1/0>`` instead
 * ``<t  slot cab speed dir>`` - Just drop the slot number
 * ``<T commands>`` - other than ``<T id 0/1>``
-* ``<s>`` - This may need to change in the future to support new features
-* ``<c>`` - This may need to change in the future to support new features
 * ``<D>`` - If the throttle developer sees the need to obtain info which is <D> only please contact us to get a better way to do it

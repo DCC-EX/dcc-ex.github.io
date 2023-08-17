@@ -1,8 +1,9 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l1.rst
+.. include:: /include/include-ex-i.rst
 .. meta::
    :keywords: EX-CommandStation Command Station EX-Installer Testing
 
-.. include:: /include/include.rst
-.. include:: /include/include-l1.rst
 *************************
 Testing your installation
 *************************

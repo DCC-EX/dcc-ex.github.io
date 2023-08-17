@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-ex-tm.rst
 |TRACKMANAGER-LOGO|
 
 ***********************
@@ -48,14 +49,6 @@ An Arduino Mega (with or without WiFi) and Standard L298P Motor Shield |EX-CS| h
 No additional external DCC decoders are required for DC (PWM) track assignments, and a single |EX-CS| is the only hardware needed for full functionality.
 
 One key difference to note in comparing DCC vs. DC is that in DCC mode, forward/reverse is determined by the DCC decoder, not the track, whereas in DC mode the direction is dependent upon the track polarity.
-
-.. warning:: 
-
-  This feature is under active development, meaning commands, features, and behaviour may change without notice. While we endeavour to keep these features functional, our development releases are updated regularly and we cannot guarantee there are no bugs that will have unexpected results.
-
-  If using our development release and, especially, the |TM| feature, we highly recommend keeping in touch with conversations and developments via our `Discord server <https://discord.gg/PuPnNMp8Qf>`_.
-
-  You can also use our new GitHub issue templates to report a bug: |githublink-ex-commandstation-button2|
 
 Before you begin
 ----------------
@@ -359,12 +352,8 @@ Using the New TrackManager Function commands you can run the any layout as
 
 All done through the free |DCC-EX| TrackManager commands.
 
-How Do I Get On Board with DCC-EX TrackManager ?
-=================================================
-
-To use TrackManager, you will need the current development version of |EX-CS| which you can obtain by following the directions in our :ref:`download/ex-commandstation:latest ex-commandstation unreleased development version` section.
-
-We highly encourage you to join our Discord server to keep up to date on developments. Refer to :ref:`support/contact-us:contact us` for details on how to join.
+EXRAIL examples
+===============
 
 Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (Android):
 ---------------------------------------------------------------------------------------
@@ -436,8 +425,6 @@ Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (An
   :scale: 50%
 
   Track Manager - Engine Driver handoff/set
-
-
 
 EXRAIL Functions Displaying on Smartphone Apps & Universal WiFi Throttles
 -------------------------------------------------------------------------

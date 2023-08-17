@@ -1,11 +1,11 @@
 .. include:: /include/include.rst
-.. include:: /include/include-l1.rst
-  
+.. include:: /include/include-l3.rst
+.. include:: /include/include-description.rst
 ***************************
 Lew's Duino Gear duinoNodes
 ***************************
 
-|tinkerer| |engineer| |githublink-ex-commandstation-button2|
+|tinkerer| |engineer|
 
 |NEW-IN-V5-LOGO-SMALL|
 

@@ -1,8 +1,6 @@
-.. meta::
-  :keywords: EX-CommandStation Command Station EX-IOExpander
-
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-ex-io.rst
 |EX-IO-LOGO|
 
 **************************
@@ -49,9 +47,7 @@ This page provides the general overview of |EX-IO|, as well as outlining the con
 Software requirements
 =====================
 
-To utilise |EX-IO|, you must be running the latest unreleased Development version of |EX-CS|.
-
-Refer to :ref:`download/ex-commandstation:latest ex-commandstation unreleased development version` on how to obtain this.
+To utilise |EX-IO|, you must be running version 5.0.0 or later of |EX-CS|.
 
 In addition, you will require the |EX-IO| software which can be found here:
 
@@ -59,7 +55,7 @@ In addition, you will require the |EX-IO| software which can be found here:
 
   `EX-IOExpander Github Repository <https://github.com/DCC-EX/EX-IOExpander>`_
 
-It is now possible to install |EX-IO| via |EX-I|, see :ref:`ex-ioexpander/overview:installation via ex-installer`.
+Both of these can be installed via |EX-I|, see :doc:`/ex-installer/installing` and :ref:`ex-ioexpander/overview:installation via ex-installer`.
 
 Hardware requirements
 =====================

@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-throttles.rst
 ***************************
 Cab Engineer: DCC Throttle
 ***************************
@@ -43,15 +44,12 @@ Screenshots
 .. image:: /_static/images/throttles/cab_engineer_screen3.jpg
    :alt: Cab Engineer 1
    :scale: 50%
-   :align: left
 
 .. image:: /_static/images/throttles/cab_engineer_screen2.jpg
    :alt: Cab Engineer 2
    :scale: 50%
-   :align: left
 
 .. image:: /_static/images/throttles/cab_engineer_screen1.jpg
    :alt: Cab Engineer 3
    :scale: 50%
-   :align: left
 

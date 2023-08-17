@@ -1,8 +1,6 @@
-.. meta::
-  :keywords: EX-CommandStation Command Station EX-IOExpander
-
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-ex-io.rst
 |EX-IO-LOGO|
 
 *************

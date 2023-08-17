@@ -19,57 +19,61 @@ For information on |DCC-EX| native commands, refer to the :doc:`/reference/softw
 
   Character, Usage
   /, |EX-R| interactive commands
+  -, Remove from reminder table
   =, |TM| configuration
+  !, Emergency stop
+  #, Request number of supported cabs/locos
+  +, WiFi commands
   0, Track power off
   1, Track power on
-  a,
+  a, Dcc accessory control
   A,
-  b,
-  B,
-  c,
+  b, Write CV bit on main
+  B, Write CV bit
+  c, Request current command
   C,
   d,
-  D,
-  e,
-  E,
-  f,
-  F,
+  D, Diagnostic commands
+  e, Erase EEPROM
+  E, Store configuration in EEPROM
+  f, Loco decoder function control (deprecated)
+  F, Loco decoder function control
   g,
   G,
   h,
-  H,
+  H, Turnout state broadcast
   g,
   G,
   i,
   I,
-  j,
-  J,
+  j, Throttle responses
+  J, Throttle queries
   k,
   K,
-  l,
+  l, Loco speedbyte/function map broadcast
   L,
   m,
-  M,
+  M, Write DCC packet
   n,
   N,
   o,
   O,
   p,
-  P,
+  P, Write DCC packet
   q, Sensor deactivated
   Q, Sensor activated
   r,
-  R,
+  R, Read CVs
   s, Display status
   S, Sensor configuration
-  t,
+  t, Cab/loco update command
   T, Turnout configuration/control
   u,
-  U,
+  U, Reserved for user commands
   v,
-  V,
-  w,
-  W,
+  V, Verify CVs
+  w, Write CV on main
+  W, Write CV
   x,
   X,
   y,

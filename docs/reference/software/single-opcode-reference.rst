@@ -23,7 +23,7 @@ For information on |DCC-EX| native commands, refer to the :doc:`/reference/softw
   =, |TM| configuration
   !, Emergency stop
   @, Reserved for future use
-  #, Request number of supported cabs/locos, also heartbeat
+  #, Request number of supported cabs/locos; heartbeat
   \+, WiFi AT commands
   ?, Reserved for future use
   0, Track power off

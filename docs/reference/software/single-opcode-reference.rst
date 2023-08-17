@@ -22,8 +22,10 @@ For information on |DCC-EX| native commands, refer to the :doc:`/reference/softw
   \-, Remove from reminder table
   =, |TM| configuration
   !, Emergency stop
-  #, Request number of supported cabs/locos
+  @, Reserved for future use
+  #, Request number of supported cabs/locos, also heartbeat
   \+, WiFi AT commands
+  ?, Reserved for future use
   0, Track power off
   1, Track power on
   a, DCC accessory control
@@ -42,12 +44,12 @@ For information on |DCC-EX| native commands, refer to the :doc:`/reference/softw
   G,
   h,
   H, Turnout state broadcast
-  i,
-  I,
+  i, Reserved for future use
+  I, Reserved for future use
   j, Throttle responses
   J, Throttle queries
-  k,
-  K,
+  k, Reserved for future use
+  K, Reserved for future use
   l, Loco speedbyte/function map broadcast
   L,
   m,

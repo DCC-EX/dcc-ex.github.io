@@ -19,14 +19,14 @@ For information on |DCC-EX| native commands, refer to the :doc:`/reference/softw
 
   Character, Usage
   /, |EX-R| interactive commands
-  -, Remove from reminder table
+  \-, Remove from reminder table
   =, |TM| configuration
   !, Emergency stop
   #, Request number of supported cabs/locos
-  +, WiFi commands
+  \+, WiFi AT commands
   0, Track power off
   1, Track power on
-  a, Dcc accessory control
+  a, DCC accessory control
   A,
   b, Write CV bit on main
   B, Write CV bit
@@ -42,8 +42,6 @@ For information on |DCC-EX| native commands, refer to the :doc:`/reference/softw
   G,
   h,
   H, Turnout state broadcast
-  g,
-  G,
   i,
   I,
   j, Throttle responses
@@ -57,7 +55,7 @@ For information on |DCC-EX| native commands, refer to the :doc:`/reference/softw
   n,
   N,
   o,
-  O,
+  O, Output broadcast
   p, Broadcast power state
   P, Write DCC packet
   q, Sensor deactivated
@@ -68,15 +66,15 @@ For information on |DCC-EX| native commands, refer to the :doc:`/reference/softw
   S, Sensor configuration
   t, Cab/loco update command
   T, Turnout configuration/control
-  u,
+  u, Reserved for user commands
   U, Reserved for user commands
   v,
   V, Verify CVs
   w, Write CV on main
   W, Write CV
   x,
-  X,
+  X, Invalid command
   y,
-  Y,
+  Y, Output broadcast
   z,
   Z, Output configuration/control

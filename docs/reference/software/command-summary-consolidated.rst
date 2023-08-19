@@ -1,6 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-.. include:: /include/include-description.rst
+.. include:: /include/include-reference.rst
 |EX-REF-LOGO|
 
 ***********************************************
@@ -998,7 +998,7 @@ These commands require the optional |EX-FC| hardware to the installed along with
 
   *Example:*
 
-    ``<JC 375 4>`` Will set the fast clock time as 6:15am with the percieved speed factor of 1 minutes every 15 seconds (4 times actual).
+    ``<JC 375 4>`` Will set the fast clock time as 6:15am with the percieved speed factor of 1 minute every 15 seconds (4 times actual).
 
 |hr-dashed|
 

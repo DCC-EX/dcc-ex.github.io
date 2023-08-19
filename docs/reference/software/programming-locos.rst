@@ -1,6 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-.. include:: /include/include-description.rst
+.. include:: /include/include-reference.rst
+|EX-REF-LOGO|
 ***********************
 Programming Locos (CVs)
 ***********************

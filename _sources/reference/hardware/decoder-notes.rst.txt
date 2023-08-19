@@ -3,9 +3,9 @@
 .. include:: /include/include-description.rst
 |EX-REF-LOGO|
 
-****************
+**************
  Decoder Notes
-****************
+**************
 
 |conductor| |tinkerer| |engineer|
 

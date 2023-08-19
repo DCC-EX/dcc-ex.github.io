@@ -1,6 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
-.. include:: /include/include-description.rst
+.. include:: /include/include-hardware.rst
+|EX-CS-LOGO|
 ****************************
 Pololu MC33926
 ****************************

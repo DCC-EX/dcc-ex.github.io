@@ -1,8 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
-.. include:: /include/include-description.rst
+.. include:: /include/include-hardware.rst
 |EX-CS-LOGO|
-
 **************************************
 ESP-01 and ESP-01s
 **************************************

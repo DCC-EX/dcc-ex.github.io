@@ -1,11 +1,11 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
-.. include:: /include/include-description.rst
+.. include:: /include/include-reference.rst
 |EX-REF-LOGO|
 
-*********
+********
 Glossary
-*********
+********
 
 |conductor| |tinkerer| |engineer|
 

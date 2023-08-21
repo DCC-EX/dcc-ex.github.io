@@ -1,6 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
-.. include:: /include/include-description.rst
+.. include:: /include/include-hardware.rst
 *************************
 Arduino Ethernet Shield 2
 *************************

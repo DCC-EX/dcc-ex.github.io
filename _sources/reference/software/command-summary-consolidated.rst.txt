@@ -1652,40 +1652,6 @@ Depending on whether the physical sensor is acting as an "event-trigger" or a "d
 
 ----
 
-Servos (Configuring the EX-CommandStation)
-------------------------------------------
-
-.. contents:: In This Section
-    :depth: 4
-    :local:
-    :class: in-this-section
-
-|hr-dashed|
-
-``<S id pin state>`` - Creates a new sensor ID, with specified PIN and PULLUP
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  *Parameters:* |BR|
-  |_| > **id:** identifier of the Sensor (0-32767) |BR|
-  |_| > **pin:** pin the sensor is connected to |BR|
-  |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - 0= ???   |BR|
-  |_| |_| |_| |_| - 1=???
-  
-  *Response:* ???
-
-|hr-dashed|
-
-``<S id>`` - Deletes definition of sensor
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  *Parameters:* |BR|
-  |_| > **id:** identifier of the Sensor (0-32767)
-
-  *Response:* ???
-
-----
-
 Outputs (Configuring the EX-CommandStation)
 -------------------------------------------
 

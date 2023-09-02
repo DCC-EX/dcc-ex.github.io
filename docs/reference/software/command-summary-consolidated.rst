@@ -488,14 +488,48 @@ For details on how to configure turnouts/points see: `Turnouts/Points (Configuri
 
   *Response:* |BR|
   |_| Repeated for each defined Turnout/Point |BR|
-  |_| Response (DCC Accessories): ``<H id DCC address subaddress state>`` |BR|
-  |_| Response (Servos): ``<H id SERVO vpin thrown_position closed_position profile state>`` |BR|
-  |_| Response (VPIN): ``<H id VPIN vpin state>`` |BR|
-  |_| Response (LCN): ``<H id LCN state>`` |BR|
-  |_| Response (fail): ? |BR|
-  |_| Response (no defined turnouts/points): ? |BR|
+  |_| |_| Response: ``<H id state>`` |BR|
+  |_| Response (fail): N/A |BR|
+  |_| Response (no defined turnouts/points): ``X`` |BR|
+  |_| |BR|
+  |_| > **id** - The numeric ID (0-32767) of the turnout to control. |BR|
+  |_| > **state:** one of |BR|
+  |_| |_| |_| |_| - 1=Thrown, |BR|
+  |_| |_| |_| |_| - 0=Closed
+
+ |hr-dashed|
+
+``<T id state>`` - Throw or Close a defined turnout/point
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **id:** identifier of the Turnout/Point |BR|
+  |_| > **state:** one of |BR|
+  |_| |_| |_| |_| - 1=Throw, |BR|
+  |_| |_| |_| |_| - T=Throw, |BR|
+  |_| |_| |_| |_| - 0=Close, |BR|
+  |_| |_| |_| |_| - C=Close, |BR|
+  |_| |_| |_| |_| - X=eXamine
+  
+  *Response:* |BR|
+  |_| ``<H id state>`` |BR|
+  |_| > **id:** one of |BR|
+  |_| |_| |_| |_| - identifier of the Turnout/Point, or  |BR|
+  |_| |_| |_| |_| - X if the command fails |BR|
+  |_| > **state:** one of |BR|
+  |_| |_| |_| |_| - 1 = Thrown, |BR|
+  |_| |_| |_| |_| - 0 = Closed |BR|
+  |_| |_| |_| |_| - blank = command failed |BR|
   |_|  |BR|
-  |_| state - 0 = closed 1 = thrown
+  |_| *Example Responses:* |BR|
+  |_| Response (successful): ``<H id 0|1>`` |BR|
+  |_| Response (fail): ``<X>`` |BR|
+  |_| Response on eXamine: |BR|
+  |_| |_| |_| Response (DCC Accessories): ``<H id DCC address subaddress state>`` |BR|
+  |_| |_| |_| Response (Servos): ``<H id SERVO vpin thrown_position closed_position profile state>`` |BR|
+  |_| |_| |_| Response (VPIN): ``<H id VPIN vpin state>`` |BR|
+  |_| |_| |_| Response (LCN): ``<H id LCN state>`` |BR|
+  |_| |_| |_| Response (fail/no such turnout): ``<X>``
 
   .. collapse:: Response - Additional Details: (click to show)
 
@@ -548,33 +582,6 @@ For details on how to configure turnouts/points see: `Turnouts/Points (Configuri
   |_| *Example Responses:* |BR|
   |_| Response (has defined Turnouts/Points): ``<jT id1 id2 id3 ...>`` |BR|
   |_| Response (no defined Turnouts/Points): ``<jT>``
-
-|hr-dashed|
-
-``<T id state>`` - Throw or Close a defined turnout/point
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  *Parameters:* |BR|
-  |_| > **id:** identifier of the Turnout/Point |BR|
-  |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - 1=Throw,  |BR|
-  |_| |_| |_| |_| - T=Throw,  |BR|
-  |_| |_| |_| |_| - 0=Close,  |BR|
-  |_| |_| |_| |_| - C=Close
-  
-  *Response:* |BR|
-  |_| ``<H id state>`` |BR|
-  |_| > **id:** one of |BR|
-  |_| |_| |_| |_| - identifier of the Turnout/Point, or  |BR|
-  |_| |_| |_| |_| - X if the command fails |BR|
-  |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - 1 = Thrown,  |BR|
-  |_| |_| |_| |_| - 0 = Closed  |BR|
-  |_| |_| |_| |_| - blank = command failed |BR|
-  |_|  |BR|
-  |_| *Example Responses:* |BR|
-  |_| Response (successful): ``<H id 0|1>`` |BR|
-  |_| Response (fail): ``<X>``
 
 ----
 

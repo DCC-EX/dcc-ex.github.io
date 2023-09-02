@@ -494,8 +494,8 @@ For details on how to configure turnouts/points see: `Turnouts/Points (Configuri
   |_| |BR|
   |_| > **id** - The numeric ID (0-32767) of the turnout to control. |BR|
   |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - 1=Thrown, |BR|
-  |_| |_| |_| |_| - 0=Closed
+  |_| |_| |_| |_| - 1 = Thrown, |BR|
+  |_| |_| |_| |_| - 0 = Closed
 
  |hr-dashed|
 
@@ -505,11 +505,11 @@ For details on how to configure turnouts/points see: `Turnouts/Points (Configuri
   *Parameters:* |BR|
   |_| > **id:** identifier of the Turnout/Point |BR|
   |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - 1=Throw, |BR|
-  |_| |_| |_| |_| - T=Throw, |BR|
-  |_| |_| |_| |_| - 0=Close, |BR|
-  |_| |_| |_| |_| - C=Close, |BR|
-  |_| |_| |_| |_| - X=eXamine
+  |_| |_| |_| |_| - 1 = Throw, |BR|
+  |_| |_| |_| |_| - T = Throw, |BR|
+  |_| |_| |_| |_| - 0 = Close, |BR|
+  |_| |_| |_| |_| - C = Close, |BR|
+  |_| |_| |_| |_| - X = eXamine
   
   *Response:* |BR|
   |_| ``<H id state>`` |BR|

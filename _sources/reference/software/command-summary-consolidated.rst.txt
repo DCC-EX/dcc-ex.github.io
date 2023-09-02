@@ -522,8 +522,9 @@ For details on how to configure turnouts/points see: `Turnouts/Points (Configuri
   |_| |_| |_| |_| - blank = command failed |BR|
   |_|  |BR|
   |_| *Example Responses:* |BR|
-  |_| Response (successful): ``<H id 0|1>`` |BR|
-  |_| Response (fail): ``<X>`` |BR|
+  |_| Response on throw/close: |BR|
+  |_| |_| |_| Response (successful): ``<H id state>`` |BR|
+  |_| |_| |_| Response (fail): ``<X>`` |BR|
   |_| Response on eXamine: |BR|
   |_| |_| |_| Response (DCC Accessories): ``<H id DCC address subaddress state>`` |BR|
   |_| |_| |_| Response (Servos): ``<H id SERVO vpin thrown_position closed_position profile state>`` |BR|
@@ -542,7 +543,7 @@ For details on how to configure turnouts/points see: `Turnouts/Points (Configuri
       * ``vpin`` is the pin number of the output to be controlled by the turnout/point object.  For Arduino output pins, this is the same as the digital pin number.  For 
         servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
         116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.
-      * ``thrown`` - "0" is closed.  "1" is thrown.
+      * ``state`` - 0 = closed.  1 = thrown.
       * ``thrown_position`` : the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490.
       * ``closed_position`` : the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490.
       * ``profile`` : the profile for the transition between states.  0=Immediate, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec), 3=Bounce (for semaphore signals).

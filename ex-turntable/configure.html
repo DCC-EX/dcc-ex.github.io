@@ -774,7 +774,7 @@
 <section id="sanity-steps">
 <h3><a class="toc-backref" href="#id18" role="doc-backlink">SANITY_STEPS</a><a class="headerlink" href="#sanity-steps" title="Permalink to this heading"></a></h3>
 <p><cite>Default: 10000 (Disabled)</cite></p>
-<p><cite>Valid values: 1 to 65535</cite></p>
+<p><cite>Valid values: 1 to 32767</cite></p>
 <p>This is the maximum number of steps the stepper motor will move during homing and calibration before flagging a failure.</p>
 <p>If you have a stepper driver/motor combination that is configured for a large number of steps, or if you have a gear ratio that results in a high number of steps, you may need to increase this number in order for the calibration process to succeed.</p>
 </section>
@@ -788,7 +788,7 @@
 <section id="full-step-count">
 <h3><a class="toc-backref" href="#id20" role="doc-backlink">FULL_STEP_COUNT</a><a class="headerlink" href="#full-step-count" title="Permalink to this heading"></a></h3>
 <p><cite>Default: 4096 (Disabled)</cite></p>
-<p><cite>Valid values: 1 to 65535</cite></p>
+<p><cite>Valid values: 1 to 32767</cite></p>
 <p>If for some reason the automatic calibration sequence is not recording the correct number of steps required for a full 360 degree rotation, or if there is some other requirement to override this value, then uncomment this line and define the desired number of steps.</p>
 <p>If you enable this option, the calibration sequence will never run automatically even if the step count is not recorded in EEPROM, and this setting will always override that on startup.</p>
 <p>You can initiate the calibration command manually while this option is enabled, it will perform the calibration sequence and record the calibrated step count in EEPROM, and that setting will take effect whilst <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> is running. However, the calibrated value in EEPROM will be overridden at the next startup unless this option is disabled.</p>

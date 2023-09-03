@@ -497,7 +497,7 @@ For details on how to configure turnouts/points see: `Turnouts/Points (Configuri
   |_| |_| |_| |_| - 1 = Thrown, |BR|
   |_| |_| |_| |_| - 0 = Closed
 
- |hr-dashed|
+|hr-dashed|
 
 ``<T id state>`` - Throw or Close a defined turnout/point
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -534,16 +534,13 @@ For details on how to configure turnouts/points see: `Turnouts/Points (Configuri
 
   .. collapse:: Response - Additional Details: (click to show)
 
-      * ``id`` : The numeric ID (0-32767) of the turnout to control.  
-
-      * (NOTE: You pick the ID. IDs are shared between Turnouts/Points, Sensors and Outputs)
-
-      * ``address`` is the primary address of a DCC accessory decoder controlling a turnout/point (0-511)
-      * ``subaddress`` is the subaddress of a DCC accessory decoder controlling a turnout/point (0-3)
-      * ``vpin`` is the pin number of the output to be controlled by the turnout/point object.  For Arduino output pins, this is the same as the digital pin number.  For 
+      * ``id`` : The numeric ID (0-32767) of the turnout to control.  |BR| (NOTE: IDs are shared between Turnouts/Points, Sensors and Outputs)
+      * ``address`` : the primary address of a DCC accessory decoder controlling a turnout/point (0-511)
+      * ``subaddress`` : the subaddress of a DCC accessory decoder controlling a turnout/point (0-3)
+      * ``vpin`` : the pin number of the output to be controlled by the turnout/point object.  For Arduino output pins, this is the same as the digital pin number.  For 
         servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
         116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.
-      * ``state`` - 0 = closed.  1 = thrown.
+      * ``state`` : 0 = closed.  1 = thrown.
       * ``thrown_position`` : the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490.
       * ``closed_position`` : the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490.
       * ``profile`` : the profile for the transition between states.  0=Immediate, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec), 3=Bounce (for semaphore signals).

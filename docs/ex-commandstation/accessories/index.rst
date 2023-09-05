@@ -20,5 +20,5 @@ Read on through the following sections to understand which accessory items can b
     signals/index
     sensors/index
     inputs-outputs/index
-    /ex-turntable/index
     animation
+    turntables/index

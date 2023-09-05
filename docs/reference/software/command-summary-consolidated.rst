@@ -488,27 +488,59 @@ For details on how to configure turnouts/points see: `Turnouts/Points (Configuri
 
   *Response:* |BR|
   |_| Repeated for each defined Turnout/Point |BR|
-  |_| Response (DCC Accessories): ``<H id DCC address subaddress state>`` |BR|
-  |_| Response (Servos): ``<H id SERVO vpin thrown_position closed_position profile state>`` |BR|
-  |_| Response (VPIN): ``<H id VPIN vpin state>`` |BR|
-  |_| Response (LCN): ``<H id LCN state>`` |BR|
-  |_| Response (fail): ? |BR|
-  |_| Response (no defined turnouts/points): ? |BR|
+  |_| |_| Response: ``<H id state>`` |BR|
+  |_| Response (fail): N/A |BR|
+  |_| Response (no defined turnouts/points): ``X`` |BR|
+  |_| |BR|
+  |_| > **id** - The numeric ID (0-32767) of the turnout to control. |BR|
+  |_| > **state:** one of |BR|
+  |_| |_| |_| |_| - 1 = Thrown, |BR|
+  |_| |_| |_| |_| - 0 = Closed
+
+|hr-dashed|
+
+``<T id state>`` - Throw or Close a defined turnout/point
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **id:** identifier of the Turnout/Point |BR|
+  |_| > **state:** one of |BR|
+  |_| |_| |_| |_| - 1 = Throw, |BR|
+  |_| |_| |_| |_| - T = Throw, |BR|
+  |_| |_| |_| |_| - 0 = Close, |BR|
+  |_| |_| |_| |_| - C = Close, |BR|
+  |_| |_| |_| |_| - X = eXamine
+  
+  *Response:* |BR|
+  |_| ``<H id state>`` |BR|
+  |_| > **id:** one of |BR|
+  |_| |_| |_| |_| - identifier of the Turnout/Point, or  |BR|
+  |_| |_| |_| |_| - X if the command fails |BR|
+  |_| > **state:** one of |BR|
+  |_| |_| |_| |_| - 1 = Thrown, |BR|
+  |_| |_| |_| |_| - 0 = Closed |BR|
+  |_| |_| |_| |_| - blank = command failed |BR|
   |_|  |BR|
-  |_| state - 0 = closed 1 = thrown
+  |_| *Example Responses:* |BR|
+  |_| Response on throw/close: |BR|
+  |_| |_| |_| Response (successful): ``<H id state>`` |BR|
+  |_| |_| |_| Response (fail): ``<X>`` |BR|
+  |_| Response on eXamine: |BR|
+  |_| |_| |_| Response (DCC Accessories): ``<H id DCC address subaddress state>`` |BR|
+  |_| |_| |_| Response (Servos): ``<H id SERVO vpin thrown_position closed_position profile state>`` |BR|
+  |_| |_| |_| Response (VPIN): ``<H id VPIN vpin state>`` |BR|
+  |_| |_| |_| Response (LCN): ``<H id LCN state>`` |BR|
+  |_| |_| |_| Response (fail/no such turnout): ``<X>``
 
   .. collapse:: Response - Additional Details: (click to show)
 
-      * ``id`` : The numeric ID (0-32767) of the turnout to control.  
-
-      * (NOTE: You pick the ID. IDs are shared between Turnouts/Points, Sensors and Outputs)
-
-      * ``address`` is the primary address of a DCC accessory decoder controlling a turnout/point (0-511)
-      * ``subaddress`` is the subaddress of a DCC accessory decoder controlling a turnout/point (0-3)
-      * ``vpin`` is the pin number of the output to be controlled by the turnout/point object.  For Arduino output pins, this is the same as the digital pin number.  For 
+      * ``id`` : The numeric ID (0-32767) of the turnout to control.  |BR| (NOTE: IDs are shared between Turnouts/Points, Sensors and Outputs)
+      * ``address`` : the primary address of a DCC accessory decoder controlling a turnout/point (0-511)
+      * ``subaddress`` : the subaddress of a DCC accessory decoder controlling a turnout/point (0-3)
+      * ``vpin`` : the pin number of the output to be controlled by the turnout/point object.  For Arduino output pins, this is the same as the digital pin number.  For 
         servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
         116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.
-      * ``thrown`` - "0" is closed.  "1" is thrown.
+      * ``state`` : 0 = closed.  1 = thrown.
       * ``thrown_position`` : the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490.
       * ``closed_position`` : the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490.
       * ``profile`` : the profile for the transition between states.  0=Immediate, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec), 3=Bounce (for semaphore signals).
@@ -548,33 +580,6 @@ For details on how to configure turnouts/points see: `Turnouts/Points (Configuri
   |_| *Example Responses:* |BR|
   |_| Response (has defined Turnouts/Points): ``<jT id1 id2 id3 ...>`` |BR|
   |_| Response (no defined Turnouts/Points): ``<jT>``
-
-|hr-dashed|
-
-``<T id state>`` - Throw or Close a defined turnout/point
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  *Parameters:* |BR|
-  |_| > **id:** identifier of the Turnout/Point |BR|
-  |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - 1=Throw,  |BR|
-  |_| |_| |_| |_| - T=Throw,  |BR|
-  |_| |_| |_| |_| - 0=Close,  |BR|
-  |_| |_| |_| |_| - C=Close
-  
-  *Response:* |BR|
-  |_| ``<H id state>`` |BR|
-  |_| > **id:** one of |BR|
-  |_| |_| |_| |_| - identifier of the Turnout/Point, or  |BR|
-  |_| |_| |_| |_| - X if the command fails |BR|
-  |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - 1 = Thrown,  |BR|
-  |_| |_| |_| |_| - 0 = Closed  |BR|
-  |_| |_| |_| |_| - blank = command failed |BR|
-  |_|  |BR|
-  |_| *Example Responses:* |BR|
-  |_| Response (successful): ``<H id 0|1>`` |BR|
-  |_| Response (fail): ``<X>``
 
 ----
 
@@ -1649,40 +1654,6 @@ All sensors defined as per above are repeatedly and sequentially checked within 
 * ``<q id>`` - for transition of Sensor ID from ACTIVE state to INACTIVE state (i.e. the sensor is no longer triggered)
 
 Depending on whether the physical sensor is acting as an "event-trigger" or a "detection-sensor", you may decide to ignore the ``<q id>`` return and only react to ``<Q id>`` triggers.
-
-----
-
-Servos (Configuring the EX-CommandStation)
-------------------------------------------
-
-.. contents:: In This Section
-    :depth: 4
-    :local:
-    :class: in-this-section
-
-|hr-dashed|
-
-``<S id pin state>`` - Creates a new sensor ID, with specified PIN and PULLUP
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  *Parameters:* |BR|
-  |_| > **id:** identifier of the Sensor (0-32767) |BR|
-  |_| > **pin:** pin the sensor is connected to |BR|
-  |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - 0= ???   |BR|
-  |_| |_| |_| |_| - 1=???
-  
-  *Response:* ???
-
-|hr-dashed|
-
-``<S id>`` - Deletes definition of sensor
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  *Parameters:* |BR|
-  |_| > **id:** identifier of the Sensor (0-32767)
-
-  *Response:* ???
 
 ----
 

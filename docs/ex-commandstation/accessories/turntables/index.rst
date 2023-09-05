@@ -7,7 +7,7 @@
 Turntables and traversers
 *************************
 
-Turntables and traversers...
+Turntables and traversers can add significant interest to your model railroad as well as...
 
 Read on through these pages to understand what turntables and traversers are along with how to connect them to and control them from your |EX-CS|.
 

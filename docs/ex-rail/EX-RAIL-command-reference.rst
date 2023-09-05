@@ -776,6 +776,42 @@ All the below turnout/point definitions will define turnouts/points that are adv
 
 ----
 
+Turntable/Traverser objects - Definition and Control
+----------------------------------------------------
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
+|hr-dashed|
+
+All the below turntable/traverser definitions will define turntables/traversers that are advertised to throttles that understand them, unless the HIDDEN keyword is used.
+
+To fully define a turntable/traverser object, you need to define the object first, and then one or more positions (see :ref:`ex-rail/ex-rail-command-reference:``tt_addposition( turntable_id, position_id, value [, "description"] )`` - add a turntable position`).
+
+"description" is an optional parameter, and must be enclosed in quotes "". If you don't wish this turntable/traverser to be advertised to throttles, then substitute the word HIDDEN (with no "") instead of the description.
+
+|hr-dashed|
+
+``DCC_TURNTABLE( id, [, "description"] )`` - Define a DCC accessory turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Define a DCC accessory turntable/traverser. Note that DCC linear addresses are not supported, and must be converted to address/subaddress in order to be defined. Refer to the :ref:`reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)` for help on these conversions. (or see TURNOUTL below).
+
+|hr-dashed|
+
+
+
+``TT_ADDPOSITION( turntable_id, position_id, value [, "description"] )`` - Add a turntable position
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Add a position...
+
+|force-break|
+
+----
+
 Sensors/Inputs - Reading and Responding
 ---------------------------------------
 

@@ -599,63 +599,66 @@ For details on how to configure turnouts/points see: `Turnouts/Points (Configuri
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
-  |_| Repeated for each defined Turnout/Point |BR|
-  |_| |_| Response: ``<H id state>`` |BR|
+  |_| Repeated for each defined Turtable/traverser |BR|
+  |_| |_| Response: ``<i id position>`` |BR|
   |_| Response (fail): N/A |BR|
-  |_| Response (no defined turnouts/points): ``X`` |BR|
+  |_| Response (no defined turntables/traversers): ``X`` |BR|
   |_| |BR|
-  |_| > **id** - The numeric ID (0-32767) of the turnout to control. |BR|
-  |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - 1 = Thrown, |BR|
-  |_| |_| |_| |_| - 0 = Closed
+  |_| > **id** - The numeric ID (0-32767) of the turntable to control |BR|
+  |_| > **position** - The current position of the turntable |BR|
 
 |hr-dashed|
 
-``<I id state>`` - Throw or Close a defined turnout/point
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<I id position>`` - Rotate a DCC turntable
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
-  |_| > **id:** identifier of the Turnout/Point |BR|
-  |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - 1 = Throw, |BR|
-  |_| |_| |_| |_| - T = Throw, |BR|
-  |_| |_| |_| |_| - 0 = Close, |BR|
-  |_| |_| |_| |_| - C = Close, |BR|
-  |_| |_| |_| |_| - X = eXamine
+  |_| > **id:** - Identifier of the Turntable/traverser |BR|
+  |_| > **position:** - Position to rotate to |BR|
   
   *Response:* |BR|
-  |_| ``<H id state>`` |BR|
+  |_| ``<i id position moving>`` |BR|
   |_| > **id:** one of |BR|
-  |_| |_| |_| |_| - identifier of the Turnout/Point, or  |BR|
+  |_| |_| |_| |_| - identifier of the Turntable/traverser, or  |BR|
   |_| |_| |_| |_| - X if the command fails |BR|
-  |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - 1 = Thrown, |BR|
-  |_| |_| |_| |_| - 0 = Closed |BR|
+  |_| > **position:** one of |BR|
+  |_| |_| |_| |_| - position rotating to, or |BR|
+  |_| |_| |_| |_| - blank = command failed |BR|
+  |_| > **moving:** one of |BR|
+  |_| |_| |_| |_| - 0 (no feedback can be returned from a DCC turntable), or |BR|
   |_| |_| |_| |_| - blank = command failed |BR|
   |_|  |BR|
   |_| *Example Responses:* |BR|
-  |_| Response on throw/close: |BR|
-  |_| |_| |_| Response (successful): ``<H id state>`` |BR|
+  |_| Response on rotate: |BR|
+  |_| |_| |_| Response (successful): ``<i id position moving>`` |BR|
   |_| |_| |_| Response (fail): ``<X>`` |BR|
-  |_| Response on eXamine: |BR|
-  |_| |_| |_| Response (DCC Accessories): ``<H id DCC address subaddress state>`` |BR|
-  |_| |_| |_| Response (Servos): ``<H id SERVO vpin thrown_position closed_position profile state>`` |BR|
-  |_| |_| |_| Response (VPIN): ``<H id VPIN vpin state>`` |BR|
-  |_| |_| |_| Response (LCN): ``<H id LCN state>`` |BR|
-  |_| |_| |_| Response (fail/no such turnout): ``<X>``
 
-  .. collapse:: Response - Additional Details: (click to show)
+|hr-dashed|
 
-      * ``id`` : The numeric ID (0-32767) of the turnout to control.  |BR| (NOTE: IDs are shared between Turnouts/Points, Sensors and Outputs)
-      * ``address`` : the primary address of a DCC accessory decoder controlling a turnout/point (0-511)
-      * ``subaddress`` : the subaddress of a DCC accessory decoder controlling a turnout/point (0-3)
-      * ``vpin`` : the pin number of the output to be controlled by the turnout/point object.  For Arduino output pins, this is the same as the digital pin number.  For 
-        servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module,
-        116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.
-      * ``state`` : 0 = closed.  1 = thrown.
-      * ``thrown_position`` : the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490.
-      * ``closed_position`` : the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490.
-      * ``profile`` : the profile for the transition between states.  0=Immediate, 1=Fast (0.5 sec), 2=Medium (1 sec), 3=Slow (2 sec), 3=Bounce (for semaphore signals).
+``<I id position activity>`` - Rotate EX-Turntable
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **id:** - Identifier of the Turntable/traverser |BR|
+  |_| > **position:** - Position to rotate to |BR|
+  |_| > **activity:** - The activity for EX-Turntable to perform |BR|
+  
+  *Response:* |BR|
+  |_| ``<i id position moving>`` |BR|
+  |_| > **id:** one of |BR|
+  |_| |_| |_| |_| - identifier of the Turntable/traverser, or  |BR|
+  |_| |_| |_| |_| - X if the command fails |BR|
+  |_| > **position:** one of |BR|
+  |_| |_| |_| |_| - position rotating to, or |BR|
+  |_| |_| |_| |_| - blank = command failed |BR|
+  |_| > **moving:** one of |BR|
+  |_| |_| |_| |_| - 0 (no feedback can be returned from a DCC turntable), or |BR|
+  |_| |_| |_| |_| - blank = command failed |BR|
+  |_|  |BR|
+  |_| *Example Responses:* |BR|
+  |_| Response on rotate: |BR|
+  |_| |_| |_| Response (successful): ``<i id position moving>`` |BR|
+  |_| |_| |_| Response (fail): ``<X>`` |BR|
 
 |hr-dashed|
 

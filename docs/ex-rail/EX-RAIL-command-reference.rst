@@ -788,7 +788,7 @@ Turntable/Traverser objects - Definition and Control
 
 All the below turntable/traverser definitions will define turntables/traversers that are advertised to throttles that understand them, unless the HIDDEN keyword is used.
 
-To fully define a turntable/traverser object, you need to define the object first, and then one or more positions (see :ref:`ex-rail/ex-rail-command-reference:``tt_addposition( turntable_id, position_id, value [, "description"] )`` - add a turntable position`).
+To fully define a turntable/traverser object, you need to define the object first, and then one or more positions.
 
 "description" is an optional parameter, and must be enclosed in quotes "". If you don't wish this turntable/traverser to be advertised to throttles, then substitute the word HIDDEN (with no "") instead of the description.
 

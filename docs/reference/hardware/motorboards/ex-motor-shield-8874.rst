@@ -2,9 +2,12 @@
 .. include:: /include/include-l3.rst
 .. include:: /include/include-hardware.rst
 |EX-MS-LOGO| |donate-button|
-********************************
+
+.. index:: 8874, EX-MotorShield
+
+******************************
 DCC-EX EX-MotorShield8874 RevA
-********************************
+******************************
 
 |conductor|
 
@@ -25,7 +28,7 @@ Designed in conjunction with the |DCC-EX| development team, the |EX-MS| is extre
    :scale: 10%
 
 What Is It?
-============
+===========
 
 The EX-Motorshield8874 is pin compatible with the original Arduino Motor Shield Rev3 but provides significantly improved electrical performance for driving higher loads, and improved usability.
 

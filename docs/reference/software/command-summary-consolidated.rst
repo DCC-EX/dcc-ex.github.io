@@ -586,6 +586,8 @@ For details on how to configure turnouts/points see: `Turnouts/Points (Configuri
 Turntables/Traversers
 ---------------------
 
+|NOT-IN-PROD-VERSION|
+
 .. contents:: In This Section
     :depth: 4
     :local:
@@ -633,6 +635,9 @@ For details on how to configure turnouts/points see: `Turnouts/Points (Configuri
   |_| |_| |_| Response (successful): ``<i id position moving>`` |BR|
   |_| |_| |_| Response (fail): ``<X>`` |BR|
 
+  *Further information:* |BR|
+  |_| When a DCC accessory turntable is rotated or moved, no feedback is sent to |EX-CS|, and therefore the **moving** variable will always be '0', and a second response will therefore never be sent to indicate the completiong of a rotation or move, unlike how |EX-TT| operates.
+
 |hr-dashed|
 
 ``<I id position activity>`` - Rotate EX-Turntable
@@ -641,18 +646,19 @@ For details on how to configure turnouts/points see: `Turnouts/Points (Configuri
   *Parameters:* |BR|
   |_| > **id:** - Identifier of the Turntable/traverser |BR|
   |_| > **position:** - Position to rotate to |BR|
-  |_| > **activity:** - The activity for EX-Turntable to perform |BR|
+  |_| > **activity:** - The activity for EX-Turntable to perform (refer :ref:`ex-turntable/test-and-tune:ex-turntable commands`) |BR|
   
   *Response:* |BR|
   |_| ``<i id position moving>`` |BR|
   |_| > **id:** one of |BR|
   |_| |_| |_| |_| - identifier of the Turntable/traverser, or  |BR|
-  |_| |_| |_| |_| - X if the command fails |BR|
+  |_| |_| |_| |_| - X if the command fails, or a rotation/move is in progress |BR|
   |_| > **position:** one of |BR|
   |_| |_| |_| |_| - position rotating to, or |BR|
   |_| |_| |_| |_| - blank = command failed |BR|
   |_| > **moving:** one of |BR|
-  |_| |_| |_| |_| - 0 (no feedback can be returned from a DCC turntable), or |BR|
+  |_| |_| |_| |_| - 1 - turntable is moving, or |BR|
+  |_| |_| |_| |_| - 0 - turntable is not moving, or |BR|
   |_| |_| |_| |_| - blank = command failed |BR|
   |_|  |BR|
   |_| *Example Responses:* |BR|
@@ -660,41 +666,78 @@ For details on how to configure turnouts/points see: `Turnouts/Points (Configuri
   |_| |_| |_| Response (successful): ``<i id position moving>`` |BR|
   |_| |_| |_| Response (fail): ``<X>`` |BR|
 
+  *Further information:* |BR|
+  |_| When EX-Turntable commences rotating/moving, the device driver flags this using the **moving** variable above in the response (1 indicates moving, 0 indicates stationary), and when a rotation or move is complete, it will generate an additional response broadcast to indicate that the rotation or move has completed. Further to this, a new rotate/move command will error when a rotation or move is currently in progress.
+
 |hr-dashed|
 
-``<J O id>`` ``<JO id>`` - Request details of a specific Turnout/Point
+``<J O>`` ``<JO>`` - Request the list of defined turntables/traversers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Response:*
+  |_| ``<jO [id1 id2 id3 ...]>`` |BR|
+  |_| > **id:** unique id of the turntable(s)/traverser(s) |BR|
+  |_|  |BR|
+  |_| *Example Responses:* |BR|
+  |_| Response (has defined Turnouts/Points): ``<jO id1 id2 id3 ...>`` |BR|
+  |_| Response (no defined Turnouts/Points): ``<jO>``
+
+|hr-dashed|
+
+``<J O id>`` ``<JO id>`` - Request details of a specific turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **id:**  unique id of the turntable/traverser
+  
+  *Response:* |BR|
+  |_| ``<jO id type position position_count "[desc]">`` |BR|
+  |_| > **id:** unique id of the turntable/traverser  |BR|
+  |_| > **type:** one of |BR|
+  |_| |_| |_| |_| - 0 = DCC |BR|
+  |_| |_| |_| |_| - 1 = EX-Turntable |BR|
+  |_| |_| |_| |_| - X = unknown id or hidden |BR|
+  |_| > **position:** one of |BR|
+  |_| |_| |_| |_| - index of the current position (0 - 48) |BR|
+  |_| |_| |_| |_| - blank = unknown or hidden id |BR|
+  |_| > **position_count:** one of |BR|
+  |_| |_| |_| |_| - 0 = number of defined positions, including home (0) |BR|
+  |_| |_| |_| |_| - blank = unknown or hidden id |BR|
+  |_| > **desc:** one of  |BR|
+  |_| |_| |_| |_| - "desc" = description of the turntable or traverser (including surrounding quotes) |BR|
+  |_| |_| |_| |_| - blank = unknown or hidden id |BR|
+  |_|  |BR|
+  |_| *Example Responses:* |BR|
+  |_| Response (id is defined): ``<jO id type position position_count "[desc]">`` |BR|
+  |_| Response (id not defined): ``<jO id X>``
+
+  *Further information:* |BR|
+  |_| The turntable or traverser information does not include the list of defined positions, and this must be requested separated as outlined in the following section.
+
+|hr-dashed|
+
+``<J P id>`` ``<JP id>`` - Request all position details of a specified turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **id:**  unique id of the Turnout/Point
   
   *Response:* |BR|
-  |_| ``<jT id X|state |"[desc]">`` |BR|
-  |_| > **id:** unique id of the Turnout/Point  |BR|
-  |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - C = Closed |BR|
-  |_| |_| |_| |_| - T = Thrown |BR|
-  |_| |_| |_| |_| - X = unknown id |BR|
+  |_| ``<jP id index value "[desc]">`` |BR|
+  |_| > **id:** unique id of the turntable/traverser  |BR|
+  |_| > **index:** one of |BR|
+  |_| |_| |_| |_| - the position index (0 - 48) |BR|
+  |_| |_| |_| |_| - X = unknown or hidden id |BR|
+  |_| > **value:** one of |BR|
+  |_| |_| |_| |_| - either the step count from home for the position (EX-Turntable), or the linear DCC address (DCC accessory turntables) |BR|
+  |_| |_| |_| |_| - blank = unknown or hidden id |BR|
   |_| > **desc:** one of  |BR|
-  |_| |_| |_| |_| - "desc" = description of the Turnout(Point) (including surrounding quotes) |BR|
-  |_| |_| |_| |_| - blank = unknown id |BR|
+  |_| |_| |_| |_| - "desc" = description of the turntable/traverser (including surrounding quotes) |BR|
+  |_| |_| |_| |_| - blank = unknown or hidden id |BR|
   |_|  |BR|
   |_| *Example Responses:* |BR|
-  |_| Response (id is defined): ``<jT id state "[desc]">`` |BR|
-  |_| Response (id not defined): ``<jT id X>``
-
-|hr-dashed|
-
-``<J O>`` ``<JO>`` - Request the list of defined turnout/Point IDs
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  *Response:*
-  |_| ``<jT [id1 id2 id3 ...]>`` |BR|
-  |_| > **id:** unique id of the Turnout/s(Point/s) |BR|
-  |_|  |BR|
-  |_| *Example Responses:* |BR|
-  |_| Response (has defined Turnouts/Points): ``<jT id1 id2 id3 ...>`` |BR|
-  |_| Response (no defined Turnouts/Points): ``<jT>``
+  |_| Response (id is defined): ``<jO id index value "[desc]">`` |BR|
+  |_| Response (id not defined): ``<jO id X>``
 
 ----
 

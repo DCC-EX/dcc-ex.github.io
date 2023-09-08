@@ -58,14 +58,15 @@ Download and Run EX-Installer
 
 * For **Apple macOS**:
 
-  * :dcc-ex-red:`The instructions here are incomplete.  This will be updated shortly.` Open a terminal window and navigate to that folder
-  * **Run the installer with** the following command: ``./EX-Installer-macOS`` |BR| |BR|
+  * Open a terminal window and navigate to the that folder that you downloaded the file to.  e.g.: |BR| ``cd Downloads``
+  * Enter the following command to tell the OS that it is an executable: |BR| ``chmod +x EX-Installer-macOS``
+  * **Run the installer with** the following command: |BR| ``./EX-Installer-macOS`` |BR| |BR|
 
 * For **Linux**:
 
   * Right-click on the file, go to Properties, then the Permissions tab, and check "Allow executing file as program"
   * Open a terminal window and navigate to that folder
-  * **Run the installer with** the following command: ``./EX-Installer-Linux64`` |BR| |BR|
+  * **Run the installer with** the following command: |BR| ``./EX-Installer-Linux64`` |BR| |BR|
 
 .. warning:: 
    

@@ -806,13 +806,16 @@ To fully define a turntable/traverser object, you need to define the object firs
 
 |hr-dashed|
 
-``EXTT_TURNTABLE( id, vpin, home, [, "description"] )`` - Define an EX-Turntable turntable/traverser
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``EXTT_TURNTABLE( id, vpin, i2c_address, home, [, "description"] )`` - Define an EX-Turntable turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  Define a DCC accessory turntable/traverser at the specified **id** and **vpin**, with a **home** angle.
+  Define an EX-Turntable turntable/traverser at the specified **id**, **vpin**, and **i2c_address**, with a **home** angle.
+
+  This statement will both create the |EX-TT| device as well as the turntable/traverser object, so you do not need a separate ``HAL()`` statement for an |EX-TT| device, nor do you need to create it via "myHal.cpp".
 
   - id - the id of the turntable/traverser, valid IDs are 1 - 32767
-  - vpin - the id of the vpin where the |EX-TT| device is located, which must be defined prior to this statement
+  - vpin - the id of the vpin where the |EX-TT| device is located
+  - i2c_address - the |I2C| address of the |EX-TT| device
   - angle - the angle of the home position, valid angles are 0 - 3600
 
 |hr-dashed|

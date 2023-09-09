@@ -35,7 +35,6 @@ Hardware, Software, tools
     hardware/index
     software/index
     software/command-summary-consolidated
-    software/single-opcode-reference
     /ex-rail/EX-RAIL-command-reference
     developers/index
     accessories/index

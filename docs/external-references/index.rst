@@ -59,4 +59,4 @@ Paul Antoine
 DriverDTrains
 ------------
 
-* ~ 27 August 2023 - `"#4 Assembling a Mega DCC-EX Command Station" - Driver D (Initial Starter with future App install)  <https://www.youtube.com/watch?v=HatlU7A5S5s>`_
+* ~ 27 August 2023 - `"#4 Assembling a Mega DCC-EX Command Station" - Driver D (Part 1 Hardware Assembly)  <https://www.youtube.com/watch?v=HatlU7A5S5s>`_

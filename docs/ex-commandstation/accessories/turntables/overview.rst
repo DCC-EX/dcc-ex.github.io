@@ -38,7 +38,13 @@ Turntable/traverser types
 DCC accessory
 -------------
 
-.
+.. note:: 
+
+  As the author of these pages and the new turntable functionality has no access to a DCC accessory turntable, operation of DCC accessory turntables is theoretical only and has not been tested. The operation has been defined referring to the instructions found online for operating a Walthers DCC turntable only.
+
+Like any other DCC accessory device, turntables are typically connected to the DCC track signal, and configured according to the manufacturer's instructions.
+
+As there is no feedback to the |EX-CS| from a DCC accessory turntable, you will not be able to use the ``WAITFORTT()`` command during |EX-R| automation, nor will a second broadcast be sent to tell throttles when a rotation or move has been completed.
 
 EX-Turntable
 ------------

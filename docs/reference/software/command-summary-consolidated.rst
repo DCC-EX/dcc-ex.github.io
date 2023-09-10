@@ -611,6 +611,19 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
 
 |hr-dashed|
 
+``<I id>`` - Request position of the specified turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Response:* |BR|
+  |_| Response: ``<i id position>`` |BR|
+  |_| Response (fail): N/A |BR|
+  |_| Response (no defined turntables/traversers): ``X`` |BR|
+  |_| |BR|
+  |_| > **id** - The numeric ID (1-32767) of the turntable to control |BR|
+  |_| > **position** - The current position of the turntable |BR|
+
+|hr-dashed|
+
 ``<I id position>`` - Rotate a DCC turntable
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

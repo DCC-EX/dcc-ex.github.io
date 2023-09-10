@@ -19,4 +19,5 @@ Read on through these pages to understand how turntables and traversers can be i
   :maxdepth: 1
     
   overview
+  dcc-turntables
   /ex-turntable/index

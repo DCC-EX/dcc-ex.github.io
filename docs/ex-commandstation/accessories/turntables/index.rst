@@ -7,9 +7,13 @@
 Turntables and traversers
 *************************
 
-Turntables and traversers can add significant interest to your model railroad as well as...
+.. note:: 
 
-Read on through these pages to understand what turntables and traversers are along with how to connect them to and control them from your |EX-CS|.
+  While |EX-TT| is |NEW-IN-V5|, this section focuses on new functionality supporting turntables/traversers in the same manner as turnouts/points, by creating objects that can be advertised to and controlled by throttles in a similar way. |NOT-IN-PROD-VERSION|.
+
+Turntables and traversers can add significant interest to your model railroad during operating sessions as well as providing space savings when used in conjunction with roundhouses and when used as staging yards.
+
+Read on through these pages to understand how turntables and traversers can be integrated into and operated with your |EX-CS|.
 
 .. toctree::
   :maxdepth: 1

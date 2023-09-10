@@ -18,16 +18,22 @@ Overview - types and options
 What is a turntable or traverser?
 =================================
 
-To go back to basics, a turntable or tarverser...
+A turntable is a device that is used to rotate locomotives, primarily used in the steam era when locomotives could not reverse, and a mechanism was required to turn them around without requiring lengthy reversing loops.
 
-When moving in to the land of digital control for model railways, there needs to be a way to control turntables and traversers electronically and, where desired, via automation.
+A traverser on the other hand typically moves horizontally or vertically to align with different tracks. In the real world, traversers tend to move horizontally only, however it is not uncommon for vertical traversers in model railroading to transfer locomotives and even full trains between levels on a layout.
+
+While turntables and traversers can be operated manually or electronically independent of your |EX-CS|, it is ideal to be able to control them the same way you can control turnouts/points, hence the introduction of this capability.
 
 This section will focus on the types of turntables/traversers supported by |EX-CS| with the common hardware configurations required to support them, along with the available methods to control them.
+
+.. note:: 
+
+  While |EX-TT| is |NEW-IN-V5|, this section focuses on new functionality supporting turntables/traversers in the same manner as turnouts/points, by creating objects that can be advertised to and controlled by throttles in a similar way. |NOT-IN-PROD-VERSION|.
 
 Turntable/traverser types
 =========================
 
-A typical model railroad turntable will be driven by a stepper or other motor, with some mechanism available to index where each...
+|EX-CS| supports two types of turntables/traversers; DCC accessory types (such as the Walthers 90' and 130' motorised turntables) and our very own |EX-TT|.
 
 DCC accessory
 -------------

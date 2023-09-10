@@ -31,7 +31,7 @@ This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our
 
 .. warning:: 
 
-   Buyer beware! There have been numerous reports of build quality with these clone boards, with poorly soldered USB connectors and issues getting wireless working two commonly reported issues.
+   Buyer beware! There have been numerous reports of build quality issues with these clone boards, with poorly soldered USB connectors and issues getting wireless working two commonly reported issues.
 
    The DCC-EX team do not recommend the combined Mega2560 + WiFi due to the number of issues encountered in recent times.
 

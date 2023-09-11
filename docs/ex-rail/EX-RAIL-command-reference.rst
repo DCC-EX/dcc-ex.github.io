@@ -776,6 +776,96 @@ All the below turnout/point definitions will define turnouts/points that are adv
 
 ----
 
+Turntable/Traverser objects - Definition and Control
+----------------------------------------------------
+
+|NOT-IN-PROD-VERSION|
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
+|hr-dashed|
+
+All the below turntable/traverser definitions will define turntables/traversers that are advertised to throttles that understand them, unless the HIDDEN keyword is used.
+
+To fully define a turntable/traverser object, you need to define the object first, and then one or more positions.
+
+"description" is an optional parameter, and must be enclosed in quotes "". If you don't wish this turntable/traverser to be advertised to throttles, then substitute the word HIDDEN (with no "") instead of the description.
+
+|hr-dashed|
+
+``DCC_TURNTABLE( id, home, [, "description"] )`` - Define a DCC accessory turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Define a DCC accessory turntable/traverser at the specified **id** and the **home** angle.
+
+  - id - the id of the turntable/traverser, valid IDs are 1 - 32767
+  - angle - the angle of the home position, valid angles are 0 - 3600
+
+|hr-dashed|
+
+``EXTT_TURNTABLE( id, vpin, i2c_address, home, [, "description"] )`` - Define an EX-Turntable turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Define an EX-Turntable turntable/traverser at the specified **id**, **vpin**, and **i2c_address**, with a **home** angle.
+
+  This statement will both create the |EX-TT| device as well as the turntable/traverser object, so you do not need a separate ``HAL()`` statement for an |EX-TT| device, nor do you need to create it via "myHal.cpp".
+
+  - id - the id of the turntable/traverser, valid IDs are 1 - 32767
+  - vpin - the id of the vpin where the |EX-TT| device is located
+  - i2c_address - the |I2C| address of the |EX-TT| device
+  - angle - the angle of the home position, valid angles are 0 - 3600
+
+|hr-dashed|
+
+``TT_ADDPOSITION( turntable_id, position_id, value, angle [, "description"] )`` - Add a turntable position
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Add a position to a turntable/traverser object **turntable_id** with position index **position_id**, step or DCC address **value**, **angle** degrees from home.
+
+  - turntable_id - the id of the turntable/traverser, which must be created prior to adding positions
+  - position_id - the index of the position to add, valid positions are 1 - 48
+  - value - either steps from home for EX-Turntable, or the linear DCC address for a DCC accessory turntable, valid values are 1 - 32767
+  - angle - the angle of the position from the home position, valid angles are 0 - 3600
+
+``IF_TTPOSITION( id, position )`` - Test if turntable/traverser is at a position
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Tests if the turntable/traverser at the specified **id** is at the specified **position**.
+
+``ONROTATE( id )`` - Event handler for when a turntable/traverser is rotated
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Triggers the event handling mechanism for turntable/traverser **id** if configured. Note that there can be only one defined ONROTATE event for a specific turntable/traverser.
+
+``ROTATE( id, position, activity )`` - Rotate an EX-Turntable turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Rotate an EX-Turntable turntable/traverser at the specified **id** to the specified **position**, and perform **activity**.
+
+  - id - the id of the turntable/traverser, valid IDs are 1 - 32767
+  - position - the position to rotate to, valid positions are 1 - 48
+  - activity - refer to :ref:`ex-turntable/test-and-tune:ex-turntable commands`, using the "EX-RAIL activity" column
+
+``ROTATE_DCC( id, position )`` - Rotate a DCC accessory turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Rotate a DCC accessory turntable/traverser at the specified **id** to the specified **position**.
+
+  - id - the id of the turntable/traverser, valid IDs are 1 - 32767
+  - position - the position to rotate to, valid positions are 1 - 48
+
+``WAITFORTT( id )`` - Wait for EX-Turntable turntable/traverser to complete a rotation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Wait for the EX-Turntable turntable/traverser at **id** to complete a rotation. As no feedback can be received from DCC accessory turntables, this is only valid for EX-Turntable.
+
+|force-break|
+
+----
+
 Sensors/Inputs - Reading and Responding
 ---------------------------------------
 
@@ -1114,6 +1204,10 @@ Also refer to :ref:`ex-turntable/test-and-tune:ex-rail automation`.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   |NEW-IN-V5| Move the specified |EX-TT| to the provided step position and perform the specified activity
+
+  .. note:: 
+
+    We highly recommend using our new turntable/traverser commands which allow turntables/traversers to be advertised to throttles similarly to how turnout/point objects are advertised and operated. Refer to :ref:`ex-rail/ex-rail-command-reference:turntable/traverser objects - definition and control`
 
 |hr-dashed|
 

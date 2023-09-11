@@ -237,18 +237,23 @@
 <li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../ex-turntable/index.html">EX-Turntable</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../ex-turntable/overview.html">Overview</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../ex-turntable/purchasing.html">Purchasing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../ex-turntable/assembly.html">Assembly &amp; Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../ex-turntable/test-and-tune.html">Testing, Tuning, and Control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../ex-turntable/layout-wiring.html">Layout Connections and Wiring</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../ex-turntable/configure.html">Configuration options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../support/ex-tt-troubleshooting.html">EX-Turntable FAQ and Troubleshooting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../ex-turntable/traverser.html">Traversers and Limited Rotation Turntables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/accessories/animation.html">Automation and Animation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/accessories/turntables/index.html">Turntables and traversers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/turntables/overview.html">Overview - types and options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/turntables/dcc-turntables.html">DCC Turntables/traversers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-turntable/index.html">EX-Turntable</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../ex-turntable/overview.html">Overview</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../ex-turntable/purchasing.html">Purchasing</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../ex-turntable/assembly.html">Assembly &amp; Setup</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../ex-turntable/test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../ex-turntable/layout-wiring.html">Layout Connections and Wiring</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../ex-turntable/configure.html">Configuration options</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../support/ex-tt-troubleshooting.html">EX-Turntable FAQ and Troubleshooting</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../ex-turntable/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/accessories/animation.html">Automation and Animation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -637,11 +642,12 @@
 <li><p><a class="reference internal" href="#turnouts-points" id="id8">Turnouts/Points</a></p></li>
 <li><p><a class="reference internal" href="#automations-routes" id="id9">Automations/Routes</a></p></li>
 <li><p><a class="reference internal" href="#roster-information" id="id10">Roster Information</a></p></li>
+<li><p><a class="reference internal" href="#turntables-traversers" id="id11">Turntables/Traversers</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#commands-to-avoid" id="id11">Commands to avoid</a></p></li>
+<li><p><a class="reference internal" href="#commands-to-avoid" id="id12">Commands to avoid</a></p></li>
 </ul>
 </nav>
 </aside>
@@ -671,6 +677,8 @@
 <p>These broadcast responses should be understood if your controller deals with turnouts/points and sensors.
 - <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">[DCC|SERVO|VPIN|LCN]</span> <span class="pre">...</span> <span class="pre">[0|1]&gt;</span></code> - When turnouts are closed/thrown, this response is broadcast (see <a class="reference internal" href="../reference/software/command-summary-consolidated.html#turnouts-points"><span class="std std-ref">Turnouts/Points</span></a>)
 - <code class="docutils literal notranslate"><span class="pre">&lt;[q|Q]</span> <span class="pre">id&gt;</span></code> - When sensors are deactivated/activated, this response is broadcast (see <a class="reference internal" href="../reference/software/command-summary-consolidated.html#sensors"><span class="std std-ref">Sensors</span></a>)</p>
+<p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
+<p>There are now turntable/traverser <code class="docutils literal notranslate"><span class="pre">&lt;i</span> <span class="pre">id</span> <span class="pre">position</span> <span class="pre">moving&gt;</span></code> broadcast responses if the new turntable/traverser objects are implemented (see <a class="reference internal" href="../reference/software/command-summary-consolidated.html#turntables-traversers"><span class="std std-ref">Turntables/Traversers</span></a>).</p>
 <section id="working-with-track-power-states">
 <h3><a class="toc-backref" href="#id3" role="doc-backlink">Working with track power states</a><a class="headerlink" href="#working-with-track-power-states" title="Permalink to this heading"></a></h3>
 <p>Track power can be On, Off, or Unknown. There is no broadcast of an Unknown power state though, meaning a throttle/controller must start with track power flagged as Unknown.</p>
@@ -726,6 +734,18 @@
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JR</span> <span class="pre">id&gt;</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">&lt;jR</span> <span class="pre">id</span> <span class="pre">&quot;description&quot;</span> <span class="pre">&quot;function1/function2/function3/...&quot;&gt;</span></code></p></td>
 <td><p>Returns the ID, description, and function map of the specified roster entry ID</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JO&gt;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;jO</span> <span class="pre">id1</span> <span class="pre">id2</span> <span class="pre">id3</span> <span class="pre">...&gt;</span></code></p></td>
+<td><p>Returns the defined turntable IDs</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JO</span> <span class="pre">id&gt;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;jO</span> <span class="pre">id</span> <span class="pre">type</span> <span class="pre">position</span> <span class="pre">position_count</span> <span class="pre">&quot;[description]&quot;&gt;</span></code></p></td>
+<td><p>Returns the ID, type (0=DCC or 1=EXTT), current position, position count, and description of the specified turntable ID</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JP</span> <span class="pre">id&gt;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;jP</span> <span class="pre">id</span> <span class="pre">index</span> <span class="pre">value</span> <span class="pre">angle</span> <span class="pre">&quot;[description]&quot;&gt;</span></code></p></td>
+<td><p>Returns the turntable ID, position index, DCC linear address or EX-Turntable step count, angle, and description of each defined position for the specified turntable ID</p></td>
 </tr>
 </tbody>
 </table>
@@ -843,10 +863,31 @@
 </ul>
 </div></blockquote>
 </section>
+<section id="turntables-traversers">
+<h4><a class="toc-backref" href="#id11" role="doc-backlink">Turntables/Traversers</a><a class="headerlink" href="#turntables-traversers" title="Permalink to this heading"></a></h4>
+<p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
+<p>A new feature has been added to support control of turntables/traversers from throttles, including the ability for throttles to “draw” turntable positions as defined to support graphical operation. If <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> commands are used to define turntables and their associated positions, a description for the turntable as well as each position is able to be defined.</p>
+<p>Note that to obtain a complete definition for a turntable/traverser, the turntable object needs to be queried first (<code class="docutils literal notranslate"><span class="pre">&lt;JO</span> <span class="pre">id&gt;</span></code>) followed by the position query (<code class="docutils literal notranslate"><span class="pre">&lt;JP</span> <span class="pre">id&gt;</span></code>) to obtain all defined positions for the object.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;JO&gt;</span></code> - Returns a list of turntable IDs.</p>
+<blockquote>
+<div><p>Example response:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;jT</span> <span class="pre">1</span> <span class="pre">2&gt;</span></code> - Turnable IDs 1 and 2 are defined.</p></li>
+</ul>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;JO</span> <span class="pre">1&gt;</span></code> - Returns details of turntable ID 1.</p>
+<blockquote>
+<div><p>Example responses:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;jO</span> <span class="pre">1</span> <span class="pre">0</span> <span class="pre">1</span> <span class="pre">5</span> <span class="pre">&quot;DCC</span> <span class="pre">Turntable&quot;&gt;</span></code> - DCC turntable type currently at position 1, with 5 defined positions and a description “DCC Turntable”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;jO</span> <span class="pre">1</span> <span class="pre">1</span> <span class="pre">0</span> <span class="pre">11</span> <span class="pre">&quot;EX-Turntable&quot;&gt;</span></code> - EX-Turntable type currently at the home position (0), with 11 defined positions and a description “EX-Turntable”</p></li>
+</ul>
+</div></blockquote>
+</section>
 </section>
 </section>
 <section id="commands-to-avoid">
-<h2><a class="toc-backref" href="#id11" role="doc-backlink">Commands to avoid</a><a class="headerlink" href="#commands-to-avoid" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Commands to avoid</a><a class="headerlink" href="#commands-to-avoid" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">func1</span> <span class="pre">func2&gt;</span></code> - Use <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">function</span> <span class="pre">1/0&gt;</span></code> instead</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span>&#160; <span class="pre">slot</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code> - Just drop the slot number</p></li>

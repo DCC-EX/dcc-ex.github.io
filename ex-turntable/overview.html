@@ -237,18 +237,23 @@
 <li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">EX-Turntable</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Overview</a></li>
-<li class="toctree-l4"><a class="reference internal" href="purchasing.html">Purchasing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="assembly.html">Assembly &amp; Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="test-and-tune.html">Testing, Tuning, and Control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="layout-wiring.html">Layout Connections and Wiring</a></li>
-<li class="toctree-l4"><a class="reference internal" href="configure.html">Configuration options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../support/ex-tt-troubleshooting.html">EX-Turntable FAQ and Troubleshooting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="traverser.html">Traversers and Limited Rotation Turntables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/accessories/animation.html">Automation and Animation</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../ex-commandstation/accessories/turntables/index.html">Turntables and traversers</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/turntables/overview.html">Overview - types and options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/turntables/dcc-turntables.html">DCC Turntables/traversers</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">EX-Turntable</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l5"><a class="reference internal" href="purchasing.html">Purchasing</a></li>
+<li class="toctree-l5"><a class="reference internal" href="assembly.html">Assembly &amp; Setup</a></li>
+<li class="toctree-l5"><a class="reference internal" href="test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l5"><a class="reference internal" href="layout-wiring.html">Layout Connections and Wiring</a></li>
+<li class="toctree-l5"><a class="reference internal" href="configure.html">Configuration options</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../support/ex-tt-troubleshooting.html">EX-Turntable FAQ and Troubleshooting</a></li>
+<li class="toctree-l5"><a class="reference internal" href="traverser.html">Traversers and Limited Rotation Turntables</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/accessories/animation.html">Automation and Animation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -604,6 +609,7 @@
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../ex-commandstation/index.html">EX-CommandStation</a></li>
           <li class="breadcrumb-item"><a href="../ex-commandstation/accessories/index.html">Adding and Controlling Accessories</a></li>
+          <li class="breadcrumb-item"><a href="../ex-commandstation/accessories/turntables/index.html">Turntables and traversers</a></li>
           <li class="breadcrumb-item"><a href="index.html">EX-Turntable</a></li>
       <li class="breadcrumb-item active">Overview</li>
   
@@ -698,7 +704,8 @@
 <section id="controlling-the-turntable">
 <h3><a class="toc-backref" href="#id3" role="doc-backlink">Controlling the turntable</a><a class="headerlink" href="#controlling-the-turntable" title="Permalink to this heading"></a></h3>
 <p>To control the turntable, the simplest method is using EX-RAIL automation commands advertised as ROUTEs to the throttle of your choice.</p>
-<p>Refer to the <a class="reference internal" href="test-and-tune.html#testing-tuning-and-control"><span class="std std-ref">Testing, Tuning, and Control</span></a> page for more details on this.</p>
+<p>There is now the ability to control <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> as a turntable or traverser object, similar to how turnouts/points are controlled, via either DCC-EX native commands or <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span>, however <span style="color:red">This feature is not available in the current 'Production' version</span>.</p>
+<p>Refer to the <a class="reference internal" href="test-and-tune.html#testing-tuning-and-control"><span class="std std-ref">Testing, Tuning, and Control</span></a> page for more details on both methods of control available.</p>
 </section>
 <section id="considerations-when-using-geared-steppers-turntables-and-or-microsteps">
 <h3><a class="toc-backref" href="#id4" role="doc-backlink">Considerations when using geared steppers, turntables, and/or microsteps</a><a class="headerlink" href="#considerations-when-using-geared-steppers-turntables-and-or-microsteps" title="Permalink to this heading"></a></h3>
@@ -708,6 +715,10 @@
 </pre></div>
 </div>
 <p>If you have a large gear on the base of a turntable with 200 teeth which is driven by a 20 tooth spur gear, that gives a gear ratio of 10:1 (200 / 20). If you then use the 28BYJ-48 stepper in half step mode with 4096 steps per revolution, this would result in 40960 steps per revolution with this gearing, meaning <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> will not be able to successfully address a full rotation.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Given a stepper motor needs to complete an entire, single step (or microstep) in one go, implementing a gear ratio that results in a fractional step count for a single, complete revolution will result in inaccuracies, as the step count will always be rounded to an integer.</p>
+</div>
 <p>In this scenario, running the 28BYJ-48 in full step mode (2048 steps) would allow this to work, as a full rotation is 20480 steps.</p>
 <p>When using stepper drives such as the A4988 or DRV8825, these are able to be configured using microsteps, which again impacts the number of steps per revolution of the stepper.</p>
 <p>In the case of a DRV8825, the smallest microstep it can be configured for is 1/32, meaning a NEMA17 stepper with 200 steps per revolution in 1/32 microstep mode equates to 6400 steps per revolution.</p>

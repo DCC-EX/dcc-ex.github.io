@@ -237,18 +237,23 @@
 <li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">EX-Turntable</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l4"><a class="reference internal" href="purchasing.html">Purchasing</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Assembly &amp; Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="test-and-tune.html">Testing, Tuning, and Control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="layout-wiring.html">Layout Connections and Wiring</a></li>
-<li class="toctree-l4"><a class="reference internal" href="configure.html">Configuration options</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../support/ex-tt-troubleshooting.html">EX-Turntable FAQ and Troubleshooting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="traverser.html">Traversers and Limited Rotation Turntables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/accessories/animation.html">Automation and Animation</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../ex-commandstation/accessories/turntables/index.html">Turntables and traversers</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/turntables/overview.html">Overview - types and options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/turntables/dcc-turntables.html">DCC Turntables/traversers</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">EX-Turntable</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l5"><a class="reference internal" href="purchasing.html">Purchasing</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Assembly &amp; Setup</a></li>
+<li class="toctree-l5"><a class="reference internal" href="test-and-tune.html">Testing, Tuning, and Control</a></li>
+<li class="toctree-l5"><a class="reference internal" href="layout-wiring.html">Layout Connections and Wiring</a></li>
+<li class="toctree-l5"><a class="reference internal" href="configure.html">Configuration options</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../support/ex-tt-troubleshooting.html">EX-Turntable FAQ and Troubleshooting</a></li>
+<li class="toctree-l5"><a class="reference internal" href="traverser.html">Traversers and Limited Rotation Turntables</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/accessories/animation.html">Automation and Animation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -604,6 +609,7 @@
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../ex-commandstation/index.html">EX-CommandStation</a></li>
           <li class="breadcrumb-item"><a href="../ex-commandstation/accessories/index.html">Adding and Controlling Accessories</a></li>
+          <li class="breadcrumb-item"><a href="../ex-commandstation/accessories/turntables/index.html">Turntables and traversers</a></li>
           <li class="breadcrumb-item"><a href="index.html">EX-Turntable</a></li>
       <li class="breadcrumb-item active">Assembly &amp; Setup</li>
   
@@ -652,12 +658,13 @@
 <ul>
 <li><p><a class="reference internal" href="#add-with-ex-installer" id="id21">Add with EX-Installer</a></p></li>
 <li><p><a class="reference internal" href="#add-manually" id="id22">Add manually</a></p></li>
+<li><p><a class="reference internal" href="#new-development-functionality-and-changes" id="id23">New development functionality and changes</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#connect-ex-turntable-to-your-ex-commandstation" id="id23">9. Connect EX-Turntable to your EX-CommandStation</a></p></li>
+<li><p><a class="reference internal" href="#connect-ex-turntable-to-your-ex-commandstation" id="id24">9. Connect EX-Turntable to your EX-CommandStation</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#now-you-re-ready" id="id24">Now you’re ready!</a></p></li>
+<li><p><a class="reference internal" href="#now-you-re-ready" id="id25">Now you’re ready!</a></p></li>
 </ul>
 </nav>
 </aside>
@@ -1042,78 +1049,47 @@ Turntable homed successfully
 <h4><a class="toc-backref" href="#id22" role="doc-backlink">Add manually</a><a class="headerlink" href="#add-manually" title="Permalink to this heading"></a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>As mentioned previously, your CommandStation needs to be running the “add-turntable-controller” branch of <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller">EX-CommandStation</a>.</p>
-<p>This will display in the serial console of your CommandStation as version 4.0.2.</p>
-<p>If the “myHal.cpp_example.txt” is missing the lines referred to below, or if you receive compile errors that the file “IO_EXTurntable” is missing when attempting to upload the CommandStation software later in this process, this indicates you are using the incorrect version of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>.</p>
-<p>The zip file containing the correct version of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> should also be attached to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> release.</p>
+<p>As mentioned previously, your CommandStation needs to be running <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> version 5.0.0 or later.</p>
+<p>If you receive compile errors that the file “IO_EXTurntable.h” is missing when attempting to upload the CommandStation software later in this process, this indicates you are using the incorrect version of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>.</p>
+<p>Previous versions of this documentation referred to editing “myHal.cpp”. While this is possible, the recommended method is to define your device in “myAutomation.h” instead.</p>
 </div>
 <p>Before you will be able to test or use <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span>, you need to configure the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software to load the appropriate device driver.</p>
-<p>This requires creating or editing the myHal.cpp file in the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> code and uploading it to your CommandStation.</p>
+<p>This requires creating or editing the myAutomation.h file in the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> code and uploading it to your CommandStation.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>It is helpful to have a high level understanding of how device drivers and the HAL works in the CommandStation as explained on the <a class="reference internal" href="../reference/developers/hal-config.html"><span class="doc">I/O Device Drivers and HAL</span></a> page. However, if that page is more information than you require at this point, then follow the steps below to add the required <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> device driver and device.</p>
 </div>
-<p>Before continuing, refer to the file “myHal.cpp_example.txt” included with the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software, and note the following.</p>
-<p>At the top of the file there are a number of lines beginning with “#include”:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Include devices you need.</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_HCSR04.h&quot;</span><span class="c1">    // Ultrasonic range sensor</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_VL53L0X.h&quot;</span><span class="c1">   // Laser time-of-flight sensor</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_DFPlayer.h&quot;</span><span class="c1">  // MP3 sound player</span>
-<span class="c1">//#include &quot;IO_EXTurntable.h&quot;   // EX-Turntable turntable controller</span>
-</pre></div>
-</div>
-<p>Note the last line, this is the device driver required to enable <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> support.</p>
-<p>Scrolling down towards the bottom of that file, you will also see this indented section:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//=======================================================================</span>
-<span class="c1">// The following directive defines an EX-Turntable turntable instance.</span>
-<span class="c1">//=======================================================================</span>
-<span class="c1">// EXTurntable::create(VPIN, Number of VPINs, I2C Address)</span>
-<span class="w">  </span><span class="c1">//</span>
-<span class="c1">// The parameters are:</span>
-<span class="c1">//   VPIN=600</span>
-<span class="c1">//   Number of VPINs=1 (Note there is no reason to change this)</span>
-<span class="c1">//   I2C address=0x60</span>
-<span class="c1">//</span>
-<span class="c1">// Note that the i2c address is defined in the EX-Turntable code, and 0x60 is the default.</span>
-
-<span class="c1">//EXTurntable::create(600, 1, 0x60);</span>
-</pre></div>
-</div>
-<p>If you don’t have an existing “myHal.cpp” file, then follow these steps to create a new one: <a class="reference internal" href="../reference/developers/hal-config.html#adding-a-new-device"><span class="std std-ref">Adding a New Device</span></a>. Note that you don’t need to worry about copying or providing device driver files, as these are already included with the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software.</p>
-<p>Copy and paste the relevant lines from the “myHal.cpp_example.txt” file as above, which should result in the following content in your new “myHal.cpp” file:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IODevice.h&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_EXTurntable.h&quot;</span><span class="c1">   // EX-Turntable turntable controller</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">halSetup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">//=======================================================================</span>
-<span class="w">  </span><span class="c1">// The following directive defines a EX-Turntable turntable instance.</span>
-<span class="w">  </span><span class="c1">//=======================================================================</span>
-<span class="w">  </span><span class="c1">// EXTurntable::create(VPIN, Number of VPINs, I2C Address)</span>
-<span class="w">  </span><span class="c1">//</span>
-<span class="w">  </span><span class="c1">// The default parameters are:</span>
-<span class="w">  </span><span class="c1">//   VPIN=600</span>
-<span class="w">  </span><span class="c1">//   Number of VPINs=1 (Note there is no reason to change this)</span>
-<span class="w">  </span><span class="c1">//   I2C address=0x60</span>
-<span class="w">  </span><span class="c1">//</span>
-<span class="w">  </span><span class="c1">// Note that the i2c address is defined in the EX-Turntable code, and 0x60 is the default.</span>
-
-<span class="w">  </span><span class="n">EXTurntable</span><span class="o">::</span><span class="n">create</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x60</span><span class="p">);</span>
-<span class="p">}</span>
+<p>You will need to include the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> device driver file “IO_EXTurntable.h” and add a <code class="docutils literal notranslate"><span class="pre">HAL()</span></code> command to create the device:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_EXTurntable.h&quot;</span><span class="c1">     // Include the device driver</span>
+<span class="n">HAL</span><span class="p">(</span><span class="n">EXTurntable</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x60</span><span class="p">)</span><span class="w">  </span><span class="c1">// Create the device</span>
 </pre></div>
 </div>
 <p>In the device setup above, there are three parameters provided, but only two may need to change in your environment if you have other devices that may conflict with these two settings:</p>
 <ul class="simple">
 <li><p>VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer <a class="reference internal" href="../reference/developers/hal.html#overview"><span class="std std-ref">Overview</span></a>).</p></li>
-<li><p>I<sup>2</sup>C address=0x60 - This is the default address on the I<sup>2</sup>C bus that the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> is configured to use. This address also needs to be unique, so change this also if it is in use elsewhere, both in “myHal.cpp” and in “config.h” in the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> software.</p></li>
+<li><p>I<sup>2</sup>C address=0x60 - This is the default address on the I<sup>2</sup>C bus that the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> is configured to use. This address also needs to be unique, so change this also if it is in use elsewhere, both in “myAutomation.h” and in “config.h” in the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> software.</p></li>
 </ul>
-<p>If you already have an existing “myHal.cpp” file, then you simply need to add these entries in the appropriate sections of your existing file, noting that the “#include” needs to be before “void halSetup() {” and the “EXTurntable::create…” needs to be before the final “}”.</p>
+<p>If you already have an existing “myAutomation.h” file, then you simply need to add these entries in the appropriate sections of your existing file, noting that the “#include” needs to be before <code class="docutils literal notranslate"><span class="pre">HAL()</span></code>.</p>
 <p>Follow the rest of the directions for <a class="reference internal" href="../reference/developers/hal-config.html#adding-a-new-device"><span class="std std-ref">Adding a New Device</span></a> all the way through to the <a class="reference internal" href="../reference/developers/hal-config.html#upload-the-new-version-of-the-software"><span class="std std-ref">Upload the new version of the software</span></a> step to upload your newly configured CommandStation.</p>
 <p>Note there is no point in checking the driver at this stage as <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> is not connected, and will show as “OFFLINE”.</p>
 </section>
+<section id="new-development-functionality-and-changes">
+<h4><a class="toc-backref" href="#id23" role="doc-backlink">New development functionality and changes</a><a class="headerlink" href="#new-development-functionality-and-changes" title="Permalink to this heading"></a></h4>
+<p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
+<p>If you are using the new developmental features for turntables and traversers available from development version 5.1.5 and on, there are some changes to the above:</p>
+<ul class="simple">
+<li><p>Remove any reference to including “IO_EXTurntable.h” as this file no longer exists, and the device driver is included automatically</p></li>
+<li><p>The new <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> command <code class="docutils literal notranslate"><span class="pre">EXTT_TURNTABLE()</span></code> creates the device, meaning you will no longer need a separate <code class="docutils literal notranslate"><span class="pre">HAL()</span></code> command</p></li>
+</ul>
+<p>To create your turntable device in “myAutomation.h”, the new command required is:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>EXTT_TURNTABLE(id, vpin, i2c_address, home [, &quot;description&quot;])
+</pre></div>
+</div>
+<p>For complete information, refer to <a class="reference internal" href="test-and-tune.html#development-version-commands"><span class="std std-ref">Development version commands</span></a>.</p>
+</section>
 </section>
 <section id="connect-ex-turntable-to-your-ex-commandstation">
-<h3><a class="toc-backref" href="#id23" role="doc-backlink">9. Connect EX-Turntable to your EX-CommandStation</a><a class="headerlink" href="#connect-ex-turntable-to-your-ex-commandstation" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id24" role="doc-backlink">9. Connect EX-Turntable to your EX-CommandStation</a><a class="headerlink" href="#connect-ex-turntable-to-your-ex-commandstation" title="Permalink to this heading"></a></h3>
 <p>To control <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> from your CommandStation, you will need a connection to the I<sup>2</sup>C (SDA, SCL) pins.</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
@@ -1146,7 +1122,7 @@ Turntable homed successfully
 </section>
 </section>
 <section id="now-you-re-ready">
-<h2><a class="toc-backref" href="#id24" role="doc-backlink">Now you’re ready!</a><a class="headerlink" href="#now-you-re-ready" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id25" role="doc-backlink">Now you’re ready!</a><a class="headerlink" href="#now-you-re-ready" title="Permalink to this heading"></a></h2>
 <p>At this point, you should have a fully assembled <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> with the software loaded, a default configuration, and the device driver installed and configured in your CommandStation.</p>
 <p>In addition, <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> should be connected to your CommandStation ready to test, tune your turntable positions, and configure EX-RAIL ready for use on your layout.</p>
 <p>Click the “next” button to get cracking!</p>

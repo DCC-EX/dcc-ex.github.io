@@ -46,6 +46,10 @@ These broadcast responses should be understood if your controller deals with tur
 - ``<H id [DCC|SERVO|VPIN|LCN] ... [0|1]>`` - When turnouts are closed/thrown, this response is broadcast (see :ref:`reference/software/command-summary-consolidated:turnouts/points`)
 - ``<[q|Q] id>`` - When sensors are deactivated/activated, this response is broadcast (see :ref:`reference/software/command-summary-consolidated:sensors`)
 
+|NOT-IN-PROD-VERSION|
+
+There are now turntable/traverser ``<i id position moving>`` broadcast responses if the new turntable/traverser objects are implemented (see :ref:`reference/software/command-summary-consolidated:turntables/traversers`).
+
 Working with track power states
 -------------------------------
 
@@ -96,6 +100,15 @@ Key throttle specific commands are summarised here, refer below for elaboration 
   * - ``<JR id>``
     - ``<jR id "description" "function1/function2/function3/...">``
     - Returns the ID, description, and function map of the specified roster entry ID
+  * - ``<JO>``
+    - ``<jO id1 id2 id3 ...>``
+    - Returns the defined turntable IDs
+  * - ``<JO id>``
+    - ``<jO id type position position_count "[description]">``
+    - Returns the ID, type (0=DCC or 1=EXTT), current position, position count, and description of the specified turntable ID
+  * - ``<JP id>``
+    - ``<jP id index value angle "[description]">``
+    - Returns the turntable ID, position index, DCC linear address or EX-Turntable step count, angle, and description of each defined position for the specified turntable ID
 
 ----
 
@@ -203,6 +216,30 @@ Roster Information
   Example response:
 
   * ``<jR 200 "Thomas" "whistle/*bell/squeal/panic">`` - Returns the defined description "Thomas" with each defined function's name. Refer to the EX-RAIL ROSTER command for function map format.
+
+Turntables/Traversers
+^^^^^^^^^^^^^^^^^^^^^
+
+|NOT-IN-PROD-VERSION|
+
+A new feature has been added to support control of turntables/traversers from throttles, including the ability for throttles to "draw" turntable positions as defined to support graphical operation. If |EX-R| commands are used to define turntables and their associated positions, a description for the turntable as well as each position is able to be defined.
+
+Note that to obtain a complete definition for a turntable/traverser, the turntable object needs to be queried first (``<JO id>``) followed by the position query (``<JP id>``) to obtain all defined positions for the object.
+
+``<JO>`` - Returns a list of turntable IDs.
+
+  Example response:
+
+  - ``<jT 1 2>`` - Turnable IDs 1 and 2 are defined.
+
+``<JO 1>`` - Returns details of turntable ID 1.
+
+  Example responses:
+
+  - ``<jO 1 0 1 5 "DCC Turntable">`` - DCC turntable type currently at position 1, with 5 defined positions and a description "DCC Turntable".
+  - ``<jO 1 1 0 11 "EX-Turntable">`` - EX-Turntable type currently at the home position (0), with 11 defined positions and a description "EX-Turntable"
+
+
 
 Commands to avoid
 =================

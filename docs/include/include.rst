@@ -233,15 +233,15 @@
 ..
 .. |Access Point| replace::
 
-    :doc:`Access Point </reference/glossary>`
+    :doc:`Access Point (AP) </reference/glossary>`
 ..
 .. |Access Point Mode| replace::
 
-    :doc:`Access Point Mode </reference/glossary>`
+    :doc:`Access Point (AP) Mode </reference/glossary>`
 ..
 .. |Station Mode| replace::
 
-    :doc:`Station Mode </reference/glossary>`
+    :doc:`Station (STA) Mode  </reference/glossary>`
 ..
 .. |Arduino IDE| replace::
 

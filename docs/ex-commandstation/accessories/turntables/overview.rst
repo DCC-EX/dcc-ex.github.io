@@ -83,3 +83,8 @@ EX-Turntable
 ============
 
 Given |EX-TT| is fully integrated into your |EX-CS| via its device driver, full control and automation is possible as the status of a turntable or traverser is known at all times, allowing |EX-R| automations to be sequenced along with turntable/traverser rotations and movements.
+
+Read on for more...
+===================
+
+Continue on to the next pages to understand the methods to define and control these types of turntables/traversers...

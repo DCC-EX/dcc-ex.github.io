@@ -621,7 +621,7 @@
 <section id="glossary">
 <h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../begin/levels.html#conductor"><img alt="Conductor Hat" src="../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
-<table class="docutils align-default" style="width: 900px">
+<table class="table-wrap-text docutils align-default" style="width: 900px">
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 75%" />
@@ -632,38 +632,44 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Arduino IDE</p></td>
+<tr class="row-even"><td><p>Access Point (AP) Mode</p></td>
+<td><p>In Access Point (AP) mode, the tiny ESP-WiFi chip acts as a very basic WiFi server and provides a small IP network for your throttle or for your computer running JMRI with the wiThrottle Server enabled. It acts much like your router does to let things connect directly to it (currently up to four connections). <br /> Using the Command Station in AP mode allows you to have a separate network so you can keep your layout network separate from your home network. <br /> <a class="reference internal" href="../ex-commandstation/advanced-setup/supported-wifi/wifi-config.html"><span class="doc">Refer here for more information.</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Arduino IDE</p></td>
 <td><p>A free app running on your PC, specifically designed to install software onto Arduino microprocessors. <br /> <a class="reference external" href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>Command Station <br /> DCC Command Station <br /> DCC Base Station</p></td>
+<tr class="row-even"><td><p>Command Station <br /> DCC Command Station <br /> DCC Base Station</p></td>
 <td><p>See <a class="reference external" href="https://dccwiki.com/Command_Station">https://dccwiki.com/Command_Station</a></p></td>
 </tr>
-<tr class="row-even"><td><p>Consist <br /> Multiple Unit</p></td>
+<tr class="row-odd"><td><p>Consist <br /> Multiple Unit</p></td>
 <td><p>Multiple locos hauling a singe train. see <a class="reference external" href="https://dccwiki.com/Multiple_Unit_Consisting">https://dccwiki.com/Multiple_Unit_Consisting</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>Cab</p></td>
+<tr class="row-even"><td><p>Cab</p></td>
 <td><p>A Cab can refer to a throttle (or controller) as well as a loco or locomotive <br /> In the context of DCC-EX commands, <cite>cab</cite> refers to a loco</p></td>
 </tr>
-<tr class="row-even"><td><p>DC</p></td>
+<tr class="row-odd"><td><p>DC</p></td>
 <td><p>Direct Current</p></td>
 </tr>
-<tr class="row-odd"><td><p>DCC</p></td>
+<tr class="row-even"><td><p>DCC</p></td>
 <td><p>Digital Command Control.  NMRA Specification for controlling trains. <br /> See <a class="reference external" href="https://dccwiki.com/NMRA/NMRA_Standards">https://dccwiki.com/NMRA/NMRA_Standards</a></p></td>
 </tr>
-<tr class="row-even"><td><p>Engine Driver <br /> Engine Driver Throttle</p></td>
+<tr class="row-odd"><td><p>Engine Driver <br /> Engine Driver Throttle</p></td>
 <td><p>Android app for controlling DCC locos using the wiThrottle Protocol <br /> See <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p>DCC++ Commands <br /> &lt;DCC++&gt; <br /> DCC++ Protocol <br /> DCC++ API</p></td>
+<tr class="row-even"><td><p>DCC++ Commands <br /> &lt;DCC++&gt; <br /> DCC++ Protocol <br /> DCC++ API</p></td>
 <td><p>Old name for the DCC-EX Native Commands / DCC-EX Native Protocol. <br /> Some references to this still remain for backward compatibility. i.e. JMRI still refers to DCC++.</p></td>
 </tr>
-<tr class="row-even"><td><p>DCC-EX Native Commands <br /> DCC-EX Native Protocol <br /> DCC-EX Native API</p></td>
+<tr class="row-odd"><td><p>DCC-EX Native Commands <br /> DCC-EX Native Protocol <br /> DCC-EX Native API</p></td>
 <td><p>New name for the DCC++ Commands/Protocol/API. <br /> Refer to <a class="reference internal" href="software/command-summary-consolidated.html"><span class="doc">DCC-EX Native Commands - Consolidated Reference</span></a> for details.</p></td>
 </tr>
-<tr class="row-odd"><td><p>JMRI</p></td>
+<tr class="row-even"><td><p>JMRI</p></td>
 <td><p><a class="reference external" href="https://www.jmri.org/">Java Model Railroad Interface</a></p></td>
 </tr>
-<tr class="row-even"><td><p>Motor Driver</p></td>
+<tr class="row-odd"><td><p>Motor Driver</p></td>
 <td><p>Same as “Motor Shield” “Motor Board” “Motorboard” <br /> See <a class="reference internal" href="hardware/motor-boards.html"><span class="doc">Supported Motor Drivers</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Station (STA) Mode</p></td>
+<td><p>Station Mode allows you to connect the Command Station to your existing home network. <br /> The Command Station becomes a Station or Client rather than an Access Point. <br /> That means instead of being a host that manages the IP of the smartphone that runs your Throttle, it becomes a station that connects to your existing network just like any of the other computers or devices connected to your network. The Throttle then connects to the Command Station by finding its IP address on the network. <br /> <a class="reference internal" href="../ex-commandstation/advanced-setup/supported-wifi/wifi-config.html"><span class="doc">Refer here for more information.</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>Switching <br /> Shunting</p></td>
 <td><p>The process of moving individual carriages to/from specific locations on yards or sidings.</p></td>

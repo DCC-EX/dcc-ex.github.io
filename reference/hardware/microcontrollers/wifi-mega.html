@@ -645,7 +645,7 @@
 <ul>
 <li><p><a class="reference internal" href="#short-version-of-network-setup" id="id20">Short Version of Network Setup</a></p></li>
 <li><p><a class="reference internal" href="#long-version-of-network-setup" id="id21">Long Version of Network Setup</a></p></li>
-<li><p><a class="reference internal" href="#setting-up-in-access-point-ap-mode" id="id22">Setting up in Access Point AP Mode</a></p></li>
+<li><p><a class="reference internal" href="#setting-up-in-access-point-ap-mode" id="id22">Setting up in Access Point (AP) Mode</a></p></li>
 <li><p><a class="reference internal" href="#setting-up-wifi-in-station-sta-mode-with-router" id="id23">Setting up WiFi in Station (STA) Mode with Router</a></p></li>
 </ul>
 </li>
@@ -657,16 +657,18 @@
 </ul>
 </nav>
 </aside>
-<p><strong>A WiFi EX-CommandStation on one Board</strong></p>
+<p><strong>A WiFi EX-CommandStation with just two boards</strong>  (The Mega+WiFi board plus a Motor Shield)</p>
 <figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="../../../_images/mega_wifi.png"><img alt="Mega WiFi" src="../../../_images/mega_wifi.png" style="width: 384.40000000000003px; height: 308.40000000000003px;" /></a>
 <figcaption>
 <p><span class="caption-number">Figure 34 </span><span class="caption-text">Mega+WiFi Board</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>Do you know you are going want WiFi connectivity to connect your Throttle directly to your Command Station? Are you okay with having to throw a few switches and upload a bit of firmware onto the built-in ESP8266 WiFi chip? The process is easy, but since in involves having to use another bit of software and requires a couple of more steps, we labelled this option for Tinkerers, but it doesn’t involve any soldering or jumper wiring.</p>
+<p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
+<p>Do you know you are going want WiFi connectivity to connect your Throttle directly to your Command Station? <br /> Are you okay with having to throw a few switches and upload a bit of firmware onto the built-in ESP8266 WiFi chip?</p>
+<p>The process is easy, but since in involves having to use another bit of software and requires a couple of more steps, we labelled this option for <strong>Tinkerers</strong>, but it doesn’t involve any soldering or jumper wiring.</p>
 <hr class="docutils" />
-<p>This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brand names though the board itself can also be unmarked.</p>
+<p>Mega+WiFi Board is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Buyer beware! There have been numerous reports of build quality issues with these clone boards, with poorly soldered USB connectors and issues getting wireless working two commonly reported issues.</p>
@@ -858,8 +860,8 @@
 </section>
 <section id="decide-if-you-want-access-point-mode-or-station-mode">
 <h2><a class="toc-backref" href="#id18" role="doc-backlink">2. Decide if you want Access Point Mode or Station Mode</a><a class="headerlink" href="#decide-if-you-want-access-point-mode-or-station-mode" title="Permalink to this heading"></a></h2>
-<p>Access Point (AP) Mode (the default) makes the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> an Access Point. That is a direct connection from your Throttle (Phone) to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> as a Local Intranet. There is no Internet access.  Station Mode connects the Command Station to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> so your Throttles (Controllers) can find it on your network.</p>
-<p>If you choose to use AP mode, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>. Go directly to step 5.</p>
+<p><a class="reference internal" href="../../glossary.html"><span class="doc">Access Point (AP) Mode</span></a> (the default) makes the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> an Access Point. That is a direct connection from your Throttle (Phone) to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> as a Local Intranet. There is no Internet access.  <a class="reference internal" href="../../glossary.html"><span class="doc">Station (STA) Mode</span></a> connects the Command Station to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> so your Throttles (Controllers) can find it on your network.</p>
+<p>If you choose to use <a class="reference internal" href="../../glossary.html"><span class="doc">Access Point (AP) Mode</span></a>, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>. Go directly to step 5.</p>
 <p>If you are going to want to connect to your WiFi router, you just need to enter your login information. Take a look at the <a class="reference internal" href="#short-version-of-network-setup">Short Version of Network Setup</a> below before proceeding to step 5. But keep in mind, you can always install, make changes, and install again.</p>
 </section>
 <section id="configure-the-ex-commandstation-software">
@@ -878,7 +880,7 @@
 <p><strong>First, make sure your dip switches are set with 1,2,3,4 ON and 5,6,7 OFF (8 doesn’t matter)</strong></p>
 </section>
 <section id="setting-up-in-access-point-ap-mode">
-<h3><a class="toc-backref" href="#id22" role="doc-backlink">Setting up in Access Point AP Mode</a><a class="headerlink" href="#setting-up-in-access-point-ap-mode" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id22" role="doc-backlink">Setting up in Access Point (AP) Mode</a><a class="headerlink" href="#setting-up-in-access-point-ap-mode" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>If using the installer, just check the WiFi check box and leave SSID and password alone</p></li>
 <li><p>If using the Arduino IDE,Make sure you didn’t put “//” in front of the <cite>#define ENABLE_WIFI true</cite> line in your config.h file</p></li>
@@ -923,15 +925,15 @@
 <section id="connect-your-phone-as-a-throttle-controller">
 <h2><a class="toc-backref" href="#id26" role="doc-backlink">6. Connect your Phone as a Throttle (Controller)</a><a class="headerlink" href="#connect-your-phone-as-a-throttle-controller" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p>If operating in STA mode, make sure your phone is connected to your local network (The same SSID and PASSWD you set in the config.h file)</p></li>
-<li><p>If Operating in AP mode, disconnect your phone/tablet from any other network and find the SSID for your Command Station in your network list. It will be “DCCEX_xxxxxx” where the x’s are the last 6 characters of your WiFi chip’s MAC address. Use the password “PASS_xxxxxx” where the x’s are the same 6 characters.</p></li>
+<li><p>If operating in <a class="reference internal" href="../../glossary.html"><span class="doc">Station (STA) Mode</span></a>, make sure your phone is connected to your local network (The same SSID and PASSWD you set in the config.h file)</p></li>
+<li><p>If Operating in <a class="reference internal" href="../../glossary.html"><span class="doc">Access Point (AP) Mode</span></a>, disconnect your phone/tablet from any other network and find the SSID for your Command Station in your network list. It will be “DCCEX_xxxxxx” where the x’s are the last 6 characters of your WiFi chip’s MAC address. Use the password “PASS_xxxxxx” where the x’s are the same 6 characters.</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You MUST either forget your local network or turn off “auto-reconnect” for that connection when using AP Mode. If you do not, your phone will disconnect from the DCCEX_xxxxxx network and connect to either a stronger connection, or one that has a connection to the internet.</p>
+<p>You MUST either forget your local network or turn off “auto-reconnect” for that connection when using <a class="reference internal" href="../../glossary.html"><span class="doc">Access Point (AP) Mode</span></a>. If you do not, your phone will disconnect from the DCCEX_xxxxxx network and connect to either a stronger connection, or one that has a connection to the internet.</p>
 </div>
 <ul class="simple">
-<li><p>Start your Smart Phone (Android) <a class="reference internal" href="../../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> App Or (Apple iOS) <a class="reference internal" href="../../../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> App and enter the IP address XXX.XXX.X.XXX assigned in the Arduino Serial Monitor above and Port 2560. For AP mode, it will usually be 192.168.4.1. For STA mode, it will be whatever your router assigned it.</p></li>
+<li><p>Start your Smart Phone (Android) <a class="reference internal" href="../../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> App Or (Apple iOS) <a class="reference internal" href="../../../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> App and enter the IP address XXX.XXX.X.XXX assigned in the Arduino Serial Monitor above and Port 2560. For <a class="reference internal" href="../../glossary.html"><span class="doc">Access Point (AP) Mode</span></a>, it will usually be 192.168.4.1. For <a class="reference internal" href="../../glossary.html"><span class="doc">Station (STA) Mode</span></a>, it will be whatever your router assigned it.</p></li>
 </ul>
 <p>If the <a class="reference internal" href="../../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> fails to connect the first time with the Command Station just press the Mega’s red Reset button and try the IP/Port connection again.</p>
 <p>You should have a direct Throttle connection to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> 3.0.5+ Standalone WiFi Command Station Via your home router.</p>
@@ -944,9 +946,13 @@
 <h2><a class="toc-backref" href="#id27" role="doc-backlink">Diagnosing Problems</a><a class="headerlink" href="#diagnosing-problems" title="Permalink to this heading"></a></h2>
 <p>There a few things to try if you experience issues connecting or staying connected:</p>
 <ol class="arabic simple">
-<li><p>Connect a serial monitor to the USB port and watch the boot sequence. The code will check each serial port in order to see if anything responds to an “AT” command. You will see “OK” on a line where it finds your WiFi board on serial port 3 and failure if it does not.</p></li>
+<li><p>Connect a serial monitor to the USB port and watch the boot sequence. The code will check each serial port in order to see if anything responds to an “AT” command. You will see “OK” on a line where it finds your WiFi board on serial port 3 and failure if it does not.</p>
+<ul class="simple">
+<li><p>Confirm that you see this exact line <code class="docutils literal notranslate"><span class="pre">AT</span> <span class="pre">version:1.7.4.0(May</span> <span class="pre">11</span> <span class="pre">2020</span> <span class="pre">19:13:04)</span></code> <br /> if you see any other version or date/time, then the flash did not work.</p></li>
+</ul>
+</li>
 <li><p>Make sure the little slide switch is set to Tx/Rx 3</p></li>
-<li><p>Make sure you forget your local network if using AP mode or set your home network to not automatically reconnect.</p></li>
+<li><p>Make sure you forget your local network if using <a class="reference internal" href="../../glossary.html"><span class="doc">Access Point (AP) Mode</span></a> or set your home network to not automatically reconnect.</p></li>
 <li><p>Try changing the WiFi Channel in your config.h file to another channel and uploading the firmware again.</p></li>
 </ol>
 </section>

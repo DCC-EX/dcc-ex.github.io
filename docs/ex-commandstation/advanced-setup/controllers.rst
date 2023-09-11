@@ -87,7 +87,7 @@ For those who want the power of |JMRI| to operate a complex layout, you would in
 Command Language (API)
 ======================
 
-There are at least 3 ways for a throttle to 'talk' to a Command Station; the |DCC-EX Native Commands|, |WiThrottle Protocol| command language, and via the |JMRI| Web Server command language. For an explanation of what these terms mean, and what that means to you, please see :doc:`Protocols: WiThrottle, DCC-EX Native Commands, and Web Servers Explained </throttles/protocols>`. |EX-CS| natively understands our own |DCC-EX Native Commands| and the |WiThrottle Protocol| API, and will work with a direct connection to these throttles. However, you can connect throttles to the computer running |JMRI|, and use |JMRI| as the middleware to send commands to |EX-CS|. |JMRI| uses DCC++ commands when speaking to the Command Station.
+There are at least 3 ways for a throttle to 'talk' to a Command Station; the |DCC-EX Native Commands|, |WiThrottle Protocol| command language, and via the |JMRI| Web Server command language. For an explanation of what these terms mean, and what that means to you, please see :doc:`Protocols: WiThrottle, DCC-EX Native Commands, and Web Servers Explained </throttles/protocols>`. |EX-CS| natively understands our own |DCC-EX Native Commands| and the |WiThrottle Protocol| API, and will work with a direct connection to these throttles. However, you can connect throttles to the computer running |JMRI|, and use |JMRI| as the middleware to send commands to |EX-CS|. |JMRI| uses |DCC-EX Native Commands| when speaking to the Command Station.
 
 Compatible Throttles (Controllers)
 ==================================
@@ -143,8 +143,8 @@ WiThrottle (iOS | WiThrottle | WiFi)
 
 See :doc:`WiThrottle Page </throttles/software/withrottle>`
 
-Locontrol (iOS | JMRI Web Server, DCC++ | WiFi)
-------------------------------------------------
+Locontrol (iOS | JMRI Web Server, DCC-EX Native Commands | WiFi)
+----------------------------------------------------------------
 
 Locontrol is a beautiful and functional throttle that uses the |JMRI| Web Server to connect. Soon it will be able to connect directly to the |EX-CS| by using the |DCC-EX Native Commands| set.
 

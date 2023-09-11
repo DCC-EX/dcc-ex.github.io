@@ -14,4 +14,4 @@ Setting up the UNO is essentially the same as setting up a Mega, so refer to the
 
 .. warning:: 
 
-    **Uno R4 is not supported** |BR| If you choose to purchase an Arduino Uno, it is vital that you purchase the **Revision 3 (R3)** version, :dcc-ex-red-bold:`not` the **Revision 4 (R4)** version.  The |EX-CS| :dcc-ex-red:`cannot run` on the R4 version.  :doc:`See here from more informtion</news/posts/20230728>`.
+    **Uno R4 is not supported** |BR| If you choose to purchase an Arduino Uno, it is vital that you purchase the **Revision 3 (R3)** version, :dcc-ex-red-bold:`not` the **Revision 4 (R4)** version.  The |EX-CS| :dcc-ex-red:`cannot run` on the R4 version.  :doc:`See here from more information</news/posts/20230728>`.

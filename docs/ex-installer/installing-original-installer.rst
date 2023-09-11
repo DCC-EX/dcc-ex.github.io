@@ -20,6 +20,8 @@ Using the Installer (Windows x32, MacOS or Linux)
 
    Use the :doc:`new EX-Installer <installing>` instead for Microsoft Windows x64 computers.
 
+   As of the 11th September 2023, this original installer is now a public archive, meaning no further development will occur.
+
 .. warning:: 
 
   Please be advised that our installer currently does not work reliably on Linux or macOS which is a known issue.

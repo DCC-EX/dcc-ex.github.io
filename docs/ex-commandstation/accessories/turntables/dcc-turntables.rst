@@ -34,8 +34,8 @@ To define a DCC accessory turntable with an ID of 201, starting at linear DCC ad
 
 .. code-block:: 
 
-  <I 201 DCC 0>
-  <I 201 ADD 1 201 0>
+  <I 201 DCC 0>           // This creates the turntable object
+  <I 201 ADD 1 201 0>     // This adds position 1 with the DCC address 201
   <I 201 ADD 2 202 0>
   <I 201 ADD 3 203 0>
   <I 201 ADD 4 204 0>
@@ -44,7 +44,7 @@ To define a DCC accessory turntable with an ID of 201, starting at linear DCC ad
   <I 201 ADD 7 207 0>
   <I 201 ADD 8 208 0>
   <I 201 ADD 9 209 0>
-  <I 201 ADD 10 210 0>
+  <I 201 ADD 10 210 0>    // This adds position 10 with the DCC address 210
 
 Once these are defined, it can be operated using the ``<I id position>`` command:
 
@@ -60,8 +60,8 @@ To repeat the above example using |EX-R| instead, these commands need to be adde
 
 .. code-block:: 
 
-  DCC_TURNTABLE(201,0,"My DCC turntable")
-  TT_ADDPOSITION(201,1,201,0,"Roundhouse stall 1")
+  DCC_TURNTABLE(201,0,"My DCC turntable")           // This creates the turntable object
+  TT_ADDPOSITION(201,1,201,0,"Roundhouse stall 1")  // This adds position 1 with the DCC address 201
   TT_ADDPOSITION(201,2,202,0,"Roundhouse stall 2")
   TT_ADDPOSITION(201,3,203,0,"Roundhouse stall 3")
   TT_ADDPOSITION(201,4,204,0,"Roundhouse stall 4")
@@ -70,14 +70,14 @@ To repeat the above example using |EX-R| instead, these commands need to be adde
   TT_ADDPOSITION(201,7,207,0,"Turntable entry")
   TT_ADDPOSITION(201,8,208,0,"Maintenance bay 1")
   TT_ADDPOSITION(201,9,209,0,"Maintenance bay 2")
-  TT_ADDPOSITION(201,10,210,0,"Maintenance bay 3")
+  TT_ADDPOSITION(201,10,210,0,"Maintenance bay 3")  // This adds position 10 with the DCC address 210
 
 Throttle control
 ----------------
 
 The result of both examples above is that the turntable objects are advertised to throttles that understand turntable objects, meaning they can be controlled in a similar manner to turnouts/points.
 
-Note, however, that as this is brand new functionality, there are likely to be no throttles that understand these commands yet.
+Note, however, that as this is brand new functionality, there are likely to be no throttles that understand these commands yet (subtle hint for throttle developers here!).
 
 Automation options
 ------------------

@@ -100,7 +100,9 @@ Controlling the turntable
 
 To control the turntable, the simplest method is using EX-RAIL automation commands advertised as ROUTEs to the throttle of your choice.
 
-Refer to the :ref:`ex-turntable/test-and-tune:testing, tuning, and control` page for more details on this.
+There is now the ability to control |EX-TT| as a turntable or traverser object, similar to how turnouts/points are controlled, via either DCC-EX native commands or |EX-R|, however |NOT-IN-PROD-VERSION|.
+
+Refer to the :ref:`ex-turntable/test-and-tune:testing, tuning, and control` page for more details on both methods of control available.
 
 Considerations when using geared steppers, turntables, and/or microsteps
 ------------------------------------------------------------------------
@@ -114,6 +116,10 @@ If your physical turntable involves gearing, for example a small spur gear on th
   # large gear teeth / # small gear teeth * stepper steps per rotation
 
 If you have a large gear on the base of a turntable with 200 teeth which is driven by a 20 tooth spur gear, that gives a gear ratio of 10:1 (200 / 20). If you then use the 28BYJ-48 stepper in half step mode with 4096 steps per revolution, this would result in 40960 steps per revolution with this gearing, meaning |EX-TT| will not be able to successfully address a full rotation.
+
+.. warning:: 
+
+  Given a stepper motor needs to complete an entire, single step (or microstep) in one go, implementing a gear ratio that results in a fractional step count for a single, complete revolution will result in inaccuracies, as the step count will always be rounded to an integer.
 
 In this scenario, running the 28BYJ-48 in full step mode (2048 steps) would allow this to work, as a full rotation is 20480 steps.
 

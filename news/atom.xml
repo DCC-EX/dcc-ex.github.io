@@ -2,10 +2,31 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2023-09-11T00:40:37.450605+00:00</updated>
+  <updated>2023-09-11T03:14:09.521965+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.3">ABlog</generator>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20230911.html</id>
+    <title>Farewell to the old exInstaller, in with the new EX-Installer!</title>
+    <updated>2023-09-11T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="farewell-to-the-old-exinstaller-in-with-the-new-ex-installer"&gt;
+
+&lt;p&gt;Today, we bid a fond farewell to the old exInstaller, used successfully by many a user to load our flagship product &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt; onto Arduino devices around the world and enable DCC control of many model railroading layouts.&lt;/p&gt;
+&lt;p&gt;As announced earlier this year, our new &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt; has been released to supersede our original installer, and over time will allow loading all our Arduino based products rather than just focusing on &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;If you still use the original exInstaller, we encourage you to move to &lt;a class="reference internal" href="ex-installer/index.html"&gt;&lt;span class="doc"&gt;EX-Installer&lt;/span&gt;&lt;/a&gt; instead.&lt;/p&gt;
+&lt;p&gt;The old exInstaller has now been made a public archive, and no further development will occur.&lt;/p&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20230911.html" rel="alternate"/>
+    <summary>Today, we bid a fond farewell to the old exInstaller, used successfully by many a user to load our flagship product &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt; onto Arduino devices around the world and enable DCC control of many model railroading layouts.</summary>
+    <category term="ex-installer" label="ex-installer"/>
+    <published>2023-09-11T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>https://dcc-ex.com/news/posts/20230807.html</id>
     <title>Version 5 is here!</title>

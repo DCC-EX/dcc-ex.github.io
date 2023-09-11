@@ -21,6 +21,8 @@ Glossary
       - In Access Point (AP) mode, the tiny ESP-WiFi chip acts as a very basic WiFi server and provides a small IP network for your throttle or for your computer running JMRI with the wiThrottle Server enabled. It acts much like your router does to let things connect directly to it (currently up to four connections). |BR| Using the Command Station in AP mode allows you to have a separate network so you can keep your layout network separate from your home network. |BR| :doc:`Refer here for more information. </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
     * - Arduino IDE
       - A free app running on your PC, specifically designed to install software onto Arduino microprocessors. |BR| https://www.arduino.cc/en/software
+    * - BaseStation-Classic |BR| DCC++ (Original)
+      - The original inexpensive Command Station based on the Arduino platform by Gregg Berman. :dcc-ex-red-bold-italic:`This is no longer maintained or supported by the DCC-EX Team`. |BR| |EX-CS| is a completely new build which maintains backward compatibility with the original DCC++. |BR| See :doc:`DCC++ VS DCC-EX? <../../news/posts/20201001>` for more information
     * - Command Station |BR| DCC Command Station |BR| DCC Base Station
       - See https://dccwiki.com/Command_Station
     * - Consist |BR| Multiple Unit

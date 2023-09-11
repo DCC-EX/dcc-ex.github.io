@@ -8,6 +8,8 @@
 DCC Turntables/traversers
 *************************
 
+|NOT-IN-PROD-VERSION|
+
 .. sidebar:: 
 
   .. contents:: On this page
@@ -69,6 +71,13 @@ To repeat the above example using |EX-R| instead, these commands need to be adde
   TT_ADDPOSITION(201,8,208,0,"Maintenance bay 1")
   TT_ADDPOSITION(201,9,209,0,"Maintenance bay 2")
   TT_ADDPOSITION(201,10,210,0,"Maintenance bay 3")
+
+Throttle control
+----------------
+
+The result of both examples above is that the turntable objects are advertised to throttles that understand turntable objects, meaning they can be controlled in a similar manner to turnouts/points.
+
+Note, however, that as this is brand new functionality, there are likely to be no throttles that understand these commands yet.
 
 Automation options
 ------------------

@@ -119,7 +119,7 @@ If you have a large gear on the base of a turntable with 200 teeth which is driv
 
 .. warning:: 
 
-  Given a stepper motor needs to complete an entire, single step (or microstep) in one go, implementing a gear ratio that results in a fractional step count for a single, complete revolution will result in inaccuracies, as the step count will always be rounded to an integer.
+  Given a stepper motor needs to complete an entire, single step (or microstep) in one go, implementing a gear ratio that results in a fractional step count for a single, complete revolution will result in inaccuracies, as the step count will always be rounded to an integer. Always ensure the resultant steps per rotation will be a whole number before purchasing or building any geared stepper configuration.
 
 In this scenario, running the 28BYJ-48 in full step mode (2048 steps) would allow this to work, as a full rotation is 20480 steps.
 
@@ -130,6 +130,10 @@ In the case of a DRV8825, the smallest microstep it can be configured for is 1/3
 While this is well within the limit of the maximum 32767 steps in |EX-TT|, if you then use this in the same gear ratio calculated above, it will result in 64000 steps per revolution, which is well outside |EX-TT|'s limit.
 
 These same considerations apply when using steppers with built-in gearing.
+
+While |NOT-IN-PROD-VERSION|, another new option for |EX-TT| allows for larger step counts than the maximum of 32767 that |EX-CS| can support, by introducing a gear factor configuration option. This number is used as a multiplier for the number of steps sent from |EX-CS|.
+
+For example, if you had a steps per revolution count of 60000 after calculating your gear ratio, you would set a gearing factor of 2, meaning all step counts configured in |EX-CS| are 30000 or less (60000 / 2), allowing for control of this configuration. Refer to :ref:`ex-turntable/configure:stepper_gearing_factor` for how to configure this option.
 
 Important! Phase (or polarity) switching
 ----------------------------------------

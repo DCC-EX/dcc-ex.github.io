@@ -776,8 +776,60 @@ All the below turnout/point definitions will define turnouts/points that are adv
 
 ----
 
-Turntable/Traverser objects - Definition and Control
+Turntable/Traverser Objects - Definition and Control
 ----------------------------------------------------
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
+|NEW-IN-V5-LOGO-SMALL|
+
+Also refer to :ref:`ex-turntable/test-and-tune:ex-rail automation`.
+
+|hr-dashed|
+
+``MOVETT( id, steps, activity )`` - Move the specified |EX-TT| to the provided step position and perform the specified activity
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  |NEW-IN-V5| Move the specified |EX-TT| to the provided step position and perform the specified activity
+
+  .. note:: 
+
+    For users of our development releases, we highly recommend using our new turntable/traverser commands which allow turntables/traversers to be advertised to throttles similarly to how turnout/point objects are advertised and operated. Refer to :ref:`ex-rail/ex-rail-command-reference:turntable development features not in the current production version`.
+
+|hr-dashed|
+
+``IFRE ( id, value )`` - Test if a rotary encoder has been set to the specified value
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  |NEW-IN-V5| Test if a rotary encoder has been set to the specified value
+
+|hr-dashed|
+
+``ONCHANGE( id )`` - Detects a rotary encoder has changed position
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  |NEW-IN-V5| Detects a rotary encoder has changed position
+
+  .. collapse:: For example: (click to show)
+
+    .. code-block:: 
+
+      ONCHANGE(700)     // If rotary encoder ID 700 change state do this sequence
+        IFRE(700, 1)    // If rotary encoder ID 700 is at position 1, start ROUTE ID 123
+          START(123)
+        ENDIF
+        IFRE(700, 2)    // If rotary encoder ID 700 is at position 2, start ROUTE ID 124
+          START(124)
+        ENDIF
+        DONE
+
+|hr-dashed|
+
+Turntable development features not in the current production version
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |NOT-IN-PROD-VERSION|
 
@@ -1183,60 +1235,6 @@ DCC Accessory Decoder Control
   Send DCC function OFF to specific cab (eg coach lights) Not for Loco use - use FON instead!
 
   All the above "ON" commands are event handlers that trigger a sequence of commands to run when the event occurs. These can vary from the most basic tasks such as setting signals when turnouts are closed or thrown, to triggering complete automation sequences via a DCC accessory decoder.
-
-----
-
-EX-Turntable Control
---------------------
-
-|NEW-IN-V5-LOGO-SMALL|
-
-.. contents:: In This Section
-    :depth: 4
-    :local:
-    :class: in-this-section
-
-Also refer to :ref:`ex-turntable/test-and-tune:ex-rail automation`.
-
-|hr-dashed|
-
-``MOVETT( id, steps, activity )`` - Move the specified |EX-TT| to the provided step position and perform the specified activity
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  |NEW-IN-V5| Move the specified |EX-TT| to the provided step position and perform the specified activity
-
-  .. note:: 
-
-    We highly recommend using our new turntable/traverser commands which allow turntables/traversers to be advertised to throttles similarly to how turnout/point objects are advertised and operated. Refer to :ref:`ex-rail/ex-rail-command-reference:turntable/traverser objects - definition and control`
-
-|hr-dashed|
-
-``IFRE ( id, value )`` - Test if a rotary encoder has been set to the specified value
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  |NEW-IN-V5| Test if a rotary encoder has been set to the specified value
-
-|hr-dashed|
-
-``ONCHANGE( id )`` - Detects a rotary encoder has changed position
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  |NEW-IN-V5| Detects a rotary encoder has changed position
-
-  .. collapse:: For example: (click to show)
-
-    .. code-block:: 
-
-      ONCHANGE(700)     // If rotary encoder ID 700 change state do this sequence
-        IFRE(700, 1)    // If rotary encoder ID 700 is at position 1, start ROUTE ID 123
-          START(123)
-        ENDIF
-        IFRE(700, 2)    // If rotary encoder ID 700 is at position 2, start ROUTE ID 124
-          START(124)
-        ENDIF
-        DONE
-
-|force-break|
 
 ----
 

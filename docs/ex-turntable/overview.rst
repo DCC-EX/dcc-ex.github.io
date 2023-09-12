@@ -135,6 +135,8 @@ While |NOT-IN-PROD-VERSION|, another new option for |EX-TT| allows for larger st
 
 For example, if you had a steps per revolution count of 60000 after calculating your gear ratio, you would set a gearing factor of 2, meaning all step counts configured in |EX-CS| are 30000 or less (60000 / 2), allowing for control of this configuration. Refer to :ref:`ex-turntable/configure:stepper_gearing_factor` for how to configure this option.
 
+You need to be running |EX-TT| v0.6.0 or later to use this feature.
+
 Important! Phase (or polarity) switching
 ----------------------------------------
 

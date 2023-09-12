@@ -1331,6 +1331,89 @@ TrackManager Control
 
 ----
 
+
+Controlling Overload/Shorts
+---------------------------
+
+|NEW-IN-V5-LOGO-SMALL|
+
+|NOT-IN-PROD-VERSION|
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
+|hr-dashed|
+
+``ONOVERLOAD( track )`` - Event handler for actions to be taken when an Overload occurs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+   Creates an event handler for the selected track, to be executed when the MotorDriver routines detect and overload. Refer also to :doc:`/trackmanager/index`
+
+|hr-dashed|
+
+``AFTEROVERLOAD( track )`` - Event handler for actions to be taken when an Overload clears
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Creates a complementary event handler for the selected track, to be executed when the MotorDriver routines indicate the overload is cleared. Refer also to :doc:`/trackmanager/index`
+
+  Note:  AFTEROVERLOAD is only relevent when used within and ONOVERLOAD.... DONE structure.
+
+|hr-dashed|
+
+  The power calculation routines within |DCC-EX| will check for shorts and overloads and will change the state of the power produced by the MotorDriver board to protect both it and locos from damage.  This is usually eveident by the LED's on the MotorDriver board flashing.  However some users may wish to see some physical notifcation of these events.  This can now be achieved with EXRAIL and the ONOVERLOAD event.
+
+
+  .. collapse:: For example: (click to show)
+
+    This first example shows a warning message to an attached screen with an LED being illuminated to warn the user of the overload.  Once the overload is cleared the AFTEROVERLOAD code is run automatically.
+    
+    .. code-block:: cpp
+
+      ONOVERLOAD(A)       // the EXRAIL statement to control the event.
+        SCREEN(2,0, "OVERLOAD ON TRACCK A")     // A message to the second screen
+        PRINT("Overload Detected on Track A")   // Message to system moniter
+        SET(27)                                 // Turn on an LED perhaps
+        AFTEROVERLOAD(A)
+            SCREEN(2,0, "RESTORE A POWER ON")
+            PRINT("Overload Cleared on A - Power Restored")
+            RESET(27)                           // Turn off the LED
+            DELAY(2000)
+            SCREEN(2,0, "                  ")   // Clear the screen message
+      DONE
+
+    If the user wishes to turn off power whilst he/she investigates the problem, then this can be achieved using the second example below.  POWEROFF can be used, but this will turn off powere to all tracks.  Power to the track with the problem can be turned off with a TrackManager command.  However in order to execute the AFTEROVERLOAD routine it is necessary to have a reset routine.
+
+    .. code-block:: cpp
+
+      // This is the event triggered by an overload.  AFTEROVERLOAD cannot be triggered whilst power is OFF.
+      ONOVERLOAD(A)
+        SCREEN(2,0, "OVERLOAD A POWEROFF")
+        PRINT("Overload Detected on A - Turn Off Power")
+        SET_TRACK(A, NONE)   // Unsets the TrackManager assignment and turns off power.
+        SET(27)              // Light the LED
+        AFTEROVERLOAD(A)
+            SCREEN(2,0, "RESTORE A POWER ON")
+            PRINT("Overload Cleared on A - Power Restored")
+            RESET(27)
+            DELAY(2000)
+            SCREEN(2,0, "                  ")
+      DONE
+
+      // The following turns the poweron and allows the AFTEROVERLOAD to run
+      // This could also be achieved with a physical button and AFTER(pin) in place of ROUTE()
+      ROUTE(12,"Reset A")
+        SCREEN(2,0,"                  ")
+        SET_TRACK(A, MAIN)
+        POWERON
+      DONE
+    
+
+|force-break|
+
+----
+
 Virtual Block Control
 ---------------------
 

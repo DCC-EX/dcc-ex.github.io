@@ -1335,8 +1335,6 @@ TrackManager Control
 Controlling Overload/Shorts
 ---------------------------
 
-|NEW-IN-V5-LOGO-SMALL|
-
 |NOT-IN-PROD-VERSION|
 
 .. contents:: In This Section

@@ -18,7 +18,7 @@ Purchasing
 What you need for EX-Turntable
 ==============================
 
-* An |EX-CS| running the "add-turntable-controller" branch of `EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller>`_ (this displays as version 4.0.2)
+* An |EX-CS| running version 5.0.0 or later
 * An Arduino microcontroller (tested on Nano V3, both old and new bootloader, an Uno R3 should also work)
 * A supported stepper motor driver and stepper motor (see list below)
 * A hall effect (or similar) sensor for homing, which needs to be digital/unipolar such as an A3144 or 44E (or equivalent)

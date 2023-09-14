@@ -373,7 +373,7 @@ In a similar manner to |EX-TT| itself, the rotary encoder Arduino connects to th
 
 .. note:: 
 
-  The rotary encoder software is not official DCC-EX software and is maintained separately, although the device driver and EX-RAIL commands will be included with a future release of |EX-CS|.
+  The rotary encoder software is not official DCC-EX software and is maintained separately. The device driver and EX-RAIL commands are included with |EX-CS| as of version 5.0.0.
 
   This section will focus on enabling and using the device driver. For the rotary encoder software documentation including installation and configuration, refer to the project page `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/overview.html>`__.
 
@@ -391,7 +391,7 @@ To utilise this rotary encoder, you must be running version 5.0.0 or later of |E
 Enabling the device driver
 --------------------------
 
-The default |I2C| address for the rotary encoder is 0x70, and you will need to create the device in "myAutomation.h" on your |EX-CS|.
+The default |I2C| address for the rotary encoder is 0x78, and you will need to create the device in "myAutomation.h" on your |EX-CS|.
 
 Note you can create the device using 1, 2, or 3 Vpins. If you create it with 2, you can send feedback to the rotary encoder Arduino to indicate if a turntable is moving, and when it has completed the movement. If you define 3 Vpins, you can tell the rotary encoder when a turntable has changed position also. Refer to the `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/overview.html>`__ documentation for more information on this feature.
 
@@ -399,8 +399,9 @@ Note you can create the device using 1, 2, or 3 Vpins. If you create it with 2, 
 
   #include "IO_RotaryEncoder.h"
 
-  HAL(RotaryEncoder, 700, 1, 0x70)
-  HAL(RotaryEncoder, 701, 2, 0x71)
+  HAL(RotaryEncoder, 700, 1, 0x78)  // 1 pin for control only
+  HAL(RotaryEncoder, 700, 2, 0x78)  // 2 pins for control and feedback
+  HAL(RotaryEncoder, 700, 3, 0x78)  // 3 pins for control, feedback, and sending positions back to the rotary encoder
 
 You need to follow the same process as :ref:`ex-turntable/assembly:8. add the ex-turntable device driver to ex-commandstation` to load the updated software on your |EX-CS|.
 

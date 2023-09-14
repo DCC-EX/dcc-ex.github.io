@@ -968,7 +968,7 @@ Setting phase switch flag to: 0
 <p>In a similar manner to <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> itself, the rotary encoder Arduino connects to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> via I<sup>2</sup>C.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The rotary encoder software is not official DCC-EX software and is maintained separately, although the device driver and EX-RAIL commands will be included with a future release of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>.</p>
+<p>The rotary encoder software is not official DCC-EX software and is maintained separately. The device driver and EX-RAIL commands are included with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> as of version 5.0.0.</p>
 <p>This section will focus on enabling and using the device driver. For the rotary encoder software documentation including installation and configuration, refer to the project page <a class="reference external" href="https://petegsx-projects.github.io/rotary-encoder/overview.html">DCC-EX Rotary Encoder</a>.</p>
 </div>
 <section id="required-software">
@@ -979,12 +979,13 @@ Setting phase switch flag to: 0
 </section>
 <section id="enabling-the-device-driver">
 <h3><a class="toc-backref" href="#id15" role="doc-backlink">Enabling the device driver</a><a class="headerlink" href="#enabling-the-device-driver" title="Permalink to this heading"></a></h3>
-<p>The default I<sup>2</sup>C address for the rotary encoder is 0x70, and you will need to create the device in “myAutomation.h” on your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>.</p>
+<p>The default I<sup>2</sup>C address for the rotary encoder is 0x78, and you will need to create the device in “myAutomation.h” on your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>.</p>
 <p>Note you can create the device using 1, 2, or 3 Vpins. If you create it with 2, you can send feedback to the rotary encoder Arduino to indicate if a turntable is moving, and when it has completed the movement. If you define 3 Vpins, you can tell the rotary encoder when a turntable has changed position also. Refer to the <a class="reference external" href="https://petegsx-projects.github.io/rotary-encoder/overview.html">DCC-EX Rotary Encoder</a> documentation for more information on this feature.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#include &quot;IO_RotaryEncoder.h&quot;
 
-HAL(RotaryEncoder, 700, 1, 0x70)
-HAL(RotaryEncoder, 701, 2, 0x71)
+HAL(RotaryEncoder, 700, 1, 0x78)  // 1 pin for control only
+HAL(RotaryEncoder, 700, 2, 0x78)  // 2 pins for control and feedback
+HAL(RotaryEncoder, 700, 3, 0x78)  // 3 pins for control, feedback, and sending positions back to the rotary encoder
 </pre></div>
 </div>
 <p>You need to follow the same process as <a class="reference internal" href="assembly.html#add-the-ex-turntable-device-driver-to-ex-commandstation"><span class="std std-ref">8. Add the EX-Turntable device driver to EX-CommandStation</span></a> to load the updated software on your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>.</p>

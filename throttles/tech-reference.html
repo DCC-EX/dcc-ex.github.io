@@ -744,8 +744,8 @@
 <td><p>Returns the ID, type (0=DCC or 1=EXTT), current position, position count, and description of the specified turntable ID</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;JP</span> <span class="pre">id&gt;</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">&lt;jP</span> <span class="pre">id</span> <span class="pre">index</span> <span class="pre">value</span> <span class="pre">angle</span> <span class="pre">&quot;[description]&quot;&gt;</span></code></p></td>
-<td><p>Returns the turntable ID, position index, DCC linear address or EX-Turntable step count, angle, and description of each defined position for the specified turntable ID</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;jP</span> <span class="pre">id</span> <span class="pre">index</span> <span class="pre">angle</span> <span class="pre">&quot;[description]&quot;&gt;</span></code></p></td>
+<td><p>Returns the turntable ID, position index, angle, and description of each defined position for the specified turntable ID</p></td>
 </tr>
 </tbody>
 </table>
@@ -881,6 +881,15 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;jO</span> <span class="pre">1</span> <span class="pre">0</span> <span class="pre">1</span> <span class="pre">5</span> <span class="pre">&quot;DCC</span> <span class="pre">Turntable&quot;&gt;</span></code> - DCC turntable type currently at position 1, with 5 defined positions and a description “DCC Turntable”.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;jO</span> <span class="pre">1</span> <span class="pre">1</span> <span class="pre">0</span> <span class="pre">11</span> <span class="pre">&quot;EX-Turntable&quot;&gt;</span></code> - EX-Turntable type currently at the home position (0), with 11 defined positions and a description “EX-Turntable”</p></li>
+</ul>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;JP</span> <span class="pre">1&gt;</span></code> - Returns all positions for turntable ID 1.</p>
+<blockquote>
+<div><p>Example responses (will return all positions):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;jP</span> <span class="pre">1</span> <span class="pre">0</span> <span class="pre">0</span> <span class="pre">&quot;&quot;&gt;</span></code> - Position 0, unused for DCC turntables, “home” for EX-Turntable</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;jP</span> <span class="pre">1</span> <span class="pre">1</span> <span class="pre">100</span> <span class="pre">&quot;Turntable</span> <span class="pre">position</span> <span class="pre">1&quot;&gt;</span></code> - Position 1, 10 degrees from home</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;jP</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">1800</span> <span class="pre">&quot;Turntable</span> <span class="pre">position</span> <span class="pre">2&quot;&gt;</span></code> - Position 2, 180 degrees from home</p></li>
 </ul>
 </div></blockquote>
 </section>

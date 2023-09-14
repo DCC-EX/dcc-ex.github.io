@@ -107,8 +107,8 @@ Key throttle specific commands are summarised here, refer below for elaboration 
     - ``<jO id type position position_count "[description]">``
     - Returns the ID, type (0=DCC or 1=EXTT), current position, position count, and description of the specified turntable ID
   * - ``<JP id>``
-    - ``<jP id index value angle "[description]">``
-    - Returns the turntable ID, position index, DCC linear address or EX-Turntable step count, angle, and description of each defined position for the specified turntable ID
+    - ``<jP id index angle "[description]">``
+    - Returns the turntable ID, position index, angle, and description of each defined position for the specified turntable ID
 
 ----
 
@@ -239,7 +239,13 @@ Note that to obtain a complete definition for a turntable/traverser, the turntab
   - ``<jO 1 0 1 5 "DCC Turntable">`` - DCC turntable type currently at position 1, with 5 defined positions and a description "DCC Turntable".
   - ``<jO 1 1 0 11 "EX-Turntable">`` - EX-Turntable type currently at the home position (0), with 11 defined positions and a description "EX-Turntable"
 
+``<JP 1>`` - Returns all positions for turntable ID 1.
 
+  Example responses (will return all positions):
+
+  - ``<jP 1 0 0 "">`` - Position 0, unused for DCC turntables, "home" for EX-Turntable
+  - ``<jP 1 1 100 "Turntable position 1">`` - Position 1, 10 degrees from home
+  - ``<jP 1 2 1800 "Turntable position 2">`` - Position 2, 180 degrees from home
 
 Commands to avoid
 =================

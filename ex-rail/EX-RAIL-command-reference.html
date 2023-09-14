@@ -1546,9 +1546,9 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 <nav class="contents in-this-section local" id="id7">
 <p class="topic-title">In This Section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#at-sensor-id-an-event-handler-that-defines-what-to-do-when-a-sensor-is-active-triggered" id="id110"><code class="docutils literal notranslate"><span class="pre">AT(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - An event handler that defines what to do when a sensor is active/triggered</a></p></li>
-<li><p><a class="reference internal" href="#after-sensor-id-define-an-event-handler-for-what-to-do-after-a-sensor-has-been-triggered" id="id111"><code class="docutils literal notranslate"><span class="pre">AFTER(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - Define an event handler for what to do after a sensor has been triggered</a></p></li>
-<li><p><a class="reference internal" href="#attimeout-sensor-id-timeout-ms-define-a-time-based-event-handler-for-what-to-do-when-a-sensor-is-active-triggered-or-if-the-timer-runs-out" id="id112"><code class="docutils literal notranslate"><span class="pre">ATTIMEOUT(</span> <span class="pre">sensor_id,</span> <span class="pre">timeout_ms</span> <span class="pre">)</span></code> - Define a time based event handler for what to do when a sensor is active/triggered or if the timer runs out</a></p></li>
+<li><p><a class="reference internal" href="#at-sensor-id-causes-a-sequence-to-wait-until-a-sensor-is-active-triggered" id="id110"><code class="docutils literal notranslate"><span class="pre">AT(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - Causes a sequence to wait until a sensor is active/triggered</a></p></li>
+<li><p><a class="reference internal" href="#after-sensor-id-causes-a-sequence-to-wait-until-after-a-sensor-has-been-triggered" id="id111"><code class="docutils literal notranslate"><span class="pre">AFTER(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - Causes a sequence to wait until after a sensor has been triggered</a></p></li>
+<li><p><a class="reference internal" href="#attimeout-sensor-id-timeout-ms-causes-a-sequence-to-wait-until-either-a-sensor-is-active-triggered-or-if-the-timer-runs-out" id="id112"><code class="docutils literal notranslate"><span class="pre">ATTIMEOUT(</span> <span class="pre">sensor_id,</span> <span class="pre">timeout_ms</span> <span class="pre">)</span></code> - Causes a sequence to wait until either a sensor is active/triggered, or if the timer runs out</a></p></li>
 <li><p><a class="reference internal" href="#if-sensor-id-if-sensor-activated-or-latched-continue" id="id113"><code class="docutils literal notranslate"><span class="pre">IF(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - If sensor activated or latched, continue</a></p></li>
 <li><p><a class="reference internal" href="#ifnot-sensor-id-if-sensor-not-activated-and-not-latched-continue" id="id114"><code class="docutils literal notranslate"><span class="pre">IFNOT(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - If sensor NOT activated and NOT latched, continue</a></p></li>
 <li><p><a class="reference internal" href="#iftimeout-tests-if-timed-out-flag-has-been-set-by-an-attimeout-sensor-reading-attempt" id="id115"><code class="docutils literal notranslate"><span class="pre">IFTIMEOUT</span></code> - Tests if “timed out” flag has been set by an ATTIMEOUT() sensor reading attempt</a></p></li>
@@ -1561,21 +1561,24 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
-<section id="at-sensor-id-an-event-handler-that-defines-what-to-do-when-a-sensor-is-active-triggered">
-<h4><a class="toc-backref" href="#id110" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AT(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - An event handler that defines what to do when a sensor is active/triggered</a><a class="headerlink" href="#at-sensor-id-an-event-handler-that-defines-what-to-do-when-a-sensor-is-active-triggered" title="Permalink to this heading"></a></h4>
-<p><hr class="hr-dashed" /></p>
-</section>
-<section id="after-sensor-id-define-an-event-handler-for-what-to-do-after-a-sensor-has-been-triggered">
-<h4><a class="toc-backref" href="#id111" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AFTER(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - Define an event handler for what to do after a sensor has been triggered</a><a class="headerlink" href="#after-sensor-id-define-an-event-handler-for-what-to-do-after-a-sensor-has-been-triggered" title="Permalink to this heading"></a></h4>
+<section id="at-sensor-id-causes-a-sequence-to-wait-until-a-sensor-is-active-triggered">
+<h4><a class="toc-backref" href="#id110" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AT(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - Causes a sequence to wait until a sensor is active/triggered</a><a class="headerlink" href="#at-sensor-id-causes-a-sequence-to-wait-until-a-sensor-is-active-triggered" title="Permalink to this heading"></a></h4>
 <blockquote>
-<div><p>An event handler that defines what to do after a sensor has been triggered and then is off for 0.5 seconds.</p>
+<div><p>A sequence will not progress until a sensor has been triggered.</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="attimeout-sensor-id-timeout-ms-define-a-time-based-event-handler-for-what-to-do-when-a-sensor-is-active-triggered-or-if-the-timer-runs-out">
-<h4><a class="toc-backref" href="#id112" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ATTIMEOUT(</span> <span class="pre">sensor_id,</span> <span class="pre">timeout_ms</span> <span class="pre">)</span></code> - Define a time based event handler for what to do when a sensor is active/triggered or if the timer runs out</a><a class="headerlink" href="#attimeout-sensor-id-timeout-ms-define-a-time-based-event-handler-for-what-to-do-when-a-sensor-is-active-triggered-or-if-the-timer-runs-out" title="Permalink to this heading"></a></h4>
+<section id="after-sensor-id-causes-a-sequence-to-wait-until-after-a-sensor-has-been-triggered">
+<h4><a class="toc-backref" href="#id111" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AFTER(</span> <span class="pre">sensor_id</span> <span class="pre">)</span></code> - Causes a sequence to wait until after a sensor has been triggered</a><a class="headerlink" href="#after-sensor-id-causes-a-sequence-to-wait-until-after-a-sensor-has-been-triggered" title="Permalink to this heading"></a></h4>
 <blockquote>
-<div><p>A time based event handler that defines what to do when a sensor is active/triggered or if the timer runs out, then continues and sets a testable “timed out” flag.</p>
+<div><p>A sequence will not progress until after a sensor has been triggered and then is off for 0.5 seconds.</p>
+</div></blockquote>
+<p><hr class="hr-dashed" /></p>
+</section>
+<section id="attimeout-sensor-id-timeout-ms-causes-a-sequence-to-wait-until-either-a-sensor-is-active-triggered-or-if-the-timer-runs-out">
+<h4><a class="toc-backref" href="#id112" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ATTIMEOUT(</span> <span class="pre">sensor_id,</span> <span class="pre">timeout_ms</span> <span class="pre">)</span></code> - Causes a sequence to wait until either a sensor is active/triggered, or if the timer runs out</a><a class="headerlink" href="#attimeout-sensor-id-timeout-ms-causes-a-sequence-to-wait-until-either-a-sensor-is-active-triggered-or-if-the-timer-runs-out" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><p>A sequence will not progress until either a sensor is active/triggered, or if the timer runs out. It then continues and sets a testable “timed out” flag (see <code class="docutils literal notranslate"><span class="pre">IFTIMEOUT</span></code>).</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>

@@ -928,23 +928,24 @@ Sensors/Inputs - Reading and Responding
 
 |hr-dashed|
 
-``AT( sensor_id )`` - An event handler that defines what to do when a sensor is active/triggered
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``AT( sensor_id )`` - Causes a sequence to wait until a sensor is active/triggered
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
-|hr-dashed|
-
-``AFTER( sensor_id )`` - Define an event handler for what to do after a sensor has been triggered
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  An event handler that defines what to do after a sensor has been triggered and then is off for 0.5 seconds.
+  A sequence will not progress until a sensor has been triggered.
 
 |hr-dashed|
 
-``ATTIMEOUT( sensor_id, timeout_ms )`` - Define a time based event handler for what to do when a sensor is active/triggered or if the timer runs out
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``AFTER( sensor_id )`` - Causes a sequence to wait until after a sensor has been triggered
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  A time based event handler that defines what to do when a sensor is active/triggered or if the timer runs out, then continues and sets a testable "timed out" flag.
+  A sequence will not progress until after a sensor has been triggered and then is off for 0.5 seconds.
+
+|hr-dashed|
+
+``ATTIMEOUT( sensor_id, timeout_ms )`` - Causes a sequence to wait until either a sensor is active/triggered, or if the timer runs out
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A sequence will not progress until either a sensor is active/triggered, or if the timer runs out. It then continues and sets a testable "timed out" flag (see ``IFTIMEOUT``).
 
 |hr-dashed|
 

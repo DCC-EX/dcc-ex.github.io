@@ -736,14 +736,11 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
   |_| > **id:**  unique id of the Turnout/Point
   
   *Response:* |BR|
-  |_| ``<jP id index value angle "[desc]">`` |BR|
+  |_| ``<jP id index angle "[desc]">`` |BR|
   |_| > **id:** unique id of the turntable/traverser  |BR|
   |_| > **index:** one of |BR|
   |_| |_| |_| |_| - the position index (0 - 48) |BR|
   |_| |_| |_| |_| - X = unknown or hidden id |BR|
-  |_| > **value:** one of |BR|
-  |_| |_| |_| |_| - either the step count from home for the position (EX-Turntable), or the linear DCC address (DCC accessory turntables) |BR|
-  |_| |_| |_| |_| - blank = unknown or hidden id |BR|
   |_| > **angle:** one of |BR|
   |_| |_| |_| |_| - the angle from home for the position (0 - 3600 to allow for partial angles) |BR|
   |_| |_| |_| |_| - blank = unknown or hidden id |BR|
@@ -752,7 +749,7 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
   |_| |_| |_| |_| - blank = unknown or hidden id |BR|
   |_|  |BR|
   |_| *Example Responses:* |BR|
-  |_| Response (id is defined): ``<jO id index value angle "[desc]">`` |BR|
+  |_| Response (id is defined): ``<jO id index angle "[desc]">`` |BR|
   |_| Response (id not defined): ``<jO id X>``
 
 ----

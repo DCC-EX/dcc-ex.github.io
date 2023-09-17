@@ -33,10 +33,12 @@ There are two simple options for testing your setup described below:
 Using EX-WebThrottle
 --------------------
 
-.. image:: /_static/images/throttles/webthrottle_setup.png
+.. figure:: /_static/images/throttles/webthrottle_setup.png
    :alt: EX-WebThrottle
    :align: center
    :scale: 40%
+
+   EX-WebThrottle setup
 
 .. sidebar:: 
 
@@ -59,7 +61,7 @@ Connect Everything:
    :alt: EX-WebThrottle
    :scale: 80%
 
-   EX-WebThrottle
+   EX-WebThrottle screen
 
 * Click this link and it will load a web page from our server that will run the web throttle on your PC
 
@@ -118,10 +120,12 @@ Connect Everything:
 * If you are using the Arduino Motor Shield, plug in the two power supplies (The one for the Arduino and the one for the motor shield). Make sure to not plug the higher voltage power supply into the Arduino by mistake
 * Wait for about 30 seconds for the Arduino to run through the initial startup sequence
 
-.. image:: /_static/images/throttles/throttle_wifi_direct.png
+.. figure:: /_static/images/throttles/throttle_wifi_direct.png
    :alt:  WiFi Throttle Direct to CS
    :align: center
    :scale: 40%
+
+   WiFi Throttle Direct to Command Station
 
 Using Engine Driver (Android)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

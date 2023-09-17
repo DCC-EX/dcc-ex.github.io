@@ -572,14 +572,24 @@ html[data-theme='dark'] .table-wrap-text td {
 
 .gsib_a input {
   padding: 5px !important;
+  background-color: #141414 !important;
 }
 
 .gsc-search-button .gsc-search-button-v2 {
+  width: 40px !important;
+  height: 21px !important;
+  padding: 4px 4px !important;
+  background-color: #00a3b9ff !important;
+  border-color: #00a3b9ff !important;
+  border-radius: 5px;
+}
+
+/* .gsc-search-button .gsc-search-button-v2 {
   width: 0px !important;
   padding: 7px 7px !important;
   border-color: #009300 !important;
   background-color: #009300 !important;
-}
+} */
 
 /* *************************************** */
 

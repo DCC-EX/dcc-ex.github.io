@@ -36,6 +36,7 @@ There several common symptoms of a an incorrect firmware version
 * You can connect to the SSID, but can't connect your WiFi throttle to the CommandStation (e.g.g Engine Driver or wiThrottle)
 * You can connect once, but it will not connect again unless you shut down the |EX-CS|
 
+----
 
 Find out Your AT Version
 ========================
@@ -44,13 +45,13 @@ It is important to find out which version of the firmware you board has and corr
 
 There are two basic ways that you can check:
 
-* after you load the |EX-CS| software
-* before you load the |EX-CS| software
+* After you load the |EX-CS| software
+* Before you load the |EX-CS| software
 
 Checking after you load the |EX-CS| software
 --------------------------------------------
 
-One you have loaded the |EX-CS| software you will be able to the AT version in the start-up log, but connecting the serial monitor in either the |EX-I| or Arduino IDE (whichever you used to upload the |EX-CS| onto your device).
+One you have loaded the |EX-CS| software you will be able to see the AT version in the start-up log by connecting the serial monitor in either the |EX-I| or Arduino IDE (whichever you used to upload the |EX-CS| onto your device).
 
 Checking using EX-Installer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -63,12 +64,12 @@ Once you have successfully loaded the |EX-CS| software:
 
 e.g. ``AT version:1.7.4.0(May 11 2020 19:13:04)``
 
-If it says **anything other than** 1.7.4 in that link, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.
+If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.
 
 Checking with the Arduino IDE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-..todo:: `Checking AT version with the Arduino IDE`
+.. todo:: `Checking AT version with the Arduino IDE`
 
 
 Checking before you load the |EX-CS| software
@@ -79,13 +80,13 @@ How to check before you load the |EX-CS| software will depend on which WiFi shie
 Checking ESP-01
 ^^^^^^^^^^^^^^^
 
-..todo:: `Checking AT version ESP-01 prior to upload`
+.. todo:: `Checking AT version ESP-01 prior to upload`
 
 
 Checking ESP8266 Wifi Shield
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-..todo:: `Checking AT version ESP8266 Wifi Shield prior to upload`
+.. todo:: `Checking AT version ESP8266 Wifi Shield prior to upload`
 
 
 Checking Duinopeak ESP8266 WiFi Expansion Board 
@@ -96,7 +97,7 @@ Checking Duinopeak ESP8266 WiFi Expansion Board
 Checking Mega+WiFi
 ^^^^^^^^^^^^^^^^^^
 
-..todo:: `Checking AT version Mega+WiFi prior to upload`
+.. todo:: `Checking AT version Mega+WiFi prior to upload`
 
 
 ----
@@ -112,13 +113,13 @@ We highly recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 ava
 Correcting the AT version on a ESP-01
 -------------------------------------
 
-..todo:: `Correcting AT version ESP-01`
+.. todo:: `Correcting AT version ESP-01`
 
 
 Correcting the AT version on a ESP8266 Wifi Shield
 --------------------------------------------------
 
-..todo:: `Correcting AT version ESP8266 Wifi Shield`
+.. todo:: `Correcting AT version ESP8266 Wifi Shield`
 
 Correcting the AT version on a Duinopeak ESP8266 WiFi Expansion Board 
 ---------------------------------------------------------------------

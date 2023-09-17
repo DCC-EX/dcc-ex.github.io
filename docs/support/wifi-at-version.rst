@@ -25,7 +25,7 @@ Which is correct version of the AT firmware
 
 Only **version 1.7.4** is known to work reliably.  
 
-That means all versions bother before or after 1.7.4 are *not* suitable.  So don't be fooled in thinking that if it has a version later than that it will be ok.  **It won't!**
+That means all versions both before or after 1.7.4 are *not* suitable.  So don't be fooled in thinking that if it has a version later than that it will be ok.  **It won't!**
 
 Symptoms of an Incorrect firmware Version
 =========================================
@@ -33,7 +33,7 @@ Symptoms of an Incorrect firmware Version
 There several common symptoms of a an incorrect firmware version
 
 * You can't connect to the SSID
-* You can connect to the SSID, but can't connect your WiFi throttle to the CommandStation (e.g.g Engine Driver or wiThrottle)
+* You can connect to the SSID, but can't connect your WiFi throttle to the CommandStation (e.g. Engine Driver or wiThrottle)
 * You can connect once, but it will not connect again unless you shut down the |EX-CS|
 
 ----
@@ -64,12 +64,24 @@ Once you have successfully loaded the |EX-CS| software:
 
 e.g. ``AT version:1.7.4.0(May 11 2020 19:13:04)``
 
+Alternately, you can enter the command ``<+GMR>`` and click :guilabel:`Send`.  A similar line will be shown.
+
 If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.
 
 Checking with the Arduino IDE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. todo:: `Checking AT version with the Arduino IDE`
+If you loaded the |EX-CS| software using the Arduino, once you have successfully loaded the |EX-CS| software:
+
+1. select **Tools** -> **Serial monitor** from the menus
+2. A new pane will open at the bottom of the IDE window will open lot of text will appear
+3. you need to look for a line similar to the following
+
+e.g. ``AT version:1.7.4.0(May 11 2020 19:13:04)``
+
+Alternately, you can enter the command ``<+GMR>`` and click :guilabel:`Send`.  A similar line will be shown.
+
+If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.
 
 
 Checking before you load the |EX-CS| software
@@ -81,6 +93,26 @@ Checking ESP-01
 ^^^^^^^^^^^^^^^
 
 .. todo:: `Checking AT version ESP-01 prior to upload`
+
+Checking with a USB Serial Adapter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Connect the ESP01 to the serial adapter
+2. plug the serial adapter it the PC
+3. open the Arduino IDE 
+4. select **Tools** -> **Serial monitor** from the menus
+5. A new pane will open at the bottom of the IDE window will open lot of text will appear
+6. Enter the command ``<+GMR>`` and click :guilabel:`Send`.
+
+It will reply with something like ``AT version:1.7.4.0(May 11 2020 19:13:04)``
+
+If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.
+
+Checking with a USB to TTL CH340G Converter Module Adapter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Checking with a Arduino Uno
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Checking ESP8266 Wifi Shield
@@ -115,6 +147,15 @@ Correcting the AT version on a ESP-01
 
 .. todo:: `Correcting AT version ESP-01`
 
+With a USB Serial Adapter
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+With a USB to TTL CH340G Converter Module Adapter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+With a Arduino Uno
+^^^^^^^^^^^^^^^^^^
+
 
 Correcting the AT version on a ESP8266 Wifi Shield
 --------------------------------------------------
@@ -123,6 +164,8 @@ Correcting the AT version on a ESP8266 Wifi Shield
 
 Correcting the AT version on a Duinopeak ESP8266 WiFi Expansion Board 
 ---------------------------------------------------------------------
+
+.. todo:: `Correcting AT version Duinopeak ESP8266 WiFi Expansion Board`
 
 Correcting the AT version on a Mega+WiFi
 ----------------------------------------

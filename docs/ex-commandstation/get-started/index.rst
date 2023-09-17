@@ -92,3 +92,4 @@ Click :doc:`here <purchasing>` or click the "next" button to see what you need t
     controllers
     testing
     /support/ex-cs-troubleshooting
+    /support/wifi-at-version

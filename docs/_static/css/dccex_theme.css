@@ -564,6 +564,22 @@ html[data-theme='dark'] .table-wrap-text td {
 }
 
 /* *************************************** */
+/* Google search */
+
+.gsc-input-box {
+  border: 0px !important;
+}
+
+.gsib_a input {
+  padding: 5px !important;
+}
+
+.gsc-search-button .gsc-search-button-v2 {
+  width: 0px !important;
+  padding: 7px 7px !important;
+}
+
+/* *************************************** */
 
 /* sidebar level 3 bullet points */
 nav#on-this-page ul.simple li ul li p {

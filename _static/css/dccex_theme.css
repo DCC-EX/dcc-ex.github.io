@@ -573,6 +573,7 @@ html[data-theme='dark'] .table-wrap-text td {
 .gsib_a input {
   padding: 5px !important;
   background-color: #141414 !important;
+  color:white !important;
 }
 
 .gsc-search-button .gsc-search-button-v2 {

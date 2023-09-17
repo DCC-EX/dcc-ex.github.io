@@ -151,6 +151,8 @@ The acceleration rate of the turntable, which is defined as steps per second, pe
 STEPPER_GEARING_FACTOR
 ----------------------
 
+**Requires EX-Turntable version 0.6.0 or later**
+
 `Default: 1`
 
 `Valid values: 1 - 10`

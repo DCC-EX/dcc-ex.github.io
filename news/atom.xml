@@ -2,10 +2,55 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2023-09-14T21:58:16.349318+00:00</updated>
+  <updated>2023-09-17T00:28:35.224653+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.3">ABlog</generator>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20230917.html</id>
+    <title>EX-Installer Updated</title>
+    <updated>2023-09-17T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="ex-installer-updated"&gt;
+
+&lt;p&gt;Since our original announcement back on the 2nd of July 2023, &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt; has continued to be improved with both enhancements and bug fixes. Originally announced at version 0.0.12, this new announcement has &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt; at version 0.0.16, with quite a difference between these two releases!&lt;/p&gt;
+&lt;section id="new-features"&gt;
+&lt;h2&gt;New features:&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Added an information menu with version and device information and links to our website and instructions&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added support to install &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;IOExpander&lt;/span&gt; and &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added command history to the Device Monitor&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added popup help for contextual help when hovering your mouse over various options&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Various enhancements to contextual highlighting in Device Monitor&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Various enhancements to configuring &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt; including a refreshed configuration interface and support for newer features&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added a tools menu in order to set screen scaling for smaller or larger screen sizes, and to help those of us who don’t see as well as we used to&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added some device specific limitations and recommendations, such as disabling Track Manager on Uno/Nano&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="bug-fixes"&gt;
+&lt;h2&gt;Bug fixes:&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Fixed an issue where Track Manager options were displayed for incorrect versions&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fixed an issue where Device Monitor was forced on top of all windows in Linux&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fixed an issue where closing the app with Device Monitor open could leave the Arduino CLI running in the background&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fixed an issue where Track Manager and current override options were disabled for &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt; 5.0.0 or later&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fixed an issue in Device Monitor where the output was blank and/or flashing on older Linux versions&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fixed an issue for incorrect screen scaling on Linux&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fixed an issue where the Ethernet library was not installed when enabling Ethernet support for &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt; (you must click “Refresh Arduino CLI” to have this installed)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Fixed an issue on Fedora Linux where SSL certificates were not available (a warning will still be seen for fonts which can be disregarded)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is by no means an exhaustive list of the updates, so we highly recommmend downloading this latest version of &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;.&lt;/p&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20230917.html" rel="alternate"/>
+    <summary>Since our original announcement back on the 2nd of July 2023, &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt; has continued to be improved with both enhancements and bug fixes. Originally announced at version 0.0.12, this new announcement has &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt; at version 0.0.16, with quite a difference between these two releases!</summary>
+    <category term="ex-installer" label="ex-installer"/>
+    <published>2023-09-17T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>https://dcc-ex.com/news/posts/20230911.html</id>
     <title>Farewell to the old exInstaller, in with the new EX-Installer!</title>

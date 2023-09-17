@@ -59,7 +59,7 @@ Checking using EX-Installer
 Once you have successfully loaded the |EX-CS| software:
 
 1. click back through the pages of the |EX-I| till you get to the 'Select your Device' screen
-2. Click on the :guilabel:`View device monitor` button |BR| A new window will open lot of text will appear
+2. Click on the :guilabel:`View device monitor` button |BR| A new window will open and a lot of text will appear
 3. you need to look for a line that will have a section highlighted in green
 
 e.g. ``AT version:1.7.4.0(May 11 2020 19:13:04)``
@@ -74,7 +74,7 @@ Checking with the Arduino IDE
 If you loaded the |EX-CS| software using the Arduino, once you have successfully loaded the |EX-CS| software:
 
 1. select **Tools** -> **Serial monitor** from the menus
-2. A new pane will open at the bottom of the IDE window will open lot of text will appear
+2. A new pane will open at the bottom of the IDE window will open and a lot of text will appear
 3. you need to look for a line similar to the following
 
 e.g. ``AT version:1.7.4.0(May 11 2020 19:13:04)``
@@ -98,11 +98,12 @@ Checking with a USB Serial Adapter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Connect the ESP01 to the serial adapter
-2. plug the serial adapter it the PC
-3. open the Arduino IDE 
-4. select **Tools** -> **Serial monitor** from the menus
-5. A new pane will open at the bottom of the IDE window will open lot of text will appear
-6. Enter the command ``<+GMR>`` and click :guilabel:`Send`.
+2. Plug the serial adapter it the PC
+3. oOpen the Arduino IDE 
+4. Select **Tools** -> **Serial monitor** from the menus
+5. Select baud: ``115200`` and ``Both NL & CR``
+5. A new pane will open at the bottom of the IDE window will open
+6. Enter the command ``AT+GMR`` and click :guilabel:`Send`.
 
 It will reply with something like ``AT version:1.7.4.0(May 11 2020 19:13:04)``
 

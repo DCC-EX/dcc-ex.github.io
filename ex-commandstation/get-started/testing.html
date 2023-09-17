@@ -99,6 +99,7 @@
 <li class="toctree-l3"><a class="reference internal" href="controllers.html">Choosing a Throttle (Controller)</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Test Your Setup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../support/ex-cs-troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../support/wifi-at-version.html">ESP8266 (WiFi Boards) - AT Version Issues and Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../advanced-setup/index.html">Advanced Options</a><ul>
@@ -632,19 +633,19 @@
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#testing-control-of-a-loco" id="id3">Testing control of a loco</a></p>
+<li><p><a class="reference internal" href="#testing-control-of-a-loco" id="id5">Testing control of a loco</a></p>
 <ul>
-<li><p><a class="reference internal" href="#using-ex-webthrottle" id="id4">Using EX-WebThrottle</a></p></li>
-<li><p><a class="reference internal" href="#using-engine-driver-or-withrottle-requires-wifi" id="id5">Using Engine Driver or WiThrottle - Requires WiFi</a></p></li>
+<li><p><a class="reference internal" href="#using-ex-webthrottle" id="id6">Using EX-WebThrottle</a></p></li>
+<li><p><a class="reference internal" href="#using-engine-driver-or-withrottle-requires-wifi" id="id7">Using Engine Driver or WiThrottle - Requires WiFi</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#next-steps-run-your-trains" id="id6">Next Steps - Run Your Trains</a></p></li>
+<li><p><a class="reference internal" href="#next-steps-run-your-trains" id="id8">Next Steps - Run Your Trains</a></p></li>
 </ul>
 </nav>
 </aside>
 <p>This page is specifically written for someone who has installed <em>just</em> the recommended hardware (including WiFi). However it will generally be suitable for testing most other configuration options.</p>
 <section id="testing-control-of-a-loco">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">Testing control of a loco</a><a class="headerlink" href="#testing-control-of-a-loco" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Testing control of a loco</a><a class="headerlink" href="#testing-control-of-a-loco" title="Permalink to this heading"></a></h2>
 <p>You need to test with a locomotive equipped with a DCC decoder (either a standard or sound decoder). Ideally, it should be a loco already proven to work on DCC. Otherwise, if you have a problem, you may not be able to tell if the problem is the decoder or the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>.</p>
 <p>There are two simple options for testing your setup described below:</p>
 <ul class="simple">
@@ -652,8 +653,13 @@
 <li><p>using the <a class="reference internal" href="../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> app installed on an Android device, <br /> or the <a class="reference internal" href="../../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> app installed on an iOS device</p></li>
 </ul>
 <section id="using-ex-webthrottle">
-<h3><a class="toc-backref" href="#id4" role="doc-backlink">Using EX-WebThrottle</a><a class="headerlink" href="#using-ex-webthrottle" title="Permalink to this heading"></a></h3>
-<a class="reference internal image-reference" href="../../_images/webthrottle_setup.png"><img alt="EX-WebThrottle" class="align-center" src="../../_images/webthrottle_setup.png" style="width: 640.0px; height: 292.8px;" /></a>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Using EX-WebThrottle</a><a class="headerlink" href="#using-ex-webthrottle" title="Permalink to this heading"></a></h3>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/webthrottle_setup.png"><img alt="EX-WebThrottle" src="../../_images/webthrottle_setup.png" style="width: 640.0px; height: 292.8px;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 31 </span><span class="caption-text">EX-WebThrottle setup</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <aside class="sidebar">
 <p><a class="reference external" href="../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <br /> Additional options (throttles) for testing and diagnosing issues are available and is described in the <a class="reference internal" href="../advanced-setup/controllers.html"><span class="doc">Choosing a Throttle (Controller) - Advanced</span></a> page if needed .</p>
 </aside>
@@ -669,10 +675,10 @@
 <p class="admonition-title">Note</p>
 <p>The programming track is for programming only. Make sure you are on the MAIN track if you expect your loco to move or respond to light or sound commands.</p>
 </div>
-<figure class="align-default" id="id1">
+<figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../../_images/exwebthrottle.jpg"><img alt="EX-WebThrottle" src="../../_images/exwebthrottle.jpg" style="width: 480.0px; height: 351.20000000000005px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 31 </span><span class="caption-text">EX-WebThrottle</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 32 </span><span class="caption-text">EX-WebThrottle screen</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -717,7 +723,7 @@
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
 <section id="using-engine-driver-or-withrottle-requires-wifi">
-<h3><a class="toc-backref" href="#id5" role="doc-backlink">Using Engine Driver or WiThrottle - Requires WiFi</a><a class="headerlink" href="#using-engine-driver-or-withrottle-requires-wifi" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Using Engine Driver or WiThrottle - Requires WiFi</a><a class="headerlink" href="#using-engine-driver-or-withrottle-requires-wifi" title="Permalink to this heading"></a></h3>
 <div class="note-float-right admonition note">
 <p class="admonition-title">Note</p>
 <p>The programming track is for programming only. Make sure you are on the MAIN track if you expect your loco to move or respond to light or sound commands.</p>
@@ -730,13 +736,18 @@
 <li><p>If you are using the Arduino Motor Shield, plug in the two power supplies (The one for the Arduino and the one for the motor shield). Make sure to not plug the higher voltage power supply into the Arduino by mistake</p></li>
 <li><p>Wait for about 30 seconds for the Arduino to run through the initial startup sequence</p></li>
 </ul>
-<a class="reference internal image-reference" href="../../_images/throttle_wifi_direct.png"><img alt="WiFi Throttle Direct to CS" class="align-center" src="../../_images/throttle_wifi_direct.png" style="width: 640.0px; height: 292.8px;" /></a>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/throttle_wifi_direct.png"><img alt="WiFi Throttle Direct to CS" src="../../_images/throttle_wifi_direct.png" style="width: 640.0px; height: 292.8px;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 33 </span><span class="caption-text">WiFi Throttle Direct to Command Station</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <section id="using-engine-driver-android">
 <h4>Using Engine Driver (Android)<a class="headerlink" href="#using-engine-driver-android" title="Permalink to this heading"></a></h4>
-<figure class="align-right" id="id2">
+<figure class="align-right" id="id4">
 <a class="reference internal image-reference" href="../../_images/engine_driver.png"><img alt="Engine Driver" src="../../_images/engine_driver.png" style="width: 125.60000000000001px; height: 256.8px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 32 </span><span class="caption-text">Engine Driver</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 34 </span><span class="caption-text">Engine Driver</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>You will need to install <a class="reference internal" href="../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> on your mobile device and then connect to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, either directly with AP mode or through your router with Station Mode. You can then use your phone to control your trains.</p>
@@ -886,7 +897,7 @@
 </section>
 <hr class="docutils" />
 <section id="next-steps-run-your-trains">
-<h2><a class="toc-backref" href="#id6" role="doc-backlink">Next Steps - Run Your Trains</a><a class="headerlink" href="#next-steps-run-your-trains" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Next Steps - Run Your Trains</a><a class="headerlink" href="#next-steps-run-your-trains" title="Permalink to this heading"></a></h2>
 <p><em>You now should have everything you need to run your trains.</em></p>
 <p>We suggest that you look at the <a class="reference internal" href="../../big-picture/index.html"><span class="doc">The Big Picture</span></a> to get some additional guidance on running trains and the additional capabilities of <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> that you may prove of interest.</p>
 <p>You might also like to look at the other <a class="reference internal" href="../advanced-setup/controllers.html"><span class="doc">Throttles (Controllers)</span></a> that are available.</p>

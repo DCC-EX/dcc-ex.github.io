@@ -2,11 +2,13 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<meta content="Hardware that works with EX-CommandStations or other DCC-EX products. [DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout.]" name="description" />
-<meta content="Hardware EX-CommandStations Third Party Products Suppliers" name="keywords" />
+<meta content="DCC-EX DCC DCC++ EX DCC++EX" name="keywords" />
+<meta content="An EX-CommandStation is a simple, but powerful, DCC Command Station which you assemble yourself using widely available Arduino boards. [DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout.]" name="description" />
+<meta content="EX-CommandStation EX-CS Command Station" name="keywords" />
+<meta content="WiFi setup Espressif" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>&lt;no title&gt; &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>ESP8266 (WiFi Boards) - AT Version Issues and Solutions &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
@@ -16,7 +18,7 @@
       <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
       <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-    <link rel="canonical" href="https://dcc-ex.com/include/include-hardware.html" />
+    <link rel="canonical" href="https://dcc-ex.com/support/wifi-at-version.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -35,6 +37,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Advanced Options" href="../ex-commandstation/advanced-setup/index.html" />
+    <link rel="prev" title="Troubleshooting" href="ex-cs-troubleshooting.html" />
 
      
       <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -85,17 +89,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../begin/levels.html">Choose Your Comfort Level</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Products</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../ex-commandstation/index.html">EX-CommandStation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ex-commandstation/get-started/index.html">Getting Started</a><ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../ex-commandstation/index.html">EX-CommandStation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../ex-commandstation/get-started/index.html">Getting Started</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/get-started/purchasing.html">Purchasing Parts</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/get-started/assembly.html">Initial Assembly</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/get-started/wifi-setup.html">Adding WiFi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/get-started/installer.html">Install the Software</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/get-started/controllers.html">Choosing a Throttle (Controller)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/get-started/testing.html">Test Your Setup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../support/ex-cs-troubleshooting.html">Troubleshooting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../support/wifi-at-version.html">ESP8266 (WiFi Boards) - AT Version Issues and Solutions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ex-cs-troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ESP8266 (WiFi Boards) - AT Version Issues and Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-commandstation/advanced-setup/index.html">Advanced Options</a><ul>
@@ -229,7 +233,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../ex-ioexpander/supported-devices.html">Supported Devices</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../ex-ioexpander/testing.html">Testing EX-IOExpander</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../ex-ioexpander/other-devices.html">Using other devices</a></li>
-<li class="toctree-l5"><a class="reference internal" href="../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
@@ -246,7 +250,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../ex-turntable/test-and-tune.html">Testing, Tuning, and Control</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../ex-turntable/layout-wiring.html">Layout Connections and Wiring</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../ex-turntable/configure.html">Configuration options</a></li>
-<li class="toctree-l5"><a class="reference internal" href="../support/ex-tt-troubleshooting.html">EX-Turntable FAQ and Troubleshooting</a></li>
+<li class="toctree-l5"><a class="reference internal" href="ex-tt-troubleshooting.html">EX-Turntable FAQ and Troubleshooting</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../ex-turntable/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 </ul>
 </li>
@@ -291,7 +295,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../ex-turntable/test-and-tune.html">Testing, Tuning, and Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-turntable/layout-wiring.html">Layout Connections and Wiring</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-turntable/configure.html">Configuration options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../support/ex-tt-troubleshooting.html">EX-Turntable FAQ and Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ex-tt-troubleshooting.html">EX-Turntable FAQ and Troubleshooting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-turntable/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 </ul>
 </li>
@@ -300,7 +304,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../ex-ioexpander/supported-devices.html">Supported Devices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-ioexpander/testing.html">Testing EX-IOExpander</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-ioexpander/other-devices.html">Using other devices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../ex-fastclock/index.html">EX-FastClock</a><ul>
@@ -341,17 +345,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../throttles/tech-reference.html">Technical Reference for Throttle Developers</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../support/index.html">Troubleshooting &amp; Getting Help</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../support/index-ex-cs.html">EX-CommandStation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../support/ex-cs-faq.html">Frequently Asked Questions (FAQ)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../support/ex-cs-diagnose.html">Diagnosing Basic Problems</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../support/ex-cs-troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Troubleshooting &amp; Getting Help</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index-ex-cs.html">EX-CommandStation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ex-cs-faq.html">Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ex-cs-diagnose.html">Diagnosing Basic Problems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ex-cs-troubleshooting.html">Troubleshooting</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../support/ex-tt-troubleshooting.html">EX-Turntable FAQ and Troubleshooting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../support/ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../support/contact-us.html">Contact Us</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../support/create-ticket.html">Submit a Support Ticket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ex-tt-troubleshooting.html">EX-Turntable FAQ and Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ex-io-troubleshooting.html">EX-IOExpander FAQ and Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contact-us.html">Contact Us</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create-ticket.html">Submit a Support Ticket</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../big-picture/index.html">The Big Picture</a><ul>
@@ -605,11 +609,13 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">&lt;no title&gt;</li>
+          <li class="breadcrumb-item"><a href="../ex-commandstation/index.html">EX-CommandStation</a></li>
+          <li class="breadcrumb-item"><a href="../ex-commandstation/get-started/index.html">Getting Started</a></li>
+      <li class="breadcrumb-item active">ESP8266 (WiFi Boards) - AT Version Issues and Solutions</li>
   
     
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/include/include-hardware.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/support/wifi-at-version.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   
 
@@ -619,6 +625,175 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
+<p><a class="image-product-logo-float-right reference internal" href="../_images/product-logo-ex-commandstation.png"><img alt="EX-CommandStation" class="image-product-logo-float-right" src="../_images/product-logo-ex-commandstation.png" style="width: 320.0px; height: 64.0px;" /></a></p>
+<section id="esp8266-wifi-boards-at-version-issues-and-solutions">
+<h1>ESP8266 (WiFi Boards) - AT Version Issues and Solutions<a class="headerlink" href="#esp8266-wifi-boards-at-version-issues-and-solutions" title="Permalink to this heading"></a></h1>
+<p><a class="reference external" href="../../begin/levels.html#conductor"><img alt="Conductor Hat" src="../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
+<aside class="sidebar">
+<nav class="contents local" id="on-this-page">
+<p class="topic-title">On this page</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#which-is-correct-version-of-the-at-firmware" id="id7">Which is correct version of the AT firmware</a></p></li>
+<li><p><a class="reference internal" href="#symptoms-of-an-incorrect-firmware-version" id="id8">Symptoms of an Incorrect firmware Version</a></p></li>
+<li><p><a class="reference internal" href="#find-out-your-at-version" id="id9">Find out Your AT Version</a></p>
+<ul>
+<li><p><a class="reference internal" href="#checking-after-you-load-the-ex-cs-software" id="id10">Checking after you load the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software</a></p></li>
+<li><p><a class="reference internal" href="#checking-before-you-load-the-ex-cs-software" id="id11">Checking before you load the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#what-to-do-if-you-have-the-wrong-version" id="id12">What to do if you have the wrong version</a></p>
+<ul>
+<li><p><a class="reference internal" href="#correcting-the-at-version-on-a-esp-01" id="id13">Correcting the AT version on a ESP-01</a></p></li>
+<li><p><a class="reference internal" href="#correcting-the-at-version-on-a-esp8266-wifi-shield" id="id14">Correcting the AT version on a ESP8266 Wifi Shield</a></p></li>
+<li><p><a class="reference internal" href="#correcting-the-at-version-on-a-duinopeak-esp8266-wifi-expansion-board" id="id15">Correcting the AT version on a Duinopeak ESP8266 WiFi Expansion Board</a></p></li>
+<li><p><a class="reference internal" href="#correcting-the-at-version-on-a-mega-wifi" id="id16">Correcting the AT version on a Mega+WiFi</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+</aside>
+<p>Unfortunately the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>. This now seems to include the recommended <a class="reference external" href="https://www.makerfabs.com/esp8266-wifi-shield.html">Makerfabs ESP8266 WiFi Shield</a>.</p>
+<section id="which-is-correct-version-of-the-at-firmware">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Which is correct version of the AT firmware</a><a class="headerlink" href="#which-is-correct-version-of-the-at-firmware" title="Permalink to this heading"></a></h2>
+<p>Only <strong>version 1.7.4</strong> is known to work reliably.</p>
+<p>That means all versions both before or after 1.7.4 are <em>not</em> suitable.  So don’t be fooled in thinking that if it has a version later than that it will be ok.  <strong>It won’t!</strong></p>
+</section>
+<section id="symptoms-of-an-incorrect-firmware-version">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Symptoms of an Incorrect firmware Version</a><a class="headerlink" href="#symptoms-of-an-incorrect-firmware-version" title="Permalink to this heading"></a></h2>
+<p>There several common symptoms of a an incorrect firmware version</p>
+<ul class="simple">
+<li><p>You can’t connect to the SSID</p></li>
+<li><p>You can connect to the SSID, but can’t connect your WiFi throttle to the CommandStation (e.g. Engine Driver or wiThrottle)</p></li>
+<li><p>You can connect once, but it will not connect again unless you shut down the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="find-out-your-at-version">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Find out Your AT Version</a><a class="headerlink" href="#find-out-your-at-version" title="Permalink to this heading"></a></h2>
+<p>It is important to find out which version of the firmware you board has and correct it if necessary.</p>
+<p>There are two basic ways that you can check:</p>
+<ul class="simple">
+<li><p>After you load the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software</p></li>
+<li><p>Before you load the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software</p></li>
+</ul>
+<section id="checking-after-you-load-the-ex-cs-software">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Checking after you load the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software</a><a class="headerlink" href="#checking-after-you-load-the-ex-cs-software" title="Permalink to this heading"></a></h3>
+<p>One you have loaded the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software you will be able to see the AT version in the start-up log by connecting the serial monitor in either the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> or Arduino IDE (whichever you used to upload the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> onto your device).</p>
+<section id="checking-using-ex-installer">
+<h4>Checking using EX-Installer<a class="headerlink" href="#checking-using-ex-installer" title="Permalink to this heading"></a></h4>
+<p>Once you have successfully loaded the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software:</p>
+<ol class="arabic simple">
+<li><p>click back through the pages of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> till you get to the ‘Select your Device’ screen</p></li>
+<li><p>Click on the <span class="guilabel">View device monitor</span> button <br /> A new window will open and a lot of text will appear</p></li>
+<li><p>you need to look for a line that will have a section highlighted in green</p></li>
+</ol>
+<p>e.g. <code class="docutils literal notranslate"><span class="pre">AT</span> <span class="pre">version:1.7.4.0(May</span> <span class="pre">11</span> <span class="pre">2020</span> <span class="pre">19:13:04)</span></code></p>
+<p>Alternately, you can enter the command <code class="docutils literal notranslate"><span class="pre">&lt;+GMR&gt;</span></code> and click <span class="guilabel">Send</span>.  A similar line will be shown.</p>
+<p>If it says <strong>anything other than</strong> 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.</p>
+</section>
+<section id="checking-with-the-arduino-ide">
+<h4>Checking with the Arduino IDE<a class="headerlink" href="#checking-with-the-arduino-ide" title="Permalink to this heading"></a></h4>
+<p>If you loaded the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software using the Arduino, once you have successfully loaded the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software:</p>
+<ol class="arabic simple">
+<li><p>select <strong>Tools</strong> -&gt; <strong>Serial monitor</strong> from the menus</p></li>
+<li><p>A new pane will open at the bottom of the IDE window will open and a lot of text will appear</p></li>
+<li><p>you need to look for a line similar to the following</p></li>
+</ol>
+<p>e.g. <code class="docutils literal notranslate"><span class="pre">AT</span> <span class="pre">version:1.7.4.0(May</span> <span class="pre">11</span> <span class="pre">2020</span> <span class="pre">19:13:04)</span></code></p>
+<p>Alternately, you can enter the command <code class="docutils literal notranslate"><span class="pre">&lt;+GMR&gt;</span></code> and click <span class="guilabel">Send</span>.  A similar line will be shown.</p>
+<p>If it says <strong>anything other than</strong> 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.</p>
+</section>
+</section>
+<section id="checking-before-you-load-the-ex-cs-software">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Checking before you load the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software</a><a class="headerlink" href="#checking-before-you-load-the-ex-cs-software" title="Permalink to this heading"></a></h3>
+<p>How to check before you load the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software will depend on which WiFi shield or board you are using.</p>
+<section id="checking-esp-01">
+<h4>Checking ESP-01<a class="headerlink" href="#checking-esp-01" title="Permalink to this heading"></a></h4>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p><cite>Checking AT version ESP-01 prior to upload</cite></p>
+</div>
+<section id="checking-with-a-usb-serial-adapter">
+<h5>Checking with a USB Serial Adapter<a class="headerlink" href="#checking-with-a-usb-serial-adapter" title="Permalink to this heading"></a></h5>
+<ol class="arabic simple">
+<li><p>Connect the ESP01 to the serial adapter</p></li>
+<li><p>Plug the serial adapter it the PC</p></li>
+<li><p>oOpen the Arduino IDE</p></li>
+<li><p>Select <strong>Tools</strong> -&gt; <strong>Serial monitor</strong> from the menus</p></li>
+<li><p>Select baud: <code class="docutils literal notranslate"><span class="pre">115200</span></code> and <code class="docutils literal notranslate"><span class="pre">Both</span> <span class="pre">NL</span> <span class="pre">&amp;</span> <span class="pre">CR</span></code></p></li>
+<li><p>A new pane will open at the bottom of the IDE window will open</p></li>
+<li><p>Enter the command <code class="docutils literal notranslate"><span class="pre">AT+GMR</span></code> and click <span class="guilabel">Send</span>.</p></li>
+</ol>
+<p>It will reply with something like <code class="docutils literal notranslate"><span class="pre">AT</span> <span class="pre">version:1.7.4.0(May</span> <span class="pre">11</span> <span class="pre">2020</span> <span class="pre">19:13:04)</span></code></p>
+<p>If it says <strong>anything other than</strong> 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.</p>
+</section>
+<section id="checking-with-a-usb-to-ttl-ch340g-converter-module-adapter">
+<h5>Checking with a USB to TTL CH340G Converter Module Adapter<a class="headerlink" href="#checking-with-a-usb-to-ttl-ch340g-converter-module-adapter" title="Permalink to this heading"></a></h5>
+</section>
+<section id="checking-with-a-arduino-uno">
+<h5>Checking with a Arduino Uno<a class="headerlink" href="#checking-with-a-arduino-uno" title="Permalink to this heading"></a></h5>
+</section>
+</section>
+<section id="checking-esp8266-wifi-shield">
+<h4>Checking ESP8266 Wifi Shield<a class="headerlink" href="#checking-esp8266-wifi-shield" title="Permalink to this heading"></a></h4>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p><cite>Checking AT version ESP8266 Wifi Shield prior to upload</cite></p>
+</div>
+</section>
+<section id="checking-duinopeak-esp8266-wifi-expansion-board">
+<h4>Checking Duinopeak ESP8266 WiFi Expansion Board<a class="headerlink" href="#checking-duinopeak-esp8266-wifi-expansion-board" title="Permalink to this heading"></a></h4>
+</section>
+<section id="checking-mega-wifi">
+<h4>Checking Mega+WiFi<a class="headerlink" href="#checking-mega-wifi" title="Permalink to this heading"></a></h4>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">Todo</p>
+<p><cite>Checking AT version Mega+WiFi prior to upload</cite></p>
+</div>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="what-to-do-if-you-have-the-wrong-version">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">What to do if you have the wrong version</a><a class="headerlink" href="#what-to-do-if-you-have-the-wrong-version" title="Permalink to this heading"></a></h2>
+<p>The steps necessary to correct the version will depend on you hardware.</p>
+<p>We highly recommend upgrading or downgrading to the “NonOS AT” version 1.7.4 available on our <a class="reference internal" href="../download/esp8266.html"><span class="doc">ESP8266 (WiFi Boards)</span></a> download page prior to reaching out for support from the team.</p>
+<section id="correcting-the-at-version-on-a-esp-01">
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Correcting the AT version on a ESP-01</a><a class="headerlink" href="#correcting-the-at-version-on-a-esp-01" title="Permalink to this heading"></a></h3>
+<div class="admonition-todo admonition" id="id4">
+<p class="admonition-title">Todo</p>
+<p><cite>Correcting AT version ESP-01</cite></p>
+</div>
+<section id="with-a-usb-serial-adapter">
+<h4>With a USB Serial Adapter<a class="headerlink" href="#with-a-usb-serial-adapter" title="Permalink to this heading"></a></h4>
+</section>
+<section id="with-a-usb-to-ttl-ch340g-converter-module-adapter">
+<h4>With a USB to TTL CH340G Converter Module Adapter<a class="headerlink" href="#with-a-usb-to-ttl-ch340g-converter-module-adapter" title="Permalink to this heading"></a></h4>
+</section>
+<section id="with-a-arduino-uno">
+<h4>With a Arduino Uno<a class="headerlink" href="#with-a-arduino-uno" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+<section id="correcting-the-at-version-on-a-esp8266-wifi-shield">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Correcting the AT version on a ESP8266 Wifi Shield</a><a class="headerlink" href="#correcting-the-at-version-on-a-esp8266-wifi-shield" title="Permalink to this heading"></a></h3>
+<div class="admonition-todo admonition" id="id5">
+<p class="admonition-title">Todo</p>
+<p><cite>Correcting AT version ESP8266 Wifi Shield</cite></p>
+</div>
+</section>
+<section id="correcting-the-at-version-on-a-duinopeak-esp8266-wifi-expansion-board">
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">Correcting the AT version on a Duinopeak ESP8266 WiFi Expansion Board</a><a class="headerlink" href="#correcting-the-at-version-on-a-duinopeak-esp8266-wifi-expansion-board" title="Permalink to this heading"></a></h3>
+<div class="admonition-todo admonition" id="id6">
+<p class="admonition-title">Todo</p>
+<p><cite>Correcting AT version Duinopeak ESP8266 WiFi Expansion Board</cite></p>
+</div>
+</section>
+<section id="correcting-the-at-version-on-a-mega-wifi">
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">Correcting the AT version on a Mega+WiFi</a><a class="headerlink" href="#correcting-the-at-version-on-a-mega-wifi" title="Permalink to this heading"></a></h3>
+<p>Flashing the ESP8266 chip on a Mega+WiFi is covered in detail <a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html"><span class="doc">here</span></a>.</p>
+</section>
+</section>
+</section>
 
 <div class="section ablog__blog_comments">
   
@@ -627,7 +802,10 @@
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ex-cs-troubleshooting.html" class="btn btn-neutral float-left" title="Troubleshooting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ex-commandstation/advanced-setup/index.html" class="btn btn-neutral float-right" title="Advanced Options" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

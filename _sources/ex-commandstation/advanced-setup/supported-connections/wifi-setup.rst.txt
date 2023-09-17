@@ -60,7 +60,15 @@ Most boards based on the ESP8266 should work with |EX-CS|. However, with all the
 * `Duinopeak ESP8266 WiFi Expansion Board (plus an ESP-01 or 01s) <https://usa.banggood.com/Duinopeak-ESP8266-ESP-01-WiFi-Expansion-Board-Shield-Without-ESP8266-Module-p-1391961.html?cur_warehouse=CN>`_
 * `ESP-01 or ESP-01S Board (This is not a shield. You will need to use jumpers) <https://www.amzn.com/B00O34AGSU/>`_
 
-Fore more boards you may be able to use, see the :doc:`WiFi Boards Section </reference/hardware/wifi-boards>`
+For more boards you may be able to use, see the :doc:`WiFi Boards Section </reference/hardware/wifi-boards>`
+
+.. warning:: 
+
+    Please be aware that the Espressif firmware provided with these devices **may not work** with |EX-CS| as there are many different versions which behave quite differently.
+
+    We **highly** recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 available on our :doc:`/download/esp8266` download page prior to reaching out for support from the team.
+
+    See :doc:`/support/wifi-at-version` for details on how to check the version and correct it if needed.
 
 What you will need (for WiFi)
 =============================
@@ -83,10 +91,10 @@ What you will need (for WiFi)
 Supported Boards
 ================
 
-* :doc:`/reference/hardware/wifi-boards/makerfabs-esp8266`
-* :doc:`/reference/hardware/wifi-boards/duinopeak-esp8266`
-* :doc:`/reference/hardware/wifi-boards/esp-01`
-* :doc:`/reference/hardware/wifi-boards/mega-wifi`
+* :doc:`Makerfabs ESP8266 WiFi Shield (recommended) </reference/hardware/wifi-boards/makerfabs-esp8266>`
+* :doc:`Duinopeak ESP8266 WiFi Expansion Board </reference/hardware/wifi-boards/duinopeak-esp8266>`
+* :doc:`ESP-01 and ESP-01s </reference/hardware/wifi-boards/esp-01>`
+* :doc:`Mega+WiFi Combo Board </reference/hardware/wifi-boards/mega-wifi>`
 
 
 Install the Software

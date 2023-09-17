@@ -98,6 +98,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../get-started/controllers.html">Choosing a Throttle (Controller)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../get-started/testing.html">Test Your Setup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../support/ex-cs-troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../support/wifi-at-version.html">ESP8266 (WiFi Boards) - AT Version Issues and Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Advanced Options</a><ul class="current">
@@ -669,7 +670,13 @@
 <li><p><a class="reference external" href="https://usa.banggood.com/Duinopeak-ESP8266-ESP-01-WiFi-Expansion-Board-Shield-Without-ESP8266-Module-p-1391961.html?cur_warehouse=CN">Duinopeak ESP8266 WiFi Expansion Board (plus an ESP-01 or 01s)</a></p></li>
 <li><p><a class="reference external" href="https://www.amzn.com/B00O34AGSU/">ESP-01 or ESP-01S Board (This is not a shield. You will need to use jumpers)</a></p></li>
 </ul>
-<p>Fore more boards you may be able to use, see the <a class="reference internal" href="../../../reference/hardware/wifi-boards.html"><span class="doc">WiFi Boards Section</span></a></p>
+<p>For more boards you may be able to use, see the <a class="reference internal" href="../../../reference/hardware/wifi-boards.html"><span class="doc">WiFi Boards Section</span></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please be aware that the Espressif firmware provided with these devices <strong>may not work</strong> with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> as there are many different versions which behave quite differently.</p>
+<p>We <strong>highly</strong> recommend upgrading or downgrading to the “NonOS AT” version 1.7.4 available on our <a class="reference internal" href="../../../download/esp8266.html"><span class="doc">ESP8266 (WiFi Boards)</span></a> download page prior to reaching out for support from the team.</p>
+<p>See <a class="reference internal" href="../../../support/wifi-at-version.html"><span class="doc">ESP8266 (WiFi Boards) - AT Version Issues and Solutions</span></a> for details on how to check the version and correct it if needed.</p>
+</div>
 </section>
 <section id="what-you-will-need-for-wifi">
 <h2><a class="toc-backref" href="#id3" role="doc-backlink">What you will need (for WiFi)</a><a class="headerlink" href="#what-you-will-need-for-wifi" title="Permalink to this heading"></a></h2>
@@ -691,10 +698,10 @@
 <section id="supported-boards">
 <h2><a class="toc-backref" href="#id4" role="doc-backlink">Supported Boards</a><a class="headerlink" href="#supported-boards" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../../reference/hardware/wifi-boards/makerfabs-esp8266.html"><span class="doc"></span></a></p></li>
-<li><p><a class="reference internal" href="../../../reference/hardware/wifi-boards/duinopeak-esp8266.html"><span class="doc"></span></a></p></li>
-<li><p><a class="reference internal" href="../../../reference/hardware/wifi-boards/esp-01.html"><span class="doc"></span></a></p></li>
-<li><p><a class="reference internal" href="../../../reference/hardware/wifi-boards/mega-wifi.html"><span class="doc"></span></a></p></li>
+<li><p><a class="reference internal" href="../../../reference/hardware/wifi-boards/makerfabs-esp8266.html"><span class="doc">Makerfabs ESP8266 WiFi Shield (recommended)</span></a></p></li>
+<li><p><a class="reference internal" href="../../../reference/hardware/wifi-boards/duinopeak-esp8266.html"><span class="doc">Duinopeak ESP8266 WiFi Expansion Board</span></a></p></li>
+<li><p><a class="reference internal" href="../../../reference/hardware/wifi-boards/esp-01.html"><span class="doc">ESP-01 and ESP-01s</span></a></p></li>
+<li><p><a class="reference internal" href="../../../reference/hardware/wifi-boards/mega-wifi.html"><span class="doc">Mega+WiFi Combo Board</span></a></p></li>
 </ul>
 </section>
 <section id="install-the-software">

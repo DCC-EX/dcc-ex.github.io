@@ -91,10 +91,10 @@ What you will need (for WiFi)
 Supported Boards
 ================
 
-* :doc:`/reference/hardware/wifi-boards/makerfabs-esp8266`
-* :doc:`/reference/hardware/wifi-boards/duinopeak-esp8266`
-* :doc:`/reference/hardware/wifi-boards/esp-01`
-* :doc:`/reference/hardware/wifi-boards/mega-wifi`
+* :doc:`Makerfabs ESP8266 WiFi Shield (recommended) </reference/hardware/wifi-boards/makerfabs-esp8266>`
+* :doc:`Duinopeak ESP8266 WiFi Expansion Board </reference/hardware/wifi-boards/duinopeak-esp8266>`
+* :doc:`ESP-01 and ESP-01s </reference/hardware/wifi-boards/esp-01>`
+* :doc:`Mega+WiFi Combo Board </reference/hardware/wifi-boards/mega-wifi>`
 
 
 Install the Software

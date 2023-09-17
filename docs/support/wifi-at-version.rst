@@ -102,8 +102,8 @@ Checking with a USB Serial Adapter
 3. oOpen the Arduino IDE 
 4. Select **Tools** -> **Serial monitor** from the menus
 5. Select baud: ``115200`` and ``Both NL & CR``
-5. A new pane will open at the bottom of the IDE window will open
-6. Enter the command ``AT+GMR`` and click :guilabel:`Send`.
+6. A new pane will open at the bottom of the IDE window will open
+7. Enter the command ``AT+GMR`` and click :guilabel:`Send`.
 
 It will reply with something like ``AT version:1.7.4.0(May 11 2020 19:13:04)``
 

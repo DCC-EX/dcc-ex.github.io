@@ -148,6 +148,17 @@ STEPPER_ACCELERATION
 
 The acceleration rate of the turntable, which is defined as steps per second, per second. This is what gives |EX-TT| a more prototypical acceleration/deceleration rate when rotating.
 
+STEPPER_GEARING_FACTOR
+----------------------
+
+**Requires EX-Turntable version 0.6.0 or later**
+
+`Default: 1`
+
+`Valid values: 1 - 10`
+
+Step counts sent from |EX-CS| will be multiplied by this number, allowing for larger gear ratios and small microsteps that result in a steps per revolution of greater than 32767. The maximum number after multiplication is 4,294,967,295.
+
 LED_FAST
 --------
 

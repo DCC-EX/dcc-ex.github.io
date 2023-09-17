@@ -32,9 +32,9 @@ Symptoms of an Incorrect firmware Version
 
 There several common symptoms of a an incorrect firmware version
 
-# You can't connect to the SSID
-# You can connect to the SSID, but can't connect your WiFi throttle to the CommandStation (e.g.g Engine Driver or wiThrottle)
-# You can connect once, but it will not connect again unless you shut down the |EX-CS|
+* You can't connect to the SSID
+* You can connect to the SSID, but can't connect your WiFi throttle to the CommandStation (e.g.g Engine Driver or wiThrottle)
+* You can connect once, but it will not connect again unless you shut down the |EX-CS|
 
 
 Find out Your AT Version

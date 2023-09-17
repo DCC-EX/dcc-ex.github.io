@@ -776,8 +776,60 @@ All the below turnout/point definitions will define turnouts/points that are adv
 
 ----
 
-Turntable/Traverser objects - Definition and Control
+Turntable/Traverser Objects - Definition and Control
 ----------------------------------------------------
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
+|NEW-IN-V5-LOGO-SMALL|
+
+Also refer to :ref:`ex-turntable/test-and-tune:ex-rail automation`.
+
+|hr-dashed|
+
+``MOVETT( id, steps, activity )`` - Move the specified |EX-TT| to the provided step position and perform the specified activity
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  |NEW-IN-V5| Move the specified |EX-TT| to the provided step position and perform the specified activity
+
+  .. note:: 
+
+    For users of our development releases, we highly recommend using our new turntable/traverser commands which allow turntables/traversers to be advertised to throttles similarly to how turnout/point objects are advertised and operated. Refer to :ref:`ex-rail/ex-rail-command-reference:turntable development features not in the current production version`.
+
+|hr-dashed|
+
+``IFRE ( id, value )`` - Test if a rotary encoder has been set to the specified value
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  |NEW-IN-V5| Test if a rotary encoder has been set to the specified value
+
+|hr-dashed|
+
+``ONCHANGE( id )`` - Detects a rotary encoder has changed position
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  |NEW-IN-V5| Detects a rotary encoder has changed position
+
+  .. collapse:: For example: (click to show)
+
+    .. code-block:: 
+
+      ONCHANGE(700)     // If rotary encoder ID 700 change state do this sequence
+        IFRE(700, 1)    // If rotary encoder ID 700 is at position 1, start ROUTE ID 123
+          START(123)
+        ENDIF
+        IFRE(700, 2)    // If rotary encoder ID 700 is at position 2, start ROUTE ID 124
+          START(124)
+        ENDIF
+        DONE
+
+|hr-dashed|
+
+Turntable development features not in the current production version
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |NOT-IN-PROD-VERSION|
 
@@ -876,23 +928,24 @@ Sensors/Inputs - Reading and Responding
 
 |hr-dashed|
 
-``AT( sensor_id )`` - An event handler that defines what to do when a sensor is active/triggered
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``AT( sensor_id )`` - Causes a sequence to wait until a sensor is active/triggered
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
-|hr-dashed|
-
-``AFTER( sensor_id )`` - Define an event handler for what to do after a sensor has been triggered
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  An event handler that defines what to do after a sensor has been triggered and then is off for 0.5 seconds.
+  A sequence will not progress until a sensor has been triggered.
 
 |hr-dashed|
 
-``ATTIMEOUT( sensor_id, timeout_ms )`` - Define a time based event handler for what to do when a sensor is active/triggered or if the timer runs out
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``AFTER( sensor_id )`` - Causes a sequence to wait until after a sensor has been triggered
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  A time based event handler that defines what to do when a sensor is active/triggered or if the timer runs out, then continues and sets a testable "timed out" flag.
+  A sequence will not progress until after a sensor has been triggered and then is off for 0.5 seconds.
+
+|hr-dashed|
+
+``ATTIMEOUT( sensor_id, timeout_ms )`` - Causes a sequence to wait until either a sensor is active/triggered, or if the timer runs out
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A sequence will not progress until either a sensor is active/triggered, or if the timer runs out. It then continues and sets a testable "timed out" flag (see ``IFTIMEOUT``).
 
 |hr-dashed|
 
@@ -1186,60 +1239,6 @@ DCC Accessory Decoder Control
 
 ----
 
-EX-Turntable Control
---------------------
-
-|NEW-IN-V5-LOGO-SMALL|
-
-.. contents:: In This Section
-    :depth: 4
-    :local:
-    :class: in-this-section
-
-Also refer to :ref:`ex-turntable/test-and-tune:ex-rail automation`.
-
-|hr-dashed|
-
-``MOVETT( id, steps, activity )`` - Move the specified |EX-TT| to the provided step position and perform the specified activity
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  |NEW-IN-V5| Move the specified |EX-TT| to the provided step position and perform the specified activity
-
-  .. note:: 
-
-    We highly recommend using our new turntable/traverser commands which allow turntables/traversers to be advertised to throttles similarly to how turnout/point objects are advertised and operated. Refer to :ref:`ex-rail/ex-rail-command-reference:turntable/traverser objects - definition and control`
-
-|hr-dashed|
-
-``IFRE ( id, value )`` - Test if a rotary encoder has been set to the specified value
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  |NEW-IN-V5| Test if a rotary encoder has been set to the specified value
-
-|hr-dashed|
-
-``ONCHANGE( id )`` - Detects a rotary encoder has changed position
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  |NEW-IN-V5| Detects a rotary encoder has changed position
-
-  .. collapse:: For example: (click to show)
-
-    .. code-block:: 
-
-      ONCHANGE(700)     // If rotary encoder ID 700 change state do this sequence
-        IFRE(700, 1)    // If rotary encoder ID 700 is at position 1, start ROUTE ID 123
-          START(123)
-        ENDIF
-        IFRE(700, 2)    // If rotary encoder ID 700 is at position 2, start ROUTE ID 124
-          START(124)
-        ENDIF
-        DONE
-
-|force-break|
-
-----
-
 EX-FastClock Event Handlers
 ---------------------------
 
@@ -1420,6 +1419,87 @@ TrackManager Control
       SETLOCO(1) SET_TRACK(A, DC)
       SET_TRACK(B, PROG)
       DONE
+
+|force-break|
+
+----
+
+
+Controlling Overload/Shorts
+---------------------------
+
+|NOT-IN-PROD-VERSION|
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
+|hr-dashed|
+
+``ONOVERLOAD( track )`` - Event handler for actions to be taken when an Overload occurs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+   Creates an event handler for the selected track, to be executed when the MotorDriver routines detect and overload. Refer also to :doc:`/trackmanager/index`
+
+|hr-dashed|
+
+``AFTEROVERLOAD( track )`` - Event handler for actions to be taken when an Overload clears
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Creates a complementary event handler for the selected track, to be executed when the MotorDriver routines indicate the overload is cleared. Refer also to :doc:`/trackmanager/index`
+
+  Note:  AFTEROVERLOAD is only relevent when used within and ONOVERLOAD.... DONE structure.
+
+|hr-dashed|
+
+  The power calculation routines within |DCC-EX| will check for shorts and overloads and will change the state of the power produced by the MotorDriver board to protect both it and locos from damage.  This is usually eveident by the LED's on the MotorDriver board flashing.  However some users may wish to see some physical notifcation of these events.  This can now be achieved with EXRAIL and the ONOVERLOAD event.
+
+
+  .. collapse:: For example: (click to show)
+
+    This first example shows a warning message to an attached screen with an LED being illuminated to warn the user of the overload.  Once the overload is cleared the AFTEROVERLOAD code is run automatically.
+    
+    .. code-block:: cpp
+
+      ONOVERLOAD(A)       // the EXRAIL statement to control the event.
+        SCREEN(2,0, "OVERLOAD ON TRACCK A")     // A message to the second screen
+        PRINT("Overload Detected on Track A")   // Message to system moniter
+        SET(27)                                 // Turn on an LED perhaps
+        AFTEROVERLOAD(A)
+            SCREEN(2,0, "RESTORE A POWER ON")
+            PRINT("Overload Cleared on A - Power Restored")
+            RESET(27)                           // Turn off the LED
+            DELAY(2000)
+            SCREEN(2,0, "                  ")   // Clear the screen message
+      DONE
+
+    If the user wishes to turn off power whilst he/she investigates the problem, then this can be achieved using the second example below.  POWEROFF can be used, but this will turn off powere to all tracks.  Power to the track with the problem can be turned off with a TrackManager command.  However in order to execute the AFTEROVERLOAD routine it is necessary to have a reset routine.
+
+    .. code-block:: cpp
+
+      // This is the event triggered by an overload.  AFTEROVERLOAD cannot be triggered whilst power is OFF.
+      ONOVERLOAD(A)
+        SCREEN(2,0, "OVERLOAD A POWEROFF")
+        PRINT("Overload Detected on A - Turn Off Power")
+        SET_TRACK(A, NONE)   // Unsets the TrackManager assignment and turns off power.
+        SET(27)              // Light the LED
+        AFTEROVERLOAD(A)
+            SCREEN(2,0, "RESTORE A POWER ON")
+            PRINT("Overload Cleared on A - Power Restored")
+            RESET(27)
+            DELAY(2000)
+            SCREEN(2,0, "                  ")
+      DONE
+
+      // The following turns the poweron and allows the AFTEROVERLOAD to run
+      // This could also be achieved with a physical button and AFTER(pin) in place of ROUTE()
+      ROUTE(12,"Reset A")
+        SCREEN(2,0,"                  ")
+        SET_TRACK(A, MAIN)
+        POWERON
+      DONE
+    
 
 |force-break|
 

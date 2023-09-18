@@ -89,6 +89,7 @@ The complete list of supported stepper drivers and motors:
 * ULN2003/28BYJ-48 (Default)
 * A4988/NEMA17
 * DRV8825/NEMA17
+* TMC2208/NEMA17
 
 Next Steps
 ==========

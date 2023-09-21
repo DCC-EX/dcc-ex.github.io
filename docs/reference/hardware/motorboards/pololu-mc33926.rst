@@ -9,6 +9,9 @@ Pololu MC33926
 
 |tinkerer|
 
+.. warning:: 
+
+   This board is **not** compatible with |TM| DC mode.
 
 **Current sensing is not appropriate for most CV programming**
 

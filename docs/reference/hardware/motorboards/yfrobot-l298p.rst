@@ -9,6 +9,10 @@ YFRobot L298P Motor Shield
 
 |conductor|
 
+.. warning:: 
+
+   This board is **not** compatible with |TM| DC mode.
+
 This board is electrically similar, though a different layout than the Arduino motor shield and does not have a brake_pin feature. Often cheaper. Supports 2A per channel, but can deliver realistically 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan. 
 
 The YFROBOT Motor Shield will Only run DCC waveform and will Not be able to run DC waveform with the new TrackManager features as this shield does not have a brake_pin.

@@ -9,6 +9,9 @@ MiniIBT Motor Driver L6201P (single)
 
 |tinkerer| |engineer|
 
+.. warning:: 
+
+   This board is **not** compatible with |TM| DC mode.
 
 Found on eBay, Amazon and the Chinese sites, this board uses the L6201P H-Bridge chip and is rated for 5 Amps. With a fan and heat sink, it can handle 3 or 4 Amps at 12-14V. Search for MiniIBT or Wingxine to find it. Be careful to match the picture since there is another board that sometimes comes up in searches.
 

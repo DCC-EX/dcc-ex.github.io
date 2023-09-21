@@ -11,6 +11,10 @@ DCC-EX EX-MotorShield8874 RevA
 
 |conductor|
 
+.. note:: 
+
+   This board is compatible with |TM| DC mode.
+
 .. sidebar::
 
   .. contents:: On this page

@@ -9,6 +9,10 @@ L298N Motor Driver Setup
 
 |tinkerer| |engineer|
 
+.. warning:: 
+
+   This board is **not** compatible with |TM| DC mode.
+
 .. sidebar::
 
   .. contents:: On this page

@@ -9,6 +9,10 @@ Arduino Motor Shield R3
 
 |conductor|
 
+.. note:: 
+
+   This board is compatible with |TM| DC mode.
+
 Easy to use, widely available, and in the latest R3 version it is compatible with our next generation of Command Station hardware. It is rated at 2A of load per channel, but without a heatsink and fan, it can only realistically handle about 1.3A per channel. This board is the standard by which we compare other boards that are about the same, worse, or better.
 
 .. image:: /_static/images/motorboards/arduino_motorshield2.jpg

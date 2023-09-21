@@ -124,9 +124,9 @@ Hardware Requirements and Technical Notes
 
   These requirements are only for operating DC locomotives. There is nothing to do in a pure DCC environment where no DC or analogue locomotives are run.
 
-In order for TrackManager to operate in DC mode, the motor shield must have a brake pin, and defined in your “config.h” motor shield definition.
+.. warning:: 
 
-Non-standard motor shields must be validated for compatibility and require a fourth brake pin to be configured to run in DC (PWM) mode. A list of current supported motor drivers can be found in :ref:`ex-commandstation/advanced-setup/supported-motorboards/index:supported motor drivers`.
+  In order for |TM| to operate in DC mode, the motor shield must have a brake pin defined in your “config.h” motor shield definition. There are a very limited number of motor boards that are suitable for use with DC mode, and any other motor boards are unsupported. The current list is available in :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`.
 
 Do not attempt to connect two insulated tracks together and drive a DCC engine back and forth until someone bolder than you tries it first (or you've tested it).
 

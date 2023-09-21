@@ -40,7 +40,22 @@ A motor controller (aka shield, aka board) is just a high voltage, high current 
 Current list of boards
 =======================
 
-Below we outline the various details that we know of related to each of the different boards that we've either tested, or know to work based on user feedback.
+In this section we outline the various details that we know of related to each of the different boards that we've either tested, or know to work based on user feedback.
+
+TrackManager DC compatible boards
+---------------------------------
+
+.. warning:: 
+
+  There are specific pin and hardware requirements in order to support DC mode in |TM|. Use of any other board than this short list for DC mode is unsupported by the |DCC-EX| team.
+
+For users wishing to use the new |TM| DC feature, there are a very limited number of boards available for use, and only this list of boards is supported:
+
+- :doc:`/reference/hardware/motorboards/ex-motor-shield-8874`
+- :doc:`/reference/hardware/motorboards/arduino-motor-shield`
+- :doc:`/reference/hardware/motorboards/deek-robot-motor-shield`
+- :doc:`/reference/hardware/motorboards/flashtree-motor-shield`
+- :doc:`/reference/hardware/motorboards/diy-more-l298nh-motor-shield`
 
 Easy to use boards
 ------------------

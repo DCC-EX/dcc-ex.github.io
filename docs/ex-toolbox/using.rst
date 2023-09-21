@@ -186,7 +186,7 @@ You can use the :guilabel:`Next` and :guilabel:`Prior` buttons to retrieve previ
 Track Manager
 =============
 
-(Only available when connected to EX-CommandStation version 4.2.7 and above.)
+(Only available when connected to EX-CommandStation version 5.0.0 and above.)
 
 .. figure:: /_static/images/ex-toolbox/track_manager.png
    :alt: Track Manager
@@ -279,7 +279,7 @@ The :guilabel:`Watch` button is generally not needed, but will force |EX-TB| to 
 Current Meter
 =============
 
-(Only available when connected to EX-CommandStation version 4.2.20 and above.)
+(Only available when connected to EX-CommandStation version 5.0.0 and above.)
 
 .. figure:: /_static/images/ex-toolbox/currents.png
    :alt: Current Meter Screen

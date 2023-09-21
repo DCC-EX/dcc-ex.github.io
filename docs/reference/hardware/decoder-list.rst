@@ -148,3 +148,19 @@ Note to manufacturers: This list is not designed in any way to disparage or favo
     - Default
     - 3
     - Worked as expected. This is in the powered A unit that complements the unpowered B unit.
+  * - ESU
+    - Lokpilot 4 21MTC
+    - MF
+    - Unknown
+    - 21MTC
+    - Default
+    - 3
+    - Worked as expected out of the box. CV setup easily via programming track.
+  * - ESU
+    - Lokpilot 5 59610
+    - MF
+    - Unknown
+    - NEM652
+    - Default
+    - 3
+    - As expected no problems connecting to DCC-EX CS. Biggest advantage with this decoder is multi-format. DCC, MM, M4 (mfx), DC and AC analogue (same feedback from 2 users).

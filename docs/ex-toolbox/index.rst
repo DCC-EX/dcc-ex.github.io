@@ -22,8 +22,8 @@ Welcome to the home of |EX-TB|, an Android app to help setup and configure your 
 * CV Programming in the main track (Operation Mode)
 * Servo motor testing and adjustment
 * Sensor testing 
-* Current Meter (Only available when connected to EX-CommandStation version 4.2.20 and above.)
-* Track Manager (Only available when connected to EX-CommandStation version 4.2.7 and above.)
+* Current Meter (Only available when connected to EX-CommandStation version 5.0.0 and above.)
+* Track Manager (Only available when connected to EX-CommandStation version 5.0.0 and above.)
 
 
 .. toctree::

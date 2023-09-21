@@ -2,11 +2,16 @@
 .. include:: /include/include-l3.rst
 .. include:: /include/include-hardware.rst
 |EX-CS-LOGO|
+
 ****************************
 DIY More L298NH Motor Shield
 ****************************
 
 |conductor|
+
+.. note:: 
+
+   This board is compatible with |TM| DC mode.
 
 Another similar board to the Arduino motor shield. Supports 2A per channel. This board uses the L298HN, which is the same L298 internally as the Arduino Motor Shield but in a different form factor with a larger heat sink tab. Current sense and other features are identical to the Arduino version.
 

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2023-09-18T21:48:40.215128+00:00</updated>
+  <updated>2023-09-21T21:51:49.952886+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.3">ABlog</generator>
@@ -368,8 +368,8 @@
 &lt;li&gt;&lt;p&gt;CV Programming in the main track (Operation Mode)&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Servo motor testing and adjustment&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Sensor testing&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Current Meter (Only available when connected to EX-CommandStation version 4.2.20 and above.)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Track Manager (Only available when connected to EX-CommandStation version 4.2.7 and above.)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Current Meter (Only available when connected to EX-CommandStation version 5.0.0 and above.)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Track Manager (Only available when connected to EX-CommandStation version 5.0.0 and above.)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/section&gt;
 </content>

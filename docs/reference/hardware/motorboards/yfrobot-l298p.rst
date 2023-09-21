@@ -2,11 +2,16 @@
 .. include:: /include/include-l3.rst
 .. include:: /include/include-hardware.rst
 |EX-CS-LOGO|
-**************************************
+
+**************************
 YFRobot L298P Motor Shield
-**************************************
+**************************
 
 |conductor|
+
+.. warning:: 
+
+   This board is **not** compatible with |TM| DC mode.
 
 This board is electrically similar, though a different layout than the Arduino motor shield and does not have a brake_pin feature. Often cheaper. Supports 2A per channel, but can deliver realistically 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan. 
 

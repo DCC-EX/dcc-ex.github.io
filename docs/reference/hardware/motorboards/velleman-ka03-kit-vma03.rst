@@ -1,12 +1,17 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
-.. include:: /include/include-hardware.rst
+.. include:: /include/in
+   clude-hardware.rst
 |EX-CS-LOGO|
 ************************************
 Velleman KA03 (kit) VMA03 (soldered)
 ************************************
 
 |engineer|
+
+.. warning:: 
+
+   This board is **not** compatible with |TM| DC mode.
 
 **THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`reference/hardware/motorboards/motor-board-config:current sense and sense factor` section for further information.
 

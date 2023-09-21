@@ -4,9 +4,10 @@
 .. include:: /include/include-l3.rst
 .. include:: /include/include-hardware.rst
 |EX-CS-LOGO|
-**************************************
+
+****************
 DFRobot Romeo V2
-**************************************
+****************
 
 |engineer|
 

@@ -2,9 +2,10 @@
 .. include:: /include/include-l3.rst
 .. include:: /include/include-hardware.rst
 |EX-CS-LOGO|
-**************************
+
+**********************
 Flashtree Motor Shield
-**************************
+**********************
 
 |conductor|
 

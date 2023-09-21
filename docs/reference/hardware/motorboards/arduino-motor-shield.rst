@@ -2,9 +2,10 @@
 .. include:: /include/include-l3.rst
 .. include:: /include/include-hardware.rst
 |EX-CS-LOGO|
-**************************
+
+***********************
 Arduino Motor Shield R3
-**************************
+***********************
 
 |conductor|
 

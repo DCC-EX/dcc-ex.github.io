@@ -180,7 +180,7 @@ With a USB to TTL CH340G Converter Module Adapter
 With a Arduino Uno
 ^^^^^^^^^^^^^^^^^^
 
-.. todo:: `Correcting AT version ESP-01 With a Arduino Uno`
+See https://cordobo.com/2300-flash-esp8266-01-with-arduino-uno/
 
 |hr-dashed|
 
@@ -188,6 +188,11 @@ Correcting the AT version on a ESP8266 Wifi Shield
 --------------------------------------------------
 
 .. todo:: `Correcting AT version ESP8266 Wifi Shield`
+
+With a USB to TTL Converter Module Adapter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+See https://gist.github.com/nathankellenicki/7008540322c617869cec17226cff579d   
 
 Correcting the AT version on a Duinopeak ESP8266 WiFi Expansion Board 
 ---------------------------------------------------------------------

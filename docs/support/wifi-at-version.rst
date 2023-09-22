@@ -32,9 +32,9 @@ Symptoms of an Incorrect firmware Version
 
 There several common symptoms of a an incorrect firmware version
 
-* You can't connect to the SSID
-* You can connect to the SSID, but can't connect your WiFi throttle to the CommandStation (e.g. Engine Driver or wiThrottle)
-* You can connect once, but it will not connect again unless you shut down the |EX-CS|
+* You can't connect to the SSID.
+* You can connect to the SSID, but can't connect your WiFi throttle (e.g. Engine Driver or wiThrottle) to the CommandStation. 
+* You can connect once, but it will not connect again unless you re-start the |EX-CS|.
 
 ----
 
@@ -48,8 +48,10 @@ There are two basic ways that you can check:
 * After you load the |EX-CS| software
 * Before you load the |EX-CS| software
 
-Checking after you load the |EX-CS| software
---------------------------------------------
+|hr-dashed|
+
+Checking *after* you load the |EX-CS| software
+----------------------------------------------
 
 One you have loaded the |EX-CS| software you will be able to see the AT version in the start-up log by connecting the serial monitor in either the |EX-I| or Arduino IDE (whichever you used to upload the |EX-CS| onto your device).
 
@@ -66,7 +68,7 @@ e.g. ``AT version:1.7.4.0(May 11 2020 19:13:04)``
 
 Alternately, you can enter the command ``<+GMR>`` and click :guilabel:`Send`.  A similar line will be shown.
 
-If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.
+If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow `the instructions at the end of this page <What to do if you have the wrong version>`_ to correct it.
 
 Checking with the Arduino IDE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -81,18 +83,26 @@ e.g. ``AT version:1.7.4.0(May 11 2020 19:13:04)``
 
 Alternately, you can enter the command ``<+GMR>`` and click :guilabel:`Send`.  A similar line will be shown.
 
-If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.
+If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow `the instructions at the end of this page <What to do if you have the wrong version>`_ to correct it.
 
+|hr-dashed|
 
-Checking before you load the |EX-CS| software
----------------------------------------------
+Checking *before* you load the |EX-CS| software
+-----------------------------------------------
 
 How to check before you load the |EX-CS| software will depend on which WiFi shield or board you are using.
 
-Checking ESP-01
-^^^^^^^^^^^^^^^
+Checking ESP-01 or ESP-01s
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. todo:: `Checking AT version ESP-01 prior to upload`
+
+There are a number of ways that you can an ESP-01 or ESP-01s:
+
+* with a USB Serial Adapter
+* with a USB to TTL CH340G Converter Module Adapter
+* with a Arduino Uno
+* ESP8266 Wifi Shield
 
 Checking with a USB Serial Adapter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -107,31 +117,39 @@ Checking with a USB Serial Adapter
 
 It will reply with something like ``AT version:1.7.4.0(May 11 2020 19:13:04)``
 
-If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.
+If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow `the instructions at the end of this page <What to do if you have the wrong version>`_ to correct it.
 
 Checking with a USB to TTL CH340G Converter Module Adapter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. todo:: `Checking AT version with a USB to TTL CH340G Converter Module Adapter prior to upload`
+
 Checking with a Arduino Uno
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. todo:: `Checking AT version with a Arduino Uno prior to upload`
 
-Checking ESP8266 Wifi Shield
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+|hr-dashed|
+
+Checking a ESP8266 Wifi Shield
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. todo:: `Checking AT version ESP8266 Wifi Shield prior to upload`
 
 
-Checking Duinopeak ESP8266 WiFi Expansion Board 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+|hr-dashed|
 
+Checking a Duinopeak ESP8266 WiFi Expansion Board 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. todo:: `Checking AT version ESP8266 WiFi Expansion Board prior to upload`
 
-Checking Mega+WiFi
-^^^^^^^^^^^^^^^^^^
+|hr-dashed|
+
+Checking a Mega+WiFi
+^^^^^^^^^^^^^^^^^^^^
 
 .. todo:: `Checking AT version Mega+WiFi prior to upload`
-
 
 ----
 
@@ -140,8 +158,9 @@ What to do if you have the wrong version
 
 The steps necessary to correct the version will depend on you hardware.
 
-We highly recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 available on our :doc:`/download/esp8266` download page prior to reaching out for support from the team.
+We highly recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 available on our :doc:`/download/esp8266` download page **prior** to reaching out for support from the team.
 
+|hr-dashed|
 
 Correcting the AT version on a ESP-01
 -------------------------------------
@@ -151,12 +170,19 @@ Correcting the AT version on a ESP-01
 With a USB Serial Adapter
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. todo:: `Correcting AT version ESP-01 With a USB Serial Adapter` 
+
 With a USB to TTL CH340G Converter Module Adapter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. todo:: `Correcting AT version ESP-01 With a USB to TTL CH340G Converter Module Adapter`
 
 With a Arduino Uno
 ^^^^^^^^^^^^^^^^^^
 
+.. todo:: `Correcting AT version ESP-01 With a Arduino Uno`
+
+|hr-dashed|
 
 Correcting the AT version on a ESP8266 Wifi Shield
 --------------------------------------------------

@@ -16,7 +16,7 @@ ESP8266 (WiFi Boards) - AT Version Issues and Solutions
 
    .. contents:: On this page
       :local:
-      :depth: 2
+      :depth: 3
 
 Unfortunately the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with |EX-CS|. This now seems to include the recommended `Makerfabs ESP8266 WiFi Shield <https://www.makerfabs.com/esp8266-wifi-shield.html>`_.
 
@@ -55,8 +55,8 @@ Checking *after* you load the |EX-CS| software
 
 One you have loaded the |EX-CS| software you will be able to see the AT version in the start-up log by connecting the serial monitor in either the |EX-I| or Arduino IDE (whichever you used to upload the |EX-CS| onto your device).
 
-Checking using EX-Installer
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Checking the AT version using EX-Installer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once you have successfully loaded the |EX-CS| software:
 
@@ -70,8 +70,8 @@ Alternately, you can enter the command ``<+GMR>`` and click :guilabel:`Send`.  A
 
 If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow `the instructions at the end of this page <What to do if you have the wrong version>`_ to correct it.
 
-Checking with the Arduino IDE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Checking the AT version with the Arduino IDE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you loaded the |EX-CS| software using the Arduino, once you have successfully loaded the |EX-CS| software:
 
@@ -92,24 +92,24 @@ Checking *before* you load the |EX-CS| software
 
 How to check before you load the |EX-CS| software will depend on which WiFi shield or board you are using.
 
-Checking ESP-01 or ESP-01s
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Checking the AT version of a ESP-01 or ESP-01s
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. todo:: `Checking AT version ESP-01 prior to upload`
 
-There are a number of ways that you can an ESP-01 or ESP-01s:
+There are a number of ways that you can check the AT version an a ESP-01 or ESP-01s:
 
 * with a USB Serial Adapter
 * with a USB to TTL CH340G Converter Module Adapter
 * with a Arduino Uno
 * ESP8266 Wifi Shield
 
-Checking with a USB Serial Adapter
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Checking the AT version of a with a USB Serial Adapter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Connect the ESP01 to the serial adapter
 2. Plug the serial adapter it the PC
-3. oOpen the Arduino IDE 
+3. Open the Arduino IDE 
 4. Select **Tools** -> **Serial monitor** from the menus
 5. Select baud: ``115200`` and ``Both NL & CR``
 6. A new pane will open at the bottom of the IDE window will open
@@ -119,35 +119,35 @@ It will reply with something like ``AT version:1.7.4.0(May 11 2020 19:13:04)``
 
 If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow `the instructions at the end of this page <What to do if you have the wrong version>`_ to correct it.
 
-Checking with a USB to TTL CH340G Converter Module Adapter
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Checking the AT version of a with a USB to TTL CH340G Converter Module Adapter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. todo:: `Checking AT version with a USB to TTL CH340G Converter Module Adapter prior to upload`
 
-Checking with a Arduino Uno
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Checking the AT version of a with a Arduino Uno
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. todo:: `Checking AT version with a Arduino Uno prior to upload`
 
 |hr-dashed|
 
-Checking a ESP8266 Wifi Shield
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Checking the AT version of a ESP8266 Wifi Shield
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. todo:: `Checking AT version ESP8266 Wifi Shield prior to upload`
 
 
 |hr-dashed|
 
-Checking a Duinopeak ESP8266 WiFi Expansion Board 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Checking the AT version of a Duinopeak ESP8266 WiFi Expansion Board 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. todo:: `Checking AT version ESP8266 WiFi Expansion Board prior to upload`
 
 |hr-dashed|
 
-Checking a Mega+WiFi
-^^^^^^^^^^^^^^^^^^^^
+Checking the AT version of a Mega+WiFi
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. todo:: `Checking AT version Mega+WiFi prior to upload`
 
@@ -167,18 +167,18 @@ Correcting the AT version on a ESP-01
 
 .. todo:: `Correcting AT version ESP-01`
 
-With a USB Serial Adapter
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Correcting ESP-01 With a USB Serial Adapter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. todo:: `Correcting AT version ESP-01 With a USB Serial Adapter` 
 
-With a USB to TTL CH340G Converter Module Adapter
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Correcting ESP-01 With a USB to TTL CH340G Converter Module Adapter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. todo:: `Correcting AT version ESP-01 With a USB to TTL CH340G Converter Module Adapter`
 
-With a Arduino Uno
-^^^^^^^^^^^^^^^^^^
+Correcting ESP-01 With a Arduino Uno
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 See https://cordobo.com/2300-flash-esp8266-01-with-arduino-uno/
 
@@ -187,10 +187,10 @@ See https://cordobo.com/2300-flash-esp8266-01-with-arduino-uno/
 Correcting the AT version on a ESP8266 Wifi Shield
 --------------------------------------------------
 
-.. todo:: `Correcting AT version ESP8266 Wifi Shield`
+See https://www.allaboutcircuits.com/projects/update-the-firmware-in-your-esp8266-wi-fi-module/
 
-With a USB to TTL Converter Module Adapter
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Correcting the ESP8266 Wifi Shield With a USB to TTL Converter Module Adapter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 See https://gist.github.com/nathankellenicki/7008540322c617869cec17226cff579d   
 

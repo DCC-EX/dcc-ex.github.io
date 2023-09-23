@@ -54,12 +54,13 @@ h4, .h4 {
   text-shadow: 1px 1px #ffffff78;
 }
 html[data-theme='dark'] h4, .h4 {
-  color: #ffffff !important;
+  color: #00a3b9ff !important;
   text-shadow: 1px 1px #00353d;
 }
 html[data-theme='dark'] h4 a, 
 html[data-theme='dark'] h4 a:visited {
-  color: #ffffff !important;
+  color: #00a3b9ff !important;
+  text-shadow: 1px 1px #00353d;
 }
 h5, .h5 {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
@@ -450,7 +451,7 @@ html[data-theme='dark'] .admonition-todo {
   background: #f7d1b0 !important;
 }
 html[data-theme='dark'] .admonition-todo p.admonition-title {
-  background: #ca6105 !important;
+  background: #6d3403 !important;
 }
 
 /* *************************************** */

@@ -35,6 +35,7 @@ There several common symptoms of a an incorrect firmware version
 * You can't connect to the SSID.
 * You can connect to the SSID, but can't connect your WiFi throttle (e.g. Engine Driver or wiThrottle) to the CommandStation. 
 * You can connect once, but it will not connect again unless you re-start the |EX-CS|.
+* If you are installing one of the DEVEL versions (not the current production version) of the |EX-CS| and you set up the command station in |Access Point mode|, then the SSID that will be displayed will be "DCCEX_SAYS_BROKEN_FIRMWARE".
 
 ----
 
@@ -156,7 +157,7 @@ Checking the AT version of a Mega+WiFi
 What to do if you have the wrong version
 ========================================
 
-The steps necessary to correct the version will depend on you hardware.
+The steps necessary to correct the AT version will depend on your hardware.
 
 We highly recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 available on our :doc:`/download/esp8266` download page **prior** to reaching out for support from the team.
 
@@ -165,20 +166,24 @@ We highly recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 ava
 Correcting the AT version on a ESP-01
 -------------------------------------
 
-.. todo:: `Correcting AT version ESP-01`
+Correcting the AT version of a ESP-01or ESP01s requires additional hardware. One of following is required:
 
-Correcting ESP-01 With a USB Serial Adapter
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* A USB Serial Adapter
+* A USB to TTL CH340G Converter Module Adapter
+* A Arduino Uno
+
+Correcting a ESP-01 with a USB Serial Adapter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. todo:: `Correcting AT version ESP-01 With a USB Serial Adapter` 
 
-Correcting ESP-01 With a USB to TTL CH340G Converter Module Adapter
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Correcting a ESP-01 with a USB to TTL CH340G Converter Module Adapter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. todo:: `Correcting AT version ESP-01 With a USB to TTL CH340G Converter Module Adapter`
 
-Correcting ESP-01 With a Arduino Uno
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Correcting a ESP-01 with a Arduino Uno
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 See https://cordobo.com/2300-flash-esp8266-01-with-arduino-uno/
 

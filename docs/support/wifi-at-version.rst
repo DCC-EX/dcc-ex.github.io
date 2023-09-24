@@ -96,8 +96,6 @@ How to check before you load the |EX-CS| software will depend on which WiFi shie
 Checking the AT version of a ESP-01 or ESP-01s
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. todo:: `Checking AT version ESP-01 prior to upload`
-
 There are a number of ways that you can check the AT version an a ESP-01 or ESP-01s:
 
 * with a USB Serial Adapter

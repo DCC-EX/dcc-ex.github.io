@@ -93,6 +93,8 @@ Checking *before* you load the |EX-CS| software
 
 How to check before you load the |EX-CS| software will depend on which WiFi shield or board you are using.
 
+|hr-dashed|
+
 Checking the AT version of a ESP-01 or ESP-01s
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -118,10 +120,14 @@ It will reply with something like ``AT version:1.7.4.0(May 11 2020 19:13:04)``
 
 If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow `the instructions at the end of this page <What to do if you have the wrong version>`_ to correct it.
 
+|hr-dashed|
+
 Checking the AT version of a with a USB to TTL CH340G Converter Module Adapter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. todo:: `Checking AT version with a USB to TTL CH340G Converter Module Adapter prior to upload`
+
+|hr-dashed|
 
 Checking the AT version of a with a Arduino Uno
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -157,9 +163,7 @@ What to do if you have the wrong version
 
 The steps necessary to correct the AT version will depend on your hardware.
 
-We highly recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 available on our :doc:`/download/esp8266` download page **prior** to reaching out for support from the team.
-
-|hr-dashed|
+We strongly recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 available on our :doc:`/download/esp8266` download page **prior** to reaching out for support from the team.
 
 Correcting the AT version on a ESP-01
 -------------------------------------
@@ -167,23 +171,65 @@ Correcting the AT version on a ESP-01
 Correcting the AT version of a ESP-01or ESP01s requires additional hardware. One of following is required:
 
 * A USB Serial Adapter
+* A USB to ESP-01 Adapter
 * A USB to TTL CH340G Converter Module Adapter
 * A Arduino Uno
+
+|hr-dashed|
 
 Correcting a ESP-01 with a USB Serial Adapter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. todo:: `Correcting AT version ESP-01 With a USB Serial Adapter` 
 
-Correcting a ESP-01 with a USB to TTL CH340G Converter Module Adapter
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+|hr-dashed|
+
+Correcting with a USB to ESP-01 Adapter Board
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. todo:: `Correcting AT version ESP-01 With a  USB to ESP-01 Adapter Board` 
+
+.. figure:: /_static/images/esp-01/esp-01-usb-adapter.png
+   :alt: ESP-01 USB adapter
+   :scale: 40%
+
+   ESP-01 USB adapter
+
+See https://remotexy.com/en/help/esp8266-firmware-update/
+
+|hr-dashed|
+
+Correcting a ESP-01 or ESP-01s with a USB to TTL CH340G Converter Module Adapter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: /_static/images/esp-01/CH340G-USB-to-TTL(serial)-converter.png
+   :alt: CH340G USB to TTL(serial) Converter
+   :scale: 50%
+
+   CH340G USB to TTL(serial) Converter
+
+The normal boards needs to be modified to be able to temporarily connect GND to GPIO 0.
+
+See here for the modification needed https://www.mogtour.com/wp-content/uploads/2021/01/ch340g.pdf
+
+.. figure:: /_static/images/esp-01/CH340G-USB-to-TTL(serial)-converter-later.png
+   :alt: CH340G USB to TTL(serial) Converter with switch
+   :scale: 50%
+
+   CH340G USB to TTL(serial) Converter with switch
+
+Later boards do not require the modification.
 
 .. todo:: `Correcting AT version ESP-01 With a USB to TTL CH340G Converter Module Adapter`
+
+|hr-dashed|
 
 Correcting a ESP-01 with a Arduino Uno
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 See https://cordobo.com/2300-flash-esp8266-01-with-arduino-uno/
+
+Or https://remotexy.com/en/help/esp8266-firmware-update/
 
 |hr-dashed|
 

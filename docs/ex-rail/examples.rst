@@ -29,12 +29,12 @@ Objects :
 Turn Track Power On at Startup
 ==============================
 
-Turning track power on or off in EX-CommandStation 5, the current version, is performed by the EX-Rail commands POWERON  POWEROFF; or in EX-CommandStation's native language, <1> or <0>
+Turning track power on or off in EX-CommandStation 5, the current version, is performed respectively by either the EX-Rail command POWERON or POWEROFF; or in EX-CommandStation's native language using the command line, <1> or <0>
 
-Users of previous EX-CommandStation versions can either;
-   SETUP("<1 MAIN>")  or SETUP("<0 MAIN>")  or in EX-CommandStation's native language, <1> or <0>
+Users of previous EX-CommandStation versions can switch track power on or off via EX-Rail;
+   SETUP("<1>")  for on or SETUP("<0>") for off;  or in EX-CommandStation's native language, <1> or <0>
 
-Another approach is to assign a speed to a loco in a sequence and track power will automatically turn on.  EX-Rail cleverly knows that power must be on before a locomotive can move so it turns track power on at startup.
+Another approach for powering up the track is to assign a speed to a loco in a sequence and power will automatically turn on.  EX-Rail cleverly knows that power must be on before a locomotive can move so it turns track power on when the sequence is executed.
 
 .. code-block:: cpp
    

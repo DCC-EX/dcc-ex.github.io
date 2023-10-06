@@ -15,10 +15,9 @@ Example Objects and Sequences
      :depth: 2
      :local:
 
-On this page are a number of examples of |EX-R| sequences that you can lean from.  :doc:`/big-picture/big-picture` section of this web site also contains numerous more complex examples.
+A variety of |EX-R| sequences that illustrate function and usage of five objects are shown below.  :doc:`/big-picture/big-picture` section of this web site also contains a number of more elaborate and complex examples.
 
-We will be using these objects in the examples:
-
+Objects :
 - A three aspect signal connected to Mega2560 I/O pins 22 (red), 23 (amber), and 24 (green)
 - A two aspect signal connected to Mega2560 I/O pins 25 (red) and 26 (green)
 - LEDs connected to pins vpins 164 and 165 of an MCP23017 I/O extender
@@ -30,7 +29,12 @@ We will be using these objects in the examples:
 Turn Track Power On at Startup
 ==============================
 
-The current production release of |EX-R| does not have commands for turning track power on or off, but if you assign a speed to a loco in a sequence it will automatically turn the track power on.  Using this feature we can fudge turning the track power on at startup.
+Turning track power on or off in EX-CommandStation 5, the current version, is performed by the EX-Rail commands POWERON  POWEROFF; or in EX-CommandStation's native language, <1> or <0>
+
+Users of previous EX-CommandStation versions can either;
+   SETUP("<1 MAIN>")  or SETUP("<0 MAIN>")  or in EX-CommandStation's native language, <1> or <0>
+
+Another approach is to assign a speed to a loco in a sequence and track power will automatically turn on.  EX-Rail cleverly knows that power must be on before a locomotive can move so it turns track power on at startup.
 
 .. code-block:: cpp
    

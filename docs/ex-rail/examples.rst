@@ -38,7 +38,10 @@ Another approach for powering up the track is to assign a speed to a loco in a s
 
 .. code-block:: cpp
    
-  // if this is at the start of myAutomation.h  This will act like an AUTOSTART sequence
+  // VER 5 No Implied AUTOSTART occurs and must be added to the myAutomation.h file
+  // VER 4 The implied AUTOSTART results in the automatic execution 
+  // of the code in the myAutomation.h file thus the sequence is run each time 
+  // the EX-CommandStation boots up.
   SETLOCO(9999)   // select loco 9999
   SPEED(0)        // set the speed to 0.  This will turn the tarck power on
   DONE

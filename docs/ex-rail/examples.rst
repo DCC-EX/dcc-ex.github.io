@@ -15,7 +15,7 @@ Example Objects and Sequences
      :depth: 2
      :local:
 
-A variety of |EX-R| sequences that illustrate function and usage of five objects are shown below.  :doc:`/big-picture/big-picture` section of this web site also contains a number of more elaborate and complex examples.
+A variety of |EX-R| sequences that illustrate function and usage of five objects are shown below. The :doc:`/big-picture/big-picture` section of this web site also contains a number of more elaborate and complex examples.
 
 Objects :
 - A three aspect signal connected to Mega2560 I/O pins 22 (red), 23 (amber), and 24 (green)
@@ -29,10 +29,10 @@ Objects :
 Turn Track Power On at Startup
 ==============================
 
-Turning track power on or off in EX-CommandStation 5, the current version, is performed respectively by either the EX-Rail command POWERON or POWEROFF; or in EX-CommandStation's native language using the command line, <1> or <0>
+Turning track power on or off in |EX-CS| version 5 (the current Production version) is performed respectively by either the |EX-R| command ``POWERON`` or ``POWEROFF``; or in EX-CommandStation's native language using the command line, ``<1>`` or ``<0>``.
 
 Users of previous EX-CommandStation versions can switch track power on or off via EX-Rail;
-   SETUP("<1>")  for on or SETUP("<0>") for off;  or in EX-CommandStation's native language, <1> or <0>
+   ``SETUP("<1>")``  for on or ``SETUP("<0>")`` for off;  or in EX-CommandStation's native language, ``<1>`` or ``<0>``
 
 Another approach for powering up the track is to assign a speed to a loco in a sequence and power will automatically turn on.  EX-Rail cleverly knows that power must be on before a locomotive can move so it turns track power on when the sequence is executed.
 
@@ -42,6 +42,7 @@ Another approach for powering up the track is to assign a speed to a loco in a s
   // VER 4 The implied AUTOSTART results in the automatic execution 
   // of the code in the myAutomation.h file thus the sequence is run each time 
   // the EX-CommandStation boots up.
+  AUTOSTART       // required in version 5 or later
   SETLOCO(9999)   // select loco 9999
   SPEED(0)        // set the speed to 0.  This will turn the tarck power on
   DONE

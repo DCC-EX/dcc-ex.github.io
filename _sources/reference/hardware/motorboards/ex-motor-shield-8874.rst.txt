@@ -76,10 +76,10 @@ Units may be purchased from the following sources:
 * from `Smart Hobby, LLC <https://www.smarthobbyllc.com/>`_. You can also find Smart Hobby on Facebook
 * In the UK from `Chesterfield Model Making & Miniature Electronics <https://chesterfield-models.co.uk/product/semify-dcc-ex-motor-shield/>`_
 * In Europe from `Semify's Tindie store <https://www.tindie.com/products/semify/semify-dcc-ex-motor-shield/>`_ (based in Austria)
-* In Australia and New Zealand and South East Asia from Millennium Engineering Pty Ltd (orders @ milleng.com.au)
+* In Australia and New Zealand and South East Asia from `Millennium Engineering Pty Ltd <https://www.milleng.com.au>`_
 * and other manufacturers licensed by DCC-EX.
 
-There are different options for the board such as fully assembled or in kit form where connectors and headers need to be soldered onto the board. Prices vary from around $34.95 to $39.90 in the US, to approximately £29.99 in the UK, €37 in Europe, and from Australia for $AU55.00. Prices do not include tax and shipping.
+There are different options for the board such as fully assembled or in kit form where connectors and headers need to be soldered onto the board. Prices vary from around $34.95 to $39.90 in the US, to approximately £29.99 in the UK, €37 in Europe, and in Australia starting from $AU55.00. Prices typically do not include tax and shipping.
 
 For quantities of 10 or less per annum, you may utilise a PCB manufacturing and assembly service such as JLCPCB without licensing fees. A donation to DCC-EX would be appreciated, so click the DONATE button! The production files are available on the `DCC-EX GitHub <https://github.com/DCC-EX/EX-Hardware/tree/main/EX-Motorshield8874>`_.
 

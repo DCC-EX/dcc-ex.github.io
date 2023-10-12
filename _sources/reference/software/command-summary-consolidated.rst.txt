@@ -602,7 +602,7 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
 
   *Response:* |BR|
   |_| Repeated for each defined Turtable/traverser |BR|
-  |_| |_| Response: ``<i id position>`` |BR|
+  |_| |_| Response: ``<I id position>`` |BR|
   |_| Response (fail): N/A |BR|
   |_| Response (no defined turntables/traversers): ``X`` |BR|
   |_| |BR|
@@ -615,7 +615,7 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
-  |_| Response: ``<i id position>`` |BR|
+  |_| Response: ``<I id position>`` |BR|
   |_| Response (fail): N/A |BR|
   |_| Response (no defined turntables/traversers): ``X`` |BR|
   |_| |BR|
@@ -632,7 +632,7 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
   |_| > **position:** - Position to rotate to |BR|
   
   *Response:* |BR|
-  |_| ``<i id position moving>`` |BR|
+  |_| ``<I id position moving>`` |BR|
   |_| > **id:** one of |BR|
   |_| |_| |_| |_| - identifier of the Turntable/traverser, or  |BR|
   |_| |_| |_| |_| - X if the command fails |BR|
@@ -645,7 +645,7 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
   |_|  |BR|
   |_| *Example Responses:* |BR|
   |_| Response on rotate: |BR|
-  |_| |_| |_| Response (successful): ``<i id position moving>`` |BR|
+  |_| |_| |_| Response (successful): ``<I id position moving>`` |BR|
   |_| |_| |_| Response (fail): ``<X>`` |BR|
 
   *Further information:* |BR|
@@ -662,7 +662,7 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
   |_| > **activity:** - The activity for EX-Turntable to perform (refer :ref:`ex-turntable/test-and-tune:ex-turntable commands`) |BR|
   
   *Response:* |BR|
-  |_| ``<i id position moving>`` |BR|
+  |_| ``<I id position moving>`` |BR|
   |_| > **id:** one of |BR|
   |_| |_| |_| |_| - identifier of the Turntable/traverser, or  |BR|
   |_| |_| |_| |_| - X if the command fails, or a rotation/move is in progress |BR|
@@ -676,7 +676,7 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
   |_|  |BR|
   |_| *Example Responses:* |BR|
   |_| Response on rotate: |BR|
-  |_| |_| |_| Response (successful): ``<i id position moving>`` |BR|
+  |_| |_| |_| Response (successful): ``<I id position moving>`` |BR|
   |_| |_| |_| Response (fail): ``<X>`` |BR|
 
   *Further information:* |BR|
@@ -1797,7 +1797,7 @@ It is anticipated that throttle developers will be able to "draw" turntables wit
   |_| > **home:** angle of the home position (0 - 3600)
 
   *Response:* |BR|
-  |_| Successful: ``<i>`` |BR|
+  |_| Successful: ``<I>`` |BR|
   |_| Fail: ``<X>``
 
   *Example:* ``<I 1 DCC 0>`` defines a DCC accessory turntable/traverser with a 0 degree home angle. |BR|
@@ -1814,7 +1814,7 @@ It is anticipated that throttle developers will be able to "draw" turntables wit
   |_| > **home:** angle of the home position (0 - 3600)
 
   *Response:* |BR|
-  |_| Successful: ``<i>`` |BR|
+  |_| Successful: ``<I>`` |BR|
   |_| Fail: ``<X>``
 
   *Example:* ``<I 1 EXTT 600 0>`` defines an EX-Turntable turntable/traverser at Vpin 600 with a 0 degree home angle. |BR|
@@ -1832,7 +1832,7 @@ It is anticipated that throttle developers will be able to "draw" turntables wit
   |_| > **angle:** angle from home for the position (0 - 3600)
 
   *Response:* |BR|
-  |_| Successful: ``<i>`` |BR|
+  |_| Successful: ``<I>`` |BR|
   |_| Fail: ``<X>``
 
   *Example:* This example defines a DCC accessory device, with 3 positions:

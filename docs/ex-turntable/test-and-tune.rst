@@ -87,7 +87,7 @@ Development version commands
 
 |NOT-IN-PROD-VERSION|
 
-For users keeping up with the |EX-CS| development releases, version 5.1.5 introduced a new turntable/traverser object, allowing for similar definition and control to that of turnouts/points.
+For users keeping up with the |EX-CS| development releases, version 5.1.16 introduced a new turntable/traverser object, allowing for similar definition and control to that of turnouts/points.
 
 The existing methods of control for |EX-TT| using the native ``<D TT ...>`` command and ``MOVETT()`` |EX-R| command remain as-is, however there are now more complete methods of definition and control available.
 
@@ -505,7 +505,7 @@ NEW - Development version control of EX-Turntable
 
 |NOT-IN-PROD-VERSION|
 
-As mentioned previously, for users of the development version of |EX-CS|, version 5.1.5 introduces a new turntable object that can be used to define and control |EX-TT|.
+As mentioned previously, for users of the development version of |EX-CS|, version 5.1.16 introduces a new turntable object that can be used to define and control |EX-TT|.
 
 Here are some examples for defining a turntable as per the examples above, but using the new turntable object in both native commands, and |EX-R|.
 
@@ -552,7 +552,8 @@ To define our turntable as above but in |EX-R|, it looks like this:
 
 .. code-block:: 
 
-  EXTT_TURNTABLE(600,600,0x60,0,"My EX-Turntable")
+  HAL(EXTurntable,600,1,0x60)
+  EXTT_TURNTABLE(600,0,"My EX-Turntable")
   TT_ADDPOSITION(600,1,114,0,"Roundhouse stall 1")
   TT_ADDPOSITION(600,2,227,0,"Roundhouse stall 2")
   TT_ADDPOSITION(600,3,341,0,"Roundhouse stall 3")

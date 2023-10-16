@@ -1370,8 +1370,8 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 <li><p><a class="reference internal" href="#ifre-vpin-value-test-if-a-rotary-encoder-has-been-set-to-the-specified-value" id="id99"><code class="docutils literal notranslate"><span class="pre">IFRE</span> <span class="pre">(</span> <span class="pre">vpin,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Test if a rotary encoder has been set to the specified value</a></p></li>
 <li><p><a class="reference internal" href="#onchange-vpin-detects-a-rotary-encoder-has-changed-position" id="id100"><code class="docutils literal notranslate"><span class="pre">ONCHANGE(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - Detects a rotary encoder has changed position</a></p></li>
 <li><p><a class="reference internal" href="#turntable-development-features-not-in-the-current-production-version" id="id101">Turntable development features not in the current production version</a></p></li>
-<li><p><a class="reference internal" href="#dcc-turntable-id-home-description-define-a-dcc-accessory-turntable-traverser" id="id102"><code class="docutils literal notranslate"><span class="pre">DCC_TURNTABLE(</span> <span class="pre">id,</span> <span class="pre">home,</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> - Define a DCC accessory turntable/traverser</a></p></li>
-<li><p><a class="reference internal" href="#extt-turntable-id-vpin-home-description-define-an-ex-turntable-turntable-traverser" id="id103"><code class="docutils literal notranslate"><span class="pre">EXTT_TURNTABLE(</span> <span class="pre">id,</span> <span class="pre">vpin,</span> <span class="pre">home,</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> - Define an EX-Turntable turntable/traverser</a></p></li>
+<li><p><a class="reference internal" href="#dcc-turntable-id-home-angle-description-define-a-dcc-accessory-turntable-traverser" id="id102"><code class="docutils literal notranslate"><span class="pre">DCC_TURNTABLE(</span> <span class="pre">id,</span> <span class="pre">home_angle,</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> - Define a DCC accessory turntable/traverser</a></p></li>
+<li><p><a class="reference internal" href="#extt-turntable-id-vpin-home-angle-description-define-an-ex-turntable-turntable-traverser" id="id103"><code class="docutils literal notranslate"><span class="pre">EXTT_TURNTABLE(</span> <span class="pre">id,</span> <span class="pre">vpin,</span> <span class="pre">home_angle,</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> - Define an EX-Turntable turntable/traverser</a></p></li>
 <li><p><a class="reference internal" href="#tt-addposition-turntable-id-position-id-value-angle-description-add-a-turntable-position" id="id104"><code class="docutils literal notranslate"><span class="pre">TT_ADDPOSITION(</span> <span class="pre">turntable_id,</span> <span class="pre">position_id,</span> <span class="pre">value,</span> <span class="pre">angle</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> - Add a turntable position</a></p></li>
 <li><p><a class="reference internal" href="#if-ttposition-id-position-test-if-turntable-traverser-is-at-a-position" id="id105"><code class="docutils literal notranslate"><span class="pre">IF_TTPOSITION(</span> <span class="pre">id,</span> <span class="pre">position</span> <span class="pre">)</span></code> - Test if turntable/traverser is at a position</a></p></li>
 <li><p><a class="reference internal" href="#onrotate-id-event-handler-for-when-a-turntable-traverser-is-rotated" id="id106"><code class="docutils literal notranslate"><span class="pre">ONROTATE(</span> <span class="pre">id</span> <span class="pre">)</span></code> - Event handler for when a turntable/traverser is rotated</a></p></li>
@@ -1428,21 +1428,21 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 <p>“description” is an optional parameter, and must be enclosed in quotes “”. If you don’t wish this turntable/traverser to be advertised to throttles, then substitute the word HIDDEN (with no “”) instead of the description.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="dcc-turntable-id-home-description-define-a-dcc-accessory-turntable-traverser">
-<h4><a class="toc-backref" href="#id102" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">DCC_TURNTABLE(</span> <span class="pre">id,</span> <span class="pre">home,</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> - Define a DCC accessory turntable/traverser</a><a class="headerlink" href="#dcc-turntable-id-home-description-define-a-dcc-accessory-turntable-traverser" title="Permalink to this heading"></a></h4>
+<section id="dcc-turntable-id-home-angle-description-define-a-dcc-accessory-turntable-traverser">
+<h4><a class="toc-backref" href="#id102" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">DCC_TURNTABLE(</span> <span class="pre">id,</span> <span class="pre">home_angle,</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> - Define a DCC accessory turntable/traverser</a><a class="headerlink" href="#dcc-turntable-id-home-angle-description-define-a-dcc-accessory-turntable-traverser" title="Permalink to this heading"></a></h4>
 <blockquote>
-<div><p>Define a DCC accessory turntable/traverser at the specified <strong>id</strong> and the <strong>home</strong> angle.</p>
+<div><p>Define a DCC accessory turntable/traverser at the specified <strong>id</strong> and the <strong>home_angle</strong> angle.</p>
 <ul class="simple">
 <li><p>id - the id of the turntable/traverser, valid IDs are 1 - 32767</p></li>
-<li><p>angle - the angle of the home position, valid angles are 0 - 3600</p></li>
+<li><p>home_angle - the angle of the home position, valid angles are 0 - 3600</p></li>
 </ul>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="extt-turntable-id-vpin-home-description-define-an-ex-turntable-turntable-traverser">
-<h4><a class="toc-backref" href="#id103" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">EXTT_TURNTABLE(</span> <span class="pre">id,</span> <span class="pre">vpin,</span> <span class="pre">home,</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> - Define an EX-Turntable turntable/traverser</a><a class="headerlink" href="#extt-turntable-id-vpin-home-description-define-an-ex-turntable-turntable-traverser" title="Permalink to this heading"></a></h4>
+<section id="extt-turntable-id-vpin-home-angle-description-define-an-ex-turntable-turntable-traverser">
+<h4><a class="toc-backref" href="#id103" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">EXTT_TURNTABLE(</span> <span class="pre">id,</span> <span class="pre">vpin,</span> <span class="pre">home_angle,</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> - Define an EX-Turntable turntable/traverser</a><a class="headerlink" href="#extt-turntable-id-vpin-home-angle-description-define-an-ex-turntable-turntable-traverser" title="Permalink to this heading"></a></h4>
 <blockquote>
-<div><p>Define an EX-Turntable turntable/traverser at the specified <strong>id</strong> and <strong>vpin</strong> with a <strong>home</strong> angle.</p>
+<div><p>Define an EX-Turntable turntable/traverser at the specified <strong>id</strong> and <strong>vpin</strong> with a <strong>home_angle</strong> angle.</p>
 <p>This statement will create the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> turntable/traverser object only, so you will need a separate <code class="docutils literal notranslate"><span class="pre">HAL()</span></code> statement for an <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> device to create the HAL device. It is not recommended to create it via “myHal.cpp”.</p>
 <p>The HAL creation will require the <strong>vpin</strong> and <strong>i2c_address</strong> parameters.</p>
 <p>Where:</p>
@@ -1450,7 +1450,7 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 <li><p>id - the id of the turntable/traverser, valid IDs are 1 - 32767</p></li>
 <li><p>vpin - the id of the vpin where the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> device is located</p></li>
 <li><p>i2c_address - the I<sup>2</sup>C address of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> device</p></li>
-<li><p>angle - the angle of the home position, valid angles are 0 - 3600</p></li>
+<li><p>home_angle - the angle of the home position, valid angles are 0 - 3600</p></li>
 </ul>
 <p>Example creation and definition:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>HAL(EXTurntable,600,1,0x60)            // Create your EX-Turntable device driver

@@ -858,10 +858,10 @@ To fully define a turntable/traverser object, you need to define the object firs
 
 |hr-dashed|
 
-``EXTT_TURNTABLE( id, home, [, "description"] )`` - Define an EX-Turntable turntable/traverser
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``EXTT_TURNTABLE( id, vpin, home, [, "description"] )`` - Define an EX-Turntable turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  Define an EX-Turntable turntable/traverser at the specified **id** with a **home** angle.
+  Define an EX-Turntable turntable/traverser at the specified **id** and **vpin** with a **home** angle.
 
   This statement will create the |EX-TT| turntable/traverser object only, so you will need a separate ``HAL()`` statement for an |EX-TT| device to create the HAL device. It is not recommended to create it via "myHal.cpp".
 
@@ -878,8 +878,8 @@ To fully define a turntable/traverser object, you need to define the object firs
 
   .. code-block:: 
 
-    HAL(EXTurntable, 600, 1, 0x60)            // Create your EX-Turntable device driver
-    EXTT_TURNTABLE(1, 45, "My EX-Turntable")  // Create your EX-Turntable object to enable control
+    HAL(EXTurntable,600,1,0x60)            // Create your EX-Turntable device driver
+    EXTT_TURNTABLE(1,600,45,"My EX-Turntable")  // Create your EX-Turntable object to enable control
 
 |hr-dashed|
 

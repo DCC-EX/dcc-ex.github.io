@@ -553,7 +553,7 @@ To define our turntable as above but in |EX-R|, it looks like this:
 .. code-block:: 
 
   HAL(EXTurntable,600,1,0x60)
-  EXTT_TURNTABLE(600,0,"My EX-Turntable")
+  EXTT_TURNTABLE(1,600,0,"My EX-Turntable")
   TT_ADDPOSITION(600,1,114,0,"Roundhouse stall 1")
   TT_ADDPOSITION(600,2,227,0,"Roundhouse stall 2")
   TT_ADDPOSITION(600,3,341,0,"Roundhouse stall 3")

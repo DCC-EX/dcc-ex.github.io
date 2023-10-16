@@ -848,20 +848,20 @@ To fully define a turntable/traverser object, you need to define the object firs
 
 |hr-dashed|
 
-``DCC_TURNTABLE( id, home, [, "description"] )`` - Define a DCC accessory turntable/traverser
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``DCC_TURNTABLE( id, home_angle, [, "description"] )`` - Define a DCC accessory turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  Define a DCC accessory turntable/traverser at the specified **id** and the **home** angle.
+  Define a DCC accessory turntable/traverser at the specified **id** and the **home_angle** angle.
 
   - id - the id of the turntable/traverser, valid IDs are 1 - 32767
-  - angle - the angle of the home position, valid angles are 0 - 3600
+  - home_angle - the angle of the home position, valid angles are 0 - 3600
 
 |hr-dashed|
 
-``EXTT_TURNTABLE( id, vpin, home, [, "description"] )`` - Define an EX-Turntable turntable/traverser
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``EXTT_TURNTABLE( id, vpin, home_angle, [, "description"] )`` - Define an EX-Turntable turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  Define an EX-Turntable turntable/traverser at the specified **id** and **vpin** with a **home** angle.
+  Define an EX-Turntable turntable/traverser at the specified **id** and **vpin** with a **home_angle** angle.
 
   This statement will create the |EX-TT| turntable/traverser object only, so you will need a separate ``HAL()`` statement for an |EX-TT| device to create the HAL device. It is not recommended to create it via "myHal.cpp".
 
@@ -872,7 +872,7 @@ To fully define a turntable/traverser object, you need to define the object firs
   - id - the id of the turntable/traverser, valid IDs are 1 - 32767
   - vpin - the id of the vpin where the |EX-TT| device is located
   - i2c_address - the |I2C| address of the |EX-TT| device
-  - angle - the angle of the home position, valid angles are 0 - 3600
+  - home_angle - the angle of the home position, valid angles are 0 - 3600
 
   Example creation and definition:
 

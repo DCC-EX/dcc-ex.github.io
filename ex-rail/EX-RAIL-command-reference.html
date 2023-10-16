@@ -1366,12 +1366,12 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 <nav class="contents in-this-section local" id="id5">
 <p class="topic-title">In This Section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#movett-id-steps-activity-move-the-specified-ex-tt-to-the-provided-step-position-and-perform-the-specified-activity" id="id98"><code class="docutils literal notranslate"><span class="pre">MOVETT(</span> <span class="pre">id,</span> <span class="pre">steps,</span> <span class="pre">activity</span> <span class="pre">)</span></code> - Move the specified <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> to the provided step position and perform the specified activity</a></p></li>
-<li><p><a class="reference internal" href="#ifre-id-value-test-if-a-rotary-encoder-has-been-set-to-the-specified-value" id="id99"><code class="docutils literal notranslate"><span class="pre">IFRE</span> <span class="pre">(</span> <span class="pre">id,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Test if a rotary encoder has been set to the specified value</a></p></li>
-<li><p><a class="reference internal" href="#onchange-id-detects-a-rotary-encoder-has-changed-position" id="id100"><code class="docutils literal notranslate"><span class="pre">ONCHANGE(</span> <span class="pre">id</span> <span class="pre">)</span></code> - Detects a rotary encoder has changed position</a></p></li>
+<li><p><a class="reference internal" href="#movett-vpin-steps-activity-move-the-specified-ex-tt-to-the-provided-step-position-and-perform-the-specified-activity" id="id98"><code class="docutils literal notranslate"><span class="pre">MOVETT(</span> <span class="pre">vpin,</span> <span class="pre">steps,</span> <span class="pre">activity</span> <span class="pre">)</span></code> - Move the specified <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> to the provided step position and perform the specified activity</a></p></li>
+<li><p><a class="reference internal" href="#ifre-vpin-value-test-if-a-rotary-encoder-has-been-set-to-the-specified-value" id="id99"><code class="docutils literal notranslate"><span class="pre">IFRE</span> <span class="pre">(</span> <span class="pre">vpin,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Test if a rotary encoder has been set to the specified value</a></p></li>
+<li><p><a class="reference internal" href="#onchange-vpin-detects-a-rotary-encoder-has-changed-position" id="id100"><code class="docutils literal notranslate"><span class="pre">ONCHANGE(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - Detects a rotary encoder has changed position</a></p></li>
 <li><p><a class="reference internal" href="#turntable-development-features-not-in-the-current-production-version" id="id101">Turntable development features not in the current production version</a></p></li>
 <li><p><a class="reference internal" href="#dcc-turntable-id-home-description-define-a-dcc-accessory-turntable-traverser" id="id102"><code class="docutils literal notranslate"><span class="pre">DCC_TURNTABLE(</span> <span class="pre">id,</span> <span class="pre">home,</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> - Define a DCC accessory turntable/traverser</a></p></li>
-<li><p><a class="reference internal" href="#extt-turntable-id-vpin-i2c-address-home-description-define-an-ex-turntable-turntable-traverser" id="id103"><code class="docutils literal notranslate"><span class="pre">EXTT_TURNTABLE(</span> <span class="pre">id,</span> <span class="pre">vpin,</span> <span class="pre">i2c_address,</span> <span class="pre">home,</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> - Define an EX-Turntable turntable/traverser</a></p></li>
+<li><p><a class="reference internal" href="#extt-turntable-id-vpin-home-description-define-an-ex-turntable-turntable-traverser" id="id103"><code class="docutils literal notranslate"><span class="pre">EXTT_TURNTABLE(</span> <span class="pre">id,</span> <span class="pre">vpin,</span> <span class="pre">home,</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> - Define an EX-Turntable turntable/traverser</a></p></li>
 <li><p><a class="reference internal" href="#tt-addposition-turntable-id-position-id-value-angle-description-add-a-turntable-position" id="id104"><code class="docutils literal notranslate"><span class="pre">TT_ADDPOSITION(</span> <span class="pre">turntable_id,</span> <span class="pre">position_id,</span> <span class="pre">value,</span> <span class="pre">angle</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> - Add a turntable position</a></p></li>
 <li><p><a class="reference internal" href="#if-ttposition-id-position-test-if-turntable-traverser-is-at-a-position" id="id105"><code class="docutils literal notranslate"><span class="pre">IF_TTPOSITION(</span> <span class="pre">id,</span> <span class="pre">position</span> <span class="pre">)</span></code> - Test if turntable/traverser is at a position</a></p></li>
 <li><p><a class="reference internal" href="#onrotate-id-event-handler-for-when-a-turntable-traverser-is-rotated" id="id106"><code class="docutils literal notranslate"><span class="pre">ONROTATE(</span> <span class="pre">id</span> <span class="pre">)</span></code> - Event handler for when a turntable/traverser is rotated</a></p></li>
@@ -1383,8 +1383,8 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 <p><a class="reference external" href="../news/posts/20230807.html"><img alt="EX-MotorShield8874" class="image-min-width-144" src="../_images/new_in_version_5.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>Also refer to <a class="reference internal" href="../ex-turntable/test-and-tune.html#ex-rail-automation"><span class="std std-ref">EX-RAIL automation</span></a>.</p>
 <p><hr class="hr-dashed" /></p>
-<section id="movett-id-steps-activity-move-the-specified-ex-tt-to-the-provided-step-position-and-perform-the-specified-activity">
-<h4><a class="toc-backref" href="#id98" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">MOVETT(</span> <span class="pre">id,</span> <span class="pre">steps,</span> <span class="pre">activity</span> <span class="pre">)</span></code> - Move the specified <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> to the provided step position and perform the specified activity</a><a class="headerlink" href="#movett-id-steps-activity-move-the-specified-ex-tt-to-the-provided-step-position-and-perform-the-specified-activity" title="Permalink to this heading"></a></h4>
+<section id="movett-vpin-steps-activity-move-the-specified-ex-tt-to-the-provided-step-position-and-perform-the-specified-activity">
+<h4><a class="toc-backref" href="#id98" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">MOVETT(</span> <span class="pre">vpin,</span> <span class="pre">steps,</span> <span class="pre">activity</span> <span class="pre">)</span></code> - Move the specified <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> to the provided step position and perform the specified activity</a><a class="headerlink" href="#movett-vpin-steps-activity-move-the-specified-ex-tt-to-the-provided-step-position-and-perform-the-specified-activity" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p><span class="new-in-v5">New in version 5 </span> Move the specified <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> to the provided step position and perform the specified activity</p>
 <div class="admonition note">
@@ -1394,15 +1394,15 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="ifre-id-value-test-if-a-rotary-encoder-has-been-set-to-the-specified-value">
-<h4><a class="toc-backref" href="#id99" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFRE</span> <span class="pre">(</span> <span class="pre">id,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Test if a rotary encoder has been set to the specified value</a><a class="headerlink" href="#ifre-id-value-test-if-a-rotary-encoder-has-been-set-to-the-specified-value" title="Permalink to this heading"></a></h4>
+<section id="ifre-vpin-value-test-if-a-rotary-encoder-has-been-set-to-the-specified-value">
+<h4><a class="toc-backref" href="#id99" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFRE</span> <span class="pre">(</span> <span class="pre">vpin,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Test if a rotary encoder has been set to the specified value</a><a class="headerlink" href="#ifre-vpin-value-test-if-a-rotary-encoder-has-been-set-to-the-specified-value" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p><span class="new-in-v5">New in version 5 </span> Test if a rotary encoder has been set to the specified value</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="onchange-id-detects-a-rotary-encoder-has-changed-position">
-<h4><a class="toc-backref" href="#id100" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONCHANGE(</span> <span class="pre">id</span> <span class="pre">)</span></code> - Detects a rotary encoder has changed position</a><a class="headerlink" href="#onchange-id-detects-a-rotary-encoder-has-changed-position" title="Permalink to this heading"></a></h4>
+<section id="onchange-vpin-detects-a-rotary-encoder-has-changed-position">
+<h4><a class="toc-backref" href="#id100" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONCHANGE(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - Detects a rotary encoder has changed position</a><a class="headerlink" href="#onchange-vpin-detects-a-rotary-encoder-has-changed-position" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p><span class="new-in-v5">New in version 5 </span> Detects a rotary encoder has changed position</p>
 <details class="summary-for-example-click-to-show">
@@ -1439,17 +1439,24 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="extt-turntable-id-vpin-i2c-address-home-description-define-an-ex-turntable-turntable-traverser">
-<h4><a class="toc-backref" href="#id103" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">EXTT_TURNTABLE(</span> <span class="pre">id,</span> <span class="pre">vpin,</span> <span class="pre">i2c_address,</span> <span class="pre">home,</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> - Define an EX-Turntable turntable/traverser</a><a class="headerlink" href="#extt-turntable-id-vpin-i2c-address-home-description-define-an-ex-turntable-turntable-traverser" title="Permalink to this heading"></a></h4>
+<section id="extt-turntable-id-vpin-home-description-define-an-ex-turntable-turntable-traverser">
+<h4><a class="toc-backref" href="#id103" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">EXTT_TURNTABLE(</span> <span class="pre">id,</span> <span class="pre">vpin,</span> <span class="pre">home,</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]</span> <span class="pre">)</span></code> - Define an EX-Turntable turntable/traverser</a><a class="headerlink" href="#extt-turntable-id-vpin-home-description-define-an-ex-turntable-turntable-traverser" title="Permalink to this heading"></a></h4>
 <blockquote>
-<div><p>Define an EX-Turntable turntable/traverser at the specified <strong>id</strong>, <strong>vpin</strong>, and <strong>i2c_address</strong>, with a <strong>home</strong> angle.</p>
-<p>This statement will both create the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> device as well as the turntable/traverser object, so you do not need a separate <code class="docutils literal notranslate"><span class="pre">HAL()</span></code> statement for an <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> device, nor do you need to create it via “myHal.cpp”.</p>
+<div><p>Define an EX-Turntable turntable/traverser at the specified <strong>id</strong> and <strong>vpin</strong> with a <strong>home</strong> angle.</p>
+<p>This statement will create the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> turntable/traverser object only, so you will need a separate <code class="docutils literal notranslate"><span class="pre">HAL()</span></code> statement for an <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> device to create the HAL device. It is not recommended to create it via “myHal.cpp”.</p>
+<p>The HAL creation will require the <strong>vpin</strong> and <strong>i2c_address</strong> parameters.</p>
+<p>Where:</p>
 <ul class="simple">
 <li><p>id - the id of the turntable/traverser, valid IDs are 1 - 32767</p></li>
 <li><p>vpin - the id of the vpin where the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> device is located</p></li>
 <li><p>i2c_address - the I<sup>2</sup>C address of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> device</p></li>
 <li><p>angle - the angle of the home position, valid angles are 0 - 3600</p></li>
 </ul>
+<p>Example creation and definition:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>HAL(EXTurntable,600,1,0x60)            // Create your EX-Turntable device driver
+EXTT_TURNTABLE(1,600,45,&quot;My EX-Turntable&quot;)  // Create your EX-Turntable object to enable control
+</pre></div>
+</div>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>

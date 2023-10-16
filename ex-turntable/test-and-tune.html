@@ -706,7 +706,7 @@ MOVETT(600, 100, Turn)
 <section id="development-version-commands">
 <h3><a class="toc-backref" href="#id3" role="doc-backlink">Development version commands</a><a class="headerlink" href="#development-version-commands" title="Permalink to this heading"></a></h3>
 <p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
-<p>For users keeping up with the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> development releases, version 5.1.5 introduced a new turntable/traverser object, allowing for similar definition and control to that of turnouts/points.</p>
+<p>For users keeping up with the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> development releases, version 5.1.16 introduced a new turntable/traverser object, allowing for similar definition and control to that of turnouts/points.</p>
 <p>The existing methods of control for <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> using the native <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">TT</span> <span class="pre">...&gt;</span></code> command and <code class="docutils literal notranslate"><span class="pre">MOVETT()</span></code> <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> command remain as-is, however there are now more complete methods of definition and control available.</p>
 <p>When tuning positions, using <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">TT</span> <span class="pre">...&gt;</span></code> as outlined on this page is still the simplest method for understanding accurate step counts to align with positions.</p>
 <p>For defining the new turntable/traverser objects with <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> native commands, refer to <a class="reference internal" href="../reference/software/command-summary-consolidated.html#turntables-traversers-configuring-the-ex-commandstation"><span class="std std-ref">Turntables/Traversers (Configuring the EX-CommandStation)</span></a>, and for controlling them, refer to <a class="reference internal" href="../reference/software/command-summary-consolidated.html#turntables-traversers"><span class="std std-ref">Turntables/Traversers</span></a>.</p>
@@ -1051,7 +1051,7 @@ DONE
 <section id="new-development-version-control-of-ex-turntable">
 <h2><a class="toc-backref" href="#id17" role="doc-backlink">NEW - Development version control of EX-Turntable</a><a class="headerlink" href="#new-development-version-control-of-ex-turntable" title="Permalink to this heading"></a></h2>
 <p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
-<p>As mentioned previously, for users of the development version of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, version 5.1.5 introduces a new turntable object that can be used to define and control <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span>.</p>
+<p>As mentioned previously, for users of the development version of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, version 5.1.16 introduces a new turntable object that can be used to define and control <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span>.</p>
 <p>Here are some examples for defining a turntable as per the examples above, but using the new turntable object in both native commands, and <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span>.</p>
 <section id="basic-dcc-ex-native-turntable-definition-and-control">
 <h3><a class="toc-backref" href="#id18" role="doc-backlink">Basic DCC-EX native turntable definition and control</a><a class="headerlink" href="#basic-dcc-ex-native-turntable-definition-and-control" title="Permalink to this heading"></a></h3>
@@ -1085,7 +1085,8 @@ DONE
 <h3><a class="toc-backref" href="#id19" role="doc-backlink">EXRAIL definition and control</a><a class="headerlink" href="#exrail-definition-and-control" title="Permalink to this heading"></a></h3>
 <p>The real beauty of this new object comes in the form of automation possibilities with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span>, as there is now an event handler <code class="docutils literal notranslate"><span class="pre">ONROTATE()</span></code> along with a position test command <code class="docutils literal notranslate"><span class="pre">IF_TTPOSITION()</span></code> and a new <code class="docutils literal notranslate"><span class="pre">WAITFORTT()</span></code> command to really enhance the possibilities of what can be accomplished when turntable/traverser activities occur.</p>
 <p>To define our turntable as above but in <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span>, it looks like this:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>EXTT_TURNTABLE(600,600,0x60,0,&quot;My EX-Turntable&quot;)
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>HAL(EXTurntable,600,1,0x60)
+EXTT_TURNTABLE(1,600,0,&quot;My EX-Turntable&quot;)
 TT_ADDPOSITION(600,1,114,0,&quot;Roundhouse stall 1&quot;)
 TT_ADDPOSITION(600,2,227,0,&quot;Roundhouse stall 2&quot;)
 TT_ADDPOSITION(600,3,341,0,&quot;Roundhouse stall 3&quot;)

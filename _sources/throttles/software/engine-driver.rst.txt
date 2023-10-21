@@ -67,6 +67,8 @@ EX-CommandStation Specific or Advantageous Features
 * Able to select local images for roster locos
 * New 'Request Loco ID' & 'Drive Away' feature from a Program track onto Mainline track with |EX-CS|
 
+:doc:`/throttles/driveaway`
+
 EX-CommandStation Specific Features - when using the DCC-EX Native Protocol
 ===========================================================================
 
@@ -76,7 +78,8 @@ EX-CommandStation Specific Features - when using the DCC-EX Native Protocol
 * Issue Native commands to the |EX-CS|
 * TrackManager control - able to change the type and state of each Track/Channel (e.g DCC and DC))
 
-:doc:`/throttles/driveaway`
+:doc:`/throttles/software/engine-driver-native-protocol`
+
 
 .. _ed-screenshots:
 

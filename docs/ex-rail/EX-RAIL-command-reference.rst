@@ -790,8 +790,8 @@ Also refer to :ref:`ex-turntable/test-and-tune:ex-rail automation`.
 
 |hr-dashed|
 
-``MOVETT( id, steps, activity )`` - Move the specified |EX-TT| to the provided step position and perform the specified activity
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``MOVETT( vpin, steps, activity )`` - Move the specified |EX-TT| to the provided step position and perform the specified activity
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   |NEW-IN-V5| Move the specified |EX-TT| to the provided step position and perform the specified activity
 
@@ -801,15 +801,15 @@ Also refer to :ref:`ex-turntable/test-and-tune:ex-rail automation`.
 
 |hr-dashed|
 
-``IFRE ( id, value )`` - Test if a rotary encoder has been set to the specified value
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``IFRE ( vpin, value )`` - Test if a rotary encoder has been set to the specified value
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   |NEW-IN-V5| Test if a rotary encoder has been set to the specified value
 
 |hr-dashed|
 
-``ONCHANGE( id )`` - Detects a rotary encoder has changed position
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``ONCHANGE( vpin )`` - Detects a rotary encoder has changed position
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   |NEW-IN-V5| Detects a rotary encoder has changed position
 
@@ -848,27 +848,38 @@ To fully define a turntable/traverser object, you need to define the object firs
 
 |hr-dashed|
 
-``DCC_TURNTABLE( id, home, [, "description"] )`` - Define a DCC accessory turntable/traverser
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``DCC_TURNTABLE( id, home_angle, [, "description"] )`` - Define a DCC accessory turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  Define a DCC accessory turntable/traverser at the specified **id** and the **home** angle.
+  Define a DCC accessory turntable/traverser at the specified **id** and the **home_angle** angle.
 
   - id - the id of the turntable/traverser, valid IDs are 1 - 32767
-  - angle - the angle of the home position, valid angles are 0 - 3600
+  - home_angle - the angle of the home position, valid angles are 0 - 3600
 
 |hr-dashed|
 
-``EXTT_TURNTABLE( id, vpin, i2c_address, home, [, "description"] )`` - Define an EX-Turntable turntable/traverser
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``EXTT_TURNTABLE( id, vpin, home_angle, [, "description"] )`` - Define an EX-Turntable turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  Define an EX-Turntable turntable/traverser at the specified **id**, **vpin**, and **i2c_address**, with a **home** angle.
+  Define an EX-Turntable turntable/traverser at the specified **id** and **vpin** with a **home_angle** angle.
 
-  This statement will both create the |EX-TT| device as well as the turntable/traverser object, so you do not need a separate ``HAL()`` statement for an |EX-TT| device, nor do you need to create it via "myHal.cpp".
+  This statement will create the |EX-TT| turntable/traverser object only, so you will need a separate ``HAL()`` statement for an |EX-TT| device to create the HAL device. It is not recommended to create it via "myHal.cpp".
+
+  The HAL creation will require the **vpin** and **i2c_address** parameters.
+
+  Where:
 
   - id - the id of the turntable/traverser, valid IDs are 1 - 32767
   - vpin - the id of the vpin where the |EX-TT| device is located
   - i2c_address - the |I2C| address of the |EX-TT| device
-  - angle - the angle of the home position, valid angles are 0 - 3600
+  - home_angle - the angle of the home position, valid angles are 0 - 3600
+
+  Example creation and definition:
+
+  .. code-block:: 
+
+    HAL(EXTurntable,600,1,0x60)            // Create your EX-Turntable device driver
+    EXTT_TURNTABLE(1,600,45,"My EX-Turntable")  // Create your EX-Turntable object to enable control
 
 |hr-dashed|
 

@@ -220,7 +220,7 @@ See here for the modification needed https://www.mogtour.com/wp-content/uploads/
 
 Later boards do not require the modification.
 
-.. todo:: `Correcting AT version ESP-01 With a USB to TTL CH340G Converter Module Adapter`
+See https://www.allaboutcircuits.com/projects/update-the-firmware-in-your-esp8266-wi-fi-module/
 
 |hr-dashed|
 
@@ -235,8 +235,6 @@ Or https://remotexy.com/en/help/esp8266-firmware-update/
 
 Correcting the AT version on a ESP8266 Wifi Shield
 --------------------------------------------------
-
-See https://www.allaboutcircuits.com/projects/update-the-firmware-in-your-esp8266-wi-fi-module/
 
 Correcting the ESP8266 Wifi Shield With a USB to TTL Converter Module Adapter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

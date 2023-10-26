@@ -394,6 +394,18 @@ If you have installed and Ethernet board, select this option.
 
 Note that it is not possible to have both WiFi and Ethernet enabled at the same time.
 
+Start with power on
+~~~~~~~~~~~~~~~~~~~
+
+Enabling this option will cause the |EX-CS| to automatically start with the track power on.  
+
+If you don't enable this, you will need to turn the track power with you controller, or with TrackManger automations.
+
+Override current limit
+~~~~~~~~~~~~~~~~~~~~~~
+
+Enabling this option will allow you to override the default current limit.
+
 Set track modes
 ~~~~~~~~~~~~~~~
 

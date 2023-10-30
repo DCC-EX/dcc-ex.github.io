@@ -88,7 +88,9 @@ The Arduino should still be unplugged from the USB port at this stage.
 4. Plug the adapter into a free USB port on your PC
 5. KEEP HOLDING THE JUMPER ON THE PIN
 
-.. image:: https://user-images.githubusercontent.com/2862695/228995714-de006673-56df-48ec-8428-ae78b2abc892.jpg
+.. figure:: /_static/images/wifi/mega-for-flashing-makerfabs-wifi-2.jpg
+   :alt: Arduino Mega - Flashing Makerfabs Wifi Shield
+   :scale: 25%
 
 Step 5 - Start the flashing
 ---------------------------

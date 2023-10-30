@@ -57,24 +57,24 @@ Step 1 - Set up the download tool
 Step 2 - Preparation
 --------------------
 
-The UNO should be unplugged from the USB port at this stage.
-No other power supply should be connected to the Arduino or Motor Shield during this process.
-
-The WiFi Shield should be connected to the Arduino as per the |EX-CS| instructions.  The Motor Shield can also be in the stack.
+* The UNO should be **unplugged from the USB port** at this stage.
+* **No other power supply should be connected** to the Arduino or Motor Shield during this process.
 
 Step 3 - Connect the Jumper Wires
 ---------------------------------
 
-Connect the following pins:
+Connect the following:
 
-1. Assemble the Wifi shield onto the Arduino. 
+1. Assemble the Wifi shield onto the Arduino. |BR| The WiFi Shield should be connected to the Arduino as per the |EX-CS| instructions.  The Motor Shield can also be in the stack.
 2. Connect one jumper wire from the "RESET" to "GND".
 3. Connect one jumper from the Wifi Shield "ESP_TXD" to the "RX" header or to "D0" on the shield. 
 4. Connect one jumper from the Wifi Shield "ESP_RXD" to the "TX" header or to "D1" on the shield.
 
 Your connections should look like this:
 
-ADD photo here!!!
+.. figure:: /_static/images/wifi/mega-for-flashing-makerfabs-wifi.png
+   :alt: Arduino Mega - Wiring for flashing Makerfabs Wifi Shield
+   :scale: 60%
 
 
 Step 4 - Plug in the Arduino

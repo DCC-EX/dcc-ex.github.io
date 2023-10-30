@@ -27,7 +27,7 @@ These instructions have been adapted from https://gist.github.com/nathankellenic
 Introduction
 ============
 
-Out of the box, the MakerFabs ESP8266 shield appears to be shipping with a broken firmware that is unstable when used with DCC-EX. I needed to flash version 1.7.4 onto the board. Here's how I did it - hopefully it works for you.
+Out of the box, the MakerFabs ESP8266 shield appears to be shipping with a broken firmware that is unstable when used with DCC-EX. To flash version 1.7.4 onto the board follow these instructions.
 
 Requirements
 ============
@@ -35,7 +35,7 @@ Requirements
 * The WiFi Shield itself - https://www.makerfabs.com/esp8266-wifi-shield.html
 * An Arduino Uno or Arduino mega
 * 2x female to male jumper wires
-* 1x male to male jumper wire
+* 2x male to male jumper wire
 * The flash download tool and firmware files from DCC-EX - https://dcc-ex.com/download/esp8266.html
 * A Windows PC
 
@@ -76,7 +76,6 @@ Your connections should look like this:
    :alt: Arduino Mega - Wiring for flashing Makerfabs Wifi Shield
    :scale: 60%
 
-
 Step 4 - Plug in the Arduino
 ----------------------------
 
@@ -90,7 +89,9 @@ The Arduino should still be unplugged from the USB port at this stage.
 
 .. figure:: /_static/images/wifi/mega-for-flashing-makerfabs-wifi-2.jpg
    :alt: Arduino Mega - Flashing Makerfabs Wifi Shield
-   :scale: 25%
+   :scale: 20%
+
+   Note: the "RESET" to "GND" jumper is not shown in this photo. **It is required!**
 
 Step 5 - Start the flashing
 ---------------------------

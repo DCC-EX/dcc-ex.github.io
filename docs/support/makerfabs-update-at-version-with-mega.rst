@@ -34,7 +34,7 @@ Requirements
 
 * The WiFi Shield itself - https://www.makerfabs.com/esp8266-wifi-shield.html
 * An Arduino Uno or Arduino mega
-* 4x female to female jumper wires
+* 2x female to male jumper wires
 * 1x male to male jumper wire
 * The flash download tool and firmware files from DCC-EX - https://dcc-ex.com/download/esp8266.html
 * A Windows PC

@@ -14,6 +14,15 @@ Makerfabs ESP8266 WiFi Shield (recommended)
       :depth: 1
       :local:
 
+.. warning:: 
+    :class: warning-float-right
+
+    The Espressif firmware provided with these devices **may not work** with |EX-CS|.
+
+    We **highly** recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 available on our :doc:`/download/esp8266` download page prior to reaching out for support from the team.
+
+    See :doc:`/support/wifi-at-version` for details on how to check the version and correct it if needed.
+    
 We like this board here at |DCC-EX|. It is simple, inexpensive, easy to use, and it works.
 
 .. figure:: /_static/images/assembly/wifi_jumpers1.jpg

@@ -2,7 +2,7 @@
 .. include:: /include/include-l2.rst
 .. include:: /include/include-ex-cs.rst
 .. meta::
-   :keywords: WiFi setup Espressif
+   :keywords: WiFi setup Espressif AT version
 
 |EX-CS-LOGO|
 
@@ -240,6 +240,13 @@ Correcting the ESP8266 Wifi Shield With a USB to TTL Converter Module Adapter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 See https://gist.github.com/nathankellenicki/7008540322c617869cec17226cff579d   
+
+
+Correcting the ESP8266 Wifi Shield With an Arduino Uno or Mega
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Flashing the ESP8266 Wifi Shield  is covered in detail :doc:`here </support/makerfabs-update-at-version-with-mega>`.
+
 
 Correcting the AT version on a Duinopeak ESP8266 WiFi Expansion Board 
 ---------------------------------------------------------------------

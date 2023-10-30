@@ -231,27 +231,31 @@ See https://cordobo.com/2300-flash-esp8266-01-with-arduino-uno/
 
 Or https://remotexy.com/en/help/esp8266-firmware-update/
 
-|hr-dashed|
+----
 
 Correcting the AT version on a ESP8266 Wifi Shield
 --------------------------------------------------
 
-Correcting the ESP8266 Wifi Shield With a USB to TTL Converter Module Adapter
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Correcting the Makerfabs ESP8266 Wifi Shield With a USB to TTL Converter Module Adapter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 See https://gist.github.com/nathankellenicki/7008540322c617869cec17226cff579d   
 
+|hr-dashed|
 
-Correcting the ESP8266 Wifi Shield With an Arduino Uno or Mega
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Correcting the Makerfabs ESP8266 Wifi Shield With an Arduino Uno or Mega
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Flashing the ESP8266 Wifi Shield  is covered in detail :doc:`here </support/makerfabs-update-at-version-with-mega>`.
+Flashing the ESP8266 Wifi Shield is covered :doc:`here </support/makerfabs-update-at-version-with-mega>`.
 
+----
 
 Correcting the AT version on a Duinopeak ESP8266 WiFi Expansion Board 
 ---------------------------------------------------------------------
 
 .. todo:: `Correcting AT version Duinopeak ESP8266 WiFi Expansion Board`
+
+----
 
 Correcting the AT version on a Mega+WiFi
 ----------------------------------------

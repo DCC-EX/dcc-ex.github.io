@@ -200,6 +200,11 @@ Checking the AT version of a Makerfabs ESP8266 Wifi Shield
 Checking the AT version of a Duinopeak ESP8266 WiFi Expansion Board 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. image:: /_static/images/wifi/duinopeak.png
+   :class: image-float-right
+   :alt: Duinopeak ESP8266 WiFi Expansion Board
+   :scale: 25%
+
 .. todo:: `Checking AT version ESP8266 WiFi Expansion Board prior to upload`
 
 |force-break|
@@ -209,7 +214,16 @@ Checking the AT version of a Duinopeak ESP8266 WiFi Expansion Board
 Checking the AT version of a Mega+WiFi
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. image:: /_static/images/assembly/mega_wifi.png
+   :class: image-float-right
+   :alt: Mega + WiFi
+   :scale: 25%
+
 .. todo:: `Checking AT version Mega+WiFi prior to upload`
+
+|force-break|
+
+|hr-heavy|
 
 |hr-heavy|
 
@@ -323,12 +337,24 @@ See https://gist.github.com/nathankellenicki/7008540322c617869cec17226cff579d
 Correcting the AT version on a Duinopeak ESP8266 WiFi Expansion Board 
 ---------------------------------------------------------------------
 
+.. image:: /_static/images/wifi/duinopeak.png
+   :class: image-float-right
+   :alt: Duinopeak ESP8266 WiFi Expansion Board
+   :scale: 25%
+
 .. todo:: `Correcting AT version Duinopeak ESP8266 WiFi Expansion Board`
+
+|force-break|
 
 ----
 
 Correcting the AT version on a Mega+WiFi
 ----------------------------------------
+
+.. image:: /_static/images/assembly/mega_wifi.png
+   :class: image-float-right
+   :alt: Mega + WiFi
+   :scale: 25%
 
 Flashing the ESP8266 chip on a Mega+WiFi is covered in detail :doc:`here </reference/hardware/microcontrollers/wifi-mega>`.
 

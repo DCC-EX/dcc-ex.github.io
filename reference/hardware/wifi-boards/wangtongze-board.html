@@ -166,6 +166,7 @@
 <li class="toctree-l4"><a class="reference internal" href="mega-wifi.html"></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mega-wifi.html#mega-wifi-combo-board">Mega+WiFi Combo Board</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-wifi/wifi-config.html">WiFi Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../support/wifi-at-version.html">ESP8266 (WiFi Boards) - AT Version Issues and Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-ethernet/index.html">Supported Ethernet Boards</a><ul>
@@ -614,6 +615,12 @@
 <p><a class="reference external" href="../../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
 </aside>
+<div class="warning-float-right admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The Espressif firmware provided with these devices <strong>may not work</strong> with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>.</p>
+<p>We <strong>highly</strong> recommend upgrading or downgrading to the “NonOS AT” version 1.7.4 available on our <a class="reference internal" href="../../../download/esp8266.html"><span class="doc">ESP8266 (WiFi Boards)</span></a> download page prior to reaching out for support from the team.</p>
+<p>See <a class="reference internal" href="../../../support/wifi-at-version.html"><span class="doc">ESP8266 (WiFi Boards) - AT Version Issues and Solutions</span></a> for details on how to check the version and correct it if needed.</p>
+</div>
 <p>AKA: Uno R3 Mega Esp8266 Serial Wifi Shield / ESP-12E Board</p>
 <p>Tinkerer to Engineer Level</p>
 <a class="reference internal image-reference" href="../../../_images/wangtongze_wifi_board.jpg"><img alt="ESP-01S" src="../../../_images/wangtongze_wifi_board.jpg" style="width: 450.59999999999997px; height: 357.59999999999997px;" /></a>
@@ -623,7 +630,7 @@
 <figure class="align-default" id="id1">
 <a class="with-shadow reference internal image-reference" href="../../../_images/wangtongze_transistors.png"><img alt="Wangongze level shifter transistors" class="with-shadow" src="../../../_images/wangtongze_transistors.png" style="width: 378.59999999999997px; height: 276.9px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 173 </span><span class="caption-text">WiFi board level shifting transistors should be J1Y (click the image to enlarge)</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 171 </span><span class="caption-text">WiFi board level shifting transistors should be J1Y (click the image to enlarge)</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>If these 2 transistors are labelled “JIY” you are lucky and the board with work with no modifications. If they are labelled “J3Y”, you have two choices to get this to work:</p>
@@ -638,14 +645,14 @@
 <figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../../../_images/wangtongze_jumpered.jpg"><img alt="Wangtongze Jumpering to the debug header" src="../../../_images/wangtongze_jumpered.jpg" style="width: 436.8px; height: 317.7px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 174 </span><span class="caption-text">Using Jumpers Directly to the Debug Header</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 172 </span><span class="caption-text">Using Jumpers Directly to the Debug Header</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>And here is a voltage divider with just two resistors you can use as a signal level shifter circuit:</p>
 <figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="../../../_images/esp_level_shifter.png"><img alt="" src="../../../_images/esp_level_shifter.png" style="width: 368.2px; height: 287.7px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 175 </span><span class="caption-text">Voltage Divider Level Shifter for ESP8255 Rx Debug Header Pin</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 173 </span><span class="caption-text">Voltage Divider Level Shifter for ESP8255 Rx Debug Header Pin</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="2">

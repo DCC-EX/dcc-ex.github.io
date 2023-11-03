@@ -316,6 +316,11 @@ html[data-theme='dark'] .rst-content .guilabel {
   border-top: 1px dashed #d2dfe3;
 }
 
+.hr-heavy {
+  margin: -10px 0px -10px 0px; 
+  border-top: 5px solid #d2dfe3;
+}
+
 html[data-theme='dark'] .hr-dashed {
   border-top: 1px dashed #114759;
 }

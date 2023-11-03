@@ -176,22 +176,26 @@ When Configured as an Access Point
     - (a) WifI shield is connected incorrectly to the CommandStation - The Rx pin of the WiFi shield must connect to the Tx pin on the CommandStation, and Tx to the Rx pin
       (b) ToDo
 
-  * - 3. Can your phone connect the WiFi network of the EX-CommandStation
+  * - 3. The Wifi network name appears as "DCCEX-SAYS-BROKEN-FIRMWARE" 
+    - See :doc:`/support/wifi-at-version` for details.
     - Go to Question 4
-    - (a) ToDo
-      (b) ToDo
 
-  * - 4. Can your throttle app connect the wiThrottle server of the EX-CommandStation |BR| |BR| |Engine Driver| should show you the wiThrottle server in the discovered servers list |BR| For |wiThrottle| you will need to type in the IP address and Port
+  * - 4. Can your phone connect the WiFi network of the EX-CommandStation
     - Go to Question 5
     - (a) ToDo
       (b) ToDo
 
-  * - 5. Can you turn the track power on?  |BR| Do the LEDs on the motor shield turn on?
-    - Go to Question 6.
+  * - 5. Can your throttle app connect the wiThrottle server of the EX-CommandStation |BR| |BR| |Engine Driver| should show you the wiThrottle server in the discovered servers list |BR| For |wiThrottle| you will need to type in the IP address and Port
+    - Go to Question 6
+    - (a) ToDo
+      (b) ToDo
+
+  * - 6. Can you turn the track power on?  |BR| Do the LEDs on the motor shield turn on?
+    - Go to Question 7.
     - (a) Have you plugged in and turned on a 12-15v DC power supply into the motor board
       (b) Have you made sure the polarity of the power supply is correct. 
 
-  * - 6. When select a loco in the throttle app and move the throttle, does the loco move?
+  * - 7. When select a loco in the throttle app and move the throttle, does the loco move?
     - Congratulations, your |EX-CS| is essentially working.
     - (a) Have you connected the track to the 'MAIN' outputs of the Motor Board.  |BR| You cannot directly control trains on the 'PROGRAMMING' outputs without using additional commands which can be done in |Engine Driver| but not other WiFi throttle apps (Use the :guilabel:`Request Loco ID` button in |Engine Driver|.) |BR| recommend that the MAIN outputs be used to run a layout.
       (b) Wrong loco DCC Address selected.

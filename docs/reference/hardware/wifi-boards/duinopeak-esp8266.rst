@@ -21,13 +21,13 @@ This board is designed as an expansion/prototyping board as well as a WiFi board
 .. warning:: 
     :class: warning-float-right
 
-    The Espressif firmware provided with these devices **may not work** with |EX-CS|.
+    The Espressif firmware shipped with these devices **may not work** with |EX-CS|.
 
     We **highly** recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 available on our :doc:`/download/esp8266` download page prior to reaching out for support from the team.
 
     See :doc:`/support/wifi-at-version` for details on how to check the version and correct it if needed.
 
-.. figure:: /_static/images/assembly/duinopeak.jpg
+.. figure:: /_static/images/wifi/duinopeak.png
    :alt: Duinopeak WiFi Board
    :scale: 60%
 

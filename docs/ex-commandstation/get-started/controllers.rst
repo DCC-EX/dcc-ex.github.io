@@ -74,6 +74,16 @@ Here is an image that represents a direct connection.
 
 There are number of excellent :doc:`phone apps and physical hardware devices </throttles/index>` that can be used a wifi Throttle (Controller) for the |EX-CS|.  On this page we are only going to cover two. 
 
+.. warning:: 
+
+   The Espressif AT firmware shipped with most of the supported WiFi devices **may not work** with |EX-CS|.
+
+   If you see a WiFi network Name (SSID) of "DCCEX-SAYS-BROKEN-FIRMWARE" then you have one of the problematic AT firmware versions.
+
+   We **highly** recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 available on our :doc:`/download/esp8266` download page prior to reaching out for support from the team.
+
+   See :doc:`/support/wifi-at-version` for details on how to check the version and correct it if needed.
+
 Compatible Wifi Throttles
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 

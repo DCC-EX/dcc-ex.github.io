@@ -64,7 +64,7 @@ For more boards you may be able to use, see the :doc:`WiFi Boards Section </refe
 
 .. warning:: 
 
-    Please be aware that the Espressif firmware provided with these devices **may not work** with |EX-CS| as there are many different versions which behave quite differently.
+    Please be aware that the Espressif firmware shipped with these devices **may not work** with |EX-CS| as there are many different versions which behave quite differently.
 
     We **highly** recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 available on our :doc:`/download/esp8266` download page prior to reaching out for support from the team.
 

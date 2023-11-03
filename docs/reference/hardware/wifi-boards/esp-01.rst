@@ -16,7 +16,7 @@ ESP-01 and ESP-01s
 
 This is the board that started it all. It fueled the WiFi revolution in small devices. In fact, this little board is actually a microcontroller that is more powerful than the Arduino Uno! The difference between the 01 and the 01S is primarily that there is more memory on the 01-"S". Since the 01 version has been retired, any new board you get should be the 01s, but either will work.
 
-.. figure:: /_static/images/assembly/esp-01s_2.jpg
+.. figure:: /_static/images/assembly/esp-01s_2.png
    :alt: ESP-01s
    :scale: 75%
 
@@ -25,7 +25,7 @@ This is the board that started it all. It fueled the WiFi revolution in small de
 .. warning:: 
     :class: warning-float-right
 
-    The Espressif firmware provided with these devices **may not work** with |EX-CS|.
+    The Espressif firmware shipped with these devices **may not work** with |EX-CS|.
 
     We **highly** recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 available on our :doc:`/download/esp8266` download page prior to reaching out for support from the team.
 
@@ -37,7 +37,7 @@ Install the Module
 Below is a wiring diagram for connecting the ESP8266 to the Arduino. For clarity, the image does not show the motor board already on top of the Mega, but since the headers connect all the pins together vertically, you can find the same pins on the motor board to get the 3.3V and Gnd to power the ESP8266.
 
 
-.. figure:: /_static/images/assembly/esp8266_mega.jpg
+.. figure:: /_static/images/assembly/esp8266_mega.png
    :alt: ESP-8266 Wiring to a Mega
    :scale: 75%
 
@@ -58,7 +58,7 @@ In order to connect both Vcc and CH_PD to the 3.3V output of the Arduino, you ca
 
 .. note:: About current requirements: While we at |DCC-EX| Labs have had success with running the ESP-01s off the 3.3V Mega power supply, this is at the limit of what the Mega can supply. The Mega 3.3V regulator is only rated for 200mA. The ESP can exceed this in short bursts. If you want to be safe, you can power a 5V to 3.3V regulator from the 5V supply, or find another way to provide clean, regulated 3.3V to the ESP.
 
-.. figure:: /_static/images/assembly/esp-01_adapter.jpg
+.. figure:: /_static/images/assembly/esp-01_adapter.png
    :alt: ESP-01s Adapters
    :scale: 75%
    :name: esp-01s-adapters

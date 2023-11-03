@@ -263,6 +263,10 @@
 
    <hr class="hr-dashed" />
 ..
+.. |hr-heavy| raw:: html
+
+   <hr class="hr-heavy" />
+..
 .. ...............................................
 ..
 .. |githublink-ex-turntable| raw:: html

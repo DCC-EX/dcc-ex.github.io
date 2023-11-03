@@ -37,10 +37,10 @@ There several common symptoms of a an incorrect firmware version
 * You can connect once, but it will not connect again unless you re-start the |EX-CS|.
 * If you are installing one of the DEVEL versions (not the current production version) of the |EX-CS| and you set up the command station in |Access Point mode|, then the SSID that will be displayed will be "DCCEX_SAYS_BROKEN_FIRMWARE".
 
-----
+|hr-heavy|
 
-Find out Your AT Version
-========================
+Find Your AT Version
+====================
 
 It is important to find out which version of the firmware you board has and correct it if necessary.
 
@@ -49,7 +49,7 @@ There are two basic ways that you can check:
 * After you load the |EX-CS| software
 * Before you load the |EX-CS| software
 
-|hr-dashed|
+----
 
 Checking *after* you load the |EX-CS| software
 ----------------------------------------------
@@ -69,7 +69,7 @@ e.g. ``AT version:1.7.4.0(May 11 2020 19:13:04)``
 
 Alternately, you can enter the command ``<+GMR>`` and click :guilabel:`Send`.  A similar line will be shown.
 
-If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow `the instructions at the end of this page <What to do if you have the wrong version>`_ to correct it.
+If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.
 
 Checking the AT version with the Arduino IDE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -84,143 +84,203 @@ e.g. ``AT version:1.7.4.0(May 11 2020 19:13:04)``
 
 Alternately, you can enter the command ``<+GMR>`` and click :guilabel:`Send`.  A similar line will be shown.
 
-If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow `the instructions at the end of this page <What to do if you have the wrong version>`_ to correct it.
+If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.
 
-|hr-dashed|
+|hr-heavy|
 
 Checking *before* you load the |EX-CS| software
 -----------------------------------------------
 
-How to check before you load the |EX-CS| software will depend on which WiFi shield or board you are using.
+How to check before you load the |EX-CS| software will depend on which WiFi shield or board you are using:
 
-|hr-dashed|
+* ESP-01 or ESP-01s
+* Makerfabs ESP8266 Wifi Shield
+* Duinopeak ESP8266 WiFi Expansion board
+* Mega+WiF board
+
+----
 
 Checking the AT version of a ESP-01 or ESP-01s
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: /_static/images/esp-01/esp-01.png
+   :alt: ESP-01
+   :scale: 20%
+
+   ESP-01
 
 There are a number of ways that you can check the AT version an a ESP-01 or ESP-01s:
 
 * with a USB Serial Adapter
 * with a USB to TTL CH340G Converter Module Adapter
 * with a Arduino Uno
-* ESP8266 Wifi Shield
 
-Checking the AT version of a with a USB Serial Adapter
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+|hr-dashed|
 
-1. Connect the ESP01 to the serial adapter
+Checking the AT version of a ESP-01 with a USB Serial Adapter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: /_static/images/esp-01/CH340G-USB-to-TTL(serial)-converter.png
+   :class: image-float-right
+   :alt: CH340G USB to TTL(serial) Converter
+   :scale: 35%
+
+1. Connect the ESP01 to the serial adapter with the instructions on here: https://remotexy.com/en/help/esp8266-firmware-update (see the section on 'Connection via the USB-UARt adapter') |BR| Note the orange wire is not needed for checking the AT version.
 2. Plug the serial adapter it the PC
 3. Open the Arduino IDE 
 4. Select **Tools** -> **Serial monitor** from the menus
 5. Select baud: ``115200`` and ``Both NL & CR``
 6. A new pane will open at the bottom of the IDE window will open
-7. Enter the command ``AT+GMR`` and click :guilabel:`Send`.
+7. Enter the command ``AT+RST`` and click :guilabel:`Send`.
+8. Enter the command ``AT+GMR`` and click :guilabel:`Send`.
 
 It will reply with something like ``AT version:1.7.4.0(May 11 2020 19:13:04)``
 
-If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow `the instructions at the end of this page <What to do if you have the wrong version>`_ to correct it.
+If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.
 
 |hr-dashed|
 
-Checking the AT version of a with a USB to TTL CH340G Converter Module Adapter
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Checking the AT version of a ESP-01 a with a USB to TTL CH340G Converter Module Adapter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. todo:: `Checking AT version with a USB to TTL CH340G Converter Module Adapter prior to upload`
 
+.. image:: /_static/images/esp-01/USB-to-ESP-01-adapter-early.png
+   :class: image-float-right
+   :alt: Early ESP-01 USB adapter
+   :scale: 20%
+
+.. image:: /_static/images/esp-01/USB-to-ESP-01-adapter.png
+   :class: image-float-right
+   :alt: ESP-01 USB adapter
+   :scale: 25%
+
+.. image:: /_static/images/esp-01/USB-to-ESP-01s-adapter.png
+   :class: image-float-right
+   :alt: ESP-01s USB adapter
+   :scale: 20%
+
+1. Connect the ESP01 to the adapter
+2. Plug the adapter it the PC
+3. Open the Arduino IDE 
+4. Select **Tools** -> **Serial monitor** from the menus
+5. Select baud: ``115200`` and ``Both NL & CR``
+6. A new pane will open at the bottom of the IDE window will open
+7. Enter the command ``AT+RST`` and click :guilabel:`Send`.
+8. Enter the command ``AT+GMR`` and click :guilabel:`Send`.
+
+It will reply with something like ``AT version:1.7.4.0(May 11 2020 19:13:04)``
+
+If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.
+
+
 |hr-dashed|
 
-Checking the AT version of a with a Arduino Uno
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Checking the AT version of a ESP-01 a with a Arduino Uno
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. todo:: `Checking AT version with a Arduino Uno prior to upload`
 
-|hr-dashed|
+----
 
-Checking the AT version of a ESP8266 Wifi Shield
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Checking the AT version of a Makerfabs ESP8266 Wifi Shield
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. image:: /_static/images/wifi/makerfabs-esp8266-wifi-shield.png
+   :class: image-float-right
+   :alt: Makefabs ESP8266 WiFi Shield
+   :scale: 25%
 
 .. todo:: `Checking AT version ESP8266 Wifi Shield prior to upload`
 
+|force-break|
 
-|hr-dashed|
+-----
 
 Checking the AT version of a Duinopeak ESP8266 WiFi Expansion Board 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. todo:: `Checking AT version ESP8266 WiFi Expansion Board prior to upload`
 
-|hr-dashed|
+|force-break|
+
+----
 
 Checking the AT version of a Mega+WiFi
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. todo:: `Checking AT version Mega+WiFi prior to upload`
 
-----
+|hr-heavy|
 
 What to do if you have the wrong version
 ========================================
 
-The steps necessary to correct the AT version will depend on your hardware.
+The steps necessary to correct the AT version will depend on your hardware:
+
+* ESP-01 or ESP-01s
+* Makerfabs ESP8266 Wifi Shield
+* Duinopeak ESP8266 WiFi Expansion board
+* Mega+WiF board
 
 We strongly recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 available on our :doc:`/download/esp8266` download page **prior** to reaching out for support from the team.
+
+----
 
 Correcting the AT version on a ESP-01
 -------------------------------------
 
 Correcting the AT version of a ESP-01or ESP01s requires additional hardware. One of following is required:
 
-* A USB Serial Adapter
 * A USB to ESP-01 Adapter
 * A USB to TTL CH340G Converter Module Adapter
-* A Arduino Uno
+* An Arduino Uno
 
 |hr-dashed|
 
 Correcting a ESP-01 with a USB Serial Adapter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. todo:: `Correcting AT version ESP-01 With a USB Serial Adapter` 
-
-|hr-dashed|
-
-Correcting with a USB to ESP-01 Adapter Board
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. todo:: `Correcting AT version ESP-01 With a  USB to ESP-01 Adapter Board` 
-
-.. figure:: /_static/images/esp-01/esp-01-usb-adapter.png
-   :alt: ESP-01 USB adapter
-   :scale: 40%
-
-   ESP-01 USB adapter
+.. image:: /_static/images/esp-01/CH340G-USB-to-TTL(serial)-converter.png
+   :class: image-float-right
+   :alt: CH340G USB to TTL(serial) Converter
+   :scale: 35%
 
 See https://remotexy.com/en/help/esp8266-firmware-update/
 
+|force-break|
+
 |hr-dashed|
 
+Correcting a ESP-01 with a USB to ESP-01 Adapter Board
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Correcting a ESP-01 or ESP-01s with a USB to TTL CH340G Converter Module Adapter
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: /_static/images/esp-01/CH340G-USB-to-TTL(serial)-converter.png
-   :alt: CH340G USB to TTL(serial) Converter
-   :scale: 50%
+.. image:: /_static/images/esp-01/USB-to-ESP-01-adapter-early.png
+   :class: image-float-right
+   :alt: Early ESP-01 USB adapter
+   :scale: 20%
 
-   CH340G USB to TTL(serial) Converter
+.. image:: /_static/images/esp-01/USB-to-ESP-01-adapter.png
+   :class: image-float-right
+   :alt: ESP-01 USB adapter
+   :scale: 25%
 
-The normal boards needs to be modified to be able to temporarily connect GND to GPIO 0.
+.. image:: /_static/images/esp-01/USB-to-ESP-01s-adapter.png
+   :class: image-float-right
+   :alt: ESP-01s USB adapter
+   :scale: 20%
+
+The early/normal boards needs to be modified to be able to temporarily connect GND to GPIO 0.
 
 See here for the modification needed https://www.mogtour.com/wp-content/uploads/2021/01/ch340g.pdf
-
-.. figure:: /_static/images/esp-01/CH340G-USB-to-TTL(serial)-converter-later.png
-   :alt: CH340G USB to TTL(serial) Converter with switch
-   :scale: 50%
-
-   CH340G USB to TTL(serial) Converter with switch
 
 Later boards do not require the modification.
 
 See https://www.allaboutcircuits.com/projects/update-the-firmware-in-your-esp8266-wi-fi-module/
+
+|force-break|
 
 |hr-dashed|
 
@@ -231,6 +291,8 @@ See https://cordobo.com/2300-flash-esp8266-01-with-arduino-uno/
 
 Or https://remotexy.com/en/help/esp8266-firmware-update/
 
+|force-break|
+
 ----
 
 Correcting the AT version on a ESP8266 Wifi Shield
@@ -239,14 +301,22 @@ Correcting the AT version on a ESP8266 Wifi Shield
 Correcting the Makerfabs ESP8266 Wifi Shield With a USB to TTL Converter Module Adapter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. image:: /_static/images/wifi/makerfabs-esp8266-wifi-shield.png
+   :class: image-float-right
+   :alt: Makefabs ESP8266 WiFi Shield
+   :scale: 25%
+
 See https://gist.github.com/nathankellenicki/7008540322c617869cec17226cff579d   
 
-|hr-dashed|
+..
+   |hr-dashed|
 
-Correcting the Makerfabs ESP8266 Wifi Shield With an Arduino Uno or Mega
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   Correcting the Makerfabs ESP8266 Wifi Shield With an Arduino Uno or Mega
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Flashing the ESP8266 Wifi Shield is covered :doc:`here </support/makerfabs-update-at-version-with-mega>`.
+   Flashing the ESP8266 Wifi Shield is covered :doc:`here </support/makerfabs-update-at-version-with-mega>`.
+
+|force-break|
 
 ----
 

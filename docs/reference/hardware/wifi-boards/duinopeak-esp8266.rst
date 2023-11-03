@@ -18,9 +18,18 @@ This board is designed as an expansion/prototyping board as well as a WiFi board
 
 .. note:: This is just a carrier board for an ESP-01 or 01s. You will still need an ESP-01s to place onto this board. See the next section.
 
+.. warning:: 
+    :class: warning-float-right
+
+    The Espressif firmware provided with these devices **may not work** with |EX-CS|.
+
+    We **highly** recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 available on our :doc:`/download/esp8266` download page prior to reaching out for support from the team.
+
+    See :doc:`/support/wifi-at-version` for details on how to check the version and correct it if needed.
+
 .. figure:: /_static/images/assembly/duinopeak.jpg
    :alt: Duinopeak WiFi Board
-   :scale: 75%
+   :scale: 60%
 
    Duinopeak WiFi Board
 

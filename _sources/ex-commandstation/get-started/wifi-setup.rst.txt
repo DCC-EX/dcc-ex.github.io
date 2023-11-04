@@ -18,17 +18,21 @@ Adding WiFi
       :local:
       :depth: 1
 
+:dcc-ex-red-bold:`Please read the warning before you proceed.`
+
 This page is specifically intended for a |conductor-text| who intends to install *just* the recommended hardware. If you are a |tinkerer-text| or |engineer-text| or want to install some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`/ex-commandstation/advanced-setup/supported-connections/wifi-setup` page for the full list of WiFi options.
 
 ----
 
 .. warning:: 
 
-    Please be aware that the Espressif firmware provided with these devices **may not work** with |EX-CS| as there are many different versions which behave quite differently.
+   Please be aware that the Espressif AT firmware currently being shipped with these devices **may not work** with |EX-CS| out of the box.
 
-    We **highly** recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 available on our :doc:`/download/esp8266` download page prior to reaching out for support from the team.
+   This can be corrected but is probably beyond Conductor level and requires additional hardware.  
 
-    See :doc:`/support/wifi-at-version` for details on how to check the version and correct it if needed.
+   See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
+
+   We are currently investigating other options.
 
 The purpose of adding WiFi to your |EX-CS| is allow connection up to 5 WiFi throttles (e.g. phones) DIRECTLY to it, eliminating the need for a computer and another software controller. 
 

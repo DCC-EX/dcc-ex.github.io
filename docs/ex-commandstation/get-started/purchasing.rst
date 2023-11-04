@@ -47,7 +47,7 @@ You will need to find or purchase:
 
 #. a supported **Arduino board** |BR| We recommend the `Elegoo Mega 2560 <https://www.amazon.com/ELEGOO-ATmega2560-ATMEGA16U2-Projects-Compliant/dp/B01H4ZLZLQ/>`_ |BR| |BR|
 #. a supported **Motor Driver**  |BR| We recommend either our own :doc:`EX-MotorShield8874 </reference/hardware/motorboards/ex-motor-shield-8874>` or the `Arduino Motor Shield Rev3 <https://store.arduino.cc/collections/shields/products/arduino-motor-shield-rev3>`_ |BR| |BR|
-#. a supported **WiFi shield** |BR| We recommend the `Makerfabs ESP8266 WiFi Shield <https://www.makerfabs.com/esp8266-wifi-shield.html>`_ |BR| |BR|
+#. a supported **WiFi shield** |BR| We recommend the `Makerfabs ESP8266 WiFi Shield <https://www.makerfabs.com/esp8266-wifi-shield.html>`_ |BR| :dcc-ex-red-bold:`WARNING`: Most ESP8266 WiFi options, including the Makerfabs WiFi Shield, are now shipping with an incompatible AT firmware version. This can be corrected, but is probably beyond Conductor level and requires additional hardware. |BR| See :doc:`/support/wifi-at-version` for more information. |BR| We are currently investigating other options. |BR| |BR|
 #. Two (2) Male to Female **Jumpers leads** |BR| |BR|
 #. a 9-14v DC :doc:`power supply </reference/hardware/power-supplies>` for the motor shield |BR| We recommend `12V 5Amp Power Supply for the Track <https://www.amazon.com/LEDMO-Power-Supply-Transformers-Adapter/dp/B01461MOGQ/>`_ |BR| |BR|
 #. a 2.5mm x 5.5mm Female DC Plug to **Screw Terminal (optional, but recommended)** to connect the motor shield power supply |BR| |BR|

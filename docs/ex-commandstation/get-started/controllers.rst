@@ -74,6 +74,18 @@ Here is an image that represents a direct connection.
 
 There are number of excellent :doc:`phone apps and physical hardware devices </throttles/index>` that can be used a wifi Throttle (Controller) for the |EX-CS|.  On this page we are only going to cover two. 
 
+.. warning:: 
+
+   Please be aware that the Espressif AT firmware currently being shipped with these devices **may not work** with |EX-CS| out of the box.
+
+   If you see a WiFi network Name (SSID) of "DCCEX-SAYS-BROKEN-FIRMWARE" then you have one of the problematic AT firmware versions.
+
+   This can be corrected but is probably beyond Conductor level and requires additional hardware.  
+
+   See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
+
+   We are currently investigating other options.
+
 Compatible Wifi Throttles
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 

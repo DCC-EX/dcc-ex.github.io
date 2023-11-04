@@ -13,9 +13,13 @@ You can connect up to 5 WiFi throttles. For the standard Mega board, we recommen
 
 .. warning:: 
 
-    Please be aware that the Espressif firmware provided with your device **may not immediately work** with |EX-CS| as there are many different versions which behave quite differently.
+    Please be aware that the Espressif AT firmware currently being shipped with these devices **may not work** with |EX-CS| out of the box.
 
-    We highly recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 available on our :doc:`/download/esp8266` download page prior to reaching out for support from the team.
+    This can be corrected but is probably beyond Conductor level and requires additional hardware.  
+
+    See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
+
+    We are currently investigating other options.
 
 For more information on how to configure your Command Station to use the boards below, see :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>`
 

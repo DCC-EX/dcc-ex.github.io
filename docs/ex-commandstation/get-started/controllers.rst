@@ -76,13 +76,15 @@ There are number of excellent :doc:`phone apps and physical hardware devices </t
 
 .. warning:: 
 
-   The Espressif AT firmware shipped with most of the supported WiFi devices **may not work** with |EX-CS|.
+   Please be aware that the Espressif AT firmware currently being shipped with these devices **may not work** with |EX-CS| out of the box.
 
    If you see a WiFi network Name (SSID) of "DCCEX-SAYS-BROKEN-FIRMWARE" then you have one of the problematic AT firmware versions.
 
-   We **highly** recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 available on our :doc:`/download/esp8266` download page prior to reaching out for support from the team.
+   This can be corrected but is probably beyond Conductor level and requires additional hardware.  
 
-   See :doc:`/support/wifi-at-version` for details on how to check the version and correct it if needed.
+   See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
+
+   We are currently investigating other options.
 
 Compatible Wifi Throttles
 ^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -35,7 +35,7 @@ There several common symptoms of a an incorrect firmware version
 * You can't connect to the SSID.
 * You can connect to the SSID, but can't connect your WiFi throttle (e.g. Engine Driver or wiThrottle) to the CommandStation. 
 * You can connect once, but it will not connect again unless you re-start the |EX-CS|.
-* If you are installing one of the DEVEL versions (not the current production version) of the |EX-CS| and you set up the command station in |Access Point mode|, then the SSID that will be displayed will be "DCCEX_SAYS_BROKEN_FIRMWARE" or "UPDATE_ESP_FIRMWARE".
+* If you set up the command station in |Access Point mode|, then the SSID (Network Name) the displayed will be "DCCEX_SAYS_BROKEN_FIRMWARE" or "UPDATE_ESP_FIRMWARE".
 
 |hr-heavy|
 

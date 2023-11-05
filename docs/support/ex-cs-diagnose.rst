@@ -176,7 +176,7 @@ When Configured as an Access Point
     - (a) WifI shield is connected incorrectly to the CommandStation - The Rx pin of the WiFi shield must connect to the Tx pin on the CommandStation, and Tx to the Rx pin
       (b) ToDo
 
-  * - 3. The Wifi network name appears as "DCCEX-SAYS-BROKEN-FIRMWARE" 
+  * - 3. The Wifi network name appears as "DCCEX-SAYS-BROKEN-FIRMWARE" or "UPDATE_ESP_FIRMWARE" 
     - See :doc:`/support/wifi-at-version` for details.
     - Go to Question 4
 

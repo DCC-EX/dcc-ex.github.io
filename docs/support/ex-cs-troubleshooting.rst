@@ -63,7 +63,7 @@ Cannot connect to the EX-CommandStation over WiFi
       (b) CommandStation is configured for Station Mode and connects to the WiFi network, but |Engine Driver| or |wiThrottle| device is connected to a different WiFi network - Connect the device to the correct WiFi network
       (c) WifI shield is connected incorrectly to the CommandStation - The Rx pin of the WiFi shield must connect to the Tx pin on the CommandStation, and Tx to the Rx pin
       (d) ESP8266 has the wrong AT version.  See the :doc:`/support/wifi-at-version` page for details on how to check and correct if needed.
-      (e) The Wifi network name appears as "DCCEX-SAYS-BROKEN-FIRMWARE". See the :doc:`/support/wifi-at-version` page for details on how to check and correct if needed.
+      (e) The Wifi network name appears as "DCCEX-SAYS-BROKEN-FIRMWARE" or "UPDATE_ESP_FIRMWARE". See the :doc:`/support/wifi-at-version` page for details on how to check and correct if needed.
 
 Diagnostics
 ===========

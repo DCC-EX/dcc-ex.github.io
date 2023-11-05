@@ -23,19 +23,20 @@ Unfortunately the Espressif ESP8266 based WiFi Boards that are available for sal
 Which is correct version of the AT firmware
 ===========================================
 
-Only **version 1.7.4** is known to work reliably.  
+:dcc-ex-text-size-200pct:`ONLY Version 1.7.4 is known to work reliably.`  
 
 That means all versions both before or after 1.7.4 are *not* suitable.  So don't be fooled in thinking that if it has a version later than that it will be ok.  **It won't!**
 
 Symptoms of an Incorrect firmware Version
 =========================================
 
-There several common symptoms of a an incorrect firmware version
+There several common symptoms of a an incorrect firmware version:
 
-* You can't connect to the SSID.
-* You can connect to the SSID, but can't connect your WiFi throttle (e.g. Engine Driver or wiThrottle) to the CommandStation. 
-* You can connect once, but it will not connect again unless you re-start the |EX-CS|.
-* If you are installing one of the DEVEL versions (not the current production version) of the |EX-CS| and you set up the command station in |Access Point mode|, then the SSID that will be displayed will be "DCCEX_SAYS_BROKEN_FIRMWARE".
+* If you set up the command station in |Access Point mode|, then the SSID (Network Name) the displayed will be "DCCEX_SAYS_BROKEN_FIRMWARE" or "UPDATE_ESP_FIRMWARE".
+* You can't connect to the displayed Access Point.
+* Your phone can connect to the Access Point, but can't connect your WiFi throttle (e.g. Engine Driver or wiThrottle) to the |EX-CS|. 
+* You can connect and use a phone once, but it will not connect again unless you re-start the |EX-CS|.
+* You can connect and use one phone, but it will not allow connection of a second phone, or the second phone works, but it disconnects the first phone.
 
 |hr-heavy|
 
@@ -46,24 +47,29 @@ It is important to find out which version of the firmware you board has and corr
 
 There are two basic ways that you can check:
 
-* After you load the |EX-CS| software
-* Before you load the |EX-CS| software
+* **After** you load the EX-CommandStation software
+* **Before** you load the EX-CommandStation software
 
 ----
 
-Checking *after* you load the |EX-CS| software
-----------------------------------------------
+Checking AFTER you load the EX-CommandStation software
+--------------------------------------------------------
 
 One you have loaded the |EX-CS| software you will be able to see the AT version in the start-up log by connecting the serial monitor in either the |EX-I| or Arduino IDE (whichever you used to upload the |EX-CS| onto your device).
+
+You can check the AT version two ways. Which is best for you depends on how you loaded the |EX-CS| software:
+
+* Using the **EX-Installer**
+* Using the **Arduino IDE**
 
 Checking the AT version using EX-Installer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once you have successfully loaded the |EX-CS| software:
 
-1. click back through the pages of the |EX-I| till you get to the 'Select your Device' screen
+1. Click back through the pages of the |EX-I| till you get to the 'Select your Device' screen
 2. Click on the :guilabel:`View device monitor` button |BR| A new window will open and a lot of text will appear
-3. you need to look for a line that will have a section highlighted in green
+3. You need to look for a line that will have a section highlighted in green
 
 e.g. ``AT version:1.7.4.0(May 11 2020 19:13:04)``
 
@@ -88,8 +94,8 @@ If it says **anything other than** 1.7.4 in that line, then you have the wrong v
 
 |hr-heavy|
 
-Checking *before* you load the |EX-CS| software
------------------------------------------------
+Checking BEFORE you load the EX-CommandStation software
+-------------------------------------------------------
 
 How to check before you load the |EX-CS| software will depend on which WiFi shield or board you are using:
 
@@ -227,8 +233,8 @@ Checking the AT version of a Mega+WiFi
 
 |hr-heavy|
 
-What to do if you have the wrong version
-========================================
+What to do if you have the wrong AT Firmware version
+====================================================
 
 The steps necessary to correct the AT version will depend on your hardware:
 
@@ -358,3 +364,4 @@ Correcting the AT version on a Mega+WiFi
 
 Flashing the ESP8266 chip on a Mega+WiFi is covered in detail :doc:`here </reference/hardware/microcontrollers/wifi-mega>`.
 
+|force-break|

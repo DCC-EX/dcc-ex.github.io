@@ -825,6 +825,11 @@ html[data-theme='dark'] .rst-content code.literal, .rst-content tt.literal {
   font-weight: bold !important;
 }
 
+.dcc-ex-text-size-200pct {
+  font-size: 200% !important;
+  line-height: 110% !important;
+}
+
 .dcc-ex-text-size-80pct {
   font-size: 80% !important;
 }

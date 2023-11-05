@@ -619,13 +619,13 @@
 <li><p><a class="reference internal" href="#symptoms-of-an-incorrect-firmware-version" id="id9">Symptoms of an Incorrect firmware Version</a></p></li>
 <li><p><a class="reference internal" href="#find-your-at-version" id="id10">Find Your AT Version</a></p>
 <ul>
-<li><p><a class="reference internal" href="#checking-after-you-load-the-ex-cs-software" id="id11">Checking <em>after</em> you load the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software</a></p>
+<li><p><a class="reference internal" href="#checking-after-you-load-the-ex-commandstation-software" id="id11">Checking AFTER you load the EX-CommandStation software</a></p>
 <ul>
 <li><p><a class="reference internal" href="#checking-the-at-version-using-ex-installer" id="id12">Checking the AT version using EX-Installer</a></p></li>
 <li><p><a class="reference internal" href="#checking-the-at-version-with-the-arduino-ide" id="id13">Checking the AT version with the Arduino IDE</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#checking-before-you-load-the-ex-cs-software" id="id14">Checking <em>before</em> you load the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software</a></p>
+<li><p><a class="reference internal" href="#checking-before-you-load-the-ex-commandstation-software" id="id14">Checking BEFORE you load the EX-CommandStation software</a></p>
 <ul>
 <li><p><a class="reference internal" href="#checking-the-at-version-of-a-esp-01-or-esp-01s" id="id15">Checking the AT version of a ESP-01 or ESP-01s</a></p></li>
 <li><p><a class="reference internal" href="#checking-the-at-version-of-a-makerfabs-esp8266-wifi-shield" id="id16">Checking the AT version of a Makerfabs ESP8266 Wifi Shield</a></p></li>
@@ -635,7 +635,7 @@
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#what-to-do-if-you-have-the-wrong-version" id="id19">What to do if you have the wrong version</a></p>
+<li><p><a class="reference internal" href="#what-to-do-if-you-have-the-wrong-at-firmware-version" id="id19">What to do if you have the wrong AT Firmware version</a></p>
 <ul>
 <li><p><a class="reference internal" href="#correcting-the-at-version-on-a-esp-01" id="id20">Correcting the AT version on a ESP-01</a></p>
 <ul>
@@ -659,17 +659,18 @@
 <p>Unfortunately the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>. This now seems to include the recommended <a class="reference external" href="https://www.makerfabs.com/esp8266-wifi-shield.html">Makerfabs ESP8266 WiFi Shield</a>.</p>
 <section id="which-is-correct-version-of-the-at-firmware">
 <h2><a class="toc-backref" href="#id8" role="doc-backlink">Which is correct version of the AT firmware</a><a class="headerlink" href="#which-is-correct-version-of-the-at-firmware" title="Permalink to this heading"></a></h2>
-<p>Only <strong>version 1.7.4</strong> is known to work reliably.</p>
+<p><span class="dcc-ex-text-size-200pct">ONLY Version 1.7.4 is known to work reliably.</span></p>
 <p>That means all versions both before or after 1.7.4 are <em>not</em> suitable.  So don’t be fooled in thinking that if it has a version later than that it will be ok.  <strong>It won’t!</strong></p>
 </section>
 <section id="symptoms-of-an-incorrect-firmware-version">
 <h2><a class="toc-backref" href="#id9" role="doc-backlink">Symptoms of an Incorrect firmware Version</a><a class="headerlink" href="#symptoms-of-an-incorrect-firmware-version" title="Permalink to this heading"></a></h2>
-<p>There several common symptoms of a an incorrect firmware version</p>
+<p>There several common symptoms of a an incorrect firmware version:</p>
 <ul class="simple">
-<li><p>You can’t connect to the SSID.</p></li>
-<li><p>You can connect to the SSID, but can’t connect your WiFi throttle (e.g. Engine Driver or wiThrottle) to the CommandStation.</p></li>
-<li><p>You can connect once, but it will not connect again unless you re-start the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>.</p></li>
-<li><p>If you are installing one of the DEVEL versions (not the current production version) of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> and you set up the command station in <a class="reference internal" href="../reference/glossary.html"><span class="doc">Access Point (AP) Mode</span></a>, then the SSID that will be displayed will be “DCCEX_SAYS_BROKEN_FIRMWARE”.</p></li>
+<li><p>If you set up the command station in <a class="reference internal" href="../reference/glossary.html"><span class="doc">Access Point (AP) Mode</span></a>, then the SSID (Network Name) the displayed will be “DCCEX_SAYS_BROKEN_FIRMWARE” or “UPDATE_ESP_FIRMWARE”.</p></li>
+<li><p>You can’t connect to the displayed Access Point.</p></li>
+<li><p>Your phone can connect to the Access Point, but can’t connect your WiFi throttle (e.g. Engine Driver or wiThrottle) to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>.</p></li>
+<li><p>You can connect and use a phone once, but it will not connect again unless you re-start the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>.</p></li>
+<li><p>You can connect and use one phone, but it will not allow connection of a second phone, or the second phone works, but it disconnects the first phone.</p></li>
 </ul>
 <p><hr class="hr-heavy" /></p>
 </section>
@@ -678,20 +679,25 @@
 <p>It is important to find out which version of the firmware you board has and correct it if necessary.</p>
 <p>There are two basic ways that you can check:</p>
 <ul class="simple">
-<li><p>After you load the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software</p></li>
-<li><p>Before you load the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software</p></li>
+<li><p><strong>After</strong> you load the EX-CommandStation software</p></li>
+<li><p><strong>Before</strong> you load the EX-CommandStation software</p></li>
 </ul>
 <hr class="docutils" />
-<section id="checking-after-you-load-the-ex-cs-software">
-<h3><a class="toc-backref" href="#id11" role="doc-backlink">Checking <em>after</em> you load the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software</a><a class="headerlink" href="#checking-after-you-load-the-ex-cs-software" title="Permalink to this heading"></a></h3>
+<section id="checking-after-you-load-the-ex-commandstation-software">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Checking AFTER you load the EX-CommandStation software</a><a class="headerlink" href="#checking-after-you-load-the-ex-commandstation-software" title="Permalink to this heading"></a></h3>
 <p>One you have loaded the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software you will be able to see the AT version in the start-up log by connecting the serial monitor in either the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> or Arduino IDE (whichever you used to upload the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> onto your device).</p>
+<p>You can check the AT version two ways. Which is best for you depends on how you loaded the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software:</p>
+<ul class="simple">
+<li><p>Using the <strong>EX-Installer</strong></p></li>
+<li><p>Using the <strong>Arduino IDE</strong></p></li>
+</ul>
 <section id="checking-the-at-version-using-ex-installer">
 <h4><a class="toc-backref" href="#id12" role="doc-backlink">Checking the AT version using EX-Installer</a><a class="headerlink" href="#checking-the-at-version-using-ex-installer" title="Permalink to this heading"></a></h4>
 <p>Once you have successfully loaded the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software:</p>
 <ol class="arabic simple">
-<li><p>click back through the pages of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> till you get to the ‘Select your Device’ screen</p></li>
+<li><p>Click back through the pages of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> till you get to the ‘Select your Device’ screen</p></li>
 <li><p>Click on the <span class="guilabel">View device monitor</span> button <br /> A new window will open and a lot of text will appear</p></li>
-<li><p>you need to look for a line that will have a section highlighted in green</p></li>
+<li><p>You need to look for a line that will have a section highlighted in green</p></li>
 </ol>
 <p>e.g. <code class="docutils literal notranslate"><span class="pre">AT</span> <span class="pre">version:1.7.4.0(May</span> <span class="pre">11</span> <span class="pre">2020</span> <span class="pre">19:13:04)</span></code></p>
 <p>Alternately, you can enter the command <code class="docutils literal notranslate"><span class="pre">&lt;+GMR&gt;</span></code> and click <span class="guilabel">Send</span>.  A similar line will be shown.</p>
@@ -711,8 +717,8 @@
 <p><hr class="hr-heavy" /></p>
 </section>
 </section>
-<section id="checking-before-you-load-the-ex-cs-software">
-<h3><a class="toc-backref" href="#id14" role="doc-backlink">Checking <em>before</em> you load the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software</a><a class="headerlink" href="#checking-before-you-load-the-ex-cs-software" title="Permalink to this heading"></a></h3>
+<section id="checking-before-you-load-the-ex-commandstation-software">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Checking BEFORE you load the EX-CommandStation software</a><a class="headerlink" href="#checking-before-you-load-the-ex-commandstation-software" title="Permalink to this heading"></a></h3>
 <p>How to check before you load the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software will depend on which WiFi shield or board you are using:</p>
 <ul class="simple">
 <li><p>ESP-01 or ESP-01s</p></li>
@@ -818,8 +824,8 @@
 </section>
 </section>
 </section>
-<section id="what-to-do-if-you-have-the-wrong-version">
-<h2><a class="toc-backref" href="#id19" role="doc-backlink">What to do if you have the wrong version</a><a class="headerlink" href="#what-to-do-if-you-have-the-wrong-version" title="Permalink to this heading"></a></h2>
+<section id="what-to-do-if-you-have-the-wrong-at-firmware-version">
+<h2><a class="toc-backref" href="#id19" role="doc-backlink">What to do if you have the wrong AT Firmware version</a><a class="headerlink" href="#what-to-do-if-you-have-the-wrong-at-firmware-version" title="Permalink to this heading"></a></h2>
 <p>The steps necessary to correct the AT version will depend on your hardware:</p>
 <ul class="simple">
 <li><p>ESP-01 or ESP-01s</p></li>
@@ -890,6 +896,7 @@
 <h3><a class="toc-backref" href="#id27" role="doc-backlink">Correcting the AT version on a Mega+WiFi</a><a class="headerlink" href="#correcting-the-at-version-on-a-mega-wifi" title="Permalink to this heading"></a></h3>
 <a class="image-float-right reference internal image-reference" href="../_images/mega_wifi.png"><img alt="Mega + WiFi" class="image-float-right" src="../_images/mega_wifi.png" style="width: 240.25px; height: 192.75px;" /></a>
 <p>Flashing the ESP8266 chip on a Mega+WiFi is covered in detail <a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html"><span class="doc">here</span></a>.</p>
+<p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
 </section>
 </section>

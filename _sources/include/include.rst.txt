@@ -64,6 +64,7 @@
 ..
 .. role:: dcc-ex-text-size-80pct
 .. role:: dcc-ex-text-size-60pct
+.. role:: dcc-ex-text-size-200pct
 ..
 .. |_| unicode:: 0xA0
   :trim:

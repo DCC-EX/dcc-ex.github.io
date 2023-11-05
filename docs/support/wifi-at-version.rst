@@ -32,10 +32,11 @@ Symptoms of an Incorrect firmware Version
 
 There several common symptoms of a an incorrect firmware version
 
-* You can't connect to the SSID.
-* You can connect to the SSID, but can't connect your WiFi throttle (e.g. Engine Driver or wiThrottle) to the CommandStation. 
-* You can connect once, but it will not connect again unless you re-start the |EX-CS|.
 * If you set up the command station in |Access Point mode|, then the SSID (Network Name) the displayed will be "DCCEX_SAYS_BROKEN_FIRMWARE" or "UPDATE_ESP_FIRMWARE".
+* You can't connect to the displayed Access Point.
+* Your phone can connect to the Access Point, but can't connect your WiFi throttle (e.g. Engine Driver or wiThrottle) to the |EX-CS|. 
+* You can connect and use a phone once, but it will not connect again unless you re-start the |EX-CS|.
+* You can connect and use one phone, but it will not allow connection of a second phone, or the second phone works, but it disconnects the first phone.
 
 |hr-heavy|
 

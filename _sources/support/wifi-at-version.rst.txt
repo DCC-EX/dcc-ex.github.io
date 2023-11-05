@@ -47,20 +47,22 @@ It is important to find out which version of the firmware you board has and corr
 
 There are two basic ways that you can check:
 
-* **After** you load the EX-CommandStation software
-* **Before** you load the EX-CommandStation software
+* :ref:`AFTER you load the EX-CommandStation software <support/wifi-at-version:Checking AFTER you load the EX-CommandStation software>`
+* :ref:`BEFORE you load the EX-CommandStation software <support/wifi-at-version:Checking BEFORE you load the EX-CommandStation software>`
 
 ----
 
 Checking AFTER you load the EX-CommandStation software
 --------------------------------------------------------
 
-One you have loaded the |EX-CS| software you will be able to see the AT version in the start-up log by connecting the serial monitor in either the |EX-I| or Arduino IDE (whichever you used to upload the |EX-CS| onto your device).
+One you have loaded the |EX-CS| software you will be able to see the AT version in the start-up log by connecting the serial monitor in either the |EX-I| or **Arduino IDE** (whichever you used to upload the |EX-CS| onto your device).
 
 You can check the AT version two ways. Which is best for you depends on how you loaded the |EX-CS| software:
 
-* Using the **EX-Installer**
-* Using the **Arduino IDE**
+* :ref:`Using EX-Installer <support/wifi-at-version:Checking the AT version using EX-Installer>`
+* :ref:`Using the Arduino IDE <support/wifi-at-version:Checking the AT version with the Arduino IDE>`
+
+|hr-dashed|
 
 Checking the AT version using EX-Installer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -75,7 +77,9 @@ e.g. ``AT version:1.7.4.0(May 11 2020 19:13:04)``
 
 Alternately, you can enter the command ``<+GMR>`` and click :guilabel:`Send`.  A similar line will be shown.
 
-If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.
+If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to :ref:`follow the instructions at the end of this page <support/wifi-at-version:What to do if you have the wrong AT Firmware version>` to correct it.
+
+|hr-dashed|
 
 Checking the AT version with the Arduino IDE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -90,7 +94,7 @@ e.g. ``AT version:1.7.4.0(May 11 2020 19:13:04)``
 
 Alternately, you can enter the command ``<+GMR>`` and click :guilabel:`Send`.  A similar line will be shown.
 
-If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.
+If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to :ref:`follow the instructions at the end of this page <support/wifi-at-version:What to do if you have the wrong AT Firmware version>` to correct it.
 
 |hr-heavy|
 
@@ -99,10 +103,10 @@ Checking BEFORE you load the EX-CommandStation software
 
 How to check before you load the |EX-CS| software will depend on which WiFi shield or board you are using:
 
-* ESP-01 or ESP-01s
-* Makerfabs ESP8266 Wifi Shield
-* Duinopeak ESP8266 WiFi Expansion board
-* Mega+WiF board
+* :ref:`ESP-01 or ESP-01s <support/wifi-at-version:Checking the AT version of a ESP-01 or ESP-01s>`
+* :ref:`Makerfabs ESP8266 Wifi Shield <support/wifi-at-version:Checking the AT version of a Makerfabs ESP8266 Wifi Shield>`
+* :ref:`Duinopeak ESP8266 WiFi Expansion board <support/wifi-at-version:Checking the AT version of a Duinopeak ESP8266 WiFi Expansion Board>`
+* :ref:`Mega+WiF board <support/wifi-at-version:Checking the AT version of a Mega+WiFi>`
 
 ----
 
@@ -142,7 +146,7 @@ Checking the AT version of a ESP-01 with a USB Serial Adapter
 
 It will reply with something like ``AT version:1.7.4.0(May 11 2020 19:13:04)``
 
-If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.
+If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to :ref:`follow the instructions at the end of this page <support/wifi-at-version:What to do if you have the wrong AT Firmware version>` to correct it.
 
 |hr-dashed|
 
@@ -177,7 +181,7 @@ Checking the AT version of a ESP-01 a with a USB to TTL CH340G Converter Module 
 
 It will reply with something like ``AT version:1.7.4.0(May 11 2020 19:13:04)``
 
-If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.
+If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to :ref:`follow the instructions at the end of this page <support/wifi-at-version:What to do if you have the wrong AT Firmware version>` to correct it.
 
 
 |hr-dashed|
@@ -238,10 +242,10 @@ What to do if you have the wrong AT Firmware version
 
 The steps necessary to correct the AT version will depend on your hardware:
 
-* ESP-01 or ESP-01s
-* Makerfabs ESP8266 Wifi Shield
-* Duinopeak ESP8266 WiFi Expansion board
-* Mega+WiF board
+* :ref:`ESP-01 or ESP-01s <support/wifi-at-version:Correcting the AT version on a ESP-01>`
+* :ref:`Makerfabs ESP8266 Wifi Shield <support/wifi-at-version:Correcting the AT version on a ESP8266 Wifi Shield>`
+* :ref:`Duinopeak ESP8266 WiFi Expansion board <support/wifi-at-version:Correcting the AT version on a Duinopeak ESP8266 WiFi Expansion Board>`
+* :ref:`Mega+WiF board <support/wifi-at-version:Correcting the AT version on a Mega+WiFi>`
 
 We strongly recommend upgrading or downgrading to the "NonOS AT" version 1.7.4 available on our :doc:`/download/esp8266` download page **prior** to reaching out for support from the team.
 

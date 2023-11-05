@@ -679,18 +679,19 @@
 <p>It is important to find out which version of the firmware you board has and correct it if necessary.</p>
 <p>There are two basic ways that you can check:</p>
 <ul class="simple">
-<li><p><strong>After</strong> you load the EX-CommandStation software</p></li>
-<li><p><strong>Before</strong> you load the EX-CommandStation software</p></li>
+<li><p><a class="reference internal" href="#checking-after-you-load-the-ex-commandstation-software"><span class="std std-ref">AFTER you load the EX-CommandStation software</span></a></p></li>
+<li><p><a class="reference internal" href="#checking-before-you-load-the-ex-commandstation-software"><span class="std std-ref">BEFORE you load the EX-CommandStation software</span></a></p></li>
 </ul>
 <hr class="docutils" />
 <section id="checking-after-you-load-the-ex-commandstation-software">
 <h3><a class="toc-backref" href="#id11" role="doc-backlink">Checking AFTER you load the EX-CommandStation software</a><a class="headerlink" href="#checking-after-you-load-the-ex-commandstation-software" title="Permalink to this heading"></a></h3>
-<p>One you have loaded the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software you will be able to see the AT version in the start-up log by connecting the serial monitor in either the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> or Arduino IDE (whichever you used to upload the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> onto your device).</p>
+<p>One you have loaded the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software you will be able to see the AT version in the start-up log by connecting the serial monitor in either the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> or <strong>Arduino IDE</strong> (whichever you used to upload the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> onto your device).</p>
 <p>You can check the AT version two ways. Which is best for you depends on how you loaded the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software:</p>
 <ul class="simple">
-<li><p>Using the <strong>EX-Installer</strong></p></li>
-<li><p>Using the <strong>Arduino IDE</strong></p></li>
+<li><p><a class="reference internal" href="#checking-the-at-version-using-ex-installer"><span class="std std-ref">Using EX-Installer</span></a></p></li>
+<li><p><a class="reference internal" href="#checking-the-at-version-with-the-arduino-ide"><span class="std std-ref">Using the Arduino IDE</span></a></p></li>
 </ul>
+<p><hr class="hr-dashed" /></p>
 <section id="checking-the-at-version-using-ex-installer">
 <h4><a class="toc-backref" href="#id12" role="doc-backlink">Checking the AT version using EX-Installer</a><a class="headerlink" href="#checking-the-at-version-using-ex-installer" title="Permalink to this heading"></a></h4>
 <p>Once you have successfully loaded the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software:</p>
@@ -701,7 +702,8 @@
 </ol>
 <p>e.g. <code class="docutils literal notranslate"><span class="pre">AT</span> <span class="pre">version:1.7.4.0(May</span> <span class="pre">11</span> <span class="pre">2020</span> <span class="pre">19:13:04)</span></code></p>
 <p>Alternately, you can enter the command <code class="docutils literal notranslate"><span class="pre">&lt;+GMR&gt;</span></code> and click <span class="guilabel">Send</span>.  A similar line will be shown.</p>
-<p>If it says <strong>anything other than</strong> 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.</p>
+<p>If it says <strong>anything other than</strong> 1.7.4 in that line, then you have the wrong version you will need to <a class="reference internal" href="#what-to-do-if-you-have-the-wrong-at-firmware-version"><span class="std std-ref">follow the instructions at the end of this page</span></a> to correct it.</p>
+<p><hr class="hr-dashed" /></p>
 </section>
 <section id="checking-the-at-version-with-the-arduino-ide">
 <h4><a class="toc-backref" href="#id13" role="doc-backlink">Checking the AT version with the Arduino IDE</a><a class="headerlink" href="#checking-the-at-version-with-the-arduino-ide" title="Permalink to this heading"></a></h4>
@@ -713,7 +715,7 @@
 </ol>
 <p>e.g. <code class="docutils literal notranslate"><span class="pre">AT</span> <span class="pre">version:1.7.4.0(May</span> <span class="pre">11</span> <span class="pre">2020</span> <span class="pre">19:13:04)</span></code></p>
 <p>Alternately, you can enter the command <code class="docutils literal notranslate"><span class="pre">&lt;+GMR&gt;</span></code> and click <span class="guilabel">Send</span>.  A similar line will be shown.</p>
-<p>If it says <strong>anything other than</strong> 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.</p>
+<p>If it says <strong>anything other than</strong> 1.7.4 in that line, then you have the wrong version you will need to <a class="reference internal" href="#what-to-do-if-you-have-the-wrong-at-firmware-version"><span class="std std-ref">follow the instructions at the end of this page</span></a> to correct it.</p>
 <p><hr class="hr-heavy" /></p>
 </section>
 </section>
@@ -721,10 +723,10 @@
 <h3><a class="toc-backref" href="#id14" role="doc-backlink">Checking BEFORE you load the EX-CommandStation software</a><a class="headerlink" href="#checking-before-you-load-the-ex-commandstation-software" title="Permalink to this heading"></a></h3>
 <p>How to check before you load the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software will depend on which WiFi shield or board you are using:</p>
 <ul class="simple">
-<li><p>ESP-01 or ESP-01s</p></li>
-<li><p>Makerfabs ESP8266 Wifi Shield</p></li>
-<li><p>Duinopeak ESP8266 WiFi Expansion board</p></li>
-<li><p>Mega+WiF board</p></li>
+<li><p><a class="reference internal" href="#checking-the-at-version-of-a-esp-01-or-esp-01s"><span class="std std-ref">ESP-01 or ESP-01s</span></a></p></li>
+<li><p><a class="reference internal" href="#checking-the-at-version-of-a-makerfabs-esp8266-wifi-shield"><span class="std std-ref">Makerfabs ESP8266 Wifi Shield</span></a></p></li>
+<li><p><a class="reference internal" href="#checking-the-at-version-of-a-duinopeak-esp8266-wifi-expansion-board"><span class="std std-ref">Duinopeak ESP8266 WiFi Expansion board</span></a></p></li>
+<li><p><a class="reference internal" href="#checking-the-at-version-of-a-mega-wifi"><span class="std std-ref">Mega+WiF board</span></a></p></li>
 </ul>
 <hr class="docutils" />
 <section id="checking-the-at-version-of-a-esp-01-or-esp-01s">
@@ -756,7 +758,7 @@
 <li><p>Enter the command <code class="docutils literal notranslate"><span class="pre">AT+GMR</span></code> and click <span class="guilabel">Send</span>.</p></li>
 </ol>
 <p>It will reply with something like <code class="docutils literal notranslate"><span class="pre">AT</span> <span class="pre">version:1.7.4.0(May</span> <span class="pre">11</span> <span class="pre">2020</span> <span class="pre">19:13:04)</span></code></p>
-<p>If it says <strong>anything other than</strong> 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.</p>
+<p>If it says <strong>anything other than</strong> 1.7.4 in that line, then you have the wrong version you will need to <a class="reference internal" href="#what-to-do-if-you-have-the-wrong-at-firmware-version"><span class="std std-ref">follow the instructions at the end of this page</span></a> to correct it.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="checking-the-at-version-of-a-esp-01-a-with-a-usb-to-ttl-ch340g-converter-module-adapter">
@@ -779,7 +781,7 @@
 <li><p>Enter the command <code class="docutils literal notranslate"><span class="pre">AT+GMR</span></code> and click <span class="guilabel">Send</span>.</p></li>
 </ol>
 <p>It will reply with something like <code class="docutils literal notranslate"><span class="pre">AT</span> <span class="pre">version:1.7.4.0(May</span> <span class="pre">11</span> <span class="pre">2020</span> <span class="pre">19:13:04)</span></code></p>
-<p>If it says <strong>anything other than</strong> 1.7.4 in that line, then you have the wrong version you will need to follow the instructions at the end of this page to correct it.</p>
+<p>If it says <strong>anything other than</strong> 1.7.4 in that line, then you have the wrong version you will need to <a class="reference internal" href="#what-to-do-if-you-have-the-wrong-at-firmware-version"><span class="std std-ref">follow the instructions at the end of this page</span></a> to correct it.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="checking-the-at-version-of-a-esp-01-a-with-a-arduino-uno">
@@ -828,10 +830,10 @@
 <h2><a class="toc-backref" href="#id19" role="doc-backlink">What to do if you have the wrong AT Firmware version</a><a class="headerlink" href="#what-to-do-if-you-have-the-wrong-at-firmware-version" title="Permalink to this heading"></a></h2>
 <p>The steps necessary to correct the AT version will depend on your hardware:</p>
 <ul class="simple">
-<li><p>ESP-01 or ESP-01s</p></li>
-<li><p>Makerfabs ESP8266 Wifi Shield</p></li>
-<li><p>Duinopeak ESP8266 WiFi Expansion board</p></li>
-<li><p>Mega+WiF board</p></li>
+<li><p><a class="reference internal" href="#correcting-the-at-version-on-a-esp-01"><span class="std std-ref">ESP-01 or ESP-01s</span></a></p></li>
+<li><p><a class="reference internal" href="#correcting-the-at-version-on-a-esp8266-wifi-shield"><span class="std std-ref">Makerfabs ESP8266 Wifi Shield</span></a></p></li>
+<li><p><a class="reference internal" href="#correcting-the-at-version-on-a-duinopeak-esp8266-wifi-expansion-board"><span class="std std-ref">Duinopeak ESP8266 WiFi Expansion board</span></a></p></li>
+<li><p><a class="reference internal" href="#correcting-the-at-version-on-a-mega-wifi"><span class="std std-ref">Mega+WiF board</span></a></p></li>
 </ul>
 <p>We strongly recommend upgrading or downgrading to the “NonOS AT” version 1.7.4 available on our <a class="reference internal" href="../download/esp8266.html"><span class="doc">ESP8266 (WiFi Boards)</span></a> download page <strong>prior</strong> to reaching out for support from the team.</p>
 <hr class="docutils" />

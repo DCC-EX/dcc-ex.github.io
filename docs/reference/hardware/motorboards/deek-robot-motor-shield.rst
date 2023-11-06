@@ -15,8 +15,10 @@ Deek-Robot Motor Shield
 
 Electrically identical in most every regard to the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realistically 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan.
 
-.. image:: /_static/images/motorboards/deek_robot1_sm.jpg
+.. figure:: /_static/images/motorboards/deek-robot_motor_shield.png
    :alt: Deek-Robot Motor Shield
    :scale: 100%
+
+   Deek-Robot Motor Shield
 
 :doc:`Install the Deek-Robot Motor Shield </ex-commandstation/get-started/assembly>`

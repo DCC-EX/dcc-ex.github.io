@@ -23,13 +23,17 @@ DCC-EX EX-MotorShield8874 RevA
 
 Designed in conjunction with the |DCC-EX| development team, the |EX-MS| is extremely simple to use with all current and future generations of |EX-CS| hardware. It also safely powers the Command Station motherboard via the same single barrel jack DC input voltage that powers the track. It is rated at a very generous peak 5A of load per channel using Texas Instruments DRV8874 MOSFET technology. This board is the new standard by which we compare other boards.
 
-.. image:: /_static/images/motorboards/ex_motorshield8874.jpeg
+.. figure:: /_static/images/motorboards/ex_motorshield8874.png
    :alt: DCC-EX EX-MotorShield8874 RevA Semify
    :scale: 10%
 
-.. image:: /_static/images/motorboards/ex_motorshield8874_purple_side.jpg
+   DCC-EX EX-MotorShield8874 RevA Semify
+
+.. figure:: /_static/images/motorboards/ex_motorshield8874_purple_side.jpg
    :alt: DCC-EX EX-MotorShield8874 RevA Millennium Engineering
    :scale: 10%
+
+   DCC-EX EX-MotorShield8874 RevA Millennium Engineering
 
 What Is It?
 ===========
@@ -93,14 +97,17 @@ Assembly with the EX-MotorShield8874 is extremely simple, just plug the motor sh
 
 Shown here are examples of the shield plugged into Mega+WiFi, Nucleo-F411RE:
 
-.. image:: /_static/images/motorboards/ex_motorshield8874_mega.jpg
+.. figure:: /_static/images/motorboards/ex_motorshield8874_mega.jpg
    :alt: DCC-EX EX-MotorShield8874 RevA on Mega+WiFi
    :scale: 15%
 
-.. image:: /_static/images/motorboards/ex_motorshield8874_nucleo_f411.jpg
+   DCC-EX EX-MotorShield8874 RevA on Mega+WiFi
+
+.. figure:: /_static/images/motorboards/ex_motorshield8874_nucleo_f411.jpg
    :alt: DCC-EX EX-MotorShield8874 RevA on Nucleo-F411RE
    :scale: 15%
-      
+
+   DCC-EX EX-MotorShield8874 RevA on Nucleo-F411RE  
 
 Example pics here!
 
@@ -109,9 +116,11 @@ Example pics here!
 
 The EX-MotorShield8874 accepts a standard 2.1mm inside diameter DC barrel jack for DC power, with centre pin positive, and polarity protected for your safety. Acceptable voltages for correct DCC operation include 10-24VDC, but the shield can cope with 9-30VDC.
 
-.. image:: /_static/images/motorboards/ex_motorshield8874_purple_megawifi.jpg
+.. figure:: /_static/images/motorboards/ex_motorshield8874_purple_megawifi.jpg
    :alt: DCC-EX EX-MotorShield8874 RevA on Mega+WiFi with power and track connectors
    :scale: 10%
+
+   DCC-EX EX-MotorShield8874 RevA on Mega+WiFi with power and track connectors
    
 
 .. note::
@@ -129,9 +138,11 @@ We suggest 10-12VDC for Z & N Scale, 14-16VDC for OO, HO, and 18-19VDC for O, or
 
 Once satisfied the EX-MotorShield8874 is seated properly on the Command Station motherboard, you can apply power to the |EX-CS|. You ought to see a green LED light up indicating power is being supplied to the motherboard.
 
-.. image:: /_static/images/motorboards/ex_motorshield8874_purple_megawifi_LED_on.jpg
+.. figure:: /_static/images/motorboards/ex_motorshield8874_purple_megawifi_LED_on.jpg
    :alt: DCC-EX EX-MotorShield8874 RevA on Mega+WiFi with power LED on
    :scale: 10%
+
+   DCC-EX EX-MotorShield8874 RevA on Mega+WiFi with power LED on
    
 
 3. Connect Track to Motor Driver
@@ -139,9 +150,11 @@ Once satisfied the EX-MotorShield8874 is seated properly on the Command Station 
 
 Track power for A (MAIN) and B (PROG) tracks can be connected now using the green track connectors. These unplug conveniently to allow easy swapping in and out of the |EX-CS|. Make sure to tighten the screws onto the wire in the connectors before applying power.
 
-.. image:: /_static/images/motorboards/ex_motorshield8874_purple_connector_closeup.jpg
+.. figure:: /_static/images/motorboards/ex_motorshield8874_purple_connector_closeup.jpg
    :alt: DCC-EX EX-MotorShield8874 RevA connectors
    :scale: 30%
+   
+   DCC-EX EX-MotorShield8874 RevA connectors
    
 Notice that A (MAIN) is on the left as you look at the connectors, and B (PROG) is on the right, next to the DC barrel jack.
 

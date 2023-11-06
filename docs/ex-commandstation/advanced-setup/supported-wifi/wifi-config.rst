@@ -37,6 +37,17 @@ For a video, click `Setting up WiFi <https://www.youtube.com/watch?v=N6TWR7fIl0A
 
    If using a separate ESP instead of a shield, this becomes tinkerer level.
 
+.. warning:: 
+   :class: warning-float-right
+
+   Please be aware that the Espressif firmware shipped with the supported WiFi devices **will probably NOT work** with |EX-CS| out of the box.
+
+   This can be corrected, but is probably beyond Conductor level and requires additional hardware.  
+
+   See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
+
+   We are currently investigating other options.
+
 Wireless Connections
 =====================
 

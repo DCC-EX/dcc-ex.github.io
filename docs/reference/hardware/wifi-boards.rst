@@ -13,9 +13,9 @@ You can connect up to 5 WiFi throttles. For the standard Mega board, we recommen
 
 .. warning:: 
 
-    Please be aware that the Espressif AT firmware currently being shipped with these devices **may not work** with |EX-CS| out of the box.
+    Please be aware that the Espressif AT firmware currently being shipped with these devices **will probably NOT work** with |EX-CS| out of the box.
 
-    This can be corrected but is probably beyond Conductor level and requires additional hardware.  
+    This can be corrected, but is probably beyond Conductor level and requires additional hardware.  
 
     See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
 

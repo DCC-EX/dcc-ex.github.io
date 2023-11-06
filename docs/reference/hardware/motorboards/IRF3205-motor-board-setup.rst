@@ -24,13 +24,17 @@ Dual Motor Driver Module H-bridge MOSFET IRF3205
 
 |tinkerer|
 
-.. warning:: This board can supply a LOT of current. The maximum recommended current is 5A for N and HO scale. This board can supply 15A, enough to cause a LOT of damage. To use this board, make sure you have fuses or circuit breakers connected in line with both rails. SOFTWARE ALONE CANNOT PROTECT YOU IN ALL CASES. You will also need external current sense.
-
-You can use this board to handle both your MAIN and PROG track, or you can use one of the H-Bridges to power your MAIN track and use the Arduino Motor Shield for your PROG track. This board can provide up to 15A when you need more current than the 1.2-1.5A the Arduino Motor Shield can provide. IRF3205 is the model number of the N Channel MOSFETS used in the H-Bridge circuit. MOSFETS are a type of transistor, and rather than many other boards that use an integrated circuit for the H-Bridge, this board uses 4 discrete transistors per H-Bridge. This allows for a highly efficient motor controller with a negligible voltage drop.
-
-.. image:: /_static/images/motorboards/3205_motor_board.jpg
+.. figure:: /_static/images/motorboards/3205_motor_board.jpg
    :alt: IRF3205 Motor Board
    :scale: 75%
+
+   IRF3205 Motor Board
+
+.. warning:: 
+   
+   This board can supply a LOT of current. The maximum recommended current is 5A for N and HO scale. This board can supply 15A, enough to cause a LOT of damage. To use this board, make sure you have fuses or circuit breakers connected in line with both rails. SOFTWARE ALONE CANNOT PROTECT YOU IN ALL CASES. You will also need external current sense.
+
+You can use this board to handle both your MAIN and PROG track, or you can use one of the H-Bridges to power your MAIN track and use the Arduino Motor Shield for your PROG track. This board can provide up to 15A when you need more current than the 1.2-1.5A the Arduino Motor Shield can provide. IRF3205 is the model number of the N Channel MOSFETS used in the H-Bridge circuit. MOSFETS are a type of transistor, and rather than many other boards that use an integrated circuit for the H-Bridge, this board uses 4 discrete transistors per H-Bridge. This allows for a highly efficient motor controller with a negligible voltage drop.
 
 
 What You Will Need (IRF3205)
@@ -48,10 +52,11 @@ What You Will Need (IRF3205)
 
 See the :ref:`reference/hardware/motorboards/IRF3205-motor-board-setup:Parts list (IRF3205)`
 
-.. image:: /_static/images/motorboards/15A_Dual_HBridge3.jpg
+.. figure:: /_static/images/motorboards/15A_Dual_HBridge3.jpg
    :alt: 15A Dual H-Bridge
    :scale: 35%
-   :align: center
+
+   15A Dual H-Bridge
 
 We assume that many of you may have started off with the Arduino Mega with Arduino Motor Shield (or clones) and are here because you are making the step up to something that can handle more current, and therefore more locos. We will cover two options for how to use your IRF3205 motor board:
 

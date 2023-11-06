@@ -2,6 +2,7 @@
 .. include:: /include/include-l3.rst
 .. include:: /include/include-hardware.rst
 |EX-CS-LOGO|
+
 **************************************
 ESP-01 and ESP-01s
 **************************************
@@ -25,9 +26,9 @@ This is the board that started it all. It fueled the WiFi revolution in small de
 .. warning:: 
    :class: warning-float-right
 
-   Please be aware that the Espressif AT firmware currently being shipped with these devices **may not work** with |EX-CS| out of the box.
+   Please be aware that the Espressif AT firmware currently being shipped with these devices **will probably NOT work** with |EX-CS| out of the box.
 
-   This can be corrected but is probably beyond Conductor level and requires additional hardware.  
+   This can be corrected, but is probably beyond Conductor level and requires additional hardware.  
 
    See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
 

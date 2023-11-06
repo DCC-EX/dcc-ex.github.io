@@ -17,8 +17,10 @@ Electrically identical in most every regard to the Arduino motor shield. Often c
 
 https://flashtree.com/products/flashtree-motor-shield-r3-5v-to-12v-for-a000079
 
-.. image:: /_static/images/motorboards/flashtree1.jpg
+.. figure:: /_static/images/motorboards/flashtree.png
    :alt: Flashtree Motor Shield
-   :scale: 20%
+   :scale: 30%
+
+   Flashtree Motor Shield
 
 :doc:`Install the Flashtree (same as Deek-Robot) Motor Shield </ex-commandstation/get-started/assembly>`

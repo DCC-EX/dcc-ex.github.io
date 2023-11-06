@@ -24,7 +24,7 @@ Dual Motor Driver Module H-bridge MOSFET IRF3205
 
 |tinkerer|
 
-.. figure:: /_static/images/motorboards/3205_motor_board.jpg
+.. figure:: /_static/images/motorboards/3205_motor_board.png
    :alt: IRF3205 Motor Board
    :scale: 75%
 
@@ -52,7 +52,7 @@ What You Will Need (IRF3205)
 
 See the :ref:`reference/hardware/motorboards/IRF3205-motor-board-setup:Parts list (IRF3205)`
 
-.. figure:: /_static/images/motorboards/15A_Dual_HBridge3.jpg
+.. figure:: /_static/images/motorboards/15A_Dual_HBridge.png
    :alt: 15A Dual H-Bridge
    :scale: 35%
 

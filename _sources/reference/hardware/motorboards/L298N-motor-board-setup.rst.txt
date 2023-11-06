@@ -27,7 +27,7 @@ The L298N Motor board is the same H-Bridge on the Arduino Motor Shield. Here are
 * It doesn't have current sense, so you are going to have to use one of the solutions below
 * It stands vertically on the board with a big heat sink for better cooling
 
-.. figure:: /_static/images/motorboards/l298_board2.jpg
+.. figure:: /_static/images/motorboards/l298_board.png
   :alt: L298N Motor Board
   :scale: 25%
 
@@ -200,6 +200,8 @@ Make the following Inverter circuit (You need 2 if you want MAIN and PROG):
 .. figure:: /_static/images/motorboards/inverter1.jpg
   :alt: Transistor inverter circuit
   :scale: 60%
+
+  Transistor inverter circuit
 
 Then wire the L298N to the Arduino with jumper wires according to the following table:
 

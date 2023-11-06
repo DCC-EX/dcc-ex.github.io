@@ -19,9 +19,11 @@ The YFROBOT Motor Shield will Only run DCC waveform and will Not be able to run 
  
 **Do NOT confuse this with the DFRobot Motor Shield, which is not plug and play!**
 
-.. image:: /_static/images/motorboards/yfrobot1.png
+.. figure:: /_static/images/motorboards/yfrobot1.png
    :alt: YFRobot L298P Motor Driver Shield
    :scale: 30%
+
+   YFRobot L298P Motor Driver Shield
 
 :doc:`Install the YFRobot Motor Shield (similar to Deek-Robot) </ex-commandstation/get-started/assembly>`
 

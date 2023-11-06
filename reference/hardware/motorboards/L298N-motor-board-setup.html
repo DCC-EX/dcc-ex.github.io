@@ -594,9 +594,9 @@
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#when-is-the-l298n-a-good-option" id="id8">When is the L298N a Good Option?</a></p></li>
-<li><p><a class="reference internal" href="#l298n-for-main-and-prog-with-current-sense" id="id9">L298N for MAIN and PROG with Current Sense</a></p></li>
-<li><p><a class="reference internal" href="#l298n-for-prog-and-high-current-ibt-2-for-main" id="id10">L298N for PROG and High Current IBT_2 for MAIN</a></p></li>
+<li><p><a class="reference internal" href="#when-is-the-l298n-a-good-option" id="id9">When is the L298N a Good Option?</a></p></li>
+<li><p><a class="reference internal" href="#l298n-for-main-and-prog-with-current-sense" id="id10">L298N for MAIN and PROG with Current Sense</a></p></li>
+<li><p><a class="reference internal" href="#l298n-for-prog-and-high-current-ibt-2-for-main" id="id11">L298N for PROG and High Current IBT_2 for MAIN</a></p></li>
 </ul>
 </nav>
 </aside>
@@ -608,13 +608,13 @@
 <li><p>It stands vertically on the board with a big heat sink for better cooling</p></li>
 </ul>
 <figure class="align-default" id="id2">
-<a class="reference internal image-reference" href="../../../_images/l298_board2.jpg"><img alt="L298N Motor Board" src="../../../_images/l298_board2.jpg" style="width: 225.0px; height: 232.25px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/l298_board.png"><img alt="L298N Motor Board" src="../../../_images/l298_board.png" style="width: 225.0px; height: 232.25px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 61 </span><span class="caption-text">L298N Motor Board</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 64 </span><span class="caption-text">L298N Motor Board</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <section id="when-is-the-l298n-a-good-option">
-<h2><a class="toc-backref" href="#id8" role="doc-backlink">When is the L298N a Good Option?</a><a class="headerlink" href="#when-is-the-l298n-a-good-option" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">When is the L298N a Good Option?</a><a class="headerlink" href="#when-is-the-l298n-a-good-option" title="Permalink to this heading"></a></h2>
 <p>You may wonder why one would go through the trouble of using this board when the Arduino / Deek-Robot Motor Shield already has what we need and is a recommended option. The answer is you may want to use this board because:</p>
 <ul class="simple">
 <li><p>You already have one in your parts box</p></li>
@@ -630,7 +630,7 @@
 </ul>
 </section>
 <section id="l298n-for-main-and-prog-with-current-sense">
-<h2><a class="toc-backref" href="#id9" role="doc-backlink">L298N for MAIN and PROG with Current Sense</a><a class="headerlink" href="#l298n-for-main-and-prog-with-current-sense" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">L298N for MAIN and PROG with Current Sense</a><a class="headerlink" href="#l298n-for-main-and-prog-with-current-sense" title="Permalink to this heading"></a></h2>
 <p>You will need to have currense sense in order to program locos on the programming (service) track. In addition, current sense is necessary to provide short-circuit detection for each track. There are two methods to add current sensing to this board, the first method requires cutting two leads on the IC and soldering in current sense resistors. The other method is to use an external current sense board to measure the current going into the board.</p>
 <section id="method-1-adding-current-sense-resistors">
 <h3>Method 1: Adding Current Sense Resistors<a class="headerlink" href="#method-1-adding-current-sense-resistors" title="Permalink to this heading"></a></h3>
@@ -654,14 +654,14 @@
 <figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="../../../_images/l298_board4.jpg"><img alt="L298N lift legs to solder CS resistors" src="../../../_images/l298_board4.jpg" style="width: 500.0px; height: 375.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 62 </span><span class="caption-text">Lift or cut chip legs on front</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 65 </span><span class="caption-text">Lift or cut chip legs on front</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>or…</p>
 <figure class="align-default" id="id4">
 <a class="reference internal image-reference" href="../../../_images/l298nbackmodify.png"><img alt="L298N cut traces to install CS resistors" src="../../../_images/l298nbackmodify.png" style="width: 360.0px; height: 360.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 63 </span><span class="caption-text">Cut traces and solder on back</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 66 </span><span class="caption-text">Cut traces and solder on back</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <section id="lifting-or-cutting-chip-legs-option">
@@ -700,7 +700,7 @@
 <figure class="align-default" id="id5">
 <a class="reference internal image-reference" href="../../../_images/l298_wiring_2inputs_2tracks.png"><img alt="L298N Motor driver wiring diagram" src="../../../_images/l298_wiring_2inputs_2tracks.png" style="width: 808.1999999999999px; height: 343.2px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 64 </span><span class="caption-text">L298N 2 signal pin, 2 track wiring diagram</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 67 </span><span class="caption-text">L298N 2 signal pin, 2 track wiring diagram</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <table class="docutils align-default" id="id6">
@@ -761,13 +761,16 @@
 <h4>Using One Signal Pin With an Inverter circuit<a class="headerlink" href="#using-one-signal-pin-with-an-inverter-circuit" title="Permalink to this heading"></a></h4>
 <p>This method uses 1 signal pin on the Arduino for each track and uses the standard motorboard definition. The advantage of this method is that it provides a slightly more accurate DCC waveform that might allow slightly better compatibility with really picky decoders, and you don’t have to change the default motor board definition. The disadvantage is that you have to solder a 1 transistor, 2 resistor (or inverter chip) to invert the signal into the 2 inputs on the L298 board.</p>
 <p>Make the following Inverter circuit (You need 2 if you want MAIN and PROG):</p>
-<figure class="align-default">
+<figure class="align-default" id="id7">
 <a class="reference internal image-reference" href="../../../_images/inverter1.jpg"><img alt="Transistor inverter circuit" src="../../../_images/inverter1.jpg" style="width: 385.2px; height: 192.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 68 </span><span class="caption-text">Transistor inverter circuit</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
 </figure>
 <p>Then wire the L298N to the Arduino with jumper wires according to the following table:</p>
 <p>To wire the board, connect the pins as follows:</p>
-<table class="docutils align-default" id="id7">
-<caption><span class="caption-number">Table 2 </span><span class="caption-text">1 Signal Pin Wiring diagram</span><a class="headerlink" href="#id7" title="Permalink to this table"></a></caption>
+<table class="docutils align-default" id="id8">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">1 Signal Pin Wiring diagram</span><a class="headerlink" href="#id8" title="Permalink to this table"></a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Arduino</p></th>
 <th class="head"><p>L298N</p></th>
@@ -823,7 +826,7 @@
 </section>
 </section>
 <section id="l298n-for-prog-and-high-current-ibt-2-for-main">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">L298N for PROG and High Current IBT_2 for MAIN</a><a class="headerlink" href="#l298n-for-prog-and-high-current-ibt-2-for-main" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">L298N for PROG and High Current IBT_2 for MAIN</a><a class="headerlink" href="#l298n-for-prog-and-high-current-ibt-2-for-main" title="Permalink to this heading"></a></h2>
 </section>
 </section>
 

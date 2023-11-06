@@ -17,7 +17,7 @@ Electrically identical in most every regard to the Arduino motor shield. Often c
 
 .. figure:: /_static/images/motorboards/deek-robot_motor_shield.png
    :alt: Deek-Robot Motor Shield
-   :scale: 100%
+   :scale: 50%
 
    Deek-Robot Motor Shield
 

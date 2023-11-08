@@ -44,7 +44,8 @@ Requirements
 * An CP2104 USB to Serial Converter Arduino Programmer - https://www.makerfabs.com/cp2104-usb-to-serial-converter.html
 * 4x female to male jumper wires
 * 2x male to male jumper wire
-* The flash download tool and firmware files from DCC-EX - https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.3_0.zip
+* The flash download tool - https://www.espressif.com/en/support/download/other-tools
+* Firmware - ????
 * A Windows PC
 
 How To

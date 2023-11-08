@@ -81,15 +81,17 @@ Connect the following:
 Step 3 - Start the flashing
 ---------------------------
 
-1. Plug a USB into to PC and the CP2104 USB to Serial Converter Arduino Programmer
-2. Start Espressif's download tool
+1. Plug a USB cable into to PC and the **CP2104 USB to Serial Converter Arduino Programmer**.
+2. Start Espressif's download tool.
 3. Select ESP8266 and set it as follows:
 
    * It is recommended to increase the baud rate to 1152000, which will make the download faster.
-
-5. Click START. If there is no response, repeat step 2.
-6. Wait for the download to complete
-7. A successful result should look like:
+   * In the first field of the tool you need to enter the location of the firmware file (.bin file) that you downloaded. |br| You can use the :guilabel:`...` button to the right of the field to browse for the file. |br| If the file can be found by the tool, the field will turn green.
+   * Set the other radio buttons, drop lists and checkboxes as per the image below.
+   
+6. Click :guilabel:`START` |br| |br| If there is no response, repeat step 2. |br|
+7. Wait for the download to complete.
+8. A successful result should look like:
 
 .. figure:: /_static/images/wifi/CP2104-USB-to-Serial-Converter-Arduino-Programmer-flashing.png
    :alt: CP2104 USB to Serial Converter Arduino Programmer - flashing 

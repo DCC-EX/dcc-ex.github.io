@@ -175,7 +175,7 @@ DCC-EX Commands
   :maxdepth: 1
 
   /reference/software/command-reference
-  /reference/software/command-summary
+  /reference/software/command-summary-consolidated
 
 Features under development
 ==========================

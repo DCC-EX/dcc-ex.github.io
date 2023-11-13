@@ -327,18 +327,19 @@ Correcting the AT version on a Makerfabs ESP8266 Wifi Shield
    :alt: Makefabs ESP8266 WiFi Shield
    :scale: 25%
 
-Correcting the Makerfabs ESP8266 Wifi Shield With a Makerfabs' CP2104 USB to Serial Converter Arduino Programmer
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..
+   Correcting the Makerfabs ESP8266 Wifi Shield With a Makerfabs' CP2104 USB to Serial Converter Arduino Programmer
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: /_static/images/wifi/CP2104-USB-to-Serial-Converter-Arduino-Programmer.png
-   :alt: CP2104 USB to Serial Converter Arduino Programmer
-   :scale: 30%
+   .. figure:: /_static/images/wifi/CP2104-USB-to-Serial-Converter-Arduino-Programmer.png
+      :alt: CP2104 USB to Serial Converter Arduino Programmer
+      :scale: 30%
 
-   CP2104 USB to Serial Converter Arduino Programmer
+      CP2104 USB to Serial Converter Arduino Programmer
 
-Flashing the ESP8266 Wifi Shield using Makerfabs' own **CP2104 USB to Serial Converter Arduino Programmer** is covered :doc:`here </support/makerfabs-update-at-version-with-usb-to-ttl>`.
+   Flashing the ESP8266 Wifi Shield using Makerfabs' own **CP2104 USB to Serial Converter Arduino Programmer** is covered :doc:`here </support/makerfabs-update-at-version-with-usb-to-ttl>`.
 
-|hr-dashed|
+   |hr-dashed|
 
 
 Correcting the Makerfabs ESP8266 Wifi Shield With a USB to TTL Converter Module Adapter

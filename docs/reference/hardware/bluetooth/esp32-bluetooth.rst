@@ -1,7 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
 .. include:: /include/include-hardware.rst
-|EX-REF-LOGO|
+|EX-CS-LOGO|
 
 *************************************************
 Using Bluetooth with your ESP32 EX-CommandStation

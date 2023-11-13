@@ -2,6 +2,7 @@
 .. include:: /include/include-l2.rst
 .. include:: /include/include-reference.rst
 |EX-REF-LOGO|
+
 *******************************
 DCC-EX Native Command Reference
 *******************************
@@ -14,7 +15,7 @@ DCC-EX Native Command Reference
     :depth: 2
     :local:
 
-This is a detailed reference. For a summary version, please see :doc:`Command Summary <command-summary>`
+This is a detailed reference. For a summary version, please see :doc:`Consolidated Command Summary <command-summary-consolidated>`
 
 `EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX>`_ Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several "front end" controllers are available or you can easily create your own. Here are some examples:
 

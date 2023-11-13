@@ -61,7 +61,9 @@ Also allows joining the MAIN and PROG tracks together.
   |_| |_| |_| |_| - PROG = Programming Track  |BR|
   |_| |_| |_| |_| - JOIN = Join the Main and Programming tracks temporarily |BR|
 
-  *Response:*  N/A
+  *Response:* 
+    |_| The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes. |BR|
+    |_| ``<pOnOFF [track]>`` |BR|
 
   *Notes:*
 
@@ -72,7 +74,12 @@ Also allows joining the MAIN and PROG tracks together.
   *Examples:* |BR|
   |_| all tracks off: ``<0>`` |BR|
   |_| all tracks on ``<1>`` |BR|
-  |_| join: ``<1 JOIN>``
+  |_| join: ``<1 JOIN>`` |BR|
+  *Example Responses:* |BR|
+  |_| all tracks off: ``<p0>`` |BR|
+  |_| all tracks on ``<p1>`` |BR|
+  |_| join: ``<p1 JOIN>``
+
 
 |hr-dashed|
 

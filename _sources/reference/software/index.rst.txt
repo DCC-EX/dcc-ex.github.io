@@ -12,4 +12,6 @@ Software
 .. toctree::
     :maxdepth: 1
 
+    command-summary-consolidated
+    index-dcpp-commands
     programming-locos

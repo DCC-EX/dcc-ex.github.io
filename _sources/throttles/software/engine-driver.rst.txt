@@ -155,7 +155,28 @@ And here is another Bluetooth controller that provides extra function buttons an
 Adding a Physical Dial (Knob) 
 ==============================
 
-It is possible to easily add a rotary dial (knob) to |Engine Driver|.  see :doc:`/throttles/hardware/engine-driver-physical-knobs` for more infomation.
+It is possible to easily add a rotary dial (knob) to |Engine Driver|.  see :doc:`/throttles/hardware/engine-driver-physical-knobs` for more information.
+
+Recording a log file in EngineDriver
+====================================
+
+If you are having difficulties with Engine Driver connecting to an |EX-CS| it is very helpful if you can provide the support team with a log file of when the problem occurs.
+
+To record a log file in EngineDriver:
+
+1. Start ED.
+2. From the menu, select 'View Log'
+3. Click 'Start recording to a file'
+4. Click 'Close'
+5. Attempt whatever is causing the problem a few times
+6. Exit ED
+7. Connect a USB cable to your phone and PC 
+8. Allow access if the phone asks.
+9. In some versions of Android you may also need to change the connection type on the phone from 'charging' to 'file transfer'
+10. Open a file manager and find the connected phone
+11. Browse down to the folder ...\Internal shared storage\Android\data\jmri.enginedriver\files
+12. Find the most resent file that looks like logcatxxxxxxxxxxxxx.txt     e.g. logcat1699833098998.txt
+13. Attach that file to a message here in discord using the paperclip button on the toolbar above the message content
 
 ====
 

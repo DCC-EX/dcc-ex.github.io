@@ -36,8 +36,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Developer and API reference" href="../developers/index.html" />
-    <link rel="prev" title="" href="programming-locos.html" />
+    <link rel="next" title="Adding and Controlling Accessories" href="../../ex-commandstation/accessories/index.html" />
+    <link rel="prev" title="DCC-EX Native Command Reference" href="command-reference.html" />
 
      
       <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -99,8 +99,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../begin/levels.html">Choose Your Comfort Level</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Products</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../ex-commandstation/index.html">EX-CommandStation</a><ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../ex-commandstation/index.html">EX-CommandStation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../ex-commandstation/get-started/index.html">Getting Started</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/purchasing.html">Purchasing Parts</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/get-started/assembly.html">Initial Assembly</a></li>
@@ -112,7 +112,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../support/wifi-at-version.html">ESP8266 (WiFi Boards) - AT Version Issues and Solutions</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../ex-commandstation/advanced-setup/index.html">Advanced Options</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="../../ex-commandstation/advanced-setup/index.html">Advanced Options</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-microcontrollers/index.html">Supported Microcontrollers</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/arduino-mega.html">Arduino Mega Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../hardware/microcontrollers/arduino-uno.html">Arduino Uno Setup</a></li>
@@ -182,9 +182,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/startup-config.html">Startup Configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/controllers.html">Choosing a Throttle (Controller) - Advanced</a></li>
-<li class="toctree-l3"><a class="reference internal" href="command-reference.html"></a></li>
-<li class="toctree-l3"><a class="reference internal" href="command-reference.html#dcc-ex-native-command-reference">DCC-EX Native Command Reference</a></li>
-<li class="toctree-l3"><a class="reference internal" href="command-summary.html">DCC-EX Native Command Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="command-reference.html">DCC-EX Native Command Reference</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">DCC-EX Native Commands - Consolidated Reference</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-commandstation/accessories/index.html">Adding and Controlling Accessories</a><ul>
@@ -462,9 +461,14 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="index.html">Software</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="programming-locos.html"></a></li>
-<li class="toctree-l3"><a class="reference internal" href="programming-locos.html#programming-locos-cvs">Programming Locos (CVs)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Software</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">DCC-EX Native Commands - Consolidated Reference</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index-dcpp-commands.html">DCC-EX Native Commands</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="command-reference.html">DCC-EX Native Command Reference</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">DCC-EX Native Commands - Consolidated Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="programming-locos.html">Programming Locos (CVs)</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">DCC-EX Native Commands - Consolidated Reference</a></li>
@@ -565,7 +569,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html">Reference</a></li>
+          <li class="breadcrumb-item"><a href="../../ex-commandstation/index.html">EX-CommandStation</a></li>
+          <li class="breadcrumb-item"><a href="../../ex-commandstation/advanced-setup/index.html">Advanced Options</a></li>
       <li class="breadcrumb-item active">DCC-EX Native Commands - Consolidated Reference</li>
   
     
@@ -667,13 +672,17 @@
 <p>Also allows joining the MAIN and PROG tracks together.</p>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>onOff:</strong> one of <br />    - 1 = on <br />    - 0 = off <br /> &gt; <strong>track:</strong> one of <br />    - blank = Both Main and Programming Tracks  <br />    - MAIN = Main track  <br />    - PROG = Programming Track  <br />    - JOIN = Join the Main and Programming tracks temporarily <br /></p>
-<p><em>Response:</em>  N/A</p>
+<dl class="simple">
+<dt><em>Response:</em></dt><dd><p> The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes. <br /> <code class="docutils literal notranslate"><span class="pre">&lt;pOnOFF</span> <span class="pre">[track]&gt;</span></code> <br /></p>
+</dd>
+</dl>
 <p><em>Notes:</em></p>
 <blockquote>
 <div><p>The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work. If you drive onto a programming track that is “joined” and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!</p>
 <p>In some split motor shield hardware configurations JOIN will not be able to work.</p>
 </div></blockquote>
-<p><em>Examples:</em> <br /> all tracks off: <code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code> <br /> all tracks on <code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> <br /> join: <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code></p>
+<p><em>Examples:</em> <br /> all tracks off: <code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code> <br /> all tracks on <code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> <br /> join: <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code> <br />
+<em>Example Responses:</em> <br /> all tracks off: <code class="docutils literal notranslate"><span class="pre">&lt;p0&gt;</span></code> <br /> all tracks on <code class="docutils literal notranslate"><span class="pre">&lt;p1&gt;</span></code> <br /> join: <code class="docutils literal notranslate"><span class="pre">&lt;p1</span> <span class="pre">JOIN&gt;</span></code></p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
@@ -2232,8 +2241,8 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="programming-locos.html" class="btn btn-neutral float-left" title="" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../developers/index.html" class="btn btn-neutral float-right" title="Developer and API reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="command-reference.html" class="btn btn-neutral float-left" title="DCC-EX Native Command Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../ex-commandstation/accessories/index.html" class="btn btn-neutral float-right" title="Adding and Controlling Accessories" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

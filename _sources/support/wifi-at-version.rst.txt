@@ -243,7 +243,7 @@ What to do if you have the wrong AT Firmware version
 The steps necessary to correct the AT version will depend on your hardware:
 
 * :ref:`ESP-01 or ESP-01s <support/wifi-at-version:Correcting the AT version on a ESP-01>`
-* :ref:`Makerfabs ESP8266 Wifi Shield <support/wifi-at-version:Correcting the AT version on a ESP8266 Wifi Shield>`
+* :ref:`Makerfabs ESP8266 Wifi Shield <support/wifi-at-version:Correcting the AT version on a Makerfabs ESP8266 Wifi Shield>`
 * :ref:`Duinopeak ESP8266 WiFi Expansion board <support/wifi-at-version:Correcting the AT version on a Duinopeak ESP8266 WiFi Expansion Board>`
 * :ref:`Mega+WiF board <support/wifi-at-version:Correcting the AT version on a Mega+WiFi>`
 
@@ -319,26 +319,33 @@ Or https://remotexy.com/en/help/esp8266-firmware-update/
 
 ----
 
-Correcting the AT version on a ESP8266 Wifi Shield
---------------------------------------------------
-
-Correcting the Makerfabs ESP8266 Wifi Shield With a USB to TTL Converter Module Adapter
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Correcting the AT version on a Makerfabs ESP8266 Wifi Shield
+------------------------------------------------------------
 
 .. image:: /_static/images/wifi/makerfabs-esp8266-wifi-shield.png
    :class: image-float-right
    :alt: Makefabs ESP8266 WiFi Shield
    :scale: 25%
 
-See https://gist.github.com/nathankellenicki/7008540322c617869cec17226cff579d   
-
 ..
+   Correcting the Makerfabs ESP8266 Wifi Shield With a Makerfabs' CP2104 USB to Serial Converter Arduino Programmer
+   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+   .. figure:: /_static/images/wifi/CP2104-USB-to-Serial-Converter-Arduino-Programmer.png
+      :alt: CP2104 USB to Serial Converter Arduino Programmer
+      :scale: 30%
+
+      CP2104 USB to Serial Converter Arduino Programmer
+
+   Flashing the ESP8266 Wifi Shield using Makerfabs' own **CP2104 USB to Serial Converter Arduino Programmer** is covered :doc:`here </support/makerfabs-update-at-version-with-usb-to-ttl>`.
+
    |hr-dashed|
 
-   Correcting the Makerfabs ESP8266 Wifi Shield With an Arduino Uno or Mega
-   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Flashing the ESP8266 Wifi Shield is covered :doc:`here </support/makerfabs-update-at-version-with-mega>`.
+Correcting the Makerfabs ESP8266 Wifi Shield With a USB to TTL Converter Module Adapter
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+See https://gist.github.com/nathankellenicki/7008540322c617869cec17226cff579d   
 
 |force-break|
 

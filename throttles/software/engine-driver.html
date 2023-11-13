@@ -182,9 +182,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/startup-config.html">Startup Configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/controllers.html">Choosing a Throttle (Controller) - Advanced</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-reference.html"></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-reference.html#dcc-ex-native-command-reference">DCC-EX Native Command Reference</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-summary.html">DCC-EX Native Command Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-reference.html">DCC-EX Native Command Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">DCC-EX Native Commands - Consolidated Reference</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-commandstation/accessories/index.html">Adding and Controlling Accessories</a><ul>
@@ -463,8 +462,13 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../reference/software/index.html">Software</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../reference/software/programming-locos.html"></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../reference/software/programming-locos.html#programming-locos-cvs">Programming Locos (CVs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">DCC-EX Native Commands - Consolidated Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/software/index-dcpp-commands.html">DCC-EX Native Commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/software/command-reference.html">DCC-EX Native Command Reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">DCC-EX Native Commands - Consolidated Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/software/programming-locos.html">Programming Locos (CVs)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">DCC-EX Native Commands - Consolidated Reference</a></li>
@@ -595,9 +599,10 @@
 <li><p><a class="reference internal" href="#screenshots" id="id8">Screenshots</a></p></li>
 <li><p><a class="reference internal" href="#operation" id="id9">Operation</a></p></li>
 <li><p><a class="reference internal" href="#using-a-bluetooth-controller" id="id10">Using a Bluetooth Controller</a></p></li>
-<li><p><a class="reference internal" href="#adding-a-physical-dial-knob" id="id11">Adding a Physical Dial (Knob)</a></p>
+<li><p><a class="reference internal" href="#adding-a-physical-dial-knob" id="id11">Adding a Physical Dial (Knob)</a></p></li>
+<li><p><a class="reference internal" href="#recording-a-log-file-in-enginedriver" id="id12">Recording a log file in EngineDriver</a></p>
 <ul>
-<li><p><a class="reference internal" href="#footnotes" id="id12">Footnotes</a></p></li>
+<li><p><a class="reference internal" href="#footnotes" id="id13">Footnotes</a></p></li>
 </ul>
 </li>
 </ul>
@@ -688,10 +693,30 @@
 </section>
 <section id="adding-a-physical-dial-knob">
 <h2><a class="toc-backref" href="#id11" role="doc-backlink">Adding a Physical Dial (Knob)</a><a class="headerlink" href="#adding-a-physical-dial-knob" title="Permalink to this heading"></a></h2>
-<p>It is possible to easily add a rotary dial (knob) to <a class="reference internal" href="#"><span class="doc">Engine Driver</span></a>.  see <a class="reference internal" href="../hardware/engine-driver-physical-knobs.html"><span class="doc">Adding a Physical Dial/Knob to Engine Driver</span></a> for more infomation.</p>
+<p>It is possible to easily add a rotary dial (knob) to <a class="reference internal" href="#"><span class="doc">Engine Driver</span></a>.  see <a class="reference internal" href="../hardware/engine-driver-physical-knobs.html"><span class="doc">Adding a Physical Dial/Knob to Engine Driver</span></a> for more information.</p>
+</section>
+<section id="recording-a-log-file-in-enginedriver">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Recording a log file in EngineDriver</a><a class="headerlink" href="#recording-a-log-file-in-enginedriver" title="Permalink to this heading"></a></h2>
+<p>If you are having difficulties with Engine Driver connecting to an <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> it is very helpful if you can provide the support team with a log file of when the problem occurs.</p>
+<p>To record a log file in EngineDriver:</p>
+<ol class="arabic simple">
+<li><p>Start ED.</p></li>
+<li><p>From the menu, select ‘View Log’</p></li>
+<li><p>Click ‘Start recording to a file’</p></li>
+<li><p>Click ‘Close’</p></li>
+<li><p>Attempt whatever is causing the problem a few times</p></li>
+<li><p>Exit ED</p></li>
+<li><p>Connect a USB cable to your phone and PC</p></li>
+<li><p>Allow access if the phone asks.</p></li>
+<li><p>In some versions of Android you may also need to change the connection type on the phone from ‘charging’ to ‘file transfer’</p></li>
+<li><p>Open a file manager and find the connected phone</p></li>
+<li><p>Browse down to the folder …Internal shared storageAndroiddatajmri.enginedriverfiles</p></li>
+<li><p>Find the most resent file that looks like logcatxxxxxxxxxxxxx.txt     e.g. logcat1699833098998.txt</p></li>
+<li><p>Attach that file to a message here in discord using the paperclip button on the toolbar above the message content</p></li>
+</ol>
 <hr class="docutils" />
 <section id="footnotes">
-<h3><a class="toc-backref" href="#id12" role="doc-backlink">Footnotes</a><a class="headerlink" href="#footnotes" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Footnotes</a><a class="headerlink" href="#footnotes" title="Permalink to this heading"></a></h3>
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id3" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>

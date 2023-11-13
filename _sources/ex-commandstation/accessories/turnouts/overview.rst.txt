@@ -81,7 +81,7 @@ Turnout objects can be defined via the serial console using the ``<T ...>`` comm
 
 The recommended way to define turnout objects is to define these using the |EX-R| commands in "myAutomation.h". This has the advantage that they will automatically be created each time you turn your |EX-CS| on.
 
-For information on using the ``<T ...>`` commands, refer to the :doc:`/reference/software/command-summary` and :doc:`/reference/software/command-reference`.
+For information on using the ``<T ...>`` commands, refer to the :doc:`/reference/software/command-summary-consolidated` and :doc:`/reference/software/command-reference`.
 
 For information on using the |EX-R| commands in "myAutomation.h" refer to the :doc:`/ex-rail/EX-RAIL-command-reference`.
 

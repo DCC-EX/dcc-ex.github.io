@@ -15,5 +15,4 @@ DCC-EX Native Commands
     :maxdepth: 1
 
     command-reference
-    command-summary
     command-summary-consolidated

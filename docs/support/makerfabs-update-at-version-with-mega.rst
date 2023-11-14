@@ -132,6 +132,11 @@ Step 7. Connect to Arduino
 
 7.2 Connect the TX to RX and RX to TX pins as per the initial assembly instructions for the |EX-CS|
 
+   * Esp TX -> arduino RX1
+   * Esp RX -> arduino RX1
+
+   Remember: The wires are crossed.
+
 .. figure:: /_static/images/assembly/wifi_jumpers2.png
    :alt: Install the Jumper wires
    :scale: 50%

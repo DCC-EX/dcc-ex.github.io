@@ -130,7 +130,7 @@ Step 7. Connect to Arduino
 
 7.1 Remove TX-TX and RX-RX jumpers
 
-7.2 Connect ESP8266 serial to Arduino Serial 1 and the TX to RX and RX to TX as per the initial assembly instructions for the |EX-CS|
+7.2 Connect the TX to RX and RX to TX pins as per the initial assembly instructions for the |EX-CS|
 
 .. figure:: /_static/images/assembly/wifi_jumpers2.png
    :alt: Install the Jumper wires

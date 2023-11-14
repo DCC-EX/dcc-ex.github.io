@@ -58,7 +58,7 @@ Step 1. Get esptool
 Step 2. Get the 1.7.4 as a whole image
 --------------------------------------
 
-2.1 Open https://cdn.discordapp.com/attachments/735194734611398676/1171788863539261461/ESP8266_1MB_AT1_7.bin?ex=655df46b&is=654b7f6b&hm=dae2e165ba51eef1808caa5462e2b2a7887c1e2bc7b47f0bb1f933fe6cda83c7&
+2.1 Open `https://cdn.discordapp.com/attachments/735194734611398676/1171788863539261461/ESP8266_1MB_AT1_7.bin?ex=655df46b&is=654b7f6b&hm=dae2e165ba51eef1808caa5462e2b2a7887c1e2bc7b47f0bb1f933fe6cda83c7& <https://cdn.discordapp.com/attachments/735194734611398676/1171788863539261461/ESP8266_1MB_AT1_7.bin?ex=655df46b&is=654b7f6b&hm=dae2e165ba51eef1808caa5462e2b2a7887c1e2bc7b47f0bb1f933fe6cda83c7&>`_
 
 This should give you a file called ``ESP8266_1MB_AT1_7.bin`` size 1MB md5sum b3019e7e85bdc0878324118b8e002236
 
@@ -120,11 +120,11 @@ If the program is python you need to prepend python3 like this for my Linux comp
 
       GPIO0 ESP8266
 
-5.5 Take other GND jumper and touch ``Reset`` pad
+5.5 Take other GND jumper and touch ``Reset`` pad (While still holding the other jumper to ``GPIO0`` pad)
 
    The ``Reset`` pad is the top pad on the left, closest to the resister labelled "R6". 
 
-5.6 Now you should see text and "Writing....(xx %)" Keep holding GPIO0 until you see "Hash of data verified".
+5.6 Now you should see text and "Writing....(xx %)". Keep holding the ``GPIO0`` jumper until you see "Hash of data verified".
 
 Step 6. Check that flash was successful
 ---------------------------------------

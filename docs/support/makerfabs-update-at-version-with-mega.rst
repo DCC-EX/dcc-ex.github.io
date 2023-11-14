@@ -88,7 +88,7 @@ Note: The GPIO0 pin is the fourth pin from the bottom on the right, next to the 
 
 .. figure:: /_static/images/wifi/mega-for-flashing-makerfabs-wifi-2.jpg
    :alt: Reset ESP8266
-   :scale: 20%
+   :scale: 10%
 
    Reset ESP8266
 

@@ -19,3 +19,4 @@ Welcome to the central downloads page for all |DCC-EX| software solutions. Pleas
     ex-dccinspector
     ex-turntable
     ex-ioexpander
+    ex-fastclock

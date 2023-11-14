@@ -49,11 +49,11 @@ Step 1. Get esptool
 1.2. Now the esptool is on your computer:
 
    Windows: |br|
-   C:\Users\<userName>\AppData\Local\Arduino15\packages\esp32\tools\esptool_py\4.5.1\esptool.exe |br|
+   ``C:\Users\<userName>\AppData\Local\Arduino15\packages\esp32\tools\esptool_py\4.5.1\esptool.exe`` |br|
    Mac: |br|
-   ~/Library/Arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool_py |br|
+   ``~/Library/Arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool_py`` |br|
    Linux: |br|
-   ~/.arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool.py
+   ``~/.arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool.py``
 
 Step 2. Get the 1.7.4 as a whole image
 --------------------------------------
@@ -83,14 +83,11 @@ Step 4.  Connect your computer
 
 4.2 Remember the USB serial port name/number
 
-4.3 Use one of the jumper wires to reset the ESP8266. This should first produce gibbrish and then "ready". |br| 
-Note: The GPIO0 pin is the fourth pin from the bottom on the right, next to the "P" in "ESP-12F". See picture below.
+4.3 Reset the ESP8266 by connecting one of the jumper wires to ``Reset`` pad on the ESP8266 
 
-.. figure:: /_static/images/wifi/mega-for-flashing-makerfabs-wifi-2.jpg
-   :alt: Reset ESP8266
-   :scale: 10%
+   The ``Reset`` pad is the top pad on the left, closest to the resister labelled R6. 
 
-   Reset ESP8266
+   This should first produce gibbrish and then "ready". 
 
 4.4 Close the device monitor and installer (important).
 
@@ -100,19 +97,32 @@ Step 5. Flash with esptool
 5.1 Prepare the long command line. |br|
     For ESPTOOL and PORTNAME insert values from above
 
-``ESPTOOL --baud 38400 --port PORTNAME write_flash --erase-all --flash_freq 40m --flash_mode dout --flash_size 1MB 0x0 ESP8266_1MB_AT1_7.bin``
+   ``ESPTOOL --baud 38400 --port PORTNAME write_flash --erase-all --flash_freq 40m --flash_mode dout --flash_size 1MB 0x0 ESP8266_1MB_AT1_7.bin``
 
 If the program is python you need to prepend python3 like this for my Linux computer:
 
-``python3 ~/.arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool.py  --baud 38400 --port /dev/ttyUSB0 write_flash --erase-all --flash_freq 40m --flash_mode dout --flash_size 1MB 0x0 ESP8266_1MB_AT1_7.bin``
+   ``python3 ~/.arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool.py  --baud 38400 --port /dev/ttyUSB0 write_flash --erase-all --flash_freq 40m --flash_mode dout --flash_size 1MB 0x0 ESP8266_1MB_AT1_7.bin``
 
 5.2 Locate the Reset and GPIO0 pads on the ESP8266.
 
+   The ``GPIO0`` pad is the fourth pad from the bottom on the right, next to the "P" in "ESP-12F".  |br|
+   The ``Reset`` pad is the top pad on the left, closest to the resister labelled "R6". 
+
 5.3 Press enter on the above command line. You should see "connecting" and dots and dashes.
 
-5.4 Take one GND jumper and HOLD (keep holding) to GPIO0 pad
+5.4 Take one GND jumper and HOLD (keep holding) to ``GPIO0`` pad
 
-5.5 Take other GND jumper and touch Reset pad
+   Note: The GPIO0 pin is the fourth pin from the bottom on the right, next to the "P" in "ESP-12F". See picture below.
+
+   .. figure:: /_static/images/wifi/mega-for-flashing-makerfabs-wifi-2.jpg
+      :alt: GPIO0 ESP8266
+      :scale: 10%
+
+      GPIO0 ESP8266
+
+5.5 Take other GND jumper and touch ``Reset`` pad
+
+   The ``Reset`` pad is the top pad on the left, closest to the resister labelled "R6". 
 
 5.6 Now you should see text and "Writing....(xx %)" Keep holding GPIO0 until you see "Hash of data verified".
 
@@ -137,11 +147,11 @@ Step 7. Connect to Arduino
 
    Remember: The wires are crossed.
 
-.. figure:: /_static/images/assembly/wifi_jumpers2.png
-   :alt: Install the Jumper wires
-   :scale: 50%
+   .. figure:: /_static/images/assembly/wifi_jumpers2.png
+      :alt: Install the Jumper wires
+      :scale: 50%
 
-   Install the jumper wires
+      Install the jumper wires
 
 7.3 Remove Arduino Reset jumper
 

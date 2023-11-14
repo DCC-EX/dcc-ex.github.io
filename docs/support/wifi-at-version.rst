@@ -327,6 +327,15 @@ Correcting the AT version on a Makerfabs ESP8266 Wifi Shield
    :alt: Makefabs ESP8266 WiFi Shield
    :scale: 25%
 
+|hr-dashed|
+
+Correcting the Makerfabs ESP8266 Wifi Shield With an Arduino Mega
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Flashing the ESP8266 Wifi Shield :doc:`using an Arduino Mega is covered here </support/makerfabs-update-at-version-with-mega>`.
+
+|hr-dashed|
+
 ..
    Correcting the Makerfabs ESP8266 Wifi Shield With a Makerfabs' CP2104 USB to Serial Converter Arduino Programmer
    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

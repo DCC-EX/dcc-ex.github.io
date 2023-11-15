@@ -158,9 +158,14 @@ Step 5. Flash with esptool
 
    For iOS and Linux
 
+      * Click the Launchpad icon  in the Dock, type Terminal in the search field, then click Terminal or |BR| In the Finder , open the /Applications/Utilities folder, then double-click Terminal.
       * ???
 
-5.2 Prepare the long command line. (byt don't press :guilabel:`Enter` yet)
+   For Linux
+
+      * ???
+
+5.2 Prepare the long command line. (but don't press :guilabel:`Enter` yet)
 
    For ``ESPTOOL`` and ``PORTNAME`` insert values from the steps above
 

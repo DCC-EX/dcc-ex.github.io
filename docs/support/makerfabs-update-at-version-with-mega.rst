@@ -179,12 +179,18 @@ Step 6. Check that flash was successful
 
 6.2 Your shield should answer with the new 1.7.4 version number.
 
-Step 7. Connect to Arduino
---------------------------
+Step 7. Prepare your EX-CommandStation
+--------------------------------------
 
-7.1 Remove TX-TX and RX-RX jumpers
+7.1. Disconnect the Arduino Mega from the PC
 
-7.2 Connect the TX to RX and RX to TX pins as per the initial assembly instructions for the |EX-CS|
+7.2 Remove Arduino ``RST`` (Reset) to ``GND`` jumper
+
+7.3 Remove TX-TX and RX-RX jumpers
+
+7.4 Assemble your EX-CommandStation setup including the Motor Shield and WiFi shield
+
+7.5 Connect the TX to RX and RX to TX pins as per the initial assembly instructions for the |EX-CS|
 
    * Esp TX -> arduino RX1
    * Esp RX -> arduino RX1
@@ -197,6 +203,8 @@ Step 7. Connect to Arduino
 
       Install the jumper wires
 
-7.3 Remove Arduino Reset jumper
+7.6 If you have not already done so, run the |EX-I| and configure your |EX-CS| to use the WiFi shield. |br| Note: this is not necessary if it was done before you started flashing the WiFi firmware.  i.e. Flashing the firmware *does not* upset the software you loaded on the Arduino.
 
-You should now be able to assemble your EX-CommandStation setup, and if all went well it should work.
+----
+
+You should now be able to set your EX-CommandStation to use, and if all went well it should work.

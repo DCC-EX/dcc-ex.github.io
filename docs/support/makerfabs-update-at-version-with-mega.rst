@@ -140,14 +140,14 @@ Step 4.  Connect your computer
 
    This should first produce gibberish and then "ready". 
 
-4.6 Close the device monitor and installer (important).
+4.6 Close the device monitor and installer :dcc-ex-red-bold:`(Important)`.
 
 |hr-dashed|
 
 Step 5. Flash with esptool
 --------------------------
 
-5.1 open a command prompted
+5.1 open a command prompt
 
    For Windows PCs
 
@@ -161,7 +161,9 @@ Step 5. Flash with esptool
    For iOS and Linux
 
       * Click the Launchpad icon  in the Dock, type Terminal in the search field, then click Terminal or |BR| In the Finder , open the /Applications/Utilities folder, then double-click Terminal.
-      * ???
+      * go to the folder you downloaded the ``ESP8266_1MB_AT1_7.bin`` file to by entering:
+      
+         ???
 
    For Linux
 

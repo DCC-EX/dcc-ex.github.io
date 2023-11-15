@@ -32,7 +32,7 @@ Requirements
 
 * The WiFi Shield itself - https://www.makerfabs.com/esp8266-wifi-shield.html
 * An Arduino Uno or Arduino mega
-* 2x female to male jumper wires
+* 2x female to male jumper wires |br| (or the two small, simple jumpers/plugs that came with the WiFi shield)
 * 3x male to male jumper wire
 * A Windows, iOS or Linux PC
 * The esptool app
@@ -119,7 +119,16 @@ Step 3. Prepare the hardware
       :alt: Stacked Mega and Wifi Shield - Jumpers
       :scale: 50%
 
-      Stacked Mega and Wifi Shield - Jumpers. |BR| White and Black wires will be loose are this point
+      Stacked Mega and Wifi Shield - Jumpers. |BR| Note: White and Black wires will be loose are this point
+
+   *Alternate*
+
+   .. figure:: /_static/images/wifi/mega-for-flashing-makerfabs-wifi-3-simple-jumpers.png
+      :alt: Stacked Mega and Wifi Shield - Simple Jumpers
+      :scale: 50%
+
+      Stacked Mega and Wifi Shield - Using the small, simple jumpers/plugs that came with the shield. |BR| Note: the White and Black wires will be loose are this point
+
 
 |hr-dashed|
 

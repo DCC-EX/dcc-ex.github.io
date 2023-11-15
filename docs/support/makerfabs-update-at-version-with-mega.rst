@@ -33,7 +33,7 @@ Requirements
 * The WiFi Shield itself - https://www.makerfabs.com/esp8266-wifi-shield.html
 * An Arduino Uno or Arduino mega
 * 2x female to male jumper wires
-* 2x male to male jumper wire
+* 3x male to male jumper wire
 * A Windows, iOS or Linux PC
 * The esptool app
 * The 1.7.4 firmware image (as a single file)
@@ -44,9 +44,40 @@ How To
 Step 1. Get esptool
 -------------------
 
-1.1. Use the EX-Installer and run it like you would install on a ESP32 until it fails (if you do not have an ESP32).
+The ``esptool`` can be download separately, but the easiest way to get it is to use our |EX-I| which will automatically download it if you select the appropriate options.
 
-1.2. Now the esptool is on your computer:
+1.1. If you have not already installed the |EX-I|, download the :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app.
+
+1.2. Use the EX-Installer and run it 
+
+   * For **Microsoft Windows**:
+   
+   * Open the Windows *File Manager*
+   * Find the folder in which the **EX-Installer-Win64.exe** or **EX-Installer-Win32.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
+   * **Run** ``EX-Installer-Win64.exe`` (or **EX-Installer-Win32.exe**) |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern.  |BR| |BR|
+
+   * For **Apple macOS**:
+
+   * Open a terminal window and navigate to the that folder that you downloaded the file to.  e.g.: |BR| ``cd Downloads``
+   * Enter the following command to tell the OS that it is an executable: |BR| ``chmod +x EX-Installer-macOS``
+   * **Run the installer with** the following command: |BR| ``./EX-Installer-macOS`` |BR| |BR|
+
+   * For **Linux**:
+
+   * Right-click on the file, go to Properties, then the Permissions tab, and check "Allow executing file as program"
+   * Open a terminal window and navigate to that folder
+   * **Run the installer with** the following command: |BR| ``./EX-Installer-Linux64`` |BR| |BR|
+
+1.3 Select the options as if you are installing on a ESP32 until it fails (if you do not have an ESP32).
+
+   * Connect your Arduino Mega to the PC with a USB cable
+   * On the "Manage the Arduino CLI" page make sure the `Expressif ESP32` option is enabled
+   * Click :guilabel:`Select your device`
+   * Select ``ESP32 Dev Kit``
+   * Click :guilabel:`Select product to install`
+
+
+1.4. Now the ``esptool`` will be installed on your computer |br| It is important to be aware of where will be, as this is needed in later steps. (``ESPTOOL``)
 
    Windows: |br|
    ``C:\Users\<userName>\AppData\Local\Arduino15\packages\esp32\tools\esptool_py\4.5.1\esptool.exe`` |br|
@@ -65,42 +96,55 @@ This should give you a file called ``ESP8266_1MB_AT1_7.bin`` size 1MB md5sum b30
 Step 3. Prepare the hardware
 ----------------------------
 
-3.1. Put the makerfabs shield on the Arduino Mega.
+3.1. Disconnect the Arduino Mega from the PC
 
-3.2 Connect the jumpers so that:
+3.2. Put the Makerfabs ESP8266 WiFi shield on the Arduino Mega (if it is not already)
+
+3.3 Connect the jumpers so that:
 
    * the RX of the ESP8266 is connected to the RX/D0 of the Arduino, and 
    * the TX of the ESP8266 is connected to the TX/D1 of the Arduino
 
-3.3 Connect the Reset of the Arduino to GND
+3.4 Connect the ``RST`` (Reset) of the Arduino to ``GND`` on the Arduino
 
-3.4 Prepare two jumper wires to GND (loose ends)
+3.5 Prepare two jumper wires to ``GND`` (loose ends)
+
+   .. figure:: /_static/images/wifi/mega-for-flashing-makerfabs-wifi-3.png
+      :alt: Stacked Mega and Wifi Shield - Jumpers
+      :scale: 40%
+
+      Stacked Mega and Wifi Shield - Jumpers. |BR| White and Black wires will be loose are this point
 
 Step 4.  Connect your computer
 ------------------------------
 
-4.1 Use the Device monitor of the EX-Installer to connect to the Arduino
+4.1 Connect your Arduino Mega to the PC with a USB cable
 
-4.2 Remember the USB serial port name/number
+4.2 Use the Device monitor of the EX-Installer to connect to the Arduino
 
-4.3 Reset the ESP8266 by connecting one of the jumper wires to ``Reset`` pad on the ESP8266 
+4.3 Remember the USB serial port name/number (``PORTNAME``)
+
+4.4 Reset the ESP8266 by connecting one of the jumper wires to ``Reset`` pad on the ESP8266 
 
    The ``Reset`` pad is the top pad on the left, closest to the resister labelled R6. 
 
-   This should first produce gibbrish and then "ready". 
+   This should first produce gibberish and then "ready". 
 
-4.4 Close the device monitor and installer (important).
+4.5 Close the device monitor and installer (important).
 
 Step 5. Flash with esptool
 --------------------------
 
 5.1 Prepare the long command line. |br|
-    For ESPTOOL and PORTNAME insert values from above
+   For ``ESPTOOL`` and ``PORTNAME`` insert values from the steps above
 
    ``ESPTOOL --baud 38400 --port PORTNAME write_flash --erase-all --flash_freq 40m --flash_mode dout --flash_size 1MB 0x0 ESP8266_1MB_AT1_7.bin``
 
-If the program is python you need to prepend python3 like this for my Linux computer:
+   For Example for Windows PCs : (if the Arduino is connected on COM3) |br|
+   ``C:\Users\<userName>\AppData\Local\Arduino15\packages\esp32\tools\esptool_py\4.5.1\esptool --baud 38400 --port COM3 write_flash --erase-all --flash_freq 40m --flash_mode dout --flash_size 1MB 0x0 ESP8266_1MB_AT1_7.bin`` |br|
+   Note: that ``<username>`` needs to be replaced with 'your' user name on the PC.
 
+   If the program is python (iOS or Linux) you need to prepend python3 like this: (If the Arduino is connect on /dev/ttyUSB0) |BR|
    ``python3 ~/.arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool.py  --baud 38400 --port /dev/ttyUSB0 write_flash --erase-all --flash_freq 40m --flash_mode dout --flash_size 1MB 0x0 ESP8266_1MB_AT1_7.bin``
 
 5.2 Locate the Reset and GPIO0 pads on the ESP8266.
@@ -131,7 +175,7 @@ Step 6. Check that flash was successful
 
 6.1 Connect according to 4.x above
 
-6.2 Type AT+GMR and "enter/return"
+6.2 Type AT+GMR and :guilabel:`Send``
 
 6.2 Your shield should answer with the new 1.7.4 version number.
 

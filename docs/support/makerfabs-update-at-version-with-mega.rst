@@ -189,7 +189,9 @@ Make sure the Installer has been closed before continuing.
    The ``GPIO0`` pad is the fourth pad from the bottom on the right, next to the "P" in "ESP-12F".  |br|
    The ``Reset`` pad is the top pad on the left, closest to the resister labelled "R6". 
 
-5.4 Press enter on the above command line. You should see "connecting" and dots and dashes.
+5.4 Press :guilabel:`enter` on the above command line. 
+
+   You should see ``connecting`` and dots and dashes.
 
 5.5 Take one GND jumper and HOLD (keep holding) to ``GPIO0`` pad
 
@@ -201,11 +203,17 @@ Make sure the Installer has been closed before continuing.
 
       GPIO0 ESP8266
 
-5.6 Take other GND jumper and touch ``Reset`` pad (While still holding the other jumper to ``GPIO0`` pad)
+   If you loose contact on the GPIO0 you need to Reset again and start over.
+
+5.6 Take other GND jumper and TOUCH ``Reset`` pad (While still holding the other jumper to ``GPIO0`` pad)
 
    The ``Reset`` pad is the top pad on the left, closest to the resister labelled "R6". 
 
+   Note: The ``GPIO0`` is "hold down" but the ``Reset`` is "touch". 
+
 5.7 Now you should see text and "Writing....(xx %)". Keep holding the ``GPIO0`` jumper until you see "Hash of data verified".
+
+   If you loose contact on the GPIO0 you need to Reset again and start over.
 
 |hr-dashed|
 

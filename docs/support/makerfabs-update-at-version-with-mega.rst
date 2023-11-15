@@ -41,6 +41,8 @@ Requirements
 How To
 ======
 
+|hr-dashed|
+
 Step 1. Get esptool
 -------------------
 
@@ -86,12 +88,16 @@ The ``esptool`` can be download separately, but the easiest way to get it is to 
    Linux: |br|
    ``~/.arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool.py``
 
+|hr-dashed|
+
 Step 2. Get the 1.7.4 as a whole image
 --------------------------------------
 
 2.1 Open `https://cdn.discordapp.com/attachments/735194734611398676/1171788863539261461/ESP8266_1MB_AT1_7.bin?ex=655df46b&is=654b7f6b&hm=dae2e165ba51eef1808caa5462e2b2a7887c1e2bc7b47f0bb1f933fe6cda83c7& <https://cdn.discordapp.com/attachments/735194734611398676/1171788863539261461/ESP8266_1MB_AT1_7.bin?ex=655df46b&is=654b7f6b&hm=dae2e165ba51eef1808caa5462e2b2a7887c1e2bc7b47f0bb1f933fe6cda83c7&>`_
 
 This should give you a file called ``ESP8266_1MB_AT1_7.bin`` size 1MB md5sum b3019e7e85bdc0878324118b8e002236
+
+|hr-dashed|
 
 Step 3. Prepare the hardware
 ----------------------------
@@ -115,6 +121,8 @@ Step 3. Prepare the hardware
 
       Stacked Mega and Wifi Shield - Jumpers. |BR| White and Black wires will be loose are this point
 
+|hr-dashed|
+
 Step 4.  Connect your computer
 ------------------------------
 
@@ -132,10 +140,28 @@ Step 4.  Connect your computer
 
 4.5 Close the device monitor and installer (important).
 
+|hr-dashed|
+
 Step 5. Flash with esptool
 --------------------------
 
-5.1 Prepare the long command line. |br|
+5.1 open a command prompted
+
+   For Windows PCs
+
+      * click :guilabel:`Start Menu`
+      * Type ``cmd`` and press the :guilabel:`Enter` key
+      * go to the folder you downloaded the ``ESP8266_1MB_AT1_7.bin`` file to (normally 'dDownloads') by entering:
+         
+         ``c:``
+         ``cd \user\<username>\downloads``   replace ``<username>`` with you username on the PC 
+
+   For iOS and Linux
+
+      * ???
+
+5.2 Prepare the long command line. (byt don't press :guilabel:`Enter` yet)
+
    For ``ESPTOOL`` and ``PORTNAME`` insert values from the steps above
 
    ``ESPTOOL --baud 38400 --port PORTNAME write_flash --erase-all --flash_freq 40m --flash_mode dout --flash_size 1MB 0x0 ESP8266_1MB_AT1_7.bin``
@@ -147,14 +173,14 @@ Step 5. Flash with esptool
    If the program is python (iOS or Linux) you need to prepend python3 like this: (If the Arduino is connect on /dev/ttyUSB0) |BR|
    ``python3 ~/.arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool.py  --baud 38400 --port /dev/ttyUSB0 write_flash --erase-all --flash_freq 40m --flash_mode dout --flash_size 1MB 0x0 ESP8266_1MB_AT1_7.bin``
 
-5.2 Locate the Reset and GPIO0 pads on the ESP8266.
+5.3 Locate the Reset and GPIO0 pads on the ESP8266.
 
    The ``GPIO0`` pad is the fourth pad from the bottom on the right, next to the "P" in "ESP-12F".  |br|
    The ``Reset`` pad is the top pad on the left, closest to the resister labelled "R6". 
 
-5.3 Press enter on the above command line. You should see "connecting" and dots and dashes.
+5.4 Press enter on the above command line. You should see "connecting" and dots and dashes.
 
-5.4 Take one GND jumper and HOLD (keep holding) to ``GPIO0`` pad
+5.5 Take one GND jumper and HOLD (keep holding) to ``GPIO0`` pad
 
    Note: The GPIO0 pin is the fourth pin from the bottom on the right, next to the "P" in "ESP-12F". See picture below.
 
@@ -164,11 +190,13 @@ Step 5. Flash with esptool
 
       GPIO0 ESP8266
 
-5.5 Take other GND jumper and touch ``Reset`` pad (While still holding the other jumper to ``GPIO0`` pad)
+5.6 Take other GND jumper and touch ``Reset`` pad (While still holding the other jumper to ``GPIO0`` pad)
 
    The ``Reset`` pad is the top pad on the left, closest to the resister labelled "R6". 
 
-5.6 Now you should see text and "Writing....(xx %)". Keep holding the ``GPIO0`` jumper until you see "Hash of data verified".
+5.7 Now you should see text and "Writing....(xx %)". Keep holding the ``GPIO0`` jumper until you see "Hash of data verified".
+
+|hr-dashed|
 
 Step 6. Check that flash was successful
 ---------------------------------------

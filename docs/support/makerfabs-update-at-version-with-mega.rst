@@ -128,9 +128,9 @@ Step 4.  Connect your computer
 
 4.1 Connect your Arduino Mega to the PC with a USB cable
 
-4.2 Use the Device monitor of the EX-Installer to connect to the Arduino
+4.2 Use the "Select your device" page of the EX-Installer to connect to the Arduino
 
-4.3 Remember the USB serial port name/number (``PORTNAME``)
+4.3 Remember the USB serial port name/number (``PORTNAME``) from you selection
 
 4.4 Reset the ESP8266 by connecting one of the jumper wires to ``Reset`` pad on the ESP8266 
 

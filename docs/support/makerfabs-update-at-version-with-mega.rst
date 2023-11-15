@@ -117,7 +117,7 @@ Step 3. Prepare the hardware
 
    .. figure:: /_static/images/wifi/mega-for-flashing-makerfabs-wifi-3.png
       :alt: Stacked Mega and Wifi Shield - Jumpers
-      :scale: 40%
+      :scale: 50%
 
       Stacked Mega and Wifi Shield - Jumpers. |BR| White and Black wires will be loose are this point
 
@@ -151,16 +151,16 @@ Make sure the Installer has been closed before continuing.
 
 5.1 open a command prompt
 
-   For Windows PCs
+   For Windows
 
       * click :guilabel:`Start Menu`
       * Type ``cmd`` and press the :guilabel:`Enter` key
-      * go to the folder you downloaded the ``ESP8266_1MB_AT1_7.bin`` file to (normally 'dDownloads') by entering:
+      * go to the folder you downloaded the ``ESP8266_1MB_AT1_7.bin`` file to (normally 'Downloads') by entering:
          
          ``c:``
-         ``cd \user\<username>\downloads``   replace ``<username>`` with you username on the PC 
+         ``cd \user\<username>\downloads`` |br| (Replace ``<username>`` with your username on the PC) 
 
-   For iOS and Linux
+   For Apple macOS
 
       * Click the Launchpad icon  in the Dock, type Terminal in the search field, then click Terminal or |BR| In the Finder , open the /Applications/Utilities folder, then double-click Terminal.
       * go to the folder you downloaded the ``ESP8266_1MB_AT1_7.bin`` file to by entering:

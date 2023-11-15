@@ -147,6 +147,8 @@ Step 4.  Connect your computer
 Step 5. Flash with esptool
 --------------------------
 
+Make sure the Installer has been closed before continuing.
+
 5.1 open a command prompt
 
    For Windows PCs

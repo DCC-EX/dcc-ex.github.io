@@ -139,15 +139,17 @@ Step 4.  Connect your computer
 
 4.2 Use the "Select your device" page of the EX-Installer to connect to the Arduino
 
-4.3 Remember the USB serial port name/number (``PORTNAME``) from you selection
+4.3 Remember the USB serial port name/number (``PORTNAME``) from your selection
 
 4.4 Open the Device Monitor by clicking on :guilabel:`View Device Monitor`
 
-4.5 Reset the ESP8266 by connecting one of the jumper wires to ``Reset`` pad on the ESP8266 
+4.5 Reset the ESP8266 by "touching" one of the jumper wires to ``Reset`` pad on the ESP8266 
 
    The ``Reset`` pad is the top pad on the left, closest to the resister labelled R6. 
 
    This should first produce gibberish and then "ready". 
+
+   Note: The ``GPIO0`` (used in later steps) is "hold down", but the ``Reset`` is only "touch". 
 
 4.6 Close the device monitor and installer :dcc-ex-red-bold:`(Important)`.
 

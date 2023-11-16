@@ -168,8 +168,8 @@ Make sure the Installer has been closed before continuing.
       * Type ``cmd`` and press the :guilabel:`Enter` key
       * go to the folder you downloaded the ``ESP8266_1MB_AT1_7.bin`` file to (normally 'Downloads') by entering:
          
-         ``c:``
-         ``cd \user\<username>\downloads`` |br| (Replace ``<username>`` with your username on the PC) 
+         ``c:`` :guilabel:`Enter` |br|
+         ``cd \user\<username>\downloads`` :guilabel:`Enter` |br| (Replace ``<username>`` with your username on the PC) 
 
    For Apple macOS
 

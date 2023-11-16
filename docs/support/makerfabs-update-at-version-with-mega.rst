@@ -176,13 +176,16 @@ Make sure the Installer has been closed before continuing.
       * Click the Launchpad icon  in the Dock, type Terminal in the search field, then click Terminal or |BR| In the Finder , open the /Applications/Utilities folder, then double-click Terminal.
       * go to the folder you downloaded the ``ESP8266_1MB_AT1_7.bin`` file to by entering:
       
-         ???
+         ``cd ~\Downloads`` :guilabel:`Enter` 
 
    For Linux
 
-      * ???
+      * On Ubuntu, you can hit ``ctrl+alt+T`` together to open a terminal. |br| Or right-click anywhere on the desktop and select ``Open in Terminal`` which will open the terminal with the desktop folder selected. |br| Or press the :guilabel:`Windows`` key and type ``terminal``
+      * go to the folder you downloaded the ``ESP8266_1MB_AT1_7.bin`` file to by entering:
 
-5.2 Prepare the long command line. (but don't press :guilabel:`Enter` yet)
+         ``cd ~\Downloads`` :guilabel:`Enter` 
+
+5.2 Prepare the long command line. (but **don't** press :guilabel:`Enter` yet)
 
    For ``ESPTOOL`` and ``PORTNAME`` insert values from the steps above
 

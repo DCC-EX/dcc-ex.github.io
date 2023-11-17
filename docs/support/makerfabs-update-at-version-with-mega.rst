@@ -22,6 +22,10 @@ Makerfabs ESP8266 - Update AT Version with an Arduino Mega
 
 Unfortunately the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with |EX-CS|. This now seems to include the recommended `Makerfabs ESP8266 WiFi Shield <https://www.makerfabs.com/esp8266-wifi-shield.html>`_.
 
+.. warning:: 
+
+   The instructions on this page have been proven to work on Linux PCs, so will probably work on macOS PCs (Apple), however attempts to get them to work on **Microsoft Windows PCs** :dcc-ex-red-bold:`have so far been unsuccessful`. 
+
 Introduction
 ============
 
@@ -166,22 +170,22 @@ Make sure the Installer has been closed before continuing.
 
       * click :guilabel:`Start Menu`
       * Type ``cmd`` and press the :guilabel:`Enter` key
-      * go to the folder you downloaded the ``ESP8266_1MB_AT1_7.bin`` file to (normally 'Downloads') by entering:
+      * Go to the folder you downloaded the ``ESP8266_1MB_AT1_7.bin`` file to (normally 'Downloads') by entering:
          
          ``c:`` :guilabel:`Enter` |br|
          ``cd \user\<username>\downloads`` :guilabel:`Enter` |br| (Replace ``<username>`` with your username on the PC) 
 
    For Apple macOS
 
-      * Click the Launchpad icon  in the Dock, type Terminal in the search field, then click Terminal or |BR| In the Finder , open the /Applications/Utilities folder, then double-click Terminal.
-      * go to the folder you downloaded the ``ESP8266_1MB_AT1_7.bin`` file to by entering:
+      * Click the Launchpad icon  in the Dock, type Terminal in the search field, then click Terminal or |BR| In the Finder , open the /Applications/Utilities folder, then double-click ``Terminal``.
+      * Go to the folder you downloaded the ``ESP8266_1MB_AT1_7.bin`` file to by entering:
       
          ``cd ~\Downloads`` :guilabel:`Enter` 
 
    For Linux
 
-      * On Ubuntu, you can hit ``ctrl+alt+T`` together to open a terminal. |br| Or right-click anywhere on the desktop and select ``Open in Terminal`` which will open the terminal with the desktop folder selected. |br| Or press the :guilabel:`Windows`` key and type ``terminal``
-      * go to the folder you downloaded the ``ESP8266_1MB_AT1_7.bin`` file to by entering:
+      * On Ubuntu, you can hit ``ctrl+alt+T`` together to open a terminal. |br| Or right-click anywhere on the desktop and select ``Open in Terminal`` which will open the terminal with the desktop folder selected. |br| Or press the :guilabel:`Windows` key and type ``terminal``
+      * Go to the folder you downloaded the ``ESP8266_1MB_AT1_7.bin`` file to by entering:
 
          ``cd ~\Downloads`` :guilabel:`Enter` 
 

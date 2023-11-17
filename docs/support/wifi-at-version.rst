@@ -329,32 +329,29 @@ Correcting the AT version on a Makerfabs ESP8266 Wifi Shield
 
 |hr-dashed|
 
-Correcting the Makerfabs ESP8266 Wifi Shield With an Arduino Mega
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Flashing the ESP8266 Wifi Shield :doc:`using an Arduino Mega is covered here </support/makerfabs-update-at-version-with-mega>`.
-
-|hr-dashed|
-
-..
-   Correcting the Makerfabs ESP8266 Wifi Shield With a Makerfabs' CP2104 USB to Serial Converter Arduino Programmer
-   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-   .. figure:: /_static/images/wifi/CP2104-USB-to-Serial-Converter-Arduino-Programmer.png
-      :alt: CP2104 USB to Serial Converter Arduino Programmer
-      :scale: 30%
-
-      CP2104 USB to Serial Converter Arduino Programmer
-
-   Flashing the ESP8266 Wifi Shield using Makerfabs' own **CP2104 USB to Serial Converter Arduino Programmer** is covered :doc:`here </support/makerfabs-update-at-version-with-usb-to-ttl>`.
-
-   |hr-dashed|
-
-
 Correcting the Makerfabs ESP8266 Wifi Shield With a USB to TTL Converter Module Adapter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+**Recommended approach**
+
+.. note:: 
+
+   Some people have experienced problems with v3.8.5 of the flash download tool (available from the DCC-EX Downloads) when following the instructions of the linked page. They have had more success with v2.3 (available :doc:`here <https://bbs.espressif.com/viewtopic.php?f=57&t=433>`.) 
+
+   If you don't succeed after several attempts with v3.8.5 try v2.3 instead.
+
 See https://gist.github.com/nathankellenicki/7008540322c617869cec17226cff579d   
+
+|hr-dashed|
+
+Correcting the Makerfabs ESP8266 Wifi Shield With an Arduino Mega
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. warning:: 
+
+   The instructions on the following page have been proven to work on Linux PCs, so will probably work on macOS PCs (Apple), however attempts to get them to work on **Microsoft Windows PCs** :dcc-ex-red-bold:`have so far been unsuccessful`. 
+
+Flashing the ESP8266 Wifi Shield :doc:`using an Arduino Mega is covered here </support/makerfabs-update-at-version-with-mega>`.
 
 |force-break|
 

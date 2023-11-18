@@ -336,7 +336,7 @@ Correcting the Makerfabs ESP8266 Wifi Shield With a USB to TTL Converter Module 
 
 .. note:: 
 
-   Some people have experienced problems with v3.8.5 of the flash download tool (available from the DCC-EX Downloads) when following the instructions of the linked page. They have had more success with v2.3 (available :doc:`here <https://bbs.espressif.com/viewtopic.php?f=57&t=433>`.) 
+   Some people have experienced problems with v3.8.5 of the flash download tool (available from the DCC-EX Downloads) when following the instructions of the linked page. They have had more success with v2.3 (`available here <https://bbs.espressif.com/viewtopic.php?f=57&t=433>`_.) 
 
    If you don't succeed after several attempts with v3.8.5 try v2.3 instead.
 

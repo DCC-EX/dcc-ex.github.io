@@ -376,6 +376,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../download/ex-dccinspector.html">EX-DCCInspector</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../download/ex-turntable.html">EX-Turntable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../download/ex-ioexpander.html">EX-IOExpander</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/ex-fastclock.html">EX-FastClock</a></li>
 </ul>
 </li>
 </ul>
@@ -626,10 +627,11 @@
 <li><p><a class="reference internal" href="#correcting-the-at-version-on-a-makerfabs-esp8266-wifi-shield" id="id24">Correcting the AT version on a Makerfabs ESP8266 Wifi Shield</a></p>
 <ul>
 <li><p><a class="reference internal" href="#correcting-the-makerfabs-esp8266-wifi-shield-with-a-usb-to-ttl-converter-module-adapter" id="id25">Correcting the Makerfabs ESP8266 Wifi Shield With a USB to TTL Converter Module Adapter</a></p></li>
+<li><p><a class="reference internal" href="#correcting-the-makerfabs-esp8266-wifi-shield-with-an-arduino-mega" id="id26">Correcting the Makerfabs ESP8266 Wifi Shield With an Arduino Mega</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#correcting-the-at-version-on-a-duinopeak-esp8266-wifi-expansion-board" id="id26">Correcting the AT version on a Duinopeak ESP8266 WiFi Expansion Board</a></p></li>
-<li><p><a class="reference internal" href="#correcting-the-at-version-on-a-mega-wifi" id="id27">Correcting the AT version on a Mega+WiFi</a></p></li>
+<li><p><a class="reference internal" href="#correcting-the-at-version-on-a-duinopeak-esp8266-wifi-expansion-board" id="id27">Correcting the AT version on a Duinopeak ESP8266 WiFi Expansion Board</a></p></li>
+<li><p><a class="reference internal" href="#correcting-the-at-version-on-a-mega-wifi" id="id28">Correcting the AT version on a Mega+WiFi</a></p></li>
 </ul>
 </li>
 </ul>
@@ -856,15 +858,31 @@
 <section id="correcting-the-at-version-on-a-makerfabs-esp8266-wifi-shield">
 <h3><a class="toc-backref" href="#id24" role="doc-backlink">Correcting the AT version on a Makerfabs ESP8266 Wifi Shield</a><a class="headerlink" href="#correcting-the-at-version-on-a-makerfabs-esp8266-wifi-shield" title="Permalink to this heading"></a></h3>
 <a class="image-float-right reference internal image-reference" href="../_images/makerfabs-esp8266-wifi-shield.png"><img alt="Makefabs ESP8266 WiFi Shield" class="image-float-right" src="../_images/makerfabs-esp8266-wifi-shield.png" style="width: 181.5px; height: 177.75px;" /></a>
+<p><hr class="hr-dashed" /></p>
 <section id="correcting-the-makerfabs-esp8266-wifi-shield-with-a-usb-to-ttl-converter-module-adapter">
 <h4><a class="toc-backref" href="#id25" role="doc-backlink">Correcting the Makerfabs ESP8266 Wifi Shield With a USB to TTL Converter Module Adapter</a><a class="headerlink" href="#correcting-the-makerfabs-esp8266-wifi-shield-with-a-usb-to-ttl-converter-module-adapter" title="Permalink to this heading"></a></h4>
+<p><strong>Recommended approach</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some people have experienced problems with v3.8.5 of the flash download tool (available from the DCC-EX Downloads) when following the instructions of the linked page. They have had more success with v2.3 (<a class="reference external" href="https://bbs.espressif.com/viewtopic.php?f=57&amp;t=433">available here</a>.)</p>
+<p>If you don’t succeed after several attempts with v3.8.5 try v2.3 instead.</p>
+</div>
 <p>See <a class="reference external" href="https://gist.github.com/nathankellenicki/7008540322c617869cec17226cff579d">https://gist.github.com/nathankellenicki/7008540322c617869cec17226cff579d</a></p>
+<p><hr class="hr-dashed" /></p>
+</section>
+<section id="correcting-the-makerfabs-esp8266-wifi-shield-with-an-arduino-mega">
+<h4><a class="toc-backref" href="#id26" role="doc-backlink">Correcting the Makerfabs ESP8266 Wifi Shield With an Arduino Mega</a><a class="headerlink" href="#correcting-the-makerfabs-esp8266-wifi-shield-with-an-arduino-mega" title="Permalink to this heading"></a></h4>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The instructions on the following page have been proven to work on Linux PCs, so will probably work on macOS PCs (Apple), however attempts to get them to work on <strong>Microsoft Windows PCs</strong> <span class="dcc-ex-red-bold">have so far been unsuccessful</span>.</p>
+</div>
+<p>Flashing the ESP8266 Wifi Shield <a class="reference internal" href="makerfabs-update-at-version-with-mega.html"><span class="doc">using an Arduino Mega is covered here</span></a>.</p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
 </section>
 <hr class="docutils" />
 <section id="correcting-the-at-version-on-a-duinopeak-esp8266-wifi-expansion-board">
-<h3><a class="toc-backref" href="#id26" role="doc-backlink">Correcting the AT version on a Duinopeak ESP8266 WiFi Expansion Board</a><a class="headerlink" href="#correcting-the-at-version-on-a-duinopeak-esp8266-wifi-expansion-board" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id27" role="doc-backlink">Correcting the AT version on a Duinopeak ESP8266 WiFi Expansion Board</a><a class="headerlink" href="#correcting-the-at-version-on-a-duinopeak-esp8266-wifi-expansion-board" title="Permalink to this heading"></a></h3>
 <a class="image-float-right reference internal image-reference" href="../_images/duinopeak.png"><img alt="Duinopeak ESP8266 WiFi Expansion Board" class="image-float-right" src="../_images/duinopeak.png" style="width: 150.0px; height: 144.25px;" /></a>
 <div class="admonition-todo admonition" id="id6">
 <p class="admonition-title">Todo</p>
@@ -874,7 +892,7 @@
 </section>
 <hr class="docutils" />
 <section id="correcting-the-at-version-on-a-mega-wifi">
-<h3><a class="toc-backref" href="#id27" role="doc-backlink">Correcting the AT version on a Mega+WiFi</a><a class="headerlink" href="#correcting-the-at-version-on-a-mega-wifi" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id28" role="doc-backlink">Correcting the AT version on a Mega+WiFi</a><a class="headerlink" href="#correcting-the-at-version-on-a-mega-wifi" title="Permalink to this heading"></a></h3>
 <a class="image-float-right reference internal image-reference" href="../_images/mega_wifi.png"><img alt="Mega + WiFi" class="image-float-right" src="../_images/mega_wifi.png" style="width: 240.25px; height: 192.75px;" /></a>
 <p>Flashing the ESP8266 chip on a Mega+WiFi is covered in detail <a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html"><span class="doc">here</span></a>.</p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>

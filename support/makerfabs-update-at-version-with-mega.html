@@ -5,10 +5,10 @@
 <meta content="DCC-EX DCC DCC++ EX DCC++EX" name="keywords" />
 <meta content="An EX-CommandStation is a simple, but powerful, DCC Command Station which you assemble yourself using widely available Arduino boards. [DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout.]" name="description" />
 <meta content="EX-CommandStation EX-CS Command Station" name="keywords" />
-<meta content="WiFi setup MakerFabs Espressif AT version CP2104" name="keywords" />
+<meta content="WiFi setup Espressif AT version" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Makerfabs ESP8266 - Update AT Version with Makerfabs USB to TTL flasher board &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>Makerfabs ESP8266 - Update AT Version with an Arduino Mega &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
@@ -18,7 +18,7 @@
       <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
       <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-    <link rel="canonical" href="https://dcc-ex.com/support/makerfabs-update-at-version-with-usb-to-ttl.html" />
+    <link rel="canonical" href="https://dcc-ex.com/support/makerfabs-update-at-version-with-mega.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -374,6 +374,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../download/ex-dccinspector.html">EX-DCCInspector</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../download/ex-turntable.html">EX-Turntable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../download/ex-ioexpander.html">EX-IOExpander</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../download/ex-fastclock.html">EX-FastClock</a></li>
 </ul>
 </li>
 </ul>
@@ -568,11 +569,11 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Makerfabs ESP8266 - Update AT Version with Makerfabs USB to TTL flasher board</li>
+      <li class="breadcrumb-item active">Makerfabs ESP8266 - Update AT Version with an Arduino Mega</li>
   
     
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/support/makerfabs-update-at-version-with-usb-to-ttl.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/support/makerfabs-update-at-version-with-mega.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   
 
@@ -583,113 +584,257 @@
            <div itemprop="articleBody">
              
 <p><a class="image-product-logo-float-right reference internal" href="../_images/product-logo-ex-commandstation.png"><img alt="EX-CommandStation" class="image-product-logo-float-right" src="../_images/product-logo-ex-commandstation.png" style="width: 320.0px; height: 64.0px;" /></a></p>
-<section id="makerfabs-esp8266-update-at-version-with-makerfabs-usb-to-ttl-flasher-board">
-<h1>Makerfabs ESP8266 - Update AT Version with Makerfabs USB to TTL flasher board<a class="headerlink" href="#makerfabs-esp8266-update-at-version-with-makerfabs-usb-to-ttl-flasher-board" title="Permalink to this heading"></a></h1>
+<section id="makerfabs-esp8266-update-at-version-with-an-arduino-mega">
+<h1>Makerfabs ESP8266 - Update AT Version with an Arduino Mega<a class="headerlink" href="#makerfabs-esp8266-update-at-version-with-an-arduino-mega" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../begin/levels.html#conductor"><img alt="Conductor Hat" src="../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#introduction" id="id4">Introduction</a></p></li>
-<li><p><a class="reference internal" href="#requirements" id="id5">Requirements</a></p></li>
-<li><p><a class="reference internal" href="#how-to" id="id6">How To</a></p>
+<li><p><a class="reference internal" href="#introduction" id="id5">Introduction</a></p></li>
+<li><p><a class="reference internal" href="#requirements" id="id6">Requirements</a></p></li>
+<li><p><a class="reference internal" href="#how-to" id="id7">How To</a></p>
 <ul>
-<li><p><a class="reference internal" href="#step-1-set-up-the-download-tool" id="id7">Step 1 - Set up the download tool</a></p></li>
-<li><p><a class="reference internal" href="#step-2-connect-the-jumper-wires" id="id8">Step 2 - Connect the Jumper Wires</a></p></li>
-<li><p><a class="reference internal" href="#step-3-start-the-flashing" id="id9">Step 3 - Start the flashing</a></p></li>
-<li><p><a class="reference internal" href="#step-4-use-the-wifi-shield" id="id10">Step 4 - Use the WiFi shield</a></p></li>
+<li><p><a class="reference internal" href="#step-1-get-esptool" id="id8">Step 1. Get esptool</a></p></li>
+<li><p><a class="reference internal" href="#step-2-get-the-1-7-4-as-a-whole-image" id="id9">Step 2. Get the 1.7.4 as a whole image</a></p></li>
+<li><p><a class="reference internal" href="#step-3-prepare-the-hardware" id="id10">Step 3. Prepare the hardware</a></p></li>
+<li><p><a class="reference internal" href="#step-4-connect-your-computer" id="id11">Step 4.  Connect your computer</a></p></li>
+<li><p><a class="reference internal" href="#step-5-flash-with-esptool" id="id12">Step 5. Flash with esptool</a></p></li>
+<li><p><a class="reference internal" href="#step-6-check-that-flash-was-successful" id="id13">Step 6. Check that flash was successful</a></p></li>
+<li><p><a class="reference internal" href="#step-7-prepare-your-ex-commandstation" id="id14">Step 7. Prepare your EX-CommandStation</a></p></li>
 </ul>
 </li>
 </ul>
 </nav>
 </aside>
 <p>Unfortunately the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>. This now seems to include the recommended <a class="reference external" href="https://www.makerfabs.com/esp8266-wifi-shield.html">Makerfabs ESP8266 WiFi Shield</a>.</p>
-<section id="introduction">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
-<p>Out of the box, the MakerFabs ESP8266 shield appears to be shipping with a broken firmware that is unstable when used with DCC-EX. To flash version 1.7.4 onto the board follow these instructions.</p>
-<figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="../_images/CP2104-USB-to-Serial-Converter-Arduino-Programmer.png"><img alt="CP2104 USB to Serial Converter Arduino Programmer" src="../_images/CP2104-USB-to-Serial-Converter-Arduino-Programmer.png" style="width: 295.8px; height: 220.79999999999998px;" /></a>
-<figcaption>
-<p><span class="caption-text">CP2104 USB to Serial Converter Arduino Programmer - back</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>These instructions are specific to using Makerfabs’ own <strong>CP2104 USB to Serial Converter Arduino Programmer</strong>, not USB to TTL boards from other manufacturers.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The instructions on this page have been proven to work on Linux PCs, so will probably work on macOS PCs (Apple), however attempts to get them to work on <strong>Microsoft Windows PCs</strong> <span class="dcc-ex-red-bold">have so far been unsuccessful</span>.</p>
 </div>
+<section id="introduction">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<p>Out of the box, the MakerFabs ESP8266 shield appears to be shipping with a broken firmware that is unstable when used with DCC-EX. To flash version 1.7.4 onto the board follow these instructions.</p>
 </section>
 <section id="requirements">
-<h2><a class="toc-backref" href="#id5" role="doc-backlink">Requirements</a><a class="headerlink" href="#requirements" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Requirements</a><a class="headerlink" href="#requirements" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>The WiFi Shield itself - <a class="reference external" href="https://www.makerfabs.com/esp8266-wifi-shield.html">https://www.makerfabs.com/esp8266-wifi-shield.html</a></p></li>
-<li><p>An CP2104 USB to Serial Converter Arduino Programmer - <a class="reference external" href="https://www.makerfabs.com/cp2104-usb-to-serial-converter.html">https://www.makerfabs.com/cp2104-usb-to-serial-converter.html</a></p></li>
-<li><p>4x female to male jumper wires</p></li>
-<li><p>2x male to male jumper wire</p></li>
-<li><p>The flash download tool - <a class="reference external" href="https://www.espressif.com/en/support/download/other-tools">https://www.espressif.com/en/support/download/other-tools</a></p></li>
-<li><p>Firmware - ????</p></li>
-<li><p>A Windows PC</p></li>
+<li><p>An Arduino Uno or Arduino mega</p></li>
+<li><p>2x female to male jumper wires <br /> (or the two small, simple jumpers/plugs that came with the WiFi shield)</p></li>
+<li><p>3x male to male jumper wire</p></li>
+<li><p>A Windows, iOS or Linux PC</p></li>
+<li><p>The esptool app</p></li>
+<li><p>The 1.7.4 firmware image (as a single file)</p></li>
 </ul>
 </section>
 <section id="how-to">
-<h2><a class="toc-backref" href="#id6" role="doc-backlink">How To</a><a class="headerlink" href="#how-to" title="Permalink to this heading"></a></h2>
-<section id="step-1-set-up-the-download-tool">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">Step 1 - Set up the download tool</a><a class="headerlink" href="#step-1-set-up-the-download-tool" title="Permalink to this heading"></a></h3>
-<ol class="arabic simple">
-<li><p>Extract both the download tool and firmware files zips</p></li>
-<li><p>Do not connect the USB yet</p></li>
-</ol>
-</section>
-<section id="step-2-connect-the-jumper-wires">
-<h3><a class="toc-backref" href="#id8" role="doc-backlink">Step 2 - Connect the Jumper Wires</a><a class="headerlink" href="#step-2-connect-the-jumper-wires" title="Permalink to this heading"></a></h3>
-<p>Connect the following:</p>
-<ol class="arabic simple">
-<li><p>Adjust the switch to 5V</p></li>
-<li><p>Connect jumpers from the <strong>ESP12F USB to Serial Converter</strong> to the <strong>WiFi Shield</strong> as follows:</p>
-<ul class="simple">
-<li><p>VCC –&gt; 5V</p></li>
-<li><p>GND –&gt; GND</p></li>
-<li><p>RXD –&gt; ESP_TX</p></li>
-<li><p>TXD –&gt; ESP_R</p></li>
-<li><p>BOOT –&gt; GPIO0</p></li>
-<li><p>RES –&gt; RST</p></li>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">How To</a><a class="headerlink" href="#how-to" title="Permalink to this heading"></a></h2>
+<p><hr class="hr-dashed" /></p>
+<section id="step-1-get-esptool">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Step 1. Get esptool</a><a class="headerlink" href="#step-1-get-esptool" title="Permalink to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">esptool</span></code> can be download separately, but the easiest way to get it is to use our <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> which will automatically download it if you select the appropriate options.</p>
+<p>1.1. If you have not already installed the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span>, download the <a class="reference internal" href="../download/ex-commandstation.html#ex-installer"><span class="std std-ref">EX-Installer</span></a> app.</p>
+<p>1.2. Use the EX-Installer and run it</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>For <strong>Microsoft Windows</strong>:</p></li>
+<li><p>Open the Windows <em>File Manager</em></p></li>
+<li><p>Find the folder in which the <strong>EX-Installer-Win64.exe</strong> or <strong>EX-Installer-Win32.exe</strong> was saved. <br /> Generally this will default to downloading to the <em>downloads</em> folder but your browser may be configured differently.</p></li>
+<li><p><strong>Run</strong> <code class="docutils literal notranslate"><span class="pre">EX-Installer-Win64.exe</span></code> (or <strong>EX-Installer-Win32.exe</strong>) <br /> <br /> Note: depending on the configuration of your computer the ‘.exe’ may or may not appear. This is not of concern.  <br /> <br /></p></li>
+<li><p>For <strong>Apple macOS</strong>:</p></li>
+<li><p>Open a terminal window and navigate to the that folder that you downloaded the file to.  e.g.: <br /> <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">Downloads</span></code></p></li>
+<li><p>Enter the following command to tell the OS that it is an executable: <br /> <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">EX-Installer-macOS</span></code></p></li>
+<li><p><strong>Run the installer with</strong> the following command: <br /> <code class="docutils literal notranslate"><span class="pre">./EX-Installer-macOS</span></code> <br /> <br /></p></li>
+<li><p>For <strong>Linux</strong>:</p></li>
+<li><p>Right-click on the file, go to Properties, then the Permissions tab, and check “Allow executing file as program”</p></li>
+<li><p>Open a terminal window and navigate to that folder</p></li>
+<li><p><strong>Run the installer with</strong> the following command: <br /> <code class="docutils literal notranslate"><span class="pre">./EX-Installer-Linux64</span></code> <br /> <br /></p></li>
 </ul>
-</li>
-</ol>
+</div></blockquote>
+<p>1.3 Select the options as if you are installing on a ESP32 until it fails (if you do not have an ESP32).</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Connect your Arduino Mega to the PC with a USB cable</p></li>
+<li><p>On the “Manage the Arduino CLI” page make sure the <cite>Expressif ESP32</cite> option is enabled</p></li>
+<li><p>Click <span class="guilabel">Select your device</span></p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">ESP32</span> <span class="pre">Dev</span> <span class="pre">Kit</span></code></p></li>
+<li><p>Click <span class="guilabel">Select product to install</span></p></li>
+</ul>
+</div></blockquote>
+<p>1.4. Now the <code class="docutils literal notranslate"><span class="pre">esptool</span></code> will be installed on your computer <br /> It is important to be aware of where will be, as this is needed in later steps. (<code class="docutils literal notranslate"><span class="pre">ESPTOOL</span></code>)</p>
+<blockquote>
+<div><p>Windows: <br />
+<code class="docutils literal notranslate"><span class="pre">C:\Users\&lt;userName&gt;\AppData\Local\Arduino15\packages\esp32\tools\esptool_py\4.5.1\esptool.exe</span></code> <br />
+Mac: <br />
+<code class="docutils literal notranslate"><span class="pre">~/Library/Arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool_py</span></code> <br />
+Linux: <br />
+<code class="docutils literal notranslate"><span class="pre">~/.arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool.py</span></code></p>
+</div></blockquote>
+<p><hr class="hr-dashed" /></p>
+</section>
+<section id="step-2-get-the-1-7-4-as-a-whole-image">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Step 2. Get the 1.7.4 as a whole image</a><a class="headerlink" href="#step-2-get-the-1-7-4-as-a-whole-image" title="Permalink to this heading"></a></h3>
+<p>2.1 Open <a class="reference external" href="https://cdn.discordapp.com/attachments/735194734611398676/1171788863539261461/ESP8266_1MB_AT1_7.bin?ex=655df46b&amp;is=654b7f6b&amp;hm=dae2e165ba51eef1808caa5462e2b2a7887c1e2bc7b47f0bb1f933fe6cda83c7&amp;">https://cdn.discordapp.com/attachments/735194734611398676/1171788863539261461/ESP8266_1MB_AT1_7.bin?ex=655df46b&amp;is=654b7f6b&amp;hm=dae2e165ba51eef1808caa5462e2b2a7887c1e2bc7b47f0bb1f933fe6cda83c7&amp;</a></p>
+<p>This should give you a file called <code class="docutils literal notranslate"><span class="pre">ESP8266_1MB_AT1_7.bin</span></code> size 1MB md5sum b3019e7e85bdc0878324118b8e002236</p>
+<p><hr class="hr-dashed" /></p>
+</section>
+<section id="step-3-prepare-the-hardware">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Step 3. Prepare the hardware</a><a class="headerlink" href="#step-3-prepare-the-hardware" title="Permalink to this heading"></a></h3>
+<p>3.1. Disconnect the Arduino Mega from the PC</p>
+<p>3.2. Put the Makerfabs ESP8266 WiFi shield on the Arduino Mega (if it is not already)</p>
+<p>3.3 Connect the jumpers so that:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>the RX of the ESP8266 is connected to the RX/D0 of the Arduino, and</p></li>
+<li><p>the TX of the ESP8266 is connected to the TX/D1 of the Arduino</p></li>
+</ul>
+</div></blockquote>
+<p>3.4 Connect the <code class="docutils literal notranslate"><span class="pre">RST</span></code> (Reset) of the Arduino to <code class="docutils literal notranslate"><span class="pre">GND</span></code> on the Arduino</p>
+<p>3.5 Prepare two jumper wires to <code class="docutils literal notranslate"><span class="pre">GND</span></code> (loose ends)</p>
+<blockquote>
+<div><figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/mega-for-flashing-makerfabs-wifi-3.png"><img alt="Stacked Mega and Wifi Shield - Jumpers" src="../_images/mega-for-flashing-makerfabs-wifi-3.png" style="width: 400.0px; height: 241.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">Stacked Mega and Wifi Shield - Jumpers. <br /> Note: White and Black wires will be loose are this point</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p><em>Alternate</em></p>
 <figure class="align-default" id="id2">
-<a class="reference internal image-reference" href="../_images/CP2104-USB-to-Serial-Converter-Arduino-Programmer_back.png"><img alt="CP2104 USB to Serial Converter Arduino Programmer - back" src="../_images/CP2104-USB-to-Serial-Converter-Arduino-Programmer_back.png" style="width: 330.0px; height: 214.2px;" /></a>
+<a class="reference internal image-reference" href="../_images/mega-for-flashing-makerfabs-wifi-3-simple-jumpers.png"><img alt="Stacked Mega and Wifi Shield - Simple Jumpers" src="../_images/mega-for-flashing-makerfabs-wifi-3-simple-jumpers.png" style="width: 400.0px; height: 241.0px;" /></a>
 <figcaption>
-<p><span class="caption-text">CP2104 USB to Serial Converter Arduino Programmer - back</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Stacked Mega and Wifi Shield - Using the small, simple jumpers/plugs that came with the shield. <br /> Note: the White and Black wires will be loose are this point</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
+</div></blockquote>
+<p><hr class="hr-dashed" /></p>
 </section>
-<section id="step-3-start-the-flashing">
-<h3><a class="toc-backref" href="#id9" role="doc-backlink">Step 3 - Start the flashing</a><a class="headerlink" href="#step-3-start-the-flashing" title="Permalink to this heading"></a></h3>
-<ol class="arabic simple">
-<li><p>Plug a USB cable into to PC and the <strong>CP2104 USB to Serial Converter Arduino Programmer</strong>.</p></li>
-<li><p>Start Espressif’s download tool.</p></li>
-<li><p>Select ESP8266 and set it as follows:</p>
-<ul class="simple">
-<li><p>It is recommended to increase the baud rate to 1152000, which will make the download faster.</p></li>
-<li><p>In the first field of the tool you need to enter the location of the firmware file (.bin file) that you downloaded. <br /> You can use the <span class="guilabel">…</span> button to the right of the field to browse for the file. <br /> If the file can be found by the tool, the field will turn green.</p></li>
-<li><p>Set the other radio buttons, drop lists and checkboxes as per the image below.</p></li>
-</ul>
+<section id="step-4-connect-your-computer">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Step 4.  Connect your computer</a><a class="headerlink" href="#step-4-connect-your-computer" title="Permalink to this heading"></a></h3>
+<p>4.1 Connect your Arduino Mega to the PC with a USB cable</p>
+<p>4.2 Use the “Select your device” page of the EX-Installer to connect to the Arduino</p>
+<p>4.3 Remember the USB serial port name/number (<code class="docutils literal notranslate"><span class="pre">PORTNAME</span></code>) from your selection</p>
+<p>4.4 Open the Device Monitor by clicking on <span class="guilabel">View Device Monitor</span></p>
+<p>4.5 Reset the ESP8266 by “touching” one of the jumper wires to <code class="docutils literal notranslate"><span class="pre">Reset</span></code> pad on the ESP8266</p>
+<blockquote>
+<div><p>The <code class="docutils literal notranslate"><span class="pre">Reset</span></code> pad is the top pad on the left, closest to the resister labelled R6.</p>
+<p>This should first produce gibberish and then “ready”.</p>
+<p>Note: The <code class="docutils literal notranslate"><span class="pre">GPIO0</span></code> (used in later steps) is “hold down”, but the <code class="docutils literal notranslate"><span class="pre">Reset</span></code> is only “touch”.</p>
+</div></blockquote>
+<p>4.6 Close the device monitor and installer <span class="dcc-ex-red-bold">(Important)</span>.</p>
+<p><hr class="hr-dashed" /></p>
+</section>
+<section id="step-5-flash-with-esptool">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Step 5. Flash with esptool</a><a class="headerlink" href="#step-5-flash-with-esptool" title="Permalink to this heading"></a></h3>
+<p>Make sure the Installer has been closed before continuing.</p>
+<p>5.1 open a command prompt</p>
+<blockquote>
+<div><p>For Windows</p>
+<blockquote>
+<div><ul>
+<li><p>click <span class="guilabel">Start Menu</span></p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">cmd</span></code> and press the <span class="guilabel">Enter</span> key</p></li>
+<li><p>Go to the folder you downloaded the <code class="docutils literal notranslate"><span class="pre">ESP8266_1MB_AT1_7.bin</span></code> file to (normally ‘Downloads’) by entering:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">c:</span></code> <span class="guilabel">Enter</span> <br />
+<code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">\user\&lt;username&gt;\downloads</span></code> <span class="guilabel">Enter</span> <br /> (Replace <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code> with your username on the PC)</p>
+</div></blockquote>
 </li>
-</ol>
-<ol class="arabic simple" start="6">
-<li><p>Click <span class="guilabel">START</span> <br /> <br /> If there is no response, repeat step 2. <br /></p></li>
-<li><p>Wait for the download to complete.</p></li>
-<li><p>A successful result should look like:</p></li>
-</ol>
+</ul>
+</div></blockquote>
+<p>For Apple macOS</p>
+<blockquote>
+<div><ul>
+<li><p>Click the Launchpad icon  in the Dock, type Terminal in the search field, then click Terminal or <br /> In the Finder , open the /Applications/Utilities folder, then double-click <code class="docutils literal notranslate"><span class="pre">Terminal</span></code>.</p></li>
+<li><p>Go to the folder you downloaded the <code class="docutils literal notranslate"><span class="pre">ESP8266_1MB_AT1_7.bin</span></code> file to by entering:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~\Downloads</span></code> <span class="guilabel">Enter</span></p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>For Linux</p>
+<blockquote>
+<div><ul>
+<li><p>On Ubuntu, you can hit <code class="docutils literal notranslate"><span class="pre">ctrl+alt+T</span></code> together to open a terminal. <br /> Or right-click anywhere on the desktop and select <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">in</span> <span class="pre">Terminal</span></code> which will open the terminal with the desktop folder selected. <br /> Or press the <span class="guilabel">Windows</span> key and type <code class="docutils literal notranslate"><span class="pre">terminal</span></code></p></li>
+<li><p>Go to the folder you downloaded the <code class="docutils literal notranslate"><span class="pre">ESP8266_1MB_AT1_7.bin</span></code> file to by entering:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~\Downloads</span></code> <span class="guilabel">Enter</span></p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>5.2 Prepare the long command line. (but <strong>don’t</strong> press <span class="guilabel">Enter</span> yet)</p>
+<blockquote>
+<div><p>For <code class="docutils literal notranslate"><span class="pre">ESPTOOL</span></code> and <code class="docutils literal notranslate"><span class="pre">PORTNAME</span></code> insert values from the steps above</p>
+<p><code class="docutils literal notranslate"><span class="pre">ESPTOOL</span> <span class="pre">--baud</span> <span class="pre">38400</span> <span class="pre">--port</span> <span class="pre">PORTNAME</span> <span class="pre">write_flash</span> <span class="pre">--erase-all</span> <span class="pre">--flash_freq</span> <span class="pre">40m</span> <span class="pre">--flash_mode</span> <span class="pre">dout</span> <span class="pre">--flash_size</span> <span class="pre">1MB</span> <span class="pre">0x0</span> <span class="pre">ESP8266_1MB_AT1_7.bin</span></code></p>
+<p>For Example for Windows PCs : (if the Arduino is connected on COM3) <br />
+<code class="docutils literal notranslate"><span class="pre">C:\Users\&lt;userName&gt;\AppData\Local\Arduino15\packages\esp32\tools\esptool_py\4.5.1\esptool</span> <span class="pre">--baud</span> <span class="pre">38400</span> <span class="pre">--port</span> <span class="pre">COM3</span> <span class="pre">write_flash</span> <span class="pre">--erase-all</span> <span class="pre">--flash_freq</span> <span class="pre">40m</span> <span class="pre">--flash_mode</span> <span class="pre">dout</span> <span class="pre">--flash_size</span> <span class="pre">1MB</span> <span class="pre">0x0</span> <span class="pre">ESP8266_1MB_AT1_7.bin</span></code> <br />
+Note: that <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code> needs to be replaced with ‘your’ user name on the PC.</p>
+<p>If the program is python (iOS or Linux) you need to prepend python3 like this: (If the Arduino is connect on /dev/ttyUSB0) <br />
+<code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">~/.arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool.py</span>&#160; <span class="pre">--baud</span> <span class="pre">38400</span> <span class="pre">--port</span> <span class="pre">/dev/ttyUSB0</span> <span class="pre">write_flash</span> <span class="pre">--erase-all</span> <span class="pre">--flash_freq</span> <span class="pre">40m</span> <span class="pre">--flash_mode</span> <span class="pre">dout</span> <span class="pre">--flash_size</span> <span class="pre">1MB</span> <span class="pre">0x0</span> <span class="pre">ESP8266_1MB_AT1_7.bin</span></code></p>
+</div></blockquote>
+<p>5.3 Locate the Reset and GPIO0 pads on the ESP8266.</p>
+<blockquote>
+<div><p>The <code class="docutils literal notranslate"><span class="pre">GPIO0</span></code> pad is the fourth pad from the bottom on the right, next to the “P” in “ESP-12F”.  <br />
+The <code class="docutils literal notranslate"><span class="pre">Reset</span></code> pad is the top pad on the left, closest to the resister labelled “R6”.</p>
+</div></blockquote>
+<p>5.4 Press <span class="guilabel">enter</span> on the above command line.</p>
+<blockquote>
+<div><p>You should see <code class="docutils literal notranslate"><span class="pre">connecting</span></code> and dots and dashes.</p>
+</div></blockquote>
+<p>5.5 Take one GND jumper and HOLD (keep holding) to <code class="docutils literal notranslate"><span class="pre">GPIO0</span></code> pad</p>
+<blockquote>
+<div><p>Note: The GPIO0 pin is the fourth pin from the bottom on the right, next to the “P” in “ESP-12F”. See picture below.</p>
 <figure class="align-default" id="id3">
-<a class="reference internal image-reference" href="../_images/CP2104-USB-to-Serial-Converter-Arduino-Programmer-flashing.png"><img alt="CP2104 USB to Serial Converter Arduino Programmer - flashing" src="../_images/CP2104-USB-to-Serial-Converter-Arduino-Programmer-flashing.png" style="width: 336.0px; height: 406.8px;" /></a>
+<a class="reference internal image-reference" href="../_images/mega-for-flashing-makerfabs-wifi-2.jpg"><img alt="GPIO0 ESP8266" src="../_images/mega-for-flashing-makerfabs-wifi-2.jpg" style="width: 283.6px; height: 299.6px;" /></a>
 <figcaption>
-<p><span class="caption-text">CP2104 USB to Serial Converter Arduino Programmer - flashing</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-text">GPIO0 ESP8266</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
+<p>If you loose contact on the GPIO0 you need to Reset again and start over.</p>
+</div></blockquote>
+<p>5.6 Take other GND jumper and TOUCH <code class="docutils literal notranslate"><span class="pre">Reset</span></code> pad (While still holding the other jumper to <code class="docutils literal notranslate"><span class="pre">GPIO0</span></code> pad)</p>
+<blockquote>
+<div><p>The <code class="docutils literal notranslate"><span class="pre">Reset</span></code> pad is the top pad on the left, closest to the resister labelled “R6”.</p>
+<p>Note: The <code class="docutils literal notranslate"><span class="pre">GPIO0</span></code> is “hold down” but the <code class="docutils literal notranslate"><span class="pre">Reset</span></code> is “touch”.</p>
+</div></blockquote>
+<p>5.7 Now you should see text and “Writing….(xx %)”. Keep holding the <code class="docutils literal notranslate"><span class="pre">GPIO0</span></code> jumper until you see “Hash of data verified”.</p>
+<blockquote>
+<div><p>If you loose contact on the GPIO0 you need to Reset again and start over.</p>
+</div></blockquote>
+<p><hr class="hr-dashed" /></p>
 </section>
-<section id="step-4-use-the-wifi-shield">
-<h3><a class="toc-backref" href="#id10" role="doc-backlink">Step 4 - Use the WiFi shield</a><a class="headerlink" href="#step-4-use-the-wifi-shield" title="Permalink to this heading"></a></h3>
-<p>You should now be able to disconnect the jumpers, place the shield it onto your DCC-EX setup, and if all went well it should work.</p>
+<section id="step-6-check-that-flash-was-successful">
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Step 6. Check that flash was successful</a><a class="headerlink" href="#step-6-check-that-flash-was-successful" title="Permalink to this heading"></a></h3>
+<p>6.1 Connect according to 4.x above</p>
+<p>6.2 Type AT+GMR and <span class="guilabel">Send`</span></p>
+<p>6.2 Your shield should answer with the new 1.7.4 version number.</p>
+</section>
+<section id="step-7-prepare-your-ex-commandstation">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Step 7. Prepare your EX-CommandStation</a><a class="headerlink" href="#step-7-prepare-your-ex-commandstation" title="Permalink to this heading"></a></h3>
+<p>7.1. Disconnect the Arduino Mega from the PC</p>
+<p>7.2 Remove Arduino <code class="docutils literal notranslate"><span class="pre">RST</span></code> (Reset) to <code class="docutils literal notranslate"><span class="pre">GND</span></code> jumper</p>
+<p>7.3 Remove TX-TX and RX-RX jumpers</p>
+<p>7.4 Assemble your EX-CommandStation setup including the Motor Shield and WiFi shield</p>
+<p>7.5 Connect the TX to RX and RX to TX pins as per the initial assembly instructions for the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Esp TX -&gt; arduino RX1</p></li>
+<li><p>Esp RX -&gt; arduino RX1</p></li>
+</ul>
+<p>Remember: The wires are crossed.</p>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/wifi_jumpers2.png"><img alt="Install the Jumper wires" src="../_images/wifi_jumpers2.png" style="width: 300.0px; height: 211.5px;" /></a>
+<figcaption>
+<p><span class="caption-text">Install the jumper wires</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+<p>7.6 If you have not already done so, run the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> and configure your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> to use the WiFi shield. <br /> Note: this is not necessary if it was done before you started flashing the WiFi firmware.  i.e. Flashing the firmware <em>does not</em> upset the software you loaded on the Arduino.</p>
+<hr class="docutils" />
+<p>You should now be able to set your EX-CommandStation to use, and if all went well it should work.</p>
 </section>
 </section>
 </section>

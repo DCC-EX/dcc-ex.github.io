@@ -194,7 +194,7 @@ SANITY_STEPS
 
 `Default: 10000 (Disabled)`
 
-`Valid values: 1 to 32767`
+`Valid values: 1 to 2147483647`
 
 This is the maximum number of steps the stepper motor will move during homing and calibration before flagging a failure.
 
@@ -216,7 +216,7 @@ FULL_STEP_COUNT
 
 `Default: 4096 (Disabled)`
 
-`Valid values: 1 to 32767`
+`Valid values: 1 to 2147483647`
 
 If for some reason the automatic calibration sequence is not recording the correct number of steps required for a full 360 degree rotation, or if there is some other requirement to override this value, then uncomment this line and define the desired number of steps.
 

@@ -1051,13 +1051,11 @@ Turntable homed successfully
 <section id="new-development-functionality-and-changes">
 <h4><a class="toc-backref" href="#id25" role="doc-backlink">New development functionality and changes</a><a class="headerlink" href="#new-development-functionality-and-changes" title="Permalink to this heading"></a></h4>
 <p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
-<p>If you are using the new developmental features for turntables and traversers available from development version 5.1.5 and on, there are some changes to the above:</p>
-<ul class="simple">
-<li><p>Remove any reference to including “IO_EXTurntable.h” as this file no longer exists, and the device driver is included automatically</p></li>
-<li><p>The new <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> command <code class="docutils literal notranslate"><span class="pre">EXTT_TURNTABLE()</span></code> creates the device, meaning you will no longer need a separate <code class="docutils literal notranslate"><span class="pre">HAL()</span></code> command</p></li>
-</ul>
-<p>To create your turntable device in “myAutomation.h”, the new command required is:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>EXTT_TURNTABLE(id, vpin, i2c_address, home [, &quot;description&quot;])
+<p>If you are using the new developmental features for turntables and traversers available from development version 5.1.5 and on, there is one key change to the above.</p>
+<p>You must remove any reference to including “IO_EXTurntable.h” as this file no longer exists, and the device driver is included automatically.</p>
+<p>To create your turntable device in “myAutomation.h”, you are still required to create a device driver first with the <cite>HAL()</cite> command, followed by the <cite>EXTT_TURNTABLE()</cite> command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>HAL(EXTurntable, vpin, 1, i2c_address)
+EXTT_TURNTABLE(id, vpin, home [, &quot;description&quot;])
 </pre></div>
 </div>
 <p>For complete information, refer to <a class="reference internal" href="test-and-tune.html#development-version-commands"><span class="std std-ref">Development version commands</span></a>.</p>

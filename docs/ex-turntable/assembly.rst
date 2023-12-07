@@ -531,16 +531,16 @@ New development functionality and changes
 
 |NOT-IN-PROD-VERSION|
 
-If you are using the new developmental features for turntables and traversers available from development version 5.1.5 and on, there are some changes to the above:
+If you are using the new developmental features for turntables and traversers available from development version 5.1.5 and on, there is one key change to the above.
 
-- Remove any reference to including "IO_EXTurntable.h" as this file no longer exists, and the device driver is included automatically
-- The new |EX-R| command ``EXTT_TURNTABLE()`` creates the device, meaning you will no longer need a separate ``HAL()`` command
+You must remove any reference to including "IO_EXTurntable.h" as this file no longer exists, and the device driver is included automatically.
 
-To create your turntable device in "myAutomation.h", the new command required is:
+To create your turntable device in "myAutomation.h", you are still required to create a device driver first with the `HAL()` command, followed by the `EXTT_TURNTABLE()` command:
 
 .. code-block:: 
 
-  EXTT_TURNTABLE(id, vpin, i2c_address, home [, "description"])
+  HAL(EXTurntable, vpin, 1, i2c_address)
+  EXTT_TURNTABLE(id, vpin, home [, "description"])
 
 For complete information, refer to :ref:`ex-turntable/test-and-tune:development version commands`.
 

@@ -62,7 +62,7 @@ Dedicated Hardware
 - :doc:`WiTcontroller (Physical) <hardware/witcontroller>`
 - :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
 - :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
-- :doc:` DCC-EX Native command library - DCCEXProtocol <throttles/native-protocol-library>`
+- :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
 Personal Computers
 ------------------
@@ -126,7 +126,7 @@ Reference
 =========
 
 - :doc:`Technical Reference for Throttle Developers <tech-reference>`
-
+- :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
 .. toctree::
     :maxdepth: 1
@@ -137,4 +137,5 @@ Reference
     hardware/index
     connect_wifi_throttle_via_usb
     tech-reference
+    DCC-EX Native command library </throttles/native-protocol-library>
 

@@ -595,31 +595,32 @@
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#considerations-for-throttle-developers" id="id1">Considerations for throttle developers</a></p></li>
-<li><p><a class="reference internal" href="#responding-to-appropriate-information" id="id2">Responding to appropriate information</a></p>
+<li><p><a class="reference internal" href="#considerations-for-throttle-developers" id="id2">Considerations for throttle developers</a></p></li>
+<li><p><a class="reference internal" href="#dcc-ex-native-command-library-dccexprotocol" id="id3">DCC-EX Native command library - DCCEXProtocol</a></p></li>
+<li><p><a class="reference internal" href="#responding-to-appropriate-information" id="id4">Responding to appropriate information</a></p>
 <ul>
-<li><p><a class="reference internal" href="#working-with-track-power-states" id="id3">Working with track power states</a></p></li>
-<li><p><a class="reference internal" href="#key-throttle-commands" id="id4">Key Throttle commands</a></p></li>
-<li><p><a class="reference internal" href="#additional-details" id="id5">Additional Details</a></p>
+<li><p><a class="reference internal" href="#working-with-track-power-states" id="id5">Working with track power states</a></p></li>
+<li><p><a class="reference internal" href="#key-throttle-commands" id="id6">Key Throttle commands</a></p></li>
+<li><p><a class="reference internal" href="#additional-details" id="id7">Additional Details</a></p>
 <ul>
-<li><p><a class="reference internal" href="#setting-cab-loco-status" id="id6">Setting cab (loco) status</a></p></li>
-<li><p><a class="reference internal" href="#obtaining-loco-cab-status" id="id7">Obtaining loco (cab) status</a></p></li>
-<li><p><a class="reference internal" href="#turnouts-points" id="id8">Turnouts/Points</a></p></li>
-<li><p><a class="reference internal" href="#automations-routes" id="id9">Automations/Routes</a></p></li>
-<li><p><a class="reference internal" href="#roster-information" id="id10">Roster Information</a></p></li>
-<li><p><a class="reference internal" href="#turntables-traversers" id="id11">Turntables/Traversers</a></p></li>
+<li><p><a class="reference internal" href="#setting-cab-loco-status" id="id8">Setting cab (loco) status</a></p></li>
+<li><p><a class="reference internal" href="#obtaining-loco-cab-status" id="id9">Obtaining loco (cab) status</a></p></li>
+<li><p><a class="reference internal" href="#turnouts-points" id="id10">Turnouts/Points</a></p></li>
+<li><p><a class="reference internal" href="#automations-routes" id="id11">Automations/Routes</a></p></li>
+<li><p><a class="reference internal" href="#roster-information" id="id12">Roster Information</a></p></li>
+<li><p><a class="reference internal" href="#turntables-traversers" id="id13">Turntables/Traversers</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#commands-to-avoid" id="id12">Commands to avoid</a></p></li>
+<li><p><a class="reference internal" href="#commands-to-avoid" id="id14">Commands to avoid</a></p></li>
 </ul>
 </nav>
 </aside>
 <p>This page is intended to capture relevant information to assist those who develop throttles compatible with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> using the <a class="reference internal" href="../reference/glossary.html"><span class="doc">DCC-EX Native Protocol</span></a>, not the WiThrottle protocol.</p>
 <p>This page should be read in conjunction with the <a class="reference internal" href="../reference/developers/api.html"><span class="doc">DCC-EX Native API Reference</span></a> in order to understand how to send and parse <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> API commands correctly, and ignore any irrelevant commands.</p>
 <section id="considerations-for-throttle-developers">
-<h2><a class="toc-backref" href="#id1" role="doc-backlink">Considerations for throttle developers</a><a class="headerlink" href="#considerations-for-throttle-developers" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Considerations for throttle developers</a><a class="headerlink" href="#considerations-for-throttle-developers" title="Permalink to this heading"></a></h2>
 <p>For anyone developing a throttle or controller application, these considerations should be taken into account:</p>
 <ul class="simple">
 <li><p>Refer to the <a class="reference internal" href="../reference/developers/api.html"><span class="doc">DCC-EX Native API Reference</span></a></p></li>
@@ -630,8 +631,14 @@
 <li><p>There is no concept of the throttle disconnecting from the Command Station.</p></li>
 </ul>
 </section>
+<section id="dcc-ex-native-command-library-dccexprotocol">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">DCC-EX Native command library - DCCEXProtocol</a><a class="headerlink" href="#dcc-ex-native-command-library-dccexprotocol" title="Permalink to this heading"></a></h2>
+<p>For throttle developers that want to focus on throttle features and functionality, the <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> team have now released an Arduino library that communicates with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> via the native <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> commands.</p>
+<p>This library exposes numerous methods to interact with the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> and the various objects including locos, turnouts/points, routes, and turntables.</p>
+<p>For further information, refer to the <a class="reference external" href="https://dcc-ex.com/DCCEXProtocol/index.html">DCC-EX Native command library - DCCEXProtocol</a> documentation.</p>
+</section>
 <section id="responding-to-appropriate-information">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">Responding to appropriate information</a><a class="headerlink" href="#responding-to-appropriate-information" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Responding to appropriate information</a><a class="headerlink" href="#responding-to-appropriate-information" title="Permalink to this heading"></a></h2>
 <p>In addition to understanding the specific throttle commands details on this page, throttles/controllers also must understand and respond appropriately to <strong>broadcasts</strong> sent from the <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> API.</p>
 <p>These are the <em>key</em> broadcast responses that should be understood:</p>
 <ul class="simple">
@@ -645,7 +652,7 @@
 <p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
 <p>There are now turntable/traverser <code class="docutils literal notranslate"><span class="pre">&lt;i</span> <span class="pre">id</span> <span class="pre">position</span> <span class="pre">moving&gt;</span></code> broadcast responses if the new turntable/traverser objects are implemented (see <a class="reference internal" href="../reference/software/command-summary-consolidated.html#turntables-traversers"><span class="std std-ref">Turntables/Traversers</span></a>).</p>
 <section id="working-with-track-power-states">
-<h3><a class="toc-backref" href="#id3" role="doc-backlink">Working with track power states</a><a class="headerlink" href="#working-with-track-power-states" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Working with track power states</a><a class="headerlink" href="#working-with-track-power-states" title="Permalink to this heading"></a></h3>
 <p>Track power can be On, Off, or Unknown. There is no broadcast of an Unknown power state though, meaning a throttle/controller must start with track power flagged as Unknown.</p>
 <p>The throttle should only flag the power state as On or Off when either:</p>
 <ul class="simple">
@@ -654,7 +661,7 @@
 </ul>
 </section>
 <section id="key-throttle-commands">
-<h3><a class="toc-backref" href="#id4" role="doc-backlink">Key Throttle commands</a><a class="headerlink" href="#key-throttle-commands" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Key Throttle commands</a><a class="headerlink" href="#key-throttle-commands" title="Permalink to this heading"></a></h3>
 <p>Key throttle specific commands are summarised here, refer below for elaboration on the details with examples.  Refer to the <a class="reference internal" href="../reference/software/command-summary-consolidated.html"><span class="doc">DCC-EX Native Commands - Consolidated Reference</span></a> for detailed information.</p>
 <table class="command-table docutils align-default">
 <thead>
@@ -717,15 +724,15 @@
 </section>
 <hr class="docutils" />
 <section id="additional-details">
-<h3><a class="toc-backref" href="#id5" role="doc-backlink">Additional Details</a><a class="headerlink" href="#additional-details" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Additional Details</a><a class="headerlink" href="#additional-details" title="Permalink to this heading"></a></h3>
 <p>Refer to the <a class="reference internal" href="../reference/software/command-summary-consolidated.html"><span class="doc">DCC-EX Native Commands - Consolidated Reference</span></a> for detailed information on these commands.</p>
 <section id="setting-cab-loco-status">
-<h4><a class="toc-backref" href="#id6" role="doc-backlink">Setting cab (loco) status</a><a class="headerlink" href="#setting-cab-loco-status" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id8" role="doc-backlink">Setting cab (loco) status</a><a class="headerlink" href="#setting-cab-loco-status" title="Permalink to this heading"></a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cabid</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code> - Sets a cab (loco) speed and direction. (See below for the response.)</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">funct</span> <span class="pre">state&gt;</span></code> - Turns cab (loco) decoder functions ON and OFF. (See below for the response.)</p>
 </section>
 <section id="obtaining-loco-cab-status">
-<h4><a class="toc-backref" href="#id7" role="doc-backlink">Obtaining loco (cab) status</a><a class="headerlink" href="#obtaining-loco-cab-status" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id9" role="doc-backlink">Obtaining loco (cab) status</a><a class="headerlink" href="#obtaining-loco-cab-status" title="Permalink to this heading"></a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cabid&gt;</span></code> - Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.</p>
 <blockquote>
 <div><p>Example response:</p>
@@ -750,7 +757,7 @@
 </div></blockquote>
 </section>
 <section id="turnouts-points">
-<h4><a class="toc-backref" href="#id8" role="doc-backlink">Turnouts/Points</a><a class="headerlink" href="#turnouts-points" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id10" role="doc-backlink">Turnouts/Points</a><a class="headerlink" href="#turnouts-points" title="Permalink to this heading"></a></h4>
 <p>The conventional turnout definition commands and the <code class="docutils literal notranslate"><span class="pre">&lt;H&gt;</span></code> responses do not contain information about the turnout description which may have been provided in an EX-RAIL script. A turnout description is much more user friendly than the identifier (eg. T123), and having a list helps the throttle UI build a suitable set of buttons.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JT&gt;</span></code> - Returns a list of turnout IDs. The throttle should be uninterested in the turnout technology used but needs to know the IDs it can throw/close and monitor the current state.</p>
 <blockquote>
@@ -780,7 +787,7 @@
 </div>
 </section>
 <section id="automations-routes">
-<h4><a class="toc-backref" href="#id9" role="doc-backlink">Automations/Routes</a><a class="headerlink" href="#automations-routes" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id11" role="doc-backlink">Automations/Routes</a><a class="headerlink" href="#automations-routes" title="Permalink to this heading"></a></h4>
 <p>A throttle needs to know which EX-RAIL Automations and Routes it can show the user.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JA&gt;</span></code> - Returns a list of Automations/Routes.</p>
 <blockquote>
@@ -811,7 +818,7 @@
 </section>
 </section>
 <section id="roster-information">
-<h4><a class="toc-backref" href="#id10" role="doc-backlink">Roster Information</a><a class="headerlink" href="#roster-information" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id12" role="doc-backlink">Roster Information</a><a class="headerlink" href="#roster-information" title="Permalink to this heading"></a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JR&gt;</span></code> - Requests a list of cab IDs from the roster.</p>
 <blockquote>
 <div><p>Example responses:</p>
@@ -829,7 +836,7 @@
 </div></blockquote>
 </section>
 <section id="turntables-traversers">
-<h4><a class="toc-backref" href="#id11" role="doc-backlink">Turntables/Traversers</a><a class="headerlink" href="#turntables-traversers" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id13" role="doc-backlink">Turntables/Traversers</a><a class="headerlink" href="#turntables-traversers" title="Permalink to this heading"></a></h4>
 <p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
 <p>A new feature has been added to support control of turntables/traversers from throttles, including the ability for throttles to “draw” turntable positions as defined to support graphical operation. If <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> commands are used to define turntables and their associated positions, a description for the turntable as well as each position is able to be defined.</p>
 <p>Note that to obtain a complete definition for a turntable/traverser, the turntable object needs to be queried first (<code class="docutils literal notranslate"><span class="pre">&lt;JO</span> <span class="pre">id&gt;</span></code>) followed by the position query (<code class="docutils literal notranslate"><span class="pre">&lt;JP</span> <span class="pre">id&gt;</span></code>) to obtain all defined positions for the object.</p>
@@ -861,7 +868,7 @@
 </section>
 </section>
 <section id="commands-to-avoid">
-<h2><a class="toc-backref" href="#id12" role="doc-backlink">Commands to avoid</a><a class="headerlink" href="#commands-to-avoid" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">Commands to avoid</a><a class="headerlink" href="#commands-to-avoid" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">func1</span> <span class="pre">func2&gt;</span></code> - Use <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">function</span> <span class="pre">1/0&gt;</span></code> instead</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span>&#160; <span class="pre">slot</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code> - Just drop the slot number</p></li>

@@ -31,6 +31,15 @@ For anyone developing a throttle or controller application, these considerations
 - There is no concept of a throttle 'acquiring' a loco. |BR| Simply, commands for a loco are sent to the Command Station, and the Command Station 'broadcasts' the status of any/every loco to every throttle any time a change is made to a loco.
 - There is no concept of the throttle disconnecting from the Command Station.
 
+DCC-EX Native command library - DCCEXProtocol
+=============================================
+
+For throttle developers that want to focus on throttle features and functionality, the |DCC-EX| team have now released an Arduino library that communicates with |EX-CS| via the native |DCC-EX| commands.
+
+This library exposes numerous methods to interact with the |EX-CS| and the various objects including locos, turnouts/points, routes, and turntables.
+
+For further information, refer to the `DCC-EX Native command library - DCCEXProtocol <https://dcc-ex.com/DCCEXProtocol/index.html>`_ documentation.
+
 Responding to appropriate information
 =====================================
 

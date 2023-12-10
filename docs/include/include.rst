@@ -195,6 +195,11 @@
       :scale: 40%
       :class: image-product-logo-float-right
 ..
+.. |NATIVE-PROTOCOL_LIBRARY-LOGO| image:: /_static/images/logos/product-logo-native-protocol-library.png
+      :alt: DCC-EX Native Protocol Library
+      :scale: 40%
+      :class: image-product-logo-float-right
+..
 .. ................................................
 ..
 .. |EX-BP-LOGO-SMALL| image:: /_static/images/logos/product-logo-bigpicture.png

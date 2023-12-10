@@ -342,6 +342,8 @@ Correcting the Makerfabs ESP8266 Wifi Shield With a USB to TTL Converter Module 
 
 See https://gist.github.com/nathankellenicki/7008540322c617869cec17226cff579d   
 
+Also see a detailed video by Andrew from `Wotton Tor <https://www.youtube.com/@AndrewH561>`_ - `Flashing the Makerfabs wifi board <https://www.youtube.com/watch?v=mNHlDmCnPMU>`_  (The flashing demo starts about 9 minutes into the video.)
+
 |hr-dashed|
 
 Correcting the Makerfabs ESP8266 Wifi Shield With an Arduino Mega

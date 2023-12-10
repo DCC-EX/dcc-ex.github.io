@@ -26,6 +26,11 @@ Jimmy from 'DIY and Digital Railroad'
 * 31 July 2023 - `Cheap and Amazing! DCC-EX 2 Years Later <https://www.youtube.com/watch?v=5WXPA0uVFXw>`_
 * ~ 2021 - `DCC-EX: A Cheap DIY DCC System?!?! This is a Model Railroad Game Changer <https://www.youtube.com/watch?v=DVDNi9U_K68&t=0s>`_
 
+Wotton Tor
+----------
+
+* 17 December 2023 - `Flashing the Makerfabs wifi board <https://www.youtube.com/watch?v=mNHlDmCnPMU>`_  (The flashing demo starts about 9 minutes into the video.)
+
 Little Wicket Railway
 ---------------------
 

@@ -1,11 +1,11 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 .. include:: /include/include-throttles.rst
-|EX-THROTTLES-LOGO|
+|NATIVE-PROTOCOL_LIBRARY-LOGO|
 
-*********************************************
-DCC-EX Native command library - DCCEXProtocol
-*********************************************
+******************************************************
+DCC-EX Native command protocol library - DCCEXProtocol
+******************************************************
 
 |tinkerer| |engineer|
 

@@ -23,6 +23,7 @@ To make it as simple as possible we have created the |EX-I| app.
 
     installing
     testing
+    Managing config files <managing-config-files>
 
 ----
 

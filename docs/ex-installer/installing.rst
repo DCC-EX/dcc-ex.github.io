@@ -18,6 +18,10 @@ Using the Installer
       :depth: 4
       :local:
 
+.. note:: 
+
+   If you already have, or wish to create, your own custom config files, we recommend that you :doc:`read this page first <managing-config-files>`.
+
 Requirements (for installing)
 ==============================
 

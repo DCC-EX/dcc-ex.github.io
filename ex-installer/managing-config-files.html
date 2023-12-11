@@ -638,7 +638,7 @@
 </section>
 <section id="myautomation-h">
 <h3><a class="toc-backref" href="#id3" role="doc-backlink">myAutomation.h</a><a class="headerlink" href="#myautomation-h" title="Permalink to this heading"></a></h3>
-<p>The <strong>myAutomation</strong> file can contain any customisations, including:</p>
+<p>The <strong>myAutomation.h</strong> file can contain any customisations, including:</p>
 <ul class="simple">
 <li><p>Your Roster</p></li>
 <li><p>Turnouts/Points</p></li>
@@ -648,13 +648,17 @@
 <li><p>Turntables (Not available in the current ‘Release’ version)</p></li>
 </ul>
 <p>This can be created manually, or by the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> if you select the <cite>Create MyAutomation.h</cite> option.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Using <strong>myAutomation.h</strong> does use more progmem as it uses <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span>.</p>
+</div>
 </section>
 <section id="mysetup-h">
 <h3><a class="toc-backref" href="#id4" role="doc-backlink">mySetup.h</a><a class="headerlink" href="#mysetup-h" title="Permalink to this heading"></a></h3>
 <p>The <strong>mySetup.h</strong> file can contain:</p>
 <ul class="simple">
 <li><p>Sensors</p></li>
-<li><p>???</p></li>
+<li><p>Start-up power state</p></li>
 </ul>
 <p>This file must be created manually.</p>
 </section>
@@ -672,17 +676,17 @@
 <p>Note: if you are just starting out this is the recommended approach.</p>
 <ul class="simple">
 <li><p>Run <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> following the instructions</p></li>
-<li><p>in the ‘Install EX-CommandStation’ screen, make sure you select <cite>Create MyAutomation.h</cite> and <cite>advanced config</cite> along with any other options you need for your Command Station.</p></li>
-<li><p>Click the <span class="guilabel">Advanced Config</span> button you will be shown the ‘Advanced Configuration’ Screen where you can make additional edits to <strong>config.h</strong> and <strong>myAutomation.h</strong></p></li>
-<li><p>on the ‘Load EX-CommandStation’ screen, after you click <span class="guilabel">Load</span> and the software has been loaded, you will see a <span class="guilabel">Backup config files</span> button</p></li>
+<li><p>in the <strong>‘Install EX-CommandStation’</strong> screen, make sure you select <cite>Create MyAutomation.h</cite> and <cite>advanced config</cite> along with any other options you need for your Command Station.</p></li>
+<li><p>Click the <span class="guilabel">Advanced Config</span> button you will be shown the <strong>‘Advanced Configuration’</strong> Screen where you can make additional edits to <strong>config.h</strong> and <strong>myAutomation.h</strong></p></li>
+<li><p>on the <strong>‘Load EX-CommandStation’</strong> screen, after you click <span class="guilabel">Load</span> and the software has been loaded, you will see a <span class="guilabel">Backup config files</span> button</p></li>
 <li><p>Follow the instructions to backup your files</p></li>
 </ul>
 <p>The next time you run <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></p>
 <ul class="simple">
-<li><p>On the ‘Select EX-CommandStation version’ screen, select the version you wish to install</p></li>
+<li><p>On the <strong>‘Select EX-CommandStation version’</strong> screen, select the version you wish to install</p></li>
 <li><p>Then select <cite>Use my existing config files</cite> and locate the files you saved as a backup previously. <br /> Select any of the files you backed up. (Even though you select only one file, all the files will be included.)</p></li>
 <li><p>Then click <span class="guilabel">Advanced Config</span></p></li>
-<li><p>Follow the instructions above for the ‘Advanced Configuration’ screen and the following steps.</p></li>
+<li><p>Follow the instructions above for the <strong>‘Advanced Configuration’</strong> screen and the following steps.</p></li>
 </ul>
 <p>Note: this process does not automatically create <strong>mySetup.h</strong>.  This file can be manually added to the other two files using the text editor instructions below if needed.</p>
 </section>
@@ -696,10 +700,10 @@
 <li><p>If needed, create <cite>myAutomation.h</cite> and edit as needed</p></li>
 <li><p>If needed, create <cite>mySetup.h</cite> and edit as needed</p></li>
 <li><p>Run <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> following the instructions</p></li>
-<li><p>On the ‘Select EX-CommandStation version’ select the version you wish to install</p></li>
+<li><p>On the <strong>‘Select EX-CommandStation version’</strong> select the version you wish to install</p></li>
 <li><p>Then select <cite>Use my existing config files</cite> and locate the files you saved as a backup previously, and select any of the files you backed up. (Even though you select only one file, all the files will be included.)</p></li>
 <li><p>Then click <span class="guilabel">Advanced Config</span></p></li>
-<li><p>Continue to the ‘Load Configuration’ screen and load the software</p></li>
+<li><p>Continue to the <strong>‘Load Configuration’</strong> screen and load the software</p></li>
 </ul>
 <p>If you had previously used the Arduino IDE of VSC to create custom config files, you can use these files, from where you originally created them or copy them to a separate folder.</p>
 </section>

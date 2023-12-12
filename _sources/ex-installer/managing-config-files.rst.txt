@@ -63,8 +63,8 @@ mySetup.h
 
 The **mySetup.h** file can contain:
 
-* Sensors
-* Start-up power state
+* ``SETUP(cmd)`` commands  (allows issuing of DCC-EX Native protocol commands to be run at start-up of the Command Station)
+* Any c++ code you wish
 
 This file must be created manually.
 

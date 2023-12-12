@@ -122,16 +122,16 @@ Summary table of all connections required during assembly:
     * - ULN2003 \-
       - GND
       - A0 G
-    * - Home sensor common
-      - GND
-      - 2 G
-    * - Home sensor normally open (NO)
-      - 2
-      - 2 S
     * - Limit sensor common
       - GND
-      - 5 G
+      - 2 G
     * - Limit sensor normally open (NO)
+      - 2
+      - 2 S
+    * - Home sensor common
+      - GND
+      - 5 G
+    * - Home sensor normally open (NO)
       - 5
       - 5 S
     * - CommandStation 20 (SDA)

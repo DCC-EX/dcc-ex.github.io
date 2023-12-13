@@ -1364,10 +1364,10 @@ Drive logo in reverse at DCC speed 0-127 (1=ESTOP)
   |_| |_| |_| |_| Note that if the function is 'momentary' rather than 'latching' (On/Off) then start the function label with a asterisk (*). The most common example of this is the Horn/Whistle which is commonly on F2. |BR|
 
   *Examples:* |BR|
-  |_| ROSTER (  3,"Eng 3", "F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//") // Address 3, Eng 3, Function keys F0-F10 |BR|
+  |_| ROSTER (  3,"Eng 3", "F0/F1/\*F2/\*F3/F4/F5/F6/F7/Mute/F9//") // Address 3, Eng 3, Function keys F0-F10 |BR|
   |_| ROSTER(1224,"PE 1224","") // Motor Only Decoder |BR|
-  |_| ROSTER(1225,"PE 1225","Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute") |BR|
-  |_| ROSTER(4468,"LNER 4468","//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8")
+  |_| ROSTER(1225,"PE 1225","Lights/Bell/\*Whistle/\*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute") |BR|
+  |_| ROSTER(4468,"LNER 4468","//Snd On/\*Whistle/\*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door \~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8")
 
 |hr-dashed|
 

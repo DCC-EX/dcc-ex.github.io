@@ -1359,8 +1359,8 @@ Drive logo in reverse at DCC speed 0-127 (1=ESTOP)
 
   *Parameters:* |BR|
   |_| > **cab** - DCC address of your loco
-  |_| > **name:** - the name of this loco that will appear in the throttle apps. Enclosed in quotes (")|BR|
-  |_| < **funct_map** - the names that you want to see for the functions specific to this loco separated by forward slashes ("/"). All enclosed in quotes (") |BR|
+  |_| > **name:** - the name of this loco that will appear in the throttle apps. Enclosed in quotes (") |BR|
+  |_| > **funct_map** - the names that you want to see for the functions specific to this loco separated by forward slashes ("/"). All enclosed in quotes (") |BR|
   |_| |_| |_| |_| Note that if the function is 'momentary' rather than 'latching' (On/Off) then start the function label with a asterisk (*). The most common example of this is the Horn/Whistle which is commonly on F2. |BR|
 
   *Examples:* |BR|

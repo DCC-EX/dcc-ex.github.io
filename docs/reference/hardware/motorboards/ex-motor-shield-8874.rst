@@ -80,7 +80,7 @@ Units may be purchased from the following sources:
 * from `Smart Hobby, LLC <https://www.smarthobbyllc.com/>`_. You can also find Smart Hobby on Facebook
 * In the UK from `Chesterfield Model Making & Miniature Electronics <https://chesterfield-models.co.uk/product/semify-dcc-ex-motor-shield/>`_
 * In Europe from `Semify's Web Store <https://www.semify-eda.com/ex-motorshield8874/>`_ (based in Austria)
-* In Australia and New Zealand and South East Asia from `Millennium Engineering Pty Ltd <https://www.milleng.com.au>`_
+* In Australia, New Zealand and South East Asia from `Millennium Engineering Pty Ltd <https://www.milleng.com.au>`_
 * and other manufacturers licensed by DCC-EX.
 
 There are different options for the board such as fully assembled or in kit form where connectors and headers need to be soldered onto the board. Prices vary from around $34.95 to $39.90 in the US, to approximately £29.99 in the UK, €37 in Europe, and in Australia starting from $AU55.00. Prices typically do not include tax and shipping.
@@ -108,8 +108,6 @@ Shown here are examples of the shield plugged into Mega+WiFi, Nucleo-F411RE:
    :scale: 15%
 
    DCC-EX EX-MotorShield8874 RevA on Nucleo-F411RE  
-
-Example pics here!
 
 1. Connect DC Power to Motor Driver
 ------------------------------------
@@ -162,5 +160,164 @@ Next steps
 ==========
 
 Click :doc:`here </ex-commandstation/get-started/wifi-setup>` to learn how to connect the WiFi shield to your |EX-CS|, or *alternatively* connect a controller like |JMRI| or our |EX-WT| by using the serial cable to connect between your computer and the |EX-CS| as outlined in the :ref:`ex-installer/installing:getting ready` section of the |EX-I| page. Note that when configuring the EX-CommandStation you will want to select `EX8874_SHIELD` as the motor board during configuration.
+
+
+Stacking EX-MotorShield8874s
+================================
+
+This is **definitely** advanced Tinkerer/Engineer level work. Do **not** attempt it without some confidence you know what you are doing electronically. Future revisions of the EX-MotorShield8874 will look at alternative ways to expand the number of DCC districts.
+
+This article covers both stacking an Arduino Motor Shield R3 (or clone) and an EX-MotorShield8874, and stacking two EX-MotorShield8874s.
+
+Stacking an Arduino Motor Shield R3 and EX-MotorShield8874
+----------------------------------------------------------
+
+This stack is perhaps simplest and an easy enough upgrade for those who already have an Arduino Motor Shield R3 or clone.
+
+We are going to leave the Arduino Motor Shield R3 in the same configuration as recommended `here </ex-commandstation/get-started/assembly>`_ and as such it is worth doing this first and testing all is well before proceeding if this is a new install.
+
+The best solution is to stack the EX-MotorShield8874 on top of the Arduino Motor Shield R3 (is it, really??) for which we will need to re-route some of its IO pins to allow it to function.
+
+On the EX-MotorShield8874 you need to alter the Pin Assignment pads (NB: the following is fine for Mega and Nucleo/STM32 motherboards, but is **not** ideal for ESPDuino32 motherboards):
+
+.. figure:: /_static/images/motorboards/ex_motorshield8874_pin_assignment_pads.jpg
+   :alt: DCC-EX EX-MotorShield8874 RevA Pin Assignment Pads
+   :scale: 30%
+
+* Cut the PWM (EN) jumpers for both Driver A and Driver B, and solder bridge the right hand ALT pads
+* Cut the BRAKE jumpers for both Driver A and Driver B, and solder bridge the right hand ALT pads
+* Cut the DIR jumpers for both Driver A and Driver B, and solder bridge the right hand ALT pads
+* Cut the SENSE jumpers for both Driver A and Driver B, and solder bridge the right hand ALT pads
+
+The above will re-allocate most of the pins used by the top board to the `ALT or alternate set of pins <https://github.com/DCC-EX/EX-MotorShield8874#aternate-pin-assignment-pcb-jumpers>`_ but note it leaves the FAULT pins routed to the default positions of A4/A5 as there is no conflict with the Arduino Motor Shield R3.
+
+Add **one** of the following motor driver definitions to your config.h file (if uncertain, read `this description </reference/hardware/motorboards/motor-board-config>`_ first):
+
+Find this section in the file:
+
+.. code-block:: cpp
+
+  // DEFINE MOTOR_SHIELD_TYPE BELOW ACCORDING TO THE FOLLOWING TABLE:
+  //
+  //  STANDARD_MOTOR_SHIELD : Arduino Motor shield Rev3 based on the L298 with max 18V 2A per channel
+  //  POLOLU_MOTOR_SHIELD   : Pololu MC33926 Motor Driver (not recommended for prog track)
+  //  FUNDUMOTO_SHIELD      : Fundumoto Shield, no current sensing (not recommended, no short protection)
+  //  FIREBOX_MK1           : The Firebox MK1                    
+  //  FIREBOX_MK1S          : The Firebox MK1S    
+  //   |
+  //   +-----------------------
+  //
+  #define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD
+
+And for an Arduino UNO or Mega (or any 5v microcontroller) add the following:
+
+.. code-block:: cpp
+
+  // EX-MotorShield8874 stacked onto Arduino Motor Shield R3
+  // For Arduino UNO, Mega and any 5v microcontroller
+  #define MOTOR_SHIELD_TYPE EX8874_STACKED_ON_ARDUINO
+  #define EX8874_STACKED_ON_ARDUINO F("EX8874_STACKED_ON_ARDUINO"),\
+  new MotorDriver( 3, 12, UNUSED_PIN, 9, A0, 2.99, 1500, UNUSED_PIN), \
+  new MotorDriver(11, 13, UNUSED_PIN, 8, A1, 2.99, 1500, UNUSED_PIN), \
+  new MotorDriver( 2, 10, UNUSED_PIN, 7, A2, 5.08, 5000, A4), \
+  new MotorDriver( 5,  4, UNUSED_PIN, 6, A3, 5.08, 5000, A5)
+
+
+Or for any 3v3 microcontroller such as STM32 Nucleo models, but not the ESPDuino32, add the following:
+
+.. code-block:: cpp
+
+  // EX-MotorShield8874 stacked onto Arduino Motor Shield R3
+  // For Nucleo/STM32 and any 3v3 microcontroller except ESP32
+  #define MOTOR_SHIELD_TYPE EX8874_STACKED_ON_ARDUINO
+  #define EX8874_STACKED_ON_ARDUINO F("EX8874_STACKED_ON_ARDUINO"),\
+  new MotorDriver( 3, 12, UNUSED_PIN, 9, A0, 0.488, 1500, UNUSED_PIN), \
+  new MotorDriver(11, 13, UNUSED_PIN, 8, A1, 0.488, 1500, UNUSED_PIN), \
+  new MotorDriver( 2, 10, UNUSED_PIN, 7, A2, 1.27, 5000, A4), \
+  new MotorDriver( 5,  4, UNUSED_PIN, 6, A3, 1.27, 5000, A5)
+
+Stacking Two EX-MotorShield8874s
+--------------------------------
+The easiest way forward is to leave the first EX-MotorShield8874 in the stack entirely unmodified. Note that if you are using an Ethernet shield, it must be the very first board in the stack, with the unmodified EX-MotorShield8874 next immediately on top of that. As such, this too it likely worth testing first before proceeding to modifying the second EX-MotorShield8874 and adding it on.
+
+The top EX-MotorShield8874 must have its onboard 7.2V regulators disconnected from the VIN pin at least, and preferably also disabled to save a little power consumption and lower the RF noise. It also needs to have all of its IO pins used to communicate with the |EX-CS| re-routed to alternate pins and an additional motor driver entry created in `config.h`
+
+The documentation has the `jumpers described on GitHub <https://github.com/DCC-EX/EX-MotorShield8874#power-configuration-pcb-jumpers>`_
+
+But to be VERY clear, you must CUT the regulator to VIN pin on the top of the PCB which is not labelled on the original version, but has been labelled on later versions:
+
+.. figure:: /_static/images/motorboards/ex_motorshield8874_vreg_vin_pad.jpg
+   :alt: DCC-EX EX-MotorShield8874 RevA Vreg output to VIN pad
+   :scale: 30%
+
+Then you should also cut the "Regulator Enable" trace on the bottom of the board:
+
+.. figure:: /_static/images/motorboards/ex_motorshield8874_vreg_enable_pad.jpg
+   :alt: DCC-EX EX-MotorShield8874 RevA Vreg EMABLE pad
+   :scale: 30%
+
+On the top board you then need to alter the Pin Assignment pads (NB: this is for Mega and Nucleo/STM32 motherboards, but is **not** ideal for ESPDuino32 motherboards):
+
+.. figure:: /_static/images/motorboards/ex_motorshield8874_pin_assignment_pads.jpg
+   :alt: DCC-EX EX-MotorShield8874 RevA Pin Assignment Pads
+   :scale: 30%
+
+* Cut the PWM (EN) jumpers for both Driver A and Driver B, and solder bridge the right hand ALT pads
+* Cut the FAULT jumpers for both Driver A and  Driver B but do NOT solder the right hand ALT pads (explanation below)
+* Cut the BRAKE jumpers for both Driver A and Driver B, and solder bridge the right hand ALT pads
+* Cut the DIR jumpers for both Driver A and Driver B, and solder bridge the right hand ALT pads
+* Cut the SENSE jumpers for both Driver A and Driver B, and solder bridge the right hand ALT pads
+
+The above will re-allocate the pins used by the top board to the `ALT or alternate set of pins <https://github.com/DCC-EX/EX-MotorShield8874#aternate-pin-assignment-pcb-jumpers>`_
+
+The reason we did not solder the FAULT pins to their righthand ALT pads is that this would connect the FAULT pins to D0/D1 on the Arduino R3 headers which is not ideal because D0/D1 typically carry the serial port.
+
+Solder a jumper wire (carefully!) to the centre pad of the FAULT which you can jumper to any available digital input pin on the motherboard you are using.
+
+Add **one** of the following motor driver definitions to your config.h file (if uncertain, read `this description </reference/hardware/motorboards/motor-board-config>`_ first):
+
+Find this section in the file:
+
+.. code-block:: cpp
+
+  // DEFINE MOTOR_SHIELD_TYPE BELOW ACCORDING TO THE FOLLOWING TABLE:
+  //
+  //  STANDARD_MOTOR_SHIELD : Arduino Motor shield Rev3 based on the L298 with max 18V 2A per channel
+  //  POLOLU_MOTOR_SHIELD   : Pololu MC33926 Motor Driver (not recommended for prog track)
+  //  FUNDUMOTO_SHIELD      : Fundumoto Shield, no current sensing (not recommended, no short protection)
+  //  FIREBOX_MK1           : The Firebox MK1                    
+  //  FIREBOX_MK1S          : The Firebox MK1S    
+  //   |
+  //   +-----------------------
+  //
+  #define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD
+
+And for an Arduino UNO or Mega (or any 5v microcontroller) add the following:
+
+.. code-block:: cpp
+
+  // Dual stacked EX-MotorShield8874s
+  // For Arduino UNO, Mega and any 5v microcontroller
+  #define MOTOR_SHIELD_TYPE EX8874_DUAL_STACKED
+  #define EX8874_DUAL_STACKED F("EX8874_DUAL_STACKED"),\
+  new MotorDriver( 3, 12, UNUSED_PIN, 9, A0, 5.08, 5000, A4), \
+  new MotorDriver(11, 13, UNUSED_PIN, 8, A1, 5.08, 5000, A5), \
+  new MotorDriver( 2, 10, UNUSED_PIN, 7, A2, 5.08, 5000, YOUR_PIN_A), \
+  new MotorDriver( 5,  4, UNUSED_PIN, 6, A3, 5.08, 5000, YOUR_PIN_B)
+
+Or for any 3v3 microcontroller such as STM32 Nucleo models, but not the ESPDuino32, add the following:
+
+.. code-block:: cpp
+
+  // Dual stacked EX-MotorShield8874s
+  // For Nucleo/STM32 and any 3v3 microcontroller except ESP32
+  #define MOTOR_SHIELD_TYPE EX8874_DUAL_STACKED
+  #define EX8874_DUAL_STACKED F("EX8874_DUAL_STACKED"),\
+  new MotorDriver( 3, 12, UNUSED_PIN, 9, A0, 1.27, 5000, A4), \
+  new MotorDriver(11, 13, UNUSED_PIN, 8, A1, 1.27, 5000, A5), \
+  new MotorDriver( 2, 10, UNUSED_PIN, 7, A2, 1.27, 5000, YOUR_PIN_A), \
+  new MotorDriver( 5,  4, UNUSED_PIN, 6, A3, 1.27, 5000, YOUR_PIN_B)
+
+Where `YOUR_PIN_A` and `YOUR_PIN_B` are the pins you have jumpered to the Sense pins for channel A and B respectively on the top EX-MotorShield8874.
 
 For more detailed and technical information, follow the link to the `EX-MotorShield8874 on Github <https://github.com/DCC-EX/EX-MotorShield8874>`_ It also includes the schematic and the KiCad project files.

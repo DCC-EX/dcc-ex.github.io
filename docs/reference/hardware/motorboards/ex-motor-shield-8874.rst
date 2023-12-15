@@ -270,9 +270,9 @@ On the top board you then need to alter the Pin Assignment pads (NB: this is for
 
 The above will re-allocate the pins used by the top board to the `ALT or alternate set of pins <https://github.com/DCC-EX/EX-MotorShield8874#aternate-pin-assignment-pcb-jumpers>`_
 
-The reason we did not solder the FAULT pins to their righthand ALT pads is that this would connect the FAULT pins to D0/D1 on the Arduino R3 headers which is not ideal because D0/D1 typically carry the serial port.
+The reason we did not solder the FAULT pins to their righthand ALT pads is that this would connect the FAULT pins to D0/D1 on the Arduino R3 headers which is not ideal because D0/D1 typically carry the serial port. You can of course bend those pins out if you wish to use them, and simply jumper them that way.
 
-Solder a jumper wire (carefully!) to the centre pad of the FAULT which you can jumper to any available digital input pin on the motherboard you are using.
+If you do wish to use the solder method, solder a jumper wire (carefully!) to the centre pad of the FAULT which you can jumper to any available digital input pin on the motherboard you are using.
 
 Add **one** of the following motor driver definitions to your config.h file (if uncertain, read `this description </reference/hardware/motorboards/motor-board-config>`_ first):
 
@@ -319,5 +319,7 @@ Or for any 3v3 microcontroller such as STM32 Nucleo models, but not the ESPDuino
   new MotorDriver( 5,  4, UNUSED_PIN, 6, A3, 1.27, 5000, YOUR_PIN_B)
 
 Where `YOUR_PIN_A` and `YOUR_PIN_B` are the pins you have jumpered to the Sense pins for channel A and B respectively on the top EX-MotorShield8874.
+
+Note that on Nucleo-144 motherboards, D7 and D8 are incapable of PWM for the Brake for channel B on either the first or second shield. PWM is used for DC PWM output **and** for managing DCC overload situations for the EX-MotorShield8874. As such it is recommended these be BRAKE pins both be isolated by cutting the pads, and then jumpered to other PWM capable pins such as PE12 and PE14. More details to follow.
 
 For more detailed and technical information, follow the link to the `EX-MotorShield8874 on Github <https://github.com/DCC-EX/EX-MotorShield8874>`_ It also includes the schematic and the KiCad project files.

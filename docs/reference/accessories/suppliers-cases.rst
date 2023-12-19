@@ -128,7 +128,7 @@ There are various remixes of Hans' designs, so be sure to check them all out.
 
 .. image:: /_static/images/suppliers/hans2.png
    :alt: IoTT Command Station Cases
-   :scale: 50%
+   :scale: 40%
    :align: left
 
 .. rst-class:: clearer
@@ -160,14 +160,14 @@ Case to hold Arduino Mega, motor shield, and .96" display for DCC-EX
 
 .. image:: /_static/images/suppliers/nebbish_cs_case1.png
    :alt: Nebbish Command Station Cases
-   :scale: 50%
+   :scale: 60%
    :align: left
 
 .. rst-class:: clearer
 
 .. image:: /_static/images/suppliers/nebbish_cs_case2.png
    :alt: Nebbish Command Station Cases
-   :scale: 50%
+   :scale: 60%
    :align: left
 
 .. rst-class:: clearer

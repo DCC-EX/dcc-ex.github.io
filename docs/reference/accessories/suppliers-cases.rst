@@ -119,8 +119,15 @@ Hans has created a stacking system of cases similar to the M5Stack system. Using
 There are various remixes of Hans' designs, so be sure to check them all out.
 
 
-.. image:: /_static/images/suppliers/sumner_pi_case.png
-   :alt: Sumner Command Station Cases
+.. image:: /_static/images/suppliers/hans1.png
+   :alt: IoTT Command Station Cases
+   :scale: 60%
+   :align: left
+
+.. rst-class:: clearer
+
+.. image:: /_static/images/suppliers/hans2.png
+   :alt: IoTT Command Station Cases
    :scale: 50%
    :align: left
 
@@ -134,8 +141,6 @@ There are various remixes of Hans' designs, so be sure to check them all out.
 
 
    
-
-
 Nebbish's Arduino Mega case for DCC-EX (3D Print)
 --------------------------------------------------
 
@@ -153,8 +158,15 @@ Case to hold Arduino Mega, motor shield, and .96" display for DCC-EX
 * Options for external connections
 
 
-.. image:: /_static/images/suppliers/sumner_pi_case.png
-   :alt: Sumner Command Station Cases
+.. image:: /_static/images/suppliers/nebbish_cs_case1.png
+   :alt: Nebbish Command Station Cases
+   :scale: 50%
+   :align: left
+
+.. rst-class:: clearer
+
+.. image:: /_static/images/suppliers/nebbish_cs_case2.png
+   :alt: Nebbish Command Station Cases
    :scale: 50%
    :align: left
 

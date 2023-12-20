@@ -646,7 +646,7 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;p</span> <span class="pre">X</span> <span class="pre">[MAIN|PROG|JOIN]&gt;</span></code> - When a throttle issues a track power command, this response is sent as a broadcast (see <a class="reference internal" href="../reference/software/command-summary-consolidated.html#power-management"><span class="std std-ref">Power Management</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">address&gt;</span></code> - When a loco address is read on the programming track, the address is sent as a broadcast (see <a class="reference internal" href="../reference/software/command-summary-consolidated.html#reading-writing-configuration-variables-cvs-programming-track"><span class="std std-ref">Reading/Writing Configuration Variables (CVs) - Programming track</span></a>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">slot</span> <span class="pre">speed/dir</span> <span class="pre">func&gt;</span></code> - When throttles send loco commands, this is sent as a broadcast (see <a class="reference internal" href="../reference/software/command-summary-consolidated.html#cab-loco-commands"><span class="std std-ref">Cab (Loco) Commands</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cabid</span> <span class="pre">slot</span> <span class="pre">speed/dir</span> <span class="pre">func&gt;</span></code> - When throttles send loco commands, this is sent as a broadcast (see <a class="reference internal" href="../reference/software/command-summary-consolidated.html#cab-loco-commands"><span class="std std-ref">Cab (Loco) Commands</span></a>)</p></li>
 </ul>
 <p>These broadcast responses should be understood if your controller deals with turnouts/points and sensors.
 - <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">[DCC|SERVO|VPIN|LCN]</span> <span class="pre">...</span> <span class="pre">[0|1]&gt;</span></code> - When turnouts are closed/thrown, this response is broadcast (see <a class="reference internal" href="../reference/software/command-summary-consolidated.html#turnouts-points"><span class="std std-ref">Turnouts/Points</span></a>)
@@ -681,7 +681,7 @@
 <td><p><code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cabid</span> <span class="pre">slot</span> <span class="pre">speedbyte</span> <span class="pre">functionMap&gt;</span></code> (Broadcast)</p></td>
 <td><p>Requests a deliberate update of cab (loco) speed/functions</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">funct</span> <span class="pre">state&gt;</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cabid</span> <span class="pre">funct</span> <span class="pre">state&gt;</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cabid</span> <span class="pre">slot</span> <span class="pre">speedbyte</span> <span class="pre">functionMap&gt;</span></code> (Broadcast)</p></td>
 <td><p>Turns cab (loco) decoder functions ON and OFF (See below for the response.)</p></td>
 </tr>

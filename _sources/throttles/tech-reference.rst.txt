@@ -49,7 +49,7 @@ These are the *key* broadcast responses that should be understood:
 
 - ``<p X [MAIN|PROG|JOIN]>`` - When a throttle issues a track power command, this response is sent as a broadcast (see :ref:`reference/software/command-summary-consolidated:power management`)
 - ``<r address>`` - When a loco address is read on the programming track, the address is sent as a broadcast (see :ref:`reference/software/command-summary-consolidated:reading/writing configuration variables (cvs) - programming track`)
-- ``<l cab slot speed/dir func>`` - When throttles send loco commands, this is sent as a broadcast (see :ref:`reference/software/command-summary-consolidated:cab (loco) commands`)
+- ``<l cabid slot speed/dir func>`` - When throttles send loco commands, this is sent as a broadcast (see :ref:`reference/software/command-summary-consolidated:cab (loco) commands`)
 
 These broadcast responses should be understood if your controller deals with turnouts/points and sensors.
 - ``<H id [DCC|SERVO|VPIN|LCN] ... [0|1]>`` - When turnouts are closed/thrown, this response is broadcast (see :ref:`reference/software/command-summary-consolidated:turnouts/points`)
@@ -88,7 +88,7 @@ Key throttle specific commands are summarised here, refer below for elaboration 
   * - ``<t cabid>``
     - ``<l cabid slot speedbyte functionMap>`` (Broadcast)
     - Requests a deliberate update of cab (loco) speed/functions
-  * - ``<F cab funct state>``
+  * - ``<F cabid funct state>``
     - ``<l cabid slot speedbyte functionMap>`` (Broadcast)
     - Turns cab (loco) decoder functions ON and OFF (See below for the response.)
   * - ``<JT>``

@@ -94,12 +94,12 @@ Created by Sumner Patterson, this is a range of Mega Command Station cases with 
    :alt: Sumner Command Station Cases
    :scale: 50%
    :align: left
-
-.. rst-class:: clearer
-   
+  
 `Sumner's Thingiverse Case Page <https://www.thingiverse.com/thing:4763767/files>`_
 
 `List of Sumner's 3D printed cases <https://1fatgmc.com/RailRoad/3D-Printer/3D-Printer-Index.html>`_
+
+.. rst-class:: clearer
 
 Hans Tanner's ioTT cube case system (3D Print)
 --------------------------------------------------
@@ -131,14 +131,14 @@ There are various remixes of Hans' designs, so be sure to check them all out.
    :scale: 40%
    :align: left
 
-.. rst-class:: clearer
 
 `TinkerCAD design files <https://www.tinkercad.com/users/6v866XC9490-hans-tanner>`_
 
-`Hans Tanner's IoTT Tindie store <https://www.tindie.com/stores/tanner87661/items/>`_`
+`Hans Tanner's IoTT Tindie store <https://www.tindie.com/stores/tanner87661/items/>`_
 
 `YouTube Video describing the enclosure system <https://youtu.be/aBYER7211gA?si=EP9Ycd82tPHOKs_i>`_
 
+.. rst-class:: clearer
 
    
 Nebbish's Arduino Mega case for DCC-EX (3D Print)
@@ -169,7 +169,7 @@ Case to hold Arduino Mega, motor shield, and .96" display for DCC-EX
    :alt: Nebbish Command Station Cases
    :scale: 60%
    :align: left
+  
+`Nebbish case on Thingiverse <https://www.printables.com/model/371085-arduino-mega-case-for-dcc-ex>`_
 
 .. rst-class:: clearer
-   
-`Nebbish case on Thingiverse <https://www.printables.com/model/371085-arduino-mega-case-for-dcc-ex>`_

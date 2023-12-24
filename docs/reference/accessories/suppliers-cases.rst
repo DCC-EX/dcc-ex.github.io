@@ -165,11 +165,16 @@ Case to hold Arduino Mega, motor shield, and .96" display for DCC-EX
 
 .. rst-class:: clearer
 
+
 .. image:: /_static/images/suppliers/nebbish_cs_case2.png
    :alt: Nebbish Command Station Cases
    :scale: 60%
    :align: left
-  
+
 `Nebbish case on Thingiverse <https://www.printables.com/model/371085-arduino-mega-case-for-dcc-ex>`_
 
-.. rst-class:: clearer
+|force-break|
+
+
+  
+

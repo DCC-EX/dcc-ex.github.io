@@ -133,7 +133,7 @@ Note:  Previously referred to as 'DC-District'.
   |_| |_| |_| |_| - PROG |BR|
   |_| |_| |_| |_| - DC |BR|
   |_| |_| |_| |_| - DCX = DC reversed polarity |BR|
-  |_| |_| |_| |_| - OFF (DCX is DC with reversed polarity) |BR|
+  |_| |_| |_| |_| - NONE |BR|
   |_| > **id:** the cab ID. *Required when specifying DC or DCX*
   
   *Response:* |BR|

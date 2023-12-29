@@ -732,7 +732,7 @@
 <section id="trackletter-mode-cab-configure-track-manager">
 <h4><a class="toc-backref" href="#id60" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">trackletter</span> <span class="pre">mode</span> <span class="pre">[cab]&gt;</span></code> - Configure Track Manager</a><a class="headerlink" href="#trackletter-mode-cab-configure-track-manager" title="Permalink to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>trackletter:</strong> ‘A’ through ‘H’ represent one of the outputs of the/a motor shield. <br /> &gt; <strong>mode:</strong> one of  <br />    - MAIN <br />    - PROG <br />    - DC <br />    - DCX = DC reversed polarity <br />    - OFF (DCX is DC with reversed polarity) <br /> &gt; <strong>id:</strong> the cab ID. <em>Required when specifying DC or DCX</em></p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>trackletter:</strong> ‘A’ through ‘H’ represent one of the outputs of the/a motor shield. <br /> &gt; <strong>mode:</strong> one of  <br />    - MAIN <br />    - PROG <br />    - DC <br />    - DCX = DC reversed polarity <br />    - NONE <br /> &gt; <strong>id:</strong> the cab ID. <em>Required when specifying DC or DCX</em></p>
 <p><em>Response:</em> <br /> (for each track/channel that has changed) <code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">trackletter</span> <span class="pre">state</span> <span class="pre">cab&gt;</span></code> <br /> <br /> &gt; <strong>trackletter:</strong> A-H <br /> &gt; <strong>state:</strong>  PROG, MAIN DC, DCX <br /> &gt; <strong>cab:</strong> cab(loco) equivalent to a fake DCC Address</p>
 <p><em>Notes:</em></p>
 <blockquote>

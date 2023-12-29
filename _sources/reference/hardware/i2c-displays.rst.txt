@@ -238,7 +238,7 @@ In order to configure additional displays, you will need to add lines to "myHal.
   // Create a 20x4 LCD display device as display number 2 
   // (line 0 is written by EX-RAIL 'SCREEN(2, 0, "text")').
 
-  HALDisplay<LiquidCrystal>(2, 0x27, 20, 4);
+  HALDisplay<LiquidCrystal>::create(2, 0x27, 20, 4);
 
 
 As you can see from the comments in this code, both of these displays can now be written to from |EX-R| using the ``SCREEN()`` directive. See the |EX-R| :ref:`ex-rail/ex-rail-command-reference:communication and display functions` for more information.

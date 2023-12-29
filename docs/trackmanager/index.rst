@@ -258,11 +258,11 @@ In a |EX-R| Automation script we could assign a track mode to DC and wait for a 
   SET_TRACK(A,PROG) PRINT("District A PROG")
   DONE
  AUTOMATION(503, "District A DC")     // Alternate DC track A with loco ID 1
-  SET_LOCO(1)
+  SETLOCO(1)
   SET_TRACK(A,DC) PRINT("District A DC")
   DONE
  AUTOMATION(504, "District A DCX")    // Alternate DCX track A Changed to Opposite Polarity
-  SET_LOCO(1)
+  SETLOCO(1)
   SET_TRACK(A,DCX) PRINT("District A DCX Opposite Polarity") // Track A Opposite Polarity DC    
   DONE
  AUTOMATION(505, "District A NONE")    // A Track disabled

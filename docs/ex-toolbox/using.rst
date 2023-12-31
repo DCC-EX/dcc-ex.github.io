@@ -18,7 +18,7 @@ EX-Toolbox - Installing and Using
 Installing
 ==========
 
-|EX-TB| can be installed on your phone or tablet via the `Google Play Store <https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox>`_ .
+|EX-TB| can be installed on your Android phone or tablet via the `Google Play Store <https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox>`_ .
 
 Open the *Play Store* app on your phone or tablet and search for "EX-Toolbox".
 
@@ -54,6 +54,13 @@ Discovered Servers
   This is the most common way to connect. If the server you want to connect to is in the list, simply click on it and you will be taken to the 'CV-Programming' screen.
 
   If the server does not appear in the recent list try one of the other two methods.  Your server not appearing in the recent list is not necessarily a problem and there can be a number of reasons why.
+
+  
+.. warning::
+
+   |EX-TB| can only connect *directly* to an |EX-CS|, however |JMRI|, the |EX-CS| and other devices and apps can, or do, advertise as "WiThrottle" mDNS services. EX-Toolbox cannot determine which are actually direct connections to an |EX-CS|.
+
+   So... just because a server is in this list, doesn't mean that |EX-TB| will be able to connect to it.
 
 Recent Server List
 ------------------

@@ -23,9 +23,16 @@ For those who have come across our website and don't really know or understand w
 
 With DCC, there is no need for multiple electrically isolated blocks to control multiple trains independently any more.
 
-To get a more in depth introduction to the DCC standand and protocol, you can read the `Wikipedia <https://en.wikipedia.org/wiki/Digital_Command_Control>`_ and `DCC Wiki <https://dccwiki.com/Introduction_to_DCC>`_ introduction pages.
+To get a more in depth introduction to the DCC standard and protocol, you can read the `Wikipedia <https://en.wikipedia.org/wiki/Digital_Command_Control>`_ and `DCC Wiki <https://dccwiki.com/Introduction_to_DCC>`_ introduction pages.
 
 However, if you just want to know how DCC, and in particular |DCC-EX|, can help you run your trains and also add more realism to your layouts, then continue reading here.
+
+DCC-EX does DC as well
+----------------------
+
+Along with DCC, |DCC-EX| can be used to control Direct Current (DC) locomotives using Pulse Width Modulation (PWM).
+
+More information on using DC PWM can be found :doc:< on the TrackManager page `/trackmanager/index`>.
 
 DCC is for more than just controlling trains
 --------------------------------------------

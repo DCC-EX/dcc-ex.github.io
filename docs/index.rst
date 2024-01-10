@@ -123,6 +123,15 @@ DCC-EX Model Railroading
 .. toctree::
    :hidden:
    :maxdepth: 4
+   :caption: Purchasing & Merchandise
+
+   purchasing/dealers
+   reference/accessories/index
+   merchandise/index
+
+.. toctree::
+   :hidden:
+   :maxdepth: 4
    :caption: Detailed Information
 
    reference/index
@@ -135,7 +144,6 @@ DCC-EX Model Railroading
    :caption: External References
 
    external-references/index
-   reference/accessories/index
 
 .. toctree::
    :hidden:
@@ -144,10 +152,3 @@ DCC-EX Model Railroading
 
    About Us and the Project<about/index>
    about/index-contributing
-
-.. toctree::
-   :hidden:
-   :maxdepth: 4
-   :caption: Merchandise & News
-
-   merchandise/index

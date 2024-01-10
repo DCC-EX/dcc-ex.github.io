@@ -47,7 +47,7 @@ There is another version where the "more" in "more info" is spelled "moer" and "
 
    WiFi board level shifting transistors should be J1Y (click the image to enlarge)
 
-If these 2 transistors are labelled "JIY" you are lucky and the board with work with no modifications. If they are labelled "J3Y", you have two choices to get this to work:
+If these 2 transistors are labelled "JIY" you are lucky and the board will work with no modifications. If they are labelled "J3Y", you have two choices to get this to work:
 
 .. warning:: 
 

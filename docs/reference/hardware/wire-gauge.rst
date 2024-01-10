@@ -41,7 +41,7 @@ The main bus provides a low resistance, high current capable path for the voltag
 
 .. NOTE:: In the USA the smaller the number, the bigger the wire!
 
-Our general rules are based on 2 to 5 Amps of current maximum. Most model railroaders will be well within this range, most never going above 2 Amps. If you need more than 5 Amps, then you need separate power districts to distribute the load around the track. For example, you have have a motor or a lot of lights connected to one part of the track in its district. Breaking the track up into power districts ensures that there probably won't me more than a few locos in any district at a given time.
+Our general rules are based on 2 to 5 Amps of current maximum. Most model railroaders will be well within this range, most never going above 2 Amps. If you need more than 5 Amps, then you need separate power districts to distribute the load around the track. For example, you have have a motor or a lot of lights connected to one part of the track in its district. Breaking the track up into power districts ensures that there probably won't be more than a few locos in any district at a given time.
 
 Feeders
 ========

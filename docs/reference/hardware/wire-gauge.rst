@@ -41,12 +41,12 @@ The main bus provides a low resistance, high current capable path for the voltag
 
 .. NOTE:: In the USA the smaller the number, the bigger the wire!
 
-Our general rules are based on 2 to 5 Amps of current maximum. Most model railroaders will be well within this range, most never going above 2 Amps. If you need more than 5 Amps, then you need separate power districts to distribute the load around the track. For example, you have have a motor or a lot of lights connected to one part of the track in its district. Breaking the track up into power districts ensures that there probably won't me more than few locos in any district in a given time.
+Our general rules are based on 2 to 5 Amps of current maximum. Most model railroaders will be well within this range, most never going above 2 Amps. If you need more than 5 Amps, then you need separate power districts to distribute the load around the track. For example, you have have a motor or a lot of lights connected to one part of the track in its district. Breaking the track up into power districts ensures that there probably won't be more than a few locos in any district at a given time.
 
 Feeders
 ========
 
-Feeder wires a smaller, more manageable wires that you run from the main bus to the tracks. You will need feeders every few feet on larger scales and on every track for N and Z scales. The wires can be smaller because they are only a few inches long and the current is distributed between feeders.
+Feeder wires are smaller, more manageable wires that you run from the main bus to the tracks. You will need feeders every few feet on larger scales and on every track for N and Z scales. The wires can be smaller because they are only a few inches long and the current is distributed between feeders.
 
 Current
 ========
@@ -101,7 +101,7 @@ Accessory Bus
 
 If you have a small to medium sized layout you could usually power your locos, turnouts, and other accessories and lighting all from the power from the tracks. But there are a few reasons why you may want to expand your system to have a separate bus for accessories.
 
-**1. Efficiency** - The Command station already has a lot to do if you are running a lot of locos. While you could run 10, 20... even 50 trains or more, each train can get only so many commands per second. If you are running in a club situation and If you add a lot of accessories, you could find a short delay before a train responds to something like an emergency stop.
+**1. Efficiency** - The Command station already has a lot to do if you are running a lot of locos. While you could run 10, 20... even 50 trains or more, each train can get only so many commands per second. If you are running in a club situation and if you add a lot of accessories, you could find a short delay before a train responds to something like an emergency stop.
 
 **2. Voltage and current needs** - If you take the power requirements of your accessories off your main track, and power them from a separate supply, you can either run with less Amps or run more locos.
 

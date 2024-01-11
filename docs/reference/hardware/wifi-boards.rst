@@ -9,11 +9,12 @@ WiFi Boards
 
 |conductor| |tinkerer| |engineer|
 
-You can connect up to 5 WiFi throttles. For the standard Mega board, we recommend the Conductor-Friendly Makerfabs WiFi shield below. Keep in mind you can also purchase a Mega+WiFi board online that has both a Mega clone and an ESP8266 built onto the same board. However, you will have to upload new firmware to that board, so that would be a Tinkerer option. See the :doc:`Mega+WiFi page </reference/hardware/wifi-boards/mega-wifi>`
+You can connect up to 5 WiFi throttles. For the standard Mega board, we recommend the Conductor-Friendly EX-WiFiShield 8266 or  Makerfabs WiFi shield below. Keep in mind you can also purchase a Mega+WiFi board online that has both a Mega clone and an ESP8266 built onto the same board. However, you will have to upload new firmware to that board, so that would be a Tinkerer option. See the :doc:`Mega+WiFi page </reference/hardware/wifi-boards/mega-wifi>`
 
 .. warning:: 
 
-    Please be aware that the Espressif AT firmware currently being shipped with these devices **will probably NOT work** with |EX-CS| out of the box.
+    Please be aware that the Espressif AT firmware currently being shipped with devices other than the EX-WiFiShield 8266
+    and Makerfabs WiFi Shield **will probably NOT work** with |EX-CS| out of the box.
 
     This can be corrected, but is probably beyond Conductor level and requires additional hardware.  
 

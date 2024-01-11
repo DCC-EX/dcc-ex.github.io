@@ -8,9 +8,9 @@
 
 |EX-CS-LOGO|
 
-**********************************************************
-Makerfabs ESP8266 - Update AT Version with an Arduino Mega
-**********************************************************
+**************************************************************************
+EX-WiFiShield 8266 / Makerfabs - Update AT Version with an Arduino Mega
+**************************************************************************
 
 |conductor| |Tinkerer| |engineer|
 
@@ -20,7 +20,7 @@ Makerfabs ESP8266 - Update AT Version with an Arduino Mega
       :local:
       :depth: 3
 
-Unfortunately the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with |EX-CS|. This now seems to include the recommended `Makerfabs ESP8266 WiFi Shield <https://www.makerfabs.com/esp8266-wifi-shield.html>`_.
+Current versions of the EX-WiFiShield 8266 from our authorized dealers, including Makerfabs come with the correct firmware and do not normally require updating. For known good boards, see `EX-WiFiShield 8266 <https://www.tindie.com/products/dccex/ex-motorshield8874>`_ and `Makerfabs ESP8266 WiFi Shield <https://www.makerfabs.com/esp8266-wifi-shield.html>`_. If you need to update your board for any reason, follow these instructions.
 
 .. warning:: 
 
@@ -29,7 +29,7 @@ Unfortunately the Espressif ESP8266 based WiFi Boards that are available for sal
 Introduction
 ============
 
-Out of the box, the MakerFabs ESP8266 shield appears to be shipping with a broken firmware that is unstable when used with DCC-EX. To flash version 1.7.4 onto the board follow these instructions.
+While Makerfabs WiFi boards since December 20, 2023 and all EX-WiFiShield 8266 boards ship with the correct firmware, some older boards may not have firmware compatible with the |EX-CS|. Should you need to reflash the firmware or update an older board, you may follow these instructions to flash version 1.7.4 onto the board.
 
 Requirements
 ============
@@ -221,7 +221,7 @@ Make sure the Installer has been closed before continuing.
 
       GPIO0 ESP8266
 
-   If you loose contact on the GPIO0 you need to Reset again and start over.
+   If you lose contact on the GPIO0 you need to Reset again and start over.
 
 5.6 Take other GND jumper and TOUCH ``Reset`` pad (While still holding the other jumper to ``GPIO0`` pad)
 

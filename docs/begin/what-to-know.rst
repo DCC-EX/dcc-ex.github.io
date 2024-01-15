@@ -67,10 +67,10 @@ Our list of free, open source software products currently include:
       - Use additional microcontrollers to expand I/O port capability
     * - |EX-DCCI-LOGO-SMALL|
       - |EX-FC-LOGO-SMALL|
-      - 
+      - |EX-TB-LOGO-SMALL| 
     * - A separate DCC packet sniffing tool
       - A FastClock to enable time based events
-      - 
+      - An Android app to help configure your EX-CommandStation
 
 .. list-table::
     :widths: 50 50

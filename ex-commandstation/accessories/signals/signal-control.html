@@ -600,19 +600,21 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="#light-and-semaphore-or-servo-signals" id="id1">Light and semaphore or servo signals</a></p>
 <ul>
-<li><p><a class="reference internal" href="#signal-event-handlers" id="id2">Signal event handlers</a></p></li>
+<li><p><a class="reference internal" href="#interactive-control-with-dcc-ex-commands" id="id2">Interactive control with DCC-EX commands</a></p></li>
+<li><p><a class="reference internal" href="#automated-control-with-exrail-commands" id="id3">Automated control with EXRAIL commands</a></p></li>
+<li><p><a class="reference internal" href="#signal-event-handlers" id="id4">Signal event handlers</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#controlling-dcc-accessory-signals" id="id3">Controlling DCC accessory signals</a></p>
+<li><p><a class="reference internal" href="#controlling-dcc-accessory-signals" id="id5">Controlling DCC accessory signals</a></p>
 <ul>
-<li><p><a class="reference internal" href="#dcc-accessory-event-handlers" id="id4">DCC accessory event handlers</a></p></li>
+<li><p><a class="reference internal" href="#dcc-accessory-event-handlers" id="id6">DCC accessory event handlers</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#controlling-signals-with-more-than-three-aspects" id="id5">Controlling signals with more than three aspects</a></p>
+<li><p><a class="reference internal" href="#controlling-signals-with-more-than-three-aspects" id="id7">Controlling signals with more than three aspects</a></p>
 <ul>
-<li><p><a class="reference internal" href="#light-signals" id="id6">Light signals</a></p></li>
-<li><p><a class="reference internal" href="#semaphore-or-servo-signals" id="id7">Semaphore or servo signals</a></p></li>
-<li><p><a class="reference internal" href="#dcc-accessory-signals" id="id8">DCC accessory signals</a></p></li>
+<li><p><a class="reference internal" href="#light-signals" id="id8">Light signals</a></p></li>
+<li><p><a class="reference internal" href="#semaphore-or-servo-signals" id="id9">Semaphore or servo signals</a></p></li>
+<li><p><a class="reference internal" href="#dcc-accessory-signals" id="id10">DCC accessory signals</a></p></li>
 </ul>
 </li>
 </ul>
@@ -622,6 +624,18 @@
 <h2><a class="toc-backref" href="#id1" role="doc-backlink">Light and semaphore or servo signals</a><a class="headerlink" href="#light-and-semaphore-or-servo-signals" title="Permalink to this heading"></a></h2>
 <p>Light and semaphore or servo signals are always controlled by the first Vpin/pin associated with the signal.</p>
 <p>For light signals, this means the Vpin/pin associated with the red aspect, and for semaphore or servo signals, there is only one Vpin associated with the signal, and so this vpin is used.</p>
+<section id="interactive-control-with-dcc-ex-commands">
+<h3><a class="toc-backref" href="#id2" role="doc-backlink">Interactive control with DCC-EX commands</a><a class="headerlink" href="#interactive-control-with-dcc-ex-commands" title="Permalink to this heading"></a></h3>
+<p>Once your light or servo signals have been defined in myAutomation.h, you can use the <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> native command <code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">RED|AMBER|GREEN</span> <span class="pre">vpin&gt;</span></code> to control them interactively via the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> serial console.</p>
+<p>You simple run one of these commands, providing the defined red vpin as the single parameter:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">RED</span> <span class="pre">vpin&gt;</span></code> - Set the signal to the red aspect</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">AMBER</span> <span class="pre">vpin&gt;</span></code> - Set the signal to the amber aspect</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">GREEN</span> <span class="pre">vpin&gt;</span></code> - Set the signal to the green aspect</p></li>
+</ul>
+</section>
+<section id="automated-control-with-exrail-commands">
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">Automated control with EXRAIL commands</a><a class="headerlink" href="#automated-control-with-exrail-commands" title="Permalink to this heading"></a></h3>
 <p>There are three <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> commands available for controlling signals:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">RED(vpin)</span></code> - Set the signal to the red aspect</p></li>
@@ -643,8 +657,9 @@
 </pre></div>
 </div>
 <p>For further information on controlling signals refer to <a class="reference internal" href="../../../ex-rail/EX-RAIL-command-reference.html#signal-objects-definition-and-control"><span class="std std-ref">Signal Objects - Definition and Control</span></a>, and for some examples refer to <a class="reference internal" href="../../../big-picture/index.html"><span class="doc">The Big Picture</span></a>.</p>
+</section>
 <section id="signal-event-handlers">
-<h3><a class="toc-backref" href="#id2" role="doc-backlink">Signal event handlers</a><a class="headerlink" href="#signal-event-handlers" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Signal event handlers</a><a class="headerlink" href="#signal-event-handlers" title="Permalink to this heading"></a></h3>
 <p>Further to this, if you wish to have other actions triggered by setting a signal aspect, there are three event handlers available for this:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ONRED(vpin)</span></code> - Event handler when a signal is set to red</p></li>
@@ -674,7 +689,7 @@
 </section>
 </section>
 <section id="controlling-dcc-accessory-signals">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">Controlling DCC accessory signals</a><a class="headerlink" href="#controlling-dcc-accessory-signals" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Controlling DCC accessory signals</a><a class="headerlink" href="#controlling-dcc-accessory-signals" title="Permalink to this heading"></a></h2>
 <p>If using DCC accessory signals, these are controlled as per any other DCC accessory device, using the DCC accessory <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> commands:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ACTIVATE(addr,</span> <span class="pre">sub_addr)</span></code> - Activate (value 1) DCC accessory at the provided address and sub address</p></li>
@@ -696,7 +711,7 @@
 </div>
 <p>For further information on controlling DCC accessories including signals refer to <a class="reference internal" href="../../../ex-rail/EX-RAIL-command-reference.html#dcc-accessory-decoder-control"><span class="std std-ref">DCC Accessory Decoder Control</span></a>.</p>
 <section id="dcc-accessory-event-handlers">
-<h3><a class="toc-backref" href="#id4" role="doc-backlink">DCC accessory event handlers</a><a class="headerlink" href="#dcc-accessory-event-handlers" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">DCC accessory event handlers</a><a class="headerlink" href="#dcc-accessory-event-handlers" title="Permalink to this heading"></a></h3>
 <p>Further to this, if you wish to have other actions triggered by setting a DCC accessory signal aspect, there are four DCC accessory event handlers available for this:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ONACTIVATE(addr,</span> <span class="pre">sub_addr)</span></code> - Trigger an activity when accessory at address and sub address is activated</p></li>
@@ -727,9 +742,9 @@
 </section>
 </section>
 <section id="controlling-signals-with-more-than-three-aspects">
-<h2><a class="toc-backref" href="#id5" role="doc-backlink">Controlling signals with more than three aspects</a><a class="headerlink" href="#controlling-signals-with-more-than-three-aspects" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Controlling signals with more than three aspects</a><a class="headerlink" href="#controlling-signals-with-more-than-three-aspects" title="Permalink to this heading"></a></h2>
 <section id="light-signals">
-<h3><a class="toc-backref" href="#id6" role="doc-backlink">Light signals</a><a class="headerlink" href="#light-signals" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Light signals</a><a class="headerlink" href="#light-signals" title="Permalink to this heading"></a></h3>
 <p>Controlling light signals with more than three aspects is relatively straight forward, and can be accomplished by defining an additional signal object for the extra aspects required.</p>
 <p>The available event handlers for the various objects can be used to control these with some careful thought.</p>
 <p>To use a simple example, we can define a four aspect signal based on an Australian variant where there are two amber lights, with second amber light above the green light.</p>
@@ -766,13 +781,13 @@
 <p>This is a relatively simple example, and there are many complex signals in operation around the world, so you will need to evaluate which combination of signal objects and event handlers give you the most realistic configuration for your requirements.</p>
 </section>
 <section id="semaphore-or-servo-signals">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">Semaphore or servo signals</a><a class="headerlink" href="#semaphore-or-servo-signals" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Semaphore or servo signals</a><a class="headerlink" href="#semaphore-or-servo-signals" title="Permalink to this heading"></a></h3>
 <p>Semaphore signals with more than three aspects on the same semaphore arm aren’t possible by using the <code class="docutils literal notranslate"><span class="pre">SERVO_SIGNAL(...)</span></code> <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> command, so some creative thinking will be required here.</p>
 <p>It would be possible, for example, to use the event handlers and the generic <code class="docutils literal notranslate"><span class="pre">SERVO(vpin,</span> <span class="pre">angle,</span> <span class="pre">profile)</span></code> command to move a semaphore arm to any arbitrary position.</p>
 <p>If the additional aspects beyond the first three are provided by a second semaphore arm, you will need an additional servo and associated object to accomplish this.</p>
 </section>
 <section id="dcc-accessory-signals">
-<h3><a class="toc-backref" href="#id8" role="doc-backlink">DCC accessory signals</a><a class="headerlink" href="#dcc-accessory-signals" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">DCC accessory signals</a><a class="headerlink" href="#dcc-accessory-signals" title="Permalink to this heading"></a></h3>
 <p>For DCC accessory signals with more than three aspects, once again, you will need to refer to the manufacturer’s instructions on how to control these.</p>
 <p>Using the extra aspects will be a simple matter of adapting the event handlers to use the extra addresses available.</p>
 </section>

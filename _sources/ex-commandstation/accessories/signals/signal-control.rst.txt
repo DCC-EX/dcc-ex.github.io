@@ -22,6 +22,20 @@ Light and semaphore or servo signals are always controlled by the first Vpin/pin
 
 For light signals, this means the Vpin/pin associated with the red aspect, and for semaphore or servo signals, there is only one Vpin associated with the signal, and so this vpin is used.
 
+Interactive control with DCC-EX commands
+----------------------------------------
+
+Once your light or servo signals have been defined in myAutomation.h, you can use the |DCC-EX| native command ``</ RED|AMBER|GREEN vpin>`` to control them interactively via the |EX-CS| serial console.
+
+You simple run one of these commands, providing the defined red vpin as the single parameter:
+
+- ``</ RED vpin>`` - Set the signal to the red aspect
+- ``</ AMBER vpin>`` - Set the signal to the amber aspect
+- ``</ GREEN vpin>`` - Set the signal to the green aspect
+
+Automated control with EXRAIL commands
+--------------------------------------
+
 There are three |EX-R| commands available for controlling signals:
 
 - ``RED(vpin)`` - Set the signal to the red aspect

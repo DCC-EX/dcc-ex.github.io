@@ -217,7 +217,7 @@ Requirements
 1. A loop of track - MAIN 
 2. A PROG track - or be prepared to switch the loop to PROG temporarily. (see Notes)
 3. A loco that you wish to be the Master.  i.e. that you want to make to other locos match.
-4. On or more 'Second' locos that you wish to match to the Master.
+4. One or more 'Second' locos that you wish to match to the Master.
 
 Assumptions
 ^^^^^^^^^^^

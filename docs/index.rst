@@ -42,8 +42,8 @@ DCC-EX Model Railroading
     - :ref:`begin/what-to-know:dcc-ex does dc as well`
     - :ref:`I'm interested in DCC but have a limited budget <begin/what-to-know:i'm interested in dcc but have a very small budget>`
     - :ref:`I just want to run DCC trains <begin/what-to-know:i just want to run my trains>`
-    - :ref:`I want to operate my turnout/points & run DCC trains <begin/what-to-know:i want to operate my turnouts/points and run dcc trains>`
-    - :ref:`I want to control accessories & run DCC trains <begin/what-to-know:i want to control all my accessories and run dcc trains>`
+    - :ref:`I want to operate my turnout/points & run DCC trains <begin/what-to-know:i want to operate my turnouts/points and run trains>`
+    - :ref:`I want to control accessories & run DCC trains <begin/what-to-know:i want to control all my accessories and run trains>`
     - :ref:`begin/what-to-know:i want some extra automated/animated realism`
     - :ref:`begin/what-to-know:i want a fully automated exhibition layout for my club`
 

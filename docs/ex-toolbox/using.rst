@@ -190,6 +190,88 @@ You can use the :guilabel:`Next` and :guilabel:`Prior` buttons to retrieve previ
 
 ----
 
+Speed matching
+==============
+
+.. figure:: /_static/images/ex-toolbox/speed_matching.png
+   :alt: Speed Matching
+   :scale: 50%
+   :align: right
+
+   EX-Toolbox Speed Matching
+
+To access the Speed Matching either:
+
+* Swipe Left from the CV-Programming Screen
+* Swipe Left from the Track Manager Screen
+* Select 'Speed Matching (PoM)' from the Menu
+
+Speed Matching assists with making two or more locos run at similar speeds.
+
+EX-Toolbox Speed Matching Instructions
+--------------------------------------
+
+Requirements
+^^^^^^^^^^^^
+
+1. A loop of track - MAIN 
+2. A PROG track - or be prepared to switch the loop to PROG temporarily. (see Notes)
+3. A loco that you wish to be the Master.  i.e. that you want to make to other locos match.
+4. On or more 'Second' locos that you wish to match to the Master.
+
+Assumptions
+^^^^^^^^^^^
+
+1. Assumes that you have already configured the 'Master' to be the way you want it and the other locos to behave.
+
+  The Master should be the naturally slowest loco of the set, not necessarily the one that will be run in the lead position.  |BR| i.e. Test your locos on their default settings first, and find the slowest.
+  
+2. Assumes that, at least, the 'Second' loco is configured to use the High, Mid, Low CVs, not the full 28 step speed table.  (Part of CV29) |BR| Not critical, but it is advisable to have the Master also use the High, Mid, Low CVs.
+3. It is advisable that BACK-EMF is turned off on all locos.  If you don't you will probably encounter surging of the locos as they speed up and slow down under individual load.
+
+Instructions
+^^^^^^^^^^^^
+
+1. Open EX-Toolbox and go to the Speed Matching screen.
+2. Put the/a second (non-master) loco on the PROG track. (see Notes)
+3. Click :guilabel:`Read -PROG trk`.
+
+  This reads 7 CV values, including the loco address, and loads them in to the fields, with a 3 second delay between each read. |BR| Watch for any -1 responses (failed reads), and redo the read if any have failed.
+
+4. Put the 'Master' on the track, as well as the 'Second'.
+5. Enter the DCC address of the Master.
+6. Click the Low :guilabel:`Set Speed` button.
+7. Watch and adjust the speeds of the Second loco in relation the Master, util they run at the same speed:
+
+  If the 'Second' is too slow, either:
+
+	a) Edit and increase the 'Low' value and click 'Write'.
+	b) Click the :guilabel:`+` button.
+
+  If the 'Second' is too fast, either:
+
+	a) Edit and decrease the 'Low' value and click 'Write'.
+	b) Click the :guilabel:`-` button.
+
+8. Repeat for the 'Mid' Speed.
+9. Repeat for the 'High' Speed.
+10. Adjust the decoder momentum (Acceleration/Deceleration) and kick start as needed.  Test by starting and stopping the locos from the three different speeds.
+11. If you have more locos to match, repeat from step 2.
+    
+Notes: 
+^^^^^^
+
+i) By default, the :guilabel:`+` and :guilabel:`-` buttons change the CV values by 1. You can change this step amount by editing the 'Step' field.
+e.g. When I start on a loco, I normally have the Step at 10.  When it gets closer to a match I change the step to 1.
+ii) You don't need a separate PROG track.  You can use the 'Track Manager' screen to temporarily set the loop of track to 'PROG' for steps 2-3, then change it back for steps 4 on.
+iii) Some decoders don't support Kick Start.
+iv) Some decoders don't allow you to turn BACK-EMF off 
+
+
+|force-break|
+
+----
+
 Track Manager
 =============
 

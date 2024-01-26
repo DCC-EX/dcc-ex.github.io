@@ -965,6 +965,29 @@ Sensors
 
 ----
 
+Signals
+-------
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
+
+|hr-dashed|
+
+``</ RED signalId> </ AMBER signalId> </ GREEN signalId>`` - Control a signal
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **signalId:** defined red Vpin of the signal to control
+
+  *Response:* N/A
+
+|hr-dashed|
+
+----
+
 WiFi Control
 ------------
 
@@ -1128,6 +1151,14 @@ Request the Routes & Automations control list in wiThrottle Protocol format.
   *Response:* ???
 
 |hr-dashed|
+
+``</ RED signalId> </ AMBER signalId> </ GREEN signalId>`` - Control a signal (EXRAIL)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **signalId:** defined red Vpin of the signal to control
+
+  *Response:* N/A
 
 ``</>`` - Request EX-RAIL running task information
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

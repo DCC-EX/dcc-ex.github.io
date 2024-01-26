@@ -197,7 +197,7 @@ Speed Matching assists with making two or more locos run at similar speeds.
 
 .. figure:: /_static/images/ex-toolbox/speed_matching.png
    :alt: Speed Matching Screen
-   :scale: 50%
+   :scale: 20%
    :align: right
 
    EX-Toolbox Speed Matching Screen
@@ -219,7 +219,7 @@ Requirements
 2. A ``PROG`` track - or be prepared to switch the loop to ``PROG`` temporarily. (see Notes)
 3. A loco that you wish to be the Master.  i.e. that you want to make to other locos match.
 4. One or more 'Second' locos that you wish to match to the Master.
-5. That you have run all the locos (the 'Master *and* any 'Second' loco), for 5-10 minutes to warm them up.  Many locos run differently when warm.
+5. That you have run all the locos (the 'Master *and* any 'Second' loco) for 5-10 minutes to warm them up.  Many locos run differently when warm.
 
 Assumptions
 ^^^^^^^^^^^
@@ -283,7 +283,7 @@ Loco Status allows you to watch changes to all locos being controlled by the com
 
 .. figure:: /_static/images/ex-toolbox/loco_status.png
    :alt: Loco Status Screen
-   :scale: 50%
+   :scale: 20%
    :align: right
 
    EX-Toolbox Loco Status Screen
@@ -305,7 +305,7 @@ Track Manager
 
 .. figure:: /_static/images/ex-toolbox/track_manager.png
    :alt: Track Manager
-   :scale: 50%
+   :scale: 20%
    :align: right
 
    EX-Toolbox Track Manager Screen

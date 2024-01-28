@@ -121,9 +121,11 @@ https://flash62au.github.io/EngineDriver_Home/operation/getting_started.html
 
 .. TODO:: `LOW - Software <https://github.com/DCC-EX/dcc-ex.github.io/issues/436>`_ - Give some setup tutorial here. Need a video to match since ED is the top used software
 
+----
+
 Using a Bluetooth Controller
 =============================
-This is the one Steve Todd uses himself on a lanyard. It leaves both hands free for paperwork and uncoupling and is light enough to simply let go of when you need both hands. Here are his optimized settings. His prefered settings are listed in the note below. You can use these as a start and customize them for your own use:
+This is the one Steve Todd uses himself on a lanyard. It leaves both hands free for paperwork and uncoupling and is light enough to simply let go of when you need both hands. Here are his optimized settings. His preferred settings are listed in the note below. You can use these as a start and customize them for your own use:
 
 .. image:: /_static/images/throttles/bt_controller1.jpg
    :alt: Bluetooth Lanyard Controller

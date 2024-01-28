@@ -15,9 +15,9 @@ EX-WebThrottle
     :depth: 1
     :local:
 
-This is our |EX-WT| throttle/controller that can connect to the |EX-CS| directly through the USB port of a computer.
+This is our |EX-WT| throttle/controller which can connect to the |EX-CS| directly through the USB port of your computer.
 
-For a video on how to install and use |EX-WT| click below.
+For a video on how to install and use |EX-WT| see below.
 
    .. raw:: html
    
@@ -29,11 +29,12 @@ What you need to run EX-WebThrottle
 * Chromium-Based Browser version 89 or above (March 2021)
   (Chrome, Opera, Edge)
 
-You don't need anything else to test it out and to run in emulator mode, just run it and play. To use it to run real trains you will need:
+You don't need anything else to test |EX-WT| and by running in emulator mode, just run it and play. 
 
-* An Arduino Mega or Uno Microcontroller
-* An Arduino Motor Control Shield
-* The |EX-CS| sketch loaded on your Arduino
+To use it to run real trains you will need:
+
+* An |EX-CS| configured and connected to you track. |BR| Note: The microcontroller and motor shield are required, but you don't need WiFi.
+* A USB cable
 
 Getting started
 =================
@@ -41,11 +42,11 @@ Getting started
 .. note:: 
     :class: note-float-right
     
-    If you don't have your hardware yet or just want to play with the throttle and see commands being sent to the log window, you can skip the part about connecting your Command Station.
+    If you don't have your hardware yet or just want to play with the throttle and see commands being sent to the log window, you can skip the part about connecting your |EX-CS|.
 
-Make sure you are using Chrome version 89 or above (check the menu, help, about screen).
+Make sure you are using **Chrome** version 89 or above (check the menu, help, about screen) or a compatible web browser. (See above)
 
-To get started, connect your Command Station to a computer that has a USB port and have a compatible browser installed. Use a USB serial cable from your computer to the USB connector on the Arduino. Power everything up and put a loco on the MAIN track.
+To get started, connect your |EX-CS| to a computer that has a USB port and which has a compatible browser installed. Use a USB serial cable from your computer to the USB connector on the |EX-CS|. Power everything up and put a loco on the MAIN track.
 
 Run or Install EX-WebThrottle
 =============================
@@ -55,7 +56,7 @@ You have an option for how you would like to run |EX-WT|, from the cloud or inst
 Try it now (Run from the cloud)
 =================================
 
-Just click this link and you will load a web page from our server that will run the web throttle on your machine. You can connect it to the |EX-CS| or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run WebThrottle-EX in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
+Just click this link and you will load a web page from our server that will run the web throttle on your machine. You can connect it to the |EX-CS| or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run |EX-CS| in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
 
 .. rst-class:: dcclink
 
@@ -82,18 +83,9 @@ Operation
 
 To use the program, you can either click on the "Serial" dropdown button and select "Emulator" to run in emulator mode or after making sure your hardware is properly connected, select "Serial".
 
-Next, click on the "Connect DCC-EX" button. 
+Next, click on the :guilabel:`Connect EX-CS` button. 
 
-If you are in "emulator mode", you can skip to the next step. When using the serial connection, if the program finds a compatible device, it will open a popup a window showing you a selection. It may show a line at the top such as "Arduino Mega 2560 (COM3)". Your com port may vary. Click on your board to select it and then click the "Connect DCC-EX" button.
-
-
-.. raw:: html
-
-   <insert pic here>
-
-
-
-You should then be connected to the |EX-CS| and should see the response from the Command Station in the log textbox of the debug console at the bottom of the throttle window. Make sure your debug console is open. If it isn't, use the slider button in the lower left to open it. You can also open the DevTools window in your browser to see more developer logging.
+If you are in "emulator mode", you can skip to the next step. When using the serial connection, if the program finds a compatible device, it will open a popup a window showing you a selection. It may show a line at the top such as "Arduino Mega 2560 (COM3)". Your com port may vary. Click on your board to select it and then click the :guilabel:`Connect EX-CS` button.
 
 
 .. raw:: html
@@ -102,7 +94,16 @@ You should then be connected to the |EX-CS| and should see the response from the
 
 
 
-Once you are connected, you can enter the ``<s>`` command in the "direct command" textbox to get status information from your Command Station. To do this just enter ``s`` (without the quotes) and press the SEND button. You can send any DCC-EX API command in this way. You should see <iDCC++...> returned in the log window with your version, type of Arduino, type of motor shield, and some other information.
+You should then be connected to the |EX-CS| and should see the response from the Command Station in the log textbox of the debug console at the bottom of the throttle window. Make sure your debug console is open. If it isn't, use the :guilabel:`Debug Console` slider button in the lower lower right to open it. You can also open the DevTools window in your browser to see more developer logging.
+
+
+.. raw:: html
+
+   <insert pic here>
+
+
+
+Once you are connected, you can enter the ``<s>`` command in the "direct command" textbox to get status information from your Command Station. To do this just enter ``s`` (without the quotes) and press the :guilabel:`Send` button. You can send any DCC-EX API command in this way. You should see ``<iDCC-EX...>`` returned in the log window with your version, type of Arduino, type of motor shield, and some other information.
 
 
 .. raw:: html
@@ -115,7 +116,7 @@ Now you are ready to run trains! Place your loco on the track and click the powe
 
 .. note:: Make sure you place the loco on the MAIN track, not the PROGRAM track. Check your wiring. On an Arduino Motor Shield, Motor Output "A" should connect to your MAIN track and "B" to the PROGRAM track.
 
-Next go to the "Locomotive ID" textbox and enter the address of your loco and press the "Acquire" button. You should now have full control over your loco.
+Next go to the `Locomotive ID` textbox and enter the address of your loco and press the :guilabel:`Acquire` (right arrow) button. You should now have full control over your loco.
 
 
 .. raw:: html
@@ -135,7 +136,7 @@ In the throttle control area to the left of the function buttons are vertical co
 
 
 
-The circular control or vertical slider (chosen by the throttle select slider) can be moved by clicking and holding down the mouse button and dragging, clicking at a spot where you want the throttle to move, or clicking the + and - buttons.
+The circular control or vertical slider (chosen by the throttle select slider) can be moved by clicking and holding down the mouse button and dragging, clicking at a spot where you want the throttle to move, or clicking the :guilabel:`+` and :guilabel:`-` buttons.
 
 
 .. raw:: html

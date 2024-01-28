@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2024-01-26T07:10:04.690452+00:00</updated>
+  <updated>2024-01-28T05:46:26.351468+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.3">ABlog</generator>
@@ -690,7 +690,7 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 &lt;li&gt;&lt;p&gt;28 speed step support in addition to 128&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Extensive logs and diagnostics in a serial monitor or the JMRI DCC++ log window&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Created many new commands&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Developed a new browser based throttle (&lt;a class="reference internal" href="throttles/software/ex-webthrottle.html"&gt;&lt;span class="doc"&gt;EX-WebThrottle&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Developed a new browser based throttle (&lt;a class="reference internal" href="ex-webthrottle/index.html"&gt;&lt;span class="doc"&gt;EX-WebThrottle&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;New “DriveAway” feature to be able to recognize a loco on a siding used as a programming track and drive off of onto the main track&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;… and much, much more.&lt;/p&gt;

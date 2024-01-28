@@ -35,7 +35,7 @@ Throttles - By Client Technology
 Web Browser (Windows, OSX, Linux)
 ---------------------------------
 
-- :doc:`EX-Web-Throttle (Web Browser) <software/ex-webthrottle>`
+- :doc:`EX-Web-Throttle (Web Browser) </ex-webthrottle/index>`
 
 Android (Phones and Tablets)
 ----------------------------
@@ -67,7 +67,7 @@ Dedicated Hardware
 Personal Computers
 ------------------
 
-- :doc:`EX-WebThrottle <software/ex-webthrottle>`
+- :doc:`EX-WebThrottle </ex-webthrottle/index>`
 - :doc:`JMRI (Windows, iOS, Linux) <software/jmri>`
 
 ----
@@ -86,7 +86,7 @@ General
 DCC-EX (DCC-EX Native Commands)
 -------------------------------
 
-- :doc:`EX-WebThrottle <software/ex-webthrottle>`
+- :doc:`EX-WebThrottle </ex-webthrottle/index>`
 - :doc:`Engine Driver (Android)<software/engine-driver>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`miniThrottle (Physical) <hardware/minithrottle>`
@@ -111,7 +111,7 @@ wiThrottle Protocol Based Throttles
 USB Based Throttles
 -------------------------------
 
-- :doc:`EX-WebThrottle <software/ex-webthrottle>`
+- :doc:`EX-WebThrottle </ex-webthrottle/index>`
 - Also see: :doc:`connect_wifi_throttle_via_usb`
 
 JMRI Web Server Based Throttles

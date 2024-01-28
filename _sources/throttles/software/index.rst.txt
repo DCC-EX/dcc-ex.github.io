@@ -12,7 +12,7 @@ Throttles (Software)
 Web Browser (Windows, OSX, Linux)
 ---------------------------------
 
-- :doc:`EX-Web-Throttle (Web Browser) <ex-webthrottle>`
+- :doc:`EX-Web-Throttle (Web Browser) </ex-webthrottle/index>`
 
 Android (Phones and Tablets)
 ----------------------------
@@ -41,7 +41,7 @@ Personal Computers
     :maxdepth: 1
     :hidden:
     
-    EX-Web-Throttle <ex-webthrottle>
+    EX-Web-Throttle (Web Browser) </ex-webthrottle/index>
     jmri
     Engine Driver (Android) <engine-driver>
     DCCpp CAB (android) <dccpp-cab>

@@ -115,7 +115,7 @@ Here are your connections, just a computer running a chromium-based browser, a U
    :align: center
    :scale: 45%
 
-For operating instructions see :doc:`how to use EX-WebThrottle </throttles/software/ex-webthrottle>`
+For operating instructions see :doc:`how to use EX-WebThrottle </ex-webthrottle/index>`
 
 |
 

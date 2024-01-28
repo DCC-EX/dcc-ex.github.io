@@ -148,7 +148,7 @@ The simplest option is to just use a throttle connected directly to the Command 
 
 |
 
-Basic use of |EX-WT| will be covered on the following :doc:`/ex-commandstation/get-started/testing` page.  (For additional operating instructions see :doc:`how to use EX-WebThrottle </throttles/software/ex-webthrottle>`)
+Basic use of |EX-WT| will be covered on the following :doc:`/ex-commandstation/get-started/testing` page.  (For additional operating instructions see :doc:`how to use EX-WebThrottle </ex-webthrottle/index>`)
 
 ----
 

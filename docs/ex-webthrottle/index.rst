@@ -122,7 +122,6 @@ Now you are ready to run trains! Place your loco on the track and click the powe
 Next go to the `Locomotive ID` textbox and enter the address of your loco and press the :guilabel:`Acquire` (right arrow) button. You should now have full control over your loco.
 
 .. figure:: /_static/images/ex-webthrottle/loco-id.png
-   :class: image-float-right
    :alt: EX-WebThrottle - Loco ID
    :scale: 80%
 

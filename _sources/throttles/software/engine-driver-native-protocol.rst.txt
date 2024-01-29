@@ -132,8 +132,11 @@ The states will be one of:
 * DC 
 * DC reversed polarity (DCX)
 * NONE
+* AUTO
+* BOOST
+* EXT
 
-Each of the tracks/channels of the Motor Shield(s) can be changed to any one of the states above.
+Each of the tracks/channels of the Motor Shield(s) can be changed to any one of the states above. (Except ``EXT`` and ``BOOST`` which can only be changed in the Command Station config. )
 
 To change the simply select the state in the pulldown in the desired track (or tracks) and click :guilabel:`Set`
 

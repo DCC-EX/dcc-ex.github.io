@@ -3,9 +3,9 @@
 .. include:: /include/include-ex-wt.rst
 |EX-WT-LOGO|
 
-******************
+**************
 EX-WebThrottle
-******************
+**************
 
 |conductor| |tinkerer| |engineer|
 
@@ -36,7 +36,7 @@ You don't need anything else to test it out and to run in emulator mode, just ru
 * The |EX-CS| software loaded on your Arduino
 
 Getting started
-=================
+===============
 
 .. note:: 
     :class: note-float-right
@@ -53,7 +53,7 @@ Run or Install EX-WebThrottle
 You have an option for how you would like to run |EX-WT|, from the cloud or installed locally on your machine. We recommend using it from the cloud or as a web app, but the choice is yours.
 
 Try it now (Run from the cloud)
-=================================
+===============================
 
 Just click this link and you will load a web page from our server that will run the web throttle on your machine. You can connect it to the |EX-CS| or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run |EX-CS| in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
 
@@ -64,7 +64,7 @@ Just click this link and you will load a web page from our server that will run 
 |EX-WT| is also a Progressive Web App (PWA). That means you can install it on your computer and run it right from your start menu! If you go into the |EX-WT| settings panel (click the 3 line, or 3 dot, "hamburger menu" at the top left), you will find a "Settings" menu. Click on "Apps" and then select "Install as an App". You can now work offline and always find |EX-WT| with your other Apps!
 
 Download
-==========
+========
 
 .. note:: 
     :class: note-float-right
@@ -77,8 +77,10 @@ This will install all the files to run locally on your machine. You won't need a
 
    `Download <https://github.com/DCC-EX/WebThrottle-EX/releases>`_
 
+----
+
 Operation
-==========
+=========
 
 .. figure:: /_static/images/ex-webthrottle/ex-webthrottle.png
    :alt: EX-WebThrottle
@@ -151,13 +153,16 @@ The options button lets you save labels to go on your function buttons for each 
 
 .. note:: Not all Command Station functions are fully supported in the emulator yet. This means that although the software works, not all the responses will be shown in the debug console. This will be completed in a next release.
 
+----
 
 Going Further / Developing
-===========================
+==========================
 
 If you want to really delve into how this works and help us improve it with your comments or your development skills, please contact us. You can also read through our :doc:`/about/contributing/webthrottle` page for info on preparing to view and contribute to the code.
 
 To load the Chrome DevTools to look at logging and be able to manually enter "write" commands for testing, click on the Menu (the 3 vertical dots in the upper right hand corner of the Chrome Window), then select "more tools" and then "Developer Tools". Or you can just hit ``Ctrl + Shift I``
+
+----
 
 Looking for some help with EX-WebThrottle?
 ==========================================

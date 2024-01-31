@@ -32,7 +32,6 @@ Features
 * Supports the |DCC-EX Native Commands| natively
 * Supports |WiThrottle Protocol|
 * Connect via WiFi
-* Read and Write CVs
 
 .. _srcpclient-screenshots:
 

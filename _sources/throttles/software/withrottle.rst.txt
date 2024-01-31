@@ -35,7 +35,6 @@ Features
 * Connects to JMRI
 * Connects to |EX-CS| if not using JMRI
 * Connects via WiFi
-* Read and Write CVs
 
 .. _withrottle-screenshots:
 

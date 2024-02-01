@@ -82,17 +82,39 @@ This will install all the files to run locally on your machine. You won't need a
 Operation
 =========
 
+|EX-WT| has four pages
+
+- Throttle *(the default page)*
+- CV Programmer
+- Locomotives
+- Function Maps
+- Settings
+
+.. figure:: /_static/images/ex-webthrottle/menu.png
+   :alt: EX-WebThrottle - Menu
+   :scale: 40%
+
+   EX-WebThrottle - Menu
+
+----
+
+Throttle
+--------
+
+To use the program, you can either click on the "Serial" dropdown button and select "Emulator" to run in emulator mode or after making sure your hardware is properly connected, select "Serial".
+
+
 .. figure:: /_static/images/ex-webthrottle/ex-webthrottle.png
    :alt: EX-WebThrottle
    :scale: 40%
 
    EX-WebThrottle screen
 
-To use the program, you can either click on the "Serial" dropdown button and select "Emulator" to run in emulator mode or after making sure your hardware is properly connected, select "Serial".
-
 Next, click on the :guilabel:`Connect EX-CS` button. 
 
-If you are in "emulator mode", you can skip to the next step. When using the serial connection, if the program finds a compatible device, it will open a popup a window showing you a selection. It may show a line at the top such as "Arduino Mega 2560 (COM3)". Your com port may vary. Click on your board to select it and then click the :guilabel:`Connect EX-CS` button.
+See the section below for "emulator mode". 
+
+When using the serial connection, if the program finds any compatible devices, it will open a popup a window showing you a selection. It may show a line at the top such as "Arduino Mega 2560 (COM3)". Your com port may vary. Click on your board to select it and then click the :guilabel:`Connect EX-CS` button.
 
 .. figure:: /_static/images/ex-webthrottle/connect-button.png
    :alt: EX-WebThrottle - Connect button
@@ -106,16 +128,6 @@ You should then be connected to the |EX-CS| and should see the response from the
 .. raw:: html
 
    <insert pic here>
-
-
-
-Once you are connected, you can enter the ``<s>`` command in the "direct command" textbox to get status information from your Command Station. To do this just enter ``s`` (without the quotes) and press the :guilabel:`Send` button. You can send any DCC-EX API command in this way. You should see ``<iDCC-EX...>`` returned in the log window with your version, type of Arduino, type of motor shield, and some other information.
-
-.. figure:: /_static/images/ex-webthrottle/direct-commands.png
-   :alt: EX-WebThrottle - Direct commands
-   :scale: 80%
-
-   EX-WebThrottle - Direct commands
 
 Now you are ready to run trains! Place your loco on the track and click the power slider button to turn on power to your track. You should see lights on your Arduino Motor Shield and an indication that your loco has power.
 
@@ -131,14 +143,12 @@ Next go to the `Locomotive ID` textbox and enter the address of your loco and pr
 
 All the function buttons should be working, so you can play with the headlight, horn and bell and any other function assigned to a function button. The commands being sent to the Command Station and its responses will display in the log window if it is open
 
-In the throttle control area to the left of the function buttons are vertical controls to control direction. The up arrow selects forward, the square button is stop and the down arrow is reverse.
+In the throttle control area, to the left of the function buttons, are vertical controls to control direction. The up arrow selects forward, the square button is stop and the down arrow is reverse.
 
 
 .. raw:: html
 
    <insert pic here>
-
-
 
 The circular control or vertical slider (chosen by the throttle select slider) can be moved by clicking and holding down the mouse button and dragging, clicking at a spot where you want the throttle to move, or clicking the :guilabel:`+` and :guilabel:`-` buttons.
 
@@ -147,11 +157,122 @@ The circular control or vertical slider (chosen by the throttle select slider) c
 
    <instert throttle select pic here>
 
+----
 
+Issuing Commands
+~~~~~~~~~~~~~~~~
 
-The options button lets you save labels to go on your function buttons for each of your locos. We will be updating this document soon to give you more information on this and other new features.
+Once you are connected, you can enter the ``<s>`` command in the "direct command" textbox to get status information from your Command Station. To do this just enter ``s`` (without the quotes) and press the :guilabel:`Send` button. You can send any DCC-EX API command in this way. You should see ``<iDCC-EX...>`` returned in the log window with your version, type of Arduino, type of motor shield, and some other information.
 
-.. note:: Not all Command Station functions are fully supported in the emulator yet. This means that although the software works, not all the responses will be shown in the debug console. This will be completed in a next release.
+.. figure:: /_static/images/ex-webthrottle/direct-commands.png
+   :alt: EX-WebThrottle - Direct commands
+   :scale: 80%
+
+   EX-WebThrottle - Direct commands
+
+----
+
+Emulator
+~~~~~~~~
+
+.. note:: Not all Command Station functions are fully supported in the emulator yet. This means that although the software works, not all the responses will be shown in the debug console. This will be completed in a later release.
+
+----
+
+CV Programmer
+-------------
+
+The **CV Programmer** page allows you to read and write CVs (including the DCC address) from/to a decoder on the PROG Track.
+
+.. figure:: /_static/images/ex-webthrottle/cv-programmer.png
+   :alt: EX-WebThrottle - CV Programmer
+   :scale: 40%
+
+   EX-WebThrottle - CV Programmer
+
+Note you must first connect to the |EX-cS| from the **Throttle** page before you can use these features.
+
+**Decoder Address**
+
+To read a decoder address, place your loco on the PROG track and press :guilabel:`Read Address`.  If Successful, the Address will be loaded in the ``DCC Address`` Field.  If unsuccessful, a message to that effect will appear in the log.
+
+To write a decoder address, place you loco on the PROG track, enter the desired address into the ``DCC Address`` field and press :guilabel:`Write Address`.  If Successful or unsuccessful, a message to that effect will appear in the log.
+
+**CV**
+
+To read a CV, place your loco on the PROG track and press :guilabel:`Read CV`.  If Successful, the Value of the CV will be loaded in the ``CV Value`` field.  If unsuccessful, a message to that effect will appear in the log.
+
+To write a decoder address, place you loco on the PROG track, enter the desired CV into the ``CV Numver`` field, the desired value into the ``CV Value`` field and press :guilabel:`Write CV`.  If Successful or unsuccessful, a message to that effect will appear in the log.
+
+You can use the ``Common CVs`` drop list to select a CV. The appropraite value will be put into the `CV Number`` field on selection.
+
+.. note:: Programming on the Main (PoM) is not currently supported directly, though you can manually issue the appropriate commands from the throttle page.
+
+----
+
+Locomotives
+-----------
+
+The **Locomotives** page allows you store a roster of locomotives.
+
+:dcc-ex-red-bold-italic:`re Use of this is not recommended as it may not be available in the new version currently being developed.`
+
+.. note:: This is different to the roster that can be stored in the |EX-CS| itself.
+
+----
+
+Function Maps
+-------------
+
+The **Function Maps** page allows you store collections of Function Maps.
+
+:dcc-ex-red-bold-italic:`Use of this is not recommended as it may not be available in the new version currently being developed.``
+
+.. note:: This is different to the functions stored with roster entires that can be stored in the |EX-CS| itself.
+
+----
+
+Settings
+--------
+
+The **Settings page** allows you to manage aspects of the |EX-CS| apps.
+
+- General
+- Storage
+- App
+
+General
+~~~~~~~
+
+- Theme
+- Speed controller
+
+**Theme** Allows you change the appearance of the |EX-WT| screen to one of these options:
+
+- Simple
+- Metallic
+- Dark
+
+**Speed Controller** allows you to select one of thse options:
+
+- vertical
+- Knob
+- Circular
+
+Storage
+~~~~~~~
+
+:dcc-ex-red-bold-italic:`Use of this is not recommended as it may not be available in the new version currently being developed.``
+
+- Export App data
+- Import App data
+- Wipe App data
+
+App
+~~~
+
+- Install as an App
+
 
 ----
 

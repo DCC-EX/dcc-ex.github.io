@@ -143,7 +143,7 @@ CV Programming (Operation Mode)
 -------------------------------
 
 .. figure:: /_static/images/ex-toolbox/cv_programmer_ops_mode.png
-   :alt: CV Programming (Operation Mode) Screen
+   :alt: CV Programming (Ops Mode) Screen
    :scale: 50%
    :align: right
 
@@ -265,11 +265,14 @@ Instructions
 Notes: 
 ^^^^^^
 
-   1. By default, the :guilabel:`+` and :guilabel:`-` buttons change the CV values by 1. You can change this step amount by editing the 'Step' field.
-   e.g. When I start on a loco, I normally have the Step at 10.  When it gets closer to a match I change the step to 1.
+   1. By default, the :guilabel:`+` and :guilabel:`-` buttons change the CV values by 1. You can change this step amount by editing the 'Step' field. |br| e.g. When I start on a loco, I normally have the Step at 10.  When it gets closer to a match I change the step to 1.
+   
    2. You don't need a separate ``PROG`` track.  You can use the 'Track Manager' screen to temporarily set the loop of track to ``PROG`` for steps 2-3, then change it back to ``MAIN`` for steps 4 on.
+   
    3. Some decoders don't support Kick Start.
+   
    4. Some decoders don't allow you to turn BACK-EMF off. Check your decoder manual.
+   
    5. The low speed test uses a speed setting of ``5`` (0-126).  If your locos don't start moving at that setting it would be advisable to adjust Low speed setting and/or the Kick Start of the 'Master' first.
 
 |force-break|
@@ -439,7 +442,7 @@ Power
 
 .. figure:: /_static/images/ex-toolbox/power.png
    :alt: Power Screen
-   :scale: 50%
+   :scale: 10%
    :align: right
 
    EX-Toolbox Power Screen

@@ -12,7 +12,7 @@ EX-WebThrottle
 .. sidebar::
 
   .. contents:: On this page
-    :depth: 1
+    :depth: 2
     :local:
 
 |EX-WT| is a throttle (controller) that can connect to the |EX-CS| directly through the USB port of a computer.
@@ -82,6 +82,13 @@ This will install all the files to run locally on your machine. You won't need a
 Operation
 =========
 
+.. figure:: /_static/images/ex-webthrottle/menu.png
+   :alt: EX-WebThrottle - Menu
+   :scale: 40%
+   :align: right
+
+   EX-WebThrottle - Menu
+
 |EX-WT| has four pages
 
 - Throttle *(the default page)*
@@ -90,31 +97,23 @@ Operation
 - Function Maps
 - Settings
 
-.. figure:: /_static/images/ex-webthrottle/menu.png
-   :alt: EX-WebThrottle - Menu
-   :scale: 40%
-
-   EX-WebThrottle - Menu
+|force-break|
 
 ----
 
 Throttle
 --------
 
-To use the program, you can either click on the "Serial" dropdown button and select "Emulator" to run in emulator mode or after making sure your hardware is properly connected, select "Serial".
-
-
 .. figure:: /_static/images/ex-webthrottle/ex-webthrottle.png
    :alt: EX-WebThrottle
-   :scale: 40%
+   :scale: 30%
+   :align: right
 
    EX-WebThrottle screen
 
-Next, click on the :guilabel:`Connect EX-CS` button. 
+To use the program, you can either click on the ``Serial`` dropdown button and select ``Emulator`` to run in emulator mode, or after making sure your hardware is properly connected, select ``Serial``.
 
-See the section below for "emulator mode". 
-
-When using the serial connection, if the program finds any compatible devices, it will open a popup a window showing you a selection. It may show a line at the top such as "Arduino Mega 2560 (COM3)". Your com port may vary. Click on your board to select it and then click the :guilabel:`Connect EX-CS` button.
+(See the section below if wishing to use the "emulator mode". )
 
 .. figure:: /_static/images/ex-webthrottle/connect-button.png
    :alt: EX-WebThrottle - Connect button
@@ -122,53 +121,61 @@ When using the serial connection, if the program finds any compatible devices, i
 
    EX-WebThrottle - Connect button
 
-You should then be connected to the |EX-CS| and should see the response from the Command Station in the log textbox of the debug console at the bottom of the throttle window. Make sure your debug console is open. If it isn't, use the :guilabel:`Debug Console` slider button in the lower lower right to open it. You can also open the DevTools window in your browser to see more developer logging.
+Next, click on the :guilabel:`Connect EX-CS` button. 
 
+When using the serial connection, if the program finds any compatible devices, it will open a popup a window showing you a selection. It may show a line at the top such as "Arduino Mega 2560 (COM3)". Your com port may vary. Click on your board to select it and then click the :guilabel:`Connect EX-CS` button.
 
-.. raw:: html
+You should then be connected to the |EX-CS| and should see the response from the Command Station in the log textbox of the debug console at the bottom of the throttle window. Make sure your debug console is open. If it isn't, use the :guilabel:`Debug Console` slider button in the lower lower right to open it. 
 
-   <insert pic here>
+When the command station is ready to use you should see ``[i] EX-CommandStation is READY`` appear in the log.
 
-Now you are ready to run trains! Place your loco on the track and click the power slider button to turn on power to your track. You should see lights on your Arduino Motor Shield and an indication that your loco has power.
+Now you are ready to run trains! Place your loco on the track and click the :guilabel:`Power` slider button to turn on power to your track (if not already on). You should see LEDs on your Arduino Motor Shield and an indication that your loco has power.
 
-.. note:: Make sure you place the loco on the MAIN track, not the PROGRAM track. Check your wiring. On an Arduino Motor Shield, Motor Output "A" should connect to your MAIN track and "B" to the PROGRAM track.
-
-Next go to the `Locomotive ID` textbox and enter the address of your loco and press the :guilabel:`Acquire` (right arrow) button. You should now have full control over your loco.
+.. note:: Make sure you place the loco on the *MAIN* track, **not** the PROG track. Check your wiring. On an Arduino Motor Shield, Motor Output "A" should connect to your MAIN track and "B" to the PROGRAM track.
 
 .. figure:: /_static/images/ex-webthrottle/loco-id.png
    :alt: EX-WebThrottle - Loco ID
    :scale: 80%
+   :align: right
 
    EX-WebThrottle - Loco ID
 
-All the function buttons should be working, so you can play with the headlight, horn and bell and any other function assigned to a function button. The commands being sent to the Command Station and its responses will display in the log window if it is open
+Next go to the `Loco ID` textbox and enter the DCC Address of your loco and press the :guilabel:`Acquire` (right arrow in a circle) button. 
+
+You should now have full control over your loco.
+
+|force-break|
+
+.. figure:: /_static/images/ex-webthrottle/speed-and-direction-controls.png
+   :alt: EX-WebThrottle - Speed and Direction
+   :scale: 40%
+   :align: right
+
+   EX-WebThrottle - Speed and Direction
 
 In the throttle control area, to the left of the function buttons, are vertical controls to control direction. The up arrow selects forward, the square button is stop and the down arrow is reverse.
 
-
-.. raw:: html
-
-   <insert pic here>
+All the function buttons should be working, so you can play with the headlight, horn and bell and any other function assigned to a function button. The commands being sent to the Command Station and its responses will display in the log window if it is open
 
 The circular control or vertical slider (chosen by the throttle select slider) can be moved by clicking and holding down the mouse button and dragging, clicking at a spot where you want the throttle to move, or clicking the :guilabel:`+` and :guilabel:`-` buttons.
 
-
-.. raw:: html
-
-   <instert throttle select pic here>
-
 ----
 
-Issuing Commands
-~~~~~~~~~~~~~~~~
-
-Once you are connected, you can enter the ``<s>`` command in the "direct command" textbox to get status information from your Command Station. To do this just enter ``s`` (without the quotes) and press the :guilabel:`Send` button. You can send any DCC-EX API command in this way. You should see ``<iDCC-EX...>`` returned in the log window with your version, type of Arduino, type of motor shield, and some other information.
+Issuing Direct Commands
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-webthrottle/direct-commands.png
    :alt: EX-WebThrottle - Direct commands
    :scale: 80%
+   :align: right
 
    EX-WebThrottle - Direct commands
+
+Once you are connected, you can also send commands directly to the |EX-CS|. 
+
+e.g. You can send the ``<s>`` command in the "direct command" textbox to get status information from your Command Station. To do this just enter ``s`` (without the quotes) and press the :guilabel:`Send` button. |BR| You should see ``<iDCC-EX...>`` returned in the log window with your version, type of Arduino, type of motor shield, and some other information.
+
+You can send any DCC-EX Native command in this way. 
 
 ----
 
@@ -187,6 +194,7 @@ The **CV Programmer** page allows you to read and write CVs (including the DCC a
 .. figure:: /_static/images/ex-webthrottle/cv-programmer.png
    :alt: EX-WebThrottle - CV Programmer
    :scale: 40%
+   :align: right
 
    EX-WebThrottle - CV Programmer
 
@@ -215,7 +223,7 @@ Locomotives
 
 The **Locomotives** page allows you store a roster of locomotives.
 
-:dcc-ex-red-bold-italic:`re Use of this is not recommended as it may not be available in the new version currently being developed.`
+:dcc-ex-red-bold-italic:`Use of this is not recommended as it may not be available in the new version of EX-Toolbox currently being developed.`
 
 .. note:: This is different to the roster that can be stored in the |EX-CS| itself.
 
@@ -226,7 +234,7 @@ Function Maps
 
 The **Function Maps** page allows you store collections of Function Maps.
 
-:dcc-ex-red-bold-italic:`Use of this is not recommended as it may not be available in the new version currently being developed.``
+:dcc-ex-red-bold-italic:`Use of this is not recommended as it may not be available in the new version of EX-Toolbox currently being developed.`
 
 .. note:: This is different to the functions stored with roster entires that can be stored in the |EX-CS| itself.
 
@@ -246,6 +254,12 @@ General
 
 - Theme
 - Speed controller
+
+.. figure:: /_static/images/ex-webthrottle/settings-speed-controller.png
+   :alt: EX-WebThrottle - Settings - Speed Controller
+   :scale: 50%
+
+   EX-WebThrottle - Settings - Speed Controller
 
 **Theme** Allows you change the appearance of the |EX-WT| screen to one of these options:
 

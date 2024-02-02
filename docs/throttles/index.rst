@@ -113,6 +113,7 @@ USB Based Throttles
 -------------------------------
 
 - :doc:`EX-WebThrottle </ex-webthrottle/index>`
+- :doc:`myBluePillThrottle <hardware/mybluepillthrottle>`
 - Also see: :doc:`connect_wifi_throttle_via_usb`
 
 JMRI Web Server Based Throttles
@@ -397,6 +398,20 @@ Table - Throttles by Technology
       -  
       -  
 
+    * -  :doc:`myBluePillThrottle7 <hardware/mybluepillthrottle>`
+      -  Free
+      -  Serial
+      -  Native
+      -  Device
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
     * -  :doc:`TCS UWT-50 <hardware/uwt50>`
       -  Paid
       -  Net
@@ -444,10 +459,10 @@ Table - Throttles by Technology
 
   Net = Wifi or LAN networks
 
-  Free / paid = Both Free and Paid versions are available. The free version may be limited in features. |BR| |BR|
-  Native = Uses the Native DCC-EX command / command protocols |BR| |BR|
-  WiT = Uses the WiThrottle command protocol |BR| |BR|
-  Web = Requires the use of a Web Browser |BR| |BR|
+  Free / paid = Both Free and Paid versions are available. The free version may be limited in features. |BR|
+  Native = Uses the Native DCC-EX command / command protocols |BR|
+  WiT = Uses the WiThrottle command protocol |BR|
+  Web = Requires the use of a Web Browser |BR|
   Win = Windows 7 and above
 
 ----

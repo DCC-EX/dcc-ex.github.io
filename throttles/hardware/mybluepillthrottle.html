@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX DCC DCC++ EX DCC++EX" name="keywords" />
-<meta content="These &quot;big picture&quot; pages provide a view of how to put all the DCC-EX capabilities to use. [DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout.]" name="description" />
-<meta content="&quot;Big Picture&quot; Big Picture Examples EX-CommandStation EX-CS Command Station EX-TurnTable EX-RAIL Automation routes" name="keywords" />
+<meta content="Throttles (apps and devices) that can be used on EX-CommandStations. [DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout.]" name="description" />
+<meta content="Throttles Controllers WiFi" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Example - ROUTEs with servo based turnouts/signals on a PCA9685 servo module &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>myBluePillThrottle (Physical) &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
@@ -17,7 +17,7 @@
       <link rel="stylesheet" href="../../_static/dark_mode_css/general.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-    <link rel="canonical" href="https://dcc-ex.com/big-picture/stage6/example4.html" />
+    <link rel="canonical" href="https://dcc-ex.com/throttles/hardware/mybluepillthrottle.html" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -36,8 +36,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Example - Full automation with pin based turnouts and signals on Mega2560 direct I/O pins" href="example5.html" />
-    <link rel="prev" title="Example - ROUTEs with turnouts/signals on MCP23017 I/O expander Vpins" href="example3.html" />
+    <link rel="next" title="Adding a Physical Dial/Knob to Engine Driver" href="engine-driver-physical-knobs.html" />
+    <link rel="prev" title="DccEXcontroller (Physical)" href="dccexcontroller.html" />
 
      
       <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -304,35 +304,35 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Support &amp; Info</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../throttles/index.html">Throttles (Controllers)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/protocols.html">WiThrottle Server, Web Server, DCC-EX Native Protocol Explained</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/software/index.html">Throttles (Software)</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Throttles (Controllers)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../protocols.html">WiThrottle Server, Web Server, DCC-EX Native Protocol Explained</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../software/index.html">Throttles (Software)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-webthrottle/index.html">EX-Web-Throttle (Web Browser)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/jmri.html">JMRI (Java Model Railroad Interface)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/engine-driver.html">Engine Driver (Android)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/dccpp-cab.html">DCCpp CAB (android)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/cab-engineer.html">Cab Engineer: DCC Throttle (Android)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/digitrainspro.html">DigiTrainsPro (Android)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/withrottle.html">WiThrottle (iOS)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/locontrol.html">Locontrol (iOS)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/srcpclient.html">SRCP Client (iOS)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/rtdrive-dccpp.html">RtDtive DCC++ (Android)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/train-driver.html">Train Driver (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/jmri.html">JMRI (Java Model Railroad Interface)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/engine-driver.html">Engine Driver (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/dccpp-cab.html">DCCpp CAB (android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/cab-engineer.html">Cab Engineer: DCC Throttle (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/digitrainspro.html">DigiTrainsPro (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/withrottle.html">WiThrottle (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/locontrol.html">Locontrol (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/srcpclient.html">SRCP Client (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/rtdrive-dccpp.html">RtDtive DCC++ (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/train-driver.html">Train Driver (iOS)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/index.html">Throttles (Hardware)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/dccexcontroller.html">DccEXcontroller (Physical)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/mybluepillthrottle.html">myBluePillThrottle (Physical)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/engine-driver-physical-knobs.html">Adding a Physical Dial/Knob to Engine Driver</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/uwt50.html">TCS UWT-50 &amp; UWT-100 WiFi Throttles (Physical)</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Throttles (Hardware)</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dccexcontroller.html">DccEXcontroller (Physical)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">myBluePillThrottle (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engine-driver-physical-knobs.html">Adding a Physical Dial/Knob to Engine Driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="streamdeck.html">Elgato Stream Deck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uwt50.html">TCS UWT-50 &amp; UWT-100 WiFi Throttles (Physical)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/connect_wifi_throttle_via_usb.html">Connecting WiFi Throttles via USB</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/tech-reference.html">Technical Reference for Throttle Developers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/native-protocol-library.html">DCC-EX Native command library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../connect_wifi_throttle_via_usb.html">Connecting WiFi Throttles via USB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech-reference.html">Technical Reference for Throttle Developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../native-protocol-library.html">DCC-EX Native command library</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../support/index.html">Troubleshooting &amp; Getting Help</a><ul>
@@ -348,25 +348,25 @@
 <li class="toctree-l2"><a class="reference internal" href="../../support/create-ticket.html">Submit a Support Ticket</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">The Big Picture</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../big-picture.html">How it All Works Together</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../stage1.html">Stage 1 - Running a Train</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../stage2.html">Stage 2 - Adding a Roster</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../stage3.html">Stage 3 - Turnouts/Points, Accessories, Sensors &amp; Blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../stage4.html">Stage 4 - Automation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../stage5.html">Stage 5 - Turntables &amp; Traversers</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../stage5/turntable-example.html">Example - Turntable ROUTEs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../stage5/traverser-example.html">Example - Turntable and traverser ROUTEs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../big-picture/index.html">The Big Picture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/big-picture.html">How it All Works Together</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/stage1.html">Stage 1 - Running a Train</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/stage2.html">Stage 2 - Adding a Roster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/stage3.html">Stage 3 - Turnouts/Points, Accessories, Sensors &amp; Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/stage4.html">Stage 4 - Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/stage5.html">Stage 5 - Turntables &amp; Traversers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage5/turntable-example.html">Example - Turntable ROUTEs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage5/traverser-example.html">Example - Turntable and traverser ROUTEs</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="../stage6.html">Stage 6 - Putting it all Together</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="example1.html">Example 1 ROUTEs with turnouts/signals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="example2.html">Example 2 ROUTEs with turnouts/signals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="example3.html">Example 3 ROUTEs with turnouts/signals</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Example 4 ROUTEs with turnouts/signals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="example5.html">Example 5 Full automation with turnouts &amp; signals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="example6.html">Example 6 Full automation with turnouts &amp; signals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="example7.html">Example 7 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../big-picture/stage6.html">Stage 6 - Putting it all Together</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example1.html">Example 1 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example2.html">Example 2 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example3.html">Example 3 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example4.html">Example 4 ROUTEs with turnouts/signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example5.html">Example 5 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example6.html">Example 6 Full automation with turnouts &amp; signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../big-picture/stage6/example7.html">Example 7 Full automation with turnouts &amp; signals</a></li>
 </ul>
 </li>
 </ul>
@@ -474,7 +474,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">DCC-EX Native Commands Summary Reference</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../throttles/native-protocol-library.html">DCC-EX Native command protocol library - DCCEXProtocol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../native-protocol-library.html">DCC-EX Native command protocol library - DCCEXProtocol</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../reference/software/programming-locos.html">Programming Locos (CVs)</a></li>
 </ul>
 </li>
@@ -482,7 +482,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../reference/software/command-reference.html">Native Commands Details</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../reference/developers/index.html">Developer and API reference</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../throttles/tech-reference.html">Technical Reference for Throttle Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech-reference.html">Technical Reference for Throttle Developers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../reference/developers/api.html">DCC-EX Native API Reference</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../reference/developers/hal.html">DCC-EX HAL Architecture</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../reference/developers/hal-config.html">I/O Device Drivers and HAL</a></li>
@@ -509,9 +509,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../under-development/index.html">Features under development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
+<li class="toctree-l2"><a class="reference internal" href="minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="streamdeck.html">Elgato Stream Deck</a></li>
 </ul>
 </li>
 </ul>
@@ -577,13 +577,13 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html">The Big Picture</a></li>
-          <li class="breadcrumb-item"><a href="../stage6.html">Stage 6 - Putting it all Together</a></li>
-      <li class="breadcrumb-item active">Example - ROUTEs with servo based turnouts/signals on a PCA9685 servo module</li>
+          <li class="breadcrumb-item"><a href="../index.html">Throttles (Controllers)</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Throttles (Hardware)</a></li>
+      <li class="breadcrumb-item active">myBluePillThrottle (Physical)</li>
   
     
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/big-picture/stage6/example4.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/throttles/hardware/mybluepillthrottle.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   
 
@@ -593,76 +593,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-<p><a class="image-product-logo-float-right reference internal" href="../../_images/product-logo-bigpicture.png"><img alt="The Big Picture" class="image-product-logo-float-right" src="../../_images/product-logo-bigpicture.png" style="width: 320.0px; height: 64.0px;" /></a></p>
-<section id="example-routes-with-servo-based-turnouts-signals-on-a-pca9685-servo-module">
-<h1>Example - ROUTEs with servo based turnouts/signals on a PCA9685 servo module<a class="headerlink" href="#example-routes-with-servo-based-turnouts-signals-on-a-pca9685-servo-module" title="Permalink to this heading"></a></h1>
+<section id="mybluepillthrottle-physical">
+<h1>myBluePillThrottle (Physical)<a class="headerlink" href="#mybluepillthrottle-physical" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// myAutomation.h for simple ROUTEs with servo based turnouts and signals.
-
-ALIAS(TRN1, 100)
-ALIAS(TRN2, 101)
-ALIAS(SIG1_TRN1_APP, 102)
-ALIAS(SIG2_TRN2_GO, 103)
-ALIAS(SIG3_STN_EX, 104)
-
-// Start up with turnouts closed and signals red
-CLOSE(TRN1)
-CLOSE(TRN2)
-RED(SIG1_TRN1_APP)
-RED(SIG2_TRN2_GO)
-RED(SIG3_STN_EX)
-
-SERVO_TURNOUT(TRN1, 100, 400, 100, Slow, &quot;Station entry&quot;)
-SERVO_TURNOUT(TRN2, 101, 400, 100, Slow, &quot;Station exit&quot;)
-SERVO_SIGNAL(SIG1_TRN1_APP, 400, 250, 100)
-SERVO_SIGNAL(SIG2_TRN2_GO, 400, 250, 100)
-SERVO_SIGNAL(SIG3_STN_EX, 400, 250, 100)
-
-// We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
-DONE
-
-// Define our ROUTEs:
-ROUTE(1, &quot;Main track&quot;)        // Select this route to just use the main track
-  RED(SIG3_STN_EX)            // Set signal 3 red as it is not safe to exit the station siding
-  IFTHROWN(TRN1)              // If turnout 1 is thrown, do these:
-    AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
-    DELAY(2000)
-    RED(SIG1_TRN1_APP)        // Set signal 1 red while we close turnout 1
-    CLOSE(TRN1)               // Close turnout 1
-    DELAY(2000)               // Wait 2 seconds for the turnout to close
-  ENDIF
-  IFTHROWN(TRN2)              // If turnout 2 is thrown, do these:
-    AMBER(SIG2_TRN2_GO)       // Set signal 2 amber for 2 seconds to warn of the change
-    DELAY(2000)
-    RED(SIG2_TRN2_GO)         // Set signal 2 red while we close turnout 2
-    CLOSE(TRN2)               // Close turnout 2
-    DELAY(2000)               // Wait 2 seconds for the turnout to close
-  ENDIF
-  GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we&#39;re safe to proceed
-  GREEN(SIG2_TRN2_GO)         // Set signal 2 green because we&#39;re safe to proceed
-DONE
-
-ROUTE(2, &quot;Station siding&quot;)    // Select this route to use the station siding
-  RED(SIG2_TRN2_GO)           // Set signal 2 red as it is not safe to proceed beyond turnout 2 on the main track
-  IFCLOSED(TRN1)              // If turnout 1 is closed, do these:
-    AMBER(SIG1_TRN1_APP)      // Set signal 1 amber for 2 seconds to warn of the change
-    DELAY(2000)
-    RED(SIG1_TRN1_APP)        // Set signal 1 red while we throw turnout 1
-    THROW(TRN1)               // Throw turnout 1
-    DELAY(2000)               // Wait 2 seconds for the turnout to throw
-  ENDIF
-  IFCLOSED(TRN2)              // If turnout 2 is closed, do these:
-    AMBER(SIG3_STN_EX)       // Set signal 2 amber for 2 seconds to warn of the change
-    DELAY(2000)
-    RED(SIG3_STN_EX)         // Set signal 2 red while we throw turnout 2
-    THROW(TRN2)               // Throw turnout 2
-    DELAY(2000)               // Wait 2 seconds for the turnout to throw
-  ENDIF
-  GREEN(SIG1_TRN1_APP)        // Set signal 1 green because we&#39;re safe to proceed
-  GREEN(SIG3_STN_EX)          // Set signal 2 green because we&#39;re safe to proceed
-DONE
-</pre></div>
-</div>
+<aside class="sidebar">
+</aside>
+<p>A simple DCC-EX tethered throttle using STM32 Blue Pill, 5x4 keypad, and SSD1306 I2C OLED display. It is primarily for operating one loco at a time and does not include consisting or other advanced features.</p>
+<p><a class="reference external" href="https://github.com/n1ksn/dcc-ex-bluepill-throttle-7">https://github.com/n1ksn/dcc-ex-bluepill-throttle-7</a></p>
 </section>
 
 <div class="section ablog__blog_comments">
@@ -673,8 +610,8 @@ DONE
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="example3.html" class="btn btn-neutral float-left" title="Example - ROUTEs with turnouts/signals on MCP23017 I/O expander Vpins" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="example5.html" class="btn btn-neutral float-right" title="Example - Full automation with pin based turnouts and signals on Mega2560 direct I/O pins" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="dccexcontroller.html" class="btn btn-neutral float-left" title="DccEXcontroller (Physical)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="engine-driver-physical-knobs.html" class="btn btn-neutral float-right" title="Adding a Physical Dial/Knob to Engine Driver" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

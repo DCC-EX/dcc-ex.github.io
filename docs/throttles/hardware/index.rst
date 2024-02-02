@@ -14,6 +14,7 @@ Throttles (Hardware)
 
   minithrottle
   witcontroller
+  dccexcontroller
   engine-driver-physical-knobs
   streamdeck 
   uwt50

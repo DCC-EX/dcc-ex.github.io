@@ -50,7 +50,7 @@ Apple iOS (Phones and Tablets)
 ------------------------------
 
 - :doc:`Locontrol (iOS) <software/locontrol>` *- Requires JMRI*
-- :doc:`WiThrottle (iOS)<software/withrottle>`
+- :doc:`WiThrottle (iOS) <software/withrottle>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`Train Driver (iOS) <software/train-driver>`
 
@@ -58,8 +58,8 @@ Dedicated Hardware
 ------------------
 
 - :doc:`miniThrottle (Physical) <hardware/minithrottle>`
-- :doc:`miniThrottle (Physical) <hardware/minithrottle>`
 - :doc:`WiTcontroller (Physical) <hardware/witcontroller>`
+- :doc:`DccExController (Physical) <hardware/dccexcontroller>`
 - :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
 - :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
 - :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
@@ -93,6 +93,7 @@ DCC-EX (DCC-EX Native Commands)
 - :doc:`JMRI <software/jmri>`
 - :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
 - :doc:`DCCpp CAB (Android) <software/dccpp-cab>`
+- :doc:`DccExController (Physical) <hardware/dccexcontroller>`
 - :doc:` DCC-EX Native command library - DCCEXProtocol <throttles/native-protocol-library>`
 
 wiThrottle Protocol Based Throttles
@@ -122,8 +123,8 @@ JMRI Web Server Based Throttles
 
 ----
 
-Table - Throttles by Technology and Feature 
-===========================================
+Table - Throttles by Technology 
+===============================
 
 .. list-table::
     :widths: auto
@@ -142,7 +143,7 @@ Table - Throttles by Technology and Feature
       -  
       -  
       -  
-      -  CV Pro- |BR| gramming
+      -  CV  Pro- |BR| gramming
 
     * -  
       -  
@@ -172,7 +173,7 @@ Table - Throttles by Technology and Feature
       -  Linux
       -  
 
-    * -  JMRI
+    * -  :doc:`JMRI <software/jmri>`
       -  Free
       -  USB / Net
       -  Native
@@ -200,7 +201,7 @@ Table - Throttles by Technology and Feature
       -  X
       -  
 
-    * -  EX-WebThrottle
+    * -  :doc:`EX-WebThrottle </ex-webthrottle/index>`
       -  Free
       -  USB
       -  Native / WiT
@@ -214,7 +215,7 @@ Table - Throttles by Technology and Feature
       -  X
       -  X
 
-    * -  Engine Driver
+    * -  :doc:`Engine Driver <software/engine-driver>`
       -  Free
       -  Net
       -  Native
@@ -228,7 +229,7 @@ Table - Throttles by Technology and Feature
       -  
       -  X (native only)
 
-    * -  DCCpp CAB
+    * -  :doc:`DCCpp CAB <software/dccpp-cab>`
       -  
       -  Net
       -  Native
@@ -242,7 +243,7 @@ Table - Throttles by Technology and Feature
       -  
       -  
 
-    * -  Cab Engineer: DCC Throttle
+    * -  :doc:`Cab Engineer: DCC Throttle  <software/cab-engineer>`
       -  
       -  Net
       -  WiT
@@ -256,7 +257,7 @@ Table - Throttles by Technology and Feature
       -  
       -  
 
-    * -  RtDrive DCC++
+    * -  :doc:`RtDtive DCC++ <software/rtdrive-dccpp>`
       -  
       -  Net
       -  Native
@@ -270,7 +271,7 @@ Table - Throttles by Technology and Feature
       -  
       -  
 
-    * -  DigiTrainsPro
+    * -  :doc:`DigiTrainsPro <software/digitrainspro>`
       -  Free / Paid
       -  Net
       -  JMRI Web
@@ -284,7 +285,7 @@ Table - Throttles by Technology and Feature
       -  
       -  
 
-    * -  Locontrol
+    * -  :doc:`Locontrol <software/locontrol>`
       -  
       -  Net
       -  JMRI Web
@@ -298,7 +299,7 @@ Table - Throttles by Technology and Feature
       -  
       -  
 
-    * -  WiThrottle
+    * -  :doc:`WiThrottle <software/withrottle>`
       -  Free / Paid
       -  Net
       -  WiT
@@ -312,7 +313,7 @@ Table - Throttles by Technology and Feature
       -  
       -  
 
-    * -  SRCP Client
+    * -  :doc:`SRCP Client <software/srcpclient>`
       -  
       -  Net
       -  Native
@@ -326,7 +327,7 @@ Table - Throttles by Technology and Feature
       -  
       -  
 
-    * -  Train Driver
+    * -  :doc:`Train Driver <software/train-driver>`
       -  
       -  Net
       -  Native
@@ -354,7 +355,7 @@ Table - Throttles by Technology and Feature
       -  
       -  
 
-    * -  miniThrottle
+    * -  :doc:`miniThrottle <hardware/minithrottle>`
       -  
       -  Net / USB
       -  Native
@@ -368,7 +369,7 @@ Table - Throttles by Technology and Feature
       -  
       -  
 
-    * -  WiTController
+    * -  :doc:`WiTcontroller <hardware/witcontroller>`
       -  Free
       -  Net
       -  WiT
@@ -382,7 +383,7 @@ Table - Throttles by Technology and Feature
       -  
       -  
 
-    * -  DccExController
+    * -  :doc:`DccExController <hardware/dccexcontroller>`
       -  Free
       -  Net
       -  Native
@@ -396,7 +397,7 @@ Table - Throttles by Technology and Feature
       -  
       -  
 
-    * -  TCS UWT Throttle
+    * -  :doc:`TCS UWT-50 <hardware/uwt50>`
       -  Paid
       -  Net
       -  WiT
@@ -410,7 +411,7 @@ Table - Throttles by Technology and Feature
       -  
       -  
 
-    * -  Elgato Stream Deck
+    * -  :doc:`Elgato Stream Deck <hardware/streamdeck>`
       -  Paid
       -  Net
       -  native

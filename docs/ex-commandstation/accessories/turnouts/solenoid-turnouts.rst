@@ -30,7 +30,7 @@ To define solenoid/coil based turnouts directly in your |EX-CS| via the serial c
 - ``<T id VPIN vpin>`` - use this command when using a turnout/point controller that uses a single pin, whether connected directly to your |EX-CS| or via an I/O expander device
 - ``<T id DCC linear_address>`` - use this command when using DCC accessory decoders to control the turnout/point
 
-Refer to :ref:`reference/software/command-reference:defining (setting up) a turnout` for details on these commands.
+Refer to :ref:`reference/software/command-reference:defining (setting up) a turnout/point` for details on these commands.
 
 To define solenoid/coil based turnouts using |EX-R| (whether or not they are to be automated) via the "myAutomation.h" file, use the appropriate one of these commands:
 

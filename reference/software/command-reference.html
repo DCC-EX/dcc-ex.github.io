@@ -7,7 +7,7 @@
 <meta content="Reference information Developers API Code Program" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DCC-EX Native Command Reference &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>DCC-EX Native Command Detailed Reference &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
@@ -36,8 +36,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="DCC-EX Native Commands - Consolidated Reference" href="command-summary-consolidated.html" />
-    <link rel="prev" title="Choosing a Throttle (Controller) - Advanced" href="../../ex-commandstation/advanced-setup/controllers.html" />
+    <link rel="next" title="Adding and Controlling Accessories" href="../../ex-commandstation/accessories/index.html" />
+    <link rel="prev" title="DCC-EX Native Commands Summary Reference" href="command-summary-consolidated.html" />
 
      
       <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -183,8 +183,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/startup-config.html">Startup Configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/controllers.html">Choosing a Throttle (Controller) - Advanced</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">DCC-EX Native Command Reference</a></li>
-<li class="toctree-l3"><a class="reference internal" href="command-summary-consolidated.html">DCC-EX Native Commands - Consolidated Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="command-summary-consolidated.html">Native Commands Summary</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Native Commands Details</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-commandstation/accessories/index.html">Adding and Controlling Accessories</a><ul>
@@ -323,6 +323,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../throttles/hardware/index.html">Throttles (Hardware)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/dccexcontroller.html">DccEXcontroller (Physical)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/engine-driver-physical-knobs.html">Adding a Physical Dial/Knob to Engine Driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../throttles/hardware/uwt50.html">TCS UWT-50 &amp; UWT-100 WiFi Throttles (Physical)</a></li>
@@ -466,17 +467,18 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Software</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="command-summary-consolidated.html">DCC-EX Native Commands - Consolidated Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="command-summary-consolidated.html">DCC-EX Native Commands Summary Reference</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index-dcpp-commands.html">DCC-EX Native Commands</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">DCC-EX Native Command Reference</a></li>
-<li class="toctree-l4"><a class="reference internal" href="command-summary-consolidated.html">DCC-EX Native Commands - Consolidated Reference</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">DCC-EX Native Command Detailed Reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="command-summary-consolidated.html">DCC-EX Native Commands Summary Reference</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../throttles/native-protocol-library.html">DCC-EX Native command protocol library - DCCEXProtocol</a></li>
 <li class="toctree-l3"><a class="reference internal" href="programming-locos.html">Programming Locos (CVs)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="command-summary-consolidated.html">DCC-EX Native Commands - Consolidated Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command-summary-consolidated.html">Native Commands Summary</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Native Commands Details</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/index.html">Developer and API reference</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../throttles/tech-reference.html">Technical Reference for Throttle Developers</a></li>
@@ -576,7 +578,7 @@
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../ex-commandstation/index.html">EX-CommandStation</a></li>
           <li class="breadcrumb-item"><a href="../../ex-commandstation/advanced-setup/index.html">Advanced Options</a></li>
-      <li class="breadcrumb-item active">DCC-EX Native Command Reference</li>
+      <li class="breadcrumb-item active">DCC-EX Native Command Detailed Reference</li>
   
     
       <li class="wy-breadcrumbs-aside">
@@ -591,8 +593,8 @@
            <div itemprop="articleBody">
              
 <p><a class="image-product-logo-float-right reference internal" href="../../_images/product-logo-reference.png"><img alt="Reference" class="image-product-logo-float-right" src="../../_images/product-logo-reference.png" style="width: 320.0px; height: 64.0px;" /></a></p>
-<section id="dcc-ex-native-command-reference">
-<h1>DCC-EX Native Command Reference<a class="headerlink" href="#dcc-ex-native-command-reference" title="Permalink to this heading"></a></h1>
+<section id="dcc-ex-native-command-detailed-reference">
+<h1>DCC-EX Native Command Detailed Reference<a class="headerlink" href="#dcc-ex-native-command-detailed-reference" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
 <nav class="contents local" id="on-this-page">
@@ -604,7 +606,7 @@
 <ul>
 <li><p><a class="reference internal" href="#cab-functions" id="id5">CAB FUNCTIONS</a></p></li>
 <li><p><a class="reference internal" href="#stationary-accessory-decoder-turnout-commands" id="id6">Stationary Accessory Decoder &amp; Turnout Commands</a></p></li>
-<li><p><a class="reference internal" href="#defining-setting-up-a-turnout" id="id7">Defining (Setting up) a Turnout</a></p></li>
+<li><p><a class="reference internal" href="#defining-setting-up-a-turnout-point" id="id7">Defining (Setting up) a Turnout/Point</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference internal" href="#sensors-input-commands" id="id8">Sensors (Input) Commands</a></p></li>
@@ -630,7 +632,7 @@
 </ul>
 </nav>
 </aside>
-<p>This is a detailed reference. For a summary version, please see <a class="reference internal" href="command-summary-consolidated.html"><span class="doc">Consolidated Command Summary</span></a></p>
+<p>This is a detailed reference of just the major commands. For a summary version, including all commands, please see <a class="reference internal" href="command-summary-consolidated.html"><span class="doc">DCC-EX Native Commands Summary Reference</span></a></p>
 <p><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">EX-CommandStation</a> Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several “front end” controllers are available or you can easily create your own. Here are some examples:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../ex-webthrottle/index.html"><span class="doc">EX-WebThrottle</span></a> - Our <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span> browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span> itself!</p></li>
@@ -647,8 +649,8 @@
 <li><p>“&lt;” and “&gt;” - All DCC-EX API commands are surrounded by these characters to indicate the beginning and end, these must always be included</p></li>
 <li><p>First letter or number - These are called OPCODES, are case sensitive, and must be specified as directed, eg. 1, c, or -</p></li>
 <li><p>CAPITALISED words - These are parameters referred to as keywords, and should be specified as directed, eg. MAIN (note these are not case sensitive, however capitalising makes them easier to distinguish from other parameters)</p></li>
-<li><p>lowercase words - These are parameters that must be provided or are returned, with multiple parameters separated by a space, eg. cabid</p></li>
-<li><p>Square brackets [] - Parameters within square brackets [] are optional and may be ommitted, and if specifying these parameters, do not include the square brackets themselves</p></li>
+<li><p>lowercase words - These are parameters that must be provided or are returned, with multiple parameters separated by a space, eg. <cite>cabid</cite></p></li>
+<li><p>Square brackets [] - Parameters within square brackets [] are optional and may be omitted, and if specifying these parameters, do not include the square brackets themselves</p></li>
 <li><p>| - Use of the | character means you need to provide one of the provided options only, for example <code class="docutils literal notranslate"><span class="pre">&lt;0|1</span> <span class="pre">MAIN|PROG|JOIN&gt;</span></code> becomes either <code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">MAIN&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">MAIN&gt;</span></code></p></li>
 </ul>
 </section>
@@ -938,9 +940,9 @@ If your decoder does not respond on the expected linear address, try adding and 
 </section>
 </section>
 </section>
-<section id="defining-setting-up-a-turnout">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">Defining (Setting up) a Turnout</a><a class="headerlink" href="#defining-setting-up-a-turnout" title="Permalink to this heading"></a></h3>
-<p>The Turnout commands provide a more flexible and more functional way of operating turnouts.  It requires that the turnout be pre-defined through the <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">...&gt;</span></code> commands, described below.</p>
+<section id="defining-setting-up-a-turnout-point">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Defining (Setting up) a Turnout/Point</a><a class="headerlink" href="#defining-setting-up-a-turnout-point" title="Permalink to this heading"></a></h3>
+<p>The Turnout commands provide a more flexible and more functional way of operating turnouts/points.  It requires that the turnout be pre-defined through the <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">...&gt;</span></code> commands, described below.</p>
 <p>Turnouts may be in either of two states:  Closed or Thrown.  The turnout commands below use the values <code class="docutils literal notranslate"><span class="pre">1</span></code> for <code class="docutils literal notranslate"><span class="pre">Throw</span></code> or <code class="docutils literal notranslate"><span class="pre">Thrown</span></code> and <code class="docutils literal notranslate"><span class="pre">0</span></code> for <code class="docutils literal notranslate"><span class="pre">Close</span></code> or <code class="docutils literal notranslate"><span class="pre">Closed</span></code>.</p>
 <ul>
 <li><p>Command to define a DCC Accessory Decoder turnout (linear addressing): <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">linear_address&gt;</span></code> :</p>
@@ -1052,8 +1054,8 @@ You would send the following command to the <span class="ex-prefix">EX</span><sp
 <p>If turnout definitions are stored in EEPROM, the turnout thrown/closed state is also written to EEPROM whenever the turnout is switched.
 Consequently, when the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> is restarted the turnout outputs may be set to their last known state (applicable for Servo and VPIN turnouts).
 This is intended so that the servos don’t perform a sweep on power-on when their physical position does not match initial position in the CommandStation.</p>
-<section id="controlling-a-defined-turnout">
-<h4>Controlling a Defined Turnout<a class="headerlink" href="#controlling-a-defined-turnout" title="Permalink to this heading"></a></h4>
+<section id="controlling-a-defined-turnout-point">
+<h4>Controlling a Defined Turnout/Point<a class="headerlink" href="#controlling-a-defined-turnout-point" title="Permalink to this heading"></a></h4>
 <ul>
 <li><p>Sets turnout ID to either the “closed” (turned) or “thrown” (closed) position</p></li>
 <li><p>The Turnout format is <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">throw&gt;</span></code></p></li>
@@ -1137,10 +1139,10 @@ found to have transitioned from one state to another, one of the following seria
 <section id="outputs-dio-pin-commands">
 <h2><a class="toc-backref" href="#id9" role="doc-backlink">Outputs (DIO Pin) Commands</a><a class="headerlink" href="#outputs-dio-pin-commands" title="Permalink to this heading"></a></h2>
 <p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> supports optional OUTPUT control of any unused Arduino Pins for custom purposes. Pins can be activated or de-activated.
-The default is to set ACTIVE pins HIGH and INACTIVE pins LOW. However, this default behavior can be inverted for any pin in which case ACTIVE=LOW and INACTIVE=HIGH.</p>
+The default is to set ACTIVE pins HIGH and INACTIVE pins LOW. However, this default behaviour can be inverted for any pin in which case ACTIVE=LOW and INACTIVE=HIGH.</p>
 <p>Definitions and state (ACTIVE/INACTIVE) for pins are retained in EEPROM and restored on power-up.
 The default is to set each defined pin to active or inactive according to its restored state.
-However, the default behavior can be modified so that any pin can be forced to be either active or inactive upon power-up regardless of its previous state before power-down.</p>
+However, the default behaviour can be modified so that any pin can be forced to be either active or inactive upon power-up regardless of its previous state before power-down.</p>
 <p>To have <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> utilize one or more Arduino pins as custom outputs, first define/edit/delete output definitions using the following variation of the <code class="docutils literal notranslate"><span class="pre">&lt;Z&gt;</span></code> command:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">iflag&gt;</span></code> : Creates a new output ID, with specified <code class="docutils literal notranslate"><span class="pre">vpin</span></code> and <code class="docutils literal notranslate"><span class="pre">iflag</span></code> values.</p>
@@ -1165,7 +1167,7 @@ However, the default behavior can be modified so that any pin can be forced to b
 (You pick the <code class="docutils literal notranslate"><span class="pre">id</span></code> &amp; they are shared between Turnouts, Sensors and Outputs)</p>
 <p><code class="docutils literal notranslate"><span class="pre">vpin</span></code> : the pin number of the output to be controlled by the output object.  For Arduino output pins, this is the same as the digital pin number.  For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.</p>
 <p><code class="docutils literal notranslate"><span class="pre">state</span></code> : The state of the output (0=INACTIVE / 1=ACTIVE)</p>
-<p><code class="docutils literal notranslate"><span class="pre">iflag</span></code> : Defines the operational behavior of the output based on bits 0, 1, and 2 as follows:</p>
+<p><code class="docutils literal notranslate"><span class="pre">iflag</span></code> : Defines the operational behaviour of the output based on bits 0, 1, and 2 as follows:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>``iflag``, bit 0: 0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW)
               1 = inverted operation (ACTIVE=LOW / INACTIVE=HIGH)
 
@@ -1372,7 +1374,7 @@ ADDRESS: The loco address to be written (1-10239).</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JA</span> <span class="pre">id&gt;</span></code> Returns the ID, type (A=automation or R=route), and description of the specified automation/route ID</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JR&gt;</span></code> Returns the defined roster entry IDs</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JR</span> <span class="pre">id&gt;</span></code> Returns the ID, description, and function map of the specified roster entry ID</p>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cabid&gt;</span></code> Requests a deliberate update of cab speed/functions in the same format as the cab broadcas</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cabid&gt;</span></code> Requests a deliberate update of cab speed/functions in the same format as the cab broadcast</p>
 </section>
 <section id="diagnostic-commands">
 <h2><a class="toc-backref" href="#id15" role="doc-backlink">Diagnostic Commands</a><a class="headerlink" href="#diagnostic-commands" title="Permalink to this heading"></a></h2>
@@ -1447,7 +1449,7 @@ analogue read operations.  This command is available from Version 3.2.0.</p></li
 <li><p>MAX 20000uS</p></li>
 </ul>
 <p>If you still need to override these and need to do so permanently, the commands can be added to “mySetup.h” as per <a class="reference internal" href="../../ex-commandstation/advanced-setup/startup-config.html#adding-in-the-startup-commands"><span class="std std-ref">Adding in the startup commands</span></a>.</p>
-<p>Note with decoders that are equipped with “keep alives” or capacitors, it can be beneficial to turn the power on with <cite>&lt;1&gt;</cite> or <cite>&lt;1 PROG&gt;</cite> to charge the capacitors prior to programming, which can increase the reliability of the ACK, especially when attemping to read the full sheet.</p>
+<p>Note with decoders that are equipped with “keep alives” or capacitors, it can be beneficial to turn the power on with <cite>&lt;1&gt;</cite> or <cite>&lt;1 PROG&gt;</cite> to charge the capacitors prior to programming, which can increase the reliability of the ACK, especially when attempting to read the full sheet.</p>
 </div>
 <p>To quote the relevant section from NMRA S 9.2.3:</p>
 <div class="admonition note">
@@ -1516,8 +1518,8 @@ returns: NONE
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../../ex-commandstation/advanced-setup/controllers.html" class="btn btn-neutral float-left" title="Choosing a Throttle (Controller) - Advanced" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="command-summary-consolidated.html" class="btn btn-neutral float-right" title="DCC-EX Native Commands - Consolidated Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="command-summary-consolidated.html" class="btn btn-neutral float-left" title="DCC-EX Native Commands Summary Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../ex-commandstation/accessories/index.html" class="btn btn-neutral float-right" title="Adding and Controlling Accessories" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -181,8 +181,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/startup-config.html">Startup Configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/controllers.html">Choosing a Throttle (Controller) - Advanced</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-reference.html">DCC-EX Native Command Reference</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">DCC-EX Native Commands - Consolidated Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">Native Commands Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-reference.html">Native Commands Details</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-commandstation/accessories/index.html">Adding and Controlling Accessories</a><ul>
@@ -321,6 +321,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../hardware/index.html">Throttles (Hardware)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/minithrottle.html">miniThrottle (Physical)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware/dccexcontroller.html">DccEXcontroller (Physical)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/engine-driver-physical-knobs.html">Adding a Physical Dial/Knob to Engine Driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/streamdeck.html">Elgato Stream Deck</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../hardware/uwt50.html">TCS UWT-50 &amp; UWT-100 WiFi Throttles (Physical)</a></li>
@@ -464,17 +465,18 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../reference/software/index.html">Software</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">DCC-EX Native Commands - Consolidated Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">DCC-EX Native Commands Summary Reference</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../reference/software/index-dcpp-commands.html">DCC-EX Native Commands</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../reference/software/command-reference.html">DCC-EX Native Command Reference</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">DCC-EX Native Commands - Consolidated Reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/software/command-reference.html">DCC-EX Native Command Detailed Reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">DCC-EX Native Commands Summary Reference</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../native-protocol-library.html">DCC-EX Native command protocol library - DCCEXProtocol</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../reference/software/programming-locos.html">Programming Locos (CVs)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">DCC-EX Native Commands - Consolidated Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">Native Commands Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/software/command-reference.html">Native Commands Details</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../reference/developers/index.html">Developer and API reference</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tech-reference.html">Technical Reference for Throttle Developers</a></li>
@@ -618,7 +620,7 @@
 <li><p>Read and write CVs of decoders on the Programming Track</p></li>
 <li><p>Write CVs of decoders on the Main Track</p></li>
 <li><p>Issue Native commands to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></p></li>
-<li><p>TrackManager control - able to change the type and state of each Track/Channel (e.g DCC and DC))</p></li>
+<li><p>TrackManager control - able to change the type and state of each Track/Channel (e.g DCC and DC)</p></li>
 </ul>
 </section>
 <section id="how-to-enable-the-dcc-ex-native-protocol">
@@ -701,14 +703,14 @@
 <li><p>DC reversed polarity (DCX)</p></li>
 <li><p>NONE</p></li>
 <li><p>AUTO</p></li>
-<li><p>BOOST</p></li>
-<li><p>EXT</p></li>
+<li><p>BOOST  <em>(Not selectable)</em></p></li>
+<li><p>EXT  <em>(Not selectable)</em></p></li>
 </ul>
 <p>Each of the tracks/channels of the Motor Shield(s) can be changed to any one of the states above. (Except <code class="docutils literal notranslate"><span class="pre">EXT</span></code> and <code class="docutils literal notranslate"><span class="pre">BOOST</span></code> which can only be changed in the Command Station config. )</p>
 <p>To change the simply select the state in the pulldown in the desired track (or tracks) and click <span class="guilabel">Set</span></p>
-<p>Note that if you select <cite>DC</cite> or <cite>DC reversed polarity (DCX)</cite> you must also enter the Address that the track should respond to.</p>
-<p>e.g. if you enter <cite>DC</cite> and address <cite>10</cite> for track ‘A’, then in the <a class="reference internal" href="engine-driver.html"><span class="doc">Engine Driver</span></a> Select Loco screen, you would need to enter the ‘DCC Address’ of <cite>10</cite> to control the DC loco on the track which would normally have been the ‘Main’ track if you were using DCC.</p>
-<p>Note that only one track can ever be selected as ‘DCC PROG’</p>
+<p>Note that if you select <code class="docutils literal notranslate"><span class="pre">DC</span></code> or <code class="docutils literal notranslate"><span class="pre">DC</span> <span class="pre">reversed</span> <span class="pre">polarity</span> <span class="pre">(DCX)</span></code> you <em>must</em> also enter the Address that the track should respond to.</p>
+<p>e.g. if you enter <code class="docutils literal notranslate"><span class="pre">DC</span></code> and address <code class="docutils literal notranslate"><span class="pre">10</span></code> for track ‘A’, then in the <a class="reference internal" href="engine-driver.html"><span class="doc">Engine Driver</span></a> Select Loco screen, you would need to enter the ‘DCC Address’ of <code class="docutils literal notranslate"><span class="pre">10</span></code> to control the DC loco on the track which would normally have been the ‘Main’ track if you were using DCC.</p>
+<p>Note that only one track can ever be selected as <code class="docutils literal notranslate"><span class="pre">DCC</span> <span class="pre">PROG</span></code></p>
 </section>
 </section>
 </section>

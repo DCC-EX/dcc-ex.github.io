@@ -36,7 +36,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Adding a Physical Dial/Knob to Engine Driver" href="engine-driver-physical-knobs.html" />
+    <link rel="next" title="DccEXcontroller (Physical)" href="dccexcontroller.html" />
     <link rel="prev" title="miniThrottle (Physical)" href="minithrottle.html" />
 
      
@@ -183,8 +183,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/startup-config.html">Startup Configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/advanced-setup/controllers.html">Choosing a Throttle (Controller) - Advanced</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-reference.html">DCC-EX Native Command Reference</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">DCC-EX Native Commands - Consolidated Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">Native Commands Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-reference.html">Native Commands Details</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-commandstation/accessories/index.html">Adding and Controlling Accessories</a><ul>
@@ -323,6 +323,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Throttles (Hardware)</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="minithrottle.html">miniThrottle (Physical)</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">WiTcontroller (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dccexcontroller.html">DccEXcontroller (Physical)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="engine-driver-physical-knobs.html">Adding a Physical Dial/Knob to Engine Driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="streamdeck.html">Elgato Stream Deck</a></li>
 <li class="toctree-l3"><a class="reference internal" href="uwt50.html">TCS UWT-50 &amp; UWT-100 WiFi Throttles (Physical)</a></li>
@@ -466,17 +467,18 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../reference/software/index.html">Software</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">DCC-EX Native Commands - Consolidated Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">DCC-EX Native Commands Summary Reference</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../reference/software/index-dcpp-commands.html">DCC-EX Native Commands</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../reference/software/command-reference.html">DCC-EX Native Command Reference</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">DCC-EX Native Commands - Consolidated Reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/software/command-reference.html">DCC-EX Native Command Detailed Reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">DCC-EX Native Commands Summary Reference</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../native-protocol-library.html">DCC-EX Native command protocol library - DCCEXProtocol</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../reference/software/programming-locos.html">Programming Locos (CVs)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">DCC-EX Native Commands - Consolidated Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/software/command-summary-consolidated.html">Native Commands Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../reference/software/command-reference.html">Native Commands Details</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../reference/developers/index.html">Developer and API reference</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tech-reference.html">Technical Reference for Throttle Developers</a></li>
@@ -602,6 +604,7 @@
 </ul>
 </nav>
 </aside>
+<p>WiTcontroller uses exactly the same hardware as the DccExController, but uses the WiThrottle protocol instead of the DCC-EX Native command protocol.</p>
 <p>From <a class="reference internal" href="../software/engine-driver.html"><span class="doc">Engine Driver</span></a>’s very own Peter Akers (flash62au on our Discord server), comes a physical hardware throttle using only 4 parts:</p>
 <ul class="simple">
 <li><p>ESP32 with LiPo charger</p></li>
@@ -651,7 +654,7 @@
 </li>
 <li><p>limited dealing with unexpected disconnects.  It will thow you back to the WiThtottle Server selection screen.</p></li>
 </ul>
-<p>NOTE: This is a Project and is therefore a work in progress and open source. New features are being added regularly and a full tutorial will be available soon in the projects section.</p>
+<p>NOTE: This is a Project and is therefore a work in progress and open source. New features are being added regularly.</p>
 <p>Source code and instructions can be found on GitHub here: <a class="reference external" href="https://github.com/flash62au/WiTcontroller">https://github.com/flash62au/WiTcontroller</a></p>
 </section>
 <section id="images">
@@ -673,7 +676,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="minithrottle.html" class="btn btn-neutral float-left" title="miniThrottle (Physical)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="engine-driver-physical-knobs.html" class="btn btn-neutral float-right" title="Adding a Physical Dial/Knob to Engine Driver" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="dccexcontroller.html" class="btn btn-neutral float-right" title="DccEXcontroller (Physical)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

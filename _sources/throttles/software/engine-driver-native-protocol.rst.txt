@@ -33,7 +33,7 @@ These features are only available when the |DCC-EX Native Protocol| preference i
 * Read and write CVs of decoders on the Programming Track
 * Write CVs of decoders on the Main Track
 * Issue Native commands to the |EX-CS|
-* TrackManager control - able to change the type and state of each Track/Channel (e.g DCC and DC))
+* TrackManager control - able to change the type and state of each Track/Channel (e.g DCC and DC)
 
 How to enable the |DCC-EX Native Protocol|
 ==========================================
@@ -133,15 +133,15 @@ The states will be one of:
 * DC reversed polarity (DCX)
 * NONE
 * AUTO
-* BOOST
-* EXT
+* BOOST  *(Not selectable)*
+* EXT  *(Not selectable)*
 
 Each of the tracks/channels of the Motor Shield(s) can be changed to any one of the states above. (Except ``EXT`` and ``BOOST`` which can only be changed in the Command Station config. )
 
 To change the simply select the state in the pulldown in the desired track (or tracks) and click :guilabel:`Set`
 
-Note that if you select `DC` or `DC reversed polarity (DCX)` you must also enter the Address that the track should respond to. 
+Note that if you select ``DC`` or ``DC reversed polarity (DCX)`` you *must* also enter the Address that the track should respond to. 
 
-e.g. if you enter `DC` and address `10` for track 'A', then in the |Engine Driver| Select Loco screen, you would need to enter the 'DCC Address' of `10` to control the DC loco on the track which would normally have been the 'Main' track if you were using DCC.
+e.g. if you enter ``DC`` and address ``10`` for track 'A', then in the |Engine Driver| Select Loco screen, you would need to enter the 'DCC Address' of ``10`` to control the DC loco on the track which would normally have been the 'Main' track if you were using DCC.
 
-Note that only one track can ever be selected as 'DCC PROG'
+Note that only one track can ever be selected as ``DCC PROG``

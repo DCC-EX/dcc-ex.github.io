@@ -89,7 +89,7 @@ Operation
 
    EX-WebThrottle - Menu
 
-|EX-WT| has four pages
+|EX-WT| has four pages which you can switch between using the hamburger menu button (thee horizontal bars) on the top left of the screen.
 
 - Throttle *(the default page)*
 - CV Programmer
@@ -212,7 +212,7 @@ To read a CV, place your loco on the PROG track and press :guilabel:`Read CV`.  
 
 To write a decoder address, place you loco on the PROG track, enter the desired CV into the ``CV Numver`` field, the desired value into the ``CV Value`` field and press :guilabel:`Write CV`.  If Successful or unsuccessful, a message to that effect will appear in the log.
 
-You can use the ``Common CVs`` drop list to select a CV. The appropraite value will be put into the `CV Number`` field on selection.
+You can use the ``Common CVs`` drop list to select a CV. The approprate value will be put into the `CV Number`` field on selection.
 
 .. note:: Programming on the Main (PoM) is not currently supported directly, though you can manually issue the appropriate commands from the throttle page.
 
@@ -236,7 +236,7 @@ The **Function Maps** page allows you store collections of Function Maps.
 
 :dcc-ex-red-bold-italic:`Use of this is not recommended as it may not be available in the new version of EX-Toolbox currently being developed.`
 
-.. note:: This is different to the functions stored with roster entires that can be stored in the |EX-CS| itself.
+.. note:: This is different to the functions stored with roster entries that can be stored in the |EX-CS| itself.
 
 ----
 
@@ -267,7 +267,7 @@ General
 - Metallic
 - Dark
 
-**Speed Controller** allows you to select one of thse options:
+**Speed Controller** allows you to select one of these options:
 
 - vertical
 - Knob

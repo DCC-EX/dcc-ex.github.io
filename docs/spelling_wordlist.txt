@@ -42,6 +42,7 @@ Ender
 Espressif
 esptool
 EX-Installer
+EX-Toolbox
 EX-WebThrottle
 Expander
 expanders

@@ -122,6 +122,335 @@ JMRI Web Server Based Throttles
 
 ----
 
+Table - Throttles by Technology and Feature 
+===========================================
+
+.. list-table::
+    :widths: auto
+    :header-rows: 3
+    :class: command-table
+
+    * -  Name
+      -  Licence
+      -  Interface
+      -  Tech- |BR| nology
+      -  
+      -  Also |BR| Requires
+      -  Form |BR| Factor
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  CV Pro- |BR| gramming
+
+    * -  
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  Mobile
+      -  
+      -  
+      -  PC
+      -  
+      -  
+      -  
+
+    * -  
+      -  
+      -  
+      -  Protocol
+      -  UI
+      -  
+      -  Physical |BR| Device
+      -  Android
+      -  iOS
+      -  Win
+      -  MacOS
+      -  Linux
+      -  
+
+    * -  JMRI
+      -  Free
+      -  USB / Net
+      -  Native
+      -  Web
+      -  
+      -  
+      -  Web
+      -  Web
+      -  X
+      -  X
+      -  X
+      -  X
+
+    * -  Railroad Automation
+      -  
+      -  Net / LocoNet
+      -  LocoNet
+      -  Web
+      -  IoTT Red hat
+      -  
+      -  Web
+      -  Web
+      -  X
+      -  X
+      -  X
+      -  
+
+    * -  EX-WebThrottle
+      -  Free
+      -  USB
+      -  Native / WiT
+      -  Web
+      -  
+      -  
+      -  
+      -  
+      -  X
+      -  X
+      -  X
+      -  X
+
+    * -  Engine Driver
+      -  Free
+      -  Net
+      -  Native
+      -  App
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  X (native only)
+
+    * -  DCCpp CAB
+      -  
+      -  Net
+      -  Native
+      -  App
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  Cab Engineer: DCC Throttle
+      -  
+      -  Net
+      -  WiT
+      -  App
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  RtDrive DCC++
+      -  
+      -  Net
+      -  Native
+      -  App
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  DigiTrainsPro
+      -  Free / Paid
+      -  Net
+      -  JMRI Web
+      -  App
+      -  JMRI
+      -  
+      -  X
+      -  X
+      -  X
+      -  
+      -  
+      -  
+
+    * -  Locontrol
+      -  
+      -  Net
+      -  JMRI Web
+      -  App
+      -  JMRI
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+
+    * -  WiThrottle
+      -  Free / Paid
+      -  Net
+      -  WiT
+      -  App
+      -  
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+
+    * -  SRCP Client
+      -  
+      -  Net
+      -  Native
+      -  App
+      -  
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+
+    * -  Train Driver
+      -  
+      -  Net
+      -  Native
+      -  App
+      -  
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+
+    * -  Train Throttle
+      -  
+      -  Net
+      -  WiT
+      -  App
+      -  
+      -  
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+
+    * -  miniThrottle
+      -  
+      -  Net / USB
+      -  Native
+      -  Device
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  WiTController
+      -  Free
+      -  Net
+      -  WiT
+      -  Device
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  DccExController
+      -  Free
+      -  Net
+      -  Native
+      -  Device
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  TCS UWT Throttle
+      -  Paid
+      -  Net
+      -  WiT
+      -  Device
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  Elgato Stream Deck
+      -  Paid
+      -  Net
+      -  native
+      -  Device
+      -  PC or Rpi
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  LocoNet-Compatible Throttles
+      -  Free / Paid
+      -  Net
+      -  LocoNet
+      -  Device
+      -  IoTT Red hat
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
+
+**Legend**
+
+  Net = Wifi or LAN networks
+
+  Free / paid = Both Free and Paid versions are available. The free version may be limited in features. |BR| |BR|
+  Native = Uses the Native DCC-EX command / command protocols |BR| |BR|
+  WiT = Uses the WiThrottle command protocol |BR| |BR|
+  Web = Requires the use of a Web Browser |BR| |BR|
+  Win = Windows 7 and above
+
+----
+
 Reference
 =========
 
@@ -129,7 +458,7 @@ Reference
 - :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 3
     :hidden:
     
     protocols

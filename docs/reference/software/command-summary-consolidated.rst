@@ -3,9 +3,9 @@
 .. include:: /include/include-reference.rst
 |EX-REF-LOGO|
 
-***********************************************
-DCC-EX Native Commands - Consolidated Reference
-***********************************************
+****************************************
+DCC-EX Native Commands Summary Reference
+****************************************
 
 |engineer|
 

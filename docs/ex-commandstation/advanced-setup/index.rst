@@ -174,8 +174,8 @@ DCC-EX Commands
 .. toctree::
   :maxdepth: 1
 
-  /reference/software/command-reference
-  /reference/software/command-summary-consolidated
+  Native Commands Summary </reference/software/command-summary-consolidated>
+  Native Commands Details </reference/software/command-reference>
 
 Features under development
 ==========================

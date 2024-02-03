@@ -35,16 +35,16 @@ Standards (S-)
 Technical Notes (TN-)
 ........................
 
-- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TH-9 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/tn-9_2023.pdf>`_: Wiring for DC & DCC
-- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TH-9.1.1 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/tn9.1.1_nmra_dcc_decoder_test_user_manual.pdf>`_: NMRA DCC Decoder Test User Manual
-- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TH-9.1.2 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/tn9.1.2_sender_board_theory_of_operation.pdf>`_: Sender Board Theory of Operation
-- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TH-9.1.3 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/tn9.1.3_sender_v3_getting_started_guide.pdf>`_: Sender V3 Getting Started Guide
-- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TH-9.1.1.3 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/tn-9.1.1.3_21mtc_decoder_interface.pdf>`_: 21 MTC Decoder Interface
-- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TH-9.1.1.4 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/tn-9.1.1.4_plux_interface_1.pdf>`_: PluX Decoder Interface
-- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TH-9.1.1.5 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/tn-9.1.1.5_next18_next18-s_decoder_interface.pdf>`_: Next 18 and Next 18S  Decoder Interface
+- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TN-9 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/tn-9_2023.pdf>`_: Wiring for DC & DCC
+- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TN-9.1.1 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/tn9.1.1_nmra_dcc_decoder_test_user_manual.pdf>`_: NMRA DCC Decoder Test User Manual
+- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TN-9.1.2_SBT <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/tn9.1.2_sender_board_theory_of_operation.pdf>`_: Sender Board Theory of Operation
+- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TN-9.1.3 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/tn9.1.3_sender_v3_getting_started_guide.pdf>`_: Sender V3 Getting Started Guide
+- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TN-9.1.1.3 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/tn-9.1.1.3_21mtc_decoder_interface.pdf>`_: 21 MTC Decoder Interface
+- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TN-9.1.1.4 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/tn-9.1.1.4_plux_interface_1.pdf>`_: PluX Decoder Interface
+- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TN-9.1.1.5 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/tn-9.1.1.5_next18_next18-s_decoder_interface.pdf>`_: Next 18 and Next 18S  Decoder Interface
 
-- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TH-9.1.2 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/tn-9.1.2_power_station_interface.pdf>`_: Power Station Interface
-- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TH-9.2.1.1 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/tn-9.2.1.1_advanced_extended_packet_formats.pdf>`_: DCC Advanced Extended Packet Formats
+- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TN-9.1.2_PSI <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/tn-9.1.2_power_station_interface.pdf>`_: Power Station Interface
+- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TN-9.2.1.1 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/tn-9.2.1.1_advanced_extended_packet_formats.pdf>`_: DCC Advanced Extended Packet Formats
 
 Technical Informations (TI-)
 .............................

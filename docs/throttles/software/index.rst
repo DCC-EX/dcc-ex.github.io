@@ -27,6 +27,7 @@ Apple iOS (Phones and Tablets)
 ------------------------------
 
 - :doc:`Locontrol (iOS) <locontrol>` *- Requires JMRI*
+- :doc:`DigiTrainsPro (Android) <digitrainspro>` *- Requires JMRI*
 - :doc:`WiThrottle (iOS)<withrottle>`
 - :doc:`SRCP Client (iOS) <srcpclient>`
 - :doc:`Train Driver (iOS) <train-driver>`
@@ -34,7 +35,10 @@ Apple iOS (Phones and Tablets)
 Personal Computers
 ------------------
 
+- :doc:`EX-WebThrottle </ex-webthrottle/index>`  *(Web Browser)*
 - :doc:`JMRI (Windows, iOS, Linux) <jmri>`
+- :doc:`Train Throttle (Windows) <train-throttle>`
+- :doc:`DigiTrainsPro (Android) <digitrainspro>` *- Requires JMRI*
 
 
 .. toctree::
@@ -44,11 +48,13 @@ Personal Computers
     EX-Web-Throttle (Web Browser) </ex-webthrottle/index>
     jmri
     Engine Driver (Android) <engine-driver>
+    Train Throttle (Windows) <train-throttle>
     DCCpp CAB (android) <dccpp-cab>
     Cab Engineer: DCC Throttle (Android) <cab-engineer>
-    DigiTrainsPro (Android) <digitrainspro>
+    DigiTrainsPro (Android, iOS, Windows) <digitrainspro>
+    RtDtive DCC++ (Android) <rtdrive-dccpp>
     WiThrottle (iOS) <withrottle>
     Locontrol (iOS) <locontrol>
     SRCP Client (iOS) <srcpclient>
-    RtDtive DCC++ (Android) <rtdrive-dccpp>
     Train Driver (iOS) <train-driver>
+ 

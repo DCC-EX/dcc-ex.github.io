@@ -43,7 +43,7 @@ Android (Phones and Tablets)
 - :doc:`Engine Driver (Android)<software/engine-driver>`
 - :doc:`DCCpp CAB (android) <software/dccpp-cab>`
 - :doc:`Cab Engineer: DCC Throttle (Andriod) <software/cab-engineer>`
-- :doc:`DigiTrainsPro (Android) <software/digitrainspro>` *- Requires JMRI*
+- :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
 - :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
 
 Apple iOS (Phones and Tablets)
@@ -53,6 +53,8 @@ Apple iOS (Phones and Tablets)
 - :doc:`WiThrottle (iOS) <software/withrottle>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`Train Driver (iOS) <software/train-driver>`
+- :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
+
 
 Dedicated Hardware
 ------------------
@@ -67,8 +69,11 @@ Dedicated Hardware
 Personal Computers
 ------------------
 
-- :doc:`EX-WebThrottle </ex-webthrottle/index>`
+- :doc:`EX-WebThrottle </ex-webthrottle/index>`  *(Web Browser)*
 - :doc:`JMRI (Windows, iOS, Linux) <software/jmri>`
+- :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
+- :doc:`Train Throttle <software/train-throttle>`
+
 
 ----
 
@@ -342,7 +347,7 @@ Table - Throttles by Technology
       -  
       -  
 
-    * -  Train Throttle
+    * -  :doc:`Train Throttle <software/train-throttle>`
       -  
       -  Net
       -  WiT

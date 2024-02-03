@@ -23,7 +23,7 @@ Digital Command Control (DCC)
 -----------------------------------
 
 National Model Railroad Association (NMRA)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The standards for the DCC protocol.
 
 Standards (S-)

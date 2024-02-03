@@ -49,5 +49,5 @@ Technical Notes (TN-)
 Technical Informations (TI-)
 .............................
 
-- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TI-9.1.1 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/ti-9.1.1_sources_for_connectors_for_dcc.pdf>_: Sources for Connectors for DCC Decoders 
-- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TI-9.2.3 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/ti-9.1.1_sources_for_connectors_for_dcc.pdf>_: Serial User Standard Interface for DCC
+- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TI-9.1.1 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/ti-9.1.1_sources_for_connectors_for_dcc.pdf>`_: Sources for Connectors for DCC Decoders 
+- `NRMA <https://www.nmra.org/index-nmra-standards-and-recommended-practices>`_ `TI-9.2.3 <https://www.nmra.org/sites/default/files/standards/sandrp/pdf/technotes/ti-9.1.1_sources_for_connectors_for_dcc.pdf>`_: Serial User Standard Interface for DCC

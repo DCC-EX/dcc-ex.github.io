@@ -356,7 +356,7 @@ There are three options to define |EX-R| scripts or sequences:
 ``SEQUENCE( id )`` - A general purpose automation sequence that is not advertised to WiThrottles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activites. See :ref:`ex-rail/examples:automating various non-track items`, :ref:`ex-rail/examples:Point to Point Shuttle`, and :ref:`ex-rail/examples:multiple inter-connected trains` for further examples.
+  A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activities. See :ref:`ex-rail/examples:automating various non-track items`, :ref:`ex-rail/examples:Point to Point Shuttle`, and :ref:`ex-rail/examples:multiple inter-connected trains` for further examples.
 
 |hr-dashed|
 
@@ -1237,14 +1237,14 @@ DCC Accessory Decoder Control
 ``XFON( cab, func )`` - Send DCC function ON to specific cab
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  Send DCC function ON to specific cab (eg coach lights) *Not for Loco use - use FON instead!*
+  Send DCC function ON to specific cab (e.g. coach lights) *Not for Loco use - use FON instead!*
 
 |hr-dashed|
 
 ``XFOFF( cab, func )`` - Send DCC function OFF to specific cab
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  Send DCC function OFF to specific cab (eg coach lights) Not for Loco use - use FON instead!
+  Send DCC function OFF to specific cab (e.g. coach lights) Not for Loco use - use FON instead!
 
   All the above "ON" commands are event handlers that trigger a sequence of commands to run when the event occurs. These can vary from the most basic tasks such as setting signals when turnouts are closed or thrown, to triggering complete automation sequences via a DCC accessory decoder.
 
@@ -1390,7 +1390,7 @@ Drive logo in reverse at DCC speed 0-127 (1=ESTOP)
       // A defined automation sequence that will do activities only if loco ID 123 is in use
       AUTOSTART AUTOMATION(1, "Do stuff for loco 123")
         IFLOCO(123)
-          // Define activities here eg. blow horn or whistle
+          // Define activities here e.g. blow horn or whistle
         ENDIF
         DONE
 
@@ -1481,7 +1481,7 @@ Controlling Overload/Shorts
 
   Creates a complementary event handler for the selected track, to be executed when the MotorDriver routines indicate the overload is cleared. Refer also to :doc:`/trackmanager/index`
 
-  Note:  AFTEROVERLOAD is only relevent when used within and ONOVERLOAD.... DONE structure.
+  Note:  AFTEROVERLOAD is only relevant when used within and ONOVERLOAD.... DONE structure.
 
 |hr-dashed|
 

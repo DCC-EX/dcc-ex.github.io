@@ -27,4 +27,4 @@ So, in light of this, a library that takes away the heavy lifting of using/inter
 
 **One great big caveat** to this announcement is that the library version is 0.0.1, meaning it has had limited testing and is likely going to have bugs associated with it.
 
-For documentation on how to implement and use the libray, refer to the `DCCEXProtocol documentation <https://dcc-ex.com/DCCEXProtocol/index.html>`_.
+For documentation on how to implement and use the library, refer to the `DCCEXProtocol documentation <https://dcc-ex.com/DCCEXProtocol/index.html>`_.

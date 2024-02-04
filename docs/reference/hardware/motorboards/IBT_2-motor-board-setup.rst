@@ -256,7 +256,7 @@ Please do the following to ensure you won't damage the Arduino, your layout, or 
 
 * Test your board to see what voltage it reports for 2 or 3 different currents and extrapolate to make sure that at your required current, example 5A, the current sense output does not produce more than 5V.
 * Use a 5.1V zener diode (D1) and current limiting resistor (R2). This should be 220 Ohms, which will protect you from 5.2V to at least 12V of over voltage at the Arduino analog pin. The Diode can be 5V or 5.1V like a 1N4733A, 1N5231B, etc. Note that after 3.5V the response is no longer linear when using the diode, so you you may want to design your system to output its current sense range between 0 and 4V and use 5V as the over limit setting.
-* Check your board for at least 2 resistors that are labeled "103", you will need a magnifier or to take a picture with your phone and zoom in. 103 = 10k (10 followed by 3 zeros). These are the second from the left resistor in each bank of 4 (R5 and R6). See :numref:`ibt2-sense-resistors`. When we tie the two Command Station outputs together, that gives us 5k of resistance from which to measure a voltage drop and convert that to current. If you added another 10k resistor (R1) in parallel with the others, that would give you 3.3k which reduces the voltage to the Arduino analog pin to be able to measure higher currents.
+* Check your board for at least 2 resistors that are labelled "103", you will need a magnifier or to take a picture with your phone and zoom in. 103 = 10k (10 followed by 3 zeros). These are the second from the left resistor in each bank of 4 (R5 and R6). See :numref:`ibt2-sense-resistors`. When we tie the two Command Station outputs together, that gives us 5k of resistance from which to measure a voltage drop and convert that to current. If you added another 10k resistor (R1) in parallel with the others, that would give you 3.3k which reduces the voltage to the Arduino analog pin to be able to measure higher currents.
 * Put a 5A fuse on each output leg going to your track.
 
 .. figure:: /_static/images/motorboards/ibt_2_resistors.jpg
@@ -333,7 +333,7 @@ For the Engineers, the definitions and implementation for motor board control ar
   **MotorDriver.h** - Creates the "MotorDriver" C++ class that defines the data type for a motor controller
   **MotorDriver.cpp** - The routines that control the operation of a motor controller (Power, Current Sense, etc.)
 
-Normally you would never need to get into these files, we just mention them because it can be helpful to see the examples in the code if you want to learn more about how to customize your motor board definition or see how things work.
+Normally you would never need to get into these files, we just mention them because it can be helpful to see the examples in the code if you want to learn more about how to customise your motor board definition or see how things work.
 
 IBT_2 schematic
 ---------------

@@ -122,7 +122,7 @@ where mmmm is the time in minutes since midnight.  This is (hours * 60) + mins a
 
     <JC 375 4>
 
-would execute the command immediately (4 being the percieved speed factor i.e. 1 minutes every 15 seconds).  The |EX-CS| would respond with:
+would execute the command immediately (4 being the perceived speed factor i.e. 1 minutes every 15 seconds).  The |EX-CS| would respond with:
 
   .. code-block:: 
 

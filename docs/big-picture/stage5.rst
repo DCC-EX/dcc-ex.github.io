@@ -443,7 +443,7 @@ Now we have determined our various turntable and traverser positions and have ca
 Control via diagnostic commands
 -------------------------------
 
-For basic control and validation of the turntable and traverser positions, this can be accomplished using the diagostic command ``<D TT vpin steps activity>`` via the serial console of you |EX-CS|.
+For basic control and validation of the turntable and traverser positions, this can be accomplished using the diagnostic command ``<D TT vpin steps activity>`` via the serial console of you |EX-CS|.
 
 .. collapse:: Expand to see the diagnostic commands to move to our calculated turntable positions.
 
@@ -525,7 +525,7 @@ Control and automation with EX-RAIL
 
 While controlling |EX-TT| via the diagnostic command is great for testing and tuning our various |EX-TT| positions, it's not exactly the friendliest way to control the turntable during normal use of our layout.
 
-There is a much better way to do this by using the ``MOVETT(vpin, steps, activity)`` command available in |EX-R| as part of a route definition that is advertised to |wiThrottle| apps and |Engine Driver|. This allows you to simply select the appropriate route from the route list, and |EX-R| and |EX-TT| will do their things, rotating or moving to the provided position. This is also covered in :ref:`ex-turntable/test-and-tune:advertising positions to engine driver and withrottle applications`.
+There is a much better way to do this by using the ``MOVETT(vpin, steps, activity)`` command available in |EX-R| as part of a route definition that is advertised to |wiThrottle| apps and |Engine Driver|. This allows you to simply select the appropriate route from the route list, and |EX-R| and |EX-TT| will do their things, rotating or moving to the provided position. This is also covered in :ref:`ex-turntable/test-and-tune:advertising positions to engine driver and WiThrottle applications`.
 
 Controlling your |EX-TT| this way also allows you to incorporate other automated activities associated with turntable or traverser movements, such as using the virtual block commands ``<RESERVE>`` and ``<FREE>`` to ensure no other automation sequences attempt to drive a loco on to the turntable while it is moving, to control auxiliary warning LEDs to indicate movements are happening, and so forth.
 
@@ -624,7 +624,7 @@ This macro is only defined once, and encapsulates all the activities you wish to
 In this case, this macro will do these things:
 
 * ``#define EX_TURNTABLE(route_id, reserve_id, vpin, steps, activity, desc) \`` - this line defines how you need to call the macro and provide the parameters for each ROUTE later
-* ``ROUTE(route_id, desc) \`` - this line defines the ROUTE ID, and the description, which is what will appear in |wiThrottle| apps and |Engine Driver|
+* ``ROUTE(route_id, desc) \`` - this line defines the ROUTE ID, and the description, which is what will appear in |WiThrottle| apps and |Engine Driver|
 * ``RESERVE(reserve_id) \`` - this line attempts to reserve the virtual block; if it is already reserved by another ROUTE, it will pause until it is free, otherwise it will reserve it and continue
 * ``MOVETT(vpin, steps, activity) \`` - this line is what actually tells |EX-TT| what to do, based on the step count and activity provided
 * ``WAITFOR(vpin) \`` - this line tells |EX-R| not to continue processing further until such time as |EX-TT| has finished moving

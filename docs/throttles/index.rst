@@ -104,7 +104,7 @@ DCC-EX (DCC-EX Native Commands)
 - :doc:`DccExController (Physical) <hardware/dccexcontroller>`
 - :doc:` DCC-EX Native command library - DCCEXProtocol <throttles/native-protocol-library>`
 
-wiThrottle Protocol Based Throttles
+WiThrottle Protocol Based Throttles
 -----------------------------------
 
 - :doc:`Engine Driver (Android)<software/engine-driver>`

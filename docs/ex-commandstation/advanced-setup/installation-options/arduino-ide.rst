@@ -102,7 +102,7 @@ From the "Tools" menu select the "Board" menu, then "Arduino AVR boards", and th
 
 Then select "Processor" and make sure it says "ATMega2560"
 
-Last, select "Port" and find the port on your computer that recognizes the Arduino. If you don't see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here `Drivers for the CH340 <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
+Last, select "Port" and find the port on your computer that recognises the Arduino. If you don't see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here `Drivers for the CH340 <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
 
 .. figure:: /_static/images/arduino-ide/board_port_mega.jpg
    :alt: Select the COM Port

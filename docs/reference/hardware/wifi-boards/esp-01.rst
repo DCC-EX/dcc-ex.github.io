@@ -15,7 +15,7 @@ ESP-01 and ESP-01s
       :depth: 1
       :local:
 
-This is the board that started it all. It fueled the WiFi revolution in small devices. In fact, this little board is actually a microcontroller that is more powerful than the Arduino Uno! The difference between the 01 and the 01S is primarily that there is more memory on the 01-"S". Since the 01 version has been retired, any new board you get should be the 01s, but either will work.
+This is the board that started it all. It fuelled the WiFi revolution in small devices. In fact, this little board is actually a microcontroller that is more powerful than the Arduino Uno! The difference between the 01 and the 01S is primarily that there is more memory on the 01-"S". Since the 01 version has been retired, any new board you get should be the 01s, but either will work.
 
 .. figure:: /_static/images/assembly/esp-01s_2.png
    :alt: ESP-01s

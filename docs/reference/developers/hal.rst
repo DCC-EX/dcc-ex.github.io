@@ -397,7 +397,7 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
   5.  At the next loop entry of the program, the test for competition status shows that the request block is no longer busy.  
       The program may then retrieve the success/failure status, and any data that has been received, for further processing.  
 
-  When necessary, the operation may be repeated by requeueing the original request block (either unchanged or with different parameters or data).
+  When necessary, the operation may be repeated by requeuing the original request block (either unchanged or with different parameters or data).
 
   If the non-blocking |I2C| driver is not available (e.g. on controllers other than ATmega328, ATmega2560 and ATmega4809), 
   the blocking |I2C| functions in the Wire library are automatically used instead, without any changes to the Command Station code.

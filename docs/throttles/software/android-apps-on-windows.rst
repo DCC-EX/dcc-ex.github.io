@@ -17,7 +17,7 @@ There are a least two methods:
 BlueStacks
 ==========
 
-The `BlueStacks <https://www.bluestacks.com/>`_ app allows you to install and run most Android apps on most Windows PCs.
+The `BlueStacks <https://www.bluestacks.com/>`_ app allows you to install and run most Android apps on most recent Windows PCs.
 
 It has the advantages of:
 
@@ -27,7 +27,7 @@ It has the advantages of:
 
 Disadvantages include:
 
-- Advertisements
+- Has advertisements
 
 Follow the instructions on their `site <https://www.bluestacks.com/>`_ to install BlueStacks, then get the appropriate .apk to install the throttle app you want.  e.g. The Engine Driver .apk is available from the `Engine Driver site <https://enginedriver.mstevetodd.com/downloads>`_`
 
@@ -38,14 +38,14 @@ Windows Subsystem for Android
 
 It has the advantages of:
 
-- No Advertisements
 - Built in feature of Windows 11
+- No Advertisements
 
 Disadvantages include:
 
 - Only works of Windows 11 PCs with an SSD (not a physical Hard Drive)
 - Not very user friendly installation (sideloading) of non-Amazon approved apps (i.e. the throttle apps)
-- Does not Allow you to run multiple instances of same app at the same time
+- Does *not* allow you to run multiple instances of same app at the same time
 
 Follow the instructions `here <https://www.windowscentral.com/how-sideload-android-apps-using-wsa-windows-11>`_ `or here <https://www.xda-developers.com/how-to-sideload-android-apps-on-windows-11/>`_ to setup Windows Subsystem for Android to allow 'sideloading'.
 

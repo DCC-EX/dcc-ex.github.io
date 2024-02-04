@@ -304,7 +304,7 @@ Why is Phase Important?
 
 The short answer is that if one block is out of phase with another and your loco bridges the gap, you will have a dangerous short circuit! Let's look at this situation in a bit more detail for the Engineers.
 
-The DCC Signal energizes one track with a short voltage pulse (58us) for a "1" and a long one (116us)
+The DCC Signal energises one track with a short voltage pulse (58us) for a "1" and a long one (116us)
 for a "0". It then immediately switches and does the same thing on the other track. The "pulse train" looks a bit like this and is the way most people first "see" the DCC Waveform:
 
 .. figure:: /_static/images/dcc/dcc_signal.png
@@ -317,7 +317,7 @@ for a "0". It then immediately switches and does the same thing on the other tra
 
 But those familiar with how DC and AC voltage works might look at that and see a square wave where there is positive and negative voltage. That isn't what is happening, there is never any negative voltage! Only the current changes direction inside something connected to the track, like the decoder in your loco. There is no "ground", only the voltage present on one rail with respect to the other.
 
-In order to fully understand how this works, we have to stop thinking in terms of analog electronics and think in terms of the digital world. The DCC pulses provide both the voltage to operate locomotives and accessories connected to the tracks, and the data decoders need to operate them. Each rail carries the same information, just 180 degrees out of phase from the other. When one rail has a pulse of full voltage, the other is zero. We believe we are the first to present DCC in this fashion. Look at figure 8 and see that the pulses energize one rail with respect to the other back and forth.
+In order to fully understand how this works, we have to stop thinking in terms of analog electronics and think in terms of the digital world. The DCC pulses provide both the voltage to operate locomotives and accessories connected to the tracks, and the data decoders need to operate them. Each rail carries the same information, just 180 degrees out of phase from the other. When one rail has a pulse of full voltage, the other is zero. We believe we are the first to present DCC in this fashion. Look at figure 8 and see that the pulses energise one rail with respect to the other back and forth.
 
 .. figure:: /_static/images/dcc/dcc_pulse_train1.png
    :align: center
@@ -390,7 +390,7 @@ Circuit One
 
 Comprised of just 2 diodes and two resistors, this circuit is designed to connect to BOTH rails of a known good block and connect a probe to ONE rail at a time on the block under test. If your green LED lights, you are in phase with the rail on the other side connected to the green wire. If your red LED lights, you are in phase with the other side rail connected to the red wire.
 
-Note that during construction, the red wire is actually attached to the green LED and the green wire is attached to the red LED. You need to connect it this way to get the correctly colored LED to light.
+Note that during construction, the red wire is actually attached to the green LED and the green wire is attached to the red LED. You need to connect it this way to get the correctly coloured LED to light.
 
 **Circuit Operation** - The circuit works by only having a diode forward biased when the rail the probe end is attached to is out of phase with the corresponding rail on the known working block. With the red lead on Rail A of the known block and green lead on Rail B, when the probe is connected to Rail A on the opposite block, the red LED should light to indicate it is connected to the correct rail. The diode is reversed biased when the known Rail A is HIGH and the rail under test is LOW, so it blocks any current. But on the next half cycle when the known Rail A goes LOW and the test rail goes HIGH, the diode is forward biased and lights. In this way, the LEDs are only lit half the time, but do to our persistence of vision, and the approximately 8kHz frequency, we will just see a lit LED.
 

@@ -59,9 +59,9 @@ Why Use WiFi?
 
 .. sidebar:: 
 
-   |tinkerer| |engineer| |BR| Using Wifi (OR Ethernet) to talk between |JMRI| and |EX-CS| is complex, slow and functionally limited and is NOT SUPPORTED. However, you can STILL use a wireless throttle with a |JMRI| setup. Assuming your PC already has WiFi capability, you can connect through THAT instead of directly to the Command Station, while the Command Station gets its commands through the USB connection.
+   |tinkerer| |engineer| |BR| Using WiFi (OR Ethernet) to talk between |JMRI| and |EX-CS| is complex, slow and functionally limited and is NOT SUPPORTED. However, you can STILL use a wireless throttle with a |JMRI| setup. Assuming your PC already has WiFi capability, you can connect through THAT instead of directly to the Command Station, while the Command Station gets its commands through the USB connection.
 
-**BEFORE you purchase a Wifi card, please consider whether you actually need it.**
+**BEFORE you purchase a WiFi card, please consider whether you actually need it.**
 
 If you wish to run trains from your phone, tablet or other |WiThrottle protocol| devices connected directly to the |EX-CS|, without a PC involved, then you **should follow the instructions below**.
 
@@ -108,7 +108,7 @@ Installing the board follows the same procedure in the previous section on :doc:
 Remove the plastic jumpers
 ---------------------------
 
-Note the two black plastic jumpers: we need to remove both of them. You can pull them off with your fingers or needle nose pliers and either stick them in a drawer or move them to the side by having them connect via one side to any of the row of Rx pins. The other end of the connector will just hang out over the Wifi Board.
+Note the two black plastic jumpers: we need to remove both of them. You can pull them off with your fingers or needle nose pliers and either stick them in a drawer or move them to the side by having them connect via one side to any of the row of Rx pins. The other end of the connector will just hang out over the WiFi Board.
 
 
 .. figure:: /_static/images/assembly/wifi_pins.jpg
@@ -171,7 +171,7 @@ ALL of the pins in the row marked Tx (the row closest to the header) are connect
 
 Take a jumper wire and connect it to any one of the Tx pins on the WiFi Board, and connect the other end to the Rx1 pin on the mega (pin 19).
 
-Take a second jumper wire and connect it to any one of the Rx pins on the Wifi Board and connect the other end to Tx1 on the mega (pin 18).
+Take a second jumper wire and connect it to any one of the Rx pins on the WiFi Board and connect the other end to Tx1 on the mega (pin 18).
 
 .. figure:: /_static/images/assembly/wifi_jumpers2.png
    :alt: Install the Jumper wires

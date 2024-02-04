@@ -140,7 +140,6 @@ Vin
 Visio
 vpin
 waveforms
-Wifi
 WiFi
 Wingzine
 wirelessly

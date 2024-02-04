@@ -216,7 +216,7 @@ Connecting a HC-05/06 to your EX-CommandStation
 
 Once your HC-05/06 module has been programmed for the correct baud rate, and has the appropriate device name and PIN set, you will need to connect it to your |EX-CS|.
 
-It is recommended to connect a HC-05/06 device to an additional serial port on your |EX-CS| rather than the first serial port. If you have no choice (eg. you use an Uno with only one serial port), then you will need to disconnect it when uploading new versions of the |EX-CS| software.
+It is recommended to connect a HC-05/06 device to an additional serial port on your |EX-CS| rather than the first serial port. If you have no choice (e.g. you use an Uno with only one serial port), then you will need to disconnect it when uploading new versions of the |EX-CS| software.
 
 This diagram outlines connecting a HC-05 to serial port 1 on a Mega2560.
 
@@ -245,7 +245,7 @@ Firstly, you will need to program the slave device as per either :ref:`reference
 
 Once your slave HC-05/06 device is ready, you will need to put your HC-05 device into "AT" command mode as per :ref:`reference/hardware/bluetooth/hc-05-06:hc-05 programming` in order to configure it as a master device, and pair it with your HC-06 device.
 
-Validate your slave device is available with ``AT+INQ`` and note the address (eg. 0002:72:0A3C7F). When specifying this device address in the "AT" commands below, it needs to be in "NAP,UAP,LAP" format, resulting in this example address becoming "0002,72,0A3C7F".
+Validate your slave device is available with ``AT+INQ`` and note the address (e.g. 0002:72:0A3C7F). When specifying this device address in the "AT" commands below, it needs to be in "NAP,UAP,LAP" format, resulting in this example address becoming "0002,72,0A3C7F".
 
 For the examples below, we will use a HC-05 pairing with a slave HC-06 using the same details from our examples above.
 

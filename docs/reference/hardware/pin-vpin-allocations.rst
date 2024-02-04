@@ -15,7 +15,7 @@ Default Pin/VPin Allocations and Recommendations
     :depth: 2
     :local:
 
-On this page, we aim to outline and summarise the various default and recommended pins (and vpins for I/O expanders) for use with various input and output devices for our primary suported microcontrollers and I/O devices and expanders. We will also include the default |I2C| addresses where appropriate.
+On this page, we aim to outline and summarise the various default and recommended pins (and vpins for I/O expanders) for use with various input and output devices for our primary supported microcontrollers and I/O devices and expanders. We will also include the default |I2C| addresses where appropriate.
 
 Microcontrollers
 ================
@@ -103,7 +103,7 @@ Arduino Uno
   * - 3 - 4
     - Digital I/O pins commonly used by motor shields or Ethernet shields
   * - 10 - 13
-    - Digial I/O pins commonly used by motor shields
+    - Digital I/O pins commonly used by motor shields
 
 .. list-table:: Uno Pins to use
   :widths: auto
@@ -166,7 +166,7 @@ Refer to :ref:`reference/developers/hal-config:mcp23017 modules` and :ref:`refer
   * - 0x20
     - 164 - 179
     - | Defined by default, default |I2C| address on some breakout boards
-      | Some breakout boards (eg. Waveshare) have 0x27 as default and will need to be changed
+      | Some breakout boards (e.g. Waveshare) have 0x27 as default and will need to be changed
   * - 0x21
     - 180 - 195
     - Defined by default, address typically needs to be configured on breakout boards

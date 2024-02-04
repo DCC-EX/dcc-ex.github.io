@@ -361,14 +361,14 @@ You can configure the WiFi for **EX-CommandStation** two ways:
    * WiFi Password
    * WiFi Channel
 
-   **WiFi Password** is optional. |BR| If this field is left blank the password will default to 'PASS_xxxxx' where 'xxxxx' will be the same as the SSID *name* that will be automatically configured.
+   **WiFi Password** is optional. |BR| If this field is left blank the password will default to 'PASS_xxxxxx' where 'xxxxxx' will be the same as the SSID *name* that will be automatically configured.
 
    **WiFi Channel** can be any value from 1-11.
 
 **Connect my EX-CommandStation to my existing wireless network** 
 
    .. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_station.png
-      :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
+      :alt: EX-Installer - EX-CommandStation - Configure WiFi - Station Mode
       :scale: 70%
       :align: center
 
@@ -376,12 +376,12 @@ You can configure the WiFi for **EX-CommandStation** two ways:
 
    If ``Connect my EX-CommandStation to my existing wireless network`` is selected, two additional options are presented:
 
-   * Wifi SSID
+   * WiFi SSID
    * WiFi Password
 
    Both are required.
 
-   *Wifi SSID* is the name of your home network.
+   *WiFi SSID* is the name of your home network.
 
    *WiFi Password* is the password for your home network.
 
@@ -476,7 +476,7 @@ iii) 'Advanced Configuration' screen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: /_static/images/ex-installer/ex_cs_advanced_config.png
-   :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
+   :alt: EX-Installer - EX-CommandStation - Configure WiFi - Station Mode
    :scale: 40%
    :align: left
 

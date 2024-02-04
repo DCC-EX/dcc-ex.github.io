@@ -57,7 +57,7 @@ The |EX-TT| integration includes:
 * Out-of-the-box support for several common stepper drivers and motors
 * Traverser mode for horizontal/vertical traversers, and turntables that cannot rotate a full 360 degrees
 * Automatic or manual DCC signal phase switching to align bridge track phase with layout phase (if your turntable doesn't do this already)
-* An LED and accessory output to control turntable specific automations (eg. flashing warning light)
+* An LED and accessory output to control turntable specific automations (e.g. flashing warning light)
 
 .. note:: 
 

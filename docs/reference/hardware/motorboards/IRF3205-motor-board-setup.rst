@@ -211,13 +211,18 @@ Steps (Replace IRF3205)
 -------------------------
 
 1. Make sure all power supplies are disconnected from your Arduino and the IRF3205 motor board.
-2. Option - TODO: fnd current sense / fuses! See the notes below for more detail about current sense and a suggestion for using an external current sense board.
-3. Select your IRF3205 board in the config.h file. ***TODO: fnd need to add this type***
+2. Option - See the notes below for more detail about current sense and a suggestion for using an external current sense board.
+3. Select your IRF3205 board in the config.h file.
 4. Upload the new sketch to your Arduino Mega
 
 Connect wires of the proper gauge (TODO: see gauge) from the "MOTOR1" screw terminals of the IRF3205 board to your MAIN track and connect 2 more wires from the "MOTOR2" terminals to your PROG track. 
 
-.. NOTE:: It is important that the phase of the signal to your PROG and MAIN tracks are the same if you are ever going to use <1 JOIN> to make both tracks a MAIN when the PROG track is not in use, or if you are going to use the "DriveAway" feature. TODO: fnd finish this. How do know phase?
+.. NOTE:: It is important that the phase of the signal to your PROG and MAIN tracks are the same if you are ever going to use <1 JOIN> to make both tracks a MAIN when the PROG track is not in use, or if you are going to use the "DriveAway" feature.
+
+.. todo:: 
+   Option - TODO: fnd current sense / fuses! |BR|
+   Select your IRF3205 board - TODO: fnd need to add this type
+   Note: TODO: finish this. How do know phase?
 
 Use the following diagrams to connect pins from the Arduino Mega to the IRF3205. "CS" in the table means "Current Sense":
 
@@ -291,7 +296,7 @@ This will us pin 3 for Enable and 12 for signal, which will use the "High Accura
 Upload the sketch to your Arduino. If you need help on how to upload a sketch, see :doc:`Getting Started </ex-commandstation/get-started/index>`
 
 
-.. TODO:: `LOW - Hardware <https://github.com/DCC-EX/dcc-ex.github.io/issues/427>`_ - organize the above and add pictures
+.. TODO:: `LOW - Hardware <https://github.com/DCC-EX/dcc-ex.github.io/issues/427>`_ - organise the above and add pictures
 
 .. TODO:: `LOW - Hardware <https://github.com/DCC-EX/dcc-ex.github.io/issues/427>`_ - Finish this section
 
@@ -341,7 +346,7 @@ For the Engineers, the definitions and implementation for motor board control ar
   **MotorDriver.h** - Creates the "MotorDriver" C++ class that defines the data type for a motor controller
   **MotorDriver.cpp** - The routines that control the operation of a motor controller (Power, Current Sense, etc.)
 
-Normally you would never need to get into these files, we just mention them because it can be helpful to see the examples in the code if you want to learn more about how to customize your motor board definition or see how things work.
+Normally you would never need to get into these files, we just mention them because it can be helpful to see the examples in the code if you want to learn more about how to customise your motor board definition or see how things work.
 
 IRF3205 15A Motor Board schematic
 ---------------------------------
@@ -423,7 +428,7 @@ $24.40 +tax; prime shipping
    
    I wonder if the 1.5 ohm 3 watt resistor could be added to this setup instead of the MAX471.
    
-   Perhaps the two channels of the IRF3205 motor board would be better utilized for two power districts.
+   Perhaps the two channels of the IRF3205 motor board would be better utilised for two power districts.
    
    Perhaps anyone who is up to the challenges of the IRF3205 would also be able to add the 1.5 ohm resistor to the L298N motor board.
    

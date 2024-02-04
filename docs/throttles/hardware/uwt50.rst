@@ -8,7 +8,7 @@ TCS UWT-50 & UWT-100 WiFi Throttles (Physical)
 |conductor| |tinkerer| |engineer|
 
 Train Control Systems (TCS) makes a nice line of physical tactile hardware based controllers. 
-Since they support the |WiThrottle protocol|, they work seemlessly with the |EX-CS|. 
+Since they support the |WiThrottle protocol|, they work seamlessly with the |EX-CS|. 
 Recently preliminary testing on both the UWT-50 and the UWT-100 WiFi Throttles are very encouraging.
 
 Some of the major benefits of |EX-CS| for TCS UWT-Throttle users are;

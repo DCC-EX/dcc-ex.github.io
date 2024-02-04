@@ -24,7 +24,7 @@ Diagnostic commands
 
 ``<D>`` - Issue this command to toggle the diagnostic display on and off. When enabled, a display of the configuration and state of every digital and analogue pin will be displayed in the serial console, which will be updated every 5 seconds by default. The display delay is configurable.
 
-``<D delay>`` - Issue this command to adjust the diagnostic display delay, where "delay" is a number in seconds eg. ``<D 1>`` will display the diagnostic data every second. This will override the "DIAG_CONFIG_DELAY" specified in "myConfig.h". If diagnostics are not enabled, this command will also enable them.
+``<D delay>`` - Issue this command to adjust the diagnostic display delay, where "delay" is a number in seconds e.g. ``<D 1>`` will display the diagnostic data every second. This will override the "DIAG_CONFIG_DELAY" specified in "myConfig.h". If diagnostics are not enabled, this command will also enable them.
 
 Testing commands
 ================

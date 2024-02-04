@@ -158,7 +158,7 @@ Obtaining loco (cab) status
 Turnouts/Points
 ^^^^^^^^^^^^^^^
 
-The conventional turnout definition commands and the ``<H>`` responses do not contain information about the turnout description which may have been provided in an EX-RAIL script. A turnout description is much more user friendly than the identifier (eg. T123), and having a list helps the throttle UI build a suitable set of buttons.
+The conventional turnout definition commands and the ``<H>`` responses do not contain information about the turnout description which may have been provided in an EX-RAIL script. A turnout description is much more user friendly than the identifier (e.g. T123), and having a list helps the throttle UI build a suitable set of buttons.
 
 ``<JT>`` - Returns a list of turnout IDs. The throttle should be uninterested in the turnout technology used but needs to know the IDs it can throw/close and monitor the current state.
 
@@ -239,7 +239,7 @@ Note that to obtain a complete definition for a turntable/traverser, the turntab
 
   Example response:
 
-  - ``<jT 1 2>`` - Turnable IDs 1 and 2 are defined.
+  - ``<jT 1 2>`` - Turntable IDs 1 and 2 are defined.
 
 ``<JO 1>`` - Returns details of turntable ID 1.
 

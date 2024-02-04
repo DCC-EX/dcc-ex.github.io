@@ -83,7 +83,7 @@ Sequences types fall in the following broad groups:
 Manually Triggered Sequence Types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Manually triggered sequences are advertised to WiThrottles so you can activate them on your throttles (e.g. |engine driver| or |withrottle|). They are one of:
+Manually triggered sequences are advertised to WiThrottles so you can activate them on your throttles (e.g. |engine driver| or |WiThrottle|). They are one of:
 
 .. list-table:: 
     :widths: 30 70

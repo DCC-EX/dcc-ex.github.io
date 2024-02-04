@@ -33,4 +33,4 @@ For instructions on how to get the new |EX-I| and how to use it, head over to th
   :alt: New version
   :scale: 50%
 
-.. [1] For Windows users with generic or clone Arduino devices, you will still need to install suitable USB to serial drivers (eg. CH340/341) as the Arduino CLI only provides drivers for genuine Arduino devices.
+.. [1] For Windows users with generic or clone Arduino devices, you will still need to install suitable USB to serial drivers (e.g. CH340/341) as the Arduino CLI only provides drivers for genuine Arduino devices.

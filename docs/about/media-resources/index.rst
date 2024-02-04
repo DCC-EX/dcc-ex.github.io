@@ -43,7 +43,7 @@ Those with an Android phone or tablet can use the Engine Driver App from the Pla
 BlueStack Android Emulator
 ---------------------------
 
-What if you don't have an Android phone? Or, what if you just want to use a computer instead? Engine Driver is arguably the premier phone throttle app available, especially when considering all of its enhancements and features specifically tailored for the |EX-CS|. An Android Emulator, like BlueStacks, is the answer. A Google email account to download the free BlueStacks software and a fairly "modern" laptop or computer is all that is needed. Once installed, virtually any Android phone App, eg Engine Driver, can be downloaded from the Google Play Store and run on a computer via Bluestacks, no phone necessary.
+What if you don't have an Android phone? Or, what if you just want to use a computer instead? Engine Driver is arguably the premier phone throttle app available, especially when considering all of its enhancements and features specifically tailored for the |EX-CS|. An Android Emulator, like BlueStacks, is the answer. A Google email account to download the free BlueStacks software and a fairly "modern" laptop or computer is all that is needed. Once installed, virtually any Android phone App, e.g. Engine Driver, can be downloaded from the Google Play Store and run on a computer via BlueStacks, no phone necessary.
 
 The following image is a Windows computer running multiple "instances" of Engine Driver on the same computer. 
 

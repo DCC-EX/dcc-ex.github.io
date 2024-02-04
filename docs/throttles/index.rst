@@ -74,6 +74,8 @@ Personal Computers
 - :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
 - :doc:`Train Throttle <software/train-throttle>`
 
+Note: The Android throttle apps listed above can be made to made to run on Windows PCs. See :doc:`Running Android apps on Microsoft Windows <software/android-apps-on-windows>`.
+
 
 ----
 

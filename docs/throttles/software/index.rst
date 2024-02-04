@@ -39,6 +39,7 @@ Personal Computers
 - :doc:`JMRI (Windows, iOS, Linux) <jmri>`
 - :doc:`Train Throttle (Windows) <train-throttle>`
 - :doc:`DigiTrainsPro (Android) <digitrainspro>` *- Requires JMRI*
+- :doc:`Railroad Automation <railroad-automation>` *- Requires IoTT Red Hat*
 
 Note: The Android throttle apps listed above can be made to made to run on Windows PCs. See :doc:`Running Android apps on Microsoft Windows <android-apps-on-windows>`.
 
@@ -59,4 +60,5 @@ Note: The Android throttle apps listed above can be made to made to run on Windo
     Train Driver (iOS) <train-driver>
     Train Throttle (Windows) <train-throttle>
     Android Apps on Windows <android-apps-on-windows>
+    Railroad Automation (Windows) <railroad-automation>
  

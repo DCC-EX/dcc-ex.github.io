@@ -73,6 +73,7 @@ Personal Computers
 - :doc:`JMRI (Windows, iOS, Linux) <software/jmri>`
 - :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
 - :doc:`Train Throttle <software/train-throttle>`
+- :doc:`Railroad Automation <software/railroad-automation>` *- Requires IoTT Red Hat*
 
 Note: The Android throttle apps listed above can be made to made to run on Windows PCs. See :doc:`Running Android apps on Microsoft Windows <software/android-apps-on-windows>`.
 
@@ -195,7 +196,7 @@ Table - Throttles by Technology
       -  X
       -  X
 
-    * -  Railroad Automation
+    * -  :doc:`Railroad Automation <software/railroad-automation>`
       -  
       -  Net / LocoNet
       -  LocoNet
@@ -464,13 +465,14 @@ Table - Throttles by Technology
 
 **Legend**
 
-  Net = Wifi or LAN networks
-
+  Net = Wifi or LAN networks |BR|
   Free / paid = Both Free and Paid versions are available. The free version may be limited in features. |BR|
   Native = Uses the Native DCC-EX command / command protocols |BR|
   WiT = Uses the WiThrottle command protocol |BR|
   Web = Requires the use of a Web Browser |BR|
   Win = Windows 7 and above
+
+Note: The Android throttle apps listed above can be made to made to run on Windows PCs. See :doc:`Running Android apps on Microsoft Windows <software/android-apps-on-windows>`.
 
 ----
 

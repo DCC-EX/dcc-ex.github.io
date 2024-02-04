@@ -40,6 +40,7 @@ Personal Computers
 - :doc:`Train Throttle (Windows) <train-throttle>`
 - :doc:`DigiTrainsPro (Android) <digitrainspro>` *- Requires JMRI*
 
+Note: The Android throttle apps listed above can be made to made to run on Windows PCs. See :doc:`Running Android apps on Microsoft Windows <android-apps-on-windows>`.
 
 .. toctree::
     :maxdepth: 1
@@ -48,7 +49,6 @@ Personal Computers
     EX-Web-Throttle (Web Browser) </ex-webthrottle/index>
     jmri
     Engine Driver (Android) <engine-driver>
-    Train Throttle (Windows) <train-throttle>
     DCCpp CAB (android) <dccpp-cab>
     Cab Engineer: DCC Throttle (Android) <cab-engineer>
     DigiTrainsPro (Android, iOS, Windows) <digitrainspro>
@@ -57,4 +57,6 @@ Personal Computers
     Locontrol (iOS) <locontrol>
     SRCP Client (iOS) <srcpclient>
     Train Driver (iOS) <train-driver>
+    Train Throttle (Windows) <train-throttle>
+    Android Apps on Windows <android-apps-on-windows>
  

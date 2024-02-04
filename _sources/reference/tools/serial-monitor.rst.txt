@@ -61,7 +61,7 @@ Start the Arduino IDE. You should see something like this:
 Select the Correct COM Port
 ----------------------------
 
-Select "Port" and find the port on your computer that recognizes the Arduino. If you don't see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here `Drivers for the CH340 <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
+Select "Port" and find the port on your computer that recognises the Arduino. If you don't see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here `Drivers for the CH340 <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
 
 .. figure:: /_static/images/arduino-ide/board_port_mega.jpg
    :alt: Select the COM Port

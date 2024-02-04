@@ -18,7 +18,7 @@ The EX-IOExpander communication protocol
 
 There is a protocol of sorts in place that enables the device driver in your |EX-CS| to configure |EX-IO|, know when it is ready for operation, discover what version is installed on it, and then to enter normal operation mode to send/receive data.
 
-There are seven registers or instructions used in this procotol:
+There are seven registers or instructions used in this protocol:
 
 - EXIOINIT = 0xE0 - Initialise the setup procedure
 - EXIORDY = 0xE1 - Setup procedure complete
@@ -51,7 +51,7 @@ This is the device setup/configuration process:
 Digital input configuration
 ---------------------------
 
-When a digital input is defined via either |EX-R| (eg. ``AT(vpin)``, ``AFTER(vpin)``, ``IF(vpin)``) or the ``<S id vpin pullup>`` DCC-EX command, this triggers the configuration function which sends that information to the |EX-IO| device and must trigger it to start monitoring the pin and sending the data back to the device driver:
+When a digital input is defined via either |EX-R| (e.g. ``AT(vpin)``, ``AFTER(vpin)``, ``IF(vpin)``) or the ``<S id vpin pullup>`` DCC-EX command, this triggers the configuration function which sends that information to the |EX-IO| device and must trigger it to start monitoring the pin and sending the data back to the device driver:
 
 - Validates the digital pin hasn't already been defined as an analogue pin elsewhere
 - Device driver sends "EXIODPUP" with the pin number and pullup flag (0 no pullup, 1 pullup)
@@ -76,7 +76,7 @@ The |EX-IO| device must continuously send the digital and analogue input pin val
 
   - Each byte in the buffer represents up to 8 pin states
   - The buffer must contain the correct number of bytes to represent the number of all digital pins
-  - The buffer bytes must be sent in ascending order, ie. the first byte contains the first 8 digital pin states
+  - The buffer bytes must be sent in ascending order, i.e. the first byte contains the first 8 digital pin states
 
 - Device driver sends "EXIORDAN"
 - |EX-IO| must send a buffer containing all analogue input pin values:
@@ -84,7 +84,7 @@ The |EX-IO| device must continuously send the digital and analogue input pin val
   - Each input pin is represented by two bytes in the buffer
   - The least significant byte of the pin's value is received first, followed by the most significant byte
   - The buffer must contain the correct number of bytes to represent the number of all analogue pins
-  - The buffer bytes must be sent in ascending order, ie. the first byte contains the least significant byte of the first pin's value, with the second byte containing the most significant byte of the first pin's value
+  - The buffer bytes must be sent in ascending order, i.e. the first byte contains the least significant byte of the first pin's value, with the second byte containing the most significant byte of the first pin's value
 
 Digital reads
 -------------

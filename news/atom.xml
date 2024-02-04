@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2024-02-04T00:42:21.980497+00:00</updated>
+  <updated>2024-02-04T06:30:41.960388+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.3">ABlog</generator>
@@ -21,7 +21,7 @@
 &lt;p&gt;We figure for those who want to write throttle software and interact with the &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt; are probably more interested in making their software work rather than figuring out how to correctly parse our native API commands and respond appropriately to the various command responses and broadcasts that are generated and need to be dealt with.&lt;/p&gt;
 &lt;p&gt;So, in light of this, a library that takes away the heavy lifting of using/interpreting the API commands seemed like a sensible approach.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;One great big caveat&lt;/strong&gt; to this announcement is that the library version is 0.0.1, meaning it has had limited testing and is likely going to have bugs associated with it.&lt;/p&gt;
-&lt;p&gt;For documentation on how to implement and use the libray, refer to the &lt;a class="reference external" href="https://dcc-ex.com/DCCEXProtocol/index.html"&gt;DCCEXProtocol documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For documentation on how to implement and use the library, refer to the &lt;a class="reference external" href="https://dcc-ex.com/DCCEXProtocol/index.html"&gt;DCCEXProtocol documentation&lt;/a&gt;.&lt;/p&gt;
 &lt;/section&gt;
 </content>
     <link href="https://dcc-ex.com/news/posts/20231207.html" rel="alternate"/>
@@ -108,7 +108,7 @@
     <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
 &lt;section id="version-5-is-here"&gt;
 
-&lt;p&gt;&lt;span class="new-in-v5"&gt;New in version 5 &lt;/span&gt; Yep, that’s right, the much anticipated &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt; version 5 release is here at last! This is a huge release, adding significant new features like &lt;span class="ex-suffix"&gt;TrackManager&lt;/span&gt;, enhancing existing capabilities, introducting new and enhanced I/O support, along with other associated products such as &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;FastClock&lt;/span&gt;, &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;, and &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;IOExpander&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span class="new-in-v5"&gt;New in version 5 &lt;/span&gt; Yep, that’s right, the much anticipated &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt; version 5 release is here at last! This is a huge release, adding significant new features like &lt;span class="ex-suffix"&gt;TrackManager&lt;/span&gt;, enhancing existing capabilities, introducing new and enhanced I/O support, along with other associated products such as &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;FastClock&lt;/span&gt;, &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;, and &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;IOExpander&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;We highly recommend upgrading to version 5 to take advantage of the improvements we’ve made, and especially for those users who are using our new &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;MotorShield8874&lt;/span&gt;, as we’ve improved how it deals with overloads and inrush current amongst other enhancements.&lt;/p&gt;
 &lt;p&gt;To get your hands on this latest release, select &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Latest&lt;/span&gt; &lt;span class="pre"&gt;Production&lt;/span&gt;&lt;/code&gt; when running &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt; (see &lt;a class="reference internal" href="ex-installer/installing.html#download-and-run-ex-installer"&gt;&lt;span class="std std-ref"&gt;Download and Run EX-Installer&lt;/span&gt;&lt;/a&gt;), or you can download it manually by following the directions in &lt;a class="reference internal" href="download/ex-commandstation.html#latest-ex-commandstation-official-release"&gt;&lt;span class="std std-ref"&gt;Latest EX-CommandStation Official Release&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;We’ve outlined the key updates below but this is not an exhaustive list.&lt;/p&gt;
@@ -177,7 +177,7 @@
 &lt;/section&gt;
 </content>
     <link href="https://dcc-ex.com/news/posts/20230807.html" rel="alternate"/>
-    <summary>&lt;span class="new-in-v5"&gt;New in version 5 &lt;/span&gt; Yep, that’s right, the much anticipated &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt; version 5 release is here at last! This is a huge release, adding significant new features like &lt;span class="ex-suffix"&gt;TrackManager&lt;/span&gt;, enhancing existing capabilities, introducting new and enhanced I/O support, along with other associated products such as &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;FastClock&lt;/span&gt;, &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;, and &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;IOExpander&lt;/span&gt;.</summary>
+    <summary>&lt;span class="new-in-v5"&gt;New in version 5 &lt;/span&gt; Yep, that’s right, the much anticipated &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt; version 5 release is here at last! This is a huge release, adding significant new features like &lt;span class="ex-suffix"&gt;TrackManager&lt;/span&gt;, enhancing existing capabilities, introducing new and enhanced I/O support, along with other associated products such as &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;FastClock&lt;/span&gt;, &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;, and &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;IOExpander&lt;/span&gt;.</summary>
     <category term="new-in-version-5" label="new-in-version-5"/>
     <category term="news" label="news"/>
     <category term="version-5" label="version-5"/>
@@ -232,7 +232,7 @@
 &lt;aside class="footnote-list brackets"&gt;
 &lt;aside class="footnote brackets" id="id2" role="note"&gt;
 &lt;span class="label"&gt;&lt;span class="fn-bracket"&gt;[&lt;/span&gt;&lt;a role="doc-backlink" href="#id1"&gt;1&lt;/a&gt;&lt;span class="fn-bracket"&gt;]&lt;/span&gt;&lt;/span&gt;
-&lt;p&gt;For Windows users with generic or clone Arduino devices, you will still need to install suitable USB to serial drivers (eg. CH340/341) as the Arduino CLI only provides drivers for genuine Arduino devices.&lt;/p&gt;
+&lt;p&gt;For Windows users with generic or clone Arduino devices, you will still need to install suitable USB to serial drivers (e.g. CH340/341) as the Arduino CLI only provides drivers for genuine Arduino devices.&lt;/p&gt;
 &lt;/aside&gt;
 &lt;/aside&gt;
 &lt;/section&gt;
@@ -461,7 +461,7 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Other Enhancements&lt;/strong&gt;&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;UNO Progmem is optimize to allow for small EXRAIL Automation scipts to run within the limited space for testing purposes.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;UNO Progmem is optimise to allow for small EXRAIL Automation scripts to run within the limited space for testing purposes.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;PCA9685 Servo Signal board supports ‘Nopoweroffleds’, servo pins stay powered on after position reached, otherwise the new FADE would always turn off.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Position servo can use spare servo pin as a GPIO pin.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -472,10 +472,10 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 &lt;p&gt;&lt;strong&gt;4.1.1 Bug Fixes&lt;/strong&gt;&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Preserve the turnout format&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Parse multiple commands in one buffer string currectly&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Parse multiple commands in one buffer string correctly&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Fix &amp;lt;/&amp;gt; command signal status in EX-RAIL&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Read long loco addresses in EX-RAIL&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;FIX negative route IDs in WIthrottle&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;FIX negative route IDs in WiThrottle&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;See the version.h file for notes about which of the 4.1.2 features were added/changed by point release.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Known Issues&lt;/strong&gt;&lt;/p&gt;
@@ -486,7 +486,7 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;Contact info:&lt;/div&gt;
 &lt;div class="line"&gt;Name: Fred Decker&lt;/div&gt;
-&lt;div class="line"&gt;Organization: DCC-EX&lt;/div&gt;
+&lt;div class="line"&gt;Organisation: DCC-EX&lt;/div&gt;
 &lt;div class="line"&gt;Address: 113 Main Street #767, Holly Springs, NC 27540&lt;/div&gt;
 &lt;div class="line"&gt;Phone: +1 919-285-1576&lt;/div&gt;
 &lt;/div&gt;
@@ -516,7 +516,7 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;Contact info:&lt;/div&gt;
 &lt;div class="line"&gt;Name: Fred Decker&lt;/div&gt;
-&lt;div class="line"&gt;Organization: DCC-EX&lt;/div&gt;
+&lt;div class="line"&gt;Organisation: DCC-EX&lt;/div&gt;
 &lt;div class="line"&gt;Address: 113 Main Street #767, Holly Springs, NC 27540&lt;/div&gt;
 &lt;div class="line"&gt;Phone: +1 919-285-1576&lt;/div&gt;
 &lt;/div&gt;
@@ -544,13 +544,13 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 &lt;p&gt;&lt;a class="reference external" href="../../ex-commandstation/index.html"&gt;&lt;img alt="EX-CommandStation" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-ex-commandstation.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt; &lt;a class="reference external" href="../../ex-installer/index.html"&gt;&lt;img alt="EX-Installer" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-ex-installer.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt; &lt;a class="reference external" href="../../ex-webthrottle/index.html"&gt;&lt;img alt="EX-WebThrottle" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-ex-webthrottle.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt; &lt;a class="reference external" href="../../ex-rail/index.html"&gt;&lt;img alt="EX-RAIL" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-ex-rail.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt; &lt;a class="reference external" href="../../ex-turntable/index.html"&gt;&lt;img alt="EX-Turntable" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-ex-turntable.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt; &lt;a class="reference external" href="../../ex-dccinspector/index.html"&gt;&lt;img alt="EX-DCCInspector" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-ex-dccinspector.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt; &lt;a class="reference external" href="../../download/ex-commandstation.html#getting-basestation-classic"&gt;&lt;img alt="baseStationClassic" class="image-min-width-144" src="https://dcc-ex.com/_images/product-logo-basestationclassic.png" style="width: 240.0px; height: 48.0px;" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;To synopsize:&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;DCC-EX is the organization&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;DCC-EX is the organisation&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;EX-CommandStation (or EX-CS) is our command station product&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;section id="why-we-made-the-change"&gt;
 &lt;h2&gt;Why We Made the Change&lt;/h2&gt;
 &lt;p&gt;When we began this journey, we picked up on the work of Gregg E. Berman who created the original Arduino based DCC “Base Station”, called “DCC++”. He chose that name as a play on words between the NMRA’s “Digital Command Control” specification, “DCC”, and the computer programming language used on the Arduino called “C++”. If you put DCC and C++ together, you get DCC++. So DCC++ became the product name. When we extended and ultimately completely rewrote the software inspired by DCC++, we chose the name “DCC++EX” for “DCC++ Extended”. Over time and with much input from users, we decided we needed to make some changes.&lt;/p&gt;
-&lt;p&gt;The first change was calling the “Base Station” a “Command Station”. This better reflected standardized terms used in the model railroading community.&lt;/p&gt;
+&lt;p&gt;The first change was calling the “Base Station” a “Command Station”. This better reflected standardised terms used in the model railroading community.&lt;/p&gt;
 &lt;p&gt;We also noticed that there was confusion between our company/team name and the product. “DCC-EX” is the company while DCC++EX was our first product, the Command Station. DCC++EX was being used interchangeably to refer to both the company and the command station. Additionally, DCC++EX is a mouthful, it is difficult to pronounce and requires special characters (the plus signs) when written or typed. This causes issues on places that do not accept plus signs in names, like GitHub and Google.&lt;/p&gt;
 &lt;p&gt;For the above reasons, and since we have long ago expanded byond the original DCC++ project, we felt it was best to drop the “++”. At the same time, we needed to address the fact that we had a growing list of products and trademarks that should be consistent. While “EX” was always in the name, sometimes it was as a prefix and sometimes as a suffix. To remedy this, all our offerings now begin with “EX”, as in “EX-CommandStation” or “EX-CS” for short.&lt;/p&gt;
 &lt;/section&gt;
@@ -621,19 +621,19 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 &lt;p&gt;Announcing version 4.0 of its EX-CommandStation software with EX-RAIL automation and accessory control.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Operators can now have a fully automated model railroad or a separate accessory control bus for their entire layout and read CVs up to 8 times faster&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;1 February 2022 - 7am USA - Eastern Standard Time&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Holly Springs, North Carolina USA&lt;/strong&gt; - DCC-EX released the next version of its popular free and open source DCC Command Station software today. Version 4.0 of &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt; includes the new EX-RAIL &lt;sup&gt;tm&lt;/sup&gt; (Extended Railroad Automation Instruction Language) system that revolutionizes the way model railroaders can control and interact with their layouts. This new concept allows users to fully automate the operation of their trains and to manage turnouts/points, signals, lights, automations, animations, and virtually any kind of sensor, switch, servo, motor, or output, all with a very simple set of commands.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Holly Springs, North Carolina USA&lt;/strong&gt; - DCC-EX released the next version of its popular free and open source DCC Command Station software today. Version 4.0 of &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt; includes the new EX-RAIL &lt;sup&gt;tm&lt;/sup&gt; (Extended Railroad Automation Instruction Language) system that revolutionises the way model railroaders can control and interact with their layouts. This new concept allows users to fully automate the operation of their trains and to manage turnouts/points, signals, lights, automations, animations, and virtually any kind of sensor, switch, servo, motor, or output, all with a very simple set of commands.&lt;/p&gt;
 &lt;p&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt; &lt;sup&gt;tm&lt;/sup&gt; with &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;RAIL&lt;/span&gt; runs on inexpensive and readily available hardware like the Arduino and Teensy series of microcontrollers and supports standard switches, servos, and accessory boards.&lt;/p&gt;
 &lt;p&gt;Concurrent with this rollout, enhancements to the popular &lt;a class="reference internal" href="reference/glossary.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; model railroad software and &lt;a class="reference internal" href="throttles/software/engine-driver.html"&gt;&lt;span class="doc"&gt;Engine Driver&lt;/span&gt;&lt;/a&gt; smartphone and tablet app integrate tightly with the new features. Operators can create routes or automation/animation sequences and have them appear as buttons in &lt;a class="reference internal" href="throttles/software/engine-driver.html"&gt;&lt;span class="doc"&gt;Engine Driver&lt;/span&gt;&lt;/a&gt;. Press a button to begin an automation, or drive trains manually and press a button to hand them off to &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;RAIL&lt;/span&gt; to run everything unattended. Take back control with another press of a button.&lt;/p&gt;
 &lt;p&gt;Users no longer have to search for “sketches” and libraries or learn complicated C++ programming. There is no need to modify the &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt; software and risk bringing the whole system down. The only file that needs to be modified is a myAutomation file where simple commands allow the operator to define their devices and tell them what to do when the conditions they specify are triggered. An engine can be sent out from the yard, triggering turnouts/points to engage for a specific route. Along the way, all the signals and crossings operate automatically in response to sensors along the track or timings or other conditions specified by the operator.&lt;/p&gt;
 &lt;p&gt;Animations that involve a sequence, like operating cranes, arc welders, station operations, trolleys, etc. are simple to script. To make it even easier, EX-RAIL comes with many standard sequences so that an operator just needs to copy them into their script, load the file into their Command Station and connect their devices. For the first time, everything can be run from the Command Station, without the need for separate devices running custom C++ programs scattered all over the layout.&lt;/p&gt;
-&lt;p&gt;Interfacing with hardware has never been easier with the new HAL (Hardware Abstraction Layer) feature. Supported hardware such as port expander and servo controller boards are automatically detected. New types of hardware can be added by implementing a driver from a standardized interface without having to write a custom program.&lt;/p&gt;
+&lt;p&gt;Interfacing with hardware has never been easier with the new HAL (Hardware Abstraction Layer) feature. Supported hardware such as port expander and servo controller boards are automatically detected. New types of hardware can be added by implementing a driver from a standardised interface without having to write a custom program.&lt;/p&gt;
 &lt;p&gt;The new DriveAway &lt;sup&gt;tm&lt;/sup&gt; feature allows users to drive an engine onto a siding or other electrically isolated block used as a programming track. The engine can be programmed and then driven back onto the main section of the layout, all without touching the locomotive.&lt;/p&gt;
 &lt;p&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt; has enhanced capabilities to read difficult decoders, provide detailed diagnostics to avoid the dreaded “308 Error”,  and when using JMRI with CV values matching what is in the its decoder file, improve performance by a factor of 8x. Reading and writing CVs in general, whether using &lt;a class="reference internal" href="reference/glossary.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; or another method, is still significantly faster than before.&lt;/p&gt;
 &lt;p&gt;DCC-EX is a global joint effort of a group of developers and engineers located in the US, UK, Sweden, France, Australia, New Zealand, and India. For more information visit their website at &lt;a class="reference external" href="https://www.dcc-ex.com"&gt;https://www.dcc-ex.com&lt;/a&gt;.&lt;/p&gt;
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;Contact info:&lt;/div&gt;
 &lt;div class="line"&gt;Name: Fred Decker&lt;/div&gt;
-&lt;div class="line"&gt;Organization: DCC-EX&lt;/div&gt;
+&lt;div class="line"&gt;Organisation: DCC-EX&lt;/div&gt;
 &lt;div class="line"&gt;Address: 113 Main Street #767, Holly Springs, NC 27540&lt;/div&gt;
 &lt;div class="line"&gt;Phone: +1 919-285-1576&lt;/div&gt;
 &lt;/div&gt;
@@ -691,7 +691,7 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 &lt;li&gt;&lt;p&gt;Extensive logs and diagnostics in a serial monitor or the JMRI DCC++ log window&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Created many new commands&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Developed a new browser based throttle (&lt;a class="reference internal" href="ex-webthrottle/index.html"&gt;&lt;span class="doc"&gt;EX-WebThrottle&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;New “DriveAway” feature to be able to recognize a loco on a siding used as a programming track and drive off of onto the main track&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;New “DriveAway” feature to be able to recognise a loco on a siding used as a programming track and drive off of onto the main track&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;… and much, much more.&lt;/p&gt;
 &lt;/section&gt;
@@ -713,7 +713,7 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 &lt;p&gt;We needed a platform that would allow us to grow into the future. The first thing we found was that in order to allow easy changes and to be able to adapt to technology we might want to use going forward, the code needed to be more modular. Each unit needed to be a “black box” that either did just one task and did it well, or take input and generate output without having to know anything about the module it was communicating with. Therefore, we created an internal API through which the modules could communicate. By simply unplugging one unit and plugging in another we could continue to work using different devices. An example of this is input and output. It doesn’t matter whether &lt;a class="reference internal" href="reference/glossary.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; is sending commands to the &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt; or if it is a wireless Cab Controller. It doesn’t matter if the output device is the serial monitor or an I&lt;sup&gt;2&lt;/sup&gt;C display. It doesn’t matter if you want to use a serial port or a network device to route data. This makes it very easy to implement new features with new devices. We just have to create a small interface for whatever new device we want to implement. This has the side benefit of allowing the code to be more readable.&lt;/p&gt;
 &lt;p&gt;Next, the Waveform Generator needed 2 timers and interrupts, one for the Main track signal and one for the Programming track. The Uno only has 3 timers. So 2 of them were already tied up for sending the DCC signal. Since the programming track sits idle most of the time, and both signals were always being generated to the input of the motor board, processing power was being wasted that could be put to use for something else. In addition, because of the way the Arduino is designed, we were forced to use jumpers to connect pins on the Arduino to those on the motor board. Our new design eliminates the need for jumpers!&lt;/p&gt;
 &lt;p&gt;The packet generation routine was complex, hard to maintain, and limited us with regard to the hardware we could run on and new features we could implement (like the Railcom cut-out). We replaced the slow DigitalRead() and DigitalWrite() routines with a fast write library. The packet generation is now streamlined, fast (which allows us to be able to use only 1 timer to create signals for 2 tracks), and much easier to read.&lt;/p&gt;
-&lt;p&gt;We made a huge effort to streamline the code and optimize it for microcontrollers to use the limited memory we have available in the most efficient manner. The code is now object oriented and utilizes classes for readability and reusability. We eliminated almost all use of strings.&lt;/p&gt;
+&lt;p&gt;We made a huge effort to streamline the code and optimise it for microcontrollers to use the limited memory we have available in the most efficient manner. The code is now object oriented and utilises classes for readability and reusability. We eliminated almost all use of strings.&lt;/p&gt;
 &lt;p&gt;The 3 most requested features were: 1. More reliable CV read and writes, 2. Better accessory control, 3. Automation. Some have requested a Railcom cut-out. We haven’t limited ourselves to just these features, but we put a lot of time into redesigning things to accommodate them.&lt;/p&gt;
 &lt;p&gt;The current detection routines are completely different. One key difference is all current readings are in milliAmps (mA) instead of meaningless pin readings. So if you want to set your overload protection to kick in at 3 Amps, you just enter 3000 for 3000mA instead of looking up a value from a table.&lt;/p&gt;
 &lt;p&gt;We continue to test all the motorboard and Arduino combinations at different voltages to refine our current readings. This is important because we want to have accurate and fast short-circuit detection, and because the reason CV reading was occasionally unreliable in the past was due to not always sensing a current pulse on the track. In addition to more accurately reading current, we had to completely change the way we look for an “ACK” (acknowledgement from the train that it received a command). So we now check immediately after we send a command instead of waiting for a dozen or more packets. This means we don’t miss an ACK while this is happening, and we jump out of sending unnecessary packets as soon as we get one. We also use our knowledge of CVs and the probability of what a CV may contain, so save time by skipping ahead if our first guess is correct. You will appreciate how much faster we can read CVs now!&lt;/p&gt;
@@ -730,7 +730,7 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 &lt;/section&gt;
 &lt;section id="thanks"&gt;
 &lt;h2&gt;Thanks&lt;/h2&gt;
-&lt;p&gt;This is a team effort. There are a dedicated and organized group of about 15-20 core people involved in the project. In addition, there is all of you who contribute with your comments, feature ideas, evangelizing and testing. So we give you our heartfelt thanks. We will see you online!&lt;/p&gt;
+&lt;p&gt;This is a team effort. There are a dedicated and organised group of about 15-20 core people involved in the project. In addition, there is all of you who contribute with your comments, feature ideas, evangelizing and testing. So we give you our heartfelt thanks. We will see you online!&lt;/p&gt;
 &lt;p&gt;Click here for &lt;a class="reference internal" href="about/index.html"&gt;&lt;span class="doc"&gt;The DCC-EX Team Credits&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Fred Decker
 October 2020&lt;/p&gt;

@@ -981,7 +981,7 @@ ID=1,PC=12,LOCO=18 ,SPEED=50F *&gt;
 <section id="sequence-id-a-general-purpose-automation-sequence-that-is-not-advertised-to-withrottles">
 <h4><a class="toc-backref" href="#id58" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SEQUENCE(</span> <span class="pre">id</span> <span class="pre">)</span></code> - A general purpose automation sequence that is not advertised to WiThrottles</a><a class="headerlink" href="#sequence-id-a-general-purpose-automation-sequence-that-is-not-advertised-to-withrottles" title="Permalink to this heading"></a></h4>
 <blockquote>
-<div><p>A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activites. See <a class="reference internal" href="examples.html#automating-various-non-track-items"><span class="std std-ref">Automating various non-track items</span></a>, <a class="reference internal" href="examples.html#point-to-point-shuttle"><span class="std std-ref">Point to Point Shuttle</span></a>, and <a class="reference internal" href="examples.html#multiple-inter-connected-trains"><span class="std std-ref">Multiple inter-connected trains</span></a> for further examples.</p>
+<div><p>A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activities. See <a class="reference internal" href="examples.html#automating-various-non-track-items"><span class="std std-ref">Automating various non-track items</span></a>, <a class="reference internal" href="examples.html#point-to-point-shuttle"><span class="std std-ref">Point to Point Shuttle</span></a>, and <a class="reference internal" href="examples.html#multiple-inter-connected-trains"><span class="std std-ref">Multiple inter-connected trains</span></a> for further examples.</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 <p>All of these script types must be terminated by either a <code class="docutils literal notranslate"><span class="pre">DONE</span></code>, <code class="docutils literal notranslate"><span class="pre">FOLLOW(id)</span></code>, or <code class="docutils literal notranslate"><span class="pre">RETURN</span></code> statement. If you use <code class="docutils literal notranslate"><span class="pre">FOLLOW(id)</span></code> or <code class="docutils literal notranslate"><span class="pre">RETURN</span></code>, you do not also need a <code class="docutils literal notranslate"><span class="pre">DONE</span></code> statement as any of these terms will tell <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> that the sequence of events has ended.</p>
@@ -1823,14 +1823,14 @@ DONE
 <section id="xfon-cab-func-send-dcc-function-on-to-specific-cab">
 <h4><a class="toc-backref" href="#id137" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">XFON(</span> <span class="pre">cab,</span> <span class="pre">func</span> <span class="pre">)</span></code> - Send DCC function ON to specific cab</a><a class="headerlink" href="#xfon-cab-func-send-dcc-function-on-to-specific-cab" title="Permalink to this heading"></a></h4>
 <blockquote>
-<div><p>Send DCC function ON to specific cab (eg coach lights) <em>Not for Loco use - use FON instead!</em></p>
+<div><p>Send DCC function ON to specific cab (e.g. coach lights) <em>Not for Loco use - use FON instead!</em></p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="xfoff-cab-func-send-dcc-function-off-to-specific-cab">
 <h4><a class="toc-backref" href="#id138" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">XFOFF(</span> <span class="pre">cab,</span> <span class="pre">func</span> <span class="pre">)</span></code> - Send DCC function OFF to specific cab</a><a class="headerlink" href="#xfoff-cab-func-send-dcc-function-off-to-specific-cab" title="Permalink to this heading"></a></h4>
 <blockquote>
-<div><p>Send DCC function OFF to specific cab (eg coach lights) Not for Loco use - use FON instead!</p>
+<div><p>Send DCC function OFF to specific cab (e.g. coach lights) Not for Loco use - use FON instead!</p>
 <p>All the above “ON” commands are event handlers that trigger a sequence of commands to run when the event occurs. These can vary from the most basic tasks such as setting signals when turnouts are closed or thrown, to triggering complete automation sequences via a DCC accessory decoder.</p>
 </div></blockquote>
 </section>
@@ -1966,7 +1966,7 @@ DONE
 <summary>For example: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// A defined automation sequence that will do activities only if loco ID 123 is in use</span>
 <span class="n">AUTOSTART</span><span class="w"> </span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Do stuff for loco 123&quot;</span><span class="p">)</span>
 <span class="w">  </span><span class="n">IFLOCO</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
-<span class="w">    </span><span class="c1">// Define activities here eg. blow horn or whistle</span>
+<span class="w">    </span><span class="c1">// Define activities here e.g. blow horn or whistle</span>
 <span class="w">  </span><span class="n">ENDIF</span>
 <span class="w">  </span><span class="n">DONE</span>
 </pre></div>
@@ -2040,7 +2040,7 @@ DONE
 <h4><a class="toc-backref" href="#id158" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AFTEROVERLOAD(</span> <span class="pre">track</span> <span class="pre">)</span></code> - Event handler for actions to be taken when an Overload clears</a><a class="headerlink" href="#afteroverload-track-event-handler-for-actions-to-be-taken-when-an-overload-clears" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p>Creates a complementary event handler for the selected track, to be executed when the MotorDriver routines indicate the overload is cleared. Refer also to <a class="reference internal" href="../trackmanager/index.html"><span class="doc">TrackManager (DCC &amp; DC)</span></a></p>
-<p>Note:  AFTEROVERLOAD is only relevent when used within and ONOVERLOAD…. DONE structure.</p>
+<p>Note:  AFTEROVERLOAD is only relevant when used within and ONOVERLOAD…. DONE structure.</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 <blockquote>

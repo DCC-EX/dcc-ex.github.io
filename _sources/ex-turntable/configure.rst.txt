@@ -20,7 +20,7 @@ Configuration options
 
 Configuration changes are made by editing the "config.h" file.
 
-The various configuration options are outlined below, and all are declared on their own line using the "#define" directive (eg. #define I2C_ADDRESS 0x60).
+The various configuration options are outlined below, and all are declared on their own line using the "#define" directive (e.g. #define I2C_ADDRESS 0x60).
 
 Standard configuration options
 ===============================
@@ -116,8 +116,8 @@ STEPPER_DRIVER
 - ULN2003_HALF_CCW - ULN2003 stepper driver with a 28BYJ-48 motor, configured for half step mode defaulting to a counter-clockwise rotation
 - ULN2003_FULL_CW  - ULN2003 stepper driver with a 28BYJ-48 motor, configured for full step mode defaulting to a clockwise rotation
 - ULN2003_FULL_CCW - ULN2003 stepper driver with a 28BYJ-48 motor, configured for full step mode defaulting to a counter-clockwise rotation
-- A4988            - Two wire stepper driver (eg. A4988, DRV8825) with a NEMA17 motor
-- A4988_INV        - Two wire stepper driver (eg. A4988, DRV8825) with a NEMA17 motor, with the driver's enable pin inverted
+- A4988            - Two wire stepper driver (e.g. A4988, DRV8825) with a NEMA17 motor
+- A4988_INV        - Two wire stepper driver (e.g. A4988, DRV8825) with a NEMA17 motor, with the driver's enable pin inverted
 
 While the pre-defined stepper driver/motor combinations above will likely be sufficient for most use cases, it is possible to define your own stepper driver configuration providing it is supported by the AccelStepper() Arduino library. Refer to `defining custom stepper drivers`_.
 

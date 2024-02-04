@@ -29,7 +29,7 @@ What you need to Acquire
 
 .. sidebar::  Optional configuration
     
-  |conductor| |BR| |EX-CS| can be configured in an additional 'Conductor friendly' way, without wifi, but it requires |JMRI| to be installed on a computer.
+  |conductor| |BR| |EX-CS| can be configured in an additional 'Conductor friendly' way, without WiFi, but it requires |JMRI| to be installed on a computer.
 
   |tinkerer| |engineer| |BR| |EX-CS| is also supported on a variety of different hardware that you might also consider
 

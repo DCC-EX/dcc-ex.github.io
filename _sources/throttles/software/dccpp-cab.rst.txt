@@ -18,7 +18,7 @@ DCCpp CAB
    :scale: 30%
    :align: left
 
-This is an Android App (with plans for iOS) from Spain. One of the major benefits of DCCpp CAB is that it speaks the |DCC-EX Native Commands| natively (see our :doc:`Command Reference </reference/software/command-reference>`). This means it is fast and can take advantage of some features that exist in the |EX-CS| not implemented in other APIs. Another benefit is that this throttle can use Bluetooth instead of Wifi if you choose! There are several advantages to using Bluetooth, the main one being that Uno and Nano users can use a wireless throttle!
+This is an Android App (with plans for iOS) from Spain. One of the major benefits of DCCpp CAB is that it speaks the |DCC-EX Native Commands| natively (see our :doc:`Command Reference </reference/software/command-reference>`). This means it is fast and can take advantage of some features that exist in the |EX-CS| not implemented in other APIs. Another benefit is that this throttle can use Bluetooth instead of WiFi if you choose! There are several advantages to using Bluetooth, the main one being that Uno and Nano users can use a wireless throttle!
 
 You can find it in the Play Store: `DCCpp CAB App <https://play.google.com/store/apps/details?id=com.infotronikblog.dcc_cab>`_
 
@@ -59,7 +59,7 @@ Requirements
 
 * A |EX-CS| (Mega based for WiFi or Mega or Uno/Nano based for Bluetooth)
 * An Android Cell Phone or Tablet
-* A Wifi Shield (or other ESP8622 solution) if you want to connect using WiFi :doc:`Wifi Setup Page </ex-commandstation/get-started/wifi-setup>`
+* A WiFi Shield (or other ESP8622 solution) if you want to connect using WiFi :doc:`Wifi Setup Page </ex-commandstation/get-started/wifi-setup>`
 * An HC-06 Board if you want to connect using Bluetooth
 
 .. _dccpp-operation:
@@ -70,10 +70,10 @@ Operation
 .. Note:: A Mega is required for using the WiFi connection, but an Uno or Nano will work with the Bluetooth connection.
 
 
-Using Wifi
+Using WiFi
 -----------
 
-To use Wifi, make sure you have a WiFi enabled Command Station as described in the :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>` section.
+To use WiFi, make sure you have a WiFi enabled Command Station as described in the :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>` section.
 
 We have not tested the WiFi implementation yet
 

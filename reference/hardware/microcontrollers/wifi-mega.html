@@ -681,16 +681,16 @@
 <h2><a class="toc-backref" href="#id12" role="doc-backlink">1. Flashing the ESP8266 chip</a><a class="headerlink" href="#flashing-the-esp8266-chip" title="Permalink to this heading"></a></h2>
 <section id="a-plug-in-and-test-your-mega">
 <h3><a class="toc-backref" href="#id13" role="doc-backlink">a. Plug in and test your Mega</a><a class="headerlink" href="#a-plug-in-and-test-your-mega" title="Permalink to this heading"></a></h3>
-<p>Plug your board into your computer with a USB micro cable to see if it is recognized. These boards use a CH340 UART (The USB controller) instead of the ones on an Arduino brand Uno or Mega. If you have never plugged anything into your computer with this chip on it before, you are going to have to install a driver. On Windows, you can go to device manager and open the ports tree item. Look for “CH340” or “CH341”.</p>
+<p>Plug your board into your computer with a USB micro cable to see if it is recognised. These boards use a CH340 UART (The USB controller) instead of the ones on an Arduino brand Uno or Mega. If you have never plugged anything into your computer with this chip on it before, you are going to have to install a driver. On Windows, you can go to device manager and open the ports tree item. Look for “CH340” or “CH341”.</p>
 <figure class="align-center" id="id3">
-<a class="reference internal image-reference" href="../../../_images/ch340_driver.png"><img alt="CH340 Recognized" src="../../../_images/ch340_driver.png" style="width: 261.0px; height: 95.0px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/ch340_driver.png"><img alt="CH340 Recognised" src="../../../_images/ch340_driver.png" style="width: 261.0px; height: 95.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 43 </span><span class="caption-text">CH340 Recognized</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 43 </span><span class="caption-text">CH340 Recognised</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>If you don’t see the CH340 with the Mega plugged into USB, download and install the drivers from here:</p>
 <p><a class="reference external" href="http://www.wch-ic.com/downloads/CH341SER_ZIP.html">http://www.wch-ic.com/downloads/CH341SER_ZIP.html</a></p>
-<p>Once you can see your computer recognizes your board, <strong>remember the port</strong>. For a PC running windows, it will be something like “COM24” as in the picture above. For a Mac, it will be something like “/dev/cu.wchusbserial*****”, and for Linux it will look like “/dev/ttyUSBx”. Write it down.</p>
+<p>Once you can see your computer recognises your board, <strong>remember the port</strong>. For a PC running windows, it will be something like “COM24” as in the picture above. For a Mac, it will be something like “/dev/cu.wchusbserial*****”, and for Linux it will look like “/dev/ttyUSBx”. Write it down.</p>
 <p><strong>Unplug the Mega.</strong></p>
 <p>For more detail on how to install the correct CH340 drivers for your OS, you can see this <a class="reference external" href="https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all">SparkFun Tutorial</a></p>
 </section>
@@ -734,7 +734,7 @@
 <p><span class="caption-number">Figure 44 </span><span class="caption-text">Important Board Locations</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>Note that switch 8 is not connected to anything, you don’t need to touch it. With a toothpick or jewelers screwdriver, very gently set your dip switches, it is easy to break them. Use this diagram to set your dip switches, <strong>ON is up in this picture. Switches 5,6, and 7 are on</strong>.</p>
+<p>Note that switch 8 is not connected to anything, you don’t need to touch it. With a toothpick or jewellers screwdriver, very gently set your dip switches, it is easy to break them. Use this diagram to set your dip switches, <strong>ON is up in this picture. Switches 5,6, and 7 are on</strong>.</p>
 <figure class="align-center" id="id5">
 <a class="reference internal image-reference" href="../../../_images/mega_wifi_sw_flash.png"><img alt="Switches in flash mode" src="../../../_images/mega_wifi_sw_flash.png" style="width: 169.5px; height: 205.2px;" /></a>
 <figcaption>
@@ -861,7 +861,7 @@
 <li><p>If using the installer, just check the WiFi check box and leave SSID and password alone</p></li>
 <li><p>If using the Arduino IDE,Make sure you didn’t put “//” in front of the <cite>#define ENABLE_WIFI true</cite> line in your config.h file</p></li>
 <li><p>No additional changes required, Leave SSID &amp; Passwd alone</p></li>
-<li><p>Your ESP-Wifi chip will assign a SSID as DCCEX_xxxxxx and PASS_xxxxxx, Where xxxxxx is the last 6 characters of your ESP8266 MAC Address</p></li>
+<li><p>Your ESP-WiFi chip will assign a SSID as DCCEX_xxxxxx and PASS_xxxxxx, Where xxxxxx is the last 6 characters of your ESP8266 MAC Address</p></li>
 <li><p>Upload the software to your Mega+WiFi (see Compile and Re-upload below)</p></li>
 </ul>
 </section>

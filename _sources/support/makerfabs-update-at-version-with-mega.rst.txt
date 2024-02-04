@@ -85,11 +85,11 @@ The ``esptool`` can be download separately, but the easiest way to get it is to 
 
 1.4. Now the ``esptool`` will be installed on your computer |br| It is important to be aware of where will be, as this is needed in later steps. (``ESPTOOL``)
 
-   Windows: |br|
-   ``C:\Users\<userName>\AppData\Local\Arduino15\packages\esp32\tools\esptool_py\4.5.1\esptool.exe`` |br|
-   Mac: |br|
-   ``~/Library/Arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool_py`` |br|
-   Linux: |br|
+   Windows: |BR|
+   ``C:\Users\<userName>\AppData\Local\Arduino15\packages\esp32\tools\esptool_py\4.5.1\esptool.exe`` |BR|
+   Mac: |BR|
+   ``~/Library/Arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool_py`` |BR|
+   Linux: |BR|
    ``~/.arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool.py``
 
 |hr-dashed|
@@ -120,7 +120,7 @@ Step 3. Prepare the hardware
 3.5 Prepare two jumper wires to ``GND`` (loose ends)
 
    .. figure:: /_static/images/wifi/mega-for-flashing-makerfabs-wifi-3.png
-      :alt: Stacked Mega and Wifi Shield - Jumpers
+      :alt: Stacked Mega and WiFi Shield - Jumpers
       :scale: 50%
 
       Stacked Mega and Wifi Shield - Jumpers. |BR| Note: White and Black wires will be loose are this point
@@ -128,7 +128,7 @@ Step 3. Prepare the hardware
    *Alternate*
 
    .. figure:: /_static/images/wifi/mega-for-flashing-makerfabs-wifi-3-simple-jumpers.png
-      :alt: Stacked Mega and Wifi Shield - Simple Jumpers
+      :alt: Stacked Mega and WiFi Shield - Simple Jumpers
       :scale: 50%
 
       Stacked Mega and Wifi Shield - Using the small, simple jumpers/plugs that came with the shield. |BR| Note: the White and Black wires will be loose are this point
@@ -172,7 +172,7 @@ Make sure the Installer has been closed before continuing.
       * Type ``cmd`` and press the :guilabel:`Enter` key
       * Go to the folder you downloaded the ``ESP8266_1MB_AT1_7.bin`` file to (normally 'Downloads') by entering:
          
-         ``c:`` :guilabel:`Enter` |br|
+         ``c:`` :guilabel:`Enter` |BR|
          ``cd \user\<username>\downloads`` :guilabel:`Enter` |br| (Replace ``<username>`` with your username on the PC) 
 
    For Apple macOS
@@ -195,8 +195,8 @@ Make sure the Installer has been closed before continuing.
 
    ``ESPTOOL --baud 38400 --port PORTNAME write_flash --erase-all --flash_freq 40m --flash_mode dout --flash_size 1MB 0x0 ESP8266_1MB_AT1_7.bin``
 
-   For Example for Windows PCs : (if the Arduino is connected on COM3) |br|
-   ``C:\Users\<userName>\AppData\Local\Arduino15\packages\esp32\tools\esptool_py\4.5.1\esptool --baud 38400 --port COM3 write_flash --erase-all --flash_freq 40m --flash_mode dout --flash_size 1MB 0x0 ESP8266_1MB_AT1_7.bin`` |br|
+   For Example for Windows PCs : (if the Arduino is connected on COM3) |BR|
+   ``C:\Users\<userName>\AppData\Local\Arduino15\packages\esp32\tools\esptool_py\4.5.1\esptool --baud 38400 --port COM3 write_flash --erase-all --flash_freq 40m --flash_mode dout --flash_size 1MB 0x0 ESP8266_1MB_AT1_7.bin`` |BR|
    Note: that ``<username>`` needs to be replaced with 'your' user name on the PC.
 
    If the program is python (iOS or Linux) you need to prepend python3 like this: (If the Arduino is connect on /dev/ttyUSB0) |BR|
@@ -204,7 +204,7 @@ Make sure the Installer has been closed before continuing.
 
 5.3 Locate the Reset and GPIO0 pads on the ESP8266.
 
-   The ``GPIO0`` pad is the fourth pad from the bottom on the right, next to the "P" in "ESP-12F".  |br|
+   The ``GPIO0`` pad is the fourth pad from the bottom on the right, next to the "P" in "ESP-12F".  |BR|
    The ``Reset`` pad is the top pad on the left, closest to the resister labelled "R6". 
 
 5.4 Press :guilabel:`enter` on the above command line. 
@@ -268,7 +268,7 @@ Step 7. Prepare your EX-CommandStation
 
       Install the jumper wires
 
-7.6 If you have not already done so, run the |EX-I| and configure your |EX-CS| to use the WiFi shield. |br| Note: this is not necessary if it was done before you started flashing the WiFi firmware.  i.e. Flashing the firmware *does not* upset the software you loaded on the Arduino.
+7.6 If you have not already done so, run the |EX-I| and configure your |EX-CS| to use the WiFi shield. |BR| Note: this is not necessary if it was done before you started flashing the WiFi firmware.  i.e. Flashing the firmware *does not* upset the software you loaded on the Arduino.
 
 ----
 

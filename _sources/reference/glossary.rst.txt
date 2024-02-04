@@ -18,7 +18,7 @@ Glossary
     * - Term
       - Meaning
     * - Access Point (AP) Mode
-      - In Access Point (AP) mode, the tiny ESP-WiFi chip acts as a very basic WiFi server and provides a small IP network for your throttle or for your computer running JMRI with the wiThrottle Server enabled. It acts much like your router does to let things connect directly to it (currently up to four connections). |BR| Using the Command Station in AP mode allows you to have a separate network so you can keep your layout network separate from your home network. |BR| :doc:`Refer here for more information. </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
+      - In Access Point (AP) mode, the tiny ESP-WiFi chip acts as a very basic WiFi server and provides a small IP network for your throttle or for your computer running JMRI with the WiThrottle Server enabled. It acts much like your router does to let things connect directly to it (currently up to four connections). |BR| Using the Command Station in AP mode allows you to have a separate network so you can keep your layout network separate from your home network. |BR| :doc:`Refer here for more information. </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
     * - Arduino IDE
       - A free app running on your PC, specifically designed to install software onto Arduino microprocessors. |BR| https://www.arduino.cc/en/software
     * - BaseStation-Classic |BR| DCC++ (Original)
@@ -34,7 +34,7 @@ Glossary
     * - DCC
       - Digital Command Control.  NMRA Specification for controlling trains. |BR| See https://dccwiki.com/NMRA/NMRA_Standards
     * - Engine Driver |BR| Engine Driver Throttle
-      - Android app for controlling DCC locos using the wiThrottle Protocol |BR| See :doc:`/throttles/software/engine-driver`
+      - Android app for controlling DCC locos using the WiThrottle Protocol |BR| See :doc:`/throttles/software/engine-driver`
     * - DCC++ Commands |BR| <DCC++> |BR| DCC++ Protocol |BR| DCC++ API
       - Old name for the DCC-EX Native Commands / DCC-EX Native Protocol. |BR| Some references to this still remain for backward compatibility. i.e. JMRI still refers to DCC++.
     * - DCC-EX Native Commands |BR| DCC-EX Native Protocol |BR| DCC-EX Native API

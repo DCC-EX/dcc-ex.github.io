@@ -656,7 +656,7 @@ while (!Serial) {
 </section>
 <section id="connecting-via-i2c">
 <h3>Connecting via I2C<a class="headerlink" href="#connecting-via-i2c" title="Permalink to this heading"></a></h3>
-<p>Connecting via I<sup>2</sup>C involves a HAL driver file to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> as well as adding some code to the existing FastClock code.  Follow the follwing steps:</p>
+<p>Connecting via I<sup>2</sup>C involves a HAL driver file to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> as well as adding some code to the existing FastClock code.  Follow the following steps:</p>
 <ul>
 <li><p>In the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> code copy the file myHal.cpp_example.txt to myHal.cpp.</p></li>
 <li><p>Edit the file myHal.cpp and uncomment the following line near the beginning of the file</p>
@@ -671,7 +671,7 @@ while (!Serial) {
 <p>0x55 (decimal 85) is the default address but needs to match that in the FastClock code (see below).</p>
 </li>
 <li><p>Using Dupont connectors connect SDA/SCL/Gnd on the clock to SDA/SCL/Gnd on the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></p></li>
-<li><p>Include the following code in your Fastlock code:</p>
+<li><p>Include the following code in your FastClock code:</p>
 <p>Near the top of the sketch:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#include &lt;Wire.h&gt;
 </pre></div>
@@ -697,7 +697,7 @@ Wire.onRequest(TransmitTime);
 </div>
 <p>In the function above  HH is the time as hours (24hr. clock) and MM is the minutes.</p>
 </li>
-<li><p>The CommandStation-EX will now poll the FastClock to request the time.  The frequency at which it does so is influenced by the clockspeed (i.e. on a slow clock speed it polls less often).</p></li>
+<li><p>The CommandStation-EX will now poll the FastClock to request the time.  The frequency at which it does so is influenced by the clock speed (i.e. on a slow clock speed it polls less often).</p></li>
 </ul>
 </section>
 </section>

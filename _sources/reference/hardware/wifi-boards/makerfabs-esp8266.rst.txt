@@ -17,7 +17,7 @@ AKA Makerfabs ESP8266 WiFi Shield
       :depth: 1
       :local:
 
-   This board is a joint project with |DCC-EX| and Makerabs and is designed to work out of the box. Make sure to purchase from DCC-EX or any of our dealers or standard parts suppliers.
+   This board is a joint project with |DCC-EX| and Makerfabs and is designed to work out of the box. Make sure to purchase from DCC-EX or any of our dealers or standard parts suppliers.
 
 
    If for any reason you wish to update the firmware in the future, pleas see :doc:`/support/wifi-at-version` for details on how to check the version and how to change it.
@@ -36,7 +36,7 @@ Installing the board follows the same procedure in the :doc:`section on assembly
 Remove the plastic jumpers
 ==========================
 
-Note the two black plastic jumpers: we need to remove both of them. You can pull them off with your fingers or needle nose pliers and either stick them in a drawer or move them to the side by having them connect via one side to any of the row of Rx pins. The other end of the connector will just hang out over the Wifi Board. If you purchase from DCC-EX or one of our dealers, you may find that they have already done this for you.
+Note the two black plastic jumpers: we need to remove both of them. You can pull them off with your fingers or needle nose pliers and either stick them in a drawer or move them to the side by having them connect via one side to any of the row of Rx pins. The other end of the connector will just hang out over the WiFi Board. If you purchase from DCC-EX or one of our dealers, you may find that they have already done this for you.
 
 
 .. figure:: /_static/images/assembly/wifi_pins.jpg

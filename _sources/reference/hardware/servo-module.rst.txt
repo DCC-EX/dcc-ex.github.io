@@ -179,7 +179,7 @@ Another use case for the PCA9685 is to drive LEDs using PWM to control the inten
 Connecting LEDs and setting intensity
 -------------------------------------
 
-LEDs can be connected with either the anode (postive) or cathode (negative) to the PWM pin of the PCA9685, and to set the required intensity for the LED, you will need to add a configuration setting to your "mySetup.h" file. Refer to :doc:`/ex-commandstation/advanced-setup/startup-config` for further information on this file.
+LEDs can be connected with either the anode (positive) or cathode (negative) to the PWM pin of the PCA9685, and to set the required intensity for the LED, you will need to add a configuration setting to your "mySetup.h" file. Refer to :doc:`/ex-commandstation/advanced-setup/startup-config` for further information on this file.
 
 If connecting the anode (positive) side of the LED to the PWM pin, the cathode (negative) side connects to the ground pin, and you do not need a current limiting resistor in this scenario.
 
@@ -193,7 +193,7 @@ You will need to add this line to "mySetup.h" for each LED you wish to configure
 
 The parameters required are:
 
-- vpin = The VPin the LED is connected to, eg. 101 for the second pin on the first PCA9685 servo module
+- vpin = The VPin the LED is connected to, e.g. 101 for the second pin on the first PCA9685 servo module
 - OnValue = The desired intensity (brightness) of the LED when turned on, with 0 being off, and 4095 being 100%
 - OffValue = The desired intensity (brightness) of the LED when turned off
 
@@ -260,7 +260,7 @@ There are three types of servos, standard or "Positional Rotation", "Continuous 
 **A Standard, positional rotation servo** allows a shaft to spin around a central axis to position something like an arm or disk at specific angles. A standard servo can be positioned between 0 and 180 degrees. An example is the SG90 9g Micro Servo
 
 
-**A Continuous Rotation Servo** can spin around a full circle continuously like a motor. Instead of providing an angular position that the servo should rotate to, the continuous rotation servo simply has a speed and direction, clockwise or counterclockwise.
+**A Continuous Rotation Servo** can spin around a full circle continuously like a motor. Instead of providing an angular position that the servo should rotate to, the continuous rotation servo simply has a speed and direction, clockwise or counter-clockwise.
 
 **Linear Servos** use a rack and pinion gear that converts rotary motion to linear motion. A linear servo works just like a Standard Servo and you can control its position along a straight line, forward and back in a similar way by giving it a position.
 

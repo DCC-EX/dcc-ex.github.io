@@ -17,7 +17,7 @@
 Version 5 is here!
 ==================
 
-|NEW-IN-V5| Yep, that's right, the much anticipated |EX-CS| version 5 release is here at last! This is a huge release, adding significant new features like |TM|, enhancing existing capabilities, introducting new and enhanced I/O support, along with other associated products such as |EX-FC|, |EX-TT|, and |EX-IO|.
+|NEW-IN-V5| Yep, that's right, the much anticipated |EX-CS| version 5 release is here at last! This is a huge release, adding significant new features like |TM|, enhancing existing capabilities, introducing new and enhanced I/O support, along with other associated products such as |EX-FC|, |EX-TT|, and |EX-IO|.
 
 We highly recommend upgrading to version 5 to take advantage of the improvements we've made, and especially for those users who are using our new |EX-MS|, as we've improved how it deals with overloads and inrush current amongst other enhancements.
 

@@ -47,7 +47,7 @@ For example, in Microsoft Windows:
   SETUP("<1>");  // Turn track power on at startup
 
 * Select :menuselection:`File --> Exit`.  |BR| It will ask you the save the file.  Click ``Save``
-* You now need to upload the software using the |EX-I| jast the same as you originally did ( :doc:`/ex-commandstation/get-started/installer`)
+* You now need to upload the software using the |EX-I| just the same as you originally did ( :doc:`/ex-commandstation/get-started/installer`)
 
 See examples and information below for adding multiple instructions to `mySetup.h`.
 

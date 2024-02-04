@@ -942,7 +942,7 @@ If it is still busy, then other loop functions may be allowed to run.</p></li>
 <li><p>At the next loop entry of the program, the test for competition status shows that the request block is no longer busy.
 The program may then retrieve the success/failure status, and any data that has been received, for further processing.</p></li>
 </ol>
-<p>When necessary, the operation may be repeated by requeueing the original request block (either unchanged or with different parameters or data).</p>
+<p>When necessary, the operation may be repeated by requeuing the original request block (either unchanged or with different parameters or data).</p>
 <p>If the non-blocking I<sup>2</sup>C driver is not available (e.g. on controllers other than ATmega328, ATmega2560 and ATmega4809),
 the blocking I<sup>2</sup>C functions in the Wire library are automatically used instead, without any changes to the Command Station code.</p>
 </li>

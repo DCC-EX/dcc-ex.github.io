@@ -752,7 +752,7 @@
 <p>If you need to make any other adjustments to cater for using different stepper driver/motor combinations, this is the time to do so also.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>If you are using a mechanism that results in anything other than a 1:1 gear ratio (eg. using a lead screw), you may need to consider updating the <cite>SANITY_STEPS</cite> setting in “config.h”.</p>
+<p>If you are using a mechanism that results in anything other than a 1:1 gear ratio (e.g. using a lead screw), you may need to consider updating the <cite>SANITY_STEPS</cite> setting in “config.h”.</p>
 <p>This setting defaults to 10000 steps and is used to prevent a stepper turning indefinitely when attempting to find HOME or LIMIT. If the gear ratio results in a step count greater than 10000, the calibration sequence will fail to complete, and updating this setting to a sufficently high step count will solve that issue.</p>
 <p>Refer to <a class="reference internal" href="configure.html#sanity-steps"><span class="std std-ref">SANITY_STEPS</span></a>.</p>
 </div>

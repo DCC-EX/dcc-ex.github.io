@@ -1121,7 +1121,7 @@
      * "Opera Mini" and "Opera"
      *
      * Mobile versions of some browsers have "Mobile" appended to their name:
-     * eg. "Chrome Mobile", "Firefox Mobile", "IE Mobile" and "Opera Mobile"
+     * e.g. "Chrome Mobile", "Firefox Mobile", "IE Mobile" and "Opera Mobile"
      *
      * @memberOf platform
      * @type string|null

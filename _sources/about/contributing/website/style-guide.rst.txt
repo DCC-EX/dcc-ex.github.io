@@ -75,7 +75,7 @@ Style Guidelines
 * Avoid 'fluff' - unnecessary text that adds no value.
 
   * Re-read everything you write. Ask yourself a) is there a simpler way of saying it. b) does it add value.
-  * The exception to this is a bit of humor now and then, but don't overdo it.
+  * The exception to this is a bit of humour now and then, but don't overdo it.
 
 * Keep headings short.  If it fills the page it is too long.
 * If you have a number of sections that describe options; present them in list them first, before the sections, with an explanation as to why they are optional.  (i.e. a bullet list with hyperlinks to the headings.) 
@@ -88,7 +88,7 @@ Style Guidelines
   * Use **"Smart Phone"** instead of 'Cell Phone' (US only term) or 'Mobile Phone' (just about everywhere else)
   * Use **Throttle** or **Throttle (controller)** instead of 'controller' or 'controller (throttle)'
 
-*	Use railroad/railway terminology that is understandable by all English-speaking people. |br|\ Where there are clear differences from US to non-US terminology use both with a slash between and use the US version first. e.g. turnouts/points, consists/multiple units, switching/shunting.  (Only because the US term appears in apps like JMRI.)
+*	Use railroad/railway terminology that is understandable by all English-speaking people. |BR|\ Where there are clear differences from US to non-US terminology use both with a slash between and use the US version first. e.g. turnouts/points, consists/multiple units, switching/shunting.  (Only because the US term appears in apps like JMRI.)
 *	No full stop at the end of a numbered or unnumbered list
 *	Numbered lists should generally only be used if they are describing a specific sequence, or the numbering is important to the text
 * Use first person (you and your; not I, me, my or am) language
@@ -100,7 +100,7 @@ Style Guidelines
 * Use **\`\`\literal text blocks\`\`** when describing preference values  - ``literal text blocks``
 * Use **\:menuselection\:\`Menu \-\-\> Preferences \-\-\> ..\`** for menu descriptions - :menuselection:`Menu --> Preferences --> ..` 
 * Use **\:guilabel\:\`\GUI labels\`** for buttons  - :guilabel:`GUI labels`
-* For dates, use dd-mmm-yyyy or yyyy-mm-dd to avoid confusion with the way dates are uniquely written in the US. |br|\ e.g. 2-Mar-2022 or 2022-3-2, not 2-3-2022 
+* For dates, use dd-mmm-yyyy or yyyy-mm-dd to avoid confusion with the way dates are uniquely written in the US. |BR|\ e.g. 2-Mar-2022 or 2022-3-2, not 2-3-2022 
 * Heading levels:
 
   * **#########** with overline, for parts - not really used
@@ -116,9 +116,9 @@ Style Guidelines
 
 * To force a :
 
-  * Line break/new line use **\|br\|**
+  * Line break/new line use **\|BR\|**
   * Non-breaking space use **\|_\|**
   * Blank line use **\|** on its own line
-  * Paragraph break that a 'float right' element must not be placed before a point use **\|force-break\|**  |br| useful if the 'float right' element is being placed beside another 'float right' element, rather than below.
+  * Paragraph break that a 'float right' element must not be placed before a point use **\|force-break\|**  |BR| useful if the 'float right' element is being placed beside another 'float right' element, rather than below.
 
-* To add a horizontal line, use **\-\-\-\-** (four hypens) on its own line
+* To add a horizontal line, use **\-\-\-\-** (four hyphens) on its own line

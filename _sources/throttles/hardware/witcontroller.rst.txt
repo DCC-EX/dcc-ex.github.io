@@ -40,11 +40,11 @@ Features
   * otherwise it will only connect if the password is blank
 
 * Optionally provides a list of SSIDs with the specified passwords (in the sketch) to choose from
-* Auto-connects to the first found |wiThrottle Server| if only one found, otherwise:
+* Auto-connects to the first found |WiThrottle Server| if only one found, otherwise:
 
   * asks which to connect to
   * if none found will ask to enter the IP Address and Port
-  * Guesses the |wiThrottle server| IP address and Port for EX-CommandStation WiFi Access Point mode Command Stations
+  * Guesses the |WiThrottle server| IP address and Port for EX-CommandStation WiFi Access Point mode Command Stations
 
 * Rudimentary on-the-fly consists
 * Assign commands directly to the 1-9 buttons (in the sketch)
@@ -62,7 +62,7 @@ Features
   * Disconnect / Reconnect
   * Put ESP32 in deep sleep and restart it
 
-* limited dealing with unexpected disconnects.  It will thow you back to the WiThtottle Server selection screen.
+* limited dealing with unexpected disconnects.  It will throw you back to the WiThtottle Server selection screen.
 
 NOTE: This is a Project and is therefore a work in progress and open source. New features are being added regularly.
 

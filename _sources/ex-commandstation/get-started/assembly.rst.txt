@@ -20,7 +20,7 @@ Initial Assembly
 
 |image-note|
 
-This page describes the most common, recommended, configuration, but you will see some brakeouts on the right of the page the covers some of the many optional configurations. 
+This page describes the most common, recommended, configuration, but you will see some breakouts on the right of the page the covers some of the many optional configurations. 
 
 **For this install, you'll need the items listed on the** :doc:`/ex-commandstation/get-started/purchasing` **page.**
 
@@ -165,7 +165,7 @@ e. Now, being careful to not bend any pins gently press, using a rocking motion 
    
    You can either lift the board slightly, it will still connect properly, or take diagonal cutters and carefully trim the ends of the pins a bit.
 
-f. The boards should be seated. Note the pins are longer than the headers. It is normal for you to see a few millimeters of the pins between the bottom of the motor board and the top of the headers. :ref:`boards-fully-seated` shows the boards as they look properly seated. 
+f. The boards should be seated. Note the pins are longer than the headers. It is normal for you to see a few millimetres of the pins between the bottom of the motor board and the top of the headers. :ref:`boards-fully-seated` shows the boards as they look properly seated. 
 
 .. figure:: /_static/images/assembly/seated.jpg
    :alt: Fully seated
@@ -204,7 +204,7 @@ If you are using a laptop style "brick" power supply or an adapter that plugs in
 
    Screw Terminal Adapter to Motor Shield
 
-If you don't have a screw terminal adapter, you can cut the end off your power supply and strip the wires. The outer wire braid is usually the negative connection and the center wire is the positive connection. Check the wiring image on the power supply itself.
+If you don't have a screw terminal adapter, you can cut the end off your power supply and strip the wires. The outer wire braid is usually the negative connection and the centre wire is the positive connection. Check the wiring image on the power supply itself.
 
 4. Connect the Power Wires to the Tracks
 ========================================

@@ -82,9 +82,9 @@ There are some rules that apply in this scenario:
 Some suggestions to get the most out of this:
 
 * Define everything that needs to happen on startup directly in myAutomation.h, before any other includes.
-* Have a specific file for your custom macros or commands (eg. myMacros.h) and include this before other includes.
-* Have a specific file for all your aliases (eg. myAliases.h).
-* Group other items logically according to their purpose, eg. myTurnouts.h to define all your turnouts, and myShuttle.h to define an automated shuttle sequence.
+* Have a specific file for your custom macros or commands (e.g. myMacros.h) and include this before other includes.
+* Have a specific file for all your aliases (e.g. myAliases.h).
+* Group other items logically according to their purpose, e.g. myTurnouts.h to define all your turnouts, and myShuttle.h to define an automated shuttle sequence.
 * Remember the rules and ensure files are included in the correct order to prevent dependency issues, which will lead to errors when compiling and uploading.
 
 For example:

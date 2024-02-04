@@ -265,7 +265,7 @@ Instructions
 Notes: 
 ^^^^^^
 
-   1. By default, the :guilabel:`+` and :guilabel:`-` buttons change the CV values by 1. You can change this step amount by editing the 'Step' field. |br| e.g. When I start on a loco, I normally have the Step at 10.  When it gets closer to a match I change the step to 1.
+   1. By default, the :guilabel:`+` and :guilabel:`-` buttons change the CV values by 1. You can change this step amount by editing the 'Step' field. |BR| e.g. When I start on a loco, I normally have the Step at 10.  When it gets closer to a match I change the step to 1.
    
    2. You don't need a separate ``PROG`` track.  You can use the 'Track Manager' screen to temporarily set the loop of track to ``PROG`` for steps 2-3, then change it back to ``MAIN`` for steps 4 on.
    

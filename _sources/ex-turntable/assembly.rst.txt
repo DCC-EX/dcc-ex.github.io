@@ -98,10 +98,10 @@ Summary table of all connections required during assembly:
 
 Of course for the Tinkerers and Engineers, if you're not using a Nano or a prototyping shield, adapt the details as suits your configuration.
 
-Using a two wire stepper driver (eg. A4988/DRV8825)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Using a two wire stepper driver (e.g. A4988/DRV8825)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For those using a NEMA17 or similar stepper motor with a two wire type driver (eg. A4988 or DRV8825), then the four Arduino pins A0 - A3 map like this, with the rest remaining the same as the table above:
+For those using a NEMA17 or similar stepper motor with a two wire type driver (e.g. A4988 or DRV8825), then the four Arduino pins A0 - A3 map like this, with the rest remaining the same as the table above:
 
 .. list-table::
   :widths: auto
@@ -219,7 +219,7 @@ You will need to connect six of the female to female Dupont wires from the ULN20
   :alt: Shield to ULN2003 pins
   :scale: 50%
 
-Insert the stepper motor connector into the recepticle on the ULN2003 controller. Note that it will only go in one way, so check the orientation and simply plug it in.
+Insert the stepper motor connector into the receptacle on the ULN2003 controller. Note that it will only go in one way, so check the orientation and simply plug it in.
 
 .. image:: /_static/images/ex-turntable/28byj-48-connector1.png
   :alt: 28BYJ-48 Connector
@@ -403,8 +403,8 @@ If you don't have the magnet installed at this point, or if it is too far from t
 
 If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See :doc:`/support/ex-tt-troubleshooting` for further assistance if required.
 
-Configuration for two wire stepper drivers (eg. A4988/DRV8825)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Configuration for two wire stepper drivers (e.g. A4988/DRV8825)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If using a two wire stepper driver such as the A4988 or DRV8825 with a bipolar stepper motor such as a NEMA17 or similar, you will need to update "config.h" to reflect this.
 
@@ -422,8 +422,8 @@ Locate this section in "config.h", comment out the line defining the use of "ULN
   //  ULN2003_HALF_CCW    : ULN2003 in half step mode, counter clockwise homing/calibration
   //  ULN2003_FULL_CW     : ULN2003 in full step mode, clockwise homing/calibration
   //  ULN2003_FULL_CCW    : ULN2003 in full step mode, counter clockwise homing/calibration
-  //  A4988               : Two wire drivers (eg. A4988, DRV8825)
-  //  A4988_INV           : Two wire drivers (eg. A4988, DRV8825), with enable pin inverted
+  //  A4988               : Two wire drivers (e.g. A4988, DRV8825)
+  //  A4988_INV           : Two wire drivers (e.g. A4988, DRV8825), with enable pin inverted
   // 
   //  NOTE: If you are using a different controller than those already defined, refer to
   //  the documentation to define the appropriate configuration variables. Note there are

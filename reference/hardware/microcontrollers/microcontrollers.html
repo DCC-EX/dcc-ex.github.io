@@ -674,11 +674,11 @@
 <p>STMicroelectronics has a range of ARM based microcontrollers that are generally available, sold from reputable global resellers such as Digi-Key and Mouser, and have exceptional build quality for their price (often lower than clone Arduino Mega models, and presently lower than all genuine Arduino Mega prices.)</p>
 <p>Further to this, the NUCLEO series of development boards also provide Arduino Uno compatible header sockets, meaning existing motor (and other) shields can just plug straight in, providing they are 3v3 compatible (see note above).</p>
 <p>All of the NUCLEO series being considered as a future <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> platform have a great deal more RAM (128KB to 256KB vs 8KB for a Mega), double or more FLASH (512KB to 2MB) for program storage, and much faster CPU speed (100 to 180Mhz vs 16Mhz) than the current AVR-based UNO and Mega.</p>
-<p>With those attributes comes the potential to support much larger EX-RAIL scripts, more Withrottle connections, and many new features.</p>
+<p>With those attributes comes the potential to support much larger EX-RAIL scripts, more WiThrottle connections, and many new features.</p>
 <section id="nucleo-f411re-and-nucleo-f446re">
 <h3><a class="toc-backref" href="#id5" role="doc-backlink">NUCLEO-F411RE and NUCLEO-F446RE</a><a class="headerlink" href="#nucleo-f411re-and-nucleo-f446re" title="Permalink to this heading"></a></h3>
 <p>The majority of the current development work with the Nucleo series has been focused on the NUCLEO-F411RE as it most closely resembles the ubiquitous Arduino Uno form factor, including having Uno compatible header sockets in addition to Morpho pins for a much larger I/O capability than an Uno.</p>
-<p>The F411RE has 50 I/O pins compared with the Uno’s 20, and only 20 less than the Arduino Mega despite its diminuitive size. For most use cases it is therefore a suitable substitute for a Mega.</p>
+<p>The F411RE has 50 I/O pins compared with the Uno’s 20, and only 20 less than the Arduino Mega despite its diminutive size. For most use cases it is therefore a suitable substitute for a Mega.</p>
 <p>There are larger NUCLEO footprints available (see below), which have many more pins than an Arduino Mega.</p>
 <p>A good summary if the F411RE is available on the <a class="reference external" href="https://os.mbed.com/platforms/st-nucleo-f411re/">arm MBED Nucleo-F411RE</a> page.</p>
 <p>The NUCLEO-F446RE is the same Nucleo-64 size as the F411RE, but with a faster processor and other features. As one of our more advanced early alpha test users has this board, it’s now also supported as a build target for <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> and being actively tested.</p>
@@ -726,7 +726,7 @@
 <a class="reference internal image-reference" href="../../../_images/firmware1.png"><img alt="Drivers installed" src="../../../_images/firmware1.png" style="width: 345.0px; height: 196.0px;" /></a>
 <p>Clicking the “Device Connect” button will attempt to connect to your NUCLEO device and display the currently installed firmware version, along with the version it will attempt to upgrade to.</p>
 <a class="reference internal image-reference" href="../../../_images/firmware2.png"><img alt="Drivers installed" src="../../../_images/firmware2.png" style="width: 345.5px; height: 193.5px;" /></a>
-<p>Providing your NUCLEO device has been detected and is running an older version of the firmware, click “Yex &gt;&gt;&gt;&gt;” to proceed with the upgrade.</p>
+<p>Providing your NUCLEO device has been detected and is running an older version of the firmware, click “Yes &gt;&gt;&gt;&gt;” to proceed with the upgrade.</p>
 <a class="reference internal image-reference" href="../../../_images/firmware3.png"><img alt="Drivers installed" src="../../../_images/firmware3.png" style="width: 343.5px; height: 193.5px;" /></a>
 <p>Hopefully you will see the “Upgrade is successful” pop up appear when complete.</p>
 <a class="reference internal image-reference" href="../../../_images/firmware4.png"><img alt="Drivers installed" src="../../../_images/firmware4.png" style="width: 343.0px; height: 194.0px;" /></a>
@@ -745,7 +745,7 @@
 </section>
 <section id="adding-nucleo-support-to-vs-code-platformio">
 <h3><a class="toc-backref" href="#id10" role="doc-backlink">Adding NUCLEO support to VS Code/PlatformIO</a><a class="headerlink" href="#adding-nucleo-support-to-vs-code-platformio" title="Permalink to this heading"></a></h3>
-<p>In order to compile for the STM32 NUCLEO platforms you need do nothing when using Microsoft VS Code and PlatformIO. PlatformIO will automatically download the required tool chains and frameworks for platform support based on the entries in platformio.ini inclued in the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> source tree.</p>
+<p>In order to compile for the STM32 NUCLEO platforms you need do nothing when using Microsoft VS Code and PlatformIO. PlatformIO will automatically download the required tool chains and frameworks for platform support based on the entries in platformio.ini included in the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> source tree.</p>
 <p>Just select “Nucleo-F411RE” or “Nucleo-F446RE” as the build target, and hit build. Be sure to do this after installing the drivers (for Windows) and upgrading the debugger firmware per the instructions above.</p>
 </section>
 <section id="hardware-setup-notes-for-a-nucleo-ex-cs">
@@ -794,7 +794,7 @@
 </section>
 <section id="espressif-esp32-series">
 <h2><a class="toc-backref" href="#id12" role="doc-backlink">Espressif ESP32 series</a><a class="headerlink" href="#espressif-esp32-series" title="Permalink to this heading"></a></h2>
-<p>Espressif have for some years now made impressive WiFi and Bluetooth capable microcontroller modules. DCC-EX has made use of their original ESP8266 offering as the means to provide WiFi capablility to the EX-CS.</p>
+<p>Espressif have for some years now made impressive WiFi and Bluetooth capable microcontroller modules. DCC-EX has made use of their original ESP8266 offering as the means to provide WiFi capability to the EX-CS.</p>
 <p>Espressif’s newer ESP32 range has either WiFi alone or WiFi and Bluetooth capability built in. Espressif’s product naming is not the easiest to follow, but DCC-EX has been ported to the original ESP32-WROOM-32 module, which has the following capabilities:</p>
 <ul class="simple">
 <li><p>Dual Xtensa 32-bit LX6 CPU cores</p></li>
@@ -934,7 +934,7 @@ Instead, on the top of the Motor Shield connect <cite>A0</cite> to <cite>A2</cit
 };
 </pre></div>
 </div>
-<p>For boards such as the Sparkun SAMD21 Dev Breakout or Redboard Turbo, you will need to look in the Sparkfun directories for the appropriate USBCore.cpp file to alter, for example:</p>
+<p>For boards such as the Sparfun SAMD21 Dev Breakout or Redboard Turbo, you will need to look in the Sparkfun directories for the appropriate USBCore.cpp file to alter, for example:</p>
 <ul class="simple">
 <li><p>For PlatformIO this is: .platformio/packages/framework-arduino-samd/cores/arduino/USB/USBCore.cpp</p></li>
 <li><p>For Arduino IDE this is: Arduino15/packages/SparkFun/hardware/samd/1.8.3/cores/arduino/USBCore.cpp</p></li>

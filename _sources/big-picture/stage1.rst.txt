@@ -18,9 +18,9 @@ Stage 1 - Running a Train
 Throttle options
 ================
 
-There are a lot of different throttle otions available to control your trains and layout, including software applications available for your smart phone or computer and physical hardware options, both wired and wireless.
+There are a lot of different throttle options available to control your trains and layout, including software applications available for your smart phone or computer and physical hardware options, both wired and wireless.
 
-Going in to any detail on the myriad of options available is well outside the scope of this exercise, so on this page we will be focusing on the four options most commonly used with |EX-CS|: |EX-WT|, |Engine Driver|, |wiThrottle|, and |JMRi|.
+Going in to any detail on the myriad of options available is well outside the scope of this exercise, so on this page we will be focusing on the four options most commonly used with |EX-CS|: |EX-WT|, |Engine Driver|, |WiThrottle|, and |JMRi|.
 
 For other throttle options, refer to the :doc:`/ex-commandstation/advanced-setup/controllers` page for further information on choosing a throttle, and you can also refer to the  :doc:`/throttles/index` section for more information on the various throttle options available.
 
@@ -73,7 +73,7 @@ Run a train on your WiFi enabled EX-CommandStation
 If when you assembled your |EX-CS| with one of the common configuration options, then you will have a WiFi enabled Command Station, which will allow to run your trains with a smart phone. We are only going to cover two common options here:
 
 * Engine Driver - For Android phones
-* wiThrottle - for Apple iOS phones
+* WiThrottle - for Apple iOS phones
 
 Engine Driver (Android)
 -----------------------
@@ -128,7 +128,7 @@ wiThrottle (iOS)
 .. note::
   :class: note-float-right
 
-  The free version of wiThrottle ('wiThrottle Lite') only controls one loco at a time and does not offer turnout control or DCC track power control. (Note: EX-CommandStation can be configured to automatically turn the track power on. See the :ref:`EX-RAIL examples <ex-rail/examples:Turn Track Power On at Startup>`.)
+  The free version of WiThrottle ('WiThrottle Lite') only controls one loco at a time and does not offer turnout control or DCC track power control. (Note: EX-CommandStation can be configured to automatically turn the track power on. See the :ref:`EX-RAIL examples <ex-rail/examples:Turn Track Power On at Startup>`.)
   
   The paid version WiThrottle can control multiple locos, can create and control consists, can control turnouts and routes, and can control DCC track power.
 
@@ -147,21 +147,21 @@ wiThrottle (iOS)
   
     * Use your normal home id and password 
 
-* Start the |wiThrottle| App
-* |wiThrottle| will try to find the |wiThrottle Server| on the |EX-CS|
+* Start the |WiThrottle| App
+* |WiThrottle| will try to find the |WiThrottle Server| on the |EX-CS|
 * If you are using |Access Point Mode| 
 
-  * It will not find the |wiThrottle Server| automatically
+  * It will not find the |WiThrottle Server| automatically
   * Enter:
 
     * The IP Address: 192.168.4.1
     * The Port: 2560
 
-  * |wiThrottle| should then connect 
+  * |WiThrottle| should then connect 
 
 * If you are using |Station Mode| 
   
-  * It should find the |wiThrottle Server| and automatically connect to it
+  * It should find the |WiThrottle Server| and automatically connect to it
 
 * You should then see the 'Address Screen'
 * Turn the track power on by selecting the 'settings' tab and clicking on the ``Track Power``
@@ -176,7 +176,7 @@ wiThrottle (iOS)
 * Select the 'Throttle' tab
 * You can now use the sliders to move your train 
 
-See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how to install and run |wiThrottle|.
+See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how to install and run |WiThrottle|.
 
 ----
 
@@ -187,7 +187,7 @@ If when you assembled your |EX-CS| configurated to Connect to JMRI, then you wil
 
 * JMRI - PC (Windows, Apple OSX, Linux) 
 * Engine Driver - For Android phones
-* wiThrottle - for Apple iOS phones
+* WiThrottle - for Apple iOS phones
 
 JMRI (PC)
 ---------
@@ -205,8 +205,8 @@ JMRI (PC)
 Engine Driver (via JMRI)
 ------------------------
 
-Before |Engine Driver| or |wiThrottle| can be run via |JMRI|, the JMRI WiThrottle server must be started.  It can be started manually by :menuselection:`menu --> actions --> start withrottle server` or be configured to start automatically whenever JMRI is started
-:menuselection:`menu --> edit --> preferences --> start up --> add --> perform action --> start withrottle server`` then save, exit, restart JMRI. A wiThrottle server window should open showing wiThrottle server is running.
+Before |Engine Driver| or |WiThrottle| can be run via |JMRI|, the JMRI WiThrottle server must be started.  It can be started manually by :menuselection:`menu --> actions --> start withrottle server` or be configured to start automatically whenever JMRI is started
+:menuselection:`menu --> edit --> preferences --> start up --> add --> perform action --> start withrottle server`` then save, exit, restart JMRI. A WiThrottle server window should open showing WiThrottle server is running.
 
 * Open the network settings on your phone
 * Change to same network of the PC that JMRI is on
@@ -236,25 +236,25 @@ Before |Engine Driver| or |wiThrottle| can be run via |JMRI|, the JMRI WiThrottl
 
 See :doc:`Engine Driver Page </throttles/software/engine-driver>` for details on how to install and run |Engine Driver|.
 
-wiThrottle (via JMRI)
+WiThrottle (via JMRI)
 ---------------------
 
 .. note:: 
   :class: note-float-right
 
-  The free version of wiThrottle ('wiThrottle Lite') only controls one loco at a time and does not offer turnout control or DCC track power control. (Note: JMRI can be configured to automatically turn the track power on.)
+  The free version of WiThrottle ('WiThrottle Lite') only controls one loco at a time and does not offer turnout control or DCC track power control. (Note: JMRI can be configured to automatically turn the track power on.)
   
   The paid version WiThrottle can control multiple locos, can create and control consists, can control turnouts and routes, and can control DCC track power.
 
-Before |Engine Driver| or |wiThrottle| can be run via |JMRI|, the JMRI WiThrottle server must be started.  It can be started manually by :menuselection:`menu --> actions --> start withrottle server` or be configured to start automatically whenever JMRI is started
-:menuselection:`menu --> edit --> preferences --> start up --> add --> perform action --> start withrottle server`` then save, exit, restart JMRI. A wiThrottle server window should open showing wiThrottle server is running.
+Before |Engine Driver| or |WiThrottle| can be run via |JMRI|, the JMRI WiThrottle server must be started.  It can be started manually by :menuselection:`menu --> actions --> start withrottle server` or be configured to start automatically whenever JMRI is started
+:menuselection:`menu --> edit --> preferences --> start up --> add --> perform action --> start withrottle server`` then save, exit, restart JMRI. A WiThrottle server window should open showing WiThrottle server is running.
 
 * Open the network settings on your phone
 * Change to same network of the PC that JMRI is on
-* Start the |wiThrottle| App
-* |wiThrottle| will try to find the |wiThrottle Server| on the |EX-CS|
+* Start the |WiThrottle| App
+* |WiThrottle| will try to find the |WiThrottle Server| on the |EX-CS|
 
-  * It should find the |wiThrottle Server| in |JMRI| and automatically connect to it
+  * It should find the |WiThrottle Server| in |JMRI| and automatically connect to it
 
 * You should then see the 'Address Screen'
 * Turn the track power on by selecting the 'settings' tab and clicking on the ``Track Power``
@@ -269,7 +269,7 @@ Before |Engine Driver| or |wiThrottle| can be run via |JMRI|, the JMRI WiThrottl
 * Select the 'Throttle' tab
 * You can now use the sliders to move your train 
 
-See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how to install and run |wiThrottle|.
+See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how to install and run |WiThrottle|.
 
 ----
 
@@ -310,9 +310,9 @@ wiThrottle (Multiple Trains)
 .. note:: 
   :class: note-float-right
 
-  The free version of |WITHROTTLE| (WiThrottle Lite) does not provide any options for running multiple trains or Consisted / Multiple Unit trains.  You need to purchase the paid/full version.
+  The free version of |WiThrottle| (WiThrottle Lite) does not provide any options for running multiple trains or Consisted / Multiple Unit trains.  You need to purchase the paid/full version.
 
-.. todo:: `LOW - Stage 1 <https://github.com/DCC-EX/dcc-ex.github.io/issues/415>`_ - wiThrottle - Multiple Trains
+.. todo:: `LOW - Stage 1 <https://github.com/DCC-EX/dcc-ex.github.io/issues/415>`_ - WiThrottle - Multiple Trains
 
 
 ----
@@ -320,12 +320,12 @@ wiThrottle (Multiple Trains)
 Program a decoder's DCC address
 ===============================
 
-|DCC-EX| provides an Android app |EX-TB| with a basic interface for programming DCC decoders, but it requires that you connect to the |EX-CS| over wifi or Ethernet. (USB is not supported.)
+|DCC-EX| provides an Android app |EX-TB| with a basic interface for programming DCC decoders, but it requires that you connect to the |EX-CS| over WiFi or Ethernet. (USB is not supported.)
 
 There are three Android apps that can program decoders:
 
-* :doc:`/ex-toolbox/index` can program decoders over wifi or Ethernet.
-* :doc:`/throttles/software/engine-driver` can program decoders over wifi or Ethernet.
+* :doc:`/ex-toolbox/index` can program decoders over WiFi or Ethernet.
+* :doc:`/throttles/software/engine-driver` can program decoders over WiFi or Ethernet.
 * :doc:`/throttles/software/rtdrive-dccpp` can program decoders but it is not particularly user friendly to do so.
 
 We also recommend using |JMRi| DecoderPro for programming decoders.  It works for USB connected a |EX-CS| and it provides plain English descriptions of all the CVs of a huge number of different decoders, is very well supported, runs on the major PC operating systems, and is free and open source.
@@ -338,7 +338,7 @@ There are two basic methods for programming decoders
 * Using the Programming Track (Service Mode programming)
 * Programming on Main (POM or Ops Mode programming)
 
-Programming on the programming track, or service mode programming, allows for receiving acknowledgement that programming changes have successfully been applied, and also allows |JMRi| DecoderPro to interrogate a decoder to make a best guess at the type of decoder that's installed, what the address is, and so forth.
+Programming on the programming track, or service mode programming, allows for receiving acknowledgement that programming changes have successfully been applied, and also allows |JMRI| DecoderPro to interrogate a decoder to make a best guess at the type of decoder that's installed, what the address is, and so forth.
 
 Programming on main, also known as POM or ops mode programming, doesn't allow for acknowledgement or reading of CVs, but is handy when simple changes need to be made while a loco is in operation.
 
@@ -353,7 +353,7 @@ JMRI (Programming Decoders)
 
 |JMRI| is a PC based app that runs on Windows, Apple macOS, and Linux (including Raspberry Pi's Raspbian (RasPi)).
 
-It relies on the |EX-CS| being connected to the PC running |JMRI|, normally by the USB cable. (It can be done over WiFi, but is not recommended).  This means that, even if you setup your |EX-CS| for Wifi you will need to connect it to the PC.  Don't worry, this will work without having to load the software on the |EX-CS| again.
+It relies on the |EX-CS| being connected to the PC running |JMRI|, normally by the USB cable. (It can be done over WiFi, but is not recommended).  This means that, even if you setup your |EX-CS| for WiFi you will need to connect it to the PC.  Don't worry, this will work without having to load the software on the |EX-CS| again.
 
 Installing JMRI
 ^^^^^^^^^^^^^^^

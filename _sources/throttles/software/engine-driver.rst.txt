@@ -22,7 +22,7 @@ Engine Driver
 
 If you wish to connect Engine Driver directly to |EX-CS|, you need to add a WiFi option to your |EX-CS| as explained here: :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`.
 
-If you wish to connect Engine Driver to |JMRI|, you need to start the |wiThrottle Server| and (optionally [#]_) the Web Server in JMRI on the computer running |JMRI|. The |JMRI| computer must be connected to the |EX-CS| using a USB cable. 
+If you wish to connect Engine Driver to |JMRI|, you need to start the |WiThrottle Server| and (optionally [#]_) the Web Server in JMRI on the computer running |JMRI|. The |JMRI| computer must be connected to the |EX-CS| using a USB cable. 
 
 .. _ed-platforms:
 
@@ -46,7 +46,7 @@ Extensive help is available at the `Engine Driver Home <https://flash62au.github
 
 .. _ed-features:
 
-Standard Features (all wiThrottle servers)
+Standard Features (all WiThrottle servers)
 ==========================================
 
 * Control one to six locomotives or consists
@@ -125,7 +125,7 @@ https://flash62au.github.io/EngineDriver_Home/operation/getting_started.html
 
 Using a Bluetooth Controller
 =============================
-This is the one Steve Todd uses himself on a lanyard. It leaves both hands free for paperwork and uncoupling and is light enough to simply let go of when you need both hands. Here are his optimized settings. His preferred settings are listed in the note below. You can use these as a start and customize them for your own use:
+This is the one Steve Todd uses himself on a lanyard. It leaves both hands free for paperwork and uncoupling and is light enough to simply let go of when you need both hands. Here are his optimised settings. His preferred settings are listed in the note below. You can use these as a start and customise them for your own use:
 
 .. image:: /_static/images/throttles/bt_controller1.jpg
    :alt: Bluetooth Lanyard Controller

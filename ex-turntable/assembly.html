@@ -610,7 +610,7 @@
 <ul>
 <li><p><a class="reference internal" href="#connection-summary" id="id10">Connection summary</a></p>
 <ul>
-<li><p><a class="reference internal" href="#using-a-two-wire-stepper-driver-eg-a4988-drv8825" id="id11">Using a two wire stepper driver (eg. A4988/DRV8825)</a></p></li>
+<li><p><a class="reference internal" href="#using-a-two-wire-stepper-driver-e-g-a4988-drv8825" id="id11">Using a two wire stepper driver (e.g. A4988/DRV8825)</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference internal" href="#before-you-start" id="id12">1. BEFORE you start</a></p></li>
@@ -623,7 +623,7 @@
 <ul>
 <li><p><a class="reference internal" href="#installing-with-ex-installer" id="id19">Installing with EX-Installer</a></p></li>
 <li><p><a class="reference internal" href="#installing-with-the-arduino-ide" id="id20">Installing with the Arduino IDE</a></p></li>
-<li><p><a class="reference internal" href="#configuration-for-two-wire-stepper-drivers-eg-a4988-drv8825" id="id21">Configuration for two wire stepper drivers (eg. A4988/DRV8825)</a></p></li>
+<li><p><a class="reference internal" href="#configuration-for-two-wire-stepper-drivers-e-g-a4988-drv8825" id="id21">Configuration for two wire stepper drivers (e.g. A4988/DRV8825)</a></p></li>
 <li><p><a class="reference internal" href="#first-start-and-automatic-calibration" id="id22">First start and automatic calibration</a></p></li>
 </ul>
 </li>
@@ -730,9 +730,9 @@
 </tbody>
 </table>
 <p>Of course for the Tinkerers and Engineers, if you’re not using a Nano or a prototyping shield, adapt the details as suits your configuration.</p>
-<section id="using-a-two-wire-stepper-driver-eg-a4988-drv8825">
-<h4><a class="toc-backref" href="#id11" role="doc-backlink">Using a two wire stepper driver (eg. A4988/DRV8825)</a><a class="headerlink" href="#using-a-two-wire-stepper-driver-eg-a4988-drv8825" title="Permalink to this heading"></a></h4>
-<p>For those using a NEMA17 or similar stepper motor with a two wire type driver (eg. A4988 or DRV8825), then the four Arduino pins A0 - A3 map like this, with the rest remaining the same as the table above:</p>
+<section id="using-a-two-wire-stepper-driver-e-g-a4988-drv8825">
+<h4><a class="toc-backref" href="#id11" role="doc-backlink">Using a two wire stepper driver (e.g. A4988/DRV8825)</a><a class="headerlink" href="#using-a-two-wire-stepper-driver-e-g-a4988-drv8825" title="Permalink to this heading"></a></h4>
+<p>For those using a NEMA17 or similar stepper motor with a two wire type driver (e.g. A4988 or DRV8825), then the four Arduino pins A0 - A3 map like this, with the rest remaining the same as the table above:</p>
 <table class="command-table docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Device Pin</p></th>
@@ -831,7 +831,7 @@
 </table>
 <a class="reference internal image-reference" href="../_images/uln2003-pins.png"><img alt="ULN2003 Pins" src="../_images/uln2003-pins.png" style="width: 426.40000000000003px; height: 320.0px;" /></a>
 <a class="reference internal image-reference" href="../_images/shield-uln2003-pins.png"><img alt="Shield to ULN2003 pins" src="../_images/shield-uln2003-pins.png" style="width: 400.0px; height: 300.0px;" /></a>
-<p>Insert the stepper motor connector into the recepticle on the ULN2003 controller. Note that it will only go in one way, so check the orientation and simply plug it in.</p>
+<p>Insert the stepper motor connector into the receptacle on the ULN2003 controller. Note that it will only go in one way, so check the orientation and simply plug it in.</p>
 <a class="reference internal image-reference" href="../_images/28byj-48-connector1.png"><img alt="28BYJ-48 Connector" src="../_images/28byj-48-connector1.png" style="width: 400.0px; height: 300.0px;" /></a>
 <a class="reference internal image-reference" href="../_images/28byj-48-connector2.png"><img alt="28BYJ-48 Connector" src="../_images/28byj-48-connector2.png" style="width: 400.0px; height: 300.0px;" /></a>
 </section>
@@ -957,8 +957,8 @@
 <p>If you don’t have the magnet installed at this point, or if it is too far from the sensor, <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> will rotate several turns prior to flagging that homing has failed, and will then cease turning. The automatic calibration process will not commence if homing has failed.</p>
 <p>If your testing of the hall effect sensor in step 6 above succeeded, then the issue is likely to be the distance the magnet is from the sensor, and this will require adjustment. See <a class="reference internal" href="../support/ex-tt-troubleshooting.html"><span class="doc">EX-Turntable FAQ and Troubleshooting</span></a> for further assistance if required.</p>
 </section>
-<section id="configuration-for-two-wire-stepper-drivers-eg-a4988-drv8825">
-<h4><a class="toc-backref" href="#id21" role="doc-backlink">Configuration for two wire stepper drivers (eg. A4988/DRV8825)</a><a class="headerlink" href="#configuration-for-two-wire-stepper-drivers-eg-a4988-drv8825" title="Permalink to this heading"></a></h4>
+<section id="configuration-for-two-wire-stepper-drivers-e-g-a4988-drv8825">
+<h4><a class="toc-backref" href="#id21" role="doc-backlink">Configuration for two wire stepper drivers (e.g. A4988/DRV8825)</a><a class="headerlink" href="#configuration-for-two-wire-stepper-drivers-e-g-a4988-drv8825" title="Permalink to this heading"></a></h4>
 <p>If using a two wire stepper driver such as the A4988 or DRV8825 with a bipolar stepper motor such as a NEMA17 or similar, you will need to update “config.h” to reflect this.</p>
 <p>While the provided “config.example.h” file includes instructions, they are repeated here for clarity, as well as being outlined on the <a class="reference internal" href="configure.html"><span class="doc">Configuration options</span></a> page.</p>
 <p>Locate this section in “config.h”, comment out the line defining the use of “ULN2003_HALF_CW” by adding <code class="docutils literal notranslate"><span class="pre">//</span></code>, and uncomment the line defining the use of “A4988” by removing <code class="docutils literal notranslate"><span class="pre">//</span></code>:</p>
@@ -970,8 +970,8 @@
 <span class="c1">//  ULN2003_HALF_CCW    : ULN2003 in half step mode, counter clockwise homing/calibration</span>
 <span class="c1">//  ULN2003_FULL_CW     : ULN2003 in full step mode, clockwise homing/calibration</span>
 <span class="c1">//  ULN2003_FULL_CCW    : ULN2003 in full step mode, counter clockwise homing/calibration</span>
-<span class="c1">//  A4988               : Two wire drivers (eg. A4988, DRV8825)</span>
-<span class="c1">//  A4988_INV           : Two wire drivers (eg. A4988, DRV8825), with enable pin inverted</span>
+<span class="c1">//  A4988               : Two wire drivers (e.g. A4988, DRV8825)</span>
+<span class="c1">//  A4988_INV           : Two wire drivers (e.g. A4988, DRV8825), with enable pin inverted</span>
 <span class="c1">//</span>
 <span class="c1">//  NOTE: If you are using a different controller than those already defined, refer to</span>
 <span class="c1">//  the documentation to define the appropriate configuration variables. Note there are</span>

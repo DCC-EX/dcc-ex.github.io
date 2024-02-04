@@ -69,4 +69,4 @@ Using Wifi
 To use Wifi, make sure you have a WiFi enabled |EX-CS| as described in the :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>` section.
 
 
-..TODO:: insert tutorial here - Using Wifi
+..TODO:: insert tutorial here - Using WiFi

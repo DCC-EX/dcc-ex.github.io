@@ -7,13 +7,18 @@
 EX-WebThrottle
 **************
 
+.. rst-class:: dcclink-right
+
+   `Try It Now <https://DCC-EX.github.io/WebThrottle-EX>`_
+
 |conductor| |tinkerer| |engineer|
 
 .. sidebar::
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
+ 
 
 |EX-WT| is a throttle (controller) that can connect to the |EX-CS| directly through the USB port of a computer.
 
@@ -55,7 +60,7 @@ You have an option for how you would like to run |EX-WT|, from the cloud or inst
 Try it now (Run from the cloud)
 ===============================
 
-Just click this link and you will load a web page from our server that will run the web throttle on your machine. You can connect it to the |EX-CS| or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run |EX-CS| in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
+Just click the 'Try it now' button below and you will load a web page from our server that will run the web throttle on your machine. You can connect it to the |EX-CS| or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run |EX-CS| in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
 
 .. rst-class:: dcclink
 
@@ -89,7 +94,7 @@ Operation
 
    EX-WebThrottle - Menu
 
-|EX-WT| has four pages which you can switch between using the hamburger menu button (thee horizontal bars) on the top left of the screen.
+|EX-WT| has four pages which you can switch between using the hamburger menu button (three horizontal bars) on the top left of the screen.
 
 - Throttle *(the default page)*
 - CV Programmer
@@ -111,9 +116,9 @@ Throttle
 
    EX-WebThrottle screen
 
-To use the program, you can either click on the ``Serial`` dropdown button and select ``Emulator`` to run in emulator mode, or after making sure your hardware is properly connected, select ``Serial``.
+To use the program to connect to your |EX-CS| leave the ``Serial`` dropdown as is.
 
-(See the section below if wishing to use the "emulator mode". )
+(See the section below if you wish to use the "emulator mode". )
 
 .. figure:: /_static/images/ex-webthrottle/connect-button.png
    :alt: EX-WebThrottle - Connect button
@@ -181,6 +186,8 @@ You can send any DCC-EX Native command in this way.
 
 Emulator
 ~~~~~~~~
+
+To use the program in to emulate an |EX-CS|, without actually connecting to a real one, click on the ``Serial`` dropdown button and select ``Emulator`` to run in emulator mode, then follow to instructions above from ``Connect``.
 
 .. note:: Not all Command Station functions are fully supported in the emulator yet. This means that although the software works, not all the responses will be shown in the debug console. This will be completed in a later release.
 

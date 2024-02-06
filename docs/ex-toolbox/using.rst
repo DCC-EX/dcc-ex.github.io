@@ -208,6 +208,10 @@ To access the Speed Matching either:
 * Swipe Right from the Loco Status Screen
 * Select 'Speed Matching (PoM)' from the Menu
 
+   .. raw:: html
+   
+      <iframe width="336" height="189" src="https://www.youtube.com/embed/7WyWR8xYvgY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 EX-Toolbox Speed Matching Instructions
 --------------------------------------

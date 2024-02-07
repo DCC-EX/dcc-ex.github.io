@@ -166,7 +166,11 @@ To write a CV value to the decoder, enter the DCC Address of the decoder, enter 
 
 If you select a 'common CV value' it will enter the CV number into the field. From there follow the instructions above for writing the CV.
 
-Note: Issuing a read or write will automatically turn the track power on.
+.. Note: 
+
+   Issuing a read or write will automatically turn the track power on.
+
+   The CV Programming Page has a feature specific to CV29.  When you read CV29; |BR| a) it explains what you need to change the value to to disable the 'Speed Table', and |BR| b) it explains what you need to change the value to to change default direction of the loco. 
 
 See below for issuing DCC-EX commands.
 
@@ -230,17 +234,24 @@ Assumptions
 
 1. Assumes that you have already configured the 'Master' to be the way you want it and the other locos to behave.
 
-  The Master should be the naturally slowest loco of the set, not necessarily the one that will be run in the lead position.  |BR| i.e. Test your locos on their default settings first, and find the slowest.
+  The 'Master' should be the naturally slowest loco of the set, not necessarily the one that will be run in the lead position.  |BR| i.e. Test your locos on their default settings first, and find the slowest.
 
   The low speed test uses a speed setting of `5` (0-126).  If your locos don't start moving at that setting it would be advisable to adjust Low speed setting and/or the Kick Start of the 'Master' first.
   
-2. Assumes that, at least, the 'Second' loco is configured to use the High, Mid, Low CVs, not the full 28 step speed table.  (Part of CV29) |BR| Not critical, but it is advisable to have the Master also use the High, Mid, Low CVs.
-3. It is advisable that BACK-EMF is turned off on all locos.  If you don't you will probably encounter surging of the locos as they speed up and slow down under individual load.
+2. Assumes that, at least, the 'Second' loco is configured to use the High, Mid, Low CVs, not the full 28 step 'Speed Table'.  (Part of CV29) |BR| Not critical, but it is advisable to have the 'Master' also use the High, Mid, Low CVs.
+
+   The CV Programming Page of |EX-TB| has a feature specific to CV29.  When you read CV29, it explains what you need to change the value to to disable the 'Speed Table'.
+
+3. It is highly advisable that **BACK-EMF** is turned off on all locos that will be run in a consist.  If you don't you will likely encounter surging of the locos as they speed up and slow down under individual load.  
+   
+   **BACK-EMF** is referred to by some manufacturers as 'Dynamic Compensation for Speed Stabilisation', 'Scaleable Speed Stabilisation' or 'Load Compensation'.  Unfortunately there is no standard way to disable BACK-EMF. You will need to refer to the manuals for your decoders. 
+   
+   `This page <https://tonystrains.com/news/dcc-motor-control-with-back-emf-and-p-i-d/>`_ has a detailed explanation of BACK-EMF and details on how to change it for a number of manufacturers.
 
 Instructions
 ^^^^^^^^^^^^
 
-1. Open EX-Toolbox and go to the Speed Matching screen.
+1. Open |EX-TB| and go to the Speed Matching screen.
 2. Put the/a second (non-master) loco on the ``PROG`` track. (see Notes)
 3. Click :guilabel:`Read -PROG trk`.
 

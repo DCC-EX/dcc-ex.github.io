@@ -790,7 +790,7 @@
 <section id="mcp23017-digital-i-o-expander">
 <h3><a class="toc-backref" href="#id21" role="doc-backlink">MCP23017 digital I/O expander</a><a class="headerlink" href="#mcp23017-digital-i-o-expander" title="Permalink to this heading"></a></h3>
 <p>MCP23017 I/O expanders have 16 digital I/O pins and 8 available I<sup>2</sup>C addresses from 0x20 to 0x27.</p>
-<p>The device driver name is “IO_MCP23017.h”, however this is included by default and does not need to be added to “myHal.cpp”.</p>
+<p>The device driver name is “IO_MCP23017.h”, however this is included by default.</p>
 <p>Two devices are defined by default.</p>
 <p>Refer to <a class="reference internal" href="../developers/hal-config.html#mcp23017-modules"><span class="std std-ref">MCP23017 Modules</span></a> and <a class="reference internal" href="../developers/hal.html#hal-programming-interface"><span class="std std-ref">HAL Programming Interface</span></a> for further information.</p>
 <table class="command-table docutils align-default" id="id7">
@@ -806,7 +806,7 @@
 <td><p>164 - 179</p></td>
 <td><div class="line-block">
 <div class="line">Defined by default, default I<sup>2</sup>C address on some breakout boards</div>
-<div class="line">Some breakout boards (e.g. Waveshare) have 0x27 as default and will need to be changed</div>
+<div class="line">Some breakout boards (e.g. Waveshare or CQRobot Ocean) have 0x27 as default and will need to be changed</div>
 </div>
 </td>
 </tr>
@@ -826,7 +826,7 @@
 </tr>
 <tr class="row-even"><td><p>0x22 - 0x27</p></td>
 <td><p>16</p></td>
-<td><p>Need to add to myHal.cpp, and I<sup>2</sup>C address typically needs to be configured on breakout boards</p></td>
+<td><p>Need to add to myAutomation.h or myHal.cpp, and I<sup>2</sup>C address typically needs to be configured on breakout boards</p></td>
 </tr>
 </tbody>
 </table>
@@ -835,8 +835,9 @@
 <section id="mcp23008-digital-i-o-expander">
 <h3><a class="toc-backref" href="#id22" role="doc-backlink">MCP23008 digital I/O expander</a><a class="headerlink" href="#mcp23008-digital-i-o-expander" title="Permalink to this heading"></a></h3>
 <p>MCP23008 I/O expanders have 8 digital I/O pins and 8 available I<sup>2</sup>C addresses from 0x20 to 0x27.</p>
-<p>The device driver name is “IO_MCP23008.h” and will need to be included in “myHal.cpp”.</p>
-<p>Note that devices at 0x20/0x21 will conflict with the default defined MCP23017 devices at these addresses, and you will need to edit “IODevice.cpp” in order to disable these.</p>
+<p>The device driver name is “IO_MCP23008.h” and will need to be included in “myAutomation.h” or “myHal.cpp”.</p>
+<p>Note that devices at 0x20/0x21 will conflict with the default defined MCP23017 devices at these addresses, but this conflict should be resolved automatically at startup.</p>
+<p>Note also the potential conflict with an LCD at I<sup>2</sup>C address 0x27 as per <a class="reference internal" href="#mcp23017-digital-i-o-expander"><span class="std std-ref">MCP23017 digital I/O expander</span></a>.</p>
 <p>Refer to <a class="reference internal" href="../developers/hal.html#hal-programming-interface"><span class="std std-ref">HAL Programming Interface</span></a> for further information.</p>
 <p>When adding MCP23008s, select an unused VPin that allows a total of 8 consecutive numbers for all I/O pins.</p>
 <table class="docutils align-default" id="id9">
@@ -849,7 +850,7 @@
 <tr class="row-even"><td><p>0x20 - 0x27</p></td>
 <td><p>8</p></td>
 <td><div class="line-block">
-<div class="line">Need to add to myHal.cpp, and I<sup>2</sup>C address typically needs to be configured on breakout boards</div>
+<div class="line">Need to add to myAutomation.h or myHal.cpp, and I<sup>2</sup>C address typically needs to be configured on breakout boards</div>
 <div class="line">May need to disable default MCP23017s if 0x20/0x21 are used</div>
 </div>
 </td>
@@ -861,8 +862,8 @@
 <section id="pcf8574-digital-i-o-expander">
 <h3><a class="toc-backref" href="#id23" role="doc-backlink">PCF8574 digital I/O expander</a><a class="headerlink" href="#pcf8574-digital-i-o-expander" title="Permalink to this heading"></a></h3>
 <p>PCF8574 I/O expanders have 8 digital I/O pins and 8 available I<sup>2</sup>C addresses from 0x20 to 0x27.</p>
-<p>The device driver name is “IO_PCF8574.h” and will need to be included in “myHal.cpp”.</p>
-<p>Note that devices at 0x20/0x21 will conflict with the default defined MCP23017 devices at these addresses, and you will need to edit “IODevice.cpp” in order to disable these.</p>
+<p>The device driver name is “IO_PCF8574.h” and will need to be included in “myAutomation.h” or “myHal.cpp”.</p>
+<p>Note that devices at 0x20/0x21 will conflict with the default defined MCP23017 devices at these addresses, but this conflict should be resolved automatically at startup.</p>
 <p>Refer to <a class="reference internal" href="../developers/hal.html#hal-programming-interface"><span class="std std-ref">HAL Programming Interface</span></a> for further information.</p>
 <p>When adding PCF8574s, select an unused VPin that allows a total of 8 consecutive numbers for all I/O pins.</p>
 <table class="docutils align-default" id="id10">
@@ -875,7 +876,7 @@
 <tr class="row-even"><td><p>0x20 - 0x27</p></td>
 <td><p>8</p></td>
 <td><div class="line-block">
-<div class="line">Need to add to myHal.cpp, and I<sup>2</sup>C address typically needs to be configured on breakout boards</div>
+<div class="line">Need to add to myAutomation.h or myHal.cpp, and I<sup>2</sup>C address typically needs to be configured on breakout boards</div>
 <div class="line">May need to disable default MCP23017s if 0x20/0x21 are used</div>
 </div>
 </td>
@@ -887,7 +888,7 @@
 <section id="pca9685-pwm-servo-module">
 <h3><a class="toc-backref" href="#id24" role="doc-backlink">PCA9685 PWM servo module</a><a class="headerlink" href="#pca9685-pwm-servo-module" title="Permalink to this heading"></a></h3>
 <p>PCA9685 servo modules (or I/O expanders) have 16 PWM output pins and 62 available I<sup>2</sup>C addresses from 0x40 to 0x7D.</p>
-<p>The device driver name is “IO_PCA9685.cpp”, however this is loaded by default and does not need to be added to “myHal.cpp”.</p>
+<p>The device driver name is “IO_PCA9685.cpp”, however this is loaded by default.</p>
 <p>Two devices are defined by default.</p>
 <p>Refer to <a class="reference internal" href="../developers/hal-config.html#pca9685-modules"><span class="std std-ref">PCA9685 Modules</span></a> and <a class="reference internal" href="../developers/hal.html#hal-programming-interface"><span class="std std-ref">HAL Programming Interface</span></a> for further information.</p>
 <table class="command-table docutils align-default" id="id11">
@@ -919,7 +920,7 @@
 </tr>
 <tr class="row-even"><td><p>0x42 - 0x7D</p></td>
 <td><p>16</p></td>
-<td><p>Need to add to myHal.cpp, and I<sup>2</sup>C address typically needs to be configured on breakout boards</p></td>
+<td><p>Need to add to myAutomation.h or myHal.cpp, and I<sup>2</sup>C address typically needs to be configured on breakout boards</p></td>
 </tr>
 </tbody>
 </table>
@@ -927,8 +928,9 @@
 <hr class="docutils" />
 <section id="ex-ioexpander-digital-and-analogue-i-o-expander">
 <h3><a class="toc-backref" href="#id25" role="doc-backlink">EX-IOExpander - digital and analogue I/O expander</a><a class="headerlink" href="#ex-ioexpander-digital-and-analogue-i-o-expander" title="Permalink to this heading"></a></h3>
+<p><a class="reference external" href="../../news/posts/20230807.html"><img alt="EX-MotorShield8874" class="image-min-width-144" src="../../_images/new_in_version_5.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>EX-IOExpander is designed to support up to 256 pins and is currently in testing. The default I<sup>2</sup>C address is 0x65, however any valid and available address can be used.</p>
-<p>The device driver name is “IO_EXIOExpander.h” and will need to be included in “myHal.cpp”.</p>
+<p>The device driver name is “IO_EXIOExpander.h” and is included by default.</p>
 <p>Refer to <a class="reference internal" href="../../ex-ioexpander/index.html"><span class="doc">EX-IOExpander</span></a> for further information.</p>
 <p>When adding EX-IOExpander devices, select an unused VPin that allows for the appropriate number of consecutive vpins for all I/O pins.</p>
 <table class="docutils align-default" id="id13">
@@ -940,7 +942,7 @@
 </tr>
 <tr class="row-even"><td><p>Any valid/available (default 0x65)</p></td>
 <td><p>16 - 256</p></td>
-<td><p>Need to add to myHal.cpp, and I<sup>2</sup>C address needs to be configured in software</p></td>
+<td><p>I<sup>2</sup>C address needs to be configured in software</p></td>
 </tr>
 </tbody>
 </table>
@@ -952,7 +954,7 @@
 <section id="vl53l0x-time-of-flight-sensor">
 <h3><a class="toc-backref" href="#id27" role="doc-backlink">VL53L0X time-of-flight sensor</a><a class="headerlink" href="#vl53l0x-time-of-flight-sensor" title="Permalink to this heading"></a></h3>
 <p>VL53L0X time-of-flight sensors have a default I<sup>2</sup>C address of 0x29, however this address is programmable by software.</p>
-<p>The device driver name is “IO_VL53L0X.h” and will need to be included in “myHal.cpp”.</p>
+<p>The device driver name is “IO_VL53L0X.h” and will need to be included in “myAutomation.h” or “myHal.cpp”.</p>
 <p>Refer to <a class="reference internal" href="../../ex-commandstation/accessories/sensors/vl53l0x-tof-sensor.html"><span class="doc">VL53L0X Time of Flight Sensor</span></a> for further information.</p>
 <table class="docutils align-default" id="id14">
 <caption><span class="caption-number">Table 17 </span><span class="caption-text">Adding VL53L0Xs</span><a class="headerlink" href="#id14" title="Permalink to this table"></a></caption>
@@ -965,7 +967,7 @@
 <tr class="row-even"><td><p>0x29 - 0x7F</p></td>
 <td><p>4000</p></td>
 <td><p>3</p></td>
-<td><p>Need to add to myHal.cpp, do not use I<sup>2</sup>C address 0x29 if using multiple devices</p></td>
+<td><p>Need to add to myAutomation.h or myHal.cpp, do not use I<sup>2</sup>C address 0x29 if using multiple devices</p></td>
 </tr>
 </tbody>
 </table>
@@ -976,12 +978,13 @@
 <h2><a class="toc-backref" href="#id28" role="doc-backlink">Other devices</a><a class="headerlink" href="#other-devices" title="Permalink to this heading"></a></h2>
 <section id="ex-turntable">
 <h3><a class="toc-backref" href="#id29" role="doc-backlink">EX-Turntable</a><a class="headerlink" href="#ex-turntable" title="Permalink to this heading"></a></h3>
+<p><a class="reference external" href="../../news/posts/20230807.html"><img alt="EX-MotorShield8874" class="image-min-width-144" src="../../_images/new_in_version_5.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> is in Beta testing, however the device driver is unlikely to change much if at all.</p>
 </div>
 <p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> is configured with a default I<sup>2</sup>C address of 0x60, however this address is configurable by the software.</p>
-<p>The device driver name is “IO_EXTurntable.h” and will need to be included in “myHal.cpp”.</p>
+<p>The device driver name is “IO_EXTurntable.h” and will need to be included in “myAutomation.h” or “myHal.cpp”.</p>
 <p>Refer to <a class="reference internal" href="../../ex-turntable/index.html"><span class="doc">EX-Turntable</span></a> for further information.</p>
 <table class="docutils align-default" id="id15">
 <caption><span class="caption-number">Table 18 </span><span class="caption-text">Adding EX-Turntable</span><a class="headerlink" href="#id15" title="Permalink to this table"></a></caption>
@@ -994,7 +997,7 @@
 <tr class="row-even"><td><p>0x60 default, any valid and available I<sup>2</sup>C address</p></td>
 <td><p>600</p></td>
 <td><p>1</p></td>
-<td><p>Need to add to myHal.cpp, and use the specified version of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></p></td>
+<td><p>Need to add to myAutomation.h or myHal.cpp, and use the specified version of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -1008,7 +1011,7 @@
 <p>The rotary encoder device driver is in early development and is likely to change.</p>
 </div>
 <p>The DCC-EX rotary encoder is configured with a default I<sup>2</sup>C address of 0x80, however this address is configurable by the software.</p>
-<p>The device driver name is “IO_RotaryEncoder.h” and will need to be included in “myHal.cpp”.</p>
+<p>The device driver name is “IO_RotaryEncoder.h” and will need to be included in “myAutomation.h” or “myHal.cpp”.</p>
 <p>Refer to <a class="reference internal" href="../../ex-turntable/test-and-tune.html#controlling-ex-turntable-with-a-rotary-encoder"><span class="std std-ref">Controlling EX-Turntable with a rotary encoder</span></a> and the <a class="reference external" href="https://petegsx-projects.github.io/rotary-encoder/overview.html">project page</a> for further information.</p>
 <table class="docutils align-default" id="id16">
 <caption><span class="caption-number">Table 19 </span><span class="caption-text">Adding DCC-EX rotary encoder</span><a class="headerlink" href="#id16" title="Permalink to this table"></a></caption>
@@ -1020,8 +1023,8 @@
 </tr>
 <tr class="row-even"><td><p>0x80 default, any valid and available I<sup>2</sup>C address</p></td>
 <td><p>800</p></td>
-<td><p>1</p></td>
-<td><p>Need to add to myHal.cpp, and use the specified version of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></p></td>
+<td><p>1 - 3</p></td>
+<td><p>Need to add to myAutomation.h or myHal.cpp, and use the specified version of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></p></td>
 </tr>
 </tbody>
 </table>

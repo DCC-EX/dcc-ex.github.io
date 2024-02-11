@@ -64,9 +64,7 @@ For more boards you may be able to use, see the :doc:`WiFi Boards Section </refe
 
 .. warning:: 
 
-   Please be aware that the Espressif firmware shipped with *Duinopeak ESP8266 WiFi Expansion* and *ESP-01 or ESP-01S* devices :dcc-ex-red-bold:`will probably NOT work` with |EX-CS| out of the box.
-
-   (The recommended *Makerfabs ESP8266 WiFi Shield* is now shipping with the correct firmware version and **will work** with |EX-CS| *without modification*).
+   While the recommended *Makerfabs ESP8266 WiFi Shield* is now shipping with the correct firmware version and **will work** with |EX-CS| *without modification*, please be aware that the Espressif firmware shipped with *Duinopeak ESP8266 WiFi Expansion* and *ESP-01 or ESP-01S* devices :dcc-ex-red-bold:`will probably NOT work` with |EX-CS| out of the box.
 
    This can be corrected, but is probably beyond Conductor level and requires additional hardware.  
 

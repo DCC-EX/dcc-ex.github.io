@@ -18,7 +18,7 @@ ESP8266 (WiFi Boards) - AT Version Issues and Solutions
       :local:
       :depth: 3
 
-Unfortunately the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with |EX-CS|. This now seems to include the recommended `Makerfabs ESP8266 WiFi Shield <https://www.makerfabs.com/esp8266-wifi-shield.html>`_.
+Unfortunately, other than the recommended *Makerfabs ESP8266 WiFi Shield*, the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with |EX-CS|. This now seems to include the recommended `Makerfabs ESP8266 WiFi Shield <https://www.makerfabs.com/esp8266-wifi-shield.html>`_.
 
 Which is correct version of the AT firmware
 ===========================================

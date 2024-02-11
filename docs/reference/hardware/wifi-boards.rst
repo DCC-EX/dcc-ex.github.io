@@ -13,13 +13,11 @@ You can connect up to 5 WiFi throttles. For the standard Mega board, we recommen
 
 .. warning:: 
 
-    Please be aware that the Espressif AT firmware currently being shipped with these devices **will probably NOT work** with |EX-CS| out of the box.
+   Please be aware that the Espressif firmware shipped with *Duinopeak ESP8266 WiFi Expansion* and *ESP-01 or ESP-01S* devices :dcc-ex-red-bold:`will probably NOT work` with |EX-CS| out of the box.
 
-    This can be corrected, but is probably beyond Conductor level and requires additional hardware.  
+   (The recommended *Makerfabs ESP8266 WiFi Shield* is now shipping with the correct firmware version and **will work** with |EX-CS| *without modification*).
 
     See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
-
-    We are currently investigating other options.
 
 For more information on how to configure your Command Station to use the boards below, see :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>`
 

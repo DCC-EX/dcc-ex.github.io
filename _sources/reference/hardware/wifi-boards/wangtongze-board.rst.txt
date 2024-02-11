@@ -18,13 +18,13 @@ WangTongze Board
 .. warning:: 
    :class: warning-float-right
 
-   Please be aware that the Espressif AT firmware currently being shipped with these devices **will probably NOT work** with |EX-CS| out of the box.
+   Please be aware that the Espressif firmware shipped with *Duinopeak ESP8266 WiFi Expansion*, *ESP-01 or ESP-01S* and *WangTongze* devices :dcc-ex-red-bold:`will probably NOT work` with |EX-CS| out of the box.
+
+   (The recommended *Makerfabs ESP8266 WiFi Shield* is now shipping with the correct firmware version and **will work** with |EX-CS| *without modification*).
 
    This can be corrected, but is probably beyond Conductor level and requires additional hardware.
 
    See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
-
-   We are currently investigating other options.
 
 AKA: Uno R3 Mega Esp8266 Serial WiFi Shield / ESP-12E Board
 

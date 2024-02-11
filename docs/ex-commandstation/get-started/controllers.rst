@@ -78,7 +78,7 @@ There are number of excellent :doc:`phone apps and physical hardware devices </t
 
    Please be aware that the Espressif firmware shipped with *Duinopeak ESP8266 WiFi Expansion* and *ESP-01 or ESP-01S* devices :dcc-ex-red-bold:`will probably NOT work` with |EX-CS| out of the box.
 
-   (The recommended *Makerfabs ESP8266 WiFi Shield* is now shipping with the correct firmware version and **will work** with |EX-CS| *without modification*).
+   (Note: The recommended :doc:`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>` is now shipping with the correct firmware version and **will work** with |EX-CS| *without modification*).
 
    If you see a WiFi network Name (SSID) of "DCCEX-SAYS-BROKEN-FIRMWARE" then you have one of the problematic AT firmware versions.
 

@@ -2,10 +2,39 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2024-02-11T23:42:30.437524+00:00</updated>
+  <updated>2024-02-14T09:11:36.852577+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.3">ABlog</generator>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20240214.html</id>
+    <title>Belated Happy New Year and a new EX-Installer!</title>
+    <updated>2024-02-14T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="belated-happy-new-year-and-a-new-ex-installer"&gt;
+
+&lt;p&gt;Firstly, we wish all our users a rather belated Happy New Year as we present our first DCC-EX News article for 2024! The news today is we have released an updated version of our &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt; (version 0.0.17).&lt;/p&gt;
+&lt;p&gt;This release includes the below changes, and as always we encourage you to download this latest version of &lt;a class="reference internal" href="download/ex-commandstation.html#ex-installer"&gt;&lt;span class="std std-ref"&gt;EX-Installer&lt;/span&gt;&lt;/a&gt; from our downloads page:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Improved how we handle fonts across different Operating Systems&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Update various Python module versions to resolve security vulnerabilities&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Remove the option to select Arduino Nano with the old bootloader, as this has never worked&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Prevent enabling WiFi for &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt; on the Arduino Uno/Nano platforms as they don’t have enough memory&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Set the default CV programming option in &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt; to enabled for the Arduino Uno/Nano platforms&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Change the &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt; start with power on option to use &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;RAIL&lt;/span&gt; &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;POWERON&lt;/span&gt;&lt;/code&gt; instead of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;JOIN&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add the ability to override local changes made to &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;, &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;IOExpander&lt;/span&gt;, and &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt; software instead of just generating an error&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Allow a blank WiFi password in STA mode&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20240214.html" rel="alternate"/>
+    <summary>Firstly, we wish all our users a rather belated Happy New Year as we present our first DCC-EX News article for 2024! The news today is we have released an updated version of our &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt; (version 0.0.17).</summary>
+    <category term="ex-installer" label="ex-installer"/>
+    <published>2024-02-14T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>https://dcc-ex.com/news/posts/20231207.html</id>
     <title>Announcing the new DCCEXProtocol Arduino Library!</title>

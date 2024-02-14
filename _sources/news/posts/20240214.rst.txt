@@ -1,0 +1,31 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+.. include:: /include/include-news.rst
+
+:blogpost: true
+:date: 14 February 2024
+:author: peteGSX
+:category: News
+:tags: ex-installer
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+Belated Happy New Year and a new EX-Installer!
+==============================================
+
+Firstly, we wish all our users a rather belated Happy New Year as we present our first DCC-EX News article for 2024! The news today is we have released an updated version of our |EX-I| (version 0.0.17).
+
+This release includes the below changes, and as always we encourage you to download this latest version of :ref:`download/ex-commandstation:ex-installer` from our downloads page:
+
+- Improved how we handle fonts across different Operating Systems
+- Update various Python module versions to resolve security vulnerabilities
+- Remove the option to select Arduino Nano with the old bootloader, as this has never worked
+- Prevent enabling WiFi for |EX-CS| on the Arduino Uno/Nano platforms as they don't have enough memory
+- Set the default CV programming option in |EX-CS| to enabled for the Arduino Uno/Nano platforms
+- Change the |EX-CS| start with power on option to use |EX-R| ``POWERON`` instead of ``JOIN``
+- Add the ability to override local changes made to |EX-CS|, |EX-IO|, and |EX-TT| software instead of just generating an error
+- Allow a blank WiFi password in STA mode

@@ -2,10 +2,34 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2024-02-14T09:11:36.852577+00:00</updated>
+  <updated>2024-02-15T00:48:24.109592+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.3">ABlog</generator>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20240215.html</id>
+    <title>Announcing EX-SensorCAM - a new camera-based sensor for your layout</title>
+    <updated>2024-02-15T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="announcing-ex-sensorcam-a-new-camera-based-sensor-for-your-layout"&gt;
+
+&lt;p&gt;Are you struggling to figure out how to neatly run a myriad of cables around your layout to cater for dozens (or more) of sensors? Struggling to find ways to neatly integrate and hide sensors in and around your track? Well struggle no more, EX-SensorCAM is here!&lt;/p&gt;
+&lt;p&gt;Today, we are announcing a new Alpha product using embedded camera technology with the ESP32 CAM platform to visually monitor your layout and detect movements of trains to trigger events.&lt;/p&gt;
+&lt;p&gt;This can be used in place of traditional wired layout sensors with a camera placed overhead instead. This can then monitor activities on the layout, rather than having to figure out the best location for a sensor, then figure out how to mount or embed it in the track bed or surrounds, and then figure out a cunning way to hide it so it looks like part of the scenery. Not to mention removing the need to wire up every sensor and ensure that wiring is neat and tidy underneath the layout.&lt;/p&gt;
+&lt;p&gt;Like all our Alpha releases, this is very new software, meaning it’s going to rapidly undergo many changes and bug fixes as issues are found, and functionality is likely going to change over time. This also means the project is currently aimed more towards our &lt;a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../begin/levels.html#tinkerer"&gt;Tinkerer&lt;/a&gt; and &lt;a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../begin/levels.html#engineer"&gt;Engineer&lt;/a&gt; audiences.&lt;/p&gt;
+&lt;p&gt;There are some caveats on things like lighting requirements at the moment given the ESP32 CAM platform is a fairly low performance, entry-level device.&lt;/p&gt;
+&lt;p&gt;If you’re keen to have a look and get started, then you can find the software in our &lt;a class="reference external" href="https://github.com/DCC-EX/EX-SensorCAM"&gt;EX-SensorCAM repository&lt;/a&gt; in GitHub, where you will find a PDF with instructions on what’s required to get started.&lt;/p&gt;
+&lt;p&gt;You can also discuss this in the #ex-sensorcam channel in our &lt;a class="reference external" href="https://discord.gg/y2sB4Fp"&gt;Discord Server&lt;/a&gt;.&lt;/p&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20240215.html" rel="alternate"/>
+    <summary>Are you struggling to figure out how to neatly run a myriad of cables around your layout to cater for dozens (or more) of sensors? Struggling to find ways to neatly integrate and hide sensors in and around your track? Well struggle no more, EX-SensorCAM is here!</summary>
+    <category term="ex-sensorcam" label="ex-sensorcam"/>
+    <published>2024-02-15T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>https://dcc-ex.com/news/posts/20240214.html</id>
     <title>Belated Happy New Year and a new EX-Installer!</title>

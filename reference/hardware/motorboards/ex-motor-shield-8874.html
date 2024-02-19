@@ -696,9 +696,9 @@
 <h3>1. Connect DC Power to Motor Driver<a class="headerlink" href="#connect-dc-power-to-motor-driver" title="Permalink to this heading"></a></h3>
 <p>The EX-MotorShield8874 accepts a standard 2.1mm inside diameter DC barrel jack for DC power, with centre pin positive, and polarity protected for your safety. Acceptable voltages for correct DCC operation include 10-24VDC, but the shield can cope with 9-30VDC.</p>
 <figure class="align-default" id="id8">
-<a class="reference internal image-reference" href="../../../_images/ex_motorshield8874_purple_megawifi.jpg"><img alt="DCC-EX EX-MotorShield8874 RevA on Mega+WiFi with power and track connectors" src="../../../_images/ex_motorshield8874_purple_megawifi.jpg" style="width: 402.5px; height: 188.4px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/ex_motorshield8874_purple_megawifi.jpg"><img alt="DCC-EX EX-MotorShield8874 on Mega+WiFi with power and track connectors" src="../../../_images/ex_motorshield8874_purple_megawifi.jpg" style="width: 402.5px; height: 188.4px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 57 </span><span class="caption-text">DCC-EX EX-MotorShield8874 RevA on Mega+WiFi with power and track connectors</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 57 </span><span class="caption-text">DCC-EX EX-MotorShield8874 on Mega+WiFi with power and track connectors</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <div class="admonition note">
@@ -710,6 +710,10 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Please note that as the EX-MotorShield8874 can supply up to 5A of track power per channel, a power supply of more than 10A peak capacity is required to run both channels at full peak current and have power left for the Command Station.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are just just testing your Arduino (not trying to power the track with the motor shield) some users have found that their PC USB ports have not been providing reliable power to the Arduino and have needed to plug the power supply into EX-MotorShield8874.</p>
 </div>
 </section>
 <section id="turn-on-power-to-the-motor-driver">
@@ -731,7 +735,10 @@
 <p><span class="caption-number">Figure 59 </span><span class="caption-text">DCC-EX EX-MotorShield8874 RevA connectors</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
+<p>There are two sets of output connectors on the motor shield, <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code>. A is the Main or Operations (also called ‘Ops’) track while <code class="docutils literal notranslate"><span class="pre">B</span></code> is the Programming or Service track. Connect twisted pair wire of the proper gauge to each track.</p>
 <p>Notice that A (MAIN) is on the left as you look at the connectors, and B (PROG) is on the right, next to the DC barrel jack.</p>
+<p>Polarity (which wire is connected to which side of the track) is not not important here if you are using separate, completely isolated piece of track for PROG. <em>However</em> if you will be using a siding track that connects to your main track, make sure that the <em>connections for both tracks match</em>.</p>
+<p>In other words, if you view one side of your main track as having a ‘left’ side and a ‘right’ side, and connect positive output A to the left side, connect the positive from the B side to the left side of the programming track. In electrical terms, we want both tracks to be “in phase” with each other. Here is the diagram from above repeated again for reference.</p>
 </section>
 </section>
 <section id="next-steps">

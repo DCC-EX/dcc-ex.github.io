@@ -639,7 +639,7 @@
 <li><p><a class="reference internal" href="#connecting-via-usb" id="id35">Connecting via USB</a></p>
 <ul>
 <li><p><a class="reference internal" href="#downloads" id="id36">Downloads</a></p></li>
-<li><p><a class="reference internal" href="#troubleshooting-windows" id="id37">Troubleshooting (Windows)</a></p></li>
+<li><p><a class="reference internal" href="#troubleshooting-windows-socat" id="id37">Troubleshooting (Windows socat)</a></p></li>
 </ul>
 </li>
 </ul>
@@ -1113,9 +1113,10 @@ i.e. ‘COM12’ in the Windows Device Manager becomes ‘/dev/ttyS11’</p>
 </ul>
 </div></blockquote>
 </section>
-<section id="troubleshooting-windows">
-<h3><a class="toc-backref" href="#id37" role="doc-backlink">Troubleshooting (Windows)</a><a class="headerlink" href="#troubleshooting-windows" title="Permalink to this heading"></a></h3>
-<p>In Microsoft Windows, if you see a “command not found” error, Here is what you need to do to fix it:</p>
+<hr class="docutils" />
+<section id="troubleshooting-windows-socat">
+<h3><a class="toc-backref" href="#id37" role="doc-backlink">Troubleshooting (Windows socat)</a><a class="headerlink" href="#troubleshooting-windows-socat" title="Permalink to this heading"></a></h3>
+<p>In Microsoft Windows and using the command line socat, if you see a “command not found” error, Here is what you need to do to fix it:</p>
 <ul class="simple">
 <li><p>Right click on “My Computer” -&gt; Properties -&gt; Advanced -&gt; Environment Variables</p></li>
 <li><p>Add a new environment variable, called <code class="docutils literal notranslate"><span class="pre">CYGWIN_HOME</span></code> and set its value to <code class="docutils literal notranslate"><span class="pre">C:\cygwin</span></code></p></li>

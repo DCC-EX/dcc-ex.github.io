@@ -604,7 +604,7 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="#using" id="id2">Using</a></p></li>
 <li><p><a class="reference internal" href="#downloads" id="id3">Downloads</a></p></li>
-<li><p><a class="reference internal" href="#troubleshooting-windows" id="id4">Troubleshooting (Windows)</a></p></li>
+<li><p><a class="reference internal" href="#troubleshooting-windows-socat" id="id4">Troubleshooting (Windows socat)</a></p></li>
 </ul>
 </nav>
 </aside>
@@ -643,7 +643,7 @@ i.e. ‘COM12’ in the Windows Device Manager becomes ‘/dev/ttyS11’</p>
 <p>Once started…</p>
 <ul class="simple">
 <li><p>Open your WiFi throttle app on your Android/iOS/etc. device</p></li>
-<li><p>On the connection screne/fields:</p></li>
+<li><p>On the connection screen/fields:</p></li>
 </ul>
 <blockquote>
 <div><ul class="simple">
@@ -669,9 +669,10 @@ i.e. ‘COM12’ in the Windows Device Manager becomes ‘/dev/ttyS11’</p>
 </ul>
 </div></blockquote>
 </section>
-<section id="troubleshooting-windows">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink">Troubleshooting (Windows)</a><a class="headerlink" href="#troubleshooting-windows" title="Permalink to this heading"></a></h2>
-<p>In Microsoft Windows, if you see a “command not found” error, Here is what you need to do to fix it:</p>
+<hr class="docutils" />
+<section id="troubleshooting-windows-socat">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Troubleshooting (Windows socat)</a><a class="headerlink" href="#troubleshooting-windows-socat" title="Permalink to this heading"></a></h2>
+<p>In Microsoft Windows and using the command line socat, if you see a “command not found” error, Here is what you need to do to fix it:</p>
 <ul class="simple">
 <li><p>Right click on “My Computer” -&gt; Properties -&gt; Advanced -&gt; Environment Variables</p></li>
 <li><p>Add a new environment variable, called <code class="docutils literal notranslate"><span class="pre">CYGWIN_HOME</span></code> and set its value to <code class="docutils literal notranslate"><span class="pre">C:\cygwin</span></code></p></li>

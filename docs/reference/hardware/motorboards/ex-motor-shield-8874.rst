@@ -76,7 +76,7 @@ How can I get one?
 
 Units may be purchased from the following sources:
 
-* In the US from the `DCC-EX Tindie Store <https://www.tindie.com/stores/dccex/>`_ or...
+* In the US from the `DCC-EX Store <https://store.dcc-ex.com/>`_ or...
 * from `Smart Hobby, LLC <https://www.smarthobbyllc.com/>`_. You can also find Smart Hobby on Facebook
 * In the UK from `Chesterfield Model Making & Miniature Electronics <https://chesterfield-models.co.uk/product/semify-dcc-ex-motor-shield/>`_
 * In Europe from `Semify's Web Store <https://www.semify-eda.com/ex-motorshield8874/>`_ (based in Austria)

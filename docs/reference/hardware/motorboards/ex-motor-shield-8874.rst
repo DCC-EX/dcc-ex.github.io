@@ -159,7 +159,7 @@ There are two sets of output connectors on the motor shield, ``A`` and ``B``. A 
 
 Notice that A (MAIN) is on the left as you look at the connectors, and B (PROG) is on the right, next to the DC barrel jack.
 
-Polarity (which wire is connected to which side of the track) is not not important here if you are using separate, completely piece of track for PROG. *However* if you will be using a siding track that connects to your main track, make sure that the *connections for both tracks match*. 
+Polarity (which wire is connected to which side of the track) is not not important here if you are using separate, completely isolated piece of track for PROG. *However* if you will be using a siding track that connects to your main track, make sure that the *connections for both tracks match*. 
 
 In other words, if you view one side of your main track as having a 'left' side and a 'right' side, and connect positive output A to the left side, connect the positive from the B side to the left side of the programming track. In electrical terms, we want both tracks to be "in phase" with each other. Here is the diagram from above repeated again for reference.
 

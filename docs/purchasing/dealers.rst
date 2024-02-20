@@ -15,7 +15,7 @@ The dealers listed on this page work with the |DCC-EX| team to ensure these devi
 In the United States (US)
 --------------------------
 
-.. image:: /_static/images/suppliers/flag_us.jpg
+.. image:: /_static/images/icons/flag_us.png
    :alt: US Flag
    :scale: 100%
    :align: left
@@ -25,27 +25,28 @@ In the United States (US)
  `Smart Hobby, LLC <https://www.smarthobbyllc.com/>`_
 
 
+
 In the United Kingdom (UK)
 ---------------------------
 
-.. image:: /_static/images/suppliers/flag_uk.png
-   :alt: US Flag
+.. image:: /_static/images/icons/flag_uk.jpg
+   :alt: UK Flag
    :scale: 100%
    :align: left
    
 `Chesterfield Model Making and Miniature Electronics <https://chesterfield-models.co.uk/product/dccex/>`_
 
 
-In the Euoropean Union (EU)
+In the European Union (EU)
 ------------------------------
 
-.. image:: /_static/images/suppliers/flag_austria.jpg
-   :alt: US Flag
+.. image:: /_static/images/icons/flag_austria.png
+   :alt: Austria Flag
    :scale: 100%
    :align: left
 
-.. image:: /_static/images/suppliers/flag_eu.jpg
-   :alt: US Flag
+.. image:: /_static/images/icons/flag_eu.png
+   :alt: EU Flag
    :scale: 100%
    :align: left
 
@@ -54,13 +55,13 @@ In the Euoropean Union (EU)
 In Australia & New Zealand (AU / NZ)
 --------------------------------------
 
-.. image:: /_static/images/suppliers/flag_australia.png
-   :alt: US Flag
+.. image:: /_static/images/icons/flag_australia.png
+   :alt: Australia Flag
    :scale: 100%
    :align: left
 
-.. image:: /_static/images/suppliers/flag_new_zealand.png
-   :alt: US Flag
+.. image:: /_static/images/icons/flag_new_zealand.png
+   :alt: New Zealand Flag
    :scale: 100%
    :align: left
 

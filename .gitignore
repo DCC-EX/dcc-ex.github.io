@@ -39,6 +39,7 @@ _build
 .DS_Store*
 ehthumbs.db
 Icon?
+!/docs/_static/images/icons
 Thumbs.db
 
 # Editor backup files #

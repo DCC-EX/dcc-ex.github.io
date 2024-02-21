@@ -12,58 +12,75 @@ As part of that, and starting with the release of the |EX-MS|, we have a number 
 
 The dealers listed on this page work with the |DCC-EX| team to ensure these devices are compatible.
 
-In the United States (US)
---------------------------
+.. tip::
+
+   If you are not in any of these countries, be aware that each dealer can usually ship anywhere in the world. Each dealer's primary territory is listed, so purchase from the one closest to you to save on shipping and duty charges.
+
 
 .. image:: /_static/images/icons/flag_us60px.png
    :alt: US Flag
    :scale: 100%
    :align: left
-  
-`DCC-EX Store <https://stors.dcc-ex.com/>`_ 
 
- `Smart Hobby, LLC <https://www.smarthobbyllc.com/>`_
+In the United States serving the US, Canada, and Mexico
+--------------------------------------------------------
+
+.. rst-class:: clearer
 
 
+`DCC-EX Store <https://stors.dcc-ex.com/>`_
+===============================================
 
-In the United Kingdom (UK)
----------------------------
+`Smart Hobby, LLC <https://www.smarthobbyllc.com/>`_
+======================================================
+
+----
 
 .. image:: /_static/images/icons/flag_uk60px.jpg
    :alt: UK Flag
    :scale: 100%
    :align: left
-   
-`Chesterfield Model Making and Miniature Electronics <https://chesterfield-models.co.uk/product/dccex/>`_
 
-
-In the European Union (EU)
+In the England serving the UK
 ------------------------------
+
+.. rst-class:: clearer
+
+
+`Chesterfield Model Making and Miniature Electronics <https://chesterfield-models.co.uk/product/dccex/>`_
+=============================================================================================================
+
+----
 
 .. image:: /_static/images/icons/flag_austria60px.png
    :alt: Austria Flag
    :scale: 100%
    :align: left
 
-.. image:: /_static/images/icons/flag_eu60px.png
-   :alt: EU Flag
-   :scale: 100%
-   :align: left
+
+In Austria serving the European Union (EU)
+--------------------------------------------
+
+.. rst-class:: clearer
+
 
 `Semify <https://www.semify-eda.com/ex-motorshield8874/>`_
+=============================================================
 
-In Australia & New Zealand (AU / NZ)
---------------------------------------
+----
 
 .. image:: /_static/images/icons/flag_australia60px.png
    :alt: Australia Flag
    :scale: 100%
    :align: left
 
-.. image:: /_static/images/icons/flag_new_zealand60px.png
-   :alt: New Zealand Flag
-   :scale: 100%
-   :align: left
+
+In Australia serving AU, NZ, and APAC
+----------------------------------------
+
+.. rst-class:: clearer
+
 
 `Millennium Engineering Pty Ltd <https://www.milleng.com.au>`_
+================================================================
 

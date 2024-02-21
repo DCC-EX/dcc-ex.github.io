@@ -159,6 +159,42 @@ Note:  Previously referred to as 'DC-District'.
   |_| > **state:** PROG, MAIN DC, DCX |BR|
   |_| > **cab:** cab(loco) equivalent to a fake DCC Address
 
+``<onOff [track]>`` - Turn power on or off to the requested TrackManager track
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|NOT-IN-PROD-VERSION|
+
+  *Parameters:* |BR|
+  |_| > **onOff:** one of |BR|
+  |_| |_| |_| |_| - 1 = on |BR|
+  |_| |_| |_| |_| - 0 = off |BR|
+  |_| > **track:** one of tracks A - H |BR|
+
+  *Response:* 
+    |_| The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes. |BR|
+    |_| ``<pOnOFF [track]>`` |BR|
+
+
+Change Frequency on DC/DCX TrackManager track
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|NOT-IN-PROD-VERSION|
+
+When running in DC mode certain locomotives can be unresponsive at certain DC frequencies, a situation that is not found when running in DCC mode.  When in DC or DCX mode it is now possible to set different frequencies using Functions F29, F30 & F31.
+
+The settings achievable vary slightly depending upon the processor running the CS but broadly follow the following:
+
+|_| > **No Functions:** Default - low frequency 131Hz |BR|
+|_| > **F29:** Mid frequency - 490Hz |BR|
+|_| > **F30:** High frequency - 3400Hz |BR|
+|_| > **F31:** Supersonic - 62500Hz|BR|
+
+Note that these functions are not cumulative - setting F30 overrides F29 and setting F31 overrides F29 & F30.
+
+For details on setting F keys see "Turn Loco decoder functions ON or OFF" in `Cab (Loco) Commands`_ below.
+
+For ease of changing these functions within EXRAIL an EXRAIL command SET_FREQ is available to select the frequency within automations/routes.
+
 ----
 
 Cab (Loco) Commands

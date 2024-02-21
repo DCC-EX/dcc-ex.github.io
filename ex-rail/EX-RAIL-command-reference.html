@@ -1990,6 +1990,8 @@ DONE
 <p class="topic-title">In This Section</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#set-track-track-mode-configures-the-mode-of-the-selected-track" id="id156"><code class="docutils literal notranslate"><span class="pre">SET_TRACK(</span> <span class="pre">track,</span> <span class="pre">mode</span> <span class="pre">)</span></code> - Configures the mode of the selected track</a></p></li>
+<li><p><a class="reference internal" href="#set-power-track-on-off-enable-disable-power-on-the-selected-track" id="id157"><code class="docutils literal notranslate"><span class="pre">SET_POWER(</span> <span class="pre">track,</span> <span class="pre">ON/OFF</span> <span class="pre">)</span></code> - Enable/Disable power on the selected track</a></p></li>
+<li><p><a class="reference internal" href="#setfreq-track-frequency-enable-specific-frequency-on-the-selected-track" id="id158"><code class="docutils literal notranslate"><span class="pre">SETFREQ(</span> <span class="pre">track,</span> <span class="pre">frequency</span> <span class="pre">)</span></code> - Enable specific frequency on the selected track</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
@@ -1997,7 +1999,7 @@ DONE
 <h4><a class="toc-backref" href="#id156" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SET_TRACK(</span> <span class="pre">track,</span> <span class="pre">mode</span> <span class="pre">)</span></code> - Configures the mode of the selected track</a><a class="headerlink" href="#set-track-track-mode-configures-the-mode-of-the-selected-track" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p>Configures the mode of the selected track, refer also to <a class="reference internal" href="../trackmanager/index.html"><span class="doc">TrackManager (DCC &amp; DC)</span></a></p>
-<p><em>Parameters:</em> <br /> &gt; <strong>track:</strong> - The track to configure, valid options are A to H <br /> &gt; <strong>mode:</strong> - The mode to set the track to, <br />    valid options for DCC are: <br />    - <code class="docutils literal notranslate"><span class="pre">MAIN</span></code> or <br />    - <code class="docutils literal notranslate"><span class="pre">PROG</span></code>,    and valid options for DC are: <br />    -  <code class="docutils literal notranslate"><span class="pre">DC</span></code> <br />    - , <code class="docutils literal notranslate"><span class="pre">DCX</span></code>. <br />    If a track is unused, it can be set to: <br />    - <code class="docutils literal notranslate"><span class="pre">NONE</span></code></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>track:</strong> - The track to configure, valid options are A to H <br /> &gt; <strong>mode:</strong> - The mode to set the track to, <br />    valid options for DCC are: <br />    - <code class="docutils literal notranslate"><span class="pre">MAIN</span></code> or <br />    - <code class="docutils literal notranslate"><span class="pre">PROG</span></code>, <br />    and valid options for DC are: <br />    -  <code class="docutils literal notranslate"><span class="pre">DC</span></code> <br />    - , <code class="docutils literal notranslate"><span class="pre">DCX</span></code>. <br />    If a track is unused, it can be set to: <br />    - <code class="docutils literal notranslate"><span class="pre">NONE</span></code></p>
 <p>When setting at track mode to either DC or DCX, you must use the <code class="docutils literal notranslate"><span class="pre">SETLOCO(</span> <span class="pre">loco</span> <span class="pre">)</span></code> command first to specify the loco ID that will be used for the DC track then SET_TRACK()</p>
 <details class="summary-for-example-click-to-show">
 <summary>For example: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Set both tracks A and B to be main DCC tracks</span>
@@ -2014,6 +2016,40 @@ DONE
 </pre></div>
 </div>
 </details></div></blockquote>
+</section>
+<section id="set-power-track-on-off-enable-disable-power-on-the-selected-track">
+<h4><a class="toc-backref" href="#id157" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SET_POWER(</span> <span class="pre">track,</span> <span class="pre">ON/OFF</span> <span class="pre">)</span></code> - Enable/Disable power on the selected track</a><a class="headerlink" href="#set-power-track-on-off-enable-disable-power-on-the-selected-track" title="Permalink to this heading"></a></h4>
+<p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
+<blockquote>
+<div><p>Configures the power setting of the selected track, refer also to <a class="reference internal" href="../trackmanager/index.html"><span class="doc">TrackManager (DCC &amp; DC)</span></a></p>
+</div></blockquote>
+<dl class="simple">
+<dt><em>Parameters:</em> <br /></dt><dd><p> &gt; <strong>track:</strong> - The track to configure, valid options are A to H <br /> &gt; <strong>ON/OFF:</strong> - Turn the power ON or OFF for this track <br /></p>
+</dd>
+</dl>
+<details class="summary-for-example-click-to-show">
+<summary>For example: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Set track A to be a DC track with loco ID 1 and power on, and track B to be a DCC programming track</span>
+<span class="n">AUTOSTART</span>
+<span class="n">SETLOCO</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">DC</span><span class="p">)</span>
+<span class="n">SET_TRACK</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="w"> </span><span class="n">PROG</span><span class="p">)</span>
+<span class="n">SET_POWER</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">ON</span><span class="p">)</span>
+<span class="n">DONE</span>
+</pre></div>
+</div>
+</details></section>
+<section id="setfreq-track-frequency-enable-specific-frequency-on-the-selected-track">
+<h4><a class="toc-backref" href="#id158" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SETFREQ(</span> <span class="pre">track,</span> <span class="pre">frequency</span> <span class="pre">)</span></code> - Enable specific frequency on the selected track</a><a class="headerlink" href="#setfreq-track-frequency-enable-specific-frequency-on-the-selected-track" title="Permalink to this heading"></a></h4>
+<blockquote>
+<div><p>DC/DCX track settings only.</p>
+</div></blockquote>
+<p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
+<blockquote>
+<div><p>Configures the frequency setting of the selected track.</p>
+<p>The settings achievable vary slightly depending upon the processor running the CS but broadly follow the following:</p>
+<p><em>Parameters:</em> <br /></p>
+<p> &gt; <strong>track:</strong> - The track to configure, valid options are A to H <br /> &gt; <strong>frequency:</strong> - The frequency to set for this track <br />   &gt;valid options are: <br />    &gt; <strong>0:</strong> Default - low frequency 131Hz <br />    &gt; <strong>1:</strong> Mid frequency - 490Hz <br />    &gt; <strong>2:</strong> High frequency - 3400Hz <br />    &gt; <strong>3:</strong> Supersonic - 62500Hz|BR|</p>
+<p>Trial and error will be needed for specific locos that do not respond well to the defaults (low) frequency setting.</p>
+</div></blockquote>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
 </section>
@@ -2024,20 +2060,20 @@ DONE
 <nav class="contents in-this-section local" id="id14">
 <p class="topic-title">In This Section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#onoverload-track-event-handler-for-actions-to-be-taken-when-an-overload-occurs" id="id157"><code class="docutils literal notranslate"><span class="pre">ONOVERLOAD(</span> <span class="pre">track</span> <span class="pre">)</span></code> - Event handler for actions to be taken when an Overload occurs</a></p></li>
-<li><p><a class="reference internal" href="#afteroverload-track-event-handler-for-actions-to-be-taken-when-an-overload-clears" id="id158"><code class="docutils literal notranslate"><span class="pre">AFTEROVERLOAD(</span> <span class="pre">track</span> <span class="pre">)</span></code> - Event handler for actions to be taken when an Overload clears</a></p></li>
+<li><p><a class="reference internal" href="#onoverload-track-event-handler-for-actions-to-be-taken-when-an-overload-occurs" id="id159"><code class="docutils literal notranslate"><span class="pre">ONOVERLOAD(</span> <span class="pre">track</span> <span class="pre">)</span></code> - Event handler for actions to be taken when an Overload occurs</a></p></li>
+<li><p><a class="reference internal" href="#afteroverload-track-event-handler-for-actions-to-be-taken-when-an-overload-clears" id="id160"><code class="docutils literal notranslate"><span class="pre">AFTEROVERLOAD(</span> <span class="pre">track</span> <span class="pre">)</span></code> - Event handler for actions to be taken when an Overload clears</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
 <section id="onoverload-track-event-handler-for-actions-to-be-taken-when-an-overload-occurs">
-<h4><a class="toc-backref" href="#id157" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONOVERLOAD(</span> <span class="pre">track</span> <span class="pre">)</span></code> - Event handler for actions to be taken when an Overload occurs</a><a class="headerlink" href="#onoverload-track-event-handler-for-actions-to-be-taken-when-an-overload-occurs" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id159" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONOVERLOAD(</span> <span class="pre">track</span> <span class="pre">)</span></code> - Event handler for actions to be taken when an Overload occurs</a><a class="headerlink" href="#onoverload-track-event-handler-for-actions-to-be-taken-when-an-overload-occurs" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p>Creates an event handler for the selected track, to be executed when the MotorDriver routines detect and overload. Refer also to <a class="reference internal" href="../trackmanager/index.html"><span class="doc">TrackManager (DCC &amp; DC)</span></a></p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="afteroverload-track-event-handler-for-actions-to-be-taken-when-an-overload-clears">
-<h4><a class="toc-backref" href="#id158" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AFTEROVERLOAD(</span> <span class="pre">track</span> <span class="pre">)</span></code> - Event handler for actions to be taken when an Overload clears</a><a class="headerlink" href="#afteroverload-track-event-handler-for-actions-to-be-taken-when-an-overload-clears" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id160" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AFTEROVERLOAD(</span> <span class="pre">track</span> <span class="pre">)</span></code> - Event handler for actions to be taken when an Overload clears</a><a class="headerlink" href="#afteroverload-track-event-handler-for-actions-to-be-taken-when-an-overload-clears" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p>Creates a complementary event handler for the selected track, to be executed when the MotorDriver routines indicate the overload is cleared. Refer also to <a class="reference internal" href="../trackmanager/index.html"><span class="doc">TrackManager (DCC &amp; DC)</span></a></p>
 <p>Note:  AFTEROVERLOAD is only relevant when used within and ONOVERLOAD…. DONE structure.</p>
@@ -2094,25 +2130,25 @@ DONE
 <nav class="contents in-this-section local" id="id15">
 <p class="topic-title">In This Section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#reserve-block-id-reserve-a-block" id="id159"><code class="docutils literal notranslate"><span class="pre">RESERVE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Reserve a block</a></p></li>
-<li><p><a class="reference internal" href="#free-block-id-free-previously-reserved-block" id="id160"><code class="docutils literal notranslate"><span class="pre">FREE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Free previously reserved block</a></p></li>
-<li><p><a class="reference internal" href="#ifreserve-block-if-block-is-not-reserved-reserves-it-and-run-commands-in-if-block" id="id161"><code class="docutils literal notranslate"><span class="pre">IFRESERVE(</span> <span class="pre">block</span> <span class="pre">)</span></code> - If block is NOT reserved, reserves it and run commands in IF block</a></p></li>
+<li><p><a class="reference internal" href="#reserve-block-id-reserve-a-block" id="id161"><code class="docutils literal notranslate"><span class="pre">RESERVE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Reserve a block</a></p></li>
+<li><p><a class="reference internal" href="#free-block-id-free-previously-reserved-block" id="id162"><code class="docutils literal notranslate"><span class="pre">FREE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Free previously reserved block</a></p></li>
+<li><p><a class="reference internal" href="#ifreserve-block-if-block-is-not-reserved-reserves-it-and-run-commands-in-if-block" id="id163"><code class="docutils literal notranslate"><span class="pre">IFRESERVE(</span> <span class="pre">block</span> <span class="pre">)</span></code> - If block is NOT reserved, reserves it and run commands in IF block</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
 <section id="reserve-block-id-reserve-a-block">
-<h4><a class="toc-backref" href="#id159" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">RESERVE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Reserve a block</a><a class="headerlink" href="#reserve-block-id-reserve-a-block" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id161" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">RESERVE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Reserve a block</a><a class="headerlink" href="#reserve-block-id-reserve-a-block" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p>Reserve a block (0-255). If already reserved, current loco will STOP and script waits for block to become free</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="free-block-id-free-previously-reserved-block">
-<h4><a class="toc-backref" href="#id160" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">FREE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Free previously reserved block</a><a class="headerlink" href="#free-block-id-free-previously-reserved-block" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id162" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">FREE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Free previously reserved block</a><a class="headerlink" href="#free-block-id-free-previously-reserved-block" title="Permalink to this heading"></a></h4>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="ifreserve-block-if-block-is-not-reserved-reserves-it-and-run-commands-in-if-block">
-<h4><a class="toc-backref" href="#id161" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFRESERVE(</span> <span class="pre">block</span> <span class="pre">)</span></code> - If block is NOT reserved, reserves it and run commands in IF block</a><a class="headerlink" href="#ifreserve-block-if-block-is-not-reserved-reserves-it-and-run-commands-in-if-block" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id163" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFRESERVE(</span> <span class="pre">block</span> <span class="pre">)</span></code> - If block is NOT reserved, reserves it and run commands in IF block</a><a class="headerlink" href="#ifreserve-block-if-block-is-not-reserved-reserves-it-and-run-commands-in-if-block" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p>If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF</p>
 </div></blockquote>
@@ -2127,78 +2163,78 @@ DONE
 <nav class="contents in-this-section local" id="id16">
 <p class="topic-title">In This Section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#lcd-row-msg-write-message-on-lcd-oled-if-fitted" id="id162"><code class="docutils literal notranslate"><span class="pre">LCD(</span> <span class="pre">row,</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Write message on LCD/OLED if fitted</a></p></li>
-<li><p><a class="reference internal" href="#screen-display-row-msg-writes-a-message-to-the-specified-display-on-the-specified-row" id="id163"><code class="docutils literal notranslate"><span class="pre">SCREEN(</span> <span class="pre">display,</span> <span class="pre">row,</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to the specified display on the specified row</a></p></li>
-<li><p><a class="reference internal" href="#broadcast-msg-broadcast-to-all-throttles-jmri-on-serial-and-wifi" id="id164"><code class="docutils literal notranslate"><span class="pre">BROADCAST(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Broadcast to all throttles/JMRI on serial and WiFi</a></p></li>
-<li><p><a class="reference internal" href="#print-msg-print-diagnostic-message-to-serial-monitor" id="id165"><code class="docutils literal notranslate"><span class="pre">PRINT(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Print diagnostic message to Serial Monitor</a></p></li>
-<li><p><a class="reference internal" href="#serial-msg-writes-direct-to-serial" id="id166"><code class="docutils literal notranslate"><span class="pre">SERIAL(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial</a></p></li>
-<li><p><a class="reference internal" href="#serial1-msg-writes-direct-to-serial1" id="id167"><code class="docutils literal notranslate"><span class="pre">SERIAL1(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial1</a></p></li>
-<li><p><a class="reference internal" href="#serial2-msg-writes-direct-to-serial2" id="id168"><code class="docutils literal notranslate"><span class="pre">SERIAL2(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial2</a></p></li>
-<li><p><a class="reference internal" href="#serial3-msg-writes-direct-to-serial3" id="id169"><code class="docutils literal notranslate"><span class="pre">SERIAL3(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial3</a></p></li>
-<li><p><a class="reference internal" href="#serial4-msg-writes-direct-to-serial4" id="id170"><code class="docutils literal notranslate"><span class="pre">SERIAL4(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial4</a></p></li>
-<li><p><a class="reference internal" href="#serial5-msg-writes-direct-to-serial5" id="id171"><code class="docutils literal notranslate"><span class="pre">SERIAL5(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial5</a></p></li>
-<li><p><a class="reference internal" href="#serial6-msg-writes-direct-to-serial6" id="id172"><code class="docutils literal notranslate"><span class="pre">SERIAL6(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial6</a></p></li>
-<li><p><a class="reference internal" href="#withrottle-msg-writes-a-message-to-dcc-ex-clients" id="id173"><code class="docutils literal notranslate"><span class="pre">WITHROTTLE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to DCC-EX clients</a></p></li>
+<li><p><a class="reference internal" href="#lcd-row-msg-write-message-on-lcd-oled-if-fitted" id="id164"><code class="docutils literal notranslate"><span class="pre">LCD(</span> <span class="pre">row,</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Write message on LCD/OLED if fitted</a></p></li>
+<li><p><a class="reference internal" href="#screen-display-row-msg-writes-a-message-to-the-specified-display-on-the-specified-row" id="id165"><code class="docutils literal notranslate"><span class="pre">SCREEN(</span> <span class="pre">display,</span> <span class="pre">row,</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to the specified display on the specified row</a></p></li>
+<li><p><a class="reference internal" href="#broadcast-msg-broadcast-to-all-throttles-jmri-on-serial-and-wifi" id="id166"><code class="docutils literal notranslate"><span class="pre">BROADCAST(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Broadcast to all throttles/JMRI on serial and WiFi</a></p></li>
+<li><p><a class="reference internal" href="#print-msg-print-diagnostic-message-to-serial-monitor" id="id167"><code class="docutils literal notranslate"><span class="pre">PRINT(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Print diagnostic message to Serial Monitor</a></p></li>
+<li><p><a class="reference internal" href="#serial-msg-writes-direct-to-serial" id="id168"><code class="docutils literal notranslate"><span class="pre">SERIAL(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial</a></p></li>
+<li><p><a class="reference internal" href="#serial1-msg-writes-direct-to-serial1" id="id169"><code class="docutils literal notranslate"><span class="pre">SERIAL1(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial1</a></p></li>
+<li><p><a class="reference internal" href="#serial2-msg-writes-direct-to-serial2" id="id170"><code class="docutils literal notranslate"><span class="pre">SERIAL2(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial2</a></p></li>
+<li><p><a class="reference internal" href="#serial3-msg-writes-direct-to-serial3" id="id171"><code class="docutils literal notranslate"><span class="pre">SERIAL3(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial3</a></p></li>
+<li><p><a class="reference internal" href="#serial4-msg-writes-direct-to-serial4" id="id172"><code class="docutils literal notranslate"><span class="pre">SERIAL4(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial4</a></p></li>
+<li><p><a class="reference internal" href="#serial5-msg-writes-direct-to-serial5" id="id173"><code class="docutils literal notranslate"><span class="pre">SERIAL5(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial5</a></p></li>
+<li><p><a class="reference internal" href="#serial6-msg-writes-direct-to-serial6" id="id174"><code class="docutils literal notranslate"><span class="pre">SERIAL6(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial6</a></p></li>
+<li><p><a class="reference internal" href="#withrottle-msg-writes-a-message-to-dcc-ex-clients" id="id175"><code class="docutils literal notranslate"><span class="pre">WITHROTTLE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to DCC-EX clients</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
 <section id="lcd-row-msg-write-message-on-lcd-oled-if-fitted">
-<h4><a class="toc-backref" href="#id162" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">LCD(</span> <span class="pre">row,</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Write message on LCD/OLED if fitted</a><a class="headerlink" href="#lcd-row-msg-write-message-on-lcd-oled-if-fitted" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id164" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">LCD(</span> <span class="pre">row,</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Write message on LCD/OLED if fitted</a><a class="headerlink" href="#lcd-row-msg-write-message-on-lcd-oled-if-fitted" title="Permalink to this heading"></a></h4>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="screen-display-row-msg-writes-a-message-to-the-specified-display-on-the-specified-row">
-<h4><a class="toc-backref" href="#id163" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SCREEN(</span> <span class="pre">display,</span> <span class="pre">row,</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to the specified display on the specified row</a><a class="headerlink" href="#screen-display-row-msg-writes-a-message-to-the-specified-display-on-the-specified-row" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id165" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SCREEN(</span> <span class="pre">display,</span> <span class="pre">row,</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to the specified display on the specified row</a><a class="headerlink" href="#screen-display-row-msg-writes-a-message-to-the-specified-display-on-the-specified-row" title="Permalink to this heading"></a></h4>
 <p><span class="new-in-v5">New in version 5 </span> Writes a message to the specified display on the specified row</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="broadcast-msg-broadcast-to-all-throttles-jmri-on-serial-and-wifi">
-<h4><a class="toc-backref" href="#id164" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">BROADCAST(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Broadcast to all throttles/JMRI on serial and WiFi</a><a class="headerlink" href="#broadcast-msg-broadcast-to-all-throttles-jmri-on-serial-and-wifi" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id166" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">BROADCAST(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Broadcast to all throttles/JMRI on serial and WiFi</a><a class="headerlink" href="#broadcast-msg-broadcast-to-all-throttles-jmri-on-serial-and-wifi" title="Permalink to this heading"></a></h4>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="print-msg-print-diagnostic-message-to-serial-monitor">
-<h4><a class="toc-backref" href="#id165" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">PRINT(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Print diagnostic message to Serial Monitor</a><a class="headerlink" href="#print-msg-print-diagnostic-message-to-serial-monitor" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id167" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">PRINT(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Print diagnostic message to Serial Monitor</a><a class="headerlink" href="#print-msg-print-diagnostic-message-to-serial-monitor" title="Permalink to this heading"></a></h4>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="serial-msg-writes-direct-to-serial">
-<h4><a class="toc-backref" href="#id166" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial</a><a class="headerlink" href="#serial-msg-writes-direct-to-serial" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id168" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial</a><a class="headerlink" href="#serial-msg-writes-direct-to-serial" title="Permalink to this heading"></a></h4>
 <p>Writes direct to Serial (Serial0/USB)</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="serial1-msg-writes-direct-to-serial1">
-<h4><a class="toc-backref" href="#id167" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL1(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial1</a><a class="headerlink" href="#serial1-msg-writes-direct-to-serial1" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id169" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL1(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial1</a><a class="headerlink" href="#serial1-msg-writes-direct-to-serial1" title="Permalink to this heading"></a></h4>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="serial2-msg-writes-direct-to-serial2">
-<h4><a class="toc-backref" href="#id168" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL2(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial2</a><a class="headerlink" href="#serial2-msg-writes-direct-to-serial2" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id170" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL2(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial2</a><a class="headerlink" href="#serial2-msg-writes-direct-to-serial2" title="Permalink to this heading"></a></h4>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="serial3-msg-writes-direct-to-serial3">
-<h4><a class="toc-backref" href="#id169" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL3(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial3</a><a class="headerlink" href="#serial3-msg-writes-direct-to-serial3" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id171" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL3(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial3</a><a class="headerlink" href="#serial3-msg-writes-direct-to-serial3" title="Permalink to this heading"></a></h4>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="serial4-msg-writes-direct-to-serial4">
-<h4><a class="toc-backref" href="#id170" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL4(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial4</a><a class="headerlink" href="#serial4-msg-writes-direct-to-serial4" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id172" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL4(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial4</a><a class="headerlink" href="#serial4-msg-writes-direct-to-serial4" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p><span class="new-in-v5">New in version 5 </span> Writes direct to Serial4</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="serial5-msg-writes-direct-to-serial5">
-<h4><a class="toc-backref" href="#id171" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL5(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial5</a><a class="headerlink" href="#serial5-msg-writes-direct-to-serial5" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id173" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL5(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial5</a><a class="headerlink" href="#serial5-msg-writes-direct-to-serial5" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p><span class="new-in-v5">New in version 5 </span> Writes direct to Serial5</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="serial6-msg-writes-direct-to-serial6">
-<h4><a class="toc-backref" href="#id172" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL6(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial6</a><a class="headerlink" href="#serial6-msg-writes-direct-to-serial6" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id174" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL6(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial6</a><a class="headerlink" href="#serial6-msg-writes-direct-to-serial6" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p><span class="new-in-v5">New in version 5 </span> Writes direct to Serial6</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="withrottle-msg-writes-a-message-to-dcc-ex-clients">
-<h4><a class="toc-backref" href="#id173" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">WITHROTTLE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to DCC-EX clients</a><a class="headerlink" href="#withrottle-msg-writes-a-message-to-dcc-ex-clients" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id175" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">WITHROTTLE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to DCC-EX clients</a><a class="headerlink" href="#withrottle-msg-writes-a-message-to-dcc-ex-clients" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p><span class="new-in-v5">New in version 5 </span> Writes a message to DCC-EX clients (alias of <code class="docutils literal notranslate"><span class="pre">PRINT</span></code>)</p>
 </div></blockquote>
@@ -2210,40 +2246,40 @@ DONE
 <nav class="contents in-this-section local" id="id17">
 <p class="topic-title">In This Section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#poweron-power-on-track-and-unjoin" id="id174"><code class="docutils literal notranslate"><span class="pre">POWERON</span></code> - Power on track and UNJOIN</a></p></li>
-<li><p><a class="reference internal" href="#poweroff-power-off-track" id="id175"><code class="docutils literal notranslate"><span class="pre">POWEROFF</span></code> - Power off track</a></p></li>
-<li><p><a class="reference internal" href="#join-join-prog-and-main-track-outputs-to-send-the-same-main-dcc-signal" id="id176"><code class="docutils literal notranslate"><span class="pre">JOIN</span></code> - Join PROG and MAIN track outputs to send the same MAIN DCC signal</a></p></li>
-<li><p><a class="reference internal" href="#unjoin-disconnect-prog-track-from-main" id="id177"><code class="docutils literal notranslate"><span class="pre">UNJOIN</span></code> - Disconnect prog track from main</a></p></li>
-<li><p><a class="reference internal" href="#hal-device-parameters-create-a-hal-device-in-myautomation-h" id="id178"><code class="docutils literal notranslate"><span class="pre">HAL(</span> <span class="pre">device,</span> <span class="pre">parameters</span> <span class="pre">)</span></code> - Create a HAL device in myAutomation.h</a></p></li>
-<li><p><a class="reference internal" href="#killall-kills-all-running-ex-r-activities" id="id179"><code class="docutils literal notranslate"><span class="pre">KILLALL</span></code> - Kills all running <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> activities</a></p></li>
-<li><p><a class="reference internal" href="#parse-msg-allows-parsing-of-a-dcc-ex-api-command-via-myautomation-h" id="id180"><code class="docutils literal notranslate"><span class="pre">PARSE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Allows parsing of a DCC-EX API command via myAutomation.h</a></p></li>
+<li><p><a class="reference internal" href="#poweron-power-on-track-and-unjoin" id="id176"><code class="docutils literal notranslate"><span class="pre">POWERON</span></code> - Power on track and UNJOIN</a></p></li>
+<li><p><a class="reference internal" href="#poweroff-power-off-track" id="id177"><code class="docutils literal notranslate"><span class="pre">POWEROFF</span></code> - Power off track</a></p></li>
+<li><p><a class="reference internal" href="#join-join-prog-and-main-track-outputs-to-send-the-same-main-dcc-signal" id="id178"><code class="docutils literal notranslate"><span class="pre">JOIN</span></code> - Join PROG and MAIN track outputs to send the same MAIN DCC signal</a></p></li>
+<li><p><a class="reference internal" href="#unjoin-disconnect-prog-track-from-main" id="id179"><code class="docutils literal notranslate"><span class="pre">UNJOIN</span></code> - Disconnect prog track from main</a></p></li>
+<li><p><a class="reference internal" href="#hal-device-parameters-create-a-hal-device-in-myautomation-h" id="id180"><code class="docutils literal notranslate"><span class="pre">HAL(</span> <span class="pre">device,</span> <span class="pre">parameters</span> <span class="pre">)</span></code> - Create a HAL device in myAutomation.h</a></p></li>
+<li><p><a class="reference internal" href="#killall-kills-all-running-ex-r-activities" id="id181"><code class="docutils literal notranslate"><span class="pre">KILLALL</span></code> - Kills all running <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> activities</a></p></li>
+<li><p><a class="reference internal" href="#parse-msg-allows-parsing-of-a-dcc-ex-api-command-via-myautomation-h" id="id182"><code class="docutils literal notranslate"><span class="pre">PARSE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Allows parsing of a DCC-EX API command via myAutomation.h</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
 <section id="poweron-power-on-track-and-unjoin">
-<h4><a class="toc-backref" href="#id174" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">POWERON</span></code> - Power on track and UNJOIN</a><a class="headerlink" href="#poweron-power-on-track-and-unjoin" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id176" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">POWERON</span></code> - Power on track and UNJOIN</a><a class="headerlink" href="#poweron-power-on-track-and-unjoin" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p><span class="new-in-v5">New in version 5 </span> Power on track and UNJOIN</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="poweroff-power-off-track">
-<h4><a class="toc-backref" href="#id175" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">POWEROFF</span></code> - Power off track</a><a class="headerlink" href="#poweroff-power-off-track" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id177" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">POWEROFF</span></code> - Power off track</a><a class="headerlink" href="#poweroff-power-off-track" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p><span class="new-in-v5">New in version 5 </span> Power off track</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="join-join-prog-and-main-track-outputs-to-send-the-same-main-dcc-signal">
-<h4><a class="toc-backref" href="#id176" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">JOIN</span></code> - Join PROG and MAIN track outputs to send the same MAIN DCC signal</a><a class="headerlink" href="#join-join-prog-and-main-track-outputs-to-send-the-same-main-dcc-signal" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id178" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">JOIN</span></code> - Join PROG and MAIN track outputs to send the same MAIN DCC signal</a><a class="headerlink" href="#join-join-prog-and-main-track-outputs-to-send-the-same-main-dcc-signal" title="Permalink to this heading"></a></h4>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="unjoin-disconnect-prog-track-from-main">
-<h4><a class="toc-backref" href="#id177" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">UNJOIN</span></code> - Disconnect prog track from main</a><a class="headerlink" href="#unjoin-disconnect-prog-track-from-main" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id179" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">UNJOIN</span></code> - Disconnect prog track from main</a><a class="headerlink" href="#unjoin-disconnect-prog-track-from-main" title="Permalink to this heading"></a></h4>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="hal-device-parameters-create-a-hal-device-in-myautomation-h">
-<h4><a class="toc-backref" href="#id178" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">HAL(</span> <span class="pre">device,</span> <span class="pre">parameters</span> <span class="pre">)</span></code> - Create a HAL device in myAutomation.h</a><a class="headerlink" href="#hal-device-parameters-create-a-hal-device-in-myautomation-h" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id180" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">HAL(</span> <span class="pre">device,</span> <span class="pre">parameters</span> <span class="pre">)</span></code> - Create a HAL device in myAutomation.h</a><a class="headerlink" href="#hal-device-parameters-create-a-hal-device-in-myautomation-h" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p><span class="new-in-v5">New in version 5 </span> Create a HAL device in myAutomation.h rather than needing to use myHal.cpp</p>
 <details class="summary-for-example-click-to-show">
@@ -2256,14 +2292,14 @@ DONE
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="killall-kills-all-running-ex-r-activities">
-<h4><a class="toc-backref" href="#id179" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">KILLALL</span></code> - Kills all running <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> activities</a><a class="headerlink" href="#killall-kills-all-running-ex-r-activities" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id181" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">KILLALL</span></code> - Kills all running <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> activities</a><a class="headerlink" href="#killall-kills-all-running-ex-r-activities" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p><span class="new-in-v5">New in version 5 </span> Kills all running <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> activities</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="parse-msg-allows-parsing-of-a-dcc-ex-api-command-via-myautomation-h">
-<h4><a class="toc-backref" href="#id180" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">PARSE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Allows parsing of a DCC-EX API command via myAutomation.h</a><a class="headerlink" href="#parse-msg-allows-parsing-of-a-dcc-ex-api-command-via-myautomation-h" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id182" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">PARSE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Allows parsing of a DCC-EX API command via myAutomation.h</a><a class="headerlink" href="#parse-msg-allows-parsing-of-a-dcc-ex-api-command-via-myautomation-h" title="Permalink to this heading"></a></h4>
 <blockquote>
 <div><p><span class="new-in-v5">New in version 5 </span> Allows parsing of a DCC-EX API command via myAutomation.h</p>
 </div></blockquote>

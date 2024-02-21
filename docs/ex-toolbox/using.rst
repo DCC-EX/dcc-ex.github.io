@@ -580,10 +580,13 @@ Downloads
  * *SerialToIPGUI*  - https://sourceforge.net/projects/serialtoip/
  * *socat* for windows requires downloading the 'cgywin' and installing the optional 'socat' package when you install - https://www.cygwin.com/ 
 
-Troubleshooting (Windows)
--------------------------
 
-In Microsoft Windows, if you see a "command not found" error, Here is what you need to do to fix it:
+----
+
+Troubleshooting (Windows socat)
+-------------------------------
+
+In Microsoft Windows and using the command line socat, if you see a "command not found" error, Here is what you need to do to fix it:
 
 * Right click on "My Computer" -> Properties -> Advanced -> Environment Variables
 * Add a new environment variable, called ``CYGWIN_HOME`` and set its value to ``C:\cygwin``

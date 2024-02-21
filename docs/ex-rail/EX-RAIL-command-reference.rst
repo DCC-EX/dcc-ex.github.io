@@ -1427,7 +1427,7 @@ TrackManager Control
   |_| > **mode:** - The mode to set the track to, |BR|
   |_| |_| |_| |_| valid options for DCC are: |BR|
   |_| |_| |_| |_| - ``MAIN`` or |BR|
-  |_| |_| |_| |_| - ``PROG``, 
+  |_| |_| |_| |_| - ``PROG``, |BR|
   |_| |_| |_| |_| and valid options for DC are: |BR|
   |_| |_| |_| |_| -  ``DC`` |BR|
   |_| |_| |_| |_| - , ``DCX``. |BR|
@@ -1450,6 +1450,29 @@ TrackManager Control
       AUTOSTART
       SETLOCO(1) SET_TRACK(A, DC)
       SET_TRACK(B, PROG)
+      DONE
+
+
+``SET_POWER( track, ON/OFF )`` - Enable/Disable power on the selected track
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|NOT-IN-PROD-VERSION|
+
+  Configures the power setting of the selected track, refer also to :doc:`/trackmanager/index`
+
+*Parameters:* |BR|
+  |_| > **track:** - The track to configure, valid options are A to H |BR|
+  |_| > **ON/OFF:** - Turn the power ON or OFF for this track |BR|
+
+.. collapse:: For example: (click to show)
+
+    .. code-block:: cpp
+
+      // Set track A to be a DC track with loco ID 1 and power on, and track B to be a DCC programming track
+      AUTOSTART
+      SETLOCO(1) SET_TRACK(A, DC)
+      SET_TRACK(B, PROG)
+      SET_POWER(A, ON)
       DONE
 
 |force-break|

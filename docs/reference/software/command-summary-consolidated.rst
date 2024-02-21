@@ -159,6 +159,21 @@ Note:  Previously referred to as 'DC-District'.
   |_| > **state:** PROG, MAIN DC, DCX |BR|
   |_| > **cab:** cab(loco) equivalent to a fake DCC Address
 
+``<onOff [track]>`` - Turn power on or off to the requested TrackManager track
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|NOT-IN-PROD-VERSION|
+
+  *Parameters:* |BR|
+  |_| > **onOff:** one of |BR|
+  |_| |_| |_| |_| - 1 = on |BR|
+  |_| |_| |_| |_| - 0 = off |BR|
+  |_| > **track:** one of tracks A - H |BR|
+
+  *Response:* 
+    |_| The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes. |BR|
+    |_| ``<pOnOFF [track]>`` |BR|
+
 ----
 
 Cab (Loco) Commands

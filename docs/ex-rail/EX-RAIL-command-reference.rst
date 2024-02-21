@@ -1475,6 +1475,31 @@ TrackManager Control
       SET_POWER(A, ON)
       DONE
 
+
+
+``SETFREQ( track, frequency )`` - Enable specific frequency on the selected track
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  DC/DCX track settings only.
+
+|NOT-IN-PROD-VERSION|
+
+  Configures the frequency setting of the selected track.
+
+  The settings achievable vary slightly depending upon the processor running the CS but broadly follow the following:
+
+  *Parameters:* |BR|
+
+  |_| > **track:** - The track to configure, valid options are A to H |BR|
+  |_| > **frequency:** - The frequency to set for this track |BR|
+  |_| |_| |_|>valid options are: |BR|
+  |_| |_| |_| |_|> **0:** Default - low frequency 131Hz |BR|
+  |_| |_| |_| |_|> **1:** Mid frequency - 490Hz |BR|
+  |_| |_| |_| |_|> **2:** High frequency - 3400Hz |BR|
+  |_| |_| |_| |_|> **3:** Supersonic - 62500Hz|BR|
+
+  Trial and error will be needed for specific locos that do not respond well to the defaults (low) frequency setting.
+
+
 |force-break|
 
 ----

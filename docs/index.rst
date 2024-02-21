@@ -135,6 +135,7 @@ DCC-EX Model Railroading
    :caption: External References
 
    external-references/index
+   external-references/standards
    reference/accessories/index
 
 .. toctree::

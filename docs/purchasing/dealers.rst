@@ -15,7 +15,7 @@ The dealers listed on this page work with the |DCC-EX| team to ensure these devi
 In the United States (US)
 --------------------------
 
-.. image:: /_static/images/icons/flag_us.png
+.. image:: /_static/images/icons/flag_us60px.png
    :alt: US Flag
    :scale: 100%
    :align: left
@@ -29,7 +29,7 @@ In the United States (US)
 In the United Kingdom (UK)
 ---------------------------
 
-.. image:: /_static/images/icons/flag_uk.jpg
+.. image:: /_static/images/icons/flag_uk60px.jpg
    :alt: UK Flag
    :scale: 100%
    :align: left
@@ -40,12 +40,12 @@ In the United Kingdom (UK)
 In the European Union (EU)
 ------------------------------
 
-.. image:: /_static/images/icons/flag_austria.png
+.. image:: /_static/images/icons/flag_austria60px.png
    :alt: Austria Flag
    :scale: 100%
    :align: left
 
-.. image:: /_static/images/icons/flag_eu.png
+.. image:: /_static/images/icons/flag_eu60px.png
    :alt: EU Flag
    :scale: 100%
    :align: left
@@ -55,12 +55,12 @@ In the European Union (EU)
 In Australia & New Zealand (AU / NZ)
 --------------------------------------
 
-.. image:: /_static/images/icons/flag_australia.png
+.. image:: /_static/images/icons/flag_australia60px.png
    :alt: Australia Flag
    :scale: 100%
    :align: left
 
-.. image:: /_static/images/icons/flag_new_zealand.png
+.. image:: /_static/images/icons/flag_new_zealand60px.png
    :alt: New Zealand Flag
    :scale: 100%
    :align: left

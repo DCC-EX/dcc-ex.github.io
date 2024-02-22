@@ -28,7 +28,7 @@ In the United States serving the US, Canada, and Mexico
 .. rst-class:: clearer
 
 
-`DCC-EX Store <https://stors.dcc-ex.com/>`_
+`DCC-EX Store <https://store.dcc-ex.com/>`_
 ===============================================
 
 `Smart Hobby, LLC <https://www.smarthobbyllc.com/>`_

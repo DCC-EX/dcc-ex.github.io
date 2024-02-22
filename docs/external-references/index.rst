@@ -3,7 +3,7 @@
 .. include:: /include/include-l1.rst
 .. include:: /include/include-description.rst
 .. meta::
-  :description: Articles and videos created by people in and outside the |DCC-EX| project which you may fine useful or interesting
+  :description: Articles and videos created by people in and outside the |DCC-EX| project which you may find useful or interesting
 
 *******************
 Articles and Videos
@@ -15,7 +15,7 @@ Articles and Videos
     :depth: 2
     :local:
 
-The following are articles and videos created by people in and outside the |DCC-EX| project which you may fine useful or interesting.
+The following are articles and videos created by people in and outside the |DCC-EX| project which you may find useful or interesting.
 
 Videos
 ======

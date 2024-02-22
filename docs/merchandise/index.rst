@@ -1,6 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 .. include:: /include/include-description.rst
+
 *******************
 DCC-EX Merchandise
 *******************

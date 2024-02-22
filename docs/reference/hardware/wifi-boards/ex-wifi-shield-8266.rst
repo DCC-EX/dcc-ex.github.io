@@ -25,10 +25,6 @@ Designed in conjunction with the |DCC-EX| development team...
    :scale: 40%
    :align: left
 
-.. image:: /_static/images/wifi/exwifi6.png
-   :alt: EX-WiFiShield-8266 back
-   :scale: 40%
-   :align: left
 
 Overview
 ===========
@@ -49,7 +45,7 @@ supports wireless 2.4GHz 802.11 b/g/n supports the STA/AP/STA + AP operation mod
 How can I get one?
 ==================
 
-Units may be purchased from the following sources you can find here: 'Authorized Dealers / Resellers <../purchasing/dealers/'
+Units may be purchased from the following sources you can find here: :doc:`/purchasing/dealers`
 
 
 Assembly with EX-MotorShield8874

@@ -22,6 +22,7 @@ For more information on how to configure your Command Station to use the boards 
 .. toctree::
     :maxdepth: 1
 
+    /reference/hardware/wifi-boards/ex-wifi-shield-8266
     /reference/hardware/wifi-boards/makerfabs-esp8266
     /reference/hardware/wifi-boards/duinopeak-esp8266
     /reference/hardware/wifi-boards/esp-01

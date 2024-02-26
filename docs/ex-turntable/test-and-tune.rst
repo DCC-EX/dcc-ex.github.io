@@ -101,14 +101,14 @@ Note that as per the existing commands, the above table for the various activiti
 
 For further information on using this new functionality, some examples are included at the bottom of this page in the section :ref:`ex-turntable/test-and-tune:new - development version control of ex-turntable`.
 
-Serial console testing
-----------------------
+Interactive Serial console commands
+-----------------------------------
 
 As of version 0.5.0-Beta, the ability to test |EX-TT| directly via the serial console has been introduced.
 
-Similar to the |EX-CS| diagnostic command outlined previously, the syntax is ``<steps activity>``, where again steps is the number of steps from the home position to move to, and activity is as per the previous table. Note that also like the diagnostic command, this needs to be a number.
+Similar to the |EX-CS| diagnostic command outlined previously and up until version 0.7.0, the syntax is ``<steps activity>``, where again steps is the number of steps from the home position to move to, and activity is as per the previous table. Note that also like the diagnostic command, this needs to be a number. In version 0.7.0, this changes to ``<M steps activity>``.
 
-For example, sending the command ``<300 0>`` via the serial console will result in output similar to this:
+For example, sending the command ``<300 0>``/``<M 300 0>`` via the serial console will result in output similar to this:
 
 .. code-block:: 
 
@@ -117,6 +117,17 @@ For example, sending the command ``<300 0>`` via the serial console will result 
   Received notification to move to step postion 300
   Position steps: 300, Auto phase switch - moving 300 steps
   Setting phase switch flag to: 0
+
+In version 0.7.0, a number of other interactive serial console commands have also been added. This is the complete list:
+
+- ``<C>`` - Initiate the calibration sequence
+- ``<D>`` - Enable/disable debug output to the serial console
+- ``<E>`` - Erase the EEPROM contents, which will force calibration to occur at next startup
+- ``<H>`` - Initiate homing
+- ``<M steps activity>`` - Initiate a move to the provided step count with the specified activity
+- ``<R>`` - Initiate a reboot (note with the old bootloader Nano this will not function correctly)
+- ``<T>`` - Enter/exit sensor testing mode, and requires a restart if exiting
+- ``<V>`` - Display the startup information in the serial console
 
 Testing EX-Turntable
 ====================

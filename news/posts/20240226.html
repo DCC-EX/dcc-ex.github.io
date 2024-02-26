@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<meta content="DCC-EX DCC DCC++ EX DCC++EX" name="keywords" />
+<meta content="News and Announcements from the DCC-EX team. [DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout.]" name="description" />
+<meta content="News Announcements &quot;What's Happening&quot;" name="keywords" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Posts tagged ex-commandstation ex-motorshield8874 &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>Announcing EX-Turntable 0.7.0 &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
@@ -13,7 +17,7 @@
       <link rel="stylesheet" href="../../_static/dark_mode_css/general.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/dark_mode_css/dark.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-    <link rel="canonical" href="https://dcc-ex.com/news/tag/ex-commandstation-ex-motorshield8874.html" />
+    <link rel="canonical" href="https://dcc-ex.com/news/posts/20240226.html" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -49,7 +53,7 @@
   rel="alternate"
   type="application/atom+xml"
   href="../../news/atom.xml"
-  title="Posts tagged ex-commandstation ex-motorshield8874"
+  title="DCC-EX News"
 />
 
 
@@ -577,10 +581,11 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Posts tagged ex-commandstation ex-motorshield8874</li>
+      <li class="breadcrumb-item active">Announcing EX-Turntable 0.7.0</li>
   
     
       <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/news/posts/20240226.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   
 
@@ -590,95 +595,52 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
+<a class="image-product-logo-float-right reference internal image-reference" href="../../_images/product-logo-news.png"><img alt="DCC-EX News" class="image-product-logo-float-right" src="../../_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /></a>
+<section id="announcing-ex-turntable-0-7-0">
+<h1>Announcing EX-Turntable 0.7.0<a class="headerlink" href="#announcing-ex-turntable-0-7-0" title="Permalink to this heading"></a></h1>
+<p>The <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> team is pleased to share the next Beta version of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> with version 0.7.0 being released today. Please be aware that there are some changes in this version that may impact configuration options set, particularly for those using two wire stepper drivers such as the A4988, DRV8825, or TMC2208. Users with ULN2003 stepper drivers should not be impacted. <strong>NOTE</strong> If you are using the STEPPER_DRIVER option <code class="docutils literal notranslate"><span class="pre">A4988_INV</span></code> you will need to edit your configuration file, please see <a class="reference internal" href="../../ex-turntable/configure.html#stepper-driver"><span class="std std-ref">STEPPER_DRIVER</span></a> and <a class="reference internal" href="../../ex-turntable/configure.html#invert-enable"><span class="std std-ref">INVERT_ENABLE</span></a> for more information.</p>
+<p>An often requested feature has been added in this release, enabling single direction rotation to cater for stepper motors and/or gearboxes that have a lot of slop. Refer to <a class="reference internal" href="../../ex-turntable/configure.html#rotate-forward-only"><span class="std std-ref">ROTATE_FORWARD_ONLY</span></a> and <a class="reference internal" href="../../ex-turntable/configure.html#rotate-reverse-only"><span class="std std-ref">ROTATE_REVERSE_ONLY</span></a> for more information on how to enable this.</p>
+<p>In addition, the interactive serial console commands to <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> have been expanded significantly, allowing for various testing, debug, display, and other options to be enabled or disabled via the serial console. Note that the test move command <code class="docutils literal notranslate"><span class="pre">&lt;steps</span> <span class="pre">activity&gt;</span></code> has been altered also as a result. Refer to <a class="reference internal" href="../../ex-turntable/test-and-tune.html#interactive-serial-console-commands"><span class="std std-ref">Interactive Serial console commands</span></a> for the complete list of commands and what they do.</p>
+<p>Here is the summary of the changes in this release:</p>
+<ul class="simple">
+<li><p>Fix bug where enabling sensor testing or debug output prevents compiling</p></li>
+<li><p>Add interactive serial command C to initiate calibration</p></li>
+<li><p>Add interactive serial command D to enable/disable debug output in serial console</p></li>
+<li><p>Add interactive serial command E to erase calibration steps stored in EEPROM</p></li>
+<li><p>Add interactive serial command H to initiate homing</p></li>
+<li><p>Change movement command from &lt;steps activity&gt; to &lt;M steps activity&gt;</p></li>
+<li><p>Add interactive serial command R to reset the EX-Turntable microcontroller</p></li>
+<li><p>Add interactive serial command T to enable/disable sensor testing mode</p></li>
+<li><p>Add interactive serial command V to display version and other system info</p></li>
+<li><p>Add ability to force single direction rotation only for steppers with a lot of slop</p></li>
+<li><p>Update AccelStepper library to v1.64 and remove need for modification</p></li>
+<li><p>Enable inversion of direction, steps, and enable via config.h defines</p></li>
+</ul>
+</section>
 
-<div class="section ablog__collection">
-  <h1>
+<div class="section ablog__blog_comments">
+  
+  
+
+
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
     
-      Posts tagged
+    
+    <a href="20240215.html">
       
-    ex-commandstation ex-motorshield8874
-    
-  </h1>
-  
-  
-  <div class="section ablog-post">
-    <h2 class="ablog-post-title">
-      <a href="../posts/20230515.html">DCC-EX Releases 5amp EX-MotorShield8874</a>
-    </h2>
-    <ul class="ablog-archive">
-      <li>
-        
-        
-        <i class="fa fa-calendar"></i>
-        
-        15 May 2023
-        
-      </li>
+      <i class="fa fa-arrow-circle-left"></i>
       
-
-<li id="ablog-sidebar-item author ablog__author">
-  <span>
+      <span>Announcing EX-SensorCAM - a new camera-based sensor for your layout</span>
+    </a>
     
-    <i class="fa-fw fa fa-user"></i>
+  </span>
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
     
-    </span>
-  
-  
-  <a href="../author/paul-antoine.html">Paul Antoine</a>
-  
-  
-  
-</li>
-
-
-
-
-<li id="ablog-sidebar-item category ablog__category">
-  <span>
-    
-    <i class="fa-fw fa fa-folder-open"></i>
-    
-    </span>
-  
-  
-  <a href="../category/news.html">News</a>
-  
-  ,
-  
-  
-  
-  
-  <a href="../category/release.html">Release</a>
-  
-  
-  
-</li>
-
-
-<li id="ablog-sidebar-item tags ablog__tags">
-  <span>
-    
-    
-    <i class="fa-fw fa fa-tag"></i>
-    
-    </span>
-  
-  
-  <a href="#">ex-commandstation ex-motorshield8874</a>
-  
-  
-  
-</li>
-
-
-    </ul>
-    <div class="ablog-post-excerpt docutils container">
-<p>DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the first of our open source hardware products: the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span>, providing dual 5 amp DCC and DC PWM (pulse width modulation) output for DCC-EX Command Stations.</p>
+  </span>
 </div>
 
-    <p class="ablog-post-expand"><a href="../posts/20230515.html"><em>Read more ...</em></a></p>
-    <hr/>
-  </div>
   
   
 </div>

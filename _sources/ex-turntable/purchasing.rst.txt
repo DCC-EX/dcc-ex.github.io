@@ -21,7 +21,7 @@ What you need for EX-Turntable
 * An |EX-CS| running version 5.0.0 or later
 * An Arduino microcontroller (tested on Nano V3, both old and new bootloader, an Uno R3 should also work)
 * A supported stepper motor driver and stepper motor (see list below)
-* A hall effect (or similar) sensor for homing, which needs to be digital/unipolar such as an A3144 or 44E (or equivalent)
+* A hall effect (or similar) sensor for homing, which needs to be digital/unipolar such as an A3144 or 44E (or equivalent), and a HC-020K optical sensor is also an appropriate alternative here
 * A suitable power supply - note that your chosen stepper driver/motor will dictate this, see note below
 * A prototyping shield is highly recommended, especially when using a Nano, and the pictured version is preferred over the screw terminal version
 * Dupont type wires to connect the components, male to female or female to female as required

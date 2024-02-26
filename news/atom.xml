@@ -2,10 +2,46 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2024-02-22T07:39:34.526391+00:00</updated>
+  <updated>2024-02-26T07:02:22.470103+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.3">ABlog</generator>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20240226.html</id>
+    <title>Announcing EX-Turntable 0.7.0</title>
+    <updated>2024-02-26T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="announcing-ex-turntable-0-7-0"&gt;
+
+&lt;p&gt;The &lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt; team is pleased to share the next Beta version of &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt; with version 0.7.0 being released today. Please be aware that there are some changes in this version that may impact configuration options set, particularly for those using two wire stepper drivers such as the A4988, DRV8825, or TMC2208. Users with ULN2003 stepper drivers should not be impacted. &lt;strong&gt;NOTE&lt;/strong&gt; If you are using the STEPPER_DRIVER option &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;A4988_INV&lt;/span&gt;&lt;/code&gt; you will need to edit your configuration file, please see &lt;a class="reference internal" href="ex-turntable/configure.html#stepper-driver"&gt;&lt;span class="std std-ref"&gt;STEPPER_DRIVER&lt;/span&gt;&lt;/a&gt; and &lt;a class="reference internal" href="ex-turntable/configure.html#invert-enable"&gt;&lt;span class="std std-ref"&gt;INVERT_ENABLE&lt;/span&gt;&lt;/a&gt; for more information.&lt;/p&gt;
+&lt;p&gt;An often requested feature has been added in this release, enabling single direction rotation to cater for stepper motors and/or gearboxes that have a lot of slop. Refer to &lt;a class="reference internal" href="ex-turntable/configure.html#rotate-forward-only"&gt;&lt;span class="std std-ref"&gt;ROTATE_FORWARD_ONLY&lt;/span&gt;&lt;/a&gt; and &lt;a class="reference internal" href="ex-turntable/configure.html#rotate-reverse-only"&gt;&lt;span class="std std-ref"&gt;ROTATE_REVERSE_ONLY&lt;/span&gt;&lt;/a&gt; for more information on how to enable this.&lt;/p&gt;
+&lt;p&gt;In addition, the interactive serial console commands to &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt; have been expanded significantly, allowing for various testing, debug, display, and other options to be enabled or disabled via the serial console. Note that the test move command &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;&amp;lt;steps&lt;/span&gt; &lt;span class="pre"&gt;activity&amp;gt;&lt;/span&gt;&lt;/code&gt; has been altered also as a result. Refer to &lt;a class="reference internal" href="ex-turntable/test-and-tune.html#interactive-serial-console-commands"&gt;&lt;span class="std std-ref"&gt;Interactive Serial console commands&lt;/span&gt;&lt;/a&gt; for the complete list of commands and what they do.&lt;/p&gt;
+&lt;p&gt;Here is the summary of the changes in this release:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Fix bug where enabling sensor testing or debug output prevents compiling&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add interactive serial command C to initiate calibration&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add interactive serial command D to enable/disable debug output in serial console&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add interactive serial command E to erase calibration steps stored in EEPROM&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add interactive serial command H to initiate homing&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Change movement command from &amp;lt;steps activity&amp;gt; to &amp;lt;M steps activity&amp;gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add interactive serial command R to reset the EX-Turntable microcontroller&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add interactive serial command T to enable/disable sensor testing mode&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add interactive serial command V to display version and other system info&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add ability to force single direction rotation only for steppers with a lot of slop&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Update AccelStepper library to v1.64 and remove need for modification&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Enable inversion of direction, steps, and enable via config.h defines&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20240226.html" rel="alternate"/>
+    <summary>The &lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt; team is pleased to share the next Beta version of &lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt; with version 0.7.0 being released today. Please be aware that there are some changes in this version that may impact configuration options set, particularly for those using two wire stepper drivers such as the A4988, DRV8825, or TMC2208. Users with ULN2003 stepper drivers should not be impacted. NOTE If you are using the STEPPER_DRIVER option A4988_INV you will need to edit your configuration file, please see ex-turntable/configure:stepper_driver and ex-turntable/configure:invert_enable for more information.</summary>
+    <category term="ex-turntable" label="ex-turntable"/>
+    <category term="release" label="release"/>
+    <published>2024-02-26T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>https://dcc-ex.com/news/posts/20240215.html</id>
     <title>Announcing EX-SensorCAM - a new camera-based sensor for your layout</title>

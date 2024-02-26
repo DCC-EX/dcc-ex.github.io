@@ -207,7 +207,7 @@ We'll use some basic mathematics to tune our turntable and traverser positions, 
 
 .. note:: 
 
-  When tuning positions, you can use the ``<D TT vpin steps activity>`` diagnostic command as outlined in :ref:`ex-turntable/test-and-tune:tuning your turntable positions` to test and refine these for perfect track alignment between the turntable bridge track and the surrounding tracks. You can also use the direct EX-Turntable serial testing command ``<steps activity>`` as covered in :ref:`ex-turntable/test-and-tune:serial console testing`.
+  When tuning positions, you can use the ``<D TT vpin steps activity>`` diagnostic command as outlined in :ref:`ex-turntable/test-and-tune:tuning your turntable positions` to test and refine these for perfect track alignment between the turntable bridge track and the surrounding tracks. You can also use the direct EX-Turntable serial testing command ``<steps activity>``/``<M steps activity>`` as covered in :ref:`ex-turntable/test-and-tune:interactive serial console commands`.
 
   We will be using the same steps per revolution number throughout this page (4097) for both the turntable and traverser, and are keeping this consistent with the examples in the |EX-TT| documentation for simplicity.
 

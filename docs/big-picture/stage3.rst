@@ -1,6 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 .. include:: /include/include-ex-bp.rst
+
 |EX-BP-LOGO|
 
 ********************************************************
@@ -176,7 +177,7 @@ Adding a Sensor
 
 IR sensors typically require three connections: 5V (or VCC), Ground, and output (OUT or S).
 
-.. image:: /_static/images/accessories/ir-sensor.png
+.. image:: /_static/images/sensors/ir-sensor.png
    :alt: IR Sensor microcontroller-boards
    :scale: 100%
 

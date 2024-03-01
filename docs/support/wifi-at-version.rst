@@ -18,7 +18,7 @@ ESP8266 (WiFi Boards) - AT Version Issues and Solutions
       :local:
       :depth: 3
 
-Unfortunately, other than the recommended *Makerfabs ESP8266 WiFi Shield*, the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with |EX-CS|. This now seems to include the recommended `Makerfabs ESP8266 WiFi Shield <https://www.makerfabs.com/esp8266-wifi-shield.html>`_.
+Unfortunately, other than the recommended *DCC-EX EX-MotorShield 8266* and *Makerfabs ESP8266 WiFi Shield*, the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with |EX-CS|. There was a run of Makerfabs boards from around May 2023 through October 2023 that had defective firmware from Expressif. You can use this tutorial to upgrade one of those boards if you have one. All boards manufactured after November 2023 have the correct firmware. These boards carry the DCC-EX logo on the bottom and display version 1.1 or later.
 
 Which is correct version of the AT firmware
 ===========================================
@@ -351,7 +351,7 @@ Correcting the Makerfabs ESP8266 WiFi Shield With an Arduino Mega
 
 .. warning:: 
 
-   The instructions on the following page have been proven to work on Linux PCs, so will probably work on macOS PCs (Apple), however attempts to get them to work on **Microsoft Windows PCs** :dcc-ex-red-bold:`have so far been unsuccessful`. 
+   The instructions on the following page have been proven to work on Linux PCs, so will probably work on macOS PCs (Apple), however attempts to get them to work on **Microsoft Windows PCs** :dcc-ex-red-bold:`have so far been unsuccessful`. We need to do more testing. If you have an issue with this method, simply purchase a USB to TTL converter module and use the recommended process in the previous heading. This should not be an issue for most people since they will have the DCC-EX EX-WiFi Shield 8266 which has the correct firmware and a much easier upgrade process should that be required in the future.
 
 Flashing the ESP8266 WiFi Shield :doc:`using an Arduino Mega is covered here </support/makerfabs-update-at-version-with-mega>`.
 

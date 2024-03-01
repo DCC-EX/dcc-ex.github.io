@@ -24,7 +24,7 @@ This page is specifically intended for a |conductor-text| who intends to install
 
 .. warning:: 
 
-   While the recommended `EX-WiFiShield 8266 <https://store.dcc-ex.com/products/EX-MotorShield8874-p625878148>1_ and :doc:`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>` is now shipping with the correct firmware version and **will work** with |EX-CS| *without modification*, please be aware that the Espressif firmware shipped with *Duinopeak ESP8266 WiFi Expansion* and *ESP-01 or ESP-01S* devices :dcc-ex-red-bold:`will probably NOT work` with |EX-CS| out of the box.
+   While the recommended `EX-WiFiShield 8266 <https://store.dcc-ex.com/products/EX-MotorShield8874-p625878148>`_ and :doc:`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>` is now shipping with the correct firmware version and **will work** with |EX-CS| *without modification*, please be aware that the Espressif firmware shipped with *Duinopeak ESP8266 WiFi Expansion* and *ESP-01 or ESP-01S* devices :dcc-ex-red-bold:`will probably NOT work` with |EX-CS| out of the box.
 
    This can be corrected, but is probably beyond Conductor level and requires additional hardware.  
 

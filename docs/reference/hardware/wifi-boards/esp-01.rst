@@ -15,7 +15,7 @@ ESP-01 and ESP-01s
       :depth: 1
       :local:
 
-This is the board that started it all. It fueled the WiFi revolution in small devices. In fact, this little board is actually a microcontroller that is more powerful than the Arduino Uno! The difference between the 01 and the 01S is primarily that there is more memory on the 01-"S". Since the 01 version has been retired, any new board you get should be the 01s, but either will work.
+This is the board that started it all. It fuelled the WiFi revolution in small devices. In fact, this little board is actually a microcontroller that is more powerful than the Arduino Uno! The difference between the 01 and the 01S is primarily that there is more memory on the 01-"S". Since the 01 version has been retired, any new board you get should be the 01s, but either will work.
 
 .. figure:: /_static/images/assembly/esp-01s_2.png
    :alt: ESP-01s
@@ -26,13 +26,13 @@ This is the board that started it all. It fueled the WiFi revolution in small de
 .. warning:: 
    :class: warning-float-right
 
-   Please be aware that the Espressif AT firmware currently being shipped with these devices **will probably NOT work** with |EX-CS| out of the box.
+   Please be aware that the Espressif firmware shipped with *Duinopeak ESP8266 WiFi Expansion* and *ESP-01 or ESP-01S* devices :dcc-ex-red-bold:`will probably NOT work` with |EX-CS| out of the box.
+
+   (Note: The recommended :doc:`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>` is now shipping with the correct firmware version and **will work** with |EX-CS| *without modification*).
 
    This can be corrected, but is probably beyond Conductor level and requires additional hardware.  
 
    See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
-
-   We are currently investigating other options.
     
 Install the Module
 ==================

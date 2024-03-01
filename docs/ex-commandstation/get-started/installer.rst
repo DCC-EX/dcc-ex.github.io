@@ -231,7 +231,7 @@ On this screen you can select some of the flexible and optional features of the 
 
 * Motor Driver type
 * LCD or oLED display
-* Wifi
+* WiFi
 * Ethernet
 * Set track modes
 * Advanced Config
@@ -311,7 +311,7 @@ You can configure the WiFi for EX-CommandStation two ways:
 
    Both are required, Though it is possible, but unlikely, that the WiFi Password for your network is blank.  If so, leave the field blank.
 
-   *Wifi SSID* is the name of your home network.
+   *WiFi SSID* is the name of your home network.
 
    *WiFi Password* is the password for your home network.
 

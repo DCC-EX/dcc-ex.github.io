@@ -36,7 +36,7 @@ API clients may include:
 
 - Throttles (both wired and wireless)
 - |JMRI|
-- Other integrations (eg. RedHat)
+- Other integrations (e.g. RedHat)
 
 2. Serial port and WiFi/Ethernet monitoring
 ============================================
@@ -101,7 +101,7 @@ There are three types of parameters in use:
 6.1. Keyword
 ------------
 
-These are a consecutive sequence of one or more non-blank characters consisting of ``a-z``, ``A-Z``, ``0-9``, or ``_``, eg. "JOIN", "WIFI", "ON", "SPEED28".
+These are a consecutive sequence of one or more non-blank characters consisting of ``a-z``, ``A-Z``, ``0-9``, or ``_``, e.g. "JOIN", "WIFI", "ON", "SPEED28".
 
 Keyword parameters are internally hashed to created integers and may start with any of these characters. The |EX-CS| code does not differentiate between keywords and numbers internally.
 
@@ -115,7 +115,7 @@ These are a consecutive sequence of one or more digits, with an optional leading
 6.3. String
 -----------
 
-These are surrounded by a leading and trailing ``"`` and may contain text including spaces eg. "This is a turnout description".
+These are surrounded by a leading and trailing ``"`` and may contain text including spaces e.g. "This is a turnout description".
 
 Appendix A. Exceptions
 =======================

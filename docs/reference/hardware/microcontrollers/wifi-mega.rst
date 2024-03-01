@@ -71,20 +71,20 @@ What You Will Do
 a. Plug in and test your Mega
 -----------------------------
 
-Plug your board into your computer with a USB micro cable to see if it is recognized. These boards use a CH340 UART (The USB controller) instead of the ones on an Arduino brand Uno or Mega. If you have never plugged anything into your computer with this chip on it before, you are going to have to install a driver. On Windows, you can go to device manager and open the ports tree item. Look for "CH340" or "CH341".
+Plug your board into your computer with a USB micro cable to see if it is recognised. These boards use a CH340 UART (The USB controller) instead of the ones on an Arduino brand Uno or Mega. If you have never plugged anything into your computer with this chip on it before, you are going to have to install a driver. On Windows, you can go to device manager and open the ports tree item. Look for "CH340" or "CH341".
 
 .. figure:: /_static/images/wifi/ch340_driver.png
-   :alt: CH340 Recognized
+   :alt: CH340 Recognised
    :scale: 100%
    :align: center
 
-   CH340 Recognized 
+   CH340 Recognised 
 
 If you don't see the CH340 with the Mega plugged into USB, download and install the drivers from here:
 
 http://www.wch-ic.com/downloads/CH341SER_ZIP.html
 
-Once you can see your computer recognizes your board, **remember the port**. For a PC running windows, it will be something like "COM24" as in the picture above. For a Mac, it will be something like "/dev/cu.wchusbserial*****", and for Linux it will look like "/dev/ttyUSBx". Write it down. 
+Once you can see your computer recognises your board, **remember the port**. For a PC running windows, it will be something like "COM24" as in the picture above. For a Mac, it will be something like "/dev/cu.wchusbserial*****", and for Linux it will look like "/dev/ttyUSBx". Write it down. 
 
 **Unplug the Mega.**
 
@@ -151,7 +151,7 @@ With the Mega UNPLUGGED (no power connected!), you will set some switches. Use t
 
    Important Board Locations
 
-Note that switch 8 is not connected to anything, you don't need to touch it. With a toothpick or jewelers screwdriver, very gently set your dip switches, it is easy to break them. Use this diagram to set your dip switches, **ON is up in this picture. Switches 5,6, and 7 are on**.
+Note that switch 8 is not connected to anything, you don't need to touch it. With a toothpick or jewellers screwdriver, very gently set your dip switches, it is easy to break them. Use this diagram to set your dip switches, **ON is up in this picture. Switches 5,6, and 7 are on**.
 
 .. figure:: /_static/images/wifi/mega_wifi_sw_flash.png
    :alt: Switches in flash mode
@@ -301,7 +301,7 @@ Setting up in Access Point (AP) Mode
   
 - If using the Arduino IDE,Make sure you didn't put "//" in front of the `#define ENABLE_WIFI true` line in your config.h file
 - No additional changes required, Leave SSID & Passwd alone
-- Your ESP-Wifi chip will assign a SSID as DCCEX_xxxxxx and PASS_xxxxxx, Where xxxxxx is the last 6 characters of your ESP8266 MAC Address
+- Your ESP-WiFi chip will assign a SSID as DCCEX_xxxxxx and PASS_xxxxxx, Where xxxxxx is the last 6 characters of your ESP8266 MAC Address
 - Upload the software to your Mega+WiFi (see Compile and Re-upload below)
 
 Setting up WiFi in Station (STA) Mode with Router

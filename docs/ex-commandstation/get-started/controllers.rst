@@ -72,11 +72,13 @@ Here is an image that represents a direct connection.
    :align: center
    :scale: 40%
 
-There are number of excellent :doc:`phone apps and physical hardware devices </throttles/index>` that can be used a wifi Throttle (Controller) for the |EX-CS|.  On this page we are only going to cover two. 
+There are number of excellent :doc:`phone apps and physical hardware devices </throttles/index>` that can be used a WiFi Throttle (Controller) for the |EX-CS|.  On this page we are only going to cover two. 
 
 .. warning:: 
 
-   Please be aware that the Espressif firmware shipped with these devices **will probably NOT work** with |EX-CS| out of the box.
+   Please be aware that the Espressif firmware shipped with *Duinopeak ESP8266 WiFi Expansion* and *ESP-01 or ESP-01S* devices :dcc-ex-red-bold:`will probably NOT work` with |EX-CS| out of the box.
+
+   (Note: The recommended :doc:`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>` is now shipping with the correct firmware version and **will work** with |EX-CS| *without modification*).
 
    If you see a WiFi network Name (SSID) of "DCCEX-SAYS-BROKEN-FIRMWARE" then you have one of the problematic AT firmware versions.
 
@@ -84,15 +86,13 @@ There are number of excellent :doc:`phone apps and physical hardware devices </t
 
    See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
 
-   We are currently investigating other options.
-
-Compatible Wifi Throttles
+Compatible WiFi Throttles
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. warning:: 
    :class: warning-float-right
    
-   A limitation of the |Access Point Mode| that is recommended in the :doc:`/ex-commandstation/get-started/index` pages is that the |wiThrottle Server| of the |EX-CS| cannot be 'discovered'.  |Engine Driver| can guess it, but |wiThrottle| can't.  In |wiThrottle| you will need type in the address.
+   A limitation of the |Access Point Mode| that is recommended in the :doc:`/ex-commandstation/get-started/index` pages is that the |WiThrottle Server| of the |EX-CS| cannot be 'discovered'.  |Engine Driver| can guess it, but |WiThrottle| can't.  In |WiThrottle| you will need type in the address.
 
 For more information on any of these throttles, you can click on their links below or see our :doc:`Throttles Page Index </throttles/index>`.
 
@@ -105,7 +105,7 @@ Engine Driver (Android \| WiThrottle \| WiFi)
 
 |Engine Driver| is a throttle app for your phone that can control multiple locos and your turnouts. It uses an interface called "|WiThrottle Protocol|" (for WiFi Throttle). Any |WiThrottle Protocol| compatible throttle will work with the |EX-CS|. There are two ways to connect it;
 
-* The first method is by connecting directly to the Command Station via WiFi. You will need a WiFi board connected to the Command Station (see Wifi Setup :doc:`WiFi Setup <wifi-setup>`).
+* The first method is by connecting directly to the Command Station via WiFi. You will need a WiFi board connected to the Command Station (see WiFi Setup :doc:`WiFi Setup <wifi-setup>`).
 * The second method is to use |JMRI| and connect |Engine Driver| (ED) to the computer running |JMRI|. (We won't cover that option here.)
 
 Basic use of |Engine Driver| will be covered on the following :doc:`/ex-commandstation/get-started/testing` page. (See :doc:`Engine Driver Page </throttles/software/engine-driver>` for additional details on how to install and run |Engine Driver|.)
@@ -117,7 +117,7 @@ WiThrottle Lite (iOS \| WiThrottle \| WiFi)
 
 The "Lite" version of |WiThrottle| is free and is more than adequate for some initial testing and base running of locos.
 
-Basic use of |wiThrottle| will be covered on the following :doc:`/ex-commandstation/get-started/testing` page.  (See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how to install and run |wiThrottle|.)
+Basic use of |WiThrottle| will be covered on the following :doc:`/ex-commandstation/get-started/testing` page.  (See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how to install and run |WiThrottle|.)
 
 ----
 
@@ -148,7 +148,7 @@ The simplest option is to just use a throttle connected directly to the Command 
 
 |
 
-Basic use of |EX-WT| will be covered on the following :doc:`/ex-commandstation/get-started/testing` page.  (For additional operating instructions see :doc:`how to use EX-WebThrottle </throttles/software/ex-webthrottle>`)
+Basic use of |EX-WT| will be covered on the following :doc:`/ex-commandstation/get-started/testing` page.  (For additional operating instructions see :doc:`how to use EX-WebThrottle </ex-webthrottle/index>`)
 
 ----
 

@@ -52,7 +52,7 @@ If you inadvertently touch or send any Programming command while an Engine is si
 Caution: Wiring Prog & Main
 ==============================
 
-Please be sure "Both" Programming Track rails are Insulated with dual plastic joiners from the Main line and that both the wiring for CAB A Main and CAB B Prog positive leads are connected on the right rail and the negative leads are connected on the other rails to synchronize the phase of the DCC signal. 
+Please be sure "Both" Programming Track rails are Insulated with dual plastic joiners from the Main line and that both the wiring for CAB A Main and CAB B Prog positive leads are connected on the right rail and the negative leads are connected on the other rails to synchronise the phase of the DCC signal. 
 Or else undesirable gremlins may appear, you've been forewarned.
 The proceeding is a public service announcement and the |DCC-EX| team makes no expressed or implied guarantees if the user fails his or her due diligence.
 

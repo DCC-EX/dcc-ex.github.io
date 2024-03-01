@@ -42,8 +42,8 @@ DCC-EX Model Railroading
     - :ref:`begin/what-to-know:dcc-ex does dc as well`
     - :ref:`I'm interested in DCC but have a limited budget <begin/what-to-know:i'm interested in dcc but have a very small budget>`
     - :ref:`I just want to run DCC trains <begin/what-to-know:i just want to run my trains>`
-    - :ref:`I want to operate my turnout/points & run DCC trains <begin/what-to-know:i want to operate my turnouts/points and run dcc trains>`
-    - :ref:`I want to control accessories & run DCC trains <begin/what-to-know:i want to control all my accessories and run dcc trains>`
+    - :ref:`I want to operate my turnout/points & run DCC trains <begin/what-to-know:i want to operate my turnouts/points and run trains>`
+    - :ref:`I want to control accessories & run DCC trains <begin/what-to-know:i want to control all my accessories and run trains>`
     - :ref:`begin/what-to-know:i want some extra automated/animated realism`
     - :ref:`begin/what-to-know:i want a fully automated exhibition layout for my club`
 
@@ -90,6 +90,7 @@ DCC-EX Model Railroading
    ex-installer/index
    ex-webthrottle/index
    EX-MotorShield8874 <reference/hardware/motorboards/ex-motor-shield-8874>
+   EX-WiFiSheild-8266 <reference/hardware/wifi-boards/ex-wifi-shield-8266>
    ex-dccinspector/index
    ex-toolbox/index
 
@@ -123,6 +124,15 @@ DCC-EX Model Railroading
 .. toctree::
    :hidden:
    :maxdepth: 4
+   :caption: Purchasing & Merchandise
+
+   purchasing/dealers
+   reference/accessories/index
+   merchandise/index
+
+.. toctree::
+   :hidden:
+   :maxdepth: 4
    :caption: Detailed Information
 
    reference/index
@@ -135,7 +145,6 @@ DCC-EX Model Railroading
    :caption: External References
 
    external-references/index
-   reference/accessories/index
 
 .. toctree::
    :hidden:
@@ -144,10 +153,3 @@ DCC-EX Model Railroading
 
    About Us and the Project<about/index>
    about/index-contributing
-
-.. toctree::
-   :hidden:
-   :maxdepth: 4
-   :caption: Merchandise & News
-
-   merchandise/index

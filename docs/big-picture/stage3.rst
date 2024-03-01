@@ -1,6 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 .. include:: /include/include-ex-bp.rst
+
 |EX-BP-LOGO|
 
 ********************************************************
@@ -176,7 +177,7 @@ Adding a Sensor
 
 IR sensors typically require three connections: 5V (or VCC), Ground, and output (OUT or S).
 
-.. image:: /_static/images/accessories/ir-sensor.png
+.. image:: /_static/images/sensors/ir-sensor.png
    :alt: IR Sensor microcontroller-boards
    :scale: 100%
 
@@ -184,7 +185,7 @@ To add a sensor, simply connect VCC to 5V, GND to ground, and OUT (or S) to an a
 
 If you are using I/O expander modules, then connect OUT (or S) to an available pin on the appropriate module, and you will need to reference the sensor by that vpin.
 
-Note that some users prefer to desolder one or both LEDs and mount them on wire with one on each side of the track to modify the sensor to become a broken beam type. In this scenario, the sensor will become active high.
+Note that some users prefer to de-solder one or both LEDs and mount them on wire with one on each side of the track to modify the sensor to become a broken beam type. In this scenario, the sensor will become active high.
 
 Configure the software - myAutomation.h - Sensors
 --------------------------------------------------

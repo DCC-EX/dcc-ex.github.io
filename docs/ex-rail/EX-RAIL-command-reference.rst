@@ -356,7 +356,7 @@ There are three options to define |EX-R| scripts or sequences:
 ``SEQUENCE( id )`` - A general purpose automation sequence that is not advertised to WiThrottles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activites. See :ref:`ex-rail/examples:automating various non-track items`, :ref:`ex-rail/examples:Point to Point Shuttle`, and :ref:`ex-rail/examples:multiple inter-connected trains` for further examples.
+  A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activities. See :ref:`ex-rail/examples:automating various non-track items`, :ref:`ex-rail/examples:Point to Point Shuttle`, and :ref:`ex-rail/examples:multiple inter-connected trains` for further examples.
 
 |hr-dashed|
 
@@ -1237,14 +1237,14 @@ DCC Accessory Decoder Control
 ``XFON( cab, func )`` - Send DCC function ON to specific cab
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  Send DCC function ON to specific cab (eg coach lights) *Not for Loco use - use FON instead!*
+  Send DCC function ON to specific cab (e.g. coach lights) *Not for Loco use - use FON instead!*
 
 |hr-dashed|
 
 ``XFOFF( cab, func )`` - Send DCC function OFF to specific cab
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  Send DCC function OFF to specific cab (eg coach lights) Not for Loco use - use FON instead!
+  Send DCC function OFF to specific cab (e.g. coach lights) Not for Loco use - use FON instead!
 
   All the above "ON" commands are event handlers that trigger a sequence of commands to run when the event occurs. These can vary from the most basic tasks such as setting signals when turnouts are closed or thrown, to triggering complete automation sequences via a DCC accessory decoder.
 
@@ -1390,7 +1390,7 @@ Drive logo in reverse at DCC speed 0-127 (1=ESTOP)
       // A defined automation sequence that will do activities only if loco ID 123 is in use
       AUTOSTART AUTOMATION(1, "Do stuff for loco 123")
         IFLOCO(123)
-          // Define activities here eg. blow horn or whistle
+          // Define activities here e.g. blow horn or whistle
         ENDIF
         DONE
 
@@ -1427,7 +1427,7 @@ TrackManager Control
   |_| > **mode:** - The mode to set the track to, |BR|
   |_| |_| |_| |_| valid options for DCC are: |BR|
   |_| |_| |_| |_| - ``MAIN`` or |BR|
-  |_| |_| |_| |_| - ``PROG``, 
+  |_| |_| |_| |_| - ``PROG``, |BR|
   |_| |_| |_| |_| and valid options for DC are: |BR|
   |_| |_| |_| |_| -  ``DC`` |BR|
   |_| |_| |_| |_| - , ``DCX``. |BR|
@@ -1451,6 +1451,54 @@ TrackManager Control
       SETLOCO(1) SET_TRACK(A, DC)
       SET_TRACK(B, PROG)
       DONE
+
+
+``SET_POWER( track, ON/OFF )`` - Enable/Disable power on the selected track
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|NOT-IN-PROD-VERSION|
+
+  Configures the power setting of the selected track, refer also to :doc:`/trackmanager/index`
+
+*Parameters:* |BR|
+  |_| > **track:** - The track to configure, valid options are A to H |BR|
+  |_| > **ON/OFF:** - Turn the power ON or OFF for this track |BR|
+
+.. collapse:: For example: (click to show)
+
+    .. code-block:: cpp
+
+      // Set track A to be a DC track with loco ID 1 and power on, and track B to be a DCC programming track
+      AUTOSTART
+      SETLOCO(1) SET_TRACK(A, DC)
+      SET_TRACK(B, PROG)
+      SET_POWER(A, ON)
+      DONE
+
+
+
+``SETFREQ( track, frequency )`` - Enable specific frequency on the selected track
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  DC/DCX track settings only.
+
+|NOT-IN-PROD-VERSION|
+
+  Configures the frequency setting of the selected track.
+
+  The settings achievable vary slightly depending upon the processor running the CS but broadly follow the following:
+
+  *Parameters:* |BR|
+
+  |_| > **track:** - The track to configure, valid options are A to H |BR|
+  |_| > **frequency:** - The frequency to set for this track |BR|
+  |_| |_| |_|>valid options are: |BR|
+  |_| |_| |_| |_|> **0:** Default - low frequency 131Hz |BR|
+  |_| |_| |_| |_|> **1:** Mid frequency - 490Hz |BR|
+  |_| |_| |_| |_|> **2:** High frequency - 3400Hz |BR|
+  |_| |_| |_| |_|> **3:** Supersonic - 62500Hz|BR|
+
+  Trial and error will be needed for specific locos that do not respond well to the defaults (low) frequency setting.
+
 
 |force-break|
 
@@ -1481,7 +1529,7 @@ Controlling Overload/Shorts
 
   Creates a complementary event handler for the selected track, to be executed when the MotorDriver routines indicate the overload is cleared. Refer also to :doc:`/trackmanager/index`
 
-  Note:  AFTEROVERLOAD is only relevent when used within and ONOVERLOAD.... DONE structure.
+  Note:  AFTEROVERLOAD is only relevant when used within and ONOVERLOAD.... DONE structure.
 
 |hr-dashed|
 

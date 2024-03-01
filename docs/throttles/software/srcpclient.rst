@@ -32,7 +32,6 @@ Features
 * Supports the |DCC-EX Native Commands| natively
 * Supports |WiThrottle Protocol|
 * Connect via WiFi
-* Read and Write CVs
 
 .. _srcpclient-screenshots:
 
@@ -70,4 +69,4 @@ Using Wifi
 To use Wifi, make sure you have a WiFi enabled |EX-CS| as described in the :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>` section.
 
 
-..TODO:: insert tutorial here - Using Wifi
+..TODO:: insert tutorial here - Using WiFi

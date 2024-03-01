@@ -20,7 +20,7 @@ Configuration options
 
 Configuration changes are made by editing the "config.h" file.
 
-The various configuration options are outlined below, and all are declared on their own line using the "#define" directive (eg. #define I2C_ADDRESS 0x60).
+The various configuration options are outlined below, and all are declared on their own line using the "#define" directive (e.g. #define I2C_ADDRESS 0x60).
 
 Standard configuration options
 ===============================
@@ -116,10 +116,50 @@ STEPPER_DRIVER
 - ULN2003_HALF_CCW - ULN2003 stepper driver with a 28BYJ-48 motor, configured for half step mode defaulting to a counter-clockwise rotation
 - ULN2003_FULL_CW  - ULN2003 stepper driver with a 28BYJ-48 motor, configured for full step mode defaulting to a clockwise rotation
 - ULN2003_FULL_CCW - ULN2003 stepper driver with a 28BYJ-48 motor, configured for full step mode defaulting to a counter-clockwise rotation
-- A4988            - Two wire stepper driver (eg. A4988, DRV8825) with a NEMA17 motor
-- A4988_INV        - Two wire stepper driver (eg. A4988, DRV8825) with a NEMA17 motor, with the driver's enable pin inverted
+- A4988            - Two wire stepper driver (e.g. A4988, DRV8825) with a NEMA17 motor
 
 While the pre-defined stepper driver/motor combinations above will likely be sufficient for most use cases, it is possible to define your own stepper driver configuration providing it is supported by the AccelStepper() Arduino library. Refer to `defining custom stepper drivers`_.
+
+Removed in version 0.7.0:
+
+- A4988_INV        - Two wire stepper driver (e.g. A4988, DRV8825) with a NEMA17 motor, with the driver's enable pin inverted
+
+In version 0.7.0, simply use the ``A4988`` option above, and enable the :ref:`ex-turntable/configure:invert_enable` option below to achieve the same result. This change is due to no longer needing to modify the AccelStepper library. For version 0.6.0 and earlier, you will need to use ``A4988_INV`` to invert the enable pin.
+
+INVERT_DIRECTION
+----------------
+
+**Requires EX-Turntable version 0.7.0 or later**
+
+`Default: disabled`
+
+When defined, this inverts the state of the DIR pin for two wire drivers such as the A4988, DRV8825, and TMC2208. This is likely required when using the TMC2208 as it typically has the stepper rotating in reverse direction to the A4988/DRV8825.
+
+This has no effect if using the ULN2003.
+
+INVERT_STEP
+-----------
+
+**Requires EX-Turntable version 0.7.0 or later**
+
+`Default: disabled`
+
+When defined, this inverts the state of the STEP pin for two wire drivers such as the A4988, DRV8825, and TMC2208.
+
+This has no effect if using the ULN2003.
+
+INVERT_ENABLE
+-------------
+
+**Requires EX-Turntable version 0.7.0 or later**
+
+`Default: disabled`
+
+When defined, this inverts the state of the EN pin for two wire drivers such as the A4988, DRV8825, and TMC2208.
+
+If in previous versions of |EX-TT| the ``A4988_INV`` stepper driver was defined, this option must be enabled instead, along with defining the ``A4988`` :ref:`ex-turntable/configure:stepper_driver` option.
+
+This has no effect if using the ULN2003.
 
 DISABLE_OUTPUTS_IDLE
 --------------------
@@ -158,6 +198,28 @@ STEPPER_GEARING_FACTOR
 `Valid values: 1 - 10`
 
 Step counts sent from |EX-CS| will be multiplied by this number, allowing for larger gear ratios and small microsteps that result in a steps per revolution of greater than 32767. The maximum number after multiplication is 4,294,967,295.
+
+ROTATE_FORWARD_ONLY
+-------------------
+
+**Requires EX-Turntable version 0.7.0 or later**
+
+`Default: disabled`
+
+When enabled, the stepper motor will only rotate in the forward direction for any provided step count, and will not rotate in the shortest direction to reach the desired position.
+
+This can be useful when dealing with stepper motors or gearing that introduces slop, and helps ensure accuracy as a result.
+
+ROTATE_REVERSE_ONLY
+-------------------
+
+**Requires EX-Turntable version 0.7.0 or later**
+
+`Default: disabled`
+
+When enabled, the stepper motor will only rotate in the reverse direction for any provided step count, and will not rotate in the shortest direction to reach the desired position.
+
+This can be useful when dealing with stepper motors or gearing that introduces slop, and helps ensure accuracy as a result.
 
 LED_FAST
 --------
@@ -256,7 +318,9 @@ To do this, you will need to add a valid AccelStepper() definition with the appr
 
 The list of parameters required are documented on the `AccelStepper <http://www.airspayce.com/mikem/arduino/AccelStepper/>`_ web page.
 
-**Note:** There has been a slight modification to the AccelStepper library included with |EX-TT|. If you have a need to invert the enable option, then provide this as the last parameter. The modified library sets the enable pin (if defined) when the stepper object is instantiated, and if it needs to be inverted, this happens at the same time. We do not call the setEnablePin() or setPinsInverted() functions at any point. You can see this in use in the "standard_steppers.h" file as defined for the "TWO_WIRE_INV" driver option.
+**Note:** Prior to version 0.7.0 of |EX-TT|, there was a slight modification to the AccelStepper library. If you have a need to invert the enable option, then provide this as the last parameter. The modified library sets the enable pin (if defined) when the stepper object is instantiated, and if it needs to be inverted, this happens at the same time. We do not call the setEnablePin() or setPinsInverted() functions at any point. You can see this in use in the "standard_steppers.h" file as defined for the "A4988_INV" driver option.
+
+From version 0.7.0 of |EX-TT|, just use the definitions as outlined in the AccelStepper documentation, as there is no longer a need to modify the library to work with |EX-TT|.
 
 To add this to "config.h", add your new definition **before** the `STEPPER_DRIVER` line, and update `STEPPER_DRIVER` to use your definition, and ensure all standard options are commented out:
 

@@ -18,21 +18,17 @@ Adding WiFi
       :local:
       :depth: 1
 
-:dcc-ex-red-bold:`Please read the warning before you proceed.`
-
 This page is specifically intended for a |conductor-text| who intends to install *just* the recommended hardware. If you are a |tinkerer-text| or |engineer-text| or want to install some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`/ex-commandstation/advanced-setup/supported-connections/wifi-setup` page for the full list of WiFi options.
 
 ----
 
 .. warning:: 
 
-   Please be aware that the Espressif AT firmware currently being shipped with these devices **will probably NOT work** with |EX-CS| out of the box.
+   While the recommended :doc:`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>` is now shipping with the correct firmware version and **will work** with |EX-CS| *without modification*, please be aware that the Espressif firmware shipped with *Duinopeak ESP8266 WiFi Expansion* and *ESP-01 or ESP-01S* devices :dcc-ex-red-bold:`will probably NOT work` with |EX-CS| out of the box.
 
    This can be corrected, but is probably beyond Conductor level and requires additional hardware.  
 
    See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
-
-   We are currently investigating other options.
 
 The purpose of adding WiFi to your |EX-CS| is allow connection up to 5 WiFi throttles (e.g. phones) DIRECTLY to it, eliminating the need for a computer and another software controller. 
 
@@ -59,9 +55,9 @@ Why Use WiFi?
 
 .. sidebar:: 
 
-   |tinkerer| |engineer| |BR| Using Wifi (OR Ethernet) to talk between |JMRI| and |EX-CS| is complex, slow and functionally limited and is NOT SUPPORTED. However, you can STILL use a wireless throttle with a |JMRI| setup. Assuming your PC already has WiFi capability, you can connect through THAT instead of directly to the Command Station, while the Command Station gets its commands through the USB connection.
+   |tinkerer| |engineer| |BR| Using WiFi (OR Ethernet) to talk between |JMRI| and |EX-CS| is complex, slow and functionally limited and is NOT SUPPORTED. However, you can STILL use a wireless throttle with a |JMRI| setup. Assuming your PC already has WiFi capability, you can connect through THAT instead of directly to the Command Station, while the Command Station gets its commands through the USB connection.
 
-**BEFORE you purchase a Wifi card, please consider whether you actually need it.**
+**BEFORE you purchase a WiFi card, please consider whether you actually need it.**
 
 If you wish to run trains from your phone, tablet or other |WiThrottle protocol| devices connected directly to the |EX-CS|, without a PC involved, then you **should follow the instructions below**.
 
@@ -108,7 +104,7 @@ Installing the board follows the same procedure in the previous section on :doc:
 Remove the plastic jumpers
 ---------------------------
 
-Note the two black plastic jumpers: we need to remove both of them. You can pull them off with your fingers or needle nose pliers and either stick them in a drawer or move them to the side by having them connect via one side to any of the row of Rx pins. The other end of the connector will just hang out over the Wifi Board.
+Note the two black plastic jumpers: we need to remove both of them. You can pull them off with your fingers or needle nose pliers and either stick them in a drawer or move them to the side by having them connect via one side to any of the row of Rx pins. The other end of the connector will just hang out over the WiFi Board.
 
 
 .. figure:: /_static/images/assembly/wifi_pins.jpg
@@ -171,7 +167,7 @@ ALL of the pins in the row marked Tx (the row closest to the header) are connect
 
 Take a jumper wire and connect it to any one of the Tx pins on the WiFi Board, and connect the other end to the Rx1 pin on the mega (pin 19).
 
-Take a second jumper wire and connect it to any one of the Rx pins on the Wifi Board and connect the other end to Tx1 on the mega (pin 18).
+Take a second jumper wire and connect it to any one of the Rx pins on the WiFi Board and connect the other end to Tx1 on the mega (pin 18).
 
 .. figure:: /_static/images/assembly/wifi_jumpers2.png
    :alt: Install the Jumper wires

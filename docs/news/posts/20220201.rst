@@ -24,7 +24,7 @@ Announcing version 4.0 of its EX-CommandStation software with EX-RAIL automation
 1 February 2022 - 7am USA - Eastern Standard Time
 
 
-**Holly Springs, North Carolina USA** - DCC-EX released the next version of its popular free and open source DCC Command Station software today. Version 4.0 of |EX-CS| includes the new EX-RAIL :sup:`tm` (Extended Railroad Automation Instruction Language) system that revolutionizes the way model railroaders can control and interact with their layouts. This new concept allows users to fully automate the operation of their trains and to manage turnouts/points, signals, lights, automations, animations, and virtually any kind of sensor, switch, servo, motor, or output, all with a very simple set of commands.
+**Holly Springs, North Carolina USA** - DCC-EX released the next version of its popular free and open source DCC Command Station software today. Version 4.0 of |EX-CS| includes the new EX-RAIL :sup:`tm` (Extended Railroad Automation Instruction Language) system that revolutionises the way model railroaders can control and interact with their layouts. This new concept allows users to fully automate the operation of their trains and to manage turnouts/points, signals, lights, automations, animations, and virtually any kind of sensor, switch, servo, motor, or output, all with a very simple set of commands.
 
 |EX-CS| :sup:`tm` with |EX-R| runs on inexpensive and readily available hardware like the Arduino and Teensy series of microcontrollers and supports standard switches, servos, and accessory boards.
 
@@ -34,7 +34,7 @@ Users no longer have to search for “sketches” and libraries or learn complic
 
 Animations that involve a sequence, like operating cranes, arc welders, station operations, trolleys, etc. are simple to script. To make it even easier, EX-RAIL comes with many standard sequences so that an operator just needs to copy them into their script, load the file into their Command Station and connect their devices. For the first time, everything can be run from the Command Station, without the need for separate devices running custom C++ programs scattered all over the layout.
 
-Interfacing with hardware has never been easier with the new HAL (Hardware Abstraction Layer) feature. Supported hardware such as port expander and servo controller boards are automatically detected. New types of hardware can be added by implementing a driver from a standardized interface without having to write a custom program.
+Interfacing with hardware has never been easier with the new HAL (Hardware Abstraction Layer) feature. Supported hardware such as port expander and servo controller boards are automatically detected. New types of hardware can be added by implementing a driver from a standardised interface without having to write a custom program.
 
 The new DriveAway :sup:`tm` feature allows users to drive an engine onto a siding or other electrically isolated block used as a programming track. The engine can be programmed and then driven back onto the main section of the layout, all without touching the locomotive.
 
@@ -44,7 +44,7 @@ DCC-EX is a global joint effort of a group of developers and engineers located i
 
 | Contact info:
 | Name: Fred Decker
-| Organization: DCC-EX
+| Organisation: DCC-EX
 | Address: 113 Main Street #767, Holly Springs, NC 27540
 | Phone: +1 919-285-1576
 

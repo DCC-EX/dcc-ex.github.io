@@ -20,7 +20,7 @@ Initial Assembly
 
 |image-note|
 
-This page describes the most common, recommended, configuration, but you will see some brakeouts on the right of the page the covers some of the many optional configurations. 
+This page describes the most common, recommended, configuration, but you will see some breakouts on the right of the page the covers some of the many optional configurations. 
 
 **For this install, you'll need the items listed on the** :doc:`/ex-commandstation/get-started/purchasing` **page.**
 
@@ -49,12 +49,16 @@ For a video on how to do this, click below: `Setting Up Your Command Station <ht
 1. Disable Power Sharing - Arduino to Motor Driver
 ==================================================
 
+**Arduino Motor Shield R3** Only!
+
 .. warning:: 
    :class: warning-float-right
    
-   By default, the motor controller shares its power supply via the pins, with the power supply of the Arduino. *This can supply too much voltage to the Arduino.*
+   By default, the **Arduino Motor Shield R3** shares its power supply via the pins, with the power supply of the Arduino. *This can supply too much voltage to the Arduino.*
    
    *If you do not cut this trace* or bend out the Vin, you could damage or destroy the Arduino if you apply more than 12V to the motor shield. |BR| In the same way, if you don't bypass Vin and use the 2 power supplies as recommended, they would be connected to each other which could also cause damage.
+
+   Note: This is **not required** if you are using the **EX-MotorShield8874**.
 
 We recommend you use two separate power supplies (or one power supply that can deliver two different voltages). One for the Arduino Mega, and the other for the Motor Controller to power your tracks. 
 
@@ -70,7 +74,9 @@ You will need to turn the motor controller board upside down and do ONE of the f
 Cutting the Trace
 -----------------
 
-.. sidebar:: Bending out or Cutting the Vin Pin (Optional)
+**Arduino Motor Shield R3** Only!  This is **not required** if you are using the **EX-MotorShield8874**.
+
+c
 
    |conductor| |BR| In this *alternate* method, you can just bend the Vin pin so that instead of connecting to the header in the Arduino, it rides on the outside of the header. 
 
@@ -165,7 +171,7 @@ e. Now, being careful to not bend any pins gently press, using a rocking motion 
    
    You can either lift the board slightly, it will still connect properly, or take diagonal cutters and carefully trim the ends of the pins a bit.
 
-f. The boards should be seated. Note the pins are longer than the headers. It is normal for you to see a few millimeters of the pins between the bottom of the motor board and the top of the headers. :ref:`boards-fully-seated` shows the boards as they look properly seated. 
+f. The boards should be seated. Note the pins are longer than the headers. It is normal for you to see a few millimetres of the pins between the bottom of the motor board and the top of the headers. :ref:`boards-fully-seated` shows the boards as they look properly seated. 
 
 .. figure:: /_static/images/assembly/seated.jpg
    :alt: Fully seated
@@ -204,14 +210,20 @@ If you are using a laptop style "brick" power supply or an adapter that plugs in
 
    Screw Terminal Adapter to Motor Shield
 
-If you don't have a screw terminal adapter, you can cut the end off your power supply and strip the wires. The outer wire braid is usually the negative connection and the center wire is the positive connection. Check the wiring image on the power supply itself.
+If you don't have a screw terminal adapter, you can cut the end off your power supply and strip the wires. The outer wire braid is usually the negative connection and the centre wire is the positive connection. Check the wiring image on the power supply itself.
 
 4. Connect the Power Wires to the Tracks
 ========================================
 
 **But don't plug it in yet!**
 
-There are two sets of output connectors on the motor shield, ``A`` and ``B``. A is the Main or Operations (also called 'Ops') track while ``B`` is the Programming or Service track. Connect twisted pair wire of the proper gauge to each track. Polarity is not important here, but if you will be using a siding track instead of a separate, unused piece of track, make sure that the 'positive' and 'negative' for both tracks match. 
+.. sidebar:: **EX-MotorShield8874**
+
+   For the **EX-MotorShield8874** the output are reversed.  ``A`` is furthest from the barrel connector. ``B`` is closest to the barrel connector.
+
+There are two sets of output connectors on the motor shield, ``A`` and ``B``. A is the Main or Operations (also called 'Ops') track while ``B`` is the Programming or Service track. Connect twisted pair wire of the proper gauge to each track. 
+
+Polarity (which wire is connected to which side of the track) is not not important here if you are using separate, completely isolated piece of track for PROG. *However* if you will be using a siding track that connects to your main track, make sure that the *connections for both tracks match*. 
 
 In other words, if you view one side of your main track as having a 'left' side and a 'right' side, and connect positive output A to the left side, connect the positive from the B side to the left side of the programming track. In electrical terms, we want both tracks to be "in phase" with each other. Here is the diagram from above repeated again for reference.
 

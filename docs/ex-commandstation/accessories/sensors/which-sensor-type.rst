@@ -1,6 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
 .. include:: /include/include-description.rst
+
 *************************
 Which sensor type to use?
 *************************
@@ -47,7 +48,7 @@ There are two different ways to have these configured:
     - Are affected by room and natural lighting changes, although beam break can combat this
   * - Simple to setup and use
     - Can be difficult to hide in beam break configuration
-  * - No locomotive or rolling stock modifications required (eg. resistor wheels or magnets)
+  * - No locomotive or rolling stock modifications required (e.g. resistor wheels or magnets)
     - Can be difficult to install under track in smaller scales (N and Z)
   * - Can be used to detect both ends of a train
     - Typically require modification to use in beam break configuration
@@ -128,7 +129,7 @@ There are various types of proximity sensors available, with the most commonly a
     - Disadvantages
   * - Can typically work reliably in all lighting situations
     - Typically a more expensive option
-  * - No locomotive or rolling stock modifications required (eg. resistor wheels or magnets)
+  * - No locomotive or rolling stock modifications required (e.g. resistor wheels or magnets)
     - More complex to setup and configure than infrared sensors
   * - Can be used to detect both ends of a train
     - Limited options on breakout boards, other sensors are a DIY option

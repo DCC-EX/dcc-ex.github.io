@@ -29,7 +29,7 @@ To go along with it we have created logos for the individual products
 
 To synopsize:
 
-* DCC-EX is the organization
+* DCC-EX is the organisation
 * EX-CommandStation (or EX-CS) is our command station product
 
 Why We Made the Change
@@ -37,7 +37,7 @@ Why We Made the Change
 
 When we began this journey, we picked up on the work of Gregg E. Berman who created the original Arduino based DCC "Base Station", called "DCC++". He chose that name as a play on words between the NMRA's "Digital Command Control" specification, "DCC", and the computer programming language used on the Arduino called "C++". If you put DCC and C++ together, you get DCC++. So DCC++ became the product name. When we extended and ultimately completely rewrote the software inspired by DCC++, we chose the name "DCC++EX" for "DCC++ Extended". Over time and with much input from users, we decided we needed to make some changes.
 
-The first change was calling the "Base Station" a "Command Station". This better reflected standardized terms used in the model railroading community.
+The first change was calling the "Base Station" a "Command Station". This better reflected standardised terms used in the model railroading community.
 
 We also noticed that there was confusion between our company/team name and the product. "DCC-EX" is the company while DCC++EX was our first product, the Command Station. DCC++EX was being used interchangeably to refer to both the company and the command station. Additionally, DCC++EX is a mouthful, it is difficult to pronounce and requires special characters (the plus signs) when written or typed. This causes issues on places that do not accept plus signs in names, like GitHub and Google.
 

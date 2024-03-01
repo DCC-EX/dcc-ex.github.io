@@ -30,7 +30,7 @@ To define solenoid/coil based turnouts directly in your |EX-CS| via the serial c
 - ``<T id VPIN vpin>`` - use this command when using a turnout/point controller that uses a single pin, whether connected directly to your |EX-CS| or via an I/O expander device
 - ``<T id DCC linear_address>`` - use this command when using DCC accessory decoders to control the turnout/point
 
-Refer to :ref:`reference/software/command-reference:defining (setting up) a turnout` for details on these commands.
+Refer to :ref:`reference/software/command-reference:defining (setting up) a turnout/point` for details on these commands.
 
 To define solenoid/coil based turnouts using |EX-R| (whether or not they are to be automated) via the "myAutomation.h" file, use the appropriate one of these commands:
 
@@ -90,7 +90,7 @@ Using an L293D motor driver - dual solenoid/coil turnouts
 
 Like the single solenoid/coil turnouts, a single L293D motor driver IC can be used to control two turnouts/points. This will still require six digital output pins either directly from your |EX-CS| (as per the diagram above), or these can also be connected via an I/O expander such as an MCP23017 or |EX-IO|.
 
-To operate the turnouts/points in this manner, the direction of the turnout (close/throw) is still configured by setting the input pins (2 and 7, 10 and 15) high or low, and briefly setting the appropriate enable pin high (1 or 9). The key difference for dual solenoid/coil turnouts is the common (thrid) wire of the turnout being connected to ground as per the diagram above.
+To operate the turnouts/points in this manner, the direction of the turnout (close/throw) is still configured by setting the input pins (2 and 7, 10 and 15) high or low, and briefly setting the appropriate enable pin high (1 or 9). The key difference for dual solenoid/coil turnouts is the common (third) wire of the turnout being connected to ground as per the diagram above.
 
 Note that the 10K pull down resistors connected from ground to the enable pins are there as a safety feature to ensure that any unknown states during start up don't cause the enable pins to be set to a high state, causing the coils to overheat and burn out.
 
@@ -130,7 +130,7 @@ Using a Capacitive Discharge Unit (CDU) - dual solenoid/coil turnouts
 Option 1 - DIY CDU by "Rosscoe" (DCC-EX user on Discord)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The infomation here is based on the combined driver and CDU as outlined in this GitHub repository, with a PCB available from `PCBWay <https://www.pcbway.com/>`_
+The information here is based on the combined driver and CDU as outlined in this GitHub repository, with a PCB available from `PCBWay <https://www.pcbway.com/>`_
 
 .. rst-class:: dcclink
 

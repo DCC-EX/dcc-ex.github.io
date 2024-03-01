@@ -44,7 +44,7 @@ Another approach for powering up the track is to assign a speed to a loco in a s
   // the EX-CommandStation boots up.
   AUTOSTART       // required in version 5 or later
   SETLOCO(9999)   // select loco 9999
-  SPEED(0)        // set the speed to 0.  This will turn the tarck power on
+  SPEED(0)        // set the speed to 0.  This will turn the track power on
   DONE
 
 

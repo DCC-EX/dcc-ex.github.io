@@ -27,6 +27,6 @@ An interesting thought occurred to me as I was planning the writing of the updat
 
 | Contact info:
 | Name: Fred Decker
-| Organization: DCC-EX
+| Organisation: DCC-EX
 | Address: 113 Main Street #767, Holly Springs, NC 27540
 | Phone: +1 919-285-1576

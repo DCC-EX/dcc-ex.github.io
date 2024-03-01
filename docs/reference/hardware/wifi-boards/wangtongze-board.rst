@@ -18,15 +18,15 @@ WangTongze Board
 .. warning:: 
    :class: warning-float-right
 
-   Please be aware that the Espressif AT firmware currently being shipped with these devices **will probably NOT work** with |EX-CS| out of the box.
+   Please be aware that the Espressif firmware shipped with *Duinopeak ESP8266 WiFi Expansion*, *ESP-01 or ESP-01S* and *WangTongze* devices :dcc-ex-red-bold:`will probably NOT work` with |EX-CS| out of the box.
+
+   (Note: The recommended :doc:`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>` is now shipping with the correct firmware version and **will work** with |EX-CS| *without modification*).
 
    This can be corrected, but is probably beyond Conductor level and requires additional hardware.
 
    See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
 
-   We are currently investigating other options.
-
-AKA: Uno R3 Mega Esp8266 Serial Wifi Shield / ESP-12E Board
+AKA: Uno R3 Mega Esp8266 Serial WiFi Shield / ESP-12E Board
 
 Tinkerer to Engineer Level
 
@@ -34,14 +34,14 @@ Tinkerer to Engineer Level
    :alt: ESP-01S
    :scale: 60%
 
-This board has many names, the easiest way to identify it is by the red dipswitch bank. Then zoom in on the pictures you see on the supplier site and look for "WangTongze" on the board. They may blur it out. DO NOT buy this board unless you know you are getting a genuine WangTongze board! If you get a "good" board, it will work perfectly, if you get a bad clone, it won't work without employing workarounds. A genuine Wangtongze has no misspellings.
+This board has many names, the easiest way to identify it is by the red dipswitch bank. Then zoom in on the pictures you see on the supplier site and look for "WangTongze" on the board. They may blur it out. DO NOT buy this board unless you know you are getting a genuine WangTongze board! If you get a "good" board, it will work perfectly, if you get a bad clone, it won't work without employing workarounds. A genuine WangTongze has no misspellings.
 
 One board has "shield" spelled incorrectly as "shiald". The "shiald" version works, but some say it has an unreliable WiFi connection. 
 
 There is another version where the "more" in "more info" is spelled "moer" and "Arduino" is spelled "Arbuino". This board has the wrong transistors soldered onto it in the level shifter circuit. Get out your cell phone, take a picture of your board and zoom in on the section of the board you see here:
 
 .. figure:: /_static/images/wifi/wangtongze_transistors.png
-   :alt: Wangongze level shifter transistors
+   :alt: WangTongze level shifter transistors
    :class: with-shadow
    :scale: 15%
 
@@ -58,7 +58,7 @@ If these 2 transistors are labelled "JIY" you are lucky and the board will work 
 1. **Tinkerer way** - You could bypass the header connections and use jumpers to wire directly to the debug pins of the ESP8266, but that bypasses the Tx/Rx level shifters. The ESP8266 Tx/Rx pins are 5V tolerant, but it is always best if you can to shift 5V from the Arduino to 3.3V. You could also make a small 2 resistor voltage divider to connect to the debug header Rx pin. The Tx pin to the Arduino will be fine as is.
 
 .. figure:: /_static/images/wifi/wangtongze_jumpered.jpg
-   :alt: Wangtongze Jumpering to the debug header
+   :alt: WangTongze Jumpering to the debug header
    :scale: 30%
 
    Using Jumpers Directly to the Debug Header

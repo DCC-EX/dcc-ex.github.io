@@ -109,7 +109,12 @@ h6, .h6 {
 }
 
 .wy-side-nav-search>a img.logo {
-    width: 60%;
+  width: 60%;
+  padding-bottom: 0px !important;
+}
+
+.gsc-control-cse {
+  padding: 0px !important;
 }
 
 .rst-content table.docutils th {

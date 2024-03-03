@@ -520,6 +520,97 @@ All of these script types must be terminated by either a ``DONE``, ``FOLLOW(id)`
 
 |force-break|
 
+|hr-dashed|
+
+``ROUTE_CAPTION( id, caption )`` - dynamically change the label of the Route button
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  **Not available in the current production release.**
+
+  Dynamically change the label of the Route button.
+
+  .. collapse:: For example: (click to show)
+
+    .. code-block:: cpp
+
+      // setup 4 'routes'to switch between tracks/districts between PROG, MAIN and DC
+      ROUTE(500,"1.Trk: A main, B prog")
+          SET_TRACK(A,MAIN)
+          SET_TRACK(B,PROG)
+          ROUTE_CAPTION(500,"Active")
+          ROUTE_CAPTION(501,"Inactive")
+          ROUTE_CAPTION(502,"Inactive")
+          ROUTE_CAPTION(503,"Inactive")
+          ROUTE_ACTIVE(500)
+          ROUTE_INACTIVE(501)
+          ROUTE_INACTIVE(502)
+          ROUTE_INACTIVE(503)
+      DONE
+      ROUTE(501,"2.Trk: A dc10, B dc11") 
+          SETLOCO(10) SET_TRACK(A,DC)
+          SETLOCO(11) SET_TRACK(B,DC)
+          ROUTE_CAPTION(500,"Inactive")
+          ROUTE_CAPTION(501,"Active")
+          ROUTE_CAPTION(502,"Inactive")
+          ROUTE_CAPTION(503,"Inactive")
+          ROUTE_INACTIVE(500)
+          ROUTE_ACTIVE(501)
+          ROUTE_INACTIVE(502)
+          ROUTE_INACTIVE(503)
+      DONE
+      ROUTE(502,"3.Trk: A dc10, B DCC main") 
+          SETLOCO(10) SET_TRACK(A,DC)
+          SETLOCO(11) SET_TRACK(B,MAIN)
+          ROUTE_CAPTION(500,"Inactive")
+          ROUTE_CAPTION(501,"Inactive")
+          ROUTE_CAPTION(502,"Active")
+          ROUTE_CAPTION(503,"Inactive")
+          ROUTE_INACTIVE(500)
+          ROUTE_INACTIVE(501)
+          ROUTE_ACTIVE(502)
+          ROUTE_INACTIVE(503)
+      DONE
+      ROUTE(503,"4.Trk: A DCC main, B dc10") 
+          SETLOCO(10) SET_TRACK(A,DC)
+          SETLOCO(11) SET_TRACK(B,MAIN)
+          ROUTE_CAPTION(500,"Inactive")
+          ROUTE_CAPTION(501,"Inactive")
+          ROUTE_CAPTION(502,"Inactive")
+          ROUTE_CAPTION(503,"Active")
+          ROUTE_INACTIVE(500)
+          ROUTE_INACTIVE(501)
+          ROUTE_INACTIVE(502)
+          ROUTE_ACTIVE(503)
+      DONE
+
+|force-break|
+
+|hr-dashed|
+
+``ROUTE_ACTIVE( id, caption )`` - dynamically activate a Route
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  **Not available in the current production release.**
+
+  Dynamically flag a Route as active.
+
+  See example in ROUTE_CAPTION.
+
+|force-break|
+
+|hr-dashed|
+
+``ROUTE_CAPTION( id, caption )`` - dynamically deactivate a Route
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  **Not available in the current production release.**
+
+  Dynamically flag a Route as inactive.
+
+  See example in ROUTE_CAPTION.
+
+|force-break|
+
 ----
 
 Conditional Statements

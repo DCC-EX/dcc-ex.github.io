@@ -53,9 +53,9 @@ You will also need to install the `SDK Platform Tools <https://developer.android
 
 You will also need to get the appropriate .apk to install the throttle app you want.  e.g. The Engine Driver .apk is available from the `Engine Driver site <https://enginedriver.mstevetodd.com/downloads>`_
 
-----
+|hr-dashed|
 
-Refer to pages linked above for details but a summary of the process is:
+Refer to pages linked above for details but a summary of the process for installing with Windows Subsystem for Android is:
 
 # Install *Windows Subsystem for Android*
 # Download the *SDK Platform Tools*
@@ -101,9 +101,9 @@ Refer to pages linked above for details but a summary of the process is:
 
 # Close the command prompt windows
 
-----
+|hr-dashed|
 
-To run the app in Windows
+To run the app once installed 
 
 # Click :guilabel:`Start`
 # Click :guilabel:`all Apps`

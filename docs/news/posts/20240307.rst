@@ -1,0 +1,29 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+.. include:: /include/include-news.rst
+
+:blogpost: true
+:date: 7 March 2024
+:author: peteGSX
+:category: News
+:tags: ex-installer
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+Another new EX-Installer release
+================================
+
+The |DCC-EX| team is pleased to announce another new release of |EX-I| (version 0.0.18). As always, we encourage all users to download this new version of the installer to take advantage of the bug fixes and new features available.
+
+The key updates in this release are support for the new options available in |EX-TT| version 0.7.0, and the ability to save the device logs from the Device Monitor screen directly within |EX-I|. This way, when interacting with the |DCC-EX| team in Discord or via either means, when asked to provide the startup logs or serial monitor logs, you can simply open Device Monitor and click the ``Save log`` button to obtain these.
+
+This release also includes the below changes:
+
+- Update a Python module version to resolve security vulnerabilities
+- Add a link to |DCC-EX| News articles about |EX-I| to the Info menu
+- Ensure the "Backup config files" popup is always launched within the app window geometry
+- Fix a bug where copying existing config files for |EX-TT| and |EX-IO| causes an exception

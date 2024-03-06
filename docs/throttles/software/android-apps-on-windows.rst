@@ -62,9 +62,9 @@ Refer to pages linked above for details but a summary of the process for install
 
     # Extract the files from the zip file and record the folder there are in |BR| e.g. C:\Users\your_username\Downloads\platform-tools\
 
-# Download the APK
+# Download the APK you want to install
 
-    # Note the name of the file where you saved |BR| e.g. ``C:\Users\your_username\Downloads\EngineDriver-2.36.177.apk``
+    # Note the name of the file where you saved it |BR| e.g. ``C:\Users\your_username\Downloads\EngineDriver-2.36.177.apk``
 
 # Start *Windows Subsystem for Android*
 
@@ -107,6 +107,6 @@ To run the app once installed
 
 # Click :guilabel:`Start`
 # Click :guilabel:`all Apps`
-# Scroll down to ``Engine Driver`` and click it.
+# Scroll down to ``Engine Driver`` (or whatever app you installed) and click it.
 # First use only: When **Engine Driver** start the first time you will be asked a number of questions
 # When you get the "Connect" screen, **Engine Driver** cannot 'discover' the |EX-CS|, so you will need to enter the IP address and port, then click :guilabel:`Connect`

@@ -602,4 +602,4 @@ Android apps on Windows
 
 Although|EX-TB| is an Android app, it is possible to run it on windows PCs.
 
-See the :doc:`/throttles/software/andorid-apps-on-windows` page for more information.
+See the :doc:`/throttles/software/android-apps-on-windows` page for more information.

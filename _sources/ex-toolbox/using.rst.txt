@@ -594,3 +594,12 @@ In Microsoft Windows and using the command line socat, if you see a "command not
 * Just click okay, exit any command prompts or bash shells (over cygwin) you may have open, and open it again - it'll work!
 
 Note that if you installed cgywin to a folder *other than "C:\\cgywin"* (e.g. c:\\cgywin64), use that folder name instead in the change above.
+
+----
+
+Android apps on Windows 
+=======================
+
+Although|EX-TB| is an Android app, it is possible to run it on windows PCs.
+
+See the :doc:`/throttles/software/android-apps-on-windows` page for more information.

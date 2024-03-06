@@ -18,7 +18,10 @@ ESP8266 (WiFi Boards) - AT Version Issues and Solutions
       :local:
       :depth: 3
 
-Unfortunately, other than the recommended *Makerfabs ESP8266 WiFi Shield*, the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with |EX-CS|. This now seems to include the recommended `Makerfabs ESP8266 WiFi Shield <https://www.makerfabs.com/esp8266-wifi-shield.html>`_.
+Unfortunately, other than the recommended `Makerfabs ESP8266 WiFi Shield <https://www.makerfabs.com/esp8266-wifi-shield.html>`_ , the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with |EX-CS|. 
+
+Note: This includes the *Makerfabs ESP8266 WiFi Shields* purchased prior to *about* January 2024. 
+Also Note: The boards currently sold by Makerfabs, with the DCC-EX logo, **do not have the issue**.
 
 Which is correct version of the AT firmware
 ===========================================
@@ -260,6 +263,11 @@ Correcting the AT version of a ESP-01or ESP01s requires additional hardware. One
 * A USB to TTL CH340G Converter Module Adapter
 * An Arduino Uno
 
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 |hr-dashed|
 
 Correcting a ESP-01 with a USB Serial Adapter
@@ -326,6 +334,16 @@ Correcting the AT version on a Makerfabs ESP8266 Wifi Shield
    :class: image-float-right
    :alt: Makefabs ESP8266 WiFi Shield
    :scale: 25%
+
+There are **two** options for correcting the AT version on a Makerfabs ESP8266 Wifi Shield:
+
+* With a USB to TTL Converter Module Adapter (recommended)
+* With an Arduino Mega
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
 
 |hr-dashed|
 

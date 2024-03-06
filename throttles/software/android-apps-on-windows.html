@@ -637,9 +637,63 @@
 <li><p>Not very user friendly installation (sideloading) of non-Amazon approved apps (i.e. the throttle apps)</p></li>
 <li><p>Does <em>not</em> allow you to run multiple instances of same app at the same time</p></li>
 </ul>
-<p>Follow the instructions <a class="reference external" href="https://www.windowscentral.com/how-sideload-android-apps-using-wsa-windows-11">here</a> <a class="reference external" href="https://www.xda-developers.com/how-to-sideload-android-apps-on-windows-11/">or here</a> to setup Windows Subsystem for Android to allow ‘sideloading’.</p>
-<p>You will need to install the <a class="reference external" href="https://developer.android.com/tools/releases/platform-tools">SDK Platform Tools</a>.</p>
-<p>You will also need to get the appropriate .apk to install the throttle app you want.  e.g. The Engine Driver .apk is available from the <cite>Engine Driver site &lt;https://enginedriver.mstevetodd.com/downloads&gt;`_</cite></p>
+<p>Follow the <a class="reference external" href="https://www.windowscentral.com/how-sideload-android-apps-using-wsa-windows-11">instructions here</a>  (or <a class="reference external" href="https://www.xda-developers.com/how-to-sideload-android-apps-on-windows-11/">a slightly differnt version of instructions here</a>) to setup <em>Windows Subsystem for Android</em> to allow ‘sideloading’.</p>
+<p>You will also need to install the <a class="reference external" href="https://developer.android.com/tools/releases/platform-tools">SDK Platform Tools</a>.</p>
+<p>You will also need to get the appropriate .apk to install the throttle app you want.  e.g. The Engine Driver .apk is available from the <a class="reference external" href="https://enginedriver.mstevetodd.com/downloads">Engine Driver site</a></p>
+<p><hr class="hr-dashed" /></p>
+<p>Refer to pages linked above for details but a summary of the process for installing with Windows Subsystem for Android is:</p>
+<p># Install <em>Windows Subsystem for Android</em>
+# Download the <em>SDK Platform Tools</em></p>
+<blockquote>
+<div><p># Extract the files from the zip file and record the folder there are in <br /> e.g. C:Usersyour_usernameDownloadsplatform-tools</p>
+</div></blockquote>
+<p># Download the APK you want to install</p>
+<blockquote>
+<div><p># Note the name of the file where you saved it <br /> e.g. <code class="docutils literal notranslate"><span class="pre">C:\Users\your_username\Downloads\EngineDriver-2.36.177.apk</span></code></p>
+</div></blockquote>
+<p># Start <em>Windows Subsystem for Android</em></p>
+<blockquote>
+<div><p># Enable the Developer option</p>
+<blockquote>
+<div><p># click the overflow menu (the three bars) in the top left
+# Then <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">settings</span></code>
+# Turn on <code class="docutils literal notranslate"><span class="pre">Developer</span> <span class="pre">mode</span></code>
+# Note the ip address and port on the same row (normally 127.0.0.1:58526)</p>
+</div></blockquote>
+</div></blockquote>
+<p># Start a command prompt with Administrator privileges</p>
+<blockquote>
+<div><p># Click <span class="guilabel">Start</span>
+# Type in <code class="docutils literal notranslate"><span class="pre">CMD</span></code> or <code class="docutils literal notranslate"><span class="pre">command</span></code>
+# Right click on <code class="docutils literal notranslate"><span class="pre">Command</span> <span class="pre">Prompt</span></code> from the found list and select <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">as</span> <span class="pre">Administrator</span></code>
+# Click <span class="guilabel">Yes</span> when it asks</p>
+</div></blockquote>
+<p># Connect the PC to the Windows Subsystem for Android</p>
+<blockquote>
+<div><p># Enter the command <br /> <code class="docutils literal notranslate"><span class="pre">&lt;extracted_location&gt;\adb</span> <span class="pre">connect</span> <span class="pre">&lt;ip_address_&amp;_port&gt;</span></code> <br /> where <strong>&lt;extracted_location&gt;</strong> is the folder you you extracted the <em>SDK Platform Tools</em> to above, and <br /> <strong>&lt;ip_address_&amp;_port&gt;</strong> are the ip address and port that you recorded above <br /> e.g. <code class="docutils literal notranslate"><span class="pre">C:\Users\your_username\Downloads\platform-tools\adb</span> <span class="pre">connect</span> <span class="pre">127.0.0.1:58526</span></code>.
+# You should see a request to ‘Allow ADB debugging’.  Click <span class="guilabel">Allow</span></p>
+<blockquote>
+<div><p># If you don’t see the request. <br /> e.g. you see something like <code class="docutils literal notranslate"><span class="pre">cannot</span> <span class="pre">connect</span> <span class="pre">to</span> <span class="pre">127.0.0.1:58526:</span> <span class="pre">No</span> <span class="pre">connection</span> <span class="pre">could</span> <span class="pre">be</span> <span class="pre">made</span> <span class="pre">because</span> <span class="pre">the</span> <span class="pre">target</span> <span class="pre">machine</span> <span class="pre">actively</span> <span class="pre">refused</span> <span class="pre">it.</span> <span class="pre">(10061)</span></code></p>
+<blockquote>
+<div><p># In the ‘Windows Subsystem for Android’ app (on the PC), click <code class="docutils literal notranslate"><span class="pre">Turn</span> <span class="pre">Off</span></code>
+# Then open the ‘Amazon Appstore’ (that you should have installed as part of installing Windows Subsystem for Android).  this will automatically restart the subsystem.
+# Enter the adb connect command again.</p>
+</div></blockquote>
+</div></blockquote>
+<p># Note: it is normal (not sure why) to see <code class="docutils literal notranslate"><span class="pre">failed</span> <span class="pre">to</span> <span class="pre">authenticate</span> <span class="pre">to</span> <span class="pre">127.0.0.1:58526</span></code></p>
+</div></blockquote>
+<p># Install the sdk.</p>
+<blockquote>
+<div><p>#  enter the command <br /> <code class="docutils literal notranslate"><span class="pre">&lt;extracted_location&gt;\adb</span> <span class="pre">install</span> <span class="pre">&lt;apk_file_location&gt;</span></code> <br /> where <strong>&lt;extracted_location&gt;</strong> is the folder you you extracted the <em>SDK Platform Tools</em> to above, and <br /> <strong>&lt;apk_file_location&gt;</strong>  is the floaction and name of the downlaoded apk above. <br /> e.g. <code class="docutils literal notranslate"><span class="pre">C:\Users\your_username\Downloads\platform-tools\adb</span> <span class="pre">install</span> <span class="pre">C:\Users\your_username\Downloads\EngineDriver-2.36.177.apk</span></code></p>
+</div></blockquote>
+<p># Close the command prompt windows</p>
+<p><hr class="hr-dashed" /></p>
+<p>To run the app once installed</p>
+<p># Click <span class="guilabel">Start</span>
+# Click <span class="guilabel">all Apps</span>
+# Scroll down to <code class="docutils literal notranslate"><span class="pre">Engine</span> <span class="pre">Driver</span></code> (or whatever app you installed) and click it.
+# First use only: When <strong>Engine Driver</strong> start the first time you will be asked a number of questions
+# When you get the “Connect” screen, <strong>Engine Driver</strong> cannot ‘discover’ the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, so you will need to enter the IP address and port, then click <span class="guilabel">Connect</span></p>
 </section>
 </section>
 

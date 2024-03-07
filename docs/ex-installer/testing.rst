@@ -16,6 +16,71 @@ Testing your installation
       :depth: 1
       :local:
 
+Using the EX-Installer Device Monitor
+-------------------------------------
+
+Once you have selected a device in |EX-I| on the "Select your device" screen, or after successfully loading software onto your device, a ``View device monitor`` button will be available.
+
+|force-break|
+
+.. figure:: /_static/images/ex-installer/view-device-monitor.png
+   :alt: Select Device screen
+   :scale: 40%
+   :align: left
+
+   Select your device screen
+
+.. figure:: /_static/images/ex-installer/view-device-monitor-load-screen.png
+   :alt: Load software screen
+   :scale: 40%
+   :align: center
+
+   Load software screen
+
+|force-break|
+
+When clicking this button, the Device Monitor window will open, allowing you to interact with your device by sending commands and viewing the serial console output.
+
+.. figure:: /_static/images/ex-installer/device-monitor.png
+   :alt: Device Monitor
+   :scale: 50%
+   :align: center
+
+   Device Monitor
+
+Within the Device Monitor window, you will see the serial console output of your device. As you can see in this screen shot, certain key bits of information are highlighted to help identify these when asked by the |DCC-EX| team.
+
+The following information is highlighted for |EX-CS|:
+
+- |EX-CS| version information (green)
+- WiFi firmware version (green)
+- WiFi SSID and password in access point mode (blue)
+- WiFi SSID in station (STA) mode (blue)
+- WiFi IP address and port (purple)
+
+Sending commands
+^^^^^^^^^^^^^^^^
+
+You can send any supported command to your device by typing it into the "Enter command" box and clicking the "Send" button. Refer to the :doc:`/reference/software/command-summary-consolidated` for the list of available commands. This will also work for the |EX-TT| :ref:`ex-turntable/test-and-tune:interactive serial console commands` and |EX-IO| :doc:`/ex-ioexpander/index` commands.
+
+Saving startup or serial console logs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When interacting with the |DCC-EX| team for support, you will likely be asked to provide the "startup logs", or output from the serial console of your device.
+
+Using Device Monitor is the simplest way to obtain this information by using the ``Save log`` button.
+
+.. figure:: /_static/images/ex-installer/save-device-log.png
+   :alt: Save device log
+   :scale: 60%
+   :align: center
+
+   Save device log screen
+
+Using this option, you can browse to a location on your computer you can easily find (such as your Desktop), allowing you to upload this to Discord or a GitHub issue and share with the team.
+
+When clicking the ``Save and open log`` button, it will save the file, but also open it on your screen. This way, if you're unable to upload the file for some reason, you can copy and paste the text instead.
+
 Using the Arduino IDE Serial Monitor
 -------------------------------------
 

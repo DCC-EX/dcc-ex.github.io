@@ -45,7 +45,9 @@ Depending on the configuration you choose, the cheapest commercial equivalent wi
 Purchasing
 ^^^^^^^^^^
 
-This is one area where the commercial systems win out. You can walk into store and pick up a commercial Command Station in a box with comprehensive manuals and know that it is all there and that will work first time.
+This is one area where the commercial systems win out. 
+
+You can walk into store and pick up a commercial Command Station in a box with comprehensive manuals and know that it is all there and that will work first time.
 
 With the |EX-CS|, while we now have sellers that can supply a complete system, most people purchase parts from different suppliers online.  This can therefore take some time to arrive, and there have been issues occasionally with poorly manufactured boards. So in general it is not as plug-and-play.
 
@@ -93,6 +95,10 @@ In terms of replacement/repairs, unless you purchased through one of our reselle
 Community
 ^^^^^^^^^
 
+|DCC-EX| is the winner here.
+
 While the commercial systems have strong followings, and there are plenty of people on various forums that will be happy to discuss the systems or provide help, they can't compare to the |DCC-EX| community.
 
-|DCC-EX| maintains a `Discord Server <https://discord.gg/sWNPUsg8>`_ where hundreds of people world-wide are actively engaged in discussing and evolving the |EX-CS| and it add-ons.
+|DCC-EX| maintains a `Discord Server <https://discord.gg/sWNPUsg8>`_ where hundreds of people world-wide are actively engaged in discussing and evolving the |EX-CS| and it add-ons.  You can generally get answers to questions within a few hours and, if you interested, you easily find yourself in deep conversations about existing and upcoming features. 
+
+The other aspect of |DCC-EX| that cannot be glossed over lightly.  It is all open source. Everyone is free to use or modify it as they see fit, for non-commercial use. This shows clearly in the volume and rate of features and options being continuously added by the team. We actively invite, encourage and support people to add to the products.

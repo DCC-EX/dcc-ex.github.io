@@ -67,18 +67,18 @@ Unless you purchased a complete system from one of our resellers, along with the
 
 Loading the software, assembling the boards, making a case, etc. while not individually difficult steps, can be still be daunting for some people. Conversely, for some this becomes part of the attraction/challenge.  Like the building a kit loco or building.  Some people enjoy it, some don't.  
 
-Note: A common comment made is *"..but I don't know how to program..."*.  This is a common misconception. You DO NOT have to know anything about programming to setup an |EX-CS|.  If you can join track together, then you can assemble an |EX-CS|.
+Note: A common comment made is *"..but I don't know how to program..."*.  This is a common misconception. You DO NOT have to know anything about programming to setup an |EX-CS|.  If you can join rail/track together, then you can assemble an |EX-CS|.
 
 |hr-dashed|
 
 Usability
 ^^^^^^^^
 
-Once the systems are setup, there is not a lot of difference in terms of usability between the commercial systems and a |EX-CS|.
+Once the systems are setup, there is generally not a lot of difference in terms of usability between the commercial systems and an |EX-CS|.
 
-The area of greatest difference is that most of the commercial system come with some form of physical controller.  Most |EX-CS| owners use inexpensive or hand-me-down smart phones to control their locos.
+While not functionally different, the area of greatest difference is that most of the commercial system come with some form of physical controller.  Most |EX-CS| owners use inexpensive or hand-me-down smart phones to control their locos.
 
-You can have/use physical controllers (not a phone, tablet or computer) with |EX-CS|, but that is an additional item to build or purchase.
+You can have/use physical controllers (not a phone, tablet or computer) with |EX-CS|, but that is an additional item to build or purchase.  Note that there are multiple inexpensive physical throttle designs that you can build yourself.
 
 |hr-dashed|
 
@@ -113,11 +113,11 @@ Support
 
 This is more of a mixed bag.
 
-While, the commercial systems you are more-or-less guaranteed support, replacement for faulty items, etc., the catch is that depending on where you are in the world and where the manufacturer is, there can be long turnarounds to get that support.  Even longer to get replacements or repairs.
+With commercial systems you are more-or-less guaranteed quality support, replacement for faulty items, etc. The catch is that depending on where you are in the world and where the manufacturer is, there can be long turnarounds to get that support.  Even longer to get replacements or repairs.
 
-Because the |DCC-EX| team are located world-wide, there is usually someone that can help you within a few hours. 
+Because members of the |DCC-EX| team are located world-wide, there is usually someone that can help you within a few hours on our `Discord Server <https://discord.gg/sWNPUsg8>`_. 
 
-In terms of replacement/repairs, unless you purchased through one of our resellers, it is up to you to deal with this side of the process.  The positive is that, if you wish, the costs are so low that you can keep spares of most items and still be well under the total cost of a commercial system.
+However, in terms of replacement/repairs, unless you purchased through one of our resellers, it is up to you to deal with this side of the process.  The positive is that, if you wish, the costs are so low that you can keep spares of most items and still be well under the total cost of a commercial system.
 
 |hr-dashed|
 
@@ -137,6 +137,8 @@ The other aspect of |DCC-EX| that should not be glossed over lightly is that it 
 Conclusion
 ==========
 
-As you can see from the points above and the `DCC Wiki <https://dccwiki.com/Command_Stations_List>`_ it is not a black-and-white comparison. Before proceeding with any system you should weigh up the pros and cons and come to a decision *you* feel comfortable with.  
+As you can see from the points above and the `DCC Wiki <https://dccwiki.com/Command_Stations_List>`_ it is *not* a black-and-white comparison. 
+
+Before proceeding with any system you should weigh up the pros and cons and come to a decision *you* feel comfortable with.  
 
 You are always welcome to join our `Discord Server <https://discord.gg/sWNPUsg8>`_ and discuss our products before you proceed.

@@ -21,7 +21,7 @@ Why DCC-EX? - Comparing EX-CommandStation to Commercial Systems
 Introduction
 ============
 
-A common question we see is why should someone choose our |EX-CS| over the many commercial systems that are available. This page is a *brief discussion* of some of the advantages and disadvantages of |EX-CS| and the whole |DCC-EX| ecosystem. (To see a detailed list of specific features of various systems we would recommend looking that the `DCC Wiki <https://dccwiki.com/Command_Stations_List>`_.)
+A common question we see is why should someone choose our |EX-CS| over the many commercial systems that are available. This page is a *brief discussion* of some of the advantages and disadvantages of |EX-CS| and the whole |DCC-EX| ecosystem. (To see a detailed list of specific features of various systems we would recommend looking at the `DCC Wiki <https://dccwiki.com/Command_Stations_List>`_.)
 
 First and foremost, there is nothing fundamentally wrong with any of the commercial offerings. While we believe strongly in our products, the commercial systems do have some advantages that we can't match. So we fully understand that the |EX-CS| is not necessarily the best option for everyone.
 
@@ -39,9 +39,9 @@ This page will compare the following areas in broad a generic terms:
 Cost
 ^^^^
 
-Hands down, the |EX-CS| is the cheapest DCC Command Station option available. 
+Hands down, the |EX-CS| is the lowest cost DCC Command Station option available. 
 
-Depending on the configuration you choose, the cheapest commercial equivalent will be three, or more, times more expensive.  Also, it won't have a fraction of the built in features (see below) that the |EX-CS| has, which you will likely have to pay additionally for, in the commercial systems.
+Depending on the configuration you choose, the least expensive commercial equivalent will be three, or more, times more expensive than a |EX-CS|.  Also, it won't have a fraction of the built in features (see below) that the |EX-CS| has, which you will likely have to pay additionally for, in the commercial systems.
 
 Purchasing
 ^^^^^^^^^^

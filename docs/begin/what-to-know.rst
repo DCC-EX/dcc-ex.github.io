@@ -160,10 +160,10 @@ To achieve this level of automation, you'll need to understand more than just ho
 
 As per our automated/animated realism information above, be sure to familiarise yourself with :doc:`/ex-rail/index` and :doc:`/big-picture/index`.
 
-How does EX-CommandStation compare to commercial Command Stations?
-==================================================================
+How does EX-CommandStation compare to commercial Command Stations
+=================================================================
 
-Comparing the |EX-CS| to commercial Command Stations is not *not* a black-and-white comparison.
+Comparing the |EX-CS| to commercial Command Stations is *not* black-and-white.
 
 While we believe strongly in our products, the commercial systems do have some advantages that we don't quite match. So we fully understand that the |EX-CS| is not necessarily the best option for everyone.
 

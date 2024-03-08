@@ -657,6 +657,7 @@ nav.in-this-section ul.simple li ul li p {
   font-size: 80% !important;
   line-height: 120% !important;
   margin-bottom: 0px !important;
+  text-indent: 25px !important;
 }
 
 /* in-this-section level 3 bullet points */
@@ -664,6 +665,7 @@ nav.in-this-section ul.simple li ul li {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
   line-height: 120% !important;
   margin-bottom: 0px !important;
+  text-indent: 25px !important;
 }
 
 /* in-this-section level 2 bullet points */
@@ -672,6 +674,7 @@ nav.in-this-section ul.simple li p {
   font-size: 80% !important;
   line-height: 120% !important;
   margin-bottom: 0px !important;
+  text-indent: 25px !important;
 }
 
 /* in-this-section level 2 bullet points */
@@ -679,6 +682,7 @@ nav.in-this-section ul.simple li {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
   line-height: 120% !important;
   margin-bottom: 0px !important;
+  text-indent: 25px !important;
 }
 
 nav.in-this-section ul.simple {

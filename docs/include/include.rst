@@ -221,6 +221,10 @@
 
     :doc:`Engine Driver </throttles/software/engine-driver>`
 ..
+.. |ED| replace::
+
+    :doc:`Engine Driver </throttles/software/engine-driver>`
+..
 .. |wiThrottle| replace::
 
     :doc:`wiThrottle </throttles/software/withrottle>`

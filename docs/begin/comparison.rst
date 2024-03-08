@@ -58,8 +58,10 @@ With the |EX-CS|, while we now have sellers that can supply a complete system, m
 
 |hr-dashed|
 
-Setup complexity / Usability
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Setup complexity
+^^^^^^^^^^^^^^^^
+
+The commercial systems are ahead here.
 
 Unless you purchased a complete system from one of our resellers, along with the purchasing process the commercial systems are a *lot simpler* to setup.
 
@@ -67,7 +69,16 @@ Loading the software, assembling the boards, making a case, etc. while not indiv
 
 Note: A common comment made is *"..but I don't know how to program..."*.  This is a common misconception. You DO NOT have to know anything about programming to setup an |EX-CS|.  If you can join track together, then you can assemble an |EX-CS|.
 
+|hr-dashed|
+
+Usability
+^^^^^^^^
+
 Once the systems are setup, there is not a lot of difference in terms of usability between the commercial systems and a |EX-CS|.
+
+The area of greatest difference is that most of the commercial system come with some form of physical controller.  Most |EX-CS| owners use inexpensive or hand-me-down smart phones to control their locos.
+
+You can have/use physical controllers (not a phone, tablet or computer) with |EX-CS|, but that is an additional item to build or purchase.
 
 |hr-dashed|
 
@@ -119,7 +130,7 @@ While the commercial systems have strong followings, and there are plenty of peo
 
 |DCC-EX| maintains a `Discord Server <https://discord.gg/sWNPUsg8>`_ where hundreds of people world-wide are actively engaged in discussing and evolving the |EX-CS| and it add-ons.  You can generally get answers to questions within a few hours and, if you interested, you easily find yourself in deep conversations about existing and upcoming features. 
 
-The other aspect of |DCC-EX| that cannot be glossed over lightly.  It is all open source. Everyone is free to use or modify it as they see fit, for non-commercial use. This shows clearly in the volume and rate of features and options being continuously added by the team. We actively invite, encourage and support people who want to add to the products.
+The other aspect of |DCC-EX| that should not be glossed over lightly is that it is all *open source*. Everyone is free to use or modify our code and designs as they see fit, for non-commercial use. This shows clearly in the volume and rate of features and options being continuously added by the team. We actively invite, encourage and support people who want to add to the products.
 
 ----
 
@@ -128,4 +139,4 @@ Conclusion
 
 As you can see from the points above and the `DCC Wiki <https://dccwiki.com/Command_Stations_List>`_ it is not a black-and-white comparison. Before proceeding with any system you should weigh up the pros and cons and come to a decision *you* feel comfortable with.  
 
-You a welcome to join our `Discord Server <https://discord.gg/sWNPUsg8>`_ and discuss our products before you proceed.
+You are always welcome to join our `Discord Server <https://discord.gg/sWNPUsg8>`_ and discuss our products before you proceed.

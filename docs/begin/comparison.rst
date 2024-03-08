@@ -36,12 +36,16 @@ This page will compare the following areas in broad a generic terms:
     :local:
     :class: in-this-section
 
+|hr-dashed|
+
 Cost
 ^^^^
 
 Hands down, the |EX-CS| is the lowest cost DCC Command Station option available. 
 
 Depending on the configuration you choose, the least expensive commercial system will be three, or more, times more expensive than a |EX-CS|.  Also, it won't have a fraction of the built in features (see below) that the |EX-CS| has, which you will likely have to pay additionally for, in the commercial systems.
+
+|hr-dashed|
 
 Purchasing
 ^^^^^^^^^^
@@ -51,6 +55,8 @@ This is one area where the commercial systems win out.
 You can walk into store and pick up a commercial Command Station in a box with comprehensive manuals and know that it is all there and that will work first time.
 
 With the |EX-CS|, while we now have sellers that can supply a complete system, most people purchase parts from different suppliers online.  This can therefore take some time to arrive, and there have been issues occasionally with poorly manufactured boards. So in general it is not as plug-and-play.
+
+|hr-dashed|
 
 Setup complexity / Usability
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -62,6 +68,8 @@ Loading the software, assembling the boards, making a case, etc. while not indiv
 Note: A common comment made is *"..but I don't know how to program..."*.  This is a common misconception. You DO NOT have to know anything about programming to setup an |EX-CS|.  If you can join track together, then you can assemble an |EX-CS|.
 
 Once the systems are setup, there is not a lot of difference in terms of usability between the commercial systems and a |EX-CS|.
+
+|hr-dashed|
 
 Built in Features
 ^^^^^^^^^^^^^^^^^
@@ -75,6 +83,8 @@ However, there are features that a built into some of the commercial systems tha
 - CV programming  (|EX-CS| requires the use of |ED|, |JMRI| or |EX-WT| which, while are all free, require additional hardware.)
 - FastClock
 
+|hr-dashed|
+
 Options/Expansion
 ^^^^^^^^^^^^^^^^^
 
@@ -83,6 +93,8 @@ Options/Expansion
 Over and above the built in features (above), the |EX-CS| supports IoTT connectivity, |EX-TT|, |EX-IO|, with more to come.  |DCC-EX| is evolving on a daily basis. (See Community below.)
 
 Having said that, most of the commercial system have different expansion options. However, some of these only go to fill in the features that come out of the box with the |EX-CS|.  In their favour they are generally plug and play, whereas the |DCC-EX| options require some tinkering.
+
+|hr-dashed|
 
 Support
 ^^^^^^^
@@ -95,6 +107,8 @@ Because the |DCC-EX| team are located world-wide, there is usually someone that 
 
 In terms of replacement/repairs, unless you purchased through one of our resellers, it is up to you to deal with this side of the process.  The positive is that, if you wish, the costs are so low that you can keep spares of most items and still be well under the total cost of a commercial system.
 
+|hr-dashed|
+
 Community
 ^^^^^^^^^
 
@@ -105,3 +119,8 @@ While the commercial systems have strong followings, and there are plenty of peo
 |DCC-EX| maintains a `Discord Server <https://discord.gg/sWNPUsg8>`_ where hundreds of people world-wide are actively engaged in discussing and evolving the |EX-CS| and it add-ons.  You can generally get answers to questions within a few hours and, if you interested, you easily find yourself in deep conversations about existing and upcoming features. 
 
 The other aspect of |DCC-EX| that cannot be glossed over lightly.  It is all open source. Everyone is free to use or modify it as they see fit, for non-commercial use. This shows clearly in the volume and rate of features and options being continuously added by the team. We actively invite, encourage and support people to add to the products.
+
+Conclusion
+==========
+
+As you can see from the points above and the `DCC Wiki <https://dccwiki.com/Command_Stations_List>`_ it is not a black-and-white comparison. Before proceeding with any system you should weigh up the pros and cons and come do a decision *you* feel comfortable with.

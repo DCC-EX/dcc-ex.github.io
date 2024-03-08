@@ -159,3 +159,12 @@ This can be anywhere from a simple loop to stop and start trains at stations wit
 To achieve this level of automation, you'll need to understand more than just how to get your |EX-CS| up and running, and will also need to have a good understanding of the accessories that can be added as outlined in :doc:`/ex-commandstation/accessories/index`.
 
 As per our automated/animated realism information above, be sure to familiarise yourself with :doc:`/ex-rail/index` and :doc:`/big-picture/index`.
+
+How does EX-CommandStation compare to commercial Command Stations
+=================================================================
+
+Comparing the |EX-CS| to commercial Command Stations is *not* black-and-white.
+
+While we believe strongly in our products, the commercial systems do have some advantages that we don't quite match. So we fully understand that the |EX-CS| is not necessarily the best option for everyone.
+
+See :doc:`/begin/comparison` for a discussion of the pros and cons of |EX-CS| vs the commercial products.

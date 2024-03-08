@@ -72,7 +72,7 @@ Note: A common comment made is *"..but I don't know how to program..."*.  This i
 |hr-dashed|
 
 Usability
-^^^^^^^^
+^^^^^^^^^
 
 Once the systems are setup, there is generally not a lot of difference in terms of usability between the commercial systems and an |EX-CS|.
 

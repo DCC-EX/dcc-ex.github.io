@@ -23,7 +23,7 @@ Introduction
 
 A common question we see is why should someone choose our |EX-CS| over the many commercial systems that are available. This page is a brief discussion of some of the advantages and disadvantages of |EX-CS| and the whole |DCC-EX| ecosystem.
 
-First and foremost, there is nothing fundamentally wrong with any of the commercial offerings. While we believe strongly in out products, The commercial systems do have some advantages that we can't match. So we fully understand that the |EX-CS| is not necessarily the best option for everyone.
+First and foremost, there is nothing fundamentally wrong with any of the commercial offerings. While we believe strongly in our products, the commercial systems do have some advantages that we can't match. So we fully understand that the |EX-CS| is not necessarily the best option for everyone.
 
 Areas of Comparison
 -------------------
@@ -47,7 +47,7 @@ Purchasing
 
 This is one area where the commercial systems win out. You can walk into store and pick up a commercial Command Station in a box with comprehensive manuals and know that it is all there and that will work first time.
 
-With the |EX-CS|, while we now have sellers that supply a complete system, most people purchase parts from different suppliers online.  This can therefore take some time to arrive, and there have been issues occasionally with poorly manufactured boards. So in general it is not as plug-and-play.
+With the |EX-CS|, while we now have sellers that can supply a complete system, most people purchase parts from different suppliers online.  This can therefore take some time to arrive, and there have been issues occasionally with poorly manufactured boards. So in general it is not as plug-and-play.
 
 Setup complexity / Usability
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^

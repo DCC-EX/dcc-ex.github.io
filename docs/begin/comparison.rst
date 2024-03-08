@@ -98,7 +98,7 @@ However, there are features that a built into some of the commercial systems tha
 - FastClock.  For the |EX-CS| this is an optional extra.
 - *Simple to use* Advanced Consisting
 
-^ We don't consider this a negative, just a difference.  The out-of-the-box capability to use of multiple external devices as throttle or to program decoders is flexible and powerful.
+^ We don't consider this a negative, just a difference.  The out-of-the-box capability to use multiple external devices as throttle or to program decoders is flexible and powerful.
 
 |hr-dashed|
 

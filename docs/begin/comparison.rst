@@ -43,7 +43,7 @@ Cost
 
 Hands down, the |EX-CS| is the lowest cost DCC Command Station option available. 
 
-Depending on the configuration you choose, the least expensive commercial system will be three, or more, times more expensive than a |EX-CS|.  Also, it won't have a fraction of the built in features (see below) that the |EX-CS| has, which you will likely have to pay additionally for, in the commercial systems.
+Depending on the configuration you choose, the least expensive commercial system will be three, or more, times more expensive than a |EX-CS|.  Also, it won't have a fraction of the built in features (see below) that the |EX-CS| has, which you will likely have to pay additionally for in the commercial systems.
 
 |hr-dashed|
 
@@ -78,10 +78,11 @@ Here the |EX-CS| wins hands down.
 
 DCC *and DC* loco control, Auto-Reverser, WiFi throttles, Rosters, |EX-R|, |JMRI| connectivity via WiFi or USB, and other features that are built into |EX-CS| that *generally* require additional addons to the Commercial Systems.  For example, I can think of one brand, where the USB connectivity add-on alone is more expensive the an entire |EX-CS|.
 
-However, there are features that a built into some of the commercial systems that are not exactly *built into* |EX-CS|, including:
+However, there are features that a built into some of the commercial systems that are not exactly *built into* the |EX-CS|, including:
 
 - CV programming  (|EX-CS| requires the use of |ED|, |JMRI| or |EX-WT| which, while are all free, require additional hardware.)
 - FastClock
+- *Simple to use* Advanced Consisting
 
 |hr-dashed|
 
@@ -101,7 +102,7 @@ Support
 
 This is more of a mixed bag.
 
-While, the commercial systems you are more-or-less guaranteed support, replacement for faulty items, etc.  The catch is that depending on where you are in the world and where the manufacturer is, there can be long turnarounds to get that support.  Even longer to get replacements or repairs.
+While, the commercial systems you are more-or-less guaranteed support, replacement for faulty items, etc., the catch is that depending on where you are in the world and where the manufacturer is, there can be long turnarounds to get that support.  Even longer to get replacements or repairs.
 
 Because the |DCC-EX| team are located world-wide, there is usually someone that can help you within a few hours. 
 
@@ -118,9 +119,13 @@ While the commercial systems have strong followings, and there are plenty of peo
 
 |DCC-EX| maintains a `Discord Server <https://discord.gg/sWNPUsg8>`_ where hundreds of people world-wide are actively engaged in discussing and evolving the |EX-CS| and it add-ons.  You can generally get answers to questions within a few hours and, if you interested, you easily find yourself in deep conversations about existing and upcoming features. 
 
-The other aspect of |DCC-EX| that cannot be glossed over lightly.  It is all open source. Everyone is free to use or modify it as they see fit, for non-commercial use. This shows clearly in the volume and rate of features and options being continuously added by the team. We actively invite, encourage and support people to add to the products.
+The other aspect of |DCC-EX| that cannot be glossed over lightly.  It is all open source. Everyone is free to use or modify it as they see fit, for non-commercial use. This shows clearly in the volume and rate of features and options being continuously added by the team. We actively invite, encourage and support people who want to add to the products.
+
+----
 
 Conclusion
 ==========
 
-As you can see from the points above and the `DCC Wiki <https://dccwiki.com/Command_Stations_List>`_ it is not a black-and-white comparison. Before proceeding with any system you should weigh up the pros and cons and come do a decision *you* feel comfortable with.
+As you can see from the points above and the `DCC Wiki <https://dccwiki.com/Command_Stations_List>`_ it is not a black-and-white comparison. Before proceeding with any system you should weigh up the pros and cons and come to a decision *you* feel comfortable with.  
+
+You a welcome to join our `Discord Server <https://discord.gg/sWNPUsg8>`_ and discuss our products before you proceed.

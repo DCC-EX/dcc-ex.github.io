@@ -67,7 +67,9 @@ Unless you purchased a complete system from one of our resellers, along with the
 
 Loading the software, assembling the boards, making a case, etc. while not individually difficult steps, can be still be daunting for some people. Conversely, for some this becomes part of the attraction/challenge.  Like the building a kit loco or building, some people enjoy it, some don't.  
 
-Note: A common comment made is *"..but I don't know how to program..."*.  This is a common misconception. You DO NOT have to know anything about programming to setup an |EX-CS|.  If you can join rail/track together and answer some questions in our |EX-I| app, then you can assemble an |EX-CS|.
+  Note: A common comment made is *"..but I don't know how to program..."*.  This is a common misconception. You DO NOT have to know anything about programming to setup an |EX-CS|.  If you can join rail/track together and answer some questions, then you can assemble an |EX-CS|.
+
+  This due to the |EX-I| program that runs on Windows, Mac and Linux and hugely simplifies the software loading process to the point where you need know nothing about Arduino programming to be able to install the software, maintain it with updates or configure it.
 
 |hr-dashed|
 
@@ -130,7 +132,14 @@ While the commercial systems have strong followings, and there are plenty of peo
 
 |DCC-EX| maintains a `Discord Server <https://discord.gg/sWNPUsg8>`_ where hundreds of people world-wide are actively engaged in discussing and evolving the |EX-CS| and its add-ons on a daily basis.  You can generally get answers to questions within a few hours and, if you interested, you easily find yourself in deep conversations about existing and upcoming features. 
 
-The other aspect of |DCC-EX| that should not be glossed over lightly is that it is all *open source*. Everyone is free to use or modify our code and designs as they see fit, for non-commercial use. This shows clearly in the volume and rate of features and options being continuously added by the team. We actively invite, encourage and support people who want to contribute to the products.
+|hr-dashed|
+
+Non-proprietary / Open Source
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The other aspect of |DCC-EX| that should not be glossed over lightly is that it is all *open source* using of-the-shelf or open source hardware. Everyone is free to use or modify our code and hardware designs as they see fit, for non-commercial use. This shows clearly in the volume and rate of features and options being continuously added by the team. We actively invite, encourage and support people who want to contribute to the products.
+
+With the commercial systems, with a few exceptions (e.g. WiThrottle) use proprietary technology. You are locked into the vendor for most add-ons.
 
 ----
 

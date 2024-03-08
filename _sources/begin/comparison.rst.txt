@@ -93,9 +93,12 @@ DCC *and DC* loco control, Auto-Reverser, WiFi throttles, Rosters, |EX-R|, |JMRI
 
 However, there are features that a built into some of the commercial systems that are not exactly *built into* the |EX-CS|, including:
 
-- CV programming |BR| (|EX-CS| requires the use of |ED|, |JMRI| or |EX-WT| which, while are all free, require additional hardware.)
-- FastClock
+- Hardware Throttle. |BR| Many commercial starter sets come with built-in throttles. |EX-CS| requires the use of some sort of external throttle. Most of which are free but are not *technically* part of the |EX-CS| ^.
+- CV programming |BR| Many commercial starter sets can program CVs using the hardware in the box. |EX-CS| requires the use of |ED|, |JMRI| or |EX-WT| which, while are all free are not *technically* part of the |EX-CS| ^.
+- FastClock.  For the |EX-CS| this is an optional extra.
 - *Simple to use* Advanced Consisting
+
+^ We don't consider this a negative, just a difference.  The out-of-the-box capability to use multiple external devices as throttle or to program decoders is flexible and powerful.
 
 |hr-dashed|
 

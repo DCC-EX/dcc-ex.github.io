@@ -15,7 +15,7 @@ Why DCC-EX? - Comparing EX-CommandStation to Commercial Systems
 .. sidebar:: 
 
   .. contents:: On this page
-    :depth: 2
+    :depth: 3
     :local:
 
 Introduction
@@ -23,7 +23,7 @@ Introduction
 
 A common question we see is why should someone choose our |EX-CS| over the many commercial systems that are available. This page is a *brief discussion* of some of the advantages and disadvantages of |EX-CS| and the whole |DCC-EX| ecosystem. (To see a detailed list of specific features of various systems we would recommend looking at the `DCC Wiki <https://dccwiki.com/Command_Stations_List>`_.)
 
-First and foremost, there is nothing fundamentally wrong with any of the commercial offerings. While we believe strongly in our products, the commercial systems do have some advantages that we can't match. So we fully understand that the |EX-CS| is not necessarily the best option for everyone.
+First and foremost, there is nothing fundamentally wrong with any of the commercial offerings. While we believe strongly in our products, the commercial systems do have some advantages that we don't quite match. (See below.) So we fully understand that the |EX-CS| is not necessarily the best option for everyone.
 
 
 Areas of Comparison
@@ -41,7 +41,7 @@ Cost
 
 Hands down, the |EX-CS| is the lowest cost DCC Command Station option available. 
 
-Depending on the configuration you choose, the least expensive commercial equivalent will be three, or more, times more expensive than a |EX-CS|.  Also, it won't have a fraction of the built in features (see below) that the |EX-CS| has, which you will likely have to pay additionally for, in the commercial systems.
+Depending on the configuration you choose, the least expensive commercial system will be three, or more, times more expensive than a |EX-CS|.  Also, it won't have a fraction of the built in features (see below) that the |EX-CS| has, which you will likely have to pay additionally for, in the commercial systems.
 
 Purchasing
 ^^^^^^^^^^
@@ -55,9 +55,11 @@ With the |EX-CS|, while we now have sellers that can supply a complete system, m
 Setup complexity / Usability
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Unless you purchased a complete system from one of our reseller, along with the purchasing process the commercial systems are a *lot simpler* to setup.
+Unless you purchased a complete system from one of our resellers, along with the purchasing process the commercial systems are a *lot simpler* to setup.
 
-Loading the software, assembling the boards, making a case, etc. while not individually difficult steps, can be still be daunting for some people. Conversely, for some this becomes part of the attraction/challenge.  Like the building a kit loco or building.  Some people enjoy it, some don't.
+Loading the software, assembling the boards, making a case, etc. while not individually difficult steps, can be still be daunting for some people. Conversely, for some this becomes part of the attraction/challenge.  Like the building a kit loco or building.  Some people enjoy it, some don't.  
+
+Note: A common comment made is *"..but I don't know how to program..."*.  This is a common misconception. You DO NOT have to know anything about programming to setup an |EX-CS|.  If you can join track together, then you can assemble an |EX-CS|.
 
 Once the systems are setup, there is not a lot of difference in terms of usability between the commercial systems and a |EX-CS|.
 
@@ -68,7 +70,7 @@ Here the |EX-CS| wins hands down.
 
 DCC *and DC* loco control, Auto-Reverser, WiFi throttles, Rosters, |EX-R|, |JMRI| connectivity via WiFi or USB, and other features that are built into |EX-CS| that *generally* require additional addons to the Commercial Systems.  For example, I can think of one brand, where the USB connectivity add-on alone is more expensive the an entire |EX-CS|.
 
-However, there are features that a built into some of the commercial systems, that are not exactly *built into* |EX-CS|, including:
+However, there are features that a built into some of the commercial systems that are not exactly *built into* |EX-CS|, including:
 
 - CV programming  (|EX-CS| requires the use of |ED|, |JMRI| or |EX-WT| which, while are all free, require additional hardware.)
 - FastClock

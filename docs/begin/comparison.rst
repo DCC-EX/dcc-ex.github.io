@@ -21,9 +21,10 @@ Why DCC-EX? - Comparing EX-CommandStation to Commercial Systems
 Introduction
 ============
 
-A common question we see is why should someone choose our |EX-CS| over the many commercial systems that are available. This page is a brief discussion of some of the advantages and disadvantages of |EX-CS| and the whole |DCC-EX| ecosystem.
+A common question we see is why should someone choose our |EX-CS| over the many commercial systems that are available. This page is a *brief discussion* of some of the advantages and disadvantages of |EX-CS| and the whole |DCC-EX| ecosystem. (To see a detailed list of specific features of various systems we would recommend looking that the `DCC Wiki <https://dccwiki.com/Command_Stations_List>`_.)
 
 First and foremost, there is nothing fundamentally wrong with any of the commercial offerings. While we believe strongly in our products, the commercial systems do have some advantages that we can't match. So we fully understand that the |EX-CS| is not necessarily the best option for everyone.
+
 
 Areas of Comparison
 -------------------

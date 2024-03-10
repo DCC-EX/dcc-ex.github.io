@@ -144,7 +144,7 @@ INVERT_STEP
 
 `Default: disabled`
 
-When defined, this inverts the state of the STEP pin for two wire drivers such as the A4988, DRV8825, and TMC2208.
+When defined, this inverts the state of the STEP pin for two wire drivers such as the A4988, DRV8825, and TMC2208. We have not come across a stepper driver that requires this inverted but the option is available should one be encountered.
 
 This has no effect if using the ULN2003.
 
@@ -155,7 +155,7 @@ INVERT_ENABLE
 
 `Default: disabled`
 
-When defined, this inverts the state of the EN pin for two wire drivers such as the A4988, DRV8825, and TMC2208.
+When defined, this inverts the state of the EN pin for two wire drivers such as the A4988, DRV8825, and TMC2208. This is likely required if you have ``DISABLE_OUTPUTS_IDLE`` enabled, but the stepper motor is not disabled at the end of each movement, which may result in a buzzing or humming from the driver, and you cannot rotate the stepper motor by hand.
 
 If in previous versions of |EX-TT| the ``A4988_INV`` stepper driver was defined, this option must be enabled instead, along with defining the ``A4988`` :ref:`ex-turntable/configure:stepper_driver` option.
 
@@ -198,6 +198,8 @@ STEPPER_GEARING_FACTOR
 `Valid values: 1 - 10`
 
 Step counts sent from |EX-CS| will be multiplied by this number, allowing for larger gear ratios and small microsteps that result in a steps per revolution of greater than 32767. The maximum number after multiplication is 4,294,967,295.
+
+Note you will likely need to increase :ref:`ex-turntable/configure:sanity_steps` if you have to define a gearing factor higher than 1.
 
 ROTATE_FORWARD_ONLY
 -------------------

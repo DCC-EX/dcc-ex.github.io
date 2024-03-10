@@ -732,14 +732,14 @@
 <h3><a class="toc-backref" href="#id12" role="doc-backlink">INVERT_STEP</a><a class="headerlink" href="#invert-step" title="Permalink to this heading"></a></h3>
 <p><strong>Requires EX-Turntable version 0.7.0 or later</strong></p>
 <p><cite>Default: disabled</cite></p>
-<p>When defined, this inverts the state of the STEP pin for two wire drivers such as the A4988, DRV8825, and TMC2208.</p>
+<p>When defined, this inverts the state of the STEP pin for two wire drivers such as the A4988, DRV8825, and TMC2208. We have not come across a stepper driver that requires this inverted but the option is available should one be encountered.</p>
 <p>This has no effect if using the ULN2003.</p>
 </section>
 <section id="invert-enable">
 <h3><a class="toc-backref" href="#id13" role="doc-backlink">INVERT_ENABLE</a><a class="headerlink" href="#invert-enable" title="Permalink to this heading"></a></h3>
 <p><strong>Requires EX-Turntable version 0.7.0 or later</strong></p>
 <p><cite>Default: disabled</cite></p>
-<p>When defined, this inverts the state of the EN pin for two wire drivers such as the A4988, DRV8825, and TMC2208.</p>
+<p>When defined, this inverts the state of the EN pin for two wire drivers such as the A4988, DRV8825, and TMC2208. This is likely required if you have <code class="docutils literal notranslate"><span class="pre">DISABLE_OUTPUTS_IDLE</span></code> enabled, but the stepper motor is not disabled at the end of each movement, which may result in a buzzing or humming from the driver, and you cannot rotate the stepper motor by hand.</p>
 <p>If in previous versions of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> the <code class="docutils literal notranslate"><span class="pre">A4988_INV</span></code> stepper driver was defined, this option must be enabled instead, along with defining the <code class="docutils literal notranslate"><span class="pre">A4988</span></code> <a class="reference internal" href="#stepper-driver"><span class="std std-ref">STEPPER_DRIVER</span></a> option.</p>
 <p>This has no effect if using the ULN2003.</p>
 </section>
@@ -767,6 +767,7 @@
 <p><cite>Default: 1</cite></p>
 <p><cite>Valid values: 1 - 10</cite></p>
 <p>Step counts sent from <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> will be multiplied by this number, allowing for larger gear ratios and small microsteps that result in a steps per revolution of greater than 32767. The maximum number after multiplication is 4,294,967,295.</p>
+<p>Note you will likely need to increase <a class="reference internal" href="#sanity-steps"><span class="std std-ref">SANITY_STEPS</span></a> if you have to define a gearing factor higher than 1.</p>
 </section>
 <section id="rotate-forward-only">
 <h3><a class="toc-backref" href="#id18" role="doc-backlink">ROTATE_FORWARD_ONLY</a><a class="headerlink" href="#rotate-forward-only" title="Permalink to this heading"></a></h3>

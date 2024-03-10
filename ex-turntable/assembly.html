@@ -990,12 +990,13 @@
 <span class="c1">// #define STEPPER_DRIVER ULN2003_FULL_CW</span>
 <span class="c1">// #define STEPPER_DRIVER ULN2003_FULL_CCW</span>
 <span class="cp">#define STEPPER_DRIVER A4988</span>
-<span class="c1">// #define STEPPER_DRIVER A4988_INV</span>
+<span class="c1">// #define STEPPER_DRIVER A4988_INV   &lt;--- Versions before 0.7.0</span>
+<span class="c1">// #define INVERT_STEP                &lt;--- Version 0.7.0 on</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If operating EX-Turntable does not disable the stepper driver after movements complete, you will likely hear a buzzing or humming from the driver. In this instance, you may find you need to have the “Enable” pin inverted, so you will need to use the “A4988_INV” option instead (<code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">STEPPER_DRIVER</span> <span class="pre">A4988_INV</span></code>).</p>
+<p>If operating EX-Turntable does not disable the stepper driver after movements complete, you will likely hear a buzzing or humming from the driver. In this instance, you may find you need to have the “Enable” pin inverted. In versions prior to 0.7.0, you will need to use the “A4988_INV” option instead (<code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">STEPPER_DRIVER</span> <span class="pre">A4988_INV</span></code>), and from version 0.7.0, you will need to enable the “INVERT_DIR” option (<code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">INVERT_DIR</span></code>).</p>
 </div>
 </section>
 <section id="first-start-and-automatic-calibration">
@@ -1003,7 +1004,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you have loaded the code too soon, and the automatic calibration has succeeded and recorded an inaccurate step count, then have no fear as there is a command you can run on the CommandStation to reinitiate the calibration sequence which is outlined in the <a class="reference internal" href="test-and-tune.html#ex-turntable-commands"><span class="std std-ref">Ex-Turntable commands</span></a> section.</p>
-<p>As of v0.5.0-Beta, you can also execute the command <code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">3&gt;</span></code> in the serial console to initiate the calibration sequence.</p>
+<p>As of v0.5.0-Beta and up to version 0.6.0, you can also execute the command <code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">3&gt;</span></code> in the serial console to initiate the calibration sequence. In version 0.7.0 you can execute <code class="docutils literal notranslate"><span class="pre">&lt;C&gt;</span></code> instead to intiate the sequence.</p>
 <p>Also, if you have enabled the <cite>FULL_STEP_COUNT</cite> option in “config.h”, that will prevent automatic calibration occurring, refer to <a class="reference internal" href="configure.html#full-step-count"><span class="std std-ref">FULL_STEP_COUNT</span></a>.</p>
 </div>
 <p>When <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span> is first loaded onto your Arduino, and it has successfully performed the homing process outlined above, it will commence an automatic calibration sequence. This involves several rotations of the turntable to ensure it is homed accurately, and is then able to count the steps required to complete a full rotation of the turntable.</p>

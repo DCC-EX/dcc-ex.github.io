@@ -45,7 +45,8 @@ extensions = [
     'ablog',
     'sphinx.ext.intersphinx',
     'sphinx_design',
-    'sphinx_rtd_dark_mode'
+    'sphinx_rtd_dark_mode',
+    'sphinx_reredirects'
 ]
 
 autosectionlabel_prefix_document = True
@@ -158,3 +159,9 @@ post_auto_image = 0
 blog_post_pattern = "news/posts/*"
 blog_feed_fulltext = True
 fontawesome_included = True
+
+redirects = {
+     "under-development/track-manager": "../trackmanager/index.html",
+     "reference/software/command-summary": "../../reference/software/command-summary-consolidated.html",
+     "throttles/software/ex-webthrottle": "../../ex-webthrottle/index.html" b
+}

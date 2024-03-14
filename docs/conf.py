@@ -163,5 +163,5 @@ fontawesome_included = True
 redirects = {
      "under-development/track-manager": "../trackmanager/index.html",
      "reference/software/command-summary": "../../reference/software/command-summary-consolidated.html",
-     "throttles/software/ex-webthrottle": "../../ex-webthrottle/index.html" b
+     "throttles/software/ex-webthrottle": "../../ex-webthrottle/index.html"
 }

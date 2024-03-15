@@ -161,7 +161,66 @@ blog_feed_fulltext = True
 fontawesome_included = True
 
 redirects = {
-     "under-development/track-manager": "../trackmanager/index.html",
-     "reference/software/command-summary": "../../reference/software/command-summary-consolidated.html",
-     "throttles/software/ex-webthrottle": "../../ex-webthrottle/index.html"
+    "about/press/index" : "../../about/about.html",
+    "about/press/new-name" : "https://dcc-ex.com/news/posts/20201001.html",
+    "advanced-setup/index" : "../ex-commandstation/advanced-setup/index.html",
+    "advanced-setup/supported-microcontrollers/index"
+      : "../../advanced-setup/supported-microcontrollers/index.html",
+    "advanced-setup/supported-motorboards/index"
+      : "../../reference/hardware/motor-boards.html",
+    "automation/EX-RAIL-intro" : "../ex-rail/index.htm",
+    "automation/index" : "../ex-rail/index.htm",
+    "begin/*" : "../ex-commandstation/get-started/index.html",
+    "blog/*" : "../news.html",
+    "contributing/*" : "../about/contributing/index.html",
+    "developer-reference/api" : "../reference/developers/api.html",
+    "developer-reference/api" : "../reference/developers/api.html",
+    "developer-reference/index" : "../reference/developers/index.html",
+    "developer-reference/tech-reference" : "../reference/developers/index.html",
+    "download/commandstation" : "ex-commandstation.html",
+    "download/dcc-inspector-ex" : "ex-dccinspector.html",
+    "download/documents" : "index.html",
+    "download/schematics" : "index.html",
+    "download/turntable-ex" : "ex-turntable.html",
+    "ex-commandstation/advanced-setup/supported-bluetooth/index"
+      : "../../../reference/hardware/bluetooth.html",
+    "ex-installer/installing-original-installer" : "index.html",
+    "ex-rail/deprecate-EX-RAIL-reference" : "index.html",
+    "ex-rail/deprecate-EX-RAIL-summary" : "index.html",
+    "exwebthrottle/LICENSE" : "../about/licence.htm",
+    "get-started/assembly" : "../ex-commandstation/get-started/assembly.htm",
+    "get-started/controllers" : "../ex-commandstation/get-started/controllers.html",
+    "get-started/index" : "../ex-commandstation/get-started/index.html",
+    "get-started/installer" : "../ex-commandstation/get-started/installer.html",
+    "get-started/levels" : "../begin/levels.html",
+    "get-started/wifi-setup" : "../ex-commandstation/get-started/wifi-setup.html",
+    "glossary" : "./reference/glossary.html",
+    "news/posts/20230310" : "../../news.html",
+    "news/posts/20230408" : "../../news.html",
+    "news/posts/20230806" : "../../news.html",
+    "press/index" : "../../news.html",
+    "press/v40-announce" : "../../news.html",
+    "reference/developers/tech-reference" : "../../throttles/tech-reference.html",
+    "reference/documents/decoder-table" : "../../reference/hardware/decoder-list.html",
+    "reference/hardware/bluetooth-boards" : "../../reference/hardware/bluetooth.html",
+    "reference/hardware/other/index" : "../../reference/hardware/index.html",
+    "reference/hardware/shopping-list"
+      : "../../ex-commandstation/get-started/purchasing.htm",
+    "reference/software/command-summary"
+      : "../../reference/software/command-summary-consolidated.html",
+    "reference/software/single-opcode-reference"
+      : "../../reference/software/command-summary-consolidated.html",
+    "site-map/index" : "../about/site-map.html",
+    "support/create-ticket" : "../support/index.html",
+    "support/makerfabs-update-at-version-with-usb-to-ttl"
+      : "../support/wifi-at-version.html#correcting-the-at-version-on-a-makerfabs-esp8266-wifi-shield",
+    "throttles/cab-engineer" : "../throttles/software/cab-engineer.html",
+    "throttles/hardware/physical-knobs"
+      : "../../throttles/hardware/engine-driver-physical-knobs.html",
+    "throttles/physical-knobs" : "../throttles/hardware/engine-driver-physical-knobs.html",
+    "throttles/tech-reference" : "../throttles/tech-reference.html",
+    "throttles/witcontroller" : "../throttles/hardware/witcontroller.html",
+    "throttles/withrottle" : "../throttles/software/withrottle.html",
+    "turntable-ex/index" : "../ex-turntable/index.html",
+    "turntable-ex/turntable-ex" : "../ex-turntable/index.html"
 }

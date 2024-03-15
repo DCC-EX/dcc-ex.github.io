@@ -46,8 +46,8 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx_design',
     'sphinx_rtd_dark_mode',
-    'sphinx_reredirects',
-    'notfound.extension'
+    'sphinx_reredirects'
+    # 'notfound.extension'
 ]
 
 autosectionlabel_prefix_document = True
@@ -165,10 +165,8 @@ redirects = {
     "about/press/index":"../../about/about.html",
     "about/press/new-name":"https://dcc-ex.com/news/posts/20201001.html",
     "advanced-setup/index":"../ex-commandstation/advanced-setup/index.html",
-    "advanced-setup/supported-microcontrollers/index"
-    :"../../advanced-setup/supported-microcontrollers/index.html",
-    "advanced-setup/supported-motorboards/index"
-    :"../../reference/hardware/motor-boards.html",
+    "advanced-setup/supported-microcontrollers/index":"../../advanced-setup/supported-microcontrollers/index.html",
+    "advanced-setup/supported-motorboards/index":"../../reference/hardware/motor-boards.html",
     "automation/EX-RAIL-intro":"../ex-rail/index.htm",
     "automation/index":"../ex-rail/index.htm",
     "begin/*":"../ex-commandstation/get-started/index.html",
@@ -181,15 +179,13 @@ redirects = {
     "download/documents":"index.html",
     "download/schematics":"index.html",
     "download/turntable-ex":"ex-turntable.html",
-    "ex-commandstation/advanced-setup/supported-bluetooth/index"
-    :"../../../reference/hardware/bluetooth.html",
+    "ex-commandstation/advanced-setup/supported-bluetooth/index":"../../../reference/hardware/bluetooth.html",
     "ex-installer/installing-original-installer":"index.html",
     "ex-rail/deprecate-EX-RAIL-reference":"index.html",
     "ex-rail/deprecate-EX-RAIL-summary":"index.html",
     "exwebthrottle/LICENSE":"../about/licence.html",
     "get-started/assembly":"../ex-commandstation/get-started/assembly.html",
-    "get-started/controllers"
-    :"../ex-commandstation/get-started/controllers.html",
+    "get-started/controllers":"../ex-commandstation/get-started/controllers.html",
     "get-started/index":"../ex-commandstation/get-started/index.html",
     "get-started/installer":"../ex-commandstation/get-started/installer.html",
     "get-started/levels":"../begin/levels.html",
@@ -200,28 +196,19 @@ redirects = {
     "news/posts/20230806":"../../news.html",
     "press/index":"../../news.html",
     "press/v40-announce":"../../news.html",
-    "reference/developers/tech-reference"
-    :"../../throttles/tech-reference.html",
-    "reference/documents/decoder-table"
-    :"../../reference/hardware/decoder-list.html",
-    "reference/hardware/bluetooth-boards"
-    :"../../reference/hardware/bluetooth.html",
+    "reference/developers/tech-reference":"../../throttles/tech-reference.html",
+    "reference/documents/decoder-table":"../../reference/hardware/decoder-list.html",
+    "reference/hardware/bluetooth-boards":"../../reference/hardware/bluetooth.html",
     "reference/hardware/other/index":"../../reference/hardware/index.html",
-    "reference/hardware/shopping-list"
-    :"../../ex-commandstation/get-started/purchasing.html",
-    "reference/software/command-summary"
-    :"../../reference/software/command-summary-consolidated.html",
-    "reference/software/single-opcode-reference"
-    :"../../reference/software/command-summary-consolidated.html",
+    "reference/hardware/shopping-list":"../../ex-commandstation/get-started/purchasing.html",
+    "reference/software/command-summary":"../../reference/software/command-summary-consolidated.html",
+    "reference/software/single-opcode-reference":"../../reference/software/command-summary-consolidated.html",
     "site-map/index":"../about/site-map.html",
     "support/create-ticket":"../support/index.html",
-    "support/makerfabs-update-at-version-with-usb-to-ttl"
-    :"../support/wifi-at-version.html#correcting-the-at-version-on-a-makerfabs-esp8266-wifi-shield",
+    "support/makerfabs-update-at-version-with-usb-to-ttl":"../support/wifi-at-version.html#correcting-the-at-version-on-a-makerfabs-esp8266-wifi-shield",
     "throttles/cab-engineer":"../throttles/software/cab-engineer.html",
-    "throttles/hardware/physical-knobs"
-    :"../../throttles/hardware/engine-driver-physical-knobs.html",
-    "throttles/physical-knobs"
-    :"../throttles/hardware/engine-driver-physical-knobs.html",
+    "throttles/hardware/physical-knobs":"../../throttles/hardware/engine-driver-physical-knobs.html",
+    "throttles/physical-knobs":"../throttles/hardware/engine-driver-physical-knobs.html",
     "throttles/tech-reference":"../throttles/tech-reference.html",
     "throttles/witcontroller":"../throttles/hardware/witcontroller.html",
     "throttles/withrottle":"../throttles/software/withrottle.html",
@@ -229,9 +216,9 @@ redirects = {
     "turntable-ex/turntable-ex":"../ex-turntable/index.html"
 }
 
-# Configure sphinx-notfound-page
-notfound_context = {
-    'title': 'Page not found',
-    'body': "<h1>Page not found</h1>\n\nUnfortunately we couldn't find the content you were looking for.",
-}
-notfound_urls_prefix = None
+# # Configure sphinx-notfound-page
+# notfound_context = {
+#     'title': 'Page not found',
+#     'body': "<h1>Page not found</h1>\n\nUnfortunately we couldn't find the content you were looking for.",
+# }
+# notfound_urls_prefix = "/dcc-ex.com/"

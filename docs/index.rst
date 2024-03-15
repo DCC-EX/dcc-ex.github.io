@@ -111,8 +111,8 @@ DCC-EX Model Railroading
    :maxdepth: 4
    :caption: Support & Info
 
-   throttles/index
    support/index
+   throttles/index
    big-picture/index
 
 .. toctree::

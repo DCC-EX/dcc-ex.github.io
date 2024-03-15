@@ -5,7 +5,7 @@
 EX-IOExpander FAQ and Troubleshooting
 *************************************
 
-|tinkerer| |githublink-ex-ioexpander-button2|
+|tinkerer| |support-button| |githublink-ex-ioexpander-button2|
 
 .. sidebar::
 

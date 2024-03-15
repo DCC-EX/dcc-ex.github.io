@@ -224,7 +224,7 @@ notfound_context = {
 
 <p>Sorry, we couldn't find that page.</p>
 
-<p>Try using the search box or go to the homepage.</p>
+<p>Try using the search box or go to the <a href="/index.html">homepage</a>.</p>
 """,
 }
 notfound_urls_prefix = "/dcc-ex.github.io/"

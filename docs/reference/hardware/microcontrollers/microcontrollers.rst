@@ -7,7 +7,7 @@
 Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD
 *****************************************************
 
-|tinkerer| |engineer| |githublink-ex-commandstation-button2|
+|tinkerer| |engineer| |support-button| |githublink-ex-commandstation-button2|
 
 |NEW-IN-V5|
 

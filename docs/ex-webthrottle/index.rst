@@ -311,4 +311,4 @@ Looking for some help with EX-WebThrottle?
 
 To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking this button:
 
-|githublink-ex-webthrottle-button|
+|support-button-large| |githublink-ex-webthrottle-button|

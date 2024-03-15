@@ -7,7 +7,7 @@
 Advanced Options
 ****************
 
-|tinkerer| |engineer| |githublink-ex-commandstation-button2|
+|tinkerer| |engineer| |support-button| |githublink-ex-commandstation-button2|
 
 .. sidebar::
 

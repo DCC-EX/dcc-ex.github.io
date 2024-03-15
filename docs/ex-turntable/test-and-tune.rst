@@ -7,7 +7,7 @@
 Testing, Tuning, and Control
 *****************************
 
-|tinkerer| |githublink-ex-turntable-button2|
+|tinkerer| |support-button| |githublink-ex-turntable-button2|
 
 .. sidebar:: 
 

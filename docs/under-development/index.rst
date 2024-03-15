@@ -29,7 +29,7 @@ Looking for some help with EX-CommandStation?
 
 To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking this button:
 
-|githublink-ex-commandstation-button2|
+|support-button-large| |githublink-ex-commandstation-button2|
 
 .. tip:: 
 

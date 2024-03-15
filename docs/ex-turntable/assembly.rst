@@ -444,7 +444,7 @@ Locate this section in "config.h", comment out the line defining the use of "ULN
 
 .. note:: 
 
-  If operating EX-Turntable does not disable the stepper driver after movements complete, you will likely hear a buzzing or humming from the driver. In this instance, you may find you need to have the "Enable" pin inverted. In versions prior to 0.7.0, you will need to use the "A4988_INV" option instead (``#define STEPPER_DRIVER A4988_INV``), and from version 0.7.0, you will need to enable the "INVERT_DIR" option (``#define INVERT_DIR``).
+  If operating EX-Turntable does not disable the stepper driver after movements complete, you will likely hear a buzzing or humming from the driver. In this instance, you may find you need to have the "Enable" pin inverted. In versions prior to 0.7.0, you will need to use the "A4988_INV" option instead (``#define STEPPER_DRIVER A4988_INV``), and from version 0.7.0, you will need to enable the "INVERT_ENABLE" option (``#define INVERT_ENABLE``).
 
 First start and automatic calibration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -209,11 +209,13 @@ redirects = {
     "throttles/cab-engineer":"../throttles/software/cab-engineer.html",
     "throttles/hardware/physical-knobs":"../../throttles/hardware/engine-driver-physical-knobs.html",
     "throttles/physical-knobs":"../throttles/hardware/engine-driver-physical-knobs.html",
+    "throttles/software/ex-webthrottle":"../../ex-webthrottle/index.html",
     "throttles/tech-reference":"../throttles/tech-reference.html",
     "throttles/witcontroller":"../throttles/hardware/witcontroller.html",
     "throttles/withrottle":"../throttles/software/withrottle.html",
     "turntable-ex/index":"../ex-turntable/index.html",
-    "turntable-ex/turntable-ex":"../ex-turntable/index.html"
+    "turntable-ex/turntable-ex":"../ex-turntable/index.html",
+    "under-development/track-manager":"../trackmanager/index.html"
 }
 
 # Configure sphinx-notfound-page

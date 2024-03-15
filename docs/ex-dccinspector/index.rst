@@ -31,6 +31,6 @@ EX-DCCInspector
 Looking for some help with EX-DCCInspector?
 ===========================================
 
-To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking this button:
+To find out how to request assistance click the first button below. To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking the second button:
 
 |support-button-large| |githublink-ex-dccinspector-button|

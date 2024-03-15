@@ -230,5 +230,8 @@ redirects = {
 }
 
 # Configure sphinx-notfound-page
-notfound_template = "/404.rst"
-notfound_urls_prefix = ""
+notfound_context = {
+    'title': 'Page not found',
+    'body': "<h1>Page not found</h1>\n\nUnfortunately we couldn't find the content you were looking for.",
+}
+notfound_urls_prefix = None

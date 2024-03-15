@@ -46,8 +46,8 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx_design',
     'sphinx_rtd_dark_mode',
-    'sphinx_reredirects'
-    # 'notfound.extension'
+    'sphinx_reredirects',
+    'notfound.extension'
 ]
 
 autosectionlabel_prefix_document = True
@@ -216,9 +216,15 @@ redirects = {
     "turntable-ex/turntable-ex":"../ex-turntable/index.html"
 }
 
-# # Configure sphinx-notfound-page
-# notfound_context = {
-#     'title': 'Page not found',
-#     'body': "<h1>Page not found</h1>\n\nUnfortunately we couldn't find the content you were looking for.",
-# }
-# notfound_urls_prefix = "/dcc-ex.com/"
+# Configure sphinx-notfound-page
+notfound_context = {
+    "title": "Page Not Found",
+    "body": """
+<h1>Page Not Found</h1>
+
+<p>Sorry, we couldn't find that page.</p>
+
+<p>Try using the search box or go to the homepage.</p>
+""",
+}
+notfound_urls_prefix = "/dcc-ex.github.io/"

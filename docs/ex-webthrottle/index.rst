@@ -11,7 +11,7 @@ EX-WebThrottle
 
    `Try It Now <https://DCC-EX.github.io/WebThrottle-EX>`_
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button| 
 
 .. sidebar::
 

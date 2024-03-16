@@ -10,7 +10,7 @@
 Initial Assembly
 ****************
 
-|conductor|
+|conductor| |support-button| 
 
 .. sidebar::
 

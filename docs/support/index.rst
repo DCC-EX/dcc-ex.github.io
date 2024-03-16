@@ -29,6 +29,8 @@ The following pages provide these FAQs and troubleshooting guides, and the follo
   ex-tt-troubleshooting
   ex-io-troubleshooting
 
+----
+
 Contact & Support options
 =========================
 
@@ -53,6 +55,8 @@ For those who wish to contribute to the project, this is by far the best option 
 
     <center><iframe src="https://ptb.discordapp.com/widget?id=713189617066836079&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></center><br>
 
+|hr-dashed|
+
 Raise a support ticket
 ----------------------
 
@@ -65,12 +69,14 @@ The next best way to get our attention is to fill out a support ticket:
 
 You can also send an email to support@dcc-ex.com.
 
+|hr-dashed|
+
 Other options
 -------------
 
 We try to follow FaceBook and JMRI groups, but there are just too many separate groups to see and respond to all the messages.
 
-You can find us on Facebook here:
+You can find some of us on Facebook here:
 
 `Arduino for Model Railroading <https://www.facebook.com/groups/926390087391995/>`_
 

@@ -46,7 +46,7 @@ DCC-EX Model Railroading
     - :ref:`I want to control accessories & run DCC trains <begin/what-to-know:i want to control all my accessories and run trains>`
     - :ref:`begin/what-to-know:i want some extra automated/animated realism`
     - :ref:`begin/what-to-know:i want a fully automated exhibition layout for my club`
-    - :ref:`begin/what-to-know:how does ex-commandstation compare to commercial command stations`
+    - :doc:`/begin/comparison`
 
     If these haven't helped, or you've read them and you are still unsure, then feel free to contact us, preferably through our Discord server where you can chat directly with our team members. Details of this and other contact methods on our :doc:`/support/contact-us` page. 
 

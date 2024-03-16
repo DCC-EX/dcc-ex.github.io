@@ -7,7 +7,7 @@
 WiThrottle Server, Web Server, DCC-EX Native Protocol Explained
 ***************************************************************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button| 
 
 .. sidebar:: 
 

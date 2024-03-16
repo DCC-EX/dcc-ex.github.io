@@ -279,14 +279,6 @@
 ..
 .. ...............................................
 ..
-.. |support-button| raw:: html
-
-   <a href="https://dcc-ex.com/support/index.html#contact-support-options" target="_blank" title="Request help or support"><img src="../_static/images/buttons/support.png" style="height: 33px;" /></a>
-..
-.. |support-button-large| raw:: html
-
-   <a href="https://dcc-ex.com/support/index.html#contact-support-options" target="_blank" title="Request help or support"><img src="../_static/images/buttons/support.png" style="width: 10%; height: 10%;" /></a>
-..
 .. |githublink-ex-turntable| raw:: html
 
    <a class="githublink" href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help">Bug/Feature/Support Requests</a>

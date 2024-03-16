@@ -32,7 +32,7 @@ Looking for some help with EX-Turntable?
 
 To find out how to request assistance click the first button below. To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking the second button:
 
-|support-button| |githublink-ex-turntable-button|
+|support-button-large| |githublink-ex-turntable-button|
 
 .. tip:: 
 

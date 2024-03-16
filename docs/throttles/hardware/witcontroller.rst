@@ -5,7 +5,7 @@
 WiTcontroller (Physical)
 ************************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button| 
 
 .. sidebar:: 
 

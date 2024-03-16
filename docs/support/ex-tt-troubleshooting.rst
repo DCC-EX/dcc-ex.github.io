@@ -7,7 +7,7 @@
 EX-Turntable FAQ and Troubleshooting
 ************************************
 
-|tinkerer| |githublink-ex-turntable-button2|
+|tinkerer| |support-button| |githublink-ex-turntable-button2|
 
 .. sidebar::
 

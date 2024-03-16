@@ -10,7 +10,7 @@
 Adding WiFi
 ***********
 
-|conductor|
+|conductor| |support-button| 
 
 .. sidebar::
 

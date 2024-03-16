@@ -9,7 +9,7 @@
 Using the "DriveAway(tm)" Feature
 **********************************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button| 
 
 .. sidebar:: 
 

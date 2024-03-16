@@ -11,7 +11,7 @@ EX-WebThrottle
 
    `Try It Now <https://DCC-EX.github.io/WebThrottle-EX>`_
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button| 
 
 .. sidebar::
 
@@ -309,6 +309,6 @@ To load the Chrome DevTools to look at logging and be able to manually enter "wr
 Looking for some help with EX-WebThrottle?
 ==========================================
 
-To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking this button:
+To find out how to request assistance click the first button below. To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking the second button:
 
-|githublink-ex-webthrottle-button|
+|support-button-large| |githublink-ex-webthrottle-button|

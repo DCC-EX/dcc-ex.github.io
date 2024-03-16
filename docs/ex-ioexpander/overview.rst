@@ -7,7 +7,7 @@
 Overview and configuration
 **************************
 
-|tinkerer| |githublink-ex-ioexpander-button2|
+|tinkerer| |support-button| |githublink-ex-ioexpander-button2|
 
 .. note:: 
 

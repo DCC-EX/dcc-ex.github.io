@@ -10,7 +10,7 @@
 Purchasing Parts
 ****************
 
-|conductor| 
+|conductor| |support-button| 
 
 .. sidebar::
 

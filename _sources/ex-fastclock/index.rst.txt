@@ -28,9 +28,9 @@ Welcome to the home of |EX-FC|, a fully integrated Fast Clock for |EX-CS|.
 Looking for some help with EX-FastClock?
 ========================================
 
-To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking this button:
+To find out how to request assistance click the first button below. To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking the second button:
 
-|githublink-ex-fastclock-button|
+|support-button-large| |githublink-ex-fastclock-button|
 
 .. tip:: 
 

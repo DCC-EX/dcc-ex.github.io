@@ -15,9 +15,13 @@ The best way to reach us is on our `Discord server <https://discord.gg/PuPnNMp8Q
 
     <center><iframe src="https://ptb.discordapp.com/widget?id=713189617066836079&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></center><br>
 
-You can also find us on Facebook in the "DCC++ and Arduino Model Railroading" private group here:
+|hr-dashed|
+
+You can also find us on Facebook in the "DCC-EX, DCC++ and Arduino Model Railroading" private group here:
 
 https://www.facebook.com/groups/1406785379394934/
+
+|hr-dashed|
 
 and on TrainBoard Here:
 

@@ -10,7 +10,7 @@
 Test Your Setup
 ***************
 
-|conductor|
+|conductor| |support-button| 
 
 .. sidebar::
 

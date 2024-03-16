@@ -7,7 +7,7 @@
 Getting Started
 ***************
 
-|conductor| 
+|conductor| |support-button| 
 
 .. sidebar::
 

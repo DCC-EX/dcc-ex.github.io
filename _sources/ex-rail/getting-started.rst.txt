@@ -7,7 +7,7 @@
 Sequences - an Introduction
 ***************************
 
-|tinkerer| |conductor|
+|tinkerer| |conductor| |support-button| 
 
 .. sidebar:: 
 

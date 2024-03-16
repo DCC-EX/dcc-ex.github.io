@@ -7,7 +7,7 @@
 EX-Toolbox - Overview
 *********************
 
-|tinkerer|
+|tinkerer| |support-button| 
 
 |EX-TB| is a free, open source, Android app to help setup and configure your |EX-CS|. It is intended for setup, configuration, debugging you Command Station rather than continuous use.
 

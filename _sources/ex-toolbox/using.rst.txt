@@ -7,7 +7,7 @@
 EX-Toolbox - Installing and Using
 *********************************
 
-|tinkerer|
+|tinkerer| |support-button| 
 
 .. sidebar::
 

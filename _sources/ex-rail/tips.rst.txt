@@ -7,7 +7,7 @@
 Tips and Techniques
 *******************
 
-|tinkerer| |conductor|
+|tinkerer| |conductor| |support-button| 
 
 .. sidebar:: 
 

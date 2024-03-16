@@ -32,9 +32,9 @@ It can be used to increase the number of available pins on your command station 
 Looking for some help with EX-IOExpander?
 ===========================================
 
-To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking this button:
+To find out how to request assistance click the first button below. To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking the second button:
 
-|githublink-ex-ioexpander-button|
+|support-button-large| |githublink-ex-ioexpander-button|
 
 .. tip:: 
 

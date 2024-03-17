@@ -7,7 +7,7 @@
 Adding and Controlling Accessories
 **********************************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 Once your |EX-CS| is up and running, you will likely want to add the ability to control accessory items such as turnouts/points, signals, and turntables, along with being able to receive input from various sensor types to know where trains are, when buttons on mimic panels are pushed, and so forth.
 

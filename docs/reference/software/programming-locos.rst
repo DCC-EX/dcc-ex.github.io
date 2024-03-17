@@ -7,7 +7,7 @@
 Programming Locos (CVs)
 ***********************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 Requirements
 =============

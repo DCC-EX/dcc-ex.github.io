@@ -7,7 +7,7 @@
 Connecting a Servo Module
 *************************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

@@ -7,7 +7,7 @@
 DCC Track Wiring Information
 ****************************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

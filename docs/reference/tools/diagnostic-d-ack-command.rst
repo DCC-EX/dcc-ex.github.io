@@ -7,7 +7,7 @@
 Diagnostics ``<D ACK>`` Command
 ********************************
 
-|engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

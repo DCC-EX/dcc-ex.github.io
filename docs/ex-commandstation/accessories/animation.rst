@@ -7,7 +7,7 @@
 Automation and Animation
 ************************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 |EX-CS| has been written to include |EX-R|, which enables more than just automation of train control, and can in fact be used to animate almost any aspect of your layout.
 

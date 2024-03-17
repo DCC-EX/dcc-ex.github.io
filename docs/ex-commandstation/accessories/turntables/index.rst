@@ -7,6 +7,8 @@
 Turntables and traversers
 *************************
 
+|conductor| |tinkerer| |engineer| |support-button|
+
 .. note:: 
 
   While |EX-TT| is |NEW-IN-V5|, this section focuses on new functionality supporting turntables/traversers in the same manner as turnouts/points, by creating objects that can be advertised to and controlled by throttles in a similar way. |NOT-IN-PROD-VERSION|.

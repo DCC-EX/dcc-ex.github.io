@@ -7,7 +7,7 @@
 Supported Connections
 **************************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 |EX-CS| supports multiple different connection types depending on the use case.
 

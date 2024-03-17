@@ -7,7 +7,7 @@
 Direct Connection (USB)
 ***********************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 Connection Type: Direct to Command Station
 ==========================================

@@ -7,7 +7,7 @@
 Engine Driver - Features when using the Native Protocol
 *******************************************************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar:: 
 

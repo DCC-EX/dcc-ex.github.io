@@ -7,7 +7,7 @@
 DCC-EX Native Commands Summary Reference
 ****************************************
 
-|engineer|
+|engineer| |support-button|
 
 .. sidebar:: 
 

@@ -7,7 +7,7 @@
 About and History
 *****************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar:: 
 

@@ -7,6 +7,8 @@
 Using other devices
 *******************
 
+|tinkerer| |engineer| |support-button|
+
 |EX-IO| is designed to be a very generic I/O expansion option, and any external device that can work with digital reads/writes or send in analogue data should be able to use the same device driver.
 
 If anyone wishes to utilise the |EX-IO| device driver with a different device, then this can be accomplished provided the correct instructions are sent/received along with the data.

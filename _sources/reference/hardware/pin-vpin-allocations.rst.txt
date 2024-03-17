@@ -7,7 +7,7 @@
 Default Pin/VPin Allocations and Recommendations
 ************************************************
 
-|conductor| |tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

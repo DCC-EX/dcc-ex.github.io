@@ -7,7 +7,7 @@
 Stage 6 - Putting it all Together
 *********************************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar:: 
 

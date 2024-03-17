@@ -7,7 +7,7 @@
 Downloads
 *********
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 Welcome to the central downloads page for all |DCC-EX| software solutions. Please click on the project that you'd like to download.
 

@@ -7,7 +7,7 @@
 EX-RAIL Command Reference
 **************************
 
-|conductor| |tinkerer| |engineer| |support-button| 
+|tinkerer| |engineer| |support-button| 
 
 .. sidebar::
 

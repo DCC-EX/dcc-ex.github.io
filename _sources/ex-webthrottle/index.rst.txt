@@ -7,6 +7,8 @@
 EX-WebThrottle
 **************
 
+|conductor| |tinkerer| |engineer| |support-button|
+
 .. rst-class:: dcclink-right
 
    `Try It Now <https://DCC-EX.github.io/WebThrottle-EX>`_

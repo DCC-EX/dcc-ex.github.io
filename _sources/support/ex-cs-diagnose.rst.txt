@@ -10,7 +10,7 @@
 Diagnosing Basic Problems
 *************************
 
-|conductor| 
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

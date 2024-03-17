@@ -5,7 +5,7 @@
 Lew's Duino Gear duinoNodes
 ***************************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 |NEW-IN-V5-LOGO-SMALL|
 

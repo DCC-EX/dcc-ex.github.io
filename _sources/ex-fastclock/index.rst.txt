@@ -7,7 +7,7 @@
 EX-FastClock
 ************
 
-|tinkerer|
+|tinkerer| |engineer| |support-button|
 
 Welcome to the home of |EX-FC|, a fully integrated Fast Clock for |EX-CS|. 
 

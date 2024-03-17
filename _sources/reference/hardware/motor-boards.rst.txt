@@ -7,7 +7,7 @@
 Supported Motor Drivers
 ***********************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

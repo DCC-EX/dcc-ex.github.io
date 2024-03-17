@@ -7,7 +7,7 @@
 Reference
 *********
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 Glossary
 ========

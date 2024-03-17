@@ -5,7 +5,7 @@
 Engine Driver
 *************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar:: 
 

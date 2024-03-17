@@ -7,7 +7,7 @@
 EX-Toolbox
 ************
 
-|tinkerer|
+|tinkerer| |engineer| |support-button|
 
 Welcome to the home of |EX-TB|, an Android app to help setup and configure your |EX-CS|. 
 

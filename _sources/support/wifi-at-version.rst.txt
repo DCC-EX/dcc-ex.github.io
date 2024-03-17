@@ -10,7 +10,7 @@
 ESP8266 (WiFi Boards) - AT Version Issues and Solutions
 *******************************************************
 
-|conductor| |Tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

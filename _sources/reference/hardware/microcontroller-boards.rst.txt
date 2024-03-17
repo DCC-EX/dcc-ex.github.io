@@ -7,8 +7,8 @@
 Microcontroller Boards
 **********************
 
-|tinkerer| |engineer|
-
+ |tinkerer| |engineer| |support-button|
+ 
 .. sidebar::
 
   .. contents:: On this page

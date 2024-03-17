@@ -7,7 +7,7 @@
 Bluetooth Connection
 **************************
 
-|tinkerer|
+|tinkerer| |engineer| |support-button|
 
 Connection type: Bluetooth
 ==========================

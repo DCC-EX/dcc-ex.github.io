@@ -7,7 +7,7 @@
 Startup Configuration
 **********************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

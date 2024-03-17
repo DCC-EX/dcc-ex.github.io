@@ -3,11 +3,11 @@
 .. include:: /include/include-description.rst
 |EX-CS-LOGO|
 
-|conductor| |tinkerer| |engineer|
-
 *************
 Light signals
 *************
+
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar:: 
 

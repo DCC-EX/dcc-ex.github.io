@@ -7,9 +7,11 @@
 Submit a Support Ticket
 ************************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
-The best way to reach us is on our `Discord server <https://discord.gg/PuPnNMp8Qf>`_. Usually there is always a team member online to help with your issue, and if not you'll get a response within a few hours. If you still want to use email support, you can fill out the following form or send at email to support@dcc-ex.com.
+The best way to reach us is on our `Discord Server </support/index.html#preferred-option-discord>`_. 
+
+Usually there is always a team member online to help with your issue, and if not you'll get a response within a few hours. If you still want to use email support, you can fill out the following form or send at email to support@dcc-ex.com.
 
   .. raw:: html
 

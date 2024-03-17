@@ -8,7 +8,7 @@
 Choosing a Throttle (Controller)
 *********************************
 
-|conductor| 
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

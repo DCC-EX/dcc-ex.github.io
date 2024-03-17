@@ -145,7 +145,7 @@ Facebook
 
 We try to follow FaceBook and JMRI groups, but there are just too many separate groups to see and respond to all the messages.
 
-You can find some of us on Facebook in the "DCC-EX, DCC++ and Arduino Model Railroading" private group. However many of the project team do not use Facebook, so this approach is **not recommended**.
+You can find some of us on Facebook in the "DCC-EX, DCC++ and Arduino Model Railroading" private group. However many of the project team do not use Facebook at all, so this approach is **not recommended**.
 
 `Arduino for Model Railroading <https://www.facebook.com/groups/926390087391995/>`_
 
@@ -156,7 +156,7 @@ There is also another group you you can join here:
 TrainBoard
 ^^^^^^^^^^
 
-You can also find a few of us on TrainBoard. However very few of the project team do not use TrainBoard, so this approach is **not recommended**.
+You can also find a few of us on TrainBoard. However very few of the project team use TrainBoard, so this approach is **not recommended**.
 
 `DCC++ EX TrainBoard Forum <https://www.trainboard.com/highball/index.php?forums/dcc.177/>`_
 

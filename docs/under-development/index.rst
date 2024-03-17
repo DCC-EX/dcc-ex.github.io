@@ -6,7 +6,7 @@
 Features under development
 **************************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 |NOT-IN-PROD-VERSION|
   

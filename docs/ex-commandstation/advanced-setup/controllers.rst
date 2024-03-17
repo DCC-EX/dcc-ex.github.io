@@ -7,7 +7,7 @@
 Choosing a Throttle (Controller) - Advanced
 *******************************************
 
-|conductor|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

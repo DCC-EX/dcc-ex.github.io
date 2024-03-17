@@ -7,7 +7,7 @@
 EX-IOExpander
 *************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 |EX-IO| is a software based I/O expander using an Arduino microcontroller to expand the I/O pins available for |EX-CS| using both digital and analogue pins.
 

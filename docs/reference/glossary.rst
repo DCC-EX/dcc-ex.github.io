@@ -7,7 +7,7 @@
 Glossary
 ********
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. list-table::
     :widths: 25 75

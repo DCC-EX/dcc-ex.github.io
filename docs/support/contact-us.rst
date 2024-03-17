@@ -7,22 +7,20 @@
 Contact Us
 ***********
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
-The best way to reach us is on our `Discord server <https://discord.gg/PuPnNMp8Qf>`_. Usually there is a team member online to help with your issue in English, German and French, and if not you'll get a response within a few hours.
+The best way to reach us is on our  `Discord Server </support/index.html#preferred-option-discord>`_. 
 
-.. raw:: html
-
-    <center><iframe src="https://ptb.discordapp.com/widget?id=713189617066836079&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></center><br>
+Usually there is a team member online to help with your issue in English, German and French, and if not you'll get a response within a few hours.
 
 |hr-dashed|
 
-You can also find us on Facebook in the "DCC-EX, DCC++ and Arduino Model Railroading" private group here:
+You can also find some of us on Facebook in the "DCC-EX, DCC++ and Arduino Model Railroading" private group. However many of the project team do not use Facebook, so this approach is **not recommended**.
 
 https://www.facebook.com/groups/1406785379394934/
 
 |hr-dashed|
 
-and on TrainBoard Here:
+and on TrainBoard. However very few of the project team do not use TrainBoard, so this approach is **not recommended**.
 
 https://www.trainboard.com/highball/index.php?forums/dcc.177/

@@ -7,7 +7,7 @@
 Input and Output Accessories and Expanders
 ******************************************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 There are various different input and output devices you can connect to your |EX-CS|, such as sensors, displays, various types of I/O expanders, and servo controllers.
 

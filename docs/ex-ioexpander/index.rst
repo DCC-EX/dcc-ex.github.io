@@ -7,7 +7,7 @@
 EX-IOExpander
 *************
 
-|tinkerer|
+|tinkerer| |engineer| |support-button|
 
 .. note:: 
 

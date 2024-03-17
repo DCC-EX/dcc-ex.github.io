@@ -7,7 +7,7 @@
 Overview
 *********
 
-|tinkerer| |support-button| |githublink-ex-turntable-button2|
+|tinkerer| |engineer| |support-button| |githublink-ex-turntable-button2|
 
 .. sidebar:: 
   

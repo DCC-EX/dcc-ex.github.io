@@ -10,7 +10,7 @@
 Test Your Setup
 ***************
 
-|conductor| |support-button| 
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

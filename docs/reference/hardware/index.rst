@@ -7,15 +7,16 @@
 Hardware
 ********
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. toctree::
     :maxdepth: 1
     
+    index-decoder
     wire-gauge
     power-supplies
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. toctree::
     :maxdepth: 1
@@ -28,4 +29,3 @@ Hardware
     bluetooth
     index-i2c
     accessory-controllers
-    index-decoder

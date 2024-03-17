@@ -7,7 +7,7 @@
 Using a Serial Monitor
 *************************
 
-|tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

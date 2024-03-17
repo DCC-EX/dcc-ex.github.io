@@ -5,7 +5,7 @@
 Solenoid or coil turnouts/points
 ********************************
 
-|conductor| |tinkerer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar:: 
 

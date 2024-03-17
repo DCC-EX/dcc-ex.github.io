@@ -7,7 +7,7 @@
 EX-CommandStation
 ******************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 
 Frequently Asked Questions and Troubleshooting

@@ -100,7 +100,13 @@ Instructions:
   :alt: Discord open-a-ticket
   :scale: 50%
 
-7. Enter an explanation of your issue or query.  Add as much detail as possible.
+That will create a new 'ticket' channel like this...
+
+.. figure:: /_static/images/discord/discord-ticket.png
+  :alt: Discord ticket
+  :scale: 50%
+
+7. Enter an explanation of your issue or query into the ``message`` at the bottom of the screen.  Please add as much detail as possible.
 
 **At a minimum** you should also add details on the items you are using:
 
@@ -111,8 +117,7 @@ Instructions:
 * How you installed the software (|EX-I| , Arduino IDE, Microsoft Visual Code)
 * Which throttle you are using (|EX-WT|, Engine Driver, WiThrottle, JMRI, etc.)
 
-
-Someone will normally reply to you within a few hours.
+Someone will normally reply to you within a few hours, so check back regularly.
 
 |hr-dashed|
 

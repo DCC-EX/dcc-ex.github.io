@@ -1,0 +1,30 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+.. include:: /include/include-news.rst
+
+:blogpost: true
+:date: 19 March 2024
+:author: peteGSX
+:category: News
+:tags: release, ex-commandstation
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+Announcing EX-CommandStation 5.4.0
+==================================
+
+The |DCC-EX| team are excited to announce a new Production release of |EX-CS| with version 5.4.0 being made available today.
+
+As usual, our next release includes a raft of new features and enhancements to bring even more capability and joy to your digital model railroading experience!
+
+Just check out this list of features and enhancements added since our last release:
+
+- Add a new turntable object so these can be operated from throttles just like turnouts, including |EX-R| commands for automation
+- Added Beta auto reverser and booster mode for the ESP32 platform
+- Add the ability to delay startup of your |EX-CS| to allow peripheral devices to start first
+- Various HAL enhancements, including our native, non-blocking |I2C| capability for the STM32 Nucleo platform
+- Add support for variable DC frequency, using function keys 29 - 31 to set it

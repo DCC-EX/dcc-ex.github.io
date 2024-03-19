@@ -523,7 +523,7 @@ All of these script types must be terminated by either a ``DONE``, ``FOLLOW(id)`
 |hr-dashed|
 
 ``ROUTE_CAPTION( id, "caption" )`` - dynamically change the label of the Route button
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   **New in 5.4.0**
 

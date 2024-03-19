@@ -13,7 +13,7 @@ EX-WebThrottle
 
    `Try It Now <https://DCC-EX.github.io/WebThrottle-EX>`_
 
-|conductor| |tinkerer| |engineer| |support-button| 
+|force-break|
 
 .. sidebar::
 
@@ -21,7 +21,6 @@ EX-WebThrottle
       :depth: 2
       :local:
  
-
 |EX-WT| is a throttle (controller) that can connect to the |EX-CS| directly through the USB port of a computer.
 
 For a video on how to install and use |EX-WT| click below.

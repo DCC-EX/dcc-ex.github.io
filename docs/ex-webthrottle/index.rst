@@ -9,9 +9,9 @@ EX-WebThrottle
 
 |conductor| |tinkerer| |engineer| |support-button|
 
-.. rst-class:: dcclink-right
+.. rst-class:: dcclink
 
-   `Try It Now <https://DCC-EX.github.io/WebThrottle-EX>`_
+   `Run Ex-WebThrottle Now <https://DCC-EX.github.io/WebThrottle-EX>`_
 
 |force-break|
 
@@ -58,14 +58,14 @@ Run or Install EX-WebThrottle
 
 You have an option for how you would like to run |EX-WT|, from the cloud or installed locally on your machine. We recommend using it from the cloud or as a web app, but the choice is yours.
 
-Try it now (Run from the cloud)
+Run it now (Run from the cloud)
 ===============================
 
-Just click the 'Try it now' button below and you will load a web page from our server that will run the web throttle on your machine. You can connect it to the |EX-CS| or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run |EX-CS| in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
+Just click the 'Run Ex-WebThrottle Now' button below and you will load a web page from our server that will run the web throttle on your computer. You can connect it to the |EX-CS| or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run |EX-CS| in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
 
 .. rst-class:: dcclink
 
-   `Try It Now <https://DCC-EX.github.io/WebThrottle-EX>`_
+   `Run Ex-WebThrottle Now <https://DCC-EX.github.io/WebThrottle-EX>`_
 
 |EX-WT| is also a Progressive Web App (PWA). That means you can install it on your computer and run it right from your start menu! If you go into the |EX-WT| settings panel (click the 3 line, or 3 dot, "hamburger menu" at the top left), you will find a "Settings" menu. Click on "Apps" and then select "Install as an App". You can now work offline and always find |EX-WT| with your other Apps!
 

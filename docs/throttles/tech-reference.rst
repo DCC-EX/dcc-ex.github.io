@@ -55,7 +55,7 @@ These broadcast responses should be understood if your controller deals with tur
 - ``<H id [DCC|SERVO|VPIN|LCN] ... [0|1]>`` - When turnouts are closed/thrown, this response is broadcast (see :ref:`reference/software/command-summary-consolidated:turnouts/points`)
 - ``<[q|Q] id>`` - When sensors are deactivated/activated, this response is broadcast (see :ref:`reference/software/command-summary-consolidated:sensors`)
 
-|NOT-IN-PROD-VERSION|
+**New in 5.4.0**
 
 There are now turntable/traverser ``<i id position moving>`` broadcast responses if the new turntable/traverser objects are implemented (see :ref:`reference/software/command-summary-consolidated:turntables/traversers`).
 
@@ -198,6 +198,10 @@ A throttle needs to know which EX-RAIL Automations and Routes it can show the us
   * ``<jA 13 R "description">`` - Returns the description for ID 13, and that it is a route.
   * ``<jA 13 A "description">`` - Returns the description for ID 13, and that it is an automation.
   * ``<jA 13 X>`` - Indicates ID 13 is not found.
+  
+**New in 5.4.0**
+
+Route states are now broadcast from |EX-CS|, allowing throttles to respond when they are active/inactive.
 
 What's the difference?
 ~~~~~~~~~~~~~~~~~~~~~~

@@ -336,6 +336,16 @@ Controlling an Accessory Decoder with ``<a address subaddress activate>``
 
 .. Note:: This general command simply sends the appropriate DCC instruction packet to the main tracks to operate connected accessories. It does not store or retain any information regarding the current status of that accessory.
 
+Some extended accessory decoders designed primarily for signal operation can be controlled with an "aspect".  The following command is designed for that situation.
+
+Controlling an Extended Accessory Decoder with ``<A address aspect>``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* ``A`` (Upper case A) 
+* ``address`` is the primary address of the decoder
+* ``aspect`` Aspect numbers are undefined as standards and will depend upon the decoder, except for 0 which is always considered as stop.
+
+
 Defining (Setting up) a Turnout/Point
 -------------------------------------
 

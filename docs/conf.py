@@ -164,6 +164,7 @@ fontawesome_included = True
 redirects = {
     "about/press/index":"../../about/about.html",
     "about/press/new-name":"https://dcc-ex.com/news/posts/20201001.html",
+    "about/rewrite":"https://dcc-ex.com/news/posts/20201001.html",
     "advanced-setup/index":"../ex-commandstation/advanced-setup/index.html",
     "advanced-setup/supported-microcontrollers/index":"../../advanced-setup/supported-microcontrollers/index.html",
     "advanced-setup/supported-motorboards/index":"../../reference/hardware/motor-boards.html",

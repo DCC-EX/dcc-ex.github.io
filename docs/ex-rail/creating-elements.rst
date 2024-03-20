@@ -368,7 +368,7 @@ Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardw
 
 Sensors with ID's 0 to 255 may be LATCHED/UNLATCHED in your script. If a sensor is latched on by the script, it can only be set off by the script… so ``AT(22) LATCH(22)`` for example effectively latches the sensor 22 on when detected once.
 
-Sensor polling by JMRI is independent of this, and may continue if ``<S>`` commands are used.
+Sensor polling by JMRI is independent of this, and may continue if ``<S>`` commands are used.  However there is now a way of defining JMRI sensors from within EXRAIL - see EXRAIL Command Reference - JMRI_SENSOR.
 
 ----
 

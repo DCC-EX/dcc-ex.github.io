@@ -700,6 +700,19 @@ Signal Objects - Definition and Control
 
 |NEW-IN-V5| Define a DCC accessory signal. Control the colour or aspect of these via the defined ``id``
 
+``DCCX_SIGNAL( Address, redAspect, amberAspect, greenAspect )`` - This defines a signal (with id same as dcc address)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+** New in version 5.4.0 ** 
+
+This defines a signal (with id same as dcc address) that can be operated
+by the RED/AMBER/GREEN commands.   In each case the command uses the signal address to refer to the signal and the aspect chosen depends on the use of the RED AMBER or GREEN command sent. Other aspects may be sent but will require the direct use of the ASPECT command.
+
+The IFRED/IFAMBER/IFGREEN  and ONRED/ONAMBER/ONGREEN commands contunue to operate as for any other signal type. It is important to be aware that use of the ASPECT (see below) or <A> commands will correctly set the IF flags and call the ON handlers if ASPECT is used to set one of the three aspects defined in the DCCX_SIGNAL command. 
+
+Direct use of other aspects does not affect the signal flags. ASPECT and <A> can be used without defining any signal if the flag management or ON event handlers are not required.    
+
+
 |hr-dashed|
 
 ``VIRTUAL_SIGNAL( id )`` - Define a virtual signal
@@ -736,6 +749,18 @@ Signal Objects - Definition and Control
 
 ``RED( signal_id )`` - Set defined signal to Red (See SIGNAL)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|hr-dashed|
+
+``ASPECT( address, aspect )`` - Command for DCC Extended Accessories.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+** New in version 5.4.0 **
+
+This command sends an extended accessory packet to the track, normally used to set
+a signal aspect. Aspect numbers are undefined as standards except for 0 which is
+always considered a stop.
+
 
 |hr-dashed|
 
@@ -1041,6 +1066,16 @@ Sensors/Inputs - Reading and Responding
     :class: in-this-section
 
 |hr-dashed|
+
+``JMRI_SENSOR(vpin [,count])`` - Creates <S> type sensors visible to JMRI.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  ** New in version 5.4.0 ** 
+
+  This Macro causes the creation of JMRI <S> type sensors in a way that is simpler than repeating lines of <S> commands in mySetup.h.
+
+  JMRI_SENSOR(100)   is equenvelant to <S 100 100 1>
+  JMRI_SENSOR(100,16) will create <S> type sensors for vpins 100-115.
 
 ``AT( sensor_id )`` - Causes a sequence to wait until a sensor is active/triggered
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1640,7 +1675,7 @@ Controlling Overload/Shorts
     .. code-block:: cpp
 
       ONOVERLOAD(A)       // the EXRAIL statement to control the event.
-        SCREEN(2,0, "OVERLOAD ON TRACCK A")     // A message to the second screen
+        SCREEN(2,0, "OVERLOAD ON TRACK A")     // A message to the second screen
         PRINT("Overload Detected on Track A")   // Message to system moniter
         SET(27)                                 // Turn on an LED perhaps
         AFTEROVERLOAD(A)
@@ -1793,6 +1828,16 @@ Writes direct to Serial (Serial0/USB)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   |NEW-IN-V5| Writes a message to DCC-EX clients (alias of ``PRINT``)
+
+|hr-dashed|
+
+``MESSAGE( "msg" )`` - Writes a message to all clients
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  ** New in version 5.4.0 ** 
+
+  Writes a message to all serial throttles and all WiThrottles.
+
 
 ----
 

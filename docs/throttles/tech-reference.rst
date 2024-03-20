@@ -55,7 +55,7 @@ These broadcast responses should be understood if your controller deals with tur
 - ``<H id [DCC|SERVO|VPIN|LCN] ... [0|1]>`` - When turnouts are closed/thrown, this response is broadcast (see :ref:`reference/software/command-summary-consolidated:turnouts/points`)
 - ``<[q|Q] id>`` - When sensors are deactivated/activated, this response is broadcast (see :ref:`reference/software/command-summary-consolidated:sensors`)
 
-|NOT-IN-PROD-VERSION|
+**New in 5.4.0**
 
 There are now turntable/traverser ``<i id position moving>`` broadcast responses if the new turntable/traverser objects are implemented (see :ref:`reference/software/command-summary-consolidated:turntables/traversers`).
 
@@ -198,6 +198,31 @@ A throttle needs to know which EX-RAIL Automations and Routes it can show the us
   * ``<jA 13 R "description">`` - Returns the description for ID 13, and that it is a route.
   * ``<jA 13 A "description">`` - Returns the description for ID 13, and that it is an automation.
   * ``<jA 13 X>`` - Indicates ID 13 is not found.
+  
+**New in 5.4.0**
+
+Route states can now also be broadcast via |EX-R|, allowing throttles to respond when they are active/inactive or hidden. Throttle developers should now respond to (or ignore if not implemented) the ``<jB ...>`` broadcasts.
+
+This broadcast is in the format:
+
+``<jB id param>`` where:
+
+- `id` is the ID of the route or automation (obtained via the ``<JA>`` commands above)
+- `param` is one of the following:
+
+  - 0 - indicates the route/automation is currently inactive
+  - 1 - indicates the route/automation is currently active
+  - 2 - indicates the route/automation should be hidden/unavailable
+  - "text" - some text that should be display to the user
+
+  Example broadcasts:
+
+  * ``<jB 13 0>`` - indicates route/automation ID 13 is inactive
+  * ``<jB 13 1>`` - indicates route/automation ID 13 is active
+  * ``<jB 13 2>`` - indicates route/automation ID 13 should be hidden
+  * ``<jB 13 "Route 13">`` - indicates route/automation ID 13's label/description should be set to "Route 13"
+
+To see how these are implemented in |EX-R|, refer to :ref:`ex-rail/ex-rail-command-reference:flow control`.
 
 What's the difference?
 ~~~~~~~~~~~~~~~~~~~~~~

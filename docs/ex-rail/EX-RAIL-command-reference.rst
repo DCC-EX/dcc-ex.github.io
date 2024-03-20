@@ -522,10 +522,10 @@ All of these script types must be terminated by either a ``DONE``, ``FOLLOW(id)`
 
 |hr-dashed|
 
-``ROUTE_CAPTION( id, caption )`` - dynamically change the label of the Route button
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``ROUTE_CAPTION( id, "caption" )`` - dynamically change the label of the Route button
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  **Not available in the current production release.**
+  **New in 5.4.0**
 
   Dynamically change the label of the Route button.
 
@@ -587,10 +587,10 @@ All of these script types must be terminated by either a ``DONE``, ``FOLLOW(id)`
 
 |hr-dashed|
 
-``ROUTE_ACTIVE( id, caption )`` - dynamically activate a Route
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``ROUTE_ACTIVE( id )`` - dynamically activate a Route
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  **Not available in the current production release.**
+  **New in 5.4.0.**
 
   Dynamically flag a Route as active.
 
@@ -600,14 +600,25 @@ All of these script types must be terminated by either a ``DONE``, ``FOLLOW(id)`
 
 |hr-dashed|
 
-``ROUTE_CAPTION( id, caption )`` - dynamically deactivate a Route
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``ROUTE_INACTIVE( id )`` - dynamically deactivate a Route
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  **Not available in the current production release.**
+  **New in 5.4.0.**
 
   Dynamically flag a Route as inactive.
 
   See example in ROUTE_CAPTION.
+
+|force-break|
+
+|hr-dashed|
+
+``ROUTE_HIDDEN( id )`` - hide a Route from display
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  **New in 5.4.0.**
+
+  Dynamically hide a Route.
 
 |force-break|
 

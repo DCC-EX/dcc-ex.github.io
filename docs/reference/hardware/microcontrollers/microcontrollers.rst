@@ -54,6 +54,10 @@ ALL 3v3 microcontrollers require analog inputs to be restricted to no more than 
 STMicroelectronics STM32 NUCLEO series
 ======================================
 
+.. note:: 
+
+  Only NUCLEO-F411RE and NUCLEO-F446RE boards are currently supported by the DCC-EX installer. If you're shopping for a NUCLEO board and want a simple installation experience you need to choose one of those two boards.
+
 STMicroelectronics has a range of ARM based microcontrollers that are generally available, sold from reputable global resellers such as Digi-Key and Mouser, and have exceptional build quality for their price (often lower than clone Arduino Mega models, and presently lower than all genuine Arduino Mega prices.)
 
 Further to this, the NUCLEO series of development boards also provide Arduino Uno compatible header sockets, meaning existing motor (and other) shields can just plug straight in, providing they are 3v3 compatible (see note above).

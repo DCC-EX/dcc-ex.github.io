@@ -622,6 +622,42 @@ All of these script types must be terminated by either a ``DONE``, ``FOLLOW(id)`
 
 |force-break|
 
+|hr-dashed|
+
+``STEALTH`` - include some C++ code in a ROUTE/SEQUENCE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  **New in 5.4.0.**
+
+  SERIOUS ENGINEERS ONLY   |engineer| 
+
+  Permits a certain level of C++ code to be embedded as a single step in an exrail sequence. Serious engineers only.
+
+  Please use this option with great care.  If in doubt ask for assitance.
+
+  Syntax:
+    STEALTH( .. C++ code ..)
+
+.. collapse:: For example: (click to show)
+
+    .. code-block:: cpp
+
+      // run a routine to free any LATCHES that are left on.
+      SEQUENCE(999)
+           STEALTH(  //RESET ANY LATCHES WE TURNED ON
+            for (int i = 1; i <= 255; i++) {
+              if (getFlag(i,LATCH_FLAG)) {    //IF LATCH ON
+              setFlag(i,0,LATCH_FLAG);      //RESET LATCH
+                }
+              }  
+            )
+      RETURN
+
+      then
+      CALL(999) inside your onthrow/onclose sections.
+         
+
+|force-break|
 ----
 
 Conditional Statements

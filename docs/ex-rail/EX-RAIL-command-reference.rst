@@ -759,7 +759,7 @@ Direct use of other aspects does not affect the signal flags. ASPECT and <A> can
 
 This command sends an extended accessory packet to the track, normally used to set
 a signal aspect. Aspect numbers are undefined as standards except for 0 which is
-always considered a stop.
+always considered a stop.  The exact aspect codes to be used must be determined from the documentation for the accessory decoder in use.
 
 
 |hr-dashed|
@@ -1074,8 +1074,8 @@ Sensors/Inputs - Reading and Responding
 
   This Macro causes the creation of JMRI <S> type sensors in a way that is simpler than repeating lines of <S> commands in mySetup.h.
 
-  JMRI_SENSOR(100)   is equenvelant to <S 100 100 1>
-  JMRI_SENSOR(100,16) will create <S> type sensors for vpins 100-115.
+  - JMRI_SENSOR(100)   is equenvelant to <S 100 100 1>
+  - JMRI_SENSOR(100,16) will create <S> type sensors for vpins 100-115.
 
 ``AT( sensor_id )`` - Causes a sequence to wait until a sensor is active/triggered
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1261,6 +1261,27 @@ Output and LED control
 
   Send message to LCN Accessory Network
 
+``CONFIGURE_SERVO(vpin, pos1, pos2, profile)`` - Allows easy definition of LED's connected to PCA9685 boards
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  ** New in version 5.4.0 ** 
+
+  This macro offsers a more convenient way of defining an LED connected to a PCA9685 pin, instead of performing the HAL call in halSetup.h
+
+  - vpin   The VPin the LED is connected to, e.g. 101 for the second pin on the first PCA9685 servo module
+  - pos1 = The desired intensity (brightness) of the LED when turned on, with 0 being off, and 4095 being 100%
+  - pos2 = The desired intensity (brightness) of the LED when turned off
+  - profile = the required profile
+
+e.g. previously in mySetup.h:
+
+    IODevice::configureServo(112,2437,0,PCA9685::NoPowerOff);
+
+now in myAutomation.h
+
+    CONFIGURE_SERVO(111, 2437, 0, PCA9685::NoPoweroFF)
+
+
 ----
 
 Servo Control
@@ -1289,6 +1310,9 @@ Servo Control
 
 ``WAITFOR( pin )`` - The WAITFOR() command instructs EX-RAIL to wait for a servo motion to complete prior to continuing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|hr-dashed|
+
 
   .. collapse:: A couple of examples: (click to show)
 

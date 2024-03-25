@@ -211,7 +211,7 @@ redirects = {
     "throttles/hardware/physical-knobs": "../../throttles/hardware/engine-driver-physical-knobs.html",
     "throttles/physical-knobs": "../throttles/hardware/engine-driver-physical-knobs.html",
     "throttles/software/ex-webthrottle": "../../ex-webthrottle/index.html",
-    "throttles/witcontroller": "../throttles/hardware/witcontroller.html",Use the Source Cont
+    "throttles/witcontroller": "../throttles/hardware/witcontroller.html",
     "throttles/withrottle": "../throttles/software/withrottle.html",
     "turntable-ex/index": "../ex-turntable/index.html",
     "turntable-ex/turntable-ex": "../ex-turntable/index.html",

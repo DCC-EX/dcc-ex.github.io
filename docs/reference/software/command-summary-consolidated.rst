@@ -955,9 +955,19 @@ NOTE: Both the following commands do the same thing. Pick the one that works for
 
   *Response:* ???
 
+  |hr-dashed|
+
+``<A address aspect>`` - Command for DCC Extended Accessories.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+** New in version 5.4.0 ** 
+
+This command sends an extended accessory packet to the track, normally used to set a signal aspect. Aspect numbers are undefined as sdtandards except for 0 which is always considered a stop.
+
+
   *Note*
   
-    This general command simply sends the appropriate DCC instruction packet to the main tracks to operate connected accessories. It does not store or retain any information regarding the current status of that accessory.
+    These general commands simply send the appropriate DCC instruction packet to the main tracks to operate connected accessories. It does not store or retain any information regarding the current status of that accessory.
 
 ----
 

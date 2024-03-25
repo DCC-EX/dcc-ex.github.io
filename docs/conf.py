@@ -106,7 +106,7 @@ html_theme_options = {
     'titles_only': True,
     'collapse_navigation': False,
     # 'navigation_depth': 3
-     'navigation_depth': -1 
+    'navigation_depth': -1
 }
 
 html_context = {
@@ -211,11 +211,11 @@ redirects = {
     "throttles/hardware/physical-knobs": "../../throttles/hardware/engine-driver-physical-knobs.html",
     "throttles/physical-knobs": "../throttles/hardware/engine-driver-physical-knobs.html",
     "throttles/software/ex-webthrottle": "../../ex-webthrottle/index.html",
-    "throttles/witcontroller": "../throttles/hardware/witcontroller.html",
+    "throttles/witcontroller": "../throttles/hardware/witcontroller.html",Use the Source Cont
     "throttles/withrottle": "../throttles/software/withrottle.html",
     "turntable-ex/index": "../ex-turntable/index.html",
     "turntable-ex/turntable-ex": "../ex-turntable/index.html",
-    "under-development/track-manager": "../trackmanager/index.html"
+    "under-development/track-manager": "../trackmanager/index.html",
 }
 
 # Configure sphinx-notfound-page

@@ -926,7 +926,7 @@ Also refer to :ref:`ex-turntable/test-and-tune:ex-rail automation`.
 
   .. note:: 
 
-    For users of our development releases, we highly recommend using our new turntable/traverser commands which allow turntables/traversers to be advertised to throttles similarly to how turnout/point objects are advertised and operated. Refer to :ref:`ex-rail/ex-rail-command-reference:turntable development features not in the current production version`.
+    From version 5.4.0, we highly recommend using our new turntable/traverser commands which allow turntables/traversers to be advertised to throttles similarly to how turnout/point objects are advertised and operated. Refer to :ref:`ex-rail/ex-rail-command-reference:turntable features`.
 
 |hr-dashed|
 
@@ -957,10 +957,10 @@ Also refer to :ref:`ex-turntable/test-and-tune:ex-rail automation`.
 
 |hr-dashed|
 
-Turntable development features not in the current production version
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Turntable features
+^^^^^^^^^^^^^^^^^^
 
-|NOT-IN-PROD-VERSION|
+**New in 5.4.0**
 
 .. contents:: In This Section
     :depth: 4
@@ -1619,8 +1619,6 @@ TrackManager Control
 ``SET_POWER( track, ON/OFF )`` - Enable/Disable power on the selected track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NOT-IN-PROD-VERSION|
-
   Configures the power setting of the selected track, refer also to :doc:`/trackmanager/index`
 
 *Parameters:* |BR|
@@ -1643,8 +1641,6 @@ TrackManager Control
 ``SETFREQ( track, frequency )`` - Enable specific frequency on the selected track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   DC/DCX track settings only.
-
-|NOT-IN-PROD-VERSION|
 
   Configures the frequency setting of the selected track.
 
@@ -1670,8 +1666,6 @@ TrackManager Control
 
 Controlling Overload/Shorts
 ---------------------------
-
-|NOT-IN-PROD-VERSION|
 
 .. contents:: In This Section
     :depth: 4

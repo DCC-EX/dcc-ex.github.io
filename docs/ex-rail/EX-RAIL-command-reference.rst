@@ -957,10 +957,11 @@ Also refer to :ref:`ex-turntable/test-and-tune:ex-rail automation`.
 
 |hr-dashed|
 
-Turntable development features not in the current production version
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Turntable development features
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NOT-IN-PROD-VERSION|
+The following features are only available if variable IO_NO_HAL is defined using:
+  #define IO_NO_HAL
 
 .. contents:: In This Section
     :depth: 4
@@ -1619,8 +1620,6 @@ TrackManager Control
 ``SET_POWER( track, ON/OFF )`` - Enable/Disable power on the selected track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NOT-IN-PROD-VERSION|
-
   Configures the power setting of the selected track, refer also to :doc:`/trackmanager/index`
 
 *Parameters:* |BR|
@@ -1643,8 +1642,6 @@ TrackManager Control
 ``SETFREQ( track, frequency )`` - Enable specific frequency on the selected track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   DC/DCX track settings only.
-
-|NOT-IN-PROD-VERSION|
 
   Configures the frequency setting of the selected track.
 
@@ -1670,8 +1667,6 @@ TrackManager Control
 
 Controlling Overload/Shorts
 ---------------------------
-
-|NOT-IN-PROD-VERSION|
 
 .. contents:: In This Section
     :depth: 4

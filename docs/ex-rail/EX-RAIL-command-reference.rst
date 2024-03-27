@@ -227,8 +227,8 @@ These commands can be run interactively via the serial console or over Ethernet/
 
 |hr-dashed|
 
-``</ KILL task_id>`` - Kills a currently running script task by ID (use to list task IDs)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``</ KILL task_id>`` - Kills a currently running script task by ID
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |hr-dashed|
 

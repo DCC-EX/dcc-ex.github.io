@@ -95,12 +95,13 @@ Operation
 
    EX-WebThrottle - Menu
 
-|EX-WT| has four pages which you can switch between using the hamburger menu button (three horizontal bars) on the top left of the screen.
+|EX-WT| has four pages which you can switch between using the hamburger menu button (three horizontal bars) on the top left of the screen, or direct icon buttons at the top of the screen.
 
 - Throttle *(the default page)*
 - CV Programmer
-- Locomotives
-- Function Maps
+- Routes/Automation
+- Locomotives (local)
+- Function Maps (local)
 - Settings
 
 |force-break|
@@ -191,6 +192,20 @@ Emulator
 To use the program in to emulate an |EX-CS|, without actually connecting to a real one, click on the ``Serial`` dropdown button and select ``Emulator`` to run in emulator mode, then follow to instructions above from ``Connect``.
 
 .. note:: Not all Command Station functions are fully supported in the emulator yet. This means that although the software works, not all the responses will be shown in the debug console. This will be completed in a later release.
+
+----
+
+Routes/Automation
+-----------------
+
+.. figure:: /_static/images/ex-webthrottle/routes-automation.png
+   :alt: EX-WebThrottle - Routes/Automation
+   :scale: 40%
+   :align: right
+
+Once connected to a |EX-CS|, The **Routes/Automation** page allows you to activate any of the Routes or Automations that have been store in your |EX-CS|, if any.
+
+Clicking the run button on a Route/Automation will activate it.
 
 ----
 

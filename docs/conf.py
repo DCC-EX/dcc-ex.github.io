@@ -47,7 +47,8 @@ extensions = [
     'sphinx_design',
     'sphinx_rtd_dark_mode',
     'sphinx_reredirects',
-    'notfound.extension'
+    'notfound.extension',
+    'sphinx_last_updated_by_git'
 ]
 
 autosectionlabel_prefix_document = True

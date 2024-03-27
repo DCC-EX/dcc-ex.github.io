@@ -1833,8 +1833,34 @@ CommandStation Functions
 
     .. code-block:: cpp
 
+      // Defining and Setting up Devices like OLED & LCD displays on a I2C bus
+       #include "IODevice.h"
+       #include "IO_HALDisplay.h"  // Auxiliary display devices (LCD/OLED) {Type, Screen#, address, density}
+      // Create a 20x2 LCD display devices as display# number 0, Change display# as needed
+       HAL(HALDisplay<LiquidCrystal_I2C>, 0, 0x27, 20, 2) // LCD with 20 Char & 2 lines
+      // Create a 20x4 LCD display devices as display number 0
+       HAL(HALDisplay<LiquidCrystal_I2C>, 0, 0x27, 20, 4) // LCD with 20 Char & 4 lines
+
+      // Create various OLED display devices as Screen# number 0, Change Screen# number as needed
+       HAL(HALDisplay<OLED>, 0, 0x3c, 128, 32) // OLED 0.96" display
+       HAL(HALDisplay<OLED>, 0, 0x3c, 128, 64) // OLED 0.96" display
+       HAL(HALDisplay<OLED>, 0, 0x3c, 132, 64) // OLED 1.3" display
+  
+      // PCA9685 Servo Signal Boards 3 & 4
+      // Create Two more Servo controller numbered (132-147) & (148-163) etc., on I2C addr 0x42 & Ox43 & 0x44 etc
+      // Number of VPINs=16 numbered (132-147) I2C address of module=0x42
+        HAL(PCA9685, 133, 16, 0x42) // Must Solder A1 and uncomment this line
+      // Number of VPINs=16 numbered (148-163) I2C address of module=0x43
+        HAL(PCA9685, 148, 16, 0x43) // Must Solder A0 & A1 and uncomment this line
+
+      // EX-IO Expanders
       // Define a Mega2560 based EX-IOExpander device starting at Vpin 800 at the default address of 0x65
-      HAL(EXIOExpander, 800, 62, 0x65)
+        HAL(EXIOExpander, 800, 62, 0x65)
+
+      // DFPlayer mini MP3 Sound player
+        #include "IO_DFPlayer.h"// MP3 sound player
+      // Define a Mega2560 based DFPLayer device with vpin id of 1500 with 20 sound files connected on Serial1
+        HAL(DFPlayer, 1500, 20, Serial1) // create device 1500, 20 files, on Mega Tx1 Rx1, D18, D19  1K Ohm on D18   
 
 |force-break|
 

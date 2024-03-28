@@ -47,6 +47,7 @@ extensions = [
     'sphinx_design',
     'sphinx_rtd_dark_mode',
     'sphinx_reredirects',
+    # 'sphinx_last_updated_by_git',
     'notfound.extension'
 ]
 

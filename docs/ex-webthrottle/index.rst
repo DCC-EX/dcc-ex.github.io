@@ -95,11 +95,12 @@ Operation
 
    EX-WebThrottle - Menu
 
-|EX-WT| has four pages which you can switch between using the hamburger menu button (three horizontal bars) on the top left of the screen, or direct icon buttons at the top of the screen.
+|EX-WT| has five pages which you can switch between using the hamburger menu button (three horizontal bars) on the top left of the screen, or direct icon buttons at the top of the screen.
 
 - Throttle *(the default page)*
 - CV Programmer
 - Routes/Automation
+- Turnouts/Points
 - Locomotives (local)
 - Function Maps (local)
 - Settings
@@ -203,9 +204,19 @@ Routes/Automation
    :scale: 40%
    :align: right
 
-Once connected to a |EX-CS|, The **Routes/Automation** page allows you to activate any of the Routes or Automations that have been store in your |EX-CS|, if any.
+Once connected to a |EX-CS|, The **Routes/Automation** page allows you to activate any of the Routes or Automations that have been stored in your |EX-CS|, if any.
 
 Clicking the run button on a Route/Automation will activate it.
+
+----
+
+
+Turnouts/Points
+-----------------
+
+Once connected to a |EX-CS|, The **Turnouts/Points** page allows you to throw or close any of the Turnouts/Points that have been stored in your |EX-CS|, if any.
+
+Clicking either the :guilabel:`Throw` or :guilabel:`Close` buttons on a Turnout/Point will change it.
 
 ----
 
@@ -244,22 +255,22 @@ You can use the ``Common CVs`` drop list to select a CV. The approprate value wi
 Locomotives
 -----------
 
-The **Locomotives** page allows you store a roster of locomotives.
+The **Locomotives** page allows you store a 'roster' of locomotives.  This is stored in the individual PC/computer, and cannot be accessed by any other computer, unless exported and imported into that computer.  The 'roster' cannot be accessed by any mobile device (phone app).
 
 :dcc-ex-red-bold-italic:`Use of this is not recommended as it may not be available in the new version of EX-Toolbox currently being developed.`
 
-.. note:: This is different to the roster that can be stored in the |EX-CS| itself.
+.. note:: This is very different to the roster that can be stored in the |EX-CS| itself.
 
 ----
 
 Function Maps
 -------------
 
-The **Function Maps** page allows you store collections of Function Maps.
+The **Function Maps** page allows you store collections of Function Maps.  This is stored in the individual PC/computer, and cannot be accessed by any other computer, unless exported and imported into that computer.  The 'functions maps' cannot be accessed by any mobile device (phone app).
 
 :dcc-ex-red-bold-italic:`Use of this is not recommended as it may not be available in the new version of EX-Toolbox currently being developed.`
 
-.. note:: This is different to the functions stored with roster entries that can be stored in the |EX-CS| itself.
+.. note:: This is very different to the functions stored with roster entries that can be stored in the |EX-CS| itself.
 
 ----
 

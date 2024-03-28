@@ -866,8 +866,8 @@ html[data-theme='dark'] .new-in-v5 {
 @media not screen and (max-width: 900px) {
   div.rst-footer-buttons {
     position: fixed;
-    bottom:5px;
-    width:350px;
+    bottom: 5px;
+    width: 250px;
     background: #c9c9c999;
     padding: 10px; 
     border-radius: 10px;

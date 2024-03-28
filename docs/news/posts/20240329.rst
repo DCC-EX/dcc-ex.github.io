@@ -3,7 +3,7 @@
 .. include:: /include/include-news.rst
 
 :blogpost: true
-:date: 19 March 2024
+:date: 29 March 2024
 :author: peteGSX
 :category: News
 :tags: release, ex-commandstation

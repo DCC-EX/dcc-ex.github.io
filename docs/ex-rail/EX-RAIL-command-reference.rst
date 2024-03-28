@@ -1280,7 +1280,7 @@ e.g. previously in mySetup.h:
 
 now in myAutomation.h
 
-    CONFIGURE_SERVO(111, 2437, 0, PCA9685::NoPoweroFF)
+    CONFIGURE_SERVO(111, 2437, 0, PCA9685::NoPowerOff)
 
 
 ----
@@ -1908,8 +1908,17 @@ CommandStation Functions
 
     .. code-block:: cpp
 
-      // Define a Mega2560 based EX-IOExpander device starting at Vpin 800 at the default address of 0x65
+      // Define a third PCA9685 device following the first two default devices at Vpin 132 and I2C address 0x42
+      HAL(PCA9685, 132, 16, 0x42)
+      
+      // Define a third MCP23017 device following the first two default devices at Vpin 196 and I2C address 0x22
+      HAL(MCP23017, 196, 16, 0x22)
+      
+      // Define a Mega2560 based EX-IOExpander device starting at Vpin 800 at the default I2C address of 0x65
       HAL(EXIOExpander, 800, 62, 0x65)
+      
+      // Define an EX-Turntable device at the default Vpin 600 and I2C address of 0x60
+      HAL(EXTurntable, 600, 1, 0x60)
 
 |force-break|
 

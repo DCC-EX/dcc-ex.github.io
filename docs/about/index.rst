@@ -19,4 +19,3 @@ Find out about who we are as well as a little history of how this all came about
 
     licence
     roadmap
-    site-map

@@ -438,7 +438,9 @@ The READ_LOCO reads the loco address from the PROG track and the current route t
 
 ----
 
-Next Steps - Detailed Reference
-===============================
+Next Steps
+==========
 
-The previous pages have only been a small taste of what is possible with |EX-R|. See the :doc:`/ex-rail/EX-RAIL-command-reference` or click the :guilabel:`Next` button to explore the full capabilities of |EX-R|.
+The previous pages have only been a small taste of what is possible with |EX-R|.
+
+To continue to learn more about it, click the :guilabel:`Next` button to see some more :doc:`/ex-rail/tips`, and you can also see the :doc:`/ex-rail/EX-RAIL-command-reference` to explore the full capabilities.

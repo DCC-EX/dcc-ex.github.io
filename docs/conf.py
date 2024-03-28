@@ -47,6 +47,7 @@ extensions = [
     'sphinx_design',
     'sphinx_rtd_dark_mode',
     'sphinx_reredirects',
+    # 'sphinx_last_updated_by_git',
     'notfound.extension'
 ]
 
@@ -170,7 +171,6 @@ redirects = {
     "advanced-setup/supported-motorboards/index": "../../reference/hardware/motor-boards.html",
     "automation/EX-RAIL-intro": "../ex-rail/index.htm",
     "automation/index": "../ex-rail/index.htm",
-    "begin/*": "../ex-commandstation/get-started/index.html",
     "developer-reference/api": "../reference/developers/api.html",
     "developer-reference/api": "../reference/developers/api.html",
     "developer-reference/index": "../reference/developers/index.html",

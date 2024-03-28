@@ -1,0 +1,7 @@
+{% extends '!footer.html' %} 
+  {% block extrafooter %} 
+    {{super}}
+    <div class="topOfPage">
+    <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
+    </div>
+  {% endblock %}

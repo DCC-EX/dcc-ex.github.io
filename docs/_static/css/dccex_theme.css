@@ -866,8 +866,8 @@ html[data-theme='dark'] .new-in-v5 {
 @media not screen and (max-width: 900px) {
   div.rst-footer-buttons {
     position: fixed;
-    bottom:5px;
-    width:350px;
+    bottom: 5px;
+    width: 250px;
     background: #c9c9c999;
     padding: 10px; 
     border-radius: 10px;
@@ -883,6 +883,32 @@ html[data-theme='dark'] .new-in-v5 {
     padding-bottom: 40px;
     font-size: 80% !important;
   }
+
+  div.topOfPage {
+    position: fixed;
+    bottom:30px;
+	  right: 95px;
+    width:52px;
+    background: #c9c9c999;
+    padding: 5px; 
+    border-radius: 10px;
+    border-color: white !important;
+    border: 4px solid;
+  }
+  html[data-theme='dark'] div.topOfPage {
+    border-color: #141414 !important;
+    background: #c9c9c92e;
+  }
+
+  .topOfPageBtn {
+     border: 1px solid rgba(0,0,0,.1);
+     border-radius: 2px;
+     color: #404040!important;
+  }
+  html[data-theme='dark'] .topOfPageBtn {
+    background-color: #17181c !important;
+    color: #c1c1c1 !important;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -890,4 +916,7 @@ html[data-theme='dark'] .new-in-v5 {
     display:block;
     font-size: 80% !important;
   }
+  /* div.topOfPage {
+    display:block;
+  } */
 }

@@ -206,17 +206,25 @@ Routes/Automation
 
 Once connected to a |EX-CS|, The **Routes/Automation** page allows you to activate any of the Routes or Automations that have been stored in your |EX-CS|, if any.
 
-Clicking the run button on a Route/Automation will activate it.
+Clicking the :guilabel:`Set` button on a Route/Automation will activate it.
+
+|force-break|
 
 ----
-
 
 Turnouts/Points
 -----------------
 
+.. figure:: /_static/images/ex-webthrottle/turnouts.png
+   :alt: EX-WebThrottle - Turnouts/Points
+   :scale: 40%
+   :align: right
+
 Once connected to a |EX-CS|, The **Turnouts/Points** page allows you to throw or close any of the Turnouts/Points that have been stored in your |EX-CS|, if any.
 
 Clicking either the :guilabel:`Throw` or :guilabel:`Close` buttons on a Turnout/Point will change it.
+
+|force-break|
 
 ----
 

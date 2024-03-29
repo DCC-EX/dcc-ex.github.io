@@ -9,6 +9,8 @@ Teensy
 
 |tinkerer| |engineer|
 
+**As of version 5.4.0, this is now deprecated, see :doc:`/news/posts/20240328`**
+
 The Teensy 3.x/4.x Series by PJRC are next generation ARM-based microcontrollers. They have loads of RAM, a faster clock speed and a host of add-ons. 
 
 It's teensy because it is even smaller than a Nano, but it is even more powerful than a Nano Every. This is not an Arduino, it is from a company called PJRC. Since they use different processors, there are a lot of changes in the software that load onto the teensy when you select that as your processor.

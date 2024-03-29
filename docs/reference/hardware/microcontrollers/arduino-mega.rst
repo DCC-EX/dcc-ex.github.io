@@ -3,9 +3,9 @@
 .. include:: /include/include-hardware.rst
 |EX-CS-LOGO|
 
-*******************
-Arduino Mega Setup
-*******************
+************
+Arduino Mega
+************
 
 |conductor|
 

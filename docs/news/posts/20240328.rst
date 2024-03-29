@@ -17,9 +17,10 @@
 Announcing EX-CommandStation 5.4.0
 ==================================
 
-The |DCC-EX| team are excited to announce a new Production release of |EX-CS| with version 5.4.0 being made available today.
+The |DCC-EX| team are excited to announce a new Production release of |EX-CS| with version 5.4.0 being made available today. As usual, this release includes a raft of **new features and enhancements** to bring even more capability and joy to your digital model railroading experience! We're also announcing changes to our **supported hardware platforms**.
 
-As usual, our next release includes a raft of new features and enhancements to bring even more capability and joy to your digital model railroading experience!
+New features and enhancements
+-----------------------------
 
 Just check out this list of features and enhancements added since our last release:
 
@@ -29,3 +30,47 @@ Just check out this list of features and enhancements added since our last relea
 - Various HAL enhancements, including our native, non-blocking |I2C| capability for the STM32 Nucleo platform
 - Add support for variable DC frequency with TrackManager, using function keys 29 - 31 to set it
 - Add support to broadcast route/automation state changes to throttles
+
+Changes to supported hardware platforms
+---------------------------------------
+
+Up until now, we have continued to recommend the tried and true Arduino Mega2560 as our preferred and recommended hardware platform for |EX-CS|, with the Uno and Nano backing it up as alternatives, albeit with less I/O and resources available compared with the Mega2560.
+
+Along with our :doc:`/news/posts/20230807` announcement back in August 2023, we also announced some new Beta hardware platforms including the ESP32-WROOM and select STMicroelectronics Nucleo boards. These boards are now largely moving into full support as they have proven to be reliable and provide a lot more "bang for your buck" in terms of capabilities and future proofing your |EX-CS| with the continuing new features being added.
+
+Moving forwards, we **highly recommend new users seriously consider these newer, more powerful ESP32 or Nucleo boards** as the pricing is competitive even compared with clone Mega2560 options, and will scale to much larger layouts and allow you to keep up with the development of the |DCC-EX| ecosystem.
+
+The **Arduino Uno and Nano**, however, are **no longer recommended** as good platforms as they are just too limited in terms of resources and capability, and will not work with some of our new features such as :doc:`/trackmanager/index` or I/O expanders. These can still be handy as dedicated programming only devices with |JMRi| or for simple Christmas layouts of course, but don't expect to be using any of our new features on these devices.
+
+Further to the above, we now have a large number of platforms to support, with a number of these no longer available to the core |DCC-EX| team for testing and validation. As a result, we are announcing the **deprecation of support for some platforms**, and these will no longer function with |EX-CS| when we release our next major version 6.0.0. Support for these right now is limited to ensuring the software compiles, as no testing is possible by the team.
+
+Read below for a summary of the changes to our hardware platforms.
+
+Supported and recommended platforms
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+New users should choose one of these platforms to make use of all features and capabilities.
+
+- (link to new page here) ESP32 moves from Beta into full support - note this is for devices using the **ESP32-WROOM CPU only**, other variants such as C3, S3, etc. are not supported
+- (link to new page here) STMicroelectronics Nucleo boards move from Beta into full support for DCC only (F411RE, F446RE, F401RE, F429ZI, and F439ZI) - note that DC mode and Ethernet support for these is still in Beta
+- :doc:`/reference/hardware/microcontrollers/arduino-mega` - continues as supported and recommended, but RAM is limited for large layouts with lots of accessories
+
+No longer recommended platforms
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+No new features will be available for these, but they can still be handy for dedicated programming or small demo layouts. Note that an ESPduino32 has the same format as an Uno, is probably less expensive, and has full capabilities including WiFi.
+
+- :doc:`/reference/hardware/microcontrollers/arduino-uno`
+- :doc:`/reference/hardware/microcontrollers/nano`
+
+Deprecated platforms
+^^^^^^^^^^^^^^^^^^^^
+
+The team no longer has hardware to test these boards, so we ensure the software compiles for them only, and no testing is performed. They will be removed when we release 6.0.0.
+
+- SAMD21
+- Arduino M0
+- Arduino Mega328
+- Arduino Uno WiFi R2
+- :doc:`/reference/hardware/microcontrollers/nano-every`
+- :doc:`/reference/hardware/microcontrollers/teensy`

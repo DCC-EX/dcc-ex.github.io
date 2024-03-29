@@ -3,11 +3,13 @@
 .. include:: /include/include-hardware.rst
 |EX-CS-LOGO|
 
-*******************
+**********
 Nano Every
-*******************
+**********
 
 |tinkerer|
+
+**As of version 5.4.0, this is now deprecated, see :doc:`/news/posts/20240328`**
 
 .. image:: /_static/images/microcontrollers/nanoevery_box.jpg
    :alt: Arduino

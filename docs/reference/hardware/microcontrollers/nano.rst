@@ -3,11 +3,13 @@
 .. include:: /include/include-hardware.rst
 |EX-CS-LOGO|
 
-******************
-Arduino Nano Setup
-******************
+************
+Arduino Nano
+************
 
 |tinkerer|
+
+**As of version 5.4.0, this is no longer a recommended option, see :doc:`/news/posts/20240328`**
 
 .. sidebar::
 

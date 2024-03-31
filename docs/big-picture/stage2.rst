@@ -112,11 +112,27 @@ Re-upload the EX-CommandStation software
 Using EX-Installer
 ^^^^^^^^^^^^^^^^^^
 
-#. Place your 'myAutomation.h' file in the ``CommandStation-EX`` subfolder of wherever you extracted the |EX-I| files.
-#. Re-Run |EX-I|
-#. Select the same options that you originally chose and upload
+The |EX-I| can make use of the config files from a 'saved' location.  
 
-The Roster will be automatically loaded with the |EX-CS| software.
+*If you have previously saved the config files...*
+
+   At the end of the install process it will ask you if you want to save the config files. If you have said ``Yes`` (and put them in a folder well away from the EX-Installer folder) you can place your 'myAutomation.h' in that folder and rerun the |EX-I|. the |EX-I| will ask if you want to use existing config files. Just point it to where you saved and edited the file.
+
+   The Roster will be automatically loaded with the |EX-CS| software.
+
+*If you have not saved the config files...*
+
+   Re-run the |EX-I|. Select the same options that you originally chose *and* also select the ``create myAutomation.h`` and the ``Advanced config`` options.  This will show a myAutomation.h window on the following page. Copy and paste your roster lines into this window then ``Compile and load`` the software.
+
+   After the load finishes you will be asked to 'backup/save' the config files. Say `Yes` and put them in a folder well away from the EX-Installer folder. You can can then make direct edits to the file there, and when you next run |EX-I|, it asks if you want to use existing config files. Just point it to where you saved and edited the file.
+
+   The Roster will be automatically loaded with the |EX-CS| software.
+
+More information on the config files can be found on the :doc:`/ex-installer/managing-config-files` page.
+
+.. warning:: 
+
+   Never edit any files in the EX-Installer folder. Editing any files in the EX-Installer folder will **always** cause |EX-I| to fail.
 
 Using the Arduino IDE
 ^^^^^^^^^^^^^^^^^^^^^

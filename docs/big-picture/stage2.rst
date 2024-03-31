@@ -124,9 +124,9 @@ After the load finishes you will be asked to 'backup/save' the config files. Say
 
 More information on the config files can be found on the :doc:`ex-installer/managing-config-files` page.
 
-.. warning:: Never edit any files in the EX-Installer folder
+.. warning:: 
 
-   Editing any files in the EX-Installer folder will **always** cause |EX-I| to fail.
+   Never edit any files in the EX-Installer folder. Editing any files in the EX-Installer folder will **always** cause |EX-I| to fail.
 
 Using the Arduino IDE
 ^^^^^^^^^^^^^^^^^^^^^

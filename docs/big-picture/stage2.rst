@@ -114,13 +114,19 @@ Using EX-Installer
 
 The |EX-I| can make use of the config files from a 'saved' location.  
 
-At the end of the install process it will ask you if you want to save the config files. If you have said ``Yes`` (and put them in a folder well away from the EX-Installer folder) you can place your 'myAutomation.h' in that folder and rerun the |EX-I|. the |EX-I| will ask if you want to use existing config files. Just point it to where you saved and edited the file.
+*If you have previously saved the config files...*
 
-The Roster will be automatically loaded with the |EX-CS| software.
+   At the end of the install process it will ask you if you want to save the config files. If you have said ``Yes`` (and put them in a folder well away from the EX-Installer folder) you can place your 'myAutomation.h' in that folder and rerun the |EX-I|. the |EX-I| will ask if you want to use existing config files. Just point it to where you saved and edited the file.
 
-If you have not saved the config files, rerun the |EX-I| Select the same options that you originally chose and upload and also select the ``create my Automation.h`` and the ``Advanced config`` options.  This will show a window on the following page. copy and paste your roster lines into this window and ``Complie and load`` the software.
+   The Roster will be automatically loaded with the |EX-CS| software.
 
-After the load finishes you will be asked to 'backup/save' the config files. Say `Yes` and put them in a folder well away from the EX-Installer folder. You can can then make direct edits to the file there, and when you next run |EX-I|, it asks if you want to use existing config files. Just point it to where you saved and edited the file.
+*If you have not saved the config files...*
+
+   Re-run the |EX-I|. Select the same options that you originally chose *and* also select the ``create myAutomation.h`` and the ``Advanced config`` options.  This will show a myAutomation.h window on the following page. Copy and paste your roster lines into this window then ``Compile and load`` the software.
+
+   After the load finishes you will be asked to 'backup/save' the config files. Say `Yes` and put them in a folder well away from the EX-Installer folder. You can can then make direct edits to the file there, and when you next run |EX-I|, it asks if you want to use existing config files. Just point it to where you saved and edited the file.
+
+   The Roster will be automatically loaded with the |EX-CS| software.
 
 More information on the config files can be found on the :doc:`/ex-installer/managing-config-files` page.
 

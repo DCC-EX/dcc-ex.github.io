@@ -122,7 +122,7 @@ If you have not saved the config files, rerun the |EX-I| Select the same options
 
 After the load finishes you will be asked to 'backup/save' the config files. Say `Yes` and put them in a folder well away from the EX-Installer folder. You can can then make direct edits to the file there, and when you next run |EX-I|, it asks if you want to use existing config files. Just point it to where you saved and edited the file.
 
-More information on the config files can be found on the :doc:`ex-installer/managing-config-files` page.
+More information on the config files can be found on the :doc:`/ex-installer/managing-config-files` page.
 
 .. warning:: 
 

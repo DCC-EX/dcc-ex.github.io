@@ -328,6 +328,25 @@ Or for any 3v3 microcontroller such as STM32 Nucleo models, but not the ESPDuino
 
 Where `YOUR_PIN_A` and `YOUR_PIN_B` are the pins you have jumpered to the Sense pins for channel A and B respectively on the top EX-MotorShield8874.
 
-Note that on Nucleo-144 motherboards, D7 and D8 are incapable of PWM for the Brake for channel B on either the first or second shield. PWM is used for DC PWM output **and** for managing DCC overload situations for the EX-MotorShield8874. As such it is recommended these be BRAKE pins both be isolated by cutting the pads, and then jumpered to other PWM capable pins such as PE12 and PE14. More details to follow.
+Note that on Nucleo-144 motherboards, D7 and D8 are incapable of PWM for the Brake for channel B on either the first or second shield. PWM is used for DC PWM output **and** for managing DCC overload situations for the EX-MotorShield8874. As such it is recommended that the first board in the stack use the default Channel A BRAKE of D9, and the ALT Channel B BRAKE of D6.
+
+Then on the top EX-MotorShield8874 set all pins except the BRAKE pins for Channel A and B to the ALT settings. For this to work you will also need to disable the Serial6 port as those appear on Arduino D0(PG9)/D1(PG14) which we will use for the ALT FAULT pins. Find the following line in DCCTimerSTM32.cpp and comment it out thusly:
+
+.. code-block:: cpp
+
+   //HardwareSerial Serial6(PG9, PG14);  // Rx=PG9, Tx=PG14 -- USART6
+
+The BRAKE pins both need to be isolated by cutting the default setting on the pads, and then solder jumpered to other PWM capable pins such as PE12 and PE14. This requires careful soldering of jumpers to the centre pad of the BRAKE jumper pads for both Channel A and B on the top EX-MotorShield8874. We suggest the use of male-male dupont jumpers where you cut one end off, strip the wires and tin with solder to attached to the centre pad. Then use the male dupont pin to connect to PE12/PE13. The motor driver configuration would then look like this:
+
+.. code-block:: cpp
+
+  // Dual stacked EX-MotorShield8874s
+  // For Nucleo-F429ZI/F439ZI
+  #define MOTOR_SHIELD_TYPE EX8874_DUAL_STACKED_ETH
+  #define EX8874_DUAL_STACKED_ETH F("EX8874_DUAL_STACKED_ETH"),\
+  new MotorDriver( 3, 12, UNUSED_PIN, 9, A0, 1.27, 5000, A4), \
+  new MotorDriver(11, 13, UNUSED_PIN, 6, A1, 1.27, 5000, A5), \
+  new MotorDriver( 2, 10, UNUSED_PIN, 7, A2, 1.27, 5000, YOUR_PIN_A), \
+  new MotorDriver( 5,  4, UNUSED_PIN, 6, A3, 1.27, 5000, YOUR_PIN_B)
 
 For more detailed and technical information, follow the link to the `EX-MotorShield8874 on Github <https://github.com/DCC-EX/EX-MotorShield8874>`_ It also includes the schematic and the KiCad project files.

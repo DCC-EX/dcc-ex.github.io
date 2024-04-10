@@ -1177,7 +1177,7 @@ Test if analog pin reading is greater than or equal to value (>=).
 ``IFLT( sensor_id, value )`` - Test if analog pin reading is less than value
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  Test if analog pin reading is less than value (<).
+Test if analog pin reading is less than value (<).
 
 |hr-dashed|
 
@@ -1280,6 +1280,19 @@ Output and LED control
 
 ``FADE( pin, value, ms )`` - Fade an LED on a servo driver to given value taking given time
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|hr-dashed|
+
+``BLINK( pin, onMs, offMs )`` - Blink an output pin
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This will start a pin/Vpin blinking until such time as it is ``SET``, ``RESET``, or set via a signal operation.
+
+`onMs` is the time for the pin to be on in milliseconds, and `offMs` is the off time in milliseconds.
+
+.. code-block:: 
+
+  BLINK(22, 500, 500) // Blink pin 22 at half second intervals
 
 |hr-dashed|
 

@@ -39,6 +39,7 @@ The commands available are:
   The ``SIGNAL(...)`` function is used with LED's that have the anode + leg connected to a positive v+ source.
 
   The ``SIGNALH(..)`` function is used with LED's that have the anode + leg connected to the output pin of a I/O device like a PCA9685 board.  
+
   Always double check that you have the appropriate Ohm Resistor(s) on the device or add them to the LED's as needed.
 
 What if I don't have three aspect signals?

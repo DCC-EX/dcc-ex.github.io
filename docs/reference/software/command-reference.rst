@@ -624,7 +624,7 @@ WRITE CV BYTE TO ENGINE DECODER ON MAIN TRACK
 Writes, without any verification, a Configuration Variable BYTE to the decoder of an engine on the main operations track. 
 
 
-* Write CV BYTE Format is: ``<w cab cv valule>``  
+* Write CV BYTE Format is: ``<w cab cv value>``  
 * ``cab`` : The short (1-127) or long (128-10293) address of the engine decoder  
 * ``cv`` : The number of the Configuration Variable memory location in the decoder to write to (1-1024)  
 * ``value`` : The value to be written to the Configuration Variable memory location (0-255)  

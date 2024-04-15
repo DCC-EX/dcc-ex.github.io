@@ -41,7 +41,19 @@ Multiplexer I2C Base Addresses
 Most multiplexers allow you to set them to the |I2C| address range of 0x70-0x77. The issue with 0x70 is that it is also a broadcast address used by PCA9685 Servo Modules, and therefore any attempt to use this address can create issues. We therefore suggest you set all of your multiplexers into the range 0x71-77.
 
 .. note::
+
    |EX-CS| will only scan for multiplexers in the address range 0x71-77, so please set your multiplexers into this address range.
+
+Locating devices on I2C buses and multiplexer sub buses
+=======================================================
+
+It is important to note that an |I2C| multiplexer operates more like a switch than a true multiplexer, meaning that when a specific sub bus is selected, that sub bus is **connected to the main bus** the multiplexer is connected to.
+
+This results in any device on that sub bus being connected to the main |I2C| bus, meaning a device on a sub bus **will conflict with another device on the main bus at the same address**.
+
+What does this mean?
+
+Simply, it means ensuring that when you are using multiple devices with the same address (eg. multiple OLEDs on 0x3C), do not connect any of those devices to the main |I2C| bus, and instead ensure they all exist on a sub bus of the multiplexer only.
 
 How do I use a multiplexer?
 ===========================

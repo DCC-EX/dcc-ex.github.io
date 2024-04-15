@@ -175,7 +175,6 @@ DCC-EX Commands
   :maxdepth: 1
 
   Native Commands Summary </reference/software/command-summary-consolidated>
-  Native Commands Details </reference/software/command-reference>
 
 Features under development
 ==========================

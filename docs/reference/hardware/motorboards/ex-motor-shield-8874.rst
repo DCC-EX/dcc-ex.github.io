@@ -182,7 +182,7 @@ Stacking an Arduino Motor Shield R3 and EX-MotorShield8874
 
 This stack is perhaps simplest and an easy enough upgrade for those who already have an Arduino Motor Shield R3 or clone.
 
-We are going to leave the Arduino Motor Shield R3 in the same configuration as recommended `here </ex-commandstation/get-started/assembly>`_ and as such it is worth doing this first and testing all is well before proceeding if this is a new install.
+We are going to leave the Arduino Motor Shield R3 in the same configuration as recommended :doc:`here </ex-commandstation/get-started/assembly>` and as such it is worth doing this first and testing all is well before proceeding if this is a new install.
 
 The best solution is to stack the EX-MotorShield8874 on top of the Arduino Motor Shield R3 (is it, really??) for which we will need to re-route some of its IO pins to allow it to function.
 
@@ -199,7 +199,7 @@ On the EX-MotorShield8874 you need to alter the Pin Assignment pads (NB: the fol
 
 The above will re-allocate most of the pins used by the top board to the `ALT or alternate set of pins <https://github.com/DCC-EX/EX-MotorShield8874#aternate-pin-assignment-pcb-jumpers>`_ but note it leaves the FAULT pins routed to the default positions of A4/A5 as there is no conflict with the Arduino Motor Shield R3.
 
-Add **one** of the following motor driver definitions to your config.h file (if uncertain, read `this description </reference/hardware/motorboards/motor-board-config>`_ first):
+Add **one** of the following motor driver definitions to your config.h file (if uncertain, read :doc:`this description </reference/hardware/motorboards/motor-board-config>` first):
 
 Find this section in the file:
 
@@ -282,7 +282,7 @@ The reason we did not solder the FAULT pins to their righthand ALT pads is that 
 
 If you do wish to use the solder method, solder a jumper wire (carefully!) to the centre pad of the FAULT which you can jumper to any available digital input pin on the motherboard you are using.
 
-Add **one** of the following motor driver definitions to your config.h file (if uncertain, read `this description </reference/hardware/motorboards/motor-board-config>`_ first):
+Add **one** of the following motor driver definitions to your config.h file (if uncertain, read :doc:`this description </reference/hardware/motorboards/motor-board-config>` first):
 
 Find this section in the file:
 
@@ -350,3 +350,101 @@ The BRAKE pins both need to be isolated by cutting the default setting on the pa
   new MotorDriver( 5,  4, UNUSED_PIN, 6, A3, 1.27, 5000, YOUR_PIN_B)
 
 For more detailed and technical information, follow the link to the `EX-MotorShield8874 on Github <https://github.com/DCC-EX/EX-MotorShield8874>`_ It also includes the schematic and the KiCad project files.
+
+Testing TrackManager configuration and operation
+================================================
+
+There are some simple tests you can perform to confirm that the EX-MotorShield8874 is operating correctly once configured.
+
+All of these tests require a serial connection to your |EX-CS| and use interactive commands to change the active configuration. If you're unsure on how to connect via a serial connection, refer to :doc:`/reference/tools/serial-monitor`
+
+Note in the images below, Track A is the right hand green connector, and Track B is the left hand green connector.
+
+Firstly, configure both Tracks as ``MAIN`` and turn track power on:
+
+.. code-block::
+
+   <= A MAIN>
+   <= B MAIN>
+   <1>
+
+This should result in all four (4) yellow LEDs being lit:
+
+.. figure:: /_static/images/ex-motorshield8874/tracks-a-b-main-poweron.jpg
+   :alt: Tracks A/B Main
+   :scale: 20%
+
+   Tracks A and B configured as ``MAIN`` with power on
+
+Next, configure Track A as ``DC``, turn power on again, and ensure that there is no throttle speed:
+
+.. code-block::
+
+   <A= A DC 1>
+   <1>
+   <t 1 0 1>
+
+This should result in both Track B (left) LEDs being lit, but Track A (right) LEDs being off:
+
+.. figure:: /_static/images/ex-motorshield8874/tracks-a-dc-b-main-nothrottle.jpg
+   :alt: Track A DC/B Main no throttle
+   :scale: 20%
+
+   Track A ``DC``, B ``MAIN``, no throttle
+
+Set throttle speed for Track A using DCC address 1:
+
+.. code-block::
+
+   <t 1 100 1>
+
+This should result in both Track B (left) LEDs still being lit, and one Track A (right) LED being lit:
+
+.. figure:: /_static/images/ex-motorshield8874/tracks-a-dc-b-main-throttle.jpg
+   :alt: Track A DC/B Main throttle
+   :scale: 20%
+
+   Track A ``DC``, B ``MAIN``, with forward throttle
+
+Reverse the direction for Track A using DCC address 1:
+
+.. code-block:: 
+
+   <t 1 100 0>
+
+This should result in both Track B (left) LEDs still being lit, and the opposite Track A (right) LED being lit:
+
+.. figure:: /_static/images/ex-motorshield8874/tracks-a-dc-b-main-throttlerev.jpg
+   :alt: Track A DC/B Main throttle reversed
+   :scale: 20%
+
+   Track A ``DC``, B ``MAIN``, with reverse throttle
+
+Now configure Track B as ``DC`` with the same DCC address as Track A and power on:
+
+.. code-block::
+
+   <= B DC 1>
+   <1>
+
+This should now result in one Track B (left) LED being lit, matching Track A's (right) LED being lit:
+
+.. figure:: /_static/images/ex-motorshield8874/tracks-a-dc-b-dc-throttlerev.jpg
+   :alt: Track A DC/B DC throttle reversed
+   :scale: 20%
+
+   Track A ``DC``, B ``DC``, with reverse throttle
+
+Finally, change to the forward direction again:
+
+.. code-block:: 
+
+   <t 1 100 1>
+
+This should now result in both Track B (left) and Track A (right) having the opposite LED being lit:
+
+.. figure:: /_static/images/ex-motorshield8874/tracks-a-dc-b-dc-throttle.jpg
+   :alt: Track A DC/B DC throttle forward
+   :scale: 20%
+
+   Track A ``DC``, B ``DC``, with forward throttle

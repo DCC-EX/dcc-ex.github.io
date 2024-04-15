@@ -134,6 +134,8 @@ You will need to know:
 
 .. note:: All of this information is displayed in the startup log if you connect the Command Station to a serial monitor. The IP address and port also appear on the optional LCD or OLED display.
 
+   If you wish to use a custom SSID in access point mode, you will need to set the WIFI_FORCE_AP option in config.h, see :ref:`ex-commandstation/advanced-setup/supported-wifi/wifi-config:#define wifi_force_ap`
+
 Whenever you connect a USB cable and open the serial monitor, you reset the program running on your Command Station. It will go through the bootup sequence again and try to connect to a network. If you did not setup a "Station Mode" configuration, or if that network is not in range, it will configure itself in AP mode. You will see this process by watching the serial monitor log window. Here are the important lines you need to look for. While the IP address is almost always 192.168.4.1, it could be different on your system. You are looking for the items in the blue box below that are highlighted in red. 
 
 .. figure:: /_static/images/wifi/ap_mode1.jpg
@@ -171,7 +173,7 @@ Simply click on that network and connect to it on your mobile device. You will n
 
 Ignore the warning that may pop up telling you that "Internet may not be available". The Command Station is not connected to the internet, and you are connecting to the Command Station directly from your mobile device for the purpose of controlling trains, not surfing the web. Depending on the config and OS of your mobile device, you may still have internet access over mobile data through a cell tower connection. If you wish to use your home network internet (for example, if your data plan is expensive), turn off mobile data and see the section below on Station Mode to connect using your home network instead.
 
-Once you are connected to the Command Station with your cell phone, you can run your WiFi Throttle app, enter the IP Address for the Server Address (**the default is usually 192.168.4.1, but it will be displayed in your serial monitor log if you are unsure**), enter **2560 for the port number**, and then select and acquire your loco by its address. If you don't know your loco address, see the ``<R>`` command in the :ref:`Decoder Test <reference/software/command-reference:DECODER TEST>` section of the Command Reference.
+Once you are connected to the Command Station with your cell phone, you can run your WiFi Throttle app, enter the IP Address for the Server Address (**the default is usually 192.168.4.1, but it will be displayed in your serial monitor log if you are unsure**), enter **2560 for the port number**, and then select and acquire your loco by its address. If you don't know your loco address, see the ``<R>`` command in the :ref:`reference/software/command-summary-consolidated:<r> - read dcc decoder (cab) address` section of the Command Reference.
 
 .. note:: Your Mobile Throttle function keys are user defined default function keys, not the function keys you used in either |JMRI| or Rocrail engine roster function keys.
 
@@ -276,6 +278,13 @@ If you don't change this setting and start up in AP mode instead, the default pa
 ----------------------------------
 
 **Default: 14000 milliseconds (14 seconds)** - You only need to set this if you have an extremely slow WiFi router, and the response to the connection request takes longer than normal.
+
+#define WIFI_FORCE_AP
+---------------------
+
+**New in 5.4.0**
+
+**Default: commented out** - Uncomment this line if you wish to use a custom SSID for your WiFi in access point mode, otherwise defining a custom SSID will cause the WiFi to attempt to connect to an existing WiFi network is STA mode.
 
 #define ENABLE_ETHERNET true
 ----------------------------

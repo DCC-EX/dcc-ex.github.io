@@ -31,6 +31,15 @@ Just check out this list of features and enhancements added since our last relea
 - Add support for variable DC frequency with TrackManager, using function keys 29 - 31 to set it
 - Add support to broadcast route/automation state changes to throttles
 
+New |EX-R| specific commands and enhancements:
+
+- Compile time checks for duplicate or missing automation/route IDs
+- Compile time checks for LATCH and RESERVE IDs out of range
+- Compile time checks for speeds out of range
+- Various new ROUTE related commands - See :ref:`ex-rail/ex-rail-command-reference:scripts/sequences - types and control`
+- :ref:`ex-rail/ex-rail-command-reference:jmri_sensor(vpin [,count]) - creates <s> type sensors visible to jmri.`
+- Blinking/flashing vpin and amber signal - :ref:`ex-rail/ex-rail-command-reference:blink( pin, onms, offms ) - blink an output pin`
+
 Changes to supported hardware platforms
 ---------------------------------------
 

@@ -14,5 +14,4 @@ DCC-EX Native Commands
 .. toctree::
     :maxdepth: 1
 
-    command-reference
     command-summary-consolidated

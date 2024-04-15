@@ -18,7 +18,7 @@ SRCP Client (iOS)
    :scale: 30%
    :align: left
 
-This is an iOS App from Germany. One of the major benefits of SRCPClient is that it speaks the |DCC-EX Native Commands| natively (see our :doc:`Command Reference </reference/software/command-reference>`). This means it is fast and can take advantage of some features that exist in the |EX-CS| not implemented in other APIs. Is also can connect to a WiThrottle server so you can use it with |JMRI| too.
+This is an iOS App from Germany. One of the major benefits of SRCPClient is that it speaks the |DCC-EX Native Commands| natively (see our :doc:`/reference/software/command-summary-consolidated`). This means it is fast and can take advantage of some features that exist in the |EX-CS| not implemented in other APIs. Is also can connect to a WiThrottle server so you can use it with |JMRI| too.
 
 Please visit their website: https://www.io-expert.com/
 

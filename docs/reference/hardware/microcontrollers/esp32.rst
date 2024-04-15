@@ -4,9 +4,9 @@
 
 |EX-CS-LOGO|
 
-*****
-ESP32
-*****
+*******************
+ESP32 (Recommended)
+*******************
 
 |tinkerer| |engineer| |support-button| |githublink-ex-commandstation-button2|
 

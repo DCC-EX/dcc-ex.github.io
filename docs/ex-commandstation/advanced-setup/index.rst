@@ -1,6 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
 .. include:: /include/include-ex-cs.rst
+
 |EX-CS-LOGO|
    
 ****************
@@ -53,7 +54,7 @@ The other item of specific note is the Mega2560 + WiFi which, while appearing a 
 .. toctree::
   :maxdepth: 2
   
-  supported-microcontrollers/index
+  /reference/hardware/microcontroller-boards
 
 
 Motor Drivers

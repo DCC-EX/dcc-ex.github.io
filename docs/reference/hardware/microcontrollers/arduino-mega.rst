@@ -4,9 +4,9 @@
 
 |EX-CS-LOGO|
 
-************
-Arduino Mega
-************
+**************************
+Arduino Mega (Recommended)
+**************************
 
 |conductor|
 

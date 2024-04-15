@@ -4,9 +4,9 @@
 
 |EX-CS-LOGO|
 
-************
-Arduino Nano
-************
+******************************
+Arduino Nano (Not recommended)
+******************************
 
 |tinkerer|
 

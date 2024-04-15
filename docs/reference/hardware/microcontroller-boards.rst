@@ -159,3 +159,7 @@ Boards that will NOT work
 ==========================
 
 **WAVGAT Uno clone** - This board is NOT 100% Uno compatible. It uses a LGT8F328P processor from a company in China called "Logic Green". It has no EEPROM and requires a bit of configuration in the Arduino IDE to get it to be seen correctly and compile sketches. It is, however, a good board for developing other applications on because it can be switched to run at 32mHz instead of 16. It also has 12 bit analog pins instead of 10 bit. That means higher resolution readings, 0-4096 instead of 0-1024. It could potentially work as a Command Station with more testing and some code changes, but we will leave that to someone else to attempt. Various other microcontrollers offer more memory, more serial ports and more GPIO pins and are just a better way to go for the future.
+
+**Arduino Uno R4** - Despite the name, this is not simply a new release of the tried and true Arduino Uno platform, and is a major (and expensive) redesign. Refer to the :doc:`/news/posts/20230728` News article.
+
+**Arduino Giga** - Like the above Uno R4, this is not just an enhanced version of our recommended Arduino Mega2560 but rather an entirely new (and also very expensive) board that just happens to share the same footprint. Refer to the :doc:`/news/posts/20230728` News article.

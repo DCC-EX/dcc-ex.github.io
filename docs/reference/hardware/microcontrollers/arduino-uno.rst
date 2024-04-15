@@ -4,9 +4,9 @@
 
 |EX-CS-LOGO|
 
-***********
-Arduino Uno
-***********
+*****************************
+Arduino Uno (Not recommended)
+*****************************
 
 |conductor|
 

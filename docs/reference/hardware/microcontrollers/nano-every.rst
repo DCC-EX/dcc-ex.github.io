@@ -4,9 +4,9 @@
 
 |EX-CS-LOGO|
 
-**********
-Nano Every
-**********
+***********************
+Nano Every (Deprecated)
+***********************
 
 |tinkerer|
 

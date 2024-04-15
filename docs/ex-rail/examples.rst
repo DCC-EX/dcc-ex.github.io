@@ -1,6 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 .. include:: /include/include-ex-r.rst
+
 |EX-R-LOGO|
 
 *****************************
@@ -17,7 +18,8 @@ Example Objects and Sequences
 
 A variety of |EX-R| sequences that illustrate function and usage of five objects are shown below. The :doc:`/big-picture/big-picture` section of this web site also contains a number of more elaborate and complex examples.
 
-Objects :
+Objects:
+
 - A three aspect signal connected to Mega2560 I/O pins 22 (red), 23 (amber), and 24 (green)
 - A two aspect signal connected to Mega2560 I/O pins 25 (red) and 26 (green)
 - LEDs connected to pins vpins 164 and 165 of an MCP23017 I/O extender

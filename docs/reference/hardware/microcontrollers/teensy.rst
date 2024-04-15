@@ -4,9 +4,9 @@
 
 |EX-CS-LOGO|
 
-************
-Teensy
-************
+*******************
+Teensy (Deprecated)
+*******************
 
 |tinkerer| |engineer|
 

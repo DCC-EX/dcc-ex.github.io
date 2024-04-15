@@ -4,9 +4,9 @@
 
 |EX-CS-LOGO|
 
-***************
-Mega+WiFi Setup
-***************
+***************************
+Mega+WiFi (Not recommended)
+***************************
 
 |tinkerer| |engineer|
 

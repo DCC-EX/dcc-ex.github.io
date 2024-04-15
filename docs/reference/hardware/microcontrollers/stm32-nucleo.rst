@@ -4,9 +4,9 @@
 
 |EX-CS-LOGO|
 
-*************************
-STMicroelectronics Nucleo
-*************************
+***************************************
+STMicroelectronics Nucleo (Recommended)
+***************************************
 
 |tinkerer| |engineer| |support-button| |githublink-ex-commandstation-button2|
 

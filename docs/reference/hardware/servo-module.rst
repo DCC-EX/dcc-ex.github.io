@@ -223,7 +223,7 @@ Using these for JMRI signal heads and signal masts
 
 If the LEDs are to be used for signal heads or signal masts in JMRI, they can be added to the Turnout Table by defining these as outputs also in "mySetup.h".
 
-An output is defined by using the ``<Z id vpin iflag>`` command. Refer to :ref:`reference/software/command-reference:outputs (dio pin) commands` for further information on this command.
+An output is defined by using the ``<Z id vpin iflag>`` command. Refer to :ref:`reference/software/command-summary-consolidated:outputs (configuring the ex-commandstation)` for further information on this command.
 
 This command will associate the provided output ID with the LED connected to the VPin as defined in the configuration commands in the section above.
 

@@ -77,6 +77,24 @@ Note to manufacturers: This list is not designed in any way to disparage or favo
     - 2.5/3
     - Half point deduction due to non-standard method for indexed CVs, and increased ACK pulse time.   |
   * - Digitrax
+    - DH126D
+    - MF
+    - Default for 2021/2022
+    - JST-9
+    - Default
+    - 3
+    - | I have noticed that these decoders switch on the rear light at power on with no commands, which can be a useful behavior for troubleshooting. They run nicely as installed. The learning curve I had on the 1st was entirely using DCC-EX + JMRI to configure them, additional installations and changes have been smooth.
+      | DH126D is meant to be an economy decoder with fewer functions and features than the DH166D.
+      | 1st and 2nd in November of 2022, 3rd was installed in December 2023.
+  * - Digitrax
+    - DH166D
+    - MF
+    - 51
+    - N/A (bare wires)
+    - Default
+    - 3
+    - Worked exactly as expected. No problems with programming or operation.
+  * - Digitrax
     - SDXH186MT
     - MFS
     - New in 2021
@@ -124,14 +142,6 @@ Note to manufacturers: This list is not designed in any way to disparage or favo
     - Default
     - 3
     - Works perfectly, was my first decoder tested with DCC++EX. Reported it because I couldn't find this decoder in the list yet.
-  * - Digitrax
-    - DH166D
-    - MF
-    - 51
-    - N/A (bare wires)
-    - Default
-    - 3
-    - Worked exactly as expected. No problems with programming or operation.
   * - LaisDCC
     - 860011
     - Accessory

@@ -21,7 +21,7 @@ Recommended reading
 
 Throughout these pages we will be using |EX-R| functionality extensively, not just for automation, but also to define the various objects in use, and therefore we highly recommend being familiar with at least the basics of EX-RAIL, so it would be best to read through the :doc:`/ex-rail/getting-started` page prior to going any further.
 
-We will also be outlining the equivalent DCC-EX commands for items where relevant, so it can be handy to refer to the :doc:`/reference/software/command-reference` where necessary.
+We will also be outlining the equivalent DCC-EX commands for items where relevant, so it can be handy to refer to the :doc:`/reference/software/command-summary-consolidated` where necessary.
 
 Overview of EX-RAIL automations
 ===============================

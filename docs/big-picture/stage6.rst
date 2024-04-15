@@ -55,7 +55,7 @@ Turnouts/Points
 
 Two turnouts/points are used in this first stage of our RMFT layout to allow trains to enter and exit the station siding, or continue along the main track.
 
-For further reading on turnouts/points, you can refer to the :ref:`ex-rail/ex-rail-command-reference:turnout/point objects - definition and control` section of the EX-RAIL reference and :ref:`reference/software/command-reference:defining (setting up) a turnout/point` in the DCC-EX Command reference.
+For further reading on turnouts/points, you can refer to the :ref:`ex-rail/ex-rail-command-reference:turnout/point objects - definition and control` section of the EX-RAIL reference and :ref:`reference/software/command-summary-consolidated:turnouts/points (configuring the ex-commandstation)` in the DCC-EX Command reference.
 
 Turnout/Point definitions
 -------------------------

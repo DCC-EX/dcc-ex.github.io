@@ -422,7 +422,7 @@ This should result in both Track B (left) LEDs still being lit, and the opposite
 
 Now configure Track B as ``DC`` with the same DCC address as Track A and power on:
 
-.. code-block:: ::
+.. code-block::
 
    <= B DC 1>
    <1>

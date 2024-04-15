@@ -46,7 +46,7 @@ Also see `System Information`_ for retrieve command station power information.
 
 |hr-dashed|
 
-``<onOff [track]>`` - Turn power on or off to the MAIN and PROG tracks
+<onOff [track]> - Turn power on or off to the MAIN and PROG tracks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Also allows joining the MAIN and PROG tracks together.
@@ -83,12 +83,12 @@ Also allows joining the MAIN and PROG tracks together.
 
 |hr-dashed|
 
-``<D RESET>`` - Re-boot the command Station
+<D RESET> - Re-boot the command Station
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* N/A
 
-``<J I>`` ``<JI>`` - Request current status
+<J I> <JI> - Request current status
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* Repeated for each Channel/Track: ``<j I track current>`` |BR|
@@ -99,7 +99,7 @@ Also allows joining the MAIN and PROG tracks together.
 
 |hr-dashed|
 
-``<J G>`` ``<JG>`` - Request max current
+<J G> <JG> - Request max current
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
@@ -123,7 +123,7 @@ Note:  Previously referred to as 'DC-District'.
 
 |hr-dashed|
 
-``<= trackletter mode [cab]>`` - Configure Track Manager 
+<= trackletter mode [cab]> - Configure Track Manager 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -149,7 +149,7 @@ Note:  Previously referred to as 'DC-District'.
 
 |hr-dashed|
 
-``<=>`` - Request the current Track Manager configuration
+<=> - Request the current Track Manager configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
@@ -159,7 +159,7 @@ Note:  Previously referred to as 'DC-District'.
   |_| > **state:** PROG, MAIN DC, DCX |BR|
   |_| > **cab:** cab(loco) equivalent to a fake DCC Address
 
-``<onOff [track]>`` - Turn power on or off to the requested TrackManager track
+<onOff [track]> - Turn power on or off to the requested TrackManager track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |NOT-IN-PROD-VERSION|
@@ -207,7 +207,7 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
-``<t cab>`` - Request a deliberate update on the cab (loco) speed/functions
+<t cab> - Request a deliberate update on the cab (loco) speed/functions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -232,7 +232,7 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
-``<t cab speed dir>`` - Set Cab (Loco) Speed
+<t cab speed dir> - Set Cab (Loco) Speed
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -261,7 +261,7 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
-``<!>`` - Emergency Stop
+<!> - Emergency Stop
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
@@ -270,7 +270,7 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
-``<F cab funct state>`` - Turn loco decoder functions ON or OFF
+<F cab funct state> - Turn loco decoder functions ON or OFF
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -300,7 +300,7 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
-``<f cab byte1 [byte2]]>`` - Decoder Functions - Legacy command |DEPRECATED|
+<f cab byte1 [byte2]]> - Decoder Functions - Legacy command |DEPRECATED|
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -403,7 +403,7 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
-``<t reg cab speed dir>`` - Set Cab (Loco) Speed - Legacy command |DEPRECATED|
+<t reg cab speed dir> - Set Cab (Loco) Speed - Legacy command |DEPRECATED|
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -431,7 +431,7 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
-``<- [cab]>`` - Remove one or all locos from reminders
+<- [cab]> - Remove one or all locos from reminders
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -454,7 +454,7 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
-``<D speedsteps>`` - Switch between 28 and 128 speed steps
+<D speedsteps> - Switch between 28 and 128 speed steps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -481,7 +481,7 @@ Roster Commands
 
 |hr-dashed|
 
-``<J R>`` ``<JR>`` - Request the list defined Roster Entry IDs
+<J R> <JR> - Request the list defined Roster Entry IDs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* N/A |BR| 
@@ -496,7 +496,7 @@ Roster Commands
 
 |hr-dashed|
 
-``<J R id>`` ``<JR id>`` - Request details of a specific Roster Entry
+<J R id> <JR id> - Request details of a specific Roster Entry
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -526,7 +526,7 @@ For details on how to configure turnouts/points see: :ref:`reference/software/co
 
 |hr-dashed|
 
-``<T>`` - Request a list all defined turnouts/Points
+<T> - Request a list all defined turnouts/Points
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
@@ -542,7 +542,7 @@ For details on how to configure turnouts/points see: :ref:`reference/software/co
 
 |hr-dashed|
 
-``<T id state>`` - Throw or Close a defined turnout/point
+<T id state> - Throw or Close a defined turnout/point
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -590,7 +590,7 @@ For details on how to configure turnouts/points see: :ref:`reference/software/co
 
 |hr-dashed|
 
-``<J T id>`` ``<JT id>`` - Request details of a specific Turnout/Point
+<J T id> <JT id> - Request details of a specific Turnout/Point
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -613,7 +613,7 @@ For details on how to configure turnouts/points see: :ref:`reference/software/co
 
 |hr-dashed|
 
-``<J T>`` ``<JT>`` - Request the list of defined turnout/Point IDs
+<J T> <JT> - Request the list of defined turnout/Point IDs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:*
@@ -640,7 +640,7 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
 
 |hr-dashed|
 
-``<I>`` - Request a list all defined turntables/traversers
+<I> - Request a list all defined turntables/traversers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
@@ -654,7 +654,7 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
 
 |hr-dashed|
 
-``<I id>`` - Request position of the specified turntable/traverser
+<I id> - Request position of the specified turntable/traverser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
@@ -667,7 +667,7 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
 
 |hr-dashed|
 
-``<I id position>`` - Rotate a DCC turntable
+<I id position> - Rotate a DCC turntable
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -696,7 +696,7 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
 
 |hr-dashed|
 
-``<I id position activity>`` - Rotate EX-Turntable
+<I id position activity> - Rotate EX-Turntable
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -727,7 +727,7 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
 
 |hr-dashed|
 
-``<J O>`` ``<JO>`` - Request the list of defined turntables/traversers
+<J O> <JO> - Request the list of defined turntables/traversers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:*
@@ -740,7 +740,7 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
 
 |hr-dashed|
 
-``<J O id>`` ``<JO id>`` - Request details of the specific turntable/traverser
+<J O id> <JO id> - Request details of the specific turntable/traverser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -772,7 +772,7 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
 
 |hr-dashed|
 
-``<J P id>`` ``<JP id>`` - Request all position details of the specified turntable/traverser
+<J P id> <JP id> - Request all position details of the specified turntable/traverser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -811,7 +811,7 @@ Also see the `EX-RAIL` section below for activating routes.
 
 |hr-dashed|
 
-``<J A>`` - Request a list of Automations/Routes
+<J A> - Request a list of Automations/Routes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
@@ -825,7 +825,7 @@ Also see the `EX-RAIL` section below for activating routes.
 
 |hr-dashed|
 
-``<J A id>`` ``<JA id>`` - Request information for a route/automation
+<J A id> <JA id> - Request information for a route/automation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -855,7 +855,7 @@ System Information
 
 |hr-dashed|
 
-``<c>`` - Request Current on the Track(s)
+<c> - Request Current on the Track(s)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
@@ -871,7 +871,7 @@ System Information
 
 |hr-dashed|
 
-``<s>`` - Request the DCC-EX version and hardware info, along with listing defined turnouts
+<s> - Request the DCC-EX version and hardware info, along with listing defined turnouts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
@@ -889,7 +889,7 @@ System Information
 
 |hr-dashed|
 
-``<#>`` - Request the number of supported cabs(locos)
+<#> - Request the number of supported cabs(locos)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
@@ -930,7 +930,7 @@ NOTE: Both the following commands do the same thing. Pick the one that works for
 
 |hr-dashed|
 
-``<a addr subaddr activate>`` - Control an Accessory Decoder with Address and Subaddress
+<a addr subaddr activate> - Control an Accessory Decoder with Address and Subaddress
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -944,7 +944,7 @@ NOTE: Both the following commands do the same thing. Pick the one that works for
 
 |hr-dashed|
 
-``<a linear_addr activate>`` - Control an Accessory Decoder with linear address
+<a linear_addr activate> - Control an Accessory Decoder with linear address
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -957,7 +957,7 @@ NOTE: Both the following commands do the same thing. Pick the one that works for
 
   |hr-dashed|
 
-``<A address aspect>`` - Command for DCC Extended Accessories.
+<A address aspect> - Command for DCC Extended Accessories.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ** New in version 5.4.0 ** 
@@ -982,7 +982,7 @@ Sensors
 
 |hr-dashed|
 
-``<Q>`` - Lists Status of all sensors
+<Q> - Lists Status of all sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
@@ -994,7 +994,7 @@ Sensors
 
 |hr-dashed|
 
-``<S>`` - Request a list of all defined sensors
+<S> - Request a list of all defined sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
@@ -1022,7 +1022,7 @@ Signals
 
 |hr-dashed|
 
-``</ RED signalId> </ AMBER signalId> </ GREEN signalId>`` - Control a signal
+</ RED signalId> </ AMBER signalId> </ GREEN signalId> - Control a signal
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1044,7 +1044,7 @@ WiFi Control
 
 |hr-dashed|
 
-``<+X>`` - Force the Command Station into "WiFi Connected" mode
+<+X> - Force the Command Station into "WiFi Connected" mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   A special command to force the "connected" flag (WiFi Connected Mode) to on inside the Command Station so that our loop will start seeing network traffic. If your code creates a connection outside of our normal WiFi code, this provides a way for you to notify the Command Station that it needs to process commands on a connection you created and so you can send your own AT commands.
@@ -1064,7 +1064,7 @@ WiFi Control
 
 |hr-dashed|
 
-``<+command>`` - Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)
+<+command> - Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1080,7 +1080,7 @@ WiFi Control
 
 |hr-dashed|
 
-``<+>`` - Switch to direct communication with WiFi AT processor
+<+> - Switch to direct communication with WiFi AT processor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
@@ -1091,147 +1091,7 @@ WiFi Control
 EX-RAIL
 -------
 
-.. contents:: In This Section
-    :depth: 4
-    :local:
-    :class: in-this-section
-
-|hr-dashed|
-
-``</ ROUTES>`` ``</ROUTES>`` - Request the Routes & Automations list
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Request the Routes & Automations control list in wiThrottle Protocol format.
-
-  *Response:* |BR|
-  |_| ``<X>``
-
-|hr-dashed|
-
-``</ START [locoAddr] routeId>`` - Start a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  *Parameters:* |BR|
-  |_| locoAddr: DCC address of the loco |BR|
-  |_| routeId: id of the rout to start
-  
-  *Response:* ???
-
-|hr-dashed|
-
-``</ PAUSE>`` - Pauses ALL EX-RAIL automation activities
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  Including sending an E-STOP to all locos.
-
-  *Response:* N/A
-
-|hr-dashed|
-
-``</ RESUME>`` ``</RESUME>`` - Resumes ALL EX-RAIL automation activities
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  Also resumes all locos at the same speed at which they were paused.
-
-  *Parameters:* N/A |BR|
-  *Response:* N/A
-
-|hr-dashed|
-
-``</ KILL taskId>`` - Kills a currently running script task by ID (use to list task IDs)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  *Parameters:* |BR|
-  |_| > **taskId:** ??
-
-  *Response:* ???
-
-|hr-dashed|
-
-``</ LATCH sensorId>`` - Lock sensor ON, preventing external influence
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  *Parameters:* |BR|
-  |_| > **sensorId:**  ??  valid ids and in the range 0-255
-  
-  *Response:* ??? |BR|
-  |_|  |BR|
-  |_| ``<* Opcode=L params=2 *>`` |BR|
-  |_| ``<* p[0]=-7906 (0xE11E) *>`` |BR|
-  |_| ``<* p[1]=24 (0x18) *>`` |BR|
-  |_| ``<X>``
-
-|hr-dashed|
-
-``</ UNLATCH sensorId>`` - Unlock sensor, returning to current external state
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  *Parameters:* |BR|
-  |_| > **sensor_id:** ??  valid ids and in the range 0-255
-  
-  *Response:* ??? |BR|
-  |_|  |BR|
-  |_| ``<* Opcode=U params=2 *>`` |BR|
-  |_| ``<* p[0]=23772 (0x5CDC) *>`` |BR|
-  |_| ``<* p[1]=24 (0x18) *>`` |BR|
-  |_| ``<X>``
-
-|hr-dashed|
-
-``</ RESERVE blockId>`` - Manually reserves a virtual track Block
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  *Parameters:* |BR|
-  |_| > **blockId:** ?? valid ids and in the range 0-255
-  
-  *Response:* ???
-
-|hr-dashed|
-
-``</ FREE blockId>`` - Manually frees a virtual track Block
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  *Parameters:* |BR|
-  |_| > **blockId:** ?? valid ids and in the range 0-255
-
-  *Response:* ???
-
-|hr-dashed|
-
-``</ RED signalId> </ AMBER signalId> </ GREEN signalId>`` - Control a signal (EXRAIL)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  *Parameters:* |BR|
-  |_| > **signalId:** defined red Vpin of the signal to control
-
-  *Response:* N/A
-
-``</>`` - Request EX-RAIL running task information
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  *Response:* |BR|
-  |_| > **<* EXRAIL STATUS |BR|
-  |_| ID=0,PC=189,LOCO=0 ,SPEED=0F |BR|
-  |_| ID=2,PC=267,LOCO=0 ,SPEED=0F |BR|
-  |_| ID=1,PC=228,LOCO=0 ,SPEED=0F |BR|
-  |_| RED[110] |BR|
-  |_| RED[113] *>**
-
-|hr-dashed|
-
-``<D EXRAIL state>`` - Enable or disable EX-RAIL script logging
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  When the CommandStation is connected to a serial monitor, EX-RAIL script logging can be Enabled or Disabled
-
-  *Parameters:* |BR|
-  |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - ON |BR|
-  |_| |_| |_| |_| - OFF
-  
-  *Response:* N/A
-
-----
+Refer to the :doc:`/ex-rail/EX-RAIL-command-reference` for these.
 
 EX-FastClock
 ------------
@@ -1245,7 +1105,7 @@ These commands require the optional |EX-FC| hardware to the installed along with
 
 |hr-dashed|
 
-``<JC minutes speed>`` - Start the fast clock with a specified time
+<JC minutes speed> - Start the fast clock with a specified time
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1262,7 +1122,7 @@ These commands require the optional |EX-FC| hardware to the installed along with
 
 |hr-dashed|
 
-``<JC>`` - Request the fast clock current time
+<JC> - Request the fast clock current time
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* ``<jC minutes>`` |BR|
@@ -1285,7 +1145,7 @@ Writing CVs - Program on the main
 
 |hr-dashed|
 
-``<b cab cv bit value>`` - Write Configuration Variable (CV) bit on main track
+<b cab cv bit value> - Write Configuration Variable (CV) bit on main track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1298,7 +1158,7 @@ Writing CVs - Program on the main
 
 |hr-dashed|
 
-``<w cab cv value>`` - Write Configuration Variable (CV) on main track
+<w cab cv value> - Write Configuration Variable (CV) on main track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1324,7 +1184,7 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
-``<R cv>`` - Read Configuration Variables (CVs)
+<R cv> - Read Configuration Variables (CVs)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1341,7 +1201,7 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
-``<R>`` - Read DCC decoder (cab) address
+<R> - Read DCC decoder (cab) address
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
@@ -1362,7 +1222,7 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
-``<V cv bit onOff>`` - Verify/Read bit of Configuration Variable (CV) with guessed value
+<V cv bit onOff> - Verify/Read bit of Configuration Variable (CV) with guessed value
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1383,7 +1243,7 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
-``<V cv value>`` - Verify/Read of Configuration Variable (CV) with guessed value
+<V cv value> - Verify/Read of Configuration Variable (CV) with guessed value
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1403,7 +1263,7 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
-``<B cv bit onOff>`` - Write bit to Configuration Variable (CV)
+<B cv bit onOff> - Write bit to Configuration Variable (CV)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1417,7 +1277,7 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
-``<W cv value >`` - Write Configuration Variable (CV)
+<W cv value > - Write Configuration Variable (CV)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1433,7 +1293,7 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
-``<W address>`` - Write DCC address to cab (loco)
+<W address> - Write DCC address to cab (loco)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1454,7 +1314,7 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
-``<P register hex1 hex2 [hex3 [hex4 [hex5]]]>`` - Writes a DCC packet to the PROG track
+<P register hex1 hex2 [hex3 [hex4 [hex5]]]> - Writes a DCC packet to the PROG track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1469,7 +1329,7 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
-``<B cv bit value callbacknum callbacksub>`` - :dcc-ex-red-bold-italic:`Deprecated, please use <W cv value> instead`
+<B cv bit value callbacknum callbacksub> - :dcc-ex-red-bold-italic:`Deprecated, please use <W cv value> instead`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1483,7 +1343,7 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
-``<W cv value callbacknum callbacksub>`` - :dcc-ex-red-bold-italic:`Deprecated, please use <w cv value> instead`
+<W cv value callbacknum callbacksub> - :dcc-ex-red-bold-italic:`Deprecated, please use <w cv value> instead`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1496,7 +1356,7 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
-``<R cv callbacknum callbacksub>`` - Read Configuration variable byte
+<R cv callbacknum callbacksub> - Read Configuration variable byte
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1524,7 +1384,7 @@ Write direct DCC packet
 
 |hr-dashed|
 
-``<M register hex1 hex2 [hex3 [hex4 [hex5]]]>`` - Write a DCC packet the MAIN track
+<M register hex1 hex2 [hex3 [hex4 [hex5]]]> - Write a DCC packet the MAIN track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   Writes a DCC packet of two, three, four, or five hexadecimal bytes to a register driving the selected track.
@@ -1546,7 +1406,7 @@ Write direct DCC packet
     
 |hr-dashed|
 
-``<P register hex1 hex2 [hex3 [hex4 [hex5]]]>`` - Write a DCC packet the MAIN track
+<P register hex1 hex2 [hex3 [hex4 [hex5]]]> - Write a DCC packet the MAIN track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   Writes a DCC packet of two, three, four, or five hexadecimal bytes to a register driving the selected track.
@@ -1578,7 +1438,7 @@ Programming track - Tuning
 
 |hr-dashed|
 
-``<D ACK LIMIT mA>`` - Sets the ACK limit
+<D ACK LIMIT mA> - Sets the ACK limit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   Use this command to override the minimum milliamps (mA) required to detect the ACK pulse, e.g. ``<D ACK LIMIT 30>`` means a minimum 30mA pulse would be accepted.
@@ -1594,7 +1454,7 @@ Programming track - Tuning
 
 |hr-dashed|
 
-``<D ACK MIN µS>`` - Sets the ACK pulse minimum
+<D ACK MIN µS> - Sets the ACK pulse minimum
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   As above, however overriding the maximum amount of time for a pulse, e.g. ``<D ACK MAX 20000>`` means a pulse up to 20ms would be accepted.
@@ -1610,7 +1470,7 @@ Programming track - Tuning
 
 |hr-dashed|
 
-``<D ACK MAX µS>`` - Sets the ACK pulse maximum
+<D ACK MAX µS> - Sets the ACK pulse maximum
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   Use this command to override the minimum amount of time in microseconds (uS) the pulse needs to be active for, e.g. ``<D ACK MIN 2000>`` means a pulse of 2ms or more would be accepted.
@@ -1625,7 +1485,7 @@ Programming track - Tuning
 
 |hr-dashed|
 
-``<D ACK RETRY x>`` - Adjust ACK retries
+<D ACK RETRY x> - Adjust ACK retries
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   When reading/writing CVs, the program will try again upon failure.  The default is ``<D ACK RETRY 2>``, which means 3 attempts before a failure is reported.  Each of the unsuccessful attempts is reported in the serial monitor or JMRI monitor log.  The last unsuccessful attempt remains on the display if in use.  To reset the running total, send the command manually: ``<D ACK RETRY 2>``.
@@ -1642,7 +1502,7 @@ Programming track - Tuning
 
 |hr-dashed|
 
-``<D PROGBOOST>`` - Override prog track limit while idle
+<D PROGBOOST> - Override prog track limit while idle
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   By default, the programming track has a current limit enabled of 250mA, so any programming activities requiring more than this value will cause power to the programming track to be cut for 100ms. Run this command to override this if programming decoders trigger current limiting on the programming track.
@@ -1676,7 +1536,7 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
-``<T id DCC addr subaddr>`` - Define turnout/point on a DCC Accessory Decoder with the specified address and subaddress
+<T id DCC addr subaddr> - Define turnout/point on a DCC Accessory Decoder with the specified address and subaddress
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1708,7 +1568,7 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
-``<T id DCC linearAddr>`` - Define turnout/point on a DCC Accessory Decoder with the specified linear address
+<T id DCC linearAddr> - Define turnout/point on a DCC Accessory Decoder with the specified linear address
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1721,7 +1581,7 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
-``<T id VPIN vpin>`` - Define turnout/point output on specified vpin
+<T id VPIN vpin> - Define turnout/point output on specified vpin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1743,7 +1603,7 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
-``<T id SERVO vpin thrownPos closedPos profile>`` - Define turnout/point servo (PWM) on specified vpin
+<T id SERVO vpin thrownPos closedPos profile> - Define turnout/point servo (PWM) on specified vpin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1775,7 +1635,7 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
-``<T id>`` - Deletes a turnout by Id
+<T id> - Deletes a turnout by Id
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1787,7 +1647,7 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
-``<D SERVO vpin value [profile]>`` - Set servo position to value on pin vpin
+<D SERVO vpin value [profile]> - Set servo position to value on pin vpin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  
   *Parameters:* |BR|
@@ -1808,7 +1668,7 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
-``<T id addr subaddr>`` - Define a turnout on a DCC Accessory Decoder with the specified address and subaddress - Legacy command |DEPRECATED|
+<T id addr subaddr> - Define a turnout on a DCC Accessory Decoder with the specified address and subaddress - Legacy command |DEPRECATED|
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1822,7 +1682,7 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
-``<T id vpin activePos inactivePos>`` - Define a turnout/point servo on specified vpin - Legacy command |DEPRECATED|
+<T id vpin activePos inactivePos> - Define a turnout/point servo on specified vpin - Legacy command |DEPRECATED|
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1873,7 +1733,7 @@ It is anticipated that throttle developers will be able to "draw" turntables wit
 
 |hr-dashed|
 
-``<I id DCC home>`` - Define a DCC accessory turntable/traverser
+<I id DCC home> - Define a DCC accessory turntable/traverser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1889,7 +1749,7 @@ It is anticipated that throttle developers will be able to "draw" turntables wit
 
 |hr-dashed|
 
-``<I id EXTT vpin home>`` - Define an EX-Turntable turntable/traverser
+<I id EXTT vpin home> - Define an EX-Turntable turntable/traverser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1906,7 +1766,7 @@ It is anticipated that throttle developers will be able to "draw" turntables wit
 
 |hr-dashed|
 
-``<I id ADD position value angle>`` - Add a position to a turntable/traverser
+<I id ADD position value angle> - Add a position to a turntable/traverser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1959,7 +1819,7 @@ To monitor one or more Arduino pins for sensor triggers, first define/edit/delet
 
 |hr-dashed|
 
-``<S id vpin pullup>`` - Create a new sensor ID
+<S id vpin pullup> - Create a new sensor ID
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1979,7 +1839,7 @@ To monitor one or more Arduino pins for sensor triggers, first define/edit/delet
 
 |hr-dashed|
 
-``<S id>`` - Delete defined sensor
+<S id> - Delete defined sensor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -2021,7 +1881,7 @@ To have |EX-CS| utilise one or more Arduino pins as custom outputs, first define
 
 |hr-dashed|
 
-``<Z id vpin iflag>`` - Creates a new output ID, with specified PIN and IFLAG values
+<Z id vpin iflag> - Creates a new output ID, with specified PIN and IFLAG values
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -2051,7 +1911,7 @@ To have |EX-CS| utilise one or more Arduino pins as custom outputs, first define
 
 |hr-dashed|
 
-``<Z id>`` - Deletes definition of output ID
+<Z id> - Deletes definition of output ID
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -2063,7 +1923,7 @@ To have |EX-CS| utilise one or more Arduino pins as custom outputs, first define
 
 |hr-dashed|
 
-``<Z>`` -Lists all defined output pins
+<Z> -Lists all defined output pins
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
@@ -2072,7 +1932,7 @@ To have |EX-CS| utilise one or more Arduino pins as custom outputs, first define
 
 |hr-dashed|
 
-``<Z id state>`` - Sets output ID to either INACTIVE or ACTIVE state
+<Z id state> - Sets output ID to either INACTIVE or ACTIVE state
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -2108,14 +1968,14 @@ EEPROM Management (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-``<D EEPROM>`` - Diagnostic dump EEPROM contents
+<D EEPROM> - Diagnostic dump EEPROM contents
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* ???
 
 |hr-dashed|
 
-``<e>`` - Erase ALL (turnouts, sensors, and outputs) from EEPROM
+<e> - Erase ALL (turnouts, sensors, and outputs) from EEPROM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
@@ -2123,7 +1983,7 @@ EEPROM Management (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-``<E>`` - Store definitions to EEPROM
+<E> - Store definitions to EEPROM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
@@ -2141,7 +2001,7 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-``<D ACK state>`` - Enables ACK diagnostics
+<D ACK state> - Enables ACK diagnostics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -2159,7 +2019,7 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-``<D CMD state>`` - Enables Command Parser diagnostics
+<D CMD state> - Enables Command Parser diagnostics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -2175,7 +2035,7 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-``<D ETHERNET state>`` - Enables Ethernet diagnostics
+<D ETHERNET state> - Enables Ethernet diagnostics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -2191,7 +2051,7 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-``<D LCN state>`` - Enables LCN interface diagnostics
+<D LCN state> - Enables LCN interface diagnostics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -2203,7 +2063,7 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-``<D WIFI state>`` - Enables WiFi diagnostics
+<D WIFI state> - Enables WiFi diagnostics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -2219,7 +2079,7 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-``<D WIT state>`` - Enables WiThrottle diagnostics
+<D WIT state> - Enables WiThrottle diagnostics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -2235,7 +2095,7 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-``<D CABS>`` - Shows cab numbers and speed in reminder tables
+<D CABS> - Shows cab numbers and speed in reminder tables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
@@ -2244,7 +2104,7 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-``<D HAL SHOW>`` - Shows configured servo board and GPIO extender board config and used pins
+<D HAL SHOW> - Shows configured servo board and GPIO extender board config and used pins
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
@@ -2262,7 +2122,7 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-``<D RAM>`` - Shows remaining RAM (Free Memory)
+<D RAM> - Shows remaining RAM (Free Memory)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
@@ -2281,14 +2141,14 @@ I/O (HAL) Diagnostics
 
 |hr-dashed|
 
-``<D HAL SHOW>`` - List HAL devices and allocated VPINs
+<D HAL SHOW> - List HAL devices and allocated VPINs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* ???
 
 |hr-dashed|
 
-``<D ANIN vpin>`` - Read and display pin vpin's analogue value
+<D ANIN vpin> - Read and display pin vpin's analogue value
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -2298,7 +2158,7 @@ I/O (HAL) Diagnostics
 
 |hr-dashed|
 
-``<D ANOUT vpin value [param2]>`` - Write value to analogue vpin
+<D ANOUT vpin value [param2]> - Write value to analogue vpin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Write value to analogue pin vpin, supplying param2 to the driver.
@@ -2325,7 +2185,7 @@ Other Commands
 
 |hr-dashed|
 
-``<U cmd>`` - Is reserved for user commands (through user filter)
+<U cmd> - Is reserved for user commands (through user filter)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|

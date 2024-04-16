@@ -727,7 +727,32 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 </div>
 <p>This tells EX-RAIL that when the sensor at VPin 164 is activated, the lineside worker moves quickly back from the track for safety, and then after the sensor has been deactivated, he can leisurely move back to his working position (no one wants to rush back to work right?).</p>
 </section>
+<section id="animation-servo-with-a-mimic-panel-push-button">
+<h3>Animation Servo with a Mimic Panel Push Button<a class="headerlink" href="#animation-servo-with-a-mimic-panel-push-button" title="Permalink to this heading"></a></h3>
+<p>As per the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> reference, accessory animation servos are defined with the following syntax:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO2</span><span class="p">(</span><span class="n">pin</span><span class="p">,</span><span class="w"> </span><span class="n">active_angle</span><span class="p">,</span><span class="w"> </span><span class="n">duration</span><span class="p">)</span><span class="w">  </span><span class="c1">// For Animation Servo, Do Not Use for Turnouts</span>
+</pre></div>
+</div>
+<p>The valid parameters are:</p>
+<ul class="simple">
+<li><p>pin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.</p></li>
+<li><p>position = The angle to which the servo will move when the servo is activated.</p></li>
+<li><p>duration = time to move to the designated position in milliseconds ms: 10000 is 10sec for a person walking or crossing gate moving.</p></li>
+</ul>
+<p>An example definition for a servo connected to the fifth control pin 5 or vpin105 of the first PCA9685 connected to the CommandStation, using the duration profile for animation operation:</p>
+<p>Use SERVO2 function with Mega D35 pin for a panel button to operate animation accessory servo ‘Railfan Walking’.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AUTOSTART</span>
+<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span><span class="w">  </span><span class="c1">// When panel button on Mega Dpin 35 is pressed alternate between the two positions taking 10 seconds</span>
+<span class="n">AFTER</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span>
+<span class="w"> </span><span class="n">SERVO2</span><span class="p">(</span><span class="mi">105</span><span class="p">,</span><span class="w"> </span><span class="mi">490</span><span class="p">,</span><span class="w"> </span><span class="mi">10000</span><span class="p">)</span><span class="w">  </span><span class="n">PRINT</span><span class="p">(</span><span class="s">&quot;Railfan Walking Back To Annex&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Walk Counter-Clockwise {Thrown}</span>
+<span class="n">AFTER</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span>
+<span class="w"> </span><span class="n">SERVO2</span><span class="p">(</span><span class="mi">105</span><span class="p">,</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w"> </span><span class="mi">10000</span><span class="p">)</span><span class="w">  </span><span class="n">PRINT</span><span class="p">(</span><span class="s">&quot;Railfan Walking To Train&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Walk Clockwise {Close}</span>
+<span class="n">FOLLOW</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
+</section>
+<hr class="docutils" />
 <section id="using-a-servo-module-for-leds">
 <h2><a class="toc-backref" href="#id7" role="doc-backlink">Using a servo module for LEDs</a><a class="headerlink" href="#using-a-servo-module-for-leds" title="Permalink to this heading"></a></h2>
 <p>Another use case for the PCA9685 is to drive LEDs using PWM to control the intensity of the LEDs. The intensity of the LEDs can vary from 0 (off) to 4095 (100%).</p>
@@ -846,7 +871,7 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fb9c000ebf0>
+    <jinja2.runtime.BlockReference object at 0x7f034c858f10>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

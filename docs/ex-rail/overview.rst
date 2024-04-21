@@ -7,7 +7,7 @@
 Overview
 ********
 
-|tinkerer| |engineer| |support-button| 
+|conductor| |tinkerer| |engineer| |support-button| 
 
 .. sidebar:: 
 
@@ -32,7 +32,6 @@ To begin, let's define a few terms:
 
 Most people wanting to do animations or run trains through an automated route will use a SEQUENCE, but those with :doc:`throttles </throttles/index>` that support it (|engine driver|, |EX-WT|) can add routes and automations. Both of these terms are just tags that let throttles with this feature automatically assign sequences to control buttons. "Routes" go into route buttons and can set turnouts, signals, etc., so you can drive your train along that route. Automation 'sequences' can appear on a 'handoff' button that will supply or handoff the Loco ID to |EX-R| where it can take over and run the train autonomously. An automation sequence example would be manually driving a train into a station and pressing the assigned handoff button in the throttle that runs an AUTOMATION to take it on a journey around the layout.
 
-
 Things You Can Do With EX-RAIL
 ==============================
 
@@ -56,6 +55,16 @@ You DON'T need:
 - |Engine Driver|, |WiThrottle|, or any other WiThrottle app
 - A separate computer living under your layout
 - Knowledge of C++ or Python/Jython programming
+
+Reasons to use EX-RAIL rather than extra software and/or hardware
+=================================================================
+
+I have used C++ on Arduino's and Python/Jython on JMRI software to build Automation sequences. I now use |EX-R| instead because:
+
+- It's ten times easier and more flexible than the other two options.
+- I reduce the number of Uno and Nano accessory boards needed to do the same tasks on the layout by using the |DCC-EX| Command Station and embedded |EX-R| instead.
+- I can create Automations, Routes, & Sequence scripts With |EX-R| on the Command Station and still access them from JMRI PanelPro and DecoderPro GUI buttons with a simple sendDCCmessage.py script pointer that passes them to the |EX-R| scripts on the Command Station, so I don't have to rewrite the script in Jython/Python.
+- |EX-R| is ten times easier to learn and use and is more flexible then the other methods.
 
 ----
 

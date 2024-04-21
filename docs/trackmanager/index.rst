@@ -61,11 +61,19 @@ You will instead be using a regulated DC (Laptop) 12-18 Vdc 3-5Amp power supply 
 
 You will be using DC (Pulse Width Modulation PWM) to drive the DC engines, Not DC Direct Current (-0 +16v).
 
-.. figure:: /_static/images/track_manager/DCCpwm_DCCpwm_AC_DC.png
-  :alt: Waveform Comparison
+.. figure:: /_static/images/track_manager/dcc.svg
+  :alt: DCC Waveform
   :scale: 50%
+  :align: left
 
-  Waveform Comparison
+  What a DCC waveform looks like
+
+.. figure:: /_static/images/track_manager/pwm.svg
+  :alt: PWM Waveform
+  :scale: 50%
+  :align: center
+
+  What a PWM waveform looks like
 
 .. note:: 
 

@@ -51,13 +51,12 @@ These are the *key* broadcast responses that should be understood:
 - ``<r address>`` - When a loco address is read on the programming track, the address is sent as a broadcast (see :ref:`reference/software/command-summary-consolidated:reading/writing configuration variables (cvs) - programming track`)
 - ``<l cabid slot speed/dir func>`` - When throttles send loco commands, this is sent as a broadcast (see :ref:`reference/software/command-summary-consolidated:cab (loco) commands`)
 
-These broadcast responses should be understood if your controller deals with turnouts/points and sensors.
+These broadcast responses should be understood if your controller deals with turnouts/points and sensors:
+
 - ``<H id [DCC|SERVO|VPIN|LCN] ... [0|1]>`` - When turnouts are closed/thrown, this response is broadcast (see :ref:`reference/software/command-summary-consolidated:turnouts/points`)
 - ``<[q|Q] id>`` - When sensors are deactivated/activated, this response is broadcast (see :ref:`reference/software/command-summary-consolidated:sensors`)
-
-**New in 5.4.0**
-
-There are now turntable/traverser ``<i id position moving>`` broadcast responses if the new turntable/traverser objects are implemented (see :ref:`reference/software/command-summary-consolidated:turntables/traversers`).
+- ``<m "text">`` - **New in 5.4.0** - A message can be sent to all throttles using |EX-R| (see :ref:`ex-rail/ex-rail-command-reference:message( "msg" ) - writes a message to all clients`)
+- ``<i id position moving>`` - **New in 5.4.0** - Broadcasts if the new turntable/traverser objects are implemented (see :ref:`reference/software/command-summary-consolidated:turntables/traversers`).
 
 Working with track power states
 -------------------------------

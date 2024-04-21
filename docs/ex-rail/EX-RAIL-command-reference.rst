@@ -1971,6 +1971,8 @@ MESSAGE( "msg" ) - Writes a message to all clients
 
 Writes a message to all serial throttles and all WiThrottles.
 
+A |DCC-EX| throttle will receive a broadcast ``<m "text">``, and a WiThrottle throttle will receive ``Hmtext``.
+
 ----
 
 CommandStation Functions

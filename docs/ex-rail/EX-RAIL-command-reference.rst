@@ -1308,6 +1308,26 @@ UNLATCH( sensor_id ) - Remove LATCH on sensor
       ENDIF
     DONE
 
+|hr-dashed|
+
+ONBUTTON( vpin ) - Event handler for debounced button presses
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**New in 5.4.0**
+
+This new event handler is handy for mimic panel and other buttons that need to perform an action when a button is pressed, rather than having to create a sequence with a combination of ``AFTER`` and ``IF`` statements to debounce a button which quickly becomes very complicated.
+
+Note that this works for active low buttons only.
+
+|hr-dashed|
+
+ONSENSOR( sensor_id ) - Event handler for sensors
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**New in 5.4.0**
+
+A new event handler to perform actions when a sensor is activated. Like the other sensor triggers such as ``IF``, ``AT``, and ``AFTER``, a negative value can be used for an active high sensor.
+
 |force-break|
 
 ----

@@ -3,7 +3,7 @@
 .. include:: /include/include-news.rst
 
 :blogpost: true
-:date: 28 March 2024
+:date: 21 April 2024
 :author: peteGSX
 :category: News
 :tags: release, ex-commandstation
@@ -39,6 +39,7 @@ New |EX-R| specific commands and enhancements:
 - Various new ROUTE related commands - See :ref:`ex-rail/ex-rail-command-reference:scripts/sequences - types and control`
 - :ref:`ex-rail/ex-rail-command-reference:jmri_sensor(vpin [,count]) - creates <s> type sensors visible to jmri.`
 - Blinking/flashing vpin and amber signal - :ref:`ex-rail/ex-rail-command-reference:blink( pin, onms, offms ) - blink an output pin`
+- New :ref:`ex-rail/ex-rail-command-reference:onbutton( vpin ) - event handler for debounced button presses` and :ref:`ex-rail/ex-rail-command-reference:onsensor( sensor_id ) - event handler for sensors`
 
 Changes to supported hardware platforms
 ---------------------------------------
@@ -83,3 +84,26 @@ The team no longer has hardware to test these boards, so we ensure the software 
 - Arduino Uno WiFi R2
 - :doc:`/reference/hardware/microcontrollers/nano-every`
 - :doc:`/reference/hardware/microcontrollers/teensy`
+
+JMRI specific updates
+---------------------
+
+Given there are a lot of |DCC-EX| users who also utilise |JMRi|, we figured it was worthwhile outlining some more specific updates centred around |JMRi| and the interoperability with it.
+
+Note these all require |JMRi| v5.7 or later AND |DCC-EX| v5.4.0 or later.
+
+- 'Roster Export to DCC-EX' - the ability to press a button and have your complete |JMRi| Engine Roster shown in a window which you can then copy into your DCC-EX Roster
+- |DCC-EX| 'Virtual LCD Displays' on |JMRi| to see data about your |EX-CS| and additional user data without having to have physical LCDs or OLEDs connected to your command station
+- Monitor, Send Command, and Config Base Station now multi-connection-aware
+- Config Base Station now available as Startup action in Preferences
+- New 'Open Meter' pane in Preferences -> Set Up -> Add -> Perform action -> 'Open Meters'
+- The DCC++ Current Meter now automatically tracks & displays active current draw on Main A
+- New sample script (SendDCCppMessages.py) to easily send DCCpp commmands to run |EX-R| scripts directly from |JMRi|
+- Throttles now default to Forward instead of Reverse
+- Handle new locoState reply to sync Speed, Dir and F-keys
+- Add throttle commands and replies to simulator
+- Added support for new servo and vpin turnout messages
+- Automatically populate the |JMRi| Sensor pane by using the new |EX-R| JMRI_SENSOR function.
+- Store definitions as properties in created objects
+- Improved CV read speeds by including startVal feature
+- DCCppOverTCP server now forwards all messages

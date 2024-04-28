@@ -24,46 +24,48 @@ New features and enhancements
 
 Just check out this list of features and enhancements added since our last release:
 
-- Add a new turntable object so these can be operated from throttles just like turnouts, including |EX-R| commands for automation
-- Added Beta auto reverser and booster mode for the ESP32 platform
-- Add the ability to delay startup of your |EX-CS| to allow peripheral devices to start first
-- Various HAL enhancements, including our native, non-blocking |I2C| capability for the STM32 Nucleo platform
-- Add support for variable DC frequency with TrackManager, using function keys 29 - 31 to set it
-- Add support to broadcast route/automation state changes to throttles
+- Turntables can now be operated from throttles just like turnouts, including new |EX-R| commands for automation of turntable movement
+- Auto reverser and booster mode for the ESP32 platform is in Beta
+- Delay can be added to the startup of |EX-CS| to allow peripheral devices to boot or start first
+- Various HAL enhancements, including our native, non-blocking |I2C| capability for the STM32F4xx family of Nucleo platforms
+- Variable DC frequency support in TrackManager, using DCC function keys 29 - 31 to set the desired frequency whilst running
+- Broadcasting of route/automation state changes to throttles
 
 New |EX-R| specific commands and enhancements:
 
-- Compile time checks for duplicate or missing automation/route IDs
-- Compile time checks for LATCH and RESERVE IDs out of range
-- Compile time checks for speeds out of range
 - Various new ROUTE related commands - See :ref:`ex-rail/ex-rail-command-reference:scripts/sequences - types and control`
 - :ref:`ex-rail/ex-rail-command-reference:jmri_sensor(vpin [,count]) - creates <s> type sensors visible to jmri.`
 - Blinking/flashing vpin and amber signal - :ref:`ex-rail/ex-rail-command-reference:blink( pin, onms, offms ) - blink an output pin`
 - New :ref:`ex-rail/ex-rail-command-reference:onbutton( vpin ) - event handler for debounced button presses` and :ref:`ex-rail/ex-rail-command-reference:onsensor( sensor_id ) - event handler for sensors`
 
+- Compile time checks for:
+   - duplicate or missing automation/route IDs
+   - LATCH and RESERVE IDs out of range
+   - speeds out of range
+
 Changes to supported hardware platforms
 ---------------------------------------
 
-Up until now, we have continued to recommend the tried and true Arduino Mega2560 as our preferred and recommended hardware platform for |EX-CS|, with the Uno and Nano backing it up as alternatives, albeit with less I/O and resources available compared with the Mega2560.
+We continue to recommend the tried and true Arduino Mega2560 as our preferred and recommended hardware platform for |EX-CS|, with the Uno and Nano backing it up as alternatives, albeit with less I/O and resources available compared with the Mega2560. We have seen some quality issues with the cheaper end of the clone variants of these boards. In general genuine Arduino and Elegoo clones remain our recommendations, but the genuine Arduino Mega is quite expensive given its performance.
 
-Along with our :doc:`/news/posts/20230807` announcement back in August 2023, we also announced some new Beta hardware platforms including the ESP32-WROOM and select STMicroelectronics Nucleo boards. These boards are now largely moving into full support as they have proven to be reliable and provide a lot more "bang for your buck" in terms of capabilities and future proofing your |EX-CS| with the continuing new features being added.
+Along with our :doc:`/news/posts/20230807` announcement back in August 2023, we also announced some new Beta hardware platforms including the ESP32-WROOM and select STMicroelectronics Nucleo STM32F4xx family boards. These boards are now largely moving into full support as they have proven to be reliable and provide a lot more "bang for your buck" in terms of capabilities and future proofing your |EX-CS| with the continuing new features being added.
 
-Moving forwards, we **highly recommend new users seriously consider these newer, more powerful ESP32 or Nucleo boards** as the pricing is competitive even compared with clone Mega2560 options, and will scale to much larger layouts and allow you to keep up with the development of the |DCC-EX| ecosystem.
+Moving forwards, we **highly recommend new users seriously consider these newer, more powerful ESP32 or Nucleo boards** as the pricing is competitive even compared with clone Mega2560 options, and as they have much more RAM they will scale to be able to animate and automate much larger layouts and allow you to keep up with the development of the |DCC-EX| ecosystem.
 
-The **Arduino Uno and Nano**, however, are **no longer recommended** as good platforms as they are just too limited in terms of resources and capability, and will not work with some of our new features such as :doc:`/trackmanager/index` or |I2C| connectivity. These can still be handy as dedicated programming only devices with |JMRi| or for simple Christmas layouts of course, but don't expect to be using any of our new features on these devices. They can also be re-purposed as accessory devices with our new |EX-IO|.
+The **Arduino UNO and Nano**, however, are **no longer recommended** as fully capable platforms as they are just too limited in terms of RAM and FLASH resources and capability to fit all of the |DCC-EX| feature set. They therefore will not work with some of our newest features such as :doc:`/trackmanager/index` or |I2C| connectivity. |DCC-EX| does allow users to turn off features such that UNOs and Nanos can still be handy as dedicated programming only devices with |JMRi| or for simple Christmas layouts of course, but don't expect to be using any of our newest or resource hungry features on these devices. They can also be re-purposed as versatile and affordable |I2C| accessory devices with our new |EX-IO|, as they can provide a mix of digital GPIO, PWM output, and analog inputs on a single board.
 
-Further to the above, we now have a large number of platforms to support, with a number of these no longer available to the core |DCC-EX| team for testing and validation. As a result, we are announcing the **deprecation of support for some platforms**, and these will no longer function with |EX-CS| when we release our next major version 6.0.0. Support for these right now is limited to ensuring the software compiles, as no testing is possible by the team.
+We now have a larger number of core platforms to support so need to rationalise our support of some legacy platforms. Also, a number of previously supported platforms are no longer available to the primary |DCC-EX| team for testing and validation. As a result, we are announcing the **deprecation of support for some platforms**, and these will no longer function with |EX-CS| when we release our next major version 6.0.0. Support for these right now is limited to ensuring the software compiles, as no testing is possible by the team.
 
-Read below for a summary of the changes to our hardware platforms.
+Read below for a summary of the changes to our supported hardware platforms.
 
 Supported and recommended platforms
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 New users should choose one of these platforms to make use of all features and capabilities.
 
-- (link to new page here) ESP32 moves from Beta into full support - note this is for devices using the **ESP32-WROOM CPU only**, other variants such as C3, S3, etc. are not supported
-- (link to new page here) STMicroelectronics Nucleo boards move from Beta into full support for DCC only (F411RE, F446RE, F401RE, F429ZI, and F439ZI) - note that DC mode and Ethernet support for these is still in Beta
-- :doc:`/reference/hardware/microcontrollers/arduino-mega` - continues as supported and recommended, but RAM is limited for large layouts with lots of accessories
+- :doc:`/reference/hardware/microcontrollers/arduino-mega` genuine Arduino Mega 2560 R3, and good quality clones - continues as supported and recommended, but RAM is limited for large layouts with lots of accessories and/or animations or automations
+- (link to new page here) ESP32 moves from Beta into full support - note this is for devices using the **ESP32-WROOM (ESP32-D0WD) CPU only**, other ESP32 variants such as C3, S3, etc. are not supported at this time and may never be due to hardware limitations
+- (link to new page here) STMicroelectronics Nucleo boards in the STM32F4xx family move from Beta into full support for DCC only - note that DC mode and Ethernet support for these is still in Beta
 
 No longer recommended platforms
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -78,12 +80,12 @@ Deprecated platforms
 
 The team no longer has hardware to test these boards, so we ensure the software compiles for them only, and no testing is performed. They will be removed when we release 6.0.0.
 
-- SAMD21
-- Arduino M0
-- Arduino Mega328
-- Arduino Uno WiFi R2
 - :doc:`/reference/hardware/microcontrollers/nano-every`
 - :doc:`/reference/hardware/microcontrollers/teensy`
+- Arduino Mega328
+- Arduino Uno WiFi R2
+- SAMD21
+- Arduino M0
 
 JMRI specific updates
 ---------------------
@@ -97,13 +99,13 @@ Note these all require |JMRi| v5.7 or later AND |DCC-EX| v5.4.0 or later.
 - Monitor, Send Command, and Config Base Station now multi-connection-aware
 - Config Base Station now available as Startup action in Preferences
 - New 'Open Meter' pane in Preferences -> Set Up -> Add -> Perform action -> 'Open Meters'
-- The DCC++ Current Meter now automatically tracks & displays active current draw on Main A
-- New sample script (SendDCCppMessages.py) to easily send DCCpp commmands to run |EX-R| scripts directly from |JMRi|
+- DCC++ Current Meter now automatically tracks & displays active current draw on Main A
+- Sample script (SendDCCppMessages.py) to easily send DCCpp commmands to run |EX-R| scripts directly from |JMRi|
 - Throttles now default to Forward instead of Reverse
-- Handle new locoState reply to sync Speed, Dir and F-keys
-- Add throttle commands and replies to simulator
-- Added support for new servo and vpin turnout messages
-- Automatically populate the |JMRi| Sensor pane by using the new |EX-R| JMRI_SENSOR function.
+- Handles new locoState reply to sync Speed, Dir and F-keys
+- Throttle commands and replies added to simulator
+- New servo and vpin turnout messages now supported
+- Automatic population of the |JMRi| Sensor pane by using the new |EX-R| JMRI_SENSOR function
 - Store definitions as properties in created objects
 - Improved CV read speeds by including startVal feature
 - DCCppOverTCP server now forwards all messages

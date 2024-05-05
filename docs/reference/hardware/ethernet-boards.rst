@@ -62,7 +62,7 @@ This is a micro Ethernet board no bigger than the RJ45 connector it is attached 
 Sunfounder Ethernet Shield
 ============================
 
-This board is tested and works. It is less expensive than the Arduino brand-name board and based on the Wiznet W5100 instead of the W5500. It must be first shield in the stack because it uses the ICSP header pins.
+This board is tested and works. It is less expensive than the Arduino brand-name board and based on the Wiznet W5100 instead of the W5500. It must be the first shield in the stack because it uses the ICSP header pins.
 
 .. image:: ../../_static/images/ethernet/sunfounder_ethernet_shield.jpg
    :alt: Sunfounder Ethernet Shield

@@ -600,7 +600,7 @@ All of these script types must be terminated by either a ``DONE``, ``FOLLOW(id)`
 
 |hr-dashed|
 
-``ROUTE_CAPTION( id, caption )`` - dynamically deactivate a Route
+``ROUTE_INACTIVE( id, caption )`` - dynamically deactivate a Route
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   **Not available in the current production release.**

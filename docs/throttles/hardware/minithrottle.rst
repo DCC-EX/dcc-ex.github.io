@@ -34,4 +34,4 @@ Note, this is a "project" type throttle and requires the user to construct it to
 * Multiple WiFi networks allowing the throttle to be portable and used on multiple layouts. Alternatively a direct serial connection to|EX-CS| may be used, which bypasses WiFi connectivity.
 * Menu driven user interface makes it easy for visitors or occasional users to use
 
-Please visit the miniThrottle Website for complete instructions here: `miniThrottle Project <https://conferre.cf/miniThrottle/miniIntro.php>`_
+Please visit the miniThrottle Website for complete instructions here: `miniThrottle Project <https://camelthorn.cloud/miniThrottle/miniIntro.php>`_

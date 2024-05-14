@@ -98,7 +98,7 @@ EX-FastClock
 
 Developers
 
-Colin (ColinM)
+Colin Murdoch - Pontypool, Wales (ColinM)
 
 EX-SensorCam
 ==============

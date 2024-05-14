@@ -39,11 +39,16 @@ Lead Developer
 Developers
 
 * Harald Barth - Stockholm, Sweden (Haba)
-* Dave Cutting - Logan, Utah, USA (Dave Cutting/ David Cutting)
 * Neil McKechnie -  Worcestershire, UK
 * Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
-* Gregor Baues - Île-de-France, France (grbba)
 * Herb Morton - Kingwood, Texas, USA (Ash++)
+* Peter Cole - Brisbane, QLD, Australia (peteGSX)
+
+EX-Installer 
+===============
+
+Lead Developer
+
 * Peter Cole - Brisbane, QLD, Australia (peteGSX)
 
 
@@ -53,8 +58,9 @@ EX-WebThrottle
 Developers
 
 * Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
+* Peter Cole - Brisbane, QLD, Australia (peteGSX)
 * Mani Kumar - Bangalor, India (Mani / Mani Kumar)
-* Matt H. - Somewhere in Europe
+* Matt Hu - Somewhere in Europe
 
 
 EX-DCCInspector
@@ -63,7 +69,7 @@ EX-DCCInspector
 Developers
 
 * Neil McKechnie -  Worcestershire, UK
-* Fred Decker - Holly Springs, NC, USA
+* Fred Decker - Holly Springs, NC, USA (FlightRisk)
 
 EX-Toolbox
 ==========
@@ -71,6 +77,36 @@ EX-Toolbox
 Developers
 
 * Peter Akers - Brisbane, QLD, Australia (flash62au)
+
+EX-IOExpander
+==============
+
+Developers
+
+* Peter Cole - Brisbane, QLD, Australia (peteGSX)
+
+
+EX-Turntable
+=============
+
+Developers
+
+* Peter Cole - Brisbane, QLD, Australia (peteGSX)
+
+EX-FastClock
+==============
+
+Developers
+
+Colin (ColinM)
+
+EX-SensorCam
+==============
+
+Developers
+
+* Barry Daniel- Gold Coast, Australia (BarryD)
+
 
 DCC++ Classic
 ==============
@@ -86,39 +122,38 @@ LCN / LCOS (Layout Control)
 * Rob Simonds - Reno, Nevada, USA (RobinS)
 * Jack Regan - Callao, Mo, USA (Marada1)
 
-Installer Software
-===================
-
-Lead Developer
-
-* Anthony W - Dayton, Ohio, USA (coDex)
 
 Website
 ========
 
-Lead Developers
-
-* Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
-* Mani Kumar - Bangalor, India (Mani / Mani Kumar)
-* Peter Akers - Brisbane, QLD, Australia (flash62au)
-
 Developers
 
-* Dave Cutting - Logan, Utah, USA (Dave Cutting/ David Cutting)
+* Peter Cole - Brisbane, QLD, Australia (peteGSX)
+* Peter Akers - Brisbane, QLD, Australia (flash62au)
+* Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
+* Mani Kumar - Bangalor, India (Mani / Mani Kumar)
+
+
 
 Hardware / Electronics
 =========================
 
+Lead Developer
+
+* Paul Antoine - Western Australia (Paul Antoine)
+
+Developers
+
 * Harald Barth - Stockholm, Sweden (Haba)
-* Paul Antoine, Western Australia
+* Erwin Peterlin - Graz, Austria (caperp)
 * Neil McKechnie -  Worcestershire, UK
-* Fred Decker - Holly Springs, NC, USA
+* Fred Decker - Holly Springs, NC, USA (FlightRisk)
 * Herb Morton - Kingwood Texas, USA (Ash++)
+* Keith Trayler
 
 Documentation / Management
 ===========================
 
-* Roger Beschizza - Dorset, UK (Roger Beschizza)
 * Keith Ledbetter - Chicago, Illinois, USA (Keith Ledbetter)
 * Kevin Smith - Rochester Hills, Michigan, USA (KC Smith)
 * Peter Cole - Brisbane, QLD, Australia (peteGSX)

@@ -600,8 +600,8 @@ See example in ROUTE_CAPTION.
 
 |hr-dashed|
 
-ROUTE_INACTIVE( id ) - dynamically deactivate a Route
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``ROUTE_INACTIVE( id, caption )`` - dynamically deactivate a Route
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **New in 5.4.0.**
 

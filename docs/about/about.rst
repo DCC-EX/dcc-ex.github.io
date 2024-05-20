@@ -55,6 +55,7 @@ Developers
 * Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
 * Mani Kumar - Bangalor, India (Mani / Mani Kumar)
 * Matt H. - Somewhere in Europe
+* Peter Akers - Brisbane, QLD, Australia (flash62au)
 
 
 EX-DCCInspector
@@ -92,6 +93,7 @@ Installer Software
 Lead Developer
 
 * Anthony W - Dayton, Ohio, USA (coDex)
+* Peter Cole - Brisbane, QLD, Australia (peteGSX)
 
 Website
 ========

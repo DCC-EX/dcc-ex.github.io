@@ -7,7 +7,7 @@
 WiFi Connection
 ***************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

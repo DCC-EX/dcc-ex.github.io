@@ -7,6 +7,8 @@
 I2C Hardware
 ************
 
+|tinkerer| |engineer| |support-button|
+
 .. toctree::
     :maxdepth: 1
     

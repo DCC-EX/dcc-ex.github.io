@@ -7,7 +7,7 @@
 Objects - an Introduction
 *************************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

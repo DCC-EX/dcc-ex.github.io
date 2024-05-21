@@ -2,11 +2,11 @@
 .. include:: /include/include-l3.rst
 .. include:: /include/include-description.rst
 
-|conductor| |tinkerer| |engineer|
-
 *************************
 DCC Turntables/traversers
 *************************
+
+|conductor| |tinkerer| |engineer| |support-button|
 
 |NOT-IN-PROD-VERSION|
 

@@ -7,7 +7,7 @@
 EX-Toolbox - Overview
 *********************
 
-|tinkerer|
+|tinkerer| |engineer| |support-button|
 
 |EX-TB| is a free, open source, Android app to help setup and configure your |EX-CS|. It is intended for setup, configuration, debugging you Command Station rather than continuous use.
 
@@ -32,3 +32,11 @@ With |EX-TB| you can perform:
 * Current Meter (Only available when connected to EX-CommandStation version 5.0.0 and above.)
 * Track Manager (Only available when connected to EX-CommandStation version 5.0.0 and above.)
 
+----
+
+Android apps on Windows 
+=======================
+
+Although|EX-TB| is an Android app, it is possible to run it on windows PCs.
+
+See the :doc:`/throttles/software/android-apps-on-windows` page for more information.

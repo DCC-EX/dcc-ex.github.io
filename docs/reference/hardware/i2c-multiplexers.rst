@@ -7,7 +7,7 @@
 I2C Multiplexers
 ****************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

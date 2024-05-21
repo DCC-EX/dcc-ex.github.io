@@ -10,7 +10,7 @@
 Purchasing Parts
 ****************
 
-|conductor| 
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

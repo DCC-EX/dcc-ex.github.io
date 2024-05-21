@@ -7,7 +7,7 @@
  Decoder Notes
 **************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 |EX-CS| works with virtually any decoder using its proprietary programming and ACK detection features. Still, while running locos and sending commands to the main track will always work, you may run into issues during programming operations with ACK Detection. This page describes fixes for any of the decoders users or the |DCC-EX| team found.
 

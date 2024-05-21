@@ -7,11 +7,13 @@
 EX-WebThrottle
 **************
 
-.. rst-class:: dcclink-right
+|conductor| |tinkerer| |engineer| |support-button|
 
-   `Try It Now <https://DCC-EX.github.io/WebThrottle-EX>`_
+.. rst-class:: dcclink
 
-|conductor| |tinkerer| |engineer|
+   `Run Ex-WebThrottle Now <https://DCC-EX.github.io/WebThrottle-EX>`_
+
+|force-break|
 
 .. sidebar::
 
@@ -19,7 +21,6 @@ EX-WebThrottle
       :depth: 2
       :local:
  
-
 |EX-WT| is a throttle (controller) that can connect to the |EX-CS| directly through the USB port of a computer.
 
 For a video on how to install and use |EX-WT| click below.
@@ -57,14 +58,14 @@ Run or Install EX-WebThrottle
 
 You have an option for how you would like to run |EX-WT|, from the cloud or installed locally on your machine. We recommend using it from the cloud or as a web app, but the choice is yours.
 
-Try it now (Run from the cloud)
+Run it now (Run from the cloud)
 ===============================
 
-Just click the 'Try it now' button below and you will load a web page from our server that will run the web throttle on your machine. You can connect it to the |EX-CS| or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run |EX-CS| in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
+Just click the 'Run Ex-WebThrottle Now' button below and you will load a web page from our server that will run the web throttle on your computer. You can connect it to the |EX-CS| or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run |EX-CS| in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
 
 .. rst-class:: dcclink
 
-   `Try It Now <https://DCC-EX.github.io/WebThrottle-EX>`_
+   `Run Ex-WebThrottle Now <https://DCC-EX.github.io/WebThrottle-EX>`_
 
 |EX-WT| is also a Progressive Web App (PWA). That means you can install it on your computer and run it right from your start menu! If you go into the |EX-WT| settings panel (click the 3 line, or 3 dot, "hamburger menu" at the top left), you will find a "Settings" menu. Click on "Apps" and then select "Install as an App". You can now work offline and always find |EX-WT| with your other Apps!
 
@@ -94,12 +95,14 @@ Operation
 
    EX-WebThrottle - Menu
 
-|EX-WT| has four pages which you can switch between using the hamburger menu button (three horizontal bars) on the top left of the screen.
+|EX-WT| has five pages which you can switch between using the hamburger menu button (three horizontal bars) on the top left of the screen, or direct icon buttons at the top of the screen.
 
 - Throttle *(the default page)*
 - CV Programmer
-- Locomotives
-- Function Maps
+- Routes/Automation
+- Turnouts/Points
+- Locomotives (local)
+- Function Maps (local)
 - Settings
 
 |force-break|
@@ -193,6 +196,38 @@ To use the program in to emulate an |EX-CS|, without actually connecting to a re
 
 ----
 
+Routes/Automation
+-----------------
+
+.. figure:: /_static/images/ex-webthrottle/routes-automation.png
+   :alt: EX-WebThrottle - Routes/Automation
+   :scale: 40%
+   :align: right
+
+Once connected to a |EX-CS|, The **Routes/Automation** page allows you to activate any of the Routes or Automations that have been stored in your |EX-CS|, if any.
+
+Clicking the :guilabel:`Set` button on a Route/Automation will activate it.
+
+|force-break|
+
+----
+
+Turnouts/Points
+-----------------
+
+.. figure:: /_static/images/ex-webthrottle/turnouts.png
+   :alt: EX-WebThrottle - Turnouts/Points
+   :scale: 40%
+   :align: right
+
+Once connected to a |EX-CS|, The **Turnouts/Points** page allows you to throw or close any of the Turnouts/Points that have been stored in your |EX-CS|, if any.
+
+Clicking either the :guilabel:`Throw` or :guilabel:`Close` buttons on a Turnout/Point will change it.
+
+|force-break|
+
+----
+
 CV Programmer
 -------------
 
@@ -228,22 +263,22 @@ You can use the ``Common CVs`` drop list to select a CV. The approprate value wi
 Locomotives
 -----------
 
-The **Locomotives** page allows you store a roster of locomotives.
+The **Locomotives** page allows you store a 'roster' of locomotives.  This is stored in the individual PC/computer, and cannot be accessed by any other computer, unless exported and imported into that computer.  The 'roster' cannot be accessed by any mobile device (phone app).
 
 :dcc-ex-red-bold-italic:`Use of this is not recommended as it may not be available in the new version of EX-Toolbox currently being developed.`
 
-.. note:: This is different to the roster that can be stored in the |EX-CS| itself.
+.. note:: This is very different to the roster that can be stored in the |EX-CS| itself.
 
 ----
 
 Function Maps
 -------------
 
-The **Function Maps** page allows you store collections of Function Maps.
+The **Function Maps** page allows you store collections of Function Maps.  This is stored in the individual PC/computer, and cannot be accessed by any other computer, unless exported and imported into that computer.  The 'functions maps' cannot be accessed by any mobile device (phone app).
 
 :dcc-ex-red-bold-italic:`Use of this is not recommended as it may not be available in the new version of EX-Toolbox currently being developed.`
 
-.. note:: This is different to the functions stored with roster entries that can be stored in the |EX-CS| itself.
+.. note:: This is very different to the functions stored with roster entries that can be stored in the |EX-CS| itself.
 
 ----
 
@@ -309,6 +344,6 @@ To load the Chrome DevTools to look at logging and be able to manually enter "wr
 Looking for some help with EX-WebThrottle?
 ==========================================
 
-To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking this button:
+To find out how to request assistance click the first button below. To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking the second button:
 
-|githublink-ex-webthrottle-button|
+|support-button-large| |githublink-ex-webthrottle-button|

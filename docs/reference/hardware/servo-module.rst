@@ -7,7 +7,7 @@
 Connecting a Servo Module
 *************************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -160,6 +160,38 @@ The SERVO is attached to VPin 101 (second control pin on first PCA9685), with a 
    DONE
 
 This tells EX-RAIL that when the sensor at VPin 164 is activated, the lineside worker moves quickly back from the track for safety, and then after the sensor has been deactivated, he can leisurely move back to his working position (no one wants to rush back to work right?).
+
+
+Animation Servo with a Mimic Panel Push Button
+----------------------------------------------
+
+As per the |EX-R| reference, accessory animation servos are defined with the following syntax:
+
+.. code-block:: cpp
+
+   SERVO2(pin, active_angle, duration)  // For Animation Servo, Do Not Use for Turnouts
+
+The valid parameters are:
+
+- pin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.
+- position = The angle to which the servo will move when the servo is activated.
+- duration = time to move to the designated position in milliseconds ms: 10000 is 10sec for a person walking or crossing gate moving.
+
+An example definition for a servo connected to the fifth control pin 5 or vpin105 of the first PCA9685 connected to the CommandStation, using the duration profile for animation operation:
+
+Use SERVO2 function with Mega D35 pin for a panel button to operate animation accessory servo 'Railfan Walking'.
+
+.. code-block:: cpp
+
+   AUTOSTART
+   SEQUENCE(35)  // When panel button on Mega Dpin 35 is pressed alternate between the two positions taking 10 seconds
+   AFTER(35)
+    SERVO2(105, 490, 10000)  PRINT("Railfan Walking Back To Annex") // Walk Counter-Clockwise {Thrown}
+   AFTER(35)
+    SERVO2(105, 110, 10000)  PRINT("Railfan Walking To Train") // Walk Clockwise {Close}
+   FOLLOW(35)
+
+----
 
 Using a servo module for LEDs
 =============================

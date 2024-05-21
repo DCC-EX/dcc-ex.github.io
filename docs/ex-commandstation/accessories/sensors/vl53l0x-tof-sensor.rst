@@ -6,7 +6,7 @@
 VL53L0X Time of Flight Sensor
 *****************************
 
-|conductor| |tinkerer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

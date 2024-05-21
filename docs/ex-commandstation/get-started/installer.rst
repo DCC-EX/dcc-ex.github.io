@@ -10,7 +10,7 @@
 Install the Software
 ********************
 
-|conductor|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

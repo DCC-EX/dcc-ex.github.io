@@ -7,7 +7,7 @@
 Example Objects and Sequences
 *****************************
 
-|tinkerer| |conductor|
+|tinkerer| |engineer| |support-button| 
 
 .. sidebar:: 
 

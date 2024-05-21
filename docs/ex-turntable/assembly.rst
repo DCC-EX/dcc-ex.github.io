@@ -7,7 +7,7 @@
 Assembly & Setup
 ****************
 
-|tinkerer| |githublink-ex-turntable-button2|
+|tinkerer| |engineer| |support-button| |githublink-ex-turntable-button2|
 
 .. sidebar:: 
 
@@ -439,11 +439,12 @@ Locate this section in "config.h", comment out the line defining the use of "ULN
   // #define STEPPER_DRIVER ULN2003_FULL_CW
   // #define STEPPER_DRIVER ULN2003_FULL_CCW
   #define STEPPER_DRIVER A4988
-  // #define STEPPER_DRIVER A4988_INV
+  // #define STEPPER_DRIVER A4988_INV   <--- Versions before 0.7.0
+  // #define INVERT_STEP                <--- Version 0.7.0 on
 
 .. note:: 
 
-  If operating EX-Turntable does not disable the stepper driver after movements complete, you will likely hear a buzzing or humming from the driver. In this instance, you may find you need to have the "Enable" pin inverted, so you will need to use the "A4988_INV" option instead (``#define STEPPER_DRIVER A4988_INV``).
+  If operating EX-Turntable does not disable the stepper driver after movements complete, you will likely hear a buzzing or humming from the driver. In this instance, you may find you need to have the "Enable" pin inverted. In versions prior to 0.7.0, you will need to use the "A4988_INV" option instead (``#define STEPPER_DRIVER A4988_INV``), and from version 0.7.0, you will need to enable the "INVERT_ENABLE" option (``#define INVERT_ENABLE``).
 
 First start and automatic calibration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -452,7 +453,7 @@ First start and automatic calibration
 
   If you have loaded the code too soon, and the automatic calibration has succeeded and recorded an inaccurate step count, then have no fear as there is a command you can run on the CommandStation to reinitiate the calibration sequence which is outlined in the :ref:`ex-turntable/test-and-tune:ex-turntable commands` section.
 
-  As of v0.5.0-Beta, you can also execute the command ``<0 3>`` in the serial console to initiate the calibration sequence.
+  As of v0.5.0-Beta and up to version 0.6.0, you can also execute the command ``<0 3>`` in the serial console to initiate the calibration sequence. In version 0.7.0 you can execute ``<C>`` instead to intiate the sequence.
 
   Also, if you have enabled the `FULL_STEP_COUNT` option in "config.h", that will prevent automatic calibration occurring, refer to :ref:`ex-turntable/configure:full_step_count`.
 

@@ -7,7 +7,7 @@
 Overview
 *********
 
-|tinkerer| |githublink-ex-fastclock-button2|
+|tinkerer| |engineer| |support-button| |githublink-ex-fastclock-button2|
 
 .. sidebar:: 
   

@@ -7,7 +7,7 @@
 Diagnostic Tools
 *****************
 
-|engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. toctree::
     :maxdepth: 2

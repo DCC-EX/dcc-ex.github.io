@@ -10,7 +10,7 @@
 ESP8266 (WiFi Boards) - AT Version Issues and Solutions
 *******************************************************
 
-|conductor| |Tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -260,6 +260,11 @@ Correcting the AT version of a ESP-01or ESP01s requires additional hardware. One
 * A USB to TTL CH340G Converter Module Adapter
 * An Arduino Uno
 
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 |hr-dashed|
 
 Correcting a ESP-01 with a USB Serial Adapter
@@ -326,6 +331,16 @@ Correcting the AT version on a Makerfabs ESP8266 Wifi Shield
    :class: image-float-right
    :alt: Makefabs ESP8266 WiFi Shield
    :scale: 25%
+
+There are **two** options for correcting the AT version on a Makerfabs ESP8266 Wifi Shield:
+
+* With a USB to TTL Converter Module Adapter (recommended)
+* With an Arduino Mega
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
 
 |hr-dashed|
 

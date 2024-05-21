@@ -7,7 +7,7 @@
 Supported Devices
 *****************
 
-|tinkerer| |githublink-ex-ioexpander-button2|
+|tinkerer| |engineer| |support-button| |githublink-ex-ioexpander-button2|
 
 .. sidebar:: 
   

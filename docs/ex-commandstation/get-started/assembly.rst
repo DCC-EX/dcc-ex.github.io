@@ -10,7 +10,7 @@
 Initial Assembly
 ****************
 
-|conductor|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

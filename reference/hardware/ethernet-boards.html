@@ -621,8 +621,6 @@
 <li><p>Open your config.h file in your editor (like the Arduino IDE)</p></li>
 <li><p>Uncomment the line <code class="docutils literal notranslate"><span class="pre">&quot;#define</span> <span class="pre">ENABLE_ETHERNET</span> <span class="pre">=</span> <span class="pre">true&quot;</span></code> by removing the “//” characters</p></li>
 <li><p>Add “//” comment lines in front of <code class="docutils literal notranslate"><span class="pre">&quot;#define</span> <span class="pre">ENABLE_WIFI</span> <span class="pre">=</span> <span class="pre">true&quot;</span></code> (if it isn’t already commented out).</p></li>
-<li><p>Enter the SSID for your router by replacing “Your network name” with the name of your network in <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">WIFI_SSID</span> <span class="pre">&quot;Your</span> <span class="pre">network</span> <span class="pre">name&quot;</span></code> in between the quotes.</p></li>
-<li><p>Enter the Password for your router by replacing “Your network passwd” with your password in the line:<code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">WIFI_PASSWORD</span> <span class="pre">&quot;Your</span> <span class="pre">network</span> <span class="pre">passwd&quot;</span></code> in between the quotes.</p></li>
 </ul>
 <div class="toctree-wrapper compound">
 <ul>
@@ -650,7 +648,7 @@
 </section>
 <section id="sunfounder-ethernet-shield">
 <h2><a class="toc-backref" href="#id3" role="doc-backlink">Sunfounder Ethernet Shield</a><a class="headerlink" href="#sunfounder-ethernet-shield" title="Permalink to this heading"></a></h2>
-<p>This board is tested and works. It is less expensive than the Arduino brand-name board and based on the Wiznet W5100 instead of the W5500.</p>
+<p>This board is tested and works. It is less expensive than the Arduino brand-name board and based on the Wiznet W5100 instead of the W5500. It must be the first shield in the stack because it uses the ICSP header pins.</p>
 <a class="reference internal image-reference" href="../../_images/sunfounder_ethernet_shield.jpg"><img alt="Sunfounder Ethernet Shield" src="../../_images/sunfounder_ethernet_shield.jpg" style="width: 375.0px; height: 375.0px;" /></a>
 </section>
 <section id="nano-ethernet-shield">
@@ -682,7 +680,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7feefc521810>
+    <jinja2.runtime.BlockReference object at 0x7efc57686350>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

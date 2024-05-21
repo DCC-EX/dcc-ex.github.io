@@ -650,9 +650,7 @@
 </ul>
 </nav>
 </aside>
-<p>Unfortunately, other than the recommended <a class="reference external" href="https://www.makerfabs.com/esp8266-wifi-shield.html">Makerfabs ESP8266 WiFi Shield</a> , the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>.</p>
-<p>Note: This includes the <em>Makerfabs ESP8266 WiFi Shields</em> purchased prior to <em>about</em> January 2024.
-Also Note: The boards currently sold by Makerfabs, with the DCC-EX logo, <strong>do not have the issue</strong>.</p>
+<p>Unfortunately, other than the recommended <em>DCC-EX EX-WiFiShield 8266</em> and <em>Makerfabs ESP8266 WiFi Shield</em>, the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>. There was a run of Makerfabs boards from around May 2023 through October 2023 that had defective firmware from Expressif. You can use this tutorial to upgrade one of those boards if you have one. All boards manufactured after November 2023 have the correct firmware. These boards carry the DCC-EX logo on the bottom and display version 1.1 or later.</p>
 <section id="which-is-correct-version-of-the-at-firmware">
 <h2><a class="toc-backref" href="#id9" role="doc-backlink">Which is correct version of the AT firmware</a><a class="headerlink" href="#which-is-correct-version-of-the-at-firmware" title="Permalink to this heading"></a></h2>
 <p><span class="dcc-ex-text-size-200pct">ONLY Version 1.7.4 is known to work reliably.</span></p>
@@ -910,7 +908,7 @@ Also Note: The boards currently sold by Makerfabs, with the DCC-EX logo, <strong
 <h4><a class="toc-backref" href="#id34" role="doc-backlink">Correcting the Makerfabs ESP8266 WiFi Shield With an Arduino Mega</a><a class="headerlink" href="#correcting-the-makerfabs-esp8266-wifi-shield-with-an-arduino-mega" title="Permalink to this heading"></a></h4>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The instructions on the following page have been proven to work on Linux PCs, so will probably work on macOS PCs (Apple), however attempts to get them to work on <strong>Microsoft Windows PCs</strong> <span class="dcc-ex-red-bold">have so far been unsuccessful</span>.</p>
+<p>The instructions on the following page have been proven to work on Linux PCs, so will probably work on macOS PCs (Apple), however attempts to get them to work on <strong>Microsoft Windows PCs</strong> <span class="dcc-ex-red-bold">have so far been unsuccessful</span>. We need to do more testing. If you have an issue with this method, simply purchase a USB to TTL converter module and use the recommended process in the previous heading. This should not be an issue for most people since they will have the DCC-EX EX-WiFi Shield 8266 which has the correct firmware and a much easier upgrade process should that be required in the future.</p>
 </div>
 <p>Flashing the ESP8266 WiFi Shield <a class="reference internal" href="makerfabs-update-at-version-with-mega.html"><span class="doc">using an Arduino Mega is covered here</span></a>.</p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
@@ -958,7 +956,7 @@ Also Note: The boards currently sold by Makerfabs, with the DCC-EX logo, <strong
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7feefbfa76a0>
+    <jinja2.runtime.BlockReference object at 0x7efc576ead10>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

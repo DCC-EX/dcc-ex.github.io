@@ -620,19 +620,19 @@
 </ul>
 </nav>
 </aside>
-<p>Unfortunately the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>. This now seems to include the recommended <a class="reference external" href="https://www.makerfabs.com/esp8266-wifi-shield.html">Makerfabs ESP8266 WiFi Shield</a>.</p>
+<p>Unfortunately many of the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>. The only boards guaranteed to work out of the box are the ones designed in a partnership between DCC-EX and Makerfabs. The board are the <a class="reference external" href="https://store.dcc-ex.com/products/EX-WiFiShield-8266-p625876731">EX-WifiShield 8266</a> available through our reseller network, and the <a class="reference external" href="https://www.makerfabs.com/esp8266-wifi-shield.html">Makerfabs ESP8266 WiFi Shield</a>. If you have a Makerfabs shield that was made between May 2023 and October 2023, your board may have faulty firmware.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The instructions on this page have been proven to work on Linux PCs, so will probably work on macOS PCs (Apple), however attempts to get them to work on <strong>Microsoft Windows PCs</strong> <span class="dcc-ex-red-bold">have so far been unsuccessful</span>.</p>
 </div>
 <section id="introduction">
 <h2><a class="toc-backref" href="#id5" role="doc-backlink">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
-<p>Out of the box, the MakerFabs ESP8266 shield appears to be shipping with a broken firmware that is unstable when used with DCC-EX. To flash version 1.7.4 onto the board follow these instructions.</p>
+<p>Out of the box, the small run of MakerFabs ESP8266 shields made in late 2023 mentioned above shipped with a broken firmware on the chips from the Expressif factory that Makerfabs use in their production. This version is unstable when used with DCC-EX as well as other applications. To flash version 1.7.4 onto the board follow these instructions. Do NOT use these instructions to update any EX-WiFiShield 8266 boards since they do not need updating. Known good boards have the DCC-EX logo on the bottom and are stamped with v1.1 or later. The joint DCC-EX/Makerfabs board have a much easier process to update them should they ever need new firmware in the future.</p>
 </section>
 <section id="requirements">
 <h2><a class="toc-backref" href="#id6" role="doc-backlink">Requirements</a><a class="headerlink" href="#requirements" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p>The WiFi Shield itself - <a class="reference external" href="https://www.makerfabs.com/esp8266-wifi-shield.html">https://www.makerfabs.com/esp8266-wifi-shield.html</a></p></li>
+<li><p>The WiFi Shield itself - The previous version of the one shown here: <a class="reference external" href="https://www.makerfabs.com/esp8266-wifi-shield.html">https://www.makerfabs.com/esp8266-wifi-shield.html</a></p></li>
 <li><p>An Arduino Uno or Arduino mega</p></li>
 <li><p>2x female to male jumper wires <br /> (or the two small, simple jumpers/plugs that came with the WiFi shield)</p></li>
 <li><p>3x male to male jumper wire</p></li>
@@ -871,7 +871,7 @@ The <code class="docutils literal notranslate"><span class="pre">Reset</span></c
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7feefced26e0>
+    <jinja2.runtime.BlockReference object at 0x7efc54a87250>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

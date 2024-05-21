@@ -20,7 +20,7 @@ Makerfabs ESP8266 - Update AT Version with an Arduino Mega
       :local:
       :depth: 3
 
-Unfortunately the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with |EX-CS|. This now seems to include the recommended `Makerfabs ESP8266 WiFi Shield <https://www.makerfabs.com/esp8266-wifi-shield.html>`_.
+Unfortunately many of the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with |EX-CS|. The only boards guaranteed to work out of the box are the ones designed in a partnership between DCC-EX and Makerfabs. The board are the `EX-WifiShield 8266 <https://store.dcc-ex.com/products/EX-WiFiShield-8266-p625876731>`_ available through our reseller network, and the `Makerfabs ESP8266 WiFi Shield <https://www.makerfabs.com/esp8266-wifi-shield.html>`_. If you have a Makerfabs shield that was made between May 2023 and October 2023, your board may have faulty firmware.
 
 .. warning:: 
 
@@ -29,12 +29,12 @@ Unfortunately the Espressif ESP8266 based WiFi Boards that are available for sal
 Introduction
 ============
 
-Out of the box, the MakerFabs ESP8266 shield appears to be shipping with a broken firmware that is unstable when used with DCC-EX. To flash version 1.7.4 onto the board follow these instructions.
+Out of the box, the small run of MakerFabs ESP8266 shields made in late 2023 mentioned above shipped with a broken firmware on the chips from the Expressif factory that Makerfabs use in their production. This version is unstable when used with DCC-EX as well as other applications. To flash version 1.7.4 onto the board follow these instructions. Do NOT use these instructions to update any EX-WiFiShield 8266 boards since they do not need updating. Known good boards have the DCC-EX logo on the bottom and are stamped with v1.1 or later. The joint DCC-EX/Makerfabs board have a much easier process to update them should they ever need new firmware in the future.
 
 Requirements
 ============
 
-* The WiFi Shield itself - https://www.makerfabs.com/esp8266-wifi-shield.html
+* The WiFi Shield itself - The previous version of the one shown here: https://www.makerfabs.com/esp8266-wifi-shield.html
 * An Arduino Uno or Arduino mega
 * 2x female to male jumper wires |br| (or the two small, simple jumpers/plugs that came with the WiFi shield)
 * 3x male to male jumper wire

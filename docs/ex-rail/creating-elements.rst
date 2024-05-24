@@ -142,7 +142,37 @@ Pin Turnouts/Points
 Adding the Hardware -  Pin Turnouts/Points
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. todo:: `LOW - Adding the Hardware <https://github.com/DCC-EX/dcc-ex.github.io/issues/418>`_ -  Pin Turnouts/Points
+.. sidebar::
+  
+  You can also refer to :doc:`/ex-commandstation/accessories/turnouts/solenoid-turnouts` for more information.
+
+If you have installed turnouts/points using simple pin control, you can config the |EX-R| so that it knows about it and you can control in in your sequences.
+
+   .. code-block:: cpp
+
+    PIN_TURNOUT( id, vpin [, "description"] )
+
+The ``PIN_TURNOUT`` command defines a pin operated turnout/point in EX-RAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout/point within the CommandStation.
+
+When setting up a turnout/point where multiple pins are required for control, the ``VIRTUAL_TURNOUT`` command should be used along with a control sequence. This is commonly used to configure solenoid-based turnout motors. 
+
+.. code-block:: 
+
+  #define PULSE 10    // Set the duration of the pulse to 10ms
+
+  #define SINGLE_COIL_TURNOUT(t, p1, p2, p3, desc) \
+  VIRTUAL_TURNOUT(t, desc) \
+  DONE \
+  ONCLOSE(t) \
+  SET(p2) RESET(p3) \
+  SET(p1) DELAY(PULSE) RESET(p1) \
+  DONE
+  ONTHROW(t) \
+  RESET(p2) SET(p3) \
+  SET(p1) DELAY(PULSE) RESET(p1) \
+  DONE
+
+  SINGLE_COIL_TURNOUT(101, 22, 24, 26, "Turnout 101")
 
 Configure myAutomation.h - Pin Turnouts/Points
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

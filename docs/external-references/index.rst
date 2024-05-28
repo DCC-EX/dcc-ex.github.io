@@ -43,8 +43,9 @@ Toms Trains and Things
 
 Kevin C Smith
 -------------
-* ~ January 2023
-Introduction to DCC-EX Command Station v5.0 with TrackManager & EXRAIL with Engine Driver & Magicsee Joystick throttles
+
+* ~ January 2023 - Introduction to DCC-EX Command Station v5.0 with TrackManager & EXRAIL with Engine Driver & Magicsee Joystick throttles
+
 Using Engine Driver direct WiFi connection in a unedited TrackManager and EXRAIL video demos.
 
 * `DCC-EX Command Station with EXRAIL & TrackManager Part 1 <https://m.youtube.com/watch?v=q58SyQ0eA7c>`_
@@ -61,7 +62,7 @@ Paul Antoine
 * ~ April 2023 - `"DCC-EX Open Source Model Railroading" - Paul Antoine (Everything Open 2023) <https://youtu.be/YlGL9-v5OAQ>`_
 
 DriverDTrains
-------------
+-------------
 
 * ~ 27 August 2023 - `"#4 Assembling a Mega DCC-EX Command Station" - Driver D (Part 1 Hardware Assembly)  <https://www.youtube.com/watch?v=HatlU7A5S5s>`_
-=======
+

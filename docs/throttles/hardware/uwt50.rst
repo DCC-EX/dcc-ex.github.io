@@ -66,33 +66,33 @@ Examples of UWT-100 Throttle and DCC-EX |EX-CS| in action;
 
 DCC-EX Commands Cmd Power On|Off, and Join Programming Track < == > Main line, and DCC-EX Turnout Control
 
-.. image:: /_static/images/throttles/TCS_UWT-100_&_DCC-EX_Cmd_JOIN_01.jpg
+.. image:: /_static/images/throttles/uwt100_join.jpg
    :alt: UTW-100 Throttle
    :scale: 70%
    :align: left
 
 
-.. image:: /_static/images/throttles/TCS_UWT-100_&_DCC-EX_Turnouts_02.jpg
+.. image:: /_static/images/throttles/uwt100_turnout.jpg
    :alt: UTW-100 Throttle
    :scale: 70%
    :align: center
 
 
-.. image:: /_static/images/throttles/TCS_UWT-100_&_DCC-EX_EXRAIL_202_Roundhouse_03.jpg
+.. image:: /_static/images/throttles/uwt100_roundhouse.jpg
    :alt: UTW-100 Throttle
    :scale: 70%
    :align: right
 
 
-DCC-EX Cmd to Pause & Resume EXRAIL maco scripts, and DCC-EX Cmd to Reboot Command Station
+DCC-EX Cmd to Pause & Resume EXRAIL macro scripts, and DCC-EX Cmd to Reboot Command Station
 
-.. image:: /_static/images/throttles/TCS_UWT-100_&_DCC-EX_Cmd_Resume_EXRAIL_04.jpg
+.... image:: /_static/images/throttles/TCS_UWT-100_&_DCC-EX_Cmd_Resume_EXRAIL_04.jpg
    :alt: UTW-100 Throttle
    :scale: 70%
    :align: left
 
 
-.. image:: /_static/images/throttles/TCS_UWT-100_&_DCC-EX_Cmd_Reboot_CS_05.jpg
+.. image:: /_static/images/throttles/uwt100_reboot.jpg
    :alt: UTW-100 Throttle
    :scale: 70%
    :align: center
@@ -101,4 +101,4 @@ DCC-EX Cmd to Pause & Resume EXRAIL maco scripts, and DCC-EX Cmd to Reboot Comma
 Visit the TCS website here:
 
 * https://tcsdcc.com/uwt-50 
-*  https://www.tcsdcc.com/uwt-100 
+* https://www.tcsdcc.com/uwt-100 

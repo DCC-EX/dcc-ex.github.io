@@ -1041,6 +1041,8 @@ DONE
 <p>As a result of executing the <code class="docutils literal notranslate"><span class="pre">LATCH(CHOOSE_BLK2)</span></code>, the next train navigating this block will instead have control handed over to the <a class="reference internal" href="#moving-from-block-1-to-block-2-continue-on-the-main-track">moving from block 1 to block 2 - continue on the main track</a> sequence.</p>
 <details class="summary-click-to-show-hide-the-code">
 <summary>Click to show/hide the code</summary><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Sequence to exit block 1, and choose whether to go to the station or continue on main
+ALIAS(CHOOSE_BLK2, 60)
+
 SEQUENCE(BLK1_EXIT)
   IF(CHOOSE_BLK2)
     UNLATCH(CHOOSE_BLK2)
@@ -1251,7 +1253,7 @@ SEQUENCE(BLK4_BLK1)
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fb609668610>
+    <jinja2.runtime.BlockReference object at 0x7f41b18d05e0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

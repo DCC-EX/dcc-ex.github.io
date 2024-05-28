@@ -1,11 +1,14 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
 .. include:: /include/include-description.rst
+
 |EX-CS-LOGO|
 
 *******
 Sensors
 *******
+
+|tinkerer| |engineer| |support-button|
 
 Sensors are a key item to add to your |EX-CS|, whether it's to fully realise the automation potential of |EX-R|, to know where trains are on your layout, or to trigger simple things such as road crossings.
 

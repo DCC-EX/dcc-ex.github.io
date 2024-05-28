@@ -7,7 +7,7 @@
 Overview
 ********
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button| 
 
 .. sidebar:: 
 
@@ -36,7 +36,7 @@ Most people wanting to do animations or run trains through an automated route wi
 Things You Can Do With EX-RAIL
 ==============================
 
-- Create 'Routes' which set multiple turnouts/points and signals at the press of a button in |EX-WT| or |Engine Driver|, |withrottle|, or other WiThrottle-compatible throttles are available
+- Create 'Routes' which set multiple turnouts/points and signals at the press of a button in |EX-WT| or |Engine Driver|, |WiThrottle|, or other WiThrottle-compatible throttles are available
 - Automatically drive multiple trains simultaneously, and manage complex interactions such as single line working and crossovers by setting up Automations 'Sequences'
 - Drive trains manually, and hand a train over to an Automation
 - Animate accessories such as lights, crossings, or cranes
@@ -53,7 +53,7 @@ While extra functionality may be attained by using additional tools and applicat
 You DON'T need:
 
 - |JMRI|, or any additional utilities
-- |Engine Driver|, |withrottle|, or any other WiThrottle app
+- |Engine Driver|, |WiThrottle|, or any other WiThrottle app
 - A separate computer living under your layout
 - Knowledge of C++ or Python/Jython programming
 

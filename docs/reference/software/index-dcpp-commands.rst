@@ -9,11 +9,10 @@
 DCC-EX Native Commands
 **********************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. toctree::
     :maxdepth: 1
 
     command-reference
-    command-summary
     command-summary-consolidated

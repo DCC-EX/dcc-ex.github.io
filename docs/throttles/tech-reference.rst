@@ -31,6 +31,15 @@ For anyone developing a throttle or controller application, these considerations
 - There is no concept of a throttle 'acquiring' a loco. |BR| Simply, commands for a loco are sent to the Command Station, and the Command Station 'broadcasts' the status of any/every loco to every throttle any time a change is made to a loco.
 - There is no concept of the throttle disconnecting from the Command Station.
 
+DCC-EX Native command library - DCCEXProtocol
+=============================================
+
+For throttle developers that want to focus on throttle features and functionality, the |DCC-EX| team have now released an Arduino library that communicates with |EX-CS| via the native |DCC-EX| commands.
+
+This library exposes numerous methods to interact with the |EX-CS| and the various objects including locos, turnouts/points, routes, and turntables.
+
+For further information, refer to the `DCC-EX Native command library - DCCEXProtocol <https://dcc-ex.com/DCCEXProtocol/index.html>`_ documentation.
+
 Responding to appropriate information
 =====================================
 
@@ -40,11 +49,15 @@ These are the *key* broadcast responses that should be understood:
 
 - ``<p X [MAIN|PROG|JOIN]>`` - When a throttle issues a track power command, this response is sent as a broadcast (see :ref:`reference/software/command-summary-consolidated:power management`)
 - ``<r address>`` - When a loco address is read on the programming track, the address is sent as a broadcast (see :ref:`reference/software/command-summary-consolidated:reading/writing configuration variables (cvs) - programming track`)
-- ``<l cab slot speed/dir func>`` - When throttles send loco commands, this is sent as a broadcast (see :ref:`reference/software/command-summary-consolidated:cab (loco) commands`)
+- ``<l cabid slot speed/dir func>`` - When throttles send loco commands, this is sent as a broadcast (see :ref:`reference/software/command-summary-consolidated:cab (loco) commands`)
 
 These broadcast responses should be understood if your controller deals with turnouts/points and sensors.
 - ``<H id [DCC|SERVO|VPIN|LCN] ... [0|1]>`` - When turnouts are closed/thrown, this response is broadcast (see :ref:`reference/software/command-summary-consolidated:turnouts/points`)
 - ``<[q|Q] id>`` - When sensors are deactivated/activated, this response is broadcast (see :ref:`reference/software/command-summary-consolidated:sensors`)
+
+|NOT-IN-PROD-VERSION|
+
+There are now turntable/traverser ``<i id position moving>`` broadcast responses if the new turntable/traverser objects are implemented (see :ref:`reference/software/command-summary-consolidated:turntables/traversers`).
 
 Working with track power states
 -------------------------------
@@ -75,7 +88,7 @@ Key throttle specific commands are summarised here, refer below for elaboration 
   * - ``<t cabid>``
     - ``<l cabid slot speedbyte functionMap>`` (Broadcast)
     - Requests a deliberate update of cab (loco) speed/functions
-  * - ``<F cab funct state>``
+  * - ``<F cabid funct state>``
     - ``<l cabid slot speedbyte functionMap>`` (Broadcast)
     - Turns cab (loco) decoder functions ON and OFF (See below for the response.)
   * - ``<JT>``
@@ -96,6 +109,15 @@ Key throttle specific commands are summarised here, refer below for elaboration 
   * - ``<JR id>``
     - ``<jR id "description" "function1/function2/function3/...">``
     - Returns the ID, description, and function map of the specified roster entry ID
+  * - ``<JO>``
+    - ``<jO id1 id2 id3 ...>``
+    - Returns the defined turntable IDs
+  * - ``<JO id>``
+    - ``<jO id type position position_count "[description]">``
+    - Returns the ID, type (0=DCC or 1=EXTT), current position, position count, and description of the specified turntable ID
+  * - ``<JP id>``
+    - ``<jP id index angle "[description]">``
+    - Returns the turntable ID, position index, angle, and description of each defined position for the specified turntable ID
 
 ----
 
@@ -136,7 +158,7 @@ Obtaining loco (cab) status
 Turnouts/Points
 ^^^^^^^^^^^^^^^
 
-The conventional turnout definition commands and the ``<H>`` responses do not contain information about the turnout description which may have been provided in an EX-RAIL script. A turnout description is much more user friendly than the identifier (eg. T123), and having a list helps the throttle UI build a suitable set of buttons.
+The conventional turnout definition commands and the ``<H>`` responses do not contain information about the turnout description which may have been provided in an EX-RAIL script. A turnout description is much more user friendly than the identifier (e.g. T123), and having a list helps the throttle UI build a suitable set of buttons.
 
 ``<JT>`` - Returns a list of turnout IDs. The throttle should be uninterested in the turnout technology used but needs to know the IDs it can throw/close and monitor the current state.
 
@@ -203,6 +225,36 @@ Roster Information
   Example response:
 
   * ``<jR 200 "Thomas" "whistle/*bell/squeal/panic">`` - Returns the defined description "Thomas" with each defined function's name. Refer to the EX-RAIL ROSTER command for function map format.
+
+Turntables/Traversers
+^^^^^^^^^^^^^^^^^^^^^
+
+|NOT-IN-PROD-VERSION|
+
+A new feature has been added to support control of turntables/traversers from throttles, including the ability for throttles to "draw" turntable positions as defined to support graphical operation. If |EX-R| commands are used to define turntables and their associated positions, a description for the turntable as well as each position is able to be defined.
+
+Note that to obtain a complete definition for a turntable/traverser, the turntable object needs to be queried first (``<JO id>``) followed by the position query (``<JP id>``) to obtain all defined positions for the object.
+
+``<JO>`` - Returns a list of turntable IDs.
+
+  Example response:
+
+  - ``<jT 1 2>`` - Turntable IDs 1 and 2 are defined.
+
+``<JO 1>`` - Returns details of turntable ID 1.
+
+  Example responses:
+
+  - ``<jO 1 0 1 5 "DCC Turntable">`` - DCC turntable type currently at position 1, with 5 defined positions and a description "DCC Turntable".
+  - ``<jO 1 1 0 11 "EX-Turntable">`` - EX-Turntable type currently at the home position (0), with 11 defined positions and a description "EX-Turntable"
+
+``<JP 1>`` - Returns all positions for turntable ID 1.
+
+  Example responses (will return all positions):
+
+  - ``<jP 1 0 0 "">`` - Position 0, unused for DCC turntables, "home" for EX-Turntable
+  - ``<jP 1 1 100 "Turntable position 1">`` - Position 1, 10 degrees from home
+  - ``<jP 1 2 1800 "Turntable position 2">`` - Position 2, 180 degrees from home
 
 Commands to avoid
 =================

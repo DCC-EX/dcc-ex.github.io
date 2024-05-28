@@ -7,7 +7,7 @@
 Diagnostic d Commands
 *********************
 
-|engineer|
+|tinkerer| |engineer| |support-button|
 
 .. toctree::
     :maxdepth: 2

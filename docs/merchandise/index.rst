@@ -1,11 +1,12 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 .. include:: /include/include-description.rst
+
 *******************
 DCC-EX Merchandise
 *******************
 
-Another way you can support the DCC-EX Project is to buy our DCC-EX branded merchandise, EX-Merch! Show everyone you are part of our team. There are several items to choose from in various sizes and colors:
+Another way you can support the DCC-EX Project is to buy our DCC-EX branded merchandise, EX-Merch! Show everyone you are part of our team. There are several items to choose from in various sizes and colours:
 
 * Regular T-Shirts
 * Premium T-Shirts
@@ -33,7 +34,7 @@ Here is an example listing for shirts where you need to choose the correct descr
    :align: center
    :scale: 65%
 
-And here is an example of an order page where you can select your size and color for the T-Shirts, Long-Sleeve Shirts, Hoodies, etc.
+And here is an example of an order page where you can select your size and colour for the T-Shirts, Long-Sleeve Shirts, Hoodies, etc.
 
 .. image:: /_static/images/merch/ex_merch_page.png
    :target: https://dccex.creator-spring.com/

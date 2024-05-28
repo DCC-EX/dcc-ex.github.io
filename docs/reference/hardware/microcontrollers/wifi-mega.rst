@@ -2,6 +2,7 @@
 .. include:: /include/include-l3.rst
 .. include:: /include/include-hardware.rst
 |EX-CS-LOGO|
+
 ***************
 Mega+WiFi Setup
 ***************
@@ -14,7 +15,7 @@ Mega+WiFi Setup
       :depth: 2
       :local:
 
-**A WiFi EX-CommandStation on one Board**
+**A WiFi EX-CommandStation with just two boards**  (The Mega+WiFi board plus a Motor Shield)
 
 .. figure:: /_static/images/assembly/mega_wifi.png
    :alt: Mega WiFi
@@ -23,15 +24,19 @@ Mega+WiFi Setup
 
    Mega+WiFi Board
 
-Do you know you are going want WiFi connectivity to connect your Throttle directly to your Command Station? Are you okay with having to throw a few switches and upload a bit of firmware onto the built-in ESP8266 WiFi chip? The process is easy, but since in involves having to use another bit of software and requires a couple of more steps, we labelled this option for Tinkerers, but it doesn't involve any soldering or jumper wiring.
+|force-break|
+
+Do you know you are going want WiFi connectivity to connect your Throttle directly to your Command Station? |BR| Are you okay with having to throw a few switches and upload a bit of firmware onto the built-in ESP8266 WiFi chip? 
+
+The process is easy, but since in involves having to use another bit of software and requires a couple of more steps, we labelled this option for **Tinkerers**, but it doesn't involve any soldering or jumper wiring.
 
 ----
 
-This is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266. Here are some of the brand names though the board itself can also be unmarked.
+Mega+WiFi Board is a combination of a Mega Clone and an ESP8266 WiFi chip on one board. Our guess is that like many boards made in China, this is only made by one or two factories, but sold under several names. Search for WiFi+Mega or ATmega2560+ESP8266.
 
 .. warning:: 
 
-   Buyer beware! There have been numerous reports of build quality with these clone boards, with poorly soldered USB connectors and issues getting wireless working two commonly reported issues.
+   Buyer beware! There have been numerous reports of build quality issues with these clone boards, with poorly soldered USB connectors and issues getting wireless working two commonly reported issues.
 
    The DCC-EX team do not recommend the combined Mega2560 + WiFi due to the number of issues encountered in recent times.
 
@@ -66,20 +71,20 @@ What You Will Do
 a. Plug in and test your Mega
 -----------------------------
 
-Plug your board into your computer with a USB micro cable to see if it is recognized. These boards use a CH340 UART (The USB controller) instead of the ones on an Arduino brand Uno or Mega. If you have never plugged anything into your computer with this chip on it before, you are going to have to install a driver. On Windows, you can go to device manager and open the ports tree item. Look for "CH340" or "CH341".
+Plug your board into your computer with a USB micro cable to see if it is recognised. These boards use a CH340 UART (The USB controller) instead of the ones on an Arduino brand Uno or Mega. If you have never plugged anything into your computer with this chip on it before, you are going to have to install a driver. On Windows, you can go to device manager and open the ports tree item. Look for "CH340" or "CH341".
 
 .. figure:: /_static/images/wifi/ch340_driver.png
-   :alt: CH340 Recognized
+   :alt: CH340 Recognised
    :scale: 100%
    :align: center
 
-   CH340 Recognized 
+   CH340 Recognised 
 
 If you don't see the CH340 with the Mega plugged into USB, download and install the drivers from here:
 
 http://www.wch-ic.com/downloads/CH341SER_ZIP.html
 
-Once you can see your computer recognizes your board, **remember the port**. For a PC running windows, it will be something like "COM24" as in the picture above. For a Mac, it will be something like "/dev/cu.wchusbserial*****", and for Linux it will look like "/dev/ttyUSBx". Write it down. 
+Once you can see your computer recognises your board, **remember the port**. For a PC running windows, it will be something like "COM24" as in the picture above. For a Mac, it will be something like "/dev/cu.wchusbserial*****", and for Linux it will look like "/dev/ttyUSBx". Write it down. 
 
 **Unplug the Mega.**
 
@@ -146,7 +151,7 @@ With the Mega UNPLUGGED (no power connected!), you will set some switches. Use t
 
    Important Board Locations
 
-Note that switch 8 is not connected to anything, you don't need to touch it. With a toothpick or jewelers screwdriver, very gently set your dip switches, it is easy to break them. Use this diagram to set your dip switches, **ON is up in this picture. Switches 5,6, and 7 are on**.
+Note that switch 8 is not connected to anything, you don't need to touch it. With a toothpick or jewellers screwdriver, very gently set your dip switches, it is easy to break them. Use this diagram to set your dip switches, **ON is up in this picture. Switches 5,6, and 7 are on**.
 
 .. figure:: /_static/images/wifi/mega_wifi_sw_flash.png
    :alt: Switches in flash mode
@@ -260,9 +265,9 @@ With the power disconnected from the Mega, set the switches back to the upload/r
 2. Decide if you want Access Point Mode or Station Mode
 =======================================================
 
-Access Point (AP) Mode (the default) makes the |EX-CS| an Access Point. That is a direct connection from your Throttle (Phone) to the |EX-CS| as a Local Intranet. There is no Internet access.  Station Mode connects the Command Station to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the |EX-CS| so your Throttles (Controllers) can find it on your network.
+|Access Point Mode| (the default) makes the |EX-CS| an Access Point. That is a direct connection from your Throttle (Phone) to the |EX-CS| as a Local Intranet. There is no Internet access.  |Station Mode| connects the Command Station to your local WiFi Router With Internet access. You then have to know the IP address your router assigns to the |EX-CS| so your Throttles (Controllers) can find it on your network.
 
-If you choose to use AP mode, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install |EX-CS|. Go directly to step 5.
+If you choose to use |Access Point Mode|, there is nothing you need to do. Just make sure you select the network checkbox in the installer or rename the config.example.h file to config.h and install |EX-CS|. Go directly to step 5.
 
 If you are going to want to connect to your WiFi router, you just need to enter your login information. Take a look at the `Short Version of Network Setup`_ below before proceeding to step 5. But keep in mind, you can always install, make changes, and install again.
 
@@ -289,14 +294,14 @@ All settings are in the config.h file in your EX-CommandStation folder. If you d
 
 **First, make sure your dip switches are set with 1,2,3,4 ON and 5,6,7 OFF (8 doesn't matter)**
 
-Setting up in Access Point AP Mode
-----------------------------------
+Setting up in Access Point (AP) Mode
+------------------------------------
 
 - If using the installer, just check the WiFi check box and leave SSID and password alone
   
 - If using the Arduino IDE,Make sure you didn't put "//" in front of the `#define ENABLE_WIFI true` line in your config.h file
 - No additional changes required, Leave SSID & Passwd alone
-- Your ESP-Wifi chip will assign a SSID as DCCEX_xxxxxx and PASS_xxxxxx, Where xxxxxx is the last 6 characters of your ESP8266 MAC Address
+- Your ESP-WiFi chip will assign a SSID as DCCEX_xxxxxx and PASS_xxxxxx, Where xxxxxx is the last 6 characters of your ESP8266 MAC Address
 - Upload the software to your Mega+WiFi (see Compile and Re-upload below)
 
 Setting up WiFi in Station (STA) Mode with Router
@@ -333,13 +338,13 @@ If not already connected to power, connect the Arduino ATMega2560 + ESP8266 WiFi
 6. Connect your Phone as a Throttle (Controller)
 ================================================
 
-- If operating in STA mode, make sure your phone is connected to your local network (The same SSID and PASSWD you set in the config.h file)
+- If operating in |Station Mode|, make sure your phone is connected to your local network (The same SSID and PASSWD you set in the config.h file)
 
-- If Operating in AP mode, disconnect your phone/tablet from any other network and find the SSID for your Command Station in your network list. It will be "DCCEX_xxxxxx" where the x's are the last 6 characters of your WiFi chip's MAC address. Use the password "PASS_xxxxxx" where the x's are the same 6 characters.
+- If Operating in |Access Point Mode|, disconnect your phone/tablet from any other network and find the SSID for your Command Station in your network list. It will be "DCCEX_xxxxxx" where the x's are the last 6 characters of your WiFi chip's MAC address. Use the password "PASS_xxxxxx" where the x's are the same 6 characters.
 
-.. NOTE:: You MUST either forget your local network or turn off "auto-reconnect" for that connection when using AP Mode. If you do not, your phone will disconnect from the DCCEX_xxxxxx network and connect to either a stronger connection, or one that has a connection to the internet.
+.. NOTE:: You MUST either forget your local network or turn off "auto-reconnect" for that connection when using |Access Point Mode|. If you do not, your phone will disconnect from the DCCEX_xxxxxx network and connect to either a stronger connection, or one that has a connection to the internet.
 
-- Start your Smart Phone (Android) |Engine Driver| App Or (Apple iOS) |WiThrottle| App and enter the IP address XXX.XXX.X.XXX assigned in the Arduino Serial Monitor above and Port 2560. For AP mode, it will usually be 192.168.4.1. For STA mode, it will be whatever your router assigned it.
+- Start your Smart Phone (Android) |Engine Driver| App Or (Apple iOS) |WiThrottle| App and enter the IP address XXX.XXX.X.XXX assigned in the Arduino Serial Monitor above and Port 2560. For |Access Point Mode|, it will usually be 192.168.4.1. For |Station Mode|, it will be whatever your router assigned it.
 
 If the |Engine driver| fails to connect the first time with the Command Station just press the Mega's red Reset button and try the IP/Port connection again.
 
@@ -354,9 +359,11 @@ There a few things to try if you experience issues connecting or staying connect
 
 1. Connect a serial monitor to the USB port and watch the boot sequence. The code will check each serial port in order to see if anything responds to an "AT" command. You will see "OK" on a line where it finds your WiFi board on serial port 3 and failure if it does not.
 
+   * Confirm that you see this exact line ``AT version:1.7.4.0(May 11 2020 19:13:04)`` |BR| if you see any other version or date/time, then the flash did not work.
+
 2. Make sure the little slide switch is set to Tx/Rx 3
 
-3. Make sure you forget your local network if using AP mode or set your home network to not automatically reconnect.
+3. Make sure you forget your local network if using |Access Point Mode| or set your home network to not automatically reconnect.
 
 4. Try changing the WiFi Channel in your config.h file to another channel and uploading the firmware again.
 

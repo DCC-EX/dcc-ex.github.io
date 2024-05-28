@@ -2,11 +2,16 @@
 .. include:: /include/include-l3.rst
 .. include:: /include/include-hardware.rst
 |EX-CS-LOGO|
-************************************
+
+********************************
 Keyes/Fundumoto ("Beeper Board")
-************************************
+********************************
 
 |engineer|
+
+.. warning:: 
+
+   This board is **not** compatible with |TM| DC mode.
 
 **THIS BOARD HAS NO CURRENT SENSE!** Refer to the :ref:`reference/hardware/motorboards/motor-board-config:current sense and sense factor` section for further information.
 
@@ -16,10 +21,10 @@ You have to lift two traces and solder 2 resistors and use 2 jumpers to the curr
   :alt: Keyes/Fundumoto Motor Shield
   :scale: 100%
 
-To modify the beeper board, desolder legs 2 and 19 off the solder pad, bend the legs up away from the PCB, and solder a wire directly to the legs. Be sure the legs of the IC are no longer in contact with the PCB, nor other legs.
+To modify the beeper board, de-solder legs 2 and 19 off the solder pad, bend the legs up away from the PCB, and solder a wire directly to the legs. Be sure the legs of the IC are no longer in contact with the PCB, nor other legs.
 
 .. image:: /_static/images/motorboards/keyes1.png
-  :alt: Desolder legs
+  :alt: De-solder legs
   :scale: 20%
 
 Solder the other end of each wire to the correct white header post. These correspond to A0 and A1, with pin 2 of the IC connecting to A0, and pin 19 to A1.

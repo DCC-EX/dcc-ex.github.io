@@ -64,6 +64,7 @@
 ..
 .. role:: dcc-ex-text-size-80pct
 .. role:: dcc-ex-text-size-60pct
+.. role:: dcc-ex-text-size-200pct
 ..
 .. |_| unicode:: 0xA0
   :trim:
@@ -194,6 +195,11 @@
       :scale: 40%
       :class: image-product-logo-float-right
 ..
+.. |NATIVE-PROTOCOL_LIBRARY-LOGO| image:: /_static/images/logos/product-logo-native-protocol-library.png
+      :alt: DCC-EX Native Protocol Library
+      :scale: 40%
+      :class: image-product-logo-float-right
+..
 .. ................................................
 ..
 .. |EX-BP-LOGO-SMALL| image:: /_static/images/logos/product-logo-bigpicture.png
@@ -215,6 +221,10 @@
 
     :doc:`Engine Driver </throttles/software/engine-driver>`
 ..
+.. |ED| replace::
+
+    :doc:`Engine Driver </throttles/software/engine-driver>`
+..
 .. |wiThrottle| replace::
 
     :doc:`wiThrottle </throttles/software/withrottle>`
@@ -233,15 +243,15 @@
 ..
 .. |Access Point| replace::
 
-    :doc:`Access Point </reference/glossary>`
+    :doc:`Access Point (AP) </reference/glossary>`
 ..
 .. |Access Point Mode| replace::
 
-    :doc:`Access Point Mode </reference/glossary>`
+    :doc:`Access Point (AP) Mode </reference/glossary>`
 ..
 .. |Station Mode| replace::
 
-    :doc:`Station Mode </reference/glossary>`
+    :doc:`Station (STA) Mode  </reference/glossary>`
 ..
 .. |Arduino IDE| replace::
 
@@ -262,6 +272,10 @@
 .. |hr-dashed| raw:: html
 
    <hr class="hr-dashed" />
+..
+.. |hr-heavy| raw:: html
+
+   <hr class="hr-heavy" />
 ..
 .. ...............................................
 ..

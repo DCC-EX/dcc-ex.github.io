@@ -35,7 +35,7 @@ Throttles - By Client Technology
 Web Browser (Windows, OSX, Linux)
 ---------------------------------
 
-- :doc:`EX-Web-Throttle (Web Browser) <software/ex-webthrottle>`
+- :doc:`EX-Web-Throttle (Web Browser) </ex-webthrottle/index>`
 
 Android (Phones and Tablets)
 ----------------------------
@@ -43,31 +43,40 @@ Android (Phones and Tablets)
 - :doc:`Engine Driver (Android)<software/engine-driver>`
 - :doc:`DCCpp CAB (android) <software/dccpp-cab>`
 - :doc:`Cab Engineer: DCC Throttle (Andriod) <software/cab-engineer>`
-- :doc:`DigiTrainsPro (Android) <software/digitrainspro>` *- Requires JMRI*
+- :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
 - :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
 
 Apple iOS (Phones and Tablets)
 ------------------------------
 
 - :doc:`Locontrol (iOS) <software/locontrol>` *- Requires JMRI*
-- :doc:`WiThrottle (iOS)<software/withrottle>`
+- :doc:`WiThrottle (iOS) <software/withrottle>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`Train Driver (iOS) <software/train-driver>`
+- :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
+
 
 Dedicated Hardware
 ------------------
 
 - :doc:`miniThrottle (Physical) <hardware/minithrottle>`
-- :doc:`miniThrottle (Physical) <hardware/minithrottle>`
 - :doc:`WiTcontroller (Physical) <hardware/witcontroller>`
+- :doc:`DccExController (Physical) <hardware/dccexcontroller>`
 - :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
 - :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
+- :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
 Personal Computers
 ------------------
 
-- :doc:`EX-WebThrottle <software/ex-webthrottle>`
+- :doc:`EX-WebThrottle </ex-webthrottle/index>`  *(Web Browser)*
 - :doc:`JMRI (Windows, iOS, Linux) <software/jmri>`
+- :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
+- :doc:`Train Throttle <software/train-throttle>`
+- :doc:`Railroad Automation <software/railroad-automation>` *- Requires IoTT Red Hat*
+
+Note: The Android throttle apps listed above can be made to made to run on Windows PCs. See :doc:`Running Android apps on Microsoft Windows <software/android-apps-on-windows>`.
+
 
 ----
 
@@ -85,15 +94,17 @@ General
 DCC-EX (DCC-EX Native Commands)
 -------------------------------
 
-- :doc:`EX-WebThrottle <software/ex-webthrottle>`
+- :doc:`EX-WebThrottle </ex-webthrottle/index>`
 - :doc:`Engine Driver (Android)<software/engine-driver>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`miniThrottle (Physical) <hardware/minithrottle>`
 - :doc:`JMRI <software/jmri>`
 - :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
 - :doc:`DCCpp CAB (Android) <software/dccpp-cab>`
+- :doc:`DccExController (Physical) <hardware/dccexcontroller>`
+- :doc:` DCC-EX Native command library - DCCEXProtocol <throttles/native-protocol-library>`
 
-wiThrottle Protocol Based Throttles
+WiThrottle Protocol Based Throttles
 -----------------------------------
 
 - :doc:`Engine Driver (Android)<software/engine-driver>`
@@ -109,7 +120,8 @@ wiThrottle Protocol Based Throttles
 USB Based Throttles
 -------------------------------
 
-- :doc:`EX-WebThrottle <software/ex-webthrottle>`
+- :doc:`EX-WebThrottle </ex-webthrottle/index>`
+- :doc:`myBluePillThrottle <hardware/mybluepillthrottle>`
 - Also see: :doc:`connect_wifi_throttle_via_usb`
 
 JMRI Web Server Based Throttles
@@ -120,14 +132,358 @@ JMRI Web Server Based Throttles
 
 ----
 
+Table - Throttles by Technology 
+===============================
+
+.. list-table::
+    :widths: auto
+    :header-rows: 3
+    :class: command-table
+
+    * -  Name
+      -  Licence
+      -  Interface
+      -  Tech- |BR| nology
+      -  
+      -  Also |BR| Requires
+      -  Form |BR| Factor
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  CV  Pro- |BR| gramming
+
+    * -  
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  Mobile
+      -  
+      -  
+      -  PC
+      -  
+      -  
+      -  
+
+    * -  
+      -  
+      -  
+      -  Protocol
+      -  UI
+      -  
+      -  Physical |BR| Device
+      -  Android
+      -  iOS
+      -  Win
+      -  MacOS
+      -  Linux
+      -  
+
+    * -  :doc:`JMRI <software/jmri>`
+      -  Free
+      -  USB / Net
+      -  Native
+      -  Web
+      -  
+      -  
+      -  Web
+      -  Web
+      -  X
+      -  X
+      -  X
+      -  X
+
+    * -  :doc:`Railroad Automation <software/railroad-automation>`
+      -  
+      -  Net / LocoNet
+      -  LocoNet
+      -  Web
+      -  IoTT Red hat
+      -  
+      -  Web
+      -  Web
+      -  X
+      -  X
+      -  X
+      -  
+
+    * -  :doc:`EX-WebThrottle </ex-webthrottle/index>`
+      -  Free
+      -  USB
+      -  Native / WiT
+      -  Web
+      -  
+      -  
+      -  
+      -  
+      -  X
+      -  X
+      -  X
+      -  X
+
+    * -  :doc:`Engine Driver <software/engine-driver>`
+      -  Free
+      -  Net
+      -  Native
+      -  App
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  X (native only)
+
+    * -  :doc:`DCCpp CAB <software/dccpp-cab>`
+      -  
+      -  Net
+      -  Native
+      -  App
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  :doc:`Cab Engineer: DCC Throttle  <software/cab-engineer>`
+      -  
+      -  Net
+      -  WiT
+      -  App
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  :doc:`RtDtive DCC++ <software/rtdrive-dccpp>`
+      -  
+      -  Net
+      -  Native
+      -  App
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  :doc:`DigiTrainsPro <software/digitrainspro>`
+      -  Free / Paid
+      -  Net
+      -  JMRI Web
+      -  App
+      -  JMRI
+      -  
+      -  X
+      -  X
+      -  X
+      -  
+      -  
+      -  
+
+    * -  :doc:`Locontrol <software/locontrol>`
+      -  
+      -  Net
+      -  JMRI Web
+      -  App
+      -  JMRI
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+
+    * -  :doc:`WiThrottle <software/withrottle>`
+      -  Free / Paid
+      -  Net
+      -  WiT
+      -  App
+      -  
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+
+    * -  :doc:`SRCP Client <software/srcpclient>`
+      -  
+      -  Net
+      -  Native
+      -  App
+      -  
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+
+    * -  :doc:`Train Driver <software/train-driver>`
+      -  
+      -  Net
+      -  Native
+      -  App
+      -  
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+
+    * -  :doc:`Train Throttle <software/train-throttle>`
+      -  
+      -  Net
+      -  WiT
+      -  App
+      -  
+      -  
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+
+    * -  :doc:`miniThrottle <hardware/minithrottle>`
+      -  
+      -  Net / USB
+      -  Native
+      -  Device
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  :doc:`WiTcontroller <hardware/witcontroller>`
+      -  Free
+      -  Net
+      -  WiT
+      -  Device
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  :doc:`DccExController <hardware/dccexcontroller>`
+      -  Free
+      -  Net
+      -  Native
+      -  Device
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  :doc:`myBluePillThrottle7 <hardware/mybluepillthrottle>`
+      -  Free
+      -  Serial
+      -  Native
+      -  Device
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  :doc:`TCS UWT-50 <hardware/uwt50>`
+      -  Paid
+      -  Net
+      -  WiT
+      -  Device
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  :doc:`Elgato Stream Deck <hardware/streamdeck>`
+      -  Paid
+      -  Net
+      -  native
+      -  Device
+      -  PC or Rpi
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  LocoNet-Compatible Throttles
+      -  Free / Paid
+      -  Net
+      -  LocoNet
+      -  Device
+      -  IoTT Red hat
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
+
+**Legend**
+
+  Net = Wifi or LAN networks |BR|
+  Free / paid = Both Free and Paid versions are available. The free version may be limited in features. |BR|
+  Native = Uses the Native DCC-EX command / command protocols |BR|
+  WiT = Uses the WiThrottle command protocol |BR|
+  Web = Requires the use of a Web Browser |BR|
+  Win = Windows 7 and above
+
+Note: The Android throttle apps listed above can be made to made to run on Windows PCs. See :doc:`Running Android apps on Microsoft Windows <software/android-apps-on-windows>`.
+
+----
+
 Reference
 =========
 
 - :doc:`Technical Reference for Throttle Developers <tech-reference>`
-
+- :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 3
     :hidden:
     
     protocols
@@ -135,4 +491,5 @@ Reference
     hardware/index
     connect_wifi_throttle_via_usb
     tech-reference
+    DCC-EX Native command library </throttles/native-protocol-library>
 

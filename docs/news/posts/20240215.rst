@@ -1,0 +1,32 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+.. include:: /include/include-news.rst
+
+:blogpost: true
+:date: 15 February 2024 
+:author: peteGSX
+:category: News
+:tags: ex-sensorcam
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+Announcing EX-SensorCAM - a new camera-based sensor for your layout
+===================================================================
+
+Are you struggling to figure out how to neatly run a myriad of cables around your layout to cater for dozens (or more) of sensors? Struggling to find ways to neatly integrate and hide sensors in and around your track? Well struggle no more, EX-SensorCAM is here!
+
+Today, we are announcing a new Alpha product using embedded camera technology with the ESP32 CAM platform to visually monitor your layout and detect movements of trains to trigger events.
+
+This can be used in place of traditional wired layout sensors with a camera placed overhead instead. This can then monitor activities on the layout, rather than having to figure out the best location for a sensor, then figure out how to mount or embed it in the track bed or surrounds, and then figure out a cunning way to hide it so it looks like part of the scenery. Not to mention removing the need to wire up every sensor and ensure that wiring is neat and tidy underneath the layout.
+
+Like all our Alpha releases, this is very new software, meaning it's going to rapidly undergo many changes and bug fixes as issues are found, and functionality is likely going to change over time. This also means the project is currently aimed more towards our |tinkerer-text| and |engineer-text| audiences.
+
+There are some caveats on things like lighting requirements at the moment given the ESP32 CAM platform is a fairly low performance, entry-level device.
+
+If you're keen to have a look and get started, then you can find the software in our `EX-SensorCAM repository <https://github.com/DCC-EX/EX-SensorCAM>`_ in GitHub, where you will find a PDF with instructions on what's required to get started.
+
+You can also discuss this in the #ex-sensorcam channel in our `Discord Server <https://discord.gg/y2sB4Fp>`_.

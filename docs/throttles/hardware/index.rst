@@ -7,13 +7,15 @@
 Throttles (Hardware)
 ********************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. toctree::
   :maxdepth: 1
 
   minithrottle
   witcontroller
+  dccexcontroller
+  mybluepillthrottle
   engine-driver-physical-knobs
   streamdeck 
   uwt50

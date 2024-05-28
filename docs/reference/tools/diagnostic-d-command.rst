@@ -7,7 +7,7 @@
 Diagnostics ``<D>`` Command
 ****************************
 
-|engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -19,7 +19,7 @@ These commands either enable diagnostics or allow settings to be changed. There 
 
 **The** ``<D>`` **commands are intended for diagnostics only which means that their behaviour can change from one release to another without warning**
 
-These commands can be entered directly via the USB serial console or through a Wifi connection to the command station with a tool such as Telnet or Putty. |JMRI| includes the DCC++ traffic monitor which lets you insert serial |DCC-EX Native Commands| as well. (links required)
+These commands can be entered directly via the USB serial console or through a WiFi connection to the command station with a tool such as Telnet or Putty. |JMRI| includes the DCC++ traffic monitor which lets you insert serial |DCC-EX Native Commands| as well. (links required)
 
 Speed Step Configuration
 ========================
@@ -37,11 +37,12 @@ The following commands turn ON(1) or OFF(0) various diagnostic traces
 
 ``<D CMD ON|OFF>`` trace received JMRI commands.
 
-``<D WIFI ON|OFF>`` trace Wifi protocol AT command conversation between Arduino and Wifi hardware.
+``<D WIFI ON|OFF>`` trace WiFi protocol AT command conversation between Arduino and WiFi hardware.
 
 ``<D ETHERNET ON|OFF>`` trace Ethernet  conversation between Arduino and Ethernet hardware.
 
 ``<D WIT ON|OFF>`` trace WiThrottle protocol conversation of Engine Driver (or other WiThrottle device).
+
 ``<D HAL SHOW>`` display information about configured HAL devices (servo controllers, GPIO Extenders) including address and pins used
 
 The following commands might help in exceptional circumstances

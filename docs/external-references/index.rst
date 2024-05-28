@@ -3,7 +3,7 @@
 .. include:: /include/include-l1.rst
 .. include:: /include/include-description.rst
 .. meta::
-  :description: Articles and videos created by people in and outside the |DCC-EX| project which you may fine useful or interesting
+  :description: Articles and videos created by people in and outside the |DCC-EX| project which you may find useful or interesting
 
 *******************
 Articles and Videos
@@ -15,7 +15,7 @@ Articles and Videos
     :depth: 2
     :local:
 
-The following are articles and videos created by people in and outside the |DCC-EX| project which you may fine useful or interesting.
+The following are articles and videos created by people in and outside the |DCC-EX| project which you may find useful or interesting.
 
 Videos
 ======
@@ -24,7 +24,12 @@ Jimmy from 'DIY and Digital Railroad'
 -------------------------------------
 
 * 31 July 2023 - `Cheap and Amazing! DCC-EX 2 Years Later <https://www.youtube.com/watch?v=5WXPA0uVFXw>`_
-* ~ 2021 - `DCC++EX: A Cheap DIY DCC System?!?! This is a Model Railroad Game Changer <https://www.youtube.com/watch?v=DVDNi9U_K68&t=0s>`_
+* ~ 2021 - `DCC-EX: A Cheap DIY DCC System?!?! This is a Model Railroad Game Changer <https://www.youtube.com/watch?v=DVDNi9U_K68&t=0s>`_
+
+Wotton Tor
+----------
+
+* 17 December 2023 - `Flashing the Makerfabs wifi board <https://www.youtube.com/watch?v=mNHlDmCnPMU>`_  (The flashing demo starts about 9 minutes into the video.)
 
 Little Wicket Railway
 ---------------------
@@ -55,8 +60,8 @@ Paul Antoine
 
 * ~ April 2023 - `"DCC-EX Open Source Model Railroading" - Paul Antoine (Everything Open 2023) <https://youtu.be/YlGL9-v5OAQ>`_
 
-
 DriverDTrains
 ------------
 
 * ~ 27 August 2023 - `"#4 Assembling a Mega DCC-EX Command Station" - Driver D (Part 1 Hardware Assembly)  <https://www.youtube.com/watch?v=HatlU7A5S5s>`_
+=======

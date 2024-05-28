@@ -7,7 +7,7 @@
 Supported Bluetooth Devices
 ***************************
 
-|tinkerer|
+|tinkerer| |engineer| |support-button|
 
 .. image:: /_static/images/bluetooth/bluetooth.png
   :alt: Bluetooth Logo

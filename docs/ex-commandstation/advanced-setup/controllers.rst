@@ -7,7 +7,7 @@
 Choosing a Throttle (Controller) - Advanced
 *******************************************
 
-|conductor|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -87,7 +87,7 @@ For those who want the power of |JMRI| to operate a complex layout, you would in
 Command Language (API)
 ======================
 
-There are at least 3 ways for a throttle to 'talk' to a Command Station; the |DCC-EX Native Commands|, |WiThrottle Protocol| command language, and via the |JMRI| Web Server command language. For an explanation of what these terms mean, and what that means to you, please see :doc:`Protocols: WiThrottle, DCC-EX Native Commands, and Web Servers Explained </throttles/protocols>`. |EX-CS| natively understands our own |DCC-EX Native Commands| and the |WiThrottle Protocol| API, and will work with a direct connection to these throttles. However, you can connect throttles to the computer running |JMRI|, and use |JMRI| as the middleware to send commands to |EX-CS|. |JMRI| uses DCC++ commands when speaking to the Command Station.
+There are at least 3 ways for a throttle to 'talk' to a Command Station; the |DCC-EX Native Commands|, |WiThrottle Protocol| command language, and via the |JMRI| Web Server command language. For an explanation of what these terms mean, and what that means to you, please see :doc:`Protocols: WiThrottle, DCC-EX Native Commands, and Web Servers Explained </throttles/protocols>`. |EX-CS| natively understands our own |DCC-EX Native Commands| and the |WiThrottle Protocol| API, and will work with a direct connection to these throttles. However, you can connect throttles to the computer running |JMRI|, and use |JMRI| as the middleware to send commands to |EX-CS|. |JMRI| uses |DCC-EX Native Commands| when speaking to the Command Station.
 
 Compatible Throttles (Controllers)
 ==================================
@@ -115,14 +115,14 @@ Here are your connections, just a computer running a chromium-based browser, a U
    :align: center
    :scale: 45%
 
-For operating instructions see :doc:`how to use EX-WebThrottle </throttles/software/ex-webthrottle>`
+For operating instructions see :doc:`how to use EX-WebThrottle </ex-webthrottle/index>`
 
 |
 
 Engine Driver (Android | WiThrottle | WiFi)
 --------------------------------------------
 
-Engine Driver is a throttle app for your phone that can control multiple locos and your turnouts. It uses an interface called "|WiThrottle Protocol|" (for WiFi Throttle). any |WiThrottle Protocol| compatible throttle will work with the |EX-CS|. There are two ways to connect it; the first method is by connecting directly to the Command Station via WiFi. You will need a WiFi board connected to the Command Station (see Wifi Setup :doc:`WiFi Setup </ex-commandstation/advanced-setup/supported-connections/wifi-setup>`).
+Engine Driver is a throttle app for your phone that can control multiple locos and your turnouts. It uses an interface called "|WiThrottle Protocol|" (for WiFi Throttle). any |WiThrottle Protocol| compatible throttle will work with the |EX-CS|. There are two ways to connect it; the first method is by connecting directly to the Command Station via WiFi. You will need a WiFi board connected to the Command Station (see WiFi Setup :doc:`WiFi Setup </ex-commandstation/advanced-setup/supported-connections/wifi-setup>`).
 
 The second method is to use |JMRI| and connect |Engine Driver| (ED) to the computer running |JMRI|. That computer would then connect to the Command Station via a USB cable (normally) or via a Wireless USB Bridge. The computer running |JMRI| can be just about any type of computer: PC, Mac, or Raspberry Pi. However, most operators like the Pi option because it is inexpensive, small, can mount under the layout, and has a free image file that you can flash to a Micro-SD card and have a full |JMRI| setup with WiFi with virtually no fuss.
 
@@ -143,8 +143,8 @@ WiThrottle (iOS | WiThrottle | WiFi)
 
 See :doc:`WiThrottle Page </throttles/software/withrottle>`
 
-Locontrol (iOS | JMRI Web Server, DCC++ | WiFi)
-------------------------------------------------
+Locontrol (iOS | JMRI Web Server, DCC-EX Native Commands | WiFi)
+----------------------------------------------------------------
 
 Locontrol is a beautiful and functional throttle that uses the |JMRI| Web Server to connect. Soon it will be able to connect directly to the |EX-CS| by using the |DCC-EX Native Commands| set.
 
@@ -180,7 +180,7 @@ Probably the way most people use |JMRI| is to have a Raspberry Pi running |JMRI|
 Connecting via VNC
 ^^^^^^^^^^^^^^^^^^^
 
-VNC stands for "Virtual Network Computing", and it is a way to access a device remotely. Variations of this are called "Remote Desktop" in Windows, Teamviewer, Anydesk, etc. It is free and it lets you take another device, like a tablet, and have a viewport into the computer you are using to run |JMRI|. It literally is a "remote desktop". Everything is running on your computer or Raspberry Pi, yet you can control it from a handheld wireless device with a touchscreen.
+VNC stands for "Virtual Network Computing", and it is a way to access a device remotely. Variations of this are called "Remote Desktop" in Windows, TeamViewer, AnyDesk, etc. It is free and it lets you take another device, like a tablet, and have a viewport into the computer you are using to run |JMRI|. It literally is a "remote desktop". Everything is running on your computer or Raspberry Pi, yet you can control it from a handheld wireless device with a touchscreen.
 
 .. todo:: `LOW - Controllers <https://github.com/DCC-EX/dcc-ex.github.io/issues/416>`_ - diagram needed for Connecting via VNC
 
@@ -203,9 +203,9 @@ For more information about all the throttles, see the :doc:`Throttles Section </
 
 It's also possible to connect a throttle or controller directly to the |EX-CS| serial port Tx/Rx pins if it uses a logic level serial connection. This would be a common option for DIY throttles based on other Arduino platforms.
 
-This is also the same method when using HC05/06 bluetooth devices, as outlined in :doc:`/reference/hardware/bluetooth/hc-05-06`.
+This is also the same method when using HC05/06 Bluetooth devices, as outlined in :doc:`/reference/hardware/bluetooth/hc-05-06`.
 
-If connecting to serial ports other than the default (eg. serial port 0 on the Mega2560), you will need to enable API commands for that specific serial port by editing your "config.h" file, and uncommenting the appropriate line. For example, to enable API commands on serial port 2, you need to uncomment this line:
+If connecting to serial ports other than the default (e.g. serial port 0 on the Mega2560), you will need to enable API commands for that specific serial port by editing your "config.h" file, and uncommenting the appropriate line. For example, to enable API commands on serial port 2, you need to uncomment this line:
 
 .. code-block:: cpp
 

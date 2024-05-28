@@ -3,11 +3,11 @@
 .. include:: /include/include-reference.rst
 |EX-REF-LOGO|
 
-***********************************************
-DCC-EX Native Commands - Consolidated Reference
-***********************************************
+****************************************
+DCC-EX Native Commands Summary Reference
+****************************************
 
-|engineer|
+|engineer| |support-button|
 
 .. sidebar:: 
 
@@ -61,7 +61,9 @@ Also allows joining the MAIN and PROG tracks together.
   |_| |_| |_| |_| - PROG = Programming Track  |BR|
   |_| |_| |_| |_| - JOIN = Join the Main and Programming tracks temporarily |BR|
 
-  *Response:*  N/A
+  *Response:* 
+    |_| The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes. |BR|
+    |_| ``<pOnOFF [track]>`` |BR|
 
   *Notes:*
 
@@ -72,7 +74,12 @@ Also allows joining the MAIN and PROG tracks together.
   *Examples:* |BR|
   |_| all tracks off: ``<0>`` |BR|
   |_| all tracks on ``<1>`` |BR|
-  |_| join: ``<1 JOIN>``
+  |_| join: ``<1 JOIN>`` |BR|
+  *Example Responses:* |BR|
+  |_| all tracks off: ``<p0>`` |BR|
+  |_| all tracks on ``<p1>`` |BR|
+  |_| join: ``<p1 JOIN>``
+
 
 |hr-dashed|
 
@@ -126,7 +133,7 @@ Note:  Previously referred to as 'DC-District'.
   |_| |_| |_| |_| - PROG |BR|
   |_| |_| |_| |_| - DC |BR|
   |_| |_| |_| |_| - DCX = DC reversed polarity |BR|
-  |_| |_| |_| |_| - OFF (DCX is DC with reversed polarity) |BR|
+  |_| |_| |_| |_| - NONE |BR|
   |_| > **id:** the cab ID. *Required when specifying DC or DCX*
   
   *Response:* |BR|
@@ -151,6 +158,42 @@ Note:  Previously referred to as 'DC-District'.
   |_| > **trackletter:** A-H |BR|
   |_| > **state:** PROG, MAIN DC, DCX |BR|
   |_| > **cab:** cab(loco) equivalent to a fake DCC Address
+
+``<onOff [track]>`` - Turn power on or off to the requested TrackManager track
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|NOT-IN-PROD-VERSION|
+
+  *Parameters:* |BR|
+  |_| > **onOff:** one of |BR|
+  |_| |_| |_| |_| - 1 = on |BR|
+  |_| |_| |_| |_| - 0 = off |BR|
+  |_| > **track:** one of tracks A - H |BR|
+
+  *Response:* 
+    |_| The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes. |BR|
+    |_| ``<pOnOFF [track]>`` |BR|
+
+
+Change Frequency on DC/DCX TrackManager track
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|NOT-IN-PROD-VERSION|
+
+When running in DC mode certain locomotives can be unresponsive at certain DC frequencies, a situation that is not found when running in DCC mode.  When in DC or DCX mode it is now possible to set different frequencies using Functions F29, F30 & F31.
+
+The settings achievable vary slightly depending upon the processor running the CS but broadly follow the following:
+
+|_| > **No Functions:** Default - low frequency 131Hz |BR|
+|_| > **F29:** Mid frequency - 490Hz |BR|
+|_| > **F30:** High frequency - 3400Hz |BR|
+|_| > **F31:** Supersonic - 62500Hz|BR|
+
+Note that these functions are not cumulative - setting F30 overrides F29 and setting F31 overrides F29 & F30.
+
+For details on setting F keys see "Turn Loco decoder functions ON or OFF" in `Cab (Loco) Commands`_ below.
+
+For ease of changing these functions within EXRAIL an EXRAIL command SET_FREQ is available to select the frequency within automations/routes.
 
 ----
 
@@ -479,7 +522,7 @@ Turnouts/Points
     :local:
     :class: in-this-section
 
-For details on how to configure turnouts/points see: `Turnouts/Points (Configuring the EX-CommandStation)`_
+For details on how to configure turnouts/points see: :ref:`reference/software/command-summary-consolidated:turnouts/points (configuring the ex-commandstation)`
 
 |hr-dashed|
 
@@ -580,6 +623,177 @@ For details on how to configure turnouts/points see: `Turnouts/Points (Configuri
   |_| *Example Responses:* |BR|
   |_| Response (has defined Turnouts/Points): ``<jT id1 id2 id3 ...>`` |BR|
   |_| Response (no defined Turnouts/Points): ``<jT>``
+
+----
+
+Turntables/Traversers
+---------------------
+
+|NOT-IN-PROD-VERSION|
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
+For details on how to configure turntables/traversers see: :ref:`reference/software/command-summary-consolidated:turntables/traversers (configuring the ex-commandstation)`
+
+|hr-dashed|
+
+``<I>`` - Request a list all defined turntables/traversers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Response:* |BR|
+  |_| Repeated for each defined Turtable/traverser |BR|
+  |_| |_| Response: ``<I id position>`` |BR|
+  |_| Response (fail): N/A |BR|
+  |_| Response (no defined turntables/traversers): ``X`` |BR|
+  |_| |BR|
+  |_| > **id** - The numeric ID (1-32767) of the turntable to control |BR|
+  |_| > **position** - The current position of the turntable |BR|
+
+|hr-dashed|
+
+``<I id>`` - Request position of the specified turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Response:* |BR|
+  |_| Response: ``<I id position>`` |BR|
+  |_| Response (fail): N/A |BR|
+  |_| Response (no defined turntables/traversers): ``X`` |BR|
+  |_| |BR|
+  |_| > **id** - The numeric ID (1-32767) of the turntable to control |BR|
+  |_| > **position** - The current position of the turntable |BR|
+
+|hr-dashed|
+
+``<I id position>`` - Rotate a DCC turntable
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **id:** - Identifier of the Turntable/traverser |BR|
+  |_| > **position:** - Position to rotate to |BR|
+  
+  *Response:* |BR|
+  |_| ``<I id position moving>`` |BR|
+  |_| > **id:** one of |BR|
+  |_| |_| |_| |_| - identifier of the Turntable/traverser, or  |BR|
+  |_| |_| |_| |_| - X if the command fails |BR|
+  |_| > **position:** one of |BR|
+  |_| |_| |_| |_| - position rotating to, or |BR|
+  |_| |_| |_| |_| - blank = command failed |BR|
+  |_| > **moving:** one of |BR|
+  |_| |_| |_| |_| - 0 (no feedback can be returned from a DCC turntable), or |BR|
+  |_| |_| |_| |_| - blank = command failed |BR|
+  |_|  |BR|
+  |_| *Example Responses:* |BR|
+  |_| Response on rotate: |BR|
+  |_| |_| |_| Response (successful): ``<I id position moving>`` |BR|
+  |_| |_| |_| Response (fail): ``<X>`` |BR|
+
+  *Further information:* |BR|
+  |_| When a DCC accessory turntable is rotated or moved, no feedback is sent to |EX-CS|, and therefore the **moving** variable will always be '0', and a second response will therefore never be sent to indicate the completion of a rotation or move, unlike how |EX-TT| operates.
+
+|hr-dashed|
+
+``<I id position activity>`` - Rotate EX-Turntable
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **id:** - Identifier of the Turntable/traverser |BR|
+  |_| > **position:** - Position to rotate to |BR|
+  |_| > **activity:** - The activity for EX-Turntable to perform (refer :ref:`ex-turntable/test-and-tune:ex-turntable commands`) |BR|
+  
+  *Response:* |BR|
+  |_| ``<I id position moving>`` |BR|
+  |_| > **id:** one of |BR|
+  |_| |_| |_| |_| - identifier of the Turntable/traverser, or  |BR|
+  |_| |_| |_| |_| - X if the command fails, or a rotation/move is in progress |BR|
+  |_| > **position:** one of |BR|
+  |_| |_| |_| |_| - position rotating to, or |BR|
+  |_| |_| |_| |_| - blank = command failed |BR|
+  |_| > **moving:** one of |BR|
+  |_| |_| |_| |_| - 1 - turntable is moving, or |BR|
+  |_| |_| |_| |_| - 0 - turntable is not moving, or |BR|
+  |_| |_| |_| |_| - blank = command failed |BR|
+  |_|  |BR|
+  |_| *Example Responses:* |BR|
+  |_| Response on rotate: |BR|
+  |_| |_| |_| Response (successful): ``<I id position moving>`` |BR|
+  |_| |_| |_| Response (fail): ``<X>`` |BR|
+
+  *Further information:* |BR|
+  |_| When EX-Turntable commences rotating/moving, the device driver flags this using the **moving** variable above in the response (1 indicates moving, 0 indicates stationary), and when a rotation or move is complete, it will generate an additional response broadcast to indicate that the rotation or move has completed. Further to this, a new rotate/move command will error when a rotation or move is currently in progress.
+
+|hr-dashed|
+
+``<J O>`` ``<JO>`` - Request the list of defined turntables/traversers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Response:*
+  |_| ``<jO [id1 id2 id3 ...]>`` |BR|
+  |_| > **id:** unique id of the turntable(s)/traverser(s) |BR|
+  |_|  |BR|
+  |_| *Example Responses:* |BR|
+  |_| Response (has defined Turnouts/Points): ``<jO id1 id2 id3 ...>`` |BR|
+  |_| Response (no defined Turnouts/Points): ``<jO>``
+
+|hr-dashed|
+
+``<J O id>`` ``<JO id>`` - Request details of the specific turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **id:**  unique id of the turntable/traverser
+  
+  *Response:* |BR|
+  |_| ``<jO id type position position_count "[desc]">`` |BR|
+  |_| > **id:** unique id of the turntable/traverser  |BR|
+  |_| > **type:** one of |BR|
+  |_| |_| |_| |_| - 0 = DCC |BR|
+  |_| |_| |_| |_| - 1 = EX-Turntable |BR|
+  |_| |_| |_| |_| - X = unknown id or hidden |BR|
+  |_| > **position:** one of |BR|
+  |_| |_| |_| |_| - index of the current position (0 - 48) |BR|
+  |_| |_| |_| |_| - blank = unknown or hidden id |BR|
+  |_| > **position_count:** one of |BR|
+  |_| |_| |_| |_| - 0 = number of defined positions, including home (0) |BR|
+  |_| |_| |_| |_| - blank = unknown or hidden id |BR|
+  |_| > **desc:** one of  |BR|
+  |_| |_| |_| |_| - "desc" = description of the turntable or traverser (including surrounding quotes) |BR|
+  |_| |_| |_| |_| - blank = unknown or hidden id |BR|
+  |_|  |BR|
+  |_| *Example Responses:* |BR|
+  |_| Response (id is defined): ``<jO id type position position_count "[desc]">`` |BR|
+  |_| Response (id not defined): ``<jO id X>``
+
+  *Further information:* |BR|
+  |_| The turntable or traverser information does not include the list of defined positions, and this must be requested separated as outlined in the following section.
+
+|hr-dashed|
+
+``<J P id>`` ``<JP id>`` - Request all position details of the specified turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **id:**  unique id of the Turnout/Point
+  
+  *Response:* |BR|
+  |_| ``<jP id index angle "[desc]">`` |BR|
+  |_| > **id:** unique id of the turntable/traverser  |BR|
+  |_| > **index:** one of |BR|
+  |_| |_| |_| |_| - the position index (0 - 48) |BR|
+  |_| |_| |_| |_| - X = unknown or hidden id |BR|
+  |_| > **angle:** one of |BR|
+  |_| |_| |_| |_| - the angle from home for the position (0 - 3600 to allow for partial angles) |BR|
+  |_| |_| |_| |_| - blank = unknown or hidden id |BR|
+  |_| > **desc:** one of  |BR|
+  |_| |_| |_| |_| - "desc" = description of the position (including surrounding quotes) |BR|
+  |_| |_| |_| |_| - blank = unknown or hidden id |BR|
+  |_|  |BR|
+  |_| *Example Responses:* |BR|
+  |_| Response (id is defined): ``<jO id index angle "[desc]">`` |BR|
+  |_| Response (id not defined): ``<jO id X>``
 
 ----
 
@@ -787,6 +1001,29 @@ Sensors
 
 ----
 
+Signals
+-------
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
+
+|hr-dashed|
+
+``</ RED signalId> </ AMBER signalId> </ GREEN signalId>`` - Control a signal
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **signalId:** defined red Vpin of the signal to control
+
+  *Response:* N/A
+
+|hr-dashed|
+
+----
+
 WiFi Control
 ------------
 
@@ -950,6 +1187,14 @@ Request the Routes & Automations control list in wiThrottle Protocol format.
   *Response:* ???
 
 |hr-dashed|
+
+``</ RED signalId> </ AMBER signalId> </ GREEN signalId>`` - Control a signal (EXRAIL)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **signalId:** defined red Vpin of the signal to control
+
+  *Response:* N/A
 
 ``</>`` - Request EX-RAIL running task information
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1594,6 +1839,96 @@ If turnout definitions are stored in EEPROM, the turnout thrown/closed state is 
 
 ----
 
+Turntables/Traversers (Configuring the EX-CommandStation)
+---------------------------------------------------------
+
+|NOT-IN-PROD-VERSION|
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
+The Turntable/Traverser commands provide a more flexible and functional way of operating turntables/traversers. These require that the turntable/traverser be pre-defined through the ``<I ...>`` commands, described below.
+
+Note that a turntable/traverser object must be created using the appropriate ``<I ...>`` command, and then each desired position must be added using the ``<I id ADD ...>`` command.
+
+Turntables/traversers may be located at positions from 0 (also known as home) through 48. A common angle of separation for tracks radiating out from the turntable is 7.5 degrees, hence the need for allowing up to 48 positions to be defined.
+
+It is anticipated that throttle developers will be able to "draw" turntables with a visual representation of the location of the home and various defined positions, hence the reason for including an **angle** or **home** variable when defining turntables and positions below. Valid angles are from 0 to 3600, where 3600 = the full 360 degrees, allowing for a single decimal place to be used if partial angles are required. Throttle developers simply need to divide by 10 to obtain the appropriate angle.
+
+*General notes:*
+
+  If there is no desire for throttles to know or understand a position's angle from home, simple set any instance of the **angle** or **home** variable to 0 (zero).
+
+|hr-dashed|
+
+``<I id DCC home>`` - Define a DCC accessory turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **id:** unique Id for the turntable/traverser (1 - 32767) |BR|
+  |_| > **home:** angle of the home position (0 - 3600)
+
+  *Response:* |BR|
+  |_| Successful: ``<I>`` |BR|
+  |_| Fail: ``<X>``
+
+  *Example:* ``<I 1 DCC 0>`` defines a DCC accessory turntable/traverser with a 0 degree home angle. |BR|
+  *Example:* ``<I 2 DCC 50>`` defines a DCC accessory turntable/traverser with a 5 degree home angle.
+
+|hr-dashed|
+
+``<I id EXTT vpin home>`` - Define an EX-Turntable turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **id:** unique Id for the turntable/traverser (1 - 32767) |BR|
+  |_| > **vpin:** the Vpin of the EX-Turntable device (must exist and be operational) |BR|
+  |_| > **home:** angle of the home position (0 - 3600)
+
+  *Response:* |BR|
+  |_| Successful: ``<I>`` |BR|
+  |_| Fail: ``<X>``
+
+  *Example:* ``<I 1 EXTT 600 0>`` defines an EX-Turntable turntable/traverser at Vpin 600 with a 0 degree home angle. |BR|
+  *Example:* ``<I 2 EXTT 600 50>`` defines an EX-Turntable turntable/traverser at Vpin 600 with a 5 degree home angle.
+
+|hr-dashed|
+
+``<I id ADD position value angle>`` - Add a position to a turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **id:** id of the turntable/traverser the position is being added to |BR|
+  |_| > **position:** position index (1 - 48) |BR|
+  |_| > **value:** either the number of steps from home for EX-Turntable (1 - 32767), or the linear DCC address for a DCC accessory turntable/traverser |BR|
+  |_| > **angle:** angle from home for the position (0 - 3600)
+
+  *Response:* |BR|
+  |_| Successful: ``<I>`` |BR|
+  |_| Fail: ``<X>``
+
+  *Example:* This example defines a DCC accessory device, with 3 positions:
+  
+  .. code-block:: 
+
+    ``<I 1 DCC 0>`` - defines a DCC accessory turntable/traverser with a 0 degree home angle.
+    ``<I 1 ADD 1 201 100>`` - adds position 1, which is at linear DCC address 201, and 10 degrees from home.
+    ``<I 1 ADD 2 202 450>`` - adds position 2, which is at linear DCC address 202, and 45 degrees from home.
+    ``<I 1 ADD 3 203 1900>`` - adds position 3, which is at linear DCC address 203, and 190 degrees from home.
+  
+  *Example:* This example defines an EX-Turntable device, with 3 positions:
+  
+  .. code-block:: 
+
+    ``<I 2 EXTT 50>`` - defines an EX-Turntable turntable/traverser with a 5 degree home angle.
+    ``<I 2 ADD 1 200 100>`` - adds position 1, which is 200 steps from home, and 10 degrees from home.
+    ``<I 2 ADD 2 1500 450>`` - adds position 2, which is 1500 steps from home, and 45 degrees from home.
+    ``<I 2 ADD 3 8000 1900>`` - adds position 3, which is 8000 steps from home, and 190 degrees from home.
+
+----
+
 Sensors (Configuring the EX-CommandStation)
 -------------------------------------------
 
@@ -1608,7 +1943,7 @@ The sensor is considered INACTIVE when at +5V potential, and ACTIVE when the pin
 
 To ensure proper voltage levels, some part of the Sensor circuitry MUST be tied back to the same ground as used by the Arduino.
 
-The Sensor code utilizes debouncing logic to eliminate contact 'bounce' generated by mechanical switches on transitions. This avoids the need to create smoothing circuitry for each sensor. You may need to change the parameters in Sensor.cpp through trial and error for your specific sensors, but the default parameters protect against contact bounces for up to 20 milliseconds, which should be adequate for almost all mechanical switches and all electronic sensors.
+The Sensor code utilises debouncing logic to eliminate contact 'bounce' generated by mechanical switches on transitions. This avoids the need to create smoothing circuitry for each sensor. You may need to change the parameters in Sensor.cpp through trial and error for your specific sensors, but the default parameters protect against contact bounces for up to 20 milliseconds, which should be adequate for almost all mechanical switches and all electronic sensors.
 
 To monitor one or more Arduino pins for sensor triggers, first define/edit/delete sensor definitions using the following variation of the ``<S>`` command:
 
@@ -1672,7 +2007,7 @@ Definitions and state (ACTIVE/INACTIVE) for pins are retained in EEPROM and rest
 The default is to set each defined pin to active or inactive according to its restored state. 
 However, the default behaviour can be modified so that any pin can be forced to be either active or inactive upon power-up regardless of its previous state before power-down.  
 
-To have |EX-CS| utilize one or more Arduino pins as custom outputs, first define/edit/delete output definitions using the following variation of the ``<Z>`` command:  
+To have |EX-CS| utilise one or more Arduino pins as custom outputs, first define/edit/delete output definitions using the following variation of the ``<Z>`` command:  
 
 |hr-dashed|
 

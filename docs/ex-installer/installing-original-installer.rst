@@ -12,13 +12,15 @@
 Using the Installer (Windows x32, MacOS or Linux)
 *************************************************
 
-|tinkerer| |engineer| |githublink-ex-installer-button2|
+|tinkerer| |engineer| |support-button| |githublink-ex-installer-button2|
 
 .. warning::
 
    The instructions on this page refer to the *original* installer.  This is no longer recommended for use on Microsoft Windows x64 computers.
 
    Use the :doc:`new EX-Installer <installing>` instead for Microsoft Windows x64 computers.
+
+   As of the 11th September 2023, this original installer is now a public archive, meaning no further development will occur.
 
 .. warning:: 
 

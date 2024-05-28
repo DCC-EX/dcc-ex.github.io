@@ -7,7 +7,7 @@
 EX-RAIL Command Reference
 **************************
 
-|conductor| |tinkerer| |engineer|
+|tinkerer| |engineer| |support-button| 
 
 .. sidebar::
 
@@ -356,7 +356,7 @@ There are three options to define |EX-R| scripts or sequences:
 ``SEQUENCE( id )`` - A general purpose automation sequence that is not advertised to WiThrottles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activites. See :ref:`ex-rail/examples:automating various non-track items`, :ref:`ex-rail/examples:Point to Point Shuttle`, and :ref:`ex-rail/examples:multiple inter-connected trains` for further examples.
+  A general purpose automation sequence that is not advertised to WiThrottles. This may be triggered automatically on startup, or be called by other sequences or activities. See :ref:`ex-rail/examples:automating various non-track items`, :ref:`ex-rail/examples:Point to Point Shuttle`, and :ref:`ex-rail/examples:multiple inter-connected trains` for further examples.
 
 |hr-dashed|
 
@@ -517,6 +517,97 @@ All of these script types must be terminated by either a ``DONE``, ``FOLLOW(id)`
           RESET(166)
         ENDIF
         DONE
+
+|force-break|
+
+|hr-dashed|
+
+``ROUTE_CAPTION( id, caption )`` - dynamically change the label of the Route button
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  **Not available in the current production release.**
+
+  Dynamically change the label of the Route button.
+
+  .. collapse:: For example: (click to show)
+
+    .. code-block:: cpp
+
+      // setup 4 'routes'to switch between tracks/districts between PROG, MAIN and DC
+      ROUTE(500,"1.Trk: A main, B prog")
+          SET_TRACK(A,MAIN)
+          SET_TRACK(B,PROG)
+          ROUTE_CAPTION(500,"Active")
+          ROUTE_CAPTION(501,"Inactive")
+          ROUTE_CAPTION(502,"Inactive")
+          ROUTE_CAPTION(503,"Inactive")
+          ROUTE_ACTIVE(500)
+          ROUTE_INACTIVE(501)
+          ROUTE_INACTIVE(502)
+          ROUTE_INACTIVE(503)
+      DONE
+      ROUTE(501,"2.Trk: A dc10, B dc11") 
+          SETLOCO(10) SET_TRACK(A,DC)
+          SETLOCO(11) SET_TRACK(B,DC)
+          ROUTE_CAPTION(500,"Inactive")
+          ROUTE_CAPTION(501,"Active")
+          ROUTE_CAPTION(502,"Inactive")
+          ROUTE_CAPTION(503,"Inactive")
+          ROUTE_INACTIVE(500)
+          ROUTE_ACTIVE(501)
+          ROUTE_INACTIVE(502)
+          ROUTE_INACTIVE(503)
+      DONE
+      ROUTE(502,"3.Trk: A dc10, B DCC main") 
+          SETLOCO(10) SET_TRACK(A,DC)
+          SETLOCO(11) SET_TRACK(B,MAIN)
+          ROUTE_CAPTION(500,"Inactive")
+          ROUTE_CAPTION(501,"Inactive")
+          ROUTE_CAPTION(502,"Active")
+          ROUTE_CAPTION(503,"Inactive")
+          ROUTE_INACTIVE(500)
+          ROUTE_INACTIVE(501)
+          ROUTE_ACTIVE(502)
+          ROUTE_INACTIVE(503)
+      DONE
+      ROUTE(503,"4.Trk: A DCC main, B dc10") 
+          SETLOCO(10) SET_TRACK(A,DC)
+          SETLOCO(11) SET_TRACK(B,MAIN)
+          ROUTE_CAPTION(500,"Inactive")
+          ROUTE_CAPTION(501,"Inactive")
+          ROUTE_CAPTION(502,"Inactive")
+          ROUTE_CAPTION(503,"Active")
+          ROUTE_INACTIVE(500)
+          ROUTE_INACTIVE(501)
+          ROUTE_INACTIVE(502)
+          ROUTE_ACTIVE(503)
+      DONE
+
+|force-break|
+
+|hr-dashed|
+
+``ROUTE_ACTIVE( id, caption )`` - dynamically activate a Route
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  **Not available in the current production release.**
+
+  Dynamically flag a Route as active.
+
+  See example in ROUTE_CAPTION.
+
+|force-break|
+
+|hr-dashed|
+
+``ROUTE_INACTIVE( id, caption )`` - dynamically deactivate a Route
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  **Not available in the current production release.**
+
+  Dynamically flag a Route as inactive.
+
+  See example in ROUTE_CAPTION.
 
 |force-break|
 
@@ -776,6 +867,159 @@ All the below turnout/point definitions will define turnouts/points that are adv
 
 ----
 
+Turntable/Traverser Objects - Definition and Control
+----------------------------------------------------
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
+|NEW-IN-V5-LOGO-SMALL|
+
+Also refer to :ref:`ex-turntable/test-and-tune:ex-rail automation`.
+
+|hr-dashed|
+
+``MOVETT( vpin, steps, activity )`` - Move the specified |EX-TT| to the provided step position and perform the specified activity
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  |NEW-IN-V5| Move the specified |EX-TT| to the provided step position and perform the specified activity
+
+  .. note:: 
+
+    For users of our development releases, we highly recommend using our new turntable/traverser commands which allow turntables/traversers to be advertised to throttles similarly to how turnout/point objects are advertised and operated. Refer to :ref:`ex-rail/ex-rail-command-reference:turntable development features not in the current production version`.
+
+|hr-dashed|
+
+``IFRE ( vpin, value )`` - Test if a rotary encoder has been set to the specified value
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  |NEW-IN-V5| Test if a rotary encoder has been set to the specified value
+
+|hr-dashed|
+
+``ONCHANGE( vpin )`` - Detects a rotary encoder has changed position
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  |NEW-IN-V5| Detects a rotary encoder has changed position
+
+  .. collapse:: For example: (click to show)
+
+    .. code-block:: 
+
+      ONCHANGE(700)     // If rotary encoder ID 700 change state do this sequence
+        IFRE(700, 1)    // If rotary encoder ID 700 is at position 1, start ROUTE ID 123
+          START(123)
+        ENDIF
+        IFRE(700, 2)    // If rotary encoder ID 700 is at position 2, start ROUTE ID 124
+          START(124)
+        ENDIF
+        DONE
+
+|hr-dashed|
+
+Turntable development features not in the current production version
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|NOT-IN-PROD-VERSION|
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
+|hr-dashed|
+
+All the below turntable/traverser definitions will define turntables/traversers that are advertised to throttles that understand them, unless the HIDDEN keyword is used.
+
+To fully define a turntable/traverser object, you need to define the object first, and then one or more positions.
+
+"description" is an optional parameter, and must be enclosed in quotes "". If you don't wish this turntable/traverser to be advertised to throttles, then substitute the word HIDDEN (with no "") instead of the description.
+
+|hr-dashed|
+
+``DCC_TURNTABLE( id, home_angle, [, "description"] )`` - Define a DCC accessory turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Define a DCC accessory turntable/traverser at the specified **id** and the **home_angle** angle.
+
+  - id - the id of the turntable/traverser, valid IDs are 1 - 32767
+  - home_angle - the angle of the home position, valid angles are 0 - 3600
+
+|hr-dashed|
+
+``EXTT_TURNTABLE( id, vpin, home_angle, [, "description"] )`` - Define an EX-Turntable turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Define an EX-Turntable turntable/traverser at the specified **id** and **vpin** with a **home_angle** angle.
+
+  This statement will create the |EX-TT| turntable/traverser object only, so you will need a separate ``HAL()`` statement for an |EX-TT| device to create the HAL device. It is not recommended to create it via "myHal.cpp".
+
+  The HAL creation will require the **vpin** and **i2c_address** parameters.
+
+  Where:
+
+  - id - the id of the turntable/traverser, valid IDs are 1 - 32767
+  - vpin - the id of the vpin where the |EX-TT| device is located
+  - i2c_address - the |I2C| address of the |EX-TT| device
+  - home_angle - the angle of the home position, valid angles are 0 - 3600
+
+  Example creation and definition:
+
+  .. code-block:: 
+
+    HAL(EXTurntable,600,1,0x60)            // Create your EX-Turntable device driver
+    EXTT_TURNTABLE(1,600,45,"My EX-Turntable")  // Create your EX-Turntable object to enable control
+
+|hr-dashed|
+
+``TT_ADDPOSITION( turntable_id, position_id, value, angle [, "description"] )`` - Add a turntable position
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Add a position to a turntable/traverser object **turntable_id** with position index **position_id**, step or DCC address **value**, **angle** degrees from home.
+
+  - turntable_id - the id of the turntable/traverser, which must be created prior to adding positions
+  - position_id - the index of the position to add, valid positions are 1 - 48
+  - value - either steps from home for EX-Turntable, or the linear DCC address for a DCC accessory turntable, valid values are 1 - 32767
+  - angle - the angle of the position from the home position, valid angles are 0 - 3600
+
+``IF_TTPOSITION( id, position )`` - Test if turntable/traverser is at a position
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Tests if the turntable/traverser at the specified **id** is at the specified **position**.
+
+``ONROTATE( id )`` - Event handler for when a turntable/traverser is rotated
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Triggers the event handling mechanism for turntable/traverser **id** if configured. Note that there can be only one defined ONROTATE event for a specific turntable/traverser.
+
+``ROTATE( id, position, activity )`` - Rotate an EX-Turntable turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Rotate an EX-Turntable turntable/traverser at the specified **id** to the specified **position**, and perform **activity**.
+
+  - id - the id of the turntable/traverser, valid IDs are 1 - 32767
+  - position - the position to rotate to, valid positions are 1 - 48
+  - activity - refer to :ref:`ex-turntable/test-and-tune:ex-turntable commands`, using the "EX-RAIL activity" column
+
+``ROTATE_DCC( id, position )`` - Rotate a DCC accessory turntable/traverser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Rotate a DCC accessory turntable/traverser at the specified **id** to the specified **position**.
+
+  - id - the id of the turntable/traverser, valid IDs are 1 - 32767
+  - position - the position to rotate to, valid positions are 1 - 48
+
+``WAITFORTT( id )`` - Wait for EX-Turntable turntable/traverser to complete a rotation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Wait for the EX-Turntable turntable/traverser at **id** to complete a rotation. As no feedback can be received from DCC accessory turntables, this is only valid for EX-Turntable.
+
+|force-break|
+
+----
+
 Sensors/Inputs - Reading and Responding
 ---------------------------------------
 
@@ -786,23 +1030,24 @@ Sensors/Inputs - Reading and Responding
 
 |hr-dashed|
 
-``AT( sensor_id )`` - An event handler that defines what to do when a sensor is active/triggered
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``AT( sensor_id )`` - Causes a sequence to wait until a sensor is active/triggered
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
-|hr-dashed|
-
-``AFTER( sensor_id )`` - Define an event handler for what to do after a sensor has been triggered
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  An event handler that defines what to do after a sensor has been triggered and then is off for 0.5 seconds.
+  A sequence will not progress until a sensor has been triggered.
 
 |hr-dashed|
 
-``ATTIMEOUT( sensor_id, timeout_ms )`` - Define a time based event handler for what to do when a sensor is active/triggered or if the timer runs out
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``AFTER( sensor_id )`` - Causes a sequence to wait until after a sensor has been triggered
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  A time based event handler that defines what to do when a sensor is active/triggered or if the timer runs out, then continues and sets a testable "timed out" flag.
+  A sequence will not progress until after a sensor has been triggered and then is off for 0.5 seconds.
+
+|hr-dashed|
+
+``ATTIMEOUT( sensor_id, timeout_ms )`` - Causes a sequence to wait until either a sensor is active/triggered, or if the timer runs out
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  A sequence will not progress until either a sensor is active/triggered, or if the timer runs out. It then continues and sets a testable "timed out" flag (see ``IFTIMEOUT``).
 
 |hr-dashed|
 
@@ -1083,66 +1328,16 @@ DCC Accessory Decoder Control
 ``XFON( cab, func )`` - Send DCC function ON to specific cab
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  Send DCC function ON to specific cab (eg coach lights) *Not for Loco use - use FON instead!*
+  Send DCC function ON to specific cab (e.g. coach lights) *Not for Loco use - use FON instead!*
 
 |hr-dashed|
 
 ``XFOFF( cab, func )`` - Send DCC function OFF to specific cab
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  Send DCC function OFF to specific cab (eg coach lights) Not for Loco use - use FON instead!
+  Send DCC function OFF to specific cab (e.g. coach lights) Not for Loco use - use FON instead!
 
   All the above "ON" commands are event handlers that trigger a sequence of commands to run when the event occurs. These can vary from the most basic tasks such as setting signals when turnouts are closed or thrown, to triggering complete automation sequences via a DCC accessory decoder.
-
-----
-
-EX-Turntable Control
---------------------
-
-|NEW-IN-V5-LOGO-SMALL|
-
-.. contents:: In This Section
-    :depth: 4
-    :local:
-    :class: in-this-section
-
-Also refer to :ref:`ex-turntable/test-and-tune:ex-rail automation`.
-
-|hr-dashed|
-
-``MOVETT( id, steps, activity )`` - Move the specified |EX-TT| to the provided step position and perform the specified activity
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  |NEW-IN-V5| Move the specified |EX-TT| to the provided step position and perform the specified activity
-
-|hr-dashed|
-
-``IFRE ( id, value )`` - Test if a rotary encoder has been set to the specified value
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  |NEW-IN-V5| Test if a rotary encoder has been set to the specified value
-
-|hr-dashed|
-
-``ONCHANGE( id )`` - Detects a rotary encoder has changed position
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  |NEW-IN-V5| Detects a rotary encoder has changed position
-
-  .. collapse:: For example: (click to show)
-
-    .. code-block:: 
-
-      ONCHANGE(700)     // If rotary encoder ID 700 change state do this sequence
-        IFRE(700, 1)    // If rotary encoder ID 700 is at position 1, start ROUTE ID 123
-          START(123)
-        ENDIF
-        IFRE(700, 2)    // If rotary encoder ID 700 is at position 2, start ROUTE ID 124
-          START(124)
-        ENDIF
-        DONE
-
-|force-break|
 
 ----
 
@@ -1250,8 +1445,20 @@ Drive logo in reverse at DCC speed 0-127 (1=ESTOP)
 
 |hr-dashed|
 
-``ROSTER( cab, name, func_map )`` - Provide roster info for WiThrottle
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``ROSTER( cab, "name", "func_map" )`` - Provide roster info for WiThrottle
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **cab** - DCC address of your loco
+  |_| > **name:** - the name of this loco that will appear in the throttle apps. Enclosed in quotes (") |BR|
+  |_| > **funct_map** - the names that you want to see for the functions specific to this loco separated by forward slashes ("/"). All enclosed in quotes (") |BR|
+  |_| |_| |_| |_| Note that if the function is 'momentary' rather than 'latching' (On/Off) then start the function label with a asterisk (*). The most common example of this is the Horn/Whistle which is commonly on F2. |BR|
+
+  *Examples:* |BR|
+  |_| ROSTER (  3,"Eng 3", "F0/F1/\*F2/\*F3/F4/F5/F6/F7/Mute/F9//") // Address 3, Eng 3, Function keys F0-F10 |BR|
+  |_| ROSTER(1224,"PE 1224","") // Motor Only Decoder |BR|
+  |_| ROSTER(1225,"PE 1225","Lights/Bell/\*Whistle/\*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute") |BR|
+  |_| ROSTER(4468,"LNER 4468","//Snd On/\*Whistle/\*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door \~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8")
 
 |hr-dashed|
 
@@ -1274,7 +1481,7 @@ Drive logo in reverse at DCC speed 0-127 (1=ESTOP)
       // A defined automation sequence that will do activities only if loco ID 123 is in use
       AUTOSTART AUTOMATION(1, "Do stuff for loco 123")
         IFLOCO(123)
-          // Define activities here eg. blow horn or whistle
+          // Define activities here e.g. blow horn or whistle
         ENDIF
         DONE
 
@@ -1306,8 +1513,17 @@ TrackManager Control
 
   Configures the mode of the selected track, refer also to :doc:`/trackmanager/index`
 
-  - track - The track to configure, valid options are A to H
-  - mode - The mode to set the track to, valid options for DCC are ``MAIN`` or ``PROG``, and valid options for DC are ``DC``, ``DCX``. If a track is unused, it can be set to ``NONE``
+  *Parameters:* |BR|
+  |_| > **track:** - The track to configure, valid options are A to H |BR|
+  |_| > **mode:** - The mode to set the track to, |BR|
+  |_| |_| |_| |_| valid options for DCC are: |BR|
+  |_| |_| |_| |_| - ``MAIN`` or |BR|
+  |_| |_| |_| |_| - ``PROG``, |BR|
+  |_| |_| |_| |_| and valid options for DC are: |BR|
+  |_| |_| |_| |_| -  ``DC`` |BR|
+  |_| |_| |_| |_| - , ``DCX``. |BR|
+  |_| |_| |_| |_| If a track is unused, it can be set to: |BR| 
+  |_| |_| |_| |_| - ``NONE``
 
   When setting at track mode to either DC or DCX, you must use the ``SETLOCO( loco )`` command first to specify the loco ID that will be used for the DC track then SET_TRACK()
 
@@ -1326,6 +1542,135 @@ TrackManager Control
       SETLOCO(1) SET_TRACK(A, DC)
       SET_TRACK(B, PROG)
       DONE
+
+
+``SET_POWER( track, ON/OFF )`` - Enable/Disable power on the selected track
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|NOT-IN-PROD-VERSION|
+
+  Configures the power setting of the selected track, refer also to :doc:`/trackmanager/index`
+
+*Parameters:* |BR|
+  |_| > **track:** - The track to configure, valid options are A to H |BR|
+  |_| > **ON/OFF:** - Turn the power ON or OFF for this track |BR|
+
+.. collapse:: For example: (click to show)
+
+    .. code-block:: cpp
+
+      // Set track A to be a DC track with loco ID 1 and power on, and track B to be a DCC programming track
+      AUTOSTART
+      SETLOCO(1) SET_TRACK(A, DC)
+      SET_TRACK(B, PROG)
+      SET_POWER(A, ON)
+      DONE
+
+
+
+``SETFREQ( track, frequency )`` - Enable specific frequency on the selected track
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  DC/DCX track settings only.
+
+|NOT-IN-PROD-VERSION|
+
+  Configures the frequency setting of the selected track.
+
+  The settings achievable vary slightly depending upon the processor running the CS but broadly follow the following:
+
+  *Parameters:* |BR|
+
+  |_| > **track:** - The track to configure, valid options are A to H |BR|
+  |_| > **frequency:** - The frequency to set for this track |BR|
+  |_| |_| |_|>valid options are: |BR|
+  |_| |_| |_| |_|> **0:** Default - low frequency 131Hz |BR|
+  |_| |_| |_| |_|> **1:** Mid frequency - 490Hz |BR|
+  |_| |_| |_| |_|> **2:** High frequency - 3400Hz |BR|
+  |_| |_| |_| |_|> **3:** Supersonic - 62500Hz|BR|
+
+  Trial and error will be needed for specific locos that do not respond well to the defaults (low) frequency setting.
+
+
+|force-break|
+
+----
+
+
+Controlling Overload/Shorts
+---------------------------
+
+|NOT-IN-PROD-VERSION|
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
+|hr-dashed|
+
+``ONOVERLOAD( track )`` - Event handler for actions to be taken when an Overload occurs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+   Creates an event handler for the selected track, to be executed when the MotorDriver routines detect and overload. Refer also to :doc:`/trackmanager/index`
+
+|hr-dashed|
+
+``AFTEROVERLOAD( track )`` - Event handler for actions to be taken when an Overload clears
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Creates a complementary event handler for the selected track, to be executed when the MotorDriver routines indicate the overload is cleared. Refer also to :doc:`/trackmanager/index`
+
+  Note:  AFTEROVERLOAD is only relevant when used within and ONOVERLOAD.... DONE structure.
+
+|hr-dashed|
+
+  The power calculation routines within |DCC-EX| will check for shorts and overloads and will change the state of the power produced by the MotorDriver board to protect both it and locos from damage.  This is usually eveident by the LED's on the MotorDriver board flashing.  However some users may wish to see some physical notifcation of these events.  This can now be achieved with EXRAIL and the ONOVERLOAD event.
+
+
+  .. collapse:: For example: (click to show)
+
+    This first example shows a warning message to an attached screen with an LED being illuminated to warn the user of the overload.  Once the overload is cleared the AFTEROVERLOAD code is run automatically.
+    
+    .. code-block:: cpp
+
+      ONOVERLOAD(A)       // the EXRAIL statement to control the event.
+        SCREEN(2,0, "OVERLOAD ON TRACCK A")     // A message to the second screen
+        PRINT("Overload Detected on Track A")   // Message to system moniter
+        SET(27)                                 // Turn on an LED perhaps
+        AFTEROVERLOAD(A)
+            SCREEN(2,0, "RESTORE A POWER ON")
+            PRINT("Overload Cleared on A - Power Restored")
+            RESET(27)                           // Turn off the LED
+            DELAY(2000)
+            SCREEN(2,0, "                  ")   // Clear the screen message
+      DONE
+
+    If the user wishes to turn off power whilst he/she investigates the problem, then this can be achieved using the second example below.  POWEROFF can be used, but this will turn off powere to all tracks.  Power to the track with the problem can be turned off with a TrackManager command.  However in order to execute the AFTEROVERLOAD routine it is necessary to have a reset routine.
+
+    .. code-block:: cpp
+
+      // This is the event triggered by an overload.  AFTEROVERLOAD cannot be triggered whilst power is OFF.
+      ONOVERLOAD(A)
+        SCREEN(2,0, "OVERLOAD A POWEROFF")
+        PRINT("Overload Detected on A - Turn Off Power")
+        SET_TRACK(A, NONE)   // Unsets the TrackManager assignment and turns off power.
+        SET(27)              // Light the LED
+        AFTEROVERLOAD(A)
+            SCREEN(2,0, "RESTORE A POWER ON")
+            PRINT("Overload Cleared on A - Power Restored")
+            RESET(27)
+            DELAY(2000)
+            SCREEN(2,0, "                  ")
+      DONE
+
+      // The following turns the poweron and allows the AFTEROVERLOAD to run
+      // This could also be achieved with a physical button and AFTER(pin) in place of ROUTE()
+      ROUTE(12,"Reset A")
+        SCREEN(2,0,"                  ")
+        SET_TRACK(A, MAIN)
+        POWERON
+      DONE
+    
 
 |force-break|
 
@@ -1488,8 +1833,34 @@ CommandStation Functions
 
     .. code-block:: cpp
 
+      // Defining and Setting up Devices like OLED & LCD displays on a I2C bus
+       #include "IODevice.h"
+       #include "IO_HALDisplay.h"  // Auxiliary display devices (LCD/OLED) {Type, Screen#, address, density}
+      // Create a 20x2 LCD display devices as display# number 0, Change display# as needed
+       HAL(HALDisplay<LiquidCrystal_I2C>, 0, 0x27, 20, 2) // LCD with 20 Char & 2 lines
+      // Create a 20x4 LCD display devices as display number 0
+       HAL(HALDisplay<LiquidCrystal_I2C>, 0, 0x27, 20, 4) // LCD with 20 Char & 4 lines
+
+      // Create various OLED display devices as Screen# number 0, Change Screen# number as needed
+       HAL(HALDisplay<OLED>, 0, 0x3c, 128, 32) // OLED 0.96" display
+       HAL(HALDisplay<OLED>, 0, 0x3c, 128, 64) // OLED 0.96" display
+       HAL(HALDisplay<OLED>, 0, 0x3c, 132, 64) // OLED 1.3" display
+  
+      // PCA9685 Servo Signal Boards 3 & 4
+      // Create Two more Servo controller numbered (132-147) & (148-163) etc., on I2C addr 0x42 & Ox43 & 0x44 etc
+      // Number of VPINs=16 numbered (132-147) I2C address of module=0x42
+        HAL(PCA9685, 133, 16, 0x42) // Must Solder A1 and uncomment this line
+      // Number of VPINs=16 numbered (148-163) I2C address of module=0x43
+        HAL(PCA9685, 148, 16, 0x43) // Must Solder A0 & A1 and uncomment this line
+
+      // EX-IO Expanders
       // Define a Mega2560 based EX-IOExpander device starting at Vpin 800 at the default address of 0x65
-      HAL(EXIOExpander, 800, 62, 0x65)
+        HAL(EXIOExpander, 800, 62, 0x65)
+
+      // DFPlayer mini MP3 Sound player
+        #include "IO_DFPlayer.h"// MP3 sound player
+      // Define a Mega2560 based DFPLayer device with vpin id of 1500 with 20 sound files connected on Serial1
+        HAL(DFPlayer, 1500, 20, Serial1) // create device 1500, 20 files, on Mega Tx1 Rx1, D18, D19  1K Ohm on D18   
 
 |force-break|
 

@@ -7,7 +7,7 @@
 Stage 2 - Adding a Roster
 *********************************
 
-|conductor|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar:: 
 
@@ -112,11 +112,27 @@ Re-upload the EX-CommandStation software
 Using EX-Installer
 ^^^^^^^^^^^^^^^^^^
 
-#. Place your 'myAutomation.h' file in the ``CommandStation-EX`` subfolder of wherever you extracted the |EX-I| files.
-#. Re-Run |EX-I|
-#. Select the same options that you originally chose and upload
+The |EX-I| can make use of the config files from a 'saved' location.  
 
-The Roster will be automatically loaded with the |EX-CS| software.
+*If you have previously saved the config files...*
+
+   At the end of the install process it will ask you if you want to save the config files. If you have said ``Yes`` (and put them in a folder well away from the EX-Installer folder) you can place your 'myAutomation.h' in that folder and rerun the |EX-I|. the |EX-I| will ask if you want to use existing config files. Just point it to where you saved and edited the file.
+
+   The Roster will be automatically loaded with the |EX-CS| software.
+
+*If you have not saved the config files...*
+
+   Re-run the |EX-I|. Select the same options that you originally chose *and* also select the ``create myAutomation.h`` and the ``Advanced config`` options.  This will show a myAutomation.h window on the following page. Copy and paste your roster lines into this window then ``Compile and load`` the software.
+
+   After the load finishes you will be asked to 'backup/save' the config files. Say `Yes` and put them in a folder well away from the EX-Installer folder. You can can then make direct edits to the file there, and when you next run |EX-I|, it asks if you want to use existing config files. Just point it to where you saved and edited the file.
+
+   The Roster will be automatically loaded with the |EX-CS| software.
+
+More information on the config files can be found on the :doc:`/ex-installer/managing-config-files` page.
+
+.. warning:: 
+
+   Never edit any files in the EX-Installer folder. Editing any files in the EX-Installer folder will **always** cause |EX-I| to fail.
 
 Using the Arduino IDE
 ^^^^^^^^^^^^^^^^^^^^^
@@ -144,9 +160,9 @@ There are three ways to load & store your Locomotive Icon Image in Engine Driver
   If you have a JMRI Server that does support loco images:
 
   * Start JMRI and capture and load your images into JMRI Roster & Media panel as normal
-  * Start the |withrottle server|.
+  * Start the |WiThrottle server|.
   * Start the Web Server.
-  * Connect |Engine Driver| to JMRI |withrottle server| Discovered Server 'My JMRI Railroad' or type in the IP address : Port# 
+  * Connect |Engine Driver| to JMRI |WiThrottle server| Discovered Server 'My JMRI Railroad' or type in the IP address : Port# 
   * Click ``Select`` and load your Locos then ``Release`` and repeat until you've loaded all the locomotives you require with Icons into a throttle. 
  
   These Loco Icons will automatically be saved/cached on the Android device/phone in a new '/Android/data/jmri.enginedriver/files/recent_engine_list/**recent_engine_list**' folder for you.
@@ -159,7 +175,7 @@ There are three ways to load & store your Locomotive Icon Image in Engine Driver
 2. **Manually entered directly into your Android Engine Driver folder**
   
   * Capture then rename the image exactly like the Roster ID name in JMRI & EXRAIL and save as a .PNG file
-  * Then place the engine Image into your Android device/phone in the |br|\ '/Android/data/jmri.enginedriver/files/recent_engine_list' folder |br|\ example image name;  PE 1225.png
+  * Then place the engine Image into your Android device/phone in the |BR|\ '/Android/data/jmri.enginedriver/files/recent_engine_list' folder |BR|\ example image name;  PE 1225.png
 
   Note: certain characters are not allowed in file names so need to be substituted with "_" (underscore) if you have used them in your roster name. They are:
 
@@ -178,12 +194,12 @@ There are three ways to load & store your Locomotive Icon Image in Engine Driver
    * Long press on the loco
    * press the :guilabel:`New Image` button, which will launch the Android system's default app for choosing images 
    * find and select an image
-   * click :guilabel:`Save` |br|\ |br|\ You can replace an image with the :guilabel:`New Image` button or remove it with the :guilabel:`Remove` button
+   * click :guilabel:`Save` |BR|\ |BR|\ You can replace an image with the :guilabel:`New Image` button or remove it with the :guilabel:`Remove` button
 
 **General Notes on the Local Loco Icons:**
 
-* If the loco already has an image in the JMRI Roster (of the currently connected |withrottle server|), you won't be able to choose a local image.
-* If you later add an image in the JMRI Roster for the loco (or later connect to a |withrottle server| that has an image), it will automatically overwrite the local image with the one on the server.
+* If the loco already has an image in the JMRI Roster (of the currently connected |WiThrottle server|), you won't be able to choose a local image.
+* If you later add an image in the JMRI Roster for the loco (or later connect to a |WiThrottle server| that has an image), it will automatically overwrite the local image with the one on the server.
 * In the Recent Locos list you *can not* add images to locos entered by a DCC address. (i.e. not from the roster)  
 
 Also refer to the `Engine Driver Loco Icon Documentation <https://flash62au.github.io/EngineDriver_Home/configuration/loco_icons.html?highlight=images>`_ for more information.

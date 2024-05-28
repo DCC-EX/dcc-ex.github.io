@@ -17,7 +17,7 @@ DCC-EX Model Railroading
     :columns: 12 12 12 8
     :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
 
-    |DCC-EX| is a team of dedicated enthusiasts producing open source *DCC solutions* for you to run your complete model railroad layout. Our easy to use, do-it-yourself, and free open source products run on off-the-shelf Arduino technology and are supported by numerous third party hardware and apps like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more.
+    |DCC-EX| is a team of dedicated enthusiasts producing open source *DCC & DC solutions* for you to run your complete model railroad layout. Our easy to use, do-it-yourself, and free open source products run on off-the-shelf Arduino technology and are supported by numerous third party hardware and apps like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more.
 
   .. grid-item-card:: 
     :columns: 12 12 12 4
@@ -39,12 +39,14 @@ DCC-EX Model Railroading
     If you are just starting with |DCC-EX| then the sections below are intended to help you understand how our products might suit your needs. We've curated this guidance based on feedback from our users: 
 
     - :ref:`begin/what-to-know:what is dcc and dcc-ex?`
+    - :ref:`begin/what-to-know:dcc-ex does dc as well`
     - :ref:`I'm interested in DCC but have a limited budget <begin/what-to-know:i'm interested in dcc but have a very small budget>`
     - :ref:`I just want to run DCC trains <begin/what-to-know:i just want to run my trains>`
-    - :ref:`I want to operate my turnout/points & run DCC trains <begin/what-to-know:i want to operate my turnouts/points and run dcc trains>`
-    - :ref:`I want to control accessories & run DCC trains <begin/what-to-know:i want to control all my accessories and run dcc trains>`
+    - :ref:`I want to operate my turnout/points & run DCC trains <begin/what-to-know:i want to operate my turnouts/points and run trains>`
+    - :ref:`I want to control accessories & run DCC trains <begin/what-to-know:i want to control all my accessories and run trains>`
     - :ref:`begin/what-to-know:i want some extra automated/animated realism`
     - :ref:`begin/what-to-know:i want a fully automated exhibition layout for my club`
+    - :doc:`/begin/comparison`
 
     If these haven't helped, or you've read them and you are still unsure, then feel free to contact us, preferably through our Discord server where you can chat directly with our team members. Details of this and other contact methods on our :doc:`/support/contact-us` page. 
 
@@ -89,6 +91,7 @@ DCC-EX Model Railroading
    ex-installer/index
    ex-webthrottle/index
    EX-MotorShield8874 <reference/hardware/motorboards/ex-motor-shield-8874>
+   EX-WiFiSheild-8266 <reference/hardware/wifi-boards/ex-wifi-shield-8266>
    ex-dccinspector/index
    ex-toolbox/index
 
@@ -108,8 +111,8 @@ DCC-EX Model Railroading
    :maxdepth: 4
    :caption: Support & Info
 
-   throttles/index
    support/index
+   throttles/index
    big-picture/index
 
 .. toctree::
@@ -118,6 +121,15 @@ DCC-EX Model Railroading
    :caption: Downloads
 
    download/index
+
+.. toctree::
+   :hidden:
+   :maxdepth: 4
+   :caption: Purchasing & Merchandise
+
+   purchasing/dealers
+   reference/accessories/index
+   merchandise/index
 
 .. toctree::
    :hidden:
@@ -134,7 +146,6 @@ DCC-EX Model Railroading
    :caption: External References
 
    external-references/index
-   reference/accessories/index
 
 .. toctree::
    :hidden:
@@ -143,10 +154,3 @@ DCC-EX Model Railroading
 
    About Us and the Project<about/index>
    about/index-contributing
-
-.. toctree::
-   :hidden:
-   :maxdepth: 4
-   :caption: Merchandise & News
-
-   merchandise/index

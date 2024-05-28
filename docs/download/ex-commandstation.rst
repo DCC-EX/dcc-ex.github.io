@@ -7,7 +7,7 @@
 EX-CommandStation
 *****************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -21,7 +21,7 @@ Welcome to the |EX-CS| download page. You have several choices:
 * If you are a |tinkerer-text| the `ex-Installer`_ is still the recommended solution, but if would like to download a zip file and install the firmware using the |Arduino IDE| or |VSC|, go to the `Latest EX-CommandStation Official Release`_ section.
 * To get the latest unreleased development version, go to the `Latest EX-CommandStation Unreleased Development Version`_ (or use the `ex-Installer`_ ).
 * If you are an |engineer-text| or developer, and want to clone the repository onto your computer, go to the `EX-CommandStation Repository (project source files)`_ section.
-* If you're still looking for |BSC|, go to the `Getting BaseStation-Classic`_ section.
+* If you're still looking for the old, and unsupported, |BSC|, go to the `BaseStation-Classic`_ section.
 
 ----
 
@@ -55,6 +55,7 @@ Clicking on the link below will automatically find the correct version of the in
 
 This downloads a self contained app that can automatically load the software from your computer to your Arduino or other supported board. Click here for :doc:`EX-Installer installation instructions </ex-commandstation/get-started/installer>`.
 
+*Note* that the new |EX-I| will unfortunately not work on Windows 7.
 
 .. raw:: html 
 
@@ -109,18 +110,16 @@ EX-CommandStation Repository (project source files)
 
 |EX-BSC-LOGO-SMALL|
 
-Getting BaseStation-Classic
-============================
+BaseStation-Classic
+===================
 
 .. warning:: 
-   :class: warning-float-right
 
-   This version is not actively maintained, and will only be updated with bug fixes.
+   BaseStation-Classic (the original DCC++) is no longer maintained or supported by the DCC-EX Team.
+
+We recommend using the newer |EX-CS| as it will run on the same hardware and is maintained and supported. 
 
 The new |EX-I| :dcc-ex-red-bold:`does not provide an option to install BaseStation-Classic` so if you wish to install it you will need to use the |Arduino IDE| or |VSC| and download the links below. 
-
-We recommend using the newer |EX-CS| as it will run on the same hardware and is better supported. 
-
 
    .. rst-class:: dcclink
 

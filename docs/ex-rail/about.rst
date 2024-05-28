@@ -7,7 +7,7 @@
 About and History
 *****************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar:: 
 
@@ -32,7 +32,7 @@ EX-RAIL automation is *much* (perhaps 2 orders of magnitude) more time efficient
 History - A note from the Author
 ================================
 
-My original aim was to see if I could create an automated layout with lots going on, that didn't just run around in circles. Having looked at |JMRI| (briefly, I must say) and DCC++, I began to wonder whether I could actually make a simpler automation system, and run it entirely on the Arduino used for DCC++.
+My original aim was to see if I could create an automated layout with lots going on, that didn't just run around in circles. Having looked at |JMRI| (briefly, I must say) and DCC-EX, I began to wonder whether I could actually make a simpler automation system, and run it entirely on the Arduino used for the |EX-CS|.
 
 Some of the automation techniques I read about, using Jython scripts in JRMI, seem to require extensive programming skills and complex table configurations which appeared awkward to me, despite my years of programming in dozens of languages.
 

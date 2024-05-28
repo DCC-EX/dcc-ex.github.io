@@ -2,6 +2,7 @@
 .. include:: /include/include-l3.rst
 .. include:: /include/include-hardware.rst
 |EX-CS-LOGO|
+
 **************************************
 ESP-01 and ESP-01s
 **************************************
@@ -14,21 +15,32 @@ ESP-01 and ESP-01s
       :depth: 1
       :local:
 
-This is the board that started it all. It fueled the WiFi revolution in small devices. In fact, this little board is actually a microcontroller that is more powerful than the Arduino Uno! The difference between the 01 and the 01S is primarily that there is more memory on the 01-"S". Since the 01 version has been retired, any new board you get should be the 01s, but either will work.
+This is the board that started it all. It fuelled the WiFi revolution in small devices. In fact, this little board is actually a microcontroller that is more powerful than the Arduino Uno! The difference between the 01 and the 01S is primarily that there is more memory on the 01-"S". Since the 01 version has been retired, any new board you get should be the 01s, but either will work.
 
-.. figure:: /_static/images/assembly/esp-01s_2.jpg
+.. figure:: /_static/images/assembly/esp-01s_2.png
    :alt: ESP-01s
    :scale: 75%
 
    ESP-01s
 
+.. warning:: 
+   :class: warning-float-right
+
+   Please be aware that the Espressif firmware shipped with *Duinopeak ESP8266 WiFi Expansion* and *ESP-01 or ESP-01S* devices :dcc-ex-red-bold:`will probably NOT work` with |EX-CS| out of the box.
+
+   (Note: The recommended :doc:`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>` is now shipping with the correct firmware version and **will work** with |EX-CS| *without modification*).
+
+   This can be corrected, but is probably beyond Conductor level and requires additional hardware.  
+
+   See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
+    
 Install the Module
 ==================
 
 Below is a wiring diagram for connecting the ESP8266 to the Arduino. For clarity, the image does not show the motor board already on top of the Mega, but since the headers connect all the pins together vertically, you can find the same pins on the motor board to get the 3.3V and Gnd to power the ESP8266.
 
 
-.. figure:: /_static/images/assembly/esp8266_mega.jpg
+.. figure:: /_static/images/assembly/esp8266_mega.png
    :alt: ESP-8266 Wiring to a Mega
    :scale: 75%
 
@@ -49,7 +61,7 @@ In order to connect both Vcc and CH_PD to the 3.3V output of the Arduino, you ca
 
 .. note:: About current requirements: While we at |DCC-EX| Labs have had success with running the ESP-01s off the 3.3V Mega power supply, this is at the limit of what the Mega can supply. The Mega 3.3V regulator is only rated for 200mA. The ESP can exceed this in short bursts. If you want to be safe, you can power a 5V to 3.3V regulator from the 5V supply, or find another way to provide clean, regulated 3.3V to the ESP.
 
-.. figure:: /_static/images/assembly/esp-01_adapter.jpg
+.. figure:: /_static/images/assembly/esp-01_adapter.png
    :alt: ESP-01s Adapters
    :scale: 75%
    :name: esp-01s-adapters

@@ -5,7 +5,7 @@
 Engine Driver
 *************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar:: 
 
@@ -22,7 +22,7 @@ Engine Driver
 
 If you wish to connect Engine Driver directly to |EX-CS|, you need to add a WiFi option to your |EX-CS| as explained here: :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`.
 
-If you wish to connect Engine Driver to |JMRI|, you need to start the |wiThrottle Server| and (optionally [#]_) the Web Server in JMRI on the computer running |JMRI|. The |JMRI| computer must be connected to the |EX-CS| using a USB cable. 
+If you wish to connect Engine Driver to |JMRI|, you need to start the |WiThrottle Server| and (optionally [#]_) the Web Server in JMRI on the computer running |JMRI|. The |JMRI| computer must be connected to the |EX-CS| using a USB cable. 
 
 .. _ed-platforms:
 
@@ -46,7 +46,7 @@ Extensive help is available at the `Engine Driver Home <https://flash62au.github
 
 .. _ed-features:
 
-Standard Features (all wiThrottle servers)
+Standard Features (all WiThrottle servers)
 ==========================================
 
 * Control one to six locomotives or consists
@@ -67,6 +67,8 @@ EX-CommandStation Specific or Advantageous Features
 * Able to select local images for roster locos
 * New 'Request Loco ID' & 'Drive Away' feature from a Program track onto Mainline track with |EX-CS|
 
+:doc:`/throttles/driveaway`
+
 EX-CommandStation Specific Features - when using the DCC-EX Native Protocol
 ===========================================================================
 
@@ -76,7 +78,8 @@ EX-CommandStation Specific Features - when using the DCC-EX Native Protocol
 * Issue Native commands to the |EX-CS|
 * TrackManager control - able to change the type and state of each Track/Channel (e.g DCC and DC))
 
-:doc:`/throttles/driveaway`
+:doc:`/throttles/software/engine-driver-native-protocol`
+
 
 .. _ed-screenshots:
 
@@ -118,9 +121,11 @@ https://flash62au.github.io/EngineDriver_Home/operation/getting_started.html
 
 .. TODO:: `LOW - Software <https://github.com/DCC-EX/dcc-ex.github.io/issues/436>`_ - Give some setup tutorial here. Need a video to match since ED is the top used software
 
+----
+
 Using a Bluetooth Controller
 =============================
-This is the one Steve Todd uses himself on a lanyard. It leaves both hands free for paperwork and uncoupling and is light enough to simply let go of when you need both hands. Here are his optimized settings. His prefered settings are listed in the note below. You can use these as a start and customize them for your own use:
+This is the one Steve Todd uses himself on a lanyard. It leaves both hands free for paperwork and uncoupling and is light enough to simply let go of when you need both hands. Here are his optimised settings. His preferred settings are listed in the note below. You can use these as a start and customise them for your own use:
 
 .. image:: /_static/images/throttles/bt_controller1.jpg
    :alt: Bluetooth Lanyard Controller
@@ -152,7 +157,28 @@ And here is another Bluetooth controller that provides extra function buttons an
 Adding a Physical Dial (Knob) 
 ==============================
 
-It is possible to easily add a rotary dial (knob) to |Engine Driver|.  see :doc:`/throttles/hardware/engine-driver-physical-knobs` for more infomation.
+It is possible to easily add a rotary dial (knob) to |Engine Driver|.  see :doc:`/throttles/hardware/engine-driver-physical-knobs` for more information.
+
+Recording a log file in EngineDriver
+====================================
+
+If you are having difficulties with Engine Driver connecting to an |EX-CS| it is very helpful if you can provide the support team with a log file of when the problem occurs.
+
+To record a log file in EngineDriver:
+
+1. Start ED.
+2. From the menu, select 'View Log'
+3. Click 'Start recording to a file'
+4. Click 'Close'
+5. Attempt whatever is causing the problem a few times
+6. Exit ED
+7. Connect a USB cable to your phone and PC 
+8. Allow access if the phone asks.
+9. In some versions of Android you may also need to change the connection type on the phone from 'charging' to 'file transfer'
+10. Open a file manager and find the connected phone
+11. Browse down to the folder ...\Internal shared storage\Android\data\jmri.enginedriver\files
+12. Find the most resent file that looks like logcatxxxxxxxxxxxxx.txt     e.g. logcat1699833098998.txt
+13. Attach that file to a message here in discord using the paperclip button on the toolbar above the message content
 
 ====
 

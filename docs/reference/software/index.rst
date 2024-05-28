@@ -7,9 +7,12 @@
 Software
 ********
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. toctree::
     :maxdepth: 1
 
+    command-summary-consolidated
+    index-dcpp-commands
+    /throttles/native-protocol-library
     programming-locos

@@ -10,7 +10,7 @@
 Install the Software
 ********************
 
-|conductor|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -63,8 +63,9 @@ Requirements (for installing)
 
 * For **Apple macOS**:
 
-  * :dcc-ex-red:`The instructions here are incomplete.  This will be updated shortly.` Open a terminal window and navigate to that folder
-  * **Run the installer with** the following command: ``./EX-Installer-macOS`` |BR| |BR|
+  * Open a terminal window and navigate to the that folder that you downloaded the file to.  e.g.: |BR| ``cd Downloads``
+  * Enter the following command to tell the OS that it is an executable: |BR| ``chmod +x EX-Installer-macOS``
+  * **Run the installer with** the following command: |BR| ``./EX-Installer-macOS`` |BR| |BR|
 
 * For **Linux**:
 
@@ -230,7 +231,7 @@ On this screen you can select some of the flexible and optional features of the 
 
 * Motor Driver type
 * LCD or oLED display
-* Wifi
+* WiFi
 * Ethernet
 * Set track modes
 * Advanced Config
@@ -310,7 +311,7 @@ You can configure the WiFi for EX-CommandStation two ways:
 
    Both are required, Though it is possible, but unlikely, that the WiFi Password for your network is blank.  If so, leave the field blank.
 
-   *Wifi SSID* is the name of your home network.
+   *WiFi SSID* is the name of your home network.
 
    *WiFi Password* is the password for your home network.
 

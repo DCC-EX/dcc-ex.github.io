@@ -7,7 +7,7 @@
 Accessory Controllers
 *********************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

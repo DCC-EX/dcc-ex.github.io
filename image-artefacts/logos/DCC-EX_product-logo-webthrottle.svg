@@ -2,7 +2,7 @@
 <svg
    inkscape:export-ydpi="17.060751"
    inkscape:export-xdpi="17.060751"
-   inkscape:export-filename="..\..\docs\_static\images\logos\product-logo-ex-motorshield8874.png"
+   inkscape:export-filename="..\..\docs\_static\images\logos\product-logo-ex-webthrottle.png"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="DCC-EX_product-logo-webthrottle.svg"
    id="svg40"
@@ -36,14 +36,14 @@
      inkscape:current-layer="svg40"
      inkscape:window-maximized="1"
      inkscape:window-y="-11"
-     inkscape:window-x="2869"
+     inkscape:window-x="-11"
      inkscape:cy="218.45465"
-     inkscape:cx="2877.72"
+     inkscape:cx="2039.6103"
      inkscape:zoom="0.23803567"
      showgrid="false"
      id="namedview42"
-     inkscape:window-height="1244"
-     inkscape:window-width="2400"
+     inkscape:window-height="974"
+     inkscape:window-width="1920"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0"
      guidetolerance="10"
@@ -292,7 +292,7 @@
      inkscape:export-ydpi="27.552528"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan1764">EX-WebThrottle</tspan></text>
+       id="tspan351">EX-WebThrottle</tspan></text>
   <text
      xml:space="preserve"
      id="text2480-6-0-6-4-4"
@@ -303,7 +303,7 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan1766">DCC-EX</tspan></text>
+       id="tspan353">DCC-EX</tspan></text>
   <path
      d="M 916.02466,472.51298 H 2102.0679"
      stroke="#000000"
@@ -334,11 +334,11 @@
      inkscape:export-ydpi="27.552528"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan1772"><tspan
+       id="tspan359"><tspan
          style="fill:#00a3b9"
-         id="tspan1768">EX</tspan><tspan
+         id="tspan355">EX</tspan><tspan
          style="fill:#00353d"
-         id="tspan1770">-WebThrottle</tspan></tspan></text>
+         id="tspan357">-WebThrottle</tspan></tspan></text>
   <text
      xml:space="preserve"
      id="text2480-6-0-6-4"
@@ -349,11 +349,11 @@
      inkscape:export-ydpi="18.431187"><tspan
        x="205.2832"
        y="1421.3719"
-       id="tspan1778"><tspan
+       id="tspan365"><tspan
          style="fill:#00353d"
-         id="tspan1774">DCC-</tspan><tspan
+         id="tspan361">DCC-</tspan><tspan
          style="fill:#00a3b9"
-         id="tspan1776">EX</tspan></tspan></text>
+         id="tspan363">EX</tspan></tspan></text>
   <path
      d="M 910.02466,466.51298 H 2096.0679"
      stroke="#000000"

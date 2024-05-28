@@ -1,6 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
 .. include:: /include/include-hardware.rst
+
 |EX-MS-LOGO| |donate-button|
 
 .. index:: 8874, EX-MotorShield
@@ -11,7 +12,7 @@ DCC-EX EX-MotorShield8874 RevA
 
 |conductor|
 
-.. note:: 
+.. note::
 
    This board is compatible with |TM| DC mode.
 
@@ -52,7 +53,7 @@ The EX-Motorshield8874 is pin compatible with the original Arduino Motor Shield 
 * Alternative power in and out solder pads for different connector types
 * Stackable (Support multiple Power Districts)
 * Optional OLED header to connect a display directly to the shield
-  
+
 The EX-Motorshield8874 is based on two DRV8874 H-bridge motor drivers with integrated current sensing from Texas Instruments (TI). It is used to drive inductive loads like relays, solenoids, DC and stepping motors, as well as provide the DCC signal and power to the model railroad tracks.
 
 Powering of Arduino boards is possible due to the on board DC/DC buck converter, supporting a wide input supply range from 9 to 30V. The reverse polarity protection prevents damage to the circuit and its components in case the power supply is accidentally connected backwards.
@@ -67,7 +68,7 @@ Why did we make it?
 EX-Motorshield8874 is specifically designed for use with DCC-EX Command Station for controlling model railroads, but can also be used as generally better replacement for Arduino Motor Shield R3 in any device that needs to control a motor. We needed higher current capacity to power more motors/trains and have little to no voltage drop due to advanced MOSFET driver technology.
 
 
-.. note:: 
+.. note::
 
    The EX-MotorShield8874 was created through the gracious support and design facilities of Semify, who, along with DCC-EX, license it to manufacturers. The hardware design has been made open source for individual users and the schematics are available on the `DCC-EX GitHub <https://github.com/DCC-EX/EX-Hardware/tree/main/EX-Motorshield8874>`_ repository.
 
@@ -76,7 +77,7 @@ How can I get one?
 
 Units may be purchased from the following sources:
 
-* In the US from the `DCC-EX Tindie Store <https://www.tindie.com/stores/dccex/>`_ or...
+* In the US from the `DCC-EX Store <https://store.dcc-ex.com/>`_ or...
 * from `Smart Hobby, LLC <https://www.smarthobbyllc.com/>`_. You can also find Smart Hobby on Facebook
 * In the UK from `Chesterfield Model Making & Miniature Electronics <https://chesterfield-models.co.uk/product/semify-dcc-ex-motor-shield/>`_
 * In Europe from `Semify's Web Store <https://www.semify-eda.com/ex-motorshield8874/>`_ (based in Austria)
@@ -107,7 +108,7 @@ Shown here are examples of the shield plugged into Mega+WiFi, Nucleo-F411RE:
    :alt: DCC-EX EX-MotorShield8874 RevA on Nucleo-F411RE
    :scale: 15%
 
-   DCC-EX EX-MotorShield8874 RevA on Nucleo-F411RE  
+   DCC-EX EX-MotorShield8874 RevA on Nucleo-F411RE
 
 1. Connect DC Power to Motor Driver
 ------------------------------------
@@ -115,11 +116,10 @@ Shown here are examples of the shield plugged into Mega+WiFi, Nucleo-F411RE:
 The EX-MotorShield8874 accepts a standard 2.1mm inside diameter DC barrel jack for DC power, with centre pin positive, and polarity protected for your safety. Acceptable voltages for correct DCC operation include 10-24VDC, but the shield can cope with 9-30VDC.
 
 .. figure:: /_static/images/motorboards/ex_motorshield8874_purple_megawifi.jpg
-   :alt: DCC-EX EX-MotorShield8874 RevA on Mega+WiFi with power and track connectors
+   :alt: DCC-EX EX-MotorShield8874 on Mega+WiFi with power and track connectors
    :scale: 10%
 
-   DCC-EX EX-MotorShield8874 RevA on Mega+WiFi with power and track connectors
-   
+   DCC-EX EX-MotorShield8874 on Mega+WiFi with power and track connectors
 
 .. note::
   **DO NOT** connect power to BOTH the EX-MotorShield8874 barrel jack and the underlying Arduino motherboard via its DC barrel jack as you may damage your Arduino and/or EX-MotorShield8874!!
@@ -131,6 +131,9 @@ We suggest 10-12VDC for Z & N Scale, 14-16VDC for OO, HO, and 18-19VDC for O, or
 .. note::
    Please note that as the EX-MotorShield8874 can supply up to 5A of track power per channel, a power supply of more than 10A peak capacity is required to run both channels at full peak current and have power left for the Command Station.
 
+.. note::
+   If you are just just testing your Arduino (not trying to power the track with the motor shield) some users have found that their PC USB ports have not been providing reliable power to the Arduino and have needed to plug the power supply into EX-MotorShield8874.
+
 1. Turn on Power to the Motor Driver
 ------------------------------------
 
@@ -141,7 +144,6 @@ Once satisfied the EX-MotorShield8874 is seated properly on the Command Station 
    :scale: 10%
 
    DCC-EX EX-MotorShield8874 RevA on Mega+WiFi with power LED on
-   
 
 3. Connect Track to Motor Driver
 ------------------------------------
@@ -151,10 +153,16 @@ Track power for A (MAIN) and B (PROG) tracks can be connected now using the gree
 .. figure:: /_static/images/motorboards/ex_motorshield8874_purple_connector_closeup.jpg
    :alt: DCC-EX EX-MotorShield8874 RevA connectors
    :scale: 30%
-   
+
    DCC-EX EX-MotorShield8874 RevA connectors
-   
+
+There are two sets of output connectors on the motor shield, ``A`` and ``B``. A is the Main or Operations (also called 'Ops') track while ``B`` is the Programming or Service track. Connect twisted pair wire of the proper gauge to each track.
+
 Notice that A (MAIN) is on the left as you look at the connectors, and B (PROG) is on the right, next to the DC barrel jack.
+
+Polarity (which wire is connected to which side of the track) is not important here if you are using separate, completely isolated piece of track for PROG. *However* if you will be using a siding track that connects to your main track, make sure that the *connections for both tracks match*. 
+
+In other words, if you view one side of your main track as having a 'left' side and a 'right' side, and connect positive output A to the left side, connect the positive from the B side to the left side of the programming track. In electrical terms, we want both tracks to be "in phase" with each other. Here is the diagram from above repeated again for reference.
 
 Next steps
 ==========
@@ -202,8 +210,8 @@ Find this section in the file:
   //  STANDARD_MOTOR_SHIELD : Arduino Motor shield Rev3 based on the L298 with max 18V 2A per channel
   //  POLOLU_MOTOR_SHIELD   : Pololu MC33926 Motor Driver (not recommended for prog track)
   //  FUNDUMOTO_SHIELD      : Fundumoto Shield, no current sensing (not recommended, no short protection)
-  //  FIREBOX_MK1           : The Firebox MK1                    
-  //  FIREBOX_MK1S          : The Firebox MK1S    
+  //  FIREBOX_MK1           : The Firebox MK1
+  //  FIREBOX_MK1S          : The Firebox MK1S
   //   |
   //   +-----------------------
   //
@@ -285,8 +293,8 @@ Find this section in the file:
   //  STANDARD_MOTOR_SHIELD : Arduino Motor shield Rev3 based on the L298 with max 18V 2A per channel
   //  POLOLU_MOTOR_SHIELD   : Pololu MC33926 Motor Driver (not recommended for prog track)
   //  FUNDUMOTO_SHIELD      : Fundumoto Shield, no current sensing (not recommended, no short protection)
-  //  FIREBOX_MK1           : The Firebox MK1                    
-  //  FIREBOX_MK1S          : The Firebox MK1S    
+  //  FIREBOX_MK1           : The Firebox MK1
+  //  FIREBOX_MK1S          : The Firebox MK1S
   //   |
   //   +-----------------------
   //

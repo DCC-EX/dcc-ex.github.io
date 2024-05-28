@@ -10,7 +10,7 @@
 Purchasing Parts
 ****************
 
-|conductor| 
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -29,7 +29,7 @@ What you need to Acquire
 
 .. sidebar::  Optional configuration
     
-  |conductor| |BR| |EX-CS| can be configured in an additional 'Conductor friendly' way, without wifi, but it requires |JMRI| to be installed on a computer.
+  |conductor| |BR| |EX-CS| can be configured in an additional 'Conductor friendly' way, without WiFi, but it requires |JMRI| to be installed on a computer.
 
   |tinkerer| |engineer| |BR| |EX-CS| is also supported on a variety of different hardware that you might also consider
 
@@ -47,7 +47,7 @@ You will need to find or purchase:
 
 #. a supported **Arduino board** |BR| We recommend the `Elegoo Mega 2560 <https://www.amazon.com/ELEGOO-ATmega2560-ATMEGA16U2-Projects-Compliant/dp/B01H4ZLZLQ/>`_ |BR| |BR|
 #. a supported **Motor Driver**  |BR| We recommend either our own :doc:`EX-MotorShield8874 </reference/hardware/motorboards/ex-motor-shield-8874>` or the `Arduino Motor Shield Rev3 <https://store.arduino.cc/collections/shields/products/arduino-motor-shield-rev3>`_ |BR| |BR|
-#. a supported **WiFi shield** |BR| We recommend the `EX-WiFi Shield 8266 (aka Makerfabs WiFi Shield) <https://www.tindie.com/products/dccex/ex-wifishield-8266-with-jumpers/>`_ or from `Makerfabs <https://www.makerfabs.com/esp8266-wifi-shield.html>`_ |BR| |BR|
+#. a supported **WiFi shield** |BR| We recommend the `EX-WiFi Shield 8266 (aka Makerfabs WiFi Shield) <https://www.makerfabs.com/esp8266-wifi-shield.html>`_ |BR| |BR|
 #. Two (2) Male to Female **Jumpers leads** |BR| |BR|
 #. a 9-14v DC :doc:`power supply </reference/hardware/power-supplies>` for the motor shield |BR| We recommend `12V 5Amp Power Supply for the Track <https://www.amazon.com/LEDMO-Power-Supply-Transformers-Adapter/dp/B01461MOGQ/>`_ |BR| |BR|
 #. a 2.5mm x 5.5mm Female DC Plug to **Screw Terminal (optional, but recommended)** to connect the motor shield power supply |BR| |BR|

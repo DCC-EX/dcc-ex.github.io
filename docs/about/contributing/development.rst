@@ -44,7 +44,7 @@ Reading and understanding our code
 
 Reading any code in any language is always going to require a basic understanding of the language and features in addition to an understanding of the environment (Arduino in this case, and various CPU versions), plus an understanding of the program features the author is trying to implement (Command parsing and DCC in our case).
 
-The level of C++ that we use is a relatively small subset of the language as we don't need or use many of the more complex C++ features such as studio, templates, lambdas, operator overloading, multiple inheritance etc., but we DO make significant use of the C++ compiler's pre-processor features to automatically customise the code to various CPU or user feature requirements (Wifi, Ethernet etc).
+The level of C++ that we use is a relatively small subset of the language as we don't need or use many of the more complex C++ features such as studio, templates, lambdas, operator overloading, multiple inheritance etc., but we DO make significant use of the C++ compiler's pre-processor features to automatically customise the code to various CPU or user feature requirements (WiFi, Ethernet etc).
 
 EX-RAIL in particular pulls some very cunning, but legitimate, stunts with the pre-processor to weave your automations into the code as it's compiled.
 
@@ -65,7 +65,7 @@ The following subsets of C++ are good to understand:
 Reliance on the C++ pre-processor
 ---------------------------------
 
-We rely on the ability of the compiler/linker to remove functions that are never called so the resulting binary image is as small as possible. This avoids having to manage separate code for large and small cpus.
+We rely on the ability of the compiler/linker to remove functions that are never called so the resulting binary image is as small as possible. This avoids having to manage separate code for large and small CPUs.
 
 We also rely on the compiler to propagate constants. This, for example, allows us to use a floating point value for motor shield definitions but have the float to integer calculation performed by the compiler, meaning the large floating point library is not needed at run time.
 

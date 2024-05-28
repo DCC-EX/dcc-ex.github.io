@@ -109,7 +109,12 @@ h6, .h6 {
 }
 
 .wy-side-nav-search>a img.logo {
-    width: 60%;
+  width: 60%;
+  padding-bottom: 0px !important;
+}
+
+.gsc-control-cse {
+  padding: 0px !important;
 }
 
 .rst-content table.docutils th {
@@ -652,6 +657,7 @@ nav.in-this-section ul.simple li ul li p {
   font-size: 80% !important;
   line-height: 120% !important;
   margin-bottom: 0px !important;
+  text-indent: 25px !important;
 }
 
 /* in-this-section level 3 bullet points */
@@ -659,6 +665,7 @@ nav.in-this-section ul.simple li ul li {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
   line-height: 120% !important;
   margin-bottom: 0px !important;
+  text-indent: 25px !important;
 }
 
 /* in-this-section level 2 bullet points */
@@ -667,6 +674,7 @@ nav.in-this-section ul.simple li p {
   font-size: 80% !important;
   line-height: 120% !important;
   margin-bottom: 0px !important;
+  text-indent: 25px !important;
 }
 
 /* in-this-section level 2 bullet points */
@@ -674,6 +682,7 @@ nav.in-this-section ul.simple li {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
   line-height: 120% !important;
   margin-bottom: 0px !important;
+  text-indent: 25px !important;
 }
 
 nav.in-this-section ul.simple {
@@ -857,8 +866,8 @@ html[data-theme='dark'] .new-in-v5 {
 @media not screen and (max-width: 900px) {
   div.rst-footer-buttons {
     position: fixed;
-    bottom:5px;
-    width:350px;
+    bottom: 5px;
+    width: 250px;
     background: #c9c9c999;
     padding: 10px; 
     border-radius: 10px;
@@ -874,6 +883,32 @@ html[data-theme='dark'] .new-in-v5 {
     padding-bottom: 40px;
     font-size: 80% !important;
   }
+
+  div.topOfPage {
+    position: fixed;
+    bottom:30px;
+	  right: 95px;
+    width:52px;
+    background: #c9c9c999;
+    padding: 5px; 
+    border-radius: 10px;
+    border-color: white !important;
+    border: 4px solid;
+  }
+  html[data-theme='dark'] div.topOfPage {
+    border-color: #141414 !important;
+    background: #c9c9c92e;
+  }
+
+  .topOfPageBtn {
+     border: 1px solid rgba(0,0,0,.1);
+     border-radius: 2px;
+     color: #404040!important;
+  }
+  html[data-theme='dark'] .topOfPageBtn {
+    background-color: #17181c !important;
+    color: #c1c1c1 !important;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -881,4 +916,7 @@ html[data-theme='dark'] .new-in-v5 {
     display:block;
     font-size: 80% !important;
   }
+  /* div.topOfPage {
+    display:block;
+  } */
 }

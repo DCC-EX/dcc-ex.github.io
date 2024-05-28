@@ -58,7 +58,7 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 
 **Other Enhancements**
 
-* UNO Progmem is optimize to allow for small EXRAIL Automation scipts to run within the limited space for testing purposes.
+* UNO Progmem is optimise to allow for small EXRAIL Automation scripts to run within the limited space for testing purposes.
 * PCA9685 Servo Signal board supports 'Nopoweroffleds', servo pins stay powered on after position reached, otherwise the new FADE would always turn off.
 * Position servo can use spare servo pin as a GPIO pin.
 
@@ -69,10 +69,10 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 **4.1.1 Bug Fixes**
 
 * Preserve the turnout format
-* Parse multiple commands in one buffer string currectly
+* Parse multiple commands in one buffer string correctly
 * Fix </> command signal status in EX-RAIL
 * Read long loco addresses in EX-RAIL
-* FIX negative route IDs in WIthrottle
+* FIX negative route IDs in WiThrottle
 
 See the version.h file for notes about which of the 4.1.2 features were added/changed by point release.
 
@@ -83,6 +83,6 @@ See the version.h file for notes about which of the 4.1.2 features were added/ch
 
 | Contact info:
 | Name: Fred Decker
-| Organization: DCC-EX
+| Organisation: DCC-EX
 | Address: 113 Main Street #767, Holly Springs, NC 27540
 | Phone: +1 919-285-1576

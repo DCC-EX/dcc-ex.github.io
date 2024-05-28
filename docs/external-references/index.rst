@@ -3,7 +3,7 @@
 .. include:: /include/include-l1.rst
 .. include:: /include/include-description.rst
 .. meta::
-  :description: Articles and videos created by people in and outside the |DCC-EX| project which you may fine useful or interesting
+  :description: Articles and videos created by people in and outside the |DCC-EX| project which you may find useful or interesting
 
 *******************
 Articles and Videos
@@ -15,7 +15,7 @@ Articles and Videos
     :depth: 2
     :local:
 
-The following are articles and videos created by people in and outside the |DCC-EX| project which you may fine useful or interesting.
+The following are articles and videos created by people in and outside the |DCC-EX| project which you may find useful or interesting.
 
 Videos
 ======
@@ -43,8 +43,9 @@ Toms Trains and Things
 
 Kevin C Smith
 -------------
-
-If you're using Engine Driver direct WiFi connection then you can see a simple unedited TrackManager and EXRAIL demo here.
+* ~ January 2023
+Introduction to DCC-EX Command Station v5.0 with TrackManager & EXRAIL with Engine Driver & Magicsee Joystick throttles
+Using Engine Driver direct WiFi connection in a unedited TrackManager and EXRAIL video demos.
 
 * `DCC-EX Command Station with EXRAIL & TrackManager Part 1 <https://m.youtube.com/watch?v=q58SyQ0eA7c>`_
 * `DCC-EX Command Station with EXRAIL & TrackManager Part 2 <https://m.youtube.com/watch?v=-W-5n19eDOk>`_
@@ -58,3 +59,9 @@ Paul Antoine
 ------------
 
 * ~ April 2023 - `"DCC-EX Open Source Model Railroading" - Paul Antoine (Everything Open 2023) <https://youtu.be/YlGL9-v5OAQ>`_
+
+DriverDTrains
+------------
+
+* ~ 27 August 2023 - `"#4 Assembling a Mega DCC-EX Command Station" - Driver D (Part 1 Hardware Assembly)  <https://www.youtube.com/watch?v=HatlU7A5S5s>`_
+=======

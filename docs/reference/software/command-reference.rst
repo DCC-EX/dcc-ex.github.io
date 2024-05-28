@@ -3,11 +3,11 @@
 .. include:: /include/include-reference.rst
 |EX-REF-LOGO|
 
-*******************************
-DCC-EX Native Command Reference
-*******************************
+****************************************
+DCC-EX Native Command Detailed Reference
+****************************************
 
-|engineer|
+|engineer| |support-button|
 
 .. sidebar:: 
 
@@ -15,13 +15,13 @@ DCC-EX Native Command Reference
     :depth: 2
     :local:
 
-This is a detailed reference. For a summary version, please see :doc:`Consolidated Command Summary <command-summary-consolidated>`
+This is a detailed reference of just the major commands. For a summary version, including all commands, please see :doc:`DCC-EX Native Commands Summary Reference <command-summary-consolidated>`
 
 `EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX>`_ Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several "front end" controllers are available or you can easily create your own. Here are some examples:
 
-* :doc:`EX-WebThrottle </throttles/software/ex-webthrottle>` - Our |EX-WT| browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within |EX-WT| itself!
+* :doc:`EX-WebThrottle </ex-webthrottle/index>` - Our |EX-WT| browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within |EX-WT| itself!
 
-* `Engine Driver <https://enginedriver.mstevetodd.com/>`_ - Cellphone App WiFi Throttle  
+* `Engine Driver <https://enginedriver.mstevetodd.com/>`_ - Android WiFi Throttle app
 
 * `JMRI (Java Model Railroad Interface) <http://www.jmri.org/>`_
 
@@ -37,10 +37,10 @@ Conventions used on this page
 =============================
 
 - "<" and ">" - All DCC-EX API commands are surrounded by these characters to indicate the beginning and end, these must always be included
-- First letter or number - These are called OPCODES, are case sensitive, and must be specified as directed, eg. 1, c, or -
-- CAPITALISED words - These are parameters referred to as keywords, and should be specified as directed, eg. MAIN (note these are not case sensitive, however capitalising makes them easier to distinguish from other parameters)
-- lowercase words - These are parameters that must be provided or are returned, with multiple parameters separated by a space, eg. cabid
-- Square brackets [] - Parameters within square brackets [] are optional and may be ommitted, and if specifying these parameters, do not include the square brackets themselves
+- First letter or number - These are called OPCODES, are case sensitive, and must be specified as directed, e.g. 1, c, or -
+- CAPITALISED words - These are parameters referred to as keywords, and should be specified as directed, e.g. MAIN (note these are not case sensitive, however capitalising makes them easier to distinguish from other parameters)
+- lowercase words - These are parameters that must be provided or are returned, with multiple parameters separated by a space, e.g. `cabid`
+- Square brackets [] - Parameters within square brackets [] are optional and may be omitted, and if specifying these parameters, do not include the square brackets themselves
 - \| - Use of the \| character means you need to provide one of the provided options only, for example ``<0|1 MAIN|PROG|JOIN>`` becomes either ``<0 MAIN>`` or ``<1 MAIN>``
 
 Track Power Commands
@@ -336,10 +336,10 @@ Controlling an Accessory Decoder with ``<a address subaddress activate>``
 
 .. Note:: This general command simply sends the appropriate DCC instruction packet to the main tracks to operate connected accessories. It does not store or retain any information regarding the current status of that accessory.
 
-Defining (Setting up) a Turnout
--------------------------------
+Defining (Setting up) a Turnout/Point
+-------------------------------------
 
-The Turnout commands provide a more flexible and more functional way of operating turnouts.  It requires that the turnout be pre-defined through the ``<T ...>`` commands, described below.
+The Turnout commands provide a more flexible and more functional way of operating turnouts/points.  It requires that the turnout be pre-defined through the ``<T ...>`` commands, described below.
 
 Turnouts may be in either of two states:  Closed or Thrown.  The turnout commands below use the values ``1`` for ``Throw`` or ``Thrown`` and ``0`` for ``Close`` or ``Closed``.
 
@@ -438,8 +438,8 @@ If turnout definitions are stored in EEPROM, the turnout thrown/closed state is 
 Consequently, when the |EX-CS| is restarted the turnout outputs may be set to their last known state (applicable for Servo and VPIN turnouts).
 This is intended so that the servos don't perform a sweep on power-on when their physical position does not match initial position in the CommandStation.
 
-Controlling a Defined Turnout
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Controlling a Defined Turnout/Point
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Sets turnout ID to either the "closed" (turned) or "thrown" (closed) position  
 * The Turnout format is ``<T id throw>``  
@@ -478,7 +478,7 @@ The sensor is considered INACTIVE when at +5V potential, and ACTIVE when the pin
 
 To ensure proper voltage levels, some part of the Sensor circuitry MUST be tied back to the same ground as used by the Arduino.  
 
-The Sensor code utilizes debouncing logic to eliminate contact 'bounce' generated by mechanical switches on transitions. This avoids the need to create smoothing circuitry for each sensor. 
+The Sensor code utilises debouncing logic to eliminate contact 'bounce' generated by mechanical switches on transitions. This avoids the need to create smoothing circuitry for each sensor. 
 You may need to change the parameters in Sensor.cpp through trial and error for your specific sensors,
 but the default parameters protect against contact bounces for up to 20 milliseconds, which should be adequate for almost all mechanical switches and all electronic sensors.
 
@@ -531,11 +531,11 @@ Outputs (DIO Pin) Commands
 ===========================
 
 |EX-CS| supports optional OUTPUT control of any unused Arduino Pins for custom purposes. Pins can be activated or de-activated. 
-The default is to set ACTIVE pins HIGH and INACTIVE pins LOW. However, this default behavior can be inverted for any pin in which case ACTIVE=LOW and INACTIVE=HIGH.  
+The default is to set ACTIVE pins HIGH and INACTIVE pins LOW. However, this default behaviour can be inverted for any pin in which case ACTIVE=LOW and INACTIVE=HIGH.  
 
 Definitions and state (ACTIVE/INACTIVE) for pins are retained in EEPROM and restored on power-up.
 The default is to set each defined pin to active or inactive according to its restored state. 
-However, the default behavior can be modified so that any pin can be forced to be either active or inactive upon power-up regardless of its previous state before power-down.  
+However, the default behaviour can be modified so that any pin can be forced to be either active or inactive upon power-up regardless of its previous state before power-down.  
 
 To have |EX-CS| utilize one or more Arduino pins as custom outputs, first define/edit/delete output definitions using the following variation of the ``<Z>`` command:  
 
@@ -561,7 +561,7 @@ To have |EX-CS| utilize one or more Arduino pins as custom outputs, first define
 
 ``state`` : The state of the output (0=INACTIVE / 1=ACTIVE)
 
-``iflag`` : Defines the operational behavior of the output based on bits 0, 1, and 2 as follows:  
+``iflag`` : Defines the operational behaviour of the output based on bits 0, 1, and 2 as follows:  
 
 .. code-block::
 
@@ -624,7 +624,7 @@ WRITE CV BYTE TO ENGINE DECODER ON MAIN TRACK
 Writes, without any verification, a Configuration Variable BYTE to the decoder of an engine on the main operations track. 
 
 
-* Write CV BYTE Format is: ``<w cab cv valule>``  
+* Write CV BYTE Format is: ``<w cab cv value>``  
 * ``cab`` : The short (1-127) or long (128-10293) address of the engine decoder  
 * ``cv`` : The number of the Configuration Variable memory location in the decoder to write to (1-1024)  
 * ``value`` : The value to be written to the Configuration Variable memory location (0-255)  
@@ -778,7 +778,7 @@ As there is existing detailed documentation for these, we will not elaborate her
 
 ``<JR id>`` Returns the ID, description, and function map of the specified roster entry ID
 
-``<t cabid>`` Requests a deliberate update of cab speed/functions in the same format as the cab broadcas
+``<t cabid>`` Requests a deliberate update of cab speed/functions in the same format as the cab broadcast
 
 Diagnostic Commands
 =====================
@@ -855,7 +855,7 @@ To help define the correct ACK parameters required for different decoders, there
 
   If you still need to override these and need to do so permanently, the commands can be added to "mySetup.h" as per :ref:`ex-commandstation/advanced-setup/startup-config:adding in the startup commands`.
 
-  Note with decoders that are equipped with "keep alives" or capacitors, it can be beneficial to turn the power on with `<1>` or `<1 PROG>` to charge the capacitors prior to programming, which can increase the reliability of the ACK, especially when attemping to read the full sheet.
+  Note with decoders that are equipped with "keep alives" or capacitors, it can be beneficial to turn the power on with `<1>` or `<1 PROG>` to charge the capacitors prior to programming, which can increase the reliability of the ACK, especially when attempting to read the full sheet.
 
 To quote the relevant section from NMRA S 9.2.3:
 
@@ -865,11 +865,11 @@ To quote the relevant section from NMRA S 9.2.3:
   
   Basic acknowledgment is defined by the Digital Decoder providing an increased load (positive-delta) on the programming track of at least 60 mA for 6 ms +/-1 ms. It is permissible to provide this increased load by applying power to the motor or other similar device controlled by the Digital Decoder.
 
-``<D ACK LIMIT mA>`` Use this command to override the minimum milliamps (mA) required to detect the ACK pulse, eg. ``<D ACK LIMIT 30>`` means a minimum 30mA pulse would be accepted.
+``<D ACK LIMIT mA>`` Use this command to override the minimum milliamps (mA) required to detect the ACK pulse, e.g. ``<D ACK LIMIT 30>`` means a minimum 30mA pulse would be accepted.
  
-``<D ACK MIN uS>`` Use this command to override the minimum amount of time in microseconds (uS) the pulse needs to be active for, eg. ``<D ACK MIN 2000>`` means a pulse of 2ms or more would be accepted.
+``<D ACK MIN uS>`` Use this command to override the minimum amount of time in microseconds (uS) the pulse needs to be active for, e.g. ``<D ACK MIN 2000>`` means a pulse of 2ms or more would be accepted.
 
-``<D ACK MAX uS>`` As above, however overriding the maximum amount of time for a pulse, eg. ``<D ACK MAX 20000>`` means a pulse up to 20ms would be accepted.
+``<D ACK MAX uS>`` As above, however overriding the maximum amount of time for a pulse, e.g. ``<D ACK MAX 20000>`` means a pulse up to 20ms would be accepted.
 
 ``<D ACK RETRY x>`` When reading/writing CVs, the program will try again upon failure.  The default is ``<D ACK RETRY 2>``, which means 3 attempts before a failure is reported.  Each of the unsuccessful attempts is reported in the serial monitor or JMRI monitor log.  The last unsuccessful attempt remains on the display if in use.  To reset the running total, send the command manually: ``<D ACK RETRY 2>``.
 

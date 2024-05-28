@@ -7,7 +7,7 @@
 WiThrottle Server, Web Server, DCC-EX Native Protocol Explained
 ***************************************************************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button| 
 
 .. sidebar:: 
 
@@ -31,9 +31,9 @@ The WiThrottle Server
 
 The |WiThrottle Protocol| is the proprietary protocol developed by Brett Hoffman at https://www.WiThrottle.com. Like the |DCC-EX Native Protocol|, is consists of messages composed of strings of text characters sent across a serial connection that tell the Command Station how to control your layout. The command "PPA1", for example turns the power on in WiThrottle. It can be confusing, but WiThrottle can refer to the protocol (as in |WiThrottle Server| or WiThrottle compatible), but it also refers to the iOS throttle App called "WiThrottle" (it stands for WiFi Throttle).
 
-|EX-CS| allows you to use the "|WiThrottle server|" built into |JMRI| and other software and have them connect to your Command Station via a USB or serial connection, but |EX-CS| also implements a |WiThrottle Protocol| server in our Command Station software itself. A "server" is just a fancy way of saying that there is software running inside JMRI and |EX-CS| that can understand WiThrottle commands and "serve" or "service" clients that want to connect and send WiThrottle commands. The ability of |EX-CS| to natively "speak" WiThrottle means you can directly connect a |WiThrottle protocol| compatible Throttle (aka CAB) via Wifi or Bluetooth to the Command Station and run trains. But you can still connect to JMRI WiThrottle instead and connect JMRI to |EX-CS| with a USB cable. So |EX-CS| is bi-lingual, we speak DCC-EX AND |WiThrottle Protocol|! Apps like |Engine Driver| and |WiThrottle| for iOS send commands in the WiThrottle format.
+|EX-CS| allows you to use the "|WiThrottle server|" built into |JMRI| and other software and have them connect to your Command Station via a USB or serial connection, but |EX-CS| also implements a |WiThrottle Protocol| server in our Command Station software itself. A "server" is just a fancy way of saying that there is software running inside JMRI and |EX-CS| that can understand WiThrottle commands and "serve" or "service" clients that want to connect and send WiThrottle commands. The ability of |EX-CS| to natively "speak" WiThrottle means you can directly connect a |WiThrottle protocol| compatible Throttle (aka CAB) via WiFi or Bluetooth to the Command Station and run trains. But you can still connect to JMRI WiThrottle instead and connect JMRI to |EX-CS| with a USB cable. So |EX-CS| is bi-lingual, we speak DCC-EX AND |WiThrottle Protocol|! Apps like |Engine Driver| and |WiThrottle| for iOS send commands in the WiThrottle format.
 
-Refer to :ref:`this list <throttles/index:wiThrottle Protocol Based Throttles>` for the Throttles (Controllers) that are known to support the wiThrottle Protocol.
+Refer to :ref:`this list <throttles/index:wiThrottle Protocol Based Throttles>` for the Throttles (Controllers) that are known to support the WiThrottle Protocol.
 
 The JMRI WEB Server
 ====================

@@ -7,6 +7,8 @@
 EX-CommandStation
 ******************
 
+|conductor| |tinkerer| |engineer| |support-button|
+
 What is EX-CommandStation?
 ==========================
 
@@ -41,7 +43,7 @@ It also supports:
     :width: 900
 
     * - |conductor| 
-      - If you are just starting on the |DCC-EX| journey we recommend you start with the |br| :doc:`Getting started Page <get-started/index>`
+      - If you are just starting on the |DCC-EX| journey we recommend you start with the |BR| :doc:`Getting started Page <get-started/index>`
 
 ----
 

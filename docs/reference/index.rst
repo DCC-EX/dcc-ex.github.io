@@ -7,35 +7,36 @@
 Reference
 *********
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 Glossary
 ========
 
 .. toctree::
-    :maxdepth: 1
+   :maxdepth: 1
 
-    glossary
+   glossary
 
 Videos
 ======
 
 .. toctree::
-    :maxdepth: 1
+   :maxdepth: 1
 
-    videos/index
+   videos/index
  
 Hardware, Software, tools
 =========================
 
 .. toctree::
-    :maxdepth: 1
+   :maxdepth: 1
 
-    downloads/index
-    hardware/index
-    software/index
-    software/command-summary-consolidated
-    /ex-rail/EX-RAIL-command-reference
-    developers/index
-    accessories/index
-    tools/index
+   downloads/index
+   hardware/index
+   software/index
+   Native Commands Summary <software/command-summary-consolidated>
+   Native Commands Details <software/command-reference>
+   /ex-rail/EX-RAIL-command-reference
+   developers/index
+   accessories/index
+   tools/index

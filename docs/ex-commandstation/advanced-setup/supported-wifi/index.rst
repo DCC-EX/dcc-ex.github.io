@@ -7,20 +7,16 @@
 Supported WiFi Shields and Boards
 *********************************
 
-|tinkerer| |engineer|
-
-:dcc-ex-red-bold:`Please read the warning before you proceed.`
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. warning:: 
    :class: warning-float-right
 
-   Please be aware that the Espressif firmware shipped with these devices **will probably NOT work** with |EX-CS| out of the box.
+   While The recommended :doc:`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>` is now shipping with the correct firmware version and **will work** with |EX-CS| *without modification*, please be aware that the Espressif firmware shipped with *Duinopeak ESP8266 WiFi Expansion* and *ESP-01 or ESP-01S* devices :dcc-ex-red-bold:`will probably NOT work` with |EX-CS| out of the box.
 
    This can be corrected, but is probably beyond Conductor level and requires additional hardware.  
 
    See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
-
-   We are currently investigating other options.
    
 The following pages describe all the supported WiFi options of the |EX-CS|.  If you identify as a |conductor-text| and have installed only the recommended hardware we suggest that you look at the guide on the :doc:`/ex-commandstation/get-started/wifi-setup` page.
 

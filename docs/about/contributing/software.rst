@@ -123,7 +123,7 @@ The reStructuredText extension installed with VSCode allows live previewing of t
 
 Note, however, that the Esbonio server will only generate live previews of the pages you are actively editing, and therefore it will not give you a complete updated view of the entire website.
 
-Once you've installed the extensions above, it is recommended you close then reopen VSCode, and upon reopening VSCode, you should be prompted in the bottom right hand corner to install the Esbonion language server. It is recommended you do so now.
+Once you've installed the extensions above, it is recommended you close then reopen VSCode, and upon reopening VSCode, you should be prompted in the bottom right hand corner to install the Esbonio language server. It is recommended you do so now.
 
 Refer to the :doc:`/about/contributing/website/index` contribution page for more info on generating reliable local previews.
 

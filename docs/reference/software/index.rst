@@ -7,7 +7,7 @@
 Software
 ********
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. toctree::
     :maxdepth: 1

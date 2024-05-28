@@ -3,11 +3,11 @@
 .. include:: /include/include-description.rst
 |EX-CS-LOGO|
 
-|conductor| |tinkerer| |engineer|
-
 ****************************
 Overview - types and options
 ****************************
+
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar:: 
 
@@ -43,7 +43,7 @@ Solenoid/coil operated
 
 Solenoid (or coil) operated turnouts/points also typically have a lever or switch to allow these to be operated manually, however these aren't designed to be motor driven in the same was as lever operated turnouts/points, and rather they have an internal solenoid or coil that needs to be energised in order to close or throw them.
 
-The critical element to consider with these is that the solenoid or coil requires a **very brief pluse** to actuate them, and powering them continuously will **burn them out**. This also means they shouldn't be operated in repeatedly in rapid succession, to allow time to cool down.
+The critical element to consider with these is that the solenoid or coil requires a **very brief pulse** to actuate them, and powering them continuously will **burn them out**. This also means they shouldn't be operated in repeatedly in rapid succession, to allow time to cool down.
 
 There are several different options to control these remotely including capacitive discharge units (CDU) and motor driver ICs such as L293D, L298, or HG7881/L9110. There are also commercial DCC accessory decoder based solenoid or coil turnout/point controllers available which can be utilised instead.
 

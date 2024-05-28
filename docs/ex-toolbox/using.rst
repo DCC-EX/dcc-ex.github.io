@@ -7,7 +7,7 @@
 EX-Toolbox - Installing and Using
 *********************************
 
-|tinkerer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -143,7 +143,7 @@ CV Programming (Operation Mode)
 -------------------------------
 
 .. figure:: /_static/images/ex-toolbox/cv_programmer_ops_mode.png
-   :alt: CV Programming (Operation Mode) Screen
+   :alt: CV Programming (Ops Mode) Screen
    :scale: 50%
    :align: right
 
@@ -166,7 +166,11 @@ To write a CV value to the decoder, enter the DCC Address of the decoder, enter 
 
 If you select a 'common CV value' it will enter the CV number into the field. From there follow the instructions above for writing the CV.
 
-Note: Issuing a read or write will automatically turn the track power on.
+.. Note: 
+
+   Issuing a read or write will automatically turn the track power on.
+
+   The CV Programming Page has a feature specific to CV29.  When you read CV29; |BR| a) it explains what you need to change the value to to disable the 'Speed Table', and |BR| b) it explains what you need to change the value to to change default direction of the loco. 
 
 See below for issuing DCC-EX commands.
 
@@ -208,6 +212,10 @@ To access the Speed Matching either:
 * Swipe Right from the Loco Status Screen
 * Select 'Speed Matching (PoM)' from the Menu
 
+   .. raw:: html
+   
+      <iframe width="336" height="189" src="https://www.youtube.com/embed/7WyWR8xYvgY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 EX-Toolbox Speed Matching Instructions
 --------------------------------------
@@ -226,17 +234,24 @@ Assumptions
 
 1. Assumes that you have already configured the 'Master' to be the way you want it and the other locos to behave.
 
-  The Master should be the naturally slowest loco of the set, not necessarily the one that will be run in the lead position.  |BR| i.e. Test your locos on their default settings first, and find the slowest.
+  The 'Master' should be the naturally slowest loco of the set, not necessarily the one that will be run in the lead position.  |BR| i.e. Test your locos on their default settings first, and find the slowest.
 
   The low speed test uses a speed setting of `5` (0-126).  If your locos don't start moving at that setting it would be advisable to adjust Low speed setting and/or the Kick Start of the 'Master' first.
   
-2. Assumes that, at least, the 'Second' loco is configured to use the High, Mid, Low CVs, not the full 28 step speed table.  (Part of CV29) |BR| Not critical, but it is advisable to have the Master also use the High, Mid, Low CVs.
-3. It is advisable that BACK-EMF is turned off on all locos.  If you don't you will probably encounter surging of the locos as they speed up and slow down under individual load.
+2. Assumes that, at least, the 'Second' loco is configured to use the High, Mid, Low CVs, not the full 28 step 'Speed Table'.  (Part of CV29) |BR| Not critical, but it is advisable to have the 'Master' also use the High, Mid, Low CVs.
+
+   The CV Programming Page of |EX-TB| has a feature specific to CV29.  When you read CV29, it explains what you need to change the value to to disable the 'Speed Table'.
+
+3. It is highly advisable that **BACK-EMF** is turned off on all locos that will be run in a consist.  If you don't you will likely encounter surging of the locos as they speed up and slow down under individual load.  
+   
+   **BACK-EMF** is referred to by some manufacturers as 'Dynamic Compensation for Speed Stabilisation', 'Scaleable Speed Stabilisation' or 'Load Compensation'.  Unfortunately there is no standard way to disable BACK-EMF. You will need to refer to the manuals for your decoders. 
+   
+   `This page <https://tonystrains.com/news/dcc-motor-control-with-back-emf-and-p-i-d/>`_ has a detailed explanation of BACK-EMF and details on how to change it for a number of manufacturers.
 
 Instructions
 ^^^^^^^^^^^^
 
-1. Open EX-Toolbox and go to the Speed Matching screen.
+1. Open |EX-TB| and go to the Speed Matching screen.
 2. Put the/a second (non-master) loco on the ``PROG`` track. (see Notes)
 3. Click :guilabel:`Read -PROG trk`.
 
@@ -265,11 +280,14 @@ Instructions
 Notes: 
 ^^^^^^
 
-   1. By default, the :guilabel:`+` and :guilabel:`-` buttons change the CV values by 1. You can change this step amount by editing the 'Step' field.
-   e.g. When I start on a loco, I normally have the Step at 10.  When it gets closer to a match I change the step to 1.
+   1. By default, the :guilabel:`+` and :guilabel:`-` buttons change the CV values by 1. You can change this step amount by editing the 'Step' field. |BR| e.g. When I start on a loco, I normally have the Step at 10.  When it gets closer to a match I change the step to 1.
+   
    2. You don't need a separate ``PROG`` track.  You can use the 'Track Manager' screen to temporarily set the loop of track to ``PROG`` for steps 2-3, then change it back to ``MAIN`` for steps 4 on.
+   
    3. Some decoders don't support Kick Start.
+   
    4. Some decoders don't allow you to turn BACK-EMF off. Check your decoder manual.
+   
    5. The low speed test uses a speed setting of ``5`` (0-126).  If your locos don't start moving at that setting it would be advisable to adjust Low speed setting and/or the Kick Start of the 'Master' first.
 
 |force-break|
@@ -439,7 +457,7 @@ Power
 
 .. figure:: /_static/images/ex-toolbox/power.png
    :alt: Power Screen
-   :scale: 50%
+   :scale: 10%
    :align: right
 
    EX-Toolbox Power Screen
@@ -562,10 +580,13 @@ Downloads
  * *SerialToIPGUI*  - https://sourceforge.net/projects/serialtoip/
  * *socat* for windows requires downloading the 'cgywin' and installing the optional 'socat' package when you install - https://www.cygwin.com/ 
 
-Troubleshooting (Windows)
--------------------------
 
-In Microsoft Windows, if you see a "command not found" error, Here is what you need to do to fix it:
+----
+
+Troubleshooting (Windows socat)
+-------------------------------
+
+In Microsoft Windows and using the command line socat, if you see a "command not found" error, Here is what you need to do to fix it:
 
 * Right click on "My Computer" -> Properties -> Advanced -> Environment Variables
 * Add a new environment variable, called ``CYGWIN_HOME`` and set its value to ``C:\cygwin``
@@ -573,3 +594,12 @@ In Microsoft Windows, if you see a "command not found" error, Here is what you n
 * Just click okay, exit any command prompts or bash shells (over cygwin) you may have open, and open it again - it'll work!
 
 Note that if you installed cgywin to a folder *other than "C:\\cgywin"* (e.g. c:\\cgywin64), use that folder name instead in the change above.
+
+----
+
+Android apps on Windows 
+=======================
+
+Although|EX-TB| is an Android app, it is possible to run it on windows PCs.
+
+See the :doc:`/throttles/software/android-apps-on-windows` page for more information.

@@ -7,7 +7,7 @@
 EX-Turntable
 ************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 |EX-TT| is a fully integrated turntable controller, using an Arduino microcontroller to drive a stepper controller and motor to spin the turntable bridge.
 

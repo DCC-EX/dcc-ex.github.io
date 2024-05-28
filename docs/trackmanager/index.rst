@@ -7,7 +7,7 @@
 TrackManager (DCC & DC)
 ***********************
 
-|tinkerer| |engineer| |githublink-ex-commandstation-button2|
+|tinkerer| |engineer| |support-button| |githublink-ex-commandstation-button2|
 
 |NEW-IN-V5-LOGO-SMALL|
 
@@ -283,7 +283,7 @@ In a |EX-R| Automation script we could a Set a Loco Address to a specific track 
    SETLOCO(1225)
    SET_TRACK(B,DC)
    Run a your Roundhouse script blow whistle, run Forward delay wait and run Reverse delay stop       
-   DELAYRANDOM(msec, msec) // randomize the run time between runs
+   DELAYRANDOM(msec, msec) // randomise the run time between runs
    DONE
 
 Create EX-RAIL Track Manager Functions for Engine Driver Throttle Route [Set] buttons

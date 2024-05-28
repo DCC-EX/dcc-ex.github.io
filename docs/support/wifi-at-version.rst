@@ -10,7 +10,7 @@
 ESP8266 (WiFi Boards) - AT Version Issues and Solutions
 *******************************************************
 
-|conductor| |Tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -18,7 +18,7 @@ ESP8266 (WiFi Boards) - AT Version Issues and Solutions
       :local:
       :depth: 3
 
-Unfortunately the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with |EX-CS|. This now seems to include the recommended `Makerfabs ESP8266 WiFi Shield <https://www.makerfabs.com/esp8266-wifi-shield.html>`_.
+Unfortunately, other than the recommended *DCC-EX EX-WiFiShield 8266* and *Makerfabs ESP8266 WiFi Shield*, the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with |EX-CS|. There was a run of Makerfabs boards from around May 2023 through October 2023 that had defective firmware from Expressif. You can use this tutorial to upgrade one of those boards if you have one. All boards manufactured after November 2023 have the correct firmware. These boards carry the DCC-EX logo on the bottom and display version 1.1 or later.
 
 Which is correct version of the AT firmware
 ===========================================
@@ -34,7 +34,7 @@ There several common symptoms of a an incorrect firmware version:
 
 * If you set up the command station in |Access Point mode|, then the SSID (Network Name) the displayed will be "DCCEX_SAYS_BROKEN_FIRMWARE" or "UPDATE_ESP_FIRMWARE".
 * You can't connect to the displayed Access Point.
-* Your phone can connect to the Access Point, but can't connect your WiFi throttle (e.g. Engine Driver or wiThrottle) to the |EX-CS|. 
+* Your phone can connect to the Access Point, but can't connect your WiFi throttle (e.g. Engine Driver or WiThrottle) to the |EX-CS|. 
 * You can connect and use a phone once, but it will not connect again unless you re-start the |EX-CS|.
 * You can connect and use one phone, but it will not allow connection of a second phone, or the second phone works, but it disconnects the first phone.
 
@@ -193,7 +193,7 @@ Checking the AT version of a ESP-01 a with a Arduino Uno
 
 ----
 
-Checking the AT version of a Makerfabs ESP8266 Wifi Shield
+Checking the AT version of a Makerfabs ESP8266 WiFi Shield
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: /_static/images/wifi/makerfabs-esp8266-wifi-shield.png
@@ -259,6 +259,11 @@ Correcting the AT version of a ESP-01or ESP01s requires additional hardware. One
 * A USB to ESP-01 Adapter
 * A USB to TTL CH340G Converter Module Adapter
 * An Arduino Uno
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
 
 |hr-dashed|
 
@@ -327,9 +332,19 @@ Correcting the AT version on a Makerfabs ESP8266 Wifi Shield
    :alt: Makefabs ESP8266 WiFi Shield
    :scale: 25%
 
+There are **two** options for correcting the AT version on a Makerfabs ESP8266 Wifi Shield:
+
+* With a USB to TTL Converter Module Adapter (recommended)
+* With an Arduino Mega
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
 |hr-dashed|
 
-Correcting the Makerfabs ESP8266 Wifi Shield With a USB to TTL Converter Module Adapter
+Correcting the Makerfabs ESP8266 WiFi Shield With a USB to TTL Converter Module Adapter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Recommended approach**
@@ -346,14 +361,14 @@ Also see a detailed video by Andrew from `Wotton Tor <https://www.youtube.com/@A
 
 |hr-dashed|
 
-Correcting the Makerfabs ESP8266 Wifi Shield With an Arduino Mega
+Correcting the Makerfabs ESP8266 WiFi Shield With an Arduino Mega
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. warning:: 
 
-   The instructions on the following page have been proven to work on Linux PCs, so will probably work on macOS PCs (Apple), however attempts to get them to work on **Microsoft Windows PCs** :dcc-ex-red-bold:`have so far been unsuccessful`. 
+   The instructions on the following page have been proven to work on Linux PCs, so will probably work on macOS PCs (Apple), however attempts to get them to work on **Microsoft Windows PCs** :dcc-ex-red-bold:`have so far been unsuccessful`. We need to do more testing. If you have an issue with this method, simply purchase a USB to TTL converter module and use the recommended process in the previous heading. This should not be an issue for most people since they will have the DCC-EX EX-WiFi Shield 8266 which has the correct firmware and a much easier upgrade process should that be required in the future.
 
-Flashing the ESP8266 Wifi Shield :doc:`using an Arduino Mega is covered here </support/makerfabs-update-at-version-with-mega>`.
+Flashing the ESP8266 WiFi Shield :doc:`using an Arduino Mega is covered here </support/makerfabs-update-at-version-with-mega>`.
 
 |force-break|
 

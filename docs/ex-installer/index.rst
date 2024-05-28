@@ -10,7 +10,7 @@
 EX-Installer
 ************
 
-|tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 ----
 
@@ -30,9 +30,9 @@ To make it as simple as possible we have created the |EX-I| app.
 Looking for some help with EX-Installer?
 ========================================
 
-To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking this button:
+To find out how to request assistance click the first button below. To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking the second button:
 
-|githublink-ex-installer-button|
+|support-button-large| |githublink-ex-installer-button|
 
 .. tip:: 
 

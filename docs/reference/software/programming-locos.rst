@@ -7,7 +7,7 @@
 Programming Locos (CVs)
 ***********************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 Requirements
 =============
@@ -33,7 +33,7 @@ For a quick intro to setting up roster entries in |JMRi| and changing basic item
 
 When launching |JMRi| DecoderPro, you will see your list of roster entries by default.
 
-To make changes to your decoder settings, select the loco you wish to program, then click the :guilabel:`Program` button to lauch the programming dialog.
+To make changes to your decoder settings, select the loco you wish to program, then click the :guilabel:`Program` button to launch the programming dialog.
 
 * To set basic items such as the decoder address and speed steps, use the options on the "Basic" tab
 * For options such as acceleration and deceleration, use the "Motor" tab, noting there is also a "Momentum" tab for more control over inertia settings

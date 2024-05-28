@@ -59,8 +59,8 @@ We added many new functions such as:
 * 28 speed step support in addition to 128
 * Extensive logs and diagnostics in a serial monitor or the JMRI DCC++ log window
 * Created many new commands
-* Developed a new browser based throttle (:doc:`EX-WebThrottle </throttles/software/ex-webthrottle>`)
-* New "DriveAway" feature to be able to recognize a loco on a siding used as a programming track and drive off of onto the main track
+* Developed a new browser based throttle (:doc:`EX-WebThrottle </ex-webthrottle/index>`)
+* New "DriveAway" feature to be able to recognise a loco on a siding used as a programming track and drive off of onto the main track
 
 ... and much, much more. 
 
@@ -94,7 +94,7 @@ Next, the Waveform Generator needed 2 timers and interrupts, one for the Main tr
 
 The packet generation routine was complex, hard to maintain, and limited us with regard to the hardware we could run on and new features we could implement (like the Railcom cut-out). We replaced the slow DigitalRead() and DigitalWrite() routines with a fast write library. The packet generation is now streamlined, fast (which allows us to be able to use only 1 timer to create signals for 2 tracks), and much easier to read.
 
-We made a huge effort to streamline the code and optimize it for microcontrollers to use the limited memory we have available in the most efficient manner. The code is now object oriented and utilizes classes for readability and reusability. We eliminated almost all use of strings.
+We made a huge effort to streamline the code and optimise it for microcontrollers to use the limited memory we have available in the most efficient manner. The code is now object oriented and utilises classes for readability and reusability. We eliminated almost all use of strings.
 
 The 3 most requested features were: 1. More reliable CV read and writes, 2. Better accessory control, 3. Automation. Some have requested a Railcom cut-out. We haven't limited ourselves to just these features, but we put a lot of time into redesigning things to accommodate them. 
 
@@ -119,7 +119,7 @@ So while maintaining proper deference to Gregg Berman's original concept of an i
 Thanks
 ------
 
-This is a team effort. There are a dedicated and organized group of about 15-20 core people involved in the project. In addition, there is all of you who contribute with your comments, feature ideas, evangelizing and testing. So we give you our heartfelt thanks. We will see you online!
+This is a team effort. There are a dedicated and organised group of about 15-20 core people involved in the project. In addition, there is all of you who contribute with your comments, feature ideas, evangelizing and testing. So we give you our heartfelt thanks. We will see you online!
 
 Click here for :doc:`The DCC-EX Team Credits </about/index>`
 

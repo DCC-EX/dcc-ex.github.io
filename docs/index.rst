@@ -46,6 +46,7 @@ DCC-EX Model Railroading
     - :ref:`I want to control accessories & run DCC trains <begin/what-to-know:i want to control all my accessories and run trains>`
     - :ref:`begin/what-to-know:i want some extra automated/animated realism`
     - :ref:`begin/what-to-know:i want a fully automated exhibition layout for my club`
+    - :doc:`/begin/comparison`
 
     If these haven't helped, or you've read them and you are still unsure, then feel free to contact us, preferably through our Discord server where you can chat directly with our team members. Details of this and other contact methods on our :doc:`/support/contact-us` page. 
 
@@ -90,6 +91,7 @@ DCC-EX Model Railroading
    ex-installer/index
    ex-webthrottle/index
    EX-MotorShield8874 <reference/hardware/motorboards/ex-motor-shield-8874>
+   EX-WiFiSheild-8266 <reference/hardware/wifi-boards/ex-wifi-shield-8266>
    ex-dccinspector/index
    ex-toolbox/index
 
@@ -109,8 +111,8 @@ DCC-EX Model Railroading
    :maxdepth: 4
    :caption: Support & Info
 
-   throttles/index
    support/index
+   throttles/index
    big-picture/index
 
 .. toctree::
@@ -119,6 +121,15 @@ DCC-EX Model Railroading
    :caption: Downloads
 
    download/index
+
+.. toctree::
+   :hidden:
+   :maxdepth: 4
+   :caption: Purchasing & Merchandise
+
+   purchasing/dealers
+   reference/accessories/index
+   merchandise/index
 
 .. toctree::
    :hidden:
@@ -145,10 +156,3 @@ DCC-EX Model Railroading
 
    About Us and the Project<about/index>
    about/index-contributing
-
-.. toctree::
-   :hidden:
-   :maxdepth: 4
-   :caption: Merchandise & News
-
-   merchandise/index

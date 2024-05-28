@@ -12,7 +12,7 @@
 Makerfabs ESP8266 - Update AT Version with an Arduino Mega
 **********************************************************
 
-|conductor| |Tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -20,7 +20,7 @@ Makerfabs ESP8266 - Update AT Version with an Arduino Mega
       :local:
       :depth: 3
 
-Unfortunately the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with |EX-CS|. This now seems to include the recommended `Makerfabs ESP8266 WiFi Shield <https://www.makerfabs.com/esp8266-wifi-shield.html>`_.
+Unfortunately many of the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with |EX-CS|. The only boards guaranteed to work out of the box are the ones designed in a partnership between DCC-EX and Makerfabs. The board are the `EX-WifiShield 8266 <https://store.dcc-ex.com/products/EX-WiFiShield-8266-p625876731>`_ available through our reseller network, and the `Makerfabs ESP8266 WiFi Shield <https://www.makerfabs.com/esp8266-wifi-shield.html>`_. If you have a Makerfabs shield that was made between May 2023 and October 2023, your board may have faulty firmware.
 
 .. warning:: 
 
@@ -29,12 +29,12 @@ Unfortunately the Espressif ESP8266 based WiFi Boards that are available for sal
 Introduction
 ============
 
-Out of the box, the MakerFabs ESP8266 shield appears to be shipping with a broken firmware that is unstable when used with DCC-EX. To flash version 1.7.4 onto the board follow these instructions.
+Out of the box, the small run of MakerFabs ESP8266 shields made in late 2023 mentioned above shipped with a broken firmware on the chips from the Expressif factory that Makerfabs use in their production. This version is unstable when used with DCC-EX as well as other applications. To flash version 1.7.4 onto the board follow these instructions. Do NOT use these instructions to update any EX-WiFiShield 8266 boards since they do not need updating. Known good boards have the DCC-EX logo on the bottom and are stamped with v1.1 or later. The joint DCC-EX/Makerfabs board have a much easier process to update them should they ever need new firmware in the future.
 
 Requirements
 ============
 
-* The WiFi Shield itself - https://www.makerfabs.com/esp8266-wifi-shield.html
+* The WiFi Shield itself - The previous version of the one shown here: https://www.makerfabs.com/esp8266-wifi-shield.html
 * An Arduino Uno or Arduino mega
 * 2x female to male jumper wires |br| (or the two small, simple jumpers/plugs that came with the WiFi shield)
 * 3x male to male jumper wire
@@ -85,11 +85,11 @@ The ``esptool`` can be download separately, but the easiest way to get it is to 
 
 1.4. Now the ``esptool`` will be installed on your computer |br| It is important to be aware of where will be, as this is needed in later steps. (``ESPTOOL``)
 
-   Windows: |br|
-   ``C:\Users\<userName>\AppData\Local\Arduino15\packages\esp32\tools\esptool_py\4.5.1\esptool.exe`` |br|
-   Mac: |br|
-   ``~/Library/Arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool_py`` |br|
-   Linux: |br|
+   Windows: |BR|
+   ``C:\Users\<userName>\AppData\Local\Arduino15\packages\esp32\tools\esptool_py\4.5.1\esptool.exe`` |BR|
+   Mac: |BR|
+   ``~/Library/Arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool_py`` |BR|
+   Linux: |BR|
    ``~/.arduino15/packages/esp32/tools/esptool_py/4.5.1/esptool.py``
 
 |hr-dashed|
@@ -120,7 +120,7 @@ Step 3. Prepare the hardware
 3.5 Prepare two jumper wires to ``GND`` (loose ends)
 
    .. figure:: /_static/images/wifi/mega-for-flashing-makerfabs-wifi-3.png
-      :alt: Stacked Mega and Wifi Shield - Jumpers
+      :alt: Stacked Mega and WiFi Shield - Jumpers
       :scale: 50%
 
       Stacked Mega and Wifi Shield - Jumpers. |BR| Note: White and Black wires will be loose are this point
@@ -128,7 +128,7 @@ Step 3. Prepare the hardware
    *Alternate*
 
    .. figure:: /_static/images/wifi/mega-for-flashing-makerfabs-wifi-3-simple-jumpers.png
-      :alt: Stacked Mega and Wifi Shield - Simple Jumpers
+      :alt: Stacked Mega and WiFi Shield - Simple Jumpers
       :scale: 50%
 
       Stacked Mega and Wifi Shield - Using the small, simple jumpers/plugs that came with the shield. |BR| Note: the White and Black wires will be loose are this point
@@ -172,7 +172,7 @@ Make sure the Installer has been closed before continuing.
       * Type ``cmd`` and press the :guilabel:`Enter` key
       * Go to the folder you downloaded the ``ESP8266_1MB_AT1_7.bin`` file to (normally 'Downloads') by entering:
          
-         ``c:`` :guilabel:`Enter` |br|
+         ``c:`` :guilabel:`Enter` |BR|
          ``cd \user\<username>\downloads`` :guilabel:`Enter` |br| (Replace ``<username>`` with your username on the PC) 
 
    For Apple macOS
@@ -195,8 +195,8 @@ Make sure the Installer has been closed before continuing.
 
    ``ESPTOOL --baud 38400 --port PORTNAME write_flash --erase-all --flash_freq 40m --flash_mode dout --flash_size 1MB 0x0 ESP8266_1MB_AT1_7.bin``
 
-   For Example for Windows PCs : (if the Arduino is connected on COM3) |br|
-   ``C:\Users\<userName>\AppData\Local\Arduino15\packages\esp32\tools\esptool_py\4.5.1\esptool --baud 38400 --port COM3 write_flash --erase-all --flash_freq 40m --flash_mode dout --flash_size 1MB 0x0 ESP8266_1MB_AT1_7.bin`` |br|
+   For Example for Windows PCs : (if the Arduino is connected on COM3) |BR|
+   ``C:\Users\<userName>\AppData\Local\Arduino15\packages\esp32\tools\esptool_py\4.5.1\esptool --baud 38400 --port COM3 write_flash --erase-all --flash_freq 40m --flash_mode dout --flash_size 1MB 0x0 ESP8266_1MB_AT1_7.bin`` |BR|
    Note: that ``<username>`` needs to be replaced with 'your' user name on the PC.
 
    If the program is python (iOS or Linux) you need to prepend python3 like this: (If the Arduino is connect on /dev/ttyUSB0) |BR|
@@ -204,7 +204,7 @@ Make sure the Installer has been closed before continuing.
 
 5.3 Locate the Reset and GPIO0 pads on the ESP8266.
 
-   The ``GPIO0`` pad is the fourth pad from the bottom on the right, next to the "P" in "ESP-12F".  |br|
+   The ``GPIO0`` pad is the fourth pad from the bottom on the right, next to the "P" in "ESP-12F".  |BR|
    The ``Reset`` pad is the top pad on the left, closest to the resister labelled "R6". 
 
 5.4 Press :guilabel:`enter` on the above command line. 
@@ -268,7 +268,7 @@ Step 7. Prepare your EX-CommandStation
 
       Install the jumper wires
 
-7.6 If you have not already done so, run the |EX-I| and configure your |EX-CS| to use the WiFi shield. |br| Note: this is not necessary if it was done before you started flashing the WiFi firmware.  i.e. Flashing the firmware *does not* upset the software you loaded on the Arduino.
+7.6 If you have not already done so, run the |EX-I| and configure your |EX-CS| to use the WiFi shield. |BR| Note: this is not necessary if it was done before you started flashing the WiFi firmware.  i.e. Flashing the firmware *does not* upset the software you loaded on the Arduino.
 
 ----
 

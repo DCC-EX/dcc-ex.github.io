@@ -7,7 +7,7 @@
 Beta microcontrollers - STM32 Nucleo, ESP32, and SAMD
 *****************************************************
 
-|tinkerer| |engineer| |githublink-ex-commandstation-button2|
+|tinkerer| |engineer| |support-button| |githublink-ex-commandstation-button2|
 
 |NEW-IN-V5|
 
@@ -54,20 +54,24 @@ ALL 3v3 microcontrollers require analog inputs to be restricted to no more than 
 STMicroelectronics STM32 NUCLEO series
 ======================================
 
+.. note:: 
+
+  Only NUCLEO-F411RE and NUCLEO-F446RE boards are currently supported by the DCC-EX installer. If you're shopping for a NUCLEO board and want a simple installation experience you need to choose one of those two boards.
+
 STMicroelectronics has a range of ARM based microcontrollers that are generally available, sold from reputable global resellers such as Digi-Key and Mouser, and have exceptional build quality for their price (often lower than clone Arduino Mega models, and presently lower than all genuine Arduino Mega prices.)
 
 Further to this, the NUCLEO series of development boards also provide Arduino Uno compatible header sockets, meaning existing motor (and other) shields can just plug straight in, providing they are 3v3 compatible (see note above).
 
 All of the NUCLEO series being considered as a future |DCC-EX| platform have a great deal more RAM (128KB to 256KB vs 8KB for a Mega), double or more FLASH (512KB to 2MB) for program storage, and much faster CPU speed (100 to 180Mhz vs 16Mhz) than the current AVR-based UNO and Mega.
 
-With those attributes comes the potential to support much larger EX-RAIL scripts, more Withrottle connections, and many new features.
+With those attributes comes the potential to support much larger EX-RAIL scripts, more WiThrottle connections, and many new features.
 
 NUCLEO-F411RE and NUCLEO-F446RE
 -------------------------------
 
 The majority of the current development work with the Nucleo series has been focused on the NUCLEO-F411RE as it most closely resembles the ubiquitous Arduino Uno form factor, including having Uno compatible header sockets in addition to Morpho pins for a much larger I/O capability than an Uno.
 
-The F411RE has 50 I/O pins compared with the Uno's 20, and only 20 less than the Arduino Mega despite its diminuitive size. For most use cases it is therefore a suitable substitute for a Mega.
+The F411RE has 50 I/O pins compared with the Uno's 20, and only 20 less than the Arduino Mega despite its diminutive size. For most use cases it is therefore a suitable substitute for a Mega.
 
 There are larger NUCLEO footprints available (see below), which have many more pins than an Arduino Mega.
 
@@ -160,7 +164,7 @@ Clicking the "Device Connect" button will attempt to connect to your NUCLEO devi
   :alt: Drivers installed
   :scale: 50%
 
-Providing your NUCLEO device has been detected and is running an older version of the firmware, click "Yex >>>>" to proceed with the upgrade.
+Providing your NUCLEO device has been detected and is running an older version of the firmware, click "Yes >>>>" to proceed with the upgrade.
 
 .. image:: /_static/images/nucleo/firmware3.png
   :alt: Drivers installed
@@ -202,7 +206,7 @@ Once this has been performed, the NUCLEO devices should be available to be selec
 Adding NUCLEO support to VS Code/PlatformIO
 -------------------------------------------
 
-In order to compile for the STM32 NUCLEO platforms you need do nothing when using Microsoft VS Code and PlatformIO. PlatformIO will automatically download the required tool chains and frameworks for platform support based on the entries in platformio.ini inclued in the |EX-CS| source tree.
+In order to compile for the STM32 NUCLEO platforms you need do nothing when using Microsoft VS Code and PlatformIO. PlatformIO will automatically download the required tool chains and frameworks for platform support based on the entries in platformio.ini included in the |EX-CS| source tree.
 
 Just select "Nucleo-F411RE" or "Nucleo-F446RE" as the build target, and hit build. Be sure to do this after installing the drivers (for Windows) and upgrading the debugger firmware per the instructions above.
 
@@ -279,7 +283,7 @@ NB: The default serial port used for console communications for the F411RE and F
 Espressif ESP32 series
 ======================
 
-Espressif have for some years now made impressive WiFi and Bluetooth capable microcontroller modules. DCC-EX has made use of their original ESP8266 offering as the means to provide WiFi capablility to the EX-CS.
+Espressif have for some years now made impressive WiFi and Bluetooth capable microcontroller modules. DCC-EX has made use of their original ESP8266 offering as the means to provide WiFi capability to the EX-CS.
 
 Espressif's newer ESP32 range has either WiFi alone or WiFi and Bluetooth capability built in. Espressif's product naming is not the easiest to follow, but DCC-EX has been ported to the original ESP32-WROOM-32 module, which has the following capabilities:
 
@@ -445,7 +449,7 @@ So far, the Arduino Zero, SparkFun SAMD21 Dev Breakout, Sparkfun RedBoard Turbo,
   :scale: 25%
 
 .. note::
-  Please note that the barrel jack on the Sparkfun SAMD21 Dev Breakout is not fitted by the factory and the board itself **CANNOT handle more than 6VDC**. We strongly suggest you triple-check voltages before using this connector. It may give less scope for error to stick to powering the board via the Micro-USB connector for power. |br| |br| Note also that the |DCC-EX| EX-MotorShield8874's onboard regulator is by default set **too high** for the SAMD21 Dev Breakout at 7.2VDC. Adjustments to resistor R206 will be needed to lower the output to a safe 6V instead.
+  Please note that the barrel jack on the Sparkfun SAMD21 Dev Breakout is not fitted by the factory and the board itself **CANNOT handle more than 6VDC**. We strongly suggest you triple-check voltages before using this connector. It may give less scope for error to stick to powering the board via the Micro-USB connector for power. |BR| |BR| Note also that the |DCC-EX| EX-MotorShield8874's onboard regulator is by default set **too high** for the SAMD21 Dev Breakout at 7.2VDC. Adjustments to resistor R206 will be needed to lower the output to a safe 6V instead.
 
 Dropped character on USB CDC fix
 ---------------------------------
@@ -478,7 +482,7 @@ And replace it with:
   // optional timeout code here
   };
 
-For boards such as the Sparkun SAMD21 Dev Breakout or Redboard Turbo, you will need to look in the Sparkfun directories for the appropriate USBCore.cpp file to alter, for example:
+For boards such as the Sparfun SAMD21 Dev Breakout or Redboard Turbo, you will need to look in the Sparkfun directories for the appropriate USBCore.cpp file to alter, for example:
 
 - For PlatformIO this is: .platformio/packages/framework-arduino-samd/cores/arduino/USB/USBCore.cpp
 - For Arduino IDE this is: Arduino15/packages/SparkFun/hardware/samd/1.8.3/cores/arduino/USBCore.cpp

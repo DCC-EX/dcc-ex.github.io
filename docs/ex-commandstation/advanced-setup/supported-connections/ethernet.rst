@@ -7,7 +7,7 @@
 Ethernet Connection
 *******************
 
-|tinkerer|
+|tinkerer| |engineer| |support-button|
 
 Connection type: Ethernet
 =========================

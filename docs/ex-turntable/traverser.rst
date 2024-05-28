@@ -7,7 +7,7 @@
 Traversers and Limited Rotation Turntables
 *******************************************
 
-|tinkerer| |githublink-ex-turntable-button2|
+|tinkerer| |engineer| |support-button| |githublink-ex-turntable-button2|
 
 .. sidebar:: 
 
@@ -168,7 +168,7 @@ If you need to make any other adjustments to cater for using different stepper d
 
 .. tip:: 
 
-  If you are using a mechanism that results in anything other than a 1:1 gear ratio (eg. using a lead screw), you may need to consider updating the `SANITY_STEPS` setting in "config.h".
+  If you are using a mechanism that results in anything other than a 1:1 gear ratio (e.g. using a lead screw), you may need to consider updating the `SANITY_STEPS` setting in "config.h".
 
   This setting defaults to 10000 steps and is used to prevent a stepper turning indefinitely when attempting to find HOME or LIMIT. If the gear ratio results in a step count greater than 10000, the calibration sequence will fail to complete, and updating this setting to a sufficently high step count will solve that issue.
 

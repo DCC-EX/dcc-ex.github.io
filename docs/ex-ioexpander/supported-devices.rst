@@ -7,7 +7,7 @@
 Supported Devices
 *****************
 
-|tinkerer| |githublink-ex-ioexpander-button2|
+|tinkerer| |engineer| |support-button| |githublink-ex-ioexpander-button2|
 
 .. sidebar:: 
   
@@ -445,7 +445,7 @@ Adding new devices
 
 .. warning:: 
 
-  When considering adding new devices to |EX-IO|, be sure to take into account whether they are 5V or 3.3V devices, and whether their I/O and |I2C| pins are 5V tolerant if they are 3.3V devices. New generation microcontrollers tend to be 3.3V, and some have 5V tolerant I/O pins (eg. STM32 Nucleo), but some are not 5V tolerant (eg. SAMD).
+  When considering adding new devices to |EX-IO|, be sure to take into account whether they are 5V or 3.3V devices, and whether their I/O and |I2C| pins are 5V tolerant if they are 3.3V devices. New generation microcontrollers tend to be 3.3V, and some have 5V tolerant I/O pins (e.g. STM32 Nucleo), but some are not 5V tolerant (e.g. SAMD).
 
   To connect 3.3V devices to a 5V |EX-CS|, they need to either be 5V tolerant, or you will need to use a level shifter to avoid letting the magic smoke out.
 
@@ -453,7 +453,7 @@ Adding new devices to the |EX-IO| software only requires additional information 
 
 In order to successfully add an additional device, you need to know the C++ preprocessor macro definitions for the architecture or platform, and for the specific variant or board itself. In addition, you need to define the pins available for use on the |EX-IO| device, and define the capabilities available for each pin.
 
-For example, the AVR series (Uno, Mega, Nano) have the architure or platform macro defined as "ARDUINO_ARCH_AVR", with the Nano having the variant or board specific macro "ARDUINO_AVR_NANO", and there is a pin map defined that maps to this macro definition.
+For example, the AVR series (Uno, Mega, Nano) have the architecture or platform macro defined as "ARDUINO_ARCH_AVR", with the Nano having the variant or board specific macro "ARDUINO_AVR_NANO", and there is a pin map defined that maps to this macro definition.
 
 Files to be created/modified
 ----------------------------
@@ -510,7 +510,7 @@ A pin map is used to map the Vpins from the device driver in the |EX-CS| to the 
 
 Each unique device needs a file created containing the "BOARD_TYPE" macro definition and the device specific pin map.
 
-Files should be named according to the platform and CPU type eg. "arduino_avr_nano.h" or "arduino_nucleo_f412zg.h".
+Files should be named according to the platform and CPU type e.g. "arduino_avr_nano.h" or "arduino_nucleo_f412zg.h".
 
 As per :ref:`ex-ioexpander/overview:pin/vpin allocation`, Vpins are allocated to physical pins in ascending order.
 

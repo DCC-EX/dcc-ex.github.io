@@ -3,11 +3,11 @@
 .. include:: /include/include-description.rst
 |EX-CS-LOGO|
 
-|conductor| |tinkerer| |engineer|
-
 **************************
 Semaphore or servo signals
 **************************
+
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar:: 
 
@@ -59,7 +59,7 @@ You will need to connect your servos to a PCA9685 servo module, with the module 
    :alt: PCA9685 Servo Module
    :scale: 30%
 
-While the focus of this section is on the electronic connections and software control of the signals, the following diagram outlines an example of connecting the servo to the sempahore signal arm using flexible piano wire.
+While the focus of this section is on the electronic connections and software control of the signals, the following diagram outlines an example of connecting the servo to the semaphore signal arm using flexible piano wire.
 
 .. image:: /_static/images/i2c/SemaphoreSignal.jpg
    :alt: Servo mount to operate a Semaphore Signal

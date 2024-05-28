@@ -7,7 +7,7 @@
 I2C Displays
 ************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

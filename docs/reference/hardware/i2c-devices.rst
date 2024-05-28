@@ -7,7 +7,7 @@
 I2C Devices
 ***********
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

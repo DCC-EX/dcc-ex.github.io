@@ -7,7 +7,7 @@
 Overview
 *********
 
-|tinkerer| |githublink-ex-turntable-button2|
+|tinkerer| |engineer| |support-button| |githublink-ex-turntable-button2|
 
 .. sidebar:: 
   
@@ -32,8 +32,6 @@ To make full use of |EX-TT|, you will need a basic understanding of :doc:`EX-RAI
 
   For a current overview of all outstanding feature requests or enhancements and known bugs to be fixed, visit the |EX-TT| view of the `DCC-EX GitHub project <https://github.com/orgs/DCC-EX/projects/7/views/1>`_.
   
-  For those who wish to help us with Beta testing, you're encouraged to follow the testing processes outlined in the `Regression Testing process <https://github.com/DCC-EX/Support-Planning/wiki/EX-Turntable_Tests>`_, and then submit your test results using the `Beta Test Results <https://github.com/DCC-EX/Turntable-EX/issues/new/choose>`_ issue template.
-
 .. sidebar:: Supported stepper drivers and motors
 
   .. image:: /_static/images/level_icons/tinkerer.png
@@ -57,13 +55,13 @@ The |EX-TT| integration includes:
 * Out-of-the-box support for several common stepper drivers and motors
 * Traverser mode for horizontal/vertical traversers, and turntables that cannot rotate a full 360 degrees
 * Automatic or manual DCC signal phase switching to align bridge track phase with layout phase (if your turntable doesn't do this already)
-* An LED and accessory output to control turntable specific automations (eg. flashing warning light)
+* An LED and accessory output to control turntable specific automations (e.g. flashing warning light)
 
 .. note:: 
 
   Credit where credit is due!
   
-  **AccelStepper.h credit:** This project would not be effective without the excellent work by Mike McCauley on the AccelStepper.h library that enables us to have somewhat prototypical acceleration and deceleration of the turntable. A slightly modified version of this library is included with the |EX-TT| software (sans example sketches), and more details can be found on the official `AccelStepper <http://www.airspayce.com/mikem/arduino/AccelStepper/>`_ web page. Modification comments are included within the library.
+  **AccelStepper.h credit:** This project would not be effective without the excellent work by Mike McCauley on the AccelStepper.h library that enables us to have somewhat prototypical acceleration and deceleration of the turntable. This library is included with the |EX-TT| software (sans example sketches), and more details can be found on the official `AccelStepper <http://www.airspayce.com/mikem/arduino/AccelStepper/>`_ web page. Note as of version 0.7.0 there is no longer a need for modifications to the library.
 
   **NmraDcc.h credit:** Also, while not directly used in this software, Alex Shephard's "DCCInterface_TurntableControl" was the inspiration for the initial turntable logic for another DCC driven turntable that translated into the beginnings of |EX-TT|. You can see this code as part of the `NmraDcc Arduino library <https://github.com/mrrwa/NmraDcc>`_.
 
@@ -107,15 +105,15 @@ Refer to the :ref:`ex-turntable/test-and-tune:testing, tuning, and control` page
 Considerations when using geared steppers, turntables, and/or microsteps
 ------------------------------------------------------------------------
 
-In the current implementation of |EX-TT|, the maximum number of steps per rotation it can address is 32767.
+Due to the HAL within |EX-CS|, the maximum number of steps per rotation the |EX-TT| device driver can address is 32767.
 
-If your physical turntable involves gearing, for example a small spur gear on the stepper driving a large gear connected to the turntable, you will need to calculate the resulting gear ratio, and multiply that by the number of steps per rotation of your stepper motor. This would give a resultant steps per rotation that needs to be no more than 32767 steps.
+If your physical turntable involves gearing, for example a small spur gear on the stepper driving a large gear connected to the turntable or you have a stepper with an inbuilt gearbox, you will need to know the gear ratio, and multiply that by the number of steps per rotation of your stepper motor. This would give a resultant step per rotation count that needs to be no more than 32767 steps.
 
 .. code-block:: 
 
   # large gear teeth / # small gear teeth * stepper steps per rotation
 
-If you have a large gear on the base of a turntable with 200 teeth which is driven by a 20 tooth spur gear, that gives a gear ratio of 10:1 (200 / 20). If you then use the 28BYJ-48 stepper in half step mode with 4096 steps per revolution, this would result in 40960 steps per revolution with this gearing, meaning |EX-TT| will not be able to successfully address a full rotation.
+For example, if you have a large gear on the base of a turntable with 200 teeth which is driven by a 20 tooth spur gear on the stepper motor, that gives a gear ratio of 10:1 (200 / 20). If you then use the 28BYJ-48 stepper in half step mode with 4096 steps per revolution, this would result in 40960 steps per revolution with this gearing, meaning |EX-TT| will not be able to successfully address a full rotation.
 
 .. warning:: 
 
@@ -123,19 +121,17 @@ If you have a large gear on the base of a turntable with 200 teeth which is driv
 
 In this scenario, running the 28BYJ-48 in full step mode (2048 steps) would allow this to work, as a full rotation is 20480 steps.
 
-When using stepper drives such as the A4988 or DRV8825, these are able to be configured using microsteps, which again impacts the number of steps per revolution of the stepper.
+When using stepper drivers such as the A4988, DRV8825, or TMC2208, these are able to be configured using microsteps, which again impacts the number of steps per revolution of the stepper.
 
 In the case of a DRV8825, the smallest microstep it can be configured for is 1/32, meaning a NEMA17 stepper with 200 steps per revolution in 1/32 microstep mode equates to 6400 steps per revolution.
 
 While this is well within the limit of the maximum 32767 steps in |EX-TT|, if you then use this in the same gear ratio calculated above, it will result in 64000 steps per revolution, which is well outside |EX-TT|'s limit.
 
-These same considerations apply when using steppers with built-in gearing.
+Introduced in |EX-TT| version 0.6.0, there is an option that allows for larger step counts than the maximum of 32767. This number is used as a multiplier for the number of steps sent from |EX-CS| and is set by defining ``#define STEPPER_GEARING_FACTOR x`` in your "config.h" file, where "x" is a number from 1 to 10.
 
-While |NOT-IN-PROD-VERSION|, another new option for |EX-TT| allows for larger step counts than the maximum of 32767 that |EX-CS| can support, by introducing a gear factor configuration option. This number is used as a multiplier for the number of steps sent from |EX-CS|.
+For example, if you had a step per revolution count of 60000 after calculating your gear ratio, you would set a gearing factor of 2, meaning all step counts configured in |EX-CS| are 30000 or less (60000 / 2), allowing for control of this configuration. Refer to :ref:`ex-turntable/configure:stepper_gearing_factor` for how to configure this option.
 
-For example, if you had a steps per revolution count of 60000 after calculating your gear ratio, you would set a gearing factor of 2, meaning all step counts configured in |EX-CS| are 30000 or less (60000 / 2), allowing for control of this configuration. Refer to :ref:`ex-turntable/configure:stepper_gearing_factor` for how to configure this option.
-
-You need to be running |EX-TT| v0.6.0 or later to use this feature.
+If you have a need to set a gearing factor higher than 1, you will likely also need to adjust the :ref:`ex-turntable/configure:sanity_steps` option to allow the calibration process to still function, as by default it will stop at 10000 steps.
 
 Important! Phase (or polarity) switching
 ----------------------------------------

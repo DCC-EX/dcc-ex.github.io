@@ -10,7 +10,7 @@
 Troubleshooting
 ***************
 
-|conductor| 
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -55,15 +55,15 @@ Cannot connect to the EX-CommandStation over WiFi
   * - Symptoms
     - Common Causes
       
-  * - CommandStation does not appear in the available WiThrottle server list in |Engine Driver| or |wiThrottle| apps.
+  * - CommandStation does not appear in the available WiThrottle server list in |Engine Driver| or |WiThrottle| apps.
       
       Manually entering the expected IP address and port does not successfully connect
       
-    - (a) CommandStation is configured for Access Point mode, but |Engine Driver| or |wiThrottle| device is connected to a different WiFi network - Connect the device to the CommandStation's WiFi network
-      (b) CommandStation is configured for Station Mode and connects to the WiFi network, but |Engine Driver| or |wiThrottle| device is connected to a different WiFi network - Connect the device to the correct WiFi network
-      (c) WifI shield is connected incorrectly to the CommandStation - The Rx pin of the WiFi shield must connect to the Tx pin on the CommandStation, and Tx to the Rx pin
+    - (a) CommandStation is configured for Access Point mode, but |Engine Driver| or |WiThrottle| device is connected to a different WiFi network - Connect the device to the CommandStation's WiFi network
+      (b) CommandStation is configured for Station Mode and connects to the WiFi network, but |Engine Driver| or |WiThrottle| device is connected to a different WiFi network - Connect the device to the correct WiFi network
+      (c) WiFi shield is connected incorrectly to the CommandStation - The Rx pin of the WiFi shield must connect to the Tx pin on the CommandStation, and Tx to the Rx pin
       (d) ESP8266 has the wrong AT version.  See the :doc:`/support/wifi-at-version` page for details on how to check and correct if needed.
-      (e) The Wifi network name appears as "DCCEX-SAYS-BROKEN-FIRMWARE" or "UPDATE_ESP_FIRMWARE". See the :doc:`/support/wifi-at-version` page for details on how to check and correct if needed.
+      (e) The WiFi network name appears as "DCCEX-SAYS-BROKEN-FIRMWARE" or "UPDATE_ESP_FIRMWARE". See the :doc:`/support/wifi-at-version` page for details on how to check and correct if needed.
 
 Diagnostics
 ===========

@@ -54,10 +54,15 @@ Add a Roster
 
 .. code-block:: cpp
    
+   // Sample Engines with DCC decoders have from a few to many F-Keys
    ROSTER (  3,"Eng 3", "F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//") // Address 3, Eng 3, Function keys F0-F10
    ROSTER(1224,"PE 1224","") // Motor Only Decoder, But use Engine Driver 'Preferences >In Phone Loco 'Sound'
    ROSTER(1225,"PE 1225","Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute")
    ROSTER(4468,"LNER 4468","//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8")
+
+   // Version 5.0+ TrackManager, Sample Analog DC Engines with No decoder, either no F-keys, or just One identifing it as DC only 
+   ROSTER (  1,"Eng 1", "")   // Address 1, Eng 1, Function keys None
+   ROSTER ( 25,"PE 25", "DC") // Address 25, PE 25, Function keys just One 'DC' Identifing it as Analog DC Cab 
 
 
 Defining Servo Turnouts

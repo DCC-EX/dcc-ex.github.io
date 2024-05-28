@@ -50,16 +50,16 @@ Add a line that looks like:
 
 Where:
 
-* 999 - is the DCC address of your loco
-* My Loco Name - is anything you want to see as the name of this loco in the throttle apps
-* F0 F1 F3 ... F27. - are the names that you want to see for the functions specific to this loco
-* \*F2 - note that if the function is 'momentary' rather than 'latching' (On/Off) then start the function label with a asterisk (\*).  The most common example of this is the Horn/Whistle which is commonly on F2.
+* **999** - is the DCC address of your loco
+* **Loco Name** - is anything you want to see as the name of this loco in the throttle apps
+* **F0 F1 F3 ... F27**. - are the names that you want to see for the functions specific to this loco
+* **\*F2** - note that if the function is 'momentary' rather than 'latching' (On/Off) then start the function label with a asterisk (\*).  The most common example of this is the Horn/Whistle which is commonly on F2.
 
 Some more realistic examples might look like:
 
 .. code-block:: 
    
-   ROSTER (  3,"Eng 3", "F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//") // Address 3, Eng 3, Function keys F0-F10
+   ROSTER(3,"Eng 3","F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//") // Address = 3, Loco Name = Eng 3, Function keys F0-F10
    ROSTER(1224,"PE 1224","") // Motor Only Decoder, But use Engine Driver 'Preferences >In Phone Loco 'Sound'
    ROSTER(1225,"PE 1225","Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute")
    ROSTER(4468,"LNER 4468","//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8")

@@ -1,6 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
 .. include:: /include/include-throttles.rst
+
 **********************************************
 TCS UWT-50 & UWT-100 WiFi Throttles (Physical)
 **********************************************
@@ -8,7 +9,7 @@ TCS UWT-50 & UWT-100 WiFi Throttles (Physical)
 |conductor| |tinkerer| |engineer|
 
 Train Control Systems (TCS) makes a nice line of physical tactile hardware based controllers. 
-Since they support the |WiThrottle protocol|, they work seamlessly with the |EX-CS|. 
+Since they support the |WiThrottle protocol|, they work seemlessly with the |EX-CS|. 
 Recently preliminary testing on both the UWT-50 and the UWT-100 WiFi Throttles are very encouraging.
 
 Some of the major benefits of |EX-CS| for TCS UWT-Throttle users are;
@@ -20,7 +21,6 @@ Some of the major benefits of |EX-CS| for TCS UWT-Throttle users are;
 * JMRI Routes can be created to point to existing EXRAIL macros residing on DCC-EX  and be run through the WiThrottle Server connection
 * EXRAIL scripts are simpler more powerful & easier to write than JMRI Jython/Python.py scripts.
 * Both DCC & DC Layouts can use TCS UWT-WiFi Throttles and other smartphone WiFi Throttle Apps together with DCC-EX and our new TrackManager.
-
 
 .. figure:: /_static/images/throttles/uwt50_a.png
    :alt: UTW-50 Throttle
@@ -66,40 +66,39 @@ Examples of UWT-100 Throttle and DCC-EX |EX-CS| in action;
 
 DCC-EX Commands Cmd Power On|Off, and Join Programming Track < == > Main line, and DCC-EX Turnout Control
 
-.. figure:: /_static/images/throttles/uwt100_join.jpg
-   :alt: UTW-100 Join
-   :scale: 100%
-
-   UTW-100 Join
-
-.. figure:: /_static/images/throttles/uwt100_turnout.jpg
-   :alt: UTW-100 Turnouts/Points
+.. image:: /_static/images/throttles/uwt100_join.jpg
+   :alt: UTW-100 Throttle
    :scale: 70%
+   :align: left
 
-   UTW-100 Turnouts/Points
 
-.. figure:: /_static/images/throttles/uwt100_roundhouse.jpg
-   :alt: UTW-100 Roundhouse
+.. image:: /_static/images/throttles/uwt100_turnout.jpg
+   :alt: UTW-100 Throttle
    :scale: 70%
+   :align: center
 
-   UTW-100 Roundhouse
+
+.. image:: /_static/images/throttles/uwt100_roundhouse.jpg
+   :alt: UTW-100 Throttle
+   :scale: 70%
+   :align: right
 
 
 DCC-EX Cmd to Pause & Resume EXRAIL macro scripts, and DCC-EX Cmd to Reboot Command Station
 
-.. figure:: /_static/images/throttles/uwt100_resume.jpg
-   :alt: UTW-100 Resume
+.... image:: /_static/images/throttles/TCS_UWT-100_&_DCC-EX_Cmd_Resume_EXRAIL_04.jpg
+   :alt: UTW-100 Throttle
    :scale: 70%
+   :align: left
 
-   UTW-100 Resume
 
-.. figure:: /_static/images/throttles/uwt100_reboot.jpg
-   :alt: UTW-100 Reboot
+.. image:: /_static/images/throttles/uwt100_reboot.jpg
+   :alt: UTW-100 Throttle
    :scale: 70%
+   :align: center
   
-   UTW-100 Reboot
   
 Visit the TCS website here:
- https://tcsdcc.com/uwt-50 
 
- https://www.tcsdcc.com/uwt-100 
+* https://tcsdcc.com/uwt-50 
+* https://www.tcsdcc.com/uwt-100 

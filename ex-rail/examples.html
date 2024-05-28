@@ -651,10 +651,15 @@
 </section>
 <section id="add-a-roster">
 <h2><a class="toc-backref" href="#id3" role="doc-backlink">Add a Roster</a><a class="headerlink" href="#add-a-roster" title="Permalink to this heading"></a></h2>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="mi">3</span><span class="p">,</span><span class="s">&quot;Eng 3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Address 3, Eng 3, Function keys F0-F10</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Sample Engines with DCC decoders have from a few to many F-Keys</span>
+<span class="n">ROSTER</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="mi">3</span><span class="p">,</span><span class="s">&quot;Eng 3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Address 3, Eng 3, Function keys F0-F10</span>
 <span class="n">ROSTER</span><span class="p">(</span><span class="mi">1224</span><span class="p">,</span><span class="s">&quot;PE 1224&quot;</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Motor Only Decoder, But use Engine Driver &#39;Preferences &gt;In Phone Loco &#39;Sound&#39;</span>
 <span class="n">ROSTER</span><span class="p">(</span><span class="mi">1225</span><span class="p">,</span><span class="s">&quot;PE 1225&quot;</span><span class="p">,</span><span class="s">&quot;Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute&quot;</span><span class="p">)</span>
 <span class="n">ROSTER</span><span class="p">(</span><span class="mi">4468</span><span class="p">,</span><span class="s">&quot;LNER 4468&quot;</span><span class="p">,</span><span class="s">&quot;//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8&quot;</span><span class="p">)</span>
+
+<span class="c1">// Version 5.0+ TrackManager, Sample Analog DC Engines with No decoder, either no F-keys, or just One identifing it as DC only</span>
+<span class="n">ROSTER</span><span class="w"> </span><span class="p">(</span><span class="w">  </span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Eng 1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w">   </span><span class="c1">// Address 1, Eng 1, Function keys None</span>
+<span class="n">ROSTER</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="s">&quot;PE 25&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DC&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Address 25, PE 25, Function keys just One &#39;DC&#39; Identifing it as Analog DC Cab</span>
 </pre></div>
 </div>
 </section>
@@ -989,7 +994,7 @@ number. So now our route looks like this:</p>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fc5457c38b0>
+    <jinja2.runtime.BlockReference object at 0x7fb2b71a2e00>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

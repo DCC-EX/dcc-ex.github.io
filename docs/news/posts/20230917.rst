@@ -1,0 +1,46 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+.. include:: /include/include-news.rst
+
+:blogpost: true
+:date: 17 September 2023
+:author: peteGSX
+:category: News
+:tags: ex-installer
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+EX-Installer Updated
+====================
+
+Since our original announcement back on the 2nd of July 2023, |EX-I| has continued to be improved with both enhancements and bug fixes. Originally announced at version 0.0.12, this new announcement has |EX-I| at version 0.0.16, with quite a difference between these two releases!
+
+New features:
+-------------
+
+- Added an information menu with version and device information and links to our website and instructions
+- Added support to install |EX-IO| and |EX-TT|
+- Added command history to the Device Monitor
+- Added popup help for contextual help when hovering your mouse over various options
+- Various enhancements to contextual highlighting in Device Monitor
+- Various enhancements to configuring |EX-CS| including a refreshed configuration interface and support for newer features
+- Added a tools menu in order to set screen scaling for smaller or larger screen sizes, and to help those of us who don't see as well as we used to
+- Added some device specific limitations and recommendations, such as disabling Track Manager on Uno/Nano
+
+Bug fixes:
+----------
+
+- Fixed an issue where Track Manager options were displayed for incorrect versions
+- Fixed an issue where Device Monitor was forced on top of all windows in Linux
+- Fixed an issue where closing the app with Device Monitor open could leave the Arduino CLI running in the background
+- Fixed an issue where Track Manager and current override options were disabled for |EX-CS| 5.0.0 or later
+- Fixed an issue in Device Monitor where the output was blank and/or flashing on older Linux versions
+- Fixed an issue for incorrect screen scaling on Linux
+- Fixed an issue where the Ethernet library was not installed when enabling Ethernet support for |EX-CS| (you must click "Refresh Arduino CLI" to have this installed)
+- Fixed an issue on Fedora Linux where SSL certificates were not available (a warning will still be seen for fonts which can be disregarded)
+
+This is by no means an exhaustive list of the updates, so we highly recommmend downloading this latest version of |EX-I|.

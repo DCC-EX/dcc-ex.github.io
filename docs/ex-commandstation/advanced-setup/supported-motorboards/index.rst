@@ -1,13 +1,13 @@
 :orphan:
 
-.. include:: /include/include-ex-cs.rst
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+.. include:: /include/include-ex-cs.rst
 ***********************
 Supported Motor Drivers
 ***********************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 These pages are notes and guides for how to connect and configure each specific motor controller supported by |EX-CS|. Click on the motor controller you want to use. Be sure to read :doc:`Motor Board Config </reference/hardware/motorboards/motor-board-config>` as well. For a listing of the different types of motor boards and whether they are supported or not, see the :doc:`Motor Boards </reference/hardware/motor-boards>` page.
 

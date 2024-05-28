@@ -1,13 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
-
+.. include:: /include/include-ex-tb.rst
 |EX-TB-LOGO|
 
 ************
 EX-Toolbox
 ************
 
-|tinkerer|
+|tinkerer| |engineer| |support-button|
 
 Welcome to the home of |EX-TB|, an Android app to help setup and configure your |EX-CS|. 
 
@@ -22,8 +22,8 @@ Welcome to the home of |EX-TB|, an Android app to help setup and configure your 
 * CV Programming in the main track (Operation Mode)
 * Servo motor testing and adjustment
 * Sensor testing 
-* Current Meter (Only available when connected to EX-CommandStation version 4.2.20 and above.)
-* Track Manager (Only available when connected to EX-CommandStation version 4.2.7 and above.)
+* Current Meter (Only available when connected to EX-CommandStation version 5.0.0 and above.)
+* Track Manager (Only available when connected to EX-CommandStation version 5.0.0 and above.)
 
 
 .. toctree::
@@ -38,9 +38,9 @@ Welcome to the home of |EX-TB|, an Android app to help setup and configure your 
 Looking for some help with EX-Toolbox?
 ======================================
 
-To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking this button:
+To find out how to request assistance click the first button below. To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking the second button:
 
-|githublink-ex-fastclock-button|
+|support-button-large| |githublink-ex-fastclock-button|
 
 .. tip:: 
 

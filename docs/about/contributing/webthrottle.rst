@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-description.rst
 |EX-CONTRIBUTING-LOGO|
 
 *******************************
@@ -72,7 +73,7 @@ Code standards
 
 For EX-WebThrottle2, we follow the `Google Style Guides <https://google.github.io/styleguide/>`__, specifically the `HTML/CSS <https://google.github.io/styleguide/htmlcssguide.html>`__ and `TypeScript <https://google.github.io/styleguide/tsguide.html>`__ style guides. 
 This means we use a indent of two spaces and single quotes for strings. 
-Also, although semicolons are optional in Javascript, we have configured the linter to enforce semicolons. 
+Also, although semicolons are optional in JavaScript, we have configured the linter to enforce semicolons. 
 If you have installed the recommended extensions, VSCode should highlight problems for you. 
 You can also find (and fix some) problems using the following command:
 
@@ -116,9 +117,9 @@ These prefixes are:
 - Feat: A finished feature
 - Chore: Code maintenance such as adding comments or removing dead code
 
-An example would be: |br|
-*WIP: Add a new button* |br|
-Or |br|
+An example would be: |BR|
+*WIP: Add a new button* |BR|
+Or |BR|
 *Fix: button now works (#52)*
 
 If you feel able to, please consider signing your commits (See this guide if you want to have a go: `Verified commits - GitHub <https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification>`__).

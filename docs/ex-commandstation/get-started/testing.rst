@@ -1,16 +1,16 @@
-.. include:: /include/include-ex-cs.rst
-.. meta::
-   :keywords: EX-CommandStation Command Station Testing
-
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-ex-cs.rst
+.. meta::
+   :keywords: Testing
+
 |EX-CS-LOGO|
 
 ***************
 Test Your Setup
 ***************
 
-|conductor|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -28,15 +28,17 @@ You need to test with a locomotive equipped with a DCC decoder (either a standar
 There are two simple options for testing your setup described below:
 
 * Using our |EX-WT| (recommended)
-* using the |Engine Driver| app installed on an Android device, |BR| or the |wiThrottle| app installed on an iOS device
+* using the |Engine Driver| app installed on an Android device, |BR| or the |WiThrottle| app installed on an iOS device
 
 Using EX-WebThrottle
 --------------------
 
-.. image:: /_static/images/throttles/webthrottle_setup.png
+.. figure:: /_static/images/throttles/webthrottle_setup.png
    :alt: EX-WebThrottle
    :align: center
    :scale: 40%
+
+   EX-WebThrottle setup
 
 .. sidebar:: 
 
@@ -48,7 +50,7 @@ Connect Everything:
 * Connect wires from the MAIN Terminals of the motor shield (output A) to your **MAIN track**
 * Plug in the power supply for the motor shield **only**
 * Reconnect the |EX-CS| to the computer
-* wait for about 30 seconds
+* Wait for about 30 seconds for the CS to run through its startup sequence
 
 .. NOTE:: 
    :class: note-float-right-narrow
@@ -59,7 +61,7 @@ Connect Everything:
    :alt: EX-WebThrottle
    :scale: 80%
 
-   EX-WebThrottle
+   EX-WebThrottle screen
 
 * Click this link and it will load a web page from our server that will run the web throttle on your PC
 
@@ -68,12 +70,12 @@ Connect Everything:
    `Run EX-WebThrottle Now <https://DCC-EX.github.io/WebThrottle-EX>`_
 
 * Click on the "Serial" dropdown button and select "Serial"
-* Click on the :guilabel:`Connect DCC++ EX` button 
+* Click on the :guilabel:`Connect EX-CS` button 
 * If the program finds a compatible device,
 
   * It will open a popup a window showing you a selection. |BR| It may show a line at the top such as "Arduino Mega 2560 (COM3)". (The COM port will vary)
   * Click on your board to select it
-  * Then click the :guilabel:`Connect DCC++ EX` button
+  * Then click the :guilabel:`Connect EX-CS` button
   
 * You should then be connected to the |EX-CS| and should see the response from the Command Station in the log textbox of the debug console at the bottom of the throttle window. |BR| Make sure your debug console is open. If it isn't, use the slider button in the lower left to open it. You can also open the DevTools window in your browser to see more developer logging
 * Once you are connected, you can:   
@@ -84,18 +86,21 @@ Connect Everything:
 * Now you are ready to run trains! |BR| |BR|
 * Place your loco on the **MAIN track**, a loco will NOT run on a programming track 
 * Click the :guilabel:`Power Slider` button to turn on power to your track
-* You should see lights on your Arduino Motor Shield and an indication that your loco has power
+* You should see lights on your Arduino Motor Shield or EX-MotorShield8874 and an indication that your loco has power
 * Next go to the ``Locomotive ID`` textbox 
 * Enter the DCC address of your loco
 * Then press the :guilabel:`Acquire` button
 * You should now have full control over your loco
 * The circular control or vertical slider (chosen by the throttle select slider) can be moved by clicking and holding down the mouse button and dragging, clicking at a spot where you want the throttle to move, or clicking the + and - buttons
 
+.. note:: 
+   If you did not see the LEDs light near the A and B outputs on the Motor Shield, try pushing down on the motor shield to make sure that the pins are properly seated into the Arduino. If that did not work, scroll down to the very bottom of this page and click on the "next" button for troubleshooting help.
+
 .. sidebar:: 
 
     |EX-WT| is also a Progressive Web App (PWA). That means you can install it on your computer and run it right from your start menu! If you go into the |EX-WT| settings panel (click the 3 line "hamburger menu" at the top left), you will find a "Settings" menu. Click on "Apps" and then select "Install as an App". You can now work offline and always find |EX-WT| with your other Apps!
 
-Click this link: :doc:`EX-WebThrottle </throttles/software/ex-webthrottle>` to run |EX-WT| hosted on our site, or visit `GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ to get the latest version to run on your computer.
+Click this link: :doc:`EX-WebThrottle </ex-webthrottle/index>` to run |EX-WT| hosted on our site, or visit `GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ to get the latest version to run on your computer.
 
 |force-break|
 
@@ -111,13 +116,16 @@ Connect Everything:
 
 * Disconnect the |EX-CS| from the computer (that you used to load the software)
 * Connect the wires from the 'MAIN' terminals of the motor shield (output A) to your MAIN track
-* Plug in the two power supplies (The one for the Arduino and the the one for the motor shield)
-* wait for about 30 seconds for the Arduino to run through the initial startup sequence
+* If you are using the DCC-EX EX-MotorShield8874, plug in your single power supply to the shield
+* If you are using the Arduino Motor Shield, plug in the two power supplies (The one for the Arduino and the one for the motor shield). Make sure to not plug the higher voltage power supply into the Arduino by mistake
+* Wait for about 30 seconds for the Arduino to run through the initial startup sequence
 
-.. image:: /_static/images/throttles/throttle_wifi_direct.png
+.. figure:: /_static/images/throttles/throttle_wifi_direct.png
    :alt:  WiFi Throttle Direct to CS
    :align: center
    :scale: 40%
+
+   WiFi Throttle Direct to Command Station
 
 Using Engine Driver (Android)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -180,7 +188,10 @@ You will need to install |Engine Driver| on your mobile device and then connect 
 
 See :doc:`Engine Driver Page </throttles/software/engine-driver>` for details on how to install and run |Engine Driver|.
 
-Using wiThrottle (Apple iOS)
+.. note:: 
+   If you did not see the LEDs near the A and B outputs light on the Motor Shield, try pushing down on the motor shield to make sure that the pins are properly seated into the Arduino. If that did not work, scroll down to the very bottom of this page and click on the "next" button for troubleshooting help.
+
+Using WiThrottle (Apple iOS)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: 
@@ -203,26 +214,26 @@ Using wiThrottle (Apple iOS)
   
     * Use your normal home SSID (Network name) and Password to connect to the network  
 
-* Start the |wiThrottle| App
-* |wiThrottle| will try to find the |wiThrottle Server| on the |EX-CS|
+* Start the |WiThrottle| App
+* |WiThrottle| will try to find the |WiThrottle Server| on the |EX-CS|
 * If you are using |Access Point Mode| 
 
-  * It should find the |wiThrottle Server| and automatically connect to it
+  * It should find the |WiThrottle Server| and automatically connect to it
 
 * If you are using |Station Mode| 
   
-  * It will not find the |wiThrottle Server| automatically
+  * It will not find the |WiThrottle Server| automatically
   * Enter:
 
     * The IP Address: 192.168.4.1
     * The Port: 2560
 
-  * |wiThrottle| should then connect 
+  * |WiThrottle| should then connect 
 
 .. warning:: 
    :class: warning-float-right
 
-   |wiThrottle Lite| (the free version) does not have the ``Track Power`` function. You will either need to purchase the full version, or you can :doc:`add a startup command </ex-commandstation/advanced-setup/startup-config>`. 
+   |WiThrottle Lite| (the free version) does not have the ``Track Power`` function. You will either need to purchase the full version, or you can :doc:`add a startup command </ex-commandstation/advanced-setup/startup-config>`. 
 
 * You should then see the 'Address Screen'
 * Turn the track power on by selecting the 'settings' tab and clicking on the ``Track Power``
@@ -237,7 +248,7 @@ Using wiThrottle (Apple iOS)
 * Select the 'Throttle' tab
 * You can now use the sliders to move your train on the MAIN track
 
-See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how to install and run |wiThrottle|.
+See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how to install and run |WiThrottle|.
 
 .. warning:: 
 
@@ -256,4 +267,4 @@ We suggest that you look at the :doc:`/big-picture/index` to get some additional
 
 You might also like to look at the other :doc:`Throttles (Controllers) </ex-commandstation/advanced-setup/controllers>` that are available.
 
-If you are still having difficulties click :guilabel:`Next`.
+If you are still having difficulties click :guilabel:`Next` below.

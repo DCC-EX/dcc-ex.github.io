@@ -1,17 +1,16 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l1.rst
+.. include:: /include/include-ex-i.rst
 .. meta::
    :keywords: EX-CommandStation Command Station EX-Installer
 
-.. include:: /include/include.rst
-.. include:: /include/include-l1.rst
 |EX-I-LOGO|
 
 ************
 EX-Installer
 ************
 
-|tinkerer| |engineer|
-
-This page describes all the feature and options of the |EX-I|.  If you identify as an a |conductor-text| and have installed only the recommended hardware we suggest that you look at the simplified instructions on the :doc:`/ex-commandstation/get-started/installer` page.
+|conductor| |tinkerer| |engineer| |support-button|
 
 ----
 
@@ -24,15 +23,16 @@ To make it as simple as possible we have created the |EX-I| app.
 
     installing
     testing
+    Managing config files <managing-config-files>
 
 ----
 
 Looking for some help with EX-Installer?
 ========================================
 
-To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking this button:
+To find out how to request assistance click the first button below. To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking the second button:
 
-|githublink-ex-installer-button|
+|support-button-large| |githublink-ex-installer-button|
 
 .. tip:: 
 

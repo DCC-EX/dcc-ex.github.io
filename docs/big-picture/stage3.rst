@@ -1,10 +1,14 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-ex-bp.rst
+
+|EX-BP-LOGO|
+
 ********************************************************
 Stage 3 - Turnouts/Points, Accessories, Sensors & Blocks
 ********************************************************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 What to expect to learn from stage 3
 ====================================
@@ -32,7 +36,7 @@ Throughout this exercise, we will be defining turnout/point objects, and for con
 
 This way, the various possible variations of each type of object will be defined with the same ID, meaning the same |EX-R| sequences will apply, no matter how the objects are defined.
 
-For further information on IDs used in |EX-R|, refer to the :ref:`ex-rail/ex-rail-reference:notes` section of the |EX-R| reference page.
+For further information on IDs used in |EX-R|, refer to the :ref:`ex-rail/ex-rail-command-reference:handy information` section of the |EX-R| reference page.
 
 DCC addresses
 -------------
@@ -173,7 +177,7 @@ Adding a Sensor
 
 IR sensors typically require three connections: 5V (or VCC), Ground, and output (OUT or S).
 
-.. image:: /_static/images/accessories/ir-sensor.png
+.. image:: /_static/images/sensors/ir-sensor.png
    :alt: IR Sensor microcontroller-boards
    :scale: 100%
 
@@ -181,7 +185,7 @@ To add a sensor, simply connect VCC to 5V, GND to ground, and OUT (or S) to an a
 
 If you are using I/O expander modules, then connect OUT (or S) to an available pin on the appropriate module, and you will need to reference the sensor by that vpin.
 
-Note that some users prefer to desolder one or both LEDs and mount them on wire with one on each side of the track to modify the sensor to become a broken beam type. In this scenario, the sensor will become active high.
+Note that some users prefer to de-solder one or both LEDs and mount them on wire with one on each side of the track to modify the sensor to become a broken beam type. In this scenario, the sensor will become active high.
 
 Configure the software - myAutomation.h - Sensors
 --------------------------------------------------
@@ -195,7 +199,7 @@ Adding a Block
 
 .. sidebar:: 
    
-   You can also refer to :ref:`ex-rail/ex-rail-reference:blocks` for more information.
+   You can also refer to :ref:`ex-rail/ex-rail-command-reference:virtual block control` for more information.
 
 Blocks in EX-RAIL are a virtual concept only, and they do not relate in any way to the concept of block occupancy detection.
 

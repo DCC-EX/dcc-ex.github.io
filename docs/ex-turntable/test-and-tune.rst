@@ -1,12 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-ex-tt.rst
 |EX-TT-LOGO|
 
 *****************************
 Testing, Tuning, and Control
 *****************************
 
-|tinkerer| |githublink-ex-turntable-button2|
+|tinkerer| |engineer| |support-button| |githublink-ex-turntable-button2|
 
 .. sidebar:: 
 
@@ -31,7 +32,7 @@ This is the EX-RAIL command to be included in myAutomation.h:
 
   MOVETT(vpin, steps, activity)
 
-For both of these commands, "vpin" is as defined in your "myHal.cpp" file, and "steps" is the number of steps from the home position, not the number of steps the turntable has to travel.
+For both of these commands, "vpin" is as defined in your "myAutomation.h" file, and "steps" is the number of steps from the home position, not the number of steps the turntable has to travel.
 
 For the diagnostic command, "activity" needs to be defined as a number, whereas for the EX-RAIL command, this is defined as text based on the table below. Sound confusing? The reason for using text in the EX-RAIL command is to make your automation sequences more "human-friendly" when reading what they do later. It's much easier for us humans to remember words rather than numbers.
 
@@ -81,14 +82,33 @@ Here's a quick example to demonstrate the difference between the diagnostic and 
   <D TT 600 100 0>
   MOVETT(600, 100, Turn)
 
-Serial console testing
-----------------------
+Development version commands
+----------------------------
+
+|NOT-IN-PROD-VERSION|
+
+For users keeping up with the |EX-CS| development releases, version 5.1.16 introduced a new turntable/traverser object, allowing for similar definition and control to that of turnouts/points.
+
+The existing methods of control for |EX-TT| using the native ``<D TT ...>`` command and ``MOVETT()`` |EX-R| command remain as-is, however there are now more complete methods of definition and control available.
+
+When tuning positions, using ``<D TT ...>`` as outlined on this page is still the simplest method for understanding accurate step counts to align with positions.
+
+For defining the new turntable/traverser objects with |DCC-EX| native commands, refer to :ref:`reference/software/command-summary-consolidated:turntables/traversers (configuring the ex-commandstation)`, and for controlling them, refer to :ref:`reference/software/command-summary-consolidated:turntables/traversers`.
+
+For the new commands available to define and control these objects with |EX-R|, refer to :ref:`ex-rail/ex-rail-command-reference:turntable/traverser objects - definition and control`.
+
+Note that as per the existing commands, the above table for the various activities is still relevant, with the native ``<I ...>`` command requiring numeric activities as per the first column, and |EX-R| ``ROTATE()`` command requiring the named activities as per the second column.
+
+For further information on using this new functionality, some examples are included at the bottom of this page in the section :ref:`ex-turntable/test-and-tune:new - development version control of ex-turntable`.
+
+Interactive Serial console commands
+-----------------------------------
 
 As of version 0.5.0-Beta, the ability to test |EX-TT| directly via the serial console has been introduced.
 
-Similar to the |EX-CS| diagnostic command outlined previously, the syntax is ``<steps activity>``, where again steps is the number of steps from the home position to move to, and activity is as per the previous table. Note that also like the diagnostic command, this needs to be a number.
+Similar to the |EX-CS| diagnostic command outlined previously and up until version 0.7.0, the syntax is ``<steps activity>``, where again steps is the number of steps from the home position to move to, and activity is as per the previous table. Note that also like the diagnostic command, this needs to be a number. In version 0.7.0, this changes to ``<M steps activity>``.
 
-For example, sending the command ``<300 0>`` via the serial console will result in output similar to this:
+For example, sending the command ``<300 0>``/``<M 300 0>`` via the serial console will result in output similar to this:
 
 .. code-block:: 
 
@@ -97,6 +117,17 @@ For example, sending the command ``<300 0>`` via the serial console will result 
   Received notification to move to step postion 300
   Position steps: 300, Auto phase switch - moving 300 steps
   Setting phase switch flag to: 0
+
+In version 0.7.0, a number of other interactive serial console commands have also been added. This is the complete list:
+
+- ``<C>`` - Initiate the calibration sequence
+- ``<D>`` - Enable/disable debug output to the serial console
+- ``<E>`` - Erase the EEPROM contents, which will force calibration to occur at next startup
+- ``<H>`` - Initiate homing
+- ``<M steps activity>`` - Initiate a move to the provided step count with the specified activity
+- ``<R>`` - Initiate a reboot (note with the old bootloader Nano this will not function correctly)
+- ``<T>`` - Enter/exit sensor testing mode, and requires a restart if exiting
+- ``<V>`` - Display the startup information in the serial console
 
 Testing EX-Turntable
 ====================
@@ -190,7 +221,7 @@ Therefore, to determine the number of steps required to turn a certain number of
 In this example, for simplicity, we will devise the steps required for a six position turntable, with position 1 being 10 degrees from the home position, position 2 a further 10 degrees, position 3 a further 10 degrees again, and positions 4 through 6 being 180 degrees from the first three positions.
 
 .. image:: /_static/images/ex-turntable/six-pos-example-degrees.png
-  :alt: Six Postion Example
+  :alt: Six Position Example
   :scale: 70%
 
 Therefore, using our formula, the starting point for each position will be:
@@ -343,7 +374,7 @@ The EX-RAIL equivalent to the above would be:
 Controlling EX-Turntable with a rotary encoder
 ==============================================
 
-|NOT-IN-PROD-VERSION|
+|NEW-IN-V5-LOGO-SMALL|
 
 It is possible to use a rotary encoder to select turntable positions if desired, which is handy for use with mimic panels and so forth.
 
@@ -353,7 +384,7 @@ In a similar manner to |EX-TT| itself, the rotary encoder Arduino connects to th
 
 .. note:: 
 
-  The rotary encoder software is not official DCC-EX software and is maintained separately, although the device driver and EX-RAIL commands will be included with a future release of |EX-CS|.
+  The rotary encoder software is not official DCC-EX software and is maintained separately. The device driver and EX-RAIL commands are included with |EX-CS| as of version 5.0.0.
 
   This section will focus on enabling and using the device driver. For the rotary encoder software documentation including installation and configuration, refer to the project page `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/overview.html>`__.
 
@@ -366,25 +397,22 @@ The rotary encoder software can be downloaded from:
 
   `dcc-ex-rotary-encoder GitHub repository <https://github.com/peteGSX-Projects/dcc-ex-rotary-encoder>`_
 
-To utilise |EX-IO|, you must be running the latest unreleased Development version of |EX-CS|.
-
-Refer to :ref:`download/ex-commandstation:latest ex-commandstation unreleased development version` on how to obtain this.
+To utilise this rotary encoder, you must be running version 5.0.0 or later of |EX-CS|.
 
 Enabling the device driver
 --------------------------
 
-The default |I2C| address for the rotary encoder is 0x70, and you will need to create the device in "myHal.cpp" on your |EX-CS|.
+The default |I2C| address for the rotary encoder is 0x78, and you will need to create the device in "myAutomation.h" on your |EX-CS|.
 
-Note you can create the device using 1 or 2 Vpins, and if you create it with 2, you can send feedback to the rotary encoder Arduino to indicate if a turntable is moving, and when it has completed the movement. Refer to the `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/overview.html>`__ documentation for more information on this feature.
+Note you can create the device using 1, 2, or 3 Vpins. If you create it with 2, you can send feedback to the rotary encoder Arduino to indicate if a turntable is moving, and when it has completed the movement. If you define 3 Vpins, you can tell the rotary encoder when a turntable has changed position also. Refer to the `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/overview.html>`__ documentation for more information on this feature.
 
-.. code-block:: cpp
+.. code-block::
 
   #include "IO_RotaryEncoder.h"
 
-  void halSetup() {
-    RotaryEncoder::create(700, 1, 0x70);
-    RotaryEncoder::create(701, 2, 0x71);
-  }
+  HAL(RotaryEncoder, 700, 1, 0x78)  // 1 pin for control only
+  HAL(RotaryEncoder, 700, 2, 0x78)  // 2 pins for control and feedback
+  HAL(RotaryEncoder, 700, 3, 0x78)  // 3 pins for control, feedback, and sending positions back to the rotary encoder
 
 You need to follow the same process as :ref:`ex-turntable/assembly:8. add the ex-turntable device driver to ex-commandstation` to load the updated software on your |EX-CS|.
 
@@ -481,4 +509,130 @@ For example, we could take the :ref:`big-picture/stage5/turntable-example:exampl
     IFRE(700, 0)
       START(TTRoute8)
     ENDIF
+  DONE
+
+NEW - Development version control of EX-Turntable
+=================================================
+
+|NOT-IN-PROD-VERSION|
+
+As mentioned previously, for users of the development version of |EX-CS|, version 5.1.16 introduces a new turntable object that can be used to define and control |EX-TT|.
+
+Here are some examples for defining a turntable as per the examples above, but using the new turntable object in both native commands, and |EX-R|.
+
+Basic DCC-EX native turntable definition and control
+----------------------------------------------------
+
+In this example, a turntable with ID 600 is defined with our six positions as per the above examples, and disregarding the values of **home** and **angle**.
+
+.. code-block:: 
+
+  <I 600 EXTT 600 0>
+  <I 600 ADD 1 114 0>
+  <I 600 ADD 2 227 0>
+  <I 600 ADD 3 341 0>
+  <I 600 ADD 4 2159 0>
+  <I 600 ADD 5 2273 0>
+  <I 600 ADD 6 2386 0>
+
+Assuming |EX-TT| was configured for automatic phase switching, these commands would be used to rotate it to position 1, then position 6, and then home:
+
+.. code-block:: 
+
+  <I 600 1 0>
+  <I 600 6 0>
+  <I 600 0 2>
+
+Operation with manual phase switching
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For the same scenario, but with manual phase switching, these commands would be used:
+
+.. code-block:: 
+
+  <I 600 1 0>
+  <I 600 6 1>
+  <I 600 0 2>
+
+EXRAIL definition and control
+-----------------------------
+
+The real beauty of this new object comes in the form of automation possibilities with |EX-R|, as there is now an event handler ``ONROTATE()`` along with a position test command ``IF_TTPOSITION()`` and a new ``WAITFORTT()`` command to really enhance the possibilities of what can be accomplished when turntable/traverser activities occur.
+
+To define our turntable as above but in |EX-R|, it looks like this:
+
+.. code-block:: 
+
+  HAL(EXTurntable,600,1,0x60)
+  EXTT_TURNTABLE(1,600,0,"My EX-Turntable")
+  TT_ADDPOSITION(600,1,114,0,"Roundhouse stall 1")
+  TT_ADDPOSITION(600,2,227,0,"Roundhouse stall 2")
+  TT_ADDPOSITION(600,3,341,0,"Roundhouse stall 3")
+  TT_ADDPOSITION(600,4,2159,0,"Reverse to stall 1")
+  TT_ADDPOSITION(600,5,2273,0,"Reverse to stall 2")
+  TT_ADDPOSITION(600,6,2386,0,"Reverse to stall 3")
+
+Now, suppose we wish to turn a flashing light connected to Vpin 164 on whenever the turntable is is motion. This can be accomplished with our event handler:
+
+.. code-block:: 
+
+  ONROTATE(600)
+    SET(164)
+    WAITFORTT(600)
+    RESET(164)
+  DONE
+
+This can be further enhanced with position specific options. Say we have roundhouse doors that need to be opened when their position is selected, and closed after the loco has entered the stall.
+
+Stall 1's door is operated by enabling Vpin 164, 2 by Vpin 165, and 3 by Vpin 166. Sensors for each are at Vpins 167, 168, and 169 respectively.
+
+.. code-block:: 
+
+  ONROTATE(600)
+    IF_TTPOSITION(1)
+      CALL(101)
+    ENDIF
+    IF_TTPOSITION(2)
+      CALL(102)
+    ENDIF
+    IF_TTPOSITION(3)
+      CALL(103)
+    ENDIF
+    IF_TTPOSITION(4)
+      CALL(101)
+    ENDIF
+    IF_TTPOSITION(5)
+      CALL(102)
+    ENDIF
+    IF_TTPOSITION(6)
+      CALL(103)
+    ENDIF
+  DONE
+  
+  SEQUENCE(101)
+    SET(164)
+    AFTER(167)
+    RESET(164)
+  RETURN
+
+  SEQUENCE(102)
+    SET(165)
+    AFTER(168)
+    RESET(165)
+  RETURN
+
+  SEQUENCE(103)
+    SET(166)
+    AFTER(169)
+    RESET(166)
+  RETURN
+
+Using these capabilities means any operation of the turntable will result in the roundhouse stall doors opening, and then closing once the loco has entered and passed over the appropriate sensor.
+
+For controlling the turntable, it is still possible to use the ``ROUTE()`` command for this, and utilising the new ``ROTATE()`` command:
+
+.. code-block:: 
+
+  ROUTE(201, "Set for roundhouse stall 1")
+    ROTATE(600,1,Turn)
   DONE

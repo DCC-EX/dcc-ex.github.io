@@ -1,0 +1,30 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+.. include:: /include/include-news.rst
+
+:blogpost: true
+:date: 7 December, 2023
+:author: peteGSX
+:category: News
+:tags: ex-commandstation, dcc-ex, news, dccexprotocol
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+Announcing the new DCCEXProtocol Arduino Library!
+=================================================
+
+The |DCC-EX| team are proud to announce that we've released the very first version of our brand spanking new DCCEXProtocol Arduino Library! This has been written to make life easier for those wishing to write software for throttles or other clients that need to communicate with |EX-CS| using our native command API.
+
+Why release an Arduino library in the first place?
+
+We figure for those who want to write throttle software and interact with the |EX-CS| are probably more interested in making their software work rather than figuring out how to correctly parse our native API commands and respond appropriately to the various command responses and broadcasts that are generated and need to be dealt with.
+
+So, in light of this, a library that takes away the heavy lifting of using/interpreting the API commands seemed like a sensible approach.
+
+**One great big caveat** to this announcement is that the library version is 0.0.1, meaning it has had limited testing and is likely going to have bugs associated with it.
+
+For documentation on how to implement and use the library, refer to the `DCCEXProtocol documentation <https://dcc-ex.com/DCCEXProtocol/index.html>`_.

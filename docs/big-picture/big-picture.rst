@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-ex-bp.rst
 |EX-BP-LOGO|
 
 *************************
@@ -47,7 +48,7 @@ Building blocks and stages
 
 We'll present this information by starting with some core functionality, moving on to a simple loop with a single siding and station, and then proceed to add extra features and complexity a step at a time until we reach the complete layout pictured above.
 
-At each stage, we will outline how to implement each variation of the objects in use (eg. a servo based turnout/point, a pin based turnout/point, and a DCC controlled turnout/point) as well as outlining how the various objects can potentially interact with each other, and how to build an |EX-R| automation sequence to take advantage of the features.
+At each stage, we will outline how to implement each variation of the objects in use (e.g. a servo based turnout/point, a pin based turnout/point, and a DCC controlled turnout/point) as well as outlining how the various objects can potentially interact with each other, and how to build an |EX-R| automation sequence to take advantage of the features.
 
 How to read the diagrams
 ========================

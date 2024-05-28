@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-description.rst
 |EX-CONTRIBUTING-LOGO|
 
 **********************
@@ -15,7 +16,7 @@ Donate to Our Project
 How We Use Donations
 ======================
 
-Your donations help to offset the cost of running some of the resources used to operate DCC-EX and bring you new software and hardware. Your generosity funds the purchasing of technology we use in testing to add new features such as motor drivers, the latest microcontrollers, expansion boards, and similar items. At the end of the year, if there is any money left over, a few of the key contributors for that year may receive a small gift certificate to their favorite coffee shop or train store to thank them personally for their efforts. We truly appreciate your support!
+Your donations help to offset the cost of running some of the resources used to operate DCC-EX and bring you new software and hardware. Your generosity funds the purchasing of technology we use in testing to add new features such as motor drivers, the latest microcontrollers, expansion boards, and similar items. At the end of the year, if there is any money left over, a few of the key contributors for that year may receive a small gift certificate to their favourite coffee shop or train store to thank them personally for their efforts. We truly appreciate your support!
 
 **US Donors**, In order to save fees, please use PayPal or Venmo for one-time donations and choose the "Friends and Family" option. You can also use GitHub. Use any credit you may have or the bank account linked to your account. Using a credit card will incur fees. For automatic monthly donations, you may use GitHub or Patreon.
 

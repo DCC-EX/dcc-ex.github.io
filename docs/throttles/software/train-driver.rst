@@ -1,8 +1,9 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-*******************
+.. include:: /include/include-throttles.rst
+************
 Train Driver
-*******************
+************
 
 |conductor| |tinkerer| |engineer|
 
@@ -19,8 +20,8 @@ Following protocols are supported:
 
 - SRCP including MFX extension
 - Z21 from Fleischmann / Roco
-- WiThrottle as used e.g. in JMRI or DCC++EX
-- DCC++EX
+- |wiThrottle Protocol| commands as used e.g. in JMRI or DCC-EX
+- |DCC-EX Native Commands|
 
 In order to control a locomotive, the app must be connected to a control center. A small red point flashes at the bottom right of the symbol. Now the locomotive can be set. Again a small red point flashes at the bottom right of the symbol.
 

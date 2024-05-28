@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-ex-bp.rst
 |EX-BP-LOGO|
 
 ************************************************************************************

@@ -1,12 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+.. include:: /include/include-description.rst
 |EX-CS-LOGO|
-
-|conductor| |tinkerer| |engineer|
 
 ***************************************
 Signalling overview - types and options
 ***************************************
+
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar:: 
 

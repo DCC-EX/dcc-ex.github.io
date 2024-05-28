@@ -1,12 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-ex-r.rst
 |EX-R-LOGO|
 
 *****************************
 Example Objects and Sequences
 *****************************
 
-|tinkerer| |conductor|
+|tinkerer| |engineer| |support-button| 
 
 .. sidebar:: 
 
@@ -14,10 +15,9 @@ Example Objects and Sequences
      :depth: 2
      :local:
 
-On this page are a number of examples of |EX-R| sequences that you can lean from.  :doc:`/big-picture/big-picture` section of this web site also contains numerous more complex examples.
+A variety of |EX-R| sequences that illustrate function and usage of five objects are shown below. The :doc:`/big-picture/big-picture` section of this web site also contains a number of more elaborate and complex examples.
 
-We will be using these objects in the examples:
-
+Objects :
 - A three aspect signal connected to Mega2560 I/O pins 22 (red), 23 (amber), and 24 (green)
 - A two aspect signal connected to Mega2560 I/O pins 25 (red) and 26 (green)
 - LEDs connected to pins vpins 164 and 165 of an MCP23017 I/O extender
@@ -29,13 +29,22 @@ We will be using these objects in the examples:
 Turn Track Power On at Startup
 ==============================
 
-The current production release of |EX-R| does not have commands for turning track power on or off, but if you assign a speed to a loco in a sequence it will automatically turn the track power on.  Using this feature we can fudge turning the track power on at startup.
+Turning track power on or off in |EX-CS| version 5 (the current Production version) is performed respectively by either the |EX-R| command ``POWERON`` or ``POWEROFF``; or in EX-CommandStation's native language using the command line, ``<1>`` or ``<0>``.
+
+Users of previous EX-CommandStation versions can switch track power on or off via EX-Rail;
+   ``SETUP("<1>")``  for on or ``SETUP("<0>")`` for off;  or in EX-CommandStation's native language, ``<1>`` or ``<0>``
+
+Another approach for powering up the track is to assign a speed to a loco in a sequence and power will automatically turn on.  EX-Rail cleverly knows that power must be on before a locomotive can move so it turns track power on when the sequence is executed.
 
 .. code-block:: cpp
    
-  // if this is at the start of myAutomation.h  This will act like an AUTOSTART sequence
+  // VER 5 No Implied AUTOSTART occurs and must be added to the myAutomation.h file
+  // VER 4 The implied AUTOSTART results in the automatic execution 
+  // of the code in the myAutomation.h file thus the sequence is run each time 
+  // the EX-CommandStation boots up.
+  AUTOSTART       // required in version 5 or later
   SETLOCO(9999)   // select loco 9999
-  SPEED(0)        // set the speed to 0.  This will turn the tarck power on
+  SPEED(0)        // set the speed to 0.  This will turn the track power on
   DONE
 
 
@@ -45,10 +54,15 @@ Add a Roster
 
 .. code-block:: cpp
    
+   // Sample Engines with DCC decoders have from a few to many F-Keys
    ROSTER (  3,"Eng 3", "F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//") // Address 3, Eng 3, Function keys F0-F10
    ROSTER(1224,"PE 1224","") // Motor Only Decoder, But use Engine Driver 'Preferences >In Phone Loco 'Sound'
    ROSTER(1225,"PE 1225","Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute")
    ROSTER(4468,"LNER 4468","//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8")
+
+   // Version 5.0+ TrackManager, Sample Analog DC Engines with No decoder, either no F-keys, or just One identifing it as DC only 
+   ROSTER (  1,"Eng 1", "")   // Address 1, Eng 1, Function keys None
+   ROSTER ( 25,"PE 25", "DC") // Address 25, PE 25, Function keys just One 'DC' Identifing it as Analog DC Cab 
 
 
 Defining Servo Turnouts
@@ -278,7 +292,7 @@ number. So now our route looks like this:
    :align: center
    :scale: 100%
 
-Assuming that you have defined your turnouts with :ref:`TURNOUT commands. <ex-rail/EX-RAIL-summary:Automations, Routes and Sequences>`
+Assuming that you have defined your turnouts as per :ref:`ex-rail/ex-rail-command-reference:turnout/point objects - definition and control`
 
 .. code-block:: cpp
 
@@ -432,4 +446,4 @@ The READ_LOCO reads the loco address from the PROG track and the current route t
 Next Steps - Detailed Reference
 ===============================
 
-The previous pages have only been a small taste of what is possible with |EX-R|. Click :doc:`here </ex-rail/EX-RAIL-reference>` or click the :guilabel:`Next` button to explore the full capabilities of |EX-R|.
+The previous pages have only been a small taste of what is possible with |EX-R|. See the :doc:`/ex-rail/EX-RAIL-command-reference` or click the :guilabel:`Next` button to explore the full capabilities of |EX-R|.

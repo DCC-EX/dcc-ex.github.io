@@ -1,21 +1,19 @@
-.. meta::
-  :keywords: EX-CommandStation Command Station EX-IOExpander
-
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-ex-io.rst
 |EX-IO-LOGO|
 
 **************************
 Overview and configuration
 **************************
 
-|tinkerer| |githublink-ex-ioexpander-button2|
+|tinkerer| |engineer| |support-button| |githublink-ex-ioexpander-button2|
 
 .. note:: 
 
   |EX-IO| is currently in its infancy and as such is considered to be in Alpha testing, so could (and likely will) change without notice, and possibly even be broken in some scenarios.
 
-|NOT-IN-PROD-VERSION|
+|NEW-IN-V5-LOGO-SMALL|
 
 .. sidebar:: 
   
@@ -28,11 +26,17 @@ Introduction
 
 |EX-IO| is an additional microcontroller utilised to expand the I/O port capability of an |EX-CS| and connecting via |I2C|.
 
-|EX-IO| can utilise digital input and output pins as well as analogue input pins, depending on the chosen microcontroller.
+It can be used to increase the number of available pins on your command station or run devices/objects at a greater distance away from it without having to run a lot of wires back to the command station. This is accomplished by using just two |I2C| bus wires to connect to one or many micro controllers running the |EX-IO| software.
 
-There is also work in progress to enable using PWM capable pins to drive servos and control LED brightness.
+|EX-IO| can be used for various different functions depending on the microcontroller in use:
 
-Rather than emulate any specific type of existing I/O expander, |EX-IO| has been written to integrate directly with |EX-CS| via its own device driver, which is how both digital and analogue pins can easily be utilised on the same device, as well as utilising a device's PWM capability to control servos and variable brightness LEDs.
+- Reading from digital input pins
+- Writing to digital output pins
+- Reading from analogue input pins
+- Controlling servos via the Arduino Servo library (Uno, Nano, and Mega only)
+- Dimming LEDs
+
+Rather than emulate any specific type of existing I/O expander, |EX-IO| has been written to integrate directly with |EX-CS| via its own device driver, which is how both digital and analogue pins can easily be utilised on the same device, as well as control servos and variable brightness LEDs.
 
 This page provides the general overview of |EX-IO|, as well as outlining the configuration options available.
 
@@ -43,15 +47,15 @@ This page provides the general overview of |EX-IO|, as well as outlining the con
 Software requirements
 =====================
 
-To utilise |EX-IO|, you must be running the latest unreleased Development version of |EX-CS|.
-
-Refer to :ref:`download/ex-commandstation:latest ex-commandstation unreleased development version` on how to obtain this.
+To utilise |EX-IO|, you must be running version 5.0.0 or later of |EX-CS|.
 
 In addition, you will require the |EX-IO| software which can be found here:
 
 .. rst-class:: dcclink
 
   `EX-IOExpander Github Repository <https://github.com/DCC-EX/EX-IOExpander>`_
+
+Both of these can be installed via |EX-I|, see :doc:`/ex-installer/installing` and :ref:`ex-ioexpander/overview:installation via ex-installer`.
 
 Hardware requirements
 =====================
@@ -69,13 +73,39 @@ Theory of operation
 
 Pins capable of both digital and analogue can be used for either purpose.
 
-As per other I/O devices, |EX-IO| can function with both the ``<S ...>`` sensor/input and ``<Z ...>`` output |DCC-EX| commands, as well as the various ``AT(), IF(), ATGTE(), IFGTE()`` type |EX-R| commands.
-
-There is experimental PWM support to be used to drive servos and control LED brightness, enabling use of the ``<D SERVO ...>`` command, along with the ``SERVO()``, ``SERVO_TURNOUT()``, ``SERVO_SIGNAL()``, and ``FADE()`` |EX-R| commands.
-
 .. note:: 
 
   To ensure the devices start with I/O pins in the safest possible state, all defined pins are set to input mode with pullups disabled by default. The pins stay in this state until they are configured explicitly via the |EX-CS| device driver.
+
+As per other I/O devices, |EX-IO| can function with both the ``<S ...>`` sensor/input and ``<Z ...>`` output |DCC-EX| commands, as well as the various ``AT(), IF(), ATGTE(), IFGTE()`` type |EX-R| commands.
+
+Servo control
+-------------
+
+There is now support for controlling servos via the Arduino Servo library for Arduino AVR platforms (Uno, Nano, and Mega only), or via hardware PWM pins on other platforms.
+
+This enables the use of the ``<D SERVO ...>`` command, along with the ``SERVO()``, ``SERVO_TURNOUT()``, and ``SERVO_SIGNAL()`` |EX-R| commands, along with being able to define servo based turnout objects on these devices.
+
+When using AVR based platforms that utilise the Servo library, the reported values for servo movements are from 544 to 2400, which is significantly different to the 100 to 400 in use by the PCA9685 servo modules. Experimentation will be required to determine the correct values for your servos. If you're familiar with the library, we use the writeMicroseconds() function. Any digital pin can be used to control servos.
+
+When using other platforms, only hardware PWM pins can be used which need values from 0 to 255, and again experimentation will be required to determine the correct values for your servos. Note that using analogWrite() and direct hardware PWM pins is not an ideal scenario for operating servos, so we would recommend considering if there is a better solution for your needs. We outline which pins have hardware PWM support available on the :doc:`/ex-ioexpander/supported-devices` page.
+
+For experimenting with different values for servo angles, we highly recommend trying out :doc:`/ex-toolbox/index`.
+
+.. warning:: 
+
+  When using servos or fading LEDs with |EX-IO|, you *must use the values as indicated above* to control them, not the values documented for the PCA9685 servo modules, as those values are designed specifically for those modules.
+
+  Attempts were made to provide some sane mapping between the PCA9685 values and those required by the Servo library and hardware PWM pins, however the results were vastly different. It would be misleading to imply a value that works on one device could safely be mapped to a different value on a different and result in the same servo angle, even with the same exact servo in use.
+
+  You must also ensure you provide sufficient power to run the servos, as well as have a large electrolytic capacitor across the 5V and Ground pins to ensure servo movements don't cause the |EX-IO| device to reset due to brownouts in the power supply. A capacitor in the realm of 1000uF is recommended. It is not sufficient to power the servos from the USB interface, and an external 5V power supply must be used in the same way as outlined on the :doc:`/reference/hardware/servo-module` page.
+
+LED dimming
+-----------
+
+Dimming LEDs is also possible utilising |EX-IO|, enabling the use of the ``FADE()`` |EX-R| command.
+
+Valid values for LED brightness are from 0 (off) to 255 (fully on), and any digital pin on any platform can be used.
 
 Configuration
 =============
@@ -86,6 +116,43 @@ Configuration changes for |EX-IO| are made by editing a "myConfig.h" file or wri
 
 Software installation process
 -----------------------------
+
+Installation via EX-Installer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|EX-I| can be used to install both |EX-CS| and |EX-IO|. The process is the same for both, with the exception of the configuration options, therefore we will only outline the configuration options here. Refer to :doc:`/ex-installer/installing` for the full documentation on using |EX-I|.
+
+When you reach the "Select Product" screen, select |EX-IO|.
+
+.. figure:: /_static/images/ex-installer/select_product.png
+   :alt: EX-Installer - Select Product
+   :scale: 40%
+   :align: center
+
+   EX-Installer - Product Screen
+
+We always recommend selecting the latest available version for |EX-IO| unless advised otherwise, but note you will only see Development versions while it remains in Alpha testing.
+
+.. figure:: /_static/images/ex-installer/select_io_version.png
+   :alt: EX-Installer - Select Version
+   :scale: 40%
+   :align: center
+
+   EX-Installer - Product Screen
+
+Once the version has been selected, you will be able to configure the necessary options.
+
+.. figure:: /_static/images/ex-installer/ex_io-expander.png
+   :alt: EX-Installer - Configure EX-IOExpander
+   :scale: 40%
+   :align: center
+
+   EX-Installer - EX-IOExpander configuration
+
+Continue through the rest of the |EX-I| process to load the software on to your device.
+
+Manual installation
+^^^^^^^^^^^^^^^^^^^
 
 This is a brief overview of the software installation and configuration process:
 
@@ -204,15 +271,22 @@ This example is for an Arduino Nano configured starting at Vpin 800:
 
 .. code-block:: 
 
-  DCC-EX EX-IOExpander v0.0.14
+  DCC-EX EX-IOExpander v0.0.23
   Detected device: Nano
-  Available at I2C address 0x71
+  Available at I2C address 0x65
+  Servo library support for up to 12 servos
+  SuperPin support to dim up to 16 LEDs
   Initialised all pins as input only
   Received correct pin count: 18, starting at Vpin: 800
   Vpin to physical pin mappings (Vpin => physical pin):
-  |800 =>   2|801 =>   3|802 =>   4|803 =>   5|804 =>   6|805 =>   7|806 =>   8|807 =>   9|
-  |808 =>  10|809 =>  11|810 =>  12|811 =>  13|812 =>  14|813 =>  15|814 =>  16|815 =>  17|
-  |816 =>  20|817 =>  21|
+  |800  =>   D2|801  =>   D3|802  =>   D4|803  =>   D5|804  =>   D6|805  =>   D7|806  =>   D8|807  =>   D9|
+  |808  =>  D10|809  =>  D11|810  =>  D12|811  =>  D13|812  =>   A0|813  =>   A1|814  =>   A2|815  =>   A3|
+  |816  =>   A6|817  =>   A7|
+
+Viewing the Vpin map
+^^^^^^^^^^^^^^^^^^^^
+
+When connected to the |EX-IO| device's serial console, you can enter the command ``<V>`` to view the current Vpin to physical pin map, which will also repeat the startup display including the version, device type, and so forth as per the example above.
 
 EX-CommandStation device driver
 -------------------------------
@@ -247,11 +321,8 @@ Using "myAutomation.h":
 
 .. code-block:: cpp
 
-  void halSetup() {
-    ...
-    HAL(EXIOExpander, 800, 18, 0x65)
-    HAL(EXIOExpander, 820, 16, 0x66)
-  }
+  HAL(EXIOExpander, 800, 18, 0x65)
+  HAL(EXIOExpander, 820, 16, 0x66)
 
 I2C_ADDRESS
 -----------
@@ -319,7 +390,9 @@ If for some reason serial input is not working as expected, test modes can be en
 
 Only enable one test mode at a time. If multiple are enabled, only the last one defined will take effect.
 
-Refer to :ref:`ex-ioexpander/testing:testing commands` for details on the testing each option enables.
+It is preferable, however, to use the testing commands available in the serial console.
+
+Refer to :ref:`ex-ioexpander/testing:testing commands` for details of what test each option enables and the associated serial commands.
 
 DISABLE_I2C_PULLUPS
 -------------------

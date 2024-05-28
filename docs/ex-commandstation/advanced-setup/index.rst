@@ -1,13 +1,13 @@
-.. include:: /include/include-ex-cs.rst
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-ex-cs.rst
 |EX-CS-LOGO|
    
 ****************
 Advanced Options
 ****************
 
-|tinkerer| |engineer| |githublink-ex-commandstation-button2|
+|tinkerer| |engineer| |support-button| |githublink-ex-commandstation-button2|
 
 .. sidebar::
 
@@ -73,7 +73,7 @@ Connection Options
 
 How you connect to your |EX-CS| is going to depend entirely on your personal choices of how you wish to interact with it. Are you a JMRI user? Do you only want to use wireless hand-held throttles?
 
-To faciliate a variety of these choices, there are four ways to connect: direct via USB, WiFi, Ethernet, and/or Bluetooth.
+To facilitate a variety of these choices, there are four ways to connect: direct via USB, WiFi, Ethernet, and/or Bluetooth.
 
 Depending on your platform choice for your |EX-CS|, the connectivity options aren't mutually exclusive, and you can use multiple methods.
 
@@ -174,8 +174,8 @@ DCC-EX Commands
 .. toctree::
   :maxdepth: 1
 
-  /reference/software/command-reference
-  /reference/software/command-summary
+  Native Commands Summary </reference/software/command-summary-consolidated>
+  Native Commands Details </reference/software/command-reference>
 
 Features under development
 ==========================

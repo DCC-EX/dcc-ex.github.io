@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+.. include:: /include/include-description.rst
 |EX-CONTRIBUTING-LOGO|
 
 *************************
@@ -81,7 +82,7 @@ Meta Keywords
 
 The meta keywords help search entries find find the page based on key words. 
 
-By using the recommended includes (below) several key meta keywords are included in all pages.  i.e. ``DCC DCC++ EX DCC++EX DCC-EX``
+By using the recommended includes (below) several key meta keywords are included in all pages.  i.e. ``DCC-EX DCC DCC++ EX DCC++EX``
 Generally each page should start with any additional meta keywords that are appropriate to the page.
 
 
@@ -112,12 +113,13 @@ For example:
 
     .. include:: /include/include.rst
     .. include:: /include/include-l2.rst
+    .. include:: /include/include-description.rst
 
 
 .. note:: 
   :class: note-float-right
 
-  The expansion must be followed by a blank line.
+  The 'include-description.rst' will add a generic HTML meta *description* to the page.  You can alternately make use of one the the other include files,or create a new one, to have different description for the page.
 
 Product Icon
 ------------
@@ -130,9 +132,9 @@ For example:
 
   ::
 
-
     .. include:: /include/include.rst
     .. include:: /include/include-l3.rst
+    .. include:: /include/include-description.rst
     |EX-CS-LOGO|
 
     ***************************************

@@ -1,12 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-ex-r.rst
 |EX-R-LOGO|
 
 **********************
 Editing myAutomation.h
 **********************
 
-|tinkerer| |conductor|
+|tinkerer| |conductor| |support-button| 
 
 .. sidebar:: 
 

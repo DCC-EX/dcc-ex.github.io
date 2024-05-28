@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+.. include:: /include/include-description.rst
 |EX-CONTRIBUTING-LOGO|
 
 ****************************
@@ -33,7 +34,7 @@ Local previews can still be generated as per :ref:`about/contributing/website/ge
 Using the post-template.txt template
 ====================================
 
-To create a new post, copy the file "post-template.txt" to a new .rst file, with the name in reverse date format <yyyymmdd>.rst eg. 20230308.rst for a post on the 8th of March, 2023.
+To create a new post, copy the file "post-template.txt" to a new .rst file, with the name in reverse date format <yyyymmdd>.rst e.g. 20230308.rst for a post on the 8th of March, 2023.
 
 This new file must reside in the "news/posts" directory along with the other posts.
 
@@ -43,9 +44,10 @@ The content of the file should start like this:
 
   .. include:: /include/include.rst
   .. include:: /include/include-l2.rst
+  .. include:: /include/include-description.rst
 
   :blogpost: true
-  :date: <date in format day month, year eg. 8 March, 2023>
+  :date: <date in format day month, year e.g. 8 March, 2023>
   :author: <Your name, either Discord/GitHub username or real name>
   :category: <Refer to the doco for the category>
   :tags: <Refer to the doco for tags to use (comma separated list)>
@@ -71,14 +73,14 @@ Updating the metadata (date, author, category, tags)
 
 The `:date:`, `:author:`, `:category:`, and `:tags:` metadata fields must be updated for each post.
 
-- `:date:` - Add the date of the post eg. `:date: 8 March, 2023`
-- `:author` - Your Discord or GitHub username, or full name if you're comfortable with that eg. `:author: peteGSX` or `:author: Peter Cole`
-- `:category:` - One or more categories the post falls into, can be a comma separated list eg. `:category: News` or `:category: News, Release` (see :ref:`about/contributing/website/publishing-news:Valid categories and tags`)
-- `:tags:` - One or more tags related to the post eg. `:tags: release, ex-commandstation` (see :ref:`about/contributing/website/publishing-news:Valid categories and tags`)
+- `:date:` - Add the date of the post e.g. `:date: 8 March, 2023`
+- `:author` - Your Discord or GitHub username, or full name if you're comfortable with that e.g. `:author: peteGSX` or `:author: Peter Cole`
+- `:category:` - One or more categories the post falls into, can be a comma separated list e.g. `:category: News` or `:category: News, Release` (see :ref:`about/contributing/website/publishing-news:Valid categories and tags`)
+- `:tags:` - One or more tags related to the post e.g. `:tags: release, ex-commandstation` (see :ref:`about/contributing/website/publishing-news:Valid categories and tags`)
   
 .. note::
 
-  Give careful consideration to the date of the post compared to your timezone. If you publish the website with a new post dated today, and today for the timezone you are in is ahead of GMT (eg. GMT+10 for Brisbane, Australia where this author is located), the post will not be displayed as it is considered in the future.
+  Give careful consideration to the date of the post compared to your time zone. If you publish the website with a new post dated today, and today for the time zone you are in is ahead of GMT (e.g. GMT+10 for Brisbane, Australia where this author is located), the post will not be displayed as it is considered in the future.
   
   All other metadata/RST directives must remain intact as provided in the template, including the ".. include" lines, `:blogpost:`, `:excerpt:`, `:image:`, and the logo image directive.
 

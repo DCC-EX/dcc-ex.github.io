@@ -1,0 +1,26 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+.. include:: /include/include-news.rst
+
+:blogpost: true
+:date: 11 September 2023
+:author: peteGSX
+:category: News
+:tags: ex-installer
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+Farewell to the old exInstaller, in with the new EX-Installer!
+==============================================================
+
+Today, we bid a fond farewell to the old exInstaller, used successfully by many a user to load our flagship product |EX-CS| onto Arduino devices around the world and enable DCC control of many model railroading layouts.
+
+As announced earlier this year, our new |EX-I| has been released to supersede our original installer, and over time will allow loading all our Arduino based products rather than just focusing on |EX-CS|.
+
+If you still use the original exInstaller, we encourage you to move to :doc:`/ex-installer/index` instead.
+
+The old exInstaller has now been made a public archive, and no further development will occur.

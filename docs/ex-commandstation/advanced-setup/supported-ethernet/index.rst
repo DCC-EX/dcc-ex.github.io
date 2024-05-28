@@ -1,13 +1,13 @@
-.. include:: /include/include-ex-cs.rst
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+.. include:: /include/include-ex-cs.rst
 |EX-CS-LOGO|
 
 **************************
 Supported Ethernet Boards
 **************************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 If you prefer to connect to your |EX-CS| via a physical network cable rather than WiFi, there are several supported Ethernet options available as outlined on these pages.
 

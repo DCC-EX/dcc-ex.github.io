@@ -1,12 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-description.rst
 |EX-REF-LOGO|
 
 ********************************
 Diagnostics ``<D ACK>`` Command
 ********************************
 
-|engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

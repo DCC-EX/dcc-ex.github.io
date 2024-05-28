@@ -1,10 +1,17 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+.. include:: /include/include-hardware.rst
+|EX-CS-LOGO|
+
 **************************
 IRF3205 Motor Driver Setup
 **************************
 
 |tinkerer| |engineer|
+
+.. warning:: 
+
+   This board is **not** compatible with |TM| DC mode.
 
 .. sidebar::
 
@@ -17,13 +24,17 @@ Dual Motor Driver Module H-bridge MOSFET IRF3205
 
 |tinkerer|
 
-.. warning:: This board can supply a LOT of current. The maximum recommended current is 5A for N and HO scale. This board can supply 15A, enough to cause a LOT of damage. To use this board, make sure you have fuses or circuit breakers connected in line with both rails. SOFTWARE ALONE CANNOT PROTECT YOU IN ALL CASES. You will also need external current sense.
-
-You can use this board to handle both your MAIN and PROG track, or you can use one of the H-Bridges to power your MAIN track and use the Arduino Motor Shield for your PROG track. This board can provide up to 15A when you need more current than the 1.2-1.5A the Arduino Motor Shield can provide. IRF3205 is the model number of the N Channel MOSFETS used in the H-Bridge circuit. MOSFETS are a type of transistor, and rather than many other boards that use an integrated circuit for the H-Bridge, this board uses 4 discrete transistors per H-Bridge. This allows for a highly efficient motor controller with a negligible voltage drop.
-
-.. image:: /_static/images/motorboards/3205_motor_board.jpg
+.. figure:: /_static/images/motorboards/3205_motor_board.png
    :alt: IRF3205 Motor Board
    :scale: 75%
+
+   IRF3205 Motor Board
+
+.. warning:: 
+   
+   This board can supply a LOT of current. The maximum recommended current is 5A for N and HO scale. This board can supply 15A, enough to cause a LOT of damage. To use this board, make sure you have fuses or circuit breakers connected in line with both rails. SOFTWARE ALONE CANNOT PROTECT YOU IN ALL CASES. You will also need external current sense.
+
+You can use this board to handle both your MAIN and PROG track, or you can use one of the H-Bridges to power your MAIN track and use the Arduino Motor Shield for your PROG track. This board can provide up to 15A when you need more current than the 1.2-1.5A the Arduino Motor Shield can provide. IRF3205 is the model number of the N Channel MOSFETS used in the H-Bridge circuit. MOSFETS are a type of transistor, and rather than many other boards that use an integrated circuit for the H-Bridge, this board uses 4 discrete transistors per H-Bridge. This allows for a highly efficient motor controller with a negligible voltage drop.
 
 
 What You Will Need (IRF3205)
@@ -41,10 +52,11 @@ What You Will Need (IRF3205)
 
 See the :ref:`reference/hardware/motorboards/IRF3205-motor-board-setup:Parts list (IRF3205)`
 
-.. image:: /_static/images/motorboards/15A_Dual_HBridge3.jpg
+.. figure:: /_static/images/motorboards/15A_Dual_HBridge.png
    :alt: 15A Dual H-Bridge
    :scale: 35%
-   :align: center
+
+   15A Dual H-Bridge
 
 We assume that many of you may have started off with the Arduino Mega with Arduino Motor Shield (or clones) and are here because you are making the step up to something that can handle more current, and therefore more locos. We will cover two options for how to use your IRF3205 motor board:
 
@@ -199,13 +211,18 @@ Steps (Replace IRF3205)
 -------------------------
 
 1. Make sure all power supplies are disconnected from your Arduino and the IRF3205 motor board.
-2. Option - TODO: fnd current sense / fuses! See the notes below for more detail about current sense and a suggestion for using an external current sense board.
-3. Select your IRF3205 board in the config.h file. ***TODO: fnd need to add this type***
+2. Option - See the notes below for more detail about current sense and a suggestion for using an external current sense board.
+3. Select your IRF3205 board in the config.h file.
 4. Upload the new sketch to your Arduino Mega
 
 Connect wires of the proper gauge (TODO: see gauge) from the "MOTOR1" screw terminals of the IRF3205 board to your MAIN track and connect 2 more wires from the "MOTOR2" terminals to your PROG track. 
 
-.. NOTE:: It is important that the phase of the signal to your PROG and MAIN tracks are the same if you are ever going to use <1 JOIN> to make both tracks a MAIN when the PROG track is not in use, or if you are going to use the "DriveAway" feature. TODO: fnd finish this. How do know phase?
+.. NOTE:: It is important that the phase of the signal to your PROG and MAIN tracks are the same if you are ever going to use <1 JOIN> to make both tracks a MAIN when the PROG track is not in use, or if you are going to use the "DriveAway" feature.
+
+.. todo:: 
+   Option - TODO: fnd current sense / fuses! |BR|
+   Select your IRF3205 board - TODO: fnd need to add this type
+   Note: TODO: finish this. How do know phase?
 
 Use the following diagrams to connect pins from the Arduino Mega to the IRF3205. "CS" in the table means "Current Sense":
 
@@ -279,7 +296,7 @@ This will us pin 3 for Enable and 12 for signal, which will use the "High Accura
 Upload the sketch to your Arduino. If you need help on how to upload a sketch, see :doc:`Getting Started </ex-commandstation/get-started/index>`
 
 
-.. TODO:: `LOW - Hardware <https://github.com/DCC-EX/dcc-ex.github.io/issues/427>`_ - organize the above and add pictures
+.. TODO:: `LOW - Hardware <https://github.com/DCC-EX/dcc-ex.github.io/issues/427>`_ - organise the above and add pictures
 
 .. TODO:: `LOW - Hardware <https://github.com/DCC-EX/dcc-ex.github.io/issues/427>`_ - Finish this section
 
@@ -329,7 +346,7 @@ For the Engineers, the definitions and implementation for motor board control ar
   **MotorDriver.h** - Creates the "MotorDriver" C++ class that defines the data type for a motor controller
   **MotorDriver.cpp** - The routines that control the operation of a motor controller (Power, Current Sense, etc.)
 
-Normally you would never need to get into these files, we just mention them because it can be helpful to see the examples in the code if you want to learn more about how to customize your motor board definition or see how things work.
+Normally you would never need to get into these files, we just mention them because it can be helpful to see the examples in the code if you want to learn more about how to customise your motor board definition or see how things work.
 
 IRF3205 15A Motor Board schematic
 ---------------------------------
@@ -411,7 +428,7 @@ $24.40 +tax; prime shipping
    
    I wonder if the 1.5 ohm 3 watt resistor could be added to this setup instead of the MAX471.
    
-   Perhaps the two channels of the IRF3205 motor board would be better utilized for two power districts.
+   Perhaps the two channels of the IRF3205 motor board would be better utilised for two power districts.
    
    Perhaps anyone who is up to the challenges of the IRF3205 would also be able to add the 1.5 ohm resistor to the L298N motor board.
    

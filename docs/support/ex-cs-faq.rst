@@ -1,16 +1,16 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
 .. include:: /include/include-ex-cs.rst
 .. meta::
    :keywords: EX-CommandStation Command Station diagnosing Issues Troubleshooting
 
-.. include:: /include/include.rst
-.. include:: /include/include-l2.rst
 |EX-CS-LOGO|
 
 ********************************
 Frequently Asked Questions (FAQ)
 ********************************
 
-|conductor| 
+|conductor| |tinkerer| |engineer| |support-button|
 
 This is a list of **Frequently Asked Questions** that we answer on our various support channels:
 

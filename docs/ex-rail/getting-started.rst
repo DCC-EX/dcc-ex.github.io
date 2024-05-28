@@ -1,12 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-ex-r.rst
 |EX-R-LOGO|
 
 ***************************
 Sequences - an Introduction
 ***************************
 
-|tinkerer| |conductor|
+|tinkerer| |engineer| |support-button| 
 
 .. sidebar:: 
 
@@ -14,7 +15,7 @@ Sequences - an Introduction
     :depth: 4
     :local:
 
-This page is a limited introduction to the |EX-R| automation sequences.  For more comprehensive information refer to the :doc:`/ex-rail/EX-RAIL-reference` and :doc:`/ex-rail/EX-RAIL-summary` pages.
+This page is a limited introduction to the |EX-R| automation sequences.  For more comprehensive information refer to the :doc:`/ex-rail/EX-RAIL-command-reference`.
 
 Before You start, generally you will need to have created some Key Objects (e.g. Turnouts/Points, Sensors, Signals) before you start writing sequences.  Refer to the previous page (:doc:`creating-elements`) for creating and adding those Objects.  Note that these objects don't have to be listed in the myAutomation.h file before the sequence in which you use it, but it is good practice to do so.
 
@@ -27,7 +28,7 @@ Once started, each 'sequence' will step through a list of simple keyword command
 
 Multiple concurrent sequences are supported.
 
-For a full list of keywords, see :doc:`EX-RAIL-summary`, and for further detailed information, see the :doc:`/ex-rail/EX-RAIL-reference`.  Only a subset are described on this page.
+For a full list of keywords, see :doc:`/ex-rail/EX-RAIL-command-reference`.  Only a subset are described on this page.
 
 
 .. note:: 
@@ -82,7 +83,7 @@ Sequences types fall in the following broad groups:
 Manually Triggered Sequence Types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Manually triggered sequences are advertised to WiThrottles so you can activate them on your throttles (e.g. |engine driver| or |withrottle|). They are one of:
+Manually triggered sequences are advertised to WiThrottles so you can activate them on your throttles (e.g. |engine driver| or |WiThrottle|). They are one of:
 
 .. list-table:: 
     :widths: 30 70
@@ -135,7 +136,7 @@ Sequences that are triggered when 'events' occur, include:
     * - ONTHROW( turnout_id ) 
       - Event handler for turnout thrown
 
-See :doc:`EX-RAIL-summary` page for additional Event Triggered Sequence types, and additional information on these types. 
+See the :doc:`/ex-rail/EX-RAIL-command-reference` for additional Event Triggered Sequence types, and additional information on these types. 
 
 Automatically Running a Sequence at Power Up
 --------------------------------------------
@@ -143,7 +144,7 @@ Automatically Running a Sequence at Power Up
 .. note:: 
    :class: note-float-right
 
-   There is an implied AUTOSTART whereby everything in myAutomation.h prior to the first ``DONE`` keyword is executed on startup. If you don't wish anything to happen at startup, simply add the keyword ``DONE`` as the first line.
+   |NEW-IN-V5| There is no longer an implied AUTOSTART whereby everything in myAutomation.h prior to the first ``DONE`` keyword is executed on startup. If you wish to reinstate this behaviour, simply add the keyword ``AUTOSTART`` as the first line.
 
 If you want a sequence to start immediate the system powers up, add the ``AUTOSTART`` command to the content of the sequence.
 
@@ -173,7 +174,7 @@ Action Commands - Getting EX-RAIL to 'do' something
 
 This type of command will somehow change Objects of the system you have created and defined, like turnouts/points, signals, servos, turntables, blocks and locos.  
 
-There are a substantial number of commands that you can explore on the :doc:`EX-RAIL-summary` page.  We will look at just a few here.
+There are a substantial number of commands that you can explore in the :doc:`/ex-rail/EX-RAIL-command-reference`. We will look at just a few here.
 
 .. code-block:: cpp
    :class: code-block-float-right
@@ -252,7 +253,7 @@ Turntable related commands include:
     * - MOVETT( vpin, steps, activity ) 
       - Move a turntable the number of steps relative to home, and perform the activity (refer EX-Turntable documentation)
 
-See :doc:`EX-RAIL-summary` page for additional commands and additional information on these commands. 
+See the :doc:`/ex-rail/EX-RAIL-command-reference` for additional commands and additional information on these commands. 
 
 Sequence Flow / Flow Control Commands
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -376,7 +377,7 @@ Other Conditionals:
     * - IFTIMEOUT
       - Tests if “timed out” flag has been set by an ATTIMEOUT sensor reading attempt
 
-see :doc:`EX-RAIL-summary` page for additional information.
+see the :doc:`/ex-rail/EX-RAIL-command-reference` for additional information.
 
 Branching
 ~~~~~~~~~
@@ -410,7 +411,7 @@ Delays & Waits
 
 The timing of the execution of the commands in a sequence can be altered with 'Delay' or 'Wait' type commands. i.e. they don't happen immediately on completion of the previous command.
 
-There are a number of delay type commands that you can explore on the :doc:`EX-RAIL-summary` page.  We will look at just a few here.
+There are a number of delay type commands that you can explore in the :doc:`/ex-rail/EX-RAIL-command-reference`. We will look at just a few here.
 
 
 .. code-block:: cpp
@@ -457,7 +458,7 @@ There are a number of delay type commands that you can explore on the :doc:`EX-R
 Command Station Commands
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-There are a substantial number of commands that you can explore on the :doc:`EX-RAIL-summary` page.  We will look at just a few here.
+There are a substantial number of commands that you can explore in the :doc:`/ex-rail/EX-RAIL-command-reference`. We will look at just a few here.
 
 .. code-block:: cpp
 
@@ -482,7 +483,7 @@ There are a substantial number of commands that you can explore on the :doc:`EX-
     * -  READ_LOCO
       -  Read loco ID from Prog track
 
-See :doc:`EX-RAIL-summary` page for additional Command Station Commands and additional information on the commands shown here.
+See the :doc:`/ex-rail/EX-RAIL-command-reference` for additional Command Station Commands and additional information on the commands shown here.
 
 ----
 
@@ -500,7 +501,7 @@ Turnouts/Points defined in 'myAutomation.h' will still be visible to WiThrottle 
 
 A TURNOUT command sends DCC signals to a decoder attached to the track, a PIN_TURNOUT sends a "throw" or "close" (5V or 0V signal) to a pin on the Arduino, and a SERVO_TURNOUT sends an |I2C| serial command to a servo board connected to your servos.
  
-See the :doc:`/ex-rail/EX-RAIL-summary` page for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.
+See the :doc:`/ex-rail/EX-RAIL-command-reference` for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.
 
 Referencing Signals
 -------------------

@@ -1,16 +1,13 @@
-.. include:: /include/include-ex-cs.rst
-.. meta::
-   :keywords: EX-CommandStation Command Station EX-CS
-
 .. include:: ../../include/include.rst
 .. include:: ../../include/include-l2.rst
+.. include:: /include/include-ex-cs.rst
 |EX-CS-LOGO|
 
 ***************
 Getting Started
 ***************
 
-|conductor| 
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -65,7 +62,7 @@ To actually run your model railroad you will need a few items:
    :scale: 75%
    :align: right
 
-2. a **Throttle (Controller)** - Something to control your trains with.  |BR| Such as our |EX-WT|, or other apps like |JMRI|, |Engine Driver|, |wiThrottle|, etc.
+2. a **Throttle (Controller)** - Something to control your trains with.  |BR| Such as our |EX-WT|, or other apps like |JMRI|, |Engine Driver|, |WiThrottle|, etc.
 3. Power - The Arduino and the Motor shields need to be powered separately, so 
  
   - a **9-14v DC power supply** for the motor shield to the track, and 
@@ -78,7 +75,7 @@ To actually run your model railroad you will need a few items:
 Next Steps - Purchasing Parts
 =============================
 
-Click :doc:`here <purchasing>` or click the "next" button to see what you need to aquire to create your |EX-CS|.
+Click :doc:`here <purchasing>` or click the "next" button to see what you need to acquire to create your |EX-CS|.
 
 ----
 
@@ -95,3 +92,4 @@ Click :doc:`here <purchasing>` or click the "next" button to see what you need t
     controllers
     testing
     /support/ex-cs-troubleshooting
+    /support/wifi-at-version

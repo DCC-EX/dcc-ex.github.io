@@ -45,7 +45,7 @@
 .. |EX-IO-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-ioexpander.png
       :alt: EX-IOExpander
       :scale: 30%
-      :class: image-product-logo-float-right
+      :class: image-min-width-144
       :target: ../../ex-ioexpander/index.html
 ..
 .. |EX-BSC-LOGO-SMALL| image:: /_static/images/logos/product-logo-basestationclassic.png
@@ -59,6 +59,24 @@
       :scale: 30%
       :class: image-min-width-144
       :target: ../../ex-toolbox/index.html
+..
+.. |EX-MS-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-motorshield8874.png
+      :alt: EX-MotorShield8874
+      :scale: 30%
+      :class: image-min-width-144
+      :target: ../../reference/hardware/motorboards/ex-motor-shield-8874.html
+..
+.. |TRACKMANAGER-LOGO-SMALL| image:: /_static/images/logos/product-logo-trackmanager.png
+      :alt: DCC-EX TrackManager
+      :scale: 30%
+      :class: image-min-width-144
+      :target: ../../trackmanager/index.html
+..
+.. |NEW-IN-V5-LOGO-SMALL| image:: /_static/images/logos/new_in_version_5.png
+      :alt: EX-MotorShield8874
+      :scale: 30%
+      :class: image-min-width-144
+      :target: ../../news/posts/20230807.html
 ..
 .. ................................................
 ..
@@ -113,6 +131,18 @@
 
    <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../begin/levels.html#engineer">Engineer</a>
 ..
+.. ................................................
+..
+.. |support-button| raw:: html
+
+   <a href="../../support/index.html#contact-support-options" title="Request help or support"><img src="../../_static/images/buttons/support.png" style="height: 33px;" /></a>
+..
+.. |support-button-large| raw:: html
+
+   <a href="../../support/index.html#contact-support-options" title="Request help or support"><img src="../../_static/images/buttons/support.png" style="width: 10%; height: 10%;" /></a>
+..
+.. ................................................
+..
 .. |githublink-ex-turntable-button2| raw:: html
 
    <a href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../../_static/images/buttons/github-bug.png" style="width: 169px;" /></a>
@@ -127,7 +157,7 @@
 ..
 .. |githublink-ex-installer-button2| raw:: html
 
-   <a href="https://github.com/DCC-EX/exInstaller/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../../_static/images/buttons/github-bug.png" style="width: 169px;" /></a>
+   <a href="https://github.com/DCC-EX/EX-Installer/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../../_static/images/buttons/github-bug.png" style="width: 169px;" /></a>
 ..
 .. |githublink-ex-commandstation-button2| raw:: html
 

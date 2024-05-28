@@ -1,12 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-hardware.rst
 |EX-REF-LOGO|
 
 ***************************
 Supported Bluetooth Devices
 ***************************
 
-|tinkerer|
+|tinkerer| |engineer| |support-button|
 
 .. image:: /_static/images/bluetooth/bluetooth.png
   :alt: Bluetooth Logo

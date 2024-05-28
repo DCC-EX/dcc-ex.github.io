@@ -1,12 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-ex-tt.rst
 |EX-TT-LOGO|
 
 **********
 Purchasing
 **********
 
-|tinkerer| |githublink-ex-turntable-button2|
+|tinkerer| |engineer| |support-button| |githublink-ex-turntable-button2|
 
 .. sidebar:: 
 
@@ -17,10 +18,10 @@ Purchasing
 What you need for EX-Turntable
 ==============================
 
-* An |EX-CS| running the "add-turntable-controller" branch of `EX-CommandStation <https://github.com/DCC-EX/CommandStation-EX/tree/add-turntable-controller>`_ (this displays as version 4.0.2)
+* An |EX-CS| running version 5.0.0 or later
 * An Arduino microcontroller (tested on Nano V3, both old and new bootloader, an Uno R3 should also work)
 * A supported stepper motor driver and stepper motor (see list below)
-* A hall effect (or similar) sensor for homing, which needs to be digital/unipolar such as an A3144 or 44E (or equivalent)
+* A hall effect (or similar) sensor for homing, which needs to be digital/unipolar such as an A3144 or 44E (or equivalent), and a HC-020K optical sensor is also an appropriate alternative here
 * A suitable power supply - note that your chosen stepper driver/motor will dictate this, see note below
 * A prototyping shield is highly recommended, especially when using a Nano, and the pictured version is preferred over the screw terminal version
 * Dupont type wires to connect the components, male to female or female to female as required
@@ -88,6 +89,7 @@ The complete list of supported stepper drivers and motors:
 * ULN2003/28BYJ-48 (Default)
 * A4988/NEMA17
 * DRV8825/NEMA17
+* TMC2208/NEMA17
 
 Next Steps
 ==========

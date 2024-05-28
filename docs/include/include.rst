@@ -1,54 +1,70 @@
 .. meta::
-  :description: DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout.
-  :keywords: DCC DCC++ EX DCC++EX DCC-EX
+  :keywords: DCC-EX DCC DCC++ EX DCC++EX 
 ..
 .. |DCC-EX| raw:: html
 
-  <span style="font-weight: 600; font-family: Audiowide,Helvetica,Arial,sans-serif; color: #00353d; font-size: 110%; ">DCC-<span style="color: #00a3b9;">EX</span></span>
+  <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span>
 ..
 .. |EX-CS| raw:: html
 
-  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;CommandStation</span></span>
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>
 ..
 .. |EX-WT| raw:: html
 
-  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;WebThrottle</span></span>
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span>
 ..
 .. |EX-R| raw:: html
 
-  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;RAIL</span></span>
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span>
 ..
 .. |EX-I| raw:: html
    
-  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Installer</span></span>
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span>
 ..
 .. |EX-TT| raw:: html
 
-  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Turntable</span></span>
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span>
 ..
 .. |EX-FC| raw:: html
 
-  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;FastClock</span></span>
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;FastClock</span>
 ..
 .. |EX-DCCI| raw:: html
 
-  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;DCCInspector</span></span>
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;DCCInspector</span>
 ..
 .. |EX-IO| raw:: html
 
-  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;IOExpander</span></span>
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span>
 ..
 .. |EX-TB| raw:: html
 
-  <span style="font-weight: bold; color: #00a3b9; font-size: 110%;">EX<span style="color: #00353d;">&#8209;Toolbox</span></span>
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span>
+..
+.. |EX-MS| raw:: html
+
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span>
 ..
 .. |BSC| raw:: html
 
-  <span style="font-weight: bold; color: #00353d; font-size: 100%;">BaseStationClassic (DCC++)</span>
+  <span class="ex-suffix">BaseStationClassic (DCC++)</span>
+..
+.. |TM| raw:: html
+
+  <span class="ex-suffix">TrackManager</span>
 ..
 .. |br| raw:: html
 
   <br />
+..
+.. role:: dcc-ex-red
+.. role:: dcc-ex-red-bold
+.. role:: dcc-ex-red-bold-italic
+.. role:: dcc-ex-code
+..
+.. role:: dcc-ex-text-size-80pct
+.. role:: dcc-ex-text-size-60pct
+.. role:: dcc-ex-text-size-200pct
 ..
 .. |_| unicode:: 0xA0
   :trim:
@@ -64,6 +80,10 @@
 .. |NOT-IN-PROD-VERSION| raw:: html
    
   <span style="color:red">This feature is not available in the current 'Production' version</span>
+..
+.. |NEW-IN-V5| raw:: html
+
+  <span class="new-in-v5">New in version 5 </span>
 ..
 .. |DEPRECATED| raw:: html
    
@@ -118,6 +138,11 @@
       :scale: 40%
       :class: image-product-logo-float-right
 ..
+.. |EX-MS-LOGO| image:: /_static/images/logos/product-logo-ex-motorshield8874.png
+      :alt: EX-MotorShield8874
+      :scale: 40%
+      :class: image-product-logo-float-right
+..
 .. ................................................
 ..
 .. |EX-BP-LOGO| image:: /_static/images/logos/product-logo-bigpicture.png
@@ -165,6 +190,16 @@
       :scale: 40%
       :class: image-product-logo-float-right
 ..
+.. |TRACKMANAGER-LOGO| image:: /_static/images/logos/product-logo-trackmanager.png
+      :alt: DCC-EX Track Manager
+      :scale: 40%
+      :class: image-product-logo-float-right
+..
+.. |NATIVE-PROTOCOL_LIBRARY-LOGO| image:: /_static/images/logos/product-logo-native-protocol-library.png
+      :alt: DCC-EX Native Protocol Library
+      :scale: 40%
+      :class: image-product-logo-float-right
+..
 .. ................................................
 ..
 .. |EX-BP-LOGO-SMALL| image:: /_static/images/logos/product-logo-bigpicture.png
@@ -186,6 +221,10 @@
 
     :doc:`Engine Driver </throttles/software/engine-driver>`
 ..
+.. |ED| replace::
+
+    :doc:`Engine Driver </throttles/software/engine-driver>`
+..
 .. |wiThrottle| replace::
 
     :doc:`wiThrottle </throttles/software/withrottle>`
@@ -204,15 +243,39 @@
 ..
 .. |Access Point| replace::
 
-    :doc:`Access Point </reference/glossary>`
+    :doc:`Access Point (AP) </reference/glossary>`
 ..
 .. |Access Point Mode| replace::
 
-    :doc:`Access Point Mode </reference/glossary>`
+    :doc:`Access Point (AP) Mode </reference/glossary>`
 ..
 .. |Station Mode| replace::
 
-    :doc:`Station Mode </reference/glossary>`
+    :doc:`Station (STA) Mode  </reference/glossary>`
+..
+.. |Arduino IDE| replace::
+
+    :doc:`Arduino IDE </reference/glossary>`
+..
+.. |VSC| replace::
+
+    :doc:`Visual Studio Code (VSC) </reference/glossary>`
+..
+.. |DCC-EX Native Commands| replace::
+   
+    :doc:`DCC-EX Native Commands </reference/glossary>`
+..
+.. |DCC-EX Native Protocol| replace::
+   
+    :doc:`DCC-EX Native Protocol </reference/glossary>`
+..
+.. |hr-dashed| raw:: html
+
+   <hr class="hr-dashed" />
+..
+.. |hr-heavy| raw:: html
+
+   <hr class="hr-heavy" />
 ..
 .. ...............................................
 ..
@@ -234,7 +297,7 @@
 ..
 .. |githublink-ex-installer-button| raw:: html
 
-  <a href="https://github.com/DCC-EX/exInstaller/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 50%; height: 50%;" /></a>
+  <a href="https://github.com/DCC-EX/EX-Installer/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 50%; height: 50%;" /></a>
 ..
 .. |githublink-ex-commandstation-button| raw:: html
 

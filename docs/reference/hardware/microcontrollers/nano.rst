@@ -1,7 +1,8 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+.. include:: /include/include-hardware.rst
 |EX-CS-LOGO|
-   
+
 ******************
 Arduino Nano Setup
 ******************
@@ -20,11 +21,10 @@ The Arduino Nano is an Uno in disguise. It has the same processor, the same spee
    
 Validate none of the limitations of a Nano will prevent you using features you will need by reading through the section on :ref:`ex-commandstation/advanced-setup/index:microcontrollers`.
 
-.. figure:: /_static/images/microcontrollers/nano.jpg
+.. figure:: /_static/images/microcontrollers/nano.png
    :alt: Arduino Nano
    :scale: 60%
-   :align: center
-   
+
    Arduino Nano
 
 
@@ -58,19 +58,23 @@ Supported :doc:`ESP8266 WiFi Option </reference/hardware/wifi-boards>`
 Using the special Nano Motor Shield
 =====================================
 
-.. image:: /_static/images/motorboards/nano_gravitech.jpg
+.. Figure:: /_static/images/motorboards/nano_gravitech.png
    :alt: Gravitech Nano Motor Shield
    :scale: 20%
    :align: left
 
-.. image:: /_static/images/motorboards/nano_cheap_motor_shield.jpg
+   Gravitech Nano Motor Shield
+
+.. Figure:: /_static/images/motorboards/nano_cheap_motor_shield.png
    :alt: Nano Motor Shield Clone
    :scale: 70%
    :align: left
 
-.. rst-class:: clearer
+   Nano Motor Shield Clone
 
-The above image shows a Gravitech Nano Motor Shield on the left and a clone from China on the right. The image on the left shows a Nano (separately purchased) plugged into the board. Search "Nano Motor Shield" or "Nano-L298p". And remember to order a Nano from the same source or from someone else.
+|force-break|
+
+The above image shows a Gravitech Nano Motor Shield on the left, and a clone from China on the right. The image on the left shows a Nano (separately purchased) plugged into the board. Search "Nano Motor Shield" or "Nano-L298p". And remember to order a Nano from the same source or from someone else.
 
 The Gravitech is available from RobotShop and direct from Gravitech for $29 US plus shipping. The Chinese clone costs between $9 and $18 (shipping included) from sources like AliExpress, eBay, Amazon, etc.
 

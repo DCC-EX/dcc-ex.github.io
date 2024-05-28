@@ -1,12 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-hardware.rst
 |EX-REF-LOGO|
 
 ***********************
 Supported Motor Drivers
 ***********************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -19,23 +20,46 @@ Supported Motor Drivers
 
 If you have trouble finding a particular board from the list, try searching based on it's name or the type of chip on the board and the terms "H-Bridge" or "Motor Shield". There are often many places that sell these, especially the Chinese sites like AliExpress and Banggood.
 
-**TL;DR** (aka short version): We currently recommend the Arduino Motor Shield R3 or a supported clone board like the Deek-Robot.
+**TL;DR** (aka short version): We currently recommend the |DCC-EX| EX-MotorShield8874, and the Arduino Motor Shield R3 or a supported clone like the Deek-Robot.
 
-.. image:: /_static/images/deek_robot1_sm.jpg
+.. figure:: /_static/images/motorboards/ex_motorshield8874.png
+   :alt: DCC-EX EX-MotorShield8874 RevA
+   :scale: 15%
+
+   DCC-EX EX-MotorShield8874 RevA
+
+.. figure:: /_static/images/motorboards/deek-robot_motor_shield.png
    :alt: Deek Robot Motor Shield
-   :scale: 100%
+   :scale: 70%
+
+   Deek Robot Motor Shield
 
 .. note:: Where appropriate, we have used the terms "single" and "dual" to indicate on the non-shield type boards, which ones have just a single H-Bridge for one track and which ones have two. A single H-Bridge board will power your main track, but you will then need another board of some kind to connect to your programming track
 
 What is a Motor Controller?
 ============================
 
-A motor controller (aka shield, aka board) is just a high voltage, high current switch. While initially designed to power electric motors, we use it to create the DCC signal to the track in a clever misapplication of technology. Normally, a pulse width modulated (PWM) signal would be applied to a motor with the PWM pin to control speed and the direction pin would switch the voltage from positive to negative to control the motor spin direction. Instead, we send full DC track voltage to the PWM pin and switch the direction pin at the DCC frequency (around 8000 times a second) to generate the bi-polar square wave. In this way, we use the 5V DC (or 3.3V) microcontroller output to switch the voltage from separate 12-18V DC power supply connected to the motor controller, and create a pulse train signal of 1's and 0's that a mobile decoder can interpret as commands.
+A motor controller (aka 'motor shield', aka 'motor board') is just a high voltage, high current switch. While initially designed to power electric motors, we use it to create the DCC signal to the track in a clever misapplication of technology. Normally, a pulse width modulated (PWM) signal would be applied to a motor with the PWM pin to control speed and the direction pin would switch the voltage from positive to negative to control the motor spin direction. Instead, we send full DC track voltage to the PWM pin and switch the direction pin at the DCC frequency (around 8000 times a second) to generate the bi-polar square wave. In this way, we use the 5V DC (or 3.3V) microcontroller output to switch the voltage from separate 12-18V DC power supply connected to the motor controller, and create a pulse train signal of 1's and 0's that a mobile decoder can interpret as commands.
 
 Current list of boards
 =======================
 
-Below we outline the various details that we know of related to each of the different boards that we've either tested, or know to work based on user feedback.
+In this section we outline the various details that we know of related to each of the different boards that we've either tested, or know to work based on user feedback.
+
+TrackManager DC compatible boards
+---------------------------------
+
+.. warning:: 
+
+  There are specific pin and hardware requirements in order to support DC mode in |TM|. Use of any other board than this short list for DC mode is unsupported by the |DCC-EX| team.
+
+For users wishing to use the new |TM| DC feature, there are a very limited number of boards available for use, and only this list of boards is supported:
+
+- :doc:`/reference/hardware/motorboards/ex-motor-shield-8874`
+- :doc:`/reference/hardware/motorboards/arduino-motor-shield`
+- :doc:`/reference/hardware/motorboards/deek-robot-motor-shield`
+- :doc:`/reference/hardware/motorboards/flashtree-motor-shield`
+- :doc:`/reference/hardware/motorboards/diy-more-l298nh-motor-shield`
 
 Easy to use boards
 ------------------
@@ -45,6 +69,7 @@ Easy to use boards
 .. toctree::
     :maxdepth: 1
 
+    DCC-EX EX-MotorShield8874 - 5A [RECOMMENDED] </reference/hardware/motorboards/ex-motor-shield-8874>
     Arduino Motor Shield - 1.5A [RECOMMENDED] </reference/hardware/motorboards/arduino-motor-shield>
     Deek-Robot - 1.5A [RECOMMENDED] </reference/hardware/motorboards/deek-robot-motor-shield>
     Flashtree - 1.5A </reference/hardware/motorboards/flashtree-motor-shield>

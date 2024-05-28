@@ -1,10 +1,11 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-throttles.rst
 ********************************************
 Adding a Physical Dial/Knob to Engine Driver
 ********************************************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 While it is easy to use a BlueTooth gamepad with the |Engine Driver| app that doesn't allow for for a dial or slider.
 

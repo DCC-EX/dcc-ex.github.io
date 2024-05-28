@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-description.rst
 |donate-button|
 
 *************************
@@ -12,16 +13,13 @@ About Us - Meet the Team
     :depth: 1
     :local:
 
-Who is behind all this? And will they ever face justice? Who knows, but the 
-following is a list of those names associated with taking over the DCC++ 
-BaseStation Project, and rewriting/expanding it into "DCC++ EX" which has now become |DCC-EX|. 
+Who is behind all this? And will they ever face justice? Who knows, but the following is a list of those names associated with taking over Gregg Berman's original DCC++ BaseStation Project, and rewriting/expanding it into |EX-CS| and the wider |DCC-EX| project. 
 
-First, a special thanks to Gregg E. Berman, who had the original idea for a model 
-railroad Command Station using an Arduino Uno and a Motor Driver.
+First, a special thanks to Gregg E. Berman, who had the original idea for a model railroad Command Station using an Arduino Uno and a Motor Driver.
 
 You can seek us out here:
 
-* `DCC++ EX Discord Server <https://discord.gg/y2sB4Fp>`_
+* `DCC-EX Discord Server <https://discord.gg/y2sB4Fp>`_
 * `TrainBoard DCC++ Forum <https://www.trainboard.com/highball/index.php?forums/dcc.177/>`_
 
 *Names below in parentheses are screen names on TrainBoard and Discord*
@@ -67,6 +65,13 @@ Developers
 * Neil McKechnie -  Worcestershire, UK
 * Fred Decker - Holly Springs, NC, USA
 
+EX-Toolbox
+==========
+
+Developers
+
+* Peter Akers - Brisbane, QLD, Australia (flash62au)
+
 DCC++ Classic
 ==============
 
@@ -107,7 +112,7 @@ Hardware / Electronics
 * Harald Barth - Stockholm, Sweden (Haba)
 * Paul Antoine, Western Australia
 * Neil McKechnie -  Worcestershire, UK
-* Fred Decker - Holly Springs NC, USA
+* Fred Decker - Holly Springs, NC, USA
 * Herb Morton - Kingwood Texas, USA (Ash++)
 
 Documentation / Management
@@ -117,7 +122,7 @@ Documentation / Management
 * Keith Ledbetter - Chicago, Illinois, USA (Keith Ledbetter)
 * Kevin Smith - Rochester Hills, Michigan, USA (KC Smith)
 * Peter Cole - Brisbane, QLD, Australia (peteGSX)
-* Colin Grabham - Condobolin NSW Straya (Kebbin)
+* Colin Grabham - Condobolin, NSW, Straya (Kebbin)
 * Paul Antoine - Western Australia (Paul Antoine)
 
 Testing / Research / Support
@@ -134,18 +139,18 @@ Testing / Research / Support
 * Jack Regan - Callao, Mo, USA (Marada1)
 * Larry Dribin - (H0Guy, LarryD)
 * Henk Kruisbrink - UK (Henkk)
-* Colin Grabham - Condobolin NSW Straya (Kebbin)
+* Colin Grabham - Condobolin, NSW, Straya (Kebbin)
 
 Related Software
 ================
 
 Making sure this software works well with |EX-CS|
 
-* JMRI
+* |JMRI|
   
-  * M Steve Todd - USA
+  * M Steve Todd - USA (MSteveTodd)
 
-* Engine Driver (ED)
+* |Engine Driver| (ED)
   
-  * M Steve Todd - USA
+  * M Steve Todd - USA (MSteveTodd)
   * Peter Akers - Brisbane, QLD, Australia (flash62au)

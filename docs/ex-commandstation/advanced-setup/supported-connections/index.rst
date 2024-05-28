@@ -1,13 +1,13 @@
-.. include:: /include/include-ex-cs.rst
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+.. include:: /include/include-ex-cs.rst
 |EX-CS-LOGO|
 
 **************************
 Supported Connections
 **************************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 |EX-CS| supports multiple different connection types depending on the use case.
 

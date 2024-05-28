@@ -1,10 +1,11 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-***********
+.. include:: /include/include-throttles.rst
+**********
 WiThrottle
-***********
+**********
 
-|conductor|
+|conductor| |tinkerer| |engineer|
 
 .. sidebar:: 
 
@@ -23,7 +24,7 @@ Please visit their website: https://www.withrottle.com
 
 You can find it in the App Store: `WiThrottle <http://itunes.apple.com/app/id344172578>`_
 
-For more information more information about these protocols, see :doc:`WiThrottle Server, Web Server, DCC++ API Explained </throttles/protocols>`
+For more information more information about these protocols, see :doc:`WiThrottle Server, Web Server, DCC-EX Native Commands Explained </throttles/protocols>`
 
 .. _withrottle-features:
 
@@ -34,7 +35,6 @@ Features
 * Connects to JMRI
 * Connects to |EX-CS| if not using JMRI
 * Connects via WiFi
-* Read and Write CVs
 
 .. _withrottle-screenshots:
 
@@ -55,22 +55,22 @@ Requirements
 
 * A |EX-CS| (Mega based for WiFi)
 * An iOS Cell Phone or Tablet
-* A Wifi Shield (or other ESP8622 solution) if you want to connect using WiFi :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>`
+* A WiFi Shield (or other ESP8622 solution) if you want to connect using WiFi :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>`
 
 .. _withrottle-operation:
 
 Operation
 ==========
 
-To use Wifi, make sure you have a WiFi enabled |EX-CS| as described in the :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>` section.
+To use WiFi, make sure you have a WiFi enabled |EX-CS| as described in the :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>` section.
 
 * Open the network settings on your phone
 * Change to same network of the PC that JMRI is on
-* Start the |wiThrottle| App
-* |wiThrottle| will try to find the |wiThrottle Server| on the |EX-CS|
+* Start the |WiThrottle| App
+* |WiThrottle| will try to find the |WiThrottle Server| on the |EX-CS|
 * If you are using |Access Point Mode| 
 
-  * It should find the |wiThrottle Server| in |JMRI| and automatically connect to it
+  * It should find the |WiThrottle Server| in |JMRI| and automatically connect to it
 
 .. warning:: 
    :class: warning-float-right

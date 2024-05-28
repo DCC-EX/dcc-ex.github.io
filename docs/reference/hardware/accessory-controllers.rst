@@ -1,12 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-hardware.rst
 |EX-REF-LOGO|
 
-**********************
+*********************
 Accessory Controllers
-**********************
+*********************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 

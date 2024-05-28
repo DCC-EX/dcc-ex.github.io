@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+.. include:: /include/include-hardware.rst
 |EX-CS-LOGO|
 
 ************
@@ -73,12 +74,10 @@ Teensy 3.6 Specifications
 
 |EX-CS| will run on all these boards, however the following caveats apply:
 
-- Teensys are strictly 3.3V, so you have to be careful that anything connected to the GPIO ports is also 3.3V (see also :doc:`other 3.3v microcontrollers </under-development/microcontrollers>`)
+- Teensys are strictly 3.3V, so you have to be careful that anything connected to the GPIO ports is also 3.3V (see also :doc:`other 3.3v microcontrollers </reference/hardware/microcontrollers/microcontrollers>`)
 - Teensy 3.x models are all now considered "legacy" products by PCJR and marked "Not recommended for new designs or projects", with only Teensy 4.0/4.1 recommended by PCJR
 - Version 3.1, development versions 4.2.4 and beyond, and upcoming 5.x releases of |EX-CS| can compile for the Teensy models listed above, but have not been extensively tested
 - Teensy |I2C| peripheral uses the blocking Arduino Wire library, as there is no |DCC-EX| native non-blocking |I2C| driver for any of the Teensy range presently available, or planned. This will limit performance somewhat when using |I2C| peripherals attached to your Teensy.
 - Note that no further development and testing efforts by the core development team will be directed to Teensy models under the current :doc:`roadmap </about/roadmap>`
 
 The major downside to all Teensy models is that PJRC is a very small company so as such it simply doesn't have the resources or the staff of major manufacturers like Arduino, Espressif or ST Microelectronics.
-
-.. TODO:: `LOW - Hardware <https://github.com/DCC-EX/dcc-ex.github.io/issues/424>`_ - Add pinouts and motor shield wiring diagrams

@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-news.rst
 
 :blogpost: true
 :date: 9 March, 2023
@@ -27,5 +28,5 @@ With |EX-TB| you can perform:
 * CV Programming in the main track (Operation Mode)
 * Servo motor testing and adjustment
 * Sensor testing 
-* Current Meter (Only available when connected to EX-CommandStation version 4.2.20 and above.)
-* Track Manager (Only available when connected to EX-CommandStation version 4.2.7 and above.)
+* Current Meter (Only available when connected to EX-CommandStation version 5.0.0 and above.)
+* Track Manager (Only available when connected to EX-CommandStation version 5.0.0 and above.)

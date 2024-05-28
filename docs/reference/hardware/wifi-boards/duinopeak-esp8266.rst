@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+.. include:: /include/include-hardware.rst
 |EX-CS-LOGO|
 
 **************************************
@@ -18,9 +19,20 @@ This board is designed as an expansion/prototyping board as well as a WiFi board
 
 .. note:: This is just a carrier board for an ESP-01 or 01s. You will still need an ESP-01s to place onto this board. See the next section.
 
-.. figure:: /_static/images/assembly/duinopeak.jpg
+.. warning:: 
+  :class: warning-float-right
+
+   Please be aware that the Espressif firmware shipped with *Duinopeak ESP8266 WiFi Expansion* and *ESP-01 or ESP-01S* devices :dcc-ex-red-bold:`will probably NOT work` with |EX-CS| out of the box.
+
+   (Note: The recommended :doc:`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>` is now shipping with the correct firmware version and **will work** with |EX-CS| *without modification*).
+
+   This can be corrected, but is probably beyond Conductor level and requires additional hardware.  
+
+   See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
+
+.. figure:: /_static/images/wifi/duinopeak.png
    :alt: Duinopeak WiFi Board
-   :scale: 75%
+   :scale: 60%
 
    Duinopeak WiFi Board
 

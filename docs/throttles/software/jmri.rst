@@ -1,10 +1,11 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
-****
-JMRI
-****
+.. include:: /include/include-throttles.rst
+************************************
+JMRI (Java Model Railroad Interface)
+************************************
 
-|conductor|
+|conductor| |tinkerer| |engineer|
 
 .. sidebar:: 
 
@@ -12,7 +13,7 @@ JMRI
     :depth: 2
     :local:
 
-|JMRi| is quite a powerful suite of software applications, and can be as simple or as complex as you wish to make it.
+|JMRI| is quite a powerful suite of software applications, and can be as simple or as complex as you wish to make it.
 
 On this page, we will focus on utilising |JMRi| as a throttle only.
 
@@ -21,12 +22,12 @@ Connecting to your EX-CommandStation
 
 The first thing you need to do is connect your |EX-CS| to |JMRi|.
 
-If you haven't done so already, follow the instructions outlined in the `JMRi help page <https://www.jmri.org/help/en/html/hardware/dccpp/index.shtml>`_ to get connected.
+Follow these instructions outlined in the `JMRi help page <https://www.jmri.org/help/en/html/hardware/dcc-ex/index.shtml>`_ to get connected.
 
 Create a new throttle
 =====================
 
-Once you have your connection to |JMRi| configured, you can launch a new throttle using either the DecoderPro or PanelPro applications.
+Once you have your connection to |JMRI| configured, you can launch a new throttle using either the DecoderPro or PanelPro applications.
 
 DecoderPro
 ----------
@@ -60,7 +61,7 @@ To select and control a loco from here, you need to:
 * Ensure track power is turned on using the :guilabel:`Power` button at the top of the window, or selecting "Power On" from the "Power" menu
 * Type the address of your loco in the "Address Panel" then press the :guilabel:`Set` button
 * You can now use the throttle slider, forward, reverse, :guilabel:`Idle`, and :guilabel:`STOP!` buttons to control your loco
-* Use the buttons in the "Function Panel" to control your various loco funcions also
+* Use the buttons in the "Function Panel" to control your various loco functions also
 
 Here we show a loco at address 3 selected, with track power turned on, and running in a forward direction at 25% speed:
 

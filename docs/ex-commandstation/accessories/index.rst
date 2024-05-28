@@ -1,12 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-description.rst
 |EX-CS-LOGO|
 
 **********************************
 Adding and Controlling Accessories
 **********************************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 Once your |EX-CS| is up and running, you will likely want to add the ability to control accessory items such as turnouts/points, signals, and turntables, along with being able to receive input from various sensor types to know where trains are, when buttons on mimic panels are pushed, and so forth.
 
@@ -19,5 +20,5 @@ Read on through the following sections to understand which accessory items can b
     signals/index
     sensors/index
     inputs-outputs/index
-    /ex-turntable/index
     animation
+    turntables/index

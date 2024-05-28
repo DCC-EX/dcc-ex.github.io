@@ -1,12 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-hardware.rst
 |EX-REF-LOGO|
 
-**************************
+*************************
 Connecting a Servo Module
-**************************
+*************************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -16,9 +17,11 @@ Connecting a Servo Module
 
 To connect a servo module to |EX-CS|, you first need to get a module, based on the PCA9685 chip.
 
-.. image:: /_static/images/i2c/pca9685.jpg
+.. figure:: /_static/images/i2c/pca9685.png
    :alt: PCA9685 Servo Module
    :scale: 40%
+
+   PCA9685 Servo Module
 
 These are widely available from eBay, Amazon, etc. for a few dollars.
 
@@ -34,9 +37,11 @@ consume more current than the Arduino is able to supply, and so a separate 5V su
 
 Connections to the Arduino are made with four jumper wires (+5V power and GND, and SCL and SDA), as shown on the following diagram:
 
-.. image:: /_static/images/i2c/ArduinoMegaServo.png
-   :alt: PCA9685 Servo Module
+.. figure:: /_static/images/i2c/ArduinoMegaServo.png
+   :alt: Mega with PCA9685 Servo Module
    :scale: 30%
+
+   Mega with PCA9685 Servo Module
 
 In |EX-CS|, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.
 
@@ -50,16 +55,20 @@ Try `<D SERVO 100 450 3>` and the servo should move slowly back.
 
 You can use the servo to control turnouts, semaphore signals, engine shed doors, and other layout components, to make your layout more dynamic and exciting.  In the picture below, you can see a servo mounted below the baseboard with a piece of wire passing through a slot cut in the baseboard, to operate a turnout.
 
-.. image:: /_static/images/i2c/TurnoutServoMount.jpg
+.. figure:: /_static/images/i2c/TurnoutServoMount.jpg
    :alt: Servo mount to operate a turnout
    :scale: 60%
+
+   Servo mount to operate a turnout
 
 And in the next picture you can see a servo that operates a semaphore signal.  The signal, and its
 servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.
 
-.. image:: /_static/images/i2c/SemaphoreSignal.jpg
+.. figure:: /_static/images/i2c/SemaphoreSignal.jpg
    :alt: Servo mount to operate a Semaphore Signal
    :scale: 60%
+
+   Servo mount to operate a Semaphore Signal
 
 Using Servos with EX-RAIL
 ==========================
@@ -152,14 +161,48 @@ The SERVO is attached to VPin 101 (second control pin on first PCA9685), with a 
 
 This tells EX-RAIL that when the sensor at VPin 164 is activated, the lineside worker moves quickly back from the track for safety, and then after the sensor has been deactivated, he can leisurely move back to his working position (no one wants to rush back to work right?).
 
+
+Animation Servo with a Mimic Panel Push Button
+----------------------------------------------
+
+As per the |EX-R| reference, accessory animation servos are defined with the following syntax:
+
+.. code-block:: cpp
+
+   SERVO2(pin, active_angle, duration)  // For Animation Servo, Do Not Use for Turnouts
+
+The valid parameters are:
+
+- pin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.
+- position = The angle to which the servo will move when the servo is activated.
+- duration = time to move to the designated position in milliseconds ms: 10000 is 10sec for a person walking or crossing gate moving.
+
+An example definition for a servo connected to the fifth control pin 5 or vpin105 of the first PCA9685 connected to the CommandStation, using the duration profile for animation operation:
+
+Use SERVO2 function with Mega D35 pin for a panel button to operate animation accessory servo 'Railfan Walking'.
+
+.. code-block:: cpp
+
+   AUTOSTART
+   SEQUENCE(35)  // When panel button on Mega Dpin 35 is pressed alternate between the two positions taking 10 seconds
+   AFTER(35)
+    SERVO2(105, 490, 10000)  PRINT("Railfan Walking Back To Annex") // Walk Counter-Clockwise {Thrown}
+   AFTER(35)
+    SERVO2(105, 110, 10000)  PRINT("Railfan Walking To Train") // Walk Clockwise {Close}
+   FOLLOW(35)
+
+----
+
 Using a servo module for LEDs
 =============================
 
 Another use case for the PCA9685 is to drive LEDs using PWM to control the intensity of the LEDs. The intensity of the LEDs can vary from 0 (off) to 4095 (100%).
 
-.. image:: ../../_static/images/accessories/led.png
+.. figure:: ../../_static/images/accessories/led.png
    :alt: LED
    :scale: 60%
+
+   LED
 
 .. note:: 
 
@@ -168,7 +211,7 @@ Another use case for the PCA9685 is to drive LEDs using PWM to control the inten
 Connecting LEDs and setting intensity
 -------------------------------------
 
-LEDs can be connected with either the anode (postive) or cathode (negative) to the PWM pin of the PCA9685, and to set the required intensity for the LED, you will need to add a configuration setting to your "mySetup.h" file. Refer to :doc:`/ex-commandstation/advanced-setup/startup-config` for further information on this file.
+LEDs can be connected with either the anode (positive) or cathode (negative) to the PWM pin of the PCA9685, and to set the required intensity for the LED, you will need to add a configuration setting to your "mySetup.h" file. Refer to :doc:`/ex-commandstation/advanced-setup/startup-config` for further information on this file.
 
 If connecting the anode (positive) side of the LED to the PWM pin, the cathode (negative) side connects to the ground pin, and you do not need a current limiting resistor in this scenario.
 
@@ -182,7 +225,7 @@ You will need to add this line to "mySetup.h" for each LED you wish to configure
 
 The parameters required are:
 
-- vpin = The VPin the LED is connected to, eg. 101 for the second pin on the first PCA9685 servo module
+- vpin = The VPin the LED is connected to, e.g. 101 for the second pin on the first PCA9685 servo module
 - OnValue = The desired intensity (brightness) of the LED when turned on, with 0 being off, and 4095 being 100%
 - OffValue = The desired intensity (brightness) of the LED when turned off
 
@@ -249,7 +292,7 @@ There are three types of servos, standard or "Positional Rotation", "Continuous 
 **A Standard, positional rotation servo** allows a shaft to spin around a central axis to position something like an arm or disk at specific angles. A standard servo can be positioned between 0 and 180 degrees. An example is the SG90 9g Micro Servo
 
 
-**A Continuous Rotation Servo** can spin around a full circle continuously like a motor. Instead of providing an angular position that the servo should rotate to, the continuous rotation servo simply has a speed and direction, clockwise or counterclockwise.
+**A Continuous Rotation Servo** can spin around a full circle continuously like a motor. Instead of providing an angular position that the servo should rotate to, the continuous rotation servo simply has a speed and direction, clockwise or counter-clockwise.
 
 **Linear Servos** use a rack and pinion gear that converts rotary motion to linear motion. A linear servo works just like a Standard Servo and you can control its position along a straight line, forward and back in a similar way by giving it a position.
 

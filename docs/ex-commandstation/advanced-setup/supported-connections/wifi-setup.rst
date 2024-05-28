@@ -1,13 +1,13 @@
-.. include:: /include/include-ex-cs.rst
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+.. include:: /include/include-ex-cs.rst
 |EX-CS-LOGO|
 
 ***************
 WiFi Connection
 ***************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -42,13 +42,13 @@ For a video to help you, click below.
 Why Use WiFi?
 =============
 
-**BEFORE you purchase a Wifi card, please consider whether you actually need it:**
+**BEFORE you purchase a WiFi card, please consider whether you actually need it:**
 
 With the base Command Station (CS) consisting of just an Arduino Mega and an Arduino Motor Driver (no WiFi board), you must use a USB cable to connect to a computer to run |JMRI| or our |EX-WT|, or to connect to another controller. The controller (aka Throttle) is what sends commands to the Command Station to run your trains and control your accessories.
 
-If you intend to run trains from a PC or Raspberry Pi, either by entering <DCC++> commands, by using |EX-WT|, |JMRI|, Rocrail, or similar, then YOU DO NOT NEED WiFi ON THE Command Station. Save yourself some money, and a lot of hassle, by buying a longer USB cable (or a Wireless USB bridge (HC-12) if you prefer). Using Wifi (OR Ethernet) to talk between |JMRI| and CommandStation is complex, slow and functionally limited and is therefore NOT SUPPORTED. However, you can STILL use a wireless throttle with a |JMRI| setup. The computer or Pi you use to run your train software will already have WiFi capability, and you can connect through THAT instead of directly to the Command Station, while the Command Station gets its commands through the USB connection.
+If you intend to run trains from a PC or Raspberry Pi, either by entering |DCC-EX Native Commands|, by using |EX-WT|, |JMRI|, Rocrail, or similar, then YOU DO NOT NEED WiFi ON THE Command Station. Save yourself some money, and a lot of hassle, by buying a longer USB cable (or a Wireless USB bridge (HC-12) if you prefer). Using WiFi (OR Ethernet) to talk between |JMRI| and CommandStation is complex, slow and functionally limited and is therefore NOT SUPPORTED. However, you can STILL use a wireless throttle with a |JMRI| setup. The computer or Pi you use to run your train software will already have WiFi capability, and you can connect through THAT instead of directly to the Command Station, while the Command Station gets its commands through the USB connection.
 
-If you wish to disconnect your PC/Pi and run trains from your phone or tablet using ONLY |Engine Driver| (or other |WiThrottle Protocol| devices) connected directly to the |EX-CS|, then you will need Wifi, and will have to budget some setup and learning time.
+If you wish to disconnect your PC/Pi and run trains from your phone or tablet using ONLY |Engine Driver| (or other |WiThrottle Protocol| devices) connected directly to the |EX-CS|, then you will need WiFi, and will have to budget some setup and learning time.
 
 Compatible Boards
 =================
@@ -60,7 +60,15 @@ Most boards based on the ESP8266 should work with |EX-CS|. However, with all the
 * `Duinopeak ESP8266 WiFi Expansion Board (plus an ESP-01 or 01s) <https://usa.banggood.com/Duinopeak-ESP8266-ESP-01-WiFi-Expansion-Board-Shield-Without-ESP8266-Module-p-1391961.html?cur_warehouse=CN>`_
 * `ESP-01 or ESP-01S Board (This is not a shield. You will need to use jumpers) <https://www.amzn.com/B00O34AGSU/>`_
 
-Fore more boards you may be able to use, see the :doc:`WiFi Boards Section </reference/hardware/wifi-boards>`
+For more boards you may be able to use, see the :doc:`WiFi Boards Section </reference/hardware/wifi-boards>`
+
+.. warning:: 
+
+   While the recommended *Makerfabs ESP8266 WiFi Shield* is now shipping with the correct firmware version and **will work** with |EX-CS| *without modification*, please be aware that the Espressif firmware shipped with *Duinopeak ESP8266 WiFi Expansion* and *ESP-01 or ESP-01S* devices :dcc-ex-red-bold:`will probably NOT work` with |EX-CS| out of the box.
+
+   This can be corrected, but is probably beyond Conductor level and requires additional hardware.  
+
+   See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
 
 What you will need (for WiFi)
 =============================
@@ -83,10 +91,10 @@ What you will need (for WiFi)
 Supported Boards
 ================
 
-* :doc:`/reference/hardware/wifi-boards/makerfabs-esp8266`
-* :doc:`/reference/hardware/wifi-boards/duinopeak-esp8266`
-* :doc:`/reference/hardware/wifi-boards/esp-01`
-* :doc:`/reference/hardware/wifi-boards/mega-wifi`
+* :doc:`Makerfabs ESP8266 WiFi Shield (recommended) </reference/hardware/wifi-boards/makerfabs-esp8266>`
+* :doc:`Duinopeak ESP8266 WiFi Expansion Board </reference/hardware/wifi-boards/duinopeak-esp8266>`
+* :doc:`ESP-01 and ESP-01s </reference/hardware/wifi-boards/esp-01>`
+* :doc:`Mega+WiFi Combo Board </reference/hardware/wifi-boards/mega-wifi>`
 
 
 Install the Software
@@ -98,5 +106,5 @@ If you already have the Command Station software running and are just adding WiF
 
 If you are setting up your Command Station for the first time, or are making changes to the basic setup, navigate to :doc:`Command Station Downloads </download/ex-commandstation>` to load firmware onto the Command Station.
 
-.. note:: You may run into an ESP-01s board that has the wrong firmware on it. This is easy to test by connecting it and looking at the startup log for the CS in the serial monitor. If the board does not respond to AT commands, you will need to install new firmware on the ESP board. This is called "flashing". You can find how to do this, as well as some other interesting things in the `Geoff Bunza article on creating a signal only command station. <https://forum.mrhmag.com/post/sma42-socs-signal-only-command-station-for-dcc-wifi-control-direct-to-your-logo-12289064?pid=1332020138_>`_ .Skip to the "The ESP-01S - The Wifi Connection" section
+.. note:: You may run into an ESP-01s board that has the wrong firmware on it. This is easy to test by connecting it and looking at the startup log for the CS in the serial monitor. If the board does not respond to AT commands, you will need to install new firmware on the ESP board. This is called "flashing". You can find how to do this, as well as some other interesting things in the `Geoff Bunza article on creating a signal only command station. <https://forum.mrhmag.com/post/sma42-socs-signal-only-command-station-for-dcc-wifi-control-direct-to-your-logo-12289064?pid=1332020138_>`_ .Skip to the "The ESP-01S - The WiFi Connection" section
    

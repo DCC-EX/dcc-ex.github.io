@@ -1,14 +1,15 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-ex-bp.rst
 |EX-BP-LOGO|
 
 *********************************
 Stage 6 - Putting it all Together
 *********************************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
-.. sidebar:: 
+.. sidebar::
 
   .. contents:: On this page
     :depth: 2
@@ -47,14 +48,14 @@ This also means if there is a need to change a pin or object ID, you can simply 
 
 Further more, you can make radical changes such as moving from pin turnouts/points to servo turnouts/points, and only need to edit the defined objects and alias. Again, all your existing sequences, routes, etc. should remain unchanged.
 
-For more information on aliases, refer to :ref:`ex-rail/ex-rail-reference:aliases`.
+For more information on aliases, refer to :ref:`ex-rail/ex-rail-command-reference:aliases`.
 
 Turnouts/Points
 ===============
 
 Two turnouts/points are used in this first stage of our RMFT layout to allow trains to enter and exit the station siding, or continue along the main track.
 
-For further reading on turnouts/points, you can refer to the :ref:`ex-rail/ex-rail-reference:turnouts/points` section of the EX-RAIL reference and :ref:`reference/software/command-reference:defining (setting up) a turnout` in the DCC-EX Command reference.
+For further reading on turnouts/points, you can refer to the :ref:`ex-rail/ex-rail-command-reference:turnout/point objects - definition and control` section of the EX-RAIL reference and :ref:`reference/software/command-reference:defining (setting up) a turnout/point` in the DCC-EX Command reference.
 
 Turnout/Point definitions
 -------------------------
@@ -68,18 +69,18 @@ To define these as DCC accessory turnouts/points, turnout/points 1 will be at li
 
 Therefore, the DCC-EX command to define these in the serial console is as follows:
 
-.. code-block:: 
+.. code-block::
 
   <T 100 DCC 26 0>
   <T 101 DCC 26 1>
 
 In EX-RAIL, we would add these lines to myAutomation.h, with aliases defined:
 
-.. code-block:: 
+.. code-block::
 
   ALIAS(TRN1, 100)
   ALIAS(TRN2, 101)
-  
+
   TURNOUT(TRN1, 26, 0, "Station entry")
   TURNOUT(TRN2, 26, 1, "Station exit")
 
@@ -90,14 +91,14 @@ To define these same turnout/point IDs as pin turnouts/points instead, and using
 
 To define these in the serial console:
 
-.. code-block:: 
+.. code-block::
 
   <T 100 VPIN 22>
   <T 101 VPIN 23>
 
 In EX-RAIL, we would add these lines to myAutomation.h:
 
-.. code-block:: 
+.. code-block::
 
   ALIAS(TRN1, 100)
   ALIAS(TRN2, 101)
@@ -109,18 +110,18 @@ If we were instead to use an MCP23017 I/O expander, we would use Vpins instead o
 
 To define these in the serial console:
 
-.. code-block:: 
+.. code-block::
 
   <T 100 VPIN 164>
   <T 101 VPIN 165>
 
 And again, in myAutomation.h for EX-RAIL:
 
-.. code-block:: 
+.. code-block::
 
   ALIAS(TRN1, 100)
   ALIAS(TRN2, 101)
-  
+
   PIN_TURNOUT(TRN1, 164, "Station entry")
   PIN_TURNOUT(TRN2, 165, "Station exit")
 
@@ -129,7 +130,7 @@ Servo turnouts/points
 
 Finally, to define these same turnouts as servo based turnouts, these would be connected to a PCA9685 servo module, and our first module starts at Vpin ID 100.
 
-.. tip:: 
+.. tip::
 
   Remember! Servo angles will be unique to your layout, and probably even unique to individual turnouts, so be sure you read the blurb on :ref:`big-picture/stage3:tuning servo positions` and the :doc:`/reference/hardware/servo-module` page.
 
@@ -145,18 +146,18 @@ Throughout these pages, we will assume that the thrown servo position is 400, th
 
 Defining these in the serial console therefore would be:
 
-.. code-block:: 
+.. code-block::
 
   <T 100 SERVO 100 400 100 3>
   <T 101 SERVO 101 400 100 3>
 
 Again, in myAutomation.h this becomes:
 
-.. code-block:: 
+.. code-block::
 
   ALIAS(TRN1, 100)
   ALIAS(TRN2, 101)
-  
+
   SERVO_TURNOUT(TRN1, 100, 400, 100, Slow, "Station entry")
   SERVO_TURNOUT(TRN2, 101, 400, 100, Slow, "Station exit")
 
@@ -169,7 +170,7 @@ We don't need to explicitly define any sensor objects to work with EX-RAIL, so w
 
 To use pins directly on our Mega2560, we would start at pin 24 (we used pins 22/23 for turnouts):
 
-.. code-block:: 
+.. code-block::
 
   ALIAS(SNS1_TRN1_APP, 24)       // Sensor 1, approaching turnout 1
   ALIAS(SNS2_MAIN_TRN1_EX, 25)   // Sensor 2, on the main track exiting turnout 1
@@ -179,7 +180,7 @@ To use pins directly on our Mega2560, we would start at pin 24 (we used pins 22/
 
 Moving these to our first MCP23017 I/O expander, these would start at Vpin 166 (we used Vpins 164/165 for turnouts):
 
-.. code-block:: 
+.. code-block::
 
   ALIAS(SNS1_TRN1_APP, 166)       // Sensor 1, approaching turnout 1
   ALIAS(SNS2_MAIN_TRN1_EX, 167)   // Sensor 2, on the main track exiting turnout 1
@@ -199,7 +200,7 @@ To use pin based signals, we require three pins per signal, and therefore nine p
 
 To define pin based signals directly on the Mega2560 with aliases for the control pins:
 
-.. code-block:: 
+.. code-block::
 
   ALIAS(SIG1_TRN1_APP, 30)       // Signal 1, approaching turnout 1
   ALIAS(SIG2_TRN2_GO, 33)        // Signal 2, proceed beyond turnout 2
@@ -211,7 +212,7 @@ To define pin based signals directly on the Mega2560 with aliases for the contro
 
 Moving these again to an MCP23017 I/O expander, these would start at Vpin 172, however this also overlaps to a second I/O expander by one pin:
 
-.. code-block:: 
+.. code-block::
 
   ALIAS(SIG1_TRN1_APP, 172)      // Signal 1, approaching turnout 1
   ALIAS(SIG2_TRN2_GO, 175)       // Signal 2, proceed beyond turnout 2
@@ -226,7 +227,7 @@ Servo based signals
 
 To define servo based signals, these only require one Vpin per signal along with specifying the servo angle for the red, amber, and green positions.
 
-.. tip:: 
+.. tip::
 
   Remember! Servo angles will be unique to your layout, and probably even unique to individual signals, so be sure you read the blurb on :ref:`big-picture/stage3:tuning servo positions` and the :doc:`/reference/hardware/servo-module` page.
 
@@ -236,7 +237,7 @@ Allowing for servo based turnouts being used, we will start our signals from the
 
 .. collapse:: Click to show/hide the code
 
-    .. code-block:: 
+    .. code-block::
 
       ALIAS(SIG1_TRN1_APP, 102)       // Signal 1, approaching turnout 1
       ALIAS(SIG2_TRN2_GO, 103)        // Signal 2, proceed beyond turnout 2
@@ -260,7 +261,7 @@ Block 1 is the approach to turnout 1, and can be used to prevent a train from en
 
 We will use ID 1 for this, with an alias:
 
-.. code-block:: 
+.. code-block::
 
   ALIAS(BLK1_TRN1_APP, 1)
 
@@ -271,7 +272,7 @@ Block 2 consists of the section of the main track between turnouts 1 and 2, prov
 
 We will use ID 2 for this, with an alias:
 
-.. code-block:: 
+.. code-block::
 
   ALIAS(BLK2_MAIN_HOLD, 2)
 
@@ -282,7 +283,7 @@ Block 3 is for our station siding, ensuring no other trains can enter this block
 
 We will use ID 3 for this, with an alias:
 
-.. code-block:: 
+.. code-block::
 
   ALIAS(BLK3_STN, 3)
 
@@ -295,7 +296,7 @@ Note that block 4 on the diagram continues all the way to the beginning of block
 
 We will use ID 4 for this, with an alias:
 
-.. code-block:: 
+.. code-block::
 
   ALIAS(BLK4_TRN2_EX, 4)
 
@@ -330,7 +331,7 @@ If we omit that first ``DONE``, EX-RAIL would automatically execute ``ROUTE(1, "
 
 .. collapse:: Click to show/hide the code
 
-    .. code-block:: 
+    .. code-block::
 
       // Start up with turnouts closed and signals red
       CLOSE(TRN1)
@@ -347,7 +348,7 @@ If we omit that first ``DONE``, EX-RAIL would automatically execute ``ROUTE(1, "
 Route 1 - main track running
 ----------------------------
 
-The first route we publish for use is ``ROUTE(1, "Main track")`` which will appear in |WiThrottle Protocol| based apps (like |Engine Driver| and |wiThrottle|) with the description "Main track".
+The first route we publish for use is ``ROUTE(1, "Main track")`` which will appear in |WiThrottle Protocol| based apps (like |Engine Driver| and |WiThrottle|) with the description "Main track".
 
 Given we have closed our turnouts and set all our signals red in the startup sequence above, when selecting this route the first time, it will simply set signals 1 and 2 green, as the ``IFTHROWN()`` statements will evaluate as false and not execute the associated commands.
 
@@ -365,7 +366,7 @@ The route is completed with a ``DONE`` to tell EX-RAIL not to proceed any furthe
 
 .. collapse:: Click to show/hide the code
 
-    .. code-block:: 
+    .. code-block::
 
       ROUTE(1, "Main track")        // Select this route to just use the main track
         RED(SIG3_STN_EX)            // Set signal 3 red as it is not safe to exit the station siding
@@ -392,7 +393,7 @@ The route is completed with a ``DONE`` to tell EX-RAIL not to proceed any furthe
 Route 2 - enter and exit the station siding
 -------------------------------------------
 
-The second route we publish for use is ``ROUTE(2, "Stating siding")`` which will appear in |WiThrottle Protocol| based apps (like |Engine Driver| and |wiThrottle|)  with the description "Station siding".
+The second route we publish for use is ``ROUTE(2, "Stating siding")`` which will appear in |WiThrottle Protocol| based apps (like |Engine Driver| and |WiThrottle|)  with the description "Station siding".
 
 Counter to the main track route above, we use ``IFCLOSED()`` statements to evaluate if turnouts need to change or not from their current position. Therefore, if the first route we choose after startup is this one, both statements will evaluate true. The same will occur if we select our main track route.
 
@@ -408,7 +409,7 @@ The route is completed with a ``DONE`` to tell EX-RAIL not to proceed any furthe
 
 .. collapse:: Click to show/hide the code
 
-    .. code-block:: 
+    .. code-block::
 
       ROUTE(2, "Station siding")    // Select this route to use the station siding
         RED(SIG2_TRN2_GO)           // Set signal 2 red as it is not safe to proceed beyond turnout 2 on the main track
@@ -452,9 +453,9 @@ Virtual block logic
 
 As mentioned in the introduction, we can enable fully automated running of up to three trains on this layout by breaking it into four virtual blocks.
 
-.. note:: 
+.. note::
 
-  Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don't confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to :ref:`ex-rail/ex-rail-reference:blocks`.
+  Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don't confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to :ref:`ex-rail/ex-rail-command-reference:virtual block control`.
 
 When reading through the sections below on the logic, it helps to keep in mind the perspective of the engineer driving the train, rather than thinking of the complete layout. As the engineer, you need to ask yourself the question "what needs to be in place for me to safely drive this train to the desired destination?"
 
@@ -475,7 +476,7 @@ Once these activities have been done, we can tell our trains to start following 
 
 .. collapse:: Click to show/hide the code
 
-    .. code-block:: 
+    .. code-block::
 
       // Start up with turnouts closed and signals red
       CLOSE(TRN1)
@@ -502,7 +503,7 @@ Exiting block 1 - station entry or main track?
 
 In order to safely exit block 1, the first decision to be made is if the train will go straight through to continue on the main track, or if it will switch on to the station siding.
 
-Using the ``LATCH()`` command gives us a way to automatically alternate between the main track and the station siding. ``LATCH()`` simply sets the state of a pin (either real or virtual) which can then be tested by an ``IF()`` statement. In this particular case, we have defined pin 60 (alias "CHOOSE_BLK2") to be latched and unlatched, as this pin does not exist on the Mega2560, nor does it exist on any of our I/O expander boards. Further reading on ``LATCH()`` and ``UNLATCH()`` can be found in the :ref:`ex-rail/ex-rail-reference:sensors/inputs` section of the EX-RAIL reference.
+Using the ``LATCH()`` command gives us a way to automatically alternate between the main track and the station siding. ``LATCH()`` simply sets the state of a pin (either real or virtual) which can then be tested by an ``IF()`` statement. In this particular case, we have defined pin 60 (alias "CHOOSE_BLK2") to be latched and unlatched, as this pin does not exist on the Mega2560, nor does it exist on any of our I/O expander boards. Further reading on ``LATCH()`` and ``UNLATCH()`` can be found in the :ref:`ex-rail/ex-rail-command-reference:sensors/inputs - reading and responding` section of the EX-RAIL reference.
 
 When our CommandStation starts up, virtual pin 60 will not be set, and therefore evaluating the IF() statement ``IF(CHOOSE_BLK2)`` will return false, with our sequence then latching this virtual pin, meaning the next time this sequence is called, ``IF(CHOOSE_BLK2)`` will return true.
 
@@ -514,9 +515,11 @@ As a result of executing the ``LATCH(CHOOSE_BLK2)``, the next train navigating t
 
 .. collapse:: Click to show/hide the code
 
-  .. code-block:: 
+  .. code-block::
 
       // Sequence to exit block 1, and choose whether to go to the station or continue on main
+      ALIAS(CHOOSE_BLK2, 60)
+      
       SEQUENCE(BLK1_EXIT)
         IF(CHOOSE_BLK2)
           UNLATCH(CHOOSE_BLK2)
@@ -545,7 +548,7 @@ At this point, control of the train is handed over to the `moving from block 2 t
 
 .. collapse:: Click to show/hide the code
 
-  .. code-block:: 
+  .. code-block::
 
     // Sequence to go from block 1 to block 2
     SEQUENCE(BLK1_BLK2)
@@ -580,7 +583,7 @@ There is now a delay of 10 to 15 seconds while our passengers embark or disembar
 
 .. collapse:: Click to show/hide the code
 
-    .. code-block:: 
+    .. code-block::
 
       // Sequence to go from block 1 to block 3
       SEQUENCE(BLK1_BLK3)
@@ -611,7 +614,7 @@ There are no new concepts here compared with our previous virtual block sequence
 
 Once done, train control is over to the `moving from block 4 to block 1 - the speed run`_ sequence.
 
-.. note:: 
+.. note::
 
   Note that we start with train 2 occupying block 2, and train 3 occupying block 4 (both with a ``RESERVE()`` in place as part of our startup sequence) and therefore train 2 cannot proceed until train 3 has exited block 4.
 
@@ -621,7 +624,7 @@ Once done, train control is over to the `moving from block 4 to block 1 - the sp
 
 .. collapse:: Click to show/hide the code
 
-    .. code-block:: 
+    .. code-block::
 
       // Sequence to go from block 2 to block 4
       SEQUENCE(BLK2_BLK4)
@@ -652,7 +655,7 @@ Control is then handed over to the `moving from block 4 to block 1 - the speed r
 
 .. collapse:: Click to show/hide the code
 
-    .. code-block:: 
+    .. code-block::
 
       // Sequence to go from block 3 to block 4
       SEQUENCE(BLK3_BLK4)
@@ -683,7 +686,7 @@ Again, we start up with train 3 occupying block 4, and once train 1 has exited b
 
 .. collapse:: Click to show/hide the code
 
-    .. code-block:: 
+    .. code-block::
 
       // Sequence to move from block 4 back to block 1
       SEQUENCE(BLK4_BLK1)
@@ -732,4 +735,3 @@ Complete myAutomation.h examples
   Example 5 Full automation with turnouts & signals<stage6/example5>
   Example 6 Full automation with turnouts & signals<stage6/example6>
   Example 7 Full automation with turnouts & signals<stage6/example7>
-    

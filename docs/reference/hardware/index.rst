@@ -1,20 +1,22 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-hardware.rst
 |EX-REF-LOGO|
 
 ********
 Hardware
 ********
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. toctree::
     :maxdepth: 1
     
+    index-decoder
     wire-gauge
     power-supplies
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. toctree::
     :maxdepth: 1
@@ -27,4 +29,3 @@ Hardware
     bluetooth
     index-i2c
     accessory-controllers
-    index-decoder

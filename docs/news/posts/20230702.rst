@@ -1,0 +1,36 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+.. include:: /include/include-news.rst
+
+:blogpost: true
+:date: 2 July, 2023
+:author: peteGSX
+:category: News, Release
+:tags: ex-installer, news
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+DCC-EX has a new installer!
+===========================
+
+Yes, that's right, the |DCC-EX| team is announcing we have an updated |EX-I|!
+
+The previous version has been a welcome addition to the family and served many users well, however only caters for |EX-CS|, and has recently had issues for our Linux and macOS users, meaning it was time for a refresh.
+
+Our new installer has been written in Python with a view to being portable across as many operating systems as possible and continues to use the Arduino Command Line Interface (CLI) in the background to manage loading the |DCC-EX| software onto your Arduino device.
+
+Further to this, the new |EX-I| has been written in a way that will allow you to install our other Arduino based products with it in the future, including |EX-IO|, |EX-TT|, |EX-FC|, and |EX-DCCI|.
+
+You just need to download one file for either Windows, Linux, or macOS in order to get up and running with the new |EX-I|, and it will take care of downloading our software and managing your Arduino device. [1]_
+
+For instructions on how to get the new |EX-I| and how to use it, head over to the :doc:`/ex-installer/index` page.
+
+.. image:: /_static/images/installer/new-version.png
+  :alt: New version
+  :scale: 50%
+
+.. [1] For Windows users with generic or clone Arduino devices, you will still need to install suitable USB to serial drivers (e.g. CH340/341) as the Arduino CLI only provides drivers for genuine Arduino devices.

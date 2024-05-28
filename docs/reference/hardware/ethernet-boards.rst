@@ -1,12 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-hardware.rst
 |EX-REF-LOGO|
 
-****************
+***************
 Ethernet Boards
-****************
+***************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -22,8 +23,6 @@ To use Ethernet instead of WiFi, follow these simple steps:
 * Open your config.h file in your editor (like the Arduino IDE)
 * Uncomment the line ``"#define ENABLE_ETHERNET = true"`` by removing the "//" characters
 * Add "//" comment lines in front of ``"#define ENABLE_WIFI = true"`` (if it isn't already commented out).
-* Enter the SSID for your router by replacing "Your network name" with the name of your network in ``#define WIFI_SSID "Your network name"`` in between the quotes.
-* Enter the Password for your router by replacing "Your network passwd" with your password in the line:``#define WIFI_PASSWORD "Your network passwd"`` in between the quotes.
 
 
 .. toctree::
@@ -63,7 +62,7 @@ This is a micro Ethernet board no bigger than the RJ45 connector it is attached 
 Sunfounder Ethernet Shield
 ============================
 
-This board is tested and works. It is less expensive than the Arduino brand-name board and based on the Wiznet W5100 instead of the W5500.
+This board is tested and works. It is less expensive than the Arduino brand-name board and based on the Wiznet W5100 instead of the W5500. It must be the first shield in the stack because it uses the ICSP header pins.
 
 .. image:: ../../_static/images/ethernet/sunfounder_ethernet_shield.jpg
    :alt: Sunfounder Ethernet Shield

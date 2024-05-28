@@ -1,18 +1,31 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
-**************************************
+.. include:: /include/include-hardware.rst
+|EX-CS-LOGO|
+
+**************************
 YFRobot L298P Motor Shield
-**************************************
+**************************
 
 |conductor|
 
-This board is electrically the same, though a different layout than the Arduino motor shield. Often cheaper. Supports 2A per channel, but can deliver realistically 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan. **Do NOT confuse this with the DFRobot Motor Shield, which is not plug and play!**
+.. warning:: 
 
-.. image:: /_static/images/motorboards/yfrobot1.png
+   This board is **not** compatible with |TM| DC mode.
+
+This board is electrically similar, though a different layout than the Arduino motor shield and does not have a brake_pin feature. Often cheaper. Supports 2A per channel, but can deliver realistically 1.3 or maybe 1.5 Amps with an added heatsink and cooling fan. 
+
+The YFROBOT Motor Shield will Only run DCC waveform and will Not be able to run DC waveform with the new TrackManager features as this shield does not have a brake_pin.
+ 
+**Do NOT confuse this with the DFRobot Motor Shield, which is not plug and play!**
+
+.. figure:: /_static/images/motorboards/yfrobot1.png
    :alt: YFRobot L298P Motor Driver Shield
    :scale: 30%
 
-:doc:`Install the YFRobot Motor Shield (same as Deek-Robot) </ex-commandstation/get-started/assembly>`
+   YFRobot L298P Motor Driver Shield
+
+:doc:`Install the YFRobot Motor Shield (similar to Deek-Robot) </ex-commandstation/get-started/assembly>`
 
 **Remember to select YFROBOT_MOTOR_SHIELD in your config.h file or from the motor board dropdown if using EX-Installer**
 

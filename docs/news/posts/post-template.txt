@@ -1,8 +1,9 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-news.rst
 
 :blogpost: true
-:date: <date in format day month, year eg. 8 March, 2023>
+:date: <date in format day month, year e.g. 8 March, 2023>
 :author: <Your name, either Discord/GitHub username or real name>
 :category: <Refer to the doco for the category>
 :tags: <Refer to the doco for tags to use (comma separated list)>

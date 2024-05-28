@@ -1,16 +1,18 @@
+:orphan:
+
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-reference.rst
 |EX-REF-LOGO|
 
-**************
-DCC++ Commands
-**************
+**********************
+DCC-EX Native Commands
+**********************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. toctree::
     :maxdepth: 1
 
     command-reference
-    command-summary
     command-summary-consolidated

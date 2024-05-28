@@ -1,12 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-ex-r.rst
 |EX-R-LOGO|
 
 *******************
 Tips and Techniques
 *******************
 
-|tinkerer| |conductor|
+|tinkerer| |conductor| |support-button| 
 
 .. sidebar:: 
 
@@ -56,7 +57,7 @@ This is a simple substitution that lets you have readable names for things in yo
       THROW(COAL_YARD_TURNOUT)
       GREEN(COAL_YARD_SIGNAL_3)
 
-Refer to :ref:`ex-rail/ex-rail-reference:aliases` for more information.
+Refer to :ref:`ex-rail/ex-rail-command-reference:aliases` for more information.
 
 Alias names:
 
@@ -81,9 +82,9 @@ There are some rules that apply in this scenario:
 Some suggestions to get the most out of this:
 
 * Define everything that needs to happen on startup directly in myAutomation.h, before any other includes.
-* Have a specific file for your custom macros or commands (eg. myMacros.h) and include this before other includes.
-* Have a specific file for all your aliases (eg. myAliases.h).
-* Group other items logically according to their purpose, eg. myTurnouts.h to define all your turnouts, and myShuttle.h to define an automated shuttle sequence.
+* Have a specific file for your custom macros or commands (e.g. myMacros.h) and include this before other includes.
+* Have a specific file for all your aliases (e.g. myAliases.h).
+* Group other items logically according to their purpose, e.g. myTurnouts.h to define all your turnouts, and myShuttle.h to define an automated shuttle sequence.
 * Remember the rules and ensure files are included in the correct order to prevent dependency issues, which will lead to errors when compiling and uploading.
 
 For example:
@@ -123,11 +124,11 @@ For example:
    DONE
 
    ONCLOSE(9101)                                // When closing the virtual turnout:
-   GREEN(MainlineSignal)                        // Set a green signal.
+   RED(ShuntingSignal)                        // Set a green signal.
    DELAY(5000)                                  // Wait for the signalman to move to the turnout lever.
    CLOSE(101)                                   // Close the real turnout.
    DELAY(7500)                                  // Wait again for the signalman to move to the other signal lever.
-   RED(ShuntingSignal)                          // Set a red signal.
+   GREEN(MainlineSignal)                          // Set a red signal.
    DONE
 
 A virtual turnout may be used in any circumstance where the turnout process is handled in EX-RAIL rather than the normal process, for example a solenoid turnout requiring a pin or relay to be manipulated.
@@ -137,7 +138,7 @@ Make your own EX-RAIL macro or command
 
 One of the cunning features of EX-RAIL is enabling users to define macros, or what is effectively your very own EX-RAIL command.
 
-To do this, you're actually making use of some C++ code in addition to the clever programming in DCC++ EX.
+To do this, you're actually making use of some C++ code in addition to the clever programming in DCC-EX.
 
 (Yes, we just called ourselves cunning and clever. Our talent is superseded only by our modesty ;) )
 

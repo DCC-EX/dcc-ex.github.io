@@ -1,5 +1,6 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-description.rst
 ****************
 Related Projects
 ****************
@@ -13,3 +14,8 @@ This page holds related projects by some of our team members and users. If you h
     /throttles/hardware/minithrottle
     /throttles/hardware/witcontroller
     /throttles/hardware/streamdeck
+
+    DCC-EX Deadrail Command Station
+    -------------------------------
+    promini_air_tx_wcs ProMini-Air-Controller O-Scale
+    

@@ -1,12 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-hardware.rst
 |EX-REF-LOGO|
 
 ***********************
 List of Tested Decoders
 ***********************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 We often receive reports on DCC multifunction decoders via Discord and our support channels as well as requests for help when things don't quite work "out of the box".
 
@@ -45,7 +46,7 @@ If you wish to add to this list, please fill out the DCC Decoder Feedback form a
   * 3/3 - Works exactly as expected.
 * Comments - Any other relevant information discovered during testing or support tickets.
 
-Note to manufacturers: This list is not designed in any way to disparage or favour specific manufacturers, and is simply a factual observation of what the DCC++ EX team have noted while helping people get up and running with various DCC decoders.
+Note to manufacturers: This list is not designed in any way to disparage or favour specific manufacturers, and is simply a factual observation of what the DCC-EX team have noted while helping people get up and running with various DCC decoders.
 
 .. list-table:: Decoder List
   :widths: auto
@@ -98,7 +99,7 @@ Note to manufacturers: This list is not designed in any way to disparage or favo
     - Screw terminal
     - Default
     - 3/3
-    - I can recommend them, because they are very simple, easy to use, small (4cm x 7cm(4-out) / 11cm(8-out)) and in comparison to the ones from Maerklin very cheap.
+    - I can recommend them, because they are very simple, easy to use, small (4cm x 7cm(4-out) / 11cm(8-out)) and in comparison to the ones from Märklin very cheap.
   * - Märklin
     - MSD3/MLD3
     - MFS/MF
@@ -106,7 +107,7 @@ Note to manufacturers: This list is not designed in any way to disparage or favo
     - Märklin standard
     - Default
     - 3/3
-    - No difficulties. On some decoders I have disabled all protocols but DCC, because I previously used a Maerklin MobileStation they connected to automatically via mfx, but the decoders are also working perfecty with all enabled. If you should encounter problems, take a look at the CV reference section in the manual. Protocols other than DCC can be disabled with CV50.
+    - No difficulties. On some decoders I have disabled all protocols but DCC, because I previously used a Märklin MobileStation they connected to automatically via mfx, but the decoders are also working perfectly with all enabled. If you should encounter problems, take a look at the CV reference section in the manual. Protocols other than DCC can be disabled with CV50.
   * - Bachmann
     - 4 Function decoder (36-550)
     - MF
@@ -122,7 +123,7 @@ Note to manufacturers: This list is not designed in any way to disparage or favo
     - N/A (bare wires)
     - Default
     - 3
-    - Works perfectly, was my first decoder testet with DCC++EX. Reported it because I couldn't find this decoder in the list yet.
+    - Works perfectly, was my first decoder tested with DCC++EX. Reported it because I couldn't find this decoder in the list yet.
   * - Digitrax
     - DH166D
     - MF
@@ -147,3 +148,19 @@ Note to manufacturers: This list is not designed in any way to disparage or favo
     - Default
     - 3
     - Worked as expected. This is in the powered A unit that complements the unpowered B unit.
+  * - ESU
+    - Lokpilot 4 21MTC
+    - MF
+    - Unknown
+    - 21MTC
+    - Default
+    - 3
+    - Worked as expected out of the box. CV setup easily via programming track.
+  * - ESU
+    - Lokpilot 5 59610
+    - MF
+    - Unknown
+    - NEM652
+    - Default
+    - 3
+    - As expected no problems connecting to DCC-EX CS. Biggest advantage with this decoder is multi-format. DCC, MM, M4 (mfx), DC and AC analogue (same feedback from 2 users).

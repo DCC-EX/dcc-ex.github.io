@@ -1,13 +1,13 @@
-.. include:: /include/include-ex-cs.rst
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+.. include:: /include/include-ex-cs.rst
 |EX-CS-LOGO|
 
 ***********************
 Direct Connection (USB)
 ***********************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 Connection Type: Direct to Command Station
 ==========================================

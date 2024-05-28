@@ -1,10 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-description.rst
+|EX-REF-LOGO|
+
 *************************
 Using a Serial Monitor
 *************************
 
-|tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -15,7 +18,7 @@ Using a Serial Monitor
 What is a Serial Monitor and Why Do I Need One?
 ================================================
 
-A Serial Monitor is another name for a "terminal" program. It is software that runs on your computer or phone and connects to a serial port, like the USB connector on an Arduino, and lets you interact with your Command Station. The Arduino IDE has one built in, which makes it a bit of a "Swiss Army Knife" in that it provides a way to upload software to your Command Station, and connect to it to view logs and send manual commands. If anything goes wrong with the CS, we will ask you to check the startup log with a Serial Monitor. With a Serial Monitor you can:
+A Serial Monitor is another name for a "terminal" program. It is software that runs on your computer or phone and connects to a serial port, like the USB connector on an Arduino, and lets you interact with your Command Station. The Arduino IDE has one built in as does our very own |EX-I|, which makes it a bit of a "Swiss Army Knife" in that it provides a way to upload software to your Command Station, and connect to it to view logs and send manual commands. If anything goes wrong with the CS, we will ask you to check the startup log with a Serial Monitor. With a Serial Monitor you can:
 
 * Test your Command Station
 * View startup and other diagnostic logs to fix issues or help us support you
@@ -27,6 +30,13 @@ A Serial Monitor is another name for a "terminal" program. It is software that r
 * Program CVs without the need for any other software
 
 If you know how to use a terminal program it is as simple as connecting your device to the Command Station, opening a session and selecting the right baud rate (115200) and line endings (Carriage Return and Line Feed). For the rest of us, we will include detailed instructions on how to use a computer or a phone app to connect to your Command Station.
+
+Connect with EX-Installer and Device Monitor
+============================================
+
+This is the simplest way to connect to the serial console of your device, and allows for a simple way to share your startup or serial console logs with the |DCC-EX| team.
+
+For details, refer to :ref:`ex-installer/testing:using the ex-installer device monitor`.
 
 Connect with the Arduino Serial Monitor
 ========================================
@@ -58,7 +68,7 @@ Start the Arduino IDE. You should see something like this:
 Select the Correct COM Port
 ----------------------------
 
-Select "Port" and find the port on your computer that recognizes the Arduino. If you don't see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here `Drivers for the CH340 <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
+Select "Port" and find the port on your computer that recognises the Arduino. If you don't see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here `Drivers for the CH340 <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
 
 .. figure:: /_static/images/arduino-ide/board_port_mega.jpg
    :alt: Select the COM Port

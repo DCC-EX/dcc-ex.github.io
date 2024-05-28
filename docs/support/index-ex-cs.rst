@@ -1,12 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-description.rst
 |EX-SUPPORT-LOGO|
    
 ******************
 EX-CommandStation
 ******************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 
 Frequently Asked Questions and Troubleshooting

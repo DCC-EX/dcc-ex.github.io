@@ -1,10 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-reference.rst
+|EX-REF-LOGO|
+
 ***********************
 Programming Locos (CVs)
 ***********************
 
-|conductor| |tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 Requirements
 =============
@@ -15,6 +18,12 @@ Requirements
 
 .. NOTE:: The default EX-CommandStation with a dual output Arduino Motor shield has everything you need, a main track output, a programming track output, and a configuration that handles current sense for programming a loco on output B and current sense for overlimit detection on output A.
 
+There are a number of ways you can program decoders with the |EX-CS| including:
+
+* `JMRI DecoderPro`_
+* `Programming CVs with EX-Toolbox app`_
+* `Programming CVs with Engine Driver app`_ 
+
 JMRI DecoderPro
 ===============
 
@@ -24,7 +33,7 @@ For a quick intro to setting up roster entries in |JMRi| and changing basic item
 
 When launching |JMRi| DecoderPro, you will see your list of roster entries by default.
 
-To make changes to your decoder settings, select the loco you wish to program, then click the :guilabel:`Program` button to lauch the programming dialog.
+To make changes to your decoder settings, select the loco you wish to program, then click the :guilabel:`Program` button to launch the programming dialog.
 
 * To set basic items such as the decoder address and speed steps, use the options on the "Basic" tab
 * For options such as acceleration and deceleration, use the "Motor" tab, noting there is also a "Momentum" tab for more control over inertia settings
@@ -46,3 +55,13 @@ DCC-EX & JMRI DecoderPro Getting Started Guide
 ----------------------------------------------
 
 To assist you in setting up a DCC-EX & JMRI DecoderPro Programming Station please download and follow the :ref:`reference/downloads/documents:comprehensive dcc-ex & jmri decoderpro getting started guide pdf`.
+
+Programming CVs with EX-Toolbox app
+===================================
+
+Refer to the :ref:`EX-Toolbox page <ex-toolbox/using:cv programming>` for information on how to program CVs with EX-Toolbox app.
+
+Programming CVs with Engine Driver app
+======================================
+
+.. todo:: Programming CVs with Engine Driver

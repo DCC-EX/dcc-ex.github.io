@@ -1,13 +1,13 @@
-.. include:: /include/include-ex-cs.rst
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+.. include:: /include/include-ex-cs.rst
 |EX-CS-LOGO|
 
 *******************
 WiFi Configuration
 *******************
 
-|tinkerer| |engineer|
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar:: 
 
@@ -37,6 +37,17 @@ For a video, click `Setting up WiFi <https://www.youtube.com/watch?v=N6TWR7fIl0A
 
    If using a separate ESP instead of a shield, this becomes tinkerer level.
 
+.. warning:: 
+   :class: warning-float-right
+
+   Please be aware that the Espressif firmware shipped with *Duinopeak ESP8266 WiFi Expansion* and *ESP-01 or ESP-01S* devices :dcc-ex-red-bold:`will probably NOT work` with |EX-CS| out of the box.
+
+   (Note: The recommended :doc:`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>` is now shipping with the correct firmware version and **will work** with |EX-CS| *without modification*).
+
+   This can be corrected, but is probably beyond Conductor level and requires additional hardware.  
+
+   See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
+
 Wireless Connections
 =====================
 
@@ -57,16 +68,16 @@ Everything on this page seems to come in twos! You have two options for connecti
 * Connect directly to |EX-CS| using WiFi or Bluetooth (|JMRI| not required but optional)
 * Connect to the |EX-CS| through |JMRI| with the USB cable, and connect a |WiThrottle Protocol| compatible throttle to JMRI's |WiThrottle Server| via WiFi
 
-If you don't need |JMRI|, or just want to connect your wireless throttle (controller) directly to the |EX-CS|, then you connect to the Command Station using a WiFi or Bluetooth device that speaks either the <DCC++> command language, or the |WiThrottle Protocol| command language. 
+If you don't need |JMRI|, or just want to connect your wireless throttle (controller) directly to the |EX-CS|, then you connect to the Command Station using a WiFi or Bluetooth device that speaks either the |DCC-EX Native Commands|, or the |WiThrottle Protocol| command language. 
 
-For example, |Engine Driver| uses the |WiThrottle Protocol|, so it can connect either directly to the |EX-CS| via WiFi, or indirectly through the JMRI computer that has WiFi and its own |WiThrottle Server|. DCCpp CAB can connect directly to the |EX-CS| via WiFi or Bluetooth, and sends native <DCC++> commands.
+For example, |Engine Driver| uses the |WiThrottle Protocol|, so it can connect either directly to the |EX-CS| via WiFi, or indirectly through the JMRI computer that has WiFi and its own |WiThrottle Server|. DCCpp CAB can connect directly to the |EX-CS| via WiFi or Bluetooth, and sends |DCC-EX Native Commands|.
 
 What's a "WiThrottle Server"?
 ==============================
 
 |WiThrottle| stands for "WiFi Throttle", and a "|WiThrottle Server|" is just software running on your |JMRI| computer or on the |EX-CS| that communicates using the |WiThrottle Protocol|. It's called a "Server" because it allows you to connect to it and it "serves", or services, requests from another application. That application is called a "Client". So your throttle in this case is the client.
 
-|WiThrottle Protocol| itself is a standard for how WiFi throttles can communicate with Command Stations, much like the DCC standard is a standard for how data packets communicate with decoders. What this means for you, is that any device that is |WiThrottle Protocol| compatible should work with the |EX-CS|. Also, any device that sends <DCC++> commands should work with |EX-CS|.
+|WiThrottle Protocol| itself is a standard for how WiFi throttles can communicate with Command Stations, much like the DCC standard is a standard for how data packets communicate with decoders. What this means for you, is that any device that is |WiThrottle Protocol| compatible should work with the |EX-CS|. Also, any device that sends |DCC-EX Native Commands| should work with |EX-CS|.
 
 Access Point Mode vs. Station Mode
 ===================================
@@ -110,7 +121,7 @@ Access Point Mode (Default - No Configuration Necessary)
 
 To use the default |Access Point mode|, you don't have to do anything other than connect an ESP8266 board as described in :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`. 
 
-That's it! If there is no previously configured network in range, or the WiFi setup in your config.h file is still unconfigured, the default for |EX-CS| is AP mode. We find your WiFi board, no matter which of the extra serial ports you attached it to. |EX-CS| then accepts commands from WiFi throttles in either |WiThrottle Protocol| or <DCC++> format.
+That's it! If there is no previously configured network in range, or the WiFi setup in your config.h file is still unconfigured, the default for |EX-CS| is AP mode. We find your WiFi board, no matter which of the extra serial ports you attached it to. |EX-CS| then accepts commands from WiFi throttles in either |WiThrottle Protocol| or |DCC-EX Native Commands|.
 
 To see other configuration options you can set in your config.h file, see `WiFi Config Options`_ below.
 

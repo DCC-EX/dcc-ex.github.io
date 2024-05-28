@@ -1,10 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+.. include:: /include/include-description.rst
 |EX-CS-LOGO|
 
 ***************
 Turnouts/points
 ***************
+
+|conductor| |tinkerer| |engineer| |support-button|
 
 Turnouts or points are an integral part of almost every layout in operation, and with the variety of turnout/point types and control options available, these require their own special section to help our users understand which is the best option for their layout and level of comfort.
 

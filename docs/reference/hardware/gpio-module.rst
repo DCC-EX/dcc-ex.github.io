@@ -1,12 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-hardware.rst
 |EX-REF-LOGO|
 
-***************************
+*************************
 I2C GPIO Expander Modules
-***************************
+*************************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -36,9 +37,11 @@ be configured as an input.
 A typical GPIO Expander, for which |EX-CS| is pre-configured, is the MCP23017.  An 
 example board (from PiHut) is shown here.
 
-.. image:: /_static/images/i2c/MCP23017_module.jpg
+.. figure:: /_static/images/i2c/MCP23017_module.jpg
     :alt: MCP23017 Module (PiHut)
     :scale: 80%
+
+    MCP23017 Module (PiHut)
 
 It has a Grove connector on the bottom-left side, for which a compatible converter cable is provided.  It also has 
 five connector pads on the top-right side, to which pins or wires may be soldered.
@@ -46,9 +49,11 @@ Along the top-left and bottom-right edges are the sixteen GPIO pins, and two Vcc
 
 Here is another module, from DFRobot:
 
-.. image:: /_static/images/i2c/DFrobot_mcp23017.jpg
+.. figure:: /_static/images/i2c/DFrobot_mcp23017.jpg
     :alt: MCP23017 Module (DFRobot)
     :scale: 80%
+
+    MCP23017 Module (DFRobot)
 
 This module has a row of three pin headers associated with each I/O pin; this allows
 each sensor to have its own GND, VCC and signal pin connection, so we can use three-way 
@@ -57,9 +62,11 @@ ribbon connectors for each sensor or output.  At the far left of the board are t
 
 An example of circuit connections for a module is shown below:
 
-.. image:: /_static/images/i2c/ArduinoMega_MCP23017.png
+.. figure:: /_static/images/i2c/ArduinoMega_MCP23017.png
     :alt: MCP23017 module connections
     :scale: 30%
+
+    MCP23017 module connections
 
 This diagram also shows an infra-red sensor (3-pin device) connected to GPIO0 of the 
 MCP23017, and a push-button (2-pin) connected to GPIO1.  
@@ -67,9 +74,11 @@ MCP23017, and a push-button (2-pin) connected to GPIO1.
 Also generally available is the MCP23017 in IC form (28-pin DIL package).  This can be mounted on 
 a breadboard for use, as shown below, or on stripboard if you want a more permanent solution.
 
-.. image:: /_static/images/i2c/ArduinoMega_MCP23017_breadboard.png
+.. figure:: /_static/images/i2c/ArduinoMega_MCP23017_breadboard.png
     :alt: MCP23017 on a Breadboard
     :scale: 30%
+
+    MCP23017 on a Breadboard
  
 Pins 15-17 of the MCP23017 allow selection of the |I2C| address.  If all three pins are connected
 to ground (as shown in the diagram with cyan wires) then the address will be 0x20.

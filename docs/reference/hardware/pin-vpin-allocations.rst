@@ -1,12 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
+.. include:: /include/include-hardware.rst
 |EX-REF-LOGO|
 
 ************************************************
 Default Pin/VPin Allocations and Recommendations
 ************************************************
 
-|conductor| |tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -14,7 +15,7 @@ Default Pin/VPin Allocations and Recommendations
     :depth: 2
     :local:
 
-On this page, we aim to outline and summarise the various default and recommended pins (and vpins for I/O expanders) for use with various input and output devices for our primary suported microcontrollers and I/O devices and expanders. We will also include the default |I2C| addresses where appropriate.
+On this page, we aim to outline and summarise the various default and recommended pins (and vpins for I/O expanders) for use with various input and output devices for our primary supported microcontrollers and I/O devices and expanders. We will also include the default |I2C| addresses where appropriate.
 
 Microcontrollers
 ================
@@ -56,11 +57,11 @@ Arduino Mega2560
   * - Pin(s)
     - Details
   * - SDA/SCL (20/21)
-    - |I2C| connection for use with |I2C| displays, I/O expanders, etc.
+    - |I2C| connection for use with |I2C| displays, I/O expanders, etc., **not for general I/O**
   * - SDA/SCL (near USB)
-    - |I2C| connection for use with |I2C| displays, I/O expanders, etc.
+    - |I2C| connection for use with |I2C| displays, I/O expanders, etc., **not for general I/O**
   * - Tx1/Rx1/Tx2/Rx2/Tx3/Rx3
-    - Additional serial ports available for use
+    - Additional serial ports available for use, **not for general I/O**
   * - A8 - A15
     - Analogue I/O pins available for use
   * - 2
@@ -102,9 +103,9 @@ Arduino Uno
   * - 3 - 4
     - Digital I/O pins commonly used by motor shields or Ethernet shields
   * - 10 - 13
-    - Digial I/O pins commonly used by motor shields
+    - Digital I/O pins commonly used by motor shields
 
-.. list-table:: Mega2560 Pins to use
+.. list-table:: Uno Pins to use
   :widths: auto
   :header-rows: 1
   :class: command-table
@@ -112,13 +113,13 @@ Arduino Uno
   * - Pin(s)
     - Details
   * - SDA/SCL (A4/A5)
-    - |I2C| connection for use with |I2C| displays, I/O expanders, etc.
+    - |I2C| connection for use with |I2C| displays, I/O expanders, etc., **not for general I/O**
   * - SDA/SCL (near USB)
-    - |I2C| connection for use with |I2C| displays, I/O expanders, etc.
+    - |I2C| connection for use with |I2C| displays, I/O expanders, etc., **not for general I/O**
   * - 2
     - Digital I/O pin available for use
 
-.. list-table:: Mega2560 Pins to use with caution
+.. list-table:: Uno Pins to use with caution
   :widths: auto
   :header-rows: 1
   :class: command-table
@@ -148,7 +149,7 @@ MCP23017 digital I/O expander
 
 MCP23017 I/O expanders have 16 digital I/O pins and 8 available |I2C| addresses from 0x20 to 0x27.
 
-The device driver name is "IO_MCP23017.h", however this is included by default and does not need to be added to "myHal.cpp".
+The device driver name is "IO_MCP23017.h", however this is included by default.
 
 Two devices are defined by default.
 
@@ -165,7 +166,7 @@ Refer to :ref:`reference/developers/hal-config:mcp23017 modules` and :ref:`refer
   * - 0x20
     - 164 - 179
     - | Defined by default, default |I2C| address on some breakout boards
-      | Some breakout boards (eg. Waveshare) have 0x27 as default and will need to be changed
+      | Some breakout boards (e.g. Waveshare or CQRobot Ocean) have 0x27 as default and will need to be changed
   * - 0x21
     - 180 - 195
     - Defined by default, address typically needs to be configured on breakout boards
@@ -179,7 +180,7 @@ When adding more MCP23017s, select an unused VPin that allows a total of 16 cons
     - Comments
   * - 0x22 - 0x27
     - 16
-    - Need to add to myHal.cpp, and |I2C| address typically needs to be configured on breakout boards
+    - Need to add to myAutomation.h or myHal.cpp, and |I2C| address typically needs to be configured on breakout boards
 
 ----
 
@@ -188,9 +189,11 @@ MCP23008 digital I/O expander
 
 MCP23008 I/O expanders have 8 digital I/O pins and 8 available |I2C| addresses from 0x20 to 0x27.
 
-The device driver name is "IO_MCP23008.h" and will need to be included in "myHal.cpp".
+The device driver name is "IO_MCP23008.h" and will need to be included in "myAutomation.h" or "myHal.cpp".
 
-Note that devices at 0x20/0x21 will conflict with the default defined MCP23017 devices at these addresses, and you will need to edit "IODevice.cpp" in order to disable these.
+Note that devices at 0x20/0x21 will conflict with the default defined MCP23017 devices at these addresses, but this conflict should be resolved automatically at startup.
+
+Note also the potential conflict with an LCD at |I2C| address 0x27 as per :ref:`reference/hardware/pin-vpin-allocations:mcp23017 digital i/o expander`.
 
 Refer to :ref:`reference/developers/hal:hal programming interface` for further information.
 
@@ -203,7 +206,7 @@ When adding MCP23008s, select an unused VPin that allows a total of 8 consecutiv
     - Comments
   * - 0x20 - 0x27
     - 8
-    - | Need to add to myHal.cpp, and |I2C| address typically needs to be configured on breakout boards
+    - | Need to add to myAutomation.h or myHal.cpp, and |I2C| address typically needs to be configured on breakout boards
       | May need to disable default MCP23017s if 0x20/0x21 are used
 
 ----
@@ -213,9 +216,9 @@ PCF8574 digital I/O expander
 
 PCF8574 I/O expanders have 8 digital I/O pins and 8 available |I2C| addresses from 0x20 to 0x27.
 
-The device driver name is "IO_PCF8574.h" and will need to be included in "myHal.cpp".
+The device driver name is "IO_PCF8574.h" and will need to be included in "myAutomation.h" or "myHal.cpp".
 
-Note that devices at 0x20/0x21 will conflict with the default defined MCP23017 devices at these addresses, and you will need to edit "IODevice.cpp" in order to disable these.
+Note that devices at 0x20/0x21 will conflict with the default defined MCP23017 devices at these addresses, but this conflict should be resolved automatically at startup.
 
 Refer to :ref:`reference/developers/hal:hal programming interface` for further information.
 
@@ -228,7 +231,7 @@ When adding PCF8574s, select an unused VPin that allows a total of 8 consecutive
     - Comments
   * - 0x20 - 0x27
     - 8
-    - | Need to add to myHal.cpp, and |I2C| address typically needs to be configured on breakout boards
+    - | Need to add to myAutomation.h or myHal.cpp, and |I2C| address typically needs to be configured on breakout boards
       | May need to disable default MCP23017s if 0x20/0x21 are used
 
 ----
@@ -238,7 +241,7 @@ PCA9685 PWM servo module
 
 PCA9685 servo modules (or I/O expanders) have 16 PWM output pins and 62 available |I2C| addresses from 0x40 to 0x7D.
 
-The device driver name is "IO_PCA9685.cpp", however this is loaded by default and does not need to be added to "myHal.cpp".
+The device driver name is "IO_PCA9685.cpp", however this is loaded by default.
 
 Two devices are defined by default.
 
@@ -268,16 +271,18 @@ When adding more PCA9685s, select an unused VPin that allows a total of 16 conse
     - Comments
   * - 0x42 - 0x7D
     - 16
-    - Need to add to myHal.cpp, and |I2C| address typically needs to be configured on breakout boards
+    - Need to add to myAutomation.h or myHal.cpp, and |I2C| address typically needs to be configured on breakout boards
 
 ----
 
 EX-IOExpander - digital and analogue I/O expander
 -------------------------------------------------
 
+|NEW-IN-V5-LOGO-SMALL|
+
 EX-IOExpander is designed to support up to 256 pins and is currently in testing. The default |I2C| address is 0x65, however any valid and available address can be used.
 
-The device driver name is "IO_EXIOExpander.h" and will need to be included in "myHal.cpp".
+The device driver name is "IO_EXIOExpander.h" and is included by default.
 
 Refer to :doc:`/ex-ioexpander/index` for further information.
 
@@ -290,7 +295,7 @@ When adding EX-IOExpander devices, select an unused VPin that allows for the app
     - Comments
   * - Any valid/available (default 0x65)
     - 16 - 256
-    - Need to add to myHal.cpp, and |I2C| address needs to be configured in software
+    - |I2C| address needs to be configured in software
 
 ----
 
@@ -302,7 +307,7 @@ VL53L0X time-of-flight sensor
 
 VL53L0X time-of-flight sensors have a default |I2C| address of 0x29, however this address is programmable by software.
 
-The device driver name is "IO_VL53L0X.h" and will need to be included in "myHal.cpp".
+The device driver name is "IO_VL53L0X.h" and will need to be included in "myAutomation.h" or "myHal.cpp".
 
 Refer to :doc:`/ex-commandstation/accessories/sensors/vl53l0x-tof-sensor` for further information.
 
@@ -315,7 +320,7 @@ Refer to :doc:`/ex-commandstation/accessories/sensors/vl53l0x-tof-sensor` for fu
   * - 0x29 - 0x7F
     - 4000
     - 3
-    - Need to add to myHal.cpp, do not use |I2C| address 0x29 if using multiple devices
+    - Need to add to myAutomation.h or myHal.cpp, do not use |I2C| address 0x29 if using multiple devices
 
 ----
 
@@ -325,13 +330,15 @@ Other devices
 EX-Turntable
 ------------
 
+|NEW-IN-V5-LOGO-SMALL|
+
 .. note:: 
 
   |EX-TT| is in Beta testing, however the device driver is unlikely to change much if at all.
 
 |EX-TT| is configured with a default |I2C| address of 0x60, however this address is configurable by the software.
 
-The device driver name is "IO_EXTurntable.h" and will need to be included in "myHal.cpp".
+The device driver name is "IO_EXTurntable.h" and will need to be included in "myAutomation.h" or "myHal.cpp".
 
 Refer to :doc:`/ex-turntable/index` for further information.
 
@@ -344,14 +351,14 @@ Refer to :doc:`/ex-turntable/index` for further information.
   * - 0x60 default, any valid and available |I2C| address
     - 600
     - 1
-    - Need to add to myHal.cpp, and use the specified version of |EX-CS|
+    - Need to add to myAutomation.h or myHal.cpp, and use the specified version of |EX-CS|
 
 ----
 
 DCC-EX rotary encoder
 ---------------------
 
-|NOT-IN-PROD-VERSION|
+|NEW-IN-V5-LOGO-SMALL|
 
 .. note:: 
 
@@ -359,7 +366,7 @@ DCC-EX rotary encoder
 
 The DCC-EX rotary encoder is configured with a default |I2C| address of 0x80, however this address is configurable by the software.
 
-The device driver name is "IO_RotaryEncoder.h" and will need to be included in "myHal.cpp".
+The device driver name is "IO_RotaryEncoder.h" and will need to be included in "myAutomation.h" or "myHal.cpp".
 
 Refer to :ref:`ex-turntable/test-and-tune:controlling ex-turntable with a rotary encoder` and the `project page <https://petegsx-projects.github.io/rotary-encoder/overview.html>`_ for further information.
 
@@ -371,5 +378,5 @@ Refer to :ref:`ex-turntable/test-and-tune:controlling ex-turntable with a rotary
     - Comments
   * - 0x80 default, any valid and available |I2C| address
     - 800
-    - 1
-    - Need to add to myHal.cpp, and use the specified version of |EX-CS|
+    - 1 - 3
+    - Need to add to myAutomation.h or myHal.cpp, and use the specified version of |EX-CS|

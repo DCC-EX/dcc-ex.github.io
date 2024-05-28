@@ -1,10 +1,13 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst  
+.. include:: /include/include-ex-bp.rst
 |EX-BP-LOGO|
 
 ****************
 The Big Picture
 ****************
+
+|conductor| |tinkerer| |engineer| |support-button|
 
 This section will provide a "big picture" view of how to put all the various |DCC-EX| capabilities to use with the various different supported hardware components and automation sequences.
 

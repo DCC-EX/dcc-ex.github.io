@@ -1,11 +1,17 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
-****************************
+.. include:: /include/include-hardware.rst
+|EX-CS-LOGO|
+
+**************
 Pololu MC33926
-****************************
+**************
 
 |tinkerer|
 
+.. warning:: 
+
+   This board is **not** compatible with |TM| DC mode.
 
 **Current sensing is not appropriate for most CV programming**
 

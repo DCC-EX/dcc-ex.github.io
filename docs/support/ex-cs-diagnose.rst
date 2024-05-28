@@ -1,16 +1,16 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
 .. include:: /include/include-ex-cs.rst
 .. meta::
    :keywords: EX-CommandStation Command Station diagnosing Issues Troubleshooting
 
-.. include:: /include/include.rst
-.. include:: /include/include-l2.rst
 |EX-CS-LOGO|
 
 *************************
 Diagnosing Basic Problems
 *************************
 
-|conductor| 
+|conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -46,7 +46,7 @@ Either using the |EX-I| to the Arduino IDE.
 
   * - "Failed to upload because uploading error:"
     - Go to Question 2.
-    - (a) Have you selected the correct COM port? |BR| See :ref:`ex-installer/installing:1. getting ready` for information on finding the correct COM port.
+    - (a) Have you selected the correct COM port? |BR| See :ref:`ex-installer/installing:getting ready` for information on finding the correct COM port.
       (b) Have you selected the correct Arduino board type?
   
   * - 2. Have you selected the correct Baud rate?
@@ -56,7 +56,7 @@ Either using the |EX-I| to the Arduino IDE.
   * - 3. Do you receive a message starts with "Failed to download..."
     - Go to Question 4.
     - (a) Your PC may not have an internet connection. 
-      (b) Your PC's firewall software may be stopping the installer from accessing the internet. Temporarily disable the firewall, or create an exception for EX-Installer. |br| |br| An internet connection is required to download some files.      
+      (b) Your PC's firewall software may be stopping the installer from accessing the internet. Temporarily disable the firewall, or create an exception for EX-Installer. |BR| |BR| An internet connection is required to download some files.      
   
   * - 4. ToDo?
     - ToDo.
@@ -72,7 +72,7 @@ When Connected to a PC via USB
 Initial Check
 -------------
 
-As an initial check we recommend you should try to connect to your EX-CommandStation using |EX-WT|, even if you plan to use it via |JMRI| or a wifi throttle.
+As an initial check we recommend you should try to connect to your EX-CommandStation using |EX-WT|, even if you plan to use it via |JMRI| or a WiFi throttle.
 
 .. list-table:: 
   :widths: 40 20 40
@@ -95,7 +95,7 @@ As an initial check we recommend you should try to connect to your EX-CommandSta
     - (a) EX-CommandStation not connected to your **PC** via USB.
       (b) Software may not have loaded correctly. Try loading the EX-CommandStation software again.
 
-  * - 3. When you click the power on slider, it should say power on. |br| Do the 4 LEDs on the motor board turn on and stay on?
+  * - 3. When you click the power on slider, it should say power on. |BR| Do the 4 LEDs on the motor board turn on and stay on?
     - Go to Question 4.
     - (a) Have you plugged in and turned on a 12-15v DC power supply into the motor board
       (b) Have you made sure the polarity of the power supply is correct.
@@ -173,25 +173,29 @@ When Configured as an Access Point
 
   * - 2. Can your phone see the WiFi network of the EX-CommandStation in the phone's available network list?
     - Go to Question 3
-    - (a) WifI shield is connected incorrectly to the CommandStation - The Rx pin of the WiFi shield must connect to the Tx pin on the CommandStation, and Tx to the Rx pin
+    - (a) WiFi shield is connected incorrectly to the CommandStation - The Rx pin of the WiFi shield must connect to the Tx pin on the CommandStation, and Tx to the Rx pin
       (b) ToDo
 
-  * - 3. Can your phone connect the WiFi network of the EX-CommandStation
+  * - 3. The WiFi network name appears as "DCCEX-SAYS-BROKEN-FIRMWARE" or "UPDATE_ESP_FIRMWARE" 
+    - See :doc:`/support/wifi-at-version` for details.
     - Go to Question 4
-    - (a) ToDo
-      (b) ToDo
 
-  * - 4. Can your throttle app connect the wiThrottle server of the EX-CommandStation |BR| |BR| |Engine Driver| should show you the wiThrottle server in the discovered servers list |BR| For |wiThrottle| you will need to type in the IP address and Port
+  * - 4. Can your phone connect the WiFi network of the EX-CommandStation
     - Go to Question 5
     - (a) ToDo
       (b) ToDo
 
-  * - 5. Can you turn the track power on?  |BR| Do the LEDs on the motor shield turn on?
-    - Go to Question 6.
+  * - 5. Can your throttle app connect the WiThrottle server of the EX-CommandStation |BR| |BR| |Engine Driver| should show you the WiThrottle server in the discovered servers list |BR| For |WiThrottle| you will need to type in the IP address and Port
+    - Go to Question 6
+    - (a) ToDo
+      (b) ToDo
+
+  * - 6. Can you turn the track power on?  |BR| Do the LEDs on the motor shield turn on?
+    - Go to Question 7.
     - (a) Have you plugged in and turned on a 12-15v DC power supply into the motor board
       (b) Have you made sure the polarity of the power supply is correct. 
 
-  * - 6. When select a loco in the throttle app and move the throttle, does the loco move?
+  * - 7. When select a loco in the throttle app and move the throttle, does the loco move?
     - Congratulations, your |EX-CS| is essentially working.
     - (a) Have you connected the track to the 'MAIN' outputs of the Motor Board.  |BR| You cannot directly control trains on the 'PROGRAMMING' outputs without using additional commands which can be done in |Engine Driver| but not other WiFi throttle apps (Use the :guilabel:`Request Loco ID` button in |Engine Driver|.) |BR| recommend that the MAIN outputs be used to run a layout.
       (b) Wrong loco DCC Address selected.
@@ -223,6 +227,6 @@ When Configured in Station mode
       
       For c & d, try loading the EX-CommandStation software again.
 
-  * - 2. Can your throttle app connect to the wiThrottle server of the EX-CommandStation |BR| |BR| |Engine Driver| should show you the wiThrottle server in the discovered servers list |BR| For |wiThrottle| It should connect automatically.
+  * - 2. Can your throttle app connect to the WiThrottle server of the EX-CommandStation |BR| |BR| |Engine Driver| should show you the WiThrottle server in the discovered servers list |BR| For |WiThrottle| It should connect automatically.
     - ToDo
     - (a) You may be on a different network to the EX-CommandStation (e.g. 2.5gHz VS 5gHz connection to you home router.) Try entering the IP address and Port manually.  To 

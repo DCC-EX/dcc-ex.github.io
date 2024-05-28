@@ -1,13 +1,13 @@
-.. include:: /include/include-ex-cs.rst
 .. include:: /include/include.rst
 .. include:: /include/include-l3.rst
+.. include:: /include/include-ex-cs.rst
 |EX-CS-LOGO|
 
 ******************************
 Install using the Arduino IDE
 ******************************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 .. sidebar::
 
@@ -28,8 +28,8 @@ Rather than go into details that are already covered in great detail on the Ardu
 
 `Arduino IDE Guide <https://www.arduino.cc/en/Guide>`_
 
-Download the DCC++ EX ZIP file
-===============================
+Download the DCC-EX ZIP file
+============================
 
 Use the link to either the ZIP or TAR file at the bottom of our GitHub page here:
 
@@ -102,7 +102,7 @@ From the "Tools" menu select the "Board" menu, then "Arduino AVR boards", and th
 
 Then select "Processor" and make sure it says "ATMega2560"
 
-Last, select "Port" and find the port on your computer that recognizes the Arduino. If you don't see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here `Drivers for the CH340 <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
+Last, select "Port" and find the port on your computer that recognises the Arduino. If you don't see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here `Drivers for the CH340 <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
 
 .. figure:: /_static/images/arduino-ide/board_port_mega.jpg
    :alt: Select the COM Port
@@ -176,7 +176,7 @@ Run your trains!
 
 * Put your loco on the MAIN track. **The loco cannot move or respond to non-programming commands on the PROG track!**
 
-**Now run EX-WebThrottle** directly from our :doc:`EX-WebThrottle web page </throttles/software/ex-webthrottle>`. As described on that page, ensure that you are using Chrome version 89 or above. Note that you can run the throttle from your browser, and/or install it locally from its own menu.
+**Now run EX-WebThrottle** directly from our :doc:`EX-WebThrottle web page </ex-webthrottle/index>`. As described on that page, ensure that you are using Chrome version 89 or above. Note that you can run the throttle from your browser, and/or install it locally from its own menu.
 
 You can also download our |EX-WT| found at `EX-WebThrottle on GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ and run it in your browser. Again, make sure you are using a Chrome based browser version 89 or above.
 

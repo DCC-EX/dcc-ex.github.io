@@ -1,15 +1,13 @@
-.. meta::
-  :keywords: EX-CommandStation Command Station EX-IOExpander
-
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-ex-io.rst
 |EX-IO-LOGO|
 
 *****************
 Supported Devices
 *****************
 
-|tinkerer| |githublink-ex-ioexpander-button2|
+|tinkerer| |engineer| |support-button| |githublink-ex-ioexpander-button2|
 
 .. sidebar:: 
   
@@ -195,13 +193,17 @@ STMicroelectronics NUCLEO-F411RE
 
 .. warning:: 
 
-  Support for the F411RE is experimental at best right now. While the software compiles and it appears to operate normally, no actual I/O testing has been performed.
+  Support for the F411RE is experimental at best right now. While the software compiles and it appears to operate normally, only basic I/O testing has been performed.
+
+  Note also that as a 3.3V microcontroller, not all pins are 5V tolerant.
 
 .. image:: /_static/images/nucleo/nucleo-f411re-pinout.png
   :alt: Nucleo F411RE pin out
   :scale: 60%
 
-The Nucleo F411RE is a 3v3 microcontroller with more available I/O pins than an Arduino Uno. The pin numbers used are defined using the Morpho pin names, in ascending order of the pin number for each Morpho connector, hence the pin names aren't sequential.
+The Nucleo F411RE is a 3v3 microcontroller with more available I/O pins than an Arduino Uno in a similar, but slightly larger form factor. The pin numbers used are defined using the Morpho pin names associated with connectors CN7 and CN10.
+
+Vpins are allocated in ascending order from the STLink/USB connector end of each Morpho connector, with the odd numbered pin row first, then the even number row, hence the pin names aren't sequential.
 
 Numerous I/O pins are connected to other devices or perform multiple functions which result in pin conflicts, so the only pins included are those that are able to successfully be set to input mode on startup.
 
@@ -227,29 +229,29 @@ Numerous I/O pins are connected to other devices or perform multiple functions w
 
 .. csv-table:: F411RE EX-IOExpander pin map at Vpin 800
   :widths: auto
-  :stub-columns: 1
+  :header-rows: 1
 
   Vpin,Pin,Digital,Analogue,PWM,Vpin,Pin,Digital,Analogue,PWM
-  800,PC10,Y,N,N,820,PA12,Y,N,N
-  801,PC11,Y,N,N,821,PA6,Y,Y,Y
-  802,PC12,Y,N,N,822,PA11,Y,N,Y
-  803,PD2,Y,N,N,823,PA7,Y,N,Y
-  804,PA15,Y,N,Y,824,PB12,Y,N,N
-  805,PB7,Y,N,Y,825,PB6,Y,N,Y
-  806,PC15,Y,N,N,826,PC7,Y,N,Y
-  807,PA0,Y,Y,Y,827,PA9,Y,N,Y
-  808,PA1,Y,Y,Y,828,PB2,Y,N,N
-  809,PA4,Y,Y,N,829,PA8,Y,N,Y
-  810,PB0,Y,Y,Y,830,PB1,Y,Y,Y
-  811,PC2,Y,Y,N,831,PB10,Y,N,Y
-  812,PC1,Y,Y,N,832,PB15,Y,N,Y
-  813,PC3,Y,Y,N,833,PB4,Y,N,Y
-  814,PC0,Y,Y,N,834,PB14,Y,N,Y
-  815,PC9,Y,N,Y,835,PB5,Y,N,Y
-  816,PC8,Y,N,Y,836,PB13,Y,N,Y
-  817,PC6,Y,N,Y,837,PB3,Y,N,Y
-  818,PC5,Y,Y,N,838,PA10,Y,N,Y
-  819,PA5,Y,Y,Y,839,PC4,Y,Y,N
+  800,PC10,Y,N,N,820,PC7,Y,N,N
+  801,PC12,Y,N,N,821,PA9,Y,Y,Y
+  802,PA15,Y,N,N,822,PA8,Y,N,Y
+  803,PB7,Y,N,N,823,PB10,Y,N,Y
+  804,PC15,Y,N,Y,824,PB4,Y,N,N
+  805,PC2,Y,N,Y,825,PB5,Y,N,Y
+  806,PC3,Y,N,N,826,PB3,Y,N,Y
+  807,PC11,Y,Y,Y,827,PA10,Y,N,Y
+  808,PD2,Y,Y,Y,828,PC8,Y,N,N
+  809,PA0,Y,Y,N,829,PC6,Y,N,Y
+  810,PA1,Y,Y,Y,830,PC5,Y,Y,Y
+  811,PA4,Y,Y,N,831,PA12,Y,N,Y
+  812,PB0,Y,Y,N,832,PA11,Y,N,Y
+  813,PC1,Y,Y,N,833,PB12,Y,N,Y
+  814,PC0,Y,Y,N,834,PB2,Y,N,Y
+  815,PC9,Y,N,Y,835,PB1,Y,N,Y
+  816,PA5,Y,N,Y,836,PB15,Y,N,Y
+  817,PA6,Y,N,Y,837,PB14,Y,N,Y
+  818,PA7,Y,Y,N,838,PB13,Y,N,Y
+  819,PB6,Y,Y,Y,839,PC4,Y,Y,N
 
 |
 
@@ -258,9 +260,13 @@ STMicroelectronics NUCLEO-F412ZG
 
 .. warning:: 
 
-  Support for the F412ZG is experimental at best right now. While the software compiles and it appears to operate normally, no actual I/O testing has been performed.
+  Support for the F412ZG is experimental at best right now. While the software compiles and it appears to operate normally, only basic I/O testing has been performed.
 
-The Nucleo F412ZG is a 3v3 microcontroller with significantly more available I/O pins than an Arduino Mega. The pin numbers used are defined using the Morpho pin names, in ascending order of the pin number for each Morpho connector, hence the pin names aren't sequential.
+  Note also that as a 3.3V microcontroller, not all pins are 5V tolerant.
+
+The Nucleo F412ZG is a 3v3 microcontroller with significantly more available I/O pins than an Arduino Mega. The pin numbers used are defined using the Morpho pin names associated with connectors CN11 and CN12.
+
+Vpins are allocated in ascending order from the STLink/USB connector end of each Morpho connector, with the odd numbered pin row first, then the even number row, hence the pin names aren't sequential.
 
 Numerous I/O pins are connected to other devices or perform multiple functions which result in pin conflicts, so the only pins included are those that are able to successfully be set to input mode on startup.
 
@@ -286,58 +292,58 @@ Numerous I/O pins are connected to other devices or perform multiple functions w
 
 .. csv-table:: F412ZG EX-IOExpander pin map at Vpin 800
   :widths: auto
-  :stub-columns: 1
+  :header-rows: 1
 
   Vpin,Pin,Digital,Analogue,PWM,Vpin,Pin,Digital,Analogue,PWM
-  800,PC10,Y,N,N,849,PA5,Y,Y,Y
-  801,PC11,Y,N,N,850,PA6,Y,Y,Y
-  802,PC12,Y,N,N,851,PA7,Y,Y,Y
-  803,PD2,Y,N,N,852,PB12,Y,N,N
-  804,PF6,Y,N,Y,853,PB6,Y,N,Y
-  805,PF7,Y,N,Y,854,PB11,Y,N,Y
-  806,PA15,Y,N,Y,855,PC7,Y,N,Y
-  807,PB7,Y,N,Y,856,PB2,Y,N,N
-  808,PC13,Y,N,N,857,PB1,Y,Y,Y
-  809,PA0,Y,Y,Y,858,PB10,Y,N,Y
-  810,PA1,Y,Y,Y,859,PB15,Y,N,Y
-  811,PA4,Y,Y,N,860,PB4,Y,N,Y
-  812,PB0,Y,Y,Y,861,PB14,Y,N,Y
-  813,PC2,Y,Y,N,862,PB5,Y,N,Y
-  814,PC1,Y,Y,N,863,PB13,Y,N,Y
-  815,PC3,Y,Y,N,864,PB3,Y,N,Y
-  816,PC0,Y,Y,N,865,PC4,Y,Y,N
-  817,PD4,Y,N,N,866,PA2,Y,Y,Y
-  818,PD3,Y,N,N,867,PF5,Y,N,N
-  819,PD5,Y,N,N,868,PA3,Y,Y,Y
-  820,PG2,Y,N,N,869,PF4,Y,N,N
-  821,PD6,Y,N,N,870,PE8,Y,N,Y
-  822,PG3,Y,N,N,871,PD13,Y,N,Y
-  823,PD7,Y,N,N,872,PF10,Y,N,N
-  824,PE2,Y,N,N,873,PD12,Y,N,Y
-  825,PE3,Y,N,N,874,PE7,Y,N,N
-  826,PE4,Y,N,N,875,PD11,Y,N,N
-  827,PE5,Y,N,Y,876,PD14,Y,N,Y
-  828,PF1,Y,N,N,877,PE10,Y,N,Y
-  829,PF2,Y,N,N,878,PD15,Y,N,Y
-  830,PF0,Y,N,N,879,PE12,Y,N,Y
-  831,PF8,Y,N,Y,880,PF14,Y,N,N
-  832,PD1,Y,N,N,881,PE14,Y,N,Y
-  833,PF9,Y,N,Y,882,PE9,Y,N,Y
-  834,PD0,Y,N,N,883,PE15,Y,N,N
-  835,PG1,Y,N,N,884,PE13,Y,N,Y
-  836,PG0,Y,N,N,885,PE11,Y,N,Y
-  837,PE1,Y,N,N,886,PF13,Y,N,N
-  838,PE6,Y,N,Y,887,PF3,Y,N,N
-  839,PG9,Y,N,N,888,PF12,Y,N,N
-  840,PG15,Y,N,N,889,PF15,Y,N,N
-  841,PG12,Y,N,N,890,PG14,Y,N,N
-  842,PG10,Y,N,N,891,PF11,Y,N,N
-  843,PG13,Y,N,N,892,PE0,Y,N,N
-  844,PG11,Y,N,N,893,PD10,Y,N,N
-  845,PC9,Y,N,Y,894,PG8,Y,N,N
-  846,PC8,Y,N,Y,895,PG5,Y,N,N
-  847,PC6,Y,N,Y,896,PG4,Y,N,N
-  848,PC5,Y,Y,N
+  800,PC10,Y,N,N,849,PB6,Y,Y,Y
+  801,PC12,Y,N,N,850,PC7,Y,Y,Y
+  802,PF6,Y,N,N,851,PB10,Y,Y,Y
+  803,PF7,Y,N,N,852,PB4,Y,N,N
+  804,PA15,Y,N,Y,853,PB5,Y,N,Y
+  805,PB7,Y,N,Y,854,PB3,Y,N,Y
+  806,PC13,Y,N,Y,855,PA2,Y,N,Y
+  807,PC2,Y,N,Y,856,PA3,Y,N,N
+  808,PC3,Y,N,N,857,PD13,Y,Y,Y
+  809,PD4,Y,Y,Y,858,PD12,Y,N,Y
+  810,PD5,Y,Y,Y,859,PD11,Y,N,Y
+  811,PD6,Y,Y,N,860,PE10,Y,N,Y
+  812,PD7,Y,Y,Y,861,PE12,Y,N,Y
+  813,PE3,Y,Y,N,862,PE14,Y,N,Y
+  814,PF1,Y,Y,N,863,PE15,Y,N,Y
+  815,PF0,Y,Y,N,864,PE13,Y,N,Y
+  816,PD1,Y,Y,N,865,PF13,Y,Y,N
+  817,PD0,Y,N,N,866,PF12,Y,Y,Y
+  818,PG0,Y,N,N,867,PG14,Y,N,N
+  819,PE1,Y,N,N,868,PD10,Y,Y,Y
+  820,PG9,Y,N,N,869,PG4,Y,N,N
+  821,PG12,Y,N,N,870,PC8,Y,N,Y
+  822,PC11,Y,N,N,871,PC6,Y,N,Y
+  823,PD2,Y,N,N,872,PC5,Y,N,N
+  824,PA0,Y,N,N,873,PB12,Y,N,Y
+  825,PA1,Y,N,N,874,PB11,Y,N,N
+  826,PA4,Y,N,N,875,PB2,Y,N,N
+  827,PB0,Y,N,Y,876,PB1,Y,N,Y
+  828,PC1,Y,N,N,877,PB15,Y,N,Y
+  829,PC0,Y,N,N,878,PB14,Y,N,Y
+  830,PD3,Y,N,N,879,PB13,Y,N,Y
+  831,PG2,Y,N,Y,880,PC4,Y,N,N
+  832,PG3,Y,N,N,881,PF5,Y,N,Y
+  833,PE2,Y,N,Y,882,PF4,Y,N,Y
+  834,PE4,Y,N,N,883,PE8,Y,N,N
+  835,PE5,Y,N,N,884,PF10,Y,N,Y
+  836,PF2,Y,N,N,885,PE7,Y,N,Y
+  837,PF8,Y,N,N,886,PD14,Y,N,N
+  838,PF9,Y,N,Y,887,PD15,Y,N,N
+  839,PG1,Y,N,N,888,PF14,Y,N,N
+  840,PE6,Y,N,N,889,PE9,Y,N,N
+  841,PG15,Y,N,N,890,PE11,Y,N,N
+  842,PG10,Y,N,N,891,PF3,Y,N,N
+  843,PG13,Y,N,N,892,PF15,Y,N,N
+  844,PG11,Y,N,N,893,PF11,Y,N,N
+  845,PC9,Y,N,Y,894,PE0,Y,N,N
+  846,PA5,Y,N,Y,895,PG8,Y,N,N
+  847,PA6,Y,N,Y,896,PG5,Y,N,N
+  848,PA7,Y,Y,N
 
 |
 
@@ -381,6 +387,57 @@ Arduino Zero (or SAMD based clone)
 
 |
 
+STMicroelectronics STM32F103C8T6 (Bluepill)
+===========================================
+
+.. warning:: 
+
+  Support for the STM32F103C8T6 Bluepill is experimental at best right now. While the software compiles and it appears to operate normally, only basic I/O testing has been performed.
+
+  Note also that as a 3.3V microcontroller, not all pins are 5V tolerant.
+
+.. image:: /_static/images/ex-ioexpander/stm32f103c8t6_pinout_voltage01.png
+  :alt: EX-IOExpander on STM32F103C8T6 Bluepill
+  :scale: 50%
+
+Image courtesy of `arm MBED <https://os.mbed.com/users/hudakz/code/STM32F103C8T6_Hello/>`_
+
+.. list-table:: STM32F103C8T6 Bluepill pin allocations
+  :widths: auto
+  :stub-columns: 1
+  :class: command-table
+
+  * - Total pins
+    - 28
+  * - Digital capable pins
+    - 28
+  * - Analogue capable pins
+    - 10
+  * - PWM capable pins
+    - 19
+
+.. csv-table:: STM32F103C8T6 Bluepill EX-IOExpander pin map at Vpin 800
+  :widths: auto
+  :header-rows: 1
+
+  Vpin,Pin,Digital,Analogue,PWM,Vpin,Pin,Digital,Analogue,PWM
+  800,PC13,Y,N,N,814,PB11,Y,N,Y
+  801,PC14,Y,N,N,815,PB9,Y,N,N
+  802,PA15,Y,N,N,816,PB8,Y,N,N
+  803,PA0,Y,Y,N,817,PB5,Y,N,Y
+  804,PA1,Y,Y,Y,818,PB4,Y,N,Y
+  805,PA2,Y,Y,Y,819,PB3,Y,N,Y
+  806,PA3,Y,Y,Y,820,PA15,Y,N,Y
+  807,PA4,Y,Y,N,821,PA10,Y,N,Y
+  808,PA5,Y,Y,N,822,PA9,Y,N,Y
+  809,PA6,Y,Y,Y,823,PA8,Y,N,Y
+  810,PA7,Y,Y,Y,824,PB15,Y,N,Y
+  811,PB0,Y,Y,Y,825,PB14,Y,N,Y
+  812,PB1,Y,Y,Y,826,PB13,Y,N,Y
+  813,PB10,Y,N,Y,827,PB12,Y,N,N
+
+|
+
 Adding new devices
 ==================
 
@@ -388,7 +445,7 @@ Adding new devices
 
 .. warning:: 
 
-  When considering adding new devices to |EX-IO|, be sure to take into account whether they are 5V or 3.3V devices, and whether their I/O and |I2C| pins are 5V tolerant if they are 3.3V devices. New generation microcontrollers tend to be 3.3V, and some have 5V tolerant I/O pins (eg. STM32 Nucleo), but some are not 5V tolerant (eg. SAMD).
+  When considering adding new devices to |EX-IO|, be sure to take into account whether they are 5V or 3.3V devices, and whether their I/O and |I2C| pins are 5V tolerant if they are 3.3V devices. New generation microcontrollers tend to be 3.3V, and some have 5V tolerant I/O pins (e.g. STM32 Nucleo), but some are not 5V tolerant (e.g. SAMD).
 
   To connect 3.3V devices to a 5V |EX-CS|, they need to either be 5V tolerant, or you will need to use a level shifter to avoid letting the magic smoke out.
 
@@ -396,7 +453,7 @@ Adding new devices to the |EX-IO| software only requires additional information 
 
 In order to successfully add an additional device, you need to know the C++ preprocessor macro definitions for the architecture or platform, and for the specific variant or board itself. In addition, you need to define the pins available for use on the |EX-IO| device, and define the capabilities available for each pin.
 
-For example, the AVR series (Uno, Mega, Nano) have the architure or platform macro defined as "ARDUINO_ARCH_AVR", with the Nano having the variant or board specific macro "ARDUINO_AVR_NANO", and there is a pin map defined that maps to this macro definition.
+For example, the AVR series (Uno, Mega, Nano) have the architecture or platform macro defined as "ARDUINO_ARCH_AVR", with the Nano having the variant or board specific macro "ARDUINO_AVR_NANO", and there is a pin map defined that maps to this macro definition.
 
 Files to be created/modified
 ----------------------------
@@ -406,6 +463,7 @@ When adding new devices to |EX-IO|, there are potentially three files to be adde
 - device_functions.cpp - Contains the architecture/platform specific function to reboot via software
 - defines.h - Contains some device specific macro definitions
 - <device_type>.h - Contains the device specific macro definitions and the pin map
+- EX-IOExpander.ino - Loads the device specific files
 
 Enabling software reboots
 -------------------------
@@ -452,7 +510,7 @@ A pin map is used to map the Vpins from the device driver in the |EX-CS| to the 
 
 Each unique device needs a file created containing the "BOARD_TYPE" macro definition and the device specific pin map.
 
-Files should be named according to the platform and CPU type eg. "arduino_avr_nano.h" or "arduino_nucleo_f412zg.h".
+Files should be named according to the platform and CPU type e.g. "arduino_avr_nano.h" or "arduino_nucleo_f412zg.h".
 
 As per :ref:`ex-ioexpander/overview:pin/vpin allocation`, Vpins are allocated to physical pins in ascending order.
 
@@ -520,3 +578,6 @@ This ensures attempting to use a pin for something it's not capable of will gene
   AIDIP,Analogue input with digital input and PWM output
   AIDOP,Analogue input with digital output and PWM output
   AIDIOP,Analogue input with digital input and output and PWM output
+
+Including the device specific file in EX-IOExpander.ino
+-------------------------------------------------------

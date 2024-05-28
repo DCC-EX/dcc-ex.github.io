@@ -1,11 +1,12 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
+.. include:: /include/include-description.rst
 
 **************************
 Features under development
 **************************
 
-|tinkerer| |engineer|
+|tinkerer| |engineer| |support-button|
 
 |NOT-IN-PROD-VERSION|
   
@@ -19,19 +20,16 @@ We always have new features under development for |EX-CS| and |EX-R|, and as the
 
 To obtain the development branch code, refer to :ref:`download/ex-commandstation:latest ex-commandstation unreleased development version`
 
-.. toctree::
-  :maxdepth: 1
+.. note:: 
 
-  microcontrollers
-  track-manager
-  duinonodes
+  With v5 being a brand new release, there's nothing to see here just yet, but stay tuned as we start work on new features!
 
 Looking for some help with EX-CommandStation?
 =============================================
 
-To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking this button:
+To find out how to request assistance click the first button below. To raise a bug report, feature request, support request, or submit Beta test results, feel free to use our handy GitHub templates accessible by clicking the second button:
 
-|githublink-ex-commandstation-button2|
+|support-button-large| |githublink-ex-commandstation-button2|
 
 .. tip:: 
 

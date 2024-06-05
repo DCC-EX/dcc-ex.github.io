@@ -141,8 +141,8 @@ As per the |EX-R| reference, these are defined with the following syntax:
 The valid parameters are:
 
 - vpin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.
-- position = The angle to which the servo will move when the turnout is thrown (refer below for further detailed information).
-- profile = There are five profiles to choose from that determine the speed at which a turnout will move: Instant, Fast, Medium, Slow, and Bounce.
+- position = The angle to which the servo will move when it is activated (refer below for further detailed information).
+- profile = There are five profiles to choose from that determine the speed at which a servo will move: Instant, Fast, Medium, Slow, and Bounce.
 - duration = The time (in milliseconds (ms)) for the servo to be actively rotating.
 
 As an example, consider a lineside worker that needs to be moved away from the track when a train approaches, which is controlled by an infrared sensor.

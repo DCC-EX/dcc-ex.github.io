@@ -14,7 +14,7 @@ We always have new features under development for |EX-CS| and |EX-R|, and as the
 
 .. warning:: 
 
-  Remember that these features will continue to change and evolve as bugs are found and fixed, and better ways of doing things are discovered, so it's best to keep up to date with any discussions via our `Discord server <https://discord.gg/PuPnNMp8Qf>`_.
+  Remember that these features will continue to change and evolve as bugs are found and fixed, and better ways of doing things are discovered, so it's best to keep up to date with any discussions via our `Discord server <https://discord.gg/PuPnNMp8Qf>`_ |EXTERNAL-LINK|.
   
   These pages are aimed at those who have some technical capabilities with regards to electronics and the like, so you generally won't find step by step guides as we provide for the general user base elsewhere in our documentation. Using the development branch means you will regularly need to update your |EX-CS| to keep up with bug fixes and feature enhancements.
 

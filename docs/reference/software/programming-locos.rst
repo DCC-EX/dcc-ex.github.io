@@ -47,7 +47,7 @@ When you're finished editing, you need to write the changes to the decoder. To d
 * :guilabel:`Write changes on all sheets` - use this if you've made changes on multiple tabs
 * :guilabel:`Write all sheets` - use this if you want to ensure every setting on every tab is written, noting this will take some time to write
 
-Note that this really is just scratching the surface of the capabilities of DecoderPro, and we highly recommend you read the full documentation on the `JMRI website <https://www.jmri.org/help/en/html/apps/DecoderPro/index.shtml>`_.
+Note that this really is just scratching the surface of the capabilities of DecoderPro, and we highly recommend you read the full documentation on the `JMRI website <https://www.jmri.org/help/en/html/apps/DecoderPro/index.shtml>`_ |EXTERNAL-LINK|.
 
 Even if you don't intend to use |JMRi| to control your layout, it still has the best decoder programming functionality by far.
 

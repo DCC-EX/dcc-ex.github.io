@@ -22,7 +22,7 @@ Connecting to your EX-CommandStation
 
 The first thing you need to do is connect your |EX-CS| to |JMRi|.
 
-Follow these instructions outlined in the `JMRi help page <https://www.jmri.org/help/en/html/hardware/dcc-ex/index.shtml>`_ to get connected.
+Follow these instructions outlined in the `JMRi help page <https://www.jmri.org/help/en/html/hardware/dcc-ex/index.shtml>`_ |EXTERNAL-LINK| to get connected.
 
 Create a new throttle
 =====================
@@ -78,4 +78,4 @@ If you would like to utilise the combined power of EX-CommandStation & JMRI Deco
 Further reading
 ===============
 
-If you're keen to learn more about |JMRi|, then we highly recommend going to the `JMRI website <https://www.jmri.org/>`_ and reading further on the features and possibilities available.
+If you're keen to learn more about |JMRi|, then we highly recommend going to the `JMRI website <https://www.jmri.org/>`_ |EXTERNAL-LINK| and reading further on the features and possibilities available.

@@ -291,25 +291,25 @@ Parts List (IBT_2)
 
 Mean Well LRS-150-15
 Enclosed Switchable Power Supply 1U Profile, 150W 15V 10A
-http://amazon.com/gp/product/B019GYOPSS/
+http://amazon.com/gp/product/B019GYOPSS/ |EXTERNAL-LINK|
 $23.38 +tax; prime shipping
 
 ELEGOO MEGA 2560 R3 Board ATmega2560 ATMEGA16U2 + USB Cable
-https://www.amazon.com/gp/product/B01H4ZLZLQ
+https://www.amazon.com/gp/product/B01H4ZLZLQ |EXTERNAL-LINK|
 $16.99 +tax; prime shipping
 
 ACS724 Current Sensor Carrier 0 to 10A (this one has 400mv/A sensitivity)
-https://www.pololu.com/product/4042
+https://www.pololu.com/product/4042 |EXTERNAL-LINK|
 $9.95 + $3.95 shipping
 
 DuPont pin M/F jumper wires 20cm – an assortment is fine
-https://www.amazon.com/dp/B07GD2BWPY
+https://www.amazon.com/dp/B07GD2BWPY |EXTERNAL-LINK|
 $5.79 +tax; prime shipping
 
 Single Motor Driver Board H-Bridge IBT_2, 3-36V, 15A, Peak 43A
 various sellers, prices and delivery methods. $7 to $14.
 Here is a pack of two:
-https://www.amazon.com/dp/B07TFB22H5/
+https://www.amazon.com/dp/B07TFB22H5/ |EXTERNAL-LINK|
 $15.51 +tax; prime shipping
 
 

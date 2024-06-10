@@ -202,4 +202,4 @@ There are three ways to load & store your Locomotive Icon Image in Engine Driver
 * If you later add an image in the JMRI Roster for the loco (or later connect to a |WiThrottle server| that has an image), it will automatically overwrite the local image with the one on the server.
 * In the Recent Locos list you *can not* add images to locos entered by a DCC address. (i.e. not from the roster)  
 
-Also refer to the `Engine Driver Loco Icon Documentation <https://flash62au.github.io/EngineDriver_Home/configuration/loco_icons.html?highlight=images>`_ for more information.
+Also refer to the `Engine Driver Loco Icon Documentation <https://flash62au.github.io/EngineDriver_Home/configuration/loco_icons.html?highlight=images>`_ |EXTERNAL-LINK| for more information.

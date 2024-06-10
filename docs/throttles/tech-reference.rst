@@ -38,7 +38,7 @@ For throttle developers that want to focus on throttle features and functionalit
 
 This library exposes numerous methods to interact with the |EX-CS| and the various objects including locos, turnouts/points, routes, and turntables.
 
-For further information, refer to the `DCC-EX Native command library - DCCEXProtocol <https://dcc-ex.com/DCCEXProtocol/index.html>`_ documentation.
+For further information, refer to the `DCC-EX Native command library - DCCEXProtocol <https://dcc-ex.com/DCCEXProtocol/index.html>`_ |EXTERNAL-LINK| documentation.
 
 Responding to appropriate information
 =====================================

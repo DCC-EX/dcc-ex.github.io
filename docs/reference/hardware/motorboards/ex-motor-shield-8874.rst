@@ -77,16 +77,16 @@ How can I get one?
 
 Units may be purchased from the following sources:
 
-* In the US from the `DCC-EX Store <https://store.dcc-ex.com/>`_ or...
-* from `Smart Hobby, LLC <https://www.smarthobbyllc.com/>`_. You can also find Smart Hobby on Facebook
+* In the US from the `DCC-EX Store <https://store.dcc-ex.com/>`_ |EXTERNAL-LINK| or...
+* from `Smart Hobby, LLC <https://www.smarthobbyllc.com/>`_ |EXTERNAL-LINK|. You can also find Smart Hobby on Facebook
 * In the UK from `Chesterfield Model Making & Miniature Electronics <https://chesterfield-models.co.uk/product/semify-dcc-ex-motor-shield/>`_
-* In Europe from `Semify's Web Store <https://www.semify-eda.com/ex-motorshield8874/>`_ (based in Austria)
-* In Australia, New Zealand and South East Asia from `Millennium Engineering Pty Ltd <https://www.milleng.com.au>`_
+* In Europe from `Semify's Web Store <https://www.semify-eda.com/ex-motorshield8874/>`_ |EXTERNAL-LINK| (based in Austria)
+* In Australia, New Zealand and South East Asia from `Millennium Engineering Pty Ltd <https://www.milleng.com.au>`_ |EXTERNAL-LINK|
 * and other manufacturers licensed by DCC-EX.
 
 There are different options for the board such as fully assembled or in kit form where connectors and headers need to be soldered onto the board. Prices vary from around $34.95 to $39.90 in the US, to approximately £29.99 in the UK, €37 in Europe, and in Australia starting from $AU55.00. Prices typically do not include tax and shipping.
 
-For quantities of 10 or less per annum, you may utilise a PCB manufacturing and assembly service such as JLCPCB without licensing fees. A donation to DCC-EX would be appreciated, so click the DONATE button! The production files are available on the `DCC-EX GitHub <https://github.com/DCC-EX/EX-Hardware/tree/main/EX-Motorshield8874>`_.
+For quantities of 10 or less per annum, you may utilise a PCB manufacturing and assembly service such as JLCPCB without licensing fees. A donation to DCC-EX would be appreciated, so click the DONATE button! The production files are available on the `DCC-EX GitHub <https://github.com/DCC-EX/EX-Hardware/tree/main/EX-Motorshield8874>`_ |EXTERNAL-LINK|.
 
 Entrepreneurs wanting to use the design to offer commercial quantities to their local communities should contact Semify (service @ semify-eda.com) to arrange a bulk purchase or DCC-EX (support @ dcc-ex.com) for a license to manufacture. Licensing includes donating a royalty to DCC-EX per board sold.
 
@@ -197,9 +197,9 @@ On the EX-MotorShield8874 you need to alter the Pin Assignment pads (NB: the fol
 * Cut the DIR jumpers for both Driver A and Driver B, and solder bridge the right hand ALT pads
 * Cut the SENSE jumpers for both Driver A and Driver B, and solder bridge the right hand ALT pads
 
-The above will re-allocate most of the pins used by the top board to the `ALT or alternate set of pins <https://github.com/DCC-EX/EX-MotorShield8874#aternate-pin-assignment-pcb-jumpers>`_ but note it leaves the FAULT pins routed to the default positions of A4/A5 as there is no conflict with the Arduino Motor Shield R3.
+The above will re-allocate most of the pins used by the top board to the `ALT or alternate set of pins <https://github.com/DCC-EX/EX-MotorShield8874#aternate-pin-assignment-pcb-jumpers>`_ |EXTERNAL-LINK| but note it leaves the FAULT pins routed to the default positions of A4/A5 as there is no conflict with the Arduino Motor Shield R3.
 
-Add **one** of the following motor driver definitions to your config.h file (if uncertain, read `this description </reference/hardware/motorboards/motor-board-config>`_ first):
+Add **one** of the following motor driver definitions to your config.h file (if uncertain, read `this description </reference/hardware/motorboards/motor-board-config>`_ |EXTERNAL-LINK| first):
 
 Find this section in the file:
 
@@ -250,7 +250,7 @@ The easiest way forward is to leave the first EX-MotorShield8874 in the stack en
 
 The top EX-MotorShield8874 must have its onboard 7.2V regulators disconnected from the VIN pin at least, and preferably also disabled to save a little power consumption and lower the RF noise. It also needs to have all of its IO pins used to communicate with the |EX-CS| re-routed to alternate pins and an additional motor driver entry created in `config.h`
 
-The documentation has the `jumpers described on GitHub <https://github.com/DCC-EX/EX-MotorShield8874#power-configuration-pcb-jumpers>`_
+The documentation has the `jumpers described on GitHub <https://github.com/DCC-EX/EX-MotorShield8874#power-configuration-pcb-jumpers>`_ |EXTERNAL-LINK|
 
 But to be VERY clear, you must CUT the regulator to VIN pin on the top of the PCB which is not labelled on the original version, but has been labelled on later versions:
 
@@ -276,7 +276,7 @@ On the top board you then need to alter the Pin Assignment pads (NB: this is for
 * Cut the DIR jumpers for both Driver A and Driver B, and solder bridge the right hand ALT pads
 * Cut the SENSE jumpers for both Driver A and Driver B, and solder bridge the right hand ALT pads
 
-The above will re-allocate the pins used by the top board to the `ALT or alternate set of pins <https://github.com/DCC-EX/EX-MotorShield8874#aternate-pin-assignment-pcb-jumpers>`_
+The above will re-allocate the pins used by the top board to the `ALT or alternate set of pins <https://github.com/DCC-EX/EX-MotorShield8874#aternate-pin-assignment-pcb-jumpers>`_ |EXTERNAL-LINK|
 
 The reason we did not solder the FAULT pins to their righthand ALT pads is that this would connect the FAULT pins to D0/D1 on the Arduino R3 headers which is not ideal because D0/D1 typically carry the serial port. You can of course bend those pins out if you wish to use them, and simply jumper them that way.
 
@@ -330,4 +330,4 @@ Where `YOUR_PIN_A` and `YOUR_PIN_B` are the pins you have jumpered to the Sense 
 
 Note that on Nucleo-144 motherboards, D7 and D8 are incapable of PWM for the Brake for channel B on either the first or second shield. PWM is used for DC PWM output **and** for managing DCC overload situations for the EX-MotorShield8874. As such it is recommended these be BRAKE pins both be isolated by cutting the pads, and then jumpered to other PWM capable pins such as PE12 and PE14. More details to follow.
 
-For more detailed and technical information, follow the link to the `EX-MotorShield8874 on Github <https://github.com/DCC-EX/EX-MotorShield8874>`_ It also includes the schematic and the KiCad project files.
+For more detailed and technical information, follow the link to the `EX-MotorShield8874 on Github <https://github.com/DCC-EX/EX-MotorShield8874>`_ |EXTERNAL-LINK| It also includes the schematic and the KiCad project files.

@@ -19,7 +19,7 @@ Lew's Duino Gear sells various intelligent electronics designed for model railro
 
 This page documents the configuration of these boards with |EX-CS| only.
 
-For documentation, support, and reference on the boards themselves, refer to the `Lew's Duino Gear <https://beaglebay.com/duinogear/>`_ website and/or the product documentation supplied with the boards.
+For documentation, support, and reference on the boards themselves, refer to the `Lew's Duino Gear <https://beaglebay.com/duinogear/>`_ |EXTERNAL-LINK| website and/or the product documentation supplied with the boards.
 
 DNIN8/DNIN8K Digital Input duinoNode
 ====================================

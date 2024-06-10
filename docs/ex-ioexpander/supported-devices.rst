@@ -400,7 +400,7 @@ STMicroelectronics STM32F103C8T6 (Bluepill)
   :alt: EX-IOExpander on STM32F103C8T6 Bluepill
   :scale: 50%
 
-Image courtesy of `arm MBED <https://os.mbed.com/users/hudakz/code/STM32F103C8T6_Hello/>`_
+Image courtesy of `arm MBED <https://os.mbed.com/users/hudakz/code/STM32F103C8T6_Hello/>`_ |EXTERNAL-LINK|
 
 .. list-table:: STM32F103C8T6 Bluepill pin allocations
   :widths: auto

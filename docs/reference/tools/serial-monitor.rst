@@ -52,7 +52,7 @@ Download and install the Arduino IDE
 
 Rather than go into details that are already covered in great detail on the Arduino web page, just follow the instructions in the following link and then return here.
 
-`Arduino IDE Guide <https://www.arduino.cc/en/Guide>`_
+`Arduino IDE Guide <https://www.arduino.cc/en/Guide>`_ |EXTERNAL-LINK|
 
 Run the Arduino IDE
 --------------------
@@ -68,7 +68,7 @@ Start the Arduino IDE. You should see something like this:
 Select the Correct COM Port
 ----------------------------
 
-Select "Port" and find the port on your computer that recognises the Arduino. If you don't see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here `Drivers for the CH340 <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
+Select "Port" and find the port on your computer that recognises the Arduino. If you don't see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here `Drivers for the CH340 <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_ |EXTERNAL-LINK|
 
 .. figure:: /_static/images/arduino-ide/board_port_mega.jpg
    :alt: Select the COM Port
@@ -129,18 +129,18 @@ You will need to find one that is compatible with your phone. Some phones come w
 
 Here is an adapter:
 
-https://www.amazon.com/Thunderbolt-Compatible-Chromebook-Pixelbook-Microsoft/dp/B07KR45LJW/
+https://www.amazon.com/Thunderbolt-Compatible-Chromebook-Pixelbook-Microsoft/dp/B07KR45LJW/ |EXTERNAL-LINK|
 
 Here is one for Android or MacBook Pro with USB-C with a short pigtail:
 
-https://www.amazon.com/Adapter-JSAUX-Compatible-MacBook-Samsung/dp/B07L749R9R/
+https://www.amazon.com/Adapter-JSAUX-Compatible-MacBook-Samsung/dp/B07L749R9R/ |EXTERNAL-LINK|
 
 And one for an iPad or iPhone:
 
-https://www.amazon.com/dp/B09KBZDDGL/
+https://www.amazon.com/dp/B09KBZDDGL/ |EXTERNAL-LINK|
 
 Every smart phone OS such as Android or iOS has a program or two that will work as a serial monitor. For Android, here are a few:
 
 * Serial USB Terminal by Kai Morich
-* `Serial Monitor by CSA <https://play.google.com/store/apps/details?id=com.csa.serialmonitor>`_
-* `USB Serial Console by Felipe Herranz <https://play.google.com/store/apps/details?id=jp.sugnakys.usbserialconsole>`_
+* `Serial Monitor by CSA <https://play.google.com/store/apps/details?id=com.csa.serialmonitor>`_ |EXTERNAL-LINK|
+* `USB Serial Console by Felipe Herranz <https://play.google.com/store/apps/details?id=jp.sugnakys.usbserialconsole>`_ |EXTERNAL-LINK|

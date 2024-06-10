@@ -130,11 +130,11 @@ Using a Capacitive Discharge Unit (CDU) - dual solenoid/coil turnouts
 Option 1 - DIY CDU by "Rosscoe" (DCC-EX user on Discord)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The information here is based on the combined driver and CDU as outlined in this GitHub repository, with a PCB available from `PCBWay <https://www.pcbway.com/>`_
+The information here is based on the combined driver and CDU as outlined in this GitHub repository, with a PCB available from `PCBWay <https://www.pcbway.com/>`_ |EXTERNAL-LINK|
 
 .. rst-class:: dcclink
 
-  `DCC Solenoid Turnout Driver <https://github.com/Rosscoetrain/DCC-Solenoid-Turnout-Driver>`_
+  `DCC Solenoid Turnout Driver <https://github.com/Rosscoetrain/DCC-Solenoid-Turnout-Driver>`_ |EXTERNAL-LINK|
 
 .. image:: /_static/images/turnouts/block_diagram_switch_final.png
   :alt: Block Diagram

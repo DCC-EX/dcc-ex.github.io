@@ -47,7 +47,7 @@ The |EX-FC| integration includes:
 
   Credit where credit is due!
   
-  The |EX-FC| is based on a project originally written by Jim Gifford (Hallet Cove Southern) in June 2017. That project used a 32 x 8 LED matrix to display the time and was controlled by a number of pushbuttons. You can see Jim's Original Project `here <https://www.hallettcovesouthern.com/track-plan-design-info/arduino-projects/fast-clock/>`.
+  The |EX-FC| is based on a project originally written by Jim Gifford (Hallet Cove Southern) in June 2017. That project used a 32 x 8 LED matrix to display the time and was controlled by a number of pushbuttons. You can see Jim's Original Project `here <https://www.hallettcovesouthern.com/track-plan-design-info/arduino-projects/fast-clock/>` |EXTERNAL-LINK|.
 
 
 

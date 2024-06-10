@@ -13,7 +13,7 @@ CMME (Chesterfield Model Making & Miniature Electronics)
    :scale: 100%
    :align: left
    
-`Chesterfield Model Making and Miniature Electronics <https://chesterfield-models.co.uk/product/dccex/>`_
+`Chesterfield Model Making and Miniature Electronics <https://chesterfield-models.co.uk/product/dccex/>`_ |EXTERNAL-LINK|
 
 .. rst-class:: clearer
 
@@ -24,5 +24,5 @@ Chesterfield sells a complete system in a 3D printed case already assembled and 
     :scale: 80%
     :align: left
 
-`Chesterfield assembled DCC-EX Command Station <https://chesterfield-models.co.uk/product/dccex/>`_
+`Chesterfield assembled DCC-EX Command Station <https://chesterfield-models.co.uk/product/dccex/>`_ |EXTERNAL-LINK|
 

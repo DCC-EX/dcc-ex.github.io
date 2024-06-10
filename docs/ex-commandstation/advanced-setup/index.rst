@@ -184,6 +184,6 @@ Features under development
   
 We always have new features under development for |EX-CS| and |EX-R|, and as these features get incorporated into the development branch of the software, we will endeavour to keep these documented in our development pages.
 
-Remember that these features will continue to change and evolve as bugs are found and fixed, and better ways of doing things are discovered, so it's best to keep up to date with any discussions via our `Discord server <https://discord.gg/PuPnNMp8Qf>`_.
+Remember that these features will continue to change and evolve as bugs are found and fixed, and better ways of doing things are discovered, so it's best to keep up to date with any discussions via our `Discord server <https://discord.gg/PuPnNMp8Qf>`_ |EXTERNAL-LINK|.
 
 Refer to :doc:`/under-development/index` for more information.

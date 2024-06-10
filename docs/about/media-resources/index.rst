@@ -17,7 +17,7 @@ Let us help you to have everything you need to produce your content and receive 
 
 * Find us on Discord
 * Send an email to support@dcc-ex.com
-* Create a support request at https://dcc-ex.com/support/index.html#raise-a-support-ticket
+* Create a support request at https://dcc-ex.com/support/index.html#raise-a-support-ticket |EXTERNAL-LINK|
 
 Making videos or Live Demos
 ============================

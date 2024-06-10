@@ -88,7 +88,7 @@ Once you can see your computer recognises your board, **remember the port**. For
 
 **Unplug the Mega.**
 
-For more detail on how to install the correct CH340 drivers for your OS, you can see this `SparkFun Tutorial <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
+For more detail on how to install the correct CH340 drivers for your OS, you can see this `SparkFun Tutorial <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_ |EXTERNAL-LINK|
 
 b. Download and install the flash download tool
 -----------------------------------------------
@@ -119,7 +119,7 @@ Download the ESP8266_NONOS_AT_BIN_v1.7.4 firmware files by clicking the button b
 
 Install python if you don't already have it installed. This quick guide shows you how to check if you already have Python and how to install it if you don't:
 
-https://wiki.python.org/moin/BeginnersGuide/Download
+https://wiki.python.org/moin/BeginnersGuide/Download |EXTERNAL-LINK|
 
 Once you have Python installed, you will need to install esptool.py. Open a command prompt and use pip (or Homebrew on a macOS) to find and install it from the web:
 
@@ -375,12 +375,12 @@ If you want to understand what is happening in more detail, such as what the dif
 Detailed tutorial and analysis by DCC-EX team member Neil McKechnie (NeilMc):
 https://wakwak2popo.wordpress.com/2021/01/05/flashing-at-command-set-on-combined-mega-8266-board/
 
-Fernando Koyanagi's excellent site including a video. Just be careful not to use his settings since he used an older version of the firmware: https://www.instructables.com/Arduino-MEGA-2560-With-WiFi-Built-in-ESP8266/
+Fernando Koyanagi's excellent site including a video. Just be careful not to use his settings since he used an older version of the firmware: https://www.instructables.com/Arduino-MEGA-2560-With-WiFi-Built-in-ESP8266/ |EXTERNAL-LINK|
 
-The Espressif ESP8266 page (The manufacturer of the chip): https://www.espressif.com/en/products/socs/esp8266/
+The Espressif ESP8266 page (The manufacturer of the chip): https://www.espressif.com/en/products/socs/esp8266/ |EXTERNAL-LINK|
 
 Espressif detailed instructions on using the esptool
-https://github.com/espressif/esptool#installation--dependencies
+https://github.com/espressif/esptool#installation--dependencies |EXTERNAL-LINK|
 
 The Mega+WiFi Schematic diagram. Click on it to enlarge:
 

@@ -191,8 +191,8 @@ You can Assign Tracks/Districts to DCC and DC mode in four ways
 
 New |Engine Driver| DCC-EX Native mode features now available today via Google Play Store:
 
-  * `Engine Driver <https://play.google.com/store/apps/details?id=jmri.enginedriver>`_
-  * `EX-Toolbox <https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox>`_
+  * `Engine Driver <https://play.google.com/store/apps/details?id=jmri.enginedriver>`_ |EXTERNAL-LINK|
+  * `EX-Toolbox <https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox>`_ |EXTERNAL-LINK|
 
 TrackManager Commands
 ======================

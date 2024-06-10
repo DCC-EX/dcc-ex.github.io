@@ -17,5 +17,5 @@ It is possible to easily add a rotary dial (knob) to |Engine Driver| due its abi
 
 Examples of projects using this feature can be found at:  
 
-* http://1fatgmc.com/RailRoad/DCC/page-3.html
-* https://www.youtube.com/watch?v=qA9WiscD1gk
+* http://1fatgmc.com/RailRoad/DCC/page-3.html |EXTERNAL-LINK|
+* https://www.youtube.com/watch?v=qA9WiscD1gk |EXTERNAL-LINK|

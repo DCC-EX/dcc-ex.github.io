@@ -64,11 +64,11 @@ For those who wish to contribute to the project, this is by far the best option 
 
 .. rst-class:: dcclink
 
-   `Join our Discord Server <https://discord.gg/y2sB4Fp>`_
+   `Join our Discord Server <https://discord.gg/y2sB4Fp>`_ |EXTERNAL-LINK|
 
 Instructions:
 
-1. Follow this link `<https://discord.gg/y2sB4Fp>`_
+1. Follow this link `<https://discord.gg/y2sB4Fp>`_ |EXTERNAL-LINK|
 
 2. click ``Register`` on the sign in-page
 
@@ -152,18 +152,18 @@ We try to follow FaceBook and JMRI groups, but there are just too many separate 
 
 You can find some of us on Facebook in the "DCC-EX, DCC++ and Arduino Model Railroading" private group. However many of the project team do not use Facebook at all, so this approach is **not recommended**.
 
-`Arduino for Model Railroading <https://www.facebook.com/groups/926390087391995/>`_
+`Arduino for Model Railroading <https://www.facebook.com/groups/926390087391995/>`_ |EXTERNAL-LINK|
 
 There is also another group you you can join here:
 
-`DCC++ and Arduino Model Railroading <https://www.facebook.com/groups/1406785379394934/>`_
+`DCC++ and Arduino Model Railroading <https://www.facebook.com/groups/1406785379394934/>`_ |EXTERNAL-LINK|
 
 TrainBoard
 ^^^^^^^^^^
 
 You can also find a few of us on TrainBoard. However very few of the project team use TrainBoard, so this approach is **not recommended**.
 
-`DCC++ EX TrainBoard Forum <https://www.trainboard.com/highball/index.php?forums/dcc.177/>`_
+`DCC++ EX TrainBoard Forum <https://www.trainboard.com/highball/index.php?forums/dcc.177/>`_ |EXTERNAL-LINK|
 
 
 .. toctree::

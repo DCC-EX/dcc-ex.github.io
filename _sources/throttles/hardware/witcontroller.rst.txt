@@ -66,7 +66,7 @@ Features
 
 NOTE: This is a Project and is therefore a work in progress and open source. New features are being added regularly.
 
-Source code and instructions can be found on GitHub here: https://github.com/flash62au/WiTcontroller
+Source code and instructions can be found on GitHub here: https://github.com/flash62au/WiTcontroller |EXTERNAL-LINK|
 
 Images
 ========

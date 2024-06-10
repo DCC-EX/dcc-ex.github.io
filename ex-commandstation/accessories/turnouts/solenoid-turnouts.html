@@ -720,8 +720,8 @@ DUAL_COIL_TURNOUT(102, 23, 25, 27, &quot;Turnout 102&quot;)
 <h3><a class="toc-backref" href="#id8" role="doc-backlink">Using a Capacitive Discharge Unit (CDU) - dual solenoid/coil turnouts</a><a class="headerlink" href="#using-a-capacitive-discharge-unit-cdu-dual-solenoid-coil-turnouts" title="Permalink to this heading"></a></h3>
 <section id="option-1-diy-cdu-by-rosscoe-dcc-ex-user-on-discord">
 <h4><a class="toc-backref" href="#id9" role="doc-backlink">Option 1 - DIY CDU by “Rosscoe” (DCC-EX user on Discord)</a><a class="headerlink" href="#option-1-diy-cdu-by-rosscoe-dcc-ex-user-on-discord" title="Permalink to this heading"></a></h4>
-<p>The information here is based on the combined driver and CDU as outlined in this GitHub repository, with a PCB available from <a class="reference external" href="https://www.pcbway.com/">PCBWay</a></p>
-<p class="dcclink"><a class="reference external" href="https://github.com/Rosscoetrain/DCC-Solenoid-Turnout-Driver">DCC Solenoid Turnout Driver</a></p>
+<p>The information here is based on the combined driver and CDU as outlined in this GitHub repository, with a PCB available from <a class="reference external" href="https://www.pcbway.com/">PCBWay</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
+<p class="dcclink"><a class="reference external" href="https://github.com/Rosscoetrain/DCC-Solenoid-Turnout-Driver">DCC Solenoid Turnout Driver</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <a class="reference internal image-reference" href="../../../_images/block_diagram_switch_final.png"><img alt="Block Diagram" src="../../../_images/block_diagram_switch_final.png" style="width: 483.59999999999997px; height: 392.4px;" /></a>
 <p>This board has an MCP23017 which is connected to your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> via I<sup>2</sup>C, which is then controlled like any other MCP23017.  This MCP23017 controls two ULN2803 darlington arrays to switch power to the turnout/point solenoids.</p>
 <p>The connections will depend on the driver and CDU.</p>
@@ -783,10 +783,18 @@ DUAL_SOLENOID_TURNOUT(1,164,165,&quot;Example CDU turnout&quot;,EXAMPLE_TURNOUT)
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f98f19c00>
+    <jinja2.runtime.BlockReference object at 0x7fb014e53f10>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

@@ -775,7 +775,7 @@ AFTER(4003)     // Will trigger 0.5s after an object moves 250mm away
 </div>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
-<p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/447">LOW - VL53L0X</a> - validate VL53L0X works with EX-RAIL’s analogue sensor commands ATGTE, ATLT, IFGTE, IFLT</p>
+<p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/447">LOW - VL53L0X</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> - validate VL53L0X works with EX-RAIL’s analogue sensor commands ATGTE, ATLT, IFGTE, IFLT</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -812,10 +812,18 @@ ATLT(4003, 100)     // Will trigger when an object is less than 100mm away
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f970296c0>
+    <jinja2.runtime.BlockReference object at 0x7fb012aef2b0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

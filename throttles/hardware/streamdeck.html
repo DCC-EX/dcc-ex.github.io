@@ -625,7 +625,7 @@
 <p><span class="caption-number">Figure 199 </span><span class="caption-text">Stream Deck Setup</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>To see more information and instructions, click here to go to <a class="reference external" href="https://github.com/daniep01/companion-module-dcc-ex-commandstation">Peter’s GitHub Page</a></p>
+<p>To see more information and instructions, click here to go to <a class="reference external" href="https://github.com/daniep01/companion-module-dcc-ex-commandstation">Peter’s GitHub Page</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <p>Note that this option would fit more into the project category since there is some tinkering involved.</p>
 </section>
 
@@ -651,10 +651,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f973458d0>
+    <jinja2.runtime.BlockReference object at 0x7fb0138ddbd0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

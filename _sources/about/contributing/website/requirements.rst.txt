@@ -30,29 +30,29 @@ Just go to the Contact Us section, and we will find a way of getting you on boar
 reStructuredText
 ----------------
 
-All documentation is done using reStructuredText, for which you can find information on the official website: `reStructuredText <https://docutils.sourceforge.io/rst.html>`_
-or the `Sphinx <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_ document builder tool website, which we discuss later on in this chapter.
+All documentation is done using reStructuredText, for which you can find information on the official website: `reStructuredText <https://docutils.sourceforge.io/rst.html>`_ |EXTERNAL-LINK|
+or the `Sphinx <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_ |EXTERNAL-LINK| document builder tool website, which we discuss later on in this chapter.
 reStructuredText is a markdown type language, for typesetting documents from websites to PDF or LaTeX documents. Our Website is built upon this technology, so you should make yourself familiar with this by looking through the links provided.
 
-reStructuredText `QuickReference Guide <https://docutils.sourceforge.io/docs/user/rst/quickref.html>`_ 
+reStructuredText `QuickReference Guide <https://docutils.sourceforge.io/docs/user/rst/quickref.html>`_ |EXTERNAL-LINK| 
 
 Git & GitHub
 ------------
 
 You should have some knowledge about Git and GitHub, as we manage all of our documentation (as well as the development) there. Depending on the editing platform of your choice, you may get all the Git functionality you need. You may want to install GitHub Desktop or Sourcetree for getting a good idea on the state of the |EX-CS| documentation GitHub repository (dcc-ex.github.io).
 
-If you don't have Git installed, now is as good a time as any, follow the instructions in the `Pro Git book <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_
+If you don't have Git installed, now is as good a time as any, follow the instructions in the `Pro Git book <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_ |EXTERNAL-LINK|
 
-Download `GitHub Desktop <https://desktop.github.com/>`_
+Download `GitHub Desktop <https://desktop.github.com/>`_ |EXTERNAL-LINK|
 
-Download `SourceTree <https://www.sourcetreeapp.com/>`_
+Download `SourceTree <https://www.sourcetreeapp.com/>`_ |EXTERNAL-LINK|
 
 Editing
 -------
 
 You will also need to choose a text editor. Yes, any text editor will do, even the most simple one, but they will not provide editing help. We suggest you use the free VSCode (Visual Studio Code) which provides additional components that will make your editing easier with syntax highlighting, text snippets, and live preview of the rendering of the file, as well as integration with GitHub. Using a simple text editor will require you handling the Git integration yourself.
 
-Download VSCode `here <https://code.visualstudio.com/download>`_
+Download VSCode `here <https://code.visualstudio.com/download>`_ |EXTERNAL-LINK|
 
 Install the following extensions:
 

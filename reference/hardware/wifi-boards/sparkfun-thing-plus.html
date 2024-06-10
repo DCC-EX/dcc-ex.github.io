@@ -612,9 +612,9 @@
 <p><a class="reference external" href="../../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
 </aside>
-<p>This is a very powerful board in its own right. It almost seems a shame to use it just for WiFi, though with custom firmware, it could handle WiFi duty and a lot more. The advantage of this board is it has a connector for an external antenna. The board is relatively expensive, but SparkFun has quality products and top notch support. Detailed installation instructions can be found at: <a class="reference external" href="https://docs.espressif.com/projects/esp-at/en/latest/Get_Started/index.html">https://docs.espressif.com/projects/esp-at/en/latest/Get_Started/index.html</a></p>
+<p>This is a very powerful board in its own right. It almost seems a shame to use it just for WiFi, though with custom firmware, it could handle WiFi duty and a lot more. The advantage of this board is it has a connector for an external antenna. The board is relatively expensive, but SparkFun has quality products and top notch support. Detailed installation instructions can be found at: <a class="reference external" href="https://docs.espressif.com/projects/esp-at/en/latest/Get_Started/index.html">https://docs.espressif.com/projects/esp-at/en/latest/Get_Started/index.html</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <a class="reference internal image-reference" href="../../../_images/sparkfun_thing_plus.jpg"><img alt="SparkFun Thing Plus" src="../../../_images/sparkfun_thing_plus.jpg" style="width: 240.0px; height: 240.0px;" /></a>
-<p><a class="reference external" href="https://www.sparkfun.com/products/17381">https://www.sparkfun.com/products/17381</a></p>
+<p><a class="reference external" href="https://www.sparkfun.com/products/17381">https://www.sparkfun.com/products/17381</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 </section>
 
 <div class="section ablog__blog_comments">
@@ -639,10 +639,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f96849090>
+    <jinja2.runtime.BlockReference object at 0x7fb013a82e30>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

@@ -774,7 +774,7 @@ ROSTER(4468,&quot;LNER 4468&quot;,&quot;//Snd On/*Whistle/*Whistle2/Brake/F5 Dra
 <li><p>If you later add an image in the JMRI Roster for the loco (or later connect to a <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Server</span></a> that has an image), it will automatically overwrite the local image with the one on the server.</p></li>
 <li><p>In the Recent Locos list you <em>can not</em> add images to locos entered by a DCC address. (i.e. not from the roster)</p></li>
 </ul>
-<p>Also refer to the <a class="reference external" href="https://flash62au.github.io/EngineDriver_Home/configuration/loco_icons.html?highlight=images">Engine Driver Loco Icon Documentation</a> for more information.</p>
+<p>Also refer to the <a class="reference external" href="https://flash62au.github.io/EngineDriver_Home/configuration/loco_icons.html?highlight=images">Engine Driver Loco Icon Documentation</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> for more information.</p>
 </section>
 </section>
 </section>
@@ -801,10 +801,18 @@ ROSTER(4468,&quot;LNER 4468&quot;,&quot;//Snd On/*Whistle/*Whistle2/Brake/F5 Dra
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f97b5acb0>
+    <jinja2.runtime.BlockReference object at 0x7fb012ea26e0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

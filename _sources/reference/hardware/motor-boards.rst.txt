@@ -114,7 +114,7 @@ Incompatible boards
 * IFX9202ED - Infineon Dual H-Bridge. Can't switch fast enough.
 * :doc:`/reference/hardware/motorboards/dfrobot-romeo-v2` - Well, an Engineer could perhaps get this one to work.
 * Kuman Board (and any L293D based boards) - not enough current.
-* Pololu TB9051FTG based motor shield. It can't switch fast enough to generate a reliable DCC signal. `Product page <https://www.pololu.com/product/2520>`_.
+* Pololu TB9051FTG based motor shield. It can't switch fast enough to generate a reliable DCC signal. `Product page <https://www.pololu.com/product/2520>`_ |EXTERNAL-LINK|.
    
 Other boards
 ------------

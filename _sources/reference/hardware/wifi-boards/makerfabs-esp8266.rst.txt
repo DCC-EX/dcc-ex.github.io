@@ -17,7 +17,7 @@ AKA Makerfabs ESP8266 WiFi Shield
       :depth: 1
       :local:
 
-   `This board <https://www.makerfabs.com/esp8266-wifi-shield.html>`_ is a joint project with |DCC-EX| and Makerfabs and is designed to work out of the box. Make sure to purchase from DCC-EX or any of our dealers or standard parts suppliers.
+   `This board <https://www.makerfabs.com/esp8266-wifi-shield.html>`_ |EXTERNAL-LINK| is a joint project with |DCC-EX| and Makerfabs and is designed to work out of the box. Make sure to purchase from DCC-EX or any of our dealers or standard parts suppliers.
 
    If for any reason you wish to update the firmware in the future, pleas see :doc:`/support/wifi-at-version` for details on how to check the version and how to change it.
     

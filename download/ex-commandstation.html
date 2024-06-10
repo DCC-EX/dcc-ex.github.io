@@ -661,7 +661,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>On the releases page, select the most recent version and download the .zip file. You will see the 2 files for download, choose the compression format you prefer: CommandStation-EX.zip or CommandStation-EX.tar.gz. The zip/tar file contains the Arduino Sketch file for <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>. You will need either the Arduino IDE or the PlatformIO development environment in order to upload it to your microcontroller board. Click here for <a class="reference internal" href="../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">Arduino IDE installation instructions</span></a>.</p>
-<p class="dcclink"><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/releases">Official Release page</a></p>
+<p class="dcclink"><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/releases">Official Release page</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 </div>
 </section>
 <section id="latest-ex-commandstation-unreleased-development-version">
@@ -673,7 +673,7 @@
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p><a class="reference external" href="https://discord.gg/y2sB4Fp">Discord</a> is the best place to keep up-to-date on new code releases, and you may be directed to download the latest version here from time to time, as new features are added and updated often.</p>
-<p class="dcclink"><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/tree/devel">Development Version</a></p>
+<p class="dcclink"><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/tree/devel">Development Version</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 </div>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
@@ -682,7 +682,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The link below will take you the the EX-CommandStation GitHub repository, where you can clone the project to your computer. Click on the green button to get a clone link or to download the zip file. We have made sure that you can still use the Arduino IDE if you like, but we recommend developers use the PlatformIO development environment. See the <a class="reference internal" href="../about/contributing/index.html"><span class="doc">Contributing Page</span></a> for more information.</p>
-<p class="dcclink"><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">EX-CommandStation GitHub</a></p>
+<p class="dcclink"><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">EX-CommandStation GitHub</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 </div>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 <hr class="docutils" />
@@ -698,8 +698,8 @@
 <p>We recommend using the newer <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> as it will run on the same hardware and is maintained and supported.</p>
 <p>The new <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> <span class="dcc-ex-red-bold">does not provide an option to install BaseStation-Classic</span> so if you wish to install it you will need to use the <a class="reference internal" href="../reference/glossary.html"><span class="doc">Arduino IDE</span></a> or <a class="reference internal" href="../reference/glossary.html"><span class="doc">Visual Studio Code (VSC)</span></a> and download the links below.</p>
 <blockquote>
-<div><p class="dcclink"><a class="reference external" href="https://github.com/DCC-EX/BaseStation-Classic/archive/master.zip">BaseStation-Classic .zip file</a></p>
-<p class="dcclink"><a class="reference external" href="https://github.com/DCC-EX/BaseStation-Classic">BaseStation-Classic GitHub</a></p>
+<div><p class="dcclink"><a class="reference external" href="https://github.com/DCC-EX/BaseStation-Classic/archive/master.zip">BaseStation-Classic .zip file</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
+<p class="dcclink"><a class="reference external" href="https://github.com/DCC-EX/BaseStation-Classic">BaseStation-Classic GitHub</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 </div></blockquote>
 </section>
 </section>
@@ -726,10 +726,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f9904a980>
+    <jinja2.runtime.BlockReference object at 0x7fb013667eb0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

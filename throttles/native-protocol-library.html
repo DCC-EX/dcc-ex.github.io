@@ -610,7 +610,7 @@
 <p><a class="reference external" href="../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../support/index.html#contact-support-options" title="Request help or support"><img src="../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
 <p>A DCC-EX Native command protocol library is available to help develop throttle apps on Arduino (primarily ESP32) hardware.</p>
 <p>The library implements the DCC-EX Native command protocol (as used in the <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> ONLY), allowing a device to connect to the server and act as a client (such as a hardware based throttle).</p>
-<p>Details of the library, including instructions and examples, <a class="reference external" href="https://dcc-ex.com/DCCEXProtocol/index.html">is available here</a>.</p>
+<p>Details of the library, including instructions and examples, <a class="reference external" href="https://dcc-ex.com/DCCEXProtocol/index.html">is available here</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;">.</p>
 </section>
 
 <div class="section ablog__blog_comments">
@@ -635,10 +635,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f965bc190>
+    <jinja2.runtime.BlockReference object at 0x7fb013c8a200>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

@@ -776,12 +776,12 @@ skin ef.</p></th>
 </tbody>
 </table>
 <p>You can see from the above table, for example, that 14 gauge wire can handle a 5Amp current, and 22 gauge wire would be good for feeders. But don’t trust this table, especially if you are using higher currents and have a large layout. Voltage, current, length of wire and the fact that these numbers are for 50/60 cycle house current instead of our ~8kHz DCC, mean that the more current you are going to use, the more you will need to know. Find more information in the following resources:</p>
-<p><a class="reference external" href="https://dccwiki.com/Wire_Sizes_and_Spacing">https://dccwiki.com/Wire_Sizes_and_Spacing</a></p>
-<p><a class="reference external" href="https://tonystrains.com/news/wire-sizes-to-use-in-dcc/">https://tonystrains.com/news/wire-sizes-to-use-in-dcc/</a></p>
-<p><a class="reference external" href="https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/track-wire-gauge-selection">https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/track-wire-gauge-selection</a></p>
-<p><a class="reference external" href="http://www.sumidacrossing.org/LayoutControl/DCC/DCCLayoutPower/">http://www.sumidacrossing.org/LayoutControl/DCC/DCCLayoutPower/</a></p>
+<p><a class="reference external" href="https://dccwiki.com/Wire_Sizes_and_Spacing">https://dccwiki.com/Wire_Sizes_and_Spacing</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
+<p><a class="reference external" href="https://tonystrains.com/news/wire-sizes-to-use-in-dcc/">https://tonystrains.com/news/wire-sizes-to-use-in-dcc/</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
+<p><a class="reference external" href="https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/track-wire-gauge-selection">https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/track-wire-gauge-selection</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
+<p><a class="reference external" href="http://www.sumidacrossing.org/LayoutControl/DCC/DCCLayoutPower/">http://www.sumidacrossing.org/LayoutControl/DCC/DCCLayoutPower/</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <p>A little more involved, but worth the read if you already are an experienced railroader:</p>
-<p><a class="reference external" href="http://4dpnr.com/wp-content/uploads/2015/07/DCC_Wiring.pdf">http://4dpnr.com/wp-content/uploads/2015/07/DCC_Wiring.pdf</a></p>
+<p><a class="reference external" href="http://4dpnr.com/wp-content/uploads/2015/07/DCC_Wiring.pdf">http://4dpnr.com/wp-content/uploads/2015/07/DCC_Wiring.pdf</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <p>Read all the above and you will be a DCC-EX Engineer!</p>
 </section>
 <section id="accessory-bus">
@@ -815,10 +815,18 @@ skin ef.</p></th>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f98380a00>
+    <jinja2.runtime.BlockReference object at 0x7fb01426f3a0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

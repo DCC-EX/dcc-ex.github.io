@@ -639,7 +639,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Credit where credit is due!</p>
-<p>The <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;FastClock</span> is based on a project originally written by Jim Gifford (Hallet Cove Southern) in June 2017. That project used a 32 x 8 LED matrix to display the time and was controlled by a number of pushbuttons. You can see Jim’s Original Project <cite>here &lt;https://www.hallettcovesouthern.com/track-plan-design-info/arduino-projects/fast-clock/&gt;</cite>.</p>
+<p>The <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;FastClock</span> is based on a project originally written by Jim Gifford (Hallet Cove Southern) in June 2017. That project used a 32 x 8 LED matrix to display the time and was controlled by a number of pushbuttons. You can see Jim’s Original Project <cite>here &lt;https://www.hallettcovesouthern.com/track-plan-design-info/arduino-projects/fast-clock/&gt;</cite> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;">.</p>
 <p><strong>MCUFRIEND.kbv credit:</strong> This library was written by David Prentice and has become the De-Facto standard for the shield based TFT screens used in this project. This library inherits from the Adafruit GFX library.</p>
 <p><strong>Adafruit</strong> for the Adafruit GFX Library.</p>
 </div>
@@ -672,10 +672,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f976c5ff0>
+    <jinja2.runtime.BlockReference object at 0x7fb013ce1f30>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

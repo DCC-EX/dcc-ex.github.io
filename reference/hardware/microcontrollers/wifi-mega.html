@@ -701,7 +701,7 @@
 <p><a class="reference external" href="http://www.wch-ic.com/downloads/CH341SER_ZIP.html">http://www.wch-ic.com/downloads/CH341SER_ZIP.html</a></p>
 <p>Once you can see your computer recognises your board, <strong>remember the port</strong>. For a PC running windows, it will be something like “COM24” as in the picture above. For a Mac, it will be something like “/dev/cu.wchusbserial*****”, and for Linux it will look like “/dev/ttyUSBx”. Write it down.</p>
 <p><strong>Unplug the Mega.</strong></p>
-<p>For more detail on how to install the correct CH340 drivers for your OS, you can see this <a class="reference external" href="https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all">SparkFun Tutorial</a></p>
+<p>For more detail on how to install the correct CH340 drivers for your OS, you can see this <a class="reference external" href="https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all">SparkFun Tutorial</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 </section>
 <section id="b-download-and-install-the-flash-download-tool">
 <h3><a class="toc-backref" href="#id14" role="doc-backlink">b. Download and install the flash download tool</a><a class="headerlink" href="#b-download-and-install-the-flash-download-tool" title="Permalink to this heading"></a></h3>
@@ -717,7 +717,7 @@
 <p>Download the ESP8266_NONOS_AT_BIN_v1.7.4 firmware files by clicking the button below:</p>
 <p class="dcclink"><a class="reference external" href="/_static/files/esp8266/ESP8266_NonOS_AT_Bin_V1.7.4.zip">ESP8266 Firmware Zipped</a></p>
 <p>Install python if you don’t already have it installed. This quick guide shows you how to check if you already have Python and how to install it if you don’t:</p>
-<p><a class="reference external" href="https://wiki.python.org/moin/BeginnersGuide/Download">https://wiki.python.org/moin/BeginnersGuide/Download</a></p>
+<p><a class="reference external" href="https://wiki.python.org/moin/BeginnersGuide/Download">https://wiki.python.org/moin/BeginnersGuide/Download</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <p>Once you have Python installed, you will need to install esptool.py. Open a command prompt and use pip (or Homebrew on a macOS) to find and install it from the web:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pip install esptool
 </pre></div>
@@ -946,10 +946,10 @@
 <p>If you want to understand what is happening in more detail, such as what the different settings and firmware does, you may consult the following resources.</p>
 <p>Detailed tutorial and analysis by DCC-EX team member Neil McKechnie (NeilMc):
 <a class="reference external" href="https://wakwak2popo.wordpress.com/2021/01/05/flashing-at-command-set-on-combined-mega-8266-board/">https://wakwak2popo.wordpress.com/2021/01/05/flashing-at-command-set-on-combined-mega-8266-board/</a></p>
-<p>Fernando Koyanagi’s excellent site including a video. Just be careful not to use his settings since he used an older version of the firmware: <a class="reference external" href="https://www.instructables.com/Arduino-MEGA-2560-With-WiFi-Built-in-ESP8266/">https://www.instructables.com/Arduino-MEGA-2560-With-WiFi-Built-in-ESP8266/</a></p>
-<p>The Espressif ESP8266 page (The manufacturer of the chip): <a class="reference external" href="https://www.espressif.com/en/products/socs/esp8266/">https://www.espressif.com/en/products/socs/esp8266/</a></p>
+<p>Fernando Koyanagi’s excellent site including a video. Just be careful not to use his settings since he used an older version of the firmware: <a class="reference external" href="https://www.instructables.com/Arduino-MEGA-2560-With-WiFi-Built-in-ESP8266/">https://www.instructables.com/Arduino-MEGA-2560-With-WiFi-Built-in-ESP8266/</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
+<p>The Espressif ESP8266 page (The manufacturer of the chip): <a class="reference external" href="https://www.espressif.com/en/products/socs/esp8266/">https://www.espressif.com/en/products/socs/esp8266/</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <p>Espressif detailed instructions on using the esptool
-<a class="reference external" href="https://github.com/espressif/esptool#installation--dependencies">https://github.com/espressif/esptool#installation–dependencies</a></p>
+<a class="reference external" href="https://github.com/espressif/esptool#installation--dependencies">https://github.com/espressif/esptool#installation–dependencies</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <p>The Mega+WiFi Schematic diagram. Click on it to enlarge:</p>
 <figure class="align-center" id="id9">
 <a class="reference internal image-reference" href="../../../_images/mega_wifi1.png"><img alt="Mega WiFi Schematic" src="../../../_images/mega_wifi1.png" style="width: 350.8px; height: 247.8px;" /></a>
@@ -983,10 +983,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f96ca6e60>
+    <jinja2.runtime.BlockReference object at 0x7fb014cf3160>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

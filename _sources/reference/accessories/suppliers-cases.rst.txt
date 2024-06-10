@@ -13,7 +13,7 @@ David Yale
    :scale: 100%
    :align: left
 
-`David's Makerbot Thingiverse page <https://www.thingiverse.com/dcyale/designs>`_
+`David's Makerbot Thingiverse page <https://www.thingiverse.com/dcyale/designs>`_ |EXTERNAL-LINK|
 
 .. rst-class:: clearer
 
@@ -24,7 +24,7 @@ David provides the files to make a 3D printed case or can sell an already made c
    :scale: 40%
    :align: left
 
-`David's DCC-EX case designs <https://www.thingiverse.com/thing:4619514>`_
+`David's DCC-EX case designs <https://www.thingiverse.com/thing:4619514>`_ |EXTERNAL-LINK|
 
 .. rst-class:: clearer
 
@@ -36,7 +36,7 @@ Chesterfield Cases
    :scale: 100%
    :align: left
    
-`Chesterfield Model Making & Miniature Electronics <https://chesterfield-models.co.uk/>`_
+`Chesterfield Model Making & Miniature Electronics <https://chesterfield-models.co.uk/>`_ |EXTERNAL-LINK|
 
 .. rst-class:: clearer
 
@@ -47,7 +47,7 @@ Chesterfield sells a case to fit the Mega DCC-EX Command Station along with comp
     :scale: 80%
     :align: left
 
-`Chesterfield EX-CommandStation Case <https://chesterfield-models.co.uk/product/dccex/>`_
+`Chesterfield EX-CommandStation Case <https://chesterfield-models.co.uk/product/dccex/>`_ |EXTERNAL-LINK|
 
 .. rst-class:: clearer
 
@@ -68,7 +68,7 @@ Created by Neil McKechnie, one of the the DCC-EX Team developers, this is a rack
    :scale: 50%
    :align: left
 
-`Neil's DCC++/EX Controller Case <https://wakwak2popo.wordpress.com/2021/01/04/dcc-controller-case/>`_
+`Neil's DCC++/EX Controller Case <https://wakwak2popo.wordpress.com/2021/01/04/dcc-controller-case/>`_ |EXTERNAL-LINK|
 
 .. rst-class:: clearer
 
@@ -95,9 +95,9 @@ Created by Sumner Patterson, this is a range of Mega Command Station cases with 
    :scale: 50%
    :align: left
   
-`Sumner's Thingiverse Case Page <https://www.thingiverse.com/thing:4763767/files>`_
+`Sumner's Thingiverse Case Page <https://www.thingiverse.com/thing:4763767/files>`_ |EXTERNAL-LINK|
 
-`List of Sumner's 3D printed cases <https://1fatgmc.com/RailRoad/3D-Printer/3D-Printer-Index.html>`_
+`List of Sumner's 3D printed cases <https://1fatgmc.com/RailRoad/3D-Printer/3D-Printer-Index.html>`_ |EXTERNAL-LINK|
 
 .. rst-class:: clearer
 
@@ -132,11 +132,11 @@ There are various remixes of Hans' designs, so be sure to check them all out.
    :align: left
 
 
-`TinkerCAD design files <https://www.tinkercad.com/users/6v866XC9490-hans-tanner>`_
+`TinkerCAD design files <https://www.tinkercad.com/users/6v866XC9490-hans-tanner>`_ |EXTERNAL-LINK|
 
-`Hans Tanner's IoTT Tindie store <https://www.tindie.com/stores/tanner87661/items/>`_
+`Hans Tanner's IoTT Tindie store <https://www.tindie.com/stores/tanner87661/items/>`_ |EXTERNAL-LINK|
 
-`YouTube Video describing the enclosure system <https://youtu.be/aBYER7211gA?si=EP9Ycd82tPHOKs_i>`_
+`YouTube Video describing the enclosure system <https://youtu.be/aBYER7211gA?si=EP9Ycd82tPHOKs_i>`_ |EXTERNAL-LINK|
 
 .. rst-class:: clearer
 
@@ -171,7 +171,7 @@ Case to hold Arduino Mega, motor shield, and .96" display for DCC-EX
    :scale: 60%
    :align: left
 
-`Nebbish case on Thingiverse <https://www.printables.com/model/371085-arduino-mega-case-for-dcc-ex>`_
+`Nebbish case on Thingiverse <https://www.printables.com/model/371085-arduino-mega-case-for-dcc-ex>`_ |EXTERNAL-LINK|
 
 |force-break|
 

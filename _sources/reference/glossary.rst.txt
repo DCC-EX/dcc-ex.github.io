@@ -20,19 +20,19 @@ Glossary
     * - Access Point (AP) Mode
       - In Access Point (AP) mode, the tiny ESP-WiFi chip acts as a very basic WiFi server and provides a small IP network for your throttle or for your computer running JMRI with the WiThrottle Server enabled. It acts much like your router does to let things connect directly to it (currently up to four connections). |BR| Using the Command Station in AP mode allows you to have a separate network so you can keep your layout network separate from your home network. |BR| :doc:`Refer here for more information. </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
     * - Arduino IDE
-      - A free app running on your PC, specifically designed to install software onto Arduino microprocessors. |BR| https://www.arduino.cc/en/software
+      - A free app running on your PC, specifically designed to install software onto Arduino microprocessors. |BR| https://www.arduino.cc/en/software |EXTERNAL-LINK|
     * - BaseStation-Classic |BR| DCC++ (Original)
       - The original inexpensive Command Station based on the Arduino platform by Gregg Berman. :dcc-ex-red-bold-italic:`This is no longer maintained or supported by the DCC-EX Team`. |BR| |EX-CS| is a completely new build which maintains backward compatibility with the original DCC++. |BR| See :doc:`DCC++ VS DCC-EX? <../../news/posts/20201001>` for more information
     * - Command Station |BR| DCC Command Station |BR| DCC Base Station
-      - See https://dccwiki.com/Command_Station
+      - See https://dccwiki.com/Command_Station |EXTERNAL-LINK|
     * - Consist |BR| Multiple Unit
-      - Multiple locos hauling a singe train. see https://dccwiki.com/Multiple_Unit_Consisting
+      - Multiple locos hauling a singe train. see https://dccwiki.com/Multiple_Unit_Consisting |EXTERNAL-LINK|
     * - Cab
       - A Cab can refer to a throttle (or controller) as well as a loco or locomotive |BR| In the context of DCC-EX commands, `cab` refers to a loco
     * - DC
       - Direct Current
     * - DCC
-      - Digital Command Control.  NMRA Specification for controlling trains. |BR| See https://dccwiki.com/NMRA/NMRA_Standards
+      - Digital Command Control.  NMRA Specification for controlling trains. |BR| See https://dccwiki.com/NMRA/NMRA_Standards |EXTERNAL-LINK|
     * - Engine Driver |BR| Engine Driver Throttle
       - Android app for controlling DCC locos using the WiThrottle Protocol |BR| See :doc:`/throttles/software/engine-driver`
     * - DCC++ Commands |BR| <DCC++> |BR| DCC++ Protocol |BR| DCC++ API
@@ -52,7 +52,7 @@ Glossary
     * - USB
       - Universal Serial Bus
     * - Visual Studio Code (VSC)
-      - A free app running on your PC that, among other capabilities, can install software onto Arduino microprocessors |BR| https://code.visualstudio.com/
+      - A free app running on your PC that, among other capabilities, can install software onto Arduino microprocessors |BR| https://code.visualstudio.com/ |EXTERNAL-LINK|
     * - WiThrottle
       - \ 1. Trademark owned by Brett Hoffman |BR|\ 2. proprietary iOS app developed by Brett Hoffman. See :doc:`/throttles/software/withrottle`
     * - WiThrottle Protocol

@@ -663,7 +663,7 @@ Rx   -----&gt; Tx
 </figure>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The ESP8266 chips are designed for 3.3V. DO NOT TRY TO CONNECT THEM TO 5V!! While they cannot handle 5V for power, their GPIO pins are 5V tolerant. Because of this, you don’t need any additional circuitry. However, to be safe, you can use a small <a class="reference external" href="https://learn.sparkfun.com/tutorials/bi-directional-logic-level-converter-hookup-guide/all">level shifter board</a>, or use one of the breakout boards like the one above and to the right that has a 3.3V regulator and level shifters for the Tx and Rx pins.</p>
+<p>The ESP8266 chips are designed for 3.3V. DO NOT TRY TO CONNECT THEM TO 5V!! While they cannot handle 5V for power, their GPIO pins are 5V tolerant. Because of this, you don’t need any additional circuitry. However, to be safe, you can use a small <a class="reference external" href="https://learn.sparkfun.com/tutorials/bi-directional-logic-level-converter-hookup-guide/all">level shifter board</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;">, or use one of the breakout boards like the one above and to the right that has a 3.3V regulator and level shifters for the Tx and Rx pins.</p>
 </div>
 </section>
 </section>
@@ -690,10 +690,18 @@ Rx   -----&gt; Tx
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f97154700>
+    <jinja2.runtime.BlockReference object at 0x7fb0123a05e0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

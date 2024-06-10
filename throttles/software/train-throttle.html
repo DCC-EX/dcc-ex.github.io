@@ -609,7 +609,7 @@
 <h1>Train Throttle<a class="headerlink" href="#train-throttle" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../begin/levels.html#conductor"><img alt="Conductor Hat" src="../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <p>Train Throttle is a fully featured client for the JMRI WiThrottle server, which allows you to control your DCC equipped model trains. You can control a single engine or consist, create consists, set turnouts, toggle routes, and more.</p>
-<p><a class="reference external" href="https://apps.microsoft.com/detail/9NBLGGH4VF5J?hl=en-US&amp;gl=US">https://apps.microsoft.com/detail/9NBLGGH4VF5J?hl=en-US&amp;gl=US</a></p>
+<p><a class="reference external" href="https://apps.microsoft.com/detail/9NBLGGH4VF5J?hl=en-US&amp;gl=US">https://apps.microsoft.com/detail/9NBLGGH4VF5J?hl=en-US&amp;gl=US</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 </section>
 
 <div class="section ablog__blog_comments">
@@ -634,10 +634,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f96d0a290>
+    <jinja2.runtime.BlockReference object at 0x7fb0123a1180>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

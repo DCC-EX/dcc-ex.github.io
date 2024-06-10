@@ -20,7 +20,7 @@ Another way you can support the DCC-EX Project is to buy our DCC-EX branded merc
 
 NOTE: There are 3 styles of shirts, plain back, "I'm a DCC-EX Tinkerer" on the back, and "I'm a DCC-EX Engineer" on the back. Be careful to choose the style you want. Shirts with printing on the back cost slightly more.
 
-`DCC-EX Merchandise Store <https://dccex.creator-spring.com/>`_
+`DCC-EX Merchandise Store <https://dccex.creator-spring.com/>`_ |EXTERNAL-LINK|
 
 .. image:: /_static/images/merch/ex_shirts.png
    :alt: Shirts with optional back printing

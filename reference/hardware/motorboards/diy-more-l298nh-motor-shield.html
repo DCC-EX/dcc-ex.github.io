@@ -616,7 +616,7 @@
 </div>
 <p>Another similar board to the Arduino motor shield. Supports 2A per channel. This board uses the L298HN, which is the same L298 internally as the Arduino Motor Shield but in a different form factor with a larger heat sink tab. Current sense and other features are identical to the Arduino version.</p>
 <a class="reference internal image-reference" href="../../../_images/diy_more_motor.png"><img alt="DIY More Motor Shield" src="../../../_images/diy_more_motor.png" style="width: 273.6px; height: 255.20000000000002px;" /></a>
-<p><a class="reference external" href="https://www.diymore.cc/products/replace-l298p-for-arduino-uno-r3-dual-channel-dc-motor-driver-shield-expansion-board-l298nh-module-driving-module-mega2560-one">DIY More Website</a></p>
+<p><a class="reference external" href="https://www.diymore.cc/products/replace-l298p-for-arduino-uno-r3-dual-channel-dc-motor-driver-shield-expansion-board-l298nh-module-driving-module-mega2560-one">DIY More Website</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <p><a class="reference internal" href="../../../ex-commandstation/get-started/assembly.html"><span class="doc">Install the DIY More Motor Shield (same as Deek-Robot)</span></a></p>
 </section>
 
@@ -642,10 +642,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f97a4d420>
+    <jinja2.runtime.BlockReference object at 0x7fb0138df910>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

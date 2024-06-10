@@ -649,13 +649,13 @@
 <p><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">EX-CommandStation</a> Provides an Application Programming Interface (API) that other applications use to send simple text commands that can operate your Command Station. Several “front end” controllers are available or you can easily create your own. Here are some examples:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../ex-webthrottle/index.html"><span class="doc">EX-WebThrottle</span></a> - Our <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span> browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span> itself!</p></li>
-<li><p><a class="reference external" href="https://enginedriver.mstevetodd.com/">Engine Driver</a> - Android WiFi Throttle app</p></li>
-<li><p><a class="reference external" href="http://www.jmri.org/">JMRI (Java Model Railroad Interface)</a></p></li>
+<li><p><a class="reference external" href="https://enginedriver.mstevetodd.com/">Engine Driver</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> - Android WiFi Throttle app</p></li>
+<li><p><a class="reference external" href="http://www.jmri.org/">JMRI (Java Model Railroad Interface)</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></li>
 <li><p>A serial console, like the Arduino Serial Monitor or PuTTY</p></li>
-<li><p><a class="reference external" href="https://github.com/DccPlusPlus/Controller">Gregg Berman’s DCC++ Controller Software</a></p></li>
+<li><p><a class="reference external" href="https://github.com/DccPlusPlus/Controller">Gregg Berman’s DCC++ Controller Software</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></li>
 </ul>
-<p>This reference explains the available command structure, and for commands that provide them, their responses. If you are testing your Command Station or writing your own control program, make sure you have the latest release of the <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">EX-CommandStation Firmware</a>.</p>
-<p>You can view and edit this code in the <a class="reference external" href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> or in <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md">PlatformIO</a> Software from <a class="reference external" href="https://github.com/DCC-EX">GitHub</a>. If you are new to we suggest you start with the <a class="reference external" href="https://dcc-ex.com">DCC-EX Webpage</a>.</p>
+<p>This reference explains the available command structure, and for commands that provide them, their responses. If you are testing your Command Station or writing your own control program, make sure you have the latest release of the <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">EX-CommandStation Firmware</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;">.</p>
+<p>You can view and edit this code in the <a class="reference external" href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> or in <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md">PlatformIO</a> Software from <a class="reference external" href="https://github.com/DCC-EX">GitHub</a>. If you are new to we suggest you start with the <a class="reference external" href="https://dcc-ex.com">DCC-EX Webpage</a>.</p>
 <section id="conventions-used-on-this-page">
 <h2><a class="toc-backref" href="#id2" role="doc-backlink">Conventions used on this page</a><a class="headerlink" href="#conventions-used-on-this-page" title="Permalink to this heading"></a></h2>
 <ul class="simple">
@@ -1515,7 +1515,7 @@ returns: NONE
 </div></blockquote>
 <p>For more detail follow these links:</p>
 <p><a class="reference internal" href="../../ex-commandstation/advanced-setup/supported-wifi/wifi-config.html"><span class="doc">DCC-EX WiFi Configuration</span></a></p>
-<p><a class="reference external" href="https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf">Espressif AT Command Set PDF File (Exressif makes the ESP8266)</a></p>
+<p><a class="reference external" href="https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf">Espressif AT Command Set PDF File (Exressif makes the ESP8266)</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 </section>
 <section id="user-commands">
 <h2><a class="toc-backref" href="#id21" role="doc-backlink">User Commands</a><a class="headerlink" href="#user-commands" title="Permalink to this heading"></a></h2>
@@ -1545,10 +1545,18 @@ returns: NONE
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f99380190>
+    <jinja2.runtime.BlockReference object at 0x7fb0132d00a0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

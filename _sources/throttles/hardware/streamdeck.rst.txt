@@ -26,6 +26,6 @@ The little hardware controller was originally designed for video production folk
 
    Stream Deck Setup
 
-To see more information and instructions, click here to go to `Peter's GitHub Page <https://github.com/daniep01/companion-module-dcc-ex-commandstation>`_
+To see more information and instructions, click here to go to `Peter's GitHub Page <https://github.com/daniep01/companion-module-dcc-ex-commandstation>`_ |EXTERNAL-LINK|
 
 Note that this option would fit more into the project category since there is some tinkering involved.

@@ -11,4 +11,4 @@ Railroad Automation (RRA) is a command and control software package, for DCC (Di
 
 Note: *Requires IoTT Red Hat*
 
-https://www.perecli.com/rrauto/
+https://www.perecli.com/rrauto/ |EXTERNAL-LINK|

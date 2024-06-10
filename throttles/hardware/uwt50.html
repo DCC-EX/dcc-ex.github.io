@@ -676,8 +676,8 @@ Recently preliminary testing on both the UWT-50 and the UWT-100 WiFi Throttles a
 <a class="reference internal image-reference" href="../../_images/uwt100_reboot.jpg"><img alt="UTW-100 Throttle" class="align-center" src="../../_images/uwt100_reboot.jpg" style="width: 120.39999999999999px; height: 246.39999999999998px;" /></a>
 <p>Visit the TCS website here:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://tcsdcc.com/uwt-50">https://tcsdcc.com/uwt-50</a></p></li>
-<li><p><a class="reference external" href="https://www.tcsdcc.com/uwt-100">https://www.tcsdcc.com/uwt-100</a></p></li>
+<li><p><a class="reference external" href="https://tcsdcc.com/uwt-50">https://tcsdcc.com/uwt-50</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></li>
+<li><p><a class="reference external" href="https://www.tcsdcc.com/uwt-100">https://www.tcsdcc.com/uwt-100</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></li>
 </ul>
 </section>
 
@@ -703,10 +703,18 @@ Recently preliminary testing on both the UWT-50 and the UWT-100 WiFi Throttles a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f97f313f0>
+    <jinja2.runtime.BlockReference object at 0x7fb012740910>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

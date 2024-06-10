@@ -20,7 +20,7 @@ Makerfabs ESP8266 - Update AT Version with an Arduino Mega
       :local:
       :depth: 3
 
-Unfortunately many of the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with |EX-CS|. The only boards guaranteed to work out of the box are the ones designed in a partnership between DCC-EX and Makerfabs. The board are the `EX-WifiShield 8266 <https://store.dcc-ex.com/products/EX-WiFiShield-8266-p625876731>`_ available through our reseller network, and the `Makerfabs ESP8266 WiFi Shield <https://www.makerfabs.com/esp8266-wifi-shield.html>`_. If you have a Makerfabs shield that was made between May 2023 and October 2023, your board may have faulty firmware.
+Unfortunately many of the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with |EX-CS|. The only boards guaranteed to work out of the box are the ones designed in a partnership between DCC-EX and Makerfabs. The board are the `EX-WifiShield 8266 <https://store.dcc-ex.com/products/EX-WiFiShield-8266-p625876731>`_ |EXTERNAL-LINK| available through our reseller network, and the `Makerfabs ESP8266 WiFi Shield <https://www.makerfabs.com/esp8266-wifi-shield.html>`_ |EXTERNAL-LINK|. If you have a Makerfabs shield that was made between May 2023 and October 2023, your board may have faulty firmware.
 
 .. warning:: 
 
@@ -34,7 +34,7 @@ Out of the box, the small run of MakerFabs ESP8266 shields made in late 2023 men
 Requirements
 ============
 
-* The WiFi Shield itself - The previous version of the one shown here: https://www.makerfabs.com/esp8266-wifi-shield.html
+* The WiFi Shield itself - The previous version of the one shown here: https://www.makerfabs.com/esp8266-wifi-shield.html |EXTERNAL-LINK|
 * An Arduino Uno or Arduino mega
 * 2x female to male jumper wires |br| (or the two small, simple jumpers/plugs that came with the WiFi shield)
 * 3x male to male jumper wire

@@ -623,16 +623,16 @@
 <td><p>In Access Point (AP) mode, the tiny ESP-WiFi chip acts as a very basic WiFi server and provides a small IP network for your throttle or for your computer running JMRI with the WiThrottle Server enabled. It acts much like your router does to let things connect directly to it (currently up to four connections). <br /> Using the Command Station in AP mode allows you to have a separate network so you can keep your layout network separate from your home network. <br /> <a class="reference internal" href="../ex-commandstation/advanced-setup/supported-wifi/wifi-config.html"><span class="doc">Refer here for more information.</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>Arduino IDE</p></td>
-<td><p>A free app running on your PC, specifically designed to install software onto Arduino microprocessors. <br /> <a class="reference external" href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a></p></td>
+<td><p>A free app running on your PC, specifically designed to install software onto Arduino microprocessors. <br /> <a class="reference external" href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></td>
 </tr>
 <tr class="row-even"><td><p>BaseStation-Classic <br /> DCC++ (Original)</p></td>
 <td><p>The original inexpensive Command Station based on the Arduino platform by Gregg Berman. <span class="dcc-ex-red-bold-italic">This is no longer maintained or supported by the DCC-EX Team</span>. <br /> <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> is a completely new build which maintains backward compatibility with the original DCC++. <br /> See <a class="reference internal" href="../news/posts/20201001.html"><span class="doc">DCC++ VS DCC-EX?</span></a> for more information</p></td>
 </tr>
 <tr class="row-odd"><td><p>Command Station <br /> DCC Command Station <br /> DCC Base Station</p></td>
-<td><p>See <a class="reference external" href="https://dccwiki.com/Command_Station">https://dccwiki.com/Command_Station</a></p></td>
+<td><p>See <a class="reference external" href="https://dccwiki.com/Command_Station">https://dccwiki.com/Command_Station</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></td>
 </tr>
 <tr class="row-even"><td><p>Consist <br /> Multiple Unit</p></td>
-<td><p>Multiple locos hauling a singe train. see <a class="reference external" href="https://dccwiki.com/Multiple_Unit_Consisting">https://dccwiki.com/Multiple_Unit_Consisting</a></p></td>
+<td><p>Multiple locos hauling a singe train. see <a class="reference external" href="https://dccwiki.com/Multiple_Unit_Consisting">https://dccwiki.com/Multiple_Unit_Consisting</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></td>
 </tr>
 <tr class="row-odd"><td><p>Cab</p></td>
 <td><p>A Cab can refer to a throttle (or controller) as well as a loco or locomotive <br /> In the context of DCC-EX commands, <cite>cab</cite> refers to a loco</p></td>
@@ -641,7 +641,7 @@
 <td><p>Direct Current</p></td>
 </tr>
 <tr class="row-odd"><td><p>DCC</p></td>
-<td><p>Digital Command Control.  NMRA Specification for controlling trains. <br /> See <a class="reference external" href="https://dccwiki.com/NMRA/NMRA_Standards">https://dccwiki.com/NMRA/NMRA_Standards</a></p></td>
+<td><p>Digital Command Control.  NMRA Specification for controlling trains. <br /> See <a class="reference external" href="https://dccwiki.com/NMRA/NMRA_Standards">https://dccwiki.com/NMRA/NMRA_Standards</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></td>
 </tr>
 <tr class="row-even"><td><p>Engine Driver <br /> Engine Driver Throttle</p></td>
 <td><p>Android app for controlling DCC locos using the WiThrottle Protocol <br /> See <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a></p></td>
@@ -671,7 +671,7 @@
 <td><p>Universal Serial Bus</p></td>
 </tr>
 <tr class="row-odd"><td><p>Visual Studio Code (VSC)</p></td>
-<td><p>A free app running on your PC that, among other capabilities, can install software onto Arduino microprocessors <br /> <a class="reference external" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p></td>
+<td><p>A free app running on your PC that, among other capabilities, can install software onto Arduino microprocessors <br /> <a class="reference external" href="https://code.visualstudio.com/">https://code.visualstudio.com/</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></td>
 </tr>
 <tr class="row-even"><td><p>WiThrottle</p></td>
 <td><p>1. Trademark owned by Brett Hoffman <br />2. proprietary iOS app developed by Brett Hoffman. See <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">WiThrottle</span></a></p></td>
@@ -708,10 +708,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f96d0bfa0>
+    <jinja2.runtime.BlockReference object at 0x7fb012f14730>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

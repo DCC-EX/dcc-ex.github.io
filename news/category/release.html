@@ -671,12 +671,6 @@
     </span>
   
   
-  <a href="../tag/news.html">news</a>
-  
-  
-  
-  
-  
   <a href="../tag/new-in-version-5.html">new-in-version-5</a>
   
   
@@ -684,6 +678,12 @@
   
   
   <a href="../tag/version-5.html">version-5</a>
+  
+  
+  
+  
+  
+  <a href="../tag/news.html">news</a>
   
   
   
@@ -1357,10 +1357,18 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f980a8640>
+    <jinja2.runtime.BlockReference object at 0x7fb012495cf0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

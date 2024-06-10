@@ -194,7 +194,7 @@ Finally, this command will cause the turntable to once again find its home posit
   
   <D TT 600 0 2>
 
-.. todo:: `LOW - Add a video demonstrating diagnostic commands <https://github.com/DCC-EX/dcc-ex.github.io/issues/439>`_
+.. todo:: `LOW - Add a video demonstrating diagnostic commands <https://github.com/DCC-EX/dcc-ex.github.io/issues/439>`_ |EXTERNAL-LINK|
 
 Providing these tests have completed successfully, you are now ready to tune the turntable positions for your layout in preparation for defining the EX-RAIL configuration and putting |EX-TT| to good use.
 
@@ -386,7 +386,7 @@ In a similar manner to |EX-TT| itself, the rotary encoder Arduino connects to th
 
   The rotary encoder software is not official DCC-EX software and is maintained separately. The device driver and EX-RAIL commands are included with |EX-CS| as of version 5.0.0.
 
-  This section will focus on enabling and using the device driver. For the rotary encoder software documentation including installation and configuration, refer to the project page `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/overview.html>`__.
+  This section will focus on enabling and using the device driver. For the rotary encoder software documentation including installation and configuration, refer to the project page `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/overview.html>`__ |EXTERNAL-LINK|.
 
 Required software
 -----------------
@@ -395,7 +395,7 @@ The rotary encoder software can be downloaded from:
 
 .. rst-class:: dcclink
 
-  `dcc-ex-rotary-encoder GitHub repository <https://github.com/peteGSX-Projects/dcc-ex-rotary-encoder>`_
+  `dcc-ex-rotary-encoder GitHub repository <https://github.com/peteGSX-Projects/dcc-ex-rotary-encoder>`_ |EXTERNAL-LINK|
 
 To utilise this rotary encoder, you must be running version 5.0.0 or later of |EX-CS|.
 
@@ -404,7 +404,7 @@ Enabling the device driver
 
 The default |I2C| address for the rotary encoder is 0x78, and you will need to create the device in "myAutomation.h" on your |EX-CS|.
 
-Note you can create the device using 1, 2, or 3 Vpins. If you create it with 2, you can send feedback to the rotary encoder Arduino to indicate if a turntable is moving, and when it has completed the movement. If you define 3 Vpins, you can tell the rotary encoder when a turntable has changed position also. Refer to the `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/overview.html>`__ documentation for more information on this feature.
+Note you can create the device using 1, 2, or 3 Vpins. If you create it with 2, you can send feedback to the rotary encoder Arduino to indicate if a turntable is moving, and when it has completed the movement. If you define 3 Vpins, you can tell the rotary encoder when a turntable has changed position also. Refer to the `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/overview.html>`__ |EXTERNAL-LINK| documentation for more information on this feature.
 
 .. code-block::
 

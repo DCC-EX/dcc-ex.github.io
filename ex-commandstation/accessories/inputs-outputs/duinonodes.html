@@ -622,7 +622,7 @@
 </aside>
 <p>Lew’s Duino Gear sells various intelligent electronics designed for model railroads, and there is now a device driver available to use two of the I/O products, the DNIN8/DNIN8K Digtail Input duinoNode, and the DNOU8/DNOU8K Digital Output duinoNode.</p>
 <p>This page documents the configuration of these boards with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> only.</p>
-<p>For documentation, support, and reference on the boards themselves, refer to the <a class="reference external" href="https://beaglebay.com/duinogear/">Lew’s Duino Gear</a> website and/or the product documentation supplied with the boards.</p>
+<p>For documentation, support, and reference on the boards themselves, refer to the <a class="reference external" href="https://beaglebay.com/duinogear/">Lew’s Duino Gear</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> website and/or the product documentation supplied with the boards.</p>
 <section id="dnin8-dnin8k-digital-input-duinonode">
 <h2><a class="toc-backref" href="#id1" role="doc-backlink">DNIN8/DNIN8K Digital Input duinoNode</a><a class="headerlink" href="#dnin8-dnin8k-digital-input-duinonode" title="Permalink to this heading"></a></h2>
 <p>This is a shift-register implementation of a digital input collector. Multiple DNIN8 boards may be chained together but it is important that the software configuration correctly represents the number of boards connected otherwise the results will be meaningless.</p>
@@ -703,10 +703,18 @@ HAL(IO_DNOU8, 450, 16, 45, 47, 49)    // Create a chain for two DNOU8/DNOU8K boa
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f980a8640>
+    <jinja2.runtime.BlockReference object at 0x7fb01485c1f0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

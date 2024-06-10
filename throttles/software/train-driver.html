@@ -608,7 +608,7 @@
 <section id="train-driver">
 <h1>Train Driver<a class="headerlink" href="#train-driver" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../../begin/levels.html#conductor"><img alt="Conductor Hat" src="../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
-<p><a class="reference external" href="https://apps.apple.com/au/app/train-driver/id1558334503">Get it on the Apple App Store</a></p>
+<p><a class="reference external" href="https://apps.apple.com/au/app/train-driver/id1558334503">Get it on the Apple App Store</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <p>Train Driver is a multi protocol model train mobile controller</p>
 <p>The app is driving digital model trains supporting several digital centrals with their different protocols. The app is developed by a model train enthusiast for other model train enthusiasts.</p>
 <p>The focus is on a mobile locomotive controller and is therefore currently limited to only control locomotives. For this purpose, up to 3 locomotives are supported at the same time. At the iPad in landscape format all 3 locomotives are displayed in one screen and can be controlled easily together. At the iPhone controllers can be switched easily, but only one controller is displayed.</p>
@@ -645,10 +645,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f96f3dd20>
+    <jinja2.runtime.BlockReference object at 0x7fb012619d50>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

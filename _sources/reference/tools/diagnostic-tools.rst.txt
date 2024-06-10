@@ -84,7 +84,7 @@ Well it isn't quite a turnkey solution, but it's close. You need this shield and
 
    Iowa Scale Engineering DCC Sniffer/Decoder Board
 
-https://www.iascaled.com/store/ARD-DCCSHIELD
+https://www.iascaled.com/store/ARD-DCCSHIELD |EXTERNAL-LINK|
 
 **It costs about $30 US.**
 
@@ -160,7 +160,7 @@ All you need to create your DCC Sniffer is to solder up this board and connect i
 
 Please check out Dr. Geoff's excellent blog on this board here:
 
-https://model-railroad-hobbyist.com/node/41187
+https://model-railroad-hobbyist.com/node/41187 |EXTERNAL-LINK|
 
 *** add info on wiring and sketches here ***
 
@@ -178,9 +178,9 @@ If you just need the power supply for your own board, use the schematic to get w
 
 - 17 function decoder
 
-http://www.modelrailroadcontrolsystems.com/improved-geoff-bunzas-low-cost-17-channel-dcc-decoder-bare-board/
+http://www.modelrailroadcontrolsystems.com/improved-geoff-bunzas-low-cost-17-channel-dcc-decoder-bare-board/ |EXTERNAL-LINK|
 
-https://www.tindie.com/products/tanner87661/dcc-interface-breakout-board-with-grove-port/
+https://www.tindie.com/products/tanner87661/dcc-interface-breakout-board-with-grove-port/ |EXTERNAL-LINK|
 
 **Build it in a case with a display!**
 
@@ -194,10 +194,10 @@ And if you want to get into the development of |EX-DCCI| and why we recommend th
    Neil's DCC-EX Sniffer in a 3D Printed Case
 
 HERE:
-https://wakwak2popo.wordpress.com/2020/12/11/dcc-sniffer/
+https://wakwak2popo.wordpress.com/2020/12/11/dcc-sniffer/ |EXTERNAL-LINK|
 
 and HERE:
-https://wakwak2popo.wordpress.com/2021/01/28/stand-alone-dcc-diagnostics/
+https://wakwak2popo.wordpress.com/2021/01/28/stand-alone-dcc-diagnostics/ |EXTERNAL-LINK|
 
 Logic Analyzer/Decoder
 =========================
@@ -211,10 +211,10 @@ Logic Analyzer/Decoder
 
 No need to make this yourself, simply buy it. You will need the following items. They are available under many manufacturer names from many suppliers. eBay and AliExpress are good sources:
 
-* `8 Channel 24mHz USB Logic Anayzer ($8-20) <https://www.amazon.com/KeeYees-Analyzer-Device-Channel-Arduino/dp/B07K6HXDH1/>`_
-* `Logic Analyzer Probe Setup ($7-18) May come with your analyzer <https://www.amazon.com/10PCS-Grabber-Jumper-Analyzer-Colors/dp/B083PRVPCR/>`_
-* `Sigrok PulseView Sofware (FREE) <https://sigrok.org/wiki/PulseView>`_
-* `DCC Decoder Plugin for PulseView (FREE) <https://github.com/littleyoda/sigrok-DCC-Protocoll/archive/master.zip>`_
+* `8 Channel 24mHz USB Logic Anayzer ($8-20) <https://www.amazon.com/KeeYees-Analyzer-Device-Channel-Arduino/dp/B07K6HXDH1/>`_ |EXTERNAL-LINK|
+* `Logic Analyzer Probe Setup ($7-18) May come with your analyzer <https://www.amazon.com/10PCS-Grabber-Jumper-Analyzer-Colors/dp/B083PRVPCR/>`_ |EXTERNAL-LINK|
+* `Sigrok PulseView Sofware (FREE) <https://sigrok.org/wiki/PulseView>`_ |EXTERNAL-LINK|
+* `DCC Decoder Plugin for PulseView (FREE) <https://github.com/littleyoda/sigrok-DCC-Protocoll/archive/master.zip>`_ |EXTERNAL-LINK|
 
 .. note:: Search for the best source. As usual, you can often find the hardware items from online stores or Amazon, but also find them cheaper on eBay or AliExpress  or BangGood direct from China.
 
@@ -232,7 +232,7 @@ Install PulseView
 
 Since the install instructions are particular for your operating system, we will just refer you to the SigRok page where you can follow their detailed instructions:
 
-`SigRok PulseView Installation Instructions <https://sigrok.org/doc/pulseview/0.4.1/manual.html#installation>`_
+`SigRok PulseView Installation Instructions <https://sigrok.org/doc/pulseview/0.4.1/manual.html#installation>`_ |EXTERNAL-LINK|
 
 Install the Plugin
 -------------------
@@ -265,7 +265,7 @@ Download USB Drivers
 
 These device need USB drivers from Saleae. Download and install the 1.x drivers from here:
 
-`USB Analyzer Drivers Download <https://support.saleae.com/logic-software/legacy-software/older-software-releases>`_
+`USB Analyzer Drivers Download <https://support.saleae.com/logic-software/legacy-software/older-software-releases>`_ |EXTERNAL-LINK|
 
 Connect the Analyzer
 ---------------------
@@ -396,7 +396,7 @@ Note that during construction, the red wire is actually attached to the green LE
 
 The other LED won't light because it is always in phase with the known track Rail B. When they are both HIGH at the same time (full track voltage) or both LOW, there is no potential difference across the LED.
 
-See the thread on the MRH blog here: https://model-railroad-hobbyist.com/node/17215?page=2
+See the thread on the MRH blog here: https://model-railroad-hobbyist.com/node/17215?page=2 |EXTERNAL-LINK|
 
 .. figure:: /_static/images/dcc/dcc_phase_checker1.png
    :align: center

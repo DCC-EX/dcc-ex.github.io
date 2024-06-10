@@ -21,17 +21,17 @@ This is a detailed reference of just the major commands. For a summary version, 
 
 * :doc:`EX-WebThrottle </ex-webthrottle/index>` - Our |EX-WT| browser based throttle using your USB cable. See it and run from the web. You can also install it by clicking a button from within |EX-WT| itself!
 
-* `Engine Driver <https://enginedriver.mstevetodd.com/>`_ - Android WiFi Throttle app
+* `Engine Driver <https://enginedriver.mstevetodd.com/>`_ |EXTERNAL-LINK| - Android WiFi Throttle app
 
-* `JMRI (Java Model Railroad Interface) <http://www.jmri.org/>`_
+* `JMRI (Java Model Railroad Interface) <http://www.jmri.org/>`_ |EXTERNAL-LINK|
 
 * A serial console, like the Arduino Serial Monitor or PuTTY
 
-* `Gregg Berman's DCC++ Controller Software <https://github.com/DccPlusPlus/Controller>`_
+* `Gregg Berman's DCC++ Controller Software <https://github.com/DccPlusPlus/Controller>`_ |EXTERNAL-LINK|
 
-This reference explains the available command structure, and for commands that provide them, their responses. If you are testing your Command Station or writing your own control program, make sure you have the latest release of the `EX-CommandStation Firmware <https://github.com/DCC-EX/CommandStation-EX>`_.
+This reference explains the available command structure, and for commands that provide them, their responses. If you are testing your Command Station or writing your own control program, make sure you have the latest release of the `EX-CommandStation Firmware <https://github.com/DCC-EX/CommandStation-EX>`_ |EXTERNAL-LINK|.
 
-You can view and edit this code in the `Arduino IDE <https://www.arduino.cc/en/Main/Software>`_ or in `PlatformIO <https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md>`_ Software from `GitHub <https://github.com/DCC-EX>`_. If you are new to we suggest you start with the `DCC-EX Webpage <https://dcc-ex.com>`_.  
+You can view and edit this code in the `Arduino IDE <https://www.arduino.cc/en/Main/Software>`_ |EXTERNAL-LINK| or in `PlatformIO <https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md>`_ Software from `GitHub <https://github.com/DCC-EX>`_. If you are new to we suggest you start with the `DCC-EX Webpage <https://dcc-ex.com>`_.  
 
 Conventions used on this page
 =============================
@@ -916,7 +916,7 @@ For more detail follow these links:
 
 :doc:`DCC-EX WiFi Configuration </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
 
-`Espressif AT Command Set PDF File (Exressif makes the ESP8266) <https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf>`_
+`Espressif AT Command Set PDF File (Exressif makes the ESP8266) <https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf>`_ |EXTERNAL-LINK|
 
 
 User Commands

@@ -609,7 +609,7 @@
 <p>We always have new features under development for <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> and <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span>, and as these features get incorporated into the development branch of the software, we will endeavour to keep these documented here in our development pages.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Remember that these features will continue to change and evolve as bugs are found and fixed, and better ways of doing things are discovered, so it’s best to keep up to date with any discussions via our <a class="reference external" href="https://discord.gg/PuPnNMp8Qf">Discord server</a>.</p>
+<p>Remember that these features will continue to change and evolve as bugs are found and fixed, and better ways of doing things are discovered, so it’s best to keep up to date with any discussions via our <a class="reference external" href="https://discord.gg/PuPnNMp8Qf">Discord server</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;">.</p>
 <p>These pages are aimed at those who have some technical capabilities with regards to electronics and the like, so you generally won’t find step by step guides as we provide for the general user base elsewhere in our documentation. Using the development branch means you will regularly need to update your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> to keep up with bug fixes and feature enhancements.</p>
 </div>
 <p>To obtain the development branch code, refer to <a class="reference internal" href="../download/ex-commandstation.html#latest-ex-commandstation-unreleased-development-version"><span class="std std-ref">Latest EX-CommandStation Unreleased Development Version</span></a></p>
@@ -650,10 +650,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f975ecfd0>
+    <jinja2.runtime.BlockReference object at 0x7fb0135ac550>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

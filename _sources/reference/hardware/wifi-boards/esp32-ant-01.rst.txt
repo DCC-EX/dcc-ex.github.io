@@ -19,8 +19,8 @@ ESP32_Ant-01 Breakout and Development Board (ESP32)
     :alt: ESP32 dev board
     :scale: 65%
 
-Like the SparkFun board, this board is a very powerful board in its own right. It almost seems a shame to use it just for WiFi, though with custom firmware, it could handle WiFi duty and a lot more. The advantage of this board is it has a connector for an external antenna. It is half the price of the SparkFun board and comes with an antenna. Detailed instructions on installation can be found at: https://docs.espressif.com/projects/esp-at/en/latest/Get_Started/index.html
+Like the SparkFun board, this board is a very powerful board in its own right. It almost seems a shame to use it just for WiFi, though with custom firmware, it could handle WiFi duty and a lot more. The advantage of this board is it has a connector for an external antenna. It is half the price of the SparkFun board and comes with an antenna. Detailed instructions on installation can be found at: https://docs.espressif.com/projects/esp-at/en/latest/Get_Started/index.html |EXTERNAL-LINK|
 
-https://www.ezsbc.com/product/wifi01u/
+https://www.ezsbc.com/product/wifi01u/ |EXTERNAL-LINK|
 
 

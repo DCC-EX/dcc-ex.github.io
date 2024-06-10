@@ -608,7 +608,7 @@
 <h1>EX-FastClock<a class="headerlink" href="#ex-fastclock" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../support/index.html#contact-support-options" title="Request help or support"><img src="../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
 <p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;FastClock</span> is a standalone adjustable speed clock built using an additional Arduino Uno microcontroller and a plug-in shield type TFT touch screen. The commands built into the DCC_EX Command Station make it possible to also integrate an existing microcontroller based fast clock. For information in the <a class="reference internal" href="../ex-fastclock/index.html"><span class="doc">EX-FastClock page</span></a></p>
-<p class="dcclink"><a class="reference external" href="https://github.com/DCC-EX/EX-FastClock">EX-FastClock source code</a></p>
+<p class="dcclink"><a class="reference external" href="https://github.com/DCC-EX/EX-FastClock">EX-FastClock source code</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -636,10 +636,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f97157850>
+    <jinja2.runtime.BlockReference object at 0x7fb0138fd750>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

@@ -615,7 +615,7 @@
 <p>If you prefer to use, or need some features of, <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a>, then you can use <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a> to connect directly to your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> via the USB connection, and then connect your controller(s) to <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a>.</p>
 <p>To enable this functionality, <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a> includes a <a class="reference internal" href="../../../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> server.</p>
 <p>For example, <a class="reference internal" href="../../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> uses the <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a>, so it can connect through the JMRI computer that has WiFi and its own <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">wiThrottle Server</span></a>. This should also apply to any other controller that supports the <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a>.</p>
-<p>You can read further on connecting your controller to <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a> on the <a class="reference external" href="https://www.jmri.org/help/en/package/jmri/jmrit/withrottle/UserInterface.shtml">JMRI: WiFi Connected Throttle</a> page on the <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a> website.</p>
+<p>You can read further on connecting your controller to <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a> on the <a class="reference external" href="https://www.jmri.org/help/en/package/jmri/jmrit/withrottle/UserInterface.shtml">JMRI: WiFi Connected Throttle</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> page on the <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a> website.</p>
 <p>Some reasons you may wish to use <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a> with your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>:</p>
 <ul class="simple">
 <li><p>You wish to connect more than 4 controllers to your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> via WiFi</p></li>
@@ -648,10 +648,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f98942380>
+    <jinja2.runtime.BlockReference object at 0x7fb017c30af0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

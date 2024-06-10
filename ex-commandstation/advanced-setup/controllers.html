@@ -737,7 +737,7 @@
 <p>Probably the way most people use <a class="reference internal" href="../../reference/glossary.html"><span class="doc">JMRI</span></a> is to have a Raspberry Pi running <a class="reference internal" href="../../reference/glossary.html"><span class="doc">JMRI</span></a> connected via a short USB cable to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>. They then use <a class="reference internal" href="../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> on their phone, connected to <a class="reference internal" href="../../reference/glossary.html"><span class="doc">JMRI</span></a> via WiFi as a throttle for their engines. If you want to actually operate using all the features of <a class="reference internal" href="../../reference/glossary.html"><span class="doc">JMRI</span></a>, you can connect a small monitor, keyboard, and mouse to your computer or Raspberry Pi. You can replace the USB cable with a USB Wireless Bridge which is covered in that section. But let’s look at another method next.</p>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
-<p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/416">LOW - Controllers</a> - diagram needed for the connection via USB Cable</p>
+<p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/416">LOW - Controllers</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> - diagram needed for the connection via USB Cable</p>
 </div>
 </section>
 <section id="connecting-via-vnc">
@@ -745,7 +745,7 @@
 <p>VNC stands for “Virtual Network Computing”, and it is a way to access a device remotely. Variations of this are called “Remote Desktop” in Windows, TeamViewer, AnyDesk, etc. It is free and it lets you take another device, like a tablet, and have a viewport into the computer you are using to run <a class="reference internal" href="../../reference/glossary.html"><span class="doc">JMRI</span></a>. It literally is a “remote desktop”. Everything is running on your computer or Raspberry Pi, yet you can control it from a handheld wireless device with a touchscreen.</p>
 <div class="admonition-todo admonition" id="id3">
 <p class="admonition-title">Todo</p>
-<p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/416">LOW - Controllers</a> - diagram needed for Connecting via VNC</p>
+<p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/416">LOW - Controllers</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> - diagram needed for Connecting via VNC</p>
 </div>
 </section>
 </section>
@@ -760,7 +760,7 @@
 </ul>
 <div class="admonition-todo admonition" id="id5">
 <p class="admonition-title">Todo</p>
-<p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/416">LOW - Controllers</a> - diagram needed for USB Wireless Bridge</p>
+<p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/416">LOW - Controllers</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> - diagram needed for USB Wireless Bridge</p>
 </div>
 <p>For more information about all the throttles, see the <a class="reference internal" href="../../throttles/index.html"><span class="doc">Throttles Section</span></a>&gt;</p>
 </section>
@@ -808,10 +808,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f96d13b50>
+    <jinja2.runtime.BlockReference object at 0x7fb0127f1840>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

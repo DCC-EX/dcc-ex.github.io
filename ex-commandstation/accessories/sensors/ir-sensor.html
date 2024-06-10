@@ -647,9 +647,9 @@
 </section>
 <section id="adafruit-beam-break-sensors">
 <h3><a class="toc-backref" href="#id5" role="doc-backlink">Adafruit beam break sensors</a><a class="headerlink" href="#adafruit-beam-break-sensors" title="Permalink to this heading"></a></h3>
-<p>As an example, Adafruit has both a <a class="reference external" href="https://www.adafruit.com/product/2167">3mm beam break</a> and <a class="reference external" href="https://www.adafruit.com/product/2168">5mm beam break</a> version of these sensors which hold a high level on their output (VCC) until the beam is broken when they switch to a low level (GND). Therefore these are active low sensors. These are very simple to attach to a DCC-EX command station requiring only VCC, GND and Digital input.</p>
+<p>As an example, Adafruit has both a <a class="reference external" href="https://www.adafruit.com/product/2167">3mm beam break</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> and <a class="reference external" href="https://www.adafruit.com/product/2168">5mm beam break</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> version of these sensors which hold a high level on their output (VCC) until the beam is broken when they switch to a low level (GND). Therefore these are active low sensors. These are very simple to attach to a DCC-EX command station requiring only VCC, GND and Digital input.</p>
 <p>These are 10mm wide x 20mm high x 8mm thick, so on an HO layout this equates to 870mm x 1740mm x 696mm. Would look like a junction box next to the track.</p>
-<p>A mount for the 3mm version is available on <a class="reference external" href="https://www.thingiverse.com/thing:5539548">Thingiverse</a>.</p>
+<p>A mount for the 3mm version is available on <a class="reference external" href="https://www.thingiverse.com/thing:5539548">Thingiverse</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;">.</p>
 <p>Like most IR break beam sensors these work best if you can angle them across the track. They work well when angled at 45deg to the track centreline about 70mm apart.</p>
 <p>If needed the 3mm version works up to 250mm apart this allows use along a section of track. The 5mm version works up to 500mm so could be used for a track occupancy detector.</p>
 <p>If placed at 90deg to the track centreline there can be an issue with them only sensing the wheels and activating on each wheel set that passes. Good if you want to count wheel sets or want the train to stop at a particular poin but not if your trying to only activate the sensor at the start of the train and deactivate at the end of the train.</p>
@@ -669,7 +669,7 @@
 <h3><a class="toc-backref" href="#id7" role="doc-backlink">Modulated IR sensor software</a><a class="headerlink" href="#modulated-ir-sensor-software" title="Permalink to this heading"></a></h3>
 <p>There is a separate project that has been created to provide a software solution to the reliability issues faced with IR sensors, using both a modulated signal and a rolling comparison window to mitigate against false positives.</p>
 <p>This project can utilise generic IR sensors available from places like AliExpress, eBay, or Amazon with a simple modification, and connects to an Arduino microcontroller to perform the modulation and the rolling window comparison. It will also integrate with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> utilising the same device driver as <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span>.</p>
-<p>The documentation for this project is available on <a class="reference external" href="https://petegsx-projects.github.io/modulated-ir-sensor/index.html">Pete’s Pages</a>.</p>
+<p>The documentation for this project is available on <a class="reference external" href="https://petegsx-projects.github.io/modulated-ir-sensor/index.html">Pete’s Pages</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;">.</p>
 </section>
 </section>
 <section id="connecting-sensors">
@@ -739,10 +739,18 @@ AT(-164)     // active high
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f9715fcd0>
+    <jinja2.runtime.BlockReference object at 0x7fb013b748b0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

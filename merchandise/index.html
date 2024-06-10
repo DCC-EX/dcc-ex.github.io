@@ -617,7 +617,7 @@
 <li><p>Stickers</p></li>
 </ul>
 <p>NOTE: There are 3 styles of shirts, plain back, “I’m a DCC-EX Tinkerer” on the back, and “I’m a DCC-EX Engineer” on the back. Be careful to choose the style you want. Shirts with printing on the back cost slightly more.</p>
-<p><a class="reference external" href="https://dccex.creator-spring.com/">DCC-EX Merchandise Store</a></p>
+<p><a class="reference external" href="https://dccex.creator-spring.com/">DCC-EX Merchandise Store</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <a class="reference internal image-reference" href="../_images/ex_shirts.png"><img alt="Shirts with optional back printing" class="align-center" src="../_images/ex_shirts.png" style="width: 499.40000000000003px; height: 563.2px;" /></a>
 <p>Here is an example listing for shirts where you need to choose the correct description for either a blank back or the “Tinkerer” or “Engineer” printing on the back</p>
 <a class="reference internal image-reference" href="../_images/ex_listing_example_arrows.png"><img alt="Listing showing back styles" class="align-center" src="../_images/ex_listing_example_arrows.png" style="width: 508.3px; height: 315.90000000000003px;" /></a>
@@ -653,10 +653,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f97552050>
+    <jinja2.runtime.BlockReference object at 0x7fb013e6b2b0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

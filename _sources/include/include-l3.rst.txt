@@ -143,7 +143,13 @@
 ..
 .. ................................................
 ..
- .. |githublink-ex-turntable-button2| raw:: html
+.. |EXTERNAL-LINK| raw:: html
+   
+  <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;">
+..
+.. ................................................
+..
+.. |githublink-ex-turntable-button2| raw:: html
 
    <a href="https://github.com/DCC-EX/Turntable-EX/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../../../_static/images/buttons/github-bug.png" style="width: 169px;" /></a>
 ..

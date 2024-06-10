@@ -17,7 +17,7 @@ There are a least two methods:
 BlueStacks
 ==========
 
-The `BlueStacks <https://www.bluestacks.com/>`_ app allows you to install and run most Android apps on most recent Windows PCs.
+The `BlueStacks <https://www.bluestacks.com/>`_ |EXTERNAL-LINK| app allows you to install and run most Android apps on most recent Windows PCs.
 
 It has the advantages of:
 
@@ -29,12 +29,12 @@ Disadvantages include:
 
 - Has advertisements
 
-Follow the instructions on their `site <https://www.bluestacks.com/>`_ to install BlueStacks, then get the appropriate .apk to install the throttle app you want.  e.g. The Engine Driver .apk is available from the `Engine Driver site <https://enginedriver.mstevetodd.com/downloads>`_`
+Follow the instructions on their `site <https://www.bluestacks.com/>`_ |EXTERNAL-LINK| to install BlueStacks, then get the appropriate .apk to install the throttle app you want.  e.g. The Engine Driver .apk is available from the `Engine Driver site <https://enginedriver.mstevetodd.com/downloads>`_ |EXTERNAL-LINK|
 
 Windows Subsystem for Android
 =============================
 
-`Windows Subsystem for Android <https://https://learn.microsoft.com/en-us/windows/android/wsa//>`_ is a built in feature of Windows 11 that allows you to install and run most Android apps on *some* Windows PCs.
+`Windows Subsystem for Android <https://https://learn.microsoft.com/en-us/windows/android/wsa//>`_ |EXTERNAL-LINK| is a built in feature of Windows 11 that allows you to install and run most Android apps on *some* Windows PCs.
 
 It has the advantages of:
 
@@ -47,11 +47,11 @@ Disadvantages include:
 - Not very user friendly installation (sideloading) of non-Amazon approved apps (i.e. the throttle apps)
 - Does *not* allow you to run multiple instances of same app at the same time
 
-Follow the `instructions here <https://www.windowscentral.com/how-sideload-android-apps-using-wsa-windows-11>`_  (or `a slightly differnt version of instructions here <https://www.xda-developers.com/how-to-sideload-android-apps-on-windows-11/>`_) to setup *Windows Subsystem for Android* to allow 'sideloading'.
+Follow the `instructions here <https://www.windowscentral.com/how-sideload-android-apps-using-wsa-windows-11>`_ |EXTERNAL-LINK| (or `a slightly differnt version of instructions here <https://www.xda-developers.com/how-to-sideload-android-apps-on-windows-11/>`_ |EXTERNAL-LINK|) to setup *Windows Subsystem for Android* to allow 'sideloading'.
 
-You will also need to install the `SDK Platform Tools <https://developer.android.com/tools/releases/platform-tools>`_.
+You will also need to install the `SDK Platform Tools <https://developer.android.com/tools/releases/platform-tools>`_ |EXTERNAL-LINK|.
 
-You will also need to get the appropriate .apk to install the throttle app you want.  e.g. The Engine Driver .apk is available from the `Engine Driver site <https://enginedriver.mstevetodd.com/downloads>`_
+You will also need to get the appropriate .apk to install the throttle app you want.  e.g. The Engine Driver .apk is available from the `Engine Driver site <https://enginedriver.mstevetodd.com/downloads>`_ |EXTERNAL-LINK|
 
 |hr-dashed|
 

@@ -621,7 +621,7 @@
 <li><p><a class="reference internal" href="#install-the-jumper-wires" id="id8">Install the jumper wires</a></p></li>
 </ul>
 </nav>
-<p><a class="reference external" href="https://www.makerfabs.com/esp8266-wifi-shield.html">This board</a> is a joint project with <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> and Makerfabs and is designed to work out of the box. Make sure to purchase from DCC-EX or any of our dealers or standard parts suppliers.</p>
+<p><a class="reference external" href="https://www.makerfabs.com/esp8266-wifi-shield.html">This board</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> is a joint project with <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> and Makerfabs and is designed to work out of the box. Make sure to purchase from DCC-EX or any of our dealers or standard parts suppliers.</p>
 <p>If for any reason you wish to update the firmware in the future, pleas see <a class="reference internal" href="../../../support/wifi-at-version.html"><span class="doc">ESP8266 (WiFi Boards) - AT Version Issues and Solutions</span></a> for details on how to check the version and how to change it.</p>
 </aside>
 <figure class="align-default" id="id1">
@@ -709,10 +709,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f98a31f00>
+    <jinja2.runtime.BlockReference object at 0x7fb013e6abf0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

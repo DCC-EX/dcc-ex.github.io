@@ -23,7 +23,7 @@ The current API has resulted from a mix of new commands and commands inherited f
 
   Legacy commands and responses that do not comply with this documented syntax will be deprecated in future versions.
 
-If you are looking for information on the WiThrottle protocol, you will find that documented on the `JMRI website <https://www.jmri.org/help/en/package/jmri/jmrit/withrottle/Protocol.shtml>`_.
+If you are looking for information on the WiThrottle protocol, you will find that documented on the `JMRI website <https://www.jmri.org/help/en/package/jmri/jmrit/withrottle/Protocol.shtml>`_ |EXTERNAL-LINK|.
 
 For detailed information on the various commands and responses available with |EX-CS|, refer to the :doc:`/reference/software/command-summary-consolidated` page.
 

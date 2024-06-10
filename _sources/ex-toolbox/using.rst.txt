@@ -18,7 +18,7 @@ EX-Toolbox - Installing and Using
 Installing
 ==========
 
-|EX-TB| can be installed on your Android phone or tablet via the `Google Play Store <https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox>`_ .
+|EX-TB| can be installed on your Android phone or tablet via the `Google Play Store <https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox>`_ |EXTERNAL-LINK|.
 
 Open the *Play Store* app on your phone or tablet and search for "EX-Toolbox".
 
@@ -246,7 +246,7 @@ Assumptions
    
    **BACK-EMF** is referred to by some manufacturers as 'Dynamic Compensation for Speed Stabilisation', 'Scaleable Speed Stabilisation' or 'Load Compensation'.  Unfortunately there is no standard way to disable BACK-EMF. You will need to refer to the manuals for your decoders. 
    
-   `This page <https://tonystrains.com/news/dcc-motor-control-with-back-emf-and-p-i-d/>`_ has a detailed explanation of BACK-EMF and details on how to change it for a number of manufacturers.
+   `This page <https://tonystrains.com/news/dcc-motor-control-with-back-emf-and-p-i-d/>`_ |EXTERNAL-LINK| has a detailed explanation of BACK-EMF and details on how to change it for a number of manufacturers.
 
 Instructions
 ^^^^^^^^^^^^
@@ -577,8 +577,8 @@ Using *SerialToIPGUI* (For Microsoft Windows) (Recommended):
 Downloads
 ---------
 
- * *SerialToIPGUI*  - https://sourceforge.net/projects/serialtoip/
- * *socat* for windows requires downloading the 'cgywin' and installing the optional 'socat' package when you install - https://www.cygwin.com/ 
+ * *SerialToIPGUI*  - https://sourceforge.net/projects/serialtoip/ |EXTERNAL-LINK|
+ * *socat* for windows requires downloading the 'cgywin' and installing the optional 'socat' package when you install - https://www.cygwin.com/ |EXTERNAL-LINK|
 
 
 ----

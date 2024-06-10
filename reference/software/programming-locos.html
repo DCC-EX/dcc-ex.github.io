@@ -646,7 +646,7 @@
 <li><p><span class="guilabel">Write changes on all sheets</span> - use this if you’ve made changes on multiple tabs</p></li>
 <li><p><span class="guilabel">Write all sheets</span> - use this if you want to ensure every setting on every tab is written, noting this will take some time to write</p></li>
 </ul>
-<p>Note that this really is just scratching the surface of the capabilities of DecoderPro, and we highly recommend you read the full documentation on the <a class="reference external" href="https://www.jmri.org/help/en/html/apps/DecoderPro/index.shtml">JMRI website</a>.</p>
+<p>Note that this really is just scratching the surface of the capabilities of DecoderPro, and we highly recommend you read the full documentation on the <a class="reference external" href="https://www.jmri.org/help/en/html/apps/DecoderPro/index.shtml">JMRI website</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;">.</p>
 <p>Even if you don’t intend to use <a class="reference internal" href="../glossary.html"><span class="doc">JMRI</span></a> to control your layout, it still has the best decoder programming functionality by far.</p>
 <section id="dcc-ex-jmri-decoderpro-getting-started-guide">
 <h3>DCC-EX &amp; JMRI DecoderPro Getting Started Guide<a class="headerlink" href="#dcc-ex-jmri-decoderpro-getting-started-guide" title="Permalink to this heading"></a></h3>
@@ -688,10 +688,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f97345e40>
+    <jinja2.runtime.BlockReference object at 0x7fb011b84670>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

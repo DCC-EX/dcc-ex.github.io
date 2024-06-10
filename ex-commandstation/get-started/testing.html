@@ -665,7 +665,7 @@
 <ul class="simple">
 <li><p>Click this link and it will load a web page from our server that will run the web throttle on your PC</p></li>
 </ul>
-<p class="dcclink"><a class="reference external" href="https://DCC-EX.github.io/WebThrottle-EX">Run EX-WebThrottle Now</a></p>
+<p class="dcclink"><a class="reference external" href="https://DCC-EX.github.io/WebThrottle-EX">Run EX-WebThrottle Now</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <ul class="simple">
 <li><p>Click on the “Serial” dropdown button and select “Serial”</p></li>
 <li><p>Click on the <span class="guilabel">Connect EX-CS</span> button</p></li>
@@ -700,7 +700,7 @@
 <aside class="sidebar">
 <p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span> is also a Progressive Web App (PWA). That means you can install it on your computer and run it right from your start menu! If you go into the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span> settings panel (click the 3 line “hamburger menu” at the top left), you will find a “Settings” menu. Click on “Apps” and then select “Install as an App”. You can now work offline and always find <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span> with your other Apps!</p>
 </aside>
-<p>Click this link: <a class="reference internal" href="../../ex-webthrottle/index.html"><span class="doc">EX-WebThrottle</span></a> to run <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span> hosted on our site, or visit <a class="reference external" href="https://github.com/DCC-EX/WebThrottle-EX">GitHub</a> to get the latest version to run on your computer.</p>
+<p>Click this link: <a class="reference internal" href="../../ex-webthrottle/index.html"><span class="doc">EX-WebThrottle</span></a> to run <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span> hosted on our site, or visit <a class="reference external" href="https://github.com/DCC-EX/WebThrottle-EX">GitHub</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> to get the latest version to run on your computer.</p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
 <section id="using-engine-driver-or-withrottle-requires-wifi">
@@ -908,10 +908,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f98670430>
+    <jinja2.runtime.BlockReference object at 0x7fb013ec5120>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

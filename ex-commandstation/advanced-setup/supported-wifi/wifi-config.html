@@ -703,7 +703,7 @@
 </figcaption>
 </figure>
 <p>Images are courtesy of <a class="reference external" href="https://nodemcu.readthedocs.io/en/latest/modules/wifi/">NodeMCU</a>. You can find a great tutorial on WiFi there also.</p>
-<p>We will focus on how to connect a Throttle to the Command Station. For info on using WiFi with <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a>, refer to the <a class="reference external" href="https://www.jmri.org/help/en/html/hardware/dccpp/index.shtml">JMRI documentation</a>.</p>
+<p>We will focus on how to connect a Throttle to the Command Station. For info on using WiFi with <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">JMRI</span></a>, refer to the <a class="reference external" href="https://www.jmri.org/help/en/html/hardware/dccpp/index.shtml">JMRI documentation</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;">.</p>
 </section>
 </section>
 <section id="access-point-mode-default-no-configuration-necessary">
@@ -954,10 +954,18 @@ If you don’t change this setting and start up in AP mode instead, the default 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f9baa0fa0>
+    <jinja2.runtime.BlockReference object at 0x7fb0136e0a60>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

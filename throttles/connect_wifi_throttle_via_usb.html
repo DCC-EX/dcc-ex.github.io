@@ -673,8 +673,8 @@ i.e. ‘COM12’ in the Windows Device Manager becomes ‘/dev/ttyS11’</p>
 <h2><a class="toc-backref" href="#id3" role="doc-backlink">Downloads</a><a class="headerlink" href="#downloads" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><ul class="simple">
-<li><p><em>SerialToIPGUI</em>  - <a class="reference external" href="https://sourceforge.net/projects/serialtoip/">https://sourceforge.net/projects/serialtoip/</a></p></li>
-<li><p><em>socat</em> for windows requires downloading the ‘cgywin’ and installing the optional ‘socat’ package when you install - <a class="reference external" href="https://www.cygwin.com/">https://www.cygwin.com/</a></p></li>
+<li><p><em>SerialToIPGUI</em>  - <a class="reference external" href="https://sourceforge.net/projects/serialtoip/">https://sourceforge.net/projects/serialtoip/</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></li>
+<li><p><em>socat</em> for windows requires downloading the ‘cgywin’ and installing the optional ‘socat’ package when you install - <a class="reference external" href="https://www.cygwin.com/">https://www.cygwin.com/</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></li>
 </ul>
 </div></blockquote>
 </section>
@@ -714,10 +714,18 @@ i.e. ‘COM12’ in the Windows Device Manager becomes ‘/dev/ttyS11’</p>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f97553040>
+    <jinja2.runtime.BlockReference object at 0x7fb0132d0820>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

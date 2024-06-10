@@ -611,10 +611,10 @@
 <p>Usually there is a team member online to help with your issue in English, German and French, and if not you’ll get a response within a few hours.</p>
 <p><hr class="hr-dashed" /></p>
 <p>You can also find some of us on Facebook in the “DCC-EX, DCC++ and Arduino Model Railroading” private group. However many of the project team do not use Facebook, so this approach is <strong>not recommended</strong>.</p>
-<p><a class="reference external" href="https://www.facebook.com/groups/1406785379394934/">https://www.facebook.com/groups/1406785379394934/</a></p>
+<p><a class="reference external" href="https://www.facebook.com/groups/1406785379394934/">https://www.facebook.com/groups/1406785379394934/</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <p><hr class="hr-dashed" /></p>
 <p>and on TrainBoard. However very few of the project team do not use TrainBoard, so this approach is <strong>not recommended</strong>.</p>
-<p><a class="reference external" href="https://www.trainboard.com/highball/index.php?forums/dcc.177/">https://www.trainboard.com/highball/index.php?forums/dcc.177/</a></p>
+<p><a class="reference external" href="https://www.trainboard.com/highball/index.php?forums/dcc.177/">https://www.trainboard.com/highball/index.php?forums/dcc.177/</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 </section>
 
 <div class="section ablog__blog_comments">
@@ -639,10 +639,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f98e209a0>
+    <jinja2.runtime.BlockReference object at 0x7fb01278fdf0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

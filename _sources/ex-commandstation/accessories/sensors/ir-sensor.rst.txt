@@ -46,11 +46,11 @@ In beam break mode, the IR LED transmits the infrared light, with the IR receive
 Adafruit beam break sensors
 ---------------------------
 
-As an example, Adafruit has both a `3mm beam break <https://www.adafruit.com/product/2167>`_ and `5mm beam break <https://www.adafruit.com/product/2168>`_ version of these sensors which hold a high level on their output (VCC) until the beam is broken when they switch to a low level (GND). Therefore these are active low sensors. These are very simple to attach to a DCC-EX command station requiring only VCC, GND and Digital input.
+As an example, Adafruit has both a `3mm beam break <https://www.adafruit.com/product/2167>`_ |EXTERNAL-LINK| and `5mm beam break <https://www.adafruit.com/product/2168>`_ |EXTERNAL-LINK| version of these sensors which hold a high level on their output (VCC) until the beam is broken when they switch to a low level (GND). Therefore these are active low sensors. These are very simple to attach to a DCC-EX command station requiring only VCC, GND and Digital input.
 
 These are 10mm wide x 20mm high x 8mm thick, so on an HO layout this equates to 870mm x 1740mm x 696mm. Would look like a junction box next to the track.
 
-A mount for the 3mm version is available on `Thingiverse <https://www.thingiverse.com/thing:5539548>`_.
+A mount for the 3mm version is available on `Thingiverse <https://www.thingiverse.com/thing:5539548>`_ |EXTERNAL-LINK|.
 
 Like most IR break beam sensors these work best if you can angle them across the track. They work well when angled at 45deg to the track centreline about 70mm apart.
 
@@ -77,7 +77,7 @@ There is a separate project that has been created to provide a software solution
 
 This project can utilise generic IR sensors available from places like AliExpress, eBay, or Amazon with a simple modification, and connects to an Arduino microcontroller to perform the modulation and the rolling window comparison. It will also integrate with |EX-CS| utilising the same device driver as |EX-IO|.
 
-The documentation for this project is available on `Pete's Pages <https://petegsx-projects.github.io/modulated-ir-sensor/index.html>`_.
+The documentation for this project is available on `Pete's Pages <https://petegsx-projects.github.io/modulated-ir-sensor/index.html>`_ |EXTERNAL-LINK|.
 
 Connecting sensors
 ==================

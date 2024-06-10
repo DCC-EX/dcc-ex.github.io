@@ -13,4 +13,4 @@ A DCC-EX Native command protocol library is available to help develop throttle a
 
 The library implements the DCC-EX Native command protocol (as used in the |DCC-EX| |EX-CS| ONLY), allowing a device to connect to the server and act as a client (such as a hardware based throttle).
 
-Details of the library, including instructions and examples, `is available here <https://dcc-ex.com/DCCEXProtocol/index.html>`_.
+Details of the library, including instructions and examples, `is available here <https://dcc-ex.com/DCCEXProtocol/index.html>`_ |EXTERNAL-LINK|.

@@ -82,17 +82,17 @@ Here are some examples of the electrical specifications of a few sizes of wire:
 
 You can see from the above table, for example, that 14 gauge wire can handle a 5Amp current, and 22 gauge wire would be good for feeders. But don't trust this table, especially if you are using higher currents and have a large layout. Voltage, current, length of wire and the fact that these numbers are for 50/60 cycle house current instead of our ~8kHz DCC, mean that the more current you are going to use, the more you will need to know. Find more information in the following resources:
 
-https://dccwiki.com/Wire_Sizes_and_Spacing
+https://dccwiki.com/Wire_Sizes_and_Spacing |EXTERNAL-LINK|
 
-https://tonystrains.com/news/wire-sizes-to-use-in-dcc/
+https://tonystrains.com/news/wire-sizes-to-use-in-dcc/ |EXTERNAL-LINK|
 
-https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/track-wire-gauge-selection
+https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/track-wire-gauge-selection |EXTERNAL-LINK|
 
-http://www.sumidacrossing.org/LayoutControl/DCC/DCCLayoutPower/
+http://www.sumidacrossing.org/LayoutControl/DCC/DCCLayoutPower/ |EXTERNAL-LINK|
 
 A little more involved, but worth the read if you already are an experienced railroader:
 
-http://4dpnr.com/wp-content/uploads/2015/07/DCC_Wiring.pdf
+http://4dpnr.com/wp-content/uploads/2015/07/DCC_Wiring.pdf |EXTERNAL-LINK|
 
 Read all the above and you will be a DCC-EX Engineer!
 

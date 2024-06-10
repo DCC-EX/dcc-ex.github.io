@@ -7,6 +7,6 @@
 Videos
 ******
 
-* Please visit our YouTube Channel at `www.youtube.com/c/DCCEX <https://www.youtube.com/c/DCCEX>`_
+* Please visit our YouTube Channel at `www.youtube.com/c/DCCEX <https://www.youtube.com/c/DCCEX>`_ |EXTERNAL-LINK|
 
 Also see :doc:`video contributions by external parties </external-references/index>`

@@ -650,7 +650,7 @@
 <h2><a class="toc-backref" href="#id3" role="doc-backlink">Development, planning, and support processes</a><a class="headerlink" href="#development-planning-and-support-processes" title="Permalink to this heading"></a></h2>
 <p>There is a repository within the DCC-EX GitHub organisation where we are slowly building out our project and support process documentation.</p>
 <p>This repository will contain the various workflows, templates, and testing items we will use to ensure we release quality code with as few bugs (or “hidden features”) as possible, and to ensure code is consistent across an internationally dispersed team.</p>
-<p>This is our <a class="reference external" href="https://github.com/DCC-EX/Support-Planning">Support Planning</a> repository.</p>
+<p>This is our <a class="reference external" href="https://github.com/DCC-EX/Support-Planning">Support Planning</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> repository.</p>
 </section>
 <section id="contacting-the-team">
 <h2><a class="toc-backref" href="#id4" role="doc-backlink">Contacting the team</a><a class="headerlink" href="#contacting-the-team" title="Permalink to this heading"></a></h2>
@@ -685,10 +685,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f97e4c2e0>
+    <jinja2.runtime.BlockReference object at 0x7fb013ec6770>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

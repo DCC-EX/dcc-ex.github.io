@@ -61,7 +61,7 @@ You have an option for how you would like to run |EX-WT|, from the cloud or inst
 Run it now (Run from the cloud)
 ===============================
 
-Just click the 'Run Ex-WebThrottle Now' button below and you will load a web page from our server that will run the web throttle on your computer. You can connect it to the |EX-CS| or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run |EX-CS| in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX.
+Just click the 'Run Ex-WebThrottle Now' button below and you will load a web page from our server that will run the web throttle on your computer. You can connect it to the |EX-CS| or just run it in emulator mode where you don't have to have any hardware. Please read the requirements above for what you need in order to run |EX-CS| in your browser. If you want to remember the link to run the throttle, it is https://dcc-ex.github.io/WebThrottle-EX |EXTERNAL-LINK|.
 
 .. rst-class:: dcclink
 

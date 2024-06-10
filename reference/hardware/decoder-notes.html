@@ -615,8 +615,8 @@
 <p>How to program (<a class="reference internal" href="../glossary.html"><span class="doc">JMRI</span></a>, <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span>, serial monitor, throttles)</p>
 <p>Commands used</p>
 <p>other errors (gaps)</p>
-<p><a class="reference external" href="https://railsnail.uk/dcc-ex-and-hornby-tts-decoders-no-ack/">https://railsnail.uk/dcc-ex-and-hornby-tts-decoders-no-ack/</a></p>
-<p><a class="reference external" href="https://dccwiki.com/Decoder_Programming">https://dccwiki.com/Decoder_Programming</a></p>
+<p><a class="reference external" href="https://railsnail.uk/dcc-ex-and-hornby-tts-decoders-no-ack/">https://railsnail.uk/dcc-ex-and-hornby-tts-decoders-no-ack/</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
+<p><a class="reference external" href="https://dccwiki.com/Decoder_Programming">https://dccwiki.com/Decoder_Programming</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <p>mention “service mode” vs. “operations mode”</p>
 <p>Have a link to “Programming Mobile decoders, aka. Reading and Writing CVs” and write that document</p>
 <div class="admonition-todo admonition" id="id1">
@@ -647,10 +647,18 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7f973465c0>
+    <jinja2.runtime.BlockReference object at 0x7fb0127cf400>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>
+
+    <script type="text/javascript">
+      <!-- Adds target=_blank to external links -->
+
+      $(document).ready(function () {
+        $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').not('a[href^="https://dcc-ex.com/"]').attr('target', '_blank');
+      });
+    </script>
   
 
 </footer>

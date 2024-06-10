@@ -65,7 +65,7 @@ Each Slave device has an address on the bus, which is normally 7 bits in length.
 
 When the Master wants to communicate with a Slave device, it sends the address of the device it wishes to communicate with, and a Slave device which matches that address will respond.  The Master may then send further data which that Slave may interpret as a command.  Or the Master may wait to allow the Slave to send data.  In this way, we can have two-way data flows from Master to Slave, and from Slave to Master.
 
-For more information about |I2C|, including a link to the |I2C| Standard, see `<https://www.i2c-bus.org/>`_.
+For more information about |I2C|, including a link to the |I2C| Standard, see `<https://www.i2c-bus.org/>`_ |EXTERNAL-LINK|.
 
 Addresses
 ==========

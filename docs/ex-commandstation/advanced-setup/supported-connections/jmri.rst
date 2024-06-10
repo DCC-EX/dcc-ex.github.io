@@ -18,7 +18,7 @@ To enable this functionality, |JMRi| includes a |WiThrottle| server.
 
 For example, |Engine Driver| uses the |WiThrottle Protocol|, so it can connect through the JMRI computer that has WiFi and its own |WiThrottle Server|. This should also apply to any other controller that supports the |WiThrottle Protocol|.
 
-You can read further on connecting your controller to |JMRi| on the `JMRI: WiFi Connected Throttle <https://www.jmri.org/help/en/package/jmri/jmrit/withrottle/UserInterface.shtml>`_ page on the |JMRi| website.
+You can read further on connecting your controller to |JMRi| on the `JMRI: WiFi Connected Throttle <https://www.jmri.org/help/en/package/jmri/jmrit/withrottle/UserInterface.shtml>`_ |EXTERNAL-LINK| page on the |JMRi| website.
 
 Some reasons you may wish to use |JMRi| with your |EX-CS|:
 

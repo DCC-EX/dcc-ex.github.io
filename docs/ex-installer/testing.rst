@@ -88,7 +88,7 @@ This page is a brief introduction to using the Arduino IDE Serial Monitor. For a
 
 To test with the Arduino Serial Monitor, download the Arduino IDE from the following link and install it on your computer.
 
-`Download the Arduino IDE <https://www.arduino.cc/en/software>`_
+`Download the Arduino IDE <https://www.arduino.cc/en/software>`_ |EXTERNAL-LINK|
 
 
 To do a quick test, open the Arduino application:
@@ -130,7 +130,7 @@ At the top of the serial monitor type ``<s>`` (lowercase "s") into the command t
 
 This is the "status" command and reports your version, types of boards you are using, and a build number.
 
-There are a lot of other commands you can enter here. As a matter of fact, you could use the serial monitor to test any of the DCC-EX API (application programming interface) commands. Please see the `DCC-EX Wiki <https://github.com/DCC-EX/CommandStation-EX/wiki>`_ for a list of commands or for additional information on using the serial monitor see the :doc:`/reference/tools/serial-monitor` page.
+There are a lot of other commands you can enter here. As a matter of fact, you could use the serial monitor to test any of the DCC-EX API (application programming interface) commands. Please see the `DCC-EX Wiki <https://github.com/DCC-EX/CommandStation-EX/wiki>`_ |EXTERNAL-LINK| for a list of commands or for additional information on using the serial monitor see the :doc:`/reference/tools/serial-monitor` page.
 
 Using EX-WebThrottle
 --------------------
@@ -141,7 +141,7 @@ Using EX-WebThrottle
 
    EX-WebThrottle
 
-Click this link: :doc:`EX-WebThrottle </ex-webthrottle/index>` to run EX-WebThrottle hosted on our site, or visit `GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ to get the latest version to run on your computer.
+Click this link: :doc:`EX-WebThrottle </ex-webthrottle/index>` to run EX-WebThrottle hosted on our site, or visit `GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ |EXTERNAL-LINK| to get the latest version to run on your computer.
 
 Using Engine Driver (or other WiThrottle Protocol Throttle) - Requires WiFi
 ---------------------------------------------------------------------------

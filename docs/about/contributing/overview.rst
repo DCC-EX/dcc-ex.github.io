@@ -54,7 +54,7 @@ There is a repository within the DCC-EX GitHub organisation where we are slowly 
 
 This repository will contain the various workflows, templates, and testing items we will use to ensure we release quality code with as few bugs (or "hidden features") as possible, and to ensure code is consistent across an internationally dispersed team.
 
-This is our `Support Planning <https://github.com/DCC-EX/Support-Planning>`_ repository.
+This is our `Support Planning <https://github.com/DCC-EX/Support-Planning>`_ |EXTERNAL-LINK| repository.
 
 Contacting the team
 ====================

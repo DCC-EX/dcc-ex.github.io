@@ -20,13 +20,13 @@ EX-DCCInspector
 
 .. rst-class:: dcclink
 
-   `EX-DCCInspector source code Zip file <https://github.com/DCC-EX/DCCInspector-EX/archive/refs/heads/main.zip>`_
+   `EX-DCCInspector source code Zip file <https://github.com/DCC-EX/DCCInspector-EX/archive/refs/heads/main.zip>`_ |EXTERNAL-LINK|
 
 |
 
 .. rst-class:: dcclink
 
-   `EX-DCCInspector Github Repository <https://github.com/DCC-EX/DCCInspector-EX>`_
+   `EX-DCCInspector Github Repository <https://github.com/DCC-EX/DCCInspector-EX>`_ |EXTERNAL-LINK|
 
 Looking for some help with EX-DCCInspector?
 ===========================================

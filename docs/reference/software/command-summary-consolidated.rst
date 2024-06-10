@@ -1050,7 +1050,7 @@ WiFi Control
 
     :doc:`DCC-EX WiFi Configuration </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
 
-    `Espressif AT Command Set PDF File (Exressif makes the ESP8266) <https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf>`_
+    `Espressif AT Command Set PDF File (Exressif makes the ESP8266) <https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf>`_ |EXTERNAL-LINK|
 
 |hr-dashed|
 

@@ -13,6 +13,6 @@ EX-FastClock
 
 .. rst-class:: dcclink
 
-   `EX-FastClock source code <https://github.com/DCC-EX/EX-FastClock>`_
+   `EX-FastClock source code <https://github.com/DCC-EX/EX-FastClock>`_ |EXTERNAL-LINK|
 
 |

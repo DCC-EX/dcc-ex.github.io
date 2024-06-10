@@ -100,5 +100,5 @@ DCC-EX Cmd to Pause & Resume EXRAIL macro scripts, and DCC-EX Cmd to Reboot Comm
   
 Visit the TCS website here:
 
-* https://tcsdcc.com/uwt-50 
-* https://www.tcsdcc.com/uwt-100 
+* https://tcsdcc.com/uwt-50 |EXTERNAL-LINK|
+* https://www.tcsdcc.com/uwt-100 |EXTERNAL-LINK|

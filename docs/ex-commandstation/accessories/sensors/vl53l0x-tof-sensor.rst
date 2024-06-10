@@ -207,7 +207,7 @@ For example:
   AT(4000)        // Will trigger when an object is within 200mm
   AFTER(4003)     // Will trigger 0.5s after an object moves 250mm away
 
-.. todo:: `LOW - VL53L0X <https://github.com/DCC-EX/dcc-ex.github.io/issues/447>`_ - validate VL53L0X works with EX-RAIL's analogue sensor commands ATGTE, ATLT, IFGTE, IFLT
+.. todo:: `LOW - VL53L0X <https://github.com/DCC-EX/dcc-ex.github.io/issues/447>`_ |EXTERNAL-LINK| - validate VL53L0X works with EX-RAIL's analogue sensor commands ATGTE, ATLT, IFGTE, IFLT
 
 .. note:: 
 

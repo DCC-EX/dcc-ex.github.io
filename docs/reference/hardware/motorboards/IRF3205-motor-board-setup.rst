@@ -373,24 +373,24 @@ Parts List (IRF3205)
 
 Mean Well LRS-150-15
 Enclosed Switchable Power Supply 1U Profile, 150W 15V 10A
-http://amazon.com/gp/product/B019GYOPSS/
+http://amazon.com/gp/product/B019GYOPSS/ |EXTERNAL-LINK|
 $23.38 +tax; prime shipping
 
 ELEGOO MEGA 2560 R3 Board ATmega2560 ATMEGA16U2 + USB Cable
 https://www.amazon.com/gp/product/B01H4ZLZLQ
-$16.99 +tax; prime shipping
+$16.99 +tax; prime shipping |EXTERNAL-LINK|
 
 ACS724 Current Sensor Carrier 0 to 10A (this one has 400mv/A sensitivity)
-https://www.pololu.com/product/4042
+https://www.pololu.com/product/4042 |EXTERNAL-LINK|
 $9.95 + $3.95 shipping
 
 DuPont pin M/F jumper wires 20cm – an assortment is fine
-https://www.amazon.com/dp/B07GD2BWPY
+https://www.amazon.com/dp/B07GD2BWPY |EXTERNAL-LINK|
 $5.79 +tax; prime shipping
 
 Dual Motor Driver Board H-Bridge IRF3205, 3-36V, 10A, Peak 30A
 various sellers, prices and delivery methods. $16 and higher.
-https://www.amazon.com/gp/product/B087PF8CZM
+https://www.amazon.com/gp/product/B087PF8CZM |EXTERNAL-LINK|
 $24.40 +tax; prime shipping
 
 .. TODO:: `LOW - Hardware <https://github.com/DCC-EX/dcc-ex.github.io/issues/427>`_ - See the PDF file IRF3205_mega_ACS724 in trains folder to include here

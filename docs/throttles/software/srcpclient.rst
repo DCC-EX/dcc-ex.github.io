@@ -22,7 +22,7 @@ This is an iOS App from Germany. One of the major benefits of SRCPClient is that
 
 Please visit their website: https://www.io-expert.com/
 
-You can find it in the App Store: `SRCP Client for iOS <https://apps.apple.com/us/app/srcpclient/id1495402734>`_
+You can find it in the App Store: `SRCP Client for iOS <https://apps.apple.com/us/app/srcpclient/id1495402734>`_ |EXTERNAL-LINK|
 
 .. _srcpclient-features:
 

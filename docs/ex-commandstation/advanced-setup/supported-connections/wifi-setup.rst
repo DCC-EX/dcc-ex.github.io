@@ -56,9 +56,9 @@ Compatible Boards
 Most boards based on the ESP8266 should work with |EX-CS|. However, with all the variations and software versions out there, we've compiled this list of known tested, working hardware. We will add more over time.
 
 
-* `Makerfabs ESP8266 WiFi Shield (recommended) <https://www.makerfabs.com/esp8266-wifi-shield.html>`_
-* `Duinopeak ESP8266 WiFi Expansion Board (plus an ESP-01 or 01s) <https://usa.banggood.com/Duinopeak-ESP8266-ESP-01-WiFi-Expansion-Board-Shield-Without-ESP8266-Module-p-1391961.html?cur_warehouse=CN>`_
-* `ESP-01 or ESP-01S Board (This is not a shield. You will need to use jumpers) <https://www.amzn.com/B00O34AGSU/>`_
+* `Makerfabs ESP8266 WiFi Shield (recommended) <https://www.makerfabs.com/esp8266-wifi-shield.html>`_ |EXTERNAL-LINK|
+* `Duinopeak ESP8266 WiFi Expansion Board (plus an ESP-01 or 01s) <https://usa.banggood.com/Duinopeak-ESP8266-ESP-01-WiFi-Expansion-Board-Shield-Without-ESP8266-Module-p-1391961.html?cur_warehouse=CN>`_ |EXTERNAL-LINK|
+* `ESP-01 or ESP-01S Board (This is not a shield. You will need to use jumpers) <https://www.amzn.com/B00O34AGSU/>`_ |EXTERNAL-LINK|
 
 For more boards you may be able to use, see the :doc:`WiFi Boards Section </reference/hardware/wifi-boards>`
 
@@ -106,5 +106,5 @@ If you already have the Command Station software running and are just adding WiF
 
 If you are setting up your Command Station for the first time, or are making changes to the basic setup, navigate to :doc:`Command Station Downloads </download/ex-commandstation>` to load firmware onto the Command Station.
 
-.. note:: You may run into an ESP-01s board that has the wrong firmware on it. This is easy to test by connecting it and looking at the startup log for the CS in the serial monitor. If the board does not respond to AT commands, you will need to install new firmware on the ESP board. This is called "flashing". You can find how to do this, as well as some other interesting things in the `Geoff Bunza article on creating a signal only command station. <https://forum.mrhmag.com/post/sma42-socs-signal-only-command-station-for-dcc-wifi-control-direct-to-your-logo-12289064?pid=1332020138_>`_ .Skip to the "The ESP-01S - The WiFi Connection" section
+.. note:: You may run into an ESP-01s board that has the wrong firmware on it. This is easy to test by connecting it and looking at the startup log for the CS in the serial monitor. If the board does not respond to AT commands, you will need to install new firmware on the ESP board. This is called "flashing". You can find how to do this, as well as some other interesting things in the `Geoff Bunza article on creating a signal only command station. <https://forum.mrhmag.com/post/sma42-socs-signal-only-command-station-for-dcc-wifi-control-direct-to-your-logo-12289064?pid=1332020138_>`_ |EXTERNAL-LINK| .Skip to the "The ESP-01S - The WiFi Connection" section
    

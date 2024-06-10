@@ -24,7 +24,7 @@ Cab Engineer: DCC Throttle
 
 Please visit Ralf at the Alf Labs Website: https://www.alfray.com/trains/cab_app.html
    
-`Get it from the Google Play Store HERE <https://play.google.com/store/apps/details?id=com.alflabs.dcccab>`_
+`Get it from the Google Play Store HERE <https://play.google.com/store/apps/details?id=com.alflabs.dcccab>`_ |EXTERNAL-LINK|
      
 .. _ce-features:
    

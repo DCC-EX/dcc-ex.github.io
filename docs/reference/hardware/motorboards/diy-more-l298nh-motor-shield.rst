@@ -19,6 +19,6 @@ Another similar board to the Arduino motor shield. Supports 2A per channel. This
    :alt: DIY More Motor Shield
    :scale: 40%
 
-`DIY More Website <https://www.diymore.cc/products/replace-l298p-for-arduino-uno-r3-dual-channel-dc-motor-driver-shield-expansion-board-l298nh-module-driving-module-mega2560-one>`_
+`DIY More Website <https://www.diymore.cc/products/replace-l298p-for-arduino-uno-r3-dual-channel-dc-motor-driver-shield-expansion-board-l298nh-module-driving-module-mega2560-one>`_ |EXTERNAL-LINK|
    
 :doc:`Install the DIY More Motor Shield (same as Deek-Robot) </ex-commandstation/get-started/assembly>`

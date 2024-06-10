@@ -26,14 +26,14 @@ Download and install the Arduino IDE
 
 Rather than go into details that are already covered in great detail on the Arduino web page, just follow the instructions in the following link and then return here.
 
-`Arduino IDE Guide <https://www.arduino.cc/en/Guide>`_
+`Arduino IDE Guide <https://www.arduino.cc/en/Guide>`_ |EXTERNAL-LINK|
 
 Download the DCC-EX ZIP file
 ============================
 
 Use the link to either the ZIP or TAR file at the bottom of our GitHub page here:
 
-`DCC-EX Download Page <https://github.com/DCC-EX/CommandStation-EX/releases>`_
+`DCC-EX Download Page <https://github.com/DCC-EX/CommandStation-EX/releases>`_ |EXTERNAL-LINK|
 
 Unzip the file into the Arduino IDE project folder
 ===================================================
@@ -102,7 +102,7 @@ From the "Tools" menu select the "Board" menu, then "Arduino AVR boards", and th
 
 Then select "Processor" and make sure it says "ATMega2560"
 
-Last, select "Port" and find the port on your computer that recognises the Arduino. If you don't see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here `Drivers for the CH340 <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_
+Last, select "Port" and find the port on your computer that recognises the Arduino. If you don't see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here `Drivers for the CH340 <https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all>`_ |EXTERNAL-LINK|
 
 .. figure:: /_static/images/arduino-ide/board_port_mega.jpg
    :alt: Select the COM Port
@@ -178,7 +178,7 @@ Run your trains!
 
 **Now run EX-WebThrottle** directly from our :doc:`EX-WebThrottle web page </ex-webthrottle/index>`. As described on that page, ensure that you are using Chrome version 89 or above. Note that you can run the throttle from your browser, and/or install it locally from its own menu.
 
-You can also download our |EX-WT| found at `EX-WebThrottle on GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ and run it in your browser. Again, make sure you are using a Chrome based browser version 89 or above.
+You can also download our |EX-WT| found at `EX-WebThrottle on GitHub <https://github.com/DCC-EX/WebThrottle-EX>`_ |EXTERNAL-LINK| and run it in your browser. Again, make sure you are using a Chrome based browser version 89 or above.
 
 The rest of the instructions show you how to use |EX-WT|. You should be able to find the Command Station by its serial port and enable it, turn on the track power, then acquire your loco by its ID. After that, you should be able to use the throttle slider and function buttons to operate your locomotive!
 

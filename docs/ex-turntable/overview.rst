@@ -30,7 +30,7 @@ To make full use of |EX-TT|, you will need a basic understanding of :doc:`EX-RAI
 
   |EX-TT| is in public Beta testing, and as such, we encourage regular feedback on the success or otherwise of both the software and documentation. Please reach out via any of our :doc:`/support/contact-us` methods and help us get |EX-TT| as easy to use and reliable as possible.
 
-  For a current overview of all outstanding feature requests or enhancements and known bugs to be fixed, visit the |EX-TT| view of the `DCC-EX GitHub project <https://github.com/orgs/DCC-EX/projects/7/views/1>`_.
+  For a current overview of all outstanding feature requests or enhancements and known bugs to be fixed, visit the |EX-TT| view of the `DCC-EX GitHub project <https://github.com/orgs/DCC-EX/projects/7/views/1>`_ |EXTERNAL-LINK|.
   
 .. sidebar:: Supported stepper drivers and motors
 
@@ -63,7 +63,7 @@ The |EX-TT| integration includes:
   
   **AccelStepper.h credit:** This project would not be effective without the excellent work by Mike McCauley on the AccelStepper.h library that enables us to have somewhat prototypical acceleration and deceleration of the turntable. This library is included with the |EX-TT| software (sans example sketches), and more details can be found on the official `AccelStepper <http://www.airspayce.com/mikem/arduino/AccelStepper/>`_ web page. Note as of version 0.7.0 there is no longer a need for modifications to the library.
 
-  **NmraDcc.h credit:** Also, while not directly used in this software, Alex Shephard's "DCCInterface_TurntableControl" was the inspiration for the initial turntable logic for another DCC driven turntable that translated into the beginnings of |EX-TT|. You can see this code as part of the `NmraDcc Arduino library <https://github.com/mrrwa/NmraDcc>`_.
+  **NmraDcc.h credit:** Also, while not directly used in this software, Alex Shephard's "DCCInterface_TurntableControl" was the inspiration for the initial turntable logic for another DCC driven turntable that translated into the beginnings of |EX-TT|. You can see this code as part of the `NmraDcc Arduino library <https://github.com/mrrwa/NmraDcc>`_ |EXTERNAL-LINK|.
 
 How Does It Work?
 =================

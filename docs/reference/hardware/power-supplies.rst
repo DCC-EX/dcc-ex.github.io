@@ -58,7 +58,7 @@ Powering the Motor Controller
 Voltage
 ^^^^^^^^^
 
-N and Z scale layouts should run at at about 12V-14V to avoid damage to the motors. See this thread to learn more about the pros and cons of running at higher voltages at this `TrainBoard Thread <https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/>`_ Another good link (along with just about anything written by Mark Gurries), is here: `Mark Gurries - Choosing the Right Booster <https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/boosters/choosing-the-right-booster>`_
+N and Z scale layouts should run at at about 12V-14V to avoid damage to the motors. See this thread to learn more about the pros and cons of running at higher voltages at this `TrainBoard Thread <https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/>`_ |EXTERNAL-LINK| Another good link (along with just about anything written by Mark Gurries), is here: `Mark Gurries - Choosing the Right Booster <https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/boosters/choosing-the-right-booster>`_ |EXTERNAL-LINK|
 
 Most larger scales will run higher voltages. For reference, Digitrax systems put the rails at around 14V and garden scale could be 18V. Do some homework to determine what voltage is best for your system.
 
@@ -99,7 +99,7 @@ Bricks (Laptop Style)
    :scale: 25%
    :alt: Samsung brick
 
-https://www.amazon.com/Samsung-Monitor-SoulBay-SyncMaster-Notebook/dp/B07QLRBLWC/
+https://www.amazon.com/Samsung-Monitor-SoulBay-SyncMaster-Notebook/dp/B07QLRBLWC/ |EXTERNAL-LINK|
 
 Since many people have old laptop power supplies that can be 18-19.5V DC, you can use the diode or buck converter method listed below to reduce the voltage.
 
@@ -112,13 +112,13 @@ Adjustable Power Supplies
    :scale: 25%
    :alt: Belker_adjustable wall-wart
 
-https://www.amazon.com/dp/B07J6RC43S/
+https://www.amazon.com/dp/B07J6RC43S/ |EXTERNAL-LINK|
 
 .. image:: /_static/images/power/belker_adjustable_45w.jpg
    :scale: 25%
    :alt: Belker_adjustable brick
 
-https://www.amazon.com/Belker-5V-15V-Universal-Adapter-Speaker/dp/B015H0UPWU
+https://www.amazon.com/Belker-5V-15V-Universal-Adapter-Speaker/dp/B015H0UPWU |EXTERNAL-LINK|
 
 Cage Power Supplies
 ======================
@@ -129,7 +129,7 @@ Cage Power Supplies
    :scale: 100%
    :alt: Meanwell
 
-`See on Digi-Key <https://www.digikey.com/product-detail/en/mean-well-usa-inc/LRS-100-15/1866-3313-ND/7705005>`_
+`See on Digi-Key <https://www.digikey.com/product-detail/en/mean-well-usa-inc/LRS-100-15/1866-3313-ND/7705005>`_ |EXTERNAL-LINK|
 
 .. warning:: For the Meanwell LRS-100-15 you will need to do your own mains wiring. If you don't have experience with this get a friend who does or hire an electrician to do it for you. **MAINS POWER IS DANGEROUS!**
 
@@ -144,7 +144,7 @@ With a dual voltage power supply, you can provide 12V for the motor controller a
    :scale: 100%
    :alt: Mean Well RD125A Dual voltage power supply
 
-`See on Amazon <https://www.amzn.com/B005T9FF4I/>`_
+`See on Amazon <https://www.amzn.com/B005T9FF4I/>`_ |EXTERNAL-LINK|
 
 .. warning:: For the Meanwell RD125A, you will need to do your own mains wiring. If you don't have experience with this get a friend who does or hire an electrician to do it for you. **MAINS POWER IS DANGEROUS!**
 
@@ -166,7 +166,7 @@ Some options for a power supply are the **Meanwell SP-200-15** or the **ATOS-300
    :scale: 50%
    :alt: 15V 20A supply
 
-Here is a link to where you can find the `Meanwell SP-200-15 Power Supply <https://www.walmart.com/ip/NEW-Mean-Well-15Vdc-PFC-Power-Supply-SP-200-15/628549676?wmlspartner=wlpa&selectedSellerId=844>`_
+Here is a link to where you can find the `Meanwell SP-200-15 Power Supply <https://www.walmart.com/ip/NEW-Mean-Well-15Vdc-PFC-Power-Supply-SP-200-15/628549676?wmlspartner=wlpa&selectedSellerId=844>`_ |EXTERNAL-LINK|
 
 Using Buck Converters
 -----------------------
@@ -190,7 +190,7 @@ These come in different sizes. Show here is a 2A and a 6A Version. You can look 
    :scale: 18%
    :alt: 60W 6A 5-24V Buck Power Supply
 
-**One example from Amazon**, click to follow the link: `5 to 30V Adjustable regulator converter <https://www.amazon.com/DROK-5-5-30V-Adjustable-Regulator-Converter/dp/B07VNDGFT6/>`_
+**One example from Amazon**, click to follow the link: `5 to 30V Adjustable regulator converter <https://www.amazon.com/DROK-5-5-30V-Adjustable-Regulator-Converter/dp/B07VNDGFT6/>`_ |EXTERNAL-LINK|
 
 
 4 Pack of Buck Regular Converters
@@ -202,7 +202,7 @@ These come in different sizes. Show here is a 2A and a 6A Version. You can look 
 
 These are Input Voltage: DC 4-38V, error ±0.1V. Output Voltage: DC 1.25V to 36V at 5A.
 
-https://www.amazon.com/dp/B079N9BFZC
+https://www.amazon.com/dp/B079N9BFZC |EXTERNAL-LINK|
 
 
 Cheap Buck Converter with Display $5
@@ -214,7 +214,7 @@ Cheap Buck Converter with Display $5
 
 This is a push button programmable 20W adjustable DC-DC buck converter module with digital display. It is based on LM2596 3A step-down voltage regulator and supports an input of 0~40V DC to an output of 1.25 to 37V with an accuracy of ± 0.05V.
 
-Here is one example sold by DFRobot, click to follow the link: `20W 3A programmable buck converter <https://www.dfrobot.com/product-1552.html>`_.
+Here is one example sold by DFRobot, click to follow the link: `20W 3A programmable buck converter <https://www.dfrobot.com/product-1552.html>`_ |EXTERNAL-LINK|.
 
 Using Diodes to Reduce Voltage
 ===============================

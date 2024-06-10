@@ -72,8 +72,8 @@ Using *SerialToIPGUI* (For Microsoft Windows) (Recommended):
 Downloads
 =========
 
- * *SerialToIPGUI*  - https://sourceforge.net/projects/serialtoip/
- * *socat* for windows requires downloading the 'cgywin' and installing the optional 'socat' package when you install - https://www.cygwin.com/ 
+ * *SerialToIPGUI*  - https://sourceforge.net/projects/serialtoip/ |EXTERNAL-LINK|
+ * *socat* for windows requires downloading the 'cgywin' and installing the optional 'socat' package when you install - https://www.cygwin.com/ |EXTERNAL-LINK|
 
 ----
 

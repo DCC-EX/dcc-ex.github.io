@@ -21,9 +21,9 @@ Commands used
 
 other errors (gaps)
 
-https://railsnail.uk/dcc-ex-and-hornby-tts-decoders-no-ack/
+https://railsnail.uk/dcc-ex-and-hornby-tts-decoders-no-ack/ |EXTERNAL-LINK|
 
-https://dccwiki.com/Decoder_Programming
+https://dccwiki.com/Decoder_Programming |EXTERNAL-LINK|
 
 mention "service mode" vs. "operations mode"
 

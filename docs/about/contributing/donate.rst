@@ -27,25 +27,25 @@ Donation Options
 
 .. rst-class:: dcclink
 
-  `PayPal <https://paypal.me/fndecker>`_
+  `PayPal <https://paypal.me/fndecker>`_ |EXTERNAL-LINK|
 
 Or choose user @FNDecker in your PayPal App
 
 .. rst-class:: dcclink
 
-  `Venmo <https://venmo.com/fndecker>`_
+  `Venmo <https://venmo.com/fndecker>`_ |EXTERNAL-LINK|
 
 Or choose user @FNDecker in your Venmo App
 
 .. rst-class:: dcclink
 
-  `Patreon <https://patreon.com/dccex>`_
+  `Patreon <https://patreon.com/dccex>`_ |EXTERNAL-LINK|
 
 Or choose user "dccex" on Patreon
 
 .. rst-class:: dcclink
 
-  `Github Sponsors <https://github.com/sponsors/DCC-EX>`_
+  `Github Sponsors <https://github.com/sponsors/DCC-EX>`_ |EXTERNAL-LINK|
 
 We are DCC-EX on GitHub Sponsors. You can also donate from our |EX-CS| repository page by scrolling down the right side column.
 

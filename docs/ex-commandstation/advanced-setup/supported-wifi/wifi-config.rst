@@ -114,7 +114,7 @@ Station Mode
 
 Images are courtesy of `NodeMCU <https://nodemcu.readthedocs.io/en/latest/modules/wifi/>`_. You can find a great tutorial on WiFi there also.
 
-We will focus on how to connect a Throttle to the Command Station. For info on using WiFi with |JMRI|, refer to the `JMRI documentation <https://www.jmri.org/help/en/html/hardware/dccpp/index.shtml>`_.
+We will focus on how to connect a Throttle to the Command Station. For info on using WiFi with |JMRI|, refer to the `JMRI documentation <https://www.jmri.org/help/en/html/hardware/dccpp/index.shtml>`_ |EXTERNAL-LINK|.
 
 Access Point Mode (Default - No Configuration Necessary)
 ========================================================

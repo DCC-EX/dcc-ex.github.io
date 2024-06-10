@@ -68,4 +68,4 @@ In order to connect both Vcc and CH_PD to the 3.3V output of the Arduino, you ca
 
    ESP-01 Breakout Boards
 
-.. warning:: The ESP8266 chips are designed for 3.3V. DO NOT TRY TO CONNECT THEM TO 5V!! While they cannot handle 5V for power, their GPIO pins are 5V tolerant. Because of this, you don't need any additional circuitry. However, to be safe, you can use a small `level shifter board <https://learn.sparkfun.com/tutorials/bi-directional-logic-level-converter-hookup-guide/all>`_, or use one of the breakout boards like the one above and to the right that has a 3.3V regulator and level shifters for the Tx and Rx pins.
+.. warning:: The ESP8266 chips are designed for 3.3V. DO NOT TRY TO CONNECT THEM TO 5V!! While they cannot handle 5V for power, their GPIO pins are 5V tolerant. Because of this, you don't need any additional circuitry. However, to be safe, you can use a small `level shifter board <https://learn.sparkfun.com/tutorials/bi-directional-logic-level-converter-hookup-guide/all>`_ |EXTERNAL-LINK|, or use one of the breakout boards like the one above and to the right that has a 3.3V regulator and level shifters for the Tx and Rx pins.

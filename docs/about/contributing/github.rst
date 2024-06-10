@@ -17,7 +17,7 @@ GitHub
 
 While you don't need to be an expert, you should have some knowledge about Git and GitHub, as we manage all of our code and documentation there.
 
-All development and documentation related repositories are located in the `DCC-EX GitHub organisation <https://github.com/DCC-EX>`_.
+All development and documentation related repositories are located in the `DCC-EX GitHub organisation <https://github.com/DCC-EX>`_ |EXTERNAL-LINK|.
 
 Depending on the editing platform of your choice, you may get all the Git functionality you need, however you may optionally want to install GitHub Desktop or Sourcetree for getting a good idea on the state of the various |DCC-EX| repositories.
 
@@ -37,14 +37,14 @@ GitHub account
 
 To start with, you will of course require an account on GitHub. If you have one already for your own personal projects, or contributing to other projects, you can simply use this. There is no need to have multiple GitHub accounts.
 
-If you don't have one at all, then you'll need to `sign up <https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home>`_.
+If you don't have one at all, then you'll need to `sign up <https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home>`_ |EXTERNAL-LINK|.
 
 Git terms: fork, branch, pull request, and merge
 =================================================
 
 If you're brand new to using Git and GitHub, you will no doubt be instantly confused by four terms commonly used by Git users; fork, branch, pull request, and merge.
 
-If you're not familiar with these, we provide a very brief overview below, however we highly recommend reading GitHub's documentation: `Collaborate with pull requests <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests>`_.
+If you're not familiar with these, we provide a very brief overview below, however we highly recommend reading GitHub's documentation: `Collaborate with pull requests <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests>`_ |EXTERNAL-LINK|.
 
 Fork
 ----

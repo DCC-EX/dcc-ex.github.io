@@ -33,17 +33,17 @@ Developer tools
 	You may want to have a look at our page on :doc:`/about/contributing/software` and also our page on :doc:`/about/contributing/github` if you've never used git or GitHub before
 
 We strongly recommend using Visual Studio Code (VSCode) to work on EX-WebThrottle2. 
-You can download it from Microsoft's website `here <https://code.visualstudio.com/>`__.
+You can download it from Microsoft's website `here <https://code.visualstudio.com/>`__ |EXTERNAL-LINK|.
 Whilst you are waiting for it to install, you can be getting a local copy of the code.
 
 Once you have downloaded VSCode and installed it, open VSCode then click :menuselection:`File --> Open Workspace from file...` then find your local copy of the code and select "EX-WebThrottle2.code-workspace". 
 Once VSCode has loaded the workspace, you should see a popup in the bottom right asking you if you want to install the recommended extensions. 
 It's recommended you install these and they are:
 
-- `Volar <https://marketplace.visualstudio.com/items?itemName=Vue.volar>`__
-- `Vuetify <https://marketplace.visualstudio.com/items?itemName=vuetifyjs.vuetify-vscode>`__
-- `ESLint <https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint>`__
-- `Spell Checker <https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker>`__
+- `Volar <https://marketplace.visualstudio.com/items?itemName=Vue.volar>`__ |EXTERNAL-LINK|
+- `Vuetify <https://marketplace.visualstudio.com/items?itemName=vuetifyjs.vuetify-vscode>`__ |EXTERNAL-LINK|
+- `ESLint <https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint>`__ |EXTERNAL-LINK|
+- `Spell Checker <https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker>`__ |EXTERNAL-LINK|
 
 You'll need to set up Volar to handle TypeScript, instead of the built in TypeScript extension. To do this, follow these steps:
 
@@ -52,7 +52,7 @@ You'll need to set up Volar to handle TypeScript, instead of the built in TypeSc
 #. Find TypeScript and JavaScript Language Features, right click and select `Disable (Workspace)`
 #. Reload VSCode, and then open any vue file to trigger Volar activation (no longer need in 0.28.4).
 
-Next you'll need to install Node.js to run the development tools. Again, you can download it from their website `here <https://nodejs.org/en/>`__.
+Next you'll need to install Node.js to run the development tools. Again, you can download it from their website `here <https://nodejs.org/en/>`__ |EXTERNAL-LINK|.
 We recommend you use the LTS version of Node.
 
 Once Node is installed, open a terminal in VSCode (:menuselection:`Terminal --> New terminal`) and run the following command to install all the dependencies:
@@ -71,7 +71,7 @@ Then to run the code locally:
 Code standards
 --------------
 
-For EX-WebThrottle2, we follow the `Google Style Guides <https://google.github.io/styleguide/>`__, specifically the `HTML/CSS <https://google.github.io/styleguide/htmlcssguide.html>`__ and `TypeScript <https://google.github.io/styleguide/tsguide.html>`__ style guides. 
+For EX-WebThrottle2, we follow the `Google Style Guides <https://google.github.io/styleguide/>`__ |EXTERNAL-LINK|, specifically the `HTML/CSS <https://google.github.io/styleguide/htmlcssguide.html>`__ |EXTERNAL-LINK| and `TypeScript <https://google.github.io/styleguide/tsguide.html>`__ |EXTERNAL-LINK| style guides. 
 This means we use a indent of two spaces and single quotes for strings. 
 Also, although semicolons are optional in JavaScript, we have configured the linter to enforce semicolons. 
 If you have installed the recommended extensions, VSCode should highlight problems for you. 
@@ -122,7 +122,7 @@ An example would be: |BR|
 Or |BR|
 *Fix: button now works (#52)*
 
-If you feel able to, please consider signing your commits (See this guide if you want to have a go: `Verified commits - GitHub <https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification>`__).
+If you feel able to, please consider signing your commits (See this guide if you want to have a go: `Verified commits - GitHub <https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification>`__ |EXTERNAL-LINK|).
 
 
 Opening a pull request

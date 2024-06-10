@@ -50,7 +50,7 @@ Firstly, launch :guilabel:`EX-WebThrottle` in your Chromium based web browser (G
 
 .. rst-class:: dcclink
 
-   `Try It Now <https://DCC-EX.github.io/WebThrottle-EX>`_
+   `Try It Now <https://DCC-EX.github.io/WebThrottle-EX>`_ |EXTERNAL-LINK|
 
 Once you have |EX-WT| opened in your browser, follow these steps to get your train running:
 
@@ -290,7 +290,7 @@ Use the ``Throttle Screen Layout`` preference to select a layout that supports m
 
 Where a layout supports a range of throttles, select the number that you want to show with the ``Number of Throttles`` preference (:menuselection:`menu --> Preferences --> Throttle Screen Appearance Preferences --> Number of Throttles`).  
 
-See the `Throttle Screen Appearance Preferences <https://flash62au.github.io/EngineDriver_Home/configuration/preferences.html#throttle-screen-appearance-preferences>`_ page on the main |Engine Driver| help sites for detailed information on the options that each Throttle Screen Layout offers.
+See the `Throttle Screen Appearance Preferences <https://flash62au.github.io/EngineDriver_Home/configuration/preferences.html#throttle-screen-appearance-preferences>`_ |EXTERNAL-LINK| page on the main |Engine Driver| help sites for detailed information on the options that each Throttle Screen Layout offers.
 
 Consist / Multiple Unit train
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -312,7 +312,7 @@ wiThrottle (Multiple Trains)
 
   The free version of |WiThrottle| (WiThrottle Lite) does not provide any options for running multiple trains or Consisted / Multiple Unit trains.  You need to purchase the paid/full version.
 
-.. todo:: `LOW - Stage 1 <https://github.com/DCC-EX/dcc-ex.github.io/issues/415>`_ - WiThrottle - Multiple Trains
+.. todo:: `LOW - Stage 1 <https://github.com/DCC-EX/dcc-ex.github.io/issues/415>`_ |EXTERNAL-LINK| - WiThrottle - Multiple Trains
 
 
 ----
@@ -346,7 +346,7 @@ We will outline how to use each option below to update a locomotive DCC decoder'
 
 Service mode programming is the preferred method for making wholesale changes to decoder settings as you will receive positive feedback that changes have been made and, if you make a mistake with a DCC address, you can quickly read what has been programmed to correct the issue, or reset them to factory default settings and start again.
 
-To program any other features, refer to the `DecoderPro user guide <https://www.jmri.org/help/en/html/apps/DecoderPro/index.shtml>`_.
+To program any other features, refer to the `DecoderPro user guide <https://www.jmri.org/help/en/html/apps/DecoderPro/index.shtml>`_ |EXTERNAL-LINK|.
 
 JMRI (Programming Decoders)
 ---------------------------
@@ -358,9 +358,9 @@ It relies on the |EX-CS| being connected to the PC running |JMRI|, normally by t
 Installing JMRI
 ^^^^^^^^^^^^^^^
 
-To install |JMRi|, refer to the installation instructions on the `JMRI <https://www.jmri.org/help/en/manual/DecoderPro3/Installing_JMRI.shtml>`_ website.
+To install |JMRi|, refer to the installation instructions on the `JMRI <https://www.jmri.org/help/en/manual/DecoderPro3/Installing_JMRI.shtml>`_ |EXTERNAL-LINK| website.
 
-Once |JMRi| is installed, launch DecoderPro. If you haven't previously used DecoderPro or any |JMRi| applications, you will need to setup your |EX-CS| connection. Refer to the `JMRi help page <https://www.jmri.org/help/en/html/hardware/dccpp/index.shtml>`_ for instructions on how to accomplish this.
+Once |JMRi| is installed, launch DecoderPro. If you haven't previously used DecoderPro or any |JMRi| applications, you will need to setup your |EX-CS| connection. Refer to the `JMRi help page <https://www.jmri.org/help/en/html/hardware/dccpp/index.shtml>`_ |EXTERNAL-LINK| for instructions on how to accomplish this.
 
 Using the programming track (service mode)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -381,7 +381,7 @@ Once your roster entries are populated, if you forget which loco was programmed 
 
 To make further programming changes to your decoders, simply select the roster entry, make sure "Programming Track" is selected in the bottom right corner, then click the :guilabel:`Program` button which will open the full programming dialogue window.
 
-For further information on programming in service mode, see `Service Mode Programmer <https://www.jmri.org/help/en/manual/DecoderPro3/Programmer_ServiceMode.shtml>`_ on the |JMRi| website.
+For further information on programming in service mode, see `Service Mode Programmer <https://www.jmri.org/help/en/manual/DecoderPro3/Programmer_ServiceMode.shtml>`_ |EXTERNAL-LINK| on the |JMRi| website.
 
 Programming on main (POM or ops mode)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -407,4 +407,4 @@ Using POM only changes the loco you have selected, not all locos on the track.  
 * Click the "Basic" tab, set the desired DCC address in the "Active Address" text box, then click the :guilabel:`Write changes on sheet` button  *(See Warning)*
 * Close the "Program" window and when prompted, click the :guilabel:`Save and close` button
 
-For further information on programming on the main track, see `Ops Mode Programming <https://www.jmri.org/help/en/manual/DecoderPro3/Programmer_OpsMode.shtml>`_ on the |JMRi| website.
+For further information on programming on the main track, see `Ops Mode Programming <https://www.jmri.org/help/en/manual/DecoderPro3/Programmer_OpsMode.shtml>`_ |EXTERNAL-LINK| on the |JMRi| website.

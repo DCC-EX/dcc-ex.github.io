@@ -53,7 +53,7 @@ In addition, you will require the |EX-IO| software which can be found here:
 
 .. rst-class:: dcclink
 
-  `EX-IOExpander Github Repository <https://github.com/DCC-EX/EX-IOExpander>`_
+  `EX-IOExpander Github Repository <https://github.com/DCC-EX/EX-IOExpander>`_ |EXTERNAL-LINK|
 
 Both of these can be installed via |EX-I|, see :doc:`/ex-installer/installing` and :ref:`ex-ioexpander/overview:installation via ex-installer`.
 

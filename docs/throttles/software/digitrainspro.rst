@@ -30,11 +30,11 @@ DigiTrainsPro
 
 Currently, DigitTrainsPro works with |EX-CS| through |JMRI|. You use JMRI's Web Server for the connection. However, we are working with the author and will soon have an option to connect directly to the |EX-CS| using |DCC-EX Native Commands| (estimated April 2021).
 
-`WINDOWS - Get if from the Windows Store <https://www.microsoft.com/en-us/p/digitrainspro/9p3kl60r0c5q?rtc=1&activetab=pivot:overviewtab>`_
+`WINDOWS - Get if from the Windows Store <https://www.microsoft.com/en-us/p/digitrainspro/9p3kl60r0c5q?rtc=1&activetab=pivot:overviewtab>`_ |EXTERNAL-LINK|
 
-`ANDROID - Get it from the Google Play Store <https://play.google.com/store/apps/details?id=digitrainspro.digitrainspro.hu&hl=en_US&gl=US>`_
+`ANDROID - Get it from the Google Play Store <https://play.google.com/store/apps/details?id=digitrainspro.digitrainspro.hu&hl=en_US&gl=US>`_ |EXTERNAL-LINK|
 
-`iOS - Get it from the App Store <https://apps.apple.com/us/app/digitrainspro/id1481937310>`_
+`iOS - Get it from the App Store <https://apps.apple.com/us/app/digitrainspro/id1481937310>`_ |EXTERNAL-LINK|
 
 .. _digitrains-features:
 

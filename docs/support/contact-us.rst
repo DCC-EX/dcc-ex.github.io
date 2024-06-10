@@ -17,10 +17,10 @@ Usually there is a team member online to help with your issue in English, German
 
 You can also find some of us on Facebook in the "DCC-EX, DCC++ and Arduino Model Railroading" private group. However many of the project team do not use Facebook, so this approach is **not recommended**.
 
-https://www.facebook.com/groups/1406785379394934/
+https://www.facebook.com/groups/1406785379394934/ |EXTERNAL-LINK|
 
 |hr-dashed|
 
 and on TrainBoard. However very few of the project team do not use TrainBoard, so this approach is **not recommended**.
 
-https://www.trainboard.com/highball/index.php?forums/dcc.177/
+https://www.trainboard.com/highball/index.php?forums/dcc.177/ |EXTERNAL-LINK|

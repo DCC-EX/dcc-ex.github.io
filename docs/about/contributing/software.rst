@@ -24,7 +24,7 @@ Firstly, in order to work with our code, you will require access to a Git client
 
 If you have a Linux based system (including macOS), you more than likely have Git installed already, so probably don't need to install it.
 
-However, for Windows, you will need to install Git, so follow the instructions in the `Pro Git book <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_.
+However, for Windows, you will need to install Git, so follow the instructions in the `Pro Git book <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_ |EXTERNAL-LINK|.
 
 Once you've installed Git, you will need to set some variables to tell Git who you are when committing code to a repository.
 
@@ -44,11 +44,11 @@ Other handy Git software
 
 GitHub Desktop is an application by GiHub that provides a graphical user interface for managing Git repositories and so forth:
 
-Download `GitHub Desktop <https://desktop.github.com/>`_
+Download `GitHub Desktop <https://desktop.github.com/>`_ |EXTERNAL-LINK|
 
 Another graphical alternative is Sourcetree:
 
-Download `Sourcetree <https://www.sourcetreeapp.com/>`_
+Download `Sourcetree <https://www.sourcetreeapp.com/>`_ |EXTERNAL-LINK|
 
 Arduino IDE
 ============
@@ -57,12 +57,12 @@ If you're already using |DCC-EX|, then it's likely you've already installed the 
 
 However, if you haven't, it's recommended to have this installed, even if using our recommended editor (VSCode). It's handy to see the same interface that most of our users can see, as they will almost certainly be using the Arduino IDE, and providing support is so much easier when you can use the same tools as the users.
 
-To get up and running with the Arduino IDE, follow the `Getting started with Arduino products <https://www.arduino.cc/en/Guide>`_ page.
+To get up and running with the Arduino IDE, follow the `Getting started with Arduino products <https://www.arduino.cc/en/Guide>`_ |EXTERNAL-LINK| page.
 
 ESP32 support
 -------------
 
-If you need ESP32 support in addition to the standard Arduino AVR boards, follow the official `Espressif Arduino ESP32 documentation <https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html>`_.
+If you need ESP32 support in addition to the standard Arduino AVR boards, follow the official `Espressif Arduino ESP32 documentation <https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html>`_ |EXTERNAL-LINK|.
 
 Python 3.x
 ===========
@@ -75,9 +75,9 @@ All website documentation is written in reStructuredText format and built using 
 
 In order to correctly preview changes to the website documentation locally on your computer before publishing to the website, you will need to install Python, preferably the latest 3.x version available.
 
-You can obtain Python from `python.org <https://www.python.org/downloads/>`_ or, alternatively, you can install it from the Microsoft store for Windows users.
+You can obtain Python from `python.org <https://www.python.org/downloads/>`_ |EXTERNAL-LINK| or, alternatively, you can install it from the Microsoft store for Windows users.
 
-For Windows users, follow the official Python documentation here: `Using Python on Windows <https://docs.python.org/3/using/windows.html>`_.
+For Windows users, follow the official Python documentation here: `Using Python on Windows <https://docs.python.org/3/using/windows.html>`_ |EXTERNAL-LINK|.
 
 Note that you will need to ensure Python is added to your `PATH` environment variable which is outlined on that page also.
 
@@ -96,7 +96,7 @@ While any text editor will do, even the most simple one, we highly recommend usi
 
 VSCode is great whether you're contributing as a developer or documenter, and we cover the requirements for both use cases here.
 
-You can download VSCode `here <https://code.visualstudio.com/download>`_.
+You can download VSCode `here <https://code.visualstudio.com/download>`_ |EXTERNAL-LINK|.
 
 VSCode includes many different extensions and configuration options to enable the various syntax checks and other additional components, so please review the below to ensure the right configuration and extensions are in place to make things easier for yourself.
 

@@ -49,4 +49,4 @@ If you need to obtain the source code for any reason, it is available on GitHub 
 
 .. rst-class:: dcclink
 
-  `EX-Turntable Github Repository <https://github.com/DCC-EX/EX-Turntable/releases>`_
+  `EX-Turntable Github Repository <https://github.com/DCC-EX/EX-Turntable/releases>`_ |EXTERNAL-LINK|

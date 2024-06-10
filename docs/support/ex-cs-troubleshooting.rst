@@ -86,7 +86,7 @@ For all type of motor drivers, do you see a green led marked ```on``` on the Ard
 Testing
 -------
 
-We are going to use the Arduino IDE for this section. If you are unfamiliar with the Arduino IDE or do not yet have it installed, see the section about how to use the Arduino IDE to install the |EX-CS| here: :doc:`Using the Arduino IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`, or just download the Legacy IDE 1.8.19 version here: `Arduino IDE <https://www.arduino.cc/en/software>`_ . Scroll down to find the 1.8.19 version.
+We are going to use the Arduino IDE for this section. If you are unfamiliar with the Arduino IDE or do not yet have it installed, see the section about how to use the Arduino IDE to install the |EX-CS| here: :doc:`Using the Arduino IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`, or just download the Legacy IDE 1.8.19 version here: `Arduino IDE <https://www.arduino.cc/en/software>`_ |EXTERNAL-LINK|. Scroll down to find the 1.8.19 version.
 
 #. Remove the Motor Shield ---we are going to test just the Arduino first.
 #. Download and install the most current version of :ref:`EX-CommandStation <download/ex-commandstation:Latest EX-CommandStation Official Release>`
@@ -125,7 +125,7 @@ If you are using a 3.3V board for your CS, like a Nucleo or ESPDuino32, then the
 
 There is more information about the pins and how they are used on the :doc:`Motor Driver Configuration </reference/hardware/motorboards/motor-board-config>` page.
 
-If you still need help, please find us on `The DCC-EX Discord <https://discord.gg/y2sB4Fp>`_ or send an email to support@dcc-ex.com
+If you still need help, please find us on `The DCC-EX Discord <https://discord.gg/y2sB4Fp>`_ |EXTERNAL-LINK| or send an email to support@dcc-ex.com
 
 Testing the DCC signal
 ----------------------

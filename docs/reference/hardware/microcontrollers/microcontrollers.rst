@@ -75,11 +75,11 @@ The F411RE has 50 I/O pins compared with the Uno's 20, and only 20 less than the
 
 There are larger NUCLEO footprints available (see below), which have many more pins than an Arduino Mega.
 
-A good summary if the F411RE is available on the `arm MBED Nucleo-F411RE <https://os.mbed.com/platforms/st-nucleo-f411re/>`_ page.
+A good summary if the F411RE is available on the `arm MBED Nucleo-F411RE <https://os.mbed.com/platforms/st-nucleo-f411re/>`_ |EXTERNAL-LINK| page.
 
 The NUCLEO-F446RE is the same Nucleo-64 size as the F411RE, but with a faster processor and other features. As one of our more advanced early alpha test users has this board, it's now also supported as a build target for |DCC-EX| and being actively tested.
 
-A good summary if the F446RE is available on the `arm MBED Nucleo-F446RE <https://os.mbed.com/platforms/st-nucleo-f446re/>`_ page.
+A good summary if the F446RE is available on the `arm MBED Nucleo-F446RE <https://os.mbed.com/platforms/st-nucleo-f446re/>`_ |EXTERNAL-LINK| page.
 
 Both the F411RE and F446RE are supported in the Arduino IDE.
 
@@ -90,11 +90,11 @@ These are three of the larger NUCLEO devices being tested in the Nucleo-144 form
 
 Each of these has a larger footprint than the Nucleo-64 series, while still retaining the Uno compatible header sockets, with 114 I/O pins. That said, they are only slightly larger (20mm wider, 33mm longer) than an Arduino Mega 2560.
 
-The F412ZG is potentially suitable as a larger replacement for a Mega, with more I/O pins available, refer to the `arm MBED F412ZG <https://os.mbed.com/platforms/ST-Nucleo-F412ZG/>`_ page.
+The F412ZG is potentially suitable as a larger replacement for a Mega, with more I/O pins available, refer to the `arm MBED F412ZG <https://os.mbed.com/platforms/ST-Nucleo-F412ZG/>`_ |EXTERNAL-LINK| page.
 
-The F446ZE has the same large footprint, however it has a significantly faster CPU and a USB OTG port. Refer to the `arm MBED F446ZE <https://os.mbed.com/platforms/ST-Nucleo-F446ZE/>`_ page.
+The F446ZE has the same large footprint, however it has a significantly faster CPU and a USB OTG port. Refer to the `arm MBED F446ZE <https://os.mbed.com/platforms/ST-Nucleo-F446ZE/>`_ |EXTERNAL-LINK| page.
 
-The F429ZI has the same large footprint, however it has the added benefit of onboard Ethernet, which makes it potentially suitable for larger or exhibition layouts where the WiFi limitations of the ESP01 firmware come in to play. Note, however, that the Ethernet support for this board in |EX-CS| is currently not implemented. It too has a USB OTG port. Refer to the `arm MBED F429ZI <https://os.mbed.com/platforms/ST-Nucleo-F429ZI/>`_ page.
+The F429ZI has the same large footprint, however it has the added benefit of onboard Ethernet, which makes it potentially suitable for larger or exhibition layouts where the WiFi limitations of the ESP01 firmware come in to play. Note, however, that the Ethernet support for this board in |EX-CS| is currently not implemented. It too has a USB OTG port. Refer to the `arm MBED F429ZI <https://os.mbed.com/platforms/ST-Nucleo-F429ZI/>`_ |EXTERNAL-LINK| page.
 
 .. note:: 
 
@@ -189,7 +189,7 @@ In order to compile for the STM32 NUCLEO platforms, you will need to add the boa
 
 To do this, navigate to "File" -> "Preferences" and add this URL to the "Additional Boards Manager URLs" list:
 
-`<https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json>`_
+`<https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json>`_ |EXTERNAL-LINK|
 
 .. image:: /_static/images/nucleo/arduino-support.png
   :alt: Arduino IDE Preferences
@@ -334,7 +334,7 @@ WeMos D1 R32/ESPDUINO-32 board
 ------------------------------
 
 The recommended hardware for now is the WeMos D1 R32, also referred to as the ESPDUINO-32.
-This consists of an `ESP32-WROOM-32 <https://www.espressif.com/en/products/modules/esp32>`_ module mounted on a UNO form factor board with UNO R3 style connectors. Pictured here:
+This consists of an `ESP32-WROOM-32 <https://www.espressif.com/en/products/modules/esp32>`_ |EXTERNAL-LINK| module mounted on a UNO form factor board with UNO R3 style connectors. Pictured here:
 
 .. image:: /_static/images/esp32/espduino-32.jpg
   :alt: ESPDUINO-32 UNO form factor
@@ -397,7 +397,7 @@ Adding ESP32 support to the Arduino IDE
 
 In order to compile for the Espressif ESP32 platforms, you will need to add the board definitions to the Arduino IDE.
 
-To do this, follow the instructions on the `official Espressif guide <https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide>`_.
+To do this, follow the instructions on the `official Espressif guide <https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide>`_ |EXTERNAL-LINK|.
 
 When using VS Code and PlatformIO it will auto-configure from the entry in the platformio.ini file when you select the ESP32 target to be built.
 
@@ -454,7 +454,7 @@ So far, the Arduino Zero, SparkFun SAMD21 Dev Breakout, Sparkfun RedBoard Turbo,
 Dropped character on USB CDC fix
 ---------------------------------
 
-The USB CDC driver code for Arduino SAMD core implementation seems broken as it is both slow and loses characters. This issue had already been reported to the Arduino SAMD GitHub pages as issue #538, and was then backed up with details from the DCC-EX dev team (https://github.com/arduino/ArduinoCore-samd/issues/538).
+The USB CDC driver code for Arduino SAMD core implementation seems broken as it is both slow and loses characters. This issue had already been reported to the Arduino SAMD GitHub pages as issue #538, and was then backed up with details from the DCC-EX dev team (https://github.com/arduino/ArduinoCore-samd/issues/538 |EXTERNAL-LINK|).
 
 You will need to edit some code in the Arduino Core library for SAMD to fix this temporarily. Where the file to be fixed resides depends on the particular SAMD21 board you have, the OS and development environment you are using.
 

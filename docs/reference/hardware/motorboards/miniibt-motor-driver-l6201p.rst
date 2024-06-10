@@ -21,9 +21,9 @@ Found on eBay, Amazon and the Chinese sites, this board uses the L6201P H-Bridge
 
    L6201P Wingxine Motor Driver
 
-https://www.aliexpress.com/i/32790131503.html
-https://www.aliexpress.com/item/32722458131.html
-https://www.aliexpress.com/item/531569334.html
+https://www.aliexpress.com/i/32790131503.html |EXTERNAL-LINK|
+https://www.aliexpress.com/item/32722458131.html |EXTERNAL-LINK|
+https://www.aliexpress.com/item/531569334.html |EXTERNAL-LINK|
 
 ***Dave Bodnar Tested this board***
 

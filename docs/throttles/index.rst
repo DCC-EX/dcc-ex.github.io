@@ -102,7 +102,7 @@ DCC-EX (DCC-EX Native Commands)
 - :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
 - :doc:`DCCpp CAB (Android) <software/dccpp-cab>`
 - :doc:`DccExController (Physical) <hardware/dccexcontroller>`
-- :doc:` DCC-EX Native command library - DCCEXProtocol <throttles/native-protocol-library>`
+- :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
 WiThrottle Protocol Based Throttles
 -----------------------------------

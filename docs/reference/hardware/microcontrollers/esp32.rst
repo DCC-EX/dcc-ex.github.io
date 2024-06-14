@@ -23,7 +23,7 @@ Espressif ESP32 series
 
 Espressif have for some years now made impressive WiFi and Bluetooth capable microcontroller modules. DCC-EX has made use of their original ESP8266 offering as the means to provide WiFi capability to the EX-CS.
 
-Espressif's newer ESP32 range has either WiFi alone or WiFi and Bluetooth capability built in. Espressif's product naming is not the easiest to follow, but DCC-EX has been ported to the original ESP32-WROOM-32 module, which has the following capabilities:
+Espressif's newer ESP32 range has either WiFi alone or WiFi and Bluetooth capability built in. Espressif's product naming is not the easiest to follow, but DCC-EX has been ported to the original ESP32-WROOM-D0WD module, which has the following capabilities:
 
 - Dual Xtensa 32-bit LX6 CPU cores
 - 448KB of ROM for boot and core functions
@@ -42,7 +42,7 @@ The appeal of the ESP32 series is that they are very compact and come with WiFi 
 - To generate a clean DCC signal you need to program the special RMT hardware, normally used for IR remote controls
 - Once we had done this, the DCC signal was very good
 
-The port is currently considered acceptable for beta testing, for tinkerers and engineers only.
+The port is currently in very active beta testing, and is for the most part very reliable. At present, the hardware modifications needed for the ESPduino32 and connectivity challenges with the various Devkit modules makes the hardware for tinkerers and engineers only.
 
 .. note:: 
   DCC-EX can only run on the ESP32-WROOM-32 module, and none of the other ESP32 modules (S2, S3, C3 etc.) are supported at present. This is because other ESP32 modules do not have the necessary RMT hardware, or do not have enough such hardware to run DCC-EX.
@@ -130,12 +130,18 @@ WeMos D1 R32/ESPDUINO-32 with Microsoft Windows - CH340 drivers
 
 When using the WeMos D1 R32/ESPDUINO-32 board with Microsoft Windows, you will need to install the CH340 USB drivers in order to be able to upload software to it and use the serial monitor in either PlatformIO or the Arduino IDE.
 
+Building DCC-EX for ESP32
+-------------------------
+
+The easiest way of building DCC-EX for the ESP32 is via EX-Installer by selecting the ESP32 option. Click here for :doc:`EX-Installer installation instructions </ex-commandstation/get-started/installer>`.
+
 Adding ESP32 support to the Arduino IDE
 ----------------------------------------
 
-In order to compile for the Espressif ESP32 platforms, you will need to add the board definitions to the Arduino IDE.
+In order to compile for the Espressif ESP32 platforms, you will need to add the board definitions to the Arduino IDE. To do this, follow the instructions on the `official Espressif guide <https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide>`_.
 
-To do this, follow the instructions on the `official Espressif guide <https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide>`_.
+Adding ESP32 support to VS Code and PlatformIO
+----------------------------------------------
 
 When using VS Code and PlatformIO it will auto-configure from the entry in the platformio.ini file when you select the ESP32 target to be built.
 

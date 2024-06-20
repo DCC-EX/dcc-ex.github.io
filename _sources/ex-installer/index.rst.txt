@@ -14,6 +14,10 @@ EX-Installer
 
 ----
 
+.. warning:: 
+
+  |EX-I| has been broken by a recent Arduino CLI update and currently WILL NOT WORK... fear not, we are working on a fix!!
+
 Once you have assembled your |EX-CS| hardware you need to load our software onto it make is usable.  
 
 To make it as simple as possible we have created the |EX-I| app.

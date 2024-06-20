@@ -15,6 +15,7 @@ Throttles (Hardware)
   minithrottle
   witcontroller
   dccexcontroller
+  handcab
   mybluepillthrottle
   engine-driver-physical-knobs
   streamdeck 

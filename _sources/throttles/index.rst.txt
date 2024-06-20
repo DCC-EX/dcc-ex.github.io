@@ -62,6 +62,7 @@ Dedicated Hardware
 - :doc:`miniThrottle (Physical) <hardware/minithrottle>`
 - :doc:`WiTcontroller (Physical) <hardware/witcontroller>`
 - :doc:`DccExController (Physical) <hardware/dccexcontroller>`
+- :doc:`HandCab (Physical) <hardware/handcab>`
 - :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
 - :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
 - :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
@@ -114,6 +115,7 @@ WiThrottle Protocol Based Throttles
 - :doc:`Train Driver (iOS) <software/train-driver>`
 - :doc:`miniThrottle (Physical) <hardware/minithrottle>`
 - :doc:`WiTcontroller (Physical) <hardware/witcontroller>`
+- :doc:`HandCab (Physical) <hardware/handcab>`
 - :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
 - :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
 
@@ -379,6 +381,20 @@ Table - Throttles by Technology
       -  
 
     * -  :doc:`WiTcontroller <hardware/witcontroller>`
+      -  Free
+      -  Net
+      -  WiT
+      -  Device
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  :doc:`HandCab <hardware/handcab>`
       -  Free
       -  Net
       -  WiT

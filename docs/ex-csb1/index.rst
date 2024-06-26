@@ -77,7 +77,9 @@ The built-in EXRAIL Automation and Animation capability lets you use pre-written
 Why did we make it?
 ====================
 
-After experiencing such success of the DIY kit approach of the original EX-CommandStation software, the DCC-EX team wanted to address the need for something that was even simpler. We felt an all on one board that would appeal to a broader range of modellers, especially our Conductors who even our Engineers and Tinkerers who don't want to spend their precious hobby time on electronics. We wanted to maintain a bit of the "I did it myself" satisfaction, while making things far simpler, smaller, and more "plug and play". Most of us want more time playing with our layouts and not fiddling with connections or debugging issues. And whether you are a Conductor, Tinkerer, or Engineer, you still may want an all-in-one solution to save time, space, and reduce complexity. We asked the team, "what features would you want on the ideal command station?". That is how the EX-CSB1 Express came to be.
+After experiencing such success of the DIY kit approach of the original EX-CommandStation software, the DCC-EX team wanted to address the need for something that was even simpler. We felt an all on one board that would appeal to a broader range of modellers, especially our Conductors who are less confident with electronics, or even our Engineers and Tinkerers who don't want to spend their precious hobby time on electronics.
+
+In doing so we also wanted to maintain a bit of the "I did it myself" satisfaction, while making things far simpler, smaller, and more "plug and play". Most of us want more time playing with our layouts and not fiddling with connections or debugging issues. And whether you are a Conductor, Tinkerer, or Engineer, you still may want an all-in-one solution to save time, space, and reduce complexity. We asked the team, "what features would you want on the ideal command station?". That is how the EX-CSB1 Express came to be.
 
 
 How can I get one?

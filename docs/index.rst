@@ -90,6 +90,7 @@ DCC-EX Model Railroading
    ex-commandstation/index
    ex-installer/index
    ex-webthrottle/index
+   EX-CSB1 Express <ex-csb1/index>
    EX-MotorShield8874 <reference/hardware/motorboards/ex-motor-shield-8874>
    EX-WiFiShield-8266 <reference/hardware/wifi-boards/ex-wifi-shield-8266>
    ex-dccinspector/index

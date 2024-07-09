@@ -130,7 +130,7 @@ DC (PWM) mode can be enabled several ways:
 
 * from a throttle (temporary)
 * from the serial monitor (temporary)
-* in ``myautomation.h`` (semi-permanent)
+* in ``myAutomation.h`` (semi-permanent)
 * from the |EX-TB| WiFi Android app
 
 |hr-dashed|
@@ -180,7 +180,7 @@ You would then enter your Engine address on the throttle of 1234 and 4321 and dr
 
 |hr-dashed|
 
-in myautomation.H
+in myAutomation.H
 -----------------
 
 Create an EXRAIL myAutomation.h file Scripts for Track Manager assigned commands and they automatically appear in |Engine Driver| as GUI Automation [Handoff] and Route [Set] buttons, and in WiThrottle WiFi Throttle iOS as [Route] buttons, and on TCS Universal UWT-50 & 100 WiFi Throttle [Select Accry] lines.

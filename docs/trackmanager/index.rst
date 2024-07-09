@@ -23,7 +23,7 @@ Welcome to DCC-EX TrackManager
 .. warning:: 
   :class: warning-float-right
 
-  This is not zero (0) strething. We deliberately do not support the zero stretching address function found on Digitrax and Lenz command Stations. The constant dual DCC electrical signal may damage certain types of older DC motors if left on for a long time.|BR| **So never put a DC locomotive on a DCC-EX DCC track.**
+  This is not zero (0) strething. We deliberately do not support the zero stretching address function found on Digitrax and Lenz command Stations. The constant dual DCC electrical signal may damage certain types of older DC motors if left on for a long time. |BR| **So never put a DC locomotive on a DCC-EX DCC track.**
 
 *A first for the DCC & DC model railroading world.*
 
@@ -44,11 +44,9 @@ Any throttle that connect to an |EX-CS| can control analogue (DC) locos just as 
   * Each track/district can also be disabled by setting to ``NONE``
   
 |EX-CS| **production version 5.0+** (devel v4.2.50+) supports both DCC (PWM) and DC (PWM) Pulse Width Modulation modes as an *embedded standard feature*.
-TrackManager allows you to set up and operate up to eight separate dual insulated sections of track/districts in either DCC (PWM) and or DC (PWM) as tracks A - H.
+TrackManager allows you to set up and operate up to eight separate dual insulated sections of track/districts in either DCC (PWM) and or DC (PWM) as tracks A - H. No additional external DCC decoders are required for DC (PWM), and a single |EX-CS| is the only hardware needed for full functionality.
 
 An Arduino Mega (with or without WiFi) and Standard L298P Motor Shield |EX-CS| has two ready to run Tracks (**A** & **B**).
-
-No additional external DCC decoders are required for DC (PWM), and a single |EX-CS| is the only hardware needed for full functionality.
 
 One key difference to note in comparing DCC vs. DC is that in DCC mode, forward/reverse is determined by the DCC decoder, not the track, whereas in DC mode the direction is dependent upon the track polarity.
 
@@ -68,9 +66,9 @@ This is all done through a single |EX-CS| and no we're not using another Expensi
 
 .. warning::
   
-  Existing analogue DC layouts which have DC transformers on two or more separate DC tracks/districts/blocks and/or also have a separate proprietary DCC command station with a section of dead rail, an electric relay, or a DPDT centre-off switch between the two types of controller powered stations must not be using a common ground rail, and should only use dual insulated tracks.
+  Existing analogue DC layouts which have DC transformers on two or more separate DC tracks/districts/blocks and/or also have a separate DCC command station with a section of dead rail, an electric relay, or a DPDT centre-off switch between the two types of controller powered stations must not be using a common ground rail, and should only use dual insulated tracks.
 
-  This also allows replacing the physical hardware DPDT switch for switching from DC to DCC.
+  The features described here also allows replacing the physical DPDT switch for switching from DC to DCC.
 
 ----
 
@@ -112,7 +110,7 @@ When specifying ``DC`` or ``DCX`` it is necessary to also specify which locomoti
 
 TrackMagic uses that number (often the road number of a DC locomotive) in a throttle to run it on a assigned track/district/block, mimicking the look of DCC Engines. No DPDT Switches are required, all waveform mode switching is done by Track Manager Software instructions.
 
-So, you can take a standard DC motor only locomotives (Cab) road number on the side of the engine and assign it to one or more of up to 8 tracks/districts/blocks labelled A thru H then enter that same number into a throttle and control that Loco Cab # on each and every one of the assigned tracks.
+So, you can take a standard DC motor only locomotive (Cab) road number on the side of the locomotive and assign it to one or more (up to 8) tracks/districts/blocks labelled A thru H. Then enter that same number into a throttle and control that Loco (Cab) # on each and every one of the assigned tracks.
 
   * Valid loco (Cab) addresses are 1 to 10239.
   * Invalid loco (Cab) address is 0 (zero).
@@ -138,11 +136,11 @@ DC (PWM) mode can be enabled several ways:
 From a throttle
 ---------------
 
-Currently only |ED| directly supports the track manager features that include changing to DC mode.  See :doc:`/throttles/software/engine-driver-native-protocol` for details.
-
-However it is possible to create 'Routes' or 'automations' to switch between DC and DCC modes that can be seen and used by many throttles.  (See below for details)
+Currently the only throttle that directly supports the track manager features that include changing to DC mode is |ED|.  See :doc:`/throttles/software/engine-driver-native-protocol` for details.
 
 |Engine Driver| DCC-EX Native mode features now available today via Google Play Store `Engine Driver <https://play.google.com/store/apps/details?id=jmri.enginedriver>`_ |EXTERNAL-LINK|
+
+However it is possible to create 'Routes' or 'automations' to switch between DC and DCC modes that can be seen and used by many throttles.  (See below for details)
 
 |hr-dashed|
 
@@ -282,8 +280,8 @@ In a |EX-R| Automation script we could a Set a Loco Address to a specific track 
 
 |hr-dashed|
 
-EX-Toolbox
-----------
+Using EX-Toolbox
+----------------
 
 |EX-TB| has the same TrackManger features as |ED| plus many other capabilities. see :doc:`/ex-toolbox/index` for details.
 

@@ -241,30 +241,30 @@ See the third Engine Driver Throttle image 'Districts A thru B with [Set] button
 .. code-block:: 
 
   example:
-  
-    AUTOMATION(500, "Districts A MAIN _ B PROG Default")// Reset Default back to DCC Main & PROG
-      SET_TRACK(A,MAIN) PRINT("Default Districts Tracks MAIN A & PROG B")
-      SET_TRACK(B,PROG)
-    DONE
-    AUTOMATION(501, "District A MAIN")   // Alternate DCC Main track A
-      SET_TRACK(A,MAIN) PRINT("District A MAIN")
-    DONE
-    AUTOMATION(502, "District A PROG")   // Alternate DCC PROG track A
-      SET_TRACK(A,PROG) PRINT("District A PROG")
-    DONE
-    AUTOMATION(503, "District A DC")     // Alternate DC track A with loco ID 1
-      SETLOCO(1)
-      SET_TRACK(A,DC) PRINT("District A DC")
-    DONE
-      AUTOMATION(504, "District A DCX")    // Alternate DCX track A Changed to Opposite Polarity
-      SETLOCO(1)
-      SET_TRACK(A,DCX) PRINT("District A DCX Opposite Polarity") // Track A Opposite Polarity DC    
-    DONE
-    AUTOMATION(505, "District A NONE")    // A Track disabled
-      SET_TRACK(A, NONE) PRINT ("District A disabled")
-    DONE
 
-Copy and repeat AUTOMATION(506-510, District B  mode) and create any additional combinations or tracks C - H as you add more motor boards.
+  AUTOMATION(500, "Districts A MAIN _ B PROG Default")// Reset Default back to DCC Main & PROG
+    SET_TRACK(A,MAIN) PRINT("Default Districts Tracks MAIN A & PROG B")
+    SET_TRACK(B,PROG)
+  DONE
+  AUTOMATION(501, "District A MAIN")   // Alternate DCC Main track A
+    SET_TRACK(A,MAIN) PRINT("District A MAIN")
+  DONE
+  AUTOMATION(502, "District A PROG")   // Alternate DCC PROG track A
+    SET_TRACK(A,PROG) PRINT("District A PROG")
+  DONE
+  AUTOMATION(503, "District A DC")     // Alternate DC track A with loco ID 1
+    SETLOCO(1)
+    SET_TRACK(A,DC) PRINT("District A DC")
+  DONE
+    AUTOMATION(504, "District A DCX")    // Alternate DCX track A Changed to Opposite Polarity
+    SETLOCO(1)
+    SET_TRACK(A,DCX) PRINT("District A DCX Opposite Polarity") // Track A Opposite Polarity DC    
+  DONE
+  AUTOMATION(505, "District A NONE")    // A Track disabled
+    SET_TRACK(A, NONE) PRINT ("District A disabled")
+  DONE
+
+  Copy and repeat AUTOMATION(506-510, District B mode) and create any additional combinations or tracks C - H as you add more motor boards.
 
 Complex Automations
 ~~~~~~~~~~~~~~~~~~~
@@ -338,8 +338,10 @@ You can set each district separately as mode
 
 DCX is Opposite Polarity and is what you set Block B to when you want it in DC mode because it is wired to NMRA Modular DCC Standards L+, R-.
 
-Using the New TrackManager Function commands you can run the any layout as
---------------------------------------------------------------------------
+Combinations of Modes
+---------------------
+
+Using the New TrackManager Function commands you can run the any layout as:
 
 .. code-block::
 

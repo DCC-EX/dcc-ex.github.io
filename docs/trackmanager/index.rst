@@ -160,7 +160,9 @@ To change or configure the current track modes use the new command ``<= tracklet
   * ``mode`` is one of ``MAIN``, ``PROG``, ``DC``, ``DCX``, or ``NONE`` (DCX is DC with opposite polarity)
   * ``address`` is the Cab ID and is only required when specifying DC or DCX modes
 
-.. code-block:: example
+.. code-block::
+
+  example:
 
   <= A MAIN>     // Set track A to MAIN DCC mode
   <= B PROG>     // Set track B to PROG DCC mode
@@ -187,6 +189,8 @@ my.Automation.h file
 
 .. code-block:: 
 
+  example:
+  
   //SET_TRACK(id,mode)
   SET_TRACK(A, MAIN)
   SET_TRACK(B, PROG)
@@ -207,6 +211,8 @@ In an EXRAIL Automation script we could Set a Loco Address to a specific track i
 
 .. code-block:: 
 
+  example:
+  
   ROUTE(500,"1.Trk: A main, B prog") 
       SET_TRACK(A,MAIN)            // set output A to DCC MAIN
       SET_TRACK(B,PROG)            // set output B to DCC PROG
@@ -234,6 +240,8 @@ See the third Engine Driver Throttle image 'Districts A thru B with [Set] button
 
 .. code-block:: 
 
+  example:
+  
     AUTOMATION(500, "Districts A MAIN _ B PROG Default")// Reset Default back to DCC Main & PROG
       SET_TRACK(A,MAIN) PRINT("Default Districts Tracks MAIN A & PROG B")
       SET_TRACK(B,PROG)
@@ -267,12 +275,14 @@ In a |EX-R| Automation script we could a Set a Loco Address to a specific track 
 
 .. code-block::
 
- AUTOMATION(202,"Roundhouse to Turntable Back & Forth -Timed")
-   SETLOCO(1225)
-   SET_TRACK(B,DC)
-   Run a your Roundhouse script blow whistle, run Forward delay wait and run Reverse delay stop       
-   DELAYRANDOM(msec, msec) // randomise the run time between runs
-   DONE
+  example:
+  
+  AUTOMATION(202,"Roundhouse to Turntable Back & Forth -Timed")
+    SETLOCO(1225)
+    SET_TRACK(B,DC)
+    // Run a your Roundhouse script blow whistle, run Forward delay wait and run Reverse delay stop       
+    DELAYRANDOM(msec, msec) // randomise the run time between runs
+  DONE
 
 |hr-dashed|
 
@@ -318,7 +328,7 @@ Modular Layouts
 DCC-EX TrackManager 4.2.50+ is perfect for NMRA DCC Standards Modular Layouts which have two MAIN tracks/districts,
 Track A and Track B with sidings;
 
-* Track A (east bound) wired rails L-  R+
+* Track A (east bound) wired rails L- R+
 * Track B (westbound) which also have all the siding and spurs, wired rails L+  R-
 
 You can set each district separately as mode
@@ -333,7 +343,7 @@ Using the New TrackManager Function commands you can run the any layout as
 
 .. code-block::
 
- Track A & Track B
+  Track A & Track B
    MAIN & PROG    (Use JOIN function for a Programming track to make a MagicTrack) 
    MAIN & MAIN
    PROG & MAIN

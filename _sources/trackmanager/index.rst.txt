@@ -23,13 +23,13 @@ Welcome to DCC-EX TrackManager
 .. warning:: 
   :class: warning-float-right
 
-  This is not zero (0) strething. We deliberately do not support the zero stretching address function found on Digitrax and Lenz command Stations. The constant dual DCC electrical signal may damage certain types of older DC motors if left on for a long time. |BR| **So never put a DC locomotive on a DCC-EX DCC track.**
+  This is not zero (0) stretching. We deliberately do not support the zero stretching address function found on Digitrax and Lenz command Stations. The constant dual DCC electrical signal may damage certain types of older DC motors if left on for a long time. |BR| **So never put a DC locomotive on a DCC-EX DCC track.**
 
 *A first for the DCC & DC model railroading world.*
 
 |EX-CS| is now a dual **Command Station** for both **Digital Command Control (DCC)** and **analogue (DC)** layouts.
 
-With just a single |EX-CS| and a compatible throttle you can simultaneously run both your DCC Locos and analogue DC Locos with road number IDs as throttle addresses from 1 to 10239 to control and drive them on multiple separate insulated tracks/districts.
+With just a single |EX-CS| and a compatible throttle you can simultaneously run both your DCC Locos and analogue DC Locos on multiple separate insulated tracks/districts.
 
 Any throttle that connect to an |EX-CS| can control analogue (DC) locos just as easily as DCC locos. Throttle Compatibility:
 
@@ -46,10 +46,6 @@ Any throttle that connect to an |EX-CS| can control analogue (DC) locos just as 
 |EX-CS| **production version 5.0+** (devel v4.2.50+) supports both DCC (PWM) and DC (PWM) Pulse Width Modulation modes as an *embedded standard feature*.
 TrackManager allows you to set up and operate up to eight separate dual insulated sections of track/districts in either DCC (PWM) and or DC (PWM) as tracks A - H. No additional external DCC decoders are required for DC (PWM), and a single |EX-CS| is the only hardware needed for full functionality.
 
-An Arduino Mega (with or without WiFi) and Standard L298P Motor Shield |EX-CS| has two ready to run Tracks (**A** & **B**).
-
-One key difference to note in comparing DCC vs. DC is that in DCC mode, forward/reverse is determined by the DCC decoder, not the track, whereas in DC mode the direction is dependent upon the track polarity.
-
 Technical Details
 -----------------
 
@@ -62,7 +58,7 @@ Replacing or Integrating Into Your Current Layout
 
 A single |EX-CS| is capable of replacing the DC transformers of an existing DC layout and will also allow you to easily swap between DC (PWM) mode and DCC (PWM) mode on any of the A thru H dual insulated tracks/districts.
 
-This is all done through a single |EX-CS| and no we're not using another Expensive DCC decoder under the table on each Track/District/Block to address that section of track.
+This is all done through a single |EX-CS|, and no we're not using another Expensive DCC decoder under the table on each Track/District/Block to address that section of track.
 
 .. warning::
   
@@ -80,44 +76,44 @@ Hardware Requirements and Technical Notes
 
   These requirements are only for operating DC locomotives. There is nothing to do in a pure DCC environment where no DC or analogue locomotives are run.
 
-Generally speaking the |EX-CS| can directly replace a DC transformer on a single block or two block DC layout.  If oy have more than two blocks, each with their own controller, then you need to look at one of the motor contorller options that support more than 2 outputs/blocks.
+Generally speaking the |EX-CS| can directly replace a DC transformer on a single block or two block DC layout.  If you have more than two blocks, each with their own controller, then you need to look at one of the motor contorller options that support more than 2 outputs/blocks.
 
-The two connections/leads from each output on the motor shield(s) will simply replace the connection/leads from you transformer(s).
+e.g. An Arduino Mega (with or without WiFi) and Standard L298P Motor Shield |EX-CS| has two available Tracks (**A** & **B**). Either or both of these can be used for DC.
+
+The two connections/leads from each output on the motor shield(s) will simply replace the two connection/leads from your transformer(s) that go to the two rails of the block.
 
 .. warning:: 
   
-  In order for |TM| to operate in DC mode, the motor shield must have a brake pin defined in your “config.h” motor shield definition. There are a very limited number of motor boards that are suitable for use with DC mode, and any other motor boards are unsupported. The current list is available in :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`.
+  1. In order for |TM| to operate in DC mode, the motor shield must have a brake pin defined in your “config.h” motor shield definition. There are a very limited number of motor boards that are suitable for use with DC mode, and any other motor boards are unsupported. The current list is available in :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`.
 
-.. warning:: 
-
-  Never directly connect DC and DCC tracks/blocks together.  There must always be insulated joiners on both tracks between the tracks/blocks.
+  2. Never directly connect DC and DCC tracks/blocks together.  There must always be insulated joiners on both tracks between the tracks/blocks.
   
-  Never drive a loco from an |EX-CS| controlled track or district to any other DCC or DC System.
+  3. Never drive a loco from an |EX-CS| controlled track/district to any other track controlled by another brand/type of DCC or DC System.
 
 Some suggested precautions are to add 4 fuses on wires (-b +b, -a +a) to the |EX-CS| connections. Use 2A fuses for the standard L298P motor shield or 5A fuses for the larger motor boards.
 
 DC (PWM) modes
 ==============
 
-Using TrackManager, with simple easy commands from a throttle or a serial monitor, we can change any track/block A-H from DCC (PWM) to DC (PWM) and back in real time or.  Alternately we can semi-permanently set them in ``myconfiguration.h``. 
+Using |TM|, with simple easy commands from a throttle or a serial monitor, you can change any track/block (A-H) from DCC (PWM) to DC (PWM) and back in real time or, alternately you can semi-permanently set them in ``myconfiguration.h``. 
 
   * Valid DCC modes are ``MAIN``, ``PROG``, and ``NONE``
   * Valid DC modes are ``DC``, ``DCX``, and ``NONE``
  
-  ``DCX`` is DC with an opposite polarity like NMRA modular layout track B which is wired left rail positive (+) and right rail negative (-). |BR| This allows a throttle on track B set to DCX to operate in forward and reverse correctly for west bound engines.
+  ``DCX`` is DC with an opposite polarity. Like NMRA modular layout track B which is wired left rail positive (+) and right rail negative (-). |BR| This allows a throttle on track B set to DCX to operate in forward and reverse correctly for west bound engines.
 
 When specifying ``DC`` or ``DCX`` it is necessary to also specify which locomotive (cab) ID will be used to control that track/block. 
 
-TrackMagic uses that number (often the road number of a DC locomotive) in a throttle to run it on a assigned track/district/block, mimicking the look of DCC Engines. No DPDT Switches are required, all waveform mode switching is done by Track Manager Software instructions.
+TrackMagic uses that ID (often the road number of a DC locomotive) in a throttle to run it on a assigned track/district/block, mimicking the look of DCC Locomotives. No DPDT Switches are required, all waveform mode switching is done by |TM| software instructions.
 
-So, you can take a standard DC motor only locomotive (Cab) road number on the side of the locomotive and assign it to one or more (up to 8) tracks/districts/blocks labelled A thru H. Then enter that same number into a throttle and control that Loco (Cab) # on each and every one of the assigned tracks.
+So, you can take a standard DC motor only locomotive (Cab) road number on the side of the locomotive and assign it to one, or more (up to 8), tracks/districts/blocks (labelled A thru H). Then enter that same number into a throttle and control that Loco (Cab) ID on each and every one of the assigned tracks.
 
-  * Valid loco (Cab) addresses are 1 to 10239.
-  * Invalid loco (Cab) address is 0 (zero).
+  * Valid loco (Cab) addresses are 1 to 10239
+  * Zero (0) loco (Cab) address is not valid
 
 .. note:: 
   
-  When specifying a DC or DCX locomotive (cab) ID, avoid using one of your existing locomotive DCC addresses, otherwise a command sent to control a locomotive (cab) on that DC or DCX track will also operate your DCC locomotive with the same address.
+  When specifying a DC or DCX locomotive (cab) ID, it is advised to avoid using one of your existing locomotive DCC addresses, otherwise a command sent to control a locomotive (cab) on that DC or DCX track will also operate your DCC locomotive with the same address.
 
 ----
 
@@ -126,45 +122,47 @@ How to set DC (PWM) mode?
 
 DC (PWM) mode can be enabled several ways:
 
-* from a throttle (temporary)
-* from the serial monitor (temporary)
-* in ``myAutomation.h`` (semi-permanent)
-* from the |EX-TB| WiFi Android app
+* From a throttle, including |EX-WT| (temporary)
+* From the serial monitor (temporary)
+* In ``myAutomation.h`` (semi-permanent)
+* From the |EX-TB| WiFi Android app
 
 |hr-dashed|
 
 From a throttle
 ---------------
 
-Currently the only throttle that directly supports the track manager features that include changing to DC mode is |ED|.  See :doc:`/throttles/software/engine-driver-native-protocol` for details.
+Currently the only throttle that directly supports the track manager features, which include changing to DC mode is |ED|.  See :doc:`/throttles/software/engine-driver-native-protocol` for details.
 
-|Engine Driver| DCC-EX Native mode features now available today via Google Play Store `Engine Driver <https://play.google.com/store/apps/details?id=jmri.enginedriver>`_ |EXTERNAL-LINK|
+  |Engine Driver| DCC-EX Native mode features now available today via Google Play Store `Engine Driver <https://play.google.com/store/apps/details?id=jmri.enginedriver>`_ |EXTERNAL-LINK|
 
 However it is possible to create 'Routes' or 'automations' to switch between DC and DCC modes that can be seen and used by many throttles.  (See below for details)
+
+You can use the 'Route' / 'automation' approach in |EX-WT| and also use the same options as for a serial monitor (see below).
 
 |hr-dashed|
 
 From the Serial Monitor
 -----------------------
 
-Command Line via PC with Arduino IDE Serial Monitor or JMRI serial Traffic Monitor and it is sent through your USB connected cable.
-
-Sending commands from the Arduino IDE Serial Monitor or JMRI Send Command Line or a |Engine Driver| WiFi Throttle.
+You can use a Command Line via a *PC with Arduino IDE Serial Monitor*, |EX-WT|, or the *JMRI serial Traffic Monitor* to send the following commands through your USB connected cable.  You can also send these commands via |Engine Driver| or |EX-TB|, though both apps povide more user friendly options.
 
 To display the current TrackManager configuration, use the command ``<=>`` an equal sign looks like a track.
 
 The Serial Monitor will show current status, example; Track A as Main and Track B as PROG
 
-  * <= A MAIN>
-  * <= B PROG>
+  * ``<= A MAIN>``
+  * ``<= B PROG>``
 
 To change or configure the current track modes use the new command ``<= trackletter mode [address]>`` which has been added for Track Manager, where:
 
-  * ``trackletter`` is A through H
-  * ``mode`` is one of MAIN, PROG, DC, DCX, or NONE (DCX is DC with opposite polarity)
+  * ``trackletter`` is ``A`` through ``H``
+  * ``mode`` is one of ``MAIN``, ``PROG``, ``DC``, ``DCX``, or ``NONE`` (DCX is DC with opposite polarity)
   * ``address`` is the Cab ID and is only required when specifying DC or DCX modes
 
 .. code-block::
+
+  example:
 
   <= A MAIN>     // Set track A to MAIN DCC mode
   <= B PROG>     // Set track B to PROG DCC mode
@@ -174,7 +172,7 @@ To change or configure the current track modes use the new command ``<= tracklet
                  // or any number you assign from 1 to 10239
   <= B NONE>      // Set track B disabled, like a staging yard when it gets too noisy.
 
-You would then enter your Engine address on the throttle of 1234 and 4321 and drive them on the layout.
+  You would then enter your Engine address on the throttle of 1234 and 4321 and drive them on the layout.
 
 |hr-dashed|
 
@@ -191,6 +189,8 @@ my.Automation.h file
 
 .. code-block:: 
 
+  example:
+  
   //SET_TRACK(id,mode)
   SET_TRACK(A, MAIN)
   SET_TRACK(B, PROG)
@@ -200,9 +200,9 @@ my.Automation.h file
 On Demand
 ^^^^^^^^^
 
-You can create routes to set the modes.  The following are examples of how you can doe this:
+You can create routes to dynamically set the modes.  The following are examples of how you can do this:
 
-All done through DCC-EX TrackManager with a simple push of a GUI button of Either or Both |Engine Driver| Handoff to Acquire the last Throttle Engine# used and run it on the mode of the track  [i.e. DC engine 1225], Or |Engine Driver| (Set) button to set a block to a specific mode.
+All are then controlled through DCC-EX TrackManager with a simple push of a GUI button of Either or Both |Engine Driver| Handoff to Acquire the last Throttle Engine# used and run it on the mode of the track  [i.e. DC engine 1225], Or |Engine Driver| (Set) button to set a block to a specific mode.
 
 Simple changes
 ~~~~~~~~~~~~~~
@@ -211,6 +211,8 @@ In an EXRAIL Automation script we could Set a Loco Address to a specific track i
 
 .. code-block:: 
 
+  example:
+  
   ROUTE(500,"1.Trk: A main, B prog") 
       SET_TRACK(A,MAIN)            // set output A to DCC MAIN
       SET_TRACK(B,PROG)            // set output B to DCC PROG
@@ -238,29 +240,31 @@ See the third Engine Driver Throttle image 'Districts A thru B with [Set] button
 
 .. code-block:: 
 
-    AUTOMATION(500, "Districts A MAIN _ B PROG Default")// Reset Default back to DCC Main & PROG
-      SET_TRACK(A,MAIN) PRINT("Default Districts Tracks MAIN A & PROG B")
-      SET_TRACK(B,PROG)
-    DONE
-    AUTOMATION(501, "District A MAIN")   // Alternate DCC Main track A
-      SET_TRACK(A,MAIN) PRINT("District A MAIN")
-    DONE
-    AUTOMATION(502, "District A PROG")   // Alternate DCC PROG track A
-      SET_TRACK(A,PROG) PRINT("District A PROG")
-    DONE
-    AUTOMATION(503, "District A DC")     // Alternate DC track A with loco ID 1
-      SETLOCO(1)
-      SET_TRACK(A,DC) PRINT("District A DC")
-    DONE
-      AUTOMATION(504, "District A DCX")    // Alternate DCX track A Changed to Opposite Polarity
-      SETLOCO(1)
-      SET_TRACK(A,DCX) PRINT("District A DCX Opposite Polarity") // Track A Opposite Polarity DC    
-    DONE
-    AUTOMATION(505, "District A NONE")    // A Track disabled
-      SET_TRACK(A, NONE) PRINT ("District A disabled")
-    DONE
+  example:
 
-Copy and repeat AUTOMATION(506-510, District B  mode) and create any additional combinations or tracks C - H as you add more motor boards.
+  AUTOMATION(500, "Districts A MAIN _ B PROG Default")// Reset Default back to DCC Main & PROG
+    SET_TRACK(A,MAIN) PRINT("Default Districts Tracks MAIN A & PROG B")
+    SET_TRACK(B,PROG)
+  DONE
+  AUTOMATION(501, "District A MAIN")   // Alternate DCC Main track A
+    SET_TRACK(A,MAIN) PRINT("District A MAIN")
+  DONE
+  AUTOMATION(502, "District A PROG")   // Alternate DCC PROG track A
+    SET_TRACK(A,PROG) PRINT("District A PROG")
+  DONE
+  AUTOMATION(503, "District A DC")     // Alternate DC track A with loco ID 1
+    SETLOCO(1)
+    SET_TRACK(A,DC) PRINT("District A DC")
+  DONE
+    AUTOMATION(504, "District A DCX")    // Alternate DCX track A Changed to Opposite Polarity
+    SETLOCO(1)
+    SET_TRACK(A,DCX) PRINT("District A DCX Opposite Polarity") // Track A Opposite Polarity DC    
+  DONE
+  AUTOMATION(505, "District A NONE")    // A Track disabled
+    SET_TRACK(A, NONE) PRINT ("District A disabled")
+  DONE
+
+  Copy and repeat AUTOMATION(506-510, District B mode) and create any additional combinations or tracks C - H as you add more motor boards.
 
 Complex Automations
 ~~~~~~~~~~~~~~~~~~~
@@ -271,19 +275,21 @@ In a |EX-R| Automation script we could a Set a Loco Address to a specific track 
 
 .. code-block::
 
- AUTOMATION(202,"Roundhouse to Turntable Back & Forth -Timed")
-   SETLOCO(1225)
-   SET_TRACK(B,DC)
-   Run a your Roundhouse script blow whistle, run Forward delay wait and run Reverse delay stop       
-   DELAYRANDOM(msec, msec) // randomise the run time between runs
-   DONE
+  example:
+  
+  AUTOMATION(202,"Roundhouse to Turntable Back & Forth -Timed")
+    SETLOCO(1225)
+    SET_TRACK(B,DC)
+    // Run a your Roundhouse script blow whistle, run Forward delay wait and run Reverse delay stop       
+    DELAYRANDOM(msec, msec) // randomise the run time between runs
+  DONE
 
 |hr-dashed|
 
 Using EX-Toolbox
 ----------------
 
-|EX-TB| has the same TrackManger features as |ED| plus many other capabilities. see :doc:`/ex-toolbox/index` for details.
+|EX-TB| has the same |TM| features as |ED| plus many additonal capabilities. see :doc:`/ex-toolbox/index` for details.
 
 |EX-TB| features now available today via Google Play Store  `EX-Toolbox <https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox>`_ |EXTERNAL-LINK|
 
@@ -292,11 +298,13 @@ Using EX-Toolbox
 Using DC (PWM) mode
 ===================
 
+First set the desired track/block to be DC using on of the options above.
+
 Place any analogue (DC locomotive) on a |EX-CS| power layout with a TrackManager DC assigned track/block. It will sit there dead quiet with lights off until the throttle speed is increased in either direction and then lights up and begins to move.
 
-In your throttle (teh same one that you would use for a DCC locomotive), select the address assigned to track/block when you enabled it.  Then just control the loco the same as if it was a DCC locomotive.
+In your throttle (the same one that you would use for a DCC locomotive), select the address assigned to track/block when you enabled it.  Then just control the loco the same as if it was a DCC locomotive.
 
-Throttle speed response for DC Cabs vary because the DCdistrict track is operating from 0Vdc to 16+Vdc ~PWM waveform signal. CAB's operating on a DCdistrict with either WiFi Throttles and EXRAIL Automation scripts with |Engine Driver| Handoff run different DC motors at different speeds.
+Throttle speed response for DC Cabs vary because the DC district track is operating from 0Vdc to 16+Vdc ~PWM waveform signal. CAB's operating on a DCdistrict with either WiFi Throttles and EXRAIL Automation scripts with |Engine Driver| Handoff run different DC motors at different speeds.
 
 So a script for FWD(50) speed will run at completely different speeds for two different DC motors depending on their resistance and efficiency.  One crawls at 50 while the other one runs like a bat out of hell.
 
@@ -320,7 +328,7 @@ Modular Layouts
 DCC-EX TrackManager 4.2.50+ is perfect for NMRA DCC Standards Modular Layouts which have two MAIN tracks/districts,
 Track A and Track B with sidings;
 
-* Track A (east bound) wired rails L-  R+
+* Track A (east bound) wired rails L- R+
 * Track B (westbound) which also have all the siding and spurs, wired rails L+  R-
 
 You can set each district separately as mode
@@ -330,12 +338,14 @@ You can set each district separately as mode
 
 DCX is Opposite Polarity and is what you set Block B to when you want it in DC mode because it is wired to NMRA Modular DCC Standards L+, R-.
 
-Using the New TrackManager Function commands you can run the any layout as
---------------------------------------------------------------------------
+Combinations of Modes
+---------------------
+
+Using the New TrackManager Function commands you can run the any layout as:
 
 .. code-block::
 
- Track A & Track B
+  Track A & Track B
    MAIN & PROG    (Use JOIN function for a Programming track to make a MagicTrack) 
    MAIN & MAIN
    PROG & MAIN

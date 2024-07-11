@@ -23,7 +23,7 @@ Welcome to DCC-EX TrackManager
 .. warning:: 
   :class: warning-float-right
 
-  This is not zero (0) stretching. We deliberately do not support the zero stretching address function found on Digitrax and Lenz command Stations. The constant dual DCC electrical signal may damage certain types of older DC motors if left on for a long time. |BR| **So never put a DC locomotive on a DCC-EX DCC track.**
+  *This is not zero (0) stretching*. We deliberately do not support the zero stretching address function found on Digitrax and Lenz command stations. The constant dual DCC electrical signal may damage certain types of older DC motors if left on for a long time. |BR| **So never put a DC locomotive on a DCC-EX DCC track.**
 
 *A first for the DCC & DC model railroading world.*
 
@@ -43,8 +43,8 @@ Any throttle that connect to an |EX-CS| can control analogue (DC) locos just as 
   * DC (PWM) modes for ``DC`` or ``DCX`` (reversed polarity)
   * Each track/district can also be disabled by setting to ``NONE``
   
-|EX-CS| **production version 5.0+** (devel v4.2.50+) supports both DCC (PWM) and DC (PWM) Pulse Width Modulation modes as an *embedded standard feature*.
-TrackManager allows you to set up and operate up to eight separate dual insulated sections of track/districts in either DCC (PWM) and or DC (PWM) as tracks A - H. No additional external DCC decoders are required for DC (PWM), and a single |EX-CS| is the only hardware needed for full functionality.
+|EX-CS| **production version 5.0+** supports both DCC (PWM) and DC (PWM) Pulse Width Modulation modes as an *embedded standard feature*.
+|TM| allows you to set up and operate up to eight separate (dual insulated) sections of track/districts in either DCC (PWM) and or DC (PWM). No additional external DCC decoders are required for DC (PWM). A single |EX-CS| is the only hardware needed for full functionality.
 
 Technical Details
 -----------------
@@ -62,9 +62,9 @@ This is all done through a single |EX-CS|, and no we're not using another Expens
 
 .. warning::
   
-  Existing analogue DC layouts which have DC transformers on two or more separate DC tracks/districts/blocks and/or also have a separate DCC command station with a section of dead rail, an electric relay, or a DPDT centre-off switch between the two types of controller powered stations must not be using a common ground rail, and should only use dual insulated tracks.
+  Existing analogue DC layouts which have *seperate DC transformers* on two or more separate DC tracks/districts/blocks and/or also have *a separate DCC command station* with a section of dead rail, an electric relay, or a DPDT centre-off switch between the two types of controller powered tracks must not be using a common ground rail, and should only use dual insulated tracks.
 
-  The features described here also allows replacing the physical DPDT switch for switching from DC to DCC.
+  The features described here also allows replacing the physical DPDT switch for switching from DC to DCC, or between multiple transformers.
 
 ----
 
@@ -74,11 +74,11 @@ Hardware Requirements and Technical Notes
 .. note:: 
   :class: note-float-right
 
-  These requirements are only for operating DC locomotives. There is nothing to do in a pure DCC environment where no DC or analogue locomotives are run.
+  These requirements are only for operating *DC locomotives*. There is nothing to do in a pure DCC environment where no DC or analogue locomotives are run.
 
-Generally speaking the |EX-CS| can directly replace a DC transformer on a single block or two block DC layout.  If you have more than two blocks, each with their own controller, then you need to look at one of the motor contorller options that support more than 2 outputs/blocks.
+Generally speaking, the |EX-CS| can directly replace a DC transformer on a single block, or two block, DC layout.  If you currently have more than two blocks, each with their own controller, then you need to look at one of the motor contorller options that support more than 2 outputs/blocks, but this is still within the capability of the |EX-CS|. 
 
-e.g. An Arduino Mega (with or without WiFi) and Standard L298P Motor Shield |EX-CS| has two available Tracks (**A** & **B**). Either or both of these can be used for DC.
+e.g. An Arduino Mega (with or without WiFi) and a Standard L298P Motor Shield |EX-CS| has two available Tracks (**A** & **B**). Either or both of these can be used for DC.
 
 The two connections/leads from each output on the motor shield(s) will simply replace the two connection/leads from your transformer(s) that go to the two rails of the block.
 
@@ -86,7 +86,7 @@ The two connections/leads from each output on the motor shield(s) will simply re
   
   1. In order for |TM| to operate in DC mode, the motor shield must have a brake pin defined in your “config.h” motor shield definition. There are a very limited number of motor boards that are suitable for use with DC mode, and any other motor boards are unsupported. The current list is available in :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`.
 
-  2. Never directly connect DC and DCC tracks/blocks together.  There must always be insulated joiners on both tracks between the tracks/blocks.
+  2. Never directly connect DC and DCC tracks/blocks together.  There must always be insulated joiners *on both tracks* between the tracks/blocks.
   
   3. Never drive a loco from an |EX-CS| controlled track/district to any other track controlled by another brand/type of DCC or DC System.
 
@@ -125,18 +125,18 @@ DC (PWM) mode can be enabled several ways:
 * From a throttle, including |EX-WT| (temporary)
 * From the serial monitor (temporary)
 * In ``myAutomation.h`` (semi-permanent)
-* From the |EX-TB| WiFi Android app
+* From the |EX-TB| WiFi Android app (temporary)
 
 |hr-dashed|
 
 From a throttle
 ---------------
 
-Currently the only throttle that directly supports the track manager features, which include changing to DC mode is |ED|.  See :doc:`/throttles/software/engine-driver-native-protocol` for details.
+Currently the only throttle app that directly supports the track manager features, which include changing to DC mode, is |ED|.  See :doc:`/throttles/software/engine-driver-native-protocol` for details. The mode will remain until you restart the |EX-CS|.
 
   |Engine Driver| DCC-EX Native mode features now available today via Google Play Store `Engine Driver <https://play.google.com/store/apps/details?id=jmri.enginedriver>`_ |EXTERNAL-LINK|
 
-However it is possible to create 'Routes' or 'automations' to switch between DC and DCC modes that can be seen and used by many throttles.  (See below for details)
+However it is possible to create 'Routes' or 'automations' to switch between DC and DCC modes that can be seen and used by many throttles.  (See below for details). The mode will remain until you restart the |EX-CS|.
 
 You can use the 'Route' / 'automation' approach in |EX-WT| and also use the same options as for a serial monitor (see below).
 
@@ -145,7 +145,7 @@ You can use the 'Route' / 'automation' approach in |EX-WT| and also use the same
 From the Serial Monitor
 -----------------------
 
-You can use a Command Line via a *PC with Arduino IDE Serial Monitor*, |EX-WT|, or the *JMRI serial Traffic Monitor* to send the following commands through your USB connected cable.  You can also send these commands via |Engine Driver| or |EX-TB|, though both apps povide more user friendly options.
+You can use a Command Line via a *PC with Arduino IDE Serial Monitor*, |EX-WT|, or the *JMRI serial Traffic Monitor* to send the following commands through your USB connected cable.  You can also send these commands via |Engine Driver| or |EX-TB|, though both apps povide more user friendly options.  The mode will remain until you restart the |EX-CS|.
 
 To display the current TrackManager configuration, use the command ``<=>`` an equal sign looks like a track.
 
@@ -185,7 +185,7 @@ Semi-Permanently setting the mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Using |EX-R| functions inside myAutomation.h file to run Automation scripts to change track modes from DCC to DC and back.
-my.Automation.h file
+my.Automation.h file. The chosen mode(s) will continue to be set each time you restart the |EX-CS|.
 
 .. code-block:: 
 
@@ -202,7 +202,7 @@ On Demand
 
 You can create routes to dynamically set the modes.  The following are examples of how you can do this:
 
-All are then controlled through DCC-EX TrackManager with a simple push of a GUI button of Either or Both |Engine Driver| Handoff to Acquire the last Throttle Engine# used and run it on the mode of the track  [i.e. DC engine 1225], Or |Engine Driver| (Set) button to set a block to a specific mode.
+All are then controlled through DCC-EX TrackManager with a simple push of a GUI button of Either or Both |Engine Driver| Handoff to Acquire the last Throttle Engine# used and run it on the mode of the track  [i.e. DC engine 1225], Or |Engine Driver| (Set) button to set a block to a specific mode. The mode will remain until you restart the |EX-CS|.
 
 Simple changes
 ~~~~~~~~~~~~~~
@@ -235,7 +235,7 @@ These will appear in the list of routes in the throttle.  They set the various t
 [Handoff] buttons
 ~~~~~~~~~~~~~~~~~
 
-In a |EX-R| Automation script we could assign a track mode to DC and wait for a |Engine Driver| throttle to Assign the Current Selected Active Engine Address and drive Manually through the district on the layout.
+In a |EX-R| Automation script we could assign a track mode to DC and wait for a |Engine Driver| throttle to Assign the Current Selected Active Engine Address and drive Manually through the district on the layout. The mode will remain until you restart the |EX-CS|.
 See the third Engine Driver Throttle image 'Districts A thru B with [Set] buttons at the end.
 
 .. code-block:: 
@@ -269,7 +269,7 @@ See the third Engine Driver Throttle image 'Districts A thru B with [Set] button
 Complex Automations
 ~~~~~~~~~~~~~~~~~~~
 
-You could also create more complex EX-RAIL Track Manager Functions for Engine Driver Throttle Automation [Handoff] buttons
+You could also create more complex EX-RAIL Track Manager Functions for Engine Driver Throttle Automation [Handoff] buttons. The mode will remain until you restart the |EX-CS|.
 
 In a |EX-R| Automation script we could a Set a Loco Address to a specific track in DC mode and have it run on Automation through the layout. See the sixth Engine Driver Throttle image 'EXRAIL 202 Roundhouse to Turntable Back & Forth - Timed' [Handoff] button at the end.
 

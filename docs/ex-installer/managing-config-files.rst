@@ -10,7 +10,13 @@
 Managing config files with the Installer 
 ****************************************
 
+.. rst-class:: dcclink-right
+
+   :ref:`Download Ex-Installer Now <download/ex-commandstation:ex-Installer>`
+
 |conductor| |tinkerer| |engineer| |support-button| |githublink-ex-installer-button2|
+
+|force-break|
 
 .. sidebar::
 

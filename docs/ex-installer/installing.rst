@@ -10,7 +10,13 @@
 Using the Installer 
 *******************
 
+.. rst-class:: dcclink-right
+
+   :ref:`Download Ex-Installer Now <download/ex-commandstation:ex-Installer>`
+
 |conductor| |tinkerer| |engineer| |support-button| |githublink-ex-installer-button2|
+
+|force-break|
 
 .. sidebar::
 
@@ -53,7 +59,7 @@ Download and Run EX-Installer
   
    **Antivirus Software** |BR| You *may* need to turn off your antivirus software before you try to install. |BR| Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
 
-* Download the **new** :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app. |BR| |BR|
+* Download the :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app. |BR| |BR|
 * For **Microsoft Windows**:
   
   * Open the Windows *File Manager*

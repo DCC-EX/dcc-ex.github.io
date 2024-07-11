@@ -10,6 +10,8 @@
 Managing config files with the Installer 
 ****************************************
 
+|force-break|
+
 .. rst-class:: dcclink-right
 
    :ref:`Download Ex-Installer Now <download/ex-commandstation:ex-Installer>`

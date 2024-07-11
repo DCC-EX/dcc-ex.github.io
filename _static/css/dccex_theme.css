@@ -422,14 +422,14 @@ svg {
   clear: none !important;
 }
 html[data-theme='dark'] .note {
-  background: #ffffff24 !important;
+  background: #ffffff0d !important;
 }
 
 .note p.admonition-title {
   background: #cbe1ef !important;
 }
 html[data-theme='dark'] .note p.admonition-title {
-  background: #256a97 !important;
+  background: #1a3e55 !important;
 }
 
 .tip {

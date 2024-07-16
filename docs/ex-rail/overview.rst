@@ -18,20 +18,17 @@ Overview
 Welcome to the home for |DCC-EX| Automation.
 
 |EX-R| is an "**EX**\tended **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage"
-that can easily be used to describe sequential command 'sequences' to automatically take place on your model layout. These sequences are defined programmatically in a simple command script file, and uploaded to the Command Station once to configure it. **EX-Rail** will then run automatically on **EX-CommandStation** startup, trigger manually, or on occurrence of the specified events.
+that can easily be used to describe sequential command 'sequences' to automatically take place on your model layout. 
+
+These sequences are defined programmatically in a simple command script file, and uploaded to the Command Station once to configure it. **EX-Rail** will then run automatically on **EX-CommandStation** startup, trigger manually, or on occurrence of the specified events.
 
 To begin, let's define a few terms:
 
 **OBJECT** - Things / devices on your layout that you want to interact with. these include: :ref:`Your locos <ex-rail/creating-elements:adding a roster>`, :ref:`Turnouts/Points <ex-rail/creating-elements:adding the hardware - servo turnouts/points>`, :ref:`semaphores/Signals <ex-rail/creating-elements:adding the hardware - signals>`, :ref:`Servo based Animations <ex-rail/creating-elements:configure myautomation.h - servos for signals an animations>`, :ref:`Sensors <ex-rail/creating-elements:adding the hardware - sensors>` and :ref:`Signals (Lights) <ex-rail/creating-elements:configure myautomation.h - signals>`.
 
-**SEQUENCE** - Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.
+**COMMANDS** - These can be various things like; drive a loco around, change a turnout/point or signal or LED. Or it could to be to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.  The events in turn may trigger additional commands.
 
-**ROUTE** - A special type of SEQUENCE that is made visible to a throttle with a readable name so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout.
-
-**AUTOMATION** - A special type of SEQUENCE that is made visible to a throttle so that a user can hand over a loco and let |EX-R| drive the train away, following each step listed in the sequence.
-
-Most people wanting to do animations or run trains through an automated route will use a SEQUENCE, but those with :doc:`throttles </throttles/index>` that support it (|engine driver|, |EX-WT|) can add routes and automations. Both of these terms are just tags that let throttles with this feature automatically assign sequences to control buttons. "Routes" go into route buttons and can set turnouts, signals, etc., so you can drive your train along that route. Automation 'sequences' can appear on a 'handoff' button that will supply or handoff the Loco ID to |EX-R| where it can take over and run the train autonomously. An automation sequence example would be manually driving a train into a station and pressing the assigned handoff button in the throttle that runs an AUTOMATION to take it on a journey around the layout.
-
+**SEQUENCE** - Simply a list of commnads to be done in order. There a also specific commands allow you to alter the order of the commands. Along with the generic SEQUENCE, there are some special types of sequence; **ROUTE**, **AUTOMATION** and **ONevent** that are discussed in the following pages.
 
 Things You Can Do With EX-RAIL
 ==============================

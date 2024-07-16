@@ -20,8 +20,6 @@ EX-Installer
 
 |force-break|
 
-----
-
 .. note:: 
 
   The recent issue with the Arduino CLI update has now been resolved. |BR| |EX-I| *is ready to use again.*

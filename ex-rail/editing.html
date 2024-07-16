@@ -624,9 +624,9 @@
 </ul>
 </nav>
 </aside>
-<p>The instructions containing all your objects and sequences is added to your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> by creating a file called <strong>‘myAutomation.h’</strong> in the same folder as ‘CommandStation-EX.ino’.</p>
+<p>The instructions containing all your objects and sequences is added to your <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> by creating a file called <cite>myAutomation.h</cite> in the same folder as ‘CommandStation-EX.ino’.</p>
 <p>Connecting your Arduino and pressing the <span class="guilabel">Upload</span> button in the usual way will save the file and upload your script into the Command Station.</p>
-<p>You can create and edit the myAutomation.h using a text editor (like Notepad), but if you are using the Arduino IDE (rather than the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span>) you can create the myAutomation.h file in the Arduino IDE. Use the pulldown button and select New Tab (or simply press Ctrl+Shift+N).</p>
+<p>You can create and edit the <cite>myAutomation.h</cite> using a text editor (like Notepad), but if you are using the Arduino IDE (rather than the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span>) you can create the myAutomation.h file in the Arduino IDE. Use the pulldown button and select New Tab (or simply press Ctrl+Shift+N).</p>
 <a class="reference external image-reference" href="#myautomation-h-editing-your-sequences"><img alt="Setup pulldown button" class="align-center" src="../_images/setup1.jpg" style="width: 158.0px; height: 90.0px;" /></a>
 <a class="reference external image-reference" href="#myautomation-h-editing-your-sequences"><img alt="Setup pulldown menu" class="align-center" src="../_images/setup2.jpg" style="width: 280.0px; height: 86.0px;" /></a>
 <p>Enter the file name “myAutomation.h” (This is case sensitive)</p>
@@ -638,9 +638,10 @@
 </div>
 <section id="content">
 <h2><a class="toc-backref" href="#id1" role="doc-backlink">Content</a><a class="headerlink" href="#content" title="Permalink to this heading"></a></h2>
-<p>What you will need to add to your <strong>myAutomation.h</strong> file will be explained in the next few pages, but can be catogorised as:</p>
+<p>What you will need to add to your <cite>myAutomation.h`</cite> file will be explained in the next few pages, but can be categorised as:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="creating-elements.html"><span class="doc">Objects</span></a></p></li>
+<li><p><a class="reference internal" href="getting-started.html"><span class="doc">Commands</span></a></p></li>
 <li><p><a class="reference internal" href="getting-started.html"><span class="doc">Sequences</span></a></p></li>
 </ul>
 </section>
@@ -649,13 +650,20 @@
 <h2><a class="toc-backref" href="#id2" role="doc-backlink">Re-upload the EX-CommandStation software</a><a class="headerlink" href="#re-upload-the-ex-commandstation-software" title="Permalink to this heading"></a></h2>
 <section id="using-ex-installer">
 <h3><a class="toc-backref" href="#id3" role="doc-backlink">Using EX-Installer</a><a class="headerlink" href="#using-ex-installer" title="Permalink to this heading"></a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you are using <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> <strong>DO NOT</strong> create or edit the myAutomation.h file in the EX-Installer installation folder (the folder the EX-Installer creates).</p>
+<p>Instead, create you myAutomation.h anywhere else and point EX-Installer to that folder when it askes.</p>
+</div>
 <ol class="arabic simple">
-<li><p>Place your ‘myAutomation.h’ file in the <code class="docutils literal notranslate"><span class="pre">CommandStation-EX</span></code> subfolder of wherever you extracted the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> files.</p></li>
-<li><p>Re-Run <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></p></li>
-<li><p>Select the same options that you originally chose and upload</p></li>
+<li><p>create your ‘myAutomation.h’ file in any <code class="docutils literal notranslate"><span class="pre">CommandStation-EX</span></code>, anywhere on your computer (except the EX-Installer installation folder.)</p></li>
+<li><p>Run <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></p></li>
+<li><p>When asked, point EX-Installer to the folder and file that you created.</p></li>
 </ol>
 <p>The myAutomation.h file will be automatically loaded with the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software.</p>
+<p>See <a class="reference internal" href="../ex-installer/managing-config-files.html"><span class="doc">Managing config files with the Installer</span></a> for more information.</p>
 </section>
+<hr class="docutils" />
 <section id="using-the-arduino-ide">
 <h3><a class="toc-backref" href="#id4" role="doc-backlink">Using the Arduino IDE</a><a class="headerlink" href="#using-the-arduino-ide" title="Permalink to this heading"></a></h3>
 <ol class="arabic simple">
@@ -697,7 +705,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f72797b5fc0>
+    <jinja2.runtime.BlockReference object at 0x7f9e627e3130>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

@@ -19,6 +19,40 @@ This page is a limited introduction to the |EX-R| automation sequences.  For mor
 
 Before You start, generally you will need to have created some Key Objects (e.g. Turnouts/Points, Sensors, Signals) before you start writing sequences.  Refer to the previous page (:doc:`creating-elements`) for creating and adding those Objects.  Note that these objects don't have to be listed in the myAutomation.h file before the sequence in which you use it, but it is good practice to do so.
 
+For a full list of keywords, see :doc:`/ex-rail/EX-RAIL-command-reference`.  Only a subset are described on this page.
+
+Types of Sequence
+=================
+
+There are four types of Sequence:
+
+* **SEQUENCE**
+* **ROUTE**
+* **AUTOMATION**
+* **ONevent** based sequences
+
+**SEQUENCE**
+  
+   - Simply a list of things to be done in order. These things might be to actually drive a train around, or merely to set some turnouts or flash some scene or panel lights. Actions can be made to wait for conditions to be met, like a sensor detecting a train, a button being pushed, or a period of time elapsing.  
+   - A generic **SEQUENCE** (unlike the variations below) can only be started by another SEQUENCE, or automatically at the start-up of the Command Station.
+
+**ROUTE** 
+  
+  - A special type of SEQUENCE that is made visible to a throttle with a readable name, so the user can press a button to get the sequence executed. This might be best used to set a series of turnouts and signals to create a route through the layout.
+
+**AUTOMATION** 
+
+  -  A special type of SEQUENCE that is made visible to a throttle with a readable name, so that a user can hand over a loco and instruct that specific loco to follow each step listed in the sequence.
+
+**ONevent** sequences
+
+  - Special types of SEQUENCE that are activated when certain 'events' occur. Including when signals change, when turnouts/points change, when a turntable rotates, at a specific time, etc.
+  - These include: ``ONGREEN( signal_id)`` ``ONAMBER( signal_id)`` ``ONRED( signal_id)`` ``ONCLOSE( turnout_id )`` ``ONTHROW( turnout_id )`` ``ONCHANGE( vpin )`` ``ONROTATE( id )`` ``ONACTIVATE( addr, sub_addr )`` ``ONACTIVATEL( linear )`` ``ONDEACTIVATE( addr, sub_addr )`` ``ONDEACTIVATEL( linear )`` ``ONCLOCKTIME( hours, mins )`` ``ONCLOCKMINS( mins )`` ``ONOVERLOAD( track )``
+
+Most people wanting to do animations or run trains through an automated route will use a SEQUENCE, but those with :doc:`throttles </throttles/index>` that support it (|engine driver|, |EX-WT|) can add routes and automations. Both of these terms are just tags that let throttles with this feature automatically assign sequences to control buttons. "Routes" go into route buttons/screen. Automation sequences will also appear with the routes but with a 'handoff' button that will supply or handoff the Loco ID to |EX-R| where it can take over and run the train autonomously. 
+
+e.g. A ROUTE could be just changing a series of turnouts/points, or could be driving a *specific* loco on a complex journey around the layout. An AUTOMATION could be reading id of the loco *currently controlled by user*, and taking it on a complex journey around the layout.
+
 ----
 
 The Automation Process
@@ -26,10 +60,9 @@ The Automation Process
 
 Once started, each 'sequence' will step through a list of simple keyword commands, in order, until they reach a ``DONE`` keyword.
 
-Multiple concurrent sequences are supported.
+Multiple concurrent sequences are supported.  i.e. More than one sequence can be running at the same time.
 
-For a full list of keywords, see :doc:`/ex-rail/EX-RAIL-command-reference`.  Only a subset are described on this page.
-
+Sequential execution of sequences is supported. i.e. One sequence can invoke another sequence, including itself using the ``FOLLOW(id)`` or ``CALL(id)`` commands.
 
 .. note:: 
 
@@ -40,33 +73,6 @@ For a full list of keywords, see :doc:`/ex-rail/EX-RAIL-command-reference`.  Onl
 Structure of a 'Sequence'
 =========================
 
-In general, sequences follow the basic structure:
-
-.. code-block:: cpp
-   :class: code-block-float-right
-
-   // Example
-   ROUTE(1,"Coal Yard exit")
-      RED(77)      // signal 77 to Red
-      THROW(1)     // throw turnout/point 1
-      CLOSE(7)     // close turnout/point 7
-      DELAY(5000)  // 5 second wait
-      GREEN(92)    // signal 92 to Green
-      DONE
-
-.. code-block:: cpp
-
-   <sequence-type>( parameter-1, parameter-2, ...)
-     <command 1>
-     <command 2>
-     ...
-     <command n>
-     DONE     or     RETURN     or     FOLLOW ( id )
-
-|force-break|
-
-Sequence Types
---------------
 
 .. sidebar:: Ids (Sequence Numbers)
 
@@ -74,11 +80,46 @@ Sequence Types
    - All ROUTE / AUTOMATION / SEQUENCE ids are limited to 1 - 32767
    - 0 is reserved for the startup sequence appearing as the first entry in the EXRAIL script. 
 
+In general, sequences follow the basic structure:
+
+.. code-block:: cpp
+
+   <sequence-type>( sequence-id, parameter-2, ...)
+     <command 1>
+     <command 2>
+     ...
+     <command n>
+     DONE     or     RETURN     or     FOLLOW ( id )
+
+
+For example:
+
+.. code-block:: cpp
+   :class: code-block-float-right
+
+   // Example
+   ROUTE(1,"Coal Yard exit")    // unique sequence-id = 1
+      RED(77)      // signal 77 to Red
+      THROW(1)     // throw turnout/point 1
+      CLOSE(7)     // close turnout/point 7
+      DELAY(5000)  // 5 second wait
+      GREEN(92)    // signal 92 to Green
+      DONE
+
+|force-break|
+
+----
+
+Invoking/Trigging Sequences
+---------------------------
+
 Sequences types fall in the following broad groups:
 
 * Manually triggered
 * Triggered by another sequence
 * Triggered as a result of an event that has occurred on one of the turnouts/points, sensors, signals.
+
+|hr-dashed|
 
 Manually Triggered Sequence Types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -90,12 +131,14 @@ Manually triggered sequences are advertised to WiThrottles so you can activate t
     :header-rows: 0
     :class: command-table
 
-    * - AUTOMATION( id, “description” ) 
+    * - ``AUTOMATION( id, “description” )``
       - Start a Automation Sequence and creates a WiThrottles {Handoff} button to automatically send a train along.
-    * - ROUTE( id, “description” ) 
+    * - ``ROUTE( id, “description” )``
       - Start of a Route Sequence and creates a WiThrottles {Set} button to manual drive the train along
 
 Note that these can also be invoked by other sequences.
+
+|hr-dashed|
 
 Invoked Sequence Types
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -107,8 +150,10 @@ Sequences that can only be triggered by other sequences have the following form:
     :header-rows: 0
     :class: command-table
 
-    * - SEQUENCE( id ) 
+    * - ``SEQUENCE( id )``
       - A general purpose Sequence for scenic animations, etc.
+
+|hr-dashed|
 
 Event Triggered Sequence Types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -137,6 +182,8 @@ Sequences that are triggered when 'events' occur, include:
       - Event handler for turnout thrown
 
 See the :doc:`/ex-rail/EX-RAIL-command-reference` for additional Event Triggered Sequence types, and additional information on these types. 
+
+|hr-dashed|
 
 Automatically Running a Sequence at Power Up
 --------------------------------------------
@@ -167,7 +214,7 @@ The commands fall into some basic categories:
 
 * `Command Station commands`_
 
-----
+|hr-dashed|
 
 Action Commands - Getting EX-RAIL to 'do' something
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -255,6 +302,8 @@ Turntable related commands include:
 
 See the :doc:`/ex-rail/EX-RAIL-command-reference` for additional commands and additional information on these commands. 
 
+|hr-dashed|
+
 Sequence Flow / Flow Control Commands
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -272,6 +321,8 @@ The timing of the execution of the commands can be altered as well with 'Delay' 
 
 .. _getting-started-conditionals:
   
+|hr-dashed|
+
 Conditionals
 ~~~~~~~~~~~~~
 
@@ -379,6 +430,8 @@ Other Conditionals:
 
 see the :doc:`/ex-rail/EX-RAIL-command-reference` for additional information.
 
+|hr-dashed|
+
 Branching
 ~~~~~~~~~
 
@@ -405,6 +458,8 @@ FOLLOW
 To invoke another sequence, with no wish to return and execute any further commands in the current sequence you can use the ``FOLLOW( route_id )`` command in the main sequence.
 
 ``FOLLOW( route_id )`` Branch or Follow a numbered sequence. (The 'followed' sequence does not return to the sequence that invoked it.)
+
+|hr-dashed|
 
 Delays & Waits
 ~~~~~~~~~~~~~~
@@ -454,6 +509,8 @@ There are a number of delay type commands that you can explore in the :doc:`/ex-
       - Wait until sensor is active/triggered, or if the timer runs out, then continue and set a testable "timed out" flag, use negative values for active HIGH sensors
     * - AFTER( sensor_id )
       - Waits for sensor to trigger and then go off for 0.5 seconds, use negative values for active HIGH sensors
+
+|hr-dashed|
 
 Command Station Commands
 ^^^^^^^^^^^^^^^^^^^^^^^^

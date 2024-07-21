@@ -574,11 +574,11 @@ Referencing Locos
   :class: code-block-float-right
   
   //Example
-  // If this is at the start of myConfiuration.h  
-  // this will act like an AUTOSTART sequence
-  // and automatically turn the track power on
-  SETLOCO(9999)   // select loco 9999
-  SPEED(0)        // set the speed to 0.  This will turn the tarck power on
+  SEQUENCE(98)  
+    SETLOCO(9999)   // select loco 9999
+    SPEED(0)        // set the speed to 0.
+                    //   This will turn the track power on
+                    //   if it is not on already.
   DONE
 
 To reference a loco in a sequence you only need to know it's DCC Address.  i.e. It does not need to be in the roster.

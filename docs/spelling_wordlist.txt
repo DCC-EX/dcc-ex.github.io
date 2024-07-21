@@ -52,6 +52,7 @@ Geoff
 Gravitech
 grbba
 Gurries
+guilabel
 Haba
 Homebrew
 Hornby
@@ -60,6 +61,7 @@ iDCC
 Île-de-France
 Infineon
 initialisation
+ino
 iOS
 jitter
 Jython
@@ -115,6 +117,7 @@ pull-up
 py
 Railcom
 Ralf
+rst
 reST
 reStructuredText
 reusability

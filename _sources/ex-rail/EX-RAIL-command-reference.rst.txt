@@ -1390,10 +1390,17 @@ Locos - Definition and Control
 ``SETLOCO( loco )`` - Set the loco address for this task
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  *Parameters:* |BR|
+  |_| > **loco** - DCC address of the loco
+
 |hr-dashed|
 
-``SENDLOCO( cab, route )`` - Start a new task send a given loco along given route/sequence
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``SENDLOCO( loco, route )`` - Start a new task send a given loco along given route/sequence
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **loco** - DCC address of loco
+  |_| > **route** - the id of the route/sequence to activate with that loco
 
 |hr-dashed|
 
@@ -1405,21 +1412,30 @@ Locos - Definition and Control
 ``FWD( speed )`` - Drive loco forward at DCC speed
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
- Drive loco forward at DCC speed 0-127 (1=ESTOP)
- 
+ Drive loco forward at DCC speed.
+
+  *Parameters:* |BR|
+  |_| > **speed** - 0-127 (0=Stop 1=ESTOP 2-127=Speed 1-126)
+
 |hr-dashed|
 
 ``REV( speed )`` - Drive logo in reverse at DCC speed
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Drive logo in reverse at DCC speed 0-127 (1=ESTOP)
+Drive logo in reverse at DCC speed.
+
+  *Parameters:* |BR|
+  |_| > **speed** - 0-127 (0=Stop 1=ESTOP 2-127=Speed 1-126)
 
 |hr-dashed|
 
 ``SPEED( speed )`` - Drive loco in current direction at DCC speed
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  Drive loco in current direction at DCC speed (0-127)
+  Drive loco in current direction at DCC speed.
+
+  *Parameters:* |BR|
+  |_| > **speed** - 0-127 (0=Stop 1=ESTOP 2-127=Speed 1-126)
 
 |hr-dashed|
 
@@ -1433,10 +1449,16 @@ Drive logo in reverse at DCC speed 0-127 (1=ESTOP)
 ``FON( func )`` - Turn on loco function
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  *Parameters:* |BR|
+  |_| > **fun** - Function 0-31.
+
 |hr-dashed|
 
 ``FOFF( func )`` - Turn off loco function
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **fun** - Function 0-31.
 
 |hr-dashed|
 
@@ -1445,12 +1467,12 @@ Drive logo in reverse at DCC speed 0-127 (1=ESTOP)
 
 |hr-dashed|
 
-``ROSTER( cab, "name", "func_map" )`` - Provide roster info for WiThrottle
+``ROSTER( loco, "name", "func_map" )`` - Provide roster info for WiThrottle
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
-  |_| > **cab** - DCC address of your loco
-  |_| > **name:** - the name of this loco that will appear in the throttle apps. Enclosed in quotes (") |BR|
+  |_| > **loco** - DCC address of your loco
+  |_| > **name** - the name of this loco that will appear in the throttle apps. Enclosed in quotes (") |BR|
   |_| > **funct_map** - the names that you want to see for the functions specific to this loco separated by forward slashes ("/"). All enclosed in quotes (") |BR|
   |_| |_| |_| |_| Note that if the function is 'momentary' rather than 'latching' (On/Off) then start the function label with a asterisk (*). The most common example of this is the Horn/Whistle which is commonly on F2. |BR|
 

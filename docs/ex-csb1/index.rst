@@ -20,16 +20,16 @@ EX-CSB1 Express
     :depth: 1
     :local:
 
-Designed by the |DCC-EX| development team, the EX-CSB1 replaces up to 3 different stacked boards to provide a complete, expandible DCC and DC command station with dual 5A track outputs, integrated in programming track capability, and built-in fast WiFi for throttle control connections.
+Designed by the |DCC-EX| development team, the EX-CSB1 replaces up to 3 different stacked boards to provide a complete, expandible DCC and DC command station or booster with dual 5A track outputs, integrated programming track capability, and built-in fast WiFi for throttle control connections.
 
-.. figure:: /_static/images/ex-csb1/csb1_render_drop_shadow.png
+.. figure:: docs/_static/images/ex-csb1/csb1_render_drop_shadow.png
    :alt: DCC-EX EX-CSB1 Express
    :scale: 40%
 
 What is the EX-CSB1 Express?
 =============================
 
-The EX-CSB1 is the first complete DCC Command Station capable of DC PWM with Booster mode from the DCC-EX Team. That's right, one board that can function as full USB or WiFi Wireless Command Station that can also be deployed as a stand-alone booster elsewhere on your layout! The EX-CSB1 saves you money while allowing you to more easily expand your layout XXXXXXX (really want to say something about booster mode being useful for non-DCC-EX DCC systems??)
+The EX-CSB1 is the first complete DCC Command Station capable of DC PWM with Booster mode from the DCC-EX Team. That's right, one board that can function as a full USB connected or Wireless WiFi Command Station or be deployed as a stand-alone booster anywhere on your layout! The EX-CSB1 saves you money while allowing you to more easily expand your layout XXXXXXX (really want to say something about booster mode being useful for non-DCC-EX DCC systems??)
 
 Features include:
   * All-in-one DCC compatible Command Station/Booster with PWM DC output capability
@@ -63,7 +63,7 @@ The EX-CSB1 is based on the 32-bit ESP32 microcontroller that operates on 3.3V r
 
 The EX-CSB1 comes with two integrated MOSFET based motor drivers from Texas Instruments to reduce power consumption, put more power to the layout, and generate less heat than traditional solutions. They provide up to 5A peak power to each track output to be able to run more locos simultaneously. An additional EX-MotorShield 8874 can be plugged on top of the command station board to provide two more DCC or PWM DC outputs.
 
-Since the EX-CSB1 can be a booster or a command station, you can spread more of them around your layout connected to the Railsync port. The CSB1 can automatically switch to booster mode when it sense a Railsync input.
+Since the EX-CSB1 can be a booster or a command station, you can spread more of them around your layout connected to the Railsync port. The CSB1 can automatically switch to booster mode when it sensea a Railsync input.
 
 The EX-CSB1 also has auto-reverser mode which can be enabled for any DCC output on a per-output basis. An overload is first tested with a reversing of the phase before deciding if the overload remains present.
 
@@ -94,19 +94,20 @@ Units may be purchased from the following sources:
 * In the UK from `Chesterfield Model Making & Miniature Electronics <https://chesterfield-models.co.uk/product/semify-dcc-ex-motor-shield/>`_
 * and other manufacturers licensed by DCC-EX.
 
-The EX-CSB1 Command Stations come with an OLED status display and a carrier base mount (sometimes called a "sled" ) There are different options for the board such as with or without an additional EX-MotorShield 8874 for two additional DCC/PWM DC outputs. Prices vary from around $105-$145 in the US, to approximately £ XXX -fnd in the UK, € XXX -fnd in Europe, and in Australia starting from $AU175 -fnd. Prices typically do not include tax and shipping.
+The EX-CSB1 Command Stations normally come with an OLED status display and a carrier base mount (sometimes called a "sled" ) There are different options for the board such as with or without an additional EX-MotorShield 8874 for two additional DCC/PWM DC outputs. Prices vary from around $105-$145 in the US, to approximately £ XXX -fnd in the UK, € XXX -fnd in Europe, and in Australia starting from $AU175 -fnd. Prices typically do not include tax and shipping.
 
 Ordering in Quantity or wishing to Resell
 ==========================================
 
-For quantities of 10 or less per annum, you may utilise a PCB manufacturing and assembly service such as JLCPCB without licensing fees. A donation to DCC-EX would be appreciated, so click the DONATE button! The production files are available on the `DCC-EX GitHub <https://github.com/DCC-EX/EX-Motorshield8874>`_. XXX
+For quantities of 10 or less per annum, you may utilize a PCB manufacturing and assembly service such as JLCPCB without licensing fees. A donation to DCC-EX would be appreciated, so click the DONATE button! The production files are available on the `DCC-EX GitHub <https://github.com/DCC-EX/EX-Motorshield8874>`_. XXX
 
 Entrepreneurs wanting to use the design to offer commercial quantities to their local communities should contact DCC-EX (sales @ dcc-ex.com) to arrange a bulk purchase or a license to manufacture. Licensing includes donating a royalty to DCC-EX per board sold.
 
 Board layout
 ==============
 
-  * Input Power
+  * Input Power Barrel jack
+  * Input Power / Data USB-C connector
   * Track A and B outputs
   * I2C connector
   * Railsync connector
@@ -119,6 +120,27 @@ Board layout
   * Antenna
   * Unpopulated power pads - Just because you are going to ask. For possible future use.
   * Board labels
+
+.. figure:: docs/_static/images/ex-csb1/csb1_render_top.png
+   :alt: DCC-EX EX-CSB1 Express
+   :scale: 40%
+
+**Input Power** - The CSB1 normally comes with a barrel jack for compatibility with most laptop-type power supplies that use a 2.1mm inner hole diameter and a 5.5mm outer shank diameter. Be careful since some power supplies have a 2.5mm inner hole which is too loose a fit. The barrel jack input power is reverse voltage protected.
+
+**Track A and B Outputs** - These are female pluggable terminals that accept a removable male screw terminal plug (included with your CSB1). Using the removable connectors allows for easy reconfiguration, testing, and placement of your command station. You can unsolder these connectors (or ask for a special order) and replace them with 3.5mm pitch screw terminals if you prefer. For DCC operation, output A is usually the MAIN track and output B is the programming track. However, with our TrackManager(tm) feature, you can configure any output to be DCC, DC, MAIN, or PROG. You should keep the phase of the tracks aligned. More in this here. XXX. Power to each output can be controlled together or individually.
+
+**Track Power LEDs** - These are indicators that power is being sent to the track. With DC operation, both LEDs should shine brightly when your throttle issues the power on command. You can also configure the CSB1 to start with power on using a mySetup.h or myAutomation.h file. See more here XXX. For DC operation, when power is on, ONE LED will light for each direction. That is, forward will light one LED and when you select reverse, the other LED will light. 
+
+**QWiic Connector (I2C)** - This is a standard for an I2C bus connection so that the same cable can be used to daisy chain I2C devices like displays, sensors, servos, etc. Please note the pin connection order when making your own cables or when purchasing from discount sites that often wire them incorrectly. For example, red should always be positive power and black is negative DC or "GND". IMPORTANT: The voltage for this connector is ALWAYS 3.3V!
+
+**RailSync Connector** - This is a standard Railsync input. Connecting a RailSync output from a Command Station or Booster will automatically set the EXCSB1 to booster mode. XXX (describe or link to booster mode). Any voltage between 5V and 26V at the input will work. The Digitrax specification is from 12V to 26V.
+
+**OLED I2C Header** - This is primarily designed for an OLED display, but can also be used as a female header for any OLED device that has male pins or for use with Dupont jumper wires. IMPORTANT: Many .96", 1.3" OLED displays, and some others will connect directly to the pins. However, there is no standard for pin order. Make absolutely sure that if you connect a display directly to the header that its pins are in the correct order.
+
+**I2C x 2 Header** - This is a dual male pin I2C header with 2 I2C bus connectors one above the other. They are wired together on the same I2C bus as the QWiic connector and OLED I2C Header. IMPORTANT: Note that the pin order on these two rows are different from the OLED header, pay attention to the pin order when using Dupont female wires. The EX-CSB1 is a 3.3V device, so all the I2C connectors supply 3.3V. When using 5V boards like the Arduino Mega, the OLED header and the I2C headers supply 5V (the Qwiic connector always supplies 3.3V no matter what microcontroller you are using). Keep that in mind if you are upgrading from a DIY Arduino Command Station to a 3.3V device ike the EX-CSB1 and are connecting I2C devices.
+
+**USB-C Power/Data Connector** - The USB connector can supply 5V DC from a computer or any 500mA or larger power supply. The 5V is converted through a regulator to the 3.3V that runs the circuitry on the board. In this way you can connect your EX-CSB1 to a computer and update your software version or test EXRAIL scripts that run your accessories. However, without another power supply, you cannot supply power to the rails to run trains. You can connect your 12V DC to 25V DC track Power supply to the 
+
 
 Powering the EX-CSB1
 =====================

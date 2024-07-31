@@ -101,7 +101,7 @@ Ordering in Quantity or wishing to Resell
 
 For quantities of 10 or less per annum, you may utilize a PCB manufacturing and assembly service such as JLCPCB without licensing fees. A donation to DCC-EX would be appreciated, so click the DONATE button! The production files are available on the `DCC-EX GitHub <https://github.com/DCC-EX/EX-Motorshield8874>`_. XXX
 
-Entrepreneurs wanting to use the design to offer commercial quantities to their local communities should contact DCC-EX (sales @ dcc-ex.com) to arrange a bulk purchase or a license to manufacture. Licensing includes donating a royalty to DCC-EX per board sold.
+Entrepreneurs wanting to use the design to offer commercial quantities to their local communities should contact DCC-EX (sales @ dcc-ex.com) to arrange a bulk purchase or a license to manufacture. Licensing includes donating a royalty to DCC-EX per board sold.XXX move this section to the bottom and just link to it?
 
 Board layout
 ==============
@@ -155,7 +155,7 @@ Board layout
 
 **GPIO Headers** - The 4 GPIO headers accept a DCC-EX EX-MotorShield 8874. The EX-CSB1 itself has 2 outputs for 2 track power districts. Stacking the 8874 on these headers provides 2 additional power districts for a total of 4. Any of the 4 outputs can be used for any combination of DCC MAIN, DCC PROG, or DC PWM.
 
-
+XXX Add to image to include hot area, unpopulated power pin, and any silkscreening. Add the bottom of the board help.
 
 
 Powering the EX-CSB1
@@ -178,6 +178,11 @@ Once you are sure power is disconnected and the power led indication is off, you
 
 For DC operation, there is polarity in that one track is positive and the other negative and the train will move forward when voltage is applied through the command station. When that voltage is reversed, the train will run in reverse.
 
+Use TrackManager to Set Outputs to DCC or DC Operation
+========================================================
+
+Our Trackmanager technology allows you to configure any of 4 outputs to be DCC MAIN, DCC PROG, or DC PWM in order to run DCC or DC locos. 2 outputs are included with the EX-CSB1 with 2 more available with the purchase of an EX-MotorShield 8874 that just stacks on top. By default, output A is configured as a DCC MAIN track and output B is configured as a DCC Programming track. You can dynamically change the configuration using many throttles (such as JMRI or Engine Driver) or you can configure your CSB1 to always start in your desired configuration. Note that one of the outputs can be configured in such a way that it is another MAIN power district that automatically switches to programming mode when a programming command is issued by your throttle and then automatically switches back to MAIN. XXX have this be a NOTE?
+
 
 DCC Operation
 =====================
@@ -192,7 +197,7 @@ What to put here? XXX Cover more theory of DCC and basics of the voltage and sig
 DC Operation
 ===============
 
-It is important to note that this is not a varying DC voltage, Full voltage is always at the track when the throttle is set to a speed greater than zero. Speed is controlled by using a PWM (pulse width modulated) signal that turns the voltage on and off to the track at a rate that changes the "effective" voltage the motor in the locomotive "sees". This mimics what a DCC decoder does in a DCC loco to control a motor. The benefit of this method is that starting and stopping and operating at slow speed is more smooth.
+It is important to note that this is not a varying DC voltage, Full voltage is always at the track when the throttle is set to a speed greater than zero. Speed is controlled by using a PWM (pulse width modulated) signal that turns the voltage on and off to the track at a rate that changes the "effective" voltage the motor in the locomotive "sees". This mimics what a DCC decoder does in a DCC loco to control a motor. The benefit of this method is that starting and stopping and operating at slow speed is more smooth. 
 
 USB Connection to install the Command Station Software
 ======================================================

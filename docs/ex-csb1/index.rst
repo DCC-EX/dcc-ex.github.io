@@ -127,7 +127,7 @@ Board layout
    :alt: DCC-EX EX-CSB1 Express
    :scale: 40%
 
-**Input Power Barrel Jack** - The CSB1 normally comes with a barrel jack for compatibility with most laptop-type power supplies that use a 2.1mm inner hole diameter and a 5.5mm outer shank diameter. Be careful since some power supplies have a 2.5mm inner hole which is too loose a fit. The barrel jack input power is reverse voltage protected.
+**Input Power Barrel Jack** - The CSB1 normally comes with a barrel jack for compatibility with most laptop-type power supplies that use a 2.1mm inner hole diameter and a 5.5mm outer shank diameter. Be careful since some power supplies have a 2.5mm inner hole which is too loose a fit. The barrel jack input power is reverse voltage protected. Power from the barrel jack powers the 5V regulator to power an optional EX-MotorShield 8874 (to allow for 2 more power districts), the 3.3V regulator to power the EX-CSB1, and power out to the track.
 
 **USB-C Power/Data Connector** - The USB connector can supply 5V DC from a computer or any 500mA or larger power supply. The 5V is converted through a regulator to the 3.3V that runs the circuitry on the board. In this way you can connect your EX-CSB1 to a computer and update your software version or test EXRAIL scripts that run your accessories. However, without another power supply, you cannot supply power to the rails to run trains. You can connect your 12V DC to 25V DC track Power supply to the barrel jack while the USB is connected. 
 
@@ -147,9 +147,13 @@ Board layout
 
 **ESP32 Microcontroller / WiFi / WiFi Antenna** - One microcontroller controls everything on the EX-CSB1. It runs the |EX-CS| software, any mySetup.h file instructions, any myAutomation.h scripts, and the WiFi connection to throttles. Be careful in your setup to A. Protect the antenna from being damaged from contact with anything and B. Keep anything at least 2cm (.75") from the antenna and do not allow any metallic objects to be near or surrounding the antenna.
 
-**WiFi / User LED** - When WiFi is enabled, this LED will light. It is under software control in the EX-CommandStation software, so the LED can be repurposed to provide any function a user might want.
+**WiFi / User LED** - When WiFi is enabled, this LED will stay on. It is under software control in the EX-CommandStation software, so the LED can be repurposed to indicate a user defined function.
 
+**3.3V LED** - The 3.3V LED will light whenever the 3.3V regulator is powered, this will be when powered by USB or from an external power supply connected to the barrel jack. This is simply an indicator that the circuitry on the board is powered.
 
+**5V LED** - The 5V LED will light whenever power is supplied to the barrel jack. This LED indicates that power is being supplied to the 5V regulator which can power an EX-MotorShield 8874 stacked onto the GPIO Headers. Power from the barrel jack will power the 5V regulator which in turn powers the 3.3V regulator, therefore, when power is supplied via the barrel jack, both the 5V and 3.3V LEDs will be lit.
+
+**GPIO Headers** - The 4 GPIO headers accept a DCC-EX EX-MotorShield 8874. The EX-CSB1 itself has 2 outputs for 2 track power districts. Stacking the 8874 on these headers provides 2 additional power districts for a total of 4. Any of the 4 outputs can be used for any combination of DCC MAIN, DCC PROG, or DC PWM.
 
 
 
@@ -183,21 +187,25 @@ The EX-CSB1 defaults to DCC operation. To see how to operate DC mode see here XX
 The track outputs are shown here labelled A and B. Normally, for DCC operation, output A is for your MAIN track and output B is for your PROG (Programming) track. However, the EX-CommandStation software allows you to make any track a MAIN, a PROG, DCC, DC, or a Booster, but that is covered in the TrackManager help XXX For now, let's just keep it simple.
 
 
-What to put here? XXX Cover more theory of DCC and basics of the voltage and signal and DC having polarity and being PWM? Or just talk about how to turn on DC and DCC in trackmanager?
+What to put here? XXX Cover more theory of DCC and basics of the voltage and signal and DC having polarity and being PWM? Or just talk about how to turn on DC and DCC in Trackmanager?
 
 DC Operation
 ===============
 
-It is important to note that this is not varying DC voltage, Full voltage is always at the track when the throttle is set to a speed greater than zero. Speed is controls by using a PWM (pulse width modulated) signal that turns the voltage on and off to the track at a rate that changes the "effective" voltage the motor in the locomotive sees. This mimics what a DCC decoder does in a DCC loco to control a motor. The benefit of this method is that starting and stopping and operating at slow speed is more smooth.
+It is important to note that this is not a varying DC voltage, Full voltage is always at the track when the throttle is set to a speed greater than zero. Speed is controlled by using a PWM (pulse width modulated) signal that turns the voltage on and off to the track at a rate that changes the "effective" voltage the motor in the locomotive "sees". This mimics what a DCC decoder does in a DCC loco to control a motor. The benefit of this method is that starting and stopping and operating at slow speed is more smooth.
 
 USB Connection to install the Command Station Software
 ======================================================
+
+The EX-CSB1 Express should come from your reseller with the EX-CommandStation software already installed. However, you may want to upgrade to the latest firmware or create your own EX-RAIL automation/animation scripts and upload them to the CS. A USB-A to USB-C cable (or a USB-C to USB-C cable if your computer has a USB-C connector) allows you to connect your CS to a computer to use our EX-Installer application or the Arduino IDE to install your files.
 
 Resetting the CS
 =================
 
 USB Connection to a Serial Monitor
 ===================================
+
+Using the appropriate USB-A to USB-C or USB-C to USB-C cable, you can use the Arduino IDE, EX-WebThrottle, or JMRI to act as a serial monitor to view diagnostic messages from the CS or send manual commands for testing or configuration.
 
 USB Connection to JMRI
 =======================

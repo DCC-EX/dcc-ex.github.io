@@ -80,8 +80,7 @@ Once the systems are setup, there is generally not a lot of difference in terms 
 
 While not functionally different, the area of greatest difference is that most of the commercial system come with some form of physical controller.  Most |EX-CS| owners use inexpensive, smart phones, or tablets to control their locos. Many people already have a phone they replaced sitting in a drawer or can get one cheap on ebay.
 
-You can have/use physical controllers (not a phone, tablet or computer) with |EX-CS|, but that is an additional item to build or purchase. Note that there are multiple inexpensive physical throttle designs that you can build yourself. There is a list of throttles that work with |EX-CS| in our :ref:`/throttles/index:Throttles (Controllers)` section. 
-https://dcc-ex.com/throttles/index.html#throttles-controllers
+You can have/use physical controllers (not a phone, tablet or computer) with |EX-CS|, but that is an additional item to build or purchase. Note that there are multiple inexpensive physical throttle designs that you can build yourself. There is a list of throttles that work with |EX-CS| in our :ref:`throttles/index:throttles (controllers)` section. 
 
 |hr-dashed|
 

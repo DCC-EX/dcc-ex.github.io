@@ -9,7 +9,7 @@
 .. index:: EXCSB1, EX-CSB1
 
 ******************
-EX-CSB1 Express
+|EX-CSB1|
 ******************
 
 |conductor| |tinkerer| |engineer| |support-button|
@@ -29,30 +29,28 @@ Designed by the |DCC-EX| development team, the EX-CSB1 replaces up to 3 differen
 What is the EX-CSB1 Express?
 =============================
 
-The EX-CSB1 is the first complete DCC Command Station capable of DC PWM with Booster mode from the DCC-EX Team. That's right, one board that can function as a full USB connected or Wireless WiFi Command Station or be deployed as a stand-alone booster anywhere on your layout! The EX-CSB1 saves you money while allowing you to more easily expand your layout XXXXXXX (really want to say something about booster mode being useful for non-DCC-EX DCC systems??)
+The |EX-CSB1| is the first complete DCC Command Station capable of DC PWM with Booster mode from the DCC-EX Team. That's right, one board that can function as a full USB connected or Wireless WiFi Command Station or be deployed as a stand-alone booster anywhere on your layout! The EX-CSB1 saves you money while allowing you to more easily expand your layout XXX (really want to say something about booster mode being useful for non-DCC-EX DCC systems??)
 
 Features include:
   * All-in-one DCC compatible Command Station/Booster with PWM DC output capability
   * Fast Wifi built-in
-  * Runs DCC-EX Command Station Software (Open Source, so FREE **and** having new features added)
-  * Runs DCC or DC locomotives
-  * Handles up to 10 Wifi clients simultaneously to allow you to run your layout with your friends
+  * Runs DCC-EX Command Station Software (Open Source, so FREE **and** having new features added) XXX huh?
+  * ESP32 fast 32-bit microcontroller with built-in WiFi for up to 10 simultaneous throttle connections (more with JMRI)
   * Dual DCC or PWM DC 5A outputs and variable limit software to control current to the tracks
   * Accepts an EX-MotorShield8874 for additional 2 DCC/DC PWM/PROG outputs
   * DC outputs for 4 total power districts!
   * Programmable over-current protection on each output
   * Auto-reverser capability on any DCC output
-  * Railsync DCC signal input for DCC Booster mode
-  * DCC Booster mode can be automatically engaged on receipt of a Railsync DCC input signal - perfect for modular layouts!
+  * RailSync DCC signal input for DCC Booster mode
+  * DCC Booster mode can be automatically engaged on receipt of a RailSync DCC input signal - perfect for modular layouts!
   * Single power supply required (12V to 25V) to power the command station and the tracks!
   * USB-C connection for software updates, connection to EXWebThrottle or JMRI, and full logging/debugging
-  * ESP32 fast 32-bit microcontroller with built-in WiFi for up to 10 simultaneous throttle connections (more with JMRI)
   * Qwiic/STEMMA QT 3v3 compatible I2C connector for accessories like displays, turnouts, lighting, etc.
-  * Bundled graphical OLED display for status and diagnostics (extra displays can be added)
+  * Bundled graphical OLED display for status and diagnostics (extra displays can be added for status or station displays)
   * Short circuit protection for both tracks and reverse voltage input protection
 
 Benefits include: 
-  * Works immediatley out of the box - no need to assemble
+  * Works immediately out of the box - no need to assemble
   * More memory for larger EXRAIL automation/animation scripts than an Arduino Mega
   * Less voltage drop so that more of the power from the power supply reaches the track
   * No jumper wires, trace cutting, or bending pins required
@@ -106,24 +104,7 @@ Entrepreneurs wanting to use the design to offer commercial quantities to their 
 Board layout
 ==============
 
-  * Input Power Barrel jack
-  * USB-C Input Power / Data Connector
-  * Track A and B outputs
-  * Track Power LEDs
-  * QwiiC I2C connector
-  * Railsync connector
-  * Oled I2C Header
-  * GPIO Headers
-  * Dual I2C Pin Header
-  * Reset button
-  * ESP32 Microprocessor
-  * Antenna
-  * WiFi / User LED
-  * Unpopulated power pads - Just because you are going to ask. For possible future use.
-  * Motor Controller Chips - Hot area!
-  * Board labels
-
-.. figure:: /_static/images/ex-csb1/csb1_render_top.png
+.. figure:: /_static/images/ex-csb1/csb1_render_layout_top.png
    :alt: DCC-EX EX-CSB1 Express
    :scale: 40%
 
@@ -181,7 +162,7 @@ For DC operation, there is polarity in that one track is positive and the other 
 Use TrackManager to Set Outputs to DCC or DC Operation
 ========================================================
 
-Our Trackmanager technology allows you to configure any of 4 outputs to be DCC MAIN, DCC PROG, or DC PWM in order to run DCC or DC locos. 2 outputs are included with the EX-CSB1 with 2 more available with the purchase of an EX-MotorShield 8874 that just stacks on top. By default, output A is configured as a DCC MAIN track and output B is configured as a DCC Programming track. You can dynamically change the configuration using many throttles (such as JMRI or Engine Driver) or you can configure your CSB1 to always start in your desired configuration. Note that one of the outputs can be configured in such a way that it is another MAIN power district that automatically switches to programming mode when a programming command is issued by your throttle and then automatically switches back to MAIN. XXX have this be a NOTE?
+Our Trackmanager technology allows you to configure any of 4 outputs to be DCC MAIN, DCC PROG, or DC PWM in order to run DCC or DC locos. 2 outputs are included with the EX-CSB1 with 2 more available with the purchase of an EX-MotorShield 8874 that just stacks on top. By default, output A is configured as a DCC MAIN track and output B is configured as a DCC Programming track. You can dynamically change the configuration using throttles (such as |EX-WT|, |JMRI|, or |Engine Driver|) or you can configure your CSB1 to always start in your desired configuration. Note that one of the outputs can be configured in such a way that it is another MAIN power district that automatically switches to programming mode when a programming command is issued by your throttle and then automatically switches back to MAIN. XXX have this be a NOTE? See a detailed TM section?
 
 
 DCC Operation
@@ -202,7 +183,7 @@ It is important to note that this is not a varying DC voltage, Full voltage is a
 USB Connection to install the Command Station Software
 ======================================================
 
-The EX-CSB1 Express should come from your reseller with the EX-CommandStation software already installed. However, you may want to upgrade to the latest firmware or create your own EX-RAIL automation/animation scripts and upload them to the CS. A USB-A to USB-C cable (or a USB-C to USB-C cable if your computer has a USB-C connector) allows you to connect your CS to a computer to use our EX-Installer application or the Arduino IDE to install your files.
+The EX-CSB1 Express should come from your reseller with the EX-CommandStation software already installed. However, you may want to upgrade when a new version is released or create your own EX-RAIL automation/animation scripts and upload them to the CS. A USB-A to USB-C cable (or a USB-C to USB-C cable if your computer has a USB-C connector) allows you to connect your CSB1 to a computer to use our EX-Installer application or the Arduino IDE to install your files.
 
 Resetting the CS
 =================
@@ -210,7 +191,7 @@ Resetting the CS
 USB Connection to a Serial Monitor
 ===================================
 
-Using the appropriate USB-A to USB-C or USB-C to USB-C cable, you can use the Arduino IDE, EX-WebThrottle, or JMRI to act as a serial monitor to view diagnostic messages from the CS or send manual commands for testing or configuration.
+Using the appropriate USB-A to USB-C or USB-C to USB-C cable, you can use the Arduino IDE, EX-WebThrottle, or JMRI to act as a serial monitor to view diagnostic messages from the Command Station or send manual commands for testing or configuration.
 
 USB Connection to JMRI
 =======================

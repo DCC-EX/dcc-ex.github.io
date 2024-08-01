@@ -9,6 +9,10 @@
 
   <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>
 ..
+.. |EX-WS| raw:: html
+
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WiFiShield 8874</span>
+..
 .. |EX-WT| raw:: html
 
   <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span>
@@ -44,6 +48,10 @@
 .. |EX-MS| raw:: html
 
   <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span>
+..
+.. |EX-CSB1| raw:: html
+
+  <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation/Booster One Express</span>
 ..
 .. |BSC| raw:: html
 

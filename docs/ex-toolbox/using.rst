@@ -390,7 +390,7 @@ On the Servo motor screen,
 Sensor testing
 ==============
 
-.. figure:: /_static/images/ex-toolbox/servos.png
+.. figure:: /_static/images/ex-toolbox/sensors.png
    :alt: Sensors Screen
    :scale: 50%
    :align: right

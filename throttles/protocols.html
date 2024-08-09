@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX DCC DCC++ EX DCC++EX" name="keywords" />
@@ -8,31 +8,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WiThrottle Server, Web Server, DCC-EX Native Protocol Explained &mdash; DCC-EX Model Railroading  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/big_picture_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/sphinx_design_overrides.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=6724a1a8" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/big_picture_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=bfd9ebc6" />
+
+  
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/throttles/protocols.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-        <script src="../_static/js/platform.js"></script>
-        <script src="../_static/js/extra.js"></script>
-        <script src="../_static/dark_mode_js/default_light.js"></script>
-        <script src="../_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/design-tabs.js?v=f930bc37"></script>
+        <script src="../_static/js/platform.js?v=e56cde4b"></script>
+        <script src="../_static/js/extra.js?v=3424c10e"></script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=a2af87b2"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -607,7 +608,7 @@
              
 <p><a class="image-product-logo-float-right reference internal" href="../_images/product-logo-throttles.png"><img alt="Throttles" class="image-product-logo-float-right" src="../_images/product-logo-throttles.png" style="width: 320.0px; height: 64.0px;" /></a></p>
 <section id="withrottle-server-web-server-dcc-ex-native-protocol-explained">
-<h1>WiThrottle Server, Web Server, DCC-EX Native Protocol Explained<a class="headerlink" href="#withrottle-server-web-server-dcc-ex-native-protocol-explained" title="Permalink to this heading"></a></h1>
+<h1>WiThrottle Server, Web Server, DCC-EX Native Protocol Explained<a class="headerlink" href="#withrottle-server-web-server-dcc-ex-native-protocol-explained" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../begin/levels.html#conductor"><img alt="Conductor Hat" src="../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../support/index.html#contact-support-options" title="Request help or support"><img src="../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
 <aside class="sidebar">
 <nav class="contents local" id="on-this-page">
@@ -622,24 +623,24 @@
 </aside>
 <p>There are several competing standards and ways to connect external software such as Throttles (Controllers) to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> directly or indirectly through <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>. These standards are called “protocols” and the definition and instructions for how to implement them is called an API (Application Programming Interface). There is the <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> API using a <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Server</span></a>, the JMRI API using a Web Server, and the DCC-EX API using <a class="reference internal" href="../reference/glossary.html"><span class="doc">DCC-EX Native Commands</span></a>. You need to know that the language your throttle uses will work with how you want to connect to your Command Station.</p>
 <section id="the-dcc-ex-native-protocol">
-<h2><a class="toc-backref" href="#id1" role="doc-backlink">The DCC-EX Native Protocol</a><a class="headerlink" href="#the-dcc-ex-native-protocol" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">The DCC-EX Native Protocol</a><a class="headerlink" href="#the-dcc-ex-native-protocol" title="Link to this heading"></a></h2>
 <p>The first way to connect to <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> is to use our <a class="reference internal" href="../reference/glossary.html"><span class="doc">DCC-EX Native Protocol</span></a>. This is the set of commands that tell the Command Station how to control your trains. <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> understands simple command surrounded by brackets like this: “&lt;1 MAIN&gt;”. That command turns your main track power on.</p>
 <p>Since this is just sending characters back and forth across a serial connection, anything that can connect to an Arduino through a USB cable or one of the other serial ports using WiFi of Bluetooth can send <a class="reference internal" href="../reference/glossary.html"><span class="doc">DCC-EX Native Commands</span></a> to the Command Station. This method is fast, direct, and can take advantage of special features that exist only in <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>. You can even connect using the Arduino Serial Monitor or connect to our WiFi with a terminal program like PuTTY and type <a class="reference internal" href="../reference/glossary.html"><span class="doc">DCC-EX Native Commands</span></a> manually. Our <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span>, <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> and throttles (controllers) like <a class="reference internal" href="software/engine-driver.html"><span class="doc">Engine Driver</span></a>, <em>DCCpp CAB</em> and <em>DigiTrainsPro</em> send commands in DCC-EX Native format.</p>
 <p>Refer to <a class="reference internal" href="index.html#dcc-ex-dcc-ex-native-commands"><span class="std std-ref">this list</span></a> for the Throttles (Controllers) that are known to support the DCC-EX Native Protocol.</p>
 </section>
 <section id="the-withrottle-server">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">The WiThrottle Server</a><a class="headerlink" href="#the-withrottle-server" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">The WiThrottle Server</a><a class="headerlink" href="#the-withrottle-server" title="Link to this heading"></a></h2>
 <p>The <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> is the proprietary protocol developed by Brett Hoffman at <a class="reference external" href="https://www.WiThrottle.com">https://www.WiThrottle.com</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;">. Like the <a class="reference internal" href="../reference/glossary.html"><span class="doc">DCC-EX Native Protocol</span></a>, is consists of messages composed of strings of text characters sent across a serial connection that tell the Command Station how to control your layout. The command “PPA1”, for example turns the power on in WiThrottle. It can be confusing, but WiThrottle can refer to the protocol (as in <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Server</span></a> or WiThrottle compatible), but it also refers to the iOS throttle App called “WiThrottle” (it stands for WiFi Throttle).</p>
 <p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> allows you to use the “<a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Server</span></a>” built into <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> and other software and have them connect to your Command Station via a USB or serial connection, but <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> also implements a <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> server in our Command Station software itself. A “server” is just a fancy way of saying that there is software running inside JMRI and <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> that can understand WiThrottle commands and “serve” or “service” clients that want to connect and send WiThrottle commands. The ability of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> to natively “speak” WiThrottle means you can directly connect a <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> compatible Throttle (aka CAB) via WiFi or Bluetooth to the Command Station and run trains. But you can still connect to JMRI WiThrottle instead and connect JMRI to <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> with a USB cable. So <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> is bi-lingual, we speak DCC-EX AND <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a>! Apps like <a class="reference internal" href="software/engine-driver.html"><span class="doc">Engine Driver</span></a> and <a class="reference internal" href="software/withrottle.html"><span class="doc">wiThrottle</span></a> for iOS send commands in the WiThrottle format.</p>
 <p>Refer to <a class="reference internal" href="index.html#withrottle-protocol-based-throttles"><span class="std std-ref">this list</span></a> for the Throttles (Controllers) that are known to support the WiThrottle Protocol.</p>
 </section>
 <section id="the-jmri-web-server">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">The JMRI WEB Server</a><a class="headerlink" href="#the-jmri-web-server" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">The JMRI WEB Server</a><a class="headerlink" href="#the-jmri-web-server" title="Link to this heading"></a></h2>
 <p><a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> has two kinds of servers you can connect to built into the <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> software. We already mentioned the <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Server</span></a>, but <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> also has a WEB Server. Devices can connect to <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> and send commands like it would to a WEB page. This is yet another protocol and is supported by throttles like DigiTrainsPro. When connecting using a throttle that uses the WEB Server, you connect your throttle to that via WiFi, and then connect to <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> with a USB or Serial connection.</p>
 <p>Refer to <a class="reference internal" href="index.html#jmri-web-server-based-throttles"><span class="std std-ref">this list</span></a> for the Throttles (Controllers) that are known to support the JMRI Web Server Protocol.</p>
 </section>
 <section id="a-note-about-wifi-dropped-connections">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink">A Note about WiFi Dropped Connections</a><a class="headerlink" href="#a-note-about-wifi-dropped-connections" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">A Note about WiFi Dropped Connections</a><a class="headerlink" href="#a-note-about-wifi-dropped-connections" title="Link to this heading"></a></h2>
 <p>Phones and laptop like to think they are “smart” and want to connect you to the strongest signal and to a network that has internet capability. If you use the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> as an Access Point (AP), which doesn’t connect to the internet, and you connect to <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> with your throttle, your device may disconnect you from the Command Station without you knowing and without your permission. You should turn off the option to “automatically connect” to your home network. You may even have to “forget” your home network when you are using your wireless device to connect to <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>. If you would rather, you can change settings in your config.h file to connect to your home network as a client instead running as an AP, and then have your throttle devices find the Command Station by its IP Address on your home network. You can find out more about that in <a class="reference internal" href="../ex-commandstation/get-started/wifi-setup.html"><span class="doc">Wifi Setup</span></a></p>
 </section>
 </section>
@@ -666,7 +667,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f3716aefaf0>
+    <jinja2.runtime.BlockReference object at 0x7f745ddc0970>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

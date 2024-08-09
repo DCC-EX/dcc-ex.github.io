@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX DCC DCC++ EX DCC++EX" name="keywords" />
@@ -8,31 +8,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DCC-EX Native API Reference &mdash; DCC-EX Model Railroading  documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/big_picture_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/sphinx_design_overrides.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/dark_mode_css/general.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/dark_mode_css/dark.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=6724a1a8" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/big_picture_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=bfd9ebc6" />
+
+  
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/reference/developers/api.html" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
-        <script src="../../_static/design-tabs.js"></script>
-        <script src="../../_static/js/platform.js"></script>
-        <script src="../../_static/js/extra.js"></script>
-        <script src="../../_static/dark_mode_js/default_light.js"></script>
-        <script src="../../_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+        <script src="../../_static/js/platform.js?v=e56cde4b"></script>
+        <script src="../../_static/js/extra.js?v=3424c10e"></script>
+        <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../../_static/dark_mode_js/theme_switcher.js?v=a2af87b2"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -608,7 +609,7 @@
              
 <p><a class="image-product-logo-float-right reference internal" href="../../_images/product-logo-reference.png"><img alt="Reference" class="image-product-logo-float-right" src="../../_images/product-logo-reference.png" style="width: 320.0px; height: 64.0px;" /></a></p>
 <section id="dcc-ex-native-api-reference">
-<h1>DCC-EX Native API Reference<a class="headerlink" href="#dcc-ex-native-api-reference" title="Permalink to this heading"></a></h1>
+<h1>DCC-EX Native API Reference<a class="headerlink" href="#dcc-ex-native-api-reference" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
 <nav class="contents local" id="on-this-page">
@@ -635,7 +636,7 @@
 <p>If you are looking for information on the WiThrottle protocol, you will find that documented on the <a class="reference external" href="https://www.jmri.org/help/en/package/jmri/jmrit/withrottle/Protocol.shtml">JMRI website</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;">.</p>
 <p>For detailed information on the various commands and responses available with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, refer to the <a class="reference internal" href="../software/command-summary-consolidated.html"><span class="doc">DCC-EX Native Commands Summary Reference</span></a> page.</p>
 <section id="api-client-definition">
-<h2><a class="toc-backref" href="#id1" role="doc-backlink">1. API Client definition</a><a class="headerlink" href="#api-client-definition" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">1. API Client definition</a><a class="headerlink" href="#api-client-definition" title="Link to this heading"></a></h2>
 <p>This API reference applies to any API client that makes use of these commands and responses.</p>
 <p>API clients may include:</p>
 <ul class="simple">
@@ -645,82 +646,82 @@
 </ul>
 </section>
 <section id="serial-port-and-wifi-ethernet-monitoring">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">2. Serial port and WiFi/Ethernet monitoring</a><a class="headerlink" href="#serial-port-and-wifi-ethernet-monitoring" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">2. Serial port and WiFi/Ethernet monitoring</a><a class="headerlink" href="#serial-port-and-wifi-ethernet-monitoring" title="Link to this heading"></a></h2>
 <p>The input collectors must monitor the serial ports on a byte by byte basis, look for a beginning <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> with ending <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, and ignore anything outside that before passing commands in for parsing.</p>
 <p>The WiFI or ethernet collectors work on a per-transmission basis and the first byte of input determines whether the transmitted block gets sent for parsing as an API or WiThrottle command or response.</p>
 <p><strong>Any input received that an API client does not understand must be discarded and ignored.</strong></p>
 </section>
 <section id="general-api-command-usage-and-responses">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">3. General API command usage and responses</a><a class="headerlink" href="#general-api-command-usage-and-responses" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">3. General API command usage and responses</a><a class="headerlink" href="#general-api-command-usage-and-responses" title="Link to this heading"></a></h2>
 <p>API commands are to be sent using the message format outlined below, with responses conforming to the same format.</p>
 <p>Due to the nature of <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> being able to be operated by multiple API clients concurrently combined with the fact there is no unique client identifier, there is no guarantee that a response received directly after a command is sent is related. Care must be taken to take this into account.</p>
 <p>To repeat from above, any input received that an API client does not understand should be discarded and ignored.</p>
 <section id="command-responses">
-<h3>3.1. Command responses<a class="headerlink" href="#command-responses" title="Permalink to this heading"></a></h3>
+<h3>3.1. Command responses<a class="headerlink" href="#command-responses" title="Link to this heading"></a></h3>
 <p>Command responses should conform to the syntax standard to ensure they are processed correctly by API clients.</p>
 </section>
 <section id="broadcast-responses">
-<h3>3.2. Broadcast responses<a class="headerlink" href="#broadcast-responses" title="Permalink to this heading"></a></h3>
+<h3>3.2. Broadcast responses<a class="headerlink" href="#broadcast-responses" title="Link to this heading"></a></h3>
 <p>Broadcast information is sent to all API clients along with WiThrottle responses on the understanding that API clients will discard and ignore any responses they do not understand.</p>
 <p>It is mandatory that an API client accepts and ignores a broadcast it doesn’t understand.</p>
 </section>
 <section id="diagnostics-and-other-responses">
-<h3>3.3. Diagnostics and other responses<a class="headerlink" href="#diagnostics-and-other-responses" title="Permalink to this heading"></a></h3>
+<h3>3.3. Diagnostics and other responses<a class="headerlink" href="#diagnostics-and-other-responses" title="Link to this heading"></a></h3>
 <p>If diagnostic commands are enabled, these are sent to the USB serial port.</p>
 <p>If you connect an API client to the USB serial port, you will get these correctly wrapped but do not expect to understand them.</p>
 <p>If, however, WiFi debug is enabled, or the <code class="docutils literal notranslate"><span class="pre">&lt;+&gt;</span></code> command is used, then the wrapping can no longer be guaranteed as the wifi traffic may contain <code class="docutils literal notranslate"><span class="pre">*&gt;</span></code>.</p>
 </section>
 </section>
 <section id="general-message-format">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink">4. General Message Format</a><a class="headerlink" href="#general-message-format" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">4. General Message Format</a><a class="headerlink" href="#general-message-format" title="Link to this heading"></a></h2>
 <p>A DCC-EX API message consists of a leading <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> symbol, a single character OPCODE, zero to n parameters separated by spaces, and a terminating <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> symbol:</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;OPCODE</span> <span class="pre">Param1</span> <span class="pre">Param2</span> <span class="pre">…</span> <span class="pre">ParamX&gt;</span></code></p>
 <p>Messages cannot be nested, and a second <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> inside a message constitutes a syntax error.</p>
 </section>
 <section id="error-and-empty-responses">
-<h2><a class="toc-backref" href="#id5" role="doc-backlink">5. Error and empty responses</a><a class="headerlink" href="#error-and-empty-responses" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">5. Error and empty responses</a><a class="headerlink" href="#error-and-empty-responses" title="Link to this heading"></a></h2>
 <p>A command sent that is invalid has a response of <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code>.</p>
 <p>Memory limitations prohibit more detailed error messages.</p>
 </section>
 <section id="parameter-values">
-<h2><a class="toc-backref" href="#id6" role="doc-backlink">6. Parameter values</a><a class="headerlink" href="#parameter-values" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">6. Parameter values</a><a class="headerlink" href="#parameter-values" title="Link to this heading"></a></h2>
 <p>There are three types of parameters in use:</p>
 <section id="keyword">
-<h3>6.1. Keyword<a class="headerlink" href="#keyword" title="Permalink to this heading"></a></h3>
+<h3>6.1. Keyword<a class="headerlink" href="#keyword" title="Link to this heading"></a></h3>
 <p>These are a consecutive sequence of one or more non-blank characters consisting of <code class="docutils literal notranslate"><span class="pre">a-z</span></code>, <code class="docutils literal notranslate"><span class="pre">A-Z</span></code>, <code class="docutils literal notranslate"><span class="pre">0-9</span></code>, or <code class="docutils literal notranslate"><span class="pre">_</span></code>, e.g. “JOIN”, “WIFI”, “ON”, “SPEED28”.</p>
 <p>Keyword parameters are internally hashed to created integers and may start with any of these characters. The <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> code does not differentiate between keywords and numbers internally.</p>
 <p>For example, a keyword of “3RAIL” would be valid if it were to be implemented.</p>
 </section>
 <section id="numeric">
-<h3>6.2. Numeric<a class="headerlink" href="#numeric" title="Permalink to this heading"></a></h3>
+<h3>6.2. Numeric<a class="headerlink" href="#numeric" title="Link to this heading"></a></h3>
 <p>These are a consecutive sequence of one or more digits, with an optional leading <code class="docutils literal notranslate"><span class="pre">-</span></code> to indicate a negative value. Unless noted in <a class="reference internal" href="#a-1-parameter-values">a.1. parameter values</a>, these numbers are base10.</p>
 </section>
 <section id="string">
-<h3>6.3. String<a class="headerlink" href="#string" title="Permalink to this heading"></a></h3>
+<h3>6.3. String<a class="headerlink" href="#string" title="Link to this heading"></a></h3>
 <p>These are surrounded by a leading and trailing <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> and may contain text including spaces e.g. “This is a turnout description”.</p>
 </section>
 </section>
 <section id="appendix-a-exceptions">
-<h2><a class="toc-backref" href="#id7" role="doc-backlink">Appendix A. Exceptions</a><a class="headerlink" href="#appendix-a-exceptions" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Appendix A. Exceptions</a><a class="headerlink" href="#appendix-a-exceptions" title="Link to this heading"></a></h2>
 <section id="a-1-parameter-values">
-<h3>A.1. Parameter values<a class="headerlink" href="#a-1-parameter-values" title="Permalink to this heading"></a></h3>
+<h3>A.1. Parameter values<a class="headerlink" href="#a-1-parameter-values" title="Link to this heading"></a></h3>
 <p>Due to legacy code and backwards compatibility requirements, there are two OPCODES that expect hexadecimal parameter values.</p>
 <p>These are the <code class="docutils literal notranslate"><span class="pre">&lt;M&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;P&gt;</span></code> commands documented in the <a class="reference internal" href="../software/command-reference.html#send-packet-to-the-track"><span class="std std-ref">SEND PACKET TO THE TRACK</span></a> section of the Command Reference.</p>
 </section>
 </section>
 <section id="appendix-b-suggested-parameter-parsing-sequence">
-<h2><a class="toc-backref" href="#id8" role="doc-backlink">Appendix B. Suggested parameter parsing sequence</a><a class="headerlink" href="#appendix-b-suggested-parameter-parsing-sequence" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Appendix B. Suggested parameter parsing sequence</a><a class="headerlink" href="#appendix-b-suggested-parameter-parsing-sequence" title="Link to this heading"></a></h2>
 <p>To obtain the parameters:</p>
 <section id="b-1-obtain-the-opcode">
-<h3>B.1. Obtain the OPCODE<a class="headerlink" href="#b-1-obtain-the-opcode" title="Permalink to this heading"></a></h3>
+<h3>B.1. Obtain the OPCODE<a class="headerlink" href="#b-1-obtain-the-opcode" title="Link to this heading"></a></h3>
 <p>The first level of parsing is to obtain the single character, case sensitive OPCODE which is preceded by a <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> character.</p>
 </section>
 <section id="b-2-obtain-the-parameters">
-<h3>B.2. Obtain the parameters<a class="headerlink" href="#b-2-obtain-the-parameters" title="Permalink to this heading"></a></h3>
+<h3>B.2. Obtain the parameters<a class="headerlink" href="#b-2-obtain-the-parameters" title="Link to this heading"></a></h3>
 <p>The second level of parsing takes the next non-blank parameter along with each blank separated parameter and turns them into integers. There are no decimal point or float inputs. A prefix <code class="docutils literal notranslate"><span class="pre">-</span></code> may be used.</p>
 </section>
 <section id="b-3-example-command-and-response">
-<h3>B.3. Example command and response<a class="headerlink" href="#b-3-example-command-and-response" title="Permalink to this heading"></a></h3>
+<h3>B.3. Example command and response<a class="headerlink" href="#b-3-example-command-and-response" title="Link to this heading"></a></h3>
 <p>A simple example is sending an API command to retrieve the list of defined turnouts.</p>
 <p>The command to retrieve the list of defined turnouts is <code class="docutils literal notranslate"><span class="pre">&lt;JT&gt;</span></code>.</p>
 <p>Using our syntax standard, “J” is the OPCODE, and “T” is the parameter.</p>
@@ -729,9 +730,9 @@
 </section>
 </section>
 <section id="appendix-c-further-information">
-<h2><a class="toc-backref" href="#id9" role="doc-backlink">Appendix C. Further information</a><a class="headerlink" href="#appendix-c-further-information" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Appendix C. Further information</a><a class="headerlink" href="#appendix-c-further-information" title="Link to this heading"></a></h2>
 <section id="c-1-keyword-parameters-are-not-case-sensitive">
-<h3>C.1. Keyword parameters are not case sensitive<a class="headerlink" href="#c-1-keyword-parameters-are-not-case-sensitive" title="Permalink to this heading"></a></h3>
+<h3>C.1. Keyword parameters are not case sensitive<a class="headerlink" href="#c-1-keyword-parameters-are-not-case-sensitive" title="Link to this heading"></a></h3>
 <p>Unlike OPCODES, keyword parameters are not case sensitive.</p>
 <p>As noted, parameters containing <code class="docutils literal notranslate"><span class="pre">a-z</span></code>, <code class="docutils literal notranslate"><span class="pre">A-Z</span></code>, or <code class="docutils literal notranslate"><span class="pre">_</span></code> are hashed to create integers which results in commands such as <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">WIFI</span> <span class="pre">ON&gt;</span></code> being treated identically to <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">wifi</span> <span class="pre">on&gt;</span></code>.</p>
 </section>
@@ -760,7 +761,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f371443da80>
+    <jinja2.runtime.BlockReference object at 0x7f745dd7a5c0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

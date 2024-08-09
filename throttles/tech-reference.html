@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX DCC DCC++ EX DCC++EX" name="keywords" />
@@ -8,31 +8,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Technical Reference for Throttle Developers &mdash; DCC-EX Model Railroading  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/big_picture_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/sphinx_design_overrides.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=6724a1a8" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/big_picture_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=bfd9ebc6" />
+
+  
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/throttles/tech-reference.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-        <script src="../_static/js/platform.js"></script>
-        <script src="../_static/js/extra.js"></script>
-        <script src="../_static/dark_mode_js/default_light.js"></script>
-        <script src="../_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/design-tabs.js?v=f930bc37"></script>
+        <script src="../_static/js/platform.js?v=e56cde4b"></script>
+        <script src="../_static/js/extra.js?v=3424c10e"></script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=a2af87b2"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -607,7 +608,7 @@
              
 <p><a class="image-product-logo-float-right reference internal" href="../_images/product-logo-throttles.png"><img alt="Throttles" class="image-product-logo-float-right" src="../_images/product-logo-throttles.png" style="width: 320.0px; height: 64.0px;" /></a></p>
 <section id="technical-reference-for-throttle-developers">
-<h1>Technical Reference for Throttle Developers<a class="headerlink" href="#technical-reference-for-throttle-developers" title="Permalink to this heading"></a></h1>
+<h1>Technical Reference for Throttle Developers<a class="headerlink" href="#technical-reference-for-throttle-developers" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
 <nav class="contents local" id="on-this-page">
@@ -638,7 +639,7 @@
 <p>This page is intended to capture relevant information to assist those who develop throttles compatible with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> using the <a class="reference internal" href="../reference/glossary.html"><span class="doc">DCC-EX Native Protocol</span></a>, not the WiThrottle protocol.</p>
 <p>This page should be read in conjunction with the <a class="reference internal" href="../reference/developers/api.html"><span class="doc">DCC-EX Native API Reference</span></a> in order to understand how to send and parse <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> API commands correctly, and ignore any irrelevant commands.</p>
 <section id="considerations-for-throttle-developers">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">Considerations for throttle developers</a><a class="headerlink" href="#considerations-for-throttle-developers" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Considerations for throttle developers</a><a class="headerlink" href="#considerations-for-throttle-developers" title="Link to this heading"></a></h2>
 <p>For anyone developing a throttle or controller application, these considerations should be taken into account:</p>
 <ul class="simple">
 <li><p>Refer to the <a class="reference internal" href="../reference/developers/api.html"><span class="doc">DCC-EX Native API Reference</span></a></p></li>
@@ -650,13 +651,13 @@
 </ul>
 </section>
 <section id="dcc-ex-native-command-library-dccexprotocol">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">DCC-EX Native command library - DCCEXProtocol</a><a class="headerlink" href="#dcc-ex-native-command-library-dccexprotocol" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">DCC-EX Native command library - DCCEXProtocol</a><a class="headerlink" href="#dcc-ex-native-command-library-dccexprotocol" title="Link to this heading"></a></h2>
 <p>For throttle developers that want to focus on throttle features and functionality, the <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> team have now released an Arduino library that communicates with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> via the native <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> commands.</p>
 <p>This library exposes numerous methods to interact with the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> and the various objects including locos, turnouts/points, routes, and turntables.</p>
 <p>For further information, refer to the <a class="reference external" href="https://dcc-ex.com/DCCEXProtocol/index.html">DCC-EX Native command library - DCCEXProtocol</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> documentation.</p>
 </section>
 <section id="responding-to-appropriate-information">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink">Responding to appropriate information</a><a class="headerlink" href="#responding-to-appropriate-information" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Responding to appropriate information</a><a class="headerlink" href="#responding-to-appropriate-information" title="Link to this heading"></a></h2>
 <p>In addition to understanding the specific throttle commands details on this page, throttles/controllers also must understand and respond appropriately to <strong>broadcasts</strong> sent from the <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> API.</p>
 <p>These are the <em>key</em> broadcast responses that should be understood:</p>
 <ul class="simple">
@@ -670,7 +671,7 @@
 <p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
 <p>There are now turntable/traverser <code class="docutils literal notranslate"><span class="pre">&lt;i</span> <span class="pre">id</span> <span class="pre">position</span> <span class="pre">moving&gt;</span></code> broadcast responses if the new turntable/traverser objects are implemented (see <a class="reference internal" href="../reference/software/command-summary-consolidated.html#turntables-traversers"><span class="std std-ref">Turntables/Traversers</span></a>).</p>
 <section id="working-with-track-power-states">
-<h3><a class="toc-backref" href="#id5" role="doc-backlink">Working with track power states</a><a class="headerlink" href="#working-with-track-power-states" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Working with track power states</a><a class="headerlink" href="#working-with-track-power-states" title="Link to this heading"></a></h3>
 <p>Track power can be On, Off, or Unknown. There is no broadcast of an Unknown power state though, meaning a throttle/controller must start with track power flagged as Unknown.</p>
 <p>The throttle should only flag the power state as On or Off when either:</p>
 <ul class="simple">
@@ -679,7 +680,7 @@
 </ul>
 </section>
 <section id="key-throttle-commands">
-<h3><a class="toc-backref" href="#id6" role="doc-backlink">Key Throttle commands</a><a class="headerlink" href="#key-throttle-commands" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Key Throttle commands</a><a class="headerlink" href="#key-throttle-commands" title="Link to this heading"></a></h3>
 <p>Key throttle specific commands are summarised here, refer below for elaboration on the details with examples.  Refer to the <a class="reference internal" href="../reference/software/command-summary-consolidated.html"><span class="doc">DCC-EX Native Commands Summary Reference</span></a> for detailed information.</p>
 <table class="command-table docutils align-default">
 <thead>
@@ -742,15 +743,15 @@
 </section>
 <hr class="docutils" />
 <section id="additional-details">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">Additional Details</a><a class="headerlink" href="#additional-details" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Additional Details</a><a class="headerlink" href="#additional-details" title="Link to this heading"></a></h3>
 <p>Refer to the <a class="reference internal" href="../reference/software/command-summary-consolidated.html"><span class="doc">DCC-EX Native Commands Summary Reference</span></a> for detailed information on these commands.</p>
 <section id="setting-cab-loco-status">
-<h4><a class="toc-backref" href="#id8" role="doc-backlink">Setting cab (loco) status</a><a class="headerlink" href="#setting-cab-loco-status" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id8" role="doc-backlink">Setting cab (loco) status</a><a class="headerlink" href="#setting-cab-loco-status" title="Link to this heading"></a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cabid</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code> - Sets a cab (loco) speed and direction. (See below for the response.)</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">funct</span> <span class="pre">state&gt;</span></code> - Turns cab (loco) decoder functions ON and OFF. (See below for the response.)</p>
 </section>
 <section id="obtaining-loco-cab-status">
-<h4><a class="toc-backref" href="#id9" role="doc-backlink">Obtaining loco (cab) status</a><a class="headerlink" href="#obtaining-loco-cab-status" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id9" role="doc-backlink">Obtaining loco (cab) status</a><a class="headerlink" href="#obtaining-loco-cab-status" title="Link to this heading"></a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cabid&gt;</span></code> - Requests a deliberate update on the cab speed/functions in the same format as the cab broadcast.</p>
 <blockquote>
 <div><p>Example response:</p>
@@ -775,7 +776,7 @@
 </div></blockquote>
 </section>
 <section id="turnouts-points">
-<h4><a class="toc-backref" href="#id10" role="doc-backlink">Turnouts/Points</a><a class="headerlink" href="#turnouts-points" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id10" role="doc-backlink">Turnouts/Points</a><a class="headerlink" href="#turnouts-points" title="Link to this heading"></a></h4>
 <p>The conventional turnout definition commands and the <code class="docutils literal notranslate"><span class="pre">&lt;H&gt;</span></code> responses do not contain information about the turnout description which may have been provided in an EX-RAIL script. A turnout description is much more user friendly than the identifier (e.g. T123), and having a list helps the throttle UI build a suitable set of buttons.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JT&gt;</span></code> - Returns a list of turnout IDs. The throttle should be uninterested in the turnout technology used but needs to know the IDs it can throw/close and monitor the current state.</p>
 <blockquote>
@@ -805,7 +806,7 @@
 </div>
 </section>
 <section id="automations-routes">
-<h4><a class="toc-backref" href="#id11" role="doc-backlink">Automations/Routes</a><a class="headerlink" href="#automations-routes" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id11" role="doc-backlink">Automations/Routes</a><a class="headerlink" href="#automations-routes" title="Link to this heading"></a></h4>
 <p>A throttle needs to know which EX-RAIL Automations and Routes it can show the user.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JA&gt;</span></code> - Returns a list of Automations/Routes.</p>
 <blockquote>
@@ -824,7 +825,7 @@
 </ul>
 </div></blockquote>
 <section id="what-s-the-difference">
-<h5>What’s the difference?<a class="headerlink" href="#what-s-the-difference" title="Permalink to this heading"></a></h5>
+<h5>What’s the difference?<a class="headerlink" href="#what-s-the-difference" title="Link to this heading"></a></h5>
 <p>A <strong>ROUTE</strong> is just a call to an EX-RAIL ROUTE, traditionally to set some turnouts or signals but can be used to perform any kind of EX-RAIL function, but is not expecting to know the loco ID.</p>
 <ul class="simple">
 <li><p>A route can be triggered by sending, for example, <code class="docutils literal notranslate"><span class="pre">&lt;/START</span> <span class="pre">13&gt;</span></code>.</p></li>
@@ -836,7 +837,7 @@
 </section>
 </section>
 <section id="roster-information">
-<h4><a class="toc-backref" href="#id12" role="doc-backlink">Roster Information</a><a class="headerlink" href="#roster-information" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id12" role="doc-backlink">Roster Information</a><a class="headerlink" href="#roster-information" title="Link to this heading"></a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JR&gt;</span></code> - Requests a list of cab IDs from the roster.</p>
 <blockquote>
 <div><p>Example responses:</p>
@@ -854,7 +855,7 @@
 </div></blockquote>
 </section>
 <section id="turntables-traversers">
-<h4><a class="toc-backref" href="#id13" role="doc-backlink">Turntables/Traversers</a><a class="headerlink" href="#turntables-traversers" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id13" role="doc-backlink">Turntables/Traversers</a><a class="headerlink" href="#turntables-traversers" title="Link to this heading"></a></h4>
 <p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
 <p>A new feature has been added to support control of turntables/traversers from throttles, including the ability for throttles to “draw” turntable positions as defined to support graphical operation. If <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> commands are used to define turntables and their associated positions, a description for the turntable as well as each position is able to be defined.</p>
 <p>Note that to obtain a complete definition for a turntable/traverser, the turntable object needs to be queried first (<code class="docutils literal notranslate"><span class="pre">&lt;JO</span> <span class="pre">id&gt;</span></code>) followed by the position query (<code class="docutils literal notranslate"><span class="pre">&lt;JP</span> <span class="pre">id&gt;</span></code>) to obtain all defined positions for the object.</p>
@@ -886,7 +887,7 @@
 </section>
 </section>
 <section id="commands-to-avoid">
-<h2><a class="toc-backref" href="#id14" role="doc-backlink">Commands to avoid</a><a class="headerlink" href="#commands-to-avoid" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">Commands to avoid</a><a class="headerlink" href="#commands-to-avoid" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">func1</span> <span class="pre">func2&gt;</span></code> - Use <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">function</span> <span class="pre">1/0&gt;</span></code> instead</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;t</span>&#160; <span class="pre">slot</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code> - Just drop the slot number</p></li>
@@ -918,7 +919,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f3712b0c550>
+    <jinja2.runtime.BlockReference object at 0x7f744dfb3fd0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX DCC DCC++ EX DCC++EX" name="keywords" />
@@ -8,31 +8,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Install using the Arduino IDE &mdash; DCC-EX Model Railroading  documentation</title>
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/dccex_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/big_picture_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/sphinx_design_overrides.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/dark_mode_css/general.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/dark_mode_css/dark.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/dccex_theme.css?v=6724a1a8" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/big_picture_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css?v=bfd9ebc6" />
+
+  
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/ex-commandstation/advanced-setup/installation-options/arduino-ide.html" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
-        <script src="../../../_static/design-tabs.js"></script>
-        <script src="../../../_static/js/platform.js"></script>
-        <script src="../../../_static/js/extra.js"></script>
-        <script src="../../../_static/dark_mode_js/default_light.js"></script>
-        <script src="../../../_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+        <script src="../../../_static/js/platform.js?v=e56cde4b"></script>
+        <script src="../../../_static/js/extra.js?v=3424c10e"></script>
+        <script src="../../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../../../_static/dark_mode_js/theme_switcher.js?v=a2af87b2"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -609,7 +610,7 @@
              
 <p><a class="image-product-logo-float-right reference internal" href="../../../_images/product-logo-ex-commandstation.png"><img alt="EX-CommandStation" class="image-product-logo-float-right" src="../../../_images/product-logo-ex-commandstation.png" style="width: 320.0px; height: 64.0px;" /></a></p>
 <section id="install-using-the-arduino-ide">
-<h1>Install using the Arduino IDE<a class="headerlink" href="#install-using-the-arduino-ide" title="Permalink to this heading"></a></h1>
+<h1>Install using the Arduino IDE<a class="headerlink" href="#install-using-the-arduino-ide" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../../support/index.html#contact-support-options" title="Request help or support"><img src="../../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
 <aside class="sidebar">
 <nav class="contents local" id="on-this-page">
@@ -635,65 +636,65 @@
 <p>Those on the Tinkerer or Engineer path (see <a class="reference internal" href="../../../begin/levels.html"><span class="doc">Choose Your Comfort Level</span></a>) may want to make changes to the code, or just learn more about how the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software works. At a minimum, you may need to change options in the config.h file, or use the IDE’s “Serial Monitor” to monitor your Command Station, get logs if something is not working, or enter commands to test out features.</p>
 <p><strong>You can click on most of the images below to enlarge them</strong></p>
 <section id="download-and-install-the-arduino-ide">
-<h2><a class="toc-backref" href="#id9" role="doc-backlink">Download and install the Arduino IDE</a><a class="headerlink" href="#download-and-install-the-arduino-ide" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Download and install the Arduino IDE</a><a class="headerlink" href="#download-and-install-the-arduino-ide" title="Link to this heading"></a></h2>
 <p>Rather than go into details that are already covered in great detail on the Arduino web page, just follow the instructions in the following link and then return here.</p>
 <p><a class="reference external" href="https://www.arduino.cc/en/Guide">Arduino IDE Guide</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 </section>
 <section id="download-the-dcc-ex-zip-file">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Download the DCC-EX ZIP file</a><a class="headerlink" href="#download-the-dcc-ex-zip-file" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Download the DCC-EX ZIP file</a><a class="headerlink" href="#download-the-dcc-ex-zip-file" title="Link to this heading"></a></h2>
 <p>Use the link to either the ZIP or TAR file at the bottom of our GitHub page here:</p>
 <p><a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/releases">DCC-EX Download Page</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 </section>
 <section id="unzip-the-file-into-the-arduino-ide-project-folder">
-<h2><a class="toc-backref" href="#id11" role="doc-backlink">Unzip the file into the Arduino IDE project folder</a><a class="headerlink" href="#unzip-the-file-into-the-arduino-ide-project-folder" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Unzip the file into the Arduino IDE project folder</a><a class="headerlink" href="#unzip-the-file-into-the-arduino-ide-project-folder" title="Link to this heading"></a></h2>
 <p>Find the ZIP file on your computer and unzip it. You should now have a folder with the entire <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> project inside it called “CommandStation-EX”. Make sure this folder is at the root level with all your other projects. Note that the name of this folder <strong>MUST</strong> be “CommandStation-EX”! Do not change it. Because of the way the Arduino IDE works, the folder name must match the .ino file inside it.</p>
 </section>
 <section id="copy-the-config-example-h-file-or-rename-it">
-<h2><a class="toc-backref" href="#id12" role="doc-backlink">Copy the config.example.h file (or rename it)</a><a class="headerlink" href="#copy-the-config-example-h-file-or-rename-it" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Copy the config.example.h file (or rename it)</a><a class="headerlink" href="#copy-the-config-example-h-file-or-rename-it" title="Link to this heading"></a></h2>
 <p><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> provides you with an example configuration file. This file holds settings that you can change for things like your choice of motor controller, WiFi login credentials, etc. Rather than a future update potentially causing you to lose any changes you make to your configuration, we give this file a different name and leave it up to you to edit if you need to. Simply rename this file to <code class="docutils literal notranslate"><span class="pre">config.h</span></code>.</p>
 </section>
 <section id="run-the-arduino-ide">
-<h2><a class="toc-backref" href="#id13" role="doc-backlink">Run the Arduino IDE</a><a class="headerlink" href="#run-the-arduino-ide" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Run the Arduino IDE</a><a class="headerlink" href="#run-the-arduino-ide" title="Link to this heading"></a></h2>
 <p>Start the Arduino IDE. You should see something like this:</p>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../../../_images/arduino_ide.jpg"><img alt="Arduino IDE" src="../../../_images/arduino_ide.jpg" style="width: 576.0px; height: 536.4px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 123 </span><span class="caption-text">Arduino IDE</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 123 </span><span class="caption-text">Arduino IDE</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="open-the-commandstation-ex-project">
-<h2><a class="toc-backref" href="#id14" role="doc-backlink">Open the CommandStation-EX Project</a><a class="headerlink" href="#open-the-commandstation-ex-project" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">Open the CommandStation-EX Project</a><a class="headerlink" href="#open-the-commandstation-ex-project" title="Link to this heading"></a></h2>
 <p>Choose “File -&gt; Open” from the menu to open the file manager.</p>
 <figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../../../_images/file_open.jpg"><img alt="File Open Menu" src="../../../_images/file_open.jpg" style="width: 488.7px; height: 497.7px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 124 </span><span class="caption-text">File Open Menu</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 124 </span><span class="caption-text">File Open Menu</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Then click on the “CommandStation-EX” sketch folder to open it. Scroll down to the “CommandStation-EX.ino” file (It should have the round, blue Arduino logo on it) and open that file. We also provide example .ino files for those advanced users who want to use optional features like the “User Command Override” feature, high current motor boards, etc. But for now, and for most users, this will be all you need.</p>
 <figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="../../../_images/commandstation-ex.jpg"><img alt="Find the CommandStation-EX.ino File" src="../../../_images/commandstation-ex.jpg" style="width: 577.8000000000001px; height: 458.1px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 125 </span><span class="caption-text">Find the CommandStation-EX.ino file</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 125 </span><span class="caption-text">Find the CommandStation-EX.ino file</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="edit-the-config-h-file-optional">
-<h2><a class="toc-backref" href="#id15" role="doc-backlink">Edit the config.h file (optional)</a><a class="headerlink" href="#edit-the-config-h-file-optional" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">Edit the config.h file (optional)</a><a class="headerlink" href="#edit-the-config-h-file-optional" title="Link to this heading"></a></h2>
 <p>If you are using the standard Arduino motor shield, and if optionally using one of the supported WiFi boards and want to connect directly to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> in Access Point Mode (AP) from your WiFi controller, there is nothing more to do! Just upload the software to the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> in the next step.</p>
 <p>If you are using a different motor driver (shield or board), or if you wish to connect your Command Station to your home network instead of having a separate access point, follow the instructions in the <code class="docutils literal notranslate"><span class="pre">config.h</span></code> file</p>
 <p>If you want to take a look at this file or make a simple change, just open the file and take a look. You should see many files open in tabs at the top of the IDE window. Find the down facing triangle near the upper right of the window and click on it to open the entire list of files. Scroll down to near the bottom and click on the “config.h” file you renamed in the previous step to open it in the editing window. If you are sure of your changes, make sure to click on “File -&gt; Save” from the top menu to save them.</p>
 </section>
 <section id="select-the-board-type-and-com-port">
-<h2><a class="toc-backref" href="#id16" role="doc-backlink">Select the board type and COM port</a><a class="headerlink" href="#select-the-board-type-and-com-port" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id16" role="doc-backlink">Select the board type and COM port</a><a class="headerlink" href="#select-the-board-type-and-com-port" title="Link to this heading"></a></h2>
 <p>Before you attempt this step, make sure that you have everything connected properly from the <a class="reference internal" href="../../get-started/assembly.html"><span class="doc">assembly page</span></a>. And a final reminder to <strong>make sure you cut the Vin trace</strong> on the bottom of the Arduino Motor Shield. Ready? Proceed.</p>
 <p>Connect the computer to the Arduino with the USB cable. Note the 5V coming from your computer/Raspberry Pi is enough to power the Mega, since it bypasses the regulator that converts your 7-9V power supply down to 5V, and goes right to the 5V bus on the board. So don’t be alarmed by lights on your Arduino.</p>
 <p>From the “Tools” menu select the “Board” menu, then “Arduino AVR boards”, and then “Arduino Mega or Mega 2560”.</p>
 <figure class="align-default" id="id4">
 <a class="reference internal image-reference" href="../../../_images/board_type_mega.jpg"><img alt="Select Arduino Mega" src="../../../_images/board_type_mega.jpg" style="width: 720.0px; height: 291.6px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 126 </span><span class="caption-text">Select your board type</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 126 </span><span class="caption-text">Select your board type</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Then select “Processor” and make sure it says “ATMega2560”</p>
@@ -701,28 +702,28 @@
 <figure class="align-default" id="id5">
 <a class="reference internal image-reference" href="../../../_images/board_port_mega.jpg"><img alt="Select the COM Port" src="../../../_images/board_port_mega.jpg" style="width: 720.0px; height: 261.90000000000003px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 127 </span><span class="caption-text">Select the correct COM Port</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 127 </span><span class="caption-text">Select the correct COM Port</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="upload-the-software">
-<h2><a class="toc-backref" href="#id17" role="doc-backlink">Upload the software</a><a class="headerlink" href="#upload-the-software" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id17" role="doc-backlink">Upload the software</a><a class="headerlink" href="#upload-the-software" title="Link to this heading"></a></h2>
 <p>Click on the Upload button near the top left. It is a circle with a right arrow, next to the Compile button that looks like a check mark.</p>
 <figure class="align-default" id="id6">
 <a class="reference internal image-reference" href="../../../_images/upload_arrow.jpg"><img alt="Upload the CS Software to the Arduino" src="../../../_images/upload_arrow.jpg" style="width: 208.8px; height: 132.3px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 128 </span><span class="caption-text">Upload the Command Station Software to the Arduino</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 128 </span><span class="caption-text">Upload the Command Station Software to the Arduino</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>The IDE will go through a compile process which will build all the files into an application the Arduino can run, and then upload it. You may see many lines of logging as it finishes its task. When done, it will upload the file to the Arduino which you may see as some lights blinking on the Arduino. Make sure there are no errors in the log window, and that it shows “done uploading” in the status bar and “SUCCESS” and a listing of how much memory is used on the Arduino in the log window.</p>
 <p>Don’t unplug the serial cable yet!</p>
 </section>
 <section id="plug-in-your-power-adapters">
-<h2><a class="toc-backref" href="#id18" role="doc-backlink">Plug in your power adapters</a><a class="headerlink" href="#plug-in-your-power-adapters" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id18" role="doc-backlink">Plug in your power adapters</a><a class="headerlink" href="#plug-in-your-power-adapters" title="Link to this heading"></a></h2>
 <p>You should already have the 7-9V adapter plugged into the Arduino, and the 13-14V adapter plugged into the motor driver. Now you can plug both of them into the power socket. Nothing should happen. Be sure that nothing bad happens, like smoke rising from the board or the boards getting hot. If anything seems wrong, unplug the power adapters immediately.</p>
 </section>
 <section id="use-the-serial-monitor-to-do-a-quick-test">
-<h2><a class="toc-backref" href="#id19" role="doc-backlink">Use the Serial Monitor to do a quick test</a><a class="headerlink" href="#use-the-serial-monitor-to-do-a-quick-test" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id19" role="doc-backlink">Use the Serial Monitor to do a quick test</a><a class="headerlink" href="#use-the-serial-monitor-to-do-a-quick-test" title="Link to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The programming track (PROG) is for programming only. Make sure you are on the MAIN track if you expect your loco to move or respond to light or sound commands.</p>
@@ -731,20 +732,20 @@
 <figure class="align-default" id="id7">
 <a class="reference internal image-reference" href="../../../_images/arduino_ide2.jpg"><img alt="Open the Serial Monitor" src="../../../_images/arduino_ide2.jpg" style="width: 488.7px; height: 497.7px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 129 </span><span class="caption-text">Open the Serial Monitor</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 129 </span><span class="caption-text">Open the Serial Monitor</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Make sure the baud rate at the lower right of the window is set to “115200”. This is the data communication speed, equivalent to 115.2kb/s! Make sure the dropdown next to that says “Both NL &amp; CR”. That makes sure you send a ‘new line’ command and ‘carriage return’ which the Arduino expects.</p>
 <figure class="align-default" id="id8">
 <a class="reference internal image-reference" href="../../../_images/serial_monitor.jpg"><img alt="Serial Monitor" src="../../../_images/serial_monitor.jpg" style="width: 579.6px; height: 454.5px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 130 </span><span class="caption-text">Serial Monitor</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 130 </span><span class="caption-text">Serial Monitor</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>You should see log information immediately display in the window. If you have a Network shield or WiFi shield connected, you will see the Command Station setup its AP, or connect to your network if you gave it your credentials. If you don’t have a network, that’s fine; the Command Station will sense that, the network test will fail, but everything else will be working as it should.</p>
 </section>
 <section id="type-in-a-command-or-two">
-<h2><a class="toc-backref" href="#id20" role="doc-backlink">Type in a command or two</a><a class="headerlink" href="#type-in-a-command-or-two" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id20" role="doc-backlink">Type in a command or two</a><a class="headerlink" href="#type-in-a-command-or-two" title="Link to this heading"></a></h2>
 <p>There is an entire language that <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> understands. We call this the DCC-EX API for “Application Programming Interface”. If you are interested, the list of all the commands is here in the <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/wiki">DCC-EX Wiki</a>. Let’s just try two commands to make sure everything is working.</p>
 <p>All <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> commands begin with a <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> and end with a <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>. In the command window, type <code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> and press the <code class="docutils literal notranslate"><span class="pre">send</span></code> button, or Enter on your keyboard. Power should come on to the main track. You should see 2 red LEDs light on the “A” power output of the motor shield.</p>
 <p>Now enter <code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> (lowercase). You should see status information for your Command Station appear in the log.</p>
@@ -752,7 +753,7 @@
 <p><strong>Exit the Arduino IDE software</strong>.</p>
 </section>
 <section id="run-your-trains">
-<h2><a class="toc-backref" href="#id21" role="doc-backlink">Run your trains!</a><a class="headerlink" href="#run-your-trains" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id21" role="doc-backlink">Run your trains!</a><a class="headerlink" href="#run-your-trains" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Make sure power is off to the track</p></li>
 <li><p>Make sure your loco is DCC ENABLED (not DCC Ready! DCC Ready just means it has the plumbing inside the loco to install an optional DCC decoder, but it is NOT yet DCC compatible)</p></li>
@@ -789,7 +790,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f37126d95d0>
+    <jinja2.runtime.BlockReference object at 0x7f744fdd9ab0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

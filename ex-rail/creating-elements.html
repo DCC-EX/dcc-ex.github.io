@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX DCC DCC++ EX DCC++EX" name="keywords" />
@@ -7,31 +7,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Objects - an Introduction &mdash; DCC-EX Model Railroading  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/big_picture_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/sphinx_design_overrides.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=6724a1a8" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/big_picture_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=bfd9ebc6" />
+
+  
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/ex-rail/creating-elements.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-        <script src="../_static/js/platform.js"></script>
-        <script src="../_static/js/extra.js"></script>
-        <script src="../_static/dark_mode_js/default_light.js"></script>
-        <script src="../_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/design-tabs.js?v=f930bc37"></script>
+        <script src="../_static/js/platform.js?v=e56cde4b"></script>
+        <script src="../_static/js/extra.js?v=3424c10e"></script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=a2af87b2"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -606,7 +607,7 @@
              
 <p><a class="image-product-logo-float-right reference internal" href="../_images/product-logo-ex-rail.png"><img alt="EX-RAIL" class="image-product-logo-float-right" src="../_images/product-logo-ex-rail.png" style="width: 320.0px; height: 64.0px;" /></a></p>
 <section id="objects-an-introduction">
-<h1>Objects - an Introduction<a class="headerlink" href="#objects-an-introduction" title="Permalink to this heading"></a></h1>
+<h1>Objects - an Introduction<a class="headerlink" href="#objects-an-introduction" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../support/index.html#contact-support-options" title="Request help or support"><img src="../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
 <aside class="sidebar">
 <nav class="contents local" id="on-this-page">
@@ -662,7 +663,7 @@
 </div>
 <hr class="docutils" />
 <section id="adding-a-roster">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink">Adding a Roster</a><a class="headerlink" href="#adding-a-roster" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Adding a Roster</a><a class="headerlink" href="#adding-a-roster" title="Link to this heading"></a></h2>
 <p>EX-RAIL has a <code class="docutils literal notranslate"><span class="pre">ROSTER()</span></code> function to allow you to define all of your locomotives with a list of their defined functions which is advertised to WiThrottle applications, just like turnouts/points and routes.</p>
 <p>The functions can simply be listed as “F” numbers, or you can provide a text description of the function. Prefacing the function with a “*” indicates it is momentary, meaning it is only activated while holding that function button down.</p>
 <p>In a text editor (e.g. notepad) create a new text file named ‘myAutomation.h’. (Note the capital ‘A’ in the name.  The case of all the characters is important.)</p>
@@ -714,7 +715,7 @@
 </section>
 <hr class="docutils" />
 <section id="adding-turnouts-points">
-<h2><a class="toc-backref" href="#id5" role="doc-backlink">Adding Turnouts/Points</a><a class="headerlink" href="#adding-turnouts-points" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Adding Turnouts/Points</a><a class="headerlink" href="#adding-turnouts-points" title="Link to this heading"></a></h2>
 <p>Turnouts/Points can included on your layout in one of the</p>
 <ul class="simple">
 <li><p>DCC turnouts/Points</p></li>
@@ -722,9 +723,9 @@
 <li><p>Pin turnouts/Points</p></li>
 </ul>
 <section id="dcc-turnouts-points">
-<h3><a class="toc-backref" href="#id6" role="doc-backlink">DCC Turnouts/Points</a><a class="headerlink" href="#dcc-turnouts-points" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">DCC Turnouts/Points</a><a class="headerlink" href="#dcc-turnouts-points" title="Link to this heading"></a></h3>
 <section id="adding-the-hardware-dcc-turnouts-points">
-<h4>Adding the Hardware -  DCC Turnouts/Points<a class="headerlink" href="#adding-the-hardware-dcc-turnouts-points" title="Permalink to this heading"></a></h4>
+<h4>Adding the Hardware -  DCC Turnouts/Points<a class="headerlink" href="#adding-the-hardware-dcc-turnouts-points" title="Link to this heading"></a></h4>
 <p>If you have installed turnouts/points using DCC accessory decoders, you can config the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> so that it knows about it and you can control in in your sequences.</p>
 <blockquote>
 <div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TURNOUT</span><span class="p">(</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">addr</span><span class="p">,</span><span class="w"> </span><span class="n">sub_addr</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
@@ -734,13 +735,13 @@
 <p>The <code class="docutils literal notranslate"><span class="pre">TURNOUT</span></code> command defines DCC accessory decoder turnout/point in EX-RAIL, which will appear in <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> apps, <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, and <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> in addition to being defined as a turnout/point within the CommandStation.</p>
 </section>
 <section id="configure-myautomation-h-dcc-turnouts-points">
-<h4>Configure myAutomation.h - DCC Turnouts/Points<a class="headerlink" href="#configure-myautomation-h-dcc-turnouts-points" title="Permalink to this heading"></a></h4>
+<h4>Configure myAutomation.h - DCC Turnouts/Points<a class="headerlink" href="#configure-myautomation-h-dcc-turnouts-points" title="Link to this heading"></a></h4>
 </section>
 </section>
 <section id="pin-turnouts-points">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">Pin Turnouts/Points</a><a class="headerlink" href="#pin-turnouts-points" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Pin Turnouts/Points</a><a class="headerlink" href="#pin-turnouts-points" title="Link to this heading"></a></h3>
 <section id="adding-the-hardware-pin-turnouts-points">
-<h4>Adding the Hardware -  Pin Turnouts/Points<a class="headerlink" href="#adding-the-hardware-pin-turnouts-points" title="Permalink to this heading"></a></h4>
+<h4>Adding the Hardware -  Pin Turnouts/Points<a class="headerlink" href="#adding-the-hardware-pin-turnouts-points" title="Link to this heading"></a></h4>
 <aside class="sidebar">
 <p>You can also refer to <a class="reference internal" href="../ex-commandstation/accessories/turnouts/solenoid-turnouts.html"><span class="doc">Solenoid or coil turnouts/points</span></a> for more information.</p>
 </aside>
@@ -771,13 +772,13 @@ SINGLE_COIL_TURNOUT(101, 22, 24, 26, &quot;Turnout 101&quot;)
 </div>
 </section>
 <section id="configure-myautomation-h-pin-turnouts-points">
-<h4>Configure myAutomation.h - Pin Turnouts/Points<a class="headerlink" href="#configure-myautomation-h-pin-turnouts-points" title="Permalink to this heading"></a></h4>
+<h4>Configure myAutomation.h - Pin Turnouts/Points<a class="headerlink" href="#configure-myautomation-h-pin-turnouts-points" title="Link to this heading"></a></h4>
 </section>
 </section>
 <section id="servo-turnouts-points">
-<h3><a class="toc-backref" href="#id8" role="doc-backlink">Servo Turnouts/Points</a><a class="headerlink" href="#servo-turnouts-points" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Servo Turnouts/Points</a><a class="headerlink" href="#servo-turnouts-points" title="Link to this heading"></a></h3>
 <section id="adding-the-hardware-servo-turnouts-points">
-<h4>Adding the Hardware -  Servo Turnouts/Points<a class="headerlink" href="#adding-the-hardware-servo-turnouts-points" title="Permalink to this heading"></a></h4>
+<h4>Adding the Hardware -  Servo Turnouts/Points<a class="headerlink" href="#adding-the-hardware-servo-turnouts-points" title="Link to this heading"></a></h4>
 <aside class="sidebar">
 <p>You can also refer to <a class="reference internal" href="../reference/hardware/servo-module.html"><span class="doc">Connecting a Servo Module</span></a> for more information.</p>
 </aside>
@@ -800,7 +801,7 @@ SINGLE_COIL_TURNOUT(101, 22, 24, 26, &quot;Turnout 101&quot;)
 <a class="reference internal image-reference" href="../_images/SemaphoreSignal.jpg"><img alt="Servo mount to operate a Semaphore Signal" src="../_images/SemaphoreSignal.jpg" style="width: 288.0px; height: 384.0px;" /></a>
 </section>
 <section id="configure-myautomation-h-servo-turnouts-points">
-<h4>Configure myAutomation.h - Servo Turnouts/Points<a class="headerlink" href="#configure-myautomation-h-servo-turnouts-points" title="Permalink to this heading"></a></h4>
+<h4>Configure myAutomation.h - Servo Turnouts/Points<a class="headerlink" href="#configure-myautomation-h-servo-turnouts-points" title="Link to this heading"></a></h4>
 <p>The myAutomation.h file needs to be altered so that the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> knows about each Turnout/Point.</p>
 <p>EX-RAIL supports three methods of controlling servos:</p>
 <ul class="simple">
@@ -809,7 +810,7 @@ SINGLE_COIL_TURNOUT(101, 22, 24, 26, &quot;Turnout 101&quot;)
 <li><p><a class="reference external" href="#servos-for-animations">Animations via the SERVO or SERVO2 directives</a></p></li>
 </ul>
 <section id="controlling-servos-for-turnouts-points">
-<h5>Controlling Servos for Turnouts/Points<a class="headerlink" href="#controlling-servos-for-turnouts-points" title="Permalink to this heading"></a></h5>
+<h5>Controlling Servos for Turnouts/Points<a class="headerlink" href="#controlling-servos-for-turnouts-points" title="Link to this heading"></a></h5>
 <p>The <code class="docutils literal notranslate"><span class="pre">SERVO_TURNOUT</span></code> directive defines a servo based turnout/point in EX-RAIL, which will appear in <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> apps, <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, and <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> in addition to being defined as a turnout/point within the CommandStation.</p>
 <p>As per the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> reference, turnouts/points are defined with the following syntax:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example</span>
@@ -836,10 +837,10 @@ SINGLE_COIL_TURNOUT(101, 22, 24, 26, &quot;Turnout 101&quot;)
 </section>
 <hr class="docutils" />
 <section id="servos-for-signals-and-animations">
-<h2><a class="toc-backref" href="#id9" role="doc-backlink">Servos for Signals and Animations</a><a class="headerlink" href="#servos-for-signals-and-animations" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Servos for Signals and Animations</a><a class="headerlink" href="#servos-for-signals-and-animations" title="Link to this heading"></a></h2>
 <p>See above for information on installing the servo hardware (it is the same as for a turnout/point).</p>
 <section id="configure-myautomation-h-servos-for-signals-an-animations">
-<h3><a class="toc-backref" href="#id10" role="doc-backlink">Configure myAutomation.h - Servos for Signals an Animations</a><a class="headerlink" href="#configure-myautomation-h-servos-for-signals-an-animations" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Configure myAutomation.h - Servos for Signals an Animations</a><a class="headerlink" href="#configure-myautomation-h-servos-for-signals-an-animations" title="Link to this heading"></a></h3>
 <p>The myAutomation.h file needs to be altered so that the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> knows about each servo.</p>
 <p>EX-RAIL supports two methods of controlling servos that are not related to turnouts/points:</p>
 <ul class="simple">
@@ -847,7 +848,7 @@ SINGLE_COIL_TURNOUT(101, 22, 24, 26, &quot;Turnout 101&quot;)
 <li><p><a class="reference external" href="#servos-for-animations">Animations via the SERVO or SERVO2 directives</a></p></li>
 </ul>
 <section id="servos-for-signals">
-<h4>Servos for Signals<a class="headerlink" href="#servos-for-signals" title="Permalink to this heading"></a></h4>
+<h4>Servos for Signals<a class="headerlink" href="#servos-for-signals" title="Link to this heading"></a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">SERVO_SIGNAL</span></code> directive defines a servo based signal in <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> to drive semaphore type signals as part of sequences or routes, or simply be set via a signal or similar.</p>
 <p>Similar to pin based signals, servo signals are controlled by the ID of the red pin only.</p>
 <p>Unlike servo based turnouts/points, there is no ID or description (they don’t appear in throttles), and they use the “Bounce” profile with no other options available at the present time:</p>
@@ -869,7 +870,7 @@ SINGLE_COIL_TURNOUT(101, 22, 24, 26, &quot;Turnout 101&quot;)
 </ul>
 </section>
 <section id="servos-for-animations">
-<h4>Servos for Animations<a class="headerlink" href="#servos-for-animations" title="Permalink to this heading"></a></h4>
+<h4>Servos for Animations<a class="headerlink" href="#servos-for-animations" title="Link to this heading"></a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">SERVO</span></code> and <code class="docutils literal notranslate"><span class="pre">SERVO2</span></code> directives allow for servos to be used in various automations within <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span>.</p>
 <p>Note that unlike a <code class="docutils literal notranslate"><span class="pre">SERVO_TURNOUT</span></code> these are not definitions that appear within WiThrottle apps, <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, or <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>, but are instead actions designed to be used within <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> automations.</p>
 <p>As per the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> reference, these are defined with the following syntax:</p>
@@ -909,9 +910,9 @@ SINGLE_COIL_TURNOUT(101, 22, 24, 26, &quot;Turnout 101&quot;)
 </section>
 <hr class="docutils" />
 <section id="adding-sensors">
-<h2><a class="toc-backref" href="#id11" role="doc-backlink">Adding Sensors</a><a class="headerlink" href="#adding-sensors" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Adding Sensors</a><a class="headerlink" href="#adding-sensors" title="Link to this heading"></a></h2>
 <section id="adding-the-hardware-sensors">
-<h3><a class="toc-backref" href="#id12" role="doc-backlink">Adding the Hardware -  Sensors</a><a class="headerlink" href="#adding-the-hardware-sensors" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Adding the Hardware -  Sensors</a><a class="headerlink" href="#adding-the-hardware-sensors" title="Link to this heading"></a></h3>
 <p>On the Mega2560 Processor board:</p>
 <p>Place IR Infrared or Optical Sensor’s Output wire on Dpins 22, 23, 24 … 49. Plus one wire to GND and a third wire to 5v.</p>
 <a class="reference internal image-reference" href="../_images/mega-with-ir-sensor.png"><img alt="IR Sensor connected to Arduino mega" src="../_images/mega-with-ir-sensor.png" style="width: 518.4px; height: 234.89999999999998px;" /></a>
@@ -923,7 +924,7 @@ SINGLE_COIL_TURNOUT(101, 22, 24, 26, &quot;Turnout 101&quot;)
 </div>
 </section>
 <section id="configure-myautomation-h-sensors">
-<h3><a class="toc-backref" href="#id13" role="doc-backlink">Configure myAutomation.h - Sensors</a><a class="headerlink" href="#configure-myautomation-h-sensors" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Configure myAutomation.h - Sensors</a><a class="headerlink" href="#configure-myautomation-h-sensors" title="Link to this heading"></a></h3>
 <p>You don’t actually require anything special to be added to myAutomation.h in advance of using them in an sequence.</p>
 <p>Handling sensors in sequences is made easy because <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span> throws away the concept of interrupts (“oh… sensor 22 has been detected… which loco was that and whatever do I do now?”) and instead has the sequences work on the basis of “do nothing, maintain speed until sensor 22 triggers, and then carry on in the script”.</p>
 <p>Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardware Abstraction Layer. For a Mega onboard GPIO pin, this is the same as the digital pin number. Other pin ranges refer to I/O expanders etc.</p>
@@ -938,9 +939,9 @@ SINGLE_COIL_TURNOUT(101, 22, 24, 26, &quot;Turnout 101&quot;)
 </section>
 <hr class="docutils" />
 <section id="adding-signals">
-<h2><a class="toc-backref" href="#id14" role="doc-backlink">Adding Signals</a><a class="headerlink" href="#adding-signals" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">Adding Signals</a><a class="headerlink" href="#adding-signals" title="Link to this heading"></a></h2>
 <section id="adding-the-hardware-signals">
-<h3><a class="toc-backref" href="#id15" role="doc-backlink">Adding the Hardware - Signals</a><a class="headerlink" href="#adding-the-hardware-signals" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">Adding the Hardware - Signals</a><a class="headerlink" href="#adding-the-hardware-signals" title="Link to this heading"></a></h3>
 <p>To connect a servo to <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, you first need to get a module, based on the PCA9685 chip.</p>
 <a class="reference internal image-reference" href="../_images/pca9685.jpg"><img alt="PCA9685 Servo Module" src="../_images/pca9685.jpg" style="width: 432.8px; height: 174.0px;" /></a>
 <p>These are widely available from eBay, Amazon, etc. for a few dollars.</p>
@@ -954,7 +955,7 @@ SINGLE_COIL_TURNOUT(101, 22, 24, 26, &quot;Turnout 101&quot;)
 </ul>
 </section>
 <section id="configure-myautomation-h-signals">
-<h3><a class="toc-backref" href="#id16" role="doc-backlink">Configure myAutomation.h - Signals</a><a class="headerlink" href="#configure-myautomation-h-signals" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">Configure myAutomation.h - Signals</a><a class="headerlink" href="#configure-myautomation-h-signals" title="Link to this heading"></a></h3>
 <p>The myAutomation.h file needs to be altered so that the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> knows about each Signal.</p>
 <p>Signals setup on vpins 101, 102 … 115</p>
 <p>For each signal add a line in myAutomation.h in the form:</p>
@@ -974,7 +975,7 @@ SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for turnout/point 1, Thrown=Red,
 </section>
 <hr class="docutils" />
 <section id="next-steps-creating-sequences">
-<h2><a class="toc-backref" href="#id17" role="doc-backlink">Next Steps - Creating Sequences</a><a class="headerlink" href="#next-steps-creating-sequences" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id17" role="doc-backlink">Next Steps - Creating Sequences</a><a class="headerlink" href="#next-steps-creating-sequences" title="Link to this heading"></a></h2>
 <p>Click <a class="reference internal" href="getting-started.html"><span class="doc">here</span></a> or click the <span class="guilabel">Next</span> button to learn how to create automation sequences.</p>
 </section>
 </section>
@@ -1001,7 +1002,7 @@ SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for turnout/point 1, Thrown=Red,
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f3713d8c070>
+    <jinja2.runtime.BlockReference object at 0x7f745d6dcb80>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

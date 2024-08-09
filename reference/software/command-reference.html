@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX DCC DCC++ EX DCC++EX" name="keywords" />
@@ -8,31 +8,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DCC-EX Native Command Detailed Reference &mdash; DCC-EX Model Railroading  documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/big_picture_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/sphinx_design_overrides.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/dark_mode_css/general.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/dark_mode_css/dark.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=6724a1a8" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/big_picture_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=bfd9ebc6" />
+
+  
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/reference/software/command-reference.html" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
-        <script src="../../_static/design-tabs.js"></script>
-        <script src="../../_static/js/platform.js"></script>
-        <script src="../../_static/js/extra.js"></script>
-        <script src="../../_static/dark_mode_js/default_light.js"></script>
-        <script src="../../_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+        <script src="../../_static/js/platform.js?v=e56cde4b"></script>
+        <script src="../../_static/js/extra.js?v=3424c10e"></script>
+        <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../../_static/dark_mode_js/theme_switcher.js?v=a2af87b2"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -608,7 +609,7 @@
              
 <p><a class="image-product-logo-float-right reference internal" href="../../_images/product-logo-reference.png"><img alt="Reference" class="image-product-logo-float-right" src="../../_images/product-logo-reference.png" style="width: 320.0px; height: 64.0px;" /></a></p>
 <section id="dcc-ex-native-command-detailed-reference">
-<h1>DCC-EX Native Command Detailed Reference<a class="headerlink" href="#dcc-ex-native-command-detailed-reference" title="Permalink to this heading"></a></h1>
+<h1>DCC-EX Native Command Detailed Reference<a class="headerlink" href="#dcc-ex-native-command-detailed-reference" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../support/index.html#contact-support-options" title="Request help or support"><img src="../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
 <aside class="sidebar">
 <nav class="contents local" id="on-this-page">
@@ -658,7 +659,7 @@
 <p>This reference explains the available command structure, and for commands that provide them, their responses. If you are testing your Command Station or writing your own control program, make sure you have the latest release of the <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX">EX-CommandStation Firmware</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;">.</p>
 <p>You can view and edit this code in the <a class="reference external" href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> or in <a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/blob/master/CONTRIBUTING.md">PlatformIO</a> Software from <a class="reference external" href="https://github.com/DCC-EX">GitHub</a>. If you are new to we suggest you start with the <a class="reference external" href="https://dcc-ex.com">DCC-EX Webpage</a>.</p>
 <section id="conventions-used-on-this-page">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">Conventions used on this page</a><a class="headerlink" href="#conventions-used-on-this-page" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Conventions used on this page</a><a class="headerlink" href="#conventions-used-on-this-page" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>“&lt;” and “&gt;” - All DCC-EX API commands are surrounded by these characters to indicate the beginning and end, these must always be included</p></li>
 <li><p>First letter or number - These are called OPCODES, are case sensitive, and must be specified as directed, e.g. 1, c, or -</p></li>
@@ -669,7 +670,7 @@
 </ul>
 </section>
 <section id="track-power-commands">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">Track Power Commands</a><a class="headerlink" href="#track-power-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Track Power Commands</a><a class="headerlink" href="#track-power-commands" title="Link to this heading"></a></h2>
 <p>The following commands provide control over power to the MAIN and PROG tracks (voltage), as well as monitoring the current used.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;0|1</span> <span class="pre">MAIN|PROG|JOIN&gt;</span></code> - Turns power on and off to the MAIN and PROG tracks independently from each other and allows joining the MAIN and PROG tracks together</p>
 <blockquote>
@@ -712,7 +713,7 @@
 </div></blockquote>
 </section>
 <section id="engine-decoder-cab-operation-commands">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink">Engine Decoder (CAB) Operation Commands</a><a class="headerlink" href="#engine-decoder-cab-operation-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Engine Decoder (CAB) Operation Commands</a><a class="headerlink" href="#engine-decoder-cab-operation-commands" title="Link to this heading"></a></h2>
 <p><strong>The CAB throttle format</strong>  is <code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">register</span> <span class="pre">cab</span> <span class="pre">speed</span> <span class="pre">direction&gt;</span></code></p>
 <p>Breakdown for this example <code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">1</span> <span class="pre">03</span> <span class="pre">20</span> <span class="pre">1&gt;</span></code> is:</p>
 <ul class="simple">
@@ -753,7 +754,7 @@
 </pre></div>
 </div>
 <section id="cab-functions">
-<h3><a class="toc-backref" href="#id5" role="doc-backlink">CAB FUNCTIONS</a><a class="headerlink" href="#cab-functions" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">CAB FUNCTIONS</a><a class="headerlink" href="#cab-functions" title="Link to this heading"></a></h3>
 <p>There are two formats for setting CAB functions, the DCC++ Classic legacy method (maintained for compatibility) and the new DCC-EX method. Both methods are described here though new applications are encouraged to use the newer <code class="docutils literal notranslate"><span class="pre">&lt;F&gt;</span></code> command (capital F vs. small f).</p>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">&lt;F&gt;</span></code> command turns engine decoder functions ON and OFF</p></li>
@@ -767,7 +768,7 @@ settings in the same group and will not, for example, unset F2 because you chang
 </ul>
 <p><strong>CAB Functions format</strong> is <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">func</span> <span class="pre">1|0&gt;</span></code></p>
 <section id="to-set-functions-f0-f68-on-1-or-off-0-f-cab-func-0-1">
-<h4>To set functions <strong>F0-F68</strong> on=(1) or off=(0): <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">func</span> <span class="pre">0|1&gt;</span></code><a class="headerlink" href="#to-set-functions-f0-f68-on-1-or-off-0-f-cab-func-0-1" title="Permalink to this heading"></a></h4>
+<h4>To set functions <strong>F0-F68</strong> on=(1) or off=(0): <code class="docutils literal notranslate"><span class="pre">&lt;F</span> <span class="pre">cab</span> <span class="pre">func</span> <span class="pre">0|1&gt;</span></code><a class="headerlink" href="#to-set-functions-f0-f68-on-1-or-off-0-f-cab-func-0-1" title="Link to this heading"></a></h4>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">F</span></code> = (upper case F) This command is for a CAB function i.e.: Lights, horn, bell</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cab</span></code>  : the short (1-127) or long (128-10293) address of the engine decoder</p></li>
@@ -783,7 +784,7 @@ settings in the same group and will not, for example, unset F2 because you chang
 <p><strong>The Legacy CAB Functions format</strong> is <code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">byte1</span> <span class="pre">[byte2]&gt;</span></code></p>
 </section>
 <section id="to-set-functions-f0-f4-on-1-or-off-0-f-cab-byte1-byte2">
-<h4>To set functions <strong>F0-F4</strong> on=(1) or off=(0): <code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">byte1</span> <span class="pre">[byte2]&gt;</span></code><a class="headerlink" href="#to-set-functions-f0-f4-on-1-or-off-0-f-cab-byte1-byte2" title="Permalink to this heading"></a></h4>
+<h4>To set functions <strong>F0-F4</strong> on=(1) or off=(0): <code class="docutils literal notranslate"><span class="pre">&lt;f</span> <span class="pre">cab</span> <span class="pre">byte1</span> <span class="pre">[byte2]&gt;</span></code><a class="headerlink" href="#to-set-functions-f0-f4-on-1-or-off-0-f-cab-byte1-byte2" title="Link to this heading"></a></h4>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> = (lower case f) This command is for a CAB function i.e.: Lights, horn, bell</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cab</span></code> :  the short (1-127) or long (128-10293) address of the engine decoder</p></li>
@@ -818,7 +819,7 @@ settings in the same group and will not, for example, unset F2 because you chang
 </ul>
 </section>
 <section id="to-set-functions-f5-f8-on-1-or-off-0-f-cab-byte1-byte2">
-<h4>To set functions <strong>F5-F8</strong> on=(1) or off=(0): <strong>&lt;f cab byte1 [byte2]&gt;</strong><a class="headerlink" href="#to-set-functions-f5-f8-on-1-or-off-0-f-cab-byte1-byte2" title="Permalink to this heading"></a></h4>
+<h4>To set functions <strong>F5-F8</strong> on=(1) or off=(0): <strong>&lt;f cab byte1 [byte2]&gt;</strong><a class="headerlink" href="#to-set-functions-f5-f8-on-1-or-off-0-f-cab-byte1-byte2" title="Link to this heading"></a></h4>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> = (lower case f) This command is for a CAB,s function.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">byte1</span></code> :  176 + F5*1 + F6*2 + F7*4 + F8*8</p>
@@ -835,7 +836,7 @@ settings in the same group and will not, for example, unset F2 because you chang
 </ul>
 </section>
 <section id="to-set-functions-f9-f12-on-1-or-off-0-f-cab-byte1-byte2">
-<h4>To set functions <strong>F9-F12</strong> on=(1) or off=(0): <strong>&lt;f cab byte1 [byte2]&gt;</strong><a class="headerlink" href="#to-set-functions-f9-f12-on-1-or-off-0-f-cab-byte1-byte2" title="Permalink to this heading"></a></h4>
+<h4>To set functions <strong>F9-F12</strong> on=(1) or off=(0): <strong>&lt;f cab byte1 [byte2]&gt;</strong><a class="headerlink" href="#to-set-functions-f9-f12-on-1-or-off-0-f-cab-byte1-byte2" title="Link to this heading"></a></h4>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> = (lower case f) This command is for a CAB,s function.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">byte1:</span></code>  160 + F9*1 +F10*2 + F11*4 + F12*8</p>
@@ -852,7 +853,7 @@ settings in the same group and will not, for example, unset F2 because you chang
 </ul>
 </section>
 <section id="to-set-functions-f13-f20-on-1-or-off-0-f-cab-byte1-byte2">
-<h4>To set functions <strong>F13-F20</strong> on=(1) or off=(0): <strong>&lt;f cab byte1 [byte2]&gt;</strong><a class="headerlink" href="#to-set-functions-f13-f20-on-1-or-off-0-f-cab-byte1-byte2" title="Permalink to this heading"></a></h4>
+<h4>To set functions <strong>F13-F20</strong> on=(1) or off=(0): <strong>&lt;f cab byte1 [byte2]&gt;</strong><a class="headerlink" href="#to-set-functions-f13-f20-on-1-or-off-0-f-cab-byte1-byte2" title="Link to this heading"></a></h4>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> = (lower case f) This command is for a CAB,s function.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">byte1:</span></code> 222</p></li>
@@ -873,7 +874,7 @@ settings in the same group and will not, for example, unset F2 because you chang
 </ul>
 </section>
 <section id="to-set-functions-f21-f28-on-1-or-off-0-f-cab-byte1-byte2">
-<h4>To set functions <strong>F21-F28</strong> on=(1) or off=(0): <strong>&lt;f cab byte1 [byte2]&gt;</strong><a class="headerlink" href="#to-set-functions-f21-f28-on-1-or-off-0-f-cab-byte1-byte2" title="Permalink to this heading"></a></h4>
+<h4>To set functions <strong>F21-F28</strong> on=(1) or off=(0): <strong>&lt;f cab byte1 [byte2]&gt;</strong><a class="headerlink" href="#to-set-functions-f21-f28-on-1-or-off-0-f-cab-byte1-byte2" title="Link to this heading"></a></h4>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> = (lower case f) This command is for a CAB function.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">byte1:</span></code> 223</p></li>
@@ -917,12 +918,12 @@ settings in the same group and will not, for example, unset F2 because you chang
 </section>
 </section>
 <section id="stationary-accessory-decoder-turnout-commands">
-<h3><a class="toc-backref" href="#id6" role="doc-backlink">Stationary Accessory Decoder &amp; Turnout Commands</a><a class="headerlink" href="#stationary-accessory-decoder-turnout-commands" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Stationary Accessory Decoder &amp; Turnout Commands</a><a class="headerlink" href="#stationary-accessory-decoder-turnout-commands" title="Link to this heading"></a></h3>
 <p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> can keep track of the direction of any turnout that is controlled by a DCC stationary accessory decoder once its Defined (Set Up).</p>
 <p>All decoders that are not in an engine are accessory decoders including turnouts.</p>
 <p>Any DCC Accessory Decoder based turnouts, as well as any other DCC accessories connected in this fashion, can always be operated using the DCC COMMAND STATION Accessory command:</p>
 <section id="accessory-decoder-commands">
-<h4>Accessory Decoder Commands<a class="headerlink" href="#accessory-decoder-commands" title="Permalink to this heading"></a></h4>
+<h4>Accessory Decoder Commands<a class="headerlink" href="#accessory-decoder-commands" title="Link to this heading"></a></h4>
 <p>There are two interchangeable commands for controlling Accessory Decoders, the Address/Subaddress method (aka “Dual-Coil” method) and linear addressing method.
 You can either specify an address and its subaddress (Addresses 0-511 with Subaddresses from 0-3) or the straight linear address (Addresses from 1-2044).</p>
 <p>In the mapping used by <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, linear addresses range from linear address 1, which is address 1 subaddress 0, up to linear address 2040 which is address 510 subaddress 3.
@@ -932,7 +933,7 @@ If your decoder does not respond on the expected linear address, try adding and 
 <p>Here is a spreadsheet in .XLSX format to help you: <a class="reference internal" href="../downloads/documents.html#stationary-decoder-address-table-xlsx-spreadsheet"><span class="std std-ref">Decoder Address Decoder Table</span></a></p>
 <p>NOTE: Both the following commands do the same thing. Pick the one that works for your needs.</p>
 <section id="controlling-an-accessory-decoder-with-a-linear-address-activate">
-<h5>Controlling an Accessory Decoder with <code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">linear_address</span> <span class="pre">activate&gt;</span></code><a class="headerlink" href="#controlling-an-accessory-decoder-with-a-linear-address-activate" title="Permalink to this heading"></a></h5>
+<h5>Controlling an Accessory Decoder with <code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">linear_address</span> <span class="pre">activate&gt;</span></code><a class="headerlink" href="#controlling-an-accessory-decoder-with-a-linear-address-activate" title="Link to this heading"></a></h5>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">a</span></code> (lower case a) this command is for a Accessory Decoder</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">linear_address</span></code> is the linear address of the decoder controlling this turnout (1-2044)</p></li>
@@ -940,7 +941,7 @@ If your decoder does not respond on the expected linear address, try adding and 
 </ul>
 </section>
 <section id="controlling-an-accessory-decoder-with-a-address-subaddress-activate">
-<h5>Controlling an Accessory Decoder with <code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">address</span> <span class="pre">subaddress</span> <span class="pre">activate&gt;</span></code><a class="headerlink" href="#controlling-an-accessory-decoder-with-a-address-subaddress-activate" title="Permalink to this heading"></a></h5>
+<h5>Controlling an Accessory Decoder with <code class="docutils literal notranslate"><span class="pre">&lt;a</span> <span class="pre">address</span> <span class="pre">subaddress</span> <span class="pre">activate&gt;</span></code><a class="headerlink" href="#controlling-an-accessory-decoder-with-a-address-subaddress-activate" title="Link to this heading"></a></h5>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">a</span></code> (lower case a) this command is for a Accessory Decoder</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> is the primary address of the decoder controlling this turnout (0-511)</p></li>
@@ -955,7 +956,7 @@ If your decoder does not respond on the expected linear address, try adding and 
 </section>
 </section>
 <section id="defining-setting-up-a-turnout-point">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">Defining (Setting up) a Turnout/Point</a><a class="headerlink" href="#defining-setting-up-a-turnout-point" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Defining (Setting up) a Turnout/Point</a><a class="headerlink" href="#defining-setting-up-a-turnout-point" title="Link to this heading"></a></h3>
 <p>The Turnout commands provide a more flexible and more functional way of operating turnouts/points.  It requires that the turnout be pre-defined through the <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">...&gt;</span></code> commands, described below.</p>
 <p>Turnouts may be in either of two states:  Closed or Thrown.  The turnout commands below use the values <code class="docutils literal notranslate"><span class="pre">1</span></code> for <code class="docutils literal notranslate"><span class="pre">Throw</span></code> or <code class="docutils literal notranslate"><span class="pre">Thrown</span></code> and <code class="docutils literal notranslate"><span class="pre">0</span></code> for <code class="docutils literal notranslate"><span class="pre">Close</span></code> or <code class="docutils literal notranslate"><span class="pre">Closed</span></code>.</p>
 <ul>
@@ -1069,7 +1070,7 @@ You would send the following command to the <span class="ex-prefix">EX</span><sp
 Consequently, when the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> is restarted the turnout outputs may be set to their last known state (applicable for Servo and VPIN turnouts).
 This is intended so that the servos don’t perform a sweep on power-on when their physical position does not match initial position in the CommandStation.</p>
 <section id="controlling-a-defined-turnout-point">
-<h4>Controlling a Defined Turnout/Point<a class="headerlink" href="#controlling-a-defined-turnout-point" title="Permalink to this heading"></a></h4>
+<h4>Controlling a Defined Turnout/Point<a class="headerlink" href="#controlling-a-defined-turnout-point" title="Link to this heading"></a></h4>
 <ul>
 <li><p>Sets turnout ID to either the “closed” (turned) or “thrown” (closed) position</p></li>
 <li><p>The Turnout format is <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">id</span> <span class="pre">throw&gt;</span></code></p></li>
@@ -1096,7 +1097,7 @@ To throw turnout 10 so an engine can go to the warehouse siding you would send t
 </section>
 </section>
 <section id="sensors-input-commands">
-<h2><a class="toc-backref" href="#id8" role="doc-backlink">Sensors (Input) Commands</a><a class="headerlink" href="#sensors-input-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Sensors (Input) Commands</a><a class="headerlink" href="#sensors-input-commands" title="Link to this heading"></a></h2>
 <p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> supports Sensor inputs that can be connected to any Arduino Pin not in use by this program, as well as pins on external I/O expanders
 and other devices.
 Physical sensors can be of any type (infrared, magnetic, mechanical…).  They may be configured to pull-up or not.
@@ -1151,7 +1152,7 @@ found to have transitioned from one state to another, one of the following seria
 </div></blockquote>
 </section>
 <section id="outputs-dio-pin-commands">
-<h2><a class="toc-backref" href="#id9" role="doc-backlink">Outputs (DIO Pin) Commands</a><a class="headerlink" href="#outputs-dio-pin-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Outputs (DIO Pin) Commands</a><a class="headerlink" href="#outputs-dio-pin-commands" title="Link to this heading"></a></h2>
 <p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> supports optional OUTPUT control of any unused Arduino Pins for custom purposes. Pins can be activated or de-activated.
 The default is to set ACTIVE pins HIGH and INACTIVE pins LOW. However, this default behaviour can be inverted for any pin in which case ACTIVE=LOW and INACTIVE=HIGH.</p>
 <p>Definitions and state (ACTIVE/INACTIVE) for pins are retained in EEPROM and restored on power-up.
@@ -1213,7 +1214,7 @@ A list of the current states of each output in the form <code class="docutils li
 status command is invoked. This provides an efficient way of initializing the state of any outputs being monitored or controlled by a separate interface or GUI program.</p>
 </section>
 <section id="storing-and-erasing-turnouts-sensors-and-outputs-in-eeprom">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Storing and Erasing Turnouts, Sensors and Outputs in EEPROM</a><a class="headerlink" href="#storing-and-erasing-turnouts-sensors-and-outputs-in-eeprom" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Storing and Erasing Turnouts, Sensors and Outputs in EEPROM</a><a class="headerlink" href="#storing-and-erasing-turnouts-sensors-and-outputs-in-eeprom" title="Link to this heading"></a></h2>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> Upper case E : Command to <strong>Store</strong> definitions to EEPROM, returns the number of stored turnouts, sensors, and outputs.</p>
 <blockquote>
@@ -1231,11 +1232,11 @@ status command is invoked. This provides an efficient way of initializing the st
 </div></blockquote>
 </section>
 <section id="engine-decoder-programming-commands">
-<h2><a class="toc-backref" href="#id11" role="doc-backlink">Engine Decoder Programming Commands</a><a class="headerlink" href="#engine-decoder-programming-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Engine Decoder Programming Commands</a><a class="headerlink" href="#engine-decoder-programming-commands" title="Link to this heading"></a></h2>
 <section id="programming-main-track">
-<h3><a class="toc-backref" href="#id12" role="doc-backlink">PROGRAMMING-MAIN TRACK</a><a class="headerlink" href="#programming-main-track" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">PROGRAMMING-MAIN TRACK</a><a class="headerlink" href="#programming-main-track" title="Link to this heading"></a></h3>
 <section id="write-cv-byte-to-engine-decoder-on-main-track">
-<h4>WRITE CV BYTE TO ENGINE DECODER ON MAIN TRACK<a class="headerlink" href="#write-cv-byte-to-engine-decoder-on-main-track" title="Permalink to this heading"></a></h4>
+<h4>WRITE CV BYTE TO ENGINE DECODER ON MAIN TRACK<a class="headerlink" href="#write-cv-byte-to-engine-decoder-on-main-track" title="Link to this heading"></a></h4>
 <p>Writes, without any verification, a Configuration Variable BYTE to the decoder of an engine on the main operations track.</p>
 <ul class="simple">
 <li><p>Write CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;w</span> <span class="pre">cab</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code></p></li>
@@ -1246,7 +1247,7 @@ status command is invoked. This provides an efficient way of initializing the st
 </ul>
 </section>
 <section id="write-cv-bit-to-engine-decoder-on-main-track">
-<h4>WRITE CV BIT TO ENGINE DECODER ON MAIN TRACK<a class="headerlink" href="#write-cv-bit-to-engine-decoder-on-main-track" title="Permalink to this heading"></a></h4>
+<h4>WRITE CV BIT TO ENGINE DECODER ON MAIN TRACK<a class="headerlink" href="#write-cv-bit-to-engine-decoder-on-main-track" title="Link to this heading"></a></h4>
 <p>Writes, without any verification, a single bit within a Configuration Variable BIT to the decoder of an engine on the main operations track.</p>
 <ul class="simple">
 <li><p>Write CV BIT Format is: <code class="docutils literal notranslate"><span class="pre">&lt;b</span> <span class="pre">cab</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">value&gt;</span></code></p></li>
@@ -1262,13 +1263,13 @@ status command is invoked. This provides an efficient way of initializing the st
 </section>
 </section>
 <section id="programming-programming-track">
-<h3><a class="toc-backref" href="#id13" role="doc-backlink">PROGRAMMING-PROGRAMMING TRACK</a><a class="headerlink" href="#programming-programming-track" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">PROGRAMMING-PROGRAMMING TRACK</a><a class="headerlink" href="#programming-programming-track" title="Link to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don’t let the little “jumps” you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an “ACK” (acnowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.</p>
 </div>
 <section id="read-loco-address-on-programming-track">
-<h4>READ LOCO ADDRESS ON PROGRAMMING TRACK<a class="headerlink" href="#read-loco-address-on-programming-track" title="Permalink to this heading"></a></h4>
+<h4>READ LOCO ADDRESS ON PROGRAMMING TRACK<a class="headerlink" href="#read-loco-address-on-programming-track" title="Link to this heading"></a></h4>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> Upper Case R : Read Loco address (programming track only)</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: &lt;r address&gt; where it finds the address of our loco or &lt;r -1&gt; for a read failure.
@@ -1278,13 +1279,13 @@ status command is invoked. This provides an efficient way of initializing the st
 <p>Example: &lt;r 3450&gt; shows that Loco with ID 3450 is on the programming track.</p>
 </section>
 <section id="write-loco-address-to-engine-decoder-on-programming-track">
-<h4>WRITE LOCO ADDRESS TO ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#write-loco-address-to-engine-decoder-on-programming-track" title="Permalink to this heading"></a></h4>
+<h4>WRITE LOCO ADDRESS TO ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#write-loco-address-to-engine-decoder-on-programming-track" title="Link to this heading"></a></h4>
 <p>Writes, and then verifies, the address to decoder of an engine on the programming track. This involves clearing any consist and automatically setting a long or short address. This is an easy way to put a loco in a known state to test for issues like not responding to throttle commands when it is on the main track.</p>
 <p>Write loco address Format is: <code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">address&gt;</span></code>
 ADDRESS: The loco address to be written (1-10239).</p>
 </section>
 <section id="write-cv-byte-to-engine-decoder-on-programming-track">
-<h4>WRITE CV BYTE TO ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#write-cv-byte-to-engine-decoder-on-programming-track" title="Permalink to this heading"></a></h4>
+<h4>WRITE CV BYTE TO ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#write-cv-byte-to-engine-decoder-on-programming-track" title="Link to this heading"></a></h4>
 <p>Writes, and then verifies, a Configuration Variable BYTE to the decoder of an engine on the programming track</p>
 <ul class="simple">
 <li><p>Write CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;W</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code></p></li>
@@ -1312,7 +1313,7 @@ ADDRESS: The loco address to be written (1-10239).</p>
 </ul>
 </section>
 <section id="write-cv-bit-to-engine-decoder-on-programming-track">
-<h4>WRITE CV BIT TO ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#write-cv-bit-to-engine-decoder-on-programming-track" title="Permalink to this heading"></a></h4>
+<h4>WRITE CV BIT TO ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#write-cv-bit-to-engine-decoder-on-programming-track" title="Link to this heading"></a></h4>
 <p>Writes, and then verifies, a Configuration Variable BIT to the decoder of an engine on the programming track</p>
 <ul class="simple">
 <li><p>Write CV BIT Format is: <code class="docutils literal notranslate"><span class="pre">&lt;B</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">value</span> <span class="pre">callbacknum</span> <span class="pre">callbacksub&gt;</span></code></p></li>
@@ -1329,7 +1330,7 @@ ADDRESS: The loco address to be written (1-10239).</p>
 </ul>
 </section>
 <section id="read-configuration-variable-byte-from-engine-decoder-on-programming-track">
-<h4>READ CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#read-configuration-variable-byte-from-engine-decoder-on-programming-track" title="Permalink to this heading"></a></h4>
+<h4>READ CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#read-configuration-variable-byte-from-engine-decoder-on-programming-track" title="Link to this heading"></a></h4>
 <p>If specified with parameters, reads a Configuration Variable from the decoder of an engine on the programming track. If no parameters are specified, it returns the Address of the loco on the programming track.</p>
 <p>Read CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;R</span> <span class="pre">cv</span> <span class="pre">callbacknum</span> <span class="pre">callbacksub&gt;</span></code></p>
 <ul class="simple">
@@ -1353,7 +1354,7 @@ ADDRESS: The loco address to be written (1-10239).</p>
 </div>
 </section>
 <section id="verify-configuration-variable-byte-from-engine-decoder-on-programming-track">
-<h4>VERIFY CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#verify-configuration-variable-byte-from-engine-decoder-on-programming-track" title="Permalink to this heading"></a></h4>
+<h4>VERIFY CONFIGURATION VARIABLE BYTE FROM ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#verify-configuration-variable-byte-from-engine-decoder-on-programming-track" title="Link to this heading"></a></h4>
 <p>This command is designed to offer faster verification of the value held in a CV and can be used instead of the <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> commands. Instead of reading a byte value or looking at each bit, it compares the byte to an expected value. It will attempt to verify the value first, and if it is successful, will return the value as if it was simply “read”. If the verify fails, it will perform a read byte command (see above) and return the value read.</p>
 <ul class="simple">
 <li><p>Verify CV BYTE Format is: <code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">cv</span> <span class="pre">bytevalue&gt;</span></code></p></li>
@@ -1364,7 +1365,7 @@ ADDRESS: The loco address to be written (1-10239).</p>
 </ul>
 </section>
 <section id="verify-configuration-variable-bit-from-engine-decoder-on-programming-track">
-<h4>VERIFY CONFIGURATION VARIABLE BIT FROM ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#verify-configuration-variable-bit-from-engine-decoder-on-programming-track" title="Permalink to this heading"></a></h4>
+<h4>VERIFY CONFIGURATION VARIABLE BIT FROM ENGINE DECODER ON PROGRAMMING TRACK<a class="headerlink" href="#verify-configuration-variable-bit-from-engine-decoder-on-programming-track" title="Link to this heading"></a></h4>
 <p>This command is designed to offer faster verification of the value held in a CV and can be used instead of the <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> commands. Instead of reading a bit value, it compares the bit to an expected value. It will attempt to verify the value first, an if it is successful, will return the value as if it was simply “read”. If the verify fails, it will perform a read bit command (see above) and return the value read.</p>
 <ul class="simple">
 <li><p>Verify CV BIT Format is: <code class="docutils literal notranslate"><span class="pre">&lt;V</span> <span class="pre">cv</span> <span class="pre">bit</span> <span class="pre">bitvalue&gt;</span></code></p></li>
@@ -1379,7 +1380,7 @@ ADDRESS: The loco address to be written (1-10239).</p>
 </section>
 </section>
 <section id="throttle-commands-for-developers">
-<h2><a class="toc-backref" href="#id14" role="doc-backlink">Throttle commands for developers</a><a class="headerlink" href="#throttle-commands-for-developers" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">Throttle commands for developers</a><a class="headerlink" href="#throttle-commands-for-developers" title="Link to this heading"></a></h2>
 <p>These commands have been provided for those wishing to develop throttles that utilise the DCC-EX API.</p>
 <p>As there is existing detailed documentation for these, we will not elaborate here. Instead, refer to <a class="reference internal" href="../../throttles/tech-reference.html"><span class="doc">Technical Reference for Throttle Developers</span></a> for full details on these commands.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;JT&gt;</span></code> returns the defined turnout IDs</p>
@@ -1391,9 +1392,9 @@ ADDRESS: The loco address to be written (1-10239).</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;t</span> <span class="pre">cabid&gt;</span></code> Requests a deliberate update of cab speed/functions in the same format as the cab broadcast</p>
 </section>
 <section id="diagnostic-commands">
-<h2><a class="toc-backref" href="#id15" role="doc-backlink">Diagnostic Commands</a><a class="headerlink" href="#diagnostic-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">Diagnostic Commands</a><a class="headerlink" href="#diagnostic-commands" title="Link to this heading"></a></h2>
 <section id="status">
-<h3><a class="toc-backref" href="#id16" role="doc-backlink">Status</a><a class="headerlink" href="#status" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">Status</a><a class="headerlink" href="#status" title="Link to this heading"></a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> Lowercase “s”: EX-CommandStation Status</p>
 <blockquote>
 <div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>RETURNS: Track power status, Version, Microcontroller type, Motor Shield type, build number, and then any defined turnouts, outputs, or sensors.
@@ -1403,7 +1404,7 @@ Example: &lt;iDCC-EX V-3.0.4 / MEGA / STANDARD_MOTOR_SHIELD G-75ab2ab&gt;&lt;H 1
 </div></blockquote>
 </section>
 <section id="d-commands">
-<h3><a class="toc-backref" href="#id17" role="doc-backlink">“D” Commands</a><a class="headerlink" href="#d-commands" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">“D” Commands</a><a class="headerlink" href="#d-commands" title="Link to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>1 and 0 and ON and OFF can be used interchangeably in EX-CommandStation</p>
@@ -1442,7 +1443,7 @@ analogue read operations.  This command is available from Version 3.2.0.</p></li
 </ul>
 </section>
 <section id="decoder-test">
-<h3><a class="toc-backref" href="#id18" role="doc-backlink">DECODER TEST</a><a class="headerlink" href="#decoder-test" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">DECODER TEST</a><a class="headerlink" href="#decoder-test" title="Link to this heading"></a></h3>
 <p>These following commands are detailed above but are worth repeating here. The <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> command will attempt to read the decoder on the service (programming) track and try to read its long or short address and display it in the serial monitor. To do this, it also resets any consist. So if your loco isn’t moving on the MAIN track, this command is a good way to make sure a consist is enabled as well as to make sure you have the correct address. Put together with the <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON&gt;</span></code> command, this shows a log giving detailed information about track current and ACK detection timings that you can provide to our support team to find out why a particular decoder may not be behaving correctly.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> Upper Case R : Read Loco address (programming track only). Returns:</p>
 <blockquote>
@@ -1452,7 +1453,7 @@ analogue read operations.  This command is available from Version 3.2.0.</p></li
 </div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">ON&gt;&lt;R&gt;</span></code> - When sent together as shown or one right after the other, this combined command shows the detailed results of what happened when trying to read the Address CV(s) and any response back from the decoder.</p>
 <section id="ack-tuning-commands">
-<h4>ACK Tuning Commands<a class="headerlink" href="#ack-tuning-commands" title="Permalink to this heading"></a></h4>
+<h4>ACK Tuning Commands<a class="headerlink" href="#ack-tuning-commands" title="Link to this heading"></a></h4>
 <p>To help define the correct ACK parameters required for different decoders, there are several diagnostic commands available, with defaults based on the NMRA standard for ACK responses during service mode programming.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1479,7 +1480,7 @@ analogue read operations.  This command is available from Version 3.2.0.</p></li
 </section>
 </section>
 <section id="send-packet-to-the-track">
-<h3><a class="toc-backref" href="#id19" role="doc-backlink">SEND PACKET TO THE TRACK</a><a class="headerlink" href="#send-packet-to-the-track" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id19" role="doc-backlink">SEND PACKET TO THE TRACK</a><a class="headerlink" href="#send-packet-to-the-track" title="Link to this heading"></a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>THIS IS FOR DEBUGGING AND TESTING PURPOSES ONLY.  DO NOT USE UNLESS YOU KNOW HOW TO CONSTRUCT NMRA DCC PACKETS - YOU CAN INADVERTENTLY RE-PROGRAM YOUR ENGINE DECODER</p>
@@ -1505,7 +1506,7 @@ returns: NONE
 </section>
 </section>
 <section id="wifi-at-commands">
-<h2><a class="toc-backref" href="#id20" role="doc-backlink">WiFi “AT” Commands</a><a class="headerlink" href="#wifi-at-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id20" role="doc-backlink">WiFi “AT” Commands</a><a class="headerlink" href="#wifi-at-commands" title="Link to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;+COMMAND&gt;</span></code> Plus sign followed by a command. Sends AT commands to the WiFi board (ESP8266, ESP32, etc.) There is not space between the “+” and the command.</p>
 <p>Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the <a class="reference internal" href="../../ex-commandstation/advanced-setup/startup-config.html"><span class="doc">mySetup.h file</span></a>. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code> A special command to force the “connected” flag (WiFi Connected Mode) to on inside the Command Station so that our loop will start seeing network traffic. If your code creates a connection outside of our normal WiFi code, this provides a way for you to notify the Command Station that it needs to process commands on a connection you created and so you can send your own AT commands.</p>
@@ -1519,7 +1520,7 @@ returns: NONE
 <p><a class="reference external" href="https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf">Espressif AT Command Set PDF File (Exressif makes the ESP8266)</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 </section>
 <section id="user-commands">
-<h2><a class="toc-backref" href="#id21" role="doc-backlink">User Commands</a><a class="headerlink" href="#user-commands" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id21" role="doc-backlink">User Commands</a><a class="headerlink" href="#user-commands" title="Link to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;U&gt;</span></code> Is reserved for user commands.</p>
 </section>
 </section>
@@ -1546,7 +1547,7 @@ returns: NONE
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f3712c143d0>
+    <jinja2.runtime.BlockReference object at 0x7f7453c95060>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

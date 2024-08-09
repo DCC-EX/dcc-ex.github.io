@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX DCC DCC++ EX DCC++EX" name="keywords" />
@@ -8,31 +8,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DCC-EX HAL Architecture &mdash; DCC-EX Model Railroading  documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/dccex_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/big_picture_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/sphinx_design_overrides.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/dark_mode_css/general.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/dark_mode_css/dark.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=6724a1a8" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/big_picture_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=bfd9ebc6" />
+
+  
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/reference/developers/hal.html" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
-        <script src="../../_static/design-tabs.js"></script>
-        <script src="../../_static/js/platform.js"></script>
-        <script src="../../_static/js/extra.js"></script>
-        <script src="../../_static/dark_mode_js/default_light.js"></script>
-        <script src="../../_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+        <script src="../../_static/js/platform.js?v=e56cde4b"></script>
+        <script src="../../_static/js/extra.js?v=3424c10e"></script>
+        <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../../_static/dark_mode_js/theme_switcher.js?v=a2af87b2"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -608,7 +609,7 @@
              
 <p><a class="image-product-logo-float-right reference internal" href="../../_images/product-logo-reference.png"><img alt="Reference" class="image-product-logo-float-right" src="../../_images/product-logo-reference.png" style="width: 320.0px; height: 64.0px;" /></a></p>
 <section id="dcc-ex-hal-architecture">
-<h1>DCC-EX HAL Architecture<a class="headerlink" href="#dcc-ex-hal-architecture" title="Permalink to this heading"></a></h1>
+<h1>DCC-EX HAL Architecture<a class="headerlink" href="#dcc-ex-hal-architecture" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar">
 <nav class="contents local" id="on-this-page">
@@ -623,13 +624,13 @@
 </nav>
 </aside>
 <section id="introduction">
-<h2><a class="toc-backref" href="#id1" role="doc-backlink">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Introduction</a><a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
 <p>Firstly, an apology.  The document below is mostly based on my activity log while developing the HAL software and other associated modules (I<sup>2</sup>C etc.).
 Consequently, it is badly structured, random, and mostly extremely technical.  For that, I apologise.</p>
 <p>Now, on to the content.  You have been warned…</p>
 </section>
 <section id="overview">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">Overview</a><a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Overview</a><a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
 <p><strong>HAL</strong> = <strong>H</strong>ardware <strong>A</strong>bstraction <strong>L</strong>ayer.</p>
 <p>The HAL provides the ability for any output device that can be controlled by a binary command (on/off, position1/position2, set/reset etc.), or any input that provides a binary signal (on/off, active/inactive, above/below threshold, etc.), to be controlled from <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> code through a standardised application programming interface (API) defined in class IODevice, irrespective of the type of hardware, the electrical connection or the control protocol that is used.</p>
 <p>The external device may be connected directly to an Arduino pin, a pin on an I<sup>2</sup>C-connected extender module, a DCC Accessory controller, or another microcontroller connected via a serial or wireless connection.  The HAL allows any of these options to be used without any changes to the Command Station software, just a couple of lines of text added to the user’s configuration file before building the software.  One line is a #include directive to include the device definition, and the second line associates the device type, and its handler software, with an I/O pin number or range of numbers.  However, rather than being a specific Arduino I/O pin, this pin number is termed as a ‘virtual pin’ or vpin and is a reference to any kind of ‘end-point’ connected to a local or remote device.</p>
@@ -645,9 +646,9 @@ The class GPIOBase implements functionality that is common to, and inherited by,
 device-specific commands for reading and writing to the module’s registers.</p>
 </section>
 <section id="command-reference">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">Command Reference</a><a class="headerlink" href="#command-reference" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Command Reference</a><a class="headerlink" href="#command-reference" title="Link to this heading"></a></h2>
 <section id="revised-turnout-command-list">
-<h3>Revised Turnout Command List<a class="headerlink" href="#revised-turnout-command-list" title="Permalink to this heading"></a></h3>
+<h3>Revised Turnout Command List<a class="headerlink" href="#revised-turnout-command-list" title="Link to this heading"></a></h3>
 <dl class="simple">
 <dt>&lt;T id SERVO vpin activePos inactivePos profile&gt;</dt><dd><p>Define turnout servo (PWM) on specified vpin.
 The active and inactive positions are defined in terms of the PWM parameter (0-4095 corresponds to 0-100% PWM).
@@ -678,7 +679,7 @@ and 4=Bounce (subject to revision).
 </dl>
 </section>
 <section id="hal-programming-interface">
-<h3>HAL Programming Interface<a class="headerlink" href="#hal-programming-interface" title="Permalink to this heading"></a></h3>
+<h3>HAL Programming Interface<a class="headerlink" href="#hal-programming-interface" title="Link to this heading"></a></h3>
 <p>The interface functions to the HAL are as follows.  Apart from the ‘create’ functions, these functions are generally only called internally
 from within the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software.  The xxxx::create() functions however are required to be added to the user’s myHal.cpp or mySetup.h
 configuration file in order to register the device driver and configure the specified VPINs.</p>
@@ -743,7 +744,7 @@ If the device in question does not support the configureServo operation, the val
 </dl>
 </section>
 <section id="hal-define-symbols">
-<h3>HAL #define Symbols<a class="headerlink" href="#hal-define-symbols" title="Permalink to this heading"></a></h3>
+<h3>HAL #define Symbols<a class="headerlink" href="#hal-define-symbols" title="Link to this heading"></a></h3>
 <p>The following #define symbols may be defined in the IODevice.h file or the platformio.ini file in order to facilitate fault-finding or to remove the
 HAL from the build.</p>
 <dl class="simple">
@@ -782,7 +783,7 @@ are also used by the serial USB, clock and other components).  It will also slow
 </dl>
 </section>
 <section id="mysetup-files">
-<h3>mySetup Files<a class="headerlink" href="#mysetup-files" title="Permalink to this heading"></a></h3>
+<h3>mySetup Files<a class="headerlink" href="#mysetup-files" title="Link to this heading"></a></h3>
 <p>There are various ways of configuring I/O and creating turnouts, sensors and other objects when the Command Station is powered on:</p>
 <p>After using the commands (&lt;S …&gt;, &lt;T …&gt;, &lt;Z …&gt; etc.) to define sensors, turnouts and outputs, use the &lt;E&gt; command to
 save them to EEPROM.  Then, when the Command Station restarts, the definitions are read back from EEPROM and the objects recreated.  This is limited to turnout, sensor and output definitions.</p>
@@ -827,7 +828,7 @@ functional in editors that support it (e.g. PlatformIO).</p>
 </section>
 </section>
 <section id="list-of-changes">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink">List of Changes</a><a class="headerlink" href="#list-of-changes" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">List of Changes</a><a class="headerlink" href="#list-of-changes" title="Link to this heading"></a></h2>
 <p>The following functional changes have been done in the neil-hal branch to support the implementation of the HAL in <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>,
 and to improve the handling of Displays, Turnouts, Sensors and Outputs.</p>
 <ul>
@@ -1038,7 +1039,7 @@ The device is configured in myHal.cpp by</p>
 </ul>
 </section>
 <section id="future-enhancements">
-<h2><a class="toc-backref" href="#id5" role="doc-backlink">Future Enhancements</a><a class="headerlink" href="#future-enhancements" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Future Enhancements</a><a class="headerlink" href="#future-enhancements" title="Link to this heading"></a></h2>
 <ol class="arabic">
 <li><p>HAL: Produce a simple IODevice class template, to help <span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span> developers/tinkerers who want to implement their own extensions protocols,
 e.g. for a serial link to an external device (LCN?).  See IO_ExampleSerial.cpp.</p>
@@ -1139,7 +1140,7 @@ servo’s range.</p></li>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f37170f99f0>
+    <jinja2.runtime.BlockReference object at 0x7f745d731fc0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

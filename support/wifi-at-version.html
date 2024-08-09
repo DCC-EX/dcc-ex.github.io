@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX DCC DCC++ EX DCC++EX" name="keywords" />
@@ -9,31 +9,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ESP8266 (WiFi Boards) - AT Version Issues and Solutions &mdash; DCC-EX Model Railroading  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/dccex_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/big_picture_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/sphinx_design_overrides.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=6724a1a8" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/big_picture_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=bfd9ebc6" />
+
+  
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/support/wifi-at-version.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-        <script src="../_static/js/platform.js"></script>
-        <script src="../_static/js/extra.js"></script>
-        <script src="../_static/dark_mode_js/default_light.js"></script>
-        <script src="../_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/design-tabs.js?v=f930bc37"></script>
+        <script src="../_static/js/platform.js?v=e56cde4b"></script>
+        <script src="../_static/js/extra.js?v=3424c10e"></script>
+        <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js?v=a2af87b2"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -609,7 +610,7 @@
              
 <p><a class="image-product-logo-float-right reference internal" href="../_images/product-logo-ex-commandstation.png"><img alt="EX-CommandStation" class="image-product-logo-float-right" src="../_images/product-logo-ex-commandstation.png" style="width: 320.0px; height: 64.0px;" /></a></p>
 <section id="esp8266-wifi-boards-at-version-issues-and-solutions">
-<h1>ESP8266 (WiFi Boards) - AT Version Issues and Solutions<a class="headerlink" href="#esp8266-wifi-boards-at-version-issues-and-solutions" title="Permalink to this heading"></a></h1>
+<h1>ESP8266 (WiFi Boards) - AT Version Issues and Solutions<a class="headerlink" href="#esp8266-wifi-boards-at-version-issues-and-solutions" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../../begin/levels.html#conductor"><img alt="Conductor Hat" src="../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../support/index.html#contact-support-options" title="Request help or support"><img src="../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
 <aside class="sidebar">
 <nav class="contents local" id="on-this-page">
@@ -659,12 +660,12 @@
 </aside>
 <p>Unfortunately, other than the recommended <em>DCC-EX EX-WiFiShield 8266</em> and <em>Makerfabs ESP8266 WiFi Shield</em>, the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>. There was a run of Makerfabs boards from around May 2023 through October 2023 that had defective firmware from Expressif. You can use this tutorial to upgrade one of those boards if you have one. All boards manufactured after November 2023 have the correct firmware. These boards carry the DCC-EX logo on the bottom and display version 1.1 or later.</p>
 <section id="which-is-correct-version-of-the-at-firmware">
-<h2><a class="toc-backref" href="#id9" role="doc-backlink">Which is correct version of the AT firmware</a><a class="headerlink" href="#which-is-correct-version-of-the-at-firmware" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Which is correct version of the AT firmware</a><a class="headerlink" href="#which-is-correct-version-of-the-at-firmware" title="Link to this heading"></a></h2>
 <p><span class="dcc-ex-text-size-200pct">ONLY Version 1.7.4 is known to work reliably.</span></p>
 <p>That means all versions both before or after 1.7.4 are <em>not</em> suitable.  So don’t be fooled in thinking that if it has a version later than that it will be ok.  <strong>It won’t!</strong></p>
 </section>
 <section id="symptoms-of-an-incorrect-firmware-version">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Symptoms of an Incorrect firmware Version</a><a class="headerlink" href="#symptoms-of-an-incorrect-firmware-version" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Symptoms of an Incorrect firmware Version</a><a class="headerlink" href="#symptoms-of-an-incorrect-firmware-version" title="Link to this heading"></a></h2>
 <p>There several common symptoms of a an incorrect firmware version:</p>
 <ul class="simple">
 <li><p>If you set up the command station in <a class="reference internal" href="../reference/glossary.html"><span class="doc">Access Point (AP) Mode</span></a>, then the SSID (Network Name) the displayed will be “DCCEX_SAYS_BROKEN_FIRMWARE” or “UPDATE_ESP_FIRMWARE”.</p></li>
@@ -676,7 +677,7 @@
 <p><hr class="hr-heavy" /></p>
 </section>
 <section id="find-your-at-version">
-<h2><a class="toc-backref" href="#id11" role="doc-backlink">Find Your AT Version</a><a class="headerlink" href="#find-your-at-version" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Find Your AT Version</a><a class="headerlink" href="#find-your-at-version" title="Link to this heading"></a></h2>
 <p>It is important to find out which version of the firmware you board has and correct it if necessary.</p>
 <p>There are two basic ways that you can check:</p>
 <ul class="simple">
@@ -685,7 +686,7 @@
 </ul>
 <hr class="docutils" />
 <section id="checking-after-you-load-the-ex-commandstation-software">
-<h3><a class="toc-backref" href="#id12" role="doc-backlink">Checking AFTER you load the EX-CommandStation software</a><a class="headerlink" href="#checking-after-you-load-the-ex-commandstation-software" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Checking AFTER you load the EX-CommandStation software</a><a class="headerlink" href="#checking-after-you-load-the-ex-commandstation-software" title="Link to this heading"></a></h3>
 <p>One you have loaded the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software you will be able to see the AT version in the start-up log by connecting the serial monitor in either the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> or <strong>Arduino IDE</strong> (whichever you used to upload the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> onto your device).</p>
 <p>You can check the AT version two ways. Which is best for you depends on how you loaded the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software:</p>
 <ul class="simple">
@@ -694,7 +695,7 @@
 </ul>
 <p><hr class="hr-dashed" /></p>
 <section id="checking-the-at-version-using-ex-installer">
-<h4><a class="toc-backref" href="#id13" role="doc-backlink">Checking the AT version using EX-Installer</a><a class="headerlink" href="#checking-the-at-version-using-ex-installer" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id13" role="doc-backlink">Checking the AT version using EX-Installer</a><a class="headerlink" href="#checking-the-at-version-using-ex-installer" title="Link to this heading"></a></h4>
 <p>Once you have successfully loaded the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software:</p>
 <ol class="arabic simple">
 <li><p>Click back through the pages of the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span> till you get to the ‘Select your Device’ screen</p></li>
@@ -707,7 +708,7 @@
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="checking-the-at-version-with-the-arduino-ide">
-<h4><a class="toc-backref" href="#id14" role="doc-backlink">Checking the AT version with the Arduino IDE</a><a class="headerlink" href="#checking-the-at-version-with-the-arduino-ide" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id14" role="doc-backlink">Checking the AT version with the Arduino IDE</a><a class="headerlink" href="#checking-the-at-version-with-the-arduino-ide" title="Link to this heading"></a></h4>
 <p>If you loaded the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software using the Arduino, once you have successfully loaded the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software:</p>
 <ol class="arabic simple">
 <li><p>select <strong>Tools</strong> -&gt; <strong>Serial monitor</strong> from the menus</p></li>
@@ -721,7 +722,7 @@
 </section>
 </section>
 <section id="checking-before-you-load-the-ex-commandstation-software">
-<h3><a class="toc-backref" href="#id15" role="doc-backlink">Checking BEFORE you load the EX-CommandStation software</a><a class="headerlink" href="#checking-before-you-load-the-ex-commandstation-software" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">Checking BEFORE you load the EX-CommandStation software</a><a class="headerlink" href="#checking-before-you-load-the-ex-commandstation-software" title="Link to this heading"></a></h3>
 <p>How to check before you load the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> software will depend on which WiFi shield or board you are using:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#checking-the-at-version-of-a-esp-01-or-esp-01s"><span class="std std-ref">ESP-01 or ESP-01s</span></a></p></li>
@@ -731,11 +732,11 @@
 </ul>
 <hr class="docutils" />
 <section id="checking-the-at-version-of-a-esp-01-or-esp-01s">
-<h4><a class="toc-backref" href="#id16" role="doc-backlink">Checking the AT version of a ESP-01 or ESP-01s</a><a class="headerlink" href="#checking-the-at-version-of-a-esp-01-or-esp-01s" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id16" role="doc-backlink">Checking the AT version of a ESP-01 or ESP-01s</a><a class="headerlink" href="#checking-the-at-version-of-a-esp-01-or-esp-01s" title="Link to this heading"></a></h4>
 <figure class="align-default" id="id8">
 <a class="reference internal image-reference" href="../_images/esp-01.png"><img alt="ESP-01" src="../_images/esp-01.png" style="width: 175.8px; height: 144.8px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 35 </span><span class="caption-text">ESP-01</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 35 </span><span class="caption-text">ESP-01</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>There are a number of ways that you can check the AT version an a ESP-01 or ESP-01s:</p>
@@ -746,7 +747,7 @@
 </ul>
 <p><hr class="hr-dashed" /></p>
 <section id="checking-the-at-version-of-a-esp-01-with-a-usb-serial-adapter">
-<h5>Checking the AT version of a ESP-01 with a USB Serial Adapter<a class="headerlink" href="#checking-the-at-version-of-a-esp-01-with-a-usb-serial-adapter" title="Permalink to this heading"></a></h5>
+<h5>Checking the AT version of a ESP-01 with a USB Serial Adapter<a class="headerlink" href="#checking-the-at-version-of-a-esp-01-with-a-usb-serial-adapter" title="Link to this heading"></a></h5>
 <a class="image-float-right reference internal image-reference" href="../_images/CH340G-USB-to-TTL(serial)-converter.png"><img alt="CH340G USB to TTL(serial) Converter" class="image-float-right" src="../_images/CH340G-USB-to-TTL%28serial%29-converter.png" style="width: 129.5px; height: 103.25px;" /></a>
 <ol class="arabic simple">
 <li><p>Connect the ESP01 to the serial adapter with the instructions on here: <a class="reference external" href="https://remotexy.com/en/help/esp8266-firmware-update">https://remotexy.com/en/help/esp8266-firmware-update</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> (see the section on ‘Connection via the USB-UARt adapter’) <br /> Note the orange wire is not needed for checking the AT version.</p></li>
@@ -763,7 +764,7 @@
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="checking-the-at-version-of-a-esp-01-a-with-a-usb-to-ttl-ch340g-converter-module-adapter">
-<h5>Checking the AT version of a ESP-01 a with a USB to TTL CH340G Converter Module Adapter<a class="headerlink" href="#checking-the-at-version-of-a-esp-01-a-with-a-usb-to-ttl-ch340g-converter-module-adapter" title="Permalink to this heading"></a></h5>
+<h5>Checking the AT version of a ESP-01 a with a USB to TTL CH340G Converter Module Adapter<a class="headerlink" href="#checking-the-at-version-of-a-esp-01-a-with-a-usb-to-ttl-ch340g-converter-module-adapter" title="Link to this heading"></a></h5>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
 <p><cite>Checking AT version with a USB to TTL CH340G Converter Module Adapter prior to upload</cite></p>
@@ -786,7 +787,7 @@
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="checking-the-at-version-of-a-esp-01-a-with-a-arduino-uno">
-<h5>Checking the AT version of a ESP-01 a with a Arduino Uno<a class="headerlink" href="#checking-the-at-version-of-a-esp-01-a-with-a-arduino-uno" title="Permalink to this heading"></a></h5>
+<h5>Checking the AT version of a ESP-01 a with a Arduino Uno<a class="headerlink" href="#checking-the-at-version-of-a-esp-01-a-with-a-arduino-uno" title="Link to this heading"></a></h5>
 <div class="admonition-todo admonition" id="id2">
 <p class="admonition-title">Todo</p>
 <p><cite>Checking AT version with a Arduino Uno prior to upload</cite></p>
@@ -795,7 +796,7 @@
 </section>
 <hr class="docutils" />
 <section id="checking-the-at-version-of-a-makerfabs-esp8266-wifi-shield">
-<h4><a class="toc-backref" href="#id17" role="doc-backlink">Checking the AT version of a Makerfabs ESP8266 WiFi Shield</a><a class="headerlink" href="#checking-the-at-version-of-a-makerfabs-esp8266-wifi-shield" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id17" role="doc-backlink">Checking the AT version of a Makerfabs ESP8266 WiFi Shield</a><a class="headerlink" href="#checking-the-at-version-of-a-makerfabs-esp8266-wifi-shield" title="Link to this heading"></a></h4>
 <a class="image-float-right reference internal image-reference" href="../_images/makerfabs-esp8266-wifi-shield.png"><img alt="Makefabs ESP8266 WiFi Shield" class="image-float-right" src="../_images/makerfabs-esp8266-wifi-shield.png" style="width: 181.5px; height: 177.75px;" /></a>
 <div class="admonition-todo admonition" id="id3">
 <p class="admonition-title">Todo</p>
@@ -805,7 +806,7 @@
 </section>
 <hr class="docutils" />
 <section id="checking-the-at-version-of-a-duinopeak-esp8266-wifi-expansion-board">
-<h4><a class="toc-backref" href="#id18" role="doc-backlink">Checking the AT version of a Duinopeak ESP8266 WiFi Expansion Board</a><a class="headerlink" href="#checking-the-at-version-of-a-duinopeak-esp8266-wifi-expansion-board" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id18" role="doc-backlink">Checking the AT version of a Duinopeak ESP8266 WiFi Expansion Board</a><a class="headerlink" href="#checking-the-at-version-of-a-duinopeak-esp8266-wifi-expansion-board" title="Link to this heading"></a></h4>
 <a class="image-float-right reference internal image-reference" href="../_images/duinopeak.png"><img alt="Duinopeak ESP8266 WiFi Expansion Board" class="image-float-right" src="../_images/duinopeak.png" style="width: 150.0px; height: 144.25px;" /></a>
 <div class="admonition-todo admonition" id="id4">
 <p class="admonition-title">Todo</p>
@@ -815,7 +816,7 @@
 </section>
 <hr class="docutils" />
 <section id="checking-the-at-version-of-a-mega-wifi">
-<h4><a class="toc-backref" href="#id19" role="doc-backlink">Checking the AT version of a Mega+WiFi</a><a class="headerlink" href="#checking-the-at-version-of-a-mega-wifi" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id19" role="doc-backlink">Checking the AT version of a Mega+WiFi</a><a class="headerlink" href="#checking-the-at-version-of-a-mega-wifi" title="Link to this heading"></a></h4>
 <a class="image-float-right reference internal image-reference" href="../_images/mega_wifi.png"><img alt="Mega + WiFi" class="image-float-right" src="../_images/mega_wifi.png" style="width: 240.25px; height: 192.75px;" /></a>
 <div class="admonition-todo admonition" id="id5">
 <p class="admonition-title">Todo</p>
@@ -828,7 +829,7 @@
 </section>
 </section>
 <section id="what-to-do-if-you-have-the-wrong-at-firmware-version">
-<h2><a class="toc-backref" href="#id20" role="doc-backlink">What to do if you have the wrong AT Firmware version</a><a class="headerlink" href="#what-to-do-if-you-have-the-wrong-at-firmware-version" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id20" role="doc-backlink">What to do if you have the wrong AT Firmware version</a><a class="headerlink" href="#what-to-do-if-you-have-the-wrong-at-firmware-version" title="Link to this heading"></a></h2>
 <p>The steps necessary to correct the AT version will depend on your hardware:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#correcting-the-at-version-on-a-esp-01"><span class="std std-ref">ESP-01 or ESP-01s</span></a></p></li>
@@ -839,7 +840,7 @@
 <p>We strongly recommend upgrading or downgrading to the “NonOS AT” version 1.7.4 available on our <a class="reference internal" href="../download/esp8266.html"><span class="doc">ESP8266 (WiFi Boards)</span></a> download page <strong>prior</strong> to reaching out for support from the team.</p>
 <hr class="docutils" />
 <section id="correcting-the-at-version-on-a-esp-01">
-<h3><a class="toc-backref" href="#id21" role="doc-backlink">Correcting the AT version on a ESP-01</a><a class="headerlink" href="#correcting-the-at-version-on-a-esp-01" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id21" role="doc-backlink">Correcting the AT version on a ESP-01</a><a class="headerlink" href="#correcting-the-at-version-on-a-esp-01" title="Link to this heading"></a></h3>
 <p>Correcting the AT version of a ESP-01or ESP01s requires additional hardware. One of following is required:</p>
 <ul class="simple">
 <li><p>A USB to ESP-01 Adapter</p></li>
@@ -856,14 +857,14 @@
 </nav>
 <p><hr class="hr-dashed" /></p>
 <section id="correcting-a-esp-01-with-a-usb-serial-adapter">
-<h4><a class="toc-backref" href="#id30" role="doc-backlink">Correcting a ESP-01 with a USB Serial Adapter</a><a class="headerlink" href="#correcting-a-esp-01-with-a-usb-serial-adapter" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id30" role="doc-backlink">Correcting a ESP-01 with a USB Serial Adapter</a><a class="headerlink" href="#correcting-a-esp-01-with-a-usb-serial-adapter" title="Link to this heading"></a></h4>
 <a class="image-float-right reference internal image-reference" href="../_images/CH340G-USB-to-TTL(serial)-converter.png"><img alt="CH340G USB to TTL(serial) Converter" class="image-float-right" src="../_images/CH340G-USB-to-TTL%28serial%29-converter.png" style="width: 129.5px; height: 103.25px;" /></a>
 <p>See <a class="reference external" href="https://remotexy.com/en/help/esp8266-firmware-update/">https://remotexy.com/en/help/esp8266-firmware-update/</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="correcting-a-esp-01-with-a-usb-to-esp-01-adapter-board">
-<h4><a class="toc-backref" href="#id31" role="doc-backlink">Correcting a ESP-01 with a USB to ESP-01 Adapter Board</a><a class="headerlink" href="#correcting-a-esp-01-with-a-usb-to-esp-01-adapter-board" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id31" role="doc-backlink">Correcting a ESP-01 with a USB to ESP-01 Adapter Board</a><a class="headerlink" href="#correcting-a-esp-01-with-a-usb-to-esp-01-adapter-board" title="Link to this heading"></a></h4>
 <p>Correcting a ESP-01 or ESP-01s with a USB to TTL CH340G Converter Module Adapter</p>
 <a class="image-float-right reference internal image-reference" href="../_images/USB-to-ESP-01-adapter-early.png"><img alt="Early ESP-01 USB adapter" class="image-float-right" src="../_images/USB-to-ESP-01-adapter-early.png" style="width: 87.2px; height: 93.0px;" /></a>
 <a class="image-float-right reference internal image-reference" href="../_images/USB-to-ESP-01-adapter.png"><img alt="ESP-01 USB adapter" class="image-float-right" src="../_images/USB-to-ESP-01-adapter.png" style="width: 109.5px; height: 86.0px;" /></a>
@@ -876,7 +877,7 @@
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="correcting-a-esp-01-with-a-arduino-uno">
-<h4><a class="toc-backref" href="#id32" role="doc-backlink">Correcting a ESP-01 with a Arduino Uno</a><a class="headerlink" href="#correcting-a-esp-01-with-a-arduino-uno" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id32" role="doc-backlink">Correcting a ESP-01 with a Arduino Uno</a><a class="headerlink" href="#correcting-a-esp-01-with-a-arduino-uno" title="Link to this heading"></a></h4>
 <p>See <a class="reference external" href="https://cordobo.com/2300-flash-esp8266-01-with-arduino-uno/">https://cordobo.com/2300-flash-esp8266-01-with-arduino-uno/</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <p>Or <a class="reference external" href="https://remotexy.com/en/help/esp8266-firmware-update/">https://remotexy.com/en/help/esp8266-firmware-update/</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
@@ -884,7 +885,7 @@
 </section>
 <hr class="docutils" />
 <section id="correcting-the-at-version-on-a-makerfabs-esp8266-wifi-shield">
-<h3><a class="toc-backref" href="#id25" role="doc-backlink">Correcting the AT version on a Makerfabs ESP8266 Wifi Shield</a><a class="headerlink" href="#correcting-the-at-version-on-a-makerfabs-esp8266-wifi-shield" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id25" role="doc-backlink">Correcting the AT version on a Makerfabs ESP8266 Wifi Shield</a><a class="headerlink" href="#correcting-the-at-version-on-a-makerfabs-esp8266-wifi-shield" title="Link to this heading"></a></h3>
 <a class="image-float-right reference internal image-reference" href="../_images/makerfabs-esp8266-wifi-shield.png"><img alt="Makefabs ESP8266 WiFi Shield" class="image-float-right" src="../_images/makerfabs-esp8266-wifi-shield.png" style="width: 181.5px; height: 177.75px;" /></a>
 <p>There are <strong>two</strong> options for correcting the AT version on a Makerfabs ESP8266 Wifi Shield:</p>
 <ul class="simple">
@@ -900,7 +901,7 @@
 </nav>
 <p><hr class="hr-dashed" /></p>
 <section id="correcting-the-makerfabs-esp8266-wifi-shield-with-a-usb-to-ttl-converter-module-adapter">
-<h4><a class="toc-backref" href="#id33" role="doc-backlink">Correcting the Makerfabs ESP8266 WiFi Shield With a USB to TTL Converter Module Adapter</a><a class="headerlink" href="#correcting-the-makerfabs-esp8266-wifi-shield-with-a-usb-to-ttl-converter-module-adapter" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id33" role="doc-backlink">Correcting the Makerfabs ESP8266 WiFi Shield With a USB to TTL Converter Module Adapter</a><a class="headerlink" href="#correcting-the-makerfabs-esp8266-wifi-shield-with-a-usb-to-ttl-converter-module-adapter" title="Link to this heading"></a></h4>
 <p><strong>Recommended approach</strong></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -912,7 +913,7 @@
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="correcting-the-makerfabs-esp8266-wifi-shield-with-an-arduino-mega">
-<h4><a class="toc-backref" href="#id34" role="doc-backlink">Correcting the Makerfabs ESP8266 WiFi Shield With an Arduino Mega</a><a class="headerlink" href="#correcting-the-makerfabs-esp8266-wifi-shield-with-an-arduino-mega" title="Permalink to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id34" role="doc-backlink">Correcting the Makerfabs ESP8266 WiFi Shield With an Arduino Mega</a><a class="headerlink" href="#correcting-the-makerfabs-esp8266-wifi-shield-with-an-arduino-mega" title="Link to this heading"></a></h4>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The instructions on the following page have been proven to work on Linux PCs, so will probably work on macOS PCs (Apple), however attempts to get them to work on <strong>Microsoft Windows PCs</strong> <span class="dcc-ex-red-bold">have so far been unsuccessful</span>. We need to do more testing. If you have an issue with this method, simply purchase a USB to TTL converter module and use the recommended process in the previous heading. This should not be an issue for most people since they will have the DCC-EX EX-WiFi Shield 8266 which has the correct firmware and a much easier upgrade process should that be required in the future.</p>
@@ -923,7 +924,7 @@
 </section>
 <hr class="docutils" />
 <section id="correcting-the-at-version-on-a-duinopeak-esp8266-wifi-expansion-board">
-<h3><a class="toc-backref" href="#id28" role="doc-backlink">Correcting the AT version on a Duinopeak ESP8266 WiFi Expansion Board</a><a class="headerlink" href="#correcting-the-at-version-on-a-duinopeak-esp8266-wifi-expansion-board" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id28" role="doc-backlink">Correcting the AT version on a Duinopeak ESP8266 WiFi Expansion Board</a><a class="headerlink" href="#correcting-the-at-version-on-a-duinopeak-esp8266-wifi-expansion-board" title="Link to this heading"></a></h3>
 <a class="image-float-right reference internal image-reference" href="../_images/duinopeak.png"><img alt="Duinopeak ESP8266 WiFi Expansion Board" class="image-float-right" src="../_images/duinopeak.png" style="width: 150.0px; height: 144.25px;" /></a>
 <div class="admonition-todo admonition" id="id7">
 <p class="admonition-title">Todo</p>
@@ -933,7 +934,7 @@
 </section>
 <hr class="docutils" />
 <section id="correcting-the-at-version-on-a-mega-wifi">
-<h3><a class="toc-backref" href="#id29" role="doc-backlink">Correcting the AT version on a Mega+WiFi</a><a class="headerlink" href="#correcting-the-at-version-on-a-mega-wifi" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id29" role="doc-backlink">Correcting the AT version on a Mega+WiFi</a><a class="headerlink" href="#correcting-the-at-version-on-a-mega-wifi" title="Link to this heading"></a></h3>
 <a class="image-float-right reference internal image-reference" href="../_images/mega_wifi.png"><img alt="Mega + WiFi" class="image-float-right" src="../_images/mega_wifi.png" style="width: 240.25px; height: 192.75px;" /></a>
 <p>Flashing the ESP8266 chip on a Mega+WiFi is covered in detail <a class="reference internal" href="../reference/hardware/microcontrollers/wifi-mega.html"><span class="doc">here</span></a>.</p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
@@ -963,7 +964,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f3712c17f70>
+    <jinja2.runtime.BlockReference object at 0x7f744c882380>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

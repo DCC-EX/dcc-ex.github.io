@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="DCC-EX DCC DCC++ EX DCC++EX" name="keywords" />
@@ -8,31 +8,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arduino Mega Setup &mdash; DCC-EX Model Railroading  documentation</title>
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/dccex_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/big_picture_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/sphinx_design_overrides.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/dark_mode_css/general.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/dark_mode_css/dark.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/dccex_theme.css?v=6724a1a8" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/big_picture_theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css?v=bfd9ebc6" />
+
+  
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/reference/hardware/microcontrollers/arduino-mega.html" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
-        <script src="../../../_static/design-tabs.js"></script>
-        <script src="../../../_static/js/platform.js"></script>
-        <script src="../../../_static/js/extra.js"></script>
-        <script src="../../../_static/dark_mode_js/default_light.js"></script>
-        <script src="../../../_static/dark_mode_js/theme_switcher.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+        <script src="../../../_static/js/platform.js?v=e56cde4b"></script>
+        <script src="../../../_static/js/extra.js?v=3424c10e"></script>
+        <script src="../../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+        <script src="../../../_static/dark_mode_js/theme_switcher.js?v=a2af87b2"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -609,10 +610,10 @@
              
 <p><a class="image-product-logo-float-right reference internal" href="../../../_images/product-logo-ex-commandstation.png"><img alt="EX-CommandStation" class="image-product-logo-float-right" src="../../../_images/product-logo-ex-commandstation.png" style="width: 320.0px; height: 64.0px;" /></a></p>
 <section id="arduino-mega-setup">
-<h1>Arduino Mega Setup<a class="headerlink" href="#arduino-mega-setup" title="Permalink to this heading"></a></h1>
+<h1>Arduino Mega Setup<a class="headerlink" href="#arduino-mega-setup" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../../../begin/levels.html#conductor"><img alt="Conductor Hat" src="../../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <section id="why-do-we-recommend-the-mega">
-<h2>Why do we recommend the Mega?<a class="headerlink" href="#why-do-we-recommend-the-mega" title="Permalink to this heading"></a></h2>
+<h2>Why do we recommend the Mega?<a class="headerlink" href="#why-do-we-recommend-the-mega" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>When compiled, our code just barely squeezes onto an Arduino Uno. <strong>A mega allows you to add more features</strong> like networking and displays because it has more memory.</p></li>
 <li><p>The Mega has many more GPIOs (General Purpose Input/Outputs) available to you for constructing control panels and controlling turnouts, signals and other accessories.</p></li>
@@ -624,27 +625,27 @@
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../../../_images/mega.png"><img alt="Arduino Mega Microcontroller" src="../../../_images/mega.png" style="width: 408.0px; height: 210.75px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 36 </span><span class="caption-text">Arduino Mega Microcontroller</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 36 </span><span class="caption-text">Arduino Mega Microcontroller</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <hr class="docutils" />
 <section id="arduino-pro-mini">
-<h3>Arduino Pro Mini<a class="headerlink" href="#arduino-pro-mini" title="Permalink to this heading"></a></h3>
+<h3>Arduino Pro Mini<a class="headerlink" href="#arduino-pro-mini" title="Link to this heading"></a></h3>
 <p>Note that if the size of the regular Mega board is an issue, there are condensed Mega clones that are only 52mm long! They don’t take shields, so you will need to use headers and jumper wires, but they will fit in a very small box. Look for boards by the name “Arduino Mega 2560 PRO Embedded” or “Mini MEGA 2560 Pro Micro” or just “Mega Pro 2560”. Be careful to get the correct one for what you are trying to do because they can come in 3.3V versions or 5V versions and have a Micro-USB port (which you probably want) or just pins to a TTL serial port, and come with header pins you have to solder or not. Remember it must be a 2560 not a 328.</p>
 <figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../../../_images/mega_pro.png"><img alt="Mega Pro Micro" src="../../../_images/mega_pro.png" style="width: 209.64999999999998px; height: 166.6px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 37 </span><span class="caption-text">Mega Pro Micro</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 37 </span><span class="caption-text">Mega Pro Micro</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="notes-for-setting-up-the-arduino-pro-mini">
-<h3>Notes for setting up the Arduino Pro Mini<a class="headerlink" href="#notes-for-setting-up-the-arduino-pro-mini" title="Permalink to this heading"></a></h3>
+<h3>Notes for setting up the Arduino Pro Mini<a class="headerlink" href="#notes-for-setting-up-the-arduino-pro-mini" title="Link to this heading"></a></h3>
 <p>As these microprocessors are not plug compatible with the shields you will need to wire the appropriate pins manually as per the diagram below</p>
 <figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="../../../_images/mega_2560_pro_mini_with_standard_motor_shield.png"><img alt="Mega Pro Mini - Wiring motor shield and ESP-01" src="../../../_images/mega_2560_pro_mini_with_standard_motor_shield.png" style="width: 408.45px; height: 510.29999999999995px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 38 </span><span class="caption-text">Mega Pro Mini - Wiring motor shield and ESP-01</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-number">Figure 38 </span><span class="caption-text">Mega Pro Mini - Wiring motor shield and ESP-01</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <div class="admonition warning">
@@ -677,7 +678,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f3712869780>
+    <jinja2.runtime.BlockReference object at 0x7f745a9f1de0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

@@ -101,6 +101,11 @@
 ..
 .. ................................................
 ..
+.. |EX-PLACEHOLDER| image:: /_static/images/logos/placeholder.png
+      :alt: EX-CommandStation
+      :scale: 40%
+      :class: image-product-logo-float-right
+..
 .. |EX-CS-LOGO| image:: /_static/images/logos/product-logo-ex-commandstation.png
       :alt: EX-CommandStation
       :scale: 40%

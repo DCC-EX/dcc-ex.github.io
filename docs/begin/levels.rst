@@ -16,7 +16,7 @@ Choose Your Comfort Level
     :depth: 2
     :local:
 
-Some of our products are "Ready-To-Run" and some are more "Do-It-Yourself". Model Railroad layouts can be as simple as a circle that runs around a Christmas Tree, to a fully automated club layout. Therefore, your options range in difficulty from very simple to moderately complex. 
+Some of our products are "Ready-To-Run" and some are more "Do-It-Yourself". Model Railroad layouts can be as simple as a circle that runs around a holiday display, to a fully automated club layout. Therefore, your options range in difficulty from very simple to moderately complex. 
 
 To help you navigate this web site, the pages are all tagged [#tags]_ with one or more of 'Comfort Levels' to help identify the difficulty of the what is described on that page.  (Don't worry, the paths are integrated and you can easily choose a slightly different path at any point.)
 

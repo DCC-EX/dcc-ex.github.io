@@ -32,7 +32,7 @@ However, if you just want to know how DCC, and in particular |DCC-EX|, can help 
 DCC-EX does DC as well
 ----------------------
 
-As mentioned, along with DCC, |DCC-EX| can be used to control Direct Current (DC) locomotives using Pulse Width Modulation (PWM). This is actually an improvement over pure DC since the full voltage is always applied to the track. Rather than controling a voltage from zero to full to control speed, the average time the full voltage is applied controls the speed. This allows for better stops and starts and smoother operation at low speeds.
+As mentioned, along with DCC, |DCC-EX| can be used to control Direct Current (DC) locomotives using Pulse Width Modulation (PWM). This is actually an improvement over pure DC since the full voltage is always applied to the track. Rather than controlling a voltage from zero to full to control speed, the average time the full voltage is applied controls the speed. This allows for better stops and starts and smoother operation at low speeds.
 
 More information on using DC PWM can be found :doc:`on the TrackManager page </trackmanager/index>`.
 
@@ -41,7 +41,7 @@ DCC is for more than just controlling trains
 
 DCC, and in particular our flagship product |EX-CS|, can also be used to control accessories (think turnouts/points, signals, sensors to monitor things, and lineside feature animation to name a few). DCC is not just about running trains!
 
-Of course you don't need to use any of these features if you simply want to run trains.
+Of course you don't need to use any of these features if you simply want to run trains without any of the bells and whistles (though we control the bells and whistles too!).
 
 Read on to understand which of our products and features will help you achieve your DCC dreams...
 
@@ -58,7 +58,7 @@ Our list of free, open source software products currently include:
     * - |EX-CS-LOGO-SMALL|
       - |EX-I-LOGO-SMALL|
       - |EX-R-LOGO-SMALL|
-    * - Our DCC & DC command station for controlling your model railroad
+    * - Our DCC & DC command station software for controlling your model railroad
       - Our user friendly command station software installer
       - The built-in scripting language for automating your model railroad
     * - |EX-WT-LOGO-SMALL|
@@ -80,7 +80,7 @@ Our list of free, open source software products currently include:
     :class: table-list-homepage
 
     * - |EX-CS-LOGO-SMALL| 
-      - Our DCC & DC command station for controlling your model railroad
+      - Our DCC & DC command station software for controlling your model railroad
     * - |EX-I-LOGO-SMALL| 
       - Our user friendly command station software installer
     * - |EX-R-LOGO-SMALL| 
@@ -97,17 +97,46 @@ Our list of free, open source software products currently include:
       -  A FastClock to enable time based events
     * - |EX-TB-LOGO-SMALL| 
       -  An Android app to help configure your EX-CommandStation
+  
+Our list of open source hardware products currently include:
+
+.. list-table::
+    :widths: 33 33 33
+    :header-rows: 0
+    :class: table-grid-homepage
+
+    * - |EX-CSB1-LOGO-SMALL|
+      - |EX-MS-LOGO-SMALL|
+      - |EX-WS-LOGO-SMALL|
+    * - Our ready-to-run DCC & DC command station / booster for controlling your model railroad
+      - Our dual 5A output motor shield for DIY command stations and adding power districts to the EX-CSB1
+      - Our WiFi add-on board for DIY command stations
+
+.. list-table::
+    :widths: 50 50
+    :header-rows: 0
+    :class: table-list-homepage
+
+    * - |EX-CS-LOGO-SMALL| 
+      - Our ready-to-run DCC & DC command station / booster for controlling your model railroad
+    * - |EX-I-LOGO-SMALL| 
+      - Our dual 5A output motor shield for DIY command stations and adding power districts to the EX-CSB1
+    * - |EX-R-LOGO-SMALL| 
+      - Our WiFi add-on board for DIY command stations
+
 
 I'm interested in DCC but have a very small budget
 ==================================================
 
-The |DCC-EX| project is free and open source software, using consumer grade, inexpensive microcontrollers and components to provide full feature DCC and DC train control, and more. If at the lowest end you are willing to do some learning and assembling, you can get into modelling or upgrade very inexpensively.
+How does $60 to $120 US (€54 - 110)sound for over $400 (€365)worth of command station capabilities?
+
+We offer our own ready-to-run solutions in addition to a DIY path where you snap together a command station yourself. The DCC-EX Team created the |EX-CSB1| (EX-CSB1) which is a full USB or WiFi connected Command Station on one board. Just like the commercial products, you can connect a power supply, connect it to your tracks, and you are ready to run trains in seconds. And the EX-CSB1 is half or less the price of competing systems.
+
+The |DCC-EX| DIY project is our free and open source software you install onto widely available, inexpensive microcontrollers and components to provide full featured DCC and DC train and accessory control. If at the lowest end you are willing to do some learning and assembling, you can get into modelling or upgrade your current setup very inexpensively.
 
 You will get more features from our software than you will from many commercial DCC controllers, with the hardware components able to be purchased at a fraction of the price of these commercial systems.
 
-We also offer our own ready-to-run solutions in addition to DIY offerings. The DCC-EX Team created the |EX-CSB1| (EX-CSB1) which is a full USB or WiFi connected Command Station on one board. Just like the commercial products, you can connect a power supply, connect it to your tracks, and you are ready to run trains in seconds. And the EX-CSB1 is half or less the price of competing systems.
-
-We also have our own |EX-MS| to provide more power to DIY setups using Arduino or ESPDuino32 boards, and an |EX-WS| to add WiFi capability to them as well if you choose that route. 
+We also have our own |EX-MS| to provide more power to DIY setups using Arduino or ESPDuino32 boards, and an |EX-WS| to add WiFi capability to them as well if you choose that route. (The EX-CSB1 already includes the features of both of these)
 
 As we grow, we are creating an entire ecosystem of products that plug together and allow you to control every aspect of your layout including lighting, sensors, points, motors, servos, displays, and more.
 

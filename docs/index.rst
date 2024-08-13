@@ -17,7 +17,13 @@ DCC-EX Model Railroading
     :columns: 12 12 12 8
     :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
 
-    |DCC-EX| is a team of dedicated enthusiasts producing open source *DCC & DC solutions* for you to run your complete model railroad layout. Our easy to use, do-it-yourself, and free open source products run on off-the-shelf Arduino technology and are supported by numerous third party hardware and apps like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more.
+    |DCC-EX| is a team of dedicated enthusiasts producing open source *DCC & DC solutions* for you to run your entire model railroad layout. Our easy to use, ready-to-run and do-it-yourself products run on off-the-shelf Arduino, Expressif, and ST Micro technology as well as our own specially developed DCC-EX brand hardware. Our free and open source EX-CommandStation software is supported by numerous third party hardware and apps like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more.
+
+    We created an entire ecosystem of modelling solutions such as the EX-CSB1 Express Command Station/Booster, EX-CommandStation software, EX-Turntable, EX-Fastclock, EX-DCCInspector, EX-IOExpander, and even the EX-Installer to install and update it all. Read more about these products and how to run and even automate your layout in the following pages.
+
+    Our mission is to provide free and open source hardware and software designs to make model railroading accessible and affordable to everyone. 
+    
+    We hope you enjoy our work and thank you for visiting our web page.
 
   .. grid-item-card:: 
     :columns: 12 12 12 4
@@ -71,9 +77,9 @@ DCC-EX Model Railroading
     Where to next?
     ^^^
     
-    It is important to understand that different |DCC-EX| products, and options within those products are targeted at different levels of users, from those who don't know anything about electronics or software, through to those with a lot of knowledge and experience. 
+    It is important to understand that different |DCC-EX| products, and options within those products, are targeted to different levels of users, from those who don't know anything about electronics or software, through to those with more extensive knowledge and experience. 
     
-    We have tagged the pages to help you understand who they are aimed at.  The :doc:`/begin/levels` page explains those levels. Keep an eye out on our pages to see at which level of experience our documentation is aimed at.
+    We have tagged the pages with helpful icons to help you understand who they are aimed at.  The :doc:`/begin/levels` page explains those levels. Keep an eye out on our pages to see at which level of experience each section of our documentation is aimed towards.
 
 .. toctree::
    :hidden:

@@ -21,7 +21,7 @@ Why DCC-EX? - Comparing EX-CommandStation to Commercial Systems
 Introduction
 ============
 
-A common question we see is why should someone choose our |EX-CS| over the many commercial systems that are available. This page is a *brief discussion* of some of the advantages and disadvantages of |EX-CS| and the whole |DCC-EX| ecosystem. (To see a detailed list of specific features of various systems we would recommend looking at the `DCC Wiki <https://dccwiki.com/Command_Stations_List>`_.)
+A common question we see is why should someone choose our |EX-CS| over the many commercial systems that are available. This page is a *brief discussion* of some of the advantages and disadvantages of |EX-CS| and the whole |DCC-EX| ecosystem. (To see a detailed list of specific features of various systems we would recommend looking at the `DCC Wiki <https://dccwiki.com/Command_Stations_List>`_ |EXTERNAL-LINK|.)
 
 First and foremost, there is nothing fundamentally wrong with any of the commercial offerings. While we believe strongly in our products, the commercial systems do have some advantages such as pretty packaging, a corporate structure, and more local purchasing options. (See below.)
 
@@ -120,7 +120,7 @@ With virtually 24/7 online support, we feel the DCC-EX option is unique. What ot
 
 With commercial systems you usually get high quality support, replacement for faulty items, etc. The catch is that depending on where you are in the world and where the manufacturer is, there can be long turnarounds to get that support. Even longer to get replacements or repairs.
 
-Because members of the |DCC-EX| team are located world-wide, there is usually someone that can help you within a few hours on our `Discord Server <https://discord.gg/sWNPUsg8>`_. 
+Because members of the |DCC-EX| team are located world-wide, there is usually someone that can help you within a few hours on our `Discord Server <https://discord.gg/sWNPUsg8>`_ |EXTERNAL-LINK|. 
 
 Is you purchased an |EX-CSB1| or other system from a DCC-EX Reseller, support is available both from that reseller and online from the DCC-EX team and users. If you purchased parts and installed the software yourself, is up to you to deal with this side of the process. The positive is that, if you wish, the costs are so low that you can keep spares of most items and still be well under the total cost of a commercial system.
 
@@ -133,7 +133,7 @@ Community
 
 While the commercial systems have strong followings, and there are plenty of people on various forums that will be happy to discuss their systems or provide help, they can't compare to the |DCC-EX| community.
 
-|DCC-EX| maintains a `Discord Server <https://discord.gg/sWNPUsg8>`_ where hundreds of people world-wide are actively engaged in discussing and evolving the |EX-CS| and its add-ons on a daily basis.  You can generally get answers to questions within a few hours and, if you interested, you easily find yourself in deep conversations about existing and upcoming features. 
+|DCC-EX| maintains a `Discord Server <https://discord.gg/sWNPUsg8>`_ |EXTERNAL-LINK| where hundreds of people world-wide are actively engaged in discussing and evolving the |EX-CS| and its add-ons on a daily basis.  You can generally get answers to questions within a few hours and, if you interested, you easily find yourself in deep conversations about existing and upcoming features. 
 
 |hr-dashed|
 
@@ -149,7 +149,7 @@ With the commercial systems, with a few exceptions (e.g. WiThrottle) use proprie
 Conclusion
 ==========
 
-As you can see from the points above and the `DCC Wiki <https://dccwiki.com/Command_Stations_List>`_ there is a bit of thought required to make a fair comparison. However, we believe that |EX-CS| can handle the needs of most modellers. 
+As you can see from the points above and the `DCC Wiki <https://dccwiki.com/Command_Stations_List>`_ |EXTERNAL-LINK| there is a bit of thought required to make a fair comparison. However, we believe that |EX-CS| can handle the needs of most modellers. 
 
 Before proceeding with any system you should weigh up the pros and cons and come to a decision *you* feel comfortable with. 
 

@@ -140,7 +140,11 @@ We've compiled this simple summary table to help with this:
 .. [1] Requires an additional :ref:`Ethernet <reference/hardware/ethernet-boards:ethernet boards>` or :ref:`WiFi <reference/hardware/wifi-boards:wifi boards>` shield
 .. [2] Requires a supported motor driver that supports :ref:`TrackManager <trackmanager/index:hardware requirements and technical notes>`
 .. [3] Limited |EX-R| scripts are possible only when disabling EEPROM and programming
+<<<<<<< HEAD
 .. [4] Ethernet on F429ZI/F439ZI is still in Beta, as is DC mode on all STM32 Nucleo boards
+=======
+.. [4] Features and support in Beta testing can and will change regularly, be sure to keep up to date with developments on our `Discord server <https://discord.gg/y2sB4Fp>`_ |EXTERNAL-LINK|
+>>>>>>> sphinx
 .. [5] HAL/|I2C| connectivity is only available via the blocking Arduino Wire library at present
 .. [6] While the Mega+WiFi boards seem like a good option and are based on our well-known, stable Mega2560 platform, there are many reports of quality issues with these, so buyer beware, and use of these is not recommended
 .. [7] The core development team no longer have access to these, and testing is limited to ensuring the software compiles for the board type

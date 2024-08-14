@@ -47,7 +47,7 @@ To get started, simply choose your path. Whether you are a Conductor, Tinkerer, 
     :width: 900
 
     * - |EX-CSB1-LOGO-SMALL|
-      - |EX-PLACEHOLDER|
+      - |EX-CS-DIY-LOGO-SMALL|
     * - Our ready-to-run DCC & DC command station / booster for controlling your model railroad
       - DIY instructions on the parts to buy to build your own command station
 

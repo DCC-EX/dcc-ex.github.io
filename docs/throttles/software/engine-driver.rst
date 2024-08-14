@@ -34,11 +34,11 @@ Platforms
    :scale: 30%
    :align: left
 
-`Get 'Engine Driver Throttle' from the Google Play Store <https://play.google.com/store/apps/details?id=jmri.enginedriver>`_
+`Get 'Engine Driver Throttle' from the Google Play Store <https://play.google.com/store/apps/details?id=jmri.enginedriver>`_ |EXTERNAL-LINK|
 
-Visit the Engine Driver Website: `https://enginedriver.mstevetodd.com/ <https://enginedriver.mstevetodd.com/>`_ for more information.
+Visit the Engine Driver Website: `https://enginedriver.mstevetodd.com/ <https://enginedriver.mstevetodd.com/>`_ |EXTERNAL-LINK| for more information.
 
-Extensive help is available at the `Engine Driver Home <https://flash62au.github.io/EngineDriver_Home/index.html>`_ site.
+Extensive help is available at the `Engine Driver Home <https://flash62au.github.io/EngineDriver_Home/index.html>`_ |EXTERNAL-LINK| site.
 
    .. raw:: html
       
@@ -113,11 +113,11 @@ Screenshots
 Operation
 ===========
 
-https://enginedriver.mstevetodd.com/operation
+https://enginedriver.mstevetodd.com/operation |EXTERNAL-LINK|
 
-https://enginedriver.mstevetodd.com/videos
+https://enginedriver.mstevetodd.com/videos |EXTERNAL-LINK|
 
-https://flash62au.github.io/EngineDriver_Home/operation/getting_started.html 
+https://flash62au.github.io/EngineDriver_Home/operation/getting_started.html |EXTERNAL-LINK|
 
 .. TODO:: `LOW - Software <https://github.com/DCC-EX/dcc-ex.github.io/issues/436>`_ - Give some setup tutorial here. Need a video to match since ED is the top used software
 
@@ -132,7 +132,7 @@ This is the one Steve Todd uses himself on a lanyard. It leaves both hands free 
    :scale: 50%
    :align: center
 
-`Wireless Bluetooth Gamepad/Joystick Controller <https://www.amazon.com/Wireless-Gamepad-Bluetooth-Controller-Shutter/dp/B07WFH2HB9>`_
+`Wireless Bluetooth Gamepad/Joystick Controller <https://www.amazon.com/Wireless-Gamepad-Bluetooth-Controller-Shutter/dp/B07WFH2HB9>`_ |EXTERNAL-LINK|
 
 |
 
@@ -143,9 +143,9 @@ And here is another Bluetooth controller that provides extra function buttons an
    :scale: 50%
    :align: center
    
-`Walmart <https://www.walmart.com/ip/Gamepad-Ring-Shape-Wireless-VR-Joystick-Rechargeable-Bluetooth-compatible-V4-0-Game-Controller/443871148?wmlspartner=wlpa&selectedSellerId=101036302>`_
+`Walmart <https://www.walmart.com/ip/Gamepad-Ring-Shape-Wireless-VR-Joystick-Rechargeable-Bluetooth-compatible-V4-0-Game-Controller/443871148?wmlspartner=wlpa&selectedSellerId=101036302>`_ |EXTERNAL-LINK|
 
-`AliExpress <https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20220515220821&isPremium=y&SearchText=%22r1%22+bluetooth+game+controller&spm=a2g0o.productlist.1000002.0>`_
+`AliExpress <https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20220515220821&isPremium=y&SearchText=%22r1%22+bluetooth+game+controller&spm=a2g0o.productlist.1000002.0>`_ |EXTERNAL-LINK|
 
 .. Note:: From Steve: I set speedsteps to 10, change amount to 1, repeat delay to 9999, horizontal switching layout, throttle web view. I acquire loco/consist using my phone, then dim & lock and put phone in my holster. Then I can "bump" the joystick up and down 3,2,1,0,-1,-2,-3, easily keeping track of the current "notch". 1 is coupling speed, 2 is switching/yard speed, 3 is mainline. If I'm at home, I put the Conductor view in the web and I have my work for each location.
 

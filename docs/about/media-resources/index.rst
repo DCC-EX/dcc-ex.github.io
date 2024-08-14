@@ -33,7 +33,7 @@ Trains can be run using a Chromium-based browser (Chrome or Edge) and a USB cabl
    :alt: EX-WebThrottle
    :scale: 80%
 
-Instructions for using EX-WebThrottle here: :doc:`/ex-commandstation/get-started/testing`
+Instructions for using EX-WebThrottle here: :doc:`/ex-commandstation/testing`
 
 Engine Driver
 --------------

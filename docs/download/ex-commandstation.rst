@@ -15,6 +15,9 @@ EX-CommandStation
      :depth: 2
      :local:
 
+.. note::
+	The |EX-CSB1| already comes with the |EX-CS| software installed. You can, however, use this page for instructions on how to upload a newer version, or upload your EXRAIL scripts
+
 Welcome to the |EX-CS| download page. You have several choices:
 
 * **[RECOMMENDED]** If you are a |conductor-text|, or you just want an easy installer to do the work for you, go to the `ex-Installer`_ section.
@@ -53,7 +56,7 @@ This is the new version of the |EX-I|.
 
 Clicking on the link below will automatically find the correct version of the installer for your Computer and Operating system (Windows, Apple, Linux) and download it.
 
-This downloads a self contained app that can automatically load the software from your computer to your Arduino or other supported board. Click here for :doc:`EX-Installer installation instructions </ex-commandstation/get-started/installer>`.
+This downloads a self contained app that can automatically load the software from your computer to your Arduino or other supported board. Click here for :doc:`EX-Installer installation instructions </ex-commandstation/installer>`.
 
 *Note* that the new |EX-I| will unfortunately not work on Windows 7.
 

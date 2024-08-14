@@ -21,7 +21,7 @@ What is DCC and DCC-EX?
 
 Firstly, The |EX-CS| can still run your older DC locos! But you can really open up a lot of possibilities using DCC.
 
-For those who have come across our website and don't really know or understand what Digital Command Control (DCC) is or does, then in a very short summary, it is essentially a way to control multiple trains on the same piece of track independently of one another (it is also much, much more than that).
+For those who have come across our website and don't really know or understand what Digital Command Control (DCC) is or does, then in a very short summary, it is in part a way to control multiple trains on the same piece of track independently of one another (it is also much, much more than that).
 
 With DCC, there is no longer a need for multiple electrically isolated blocks to control multiple trains independently.
 
@@ -128,7 +128,7 @@ Our list of open source hardware products currently include:
 I'm interested in DCC but have a very small budget
 ==================================================
 
-How does $60 to $120 US (€54 - 110)sound for over $400 (€365)worth of command station capabilities?
+How does spending only $60 to $120 US (€54 - 110) sound to get the equivalent of over $400 (€365)worth of command station capabilities?
 
 We offer our own ready-to-run solutions in addition to a DIY path where you snap together a command station yourself. The DCC-EX Team created the |EX-CSB1| (EX-CSB1) which is a full USB or WiFi connected Command Station on one board. Just like the commercial products, you can connect a power supply, connect it to your tracks, and you are ready to run trains in seconds. And the EX-CSB1 is half or less the price of competing systems.
 
@@ -147,25 +147,25 @@ You can start by reading through the :doc:`/ex-commandstation/accessories/index`
 I just want to run my trains
 ============================
 
-If you simply want a system to run your DCC or DC trains, then you only need to concern yourself with |EX-CS|, as this is our core digital controller product. While it can also do a lot more, you don't need to know about any other features or capabilities in order to use it to control just run trains.
+If you simply want a system to run your DCC or DC trains, then you only need to concern yourself with |EX-CS| running on our |EX-CSB1| or on a DIY system like an Arduino Mega. |EX-CS| is our core digital controller product. While it can also do a lot more, you don't need to know about any other features or capabilities in order to use it to just run trains.
 
-Note that you will need a throttle or controller to connect to the CS (via serial, WiFi, or Ethernet), but you already have a throttle - your phone. There are several excellent apps, like |Engine Driver| that are free and can have you up and running in minutes. And there are plenty of DIY physical throttles as well as commercial throttles like the TCS throttles.
+Note that you will need a throttle or controller to connect to the CS (via serial, WiFi, or Ethernet), but you already have a throttle - your phone. There are several excellent apps, like |Engine Driver| that are free and can have you up and running in minutes. And there are plenty of DIY physical throttles as well as commercial ones like the TCS throttles.
 
-You will need to read through the :doc:`/ex-commandstation/index` documentation, and it will be helpful also to read through the :doc:`/throttles/index` section to become familiar with what throttle options are available (including our very own open source |EX-WT| that connects your computer to the CS with a USB cable).
+You will need to read through the :doc:`/ex-commandstation/index` documentation, and it will be helpful also to read through the :doc:`/throttles/index` section to become familiar with what throttle options are available (including our very own free and open source |EX-WT| that connects your computer to the CS with a USB cable).
 
-This provides a very cost effective introduction to DCC train control using inexpensive consumer grade hardware and our (free) open source |EX-CS| software.
+This provides a very cost effective introduction to DCC train control using inexpensive hardware and our (free) open source |EX-CS| software.
 
 I want to operate my turnouts/points and run trains
 ===================================================
 
 If you want your turnouts/points to also be controlled by |DCC-EX|, then this same |EX-CS| product has already has this capability built-in.
 
-In addition to what you need to be familiar with for just running trains above, there is further information available on how to add and control turnouts/points in the :doc:`/ex-commandstation/accessories/turnouts/index` section.
+In addition to what you need to be familiar with for just running trains listed above, there is further information available on how to add and control turnouts/points in the :doc:`/ex-commandstation/accessories/turnouts/index` section.
 
 I want to control all my accessories and run trains
 ===================================================
 
-Further to just operating turnouts/points, |EX-CS| has the capability to control all your other various accessories including signals, turntables (including our own |EX-TT|), loco and rolling stock lighting, scenic accessories, and pretty much anything else that can be runs on electricity.
+Further to just operating turnouts/points, |EX-CS| has the capability to control all your other various accessories including signals, turntables (including our own |EX-TT|), loco and rolling stock lighting, scenic accessories, sensors, and pretty much anything else that can be run on electricity.
 
 This is simply an extension of operating trains and controlling turnouts/points covered above, with further information available in our :doc:`/ex-commandstation/accessories/index` section.
 
@@ -200,4 +200,4 @@ How does EX-CommandStation compare to commercial Command Stations
 
 Comparing the |EX-CS| to commercial Command Stations can require a bit of reading, but hopefully we can condense that knowledge into on web page.
 
-See :doc:`/begin/comparison` for a discussion of the pros and cons of |EX-CS| vs the commercial products.
+See :doc:`/begin/comparison` for a discussion of the differences between |EX-CS| vs the commercial products.

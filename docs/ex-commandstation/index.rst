@@ -26,14 +26,30 @@ What is EX-CommandStation?
 
 It includes advanced features such as:
 
-* A |WiThrottle Server| implementation, 
-* General purpose inputs and outputs (I/O) for extensibility, and 
+* A |WiThrottle Server| implementation for instant compatibility with popular throttles 
+* General purpose inputs and outputs (I/O) for extensibility
+* I2C bus for controlling accessories with I2C capability 
 * |JMRI| integration
 * |EX-R| Automation and Animation scripting that can control everything on your layout, including the locos
 
 It also supports:
 
 * Direct Current (DC) locomotive control using Pulse Width Modulation (PWM)
+
+To get started, simply choose your path. Whether you are a Conductor, Tinkerer, or Engineer, most people will choose the easy, ready-to-run option and purchase an |EX-CSB1|. Some Tinkerers and Engineers may opt to go the DIY route by purchasing separate components (or a kit), connecting it together themselves, and installing the |EX-CS| software. The choice is yours.
+
+----
+
+.. list-table::
+    :widths: 50 50
+    :header-rows: 0
+    :class: table-wrap-text
+    :width: 900
+
+    * - |EX-CSB1-LOGO-SMALL|
+      - |EX-PLACEHOLDER|
+    * - Our ready-to-run DCC & DC command station / booster for controlling your model railroad
+      - DIY instructions on the parts to buy to build your own command station
 
 ----
 
@@ -65,6 +81,7 @@ It also supports:
     :maxdepth: 1
     :hidden:
 
-    get-started/index
+    ready-to-run/index
+    diy/index
     advanced-setup/index
     accessories/index

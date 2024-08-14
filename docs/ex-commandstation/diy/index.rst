@@ -1,11 +1,11 @@
-.. include:: ../../include/include.rst
-.. include:: ../../include/include-l2.rst
+.. include:: /include/include.rst
+.. include:: /include/include-l3.rst
 .. include:: /include/include-ex-cs.rst
 |EX-CS-LOGO|
 
-***************
-Getting Started
-***************
+***********************
+DIY - Getting Started
+***********************
 
 |conductor| |tinkerer| |engineer| |support-button|
 
@@ -99,8 +99,8 @@ Click :doc:`here <purchasing>` or click the "next" button to see what you need t
     purchasing
     assembly
     wifi-setup
-    installer
-    controllers
-    testing
+    ../installer.rst
+    ../controllers.rst
+    ../testing.rst
     /support/ex-cs-troubleshooting
     /support/wifi-at-version

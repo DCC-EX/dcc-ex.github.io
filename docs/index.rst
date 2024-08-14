@@ -17,13 +17,7 @@ DCC-EX Model Railroading
     :columns: 12 12 12 8
     :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
 
-    |DCC-EX| is a team of dedicated enthusiasts producing open source *DCC & DC solutions* for you to run your entire model railroad layout. Our easy to use, ready-to-run and do-it-yourself products run on off-the-shelf Arduino, Expressif, and ST Micro technology as well as our own specially developed DCC-EX brand hardware. Our free and open source EX-CommandStation software is supported by numerous third party hardware and apps like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more.
-
-    We created an entire ecosystem of modelling solutions such as the EX-CSB1 Express Command Station/Booster, EX-CommandStation software, EX-Turntable, EX-Fastclock, EX-DCCInspector, EX-IOExpander, and even the EX-Installer to install and update it all. Read more about these products and how to run and even automate your layout in the following pages.
-
-    Our mission is to provide free and open source hardware and software designs to make model railroading accessible and affordable to everyone. 
-    
-    We hope you enjoy our work and thank you for visiting our web page.
+    |DCC-EX| is a team of dedicated enthusiasts producing open source *DCC & DC solutions* for you to run your entire model railroad layout. Our easy to use, ready-to-run and do-it-yourself products run with our own specialty hardware as well as off-the-shelf Arduino and similar technology. Our free and open source EX-CommandStation software is supported by numerous third party hardware and apps like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more. Our mission is to provide free and open source hardware and software designs to make model railroading accessible and affordable to everyone. Read more about our entire "EX"-osystem of offerings in the following pages.
 
   .. grid-item-card:: 
     :columns: 12 12 12 4

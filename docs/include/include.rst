@@ -102,16 +102,11 @@
 .. ................................................
 ..
 .. |EX-PLACEHOLDER| image:: /_static/images/logos/placeholder.png
-      :alt: EX-CommandStation
+      :alt: Dummy Placeholder
       :scale: 40%
       :class: image-product-logo-float-right
 ..
-.. |EX-CSB1-LOGO-SMALL| image:: /_static/images/logos/placeholder.png
-      :alt: EX-CSB1
-      :scale: 40%
-      :class: image-product-logo-float-right
-..
-.. |EX-WS-LOGO-SMALL| image:: /_static/images/logos/placeholder.png
+.. |EX-WS-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-cs-diy.png
       :alt: EX-WiFiShield-8266
       :scale: 40%
       :class: image-product-logo-float-right

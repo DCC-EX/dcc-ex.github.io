@@ -1,4 +1,15 @@
 .. ................................................
+.. |EX-CSB1-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-csb1.png
+      :alt: EX-CSB1 Logo
+      :scale: 30%
+      :class: image-min-width-144
+      :target: ../ex-commandstation/ready-to-run/index.html
+..
+.. |EX-CS-LOGO-DIY-SMALL| image:: /_static/images/logos/product-logo-ex-cs-diy.png
+      :alt: EX-CS-DIY Logo
+      :scale: 30%
+      :class: image-min-width-144
+      :targer: ../ex-commandstation/diy/index.html
 ..
 .. |EX-CS-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-commandstation.png
       :alt: EX-CommandStation

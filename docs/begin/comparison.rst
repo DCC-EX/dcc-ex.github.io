@@ -43,7 +43,7 @@ Cost
 
 Hands down, the |EX-CS| is the lowest cost DCC Command Station option available. 
 
-Depending on the configuration you choose, the least expensive commercial system will be three, or more, times more expensive than a |EX-CS|.  Also, it won't have a fraction of the built in features (see below) that the |EX-CS| has, which you will likely have to pay additionally for in the commercial systems, if they have those features at all.
+Depending on the configuration you choose, the least expensive commercial system will be three, or more, times more expensive than a |EX-CS|.  Also, it won't have a fraction of the built in features (see below) that the |EX-CS| has. There are many features unique to an |EX-CS| that you won't find anywhere else.
 
 |hr-dashed|
 
@@ -56,7 +56,7 @@ You can walk into store and pick up a commercial Command Station in a box with c
 
 The |EX-CS| has two options, the first is Ready-To-Run and the second is Do-It-Yourself (DIY). The Ready-To-Run option is our |EX-CSB1| which is a complete Command Station and/or Booster on one board. All you need is to plug your power supply into an outlet and connect the track outputs to you layout. It comes with software already installed and is the closest thing to what you would expect with a commercial "boxed" CS.
 
-The Do-It-Yourself option is where you purchase a microcontroller (such as an Arduino or Elegoo Mega), a motor shield (like the |EX-MS|, and optionally, a WiFi board (like the |EX-WS|). While we now have resellers that can supply a complete system, most people purchase parts from different suppliers online. Parts can therefore take some time to arrive, and there is a little more work involved in sourcing and ensuring the quality of parts. So in general it is not as plug-and-play.
+The Do-It-Yourself option is where you purchase a microcontroller (such as an Arduino or Elegoo Mega), a motor shield (like the |EX-MS|, and optionally, a WiFi board (like the |EX-WS|). While we now have resellers that can supply a complete system or kit, most people purchase parts from different suppliers online. Parts can therefore take some time to arrive, and there is a little more work involved in sourcing and ensuring the quality of parts. So DIY in general it is not as plug-and-play as an EX-CSB1 or a commercial system.
 
 |hr-dashed|
 
@@ -65,11 +65,11 @@ Setup complexity
 
 If you purchase a |EX-CSB1| or a complete Mega or ESPDuino32 system from one of our resellers, your experience will be similar to purchasing a commercial system minus the fancy packaging and, in some cases, having to provide your own enclosure if you require one.
 
-For a complete DIY system, loading the software, assembling the boards, making a case, etc. while not individually difficult steps, can be still be daunting for some people. That is why we created the |EX-CSB1|. However for those who are attracted to the challenge and bragging rights to say, "I built it myself!", we will always offer a DIY option. Like the building a kit loco or building, some people enjoy it, some don't. Choose the path that is best for you.
+For a complete DIY system, loading the software, assembling the boards, making a case, etc. while not individually difficult steps, can be still be daunting for some people. That is why we created the |EX-CSB1|. However for those who are attracted to the challenge and bragging rights to say, "I built it myself!", we will continue to offer a DIY option. Like the building a kit loco or building, some people enjoy it, some don't. Choose the path that is best for you.
 
   Note: A common comment we hear is *"..but I don't know how to program..."*.  This is a misconception about how the |EX-CS| works. You DO NOT have to know anything about programming to setup an |EX-CS|.  If you can join rail/track together and answer some questions in the |EX-I|, then you can assemble an |EX-CS|.
 
-  The |EX-I| program which runs on Windows, Mac and Linux hugely simplifies the software loading process to the point where you need know nothing about Arduino programming to be able to install the software, maintain it with updates or configure it.
+  The |EX-I| program which runs on Windows, Mac and Linux hugely simplifies the software loading process to the point where you need know nothing about Arduino programming to be able to install the software, maintain it with updates, or configure it.
 
 |hr-dashed|
 
@@ -78,7 +78,7 @@ Usability
 
 Once the systems are setup, there is generally not a lot of difference in terms of usability between the commercial systems and an |EX-CS|.
 
-While not functionally different, the area of greatest difference is that most of the commercial system come with some form of physical controller.  Most |EX-CS| owners use inexpensive, smart phones, or tablets to control their locos. Many people already have a phone they replaced sitting in a drawer or can get one cheap on ebay.
+While not functionally different, the area of greatest difference is that most of the commercial system come with some form of physical controller.  Most |EX-CS| owners use inexpensive smart phones, or tablets to control their locos. Most people already have a phone they replaced sitting in a drawer or can get one cheap on ebay if they don't want to user their main cell phone.
 
 You can have/use physical controllers (not a phone, tablet or computer) with |EX-CS|, but that is an additional item to build or purchase. Note that there are multiple inexpensive physical throttle designs that you can build yourself. There is a list of throttles that work with |EX-CS| in our :ref:`throttles/index:throttles (controllers)` section. 
 
@@ -94,8 +94,8 @@ DCC *and DC* loco control, Auto-Reverser, WiFi throttles, Rosters, |EX-R|, |JMRI
 However, there are features that a built into some of the commercial systems that are not exactly *built into* the |EX-CS|, including:
 
 - Hardware Throttle. |BR| Many commercial starter sets come with built-in throttles. |EX-CS| requires the use of some sort of external throttle. Most of which are free but are not *technically* part of the |EX-CS| ^.
-- CV programming |BR| Many commercial starter sets can program CVs using the hardware in the box. |EX-CS| requires the use of |ED|, |JMRI| or |EX-WT| which, while are all free are not *technically* part of the |EX-CS| ^.
-- FastClock.  For the |EX-CS| this is an optional extra.
+- CV programming |BR| Many commercial starter sets can program CVs using the hardware in the box. |EX-CS| requires the use of |ED|, |JMRI|, |EX-WT|, or|EX-toolbox| which, while are all free are not *technically* part of the |EX-CS| ^.
+- FastClock.  For the |EX-CS| this is an optional free extra.
 - *Simple to use* Advanced Consisting
 
 ^ We don't consider this a negative, just a difference.  The out-of-the-box capability to use multiple external devices as throttle or to program decoders is flexible and powerful.
@@ -105,11 +105,11 @@ However, there are features that a built into some of the commercial systems tha
 Options/Expansion
 ^^^^^^^^^^^^^^^^^
 
-|EX-CS| fares very well in this space.
+|EX-CS| has almost unlimited expansion capability.
 
 Over and above the extensive built in features (above), the |EX-CS| supports IoTT connectivity, |EX-TT|, |EX-IO|, with more to come.  |DCC-EX| is evolving on a daily basis. (See Community below.)
 
-Having said that, most of the commercial system have different expansion options. However, some of these only go to fill in the features that come out of the box with the |EX-CS|.  In their favour they are generally plug and play, whereas the |DCC-EX| options require some tinkering.
+Having said that, most of the commercial system have different expansion options. However, some of these only go to fill in the features that come out of the box with the |EX-CS|.  In their favour they are generally plug and play, whereas the |DCC-EX| options can require some tinkering.
 
 |hr-dashed|
 
@@ -149,8 +149,8 @@ With the commercial systems, with a few exceptions (e.g. WiThrottle) use proprie
 Conclusion
 ==========
 
-As you can see from the points above and the `DCC Wiki <https://dccwiki.com/Command_Stations_List>`_ there is a bit of thought required to make a fair comparison. However, we believe that |EX-CS| can handle the needs of most modellers. 
+As you can see from the points above and the `DCC Wiki <https://dccwiki.com/Command_Stations_List>`_ |EXTERNAL-LINK| there is a bit of thought required to make a fair comparison. However, we believe that |EX-CS| can handle the needs of most modellers. 
 
 Before proceeding with any system you should weigh up the pros and cons and come to a decision *you* feel comfortable with. 
 
-Come talk to us. Join our `Discord Server <https://discord.gg/sWNPUsg8>`_ and discuss our offerings to help you get started.
+Come talk to us. Join our `Discord Server <https://discord.gg/sWNPUsg8>`_ |EXTERNAL-LINK| and discuss our offerings to help you get started.

@@ -19,31 +19,31 @@ What do I need to know?
 What is DCC and DCC-EX?
 =======================
 
-Firstly, The |EX-CS| can still run your older DC locos! But you can really open up a lot of possibilities using DCC.
+Firstly, for those of you who already have an investment in DC locos and accessories, the |EX-CS| can still run your older DC collection! But we hope you will also take a look to see how DCC can open up a world of possibilities for you.
 
-For those who have come across our website and don't really know or understand what Digital Command Control (DCC) is or does, then in a very short summary, it is in part a way to control multiple trains on the same piece of track independently of one another (it is also much, much more than that).
+For those who have come across our website and don't really know or understand what Digital Command Control (DCC) is or does, then in a very short summary; DCC is in part a way to control multiple trains (and even accessories) on the same piece of track independently of one another.
 
-With DCC, there is no longer a need for multiple electrically isolated blocks to control multiple trains independently.
+With DCC, there is no longer a need for multiple electrically isolated blocks to control multiple trains independently. Each device on your track has its own "address" and commands are sent to only the device you want to control.
 
-To get a more in depth introduction to the DCC standard and protocol, you can read the `Wikipedia <https://en.wikipedia.org/wiki/Digital_Command_Control>`_ and `DCC Wiki <https://dccwiki.com/Introduction_to_DCC>`_ introduction pages.
+To get a more in depth introduction to the DCC standard and protocol, you can read the `Wikipedia <https://en.wikipedia.org/wiki/Digital_Command_Control>`_ |EXTERNAL-LINK| and `DCC Wiki <https://dccwiki.com/Introduction_to_DCC>`_ |EXTERNAL-LINK| introduction pages.
 
-However, if you just want to know how DCC, and in particular |DCC-EX|, can help you run your trains and also add more realism to your layouts, then continue reading here.
+However, if you just want to know how DCC, and in particular |DCC-EX|, can help you run your trains while also adding more functionality, control, and realism to your layouts, then continue reading here.
 
 DCC-EX does DC as well
 ----------------------
 
-As mentioned, along with DCC, |DCC-EX| can be used to control Direct Current (DC) locomotives using Pulse Width Modulation (PWM). This is actually an improvement over pure DC since the full voltage is always applied to the track. Rather than controlling a voltage from zero to full to control speed, the average time the full voltage is applied controls the speed. This allows for better stops and starts and smoother operation at low speeds.
+As mentioned, along with DCC, |DCC-EX| can be used to control Direct Current (DC) locomotives using Pulse Width Modulation (PWM). This is actually an improvement over pure DC since the full voltage is always applied to the track. Rather than controlling a voltage from zero to full to control speed, the average time the full voltage is applied controls the speed. This allows for better stops and starts and smoother operation at low speeds. We do NOT use the flawed "zero stretching" method some command stations use.
 
 More information on using DC PWM can be found :doc:`on the TrackManager page </trackmanager/index>`.
 
 DCC is for more than just controlling trains
 --------------------------------------------
 
-DCC, and in particular our flagship product |EX-CS|, can also be used to control accessories (think turnouts/points, signals, sensors to monitor things, and lineside feature animation to name a few). DCC is not just about running trains!
+DCC, and in particular our flagship product |EX-CS|, can also be used to control accessories (think turnouts/points, signals, sensors to monitor things, and lineside feature animation to name a few). DCC is not just about running trains! You can control your entire layout from one command station.
 
 Of course you don't need to use any of these features if you simply want to run trains without any of the bells and whistles (though we control the bells and whistles too!).
 
-Read on to understand which of our products and features will help you achieve your DCC dreams...
+Please read on to understand which of our products and features can help you achieve your "DCC dreams"...
 
 DCC-EX free and Open Source products
 ------------------------------------
@@ -132,17 +132,19 @@ How does spending only $60 to $120 US (€54 - 110) sound to get the equivalent 
 
 We offer our own ready-to-run solutions in addition to a DIY path where you snap together a command station yourself. The DCC-EX Team created the |EX-CSB1| (EX-CSB1) which is a full USB or WiFi connected Command Station on one board. Just like the commercial products, you can connect a power supply, connect it to your tracks, and you are ready to run trains in seconds. And the EX-CSB1 is half or less the price of competing systems.
 
-The |DCC-EX| DIY project is our free and open source software you install onto widely available, inexpensive microcontrollers and components to provide full featured DCC and DC train and accessory control. If at the lowest end you are willing to do some learning and assembling, you can get into modelling or upgrade your current setup very inexpensively.
+The |DCC-EX| DIY project is our free and open source software you install onto widely available, inexpensive microcontrollers and components to provide full featured DCC and DC train and accessory control. If at the the entry level you are willing to do some learning and assembling, you can get into modelling or upgrade your current setup very inexpensively.
 
-You will get more features from our software than you will from many commercial DCC controllers, with the hardware components able to be purchased at a fraction of the price of these commercial systems.
+You will get more features from our software than you will from many commercial DCC controllers, while saving money with the hardware components that can be purchased at a fraction of the price of commercial systems.
 
-We also have our own |EX-MS| to provide more power to DIY setups using Arduino or ESPDuino32 boards, and an |EX-WS| to add WiFi capability to them as well if you choose that route. (The EX-CSB1 already includes the features of both of these)
+We also have our own |EX-MS| to provide more power to DIY setups using Arduino or ESPDuino32 boards or to add power districts to an |EX-CSB1|, and an |EX-WS| to add WiFi capability to the DIY option as well if you choose that route. (The EX-CSB1 already includes the features of both of these boards)
 
-As we grow, we are creating an entire ecosystem of products that plug together and allow you to control every aspect of your layout including lighting, sensors, points, motors, servos, displays, and more.
+As we grow, we are creating an entire ecosystem (an EX-osystem if you will) of products that plug together and allow you to control every aspect of your layout including lighting, sensors, points, motors, servos, displays, and more.
 
-The only things we can't help you with is coming to your location and assembling your benchwork and laying your track!
+About the only things we can't help you with is your benchwork and ballasting! ;)
 
-You can start by reading through the :doc:`/ex-commandstation/accessories/index` section of our documentation to understand how to get a basic DCC & DC CommandStation up and running, and also look through :doc:`/throttles/index` to see what throttle/controller options are available to control your trains and/or accessories.
+You can start by going to the :doc:`/begin/levels` section and clicking the next button at the bottom of each page to walk through the tutorial in order to understand how to get a basic DCC and/or DC CommandStation up and running.
+
+You can also read through the :doc:`/ex-commandstation/accessories/index` section of our documentation to understand how you can control accessories, and also look through :doc:`/throttles/index` to see what throttle/controller options are available to control your trains and/or accessories. But be sure to go back to the beginning by starting at :doc:`/begin/levels`.
 
 I just want to run my trains
 ============================
@@ -151,7 +153,7 @@ If you simply want a system to run your DCC or DC trains, then you only need to 
 
 Note that you will need a throttle or controller to connect to the CS (via serial, WiFi, or Ethernet), but you already have a throttle - your phone. There are several excellent apps, like |Engine Driver| that are free and can have you up and running in minutes. And there are plenty of DIY physical throttles as well as commercial ones like the TCS throttles.
 
-You will need to read through the :doc:`/ex-commandstation/index` documentation, and it will be helpful also to read through the :doc:`/throttles/index` section to become familiar with what throttle options are available (including our very own free and open source |EX-WT| that connects your computer to the CS with a USB cable).
+Be sure to begin your walkthrough at the :doc:`/begin/levels` page which will then guide you through the :doc:`/ex-commandstation/index` documentation and the :doc:`/throttles/index` section to become familiar with what throttle options are available (including our very own free and open source |EX-WT| that connects your computer to the CS with a USB cable).
 
 This provides a very cost effective introduction to DCC train control using inexpensive hardware and our (free) open source |EX-CS| software.
 
@@ -160,14 +162,14 @@ I want to operate my turnouts/points and run trains
 
 If you want your turnouts/points to also be controlled by |DCC-EX|, then this same |EX-CS| product has already has this capability built-in.
 
-In addition to what you need to be familiar with for just running trains listed above, there is further information available on how to add and control turnouts/points in the :doc:`/ex-commandstation/accessories/turnouts/index` section.
+In addition to what you need to be familiar with for just running trains by beginning at the :doc:`/begin/levels` section, there is further information available on how to add and control turnouts/points in the :doc:`/ex-commandstation/accessories/turnouts/index` section.
 
 I want to control all my accessories and run trains
 ===================================================
 
 Further to just operating turnouts/points, |EX-CS| has the capability to control all your other various accessories including signals, turntables (including our own |EX-TT|), loco and rolling stock lighting, scenic accessories, sensors, and pretty much anything else that can be run on electricity.
 
-This is simply an extension of operating trains and controlling turnouts/points covered above, with further information available in our :doc:`/ex-commandstation/accessories/index` section.
+This is simply an extension of operating trains and controlling turnouts/points covered above, with further information available in our :doc:`/ex-commandstation/accessories/index` section. If you click ahead, be sure to come back and start at :doc:`/begin/levels`.
 
 I want some extra automated/animated realism
 ============================================
@@ -182,6 +184,8 @@ In addition to having your |EX-CS| up and running, with some sort of throttle or
 
 To make the most of |EX-R| you should read through the :doc:`/ex-rail/index` section as well as see the practical examples in :doc:`/big-picture/index`.
 
+But don't forget that to go through everything from the beginning, start at :doc:`/begin/levels`.
+
 I want a fully automated exhibition layout for my club
 ======================================================
 
@@ -189,11 +193,11 @@ Are your club members tired of having to perform repetitive, manual operations d
 
 To take your demonstration layouts to the next level, spend more time talking to your visitors and potential club members by using |EX-R| to automate your layout.
 
-This can include anything from a simple loop to stop and start trains at stations with automated arrival and departure announcements all the way through to multiple trains running throughout the layout, closing/throwing turnouts/points as required, setting signals, and crossing paths without collisions.
+This can include anything from a simple loop to stop and start trains at stations with automated arrival and departure announcements all the way through to multiple trains running throughout the layout, reserving sections, closing/throwing turnouts/points as required, setting signals, and crossing paths without collisions.
 
 To achieve this level of automation, you'll need to understand more than just how to get your |EX-CS| up and running, and will also need to have a good understanding of the accessories that can be added as outlined in :doc:`/ex-commandstation/accessories/index`.
 
-As per our automated/animated realism information above, be sure to familiarise yourself with :doc:`/ex-rail/index` and :doc:`/big-picture/index`.
+As per our automated/animated realism information above, be sure to familiarise yourself with :doc:`/ex-rail/index` and :doc:`/big-picture/index`. Oh, and don't forget to back up and start at the beginning with :doc:`/begin/levels`.
 
 How does EX-CommandStation compare to commercial Command Stations
 =================================================================

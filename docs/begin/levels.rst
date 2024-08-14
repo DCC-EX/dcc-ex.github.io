@@ -16,7 +16,7 @@ Choose Your Comfort Level
     :depth: 2
     :local:
 
-Some of our products are "Ready-To-Run" and some are more "Do-It-Yourself". Model Railroad layouts can be as simple as a circle that runs around a holiday display, to a fully automated club layout. Therefore, your options range in difficulty from very simple to moderately complex. 
+Some of our products are "Ready-To-Run" and some are more "Do-It-Yourself". Model Railroad layouts can be as simple as a small circle that runs around a holiday display, to a fully automated club layout. Therefore, your options range in difficulty from very simple to moderately complex. 
 
 To help you navigate this web site, the pages are all tagged [#tags]_ with one or more of 'Comfort Levels' to help identify the difficulty of the what is described on that page.  (Don't worry, the paths are integrated and you can easily choose a slightly different path at any point.)
 
@@ -44,7 +44,7 @@ Conductor
         :alt: Conductor Hat
         :width: 144px
         :class: image-min-width-72
-    - A |Conductor-text|, for the most part, just wants to enjoy operating trains. |BR| You could be someone new to trains or picking it up after a long absence, or you could be someone coming from running DC and looking to switch over to DCC. This is also the perfect place for someone who just wants something that works without much tinkering. In short, a |Conductor-text| wants to drive trains and doesn't want to have to deal with the details of the hardware or software involved. |BR| |BR| We'll show you how to purchase a ready-to-run Command Station or put one together from parts and use a free Throttle (Controller) to run trains. We'll have you up and running in just a few minutes. This path will keep things simple. |BR| |BR| We recommend that you :doc:`start Here and choose the either the ready-to-run or DIY Command Station </ex-commandstation/index>`.
+    - A |Conductor-text|, for the most part, just wants to enjoy operating trains. |BR| You could be someone new to trains or picking it up after a long absence, or you could be someone coming from running DC and looking to switch over to DCC. This is also the perfect place for someone who just wants something that works without much tinkering. In short, a |Conductor-text| wants to drive trains and doesn't want to have to deal with the details of the hardware or software involved. |BR| |BR| We'll show you how to purchase a ready-to-run Command Station or put one together from parts and use a free Throttle (Controller) to run trains. We'll have you up and running in just a few minutes. This path will keep things simple. |BR| |BR| We recommend that you :doc:`start Here and choose either the ready-to-run or DIY Command Station </ex-commandstation/index>`.
 
 
 ----
@@ -91,7 +91,7 @@ Engineer
            :alt: Engineer Hat
            :width: 144px
            :class: image-min-width-72
-      - An |Engineer-text| is a little more versed in computers and/or electronics. |BR| They have a desire to dig a little deeper into how things work. They can understand the basics of computer code and can look at the |DCC-EX| software and perhaps make simple changes. They may also want to help with offering their talents to the project! They are not averse to experimenting with things to make something work. These are the people whose layout looks like a telephone switching station when you look under their benchwork. |BR| |BR| This path will offer more technical information and cover more in depth topics like accessory control, sensors, and customizing the |EX-CS|. |BR| |BR| We also recommend that you :doc:`start here to buy or build your EX-CommandStation </ex-commandstation/index>` if you have not already done so, but look out for the |Tinkerer-text| and |Engineer-text| notes on the pages to see other options.
+      - An |Engineer-text| is a little more versed in computers and/or electronics. |BR| They have a desire to dig a little deeper into how things work. They can understand the basics of computer code and can look at the |DCC-EX| software and perhaps make simple changes to user files. They may also want to help with offering their talents to the project! They are not averse to experimenting with things to make something work. These are the people whose layout looks like a telephone switching station when you look under their benchwork. |BR| |BR| This path will offer more technical information and cover more in depth topics like accessory control, sensors, and customizing the |EX-CS|. |BR| |BR| We also recommend that you :doc:`start here to buy or build your EX-CommandStation </ex-commandstation/index>` if you have not already done so, but look out for the |Tinkerer-text| and |Engineer-text| notes on the pages to see other options.
 
 ----
 

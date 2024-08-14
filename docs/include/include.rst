@@ -111,11 +111,6 @@
       :scale: 40%
       :class: image-product-logo-float-right
 ..
-.. |EX-MS-LOGO-SMALL| image:: /_static/images/logos/placeholder.png
-      :alt: EX-MotorShield8874
-      :scale: 40%
-      :class: image-product-logo-float-right
-..
 .. |EX-WS-LOGO-SMALL| image:: /_static/images/logos/placeholder.png
       :alt: EX-WiFiShield-8266
       :scale: 40%

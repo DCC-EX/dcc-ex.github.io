@@ -49,7 +49,7 @@ For a video on how to do this, click below: `Setting Up Your Command Station <ht
 1. Disable Power Sharing - Arduino to Motor Driver
 ==================================================
 
-**Arduino Motor Shield R3** Only!
+**Arduino Motor Shield R3** Only!  This is **not required** if you are using the **EX-MotorShield8874**.
 
 .. warning:: 
    :class: warning-float-right
@@ -75,8 +75,6 @@ Cutting the Trace
 -----------------
 
 **Arduino Motor Shield R3** Only!  This is **not required** if you are using the **EX-MotorShield8874**.
-
-c
 
    |conductor| |BR| In this *alternate* method, you can just bend the Vin pin so that instead of connecting to the header in the Arduino, it rides on the outside of the header. 
 

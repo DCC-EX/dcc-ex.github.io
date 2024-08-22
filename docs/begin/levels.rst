@@ -93,6 +93,7 @@ Engineer
            :class: image-min-width-72
       - An |Engineer-text| is a little more versed in computers and/or electronics. |BR| They have a desire to dig a little deeper into how things work. They can understand the basics of computer code and can look at the |DCC-EX| software and perhaps make simple changes to user files. They may also want to help with offering their talents to the project! They are not averse to experimenting with things to make something work. These are the people whose layout looks like a telephone switching station when you look under their benchwork. |BR| |BR| This path will offer more technical information and cover more in depth topics like accessory control, sensors, and customizing the |EX-CS|. |BR| |BR| We also recommend that you :doc:`start here to buy or build your EX-CommandStation </ex-commandstation/index>` if you have not already done so, but look out for the |Tinkerer-text| and |Engineer-text| notes on the pages to see other options.
 
+
 ----
 
 Next Steps

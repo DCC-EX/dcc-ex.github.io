@@ -3,13 +3,13 @@
       :alt: EX-CSB1 Logo
       :scale: 30%
       :class: image-min-width-144
-      :target: ../ex-commandstation/ready-to-run/index.html
+      :target: ../ex-csb1/index.html
 ..
-.. |EX-CS-LOGO-DIY-SMALL| image:: /_static/images/logos/product-logo-ex-cs-diy.png
+.. |EX-CS-DIY-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-cs-diy.png
       :alt: EX-CS-DIY Logo
       :scale: 30%
       :class: image-min-width-144
-      :targer: ../ex-commandstation/diy/index.html
+      :target: ../ex-commandstation/diy/index.html
 ..
 .. |EX-CS-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-commandstation.png
       :alt: EX-CommandStation
@@ -72,10 +72,16 @@
       :target: ../ex-toolbox/index.html
 ..
 .. |EX-MS-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-motorshield8874.png
-      :alt: EX-MotorShield8874
+      :alt: EX-MotorShield 8874
       :scale: 30%
       :class: image-min-width-144
       :target: ../reference/hardware/motorboards/ex-motor-shield-8874.html
+..
+.. |EX-WS-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-wifishield8266.png
+      :alt: EX-WiFiShield 8266
+      :scale: 30%
+      :class: image-min-width-144
+      :target: ../reference/hardware/wifi-boards/makerfabs-esp8266.html
 ..
 .. |TRACKMANAGER-LOGO-SMALL| image:: /_static/images/logos/product-logo-trackmanager.png
       :alt: DCC-EX TrackManager

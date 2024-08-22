@@ -106,11 +106,6 @@
       :scale: 40%
       :class: image-product-logo-float-right
 ..
-.. |EX-WS-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-cs-diy.png
-      :alt: EX-WiFiShield-8266
-      :scale: 40%
-      :class: image-product-logo-float-right
-..
 .. |EX-CS-LOGO| image:: /_static/images/logos/product-logo-ex-commandstation.png
       :alt: EX-CommandStation
       :scale: 40%

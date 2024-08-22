@@ -56,3 +56,4 @@ Thumbs.db
 venv
 venv/*
 requirements.FND
+build_help.txt

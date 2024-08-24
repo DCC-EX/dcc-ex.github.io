@@ -166,7 +166,7 @@ What you will need
 --------------------
 
 * An EX-CSB1 Command Station
-* A Power supply (XXX see xxx)
+* A Power supply (12V - 16V DC see xxx)
 * A DCC loco (DC can work also)
 * Track
 * A throttle (You can use your phone or a computer - see below)
@@ -199,8 +199,34 @@ Unscrew both screw terminals with a flat blade jeweller's screwdriver. The screw
 
 XXX insert image here of screwing terminals
 
-Power up
----------
+Powering up
+------------
+
+Now you can connect your track power supply to the barrel connector on the CSB1 and then plug the other end into the wall. You should see status information on the display including the CSB1 firmware version. (If you do not have a display, you will need to connect a serial monitor XXX This is a mess of having to have so many options and send people back and forth and have an entire section on using a serial monitor. Just link to it?)
+
+The DCC-EX EX-CSB1 Command Station/Booster will power up in WiFi Access Point mode, with a Wifi network SSID of DCCEX_xxxxxx and password of PASS_xxxxxx, both of which will be visible on the OLED display (or serial monitor log) after it boots
+
+XXX figure link to OLED display. Also link to serial monitor log section?
+
+Access Point (AP) mode creates a separate WiFi network on the Command Station itself, whereas Station (STA) mode allows the Command Station to join as a WiFi device on your home or layout WiFi network. We have the EX-CSB1 set to default to AP mode for convenience of being able to get up and running quickly.
+
+The WiFi LED will illuminate once WiFi is configured. 
+
+XXX figure link showing WiFi LED
+
+Connecting via Wifi
+-------------------- 
+
+XXX should title be "connecting with your phone?"
+
+Please connect your smartphone or tablet where you previously installed Engine Driver or WiThrottle to this WiFi network with the password shown on the OLED to begin running trains immediately! You have nothing further to do to start using your DCC-EX EX-CSB1. You can remove the protective cover on the OLED if you wish.
+
+XXX figure image of phone logging in to the AP
+
+::NOTE: Note too that some smart phones and tablets will try hard to only connect you to a WiFi network that has Internet access, and you may be asked if you really want to connect to a WiFi network without it. For the sake of getting up and running quickly, just dismiss such queries. In the next section we show you how to reconfigure the EX-CSB1 to join your home or layout WiFi network should you prefer it.
+
+Connecting Via USB and EX-WebThrottle
+---------------------------------------
 
 
 Use TrackManager to Set Outputs to DCC or DC Operation
@@ -215,7 +241,6 @@ DCC Operation
 The EX-CSB1 defaults to DCC operation. To see how to operate DC mode see here XXX
 
 The track outputs are shown here labelled A and B. Normally, for DCC operation, output A is for your MAIN track and output B is for your PROG (Programming) track. However, the EX-CommandStation software allows you to make any track a MAIN, a PROG, DCC, DC, or a Booster, but that is covered in the TrackManager help XXX For now, let's just keep it simple.
-
 
 What to put here? XXX Cover more theory of DCC and basics of the voltage and signal and DC having polarity and being PWM? Or just talk about how to turn on DC and DCC in Trackmanager?
 

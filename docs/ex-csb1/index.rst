@@ -57,7 +57,7 @@ Benefits include:
   * Dynamically assign any output to programming mode, with NMRA current limit enforced
   * TrackManager :sup:`tm` support for configuring any output to any one of the DC/DCC/Prog modes to suit your layout
 
-The EX-CSB1 is based on the 32-bit ESP32 microcontroller that operates on 3.3V rather than 5V for increased efficiency and more options for powering the board. It uses a robust, single-PCB design with dual outputs to provide an expandible Command Station and/or Booster in a small portable form factor.
+The EX-CSB1 is based on the 32-bit ESP32 microcontroller that operates on 3.3V rather than 5V for increased efficiency and more options for powering the board. It uses a robust, single-PCB design with dual outputs to provide an expandible Command Station and/or Booster in a small portable form factor. XXX Thinking this entire section duplicates the list above. Or could delete the last 2 paragraphs?
 
 The EX-CSB1 comes with two integrated MOSFET based motor drivers from Texas Instruments to reduce power consumption, put more power to the layout, and generate less heat than traditional solutions. They provide up to 5A peak power to each track output to be able to run more locos simultaneously. An additional EX-MotorShield 8874 can be plugged on top of the command station board to provide two more DCC or PWM DC outputs.
 
@@ -67,7 +67,7 @@ The EX-CSB1 also has auto-reverser mode which can be enabled for any DCC output 
 
 Just a single 12V to 25V power supply is required to power the track and all the electronics on the EX-CSB1. The reverse polarity protection on the power input prevents damage to the circuit and its components in case the power supply is accidentally connected backwards. In addition, there is both hardware and software backup over current protection, over voltage protection, and over heating protection.
 
-The EX-CSB1 features two power status LEDs, which provide visual indication of the microcontroller power status and track input supply status in addition to separate LEDs to show each side of the A and B power outputs to show the DCC and DC status of power to the tracks. There is also an LED that lights once Wifi is connected (STA mode) or available (AP mode.)
+The EX-CSB1 features two power status LEDs, which provide visual indication of the microcontroller power status and track input supply status. There are separate LEDs to show each side of the A and B power outputs to provide visual indication of the DCC and DC status of power to the tracks. There is also an LED that lights once Wifi is connected (STA mode) or available (AP mode.)
 
 The built-in EXRAIL Automation and Animation capability lets you use pre-written scripts or ones you can create yourself to operate everything on the layout. Trains can run pre-determined routes, automatically stop for each other, operate crossings, signals,turnouts, and more.
 
@@ -99,7 +99,7 @@ Ordering in Quantity or wishing to Resell
 
 For quantities of 10 or less per annum, you may utilize a PCB manufacturing and assembly service such as JLCPCB without licensing fees. A donation to DCC-EX would be appreciated, so click the DONATE button! The production files are available on the `DCC-EX GitHub <https://github.com/DCC-EX/EX-Motorshield8874>`_. XXX
 
-Entrepreneurs wanting to use the design to offer commercial quantities to their local communities should contact DCC-EX (sales @ dcc-ex.com) to arrange a bulk purchase or a license to manufacture. Licensing includes donating a royalty to DCC-EX per board sold.XXX move this section to the bottom and just link to it?
+Entrepreneurs wanting to use the design to offer commercial quantities to their local communities should contact DCC-EX (sales @ dcc-ex.com) to arrange a bulk purchase or a license to manufacture. Licensing includes donating a royalty to DCC-EX per board sold.XXX move this section to the bottom and just link to it? XXX How about a link to a separate section for reseller inquiries?
 
 Board layout
 ==============
@@ -108,7 +108,7 @@ Board layout
    :alt: DCC-EX EX-CSB1 Express
    :scale: 40%
 
-**Input Power Barrel Jack** - The CSB1 normally comes with a barrel jack for compatibility with most laptop-type power supplies that use a 2.1mm inner hole diameter and a 5.5mm outer shank diameter. Be careful since some power supplies have a 2.5mm inner hole which is too loose a fit. The barrel jack input power is reverse voltage protected. Power from the barrel jack powers the 5V regulator to power an optional EX-MotorShield 8874 (to allow for 2 more power districts), the 3.3V regulator to power the EX-CSB1, and power out to the track. For the correct voltage (Normally between 12V DC and 14.5V DC for N and HO Scales, see XXX)
+**Input Power Barrel Jack** - The CSB1 normally comes with a barrel jack for compatibility with most laptop-type power supplies that use a 2.1mm inner hole diameter and a 5.5mm outer shank diameter. Be careful since some power supplies have a 2.5mm inner hole which is too loose a fit. The barrel jack input power is reverse voltage protected. Power from the barrel jack powers the 5V regulator to power an optional EX-MotorShield 8874 (to allow for 2 more power districts), the 3.3V regulator to power the EX-CSB1, and power out to the track. For the correct voltage (Normally between 12V DC and 14.5V DC for N and HO Scales, see XXX) Also XXX, Do we need a picture of the connector?
 
 **USB-C Power/Data Connector** - The USB connector can supply 5V DC from a computer or any 500mA or larger power supply. The 5V is converted through a regulator to the 3.3V that runs the circuitry on the board. In this way you can connect your EX-CSB1 to a computer and update your software version or load EXRAIL scripts that run your accessories. However, without another power supply, you cannot supply power to the rails to run trains. You can connect your track Power supply (see above) to the barrel jack while the USB is connected, they will not interfere with each other. XXX (will they???). The USB port is also very useful for connecting a serial monitor to test the command station and view logging information. link? XXX
 
@@ -136,28 +136,72 @@ Board layout
 
 **GPIO Headers** - The 4 GPIO headers accept a DCC-EX EX-MotorShield 8874. The EX-CSB1 itself has 2 outputs for 2 track power districts. Stacking the 8874 on these headers provides 2 additional power districts for a total of 4. Any of the 4 outputs can be used for any combination of DCC MAIN, DCC PROG, or DC PWM.
 
+**OLED Display (not shown above)** - The OLED display provides diagnostics, status, and information display. 
+
 XXX Add to image to include hot area, unpopulated power pin, and any silkscreening. Add the bottom of the board help.
 
 
 Powering the EX-CSB1
 =====================
 
-The CSB1 has a 2.1mm x 5.5mm power jack. You can use an optional 2.1mm x 5.5mm screw terminal block adapter if you already have a power supply with bare wires. See our section on recommended power supplies for more information XXX. Simply plug your power supply into Mains power and plug the male barrel end into the Command Station. Make sure your supply has the proper voltage for the scale of your locos (between 12V and 25V DC) and at least 4A of current capability. To use the full capacity of the EX-CSB1, we recommend 6A or more. For Z scale 12V would be adequate, but for N, HO and OO scale we would recommend between 14V and 16V DC. The DC input must be fully regulated, preferably a modern switch-mode power supply brick with double insulation and good overload current protection.
+The CSB1 has a 2.1mm x 5.5mm power jack. You can use an optional 2.1mm x 5.5mm screw terminal block adapter if you already have a power supply with bare wires. See our section on recommended power supplies for more information XXX. Simply plug your power supply into Mains power and plug the male barrel end into the Command Station. Make sure your supply has the proper voltage for the scale of your locos (between 12V and 25V DC) and at least 4A of current capability. To use the full capacity of the EX-CSB1, we recommend 6A or more. For Z scale 12V would be adequate, but for N, HO and OO scale we would recommend between 14V and 16V DC, especially for DCC with sound locos. The DC input must be fully regulated, preferably a modern switch-mode power supply brick with double insulation and good overload current protection.
+
+.. figure:: /_static/images//12v-3A-brick.jpg
+   :alt: 12V 3A brick power supply
+   :scale: 100%
+   :align: right
+
+   12V/3A Power Supply
 
 Don't worry about having more Amps than needed, too much voltage is a bad thing, but too much current doesn't hurt anything since an electronic device will only use as much current as it needs. Better to have a little extra than to have too little. Do keep in mind, however, that both voltage and current can be dangerous. The barrel connector provides a bit of extra safety, but if you drop a screwdriver across the terminals of your 10A power supply, it could become an arc welder. Be cautious.
 
 See "how much current do I need" XXX
 
-You should see the bright green power LED light when when power is applied letting you know the electronics are operating, however in the default configuration as delivered to you, track power will be OFF for safety. You normally would not want power to unexpectedly come on as soon as you plug the EX-CSB1 into the wall power in case the layout was not in a condition ready to accept power to the tracks. This default behaviour can be changed here XXX
+You should see the bright green power LED light when when power is applied letting you know the electronics are operating. However in the default configuration as delivered to you, track power will be OFF for safety. You normally would not want power to unexpectedly come on as soon as you plug the EX-CSB1 into the wall power in case the layout was not in a condition ready to accept power to the tracks. This default behaviour can be changed here XXX
 
-Connecting to Your tracks
-==========================
+Connecting and Testing Your Command Station
+============================================
+
+What you will need
+--------------------
+
+* An EX-CSB1 Command Station
+* A Power supply (XXX see xxx)
+* A DCC loco (DC can work also)
+* Track
+* A throttle (You can use your phone or a computer - see below)
+* 16 to 22 AWG Wire
+* Jeweller's flat bladed screwdriver (1.5 - 2mm blade)
+* A laptop or other computer*
+* A USB cable*
+
+  *Optional for connecting connecting to a computer
+
+Start with all power disconnected
+----------------------------------
 
 Before connecting wires to your tracks, make sure you have unplugged the power supply from the wall or removed the barrel connector from the command station. You do NOT want to have power to the command station while working on your connections.
 
-Once you are sure power is disconnected and the power led indication is off, you can connect wires from the A output + and - to the track. For DCC operation it is not important which wire is which, since there is no polarity, but it is important as your layout grows to be consistent so that different power districts are in phase. That just means that when one track is positive relative to the other as they switch back and forth quickly, all the different districts have that same side of the track synced the same way. More detail on this in in the wiring section XXX.
+Connect your wires
+-------------------
+
+The power connection to your track will be either wires you solder yourself to the rails or via a power connector that plugs into track such as Kato Unitrack. We will leave it up to you to determine the proper connection to your track.
+
+Once you are sure power is disconnected from the CS and the power led indication is off, you will connect wires from the track to the A output + and - of the CS. For DCC operation it is not important which wire is which, since there is no polarity, but it is important as your layout grows to be consistent so that if you add power districts, they are in phase. That just means that when one track is positive relative to the other as they switch back and forth quickly with the DCC signal, all the different districts have that same side of the track synced the same way. More detail on this in in the wiring section XXX.
 
 For DC operation, there is polarity in that one track is positive and the other negative and the train will move forward when voltage is applied through the command station. When that voltage is reversed, the train will run in reverse.
+
+There are two track connections, the A (topmost) or B (beside the power) connector. Note that by default, A is configured for DCC MAIN operation, and B is configured for PROG or programming track. We recommend connecting your track to the A MAIN output initially to test your Command Station.
+
+The pluggable male screw terminals accept to 16 to 28 AWG (gauge) solid or stranded wire. If you use stranded, we recommend "tinning" the ends of the wire to make a good connection and ensure that stray wire whiskers don't stray outside the screw terminals and cause a short circuit. Larger wire can handle more current and provide less resistance.  18-22 is a good start. Keep your wires short by mounting the CS close to the track. See XXX for more information or wire gauge.
+
+Unscrew both screw terminals with a flat blade jeweller's screwdriver. The screws just need to be loosened enough to fit your wires into the holes. Tighten down both screws once you have inserted the wires.
+
+XXX insert image here of screwing terminals
+
+Power up
+---------
+
 
 Use TrackManager to Set Outputs to DCC or DC Operation
 ========================================================

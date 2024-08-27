@@ -222,8 +222,8 @@ Unscrew both screw terminals with a flat blade jeweller's screwdriver. The screw
 [plug image]
 
 
-Powering up
-------------
+Turning on Power
+------------------
 
 Now you can connect your track power supply to the barrel connector on the CSB1 and then plug the other end into the wall. You should see status information on the display including the CSB1 firmware version. (If you do not have a display, you will need to connect a serial monitor XXX This is a mess of having to have so many options and send people back and forth and have an entire section on using a serial monitor. Just link to it?)
 
@@ -237,8 +237,11 @@ The WiFi LED will illuminate once WiFi is configured.
 
 XXX figure link showing WiFi LED
 
+Connecting a Throttle
+----------------------
+
 Connecting via Wifi
----------------------
+^^^^^^^^^^^^^^^^^^^^
 
 XXX should title be "connecting with your phone?"
 
@@ -249,7 +252,18 @@ XXX figure image of phone logging in to the AP
 ::NOTE: Note too that some smart phones and tablets will try hard to only connect you to a WiFi network that has Internet access, and you may be asked if you really want to connect to a WiFi network without it. For the sake of getting up and running quickly, just dismiss such queries. In the next section we show you how to reconfigure the EX-CSB1 to join your home or layout WiFi network should you prefer it.
 
 Connecting Via USB and EX-WebThrottle
----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+Use TrackManager to Set Outputs to DCC or DC Operation
+========================================================
+
+Our Trackmanager technology allows you to configure any of 4 outputs to be DCC MAIN, DCC PROG, or DC PWM in order to run DCC or DC locos. 2 outputs are included with the EX-CSB1 with 2 more available with the purchase of an EX-MotorShield 8874 that just stacks on top. By default, output A is configured as a DCC MAIN track and output B is configured as a DCC Programming track. You can dynamically change the configuration using throttles (such as |EX-WT|, |JMRI|, or |Engine Driver|) or you can configure your CSB1 to always start in your desired configuration. Note that one of the outputs can be configured in such a way that it is another MAIN power district that automatically switches to programming mode when a programming command is issued by your throttle and then automatically switches back to MAIN. XXX have this be a NOTE? See a detailed TM section?
+
+
+Upgrading the Software
+=========================
 
 The EX-CSB1 comes preloaded with the Command Station software, so you can start using it right out of the box. However, if you wish to customize its configuration or update the software, you can easily do so by connecting the EX-CSB1 to your computer via USB. Follow these steps to make any changes you need:
 
@@ -274,18 +288,11 @@ Check the Connection: The software should automatically detect the EX-CSB1. If i
 Step 5: Start Using or Customizing Your Command Station
 With the EX-CSB1 connected, you’re ready to start using it or making any necessary adjustments to the configuration. Explore the features and tailor the settings to optimize your model railway experience.
 
+Changing the Configuration
+============================
 
-
-Use TrackManager to Set Outputs to DCC or DC Operation
-========================================================
-
-Our Trackmanager technology allows you to configure any of 4 outputs to be DCC MAIN, DCC PROG, or DC PWM in order to run DCC or DC locos. 2 outputs are included with the EX-CSB1 with 2 more available with the purchase of an EX-MotorShield 8874 that just stacks on top. By default, output A is configured as a DCC MAIN track and output B is configured as a DCC Programming track. You can dynamically change the configuration using throttles (such as |EX-WT|, |JMRI|, or |Engine Driver|) or you can configure your CSB1 to always start in your desired configuration. Note that one of the outputs can be configured in such a way that it is another MAIN power district that automatically switches to programming mode when a programming command is issued by your throttle and then automatically switches back to MAIN. XXX have this be a NOTE? See a detailed TM section?
-
-
-USB Connection to install the Command Station Software
-======================================================
-
-The EX-CSB1 Express should come from your reseller with the EX-CommandStation software already installed. However, you may want to upgrade when a new version is released or create your own EX-RAIL automation/animation scripts and upload them to the CS. A USB-A to USB-C cable (or a USB-C to USB-C cable if your computer has a USB-C connector) allows you to connect your CSB1 to a computer to use our EX-Installer application or the Arduino IDE to install your files.
+Uploading EXRAIL Scripts
+==========================
 
 Resetting the CS
 =================

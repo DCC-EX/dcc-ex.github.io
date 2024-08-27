@@ -150,6 +150,17 @@ For more details on how much current do I need, see [link] XXX
 
 When you connect power to the CSB1, you should see a bright green power LED light up, confirming that the electronics are working. However, for safety, track power will be off by default when you first plug in the EX-CSB1. This is to prevent power from accidentally being applied to your layout before everything is ready. If you prefer, you can change this default setting [link].
 
+DCC vs. DC: A Quick Overview
+=============================
+
+**DCC (Digital Command Control):** DCC uses a constant voltage on the track with digital signals embedded in the power to control the speed, direction, and functions of your trains. There’s no need to worry about polarity in DCC, making wiring simpler as your layout expands. The digital signal allows for precise control of multiple trains on the same track, all receiving power at the same time. Each device connected to the track contains a "decoder" that only responds to commands sent to its unique address.
+
+**DC (Direct Current):** DC operation is more the traditional or legacy method, where the direction and speed of your trains are controlled by varying the voltage and switching polarity. In DC mode, one rail is positive with respect to the other. The train moves forward when voltage is applied and reverses direction when the polarity is flipped. DC control is simpler but less flexible, especially if you want to run multiple trains on the same track simultaneously.
+
+**Managing DCC and DC Modes in TrackManager:** If you are ready to dive into customizing your track outputs, TrackManager is the tool you'll use. It allows you to easily switch between DCC and DC modes for any track connected to your EX-CSB1. You can also set up different tracks for specific purposes, such as making one track a Booster or configuring your PROG track.
+
+For detailed steps on how to use TrackManager to change track modes and settings, check out the TrackManager help section [here]. XXX
+
 
 Connecting and Testing Your Command Station
 ============================================
@@ -167,7 +178,7 @@ What you will need
 * A laptop or other computer*
 * A USB cable*
 
-  *Optional for connecting connecting to a computer
+ \*Optional for connecting connecting to a computer
 
 Start with all power disconnected
 ----------------------------------
@@ -188,16 +199,28 @@ DCC Operation
 
 The EX-CSB1 is set to operate in DCC mode by default. If you want to switch to DC mode, you can find instructions on how to do that here XXX [link]
 
-Track Outputs
-^^^^^^^^^^^^^^^
+DC Operation
+-------------
 
-You will notice that the two track outputs on the EX-CSB1 are labelled A and B. In standard DCC operation, A is configured for DCC MAIN operation, and B is configured for PROG or programming track. We recommend connecting your track to the A MAIN output initially to test your Command Station.
+When using DC mode with the EX-CSB1, it is important to understand that this is not the traditional method of varying the DC voltage to control the speed of your locomotive. Instead, the track always receives full voltage whenever the throttle is set above zero. The speed of your train is controlled using a method called PWM (Pulse Width Modulation).
+
+**How PWM Works** - PWM works by rapidly turning the voltage on and off to the track. The rate at which this happens adjusts the "effective" voltage that the locomotive's motor experiences. For example, if the voltage is on 50% of the time and off 50% of the time, the motor behaves as if it's receiving half of the full voltage. This technique is similar to how a DCC decoder controls a motor in a DCC-equipped locomotive.
+
+**Benefits of PWM in DC Operation** - Using PWM for speed control has several advantages, particularly in terms of smooth operation. Trains start and stop more gradually, and running at slow speeds becomes smoother and more consistent. This gives you better control over your locomotives, making your layout more enjoyable to operate, especially during more delicate maneuvers.
+
+Track Outputs
+--------------
+
+You will notice that the two track outputs on the EX-CSB1 are labelled A and B. In standard DCC operation, A is configured for DCC MAIN operation, and B is configured for PROG or programming track. We recommend connecting your track to the A MAIN output initially to test your Command Station. For DC Mode, you would need to configure either output (or both) to be DC with a TrackManager command XXX [link]
+
+[terminal image]
 
 The pluggable male screw terminals accept to 16 to 28 AWG (gauge) solid or stranded wire. If you use stranded, we recommend "tinning" the ends of the wire to make a good connection and ensure that stray wire whiskers don't stray outside the screw terminals and cause a short circuit. Larger wire can handle more current and provide less resistance.  18-22 is a good start. Keep your wires short by mounting the CS close to the track. See XXX for more information or wire gauge.
 
 Unscrew both screw terminals with a flat blade jeweller's screwdriver. The screws just need to be loosened enough to fit your wires into the holes. Tighten down both screws once you have inserted the wires.
 
-XXX insert image here of screwing terminals
+[plug image]
+
 
 Powering up
 ------------
@@ -215,7 +238,7 @@ The WiFi LED will illuminate once WiFi is configured.
 XXX figure link showing WiFi LED
 
 Connecting via Wifi
--------------------- 
+---------------------
 
 XXX should title be "connecting with your phone?"
 
@@ -228,26 +251,36 @@ XXX figure image of phone logging in to the AP
 Connecting Via USB and EX-WebThrottle
 ---------------------------------------
 
+The EX-CSB1 comes preloaded with the Command Station software, so you can start using it right out of the box. However, if you wish to customize its configuration or update the software, you can easily do so by connecting the EX-CSB1 to your computer via USB. Follow these steps to make any changes you need:
+
+Step 1: Connect the EX-CSB1 to Your Computer
+Locate the USB Port: Find the USB port on your EX-CSB1. It’s typically a USB-C port, depending on your model.
+Use a Compatible USB Cable: Grab a USB cable that matches the port on your EX-CSB1. This will likely be a USB-A to micro-USB or USB-C cable.
+Plug It In: Connect one end of the USB cable to the EX-CSB1 and the other end to an available USB port on your computer.
+
+Step 2: Install the Required Drivers
+Automatic Installation: In many cases, your computer will automatically recognize the EX-CSB1 and install the necessary drivers.
+Manual Installation: If the drivers do not install automatically, you may need to download them from the official website. Follow the instructions provided on the site to complete the installation.
+
+Step 3: Access or Update the Command Station Software
+Open the Software: Since the EX-CSB1 comes preloaded with the Command Station software, you can access it directly by launching the program on your computer after connecting the EX-CSB1.
+Download the Latest Version (Optional): If you want to update to the latest software version, visit the official DCC-EX website and download it. Open the installer and follow the on-screen instructions.
+Modify the Configuration: The software allows you to customize the EX-CSB1’s configuration to suit your specific needs. Use the setup wizard or manual settings within the software to make any changes.
+
+Step 4: Verify the Connection
+Open the Command Station Software: Once the software is updated or if you’re making adjustments, launch it from your desktop or start menu.
+Check the Connection: The software should automatically detect the EX-CSB1. If it doesn’t, ensure that your USB cable is securely connected and try again.
+
+Step 5: Start Using or Customizing Your Command Station
+With the EX-CSB1 connected, you’re ready to start using it or making any necessary adjustments to the configuration. Explore the features and tailor the settings to optimize your model railway experience.
+
+
 
 Use TrackManager to Set Outputs to DCC or DC Operation
 ========================================================
 
 Our Trackmanager technology allows you to configure any of 4 outputs to be DCC MAIN, DCC PROG, or DC PWM in order to run DCC or DC locos. 2 outputs are included with the EX-CSB1 with 2 more available with the purchase of an EX-MotorShield 8874 that just stacks on top. By default, output A is configured as a DCC MAIN track and output B is configured as a DCC Programming track. You can dynamically change the configuration using throttles (such as |EX-WT|, |JMRI|, or |Engine Driver|) or you can configure your CSB1 to always start in your desired configuration. Note that one of the outputs can be configured in such a way that it is another MAIN power district that automatically switches to programming mode when a programming command is issued by your throttle and then automatically switches back to MAIN. XXX have this be a NOTE? See a detailed TM section?
 
-
-DCC Operation
-=====================
-
-The EX-CSB1 defaults to DCC operation. To see how to operate DC mode see here XXX
-
-The track outputs are shown here labelled A and B. Normally, for DCC operation, output A is for your MAIN track and output B is for your PROG (Programming) track. However, the EX-CommandStation software allows you to make any track a MAIN, a PROG, DCC, DC, or a Booster, but that is covered in the TrackManager help XXX For now, let's just keep it simple.
-
-What to put here? XXX Cover more theory of DCC and basics of the voltage and signal and DC having polarity and being PWM? Or just talk about how to turn on DC and DCC in Trackmanager?
-
-DC Operation
-===============
-
-It is important to note that this is not a varying DC voltage, Full voltage is always at the track when the throttle is set to a speed greater than zero. Speed is controlled by using a PWM (pulse width modulated) signal that turns the voltage on and off to the track at a rate that changes the "effective" voltage the motor in the locomotive "sees". This mimics what a DCC decoder does in a DCC loco to control a motor. The benefit of this method is that starting and stopping and operating at slow speed is more smooth. 
 
 USB Connection to install the Command Station Software
 ======================================================
@@ -256,6 +289,42 @@ The EX-CSB1 Express should come from your reseller with the EX-CommandStation so
 
 Resetting the CS
 =================
+
+Soft Reset Recovery
+--------------------
+
+Factory Reset
+-------------
+
+
+If you need to reset your EX-CSB1 Command Station software to its default settings, you'll need to reinstall the software. This process will overwrite your current configuration with the original default settings. Follow these steps to reset the software:
+
+Step 1: Disconnect Power
+Before you begin, make sure the Command Station is powered off. Unplug the power supply from the wall or disconnect the barrel connector from the CSB1. This ensures that the system is completely powered down before the reset process.
+
+Step 2: Connect to Your Computer via USB
+Locate the USB Port: Find the USB port on your EX-CSB1.
+Use a Compatible USB Cable: Connect the CSB1 to your computer using the appropriate USB cable.
+Power On: Plug the power supply back in or reconnect the barrel connector to power on the CSB1.
+
+Step 3: Download the Latest Installer
+Visit the DCC-EX Website: Go to the official DCC-EX website and download the latest version of the Command Station software installer.
+Save the Installer: Save the installer file to a location on your computer where you can easily access it.
+
+Step 4: Run the Installer
+Open the Installer: Locate the downloaded installer file on your computer and double-click to run it.
+Follow the On-Screen Instructions: The installer will guide you through the reinstallation process. During this process, the existing software on the EX-CSB1 will be overwritten with the default settings.
+Complete the Installation: Allow the installer to complete the process. Once done, the software will be reset to its original configuration.
+
+Step 5: Verify the Reset
+Launch the Command Station Software: After the installation is complete, open the Command Station software to ensure it’s running correctly with the default settings.
+Check the Configuration: Confirm that the software has been reset by checking the basic settings and making sure they match the defaults.
+
+Step 6: Reconfigure if Necessary
+Customize Settings: If you need to adjust the settings to suit your layout, you can now do so within the software.
+Test Your Setup: Power up your layout and test the system to ensure everything is working as expected.
+
+
 
 USB Connection to a Serial Monitor
 ===================================
@@ -271,3 +340,62 @@ Integrated displays
 Connecting Accessories (I2C)
 =============================
 
+The EX-CSB1 Command Station allows you to expand your model railway setup by connecting various I2C accessories such as sensors, displays, and GPIO expanders. Using the DCC-EX Installer and additional tools, you can easily configure these accessories to work with your layout.
+
+Step 1: Selecting I2C Accessories
+Choose Compatible Accessories:
+Common I2C accessories include displays (e.g., OLED, LCD), sensors (e.g., temperature, distance), and GPIO expanders.
+Ensure your accessories are compatible with I2C and check the DCC-EX website for supported devices.
+
+Step 2: Connecting Accessories to EX-CSB1
+Locate the I2C Ports:
+Use the "I2C x 2" ports for general I2C devices.
+Use the "OLED I2C" port if you're connecting an OLED display.
+Wiring the Devices:
+SDA (Data Line): Connect the SDA pin on your accessory to the SDA pin on the EX-CSB1.
+SCL (Clock Line): Connect the SCL pin on your accessory to the SCL pin on the EX-CSB1.
+Power: Depending on your device’s requirements, connect the VCC pin to either 3.3V or 5V on the EX-CSB1. Connect the GND pin to GND.
+Daisy-Chaining Multiple Devices: If connecting more than one I2C device, ensure each has a unique I2C address, which can be set via jumpers or configuration switches.
+
+Step 3: Installing and Running the DCC-EX Installer
+Download and Install:
+
+Visit the DCC-EX Installer page to download the latest version.
+Follow the on-screen instructions to install the software on your computer.
+Run the Installer:
+
+Connect your EX-CSB1 to your computer via USB.
+Open the DCC-EX Installer. The installer will guide you through the initial setup, including basic configurations like setting up I2C displays.
+Configuring I2C Displays:
+
+The installer will allow you to configure connected displays (such as OLED or LCD) directly during the setup process.
+For other I2C devices, further configuration may require manual adjustments using the DCC-EX CommandStation software or editing configuration files.
+
+Step 4: Manual Configuration for Advanced Accessories
+Access the CommandStation Software:
+
+For advanced I2C accessories like sensors or GPIO expanders, you may need to manually configure them via the DCC-EX CommandStation software.
+This involves accessing configuration files or using a serial monitor to input specific commands.
+Editing Configuration Files:
+
+If necessary, open the configuration files provided with the DCC-EX software to manually add and configure your I2C devices. Instructions for this can be found on the DCC-EX documentation pages.
+Save and Apply Settings:
+
+After configuring your devices, ensure you save and apply your settings through the CommandStation software.
+Step 5: Testing and Troubleshooting
+Test Your Setup:
+
+Once configured, power on your layout and check if the I2C devices are functioning correctly.
+Use the diagnostics tools provided by the DCC-EX software to troubleshoot any issues.
+Troubleshooting Common Issues:
+
+Double-check wiring connections and I2C addresses.
+If issues persist, refer to the troubleshooting guides on the DCC-EX website.
+Additional Resources
+For more detailed instructions and support, refer to these resources:
+
+
+DCC-EX I2C Hardware Overview
+Using the EX-CommandStation Software
+DCC-EX Installer Guide
+Connecting and Configuring I2C Displays

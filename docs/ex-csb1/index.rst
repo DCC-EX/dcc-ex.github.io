@@ -81,14 +81,9 @@ Units may be purchased from the following sources:
 * In the UK from `Chesterfield Model Making & Miniature Electronics <https://chesterfield-models.co.uk/product/semify-dcc-ex-motor-shield/>`_
 * and other manufacturers licensed by DCC-EX.
 
-The EX-CSB1 Command Stations normally come with an OLED status display and a carrier base mount (sometimes called a "sled" ) There are different options for the board such as with or without an additional EX-MotorShield 8874 for two additional DCC/PWM DC outputs. Prices vary from around $105-$145 in the US, to approximately £ XXX -fnd in the UK, € XXX -fnd in Europe, and in Australia starting from $AU175 -fnd. Prices typically do not include tax and shipping.
+The EX-CSB1 Command Stations normally come with an OLED status display and a carrier base mount (sometimes called a "sled" ) There are different options for the board such as with or without an additional EX-MotorShield 8874 for two additional DCC/PWM DC outputs. Prices vary from around $105-$145 in the US, to approximately £ XXX -fnd in the UK, € XXX -fnd in Europe, and in Australia starting from $AU175 -fnd. Prices typically do not include tax and shipping. 
 
-Ordering in Quantity or wishing to Resell
-==========================================
-
-For quantities of 10 or less per annum, you may utilize a PCB manufacturing and assembly service such as JLCPCB without licensing fees. A donation to DCC-EX would be appreciated, so click the DONATE button! The production files are available on the `DCC-EX GitHub <https://github.com/DCC-EX/EX-Motorshield8874>`_. XXX
-
-Entrepreneurs wanting to use the design to offer commercial quantities to their local communities should contact DCC-EX (sales @ dcc-ex.com) to arrange a bulk purchase or a license to manufacture. Licensing includes donating a royalty to DCC-EX per board sold.XXX move this section to the bottom and just link to it? XXX How about a link to a separate section for reseller inquiries?
+`Click here for ordering in quantity of if you wish to become a reseller <Ordering in Quantity or wishing to Resell>`_.
 
 Board layout
 ==============
@@ -213,7 +208,7 @@ Track Outputs
 
 You will notice that the two track outputs on the EX-CSB1 are labelled A and B. In standard DCC operation, A is configured for DCC MAIN operation, and B is configured for PROG or programming track. We recommend connecting your track to the A MAIN output initially to test your Command Station. For DC Mode, you would need to configure either output (or both) to be DC with a TrackManager command XXX [link]
 
-[terminal image]
+[screw terminal image]
 
 The pluggable male screw terminals accept to 16 to 28 AWG (gauge) solid or stranded wire. If you use stranded, we recommend "tinning" the ends of the wire to make a good connection and ensure that stray wire whiskers don't stray outside the screw terminals and cause a short circuit. Larger wire can handle more current and provide less resistance.  18-22 is a good start. Keep your wires short by mounting the CS close to the track. See XXX for more information or wire gauge.
 
@@ -243,7 +238,7 @@ Connecting a Throttle
 Connecting via Wifi
 ^^^^^^^^^^^^^^^^^^^^
 
-XXX should title be "connecting with your phone?"
+XXX should title be "connecting with your phone?" Do we link to the engine driver page or give a short version here? Or to we break up the page and the "next" button goes to a mirrored page so there is only one page to maintain?
 
 Please connect your smartphone or tablet where you previously installed Engine Driver or WiThrottle to this WiFi network with the password shown on the OLED to begin running trains immediately! You have nothing further to do to start using your DCC-EX EX-CSB1. You can remove the protective cover on the OLED if you wish.
 
@@ -254,7 +249,7 @@ XXX figure image of phone logging in to the AP
 Connecting Via USB and EX-WebThrottle
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
+XXX Do we just link to the webthrottle page or do a quick version here?
 
 Use TrackManager to Set Outputs to DCC or DC Operation
 ========================================================
@@ -406,3 +401,10 @@ DCC-EX I2C Hardware Overview
 Using the EX-CommandStation Software
 DCC-EX Installer Guide
 Connecting and Configuring I2C Displays
+
+Ordering in Quantity or wishing to Resell
+==========================================
+
+For quantities of 10 or less per year, you may utilize a PCB manufacturing and assembly service such as JLCPCB without licensing fees. A donation to DCC-EX would be appreciated, so click the DONATE button! The production files are available on the `DCC-EX GitHub <https://github.com/DCC-EX/EX-Motorshield8874>`_. XXX include donate button on the page
+
+Entrepreneurs wanting to use the design to offer commercial quantities to their local communities should contact DCC-EX (sales @ dcc-ex.com) to arrange a bulk purchase or a license to manufacture. Licensing includes donating a royalty to DCC-EX per board sold.

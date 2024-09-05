@@ -41,6 +41,8 @@ Style Guidelines
   
   * \|DCC-EX\| for |DCC-EX|
   * \|EX-CS\| for |EX-CS|
+  * \|EX-MS\| for |EX-MS|
+  * \|EX-CSB1\| for |EX-CSB1|
   * \|EX-I\| for |EX-I|
   * \|EX-R\| for |EX-R|
   * \|EX-TT\| for |EX-TT|

@@ -358,14 +358,16 @@ Integrated displays
 Connecting Accessories (I2C)
 =============================
 
-The EX-CSB1 Command Station allows you to expand your model railway setup by connecting various I2C accessories such as sensors, displays, and GPIO expanders. Using the DCC-EX Installer and additional tools, you can easily configure these accessories to work with your layout.
+The EX-CSB1 Command Station allows you to expand your model railway setup by connecting various I2C accessories such as sensors, displays, and GPIO expanders. Using the DCC-EX |EX-I| and additional tools, you can easily configure these accessories to work with your layout.
 
 Step 1: Selecting I2C Accessories
+-----------------------------------
 Choose Compatible Accessories:
 Common I2C accessories include displays (e.g., OLED, LCD), sensors (e.g., temperature, distance), and GPIO expanders.
 Ensure your accessories are compatible with I2C and check the DCC-EX website for supported devices.
 
 Step 2: Connecting Accessories to EX-CSB1
+------------------------------------------
 Locate the I2C Ports:
 Use the "I2C x 2" ports for general I2C devices.
 Use the "OLED I2C" port if you're connecting an OLED display.
@@ -376,6 +378,7 @@ Power: Depending on your device’s requirements, connect the VCC pin to either 
 Daisy-Chaining Multiple Devices: If connecting more than one I2C device, ensure each has a unique I2C address, which can be set via jumpers or configuration switches.
 
 Step 3: Installing and Running the DCC-EX Installer
+-----------------------------------------------------
 Download and Install:
 
 Visit the DCC-EX Installer page to download the latest version.
@@ -390,6 +393,7 @@ The installer will allow you to configure connected displays (such as OLED or LC
 For other I2C devices, further configuration may require manual adjustments using the DCC-EX CommandStation software or editing configuration files.
 
 Step 4: Manual Configuration for Advanced Accessories
+------------------------------------------------------
 Access the CommandStation Software:
 
 For advanced I2C accessories like sensors or GPIO expanders, you may need to manually configure them via the DCC-EX CommandStation software.
@@ -412,11 +416,19 @@ If issues persist, refer to the troubleshooting guides on the DCC-EX website.
 Additional Resources
 For more detailed instructions and support, refer to these resources:
 
+XXX are these main headings or subheadings of what is above?
 
 DCC-EX I2C Hardware Overview
+=============================
+
 Using the EX-CommandStation Software
+=====================================
+
 DCC-EX Installer Guide
+========================
+
 Connecting and Configuring I2C Displays
+========================================
 
 Ordering in Quantity or wishing to Resell
 ==========================================

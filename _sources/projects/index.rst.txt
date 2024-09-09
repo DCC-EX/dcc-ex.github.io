@@ -14,9 +14,5 @@ This page holds related projects by some of our team members and users. If you h
     /throttles/hardware/minithrottle
     /throttles/hardware/witcontroller
     /throttles/hardware/streamdeck
-
-DCC-EX Deadrail Command Station
--------------------------------
-    
-    promini_air_tx_wcs ProMini-Air-Controller O-Scale
+    ProMiniAir_Transmitter_w_CommandStation
     

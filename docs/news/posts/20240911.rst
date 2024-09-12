@@ -1,0 +1,40 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+.. include:: /include/include-news.rst
+
+
+:blogpost: true
+:date: 11 September 2024
+:author: FlightRisk
+:category: news
+:tags: ex-commandstation
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+How do I display track current on the display?
+===============================================
+
+This has become a frequently asked question so we decided to create an article dedicated to the answer. Some users want to monitor how much current their locos are using and how close they may be to the limit set for their command station as they add more locos. The short answer is that this should be a throttle function, or a task for an external device, not a command station function. Indeed, applications like |EX-TB| allow you to see track current virtually in real time.
+
+Methods For Displaying Current
+-------------------------------
+
+1. EX-CommandStation or to send commands to see the :doc:`current commands </reference/software/command-summary-consolidated>`
+2. Use the |EX-TB| Android Phone/Table app with the :ref:`Current Meter Function <ex-toolbox/using:current meter>`
+3. Use :doc:`JMRI's current monitor </throttles/software/jmri>`
+4. Use an external microcontroller with a display connected to the command station that sends commands via a serial port
+
+Why Not To Do This On The Command Station
+-------------------------------------------
+
+This is much harder task than might appear:
+
+* The current will change from microsecond to microsecond making a digital display impossible to read, you will have to perform your own averaging and conversion to a suitable display format (eg. a bar chart) but without using any floating point maths
+* The cost of updating the lcd on every loop will make the command station slow to respond to commands and track shorts
+* There may be up to 8 separate tracks for which current is being measured
+* Future versions of the code store current in different ways.
+* Altering the base code is discouraged as it may be lost as updates are released, user modifications should be coded using the EXRAIL feature whenever possible.

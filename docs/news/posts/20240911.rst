@@ -27,6 +27,7 @@ Methods For Displaying Current
 2. Use the |EX-TB| Android Phone/Table app with the :ref:`Current Meter Function <ex-toolbox/using:current meter>`
 3. Use :doc:`JMRI's current monitor </throttles/software/jmri>`
 4. Use an external microcontroller with a display connected to the command station that sends commands via a serial port
+5. Use an EXRAIL script to send the <JI> command based on a DELAY or button press and send that to a display
 
 Why Not To Do This On The Command Station
 -------------------------------------------

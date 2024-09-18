@@ -53,9 +53,9 @@ Sphinx cross-references are used for internal links in the different pages. This
 
   ::
 
-    :ref:`Internal - Same page`
+    :ref:`Internal - Different Page Heading`
 
-    :ref:`some other text to appear in the page <Internal - Same page>`
+    :ref:`some other text to appear in the page <Internal - Different Page Heading>`
 
 Internal - To a Different Page
 ------------------------------

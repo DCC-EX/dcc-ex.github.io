@@ -166,20 +166,63 @@ Board layout
 
 .. image:: /_static/images/ex-csb1/wifi_led2.png
    :alt: WiFi LED
-   :scale: 50%
+   :scale: 45%
    :align: right
 
-**WiFi / User LED** - When WiFi is enabled, this LED will stay on. It is under software control in the EX-CommandStation software, so the LED can be repurposed to indicate a user defined function.
+**WiFi / User LED** - When WiFi is enabled, this LED will stay on. It is under software control in the EX-CommandStation software, so the LED can be repurposed to indicate a user defined function with an EXRAIL script or a <U> command function.
 
-**3.3V LED** - The 3.3V power LED will light whenever the 3.3V regulator is powered. This will be when powered by USB, or from an external power supply connected to the barrel jack. This is simply an indicator that the circuitry on the board is powered.
+.. image:: /_static/images/ex-csb1/3v_led.png
+   :alt: 3.3V LED
+   :scale: 28%
+   :align: right
+
+**3.3V LED** - The 3.3V power LED will light whenever the 3.3V regulator is powered. This occurs when powered by USB, or from an external power supply connected to the barrel jack. This is simply an indicator that the circuitry on the board is powered.
+
+.. image:: /_static/images/ex-csb1/5v_led.png
+   :alt: 5V LED
+   :scale: 28%
+   :align: right
 
 **5V LED** - The 5V LED will light whenever power is supplied to the barrel jack. This LED indicates that power is being supplied to the 5V regulator which can power an EX-MotorShield 8874 stacked onto the GPIO Headers. Power from the barrel jack will power the 5V regulator which in turn powers the 3.3V regulator. Therefore, when power is supplied via the barrel jack, both the 5V and 3.3V LEDs will be lit.
 
 **GPIO Headers** - The 4 GPIO headers accept a DCC-EX EX-MotorShield8874. The EX-CSB1 itself has 2 outputs for 2 track power districts. Stacking the EX8874 on these headers provides 2 additional power districts for a total of 4. Any of the 4 outputs can be used for any combination of DCC MAIN, DCC PROG, or DC PWM. You must enable the extra board from the EX-Installer or your config.h file for a manual install. See XXX.
 
-**OLED Display (not shown above)** - The OLED display provides diagnostics, status, and general information, and can also display output from EX-RAIL scripts. 
+.. image:: /_static/images/ex-csb1/oled_display.png
+   :alt: OLED Display
+   :scale: 28%
+   :align: right
 
-XXX Add to image to include hot area, unpopulated power pin, and any silkscreening. Add the bottom of the board help.
+**OLED Display (not shown above)** - The OLED display provides diagnostics, status, and general information. The OLED display can also show output from EX-RAIL scripts including user defined text. By default, the display shows the version number, license, power status, free memory, and if configured, your WiFi access point login information.
+
+.. image:: /_static/images/ex-csb1/hot_area.png
+   :alt: Hot Area Warning
+   :scale: 36%
+   :align: right
+
+**HOT Surface Area** - The entire area shown in the image to the right can get extremely hot during operation. Be carful not to touch this area at the top or bottom of the board to avoid being burned. This is especially true at high track current levels. Also be sure to provide proper ventilation to the board. If placed in a case, that case must have proper ventilation. Consider using proper vent holes and a fan if you intend to place the EX-CSB1 inside an enclosure.
+
+.. image:: /_static/images/ex-csb1/i2C_jumper_pads.png
+   :alt: I2C Jumper Pads
+   :scale: 45%
+   :align: right
+
+**I2C Jumper Pads** - There are 2 solder pad jumpers on the EX-CSB1 labelled "i2c". XXX why and when would I use these?
+
+.. image:: /_static/images/ex-csb1/unpopulated_power_pins.png
+   :alt: Unpopulated Power Pads
+   :scale: 45%
+   :align: right
+
+**Unpopulated Power Connector** - These unpopulated solder pads are used internally for testing and can provide power connections for an optional header. When operated without an EX-MotorShield8874 on top, a user could remove the barrel jack and solder pins here capable of handling the 5A maximum current to power the board and the track.
+
+.. image:: /_static/images/ex-csb1/pin_legend.png
+   :alt: Pin Legend
+   :scale: 40%
+   :align: right
+
+**Board Bottom Legend** - On the bottom of the board there are several markings such as the DCC-EX logo, board revision, and the QR code that links to this page on our website. Additionally, important pins are labelled should you need access to them from the top of the board headers. Input/Output (GPIO) pins are labelled "IO36", "IO39", etc. GND, 5V, and 3.3V are also labelled. Note that when an EX-MotorShield8874 is stacked on top for extra power districts, there are no free GPIO pins left to connect accessories directly the EX-CSB1. You must use the I2C pins and connect port expanders and/or servo boards to connect your accessories.
+
+
 
 
 Powering the EX-CSB1

@@ -94,33 +94,68 @@ Board layout
 
    EX-CSB1 top (click image to enlarge it)
 
-**Input Power Barrel Jack** - The CSB1 normally comes with a barrel jack for compatibility with most laptop-type power supplies that use a 2.1mm inner hole diameter and a 5.5mm outer shank diameter. Be careful since some power supplies have a 2.5mm inner hole which is likely to be too loose. The barrel jack input power is reverse voltage protected. This supplies a 5V switching regulator for all electronics on the board including a 3.3V regulator for 3.3V components, an optional EX-MotorShield 8874 stacked on top, and power out to the track. While it is capable of 10v-25v operation, it is best to choose a suitable track voltage for your scale. Typically this is 12-15v for N scale, and 14-16v for HO scale.
-
 .. image:: /_static/images/ex-csb1/barrel_jack1.png
    :alt: Barrel Jack
    :scale: 40%
-   :alignt: left
+   :align: right
 
-.. image:: /_static/images/ex-csb1/2_1mm_screw_terminal_adapter.png
-   :alt: Screw Terminal Adapter
-   :scale: 40%
+**Input Power Barrel Jack** - The CSB1 normally comes with a barrel jack for compatibility with most laptop-type power supplies that use a 2.1mm inner hole diameter and a 5.5mm outer shank diameter. Be careful since some power supplies have a 2.5mm inner hole which is likely to be too loose. The barrel jack input power is reverse voltage protected. This supplies a 5V switching regulator for all electronics on the board including a 3.3V regulator for 3.3V components, an optional EX-MotorShield 8874 stacked on top, and power out to the track. While it is capable of 10v-25v operation, it is best to choose a suitable track voltage for your scale. Typically this is 12-15v for N scale, and 14-16v for HO scale. With help in choosing your power supply or using one with bare wires instead of a barrel connector, see `Powering the EX-CSB1`_ below.
+
+.. image:: /_static/images/ex-csb1/usb_conn1.png
+   :alt: USB Connector
+   :scale: 50%
    :align: right
 
 **USB-C Power/Data Connector** - The USB connector can provide power from a computer or any 500mA or larger USB or USB-C Power Delivery (USB-C PD) power supply.  In this way you can connect your EX-CSB1 to a computer and update your software version or load EXRAIL scripts that run your accessories. However, without a power supply powering the DC input jack, you cannot supply power to the rails to run trains. You can connect your track Power supply (see above) to the barrel jack while the USB is connected, as they will not interfere with each other. You may also wish to do this to isolate the EX-CSB1 processor power from any interruptions to track power due to overload for example. The USB port is also very useful for connecting a serial monitor to test the command station and view logging information in real time to aid in fault finding. See :doc:`/reference/tools/serial-monitor`
 
-**Track A and B Outputs** - These are female pluggable terminals that accept a removable male screw terminal plug (included with your CSB1). Using the removable connectors allows for easy reconfiguration, testing, and placement of your command station. You can unsolder these connectors (or ask for a special order) and replace them with 3.5mm pitch screw terminals if you prefer. For DCC operation, output A is usually the MAIN track and output B is the programming track. However, with our TrackManager :sup:`tm` feature, you can configure any output to be DCC, DC, MAIN, or PROG. You should keep the phase of the tracks aligned, so if a train crosses from one power district to another it doesn't intentionally cause a short (unless it's a reversing loop and you have assigned that output to have Auto-Reverse capability.) More on this here: XXX. Power to each output can be controlled together or individually. Correct wired gauge for the screw terminals is 16 to 28AWG (1.5mm^2). Be sure your wire gauge can handle the current you expect on the track.
+.. image:: /_static/images/ex-csb1/pluggable_connectors.png
+   :alt: Pluggable Track Output Connectors
+   :scale: 40%
+   :align: right
+
+**Track A and B Outputs** - These are female pluggable terminals that accept a removable male screw terminal plug (included with your CSB1). Using the removable connectors allows for easy reconfiguration, testing, and placement of your command station. You can unsolder these connectors (or ask for a special order) and replace them with 3.5mm pitch screw terminals if you prefer. For DCC operation, output A is usually the MAIN track and output B is the programming track. However, with our TrackManager :sup:`tm` feature, you can configure any output to be DCC, DC, MAIN, or PROG. You should keep the phase of the tracks aligned, so if a train crosses from one power district to another it doesn't intentionally cause a short (unless it's a reversing loop and you have assigned that output to have Auto-Reverse capability.) See: :doc:`/ex-installer/managing-config-files`. Power to each output can be controlled together or individually. Correct wired gauge for the screw terminals is 16 to 28AWG (1.5mm^2). Be sure your wire gauge can handle the current you expect on the track.
+
+.. image:: /_static/images/ex-csb1/track_output_leds.png
+   :alt: Pluggable Track Output Connectors
+   :scale: 70%
+   :align: right
 
 **Track Power LEDs** - These are indicators that power is being sent to the track, and the mode of the output. With DCC operation, both LEDs should shine brightly when your throttle issues the power-on command. You can also configure the CSB1 to start with power on using a mySetup.h or myAutomation.h file. See more here XXX. For DC PWM mode operation, when power is on, ONE LED will light for each direction. That is, forward will light one LED and when you select reverse, the other LED will light. 
 
+.. image:: /_static/images/ex-csb1/qwiic_conn.png
+   :alt: Qwiic Connector
+   :scale: 30%
+   :align: right
+
 **QWiic Connector (I2C)** - This is a standard for an I2C bus connection so that the same cable can be used to daisy chain I2C devices like displays, sensors, servos, etc. Please note the pin connection order when making your own cables or when purchasing from discount sites that often wire them incorrectly. For example, red should always be positive power and black is negative DC or "GND". IMPORTANT: The voltage for this connector is ALWAYS 3.3V!
 
-**RailSync Connector** - This is a standard Railsync input. Connecting a RailSync output from a Command Station or Booster will automatically switch the EXCSB1 to booster mode on receipt of an input signal when the CSB1 is running the appropriate EX-RAIL script. Again be sure to wire the DCC outputs to power districts with consistent phasing. Any voltage between 5V and 26V at the input will work. The Digitrax specification is from 12V to 26V. See `the DCCWiki article on RailSync <https://dccwiki.com/LocoNet_and_RailSync_Voltages>`_ |EXTERNAL-LINK|
+.. image:: /_static/images/ex-csb1/booster_conn.png
+   :alt: Railsync Connector
+   :scale: 35%
+   :align: right
 
-**OLED I2C Header** - This header is primarily designed for an OLED display, but can also be used as a female header for any I2C device that has male pins or for use with Dupont jumper wires. IMPORTANT: Many .96" and 1.3" OLED displays, and some others will connect directly to the pins, however **beware** that sadly there is no standard for pin order. Make absolutely sure that any display you purchase to connect directly to the header has its pins in the correct order! You have been warned!
+**RailSync Connector** - This is a standard Railsync input and is labelled "Booster In" on the top of the board. Connecting a RailSync output from a Command Station or Booster will automatically switch the EXCSB1 to booster mode on receipt of an input signal when the CSB1 is running the appropriate EX-RAIL script. Again be sure to wire the DCC outputs to power districts with consistent phasing. Any voltage between 5V and 26V at the input will work. The Digitrax specification is from 12V to 26V. See `the DCCWiki article on RailSync <https://dccwiki.com/LocoNet_and_RailSync_Voltages>`_ |EXTERNAL-LINK|
 
-**Dual I2C Header** - This is a dual male pin I2C header with 2 rows of I2C bus connectors one beside the other. They are wired together on the same I2C bus as the QWiic connector and OLED I2C Header. IMPORTANT: Note that the pin order on these two rows are different from the OLED header, pay attention to the pin order when using Dupont female wires. The EX-CSB1 is a 3.3V device, so all the I2C connectors only supply 3.3V unlike the Arduino Mega. Keep that in mind if you are upgrading from a DIY Arduino Command Station to a 3.3V device ike the EX-CSB1 and are connecting I2C devices. See notes here XXX.
+.. image:: /_static/images/ex-csb1/oled_header.png
+   :alt: OLED header
+   :scale: 40%
+   :align: right
 
-**Reset Button** - Pressing the reset button does a hard reset of the command station. If the Command Station gets into an unexpected state, you can reset it by pressing this button. The DCC-EX software, EXRAIL Scripts, and any other settings are maintained, but the unit reboots as if it had been turned off. Boards stacked on top of the EX-CSB1 also receive the reset signal, but less well designed boards may not be reset depending upon their own ciruit peculiarities. Only rarely should it require unplugging all power from the EX-CSB1 to perform a power-on hard reset.
+**OLED I2C Header** - This header is primarily designed for an OLED display, but can also be used as a female header for any I2C device that has male pins or for use with Dupont jumper wires. IMPORTANT: Many .96" and 1.3" OLED displays, and some others will connect directly to the pins, however **beware** that sadly there is no standard for pin order. Make absolutely sure that any display you purchase to connect directly to the header has its pins in the correct order! The correct order is GND, V+, SCL, SDA and is different than other OLED connectors on the board. For more information see: :doc:`/reference/hardware/i2c-devices`.
+
+.. image:: /_static/images/ex-csb1/dual_i2c_pins.png
+   :alt: Dual Male I2C Header
+   :scale: 40%
+   :align: right
+
+**Dual I2C Header** - This is a dual male pin I2C header with 2 rows of I2C bus connectors one beside the other. They are wired together on the same I2C bus as the QWiic connector and OLED I2C Header. IMPORTANT: The pin order on these two rows are different from the OLED header, pay attention to the pin order when using Dupont female wires. The correct order for this header is SCL, GND, SDA and V+ as labelled on the board. The EX-CSB1 is a 3.3V device, so all the I2C connectors only supply 3.3V unlike the Arduino Mega. Keep that in mind if you are upgrading from a DIY Arduino Command Station to a 3.3V device ike the EX-CSB1 and are connecting I2C devices. For more information see: :doc:`/reference/hardware/i2c-devices`.
+
+.. image:: /_static/images/ex-csb1/reset_button.png
+   :alt: Reset Button
+   :scale: 60%
+   :align: right
+
+**Reset Button** - Pressing the reset button does a hard reset of the command station. If the Command Station gets into an unexpected state, you can reset it by pressing this button. The DCC-EX software, EXRAIL Scripts, and any other settings are maintained, but the unit reboots as if it had been turned off. Boards stacked on top of the EX-CSB1 also receive the reset signal, but less well designed boards may not be reset depending upon their own circuit peculiarities. Only rarely should it require unplugging all power from the EX-CSB1 to perform a power-on hard reset.
 
 **ESP32 Microcontroller / WiFi / WiFi Antenna** - One microcontroller controls everything on the EX-CSB1. It runs the |EX-CS| software, any mySetup.h file instructions, any myAutomation.h scripts, and provides the WiFi connection to throttles. Be careful in your setup to protect WiFi antenna from being damaged from contact with anything or should the unit be dropped. For best WiFi performance, keep items at least 2cm (.75") from the antenna and do not allow any metallic objects to be near, underneath, or surrounding the antenna.
 
@@ -449,6 +484,12 @@ Additional Resources
 For more detailed instructions and support, refer to these resources:
 
 XXX are these main headings or subheadings of what is above?
+
+Adding an EX-MotorShield 8874
+===============================
+
+You can and an |EX-MS| to provide an additional 2 outputs. You may want to do this if you want to split your DCC layout into separate power districts or if running DC PWM, create up to 4 blocks before you need to add a booster. XXX more detail here?
+
 
 DCC-EX I2C Hardware Overview
 =============================

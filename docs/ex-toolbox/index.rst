@@ -22,8 +22,13 @@ Welcome to the home of |EX-TB|, an Android app to help setup and configure your 
 * CV Programming in the main track (Operation Mode)
 * Servo motor testing and adjustment
 * Sensor testing 
-* Current Meter (Only available when connected to EX-CommandStation version 5.0.0 and above.)
-* Track Manager (Only available when connected to EX-CommandStation version 5.0.0 and above.)
+* Current Meter
+* Track Manager
+* Loco status (all active locos)
+* Assist with Loco Speed Matching
+* Speedometer (requires two sensors on the |EX-CS|)
+* Roster list
+* NeoPixel Setup (Alpha version only)
 
 
 .. toctree::

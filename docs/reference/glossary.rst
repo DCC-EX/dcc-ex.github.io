@@ -43,6 +43,8 @@ Glossary
       - `Java Model Railroad Interface <https://www.jmri.org/>`_
     * - Motor Driver 
       - Same as "Motor Shield" "Motor Board" "Motorboard" |BR| See :doc:`/reference/hardware/motor-boards`
+    * - Native Protocol /  Native DCC-EX Protocol / DCC++ Protocol
+      - Native protocol used by the |EX-CS| in preference to the WitThrottle protocol.  This is the preferred protocol for communication with the Command Station as it is considerably more powerful and comprehensive.  This was originally developed for the now defunct DCC++ project, hence it is still referred to in JMRI as 'DCC++', but have been considerably enhanced since then.
     * - Station (STA) Mode
       - Station Mode allows you to connect the Command Station to your existing home network. |BR| The Command Station becomes a Station or Client rather than an Access Point. |BR| That means instead of being a host that manages the IP of the smartphone that runs your Throttle, it becomes a station that connects to your existing network just like any of the other computers or devices connected to your network. The Throttle then connects to the Command Station by finding its IP address on the network. |BR| :doc:`Refer here for more information. </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
     * - Switching |BR| Shunting

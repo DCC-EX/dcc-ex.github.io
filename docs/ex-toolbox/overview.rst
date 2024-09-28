@@ -9,9 +9,9 @@ EX-Toolbox - Overview
 
 |tinkerer| |engineer| |support-button|
 
-|EX-TB| is a free, open source, Android app to help setup and configure your |EX-CS|. It is intended for setup, configuration, debugging you Command Station rather than continuous use.
+|EX-TB| is a free, open source, Android app to help setup and configure your |EX-CS|. It is intended for setup, configuration, debugging and monitoring your Command Station rather than continuous use.
 
-It is designed to function if your |EX-CS| is configured with WiFi (either Access Point mode or Station mode) or Ethernet. It can't connect to a |EX-CS| though JMRI.  
+It is designed to function if your |EX-CS| is configured with WiFi (either Access Point mode or Station mode) or Ethernet. It can connect to a |EX-CS| though JMRI, but only if the ``Load DCC++ over TCP Server`` option is enabled.  
 
 It can't normally connect to a |EX-CS| though USB, however there some options that can allow this to work partly.  See :ref:`ex-toolbox/using:connecting via usb` for details.
 
@@ -29,8 +29,13 @@ With |EX-TB| you can perform:
 * CV Programming in the main track (Operation Mode)
 * Servo motor testing and adjustment
 * Sensor testing 
-* Current Meter (Only available when connected to EX-CommandStation version 5.0.0 and above.)
-* Track Manager (Only available when connected to EX-CommandStation version 5.0.0 and above.)
+* Current Meter
+* Track Manager
+* Loco status (all active locos)
+* Assist with Loco Speed Matching
+* Speedometer (requires two sensors on the |EX-CS|)
+* Roster list
+* NeoPixel Control (Alpha version only)
 
 ----
 

@@ -648,13 +648,14 @@
 <li><p><a class="reference internal" href="#about" id="id34">About</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#connecting-via-usb" id="id35">Connecting via USB</a></p>
+<li><p><a class="reference internal" href="#connecting-via-jmri" id="id35">Connecting via JMRI</a></p></li>
+<li><p><a class="reference internal" href="#connecting-via-usb" id="id36">Connecting via USB</a></p>
 <ul>
-<li><p><a class="reference internal" href="#downloads" id="id36">Downloads</a></p></li>
-<li><p><a class="reference internal" href="#troubleshooting-windows-socat" id="id37">Troubleshooting (Windows socat)</a></p></li>
+<li><p><a class="reference internal" href="#downloads" id="id37">Downloads</a></p></li>
+<li><p><a class="reference internal" href="#troubleshooting-windows-socat" id="id38">Troubleshooting (Windows socat)</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#android-apps-on-windows" id="id38">Android apps on Windows</a></p></li>
+<li><p><a class="reference internal" href="#android-apps-on-windows" id="id39">Android apps on Windows</a></p></li>
 </ul>
 </nav>
 </aside>
@@ -692,8 +693,9 @@
 </div></blockquote>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span> can only connect <em>directly</em> to an <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>, however <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>, the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> and other devices and apps can, or do, advertise as “WiThrottle” mDNS services. EX-Toolbox cannot determine which are actually direct connections to an <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span>.</p>
+<p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span> can connect <em>directly</em> to an <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> or server using the <a class="reference internal" href="../reference/glossary.html"><span class="doc">Native DCC-EX Protocol</span></a>, however <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a>, the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> and other devices and apps can, or do, advertise as “WiThrottle” mDNS services. EX-Toolbox cannot determine which are actually connections to a suitable server.</p>
 <p>So… just because a server is in this list, doesn’t mean that <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span> will be able to connect to it.</p>
+<p>Refer to <a class="reference internal" href="#connecting-via-jmri">Connecting via JMRI</a> below for how to use <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span> with JMRI.</p>
 </div>
 </section>
 <section id="recent-server-list">
@@ -1073,8 +1075,15 @@ Internal storage <code class="docutils literal notranslate"><span class="pre">/A
 </section>
 </section>
 <hr class="docutils" />
+<section id="connecting-via-jmri">
+<h2><a class="toc-backref" href="#id35" role="doc-backlink">Connecting via JMRI</a><a class="headerlink" href="#connecting-via-jmri" title="Link to this heading"></a></h2>
+<p>By default, you cannot connect <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span> to <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> and therefore the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> via JMRI. JMRI uses the <a class="reference internal" href="../reference/glossary.html"><span class="doc">wiThrottle Protocol</span></a> for normal WiFI connections to client devices, but the <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span> requires the use of the <a class="reference internal" href="../reference/glossary.html"><span class="doc">Native DCC-EX Protocol</span></a>.</p>
+<p>To use <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span> with <a class="reference internal" href="../reference/glossary.html"><span class="doc">JMRI</span></a> you must enable the <code class="docutils literal notranslate"><span class="pre">Load</span> <span class="pre">DCC++</span> <span class="pre">over</span> <span class="pre">TCP</span> <span class="pre">Server</span></code> option.  This is found in the ‘DCC++’ Menu.</p>
+<p>Once this is enabled you will see two servers in the ‘Discovered Servers’ list in <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span> (and <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>).  One will be just the name you have given your railroad in JMRI (e.g. ‘My JMRI Railroad’). The other will have the same name but with ‘ [DCC-EX]’ after it (e.g.’My JMRI Railroad [DCC-EX]’).</p>
+<p>To use <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span> you must select the one with ‘ [DCC-EX]’ in the name.</p>
+</section>
 <section id="connecting-via-usb">
-<h2><a class="toc-backref" href="#id35" role="doc-backlink">Connecting via USB</a><a class="headerlink" href="#connecting-via-usb" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id36" role="doc-backlink">Connecting via USB</a><a class="headerlink" href="#connecting-via-usb" title="Link to this heading"></a></h2>
 <p><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span> can’t normally connect to an <span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span> via USB, however it is possible to temporarily create a USB to IP connection on your PC using tools like <em>socat</em> or <em>SerialToIPGUI</em> (for windows).</p>
 <p>Using <em>socat</em> in Linux:</p>
 <blockquote>
@@ -1118,7 +1127,7 @@ i.e. ‘COM12’ in the Windows Device Manager becomes ‘/dev/ttyS11’</p>
 <p>This ‘trick’ only supports a single connection at a time.  So it is important that JMRI (if you are using it), or the Arduino IDE serial monitor, or anything else that might be using the COM (USB) port are shut down first.</p>
 </div>
 <section id="downloads">
-<h3><a class="toc-backref" href="#id36" role="doc-backlink">Downloads</a><a class="headerlink" href="#downloads" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id37" role="doc-backlink">Downloads</a><a class="headerlink" href="#downloads" title="Link to this heading"></a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p><em>SerialToIPGUI</em>  - <a class="reference external" href="https://sourceforge.net/projects/serialtoip/">https://sourceforge.net/projects/serialtoip/</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></li>
@@ -1128,7 +1137,7 @@ i.e. ‘COM12’ in the Windows Device Manager becomes ‘/dev/ttyS11’</p>
 </section>
 <hr class="docutils" />
 <section id="troubleshooting-windows-socat">
-<h3><a class="toc-backref" href="#id37" role="doc-backlink">Troubleshooting (Windows socat)</a><a class="headerlink" href="#troubleshooting-windows-socat" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id38" role="doc-backlink">Troubleshooting (Windows socat)</a><a class="headerlink" href="#troubleshooting-windows-socat" title="Link to this heading"></a></h3>
 <p>In Microsoft Windows and using the command line socat, if you see a “command not found” error, Here is what you need to do to fix it:</p>
 <ul class="simple">
 <li><p>Right click on “My Computer” -&gt; Properties -&gt; Advanced -&gt; Environment Variables</p></li>
@@ -1141,7 +1150,7 @@ i.e. ‘COM12’ in the Windows Device Manager becomes ‘/dev/ttyS11’</p>
 </section>
 <hr class="docutils" />
 <section id="android-apps-on-windows">
-<h2><a class="toc-backref" href="#id38" role="doc-backlink">Android apps on Windows</a><a class="headerlink" href="#android-apps-on-windows" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id39" role="doc-backlink">Android apps on Windows</a><a class="headerlink" href="#android-apps-on-windows" title="Link to this heading"></a></h2>
 <p>Although|EX-TB| is an Android app, it is possible to run it on windows PCs.</p>
 <p>See the <a class="reference internal" href="../throttles/software/android-apps-on-windows.html"><span class="doc">Android apps on Windows</span></a> page for more information.</p>
 </section>
@@ -1169,7 +1178,7 @@ i.e. ‘COM12’ in the Windows Device Manager becomes ‘/dev/ttyS11’</p>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fecd02b6d70>
+    <jinja2.runtime.BlockReference object at 0x7fa4b46196c0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

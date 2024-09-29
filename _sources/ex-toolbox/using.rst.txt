@@ -58,9 +58,11 @@ Discovered Servers
   
 .. warning::
 
-   |EX-TB| can only connect *directly* to an |EX-CS|, however |JMRI|, the |EX-CS| and other devices and apps can, or do, advertise as "WiThrottle" mDNS services. EX-Toolbox cannot determine which are actually direct connections to an |EX-CS|.
+   |EX-TB| can connect *directly* to an |EX-CS| or server using the |Native Protocol|, however |JMRI|, the |EX-CS| and other devices and apps can, or do, advertise as "WiThrottle" mDNS services. EX-Toolbox cannot determine which are actually connections to a suitable server.
 
    So... just because a server is in this list, doesn't mean that |EX-TB| will be able to connect to it.
+
+   Refer to `Connecting via JMRI`_ below for how to use |EX-TB| with JMRI.
 
 Recent Server List
 ------------------
@@ -520,6 +522,17 @@ This screen displays
 |force-break|
 
 ----
+
+Connecting via JMRI
+===================
+
+By default, you cannot connect |EX-TB| to |JMRI| and therefore the |EX-CS| via JMRI. JMRI uses the |WiThrottle Protocol| for normal WiFI connections to client devices, but the |EX-TB| requires the use of the |Native Protocol|.
+
+To use |EX-TB| with |JMRI| you must enable the ``Load DCC++ over TCP Server`` option.  This is found in the 'DCC++' Menu.
+
+Once this is enabled you will see two servers in the 'Discovered Servers' list in |EX-TB| (and |Engine Driver|).  One will be just the name you have given your railroad in JMRI (e.g. 'My JMRI Railroad'). The other will have the same name but with ' [DCC-EX]' after it (e.g.'My JMRI Railroad [DCC-EX]').
+
+To use |EX-TB| you must select the one with ' [DCC-EX]' in the name.
 
 Connecting via USB
 ==================

@@ -241,6 +241,14 @@
 
     :doc:`wiThrottle Server </reference/glossary>`
 ..
+.. |Native Protocol| replace::
+
+    :doc:`Native DCC-EX Protocol </reference/glossary>`
+..
+.. |Native DCC-EX Protocol| replace::
+
+    :doc:`Native DCC-EX Protocol </reference/glossary>`
+..
 .. |Access Point| replace::
 
     :doc:`Access Point (AP) </reference/glossary>`

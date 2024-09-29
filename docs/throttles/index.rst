@@ -199,7 +199,7 @@ Table - Throttles by Technology
       -  X
 
     * -  :doc:`Railroad Automation <software/railroad-automation>`
-      -  
+      -  Free
       -  Net / LocoNet
       -  LocoNet
       -  Web
@@ -215,7 +215,7 @@ Table - Throttles by Technology
     * -  :doc:`EX-WebThrottle </ex-webthrottle/index>`
       -  Free
       -  USB
-      -  Native / WiT
+      -  Native
       -  Web
       -  
       -  
@@ -229,7 +229,7 @@ Table - Throttles by Technology
     * -  :doc:`Engine Driver <software/engine-driver>`
       -  Free
       -  Net
-      -  Native
+      -  Native / WiT
       -  App
       -  
       -  
@@ -241,7 +241,7 @@ Table - Throttles by Technology
       -  X (native only)
 
     * -  :doc:`DCCpp CAB <software/dccpp-cab>`
-      -  
+      -  Free
       -  Net
       -  Native
       -  App
@@ -255,7 +255,7 @@ Table - Throttles by Technology
       -  
 
     * -  :doc:`Cab Engineer: DCC Throttle  <software/cab-engineer>`
-      -  
+      -  Free
       -  Net
       -  WiT
       -  App
@@ -269,7 +269,7 @@ Table - Throttles by Technology
       -  
 
     * -  :doc:`RtDtive DCC++ <software/rtdrive-dccpp>`
-      -  
+      -  Free
       -  Net
       -  Native
       -  App
@@ -297,7 +297,7 @@ Table - Throttles by Technology
       -  
 
     * -  :doc:`Locontrol <software/locontrol>`
-      -  
+      -  Free / Paid
       -  Net
       -  JMRI Web
       -  App
@@ -325,7 +325,7 @@ Table - Throttles by Technology
       -  
 
     * -  :doc:`SRCP Client <software/srcpclient>`
-      -  
+      -  Free
       -  Net
       -  Native
       -  App
@@ -339,7 +339,7 @@ Table - Throttles by Technology
       -  
 
     * -  :doc:`Train Driver <software/train-driver>`
-      -  
+      -  Free
       -  Net
       -  Native
       -  App
@@ -353,7 +353,7 @@ Table - Throttles by Technology
       -  
 
     * -  :doc:`Train Throttle <software/train-throttle>`
-      -  
+      -  Free
       -  Net
       -  WiT
       -  App
@@ -367,7 +367,7 @@ Table - Throttles by Technology
       -  
 
     * -  :doc:`miniThrottle <hardware/minithrottle>`
-      -  
+      -  Free DIY
       -  Net / USB
       -  Native
       -  Device
@@ -381,7 +381,7 @@ Table - Throttles by Technology
       -  
 
     * -  :doc:`WiTcontroller <hardware/witcontroller>`
-      -  Free
+      -  Free DIY
       -  Net
       -  WiT
       -  Device
@@ -395,7 +395,7 @@ Table - Throttles by Technology
       -  
 
     * -  :doc:`HandCab <hardware/handcab>`
-      -  Free
+      -  Free DIY
       -  Net
       -  WiT
       -  Device
@@ -409,7 +409,7 @@ Table - Throttles by Technology
       -  
 
     * -  :doc:`DccExController <hardware/dccexcontroller>`
-      -  Free
+      -  Free DIY
       -  Net
       -  Native
       -  Device
@@ -423,7 +423,7 @@ Table - Throttles by Technology
       -  
 
     * -  :doc:`myBluePillThrottle7 <hardware/mybluepillthrottle>`
-      -  Free
+      -  Free DIY
       -  Serial
       -  Native
       -  Device
@@ -436,7 +436,7 @@ Table - Throttles by Technology
       -  
       -  
 
-    * -  :doc:`TCS UWT-50 <hardware/uwt50>`
+    * -  :doc:`TCS UWT-50 / UWT-100 <hardware/uwt50>`
       -  Paid
       -  Net
       -  WiT

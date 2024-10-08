@@ -167,7 +167,7 @@ In other words, if you view one side of your main track as having a 'left' side 
 Next steps
 ==========
 
-Click :doc:`here </ex-commandstation/get-started/wifi-setup>` to learn how to connect the WiFi shield to your |EX-CS|, or *alternatively* connect a controller like |JMRI| or our |EX-WT| by using the serial cable to connect between your computer and the |EX-CS| as outlined in the :ref:`ex-installer/installing:getting ready` section of the |EX-I| page. Note that when configuring the EX-CommandStation you will want to select `EX8874_SHIELD` as the motor board during configuration.
+Click :doc:`here </ex-commandstation/diy/wifi-setup>` to learn how to connect the WiFi shield to your |EX-CS|, or *alternatively* connect a controller like |JMRI| or our |EX-WT| by using the serial cable to connect between your computer and the |EX-CS| as outlined in the :ref:`ex-installer/installing:getting ready` section of the |EX-I| page. Note that when configuring the EX-CommandStation you will want to select `EX8874_SHIELD` as the motor board during configuration.
 
 
 Stacking EX-MotorShield8874s
@@ -182,7 +182,7 @@ Stacking an Arduino Motor Shield R3 and EX-MotorShield8874
 
 This stack is perhaps simplest and an easy enough upgrade for those who already have an Arduino Motor Shield R3 or clone.
 
-We are going to leave the Arduino Motor Shield R3 in the same configuration as recommended :doc:`here </ex-commandstation/get-started/assembly>` and as such it is worth doing this first and testing all is well before proceeding if this is a new install.
+We are going to leave the Arduino Motor Shield R3 in the same configuration as recommended :doc:`here </ex-commandstation/diy/assembly>` and as such it is worth doing this first and testing all is well before proceeding if this is a new install.
 
 The best solution is to stack the EX-MotorShield8874 on top of the Arduino Motor Shield R3 (is it, really??) for which we will need to re-route some of its IO pins to allow it to function.
 

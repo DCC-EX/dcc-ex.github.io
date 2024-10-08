@@ -59,7 +59,7 @@ Requirements
 
 * A |EX-CS| (Mega based for WiFi or Mega or Uno/Nano based for Bluetooth)
 * An Android Cell Phone or Tablet
-* A WiFi Shield (or other ESP8622 solution) if you want to connect using WiFi :doc:`Wifi Setup Page </ex-commandstation/get-started/wifi-setup>`
+* A WiFi Shield (or other ESP8622 solution) if you want to connect using WiFi :doc:`Wifi Setup Page </ex-commandstation/diy/wifi-setup>`
 * An HC-06 Board if you want to connect using Bluetooth
 
 .. _dccpp-operation:
@@ -73,7 +73,7 @@ Operation
 Using WiFi
 -----------
 
-To use WiFi, make sure you have a WiFi enabled Command Station as described in the :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>` section.
+To use WiFi, make sure you have a WiFi enabled Command Station as described in the :doc:`Wifi Setup </ex-commandstation/diy/wifi-setup>` section.
 
 We have not tested the WiFi implementation yet
 

@@ -132,7 +132,7 @@ Using JMRI
 
   * - 2. Have you selected the correct COM port?
     - Go to Question 3.
-    - (a) Check which com port the EX-CommandStation is connected to. |BR| See :ref:`ex-commandstation/get-started/installer:1. getting ready` for details on how to determine the correct com port.
+    - (a) Check which com port the EX-CommandStation is connected to. |BR| See :ref:`ex-commandstation/installer:1. getting ready` for details on how to determine the correct com port.
 
   * - 3. Can you turn the track power on?  |BR| Do the LEDs on the motor shield turn on?
     - Go to Question 4.

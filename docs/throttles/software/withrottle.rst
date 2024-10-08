@@ -55,14 +55,14 @@ Requirements
 
 * A |EX-CS| (Mega based for WiFi)
 * An iOS Cell Phone or Tablet
-* A WiFi Shield (or other ESP8622 solution) if you want to connect using WiFi :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>`
+* A WiFi Shield (or other ESP8622 solution) if you want to connect using WiFi :doc:`Wifi Setup </ex-commandstation/diy/wifi-setup>`
 
 .. _withrottle-operation:
 
 Operation
 ==========
 
-To use WiFi, make sure you have a WiFi enabled |EX-CS| as described in the :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>` section.
+To use WiFi, make sure you have a WiFi enabled |EX-CS| as described in the :doc:`Wifi Setup </ex-commandstation/diy/wifi-setup>` section.
 
 * Open the network settings on your phone
 * Change to same network of the PC that JMRI is on

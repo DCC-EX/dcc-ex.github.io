@@ -20,7 +20,7 @@ UK User Chris (Railsnail) has created a great project you can build that will gi
 * A 3D Printed Case
 * Details for powering and connecting Everything
 
-You may have already seen the instructions for using WiFi for connecting a Controller to your Command Station (:doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`), but many people have expressed the desire to use Bluetooth. For all the power and convenience there is when using your local area network, the fact is that it is complex. Debugging network issues can be a pain. While there are more WiFi Throttle options to connect to |EX-CS|, there are still plenty of Bluetooth solutions such as DCCpp CAB. See our :doc:`Throttle Section </throttles/index>` for more information.
+You may have already seen the instructions for using WiFi for connecting a Controller to your Command Station (:doc:`WiFi Setup </ex-commandstation/diy/wifi-setup>`), but many people have expressed the desire to use Bluetooth. For all the power and convenience there is when using your local area network, the fact is that it is complex. Debugging network issues can be a pain. While there are more WiFi Throttle options to connect to |EX-CS|, there are still plenty of Bluetooth solutions such as DCCpp CAB. See our :doc:`Throttle Section </throttles/index>` for more information.
 
 This version is Bluetooth connected meaning that your railway layout may be controlled wirelessly from a suitable DCC App on a phone/tablet OR Bluetooth enabled PC/Laptop/Mac.
 

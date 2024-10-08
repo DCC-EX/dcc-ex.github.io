@@ -21,4 +21,4 @@ Electrically identical in most every regard to the Arduino motor shield. Often c
 
    Deek-Robot Motor Shield
 
-:doc:`Install the Deek-Robot Motor Shield </ex-commandstation/get-started/assembly>`
+:doc:`Install the Deek-Robot Motor Shield </ex-commandstation/diy/assembly>`

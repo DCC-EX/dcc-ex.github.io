@@ -30,7 +30,7 @@ AKA Makerfabs ESP8266 WiFi Shield
 
    Makerfabs ESP8266 WiFi Shield
 
-Installing the board follows the same procedure in the :doc:`section on assembly </ex-commandstation/get-started/assembly>`. Start by noting the tab end of the board and align it with the tab end of the motor board. You will stack this board on top to make a three board stack.
+Installing the board follows the same procedure in the :doc:`section on assembly </ex-commandstation/diy/assembly>`. Start by noting the tab end of the board and align it with the tab end of the motor board. You will stack this board on top to make a three board stack.
 
 Remove the plastic jumpers
 ==========================

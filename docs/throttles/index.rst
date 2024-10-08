@@ -21,7 +21,7 @@ This page contains lists of compatible Throttles (Controllers) that currently su
 
 |conductor|
 
-For an more introductory overview of throttles and how to choose one, please read the :doc:`Getting Started - Throttles Page </ex-commandstation/get-started/controllers>` 
+For an more introductory overview of throttles and how to choose one, please read the :doc:`Getting Started - Throttles Page </ex-commandstation/controllers>` 
 
 |tinkerer| |engineer|
 

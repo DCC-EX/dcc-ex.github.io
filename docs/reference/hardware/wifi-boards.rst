@@ -17,7 +17,7 @@ You can connect up to 5 WiFi throttles. For the standard Mega board, we recommen
 
     See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
 
-For more information on how to configure your Command Station to use the boards below, see :doc:`Wifi Setup </ex-commandstation/get-started/wifi-setup>`
+For more information on how to configure your Command Station to use the boards below, see :doc:`Wifi Setup </ex-commandstation/diy/wifi-setup>`
 
 .. toctree::
     :maxdepth: 1

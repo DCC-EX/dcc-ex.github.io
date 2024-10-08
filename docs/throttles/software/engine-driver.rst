@@ -20,7 +20,7 @@ Engine Driver
 
 **Engine Driver** (ED) is an Android App that uses the |WiThrottle Protocol| *or* the |DCC-EX Native Commands| to connect directly to the |EX-CS| via WiFi. It can also connect to the JMRI WiThrottle Server via WiFi using the |WiThrottle Protocol|. 
 
-If you wish to connect Engine Driver directly to |EX-CS|, you need to add a WiFi option to your |EX-CS| as explained here: :doc:`WiFi Setup </ex-commandstation/get-started/wifi-setup>`.
+If you wish to connect Engine Driver directly to |EX-CS|, you need to add a WiFi option to your |EX-CS| as explained here: :doc:`WiFi Setup </ex-commandstation/diy/wifi-setup>`.
 
 If you wish to connect Engine Driver to |JMRI|, you need to start the |WiThrottle Server| and (optionally [#]_) the Web Server in JMRI on the computer running |JMRI|. The |JMRI| computer must be connected to the |EX-CS| using a USB cable. 
 

@@ -18,7 +18,7 @@ Supported WiFi Shields and Boards
 
    See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
    
-The following pages describe all the supported WiFi options of the |EX-CS|.  If you identify as a |conductor-text| and have installed only the recommended hardware we suggest that you look at the guide on the :doc:`/ex-commandstation/get-started/wifi-setup` page.
+The following pages describe all the supported WiFi options of the |EX-CS|.  If you identify as a |conductor-text| and have installed only the recommended hardware we suggest that you look at the guide on the :doc:`/ex-commandstation/diy/wifi-setup` page.
 
 Supported devices    
 -----------------

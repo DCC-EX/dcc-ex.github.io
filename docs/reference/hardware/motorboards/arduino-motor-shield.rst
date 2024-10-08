@@ -23,4 +23,4 @@ Easy to use, widely available, and in the latest R3 version it is compatible wit
 
 Schematics are available on the `Arduino website <https://docs.arduino.cc/resources/schematics/A000079-schematics.pdf>`_.
 
-:doc:`Install the Arduino Motor Shield </ex-commandstation/get-started/assembly>`
+:doc:`Install the Arduino Motor Shield </ex-commandstation/diy/assembly>`

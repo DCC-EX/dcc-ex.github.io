@@ -280,7 +280,7 @@ Short Version of Network Setup
 
 Download and install |EX-CS| from by using the Automated exInstaller or using the Arduino IDE by choosing one of the links below.
 
-:doc:`How to install using the installer </ex-commandstation/get-started/installer>`
+:doc:`How to install using the installer </ex-commandstation/installer>`
 
 :doc:`How to install using the Arduino IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`
 

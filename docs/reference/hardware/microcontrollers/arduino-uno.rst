@@ -18,7 +18,7 @@ If you already have an Uno, or will use |JMRI| to control your trains, then by a
    :alt: Arduino Uno R3
    :scale: 75%
 
-Setting up the UNO is essentially the same as setting up a Mega, so refer to the :doc:`/ex-commandstation/get-started/assembly` page for information on setting up this microcontroller.
+Setting up the UNO is essentially the same as setting up a Mega, so refer to the :doc:`/ex-commandstation/diy/assembly` page for information on setting up this microcontroller.
 
 .. warning:: 
 

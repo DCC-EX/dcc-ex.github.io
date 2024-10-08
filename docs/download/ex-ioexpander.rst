@@ -34,7 +34,7 @@ You can now use |EX-I| to download and install |EX-IO|.
 
 Clicking on the link below will automatically find the correct version of the installer for your Computer and Operating system (Windows, Apple, Linux) and download it.
 
-This downloads a self contained app that can automatically load the software from your computer to your Arduino or other supported board. Click here for :doc:`EX-Installer installation instructions </ex-commandstation/get-started/installer>`.
+This downloads a self contained app that can automatically load the software from your computer to your Arduino or other supported board. Click here for :doc:`EX-Installer installation instructions </ex-commandstation/installer>`.
 
 
 .. raw:: html 

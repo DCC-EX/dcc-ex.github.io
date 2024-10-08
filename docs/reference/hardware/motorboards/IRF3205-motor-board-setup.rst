@@ -95,7 +95,7 @@ Upgrading (Use the Arduino Motor Shield AND the IRF3205)
 
 For this installation we are going to assume you already have a working Command Station or at least have all the parts you need as listed above.
 
-If you need instructions on how to install the Arduino Motor Shield, see :doc:`Arduino Motor Shield Assembly </ex-commandstation/get-started/assembly>`
+If you need instructions on how to install the Arduino Motor Shield, see :doc:`Arduino Motor Shield Assembly </ex-commandstation/diy/assembly>`
 
 Tinkerers will use their existing motor shield for PROG and replace the MAIN output with one of the outputs of this board. Engineers can skip to :ref:`reference/hardware/motorboards/IRF3205-motor-board-setup:Replacing (Use both IRF3205 outputs to control MAIN and PROG)` to see how to modify the board so that just the IRF3205 can manage both tracks.
 
@@ -185,7 +185,7 @@ Remove the last line and replace it with this. To be sure of your spelling, you 
 
 This will use pin 3 for Enable and 12 for signal, which will use the "High Accuracy" waveform. You could use other pins that line up together if you like and use "Standard" accuracy (TODO: Link to not explaining high accuracy).
 
-7. Upload the new sketch to your Arduino. If you need help on how to upload a sketch, see :doc:`Getting Started </ex-commandstation/get-started/index>`
+7. Upload the new sketch to your Arduino. If you need help on how to upload a sketch, see :doc:`Getting Started </ex-commandstation/index>`
 
 8. If you intend to use your Command station for programming on a separate programming track, or you will want to monitor current on your main track, you will connect an external current sense board. See the notes below for more detail about current sense and a suggestion for using an external current sense board.
 
@@ -293,7 +293,7 @@ Remove the last line and replace it with this. To be sure of your spelling, you 
      new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 2.99, 2000, UNUSED_PIN)
 
 This will us pin 3 for Enable and 12 for signal, which will use the "High Accuracy" waveform. You could use other pins that line up together if you like and use "Standard" accuracy (TODO: Link to note explaining high accuracy).
-Upload the sketch to your Arduino. If you need help on how to upload a sketch, see :doc:`Getting Started </ex-commandstation/get-started/index>`
+Upload the sketch to your Arduino. If you need help on how to upload a sketch, see :doc:`Getting Started </ex-commandstation/index>`
 
 
 .. TODO:: `LOW - Hardware <https://github.com/DCC-EX/dcc-ex.github.io/issues/427>`_ - organise the above and add pictures

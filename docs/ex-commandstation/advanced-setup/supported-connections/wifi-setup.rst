@@ -15,11 +15,11 @@ WiFi Connection
     :depth: 2
     :local:
 
-This page describes all the supported WiFi options of the |EX-CS|.  If you identify as an a |conductor-text| and have installed only the recommended hardware we suggest that you look at the guide on the :doc:`/ex-commandstation/get-started/wifi-setup` page.
+This page describes all the supported WiFi options of the |EX-CS|.  If you identify as an a |conductor-text| and have installed only the recommended hardware we suggest that you look at the guide on the :doc:`/ex-commandstation/diy/wifi-setup` page.
 
 ----
 
-The purpose of this WiFi solution is for connecting up to 5 WiFi Throttles DIRECTLY to the |EX-CS|, eliminating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like |JMRI|, you can :doc:`skip ahead to the next page </ex-commandstation/get-started/installer>`.
+The purpose of this WiFi solution is for connecting up to 5 WiFi Throttles DIRECTLY to the |EX-CS|, eliminating the need for a computer and another software controller. However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to to the Command Station using something like |JMRI|, you can :doc:`skip ahead to the next page </ex-commandstation/installer>`.
 
 There are many ways to add WiFi to your Command Station. We will cover four supported methods here.
 

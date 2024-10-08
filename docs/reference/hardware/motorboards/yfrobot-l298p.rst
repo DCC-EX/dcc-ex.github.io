@@ -25,7 +25,7 @@ The YFROBOT Motor Shield will Only run DCC waveform and will Not be able to run 
 
    YFRobot L298P Motor Driver Shield
 
-:doc:`Install the YFRobot Motor Shield (similar to Deek-Robot) </ex-commandstation/get-started/assembly>`
+:doc:`Install the YFRobot Motor Shield (similar to Deek-Robot) </ex-commandstation/diy/assembly>`
 
 **Remember to select YFROBOT_MOTOR_SHIELD in your config.h file or from the motor board dropdown if using EX-Installer**
 

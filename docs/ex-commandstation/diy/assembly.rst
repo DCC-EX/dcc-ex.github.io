@@ -22,7 +22,7 @@ Initial Assembly
 
 This page describes the most common, recommended, configuration, but you will see some breakouts on the right of the page the covers some of the many optional configurations. 
 
-**For this install, you'll need the items listed on the** :doc:`/ex-commandstation/get-started/purchasing` **page.**
+**For this install, you'll need the items listed on the** :doc:`/ex-commandstation/diy/purchasing` **page.**
 
 .. rst-class:: clearer
 
@@ -252,9 +252,9 @@ Next Steps - Install the WiFi board
 .. sidebar:: 
    :class: sidebar-float-right
 
-   |conductor| |BR| You can *alternately* connect a controller like |JMRI| or our |EX-WT| by using the serial cable to connect between your computer and the |EX-CS|. If so, skip to :doc:`installer`.
+   |conductor| |BR| You can *alternately* connect a controller like |JMRI| or our |EX-WT| by using the serial cable to connect between your computer and the |EX-CS|. If so, skip to :doc:`/ex-commandstation/installer`.
 
-Click :doc:`here </ex-commandstation/get-started/wifi-setup>` or click the "next" button to learn how to connect the WiFi shield to your |EX-CS|.
+Click :doc:`here </ex-commandstation/diy/wifi-setup>` or click the "next" button to learn how to connect the WiFi shield to your |EX-CS|.
 
 ..
    1. Load firmware on your Command Station

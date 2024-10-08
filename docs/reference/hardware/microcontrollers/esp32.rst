@@ -133,7 +133,7 @@ When using the WeMos D1 R32/ESPDUINO-32 board with Microsoft Windows, you will n
 Building DCC-EX for ESP32
 -------------------------
 
-The easiest way of building DCC-EX for the ESP32 is via EX-Installer by selecting the ESP32 option. Click here for :doc:`EX-Installer installation instructions </ex-commandstation/get-started/installer>`.
+The easiest way of building DCC-EX for the ESP32 is via EX-Installer by selecting the ESP32 option. Click here for :doc:`EX-Installer installation instructions </ex-commandstation/installer>`.
 
 Adding ESP32 support to the Arduino IDE
 ----------------------------------------

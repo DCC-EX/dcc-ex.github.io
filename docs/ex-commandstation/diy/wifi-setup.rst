@@ -32,7 +32,7 @@ This page is specifically intended for a |conductor-text| who intends to install
 
 The purpose of adding WiFi to your |EX-CS| is allow connection up to 5 WiFi throttles (e.g. phones) DIRECTLY to it, eliminating the need for a computer and another software controller. 
 
-However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to the |EX-CS| using the |JMRI| application (or similar), you can :doc:`skip ahead to the next page <installer>`.
+However, WiFi is optional. If you wish to simply use your computer connected via a USB cable to the |EX-CS| using the |JMRI| application (or similar), you can :doc:`skip ahead to the next page </ex-commandstation/installer>`.
 
 .. rst-class:: clearer
 
@@ -61,7 +61,7 @@ Why Use WiFi?
 
 If you wish to run trains from your phone, tablet or other |WiThrottle protocol| devices connected directly to the |EX-CS|, without a PC involved, then you **should follow the instructions below**.
 
-   However, with the base |EX-CS| without a WiFi shield, you can use a USB cable to connect to a computer to run |JMRI| or our web browser based |EX-WT|. So, if you intend to run trains from a PC, or by only using a web browser, |JMRI|, Rocrail, or similar, then **YOU DO NOT NEED WiFi ON THE CS**. If this the case you can :doc:`skip ahead to the next page <installer>`.
+   However, with the base |EX-CS| without a WiFi shield, you can use a USB cable to connect to a computer to run |JMRI| or our web browser based |EX-WT|. So, if you intend to run trains from a PC, or by only using a web browser, |JMRI|, Rocrail, or similar, then **YOU DO NOT NEED WiFi ON THE CS**. If this the case you can :doc:`skip ahead to the next page </ex-commandstation/installer>`.
 
 |force-break|
 
@@ -178,7 +178,7 @@ Take a second jumper wire and connect it to any one of the Rx pins on the WiFi B
 Next Steps - Install the Software
 =================================
 
-Click :doc:`here </ex-commandstation/get-started/installer>` or click the "next" button to learn how to install the software on your |EX-CS|.
+Click :doc:`here </ex-commandstation/installer>` or click the "next" button to learn how to install the software on your |EX-CS|.
 
 .. 
    If you already have the Command Station software running and are just adding WiFi, there is nothing further you need to do if you want to use the Command Station as an Access Point (AP) and connect a WiThrottle compatible CAB (|Engine Driver|). The next time you power up the Command Station, it will automatically find your WiFi board and which port it is connected to. See the detailed instructions here: :doc:`WiFi Configuration <../advanced-setup/wifi-config>`

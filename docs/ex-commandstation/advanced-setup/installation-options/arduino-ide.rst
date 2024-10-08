@@ -88,7 +88,7 @@ If you want to take a look at this file or make a simple change, just open the f
 Select the board type and COM port
 ===================================
 
-Before you attempt this step, make sure that you have everything connected properly from the :doc:`assembly page </ex-commandstation/get-started/assembly>`. And a final reminder to **make sure you cut the Vin trace** on the bottom of the Arduino Motor Shield. Ready? Proceed.
+Before you attempt this step, make sure that you have everything connected properly from the :doc:`assembly page </ex-commandstation/diy/assembly>`. And a final reminder to **make sure you cut the Vin trace** on the bottom of the Arduino Motor Shield. Ready? Proceed.
 
 Connect the computer to the Arduino with the USB cable. Note the 5V coming from your computer/Raspberry Pi is enough to power the Mega, since it bypasses the regulator that converts your 7-9V power supply down to 5V, and goes right to the 5V bus on the board. So don't be alarmed by lights on your Arduino.
 

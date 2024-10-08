@@ -23,4 +23,4 @@ https://flashtree.com/products/flashtree-motor-shield-r3-5v-to-12v-for-a000079
 
    Flashtree Motor Shield
 
-:doc:`Install the Flashtree (same as Deek-Robot) Motor Shield </ex-commandstation/get-started/assembly>`
+:doc:`Install the Flashtree (same as Deek-Robot) Motor Shield </ex-commandstation/diy/assembly>`

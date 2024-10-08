@@ -19,7 +19,7 @@ Why do we recommend the Mega?
 * The mega is only modestly more expensive than an Uno, with clones available for less than $10 USD.
 * See the special note about the Mega+WiFi board below for a board that has the microcontroller and WiFi already on one board.
 
-See the :doc:`/ex-commandstation/get-started/assembly` page for information on setting up this microcontroller.
+See the :doc:`/ex-commandstation/diy/assembly` page for information on setting up this microcontroller.
 
 .. figure:: /_static/images/microcontrollers/mega.png
    :alt: Arduino Mega Microcontroller

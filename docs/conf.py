@@ -19,8 +19,8 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'DCC-EX Model Railroading'
-copyright = '2020-2023 - Fred Decker, Mani Kumar'
-author = 'Dave Cutting, Fred Decker, Mani Kumar'
+copyright = '2020-2024 DCC-EX Team'
+author = 'Fred Decker, , Peter Akers, Peter Cole, Paul Antoine, Mani Kumar'
 
 
 # -- General configuration ---------------------------------------------------

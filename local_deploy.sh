@@ -18,8 +18,6 @@ fi
 
 # activate prepared venv
 . venv/bin/activate
-# install requirements (why are those not in requirements.txt?)
-pip3 install sphinx-rtd-theme==1.2.0 sphinx-sitemap sphinxcontrib-spelling sphinx-toolbox ablog sphinx-design==0.3.0 || exit 255
 
 while sleep 1; do
 

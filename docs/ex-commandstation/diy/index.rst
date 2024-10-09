@@ -15,33 +15,9 @@ DIY - Getting Started
     :depth: 1
     :local:
 
-In order to get the most out of this website, we only ask you at first to make 2 choices, the first was to self-identify your "level" with regards to DCC-EX. If you have not chosen whether you are a Conductor, Tinkerer, or Engineer, please go to XXX before proceeding further.
+In order to get the most out of this website, we only ask you at first to make 2 choices, the first was to self-identify your "level" with regards to DCC-EX. If you have not chosen whether you are a Conductor, Tinkerer, or Engineer, please go to :ref:`Choose Your Comfort Level` before proceeding further.
 
-Your next choice will be whether you want to choose the "Ready-To-Run" path or the "Do-It-Yourself" path. We will get to that in a menus, but first let's define what a Command Station is.
-
-What is EX-CommandStation?
-==========================
-
-EX-CommandStation is 2 things. It is the name of the software that runs on different hardware platforms, and it is the actual hardware with our software installed that runs you train layout. That means that when you apply power to your Command Station (CS) it will be an |EX-CS| running the latest version of the |EX-CS| software.
-
-An |EX-CS| is a simple, but powerful, DCC Command Station which you can purchase ready-to-run or assemble yourself from widely available Arduino boards. It supports much of the NMRA Digital Command Control (DCC) standards, including:
-
-* Simultaneous control of multiple locomotives
-* Control of all cab functions (F0-F28 and F29-F68)
-* Control of accessory/function decoders (F0-F28 and F29-F68)
-* Main Track: Write configuration variable (CV) bytes and set/clear specific CV bits (aka Programming on Main, or POM)
-* Programming Track: Same as the main track with the addition of reading CV bytes
-
-It includes advanced features such as:
-
-* A |WiThrottle server| implementation, 
-* General purpose inputs and outputs (I/O) for extensibility, and 
-* |JMRI| integration
-
-Ready-To-Run or DIY?
-=====================
-
-
+Your next choice will be whether you want to choose the "Ready-To-Run" (RTR) path or the "Do-It-Yourself" (DIY) path. You are here on the DIY path where you will build your own command station from parts including Arduino, ESP32, or STM32 boards. If you meant to choose the Ready-To-Run route using an |EX-CSB1|, then please go to :doc:`RTR - Getting Started`. If you need a definition of what an EX-CommandStation is, please see :ref:`What is EX-CommandStation?`.
 
 The following pages will instruct you on how to build an |EX-CS| including assembling your hardware, installing software, and running your first train. After that, we will provide examples for how the base system can be extended and upgraded.
 

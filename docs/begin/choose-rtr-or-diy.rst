@@ -1,28 +1,37 @@
 .. include:: /include/include.rst
-.. include:: /include/include-l1.rst
+.. include:: /include/include-l3.rst
 .. include:: /include/include-ex-cs.rst
 |EX-CS-LOGO|
 
-******************
-EX-CommandStation
-******************
+********************************************
+Choose Ready-to-Run or DIY Command Station
+********************************************
 
 |conductor| |tinkerer| |engineer| |support-button|
+
+.. sidebar::
+
+  .. contents:: On this page
+    :depth: 1
+    :local:
 
 What is EX-CommandStation?
 ==========================
 
-|EX-CS| is simple, but powerful, DCC, and DC, Command Station software which runs on the |EX-CSB1| or on hardware that you can assemble yourself made using widely available Arduino or ESPDuino32 boards. It supports much of the NMRA Digital Command Control (DCC) standards, including:
+First some quick definitions. EX-CommandStation is 2 things. It is the name of our command station software that runs on different hardware platforms such as the |EX-CSB1|, and it is the actual hardware with our software installed that runs your model train layout. That means that when you apply power to your Command Station (CS) it will be an |EX-CS| running the latest version of the |EX-CS| software.
+
+An |EX-CS| is a simple, but powerful, DCC and DC Command Station which you can purchase ready-to-run or assemble yourself from widely available parts. It supports much of the NMRA Digital Command Control (DCC) standards, including:
 
 .. image:: /_static/images/wifi/wangtongze_jumpered.png
    :alt: EX-CommandStation
    :scale: 15%
    :align: right
-   
-* Simultaneous control of multiple locomotives and their functions
-* Control of accessory/function decoders
-* Programming Track
-* Programming on Main Track
+
+* Simultaneous control of multiple locomotives
+* Control of all cab functions (F0-F28 and F29-F68)
+* Control of accessory/function decoders (F0-F28 and F29-F68)
+* Main Track: Write configuration variable (CV) bytes and set/clear specific CV bits (aka Programming on Main, or POM)
+* Programming Track: Same as the main track with the addition of reading CV bytes
 
 It includes advanced features such as:
 
@@ -31,6 +40,10 @@ It includes advanced features such as:
 * I2C bus for controlling accessories with I2C capability 
 * |JMRI| integration
 * |EX-R| Automation and Animation scripting that can control everything on your layout, including the locos
+
+It includes advanced features such as:
+
+XXX
 
 It also supports:
 

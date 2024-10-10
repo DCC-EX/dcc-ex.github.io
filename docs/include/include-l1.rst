@@ -3,7 +3,7 @@
       :alt: EX-CSB1 Logo
       :scale: 30%
       :class: image-min-width-144
-      :target: ../ex-csb1/index.html
+      :target: ../ex-commandstation/ready-to-run/index.html
 ..
 .. |EX-CS-DIY-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-cs-diy.png
       :alt: EX-CS-DIY Logo

@@ -21,7 +21,7 @@ What is DCC and DCC-EX?
 
 Firstly, for those of you who already have an investment in DC locos and accessories, the |EX-CS| can still run your older DC collection! But we hope you will also take a look to see how DCC can open up a world of possibilities for you.
 
-For those who have come across our website and don't really know or understand what Digital Command Control (DCC) is or does, then in a very short summary; DCC is in part a way to control multiple trains (and even accessories) on the same piece of track independently of one another.
+For those who have come across our website and don't really know or understand what *Digital Command Control* (DCC) is or does, then in a very short summary; DCC is in part a way to control multiple trains (and even accessories) on the same piece of track independently of one another.
 
 With DCC, there is no longer a need for multiple electrically isolated blocks to control multiple trains independently. Each device on your track has its own "address" and commands are sent to only the device you want to control.
 

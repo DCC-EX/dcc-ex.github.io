@@ -73,7 +73,7 @@ To get started, simply choose your path. Whether you are a Conductor, Tinkerer, 
     * - | |tinkerer|
         |
         | |engineer|
-      - If you wish to discover more you can look at the :doc:`Advanced Options <advanced-setup/index>`, however if you are just starting on the |DCC-EX| journey we also recommend you start with the |br| :doc:`/ex-commandstation/ready-to-run/index>` or :doc:`/ex-commandstation/diy/index`, but also look at the :doc:`/ex-commandstation/advanced-setup/index` pages for additional options that may be of interest.
+      - If you wish to discover more you can look at the :doc:`Advanced Options <advanced-setup/index>`, however if you are just starting on the |DCC-EX| journey we also recommend you start with the |br| :doc:`/ex-commandstation/ready-to-run/index` or :doc:`/ex-commandstation/diy/index`, but also look at the :doc:`/ex-commandstation/advanced-setup/index` pages for additional options that may be of interest.
 
 ----
 

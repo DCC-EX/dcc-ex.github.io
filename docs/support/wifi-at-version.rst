@@ -60,6 +60,7 @@ One you have loaded the |EX-CS| software you will be able to see the AT version 
 You can check the AT version two ways. Which is best for you depends on how you loaded the |EX-CS| software:
 
 * :ref:`Using EX-Installer <support/wifi-at-version:Checking the AT version using EX-Installer>`
+* :ref:`Using EX-WebThrottle <support/wifi-at-version:Checking the AT version using EX-WebThrottle>`
 * :ref:`Using the Arduino IDE <support/wifi-at-version:Checking the AT version with the Arduino IDE>`
 
 |hr-dashed|
@@ -72,6 +73,25 @@ Once you have successfully loaded the |EX-CS| software:
 1. Click back through the pages of the |EX-I| till you get to the 'Select your Device' screen
 2. Click on the :guilabel:`View device monitor` button |BR| A new window will open and a lot of text will appear
 3. You need to look for a line that will have a section highlighted in green
+
+e.g. ``AT version:1.7.4.0(May 11 2020 19:13:04)``
+
+Alternately, you can enter the command ``<+GMR>`` and click :guilabel:`Send`.  A similar line will be shown.
+
+If it says **anything other than** 1.7.4 in that line, then you have the wrong version you will need to :ref:`follow the instructions at the end of this page <support/wifi-at-version:What to do if you have the wrong AT Firmware version>` to correct it.
+
+|hr-dashed|
+
+Checking the AT version using EX-WebThrottle
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Once you have successfully loaded the |EX-CS| software
+
+1. Close EX-Installer (Or the Arduino IDE if you used it)
+2. Open `EX-WebThrottle <https://dcc-ex.com/WebThrottle-EX/>`_ 
+3. Click the :guilabel:`Connect EX-CS` button and select the COM port that you used to load the software onto the |EX-CS|
+4. look at the log that will appear at the bottom of the screen
+5. You need to look for a line that will have a section highlighted in green
 
 e.g. ``AT version:1.7.4.0(May 11 2020 19:13:04)``
 

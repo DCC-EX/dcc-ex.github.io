@@ -173,11 +173,11 @@ Table - Throttles by Technology
     * -  
       -  
       -  
-      -  Protocol
+      -  Proto- |BR| col
       -  UI
       -  
       -  Physical |BR| Device
-      -  Android
+      -  An- |BR| droid
       -  iOS
       -  Win
       -  MacOS

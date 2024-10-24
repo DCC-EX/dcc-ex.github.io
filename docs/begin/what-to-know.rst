@@ -155,7 +155,7 @@ Note that you will need a throttle or controller to connect to the CS (via seria
 
 Be sure to begin your walkthrough at the :doc:`/begin/levels` page which will then guide you through the :doc:`/ex-commandstation/index` documentation and the :doc:`/throttles/index` section to become familiar with what throttle options are available (including our very own free and open source |EX-WT| that connects your computer to the CS with a USB cable).
 
-This provides a very cost effective introduction to DCC train control using inexpensive hardware and our (free) open source |EX-CS| software.
+This provides a very cost effective and expandable introduction to DCC train control using inexpensive hardware and our (free) open source |EX-CS| software.
 
 I want to operate my turnouts/points and run trains
 ===================================================

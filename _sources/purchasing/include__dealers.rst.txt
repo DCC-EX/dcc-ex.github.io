@@ -47,7 +47,7 @@ In Austria serving the European Union (EU)
 .. rst-class:: clearer
 
 
-* `Semify <https://www.semify-eda.com/ex-motorshield8874/>`_ |EXTERNAL-LINKxa|
+* `Model Railway Electronics powered by Semify <https://www.mrw-electronics.com/>`_ |EXTERNAL-LINKxa|
 
 
 |HR-DASHEDxa|

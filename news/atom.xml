@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2024-12-21T03:07:06.560750+00:00</updated>
+  <updated>2024-12-21T05:46:49.524427+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.8">ABlog</generator>
@@ -11,7 +11,7 @@
     <title>DCC-EX Releases EX-CSB1 Ready to Run DCC CommandStation</title>
     <updated>2024-12-20T00:00:00+00:00</updated>
     <author>
-      <name>Paul Antoine</name>
+      <name>Fred Decker</name>
     </author>
     <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
 &lt;section id="dcc-ex-releases-ex-csb1-ready-to-run-dcc-commandstation"&gt;
@@ -50,7 +50,7 @@
 &lt;section id="in-austria-serving-the-european-union-eu"&gt;
 &lt;h3&gt;In Austria serving the European Union (EU)&lt;/h3&gt;
 &lt;ul class="clearer simple"&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://www.semify-eda.com/ex-motorshield8874/"&gt;Semify&lt;/a&gt; &lt;img src="https://dcc-ex.com/_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://www.mrw-electronics.com/"&gt;Model Railway Electronics powered by Semify&lt;/a&gt; &lt;img src="https://dcc-ex.com/_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;hr class="hr-dashed" /&gt;&lt;/p&gt;
 &lt;img alt="Australia Flag" class="align-left" src="https://dcc-ex.com/_images/flag_australia60px.png" style="width: 42.0px; height: 25.2px;" /&gt;

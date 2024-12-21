@@ -7,7 +7,7 @@
 <meta content="Hardware EX-CommandStations Third Party Products Suppliers" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Connecting a Servo Module &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>DCC vs DC PWM &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
@@ -19,7 +19,7 @@
 
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-    <link rel="canonical" href="https://dcc-ex.com/reference/hardware/servo-module.html" />
+    <link rel="canonical" href="https://dcc-ex.com/reference/hardware/dcc-vs-dcc.html" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -37,8 +37,6 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="EX-IOExpander" href="../../ex-ioexpander/index.html" />
-    <link rel="prev" title="I2C GPIO Expander Modules" href="gpio-module.html" />
 
      
       <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -100,8 +98,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../begin/levels.html">Ready-to-Run or Do-It-Yourself - Choose your Level</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Products</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../ex-commandstation/index.html">EX-CommandStation (RTR or DIY)</a><ul class="current">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../ex-commandstation/index.html">EX-CommandStation (RTR or DIY)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-commandstation/ready-to-run/index.html">Ready-To-Run - Getting Started</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/ready-to-run/purchasing.html">Purchasing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/ready-to-run/connecting.html">EX-CSB1 Quick Setup Guide</a></li>
@@ -201,7 +199,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../software/command-summary-consolidated.html">Native Commands Summary</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../ex-commandstation/accessories/index.html">Adding and Controlling Accessories</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../ex-commandstation/accessories/index.html">Adding and Controlling Accessories</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/accessories/turnouts/index.html">Turnouts/points</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/accessories/turnouts/overview.html">Overview - types and options</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/accessories/turnouts/servo-turnouts.html">Servo driven turnouts/points</a></li>
@@ -222,12 +220,12 @@
 <li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/accessories/sensors/vl53l0x-tof-sensor.html">VL53L0X Time of Flight Sensor</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="reference internal" href="../../ex-commandstation/accessories/inputs-outputs/index.html">Input and Output Accessories and Expanders</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/accessories/inputs-outputs/index.html">Input and Output Accessories and Expanders</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="pin-vpin-allocations.html">Default Pin/VPin Allocations and Recommendations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="i2c-displays.html">I2C Displays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gpio-module.html">I2C GPIO Expander Modules</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="servo-module.html">Connecting a Servo Module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../ex-ioexpander/index.html">EX-IOExpander</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../../ex-ioexpander/overview.html">Overview and configuration</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../../ex-ioexpander/supported-devices.html">Supported Devices</a></li>
@@ -415,8 +413,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../merchandise/index.html">DCC-EX Merchandise</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Detailed Information</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../videos/index.html">Videos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../downloads/index.html">Documents and Schematics</a><ul>
@@ -424,7 +422,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../downloads/schematics.html">Schematics</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Hardware</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html">Hardware</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="index-decoder.html">Decoders</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="decoder-list.html">List of Tested Decoders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="decoder-notes.html">Decoder Notes</a></li>
@@ -489,11 +487,11 @@
 <li class="toctree-l4"><a class="reference internal" href="bluetooth/esp32-bluetooth.html">Using Bluetooth with your ESP32 EX-CommandStation</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="reference internal" href="index-i2c.html">I2C Hardware</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index-i2c.html">I2C Hardware</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="i2c-displays.html">I2C Displays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="i2c-devices.html">I2C Devices</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gpio-module.html">I2C GPIO Expander Modules</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Connecting a Servo Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="servo-module.html">Connecting a Servo Module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="i2c-multiplexers.html">I2C Multiplexers</a></li>
 </ul>
 </li>
@@ -607,14 +605,11 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../../ex-commandstation/index.html">EX-CommandStation (RTR or DIY)</a></li>
-          <li class="breadcrumb-item"><a href="../../ex-commandstation/accessories/index.html">Adding and Controlling Accessories</a></li>
-          <li class="breadcrumb-item"><a href="../../ex-commandstation/accessories/inputs-outputs/index.html">Input and Output Accessories and Expanders</a></li>
-      <li class="breadcrumb-item active">Connecting a Servo Module</li>
+      <li class="breadcrumb-item active">DCC vs DC PWM</li>
   
     
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/reference/hardware/servo-module.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/reference/hardware/dcc-vs-dcc.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   
 
@@ -625,253 +620,183 @@
            <div itemprop="articleBody">
              
 <p><a class="image-product-logo-float-right reference internal" href="../../_images/product-logo-reference.png"><img alt="Reference" class="image-product-logo-float-right" src="../../_images/product-logo-reference.png" style="width: 320.0px; height: 64.0px;" /></a></p>
-<section id="connecting-a-servo-module">
-<h1>Connecting a Servo Module<a class="headerlink" href="#connecting-a-servo-module" title="Link to this heading"></a></h1>
+<section id="dcc-vs-dc-pwm">
+<h1>DCC vs DC PWM<a class="headerlink" href="#dcc-vs-dc-pwm" title="Link to this heading"></a></h1>
 <p><a class="reference internal" href="../../_images/level-suitable-for.png"><img alt="Suitable For Level:" src="../../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../support/index.html#contact-support-options" title="Request help or support"><img src="../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
 <aside class="sidebar">
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#using-servos-with-ex-rail" id="id6">Using Servos with EX-RAIL</a></p></li>
-<li><p><a class="reference internal" href="#using-a-servo-module-for-leds" id="id7">Using a servo module for LEDs</a></p></li>
-<li><p><a class="reference internal" href="#technical-discussion-for-engineers" id="id8">Technical Discussion for Engineers</a></p></li>
+<li><p><a class="reference internal" href="#dcc-vs-dc-pwm-a-quick-overview" id="id5">DCC vs. DC PWM: A Quick Overview</a></p>
+<ul>
+<li><p><a class="reference internal" href="#hardware-requirements" id="id6">Hardware Requirements</a></p></li>
+<li><p><a class="reference internal" href="#technical-details" id="id7">Technical details</a></p></li>
+<li><p><a class="reference internal" href="#dc-operation" id="id8">DC Operation</a></p></li>
+<li><p><a class="reference internal" href="#this-is-not-zero-stretching" id="id9">This is Not Zero Stretching</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#technical-information" id="id10">Technical Information</a></p>
+<ul>
+<li><p><a class="reference internal" href="#trackmanager-dcc-pwm-vs-dc-pwm-wave-forms" id="id11">TrackManager DCC(PWM) vs. DC(PWM) wave forms</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#replacing-or-integrating-into-your-current-layout" id="id12">Replacing or Integrating Into Your Current Layout</a></p></li>
+<li><p><a class="reference internal" href="#hardware-requirements-and-technical-notes" id="id13">Hardware Requirements and Technical Notes</a></p></li>
+<li><p><a class="reference internal" href="#next-steps" id="id14">Next Steps</a></p></li>
 </ul>
 </nav>
 </aside>
-<p>To connect a servo module to <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>, you first need to get a module, based on the PCA9685 chip.</p>
-<figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="../../_images/pca9685.png"><img alt="PCA9685 Servo Module" src="../../_images/pca9685.png" style="width: 432.8px; height: 174.0px;" /></a>
+<section id="dcc-vs-dc-pwm-a-quick-overview">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">DCC vs. DC PWM: A Quick Overview</a><a class="headerlink" href="#dcc-vs-dc-pwm-a-quick-overview" title="Link to this heading"></a></h2>
+<p><strong>DCC (Digital Command Control):</strong> DCC uses a constant voltage on the track with digital signals embedded in the power to control the speed, direction, and functions of your trains.</p>
+<p>There’s no need to worry about polarity in DCC, making wiring simpler as your layout expands. The digital signal allows for precise control of multiple trains on the same track, all receiving power at the same time. Each device connected to the track contains a “decoder” that only responds to commands sent to its unique address.</p>
+<p><strong>DC (Direct Current) PWM:</strong> DC PWM operation suits traditional or legacy locomotive control, where the direction and speed of your trains are controlled by varying the voltage and switching polarity. In DC mode, one rail is positive with respect to the other. The train moves forward when voltage is applied and reverses direction when the polarity is flipped.</p>
+<p>DC control is simpler but less flexible, especially if you want to run multiple trains on the same track simultaneously. Under DCC-EX, DC PWM outputs are given a virtual DCC address which allows WiThrottle/DCC-EX throttles to control your DC locos on the piece of track powered by that output. The DC PWM frequency can be set using virtual DCC Functions 28-31</p>
+<p><strong>Managing DCC and DC Modes in TrackManager:</strong> If you are ready to dive into customising your track outputs, <span class="ex-suffix">TrackManager</span> is the tool you’ll use. It allows you to easily switch between DCC and DC modes for any track connected to your EX-CSB1.</p>
+<p>You can also set up different tracks for specific purposes, such as making one track a Booster, configuring your PROG track, or enabling Auto-Reverser mode.</p>
+<p>For detailed steps on how to use TrackManager to change track modes and settings, check out the <a class="reference internal" href="../../trackmanager/index.html"><span class="doc">TrackManager page</span></a>.</p>
+<p><hr class="hr-dashed" /></p>
+<section id="hardware-requirements">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Hardware Requirements</a><a class="headerlink" href="#hardware-requirements" title="Link to this heading"></a></h3>
+<p>These requirements are only for operating DC locomotives. There is nothing to do in a pure DCC environment where no DC or analogue locomotives are run.</p>
+<p><strong>Brake Pin:</strong> In order for <span class="ex-suffix">TrackManager</span> to operate in DC mode, the motor shield must have a brake pin defined in your “config.h” motor shield definition. There are a very limited number of motor boards that are suitable for use with DC mode, and any other motor boards are unsupported. The current list is available in <a class="reference internal" href="motor-boards.html#trackmanager-dc-compatible-boards"><span class="std std-ref">TrackManager DC compatible boards</span></a>.</p>
+<p>Do not attempt to connect two insulated tracks together and drive a DCC engine back and forth until someone bolder than you tries it first (or you’ve tested it).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Never drive a loco from an <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> controlled track or district to any other DCC or DC System.</p>
+</div>
+<p>Some suggested precautions are to add 4 fuses on wires (-b +b, -a +a) to the <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> connections. Use 2A fuses for the standard L298P motor shield or 5A fuses for the larger motor boards.</p>
+<p><hr class="hr-dashed" /></p>
+</section>
+<section id="technical-details">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Technical details</a><a class="headerlink" href="#technical-details" title="Link to this heading"></a></h3>
+<p><a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> with <span class="ex-suffix">TrackManager</span> includes the following features:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>DCC track modes of <code class="docutils literal notranslate"><span class="pre">MAIN</span></code>, <code class="docutils literal notranslate"><span class="pre">PROG</span></code>, and <code class="docutils literal notranslate"><span class="pre">NONE</span></code></p></li>
+<li><p>DC track modes of <code class="docutils literal notranslate"><span class="pre">DC</span></code>, <code class="docutils literal notranslate"><span class="pre">DCX</span></code> (DC Reversed Polarity), and <code class="docutils literal notranslate"><span class="pre">NONE</span></code></p></li>
+</ul>
+</div></blockquote>
+<p><a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> <strong>production version 5.0+</strong> supports both DCC (PWM) and DC (PWM) Pulse Width Modulation modes as an <em>embedded standard feature</em>.
+TrackManager allows you to set up and operate up to eight separate dual insulated sections of track/districts in either DCC (PWM) and or DC (PWM) as tracks A - H.</p>
+<p>An Arduino Mega (with or without WiFi) and Standard L298P Motor Shield <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> has two ready to run Tracks (<strong>A</strong> &amp; <strong>B</strong>) which can be configured as:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>DCC (PWM) modes MAIN for mainline tracks and PROG for a programming track</p></li>
+<li><p>DC (PWM) modes for DC or DCX (opposite polarity)</p></li>
+<li><p>Each track/district can also be disabled by setting to “NONE”</p></li>
+</ul>
+</div></blockquote>
+<p>No additional external DCC decoders are required for DC (PWM) track assignments, and a single <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> is the only hardware needed for full functionality.</p>
+<p>One key difference to note in comparing DCC vs. DC is that in DCC mode, forward/reverse is determined by the DCC decoder, not the track, whereas in DC mode the direction is dependent upon the track polarity.</p>
+<p><strong>This is not your father’s DC railway which used DC transformers for Cab control.</strong></p>
+<p>Turn off, unplug the AC power cord, and disconnect your current DC transformer(s) / power supply(s) from the DC layout track to place in a box for safe keeping.</p>
+<p>You will instead be using a regulated DC (Laptop) 12-18 Vdc 3-5Amp power supply to your Motor Shield and or Motor Board (booster) to run all your DCC Locos and analogue DC Cabs on all your individual tracks/districts/blocks.</p>
+<p>You will be using DC (Pulse Width Modulation PWM) to drive the DC engines, Not DC Direct Current (-0 +16v).</p>
+</section>
+<section id="dc-operation">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">DC Operation</a><a class="headerlink" href="#dc-operation" title="Link to this heading"></a></h3>
+<p>When using DC mode with the <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>, it is important to understand that this is mode does not produce the traditional varying of the DC voltage to control the speed of your locomotive. The speed of your train is controlled using a method called PWM (Pulse Width Modulation), so instead, the track always receives full voltage whenever the throttle is set above zero.</p>
+<p><strong>How PWM Works</strong> - PWM works by rapidly turning the voltage on and off to the track. The rate at which this happens adjusts the “effective” voltage that the locomotive’s motor experiences. For example, if the voltage is on 50% of the time and off 50% of the time, the motor behaves as if it’s receiving half of the full voltage. This technique is similar to how a DCC decoder controls a motor in a DCC-equipped locomotive. See the image below from Sparkfun.com for an example:</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/sparkfun_pwm.png"><img alt="PWM waveform image" src="../../_images/sparkfun_pwm.png" style="width: 244.5px; height: 168.9px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 233 </span><span class="caption-text">PCA9685 Servo Module</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+<p><span class="caption-text">PWM Waveform Image. Click the image to enlarge.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>These are widely available from eBay, Amazon, etc. for a few dollars.</p>
-<p>Note the pin connectors along the left side of the module - these are where you connect to the
-Arduino.</p>
-<p>The 16 columns of three pins along the bottom of the module are where you connect the servos.
-The pins are arranged so that you can just plug a servo connector directly onto them, but be
-sure that the wire colours match the colours of the pins, i.e. yellow to yellow, red to red and black to black.</p>
-<p>The servo module itself is powered from the Arduino, but the servos themselves contain motors that
-consume more current than the Arduino is able to supply, and so a separate 5V supply is required for the servos.  This is connected to the green terminal block at the top of the module, with terminals labelled V+ and GND. The V+ terminal is connected to 5V and the GND to the 0V (ground) wire of the supply.</p>
-<p>Connections to the Arduino are made with four jumper wires (+5V power and GND, and SCL and SDA), as shown on the following diagram:</p>
-<figure class="align-default" id="id2">
-<a class="reference internal image-reference" href="../../_images/ArduinoMegaServo.png"><img alt="Mega with PCA9685 Servo Module" src="../../_images/ArduinoMegaServo.png" style="width: 555.3px; height: 370.8px;" /></a>
+<p><strong>Benefits of PWM in DC Operation</strong> - Using PWM for speed control has several advantages, particularly in terms of smooth operation. Trains start and stop more gradually, and running at slow speeds becomes smoother and more consistent. This gives you better control over your locomotives, making your layout more enjoyable to operate, especially during more delicate manoeuvres.</p>
+<p><strong>Frequency of PWM in DC Operation</strong> - PWM can use a variety of frequencies for the pulses it sends, and this can alter motor behaviour and noise etc. The default frequency used for the CSB1 is xxHz, but this can be varied using the virtual DCC functions 28-31 (check) to allow you to alter the frequency to better suit your loco’s motor. This can of course be done during running from the throttle.</p>
+<p><hr class="hr-dashed" /></p>
+</section>
+<section id="this-is-not-zero-stretching">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">This is Not Zero Stretching</a><a class="headerlink" href="#this-is-not-zero-stretching" title="Link to this heading"></a></h3>
+<p>We do not support <strong>zero stretching</strong> / <strong>zero stretch address function</strong>, found on Digitrax and Lenz command Stations, on purpose. The constant dual DCC electrical signal may damage certain types of older DC motors if left on for a long time.</p>
+<p>Unlike Digitrax and Lenz 0 Zero stretch DCC (PWM) signal which leaves the engine lit up and humming loudly with the throttle and engine at 0 speed, because it is receiving a Dual DCC(PWM) aka AC signal, while the <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> TrackManager is dead quiet and at rest at 0 speed.</p>
+<p><hr class="hr-dashed" /></p>
+</section>
+</section>
+<section id="technical-information">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Technical Information</a><a class="headerlink" href="#technical-information" title="Link to this heading"></a></h2>
+<figure class="align-left" id="id2">
+<a class="reference internal image-reference" href="../../_images/dcc.svg"><img alt="DCC Waveform" height="240" src="../../_images/dcc.svg" width="300" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 234 </span><span class="caption-text">Mega with PCA9685 Servo Module</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+<p><span class="caption-text">What a DCC waveform looks like</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>In <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.</p>
-<p>Once you’ve made all of the connections, apply power to the Arduino.</p>
-<p>Then, in the Serial Monitor, enter the command <cite>&lt;D SERVO 100 450&gt;</cite>.  The servo should move, as long as it isn’t (by some fluke) already in that position.</p>
-<p>Enter <cite>&lt;D SERVO 100 110&gt;</cite> and this time it should definitely move.  For the last parameter (servo position) you can use any value between about 105 and 490.</p>
-<p>Try <cite>&lt;D SERVO 100 450 3&gt;</cite> and the servo should move slowly back.</p>
-<p>You can use the servo to control turnouts, semaphore signals, engine shed doors, and other layout components, to make your layout more dynamic and exciting.  In the picture below, you can see a servo mounted below the baseboard with a piece of wire passing through a slot cut in the baseboard, to operate a turnout.</p>
-<figure class="align-default" id="id3">
-<a class="reference internal image-reference" href="../../_images/TurnoutServoMount.jpg"><img alt="Servo mount to operate a turnout" src="../../_images/TurnoutServoMount.jpg" style="width: 288.0px; height: 384.0px;" /></a>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/pwm.svg"><img alt="PWM Waveform" height="240" src="../../_images/pwm.svg" width="300" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 235 </span><span class="caption-text">Servo mount to operate a turnout</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+<p><span class="caption-text">What a PWM waveform looks like</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>And in the next picture you can see a servo that operates a semaphore signal.  The signal, and its
-servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
+<p>These modes, (PWM) vs analogue DC are totally incompatible with one another and if crossed will result in magic smoke and a burned out motor shield and or USB connector.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>DCC(PWM) is detected on a multimeter as an AC signal but in a square wave form, not as a sine wave</p></li>
+<li><p>DC(PWM) is detected on a multimeter as a DC signal in a square wave form, not as a direct current wave</p></li>
+</ul>
+</div></blockquote>
+<p>The DC(PWM) track is Power supply dependent and needs a varying amount of 0 zero to maximum Vdc passed to the track of 12 or 16 or 18vdc, depending on whether they’re N, HO or G scale engines.</p>
+<p>Note; The signal is detected as DC on this track, from 0Vdc to max +xxVdc depending on the Motor Shield DC power supply output. The DCC-EX 122.55Hz PWM DC motor signal allows for better functioning and better running than most competing systems.</p>
+<section id="trackmanager-dcc-pwm-vs-dc-pwm-wave-forms">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">TrackManager DCC(PWM) vs. DC(PWM) wave forms</a><a class="headerlink" href="#trackmanager-dcc-pwm-vs-dc-pwm-wave-forms" title="Link to this heading"></a></h3>
+<p>A simplified representation of what the dual (PWM) signals might look like through the track:</p>
 <figure class="align-default" id="id4">
-<a class="reference internal image-reference" href="../../_images/SemaphoreSignal.jpg"><img alt="Servo mount to operate a Semaphore Signal" src="../../_images/SemaphoreSignal.jpg" style="width: 288.0px; height: 384.0px;" /></a>
+<a class="reference internal image-reference" href="../../_images/dcc-and-dc-on-track.png"><img alt="DCC PWM signal" src="../../_images/dcc-and-dc-on-track.png" style="width: 811.0px; height: 197.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 236 </span><span class="caption-text">Servo mount to operate a Semaphore Signal</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+<p><span class="caption-text">DCC PWM signal</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<section id="using-servos-with-ex-rail">
-<h2><a class="toc-backref" href="#id6" role="doc-backlink">Using Servos with EX-RAIL</a><a class="headerlink" href="#using-servos-with-ex-rail" title="Link to this heading"></a></h2>
-<p>EX-RAIL supports three methods of controlling servos:</p>
-<ul class="simple">
-<li><p>Turnouts via the SERVO_TURNOUT directive</p></li>
-<li><p>Signals via the SERVO_SIGNAL directive</p></li>
-<li><p>Animations via the SERVO or SERVO2 directives</p></li>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note on PWM frequency</p>
+<p>Different microcontrollers utilise different PWM frequencies, and at present, these default frequencies are in use rather than using software to define them.</p>
+<p>The side effect of these differing frequencies is that you may notice humming or sometimes squealing noises from older DC motors.</p>
+<p>The known PWM frequencies are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Mega2560 - 122.55Hz</p></li>
+<li><p>ESP32         - 131Hz</p></li>
+<li><p>STM32 Nucleo - typically 1000Hz</p></li>
 </ul>
-<section id="controlling-servos-for-turnouts">
-<h3>Controlling servos for turnouts<a class="headerlink" href="#controlling-servos-for-turnouts" title="Link to this heading"></a></h3>
-<p>The SERVO_TURNOUT directive defines a servo based turnout in EX-RAIL, which will appear in <a class="reference internal" href="../software/withrottle-vs-native-commands.html"><span class="doc">wiThrottle Protocol</span></a> apps, <a class="reference internal" href="../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, and <a class="reference internal" href="../../throttles/software/jmri.html"><span class="doc">JMRI</span></a> in addition to being defined as a turnout within the CommandStation.</p>
-<p>As per the <a href="../../ex-rail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> reference, turnouts are defined with the following syntax:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">pin</span><span class="p">,</span><span class="w"> </span><span class="n">active_angle</span><span class="p">,</span><span class="w"> </span><span class="n">inactive_angle</span><span class="p">,</span><span class="w"> </span><span class="n">profile</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">])</span>
-</pre></div>
-</div>
-<p>The valid parameters are:</p>
-<ul class="simple">
-<li><p>id = Unique ID within the CommandStation (note these are shared across turnouts, sensors, and outputs).</p></li>
-<li><p>pin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.</p></li>
-<li><p>active_angle = The angle to which the servo will move when the turnout is thrown (refer below for further detailed information).</p></li>
-<li><p>inactive_angle = The angle to which the servo will move when the turnout is closed (refer below for further detailed information).</p></li>
-<li><p>profile = There are five profiles to choose from that determine the speed at which a turnout will move: Instant, Fast, Medium, Slow, and Bounce (note we don’t recommend Bounce for a turnout definition).</p></li>
-<li><p>description = A human-friendly description of the turnout that will appear in WiThrottle apps and <a class="reference internal" href="../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>. Note that this must be enclosed in quotes “”.</p></li>
-</ul>
-<p>An example definition for a servo connected to the second control pins of the first PCA9685 connected to the CommandStation, using the slow profile for prototypical operation:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Example slow turnout definition&quot;</span><span class="p">)</span>
-</pre></div>
+</div></blockquote>
 </div>
 </section>
-<section id="controlling-servos-for-signals">
-<h3>Controlling servos for signals<a class="headerlink" href="#controlling-servos-for-signals" title="Link to this heading"></a></h3>
-<p>The SERVO_SIGNAL directive defines a servo based signal in EX-RAIL to drive semaphore type signals as part of sequences or routes, or simply be set via a signal or similar.</p>
-<p>Similar to pin based signals, servo signals are controlled by the ID of the red pin only.</p>
-<p>Unlike servo based turnouts, there is no ID or description (they don’t appear in throttles), and they use the “Bounce” profile with no other options available at the present time:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
-</pre></div>
-</div>
-<p>A simple example using the third control pins of the first PCA9685 connected to the CommandStation would be:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SERVO_SIGNAL(102, 400, 250, 100)
-</pre></div>
-</div>
 </section>
-<section id="controlling-servos-for-animations">
-<h3>Controlling servos for animations<a class="headerlink" href="#controlling-servos-for-animations" title="Link to this heading"></a></h3>
-<p>The SERVO and SERVO2 directives allow for servos to be used in various automations within <a href="../../ex-rail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a>.</p>
-<p>Note that unlike a SERVO_TURNOUT these are not definitions that appear within WiThrottle apps, <a class="reference internal" href="../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, or <a class="reference internal" href="../../throttles/software/jmri.html"><span class="doc">JMRI</span></a>, but are instead actions designed to be used within <a href="../../ex-rail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> automations.</p>
-<p>As per the <a href="../../ex-rail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> reference, these are defined with the following syntax:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">profile</span><span class="p">)</span>
-<span class="n">SERVO2</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">duration</span><span class="p">)</span>
-</pre></div>
+<section id="replacing-or-integrating-into-your-current-layout">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Replacing or Integrating Into Your Current Layout</a><a class="headerlink" href="#replacing-or-integrating-into-your-current-layout" title="Link to this heading"></a></h2>
+<p>Existing analogue DC layouts which have standard DC transformers on two or more separate DC tracks/districts/blocks and/or also have a second separate proprietary DCC command station would have in place a section of dead rail, an electric relay, or a DPDT centre-off switch between the two types of controller powered stations. These should not be using a common ground rail, and only use dual insulated tracks.</p>
+<p>You will be replacing this kind of legacy analogue DC and proprietary DCC installation described above with a single <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> which will have a software switching implementation, allowing you to easily and quickly swap between the two DCC (PWM) and DC (PWM) modes on any of the A thru H dual insulated tracks/districts in real time.</p>
+<p>This also allows replacing the physical hardware DPDT switch.</p>
+<p>This is all done through a single <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>.
+And no we’re not using another Expensive DCC decoder under the table on each Track/District/Block to address that section of track.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When specifying a DC or DCX cab ID, do not use one of your existing locomotive DCC addresses or road number IDs, otherwise a command sent to control a Cab on that DC or DCX track will also operate your DCC Loco with the same address, unless you intentionally do so.</p>
 </div>
-<p>The valid parameters are:</p>
-<ul class="simple">
-<li><p>vpin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.</p></li>
-<li><p>position = The angle to which the servo will move when it is activated (refer below for further detailed information).</p></li>
-<li><p>profile = There are five profiles to choose from that determine the speed at which a servo will move: Instant, Fast, Medium, Slow, and Bounce.</p></li>
-<li><p>duration = The time (in milliseconds (ms)) for the servo to be actively rotating.</p></li>
-</ul>
-<p>As an example, consider a lineside worker that needs to be moved away from the track when a train approaches, which is controlled by an infrared sensor.</p>
-<p>The SERVO is attached to VPin 101 (second control pin on first PCA9685), with a sensor attached to VPin 164 (first pin on the first MCP23017):</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AT</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
-<span class="n">SERVO</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="n">Fast</span><span class="p">)</span>
-<span class="n">DONE</span>
-
-<span class="n">AFTER</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
-<span class="n">SERVO</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">)</span>
-<span class="n">DONE</span>
-</pre></div>
-</div>
-<p>This tells EX-RAIL that when the sensor at VPin 164 is activated, the lineside worker moves quickly back from the track for safety, and then after the sensor has been deactivated, he can leisurely move back to his working position (no one wants to rush back to work right?).</p>
-</section>
-<section id="animation-servo-with-a-mimic-panel-push-button">
-<h3>Animation Servo with a Mimic Panel Push Button<a class="headerlink" href="#animation-servo-with-a-mimic-panel-push-button" title="Link to this heading"></a></h3>
-<p>As per the <a href="../../ex-rail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> reference, accessory animation servos are defined with the following syntax:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO2</span><span class="p">(</span><span class="n">pin</span><span class="p">,</span><span class="w"> </span><span class="n">active_angle</span><span class="p">,</span><span class="w"> </span><span class="n">duration</span><span class="p">)</span><span class="w">  </span><span class="c1">// For Animation Servo, Do Not Use for Turnouts</span>
-</pre></div>
-</div>
-<p>The valid parameters are:</p>
-<ul class="simple">
-<li><p>pin = The ID of the pin the servo is connected to, which would typically be the VPin ID of the PCA9685 controller board.</p></li>
-<li><p>position = The angle to which the servo will move when the servo is activated.</p></li>
-<li><p>duration = time to move to the designated position in milliseconds ms: 10000 is 10sec for a person walking or crossing gate moving.</p></li>
-</ul>
-<p>An example definition for a servo connected to the fifth control pin 5 or vpin105 of the first PCA9685 connected to the CommandStation, using the duration profile for animation operation:</p>
-<p>Use SERVO2 function with Mega D35 pin for a panel button to operate animation accessory servo ‘Railfan Walking’.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AUTOSTART</span>
-<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span><span class="w">  </span><span class="c1">// When panel button on Mega Dpin 35 is pressed alternate between the two positions taking 10 seconds</span>
-<span class="n">AFTER</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span>
-<span class="w"> </span><span class="n">SERVO2</span><span class="p">(</span><span class="mi">105</span><span class="p">,</span><span class="w"> </span><span class="mi">490</span><span class="p">,</span><span class="w"> </span><span class="mi">10000</span><span class="p">)</span><span class="w">  </span><span class="n">PRINT</span><span class="p">(</span><span class="s">&quot;Railfan Walking Back To Annex&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Walk Counter-Clockwise {Thrown}</span>
-<span class="n">AFTER</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span>
-<span class="w"> </span><span class="n">SERVO2</span><span class="p">(</span><span class="mi">105</span><span class="p">,</span><span class="w"> </span><span class="mi">110</span><span class="p">,</span><span class="w"> </span><span class="mi">10000</span><span class="p">)</span><span class="w">  </span><span class="n">PRINT</span><span class="p">(</span><span class="s">&quot;Railfan Walking To Train&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Walk Clockwise {Close}</span>
-<span class="n">FOLLOW</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
 </section>
 <hr class="docutils" />
-<section id="using-a-servo-module-for-leds">
-<h2><a class="toc-backref" href="#id7" role="doc-backlink">Using a servo module for LEDs</a><a class="headerlink" href="#using-a-servo-module-for-leds" title="Link to this heading"></a></h2>
-<p>Another use case for the PCA9685 is to drive LEDs using PWM to control the intensity of the LEDs. The intensity of the LEDs can vary from 0 (off) to 4095 (100%).</p>
-<figure class="align-default" id="id5">
-<a class="reference internal image-reference" href="../../_images/led.png"><img alt="LED" src="../../_images/led.png" style="width: 130.79999999999998px; height: 97.8px;" /></a>
-<figcaption>
-<p><span class="caption-number">Figure 237 </span><span class="caption-text">LED</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
-</figcaption>
-</figure>
+<section id="hardware-requirements-and-technical-notes">
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Hardware Requirements and Technical Notes</a><a class="headerlink" href="#hardware-requirements-and-technical-notes" title="Link to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Credit to Joe Haydu for following up and summarising this info for us.</p>
+<p>These requirements are only for operating DC locomotives. There is nothing to do in a pure DCC environment where no DC or analogue locomotives are run.</p>
 </div>
-<section id="connecting-leds-and-setting-intensity">
-<h3>Connecting LEDs and setting intensity<a class="headerlink" href="#connecting-leds-and-setting-intensity" title="Link to this heading"></a></h3>
-<p>LEDs can be connected with either the anode (positive) or cathode (negative) to the PWM pin of the PCA9685, and to set the required intensity for the LED, you will need to add a configuration setting to your “mySetup.h” file. Refer to <a class="reference internal" href="../../ex-commandstation/advanced-setup/startup-config.html"><span class="doc">Startup Configuration</span></a> for further information on this file.</p>
-<p>If connecting the anode (positive) side of the LED to the PWM pin, the cathode (negative) side connects to the ground pin, and you do not need a current limiting resistor in this scenario.</p>
-<p>If connecting the cathode (negative) side of the LED to the PWM pin, the anode (positive) side connects to the V+ pin of the PCA9685, and you will require a 330ohm current limiting resistor.</p>
-<p>You will need to add this line to “mySetup.h” for each LED you wish to configure:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">IODevice</span><span class="o">::</span><span class="n">configureServo</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="n">OnValue</span><span class="p">,</span><span class="n">OffValue</span><span class="p">,</span><span class="n">PCA9685</span><span class="o">::</span><span class="n">NoPowerOff</span><span class="p">);</span>
-</pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In order for <span class="ex-suffix">TrackManager</span> to operate in DC mode, the motor shield must have a brake pin defined in your “config.h” motor shield definition. There are a very limited number of motor boards that are suitable for use with DC mode, and any other motor boards are unsupported. The current list is available in <a class="reference internal" href="motor-boards.html#trackmanager-dc-compatible-boards"><span class="std std-ref">TrackManager DC compatible boards</span></a>.</p>
 </div>
-<p>The parameters required are:</p>
-<ul class="simple">
-<li><p>vpin = The VPin the LED is connected to, e.g. 101 for the second pin on the first PCA9685 servo module</p></li>
-<li><p>OnValue = The desired intensity (brightness) of the LED when turned on, with 0 being off, and 4095 being 100%</p></li>
-<li><p>OffValue = The desired intensity (brightness) of the LED when turned off</p></li>
-</ul>
-<p><span class="new-in-v5-4">New in version 5.4 </span></p>
-<p>There is now an option to configure these LED’s from within the myAutomation.h file instead of the mySetup.h file.  See CONFIGURE_SERVO in EXRAIL Command Reference.</p>
-<p>Here are some examples:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// An LED with anode (positive) to PWM pin set for full intensity when turned on</span>
-<span class="n">IODevice</span><span class="o">::</span><span class="n">configureServo</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="mi">4095</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">PCA9685</span><span class="o">::</span><span class="n">NoPowerOff</span><span class="p">);</span>
-
-<span class="c1">// An LED with cathode (negative) to PWM pin set for full intensity when turned on</span>
-<span class="n">IODevice</span><span class="o">::</span><span class="n">configureServo</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4095</span><span class="p">,</span><span class="n">PCA9685</span><span class="o">::</span><span class="n">NoPowerOff</span><span class="p">);</span>
-
-<span class="c1">// An LED with anode (positive) to PWM pin set for half intensity when turned on</span>
-<span class="n">IODevice</span><span class="o">::</span><span class="n">configureServo</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="mi">2048</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">PCA9685</span><span class="o">::</span><span class="n">NoPowerOff</span><span class="p">);</span>
-
-<span class="c1">// An LED with anode (positive) to PWM pin set for full intensity turned on, and half intensity when turned off</span>
-<span class="n">IODevice</span><span class="o">::</span><span class="n">configureServo</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="mi">4095</span><span class="p">,</span><span class="mi">2048</span><span class="p">,</span><span class="n">PCA9685</span><span class="o">::</span><span class="n">NoPowerOff</span><span class="p">);</span>
-</pre></div>
+<p>Do not attempt to connect two insulated tracks together and drive a DCC engine back and forth until someone bolder than you tries it first (or you’ve tested it).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Never drive a loco from an <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> controlled track or district to any other DCC or DC System.</p>
 </div>
+<p>Some suggested precautions are to add 4 fuses on wires (-b +b, -a +a) to the <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> connections. Use 2A fuses for the standard L298P motor shield or 5A fuses for the larger motor boards.</p>
 </section>
-<section id="using-these-for-jmri-signal-heads-and-signal-masts">
-<h3>Using these for JMRI signal heads and signal masts<a class="headerlink" href="#using-these-for-jmri-signal-heads-and-signal-masts" title="Link to this heading"></a></h3>
-<p>If the LEDs are to be used for signal heads or signal masts in JMRI, they can be added to the Turnout Table by defining these as outputs also in “mySetup.h”.</p>
-<p>An output is defined by using the <code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">iflag&gt;</span></code> command. Refer to <a class="reference internal" href="../software/command-summary-consolidated.html#outputs-configuring-the-ex-commandstation"><span class="std std-ref">Outputs (Configuring the EX-CommandStation)</span></a> for further information on this command.</p>
-<p>This command will associate the provided output ID with the LED connected to the VPin as defined in the configuration commands in the section above.</p>
-<p>To define an output with ID 101 to match the LED connected to VPin 101, add this line to “mySetup.h”:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SETUP</span><span class="p">(</span><span class="s">&quot;&lt;Z 101 101 0&gt;&quot;</span><span class="p">);</span>
-</pre></div>
-</div>
-</section>
-<section id="using-these-with-ex-rail">
-<h3>Using these with EX-RAIL<a class="headerlink" href="#using-these-with-ex-rail" title="Link to this heading"></a></h3>
-<p><a href="../../ex-rail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> includes the <code class="docutils literal notranslate"><span class="pre">FADE(vpin,</span> <span class="pre">value,</span> <span class="pre">ms)</span></code> command which can is used to adjust the LED’s brightness to the provided value over the time specified in milliseconds.</p>
-<p>The example below simulates a camp fire by continuously varying the LED brightness for random delay times, and this starts automatically when the <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> starts by using the <code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code> directive.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SEQUENCE(3)
-   AUTOSTART
-   FADE(101, 100, 50)   DELAYRANDOM(200,800) // Use an Amber or Red LED
-   FADE(101, 500, 30)   DELAYRANDOM(200,1000)
-   FADE(101,  75, 75)   DELAYRANDOM(200,400)
-   FADE(101, 750, 30)   DELAYRANDOM( 50,500)
-   FADE(101,  75,100)   DELAYRANDOM(100,1500)
-   FADE(101, 250,100)   DELAYRANDOM(100,600)
-   FADE(101, 2500, 5)   DELAYRANDOM( 50,250)
-   FADE(101,  75, 75)   DELAYRANDOM(200,1000)
-   FADE(101, 400, 30)   DELAYRANDOM( 50,600)
-   FADE(101,  75,100)   DELAYRANDOM(200,1500)
-   FADE(101, 1500,10)   DELAYRANDOM( 50,250)
-   FOLLOW(3)
-</pre></div>
-</div>
-</section>
-</section>
-<section id="technical-discussion-for-engineers">
-<h2><a class="toc-backref" href="#id8" role="doc-backlink">Technical Discussion for Engineers</a><a class="headerlink" href="#technical-discussion-for-engineers" title="Link to this heading"></a></h2>
-<p>There are three types of servos, standard or “Positional Rotation”, “Continuous Rotation” and “Linear”</p>
-<p><strong>A Standard, positional rotation servo</strong> allows a shaft to spin around a central axis to position something like an arm or disk at specific angles. A standard servo can be positioned between 0 and 180 degrees. An example is the SG90 9g Micro Servo</p>
-<p><strong>A Continuous Rotation Servo</strong> can spin around a full circle continuously like a motor. Instead of providing an angular position that the servo should rotate to, the continuous rotation servo simply has a speed and direction, clockwise or counter-clockwise.</p>
-<p><strong>Linear Servos</strong> use a rack and pinion gear that converts rotary motion to linear motion. A linear servo works just like a Standard Servo and you can control its position along a straight line, forward and back in a similar way by giving it a position.</p>
-<p>Pulse width modulation (PWM) sends an electric pulse of variable width to the motor. With PWM there is a minimum pulse, maximum pulse, and a repetition rate. The rotor will turn to the desired position based on the duration of the pulse. When servos are commanded to move, they move to the position and hold the position. A feedback mechanism (usually a potentiometer that rotates with the shaft) adjusts the speed and direction of the motor to be able to hold the correct position.</p>
-<p>For our analog servos, the signal or repetition rate is 50Hz, that is once every 20 milliseconds (ms). The duration of the pulses are between 544 and 2400 microseconds (µs) representing 0 and 180 degrees. To derive our 12-bit PWM value, we divide the pulse durations by 20ms and multiply by 4096. That gives us a range of 111 to 491.</p>
-<p>Another way to look at this is that with our 12bit ADC (Analog to Digital Converter), which can measure from 0 to 4095, 4096 (100%) is 20ms pulse length and 0 (0%) is 0ms pulse length. We convert 4095 to 100% since you can’t represent the value 4096 in 12 bits.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It is a bit difficult finding datasheets for different servos. For the SG90, we have seen a range listed of 1000-2000µs, which maps to 205-410, and 500 to 2400µs, which is 102 to 490. You define these in JMRI, or in the command station in mySetup.h or via command with “&lt;T id SERVO vpin thrownPos closedPos profile&gt;”.</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Keep a spare slot (we recommend 100) open on your first PCA9685 board so that you can test servo positions with the <cite>&lt;D SERVO …&gt;</cite> command to connect your servos to and get the exact positions you need.</p>
-</div>
-<p>Servo motors have three wires: power, ground, and signal. The power wire is typically red, and should be connected to the an external 5V power supply. Do NOT connect this to the 5V power of the Arduino! The ground wire is usually black or brown and connects to a ground pin. The signal pin is typically yellow, orange or white and should be connected to a digital pin of the PCA9685.</p>
+<hr class="docutils" />
+<section id="next-steps">
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">Next Steps</a><a class="headerlink" href="#next-steps" title="Link to this heading"></a></h2>
+<p>Visit the <a class="reference internal" href="../../trackmanager/index.html"><span class="doc">TrackManager (DCC &amp; DC)</span></a> page to see how you can use DC PWM on you <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>.</p>
 </section>
 </section>
 
@@ -882,10 +807,7 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="gpio-module.html" class="btn btn-neutral float-left" title="I2C GPIO Expander Modules" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../ex-ioexpander/index.html" class="btn btn-neutral float-right" title="EX-IOExpander" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 
@@ -897,7 +819,7 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f583b78a830>
+    <jinja2.runtime.BlockReference object at 0x7f58363fe140>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

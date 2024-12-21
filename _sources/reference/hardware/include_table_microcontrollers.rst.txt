@@ -167,7 +167,7 @@
     - Limited support only, will be removed in 6.0.0
 
 .. [1] Requires an additional :ref:`Ethernet <reference/hardware/ethernet-boards:ethernet boards>` or :ref:`WiFi <reference/hardware/wifi-boards:wifi boards>` shield
-.. [2] Requires a supported motor driver that supports :ref:`TrackManager <trackmanager/index:hardware requirements and technical notes>`
+.. [2] Requires a supported motor driver that supports :ref:`TrackManager <trackmanager/index:trackmanager technical details and detail instructions>`
 .. [3] Limited EXRAIL scripts are possible only when disabling EEPROM and programming
 .. [4] Features and support in Beta testing can and will change regularly, be sure to keep up to date with developments on our `Discord server <https://discord.gg/y2sB4Fp>`_ 
 .. [5] HAL/|I2Cxa| connectivity is only available via the blocking Arduino Wire library at present

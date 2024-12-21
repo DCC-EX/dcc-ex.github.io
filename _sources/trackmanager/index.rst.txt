@@ -24,88 +24,320 @@ Welcome to DCC-EX TrackManager
 
 With just a single |EX-CS| and a compatible throttle you can simultaneously run both your DCC Locos and analogue DC Locos with road number IDs as throttle addresses from 1 to 10239 to control and drive them on multiple separate insulated tracks/districts.
 
-Any throttle that connect to an |EX-CS| can control analogue (DC) locos just as easily as DCC locos. Throttle Compatibility:
+----
 
-  * WiFi Throttles (e.g. |Engine Driver|, |wiThrottle| and many others)
-  * The DCC-EX browser based |EX-WT|
-  * Other wired throttles to operate your DCC layout and your DC layout, either separately or a simultaneous combination of the two modes
+Track Manager Modes
+===================
 
-|EX-CS| with |TM| includes the following features: 
+By default the outputs of a Motor Driver are set to DCC. For Motor Drivers with two outputs one will be MAIN and one will be PROG.  These, and any additional outputs, can be set to a number of different modes, not just DCC.
 
-  * DCC track modes of ``MAIN``, ``PROG``, and ``NONE``
-  * DC track modes of ``DC``, ``DCX`` (DC Reversed Polarity), and ``NONE``
+Valid Modes are:
 
-|EX-CS| **production version 5.0+** (devel v4.2.50+) supports both DCC (PWM) and DC (PWM) Pulse Width Modulation modes as an *embedded standard feature*.
-TrackManager allows you to set up and operate up to eight separate dual insulated sections of track/districts in either DCC (PWM) and or DC (PWM) as tracks A - H.
+  * DCC modes 
+  
+    * MAIN
+    * PROG
+    * NONE
+    
+  * DC modes
+  
+    * DC
+    * DCX [DCX]_
+    * NONE
 
-An Arduino Mega (with or without WiFi) and Standard L298P Motor Shield |EX-CS| has two ready to run Tracks (**A** & **B**) which can be configured as:
+.. [DCX] DCX is DC with an opposite polarity like NMRA modular layout track B which is wired left rail positive (+) and right rail negative (-)
 
-  * DCC (PWM) modes MAIN for mainline tracks and PROG for a programming track
-  * DC (PWM) modes for DC or DCX (opposite polarity)
-  * Each track/district can also be disabled by setting to "NONE"
+----
 
-No additional external DCC decoders are required for DC (PWM) track assignments, and a single |EX-CS| is the only hardware needed for full functionality.
+DCC Requirements
+================
 
-One key difference to note in comparing DCC vs. DC is that in DCC mode, forward/reverse is determined by the DCC decoder, not the track, whereas in DC mode the direction is dependent upon the track polarity.
+Nothing special or extra is required for any of the DCC modes.
 
-Before you begin
-----------------
+----
 
-**This is not your father's DC railway which used DC transformers for Cab control.**
+DC Requirements
+===============
 
-Turn off, unplug the AC power cord, and disconnect your current DC transformer(s) / power supply(s) from the DC layout track to place in a box for safe keeping.
+To run DC locos with your |EX-CS| you will need:
 
-You will instead be using a regulated DC (Laptop) 12-18 Vdc 3-5Amp power supply to your Motor Shield and or Motor Board (booster) to run all your DCC Locos and analogue DC Cabs on all your individual tracks/districts/blocks.
+* An |EX-CS|.
+* A motor shield with a brake pin. |BR| (See the list of compatible boards at :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`.) |BR| (The |EX-CSB1| and |EX-MS| have a brake pin.)
+* A controller that can be used with the |EX-CS|.
 
-You will be using DC (Pulse Width Modulation PWM) to drive the DC engines, Not DC Direct Current (-0 +16v).
+*No additional external DCC decoders are required for DC (PWM) track assignments, and a single* |EX-CS| *is the only hardware needed for full functionality.*
 
-.. figure:: /_static/images/track_manager/dcc.svg
-  :alt: DCC Waveform
-  :scale: 50%
-  :align: left
+Note: An additional suggested precaution is to add 4 fuses on wires (-b +b, -a +a) to the |EX-CS| connections. Use 2A fuses for the standard L298P motor shield or 5A fuses for the |EX-MS| and other the larger motor boards.
 
-  What a DCC waveform looks like
+|HR-DASHED|
 
-.. figure:: /_static/images/track_manager/pwm.svg
-  :alt: PWM Waveform
-  :scale: 50%
-  :align: center
+Additional Technical Information
+--------------------------------
 
-  What a PWM waveform looks like
+If you are interested in the technical details of DC PWM visit our :doc:`/reference/hardware/dcc-vs-dcc` page.
 
-.. note:: 
+----
 
-  These modes, (PWM) vs analogue DC are totally incompatible with one another and if crossed will result in magic smoke and a burned out motor shield and or USB connector. 
+Changing a Motor Driver Output to a different DCC mode
+======================================================
 
- * DCC(PWM) is detected on a multimeter as an AC signal but in a square wave form, not as a sine wave
- * DC(PWM) is detected on a multimeter as a DC signal in a square wave form, not as a direct current wave
+You can change any output of the Motor Driver either temporarily or permanently (every time the |EX-CS| starts).
 
-The DC(PWM) track is Power supply dependent and needs a varying amount of 0 zero to maximum Vdc passed to the track of 12 or 16 or 18vdc, depending on whether they're N, HO or G scale engines.
+.. contents:: In this Section
+    :depth: 1
+    :local:
+    :class: in-this-section
 
-Note; The signal is detected as DC on this track, from 0Vdc to max +xxVdc depending on the Motor Shield DC power supply output. The DCC-EX 122.55Hz PWM DC motor signal allows for better functioning and better running than most competing systems.
+|HR-DASHED|
 
-TrackManager DCC(PWM) vs. DC(PWM) wave forms
-=============================================
+Temporarily Changing to a Different DCC Mode
+--------------------------------------------
 
-A simplified representation of what the dual (PWM) signals might look like through the track:
+There are several ways to temporarily change a Motor Driver Output to a different DCC Mode:
 
-.. figure:: /_static/images/track_manager/dcc-and-dc-on-track.png
-  :alt: DCC PWM signal
-  :scale: 50%
+* By issuing a command to the the |EX-CS|
+* By using the |TM| feature in |Engine Driver| or |EX-TB|
+* By creating |EX-R| Routes that can the activated in your throttle app.
 
-  DCC PWM signal
+Using Engine Driver or EX-Toolbox
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note:: Note on PWM frequency
+Issuing a command (DCC)
+~~~~~~~~~~~~~~~~~~~~~~~
 
-  Different microcontrollers utilise different PWM frequencies, and at present, these default frequencies are in use rather than using software to define them.
+You can issue |DCC-EX Native Commands| to the |EX-CS| to change the output modes with |Engine Driver|, |EX-TB|, |EX-I| Serial Monitor, |EX-WT| or the Arduino IDE Serial Monitor.
 
-  The side effect of these differing frequencies is that you may notice humming or sometimes squealing noises from older DC motors.
+1. Open the Serial Monitor (or TrackManager page in |Engine Driver| or |Ex-TB|)
 
-  The known PWM frequencies are:
+2. Issue the following command |BR| note that in this example I am setting output B to be DCC MAIN.
 
-    * Mega2560 - 122.55Hz
-    * ESP32         - 131Hz
-    * STM32 Nucleo - typically 1000Hz
+.. code-block:: c++
+
+  <= B MAIN>
+
+Note the track power is immediately turn off anytime you change the track mode.
+
+|HR-DASHED|
+
+Creating a Route (DCC)
+~~~~~~~~~~~~~~~~~~~~~~
+
+Using a Route will set a specific loco number to be associated with DC output. This is a permanent relationship, in that it will be associated every time you start the |EX-CS|.
+
+We will be adding some instructions the ``myAutomation.h`` file a re-uploading the Command Station software your |EX-CS|.
+
+1. Re-run the |EX-I| selecting the options you would normally choose, but of the last page before loading you also select ``Advanced Config``, before clicking the :guilabel:`Advanced Config` button.
+2. This will take you to the ``Advanced Configuration`` page, where you will have two (or possibly more) edit regions. One will be labelled ``myAutomation.h``.
+3. in the ``myAutomation.h`` edit region you will need to type or copy the something like the following.
+
+.. code-block:: c++
+
+ ROUTE(3, "Set Output B to DCC MAIN") // 3 is the sequence identifier  it must be unique
+   SET_TRACK(B,MAIN)  // Set Track B to DCC MAIN
+   DONE
+
+4. Then Load the Command Station software as normal (on the next page)
+
+Note the track power is immediately turn off anytime you change the track mode.
+
+|HR-DASHED|
+
+Permanently Changing To a Different DCC Mode
+--------------------------------------------
+
+By default the outputs of a Motor Driver are set to DCC. For Motor Drivers with two outputs one will be MAIN and one will be PROG.  These, and any additional outputs, can be set to a number of different modes, not just DCC.
+
+You can set any Motor Driver output to be a specific DCC mode every time the |EX-CS| starts up.
+If you wish, at any time you can temporarily change it any DC or DCC mode.
+
+This process is similar to a the 'Route' process in the previous section but will happen automatically at start-up rather than when you select the route.
+
+We will be adding some instructions the ``myAutomation.h`` file a re-uploading the Command Station software your |EX-CS|.
+
+1. Re-run the |EX-I| selecting the options you would normally choose, but of the last page before loading you also select ``Advanced Config``, before clicking the :guilabel:`Advanced Config` button.
+2. This will take you to the ``Advanced Configuration`` page, where you will have two (or possibly more) edit regions. One will be labelled ``myAutomation.h``.
+3. in the ``myAutomation.h`` edit region you will need to type or copy the something like the following |BR| note that in this example I am setting output to be DCC MAIN.
+
+.. code-block:: c++
+
+ AUTOSTART
+   SET_TRACK(B,MAIN)  // Set Track B to DCC MAIN
+   DONE
+
+4. Then Load the Command Station software as normal (on the next page)
+
+
+----
+
+Changing a Motor Driver Output to DC
+====================================
+
+You can change any output of the Motor Driver either temporarily or permanently (every time the |EX-CS| starts).
+
+.. contents:: In this Section
+    :depth: 1
+    :local:
+    :class: in-this-section
+
+|HR-DASHED|
+
+Temporarily Changing to DC
+--------------------------
+
+There are several ways to temporarily change a Motor Driver Output to DC:
+
+* By issuing a command to the the |EX-CS|
+* By using the |TM| feature in |Engine Driver| or |EX-TB|
+* By creating |EX-R| Routes or Automations that can the activated in your throttle app.
+
+Using Engine Driver or EX-Toolbox (DC)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+|Engine Driver| has specific TrackManager features that allow you to alter the output modes.  See the :ref:`throttles/software/engine-driver-native-protocol:trackmanager control` Engine Driver page for details.
+
+|EX-TB| has specific TrackManager features that allow you to alter the output modes. See the :ref:`ex-toolbox/using:track manager` page for details.
+
+|HR-DASHED|
+
+Issuing a Command (DC)
+~~~~~~~~~~~~~~~~~~~~~~
+
+You can issue |DCC-EX Native Commands| to the |EX-CS| to change the output modes with |Engine Driver|, |EX-TB|, |EX-I| Serial Monitor, |EX-WT| or the Arduino IDE Serial Monitor.
+
+1. Open the Serial Monitor (or TrackManager page in |Engine Driver| or |Ex-TB|)
+
+2. Issue the following command |BR| note that in this example I am setting output B to be DC and to be assigned to the Loco Address 1225.
+
+.. code-block:: c++
+
+  <= B DC 1225>  // Set track B to DC mode with address 1225
+
+Note the track power is immediately turn off anytime you change the track mode.
+
+|HR-DASHED|
+
+Creating a Route (DC)
+~~~~~~~~~~~~~~~~~~~~~
+
+Using a Route will set a specific loco number to be associated with DC output. This is a permanent relationship, in that it will be associated every time you start the |EX-CS|.
+
+We will be adding some instructions the ``myAutomation.h`` file a re-uploading the Command Station software your |EX-CS|.
+
+1. Firstly you will need to select an address (1-10239) which will be assigned to the DC output.  If you are also using using DCC on another output, pick a number that will not conflict with any of your own loco's addresses.
+2. Next re-run the |EX-I| selecting the options you would normally choose, but of the last page before loading you also select ``Advanced Config``, before clicking the :guilabel:`Advanced Config` button.
+3. This will take you to the ``Advanced Configuration`` page, where you will have two (or possibly more) edit regions. One will be labelled ``myAutomation.h``.
+4. in the ``myAutomation.h`` edit region you will need to type or copy the something like the following |BR| note that in this example I am setting output B to be DC and to be assigned to the Loco Address 1225.
+
+.. code-block:: c++
+
+ ROUTE(1, "Set Output B to DC 1225") // 1 is the sequence identifier  it must be unique
+   SETLOCO(1225)    // Assign Loco 1225
+   SET_TRACK(B,DC)  // Set Track B to DC with address 1225
+   DONE
+
+5. Then Load the Command Station software as normal (on the next page)
+
+Note that this will make the output DC if you activate the route in you controller.  See :ref:`trackmanager/index:controlling a dc loco` for more information. 
+
+Note the track power is immediately turn off anytime you change the track mode.
+
+|HR-DASHED|
+
+Creating an Automation (DC)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Using an Automation rather than a Route creates a temporary association between a loco address and the DC output.  It takes whatever address you currently have selected in the controller and assigns that to the output.
+
+We will be adding some instructions the ``myAutomation.h`` file a re-uploading the Command Station software your |EX-CS|.
+
+1. Firstly you will need to select an address (1-10239) which will be assigned to the DC output.  If you are also using using DCC on another output, pick a number that will not conflict with any of your own loco's addresses.
+2. Next re-run the |EX-I| selecting the options you would normally choose, but of the last page before loading you also select ``Advanced Config``, before clicking the :guilabel:`Advanced Config` button.
+3. This will take you to the ``Advanced Configuration`` page, where you will have two (or possibly more) edit regions. One will be labelled ``myAutomation.h``.
+4. in the ``myAutomation.h`` edit region you will need to type or copy the something like the following |BR| note that in this example I am setting output B to be DC and to be assigned to the Loco Address 1225.
+
+.. code-block:: c++
+
+ AUTOMATION(2, "Set Output B to DC") // 2 is the sequence identifier  it must be unique
+   SET_TRACK(B,DC)  // Set Track B to DC
+   DONE
+
+5. Then Load the Command Station software as normal (on the next page)
+
+Note that this will make the output DC if you activate the route in you controller.  See :ref:`trackmanager/index:controlling a dc loco` for more information. 
+
+Note the track power is immediately turn off anytime you change the track mode.
+
+|HR-DASHED|
+
+Permanently Changing To DC
+--------------------------
+
+By default the outputs of a Motor Driver are set to DCC. For Motor Drivers with two outputs one will be MAIN and one will be PROG.  These, and any additional outputs, can be set to a number of different modes, not just DCC.
+
+You can set any Motor Driver output to be DC every time the |EX-CS| starts up.
+If you wish, at any time you can temporarily change it any DC or DCC mode.
+
+This process is similar to a the 'Route' process in the previous section but will happen automatically at start-up rather than when you select the route.
+
+We will be adding some instructions the ``myAutomation.h`` file a re-uploading the Command Station software your |EX-CS|.
+
+1. Firstly you will need to select an address (1-10239) which will be assigned to the DC output.  If you are also using using DCC on another output, pick a number that will not conflict with any of your own loco's addresses.
+2. Next re-run the |EX-I| selecting the options you would normally choose, but of the last page before loading you also select ``Advanced Config``, before clicking the :guilabel:`Advanced Config` button.
+3. This will take you to the ``Advanced Configuration`` page, where you will have two (or possibly more) edit regions. One will be labelled ``myAutomation.h``.
+4. in the ``myAutomation.h`` edit region you will need to type or copy the something like the following |BR| note that in this example I am setting output to be DC an to be assigned to the Loco Address 1225.
+
+.. code-block:: c++
+
+ AUTOSTART
+   SETLOCO(1225)    // Assign Loco 1225
+   SET_TRACK(B,DC)  // Set Track B to DC with address 1225
+   DONE
+
+5. Then Load the Command Station software as normal (on the next page)
+
+----
+
+Selecting DC loco to control
+============================
+
+While the process to control a loco is exactly the same as a DCC loco, the process to select it will vary depending on *how* you configured the Motor Driver Output to be DC.
+
+.. contents:: In this Section
+    :depth: 1
+    :local:
+    :class: in-this-section
+
+If you set the Output to be permanently DC
+------------------------------------------
+
+1. You will need to select the Loco Address you assigned to the output when you setup the permanent assignment.
+
+|HR-DASHED|
+
+If you used a Route (DC)
+--------------------------------
+
+1. Go to the list of Routes in your throttle
+2. Active the Route that you created
+3. You will then need to select the Loco Address you assigned to the output when you created the route.
+
+|HR-DASHED|
+
+If you used an Automation (DC)
+--------------------------------------
+
+1. You will then need to select any Loco Address that you wish to use
+2. Go to the list of Routes and Automations in your throttle
+3. Active the Route (Automations) that you created
+
+|HR-DASHED|
+
+If you used Engine Driver, EX-Toolbox or a Command (DC)
+-------------------------------------------------------
+
+1. You will need to select the Loco Address you assigned to the output when you created the route.
+
+----
 
 Replacing or Integrating Into Your Current Layout
 =================================================
@@ -123,29 +355,30 @@ And no we're not using another Expensive DCC decoder under the table on each Tra
   
   When specifying a DC or DCX cab ID, do not use one of your existing locomotive DCC addresses or road number IDs, otherwise a command sent to control a Cab on that DC or DCX track will also operate your DCC Loco with the same address, unless you intentionally do so.
 
-Hardware Requirements and Technical Notes
-=========================================
+----
 
-.. note:: 
+Controlling a DC Loco
+=====================
 
-  These requirements are only for operating DC locomotives. There is nothing to do in a pure DCC environment where no DC or analogue locomotives are run.
+Any throttle that connect to an |EX-CS| can control analogue (DC) locos just as easily as DCC locos. Throttle Compatibility:
 
-.. warning:: 
-
-  In order for |TM| to operate in DC mode, the motor shield must have a brake pin defined in your “config.h” motor shield definition. There are a very limited number of motor boards that are suitable for use with DC mode, and any other motor boards are unsupported. The current list is available in :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`.
-
-Do not attempt to connect two insulated tracks together and drive a DCC engine back and forth until someone bolder than you tries it first (or you've tested it).
+  * WiFi Throttles (e.g. |Engine Driver|, |wiThrottle| and many others)
+  * The DCC-EX browser based |EX-WT|
+  * Other wired throttles to operate your DCC layout and your DC layout, either separately or a simultaneous combination of the two modes
 
 .. warning:: 
 
-  Never drive a loco from an |EX-CS| controlled track or district to any other DCC or DC System.
+  Never drive a loco, DC or DCC, from an |EX-CS| controlled track or district to any other DCC or DC *System*.
 
-Some suggested precautions are to add 4 fuses on wires (-b +b, -a +a) to the |EX-CS| connections. Use 2A fuses for the standard L298P motor shield or 5A fuses for the larger motor boards.
+----
+
+TrackManager Technical Details and Detail Instructions
+======================================================
 
 How do you run a EX-CommandStation in DC (PWM) mode?
-====================================================
+----------------------------------------------------
 
-Using TrackManager with simple easy commands from a throttle or from a serial monitor we can change any insulated track A-H from DCC (PWM) to DC (PWM) and back in real time.
+Using |TM| with simple easy commands from a throttle or from a serial monitor we can change any insulated track A-H from DCC (PWM) to DC (PWM) and back in real time.
 
   * Valid DCC modes are MAIN, PROG, and NONE
   * Valid DC modes are DC, DCX, and NONE
@@ -158,11 +391,9 @@ So, you can take a standard DC motor only engines Cab road number on the side of
   * Valid Cab addresses are 1 to 10239.
   * Invalid Cab address is 0 zero.
 
-.. warning:: 
+.. sidebar:: 
 
-  We do not support 0 zero stretch address function, found on Digitrax and Lenz command Stations on purpose. The constant dual DCC electrical signal may damage certain types of older DC motors if left on for a long time.
-
-Unlike Digitrax and Lenz 0 Zero stretch DCC (PWM) signal which leaves the engine lit up and humming loudly with the throttle and engine at 0 speed, because it is receiving a Dual DCC(PWM) aka AC signal, while the |EX-CS| TrackManager is dead quiet and at rest at 0 speed.
+  We do not support Zero stretching / zero stretch address function, found on Digitrax and Lenz command Stations. See the ':ref:`reference/hardware/dcc-vs-dcc:this is not zero stretching`' section for more information.
 
 Place any analogue DC engine on our EX-CommandStation with a TrackManager DC assigned track and it sits there dead quiet with lights off Until the throttle speed is increased in either direction and then lights up and begins to move.
 
@@ -200,8 +431,11 @@ New |Engine Driver| DCC-EX Native mode features now available today via Google P
   * `Engine Driver <https://play.google.com/store/apps/details?id=jmri.enginedriver>`_
   * `EX-Toolbox <https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox>`_
 
+
+----
+
 TrackManager Commands
-======================
+---------------------
 
 Sending commands from the Arduino IDE Serial Monitor or JMRI Send Command Line or a |Engine Driver| WiFi Throttle.
 
@@ -233,7 +467,8 @@ To change or configure the current track modes use the new command ``<= tracklet
   You would then enter your Engine address on the throttle of 1234 and 4321 and drive them on the layout.
 
 Create EX-RAIL Scripts to Change Track modes
---------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Using |EX-R| functions inside myAutomation.h file to run Automation scripts to change track modes from DCC to DC and back.
 my.Automation.h file
 
@@ -246,7 +481,7 @@ my.Automation.h file
     SET_TRACK(D, DCX)
 
 Create EX-RAIL list of Track Manager Functions for Engine Driver Automatically Assign [Handoff] buttons
--------------------------------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In a |EX-R| Automation script we could assign a track mode to DC and wait for a |Engine Driver| throttle to Assign the Current Selected Active Engine Address and drive Manually through the district on the layout.
  See the third Engine Driver Throttle image 'Districts A thru B with [Set] buttons at the end.
@@ -278,7 +513,7 @@ In a |EX-R| Automation script we could assign a track mode to DC and wait for a 
   and create any additional combinations or tracks C - H as you add more motor boards.
 
 Create EX-RAIL Track Manager Functions for Engine Driver Throttle Automation [Handoff] buttons
-----------------------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In a |EX-R| Automation script we could a Set a Loco Address to a specific track in DC mode and have it run on Automation through the layout.
  See the sixth Engine Driver Throttle image 'EXRAIL 202 Roundhouse to Turntable Back & Forth - Timed' [Handoff] button at the end.
@@ -293,7 +528,7 @@ In a |EX-R| Automation script we could a Set a Loco Address to a specific track 
    DONE
 
 Create EX-RAIL Track Manager Functions for Engine Driver Throttle Route [Set] buttons
--------------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In an EXRAIL Automation script we could Set a Loco Address to a specific track in DC mode and Manually run a preassigned address on the layout.
 
@@ -339,24 +574,24 @@ You can set each district separately as mode
 
 DCX is Opposite Polarity and is what you set Block B to when you want it in DC mode because it is wired to NMRA Modular DCC Standards L+, R-.
 
-Using the New TrackManager Function commands you can run the any layout as
---------------------------------------------------------------------------
-
-.. code-block::
-
- Track A & Track B
-   MAIN & PROG    (Use JOIN function for a Programming track to make a MagicTrack) 
-   MAIN & MAIN
-   PROG & MAIN
-   MAIN & DC
-   PROG & DC
-     DC & MAIN
-     DC & PROG
-     DC & DC
-     DC & DCX
- or any combination with up to 8 separate dual insulated tracks/districts from A - H.
-
-All done through the free |DCC-EX| TrackManager commands.
+.. Using the TrackManager Function commands you can run the any layout as
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. 
+.. .. code-block::
+.. 
+..  Track A & Track B
+..    MAIN & PROG    (Use JOIN function for a Programming track to make a MagicTrack) 
+..    MAIN & MAIN
+..    PROG & MAIN
+..    MAIN & DC
+..    PROG & DC
+..      DC & MAIN
+..      DC & PROG
+..      DC & DC
+..      DC & DCX
+..  or any combination with up to 8 separate dual insulated tracks/districts from A - H.
+.. 
+.. All done through the free |DCC-EX| TrackManager commands.
 
 EXRAIL examples
 ===============

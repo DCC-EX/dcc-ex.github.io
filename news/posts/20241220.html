@@ -5,6 +5,8 @@
 <meta content="DCC-EX DCC DCC++ EX DCC++EX" name="keywords" />
 <meta content="News and Announcements from the DCC-EX team. [DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout.]" name="description" />
 <meta content="News Announcements &quot;What's Happening&quot;" name="keywords" />
+<meta content="Third party ideas and products that work with EX-CommandStations. [DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout.]" name="description" />
+<meta content="Third Party Products Suppliers" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DCC-EX Releases EX-CSB1 Ready to Run DCC CommandStation &mdash; DCC-EX Model Railroading  documentation</title>
@@ -19,7 +21,7 @@
 
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-    <link rel="canonical" href="https://dcc-ex.com/news/posts/20241119.html" />
+    <link rel="canonical" href="https://dcc-ex.com/news/posts/20241220.html" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -609,7 +611,7 @@
   
     
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/news/posts/20241119.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/news/posts/20241220.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   
 
@@ -623,18 +625,55 @@
 <section id="dcc-ex-releases-ex-csb1-ready-to-run-dcc-commandstation">
 <h1>DCC-EX Releases EX-CSB1 Ready to Run DCC CommandStation<a class="headerlink" href="#dcc-ex-releases-ex-csb1-ready-to-run-dcc-commandstation" title="Link to this heading"></a></h1>
 <p>DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the second of our open source hardware products: the <a href="../../ex-commandstation/ready-to-run/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> CommandStation and Booster, providing dual 5 amp DCC and DC PWM (pulse width modulation) output.</p>
-<p>The <a href="../../ex-commandstation/ready-to-run/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> addresses the needs of DCC-EX users who want a ready-to-run DCC CommandStation that will have them running trains within 5 minutes of plugging it into power and track with built-in fast Wifi capability.</p>
+<p>The <a href="../../ex-commandstation/ready-to-run/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> addresses the needs of DCC-EX users who want a ready-to-run DCC and DC CommandStation that will have them running trains within 5 minutes of plugging it into power and track. With its built-in fast Wifi capability, up to 10 users can connect simultaneously using a phone or tablet in addition to commercially available throttles, in order to run trains and control their entire layout.</p>
 <a class="reference internal image-reference" href="../../_images/csb1_render_drop_shadow.png"><img alt="DCC-EX EX-CSB1" src="../../_images/csb1_render_drop_shadow.png" style="width: 200.0px; height: 150.0px;" /></a>
 <p>A DCC-EX Command Station can now outperform commercial DCC command stations which typically have single 3-3.5A or 5A output capabilities, and doing so at a fraction of the cost and with more advanced features.</p>
 <p>The <a href="../../ex-commandstation/ready-to-run/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> is the  second offering in the DCC-EX open source hardware ecosystem specifically designed for model railroaders, and is a direct result of the strong community engagement DCC-EX strives to inspire.</p>
-<p>Featuring an ESP32 processor with built-in fast WiFi, and dual 5A output Texas Instruments DRV8874 MOSFET H-Bridge ICs, the EX-CSB1 features the same proven reliable output stage as the previous EX-MotorShield8874. The DRV8874 H-Bridge ICs also include hardware overcurrent protection monitored by EX-CommandStation, in addition to the existing software-based overload protection. It has a single 2.1mm barrel jack DC power for both the DCC/DC output and to supply the ESP32.</p>
-<p>EX-CSB1 also allows stacking of the original EX-MotorShield8874 with zero hardware modifications to provide four DCC and DC PWM track outputs. Now users needing more power or more power districts have a startlingly simple upgrade path.</p>
+<p>Featuring an ESP32 processor with built-in fast WiFi, and dual 5A output Texas Instruments MOSFET motor drivers, the EX-CSB1 features the same proven reliable output stage as the previous EX-MotorShield8874. The DRV8874 H-Bridge ICs also include hardware overcurrent protection monitored by EX-CommandStation, in addition to the existing software-based overload protection. It has a single 2.1mm barrel jack DC power for both the DCC/DC output and to supply the ESP32.</p>
+<p>EX-CSB1 also allows stacking of the original EX-MotorShield8874 with zero hardware modifications to provide four DCC and DC PWM track outputs. Now users needing more power or more power districts have a strikingly simple upgrade path.</p>
 <p>EX-CSB1’s exciting new feature is Booster mode. Using the built-in Railsync compatible DCC input jack and a small piece of EX-RAIL scripting, the EX-CSB1 can switch automatically into Booster mode to produce the same DCC output on any or all of up to 4 DCC outputs. Whilst in Booster mode, the EX-CSB1 can still respond to sensor inputs and perform EX-RAIL animations as a remote animation node.</p>
 <p>EX-CSB1 sports I2C support via an industry standard STEMMA QT/Qwiic connectors and pin headers making I2C bus connections easier than ever. The STEMMA QT/Qwiic ecosystem of I2C boards from Adafruit and Sparkfun are now the easiest I2C expansion boards to use. The DCC-EX team expects to add additional STEMMA QT/Qwiic based peripherals with model railroading friendly features in upcoming releases. An I2C SIP header is included to allow many I2C enabled OLED screens to plug directly into the board.</p>
-<p>The design of the EX-CSB1 was inspired by DCC-EX development team member Harald Barth’s comment to Hardware Lead Paul Antoine when he said the ESP32 combined with the EX-MotorShield8874 would make a great compact DCC CommandStation. Working with EX-MotorShield8874 designer Erwin Peterlin of Semify in Austria, the team then designed the prototype EX-CSB1. Paul Antoine’s company Millennium Engineering Pty Ltd funded the prototype boards and shipped them to team members around the world for testing. Pre-production testing was complete in May of 2024.</p>
-<p>EX-CSB1 is available immediately for purchase in Australia, New Zealand and South East Asia from Millennium Engineering Pty Ltd (orders &#64; milleng.com.au) for $AU190, plus shipping. It will also be available shortly in the UK through Chesterfield Model Making &amp; Miniature Electronics (<a class="reference external" href="https://chesterfield-models.co.uk/product/semify-dcc-ex-motor-shield/">https://chesterfield-models.co.uk/product/semify-dcc-ex-motor-shield/</a>), for £29.99 plus shipping. Expect further announcements re local availability in the US through DCC-EX directly and Smart Hobby LLC, with other countries to follow.</p>
-<p>Design files and initial hardware documentation are at: <a class="reference external" href="https://github.com/DCC-EX/EX-Motorshield8874">https://github.com/DCC-EX/EX-Motorshield8874</a> and installation details at: <a class="reference external" href="https://dcc-ex.com/reference/hardware/motorboards/ex-motor-shield-8874.html">https://dcc-ex.com/reference/hardware/motorboards/ex-motor-shield-8874.html</a></p>
-<p>DCC-EX Website will have further documentation for the EX-MotorShield8874, and extended support in software will be included in the upcoming EX-CommandStation v5.0 release scheduled for late May 2023.</p>
+<p>In addition, the CSB1 expands on the proven EXRAIL automation and animation capabilities with even more memory for larger scripts to control locos, lighting, turnouts/points, servos, and virtually everything else on the layout.</p>
+<p>The EX-CSB1 is available immediately for purchase in The United States, The UK, Austria, Australia, New Zealand and South East Asia. Pricing starts at $120 US / $AU190 / 95 GBP / 115 Euro the DCC-EX store and resellers listed here:</p>
+<section id="suppliers-resellers-list">
+<h2>Suppliers / Resellers List<a class="headerlink" href="#suppliers-resellers-list" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../_images/flag_us60px.png"><img alt="USA Flag" class="align-left" src="../../_images/flag_us60px.png" style="width: 42.0px; height: 22.4px;" /></a>
+<section id="in-the-united-states-serving-usa-canada-mexico">
+<h3>In the United States serving USA, Canada, &amp; Mexico<a class="headerlink" href="#in-the-united-states-serving-usa-canada-mexico" title="Link to this heading"></a></h3>
+<ul class="clearer simple">
+<li><p><a class="reference external" href="https://store.dcc-ex.com/">DCC-EX Store</a> <img src="https://dcc-ex.com/_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></li>
+<li><p><a class="reference external" href="https://www.smarthobbyllc.com/">Smart Hobby, LLC</a> <img src="https://dcc-ex.com/_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></li>
+</ul>
+<p><hr class="hr-dashed" /></p>
+<a class="reference internal image-reference" href="../../_images/flag_uk60px.jpg"><img alt="UK Flag" class="align-left" src="../../_images/flag_uk60px.jpg" style="width: 42.0px; height: 21.0px;" /></a>
+</section>
+<section id="in-england-serving-the-uk">
+<h3>In England serving the UK<a class="headerlink" href="#in-england-serving-the-uk" title="Link to this heading"></a></h3>
+<ul class="clearer simple">
+<li><p><a class="reference external" href="https://chesterfield-models.co.uk/product/dccex/">Chesterfield Model Making and Miniature Electronics</a> <img src="https://dcc-ex.com/_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></li>
+</ul>
+<p><hr class="hr-dashed" /></p>
+<a class="reference internal image-reference" href="../../_images/flag_austria60px.png"><img alt="Austria Flag" class="align-left" src="../../_images/flag_austria60px.png" style="width: 42.0px; height: 28.0px;" /></a>
+</section>
+<section id="in-austria-serving-the-european-union-eu">
+<h3>In Austria serving the European Union (EU)<a class="headerlink" href="#in-austria-serving-the-european-union-eu" title="Link to this heading"></a></h3>
+<ul class="clearer simple">
+<li><p><a class="reference external" href="https://www.semify-eda.com/ex-motorshield8874/">Semify</a> <img src="https://dcc-ex.com/_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></li>
+</ul>
+<p><hr class="hr-dashed" /></p>
+<a class="reference internal image-reference" href="../../_images/flag_australia60px.png"><img alt="Australia Flag" class="align-left" src="../../_images/flag_australia60px.png" style="width: 42.0px; height: 25.2px;" /></a>
+</section>
+<section id="in-australia-serving-au-nz-and-apac">
+<h3>In Australia serving AU, NZ, and APAC<a class="headerlink" href="#in-australia-serving-au-nz-and-apac" title="Link to this heading"></a></h3>
+<ul class="clearer simple">
+<li><p><a class="reference external" href="https://www.milleng.com.au">Millennium Engineering Pty Ltd</a> <img src="https://dcc-ex.com/_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></li>
+<li><p><a class="reference external" href="https://bmodeltrains.com/product-category/dcc-ex-command-stations/">Buckambool Model Trains</a> <img src="https://dcc-ex.com/_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></li>
+</ul>
+<p>Initial documentation is at: <a class="reference external" href="http://dcc-ex/ex-csb1">http://dcc-ex/ex-csb1</a> with design files on the DCC-EX Github.</p>
+<p>In connection with the relase of the EX-CSB1, version 5.0 of the EX-CommandStation is releasing with extended support for the EX-CSB1 and the entire suite of DCC-EX products.</p>
+<p>DCC-EX would like to extend special thanks to team members Paul Antoine and Harald Barth for their ideas and contribution to the funding and design of the CSB1 and engineer (head designer of the EX-MotorShield8874), Erwin Peterlin of Semify in Austria providing his time and design expertise.</p>
+</section>
+</section>
 </section>
 
 <div class="section ablog__blog_comments">
@@ -678,7 +717,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f439f25b910>
+    <jinja2.runtime.BlockReference object at 0x7fc6bdf59f00>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

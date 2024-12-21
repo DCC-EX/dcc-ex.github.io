@@ -30,7 +30,7 @@ In England serving the UK
 .. rst-class:: clearer
 
 
-* `Chesterfield Model Making and Miniature Electronics <https://chesterfield-models.co.uk/product/dccex/>`_ |EXTERNAL-LINKxa|
+* `Chesterfield Model Making and Miniature Electronics <https://chesterfield-models.co.uk/product-category/dcc-ex/>`_ |EXTERNAL-LINKxa|
 
 
 |HR-DASHEDxa|

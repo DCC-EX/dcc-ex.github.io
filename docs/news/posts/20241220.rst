@@ -40,7 +40,9 @@ EX-CSB1 sports I2C support via an industry standard STEMMA QT/Qwiic connectors a
 
 In addition, the CSB1 expands on the proven EXRAIL automation and animation capabilities with even more memory for larger scripts to control locos, lighting, turnouts/points, servos, and virtually everything else on the layout.
 
-The EX-CSB1 is available immediately for purchase in The United States, The UK, Austria, Australia, New Zealand and South East Asia. Pricing starts at $120 US / $AU190 / 95 GBP / 115 Euro the DCC-EX store and associated resellers.
+The EX-CSB1 is available immediately for purchase in The United States, The UK, Austria, Australia, New Zealand and South East Asia. Pricing starts at $120 US / $AU190 / 95 GBP / 115 Euro the DCC-EX store and resellers listed here:
+
+.. include:: include__dealers.rst
 
 Initial documentation is at: http://dcc-ex/ex-csb1 with design files on the DCC-EX Github.
 

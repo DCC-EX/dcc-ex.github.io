@@ -31,6 +31,7 @@ In England serving the UK
 
 
 * `Chesterfield Model Making and Miniature Electronics <https://chesterfield-models.co.uk/product-category/dcc-ex/>`_ |EXTERNAL-LINKxa|
+* `ACI Model Railways <https://acimodelrailways.co.uk/>`_ |EXTERNAL-LINKxa|
 
 
 |HR-DASHEDxa|

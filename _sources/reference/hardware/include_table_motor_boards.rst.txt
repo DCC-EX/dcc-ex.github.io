@@ -12,10 +12,10 @@
     - For- |BRxb| mat
     - S |BRxb| t |BRxb| a |BRxb| c |BRxb| k |BRxb| a |BRxb| b |BRxb| l |BRxb| e
     - Short |BRxb| Cir- |BRxb| cuit |BRxb| Pro- |BRxb| tect- |BRxb| ion
-    - Cur- |BRxb| rent |BRxb| Sen- |BRxb| se |BRxb| [20]_
+    - Cur- |BRxb| rent |BRxb| Sen- |BRxb| se |BRxb| [#b20]_
     - DC |BRxb| Sup- |BRxb| port
     - No. |BRxb| Out- |BRxb| puts |BRxb| / |BRxb| Tra- |BRxb| cks
-    - Max |BRxb| Amps |BRxb| [21]_
+    - Max |BRxb| Amps |BRxb| [#b21]_
     - Comments / Notes  |_xb| |_xb| |_xb| |_xb| |_xb| |_xb| |_xb| |_xb| |_xb| |_xb| |_xb| |_xb| |_xb| |_xb| |_xb|
 
   * - :doc:`DCC-EX EX-MotorShield8874 RevA</reference/hardware/motorboards/ex-motor-shield-8874>`
@@ -23,7 +23,7 @@
     - Yes
     - Tinkerer
     - UNO / Mega
-    - Yes [22]_
+    - Yes [#b22]_
     - Yes
     - Yes
     - Yes
@@ -167,8 +167,8 @@
     - Engineer
     - UNO / Mega
     - No
-    - Yes [23]_
-    - Yes [23]_
+    - Yes [#b23]_
+    - Yes [#b23]_
     - No
     - 2
     - 2
@@ -245,7 +245,7 @@
     - Does not work. It can't switch fast enough to generate a reliable DCC signal
 
 
-.. [20] CV Programming
-.. [21] Per output
-.. [22] Requires modification of the board to stack the second board
-.. [23] Requires modification of the board to support Current Sense
+.. [#b20] CV Programming
+.. [#b21] Per output
+.. [#b22] Requires modification of the board to stack the second board
+.. [#b23] Requires modification of the board to support Current Sense

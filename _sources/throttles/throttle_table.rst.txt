@@ -9,17 +9,17 @@
       -  :rspan:`2` Licence
       -  :rspan:`2` Inter- |BRxa| face
       -  :rspan:`1` :cspan:`1` Technology
-      -  :rspan:`2` Also |BRxa| Requ- |BRxa| ires [2]_
+      -  :rspan:`2` Also |BRxa| Requ- |BRxa| ires [#t2]_
       -  :cspan:`5` Format
       -  :rspan:`2` CV |BRxa| Pro- |BRxa| gram- |BRxa| ming
 
     * -  :cspan:`2` Mobile
       -  :cspan:`2` PC
 
-    * -  P |BRxa| r |BRxa| o |BRxa| t |BRxa| o |BRxa| c |BRxa| o |BRxa| l |BRxa| [1]_
+    * -  P |BRxa| r |BRxa| o |BRxa| t |BRxa| o |BRxa| c |BRxa| o |BRxa| l |BRxa| [#t1]_
       -  UI
       -  P |BRxa| h |BRxa| y |BRxa| s |BRxa| i |BRxa| c |BRxa| a |BRxa| l
-      -  A |BRxa| n |BRxa| d |BRxa| r |BRxa| o |BRxa| i |BRxa| d |BRxa| [4]_ 
+      -  A |BRxa| n |BRxa| d |BRxa| r |BRxa| o |BRxa| i |BRxa| d |BRxa| [#t4]_ 
       -  i |BRxa| O |BRxa| S
       -  W |BRxa| i |BRxa| n
       -  M |BRxa| a |BRxa| c |BRxa| O |BRxa| S
@@ -27,10 +27,10 @@
 
     * -  :doc:`JMRI <software/jmri>`
       -  Free
-      -  USB / WiFi [6]_
+      -  USB / WiFi [#t6]_
       -  Native
       -  App \& Web
-      -  JMRI [5]_ on PC/RPi
+      -  JMRI [#t5]_ on PC/RPi
       -  
       -  Web
       -  Web
@@ -79,7 +79,7 @@
       -  
       -  
       -  
-      -  X [3]_
+      -  X [#t3]_
 
     * -  :doc:`DCCpp CAB <software/dccpp-cab>`
       -  Free
@@ -312,8 +312,8 @@
   Free = No additional cost for full functionality. |BRxa|
   Paid = Payment required for any usage. |BRxa|
   Free/Paid = Both Free and Paid versions are available. The free version has limited features. |BRxa|
-  Native = Uses the DCC-EX Native protocol/commands. [1]_ |BRxa|
-  WiT = Uses the WiThrottle protocol. [1]_ |BRxa|
+  Native = Uses the DCC-EX Native protocol/commands. [#t1]_ |BRxa|
+  WiT = Uses the WiThrottle protocol. [#t1]_ |BRxa|
   Web = Requires the use of a Web Browser. |BRxa|
   Physical = A dedicated separate physical device. Not an app running on a standard smart device.  |BRxa|
   Android = A phone or tablet running the Google Android operating system. |BRxa|
@@ -322,10 +322,10 @@
   Win = Windows 7 and above. |BRxa|
   DIY = Do it Yourself. Requires you to buy components and 'build' the device.
 
-.. [1] See :doc:`/reference/software/withrottle-vs-native-commands`.
-.. [2] Additional hardware of software is required for use. |BRxa| DIY = Requires you to buy components and 'build' the device.
-.. [3] CV programming is only available in Engine Driver when connected using the DCC-EX Native protocol.
-.. [4] Note: The Android throttle apps listed above can be made to made to run on Windows PCs. See :doc:`Running Android apps on Microsoft Windows <software/android-apps-on-windows>`.
-.. [5] JMRI is a suite of applications.  This table only refers the Web based throttle component of JMRI.  To use the Web throttle you will need to be running the JMRI suite of applications on a PC (Windows, OSX or Linux) or RPi. e.g. **Decoder Pro** or **Panel Pro**.
-.. [6] Connection JMRI to an EX-CommandStation over WiFi works, but is not recommended and is not supported 
+.. [#t1] See :doc:`/reference/software/withrottle-vs-native-commands`.
+.. [#t2] Additional hardware of software is required for use. |BRxa| DIY = Requires you to buy components and 'build' the device.
+.. [#t3] CV programming is only available in Engine Driver when connected using the DCC-EX Native protocol.
+.. [#t4] Note: The Android throttle apps listed above can be made to made to run on Windows PCs. See :doc:`Running Android apps on Microsoft Windows <software/android-apps-on-windows>`.
+.. [#t5] JMRI is a suite of applications.  This table only refers the Web based throttle component of JMRI.  To use the Web throttle you will need to be running the JMRI suite of applications on a PC (Windows, OSX or Linux) or RPi. e.g. **Decoder Pro** or **Panel Pro**.
+.. [#t6] Connection JMRI to an EX-CommandStation over WiFi works, but is not recommended and is not supported 
 

@@ -42,10 +42,10 @@ Valid Modes are:
   * :ref:`DC modes <trackmanager/index:changing a motor driver output to dc>`
   
     * DC
-    * DCX [1]_
+    * DCX [#tm1]_
     * NONE
 
-.. [1] DCX is DC with an opposite polarity. Like NMRA modular layout track B which is wired left rail positive (+) and right rail negative (-)
+.. [#tm1] DCX is DC with an opposite polarity. Like NMRA modular layout track B which is wired left rail positive (+) and right rail negative (-)
 
 ----
 
@@ -263,7 +263,7 @@ We will be adding some instructions the ``myAutomation.h`` file a re-uploading t
 
 Note that this will make the output DC if you activate the route in you controller.  See :ref:`trackmanager/index:controlling a dc loco` for more information. 
 
-Note the track power is immediately turn off anytime you change the track mode.
+Note the track power is immediately turn off anytime you change the track mode. you may wish to add ``SET_POWER( track, ON/OFF )`` after the ``SET_TRACK()`` command. e.g. ``SET_POWER(B ON)``.
 
 |HR-DASHED|
 

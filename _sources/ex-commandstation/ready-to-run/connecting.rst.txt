@@ -27,7 +27,7 @@ These instructions are for DCC locomotives. For more detailed information, to co
 What You Will Need
 ==================
 
-* An |EX-CSB1| [1]_
+* An |EX-CSB1| [#c1]_
 * A **Power supply** (12V - 16V DC see :ref:`Power Supplies <reference/hardware/power-supplies:power supplies>`)
 * A **DCC loco** (If you are here to run DC, please go to todo XXX)
 * Some **Track**
@@ -35,7 +35,7 @@ What You Will Need
 * Jeweller's **flat bladed screwdriver** (1.5 - 2mm blade)
 * A **WiFi capable smart device** like a phone or tablet to control your trains (aka a "Throttle")
 
- .. [1] While not required for normal use, a PC is required a) to initially install the software, and b) is optional for making a USB connection and using programs like |EX-WT| or |JMRI| and to update/add EXRAIL Scripts to the |EX-CS|. A USB connection also provides a connection to a "serial monitor" to generate logs and diagnose issues, but more on that later.
+ .. [#c1] While not required for normal use, a PC is required a) to initially install the software, and b) is optional for making a USB connection and using programs like |EX-WT| or |JMRI| and to update/add EXRAIL Scripts to the |EX-CS|. A USB connection also provides a connection to a "serial monitor" to generate logs and diagnose issues, but more on that later.
 
 ----
 

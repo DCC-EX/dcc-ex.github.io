@@ -112,7 +112,7 @@ You can issue |DCC-EX Native Commands| to the |EX-CS| to change the output modes
 
 1. Open the Serial Monitor (or TrackManager page in |Engine Driver| or |Ex-TB|)
 
-2. Issue the following command |BR| note that in this example I am setting output B to be DCC MAIN.
+2. Issue the following command. |BR| Note that in this example I am setting output B to be DCC MAIN.
 
 .. code-block:: c++
 
@@ -131,7 +131,7 @@ We will be adding some instructions the ``myAutomation.h`` file a re-uploading t
 
 1. Re-run the |EX-I| selecting the options you would normally choose, but of the last page before loading you also select ``Advanced Config``, before clicking the :guilabel:`Advanced Config` button.
 2. This will take you to the ``Advanced Configuration`` page, where you will have two (or possibly more) edit regions. One will be labelled ``myAutomation.h``.
-3. in the ``myAutomation.h`` edit region you will need to type or copy the something like the following.
+3. in the ``myAutomation.h`` edit region you will need to type or copy the something like the following. |BR| Note that in this example I am setting output B to be DCC MAIN.
 
 .. code-block:: c++
 
@@ -141,17 +141,16 @@ We will be adding some instructions the ``myAutomation.h`` file a re-uploading t
 
 4. Then Load the Command Station software as normal (on the next page)
 
-Note the track power is immediately turn off anytime you change the track mode.
+Note the track power is immediately turn off anytime you change the track mode. you may wish to add ``SET_POWER( track, ON/OFF )`` after the ``SET_TRACK()`` command. e.g. ``SET_POWER(B ON)``.
 
 |HR-DASHED|
 
 Permanently Changing the DCC Mode
 ---------------------------------
 
-By default the outputs of a Motor Driver are set to DCC. For Motor Drivers with two outputs one will be MAIN and one will be PROG.  These, and any additional outputs, can be set to a number of different modes, not just DCC.
+By default the outputs of a Motor Driver are set to DCC. For Motor Drivers with two outputs one will be ``MAIN`` and one will be ``PROG``.  These, and any additional outputs, can be set to a number of different modes, not just DCC.
 
-You can set any Motor Driver output to be a specific DCC mode every time the |EX-CS| starts up.
-If you wish, at any time you can temporarily change it any DC or DCC mode.
+You can set any Motor Driver output to be a specific DCC mode every time the |EX-CS| starts up. (If you wish, at any time you can subsequently temporarily change it any other DC or DCC mode.)
 
 This process is similar to a the 'Route' process in the previous section but will happen automatically at start-up rather than when you select the route.
 
@@ -159,7 +158,7 @@ We will be adding some instructions the ``myAutomation.h`` file a re-uploading t
 
 1. Re-run the |EX-I| selecting the options you would normally choose, but of the last page before loading you also select ``Advanced Config``, before clicking the :guilabel:`Advanced Config` button.
 2. This will take you to the ``Advanced Configuration`` page, where you will have two (or possibly more) edit regions. One will be labelled ``myAutomation.h``.
-3. in the ``myAutomation.h`` edit region you will need to type or copy the something like the following |BR| note that in this example I am setting output to be DCC MAIN.
+3. in the ``myAutomation.h`` edit region you will need to type or copy the something like the following. |BR| Note that in this example I am setting output B to be DCC MAIN.
 
 .. code-block:: c++
 
@@ -169,6 +168,8 @@ We will be adding some instructions the ``myAutomation.h`` file a re-uploading t
 
 4. Then Load the Command Station software as normal (on the next page)
 
+
+Note the track power is immediately turn off anytime you change the track mode. you may wish to add ``SET_POWER( track, ON/OFF )`` after the ``SET_TRACK()`` command. e.g. ``SET_POWER(B ON)``.
 
 ----
 
@@ -288,17 +289,17 @@ We will be adding some instructions the ``myAutomation.h`` file a re-uploading t
 
 Note that this will make the output DC if you activate the route in you controller.  See :ref:`trackmanager/index:controlling a dc loco` for more information. 
 
-Note the track power is immediately turn off anytime you change the track mode.
+
+Note the track power is immediately turn off anytime you change the track mode. you may wish to add ``SET_POWER( track, ON/OFF )`` after the ``SET_TRACK()`` command. e.g. ``SET_POWER(B ON)``.
 
 |HR-DASHED|
 
 Permanently Changing To DC
 --------------------------
 
-By default the outputs of a Motor Driver are set to DCC. For Motor Drivers with two outputs one will be MAIN and one will be PROG.  These, and any additional outputs, can be set to a number of different modes, not just DCC.
+By default the outputs of a Motor Driver are set to DCC. For Motor Drivers with two outputs one will be ``MAIN`` and one will be ``PROG``.  These, and any additional outputs, can be set to a number of different modes, not just DCC.
 
-You can set any Motor Driver output to be DC every time the |EX-CS| starts up.
-If you wish, at any time you can temporarily change it any DC or DCC mode.
+You can set any Motor Driver output to be DC every time the |EX-CS| starts up. (If you wish, at any time you can subsequently temporarily change it any other DC or DCC mode.)
 
 This process is similar to a the 'Route' process in the previous section but will happen automatically at start-up rather than when you select the route.
 
@@ -317,6 +318,9 @@ We will be adding some instructions the ``myAutomation.h`` file a re-uploading t
    DONE
 
 5. Then Load the Command Station software as normal (on the next page)
+
+
+Note the track power is immediately turn off anytime you change the track mode. you may wish to add ``SET_POWER( track, ON/OFF )`` after the ``SET_TRACK()`` command. e.g. ``SET_POWER(B ON)``.
 
 ----
 
@@ -342,8 +346,8 @@ If you set the Output to be permanently DC
 If you used a Route (DC)
 --------------------------------
 
-1. Go to the list of Routes in your throttle
-2. Active the Route that you created
+1. Go to the list of Routes in your throttle app
+2. Activate the Route that you created
 3. You will then need to select the Loco Address you assigned to the output when you created the route.
 
 |HR-DASHED|
@@ -352,15 +356,15 @@ If you used an Automation (DC)
 --------------------------------------
 
 1. You will then need to select any Loco Address that you wish to use
-2. Go to the list of Routes and Automations in your throttle
-3. Active the Route (Automations) that you created
+2. Go to the list of Routes and Automations in your throttle app
+3. Activate the Automation that you created
 
 |HR-DASHED|
 
 If you used Engine Driver, EX-Toolbox or a Command (DC)
 -------------------------------------------------------
 
-1. You will need to select the Loco Address you assigned to the output when you created the route.
+1. You will need to select the Loco Address you assigned to the output to DC.
 
 ----
 

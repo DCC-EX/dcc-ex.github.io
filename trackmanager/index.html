@@ -767,7 +767,7 @@
 <p>You can issue <a class="reference internal" href="../reference/software/withrottle-vs-native-commands.html"><span class="doc">DCC-EX Native Commands</span></a> to the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> to change the output modes with <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, <a href="../ex-toolbox/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span></a>, <a href="../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a> Serial Monitor, <a href="../ex-webthrottle/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span></a> or the Arduino IDE Serial Monitor.</p>
 <ol class="arabic simple">
 <li><p>Open the Serial Monitor (or TrackManager page in <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> or <a href="../ex-toolbox/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span></a>)</p></li>
-<li><p>Issue the following command <br /> note that in this example I am setting output B to be DCC MAIN.</p></li>
+<li><p>Issue the following command. <br /> Note that in this example I am setting output B to be DCC MAIN.</p></li>
 </ol>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;=</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">MAIN</span><span class="o">&gt;</span>
 </pre></div>
@@ -782,7 +782,7 @@
 <ol class="arabic simple">
 <li><p>Re-run the <a href="../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a> selecting the options you would normally choose, but of the last page before loading you also select <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">Config</span></code>, before clicking the <span class="guilabel">Advanced Config</span> button.</p></li>
 <li><p>This will take you to the <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">Configuration</span></code> page, where you will have two (or possibly more) edit regions. One will be labelled <code class="docutils literal notranslate"><span class="pre">myAutomation.h</span></code>.</p></li>
-<li><p>in the <code class="docutils literal notranslate"><span class="pre">myAutomation.h</span></code> edit region you will need to type or copy the something like the following.</p></li>
+<li><p>in the <code class="docutils literal notranslate"><span class="pre">myAutomation.h</span></code> edit region you will need to type or copy the something like the following. <br /> Note that in this example I am setting output B to be DCC MAIN.</p></li>
 </ol>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Set Output B to DCC MAIN&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// 3 is the sequence identifier  it must be unique</span>
 <span class="w">  </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">MAIN</span><span class="p">)</span><span class="w">  </span><span class="c1">// Set Track B to DCC MAIN</span>
@@ -792,21 +792,20 @@
 <ol class="arabic simple" start="4">
 <li><p>Then Load the Command Station software as normal (on the next page)</p></li>
 </ol>
-<p>Note the track power is immediately turn off anytime you change the track mode.</p>
+<p>Note the track power is immediately turn off anytime you change the track mode. you may wish to add <code class="docutils literal notranslate"><span class="pre">SET_POWER(</span> <span class="pre">track,</span> <span class="pre">ON/OFF</span> <span class="pre">)</span></code> after the <code class="docutils literal notranslate"><span class="pre">SET_TRACK()</span></code> command. e.g. <code class="docutils literal notranslate"><span class="pre">SET_POWER(B</span> <span class="pre">ON)</span></code>.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 </section>
 <section id="permanently-changing-the-dcc-mode">
 <h3><a class="toc-backref" href="#id42" role="doc-backlink">Permanently Changing the DCC Mode</a><a class="headerlink" href="#permanently-changing-the-dcc-mode" title="Link to this heading"></a></h3>
-<p>By default the outputs of a Motor Driver are set to DCC. For Motor Drivers with two outputs one will be MAIN and one will be PROG.  These, and any additional outputs, can be set to a number of different modes, not just DCC.</p>
-<p>You can set any Motor Driver output to be a specific DCC mode every time the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> starts up.
-If you wish, at any time you can temporarily change it any DC or DCC mode.</p>
+<p>By default the outputs of a Motor Driver are set to DCC. For Motor Drivers with two outputs one will be <code class="docutils literal notranslate"><span class="pre">MAIN</span></code> and one will be <code class="docutils literal notranslate"><span class="pre">PROG</span></code>.  These, and any additional outputs, can be set to a number of different modes, not just DCC.</p>
+<p>You can set any Motor Driver output to be a specific DCC mode every time the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> starts up. (If you wish, at any time you can subsequently temporarily change it any other DC or DCC mode.)</p>
 <p>This process is similar to a the ‘Route’ process in the previous section but will happen automatically at start-up rather than when you select the route.</p>
 <p>We will be adding some instructions the <code class="docutils literal notranslate"><span class="pre">myAutomation.h</span></code> file a re-uploading the Command Station software your <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>.</p>
 <ol class="arabic simple">
 <li><p>Re-run the <a href="../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a> selecting the options you would normally choose, but of the last page before loading you also select <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">Config</span></code>, before clicking the <span class="guilabel">Advanced Config</span> button.</p></li>
 <li><p>This will take you to the <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">Configuration</span></code> page, where you will have two (or possibly more) edit regions. One will be labelled <code class="docutils literal notranslate"><span class="pre">myAutomation.h</span></code>.</p></li>
-<li><p>in the <code class="docutils literal notranslate"><span class="pre">myAutomation.h</span></code> edit region you will need to type or copy the something like the following <br /> note that in this example I am setting output to be DCC MAIN.</p></li>
+<li><p>in the <code class="docutils literal notranslate"><span class="pre">myAutomation.h</span></code> edit region you will need to type or copy the something like the following. <br /> Note that in this example I am setting output B to be DCC MAIN.</p></li>
 </ol>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">AUTOSTART</span>
 <span class="w">  </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">MAIN</span><span class="p">)</span><span class="w">  </span><span class="c1">// Set Track B to DCC MAIN</span>
@@ -816,6 +815,7 @@ If you wish, at any time you can temporarily change it any DC or DCC mode.</p>
 <ol class="arabic simple" start="4">
 <li><p>Then Load the Command Station software as normal (on the next page)</p></li>
 </ol>
+<p>Note the track power is immediately turn off anytime you change the track mode. you may wish to add <code class="docutils literal notranslate"><span class="pre">SET_POWER(</span> <span class="pre">track,</span> <span class="pre">ON/OFF</span> <span class="pre">)</span></code> after the <code class="docutils literal notranslate"><span class="pre">SET_TRACK()</span></code> command. e.g. <code class="docutils literal notranslate"><span class="pre">SET_POWER(B</span> <span class="pre">ON)</span></code>.</p>
 </section>
 </section>
 <hr class="docutils" />
@@ -913,15 +913,14 @@ If you wish, at any time you can temporarily change it any DC or DCC mode.</p>
 <li><p>Then Load the Command Station software as normal (on the next page)</p></li>
 </ol>
 <p>Note that this will make the output DC if you activate the route in you controller.  See <a class="reference internal" href="#controlling-a-dc-loco"><span class="std std-ref">Controlling a DC Loco</span></a> for more information.</p>
-<p>Note the track power is immediately turn off anytime you change the track mode.</p>
+<p>Note the track power is immediately turn off anytime you change the track mode. you may wish to add <code class="docutils literal notranslate"><span class="pre">SET_POWER(</span> <span class="pre">track,</span> <span class="pre">ON/OFF</span> <span class="pre">)</span></code> after the <code class="docutils literal notranslate"><span class="pre">SET_TRACK()</span></code> command. e.g. <code class="docutils literal notranslate"><span class="pre">SET_POWER(B</span> <span class="pre">ON)</span></code>.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 </section>
 <section id="permanently-changing-to-dc">
 <h3><a class="toc-backref" href="#id45" role="doc-backlink">Permanently Changing To DC</a><a class="headerlink" href="#permanently-changing-to-dc" title="Link to this heading"></a></h3>
-<p>By default the outputs of a Motor Driver are set to DCC. For Motor Drivers with two outputs one will be MAIN and one will be PROG.  These, and any additional outputs, can be set to a number of different modes, not just DCC.</p>
-<p>You can set any Motor Driver output to be DC every time the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> starts up.
-If you wish, at any time you can temporarily change it any DC or DCC mode.</p>
+<p>By default the outputs of a Motor Driver are set to DCC. For Motor Drivers with two outputs one will be <code class="docutils literal notranslate"><span class="pre">MAIN</span></code> and one will be <code class="docutils literal notranslate"><span class="pre">PROG</span></code>.  These, and any additional outputs, can be set to a number of different modes, not just DCC.</p>
+<p>You can set any Motor Driver output to be DC every time the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> starts up. (If you wish, at any time you can subsequently temporarily change it any other DC or DCC mode.)</p>
 <p>This process is similar to a the ‘Route’ process in the previous section but will happen automatically at start-up rather than when you select the route.</p>
 <p>We will be adding some instructions the <code class="docutils literal notranslate"><span class="pre">myAutomation.h</span></code> file a re-uploading the Command Station software your <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>.</p>
 <ol class="arabic simple">
@@ -939,6 +938,7 @@ If you wish, at any time you can temporarily change it any DC or DCC mode.</p>
 <ol class="arabic simple" start="5">
 <li><p>Then Load the Command Station software as normal (on the next page)</p></li>
 </ol>
+<p>Note the track power is immediately turn off anytime you change the track mode. you may wish to add <code class="docutils literal notranslate"><span class="pre">SET_POWER(</span> <span class="pre">track,</span> <span class="pre">ON/OFF</span> <span class="pre">)</span></code> after the <code class="docutils literal notranslate"><span class="pre">SET_TRACK()</span></code> command. e.g. <code class="docutils literal notranslate"><span class="pre">SET_POWER(B</span> <span class="pre">ON)</span></code>.</p>
 </section>
 </section>
 <hr class="docutils" />
@@ -965,8 +965,8 @@ If you wish, at any time you can temporarily change it any DC or DCC mode.</p>
 <section id="if-you-used-a-route-dc">
 <h3><a class="toc-backref" href="#id47" role="doc-backlink">If you used a Route (DC)</a><a class="headerlink" href="#if-you-used-a-route-dc" title="Link to this heading"></a></h3>
 <ol class="arabic simple">
-<li><p>Go to the list of Routes in your throttle</p></li>
-<li><p>Active the Route that you created</p></li>
+<li><p>Go to the list of Routes in your throttle app</p></li>
+<li><p>Activate the Route that you created</p></li>
 <li><p>You will then need to select the Loco Address you assigned to the output when you created the route.</p></li>
 </ol>
 <p><hr class="hr-dashed" /></p>
@@ -975,15 +975,15 @@ If you wish, at any time you can temporarily change it any DC or DCC mode.</p>
 <h3><a class="toc-backref" href="#id48" role="doc-backlink">If you used an Automation (DC)</a><a class="headerlink" href="#if-you-used-an-automation-dc" title="Link to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>You will then need to select any Loco Address that you wish to use</p></li>
-<li><p>Go to the list of Routes and Automations in your throttle</p></li>
-<li><p>Active the Route (Automations) that you created</p></li>
+<li><p>Go to the list of Routes and Automations in your throttle app</p></li>
+<li><p>Activate the Automation that you created</p></li>
 </ol>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="if-you-used-engine-driver-ex-toolbox-or-a-command-dc">
 <h3><a class="toc-backref" href="#id49" role="doc-backlink">If you used Engine Driver, EX-Toolbox or a Command (DC)</a><a class="headerlink" href="#if-you-used-engine-driver-ex-toolbox-or-a-command-dc" title="Link to this heading"></a></h3>
 <ol class="arabic simple">
-<li><p>You will need to select the Loco Address you assigned to the output when you created the route.</p></li>
+<li><p>You will need to select the Loco Address you assigned to the output to DC.</p></li>
 </ol>
 </section>
 </section>
@@ -1340,7 +1340,7 @@ Track A and Track B with sidings;</p>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7ff5d0baa6e0>
+    <jinja2.runtime.BlockReference object at 0x7f5931880b80>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

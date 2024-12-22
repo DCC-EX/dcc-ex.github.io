@@ -18,7 +18,11 @@
 How do I display track current on the display?
 ===============================================
 
-This has become a frequently asked question so we decided to create an article dedicated to the answer. Some users want to monitor how much current their locos are using and how close they may be to the limit set for their command station as they add more locos. The short answer is that this should be a throttle function, or a task for an external device, not a command station function. Indeed, applications like |EX-TB| allow you to see track current virtually in real time.
+This has become a frequently asked question so we decided to create an article dedicated to the answer. 
+
+*Some users want to monitor how much current their locos are using and how close they may be to the limit set for their command station as they add more locos.*
+
+The short answer is that this should be a throttle function, or a task for an external device, not a command station function. Indeed, applications like |EX-TB| allow you to see track current virtually in real time.
 
 Methods For Displaying Current
 -------------------------------

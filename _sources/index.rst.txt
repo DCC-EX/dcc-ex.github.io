@@ -17,7 +17,13 @@ DCC-EX Model Railroading
     :columns: 12 12 12 8
     :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
 
-    |DCC-EX| is a team of dedicated enthusiasts producing open source *DCC & DC solutions* to run your entire model railroad layout. Our easy to use, ready-to-run and do-it-yourself products use our own custom hardware as well as off-the-shelf Arduino and similar technology. Our free and open source EX-CommandStation software is supported by numerous third party hardware and apps like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more. Our mission is to provide free and open source software and hardware designs to make model railroading accessible and affordable to everyone. Read more about our entire "EX"-osystem of offerings in the following pages.
+    |DCC-EX| is a team of dedicated enthusiasts producing open source **DCC** and **DC solutions** to run your entire model railroad layout. 
+    
+    Our easy to use, **ready-to-run** and **do-it-yourself** products use *either* our own custom hardware *or* off-the-shelf Arduino and similar technology. 
+    
+    Our **free and open source** :doc:`EX-CommandStation software </ex-commandstation/index>` is supported by numerous third party hardware and apps like |JMRI|, |Engine Driver|, |WiThrottle|, Rocrail and more. 
+    
+    **Our mission** is to provide free and open source software and hardware designs to make model railroading accessible and affordable to everyone. Read more about our entire "EX"-osystem of offerings in the following pages.
 
   .. grid-item-card:: 
     :columns: 12 12 12 4
@@ -36,20 +42,20 @@ DCC-EX Model Railroading
     :columns: 12 12 12 7
     :class-card: sd-shadow-md sd-rounded-3 sd-width-auto
 
-    If you are just starting with |DCC-EX| then the sections below are intended to help you understand how our products might suit your needs. We've curated this guidance based on feedback from our users: 
+    If you are just starting with |DCC-EX| then the sections will help you understand how our products might suit your needs:
 
     - :ref:`begin/what-to-know:What is EX-CommandStation?`
     - :ref:`begin/what-to-know:what is dcc?`
+    - :ref:`I just want to run DCC trains <begin/what-to-know:i just want to run my trains>`
     - :ref:`begin/what-to-know:We do DC as well!`
     - :ref:`I'm interested in DCC but have a limited budget <begin/what-to-know:i'm interested in dcc but have a limited budget>`
-    - :ref:`I just want to run DCC trains <begin/what-to-know:i just want to run my trains>`
     - :ref:`I want to operate my turnout/points & run DCC trains <begin/what-to-know:i want to operate my turnouts/points and run trains>`
     - :ref:`I want to control accessories & run DCC trains <begin/what-to-know:i want to control all my accessories and run trains>`
     - :ref:`begin/what-to-know:i want some extra automated/animated realism`
     - :ref:`begin/what-to-know:i want a fully automated exhibition layout for my club`
     - :doc:`/begin/comparison`
 
-    If these haven't helped, or you've read them and you are still unsure, then feel free to contact us, preferably through our Discord server where you can chat directly with our team members. Details of this and other contact methods on our :doc:`/support/contact-us` page. 
+    If these haven't helped, or you've read them and you are still unsure, then feel free to contact us, preferably through our :ref:`Discord server <support/index:preferred option - discord>` where you can chat directly with our team members. Details of this and other contact methods on our :doc:`/support/contact-us` page. 
 
   .. grid-item-card:: 
     :columns: 12 12 12 5
@@ -72,9 +78,9 @@ DCC-EX Model Railroading
     Where to next?
     ^^^
     
-    It is important to understand that different |DCC-EX| products, and options within those products, are targeted to different levels of users, from those who don't know anything about electronics or software, through to those with more extensive knowledge and experience. 
+    It is important to understand that our different |DCC-EX| products, and options within those products, are targeted to different levels of users. From those who don't know anything about electronics or software, through to those with more extensive knowledge and experience. 
     
-    We have tagged the pages with helpful icons to help you understand who they are aimed at.  The :doc:`/begin/levels` page explains those levels. Keep an eye out on our pages to see at which level of experience each section of our documentation is aimed towards.
+    We have tagged the pages of this website with helpful icons to help you understand who they are aimed at.  The :doc:`/begin/levels` page explains those levels. Keep an eye out on our pages to see at which level of experience each section of our documentation is aimed towards.
 
 .. toctree::
    :hidden:

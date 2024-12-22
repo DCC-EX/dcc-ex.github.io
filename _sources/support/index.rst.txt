@@ -43,8 +43,8 @@ There are several different ways to get in contact with the team and obtain help
 
 |hr-dashed|
 
-Preferred option: Discord
--------------------------
+Preferred option - Discord
+--------------------------
 
 .. raw:: html
 

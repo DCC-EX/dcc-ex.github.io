@@ -105,7 +105,7 @@ Next Steps
 
 Keep these definitions in mind as you proceed through this website.
 
-To learn more about how to buy a ready-to-run (RTR) or build your own (DIY) |EX-CS| station, click 'Next' or proceed to the :doc:`Ex-Command Station Page </ex-commandstation/index>`.
+To learn more about how to buy a *ready-to-run (RTR)* or build your own *do-it-yourself (DIY)* |EX-CS| station, click 'Next' or proceed to the :doc:`Ex-Command Station Page </ex-commandstation/index>`.
 
 ----
 

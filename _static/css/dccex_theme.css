@@ -439,6 +439,14 @@ html[data-theme='dark'] .note p.admonition-title {
   background: #1a3e55 !important;
 }
 
+html[data-theme='dark'] .important {
+  background: #00211a !important;
+}
+
+html[data-theme='dark'] .important p.admonition-title {
+  background: #1abc9c !important;
+}
+
 .tip {
   background: #eef5f4 !important;
   clear: none !important;

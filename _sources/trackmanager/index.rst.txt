@@ -381,6 +381,15 @@ Any throttle that connect to an |EX-CS| can control analogue (DC) locos just as 
 
   Never drive a loco, DC or DCC, from an |EX-CS| controlled track or district to any other DCC or DC *System*.
 
+|HR-DASHED|
+
+Changing the Pulse Width Frequency
+----------------------------------
+
+**Frequency of PWM in DC Operation** - PWM can use a variety of frequencies for the pulses it sends, and this can alter motor behaviour and noise etc. The default frequency used for the CSB1 is xxHz, but this can be varied using the virtual DCC functions 28-31 (check) to allow you to alter the frequency to better suit your loco's motor. This can of course be done during running from the throttle.
+
+The DC PWM frequency can be set using virtual DCC Functions 28-31.
+
 ----
 
 Replacing or Integrating Into Your Current Layout

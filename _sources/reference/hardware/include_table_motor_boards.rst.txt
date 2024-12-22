@@ -21,7 +21,7 @@
   * - :doc:`DCC-EX EX-MotorShield8874 RevA</reference/hardware/motorboards/ex-motor-shield-8874>`
     - Yes
     - Yes
-    - Tinkerer
+    - Conductor
     - UNO / Mega
     - Yes [#b22]_
     - Yes
@@ -34,7 +34,7 @@
   * - :doc:`Arduino Motor Shield R3</reference/hardware/motorboards/arduino-motor-shield>`
     - Yes
     - Yes
-    - Tinkerer
+    - Conductor
     - UNO / Mega
     - No
     - Yes
@@ -47,7 +47,7 @@
   * - :doc:`Deek-Robot Motor Shield</reference/hardware/motorboards/deek-robot-motor-shield>`
     - Yes
     - Yes
-    - Tinkerer
+    - Conductor
     - UNO / Mega
     - No
     - Yes

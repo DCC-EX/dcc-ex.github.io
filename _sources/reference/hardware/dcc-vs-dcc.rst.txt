@@ -20,17 +20,43 @@ DCC vs DC PWM
 DCC vs. DC PWM: A Quick Overview
 ================================
 
-**DCC (Digital Command Control):** DCC uses a constant voltage on the track with digital signals embedded in the power to control the speed, direction, and functions of your trains. 
+DCC (Digital Command Control)
+-----------------------------
+
+DCC uses a constant voltage on the track with digital signals embedded in the power to control the speed, direction, and functions of your trains. 
 
 There's no need to worry about polarity in DCC, making wiring simpler as your layout expands. The digital signal allows for precise control of multiple trains on the same track, all receiving power at the same time. Each device connected to the track contains a "decoder" that only responds to commands sent to its unique address.
 
-**DC (Direct Current) PWM:** DC PWM operation suits traditional or legacy locomotive control, where the direction and speed of your trains are controlled by varying the voltage and switching polarity. In DC mode, one rail is positive with respect to the other. The train moves forward when voltage is applied and reverses direction when the polarity is flipped. 
+DC (Direct Current) PWM
+-----------------------
 
-DC control is simpler but less flexible, especially if you want to run multiple trains on the same track simultaneously. Under DCC-EX, DC PWM outputs are given a virtual DCC address which allows WiThrottle/DCC-EX throttles to control your DC locos on the piece of track powered by that output. The DC PWM frequency can be set using virtual DCC Functions 28-31 
+DC PWM operation suits traditional or legacy locomotive control, where the direction and speed of your trains are controlled by varying the voltage and switching polarity. In DC mode, one rail is positive with respect to the other. The train moves forward when voltage is applied and reverses direction when the polarity is flipped. 
+
+DC control is simpler but less flexible, especially if you want to run multiple trains on the same track simultaneously. Using the |EX-CS|, DC PWM outputs are given a virtual DCC address which allows WiThrottle/DCC-EX throttles to control your DC locos on the piece of track powered by that output. 
+
+**How PWM Works** - PWM works by rapidly turning the voltage on and off to the track. The rate at which this happens adjusts the "effective" voltage that the locomotive's motor experiences. For example, if the voltage is on 50% of the time and off 50% of the time, the motor behaves as if it's receiving half of the full voltage. This technique is similar to how a DCC decoder controls a motor in a DCC-equipped locomotive. See the image below from Sparkfun.com for an example:
+
+**Benefits of PWM in DC Operation** - Using PWM for speed control has several advantages, particularly in terms of smooth operation. Trains start and stop more gradually, and running at slow speeds becomes smoother and more consistent. This gives you better control over your locomotives, making your layout more enjoyable to operate, especially during more delicate manoeuvres.
+
+
+.. figure:: /_static/images/power/sparkfun_pwm.png
+   :alt: PWM waveform image
+   :scale: 30%
+   :align: center
+
+   PWM Waveform Image. Click the image to enlarge.
+
+
+**Frequency of PWM in DC Operation** - PWM can use a variety of frequencies for the pulses it sends, and this can alter motor behaviour and noise etc. The default frequency used for the CSB1 is xxHz, but this can be varied using the virtual DCC functions 28-31 (check) to allow you to alter the frequency to better suit your loco's motor. This can of course be done during running from the throttle.
+
+The DC PWM frequency can be set using virtual DCC Functions 28-31 
 
 .. TODO XXX check! DCC Functions 28-31 
 
-**Managing DCC and DC Modes in TrackManager:** If you are ready to dive into customising your track outputs, |TM| is the tool you'll use. It allows you to easily switch between DCC and DC modes for any track connected to your EX-CSB1. 
+Managing DCC and DC Modes in TrackManager
+-----------------------------------------
+
+If you are ready to dive into customising your track outputs, |TM| is the tool you'll use. It allows you to easily switch between DCC and DC modes for any track connected to your EX-CSB1. 
 
 You can also set up different tracks for specific purposes, such as making one track a Booster, configuring your PROG track, or enabling Auto-Reverser mode.
 

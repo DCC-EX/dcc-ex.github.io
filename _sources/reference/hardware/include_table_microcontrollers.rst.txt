@@ -37,7 +37,7 @@
   * - Arduino :doc:`Mega2560</reference/hardware/microcontrollers/arduino-mega>`
     - Yes
     - Yes
-    - Tinkerer
+    - Conductor
     - UNO / Mega
     - Yes
     - Yes

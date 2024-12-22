@@ -26,7 +26,9 @@ This versatile board can function as a complete Command Station with USB or WiFi
 
 This page describes and explains the |EX-CSB1| in detail.
 
-.. note:: If you are setting up your |EX-CSB1| for the first time we recommend that you look at the :doc:`/ex-commandstation/ready-to-run/connecting` page first.
+.. important::
+
+   If you are setting up your |EX-CSB1| for the first time we recommend that you look at the :doc:`/ex-commandstation/ready-to-run/connecting` page first.
 
 ----
 
@@ -43,6 +45,17 @@ Board layout
 
 |FORCE-BREAK|
 
+On the Board
+-------------
+
+.. contents:: In this Section
+    :depth: 1
+    :local:
+    :class: in-this-section
+
+Input Power Barrel Jack
+~~~~~~~~~~~~~~~~~~~~~~~
+
 .. figure:: /_static/images/ex-csb1/barrel_jack1.png
    :alt: Barrel Jack
    :scale: 40%
@@ -50,13 +63,16 @@ Board layout
 
    Barrel Jack
 
-**Input Power Barrel Jack** - The CSB1 normally comes with a barrel jack for compatibility with most laptop-type power supplies that use a 2.1mm inner hole diameter and a 5.5mm outer shank diameter. 
+The CSB1 normally comes with a barrel jack for compatibility with most laptop-type power supplies that use a 2.1mm inner hole diameter and a 5.5mm outer shank diameter. 
 
 Be careful since some power supplies have a 2.5mm inner hole which is likely to be too loose. The barrel jack input power is reverse voltage protected. This supplies a 5V switching regulator for all electronics on the board including a 3.3V regulator for 3.3V components, an optional |EX-MS| stacked on top, and power out to the track. 
 
 While it is capable of 10v-25v operation, it is best to choose a suitable track voltage for your scale. Typically this is 12-15v for N scale, and 14-16v for HO scale. With help in choosing your power supply or using one with bare wires instead of a barrel connector, see `Powering the EX-CSB1`_ below.
 
 |FORCE-BREAK|
+
+USB-C Power/Data Connector
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-csb1/usb_conn1.png
    :alt: USB Connector
@@ -65,13 +81,17 @@ While it is capable of 10v-25v operation, it is best to choose a suitable track 
 
    USB Connector
 
-**USB-C Power/Data Connector** - The USB connector can provide power from a computer or any 500mA or larger USB or USB-C Power Delivery (USB-C PD) power supply.  In this way you can connect your EX-CSB1 to a computer and update your software version or load EXRAIL scripts that run your accessories. However, without a power supply powering the DC input jack, you cannot supply power to the rails to run trains. 
+
+The USB connector can provide power from a computer or any 500mA or larger USB or USB-C Power Delivery (USB-C PD) power supply.  In this way you can connect your EX-CSB1 to a computer and update your software version or load EXRAIL scripts that run your accessories. However, without a power supply powering the DC input jack, you cannot supply power to the rails to run trains. 
 
 You can connect your track Power supply (see above) to the barrel jack while the USB is connected, as they will not interfere with each other. You may also wish to do this to isolate the EX-CSB1 processor power from any interruptions to track power due to overload for example. 
 
 The USB port is also very useful for connecting a serial monitor to test the command station and view logging information in real time to aid in fault finding. See :doc:`/reference/tools/serial-monitor`
 
 |FORCE-BREAK|
+
+Track A and B Outputs
+~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-csb1/pluggable_connectors.png
    :alt: Pluggable Track Output Connectors
@@ -80,13 +100,18 @@ The USB port is also very useful for connecting a serial monitor to test the com
 
    Pluggable Track |BR| Output Connectors
 
-**Track A and B Outputs** - These are female pluggable terminals that accept a removable male screw terminal plug (included with your CSB1). Using the removable connectors allows for easy reconfiguration, testing, and placement of your command station. You can unsolder these connectors (or ask for a special order) and replace them with 3.5mm pitch screw terminals if you prefer. 
+These are female pluggable terminals that accept a removable male screw terminal plug (included with your CSB1). Using the removable connectors allows for easy reconfiguration, testing, and placement of your command station. You can unsolder these connectors (or ask for a special order) and replace them with 3.5mm pitch screw terminals if you prefer. 
 
-For DCC operation, output A is usually the MAIN track and output B is the programming track. However, with our TrackManager :sup:`tm` feature, you can configure any output to be DCC, DC, MAIN, or PROG. You should keep the phase of the tracks aligned, so if a train crosses from one power district to another it doesn't intentionally cause a short (unless it's a reversing loop and you have assigned that output to have Auto-Reverse capability.) See: :doc:`/ex-installer/managing-config-files`. 
+For DCC operation, output A is usually the MAIN track and output B is the programming track. However, with our TrackManager :sup:`tm` feature, you can configure any output to be DCC, DC, MAIN, or PROG. 
+
+You should keep the phase of the tracks aligned, so if a train crosses from one power district to another it doesn't intentionally cause a short (unless it's a reversing loop and you have assigned that output to have Auto-Reverse capability.) See: :doc:`/ex-installer/managing-config-files`. 
 
 Power to each output can be controlled together or individually. Correct wired gauge for the screw terminals is 16 to 28AWG (1.5mm^2). Be sure your wire gauge can handle the current you expect on the track.
 
 |FORCE-BREAK|
+
+Track Power LEDs
+~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-csb1/track_output_leds.png
    :alt: Track Output LEDs
@@ -95,7 +120,7 @@ Power to each output can be controlled together or individually. Correct wired g
 
    Track Output LEDs
 
-**Track Power LEDs** - These are indicators that power is being sent to the track, and the mode of the output. With DCC operation, both LEDs should shine brightly when your throttle issues the power-on command. 
+These are indicators that power is being sent to the track, and the mode of the output. With DCC operation, both LEDs should shine brightly when your throttle issues the power-on command. 
 
 You can also configure the CSB1 to start with power on using a mySetup.h or myAutomation.h file, or by selecting one of the options in |EX-I|. See the :ref:`EX -Installer page <ex-installer/installing:start with power on>` for more information on how to change this behaviour. 
 
@@ -105,6 +130,9 @@ For DC PWM mode operation, when power is on, ONE LED will light for each directi
 
 |FORCE-BREAK|
 
+QWiic Connector (I2C)
+~~~~~~~~~~~~~~~~~~~~~
+
 .. figure:: /_static/images/ex-csb1/qwiic_conn.png
    :alt: Qwiic Connector
    :scale: 30%
@@ -112,13 +140,16 @@ For DC PWM mode operation, when power is on, ONE LED will light for each directi
 
    Qwiic Connector
 
-**QWiic Connector (I2C)** - This is a standard for an I2C bus connection so that the same cable can be used to daisy chain I2C devices like displays, sensors, servos, etc. 
+This is a standard for an I2C bus connection so that the same cable can be used to daisy chain I2C devices like displays, sensors, servos, etc. 
 
 Please note the pin connection order when making your own cables or when purchasing from discount sites that often wire them incorrectly. For example, red should always be positive power and black is negative DC or "GND". 
 
 :dcc-ex-red-bold-italic:`IMPORTANT: The voltage for this connector is ALWAYS 3.3V!``
 
 |FORCE-BREAK|
+
+RailSync Connector
+~~~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-csb1/booster_conn.png
    :alt: Railsync Connector
@@ -127,11 +158,14 @@ Please note the pin connection order when making your own cables or when purchas
 
    Railsync Connector
 
-**RailSync Connector** - This is a standard Railsync input and is labelled "Booster In" on the top of the board. Connecting a RailSync output from a Command Station or Booster will automatically switch the EXCSB1 to booster mode on receipt of an input signal when the CSB1 is running the appropriate EX-RAIL script. 
+This is a standard Railsync input and is labelled "Booster In" on the top of the board. Connecting a RailSync output from a Command Station or Booster will automatically switch the EXCSB1 to booster mode on receipt of an input signal when the CSB1 is running the appropriate EX-RAIL script. 
 
 Again be sure to wire the DCC outputs to power districts with consistent phasing. Any voltage between 5V and 26V at the input will work. The Digitrax specification is from 12V to 26V. See `the DCCWiki article on RailSync <https://dccwiki.com/LocoNet_and_RailSync_Voltages>`_ |EXTERNAL-LINK|
 
 |FORCE-BREAK|
+
+OLED I2C Header
+~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-csb1/oled_header.png
    :alt: OLED header
@@ -140,13 +174,16 @@ Again be sure to wire the DCC outputs to power districts with consistent phasing
 
    OLED header
 
-**OLED I2C Header** - This header is primarily designed for an OLED display, but can also be used as a female header for any I2C device that has male pins or for use with Dupont jumper wires. 
+This header is primarily designed for an OLED display, but can also be used as a female header for any I2C device that has male pins or for use with Dupont jumper wires. 
 
 *IMPORTANT:* Many .96" and 1.3" OLED displays, and some others will connect directly to the pins, however **beware** that sadly there is no standard for pin order. 
 
 Make absolutely sure that any display you purchase to connect directly to the header has its pins in the correct order! The correct order is GND, V+, SCL, SDA and is different than other OLED connectors on the board. For more information see: :doc:`/reference/hardware/i2c-devices`.
 
 |FORCE-BREAK|
+
+Dual I2C Header
+~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-csb1/dual_i2c_pins.png
    :alt: Dual Male I2C Header
@@ -155,13 +192,16 @@ Make absolutely sure that any display you purchase to connect directly to the he
 
    Dual Male I2C Header
 
-**Dual I2C Header** - This is a dual male pin I2C header with 2 rows of I2C bus connectors one beside the other. They are wired together on the same I2C bus as the QWiic connector and OLED I2C Header. 
+This is a dual male pin I2C header with 2 rows of I2C bus connectors one beside the other. They are wired together on the same I2C bus as the QWiic connector and OLED I2C Header. 
 
 *IMPORTANT:* The pin order on these two rows are different from the OLED header, pay attention to the pin order when using Dupont female wires. The correct order for this header is SCL, GND, SDA and V+ as labelled on the board. 
 
 The EX-CSB1 is a 3.3V device, so all the I2C connectors only supply 3.3V unlike the Arduino Mega. Keep that in mind if you are upgrading from a DIY Arduino Command Station to a 3.3V device like the EX-CSB1 and are connecting I2C devices. For more information see: :doc:`/reference/hardware/i2c-devices`.
 
 |FORCE-BREAK|
+
+Reset Button
+~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-csb1/reset_button.png
    :alt: Reset Button
@@ -170,11 +210,14 @@ The EX-CSB1 is a 3.3V device, so all the I2C connectors only supply 3.3V unlike 
 
    Reset Button
 
-**Reset Button** - Pressing the reset button does a hard reset of the command station. If the Command Station gets into an unexpected state, you can reset it by pressing this button. 
+Pressing the reset button does a hard reset of the command station. If the Command Station gets into an unexpected state, you can reset it by pressing this button. 
 
 The DCC-EX software, |EX-R| Scripts, and any other settings are maintained, but the unit reboots as if it had been turned off. Boards stacked on top of the EX-CSB1 also receive the reset signal, but less well designed boards may not be reset depending upon their own circuit peculiarities. Only rarely should it require unplugging all power from the EX-CSB1 to perform a power-on hard reset.
 
 |FORCE-BREAK|
+
+ESP32 Microcontroller / WiFi / WiFi Antenna
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-csb1/esp32_1.png
    :alt: ESP32 Microcontroller
@@ -183,11 +226,14 @@ The DCC-EX software, |EX-R| Scripts, and any other settings are maintained, but 
 
    ESP32 Microcontroller
 
-**ESP32 Microcontroller / WiFi / WiFi Antenna** - One microcontroller controls everything on the EX-CSB1. It runs the |EX-CS| software, any mySetup.h file instructions, any myAutomation.h scripts, and provides the WiFi connection to throttles. 
+One microcontroller controls everything on the EX-CSB1. It runs the |EX-CS| software, any mySetup.h file instructions, any myAutomation.h scripts, and provides the WiFi connection to throttles. 
 
 Be careful in your setup to protect WiFi antenna from being damaged from contact with anything or should the unit be dropped. For best WiFi performance, keep items at least 2cm (.75") from the antenna and do not allow any metallic objects to be near, underneath, or surrounding the antenna.
 
 |FORCE-BREAK|
+
+WiFi / User LED
+~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-csb1/wifi_led2.png
    :alt: WiFi LED
@@ -196,9 +242,12 @@ Be careful in your setup to protect WiFi antenna from being damaged from contact
 
    WiFi LED
 
-**WiFi / User LED** - When WiFi is enabled, this LED will stay on. It is under software control in the EX-CommandStation software, so the LED can be repurposed to indicate a user defined function with an |EX-R| script or a ``<U>`` command function.
+When WiFi is enabled, this LED will stay on. It is under software control in the EX-CommandStation software, so the LED can be repurposed to indicate a user defined function with an |EX-R| script or a ``<U>`` command function.
 
 |FORCE-BREAK|
+
+3.3V LED
+~~~~~~~~
 
 .. figure:: /_static/images/ex-csb1/3v_led.png
    :alt: 3.3V LED
@@ -207,9 +256,12 @@ Be careful in your setup to protect WiFi antenna from being damaged from contact
 
    3.3V LED
 
-**3.3V LED** - The 3.3V power LED will light whenever the 3.3V regulator is powered. This occurs when powered by USB, or from an external power supply connected to the barrel jack. This is simply an indicator that the circuitry on the board is powered.
+The 3.3V power LED will light whenever the 3.3V regulator is powered. This occurs when powered by USB, or from an external power supply connected to the barrel jack. This is simply an indicator that the circuitry on the board is powered.
 
 |FORCE-BREAK|
+
+5V LED
+~~~~~~
 
 .. figure:: /_static/images/ex-csb1/5v_led.png
    :alt: 5V LED
@@ -218,17 +270,23 @@ Be careful in your setup to protect WiFi antenna from being damaged from contact
 
    5V LED
 
-**5V LED** - The 5V LED will light whenever power is supplied to the barrel jack. This LED indicates that power is being supplied to the 5V regulator which can power an EX-MotorShield 8874 stacked onto the GPIO Headers. 
+The 5V LED will light whenever power is supplied to the barrel jack. This LED indicates that power is being supplied to the 5V regulator which can power an EX-MotorShield 8874 stacked onto the GPIO Headers. 
 
 Power from the barrel jack will power the 5V regulator which in turn powers the 3.3V regulator. Therefore, when power is supplied via the barrel jack, both the 5V and 3.3V LEDs will be lit.
 
 |FORCE-BREAK|
 
-**GPIO Headers** - The 4 GPIO headers accept a DCC-EX |EX-MS|. The EX-CSB1 itself has 2 outputs for 2 track power districts. 
+GPIO Headers
+~~~~~~~~~~~~
+
+The 4 GPIO headers accept a DCC-EX |EX-MS|. The EX-CSB1 itself has 2 outputs for 2 track power districts. 
 
 Stacking the EX8874 on these headers provides 2 additional power districts for a total of 4. Any of the 4 outputs can be used for any combination of DCC MAIN, DCC PROG, or DC PWM. You must enable the extra board from the EX-Installer or your config.h file for a manual install. See the :ref:`ex-commandstation/ready-to-run/manual:adding an ex-motorshield 8874` section of this document.
 
 |FORCE-BREAK|
+
+OLED Display (not shown above)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-csb1/oled_display.png
    :alt: OLED Display
@@ -237,9 +295,12 @@ Stacking the EX8874 on these headers provides 2 additional power districts for a
 
    OLED Display
 
-**OLED Display (not shown above)** - The OLED display provides diagnostics, status, and general information. The OLED display can also show output from EX-RAIL scripts including user defined text. By default, the display shows the version number, license, power status, free memory, and if configured, your WiFi access point login information.
+The OLED display provides diagnostics, status, and general information. The OLED display can also show output from EX-RAIL scripts including user defined text. By default, the display shows the version number, license, power status, free memory, and if configured, your WiFi access point login information.
 
 |FORCE-BREAK|
+
+HOT Surface Area
+~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-csb1/hot_area.png
    :alt: Hot Area Warning
@@ -248,9 +309,12 @@ Stacking the EX8874 on these headers provides 2 additional power districts for a
 
    Hot Area Warning
 
-**HOT Surface Area** - The entire area shown in the image to the right can get extremely hot during operation. Be carful not to touch this area at the top or bottom of the board to avoid being burned. This is especially true at high track current levels. Also be sure to provide proper ventilation to the board. If placed in a case, that case must have proper ventilation. Consider using proper vent holes and a fan if you intend to place the EX-CSB1 inside an enclosure.
+The entire area shown in the image to the right can get extremely hot during operation. Be carful not to touch this area at the top or bottom of the board to avoid being burned. This is especially true at high track current levels. Also be sure to provide proper ventilation to the board. If placed in a case, that case must have proper ventilation. Consider using proper vent holes and a fan if you intend to place the EX-CSB1 inside an enclosure.
 
 |FORCE-BREAK|
+
+I2C Jumper Pads
+~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-csb1/i2c_jumper_pads.png
    :alt: I2C Jumper Pads
@@ -259,11 +323,14 @@ Stacking the EX8874 on these headers provides 2 additional power districts for a
 
    I2C Jumper Pads
 
-**I2C Jumper Pads** - There are 2 solder pad jumpers on the EX-CSB1 labelled "i2c". 
+There are 2 solder pad jumpers on the EX-CSB1 labelled "i2c". 
 
 .. TODO XXX why and when would I use these?
 
 |FORCE-BREAK|
+
+Unpopulated Power Connector
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-csb1/unpopulated_power_pins.png
    :alt: Unpopulated Power Pads
@@ -272,9 +339,12 @@ Stacking the EX8874 on these headers provides 2 additional power districts for a
 
    Unpopulated Power Pads
 
-**Unpopulated Power Connector** - These unpopulated solder pads are used internally for testing and can provide power connections for an optional header. When operated without an |EX-MS| on top, a user could remove the barrel jack and solder pins here capable of handling the 5A maximum current to power the board and the track.
+These unpopulated solder pads are used internally for testing and can provide power connections for an optional header. When operated without an |EX-MS| on top, a user could remove the barrel jack and solder pins here capable of handling the 5A maximum current to power the board and the track.
 
 |FORCE-BREAK|
+
+Board Bottom Legend
+~~~~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-csb1/pin_legend.png
    :alt: Pin Legend
@@ -283,7 +353,7 @@ Stacking the EX8874 on these headers provides 2 additional power districts for a
 
    Pin Legend
 
-**Board Bottom Legend** - On the bottom of the board there are several markings such as the DCC-EX logo, board revision, and the QR code that links to this page on our website. 
+On the bottom of the board there are several markings such as the DCC-EX logo, board revision, and the QR code that links to this page on our website. 
 
 Additionally, important pins are labelled should you need access to them from the top of the board headers. Input/Output (GPIO) pins are labelled "IO36", "IO39", etc. GND, 5V, and 3.3V are also labelled. Note that when an EX-MotorShield8874 is stacked on top for extra power districts, there are no free GPIO pins left to connect accessories directly the |EX-CSB1|. You must use the I2C pins and connect port expanders and/or servo boards to connect your accessories.
 
@@ -319,6 +389,12 @@ To get the most out of your EX-CSB1, we suggest using a modern switching power s
 When you connect power to the CSB1, you should see one or both bright green power LEDs light up, confirming that the electronics are working. 
 
 However, for safety, track power will be off by default when you first plug in the EX-CSB1. This is to prevent power from accidentally being applied to your layout before everything is ready. See the :ref:`EX -Installer page <ex-installer/installing:start with power on>` for more information on how to change this behaviour.
+
+----
+
+|HR-DASHED|
+
+----
 
 Connecting and Testing Your Command Station
 ============================================
@@ -429,7 +505,7 @@ You can connect to the |EX-CSB1| using both an app via Wifi on a smartphone or t
 |HR-DASHED|
 
 Connecting via Wifi
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~
 
 .. todo: Connecting via Wifi
 
@@ -446,7 +522,7 @@ You have nothing further to do to start using your DCC-EX |EX-CSB1|. You can rem
 |HR-DASHED|
 
 Connecting Via USB and EX-WebThrottle
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can connect to the |EX-CSB1| using both an app via Wifi on a smartphone or tablet, and on a PC by using |EX-WT| with the PC plugged into the EX-CSB1's USB-C port. 
 
@@ -476,46 +552,16 @@ DC Pulse Width Modulation (PWM)
 
 The EX-CSB1 is set to operate in DCC mode by default. You can switch to any of the outputs to DC mode.
 
-|HR-DASHED|
+The process to change the outputs to DC are described in detail in the :doc:`/trackmanager/index` page.
 
-DCC vs. DC PWM: A Quick Overview
---------------------------------
-
-**DCC (Digital Command Control):** DCC uses a constant voltage on the track with digital signals embedded in the power to control the speed, direction, and functions of your trains. 
-
-There's no need to worry about polarity in DCC, making wiring simpler as your layout expands. The digital signal allows for precise control of multiple trains on the same track, all receiving power at the same time. Each device connected to the track contains a "decoder" that only responds to commands sent to its unique address.
-
-**DC (Direct Current) PWM:** DC PWM operation suits traditional or legacy locomotive control, where the direction and speed of your trains are controlled by varying the voltage and switching polarity. In DC mode, one rail is positive with respect to the other. The train moves forward when voltage is applied and reverses direction when the polarity is flipped. 
-
-DC control is simpler but less flexible, especially if you want to run multiple trains on the same track simultaneously. Under DCC-EX, DC PWM outputs are given a virtual DCC address which allows WiThrottle/DCC-EX throttles to control your DC locos on the piece of track powered by that output. The DC PWM frequency can be set using virtual DCC Functions 28-31 
-
-.. TODO XXX check! DCC Functions 28-31 
-
-**Managing DCC and DC Modes in TrackManager:** If you are ready to dive into customising your track outputs, |TM| is the tool you'll use. It allows you to easily switch between DCC and DC modes for any track connected to your EX-CSB1. 
-
-You can also set up different tracks for specific purposes, such as making one track a Booster, configuring your PROG track, or enabling Auto-Reverser mode.
-
-For detailed steps on how to use TrackManager to change track modes and settings, check out the :doc:`TrackManager page </trackmanager/index>`.
+Additional technical information about DC PWM are explained on our :doc:`/reference/hardware/dcc-vs-dcc` page.
 
 |HR-DASHED|
 
 DC Operation
 -------------
 
-When using DC mode with the EX-CSB1, it is important to understand that this is mode does not produce the traditional varying of the DC voltage to control the speed of your locomotive. The speed of your train is controlled using a method called PWM (Pulse Width Modulation), so instead, the track always receives full voltage whenever the throttle is set above zero.
-
-**How PWM Works** - PWM works by rapidly turning the voltage on and off to the track. The rate at which this happens adjusts the "effective" voltage that the locomotive's motor experiences. For example, if the voltage is on 50% of the time and off 50% of the time, the motor behaves as if it's receiving half of the full voltage. This technique is similar to how a DCC decoder controls a motor in a DCC-equipped locomotive. See the image below from Sparkfun.com for an example:
-
-.. figure:: /_static/images/power/sparkfun_pwm.png
-   :alt: PWM waveform image
-   :scale: 30%
-   :align: center
-
-   PWM Waveform Image. Click the image to enlarge.
-
-**Benefits of PWM in DC Operation** - Using PWM for speed control has several advantages, particularly in terms of smooth operation. Trains start and stop more gradually, and running at slow speeds becomes smoother and more consistent. This gives you better control over your locomotives, making your layout more enjoyable to operate, especially during more delicate manoeuvres.
-
-**Frequency of PWM in DC Operation** - PWM can use a variety of frequencies for the pulses it sends, and this can alter motor behaviour and noise etc. The default frequency used for the CSB1 is xxHz, but this can be varied using the virtual DCC functions 28-31 (check) to allow you to alter the frequency to better suit your loco's motor. This can of course be done during running from the throttle.
+When using DC mode with the EX-CSB1, it is important to understand that this is mode does not produce the traditional varying of the DC voltage to control the speed of your locomotive. The speed of your train is controlled using a method called PWM (Pulse Width Modulation), so instead, the track always receives full voltage whenever the throttle is set above zero, just in pulses rather than continuously.
 
 .. TODO XXX - map of function number to frequency
 
@@ -526,7 +572,11 @@ Use TrackManager to Set Outputs to DCC or DC Operation
 
 The EX-CSB1 is set to operate in DCC mode by default. 
 
-If you want to switch to any of the outputs to DC mode, you can find instructions on how to do that here |TM| page
+If you want to switch to any of the outputs to DC mode, you can find instructions on how to do that on the :doc:`/trackmanager/index` page.
+
+----
+
+|HR-DASHED|
 
 ----
 
@@ -550,14 +600,14 @@ First Time Connection
 ---------------------
 
 Step 1: Connect the EX-CSB1 to Your Computer
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Locate the USB Port: Find the USB-C port on your EX-CSB1.
 Use a Compatible USB Cable: Grab a USB-C cable that matches the port on your PC or laptop. This will likely be a USB-A to USB-C cable for older PCs and laptops, or a USB-C to USB-C for more modern PCs and laptops.
 Plug It In: Connect one end of the USB cable to the EX-CSB1 and the other end to an available USB port on your computer.
 
 Step 2: Install the Required USB Drivers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Automatic Driver Installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -623,84 +673,84 @@ The |EX-CSB1| does not have a simple 'reset' button.
 If you need to reset your EX-CSB1 Command Station software to its default settings, you'll need to reinstall the software using the default settings. Follow these steps to reset the software:
 
 Step 1: Disconnect Power
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Before you begin, make sure the Command Station is powered off. Unplug the power supply from the wall or disconnect the barrel connector from the CSB1. This ensures that the system is completely powered down before the reset process.
 
 Step 2: Connect to Your Computer via USB
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Locate the USB Port
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 
 Find the USB port on your EX-CSB1.
 
 Use a Compatible USB Cable
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Connect the CSB1 to your computer using the appropriate USB cable.
 
 Power On
-~~~~~~~~
+^^^^^^^^
 
 Plug the power supply back in or reconnect the barrel connector to power on the CSB1.
 
 Step 3: Download the Latest Installer
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Visit the DCC-EX Website 
-~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Go to the :doc:`official DCC-EX website </ex-installer/installing>`.
 
 Save the Installer
-~~~~~~~~~~~~~~~~~~ 
+^^^^^^^^^^^^^^^^^^ 
 
 Save the |EX-I| file to a location on your computer where you can easily access it.
 
 Step 4: Run EX-Installer
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Open EX-Installer 
-~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 
 Locate the downloaded installer file on your computer and double-click to run it.
 
 Follow the On-Screen Instructions 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Following the instructions on the :doc:`/ex-commandstation/installer-rtr` page.
 
 |EX-I| will guide you through the reinstallation process. During this process, the existing software on the |EX-CSB1| will be overwritten with the default settings.
 
 Complete the Installation
-~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Allow |EX-I| to complete the process. Once done, the Command Station will be reset to its original configuration.
 
 Step 5: Verify the Reset
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Launch the Command Station Software
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 After the installation is complete, power up the |EX-CSB1| to ensure it's running correctly with the default settings.
 
 Check the Configuration
-~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Confirm that the software has been reset by checking the basic settings and making sure they match the defaults.
 
 Step 6: Reconfigure if Necessary
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Customise Settings
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 If you need to adjust the settings to suit your layout, you can now do so within |EX-I|.
 
 Test Your Setup
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 Power up your layout and test the system to ensure everything is working as expected.
 
@@ -734,7 +784,7 @@ Connecting Optional Devices and Accessories
 |HR-DASHED|
 
 Integrated displays
-^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~
 
 .. todo:: Integrated displays
 
@@ -742,22 +792,22 @@ Integrated displays
 |HR-DASHED|
 
 |I2C| Accessories
-^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
 
 DCC-EX I2C Hardware Overview
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The EX-CSB1 Command Station allows you to expand your model railway setup by connecting various I2C accessories such as sensors, displays, and GPIO expanders. Using the DCC-EX |EX-I| and additional tools, you can easily configure these accessories to work with your layout.
 
 Step 1: Selecting |I2C| Accessories
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Choose Compatible Accessories:
 Common I2C accessories include displays (e.g., OLED, LCD), sensors (e.g., temperature, distance), and GPIO expanders.
 Ensure your accessories are compatible with I2C and check the DCC-EX website for supported devices.
 
 Step 2: Connecting Accessories to EX-CSB1
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Locate the I2C Ports:
 Use the "I2C x 2" ports for general I2C devices.
@@ -769,7 +819,7 @@ Power: Depending on your device's requirements, connect the VCC pin to either 3.
 Daisy-Chaining Multiple Devices: If connecting more than one I2C device, ensure each has a unique I2C address, which can be set via jumpers or configuration switches.
 
 Step 3: Installing and Running the DCC-EX Installer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Download and Install:
 
@@ -785,7 +835,7 @@ The installer will allow you to configure connected displays (such as OLED or LC
 For other I2C devices, further configuration may require manual adjustments using the DCC-EX CommandStation software or editing configuration files.
 
 Step 4: Manual Configuration for Advanced Accessories
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Access the CommandStation Software:
 

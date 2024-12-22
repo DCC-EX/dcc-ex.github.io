@@ -11,7 +11,7 @@
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=f4b9447a" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=26b7f1a2" />
       <link rel="stylesheet" type="text/css" href="../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -629,98 +629,101 @@
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#welcome-to-dcc-ex-trackmanager" id="id11">Welcome to DCC-EX TrackManager</a></p></li>
-<li><p><a class="reference internal" href="#track-manager-modes" id="id12">Track Manager Modes</a></p></li>
-<li><p><a class="reference internal" href="#dcc-requirements" id="id13">DCC Requirements</a></p></li>
-<li><p><a class="reference internal" href="#dc-requirements" id="id14">DC Requirements</a></p>
+<li><p><a class="reference internal" href="#welcome-to-dcc-ex-trackmanager" id="id13">Welcome to DCC-EX TrackManager</a></p></li>
+<li><p><a class="reference internal" href="#track-manager-modes" id="id14">Track Manager Modes</a></p></li>
+<li><p><a class="reference internal" href="#requirements-dcc-and-dc" id="id15">Requirements (DCC and DC)</a></p>
 <ul>
-<li><p><a class="reference internal" href="#additional-technical-information" id="id15">Additional Technical Information</a></p></li>
+<li><p><a class="reference internal" href="#dcc-requirements" id="id16">DCC Requirements</a></p></li>
+<li><p><a class="reference internal" href="#dc-requirements" id="id17">DC Requirements</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#changing-a-motor-driver-output-to-a-different-dcc-mode" id="id16">Changing a Motor Driver Output to a different DCC mode</a></p>
+<li><p><a class="reference internal" href="#changing-a-motor-driver-output-to-a-different-dcc-mode" id="id18">Changing a Motor Driver Output to a different DCC mode</a></p>
 <ul>
-<li><p><a class="reference internal" href="#temporarily-changing-to-a-different-dcc-mode" id="id17">Temporarily Changing to a Different DCC Mode</a></p></li>
-<li><p><a class="reference internal" href="#permanently-changing-to-a-different-dcc-mode" id="id18">Permanently Changing To a Different DCC Mode</a></p></li>
+<li><p><a class="reference internal" href="#temporarily-changing-to-a-different-dcc-mode" id="id19">Temporarily Changing to a Different DCC Mode</a></p></li>
+<li><p><a class="reference internal" href="#permanently-changing-the-dcc-mode" id="id20">Permanently Changing the DCC Mode</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#changing-a-motor-driver-output-to-dc" id="id19">Changing a Motor Driver Output to DC</a></p>
+<li><p><a class="reference internal" href="#changing-a-motor-driver-output-to-dc" id="id21">Changing a Motor Driver Output to DC</a></p>
 <ul>
-<li><p><a class="reference internal" href="#temporarily-changing-to-dc" id="id20">Temporarily Changing to DC</a></p></li>
-<li><p><a class="reference internal" href="#permanently-changing-to-dc" id="id21">Permanently Changing To DC</a></p></li>
+<li><p><a class="reference internal" href="#controlling-the-output-not-the-loco" id="id22">Controlling the output not the loco</a></p></li>
+<li><p><a class="reference internal" href="#temporarily-changing-to-dc" id="id23">Temporarily Changing to DC</a></p></li>
+<li><p><a class="reference internal" href="#permanently-changing-to-dc" id="id24">Permanently Changing To DC</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#selecting-dc-loco-to-control" id="id22">Selecting DC loco to control</a></p>
+<li><p><a class="reference internal" href="#selecting-a-dc-loco-to-control" id="id25">Selecting A DC loco to control</a></p>
 <ul>
-<li><p><a class="reference internal" href="#if-you-set-the-output-to-be-permanently-dc" id="id23">If you set the Output to be permanently DC</a></p></li>
-<li><p><a class="reference internal" href="#if-you-used-a-route-dc" id="id24">If you used a Route (DC)</a></p></li>
-<li><p><a class="reference internal" href="#if-you-used-an-automation-dc" id="id25">If you used an Automation (DC)</a></p></li>
-<li><p><a class="reference internal" href="#if-you-used-engine-driver-ex-toolbox-or-a-command-dc" id="id26">If you used Engine Driver, EX-Toolbox or a Command (DC)</a></p></li>
+<li><p><a class="reference internal" href="#if-you-set-the-output-to-be-permanently-dc" id="id26">If you set the Output to be permanently DC</a></p></li>
+<li><p><a class="reference internal" href="#if-you-used-a-route-dc" id="id27">If you used a Route (DC)</a></p></li>
+<li><p><a class="reference internal" href="#if-you-used-an-automation-dc" id="id28">If you used an Automation (DC)</a></p></li>
+<li><p><a class="reference internal" href="#if-you-used-engine-driver-ex-toolbox-or-a-command-dc" id="id29">If you used Engine Driver, EX-Toolbox or a Command (DC)</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#replacing-or-integrating-into-your-current-layout" id="id27">Replacing or Integrating Into Your Current Layout</a></p></li>
-<li><p><a class="reference internal" href="#controlling-a-dc-loco" id="id28">Controlling a DC Loco</a></p></li>
-<li><p><a class="reference internal" href="#trackmanager-technical-details-and-detail-instructions" id="id29">TrackManager Technical Details and Detail Instructions</a></p>
+<li><p><a class="reference internal" href="#controlling-a-dc-loco" id="id30">Controlling a DC Loco</a></p></li>
+<li><p><a class="reference internal" href="#replacing-or-integrating-into-your-current-layout" id="id31">Replacing or Integrating Into Your Current Layout</a></p></li>
+<li><p><a class="reference internal" href="#trackmanager-technical-details-and-detailed-instructions" id="id32">TrackManager Technical Details and Detailed Instructions</a></p>
 <ul>
-<li><p><a class="reference internal" href="#how-do-you-run-a-ex-commandstation-in-dc-pwm-mode" id="id30">How do you run a EX-CommandStation in DC (PWM) mode?</a></p></li>
-<li><p><a class="reference internal" href="#controlling-managing-dcc-ex-trackmanager-modes" id="id31">Controlling &amp; Managing DCC-EX TrackManager modes</a></p></li>
-<li><p><a class="reference internal" href="#trackmanager-commands" id="id32">TrackManager Commands</a></p></li>
-<li><p><a class="reference internal" href="#dcc-ex-command-station-with-ex-rail-trackmanager" id="id33">DCC-EX Command Station with EX-RAIL &amp; TrackManager</a></p></li>
-<li><p><a class="reference internal" href="#modular-layouts" id="id34">Modular Layouts</a></p></li>
+<li><p><a class="reference internal" href="#how-do-you-run-a-ex-commandstation-in-dc-pwm-mode" id="id33">How do you run a EX-CommandStation in DC (PWM) mode?</a></p></li>
+<li><p><a class="reference internal" href="#controlling-managing-dcc-ex-trackmanager-modes" id="id34">Controlling &amp; Managing DCC-EX TrackManager modes</a></p></li>
+<li><p><a class="reference internal" href="#trackmanager-commands" id="id35">TrackManager Commands</a></p></li>
+<li><p><a class="reference internal" href="#dcc-ex-command-station-with-ex-rail-trackmanager" id="id36">DCC-EX Command Station with EX-RAIL &amp; TrackManager</a></p></li>
+<li><p><a class="reference internal" href="#modular-layouts" id="id37">Modular Layouts</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#exrail-examples" id="id35">EXRAIL examples</a></p>
+<li><p><a class="reference internal" href="#exrail-examples" id="id38">EXRAIL examples</a></p>
 <ul>
-<li><p><a class="reference internal" href="#example-of-user-defined-exrail-scripts-running-on-engine-driver-throttle-app-android" id="id36">Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (Android):</a></p></li>
-<li><p><a class="reference internal" href="#exrail-functions-displaying-on-smartphone-apps-universal-wifi-throttles" id="id37">EXRAIL Functions Displaying on Smartphone Apps &amp; Universal WiFi Throttles</a></p></li>
+<li><p><a class="reference internal" href="#example-of-user-defined-exrail-scripts-running-on-engine-driver-throttle-app-android" id="id39">Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (Android):</a></p></li>
+<li><p><a class="reference internal" href="#exrail-functions-displaying-on-smartphone-apps-universal-wifi-throttles" id="id40">EXRAIL Functions Displaying on Smartphone Apps &amp; Universal WiFi Throttles</a></p></li>
 </ul>
 </li>
 </ul>
 </nav>
 </aside>
 <section id="welcome-to-dcc-ex-trackmanager">
-<h2><a class="toc-backref" href="#id11" role="doc-backlink">Welcome to DCC-EX TrackManager</a><a class="headerlink" href="#welcome-to-dcc-ex-trackmanager" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Welcome to DCC-EX TrackManager</a><a class="headerlink" href="#welcome-to-dcc-ex-trackmanager" title="Link to this heading"></a></h2>
 <p><em>A first for the DCC &amp; DC model railroading world.</em></p>
 <p><a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> is now a dual <strong>Command Station</strong> for both <strong>Digital Command Control (DCC)</strong> and <strong>analogue (DC)</strong> layouts.</p>
 <p>With just a single <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> and a compatible throttle you can simultaneously run both your DCC Locos and analogue DC Locos with road number IDs as throttle addresses from 1 to 10239 to control and drive them on multiple separate insulated tracks/districts.</p>
 </section>
 <hr class="docutils" />
 <section id="track-manager-modes">
-<h2><a class="toc-backref" href="#id12" role="doc-backlink">Track Manager Modes</a><a class="headerlink" href="#track-manager-modes" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">Track Manager Modes</a><a class="headerlink" href="#track-manager-modes" title="Link to this heading"></a></h2>
 <p>By default the outputs of a Motor Driver are set to DCC. For Motor Drivers with two outputs one will be MAIN and one will be PROG.  These, and any additional outputs, can be set to a number of different modes, not just DCC.</p>
 <p>Valid Modes are:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>DCC modes</p>
+<li><p><a class="reference internal" href="#changing-a-motor-driver-output-to-a-different-dcc-mode"><span class="std std-ref">DCC modes</span></a></p>
 <ul>
 <li><p>MAIN</p></li>
 <li><p>PROG</p></li>
 <li><p>NONE</p></li>
 </ul>
 </li>
-<li><p>DC modes</p>
+<li><p><a class="reference internal" href="#changing-a-motor-driver-output-to-dc"><span class="std std-ref">DC modes</span></a></p>
 <ul>
 <li><p>DC</p></li>
-<li><p>DCX <a class="reference internal" href="#dcx" id="id1"><span>[DCX]</span></a></p></li>
+<li><p>DCX <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
 <li><p>NONE</p></li>
 </ul>
 </li>
 </ul>
 </div></blockquote>
-<div role="list" class="citation-list">
-<div class="citation" id="dcx" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">DCX</a><span class="fn-bracket">]</span></span>
-<p>DCX is DC with an opposite polarity like NMRA modular layout track B which is wired left rail positive (+) and right rail negative (-)</p>
-</div>
-</div>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>DCX is DC with an opposite polarity. Like NMRA modular layout track B which is wired left rail positive (+) and right rail negative (-)</p>
+</aside>
+</aside>
 </section>
 <hr class="docutils" />
+<section id="requirements-dcc-and-dc">
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">Requirements (DCC and DC)</a><a class="headerlink" href="#requirements-dcc-and-dc" title="Link to this heading"></a></h2>
 <section id="dcc-requirements">
-<h2><a class="toc-backref" href="#id13" role="doc-backlink">DCC Requirements</a><a class="headerlink" href="#dcc-requirements" title="Link to this heading"></a></h2>
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">DCC Requirements</a><a class="headerlink" href="#dcc-requirements" title="Link to this heading"></a></h3>
 <p>Nothing special or extra is required for any of the DCC modes.</p>
 </section>
 <hr class="docutils" />
 <section id="dc-requirements">
-<h2><a class="toc-backref" href="#id14" role="doc-backlink">DC Requirements</a><a class="headerlink" href="#dc-requirements" title="Link to this heading"></a></h2>
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">DC Requirements</a><a class="headerlink" href="#dc-requirements" title="Link to this heading"></a></h3>
 <p>To run DC locos with your <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> you will need:</p>
 <ul class="simple">
 <li><p>An <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>.</p></li>
@@ -731,24 +734,25 @@
 <p>Note: An additional suggested precaution is to add 4 fuses on wires (-b +b, -a +a) to the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> connections. Use 2A fuses for the standard L298P motor shield or 5A fuses for the <a href="../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a> and other the larger motor boards.</p>
 <p><hr class="hr-dashed" /></p>
 <section id="additional-technical-information">
-<h3><a class="toc-backref" href="#id15" role="doc-backlink">Additional Technical Information</a><a class="headerlink" href="#additional-technical-information" title="Link to this heading"></a></h3>
-<p>If you are interested in the technical details of DC PWM visit our <a class="reference internal" href="../reference/hardware/dcc-vs-dcc.html"><span class="doc">DCC vs DC PWM</span></a> page.</p>
+<h4>Additional Technical Information<a class="headerlink" href="#additional-technical-information" title="Link to this heading"></a></h4>
+<p>If you are interested in the technical details of DC Pulse Width Modulation (PWM) visit our <a class="reference internal" href="../reference/hardware/dcc-vs-dcc.html"><span class="doc">DCC vs DC PWM</span></a> page.</p>
+</section>
 </section>
 </section>
 <hr class="docutils" />
 <section id="changing-a-motor-driver-output-to-a-different-dcc-mode">
-<h2><a class="toc-backref" href="#id16" role="doc-backlink">Changing a Motor Driver Output to a different DCC mode</a><a class="headerlink" href="#changing-a-motor-driver-output-to-a-different-dcc-mode" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id18" role="doc-backlink">Changing a Motor Driver Output to a different DCC mode</a><a class="headerlink" href="#changing-a-motor-driver-output-to-a-different-dcc-mode" title="Link to this heading"></a></h2>
 <p>You can change any output of the Motor Driver either temporarily or permanently (every time the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> starts).</p>
 <nav class="contents in-this-section local" id="in-this-section">
 <p class="topic-title">In this Section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#temporarily-changing-to-a-different-dcc-mode" id="id38">Temporarily Changing to a Different DCC Mode</a></p></li>
-<li><p><a class="reference internal" href="#permanently-changing-to-a-different-dcc-mode" id="id39">Permanently Changing To a Different DCC Mode</a></p></li>
+<li><p><a class="reference internal" href="#temporarily-changing-to-a-different-dcc-mode" id="id41">Temporarily Changing to a Different DCC Mode</a></p></li>
+<li><p><a class="reference internal" href="#permanently-changing-the-dcc-mode" id="id42">Permanently Changing the DCC Mode</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
 <section id="temporarily-changing-to-a-different-dcc-mode">
-<h3><a class="toc-backref" href="#id38" role="doc-backlink">Temporarily Changing to a Different DCC Mode</a><a class="headerlink" href="#temporarily-changing-to-a-different-dcc-mode" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id41" role="doc-backlink">Temporarily Changing to a Different DCC Mode</a><a class="headerlink" href="#temporarily-changing-to-a-different-dcc-mode" title="Link to this heading"></a></h3>
 <p>There are several ways to temporarily change a Motor Driver Output to a different DCC Mode:</p>
 <ul class="simple">
 <li><p>By issuing a command to the the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a></p></li>
@@ -792,8 +796,8 @@
 <p><hr class="hr-dashed" /></p>
 </section>
 </section>
-<section id="permanently-changing-to-a-different-dcc-mode">
-<h3><a class="toc-backref" href="#id39" role="doc-backlink">Permanently Changing To a Different DCC Mode</a><a class="headerlink" href="#permanently-changing-to-a-different-dcc-mode" title="Link to this heading"></a></h3>
+<section id="permanently-changing-the-dcc-mode">
+<h3><a class="toc-backref" href="#id42" role="doc-backlink">Permanently Changing the DCC Mode</a><a class="headerlink" href="#permanently-changing-the-dcc-mode" title="Link to this heading"></a></h3>
 <p>By default the outputs of a Motor Driver are set to DCC. For Motor Drivers with two outputs one will be MAIN and one will be PROG.  These, and any additional outputs, can be set to a number of different modes, not just DCC.</p>
 <p>You can set any Motor Driver output to be a specific DCC mode every time the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> starts up.
 If you wish, at any time you can temporarily change it any DC or DCC mode.</p>
@@ -816,18 +820,32 @@ If you wish, at any time you can temporarily change it any DC or DCC mode.</p>
 </section>
 <hr class="docutils" />
 <section id="changing-a-motor-driver-output-to-dc">
-<h2><a class="toc-backref" href="#id19" role="doc-backlink">Changing a Motor Driver Output to DC</a><a class="headerlink" href="#changing-a-motor-driver-output-to-dc" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id21" role="doc-backlink">Changing a Motor Driver Output to DC</a><a class="headerlink" href="#changing-a-motor-driver-output-to-dc" title="Link to this heading"></a></h2>
 <p>You can change any output of the Motor Driver either temporarily or permanently (every time the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> starts).</p>
-<nav class="contents in-this-section local" id="id2">
+<nav class="contents in-this-section local" id="id3">
 <p class="topic-title">In this Section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#temporarily-changing-to-dc" id="id40">Temporarily Changing to DC</a></p></li>
-<li><p><a class="reference internal" href="#permanently-changing-to-dc" id="id41">Permanently Changing To DC</a></p></li>
+<li><p><a class="reference internal" href="#controlling-the-output-not-the-loco" id="id43">Controlling the output not the loco</a></p></li>
+<li><p><a class="reference internal" href="#temporarily-changing-to-dc" id="id44">Temporarily Changing to DC</a></p></li>
+<li><p><a class="reference internal" href="#permanently-changing-to-dc" id="id45">Permanently Changing To DC</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
+<section id="controlling-the-output-not-the-loco">
+<h3><a class="toc-backref" href="#id43" role="doc-backlink">Controlling the output not the loco</a><a class="headerlink" href="#controlling-the-output-not-the-loco" title="Link to this heading"></a></h3>
+<p>It is important to note a key difference between controlling a DCC loco on a DCC output/track, and controlling a DC loco on a DC output/track.</p>
+<p>In the case on DCC, you select the individual DCC address of the loco and you control just that loco regardless of how many other DCC locos are on the track.</p>
+<div class="note-float-right admonition note">
+<p class="admonition-title">Note</p>
+<p>If you plan to also use DCC, when specifying a DC address, avoid using one of your existing loco DCC addresses.</p>
+<p>Otherwise a command sent to control a DC output/track will also operate your DCC loco with the same address.</p>
+</div>
+<p>In the case of DC it is very different. You control the whole output/track and all the locos on it simultaneously.  <em>To do so we must assign that output/track an address.</em>  It is not a real DCC Address, but from the perspective of your controller, it will think it is a DCC Address.</p>
+<p>When you read further just remember that the address assigned DC output/track is not really the loco.  <em>It is an address for the output/track.</em></p>
+<p><hr class="hr-dashed" /></p>
+</section>
 <section id="temporarily-changing-to-dc">
-<h3><a class="toc-backref" href="#id40" role="doc-backlink">Temporarily Changing to DC</a><a class="headerlink" href="#temporarily-changing-to-dc" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id44" role="doc-backlink">Temporarily Changing to DC</a><a class="headerlink" href="#temporarily-changing-to-dc" title="Link to this heading"></a></h3>
 <p>There are several ways to temporarily change a Motor Driver Output to DC:</p>
 <ul class="simple">
 <li><p>By issuing a command to the the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a></p></li>
@@ -900,7 +918,7 @@ If you wish, at any time you can temporarily change it any DC or DCC mode.</p>
 </section>
 </section>
 <section id="permanently-changing-to-dc">
-<h3><a class="toc-backref" href="#id41" role="doc-backlink">Permanently Changing To DC</a><a class="headerlink" href="#permanently-changing-to-dc" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id45" role="doc-backlink">Permanently Changing To DC</a><a class="headerlink" href="#permanently-changing-to-dc" title="Link to this heading"></a></h3>
 <p>By default the outputs of a Motor Driver are set to DCC. For Motor Drivers with two outputs one will be MAIN and one will be PROG.  These, and any additional outputs, can be set to a number of different modes, not just DCC.</p>
 <p>You can set any Motor Driver output to be DC every time the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> starts up.
 If you wish, at any time you can temporarily change it any DC or DCC mode.</p>
@@ -924,27 +942,28 @@ If you wish, at any time you can temporarily change it any DC or DCC mode.</p>
 </section>
 </section>
 <hr class="docutils" />
-<section id="selecting-dc-loco-to-control">
-<h2><a class="toc-backref" href="#id22" role="doc-backlink">Selecting DC loco to control</a><a class="headerlink" href="#selecting-dc-loco-to-control" title="Link to this heading"></a></h2>
+<section id="selecting-a-dc-loco-to-control">
+<h2><a class="toc-backref" href="#id25" role="doc-backlink">Selecting A DC loco to control</a><a class="headerlink" href="#selecting-a-dc-loco-to-control" title="Link to this heading"></a></h2>
+<p>Remember that the address you assigned DC output/track above is not really the loco.  <em>It is an address for the output/track.</em></p>
 <p>While the process to control a loco is exactly the same as a DCC loco, the process to select it will vary depending on <em>how</em> you configured the Motor Driver Output to be DC.</p>
-<nav class="contents in-this-section local" id="id3">
+<nav class="contents in-this-section local" id="id4">
 <p class="topic-title">In this Section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#if-you-set-the-output-to-be-permanently-dc" id="id42">If you set the Output to be permanently DC</a></p></li>
-<li><p><a class="reference internal" href="#if-you-used-a-route-dc" id="id43">If you used a Route (DC)</a></p></li>
-<li><p><a class="reference internal" href="#if-you-used-an-automation-dc" id="id44">If you used an Automation (DC)</a></p></li>
-<li><p><a class="reference internal" href="#if-you-used-engine-driver-ex-toolbox-or-a-command-dc" id="id45">If you used Engine Driver, EX-Toolbox or a Command (DC)</a></p></li>
+<li><p><a class="reference internal" href="#if-you-set-the-output-to-be-permanently-dc" id="id46">If you set the Output to be permanently DC</a></p></li>
+<li><p><a class="reference internal" href="#if-you-used-a-route-dc" id="id47">If you used a Route (DC)</a></p></li>
+<li><p><a class="reference internal" href="#if-you-used-an-automation-dc" id="id48">If you used an Automation (DC)</a></p></li>
+<li><p><a class="reference internal" href="#if-you-used-engine-driver-ex-toolbox-or-a-command-dc" id="id49">If you used Engine Driver, EX-Toolbox or a Command (DC)</a></p></li>
 </ul>
 </nav>
 <section id="if-you-set-the-output-to-be-permanently-dc">
-<h3><a class="toc-backref" href="#id42" role="doc-backlink">If you set the Output to be permanently DC</a><a class="headerlink" href="#if-you-set-the-output-to-be-permanently-dc" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id46" role="doc-backlink">If you set the Output to be permanently DC</a><a class="headerlink" href="#if-you-set-the-output-to-be-permanently-dc" title="Link to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>You will need to select the Loco Address you assigned to the output when you setup the permanent assignment.</p></li>
 </ol>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="if-you-used-a-route-dc">
-<h3><a class="toc-backref" href="#id43" role="doc-backlink">If you used a Route (DC)</a><a class="headerlink" href="#if-you-used-a-route-dc" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id47" role="doc-backlink">If you used a Route (DC)</a><a class="headerlink" href="#if-you-used-a-route-dc" title="Link to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>Go to the list of Routes in your throttle</p></li>
 <li><p>Active the Route that you created</p></li>
@@ -953,7 +972,7 @@ If you wish, at any time you can temporarily change it any DC or DCC mode.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="if-you-used-an-automation-dc">
-<h3><a class="toc-backref" href="#id44" role="doc-backlink">If you used an Automation (DC)</a><a class="headerlink" href="#if-you-used-an-automation-dc" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id48" role="doc-backlink">If you used an Automation (DC)</a><a class="headerlink" href="#if-you-used-an-automation-dc" title="Link to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>You will then need to select any Loco Address that you wish to use</p></li>
 <li><p>Go to the list of Routes and Automations in your throttle</p></li>
@@ -962,28 +981,15 @@ If you wish, at any time you can temporarily change it any DC or DCC mode.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="if-you-used-engine-driver-ex-toolbox-or-a-command-dc">
-<h3><a class="toc-backref" href="#id45" role="doc-backlink">If you used Engine Driver, EX-Toolbox or a Command (DC)</a><a class="headerlink" href="#if-you-used-engine-driver-ex-toolbox-or-a-command-dc" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id49" role="doc-backlink">If you used Engine Driver, EX-Toolbox or a Command (DC)</a><a class="headerlink" href="#if-you-used-engine-driver-ex-toolbox-or-a-command-dc" title="Link to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>You will need to select the Loco Address you assigned to the output when you created the route.</p></li>
 </ol>
 </section>
 </section>
 <hr class="docutils" />
-<section id="replacing-or-integrating-into-your-current-layout">
-<h2><a class="toc-backref" href="#id27" role="doc-backlink">Replacing or Integrating Into Your Current Layout</a><a class="headerlink" href="#replacing-or-integrating-into-your-current-layout" title="Link to this heading"></a></h2>
-<p>Existing analogue DC layouts which have standard DC transformers on two or more separate DC tracks/districts/blocks and/or also have a second separate proprietary DCC command station would have in place a section of dead rail, an electric relay, or a DPDT centre-off switch between the two types of controller powered stations. These should not be using a common ground rail, and only use dual insulated tracks.</p>
-<p>You will be replacing this kind of legacy analogue DC and proprietary DCC installation described above with a single <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> which will have a software switching implementation, allowing you to easily and quickly swap between the two DCC (PWM) and DC (PWM) modes on any of the A thru H dual insulated tracks/districts in real time.</p>
-<p>This also allows replacing the physical hardware DPDT switch.</p>
-<p>This is all done through a single <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>.
-And no we’re not using another Expensive DCC decoder under the table on each Track/District/Block to address that section of track.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>When specifying a DC or DCX cab ID, do not use one of your existing locomotive DCC addresses or road number IDs, otherwise a command sent to control a Cab on that DC or DCX track will also operate your DCC Loco with the same address, unless you intentionally do so.</p>
-</div>
-</section>
-<hr class="docutils" />
 <section id="controlling-a-dc-loco">
-<h2><a class="toc-backref" href="#id28" role="doc-backlink">Controlling a DC Loco</a><a class="headerlink" href="#controlling-a-dc-loco" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id30" role="doc-backlink">Controlling a DC Loco</a><a class="headerlink" href="#controlling-a-dc-loco" title="Link to this heading"></a></h2>
 <p>Any throttle that connect to an <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> can control analogue (DC) locos just as easily as DCC locos. Throttle Compatibility:</p>
 <blockquote>
 <div><ul class="simple">
@@ -998,10 +1004,30 @@ And no we’re not using another Expensive DCC decoder under the table on each T
 </div>
 </section>
 <hr class="docutils" />
-<section id="trackmanager-technical-details-and-detail-instructions">
-<h2><a class="toc-backref" href="#id29" role="doc-backlink">TrackManager Technical Details and Detail Instructions</a><a class="headerlink" href="#trackmanager-technical-details-and-detail-instructions" title="Link to this heading"></a></h2>
+<section id="replacing-or-integrating-into-your-current-layout">
+<h2><a class="toc-backref" href="#id31" role="doc-backlink">Replacing or Integrating Into Your Current Layout</a><a class="headerlink" href="#replacing-or-integrating-into-your-current-layout" title="Link to this heading"></a></h2>
+<div class="warning-float-right admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you plan to use multiple DC and/or DCC blocks, these should not be using a common ground rail, and only use dual insulated tracks.</p>
+</div>
+<p>Existing analogue DC layouts will have standard DC controllers/transformers on one or more separate DC tracks/districts/blocks.</p>
+<p>If you have more than one controller, they may have DPDT centre-off switches between two controller powered blocks.</p>
+<p>You will be replacing this kind of legacy analogue DC described above with a single <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>. It includes a software switching implementation, allowing you to easily and quickly switch between the two DCC (PWM) and DC (PWM) modes on any of the A thru H dual insulated tracks/districts in real time.</p>
+<p>This also allows replacing any physical hardware DPDT switches.</p>
+<p>This is all done through a single <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>. And no we’re not using another Expensive DCC decoder under the table on each Track/District/Block to address that section of track.</p>
+<div class="admonition-todo admonition" id="id5">
+<p class="admonition-title">Todo</p>
+<p>Add examples and diagrams</p>
+</div>
+<hr class="docutils" />
+<p><hr class="hr-dashed" /></p>
+</section>
+<hr class="docutils" />
+<section id="trackmanager-technical-details-and-detailed-instructions">
+<h2><a class="toc-backref" href="#id32" role="doc-backlink">TrackManager Technical Details and Detailed Instructions</a><a class="headerlink" href="#trackmanager-technical-details-and-detailed-instructions" title="Link to this heading"></a></h2>
+<p>Below is a more detailed and technical discussion of the topics above.</p>
 <section id="how-do-you-run-a-ex-commandstation-in-dc-pwm-mode">
-<h3><a class="toc-backref" href="#id30" role="doc-backlink">How do you run a EX-CommandStation in DC (PWM) mode?</a><a class="headerlink" href="#how-do-you-run-a-ex-commandstation-in-dc-pwm-mode" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id33" role="doc-backlink">How do you run a EX-CommandStation in DC (PWM) mode?</a><a class="headerlink" href="#how-do-you-run-a-ex-commandstation-in-dc-pwm-mode" title="Link to this heading"></a></h3>
 <p>Using <span class="ex-suffix">TrackManager</span> with simple easy commands from a throttle or from a serial monitor we can change any insulated track A-H from DCC (PWM) to DC (PWM) and back in real time.</p>
 <blockquote>
 <div><ul class="simple">
@@ -1011,7 +1037,7 @@ And no we’re not using another Expensive DCC decoder under the table on each T
 </ul>
 </div></blockquote>
 <p>This allows a throttle on track B set to DCX to operate in forward and reverse correctly for west bound engines</p>
-<p>So, you can take a standard DC motor only engines Cab road number on the side of the engine and assign it to one or more of up to 8 tracks/districts/blocks labelled A thru H then enter that same number into a throttle and control that Loco Cab # on each and every one of the assigned tracks.</p>
+<p>So, you can take a standard DC motor only loco’s road number on the side of the loco and assign it to one or more of up to 8 tracks/districts/blocks labelled A thru H. Then enter that same number into a throttle and control that Address on each and every one of the assigned tracks.</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Valid Cab addresses are 1 to 10239.</p></li>
@@ -1021,17 +1047,17 @@ And no we’re not using another Expensive DCC decoder under the table on each T
 <aside class="sidebar">
 <p>We do not support Zero stretching / zero stretch address function, found on Digitrax and Lenz command Stations. See the ‘<a class="reference internal" href="../reference/hardware/dcc-vs-dcc.html#this-is-not-zero-stretching"><span class="std std-ref">This is Not Zero Stretching</span></a>’ section for more information.</p>
 </aside>
-<p>Place any analogue DC engine on our EX-CommandStation with a TrackManager DC assigned track and it sits there dead quiet with lights off Until the throttle speed is increased in either direction and then lights up and begins to move.</p>
-<p>DCC Loco with DC enabled CV decoder also sits quietly and when the throttle increases the Sound will turn on first then as you throttle up more it will begin moving.  You can throttle back until it stops but leave a little throttle speed on say 5% and the Sound will continue to play while it is stopped.</p>
-<p>Throttle speed response for DC Cabs vary because the DCdistrict track is operating from 0Vdc to 16+Vdc ~PWM waveform signal. CAB’s operating on a DCdistrict with either WiFi Throttles and EXRAIL Automation scripts with <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> Handoff run different DC motors at different speeds.</p>
+<p>Place any analogue DC loco/engine on a TrackManager DC assigned track with our <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> and it sits there dead quiet with lights off. When the throttle speed is increased in either direction and then lights up and begins to move.</p>
+<p>A DCC Loco with a DC enabled sound decoder also sits quietly and when the throttle increases the sound will turn on first then as you throttle up more it will begin moving.  You can throttle back until it stops but leave a little throttle speed on say 5% and the Sound will continue to play while it is stopped.</p>
+<p>Throttle speed response for DC locos vary because the DCdistrict track is operating from 0Vdc to 16+Vdc ~PWM waveform signal. Locos operating on a DCdistrict with either WiFi Throttles and EXRAIL Automation scripts with <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> Handoff run different DC motors at different speeds.</p>
 <p>So a script for FWD(50) speed will run at completely different speeds for two different DC motors depending on their resistance and efficiency.  One crawls at 50 while the other one runs like a bat out of hell.</p>
-<p>You can also run a DCC Locos with DC Conversion CV enabled On and run on the DCdistrict, without having to change the decoder DCC address.
-They will all run on that section of track.</p>
+<p>You can also run a DCC locos with DC Conversion CV enabled On and run on the DCdistrict, without having to change the decoder DCC address.</p>
+<p>They will all run on that section of track.</p>
 <p>DCC Sound Decoder locos with DC conversion enabled may be silent until the track reaches between 2v to 6Vdc then the Sound will start up, and between 3v to 8Vdc the motor will begin to respond and move depending on the manufacturer’s decoder.</p>
 </section>
 <section id="controlling-managing-dcc-ex-trackmanager-modes">
-<h3><a class="toc-backref" href="#id31" role="doc-backlink">Controlling &amp; Managing DCC-EX TrackManager modes</a><a class="headerlink" href="#controlling-managing-dcc-ex-trackmanager-modes" title="Link to this heading"></a></h3>
-<p>You can Assign Tracks/Districts to DCC and DC mode in four ways</p>
+<h3><a class="toc-backref" href="#id34" role="doc-backlink">Controlling &amp; Managing DCC-EX TrackManager modes</a><a class="headerlink" href="#controlling-managing-dcc-ex-trackmanager-modes" title="Link to this heading"></a></h3>
+<p>You can Assign Tracks/Districts to DCC and DC mode in four ways:</p>
 <blockquote>
 <div><ol class="arabic simple">
 <li><p>Command Line via PC with Arduino IDE Serial Monitor or JMRI serial Traffic Monitor and it is sent through your USB connected cable.</p></li>
@@ -1064,7 +1090,7 @@ They will all run on that section of track.</p>
 </section>
 <hr class="docutils" />
 <section id="trackmanager-commands">
-<h3><a class="toc-backref" href="#id32" role="doc-backlink">TrackManager Commands</a><a class="headerlink" href="#trackmanager-commands" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id35" role="doc-backlink">TrackManager Commands</a><a class="headerlink" href="#trackmanager-commands" title="Link to this heading"></a></h3>
 <p>Sending commands from the Arduino IDE Serial Monitor or JMRI Send Command Line or a <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> WiFi Throttle.</p>
 <p>To display the current TrackManager configuration, use the command <code class="docutils literal notranslate"><span class="pre">&lt;=&gt;</span></code> an equal sign looks like a track.</p>
 <p>The Serial Monitor will show current status, example; Track A as Main and Track B as PROG</p>
@@ -1082,13 +1108,13 @@ They will all run on that section of track.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> is the Cab ID and is only required when specifying DC or DCX modes</p></li>
 </ul>
 </div></blockquote>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> &lt;= A MAIN&gt;     // Set track A to MAIN DCC mode
- &lt;= B PROG&gt;     // Set track B to PROG DCC mode
-or
- &lt;= A DC 1234&gt;  // Set track A to DC mode with address 1234
- &lt;= B DCX 4321&gt; // Set track B to DC mode Opposite Polarity address 4321
-                // or any number you assign from 1 to 10239
- &lt;= B NONE&gt;      // Set track B disabled, like a staging yard when it gets too noisy.
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">MAIN</span><span class="o">&gt;</span><span class="w">     </span><span class="c1">// Set track A to MAIN DCC mode</span>
+<span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">PROG</span><span class="o">&gt;</span><span class="w">     </span><span class="c1">// Set track B to PROG DCC mode</span>
+<span class="k">or</span>
+<span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">DC</span><span class="w"> </span><span class="mi">1234</span><span class="o">&gt;</span><span class="w">  </span><span class="c1">// Set track A to DC mode with address 1234</span>
+<span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">DCX</span><span class="w"> </span><span class="mi">4321</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">// Set track B to DC mode Opposite Polarity address 4321</span>
+<span class="w">                </span><span class="c1">// or any number you assign from 1 to 10239</span>
+<span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">NONE</span><span class="o">&gt;</span><span class="w">      </span><span class="c1">// Set track B disabled, like a staging yard when it gets too noisy.</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -1099,13 +1125,19 @@ or
 <h4>Create EX-RAIL Scripts to Change Track modes<a class="headerlink" href="#create-ex-rail-scripts-to-change-track-modes" title="Link to this heading"></a></h4>
 <p>Using <a href="../ex-rail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> functions inside myAutomation.h file to run Automation scripts to change track modes from DCC to DC and back.
 my.Automation.h file</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>//SET_TRACK(id,mode)
-  SET_TRACK(A, MAIN)
-  SET_TRACK(B, PROG)
-  SET_TRACK(C, DC)
-  SET_TRACK(D, DCX)
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">//SET_TRACK(id,mode)</span>
+<span class="w">  </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">MAIN</span><span class="p">)</span>
+<span class="w">  </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="w"> </span><span class="n">PROG</span><span class="p">)</span>
+<span class="w">  </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="w"> </span><span class="n">DC</span><span class="p">)</span>
+<span class="w">  </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="w"> </span><span class="n">DCX</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Note that the Address to be used for a DC or DCX block must be set before the <code class="docutils literal notranslate"><span class="pre">SET_TRACK</span></code> command e.g.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">1225</span><span class="p">)</span>
+<span class="n">SET_TRACK</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="w"> </span><span class="n">DC</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><hr class="hr-dashed" /></p>
 </section>
 <section id="create-ex-rail-list-of-track-manager-functions-for-engine-driver-automatically-assign-handoff-buttons">
 <h4>Create EX-RAIL list of Track Manager Functions for Engine Driver Automatically Assign [Handoff] buttons<a class="headerlink" href="#create-ex-rail-list-of-track-manager-functions-for-engine-driver-automatically-assign-handoff-buttons" title="Link to this heading"></a></h4>
@@ -1113,31 +1145,32 @@ my.Automation.h file</p>
 <dt>In a <a href="../ex-rail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> Automation script we could assign a track mode to DC and wait for a <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> throttle to Assign the Current Selected Active Engine Address and drive Manually through the district on the layout.</dt><dd><p>See the third Engine Driver Throttle image ‘Districts A thru B with [Set] buttons at the end.</p>
 </dd>
 </dl>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AUTOMATION(500, &quot;Districts A MAIN _ B PROG Default&quot;)// Reset Default back to DCC Main &amp; PROG
- SET_TRACK(A,MAIN) PRINT(&quot;Default Districts Tracks MAIN A &amp; PROG B&quot;)
- SET_TRACK(B,PROG)
- DONE
-AUTOMATION(501, &quot;District A MAIN&quot;)   // Alternate DCC Main track A
- SET_TRACK(A,MAIN) PRINT(&quot;District A MAIN&quot;)
- DONE
-AUTOMATION(502, &quot;District A PROG&quot;)   // Alternate DCC PROG track A
- SET_TRACK(A,PROG) PRINT(&quot;District A PROG&quot;)
- DONE
-AUTOMATION(503, &quot;District A DC&quot;)     // Alternate DC track A with loco ID 1
- SETLOCO(1)
- SET_TRACK(A,DC) PRINT(&quot;District A DC&quot;)
- DONE
-AUTOMATION(504, &quot;District A DCX&quot;)    // Alternate DCX track A Changed to Opposite Polarity
- SETLOCO(1)
- SET_TRACK(A,DCX) PRINT(&quot;District A DCX Opposite Polarity&quot;) // Track A Opposite Polarity DC
- DONE
-AUTOMATION(505, &quot;District A NONE&quot;)    // A Track disabled
- SET_TRACK(A, NONE) PRINT (&quot;District A disabled&quot;)
- DONE
-Copy and repeat AUTOMATION(506-510, District B  mode)
- and create any additional combinations or tracks C - H as you add more motor boards.
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Districts A MAIN _ B PROG Default&quot;</span><span class="p">)</span><span class="c1">// Reset Default back to DCC Main &amp; PROG</span>
+<span class="w"> </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">MAIN</span><span class="p">)</span><span class="w"> </span><span class="n">PRINT</span><span class="p">(</span><span class="s">&quot;Default Districts Tracks MAIN A &amp; PROG B&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">PROG</span><span class="p">)</span>
+<span class="w"> </span><span class="n">DONE</span>
+<span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">501</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;District A MAIN&quot;</span><span class="p">)</span><span class="w">   </span><span class="c1">// Alternate DCC Main track A</span>
+<span class="w"> </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">MAIN</span><span class="p">)</span><span class="w"> </span><span class="n">PRINT</span><span class="p">(</span><span class="s">&quot;District A MAIN&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="n">DONE</span>
+<span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">502</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;District A PROG&quot;</span><span class="p">)</span><span class="w">   </span><span class="c1">// Alternate DCC PROG track A</span>
+<span class="w"> </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">PROG</span><span class="p">)</span><span class="w"> </span><span class="n">PRINT</span><span class="p">(</span><span class="s">&quot;District A PROG&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="n">DONE</span>
+<span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">503</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;District A DC&quot;</span><span class="p">)</span><span class="w">     </span><span class="c1">// Alternate DC track A with loco ID 1</span>
+<span class="w"> </span><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w"> </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">DC</span><span class="p">)</span><span class="w"> </span><span class="n">PRINT</span><span class="p">(</span><span class="s">&quot;District A DC&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="n">DONE</span>
+<span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">504</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;District A DCX&quot;</span><span class="p">)</span><span class="w">    </span><span class="c1">// Alternate DCX track A Changed to Opposite Polarity</span>
+<span class="w"> </span><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w"> </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">DCX</span><span class="p">)</span><span class="w"> </span><span class="n">PRINT</span><span class="p">(</span><span class="s">&quot;District A DCX Opposite Polarity&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Track A Opposite Polarity DC</span>
+<span class="w"> </span><span class="n">DONE</span>
+<span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">505</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;District A NONE&quot;</span><span class="p">)</span><span class="w">    </span><span class="c1">// A Track disabled</span>
+<span class="w"> </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">NONE</span><span class="p">)</span><span class="w"> </span><span class="n">PRINT</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;District A disabled&quot;</span><span class="p">)</span>
+<span class="w"> </span><span class="n">DONE</span>
+<span class="n">Copy</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">repeat</span><span class="w"> </span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">506-510</span><span class="p">,</span><span class="w"> </span><span class="n">District</span><span class="w"> </span><span class="n">B</span><span class="w">  </span><span class="n">mode</span><span class="p">)</span>
+<span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">create</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">additional</span><span class="w"> </span><span class="n">combinations</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">tracks</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">H</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">motor</span><span class="w"> </span><span class="n">boards</span><span class="p">.</span>
 </pre></div>
 </div>
+<p><hr class="hr-dashed" /></p>
 </section>
 <section id="create-ex-rail-track-manager-functions-for-engine-driver-throttle-automation-handoff-buttons">
 <h4>Create EX-RAIL Track Manager Functions for Engine Driver Throttle Automation [Handoff] buttons<a class="headerlink" href="#create-ex-rail-track-manager-functions-for-engine-driver-throttle-automation-handoff-buttons" title="Link to this heading"></a></h4>
@@ -1145,40 +1178,43 @@ Copy and repeat AUTOMATION(506-510, District B  mode)
 <dt>In a <a href="../ex-rail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> Automation script we could a Set a Loco Address to a specific track in DC mode and have it run on Automation through the layout.</dt><dd><p>See the sixth Engine Driver Throttle image ‘EXRAIL 202 Roundhouse to Turntable Back &amp; Forth - Timed’ [Handoff] button at the end.</p>
 </dd>
 </dl>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AUTOMATION(202,&quot;Roundhouse to Turntable Back &amp; Forth -Timed&quot;)
-  SETLOCO(1225)
-  SET_TRACK(B,DC)
-  Run a your Roundhouse script blow whistle, run Forward delay wait and run Reverse delay stop
-  DELAYRANDOM(msec, msec) // randomise the run time between runs
-  DONE
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">202</span><span class="p">,</span><span class="s">&quot;Roundhouse to Turntable Back &amp; Forth -Timed&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">1225</span><span class="p">)</span>
+<span class="w">  </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">DC</span><span class="p">)</span>
+<span class="w">  </span><span class="n">Run</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">Roundhouse</span><span class="w"> </span><span class="n">script</span><span class="w"> </span><span class="n">blow</span><span class="w"> </span><span class="n">whistle</span><span class="p">,</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">Forward</span><span class="w"> </span><span class="n">delay</span><span class="w"> </span><span class="n">wait</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">Reverse</span><span class="w"> </span><span class="n">delay</span><span class="w"> </span><span class="n">stop</span>
+<span class="w">  </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="n">msec</span><span class="p">,</span><span class="w"> </span><span class="n">msec</span><span class="p">)</span><span class="w"> </span><span class="c1">// randomise the run time between runs</span>
+<span class="w">  </span><span class="n">DONE</span>
 </pre></div>
 </div>
+<p><hr class="hr-dashed" /></p>
 </section>
 <section id="create-ex-rail-track-manager-functions-for-engine-driver-throttle-route-set-buttons">
 <h4>Create EX-RAIL Track Manager Functions for Engine Driver Throttle Route [Set] buttons<a class="headerlink" href="#create-ex-rail-track-manager-functions-for-engine-driver-throttle-route-set-buttons" title="Link to this heading"></a></h4>
 <p>In an EXRAIL Automation script we could Set a Loco Address to a specific track in DC mode and Manually run a preassigned address on the layout.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ROUTE(1225,&quot;Set track B to DC 1225&quot;)
-  SETLOCO(1225)    // Assign Loco 1225
-  SET_TRACK(B,DC)  // Set Track B to DC with address 1225
-  CLOSE(1)         // Close Turnout 1
-  THROW(2)         // Throw Turnout 2
-  DONE
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1225</span><span class="p">,</span><span class="s">&quot;Set track B to DC 1225&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">1225</span><span class="p">)</span><span class="w">    </span><span class="c1">// Assign Loco 1225</span>
+<span class="w">  </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">DC</span><span class="p">)</span><span class="w">  </span><span class="c1">// Set Track B to DC with address 1225</span>
+<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">         </span><span class="c1">// Close Turnout 1</span>
+<span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w">         </span><span class="c1">// Throw Turnout 2</span>
+<span class="w">  </span><span class="n">DONE</span>
 </pre></div>
 </div>
 <p>Then manually drive the Cab# around the layout</p>
 <p>All done through DCC-EX TrackManager with a simple push of a GUI button of Either or Both <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> Handoff to Acquire the last Throttle Engine# used and run it on the mode of the track  [i.e. DC engine 1225], Or <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> (Set) button to set a block to a specific mode.</p>
 <p>TrackMagic uses the road number ID of a DC Engine in a throttle to run it on a assigned track/district/block, mimicking the look of DCC Engines.
 No DPDT Switches are required, all waveform mode switching is done by Track Manager Software instructions.</p>
+<p><hr class="hr-dashed" /></p>
 </section>
 </section>
 <section id="dcc-ex-command-station-with-ex-rail-trackmanager">
-<h3><a class="toc-backref" href="#id33" role="doc-backlink">DCC-EX Command Station with EX-RAIL &amp; TrackManager</a><a class="headerlink" href="#dcc-ex-command-station-with-ex-rail-trackmanager" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id36" role="doc-backlink">DCC-EX Command Station with EX-RAIL &amp; TrackManager</a><a class="headerlink" href="#dcc-ex-command-station-with-ex-rail-trackmanager" title="Link to this heading"></a></h3>
 <p>Cool thing is the new EXRAIL Automation(n) &amp; Routes(n) work the same with DCC engines on MAIN tracks and the DC engines on DC or DCX tracks, along with the Sensors, Servos /Turnouts, Signals &amp; MP3 Sound DFPlayer triggers with little or no script changes other than maybe the FWD(n) &amp; REV (n) Speeds.</p>
 <p>With the new DCC-EX direct WiFi Discovered Server you can connect <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> &amp; other WiThrottle app based throttles directly and have EXRAIL [Handoff] &amp; [Set] buttons to run EXRAIL scripts from the throttles.</p>
 <p>These are DCC-EX Major feature/benefits because with other systems you’ll have to use a PC computer or Pi processor &amp; JMRI for WiThrottle Server throttle access and you have to write two different JMRI Jython.py scripts and then Setup Tools&gt; Tables&gt; Routes for for both DCC and DC automation &amp; routes runs.</p>
+<p><hr class="hr-dashed" /></p>
 </section>
 <section id="modular-layouts">
-<h3><a class="toc-backref" href="#id34" role="doc-backlink">Modular Layouts</a><a class="headerlink" href="#modular-layouts" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id37" role="doc-backlink">Modular Layouts</a><a class="headerlink" href="#modular-layouts" title="Link to this heading"></a></h3>
 <p>DCC-EX TrackManager 4.2.50+ is perfect for NMRA DCC Standards Modular Layouts which have two MAIN tracks/districts,
 Track A and Track B with sidings;</p>
 <ul class="simple">
@@ -1193,10 +1229,11 @@ Track A and Track B with sidings;</p>
 <p>DCX is Opposite Polarity and is what you set Block B to when you want it in DC mode because it is wired to NMRA Modular DCC Standards L+, R-.</p>
 </section>
 </section>
+<hr class="docutils" />
 <section id="exrail-examples">
-<h2><a class="toc-backref" href="#id35" role="doc-backlink">EXRAIL examples</a><a class="headerlink" href="#exrail-examples" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id38" role="doc-backlink">EXRAIL examples</a><a class="headerlink" href="#exrail-examples" title="Link to this heading"></a></h2>
 <section id="example-of-user-defined-exrail-scripts-running-on-engine-driver-throttle-app-android">
-<h3><a class="toc-backref" href="#id36" role="doc-backlink">Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (Android):</a><a class="headerlink" href="#example-of-user-defined-exrail-scripts-running-on-engine-driver-throttle-app-android" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id39" role="doc-backlink">Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (Android):</a><a class="headerlink" href="#example-of-user-defined-exrail-scripts-running-on-engine-driver-throttle-app-android" title="Link to this heading"></a></h3>
 <p><strong>Engine Driver Throttle Controlling Two Locos:</strong></p>
 <blockquote>
 <div><ul class="simple">
@@ -1204,17 +1241,17 @@ Track A and Track B with sidings;</p>
 <li><p>DC NH  667 on District B DC address  667 with IPLS Virtual Sound Decoder</p></li>
 </ul>
 </div></blockquote>
-<figure class="align-default" id="id4">
+<figure class="align-default" id="id6">
 <a class="reference internal image-reference" href="../_images/trackmanager_engine_driver_1.png"><img alt="Track Manager ED 1" src="../_images/trackmanager_engine_driver_1.png" style="width: 250.0px; height: 400.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 273 </span><span class="caption-text">Track Manager - Engine Driver 1</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 273 </span><span class="caption-text">Track Manager - Engine Driver 1</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p><strong>DCC-EX Commands, scroll-able</strong></p>
-<figure class="align-default" id="id5">
+<figure class="align-default" id="id7">
 <a class="reference internal image-reference" href="../_images/trackmanager_engine_driver_2.png"><img alt="Track Manager" src="../_images/trackmanager_engine_driver_2.png" style="width: 250.0px; height: 400.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 274 </span><span class="caption-text">Track Manager</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 274 </span><span class="caption-text">Track Manager</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p><strong>DCC-EX TrackManager “Handoff” &amp; “Set” buttons</strong></p>
@@ -1224,10 +1261,10 @@ Track A and Track B with sidings;</p>
 <li><p>Takes the current selected Active Throttle Engine and assigns that Address to the DC or DCX track</p></li>
 </ul>
 </div></blockquote>
-<figure class="align-default" id="id6">
+<figure class="align-default" id="id8">
 <a class="reference internal image-reference" href="../_images/trackmanager_engine_driver_3.png"><img alt="Track Manager handoff" src="../_images/trackmanager_engine_driver_3.png" style="width: 250.0px; height: 400.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 275 </span><span class="caption-text">Track Manager - Engine Driver handoff</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 275 </span><span class="caption-text">Track Manager - Engine Driver handoff</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p><strong>Engine Driver DCC-EX Native mode</strong></p>
@@ -1237,10 +1274,10 @@ Track A and Track B with sidings;</p>
 <li><p>With DCC-EX Cmd Line &amp; Serial monitor</p></li>
 </ul>
 </div></blockquote>
-<figure class="align-default" id="id7">
+<figure class="align-default" id="id9">
 <a class="reference internal image-reference" href="../_images/trackmanager_engine_driver_4.png"><img alt="Track Manager DCC-EX native mode" src="../_images/trackmanager_engine_driver_4.png" style="width: 250.0px; height: 400.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 276 </span><span class="caption-text">Track Manager - Engine Driver DCC-EX native mode</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 276 </span><span class="caption-text">Track Manager - Engine Driver DCC-EX native mode</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p><strong>Engine Driver DCC-EX Native mode</strong></p>
@@ -1250,29 +1287,30 @@ Track A and Track B with sidings;</p>
 <li><p>TrackManager District B  DC  667</p></li>
 </ul>
 </div></blockquote>
-<figure class="align-default" id="id8">
+<figure class="align-default" id="id10">
 <a class="reference internal image-reference" href="../_images/trackmanager_engine_driver_5.png"><img alt="Track Manager A/B" src="../_images/trackmanager_engine_driver_5.png" style="width: 250.0px; height: 400.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 277 </span><span class="caption-text">Engine Driver - Track Manager A/B</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 277 </span><span class="caption-text">Engine Driver - Track Manager A/B</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p><strong>Engine Driver EXRAIL Automation [Handoff] and FX special effects buttons</strong></p>
-<figure class="align-default" id="id9">
+<figure class="align-default" id="id11">
 <a class="reference internal image-reference" href="../_images/trackmanager_engine_driver_6.png"><img alt="Track Manager handoff" src="../_images/trackmanager_engine_driver_6.png" style="width: 250.0px; height: 400.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 278 </span><span class="caption-text">Track Manager - Engine Driver handoff</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 278 </span><span class="caption-text">Track Manager - Engine Driver handoff</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p><strong>FX Special Effects [Set] continued and Route [Set] buttons</strong></p>
-<figure class="align-default" id="id10">
+<figure class="align-default" id="id12">
 <a class="reference internal image-reference" href="../_images/trackmanager_engine_driver_7.png"><img alt="Track Manager handoff/set" src="../_images/trackmanager_engine_driver_7.png" style="width: 250.0px; height: 400.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 279 </span><span class="caption-text">Track Manager - Engine Driver handoff/set</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 279 </span><span class="caption-text">Track Manager - Engine Driver handoff/set</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
 </figcaption>
 </figure>
+<p><hr class="hr-dashed" /></p>
 </section>
 <section id="exrail-functions-displaying-on-smartphone-apps-universal-wifi-throttles">
-<h3><a class="toc-backref" href="#id37" role="doc-backlink">EXRAIL Functions Displaying on Smartphone Apps &amp; Universal WiFi Throttles</a><a class="headerlink" href="#exrail-functions-displaying-on-smartphone-apps-universal-wifi-throttles" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id40" role="doc-backlink">EXRAIL Functions Displaying on Smartphone Apps &amp; Universal WiFi Throttles</a><a class="headerlink" href="#exrail-functions-displaying-on-smartphone-apps-universal-wifi-throttles" title="Link to this heading"></a></h3>
 <p>The <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> EXRAIL screens shown above are all created through user defined EXRAIL Automation(n) and Route(n) scripts which are automatically passed to both <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> &amp; WiThrottle App screens as well as the Train Control Systems TCS Universal WiFi UWT-50 and UWT-100 tactile throttles all via direct connect DCC-EX WiThrottle Protocol interface.</p>
 <p>Please see the specific Smartphone App &amp; Universal WiFi Throttle instructions on how to enable their Preferences and Route screens.
 <a class="reference external" href="https://dcc-ex.com/throttles/index.html#withrottle-protocol-based-throttles">https://dcc-ex.com/throttles/index.html#withrottle-protocol-based-throttles</a></p>
@@ -1302,7 +1340,7 @@ Track A and Track B with sidings;</p>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7c7e36dea0>
+    <jinja2.runtime.BlockReference object at 0x7ff5d0baa6e0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

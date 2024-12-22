@@ -468,8 +468,9 @@ html[data-theme='dark'] .admonition-todo {
   background: #f7d1b0 !important;
 }
 html[data-theme='dark'] .admonition-todo p.admonition-title {
-  background: #6d3403 !important;
+  background: #574903 !important;
 }
+
 
 .rst-content .citation-reference, .rst-content .footnote-reference {
   font-size: 70%;

@@ -409,10 +409,10 @@ What you will need
 * **A throttle** (You can use your phone or a computer - see below)
 * 16 to 28AWG/1.5mm^2 **Wire**
 * A Jeweller's flat bladed **screwdriver** (1.5 - 2mm blade)
-* A laptop or other **computer** [PC]_
+* A laptop or other **computer** [#pc1]_
 * A **USB cable** with one end a USB-C for the EX-CSB1, and the other to suit your PC*
 
-.. [PC] Optional for connecting connecting to a computer for |EX-WT|, |JMRI| and to reload the |EX-CS| software.
+.. [#pc1] Optional for connecting connecting to a computer for |EX-WT|, |JMRI| and to reload the |EX-CS| software.
 
 Start with all power disconnected
 ----------------------------------

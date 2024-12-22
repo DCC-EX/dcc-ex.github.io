@@ -410,9 +410,17 @@ This also allows replacing any physical hardware DPDT switches.
 
 This is all done through a single |EX-CS|. And no we're not using another Expensive DCC decoder under the table on each Track/District/Block to address that section of track.
 
+.. figure:: /_static/images/layouts/dc-layout-1.png
+  :alt: DC Layout - 2 Blocks
+  :scale: 50%
+
+  DC Layout - 2 Blocks
+
+
 .. TODO XXX see if there is anything else in these two paragraphs that that should be retained
 .. Existing analogue DC layouts which have standard DC transformers on two or more separate DC tracks/districts/blocks and/or also have a second separate proprietary DCC command station would have in place a section of dead rail, an electric relay, or a DPDT centre-off switch between the two types of controller powered stations. These should not be using a common ground rail, and only use dual insulated tracks.
 .. You will be replacing this kind of legacy analogue DC and proprietary DCC installation described above with a single |EX-CS| which will have a software switching implementation, allowing you to easily and quickly swap between the two DCC (PWM) and DC (PWM) modes on any of the A thru H dual insulated tracks/districts in real time.
+
 
 .. TODO:: Add examples and diagrams 
 

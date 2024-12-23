@@ -194,7 +194,7 @@ Connecting to your Network - Station Mode "STA" (edit config.h)
 
 .. important:: 
 
-   While it is possible change your network settings using the |Arduino IDE|, we *seriously* **DO NOT RECOMMEND** it for a |conductor-text| or |tinkerer-text|. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.
+   While it is possible change your network settings using the |Arduino IDE|, we *seriously* **DO NOT RECOMMEND IT** for a |conductor-text| or |tinkerer-text|. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.
 
    Just run |EX-I| and :ref:`select your required WiFi settings <ex-installer/installing:wifi>`. 
 

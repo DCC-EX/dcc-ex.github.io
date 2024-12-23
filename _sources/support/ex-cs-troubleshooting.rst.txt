@@ -79,7 +79,7 @@ Is it Plugged In, Is it Turned On?
 
 Yes, we need to start with the basics. 
 
-**If you are using the EX-MotorShield8874** - This paragraph is for the EX-MotorShield8874. If you have a different motor shield, see the next paragraph! You can connect your 12-18V DC (based on the scale of your locomotives) power supply directly to the barrel jack (power input) of the shield. Do not connect power to the Arduino and the motor shield at the same time! You should see the power indicator LED illuminate and power should flow down to the Arduino and illuminate its power LED indicator. If you don't see the power light on the Arduino, check that the shield is seated and making a good connection into the Arduino's sockets (called headers).
+**If you are using the EX-MotorShield8874** - This paragraph is for the EX-MotorShield8874. If you have a different motor shield, see the next paragraph! |BR| You can connect your 12-18V DC (based on the scale of your locomotives) power supply directly to the barrel jack (power input) of the shield. |BR| Do not connect power to the Arduino and the motor shield at the same time! |BR| You should see the power indicator LED illuminate and power should flow down to the Arduino and illuminate its power LED indicator. If you don't see the power light on the Arduino, check that the shield is seated and making a good connection into the Arduino's sockets (called headers).
 
 * The EX-MotorShield8874 power supply should have at least a 2A rating. Ensure it is plugged into the wall.
 

@@ -638,7 +638,12 @@
 </ul>
 </nav>
 </aside>
-<p>This page is specifically written for someone who has installed <em>just</em> the recommended hardware (including WiFi). However it will generally be suitable for testing most other configuration options.</p>
+<p>This page is specifically intended for a <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../begin/levels.html#conductor">Conductor</a> or <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../begin/levels.html#tinkerer">Tinkerer</a> who has either:</p>
+<ul class="simple">
+<li><p>Purchased a ready-to-run (RTR) <a href="../ex-commandstation/ready-to-run/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a>, or</p></li>
+<li><p>Assembled <em>just</em> the recommended do-it-yourself (DIY) hardware (including WiFi).</p></li>
+</ul>
+<p>However it will generally be suitable for testing most other configuration options.</p>
 <section id="testing-control-of-a-loco">
 <h2><a class="toc-backref" href="#id5" role="doc-backlink">Testing control of a loco</a><a class="headerlink" href="#testing-control-of-a-loco" title="Link to this heading"></a></h2>
 <p>You need to test with a locomotive equipped with a DCC decoder (either a standard or sound decoder). Ideally, it should be a loco already proven to work on DCC. Otherwise, if you have a problem, you may not be able to tell if the problem is the decoder or the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>.</p>
@@ -727,7 +732,7 @@
 <ul class="simple">
 <li><p>Disconnect the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> from the computer (that you used to load the software)</p></li>
 <li><p>Connect the wires from the ‘MAIN’ terminals of the motor shield (output A) to your MAIN track</p></li>
-<li><p>If you are using the DCC-EX EX-MotorShield8874, plug in your single power supply to the shield</p></li>
+<li><p>If you are using the DCC-EX <a href="../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a>, plug in your single power supply to the shield</p></li>
 <li><p>If you are using the Arduino Motor Shield, plug in the two power supplies (The one for the Arduino and the one for the motor shield). Make sure to not plug the higher voltage power supply into the Arduino by mistake</p></li>
 <li><p>Wait for about 30 seconds for the Arduino to run through the initial startup sequence</p></li>
 </ul>
@@ -824,8 +829,8 @@
 <li><p>Open the network settings on you phone</p></li>
 <li><p>Change to the network of the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a></p>
 <ul>
-<li><p>SSID (Network name) : ‘DCCEX_xxxxxx’ <br /> where the x’s are the last 6 digits of your device’ MAC address (unique to each device)</p></li>
-<li><p>Password: ‘PASS_xxxxxx’ <br /> where the x’s are the last 6 digits of your device’ MAC address (same as above)</p></li>
+<li><p>SSID (Network name) : <code class="docutils literal notranslate"><span class="pre">DCCEX_xxxxxx</span></code> <br /> where the x’s are the last 6 digits of your device’ MAC address (unique to each device)</p></li>
+<li><p>Password: <code class="docutils literal notranslate"><span class="pre">PASS_xxxxxx</span></code> <br /> where the x’s are the last 6 digits of your device’ MAC address (same as above)</p></li>
 </ul>
 </li>
 </ul>
@@ -852,8 +857,8 @@
 <li><p>It will not find the <a class="reference internal" href="../reference/software/withrottle-vs-native-commands.html"><span class="doc">wiThrottle Server</span></a> automatically</p></li>
 <li><p>Enter:</p>
 <ul>
-<li><p>The IP Address: 192.168.4.1</p></li>
-<li><p>The Port: 2560</p></li>
+<li><p>The IP Address: <code class="docutils literal notranslate"><span class="pre">192.168.4.1</span></code></p></li>
+<li><p>The Port: <code class="docutils literal notranslate"><span class="pre">2560</span></code></p></li>
 </ul>
 </li>
 <li><p><a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> should then connect</p></li>
@@ -919,7 +924,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7746b6f850>
+    <jinja2.runtime.BlockReference object at 0x7fdade7190f0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

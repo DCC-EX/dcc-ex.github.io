@@ -16,10 +16,10 @@ Choosing a Throttle (Controller)
       :depth: 2
       :local:
 
-This page is specifically intended for a |conductor-text| who has either:
+This page is specifically intended for a |conductor-text| or |tinkerer-text| who has either:
 
-- Purchased an |EX-CSB1|, or 
-- Installed *just* the recommended DIY hardware (including WiFi). 
+- Purchased a ready-to-run (RTR) |EX-CSB1|, or 
+- Assembled *just* the recommended do-it-yourself (DIY) hardware (including WiFi). 
 
 If you are a |tinkerer-text| or |engineer-text| or have installed some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`/ex-commandstation/advanced-setup/controllers` page for the full list of Throttle (Controller) options.
 
@@ -36,12 +36,16 @@ You need just two things that work together to operate your model railroad:
 The EX-CommandStation
 ---------------------
 
-The |EX-CS| is covered in the :doc:`/ex-commandstation/index` pages, and is either an |EX-CSB1| or an Arduino microcontroller with a motor driver and a WiFi shield. The Command Station accepts instructions from a controller and generates packets that are transmitted to your track and subsequently your trains.
+The |EX-CS| is explained in detail in the :doc:`/ex-commandstation/index` pages. It is either an |EX-CSB1| or an Arduino microcontroller with a motor driver and a WiFi shield. 
+
+The Command Station accepts instructions from a controller and generates packets that are transmitted to your track and subsequently your trains.
 
 The Throttle (Controller)
 -------------------------
 
-Since the |EX-CS| simply accepts commands to turn into signals for your layout, you need something that sends those commands to run your trains - a controller. It isn't very practical to type something like <t 1 3 75 1> into a serial monitor to tell your train to move each time! 😉  A controller can be a hardware device like a handheld throttle (also called a Controller or Cab), an App that runs on your phone, a Web Page, or front-end software like |JMRI| or Rocrail that runs on a computer or Raspberry Pi. 
+Since the |EX-CS| simply accepts commands to turn into signals for your layout, you need something that sends those commands to run your trains - a controller. (It isn't very practical to type something like <t 1 3 75 1> into a serial monitor to tell your train to move each time! 😉)
+
+A controller can be a hardware device like a handheld throttle (also called a Controller or Cab), an App that runs on your phone, a Web Page, or front-end software like |JMRI| or Rocrail that runs on a computer or Raspberry Pi. 
 
 ----
 
@@ -70,7 +74,9 @@ For further throttle and connection options, refer to :doc:`/ex-commandstation/a
 Connecting via WiFi
 -------------------
 
-For those who just want to run trains and not use any other control software, the simplest method to get going is to download a compatible phone or tablet app and connect directly from your wireless device to the |EX-CS|. You need a Command Station with a WiFi Shield. 
+For those who just want to run trains and not use any other control software, the simplest method to get going is to download a compatible phone or tablet app and connect directly from your wireless device to the |EX-CS|. 
+
+Note you need a Command Station with a WiFi Shield. 
 
 Here is an image that represents a direct connection.
 

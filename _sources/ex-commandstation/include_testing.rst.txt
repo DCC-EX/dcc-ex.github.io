@@ -18,7 +18,12 @@ Test Your Setup
       :depth: 2
       :local:
 
-This page is specifically written for someone who has installed *just* the recommended hardware (including WiFi). However it will generally be suitable for testing most other configuration options.
+This page is specifically intended for a |conductor-text| or |tinkerer-text| who has either:
+
+- Purchased a ready-to-run (RTR) |EX-CSB1|, or 
+- Assembled *just* the recommended do-it-yourself (DIY) hardware (including WiFi). 
+
+However it will generally be suitable for testing most other configuration options.
 
 Testing control of a loco
 =========================
@@ -116,7 +121,7 @@ Connect Everything:
 
 * Disconnect the |EX-CS| from the computer (that you used to load the software)
 * Connect the wires from the 'MAIN' terminals of the motor shield (output A) to your MAIN track
-* If you are using the DCC-EX EX-MotorShield8874, plug in your single power supply to the shield
+* If you are using the DCC-EX |EX-MS|, plug in your single power supply to the shield
 * If you are using the Arduino Motor Shield, plug in the two power supplies (The one for the Arduino and the one for the motor shield). Make sure to not plug the higher voltage power supply into the Arduino by mistake
 * Wait for about 30 seconds for the Arduino to run through the initial startup sequence
 
@@ -204,8 +209,8 @@ Using WiThrottle (Apple iOS)
   * Open the network settings on you phone
   * Change to the network of the |EX-CS|
   
-    * SSID (Network name) : 'DCCEX_xxxxxx' |BR| where the x's are the last 6 digits of your device' MAC address (unique to each device)
-    * Password: 'PASS_xxxxxx' |BR| where the x's are the last 6 digits of your device' MAC address (same as above)
+    * SSID (Network name) : ``DCCEX_xxxxxx`` |BR| where the x's are the last 6 digits of your device' MAC address (unique to each device)
+    * Password: ``PASS_xxxxxx`` |BR| where the x's are the last 6 digits of your device' MAC address (same as above)
 
 * If you have set up your |EX-CS| in |Station Mode| (The alternate approach)
   
@@ -225,8 +230,8 @@ Using WiThrottle (Apple iOS)
   * It will not find the |WiThrottle Server| automatically
   * Enter:
 
-    * The IP Address: 192.168.4.1
-    * The Port: 2560
+    * The IP Address: ``192.168.4.1``
+    * The Port: ``2560``
 
   * |WiThrottle| should then connect 
 

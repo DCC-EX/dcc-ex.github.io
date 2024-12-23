@@ -106,7 +106,7 @@ There are 2 track output power connectors marked ``A`` and ``B``. In the standar
 
 We recommend connecting your track to the ``A`` **MAIN** output initially to test your Command Station. 
 
-To alter this default configuration of DCC outputs, or for DC Mode, you would need to configure outputs with a |TM| command in the ``mySetup.h`` file or by creatine a 'Route'. See :doc:`the TrackManager page </trackmanager/index>`
+To alter this default configuration of DCC outputs, or for DC Mode, you would need to configure outputs with a |TM| command in the ``mySetup.h`` file or by creatine a 'Route'. See the :doc:`TrackManager page </trackmanager/index>` for details.
 
 .. figure:: /_static/images/ex-csb1/ab_outputs.png
    :alt: Track A and B Outputs
@@ -159,7 +159,7 @@ You can pull the connector out of its socket to remove it from the |EX-CSB1| to 
 
 .. NOTE:: The power connection to your track will be either wires you solder yourself to the rails or via a power connector that plugs into track (such as Kato Unitrack). We will leave it up to you to determine the proper connection to your track. 
 
-Connect the other ends of the track output wires to your track. While not critical at this stage when using DCC, it is best to keep to a standard where the RED wire (or striped wire) is connected to the outside rail of the track to make things easier when using feeders to track sections or adding reversing loops. 
+Connect the other ends of the track output wires to your track. While not critical at this stage when using DCC. It is best to keep to a standard where the RED wire (or striped wire) is connected to the outside rail of the track to make things easier when using feeders to track sections or adding reversing loops. 
 
 .. todo XXX need to mention DC here with a link?
 
@@ -175,7 +175,9 @@ Connect the other ends of the track output wires to your track. While not critic
 Power Connection
 ------------------
 
-The |EX-CSB1| has a 2.1mm x 5.5mm power jack. If you already have a power supply with bare wires, you can use an optional 2.1mm x 5.5mm screw terminal block adapter. For N and HO scale you would normally use a 12V to 15V DC power supply, but be sure to check the manual for your loco/decoder combination for the correct voltage. 
+The |EX-CSB1| has a 2.1mm x 5.5mm power jack. If you already have a power supply with bare wires, you can use an optional 2.1mm x 5.5mm screw terminal block adapter. 
+
+For N and HO scale you would normally use a 12V to 15V DC power supply, but be sure to check the manual for your loco/decoder combination for the correct voltage. 
 
 For more information about power supplies, including how to use one power supply to supply all the different voltages on your layout, see :ref:`Power Supplies <reference/hardware/power-supplies:power supplies>`. 
 
@@ -201,9 +203,11 @@ Testing Your Command Station
 Connect Track Input Power
 -------------------------
 
-To fully power the EX-CSB1, just plug your power supply into the mains power (aka wall outlet) and connect the barrel end to the Command Station. Make sure your power supply matches the needs of your setup: the voltage should be between 12V and 25V DC, depending on the scale of your locomotives, and it should provide at least 2A of current with good over-current performance and voltage stability. 
+To fully power the EX-CSB1, just plug your power supply into the mains power (aka wall outlet) and connect the barrel end to the Command Station. 
 
-To get the most out of your EX-CSB1, we suggest using a modern switching power supply with 4A or more. For Z scale, 12V is usually enough, but for N, HO, and OO scales, we recommend using between 14V and 16V DC. 
+Make sure your power supply matches the needs of your setup: the voltage should be between 12V and 25V DC, depending on the scale of your locomotives, and it should provide at least 2A of current with good over-current performance and voltage stability. 
+
+To get the most out of your EX-CSB1 we suggest using a modern switching power supply with 4A or more. For Z scale, 12V is usually enough, but for N, HO, and OO scales, we recommend using between 14V and 16V DC. 
 
 It's important that your DC power is well-regulated which is why we suggest a modern switch-mode power supply with double insulation and strong overload protection.
 
@@ -227,7 +231,7 @@ However, for safety, track output power will be off by default when you first pl
 
 You should see status information on the display including the EX-CSB1 firmware version, track power status, free memory, and WiFi connection information. 
 
-If you do not have a display, you will need to connect a serial monitor (See: :doc:`Using a Serial Monitor </reference/tools/serial-monitor>`).
+If you do not have a display, you will need to connect a serial monitor to see the status, but this is not essential for ongoing use of the system. (See: :doc:`Using a Serial Monitor </reference/tools/serial-monitor>`).
 
 .. todo XXX insert link to serial monitor
 

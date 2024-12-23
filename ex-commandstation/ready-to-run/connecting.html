@@ -752,7 +752,7 @@
 <h3><a class="toc-backref" href="#id37" role="doc-backlink">Track Connection</a><a class="headerlink" href="#track-connection" title="Link to this heading"></a></h3>
 <p>There are 2 track output power connectors marked <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code>. In the standard DCC-EX configuration of a EX-CSB1, <code class="docutils literal notranslate"><span class="pre">A</span></code> is configured for DCC <strong>MAIN</strong> operation, and <code class="docutils literal notranslate"><span class="pre">B</span></code> is configured for <strong>PROG</strong> or programming track output.</p>
 <p>We recommend connecting your track to the <code class="docutils literal notranslate"><span class="pre">A</span></code> <strong>MAIN</strong> output initially to test your Command Station.</p>
-<p>To alter this default configuration of DCC outputs, or for DC Mode, you would need to configure outputs with a <span class="ex-suffix">TrackManager</span> command in the <code class="docutils literal notranslate"><span class="pre">mySetup.h</span></code> file or by creatine a ‘Route’. See <a class="reference internal" href="../../trackmanager/index.html"><span class="doc">the TrackManager page</span></a></p>
+<p>To alter this default configuration of DCC outputs, or for DC Mode, you would need to configure outputs with a <span class="ex-suffix">TrackManager</span> command in the <code class="docutils literal notranslate"><span class="pre">mySetup.h</span></code> file or by creatine a ‘Route’. See the <a class="reference internal" href="../../trackmanager/index.html"><span class="doc">TrackManager page</span></a> for details.</p>
 <figure class="align-center" id="id5">
 <a class="reference internal image-reference" href="../../_images/ab_outputs.png"><img alt="Track A and B Outputs" src="../../_images/ab_outputs.png" style="width: 250.20000000000002px; height: 225.0px;" /></a>
 <figcaption>
@@ -796,7 +796,7 @@
 <p class="admonition-title">Note</p>
 <p>The power connection to your track will be either wires you solder yourself to the rails or via a power connector that plugs into track (such as Kato Unitrack). We will leave it up to you to determine the proper connection to your track.</p>
 </div>
-<p>Connect the other ends of the track output wires to your track. While not critical at this stage when using DCC, it is best to keep to a standard where the RED wire (or striped wire) is connected to the outside rail of the track to make things easier when using feeders to track sections or adding reversing loops.</p>
+<p>Connect the other ends of the track output wires to your track. While not critical at this stage when using DCC. It is best to keep to a standard where the RED wire (or striped wire) is connected to the outside rail of the track to make things easier when using feeders to track sections or adding reversing loops.</p>
 <figure class="align-center" id="id10">
 <a class="reference internal image-reference" href="../../_images/track_power_conn_1.jpg"><img alt="Connecting Wires to Track" src="../../_images/track_power_conn_1.jpg" style="width: 320.0px; height: 240.0px;" /></a>
 <figcaption>
@@ -806,7 +806,8 @@
 </section>
 <section id="power-connection">
 <h3><a class="toc-backref" href="#id38" role="doc-backlink">Power Connection</a><a class="headerlink" href="#power-connection" title="Link to this heading"></a></h3>
-<p>The <a href="../../ex-commandstation/ready-to-run/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> has a 2.1mm x 5.5mm power jack. If you already have a power supply with bare wires, you can use an optional 2.1mm x 5.5mm screw terminal block adapter. For N and HO scale you would normally use a 12V to 15V DC power supply, but be sure to check the manual for your loco/decoder combination for the correct voltage.</p>
+<p>The <a href="../../ex-commandstation/ready-to-run/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> has a 2.1mm x 5.5mm power jack. If you already have a power supply with bare wires, you can use an optional 2.1mm x 5.5mm screw terminal block adapter.</p>
+<p>For N and HO scale you would normally use a 12V to 15V DC power supply, but be sure to check the manual for your loco/decoder combination for the correct voltage.</p>
 <p>For more information about power supplies, including how to use one power supply to supply all the different voltages on your layout, see <a class="reference internal" href="../../reference/hardware/power-supplies.html#power-supplies"><span class="std std-ref">Power Supplies</span></a>.</p>
 <figure class="align-left" id="id11">
 <a class="reference internal image-reference" href="../../_images/2_1mm_screw_terminal_adapter.png"><img alt="2.1mm screw terminal adapter" src="../../_images/2_1mm_screw_terminal_adapter.png" style="width: 152.4px; height: 144.8px;" /></a>
@@ -827,8 +828,9 @@
 <h2><a class="toc-backref" href="#id39" role="doc-backlink">Testing Your Command Station</a><a class="headerlink" href="#testing-your-command-station" title="Link to this heading"></a></h2>
 <section id="connect-track-input-power">
 <h3><a class="toc-backref" href="#id40" role="doc-backlink">Connect Track Input Power</a><a class="headerlink" href="#connect-track-input-power" title="Link to this heading"></a></h3>
-<p>To fully power the EX-CSB1, just plug your power supply into the mains power (aka wall outlet) and connect the barrel end to the Command Station. Make sure your power supply matches the needs of your setup: the voltage should be between 12V and 25V DC, depending on the scale of your locomotives, and it should provide at least 2A of current with good over-current performance and voltage stability.</p>
-<p>To get the most out of your EX-CSB1, we suggest using a modern switching power supply with 4A or more. For Z scale, 12V is usually enough, but for N, HO, and OO scales, we recommend using between 14V and 16V DC.</p>
+<p>To fully power the EX-CSB1, just plug your power supply into the mains power (aka wall outlet) and connect the barrel end to the Command Station.</p>
+<p>Make sure your power supply matches the needs of your setup: the voltage should be between 12V and 25V DC, depending on the scale of your locomotives, and it should provide at least 2A of current with good over-current performance and voltage stability.</p>
+<p>To get the most out of your EX-CSB1 we suggest using a modern switching power supply with 4A or more. For Z scale, 12V is usually enough, but for N, HO, and OO scales, we recommend using between 14V and 16V DC.</p>
 <p>It’s important that your DC power is well-regulated which is why we suggest a modern switch-mode power supply with double insulation and strong overload protection.</p>
 <figure class="align-center" id="id13">
 <a class="reference internal image-reference" href="../../_images/csb1_barrel_insert.png"><img alt="Inserting barrel plug" src="../../_images/csb1_barrel_insert.png" style="width: 320.0px; height: 244.8px;" /></a>
@@ -845,7 +847,7 @@
 </figcaption>
 </figure>
 <p>You should see status information on the display including the EX-CSB1 firmware version, track power status, free memory, and WiFi connection information.</p>
-<p>If you do not have a display, you will need to connect a serial monitor (See: <a class="reference internal" href="../../reference/tools/serial-monitor.html"><span class="doc">Using a Serial Monitor</span></a>).</p>
+<p>If you do not have a display, you will need to connect a serial monitor to see the status, but this is not essential for ongoing use of the system. (See: <a class="reference internal" href="../../reference/tools/serial-monitor.html"><span class="doc">Using a Serial Monitor</span></a>).</p>
 <figure class="align-center" id="id15">
 <a class="reference internal image-reference" href="../../_images/csb1_oled.png"><img alt="OLED Status Display" src="../../_images/csb1_oled.png" style="width: 320.0px; height: 248.0px;" /></a>
 <figcaption>
@@ -1092,7 +1094,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f775a81baf0>
+    <jinja2.runtime.BlockReference object at 0x7fdaddb65fc0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

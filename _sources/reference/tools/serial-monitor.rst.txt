@@ -44,7 +44,7 @@ Connect with the Arduino IDE Serial Monitor
 .. important:: 
    :class: important-float-right
 
-   While it is possible use the |Arduino IDE|, we *seriously* **DO NOT RECOMMEND** it for a |conductor-text| or |tinkerer-text|. It is an order of magnitude more complex and much slower.
+   While it is possible use the |Arduino IDE|, we *seriously* **DO NOT RECOMMEND IT** for a |conductor-text| or |tinkerer-text|. It is an order of magnitude more complex and much slower.
 
    Just run |EX-I| and :ref:`open the serial monitor in the EX-Installer <ex-installer/testing:using the ex-installer device monitor>`. 
 

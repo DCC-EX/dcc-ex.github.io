@@ -64,7 +64,7 @@ This will need to be done in the :doc:`/ex-commandstation/advanced-setup/install
 
    A word of caution on using the |Arduino IDE| to install the software:
 
-   While it is possible install the software using the |Arduino IDE|, we *seriously* **DO NOT RECOMMEND** it for a |conductor-text| or |tinkerer-text|. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.
+   While it is possible install the software using the |Arduino IDE|, we *seriously* **DO NOT RECOMMEND IT** for a |conductor-text| or |tinkerer-text|. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.
 
    The |EX-I| will meet 100% of the needs of a |conductor-text| or |tinkerer-text| with considerably less effort. 
 

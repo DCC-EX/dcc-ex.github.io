@@ -39,7 +39,7 @@ Our Free and Open Source Products
 Our Free, Open Source Software
 ------------------------------
 
-Our *free*, open source software products currently include:
+Our *free*, *open source* software products currently include:
 
 .. list-table::
     :widths: 33 33 33
@@ -49,7 +49,7 @@ Our *free*, open source software products currently include:
     * - |EX-CS-LOGO-SMALL|
       - |EX-I-LOGO-SMALL|
       - |EX-R-LOGO-SMALL|
-    * - Our DCC & DC command station software for controlling your model railroad
+    * - Our DCC & DC command station software for controlling your model railroad |BR| :dcc-ex-text-size-60pct:`For a ready-to-run version of the EX-CommandStation see our` :doc:`EX-CSB1 </ex-commandstation/ready-to-run/index>`
       - Our user friendly command station software installer
       - The built-in scripting language for automating your model railroad
     * - |EX-WT-LOGO-SMALL|
@@ -71,7 +71,7 @@ Our *free*, open source software products currently include:
     :class: table-list-homepage
 
     * - |EX-CS-LOGO-SMALL| 
-      - Our DCC & DC command station software for controlling your model railroad. (For a ready-to-run version of the EX-CommandStation see our :doc:`EX-CSB1 </ex-commandstation/ready-to-run/index>`)
+      - Our DCC & DC command station software for controlling your model railroad. |BR| :dcc-ex-text-size-60pct:`For a ready-to-run version of the EX-CommandStation see our` :doc:`EX-CSB1 </ex-commandstation/ready-to-run/index>`
     * - |EX-I-LOGO-SMALL| 
       - Our user friendly command station software installer
     * - |EX-R-LOGO-SMALL| 
@@ -92,7 +92,7 @@ Our *free*, open source software products currently include:
 Our Open Source Hardware
 ------------------------
 
-Our open source hardware products currently include:
+Our *open source* hardware products currently include:
 
 .. list-table::
     :widths: 33 33 33

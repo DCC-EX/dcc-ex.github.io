@@ -4,7 +4,7 @@
 |EX-R-LOGO|
 
 **************************
-EX-RAIL Command Reference
+EXRAIL Command Reference
 **************************
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
@@ -21,8 +21,8 @@ This page includes a reference for all available |EX-R| commands.
 
 See Also:
 
-- :doc:`Introduction to EX-RAIL <getting-started>` 
-- :doc:`/ex-rail/examples`
+- :doc:`Introduction to EXRAIL <getting-started>` 
+- :doc:`/exrail/examples`
 
 ----
 
@@ -32,8 +32,8 @@ Introductory Information
 Conventions used on this page
 -----------------------------
 
-- CAPITALISED words - These are EX-RAIL commands and are case sensitive
-- lowercase words within brackets/braces ``()`` - These are EX-RAIL parameters that must be provided, with multiple parameters separated by a comma ``,``, for example ``SEQUENCE(id)`` or ``DELAYRANDOM(min_delay, max_delay)``
+- CAPITALISED words - These are EXRAIL commands and are case sensitive
+- lowercase words within brackets/braces ``()`` - These are EXRAIL parameters that must be provided, with multiple parameters separated by a comma ``,``, for example ``SEQUENCE(id)`` or ``DELAYRANDOM(min_delay, max_delay)``
 - Quoted ``"text"`` - Text within quote marks ``""`` are used as descriptions, and must include the quote characters, for example ``ROUTE(id, "description")`` becomes ``ROUTE(1, "This is the route description")``
 - Square brackets ``[]`` - Parameters within square brackets ``[]`` are optional and may be ommitted. If specifying these parameters, do not include the square brackets themselves, for example ``ALIAS(name[, value])`` becomes ``ALIAS(MY_ALIAS)`` or ``ALIAS(MY_ALIAS, 3)``
 - ``|`` - Use of the ``|`` character means you need to provide one of the provided options only, for example ``<D POWER ON|OFF>`` becomes either ``<D POWER ON>`` or ``<D POWER OFF>``
@@ -51,7 +51,7 @@ Handy information
 
 .. note:: 
 
-  There are four uses of ID numbers in EX-RAIL:
+  There are four uses of ID numbers in EXRAIL:
 
   - AUTOMATION, ROUTE, and SEQUENCE IDs
   - Turnout/Point IDs
@@ -155,14 +155,14 @@ These commands can be run interactively via the serial console or over Ethernet/
 
 |hr-dashed|
 
-``<D EXRAIL state>`` - Enable or disable EX-RAIL sequence logging
+``<D EXRAIL state>`` - Enable or disable EXRAIL sequence logging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When the CommandStation is connected to a serial monitor, EX-RAIL sequence logging can be turned on or off (Enabled or Disabled).
+When the CommandStation is connected to a serial monitor, EXRAIL sequence logging can be turned on or off (Enabled or Disabled).
 
   .. collapse:: For example: (click to show)
 
-    Example output from :ref:`ex-rail/examples:Point to Point Shuttle` running SEQUENCE(13) with loco ID 18:
+    Example output from :ref:`exrail/examples:Point to Point Shuttle` running SEQUENCE(13) with loco ID 18:
 
     .. code-block:: cpp
 
@@ -189,24 +189,24 @@ When the CommandStation is connected to a serial monitor, EX-RAIL sequence loggi
 
 |hr-dashed|
 
-``</PAUSE>`` - Pause ALL EX-RAIL automation activities
+``</PAUSE>`` - Pause ALL EXRAIL automation activities
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Pauses **ALL** EX-RAIL automation activities, including sending an E-STOP to all locos.
+Pauses **ALL** EXRAIL automation activities, including sending an E-STOP to all locos.
 
 |hr-dashed|
 
-``</RESUME>`` - Resume **ALL** EX-RAIL automation activities 
+``</RESUME>`` - Resume **ALL** EXRAIL automation activities 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Resume **ALL** EX-RAIL automation activities, and resumes all locos at the same speed at which they were paused.
+Resume **ALL** EXRAIL automation activities, and resumes all locos at the same speed at which they were paused.
 
-``</>`` - Display EX-RAIL running task information
+``</>`` - Display EXRAIL running task information
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. collapse:: For example: (click to show)
 
-  Example outputs also using :ref:`ex-rail/examples:Point to Point Shuttle`:
+  Example outputs also using :ref:`exrail/examples:Point to Point Shuttle`:
 
   * Leaving right side of the shuttle sequence with speed 50F (forward):
 
@@ -262,7 +262,7 @@ Lock sensor ON, preventing external influence, valid IDs are in the range 0 - 25
 
 Unlock sensor, returning to current external state, valid IDs are in the range 0 - 255.
 
-Refer to the LATCH/UNLATCH commands in the :ref:`ex-rail/ex-rail-command-reference:sensors/inputs - reading and responding` section below for further details.
+Refer to the LATCH/UNLATCH commands in the :ref:`exrail/exrail-command-reference:sensors/inputs - reading and responding` section below for further details.
 
 ----
 
@@ -276,7 +276,7 @@ Aliases assigns names to values. They can go anywhere in the sequence. If a valu
 
 This is a simple substitution that lets you have readable names for things in your sequence. For example, instead of having to remember the VPin a turnout/point is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.
 
-If you simply need a unique identifier for an object used internally to the sequence, such as a turnout/point, route, automation, or sequence, you don't even need to provide an ID, EX-RAIL will generate one automatically when you omit the value parameter. We recommend using this for all your routes, sequences, and other internal objects so you don't have to try to remember or keep a list of numbers you've used. This also prevents you from assigning the same number to more than one object.
+If you simply need a unique identifier for an object used internally to the sequence, such as a turnout/point, route, automation, or sequence, you don't even need to provide an ID, EXRAIL will generate one automatically when you omit the value parameter. We recommend using this for all your routes, sequences, and other internal objects so you don't have to try to remember or keep a list of numbers you've used. This also prevents you from assigning the same number to more than one object.
 
 REMEMBER: IDs for RESERVE/FREE, LATCH/UNLATCH, and pins must be explicitly defined.
 
@@ -284,7 +284,7 @@ To put this another way, if you connect an LED to pin 23 and want to turn it on 
 
 Alias naming rules:
 
-- **Must not** be an existing EX-RAIL command name or other reserved word.
+- **Must not** be an existing EXRAIL command name or other reserved word.
 - **Should be** reasonably short but descriptive.
 - **Must start** with letters A-Z, a-z, or underscore _ (case sensitive!).
 - **May then** also contain numbers.
@@ -495,7 +495,7 @@ There are three options to define |EX-R| scripts or sequences:
 
 Define an automation sequence that is advertised to throttles/clients to send a train along. 
 
-See :ref:`ex-rail/examples:Stopping at a Station (simple loop)` for a simple example.
+See :ref:`exrail/examples:Stopping at a Station (simple loop)` for a simple example.
 
 *Parameters:* |BR|
 |_| > **id** - id for the sequence/route/automation |BR|
@@ -508,7 +508,7 @@ See :ref:`ex-rail/examples:Stopping at a Station (simple loop)` for a simple exa
 ``ROUTE( id, "description" )`` - Define a route, advertised to throttles/clients
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Define a route that is advertised to throttles/clients. This can be used to initiate automation sequences such as setting turnouts/points and signals to allow a train to be driven through a specific route on the layout. See :ref:`ex-rail/examples:creating routes` for various examples.
+Define a route that is advertised to throttles/clients. This can be used to initiate automation sequences such as setting turnouts/points and signals to allow a train to be driven through a specific route on the layout. See :ref:`exrail/examples:creating routes` for various examples.
 
 *Parameters:* |BR|
 |_| > **id** - id for the sequence/route/automation |BR|
@@ -521,7 +521,7 @@ Define a route that is advertised to throttles/clients. This can be used to init
 ``SEQUENCE( id )`` - A general purpose sequence, not advertised to throttles/clients
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A general purpose automation sequence that is not advertised to throttles/clients. This may be triggered automatically on startup, or be called by other sequences or activities. See :ref:`ex-rail/examples:automating various non-track items`, :ref:`ex-rail/examples:Point to Point Shuttle`, and :ref:`ex-rail/examples:multiple inter-connected trains` for further examples.
+A general purpose automation sequence that is not advertised to throttles/clients. This may be triggered automatically on startup, or be called by other sequences or activities. See :ref:`exrail/examples:automating various non-track items`, :ref:`exrail/examples:Point to Point Shuttle`, and :ref:`exrail/examples:multiple inter-connected trains` for further examples.
 
 *Parameters:* |BR|
 |_| > **id** - id for the sequence/route/automation |BR|
@@ -657,10 +657,10 @@ Branch or Follow a specified sequence. This lets us do clever things like perfor
 
 .. _pause:
 
-``PAUSE`` - E-STOP all locos and PAUSE all other EX-RAIL tasks
+``PAUSE`` - E-STOP all locos and PAUSE all other EXRAIL tasks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-E-STOP all locos and PAUSE all other EX-RAIL tasks until RESUMEd.
+E-STOP all locos and PAUSE all other EXRAIL tasks until RESUMEd.
 
 *Parameters:* |BR|
 |_| > none
@@ -736,7 +736,7 @@ Delay the current sequence a number of minutes.
 
 Delay the current sequence a random time between min and max milliseconds.
 
-See :ref:`ex-rail/examples:Multiple inter-connected trains` for good examples.
+See :ref:`exrail/examples:Multiple inter-connected trains` for good examples.
 
 *Parameters:* |BR|
 |_| > **min_delay** - minimum period to delay in milliseconds |BR|
@@ -1011,7 +1011,7 @@ If a conditional statement is part of an automation sequence, the sequence still
 
 This include ``IFNOT()``, ``IFRED()``, ``IFAMBER()``, ``IFGREEN()``, 
 
-Refer also to :ref:`ex-rail/ex-rail-command-reference:correct use of done, endif, and follow() statements`.
+Refer also to :ref:`exrail/exrail-command-reference:correct use of done, endif, and follow() statements`.
 
 |hr-dashed|
 
@@ -1469,7 +1469,7 @@ Refer to :doc:`/reference/hardware/servo-module` for more information.
 
 Define a virtual turnout, which is backed by another automation sequence. 
   
-For a good example of this refer to :ref:`ex-rail/tips:realistic turnout sequences`.
+For a good example of this refer to :ref:`exrail/tips:realistic turnout sequences`.
 
 *Parameters:* |BR|
 |_| > **turnout_id** - The id of the turnout/point |BR|
@@ -1580,7 +1580,7 @@ Turntable/Traverser Objects - Definition and Control
     :local:
     :class: in-this-section
 
-Also refer to :ref:`ex-turntable/test-and-tune:ex-rail automation`.
+Also refer to :ref:`ex-turntable/test-and-tune:exrail automation`.
 
 |hr-dashed|
 
@@ -1598,7 +1598,7 @@ Move the specified |EX-TT| to the provided step position and perform the specifi
 
 .. note:: 
 
-  From version 5.4.0, we highly recommend using our new turntable/traverser commands which allow turntables/traversers to be advertised to throttles similarly to how turnout/point objects are advertised and operated. Refer to :ref:`ex-rail/ex-rail-command-reference:turntable features`.
+  From version 5.4.0, we highly recommend using our new turntable/traverser commands which allow turntables/traversers to be advertised to throttles similarly to how turnout/point objects are advertised and operated. Refer to :ref:`exrail/exrail-command-reference:turntable features`.
 
 |hr-dashed|
 
@@ -1749,7 +1749,7 @@ Rotate an EX-Turntable turntable/traverser at the specified **id** to the specif
 *Parameters:* |BR|
 |_| > **id** - id of the turntable/traverser, valid IDs are (1 - 32767) |BR|
 |_| > **position** - position to rotate to, valid positions are (1 - 48) |BR|
-|_| > **activity** - refer to :ref:`ex-turntable/test-and-tune:ex-turntable commands`, using the "EX-RAIL activity" column
+|_| > **activity** - refer to :ref:`ex-turntable/test-and-tune:ex-turntable commands`, using the "EXRAIL activity" column
 
 |hr-dashed|
 
@@ -1969,7 +1969,7 @@ Test if analog pin reading is less than value (<).
 
 |force-break|
 
-LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used to trigger a virtual sensor to act as a state flag for EX-RAIL. As this effects the state of a sensor, it can be tested via IF/IFNOT and will also work with AT/AFTER.
+LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used to trigger a virtual sensor to act as a state flag for EXRAIL. As this effects the state of a sensor, it can be tested via IF/IFNOT and will also work with AT/AFTER.
 
 |hr-dashed|
 
@@ -2304,7 +2304,7 @@ Controls the colour of one attached Neopixel LED
       //   10 = number of VPINs allocated.
       //   Serial1 = name of serial port (usually Serial1 or Serial2).
       // With these parameters, up to 10 files may be played on pins 10000-10009.
-      // Play is started from EX-RAIL with SET(10000) for first mp3 file, SET(10001)
+      // Play is started from EXRAIL with SET(10000) for first mp3 file, SET(10001)
       // for second file, etc.  Play may also be initiated by writing an analogue
       // value to the first pin, e.g. ANOUT(10000,23,0,0) will play the 23rd mp3 file.
       // ANOUT(10000,23,30,0) will do the same thing, as well as setting the volume to 
@@ -2312,7 +2312,7 @@ Controls the colour of one attached Neopixel LED
       // Play is stopped by RESET(10000) (or any other allocated VPIN).
       // Volume may also be set by writing an analogue value to the second pin for the player, 
       // e.g. ANOUT(10001,30,0,0) sets volume to maximum (30).
-      // The EX-RAIL sequence may check for completion of play by calling WAITFOR(pin), which will only proceed to the
+      // The EXRAIL sequence may check for completion of play by calling WAITFOR(pin), which will only proceed to the
       // following line when the player is no longer busy.
       // E.g.
       //    SEQUENCE(1)
@@ -2394,7 +2394,7 @@ Move an animation servo taking duration in milliseconds. *Do NOT use for Turnout
 ``WAITFOR( pin )`` - Wait for a servo motion to complete prior to continuing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The WAITFOR() command instructs EX-RAIL to wait for a servo motion to complete prior to continuing.
+The WAITFOR() command instructs EXRAIL to wait for a servo motion to complete prior to continuing.
 
 *Parameters:* |BR|
 |_| > **pin** - vpin to test
@@ -2615,7 +2615,7 @@ EX-FastClock Event Handlers
   :local:
   :class: in-this-section
 
-Also refer to :ref:`ex-fastclock/cs-commands:controlling ex-rail by time`.
+Also refer to :ref:`ex-fastclock/cs-commands:controlling exrail by time`.
 
 |hr-dashed|
 

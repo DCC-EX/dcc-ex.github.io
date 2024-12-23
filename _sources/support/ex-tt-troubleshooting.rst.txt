@@ -122,7 +122,7 @@ EX-Turntable showing as offline with <D HAL SHOW>
   * - Symptoms
     - Common Causes
   * - | \<D HAL SHOW\> reports EX-Turntable as OFFLINE
-      | EX-Turntable does not respond to EX-RAIL or diagnostic commands
+      | EX-Turntable does not respond to EXRAIL or diagnostic commands
     - | EX-Turntable is not powered on, or was powered on after the CommandStation
       | The |I2C| interfaces are not connected correctly, refer to :ref:`ex-turntable/assembly:9. connect ex-turntable to your ex-commandstation`
       | The |I2C| address in EX-Turntable's config.h does not match the address in the CommandStation's myHal.cpp file

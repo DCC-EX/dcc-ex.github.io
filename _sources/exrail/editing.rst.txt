@@ -21,13 +21,13 @@ Connecting your Arduino and pressing the :guilabel:`Upload` button in the usual 
 
 You can create and edit the `myAutomation.h` using a text editor (like Notepad), but if you are using the Arduino IDE (rather than the |EX-I|) you can create the myAutomation.h file in the Arduino IDE. Use the pulldown button and select New Tab (or simply press Ctrl+Shift+N).
 
-.. image:: /_static/images/ex-rail/setup1.jpg
+.. image:: /_static/images/exrail/setup1.jpg
    :alt:  Setup pulldown button
    :align: center
    :scale: 100%
    :target: #myautomation-h-editing-your-sequences
 
-.. image:: /_static/images/ex-rail/setup2.jpg
+.. image:: /_static/images/exrail/setup2.jpg
    :alt:  Setup pulldown menu
    :align: center
    :scale: 100%
@@ -35,7 +35,7 @@ You can create and edit the `myAutomation.h` using a text editor (like Notepad),
 
 Enter the file name "myAutomation.h" (This is case sensitive)
 
-.. image:: /_static/images/ex-rail/setup3.jpg
+.. image:: /_static/images/exrail/setup3.jpg
    :alt:  Setup myAutomation.h
    :align: center
    :scale: 100%
@@ -43,7 +43,7 @@ Enter the file name "myAutomation.h" (This is case sensitive)
 
 And type your script in.
 
-.. image:: /_static/images/ex-rail/setup4.jpg
+.. image:: /_static/images/exrail/setup4.jpg
    :alt:  Setup Example file
    :align: center
    :scale: 100%
@@ -56,9 +56,9 @@ Content
 
 What you will need to add to your `myAutomation.h`` file will be explained in the next few pages, but can be categorised as:
 
-* :doc:`Objects </ex-rail/creating-elements>`
-* :doc:`Commands </ex-rail/getting-started>`
-* :doc:`Sequences </ex-rail/getting-started>`
+* :doc:`Objects </exrail/creating-elements>`
+* :doc:`Commands </exrail/getting-started>`
+* :doc:`Sequences </exrail/getting-started>`
 
 ----
 

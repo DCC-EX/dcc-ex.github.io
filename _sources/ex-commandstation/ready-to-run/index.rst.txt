@@ -31,7 +31,7 @@ The |DCC-EX| |EX-CSB1| comes ready to use out of the box and has the following f
 *	**WiFi built-in** – fast 802.11n capable, with Access Point and Station modes including support for connecting as many as 10 WiFi throttles (you can also connect to JMRI via WiFi, but a USB cable is often better)
 *	**Single power supply** for track and onboard electronics – 12-25V DC with polarity protection
 *	**USB-C connector** – for software upload, diagnostic monitoring, DCC-EX WebThrottle and JMRI connectivity
-*	**Railsync DCC input** – enables booster mode, which with an optional EX-RAIL script can be automatically engaged on receipt of a signal
+*	**Railsync DCC input** – enables booster mode, which with an optional EXRAIL script can be automatically engaged on receipt of a signal
 *	OLED screen – for diagnostics, status and information display
 
 Next Steps - Purchasing

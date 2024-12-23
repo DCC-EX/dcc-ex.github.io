@@ -520,7 +520,7 @@ For basic control and validation of the turntable and traverser positions, this 
 
 |
 
-Control and automation with EX-RAIL
+Control and automation with EXRAIL
 -----------------------------------
 
 While controlling |EX-TT| via the diagnostic command is great for testing and tuning our various |EX-TT| positions, it's not exactly the friendliest way to control the turntable during normal use of our layout.
@@ -529,7 +529,7 @@ There is a much better way to do this by using the ``MOVETT(vpin, steps, activit
 
 Controlling your |EX-TT| this way also allows you to incorporate other automated activities associated with turntable or traverser movements, such as using the virtual block commands ``<RESERVE>`` and ``<FREE>`` to ensure no other automation sequences attempt to drive a loco on to the turntable while it is moving, to control auxiliary warning LEDs to indicate movements are happening, and so forth.
 
-EX-RAIL commands for EX-Turntable
+EXRAIL commands for EX-Turntable
 ---------------------------------
 
 .. collapse:: Expand to see the |EX-R| version of our diagnostic commands.
@@ -590,7 +590,7 @@ EX-RAIL commands for EX-Turntable
 
 |
 
-EX-RAIL ROUTEs for EX-Turntable
+EXRAIL ROUTEs for EX-Turntable
 -------------------------------
 
 Here is an example of what you can do to control an |EX-TT| via a ROUTE using |EX-R| (you will note this is based on the example provided in myEX-Turntable.example.h provided with the |EX-CS| software):

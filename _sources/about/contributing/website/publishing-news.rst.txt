@@ -103,7 +103,7 @@ Tags:
 - bug - Use this when we've identified a bug that needs to be fixed (probably used in conjunction with News category)
 - bugfix - Use when a bug has been fixed, and when advising which version fixes it (probably used in conjunction with Release category)
 - ex-commandstation
-- ex-rail
+- exrail
 - ex-installer
 - ex-webthrottle
 - ex-turntable

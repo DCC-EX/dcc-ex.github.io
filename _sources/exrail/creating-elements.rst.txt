@@ -40,7 +40,7 @@ The process for creating these objects consists of:
 Adding a Roster
 ===============
 
-EX-RAIL has a ``ROSTER()`` function to allow you to define all of your locomotives with a list of their defined functions which is advertised to WiThrottle applications, just like turnouts/points and routes.
+EXRAIL has a ``ROSTER()`` function to allow you to define all of your locomotives with a list of their defined functions which is advertised to WiThrottle applications, just like turnouts/points and routes.
 
 The functions can simply be listed as "F" numbers, or you can provide a text description of the function. Prefacing the function with a "*" indicates it is momentary, meaning it is only activated while holding that function button down.
 
@@ -131,7 +131,7 @@ If you have installed turnouts/points using DCC accessory decoders, you can conf
 
     TURNOUT( id, addr, sub_addr [, "description"] )
 
-The ``TURNOUT`` command defines DCC accessory decoder turnout/point in EX-RAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout/point within the CommandStation.
+The ``TURNOUT`` command defines DCC accessory decoder turnout/point in EXRAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout/point within the CommandStation.
 
 Configure myAutomation.h - DCC Turnouts/Points
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -152,7 +152,7 @@ If you have installed turnouts/points using simple pin control, you can config t
 
     PIN_TURNOUT( id, vpin [, "description"] )
 
-The ``PIN_TURNOUT`` command defines a pin operated turnout/point in EX-RAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout/point within the CommandStation.
+The ``PIN_TURNOUT`` command defines a pin operated turnout/point in EXRAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout/point within the CommandStation.
 
 When setting up a turnout/point where multiple pins are required for control, the ``VIRTUAL_TURNOUT`` command should be used along with a control sequence. This is commonly used to configure solenoid-based turnout motors. 
 
@@ -234,7 +234,7 @@ Configure myAutomation.h - Servo Turnouts/Points
 
 The myAutomation.h file needs to be altered so that the |EX-CS| knows about each Turnout/Point.
 
-EX-RAIL supports three methods of controlling servos:
+EXRAIL supports three methods of controlling servos:
 
 * `Turnouts via the SERVO_TURNOUT directive <#controlling-servos-for-turnouts-points>`_
 * `Signals via the SERVO_SIGNAL directive <#servos-for-signals>`_
@@ -243,7 +243,7 @@ EX-RAIL supports three methods of controlling servos:
 Controlling Servos for Turnouts/Points
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``SERVO_TURNOUT`` directive defines a servo based turnout/point in EX-RAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout/point within the CommandStation.
+The ``SERVO_TURNOUT`` directive defines a servo based turnout/point in EXRAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout/point within the CommandStation.
 
 As per the |EX-R| reference, turnouts/points are defined with the following syntax:
 
@@ -280,7 +280,7 @@ Configure myAutomation.h - Servos for Signals an Animations
 
 The myAutomation.h file needs to be altered so that the |EX-CS| knows about each servo.
 
-EX-RAIL supports two methods of controlling servos that are not related to turnouts/points:
+EXRAIL supports two methods of controlling servos that are not related to turnouts/points:
 
 * `Signals via the SERVO_SIGNAL directive <#servos-for-signals>`_
 * `Animations via the SERVO or SERVO2 directives <#servos-for-animations>`_
@@ -351,7 +351,7 @@ The valid parameters are:
    sensor.
    The SERVO is attached to VPin 101 (second control pin on first PCA9685), 
    with a sensor attached to VPin 164 (first pin on the first MCP23017):
-   This tells EX-RAIL that when the sensor at VPin 164 is activated, the 
+   This tells EXRAIL that when the sensor at VPin 164 is activated, the 
    lineside worker moves quickly back from the track for safety, and then 
    after the sensor has been deactivated, he can leisurely move back to his 
    working position (no one wants to rush back to work right?). */

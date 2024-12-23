@@ -35,7 +35,7 @@ Hardware, Software, tools
    hardware/index
    software/index
    Native Commands Summary <software/command-summary-consolidated>
-   /ex-rail/EX-RAIL-command-reference
+   /exrail/exrail-command-reference
    developers/index
    accessories/index
    tools/index

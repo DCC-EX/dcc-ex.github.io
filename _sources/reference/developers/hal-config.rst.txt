@@ -177,11 +177,11 @@ cause damage to the servo gearing, or to any layout components you have connecte
 	<T 301 1>  -- Instructs the turnout to move to the 'thrown' position.
 	<T 301 0>  -- Instructs the turnout to move the the 'closed' position.
 
-In EX-RAIL, the servo can be controlled directly via the **SERVO(pin,position,profile)** or **SERVO2(pin,position,duration)** commands.
+In EXRAIL, the servo can be controlled directly via the **SERVO(pin,position,profile)** or **SERVO2(pin,position,duration)** commands.
 	
 **Good to know:** The PCA9685 is not only used for servos.  It generates pulses of variable mark-to-space
 ratio, with a value of 0 being full off, and 4095 being full on.  So it can be used to control an LED
-to different brightness levels.  the EX-RAIL automation has a command **FADE(pin,value,ms)** which operates the 
+to different brightness levels.  the EXRAIL automation has a command **FADE(pin,value,ms)** which operates the 
 PCA9685 to do exactly this.
 
 Other Drivers
@@ -408,7 +408,7 @@ You may also control the player by writing to the first two VPINs as analogue ou
 
 Note: The volume commands apply to the device, not to the specific MP3 files.
 
-You can also control the DFPlayer through EX-RAIL, using commands like the following:
+You can also control the DFPlayer through EXRAIL, using commands like the following:
 
 .. code-block:: none
 

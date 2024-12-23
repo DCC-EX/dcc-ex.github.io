@@ -57,7 +57,7 @@ Example - Full automation with servo based turnouts/points and signals with a PC
   SENDLOCO(2, BLK2_BLK4)
   SENDLOCO(3, BLK4_BLK1)
 
-  // We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
+  // We need DONE to tell EXRAIL not to automatically proceed beyond definitions above
   DONE
 
   // Sequence to exit block 1, and choose whether to go to the station or continue on main

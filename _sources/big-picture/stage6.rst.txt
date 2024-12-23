@@ -48,14 +48,14 @@ This also means if there is a need to change a pin or object ID, you can simply 
 
 Further more, you can make radical changes such as moving from pin turnouts/points to servo turnouts/points, and only need to edit the defined objects and alias. Again, all your existing sequences, routes, etc. should remain unchanged.
 
-For more information on aliases, refer to :ref:`ex-rail/ex-rail-command-reference:aliases`.
+For more information on aliases, refer to :ref:`exrail/exrail-command-reference:aliases`.
 
 Turnouts/Points
 ===============
 
 Two turnouts/points are used in this first stage of our RMFT layout to allow trains to enter and exit the station siding, or continue along the main track.
 
-For further reading on turnouts/points, you can refer to the :ref:`ex-rail/ex-rail-command-reference:turnout/point objects - definition and control` section of the EX-RAIL reference and :ref:`reference/software/command-summary-consolidated:turnouts/points (configuring the ex-commandstation)` in the DCC-EX Command reference.
+For further reading on turnouts/points, you can refer to the :ref:`exrail/exrail-command-reference:turnout/point objects - definition and control` section of the EXRAIL reference and :ref:`reference/software/command-summary-consolidated:turnouts/points (configuring the ex-commandstation)` in the DCC-EX Command reference.
 
 Turnout/Point definitions
 -------------------------
@@ -74,7 +74,7 @@ Therefore, the DCC-EX command to define these in the serial console is as follow
   <T 100 DCC 26 0>
   <T 101 DCC 26 1>
 
-In EX-RAIL, we would add these lines to myAutomation.h, with aliases defined:
+In EXRAIL, we would add these lines to myAutomation.h, with aliases defined:
 
 .. code-block:: 
 
@@ -96,7 +96,7 @@ To define these in the serial console:
   <T 100 VPIN 22>
   <T 101 VPIN 23>
 
-In EX-RAIL, we would add these lines to myAutomation.h:
+In EXRAIL, we would add these lines to myAutomation.h:
 
 .. code-block:: 
 
@@ -115,7 +115,7 @@ To define these in the serial console:
   <T 100 VPIN 164>
   <T 101 VPIN 165>
 
-And again, in myAutomation.h for EX-RAIL:
+And again, in myAutomation.h for EXRAIL:
 
 .. code-block:: 
 
@@ -164,9 +164,9 @@ Again, in myAutomation.h this becomes:
 Sensors
 =======
 
-Five sensors are used in this first stage, which allows us to have up to three trains controlled by EX-RAIL automation. The sensors are placed within each virtual block to ensure we know when the front of the train enters a block, and when the rear of the train has exited a block.
+Five sensors are used in this first stage, which allows us to have up to three trains controlled by EXRAIL automation. The sensors are placed within each virtual block to ensure we know when the front of the train enters a block, and when the rear of the train has exited a block.
 
-We don't need to explicitly define any sensor objects to work with EX-RAIL, so we will simply map these by defining EX-RAIL aliases.
+We don't need to explicitly define any sensor objects to work with EXRAIL, so we will simply map these by defining EXRAIL aliases.
 
 To use pins directly on our Mega2560, we would start at pin 24 (we used pins 22/23 for turnouts):
 
@@ -305,12 +305,12 @@ Station
 
 In this particular stage, there's nothing specific for the station, however some advanced concepts might be to trigger an automated sound recording of arrivals and departures based on triggering sensor 3 or even sensor 2 if turnout/point 1 is in the thrown position.
 
-This would likely make use of the EX-RAIL ``AT()`` or ``AFTER()`` commands.
+This would likely make use of the EXRAIL ``AT()`` or ``AFTER()`` commands.
 
 Manual train control with automated routes
 ==========================================
 
-If you still wish to be the driver of the trains but have some automation related to the turnouts/points and signals, then we can make use of EX-RAIL's ``ROUTE()`` directive. In this scenario, we don't need to implement our virtual blocks, as it will be up to you as the driver to ensure your trains don't collide. We also don't need to use the sensors, and will set our signals based on the choice of routes.
+If you still wish to be the driver of the trains but have some automation related to the turnouts/points and signals, then we can make use of EXRAIL's ``ROUTE()`` directive. In this scenario, we don't need to implement our virtual blocks, as it will be up to you as the driver to ensure your trains don't collide. We also don't need to use the sensors, and will set our signals based on the choice of routes.
 
 The two routes below will be advertised to |WiThrottle Protocol| applications such as |Engine Driver|, so you can simply select them from the ROUTE menu.
 
@@ -323,11 +323,11 @@ Once you understand the logic of our routes below and the various turnout/point,
 Startup sequence
 ----------------
 
-When the CommandStation and EX-RAIL starts, everything defined before the first ``DONE`` command executes automatically.
+When the CommandStation and EXRAIL starts, everything defined before the first ``DONE`` command executes automatically.
 
-For safe running and a known starting state, we ensure both our turnouts/points are closed and set all our signals to red, followed by the first ``DONE`` to stop EX-RAIL executing any further automatically.
+For safe running and a known starting state, we ensure both our turnouts/points are closed and set all our signals to red, followed by the first ``DONE`` to stop EXRAIL executing any further automatically.
 
-If we omit that first ``DONE``, EX-RAIL would automatically execute ``ROUTE(1, "Main Track")`` at every startup. Note, of course, that if you want that first route executed at every startup, then you can simply omit that same ``DONE``, which will have the same effect as manually selecting the "Main track" route.
+If we omit that first ``DONE``, EXRAIL would automatically execute ``ROUTE(1, "Main Track")`` at every startup. Note, of course, that if you want that first route executed at every startup, then you can simply omit that same ``DONE``, which will have the same effect as manually selecting the "Main track" route.
 
 .. collapse:: Click to show/hide the code
 
@@ -340,7 +340,7 @@ If we omit that first ``DONE``, EX-RAIL would automatically execute ``ROUTE(1, "
       RED(SIG2_TRN2_GO)
       RED(SIG3_STN_EX)
 
-      // We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
+      // We need DONE to tell EXRAIL not to automatically proceed beyond definitions above
       DONE
 
 |
@@ -362,7 +362,7 @@ This same logic is applied for turnout/point 2, setting signal 2 to amber ``AMBE
 
 Once both turnouts are closed, both signals 1 and 2 are set to green to indicate trains are safe to run through both turnouts with ``GREEN(SIG1_TRN1_APP)`` and ``GREEN(SIG2_TRN2_GO)``.
 
-The route is completed with a ``DONE`` to tell EX-RAIL not to proceed any further.
+The route is completed with a ``DONE`` to tell EXRAIL not to proceed any further.
 
 .. collapse:: Click to show/hide the code
 
@@ -405,7 +405,7 @@ This same logic is applied for turnout/point 2, setting signal 3 to amber ``AMBE
 
 Once both turnouts/points are thrown, both signals 1 and 3 are set to green to indicate trains are safe to enter and exit the station siding with ``GREEN(SIG1_TRN1_APP)`` and ``GREEN(SIG3_STN_EX)``.
 
-The route is completed with a ``DONE`` to tell EX-RAIL not to proceed any further.
+The route is completed with a ``DONE`` to tell EXRAIL not to proceed any further.
 
 .. collapse:: Click to show/hide the code
 
@@ -438,9 +438,9 @@ Fully automated layout
 
 Now it's time to display the full automation capabilities by setting our layout up for fully automated control of your trains.
 
-You will note that these are somewhat similar to :ref:`ex-rail/examples:multiple inter-connected trains`, updated to suit the specifics of the RMFT layout.
+You will note that these are somewhat similar to :ref:`exrail/examples:multiple inter-connected trains`, updated to suit the specifics of the RMFT layout.
 
-To setup for these fully automated sequences, we need to ensure our trains are placed in the below positions, noting that EX-RAIL has no way of knowing where a train is on the layout when first starting.
+To setup for these fully automated sequences, we need to ensure our trains are placed in the below positions, noting that EXRAIL has no way of knowing where a train is on the layout when first starting.
 
 * Train 1 in block 1, between sensor 1 and turnout/point 1.
 * Train 2 in block 2, between sensors 2 and 4.
@@ -455,7 +455,7 @@ As mentioned in the introduction, we can enable fully automated running of up to
 
 .. note:: 
 
-  Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don't confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to :ref:`ex-rail/ex-rail-command-reference:virtual block control`.
+  Remember, these are virtual blocks, and do not necessarily need to be electrically isolated from each other. Don't confuse isolated blocks of track or block occupancy detection with these virtual blocks. For further background, refer to :ref:`exrail/exrail-command-reference:virtual block control`.
 
 When reading through the sections below on the logic, it helps to keep in mind the perspective of the engineer driving the train, rather than thinking of the complete layout. As the engineer, you need to ask yourself the question "what needs to be in place for me to safely drive this train to the desired destination?"
 
@@ -493,7 +493,7 @@ Once these activities have been done, we can tell our trains to start following 
       SENDLOCO(2, BLK2_BLK4)
       SENDLOCO(3, BLK4_BLK1)
 
-      // We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
+      // We need DONE to tell EXRAIL not to automatically proceed beyond definitions above
       DONE
 
 |
@@ -503,7 +503,7 @@ Exiting block 1 - station entry or main track?
 
 In order to safely exit block 1, the first decision to be made is if the train will go straight through to continue on the main track, or if it will switch on to the station siding.
 
-Using the ``LATCH()`` command gives us a way to automatically alternate between the main track and the station siding. ``LATCH()`` simply sets the state of a pin (either real or virtual) which can then be tested by an ``IF()`` statement. In this particular case, we have defined pin 60 (alias "CHOOSE_BLK2") to be latched and unlatched, as this pin does not exist on the Mega2560, nor does it exist on any of our I/O expander boards. Further reading on ``LATCH()`` and ``UNLATCH()`` can be found in the :ref:`ex-rail/ex-rail-command-reference:sensors/inputs - reading and responding` section of the EX-RAIL reference.
+Using the ``LATCH()`` command gives us a way to automatically alternate between the main track and the station siding. ``LATCH()`` simply sets the state of a pin (either real or virtual) which can then be tested by an ``IF()`` statement. In this particular case, we have defined pin 60 (alias "CHOOSE_BLK2") to be latched and unlatched, as this pin does not exist on the Mega2560, nor does it exist on any of our I/O expander boards. Further reading on ``LATCH()`` and ``UNLATCH()`` can be found in the :ref:`exrail/exrail-command-reference:sensors/inputs - reading and responding` section of the EXRAIL reference.
 
 When our CommandStation starts up, virtual pin 60 will not be set, and therefore evaluating the IF() statement ``IF(CHOOSE_BLK2)`` will return false, with our sequence then latching this virtual pin, meaning the next time this sequence is called, ``IF(CHOOSE_BLK2)`` will return true.
 
@@ -534,7 +534,7 @@ Moving from block 1 to block 2 - continue on the main track
 
 To move from block 1 to block 2, the first thing we need to know is if it's safe to do so.
 
-In EX-RAIL, this is accomplished by using the ``RESERVE()`` command which says if the block is free, we can reserve it. If it is not free, the reserve cannot be completed, and the train will stop until the block is freed, in which case the sequence can continue.
+In EXRAIL, this is accomplished by using the ``RESERVE()`` command which says if the block is free, we can reserve it. If it is not free, the reserve cannot be completed, and the train will stop until the block is freed, in which case the sequence can continue.
 
 So, providing a reserve can be placed on block 2, we can then test to see if turnout/point 1 is thrown. If so, the turnout/point needs to be closed, but in order to do so safely we set the approach signal amber for 2 seconds ``AMBER(SIG1_TRN1_APP)``, then set the signal red ``RED(SIG1_TRN1_APP)`` before closing the turnout/point ``CLOSE(TRN2)``, and waiting a further 2 seconds to ensure the turnout/point is fully closed.
 
@@ -706,7 +706,7 @@ The main things at this point that we'd like to call to your attention are:
 * Using aliases helps your brain along. Most of us aren't geared to remember that turnout/point ID 100 is the station siding entrance turnout/point, so defining aliases makes these numbers easier to digest and work with when referring to them in myAutomation.h.
 * You can expand your I/O devices as you need. The Mega2560 provides easily for 42 available I/O pins (A2 to A15, and 22 to 49), but when you exceed this limit, you can very easily expand this using I/O expanders such as the MCP23017. This means you don't need to have all these devices up front and can start with just the Mega2560.
 * Use virtual blocks to safely control automation of your layout. With appropriate use of ``RESERVE()`` and ``FREE()`` along with appropriate location of sensors, you can safely have a number of different trains traversing all sorts of layouts without colliding.
-* EX-RAIL is an incredibly powerful piece of software that can automate the most basic, simple layout functions as well as provide fully automated, prototypical operation of an entire layout which is limited only by your imagination.
+* EXRAIL is an incredibly powerful piece of software that can automate the most basic, simple layout functions as well as provide fully automated, prototypical operation of an entire layout which is limited only by your imagination.
 
 Complete myAutomation.h examples
 ================================

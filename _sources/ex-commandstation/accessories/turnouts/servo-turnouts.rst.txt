@@ -41,7 +41,7 @@ To define servo based turnouts using |EX-R| (whether or not they are to be autom
 
 Note when providing the name of the profile to the ``SERVO_TURNOUT(...)`` command that the profile names are case sensitive, and must be written exactly as they appear in the reference (e.g. Slow, not slow or SLOW).
 
-Refer to :ref:`ex-rail/ex-rail-command-reference:turnout/point objects - definition and control` for details on these commands, along with :ref:`ex-rail/examples:defining servo turnouts`, :doc:`/big-picture/stage3`, and :ref:`ex-rail/creating-elements:adding turnouts/points` for some further information and examples.
+Refer to :ref:`exrail/exrail-command-reference:turnout/point objects - definition and control` for details on these commands, along with :ref:`exrail/examples:defining servo turnouts`, :doc:`/big-picture/stage3`, and :ref:`exrail/creating-elements:adding turnouts/points` for some further information and examples.
 
 Connecting the hardware
 =======================

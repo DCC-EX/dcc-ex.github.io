@@ -32,7 +32,7 @@ Example - ROUTEs with servo based turnouts/signals on a PCA9685 servo module
   SERVO_SIGNAL(SIG2_TRN2_GO, 400, 250, 100)
   SERVO_SIGNAL(SIG3_STN_EX, 400, 250, 100)
 
-  // We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
+  // We need DONE to tell EXRAIL not to automatically proceed beyond definitions above
   DONE
 
   // Define our ROUTEs:

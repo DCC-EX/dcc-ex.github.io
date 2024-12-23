@@ -66,8 +66,8 @@
       :scale: 40%
       :class: image-product-logo-float-right
 ..
-.. |EX-R-LOGO| image:: /_static/images/logos/product-logo-ex-rail.png
-      :alt: EX-RAIL
+.. |EX-R-LOGO| image:: /_static/images/logos/product-logo-exrail.png
+      :alt: EXRAIL
       :scale: 40%
       :class: image-product-logo-float-right
 ..

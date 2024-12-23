@@ -15,11 +15,11 @@ Sequences - an Introduction
     :depth: 4
     :local:
 
-This page is a limited introduction to the |EX-R| automation sequences.  For more comprehensive information refer to the :doc:`/ex-rail/EX-RAIL-command-reference`.
+This page is a limited introduction to the |EX-R| automation sequences.  For more comprehensive information refer to the :doc:`/exrail/exrail-command-reference`.
 
 Before You start, generally you will need to have created some Key Objects (e.g. Turnouts/Points, Sensors, Signals) before you start writing sequences.  Refer to the previous page (:doc:`creating-elements`) for creating and adding those Objects.  Note that these objects don't have to be listed in the myAutomation.h file before the sequence in which you use it, but it is good practice to do so.
 
-For a full list of keywords, see :doc:`/ex-rail/EX-RAIL-command-reference`.  Only a subset are described on this page.
+For a full list of keywords, see :doc:`/exrail/exrail-command-reference`.  Only a subset are described on this page.
 
 Types of Sequence
 =================
@@ -181,7 +181,7 @@ Sequences that are triggered when 'events' occur, include:
     * - ONTHROW( turnout_id ) 
       - Event handler for turnout thrown
 
-See the :doc:`/ex-rail/EX-RAIL-command-reference` for additional Event Triggered Sequence types, and additional information on these types. 
+See the :doc:`/exrail/exrail-command-reference` for additional Event Triggered Sequence types, and additional information on these types. 
 
 |hr-dashed|
 
@@ -206,7 +206,7 @@ A sequence is made up of 'Commands'. Commands are usually written one per line f
 
 The commands fall into some basic categories:
 
-* `Actions <#action-commands-getting-ex-rail-to-do-something>`_ - Commands that 'do' something
+* `Actions <#action-commands-getting-exrail-to-do-something>`_ - Commands that 'do' something
 * `Flow Control Commands <#sequence-flow-flow-control-commands>`_
 
   * :ref:`Conditionals <getting-started-conditionals>` & `Branching`_ - Commands that change the flow/order in which the commands are executed
@@ -216,12 +216,12 @@ The commands fall into some basic categories:
 
 |hr-dashed|
 
-Action Commands - Getting EX-RAIL to 'do' something
+Action Commands - Getting EXRAIL to 'do' something
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This type of command will somehow change Objects of the system you have created and defined, like turnouts/points, signals, servos, turntables, blocks and locos.  
 
-There are a substantial number of commands that you can explore in the :doc:`/ex-rail/EX-RAIL-command-reference`. We will look at just a few here.
+There are a substantial number of commands that you can explore in the :doc:`/exrail/exrail-command-reference`. We will look at just a few here.
 
 .. code-block:: cpp
    :class: code-block-float-right
@@ -300,7 +300,7 @@ Turntable related commands include:
     * - MOVETT( vpin, steps, activity ) 
       - Move a turntable the number of steps relative to home, and perform the activity (refer EX-Turntable documentation)
 
-See the :doc:`/ex-rail/EX-RAIL-command-reference` for additional commands and additional information on these commands. 
+See the :doc:`/exrail/exrail-command-reference` for additional commands and additional information on these commands. 
 
 |hr-dashed|
 
@@ -428,7 +428,7 @@ Other Conditionals:
     * - IFTIMEOUT
       - Tests if “timed out” flag has been set by an ATTIMEOUT sensor reading attempt
 
-see the :doc:`/ex-rail/EX-RAIL-command-reference` for additional information.
+see the :doc:`/exrail/exrail-command-reference` for additional information.
 
 |hr-dashed|
 
@@ -466,7 +466,7 @@ Delays & Waits
 
 The timing of the execution of the commands in a sequence can be altered with 'Delay' or 'Wait' type commands. i.e. they don't happen immediately on completion of the previous command.
 
-There are a number of delay type commands that you can explore in the :doc:`/ex-rail/EX-RAIL-command-reference`. We will look at just a few here.
+There are a number of delay type commands that you can explore in the :doc:`/exrail/exrail-command-reference`. We will look at just a few here.
 
 
 .. code-block:: cpp
@@ -515,7 +515,7 @@ There are a number of delay type commands that you can explore in the :doc:`/ex-
 Command Station Commands
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-There are a substantial number of commands that you can explore in the :doc:`/ex-rail/EX-RAIL-command-reference`. We will look at just a few here.
+There are a substantial number of commands that you can explore in the :doc:`/exrail/exrail-command-reference`. We will look at just a few here.
 
 .. code-block:: cpp
 
@@ -540,7 +540,7 @@ There are a substantial number of commands that you can explore in the :doc:`/ex
     * -  READ_LOCO
       -  Read loco ID from Prog track
 
-See the :doc:`/ex-rail/EX-RAIL-command-reference` for additional Command Station Commands and additional information on the commands shown here.
+See the :doc:`/exrail/exrail-command-reference` for additional Command Station Commands and additional information on the commands shown here.
 
 ----
 
@@ -552,13 +552,13 @@ Referencing Turnouts/Points
 
 |EX-CS| supports a number of different turnout/point hardware configurations, but your automation treats them all as simple ID numbers. Turnouts may be defined using ``<T>`` commands from JMRI, or in ``SETUP("<T ...>")`` commands placed in your mySetup.h file, or C++ code in mySetup.h, just like earlier versions.
 
-You may, however, find it more convenient to define turnouts/points using EX-RAIL commands, which may appear anywhere in the 'myAutomation.h' file, even after they are referenced in an ``ONTHROW``, ``ONCLOSE``, ``THROW`` or ``CLOSE`` command. (EXRAIL extracts the turnout definitions just once from your script at Command Station startup.)
+You may, however, find it more convenient to define turnouts/points using EXRAIL commands, which may appear anywhere in the 'myAutomation.h' file, even after they are referenced in an ``ONTHROW``, ``ONCLOSE``, ``THROW`` or ``CLOSE`` command. (EXRAIL extracts the turnout definitions just once from your script at Command Station startup.)
 
 Turnouts/Points defined in 'myAutomation.h' will still be visible to WiThrottle and JMRI in the normal way.
 
 A TURNOUT command sends DCC signals to a decoder attached to the track, a PIN_TURNOUT sends a "throw" or "close" (5V or 0V signal) to a pin on the Arduino, and a SERVO_TURNOUT sends an |I2C| serial command to a servo board connected to your servos.
  
-See the :doc:`/ex-rail/EX-RAIL-command-reference` for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.
+See the :doc:`/exrail/exrail-command-reference` for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.
 
 Referencing Signals
 -------------------
@@ -606,7 +606,7 @@ Sensor polling by JMRI is independent of this, and may continue if ``<S>`` comma
 Drive-Away feature
 ==================
 
-EX-RAIL can switch a track section between programming and mainline.
+EXRAIL can switch a track section between programming and mainline.
 
 Here for example is a launch sequence that has no predefined locos but allows locos to be added at station 1 while the system is in motion. Let's assume that the track section at Station1 is isolated and connected to the programming track power supply. Also that we have a “launch” button connected where sensor 17 would be and an optional signal (i.e. 3 LEDs) on the control panel connected where signal 27 would be.
 

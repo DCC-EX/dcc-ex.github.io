@@ -514,4 +514,4 @@ If you want to change the way the WiFi is configured, just click next or go the 
 
 If you want to look at some other options to use as a controller (throttle) then have a look at the :doc:`/ex-commandstation/controllers-rtr` page.
 
-If you want to add a roster, turnout/points, routes or automations look at the :doc:`/ex-rail/index` page.
+If you want to add a roster, turnout/points, routes or automations look at the :doc:`/exrail/index` page.

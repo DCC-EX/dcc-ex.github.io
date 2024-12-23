@@ -193,7 +193,7 @@ Conversely, when an object moves more than 250mm from the sensors, a ``<q id>`` 
 
 To ensure sensors are defined at startup, refer to :doc:`/ex-commandstation/advanced-setup/startup-config`.
 
-EX-RAIL integration
+EXRAIL integration
 ===================
 
 |EX-R| enables utilising these devices as both digital and analogue sensors.
@@ -207,11 +207,11 @@ For example:
   AT(4000)        // Will trigger when an object is within 200mm
   AFTER(4003)     // Will trigger 0.5s after an object moves 250mm away
 
-.. todo:: `LOW - VL53L0X <https://github.com/DCC-EX/dcc-ex.github.io/issues/447>`_ |EXTERNAL-LINK| - validate VL53L0X works with EX-RAIL's analogue sensor commands ATGTE, ATLT, IFGTE, IFLT
+.. todo:: `LOW - VL53L0X <https://github.com/DCC-EX/dcc-ex.github.io/issues/447>`_ |EXTERNAL-LINK| - validate VL53L0X works with EXRAIL's analogue sensor commands ATGTE, ATLT, IFGTE, IFLT
 
 .. note:: 
 
-  Using a VL53L0X with EX-RAIL's analogue sensor commands has not been validated, this may not work.
+  Using a VL53L0X with EXRAIL's analogue sensor commands has not been validated, this may not work.
 
 With |EX-R|, you can also use the analogue sensor commands (ATGTE, ATLT, IFGTE, IFLT) to have automation based on the actual distance from the sensor, rather than it operating like a simple on/off switch.
 

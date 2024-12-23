@@ -803,9 +803,9 @@ Routes/Automations
     :local:
     :class: in-this-section
 
-For details on how to configure routes/automations see: :doc:`/ex-rail/EX-RAIL-command-reference`
+For details on how to configure routes/automations see: :doc:`/exrail/exrail-command-reference`
 
-Also see the `EX-RAIL` section below for activating routes.
+Also see the `EXRAIL` section below for activating routes.
 
 |hr-dashed|
 
@@ -1086,10 +1086,10 @@ WiFi Control
 
 ----
 
-EX-RAIL
+EXRAIL
 -------
 
-Refer to the :doc:`/ex-rail/EX-RAIL-command-reference` for these.
+Refer to the :doc:`/exrail/exrail-command-reference` for these.
 
 EX-FastClock
 ------------
@@ -1888,7 +1888,7 @@ Unlock sensor, returning to current external state, valid IDs are in the range 0
   |_| Successful: ? |BR|
   |_| Fail: ?
 
-Refer to the LATCH/UNLATCH commands in the :ref:`ex-rail/ex-rail-command-reference:sensors/inputs - reading and responding` section below for further details.
+Refer to the LATCH/UNLATCH commands in the :ref:`exrail/exrail-command-reference:sensors/inputs - reading and responding` section below for further details.
 
 ----
 

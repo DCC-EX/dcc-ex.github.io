@@ -34,7 +34,7 @@ Example - ROUTEs with turnouts/signals on Mega2560 direct I/O pins
   RED(SIG2_TRN2_GO)
   RED(SIG3_STN_EX)
 
-  // We need DONE to tell EX-RAIL not to automatically proceed beyond definitions above
+  // We need DONE to tell EXRAIL not to automatically proceed beyond definitions above
   DONE
 
   // Define our ROUTEs:

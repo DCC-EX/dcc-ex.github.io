@@ -527,7 +527,7 @@ To change or configure the current track modes use the new command ``<= tracklet
 
   You would then enter your Engine address on the throttle of 1234 and 4321 and drive them on the layout.
 
-Create EX-RAIL Scripts to Change Track modes
+Create EXRAIL Scripts to Change Track modes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Using |EX-R| functions inside myAutomation.h file to run Automation scripts to change track modes from DCC to DC and back.
@@ -550,7 +550,7 @@ Note that the Address to be used for a DC or DCX block must be set before the ``
     
 |HR-DASHED|
 
-Create EX-RAIL list of Track Manager Functions for Engine Driver Automatically Assign [Handoff] buttons
+Create EXRAIL list of Track Manager Functions for Engine Driver Automatically Assign [Handoff] buttons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In a |EX-R| Automation script we could assign a track mode to DC and wait for a |Engine Driver| throttle to Assign the Current Selected Active Engine Address and drive Manually through the district on the layout.
@@ -584,7 +584,7 @@ In a |EX-R| Automation script we could assign a track mode to DC and wait for a 
 
 |HR-DASHED|
 
-Create EX-RAIL Track Manager Functions for Engine Driver Throttle Automation [Handoff] buttons
+Create EXRAIL Track Manager Functions for Engine Driver Throttle Automation [Handoff] buttons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In a |EX-R| Automation script we could a Set a Loco Address to a specific track in DC mode and have it run on Automation through the layout.
@@ -601,7 +601,7 @@ In a |EX-R| Automation script we could a Set a Loco Address to a specific track 
 
 |HR-DASHED|
 
-Create EX-RAIL Track Manager Functions for Engine Driver Throttle Route [Set] buttons
+Create EXRAIL Track Manager Functions for Engine Driver Throttle Route [Set] buttons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In an EXRAIL Automation script we could Set a Loco Address to a specific track in DC mode and Manually run a preassigned address on the layout.
@@ -624,7 +624,7 @@ No DPDT Switches are required, all waveform mode switching is done by Track Mana
 
 |HR-DASHED|
 
-DCC-EX Command Station with EX-RAIL & TrackManager
+DCC-EX Command Station with EXRAIL & TrackManager
 ---------------------------------------------------
 
 Cool thing is the new EXRAIL Automation(n) & Routes(n) work the same with DCC engines on MAIN tracks and the DC engines on DC or DCX tracks, along with the Sensors, Servos /Turnouts, Signals & MP3 Sound DFPlayer triggers with little or no script changes other than maybe the FWD(n) & REV (n) Speeds.

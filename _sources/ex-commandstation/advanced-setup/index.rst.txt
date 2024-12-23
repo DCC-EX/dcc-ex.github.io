@@ -52,7 +52,7 @@ There are several different supported microcontrollers you can use as your |EX-C
 
 The Arduino Mega2560 is by far the simplest option and is well proven with many users choosing this option.
 
-Whilst the Uno and Nano options are fairly popular and also relatively simple, there are limitations due to the lack of available RAM available, and therefore some features (such as WiFi and EX-RAIL) are limited.
+Whilst the Uno and Nano options are fairly popular and also relatively simple, there are limitations due to the lack of available RAM available, and therefore some features (such as WiFi and EXRAIL) are limited.
 
 The other item of specific note is the Mega2560 + WiFi which, while appearing a good alternative to a standard Mega2560, suffers from quality control issues, and numerous users have had poor experiences getting this to function correctly. While this option is supported, it is definitely *buyer beware!*
 

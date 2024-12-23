@@ -36,7 +36,7 @@ Throughout this exercise, we will be defining turnout/point objects, and for con
 
 This way, the various possible variations of each type of object will be defined with the same ID, meaning the same |EX-R| sequences will apply, no matter how the objects are defined.
 
-For further information on IDs used in |EX-R|, refer to the :ref:`ex-rail/ex-rail-command-reference:handy information` section of the |EX-R| reference page.
+For further information on IDs used in |EX-R|, refer to the :ref:`exrail/exrail-command-reference:handy information` section of the |EX-R| reference page.
 
 DCC addresses
 -------------
@@ -137,13 +137,13 @@ Configure the software - myAutomation.h - Turnouts/points
 
 The myAutomation.h file needs to be altered so that the |EX-CS| knows about each Turnout/Point.
 
-EX-RAIL supports three methods of controlling servos:
+EXRAIL supports three methods of controlling servos:
 
 * Turnouts via the SERVO_TURNOUT directive
 * Signals via the SERVO_SIGNAL directive
 * Animations via the SERVO or SERVO2 directives
 
-The SERVO_TURNOUT directive defines a servo based turnout in EX-RAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout within the CommandStation.
+The SERVO_TURNOUT directive defines a servo based turnout in EXRAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout within the CommandStation.
 
 As per the |EX-R| reference, turnouts are defined with the following syntax:
 
@@ -199,9 +199,9 @@ Adding a Block
 
 .. sidebar:: 
    
-   You can also refer to :ref:`ex-rail/ex-rail-command-reference:virtual block control` for more information.
+   You can also refer to :ref:`exrail/exrail-command-reference:virtual block control` for more information.
 
-Blocks in EX-RAIL are a virtual concept only, and they do not relate in any way to the concept of block occupancy detection.
+Blocks in EXRAIL are a virtual concept only, and they do not relate in any way to the concept of block occupancy detection.
 
 A block is represented by an ID from 0 to 255 and is used to logically reserve a section of track in automation sequences to ensure only one train can enter a block at any given time to avoid collisions.
 

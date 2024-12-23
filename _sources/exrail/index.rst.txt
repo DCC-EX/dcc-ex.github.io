@@ -4,7 +4,7 @@
 |EX-R-LOGO|
 
 ************************************************************
-EX-RAIL (Automation/Animation)
+EXRAIL (Automation/Animation)
 ************************************************************
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
@@ -14,7 +14,7 @@ Welcome to the home for |DCC-EX| Automation.
 |EX-R| is an "**EX**\tended **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage"
 that can easily be used to describe sequential command 'sequences' to automatically take place on your model layout. 
 
-These sequences are defined programmatically in a simple command script file, and uploaded to the Command Station once to configure it. **EX-Rail** will then run automatically on **EX-CommandStation** startup or if trigger manually or on occurrence of the specified events.
+These sequences are defined programmatically in a simple command script file, and uploaded to the Command Station once to configure it. **EXRAIL** will then run automatically on **EX-CommandStation** startup or if trigger manually or on occurrence of the specified events.
 
 Click 'Next' to explore the possibilities of |EX-R|.
 
@@ -29,5 +29,5 @@ Click 'Next' to explore the possibilities of |EX-R|.
     getting-started
     examples
     tips
-    EX-RAIL-command-reference
+    exrail-command-reference
     about

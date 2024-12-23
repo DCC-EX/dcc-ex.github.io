@@ -27,4 +27,4 @@ Here are some examples of animation sequences that can be driven by |EX-R|:
 
 There are endless possibilities and your imagination really is the only limitation of |EX-R|!
 
-For further information and some examples of implementation, refer to :doc:`/ex-rail/index` and :doc:`/big-picture/index`.
+For further information and some examples of implementation, refer to :doc:`/exrail/index` and :doc:`/big-picture/index`.

@@ -244,7 +244,7 @@ Anyone can use |EX-R|, and over time we are building out practical examples to d
 
 In addition to having your |EX-CS| up and running, with some sort of throttle or controller (see :doc:`/throttles/index`) to control your trains, you'll also need to add some accessories to use with your automation/animation sequences as outlined in :doc:`/ex-commandstation/accessories/index`.
 
-To make the most of |EX-R| you should read through the :doc:`/ex-rail/index` section as well as see the practical examples in :doc:`/big-picture/index`.
+To make the most of |EX-R| you should read through the :doc:`/exrail/index` section as well as see the practical examples in :doc:`/big-picture/index`.
 
 But don't forget that to go through everything from the beginning, start at :doc:`/begin/levels`.
 
@@ -261,7 +261,7 @@ This can include anything from a simple loop to stop and start trains at station
 
 To achieve this level of automation, you'll need to understand more than just how to get your |EX-CS| up and running, and will also need to have a good understanding of the accessories that can be added as outlined in :doc:`/ex-commandstation/accessories/index`.
 
-As per our automated/animated realism information above, be sure to familiarise yourself with :doc:`/ex-rail/index` and :doc:`/big-picture/index`. Oh, and don't forget to back up and start at the beginning with :doc:`/begin/levels`.
+As per our automated/animated realism information above, be sure to familiarise yourself with :doc:`/exrail/index` and :doc:`/big-picture/index`. Oh, and don't forget to back up and start at the beginning with :doc:`/begin/levels`.
 
 ----
 

@@ -128,7 +128,7 @@ wiThrottle (iOS)
 .. note::
   :class: note-float-right
 
-  The free version of WiThrottle ('WiThrottle Lite') only controls one loco at a time and does not offer turnout control or DCC track power control. (Note: EX-CommandStation can be configured to automatically turn the track power on. See the :ref:`EX-RAIL examples <ex-rail/examples:Turn Track Power On at Startup>`.)
+  The free version of WiThrottle ('WiThrottle Lite') only controls one loco at a time and does not offer turnout control or DCC track power control. (Note: EX-CommandStation can be configured to automatically turn the track power on. See the :ref:`EXRAIL examples <exrail/examples:Turn Track Power On at Startup>`.)
   
   The paid version WiThrottle can control multiple locos, can create and control consists, can control turnouts and routes, and can control DCC track power.
 

@@ -4,7 +4,7 @@
 |EX-FC-LOGO|
 
 ***************************
-Controlling EX-RAIL by Time
+Controlling EXRAIL by Time
 ***************************
 
 |SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-fastclock-button-small|

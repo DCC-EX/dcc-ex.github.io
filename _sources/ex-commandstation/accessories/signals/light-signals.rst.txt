@@ -89,7 +89,7 @@ Further to this, if you wish to use both on and flashing/blinking amber, you can
     FLASHAMBER(30)              // Call the macro defined above
   DONE
 
-Refer to `BLINK( pin, onms, offms ) - Blink an output pin <../../../ex-rail/EX-RAIL-command-reference.html#blink-pin-onms-offms-blink-an-output-pin>`_ for further details on the ``BLINK()`` command.
+Refer to `BLINK( pin, onms, offms ) - Blink an output pin <../../../exrail/exrail-command-reference.html#blink-pin-onms-offms-blink-an-output-pin>`_ for further details on the ``BLINK()`` command.
 
 Connecting the signals
 ======================

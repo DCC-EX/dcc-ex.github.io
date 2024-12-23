@@ -19,25 +19,25 @@ At the end of this stage, we expect you will have learnt the following:
 Recommended reading
 ===================
 
-Throughout these pages we will be using |EX-R| functionality extensively, not just for automation, but also to define the various objects in use, and therefore we highly recommend being familiar with at least the basics of EX-RAIL, so it would be best to read through the :doc:`/ex-rail/getting-started` page prior to going any further.
+Throughout these pages we will be using |EX-R| functionality extensively, not just for automation, but also to define the various objects in use, and therefore we highly recommend being familiar with at least the basics of EXRAIL, so it would be best to read through the :doc:`/exrail/getting-started` page prior to going any further.
 
 We will also be outlining the equivalent DCC-EX commands for items where relevant, so it can be handy to refer to the :doc:`/reference/software/command-summary-consolidated` where necessary.
 
-Overview of EX-RAIL automations
+Overview of EXRAIL automations
 ===============================
 
-The |EX-R| sequences are described in detail in the :doc:`/ex-rail/index` pages, which we recommend that you read. We won't repeat all that information here, but as introduction... 
+The |EX-R| sequences are described in detail in the :doc:`/exrail/index` pages, which we recommend that you read. We won't repeat all that information here, but as introduction... 
 
 |EX-R| is an "**EX**\tended **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage"
 that can be used to describe sequential command 'sequences' to automatically take place on your model layout. These sequences are defined in a simple command script file, and uploaded to the Command Station once to configure it. 
 
-**EX-Rail** will then run the sequences *automatically* on EX-CommandStation startup, be triggered *manually* or run on occurrence of a *specified events*.
+**EXRAIL** will then run the sequences *automatically* on EX-CommandStation startup, be triggered *manually* or run on occurrence of a *specified events*.
 
 Once started, each 'sequence' will step through a list of simple keyword commands, in order, until they reach a ``DONE`` keyword.  Multiple concurrent sequences are supported.  
 
 By using *Conditional*, *Branching*, *Delay* and *Wait* commands it is possible to design complex sequences with multiple outcomes which can drive your trains, operate your turnouts/points and signals, and react to events on your layout.
 
-See the :doc:`/ex-rail/examples` page and the following pages in this section for examples of what is possible.
+See the :doc:`/exrail/examples` page and the following pages in this section for examples of what is possible.
 
 Structure of a 'Sequence'
 -------------------------

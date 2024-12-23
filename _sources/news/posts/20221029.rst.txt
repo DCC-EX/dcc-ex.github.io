@@ -18,10 +18,10 @@ EX-CommandStation 4.1.2 Release
 ===============================
 
 The DCC-EX Team is pleased to release CommandStation-EX v4.1.2 as a Production Release for the general public.
-This release is a Minor release with many significant EX-RAIL enhancements and new automation features in addition to some bug fixes.
+This release is a Minor release with many significant EXRAIL enhancements and new automation features in addition to some bug fixes.
 The team continues improving the architecture of DCC++EX to make it more flexible and optimizing the code to get more performance from the Arduino (and other) microprocessors. This release includes all of the Point Releases from v4.0.1 to v4.1.2.
 
-**New Command Station & EX-RAIL Features**
+**New Command Station & EXRAIL Features**
 
 * ACK defaults are now set to LIMIT 50mA, MIN 2000uS, MAX 20000uS for more compatibility with non NMRA compliant decoders
 * Automatically detect and run a myFilter add-on (no need to call setFilter)
@@ -38,23 +38,23 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 * Allow WRITE CV on PROG <W CV VALUE)
 * Change callback parameters are now optional on PROG
 * New JA, JR, JT commands availabe for Throttle Developers to obtain Route, Roster and Turnout descriptions for communications
-* New EX-RAIL Functions to use in Automation(n), ROUTE(N) & SEQUENCE(N) Scripts
+* New EXRAIL Functions to use in Automation(n), ROUTE(N) & SEQUENCE(N) Scripts
 
     * ATGTE & ATLT wait for analog value, (At Greater Than or Equal and At Less Than a * certain value)
     * FADE command now works for LEDs connected on PCA9685 Servo/Signal board Output vpins
     * FORGET Forgets the current loco in DCC reminder tables saving memory and wasted packets sent to the track
     * "IF" signal detection with IFRED(signal_id), IFAMBER(signal_id), IFGREEN(signal_id)
     * KILLALL command to stop all tasks, and Diagnostic messages when KILL is used
-    * PARSE <> commands in EXRAIL allows sending of DCC-EX commands from EX-RAIL
+    * PARSE <> commands in EXRAIL allows sending of DCC-EX commands from EXRAIL
     * SERVO_SIGNAL Servo signals assigned to a specific servo turnout
     * SIGNALH High-On signal pins (Arduino normally handles active LOW signals. This allows for active HIGH)
     * HIDDEN turnouts (hide a REAL turnout and create a VIRTUAL turnout to handle actions that happen BEFORE a turnout is thrown)
     * VIRTUAL_TURNOUT definition
 
-**EX-RAIL Updates**
+**EXRAIL Updates**
 
 * EXRAIL BROADCAST("msg") sends any message to all throttles/JMRI via serial and WiFi
-* EXRAIL POWERON turns on power to both tracks from EX-RAIL (the equivalent of sending the <1> command)
+* EXRAIL POWERON turns on power to both tracks from EXRAIL (the equivalent of sending the <1> command)
 
 **Other Enhancements**
 
@@ -70,8 +70,8 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 
 * Preserve the turnout format
 * Parse multiple commands in one buffer string correctly
-* Fix </> command signal status in EX-RAIL
-* Read long loco addresses in EX-RAIL
+* Fix </> command signal status in EXRAIL
+* Read long loco addresses in EXRAIL
 * FIX negative route IDs in WiThrottle
 
 See the version.h file for notes about which of the 4.1.2 features were added/changed by point release.

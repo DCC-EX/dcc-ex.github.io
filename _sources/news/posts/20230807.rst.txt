@@ -61,9 +61,9 @@ Known Issues
 EXRAIL enhancements
 -------------------
 
-For details on these changes and new commands, refer to our new, consolidated :doc:`/ex-rail/EX-RAIL-command-reference`.
+For details on these changes and new commands, refer to our new, consolidated :doc:`/exrail/exrail-command-reference`.
 
-- **BREAKING CHANGE** Removed implicit ``AUTOSTART`` from myAutomation.h, simply add ``AUTOSTART`` to the beginning of the file to restore this, see :ref:`ex-rail/ex-rail-command-reference:scripts/sequences - types and control`
+- **BREAKING CHANGE** Removed implicit ``AUTOSTART`` from myAutomation.h, simply add ``AUTOSTART`` to the beginning of the file to restore this, see :ref:`exrail/exrail-command-reference:scripts/sequences - types and control`
 - Enhance ``SPEED`` command to respond to external direction changes
 - Add ``DCC_SIGNAL`` command to control DCC Accessory based signals
 - Add ``VIRTUAL_SIGNAL`` command to enable user-defined signal sequences

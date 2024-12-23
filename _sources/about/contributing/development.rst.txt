@@ -46,7 +46,7 @@ Reading any code in any language is always going to require a basic understandin
 
 The level of C++ that we use is a relatively small subset of the language as we don't need or use many of the more complex C++ features such as studio, templates, lambdas, operator overloading, multiple inheritance etc., but we DO make significant use of the C++ compiler's pre-processor features to automatically customise the code to various CPU or user feature requirements (WiFi, Ethernet etc).
 
-EX-RAIL in particular pulls some very cunning, but legitimate, stunts with the pre-processor to weave your automations into the code as it's compiled.
+EXRAIL in particular pulls some very cunning, but legitimate, stunts with the pre-processor to weave your automations into the code as it's compiled.
 
 The Arduino environment is fundamentally very simple for most programming tasks as there is no massive operating system, GUI, or file system to learn. For a very small subset of our code we do need to understand CPU specific interrupts, registers, and timers which are almost never encountered by programmers who are not working in embedded systems or device drivers. In addition, it's necessary to learn about the various hardware devices that may be attached although we have tried to reduce the difficulty for the user by adding code that is not necessarily easy to read for the programmer. (Its a trade-off, the complexity has to go somewhere and we don't want the average user to suffer just to make it easy for a handful of programmers.)
 
@@ -73,7 +73,7 @@ Other concepts and techniques
 -----------------------------
 
 * Use of bit manipulation operators to pack multiple flags into a byte.
-* EX-RAIL and the DCC ACK manager use "virtual machine" techniques to implement multitasking.
+* EXRAIL and the DCC ACK manager use "virtual machine" techniques to implement multitasking.
 
 Third-party libraries
 ======================

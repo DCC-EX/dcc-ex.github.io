@@ -18,7 +18,7 @@
 ..
 .. |EX-R| raw:: html
 
-  <a href="../../ex-rail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a>
+  <a href="../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a>
 ..
 .. |EX-I| raw:: html
    
@@ -92,11 +92,11 @@
       :class: image-min-width-144
       :target: ../../ex-webthrottle/index.html
 ..
-.. |EX-R-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-rail.png
-      :alt: EX-RAIL
+.. |EX-R-LOGO-SMALL| image:: /_static/images/logos/product-logo-exrail.png
+      :alt: EXRAIL
       :scale: 30%
       :class: image-min-width-144
-      :target: ../../ex-rail/index.html
+      :target: ../../exrail/index.html
 ..
 .. |EX-TT-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-turntable.png
       :alt: EX-Turntable

@@ -18,7 +18,7 @@ I2C Devices
 With the advent of the Hardware Abstraction Layer (HAL), |EX-CS| now has the capability for software
 support for new I/O devices to be added without any change to the base software.  By I/O
 devices I mean the things that are controlled through Displays, Sensors, Outputs and Turnouts (and 
-more recently by commands in EX-RAIL too).  Motor shields are not included in the HAL at present.
+more recently by commands in EXRAIL too).  Motor shields are not included in the HAL at present.
 
 As a consequence of this, it is much easier to write a device driver for a new device, without the risk of
 breaking |EX-CS| for other users.  There are various drivers already available for you to use:

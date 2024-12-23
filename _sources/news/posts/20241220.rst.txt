@@ -37,7 +37,7 @@ Featuring an ESP32 processor with built-in fast WiFi, and dual 5A output Texas I
 
 EX-CSB1 also allows stacking of the original EX-MotorShield8874 with zero hardware modifications to provide four DCC and DC PWM track outputs. Now users needing more power or more power districts have a strikingly simple upgrade path.
 
-EX-CSB1's exciting new feature is Booster mode. Using the built-in Railsync compatible DCC input jack and a small piece of EX-RAIL scripting, the EX-CSB1 can switch automatically into Booster mode to produce the same DCC output on any or all of up to 4 DCC outputs. Whilst in Booster mode, the EX-CSB1 can still respond to sensor inputs and perform EX-RAIL animations as a remote animation node.
+EX-CSB1's exciting new feature is Booster mode. Using the built-in Railsync compatible DCC input jack and a small piece of EXRAIL scripting, the EX-CSB1 can switch automatically into Booster mode to produce the same DCC output on any or all of up to 4 DCC outputs. Whilst in Booster mode, the EX-CSB1 can still respond to sensor inputs and perform EXRAIL animations as a remote animation node.
 
 EX-CSB1 sports I2C support via an industry standard STEMMA QT/Qwiic connectors and pin headers making I2C bus connections easier than ever. The STEMMA QT/Qwiic ecosystem of I2C boards from Adafruit and Sparkfun are now the easiest I2C expansion boards to use. The DCC-EX team expects to add additional STEMMA QT/Qwiic based peripherals with model railroading friendly features in upcoming releases. An I2C SIP header is included to allow many I2C enabled OLED screens to plug directly into the board.
 

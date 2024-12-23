@@ -33,10 +33,10 @@ Turn Track Power On at Startup
 
 Turning track power on or off in |EX-CS| version 5 (the current Production version) is performed respectively by either the |EX-R| command ``POWERON`` or ``POWEROFF``; or in EX-CommandStation's native language using the command line, ``<1>`` or ``<0>``.
 
-Users of previous EX-CommandStation versions can switch track power on or off via EX-Rail;
+Users of previous EX-CommandStation versions can switch track power on or off via EXRAIL;
    ``SETUP("<1>")``  for on or ``SETUP("<0>")`` for off;  or in EX-CommandStation's native language, ``<1>`` or ``<0>``
 
-Another approach for powering up the track is to assign a speed to a loco in a sequence and power will automatically turn on.  EX-Rail cleverly knows that power must be on before a locomotive can move so it turns track power on when the sequence is executed.
+Another approach for powering up the track is to assign a speed to a loco in a sequence and power will automatically turn on.  EXRAIL cleverly knows that power must be on before a locomotive can move so it turns track power on when the sequence is executed.
 
 .. code-block:: cpp
    
@@ -97,7 +97,7 @@ Creating Routes
 ===============
 
 A typical Route might be used to set a series of turnouts in response to a single button in a throttle.
-The EX-RAIL instructions to do this might look like
+The EXRAIL instructions to do this might look like
 
 .. code-block:: cpp
 
@@ -184,7 +184,7 @@ Stopping at a Station (simple loop)
 
 Start with something as simple as a single loop of track with a station and a sensor (connected to pin 40 for this example) at the point where you want the train to stop.
 
-.. image:: /_static/images/ex-rail/Example_4_diagram.png
+.. image:: /_static/images/exrail/Example_4_diagram.png
    :alt:  Simple example 4
    :align: center
    :scale: 100%
@@ -211,7 +211,7 @@ Notice that this automation does not specify the loco address. If you drive a lo
 Stopping at a Station - Adding Signals
 ======================================
 
-Adding a station signal to the loop script is extremely simple, but it does require a mind-shift for some modellers who like to think in terms of signals being in control of trains! EX-RAIL takes a different approach, by animating the signals as part of the driving script. Thus set a signal GREEN before moving off (and allow a little delay for the driver to react) and RED after you have passed it.
+Adding a station signal to the loop script is extremely simple, but it does require a mind-shift for some modellers who like to think in terms of signals being in control of trains! EXRAIL takes a different approach, by animating the signals as part of the driving script. Thus set a signal GREEN before moving off (and allow a little delay for the driver to react) and RED after you have passed it.
 
 .. code-block:: cpp
 
@@ -233,7 +233,7 @@ Point to Point Shuttle
 
 Consider a single line, shuttling between stations A and B.
 
-.. image:: /_static/images/ex-rail/Example_6_diagram.png
+.. image:: /_static/images/exrail/Example_6_diagram.png
    :alt:  Simple example 4
    :align: center
    :scale: 100%
@@ -266,7 +266,7 @@ Notice that the sensors at A and B are near the ends of the track (allowing for 
 
 Note a SEQUENCE is exactly the same as an AUTOMATION except that it does NOT appear in the throttle.
 
-When the Command Station is powered up or reset, EX-RAIL starts operating at the beginning of the file.  For this sequence we need to set a loco address and start the sequence:
+When the Command Station is powered up or reset, EXRAIL starts operating at the beginning of the file.  For this sequence we need to set a loco address and start the sequence:
 
 .. code-block:: cpp
 
@@ -289,12 +289,12 @@ So what about routes that cross or share single lines (passing places etc)?
 Let's add a passing place between A and B. S= Sensors, T=Turnout
 number. So now our route looks like this:
 
-.. image:: /_static/images/ex-rail/Example_7a_diagram.png
+.. image:: /_static/images/exrail/Example_7a_diagram.png
    :alt:  Simple example 4
    :align: center
    :scale: 100%
 
-Assuming that you have defined your turnouts as per :ref:`ex-rail/ex-rail-command-reference:turnout/point objects - definition and control`
+Assuming that you have defined your turnouts as per :ref:`exrail/exrail-command-reference:turnout/point objects - definition and control`
 
 .. code-block:: cpp
 
@@ -323,7 +323,7 @@ All well and good for one loco, but with 2 (or even 3) on this track we need som
 
 So we will need some extra sensors (hardware required) and some logical blocks (all in the mind!):
 
-.. image:: /_static/images/ex-rail/Example_7b_diagram.png
+.. image:: /_static/images/exrail/Example_7b_diagram.png
    :alt:  Simple example 4
    :align: center
    :scale: 100%
@@ -400,7 +400,7 @@ Starting the system
 
 Starting the system is tricky, because we need to place the trains in a suitable position and set them going. We need to have a starting position for each loco, and reserve the block(s) it needs to keep other trains from crashing into it.
 
-.. warning:: This EX-RAIL version isn't ready to handle locos randomly placed on the layout after a power down!
+.. warning:: This EXRAIL version isn't ready to handle locos randomly placed on the layout after a power down!
 
 For a known set of locos, the easiest way is to define the startup process at the beginning of the script. E.g. for two engines, one at each station.
 
@@ -421,7 +421,7 @@ For a known set of locos, the easiest way is to define the startup process at th
 Drive-Away feature
 ==================
 
-EX-RAIL can switch a track section between programming and mainline.
+EXRAIL can switch a track section between programming and mainline.
 
 Here for example is a launch sequence that has no predefined locos but allows locos to be added at station 1 while the system is in motion. Let's assume that the track section at Station1 is isolated and connected to the programming track power supply. Also that we have a 'launch' button connected where sensor 17 would be and an optional signal (i.e. 3 LEDs) on the control panel connected where signal 27 would be.
 
@@ -450,4 +450,4 @@ Next Steps
 
 The previous pages have only been a small taste of what is possible with |EX-R|.
 
-To continue to learn more about it, click the :guilabel:`Next` button to see some more :doc:`/ex-rail/tips`, and you can also see the :doc:`/ex-rail/EX-RAIL-command-reference` to explore the full capabilities.
+To continue to learn more about it, click the :guilabel:`Next` button to see some more :doc:`/exrail/tips`, and you can also see the :doc:`/exrail/exrail-command-reference` to explore the full capabilities.

@@ -603,6 +603,6 @@ Now you're ready!
 
 At this point, you should have a fully assembled |EX-TT| with the software loaded, a default configuration, and the device driver installed and configured in your CommandStation.
 
-In addition, |EX-TT| should be connected to your CommandStation ready to test, tune your turntable positions, and configure EX-RAIL ready for use on your layout.
+In addition, |EX-TT| should be connected to your CommandStation ready to test, tune your turntable positions, and configure EXRAIL ready for use on your layout.
 
 Click the 'Next' button to get cracking!

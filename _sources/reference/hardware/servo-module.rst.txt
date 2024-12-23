@@ -70,10 +70,10 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.
 
    Servo mount to operate a Semaphore Signal
 
-Using Servos with EX-RAIL
+Using Servos with EXRAIL
 ==========================
 
-EX-RAIL supports three methods of controlling servos:
+EXRAIL supports three methods of controlling servos:
 
 * Turnouts via the SERVO_TURNOUT directive
 * Signals via the SERVO_SIGNAL directive
@@ -82,7 +82,7 @@ EX-RAIL supports three methods of controlling servos:
 Controlling servos for turnouts
 -------------------------------
 
-The SERVO_TURNOUT directive defines a servo based turnout in EX-RAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout within the CommandStation.
+The SERVO_TURNOUT directive defines a servo based turnout in EXRAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout within the CommandStation.
 
 As per the |EX-R| reference, turnouts are defined with the following syntax:
 
@@ -108,7 +108,7 @@ An example definition for a servo connected to the second control pins of the fi
 Controlling servos for signals
 ------------------------------
 
-The SERVO_SIGNAL directive defines a servo based signal in EX-RAIL to drive semaphore type signals as part of sequences or routes, or simply be set via a signal or similar.
+The SERVO_SIGNAL directive defines a servo based signal in EXRAIL to drive semaphore type signals as part of sequences or routes, or simply be set via a signal or similar.
 
 Similar to pin based signals, servo signals are controlled by the ID of the red pin only.
 
@@ -159,7 +159,7 @@ The SERVO is attached to VPin 101 (second control pin on first PCA9685), with a 
    SERVO(101, 100, Slow)
    DONE
 
-This tells EX-RAIL that when the sensor at VPin 164 is activated, the lineside worker moves quickly back from the track for safety, and then after the sensor has been deactivated, he can leisurely move back to his working position (no one wants to rush back to work right?).
+This tells EXRAIL that when the sensor at VPin 164 is activated, the lineside worker moves quickly back from the track for safety, and then after the sensor has been deactivated, he can leisurely move back to his working position (no one wants to rush back to work right?).
 
 
 Animation Servo with a Mimic Panel Push Button
@@ -265,7 +265,7 @@ To define an output with ID 101 to match the LED connected to VPin 101, add this
 
    SETUP("<Z 101 101 0>");
 
-Using these with EX-RAIL
+Using these with EXRAIL
 ------------------------
 
 |EX-R| includes the ``FADE(vpin, value, ms)`` command which can is used to adjust the LED's brightness to the provided value over the time specified in milliseconds.

@@ -24,7 +24,7 @@ The aim is to keep things as simple as possible, and to maintain alignment with 
 
 However, there are complexities in setting up a turntable that tend to make |EX-TT| more in the realm of the |tinkerer-text| level user, even when using the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination that are readily available.
 
-To make full use of |EX-TT|, you will need a basic understanding of :doc:`EX-RAIL </ex-rail/index>` automation, but we'll share the details and some examples to help with this.
+To make full use of |EX-TT|, you will need a basic understanding of :doc:`EXRAIL </exrail/index>` automation, but we'll share the details and some examples to help with this.
 
 .. note::
 
@@ -50,7 +50,7 @@ The |EX-TT| integration includes:
 
 * Support for an Arduino Nano or Uno
 * |I2C| device driver
-* EX-RAIL automation support
+* EXRAIL automation support
 * Debug/test command (handy for tuning step positions)
 * Out-of-the-box support for several common stepper drivers and motors
 * Traverser mode for horizontal/vertical traversers, and turntables that cannot rotate a full 360 degrees
@@ -87,7 +87,7 @@ Once the home position is determined, the various positions on your layout are d
 
 The command used to move to these positions simply sends the number of steps to |EX-TT|, which calculates the steps required in order to move the least number of steps to the desired position, meaning it will rotate either clockwise or counter clockwise depending which is the shortest distance.
 
-That's pretty much as simple as it gets. These step positions are defined in myAutomation.h (part of EX-RAIL), which will be described in further detail below, including how to ensure these are advertised to WiThrottle applications.
+That's pretty much as simple as it gets. These step positions are defined in myAutomation.h (part of EXRAIL), which will be described in further detail below, including how to ensure these are advertised to WiThrottle applications.
 
 .. tip:: 
 
@@ -96,7 +96,7 @@ That's pretty much as simple as it gets. These step positions are defined in myA
 Controlling the turntable
 -------------------------
 
-To control the turntable, the simplest method is using EX-RAIL automation commands advertised as ROUTEs to the throttle of your choice.
+To control the turntable, the simplest method is using EXRAIL automation commands advertised as ROUTEs to the throttle of your choice.
 
 There is now the ability to control |EX-TT| as a turntable or traverser object, similar to how turnouts/points are controlled, via either DCC-EX native commands or |EX-R|, however |NOT-IN-PROD-VERSION|.
 
@@ -148,7 +148,7 @@ In order to prevent short circuits, the phase (or polarity) of the bridge track 
 * Use a mechanical method to switch the phase based on the physical position of the turntable
 * Use |EX-TT| to automatically (or manually) invert the phase as appropriate
 
-The critical aspect when using |EX-TT|/EX-RAIL or a mechanical method to control the phase is to ensure the entry and exit tracks for each position are wired with the same phase or polarity. An auto reverser will allow out of phase layouts to work as it will always reverse on a short circuit.
+The critical aspect when using |EX-TT|/EXRAIL or a mechanical method to control the phase is to ensure the entry and exit tracks for each position are wired with the same phase or polarity. An auto reverser will allow out of phase layouts to work as it will always reverse on a short circuit.
 
 Consider the turntable starting in alignment with the entry and exit tracks, with everything wired in alignment so the +/- connections from the motor shield are connected to the same rail all the way along.
 
@@ -183,7 +183,7 @@ Now consider inverting or reversing the phase when performing that 180 degree tu
 How does this work with EX-Turntable?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|EX-TT| supports automatic phase switching by default, but can also be controlled manually by both EX-RAIL and diagnostic commands.
+|EX-TT| supports automatic phase switching by default, but can also be controlled manually by both EXRAIL and diagnostic commands.
 
 With the default automatic phase switching, once the turntable rotates 45 degrees away from the home position, it will automatically invert the DCC phase, with the phase then reverting 180 degrees later once the turntable rotates to 225 degrees from the home position.
 

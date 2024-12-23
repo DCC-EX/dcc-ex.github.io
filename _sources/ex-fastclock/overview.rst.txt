@@ -25,7 +25,7 @@ Each time the time changes the |EX-CS| looks for a time change event and if it f
 
 |EX-FC| allows the FastClock device to connect to the |EX-CS| via either Serial Communications or |I2C|.  Even though |EX-FC| provides the code for an Uno based Clock it should be possible for |tinkerer-text| level users to add the relevant code if they already have a working clock that they wish to integrate to |EX-CS|.
 
-To make full use of |EX-FC|, you will need a basic understanding of :doc:`EX-RAIL </ex-rail/index>` automation, but we'll share the details and some examples to help with this.
+To make full use of |EX-FC|, you will need a basic understanding of :doc:`EXRAIL </exrail/index>` automation, but we'll share the details and some examples to help with this.
 
 .. note::
 
@@ -38,7 +38,7 @@ The |EX-FC| integration includes:
 * A ready made Arduino program for an Arduino Uno based Fast Clock
 * Support for Serial connection
 * |I2C| device driver
-* EX-RAIL automation support
+* EXRAIL automation support
 * Time Broadcast for time display on WiThrottle controllers such as |Engine Driver|
 * Debug output to Serial Monitor
 

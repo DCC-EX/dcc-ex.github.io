@@ -108,7 +108,7 @@ DCC-EX Model Railroading
    :maxdepth: 4
    :caption: EX-CommandStation Add-Ons
 
-   ex-rail/index
+   exrail/index
    trackmanager/index
    ex-turntable/index
    ex-ioexpander/index

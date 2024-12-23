@@ -55,7 +55,7 @@ The recommended way to define turntable objects is to define these using the |EX
 
 For information on using the ``<I ...>`` commands to define objects, refer to :ref:`reference/software/command-summary-consolidated:turntables/traversers (configuring the ex-commandstation)`.
 
-For information on using the |EX-R| commands in "myAutomation.h" refer to the :ref:`ex-rail/ex-rail-command-reference:turntable/traverser objects - definition and control`.
+For information on using the |EX-R| commands in "myAutomation.h" refer to the :ref:`exrail/exrail-command-reference:turntable/traverser objects - definition and control`.
 
 Controlling turntables/traversers
 ---------------------------------
@@ -64,7 +64,7 @@ As per defining the objects, turntables/traversers can also be controlled by bot
 
 Refer to :ref:`reference/software/command-summary-consolidated:turntables/traversers` for information pertaining to controlling these devices, as well as for what throttle developers can use to enable control of these from throttles.
 
-For |EX-R| commands, refer to :ref:`ex-rail/ex-rail-command-reference:turntable/traverser objects - definition and control`.
+For |EX-R| commands, refer to :ref:`exrail/exrail-command-reference:turntable/traverser objects - definition and control`.
 
 DCC accessory turntables
 ========================

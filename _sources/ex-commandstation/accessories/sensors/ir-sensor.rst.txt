@@ -121,7 +121,7 @@ If these sensors are active high instead of active low, then they are configured
 
 To ensure sensors are defined at startup, refer to :doc:`/ex-commandstation/advanced-setup/startup-config`.
 
-EX-RAIL integration
+EXRAIL integration
 ===================
 
 |EX-R| utlises these sensors by simply referring to their associated Vpin, and the sensor commands as outlined above are not required.

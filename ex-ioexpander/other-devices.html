@@ -11,7 +11,7 @@
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=2ae7c1fc" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=316e1faf" />
       <link rel="stylesheet" type="text/css" href="../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -279,15 +279,15 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">EX-CommandStation Add-Ons</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../ex-rail/index.html">EX-RAIL (Automation/Animation)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/overview.html">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/editing.html">Editing myAutomation.h</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/creating-elements.html">Objects - an Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/getting-started.html">Sequences - an Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/examples.html">Example Objects and Sequences</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/about.html">About and History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exrail/index.html">EXRAIL (Automation/Animation)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../exrail/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exrail/editing.html">Editing myAutomation.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exrail/creating-elements.html">Objects - an Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exrail/getting-started.html">Sequences - an Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exrail/examples.html">Example Objects and Sequences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exrail/tips.html">Tips and Techniques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exrail/exrail-command-reference.html">EXRAIL Command Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exrail/about.html">About and History</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../trackmanager/index.html">TrackManager (DCC &amp; DC)</a></li>
@@ -314,7 +314,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../ex-fastclock/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-fastclock/hardware.html">Hardware</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-fastclock/connect-existing.html">Configuration options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-fastclock/cs-commands.html">Controlling EX-RAIL by Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ex-fastclock/cs-commands.html">Controlling EXRAIL by Time</a></li>
 </ul>
 </li>
 </ul>
@@ -508,12 +508,12 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../throttles/native-protocol-library.html">DCC-EX Native command protocol library - DCCEXProtocol</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/software/programming-locos.html">Programming Locos (CVs)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../exrail/exrail-command-reference.html">EXRAIL Command Reference</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/software/withrottle-vs-native-commands.html">WiThrottle Protocol VS DCC-EX Native Commands</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/software/command-summary-consolidated.html">Native Commands Summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ex-rail/EX-RAIL-command-reference.html">EX-RAIL Command Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exrail/exrail-command-reference.html">EXRAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/developers/index.html">Developer and API reference</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../throttles/tech-reference.html">Technical Reference for Throttle Developers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/developers/api.html">DCC-EX Native API Reference</a></li>
@@ -667,7 +667,7 @@
 </section>
 <section id="digital-input-configuration">
 <h3>Digital input configuration<a class="headerlink" href="#digital-input-configuration" title="Link to this heading"></a></h3>
-<p>When a digital input is defined via either <a href="../ex-rail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> (e.g. <code class="docutils literal notranslate"><span class="pre">AT(vpin)</span></code>, <code class="docutils literal notranslate"><span class="pre">AFTER(vpin)</span></code>, <code class="docutils literal notranslate"><span class="pre">IF(vpin)</span></code>) or the <code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">pullup&gt;</span></code> DCC-EX command, this triggers the configuration function which sends that information to the <a href="../ex-ioexpander/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span></a> device and must trigger it to start monitoring the pin and sending the data back to the device driver:</p>
+<p>When a digital input is defined via either <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> (e.g. <code class="docutils literal notranslate"><span class="pre">AT(vpin)</span></code>, <code class="docutils literal notranslate"><span class="pre">AFTER(vpin)</span></code>, <code class="docutils literal notranslate"><span class="pre">IF(vpin)</span></code>) or the <code class="docutils literal notranslate"><span class="pre">&lt;S</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">pullup&gt;</span></code> DCC-EX command, this triggers the configuration function which sends that information to the <a href="../ex-ioexpander/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span></a> device and must trigger it to start monitoring the pin and sending the data back to the device driver:</p>
 <ul class="simple">
 <li><p>Validates the digital pin hasn’t already been defined as an analogue pin elsewhere</p></li>
 <li><p>Device driver sends “EXIODPUP” with the pin number and pullup flag (0 no pullup, 1 pullup)</p></li>
@@ -676,7 +676,7 @@
 </section>
 <section id="analogue-input-configuration">
 <h3>Analogue input configuration<a class="headerlink" href="#analogue-input-configuration" title="Link to this heading"></a></h3>
-<p>When an analogue input is defined in <a href="../ex-rail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> using commands such as <code class="docutils literal notranslate"><span class="pre">ATGTE(vpin,</span> <span class="pre">value)</span></code> or <code class="docutils literal notranslate"><span class="pre">IFLT(vpin,</span> <span class="pre">value)</span></code>, this triggers the analogue input configuration function which sends the pin number to the <a href="../ex-ioexpander/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span></a> device and must trigger it to start monitoring the pin and sending the data back to the device driver:</p>
+<p>When an analogue input is defined in <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> using commands such as <code class="docutils literal notranslate"><span class="pre">ATGTE(vpin,</span> <span class="pre">value)</span></code> or <code class="docutils literal notranslate"><span class="pre">IFLT(vpin,</span> <span class="pre">value)</span></code>, this triggers the analogue input configuration function which sends the pin number to the <a href="../ex-ioexpander/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span></a> device and must trigger it to start monitoring the pin and sending the data back to the device driver:</p>
 <ul class="simple">
 <li><p>Validates the analogue pin hasn’t already been defined as a digital pin elsewhere</p></li>
 <li><p>Device driver sends “EXIOENAN” with the pin number</p></li>
@@ -732,7 +732,7 @@
 </section>
 <section id="analogue-writes-pwm">
 <h3>Analogue writes (PWM)<a class="headerlink" href="#analogue-writes-pwm" title="Link to this heading"></a></h3>
-<p>Using the <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">value</span> <span class="pre">profile&gt;</span></code> command, or the various <code class="docutils literal notranslate"><span class="pre">SERVO_TURNOUT(...)</span></code>, <code class="docutils literal notranslate"><span class="pre">SERVO_SIGNAL(..)</span></code> <a href="../ex-rail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> servo commands, or the <code class="docutils literal notranslate"><span class="pre">FADE(...)</span></code> <a href="../ex-rail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> LED command will generate an analogue write to send the associated PWM value to the <a href="../ex-ioexpander/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span></a> device:</p>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">value</span> <span class="pre">profile&gt;</span></code> command, or the various <code class="docutils literal notranslate"><span class="pre">SERVO_TURNOUT(...)</span></code>, <code class="docutils literal notranslate"><span class="pre">SERVO_SIGNAL(..)</span></code> <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> servo commands, or the <code class="docutils literal notranslate"><span class="pre">FADE(...)</span></code> <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> LED command will generate an analogue write to send the associated PWM value to the <a href="../ex-ioexpander/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span></a> device:</p>
 <ul class="simple">
 <li><p>Device driver calculates servo/PWM parameters</p></li>
 <li><p>Device driver sends “EXIOWRAN” with the pin number and least and most significant bytes of the 16 bit value</p></li>
@@ -764,7 +764,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fa0c92f0820>
+    <jinja2.runtime.BlockReference object at 0x7f9fa17934c0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

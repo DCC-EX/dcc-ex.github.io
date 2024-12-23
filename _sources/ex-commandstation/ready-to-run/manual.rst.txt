@@ -158,7 +158,7 @@ RailSync Connector
 
    Railsync Connector
 
-This is a standard Railsync input and is labelled "Booster In" on the top of the board. Connecting a RailSync output from a Command Station or Booster will automatically switch the EXCSB1 to booster mode on receipt of an input signal when the CSB1 is running the appropriate EX-RAIL script. 
+This is a standard Railsync input and is labelled "Booster In" on the top of the board. Connecting a RailSync output from a Command Station or Booster will automatically switch the EXCSB1 to booster mode on receipt of an input signal when the CSB1 is running the appropriate EXRAIL script. 
 
 Again be sure to wire the DCC outputs to power districts with consistent phasing. Any voltage between 5V and 26V at the input will work. The Digitrax specification is from 12V to 26V. See `the DCCWiki article on RailSync <https://dccwiki.com/LocoNet_and_RailSync_Voltages>`_ |EXTERNAL-LINK|
 
@@ -295,7 +295,7 @@ OLED Display (not shown above)
 
    OLED Display
 
-The OLED display provides diagnostics, status, and general information. The OLED display can also show output from EX-RAIL scripts including user defined text. By default, the display shows the version number, license, power status, free memory, and if configured, your WiFi access point login information.
+The OLED display provides diagnostics, status, and general information. The OLED display can also show output from EXRAIL scripts including user defined text. By default, the display shows the version number, license, power status, free memory, and if configured, your WiFi access point login information.
 
 |FORCE-BREAK|
 
@@ -649,9 +649,9 @@ As the |EX-I| program is updated periodically, it is worth checking from time-to
 Uploading EXRAIL Scripts
 ------------------------
 
-EX‑RAIL is an “EXtended Railroad Automation Instruction Language” that can easily be used to describe sequential command 'sequences' to automatically take place on your model layout. These sequences are defined programmatically in a simple command script file, and uploaded to the Command Station once to configure it. EX-Rail will then run automatically on EX-CommandStation startup, trigger manually, or on occurrence of the specified events.
+EX‑RAIL is an “EXtended Railroad Automation Instruction Language” that can easily be used to describe sequential command 'sequences' to automatically take place on your model layout. These sequences are defined programmatically in a simple command script file, and uploaded to the Command Station once to configure it. EXRAIL will then run automatically on EX-CommandStation startup, trigger manually, or on occurrence of the specified events.
 
-To find out more about |EX-R| and how to add them to your |EX-CSB1| see the :doc:`/ex-rail/index` page.
+To find out more about |EX-R| and how to add them to your |EX-CSB1| see the :doc:`/exrail/index` page.
 
 .. Resetting the CS
 .. ----------------

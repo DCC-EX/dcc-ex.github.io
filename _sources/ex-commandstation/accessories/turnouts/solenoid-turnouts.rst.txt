@@ -38,7 +38,7 @@ To define solenoid/coil based turnouts using |EX-R| (whether or not they are to 
 - ``VIRTUAL_TURNOUT(id [, "description"])`` - use this command when you need to define a custom macro that controls the various pins and duration required to switch a turnout
 - ``TURNOUT(id, addr, sub_addr [, "description"])`` - use this command when using DCC accessory decoders to control the servos
 
-Refer to :ref:`ex-rail/ex-rail-command-reference:turnout/point objects - definition and control` for details on these commands, along with :ref:`ex-rail/creating-elements:adding turnouts/points` for some further information and examples.
+Refer to :ref:`exrail/exrail-command-reference:turnout/point objects - definition and control` for details on these commands, along with :ref:`exrail/creating-elements:adding turnouts/points` for some further information and examples.
 
 Connecting and controlling the hardware
 =======================================
@@ -148,7 +148,7 @@ On the turnout/point solenoids, there will be three wires: a common wire, a wire
 
 With the above driver board, the common is positive and the control wires are connected to ground by the darlington drivers.
 
-The EX-RAIL macro below creates a turnout object that closes/throws the turnout/point via the MCP23017 vpins on the board.
+The EXRAIL macro below creates a turnout object that closes/throws the turnout/point via the MCP23017 vpins on the board.
 
 The DUAL_SOLENOID_TURNOUT definition is:
 
@@ -156,7 +156,7 @@ The DUAL_SOLENOID_TURNOUT definition is:
 - pc - pin for CLOSE command
 - pt - pin for THROW command
 - desc - description
-- ali - alias that can be used for the turnout in EX-RAIL
+- ali - alias that can be used for the turnout in EXRAIL
 
 .. code-block:: 
 

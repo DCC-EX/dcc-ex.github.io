@@ -93,7 +93,7 @@ One thing to be aware of is the time that the functions you write will take to e
 If you have a _read() function that polls a device, waits for a calculation to be performed
 and then reads a result, it may, for example, take some milliseconds to complete. 
 During this time, nothing else in |EX-CS| is able to run (apart from interrupt code). 
-While this doesn't seem a long time, if you have multiple parts of |EX-CS| (Sensor objects, EX-RAIL Sequences, etc.) that 
+While this doesn't seem a long time, if you have multiple parts of |EX-CS| (Sensor objects, EXRAIL Sequences, etc.) that 
 are reading the values of multiple pins, then the time will be multiplied and you may find 
 that other parts of |EX-CS| start to slow down.
 

@@ -25,7 +25,7 @@ Further to this, all of the NUCLEO series of development boards also provide Ard
 
 The NUCLEO series have a great deal more RAM (128KB to 256KB vs 8KB for a Mega), double or more FLASH (512KB to 2MB) for program storage, and much faster CPU speed (100 to 180Mhz vs 16Mhz) than the current AVR-based UNO and Mega.
 
-With those attributes comes the potential to support much larger EX-RAIL scripts, and therefore much larger layouts needing animation and automation, and new features like built-in Ethernet.
+With those attributes comes the potential to support much larger EXRAIL scripts, and therefore much larger layouts needing animation and automation, and new features like built-in Ethernet.
 
 Nucleo-64 vs Nucleo-144 Form Factors
 ------------------------------------

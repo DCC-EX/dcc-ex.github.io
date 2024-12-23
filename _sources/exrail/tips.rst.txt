@@ -57,11 +57,11 @@ This is a simple substitution that lets you have readable names for things in yo
       THROW(COAL_YARD_TURNOUT)
       GREEN(COAL_YARD_SIGNAL_3)
 
-Refer to :ref:`ex-rail/ex-rail-command-reference:aliases` for more information.
+Refer to :ref:`exrail/exrail-command-reference:aliases` for more information.
 
 Alias names:
 
-- **Must not** be an existing EX-RAIL command name or other reserved word.
+- **Must not** be an existing EXRAIL command name or other reserved word.
 - **Should be** reasonably short but descriptive.
 - **Must start** with letters A-Z/a-z, 0-9 or underscore _ .
 - **May then** also contain numbers.
@@ -94,7 +94,7 @@ If you find your myAutomation.h file becoming quite lengthy and cumbersome to sc
 There are some rules that apply in this scenario:
 
 * Anything that needs to be done when the CommandStation starts must be defined first.
-* Any custom macros/commands must be defined before they are used (see `make your own ex-rail macro or command`_) below.
+* Any custom macros/commands must be defined before they are used (see `make your own exrail macro or command`_) below.
 * The files are included in the order defined, so if an item in one file depends on another file's item, make sure they included in the correct order.
 
 Some suggestions to get the most out of this:
@@ -119,12 +119,12 @@ For example:
 Realistic turnout sequences 
 ===========================
 
-Let's say you want to create a turnout that is connected to some signals and you want a more realistic sequence with time delays as if the signalman has to move from lever to lever. This can be readily achieved in EX-RAIL but you really want the turnout to appear normal in your throttle. To do this you can create two complimentary turnout definitions:
+Let's say you want to create a turnout that is connected to some signals and you want a more realistic sequence with time delays as if the signalman has to move from lever to lever. This can be readily achieved in EXRAIL but you really want the turnout to appear normal in your throttle. To do this you can create two complimentary turnout definitions:
 
 1. An invisible turnout definition which actually controls the turnout hardware. This can be a pin, servo, DCC, or whatever technology, but is created using the HIDDEN keyword (see example below) instead of a description. This will not show up in throttles or be shown to |JMRI|. 
 2. A virtual turnout. This turnout will have an ID and description, will show up in throttles and |JMRI|, but has no hardware or electronics associated with it. 
 
-Once these are defined, you can then use EX-RAIL's ONTHROW/ONCLOSE commands to intercept the throttle/JMRI/EX-RAIL sequence changing the virtual turnout which then runs the sequence of your choice. This will normally involve throwing or closing the invisible (but real) turnout.
+Once these are defined, you can then use EXRAIL's ONTHROW/ONCLOSE commands to intercept the throttle/JMRI/EXRAIL sequence changing the virtual turnout which then runs the sequence of your choice. This will normally involve throwing or closing the invisible (but real) turnout.
 
 For example:
 
@@ -149,12 +149,12 @@ For example:
    GREEN(MainlineSignal)                          // Set a red signal.
    DONE
 
-A virtual turnout may be used in any circumstance where the turnout process is handled in EX-RAIL rather than the normal process, for example a solenoid turnout requiring a pin or relay to be manipulated.
+A virtual turnout may be used in any circumstance where the turnout process is handled in EXRAIL rather than the normal process, for example a solenoid turnout requiring a pin or relay to be manipulated.
 
-Make your own EX-RAIL macro or command
+Make your own EXRAIL macro or command
 ======================================
 
-One of the cunning features of EX-RAIL is enabling users to define macros, or what is effectively your very own EX-RAIL command.
+One of the cunning features of EXRAIL is enabling users to define macros, or what is effectively your very own EXRAIL command.
 
 To do this, you're actually making use of some C++ code in addition to the clever programming in DCC-EX.
 
@@ -214,12 +214,12 @@ Here's the line by line explanation:
 * Define what happens when a CLOSE command is sent to that turnout ID.
 * Setting the direction pin high will result in closing the turnout.
 * Set the enable or pulse pin high, wait for our pulse time, then reset it again, which will actually close the turnout.
-* The DONE is required to tell EX-RAIL not to proceed any further.
+* The DONE is required to tell EXRAIL not to proceed any further.
 * Define what happens when a THROW command is sent to that turnout ID.
 * Resetting the direction pin will result in throwing the turnout.
 * Set the enable or pulse pin high, wait for our pulse time, then reset it again, which will actually throw the turnout.
-* The DONE is required to tell EX-RAIL not to proceed any further.
+* The DONE is required to tell EXRAIL not to proceed any further.
 * Finally, use the macro to create the "Yard entrance" turnout with turnout ID 105, pins 168/176 on an MCP23017 I/O expander, and an alias of YD_E that can be referred to in other sequences.
 
-This technique can be used in many different ways limited only by your imagination to have EX-RAIL perform many different actions and automations.
+This technique can be used in many different ways limited only by your imagination to have EXRAIL perform many different actions and automations.
 

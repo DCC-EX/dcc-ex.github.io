@@ -48,7 +48,7 @@ Key Features:
   * Accessory Support: Qwiic/STEMMA QT 3.3V, compatible I2C connector and extra I2C pin headers for all your accessories
   * Pre-Installed with DCC-EX Command Station Software from most suppliers
   * Auto-Reverser capability assignable to each DCC output independently
-  * RailSync DCC input for automatic booster mode engagement under software control (EX-RAIL)
+  * RailSync DCC input for automatic booster mode engagement under software control (EXRAIL)
   * OLED Display: Bundled graphical display for status and diagnostics, with support for additional displays
 
 Benefits include: 
@@ -157,7 +157,7 @@ Board layout
    :scale: 35%
    :align: right
 
-**RailSync Connector** - This is a standard Railsync input and is labelled "Booster In" on the top of the board. Connecting a RailSync output from a Command Station or Booster will automatically switch the EXCSB1 to booster mode on receipt of an input signal when the CSB1 is running the appropriate EX-RAIL script. Again be sure to wire the DCC outputs to power districts with consistent phasing. Any voltage between 5V and 26V at the input will work. The Digitrax specification is from 12V to 26V. See `the DCCWiki article on RailSync <https://dccwiki.com/LocoNet_and_RailSync_Voltages>`_ |EXTERNAL-LINK|
+**RailSync Connector** - This is a standard Railsync input and is labelled "Booster In" on the top of the board. Connecting a RailSync output from a Command Station or Booster will automatically switch the EXCSB1 to booster mode on receipt of an input signal when the CSB1 is running the appropriate EXRAIL script. Again be sure to wire the DCC outputs to power districts with consistent phasing. Any voltage between 5V and 26V at the input will work. The Digitrax specification is from 12V to 26V. See `the DCCWiki article on RailSync <https://dccwiki.com/LocoNet_and_RailSync_Voltages>`_ |EXTERNAL-LINK|
 
 .. image:: /_static/images/ex-csb1/oled_header.png
    :alt: OLED header
@@ -215,7 +215,7 @@ Board layout
    :scale: 28%
    :align: right
 
-**OLED Display (not shown above)** - The OLED display provides diagnostics, status, and general information. The OLED display can also show output from EX-RAIL scripts including user defined text. By default, the display shows the version number, license, power status, free memory, and if configured, your WiFi access point login information.
+**OLED Display (not shown above)** - The OLED display provides diagnostics, status, and general information. The OLED display can also show output from EXRAIL scripts including user defined text. By default, the display shows the version number, license, power status, free memory, and if configured, your WiFi access point login information.
 
 .. image:: /_static/images/ex-csb1/hot_area.png
    :alt: Hot Area Warning

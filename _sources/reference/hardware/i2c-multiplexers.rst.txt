@@ -87,12 +87,12 @@ In order to declare these OLED displays, we need a way to tell the code where to
 .. code-block:: cpp
 
   // Create a 128x32 OLED display device as display number 1 
-  // (line 0 is written by EX-RAIL 'SCREEN(1, 0, "text")').
+  // (line 0 is written by EXRAIL 'SCREEN(1, 0, "text")').
 
   HAL(HALDisplay<OLED>, 1, {SubBus_4, 0x3c}, 128, 64)
 
   // Create a 128x32 OLED display device as display number 2
-  // (line 0 is written by EX-RAIL 'SCREEN(2, 0, "text")').
+  // (line 0 is written by EXRAIL 'SCREEN(2, 0, "text")').
 
   HAL(HALDisplay<OLED>, 2, {SubBus_5, 0x3c}, 128, 64)
 
@@ -103,12 +103,12 @@ Note that when there are multiple multiplexers on the |I2C| bus, we will need to
 .. code-block:: cpp
 
   // Create a 128x32 OLED display device as display number 1 
-  // (line 0 is written by EX-RAIL 'SCREEN(1, 0, "text")').
+  // (line 0 is written by EXRAIL 'SCREEN(1, 0, "text")').
 
   HAL(HALDisplay<OLED>, 1, {I2CMux_0, SubBus_4, 0x3c}, 128, 64)
 
   // Create a 128x32 OLED display device as display number 2
-  // (line 0 is written by EX-RAIL 'SCREEN(2, 0, "text")').
+  // (line 0 is written by EXRAIL 'SCREEN(2, 0, "text")').
 
   HAL(HALDisplay<OLED>, 2, {I2CMux_0, SubBus_5, 0x3c}, 128, 64)
 

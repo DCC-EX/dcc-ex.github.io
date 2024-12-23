@@ -157,7 +157,7 @@ Obtaining loco (cab) status
 Turnouts/Points
 ^^^^^^^^^^^^^^^
 
-The conventional turnout definition commands and the ``<H>`` responses do not contain information about the turnout description which may have been provided in an EX-RAIL script. A turnout description is much more user friendly than the identifier (e.g. T123), and having a list helps the throttle UI build a suitable set of buttons.
+The conventional turnout definition commands and the ``<H>`` responses do not contain information about the turnout description which may have been provided in an EXRAIL script. A turnout description is much more user friendly than the identifier (e.g. T123), and having a list helps the throttle UI build a suitable set of buttons.
 
 ``<JT>`` - Returns a list of turnout IDs. The throttle should be uninterested in the turnout technology used but needs to know the IDs it can throw/close and monitor the current state.
 
@@ -174,7 +174,7 @@ The conventional turnout definition commands and the ``<H>`` responses do not co
   * ``<jT 17 C "">`` - Indicates turnout description not defined, and state is closed.
   * ``<jT 17 X>`` - Indicates turnout unknown (or possibly hidden.)
 
-.. note:: It is still the throttles responsibility to monitor the status broadcasts. Also note that turnouts marked in EX-RAIL with the HIDDEN keyword instead of a "description" will NOT show up in these commands.
+.. note:: It is still the throttles responsibility to monitor the status broadcasts. Also note that turnouts marked in EXRAIL with the HIDDEN keyword instead of a "description" will NOT show up in these commands.
 
 .. note:: *Note from the author:* The existing broadcast is messy and needs cleaning up, however, I'm not keen on dynamically created/deleted turnouts so I have no intention of providing a command that indicates the turnout list has been updated since the throttle started.
   - Chris Harlow
@@ -182,7 +182,7 @@ The conventional turnout definition commands and the ``<H>`` responses do not co
 Automations/Routes
 ^^^^^^^^^^^^^^^^^^
 
-A throttle needs to know which EX-RAIL Automations and Routes it can show the user.
+A throttle needs to know which EXRAIL Automations and Routes it can show the user.
 
 ``<JA>`` - Returns a list of Automations/Routes.
 
@@ -221,16 +221,16 @@ This broadcast is in the format:
   * ``<jB 13 2>`` - indicates route/automation ID 13 should be hidden
   * ``<jB 13 "Route 13">`` - indicates route/automation ID 13's label/description should be set to "Route 13"
 
-To see how these are implemented in |EX-R|, refer to :ref:`ex-rail/ex-rail-command-reference:flow control`.
+To see how these are implemented in |EX-R|, refer to :ref:`exrail/exrail-command-reference:flow control`.
 
 What's the difference?
 ~~~~~~~~~~~~~~~~~~~~~~
 
-A **ROUTE** is just a call to an EX-RAIL ROUTE, traditionally to set some turnouts or signals but can be used to perform any kind of EX-RAIL function, but is not expecting to know the loco ID.
+A **ROUTE** is just a call to an EXRAIL ROUTE, traditionally to set some turnouts or signals but can be used to perform any kind of EXRAIL function, but is not expecting to know the loco ID.
 
 * A route can be triggered by sending, for example, ``</START 13>``. 
 
-An **AUTOMATION** is a handoff of the last accessed loco ID to an EX-RAIL AUTOMATION which would typically drive the loco away.
+An **AUTOMATION** is a handoff of the last accessed loco ID to an EXRAIL AUTOMATION which would typically drive the loco away.
 
 * An automation expects a start command with a cab ID, for example ``</START 13 3>``.
 
@@ -248,7 +248,7 @@ Roster Information
 
   Example response:
 
-  * ``<jR 200 "Thomas" "whistle/*bell/squeal/panic">`` - Returns the defined description "Thomas" with each defined function's name. Refer to the EX-RAIL ROSTER command for function map format.
+  * ``<jR 200 "Thomas" "whistle/*bell/squeal/panic">`` - Returns the defined description "Thomas" with each defined function's name. Refer to the EXRAIL ROSTER command for function map format.
 
 Turntables/Traversers
 ^^^^^^^^^^^^^^^^^^^^^

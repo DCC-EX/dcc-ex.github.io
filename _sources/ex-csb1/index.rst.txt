@@ -44,7 +44,7 @@ Key Features:
   * Accessory Support: Qwiic/STEMMA QT 3.3V, compatible I2C connector and extra I2C pin headers for all your accessories
   * Pre-Installed with DCC-EX Command Station Software from most suppliers
   * Auto-Reverser capability assignable to each DCC output independently
-  * RailSync DCC input for automatic booster mode engagement under software control (EX-RAIL)
+  * RailSync DCC input for automatic booster mode engagement under software control (EXRAIL)
   * OLED Display: Bundled graphical display for status and diagnostics, with support for additional displays
 
 Benefits include: 

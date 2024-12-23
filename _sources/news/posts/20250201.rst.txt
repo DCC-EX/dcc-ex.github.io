@@ -33,7 +33,7 @@ Just check out this list of features and enhancements added since our last relea
 
 New |EX-R| specific commands and enhancements:
 
-- Various new ROUTE related commands - See :ref:`ex-rail/ex-rail-command-reference:scripts/sequences - types and control`
+- Various new ROUTE related commands - See :ref:`exrail/exrail-command-reference:scripts/sequences - types and control`
 - **JMRI_SENSOR(vpin [,count])** - creates <s> type sensors visible to jmri
 - Blinking/flashing vpin and amber signal - **BLINK( pin, onms, offms )** - blink an output pin
 - New **ONBUTTON( vpin )** - event handler for debounced button presses and **ONSENSOR( sensor_id )** - event handler for sensors

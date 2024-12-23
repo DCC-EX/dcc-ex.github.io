@@ -63,7 +63,7 @@ Further to this, the NUCLEO series of development boards also provide Arduino Un
 
 All of the NUCLEO series being considered as a future |DCC-EX| platform have a great deal more RAM (128KB to 256KB vs 8KB for a Mega), double or more FLASH (512KB to 2MB) for program storage, and much faster CPU speed (100 to 180Mhz vs 16Mhz) than the current AVR-based UNO and Mega.
 
-With those attributes comes the potential to support much larger EXRAIL scripts, more WiThrottle connections, and many new features.
+With those attributes comes the potential to support much larger |EX-R| scripts, more WiThrottle connections, and many new features.
 
 NUCLEO-F411RE and NUCLEO-F446RE
 -------------------------------

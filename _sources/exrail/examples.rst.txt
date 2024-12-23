@@ -33,10 +33,10 @@ Turn Track Power On at Startup
 
 Turning track power on or off in |EX-CS| version 5 (the current Production version) is performed respectively by either the |EX-R| command ``POWERON`` or ``POWEROFF``; or in EX-CommandStation's native language using the command line, ``<1>`` or ``<0>``.
 
-Users of previous EX-CommandStation versions can switch track power on or off via EXRAIL;
+Users of previous EX-CommandStation versions can switch track power on or off via |EX-R|;
    ``SETUP("<1>")``  for on or ``SETUP("<0>")`` for off;  or in EX-CommandStation's native language, ``<1>`` or ``<0>``
 
-Another approach for powering up the track is to assign a speed to a loco in a sequence and power will automatically turn on.  EXRAIL cleverly knows that power must be on before a locomotive can move so it turns track power on when the sequence is executed.
+Another approach for powering up the track is to assign a speed to a loco in a sequence and power will automatically turn on.  |EX-R| cleverly knows that power must be on before a locomotive can move so it turns track power on when the sequence is executed.
 
 .. code-block:: cpp
    
@@ -97,7 +97,7 @@ Creating Routes
 ===============
 
 A typical Route might be used to set a series of turnouts in response to a single button in a throttle.
-The EXRAIL instructions to do this might look like
+The |EX-R| instructions to do this might look like
 
 .. code-block:: cpp
 
@@ -211,7 +211,9 @@ Notice that this automation does not specify the loco address. If you drive a lo
 Stopping at a Station - Adding Signals
 ======================================
 
-Adding a station signal to the loop script is extremely simple, but it does require a mind-shift for some modellers who like to think in terms of signals being in control of trains! EXRAIL takes a different approach, by animating the signals as part of the driving script. Thus set a signal GREEN before moving off (and allow a little delay for the driver to react) and RED after you have passed it.
+Adding a station signal to the loop script is extremely simple, but it does require a mind-shift for some modellers who like to think in terms of signals being in control of trains! 
+
+|EX-R| takes a different approach, by animating the signals as part of the driving script. Thus set a signal GREEN before moving off (and allow a little delay for the driver to react) and RED after you have passed it.
 
 .. code-block:: cpp
 
@@ -266,7 +268,7 @@ Notice that the sensors at A and B are near the ends of the track (allowing for 
 
 Note a SEQUENCE is exactly the same as an AUTOMATION except that it does NOT appear in the throttle.
 
-When the Command Station is powered up or reset, EXRAIL starts operating at the beginning of the file.  For this sequence we need to set a loco address and start the sequence:
+When the Command Station is powered up or reset, |EX-R| starts operating at the beginning of the file.  For this sequence we need to set a loco address and start the sequence:
 
 .. code-block:: cpp
 
@@ -421,7 +423,7 @@ For a known set of locos, the easiest way is to define the startup process at th
 Drive-Away feature
 ==================
 
-EXRAIL can switch a track section between programming and mainline.
+|EX-R| can switch a track section between programming and mainline.
 
 Here for example is a launch sequence that has no predefined locos but allows locos to be added at station 1 while the system is in motion. Let's assume that the track section at Station1 is isolated and connected to the programming track power supply. Also that we have a 'launch' button connected where sensor 17 would be and an optional signal (i.e. 3 LEDs) on the control panel connected where signal 27 would be.
 

@@ -552,7 +552,7 @@ Referencing Turnouts/Points
 
 |EX-CS| supports a number of different turnout/point hardware configurations, but your automation treats them all as simple ID numbers. Turnouts may be defined using ``<T>`` commands from JMRI, or in ``SETUP("<T ...>")`` commands placed in your mySetup.h file, or C++ code in mySetup.h, just like earlier versions.
 
-You may, however, find it more convenient to define turnouts/points using EXRAIL commands, which may appear anywhere in the 'myAutomation.h' file, even after they are referenced in an ``ONTHROW``, ``ONCLOSE``, ``THROW`` or ``CLOSE`` command. (EXRAIL extracts the turnout definitions just once from your script at Command Station startup.)
+You may, however, find it more convenient to define turnouts/points using |EX-R| commands, which may appear anywhere in the 'myAutomation.h' file, even after they are referenced in an ``ONTHROW``, ``ONCLOSE``, ``THROW`` or ``CLOSE`` command. (EXRAIL extracts the turnout definitions just once from your script at Command Station startup.)
 
 Turnouts/Points defined in 'myAutomation.h' will still be visible to WiThrottle and JMRI in the normal way.
 
@@ -606,7 +606,7 @@ Sensor polling by JMRI is independent of this, and may continue if ``<S>`` comma
 Drive-Away feature
 ==================
 
-EXRAIL can switch a track section between programming and mainline.
+|EX-R| can switch a track section between programming and mainline.
 
 Here for example is a launch sequence that has no predefined locos but allows locos to be added at station 1 while the system is in motion. Let's assume that the track section at Station1 is isolated and connected to the programming track power supply. Also that we have a “launch” button connected where sensor 17 would be and an optional signal (i.e. 3 LEDs) on the control panel connected where signal 27 would be.
 

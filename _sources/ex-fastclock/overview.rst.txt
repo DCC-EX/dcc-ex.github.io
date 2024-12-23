@@ -38,7 +38,7 @@ The |EX-FC| integration includes:
 * A ready made Arduino program for an Arduino Uno based Fast Clock
 * Support for Serial connection
 * |I2C| device driver
-* EXRAIL automation support
+* |EX-R| automation support
 * Time Broadcast for time display on WiThrottle controllers such as |Engine Driver|
 * Debug output to Serial Monitor
 

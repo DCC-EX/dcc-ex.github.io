@@ -193,7 +193,7 @@ Note that these functions are not cumulative - setting F30 overrides F29 and set
 
 For details on setting F keys see "Turn Loco decoder functions ON or OFF" in `Cab (Loco) Commands`_ below.
 
-For ease of changing these functions within EXRAIL an EXRAIL command SET_FREQ is available to select the frequency within automations/routes.
+For ease of changing these functions within |EX-R| an EXRAIL command SET_FREQ is available to select the frequency within automations/routes.
 
 ----
 

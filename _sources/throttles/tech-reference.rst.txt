@@ -157,7 +157,7 @@ Obtaining loco (cab) status
 Turnouts/Points
 ^^^^^^^^^^^^^^^
 
-The conventional turnout definition commands and the ``<H>`` responses do not contain information about the turnout description which may have been provided in an EXRAIL script. A turnout description is much more user friendly than the identifier (e.g. T123), and having a list helps the throttle UI build a suitable set of buttons.
+The conventional turnout definition commands and the ``<H>`` responses do not contain information about the turnout description which may have been provided in an |EX-R| script. A turnout description is much more user friendly than the identifier (e.g. T123), and having a list helps the throttle UI build a suitable set of buttons.
 
 ``<JT>`` - Returns a list of turnout IDs. The throttle should be uninterested in the turnout technology used but needs to know the IDs it can throw/close and monitor the current state.
 

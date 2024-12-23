@@ -184,7 +184,7 @@ There are three ways to load & store your Locomotive Icon Image in Engine Driver
 
 2. **Manually entered directly into your Android Engine Driver folder**
   
-  * Capture then rename the image exactly like the Roster ID name in JMRI & EXRAIL and save as a .PNG file
+  * Capture then rename the image exactly like the Roster ID name in |JMRI| & |EX-R| and save as a .PNG file
   * Then place the engine Image into your Android device/phone in the |BR|\ '/Android/data/jmri.enginedriver/files/recent_engine_list' folder |BR|\ example image name;  PE 1225.png
 
   Note: certain characters are not allowed in file names so need to be substituted with "_" (underscore) if you have used them in your roster name. They are:

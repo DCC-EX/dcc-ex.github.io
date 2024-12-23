@@ -459,7 +459,7 @@ Place any analogue DC loco/engine on a TrackManager DC assigned track with our |
 
 A DCC Loco with a DC enabled sound decoder also sits quietly and when the throttle increases the sound will turn on first then as you throttle up more it will begin moving.  You can throttle back until it stops but leave a little throttle speed on say 5% and the Sound will continue to play while it is stopped.
 
-Throttle speed response for DC locos vary because the DCdistrict track is operating from 0Vdc to 16+Vdc ~PWM waveform signal. Locos operating on a DCdistrict with either WiFi Throttles and EXRAIL Automation scripts with |Engine Driver| Handoff run different DC motors at different speeds.
+Throttle speed response for DC locos vary because the DCdistrict track is operating from 0Vdc to 16+Vdc ~PWM waveform signal. Locos operating on a DCdistrict with either WiFi Throttles and |EX-R| Automation scripts with |Engine Driver| Handoff run different DC motors at different speeds.
 
 So a script for FWD(50) speed will run at completely different speeds for two different DC motors depending on their resistance and efficiency.  One crawls at 50 while the other one runs like a bat out of hell.
 
@@ -475,7 +475,7 @@ Controlling & Managing DCC-EX TrackManager modes
 You can Assign Tracks/Districts to DCC and DC mode in four ways:
 
   1. Command Line via PC with Arduino IDE Serial Monitor or JMRI serial Traffic Monitor and it is sent through your USB connected cable.
-  2. Create an EXRAIL myAutomation.h file Scripts for Track Manager assigned commands and they automatically appear in |Engine Driver| as GUI Automation [Handoff] and Route [Set] buttons, and in WiThrottle WiFi Throttle iOS as [Route] buttons, and on TCS Universal UWT-50 & 100 WiFi Throttle [Select Accry] lines.
+  2. Create an |EX-R| myAutomation.h file Scripts for Track Manager assigned commands and they automatically appear in |Engine Driver| as GUI Automation [Handoff] and Route [Set] buttons, and in WiThrottle WiFi Throttle iOS as [Route] buttons, and on TCS Universal UWT-50 & 100 WiFi Throttle [Select Accry] lines.
 
   3. Enhanced |Engine Driver| WiFi Throttle Android app v2.35.169+ features;
 
@@ -627,9 +627,9 @@ No DPDT Switches are required, all waveform mode switching is done by Track Mana
 DCC-EX Command Station with EXRAIL & TrackManager
 ---------------------------------------------------
 
-Cool thing is the new EXRAIL Automation(n) & Routes(n) work the same with DCC engines on MAIN tracks and the DC engines on DC or DCX tracks, along with the Sensors, Servos /Turnouts, Signals & MP3 Sound DFPlayer triggers with little or no script changes other than maybe the FWD(n) & REV (n) Speeds.
+Cool thing is the new |EX-R| Automation(n) & Routes(n) work the same with DCC engines on MAIN tracks and the DC engines on DC or DCX tracks, along with the Sensors, Servos /Turnouts, Signals & MP3 Sound DFPlayer triggers with little or no script changes other than maybe the FWD(n) & REV (n) Speeds.
 
-With the new DCC-EX direct WiFi Discovered Server you can connect |Engine Driver| & other WiThrottle app based throttles directly and have EXRAIL [Handoff] & [Set] buttons to run EXRAIL scripts from the throttles.
+With the new DCC-EX direct WiFi Discovered Server you can connect |Engine Driver| & other WiThrottle app based throttles directly and have |EX-R| [Handoff] & [Set] buttons to run |EX-R| scripts from the throttles.
 
 These are DCC-EX Major feature/benefits because with other systems you'll have to use a PC computer or Pi processor & JMRI for WiThrottle Server throttle access and you have to write two different JMRI Jython.py scripts and then Setup Tools> Tables> Routes for for both DCC and DC automation & routes runs.
 
@@ -751,7 +751,7 @@ Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (An
 EXRAIL Functions Displaying on Smartphone Apps & Universal WiFi Throttles
 -------------------------------------------------------------------------
 
-The |Engine Driver| EXRAIL screens shown above are all created through user defined EXRAIL Automation(n) and Route(n) scripts which are automatically passed to both |Engine Driver| & WiThrottle App screens as well as the Train Control Systems TCS Universal WiFi UWT-50 and UWT-100 tactile throttles all via direct connect DCC-EX WiThrottle Protocol interface.
+The |Engine Driver| |EX-R| screens shown above are all created through user defined |EX-R| Automation(n) and Route(n) scripts which are automatically passed to both |Engine Driver| & WiThrottle App screens as well as the Train Control Systems TCS Universal WiFi UWT-50 and UWT-100 tactile throttles all via direct connect DCC-EX WiThrottle Protocol interface.
 
 Please see the specific Smartphone App & Universal WiFi Throttle instructions on how to enable their Preferences and Route screens. 
 https://dcc-ex.com/throttles/index.html#withrottle-protocol-based-throttles

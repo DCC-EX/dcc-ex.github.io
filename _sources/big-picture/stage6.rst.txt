@@ -55,7 +55,7 @@ Turnouts/Points
 
 Two turnouts/points are used in this first stage of our RMFT layout to allow trains to enter and exit the station siding, or continue along the main track.
 
-For further reading on turnouts/points, you can refer to the :ref:`exrail/exrail-command-reference:turnout/point objects - definition and control` section of the EXRAIL reference and :ref:`reference/software/command-summary-consolidated:turnouts/points (configuring the ex-commandstation)` in the DCC-EX Command reference.
+For further reading on turnouts/points, you can refer to the :ref:`exrail/exrail-command-reference:turnout/point objects - definition and control` section of the |EX-R| reference and :ref:`reference/software/command-summary-consolidated:turnouts/points (configuring the ex-commandstation)` in the DCC-EX Command reference.
 
 Turnout/Point definitions
 -------------------------
@@ -74,7 +74,7 @@ Therefore, the DCC-EX command to define these in the serial console is as follow
   <T 100 DCC 26 0>
   <T 101 DCC 26 1>
 
-In EXRAIL, we would add these lines to myAutomation.h, with aliases defined:
+In |EX-R|, we would add these lines to myAutomation.h, with aliases defined:
 
 .. code-block:: 
 
@@ -96,7 +96,7 @@ To define these in the serial console:
   <T 100 VPIN 22>
   <T 101 VPIN 23>
 
-In EXRAIL, we would add these lines to myAutomation.h:
+In |EX-R|, we would add these lines to myAutomation.h:
 
 .. code-block:: 
 
@@ -164,9 +164,9 @@ Again, in myAutomation.h this becomes:
 Sensors
 =======
 
-Five sensors are used in this first stage, which allows us to have up to three trains controlled by EXRAIL automation. The sensors are placed within each virtual block to ensure we know when the front of the train enters a block, and when the rear of the train has exited a block.
+Five sensors are used in this first stage, which allows us to have up to three trains controlled by |EX-R| automation. The sensors are placed within each virtual block to ensure we know when the front of the train enters a block, and when the rear of the train has exited a block.
 
-We don't need to explicitly define any sensor objects to work with EXRAIL, so we will simply map these by defining EXRAIL aliases.
+We don't need to explicitly define any sensor objects to work with |EX-R|, so we will simply map these by defining |EX-R| aliases.
 
 To use pins directly on our Mega2560, we would start at pin 24 (we used pins 22/23 for turnouts):
 
@@ -323,7 +323,7 @@ Once you understand the logic of our routes below and the various turnout/point,
 Startup sequence
 ----------------
 
-When the CommandStation and EXRAIL starts, everything defined before the first ``DONE`` command executes automatically.
+When the |EX-CS| and |EX-R| starts, everything defined before the first ``DONE`` command executes automatically.
 
 For safe running and a known starting state, we ensure both our turnouts/points are closed and set all our signals to red, followed by the first ``DONE`` to stop EXRAIL executing any further automatically.
 
@@ -362,7 +362,7 @@ This same logic is applied for turnout/point 2, setting signal 2 to amber ``AMBE
 
 Once both turnouts are closed, both signals 1 and 2 are set to green to indicate trains are safe to run through both turnouts with ``GREEN(SIG1_TRN1_APP)`` and ``GREEN(SIG2_TRN2_GO)``.
 
-The route is completed with a ``DONE`` to tell EXRAIL not to proceed any further.
+The route is completed with a ``DONE`` to tell |EX-R| not to proceed any further.
 
 .. collapse:: Click to show/hide the code
 
@@ -440,7 +440,7 @@ Now it's time to display the full automation capabilities by setting our layout 
 
 You will note that these are somewhat similar to :ref:`exrail/examples:multiple inter-connected trains`, updated to suit the specifics of the RMFT layout.
 
-To setup for these fully automated sequences, we need to ensure our trains are placed in the below positions, noting that EXRAIL has no way of knowing where a train is on the layout when first starting.
+To setup for these fully automated sequences, we need to ensure our trains are placed in the below positions, noting that |EX-R| has no way of knowing where a train is on the layout when first starting.
 
 * Train 1 in block 1, between sensor 1 and turnout/point 1.
 * Train 2 in block 2, between sensors 2 and 4.

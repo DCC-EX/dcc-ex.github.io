@@ -26,7 +26,7 @@ This is a debug or diagnostic command that can be executed via the serial termin
 
   <D TT vpin steps activity>
 
-This is the EXRAIL command to be included in myAutomation.h:
+This is the |EX-R| command to be included in myAutomation.h:
 
 .. code-block:: cpp
 
@@ -34,7 +34,7 @@ This is the EXRAIL command to be included in myAutomation.h:
 
 For both of these commands, "vpin" is as defined in your "myAutomation.h" file, and "steps" is the number of steps from the home position, not the number of steps the turntable has to travel.
 
-For the diagnostic command, "activity" needs to be defined as a number, whereas for the EXRAIL command, this is defined as text based on the table below. Sound confusing? The reason for using text in the EXRAIL command is to make your automation sequences more "human-friendly" when reading what they do later. It's much easier for us humans to remember words rather than numbers.
+For the diagnostic command, "activity" needs to be defined as a number, whereas for the |EX-R| command, this is defined as text based on the table below. Sound confusing? The reason for using text in the |EX-R| command is to make your automation sequences more "human-friendly" when reading what they do later. It's much easier for us humans to remember words rather than numbers.
 
 .. list-table::
     :widths: auto
@@ -75,7 +75,7 @@ For the diagnostic command, "activity" needs to be defined as a number, whereas 
       - Acc_Off
       - Turns the accessory output off, ignores the provided step position
 
-Here's a quick example to demonstrate the difference between the diagnostic and EXRAIL commands, with both commands below rotating to step position 100:
+Here's a quick example to demonstrate the difference between the diagnostic and |EX-R| commands, with both commands below rotating to step position 100:
 
 .. code-block:: 
 
@@ -196,7 +196,7 @@ Finally, this command will cause the turntable to once again find its home posit
 
 .. todo:: `LOW - Add a video demonstrating diagnostic commands <https://github.com/DCC-EX/dcc-ex.github.io/issues/439>`_ |EXTERNAL-LINK|
 
-Providing these tests have completed successfully, you are now ready to tune the turntable positions for your layout in preparation for defining the EXRAIL configuration and putting |EX-TT| to good use.
+Providing these tests have completed successfully, you are now ready to tune the turntable positions for your layout in preparation for defining the |EX-R| configuration and putting |EX-TT| to good use.
 
 Tuning your turntable positions
 ================================
@@ -283,15 +283,15 @@ Advertising positions to Engine Driver and WiThrottle applications
 
 Now that you have defined all of your turntable positions with appropriate phase/polarity switching, it's time to get these advertised to |Engine Driver| and |WiThrottle| applications.
 
-The method to advertise these is to use EXRAIL's ROUTE function with the MOVETT command, which will ensure all of your defined turntable positions appear in the |Engine Driver| and |WiThrottle| Routes sections.
+The method to advertise these is to use **EXRAIL's** ROUTE function with the MOVETT command, which will ensure all of your defined turntable positions appear in the |Engine Driver| and |WiThrottle| Routes sections.
 
-If this is your first experience with EXRAIL and the "myAutomation.h" file, familiarise yourself with EXRAIL by reading through :doc:`/exrail/index`.
+If this is your first experience with |EX-R| and the "myAutomation.h" file, familiarise yourself with |EX-R| by reading through :doc:`/exrail/index`.
 
 Pay particular attention to the various mentions of ROUTE and the associated examples.
 
 There are two highly recommended additions to using just these ROUTEs:
 
-1. Utilise EXRAIL's virtual RESERVE() and FREE() functions to ensure that while you are operating your turntable, nothing else can interfere with it. This is not so important during manual operation, however if you want to add any other automation (say, turning a warning light on), you will need these to ensure the relevant automation activities are not interrupted should you choose another turntable position prior to the first move completing.
+1. Utilise **EXRAIL's** virtual ``RESERVE()`` and ``FREE()`` functions to ensure that while you are operating your turntable, nothing else can interfere with it. This is not so important during manual operation, however if you want to add any other automation (say, turning a warning light on), you will need these to ensure the relevant automation activities are not interrupted should you choose another turntable position prior to the first move completing.
 2. Utilise aliases to make things human friendly, and we have also provided 30 pre-defined aliases for the ROUTE IDs to ensure there will be no conflicts, as all IDs must be unique.
 
 To define the required turntable positions in the example six position turntable from above, you will need to have this content added to your "myAutomation.h" file. Note that we recommend adding an additional ROUTE to activate the homing process.
@@ -310,7 +310,7 @@ That's it! Once you have created "myAutomation.h" and uploaded it to your Comman
 My turntable moves on startup!
 ------------------------------
 
-There is one "catch" with the above "myAutomation.h" example. When your CommandStation starts up and EXRAIL starts, it will automatically execute everything in "myAutomation.h" up until the first "DONE" statement it encounters.
+There is one "catch" with the above "myAutomation.h" example. When your CommandStation starts up and |EX-R| starts, it will automatically execute everything in "myAutomation.h" up until the first "DONE" statement it encounters.
 
 In this scenario, that means on startup, the turntable will automatically move to position 1.
 
@@ -337,11 +337,11 @@ There may be times where manual phase switching is required, whether due to awkw
 
 To enable manual phase switching, you must edit "config.h" and set :ref:`ex-turntable/configure:phase_switching` to "MANUAL".
 
-Once this has been done, you must explicitly define the phase switching to occur as a part of the diagnostic or EXRAIL command for every step position that requires an inverted phase.
+Once this has been done, you must explicitly define the phase switching to occur as a part of the diagnostic or |EX-R| command for every step position that requires an inverted phase.
 
 .. note:: 
 
-  The phase switch command (1 for the diagnostic command, Turn_PInvert for EXRAIL) does not continue to invert the phase each time that command is sent, the command simply tells |EX-TT| whether or not to activate the phase inversion relays.
+  The phase switch command (1 for the diagnostic command, Turn_PInvert for |EX-R|) does not continue to invert the phase each time that command is sent, the command simply tells |EX-TT| whether or not to activate the phase inversion relays.
 
   Therefore, for every position that requires the phase to be inverted, you must send the invert command (1/Turn_PInvert). For every position that requires the phase to be maintained, you must send just the turn command (0/Turn).
 
@@ -417,7 +417,7 @@ You need to follow the same process as :ref:`ex-turntable/assembly:8. add the ex
 EXRAIL automation
 ------------------
 
-There are two EXRAIL commands available for using the rotary encoder:
+There are two |EX-R| commands available for using the rotary encoder:
 
 - ``ONCHANGE(vpin)`` - Event handler that is activated when a position change is sent
 - ``IFRE(vpin, position)`` - A test to see if the rotary encoder is at a specific position

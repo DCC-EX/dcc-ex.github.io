@@ -73,7 +73,7 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.
 Using Servos with EXRAIL
 ==========================
 
-EXRAIL supports three methods of controlling servos:
+|EX-R| supports three methods of controlling servos:
 
 * Turnouts via the SERVO_TURNOUT directive
 * Signals via the SERVO_SIGNAL directive
@@ -82,7 +82,7 @@ EXRAIL supports three methods of controlling servos:
 Controlling servos for turnouts
 -------------------------------
 
-The SERVO_TURNOUT directive defines a servo based turnout in EXRAIL, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout within the CommandStation.
+The SERVO_TURNOUT directive defines a servo based turnout in |EX-R|, which will appear in |WiThrottle Protocol| apps, |Engine Driver|, and |JMRI| in addition to being defined as a turnout within the CommandStation.
 
 As per the |EX-R| reference, turnouts are defined with the following syntax:
 
@@ -159,7 +159,7 @@ The SERVO is attached to VPin 101 (second control pin on first PCA9685), with a 
    SERVO(101, 100, Slow)
    DONE
 
-This tells EXRAIL that when the sensor at VPin 164 is activated, the lineside worker moves quickly back from the track for safety, and then after the sensor has been deactivated, he can leisurely move back to his working position (no one wants to rush back to work right?).
+This tells |EX-R| that when the sensor at VPin 164 is activated, the lineside worker moves quickly back from the track for safety, and then after the sensor has been deactivated, he can leisurely move back to his working position (no one wants to rush back to work right?).
 
 
 Animation Servo with a Mimic Panel Push Button

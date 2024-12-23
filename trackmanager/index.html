@@ -1065,7 +1065,7 @@
 </aside>
 <p>Place any analogue DC loco/engine on a TrackManager DC assigned track with our <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> and it sits there dead quiet with lights off. When the throttle speed is increased in either direction and then lights up and begins to move.</p>
 <p>A DCC Loco with a DC enabled sound decoder also sits quietly and when the throttle increases the sound will turn on first then as you throttle up more it will begin moving.  You can throttle back until it stops but leave a little throttle speed on say 5% and the Sound will continue to play while it is stopped.</p>
-<p>Throttle speed response for DC locos vary because the DCdistrict track is operating from 0Vdc to 16+Vdc ~PWM waveform signal. Locos operating on a DCdistrict with either WiFi Throttles and EXRAIL Automation scripts with <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> Handoff run different DC motors at different speeds.</p>
+<p>Throttle speed response for DC locos vary because the DCdistrict track is operating from 0Vdc to 16+Vdc ~PWM waveform signal. Locos operating on a DCdistrict with either WiFi Throttles and <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> Automation scripts with <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> Handoff run different DC motors at different speeds.</p>
 <p>So a script for FWD(50) speed will run at completely different speeds for two different DC motors depending on their resistance and efficiency.  One crawls at 50 while the other one runs like a bat out of hell.</p>
 <p>You can also run a DCC locos with DC Conversion CV enabled On and run on the DCdistrict, without having to change the decoder DCC address.</p>
 <p>They will all run on that section of track.</p>
@@ -1077,7 +1077,7 @@
 <blockquote>
 <div><ol class="arabic simple">
 <li><p>Command Line via PC with Arduino IDE Serial Monitor or JMRI serial Traffic Monitor and it is sent through your USB connected cable.</p></li>
-<li><p>Create an EXRAIL myAutomation.h file Scripts for Track Manager assigned commands and they automatically appear in <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> as GUI Automation [Handoff] and Route [Set] buttons, and in WiThrottle WiFi Throttle iOS as [Route] buttons, and on TCS Universal UWT-50 &amp; 100 WiFi Throttle [Select Accry] lines.</p></li>
+<li><p>Create an <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> myAutomation.h file Scripts for Track Manager assigned commands and they automatically appear in <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> as GUI Automation [Handoff] and Route [Set] buttons, and in WiThrottle WiFi Throttle iOS as [Route] buttons, and on TCS Universal UWT-50 &amp; 100 WiFi Throttle [Select Accry] lines.</p></li>
 <li><p>Enhanced <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> WiFi Throttle Android app v2.35.169+ features;</p></li>
 </ol>
 <blockquote>
@@ -1224,8 +1224,8 @@ No DPDT Switches are required, all waveform mode switching is done by Track Mana
 </section>
 <section id="dcc-ex-command-station-with-exrail-trackmanager">
 <h3><a class="toc-backref" href="#id37" role="doc-backlink">DCC-EX Command Station with EXRAIL &amp; TrackManager</a><a class="headerlink" href="#dcc-ex-command-station-with-exrail-trackmanager" title="Link to this heading"></a></h3>
-<p>Cool thing is the new EXRAIL Automation(n) &amp; Routes(n) work the same with DCC engines on MAIN tracks and the DC engines on DC or DCX tracks, along with the Sensors, Servos /Turnouts, Signals &amp; MP3 Sound DFPlayer triggers with little or no script changes other than maybe the FWD(n) &amp; REV (n) Speeds.</p>
-<p>With the new DCC-EX direct WiFi Discovered Server you can connect <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> &amp; other WiThrottle app based throttles directly and have EXRAIL [Handoff] &amp; [Set] buttons to run EXRAIL scripts from the throttles.</p>
+<p>Cool thing is the new <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> Automation(n) &amp; Routes(n) work the same with DCC engines on MAIN tracks and the DC engines on DC or DCX tracks, along with the Sensors, Servos /Turnouts, Signals &amp; MP3 Sound DFPlayer triggers with little or no script changes other than maybe the FWD(n) &amp; REV (n) Speeds.</p>
+<p>With the new DCC-EX direct WiFi Discovered Server you can connect <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> &amp; other WiThrottle app based throttles directly and have <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> [Handoff] &amp; [Set] buttons to run <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> scripts from the throttles.</p>
 <p>These are DCC-EX Major feature/benefits because with other systems you’ll have to use a PC computer or Pi processor &amp; JMRI for WiThrottle Server throttle access and you have to write two different JMRI Jython.py scripts and then Setup Tools&gt; Tables&gt; Routes for for both DCC and DC automation &amp; routes runs.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
@@ -1327,7 +1327,7 @@ Track A and Track B with sidings;</p>
 </section>
 <section id="exrail-functions-displaying-on-smartphone-apps-universal-wifi-throttles">
 <h3><a class="toc-backref" href="#id41" role="doc-backlink">EXRAIL Functions Displaying on Smartphone Apps &amp; Universal WiFi Throttles</a><a class="headerlink" href="#exrail-functions-displaying-on-smartphone-apps-universal-wifi-throttles" title="Link to this heading"></a></h3>
-<p>The <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> EXRAIL screens shown above are all created through user defined EXRAIL Automation(n) and Route(n) scripts which are automatically passed to both <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> &amp; WiThrottle App screens as well as the Train Control Systems TCS Universal WiFi UWT-50 and UWT-100 tactile throttles all via direct connect DCC-EX WiThrottle Protocol interface.</p>
+<p>The <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> screens shown above are all created through user defined <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> Automation(n) and Route(n) scripts which are automatically passed to both <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> &amp; WiThrottle App screens as well as the Train Control Systems TCS Universal WiFi UWT-50 and UWT-100 tactile throttles all via direct connect DCC-EX WiThrottle Protocol interface.</p>
 <p>Please see the specific Smartphone App &amp; Universal WiFi Throttle instructions on how to enable their Preferences and Route screens.
 <a class="reference external" href="https://dcc-ex.com/throttles/index.html#withrottle-protocol-based-throttles">https://dcc-ex.com/throttles/index.html#withrottle-protocol-based-throttles</a></p>
 </section>
@@ -1356,7 +1356,7 @@ Track A and Track B with sidings;</p>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7feafece8c40>
+    <jinja2.runtime.BlockReference object at 0x7f97bd6f70a0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

@@ -684,7 +684,7 @@
 </section>
 <section id="parameters-with-arithmetic">
 <h2><a class="toc-backref" href="#id3" role="doc-backlink">Parameters with Arithmetic</a><a class="headerlink" href="#parameters-with-arithmetic" title="Link to this heading"></a></h2>
-<p>Any parameter for an EXRAIL command that takes numbers can be replaced with an c++ arithmetic calculation, as long as that calculation can be resolved at compile/load time.  (e.g.  + - * /  &gt;&gt; &lt;&lt; &amp;  | ! ~ and even ?: )</p>
+<p>Any parameter for an <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> command that takes numbers can be replaced with an c++ arithmetic calculation, as long as that calculation can be resolved at compile/load time.  (e.g.  + - * /  &gt;&gt; &lt;&lt; &amp;  | ! ~ and even ?: )</p>
 <p>This can be useful if you have a block of related IDs or VPINs and you don’t wish to give each an ALIAS.</p>
 <div class="code-block-float-right highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ALIAS</span><span class="p">(</span><span class="n">Platform</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">)</span>
 <span class="p">...</span>
@@ -723,12 +723,12 @@
 </section>
 <section id="realistic-turnout-sequences">
 <h2><a class="toc-backref" href="#id5" role="doc-backlink">Realistic turnout sequences</a><a class="headerlink" href="#realistic-turnout-sequences" title="Link to this heading"></a></h2>
-<p>Let’s say you want to create a turnout that is connected to some signals and you want a more realistic sequence with time delays as if the signalman has to move from lever to lever. This can be readily achieved in EXRAIL but you really want the turnout to appear normal in your throttle. To do this you can create two complimentary turnout definitions:</p>
+<p>Let’s say you want to create a turnout that is connected to some signals and you want a more realistic sequence with time delays as if the signalman has to move from lever to lever. This can be readily achieved in <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> but you really want the turnout to appear normal in your throttle. To do this you can create two complimentary turnout definitions:</p>
 <ol class="arabic simple">
 <li><p>An invisible turnout definition which actually controls the turnout hardware. This can be a pin, servo, DCC, or whatever technology, but is created using the HIDDEN keyword (see example below) instead of a description. This will not show up in throttles or be shown to <a class="reference internal" href="../throttles/software/jmri.html"><span class="doc">JMRI</span></a>.</p></li>
 <li><p>A virtual turnout. This turnout will have an ID and description, will show up in throttles and <a class="reference internal" href="../throttles/software/jmri.html"><span class="doc">JMRI</span></a>, but has no hardware or electronics associated with it.</p></li>
 </ol>
-<p>Once these are defined, you can then use EXRAIL’s ONTHROW/ONCLOSE commands to intercept the throttle/JMRI/EXRAIL sequence changing the virtual turnout which then runs the sequence of your choice. This will normally involve throwing or closing the invisible (but real) turnout.</p>
+<p>Once these are defined, you can then use EXRAIL’s ONTHROW/ONCLOSE commands to intercept the throttle/<a class="reference internal" href="../throttles/software/jmri.html"><span class="doc">JMRI</span></a>/<a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> sequence changing the virtual turnout which then runs the sequence of your choice. This will normally involve throwing or closing the invisible (but real) turnout.</p>
 <p>For example:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">121</span><span class="p">,</span><span class="w"> </span><span class="mi">133</span><span class="p">,</span><span class="w"> </span><span class="mi">456</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="n">HIDDEN</span><span class="p">)</span><span class="w">    </span><span class="c1">// Define the real, physical turnout, in this case a servo driven turnout, note it is HIDDEN from throttles/JMRI.</span>
 <span class="n">VIRTUAL_TURNOUT</span><span class="p">(</span><span class="mi">9101</span><span class="p">,</span><span class="s">&quot;Coal yard exit&quot;</span><span class="p">)</span><span class="w">       </span><span class="c1">// Define the virtual turnout, which will be visible to throttles/JMRI.</span>
@@ -750,11 +750,11 @@
 <span class="n">DONE</span>
 </pre></div>
 </div>
-<p>A virtual turnout may be used in any circumstance where the turnout process is handled in EXRAIL rather than the normal process, for example a solenoid turnout requiring a pin or relay to be manipulated.</p>
+<p>A virtual turnout may be used in any circumstance where the turnout process is handled in <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> rather than the normal process, for example a solenoid turnout requiring a pin or relay to be manipulated.</p>
 </section>
 <section id="make-your-own-exrail-macro-or-command">
 <h2><a class="toc-backref" href="#id6" role="doc-backlink">Make your own EXRAIL macro or command</a><a class="headerlink" href="#make-your-own-exrail-macro-or-command" title="Link to this heading"></a></h2>
-<p>One of the cunning features of EXRAIL is enabling users to define macros, or what is effectively your very own EXRAIL command.</p>
+<p>One of the cunning features of <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> is enabling users to define macros, or what is effectively your very own <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> command.</p>
 <p>To do this, you’re actually making use of some C++ code in addition to the clever programming in DCC-EX.</p>
 <p>(Yes, we just called ourselves cunning and clever. Our talent is superseded only by our modesty ;) )</p>
 <p>The way to implement this is as follows:</p>
@@ -804,14 +804,14 @@ ROKUHANTURNOUT(105, 168, 176, &quot;Yard entrance&quot;, YD_E)  // Define the &q
 <li><p>Define what happens when a CLOSE command is sent to that turnout ID.</p></li>
 <li><p>Setting the direction pin high will result in closing the turnout.</p></li>
 <li><p>Set the enable or pulse pin high, wait for our pulse time, then reset it again, which will actually close the turnout.</p></li>
-<li><p>The DONE is required to tell EXRAIL not to proceed any further.</p></li>
+<li><p>The DONE is required to tell <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> not to proceed any further.</p></li>
 <li><p>Define what happens when a THROW command is sent to that turnout ID.</p></li>
 <li><p>Resetting the direction pin will result in throwing the turnout.</p></li>
 <li><p>Set the enable or pulse pin high, wait for our pulse time, then reset it again, which will actually throw the turnout.</p></li>
-<li><p>The DONE is required to tell EXRAIL not to proceed any further.</p></li>
+<li><p>The DONE is required to tell <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> not to proceed any further.</p></li>
 <li><p>Finally, use the macro to create the “Yard entrance” turnout with turnout ID 105, pins 168/176 on an MCP23017 I/O expander, and an alias of YD_E that can be referred to in other sequences.</p></li>
 </ul>
-<p>This technique can be used in many different ways limited only by your imagination to have EXRAIL perform many different actions and automations.</p>
+<p>This technique can be used in many different ways limited only by your imagination to have <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> perform many different actions and automations.</p>
 </section>
 </section>
 
@@ -837,7 +837,7 @@ ROKUHANTURNOUT(105, 168, 176, &quot;Yard entrance&quot;, YD_E)  // Define the &q
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7feafd6b78b0>
+    <jinja2.runtime.BlockReference object at 0x7f97c41f5030>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

@@ -21,7 +21,7 @@ We have a great core product (|EX-CS|) with great features such as built-in auto
 
 This section of our website is aimed to answer just that!
 
-Over time we will build this section out with diagrams, information, and EXRAIL examples to demonstrate how our fictional layout can be configured, controlled, and automated with |EX-CS| and various other supported components and features.
+Over time we will build this section out with diagrams, information, and |EX-R| examples to demonstrate how our fictional layout can be configured, controlled, and automated with |EX-CS| and various other supported components and features.
 
 We call our demonstration layout "Railway Modeller's Fictional Trains" (or RMFT for short) as it is completely fictional, and will only exist on this website for instructional purposes. The layout isn't designed to be an engaging, fun operations layout, rather to simply cram as many features in as possible to a relatively small layout to demonstrate the capabilities of |DCC-EX| and how to make use of them in the context of a complete layout.
 
@@ -53,7 +53,7 @@ At each stage, we will outline how to implement each variation of the objects in
 How to read the diagrams
 ========================
 
-Our diagrams will be created in such a way that you'll be able to click on the various items and be taken automatically to the correct page or section of the documentation that provides the software and hardware configuration of that element, along with various options depending on the supported hardware options available, and any EXRAIL automation examples.
+Our diagrams will be created in such a way that you'll be able to click on the various items and be taken automatically to the correct page or section of the documentation that provides the software and hardware configuration of that element, along with various options depending on the supported hardware options available, and any |EX-R| automation examples.
 
 We will be using specific colour coded boxes and labels to identify track side buildings, sensors, signals, virtual blocks, and turnouts/points as outlined below:
 

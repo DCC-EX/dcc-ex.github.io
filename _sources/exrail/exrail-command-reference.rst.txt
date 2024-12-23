@@ -276,7 +276,7 @@ Aliases assigns names to values. They can go anywhere in the sequence. If a valu
 
 This is a simple substitution that lets you have readable names for things in your sequence. For example, instead of having to remember the VPin a turnout/point is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.
 
-If you simply need a unique identifier for an object used internally to the sequence, such as a turnout/point, route, automation, or sequence, you don't even need to provide an ID, EXRAIL will generate one automatically when you omit the value parameter. We recommend using this for all your routes, sequences, and other internal objects so you don't have to try to remember or keep a list of numbers you've used. This also prevents you from assigning the same number to more than one object.
+If you simply need a unique identifier for an object used internally to the sequence, such as a turnout/point, route, automation, or sequence, you don't even need to provide an ID, |EX-R| will generate one automatically when you omit the value parameter. We recommend using this for all your routes, sequences, and other internal objects so you don't have to try to remember or keep a list of numbers you've used. This also prevents you from assigning the same number to more than one object.
 
 REMEMBER: IDs for RESERVE/FREE, LATCH/UNLATCH, and pins must be explicitly defined.
 
@@ -660,7 +660,7 @@ Branch or Follow a specified sequence. This lets us do clever things like perfor
 ``PAUSE`` - E-STOP all locos and PAUSE all other EXRAIL tasks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-E-STOP all locos and PAUSE all other EXRAIL tasks until RESUMEd.
+E-STOP all locos and PAUSE all other |EX-R| tasks until RESUMEd.
 
 *Parameters:* |BR|
 |_| > none
@@ -945,7 +945,7 @@ Stashes/Stores the current loco/invert in the specified stash location.
 
 .. note:: 
 
-  EXRAIL has the ability to switch the DCC direction meaning of FWD and REV so that it can, for example, use the same sequence to drive a normal train or one where the loco is pulling in reverse. If invert=1 in the stash then the loco needs to be moved in reverse in order for the train to move forward.
+  |EX-R| has the ability to switch the DCC direction meaning of FWD and REV so that it can, for example, use the same sequence to drive a normal train or one where the loco is pulling in reverse. If invert=1 in the stash then the loco needs to be moved in reverse in order for the train to move forward.
 
 |hr-dashed|
 

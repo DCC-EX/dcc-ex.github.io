@@ -40,7 +40,7 @@ We added many new functions such as:
 * Programming track turned on automatically when programming and off when finished
 * User add-on functions (intercept commands to route to your own routines)
 * Much simpler Function (F0-28) command
-* EXRAIL Automation and/or accessory control
+* |EX-R| Automation and/or accessory control
 * HAL - Hardware abstraction layer to make adding new types of hardware simple
 * Extended functions up to 68
 * Better turnout/point handling

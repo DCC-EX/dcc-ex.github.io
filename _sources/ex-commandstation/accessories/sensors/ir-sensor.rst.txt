@@ -124,7 +124,7 @@ To ensure sensors are defined at startup, refer to :doc:`/ex-commandstation/adva
 EXRAIL integration
 ===================
 
-|EX-R| utlises these sensors by simply referring to their associated Vpin, and the sensor commands as outlined above are not required.
+|EX-R| utilises these sensors by simply referring to their associated Vpin, and the sensor commands as outlined above are not required.
 
 Therefore, you can simply use the standard digital sensor commands (AT, AFTER, ATTIMEOUT, IF, IFNOT, IFTIMEOUT) commands as per any other digital sensor.
 

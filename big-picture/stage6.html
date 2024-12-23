@@ -707,7 +707,7 @@
 <section id="turnouts-points">
 <h2><a class="toc-backref" href="#id3" role="doc-backlink">Turnouts/Points</a><a class="headerlink" href="#turnouts-points" title="Link to this heading"></a></h2>
 <p>Two turnouts/points are used in this first stage of our RMFT layout to allow trains to enter and exit the station siding, or continue along the main track.</p>
-<p>For further reading on turnouts/points, you can refer to the <a class="reference internal" href="../exrail/exrail-command-reference.html#turnout-point-objects-definition-and-control"><span class="std std-ref">Turnout/Point Objects - Definition and Control</span></a> section of the EXRAIL reference and <a class="reference internal" href="../reference/software/command-summary-consolidated.html#turnouts-points-configuring-the-ex-commandstation"><span class="std std-ref">Turnouts/Points (Configuring the EX-CommandStation)</span></a> in the DCC-EX Command reference.</p>
+<p>For further reading on turnouts/points, you can refer to the <a class="reference internal" href="../exrail/exrail-command-reference.html#turnout-point-objects-definition-and-control"><span class="std std-ref">Turnout/Point Objects - Definition and Control</span></a> section of the <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> reference and <a class="reference internal" href="../reference/software/command-summary-consolidated.html#turnouts-points-configuring-the-ex-commandstation"><span class="std std-ref">Turnouts/Points (Configuring the EX-CommandStation)</span></a> in the DCC-EX Command reference.</p>
 <section id="turnout-point-definitions">
 <h3><a class="toc-backref" href="#id4" role="doc-backlink">Turnout/Point definitions</a><a class="headerlink" href="#turnout-point-definitions" title="Link to this heading"></a></h3>
 <p>We will define turnout/point 1 with an ID of 100, and turnout/point 2 with an ID of 101.</p>
@@ -719,7 +719,7 @@
 &lt;T 101 DCC 26 1&gt;
 </pre></div>
 </div>
-<p>In EXRAIL, we would add these lines to myAutomation.h, with aliases defined:</p>
+<p>In <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a>, we would add these lines to myAutomation.h, with aliases defined:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ALIAS(TRN1, 100)
 ALIAS(TRN2, 101)
 
@@ -736,7 +736,7 @@ TURNOUT(TRN2, 26, 1, &quot;Station exit&quot;)
 &lt;T 101 VPIN 23&gt;
 </pre></div>
 </div>
-<p>In EXRAIL, we would add these lines to myAutomation.h:</p>
+<p>In <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a>, we would add these lines to myAutomation.h:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ALIAS(TRN1, 100)
 ALIAS(TRN2, 101)
 
@@ -791,8 +791,8 @@ SERVO_TURNOUT(TRN2, 101, 400, 100, Slow, &quot;Station exit&quot;)
 </section>
 <section id="sensors">
 <h2><a class="toc-backref" href="#id5" role="doc-backlink">Sensors</a><a class="headerlink" href="#sensors" title="Link to this heading"></a></h2>
-<p>Five sensors are used in this first stage, which allows us to have up to three trains controlled by EXRAIL automation. The sensors are placed within each virtual block to ensure we know when the front of the train enters a block, and when the rear of the train has exited a block.</p>
-<p>We don’t need to explicitly define any sensor objects to work with EXRAIL, so we will simply map these by defining EXRAIL aliases.</p>
+<p>Five sensors are used in this first stage, which allows us to have up to three trains controlled by <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> automation. The sensors are placed within each virtual block to ensure we know when the front of the train enters a block, and when the rear of the train has exited a block.</p>
+<p>We don’t need to explicitly define any sensor objects to work with <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a>, so we will simply map these by defining <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> aliases.</p>
 <p>To use pins directly on our Mega2560, we would start at pin 24 (we used pins 22/23 for turnouts):</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ALIAS(SNS1_TRN1_APP, 24)       // Sensor 1, approaching turnout/point 1
 ALIAS(SNS2_MAIN_TRN1_EX, 25)   // Sensor 2, on the main track exiting turnout/point 1
@@ -912,7 +912,7 @@ SERVO_SIGNAL(SIG3_STN_EX, 400, 250, 100)
 <p>Once you understand the logic of our routes below and the various turnout/point, sensor, signal, and virtual block concepts above, you can view some <a class="reference internal" href="#complete-myautomation-h-examples">complete myautomation.h examples</a> at the end of this page.</p>
 <section id="startup-sequence">
 <h3><a class="toc-backref" href="#id16" role="doc-backlink">Startup sequence</a><a class="headerlink" href="#startup-sequence" title="Link to this heading"></a></h3>
-<p>When the CommandStation and EXRAIL starts, everything defined before the first <code class="docutils literal notranslate"><span class="pre">DONE</span></code> command executes automatically.</p>
+<p>When the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> and <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> starts, everything defined before the first <code class="docutils literal notranslate"><span class="pre">DONE</span></code> command executes automatically.</p>
 <p>For safe running and a known starting state, we ensure both our turnouts/points are closed and set all our signals to red, followed by the first <code class="docutils literal notranslate"><span class="pre">DONE</span></code> to stop EXRAIL executing any further automatically.</p>
 <p>If we omit that first <code class="docutils literal notranslate"><span class="pre">DONE</span></code>, EXRAIL would automatically execute <code class="docutils literal notranslate"><span class="pre">ROUTE(1,</span> <span class="pre">&quot;Main</span> <span class="pre">Track&quot;)</span></code> at every startup. Note, of course, that if you want that first route executed at every startup, then you can simply omit that same <code class="docutils literal notranslate"><span class="pre">DONE</span></code>, which will have the same effect as manually selecting the “Main track” route.</p>
 <details class="summary-click-to-show-hide-the-code">
@@ -940,7 +940,7 @@ DONE
 <p>Next, in order to safely be able to close turnout/point 1, signal 1 is set to amber for 2 seconds to warn of the impending change <code class="docutils literal notranslate"><span class="pre">AMBER(SIG1_TRN1_APP)</span></code>, and then red for a further 2 seconds <code class="docutils literal notranslate"><span class="pre">RED(SIG1_TRN1_APP)</span></code> to allow time for the turnout/point to close fully <code class="docutils literal notranslate"><span class="pre">CLOSE(TRN1)</span></code>.</p>
 <p>This same logic is applied for turnout/point 2, setting signal 2 to amber <code class="docutils literal notranslate"><span class="pre">AMBER(SIG2_TRN2_GO)</span></code>, then red <code class="docutils literal notranslate"><span class="pre">RED(SIG2_TRN2_GO)</span></code> to allow turnout/point 2 to close fully <code class="docutils literal notranslate"><span class="pre">CLOSE(TRN2)</span></code>.</p>
 <p>Once both turnouts are closed, both signals 1 and 2 are set to green to indicate trains are safe to run through both turnouts with <code class="docutils literal notranslate"><span class="pre">GREEN(SIG1_TRN1_APP)</span></code> and <code class="docutils literal notranslate"><span class="pre">GREEN(SIG2_TRN2_GO)</span></code>.</p>
-<p>The route is completed with a <code class="docutils literal notranslate"><span class="pre">DONE</span></code> to tell EXRAIL not to proceed any further.</p>
+<p>The route is completed with a <code class="docutils literal notranslate"><span class="pre">DONE</span></code> to tell <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> not to proceed any further.</p>
 <details class="summary-click-to-show-hide-the-code">
 <summary>Click to show/hide the code</summary><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ROUTE(1, &quot;Main track&quot;)        // Select this route to just use the main track
   RED(SIG3_STN_EX)            // Set signal 3 red as it is not safe to exit the station siding
@@ -1007,7 +1007,7 @@ DONE
 <h2><a class="toc-backref" href="#id19" role="doc-backlink">Fully automated layout</a><a class="headerlink" href="#fully-automated-layout" title="Link to this heading"></a></h2>
 <p>Now it’s time to display the full automation capabilities by setting our layout up for fully automated control of your trains.</p>
 <p>You will note that these are somewhat similar to <a class="reference internal" href="../exrail/examples.html#multiple-inter-connected-trains"><span class="std std-ref">Multiple inter-connected trains</span></a>, updated to suit the specifics of the RMFT layout.</p>
-<p>To setup for these fully automated sequences, we need to ensure our trains are placed in the below positions, noting that EXRAIL has no way of knowing where a train is on the layout when first starting.</p>
+<p>To setup for these fully automated sequences, we need to ensure our trains are placed in the below positions, noting that <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> has no way of knowing where a train is on the layout when first starting.</p>
 <ul class="simple">
 <li><p>Train 1 in block 1, between sensor 1 and turnout/point 1.</p></li>
 <li><p>Train 2 in block 2, between sensors 2 and 4.</p></li>
@@ -1275,7 +1275,7 @@ SEQUENCE(BLK4_BLK1)
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7feafcf392a0>
+    <jinja2.runtime.BlockReference object at 0x7f97b33841c0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

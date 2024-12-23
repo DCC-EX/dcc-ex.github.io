@@ -148,7 +148,7 @@ On the turnout/point solenoids, there will be three wires: a common wire, a wire
 
 With the above driver board, the common is positive and the control wires are connected to ground by the darlington drivers.
 
-The EXRAIL macro below creates a turnout object that closes/throws the turnout/point via the MCP23017 vpins on the board.
+The |EX-R| macro below creates a turnout object that closes/throws the turnout/point via the MCP23017 vpins on the board.
 
 The DUAL_SOLENOID_TURNOUT definition is:
 

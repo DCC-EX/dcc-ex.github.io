@@ -660,10 +660,10 @@
 <h2><a class="toc-backref" href="#id2" role="doc-backlink">Turn Track Power On at Startup</a><a class="headerlink" href="#turn-track-power-on-at-startup" title="Link to this heading"></a></h2>
 <p>Turning track power on or off in <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> version 5 (the current Production version) is performed respectively by either the <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> command <code class="docutils literal notranslate"><span class="pre">POWERON</span></code> or <code class="docutils literal notranslate"><span class="pre">POWEROFF</span></code>; or in EX-CommandStation’s native language using the command line, <code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code>.</p>
 <dl class="simple">
-<dt>Users of previous EX-CommandStation versions can switch track power on or off via EXRAIL;</dt><dd><p><code class="docutils literal notranslate"><span class="pre">SETUP(&quot;&lt;1&gt;&quot;)</span></code>  for on or <code class="docutils literal notranslate"><span class="pre">SETUP(&quot;&lt;0&gt;&quot;)</span></code> for off;  or in EX-CommandStation’s native language, <code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code></p>
+<dt>Users of previous EX-CommandStation versions can switch track power on or off via <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a>;</dt><dd><p><code class="docutils literal notranslate"><span class="pre">SETUP(&quot;&lt;1&gt;&quot;)</span></code>  for on or <code class="docutils literal notranslate"><span class="pre">SETUP(&quot;&lt;0&gt;&quot;)</span></code> for off;  or in EX-CommandStation’s native language, <code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code></p>
 </dd>
 </dl>
-<p>Another approach for powering up the track is to assign a speed to a loco in a sequence and power will automatically turn on.  EXRAIL cleverly knows that power must be on before a locomotive can move so it turns track power on when the sequence is executed.</p>
+<p>Another approach for powering up the track is to assign a speed to a loco in a sequence and power will automatically turn on.  <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> cleverly knows that power must be on before a locomotive can move so it turns track power on when the sequence is executed.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// VER 5 No Implied AUTOSTART occurs and must be added to the myAutomation.h file</span>
 <span class="c1">// VER 4 The implied AUTOSTART results in the automatic execution</span>
 <span class="c1">// of the code in the myAutomation.h file thus the sequence is run each time</span>
@@ -716,7 +716,7 @@
 <section id="creating-routes">
 <h2><a class="toc-backref" href="#id5" role="doc-backlink">Creating Routes</a><a class="headerlink" href="#creating-routes" title="Link to this heading"></a></h2>
 <p>A typical Route might be used to set a series of turnouts in response to a single button in a throttle.
-The EXRAIL instructions to do this might look like</p>
+The <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> instructions to do this might look like</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Coal Yard exit&quot;</span><span class="p">)</span>
 <span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
@@ -805,7 +805,8 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 </section>
 <section id="stopping-at-a-station-adding-signals">
 <h2><a class="toc-backref" href="#id9" role="doc-backlink">Stopping at a Station - Adding Signals</a><a class="headerlink" href="#stopping-at-a-station-adding-signals" title="Link to this heading"></a></h2>
-<p>Adding a station signal to the loop script is extremely simple, but it does require a mind-shift for some modellers who like to think in terms of signals being in control of trains! EXRAIL takes a different approach, by animating the signals as part of the driving script. Thus set a signal GREEN before moving off (and allow a little delay for the driver to react) and RED after you have passed it.</p>
+<p>Adding a station signal to the loop script is extremely simple, but it does require a mind-shift for some modellers who like to think in terms of signals being in control of trains!</p>
+<p><a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> takes a different approach, by animating the signals as part of the driving script. Thus set a signal GREEN before moving off (and allow a little delay for the driver to react) and RED after you have passed it.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SIGNAL</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">24</span><span class="p">)</span><span class="w">  </span><span class="c1">// see the Defining Signals section above for details</span>
 <span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s">&quot;Round in circles&quot;</span><span class="p">)</span>
 <span class="w">   </span><span class="n">FWD</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w">   </span><span class="c1">// move forward at DCC speed 50 (out of 127)</span>
@@ -848,7 +849,7 @@ automatically switch an adjacent facing turnout. Use an <code class="docutils li
 </pre></div>
 </div>
 <p>Note a SEQUENCE is exactly the same as an AUTOMATION except that it does NOT appear in the throttle.</p>
-<p>When the Command Station is powered up or reset, EXRAIL starts operating at the beginning of the file.  For this sequence we need to set a loco address and start the sequence:</p>
+<p>When the Command Station is powered up or reset, <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> starts operating at the beginning of the file.  For this sequence we need to set a loco address and start the sequence:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SENDLOCO</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span><span class="w"> </span><span class="c1">// Start sequence 13 using loco 3</span>
 <span class="n">DONE</span><span class="w">           </span><span class="c1">// This marks the end of the startup process</span>
 </pre></div>
@@ -972,7 +973,7 @@ number. So now our route looks like this:</p>
 </section>
 <section id="drive-away-feature">
 <h2><a class="toc-backref" href="#id13" role="doc-backlink">Drive-Away feature</a><a class="headerlink" href="#drive-away-feature" title="Link to this heading"></a></h2>
-<p>EXRAIL can switch a track section between programming and mainline.</p>
+<p><a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> can switch a track section between programming and mainline.</p>
 <p>Here for example is a launch sequence that has no predefined locos but allows locos to be added at station 1 while the system is in motion. Let’s assume that the track section at Station1 is isolated and connected to the programming track power supply. Also that we have a ‘launch’ button connected where sensor 17 would be and an optional signal (i.e. 3 LEDs) on the control panel connected where signal 27 would be.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>
 <span class="w">   </span><span class="n">SIGNAL</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">24</span><span class="p">)</span>
@@ -1021,7 +1022,7 @@ number. So now our route looks like this:</p>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7feb126f0940>
+    <jinja2.runtime.BlockReference object at 0x7f97b45088e0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

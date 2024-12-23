@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2024-12-23T22:06:48.834216+00:00</updated>
+  <updated>2024-12-23T22:53:51.918984+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.8">ABlog</generator>
@@ -896,7 +896,7 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 &lt;li&gt;&lt;p&gt;Programming track turned on automatically when programming and off when finished&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;User add-on functions (intercept commands to route to your own routines)&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Much simpler Function (F0-28) command&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;EXRAIL Automation and/or accessory control&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt; Automation and/or accessory control&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;HAL - Hardware abstraction layer to make adding new types of hardware simple&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Extended functions up to 68&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Better turnout/point handling&lt;/p&gt;&lt;/li&gt;

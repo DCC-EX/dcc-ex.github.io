@@ -19,7 +19,7 @@ At the end of this stage, we expect you will have learnt the following:
 Recommended reading
 ===================
 
-Throughout these pages we will be using |EX-R| functionality extensively, not just for automation, but also to define the various objects in use, and therefore we highly recommend being familiar with at least the basics of EXRAIL, so it would be best to read through the :doc:`/exrail/getting-started` page prior to going any further.
+Throughout these pages we will be using |EX-R| functionality extensively, not just for automation, but also to define the various objects in use, and therefore we highly recommend being familiar with at least the basics of |EX-R|, so it would be best to read through the :doc:`/exrail/getting-started` page prior to going any further.
 
 We will also be outlining the equivalent DCC-EX commands for items where relevant, so it can be handy to refer to the :doc:`/reference/software/command-summary-consolidated` where necessary.
 

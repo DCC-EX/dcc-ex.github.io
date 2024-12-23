@@ -35,7 +35,7 @@ What You Will Need
 * Jeweller's **flat bladed screwdriver** (1.5 - 2mm blade)
 * A **WiFi capable smart device** like a phone or tablet to control your trains (aka a "Throttle")
 
- .. [#c1] While not required for normal use, a PC is required a) to initially install the software, and b) is optional for making a USB connection and using programs like |EX-WT| or |JMRI| and to update/add EXRAIL Scripts to the |EX-CS|. A USB connection also provides a connection to a "serial monitor" to generate logs and diagnose issues, but more on that later.
+ .. [#c1] While not required for normal use, a PC is required a) to initially install the software, and b) is optional for making a USB connection and using programs like |EX-WT| or |JMRI| and to update/add |EX-R| Scripts to the |EX-CS|. A USB connection also provides a connection to a "serial monitor" to generate logs and diagnose issues, but more on that later.
 
 ----
 

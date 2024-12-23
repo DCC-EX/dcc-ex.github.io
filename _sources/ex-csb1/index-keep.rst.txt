@@ -48,12 +48,12 @@ Key Features:
   * Accessory Support: Qwiic/STEMMA QT 3.3V, compatible I2C connector and extra I2C pin headers for all your accessories
   * Pre-Installed with DCC-EX Command Station Software from most suppliers
   * Auto-Reverser capability assignable to each DCC output independently
-  * RailSync DCC input for automatic booster mode engagement under software control (EXRAIL)
+  * RailSync DCC input for automatic booster mode engagement under software control (|EX-R|)
   * OLED Display: Bundled graphical display for status and diagnostics, with support for additional displays
 
 Benefits include: 
   * Ready-To-Run: Pre-assembled, with no need for additional assembly or configuration
-  * Enhanced Performance: Faster WiFi than an ESP8266 with support for double the number of connections, faster processor, and a great deal more memory than an Arduino Mega for complex EXRAIL automation/animation scripts
+  * Enhanced Performance: Faster WiFi than an ESP8266 with support for double the number of connections, faster processor, and a great deal more memory than an Arduino Mega for complex |EX-R| automation/animation scripts
   * Efficient Power Usage: Less voltage drop, ensuring more power reaches the track
   * Flexible Output Management (TrackManager :sup:`tm` support): Dynamically assign outputs to different modes (DC/DCC/PROG/Auto-Reverse), with proper NMRA current limits
 
@@ -129,7 +129,7 @@ Board layout
    :scale: 50%
    :align: right
 
-**USB-C Power/Data Connector** - The USB connector can provide power from a computer or any 500mA or larger USB or USB-C Power Delivery (USB-C PD) power supply.  In this way you can connect your EX-CSB1 to a computer and update your software version or load EXRAIL scripts that run your accessories. However, without a power supply powering the DC input jack, you cannot supply power to the rails to run trains. You can connect your track Power supply (see above) to the barrel jack while the USB is connected, as they will not interfere with each other. You may also wish to do this to isolate the EX-CSB1 processor power from any interruptions to track power due to overload for example. The USB port is also very useful for connecting a serial monitor to test the command station and view logging information in real time to aid in fault finding. See :doc:`/reference/tools/serial-monitor`
+**USB-C Power/Data Connector** - The USB connector can provide power from a computer or any 500mA or larger USB or USB-C Power Delivery (USB-C PD) power supply.  In this way you can connect your EX-CSB1 to a computer and update your software version or load |EX-R| scripts that run your accessories. However, without a power supply powering the DC input jack, you cannot supply power to the rails to run trains. You can connect your track Power supply (see above) to the barrel jack while the USB is connected, as they will not interfere with each other. You may also wish to do this to isolate the EX-CSB1 processor power from any interruptions to track power due to overload for example. The USB port is also very useful for connecting a serial monitor to test the command station and view logging information in real time to aid in fault finding. See :doc:`/reference/tools/serial-monitor`
 
 .. image:: /_static/images/ex-csb1/pluggable_connectors.png
    :alt: Pluggable Track Output Connectors

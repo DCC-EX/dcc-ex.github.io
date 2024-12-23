@@ -114,8 +114,8 @@ That will create a new 'ticket' channel like this...
 * The type of Motor Shield (Arduino Motor Shield Rev3, EX-MotorShield8874, etc.)
 * The type of WiFi shield (none, Makerfabs WiFi Shield, etc.)
 * Which version of the |EX-CS| software (current Production release, Devel version xxxxx)
-* How you installed the software (|EX-I| , Arduino IDE, Microsoft Visual Code)
-* Which throttle you are using (|EX-WT|, Engine Driver, WiThrottle, JMRI, etc.)
+* How you installed the software (|EX-I| , |Arduino IDE|, Microsoft Visual Code (VSC))
+* Which throttle you are using (|EX-WT|, |Engine Driver|, |WiThrottle|, |JMRI|, etc.)
 
 Someone will normally reply to you within a few hours, so check back regularly.
 

@@ -33,7 +33,7 @@ EX-CommandStation Software fails to load
 
 .. todo:: `MEDIUM - Diagnosing <https://github.com/DCC-EX/dcc-ex.github.io/issues/433>`_ - EX-CommandStation Software fails to load
 
-Either using the |EX-I| to the Arduino IDE.
+Either using the |EX-I| or the |Arduino IDE|.
 
 .. list-table:: 
   :widths: 40 20 40

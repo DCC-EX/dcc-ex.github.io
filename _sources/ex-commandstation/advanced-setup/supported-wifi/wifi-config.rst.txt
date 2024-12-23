@@ -192,7 +192,16 @@ Once you are connected to the Command Station with your cell phone, you can run 
 Connecting to your Network - Station Mode "STA" (edit config.h)
 ==================================================================
 
-In order to connect to your home network, you must open the config.h file in a text editor and enter your login credentials, unless you have already entered your credentials earlier via the automated exInstaller. The easiest way to do this, other than the installer, is to use the Arduino IDE and open the project.
+.. important:: 
+
+   While it is possible change your network settings using the |Arduino IDE|, we *seriously* **DO NOT RECOMMEND** it for a |conductor-text| or |tinkerer-text|. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.
+
+   Just run |EX-I| and :ref:`select your required WiFi settings <ex-installer/installing:wifi>`. 
+
+In order to connect to your home network, you must open the `config.h` file and enter your login credentials, unless you have already entered your credentials earlier via the automated |EX-I|. 
+
+This can be done in a Text Editor. The other way to do this, other than the recommended way using |EX-I|, is to use the |Arduino IDE| and open the project.
+
 Look for these lines in the file:
 
 .. code-block:: cpp

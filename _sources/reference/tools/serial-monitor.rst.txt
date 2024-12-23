@@ -18,7 +18,7 @@ Using a Serial Monitor
 What is a Serial Monitor and Why Do I Need One?
 ================================================
 
-A Serial Monitor is another name for a "terminal" program. It is software that runs on your computer or phone and connects to a serial port, like the USB connector on an Arduino, and lets you interact with your Command Station. The Arduino IDE has one built in as does our very own |EX-I|, which makes it a bit of a "Swiss Army Knife" in that it provides a way to upload software to your Command Station, and connect to it to view logs and send manual commands. If anything goes wrong with the CS, we will ask you to check the startup log with a Serial Monitor. With a Serial Monitor you can:
+A Serial Monitor is another name for a "terminal" program. It is software that runs on your computer or phone and connects to a serial port, like the USB connector on an Arduino, and lets you interact with your Command Station. The |Arduino IDE| has one built in as does our very own |EX-I|, which makes it a bit of a "Swiss Army Knife" in that it provides a way to upload software to your Command Station, and connect to it to view logs and send manual commands. If anything goes wrong with the CS, we will ask you to check the startup log with a Serial Monitor. With a Serial Monitor you can:
 
 * Test your Command Station
 * View startup and other diagnostic logs to fix issues or help us support you
@@ -38,12 +38,19 @@ This is the simplest way to connect to the serial console of your device, and al
 
 For details, refer to :ref:`ex-installer/testing:using the ex-installer device monitor`.
 
-Connect with the Arduino Serial Monitor
-========================================
+Connect with the Arduino IDE Serial Monitor
+===========================================
+
+.. important:: 
+   :class: important-float-right
+
+   While it is possible use the |Arduino IDE|, we *seriously* **DO NOT RECOMMEND** it for a |conductor-text| or |tinkerer-text|. It is an order of magnitude more complex and much slower.
+
+   Just run |EX-I| and :ref:`open the serial monitor in the EX-Installer <ex-installer/testing:using the ex-installer device monitor>`. 
 
 **What You Will Need**
 
-* The Arduino IDE
+* The |Arduino IDE|
 * A Computer (Just about any Windows, Mac or Linux machine including the Raspberry Pi)
 * The USB cable for your Arduino
   

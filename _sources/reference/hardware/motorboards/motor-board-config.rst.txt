@@ -22,12 +22,14 @@ Motor Driver Configuration
 Configure Using the Installer
 =============================
 
-A |Tinkerer-text| and even a |Conductor-text| should be comfortable with this option. If you are using the installer, just select your board from the motor board drop down list. Make sure your other selections are correct, and then simply upload the changes to your |EX-CS|. 
+A |Tinkerer-text| and even a |Conductor-text| should be comfortable with this option. 
+
+If you are using the |EX-I|, just select your board from the motor board drop down list. Make sure your other selections are correct, and then simply upload the changes to your |EX-CS|. 
 
 Configure By Editing the config.h File
 ======================================
 
-Using the Arduino IDE, PlatformIO, or any other method for editing a file and uploading a sketch, you can add your motor board by editing the config.h file. Click here for a list of :doc:`Currently supported boards </reference/hardware/motor-boards>`
+Using the |Arduino IDE|, PlatformIO, or any other method for editing a file and uploading a sketch, you can add your motor board by editing the config.h file. Click here for a list of :doc:`Currently supported boards </reference/hardware/motor-boards>`
 
 Open the config.h file in your editor. If this is the first time configuring your system, you may need to copy the "config.example.h" file and name the copy "config.h".
 

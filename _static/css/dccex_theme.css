@@ -452,6 +452,17 @@ html[data-theme='dark'] .important p.admonition-title {
   background: #1abc9c !important;
 }
 
+.important-float-right {
+  float: right;
+  width: 40%;
+}
+
+.important-float-right-narrow {
+  float: right;
+  width: 20%;
+}
+
+
 .tip {
   background: #eef5f4 !important;
   clear: none !important;

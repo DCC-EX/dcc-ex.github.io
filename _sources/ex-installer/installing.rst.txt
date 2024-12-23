@@ -24,7 +24,7 @@ Once you have purchased or assembled your |EX-CS| hardware you need to load our 
 
    If you already have, or wish to create, your own custom config files, we recommend that you :doc:`read this page first <managing-config-files>`.
 
-.. note:: 
+.. important:: 
 
    A word of caution on the alternate approach of using the |Arduino IDE| to install the software:
 

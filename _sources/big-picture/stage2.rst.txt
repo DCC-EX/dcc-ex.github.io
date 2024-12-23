@@ -134,8 +134,18 @@ More information on the config files can be found on the :doc:`/ex-installer/man
 
    Never edit any files in the EX-Installer folder. Editing any files in the EX-Installer folder will **always** cause |EX-I| to fail.
 
+|HR-DASHED|
+
 Using the Arduino IDE
 ^^^^^^^^^^^^^^^^^^^^^
+
+.. important:: 
+   
+   A word of caution on using the |Arduino IDE| to install the software:
+
+   While it is possible install the software using the |Arduino IDE|, we *seriously* **DO NOT RECOMMEND** it for a |conductor-text| or |tinkerer-text|. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.
+
+   The |EX-I| described below will meet 100% of the needs of a |conductor-text| or |tinkerer-text| with considerably less effort. 
 
 #. Place your 'myAutomation.h' file in the ``CommandStation-EX`` subfolder of wherever you extracted the |EX-CS| files from GitHub.
 #. Run the Arduino IDE

@@ -22,7 +22,7 @@ This page is specifically intended for a |conductor-text| who has purchased or a
 
 If you have purchased a |EX-CSB1| it will have come with the |EX-CS| software already installed.  You only need to look at this page if you want to change the default configuration. 
 
-.. note::
+.. important::
    
    A word of caution on the alternate approach of using the |Arduino IDE| to install the software:
 

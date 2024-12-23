@@ -10,7 +10,7 @@ Glossary
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button| 
 
 .. list-table::
-    :widths: 25 75
+    :widths: 30 70
     :width: 900px
     :header-rows: 1
     :class: table-wrap-text
@@ -23,7 +23,7 @@ Glossary
       - A free app running on your PC, specifically designed to install software onto Arduino microprocessors. |BR| https://www.arduino.cc/en/software |EXTERNAL-LINK|
     * - BaseStation-Classic |BR| DCC++ (Original)
       - The original inexpensive Command Station based on the Arduino platform by Gregg Berman. :dcc-ex-red-bold-italic:`This is no longer maintained or supported by the DCC-EX Team`. |BR| |EX-CS| is a completely new build which maintains backward compatibility with the original DCC++. |BR| See :doc:`DCC++ VS DCC-EX? <../../news/posts/20201001>` for more information
-    * - Command Station |BR| DCC Command Station |BR| DCC Base Station
+    * - Base Station |BR| Command Station |BR| DCC Command Station |BR| DCC Base Station
       - See https://dccwiki.com/Command_Station |EXTERNAL-LINK|
     * - Consist |BR| Multiple Unit
       - Multiple locos hauling a singe train. see https://dccwiki.com/Multiple_Unit_Consisting |EXTERNAL-LINK|

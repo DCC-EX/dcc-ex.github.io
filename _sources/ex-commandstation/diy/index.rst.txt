@@ -15,17 +15,29 @@ Do-It-YourSelf - Getting Started
     :depth: 1
     :local:
 
-In order to get the most out of this website, we only ask you at first to make 2 choices:
+In order to get the most out of this website, we ask you at first to make 2 choices:
 
-- The first is to self-identify your "level" with regards to DCC-EX. |BR| If you have not chosen whether you are a Conductor, Tinkerer, or Engineer, please go to :doc:`/begin/levels` before proceeding further.
-- Your next choice will be whether you want to choose the "Ready-To-Run" (RTR) path or the "Do-It-Yourself" (DIY) path. 
+1. To self-identify your **"level"** with regards to DCC-EX. |BR| If you have not chosen whether you are a |Conductor-text|, |Tinkerer-text|, or |Engineer-text|, please go to the :doc:`/begin/levels` page before proceeding further. |BR| |BR|
 
-You are here on the DIY path where you will build your own command station from parts including Arduino, ESP32, or STM32 boards. If you meant to choose the Ready-To-Run route using an |EX-CSB1|, then please go to :doc:`/ex-commandstation/ready-to-run/index`. If you need a definition of what an EX-CommandStation is, please see :ref:`ex-commandstation/index:what is ex-commandstation?`.
+2. Choose will be whether you want **"Ready-To-Run" (RTR)** path or the **"Do-It-Yourself" (DIY)** path. |BR| If you want the ready-to-run (RTR) path we suggest that you look at the :doc:`/ex-commandstation/ready-to-run/index` page.
 
-The following pages will instruct you on how to build an |EX-CS| including assembling your hardware, installing software, and running your first train. After that, we will provide examples for how the base system can be extended and upgraded.
+**If you are still interested the do-it-yourself (DIY) path then read on...**
 
-The Components of a Full System
-================================
+.. note:: 
+  :class: note-float-right-narrow
+
+  If you need a definition of what an |EX-CS| is, please see :ref:`ex-commandstation/index:what is ex-commandstation?`.
+
+You are here on the DIY path where you will build your own |EX-CS| from commonly available parts.
+
+The following pages will instruct you on how to build an |EX-CS| including; assembling your hardware, installing software, and running your first train. 
+
+After that, we will provide examples for how the |EX-CS| can be extended and upgraded.
+
+|HR-DASHED|
+
+The Components of a Full EX-CommandStation
+==========================================
 
 To actually run your model railroad you will need a few items:
 

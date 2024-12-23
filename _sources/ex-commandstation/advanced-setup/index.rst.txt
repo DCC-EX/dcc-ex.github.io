@@ -13,11 +13,16 @@ DIY - Advanced Options
 .. sidebar::
 
   .. contents:: On this page
-      :depth: 1
+      :depth: 2
       :local:
 
-These pages describe the major supported hardware options for building a |EX-CS|, along with some guidance for some of the unsupported options. They are primarily targeted at |tinkerer-text| and |engineer-text| level.  However there are some options that are suitable for a |conductor-text|.  If however, you identify as a |conductor-text| and only wish to install the recommended hardware we suggest that you look at the simplified :doc:`/ex-commandstation/index` page.
+These pages describe the major supported hardware options for building a |EX-CS|, along with some guidance for some of the unsupported options. 
 
+This information is primarily targeted at |tinkerer-text| and |engineer-text| level.  However there are some options that are suitable for a |conductor-text|.  
+
+If however, you identify as a |conductor-text| and only wish to install the recommended hardware we suggest that you look at the simplified :doc:`/ex-commandstation/index` page.
+
+|HR-DASHED|
 
 Steps to Build an EX-CommandStation
 ===================================
@@ -56,6 +61,7 @@ The other item of specific note is the Mega2560 + WiFi which, while appearing a 
   
   /reference/hardware/microcontroller-boards
 
+----
 
 Motor Drivers
 =============
@@ -69,12 +75,22 @@ However, if you need more current than these can provide, then you need to consi
   
   /reference/hardware/motor-boards
 
+----
+
 Connection Options
 ==================
 
-How you connect to your |EX-CS| is going to depend entirely on your personal choices of how you wish to interact with it. Are you a JMRI user? Do you only want to use wireless hand-held throttles?
+How you connect to your |EX-CS| is going to depend entirely on your personal choices of how you wish to interact with it. 
 
-To facilitate a variety of these choices, there are four ways to connect: direct via USB, WiFi, Ethernet, and/or Bluetooth.
+* Are you a JMRI user? 
+* Do you only want to use wireless hand-held throttles?
+
+To facilitate a variety of these choices, there are four ways to connect: 
+
+.. contents:: Connection Options
+    :depth: 1
+    :local:
+    :class: in-this-section
 
 Depending on your platform choice for your |EX-CS|, the connectivity options aren't mutually exclusive, and you can use multiple methods.
 
@@ -120,6 +136,8 @@ Bluetooth
   
   /reference/hardware/bluetooth
 
+----
+
 LCD/OLED Screens
 ================
 
@@ -128,6 +146,8 @@ If you wish to have some sort of display connected to your |EX-CS|, there are va
 These can display various items such as the version, IP address (if using WiFi or Ethernet), as well as some user configurable parameters.
 
 refer to :doc:`/reference/hardware/i2c-displays`
+
+----
 
 Installation options
 ====================
@@ -143,6 +163,7 @@ The Arduino IDE requires some software to be installed on your computer, however
   
   installation-options/index
 
+----
 
 Startup Configuration
 =====================
@@ -156,6 +177,8 @@ However, there are occasions when the startup configuration does need modificati
   
   startup-config
 
+----
+
 Throttle (Controller) Options
 =============================
 
@@ -168,6 +191,7 @@ These tend to be aimed more at the |tinkerer-text| and |engineer-text| levels.
   
   controllers
 
+----
 
 DCC-EX Commands
 ===============
@@ -176,6 +200,8 @@ DCC-EX Commands
   :maxdepth: 1
 
   Native Commands Summary </reference/software/command-summary-consolidated>
+
+----
 
 Features under development
 ==========================

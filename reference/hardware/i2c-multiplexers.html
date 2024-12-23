@@ -703,7 +703,7 @@
 <span class="n">HAL</span><span class="p">(</span><span class="n">HALDisplay</span><span class="o">&lt;</span><span class="n">OLED</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="n">SubBus_5</span><span class="p">,</span><span class="w"> </span><span class="mh">0x3c</span><span class="p">},</span><span class="w"> </span><span class="mi">128</span><span class="p">,</span><span class="w"> </span><span class="mi">64</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>As you can see from the comments in this code, both of these displays can now be written to from <a href="../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> using the SCREEN() directive. See the <a href="../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> command reference for notes on using it.</p>
+<p>As you can see from the comments in this code, both of these displays can now be written to from <a href="../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> using the SCREEN() directive. See the <a href="../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> command reference for notes on using it.</p>
 <p>Note that when there are multiple multiplexers on the I<sup>2</sup>C bus, we will need to also specify which mulitplexor the display is connected to. So that declaration looks like this in “myAutomation.h”:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a 128x32 OLED display device as display number 1</span>
 <span class="c1">// (line 0 is written by EXRAIL &#39;SCREEN(1, 0, &quot;text&quot;)&#39;).</span>
@@ -770,7 +770,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f9f91b0c5b0>
+    <jinja2.runtime.BlockReference object at 0x7feb10fde1a0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

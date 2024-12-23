@@ -18,7 +18,7 @@
 ..
 .. |EX-R| raw:: html
 
-  <a href="./exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a>
+  <a href="./exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a>
 ..
 .. |EX-I| raw:: html
    

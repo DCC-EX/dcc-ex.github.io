@@ -683,8 +683,8 @@
 </ul>
 </nav>
 </aside>
-<p><a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> provides full automation and accessory control through the Extended Railroad Automation Instruction Language (<a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a>).</p>
-<p>This page includes a reference for all available <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> commands.</p>
+<p><a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> provides full automation and accessory control through the Extended Railroad Automation Instruction Language (<a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a>).</p>
+<p>This page includes a reference for all available <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> commands.</p>
 <p>See Also:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="getting-started.html"><span class="doc">Introduction to EXRAIL</span></a></p></li>
@@ -728,7 +728,7 @@
 </section>
 <section id="correct-use-of-done-endif-and-follow-statements">
 <h3><a class="toc-backref" href="#id29" role="doc-backlink">Correct use of DONE, ENDIF, and FOLLOW() statements</a><a class="headerlink" href="#correct-use-of-done-endif-and-follow-statements" title="Link to this heading"></a></h3>
-<p>Every <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> automation/route/sequence, event handler, and conditional statement must be terminated by one of these three directives.</p>
+<p>Every <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> automation/route/sequence, event handler, and conditional statement must be terminated by one of these three directives.</p>
 <p>On this page, you will see various references to the use of <code class="docutils literal notranslate"><span class="pre">DONE</span></code>, <code class="docutils literal notranslate"><span class="pre">ENDIF</span></code>, and <code class="docutils literal notranslate"><span class="pre">FOLLOW()</span></code> which can be confusing, so refer to this quick list to help understand the context in which each of these should be used:</p>
 <ul class="simple">
 <li><p>Every conditional statement (all directives starting with the word <code class="docutils literal notranslate"><span class="pre">IF</span></code>) must be terminated by <code class="docutils literal notranslate"><span class="pre">ENDIF</span></code></p></li>
@@ -812,7 +812,7 @@
 <li><p><a class="reference internal" href="#unlatch-vpin-unlock-sensor-returning-to-current-external-state" id="id67"><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">UNLATCH</span> <span class="pre">vpin&gt;</span></code> - Unlock sensor, returning to current external state</a></p></li>
 </ul>
 </nav>
-<p>Various diagnostic and control commands have been added to control and interact with <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a>, including the various sequences and objects once they have been defined in myAutomation.h and uploaded to the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>.</p>
+<p>Various diagnostic and control commands have been added to control and interact with <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a>, including the various sequences and objects once they have been defined in myAutomation.h and uploaded to the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>.</p>
 <p>These commands can be run interactively via the serial console or over Ethernet/WiFi if using a throttle or client that provides a suitable interface for sending native DCC-EX commands.</p>
 <p><hr class="hr-dashed" /></p>
 <section id="d-exrail-state-enable-or-disable-exrail-sequence-logging">
@@ -1116,7 +1116,7 @@
 <p>If you have previously relied on the implied AUTOSTART to run things immediately,  as of Version 5.0 you must now add this explicitly to the beginning of myAutomation.h</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
 <p><hr class="hr-dashed" /></p>
-<p>There are three options to define <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> scripts or sequences:</p>
+<p>There are three options to define <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> scripts or sequences:</p>
 <ul class="simple">
 <li><p>AUTOMATION</p></li>
 <li><p>ROUTE</p></li>
@@ -1142,19 +1142,19 @@
 <p>A general purpose automation sequence that is not advertised to throttles/clients. This may be triggered automatically on startup, or be called by other sequences or activities. See <a class="reference internal" href="examples.html#automating-various-non-track-items"><span class="std std-ref">Automating various non-track items</span></a>, <a class="reference internal" href="examples.html#point-to-point-shuttle"><span class="std std-ref">Point to Point Shuttle</span></a>, and <a class="reference internal" href="examples.html#multiple-inter-connected-trains"><span class="std std-ref">Multiple inter-connected trains</span></a> for further examples.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>id</strong> - id for the sequence/route/automation <br /> &gt; <strong>description</strong> - description for the sequence/route/automation</p>
 <p><hr class="hr-dashed" /></p>
-<p>All of these sequence types must be terminated by either a <code class="docutils literal notranslate"><span class="pre">DONE</span></code>, <code class="docutils literal notranslate"><span class="pre">FOLLOW(id)</span></code>, or <code class="docutils literal notranslate"><span class="pre">RETURN</span></code> statement. If you use <code class="docutils literal notranslate"><span class="pre">FOLLOW(id)</span></code> or <code class="docutils literal notranslate"><span class="pre">RETURN</span></code>, you do not also need a <code class="docutils literal notranslate"><span class="pre">DONE</span></code> statement as any of these terms will tell <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> that the sequence of events has ended.</p>
+<p>All of these sequence types must be terminated by either a <code class="docutils literal notranslate"><span class="pre">DONE</span></code>, <code class="docutils literal notranslate"><span class="pre">FOLLOW(id)</span></code>, or <code class="docutils literal notranslate"><span class="pre">RETURN</span></code> statement. If you use <code class="docutils literal notranslate"><span class="pre">FOLLOW(id)</span></code> or <code class="docutils literal notranslate"><span class="pre">RETURN</span></code>, you do not also need a <code class="docutils literal notranslate"><span class="pre">DONE</span></code> statement as any of these terms will tell <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> that the sequence of events has ended.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="done-completes-a-sequence-route-animation-event-or-any-other-automation">
 <span id="done"></span><h4><a class="toc-backref" href="#id72" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">DONE</span></code> - Completes a Sequence/Route/Animation/Event, or any other automation</a><a class="headerlink" href="#done-completes-a-sequence-route-animation-event-or-any-other-automation" title="Link to this heading"></a></h4>
-<p>Completes a Sequence/Route/Animation/Event handler, and any other automation definition as shown in the various examples on this page and elsewhere in the <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> documentation.</p>
+<p>Completes a Sequence/Route/Animation/Event handler, and any other automation definition as shown in the various examples on this page and elsewhere in the <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> documentation.</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="endtask-completes-a-sequence-route-animation-event-or-any-other-automation">
 <span id="endtask"></span><h4><a class="toc-backref" href="#id73" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ENDTASK</span></code> - Completes a Sequence/Route/Animation/Event, or any other automation</a><a class="headerlink" href="#endtask-completes-a-sequence-route-animation-event-or-any-other-automation" title="Link to this heading"></a></h4>
 <p>Identical to <code class="docutils literal notranslate"><span class="pre">DONE</span></code>.</p>
-<p>Completes a Sequence/Route/Animation/Event handler, and any other automation definition as shown in the various examples on this page and elsewhere in the <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> documentation.</p>
+<p>Completes a Sequence/Route/Animation/Event handler, and any other automation definition as shown in the various examples on this page and elsewhere in the <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> documentation.</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
 <p><hr class="hr-dashed" /></p>
 </section>
@@ -2836,7 +2836,7 @@ EXTT_TURNTABLE(1,600,45,&quot;My EX-Turntable&quot;)  // Create your EX-Turntabl
 <li><p><a class="reference internal" href="#join-join-prog-and-main-track-outputs" id="id226"><code class="docutils literal notranslate"><span class="pre">JOIN</span></code> - Join PROG and MAIN track outputs</a></p></li>
 <li><p><a class="reference internal" href="#unjoin-disconnect-prog-track-from-main" id="id227"><code class="docutils literal notranslate"><span class="pre">UNJOIN</span></code> - Disconnect prog track from main</a></p></li>
 <li><p><a class="reference internal" href="#endexrail-tba" id="id228"><code class="docutils literal notranslate"><span class="pre">ENDEXRAIL</span></code> - TBA</a></p></li>
-<li><p><a class="reference internal" href="#killall-kills-all-running-ex-r-activities" id="id229"><code class="docutils literal notranslate"><span class="pre">KILLALL</span></code> - Kills all running <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> activities</a></p></li>
+<li><p><a class="reference internal" href="#killall-kills-all-running-ex-r-activities" id="id229"><code class="docutils literal notranslate"><span class="pre">KILLALL</span></code> - Kills all running <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> activities</a></p></li>
 <li><p><a class="reference internal" href="#parse-msg-allows-parsing-of-a-dcc-ex-api-command-via-myautomation-h" id="id230"><code class="docutils literal notranslate"><span class="pre">PARSE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Allows parsing of a DCC-EX API command via myAutomation.h</a></p></li>
 <li><p><a class="reference internal" href="#disable-prog-disable-programming-to-save-ram-flash" id="id231"><code class="docutils literal notranslate"><span class="pre">DISABLE_PROG</span></code> - Disable programming to save RAM/Flash</a></p></li>
 <li><p><a class="reference internal" href="#io-no-hal-reduce-flash-footprint-when-hal-features-not-required" id="id232"><code class="docutils literal notranslate"><span class="pre">IO_NO_HAL</span></code> - Reduce FLASH footprint when HAL features not required</a></p></li>
@@ -2873,8 +2873,8 @@ EXTT_TURNTABLE(1,600,45,&quot;My EX-Turntable&quot;)  // Create your EX-Turntabl
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="killall-kills-all-running-ex-r-activities">
-<span id="killall"></span><h4><a class="toc-backref" href="#id229" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">KILLALL</span></code> - Kills all running <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> activities</a><a class="headerlink" href="#killall-kills-all-running-ex-r-activities" title="Link to this heading"></a></h4>
-<p>Kills all running <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> activities</p>
+<span id="killall"></span><h4><a class="toc-backref" href="#id229" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">KILLALL</span></code> - Kills all running <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> activities</a><a class="headerlink" href="#killall-kills-all-running-ex-r-activities" title="Link to this heading"></a></h4>
+<p>Kills all running <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> activities</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
 <p><hr class="hr-dashed" /></p>
 </section>
@@ -2983,7 +2983,7 @@ EXTT_TURNTABLE(1,600,45,&quot;My EX-Turntable&quot;)  // Create your EX-Turntabl
 <h2><a class="toc-backref" href="#id56" role="doc-backlink">Advanced (Engineers only)</a><a class="headerlink" href="#advanced-engineers-only" title="Link to this heading"></a></h2>
 <section id="caution-required">
 <h3><a class="toc-backref" href="#id57" role="doc-backlink">Caution required!</a><a class="headerlink" href="#caution-required" title="Link to this heading"></a></h3>
-<p>Any commands in this section are intended for <a class="reference external" href="../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> level users that have advanced knowledge of how <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> works, and likely some understanding of C++ coding as well.</p>
+<p>Any commands in this section are intended for <a class="reference external" href="../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> level users that have advanced knowledge of how <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> works, and likely some understanding of C++ coding as well.</p>
 <p>If you are unsure on the impacts using anything in this section may have, please reach out to the <a href="../index.html"><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span></a> team via the methods listed on our <a class="reference internal" href="../support/contact-us.html"><span class="doc">Contact Us</span></a> page.</p>
 <section id="stealth-code-include-some-c-code-in-a-route-sequence">
 <span id="stealth"></span><h4><code class="docutils literal notranslate"><span class="pre">STEALTH(</span> <span class="pre">code</span> <span class="pre">)</span></code> - include some C++ code in a ROUTE/SEQUENCE<a class="headerlink" href="#stealth-code-include-some-c-code-in-a-route-sequence" title="Link to this heading"></a></h4>
@@ -3046,7 +3046,7 @@ EXTT_TURNTABLE(1,600,45,&quot;My EX-Turntable&quot;)  // Create your EX-Turntabl
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f9fa4516170>
+    <jinja2.runtime.BlockReference object at 0x7feb121b6680>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

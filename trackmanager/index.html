@@ -761,7 +761,7 @@
 <ul class="simple">
 <li><p>By issuing a command to the the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a></p></li>
 <li><p>By using the <span class="ex-suffix">TrackManager</span> feature in <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> or <a href="../ex-toolbox/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span></a></p></li>
-<li><p>By creating <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> Routes that can the activated in your throttle app.</p></li>
+<li><p>By creating <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> Routes that can the activated in your throttle app.</p></li>
 </ul>
 <section id="using-engine-driver-or-ex-toolbox">
 <h4>Using Engine Driver or EX-Toolbox<a class="headerlink" href="#using-engine-driver-or-ex-toolbox" title="Link to this heading"></a></h4>
@@ -854,7 +854,7 @@
 <ul class="simple">
 <li><p>By issuing a command to the the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a></p></li>
 <li><p>By using the <span class="ex-suffix">TrackManager</span> feature in <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> or <a href="../ex-toolbox/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Toolbox</span></a></p></li>
-<li><p>By creating <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> Routes or Automations that can the activated in your throttle app.</p></li>
+<li><p>By creating <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> Routes or Automations that can the activated in your throttle app.</p></li>
 </ul>
 <section id="using-engine-driver-or-ex-toolbox-dc">
 <h4>Using Engine Driver or EX-Toolbox (DC)<a class="headerlink" href="#using-engine-driver-or-ex-toolbox-dc" title="Link to this heading"></a></h4>
@@ -1139,7 +1139,7 @@
 </div>
 <section id="create-exrail-scripts-to-change-track-modes">
 <h4>Create EXRAIL Scripts to Change Track modes<a class="headerlink" href="#create-exrail-scripts-to-change-track-modes" title="Link to this heading"></a></h4>
-<p>Using <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> functions inside myAutomation.h file to run Automation scripts to change track modes from DCC to DC and back.
+<p>Using <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> functions inside myAutomation.h file to run Automation scripts to change track modes from DCC to DC and back.
 my.Automation.h file</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">//SET_TRACK(id,mode)</span>
 <span class="w">  </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">MAIN</span><span class="p">)</span>
@@ -1158,7 +1158,7 @@ my.Automation.h file</p>
 <section id="create-exrail-list-of-track-manager-functions-for-engine-driver-automatically-assign-handoff-buttons">
 <h4>Create EXRAIL list of Track Manager Functions for Engine Driver Automatically Assign [Handoff] buttons<a class="headerlink" href="#create-exrail-list-of-track-manager-functions-for-engine-driver-automatically-assign-handoff-buttons" title="Link to this heading"></a></h4>
 <dl class="simple">
-<dt>In a <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> Automation script we could assign a track mode to DC and wait for a <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> throttle to Assign the Current Selected Active Engine Address and drive Manually through the district on the layout.</dt><dd><p>See the third Engine Driver Throttle image ‘Districts A thru B with [Set] buttons at the end.</p>
+<dt>In a <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> Automation script we could assign a track mode to DC and wait for a <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> throttle to Assign the Current Selected Active Engine Address and drive Manually through the district on the layout.</dt><dd><p>See the third Engine Driver Throttle image ‘Districts A thru B with [Set] buttons at the end.</p>
 </dd>
 </dl>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Districts A MAIN _ B PROG Default&quot;</span><span class="p">)</span><span class="c1">// Reset Default back to DCC Main &amp; PROG</span>
@@ -1191,7 +1191,7 @@ my.Automation.h file</p>
 <section id="create-exrail-track-manager-functions-for-engine-driver-throttle-automation-handoff-buttons">
 <h4>Create EXRAIL Track Manager Functions for Engine Driver Throttle Automation [Handoff] buttons<a class="headerlink" href="#create-exrail-track-manager-functions-for-engine-driver-throttle-automation-handoff-buttons" title="Link to this heading"></a></h4>
 <dl class="simple">
-<dt>In a <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> Automation script we could a Set a Loco Address to a specific track in DC mode and have it run on Automation through the layout.</dt><dd><p>See the sixth Engine Driver Throttle image ‘EXRAIL 202 Roundhouse to Turntable Back &amp; Forth - Timed’ [Handoff] button at the end.</p>
+<dt>In a <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> Automation script we could a Set a Loco Address to a specific track in DC mode and have it run on Automation through the layout.</dt><dd><p>See the sixth Engine Driver Throttle image ‘EXRAIL 202 Roundhouse to Turntable Back &amp; Forth - Timed’ [Handoff] button at the end.</p>
 </dd>
 </dl>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">202</span><span class="p">,</span><span class="s">&quot;Roundhouse to Turntable Back &amp; Forth -Timed&quot;</span><span class="p">)</span>
@@ -1356,7 +1356,7 @@ Track A and Track B with sidings;</p>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f9f90766a70>
+    <jinja2.runtime.BlockReference object at 0x7feafece8c40>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

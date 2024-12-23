@@ -683,7 +683,7 @@
 <p>EXRAIL has a <code class="docutils literal notranslate"><span class="pre">ROSTER()</span></code> function to allow you to define all of your locomotives with a list of their defined functions which is advertised to WiThrottle applications, just like turnouts/points and routes.</p>
 <p>The functions can simply be listed as “F” numbers, or you can provide a text description of the function. Prefacing the function with a “*” indicates it is momentary, meaning it is only activated while holding that function button down.</p>
 <p>In a text editor (e.g. notepad) create a new text file named ‘myAutomation.h’. (Note the capital ‘A’ in the name.  The case of all the characters is important.)</p>
-<p>If you are already using <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> and have a myAutomation.h, then just the add <code class="docutils literal notranslate"><span class="pre">ROSTER(...)</span></code> lines near the top of the file.</p>
+<p>If you are already using <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> and have a myAutomation.h, then just the add <code class="docutils literal notranslate"><span class="pre">ROSTER(...)</span></code> lines near the top of the file.</p>
 <p>Add a line that looks like:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">999</span><span class="p">,</span><span class="s">&quot;Loco Name&quot;</span><span class="p">,</span><span class="s">&quot;F0/F1/*F2/F3/F4/F5/F6/F7/F8&quot;</span><span class="p">)</span>
 </pre></div>
@@ -761,7 +761,7 @@
 <aside class="sidebar">
 <p>You can also refer to <a class="reference internal" href="../ex-commandstation/accessories/turnouts/solenoid-turnouts.html"><span class="doc">Solenoid or coil turnouts/points</span></a> for more information.</p>
 </aside>
-<p>If you have installed turnouts/points using simple pin control, you can config the <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> so that it knows about it and you can control in in your sequences.</p>
+<p>If you have installed turnouts/points using simple pin control, you can config the <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> so that it knows about it and you can control in in your sequences.</p>
 <blockquote>
 <div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">vpin</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
@@ -828,7 +828,7 @@ SINGLE_COIL_TURNOUT(101, 22, 24, 26, &quot;Turnout 101&quot;)
 <section id="controlling-servos-for-turnouts-points">
 <h5>Controlling Servos for Turnouts/Points<a class="headerlink" href="#controlling-servos-for-turnouts-points" title="Link to this heading"></a></h5>
 <p>The <code class="docutils literal notranslate"><span class="pre">SERVO_TURNOUT</span></code> directive defines a servo based turnout/point in EXRAIL, which will appear in <a class="reference internal" href="../reference/software/withrottle-vs-native-commands.html"><span class="doc">wiThrottle Protocol</span></a> apps, <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, and <a class="reference internal" href="../throttles/software/jmri.html"><span class="doc">JMRI</span></a> in addition to being defined as a turnout/point within the CommandStation.</p>
-<p>As per the <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> reference, turnouts/points are defined with the following syntax:</p>
+<p>As per the <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> reference, turnouts/points are defined with the following syntax:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example</span>
 <span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">pin</span><span class="p">,</span><span class="w"> </span><span class="n">active_angle</span><span class="p">,</span><span class="w"> </span><span class="n">inactive_angle</span><span class="p">,</span><span class="w"> </span><span class="n">profile</span><span class="w"> </span><span class="p">[,</span><span class="w"> </span><span class="s">&quot;description&quot;</span><span class="p">])</span>
 </pre></div>
@@ -865,7 +865,7 @@ SINGLE_COIL_TURNOUT(101, 22, 24, 26, &quot;Turnout 101&quot;)
 </ul>
 <section id="servos-for-signals">
 <h4>Servos for Signals<a class="headerlink" href="#servos-for-signals" title="Link to this heading"></a></h4>
-<p>The <code class="docutils literal notranslate"><span class="pre">SERVO_SIGNAL</span></code> directive defines a servo based signal in <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> to drive semaphore type signals as part of sequences or routes, or simply be set via a signal or similar.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">SERVO_SIGNAL</span></code> directive defines a servo based signal in <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> to drive semaphore type signals as part of sequences or routes, or simply be set via a signal or similar.</p>
 <p>Similar to pin based signals, servo signals are controlled by the ID of the red pin only.</p>
 <p>Unlike servo based turnouts/points, there is no ID or description (they don’t appear in throttles), and they use the “Bounce” profile with no other options available at the present time:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
@@ -887,9 +887,9 @@ SINGLE_COIL_TURNOUT(101, 22, 24, 26, &quot;Turnout 101&quot;)
 </section>
 <section id="servos-for-animations">
 <h4>Servos for Animations<a class="headerlink" href="#servos-for-animations" title="Link to this heading"></a></h4>
-<p>The <code class="docutils literal notranslate"><span class="pre">SERVO</span></code> and <code class="docutils literal notranslate"><span class="pre">SERVO2</span></code> directives allow for servos to be used in various automations within <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a>.</p>
-<p>Note that unlike a <code class="docutils literal notranslate"><span class="pre">SERVO_TURNOUT</span></code> these are not definitions that appear within WiThrottle apps, <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, or <a class="reference internal" href="../throttles/software/jmri.html"><span class="doc">JMRI</span></a>, but are instead actions designed to be used within <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> automations.</p>
-<p>As per the <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> reference, these are defined with the following syntax:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">SERVO</span></code> and <code class="docutils literal notranslate"><span class="pre">SERVO2</span></code> directives allow for servos to be used in various automations within <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a>.</p>
+<p>Note that unlike a <code class="docutils literal notranslate"><span class="pre">SERVO_TURNOUT</span></code> these are not definitions that appear within WiThrottle apps, <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, or <a class="reference internal" href="../throttles/software/jmri.html"><span class="doc">JMRI</span></a>, but are instead actions designed to be used within <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> automations.</p>
+<p>As per the <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> reference, these are defined with the following syntax:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">profile</span><span class="p">)</span>
 <span class="n">SERVO2</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">duration</span><span class="p">)</span>
 </pre></div>
@@ -942,7 +942,7 @@ SINGLE_COIL_TURNOUT(101, 22, 24, 26, &quot;Turnout 101&quot;)
 <section id="configure-myautomation-h-sensors">
 <h3><a class="toc-backref" href="#id13" role="doc-backlink">Configure myAutomation.h - Sensors</a><a class="headerlink" href="#configure-myautomation-h-sensors" title="Link to this heading"></a></h3>
 <p>You don’t actually require anything special to be added to myAutomation.h in advance of using them in an sequence.</p>
-<p>Handling sensors in sequences is made easy because <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;RAIL</span></a> throws away the concept of interrupts (“oh… sensor 22 has been detected… which loco was that and whatever do I do now?”) and instead has the sequences work on the basis of “do nothing, maintain speed until sensor 22 triggers, and then carry on in the script”.</p>
+<p>Handling sensors in sequences is made easy because <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> throws away the concept of interrupts (“oh… sensor 22 has been detected… which loco was that and whatever do I do now?”) and instead has the sequences work on the basis of “do nothing, maintain speed until sensor 22 triggers, and then carry on in the script”.</p>
 <p>Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardware Abstraction Layer. For a Mega onboard GPIO pin, this is the same as the digital pin number. Other pin ranges refer to I/O expanders etc.</p>
 <div class="note-float-right admonition note">
 <p class="admonition-title">Note</p>
@@ -1018,7 +1018,7 @@ SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for turnout/point 1, Thrown=Red,
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f9fa47c3400>
+    <jinja2.runtime.BlockReference object at 0x7feb119222f0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

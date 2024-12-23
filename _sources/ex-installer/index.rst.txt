@@ -12,16 +12,20 @@ EX-Installer
 
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button|
 
-If you have DIY assembled your |EX-CS| hardware you need to load our software onto it make is usable.
+If... 
 
-If you purchased an |EX-CSB1| you may wish to reload our software to enable additional features.
+* You have DIY assembled your |EX-CS| hardware you need to load our software onto it make is usable.
 
-To make it as simple as possible we have created the |EX-I| app.
+* You purchased an |EX-CSB1| you wish to reload our software to enable additional features.
+
+Then, to make it as simple as possible, we have created the |EX-I| program.
+
+To use the |EX-I| program click 'Next' or follow these links:
 
 .. toctree::
     :maxdepth: 1
 
-    installing
+    Using EX-Installer <installing>
     testing
     Managing config files <managing-config-files>
 

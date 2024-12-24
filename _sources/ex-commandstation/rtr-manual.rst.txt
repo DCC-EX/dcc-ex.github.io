@@ -28,7 +28,7 @@ This page describes and explains the |EX-CSB1| in detail.
 
 .. important::
 
-   If you are setting up your |EX-CSB1| for the first time we recommend that you look at the :doc:`/ex-commandstation/ready-to-run/connecting` page first.
+   If you are setting up your |EX-CSB1| for the first time we recommend that you look at the :doc:`/ex-commandstation/rtr-connecting` page first.
 
 ----
 
@@ -281,7 +281,7 @@ GPIO Headers
 
 The 4 GPIO headers accept a DCC-EX |EX-MS|. The EX-CSB1 itself has 2 outputs for 2 track power districts. 
 
-Stacking the EX8874 on these headers provides 2 additional power districts for a total of 4. Any of the 4 outputs can be used for any combination of **DCC MAIN**, **DCC PROG**, or **DC PWM**. You must enable the extra board from the EX-Installer or your config.h file for a manual install. See the :ref:`ex-commandstation/ready-to-run/manual:adding an ex-motorshield 8874` section of this document.
+Stacking the EX8874 on these headers provides 2 additional power districts for a total of 4. Any of the 4 outputs can be used for any combination of **DCC MAIN**, **DCC PROG**, or **DC PWM**. You must enable the extra board from the EX-Installer or your config.h file for a manual install. See the :ref:`ex-commandstation/rtr-manual:adding an ex-motorshield 8874` section of this document.
 
 |FORCE-BREAK|
 
@@ -443,7 +443,7 @@ The EX-CSB1 is set to operate in DCC mode by default.
 Optional DC Operation
 ---------------------
 
-Refer to :ref:`ex-commandstation/ready-to-run/manual:dc operation` section for information.
+Refer to :ref:`ex-commandstation/rtr-manual:dc operation` section for information.
 
 |HR-DASHED|
 
@@ -882,5 +882,5 @@ You can and an |EX-MS| to provide an additional 2 outputs. You may want to do th
 Additional information
 ==========================================
 
-* :doc:`/ex-commandstation/ready-to-run/connecting`
-* :doc:`/ex-commandstation/ready-to-run/purchasing`
+* :doc:`/ex-commandstation/rtr-connecting`
+* :doc:`/ex-commandstation/rtr-purchasing`

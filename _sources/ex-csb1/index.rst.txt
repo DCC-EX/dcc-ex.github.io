@@ -99,10 +99,22 @@ Units may be purchased from the following sources:
 
 .. include:: /purchasing/include__ex-csb1-pricing.rst
 
-----
+---- 
 
 Next Steps
 ==========
 
-* :doc:`Getting started with the EX-CSB1 </ex-commandstation/ready-to-run/connecting>`
-* :doc:`EX-CSB1 Operating Manual </ex-commandstation/ready-to-run/manual>`
+* :doc:`Getting started with the EX-CSB1 </ex-commandstation/rtr-connecting>`
+* :doc:`EX-CSB1 Operating Manual </ex-commandstation/rtr-manual>`
+
+.. toctree::
+  :hidden:
+  :maxdepth: 1
+
+  /ex-commandstation/rtr-connecting__included-esb1
+  /ex-commandstation/rtr-wifi-setup__included-esb1
+  /ex-commandstation/installer-esb1
+  /ex-commandstation/controllers-esb1
+  /ex-commandstation/testing-esb1
+  /support/ex-cs-troubleshooting__included-esb1
+  /ex-commandstation/rtr-manual__included-esb1

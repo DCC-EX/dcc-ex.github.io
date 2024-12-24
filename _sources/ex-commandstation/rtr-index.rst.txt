@@ -37,7 +37,7 @@ The |DCC-EX| |EX-CSB1| comes ready to use out of the box and has the following f
 Next Steps - Purchasing
 =======================
 
-See the :doc:`/ex-commandstation/ready-to-run/purchasing` page or click the 'Next' button to see how to acquire your |EX-CSB1|.
+See the :doc:`/ex-commandstation/rtr-purchasing` page or click the 'Next' button to see how to acquire your |EX-CSB1|.
 
 ----
 
@@ -56,11 +56,11 @@ To find out how to request assistance click the first button below. To raise a b
   :hidden:
   :maxdepth: 1
 
-  purchasing
-  connecting
-  wifi-setup
+  rtr-purchasing
+  rtr-connecting
+  rtr-wifi-setup
   /ex-commandstation/installer-rtr
   /ex-commandstation/controllers-rtr
   /ex-commandstation/testing-rtr
   /support/ex-cs-troubleshooting__included-rtr
-  manual
+  rtr-manual

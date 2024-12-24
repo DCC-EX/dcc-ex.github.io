@@ -50,7 +50,7 @@
 ..
 .. |EX-CSB1| raw:: html
 
-  <a href="./ex-commandstation/ready-to-run/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a>
+  <a href="./ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a>
 ..
 .. |BSC| raw:: html
 
@@ -66,7 +66,7 @@
       :alt: EX-CSB1 Logo
       :scale: 30%
       :class: image-min-width-144
-      :target: ./ex-commandstation/ready-to-run/index.html
+      :target: ./ex-commandstation/rtr-index.html
 ..
 .. |EX-CS-DIY-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-cs-diy.png
       :alt: EX-CS-DIY Logo

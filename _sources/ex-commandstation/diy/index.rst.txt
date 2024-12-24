@@ -19,7 +19,7 @@ In order to get the most out of this website, we ask you at first to make 2 choi
 
 1. To self-identify your **"level"** with regards to DCC-EX. |BR| If you have not chosen whether you are a |Conductor-text|, |Tinkerer-text|, or |Engineer-text|, please go to the :doc:`/begin/levels` page before proceeding further. |BR| |BR|
 
-2. Choose will be whether you want **"Ready-To-Run" (RTR)** path or the **"Do-It-Yourself" (DIY)** path. |BR| If you want the ready-to-run (RTR) path we suggest that you look at the :doc:`/ex-commandstation/ready-to-run/index` page.
+2. Choose will be whether you want **"Ready-To-Run" (RTR)** path or the **"Do-It-Yourself" (DIY)** path. |BR| If you want the ready-to-run (RTR) path we suggest that you look at the :doc:`/ex-commandstation/rtr-index` page.
 
 **If you are still interested the do-it-yourself (DIY) path then read on...**
 

@@ -22,7 +22,7 @@ EX-CSB1 Quick Setup Guide
 
 This quick startup guide is designed to have you configured and setup to run trains in 5 minutes. After all, the point is to enjoy running trains, not sifting through more information than you need until you are ready. 
 
-These instructions are for DCC locomotives. For more detailed information, to configure for running DC trains, or to use different throttles like EX-WebThrottle or JMRI, see the :doc:`EX-CSB1 Operating Manual <manual>`
+These instructions are for DCC locomotives. For more detailed information, to configure for running DC trains, or to use different throttles like EX-WebThrottle or JMRI, see the :doc:`EX-CSB1 Operating Manual <rtr-manual>`
 
 What You Will Need
 ==================
@@ -48,7 +48,7 @@ Board Layout
 
    EX-CSB1 top (click image to enlarge it)
 
-A full explanation of the board is available in the :doc:`manual </ex-commandstation/ready-to-run/manual>`.
+A full explanation of the board is available in the :doc:`manual </ex-commandstation/rtr-manual>`.
 
 .. warning::
 
@@ -259,7 +259,7 @@ The DCC-EX |EX-CSB1| will power up in WiFi **Access Point mode** as configured o
 
 This quick start covers initial testing with the |Engine Driver| app, though it is a broadly similar process when using any other throttle app on a Smart device. 
 
-For a USB Connection with |EX-WT| or |JMRI| and a computer, please see the full :doc:`CSB1 operating manual <manual>`.
+For a USB Connection with |EX-WT| or |JMRI| and a computer, please see the full :doc:`CSB1 operating manual <rtr-manual>`.
 
 **Access Point (AP) mode** creates a separate WiFi network on the Command Station itself, whereas **Station (STA) mode** allows the Command Station to join as a WiFi device on your home or layout WiFi network. We have the |EX-CSB1| set to default to **Access Point (AP) mode** for the convenience of being able to get up and running quickly. 
 
@@ -501,7 +501,7 @@ The |EX-CSB1| as the name implies can operate as a Command Station or a Booster.
 Full EX-CSB1 Operating Manual
 ------------------------------
 
-:doc:`manual`
+:doc:`rtr-manual`
 
 ----
 
@@ -510,7 +510,7 @@ Next Steps
 
 If you are happy with the default configuration of your |EX-CSB1| there is nothing more you need to do.
 
-If you want to change the way the WiFi is configured, just click next or go the :doc:`wifi-setup` page.
+If you want to change the way the WiFi is configured, just click next or go the :doc:`rtr-wifi-setup` page.
 
 If you want to look at some other options to use as a controller (throttle) then have a look at the :doc:`/ex-commandstation/controllers-rtr` page.
 

@@ -70,7 +70,7 @@ Ready-to-Run (RTR) or Do-It-YourSelf (DIY)
 
 To get started, simply choose your path. 
 
-  Whether you are a |Conductor-text|, |Tinkerer-text|, or |Engineer-text|, most people will choose the easy, :doc:`Ready-To-Run</ex-commandstation/ready-to-run/index>` (RTR), option and purchase an |EX-CSB1|. 
+  Whether you are a |Conductor-text|, |Tinkerer-text|, or |Engineer-text|, most people will choose the easy, :doc:`Ready-To-Run</ex-commandstation/rtr-index>` (RTR), option and purchase an |EX-CSB1|. 
   
   Some Tinkerers and Engineers may opt to go the :doc:`Do-It-Yourself</ex-commandstation/diy/index>` (DIY) route by purchasing separate components (or a kit), connecting it together themselves, and installing the |EX-CS| software. 
   
@@ -98,7 +98,7 @@ To get started, simply choose your path.
     :width: 900
 
     * - |conductor| 
-      - If you are just starting on the |DCC-EX| journey we recommend you start with the |BR| :doc:`Ready-to-Run</ex-commandstation/ready-to-run/index>` (RTR) page though feel free to try the :doc:`Do-It-Yourself</ex-commandstation/diy/index>` (DIY) path.
+      - If you are just starting on the |DCC-EX| journey we recommend you start with the |BR| :doc:`Ready-to-Run</ex-commandstation/rtr-index>` (RTR) page though feel free to try the :doc:`Do-It-Yourself</ex-commandstation/diy/index>` (DIY) path.
 
 ----
 
@@ -109,13 +109,13 @@ To get started, simply choose your path.
     :width: 900
 
     * - |tinkerer| |BR| |BR| |engineer|
-      - If you are just starting on the |DCC-EX| journey we also recommend you start with the |BR| :doc:`Ready-to-Run</ex-commandstation/ready-to-run/index>` (RTR) or :doc:`Do-It-Yourself</ex-commandstation/diy/index>` (DIY). |BR| But if you wish to discover more you may want to look at the :doc:`/ex-commandstation/advanced-setup/index` pages for additional options that may be of interest.
+      - If you are just starting on the |DCC-EX| journey we also recommend you start with the |BR| :doc:`Ready-to-Run</ex-commandstation/rtr-index>` (RTR) or :doc:`Do-It-Yourself</ex-commandstation/diy/index>` (DIY). |BR| But if you wish to discover more you may want to look at the :doc:`/ex-commandstation/advanced-setup/index` pages for additional options that may be of interest.
 
 .. toctree::
     :maxdepth: 1
     :hidden:
 
-    ready-to-run/index
+    rtr-index
     diy/index
     advanced-setup/index
     accessories/index

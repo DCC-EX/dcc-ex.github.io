@@ -49,7 +49,7 @@ Our *free*, *open source* software products currently include:
     * - |EX-CS-LOGO-SMALL|
       - |EX-I-LOGO-SMALL|
       - |EX-R-LOGO-SMALL|
-    * - Our DCC & DC command station software for controlling your model railroad |BR| :dcc-ex-text-size-60pct:`For a ready-to-run version of the EX-CommandStation see our` :doc:`EX-CSB1 </ex-commandstation/ready-to-run/index>`
+    * - Our DCC & DC command station software for controlling your model railroad |BR| :dcc-ex-text-size-60pct:`For a ready-to-run version of the EX-CommandStation see our` :doc:`EX-CSB1 </ex-commandstation/rtr-index>`
       - Our user friendly command station software installer
       - The built-in scripting language for automating your model railroad
     * - |EX-WT-LOGO-SMALL|
@@ -71,7 +71,7 @@ Our *free*, *open source* software products currently include:
     :class: table-list-homepage
 
     * - |EX-CS-LOGO-SMALL| 
-      - Our DCC & DC command station software for controlling your model railroad. |BR| :dcc-ex-text-size-60pct:`For a ready-to-run version of the EX-CommandStation see our` :doc:`EX-CSB1 </ex-commandstation/ready-to-run/index>`
+      - Our DCC & DC command station software for controlling your model railroad. |BR| :dcc-ex-text-size-60pct:`For a ready-to-run version of the EX-CommandStation see our` :doc:`EX-CSB1 </ex-commandstation/rtr-index>`
     * - |EX-I-LOGO-SMALL| 
       - Our user friendly command station software installer
     * - |EX-R-LOGO-SMALL| 
@@ -125,7 +125,7 @@ What is EX-CommandStation?
 
 |EX-CS| is our flagship product and is explained in great detail :doc:`elsewhere on the site</ex-commandstation/index>`, but a brief summary would be...
 
-  An |EX-CS| is a simple, but powerful, **DCC** and **DC** Command Station / Base Station which you can purchase :doc:`ready-to-run</ex-commandstation/ready-to-run/index>` or :doc:`assemble yourself</ex-commandstation/diy/index>` from widely available parts.
+  An |EX-CS| is a simple, but powerful, **DCC** and **DC** Command Station / Base Station which you can purchase :doc:`ready-to-run</ex-commandstation/rtr-index>` or :doc:`assemble yourself</ex-commandstation/diy/index>` from widely available parts.
 
 Many people call |EX-CS| "DCC-EX". These terms are often used interchangeably, though they are in very fact different.
 
@@ -176,7 +176,7 @@ Some Common Scenarios Explored
 I just want to run my trains
 ----------------------------
 
-If you simply want a system to run your **DCC** or **DC** trains, then you only need to concern yourself with our |EX-CS| software running on our :doc:`EX-CommandStation/Booster One Express </ex-commandstation/ready-to-run/index>` *or* on a :doc:`DIY EX-CommandStation </ex-commandstation/diy/index>`.
+If you simply want a system to run your **DCC** or **DC** trains, then you only need to concern yourself with our |EX-CS| software running on our :doc:`EX-CommandStation/Booster One Express </ex-commandstation/rtr-index>` *or* on a :doc:`DIY EX-CommandStation </ex-commandstation/diy/index>`.
 
 |EX-CS| is our core digital controller product. While it can also do a lot more, you don't need to know about any other features or capabilities in order to use it to just run trains.
 

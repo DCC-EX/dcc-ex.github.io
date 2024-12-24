@@ -252,8 +252,3 @@
 
    <hr class="hr-heavy" />
 ..
-.. ...............................................
-..
-.. |suitable| image:: /_static/images/level_icons/level-suitable-for.png
-   :alt: Suitable For Level:
-   :scale: 40%

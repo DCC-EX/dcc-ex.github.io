@@ -213,6 +213,13 @@
 
   <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../begin/levels.html#engineer">Engineer</a>
 ..
+.. ...............................................
+..
+.. |suitable| image:: /_static/images/level_icons/level-suitable-for.png
+   :alt: Suitable For Level:
+   :scale: 40%
+   :target: ../begin/levels.html#levels-of-difficulty-or-technical-complexity
+..  
 .. ................................................
 ..
 .. |support-button| raw:: html

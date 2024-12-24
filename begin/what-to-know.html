@@ -812,7 +812,7 @@
 <p>As mentioned, along with DCC, a <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> can be used to control <strong>Direct Current (DC)</strong> locomotives using <strong>Pulse Width Modulation (PWM)</strong>.</p>
 <p>This is actually an improvement over pure DC since the full voltage is always applied to the track in pulses. Rather than controlling a voltage from zero to full to control speed, the average <em>time</em> the full voltage is applied controls the speed. This allows for better stops and starts and smoother operation at low speeds.</p>
 <p><em>We do NOT use the flawed “zero stretching” method some command stations use.</em></p>
-<p>More information on using DC PWM can be found <a class="reference internal" href="../trackmanager/index.html"><span class="doc">on the TrackManager page</span></a>.</p>
+<p>More information on using <a class="reference internal" href="../reference/hardware/dcc-vs-dcc.html"><span class="doc">DC PWM</span></a> can be found <a class="reference internal" href="../trackmanager/index.html"><span class="doc">on the TrackManager page</span></a>.</p>
 <p><hr class="hr-dashed" /></p>
 <section id="dcc-ex-is-for-more-than-just-controlling-trains">
 <h3><a class="toc-backref" href="#id9" role="doc-backlink">DCC-EX is for more than just controlling trains</a><a class="headerlink" href="#dcc-ex-is-for-more-than-just-controlling-trains" title="Link to this heading"></a></h3>
@@ -894,7 +894,7 @@
 <h3><a class="toc-backref" href="#id19" role="doc-backlink">Zero Stretching for DC control</a><a class="headerlink" href="#zero-stretching-for-dc-control" title="Link to this heading"></a></h3>
 <p>We <strong>DO NOT</strong> use the flawed “zero stretching” / “zero bit stretching” method some command stations use.</p>
 <p><a class="reference external" href="https://dccwiki.com/Zero_Stretching">Zero stretching</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> was method introduced in the early days of DCC to make it possible for DC locos to run, poorly, on DCC systems alongside DCC equiped locos on the same track at the same time.  It is known to damage certain types of DC motors.</p>
-<p>The <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> uses a completely different approach. Any Track outputs can be switched from DCC to DC PWM. Either one type or the other, not both at the same time on the one output. (But different outputs can be different at the same time.)</p>
+<p>The <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> uses a completely different approach. Any Track outputs can be switched from DCC to <a class="reference internal" href="../reference/hardware/dcc-vs-dcc.html"><span class="doc">DC PWM</span></a>. Either one type or the other, not both at the same time on the one output. (But different outputs can be different at the same time.)</p>
 <p>e.g. Most Motor Boards have two outputs. Both can be DCC, or one DCC and one DC, or both DC.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
@@ -934,7 +934,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f97b43ac970>
+    <jinja2.runtime.BlockReference object at 0x7fe7fb2f6920>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

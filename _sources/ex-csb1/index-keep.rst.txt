@@ -20,9 +20,9 @@
     :depth: 1
     :local:
 
-XXX
+.. TODO XXX
 
-Designed by the |DCC-EX| development team, the EX-CSB1 replaces up to 3 different stacked Arduino boards to provide a complete, expandible DCC and DC PWM command station or booster with dual 5A track outputs, integrated programming track capability, and built-in fast WiFi for throttle control connections.
+Designed by the |DCC-EX| development team, the EX-CSB1 replaces up to 3 different stacked Arduino boards to provide a complete, expandible DCC and |DC PWM| command station or booster with dual 5A track outputs, integrated programming track capability, and built-in fast WiFi for throttle control connections.
 
 .. figure:: /_static/images/ex-csb1/csb1_render_drop_shadow.png
    :alt: DCC-EX EX-CSB1
@@ -30,18 +30,18 @@ Designed by the |DCC-EX| development team, the EX-CSB1 replaces up to 3 differen
 
    EX-CSB1 CommandStation / Booster
 
-XXX
+.. TODO XXX
 
 What is the EX-CSB1?
 ====================
 
-The |EX-CSB1| is the first fully integrated DCC Command Station with DC PWM and Booster mode capabilities developed by the DCC-EX Team. This versatile board can function as a complete Command Station with USB or WiFi connectivity or serve as a stand-alone booster, making it an ideal addition to any layout, including those using non-DCC-EX systems.
+The |EX-CSB1| is the first fully integrated DCC Command Station with |DC PWM| and Booster mode capabilities developed by the DCC-EX Team. This versatile board can function as a complete Command Station with USB or WiFi connectivity or serve as a stand-alone booster, making it an ideal addition to any layout, including those using non-DCC-EX systems.
 
 Key Features:
-  * All-in-one DCC Command Station/Booster: Compatible with DCC and capable of PWM DC output
+  * All-in-one DCC Command Station/Booster: Compatible with DCC and capable of |DC PWM| output
   * Built-in Fast WiFi: Supports up to 10 simultaneous throttle connections, expandable with JMRI
-  * Advanced Hardware: Utilizes an ESP32 microcontroller with dual DCC or PWM DC 5A outputs, including variable current limit control
-  * Expandable Outputs: Can accept a DCC-EX EX-MotorShield8874 for two additional DCC/DC PWM outputs, providing power to four total districts. Multiple EX-CSB1s can be added as boosters around the layout.
+  * Advanced Hardware: Utilizes an ESP32 microcontroller with dual DCC or |DC PWM| 5A outputs, including variable current limit control
+  * Expandable Outputs: Can accept a DCC-EX EX-MotorShield8874 for two additional DCC/|DC PWM| outputs, providing power to four total districts. Multiple EX-CSB1s can be added as boosters around the layout.
   * Protection & Safety: Software programmable over-current protection, and hardware over-current, over-temperature and reverse voltage protection
   * Versatile Power Supply: Operates with a single 12V to 25V power supply that powers the entire system
   * USB-C Interface: For easy software updates, connection to EX-WebThrottle or JMRI, and logging/debugging
@@ -143,7 +143,7 @@ Board layout
    :scale: 70%
    :align: right
 
-**Track Power LEDs** - These are indicators that power is being sent to the track, and the mode of the output. With DCC operation, both LEDs should shine brightly when your throttle issues the power-on command. You can also configure the CSB1 to start with power on using a mySetup.h or myAutomation.h file. See more here :doc:`/ex-commandstation/advanced-setup/startup-config`. For DC PWM mode operation, when power is on, ONE LED will light for each direction. That is, forward will light one LED and when you select reverse, the other LED will light. 
+**Track Power LEDs** - These are indicators that power is being sent to the track, and the mode of the output. With DCC operation, both LEDs should shine brightly when your throttle issues the power-on command. You can also configure the CSB1 to start with power on using a mySetup.h or myAutomation.h file. See more here :doc:`/ex-commandstation/advanced-setup/startup-config`. For |DC PWM| mode operation, when power is on, ONE LED will light for each direction. That is, forward will light one LED and when you select reverse, the other LED will light. 
 
 .. image:: /_static/images/ex-csb1/qwiic_conn.png
    :alt: Qwiic Connector

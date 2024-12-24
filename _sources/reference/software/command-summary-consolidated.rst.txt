@@ -187,7 +187,7 @@ The settings achievable vary slightly depending upon the processor running the C
 |_| > **No Functions:** Default - low frequency 131Hz |BR|
 |_| > **F29:** Mid frequency - 490Hz |BR|
 |_| > **F30:** High frequency - 3400Hz |BR|
-|_| > **F31:** Supersonic - 62500Hz|BR|
+|_| > **F31:** Supersonic - 62500Hz |BR|
 
 Note that these functions are not cumulative - setting F30 overrides F29 and setting F31 overrides F29 & F30.
 

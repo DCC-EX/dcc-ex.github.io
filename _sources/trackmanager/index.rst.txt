@@ -386,9 +386,20 @@ Any throttle that connect to an |EX-CS| can control analogue (DC) locos just as 
 Changing the Pulse Width Frequency
 ----------------------------------
 
-**Frequency of PWM in DC Operation** - PWM can use a variety of frequencies for the pulses it sends, and this can alter motor behaviour and noise etc. The default frequency used for the CSB1 is xxHz, but this can be varied using the virtual DCC functions 28-31 (check) to allow you to alter the frequency to better suit your loco's motor. This can of course be done during running from the throttle.
+**Frequency of PWM in DC Operation** - PWM can use a variety of frequencies for the pulses it sends, and this can alter motor behaviour and noise etc. 
 
-The DC PWM frequency can be set using virtual DCC Functions 28-31.
+The default frequency used for the CSB1 is 131H, but this can be varied on-the-fly using the virtual DCC functions 29-31 to allow you to alter the frequency to better suit your loco's motor. This can of course be done during running from the throttle.
+
+Just acquire the loco number you have assigned to your DC Output. Then select one of Functions 29, 30 or 31:
+
+* No Function selected: Default - low frequency 131Hz
+* F29: Mid frequency - 490Hz
+* F30: High frequency - 3400Hz
+* F31: Supersonic - 62500Hz
+
+Trial and error will be needed for specific locos that do not respond well to the defaults (low) frequency setting.
+
+Note that these functions are not cumulative - setting F30 overrides F29 and setting F31 overrides F29 & F30.
 
 ----
 
@@ -406,15 +417,32 @@ If you have more than one controller, they may have DPDT centre-off switches bet
 
 You will be replacing this kind of legacy analogue DC described above with a single |EX-CS|. It includes a software switching implementation, allowing you to easily and quickly switch between the two DCC (PWM) and DC (PWM) modes on any of the A thru H dual insulated tracks/districts in real time.
 
-This also allows replacing any physical hardware DPDT switches.
+This also means that, if you wish, you can remove any physical hardware DPDT switches that were used to switch between standard DC controllers/transformers.
 
-This is all done through a single |EX-CS|. And no we're not using another Expensive DCC decoder under the table on each Track/District/Block to address that section of track.
+This is all done through a single |EX-CS|. And no we're not using another Expensive DCC decoder under the table on each Track/District/Block to address that section of track. The capability is built into the |EX-CS|.
+
+Below is an example of a very simple DC layout with two DC controllers/transformers, with one for each track.
 
 .. figure:: /_static/images/layouts/dc-layout-1.png
   :alt: DC Layout - 2 Blocks
   :scale: 50%
 
-  DC Layout - 2 Blocks
+  DC Layout - 2 Blocks - DC controllers/transformers
+
+With an |EX-CS| with both outputs set to |DC PWM|, the wiring for the same layout is a very simple swap.
+
+.. figure:: /_static/images/layouts/dc-layout-2.png
+  :alt: DC Layout - 2 Blocks
+  :scale: 50%
+
+  DC Layout - 2 Blocks - EX-CSB1
+
+
+.. warning::
+
+  The ready-to-run |EX-CSB1| and the do-it-yourself |EX-CS| default to DCC on both outputs!  
+  
+  You must use the instructions above before placing a DC loco on the track, or you may risk damaging the loco.
 
 
 .. TODO XXX see if there is anything else in these two paragraphs that that should be retained
@@ -492,7 +520,6 @@ New |Engine Driver| DCC-EX Native mode features now available today via Google P
   * `Engine Driver <https://play.google.com/store/apps/details?id=jmri.enginedriver>`_
   * `EX-Toolbox <https://play.google.com/store/apps/details?id=dcc_ex.ex_toolbox>`_
 
-
 ----
 
 TrackManager Commands
@@ -527,8 +554,8 @@ To change or configure the current track modes use the new command ``<= tracklet
 
   You would then enter your Engine address on the throttle of 1234 and 4321 and drive them on the layout.
 
-Create EXRAIL Scripts to Change Track modes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+EXRAIL Scripts to Change Track modes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Using |EX-R| functions inside myAutomation.h file to run Automation scripts to change track modes from DCC to DC and back.
 my.Automation.h file
@@ -550,10 +577,11 @@ Note that the Address to be used for a DC or DCX block must be set before the ``
     
 |HR-DASHED|
 
-Create EXRAIL list of Track Manager Functions for Engine Driver Automatically Assign [Handoff] buttons
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+EXRAIL list of Track Manager Functions for Engine Driver Automatic Assign [Handoff] buttons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In a |EX-R| Automation script we could assign a track mode to DC and wait for a |Engine Driver| throttle to Assign the Current Selected Active Engine Address and drive Manually through the district on the layout.
+In a |EX-R| Automation script we could assign a track mode to DC and wait for a |Engine Driver| to Assign the Current Selected Active Engine Address and drive Manually through the district on the layout.
+
  See the third Engine Driver Throttle image 'Districts A thru B with [Set] buttons at the end.
 
 .. code-block:: c++
@@ -584,8 +612,8 @@ In a |EX-R| Automation script we could assign a track mode to DC and wait for a 
 
 |HR-DASHED|
 
-Create EXRAIL Track Manager Functions for Engine Driver Throttle Automation [Handoff] buttons
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+EXRAIL Track Manager Functions for Engine Driver 'Automation' [Handoff] buttons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In a |EX-R| Automation script we could a Set a Loco Address to a specific track in DC mode and have it run on Automation through the layout.
  See the sixth Engine Driver Throttle image 'EXRAIL 202 Roundhouse to Turntable Back & Forth - Timed' [Handoff] button at the end.
@@ -601,8 +629,8 @@ In a |EX-R| Automation script we could a Set a Loco Address to a specific track 
 
 |HR-DASHED|
 
-Create EXRAIL Track Manager Functions for Engine Driver Throttle Route [Set] buttons
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+EXRAIL Track Manager Functions for Engine Driver 'Route' [Set] buttons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In an EXRAIL Automation script we could Set a Loco Address to a specific track in DC mode and Manually run a preassigned address on the layout.
 
@@ -624,8 +652,8 @@ No DPDT Switches are required, all waveform mode switching is done by Track Mana
 
 |HR-DASHED|
 
-DCC-EX Command Station with EXRAIL & TrackManager
----------------------------------------------------
+EX-CommandStation with EXRAIL & TrackManager
+--------------------------------------------
 
 Cool thing is the new |EX-R| Automation(n) & Routes(n) work the same with DCC engines on MAIN tracks and the DC engines on DC or DCX tracks, along with the Sensors, Servos /Turnouts, Signals & MP3 Sound DFPlayer triggers with little or no script changes other than maybe the FWD(n) & REV (n) Speeds.
 
@@ -675,8 +703,8 @@ DCX is Opposite Polarity and is what you set Block B to when you want it in DC m
 EXRAIL examples
 ===============
 
-Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (Android):
----------------------------------------------------------------------------------------
+Example - EXRAIL Scripts running on Engine Driver App (Android)
+----------------------------------------------------------------
 
 **Engine Driver Throttle Controlling Two Locos:**
 
@@ -748,8 +776,8 @@ Example of User defined EXRAIL Scripts running on Engine Driver Throttle App (An
 
 |HR-DASHED|
 
-EXRAIL Functions Displaying on Smartphone Apps & Universal WiFi Throttles
--------------------------------------------------------------------------
+EXRAIL Functions on Smartphone Apps & Universal WiFi Throttles
+--------------------------------------------------------------
 
 The |Engine Driver| |EX-R| screens shown above are all created through user defined |EX-R| Automation(n) and Route(n) scripts which are automatically passed to both |Engine Driver| & WiThrottle App screens as well as the Train Control Systems TCS Universal WiFi UWT-50 and UWT-100 tactile throttles all via direct connect DCC-EX WiThrottle Protocol interface.
 

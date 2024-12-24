@@ -342,7 +342,7 @@ Or for any 3v3 microcontroller such as STM32 Nucleo models, but not the ESPDuino
 
 Where `YOUR_PIN_A` and `YOUR_PIN_B` are the pins you have jumpered to the Sense pins for channel A and B respectively on the top EX-MotorShield8874.
 
-Note that on Nucleo-144 motherboards, D7 and D8 are incapable of PWM for the Brake for channel B on either the first or second shield. PWM is used for DC PWM output **and** for managing DCC overload situations for the EX-MotorShield8874. As such it is recommended that the first board in the stack use the default Channel A BRAKE of D9, and the ALT Channel B BRAKE of D6.
+Note that on Nucleo-144 motherboards, D7 and D8 are incapable of PWM for the Brake for channel B on either the first or second shield. PWM is used for |DC PWM| output **and** for managing DCC overload situations for the EX-MotorShield8874. As such it is recommended that the first board in the stack use the default Channel A BRAKE of D9, and the ALT Channel B BRAKE of D6.
 
 Then on the top EX-MotorShield8874 set all pins except the BRAKE pins for Channel A and B to the ALT settings. For this to work you will also need to disable the Serial6 port as those appear on Arduino D0(PG9)/D1(PG14) which we will use for the ALT FAULT pins. Find the following line in DCCTimerSTM32.cpp and comment it out thusly:
 

@@ -18,7 +18,7 @@
 DCC-EX Releases EX-CSB1 Ready to Run DCC CommandStation
 =======================================================
 
-DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the second of our open source hardware products: the |EX-CSB1| CommandStation and Booster, providing dual 5 amp DCC and DC PWM (pulse width modulation) output.
+DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the second of our open source hardware products: the |EX-CSB1| CommandStation and Booster, providing dual 5 amp DCC and |DC PWM| (pulse width modulation) output.
 
 The |EX-CSB1| addresses the needs of DCC-EX users who want a ready-to-run DCC and DC CommandStation that will have them running trains within 5 minutes of plugging it into power and track. 
 
@@ -35,7 +35,7 @@ The |EX-CSB1| is the  second offering in the DCC-EX open source hardware ecosyst
 
 Featuring an ESP32 processor with built-in fast WiFi, and dual 5A output Texas Instruments MOSFET motor drivers, the EX-CSB1 features the same proven reliable output stage as the previous EX-MotorShield8874. The DRV8874 H-Bridge ICs also include hardware overcurrent protection monitored by EX-CommandStation, in addition to the existing software-based overload protection. It has a single 2.1mm barrel jack DC power for both the DCC/DC output and to supply the ESP32.
 
-EX-CSB1 also allows stacking of the original EX-MotorShield8874 with zero hardware modifications to provide four DCC and DC PWM track outputs. Now users needing more power or more power districts have a strikingly simple upgrade path.
+EX-CSB1 also allows stacking of the original EX-MotorShield8874 with zero hardware modifications to provide four DCC and |DC PWM| track outputs. Now users needing more power or more power districts have a strikingly simple upgrade path.
 
 EX-CSB1's exciting new feature is Booster mode. Using the built-in Railsync compatible DCC input jack and a small piece of EXRAIL scripting, the EX-CSB1 can switch automatically into Booster mode to produce the same DCC output on any or all of up to 4 DCC outputs. Whilst in Booster mode, the EX-CSB1 can still respond to sensor inputs and perform EXRAIL animations as a remote animation node.
 

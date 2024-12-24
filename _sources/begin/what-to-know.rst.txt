@@ -155,7 +155,7 @@ This is actually an improvement over pure DC since the full voltage is always ap
 
 *We do NOT use the flawed "zero stretching" method some command stations use.*
 
-More information on using DC PWM can be found :doc:`on the TrackManager page </trackmanager/index>`.
+More information on using |DC PWM| can be found :doc:`on the TrackManager page </trackmanager/index>`.
 
 |HR-DASHED|
 
@@ -284,7 +284,7 @@ We **DO NOT** use the flawed "zero stretching" / "zero bit stretching" method so
 
 `Zero stretching <https://dccwiki.com/Zero_Stretching>`_ |EXTERNAL-LINK| was method introduced in the early days of DCC to make it possible for DC locos to run, poorly, on DCC systems alongside DCC equiped locos on the same track at the same time.  It is known to damage certain types of DC motors.
 
-The |EX-CS| uses a completely different approach. Any Track outputs can be switched from DCC to DC PWM. Either one type or the other, not both at the same time on the one output. (But different outputs can be different at the same time.)
+The |EX-CS| uses a completely different approach. Any Track outputs can be switched from DCC to |DC PWM|. Either one type or the other, not both at the same time on the one output. (But different outputs can be different at the same time.)
 
 e.g. Most Motor Boards have two outputs. Both can be DCC, or one DCC and one DC, or both DC.
 

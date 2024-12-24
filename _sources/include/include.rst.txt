@@ -240,6 +240,10 @@
    
     :doc:`DCC-EX Native Protocol </reference/software/withrottle-vs-native-commands>`
 ..
+.. |DC PWM| replace::
+   
+    :doc:`DC PWM </reference/hardware/dcc-vs-dcc>`
+..
 .. |hr-dashed| raw:: html
 
    <hr class="hr-dashed" />

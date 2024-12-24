@@ -2977,7 +2977,7 @@ The settings achievable vary slightly depending upon the processor running the C
 |_| |_| |_| |_|> **0** - Default - low frequency 131Hz |BR|
 |_| |_| |_| |_|> **1** - Mid frequency - 490Hz |BR|
 |_| |_| |_| |_|> **2** - High frequency - 3400Hz |BR|
-|_| |_| |_| |_|> **3** - Supersonic - 62500Hz|BR|
+|_| |_| |_| |_|> **3** - Supersonic - 62500Hz |BR|
 
 Trial and error will be needed for specific locos that do not respond well to the defaults (low) frequency setting.
 

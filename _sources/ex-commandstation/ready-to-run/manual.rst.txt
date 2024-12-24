@@ -20,7 +20,7 @@ EX-CSB1 Operating Manual
 
 |EX-CSB1|
 
-The |EX-CSB1| is the first fully integrated DCC Command Station with DC PWM and Booster mode capabilities developed by the DCC-EX Team. 
+The |EX-CSB1| is the first fully integrated DCC Command Station with |DC PWM| and Booster mode capabilities developed by the DCC-EX Team. 
 
 This versatile board can function as a complete Command Station with USB or WiFi connectivity or serve as a stand-alone booster, making it an ideal addition to any layout, including those using non-DCC-EX systems.
 
@@ -124,7 +124,7 @@ These are indicators that power is being sent to the track, and the mode of the 
 
 You can also configure the CSB1 to start with power on using a mySetup.h or myAutomation.h file, or by selecting one of the options in |EX-I|. See the :ref:`EX -Installer page <ex-installer/installing:start with power on>` for more information on how to change this behaviour. 
 
-For DC PWM mode operation, when power is on, ONE LED will light for each direction. That is, forward will light one LED and when you select reverse, the other LED will light. 
+For |DC PWM| mode operation, when power is on, ONE LED will light for each direction. That is, forward will light one LED and when you select reverse, the other LED will light. 
 
 .. todo: add link
 
@@ -281,7 +281,7 @@ GPIO Headers
 
 The 4 GPIO headers accept a DCC-EX |EX-MS|. The EX-CSB1 itself has 2 outputs for 2 track power districts. 
 
-Stacking the EX8874 on these headers provides 2 additional power districts for a total of 4. Any of the 4 outputs can be used for any combination of DCC MAIN, DCC PROG, or DC PWM. You must enable the extra board from the EX-Installer or your config.h file for a manual install. See the :ref:`ex-commandstation/ready-to-run/manual:adding an ex-motorshield 8874` section of this document.
+Stacking the EX8874 on these headers provides 2 additional power districts for a total of 4. Any of the 4 outputs can be used for any combination of **DCC MAIN**, **DCC PROG**, or **DC PWM**. You must enable the extra board from the EX-Installer or your config.h file for a manual install. See the :ref:`ex-commandstation/ready-to-run/manual:adding an ex-motorshield 8874` section of this document.
 
 |FORCE-BREAK|
 
@@ -866,7 +866,7 @@ For more detailed instructions and support, refer to these resources:
 Adding an EX-MotorShield 8874
 -----------------------------
 
-You can and an |EX-MS| to provide an additional 2 outputs. You may want to do this if you want to split your DCC layout into separate power districts or if running DC PWM, create up to 4 blocks before you need to add a booster. 
+You can and an |EX-MS| to provide an additional 2 outputs. You may want to do this if you want to split your DCC layout into separate power districts or if running |DC PWM|, create up to 4 blocks before you need to add a booster. 
 
 .. TODO XXX more detail here?
 

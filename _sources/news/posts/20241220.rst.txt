@@ -47,7 +47,7 @@ The EX-CSB1 is available immediately for purchase in the United States, the UK, 
 
 .. include:: /purchasing/include__dealers.rst
 
-Initial documentation is at: http://dcc-ex.com/ex-csb1/index with design files on the DCC-EX Github.
+Initial documentation is at: http://dcc-ex.com/ex-csb1/index with design files on the DCC-EX: Github https://github.com/DCC-EX/EX-CSB1 |EXTERNAL-LINK|.
 
 In connection with the release of the EX-CSB1, version 5.0 of the EX-CommandStation is releasing with extended support for the EX-CSB1 and the entire suite of DCC-EX products.
 

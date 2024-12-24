@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2024-12-24T07:47:07.131660+00:00</updated>
+  <updated>2024-12-24T11:29:56.961439+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.8">ABlog</generator>
@@ -63,7 +63,7 @@
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://www.milleng.com.au"&gt;Millennium Engineering Pty Ltd&lt;/a&gt; &lt;img src="https://dcc-ex.com/_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://bmodeltrains.com/product-category/dcc-ex-command-stations/"&gt;Buckambool Model Trains&lt;/a&gt; &lt;img src="https://dcc-ex.com/_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Initial documentation is at: &lt;a class="reference external" href="http://dcc-ex.com/ex-csb1/index"&gt;http://dcc-ex.com/ex-csb1/index&lt;/a&gt; with design files on the DCC-EX Github.&lt;/p&gt;
+&lt;p&gt;Initial documentation is at: &lt;a class="reference external" href="http://dcc-ex.com/ex-csb1/index"&gt;http://dcc-ex.com/ex-csb1/index&lt;/a&gt; with design files on the DCC-EX: Github &lt;a class="reference external" href="https://github.com/DCC-EX/EX-CSB1"&gt;https://github.com/DCC-EX/EX-CSB1&lt;/a&gt; &lt;img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"&gt;.&lt;/p&gt;
 &lt;p&gt;In connection with the release of the EX-CSB1, version 5.0 of the EX-CommandStation is releasing with extended support for the EX-CSB1 and the entire suite of DCC-EX products.&lt;/p&gt;
 &lt;p&gt;DCC-EX would like to extend special thanks to team members Paul Antoine and Harald Barth for their ideas and contribution to the funding and design of the CSB1 and engineer (head designer of the EX-MotorShield8874), Erwin Peterlin of Semify in Austria providing his time and design expertise.&lt;/p&gt;
 &lt;/section&gt;

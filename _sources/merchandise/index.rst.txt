@@ -6,7 +6,7 @@
 DCC-EX Merchandise
 *******************
 
-Another way you can support the DCC-EX Project is to buy our DCC-EX branded merchandise, EX-Merch! Show everyone you are part of our team. There are several items to choose from in various sizes and colours:
+Another way you can support the |DCC-EX| Project is to buy our |DCC-EX| branded merchandise, EX-Merch! Show everyone you are part of our team. There are several items to choose from in various sizes and colours:
 
 * Regular T-Shirts
 * Premium T-Shirts

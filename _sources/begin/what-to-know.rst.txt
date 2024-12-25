@@ -20,7 +20,7 @@ This page goes through some introductory information about our team and our prod
 
 Please read on, or use the index to the right to skip to any topic of interest.
 
-If you are comfortable with differences between DCC & DC and already know a bit about our products, skip on to the :doc:`next page</begin/levels>` where we explain how our products, and the pages on this site, are tagged with how simple or complex they are.
+If you are comfortable with differences between |DCC| & |DC| and already know a bit about our products, skip on to the :doc:`next page</begin/levels>` where we explain how our products, and the pages on this site, are tagged with how simple or complex they are.
 
 |HR-DASHED|
 
@@ -49,7 +49,7 @@ Our *free*, *open source* software products currently include:
     * - |EX-CS-LOGO-SMALL|
       - |EX-I-LOGO-SMALL|
       - |EX-R-LOGO-SMALL|
-    * - Our DCC & DC command station software for controlling your model railroad |BR| :dcc-ex-text-size-60pct:`For a ready-to-run version of the EX-CommandStation see our` |EX-CSB1-SHORT|
+    * - Our |DCC| & |DC| command station software for controlling your model railroad |BR| :dcc-ex-text-size-60pct:`For a ready-to-run version of the EX-CommandStation see our` |EX-CSB1-SHORT|
       - Our user friendly command station software installer
       - The built-in scripting language for automating your model railroad
     * - |EX-WT-LOGO-SMALL|
@@ -71,7 +71,7 @@ Our *free*, *open source* software products currently include:
     :class: table-list-homepage
 
     * - |EX-CS-LOGO-SMALL| 
-      - Our DCC & DC command station software for controlling your model railroad. |BR| :dcc-ex-text-size-60pct:`For a ready-to-run version of the EX-CommandStation see our` |EX-CSB1-SHORT|
+      - Our |DCC| & |DC| command station software for controlling your model railroad. |BR| :dcc-ex-text-size-60pct:`For a ready-to-run version of the EX-CommandStation see our` |EX-CSB1-SHORT|
     * - |EX-I-LOGO-SMALL| 
       - Our user friendly command station software installer
     * - |EX-R-LOGO-SMALL| 
@@ -102,7 +102,7 @@ Our *open source* hardware products currently include:
     * - |EX-CSB1-LOGO-SMALL|
       - |EX-MS-LOGO-SMALL|
       - |EX-WS-LOGO-SMALL|
-    * - Our ready-to-run DCC & DC command station / booster for controlling your model railroad
+    * - Our ready-to-run |DCC| & |DC| command station / booster for controlling your model railroad
       - Our dual 5A output motor shield for DIY command stations and adding power districts to the EX-CSB1
       - Our WiFi add-on board for DIY command stations
 
@@ -112,7 +112,7 @@ Our *open source* hardware products currently include:
     :class: table-list-homepage
 
     * - |EX-CSB1-LOGO-SMALL| 
-      - Our ready-to-run DCC & DC command station / booster for controlling your model railroad
+      - Our ready-to-run |DCC| & |DC| command station / booster for controlling your model railroad
     * - |EX-MS-LOGO-SMALL| 
       - Our dual 5A output motor shield for DIY command stations and adding power districts to the |EX-CSB1-SHORT|
     * - |EX-WS-LOGO-SMALL| 
@@ -151,7 +151,7 @@ For those of you who already have an investment in DC locos and accessories, the
 
 As mentioned, along with DCC, a |EX-CS| can be used to control **Direct Current (DC)** locomotives using **Pulse Width Modulation (PWM)**. 
 
-This is actually an improvement over pure DC since the full voltage is always applied to the track in pulses. Rather than controlling a voltage from zero to full to control speed, the average *time* the full voltage is applied controls the speed. This allows for better stops and starts and smoother operation at low speeds. 
+This is actually an improvement over pure |DC| since the full voltage is always applied to the track in pulses. Rather than controlling a voltage from zero to full to control speed, the average *time* the full voltage is applied controls the speed. This allows for better stops and starts and smoother operation at low speeds. 
 
 *We do NOT use the flawed "zero stretching" method some command stations use.*
 
@@ -199,7 +199,7 @@ How does spending only US$60 to US$120 (€54 - €110) sound to get the equival
 
 We offer our own ready-to-run solutions in addition to a DIY path where you snap together a command station yourself. The DCC-EX Team created the |EX-CSB1| (|EX-CSB1-SHORT|) which is a full USB or WiFi connected Command Station on one board. Just like the commercial products, you can connect a power supply, connect it to your tracks, and you are ready to run trains in seconds. And the |EX-CSB1-SHORT| is half or less the price of competing systems.
 
-The |DCC-EX| DIY project is our free and open source software you install onto widely available, inexpensive microcontrollers and components to provide full featured DCC and DC train and accessory control. If at the entry level you are willing to do some learning and minor assembling, you can get into modelling or upgrade your current setup very inexpensively.
+The |DCC-EX| DIY project is our free and open source software you install onto widely available, inexpensive microcontrollers and components to provide full featured |DCC| and |DC| train and accessory control. If at the entry level you are willing to do some learning and minor assembling, you can get into modelling or upgrade your current setup very inexpensively.
 
 You will get more features from our software than you will from many commercial DCC controllers, while saving money with the hardware components that can be purchased at a fraction of the price of commercial systems.
 
@@ -209,7 +209,7 @@ As we grow, we are creating an entire ecosystem (an EX-osystem if you will) of p
 
 About the only things we can't help you with is your benchwork and ballasting! ;)
 
-You can start by going to the :doc:`/begin/levels` section and clicking the next button at the bottom of each page to walk through the tutorial in order to understand how to get a basic DCC and/or DC CommandStation up and running.
+You can start by going to the :doc:`/begin/levels` section and clicking the next button at the bottom of each page to walk through the tutorial in order to understand how to get a basic |DCC| and/or |DC| Command Station up and running.
 
 You can also read through the :doc:`/ex-commandstation/accessories/index` section of our documentation to understand how you can control accessories, and also look through :doc:`/throttles/index` to see what throttle/controller options are available to control your trains and/or accessories. But be sure to go back to the beginning by starting at :doc:`/begin/levels`.
 

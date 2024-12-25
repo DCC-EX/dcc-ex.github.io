@@ -34,7 +34,7 @@ First some quick definitions. |EX-CS| is two things:
 
    RTR EX-CSB1 |BR| Command Station / Booster
    
-An |EX-CS| is a simple, but powerful, DCC and DC Command Station which you can purchase ready-to-run or assemble yourself from widely available parts. It supports much of the NMRA Digital Command Control (DCC) standards, including:
+An |EX-CS| is a simple, but powerful, |DCC| and |DC| Command Station which you can purchase ready-to-run or assemble yourself from widely available parts. It supports much of the NMRA Digital Command Control (DCC) standards, including:
 
 * Simultaneous control of multiple locomotives
 * Control of all cab/loco functions (F0-F28 and F29-F68)
@@ -87,7 +87,7 @@ To get started, simply choose your path.
     * - |EX-CSB1-LOGO-SMALL|
       - |EX-CS-DIY-LOGO-SMALL|
     * - Our ready-to-run (RTR) |DCC| & |DC PWM| command station / booster for controlling your model railroad
-      - Do-it-yourself (DIY) instructions on the parts to buy to build your own DCC & DC command station
+      - Do-it-yourself (DIY) instructions on the parts to buy to build your own |DCC| & |DC| command station
 
 ----
 

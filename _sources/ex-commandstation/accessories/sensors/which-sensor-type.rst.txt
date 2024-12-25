@@ -91,7 +91,7 @@ Hall effect sensors consist of a hall effect device mounted between the track ra
 Block occupancy detectors
 =========================
 
-Block occupancy detectors are quite commonly found in DC layouts and have been a very popular method for detecting when a locomotive and/or rolling stock is occupying a DC power district or a specific, isolated section of track.
+Block occupancy detectors are quite commonly found in |DC| layouts and have been a very popular method for detecting when a locomotive and/or rolling stock is occupying a |DC| power district or a specific, isolated section of track.
 
 These typically work by detecting current being drawn through the track power wiring, requiring resistor wheelsets to be installed on rolling stock. A locomotive requires no modification as the motor (or DCC decoder) will enable this detection.
 

@@ -2909,10 +2909,10 @@ Configures the mode of the selected track, refer also to :doc:`/trackmanager/ind
 *Parameters:* |BR|
 |_| > **track** - - The track to configure, valid options are A to H |BR|
 |_| > **mode** - - The mode to set the track to, |BR|
-|_| |_| |_| |_| valid options for DCC are: |BR|
+|_| |_| |_| |_| valid options for |DCC| are: |BR|
 |_| |_| |_| |_| - ``MAIN`` or |BR|
 |_| |_| |_| |_| - ``PROG``, |BR|
-|_| |_| |_| |_| and valid options for DC are: |BR|
+|_| |_| |_| |_| and valid options for |DC| are: |BR|
 |_| |_| |_| |_| -  ``DC`` |BR|
 |_| |_| |_| |_| - , ``DCX``. |BR|
 |_| |_| |_| |_| If a track is unused, it can be set to: |BR| 

@@ -27,7 +27,7 @@ First and foremost, there is nothing fundamentally wrong with any of the commerc
 
 
 Areas of Comparison
--------------------
+===================
 
 This page will compare the following areas in broad generic terms:
 
@@ -39,16 +39,18 @@ This page will compare the following areas in broad generic terms:
 |hr-dashed|
 
 Cost
-^^^^
+----
 
 Hands down, the |EX-CS| is the lowest cost DCC Command Station option available. 
 
-Depending on the configuration you choose, the least expensive commercial system will be three, or more, times more expensive than a |EX-CS|.  Also, it won't have a fraction of the built in features (see below) that the |EX-CS| has. There are many features unique to an |EX-CS| that you won't find anywhere else.
+Depending on the configuration you choose, the least expensive commercial system will be three, or more, times more expensive than a |EX-CS|.  
+
+Also, it won't have a fraction of the built in features (see below) that the |EX-CS| has. There are many features unique to an |EX-CS| that you won't find anywhere else.
 
 |hr-dashed|
 
 Purchasing
-^^^^^^^^^^
+----------
 
 While DCC-EX has several resellers spread over the world, many commercial systems have a larger established reseller network. 
 
@@ -61,7 +63,7 @@ The Do-It-Yourself option is where you purchase a microcontroller (such as an Ar
 |hr-dashed|
 
 Setup complexity
-^^^^^^^^^^^^^^^^
+----------------
 
 If you purchase a |EX-CSB1| or a complete Mega or ESPDuino32 system from one of our resellers, your experience will be similar to purchasing a commercial system minus the fancy packaging and, in some cases, having to provide your own enclosure if you require one.
 
@@ -74,18 +76,22 @@ For a complete DIY system, loading the software, assembling the boards, making a
 |hr-dashed|
 
 Usability
-^^^^^^^^^
+---------
 
 Once the systems are setup, there is generally not a lot of difference in terms of usability between the commercial systems and an |EX-CS|.
 
-While not functionally different, the area of greatest difference is that most of the commercial system come with some form of physical controller.  Most |EX-CS| owners use inexpensive smart phones, or tablets to control their locos. Most people already have a phone they replaced sitting in a drawer or can get one cheap on ebay if they don't want to user their main cell phone.
+While not functionally different, the area of greatest difference is that most of the commercial systems come with some form of physical controller.  Usually only one controller is provided.
+
+Most |EX-CS| owners use inexpensive smart phones, or tablets to control their locos. Most people already have a phone they replaced sitting in a drawer or can get one cheap on ebay if they don't want to user their main cell phone.
+
+Our DIY solution provides for 4 WiFi connections out of the box. The RTR |EX-CSB1-SHORT| provides for 10 connections.
 
 You can have/use physical controllers (not a phone, tablet or computer) with |EX-CS|, but that is an additional item to build or purchase. Note that there are multiple inexpensive physical throttle designs that you can build yourself. There is a list of throttles that work with |EX-CS| in our :ref:`throttles/index:throttles (controllers)` section. 
 
 |hr-dashed|
 
 Built in Features
-^^^^^^^^^^^^^^^^^
+-----------------
 
 Here the |EX-CS| shines.
 
@@ -93,17 +99,17 @@ DCC *and DC* loco control, Auto-Reverser, WiFi throttles, Rosters, |EX-R|, |JMRI
 
 However, there are features that a built into some of the commercial systems that are not exactly *built into* the |EX-CS|, including:
 
-- Hardware Throttle. |BR| Many commercial starter sets come with built-in throttles. |EX-CS| requires the use of some sort of external throttle. Most of which are free but are not *technically* part of the |EX-CS| ^.
-- CV programming |BR| Many commercial starter sets can program CVs using the hardware in the box. |EX-CS| requires the use of |ED|, |JMRI|, |EX-WT|, or|EX-toolbox| which, while are all free are not *technically* part of the |EX-CS| ^.
-- FastClock.  For the |EX-CS| this is an optional free extra.
-- *Simple to use* Advanced Consisting
+- Hardware Throttle. |BR| Many commercial starter sets come with built-in throttles. |EX-CS| requires the use of some sort of external throttle. Most of which are free but are not *technically* part of the |EX-CS|. [#ht1]_
+- CV programming |BR| Many commercial starter sets can program CVs using the hardware in the box. |EX-CS| requires the use of |ED|, |JMRI|, |EX-WT|, or |EX-TB| which, while are all free, are not *technically* part of the |EX-CS|.
+- FastClock. |BR| For the |EX-CS| this is an optional free DIY extra. [#ht1]_
+- *Simple to use* `Advanced Consisting <https://dccwiki.com/Multiple_Unit_Consisting>`_ |EXTERNAL-LINK|. |BR| Note that |Engine Driver| and |WiThrottle| support *simple to use* on-the-fly consisting instead.
 
-^ We don't consider this a negative, just a difference.  The out-of-the-box capability to use multiple external devices as throttle or to program decoders is flexible and powerful.
+.. [#ht1] We don't consider this a negative, just a difference.  The out-of-the-box capability to use multiple external devices as throttle or to program decoders is flexible and powerful.
 
 |hr-dashed|
 
 Options/Expansion
-^^^^^^^^^^^^^^^^^
+-----------------
 
 |EX-CS| has almost unlimited expansion capability.
 
@@ -114,7 +120,7 @@ Having said that, most of the commercial system have different expansion options
 |hr-dashed|
 
 Support
-^^^^^^^
+-------
 
 With virtually 24/7 online support, we feel the DCC-EX option is unique. What other company let's you speak directly to the developers?
 
@@ -122,12 +128,14 @@ With commercial systems you usually get high quality support, replacement for fa
 
 Because members of the |DCC-EX| team are located world-wide, there is usually someone that can help you within a few hours on our `Discord Server <https://discord.gg/sWNPUsg8>`_ . 
 
-If you purchased an |EX-CSB1| or other system from a DCC-EX Reseller, support is available both from that reseller and online from the DCC-EX team and users. If you purchased parts and installed the software yourself, is up to you to deal with this side of the process. The positive is that, if you wish, the costs are so low that you can keep spares of most items and still be well under the total cost of a commercial system.
+If you purchased an |EX-CSB1| or other system from a DCC-EX Reseller, support is available both from that reseller and online from the DCC-EX team and users. 
+
+If you purchased parts and installed the software yourself, is up to you to deal with this side of the process. The positive is that, if you wish, the costs are so low that you can keep spares of most items and still be well under the total cost of *any* commercial system.
 
 |hr-dashed|
 
 Community
-^^^^^^^^^
+---------
 
 |DCC-EX| is clear the winner here.
 
@@ -138,7 +146,7 @@ While the commercial systems have strong followings, and there are plenty of peo
 |hr-dashed|
 
 Non-proprietary / Open Source
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
 
 The other aspect of |DCC-EX| that should not be taken lightly is that it is all *open source* using of-the-shelf or open source hardware. Everyone is free to use or modify our code and hardware designs as they see fit, for non-commercial use. This shows clearly in the volume and rate of features and options being continuously added by the team. We actively invite, encourage and support people who want to contribute to the products.
 

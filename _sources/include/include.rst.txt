@@ -244,6 +244,10 @@
    
     :doc:`DC PWM </reference/hardware/dcc-vs-dc>`
 ..
+.. |DC| replace::
+   
+    :doc:`DC </reference/hardware/dcc-vs-dc>`
+..
 .. |DCC| replace::
    
     :doc:`DC </reference/hardware/dcc-vs-dc>`

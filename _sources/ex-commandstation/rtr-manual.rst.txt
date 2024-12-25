@@ -426,12 +426,12 @@ The power connection to your track will be either wires you solder yourself to t
 
 Once you are sure power is disconnected from the CS and the power LED is no longer illuminated, you can connect wires from the A output (+ and -) of the command station to the track. 
 
-For DCC operation it does not matter which wire goes to which rail, since there is no polarity. However, as you layout grows, it is important to stay consistent with your wiring to ensure that different power districts remain in phase. That just means that when the tracks rapidly switch between one being energized and the other at ground potential, all the districts stay synchronised. 
+For |DCC| operation it does not matter which wire goes to which rail, since there is no polarity. However, as you layout grows, it is important to stay consistent with your wiring to ensure that different power districts remain in phase. That just means that when the tracks rapidly switch between one being energized and the other at ground potential, all the districts stay synchronised. 
 
 
 .. todo XXX You can find more detail on this in our wiring section XXX. [link]
 
-For DC operation, polarity does matter. One rail is positive, and the other is negative, which determines the direction your train will move when voltage is applied through the command station. If you reverse the voltage, the train will change direction and run in reverse.
+For |DC| operation, polarity does matter. One rail is positive, and the other is negative, which determines the direction your train will move when voltage is applied through the command station. If you reverse the voltage, the train will change direction and run in reverse.
 
 |HR-DASHED|
 
@@ -450,7 +450,7 @@ Refer to :ref:`ex-commandstation/rtr-manual:dc operation` section for informatio
 Track Outputs
 --------------
 
-You will notice that the two track outputs on the |EX-CSB1-SHORT| are labelled A and B. In the standard DCC-EX configuration of a EX-CSB1, A is configured for DCC MAIN operation, and B is configured for PROG or programming track output. We recommend connecting your track to the A MAIN output initially to test your Command Station. To alter this default configuration of DCC outputs, or for DC Mode, you would need to configure outputs with a TrackManager command in the mySetup.h file or via Routes. See :doc:`the TrackManager page </trackmanager/index>`
+You will notice that the two track outputs on the |EX-CSB1-SHORT| are labelled A and B. In the standard DCC-EX configuration of a EX-CSB1, A is configured for DCC MAIN operation, and B is configured for PROG or programming track output. We recommend connecting your track to the A MAIN output initially to test your Command Station. To alter this default configuration of |DCC| outputs, or for |DC| Mode, you would need to configure outputs with a TrackManager command in the mySetup.h file or via Routes. See :doc:`the TrackManager page </trackmanager/index>`
 
 .. TODO XXX [screw terminal image] XXX
 
@@ -552,7 +552,7 @@ DC Pulse Width Modulation (PWM)
 
 The EX-CSB1 is set to operate in |DCC| mode by default. You can switch to any of the outputs to |DC PWM| mode.
 
-The process to change the outputs to DC are described in detail in the :doc:`/trackmanager/index` page.
+The process to change the outputs to |DC| are described in detail in the :doc:`/trackmanager/index` page.
 
 Additional technical information about |DC PWM| are explained on our :doc:`/reference/hardware/dcc-vs-dc`.
 

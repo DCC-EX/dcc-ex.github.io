@@ -133,7 +133,7 @@ There are 2 track output power connectors marked ``A`` and ``B``. In the standar
 
 We recommend connecting your track to the ``A`` **MAIN** output initially to test your Command Station. 
 
-To alter this default configuration of DCC outputs, or for DC Mode, you would need to configure outputs with a |TM| command in the ``mySetup.h`` file or by creatine a 'Route'. See the :doc:`TrackManager page </trackmanager/index>` for details.
+To alter this default configuration of |DCC| outputs, or for |DC| Mode, you would need to configure outputs with a |TM| command in the ``mySetup.h`` file or by creatine a 'Route'. See the :doc:`TrackManager page </trackmanager/index>` for details.
 
 .. figure:: /_static/images/ex-csb1/ab_outputs.png
    :alt: Track A and B Outputs
@@ -514,7 +514,7 @@ At startup of the |EX-CSB1| the OLED screen shows useful information.
 DCC Operation
 ---------------
 
-The |EX-CSB1| is set to operate in DCC mode by default. If you want to switch to any of the outputs to DC mode, you can find instructions on how to do that on the :doc:`TrackManager page </trackmanager/index>`.
+The |EX-CSB1| is set to operate in |DCC| mode by default. If you want to switch to any of the outputs to |DC| mode, you can find instructions on how to do that on the :doc:`TrackManager page </trackmanager/index>`.
 
 |HR-DASHED|
 

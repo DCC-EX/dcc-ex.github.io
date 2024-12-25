@@ -550,11 +550,11 @@ Referencing Key Objects in Sequences
 Referencing Turnouts/Points
 ---------------------------
 
-|EX-CS| supports a number of different turnout/point hardware configurations, but your automation treats them all as simple ID numbers. Turnouts may be defined using ``<T>`` commands from JMRI, or in ``SETUP("<T ...>")`` commands placed in your mySetup.h file, or C++ code in mySetup.h, just like earlier versions.
+|EX-CS| supports a number of different turnout/point hardware configurations, but your automation treats them all as simple ID numbers. Turnouts may be defined using ``<T>`` commands from |JMRI|, or in ``SETUP("<T ...>")`` commands placed in your mySetup.h file, or C++ code in mySetup.h, just like earlier versions.
 
 You may, however, find it more convenient to define turnouts/points using |EX-R| commands, which may appear anywhere in the 'myAutomation.h' file, even after they are referenced in an ``ONTHROW``, ``ONCLOSE``, ``THROW`` or ``CLOSE`` command. (EXRAIL extracts the turnout definitions just once from your script at Command Station startup.)
 
-Turnouts/Points defined in 'myAutomation.h' will still be visible to WiThrottle and JMRI in the normal way.
+Turnouts/Points defined in 'myAutomation.h' will still be visible to WiThrottle and |JMRI| in the normal way.
 
 A TURNOUT command sends DCC signals to a decoder attached to the track, a PIN_TURNOUT sends a "throw" or "close" (5V or 0V signal) to a pin on the Arduino, and a SERVO_TURNOUT sends an |I2C| serial command to a servo board connected to your servos.
  
@@ -599,7 +599,7 @@ Sensor numbers are direct references to VPINs (virtual pin numbers) in the Hardw
 
 Sensors with ID's 0 to 255 may be LATCHED/UNLATCHED in your script. If a sensor is latched on by the script, it can only be set off by the script… so ``AT(5) LATCH(5)`` for example effectively latches the sensor 5 on when detected once.
 
-Sensor polling by JMRI is independent of this, and may continue if ``<S>`` commands are used.
+Sensor polling by |JMRI| is independent of this, and may continue if ``<S>`` commands are used.
 
 ----
 

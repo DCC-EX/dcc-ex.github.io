@@ -70,7 +70,7 @@ Everything on this page seems to come in twos! You have two options for connecti
 
 If you don't need |JMRI|, or just want to connect your wireless throttle (controller) directly to the |EX-CS|, then you connect to the Command Station using a WiFi or Bluetooth device that speaks either the |DCC-EX Native Commands|, or the |WiThrottle Protocol| command language. 
 
-For example, |Engine Driver| uses the |WiThrottle Protocol|, so it can connect either directly to the |EX-CS| via WiFi, or indirectly through the JMRI computer that has WiFi and its own |WiThrottle Server|. DCCpp CAB can connect directly to the |EX-CS| via WiFi or Bluetooth, and sends |DCC-EX Native Commands|.
+For example, |Engine Driver| uses the |WiThrottle Protocol|, so it can connect either directly to the |EX-CS| via WiFi, or indirectly through the |JMRI| computer that has WiFi and its own |WiThrottle Server|. DCCpp CAB can connect directly to the |EX-CS| via WiFi or Bluetooth, and sends |DCC-EX Native Commands|.
 
 What's a "WiThrottle Server"?
 ==============================
@@ -87,7 +87,7 @@ There are two ways to configure the WiFi board connected to |EX-CS|: "Access Poi
 Access Point Mode
 -----------------
 
-In |Access Point| (AP) mode, the tiny ESP-WiFi chip acts as a very basic WiFi server and provides a small IP network for your throttle or for your computer running JMRI with the |WiThrottle Server| enabled. It acts much like your router does to let things connect directly to it (currently up to four connections). Using the Command Station in AP mode allows you to have a separate network so you can keep your layout network separate from your home network. This is the simplest way to enable a connection for a WiFi throttle.
+In |Access Point| (AP) mode, the tiny ESP-WiFi chip acts as a very basic WiFi server and provides a small IP network for your throttle or for your computer running |JMRI| with the |WiThrottle Server| enabled. It acts much like your router does to let things connect directly to it (currently up to four connections). Using the Command Station in AP mode allows you to have a separate network so you can keep your layout network separate from your home network. This is the simplest way to enable a connection for a WiFi throttle.
 
 If you travel to shows, or take your setup to a friend's house, this allows for an autonomous, transportable system that does not need a connection to, and hopefully will not interfere with, other networks. 
 

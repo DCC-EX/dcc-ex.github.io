@@ -167,9 +167,9 @@ There are three ways to load & store your Locomotive Icon Image in Engine Driver
 
 1. **Automatically from your existing JMRI Roster & Media**
   
-  If you have a JMRI Server that does support loco images:
+  If you have a WiThrottle Server that does support loco images:
 
-  * Start JMRI and capture and load your images into JMRI Roster & Media panel as normal
+  * Start |JMRI| and capture and load your images into JMRI Roster & Media panel as normal
   * Start the |WiThrottle server|.
   * Start the Web Server.
   * Connect |Engine Driver| to JMRI |WiThrottle server| Discovered Server 'My JMRI Railroad' or type in the IP address : Port# 

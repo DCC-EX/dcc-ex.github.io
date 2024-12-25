@@ -327,5 +327,5 @@
 .. [#t3] CV programming is only available in Engine Driver when connected using the DCC-EX Native protocol.
 .. [#t4] Note: The Android throttle apps listed above can be made to made to run on Windows PCs. See :doc:`Running Android apps on Microsoft Windows <software/android-apps-on-windows>`.
 .. [#t5] JMRI is a suite of applications.  This table only refers the Web based throttle component of JMRI.  To use the Web throttle you will need to be running the JMRI suite of applications on a PC (Windows, OSX or Linux) or RPi. e.g. **Decoder Pro** or **Panel Pro**.
-.. [#t6] Connection JMRI to an EX-CommandStation over WiFi works, but is not recommended and is not supported 
+.. [#t6] Connecting JMRI to an EX-CommandStation over WiFi works, but is not recommended and is not supported 
 

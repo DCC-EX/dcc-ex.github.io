@@ -502,7 +502,7 @@ Controlling & Managing DCC-EX TrackManager modes
 
 You can Assign Tracks/Districts to DCC and DC mode in four ways:
 
-  1. Command Line via PC with Arduino IDE Serial Monitor or JMRI serial Traffic Monitor and it is sent through your USB connected cable.
+  1. Command Line via PC with Arduino IDE Serial Monitor or |JMRI| serial Traffic Monitor and it is sent through your USB connected cable.
   2. Create an |EX-R| myAutomation.h file Scripts for Track Manager assigned commands and they automatically appear in |Engine Driver| as GUI Automation [Handoff] and Route [Set] buttons, and in WiThrottle WiFi Throttle iOS as [Route] buttons, and on TCS Universal UWT-50 & 100 WiFi Throttle [Select Accry] lines.
 
   3. Enhanced |Engine Driver| WiFi Throttle Android app v2.35.169+ features;
@@ -525,7 +525,7 @@ New |Engine Driver| DCC-EX Native mode features now available today via Google P
 TrackManager Commands
 ---------------------
 
-Sending commands from the Arduino IDE Serial Monitor or JMRI Send Command Line or a |Engine Driver| WiFi Throttle.
+Sending commands from the Arduino IDE Serial Monitor or |JMRI| Send Command Line or a |Engine Driver| WiFi Throttle.
 
 To display the current TrackManager configuration, use the command ``<=>`` an equal sign looks like a track.
 
@@ -659,7 +659,7 @@ Cool thing is the new |EX-R| Automation(n) & Routes(n) work the same with DCC en
 
 With the new DCC-EX direct WiFi Discovered Server you can connect |Engine Driver| & other WiThrottle app based throttles directly and have |EX-R| [Handoff] & [Set] buttons to run |EX-R| scripts from the throttles.
 
-These are DCC-EX Major feature/benefits because with other systems you'll have to use a PC computer or Pi processor & JMRI for WiThrottle Server throttle access and you have to write two different JMRI Jython.py scripts and then Setup Tools> Tables> Routes for for both DCC and DC automation & routes runs.
+These are DCC-EX Major feature/benefits because with other systems you'll have to use a PC computer or Pi processor & |JMRI| for WiThrottle Server throttle access and you have to write two different |JMRI| Jython.py scripts and then Setup Tools> Tables> Routes for for both DCC and DC automation & routes runs.
 
 |HR-DASHED|
 

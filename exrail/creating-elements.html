@@ -959,7 +959,7 @@ SINGLE_COIL_TURNOUT(101, 22, 24, 26, &quot;Turnout 101&quot;)
 </div>
 <p><a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> allows for sensors that are <strong>Active Low or Active High</strong>. This is particularly important for IR sensors that have been converted to detect by broken beam, rather than reflection. By making the sensor number negative, the sensor state is inverted. e.g. <code class="docutils literal notranslate"><span class="pre">AT(-22)</span></code>.</p>
 <p>Sensors with ID’s 0 to 255 may be LATCHED/UNLATCHED in your script. If a sensor is latched on by the script, it can only be set off by the script… so <code class="docutils literal notranslate"><span class="pre">AT(22)</span> <span class="pre">LATCH(22)</span></code> for example effectively latches the sensor 22 on when detected once.</p>
-<p>Sensor polling by JMRI is independent of this, and may continue if <code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code> commands are used.  However there is now a way of defining JMRI sensors from within <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> - see EXRAIL Command Reference - JMRI_SENSOR.</p>
+<p>Sensor polling by <a class="reference internal" href="../throttles/software/jmri.html"><span class="doc">JMRI</span></a> is independent of this, and may continue if <code class="docutils literal notranslate"><span class="pre">&lt;S&gt;</span></code> commands are used.  However there is now a way of defining <a class="reference internal" href="../throttles/software/jmri.html"><span class="doc">JMRI</span></a> sensors from within <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> - see EXRAIL Command Reference - JMRI_SENSOR.</p>
 </section>
 </section>
 <hr class="docutils" />
@@ -1027,7 +1027,7 @@ SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for turnout/point 1, Thrown=Red,
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fbc603b7880>
+    <jinja2.runtime.BlockReference object at 0x7f77c6fb33a0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

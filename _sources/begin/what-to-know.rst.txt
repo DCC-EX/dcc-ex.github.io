@@ -293,7 +293,7 @@ e.g. Most Motor Boards have two outputs. Both can be DCC, or one DCC and one DC,
 What is DCC++
 -------------
 
-**DCC++** is the original name of the software developed by Gregg Berman. When this was redeveloped into the EX-CommandStation software the 'DCC++' name hung around though it is largely obsolete.  For backwards compatibility with external systems like JMRI, the term is still needed.
+**DCC++** is the original name of the software developed by Gregg Berman. When this was redeveloped into the |EX-CS| software the 'DCC++' name hung around though it is largely obsolete.  For backwards compatibility with external systems like |JMRI|, the term is still needed.
 
 See the :doc:`/news/posts/20201001` news article for more information.
 

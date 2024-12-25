@@ -69,7 +69,7 @@ Either using the |EX-I| or the |Arduino IDE|.
 When Connected to a PC via USB
 ==============================
 
-**If you have connected your EX-CommandStation to a PC via USB** (including for using JMRI).
+**If you have connected your EX-CommandStation to a PC via USB** (including for using |JMRI|).
 
 Initial Check
 -------------
@@ -143,9 +143,9 @@ Using JMRI
     - (a) Have you plugged in and turned on a 12-15v DC power supply into the motor board
       (b) Have you made sure the polarity of the power supply is correct. 
 
-  * - 4. When you open a throttle window in JMRI, select a loco and move the throttle, does the loco move?
+  * - 4. When you open a throttle window in |JMRI|, select a loco and move the throttle, does the loco move?
     - Congratulations, your |EX-CS| is essentially working.
-    - (a) Have you connected the track to the 'MAIN' outputs of the Motor Board.  |BR| JMRI cannot directly control trains on the 'PROGRAMMING' outputs without using additional commands. See :ref:`support/ex-cs-troubleshooting:cannot drive a locomotive` for more information.
+    - (a) Have you connected the track to the 'MAIN' outputs of the Motor Board.  |BR| |JMRI| cannot directly control trains on the 'PROGRAMMING' outputs without using additional commands. See :ref:`support/ex-cs-troubleshooting:cannot drive a locomotive` for more information.
       (b) Wrong loco DCC Address selected.
       (c) loco is not DCC decoder equipped.  (You will likely hear a humming coming from the loco. If you do remove it from the track urgently, the loco is being damaged.)
 

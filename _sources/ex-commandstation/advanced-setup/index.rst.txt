@@ -82,7 +82,7 @@ Connection Options
 
 How you connect to your |EX-CS| is going to depend entirely on your personal choices of how you wish to interact with it. 
 
-* Are you a JMRI user? 
+* Are you a |JMRI| user? 
 * Do you only want to use wireless hand-held throttles?
 
 To facilitate a variety of these choices, there are four ways to connect: 
@@ -97,7 +97,7 @@ Depending on your platform choice for your |EX-CS|, the connectivity options are
 Direct Connection (USB)
 -----------------------
 
-If you are a JMRI user, then a direct USB connection is all you need. JMRI will connect to your |EX-CS| via the USB port, and you won't require any other connection method to be available.
+If you are a |JMRI| user, then a direct USB connection is all you need. |JMRI| will connect to your |EX-CS| via the USB port, and you won't require any other connection method to be available.
 
 Note for Uno and Nano users, this is your only option for connectivity as mentioned in :ref:`ex-commandstation/advanced-setup/index:microcontrollers`.
 

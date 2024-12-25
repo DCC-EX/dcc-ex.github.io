@@ -54,7 +54,7 @@ Even if you don't intend to use |JMRi| to control your layout, it still has the 
 DCC-EX & JMRI DecoderPro Getting Started Guide
 ----------------------------------------------
 
-To assist you in setting up a DCC-EX & JMRI DecoderPro Programming Station please download and follow the :ref:`reference/downloads/documents:comprehensive dcc-ex & jmri decoderpro getting started guide pdf`.
+To assist you in setting up a |EX-CS| & |JMRI| DecoderPro Programming Station please download and follow the :ref:`reference/downloads/documents:comprehensive dcc-ex & jmri decoderpro getting started guide pdf`.
 
 Programming CVs with EX-Toolbox app
 ===================================

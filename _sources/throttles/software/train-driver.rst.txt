@@ -26,7 +26,7 @@ Following protocols are supported:
 
 - SRCP including MFX extension
 - Z21 from Fleischmann / Roco
-- |wiThrottle Protocol| commands as used e.g. in JMRI or DCC-EX
+- |wiThrottle Protocol| commands as used e.g. in |JMRI| or DCC-EX
 - |DCC-EX Native Commands|
 
 In order to control a locomotive, the app must be connected to a control center. A small red point flashes at the bottom right of the symbol. Now the locomotive can be set. Again a small red point flashes at the bottom right of the symbol.

@@ -32,8 +32,8 @@ Features
 =========
 
 * Supports WiThrottle Protocol
-* Connects to JMRI
-* Connects to |EX-CS| if not using JMRI
+* Connects to |JMRI|
+* Connects to |EX-CS| if not using |JMRI|
 * Connects via WiFi
 
 .. _withrottle-screenshots:
@@ -65,7 +65,7 @@ Operation
 To use WiFi, make sure you have a WiFi enabled |EX-CS| as described in the :doc:`Wifi Setup </ex-commandstation/diy/wifi-setup>` section.
 
 * Open the network settings on your phone
-* Change to same network of the PC that JMRI is on
+* Change to same network of the PC that |JMRI| is on
 * Start the |WiThrottle| App
 * |WiThrottle| will try to find the |WiThrottle Server| on the |EX-CS|
 * If you are using |Access Point Mode| 

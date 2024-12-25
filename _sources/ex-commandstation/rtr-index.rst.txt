@@ -28,9 +28,9 @@ Features
 The |DCC-EX| |EX-CSB1-SHORT| comes ready to use out of the box and has the following features:
 
 *	**Dual DCC/PWM DC outputs** with up to 5A capacity – easily expandable to 4 outputs
-*	**WiFi built-in** – fast 802.11n capable, with Access Point and Station modes including support for connecting as many as 10 WiFi throttles (you can also connect to JMRI via WiFi, but a USB cable is often better)
+*	**WiFi built-in** – fast 802.11n capable, with Access Point and Station modes including support for connecting as many as 10 WiFi throttles (you can also connect to |JMRI| via WiFi, but a USB cable is often better)
 *	**Single power supply** for track and onboard electronics – 12-25V DC with polarity protection
-*	**USB-C connector** – for software upload, diagnostic monitoring, DCC-EX WebThrottle and JMRI connectivity
+*	**USB-C connector** – for software upload, diagnostic monitoring, DCC-EX WebThrottle and |JMRI| connectivity
 *	**Railsync DCC input** – enables booster mode, which with an optional |EX-R| script can be automatically engaged on receipt of a signal
 *	OLED screen – for diagnostics, status and information display
 

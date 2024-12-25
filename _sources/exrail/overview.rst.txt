@@ -59,11 +59,11 @@ You DON'T need:
 Reasons to use EXRAIL rather than extra software and/or hardware
 =================================================================
 
-I have used C++ on Arduino's and Python/Jython on JMRI software to build Automation sequences. I now use |EX-R| instead because:
+I have used C++ on Arduino's and Python/Jython on |JMRI| software to build Automation sequences. I now use |EX-R| instead because:
 
 - It's significantly easier and more flexible than the other two options.
 - I reduce the number of Uno and Nano accessory boards needed to do the same tasks on the layout by using the |DCC-EX| Command Station and embedded |EX-R| instead.
-- I can create Automations, Routes, & Sequence scripts With |EX-R| on the Command Station and still access them from JMRI PanelPro and DecoderPro GUI buttons with a simple sendDCCmessage.py script pointer that passes them to the |EX-R| scripts on the Command Station, so I don't have to rewrite the script in Jython/Python.
+- I can create Automations, Routes, & Sequence scripts With |EX-R| on the Command Station and still access them from |JMRI| PanelPro and DecoderPro GUI buttons with a simple sendDCCmessage.py script pointer that passes them to the |EX-R| scripts on the Command Station, so I don't have to rewrite the script in Jython/Python.
 - |EX-R| is ten times easier to learn and use and is more flexible then the other methods.
 
 ----

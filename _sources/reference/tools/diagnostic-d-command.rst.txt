@@ -35,7 +35,7 @@ The following commands turn ON(1) or OFF(0) various diagnostic traces
 
 ``<D ACK ON|OFF>`` trace DCC ACK processing when reading/writing on the prog track. See :doc:`diagnostic-d-ack-command`.
 
-``<D CMD ON|OFF>`` trace received JMRI commands.
+``<D CMD ON|OFF>`` trace received |JMRI| commands.
 
 ``<D WIFI ON|OFF>`` trace WiFi protocol AT command conversation between Arduino and WiFi hardware.
 

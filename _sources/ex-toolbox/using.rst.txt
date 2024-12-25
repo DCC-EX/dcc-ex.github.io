@@ -522,7 +522,7 @@ This screen displays
 Connecting via JMRI
 ===================
 
-|EX-TB| can't normally connect to a |EX-CS| through JMRI, however it is possible if you ``Load DCC== over TCP Server`` in the DCC++ menu in JMRI, then connect |EX-TB| to the additional server that is presented.
+|EX-TB| can't normally connect to a |EX-CS| through |JMRI|, however it is possible if you ``Load DCC== over TCP Server`` in the DCC++ menu in |JMRI|, then connect |EX-TB| to the additional server that is presented.
 
 ----
 
@@ -577,7 +577,7 @@ Using *SerialToIPGUI* (For Microsoft Windows) (Recommended):
 
 .. warning::
 
-   This 'trick' only supports a single connection at a time.  So it is important that JMRI (if you are using it), or the |Arduino IDE| serial monitor, or anything else that might be using the COM (USB) port are shut down first.
+   This 'trick' only supports a single connection at a time.  So it is important that |JMRI| (if you are using it), or the |Arduino IDE| serial monitor, or anything else that might be using the COM (USB) port are shut down first.
 
 Downloads
 ---------

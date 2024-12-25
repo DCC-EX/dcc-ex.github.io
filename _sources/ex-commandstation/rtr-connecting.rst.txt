@@ -22,14 +22,14 @@ EX-CSB1 Quick Setup Guide
 
 This quick startup guide is designed to have you configured and setup to run trains in 5 minutes. After all, the point is to enjoy running trains, not sifting through more information than you need until you are ready. 
 
-These instructions are for DCC locomotives. For more detailed information, to configure for running DC trains, or to use different throttles like EX-WebThrottle or JMRI, see the :doc:`EX-CSB1 Operating Manual <rtr-manual>`
+These instructions are for DCC locomotives. For more detailed information, to configure for running DC trains, or to use different throttles like |EX-WT| or |JMRI|, see the :doc:`EX-CSB1 Operating Manual <rtr-manual>`
 
 What You Will Need
 ==================
 
 * An |EX-CSB1| [#c1]_
 * A **Power supply** (12V - 16V DC see :ref:`Power Supplies <reference/hardware/power-supplies:power supplies>`)
-* A **DCC loco** (If you are here to run DC locos, please go to the :doc:`../trackmanager/index` page.)
+* A **DCC loco** (If you are here to run DC locos, please go to the :doc:`/trackmanager/index` page.)
 * Some **Track**
 * **16 to 28AWG/1.5mm^2 Wire**, preferably in 2 colours with 1/8"/6mm insulation stripped (and wire tinned if stranded)
 * Jeweller's **flat bladed screwdriver** (1.5 - 2mm blade)

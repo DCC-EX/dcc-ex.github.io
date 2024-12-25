@@ -1797,7 +1797,7 @@ Sensors/Inputs - Reading and Responding
 
 |NEW-IN-V5-4-LOGO-SMALL|
 
-This command causes the creation of JMRI <S> type sensors in a way that is simpler than repeating lines of <S> commands in mySetup.h.
+This command causes the creation of |JMRI| <S> type sensors in a way that is simpler than repeating lines of <S> commands in mySetup.h.
 
 - JMRI_SENSOR(100)   is equivalent to <S 100 100 1>
 - JMRI_SENSOR(100,16) will create <S> type sensors for vpins 100-115.

@@ -32,7 +32,7 @@ First some quick definitions. |EX-CS| is two things:
    :scale: 25%
    :align: right
 
-   R2R EX-CSB1 Command Station / Booster
+   RTR EX-CSB1 Command Station / Booster
    
 An |EX-CS| is a simple, but powerful, DCC and DC Command Station which you can purchase ready-to-run or assemble yourself from widely available parts. It supports much of the NMRA Digital Command Control (DCC) standards, including:
 

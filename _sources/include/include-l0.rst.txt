@@ -52,6 +52,10 @@
 
   <a href="./ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a>
 ..
+.. |EX-CSB1-SHORT| raw:: html
+
+  <a href="./ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a>
+..
 .. |BSC| raw:: html
 
   <span class="ex-suffix">BaseStationClassic (DCC++)</span>

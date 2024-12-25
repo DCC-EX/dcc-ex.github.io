@@ -25,7 +25,7 @@ The |EX-CSB1| is the second offering in the DCC-EX open source hardware ecosyste
 Features
 ========
 
-The |DCC-EX| |EX-CSB1| comes ready to use out of the box and has the following features:
+The |DCC-EX| |EX-CSB1-SHORT| comes ready to use out of the box and has the following features:
 
 *	**Dual DCC/PWM DC outputs** with up to 5A capacity – easily expandable to 4 outputs
 *	**WiFi built-in** – fast 802.11n capable, with Access Point and Station modes including support for connecting as many as 10 WiFi throttles (you can also connect to JMRI via WiFi, but a USB cable is often better)

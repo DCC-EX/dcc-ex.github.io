@@ -54,9 +54,9 @@ While DCC-EX has several resellers spread over the world, many commercial system
 
 You can walk into store and pick up a commercial Command Station in a box with comprehensive manuals and be reasonably assured that most of what you need is included and it will work out of the box.
 
-The |EX-CS| has two options, the first is Ready-To-Run and the second is Do-It-Yourself (DIY). The Ready-To-Run option is our |EX-CSB1| which is a complete Command Station and/or Booster on one board. All you need is to plug your power supply into an outlet and connect the track outputs to you layout. It comes with software already installed and is the closest thing to what you would expect with a commercial "boxed" CS.
+The |EX-CS| has two options, the first is Ready-To-Run and the second is Do-It-Yourself (DIY). The Ready-To-Run option is our |EX-CSB1-SHORT| which is a complete Command Station and/or Booster on one board. All you need is to plug your power supply into an outlet and connect the track outputs to you layout. It comes with software already installed and is the closest thing to what you would expect with a commercial "boxed" CS.
 
-The Do-It-Yourself option is where you purchase a microcontroller (such as an Arduino or Elegoo Mega), a motor shield (like the |EX-MS|, and optionally, a WiFi board (like the |EX-WS|). While we now have resellers that can supply a complete system or kit, most people purchase parts from different suppliers online. Parts can therefore take some time to arrive, and there is a little more work involved in sourcing and ensuring the quality of parts. So DIY in general it is not as plug-and-play as an EX-CSB1 or a commercial system.
+The Do-It-Yourself option is where you purchase a microcontroller (such as an Arduino or Elegoo Mega), a motor shield (like the |EX-MS|, and optionally, a WiFi board (like the |EX-WS|). While we now have resellers that can supply a complete system or kit, most people purchase parts from different suppliers online. Parts can therefore take some time to arrive, and there is a little more work involved in sourcing and ensuring the quality of parts. So DIY in general it is not as plug-and-play as an |EX-CSB1-SHORT| or a commercial system.
 
 |hr-dashed|
 
@@ -122,7 +122,7 @@ With commercial systems you usually get high quality support, replacement for fa
 
 Because members of the |DCC-EX| team are located world-wide, there is usually someone that can help you within a few hours on our `Discord Server <https://discord.gg/sWNPUsg8>`_ . 
 
-Is you purchased an |EX-CSB1| or other system from a DCC-EX Reseller, support is available both from that reseller and online from the DCC-EX team and users. If you purchased parts and installed the software yourself, is up to you to deal with this side of the process. The positive is that, if you wish, the costs are so low that you can keep spares of most items and still be well under the total cost of a commercial system.
+If you purchased an |EX-CSB1| or other system from a DCC-EX Reseller, support is available both from that reseller and online from the DCC-EX team and users. If you purchased parts and installed the software yourself, is up to you to deal with this side of the process. The positive is that, if you wish, the costs are so low that you can keep spares of most items and still be well under the total cost of a commercial system.
 
 |hr-dashed|
 

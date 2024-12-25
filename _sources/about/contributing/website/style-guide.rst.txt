@@ -43,6 +43,7 @@ Style Guidelines
   * \|EX-CS\| for |EX-CS|
   * \|EX-MS\| for |EX-MS|
   * \|EX-CSB1\| for |EX-CSB1|
+  * \|EX-CSB1-SHORT\| for |EX-CSB1-SHORT|
   * \|EX-I\| for |EX-I|
   * \|EX-R\| for |EX-R|
   * \|EX-TT\| for |EX-TT|

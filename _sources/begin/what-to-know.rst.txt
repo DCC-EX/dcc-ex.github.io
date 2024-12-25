@@ -49,7 +49,7 @@ Our *free*, *open source* software products currently include:
     * - |EX-CS-LOGO-SMALL|
       - |EX-I-LOGO-SMALL|
       - |EX-R-LOGO-SMALL|
-    * - Our DCC & DC command station software for controlling your model railroad |BR| :dcc-ex-text-size-60pct:`For a ready-to-run version of the EX-CommandStation see our` :doc:`EX-CSB1 </ex-commandstation/rtr-index>`
+    * - Our DCC & DC command station software for controlling your model railroad |BR| :dcc-ex-text-size-60pct:`For a ready-to-run version of the EX-CommandStation see our` |EX-CSB1-SHORT|
       - Our user friendly command station software installer
       - The built-in scripting language for automating your model railroad
     * - |EX-WT-LOGO-SMALL|
@@ -71,7 +71,7 @@ Our *free*, *open source* software products currently include:
     :class: table-list-homepage
 
     * - |EX-CS-LOGO-SMALL| 
-      - Our DCC & DC command station software for controlling your model railroad. |BR| :dcc-ex-text-size-60pct:`For a ready-to-run version of the EX-CommandStation see our` :doc:`EX-CSB1 </ex-commandstation/rtr-index>`
+      - Our DCC & DC command station software for controlling your model railroad. |BR| :dcc-ex-text-size-60pct:`For a ready-to-run version of the EX-CommandStation see our` |EX-CSB1-SHORT|
     * - |EX-I-LOGO-SMALL| 
       - Our user friendly command station software installer
     * - |EX-R-LOGO-SMALL| 
@@ -114,7 +114,7 @@ Our *open source* hardware products currently include:
     * - |EX-CSB1-LOGO-SMALL| 
       - Our ready-to-run DCC & DC command station / booster for controlling your model railroad
     * - |EX-MS-LOGO-SMALL| 
-      - Our dual 5A output motor shield for DIY command stations and adding power districts to the EX-CSB1
+      - Our dual 5A output motor shield for DIY command stations and adding power districts to the |EX-CSB1-SHORT|
     * - |EX-WS-LOGO-SMALL| 
       - Our WiFi add-on board for DIY command stations
 
@@ -197,13 +197,13 @@ I'm interested in DCC but have a limited budget
 
 How does spending only US$60 to US$120 (€54 - €110) sound to get the equivalent of over US$400 (€365) worth of commercial command station capabilities?
 
-We offer our own ready-to-run solutions in addition to a DIY path where you snap together a command station yourself. The DCC-EX Team created the |EX-CSB1| (EX-CSB1) which is a full USB or WiFi connected Command Station on one board. Just like the commercial products, you can connect a power supply, connect it to your tracks, and you are ready to run trains in seconds. And the EX-CSB1 is half or less the price of competing systems.
+We offer our own ready-to-run solutions in addition to a DIY path where you snap together a command station yourself. The DCC-EX Team created the |EX-CSB1| (|EX-CSB1-SHORT|) which is a full USB or WiFi connected Command Station on one board. Just like the commercial products, you can connect a power supply, connect it to your tracks, and you are ready to run trains in seconds. And the |EX-CSB1-SHORT| is half or less the price of competing systems.
 
 The |DCC-EX| DIY project is our free and open source software you install onto widely available, inexpensive microcontrollers and components to provide full featured DCC and DC train and accessory control. If at the entry level you are willing to do some learning and minor assembling, you can get into modelling or upgrade your current setup very inexpensively.
 
 You will get more features from our software than you will from many commercial DCC controllers, while saving money with the hardware components that can be purchased at a fraction of the price of commercial systems.
 
-We also have our own |EX-MS| to provide more power to DIY setups using Arduino or ESPDuino32 boards or to add power districts to an |EX-CSB1|. In addition, we offer an |EX-WS| to add WiFi capability to the DIY option if you choose that route. (The EX-CSB1 already includes the features of both of these boards)
+We also have our own |EX-MS| to provide more power to DIY setups using Arduino or ESPDuino32 boards or to add power districts to an |EX-CSB1|. In addition, we offer an |EX-WS| to add WiFi capability to the DIY option if you choose that route. (The |EX-CSB1-SHORT| already includes the features of both of these boards)
 
 As we grow, we are creating an entire ecosystem (an EX-osystem if you will) of products that plug together and allow you to control every aspect of your layout including lighting, sensors, points, motors, servos, displays, and more.
 

@@ -1,4 +1,4 @@
-The EX-CSB1 Command Stations are normally supplied with:
+The **EX-CSB1** Command Stations are normally supplied with:
 
 * An OLED status display, and 
 * A Carrier Base Mount (sometimes called a "sled") or Case, depending on supplier. 

@@ -63,7 +63,7 @@ A full explanation of the board is available in the :doc:`manual </ex-commandsta
 Summary or Super-Quick Start
 ============================
 
-In summary, you need just two basic wiring connections to the EX-CSB1 to be up and running trains:
+In summary, you need just two basic wiring connections to the |EX-CSB1| to be up and running trains:
 
 .. XXX Add link above to point to the full manual
 
@@ -74,7 +74,7 @@ In summary, you need just two basic wiring connections to the EX-CSB1 to be up a
 
    There are quite a few custom features in |Engine Driver| and |EX-TB|. It may be worth getting a cheap Android phone or tablet just to be able to use those apps
 
-And to connect via WiFi to the EX-CSB1 to control trains your smart device will need either:
+And to connect via WiFi to the |EX-CSB1-SHORT| to control trains your smart device will need either:
 
 * |Engine Driver| or |EX-TB| for Android
 * |WiThrottle| for Apple iOS
@@ -102,7 +102,7 @@ Connecting your Command Station
 Track Connection
 -----------------
 
-There are 2 track output power connectors marked ``A`` and ``B``. In the standard DCC-EX configuration of a EX-CSB1, ``A`` is configured for DCC **MAIN** operation, and ``B`` is configured for **PROG** or programming track output. 
+There are 2 track output power connectors marked ``A`` and ``B``. In the standard DCC-EX configuration of a |EX-CSB1-SHORT|, ``A`` is configured for DCC **MAIN** operation, and ``B`` is configured for **PROG** or programming track output. 
 
 We recommend connecting your track to the ``A`` **MAIN** output initially to test your Command Station. 
 
@@ -127,7 +127,7 @@ Larger wire can handle more current and provide less resistance.  18-22 AWG usua
 
 Using a small flat-bladed screwdriver, loosen both screws on the MAIN (A) Track Output being careful not to screw them all the way out. The screws just need to be loosened enough to fit your wires into the holes. Tighten down both screws once you have inserted the wires making sure to not overtighten. 
 
-You can pull the connector out of its socket to remove it from the |EX-CSB1| to make this easier. Remember push the connector all the way into the connector on the board to snap it back in place.
+You can pull the connector out of its socket to remove it from the |EX-CSB1-SHORT| to make this easier. Remember push the connector all the way into the connector on the board to snap it back in place.
 
 .. figure:: /_static/images/ex-csb1/csb1_insert_wire3.png
    :alt: Inserting Track Wires
@@ -175,7 +175,7 @@ Connect the other ends of the track output wires to your track. While not critic
 Power Connection
 ------------------
 
-The |EX-CSB1| has a 2.1mm x 5.5mm power jack. If you already have a power supply with bare wires, you can use an optional 2.1mm x 5.5mm screw terminal block adapter. 
+The |EX-CSB1-SHORT| has a 2.1mm x 5.5mm power jack. If you already have a power supply with bare wires, you can use an optional 2.1mm x 5.5mm screw terminal block adapter. 
 
 For N and HO scale you would normally use a 12V to 15V DC power supply, but be sure to check the manual for your loco/decoder combination for the correct voltage. 
 
@@ -203,11 +203,11 @@ Testing Your Command Station
 Connect Track Input Power
 -------------------------
 
-To fully power the EX-CSB1, just plug your power supply into the mains power (aka wall outlet) and connect the barrel end to the Command Station. 
+To fully power the |EX-CSB1|, just plug your power supply into the mains power (aka wall outlet) and connect the barrel end to the Command Station. 
 
 Make sure your power supply matches the needs of your setup: the voltage should be between 12V and 25V DC, depending on the scale of your locomotives, and it should provide at least 2A of current with good over-current performance and voltage stability. 
 
-To get the most out of your EX-CSB1 we suggest using a modern switching power supply with 4A or more. For Z scale, 12V is usually enough, but for N, HO, and OO scales, we recommend using between 14V and 16V DC. 
+To get the most out of your |EX-CSB1-SHORT| we suggest using a modern switching power supply with 4A or more. For Z scale, 12V is usually enough, but for N, HO, and OO scales, we recommend using between 14V and 16V DC. 
 
 It's important that your DC power is well-regulated which is why we suggest a modern switch-mode power supply with double insulation and strong overload protection.
 
@@ -218,9 +218,9 @@ It's important that your DC power is well-regulated which is why we suggest a mo
 
    Inserting Power Supply Barrel Plug
 
-When you connect power to the |EX-CSB1| via the barrel connector, you should see both bright green power LEDs light up (5V and 3.3V power), confirming that the electronics are working. 
+When you connect power to the |EX-CSB1-SHORT| via the barrel connector, you should see both bright green power LEDs light up (5V and 3.3V power), confirming that the electronics are working. 
 
-However, for safety, track output power will be off by default when you first plug in the EX-CSB1. This is to prevent power from accidentally being applied to your layout before everything is ready. If you prefer, you can change this default setting in the :doc:`Startup Configuration </ex-commandstation/advanced-setup/startup-config>`. 
+However, for safety, track output power will be off by default when you first plug in the |EX-CSB1-SHORT|. This is to prevent power from accidentally being applied to your layout before everything is ready. If you prefer, you can change this default setting in the :doc:`Startup Configuration </ex-commandstation/advanced-setup/startup-config>`. 
 
 .. figure:: /_static/images/ex-csb1/csb1_power_barrel.png
    :alt: Barrel Power LEDs
@@ -229,7 +229,7 @@ However, for safety, track output power will be off by default when you first pl
 
    Barrel Plug Power LEDs
 
-You should see status information on the display including the EX-CSB1 firmware version, track power status, free memory, and WiFi connection information. 
+You should see status information on the display including the |EX-CSB1-SHORT| firmware version, track power status, free memory, and WiFi connection information. 
 
 If you do not have a display, you will need to connect a serial monitor to see the status, but this is not essential for ongoing use of the system. (See: :doc:`Using a Serial Monitor </reference/tools/serial-monitor>`).
 
@@ -255,15 +255,15 @@ Connect the Smart Device to the EX-CSB1 AP Network
 
    EX-CSB1 Startup - OLED screen
 
-The DCC-EX |EX-CSB1| will power up in WiFi **Access Point mode** as configured out of the box, with its own unique WiFi network SSID of ``DCCEX_xxxxxx`` and password of ``PASS_xxxxxx`` (where **xxxxxx** is the last 6 digits of the MAC address of the EX-CSB1), both of which will be visible on the OLED display (or serial monitor log). After it boots you can connect with a WiFi throttle like |Engine Driver| or |WiThrottle|. 
+The |EX-CSB1| will power up in WiFi **Access Point mode** as configured out of the box, with its own unique WiFi network SSID of ``DCCEX_xxxxxx`` and password of ``PASS_xxxxxx`` (where **xxxxxx** is the last 6 digits of the MAC address of the |EX-CSB1-SHORT|), both of which will be visible on the OLED display (or serial monitor log). After it boots you can connect with a WiFi throttle like |Engine Driver| or |WiThrottle|. 
 
 This quick start covers initial testing with the |Engine Driver| app, though it is a broadly similar process when using any other throttle app on a Smart device. 
 
 For a USB Connection with |EX-WT| or |JMRI| and a computer, please see the full :doc:`CSB1 operating manual <rtr-manual>`.
 
-**Access Point (AP) mode** creates a separate WiFi network on the Command Station itself, whereas **Station (STA) mode** allows the Command Station to join as a WiFi device on your home or layout WiFi network. We have the |EX-CSB1| set to default to **Access Point (AP) mode** for the convenience of being able to get up and running quickly. 
+**Access Point (AP) mode** creates a separate WiFi network on the Command Station itself, whereas **Station (STA) mode** allows the Command Station to join as a WiFi device on your home or layout WiFi network. We have the |EX-CSB1-SHORT| set to default to **Access Point (AP) mode** for the convenience of being able to get up and running quickly. 
 
-To configure your EX-CSB1 to connect to your home network, see :doc:`WiFi Configuration </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`.
+To configure your |EX-CSB1-SHORT| to connect to your home network, see :doc:`WiFi Configuration </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`.
 
 The WiFi LED will illuminate once WiFi is configured and ready as an Access Point (or Station if reconfigured for STA mode.)
 
@@ -487,7 +487,7 @@ At startup of the |EX-CSB1| the OLED screen shows useful information.
 DCC Operation
 ---------------
 
-The EX-CSB1 is set to operate in DCC mode by default. If you want to switch to any of the outputs to DC mode, you can find instructions on how to do that on the :doc:`TrackManager page </trackmanager/index>`.
+The |EX-CSB1| is set to operate in DCC mode by default. If you want to switch to any of the outputs to DC mode, you can find instructions on how to do that on the :doc:`TrackManager page </trackmanager/index>`.
 
 |HR-DASHED|
 

@@ -18,7 +18,7 @@
     :depth: 3
     :local:
 
-Designed by the |DCC-EX| development team, the EX-CSB1 replaces up to 3 different stacked Arduino boards to provide a complete, expandible |DCC| and |DC PWM| command station or booster with dual 5A track outputs, integrated programming track capability, and built-in fast WiFi for throttle control connections.
+Designed by the |DCC-EX| development team, the |EX-CSB1| replaces up to 3 different stacked Arduino boards to provide a complete, expandible |DCC| and |DC PWM| command station or booster with dual 5A track outputs, integrated programming track capability, and built-in fast WiFi for throttle control connections.
 
 .. figure:: /_static/images/ex-csb1/csb1_render_drop_shadow.png
    :alt: DCC-EX EX-CSB1
@@ -60,7 +60,7 @@ Benefits include:
 
 The **EX-CSB1's** robust, single-PCB design includes integrated MOSFET motor drivers from Texas Instruments, providing up to 5A peak power per track output. This allows for simultaneous operation of multiple trains with reduced power consumption and heat generation compared to traditional systems.
 
-With its dual role as a command station or booster, the |EX-CSB1| can be strategically placed around a layout, seamlessly switching to booster mode upon detecting a RailSync input signal. This feature is particularly useful for modular layouts, ensuring smooth operation across different sections once joined together and slaved to a master DCC signal. Distributing power around the layout also reduces the cost of heavy copper lines to carry the DCC signal that would otherwise be needed with centralised power.
+With its dual role as a command station or booster, the |EX-CSB1-SHORT| can be strategically placed around a layout, seamlessly switching to booster mode upon detecting a RailSync input signal. This feature is particularly useful for modular layouts, ensuring smooth operation across different sections once joined together and slaved to a master DCC signal. Distributing power around the layout also reduces the cost of heavy copper lines to carry the DCC signal that would otherwise be needed with centralised power.
 
 An additional |DCC-EX| |EX-MS| can be inserted onto the command station board to provide two more DCC or PWM DC outputs with the same performance characteristics and output mode flexibility.
 
@@ -73,7 +73,7 @@ An additional |DCC-EX| |EX-MS| can be inserted onto the command station board to
 
 The system includes comprehensive protection features such as reverse polarity protection, hardware and software overcurrent protection, overvoltage protection, and thermal protection. It also provides clear status indications via LEDs for microcontroller power, track input supply, track output power per output channel, DCC/DC mode indication and direction for |DC PWM| mode, and WiFi connection status.
 
-The |EX-CSB1|'s built-in |EX-R| layout Animation and Automation capabilities enable advanced control of layout operations, including crossing controls, signal management, automated train routing, layout lighting control, and much more whilst being much simpler to learn than Arduino C++ programming.
+The |EX-CSB1-SHORT|'s built-in |EX-R| layout Animation and Automation capabilities enable advanced control of layout operations, including crossing controls, signal management, automated train routing, layout lighting control, and much more whilst being much simpler to learn than Arduino C++ programming.
 
 |HR-DASHED|
 

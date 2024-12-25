@@ -65,7 +65,7 @@ DC Requirements
 To run DC locos with your |EX-CS| you will need:
 
 * An |EX-CS|.
-* A motor shield with a brake pin. |BR| (See the list of compatible boards at :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`.) |BR| (The |EX-CSB1| and |EX-MS| have a brake pin.)
+* A motor shield with a brake pin. |BR| (See the list of compatible boards at :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`.) |BR| (The |EX-CSB1-SHORT| and |EX-MS| have a brake pin.)
 * A controller that can be used with the |EX-CS|.
 
 *No additional external DCC decoders are required for DC (PWM) track assignments, and a single* |EX-CS| *is the only hardware needed for full functionality.*
@@ -440,7 +440,7 @@ With an |EX-CS| with both outputs set to |DC PWM|, the wiring for the same layou
 
 .. warning::
 
-  The ready-to-run |EX-CSB1| and the do-it-yourself |EX-CS| default to DCC on both outputs!  
+  The ready-to-run |EX-CSB1-SHORT| and the do-it-yourself |EX-CS| default to DCC on both outputs!  
   
   You must use the instructions above before placing a DC loco on the track, or you may risk damaging the loco.
 

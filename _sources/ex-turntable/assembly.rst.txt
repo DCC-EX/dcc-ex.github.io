@@ -369,7 +369,7 @@ Installing with the Arduino IDE
 
   Further to this, note that you will need to end up with two separate folders; one containing the |EX-CS| software as per  :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide`, and an additional folder containing the |EX-TT| software. The |EX-TT| software is not a component of |EX-CS| or vice versa, and as such they should not exist in the same folder.
 
-We recommend using |EX-I| to install |EX-TT| as outlined above, however you can use the Arduino IDE to load the software onto the Arduino manually.
+We recommend using |EX-I| to install |EX-TT| as outlined above, however you can use the |Arduino IDE| to load the software onto the Arduino manually.
 
 As noted in the tip above, you should have a |EX-TT| folder alongside the |EX-CS| folder, and neither should reside in the other (the |EX-TT| software is required in the next step):
 
@@ -377,7 +377,7 @@ As noted in the tip above, you should have a |EX-TT| folder alongside the |EX-CS
   :alt: Two folders
   :scale: 60%
 
-The process here is the same as installing CommandStation-EX via the Arduino IDE which you can find on the :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page.
+The process here is the same as installing CommandStation-EX via the |Arduino IDE| which you can find on the :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page.
 
 When you get to the point of opening the sketch, ensure you open the EX-Turntable sketch:
 

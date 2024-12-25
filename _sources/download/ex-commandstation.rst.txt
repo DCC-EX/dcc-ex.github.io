@@ -86,7 +86,7 @@ If you plan to use the the |Arduino IDE| or |VSC| to configure your |EX-CS| you 
 Latest EX-CommandStation Official Release
 -----------------------------------------
 
-.. note:: On the releases page, select the most recent version and download the .zip file. You will see the 2 files for download, choose the compression format you prefer: CommandStation-EX.zip or CommandStation-EX.tar.gz. The zip/tar file contains the Arduino Sketch file for |EX-CS|. You will need either the Arduino IDE or the PlatformIO development environment in order to upload it to your microcontroller board. Click here for :doc:`Arduino IDE installation instructions </ex-commandstation/advanced-setup/installation-options/arduino-ide>`.
+.. note:: On the releases page, select the most recent version and download the .zip file. You will see the 2 files for download, choose the compression format you prefer: CommandStation-EX.zip or CommandStation-EX.tar.gz. The zip/tar file contains the Arduino Sketch file for |EX-CS|. You will need either the |Arduino IDE| or the PlatformIO development environment in order to upload it to your microcontroller board. Click here for :doc:`Arduino IDE installation instructions </ex-commandstation/advanced-setup/installation-options/arduino-ide>`.
 
    .. rst-class:: dcclink
 
@@ -96,7 +96,7 @@ Latest EX-CommandStation Official Release
 Latest EX-CommandStation Unreleased Development Version
 -------------------------------------------------------
 
-.. note:: The link below is to the "devel" branch in GitHub. You can use the "Download ZIP" option from the "Code" pulldown menu to obtain a local copy of this code. Please open the zip file, go into the "CommandStation-EX-master" folder, and unzip all the files in that folder into your "CommandStation-EX" sketch folder. Make sure you **DO NOT** just unzip the entire zip file, since it will have the incorrect folder name. The Arduino IDE requires that the folder name and the .ino file inside that folder match names exactly, i.e.: "CommandStation-EX" not "CommandStation-EX-master".
+.. note:: The link below is to the "devel" branch in GitHub. You can use the "Download ZIP" option from the "Code" pulldown menu to obtain a local copy of this code. Please open the zip file, go into the "CommandStation-EX-master" folder, and unzip all the files in that folder into your "CommandStation-EX" sketch folder. Make sure you **DO NOT** just unzip the entire zip file, since it will have the incorrect folder name. The |Arduino IDE| requires that the folder name and the .ino file inside that folder match names exactly, i.e.: "CommandStation-EX" not "CommandStation-EX-master".
 
 .. attention:: `Discord <https://discord.gg/y2sB4Fp>`_ is the best place to keep up-to-date on new code releases, and you may be directed to download the latest version here from time to time, as new features are added and updated often.
 
@@ -109,7 +109,7 @@ Latest EX-CommandStation Unreleased Development Version
 EX-CommandStation Repository (project source files)
 ---------------------------------------------------
 
-.. note:: The link below will take you the the EX-CommandStation GitHub repository, where you can clone the project to your computer. Click on the green button to get a clone link or to download the zip file. We have made sure that you can still use the Arduino IDE if you like, but we recommend developers use the PlatformIO development environment. See the :doc:`Contributing Page </about/contributing/index>` for more information.
+.. note:: The link below will take you the the EX-CommandStation GitHub repository, where you can clone the project to your computer. Click on the green button to get a clone link or to download the zip file. We have made sure that you can still use the |Arduino IDE| if you like, but we recommend developers use the PlatformIO development environment. See the :doc:`Contributing Page </about/contributing/index>` for more information.
 
    .. rst-class:: dcclink
 

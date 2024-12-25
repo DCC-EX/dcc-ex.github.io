@@ -577,7 +577,7 @@ Using *SerialToIPGUI* (For Microsoft Windows) (Recommended):
 
 .. warning::
 
-   This 'trick' only supports a single connection at a time.  So it is important that JMRI (if you are using it), or the Arduino IDE serial monitor, or anything else that might be using the COM (USB) port are shut down first.
+   This 'trick' only supports a single connection at a time.  So it is important that JMRI (if you are using it), or the |Arduino IDE| serial monitor, or anything else that might be using the COM (USB) port are shut down first.
 
 Downloads
 ---------

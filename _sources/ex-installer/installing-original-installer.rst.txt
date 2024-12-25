@@ -24,9 +24,9 @@ Using the Installer (Windows x32, MacOS or Linux)
 
 .. warning:: 
 
-  Please be advised that our installer currently does not work reliably on Linux or macOS which is a known issue.
+  Please be advised that our |EX-I| currently does not work reliably on Linux or macOS which is a known issue.
 
-  For Linux users we recommend using the Arduino IDE. You can find instructions on the :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page.
+  For Linux users we recommend using the |Arduino IDE|. You can find instructions on the :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page.
 
   We hope to have a new version available soon.
 
@@ -51,7 +51,7 @@ Requirements (for installing)
 
 .. sidebar:: **USB Cable**
    
-   Make sure your USB Cable is connected from your computer to the |EX-CS|. Make sure no other programs (like the Arduino IDE) are using the same USB port.
+   Make sure your USB Cable is connected from your computer to the |EX-CS|. Make sure no other programs (like the |Arduino IDE|) are using the same USB port.
 
 1. Getting Ready 
 ================

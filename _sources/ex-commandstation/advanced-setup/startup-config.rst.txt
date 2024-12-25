@@ -58,7 +58,7 @@ If you need to change the `mySetup.h` later, simply find the file you created ab
 If you are using the Arduino IDE
 ================================
 
-This will need to be done in the :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide`, so first make sure you have followed these steps to load up the Arduino IDE.
+This will need to be done in the :doc:`/ex-commandstation/advanced-setup/installation-options/arduino-ide`, so first make sure you have followed these steps to load up the |Arduino IDE|.
 
 .. important:: 
 

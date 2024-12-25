@@ -148,7 +148,7 @@ Using the Arduino IDE
    The |EX-I| described below will meet 100% of the needs of a |conductor-text| or |tinkerer-text| with considerably less effort. 
 
 #. Place your 'myAutomation.h' file in the ``CommandStation-EX`` subfolder of wherever you extracted the |EX-CS| files from GitHub.
-#. Run the Arduino IDE
+#. Run the |Arduino IDE|
 #. Open the ``CommandStation-EX`` folder
 #. Select the Board, COM port etc. as before
 #. click :guilabel:`Upload`

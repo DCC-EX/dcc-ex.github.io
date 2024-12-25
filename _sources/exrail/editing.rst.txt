@@ -19,7 +19,7 @@ The instructions containing all your objects and sequences is added to your |EX-
 
 Connecting your Arduino and pressing the :guilabel:`Upload` button in the usual way will save the file and upload your script into the Command Station.
 
-You can create and edit the `myAutomation.h` using a text editor (like Notepad), but if you are using the Arduino IDE (rather than the |EX-I|) you can create the myAutomation.h file in the Arduino IDE. Use the pulldown button and select New Tab (or simply press Ctrl+Shift+N).
+You can create and edit the `myAutomation.h` using a text editor (like Notepad), but if you are using the |Arduino IDE| (rather than the |EX-I|) you can create the myAutomation.h file in the |Arduino IDE|. Use the pulldown button and select New Tab (or simply press Ctrl+Shift+N).
 
 .. image:: /_static/images/exrail/setup1.jpg
    :alt:  Setup pulldown button
@@ -88,7 +88,7 @@ Using the Arduino IDE
 ---------------------
 
 #. Place your 'myAutomation.h' file in the ``CommandStation-EX`` subfolder of wherever you extracted the |EX-CS| files from GitHub.
-#. Run the Arduino IDE
+#. Run the |Arduino IDE|
 #. Open the ``CommandStation-EX`` folder
 #. Select the Board, COM port etc. as before
 #. click :guilabel:`Upload`

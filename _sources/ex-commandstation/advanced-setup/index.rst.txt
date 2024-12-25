@@ -154,9 +154,9 @@ Installation options
 
 Depending on your 'Level' with using different software and computers in general, there are two options for installing the |EX-CS| software, both of which should be within the reach of |conductor-text| level users.
 
-The simplest option, requiring only a simple download, is to use |EX-I|. There are limitations on what options you can select using this method, so if you are using any options that require configuration beyond what's prompted for during the install process, you will need to use the Arduino IDE instead.
+The simplest option, requiring only a simple download, is to use |EX-I|. There are limitations on what options you can select using this method, so if you are using any options that require configuration beyond what's prompted for during the install process, you will need to use the |Arduino IDE| instead.
 
-The Arduino IDE requires some software to be installed on your computer, however due to the flexibility this provides can be a better alternative than |EX-I|.
+The |Arduino IDE| requires some software to be installed on your computer, however due to the flexibility this provides can be a better alternative than |EX-I|.
 
 .. toctree::
   :maxdepth: 2

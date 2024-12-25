@@ -84,9 +84,9 @@ When clicking the ``Save and open log`` button, it will save the file, but also 
 Using the Arduino IDE Serial Monitor
 -------------------------------------
 
-This page is a brief introduction to using the Arduino IDE Serial Monitor. For additional information see the :doc:`/reference/tools/serial-monitor` page.
+This page is a brief introduction to using the |Arduino IDE| Serial Monitor. For additional information see the :doc:`/reference/tools/serial-monitor` page.
 
-To test with the Arduino Serial Monitor, download the Arduino IDE from the following link and install it on your computer.
+To test with the Arduino Serial Monitor, download the |Arduino IDE| from the following link and install it on your computer.
 
 `Download the Arduino IDE <https://www.arduino.cc/en/software>`_
 
@@ -99,7 +99,7 @@ To do a quick test, open the Arduino application:
 
    The Arduino IDE
 
-* Select "Tools -> Serial Monitor" from the Arduino IDE menu
+* Select "Tools -> Serial Monitor" from the |Arduino IDE| menu
 
 
 .. figure:: /_static/images/installer/arduino_ide2.jpg

@@ -238,7 +238,7 @@ Save your config.h file and upload the sketch to your Command Station.
 WiFi Config Options
 ====================
 
-The following defines are all the possible network settings found the config.h file. If you used the automated installer, you may see a few of these already listed. If you do a manual Arduino IDE install, you will see all of these in the file you renamed from "config.example.h" to "config.h".
+The following defines are all the possible network settings found the config.h file. If you used the automated installer, you may see a few of these already listed. If you do a manual |Arduino IDE| install, you will see all of these in the file you renamed from "config.example.h" to "config.h".
 
 | `#define IP_PORT 2560`_
 | `#define ENABLE_WIFI true`_

@@ -82,7 +82,7 @@ The Arduino IDE's Serial Monitor can be used to program either module successful
 Interactive programming sketch
 ------------------------------
 
-This sketch allows interactive programming of either module by entering AT commands in the Arduino IDE serial console.
+This sketch allows interactive programming of either module by entering AT commands in the |Arduino IDE| serial console.
 
 Given these devices are considered |Tinkerer-text| level, we will assume you are familiar with uploading a sketch to an Arduino, and will not cover that detail here.
 

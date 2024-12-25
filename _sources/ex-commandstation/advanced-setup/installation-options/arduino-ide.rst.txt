@@ -15,7 +15,7 @@ Install using the Arduino IDE
       :depth: 1
       :local:
 
-The Arduino IDE is an "Integrated Development Environment". Don't let the name scare you away! It is really just a program that lets you open a project (like our |EX-CS| Software), compile the files into instructions the Arduino understands, and upload them from your computer into the Arduino using a serial cable. It is very easy to use.
+The |Arduino IDE| is an "Integrated Development Environment". Don't let the name scare you away! It is really just a program that lets you open a project (like our |EX-CS| Software), compile the files into instructions the Arduino understands, and upload them from your computer into the Arduino using a serial cable. It is very easy to use.
 
 .. note::
    
@@ -46,7 +46,7 @@ Use the link to either the ZIP or TAR file at the bottom of our GitHub page here
 Unzip the file into the Arduino IDE project folder
 ===================================================
 
-Find the ZIP file on your computer and unzip it. You should now have a folder with the entire |DCC-EX| project inside it called "CommandStation-EX". Make sure this folder is at the root level with all your other projects. Note that the name of this folder **MUST** be "CommandStation-EX"! Do not change it. Because of the way the Arduino IDE works, the folder name must match the .ino file inside it.
+Find the ZIP file on your computer and unzip it. You should now have a folder with the entire |DCC-EX| project inside it called "CommandStation-EX". Make sure this folder is at the root level with all your other projects. Note that the name of this folder **MUST** be "CommandStation-EX"! Do not change it. Because of the way the |Arduino IDE| works, the folder name must match the .ino file inside it.
 
 Copy the config.example.h file (or rename it)
 =============================================
@@ -56,7 +56,7 @@ Copy the config.example.h file (or rename it)
 Run the Arduino IDE
 ====================
 
-Start the Arduino IDE. You should see something like this:
+Start the |Arduino IDE|. You should see something like this:
 
 .. figure:: /_static/images/arduino-ide/arduino_ide.jpg
    :alt: Arduino IDE
@@ -143,7 +143,7 @@ Use the Serial Monitor to do a quick test
 
 .. NOTE:: The programming track (PROG) is for programming only. Make sure you are on the MAIN track if you expect your loco to move or respond to light or sound commands.
 
-The Arduino IDE has a built in serial monitor. That means that in addition to uploading updates to your |EX-CS|, we can interact with the Command Station. Select "Tools -> Serial Monitor", or click on the "serial monitor" icon near the upper right of the window.
+The |Arduino IDE| has a built in serial monitor. That means that in addition to uploading updates to your |EX-CS|, we can interact with the Command Station. Select "Tools -> Serial Monitor", or click on the "serial monitor" icon near the upper right of the window.
 
 
 .. figure:: /_static/images/installer/arduino_ide2.jpg

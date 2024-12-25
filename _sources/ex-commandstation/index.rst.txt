@@ -61,7 +61,7 @@ It includes advanced features, such as:
 
 It also supports:
 
-* :doc:`Direct Current (DC) </reference/hardware/dcc-vs-dcc>` locomotive control using Pulse Width Modulation (PWM)
+* :doc:`Direct Current (DC) </reference/hardware/dcc-vs-dc>` locomotive control using Pulse Width Modulation (PWM)
 
 ----
 

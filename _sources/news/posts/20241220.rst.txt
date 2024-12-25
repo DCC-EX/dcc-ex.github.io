@@ -18,7 +18,7 @@
 DCC-EX Releases EX-CSB1 Ready to Run DCC CommandStation
 =======================================================
 
-DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the second of our open source hardware products: the |EX-CSB1| CommandStation and Booster, providing dual 5 amp DCC and |DC PWM| (pulse width modulation) output.
+DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the second of our open source hardware products: the |EX-CSB1| CommandStation and Booster, providing dual 5 amp |DCC| and |DC PWM| (pulse width modulation) output.
 
 The |EX-CSB1| addresses the needs of DCC-EX users who want a ready-to-run DCC and DC CommandStation that will have them running trains within 5 minutes of plugging it into power and track. 
 

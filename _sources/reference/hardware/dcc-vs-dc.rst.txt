@@ -23,9 +23,11 @@ DCC vs. DC PWM: A Quick Overview
 DCC (Digital Command Control)
 -----------------------------
 
-DCC uses a constant voltage on the track with digital signals embedded in the power to control the speed, direction, and functions of your trains. 
+**Digital Command Control (DCC)** uses a constant voltage on the track with digital signals embedded in the power to control the speed, direction, and functions of your trains. 
 
-There's no need to worry about polarity in DCC, making wiring simpler as your layout expands. The digital signal allows for precise control of multiple trains on the same track, all receiving power at the same time. Each device connected to the track contains a "decoder" that only responds to commands sent to its unique address.
+There's no need to worry about polarity in **DCC**, making wiring simpler as your layout expands. The digital signal allows for precise control of multiple trains on the same track, all receiving power at the same time. Each device connected to the track contains a "decoder" that only responds to commands sent to its unique address.
+
+To get a more in depth introduction to the DCC standard and protocol, you can read the `Wikipedia <https://en.wikipedia.org/wiki/Digital_Command_Control>`_ |EXTERNAL-LINK| and `DCC Wiki <https://dccwiki.com/Introduction_to_DCC>`_ |EXTERNAL-LINK| introduction pages.
 
 DC (Direct Current) PWM
 -----------------------

@@ -684,7 +684,7 @@
 </nav>
 </aside>
 <p><a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a></p>
-<p>The <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> is the first fully integrated DCC Command Station with <a class="reference internal" href="../reference/hardware/dcc-vs-dcc.html"><span class="doc">DC PWM</span></a> and Booster mode capabilities developed by the DCC-EX Team.</p>
+<p>The <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> is the first fully integrated DCC Command Station with <a class="reference internal" href="../reference/hardware/dcc-vs-dc.html"><span class="doc">DC PWM</span></a> and Booster mode capabilities developed by the DCC-EX Team.</p>
 <p>This versatile board can function as a complete Command Station with USB or WiFi connectivity or serve as a stand-alone booster, making it an ideal addition to any layout, including those using non-DCC-EX systems.</p>
 <p>This page describes and explains the <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> in detail.</p>
 <div class="admonition important">
@@ -778,7 +778,7 @@
 </figure>
 <p>These are indicators that power is being sent to the track, and the mode of the output. With DCC operation, both LEDs should shine brightly when your throttle issues the power-on command.</p>
 <p>You can also configure the CSB1 to start with power on using a mySetup.h or myAutomation.h file, or by selecting one of the options in <a href="../../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a>. See the <a class="reference internal" href="../ex-installer/installing.html#start-with-power-on"><span class="std std-ref">EX -Installer page</span></a> for more information on how to change this behaviour.</p>
-<p>For <a class="reference internal" href="../reference/hardware/dcc-vs-dcc.html"><span class="doc">DC PWM</span></a> mode operation, when power is on, ONE LED will light for each direction. That is, forward will light one LED and when you select reverse, the other LED will light.</p>
+<p>For <a class="reference internal" href="../reference/hardware/dcc-vs-dc.html"><span class="doc">DC PWM</span></a> mode operation, when power is on, ONE LED will light for each direction. That is, forward will light one LED and when you select reverse, the other LED will light.</p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
 <section id="qwiic-connector-i2c">
@@ -1089,19 +1089,19 @@
 <hr class="docutils" />
 <section id="dc-pulse-width-modulation-pwm">
 <h2><a class="toc-backref" href="#id43" role="doc-backlink">DC Pulse Width Modulation (PWM)</a><a class="headerlink" href="#dc-pulse-width-modulation-pwm" title="Link to this heading"></a></h2>
-<p>The EX-CSB1 is set to operate in DCC mode by default. You can switch to any of the outputs to DC mode.</p>
+<p>The EX-CSB1 is set to operate in <a class="reference internal" href="../reference/hardware/dcc-vs-dc.html"><span class="doc">DC</span></a> mode by default. You can switch to any of the outputs to <a class="reference internal" href="../reference/hardware/dcc-vs-dc.html"><span class="doc">DC PWM</span></a> mode.</p>
 <p>The process to change the outputs to DC are described in detail in the <a class="reference internal" href="../trackmanager/index.html"><span class="doc">TrackManager (DCC &amp; DC)</span></a> page.</p>
-<p>Additional technical information about DC PWM are explained on our <a class="reference internal" href="../reference/hardware/dcc-vs-dcc.html"><span class="doc">DCC vs DC PWM</span></a> page.</p>
+<p>Additional technical information about <a class="reference internal" href="../reference/hardware/dcc-vs-dc.html"><span class="doc">DC PWM</span></a> are explained on our <a class="reference internal" href="../reference/hardware/dcc-vs-dc.html"><span class="doc">DCC vs DC PWM</span></a>.</p>
 <p><hr class="hr-dashed" /></p>
 <section id="dc-operation">
 <h3><a class="toc-backref" href="#id44" role="doc-backlink">DC Operation</a><a class="headerlink" href="#dc-operation" title="Link to this heading"></a></h3>
-<p>When using DC mode with the EX-CSB1, it is important to understand that this is mode does not produce the traditional varying of the DC voltage to control the speed of your locomotive. The speed of your train is controlled using a method called PWM (Pulse Width Modulation), so instead, the track always receives full voltage whenever the throttle is set above zero, just in pulses rather than continuously.</p>
+<p>When using <a class="reference internal" href="../reference/hardware/dcc-vs-dc.html"><span class="doc">DC PWM</span></a> mode with the <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a>, it is important to understand that this is mode does not produce the traditional varying of the DC voltage to control the speed of your locomotive. The speed of your train is controlled using a method called PWM (Pulse Width Modulation), so instead, the track always receives full voltage whenever the throttle is set above zero, just in pulses rather than continuously.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="use-trackmanager-to-set-outputs-to-dcc-or-dc-operation">
 <h3><a class="toc-backref" href="#id45" role="doc-backlink">Use TrackManager to Set Outputs to DCC or DC Operation</a><a class="headerlink" href="#use-trackmanager-to-set-outputs-to-dcc-or-dc-operation" title="Link to this heading"></a></h3>
-<p>The EX-CSB1 is set to operate in DCC mode by default.</p>
-<p>If you want to switch to any of the outputs to DC mode, you can find instructions on how to do that on the <a class="reference internal" href="../trackmanager/index.html"><span class="doc">TrackManager (DCC &amp; DC)</span></a> page.</p>
+<p>The <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> is set to operate in <a class="reference internal" href="../reference/hardware/dcc-vs-dc.html"><span class="doc">DC</span></a> mode by default.</p>
+<p>If you want to switch to any of the outputs to <a class="reference internal" href="../reference/hardware/dcc-vs-dc.html"><span class="doc">DC PWM</span></a> mode, you can find instructions on how to do that on the <a class="reference internal" href="../trackmanager/index.html"><span class="doc">TrackManager (DCC &amp; DC)</span></a> page.</p>
 <hr class="docutils" />
 <p><hr class="hr-dashed" /></p>
 </section>
@@ -1109,7 +1109,7 @@
 <hr class="docutils" />
 <section id="uploading-the-software-changing-the-configuration">
 <h2><a class="toc-backref" href="#id46" role="doc-backlink">Uploading the Software (Changing the Configuration)</a><a class="headerlink" href="#uploading-the-software-changing-the-configuration" title="Link to this heading"></a></h2>
-<p>The EX-CSB1 comes preloaded with the Command Station software, so you can start using it right out of the box.</p>
+<p>The <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> comes preloaded with the Command Station software, so you can start using it right out of the box.</p>
 <p>However, if you wish to customise its configuration or update the software, you can easily do so by connecting the <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> to your computer via USB and follow the steps below to make any changes you need.</p>
 <nav class="contents in-this-section local" id="id4">
 <p class="topic-title">In this Section</p>
@@ -1141,9 +1141,9 @@
 <h3><a class="toc-backref" href="#id78" role="doc-backlink">First Time Connection</a><a class="headerlink" href="#first-time-connection" title="Link to this heading"></a></h3>
 <section id="step-1-connect-the-ex-csb1-to-your-computer">
 <h4><a class="toc-backref" href="#id79" role="doc-backlink">Step 1: Connect the EX-CSB1 to Your Computer</a><a class="headerlink" href="#step-1-connect-the-ex-csb1-to-your-computer" title="Link to this heading"></a></h4>
-<p>Locate the USB Port: Find the USB-C port on your EX-CSB1.
+<p>Locate the USB Port: Find the USB-C port on your <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a>.
 Use a Compatible USB Cable: Grab a USB-C cable that matches the port on your PC or laptop. This will likely be a USB-A to USB-C cable for older PCs and laptops, or a USB-C to USB-C for more modern PCs and laptops.
-Plug It In: Connect one end of the USB cable to the EX-CSB1 and the other end to an available USB port on your computer.</p>
+Plug It In: Connect one end of the USB cable to the <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> and the other end to an available USB port on your computer.</p>
 </section>
 <section id="step-2-install-the-required-usb-drivers">
 <h4><a class="toc-backref" href="#id80" role="doc-backlink">Step 2: Install the Required USB Drivers</a><a class="headerlink" href="#step-2-install-the-required-usb-drivers" title="Link to this heading"></a></h4>
@@ -1165,34 +1165,38 @@ Plug It In: Connect one end of the USB cable to the EX-CSB1 and the other end to
 <h3><a class="toc-backref" href="#id83" role="doc-backlink">Changing the Configuration</a><a class="headerlink" href="#changing-the-configuration" title="Link to this heading"></a></h3>
 <p>On subsequent connections of your <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> to you PC loading the drivers will be automatic.</p>
 <p>You only need to run the <a href="../../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a> program on your computer following the instructions on the <a class="reference internal" href="installer-rtr.html"><span class="doc">Install the Software</span></a> page.</p>
-<p>As the <a href="../../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a> program is updated periodically, it is worth checking from time-to-time to see if there is a new version byt checking the <a class="reference internal" href="../ex-installer/index.html"><span class="doc">EX-Installer</span></a> page.</p>
+<p>As the <a href="../../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a> program is updated periodically, it is worth checking from time-to-time to see if there is a new version by checking the <a class="reference internal" href="../ex-installer/index.html"><span class="doc">EX-Installer</span></a> page.</p>
 </section>
 <section id="uploading-exrail-scripts">
 <h3><a class="toc-backref" href="#id84" role="doc-backlink">Uploading EXRAIL Scripts</a><a class="headerlink" href="#uploading-exrail-scripts" title="Link to this heading"></a></h3>
-<p><a href="../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> is an “EXtended Railroad Automation Instruction Language” that can easily be used to describe sequential command ‘sequences’ to automatically take place on your model layout. These sequences are defined programmatically in a simple command script file, and uploaded to the Command Station once to configure it. <a href="../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> will then run automatically on EX-CommandStation startup, trigger manually, or on occurrence of the specified events.</p>
+<p><a href="../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> is an “<span class="ex-prefix">EX</span><span class="ex-suffix">tended </span>
+<span class="ex-prefix">R</span><span class="ex-suffix">ailroad</span>
+<span class="ex-prefix">A</span><span class="ex-suffix">utomation</span>
+<span class="ex-prefix">I</span><span class="ex-suffix">nstruction</span>
+<span class="ex-prefix">l</span><span class="ex-suffix">anguage</span>” that can easily be used to describe sequential command ‘sequences’ to automatically take place on your model layout. These sequences are defined programmatically in a simple command script file, and uploaded to the Command Station once to configure it. <a href="../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> will then run automatically on <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> startup, trigger manually, or on occurrence of the specified events.</p>
 <p>To find out more about <a href="../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> and how to add them to your <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> see the <a class="reference internal" href="../exrail/index.html"><span class="doc">EXRAIL (Automation/Animation)</span></a> page.</p>
 </section>
 <section id="factory-reset">
 <h3><a class="toc-backref" href="#id85" role="doc-backlink">Factory Reset</a><a class="headerlink" href="#factory-reset" title="Link to this heading"></a></h3>
 <p>The <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> does not have a simple ‘reset’ button.</p>
-<p>If you need to reset your EX-CSB1 Command Station software to its default settings, you’ll need to reinstall the software using the default settings. Follow these steps to reset the software:</p>
+<p>If you need to reset your <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> Command Station software to its default settings, you’ll need to reinstall the software using the default settings. Follow these steps to reset the software:</p>
 <section id="step-1-disconnect-power">
 <h4><a class="toc-backref" href="#id86" role="doc-backlink">Step 1: Disconnect Power</a><a class="headerlink" href="#step-1-disconnect-power" title="Link to this heading"></a></h4>
-<p>Before you begin, make sure the Command Station is powered off. Unplug the power supply from the wall or disconnect the barrel connector from the CSB1. This ensures that the system is completely powered down before the reset process.</p>
+<p>Before you begin, make sure the Command Station is powered off. Unplug the power supply from the wall or disconnect the barrel connector from the <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a>. This ensures that the system is completely powered down before the reset process.</p>
 </section>
 <section id="step-2-connect-to-your-computer-via-usb">
 <h4><a class="toc-backref" href="#id87" role="doc-backlink">Step 2: Connect to Your Computer via USB</a><a class="headerlink" href="#step-2-connect-to-your-computer-via-usb" title="Link to this heading"></a></h4>
 <section id="locate-the-usb-port">
 <h5>Locate the USB Port<a class="headerlink" href="#locate-the-usb-port" title="Link to this heading"></a></h5>
-<p>Find the USB port on your EX-CSB1.</p>
+<p>Find the USB port on your <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a>.</p>
 </section>
 <section id="use-a-compatible-usb-cable">
 <h5>Use a Compatible USB Cable<a class="headerlink" href="#use-a-compatible-usb-cable" title="Link to this heading"></a></h5>
-<p>Connect the CSB1 to your computer using the appropriate USB cable.</p>
+<p>Connect the <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> to your computer using the appropriate USB cable.</p>
 </section>
 <section id="power-on">
 <h5>Power On<a class="headerlink" href="#power-on" title="Link to this heading"></a></h5>
-<p>Plug the power supply back in or reconnect the barrel connector to power on the CSB1.</p>
+<p>Plug the power supply back in or reconnect the barrel connector to power on the <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a>.</p>
 </section>
 </section>
 <section id="step-3-download-the-latest-installer">
@@ -1270,7 +1274,7 @@ Plug It In: Connect one end of the USB cable to the EX-CSB1 and the other end to
 <li><p><a class="reference internal" href="#integrated-displays" id="id92">Integrated displays</a></p></li>
 <li><p><a class="reference internal" href="#i2c-accessories" id="id93">I<sup>2</sup>C Accessories</a></p>
 <ul>
-<li><p><a class="reference internal" href="#dcc-ex-i2c-hardware-overview" id="id94">DCC-EX I2C Hardware Overview</a></p></li>
+<li><p><a class="reference internal" href="#dcc-ex-i2c-hardware-overview" id="id94">DCC-EX I<sup>2</sup>C Hardware Overview</a></p></li>
 <li><p><a class="reference internal" href="#step-1-selecting-i2c-accessories" id="id95">Step 1: Selecting I<sup>2</sup>C Accessories</a></p></li>
 <li><p><a class="reference internal" href="#step-2-connecting-accessories-to-ex-csb1" id="id96">Step 2: Connecting Accessories to EX-CSB1</a></p></li>
 <li><p><a class="reference internal" href="#step-3-installing-and-running-the-dcc-ex-installer" id="id97">Step 3: Installing and Running the DCC-EX Installer</a></p></li>
@@ -1291,63 +1295,63 @@ Plug It In: Connect one end of the USB cable to the EX-CSB1 and the other end to
 <section id="i2c-accessories">
 <h4><a class="toc-backref" href="#id93" role="doc-backlink">I<sup>2</sup>C Accessories</a><a class="headerlink" href="#i2c-accessories" title="Link to this heading"></a></h4>
 <section id="dcc-ex-i2c-hardware-overview">
-<h5><a class="toc-backref" href="#id94" role="doc-backlink">DCC-EX I2C Hardware Overview</a><a class="headerlink" href="#dcc-ex-i2c-hardware-overview" title="Link to this heading"></a></h5>
-<p>The EX-CSB1 Command Station allows you to expand your model railway setup by connecting various I2C accessories such as sensors, displays, and GPIO expanders. Using the DCC-EX <a href="../../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a> and additional tools, you can easily configure these accessories to work with your layout.</p>
+<h5><a class="toc-backref" href="#id94" role="doc-backlink">DCC-EX I<sup>2</sup>C Hardware Overview</a><a class="headerlink" href="#dcc-ex-i2c-hardware-overview" title="Link to this heading"></a></h5>
+<p>The <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> Command Station allows you to expand your model railway setup by connecting various I<sup>2</sup>C accessories such as sensors, displays, and GPIO expanders. Using the DCC-EX <a href="../../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a> and additional tools, you can easily configure these accessories to work with your layout.</p>
 </section>
 <section id="step-1-selecting-i2c-accessories">
 <h5><a class="toc-backref" href="#id95" role="doc-backlink">Step 1: Selecting I<sup>2</sup>C Accessories</a><a class="headerlink" href="#step-1-selecting-i2c-accessories" title="Link to this heading"></a></h5>
 <p>Choose Compatible Accessories:
-Common I2C accessories include displays (e.g., OLED, LCD), sensors (e.g., temperature, distance), and GPIO expanders.
-Ensure your accessories are compatible with I2C and check the DCC-EX website for supported devices.</p>
+Common I<sup>2</sup>C accessories include displays (e.g., OLED, LCD), sensors (e.g., temperature, distance), and GPIO expanders.
+Ensure your accessories are compatible with I<sup>2</sup>C and check the DCC-EX website for supported devices.</p>
 </section>
 <section id="step-2-connecting-accessories-to-ex-csb1">
 <h5><a class="toc-backref" href="#id96" role="doc-backlink">Step 2: Connecting Accessories to EX-CSB1</a><a class="headerlink" href="#step-2-connecting-accessories-to-ex-csb1" title="Link to this heading"></a></h5>
-<p>Locate the I2C Ports:
-Use the “I2C x 2” ports for general I2C devices.
-Use the “OLED I2C” port if you’re connecting an OLED display.
+<p>Locate the I<sup>2</sup>C Ports:
+Use the “I<sup>2</sup>C x 2” ports for general I<sup>2</sup>C devices.
+Use the “OLED I<sup>2</sup>C” port if you’re connecting an OLED display.
 Wiring the Devices:
-SDA (Data Line): Connect the SDA pin on your accessory to the SDA pin on the EX-CSB1.
-SCL (Clock Line): Connect the SCL pin on your accessory to the SCL pin on the EX-CSB1.
-Power: Depending on your device’s requirements, connect the VCC pin to either 3.3V or 5V on the EX-CSB1. Connect the GND pin to GND.
-Daisy-Chaining Multiple Devices: If connecting more than one I2C device, ensure each has a unique I2C address, which can be set via jumpers or configuration switches.</p>
+SDA (Data Line): Connect the SDA pin on your accessory to the SDA pin on the <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a>.
+SCL (Clock Line): Connect the SCL pin on your accessory to the SCL pin on the <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a>.
+Power: Depending on your device’s requirements, connect the VCC pin to either 3.3V or 5V on the <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a>. Connect the GND pin to GND.
+Daisy-Chaining Multiple Devices: If connecting more than one I<sup>2</sup>C device, ensure each has a unique I<sup>2</sup>C address, which can be set via jumpers or configuration switches.</p>
 </section>
 <section id="step-3-installing-and-running-the-dcc-ex-installer">
 <h5><a class="toc-backref" href="#id97" role="doc-backlink">Step 3: Installing and Running the DCC-EX Installer</a><a class="headerlink" href="#step-3-installing-and-running-the-dcc-ex-installer" title="Link to this heading"></a></h5>
 <p>Download and Install:</p>
-<p>Visit the DCC-EX Installer page to download the latest version.
+<p>Visit the <a href="../../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a> page to download the latest version.
 Follow the on-screen instructions to install the software on your computer.
 Run the Installer:</p>
-<p>Connect your EX-CSB1 to your computer via USB.
-Open the DCC-EX Installer. The installer will guide you through the initial setup, including basic configurations like setting up I2C displays.
-Configuring I2C Displays:</p>
+<p>Connect your <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> to your computer via USB.
+Open the <a href="../../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a>. The installer will guide you through the initial setup, including basic configurations like setting up I<sup>2</sup>C displays.
+Configuring I<sup>2</sup>C Displays:</p>
 <p>The installer will allow you to configure connected displays (such as OLED or LCD) directly during the setup process.
-For other I2C devices, further configuration may require manual adjustments using the DCC-EX CommandStation software or editing configuration files.</p>
+For other I<sup>2</sup>C devices, further configuration may require manual adjustments using the <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> software or editing configuration files.</p>
 </section>
 <section id="step-4-manual-configuration-for-advanced-accessories">
 <h5><a class="toc-backref" href="#id98" role="doc-backlink">Step 4: Manual Configuration for Advanced Accessories</a><a class="headerlink" href="#step-4-manual-configuration-for-advanced-accessories" title="Link to this heading"></a></h5>
-<p>Access the CommandStation Software:</p>
-<p>For advanced I2C accessories like sensors or GPIO expanders, you may need to manually configure them via the DCC-EX CommandStation software.
-This involves accessing configuration files or using a serial monitor to input specific commands.
-Editing Configuration Files:</p>
-<p>If necessary, open the configuration files provided with the DCC-EX software to manually add and configure your I2C devices. Instructions for this can be found on the DCC-EX documentation pages.
-Save and Apply Settings:</p>
+<p>Access the <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> Software:</p>
+<p>For advanced I<sup>2</sup>C accessories like sensors or GPIO expanders, you may need to manually configure them via the <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> software.
+This involves accessing configuration files or using a serial monitor to input specific commands.</p>
+<p>Editing Configuration Files:</p>
+<p>If necessary, open the configuration files provided with the DCC-EX software to manually add and configure your I<sup>2</sup>C devices. Instructions for this can be found on the DCC-EX documentation pages.</p>
+<p>Save and Apply Settings:</p>
 <p>After configuring your devices, ensure you save and apply your settings through the CommandStation software.
-Step 5: Testing and Troubleshooting
-Test Your Setup:</p>
-<p>Once configured, power on your layout and check if the I2C devices are functioning correctly.
-Use the diagnostics tools provided by the DCC-EX software to troubleshoot any issues.
-Troubleshooting Common Issues:</p>
-<p>Double-check wiring connections and I2C addresses.
-If issues persist, refer to the troubleshooting guides on the DCC-EX website.
-Additional Resources
-For more detailed instructions and support, refer to these resources:</p>
+Step 5: Testing and Troubleshooting</p>
+<p>Test Your Setup:</p>
+<p>Once configured, power on your layout and check if the I<sup>2</sup>C devices are functioning correctly.
+Use the diagnostics tools provided by the DCC-EX software to troubleshoot any issues.</p>
+<p>Troubleshooting Common Issues:</p>
+<p>Double-check wiring connections and I<sup>2</sup>C addresses.
+If issues persist, refer to the troubleshooting guides on the DCC-EX website.</p>
+<p>Additional Resources</p>
+<p>For more detailed instructions and support, refer to these resources:</p>
 </section>
 </section>
 </section>
 <hr class="docutils" />
 <section id="adding-an-ex-motorshield-8874">
 <h3><a class="toc-backref" href="#id55" role="doc-backlink">Adding an EX-MotorShield 8874</a><a class="headerlink" href="#adding-an-ex-motorshield-8874" title="Link to this heading"></a></h3>
-<p>You can and an <a href="../../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a> to provide an additional 2 outputs. You may want to do this if you want to split your DCC layout into separate power districts or if running <a class="reference internal" href="../reference/hardware/dcc-vs-dcc.html"><span class="doc">DC PWM</span></a>, create up to 4 blocks before you need to add a booster.</p>
+<p>You can and an <a href="../../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a> to provide an additional 2 outputs. You may want to do this if you want to split your DCC layout into separate power districts or if running <a class="reference internal" href="../reference/hardware/dcc-vs-dc.html"><span class="doc">DC PWM</span></a>, create up to 4 blocks before you need to add a booster.</p>
 <hr class="docutils" />
 </section>
 </section>
@@ -1382,7 +1386,7 @@ For more detailed instructions and support, refer to these resources:</p>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f892c3a3bb0>
+    <jinja2.runtime.BlockReference object at 0x7f07bc3cc8e0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

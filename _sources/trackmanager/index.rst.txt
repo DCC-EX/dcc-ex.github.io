@@ -77,7 +77,7 @@ Note: An additional suggested precaution is to add 4 fuses on wires (-b +b, -a +
 Additional Technical Information
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are interested in the technical details of DC Pulse Width Modulation (PWM) visit our :doc:`/reference/hardware/dcc-vs-dcc` page.
+If you are interested in the technical details of DC Pulse Width Modulation (PWM) visit our :doc:`/reference/hardware/dcc-vs-dc` page.
 
 ----
 
@@ -481,7 +481,7 @@ So, you can take a standard DC motor only loco's road number on the side of the 
 
 .. sidebar:: 
 
-  We do not support Zero stretching / zero stretch address function, found on Digitrax and Lenz command Stations. See the ':ref:`reference/hardware/dcc-vs-dcc:this is not zero stretching`' section for more information.
+  We do not support Zero stretching / zero stretch address function, found on Digitrax and Lenz command Stations. See the ':ref:`reference/hardware/dcc-vs-dc:this is not zero stretching`' section for more information.
 
 Place any analogue DC loco/engine on a TrackManager DC assigned track with our |EX-CS| and it sits there dead quiet with lights off. When the throttle speed is increased in either direction and then lights up and begins to move.
 

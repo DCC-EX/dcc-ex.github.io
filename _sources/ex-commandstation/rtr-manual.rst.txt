@@ -550,18 +550,18 @@ Begin by running |EX-WT| by `clicking this link <https://dcc-ex.github.io/WebThr
 DC Pulse Width Modulation (PWM)
 ===============================
 
-The EX-CSB1 is set to operate in DCC mode by default. You can switch to any of the outputs to DC mode.
+The EX-CSB1 is set to operate in |DCC| mode by default. You can switch to any of the outputs to |DC PWM| mode.
 
 The process to change the outputs to DC are described in detail in the :doc:`/trackmanager/index` page.
 
-Additional technical information about DC PWM are explained on our :doc:`/reference/hardware/dcc-vs-dcc` page.
+Additional technical information about |DC PWM| are explained on our :doc:`/reference/hardware/dcc-vs-dc`.
 
 |HR-DASHED|
 
 DC Operation
 -------------
 
-When using DC mode with the EX-CSB1, it is important to understand that this is mode does not produce the traditional varying of the DC voltage to control the speed of your locomotive. The speed of your train is controlled using a method called PWM (Pulse Width Modulation), so instead, the track always receives full voltage whenever the throttle is set above zero, just in pulses rather than continuously.
+When using |DC PWM| mode with the |EX-CSB1|, it is important to understand that this is mode does not produce the traditional varying of the DC voltage to control the speed of your locomotive. The speed of your train is controlled using a method called PWM (Pulse Width Modulation), so instead, the track always receives full voltage whenever the throttle is set above zero, just in pulses rather than continuously.
 
 .. TODO XXX - map of function number to frequency
 
@@ -570,9 +570,9 @@ When using DC mode with the EX-CSB1, it is important to understand that this is 
 Use TrackManager to Set Outputs to DCC or DC Operation
 ------------------------------------------------------
 
-The EX-CSB1 is set to operate in DCC mode by default. 
+The |EX-CSB1| is set to operate in |DCC| mode by default. 
 
-If you want to switch to any of the outputs to DC mode, you can find instructions on how to do that on the :doc:`/trackmanager/index` page.
+If you want to switch to any of the outputs to |DC PWM| mode, you can find instructions on how to do that on the :doc:`/trackmanager/index` page.
 
 ----
 
@@ -585,7 +585,7 @@ Uploading the Software (Changing the Configuration)
 
 .. TODO XXX - any reason you didn't you just copy my very carefully written Getting Started Guide content here??? PMA
 
-The EX-CSB1 comes preloaded with the Command Station software, so you can start using it right out of the box. 
+The |EX-CSB1| comes preloaded with the Command Station software, so you can start using it right out of the box. 
 
 However, if you wish to customise its configuration or update the software, you can easily do so by connecting the |EX-CSB1| to your computer via USB and follow the steps below to make any changes you need.
 
@@ -602,9 +602,9 @@ First Time Connection
 Step 1: Connect the EX-CSB1 to Your Computer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Locate the USB Port: Find the USB-C port on your EX-CSB1.
+Locate the USB Port: Find the USB-C port on your |EX-CSB1|.
 Use a Compatible USB Cable: Grab a USB-C cable that matches the port on your PC or laptop. This will likely be a USB-A to USB-C cable for older PCs and laptops, or a USB-C to USB-C for more modern PCs and laptops.
-Plug It In: Connect one end of the USB cable to the EX-CSB1 and the other end to an available USB port on your computer.
+Plug It In: Connect one end of the USB cable to the |EX-CSB1| and the other end to an available USB port on your computer.
 
 Step 2: Install the Required USB Drivers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -644,12 +644,20 @@ On subsequent connections of your |EX-CSB1| to you PC loading the drivers will b
 
 You only need to run the |EX-I| program on your computer following the instructions on the :doc:`/ex-commandstation/installer-rtr` page.
 
-As the |EX-I| program is updated periodically, it is worth checking from time-to-time to see if there is a new version byt checking the :doc:`/ex-installer/index` page.
+As the |EX-I| program is updated periodically, it is worth checking from time-to-time to see if there is a new version by checking the :doc:`/ex-installer/index` page.
 
 Uploading EXRAIL Scripts
 ------------------------
 
-|EX-R| is an “EXtended Railroad Automation Instruction Language” that can easily be used to describe sequential command 'sequences' to automatically take place on your model layout. These sequences are defined programmatically in a simple command script file, and uploaded to the Command Station once to configure it. |EX-R| will then run automatically on EX-CommandStation startup, trigger manually, or on occurrence of the specified events.
+.. |EX-R-FULL| raw:: html
+
+  <span class="ex-prefix">EX</span><span class="ex-suffix">tended </span>
+  <span class="ex-prefix">R</span><span class="ex-suffix">ailroad</span>
+  <span class="ex-prefix">A</span><span class="ex-suffix">utomation</span>
+  <span class="ex-prefix">I</span><span class="ex-suffix">nstruction</span>
+  <span class="ex-prefix">l</span><span class="ex-suffix">anguage</span>
+
+|EX-R| is an "|EX-R-FULL|" that can easily be used to describe sequential command 'sequences' to automatically take place on your model layout. These sequences are defined programmatically in a simple command script file, and uploaded to the Command Station once to configure it. |EX-R| will then run automatically on |EX-CS| startup, trigger manually, or on occurrence of the specified events.
 
 To find out more about |EX-R| and how to add them to your |EX-CSB1| see the :doc:`/exrail/index` page.
 
@@ -670,12 +678,12 @@ Factory Reset
 
 The |EX-CSB1| does not have a simple 'reset' button.  
 
-If you need to reset your EX-CSB1 Command Station software to its default settings, you'll need to reinstall the software using the default settings. Follow these steps to reset the software:
+If you need to reset your |EX-CSB1| Command Station software to its default settings, you'll need to reinstall the software using the default settings. Follow these steps to reset the software:
 
 Step 1: Disconnect Power
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Before you begin, make sure the Command Station is powered off. Unplug the power supply from the wall or disconnect the barrel connector from the CSB1. This ensures that the system is completely powered down before the reset process.
+Before you begin, make sure the Command Station is powered off. Unplug the power supply from the wall or disconnect the barrel connector from the |EX-CSB1|. This ensures that the system is completely powered down before the reset process.
 
 Step 2: Connect to Your Computer via USB
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -683,17 +691,17 @@ Step 2: Connect to Your Computer via USB
 Locate the USB Port
 ^^^^^^^^^^^^^^^^^^^
 
-Find the USB port on your EX-CSB1.
+Find the USB port on your |EX-CSB1|.
 
 Use a Compatible USB Cable
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Connect the CSB1 to your computer using the appropriate USB cable.
+Connect the |EX-CSB1| to your computer using the appropriate USB cable.
 
 Power On
 ^^^^^^^^
 
-Plug the power supply back in or reconnect the barrel connector to power on the CSB1.
+Plug the power supply back in or reconnect the barrel connector to power on the |EX-CSB1|.
 
 Step 3: Download the Latest Installer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -794,69 +802,75 @@ Integrated displays
 |I2C| Accessories
 ~~~~~~~~~~~~~~~~~~
 
-DCC-EX I2C Hardware Overview
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+DCC-EX |I2C| Hardware Overview
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The EX-CSB1 Command Station allows you to expand your model railway setup by connecting various I2C accessories such as sensors, displays, and GPIO expanders. Using the DCC-EX |EX-I| and additional tools, you can easily configure these accessories to work with your layout.
+The |EX-CSB1| Command Station allows you to expand your model railway setup by connecting various |I2C| accessories such as sensors, displays, and GPIO expanders. Using the DCC-EX |EX-I| and additional tools, you can easily configure these accessories to work with your layout.
 
 Step 1: Selecting |I2C| Accessories
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Choose Compatible Accessories:
-Common I2C accessories include displays (e.g., OLED, LCD), sensors (e.g., temperature, distance), and GPIO expanders.
-Ensure your accessories are compatible with I2C and check the DCC-EX website for supported devices.
+Common |I2C| accessories include displays (e.g., OLED, LCD), sensors (e.g., temperature, distance), and GPIO expanders.
+Ensure your accessories are compatible with |I2C| and check the DCC-EX website for supported devices.
 
 Step 2: Connecting Accessories to EX-CSB1
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Locate the I2C Ports:
-Use the "I2C x 2" ports for general I2C devices.
-Use the "OLED I2C" port if you're connecting an OLED display.
+Locate the |I2C| Ports:
+Use the "|I2C| x 2" ports for general |I2C| devices.
+Use the "OLED |I2C|" port if you're connecting an OLED display.
 Wiring the Devices:
-SDA (Data Line): Connect the SDA pin on your accessory to the SDA pin on the EX-CSB1.
-SCL (Clock Line): Connect the SCL pin on your accessory to the SCL pin on the EX-CSB1.
-Power: Depending on your device's requirements, connect the VCC pin to either 3.3V or 5V on the EX-CSB1. Connect the GND pin to GND.
-Daisy-Chaining Multiple Devices: If connecting more than one I2C device, ensure each has a unique I2C address, which can be set via jumpers or configuration switches.
+SDA (Data Line): Connect the SDA pin on your accessory to the SDA pin on the |EX-CSB1|.
+SCL (Clock Line): Connect the SCL pin on your accessory to the SCL pin on the |EX-CSB1|.
+Power: Depending on your device's requirements, connect the VCC pin to either 3.3V or 5V on the |EX-CSB1|. Connect the GND pin to GND.
+Daisy-Chaining Multiple Devices: If connecting more than one |I2C| device, ensure each has a unique |I2C| address, which can be set via jumpers or configuration switches.
 
 Step 3: Installing and Running the DCC-EX Installer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Download and Install:
 
-Visit the DCC-EX Installer page to download the latest version.
+Visit the |EX-I| page to download the latest version.
 Follow the on-screen instructions to install the software on your computer.
 Run the Installer:
 
-Connect your EX-CSB1 to your computer via USB.
-Open the DCC-EX Installer. The installer will guide you through the initial setup, including basic configurations like setting up I2C displays.
-Configuring I2C Displays:
+Connect your |EX-CSB1| to your computer via USB.
+Open the |EX-I|. The installer will guide you through the initial setup, including basic configurations like setting up |I2C| displays.
+Configuring |I2C| Displays:
 
 The installer will allow you to configure connected displays (such as OLED or LCD) directly during the setup process.
-For other I2C devices, further configuration may require manual adjustments using the DCC-EX CommandStation software or editing configuration files.
+For other |I2C| devices, further configuration may require manual adjustments using the |EX-CS| software or editing configuration files.
 
 Step 4: Manual Configuration for Advanced Accessories
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Access the CommandStation Software:
+Access the |EX-CS| Software:
 
-For advanced I2C accessories like sensors or GPIO expanders, you may need to manually configure them via the DCC-EX CommandStation software.
+For advanced |I2C| accessories like sensors or GPIO expanders, you may need to manually configure them via the |EX-CS| software.
 This involves accessing configuration files or using a serial monitor to input specific commands.
+
 Editing Configuration Files:
 
-If necessary, open the configuration files provided with the DCC-EX software to manually add and configure your I2C devices. Instructions for this can be found on the DCC-EX documentation pages.
+If necessary, open the configuration files provided with the DCC-EX software to manually add and configure your |I2C| devices. Instructions for this can be found on the DCC-EX documentation pages.
+
 Save and Apply Settings:
 
 After configuring your devices, ensure you save and apply your settings through the CommandStation software.
 Step 5: Testing and Troubleshooting
+
 Test Your Setup:
 
-Once configured, power on your layout and check if the I2C devices are functioning correctly.
+Once configured, power on your layout and check if the |I2C| devices are functioning correctly.
 Use the diagnostics tools provided by the DCC-EX software to troubleshoot any issues.
+
 Troubleshooting Common Issues:
 
-Double-check wiring connections and I2C addresses.
+Double-check wiring connections and |I2C| addresses.
 If issues persist, refer to the troubleshooting guides on the DCC-EX website.
+
 Additional Resources
+
 For more detailed instructions and support, refer to these resources:
 
 .. todo XXX are these main headings or subheadings of what is above?

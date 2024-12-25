@@ -970,7 +970,7 @@
 </pre></div>
 </div>
 <p>Where <cite>YOUR_PIN_A</cite> and <cite>YOUR_PIN_B</cite> are the pins you have jumpered to the Sense pins for channel A and B respectively on the top EX-MotorShield8874.</p>
-<p>Note that on Nucleo-144 motherboards, D7 and D8 are incapable of PWM for the Brake for channel B on either the first or second shield. PWM is used for <a class="reference internal" href="../dcc-vs-dcc.html"><span class="doc">DC PWM</span></a> output <strong>and</strong> for managing DCC overload situations for the EX-MotorShield8874. As such it is recommended that the first board in the stack use the default Channel A BRAKE of D9, and the ALT Channel B BRAKE of D6.</p>
+<p>Note that on Nucleo-144 motherboards, D7 and D8 are incapable of Pulse Width Modulation (PWM) for the Brake for channel B on either the first or second shield. PWM is used for <a class="reference internal" href="../dcc-vs-dc.html"><span class="doc">DC PWM</span></a> output <strong>and</strong> for managing DCC overload situations for the EX-MotorShield8874. As such it is recommended that the first board in the stack use the default Channel A BRAKE of D9, and the ALT Channel B BRAKE of D6.</p>
 <p>Then on the top EX-MotorShield8874 set all pins except the BRAKE pins for Channel A and B to the ALT settings. For this to work you will also need to disable the Serial6 port as those appear on Arduino D0(PG9)/D1(PG14) which we will use for the ALT FAULT pins. Find the following line in DCCTimerSTM32.cpp and comment it out thusly:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//HardwareSerial Serial6(PG9, PG14);  // Rx=PG9, Tx=PG14 -- USART6</span>
 </pre></div>
@@ -1092,7 +1092,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f893a40cbe0>
+    <jinja2.runtime.BlockReference object at 0x7f07bf4faad0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

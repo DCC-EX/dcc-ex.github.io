@@ -35,14 +35,14 @@ WiThrottle Servers
 
 WiThrottle stands for 'WiFi Throttle', and a 'WiThrottle Server' is just software running on your |JMRI| computer, DCC-EX EX-CommandStation, or dedicated device. It's called a 'Server' because it allows you to connect to it and it 'serves', or services, requests from another application. That application is called a 'Client'.
 
-The WiThrottle Protocol itself is a standard for how WiFi throttles can communicate with the WiThrottle Server, much like the DCC standard is a standard for how data packets communicate with decoders. What this means for you, is that |Engine Driver| and other apps can talk to any WiThrottle compatible server, which in turn can talks to your DCC encoders in your locos.
+The |WITHROTTLE PROTOCOL| itself is a standard for how WiFi throttles can communicate with the WiThrottle Server, much like the DCC standard is a standard for how data packets communicate with decoders. What this means for you, is that |Engine Driver| and other apps can talk to any WiThrottle compatible server, which in turn can talks to your DCC encoders in your locos.
 
 |HR-DASHED|
 
 DCC-EX Native protocol / commands
 =================================
 
-When the |DCC-EX| team designed the **DCC-EX** |EX-CS| they found the WiThrottle Protocol too limiting and came up with a new protocol referred to originally as **DCC++** but later as :doc:`DCC-EX Native Protocol or DCC-EX Native Commands </reference/software/command-summary-consolidated>`.
+When the |DCC-EX| team designed the **DCC-EX** |EX-CS| they found the |WITHROTTLE PROTOCOL| too limiting and came up with a new protocol referred to originally as **DCC++** but later as :doc:`DCC-EX Native Protocol or DCC-EX Native Commands </reference/software/command-summary-consolidated>`.
 
 |Engine Driver|, |EX-WT|, |JMRI| and a few other apps can use the more powerful **DCC-EX Native Protocol** when connecting to a **DCC-EX** |EX-CS|.
 

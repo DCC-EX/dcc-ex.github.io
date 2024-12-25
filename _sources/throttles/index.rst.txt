@@ -19,7 +19,7 @@ This page contains lists of compatible Throttles (Controllers) that currently su
 
 
 * :ref:`By Client Technology <throttles/index:throttles - by client technology>`  (e.g. Android, iOS, Web Browser, PC)
-* :ref:`By Communication Technology <throttles/index:throttles - by communication technology>` (e.g. |DCC-EX Native Commands|, wiThrottle Protocol)
+* :ref:`By Communication Technology <throttles/index:throttles - by communication technology>` (e.g. |DCC-EX Native Commands|, |WITHROTTLE PROTOCOL|)
 
 For an more introductory overview of throttles and how to choose one, please read the :doc:`Getting Started - Throttles Page </ex-commandstation/controllers-diy>` 
 

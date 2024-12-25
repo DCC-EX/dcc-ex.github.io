@@ -79,20 +79,47 @@ And to connect via WiFi to the |EX-CSB1-SHORT| to control trains your smart devi
 * |Engine Driver| or |EX-TB| for Android
 * |WiThrottle| for Apple iOS
 
-Connecting to the EX-CSB1 via WiFi
-----------------------------------
+|HR-DASHED|
 
-An Android Phone or Tablet or Apple iOS Phone or Tablet can be used.
+These are the most basic steps to get you up and running.  If you need more help, then remainder of this page explains these steps in much greater detail.
 
-* Open the Wifi Settings in your smart device.
-* Select the WiFi network in your smart device WiFi settings named ``DCCEX_xxxxxx``, and use the corresponding password ``PASS_xxxxxx`` (where **xxxxxx** is identical in each case) which is shown on your EX-CSB1's OLED display.
-* Tell your smart device not to worry about there being no Internet connection. [2]_
-* Launch your throttle app.  (We recommend the |Engine Driver| app on Android but other apps can be used.)
-* In your throttle app, connect to the ``dccex`` server.
+**Steps**
 
-.. [2] You also may need to tell your smart device to not automatically connect to your default WiFi network or it might keep trying to reconnect to that instead
+   **1. Connect your EX-CSB1 to your track**
 
-These quick tips may actually be enough to get your running, but step by step instruction follow below.
+      Connect your main track to the ``A`` **MAIN** output to your Command Station. 
+
+   **2. Connect power to your EX-CSB1**
+
+      The |EX-CSB1-SHORT| has a 2.1mm x 5.5mm power jack. Connect this to an appropriate DC power supply.
+
+      For N and HO scale you would normally use a 12V to 15V DC power supply, but be sure to check the manual for your loco/decoder combination for the correct voltage. 
+
+   **3. Connect Your Smart Device(Phone) to the 'DCCEX_xxxxx' WiFi Network**
+
+      An Android Phone or Tablet or Apple iOS Phone or Tablet can be used.
+
+      * Open the Wifi Settings in your smart device.
+      * Select the WiFi network in your smart device WiFi settings named ``DCCEX_xxxxxx``, and use the corresponding password ``PASS_xxxxxx`` (where **xxxxxx** is identical in each case) which is shown on your EX-CSB1's OLED display.
+      * Tell your smart device not to worry about there being no Internet connection. [2]_
+
+      .. [2] You also may need to tell your smart device to not automatically connect to your default WiFi network or it might keep trying to reconnect to that instead
+
+   **4. Connect Your Controller (Throttle) App to the 'dccex' Server**
+
+      * Launch your throttle app.
+      * In your throttle app, connect to the ``dccex`` server.
+
+   **5. Acquire a Loco in Your Controller (Throttle) App**
+
+      * Place a working DCC equiped loco, with a known DCC Address, on the track 
+      * Acquire that loco using its DCC Address
+
+   **6. Run Trains**
+
+      * Run/control the loco
+
+These quick tips may have been be enough to get your running, but step by step instructions follow below.
 
 ----
 
@@ -340,11 +367,11 @@ This setting will automatically add useful buttons and switch to using the |DCC-
 
    Engine Driver Wizard DCC-EX Select
 
-After choosing the DCC-EX option above and pressing the checkmark to finish the Wizard, the opening |Engine Driver| screen will change to look like figure 23 with an added option at the bottom of the screen for 'Connection Protocol'. 
+After choosing the DCC-EX option above and pressing the checkmark to finish the Wizard, the opening |Engine Driver| screen will change to look like *Figure: DCC-EX Protocol Bottom Selector* below with an added option at the bottom of the screen for 'Connection Protocol'. 
 
 'Auto' for Automatic is now the default. 
 
-You can manually switch between |DCC-EX Native Protocol| and |WiThrottle Protocol| if you go to a club or use another type of Command Station that requires WiThrottle, but generally the 'Auto' setting will do so automatically.
+You can manually switch between |DCC-EX Native Protocol| and |WITHROTTLE PROTOCOL| if you go to a club or use another type of Command Station that requires the |WITHROTTLE PROTOCOL|, but generally the 'Auto' setting will do so automatically.
 
 The |DCC-EX Native protocol| allows for more powerful, expanded capabilities when connected to an |EX-CS|:
 
@@ -353,7 +380,7 @@ The |DCC-EX Native protocol| allows for more powerful, expanded capabilities whe
    :scale: 45%
    :align: left
 
-   DCC-EX Protocol bottom selector
+   DCC-EX Protocol Bottom Selector
 
 .. figure:: /_static/images/engine_driver/ed_dcc_ex_protocol2.png
    :alt: DCC-EX Protocol Menu

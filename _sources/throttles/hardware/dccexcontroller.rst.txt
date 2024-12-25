@@ -14,7 +14,7 @@ DccEXcontroller (Physical)
     :local:
 
 
-DccExController uses exactly the same hardware as the WiTcontroller, but uses the DCC-EX Native command protocol instead of the WiThrottle protocol.
+DccExController uses exactly the same hardware as the WiTcontroller, but uses the DCC-EX Native command protocol instead of the |WITHROTTLE PROTOCOL|.
 
 From |Engine Driver|'s very own Peter Akers (flash62au on our Discord server), comes a physical hardware throttle using only 4 parts:
 

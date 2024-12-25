@@ -779,7 +779,7 @@ Example - EXRAIL Scripts running on Engine Driver App (Android)
 EXRAIL Functions on Smartphone Apps & Universal WiFi Throttles
 --------------------------------------------------------------
 
-The |Engine Driver| |EX-R| screens shown above are all created through user defined |EX-R| Automation(n) and Route(n) scripts which are automatically passed to both |Engine Driver| & WiThrottle App screens as well as the Train Control Systems TCS Universal WiFi UWT-50 and UWT-100 tactile throttles all via direct connect DCC-EX WiThrottle Protocol interface.
+The |Engine Driver| |EX-R| screens shown above are all created through user defined |EX-R| Automation(n) and Route(n) scripts which are automatically passed to both |Engine Driver| & WiThrottle App screens as well as the Train Control Systems TCS Universal WiFi UWT-50 and UWT-100 tactile throttles all via direct connect DCC-EX |WITHROTTLE PROTOCOL| interface.
 
 Please see the specific Smartphone App & Universal WiFi Throttle instructions on how to enable their Preferences and Route screens. 
 https://dcc-ex.com/throttles/index.html#withrottle-protocol-based-throttles

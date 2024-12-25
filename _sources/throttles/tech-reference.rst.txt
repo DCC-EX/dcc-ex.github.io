@@ -15,7 +15,7 @@ Technical Reference for Throttle Developers
     :depth: 3
     :local:
 
-This page is intended to capture relevant information to assist those who develop throttles compatible with |EX-CS| using the |DCC-EX Native Protocol|, not the WiThrottle protocol.
+This page is intended to capture relevant information to assist those who develop throttles compatible with |EX-CS| using the |DCC-EX Native Protocol|, not the |WITHROTTLE PROTOCOL|.
 
 This page should be read in conjunction with the :doc:`/reference/developers/api` in order to understand how to send and parse |DCC-EX| API commands correctly, and ignore any irrelevant commands.
 

@@ -20,17 +20,15 @@ Install the Software
     
 Once you have assembled your do-it-yourself |EX-CS| hardware you need to load our software onto it to make it usable. |BR| To make it as simple as possible we have created the |EX-I| app.
 
+If you have purchased a |EX-CSB1| it will have come with the |EX-CS| software already installed.  You only need to look at this page if you want to change the default configuration. 
+
 .. note::
    This page is specifically intended for a |conductor-text| or |tinkerer-text| who has either:
 
    - Purchased a ready-to-run (RTR) |EX-CSB1|, or 
    - Assembled *just* the recommended do-it-yourself (DIY) hardware (including WiFi). 
 
-   If you are a |tinkerer-text| or |engineer-text| or have installed some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`/ex-installer/index` page for the full instructions.
-
-.. note::
-
-   If you have purchased a |EX-CSB1| it will have come with the |EX-CS| software already installed.  You only need to look at this page if you want to change the default configuration. 
+   This page is as simplified version of the :doc:`/ex-installer/installing` page. If you are a |tinkerer-text| or |engineer-text| or have installed some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`Detailed Instructions </ex-installer/installing>` page for the full instructions.
 
 .. important::
    
@@ -395,7 +393,7 @@ If there **are errors** or you are having difficulties check the :doc:`/support/
 
 |force-break|
 
-----
+|HR-HEAVY|
 
 Next Steps - Selecting a Throttle (Controller) 
 ==============================================

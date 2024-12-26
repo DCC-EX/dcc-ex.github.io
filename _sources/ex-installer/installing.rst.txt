@@ -568,7 +568,7 @@ If there **are errors** or you are having difficulties check the :doc:`/support/
 |force-break|
 
 Backup
-~~~~~~
+^^^^^^
 
 After loading the software onto your device, you can optionally copy the generated configuration files to a folder of your choice as a backup by clicking the :guilabel:`Backup config files` button.
 

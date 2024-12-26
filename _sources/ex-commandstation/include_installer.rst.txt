@@ -15,15 +15,18 @@ Install the Software
 .. sidebar::
 
    .. contents:: On this page
-      :depth: 4
+      :depth: 3
       :local:
     
-This page is specifically intended for a |conductor-text| or |tinkerer-text| who has either:
+Once you have assembled your do-it-yourself |EX-CS| hardware you need to load our software onto it to make it usable. |BR| To make it as simple as possible we have created the |EX-I| app.
 
-- Purchased a ready-to-run (RTR) |EX-CSB1|, or 
-- Assembled *just* the recommended do-it-yourself (DIY) hardware (including WiFi). 
+.. note::
+   This page is specifically intended for a |conductor-text| or |tinkerer-text| who has either:
 
-If you are a |tinkerer-text| or |engineer-text| or have installed some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`/ex-installer/index` page for the full instructions.
+   - Purchased a ready-to-run (RTR) |EX-CSB1|, or 
+   - Assembled *just* the recommended do-it-yourself (DIY) hardware (including WiFi). 
+
+   If you are a |tinkerer-text| or |engineer-text| or have installed some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`/ex-installer/index` page for the full instructions.
 
 .. note::
 
@@ -31,17 +34,19 @@ If you are a |tinkerer-text| or |engineer-text| or have installed some of the ad
 
 .. important::
    
-   A word of caution on the alternate approach of using the |Arduino IDE| to install the software:
+   A word of caution on the *alternate approach* of using the |Arduino IDE| to install the software:
 
    While it is possible install the software using the |Arduino IDE|, we *seriously* **DO NOT RECOMMEND IT** for a |conductor-text| or |tinkerer-text|. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.
 
    The |EX-I| described below will meet 100% of the needs of a |conductor-text| or |tinkerer-text| with considerably less effort. 
 
+|force-break|
+
 ----
 
-Once you have assembled your |EX-CS| hardware you need to load our software onto it to make it usable. |BR| To make it as simple as possible we have created the |EX-I| app.
+**Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi)**
 
-|force-break|
+----
 
 Requirements (for installing)
 =============================
@@ -50,17 +55,23 @@ Requirements (for installing)
    
    Make sure your USB Cable is connected from your computer to the |EX-CS|. Make sure no other programs (like the |Arduino IDE|) are using the same USB port.
 
+To run |EX-I| you need:
+
 * A Windows, Linux or MacOS X **Computer**
 * An |EX-CS| (|EX-CSB1| or Arduino Mega/Uno + Motor shield+  optional WiFi shield)
 * A **USB cable** to connect your computer to the Microcontroller
 
+----
+
 1. Getting Ready 
 ================
 
-**Instruction for Windows, Mac OS X, and Linux (including the Raspberry Pi)**
+To begin with...
 
-**Connect** your |EX-CS| **hardware** to your computer via USB. |BR| Make sure your USB Cable is connected from your computer to the EX-CommandStation. Make sure no other programs (like the |Arduino IDE|) are using the same USB port.
+* **Connect** your |EX-CS| **hardware** to your computer via USB. |BR| Make sure your USB Cable is connected from your computer to the EX-CommandStation. 
+* Make sure no other programs (like the |Arduino IDE| or |EX-WT|) are using the same USB port. (i.e. close them.)
 
+----
 
 2. Download and Run EX-Installer 
 ================================
@@ -78,6 +89,11 @@ Requirements (for installing)
   * Find the folder in which the **EX-Installer-Win64.exe** or **EX-Installer-Win32.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
   * **Run** ``EX-Installer-Win64.exe`` or **EX-Installer-Win32.exe** or **EX-Installer-Win32.exe** |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern. |BR| |BR|
 
+.. important:: 
+   :class: important-float-right
+   
+   EX-Installer creates a folder (<home>\\ex-installer) to hold the information it needs. :dcc-ex-red-bold:`Do not directly modify anything in this folder` as it may be overwritten or deleted by the installer at any time.
+
 * For **Apple macOS**:
 
   * Open a terminal window and navigate to the that folder that you downloaded the file to.  e.g.: |BR| ``cd Downloads``
@@ -90,10 +106,10 @@ Requirements (for installing)
   * Open a terminal window and navigate to that folder
   * **Run the installer with** the following command: ``./EX-Installer-Linux64`` |BR| |BR|
 
-
-You will be presented with the following screen...
-
 ----
+
+**You will be presented with the following screen...**
+
 
 3. Installer Screens
 ====================
@@ -108,11 +124,11 @@ The 'EX-Installer Welcome' screen
 
 This screen provides some basic information about the process of loading the Software.
 
-If you are using the recommended Mega hardware, you should not need to adjust the other settings on this page.
-
 To proceed, click the :guilabel:`Manage Arduino CLI` button.
 
 |force-break|
+
+|HR-DASHED|
 
 'Manage Arduino CLI' screen
 ---------------------------
@@ -132,11 +148,13 @@ If you have not installed the CLI previously you *must* have Arduino CLI install
 
 If you already have the Arduino CLI installed, it is recommended that you refresh it periodically (e.g. weekly) to ensure support for the various device details are kept up to date. To refresh the CLI, simply click the :guilabel:`Refresh Arduino CLI` button.
 
-If you are using the recommended Mega hardware, you should not need to adjust the other settings on this page.
+If you are using the |EX-CSB1-SHORT| or the recommended DIY Mega hardware, you should not need to adjust the other settings on this page.  (The |EX-CSB1-SHORT| required the "Expressif ESP32" option to be enabled, which should be the default.)
 
-Once the CLI is installed, To proceed, click the :guilabel:`Select your device` button.
+Installing the CLI can take some time. Once the CLI is installed, To proceed, click the :guilabel:`Select your device` button.
 
 |force-break|
+
+|HR-DASHED|
 
 'Select Your Device' screen
 ---------------------------
@@ -154,7 +172,8 @@ On this screen you will need to |BR| a) select the type of device you wish to lo
 
 Click on the :guilabel:`Scan for Devices` button. 
 
-**No Devices Found**
+No Devices Found
+~~~~~~~~~~~~~~~~
 
 After you have clicked on the :guilabel:`Scan for Devices` button, if you see **No devices found** to means that you either a) have not connected the device to the computer, or b) the device was not recognised by the computer.
 
@@ -163,7 +182,8 @@ If you have not connected the device, connect it now then click the :guilabel:`S
 If the device *is* connected but not found refer to the :doc:`/support/ex-cs-diagnose` page for assistance.
 
 
-**Multiple Devices Found**
+Multiple Devices Found
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-installer/select_device_multiple_devices.png
    :alt: EX-Installer - Select Device - Multiple Devices
@@ -189,6 +209,8 @@ Once you have a port and device type selected, to proceed, click the :guilabel:`
 
 |force-break|
 
+|HR-DASHED|
+
 'Select the Product to Install' screen
 --------------------------------------
 
@@ -205,6 +227,8 @@ Click on the |EX-CS| logo to proceed.
 
 |force-break|
 
+|HR-DASHED|
+
 'Select EX-CommandStation Version' screen
 -----------------------------------------
 
@@ -220,11 +244,13 @@ On this screen you need to select:
 * Which version of the EX-CommandStation software you wish to load
 * How you wish to configure the software
 
-*Which version*
+Which version
+~~~~~~~~~~~~~
 
 Select which version of the |EX-CS| software to load onto your hardware.  If you are unsure, or unless you have been otherwise directed by the support team, we recommend you select ``Latest Production``.
 
-*How to configure*
+How to configure
+~~~~~~~~~~~~~~~~
 
 Select how you wish to configure your |EX-CS|. Unless you are updating a previous version that you manually configured, or want to manually make advanced configuration changes, select ``Configure options on the next screen``
 
@@ -233,6 +259,8 @@ If you do want to manually make advanced configuration changes, see the :doc:`/e
 If you have selected ``Configure options on the next screen``, to proceed, click the :guilabel:`Configure EX-CommandStation` button.
 
 |force-break|
+
+|HR-DASHED|
 
 'Install EX-CommandStation' - Configuration screen
 --------------------------------------------------
@@ -257,7 +285,8 @@ Only the *Motor Driver* and *WiFi* will be covered on this page.  If you have in
 
 |force-break|
 
-**Motor Driver**
+Motor Driver
+~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_motor_shield.png
    :alt: EX-Installer - EX-CommandStation - Configure Motor Driver
@@ -278,7 +307,8 @@ You *must* select the motor driver type that you have installed.  The installer 
 
    You must choose one of these options now, but you can always come back later and re-load the software with a different option.
 
-**WiFi**
+WiFi
+~~~~
 
 If you have installed and optional WiFi board, or are using a microcontroller board with integrated WiFi, enable the ``I have WiFi`` option, which will present you with additional options.
 
@@ -287,7 +317,8 @@ You can configure the WiFi for EX-CommandStation two ways:
 * **Access Point mode** |BR| You can configure for EX-CommandStation to have its own, completely isolated, WiFi Network. This is referred to as *Access Point Mode*. (Most useful if your layout is away from the house, or you transport your layout frequently.) |BR| To enable, select ``Use my EX-CommandStation as an Access Point`` 
 * **Station mode**  |BR| The EX-CommandStation can be setup so that it connects to your existing home WiFi Network. This is referred to as *Station Mode*. |BR| To enable, select  ``Connect my EX-CommandStation to my existing wireless network`` 
 
-**Use my EX-CommandStation as an Access Point**
+Use my EX-CommandStation as an Access Point
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
    .. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_access_point.png
       :alt: EX-Installer - EX-CommandStation - Configure WiFi Access Point
@@ -312,7 +343,8 @@ You can configure the WiFi for EX-CommandStation two ways:
 
    **WiFi Channel** can be any value from 1-11.
 
-**Connect my EX-CommandStation to my existing wireless network** 
+Connect my EX-CommandStation to my existing wireless network
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
    .. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_station.png
       :alt: EX-Installer - EX-CommandStation - Configure Wifi - Station Mode
@@ -340,6 +372,8 @@ To proceed, click the :guilabel:`Compile and Load` button.
 
 |force-break|
 
+|HR-DASHED|
+
 'Compile and Load' screen
 -------------------------
 
@@ -366,8 +400,8 @@ If there **are errors** or you are having difficulties check the :doc:`/support/
 Next Steps - Selecting a Throttle (Controller) 
 ==============================================
 
-.. NOTE:: 
-   :class: note-float-right
+.. important:: 
+   :class: important-float-right
    
    The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.
 

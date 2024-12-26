@@ -21,7 +21,7 @@ Version 5 is here!
 
 We highly recommend upgrading to version 5 to take advantage of the improvements we've made, and especially for those users who are using our new |EX-MS|, as we've improved how it deals with overloads and inrush current amongst other enhancements.
 
-To get your hands on this latest release, select ``Latest Production`` when running |EX-I| (see :ref:`ex-installer/installing:download and run ex-installer`), or you can download it manually by following the directions in :ref:`download/ex-commandstation:latest ex-commandstation official release`.
+To get your hands on this latest release, select ``Latest Production`` when running |EX-I| (see :doc:`/ex-installer/installing`), or you can download it manually by following the directions in :ref:`download/ex-commandstation:latest ex-commandstation official release`.
 
 We've outlined the key updates below but this is not an exhaustive list.
 

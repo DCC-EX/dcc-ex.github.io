@@ -1,3 +1,5 @@
+:orphan:
+
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 .. include:: /include/include-ex-i.rst
@@ -6,9 +8,9 @@
 
 |EX-I-LOGO|
 
-*******************
-Using the Installer 
-*******************
+******************************************
+Using EX-Installer - Detailed Instructions
+******************************************
 
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button| |githublink-ex-installer-button-small|
 
@@ -26,16 +28,22 @@ Once you have purchased or assembled your |EX-CS| hardware you need to load our 
 
 .. important:: 
 
-   A word of caution on the alternate approach of using the |Arduino IDE| to install the software:
+   A word of caution on the *alternate approach* of using the |Arduino IDE| to install the software:
 
    While it is possible install the software using the |Arduino IDE|, we *seriously* **DO NOT RECOMMEND IT** for a |conductor-text| or |tinkerer-text|. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.
 
    The |EX-I| described below will meet 100% of the needs of a |conductor-text| or |tinkerer-text| with considerably less effort. 
 
+|force-break|
+
 ----
+
+**Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi)**
 
 Requirements (for installing)
 ==============================
+
+To run |EX-I| you need:
 
 * a Microsoft Windows, Apple MacOS or Linux based **computer**
 * |EX-CS| **hardware**, comprising of:
@@ -50,12 +58,21 @@ Requirements (for installing)
   * optionally, a **WiFi shield** or ethernet shield
   * optionally, an **LCD or oLED display**
   
+  or
+
+  * an |EX-CSB1|
+
 * a **USB cable** to connect your computer to the Microcontroller   
 
 Getting Ready 
 =============
 
-**Connect** your |EX-CS| **hardware** to your computer via USB. |BR| Make sure your USB Cable is connected from your computer to the EX-CommandStation. Make sure no other programs (like the |Arduino IDE|) are using the same USB port.
+To begin with...
+
+* **Connect** your |EX-CS| **hardware** to your computer via USB. |BR| Make sure your USB Cable is connected from your computer to the EX-CommandStation. 
+* Make sure no other programs (like the |Arduino IDE| or |EX-WT|) are using the same USB port. (i.e. close them.)
+
+----
 
 Download and Run EX-Installer 
 =============================
@@ -72,6 +89,11 @@ Download and Run EX-Installer
   * Find the folder in which the **EX-Installer-Win64.exe** or **EX-Installer-Win32.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
   * **Run** ``EX-Installer-Win64.exe`` (or **EX-Installer-Win32.exe**) |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern.  |BR| |BR|
 
+.. important:: 
+   :class: important-float-right
+   
+   EX-Installer creates a folder (<home>\\ex-installer) to hold the information it needs. :dcc-ex-red-bold:`Do not directly modify anything in this folder` as it may be overwritten or deleted by the installer at any time.
+
 * For **Apple macOS**:
 
   * Open a terminal window and navigate to the that folder that you downloaded the file to.  e.g.: |BR| ``cd Downloads``
@@ -84,13 +106,9 @@ Download and Run EX-Installer
   * Open a terminal window and navigate to that folder
   * **Run the installer with** the following command: |BR| ``./EX-Installer-Linux64`` |BR| |BR|
 
-.. warning:: 
-   
-   EX-Installer creates then maintains a folder (<home>\\ex-installer) to hold the information it needs. :dcc-ex-red-bold:`Do not directly modify anything in this folder` as it may be overwritten or deleted by the installer at any time.
+----
 
-You will be presented with the following screen...
-
-|force-break|
+**You will be presented with the following screen...**
 
 a. The 'EX-Installer Welcome' screen
 ------------------------------------
@@ -104,11 +122,13 @@ a. The 'EX-Installer Welcome' screen
 
 This screen provides some basic information about the process of loading the Software.
 
-There is a *debugging* option on this page. If enabled this provides additional information about what is happening during the loading process. Unless you are having difficulties, or have been requested to enable this by one of our team, you do not need to select this.
+.. There is a *debugging* option on this page. If enabled this provides additional information about what is happening during the loading process. Unless you are having difficulties, or have been requested to enable this by one of our team, you do not need to select this.
 
 To proceed, click the :guilabel:`Manage Arduino CLI` button.
 
 |force-break|
+
+|HR-DASHED|
 
 b. 'Manage Arduino CLI' screen
 ------------------------------
@@ -133,15 +153,17 @@ If have previously installed the CLI you will see a :guilabel:`Refresh Arduino C
 
    Enabling additional platforms will take more space on your hard drive and is likely to add several minutes to the installation process. Maybe grab a cup of tea or a coffee!
 
-If you are using an Espressif or STMicroelectronics device, as opposed to the more common Uno or Mega based Arduinos, you will need to enable support for these by selecting the appropriate additional platform option.
+If you are using an Espressif or STMicroelectronics device (including the |EX-CSB1-SHORT|, as opposed to the more common Uno or Mega based Arduinos, you will need to enable support for these by selecting the appropriate additional platform option.
 
 You *must* have Arduino CLI installed to proceed, simply click the :guilabel:`Install Arduino CLI` button if it is showing.
 
 If you already have the Arduino CLI installed, it is recommended that you refresh it periodically (e.g. weekly) to ensure support for the various device details are kept up to date. To refresh the CLI, simply click the :guilabel:`Refresh Arduino CLI` button.
 
-Once the CLI is installed, To proceed, click the :guilabel:`Select your device` button.
+Installing the CLI can take some time. Once the CLI is installed, To proceed, click the :guilabel:`Select your device` button.
 
 |force-break|
+
+|HR-DASHED|
 
 c. 'Select Your Device' screen
 ------------------------------
@@ -161,13 +183,15 @@ When navigating to this page, a scan for devices will start automatically.
 
 If you see **No devices found** it means that you either a) have not connected the device to the computer, or b) the device was not recognised by the computer.
 
-**No Devices Found**
+No Devices Found
+~~~~~~~~~~~~~~~~
 
 If you have not connected the device, connect it now then click the :guilabel:`Scan for Devices` button again.
 
 If the device *is* connected but not found refer to the :doc:`/support/ex-cs-diagnose` page for assistance.
 
-**Multiple Devices Found**
+Multiple Devices Found
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-installer/select_device_multiple_devices.png
    :alt: EX-Installer - Select Device - Multiple Devices
@@ -193,6 +217,8 @@ Once you have a port and device type selected, to proceed, click the :guilabel:`
 
 |force-break|
 
+|HR-DASHED|
+
 d. 'Select the Product to Install' screen
 -----------------------------------------
 
@@ -209,11 +235,13 @@ Click on the |EX-CS| logo to proceed.
 
 |force-break|
 
+|HR-DASHED|
+
 e. Product Specific screens - EX-CommandStation
 -----------------------------------------------
 
 i) 'Select EX-CommandStation Version' screen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-installer/select_cs_version.png
    :alt: EX-Installer - Select EX-CommandStation version
@@ -227,7 +255,8 @@ On this screen you need to select:
 * Which version of the EX-CommandStation software you wish to load
 * How you wish to configure the software
 
-*Which version*
+Which Version
+^^^^^^^^^^^^^
 
 Select which version of the |EX-CS| software to load onto your hardware.  If you are unsure, or unless you have been otherwise directed by the support team, we recommend you select ``Latest Production``.
 
@@ -237,7 +266,8 @@ Options are:
 * Latest Development
 * Select a specific version
 
-*How to configure*
+How to Configure
+^^^^^^^^^^^^^^^^
 
 Select how you wish to configure your |EX-CS|. Unless you are updating a previous version that you manually configured, or want to manually make advanced configuration changes, select ``Configure options on the next screen``
 
@@ -267,8 +297,10 @@ If you have selected ``Use my existing configuration files``, to proceed, click 
 
 |force-break|
 
+|HR-DASHED|
+
 ii) 'Install EX-CommandStation' - Configuration screen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure-general.png
    :alt: EX-Installer - EX-CommandStation Configuration
@@ -291,7 +323,7 @@ On this screen you can select some of the flexible and optional features of the 
 |force-break|
 
 Motor Driver
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_motor_shield.png
    :alt: EX-Installer - EX-CommandStation - Configure Motor Driver
@@ -318,7 +350,7 @@ These options are determined from the chosen version of |EX-CS|, and may include
 This list will change over time as new motor drivers are added, and any older ones no longer supported are removed.
 
 Optional Display
-~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_screen.png
    :alt: EX-Installer - EX-CommandStation - Configure Display Driver
@@ -337,7 +369,7 @@ The options include:
 * OLED 128 x 64
 
 WiFi
-~~~~
+^^^^
 
 If you have installed and optional WiFi board, or are using a microcontroller board with integrated WiFi, enable the ``I have WiFi`` option, which will enable the WiFi Options tab, allowing you to configure the WiFi settings.
 
@@ -353,7 +385,8 @@ You can configure the WiFi for **EX-CommandStation** two ways:
 * **Access Point mode** |BR| You can configure for EX-CommandStation to have its own, completely isolated, WiFi Network. This is referred to as *Access Point Mode*. (Most useful if your layout is away from the house, or you transport your layout frequently, or do not want to give guests access to your home WiFi.) |BR| To enable, select ``Use my EX-CommandStation as an Access Point`` 
 * **Station mode**  |BR| The EX-CommandStation can be setup so that it connects to your existing home WiFi Network. This is referred to as *Station Mode*. |BR| To enable, select  ``Connect my EX-CommandStation to my existing wireless network`` 
 
-**Use my EX-CommandStation as an Access Point**
+Use my EX-CommandStation as an Access Point
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    .. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_access_point.png
       :alt: EX-Installer - EX-CommandStation - Configure WiFi - Access Point
@@ -377,7 +410,8 @@ You can configure the WiFi for **EX-CommandStation** two ways:
 
    **WiFi Channel** can be any value from 1-11.
 
-**Connect my EX-CommandStation to my existing wireless network** 
+Connect my EX-CommandStation to my existing wireless network
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    .. figure:: /_static/images/ex-installer/ex_cs_configure_wifi_station.png
       :alt: EX-Installer - EX-CommandStation - Configure WiFi - Station Mode
@@ -404,26 +438,26 @@ You can configure the WiFi for **EX-CommandStation** two ways:
       See the :doc:`/ex-commandstation/advanced-setup/supported-wifi/wifi-config` page for more detailed information on the the WiFi options.
 
 I have Ethernet
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 If you have installed and Ethernet board, select this option.
 
 Note that it is not possible to have both WiFi and Ethernet enabled at the same time.
 
 Start with power on
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 
 Enabling this option will cause the |EX-CS| to automatically start with the track power on.  
 
 If you don't enable this, you will need to turn the track power with you controller, or with TrackManger automations.
 
 Override current limit
-~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^
 
 Enabling this option will allow you to override the default current limit.
 
 Set track modes
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 If you have selected an appropriate version of |EX-CS|, you will be able to enable the option to configure TrackManager. If the ``Configure TrackManager`` switch is disabled, you have not selected a version that includes the TrackManager feature.
 
@@ -465,7 +499,7 @@ By default track (channel) **A** will default to ``MAIN`` and Track (channel) **
 When selecting ``DC`` or ``DCX`` modes, you can customer the associated loco/cab ID.
 
 Advanced Config
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_advanced_config.png
    :alt: EX-Installer - EX-CommandStation - Advanced Config
@@ -485,7 +519,7 @@ If you have selected *Advanced Config*, to proceed, click the :guilabel:`Advance
 |force-break|
 
 iii) 'Advanced Configuration' screen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-installer/ex_cs_advanced_config.png
    :alt: EX-Installer - EX-CommandStation - Configure WiFi - Station Mode
@@ -514,7 +548,7 @@ To proceed, click the :guilabel:`Compile and Load` button. See *iv* below.
 |force-break|
 
 iv) 'Compile and Load' screen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. figure:: /_static/images/ex-installer/ex_cs_load.png
    :alt: EX-Installer - Load
@@ -563,6 +597,8 @@ You will be prompted to select a folder, and if the chosen folder already contai
 
 |force-break|
 
+----
+
 Device Monitor
 --------------
 
@@ -581,13 +617,13 @@ For further details on using |Device Monitor|, continue on to the next page with
 
 |force-break|
 
-----
+|HR-HEAVY|
 
 Next Steps - Test your setup
 ============================
 
-.. NOTE:: 
-   :class: note-float-right
+.. important:: 
+   :class: important-float-right
 
    The programming track is for programming only. Make sure you are on the main track if you expect your loco to move or respond to light or sound commands.
 

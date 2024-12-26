@@ -693,7 +693,7 @@
 </div>
 <p>The simplest method to program these modules is by using an additional microcontroller such as an Arduino Nano or Uno, connected as per the diagram below. If you are using a HC-06 module, the green “Key” connection is not required as this pin does not exist.</p>
 <a class="reference internal image-reference" href="../../../_images/nano-bluetooth-programmer.png"><img alt="Nano Bluetooth Programmer" src="../../../_images/nano-bluetooth-programmer.png" style="width: 442.04999999999995px; height: 212.1px;" /></a>
-<p>The Arduino IDE’s Serial Monitor can be used to program either module successfully providing it is configured correctly for the specified module in the relevant section below.</p>
+<p>The <a class="reference internal" href="../../tools/serial-monitor.html#connect-with-the-arduino-ide-serial-monitor"><span class="std std-ref">Arduino IDE Serial Monitor</span></a> can be used to program either module successfully providing it is configured correctly for the specified module in the relevant section below.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you wish to simply use the modules without configuring anything, you can do so for the device name and PIN, noting that the whole world will know the default pin, and anyone can therefore pair to your device.</p>
@@ -747,8 +747,8 @@
 <p>The programming sketch in the previous section should place the HC-05 into “AT” command mode successfully, provided it is connected correctly, and your device has the “Key” pin available.</p>
 <p>When the HC-05 is in “AT” command mode, the blue and red LEDs should blink slowly, around 2 seconds on/off. When not in this mode, the blue and red LEDs will blink rapidly.</p>
 <p>If the HC-05 does not enter the “AT” command mode, ensure the “Key” pin is connected correctly, and try holding the button while powering on in case the “Key” pin is not connected internally within the module.</p>
-<p>To send the required “AT” commands to the module, open the Arduino IDE’s serial monitor, set the new line option to “Both NL &amp; CR”, and set the baud rate to “9600”.</p>
-<p>To verify the device is ready and in “AT” command mode, enter “AT” and click “Send” (or press the &lt;Enter&gt; key), and the response “OK” should appear in the serial monitor.</p>
+<p>To send the required “AT” commands to the module, open the <a class="reference internal" href="../../tools/serial-monitor.html#connect-with-the-arduino-ide-serial-monitor"><span class="std std-ref">Arduino IDE Serial Monitor</span></a>, set the new line option to “Both NL &amp; CR”, and set the baud rate to “9600”.</p>
+<p>To verify the device is ready and in “AT” command mode, enter “AT” and click “Send” (or press the &lt;Enter&gt; key), and the response “OK” should appear in the <a class="reference internal" href="../../tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a>.</p>
 <p>Providing this has been successful, enter the following commands one at a time to configure the various options, and each one should return “OK” to confirm the command was received successfully:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AT+NAME=&lt;DEVICENAME&gt;
 AT+PSWD=&lt;PASSWORD&gt;
@@ -775,9 +775,9 @@ AT+UART=115200,0,0
 <h3><a class="toc-backref" href="#id5" role="doc-backlink">HC-06 programming</a><a class="headerlink" href="#hc-06-programming" title="Link to this heading"></a></h3>
 <p>Unlike the HC-05, the HC-06 module has no specific “AT” command mode, and can be programmed at any time it is not paired with another Bluetooth device. The HC-06 can only ever operate in “Slave” mode also.</p>
 <p>The other notable difference as previously mentioned is that programming commands must be entered within a 1 second duration. This means the only effective way to send them is by using a serial console that lets you enter the complete command string in one go, and the Arduino IDE can be used for this.</p>
-<p>To send the required “AT” commands to the module, open the Arduino IDE’s serial monitor, set the new line option to “No line ending”, and set the baud rate to “9600”.</p>
+<p>To send the required “AT” commands to the module, open the <a class="reference internal" href="../../tools/serial-monitor.html#connect-with-the-arduino-ide-serial-monitor"><span class="std std-ref">Arduino IDE Serial Monitor</span></a>, set the new line option to “No line ending”, and set the baud rate to “9600”.</p>
 <p>Note that these settings take effect immediately, and therefore you should send the baud rate command last, otherwise you will effectively be disconnected from the HC-06 module.</p>
-<p>To verify the device is ready and in “AT” command mode, enter “AT” and click “Send” (or press the &lt;Enter&gt; key), and the response “OK” should appear in the serial monitor.</p>
+<p>To verify the device is ready and in “AT” command mode, enter “AT” and click “Send” (or press the &lt;Enter&gt; key), and the response “OK” should appear in the <a class="reference internal" href="../../tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a>.</p>
 <p>Providing this has been successful, enter the following commands one at a time to configure the various options:, and each one should return “OK” to confirm the command was received successfully. Note that unlike the HC-05, the return text is slightly different for each command as noted:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AT+NAME&lt;DEVICENAME&gt; (returns OKsetname)
 AT+PIN&lt;PIN&gt; (returns OKsetPIN)
@@ -905,7 +905,7 @@ AT+LINK=0021,11,012446        &lt;&lt;-- Link to our slave device
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fcb15200be0>
+    <jinja2.runtime.BlockReference object at 0x7f21aa85ba00>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

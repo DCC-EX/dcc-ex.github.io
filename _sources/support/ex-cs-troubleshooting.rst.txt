@@ -96,14 +96,14 @@ We are going to use the |Arduino IDE| for this section. If you are unfamiliar wi
 
 #. Remove the Motor Shield ---we are going to test just the Arduino first.
 #. Download and install the most current version of :ref:`EX-CommandStation <download/ex-commandstation:Latest EX-CommandStation Official Release>`
-#. Open the Serial Monitor Window in the Arduino IDE and establish communication with the Arduino. You will need to set the serial data rate to ``115200 baud`` and make sure you have set ``Both CR & NL`` from the dropdown so that commands are accepted. If you see gibberish (garbage characters), this is usually an indication that the baud rate is incorrect. You should see "DCC-EX" and the software version as well as other log lines that mention WiFi. If you don't see anything in the log, it could be that the software did not upload correctly, there is less than 7 Volts DC to the Arduino, or there is an issue with the connection between your computer and the Arduino. Check your serial port and try a different USB cable.
+#. Open the |Serial Monitor| Window in the Arduino IDE and establish communication with the Arduino. You will need to set the serial data rate to ``115200 baud`` and make sure you have set ``Both CR & NL`` from the dropdown so that commands are accepted. If you see gibberish (garbage characters), this is usually an indication that the baud rate is incorrect. You should see "DCC-EX" and the software version as well as other log lines that mention WiFi. If you don't see anything in the log, it could be that the software did not upload correctly, there is less than 7 Volts DC to the Arduino, or there is an issue with the connection between your computer and the Arduino. Check your serial port and try a different USB cable.
 
 Testing the Arduino and EX-CommandStation code
 ----------------------------------------------
 
 Validating the Arduino and |EX-CS| code is functional is a pretty straight forward exercise.
 
-#. From the serial monitor window, type ``<D RESET>`` to restart the |EX-CS| and monitor the startup logs. Once it has started, ensure the version you expect is displayed, and that the motor driver you have configured is also displayed. Look for a line similar to ``<iDCC-EX V-4.2.3 rc1 / STM32 / STANDARD_MOTOR_SHIELD G-PORTX-HAL-20220828>`` which translates to ``<Version / Microcontroller / Motor shield definition>``. If these differ from what you expect, the software hasn't loaded correctly, or your "config.h" file may not have been updated prior to uploading the software.
+#. From the |serial monitor| window, type ``<D RESET>`` to restart the |EX-CS| and monitor the startup logs. Once it has started, ensure the version you expect is displayed, and that the motor driver you have configured is also displayed. Look for a line similar to ``<iDCC-EX V-4.2.3 rc1 / STM32 / STANDARD_MOTOR_SHIELD G-PORTX-HAL-20220828>`` which translates to ``<Version / Microcontroller / Motor shield definition>``. If these differ from what you expect, the software hasn't loaded correctly, or your "config.h" file may not have been updated prior to uploading the software.
 #. If there are obvious issues noted from these startup logs, review "config.h", make sure you have downloaded the correct version of |EX-CS|, and upload the software again. 
 
 Testing the Motor Shield

@@ -26,7 +26,7 @@ Diagnostics ``<D ACK>`` Command
 <D ACK ON>
 ==========
 
-If you encounter problems with ACKs from the Decoder (Reading or Writing CVs) and you want help, the DCC-EX support team will ask you to provide a log. This is a very simple diagnostic test to provide us with the proper information. With your loco on the PROG track, and using a serial monitor like the one in the Arduino IDE, enter each of these two commands followed by pressing "send":
+If you encounter problems with ACKs from the Decoder (Reading or Writing CVs) and you want help, the DCC-EX support team will ask you to provide a log. This is a very simple diagnostic test to provide us with the proper information. With your loco on the PROG track, and using a |serial monitor| like the one in the Arduino IDE, enter each of these two commands followed by pressing "send":
 
 | ``<D ACK ON>`` 
 | ``<R>``

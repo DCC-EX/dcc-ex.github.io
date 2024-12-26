@@ -102,7 +102,7 @@ The F429ZI has the same large footprint, however it has the added benefit of onb
 Install the STLink drivers for Windows
 --------------------------------------
 
-When using any of the NUCLEO series microcontrollers with Microsoft Windows, you will need to install their STLink USB drivers in order to be able to upload software to them and use the serial monitor in either PlatformIO or the Arduino IDE.
+When using any of the NUCLEO series microcontrollers with Microsoft Windows, you will need to install their STLink USB drivers in order to be able to upload software to them and use the |serial monitor| in either VSC or the |Arduino IDE|.
 
 .. note:: 
 
@@ -139,7 +139,7 @@ You can now plug your NUCLEO device in and proceed with upgrading the debugger f
 Upgrade the debugger firmware
 -----------------------------
 
-During testing, it was noted with certain USB chipsets on Windows 11 that serial responses via the USB debugger port would stop being received by the serial monitor, even though the device continued to operate normally. The recommendation to resolve this issue is to upgrade the debugger firmware.
+During testing, it was noted with certain USB chipsets on Windows 11 that serial responses via the USB debugger port would stop being received by the |serial monitor|, even though the device continued to operate normally. The recommendation to resolve this issue is to upgrade the debugger firmware.
 
 We recommend you upgrade the debugger firmware regardless if you experience this issue or not.
 
@@ -389,7 +389,7 @@ Finally, the ESP32 needs more testing and development of a |DCC-EX| |I2C| non-bl
 WeMos D1 R32/ESPDUINO-32 with Microsoft Windows - CH340 drivers
 ---------------------------------------------------------------
 
-When using the WeMos D1 R32/ESPDUINO-32 board with Microsoft Windows, you will need to install the CH340 USB drivers in order to be able to upload software to it and use the serial monitor in either PlatformIO or the Arduino IDE.
+When using the WeMos D1 R32/ESPDUINO-32 board with Microsoft Windows, you will need to install the CH340 USB drivers in order to be able to upload software to it and use the |serial monitor| in either PlatformIO or the Arduino IDE.
 
 Adding ESP32 support to the Arduino IDE
 ----------------------------------------

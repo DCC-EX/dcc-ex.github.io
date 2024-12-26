@@ -126,7 +126,7 @@ Finally, the ESP32 needs more testing and development of a |DCC-EX| |I2C| non-bl
 WeMos D1 R32/ESPDUINO-32 with Microsoft Windows - CH340 drivers
 ---------------------------------------------------------------
 
-When using the WeMos D1 R32/ESPDUINO-32 board with Microsoft Windows, you will need to install the CH340 USB drivers in order to be able to upload software to it and use the serial monitor in either PlatformIO or the Arduino IDE.
+When using the WeMos D1 R32/ESPDUINO-32 board with Microsoft Windows, you will need to install the CH340 USB drivers in order to be able to upload software to it and use the |serial monitor| in either PlatformIO or the Arduino IDE.
 
 Building DCC-EX for ESP32
 -------------------------

@@ -463,7 +463,7 @@ Cab (Loco) Commands
   |_| |_| |_| |_| - SPEED128 = use 128 speed steps
   
   *Response:* |BR|
-  |_| Response sent to the Serial Monitor only (not wifi clients). |BR|
+  |_| Response sent to the |Serial Monitor| only (not wifi clients). |BR|
   |_| One of: |BR|
   |_| |_| |_| |_| - *28 Speedsteps* |BR|
   |_| |_| |_| |_| - *128 Speedsteps*
@@ -1074,7 +1074,7 @@ WiFi Control
 
   *Notes:*
 
-    Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the :doc:`mySetup.h file </ex-commandstation/advanced-setup/startup-config>`. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.
+    Users familiar with the AT Command Set of WiFi board may enter commands directly into the |serial monitor| in real-time or as setup commands in the :doc:`mySetup.h file </ex-commandstation/advanced-setup/startup-config>`. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.
 
 |hr-dashed|
 
@@ -1486,7 +1486,7 @@ Programming track - Tuning
 <D ACK RETRY x> - Adjust ACK retries
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  When reading/writing CVs, the program will try again upon failure.  The default is ``<D ACK RETRY 2>``, which means 3 attempts before a failure is reported.  Each of the unsuccessful attempts is reported in the serial monitor or JMRI monitor log.  The last unsuccessful attempt remains on the display if in use.  To reset the running total, send the command manually: ``<D ACK RETRY 2>``.
+  When reading/writing CVs, the program will try again upon failure.  The default is ``<D ACK RETRY 2>``, which means 3 attempts before a failure is reported.  Each of the unsuccessful attempts is reported in the |serial monitor| or JMRI monitor log.  The last unsuccessful attempt remains on the display if in use.  To reset the running total, send the command manually: ``<D ACK RETRY 2>``.
 
   *Parameters:* |BR|
   |_| > **x:** Number of times to retry
@@ -2061,7 +2061,7 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
   *Notes:*
     
-    When enabled, diagnostic messages will be shown on the the serial monitor.
+    When enabled, diagnostic messages will be shown on the the |serial monitor|.
 
 |hr-dashed|
 
@@ -2077,7 +2077,7 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
   
   *Notes:*
 
-    When enabled, diagnostic messages will be shown on the the serial monitor.
+    When enabled, diagnostic messages will be shown on the the |serial monitor|.
 
 |hr-dashed|
 
@@ -2105,7 +2105,7 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
   
   *Notes:*
     
-    When enabled, diagnostic messages will be shown on the the serial monitor.
+    When enabled, diagnostic messages will be shown on the the |serial monitor|.
 
 |hr-dashed|
 
@@ -2121,7 +2121,7 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
   *Notes:*
   
-    When enabled, diagnostic messages will be shown on the the serial monitor.
+    When enabled, diagnostic messages will be shown on the the |serial monitor|.
 
 |hr-dashed|
 
@@ -2157,7 +2157,7 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
   *Response:* |BR|
   |_| "Free memory=xxxx" |BR|
-  |_| Displayed on the serial monitor only.
+  |_| Displayed on the |serial monitor| only.
 
 ----
 

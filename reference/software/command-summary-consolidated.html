@@ -1020,7 +1020,7 @@ This starts a reminder process for any external updates to the cab’s (loco’s
 <h4><a class="toc-backref" href="#id72" role="doc-backlink">&lt;D speedsteps&gt; - Switch between 28 and 128 speed steps</a><a class="headerlink" href="#d-speedsteps-switch-between-28-and-128-speed-steps" title="Link to this heading"></a></h4>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>speedsteps:</strong> <br />    - SPEED28 = use 28 speed steps <br />    - SPEED128 = use 128 speed steps</p>
-<p><em>Response:</em> <br /> Response sent to the Serial Monitor only (not wifi clients). <br /> One of: <br />    - <em>28 Speedsteps</em> <br />    - <em>128 Speedsteps</em></p>
+<p><em>Response:</em> <br /> Response sent to the <a class="reference internal" href="../tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a> only (not wifi clients). <br /> One of: <br />    - <em>28 Speedsteps</em> <br />    - <em>128 Speedsteps</em></p>
 </div></blockquote>
 </section>
 </section>
@@ -1379,7 +1379,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <p><em>Example:</em> <code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code> would send AT+X to the ESP</p>
 <p><em>Notes:</em></p>
 <blockquote>
-<div><p>Users familiar with the AT Command Set of WiFi board may enter commands directly into the serial monitor in real-time or as setup commands in the <a class="reference internal" href="../../ex-commandstation/advanced-setup/startup-config.html"><span class="doc">mySetup.h file</span></a>. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.</p>
+<div><p>Users familiar with the AT Command Set of WiFi board may enter commands directly into the <a class="reference internal" href="../tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a> in real-time or as setup commands in the <a class="reference internal" href="../../ex-commandstation/advanced-setup/startup-config.html"><span class="doc">mySetup.h file</span></a>. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.</p>
 </div></blockquote>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
@@ -1680,7 +1680,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <section id="d-ack-retry-x-adjust-ack-retries">
 <h4><a class="toc-backref" href="#id120" role="doc-backlink">&lt;D ACK RETRY x&gt; - Adjust ACK retries</a><a class="headerlink" href="#d-ack-retry-x-adjust-ack-retries" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p>When reading/writing CVs, the program will try again upon failure.  The default is <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">RETRY</span> <span class="pre">2&gt;</span></code>, which means 3 attempts before a failure is reported.  Each of the unsuccessful attempts is reported in the serial monitor or JMRI monitor log.  The last unsuccessful attempt remains on the display if in use.  To reset the running total, send the command manually: <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">RETRY</span> <span class="pre">2&gt;</span></code>.</p>
+<div><p>When reading/writing CVs, the program will try again upon failure.  The default is <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">RETRY</span> <span class="pre">2&gt;</span></code>, which means 3 attempts before a failure is reported.  Each of the unsuccessful attempts is reported in the <a class="reference internal" href="../tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a> or JMRI monitor log.  The last unsuccessful attempt remains on the display if in use.  To reset the running total, send the command manually: <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">ACK</span> <span class="pre">RETRY</span> <span class="pre">2&gt;</span></code>.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>x:</strong> Number of times to retry</p>
 <p><em>Response:</em> N/A</p>
 <p><em>Notes:</em></p>
@@ -2103,7 +2103,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <p><em>Response:</em> N/A</p>
 <p><em>Notes:</em></p>
 <blockquote>
-<div><p>When enabled, diagnostic messages will be shown on the the serial monitor.</p>
+<div><p>When enabled, diagnostic messages will be shown on the the <a class="reference internal" href="../tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a>.</p>
 </div></blockquote>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
@@ -2115,7 +2115,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <p><em>Response:</em> N/A</p>
 <p><em>Notes:</em></p>
 <blockquote>
-<div><p>When enabled, diagnostic messages will be shown on the the serial monitor.</p>
+<div><p>When enabled, diagnostic messages will be shown on the the <a class="reference internal" href="../tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a>.</p>
 </div></blockquote>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
@@ -2135,7 +2135,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <p><em>Response:</em> N/A</p>
 <p><em>Notes:</em></p>
 <blockquote>
-<div><p>When enabled, diagnostic messages will be shown on the the serial monitor.</p>
+<div><p>When enabled, diagnostic messages will be shown on the the <a class="reference internal" href="../tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a>.</p>
 </div></blockquote>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
@@ -2147,7 +2147,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <p><em>Response:</em> N/A</p>
 <p><em>Notes:</em></p>
 <blockquote>
-<div><p>When enabled, diagnostic messages will be shown on the the serial monitor.</p>
+<div><p>When enabled, diagnostic messages will be shown on the the <a class="reference internal" href="../tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a>.</p>
 </div></blockquote>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
@@ -2179,7 +2179,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <section id="d-ram-shows-remaining-ram-free-memory">
 <h4><a class="toc-backref" href="#id152" role="doc-backlink">&lt;D RAM&gt; - Shows remaining RAM (Free Memory)</a><a class="headerlink" href="#d-ram-shows-remaining-ram-free-memory" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Response:</em> <br /> “Free memory=xxxx” <br /> Displayed on the serial monitor only.</p>
+<div><p><em>Response:</em> <br /> “Free memory=xxxx” <br /> Displayed on the <a class="reference internal" href="../tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a> only.</p>
 </div></blockquote>
 </section>
 </section>
@@ -2265,7 +2265,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fcb1ad1e5c0>
+    <jinja2.runtime.BlockReference object at 0x7f21b40c0a90>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

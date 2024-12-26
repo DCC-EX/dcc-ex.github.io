@@ -34,7 +34,7 @@ Features
 * Speaks the |DCC-EX Native Commands| natively
 * Connect via WiFi *or* Bluetooth
 * Read and Write CVs
-* Serial Monitor to send manual commands and view the log
+* |Serial Monitor| to send manual commands and view the log
 
 Screenshots
 ============

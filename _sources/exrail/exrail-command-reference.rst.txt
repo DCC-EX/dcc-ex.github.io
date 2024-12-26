@@ -158,7 +158,7 @@ These commands can be run interactively via the serial console or over Ethernet/
 ``<D EXRAIL state>`` - Enable or disable EXRAIL sequence logging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When the CommandStation is connected to a serial monitor, EXRAIL sequence logging can be turned on or off (Enabled or Disabled).
+When the CommandStation is connected to a |serial monitor|, |EX-R| sequence logging can be turned on or off (Enabled or Disabled).
 
   .. collapse:: For example: (click to show)
 
@@ -3176,7 +3176,7 @@ Broadcast to all throttles/JMRI on serial and WiFi
 ``PRINT( "msg" )`` - Print diagnostic message to Serial Monitor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Write a diagnostic message to the Serial Monitor.
+Write a diagnostic message to the |serial monitor|.
 
 *Parameters:* |BR|
 |_| > **msg** - message to write

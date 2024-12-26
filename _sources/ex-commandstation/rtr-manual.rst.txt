@@ -63,7 +63,7 @@ Input Power Barrel Jack
 
    Barrel Jack
 
-The CSB1 normally comes with a barrel jack for compatibility with most laptop-type power supplies that use a 2.1mm inner hole diameter and a 5.5mm outer shank diameter. 
+The |EX-CSB1-SHORT| normally comes with a barrel jack for compatibility with most laptop-type power supplies that use a 2.1mm inner hole diameter and a 5.5mm outer shank diameter. 
 
 Be careful since some power supplies have a 2.5mm inner hole which is likely to be too loose. The barrel jack input power is reverse voltage protected. This supplies a 5V switching regulator for all electronics on the board including a 3.3V regulator for 3.3V components, an optional |EX-MS| stacked on top, and power out to the track. 
 
@@ -86,7 +86,7 @@ The USB connector can provide power from a computer or any 500mA or larger USB o
 
 You can connect your track Power supply (see above) to the barrel jack while the USB is connected, as they will not interfere with each other. You may also wish to do this to isolate the |EX-CSB1-SHORT| processor power from any interruptions to track power due to overload for example. 
 
-The USB port is also very useful for connecting a serial monitor to test the command station and view logging information in real time to aid in fault finding. See :doc:`/reference/tools/serial-monitor`
+The USB port is also very useful for connecting a |serial monitor| to test the command station and view logging information in real time to aid in fault finding. See :doc:`/reference/tools/serial-monitor`
 
 |FORCE-BREAK|
 
@@ -100,7 +100,7 @@ Track A and B Outputs
 
    Pluggable Track |BR| Output Connectors
 
-These are female pluggable terminals that accept a removable male screw terminal plug (included with your CSB1). Using the removable connectors allows for easy reconfiguration, testing, and placement of your command station. You can unsolder these connectors (or ask for a special order) and replace them with 3.5mm pitch screw terminals if you prefer. 
+These are female pluggable terminals that accept a removable male screw terminal plug (included with your |EX-CSB1-SHORT|). Using the removable connectors allows for easy reconfiguration, testing, and placement of your command station. You can unsolder these connectors (or ask for a special order) and replace them with 3.5mm pitch screw terminals if you prefer. 
 
 For DCC operation, output A is usually the MAIN track and output B is the programming track. However, with our TrackManager :sup:`tm` feature, you can configure any output to be DCC, DC, MAIN, or PROG. 
 
@@ -158,7 +158,7 @@ RailSync Connector
 
    Railsync Connector
 
-This is a standard Railsync input and is labelled "Booster In" on the top of the board. Connecting a RailSync output from a Command Station or Booster will automatically switch the EXCSB1 to booster mode on receipt of an input signal when the CSB1 is running the appropriate |EX-R| script. 
+This is a standard Railsync input and is labelled "Booster In" on the top of the board. Connecting a RailSync output from a Command Station or Booster will automatically switch the EXCSB1 to booster mode on receipt of an input signal when the |EX-CSB1-SHORT| is running the appropriate |EX-R| script. 
 
 Again be sure to wire the DCC outputs to power districts with consistent phasing. Any voltage between 5V and 26V at the input will work. The Digitrax specification is from 12V to 26V. See `the DCCWiki article on RailSync <https://dccwiki.com/LocoNet_and_RailSync_Voltages>`_ |EXTERNAL-LINK|
 
@@ -371,6 +371,8 @@ Powering the EX-CSB1
 
 The |EX-CSB1| has a 2.1mm x 5.5mm power jack. If you already have a power supply with bare wires, you can use an optional 2.1mm x 5.5mm screw terminal block adapter. For more information about power supplies, including how to use one power supply to supply all the different voltages on your layout, see :ref:`Power Supplies <reference/hardware/power-supplies:power supplies>`.
 
+To power up the |EX-CSB1-SHORT|, just plug your power supply into the mains power (aka wall outlet) and connect the barrel end to the Command Station. Make sure your power supply matches the needs of your setup: the voltage should be between 12V and 25V DC, depending on the scale of your locomotives, and it should provide at least 2A of current with good over-current performance and voltage stability.
+
 .. figure:: /_static/images/power/12v-3A-brick.png
    :alt: 12V brick power supply
    :scale: 100%
@@ -378,15 +380,13 @@ The |EX-CSB1| has a 2.1mm x 5.5mm power jack. If you already have a power supply
 
    12V Power Supply
 
-To power up the CSB1, just plug your power supply into the mains power (aka wall outlet) and connect the barrel end to the Command Station. Make sure your power supply matches the needs of your setup: the voltage should be between 12V and 25V DC, depending on the scale of your locomotives, and it should provide at least 2A of current with good over-current performance and voltage stability.
+To get the most out of your |EX-CSB1-SHORT|, we suggest using a modern switching power supply with 4A or more. For Z scale, 12V is usually enough, but for N, HO, and OO scales, we recommend using between 14V and 16V DC. It's important that your DC power is well-regulated which is why we suggest a modern switch-mode power supply with double insulation and strong overload protection.
 
-To get the most out of your EX-CSB1, we suggest using a modern switching power supply with 4A or more. For Z scale, 12V is usually enough, but for N, HO, and OO scales, we recommend using between 14V and 16V DC. It's important that your DC power is well-regulated which is why we suggest a modern switch-mode power supply with double insulation and strong overload protection.
-
-.. NOTE:: Your power supply can be rated at *or above* the specified Amperage rating. You must not exceed the voltage rating of your device, but a little extra current is ok, since the CSB1 will only use as much as it needs. However, remember that both voltage and current can be dangerous.
+.. NOTE:: Your power supply can be rated at *or above* the specified Amperage rating. You must not exceed the voltage rating of your device, but a little extra current is ok, since the |EX-CSB1-SHORT| will only use as much as it needs. However, remember that both voltage and current can be dangerous.
 
 .. TODO XXX For more details on how much current do I need, see [link] XXX
 
-When you connect power to the CSB1, you should see one or both bright green power LEDs light up, confirming that the electronics are working. 
+When you connect power to the |EX-CSB1-SHORT|, you should see one or both bright green power LEDs light up, confirming that the electronics are working. 
 
 However, for safety, track power will be off by default when you first plug in the |EX-CSB1-SHORT|. This is to prevent power from accidentally being applied to your layout before everything is ready. See the :ref:`EX -Installer page <ex-installer/installing:start with power on>` for more information on how to change this behaviour.
 
@@ -461,13 +461,13 @@ Unscrew both screw terminals with a flat blade jeweller's screwdriver. The screw
 Turning on Power
 ------------------
 
-Now you can connect your track power supply to the barrel connector on the CSB1 and then plug the other end into the wall. You should see status information on the display including the CSB1 firmware version. 
+Now you can connect your track power supply to the barrel connector on the |EX-CSB1-SHORT| and then plug the other end into the wall. You should see status information on the display including the |EX-CSB1-SHORT| firmware version. 
 
 If you do not have a display or your display is not working, you will need to connect a :doc:`serial monitor </reference/tools/serial-monitor>`. 
 
 .. TODO XXX This is a mess of having to have so many options and send people back and forth and have an entire section on using a serial monitor. Just link to it? Yeah... link to it... it's why I insisted on an OLED display XXX PMA :-P )
 
-The |EX-CSB1| will power up in WiFi Access Point mode as configured out of the box, with a Wifi network SSID of ``DCCEX_xxxxxx`` and password of ``PASS_xxxxxx``, both of which will be visible on the OLED display (or serial monitor log) after it boots.
+The |EX-CSB1| will power up in WiFi Access Point mode as configured out of the box, with a Wifi network SSID of ``DCCEX_xxxxxx`` and password of ``PASS_xxxxxx``, both of which will be visible on the OLED display (or |serial monitor| log) after it boots.
 
 .. figure:: /_static/images/ex-csb1/oled_startup.png
    :alt: EX-CSB1 Startup - OLED screen
@@ -533,7 +533,7 @@ Connect the USB-C end of the USB cable to the |EX-CS|. Connect the other end to 
 
 Note that 5V power is supplied with the USB connection, so the single green 3.3V LED illuminates (See figure). This powers the electronics on the board for basic testing and to apply software updates, but will not power the track outputs until power is applied through the barrel jack. 
 
-You do NOT need USB power for normal operation. The blue WiFi LED will also illuminate indicating the CSB1 is setup for a WiFi connection. And last, the display will show status information.
+You do NOT need USB power for normal operation. The blue WiFi LED will also illuminate indicating the |EX-CSB1-SHORT| is setup for a WiFi connection. And last, the display will show status information.
 
 **Running EX-WebThrottle**
 
@@ -764,7 +764,7 @@ Connecting
 USB Connection to a Serial Monitor
 ----------------------------------
 
-There are a number ways to open a serial monitor to the |EX-CSB1|.  They are discussed on the :doc`/reference/tools/serial-monitor` page, and any are acceptable. 
+There are a number ways to open a |serial monitor| to the |EX-CSB1|.  They are discussed on the :doc:`/reference/tools/serial-monitor` page, and any are acceptable. 
 
 To discuss just one of those options, which will likely be the easiest to do if you have recently installed the Command Station software using |EX-I|. Simply click the :guilabel:`Serial Monitor` button when the the |EX-CSB1-SHORT| is connected via USB to your PC.
 
@@ -844,7 +844,7 @@ Step 4: Manual Configuration for Advanced Accessories
 Access the |EX-CS| Software:
 
 For advanced |I2C| accessories like sensors or GPIO expanders, you may need to manually configure them via the |EX-CS| software.
-This involves accessing configuration files or using a serial monitor to input specific commands.
+This involves accessing configuration files or using a |serial monitor| to input specific commands.
 
 Editing Configuration Files:
 

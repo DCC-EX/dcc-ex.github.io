@@ -737,7 +737,7 @@
 <p><span class="caption-number">Fig 51: </span><span class="caption-text">Barrel Jack</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>The CSB1 normally comes with a barrel jack for compatibility with most laptop-type power supplies that use a 2.1mm inner hole diameter and a 5.5mm outer shank diameter.</p>
+<p>The <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a> normally comes with a barrel jack for compatibility with most laptop-type power supplies that use a 2.1mm inner hole diameter and a 5.5mm outer shank diameter.</p>
 <p>Be careful since some power supplies have a 2.5mm inner hole which is likely to be too loose. The barrel jack input power is reverse voltage protected. This supplies a 5V switching regulator for all electronics on the board including a 3.3V regulator for 3.3V components, an optional <a href="../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a> stacked on top, and power out to the track.</p>
 <p>While it is capable of 10v-25v operation, it is best to choose a suitable track voltage for your scale. Typically this is 12-15v for N scale, and 14-16v for HO scale. With help in choosing your power supply or using one with bare wires instead of a barrel connector, see <a class="reference internal" href="#powering-the-ex-csb1">Powering the EX-CSB1</a> below.</p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
@@ -752,7 +752,7 @@
 </figure>
 <p>The USB connector can provide power from a computer or any 500mA or larger USB or USB-C Power Delivery (USB-C PD) power supply.  In this way you can connect your <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a> to a computer and update your software version or load <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> scripts that run your accessories. However, without a power supply powering the DC input jack, you cannot supply power to the rails to run trains.</p>
 <p>You can connect your track Power supply (see above) to the barrel jack while the USB is connected, as they will not interfere with each other. You may also wish to do this to isolate the <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a> processor power from any interruptions to track power due to overload for example.</p>
-<p>The USB port is also very useful for connecting a serial monitor to test the command station and view logging information in real time to aid in fault finding. See <a class="reference internal" href="../reference/tools/serial-monitor.html"><span class="doc">Using a Serial Monitor</span></a></p>
+<p>The USB port is also very useful for connecting a <a class="reference internal" href="../reference/tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a> to test the command station and view logging information in real time to aid in fault finding. See <a class="reference internal" href="../reference/tools/serial-monitor.html"><span class="doc">Using a Serial Monitor</span></a></p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
 <section id="track-a-and-b-outputs">
@@ -763,7 +763,7 @@
 <p><span class="caption-number">Fig 53: </span><span class="caption-text">Pluggable Track <br /> Output Connectors</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>These are female pluggable terminals that accept a removable male screw terminal plug (included with your CSB1). Using the removable connectors allows for easy reconfiguration, testing, and placement of your command station. You can unsolder these connectors (or ask for a special order) and replace them with 3.5mm pitch screw terminals if you prefer.</p>
+<p>These are female pluggable terminals that accept a removable male screw terminal plug (included with your <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a>). Using the removable connectors allows for easy reconfiguration, testing, and placement of your command station. You can unsolder these connectors (or ask for a special order) and replace them with 3.5mm pitch screw terminals if you prefer.</p>
 <p>For DCC operation, output A is usually the MAIN track and output B is the programming track. However, with our TrackManager <sup>tm</sup> feature, you can configure any output to be DCC, DC, MAIN, or PROG.</p>
 <p>You should keep the phase of the tracks aligned, so if a train crosses from one power district to another it doesn’t intentionally cause a short (unless it’s a reversing loop and you have assigned that output to have Auto-Reverse capability.) See: <a class="reference internal" href="../ex-installer/managing-config-files.html"><span class="doc">Managing config files with the Installer</span></a>.</p>
 <p>Power to each output can be controlled together or individually. Correct wired gauge for the screw terminals is 16 to 28AWG (1.5mm^2). Be sure your wire gauge can handle the current you expect on the track.</p>
@@ -803,7 +803,7 @@
 <p><span class="caption-number">Fig 56: </span><span class="caption-text">Railsync Connector</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>This is a standard Railsync input and is labelled “Booster In” on the top of the board. Connecting a RailSync output from a Command Station or Booster will automatically switch the EXCSB1 to booster mode on receipt of an input signal when the CSB1 is running the appropriate <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> script.</p>
+<p>This is a standard Railsync input and is labelled “Booster In” on the top of the board. Connecting a RailSync output from a Command Station or Booster will automatically switch the EXCSB1 to booster mode on receipt of an input signal when the <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a> is running the appropriate <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> script.</p>
 <p>Again be sure to wire the DCC outputs to power districts with consistent phasing. Any voltage between 5V and 26V at the input will work. The Digitrax specification is from 12V to 26V. See <a class="reference external" href="https://dccwiki.com/LocoNet_and_RailSync_Voltages">the DCCWiki article on RailSync</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
@@ -964,19 +964,19 @@
 </figcaption>
 </figure>
 <p>The <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> has a 2.1mm x 5.5mm power jack. If you already have a power supply with bare wires, you can use an optional 2.1mm x 5.5mm screw terminal block adapter. For more information about power supplies, including how to use one power supply to supply all the different voltages on your layout, see <a class="reference internal" href="../reference/hardware/power-supplies.html#power-supplies"><span class="std std-ref">Power Supplies</span></a>.</p>
+<p>To power up the <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a>, just plug your power supply into the mains power (aka wall outlet) and connect the barrel end to the Command Station. Make sure your power supply matches the needs of your setup: the voltage should be between 12V and 25V DC, depending on the scale of your locomotives, and it should provide at least 2A of current with good over-current performance and voltage stability.</p>
 <figure class="align-right" id="id28">
 <a class="reference internal image-reference" href="../_images/12v-3A-brick.png"><img alt="12V brick power supply" src="../_images/12v-3A-brick.png" style="width: 244.0px; height: 218.0px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig 70: </span><span class="caption-text">12V Power Supply</span><a class="headerlink" href="#id28" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>To power up the CSB1, just plug your power supply into the mains power (aka wall outlet) and connect the barrel end to the Command Station. Make sure your power supply matches the needs of your setup: the voltage should be between 12V and 25V DC, depending on the scale of your locomotives, and it should provide at least 2A of current with good over-current performance and voltage stability.</p>
-<p>To get the most out of your EX-CSB1, we suggest using a modern switching power supply with 4A or more. For Z scale, 12V is usually enough, but for N, HO, and OO scales, we recommend using between 14V and 16V DC. It’s important that your DC power is well-regulated which is why we suggest a modern switch-mode power supply with double insulation and strong overload protection.</p>
+<p>To get the most out of your <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a>, we suggest using a modern switching power supply with 4A or more. For Z scale, 12V is usually enough, but for N, HO, and OO scales, we recommend using between 14V and 16V DC. It’s important that your DC power is well-regulated which is why we suggest a modern switch-mode power supply with double insulation and strong overload protection.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Your power supply can be rated at <em>or above</em> the specified Amperage rating. You must not exceed the voltage rating of your device, but a little extra current is ok, since the CSB1 will only use as much as it needs. However, remember that both voltage and current can be dangerous.</p>
+<p>Your power supply can be rated at <em>or above</em> the specified Amperage rating. You must not exceed the voltage rating of your device, but a little extra current is ok, since the <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a> will only use as much as it needs. However, remember that both voltage and current can be dangerous.</p>
 </div>
-<p>When you connect power to the CSB1, you should see one or both bright green power LEDs light up, confirming that the electronics are working.</p>
+<p>When you connect power to the <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a>, you should see one or both bright green power LEDs light up, confirming that the electronics are working.</p>
 <p>However, for safety, track power will be off by default when you first plug in the <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a>. This is to prevent power from accidentally being applied to your layout before everything is ready. See the <a class="reference internal" href="../ex-installer/installing.html#start-with-power-on"><span class="std std-ref">EX -Installer page</span></a> for more information on how to change this behaviour.</p>
 <p><hr class="hr-heavy" /></p>
 </section>
@@ -1032,9 +1032,9 @@
 </section>
 <section id="turning-on-power">
 <h3><a class="toc-backref" href="#id41" role="doc-backlink">Turning on Power</a><a class="headerlink" href="#turning-on-power" title="Link to this heading"></a></h3>
-<p>Now you can connect your track power supply to the barrel connector on the CSB1 and then plug the other end into the wall. You should see status information on the display including the CSB1 firmware version.</p>
+<p>Now you can connect your track power supply to the barrel connector on the <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a> and then plug the other end into the wall. You should see status information on the display including the <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a> firmware version.</p>
 <p>If you do not have a display or your display is not working, you will need to connect a <a class="reference internal" href="../reference/tools/serial-monitor.html"><span class="doc">serial monitor</span></a>.</p>
-<p>The <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> will power up in WiFi Access Point mode as configured out of the box, with a Wifi network SSID of <code class="docutils literal notranslate"><span class="pre">DCCEX_xxxxxx</span></code> and password of <code class="docutils literal notranslate"><span class="pre">PASS_xxxxxx</span></code>, both of which will be visible on the OLED display (or serial monitor log) after it boots.</p>
+<p>The <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> will power up in WiFi Access Point mode as configured out of the box, with a Wifi network SSID of <code class="docutils literal notranslate"><span class="pre">DCCEX_xxxxxx</span></code> and password of <code class="docutils literal notranslate"><span class="pre">PASS_xxxxxx</span></code>, both of which will be visible on the OLED display (or <a class="reference internal" href="../reference/tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a> log) after it boots.</p>
 <figure class="align-right" id="id29">
 <a class="reference internal image-reference" href="../_images/oled_startup.png"><img alt="EX-CSB1 Startup - OLED screen" src="../_images/oled_startup.png" style="width: 248.25px; height: 149.75px;" /></a>
 <figcaption>
@@ -1079,7 +1079,7 @@
 </figcaption>
 </figure>
 <p>Note that 5V power is supplied with the USB connection, so the single green 3.3V LED illuminates (See figure). This powers the electronics on the board for basic testing and to apply software updates, but will not power the track outputs until power is applied through the barrel jack.</p>
-<p>You do NOT need USB power for normal operation. The blue WiFi LED will also illuminate indicating the CSB1 is setup for a WiFi connection. And last, the display will show status information.</p>
+<p>You do NOT need USB power for normal operation. The blue WiFi LED will also illuminate indicating the <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a> is setup for a WiFi connection. And last, the display will show status information.</p>
 <p><strong>Running EX-WebThrottle</strong></p>
 <p>Begin by running <a href="../ex-webthrottle/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span></a> by <a class="reference external" href="https://dcc-ex.github.io/WebThrottle-EX">clicking this link</a>. Detailed instructions are available on the <a class="reference internal" href="../ex-webthrottle/index.html"><span class="doc">EX-WebThrottle</span></a> page.</p>
 </section>
@@ -1253,7 +1253,7 @@ Plug It In: Connect one end of the USB cable to the <a href="../ex-commandstatio
 <h2><a class="toc-backref" href="#id51" role="doc-backlink">Connecting</a><a class="headerlink" href="#connecting" title="Link to this heading"></a></h2>
 <section id="usb-connection-to-a-serial-monitor">
 <h3><a class="toc-backref" href="#id52" role="doc-backlink">USB Connection to a Serial Monitor</a><a class="headerlink" href="#usb-connection-to-a-serial-monitor" title="Link to this heading"></a></h3>
-<p>There are a number ways to open a serial monitor to the <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a>.  They are discussed on the :doc`/reference/tools/serial-monitor` page, and any are acceptable.</p>
+<p>There are a number ways to open a <a class="reference internal" href="../reference/tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a> to the <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a>.  They are discussed on the <a class="reference internal" href="../reference/tools/serial-monitor.html"><span class="doc">Using a Serial Monitor</span></a> page, and any are acceptable.</p>
 <p>To discuss just one of those options, which will likely be the easiest to do if you have recently installed the Command Station software using <a href="../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a>. Simply click the <span class="guilabel">Serial Monitor</span> button when the the <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a> is connected via USB to your PC.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
@@ -1330,7 +1330,7 @@ For other I<sup>2</sup>C devices, further configuration may require manual adjus
 <h5><a class="toc-backref" href="#id98" role="doc-backlink">Step 4: Manual Configuration for Advanced Accessories</a><a class="headerlink" href="#step-4-manual-configuration-for-advanced-accessories" title="Link to this heading"></a></h5>
 <p>Access the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> Software:</p>
 <p>For advanced I<sup>2</sup>C accessories like sensors or GPIO expanders, you may need to manually configure them via the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> software.
-This involves accessing configuration files or using a serial monitor to input specific commands.</p>
+This involves accessing configuration files or using a <a class="reference internal" href="../reference/tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a> to input specific commands.</p>
 <p>Editing Configuration Files:</p>
 <p>If necessary, open the configuration files provided with the DCC-EX software to manually add and configure your I<sup>2</sup>C devices. Instructions for this can be found on the DCC-EX documentation pages.</p>
 <p>Save and Apply Settings:</p>
@@ -1385,7 +1385,7 @@ If issues persist, refer to the troubleshooting guides on the DCC-EX website.</p
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fcb05a90190>
+    <jinja2.runtime.BlockReference object at 0x7f21b3543e20>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

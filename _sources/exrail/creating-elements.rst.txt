@@ -211,7 +211,7 @@ In |EX-CS|, the drivers for the PCA9685 module is already installed, and made av
 
 Once you've made all of the connections, apply power to the Arduino.
 
-Then, in the Serial Monitor, enter the command `<D SERVO 100 450>`.  The servo should move, as long as it isn't (by some fluke) already in that position.
+Then, in the |serial monitor|, enter the command `<D SERVO 100 450>`.  The servo should move, as long as it isn't (by some fluke) already in that position.
 
 Enter `<D SERVO 100 110>` and this time it should definitely move.  For the last parameter (servo position) you can use any value between about 105 and 490.
 

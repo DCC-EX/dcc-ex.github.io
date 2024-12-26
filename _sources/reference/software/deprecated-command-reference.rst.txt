@@ -27,7 +27,7 @@ This is a detailed reference of just the major commands. For a summary version, 
 
 * `JMRI (Java Model Railroad Interface) <http://www.jmri.org/>`_ |EXTERNAL-LINK|
 
-* A serial console, like the Arduino Serial Monitor or PuTTY
+* A |serial Monitor|, like the |IDE Serial Monitor| or PuTTY
 
 * `Gregg Berman's DCC++ Controller Software <https://github.com/DccPlusPlus/Controller>`_ |EXTERNAL-LINK|
 

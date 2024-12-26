@@ -65,7 +65,7 @@ The simplest method to program these modules is by using an additional microcont
   :alt: Nano Bluetooth Programmer
   :scale: 35%
 
-The Arduino IDE's Serial Monitor can be used to program either module successfully providing it is configured correctly for the specified module in the relevant section below.
+The |IDE Serial Monitor| can be used to program either module successfully providing it is configured correctly for the specified module in the relevant section below.
 
 .. note:: 
 
@@ -131,9 +131,9 @@ When the HC-05 is in "AT" command mode, the blue and red LEDs should blink slowl
 
 If the HC-05 does not enter the "AT" command mode, ensure the "Key" pin is connected correctly, and try holding the button while powering on in case the "Key" pin is not connected internally within the module.
 
-To send the required "AT" commands to the module, open the Arduino IDE's serial monitor, set the new line option to "Both NL & CR", and set the baud rate to "9600".
+To send the required "AT" commands to the module, open the |IDE Serial Monitor|, set the new line option to "Both NL & CR", and set the baud rate to "9600".
 
-To verify the device is ready and in "AT" command mode, enter "AT" and click "Send" (or press the <Enter> key), and the response "OK" should appear in the serial monitor.
+To verify the device is ready and in "AT" command mode, enter "AT" and click "Send" (or press the <Enter> key), and the response "OK" should appear in the |serial monitor|.
 
 Providing this has been successful, enter the following commands one at a time to configure the various options, and each one should return "OK" to confirm the command was received successfully:
 
@@ -170,11 +170,11 @@ Unlike the HC-05, the HC-06 module has no specific "AT" command mode, and can be
 
 The other notable difference as previously mentioned is that programming commands must be entered within a 1 second duration. This means the only effective way to send them is by using a serial console that lets you enter the complete command string in one go, and the Arduino IDE can be used for this.
 
-To send the required "AT" commands to the module, open the Arduino IDE's serial monitor, set the new line option to "No line ending", and set the baud rate to "9600".
+To send the required "AT" commands to the module, open the |IDE Serial Monitor|, set the new line option to "No line ending", and set the baud rate to "9600".
 
 Note that these settings take effect immediately, and therefore you should send the baud rate command last, otherwise you will effectively be disconnected from the HC-06 module.
 
-To verify the device is ready and in "AT" command mode, enter "AT" and click "Send" (or press the <Enter> key), and the response "OK" should appear in the serial monitor.
+To verify the device is ready and in "AT" command mode, enter "AT" and click "Send" (or press the <Enter> key), and the response "OK" should appear in the |serial monitor|.
 
 Providing this has been successful, enter the following commands one at a time to configure the various options:, and each one should return "OK" to confirm the command was received successfully. Note that unlike the HC-05, the return text is slightly different for each command as noted:
 

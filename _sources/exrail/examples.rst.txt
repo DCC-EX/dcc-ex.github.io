@@ -275,7 +275,7 @@ When the Command Station is powered up or reset, |EX-R| starts operating at the 
    SENDLOCO(3,13) // Start sequence 13 using loco 3
    DONE           // This marks the end of the startup process
 
-The sequence can also be started from a serial monitor with the command ``</ START 3 13>``.
+The sequence can also be started from a |serial monitor| with the command ``</ START 3 13>``.
 
 
 If you have multiple separate sections of track which do not require inter-train cooperation, you may add many more separate sequences and they will operate independently.

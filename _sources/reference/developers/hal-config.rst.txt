@@ -353,7 +353,7 @@ Restart the Command Station and the new device will be configured at startup.
 Checking the Driver
 -------------------
 
-Start the Arduino IDE's serial monitor program, and set its speed to 115200 baud.  If you enter the following command:
+Start the |IDE serial monitor|, and set its speed to 115200 baud.  If you enter the following command:
 
 .. code-block:: none
 
@@ -375,7 +375,7 @@ Using the Device
 
 The five VPINs, 1000 to 1004, allow the first five MP3 files on the Micro-SD card to be played directly.  You just need to
 write to the pins as if they were real digital output pins on the Arduino.  For example, set up
-some outputs using the Arduino IDE's serial monitor program, by entering the following commands:
+some outputs using the |IDE serial monitor|, by entering the following commands:
 
 .. code-block:: none
 

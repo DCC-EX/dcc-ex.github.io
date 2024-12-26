@@ -108,9 +108,9 @@ Using Engine Driver or EX-Toolbox
 Issuing a command (DCC)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-You can issue |DCC-EX Native Commands| to the |EX-CS| to change the output modes with |Engine Driver|, |EX-TB|, |EX-I| Serial Monitor, |EX-WT| or the Arduino IDE Serial Monitor.
+You can issue |DCC-EX Native Commands| to the |EX-CS| to change the output modes with |Engine Driver|, |EX-TB|, |Device Monitor|, |EX-WT| or the |IDE Serial Monitor|.
 
-1. Open the Serial Monitor (or TrackManager page in |Engine Driver| or |Ex-TB|)
+1. Open the |Serial Monitor| (or TrackManager page in |Engine Driver| or |Ex-TB|)
 
 2. Issue the following command. |BR| Note that in this example I am setting output B to be DCC MAIN.
 
@@ -226,9 +226,9 @@ Using Engine Driver or EX-Toolbox (DC)
 Issuing a Command (DC)
 ~~~~~~~~~~~~~~~~~~~~~~
 
-You can issue |DCC-EX Native Commands| to the |EX-CS| to change the output modes with |Engine Driver|, |EX-TB|, |EX-I| Serial Monitor, |EX-WT| or the Arduino IDE Serial Monitor.
+You can issue |DCC-EX Native Commands| to the |EX-CS| to change the output modes with |Engine Driver|, |EX-TB|, |Device Monitor|, |EX-WT| or the |IDE Serial Monitor|.
 
-1. Open the Serial Monitor (or TrackManager page in |Engine Driver| or |Ex-TB|)
+1. Open the |Serial Monitor| (or TrackManager page in |Engine Driver| or |Ex-TB|)
 
 2. Issue the following command |BR| note that in this example I am setting output B to be DC and to be assigned to the Loco Address 1225.
 
@@ -388,7 +388,7 @@ Changing the Pulse Width Frequency
 
 **Frequency of PWM in DC Operation** - PWM can use a variety of frequencies for the pulses it sends, and this can alter motor behaviour and noise etc. 
 
-The default frequency used for the CSB1 is 131H, but this can be varied on-the-fly using the virtual DCC functions 29-31 to allow you to alter the frequency to better suit your loco's motor. This can of course be done during running from the throttle.
+The default frequency used for the |EX-CSB1-SHORT| is 131H, but this can be varied on-the-fly using the virtual DCC functions 29-31 to allow you to alter the frequency to better suit your loco's motor. This can of course be done during running from the throttle.
 
 Just acquire the loco number you have assigned to your DC Output. Then select one of Functions 29, 30 or 31:
 
@@ -409,13 +409,13 @@ Replacing or Integrating Into Your Current Layout
 .. warning:: 
   :class: warning-float-right
 
-  If you plan to use multiple DC and/or DCC blocks, these should not be using a common ground rail, and only use dual insulated tracks.
+  If you plan to use multiple |DC| and/or |DCC| blocks, these should not be using a common ground rail, and only use dual insulated tracks.
 
 Existing analogue DC layouts will have standard DC controllers/transformers on one or more separate DC tracks/districts/blocks.
 
 If you have more than one controller, they may have DPDT centre-off switches between two controller powered blocks. 
 
-You will be replacing this kind of legacy analogue DC described above with a single |EX-CS|. It includes a software switching implementation, allowing you to easily and quickly switch between the two DCC (PWM) and DC (PWM) modes on any of the A thru H dual insulated tracks/districts in real time.
+You will be replacing this kind of legacy analogue DC described above with a single |EX-CS|. It includes a software switching implementation, allowing you to easily and quickly switch between the two |DCC| and |DC PWM| modes on any of the A thru H dual insulated tracks/districts in real time.
 
 This also means that, if you wish, you can remove any physical hardware DPDT switches that were used to switch between standard DC controllers/transformers.
 
@@ -440,7 +440,7 @@ With an |EX-CS| with both outputs set to |DC PWM|, the wiring for the same layou
 
 .. warning::
 
-  The ready-to-run |EX-CSB1-SHORT| and the do-it-yourself |EX-CS| default to DCC on both outputs!  
+  The ready-to-run |EX-CSB1-SHORT| and the do-it-yourself |EX-CS| default to |DCC| on both outputs!  
   
   You must use the instructions above before placing a DC loco on the track, or you may risk damaging the loco.
 
@@ -466,7 +466,7 @@ Below is a more detailed and technical discussion of the topics above.
 How do you run a EX-CommandStation in DC (PWM) mode?
 ----------------------------------------------------
 
-Using |TM| with simple easy commands from a throttle or from a serial monitor we can change any insulated track A-H from DCC (PWM) to DC (PWM) and back in real time.
+Using |TM| with simple easy commands from a throttle or from a |serial monitor| we can change any insulated track A-H from DCC (PWM) to DC (PWM) and back in real time.
 
   * Valid DCC modes are MAIN, PROG, and NONE
   * Valid DC modes are DC, DCX, and NONE
@@ -500,20 +500,20 @@ DCC Sound Decoder locos with DC conversion enabled may be silent until the track
 Controlling & Managing DCC-EX TrackManager modes
 -------------------------------------------------
 
-You can Assign Tracks/Districts to DCC and DC mode in four ways:
+You can Assign Tracks/Districts to |DCC| and |DC| mode in four ways:
 
-  1. Command Line via PC with Arduino IDE Serial Monitor or |JMRI| serial Traffic Monitor and it is sent through your USB connected cable.
+  1. Command Line via PC with |IDE Serial Monitor| or |JMRI| serial Traffic Monitor and it is sent through your USB connected cable.
   2. Create an |EX-R| myAutomation.h file Scripts for Track Manager assigned commands and they automatically appear in |Engine Driver| as GUI Automation [Handoff] and Route [Set] buttons, and in WiThrottle WiFi Throttle iOS as [Route] buttons, and on TCS Universal UWT-50 & 100 WiFi Throttle [Select Accry] lines.
 
   3. Enhanced |Engine Driver| WiFi Throttle Android app v2.35.169+ features;
 
     * Track/District Manager set mode screen by touching a track mode entering an address
-    * Command Cmd Line Serial Monitor and enter them like in example (1) above but via WiFi Native mode
+    * Command Cmd Line |Serial Monitor| and enter them like in example (1) above but via WiFi Native mode
 
   4. New |EX-TB| WiFi Android app features;
   
     * Track/District Manager set mode screen by touching a track mode, entering an address
-    * Command Cmd Line Serial Monitor and enter them like in example (1) above but via WiFi Native mode
+    * Command Cmd Line |Serial Monitor| and enter them like in example (1) above but via WiFi Native mode
 
 New |Engine Driver| DCC-EX Native mode features now available today via Google Play Store:
 
@@ -525,11 +525,11 @@ New |Engine Driver| DCC-EX Native mode features now available today via Google P
 TrackManager Commands
 ---------------------
 
-Sending commands from the Arduino IDE Serial Monitor or |JMRI| Send Command Line or a |Engine Driver| WiFi Throttle.
+Sending commands from the |IDE Serial Monitor| or |JMRI| Send Command Line or a |Engine Driver| WiFi Throttle.
 
 To display the current TrackManager configuration, use the command ``<=>`` an equal sign looks like a track.
 
-The Serial Monitor will show current status, example; Track A as Main and Track B as PROG
+The |Serial Monitor| will show current status, example; Track A as Main and Track B as PROG
 
   * <= A MAIN>
   * <= B PROG>
@@ -739,7 +739,7 @@ Example - EXRAIL Scripts running on Engine Driver App (Android)
 **Engine Driver DCC-EX Native mode**
 
  - TrackManager MAIN & PROG
- - With DCC-EX Cmd Line & Serial monitor
+ - With |DCC-EX| Cmd Line & |Serial monitor|
   
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_4.png
   :alt: Track Manager DCC-EX native mode

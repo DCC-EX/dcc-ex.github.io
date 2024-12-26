@@ -258,7 +258,7 @@ However, for safety, track output power will be off by default when you first pl
 
 You should see status information on the display including the |EX-CSB1-SHORT| firmware version, track power status, free memory, and WiFi connection information. 
 
-If you do not have a display, you will need to connect a serial monitor to see the status, but this is not essential for ongoing use of the system. (See: :doc:`Using a Serial Monitor </reference/tools/serial-monitor>`).
+If you do not have a display, you will need to connect a |serial monitor| to see the status, but this is not essential for ongoing use of the system. (See: :doc:`Using a Serial Monitor </reference/tools/serial-monitor>`).
 
 .. todo XXX insert link to serial monitor
 
@@ -282,7 +282,7 @@ Connect the Smart Device to the EX-CSB1 AP Network
 
    EX-CSB1 Startup - OLED screen
 
-The |EX-CSB1| will power up in WiFi **Access Point mode** as configured out of the box, with its own unique WiFi network SSID of ``DCCEX_xxxxxx`` and password of ``PASS_xxxxxx`` (where **xxxxxx** is the last 6 digits of the MAC address of the |EX-CSB1-SHORT|), both of which will be visible on the OLED display (or serial monitor log). After it boots you can connect with a WiFi throttle like |Engine Driver| or |WiThrottle|. 
+The |EX-CSB1| will power up in WiFi **Access Point mode** as configured out of the box, with its own unique WiFi network SSID of ``DCCEX_xxxxxx`` and password of ``PASS_xxxxxx`` (where **xxxxxx** is the last 6 digits of the MAC address of the |EX-CSB1-SHORT|), both of which will be visible on the OLED display (or |serial monitor| log). After it boots you can connect with a WiFi throttle like |Engine Driver| or |WiThrottle|. 
 
 This quick start covers initial testing with the |Engine Driver| app, though it is a broadly similar process when using any other throttle app on a Smart device. 
 

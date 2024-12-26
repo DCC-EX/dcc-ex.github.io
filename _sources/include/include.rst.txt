@@ -244,6 +244,18 @@
    
     :doc:`DCC </reference/hardware/dcc-vs-dc>`
 ..
+.. |Serial Monitor| replace::
+   
+    :doc:`Serial Monitor </reference/tools/serial-monitor>`
+..
+.. |IDE Serial Monitor| replace::
+   
+    :ref:`Arduino IDE Serial Monitor <reference/tools/serial-monitor:connect with the arduino ide serial monitor>`
+..
+.. |Device Monitor| replace::
+   
+    :ref:`EX-Installer Device Monitor <ex-installer/testing:using the ex-installer device monitor>`
+..
 .. |hr-dashed| raw:: html
 
    <hr class="hr-dashed" />

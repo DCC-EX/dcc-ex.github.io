@@ -40,7 +40,7 @@ The |EX-FC| integration includes:
 * |I2C| device driver
 * |EX-R| automation support
 * Time Broadcast for time display on WiThrottle controllers such as |Engine Driver|
-* Debug output to Serial Monitor
+* Debug output to |serial monitor|
 
 
 .. note:: 

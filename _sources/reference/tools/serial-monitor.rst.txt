@@ -18,7 +18,7 @@ Using a Serial Monitor
 What is a Serial Monitor and Why Do I Need One?
 ================================================
 
-A Serial Monitor is another name for a "terminal" program. It is software that runs on your computer or phone and connects to a serial port, like the USB connector on an Arduino, and lets you interact with your Command Station. The |Arduino IDE| has one built in as does our very own |EX-I|, which makes it a bit of a "Swiss Army Knife" in that it provides a way to upload software to your Command Station, and connect to it to view logs and send manual commands. If anything goes wrong with the CS, we will ask you to check the startup log with a Serial Monitor. With a Serial Monitor you can:
+A |Serial Monitor| is another name for a "terminal" program. It is software that runs on your computer or phone and connects to a serial port, like the USB connector on an Arduino, and lets you interact with your Command Station. The |Arduino IDE| has one built in as does our very own |EX-I|, which makes it a bit of a "Swiss Army Knife" in that it provides a way to upload software to your Command Station, and connect to it to view logs and send manual commands. If anything goes wrong with the CS, we will ask you to check the startup log with a |Serial Monitor|. With a |Serial Monitor| you can:
 
 * Test your Command Station
 * View startup and other diagnostic logs to fix issues or help us support you
@@ -86,7 +86,7 @@ Select "Port" and find the port on your computer that recognises the Arduino. If
 Open the Serial Monitor
 ------------------------
 
-The Arduino IDE has a built in serial monitor. That means that in addition to uploading updates to your Command Station, we can interact with the Command Station. Select "Tools -> Serial Monitor", or click on the "serial monitor" icon near the upper right of the window.
+The Arduino IDE has a built in |serial monitor|. That means that in addition to uploading updates to your Command Station, we can interact with the Command Station. Select "Tools -> Serial Monitor", or click on the "serial monitor" icon near the upper right of the window.
 
 .. figure:: /_static/images/installer/arduino_ide2.jpg
    :alt: Open the Serial Monitor
@@ -102,7 +102,7 @@ Make sure the **baud rate at the lower right of the window is set to "115200"**.
 
    Serial Monitor - Note line ending and baud rate settings!
 
-Opening the Serial Monitor always resets the Arduino board. Therefore, you should see a startup (boot) log immediately display in the window. If you have a Network shield or WiFi shield connected, you will see the Command Station setup its AP, or connect to your network if you gave it your credentials. If you don't have a network, that's fine; the Command Station will sense that, the network test will fail, but everything else will be working as it should.
+Opening the |Serial Monitor| always resets the Arduino board. Therefore, you should see a startup (boot) log immediately display in the window. If you have a Network shield or WiFi shield connected, you will see the Command Station setup its AP, or connect to your network if you gave it your credentials. If you don't have a network, that's fine; the Command Station will sense that, the network test will fail, but everything else will be working as it should.
 
 Enter Commands to the CS
 -------------------------
@@ -117,7 +117,7 @@ Turn off the power to the track by sending ``<0>`` to the CS. That is a "zero".
 
 There are diagnostics to test CV reads and writes on the programming track, WiFi Diagnostics to test your connection to throttles like |Engine Driver|, Ethernet debugging,  and more. Read the documentation and experiment!
 
-If you run into trouble, remember to send us a log by cutting and pasting the text from the Serial Monitor window to our support channel in Discord or one of the other methods of contacting us mentioned here: https://dcc-ex.com/support/index.html.
+If you run into trouble, remember to send us a log by cutting and pasting the text from the |Serial Monitor| window to our support channel in Discord or one of the other methods of contacting us mentioned here: https://dcc-ex.com/support/index.html.
 
 Connect with a Smart Phone
 =========================== 
@@ -146,7 +146,7 @@ And one for an iPad or iPhone:
 
 https://www.amazon.com/dp/B09KBZDDGL/ |EXTERNAL-LINK|
 
-Every smart phone OS such as Android or iOS has a program or two that will work as a serial monitor. For Android, here are a few:
+Every smart phone OS such as Android or iOS has a program or two that will work as a |serial monitor|. For Android, here are a few:
 
 * Serial USB Terminal by Kai Morich
 * `Serial Monitor by CSA <https://play.google.com/store/apps/details?id=com.csa.serialmonitor>`_ |EXTERNAL-LINK|

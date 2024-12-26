@@ -143,7 +143,7 @@ Use the Serial Monitor to do a quick test
 
 .. NOTE:: The programming track (PROG) is for programming only. Make sure you are on the MAIN track if you expect your loco to move or respond to light or sound commands.
 
-The |Arduino IDE| has a built in serial monitor. That means that in addition to uploading updates to your |EX-CS|, we can interact with the Command Station. Select "Tools -> Serial Monitor", or click on the "serial monitor" icon near the upper right of the window.
+The |Arduino IDE| has a built in |serial monitor|. That means that in addition to uploading updates to your |EX-CS|, we can interact with the Command Station. Select "Tools -> Serial Monitor", or click on the "serial monitor" icon near the upper right of the window.
 
 
 .. figure:: /_static/images/installer/arduino_ide2.jpg

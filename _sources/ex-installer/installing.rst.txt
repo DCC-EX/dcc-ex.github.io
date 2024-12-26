@@ -568,7 +568,7 @@ Device Monitor
 
 Once you have selected a device in |EX-I| on the "Select your device" screen, or after successfully loading software onto your device, a ``View device monitor`` button will be available.
 
-When clicking this button, the Device Monitor window will open, allowing you to interact with your device by sending commands and viewing the serial console output.
+When clicking this button, the |Device Monitor| window will open, allowing you to interact with your device by sending commands and viewing the serial console output.
 
 .. image:: /_static/images/ex-installer/device-monitor.png
    :alt: Device Monitor
@@ -577,7 +577,7 @@ When clicking this button, the Device Monitor window will open, allowing you to 
 
 |
 
-For further details on using Device Monitor, continue on to the next page with the 'Next' button, or go straight to :ref:`ex-installer/testing:using the ex-installer device monitor`.
+For further details on using |Device Monitor|, continue on to the next page with the 'Next' button, or go straight to :ref:`ex-installer/testing:using the ex-installer device monitor`.
 
 |force-break|
 

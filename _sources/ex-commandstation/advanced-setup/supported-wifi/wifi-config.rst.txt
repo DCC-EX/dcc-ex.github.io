@@ -132,11 +132,11 @@ You will need to know:
 * The SSID or Server name to connect to (**DCCEX_xxxxxx** where the x's are the last 6 digits of your device' MAC address)
 * The password (Unless you change it in config.h, your local WiFi password.)  Its default is **PASS_xxxxxx** where the x's are the last 6 digits of your device' MAC address)
 
-.. note:: All of this information is displayed in the startup log if you connect the Command Station to a serial monitor. The IP address and port also appear on the optional LCD or OLED display.
+.. note:: All of this information is displayed in the startup log if you connect the Command Station to a |serial monitor|. The IP address and port also appear on the optional LCD or OLED display.
 
    If you wish to use a custom SSID in access point mode, you will need to set the WIFI_FORCE_AP option in config.h, see :ref:`ex-commandstation/advanced-setup/supported-wifi/wifi-config:#define wifi_force_ap`
 
-Whenever you connect a USB cable and open the serial monitor, you reset the program running on your Command Station. It will go through the bootup sequence again and try to connect to a network. If you did not setup a "Station Mode" configuration, or if that network is not in range, it will configure itself in AP mode. You will see this process by watching the serial monitor log window. Here are the important lines you need to look for. While the IP address is almost always 192.168.4.1, it could be different on your system. You are looking for the items in the blue box below that are highlighted in red. 
+Whenever you connect a USB cable and open the |serial monitor|, you reset the program running on your Command Station. It will go through the bootup sequence again and try to connect to a network. If you did not setup a "Station Mode" configuration, or if that network is not in range, it will configure itself in AP mode. You will see this process by watching the |serial monitor| log window. Here are the important lines you need to look for. While the IP address is almost always 192.168.4.1, it could be different on your system. You are looking for the items in the blue box below that are highlighted in red. 
 
 .. figure:: /_static/images/wifi/ap_mode1.jpg
    :alt: IP Address
@@ -264,7 +264,7 @@ The following defines are all the possible network settings found the config.h f
 #define DONT_TOUCH_WIFI_CONF
 ----------------------------
 
-**Default: commented out** If uncommented, this tells the Command Station to NOT process any WiFi commands in the Command Station. If other WiFi defines are enabled, the Command Station will ignore them. With this command, you can leave #define ENABLE_WIFI true so that networking is active, but send no configuration commands to ESP8266. This allows you to enter your own AT commands to set up your WiFi however you want. To do this, you would enter <+> commands in the serial monitor, or add code to send these commands automatically.
+**Default: commented out** If uncommented, this tells the Command Station to NOT process any WiFi commands in the Command Station. If other WiFi defines are enabled, the Command Station will ignore them. With this command, you can leave #define ENABLE_WIFI true so that networking is active, but send no configuration commands to ESP8266. This allows you to enter your own AT commands to set up your WiFi however you want. To do this, you would enter <+> commands in the |serial monitor|, or add code to send these commands automatically.
 
 #define WIFI_SSID "Your network name"
 -------------------------------------
@@ -321,7 +321,7 @@ Once you enter a network SSID and password, the Command Station will always try 
 Clearing the ESP-WiFi SSID Settings
 -----------------------------------
 
-Open your serial monitor and wait until the Command Station has gone through the startup sequence. Then in the command textbox enter ``<+RESTORE>`` and press "SEND".
+Open your |serial monitor| and wait until the Command Station has gone through the startup sequence. Then in the command textbox enter ``<+RESTORE>`` and press "SEND".
 
 You will then see an "Ok" message. The WiFi Settings are forgotten. However, if the last config.h used when you uploaded it to the Command Station had WiFi credentials in it, then as soon as your Command Station restarts, it will load and save those settings again. So...
 
@@ -365,20 +365,20 @@ There are circumstances where you may want to make temporary changes to your net
 
 .. admonition:: Remember...
 
-   - Use a serial monitor connected to the USB port of your Command Station, and enter the commands you need.
-   - If you disconnect the serial monitor and reconnect it (or anything else) to the USB port, it will reset the Command Station, and it will go back to the default configuration.
+   - Use a |serial monitor| connected to the USB port of your Command Station, and enter the commands you need.
+   - If you disconnect the |serial monitor| and reconnect it (or anything else) to the USB port, it will reset the Command Station, and it will go back to the default configuration.
    - Press "send" after each command.
 
 Temporarily Log Into A Different Network
 ----------------------------------------
 
-1. Forget your network settings by entering ``<+CWQAP>`` in the serial monitor.
+1. Forget your network settings by entering ``<+CWQAP>`` in the |serial monitor|.
 2. Login to the new network by entering either a new local SSID & password, or using the Command Station in Access Point Mode.
 
 Create a Static IP for your Command Station in Access Point Mode
 ----------------------------------------------------------------
 
-You are still going to have to go into your router, find the MAC address for your WiFi board (or find it in the serial monitor log) and then assign a static IP address (sometimes called "reserved" IP address) to that MAC. That should be all you need, as the DHCP server on your network will assign that IP to your Command Station when the Command Station asks for one.
+You are still going to have to go into your router, find the MAC address for your WiFi board (or find it in the |serial monitor| log) and then assign a static IP address (sometimes called "reserved" IP address) to that MAC. That should be all you need, as the DHCP server on your network will assign that IP to your Command Station when the Command Station asks for one.
 
 You can try these commands also. You must have a recent version of the firmware to support _DEF commands. If they don't work, try entering them without this suffix (Example: <+CIPAP> instead of <+CIPAP_DEF>)
 

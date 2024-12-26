@@ -945,7 +945,7 @@
 <p>You MUST either forget your local network or turn off “auto-reconnect” for that connection when using <a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-wifi/wifi-config.html"><span class="doc">Access Point (AP) Mode</span></a>. If you do not, your phone will disconnect from the DCCEX_xxxxxx network and connect to either a stronger connection, or one that has a connection to the internet.</p>
 </div>
 <ul class="simple">
-<li><p>Start your Smart Phone (Android) <a class="reference internal" href="../../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> App Or (Apple iOS) <a class="reference internal" href="../../../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> App and enter the IP address XXX.XXX.X.XXX assigned in the Arduino Serial Monitor above and Port 2560. For <a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-wifi/wifi-config.html"><span class="doc">Access Point (AP) Mode</span></a>, it will usually be 192.168.4.1. For <a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-wifi/wifi-config.html"><span class="doc">Station (STA) Mode</span></a>, it will be whatever your router assigned it.</p></li>
+<li><p>Start your Smart Phone (Android) <a class="reference internal" href="../../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> App Or (Apple iOS) <a class="reference internal" href="../../../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> App and enter the IP address XXX.XXX.X.XXX assigned in the <a class="reference internal" href="../../tools/serial-monitor.html#connect-with-the-arduino-ide-serial-monitor"><span class="std std-ref">Arduino IDE Serial Monitor</span></a> above and Port 2560. For <a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-wifi/wifi-config.html"><span class="doc">Access Point (AP) Mode</span></a>, it will usually be 192.168.4.1. For <a class="reference internal" href="../../../ex-commandstation/advanced-setup/supported-wifi/wifi-config.html"><span class="doc">Station (STA) Mode</span></a>, it will be whatever your router assigned it.</p></li>
 </ul>
 <p>If the <a class="reference internal" href="../../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> fails to connect the first time with the Command Station just press the Mega’s red Reset button and try the IP/Port connection again.</p>
 <p>You should have a direct Throttle connection to the <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> 3.0.5+ Standalone WiFi Command Station Via your home router.</p>
@@ -958,7 +958,7 @@
 <h2><a class="toc-backref" href="#id27" role="doc-backlink">Diagnosing Problems</a><a class="headerlink" href="#diagnosing-problems" title="Link to this heading"></a></h2>
 <p>There a few things to try if you experience issues connecting or staying connected:</p>
 <ol class="arabic simple">
-<li><p>Connect a serial monitor to the USB port and watch the boot sequence. The code will check each serial port in order to see if anything responds to an “AT” command. You will see “OK” on a line where it finds your WiFi board on serial port 3 and failure if it does not.</p>
+<li><p>Connect a <a class="reference internal" href="../../tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a> to the USB port and watch the boot sequence. The code will check each serial port in order to see if anything responds to an “AT” command. You will see “OK” on a line where it finds your WiFi board on serial port 3 and failure if it does not.</p>
 <ul class="simple">
 <li><p>Confirm that you see this exact line <code class="docutils literal notranslate"><span class="pre">AT</span> <span class="pre">version:1.7.4.0(May</span> <span class="pre">11</span> <span class="pre">2020</span> <span class="pre">19:13:04)</span></code> <br /> if you see any other version or date/time, then the flash did not work.</p></li>
 </ul>
@@ -1010,7 +1010,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fcb0628c8b0>
+    <jinja2.runtime.BlockReference object at 0x7f219c2ac100>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

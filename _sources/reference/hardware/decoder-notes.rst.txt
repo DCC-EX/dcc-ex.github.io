@@ -25,7 +25,7 @@ How to test (diagnostics)
 How to Program
 ==============
 
-How to program (|JMRI|, |EX-WT|, serial monitor, throttles)
+How to program (|JMRI|, |EX-WT|, |serial monitor|, throttles)
 
 Commands used
 

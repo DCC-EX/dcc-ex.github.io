@@ -39,7 +39,7 @@ Once you have selected a device in |EX-I| on the "Select your device" screen, or
 
 |force-break|
 
-When clicking this button, the Device Monitor window will open, allowing you to interact with your device by sending commands and viewing the serial console output.
+When clicking this button, the |Device Monitor| window will open, allowing you to interact with your device by sending commands and viewing the serial console output.
 
 .. figure:: /_static/images/ex-installer/device-monitor.png
    :alt: Device Monitor
@@ -48,7 +48,7 @@ When clicking this button, the Device Monitor window will open, allowing you to 
 
    Device Monitor
 
-Within the Device Monitor window, you will see the serial console output of your device. As you can see in this screen shot, certain key bits of information are highlighted to help identify these when asked by the |DCC-EX| team.
+Within the |Device Monitor| window, you will see the serial console output of your device. As you can see in this screen shot, certain key bits of information are highlighted to help identify these when asked by the |DCC-EX| team.
 
 The following information is highlighted for |EX-CS|:
 
@@ -68,7 +68,7 @@ Saving startup or serial console logs
 
 When interacting with the |DCC-EX| team for support, you will likely be asked to provide the "startup logs", or output from the serial console of your device.
 
-Using Device Monitor is the simplest way to obtain this information by using the ``Save log`` button.
+Using |Device Monitor| is the simplest way to obtain this information by using the ``Save log`` button.
 
 .. figure:: /_static/images/ex-installer/save-device-log.png
    :alt: Save device log
@@ -84,9 +84,9 @@ When clicking the ``Save and open log`` button, it will save the file, but also 
 Using the Arduino IDE Serial Monitor
 -------------------------------------
 
-This page is a brief introduction to using the |Arduino IDE| Serial Monitor. For additional information see the :doc:`/reference/tools/serial-monitor` page.
+This page is a brief introduction to using the |IDE Serial Monitor|. For additional information see the :doc:`/reference/tools/serial-monitor` page.
 
-To test with the Arduino Serial Monitor, download the |Arduino IDE| from the following link and install it on your computer.
+To test with the |IDE Serial Monitor|, download the |Arduino IDE| from the following link and install it on your computer.
 
 `Download the Arduino IDE <https://www.arduino.cc/en/software>`_
 
@@ -120,9 +120,9 @@ You will see the following screen:
 * Select "115200" as the baud rate in the dropdown in the lower right
 * Select "Both NL & CR" from the dropdown next to the baud rate
 
-When you open the serial monitor you will see at least one line sent out as status information. If you have a WiFi board or Ethernet Shield you will see a page full of log information as it configures and connects to your network.
+When you open the |IDE serial monitor| you will see at least one line sent out as status information. If you have a WiFi board or Ethernet Shield you will see a page full of log information as it configures and connects to your network.
 
-At the top of the serial monitor type ``<s>`` (lowercase "s") into the command textbox and press "Send". You should see:
+At the top of the |IDE serial monitor| type ``<s>`` (lowercase "s") into the command textbox and press "Send". You should see:
 
 .. code-block::
 
@@ -130,7 +130,7 @@ At the top of the serial monitor type ``<s>`` (lowercase "s") into the command t
 
 This is the "status" command and reports your version, types of boards you are using, and a build number.
 
-There are a lot of other commands you can enter here. As a matter of fact, you could use the serial monitor to test any of the DCC-EX API (application programming interface) commands. Please see the `DCC-EX Wiki <https://github.com/DCC-EX/CommandStation-EX/wiki>`_ for a list of commands or for additional information on using the serial monitor see the :doc:`/reference/tools/serial-monitor` page.
+There are a lot of other commands you can enter here. As a matter of fact, you could use the |IDE serial monitor| to test any of the DCC-EX API (application programming interface) commands. Please see the `DCC-EX Wiki <https://github.com/DCC-EX/CommandStation-EX/wiki>`_ for a list of commands or for additional information on using the |IDE serial monitor| see the :doc:`/reference/tools/serial-monitor` page.
 
 Using EX-WebThrottle
 --------------------

@@ -345,7 +345,7 @@ If not already connected to power, connect the Arduino ATMega2560 + ESP8266 WiFi
 
 .. NOTE:: You MUST either forget your local network or turn off "auto-reconnect" for that connection when using |Access Point Mode|. If you do not, your phone will disconnect from the DCCEX_xxxxxx network and connect to either a stronger connection, or one that has a connection to the internet.
 
-- Start your Smart Phone (Android) |Engine Driver| App Or (Apple iOS) |WiThrottle| App and enter the IP address XXX.XXX.X.XXX assigned in the Arduino Serial Monitor above and Port 2560. For |Access Point Mode|, it will usually be 192.168.4.1. For |Station Mode|, it will be whatever your router assigned it.
+- Start your Smart Phone (Android) |Engine Driver| App Or (Apple iOS) |WiThrottle| App and enter the IP address XXX.XXX.X.XXX assigned in the |IDE Serial Monitor| above and Port 2560. For |Access Point Mode|, it will usually be 192.168.4.1. For |Station Mode|, it will be whatever your router assigned it.
 
 If the |Engine driver| fails to connect the first time with the Command Station just press the Mega's red Reset button and try the IP/Port connection again.
 
@@ -358,7 +358,7 @@ Diagnosing Problems
 
 There a few things to try if you experience issues connecting or staying connected:
 
-1. Connect a serial monitor to the USB port and watch the boot sequence. The code will check each serial port in order to see if anything responds to an "AT" command. You will see "OK" on a line where it finds your WiFi board on serial port 3 and failure if it does not.
+1. Connect a |serial monitor| to the USB port and watch the boot sequence. The code will check each serial port in order to see if anything responds to an "AT" command. You will see "OK" on a line where it finds your WiFi board on serial port 3 and failure if it does not.
 
    * Confirm that you see this exact line ``AT version:1.7.4.0(May 11 2020 19:13:04)`` |BR| if you see any other version or date/time, then the flash did not work.
 

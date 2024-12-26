@@ -817,7 +817,7 @@ SINGLE_COIL_TURNOUT(101, 22, 24, 26, &quot;Turnout 101&quot;)
 <a class="reference internal image-reference" href="../_images/ArduinoMegaServo.png"><img alt="PCA9685 Servo Module" src="../_images/ArduinoMegaServo.png" style="width: 555.3px; height: 370.8px;" /></a>
 <p>In <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>, the drivers for the PCA9685 module is already installed, and made available to for use as pin numbers 100-115. A servo is shown in the diagram, connected to the first set of pins on the module.  This will be accessed using pin number 100.</p>
 <p>Once you’ve made all of the connections, apply power to the Arduino.</p>
-<p>Then, in the Serial Monitor, enter the command <cite>&lt;D SERVO 100 450&gt;</cite>.  The servo should move, as long as it isn’t (by some fluke) already in that position.</p>
+<p>Then, in the <a class="reference internal" href="../reference/tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a>, enter the command <cite>&lt;D SERVO 100 450&gt;</cite>.  The servo should move, as long as it isn’t (by some fluke) already in that position.</p>
 <p>Enter <cite>&lt;D SERVO 100 110&gt;</cite> and this time it should definitely move.  For the last parameter (servo position) you can use any value between about 105 and 490.</p>
 <p>Try <cite>&lt;D SERVO 100 450 3&gt;</cite> and the servo should move slowly back.</p>
 <p>You can use the servo to control turnouts/points, semaphore signals, engine shed doors, and other layout components, to make your layout more dynamic and exciting.  In the picture below, you can see a servo mounted below the baseboard with a piece of wire passing through a slot cut in the baseboard, to operate a turnout/point.</p>
@@ -1027,7 +1027,7 @@ SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for turnout/point 1, Thrown=Red,
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fcb0768ded0>
+    <jinja2.runtime.BlockReference object at 0x7f219cfe69e0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

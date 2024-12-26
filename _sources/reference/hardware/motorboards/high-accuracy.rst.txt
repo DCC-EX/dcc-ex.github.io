@@ -24,7 +24,7 @@ For this to work, you need two things:
 * The signal pin for the track you want to have high accuracy must be a Timer1 pin
 * You must use the single signal pin configuration for your motor board
 
-.. NOTE:: You do not have to do anything to enable High Accuracy Waveform Mode. If your motor board config meets the above two criteria, it will be enabled automatically and report that in the serial monitor boot log.
+.. NOTE:: You do not have to do anything to enable High Accuracy Waveform Mode. If your motor board config meets the above two criteria, it will be enabled automatically and report that in the |serial monitor| boot log.
 
 The Motor Board Config
 ========================

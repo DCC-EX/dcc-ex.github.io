@@ -38,7 +38,7 @@ An |EX-CS| is a simple, but powerful, |DCC| and |DC| Command Station which you c
 
 * Simultaneous control of multiple locomotives
 * Control of all cab/loco functions (F0-F28 and F29-F68)
-* Control of accessory/function decoders (F0-F28 and F29-F68)
+* Control of accessory / function decoders (F0-F28 and F29-F68)
 * Main Track: Write configuration variable (CV) bytes and set/clear specific CV bits (aka Programming on Main, or POM)
 * Programming Track: Same as the main track with the addition of reading CV bytes
 
@@ -53,7 +53,7 @@ It includes advanced features, such as:
 
    DIY EX-CommandStation
 
-* A |WiThrottle Server| implementation for instant compatibility with popular throttles/controllers 
+* A |WiThrottle Server| implementation for instant compatibility with popular throttles (controllers)
 * General purpose inputs and outputs (I/O) for extensibility
 * I2C bus for controlling accessories with I2C capability 
 * |JMRI| integration

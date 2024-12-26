@@ -45,6 +45,7 @@ DCC-EX Model Railroading
     If you are just starting with |DCC-EX| then the sections will help you understand how our products might suit your needs:
 
     - :ref:`begin/what-to-know:What is EX-CommandStation?`
+    - :doc:`/begin/comparison`
     - :ref:`begin/what-to-know:what is dcc?`
     - :ref:`I just want to run DCC trains <begin/what-to-know:i just want to run my trains>`
     - :ref:`begin/what-to-know:We do DC as well!`
@@ -53,7 +54,6 @@ DCC-EX Model Railroading
     - :ref:`I want to control accessories & run DCC trains <begin/what-to-know:i want to control all my accessories and run trains>`
     - :ref:`begin/what-to-know:i want some extra automated/animated realism`
     - :ref:`begin/what-to-know:i want a fully automated exhibition layout for my club`
-    - :doc:`/begin/comparison`
 
     If these haven't helped, or you've read them and you are still unsure, then feel free to contact us, preferably through our :ref:`Discord server <support/index:preferred option - discord>` where you can chat directly with our team members. Details of this and other contact methods on our :doc:`/support/contact-us` page. 
 

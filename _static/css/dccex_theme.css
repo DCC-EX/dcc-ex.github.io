@@ -857,6 +857,10 @@ html[data-theme='dark'] .sd-card-header {
   margin: 0 0 12px !important;
 }
 
+figure.align-right {
+  margin: 0 0 12px 12px !important;
+}
+
 /* code */
 .rst-content code {
   font-size: 100% !important;

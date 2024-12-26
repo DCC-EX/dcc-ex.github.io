@@ -250,7 +250,7 @@
 ..
 .. |DCC| replace::
    
-    :doc:`DC </reference/hardware/dcc-vs-dc>`
+    :doc:`DCC </reference/hardware/dcc-vs-dc>`
 ..
 .. |hr-dashed| raw:: html
 

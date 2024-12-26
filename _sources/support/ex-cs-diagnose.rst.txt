@@ -49,7 +49,7 @@ Either using the |EX-I| or the |Arduino IDE|.
     - (a) Have you selected the correct COM port? |BR| See :ref:`ex-installer/installing:getting ready` for information on finding the correct COM port.
       (b) Have you selected the correct Arduino board type?
   
-  * - 2. (Arduino IDE only) |BR| Have you selected the correct Baud rate? 
+  * - 2. (|Arduino IDE| only) |BR| Have you selected the correct Baud rate? 
     - Go to Question 3.
     - ToDo
   

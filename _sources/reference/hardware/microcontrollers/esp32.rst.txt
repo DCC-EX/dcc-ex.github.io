@@ -126,7 +126,7 @@ Finally, the ESP32 needs more testing and development of a |DCC-EX| |I2C| non-bl
 WeMos D1 R32/ESPDUINO-32 with Microsoft Windows - CH340 drivers
 ---------------------------------------------------------------
 
-When using the WeMos D1 R32/ESPDUINO-32 board with Microsoft Windows, you will need to install the CH340 USB drivers in order to be able to upload software to it and use the |serial monitor| in either PlatformIO or the Arduino IDE.
+When using the WeMos D1 R32/ESPDUINO-32 board with Microsoft Windows, you will need to install the CH340 USB drivers in order to be able to upload software to it and use the |serial monitor| in either PlatformIO or the |Arduino IDE|.
 
 Building DCC-EX for ESP32
 -------------------------
@@ -136,7 +136,7 @@ The easiest way of building DCC-EX for the ESP32 is via EX-Installer by selectin
 Adding ESP32 support to the Arduino IDE
 ----------------------------------------
 
-In order to compile for the Espressif ESP32 platforms, you will need to add the board definitions to the Arduino IDE. To do this, follow the instructions on the `official Espressif guide <https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide>`_.
+In order to compile for the Espressif ESP32 platforms, you will need to add the board definitions to the |Arduino IDE|. To do this, follow the instructions on the `official Espressif guide <https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide>`_.
 
 Adding ESP32 support to VS Code and PlatformIO
 ----------------------------------------------

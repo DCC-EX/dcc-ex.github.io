@@ -218,7 +218,7 @@
 ..
 .. |Arduino IDE| replace::
 
-    :doc:`Arduino IDE </reference/glossary>`
+    :doc:`Arduino IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`
 ..
 .. |VSC| replace::
 

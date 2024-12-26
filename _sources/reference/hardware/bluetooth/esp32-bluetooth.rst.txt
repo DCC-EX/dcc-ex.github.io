@@ -14,7 +14,7 @@ For users wishing to use an ESP32 as their |EX-CS|, it is possible to utilise th
 To enable Bluetooth support on the there are some important considerations to take into account:
 
 - WiFi performance may suffer as Bluetooth and WiFi share the same radio
-- The app will be bigger than 1.2MB, so the default partition scheme will not work any more, meaning you need to choose a partition scheme with at least 2MB (For example "NO OTA (2MB APP, 2MB SPIFFS)" in the Arduino IDE)
+- The app will be bigger than 1.2MB, so the default partition scheme will not work any more, meaning you need to choose a partition scheme with at least 2MB (For example "NO OTA (2MB APP, 2MB SPIFFS)" in the |Arduino IDE|)
 - There is no security (PIN) implemented, so anyone within radio range can pair with the |EX-CS|
 
 The Bluetooth interface on ESP32 is not the primary serial interface, so it will not receive debug output and is not intended to be a replacement for the USB interface.

@@ -278,7 +278,7 @@ If you are going to want to connect to your WiFi router, you just need to enter 
 Short Version of Network Setup
 ------------------------------
 
-Download and install |EX-CS| from by using the Automated exInstaller or using the Arduino IDE by choosing one of the links below.
+Download and install |EX-CS| from by using the Automated exInstaller or using the |Arduino IDE| by choosing one of the links below.
 
 :doc:`How to install using the installer </ex-commandstation/installer-diy>`
 
@@ -300,9 +300,9 @@ Setting up in Access Point (AP) Mode
 
 - If using the installer, just check the WiFi check box and leave SSID and password alone
   
-- If using the Arduino IDE,Make sure you didn't put "//" in front of the `#define ENABLE_WIFI true` line in your config.h file
+- If using the |Arduino IDE|,Make sure you didn't put "//" in front of the `#define ENABLE_WIFI true` line in your config.h file
 - No additional changes required, Leave SSID & Passwd alone
-- Your ESP-WiFi chip will assign a SSID as DCCEX_xxxxxx and PASS_xxxxxx, Where xxxxxx is the last 6 characters of your ESP8266 MAC Address
+- Your ESP-WiFi chip will assign a SSID as ``DCCEX_xxxxxx`` and ``PASS_xxxxxx``, Where 'xxxxxx' is the last 6 characters of your ESP8266 MAC Address
 - Upload the software to your Mega+WiFi (see Compile and Re-upload below)
 
 Setting up WiFi in Station (STA) Mode with Router
@@ -312,7 +312,7 @@ Setting up WiFi in Station (STA) Mode with Router
 
 - If using the installer, select the WiFi Checkbox and enter the name (SSID) of your network and the password to log into it.
 
-- If using the Arduino IDE open the CommandStation-EX.ino file in the Arduino IDE program then
+- If using the |Arduino IDE| open the CommandStation-EX.ino file in the Arduino IDE program then
 - Open, then Edit & change the new config.h file to your local or home Router's SSID & Password.
   
   - Change `#define WIFI_SSID "Your network name"` to the name of your local network.
@@ -321,14 +321,14 @@ Setting up WiFi in Station (STA) Mode with Router
 4. Compile and Re-upload EX-CommandStation software to the Arduino
 ==================================================================
 
-- If using the Arduino IDE, select ATMega2560 board from the "tools, boards" menu.
+- If using the |Arduino IDE|, select ATMega2560 board from the "tools, boards" menu.
 - Select the correct COM port that sees your Mega and set baud rate to 115200
 - Click the upload button (the arrow pointing to the right near the checkmark in the upper left of the program window)
 
 5. Operate Your EX-CommandStation
 =================================
 
-After the Arduino IDE uploads |EX-CS| sketch, make sure the serial port switch is set to RxD3/TxD3 and dip switch pins 1-4 are ON and 5-7 are OFF.
+After the |Arduino IDE| uploads |EX-CS| sketch, make sure the serial port switch is set to RxD3/TxD3 and dip switch pins 1-4 are ON and 5-7 are OFF.
 
 If not already connected to power, connect the Arduino ATMega2560 + ESP8266 WiFi board by Either a USB cable, or for Standalone Operations (no USB) you can use a 7-9vdc power supply in the Arduino 2.1mm female barrel jack.
 

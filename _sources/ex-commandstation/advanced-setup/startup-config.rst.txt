@@ -22,7 +22,7 @@ To automatically run commands at start up, you can create a new file called `myS
 How you create the file will depend on how you load the |EX-CS| software onto your Arduino.
 
 * By using |EX-I|
-* By using the Arduino IDE
+* By using the |Arduino IDE|
 
 ----
 
@@ -82,7 +82,7 @@ First you will need to add a new file, just like the :ref:`config.h file <ex-com
 Creating the mySetup.h file
 ---------------------------
 
-At the bottom of the IDE window, a yellow bar will appear asking for a `Name for new file`, here make sure to enter ``mySetup.h`` (case sensitive, so upper case S in setup) and click ``OK`` to create the new file.
+At the bottom of the |Arduino IDE| window, a yellow bar will appear asking for a `Name for new file`, here make sure to enter ``mySetup.h`` (case sensitive, so upper case S in setup) and click ``OK`` to create the new file.
 
 .. figure:: /_static/images/arduino-ide/arduino_ide_mysetup.jpg
    :alt: Arduino IDE New Tab

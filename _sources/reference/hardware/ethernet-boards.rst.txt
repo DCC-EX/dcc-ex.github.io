@@ -20,7 +20,7 @@ Ethernet Boards
 To use Ethernet instead of WiFi, follow these simple steps:
 
 * Stick your Ethernet shield onto the stack with your Mega and Motor Shield
-* Open your config.h file in your editor (like the Arduino IDE)
+* Open your config.h file in your editor (like the |Arduino IDE|)
 * Uncomment the line ``"#define ENABLE_ETHERNET = true"`` by removing the "//" characters
 * Add "//" comment lines in front of ``"#define ENABLE_WIFI = true"`` (if it isn't already commented out).
 

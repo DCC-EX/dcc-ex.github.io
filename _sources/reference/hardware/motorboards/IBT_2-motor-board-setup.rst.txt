@@ -159,7 +159,7 @@ It should look like following. Note we have included the Arduino Mega and have t
 
 .. Note:: We are going to edit your config.h file. If this is your first time using the Command Station software and you do not have a config.h file, rename your config.example.h file to config.h.
 
-Launch the Arduino IDE (or whatever editor you use) and open the CommandStation-EX project. Find the config.h file. look for the following lines of code:
+Launch the |Arduino IDE| (or whatever editor you use) and open the CommandStation-EX project. Find the config.h file. look for the following lines of code:
 
 .. code-block:: cpp
 

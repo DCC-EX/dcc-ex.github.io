@@ -80,7 +80,7 @@ The NUCLEO-F446RE is the same Nucleo-64 size as the F411RE, but with a faster pr
 
 A good summary if the F446RE is available on the `arm MBED Nucleo-F446RE <https://os.mbed.com/platforms/st-nucleo-f446re/>`_ |EXTERNAL-LINK| page.
 
-Both the F411RE and F446RE are supported in the Arduino IDE.
+Both the F411RE and F446RE are supported in the |Arduino IDE|.
 
 NUCLEO-F412ZG, NUCLEO-F446ZE and NUCLEO-F429ZI
 ----------------------------------------------
@@ -97,7 +97,7 @@ The F429ZI has the same large footprint, however it has the added benefit of onb
 
 .. note:: 
 
-  While the F429ZI is supported by the Arduino IDE, the F412ZG and F446ZE cannot be selected as build targets from within the Arduino IDE at present, and you will need to request the variant files and get some support from the |DCC-EX| dev team via Discord. The plan is to submit the F412ZG and F446ZE variant files to the STM32duino GitHub repo for inclusion once they are validated and debugged.
+  While the F429ZI is supported by the |Arduino IDE|, the F412ZG and F446ZE cannot be selected as build targets from within the Arduino IDE at present, and you will need to request the variant files and get some support from the |DCC-EX| dev team via Discord. The plan is to submit the F412ZG and F446ZE variant files to the STM32duino GitHub repo for inclusion once they are validated and debugged.
 
 Install the STLink drivers for Windows
 --------------------------------------
@@ -184,7 +184,7 @@ At this point, after clicking "OK" the software should display the new version o
 Adding NUCLEO support to the Arduino IDE
 ----------------------------------------
 
-In order to compile for the STM32 NUCLEO platforms, you will need to add the boards to the Arduino IDE.
+In order to compile for the STM32 NUCLEO platforms, you will need to add the boards to the |Arduino IDE|.
 
 To do this, navigate to "File" -> "Preferences" and add this URL to the "Additional Boards Manager URLs" list:
 
@@ -200,7 +200,7 @@ You will then need to navigate to "Tools" -> "Board" -> "Boards Manager", search
   :alt: Arduino STM32 board install
   :scale: 50%
 
-Once this has been performed, the NUCLEO devices should be available to be selected in the Arduino IDE.
+Once this has been performed, the NUCLEO devices should be available to be selected in the |Arduino IDE|.
 
 Adding NUCLEO support to VS Code/PlatformIO
 -------------------------------------------
@@ -389,12 +389,12 @@ Finally, the ESP32 needs more testing and development of a |DCC-EX| |I2C| non-bl
 WeMos D1 R32/ESPDUINO-32 with Microsoft Windows - CH340 drivers
 ---------------------------------------------------------------
 
-When using the WeMos D1 R32/ESPDUINO-32 board with Microsoft Windows, you will need to install the CH340 USB drivers in order to be able to upload software to it and use the |serial monitor| in either PlatformIO or the Arduino IDE.
+When using the WeMos D1 R32/ESPDUINO-32 board with Microsoft Windows, you will need to install the CH340 USB drivers in order to be able to upload software to it and use the |serial monitor| in either PlatformIO or the |Arduino IDE|.
 
 Adding ESP32 support to the Arduino IDE
 ----------------------------------------
 
-In order to compile for the Espressif ESP32 platforms, you will need to add the board definitions to the Arduino IDE.
+In order to compile for the Espressif ESP32 platforms, you will need to add the board definitions to the |Arduino IDE|.
 
 To do this, follow the instructions on the `official Espressif guide <https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide>`_ |EXTERNAL-LINK|.
 
@@ -457,7 +457,7 @@ The USB CDC driver code for Arduino SAMD core implementation seems broken as it 
 
 You will need to edit some code in the Arduino Core library for SAMD to fix this temporarily. Where the file to be fixed resides depends on the particular SAMD21 board you have, the OS and development environment you are using.
 
-When running Arduino IDE: look for the file USBCore.cpp in one of these locations, in this case for the Arduino Zero:
+When running |Arduino IDE|: look for the file USBCore.cpp in one of these locations, in this case for the Arduino Zero:
 
 - Windows: C:\\Users\\____\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\samd\\1.8.13\\cores\\arduino\\USB\\USBCore.cpp
 - MacOS: ~/Library/Arduino15/packages/arduino/hardware/samd/1.8.13/cores/arduino/USB/USBCore.cpp
@@ -484,7 +484,7 @@ And replace it with:
 For boards such as the Sparfun SAMD21 Dev Breakout or Redboard Turbo, you will need to look in the Sparkfun directories for the appropriate USBCore.cpp file to alter, for example:
 
 - For PlatformIO this is: .platformio/packages/framework-arduino-samd/cores/arduino/USB/USBCore.cpp
-- For Arduino IDE this is: Arduino15/packages/SparkFun/hardware/samd/1.8.3/cores/arduino/USBCore.cpp
+- For |Arduino IDE| this is: Arduino15/packages/SparkFun/hardware/samd/1.8.3/cores/arduino/USBCore.cpp
 
 .. note::
   You will need to do this every time the SAMD Arduino core code is updated unless our fix has been incorporated. We will change our documentation to reflect is if/when it happens.

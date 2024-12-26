@@ -5,9 +5,9 @@
 .. include:: /include/include-hardware.rst
 |EX-REF-LOGO|
 
-***************************
+*************
 DCC vs DC PWM
-***************************
+*************
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
@@ -58,7 +58,7 @@ The DC PWM frequency can be set using virtual DCC Functions 28-31
 Managing DCC and DC Modes in TrackManager
 -----------------------------------------
 
-If you are ready to dive into customising your track outputs, |TM| is the tool you'll use. It allows you to easily switch between DCC and DC modes for any track connected to your EX-CSB1. 
+If you are ready to dive into customising your track outputs, |TM| is the tool you'll use. It allows you to easily switch between DCC and DC modes for any track connected to your |EX-CS|. 
 
 You can also set up different tracks for specific purposes, such as making one track a Booster, configuring your PROG track, or enabling Auto-Reverser mode.
 

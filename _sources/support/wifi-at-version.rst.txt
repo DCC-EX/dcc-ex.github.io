@@ -87,7 +87,7 @@ Checking the AT version using EX-WebThrottle
 
 Once you have successfully loaded the |EX-CS| software
 
-1. Close EX-Installer (Or the Arduino IDE if you used it)
+1. Close EX-Installer (Or the |Arduino IDE| if you used it)
 2. Open `EX-WebThrottle <https://dcc-ex.com/WebThrottle-EX/>`_ 
 3. Click the :guilabel:`Connect EX-CS` button and select the COM port that you used to load the software onto the |EX-CS|
 4. look at the log that will appear at the bottom of the screen
@@ -157,7 +157,7 @@ Checking the AT version of a ESP-01 with a USB Serial Adapter
 
 1. Connect the ESP01 to the serial adapter with the instructions on here: https://remotexy.com/en/help/esp8266-firmware-update |EXTERNAL-LINK| (see the section on 'Connection via the USB-UARt adapter') |BR| Note the orange wire is not needed for checking the AT version.
 2. Plug the serial adapter it the PC
-3. Open the Arduino IDE 
+3. Open the |Arduino IDE| 
 4. Select **Tools** -> **Serial monitor** from the menus
 5. Select baud: ``115200`` and ``Both NL & CR``
 6. A new pane will open at the bottom of the IDE window will open
@@ -192,7 +192,7 @@ Checking the AT version of a ESP-01 a with a USB to TTL CH340G Converter Module 
 
 1. Connect the ESP01 to the adapter
 2. Plug the adapter it the PC
-3. Open the Arduino IDE 
+3. Open the |Arduino IDE| 
 4. Select **Tools** -> **Serial monitor** from the menus
 5. Select baud: ``115200`` and ``Both NL & CR``
 6. A new pane will open at the bottom of the IDE window will open

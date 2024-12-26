@@ -625,7 +625,7 @@ Download and run the |EX-I| program on your computer following the instructions 
 .. ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. 
 .. Open the Command Station Software: Once the software is updated or if you're making adjustments, launch it from your desktop or start menu.
-.. Check the Connection: The software should automatically detect the EX-CSB1. If it doesn't, ensure that your USB cable is securely connected and try again.
+.. Check the Connection: The software should automatically detect the |EX-CSB1|. If it doesn't, ensure that your USB cable is securely connected and try again.
 .. 
 .. Step 5: Start Using or Customising Your Command Station
 .. ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

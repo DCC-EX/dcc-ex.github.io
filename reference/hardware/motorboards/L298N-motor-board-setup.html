@@ -11,7 +11,7 @@
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/dccex_theme.css?v=8d8fec9b" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/dccex_theme.css?v=f6e9b310" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -806,11 +806,11 @@
    #define MOTOR_SHIELD_TYPE MY_L298N_BOARD
 </pre></div>
 </div>
-<p>Save the file and then upload the entire sketch into the Command Station using the Arduino IDE as explained in <a class="reference internal" href="../../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">Installing Using the Arduino IDE</span></a></p>
+<p>Save the file and then upload the entire sketch into the Command Station using the <a class="reference internal" href="../../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">Arduino IDE</span></a> as explained in <a class="reference internal" href="../../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">Installing Using the Arduino IDE</span></a></p>
 </section>
 <section id="using-one-signal-pin-with-an-inverter-circuit">
 <h4>Using One Signal Pin With an Inverter circuit<a class="headerlink" href="#using-one-signal-pin-with-an-inverter-circuit" title="Link to this heading"></a></h4>
-<p>This method uses 1 signal pin on the Arduino for each track and uses the standard motorboard definition. The advantage of this method is that it provides a slightly more accurate DCC waveform that might allow slightly better compatibility with really picky decoders, and you don’t have to change the default motor board definition. The disadvantage is that you have to solder a 1 transistor, 2 resistor (or inverter chip) to invert the signal into the 2 inputs on the L298 board.</p>
+<p>This method uses 1 signal pin on the Arduino for each track and uses the standard motor driver definition. The advantage of this method is that it provides a slightly more accurate DCC waveform that might allow slightly better compatibility with really picky decoders, and you don’t have to change the default motor board definition. The disadvantage is that you have to solder a 1 transistor, 2 resistor (or inverter chip) to invert the signal into the 2 inputs on the L298 board.</p>
 <p>Make the following Inverter circuit (You need 2 if you want MAIN and PROG):</p>
 <figure class="align-default" id="id7">
 <a class="reference internal image-reference" href="../../../_images/inverter1.jpg"><img alt="Transistor inverter circuit" src="../../../_images/inverter1.jpg" style="width: 385.2px; height: 192.0px;" /></a>
@@ -903,7 +903,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f21a7b41de0>
+    <jinja2.runtime.BlockReference object at 0x7f30d7ca75e0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

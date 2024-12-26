@@ -175,7 +175,7 @@ Which you choose will come down to cost and features you desire. The range in pr
 Install the STLink drivers for Windows
 --------------------------------------
 
-When using any of the NUCLEO series microcontrollers with Microsoft Windows, you will need to install their STLink USB drivers in order to be able to upload software to them and use the |serial monitor| in either PlatformIO or the Arduino IDE.
+When using any of the NUCLEO series microcontrollers with Microsoft Windows, you will need to install their STLink USB drivers in order to be able to upload software to them and use the |serial monitor| in either PlatformIO or the |Arduino IDE|.
 
 .. note:: 
 
@@ -262,7 +262,7 @@ At this point, after clicking "OK" the software should display the new version o
 Adding NUCLEO support to the Arduino IDE
 ----------------------------------------
 
-In order to compile for the STM32 NUCLEO platforms, you will need to add the boards to the Arduino IDE.
+In order to compile for the STM32 NUCLEO platforms, you will need to add the boards to the |Arduino IDE|.
 
 To do this, navigate to "File" -> "Preferences" and add this URL to the "Additional Boards Manager URLs" list:
 
@@ -278,7 +278,7 @@ You will then need to navigate to "Tools" -> "Board" -> "Boards Manager", search
   :alt: Arduino STM32 board install
   :scale: 50%
 
-Once this has been performed, the NUCLEO devices should be available to be selected in the Arduino IDE in an unusual two-step process. To select a particular board in the Arduino IDE, first select "Tools" -> "Board" -> "STM32 boards groups" and then either Nucleo-64 or Nucleo-144. Once you have selected the category, go to "Tools" -> "Board part number" menu to select the particular Nucleo model you have. At this point you can buid DCC-EX. Further instructions can be found `here. <https://microcontrollerslab.com/stm32-nucleo-arduino-ide-tutorial/>`_
+Once this has been performed, the NUCLEO devices should be available to be selected in the |Arduino IDE| in an unusual two-step process. To select a particular board in the |Arduino IDE|, first select "Tools" -> "Board" -> "STM32 boards groups" and then either Nucleo-64 or Nucleo-144. Once you have selected the category, go to "Tools" -> "Board part number" menu to select the particular Nucleo model you have. At this point you can buid DCC-EX. Further instructions can be found `here. <https://microcontrollerslab.com/stm32-nucleo-arduino-ide-tutorial/>`_
 
 Adding NUCLEO support to VS Code/PlatformIO
 -------------------------------------------

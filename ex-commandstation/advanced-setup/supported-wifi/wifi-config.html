@@ -11,7 +11,7 @@
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/dccex_theme.css?v=8d8fec9b" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/dccex_theme.css?v=f6e9b310" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -804,11 +804,11 @@ You should see a new network that begins with “DCCEX” like this example: <co
 <h2><a class="toc-backref" href="#id10" role="doc-backlink">Connecting to your Network - Station Mode “STA” (edit config.h)</a><a class="headerlink" href="#connecting-to-your-network-station-mode-sta-edit-config-h" title="Link to this heading"></a></h2>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>While it is possible change your network settings using the <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">Arduino IDE</span></a>, we <em>seriously</em> <strong>DO NOT RECOMMEND IT</strong> for a <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../../begin/levels.html#conductor">Conductor</a> or <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../../begin/levels.html#tinkerer">Tinkerer</a>. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.</p>
+<p>While it is possible change your network settings using the <a class="reference internal" href="../installation-options/arduino-ide.html"><span class="doc">Arduino IDE</span></a>, we <em>seriously</em> <strong>DO NOT RECOMMEND IT</strong> for a <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../../begin/levels.html#conductor">Conductor</a> or <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../../begin/levels.html#tinkerer">Tinkerer</a>. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.</p>
 <p>Just run <a href="../../../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a> and <a class="reference internal" href="../../../ex-installer/installing.html#wifi"><span class="std std-ref">select your required WiFi settings</span></a>.</p>
 </div>
 <p>In order to connect to your home network, you must open the <cite>config.h</cite> file and enter your login credentials, unless you have already entered your credentials earlier via the automated <a href="../../../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a>.</p>
-<p>This can be done in a Text Editor. The other way to do this, other than the recommended way using <a href="../../../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a>, is to use the <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">Arduino IDE</span></a> and open the project.</p>
+<p>This can be done in a Text Editor. The other way to do this, other than the recommended way using <a href="../../../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a>, is to use the <a class="reference internal" href="../installation-options/arduino-ide.html"><span class="doc">Arduino IDE</span></a> and open the project.</p>
 <p>Look for these lines in the file:</p>
 <div class="literal-block-wrapper docutils container" id="id4">
 <div class="code-block-caption"><span class="caption-number">Listing 1 </span><span class="caption-text">Station Mode Configuration</span><a class="headerlink" href="#id4" title="Link to this code"></a></div>
@@ -840,7 +840,7 @@ You should see a new network that begins with “DCCEX” like this example: <co
 </section>
 <section id="wifi-config-options">
 <h2><a class="toc-backref" href="#id11" role="doc-backlink">WiFi Config Options</a><a class="headerlink" href="#wifi-config-options" title="Link to this heading"></a></h2>
-<p>The following defines are all the possible network settings found the config.h file. If you used the automated installer, you may see a few of these already listed. If you do a manual <a class="reference internal" href="../../../reference/glossary.html"><span class="doc">Arduino IDE</span></a> install, you will see all of these in the file you renamed from “config.example.h” to “config.h”.</p>
+<p>The following defines are all the possible network settings found the config.h file. If you used the automated installer, you may see a few of these already listed. If you do a manual <a class="reference internal" href="../installation-options/arduino-ide.html"><span class="doc">Arduino IDE</span></a> install, you will see all of these in the file you renamed from “config.example.h” to “config.h”.</p>
 <div class="line-block">
 <div class="line"><a class="reference internal" href="#define-ip-port-2560">#define IP_PORT 2560</a></div>
 <div class="line"><a class="reference internal" href="#define-enable-wifi-true">#define ENABLE_WIFI true</a></div>
@@ -993,7 +993,7 @@ If you don’t change this setting and start up in AP mode instead, the default 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f219b90bcd0>
+    <jinja2.runtime.BlockReference object at 0x7f30c3dc69e0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

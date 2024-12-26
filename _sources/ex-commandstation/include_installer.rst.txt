@@ -48,7 +48,7 @@ Requirements (for installing)
 
 .. sidebar:: **USB Cable**
    
-   Make sure your USB Cable is connected from your computer to the |EX-CS|. Make sure no other programs (like the Arduino IDE) are using the same USB port.
+   Make sure your USB Cable is connected from your computer to the |EX-CS|. Make sure no other programs (like the |Arduino IDE|) are using the same USB port.
 
 * A Windows, Linux or MacOS X **Computer**
 * An |EX-CS| (|EX-CSB1| or Arduino Mega/Uno + Motor shield+  optional WiFi shield)
@@ -59,7 +59,7 @@ Requirements (for installing)
 
 **Instruction for Windows, Mac OS X, and Linux (including the Raspberry Pi)**
 
-**Connect** your |EX-CS| **hardware** to your computer via USB. |BR| Make sure your USB Cable is connected from your computer to the EX-CommandStation. Make sure no other programs (like the Arduino IDE) are using the same USB port.
+**Connect** your |EX-CS| **hardware** to your computer via USB. |BR| Make sure your USB Cable is connected from your computer to the EX-CommandStation. Make sure no other programs (like the |Arduino IDE|) are using the same USB port.
 
 
 2. Download and Run EX-Installer 

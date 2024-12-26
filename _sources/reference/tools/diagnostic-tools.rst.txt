@@ -75,7 +75,7 @@ DCC Sniffer (PACKET analyzer)
 Buy it
 -------
 
-Well it isn't quite a turnkey solution, but it's close. You need this shield and an Arduino Uno or Mega and then to download our free :doc:`DCCInspector-EX </download/ex-dccinspector>` file and upload it to your microcontroller with the Arduino IDE. This is really a well-designed board. It is not only a packet sniffer, but can also be used as a decoder with different software. It has a wealth of configuration options and can even deliver ACK pulses if you use it as a programmable mobile decoder.
+Well it isn't quite a turnkey solution, but it's close. You need this shield and an Arduino Uno or Mega and then to download our free :doc:`DCCInspector-EX </download/ex-dccinspector>` file and upload it to your microcontroller with the |Arduino IDE|. This is really a well-designed board. It is not only a packet sniffer, but can also be used as a decoder with different software. It has a wealth of configuration options and can even deliver ACK pulses if you use it as a programmable mobile decoder.
 
 .. figure:: /_static/images/tools/iowa_scale_eng_dcc_board.jpg
    :align: center

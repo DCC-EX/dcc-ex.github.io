@@ -17,7 +17,7 @@ Install using the Arduino IDE
 
 The |Arduino IDE| is an "Integrated Development Environment". Don't let the name scare you away! It is really just a program that lets you open a project (like our |EX-CS| Software), compile the files into instructions the Arduino understands, and upload them from your computer into the Arduino using a serial cable. It is very easy to use.
 
-.. note::
+.. important::
    
    A word of caution on the approach of using the |Arduino IDE| to install the software:
 
@@ -91,7 +91,7 @@ If you are using the standard Arduino motor shield, and if optionally using one 
 
 If you are using a different motor driver (shield or board), or if you wish to connect your Command Station to your home network instead of having a separate access point, follow the instructions in the ``config.h`` file
 
-If you want to take a look at this file or make a simple change, just open the file and take a look. You should see many files open in tabs at the top of the IDE window. Find the down facing triangle near the upper right of the window and click on it to open the entire list of files. Scroll down to near the bottom and click on the "config.h" file you renamed in the previous step to open it in the editing window. If you are sure of your changes, make sure to click on "File -> Save" from the top menu to save them.
+If you want to take a look at this file or make a simple change, just open the file and take a look. You should see many files open in tabs at the top of the |Arduino IDE| window. Find the down facing triangle near the upper right of the window and click on it to open the entire list of files. Scroll down to near the bottom and click on the "config.h" file you renamed in the previous step to open it in the editing window. If you are sure of your changes, make sure to click on "File -> Save" from the top menu to save them.
 
 Select the board type and COM port
 ===================================
@@ -129,7 +129,7 @@ Click on the Upload button near the top left. It is a circle with a right arrow,
 
    Upload the Command Station Software to the Arduino
 
-The IDE will go through a compile process which will build all the files into an application the Arduino can run, and then upload it. You may see many lines of logging as it finishes its task. When done, it will upload the file to the Arduino which you may see as some lights blinking on the Arduino. Make sure there are no errors in the log window, and that it shows "done uploading" in the status bar and "SUCCESS" and a listing of how much memory is used on the Arduino in the log window.
+The |Arduino IDE| will go through a compile process which will build all the files into an application the Arduino can run, and then upload it. You may see many lines of logging as it finishes its task. When done, it will upload the file to the Arduino which you may see as some lights blinking on the Arduino. Make sure there are no errors in the log window, and that it shows "done uploading" in the status bar and "SUCCESS" and a listing of how much memory is used on the Arduino in the log window.
 
 Don't unplug the serial cable yet!
 

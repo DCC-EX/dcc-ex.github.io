@@ -253,13 +253,13 @@ required in order to use it, together with examples.  If you can't find document
 Now you need to create a configuration file to include the device driver in the build.  You can either copy the supplied
 file ``myHal.cpp_example.txt`` to ``myHal.cpp`` and then edit it, or you can create a new ``myHal.cpp`` from scratch.
 In fact, the file can have any name you like.  You could use ``AA_setup.cpp`` for example, then it will appear at the beginning of the
-list of files in the Arduino IDE.
+list of files in the |Arduino IDE|.
 
 
 Adding A New Device Configuration File
 ======================================
 
-This will need to be done in the :doc:`Arduino-IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`, so first make sure you have followed these steps to load up the Arduino IDE.
+This will need to be done in the :doc:`Arduino-IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`, so first make sure you have followed these steps to load up the |Arduino IDE|.
 
 
 Create a new tab
@@ -277,7 +277,7 @@ Create a new tab using the following menu option.
 Creating the myHal.cpp file
 ---------------------------
 
-At the bottom of the IDE window, a yellow bar will appear asking for a `Name for new file`, here make sure to enter ``myHal.cpp``
+At the bottom of the |Arduino IDE| window, a yellow bar will appear asking for a `Name for new file`, here make sure to enter ``myHal.cpp``
 and click ``OK`` to create the new file.
 
 .. figure:: /_static/images/i2c/arduino_ide_myHal.jpg

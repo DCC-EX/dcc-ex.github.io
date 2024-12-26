@@ -64,7 +64,7 @@ Rather than go into details that are already covered in great detail on the Ardu
 Run the Arduino IDE
 --------------------
 
-Start the Arduino IDE. You should see something like this:
+Start the |Arduino IDE|. You should see something like this:
 
 .. figure:: /_static/images/arduino-ide/arduino_ide.jpg
    :alt: Arduino IDE
@@ -86,7 +86,7 @@ Select "Port" and find the port on your computer that recognises the Arduino. If
 Open the Serial Monitor
 ------------------------
 
-The Arduino IDE has a built in |serial monitor|. That means that in addition to uploading updates to your Command Station, we can interact with the Command Station. Select "Tools -> Serial Monitor", or click on the "serial monitor" icon near the upper right of the window.
+The |Arduino IDE| has a built in |serial monitor|. That means that in addition to uploading updates to your Command Station, we can interact with the Command Station. Select "Tools -> Serial Monitor", or click on the "serial monitor" icon near the upper right of the window.
 
 .. figure:: /_static/images/installer/arduino_ide2.jpg
    :alt: Open the Serial Monitor

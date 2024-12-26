@@ -48,7 +48,7 @@ HC-05 vs. HC-06
 
 The HC-05 and HC-06 modules are visually almost identical, however the HC-05 has 6 pins and is capable of being both a master and slave Bluetooth device, whereas the HC-06 has 4 pins and can only be a slave device. The HC-05 has an extensive AT command set for programming, whereas the HC-06 is very limited, allowing changes only to the baud rate, name, and PIN (note that they are probably the only three items required for this application anyway).
 
-The HC-05 has a dedicated mode to send the AT commands to program it, while the HC-06 can be programmed via AT commands any time it is not paired. This makes it sound like the HC-06 is the simpler option to program, however to do so interactively means you need to use a serial console that sends the entire command in one go within 1 second, and you cannot practically type the commands in fast enough. The Arduino IDE can be used for this.
+The HC-05 has a dedicated mode to send the AT commands to program it, while the HC-06 can be programmed via AT commands any time it is not paired. This makes it sound like the HC-06 is the simpler option to program, however to do so interactively means you need to use a serial console that sends the entire command in one go within 1 second, and you cannot practically type the commands in fast enough. The |Arduino IDE| can be used for this.
 
 This is why our recommendation is to stick with the HC-05 device, as they are typically only a little more expensive, but are much easier to program interactively, and are far more capable devices.
 
@@ -168,7 +168,7 @@ HC-06 programming
 
 Unlike the HC-05, the HC-06 module has no specific "AT" command mode, and can be programmed at any time it is not paired with another Bluetooth device. The HC-06 can only ever operate in "Slave" mode also.
 
-The other notable difference as previously mentioned is that programming commands must be entered within a 1 second duration. This means the only effective way to send them is by using a serial console that lets you enter the complete command string in one go, and the Arduino IDE can be used for this.
+The other notable difference as previously mentioned is that programming commands must be entered within a 1 second duration. This means the only effective way to send them is by using a serial console that lets you enter the complete command string in one go, and the |Arduino IDE| can be used for this.
 
 To send the required "AT" commands to the module, open the |IDE Serial Monitor|, set the new line option to "No line ending", and set the baud rate to "9600".
 

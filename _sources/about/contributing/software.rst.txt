@@ -53,11 +53,11 @@ Download `Sourcetree <https://www.sourcetreeapp.com/>`_ |EXTERNAL-LINK|
 Arduino IDE
 ============
 
-If you're already using |DCC-EX|, then it's likely you've already installed the Arduino IDE.
+If you're already using |DCC-EX|, then it's likely you've already installed the |Arduino IDE|.
 
-However, if you haven't, it's recommended to have this installed, even if using our recommended editor (VSCode). It's handy to see the same interface that most of our users can see, as they will almost certainly be using the Arduino IDE, and providing support is so much easier when you can use the same tools as the users.
+However, if you haven't, it's recommended to have this installed, even if using our recommended editor (VSCode). It's handy to see the same interface that most of our users can see, as they will almost certainly be using the |Arduino IDE|, and providing support is so much easier when you can use the same tools as the users.
 
-To get up and running with the Arduino IDE, follow the `Getting started with Arduino products <https://www.arduino.cc/en/Guide>`_ |EXTERNAL-LINK| page.
+To get up and running with the |Arduino IDE|, follow the `Getting started with Arduino products <https://www.arduino.cc/en/Guide>`_ |EXTERNAL-LINK| page.
 
 ESP32 support
 -------------

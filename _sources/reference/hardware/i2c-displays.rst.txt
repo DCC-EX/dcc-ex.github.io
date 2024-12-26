@@ -142,7 +142,7 @@ Reconfigure your Command Station to use a single display
 
 If installing with |EX-I|, refer to :ref:`ex-installer/installing:optional display` to configure a single display with your |EX-CS|.
 
-If you are using the Arduino IDE or VSCode with PlatformIO, you will need to edit "config.h" to enable your display option. Look for this section in "config.example.h" to define the display:
+If you are using the |Arduino IDE| or VSCode with PlatformIO, you will need to edit "config.h" to enable your display option. Look for this section in "config.example.h" to define the display:
 
 .. code-block:: cpp
 

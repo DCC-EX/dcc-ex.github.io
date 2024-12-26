@@ -2968,7 +2968,7 @@ DC/DCX track settings only.
 
 Configures the frequency setting of the selected track.
 
-The settings achievable vary slightly depending upon the processor running the CS but broadly follow the following:
+The settings achievable vary slightly depending upon the processor running the Command Station but broadly follow the following:
 
 *Parameters:* |BR|
 |_| > **track** - - The track to configure, valid options are A to H |BR|

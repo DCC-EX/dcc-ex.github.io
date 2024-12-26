@@ -39,7 +39,7 @@ LED, or a servo moves the railway track points from one position to another.
 
 The class hierarchy is shown below.
 
-.. image:: /_static/images/HAL_class_hierarchy.png
+.. image:: /_static/images/hal/HAL_class_hierarchy.png
    :alt: HAL Class Hierarchy
    :scale: 80%
 

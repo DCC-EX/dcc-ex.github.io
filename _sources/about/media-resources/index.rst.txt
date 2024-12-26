@@ -38,7 +38,7 @@ Instructions for using EX-WebThrottle here: :doc:`/ex-commandstation/testing-diy
 Engine Driver
 --------------
 
-Those with an Android phone or tablet can use the Engine Driver App from the Play Store. Engine Driver is developed alongside the |EX-CS| and can talk to the CS via the WiThrottle protocol or the direct DCC-EX protocol. The phone can be held in the shot or a mirroring app like Phone Link can be used to display the phone screen on the computer that is recording the session. If you don't have an Android phone, or want to actually run Engine Driver on a computer, be sure to read the section below on using the BlueStack Android Emulator before getting started.
+Those with an Android phone or tablet can use the Engine Driver App from the Play Store. Engine Driver is developed alongside the |EX-CS| and can talk to the Command Station via the |WiThrottle protocol| or the direct DCC-EX protocol. The phone can be held in the shot or a mirroring app like Phone Link can be used to display the phone screen on the computer that is recording the session. If you don't have an Android phone, or want to actually run Engine Driver on a computer, be sure to read the section below on using the BlueStack Android Emulator before getting started.
 
 BlueStack Android Emulator
 ---------------------------

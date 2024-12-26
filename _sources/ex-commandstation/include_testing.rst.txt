@@ -55,7 +55,7 @@ Connect Everything:
 * Connect wires from the MAIN Terminals of the motor shield (output A) to your **MAIN track**
 * Plug in the power supply for the motor shield **only**
 * Reconnect the |EX-CS| to the computer
-* Wait for about 30 seconds for the CS to run through its startup sequence
+* Wait for about 30 seconds for the Command Station to run through its startup sequence
 
 .. NOTE:: 
    :class: note-float-right-narrow

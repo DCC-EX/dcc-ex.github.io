@@ -204,14 +204,6 @@
 
     :doc:`wiThrottle Server </reference/software/withrottle-vs-native-commands>`
 ..
-.. |Native Protocol| replace::
-
-    :doc:`Native DCC-EX Protocol </reference/glossary>`
-..
-.. |Native DCC-EX Protocol| replace::
-
-    :doc:`Native DCC-EX Protocol </reference/glossary>`
-..
 .. |Access Point| replace::
 
     :doc:`Access Point (AP) </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`

@@ -182,7 +182,7 @@ If you simply want a system to run your **DCC** or **DC** trains, then you only 
 
 Note that you will need a :doc:`throttle or controller </throttles/index>` to connect to the |EX-CS| (via serial, WiFi, or Ethernet), but you already have a throttle - your laptop or your phone. 
 
-  Our |EX-WT| runs on a computer connected to the CS via a USB cable. And there are several excellent apps, like |Engine Driver| that are free and can have you up and running in minutes via a WiFi connection. 
+  Our |EX-WT| runs on a computer connected to the Command Station via a USB cable. And there are several excellent apps, like |Engine Driver| that are free and can have you up and running in minutes via a WiFi connection. 
   
   If physical knobs and buttons are your thing, there are plenty of :ref:`DIY physical throttles <throttles/index:dedicated hardware>` as well as commercial ones like the :doc:`TCS throttles </throttles/hardware/uwt50>`.
 

@@ -182,7 +182,7 @@ Change Frequency on DC/DCX TrackManager track
 
 When running in DC mode certain locomotives can be unresponsive at certain DC frequencies, a situation that is not found when running in DCC mode.  When in DC or DCX mode it is now possible to set different frequencies using Functions F29, F30 & F31.
 
-The settings achievable vary slightly depending upon the processor running the CS but broadly follow the following:
+The settings achievable vary slightly depending upon the processor running the Command Station but broadly follow the following:
 
 |_| > **No Functions:** Default - low frequency 131Hz |BR|
 |_| > **F29:** Mid frequency - 490Hz |BR|

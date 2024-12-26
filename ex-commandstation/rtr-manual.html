@@ -935,7 +935,7 @@
 <figure class="align-right" id="id25">
 <a class="reference internal image-reference" href="../_images/unpopulated_power_pins.png"><img alt="Unpopulated Power Pads" src="../_images/unpopulated_power_pins.png" style="width: 115.2px; height: 75.60000000000001px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig 67: </span><span class="caption-text">Unpopulated Power Pads</span><a class="headerlink" href="#id25" title="Link to this image"></a></p>
+<p><span class="caption-number">Fig 67: </span><span class="caption-text">Unpopulated <br /> Power Pads</span><a class="headerlink" href="#id25" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>These unpopulated solder pads are used internally for testing and can provide power connections for an optional header. When operated without an <a href="../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a> on top, a user could remove the barrel jack and solder pins here capable of handling the 5A maximum current to power the board and the track.</p>
@@ -958,30 +958,28 @@
 <section id="powering-the-ex-csb1">
 <h2><a class="toc-backref" href="#id33" role="doc-backlink">Powering the EX-CSB1</a><a class="headerlink" href="#powering-the-ex-csb1" title="Link to this heading"></a></h2>
 <figure class="align-right" id="id27">
-<a class="reference internal image-reference" href="../_images/2_1mm_screw_terminal_adapter.png"><img alt="2.1mm screw terminal adapter" src="../_images/2_1mm_screw_terminal_adapter.png" style="width: 152.4px; height: 144.8px;" /></a>
+<a class="reference internal image-reference" href="../_images/2_1mm_screw_terminal_adapter1.png"><img alt="2.1mm screw terminal adapter" src="../_images/2_1mm_screw_terminal_adapter1.png" style="width: 152.4px; height: 144.8px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig 69: </span><span class="caption-text">2.1mm Screw Terminal Adapter</span><a class="headerlink" href="#id27" title="Link to this image"></a></p>
+<p><span class="caption-number">Fig 69: </span><span class="caption-text">2.1mm Screw <br /> Terminal Adapter</span><a class="headerlink" href="#id27" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>The <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> has a 2.1mm x 5.5mm power jack. If you already have a power supply with bare wires, you can use an optional 2.1mm x 5.5mm screw terminal block adapter. For more information about power supplies, including how to use one power supply to supply all the different voltages on your layout, see <a class="reference internal" href="../reference/hardware/power-supplies.html#power-supplies"><span class="std std-ref">Power Supplies</span></a>.</p>
-<p>To power up the CSB1, just plug your power supply into the mains power (aka wall outlet) and connect the barrel end to the Command Station. Make sure your power supply matches the needs of your setup: the voltage should be between 12V and 25V DC, depending on the scale of your locomotives, and it should provide at least 2A of current with good over-current performance and voltage stability.</p>
-<p>To get the most out of your EX-CSB1, we suggest using a modern switching power supply with 4A or more. For Z scale, 12V is usually enough, but for N, HO, and OO scales, we recommend using between 14V and 16V DC. It’s important that your DC power is well-regulated which is why we suggest a modern switch-mode power supply with double insulation and strong overload protection.</p>
 <figure class="align-right" id="id28">
-<a class="reference internal image-reference" href="../_images/12v-3A-brick.jpg"><img alt="12V 3A brick power supply" src="../_images/12v-3A-brick.jpg" style="width: 244.0px; height: 218.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/12v-3A-brick.png"><img alt="12V brick power supply" src="../_images/12v-3A-brick.png" style="width: 244.0px; height: 218.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig 70: </span><span class="caption-text">12V/3A Power Supply</span><a class="headerlink" href="#id28" title="Link to this image"></a></p>
+<p><span class="caption-number">Fig 70: </span><span class="caption-text">12V Power Supply</span><a class="headerlink" href="#id28" title="Link to this image"></a></p>
 </figcaption>
 </figure>
+<p>To power up the CSB1, just plug your power supply into the mains power (aka wall outlet) and connect the barrel end to the Command Station. Make sure your power supply matches the needs of your setup: the voltage should be between 12V and 25V DC, depending on the scale of your locomotives, and it should provide at least 2A of current with good over-current performance and voltage stability.</p>
+<p>To get the most out of your EX-CSB1, we suggest using a modern switching power supply with 4A or more. For Z scale, 12V is usually enough, but for N, HO, and OO scales, we recommend using between 14V and 16V DC. It’s important that your DC power is well-regulated which is why we suggest a modern switch-mode power supply with double insulation and strong overload protection.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Your power supply can be rated at <em>or above</em> the specified Amperage rating. You must not exceed the voltage rating of your device, but a little extra current is ok, since the CSB1 will only use as much as it needs. However, remember that both voltage and current can be dangerous.</p>
 </div>
 <p>When you connect power to the CSB1, you should see one or both bright green power LEDs light up, confirming that the electronics are working.</p>
 <p>However, for safety, track power will be off by default when you first plug in the <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a>. This is to prevent power from accidentally being applied to your layout before everything is ready. See the <a class="reference internal" href="../ex-installer/installing.html#start-with-power-on"><span class="std std-ref">EX -Installer page</span></a> for more information on how to change this behaviour.</p>
-<hr class="docutils" />
-<p><hr class="hr-dashed" /></p>
+<p><hr class="hr-heavy" /></p>
 </section>
-<hr class="docutils" />
 <section id="connecting-and-testing-your-command-station">
 <h2><a class="toc-backref" href="#id34" role="doc-backlink">Connecting and Testing Your Command Station</a><a class="headerlink" href="#connecting-and-testing-your-command-station" title="Link to this heading"></a></h2>
 <section id="what-you-will-need">
@@ -1387,7 +1385,7 @@ If issues persist, refer to the troubleshooting guides on the DCC-EX website.</p
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f262a1cadd0>
+    <jinja2.runtime.BlockReference object at 0x7fcb05a90190>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

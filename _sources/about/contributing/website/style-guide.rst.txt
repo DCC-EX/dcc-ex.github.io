@@ -58,12 +58,18 @@ Style Guidelines
 
 * Additional expansions that should be used where possible: (currently these hyperlink to the the glossary but the intention is to have them link somewhere more sensible later.)
 
+  * \|DCC\|
+  * \|DC\|
+  * \|DC PWM\|
   * \|Motor Driver\|
   * \|JMRI\|
   * \|Engine Driver\|
   * \|wiThrottle\| 
   * \|wiThrottle Protocol\|
   * \|wiThrottle Server\|
+  * \|wiThrottle Lite\|
+  * \|DCC-EX Native Commands\|  produces |DCC-EX Native Commands|
+  * \|DCC-EX Native Protocol\|  produces |DCC-EX Native Protocol|
   * \|Access Point\|
   * \|Access Point Mode\|
   * \|Station Mode\|
@@ -72,8 +78,10 @@ Style Guidelines
 * Avoid abbreviations that would not be easily recognised by 'Conductors'.  
 
   * In particular *don't* use 'CS'.  Use the full name 'Command Station'
-  * *don't* use 'AP'.  Use 'Access Point' or 'Access Point Mode'
-  * *don't* use 'STA'.  Use 'Station' or 'Station Mode'
+  * *Don't* use 'AP'.  Use 'Access Point' or 'Access Point Mode'
+  * *Don't* use 'STA'.  Use 'Station' or 'Station Mode'
+  * *Limit the use of* using 'RTR' or 'R2R'.  Use 'ready-to-run' or 'ready-to-run (RTR)'
+  * Limit the use of* using 'DIY'.  Use 'do-it-yourself' or 'do-it-yourself (DIY)'
 
 * Avoid 'fluff' - unnecessary text that adds no value.
 
@@ -81,6 +89,10 @@ Style Guidelines
   * The exception to this is a bit of humour now and then, but don't overdo it.
 
 * Keep headings short.  If it fills the page it is too long.
+* Keep sentences short.  Break them up where ever possible.
+* Keep paragraphs short.  Break them up where practical.
+* Keep paragraphs on the same topic. If the topic changes start a new paragraph.
+* Do not start any page for a Conductor or Tinkerer with a technical explanation.  Put technical explanations at the end of the page or preferably in a separate dedicated page.
 * If you have a number of sections that describe options; present them in list them first, before the sections, with an explanation as to why they are optional.  (i.e. a bullet list with hyperlinks to the headings.) 
 * Where possible, avoid starting a section with a negative point of view.  i.e. Talk about the positives of what you are discussing first, before you delve into the negative or problematic aspects. |BR| e.g. Don't start with "... This is not for Conductors...", instead say "..This page is for Tinkerers ... Conductors should...".
 * Use British/Australian/Canadian/Indian (pretty much every except the USA) spelling e.g. 'colour' not 'color'.  |br|\ (Primarily because it is used in more English speaking countries)

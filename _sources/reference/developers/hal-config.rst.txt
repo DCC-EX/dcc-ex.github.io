@@ -77,7 +77,7 @@ which, and always connect SDA to SDA, SCL to SCL, GND to GND and VSS/+5V to VSS/
 All |I2C| devices are connected in parallel to this bus, and when the Arduino sends commands, all attached devices receive them.
 However, only a device with a matching address will respond.  Each device attached to the bus should have a unique address.
 
-.. figure:: ../../_static/images/i2cbus.png
+.. figure:: ../../_static/images/i2c/i2cbus.png
    :alt: |I2C| Bus Topology
    :scale: 20%
 
@@ -305,7 +305,7 @@ played from a Micro-SD card (up to 32GB).  The module is connected to an Arduino
 Connect the DFPlayer's RX to the Arduino TX3 (14) via a 1kOhm resistor, and DFPlayer's TX direct to the Arduino RX3 (15).  You also need to connect +5V power to VCC, 
 and GND on the Arduino to GND on the DFPlayer.  Connect a small speaker to the pins SPK1 and SPK2 on the DFPlayer, and that's the hardware set up. 
 
-.. figure:: ../../_static/images/dfplayer.png
+.. figure:: ../../_static/images/hal/dfplayer.png
    :alt: Arduino Mega with DFplayer
    :scale: 30%
 

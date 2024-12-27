@@ -90,7 +90,7 @@ To begin with...
 .. important:: 
    :class: important-float-right
    
-   EX-Installer creates a folder (<home>\\ex-installer) to hold the information it needs. :dcc-ex-red-bold:`Do not directly modify anything in this folder` as it may be overwritten or deleted by the installer at any time.
+   EX-Installer creates a folder (<home>\\ex-installer) to hold the information it needs. :dcc-ex-red-bold:`Do not directly modify anything in this folder` as it a) will be overwritten or deleted by the installer at any time, and b) will cause the installer to fail to load.
 
 * For **Apple macOS**:
 

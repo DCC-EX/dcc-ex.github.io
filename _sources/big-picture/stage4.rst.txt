@@ -28,7 +28,7 @@ Overview of EXRAIL automations
 
 The |EX-R| sequences are described in detail in the :doc:`/exrail/index` pages, which we recommend that you read. We won't repeat all that information here, but as introduction... 
 
-|EX-R| is an "**EX**\tended **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage"
+|EX-R| is an "|EX-R-FULL|"
 that can be used to describe sequential command 'sequences' to automatically take place on your model layout. These sequences are defined in a simple command script file, and uploaded to the Command Station once to configure it. 
 
 **EXRAIL** will then run the sequences *automatically* on EX-CommandStation startup, be triggered *manually* or run on occurrence of a *specified events*.

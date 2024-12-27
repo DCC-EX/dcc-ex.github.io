@@ -11,8 +11,7 @@ EXRAIL (Automation/Animation)
 
 Welcome to the home for |DCC-EX| Automation.
 
-|EX-R| is an "**EX**\tended **R**\ailroad **A**\utomation **I**\nstruction **L**\anguage"
-that can easily be used to describe sequential command 'sequences' to automatically take place on your model layout. 
+|EX-R| is an "|EX-R-FULL|" that can easily be used to describe sequential command 'sequences' to automatically take place on your model layout. 
 
 These sequences are defined programmatically in a simple command script file, and uploaded to the Command Station once to configure it. |EX-R| will then run automatically on |EX-CS| startup or if trigger manually or on occurrence of the specified events.
 

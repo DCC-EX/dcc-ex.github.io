@@ -645,14 +645,6 @@ As the |EX-I| program is updated periodically, it is worth checking from time-to
 Uploading EXRAIL Scripts
 ------------------------
 
-.. |EX-R-FULL| raw:: html
-
-  <span class="ex-prefix">EX</span><span class="ex-suffix">tended </span>
-  <span class="ex-prefix">R</span><span class="ex-suffix">ailroad</span>
-  <span class="ex-prefix">A</span><span class="ex-suffix">utomation</span>
-  <span class="ex-prefix">I</span><span class="ex-suffix">nstruction</span>
-  <span class="ex-prefix">l</span><span class="ex-suffix">anguage</span>
-
 |EX-R| is an "|EX-R-FULL|" that can easily be used to describe sequential command 'sequences' to automatically take place on your model layout. These sequences are defined programmatically in a simple command script file, and uploaded to the Command Station once to configure it. |EX-R| will then run automatically on |EX-CS| startup, trigger manually, or on occurrence of the specified events.
 
 To find out more about |EX-R| and how to add them to your |EX-CSB1| see the :doc:`/exrail/index` page.

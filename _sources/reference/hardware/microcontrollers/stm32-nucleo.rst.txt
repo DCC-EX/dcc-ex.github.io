@@ -13,7 +13,7 @@ STMicroelectronics Nucleo (Recommended)
 .. sidebar::
 
    .. contents:: On this page
-      :depth: 2
+      :depth: 3
       :local:
 
 STMicroelectronics STM32 NUCLEO series
@@ -37,11 +37,11 @@ The Nucleo range come in two basic form factors, being Nucleo-64 and Nucleo-144.
   :alt: Nucleo-64 Board (F401RE)
   :scale: 30%
 
-.. image:: /_static/images/nucleo/stm-stock-nucleo-f446ze.webp
+.. image:: /_static/images/nucleo/stm-stock-nucleo-f446ze.png
   :alt: Nucleo-144 Board (F446RE)
   :scale: 50%
 
-.. image:: /_static/images/nucleo/stm-stock-nucleo-f429zi.webp
+.. image:: /_static/images/nucleo/stm-stock-nucleo-f429zi.png
   :alt: Nucleo-144 Board (F429ZI)
   :scale: 47%
 
@@ -287,8 +287,8 @@ In order to compile for the STM32 NUCLEO platforms you need do nothing when usin
 
 Just select "Nucleo-F411RE" or "Nucleo-F446RE" as the build target, and hit build. Be sure to do this after installing the drivers (for Windows) and upgrading the debugger firmware per the instructions above.
 
-Hardware setup notes for a NUCLEO-64 based |EX-CS|
---------------------------------------------------
+Hardware setup notes for a NUCLEO-64 based EX-CommandStation
+-------------------------------------------------------------
 
 Here is how a Nucleo-64 board looks when new, with a top view, and the pinouts. The other Nucleo-64 models look near identical, pinouts are exactly the same, however some of their I/O functions map slightly differently as the microcontrollers might be slightly different internally.
 
@@ -350,68 +350,134 @@ You will need to select a serial port to use, and connect the Rx pin on your NUC
 
 NB: Use of Serial1 on the F401RE means using PB6 which is also Arduino pin D8 - this means you cannot use D8 for a motor shield unless you comment out the Serial1 definition. Speak to the DCC-EX dev team on Discord if you need help to do this. The default serial port used for console communications for Nucleo-64 models is Serial2, which is sent via the ST-Link debugger to the USB serial console. It is not connected to the Arduino Rx/Tx pins of D0/D1 which have no connection at all to any pin.
 
-Hardware setup notes for a NUCLEO-144 based |EX-CS|
----------------------------------------------------
+Hardware setup notes for a NUCLEO-144 based EX-CommandStation
+--------------------------------------------------------------
 
-Here is how a Nucleo-144 board looks when new, with a top view, and the pinouts. The other Nucleo-64 models look near identical, pinouts are exactly the same, however some of their I/O functions map slightly differently as the microcontrollers might be slightly different internally.
+These Nucleo-144 boards are supported for use with EX-CommandStation. 
+(F412ZG will work, but its pinouts are less consistent vs the other three.)
 
-.. image:: /_static/images/nucleo/nucleo-f411re-top.png
-  :alt: STM Nucleo-F411RE top face
-  :scale: 25%
+* **F413ZH** |BR| https://os.mbed.com/platforms/ST-Nucleo-F413ZH/ |EXTERNAL-LINK|
+* **F446ZE** |BR| https://os.mbed.com/platforms/ST-Nucleo-F446ZE/ |EXTERNAL-LINK|
+* **F439ZI and F429ZI include Ethernet** |BR| https://os.mbed.com/platforms/ST-Nucleo-F429ZI/ |EXTERNAL-LINK| |BR| https://estore.st.com/en/nucleo-f439zi-cpn.html |EXTERNAL-LINK|
 
-.. image:: /_static/images/nucleo/nucleo-f411re-pinout.png
-  :alt: STM Nucleo-F411RE connector pinouts
-  :scale: 50%
+.. figure:: /_static/images/nucleo/stm-stock-nucleo-f446ze.png
+  :alt: STM Nucleo-F446ZE
+  :scale: 75%
 
-You will notice that the Ardiuno connectors are slightly inboard of the dual-row headers called the Morpho connectors.
+  STM Nucleo-F446ZE
+
+Nucleo-144 boards have headers installed on the top, with pins extending from the bottom for CN7, CN8, CN9, CN10 (Zio headers).
+Headers/pins are not pre-installed for CN11, CN12.
+
+
+These images from the above F429ZI link were edited to include Arduino style pin numbers.  
+
+.. figure:: /_static/images/nucleo/nucleo-f429zi-zio-header-top-left-side.png
+  :alt: NUCLEO F429ZI ZIO Header (Top left Side)
+  :scale: 75%
+
+  NUCLEO F429ZI ZIO Header (Top left Side)
+
+.. figure:: /_static/images/nucleo/nucleo-f429zi-zio-header-top-right-side.png
+  :alt: NUCLEO F429ZI ZIO Header (Top right Side)
+  :scale: 75%
+
+  NUCLEO F429ZI ZIO Header (Top right Side)
 
 Notes on the Arduino connectors on the NUCLEO-144 range
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Whilst the I/O pins are 5v-tolerant for digital IO, for the moment we recommend using 3v3 friendly Arduino R3 spec shields where you can.
-- The analog pins are NOT 5v-tolerant and accept a maximum of 3v3. We recommend using the new EX-MotorShield8874, or a genuine Ardiuno Motor Shield R3 revision (and only the R3!) for the moment. Instructions for modifying the earlier R2 version and the Deek Robot Motor Shield will follow in due course.
-- By default the Rx/Tx Arduino pins (D0/D1) are NOT connected to any of the NUCLEO's pins. There are jumpers underneath to connect them to Serial2, but this isn't recommended (see steps for serial connections below)
-- The Morpho pins extend both above AND below the Nucleo-64 series boards! Please be very wary of shorting any of these pins, especially those that protrude below. We recommend mounting 10mm M3 screw hex standoffs into the 3 mounting holes on the main PCB for your safety. See pic here:
+-	Whilst the I/O pins are 5v-tolerant for digital IO, for the moment we recommend using 3v3 friendly Arduino R3 spec shields where you can.
 
-.. image:: /_static/images/nucleo/nucleo-f411re-bottom-spacers.png
+-	The analog pins are NOT 5v-tolerant and accept a maximum of 3v3. We recommend using the new EX-MotorShield8874, or a genuine Arduino Motor Shield R3 revision (and only the R3!) for the moment. Instructions for modifying the earlier R2 version and the Deek Robot Motor Shield will follow in due course.
+
+-	**SERIAL1 (UART6)** or **SERIAL3 (UART2)** are available for WiFi.  
+
+.. code-block::
+
+  SERIAL1  Rx=PG9, Tx=PG14 -- UART6   Serial6  D0,D1
+  SERIAL3  Rx=PD6, Tx=PD5  -- UART2   Serial2  D52,D53 
+           Rx=PD2, Tx=PC12 -- UART5   Serial5  D48,D47
+                              UART5 does not exist on F412ZG.
+
+
+-	The Zio pins extend below the Nucleo-144 series boards! Please be very wary of shorting any of these pins that protrude below.  We recommend standoffs in the 4 mounting holes on the main PCB for your safety.  A 3D-printed sled is also recommended.  
+
+.. figure:: /_static/images/nucleo/nucleo-144-series-board.png
+  :alt: NUCLEO 144 Series board
+  :scale: 50%
+
+  NUCLEO 144 Series board
+
+.. figure:: /_static/images/nucleo/nucleo-144-series-board-pins-extend-below.png
+  :alt: NUCLEO 144 Series board - Pins extend below
+  :scale: 75%
+
+  NUCLEO 144 Series board - Pins extend below
+
+Note that there is very little clearance for stand-offs. M3 screw heads may require filing, etc.
+
+
+
+.. - By default the Rx/Tx Arduino pins (D0/D1) are NOT connected to any of the NUCLEO's pins. There are jumpers underneath to connect them to Serial2, but this isn't recommended (see steps for serial connections below)
+
+.. - The Morpho pins extend both above AND below the Nucleo-64 series boards! Please be very wary of shorting any of these pins, especially those that protrude below. We recommend mounting 10mm M3 screw hex standoffs into the 3 mounting holes on the main PCB for your safety. See pic here:
+
+.. .. image:: /_static/images/nucleo/nucleo-f411re-bottom-spacers.png
   :alt: STM Nucleo-F411RE underneath face with 10mm M3 standoffs
   :scale: 25%
 
 
-Here is the NUCLEO-F411RE with on the left a genuine Arduino Motor Shield R3 installed, and on the right a |DCC-EX| EX-MotorShield8874 installed:
+.. Here is the NUCLEO-F411RE with on the left a genuine Arduino Motor Shield R3 installed, and on the right a |DCC-EX| EX-MotorShield8874 installed:
 
-.. image:: /_static/images/nucleo/nucleo-f411re-with-motor-shield.png
+.. .. image:: /_static/images/nucleo/nucleo-f411re-with-motor-shield.png
   :alt: STM Nucleo-F411RE with genuine Arduino Motor Shield R3 installed
   :scale: 30%
 
-.. image:: /_static/images/motorboards/ex_motorshield8874_nucleo_f411.png
+.. .. image:: /_static/images/motorboards/ex_motorshield8874_nucleo_f411.png
   :alt: STM Nucleo-F411RE with DCC-EX EX-MotorShield8874 installed
   :scale: 17%
 
 Serial for WiFi, for NUCLEO-144 models
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To connect an ESP8266 via either a WiFi shield or ESP01 module, you may use any of the available serial ports, which appear on different Morpho pins for the various Nucleo-64 models.
+To connect an ESP8266 via a WiFi shield, the D0, D1 pin positions can be used - - scanned for WiFi as SERIAL1.
 
-The |EX-CS| source code currently maps the first additional serial port pins to:
+ESP8266 ESP01 module can use those pins, or the pins scanned for WiFi as SERIAL3 
 
-- F401RE: Rx/PB7 on CN7 pin 17, Tx/PB6 on CN10 pin 17 - known as Serial1
-- F411RE: Rx/PA15 on CN7 pin 17, Tx/PB7 on CN7 pin 21 - known as Serial1
-- F446RE: Rx/PC11 on CN7 pin 2, Tx/PC10 on CN7 pin 1 - known as Serial3
+.. code-block::
 
-Also defined in |EX-CS| is an additional serial port which appears on the following pins:
+  SERIAL1  Rx=PG9, Tx=PG14 -- UART6   Serial6  D0,D1
+  SERIAL3  Rx=PD6, Tx=PD5  -- UART2   Serial2  D52,D53 
+	         Rx=PD2, Tx=PC12 -- UART5   Serial5  D48,D47
+                        		  UART5 does not exist on F412ZG.
 
-- F401RE Rx CN10 PA12 pin 12, Tx CN10 PA11 pin 13 - known as Serial6
-- F411RE Rx CN10 PA12 pin 12, Tx CN10 PA11 pin 13 - known as Serial6
-- F446RE Rx CN7 PD2 pin 4, Tx CN7 PC12 pin 3 - known as Serial5
+.. figure:: /_static/images/nucleo/nucleo-F429ZI-FZ439ZI-pins.png
+  :alt: NUCLEO F429ZI and FZ439ZI pins
+  :scale: 75%
 
-You will need to select a serial port to use, and connect the Rx pin on your NUCLEO to the Tx pin of your WiFi device, and the Tx pin of the NUCLEO to the Rx pin of the WiFi device. We recommend using Serial1 for the F401RE and F411RE, and Serial3 for F446RE. Below are pics of the positions of all available mapped serial ports:
+  NUCLEO F429ZI and FZ439ZI pins
 
-.. image:: /_static/images/nucleo/nucleo-f411re-f446re-wifi-serial1.png
+:download:`This file </reference/hardware/microcontrollers/pin_use_table_F446ZE_F429ZI_20240402.pdf>` identifies how pins were assigned for 10 tracks on F4x9ZI, F446ZE or F413ZH.  EX-CommandStation can presently use 8 tracks.  Pins not used in track definitions are available for use as accessory pins
+
+
+.. - F401RE: Rx/PB7 on CN7 pin 17, Tx/PB6 on CN10 pin 17 - known as Serial1
+.. - F411RE: Rx/PA15 on CN7 pin 17, Tx/PB7 on CN7 pin 21 - known as Serial1
+.. - F446RE: Rx/PC11 on CN7 pin 2, Tx/PC10 on CN7 pin 1 - known as Serial3
+
+.. Also defined in |EX-CS| is an additional serial port which appears on the following pins:
+
+.. - F401RE Rx CN10 PA12 pin 12, Tx CN10 PA11 pin 13 - known as Serial6
+.. - F411RE Rx CN10 PA12 pin 12, Tx CN10 PA11 pin 13 - known as Serial6
+.. - F446RE Rx CN7 PD2 pin 4, Tx CN7 PC12 pin 3 - known as Serial5
+
+.. You will need to select a serial port to use, and connect the Rx pin on your NUCLEO to the Tx pin of your WiFi device, and the Tx pin of the NUCLEO to the Rx pin of the WiFi device. We recommend using Serial1 for the F401RE and F411RE, and Serial3 for F446RE. Below are pics of the positions of all available mapped serial ports:
+
+.. .. image:: /_static/images/nucleo/nucleo-f411re-f446re-wifi-serial1.png
   :alt: NUCLEO F411RE/F446RE Serial1 Rx/Tx Connections
   :scale: 50%
 
-NB: Use of Serial1 on the F401RE means using PB6 which is also Arduino pin D8 - this means you cannot use D8 for a motor shield unless you comment out the Serial1 definition. Speak to the DCC-EX dev team on Discord if you need help to do this. The default serial port used for console communications for Nucleo-64 models is Serial2, which is sent via the ST-Link debugger to the USB serial console. It is not connected to the Arduino Rx/Tx pins of D0/D1 which have no connection at all to any pin.
+.. NB: Use of Serial1 on the F401RE means using PB6 which is also Arduino pin D8 - this means you cannot use D8 for a motor shield unless you comment out the Serial1 definition. Speak to the DCC-EX dev team on Discord if you need help to do this. The default serial port used for console communications for Nucleo-64 models is Serial2, which is sent via the ST-Link debugger to the USB serial console. It is not connected to the Arduino Rx/Tx pins of D0/D1 which have no connection at all to any pin.
 
 Notes on using the EX-MotorShield8874 with Nucleo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -426,3 +492,8 @@ In both cases this will power your Nucleo using the EX-MotorShield8874's onboard
 
 NB: once you do this it will mean you need both the EX-MotorShield8874 barrel jack to be powered AND the USB cable to enable programming. Or you can temporarily move JP5 back to U5V whilst uploading |EX-CS|. The correct sequence is power on the EX-MotorShield8874 barrel jack, **then** attach the USB cable according to the STMicroelectronics documentation.
 
+.. figure:: /_static/images/nucleo/nucelo-144-and-64-power-jumpers.png
+  :alt: NUCLEO 144 and 64 power jumpers
+  :scale: 75%
+
+  NUCLEO 144 and 64 power jumpers

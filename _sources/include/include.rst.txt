@@ -178,7 +178,7 @@
   <span class="ex-prefix">R</span><span class="ex-suffix">ailroad</span>
   <span class="ex-prefix">A</span><span class="ex-suffix">utomation</span>
   <span class="ex-prefix">I</span><span class="ex-suffix">nstruction</span>
-  <span class="ex-prefix">l</span><span class="ex-suffix">anguage</span>
+  <span class="ex-prefix">L</span><span class="ex-suffix">anguage</span>
 ..
 .. |Motor Driver| replace::
 

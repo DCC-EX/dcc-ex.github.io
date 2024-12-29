@@ -641,37 +641,48 @@
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#stmicroelectronics-stm32-nucleo-series" id="id1">STMicroelectronics STM32 NUCLEO series</a></p>
+<li><p><a class="reference internal" href="#stmicroelectronics-stm32-nucleo-series" id="id8">STMicroelectronics STM32 NUCLEO series</a></p>
 <ul>
-<li><p><a class="reference internal" href="#nucleo-64-vs-nucleo-144-form-factors" id="id2">Nucleo-64 vs Nucleo-144 Form Factors</a></p></li>
+<li><p><a class="reference internal" href="#nucleo-64-vs-nucleo-144-form-factors" id="id9">Nucleo-64 vs Nucleo-144 Form Factors</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#choosing-a-nucleo" id="id3">Choosing a Nucleo</a></p>
+<li><p><a class="reference internal" href="#choosing-a-nucleo" id="id10">Choosing a Nucleo</a></p>
 <ul>
-<li><p><a class="reference internal" href="#install-the-stlink-drivers-for-windows" id="id4">Install the STLink drivers for Windows</a></p></li>
-<li><p><a class="reference internal" href="#upgrade-the-debugger-firmware" id="id5">Upgrade the debugger firmware</a></p></li>
-<li><p><a class="reference internal" href="#upgrade-the-debugger-firmware-in-windows" id="id6">Upgrade the debugger firmware in Windows</a></p></li>
-<li><p><a class="reference internal" href="#adding-nucleo-support-to-the-arduino-ide" id="id7">Adding NUCLEO support to the Arduino IDE</a></p></li>
-<li><p><a class="reference internal" href="#adding-nucleo-support-to-vs-code-platformio" id="id8">Adding NUCLEO support to VS Code/PlatformIO</a></p></li>
-<li><p><a class="reference internal" href="#hardware-setup-notes-for-a-nucleo-64-based-ex-cs" id="id9">Hardware setup notes for a NUCLEO-64 based <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a></a></p></li>
-<li><p><a class="reference internal" href="#hardware-setup-notes-for-a-nucleo-144-based-ex-cs" id="id10">Hardware setup notes for a NUCLEO-144 based <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a></a></p></li>
+<li><p><a class="reference internal" href="#install-the-stlink-drivers-for-windows" id="id11">Install the STLink drivers for Windows</a></p></li>
+<li><p><a class="reference internal" href="#upgrade-the-debugger-firmware" id="id12">Upgrade the debugger firmware</a></p></li>
+<li><p><a class="reference internal" href="#upgrade-the-debugger-firmware-in-windows" id="id13">Upgrade the debugger firmware in Windows</a></p></li>
+<li><p><a class="reference internal" href="#adding-nucleo-support-to-the-arduino-ide" id="id14">Adding NUCLEO support to the Arduino IDE</a></p></li>
+<li><p><a class="reference internal" href="#adding-nucleo-support-to-vs-code-platformio" id="id15">Adding NUCLEO support to VS Code/PlatformIO</a></p></li>
+<li><p><a class="reference internal" href="#hardware-setup-notes-for-a-nucleo-64-based-ex-commandstation" id="id16">Hardware setup notes for a NUCLEO-64 based EX-CommandStation</a></p>
+<ul>
+<li><p><a class="reference internal" href="#notes-on-the-arduino-connectors-on-the-nucleo-64-range" id="id17">Notes on the Arduino connectors on the NUCLEO-64 range</a></p></li>
+<li><p><a class="reference internal" href="#serial-for-wifi-for-nucleo-64-models" id="id18">Serial for WiFi, for NUCLEO-64 models</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#hardware-setup-notes-for-a-nucleo-144-based-ex-commandstation" id="id19">Hardware setup notes for a NUCLEO-144 based EX-CommandStation</a></p>
+<ul>
+<li><p><a class="reference internal" href="#notes-on-the-arduino-connectors-on-the-nucleo-144-range" id="id20">Notes on the Arduino connectors on the NUCLEO-144 range</a></p></li>
+<li><p><a class="reference internal" href="#serial-for-wifi-for-nucleo-144-models" id="id21">Serial for WiFi, for NUCLEO-144 models</a></p></li>
+<li><p><a class="reference internal" href="#notes-on-using-the-ex-motorshield8874-with-nucleo" id="id22">Notes on using the EX-MotorShield8874 with Nucleo</a></p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </nav>
 </aside>
 <section id="stmicroelectronics-stm32-nucleo-series">
-<h2><a class="toc-backref" href="#id1" role="doc-backlink">STMicroelectronics STM32 NUCLEO series</a><a class="headerlink" href="#stmicroelectronics-stm32-nucleo-series" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">STMicroelectronics STM32 NUCLEO series</a><a class="headerlink" href="#stmicroelectronics-stm32-nucleo-series" title="Link to this heading"></a></h2>
 <p>STMicroelectronics has a range of ARM based microcontrollers that are generally available, sold from reputable global resellers such as Digi-Key and Mouser, and have exceptional build quality for their price (often lower than clone Arduino Mega models, and presently lower than all genuine Arduino Mega prices.)</p>
 <p>Further to this, all of the NUCLEO series of development boards also provide Arduino Uno compatible header sockets, meaning existing motor (and other) shields can just plug straight in, providing they are 3v3 compatible (see note above).</p>
 <p>The NUCLEO series have a great deal more RAM (128KB to 256KB vs 8KB for a Mega), double or more FLASH (512KB to 2MB) for program storage, and much faster CPU speed (100 to 180Mhz vs 16Mhz) than the current AVR-based UNO and Mega.</p>
 <p>With those attributes comes the potential to support much larger EXRAIL scripts, and therefore much larger layouts needing animation and automation, and new features like built-in Ethernet.</p>
 <section id="nucleo-64-vs-nucleo-144-form-factors">
-<h3><a class="toc-backref" href="#id2" role="doc-backlink">Nucleo-64 vs Nucleo-144 Form Factors</a><a class="headerlink" href="#nucleo-64-vs-nucleo-144-form-factors" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Nucleo-64 vs Nucleo-144 Form Factors</a><a class="headerlink" href="#nucleo-64-vs-nucleo-144-form-factors" title="Link to this heading"></a></h3>
 <p>The Nucleo range come in two basic form factors, being Nucleo-64 and Nucleo-144. The Nucleo-64 range have a more UNO-sized shape and design with a set of Arduino UNO style headers, but have many more pins available on additional connectors due to using a large 64-pin microcontroller. The Nucleo-144 however is much larger, larger even than an Arduino Mega2560 with headers to accept Arduino UNO shields, and 112 pins available on the extended connectors.</p>
-<a class="reference internal image-reference" href="../../../_images/stm-stock-nucleo-f401re.webp"><img alt="Nucleo-64 Board (F401RE)" src="../../../_images/stm-stock-nucleo-f401re.webp" style="width: 168.0px; height: 168.0px;" /></a>
-<a class="reference internal image-reference" href="../../../_images/stm-stock-nucleo-f446ze.webp"><img alt="Nucleo-144 Board (F446RE)" src="../../../_images/stm-stock-nucleo-f446ze.webp" style="width: 280.0px; height: 280.0px;" /></a>
-<a class="reference internal image-reference" href="../../../_images/stm-stock-nucleo-f429zi.webp"><img alt="Nucleo-144 Board (F429ZI)" src="../../../_images/stm-stock-nucleo-f429zi.webp" style="width: 200.22px; height: 300.33px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/stm-stock-nucleo-f401re.webp"><img alt="Nucleo-64 Board (F401RE)" src="../../../_images/stm-stock-nucleo-f401re.webp" style="width: 136.5px; height: 159.6px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/stm-stock-nucleo-f446ze.png"><img alt="Nucleo-144 Board (F446RE)" src="../../../_images/stm-stock-nucleo-f446ze.png" style="width: 140.0px; height: 260.0px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/stm-stock-nucleo-f429zi.png"><img alt="Nucleo-144 Board (F429ZI)" src="../../../_images/stm-stock-nucleo-f429zi.png" style="width: 145.23px; height: 269.78px;" /></a>
 <p>The advantage of the Nucleo-64 range is that they are very keenly priced at around the same price as a clone Arduino Mega2560, but have plenty of RAM and flash, etc. The Nucleo-64s most closely resembles the ubiquitous Arduino Uno form factor, including having Uno compatible header sockets in addition to Morpho pins for a much larger I/O capability than an Uno.</p>
 <p>They have 50 I/O pins compared with the Uno’s 20, and only 20 less than the Arduino Mega despite its diminutive size. For most use cases it is therefore a suitable substitute for a Mega. Just as with a Mega, use of a Wifi shield requires jumpering the serial port.</p>
 <p>Primary advantages of the Nucleo-144 range is just how many pins are availabe, many more peripherals like serial ports and so on. Each of the Nucleo-144 series has a larger footprint than the Nucleo-64s, while still retaining the Uno compatible header sockets, with 114 I/O pins. That said, they are only slightly physically larger (20mm wider, 33mm longer) than an Arduino Mega 2560.</p>
@@ -679,7 +690,7 @@
 </section>
 </section>
 <section id="choosing-a-nucleo">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">Choosing a Nucleo</a><a class="headerlink" href="#choosing-a-nucleo" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Choosing a Nucleo</a><a class="headerlink" href="#choosing-a-nucleo" title="Link to this heading"></a></h2>
 <p>With so many Nucleo models to choose from, how do you know which is the best for your needs?</p>
 <p>We’ve compiled this simple summary table to help with this:</p>
 <table class="command-table docutils align-default" style="width: 100%">
@@ -802,7 +813,7 @@
 <p>While the F429ZI is supported and recommended, ST Microelectronics has decided to end production. The F439ZI is functionally identical as far as DCC-EX is concerned and readily available.</p>
 </div>
 <section id="install-the-stlink-drivers-for-windows">
-<h3><a class="toc-backref" href="#id4" role="doc-backlink">Install the STLink drivers for Windows</a><a class="headerlink" href="#install-the-stlink-drivers-for-windows" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Install the STLink drivers for Windows</a><a class="headerlink" href="#install-the-stlink-drivers-for-windows" title="Link to this heading"></a></h3>
 <p>When using any of the NUCLEO series microcontrollers with Microsoft Windows, you will need to install their STLink USB drivers in order to be able to upload software to them and use the <a class="reference internal" href="../../tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a> in either PlatformIO or the <a class="reference internal" href="../../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">Arduino IDE</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -820,14 +831,14 @@
 <p>You can now plug your NUCLEO device in and proceed with upgrading the debugger firmware (highly recommended).</p>
 </section>
 <section id="upgrade-the-debugger-firmware">
-<h3><a class="toc-backref" href="#id5" role="doc-backlink">Upgrade the debugger firmware</a><a class="headerlink" href="#upgrade-the-debugger-firmware" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Upgrade the debugger firmware</a><a class="headerlink" href="#upgrade-the-debugger-firmware" title="Link to this heading"></a></h3>
 <p>All Nucleos come with a built-in debugger interface, which is the portion of the PCB at the top near the USB connector. This is of great advantage during development as it helps us track down issues more readily. It does however mean that device drivers are needed for Windows (7, 10 and 11 supported), and that the debugger firmware may need upgrading. See notes below.</p>
 <p>During testing, it was noted with certain USB chipsets on Windows 11 that serial responses via the USB debugger port would stop being received by the <a class="reference internal" href="../../tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a>, even though the device continued to operate normally. The recommendation to resolve this issue is to upgrade the debugger firmware.</p>
 <p>We recommend you upgrade the debugger firmware regardless if you experience this issue or not, and regardless of whether you use Windows, Linux or MacOS. Instructions for Linux and MacOS can be found on the web but rely on using the Java app in the AllPlatforms folder.</p>
 <p>You need to ensure your NUCLEO device is plugged in to a USB port prior to commencing the upgrade.</p>
 </section>
 <section id="upgrade-the-debugger-firmware-in-windows">
-<h3><a class="toc-backref" href="#id6" role="doc-backlink">Upgrade the debugger firmware in Windows</a><a class="headerlink" href="#upgrade-the-debugger-firmware-in-windows" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Upgrade the debugger firmware in Windows</a><a class="headerlink" href="#upgrade-the-debugger-firmware-in-windows" title="Link to this heading"></a></h3>
 <p>In the same zip file as the drivers, you will need to navigate through the “en.stsw-link007_v3-10-3” folder down to the “Windows” folder, which contains an executable “ST-LinkUpgrade.exe” to upgrade the firmware on the NUCLEO devices.</p>
 <a class="reference internal image-reference" href="../../../_images/extracted-firmware.png"><img alt="Drivers installed" src="../../../_images/extracted-firmware.png" style="width: 426.0px; height: 123.5px;" /></a>
 <p>Double click this file to run it, which should present the upgrade window.</p>
@@ -842,7 +853,7 @@
 <a class="reference internal image-reference" href="../../../_images/firmware5.png"><img alt="Drivers installed" src="../../../_images/firmware5.png" style="width: 343.5px; height: 194.0px;" /></a>
 </section>
 <section id="adding-nucleo-support-to-the-arduino-ide">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">Adding NUCLEO support to the Arduino IDE</a><a class="headerlink" href="#adding-nucleo-support-to-the-arduino-ide" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Adding NUCLEO support to the Arduino IDE</a><a class="headerlink" href="#adding-nucleo-support-to-the-arduino-ide" title="Link to this heading"></a></h3>
 <p>In order to compile for the STM32 NUCLEO platforms, you will need to add the boards to the <a class="reference internal" href="../../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">Arduino IDE</span></a>.</p>
 <p>To do this, navigate to “File” -&gt; “Preferences” and add this URL to the “Additional Boards Manager URLs” list:</p>
 <p><a class="reference external" href="https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json">https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json</a></p>
@@ -852,18 +863,18 @@
 <p>Once this has been performed, the NUCLEO devices should be available to be selected in the <a class="reference internal" href="../../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">Arduino IDE</span></a> in an unusual two-step process. To select a particular board in the <a class="reference internal" href="../../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">Arduino IDE</span></a>, first select “Tools” -&gt; “Board” -&gt; “STM32 boards groups” and then either Nucleo-64 or Nucleo-144. Once you have selected the category, go to “Tools” -&gt; “Board part number” menu to select the particular Nucleo model you have. At this point you can buid DCC-EX. Further instructions can be found <a class="reference external" href="https://microcontrollerslab.com/stm32-nucleo-arduino-ide-tutorial/">here.</a></p>
 </section>
 <section id="adding-nucleo-support-to-vs-code-platformio">
-<h3><a class="toc-backref" href="#id8" role="doc-backlink">Adding NUCLEO support to VS Code/PlatformIO</a><a class="headerlink" href="#adding-nucleo-support-to-vs-code-platformio" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">Adding NUCLEO support to VS Code/PlatformIO</a><a class="headerlink" href="#adding-nucleo-support-to-vs-code-platformio" title="Link to this heading"></a></h3>
 <p>In order to compile for the STM32 NUCLEO platforms you need do nothing when using Microsoft VS Code and PlatformIO. PlatformIO will automatically download the required tool chains and frameworks for platform support based on the entries in platformio.ini included in the <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> source tree.</p>
 <p>Just select “Nucleo-F411RE” or “Nucleo-F446RE” as the build target, and hit build. Be sure to do this after installing the drivers (for Windows) and upgrading the debugger firmware per the instructions above.</p>
 </section>
-<section id="hardware-setup-notes-for-a-nucleo-64-based-ex-cs">
-<h3><a class="toc-backref" href="#id9" role="doc-backlink">Hardware setup notes for a NUCLEO-64 based <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a></a><a class="headerlink" href="#hardware-setup-notes-for-a-nucleo-64-based-ex-cs" title="Link to this heading"></a></h3>
+<section id="hardware-setup-notes-for-a-nucleo-64-based-ex-commandstation">
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">Hardware setup notes for a NUCLEO-64 based EX-CommandStation</a><a class="headerlink" href="#hardware-setup-notes-for-a-nucleo-64-based-ex-commandstation" title="Link to this heading"></a></h3>
 <p>Here is how a Nucleo-64 board looks when new, with a top view, and the pinouts. The other Nucleo-64 models look near identical, pinouts are exactly the same, however some of their I/O functions map slightly differently as the microcontrollers might be slightly different internally.</p>
 <a class="reference internal image-reference" href="../../../_images/nucleo-f411re-top.png"><img alt="STM Nucleo-F411RE top face" src="../../../_images/nucleo-f411re-top.png" style="width: 212.0px; height: 256.0px;" /></a>
 <a class="reference internal image-reference" href="../../../_images/nucleo-f411re-pinout.png"><img alt="STM Nucleo-F411RE connector pinouts" src="../../../_images/nucleo-f411re-pinout.png" style="width: 335.5px; height: 284.5px;" /></a>
 <p>You will notice that the Ardiuno connectors are slightly inboard of the dual-row headers called the Morpho connectors.</p>
 <section id="notes-on-the-arduino-connectors-on-the-nucleo-64-range">
-<h4>Notes on the Arduino connectors on the NUCLEO-64 range<a class="headerlink" href="#notes-on-the-arduino-connectors-on-the-nucleo-64-range" title="Link to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id17" role="doc-backlink">Notes on the Arduino connectors on the NUCLEO-64 range</a><a class="headerlink" href="#notes-on-the-arduino-connectors-on-the-nucleo-64-range" title="Link to this heading"></a></h4>
 <ul class="simple">
 <li><p>Whilst the I/O pins are 5v-tolerant for digital IO, for the moment we recommend using 3v3 friendly Arduino R3 spec shields where you can.</p></li>
 <li><p>The analog pins are NOT 5v-tolerant and accept a maximum of 3v3. We recommend using the new EX-MotorShield8874, or a genuine Ardiuno Motor Shield R3 revision (and only the R3!) for the moment. Instructions for modifying the earlier R2 version and the Deek Robot Motor Shield will follow in due course.</p></li>
@@ -876,7 +887,7 @@
 <a class="reference internal image-reference" href="../../../_images/ex_motorshield8874_nucleo_f411.png"><img alt="STM Nucleo-F411RE with DCC-EX EX-MotorShield8874 installed" src="../../../_images/ex_motorshield8874_nucleo_f411.png" style="width: 292.57px; height: 244.97000000000003px;" /></a>
 </section>
 <section id="serial-for-wifi-for-nucleo-64-models">
-<h4>Serial for WiFi, for NUCLEO-64 models<a class="headerlink" href="#serial-for-wifi-for-nucleo-64-models" title="Link to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id18" role="doc-backlink">Serial for WiFi, for NUCLEO-64 models</a><a class="headerlink" href="#serial-for-wifi-for-nucleo-64-models" title="Link to this heading"></a></h4>
 <p>To connect an ESP8266 via either a WiFi shield or ESP01 module, you may use any of the available serial ports, which appear on different Morpho pins for the various Nucleo-64 models.</p>
 <p>The <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> source code currently maps the first additional serial port pins to:</p>
 <ul class="simple">
@@ -895,51 +906,97 @@
 <p>NB: Use of Serial1 on the F401RE means using PB6 which is also Arduino pin D8 - this means you cannot use D8 for a motor shield unless you comment out the Serial1 definition. Speak to the DCC-EX dev team on Discord if you need help to do this. The default serial port used for console communications for Nucleo-64 models is Serial2, which is sent via the ST-Link debugger to the USB serial console. It is not connected to the Arduino Rx/Tx pins of D0/D1 which have no connection at all to any pin.</p>
 </section>
 </section>
-<section id="hardware-setup-notes-for-a-nucleo-144-based-ex-cs">
-<h3><a class="toc-backref" href="#id10" role="doc-backlink">Hardware setup notes for a NUCLEO-144 based <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a></a><a class="headerlink" href="#hardware-setup-notes-for-a-nucleo-144-based-ex-cs" title="Link to this heading"></a></h3>
-<p>Here is how a Nucleo-144 board looks when new, with a top view, and the pinouts. The other Nucleo-64 models look near identical, pinouts are exactly the same, however some of their I/O functions map slightly differently as the microcontrollers might be slightly different internally.</p>
-<a class="reference internal image-reference" href="../../../_images/nucleo-f411re-top.png"><img alt="STM Nucleo-F411RE top face" src="../../../_images/nucleo-f411re-top.png" style="width: 212.0px; height: 256.0px;" /></a>
-<a class="reference internal image-reference" href="../../../_images/nucleo-f411re-pinout.png"><img alt="STM Nucleo-F411RE connector pinouts" src="../../../_images/nucleo-f411re-pinout.png" style="width: 335.5px; height: 284.5px;" /></a>
-<p>You will notice that the Ardiuno connectors are slightly inboard of the dual-row headers called the Morpho connectors.</p>
+<section id="hardware-setup-notes-for-a-nucleo-144-based-ex-commandstation">
+<h3><a class="toc-backref" href="#id19" role="doc-backlink">Hardware setup notes for a NUCLEO-144 based EX-CommandStation</a><a class="headerlink" href="#hardware-setup-notes-for-a-nucleo-144-based-ex-commandstation" title="Link to this heading"></a></h3>
+<p>These Nucleo-144 boards are supported for use with EX-CommandStation.
+(F412ZG will work, but its pinouts are less consistent vs the other three.)</p>
+<ul class="simple">
+<li><p><strong>F413ZH</strong> <br /> <a class="reference external" href="https://os.mbed.com/platforms/ST-Nucleo-F413ZH/">https://os.mbed.com/platforms/ST-Nucleo-F413ZH/</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></li>
+<li><p><strong>F446ZE</strong> <br /> <a class="reference external" href="https://os.mbed.com/platforms/ST-Nucleo-F446ZE/">https://os.mbed.com/platforms/ST-Nucleo-F446ZE/</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></li>
+<li><p><strong>F439ZI and F429ZI include Ethernet</strong> <br /> <a class="reference external" href="https://os.mbed.com/platforms/ST-Nucleo-F429ZI/">https://os.mbed.com/platforms/ST-Nucleo-F429ZI/</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> <br /> <a class="reference external" href="https://estore.st.com/en/nucleo-f439zi-cpn.html">https://estore.st.com/en/nucleo-f439zi-cpn.html</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p></li>
+</ul>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../../_images/stm-stock-nucleo-f446ze.png"><img alt="STM Nucleo-F446ZE" src="../../../_images/stm-stock-nucleo-f446ze.png" style="width: 210.0px; height: 390.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig 114: </span><span class="caption-text">STM Nucleo-F446ZE</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Nucleo-144 boards have headers installed on the top, with pins extending from the bottom for CN7, CN8, CN9, CN10 (Zio headers).
+Headers/pins are not pre-installed for CN11, CN12.</p>
+<p>These images from the above F429ZI link were edited to include Arduino style pin numbers.</p>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../../../_images/nucleo-f429zi-zio-header-top-left-side.png"><img alt="NUCLEO F429ZI ZIO Header (Top left Side)" src="../../../_images/nucleo-f429zi-zio-header-top-left-side.png" style="width: 694.5px; height: 515.25px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig 115: </span><span class="caption-text">NUCLEO F429ZI ZIO Header (Top left Side)</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../../../_images/nucleo-f429zi-zio-header-top-right-side.png"><img alt="NUCLEO F429ZI ZIO Header (Top right Side)" src="../../../_images/nucleo-f429zi-zio-header-top-right-side.png" style="width: 729.0px; height: 525.75px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig 116: </span><span class="caption-text">NUCLEO F429ZI ZIO Header (Top right Side)</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
 <section id="notes-on-the-arduino-connectors-on-the-nucleo-144-range">
-<h4>Notes on the Arduino connectors on the NUCLEO-144 range<a class="headerlink" href="#notes-on-the-arduino-connectors-on-the-nucleo-144-range" title="Link to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id20" role="doc-backlink">Notes on the Arduino connectors on the NUCLEO-144 range</a><a class="headerlink" href="#notes-on-the-arduino-connectors-on-the-nucleo-144-range" title="Link to this heading"></a></h4>
 <ul class="simple">
 <li><p>Whilst the I/O pins are 5v-tolerant for digital IO, for the moment we recommend using 3v3 friendly Arduino R3 spec shields where you can.</p></li>
-<li><p>The analog pins are NOT 5v-tolerant and accept a maximum of 3v3. We recommend using the new EX-MotorShield8874, or a genuine Ardiuno Motor Shield R3 revision (and only the R3!) for the moment. Instructions for modifying the earlier R2 version and the Deek Robot Motor Shield will follow in due course.</p></li>
-<li><p>By default the Rx/Tx Arduino pins (D0/D1) are NOT connected to any of the NUCLEO’s pins. There are jumpers underneath to connect them to Serial2, but this isn’t recommended (see steps for serial connections below)</p></li>
-<li><p>The Morpho pins extend both above AND below the Nucleo-64 series boards! Please be very wary of shorting any of these pins, especially those that protrude below. We recommend mounting 10mm M3 screw hex standoffs into the 3 mounting holes on the main PCB for your safety. See pic here:</p></li>
+<li><p>The analog pins are NOT 5v-tolerant and accept a maximum of 3v3. We recommend using the new EX-MotorShield8874, or a genuine Arduino Motor Shield R3 revision (and only the R3!) for the moment. Instructions for modifying the earlier R2 version and the Deek Robot Motor Shield will follow in due course.</p></li>
+<li><p><strong>SERIAL1 (UART6)</strong> or <strong>SERIAL3 (UART2)</strong> are available for WiFi.</p></li>
 </ul>
-<a class="reference internal image-reference" href="../../../_images/nucleo-f411re-bottom-spacers.png"><img alt="STM Nucleo-F411RE underneath face with 10mm M3 standoffs" src="../../../_images/nucleo-f411re-bottom-spacers.png" style="width: 208.25px; height: 256.0px;" /></a>
-<p>Here is the NUCLEO-F411RE with on the left a genuine Arduino Motor Shield R3 installed, and on the right a <a href="../../../index.html"><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span></a> EX-MotorShield8874 installed:</p>
-<a class="reference internal image-reference" href="../../../_images/nucleo-f411re-with-motor-shield.png"><img alt="STM Nucleo-F411RE with genuine Arduino Motor Shield R3 installed" src="../../../_images/nucleo-f411re-with-motor-shield.png" style="width: 307.2px; height: 240.0px;" /></a>
-<a class="reference internal image-reference" href="../../../_images/ex_motorshield8874_nucleo_f411.png"><img alt="STM Nucleo-F411RE with DCC-EX EX-MotorShield8874 installed" src="../../../_images/ex_motorshield8874_nucleo_f411.png" style="width: 292.57px; height: 244.97000000000003px;" /></a>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SERIAL1  Rx=PG9, Tx=PG14 -- UART6   Serial6  D0,D1
+SERIAL3  Rx=PD6, Tx=PD5  -- UART2   Serial2  D52,D53
+         Rx=PD2, Tx=PC12 -- UART5   Serial5  D48,D47
+                            UART5 does not exist on F412ZG.
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The Zio pins extend below the Nucleo-144 series boards! Please be very wary of shorting any of these pins that protrude below.  We recommend standoffs in the 4 mounting holes on the main PCB for your safety.  A 3D-printed sled is also recommended.</p></li>
+</ul>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../../../_images/nucleo-144-series-board.png"><img alt="NUCLEO 144 Series board" src="../../../_images/nucleo-144-series-board.png" style="width: 321.0px; height: 249.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig 117: </span><span class="caption-text">NUCLEO 144 Series board</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../../../_images/nucleo-144-series-board-pins-extend-below.png"><img alt="NUCLEO 144 Series board - Pins extend below" src="../../../_images/nucleo-144-series-board-pins-extend-below.png" style="width: 219.75px; height: 189.75px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig 118: </span><span class="caption-text">NUCLEO 144 Series board - Pins extend below</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Note that there is very little clearance for stand-offs. M3 screw heads may require filing, etc.</p>
 </section>
 <section id="serial-for-wifi-for-nucleo-144-models">
-<h4>Serial for WiFi, for NUCLEO-144 models<a class="headerlink" href="#serial-for-wifi-for-nucleo-144-models" title="Link to this heading"></a></h4>
-<p>To connect an ESP8266 via either a WiFi shield or ESP01 module, you may use any of the available serial ports, which appear on different Morpho pins for the various Nucleo-64 models.</p>
-<p>The <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> source code currently maps the first additional serial port pins to:</p>
-<ul class="simple">
-<li><p>F401RE: Rx/PB7 on CN7 pin 17, Tx/PB6 on CN10 pin 17 - known as Serial1</p></li>
-<li><p>F411RE: Rx/PA15 on CN7 pin 17, Tx/PB7 on CN7 pin 21 - known as Serial1</p></li>
-<li><p>F446RE: Rx/PC11 on CN7 pin 2, Tx/PC10 on CN7 pin 1 - known as Serial3</p></li>
-</ul>
-<p>Also defined in <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> is an additional serial port which appears on the following pins:</p>
-<ul class="simple">
-<li><p>F401RE Rx CN10 PA12 pin 12, Tx CN10 PA11 pin 13 - known as Serial6</p></li>
-<li><p>F411RE Rx CN10 PA12 pin 12, Tx CN10 PA11 pin 13 - known as Serial6</p></li>
-<li><p>F446RE Rx CN7 PD2 pin 4, Tx CN7 PC12 pin 3 - known as Serial5</p></li>
-</ul>
-<p>You will need to select a serial port to use, and connect the Rx pin on your NUCLEO to the Tx pin of your WiFi device, and the Tx pin of the NUCLEO to the Rx pin of the WiFi device. We recommend using Serial1 for the F401RE and F411RE, and Serial3 for F446RE. Below are pics of the positions of all available mapped serial ports:</p>
-<a class="reference internal image-reference" href="../../../_images/nucleo-f411re-f446re-wifi-serial1.png"><img alt="NUCLEO F411RE/F446RE Serial1 Rx/Tx Connections" src="../../../_images/nucleo-f411re-f446re-wifi-serial1.png" style="width: 727.0px; height: 566.0px;" /></a>
-<p>NB: Use of Serial1 on the F401RE means using PB6 which is also Arduino pin D8 - this means you cannot use D8 for a motor shield unless you comment out the Serial1 definition. Speak to the DCC-EX dev team on Discord if you need help to do this. The default serial port used for console communications for Nucleo-64 models is Serial2, which is sent via the ST-Link debugger to the USB serial console. It is not connected to the Arduino Rx/Tx pins of D0/D1 which have no connection at all to any pin.</p>
+<h4><a class="toc-backref" href="#id21" role="doc-backlink">Serial for WiFi, for NUCLEO-144 models</a><a class="headerlink" href="#serial-for-wifi-for-nucleo-144-models" title="Link to this heading"></a></h4>
+<p>To connect an ESP8266 via a WiFi shield, the D0, D1 pin positions can be used - - scanned for WiFi as SERIAL1.</p>
+<p>ESP8266 ESP01 module can use those pins, or the pins scanned for WiFi as SERIAL3</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SERIAL1  Rx=PG9, Tx=PG14 -- UART6   Serial6  D0,D1
+SERIAL3  Rx=PD6, Tx=PD5  -- UART2   Serial2  D52,D53
+               Rx=PD2, Tx=PC12 -- UART5   Serial5  D48,D47
+                                        UART5 does not exist on F412ZG.
+</pre></div>
+</div>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../../../_images/nucleo-F429ZI-FZ439ZI-pins.png"><img alt="NUCLEO F429ZI and FZ439ZI pins" src="../../../_images/nucleo-F429ZI-FZ439ZI-pins.png" style="width: 731.25px; height: 672.75px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig 119: </span><span class="caption-text">NUCLEO F429ZI and FZ439ZI pins</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><a class="reference download internal" download="" href="../../../_downloads/139caf25aefe6a074198c83cb608a968/pin_use_table_F446ZE_F429ZI_20240402.pdf"><code class="xref download docutils literal notranslate"><span class="pre">This</span> <span class="pre">file</span></code></a> identifies how pins were assigned for 10 tracks on F4x9ZI, F446ZE or F413ZH.  EX-CommandStation can presently use 8 tracks.  Pins not used in track definitions are available for use as accessory pins</p>
 </section>
 <section id="notes-on-using-the-ex-motorshield8874-with-nucleo">
-<h4>Notes on using the EX-MotorShield8874 with Nucleo<a class="headerlink" href="#notes-on-using-the-ex-motorshield8874-with-nucleo" title="Link to this heading"></a></h4>
+<h4><a class="toc-backref" href="#id22" role="doc-backlink">Notes on using the EX-MotorShield8874 with Nucleo</a><a class="headerlink" href="#notes-on-using-the-ex-motorshield8874-with-nucleo" title="Link to this heading"></a></h4>
 <p>In order to take advantage of the EX-MotorShield8874’s single power source capability, you will need to move the Nucleo power source jumper.</p>
 <p>On the Nucleo-64s it’s jumper JP5 which you move from the U5V position (pins 1+2 jumpered, USB 5V source being used) to the E5V position (pins 2+3 jumpered).</p>
 <p>On the Nucleo-144s it’s jumper JP3 which you move from the U5V position (centre pins 3+4 jumpered, USB 5V source being used) to the VIN-5V position (rightmost pins 5+6 jumpered).</p>
 <p>In both cases this will power your Nucleo using the EX-MotorShield8874’s onboard switch mode power supply of 7.2V to the VIN pin, and allows some 800mA of 5V power to be available for the Nucleo and peripherals.</p>
 <p>NB: once you do this it will mean you need both the EX-MotorShield8874 barrel jack to be powered AND the USB cable to enable programming. Or you can temporarily move JP5 back to U5V whilst uploading <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>. The correct sequence is power on the EX-MotorShield8874 barrel jack, <strong>then</strong> attach the USB cable according to the STMicroelectronics documentation.</p>
+<figure class="align-default" id="id7">
+<a class="reference internal image-reference" href="../../../_images/nucelo-144-and-64-power-jumpers.png"><img alt="NUCLEO 144 and 64 power jumpers" src="../../../_images/nucelo-144-and-64-power-jumpers.png" style="width: 834.75px; height: 286.5px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig 120: </span><span class="caption-text">NUCLEO 144 and 64 power jumpers</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 </section>
@@ -967,7 +1024,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f876294c850>
+    <jinja2.runtime.BlockReference object at 0x7f2085fe6260>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

@@ -770,15 +770,15 @@
 <li><p><a class="reference internal" href="#trackletter-mode-cab-configure-track-manager" id="id61">&lt;= trackletter mode [cab]&gt; - Configure Track Manager</a></p></li>
 <li><p><a class="reference internal" href="#request-the-current-track-manager-configuration" id="id62">&lt;=&gt; - Request the current Track Manager configuration</a></p></li>
 <li><p><a class="reference internal" href="#onoff-track-turn-power-on-or-off-to-the-requested-trackmanager-track" id="id63">&lt;onOff [track]&gt; - Turn power on or off to the requested TrackManager track</a></p></li>
-<li><p><a class="reference internal" href="#change-frequency-on-dc-dcx-trackmanager-track" id="id64">Change Frequency on DC/DCX TrackManager track</a></p></li>
+<li><p><a class="reference internal" href="#change-frequency-on-dc-or-dc-inv-dcx-trackmanager-track" id="id64">Change Frequency on DC or DC_INV/DCX TrackManager track</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
 <section id="trackletter-mode-cab-configure-track-manager">
 <h4><a class="toc-backref" href="#id61" role="doc-backlink">&lt;= trackletter mode [cab]&gt; - Configure Track Manager</a><a class="headerlink" href="#trackletter-mode-cab-configure-track-manager" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>trackletter:</strong> ‘A’ through ‘H’ represent one of the outputs of the/a motor shield. <br /> &gt; <strong>mode:</strong> one of  <br />    • MAIN <br />    • PROG <br />    • DC <br />    • DCX = DC reversed polarity <br />    • NONE <br /> &gt; <strong>id:</strong> the cab ID. <em>Required when specifying DC or DCX</em></p>
-<p><em>Response:</em> <br /> (for each track/channel that has changed) <code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">trackletter</span> <span class="pre">state</span> <span class="pre">cab&gt;</span></code> <br /> <br /> &gt; <strong>trackletter:</strong> A-H <br /> &gt; <strong>state:</strong>  PROG, MAIN DC, DCX <br /> &gt; <strong>cab:</strong> cab(loco) equivalent to a fake DCC Address</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>trackletter:</strong> ‘A’ through ‘H’ represent one of the outputs of the/a motor shield. <br /> &gt; <strong>mode:</strong> one of  <br />    • <code class="docutils literal notranslate"><span class="pre">MAIN</span></code> <br />    • <code class="docutils literal notranslate"><span class="pre">MAIN_INV</span></code> <br />    • <code class="docutils literal notranslate"><span class="pre">MAIN_AUTO</span></code> <br />    • <code class="docutils literal notranslate"><span class="pre">PROG</span></code> <br />    • <code class="docutils literal notranslate"><span class="pre">DC</span></code> <br />    • <code class="docutils literal notranslate"><span class="pre">DC_INV</span></code> = DC reversed polarity <br />    • <code class="docutils literal notranslate"><span class="pre">DCX</span></code> = DC reversed polarity (same as DC_INV) <br />    • <code class="docutils literal notranslate"><span class="pre">NONE</span></code> <br /> &gt; <strong>id:</strong> the cab ID. <em>Required when specifying DC or DC_INV / DCX</em></p>
+<p><em>Response:</em> <br /> (for each track/channel that has changed) <code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">trackletter</span> <span class="pre">state</span> <span class="pre">cab&gt;</span></code> <br /> <br /> &gt; <strong>trackletter:</strong> A-H <br /> &gt; <strong>state:</strong>  PROG, MAIN, MAIN_INV, MAIN_AUTO, DC, DC_INV / DCX, NONE <br /> &gt; <strong>cab:</strong> cab(loco) equivalent to a fake DCC Address</p>
 <p><em>Notes:</em></p>
 <blockquote>
 <div><p>since only one channel can be PROG, changing a second channel to PROG, will force the other to OFF**</p>
@@ -789,7 +789,7 @@
 <section id="request-the-current-track-manager-configuration">
 <h4><a class="toc-backref" href="#id62" role="doc-backlink">&lt;=&gt; - Request the current Track Manager configuration</a><a class="headerlink" href="#request-the-current-track-manager-configuration" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Response:</em> <br /> for each track/channel supported by the motor shield <code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">trackletter</span> <span class="pre">state</span> <span class="pre">cab&gt;</span></code> <br /> <br /> &gt; <strong>trackletter:</strong> A-H <br /> &gt; <strong>state:</strong> PROG, MAIN DC, DCX <br /> &gt; <strong>cab:</strong> cab(loco) equivalent to a fake DCC Address</p>
+<div><p><em>Response:</em> <br /> for each track/channel supported by the motor shield <code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">trackletter</span> <span class="pre">state</span> <span class="pre">cab&gt;</span></code> <br /> <br /> &gt; <strong>trackletter:</strong> A-H <br /> &gt; <strong>state:</strong> PROG, MAIN, MAIN_INV, MAIN_AUTO, DC, DC_INV / DCX, NONE <br /> &gt; <strong>cab:</strong> cab(loco) equivalent to a fake DCC Address</p>
 </div></blockquote>
 </section>
 <section id="onoff-track-turn-power-on-or-off-to-the-requested-trackmanager-track">
@@ -803,10 +803,10 @@
 </dl>
 </div></blockquote>
 </section>
-<section id="change-frequency-on-dc-dcx-trackmanager-track">
-<h4><a class="toc-backref" href="#id64" role="doc-backlink">Change Frequency on DC/DCX TrackManager track</a><a class="headerlink" href="#change-frequency-on-dc-dcx-trackmanager-track" title="Link to this heading"></a></h4>
+<section id="change-frequency-on-dc-or-dc-inv-dcx-trackmanager-track">
+<h4><a class="toc-backref" href="#id64" role="doc-backlink">Change Frequency on DC or DC_INV/DCX TrackManager track</a><a class="headerlink" href="#change-frequency-on-dc-or-dc-inv-dcx-trackmanager-track" title="Link to this heading"></a></h4>
 <p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
-<p>When running in DC mode certain locomotives can be unresponsive at certain DC frequencies, a situation that is not found when running in DCC mode.  When in DC or DCX mode it is now possible to set different frequencies using Functions F29, F30 &amp; F31.</p>
+<p>When running in DC mode certain locomotives can be unresponsive at certain DC frequencies, a situation that is not found when running in DCC mode.  When in DC or DC_INV / DCX mode it is now possible to set different frequencies using Functions F29, F30 &amp; F31.</p>
 <p>The settings achievable vary slightly depending upon the processor running the Command Station but broadly follow the following:</p>
 <p> &gt; <strong>No Functions:</strong> Default - low frequency 131Hz <br /> &gt; <strong>F29:</strong> Mid frequency - 490Hz <br /> &gt; <strong>F30:</strong> High frequency - 3400Hz <br /> &gt; <strong>F31:</strong> Supersonic - 62500Hz <br /></p>
 <p>Note that these functions are not cumulative - setting F30 overrides F29 and setting F31 overrides F29 &amp; F30.</p>
@@ -2265,7 +2265,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f1787a21a20>
+    <jinja2.runtime.BlockReference object at 0x7f471d688e50>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

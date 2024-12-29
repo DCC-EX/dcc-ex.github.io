@@ -89,8 +89,9 @@ Technical details
 
 |EX-CS| with |TM| includes the following features: 
 
-  * DCC track modes of ``MAIN``, ``PROG``, and ``NONE``
-  * DC track modes of ``DC``, ``DCX`` (DC Reversed Polarity), and ``NONE``
+  * DCC track modes of ``MAIN``, ``MAIN_INV``, ``MAIN_AUTO``, ``PROG``, and ``NONE``
+  * DC track modes of ``DC``, ``DC_INV`` / ``DCX`` (DC Reversed Polarity), and ``NONE``
+  * Booster modes (ESP32 Microcontrollers only) of ``BOOST``, ``BOOST_INV`` and ``BOOST_AUTO``.
 
 |EX-CS| **production version 5.0+** supports both DCC (PWM) and DC (PWM) Pulse Width Modulation modes as an *embedded standard feature*.
 TrackManager allows you to set up and operate up to eight separate dual insulated sections of track/districts in either DCC (PWM) and or DC (PWM) as tracks A - H.
@@ -98,7 +99,7 @@ TrackManager allows you to set up and operate up to eight separate dual insulate
 An Arduino Mega (with or without WiFi) and Standard L298P Motor Shield |EX-CS| has two ready to run Tracks (**A** & **B**) which can be configured as:
 
   * DCC (PWM) modes MAIN for mainline tracks and PROG for a programming track
-  * DC (PWM) modes for DC or DCX (opposite polarity)
+  * DC (PWM) modes for DC or DC_INV / DCX (opposite polarity)
   * Each track/district can also be disabled by setting to "NONE"
 
 No additional external DCC decoders are required for DC (PWM) track assignments, and a single |EX-CS| is the only hardware needed for full functionality.
@@ -209,7 +210,7 @@ And no we're not using another Expensive DCC decoder under the table on each Tra
 
 .. note:: 
   
-  When specifying a DC or DCX cab ID, do not use one of your existing locomotive DCC addresses or road number IDs, otherwise a command sent to control a Cab on that DC or DCX track will also operate your DCC Loco with the same address, unless you intentionally do so.
+  When specifying a DC or DC_INV / DCX loco ID, do not use one of your existing loco DCC addresses or road number IDs, otherwise a command sent to control a loco on that DC or DC_INV / DCX track will also operate your DCC Loco with the same address, unless you intentionally do so.
 
 ----
 

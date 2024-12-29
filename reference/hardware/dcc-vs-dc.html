@@ -705,8 +705,9 @@
 <p><a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> with <span class="ex-suffix">TrackManager</span> includes the following features:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>DCC track modes of <code class="docutils literal notranslate"><span class="pre">MAIN</span></code>, <code class="docutils literal notranslate"><span class="pre">PROG</span></code>, and <code class="docutils literal notranslate"><span class="pre">NONE</span></code></p></li>
-<li><p>DC track modes of <code class="docutils literal notranslate"><span class="pre">DC</span></code>, <code class="docutils literal notranslate"><span class="pre">DCX</span></code> (DC Reversed Polarity), and <code class="docutils literal notranslate"><span class="pre">NONE</span></code></p></li>
+<li><p>DCC track modes of <code class="docutils literal notranslate"><span class="pre">MAIN</span></code>, <code class="docutils literal notranslate"><span class="pre">MAIN_INV</span></code>, <code class="docutils literal notranslate"><span class="pre">MAIN_AUTO</span></code>, <code class="docutils literal notranslate"><span class="pre">PROG</span></code>, and <code class="docutils literal notranslate"><span class="pre">NONE</span></code></p></li>
+<li><p>DC track modes of <code class="docutils literal notranslate"><span class="pre">DC</span></code>, <code class="docutils literal notranslate"><span class="pre">DC_INV</span></code> / <code class="docutils literal notranslate"><span class="pre">DCX</span></code> (DC Reversed Polarity), and <code class="docutils literal notranslate"><span class="pre">NONE</span></code></p></li>
+<li><p>Booster modes (ESP32 Microcontrollers only) of <code class="docutils literal notranslate"><span class="pre">BOOST</span></code>, <code class="docutils literal notranslate"><span class="pre">BOOST_INV</span></code> and <code class="docutils literal notranslate"><span class="pre">BOOST_AUTO</span></code>.</p></li>
 </ul>
 </div></blockquote>
 <p><a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> <strong>production version 5.0+</strong> supports both DCC (PWM) and DC (PWM) Pulse Width Modulation modes as an <em>embedded standard feature</em>.
@@ -715,7 +716,7 @@ TrackManager allows you to set up and operate up to eight separate dual insulate
 <blockquote>
 <div><ul class="simple">
 <li><p>DCC (PWM) modes MAIN for mainline tracks and PROG for a programming track</p></li>
-<li><p>DC (PWM) modes for DC or DCX (opposite polarity)</p></li>
+<li><p>DC (PWM) modes for DC or DC_INV / DCX (opposite polarity)</p></li>
 <li><p>Each track/district can also be disabled by setting to “NONE”</p></li>
 </ul>
 </div></blockquote>
@@ -804,7 +805,7 @@ TrackManager allows you to set up and operate up to eight separate dual insulate
 And no we’re not using another Expensive DCC decoder under the table on each Track/District/Block to address that section of track.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When specifying a DC or DCX cab ID, do not use one of your existing locomotive DCC addresses or road number IDs, otherwise a command sent to control a Cab on that DC or DCX track will also operate your DCC Loco with the same address, unless you intentionally do so.</p>
+<p>When specifying a DC or DC_INV / DCX loco ID, do not use one of your existing loco DCC addresses or road number IDs, otherwise a command sent to control a loco on that DC or DC_INV / DCX track will also operate your DCC Loco with the same address, unless you intentionally do so.</p>
 </div>
 </section>
 <hr class="docutils" />
@@ -851,7 +852,7 @@ And no we’re not using another Expensive DCC decoder under the table on each T
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f178e433c40>
+    <jinja2.runtime.BlockReference object at 0x7f4718577010>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

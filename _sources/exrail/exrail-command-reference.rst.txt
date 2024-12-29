@@ -2914,14 +2914,68 @@ Configures the mode of the selected track, refer also to :doc:`/trackmanager/ind
 |_| > **mode** - - The mode to set the track to, |BR|
 |_| |_| |_| |_| valid options for |DCC| are: |BR|
 |_| |_| |_| |_| • ``MAIN`` or |BR|
+|_| |_| |_| |_| • ``MAIN_INV`` or |BR|
+|_| |_| |_| |_| • ``MAIN_AUTO`` or |BR|
 |_| |_| |_| |_| • ``PROG``, |BR|
 |_| |_| |_| |_| and valid options for |DC| are: |BR|
-|_| |_| |_| |_| •  ``DC`` |BR|
-|_| |_| |_| |_| • , ``DCX``. |BR|
+|_| |_| |_| |_| •  ``DC`` or |BR|
+|_| |_| |_| |_| •  ``DC_INV`` or |BR|
+|_| |_| |_| |_| •  ``DCX`` (same as DC_INV). |BR|
 |_| |_| |_| |_| If a track is unused, it can be set to: |BR| 
-|_| |_| |_| |_| • ``NONE``
+|_| |_| |_| |_| • ``NONE``, |BR|
+|_| |_| |_| |_| If the |EX-CS| is confgured as a Booster (ESP32 Microcontrollers only), it can be set to: |BR| 
+|_| |_| |_| |_| • ``BOOST`` or |BR|
+|_| |_| |_| |_| • ``BOOST_INV`` or |BR|
+|_| |_| |_| |_| • ``BOOST_AUTO``. |BR|
 
-When setting at track mode to either DC or DCX, you must use the ``SETLOCO( loco )`` command first to specify the loco ID that will be used for the DC track then SET_TRACK()
+.. flat-table::
+  :widths: auto
+  :header-rows: 1
+  :class: command-table
+
+  * - :cspan:`1` Option
+    - _INV
+    - _AUTO
+    - Notes
+
+  * - ``MAIN``
+    - ✓
+    - ✓
+    - ✓
+    -
+
+  * - ``PROG``
+    - ✓
+    - 
+    -
+    - 
+
+  * - ``DC``
+    - ✓
+    - ✓ [1]_
+    - ✓
+    - Motor drivers with brake pin only
+
+  * - ``BOOST``
+    - ✓
+    - ✓
+    - ✓
+    - ESP32 microcontrollers only
+
+  * - ``EXT``
+    - ✓
+    - 
+    - 
+
+  * - ``NONE``
+    - ✓
+    - 
+    - 
+
+.. [1] With special alias of ``DCX`` for ``DC_INV``
+
+
+When setting at track mode to either ``DC`` or ``DC_INV`` / ``DCX``, you must use the ``SETLOCO( loco )`` command first to specify the loco ID that will be used for the DC track then SET_TRACK()
 
 .. collapse:: For example: (click to show)
 
@@ -2967,7 +3021,7 @@ Configures the power setting of the selected track, refer also to :doc:`/trackma
 ``SETFREQ( track, frequency )`` - Enable a specific frequency
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-DC/DCX track settings only.
+``DC`` or ``DC_INV`` / ``DCX`` track settings only.
 
 Configures the frequency setting of the selected track.
 

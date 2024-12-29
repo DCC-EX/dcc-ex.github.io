@@ -36,16 +36,19 @@ Valid Modes are:
   * :ref:`DCC modes <trackmanager/index:changing a motor driver output to a different dcc mode>`
   
     * MAIN
+    * MAIN_INV
+    * MAIN_AUTO
     * PROG
     * NONE
     
   * :ref:`DC modes <trackmanager/index:changing a motor driver output to dc>`
   
     * DC
+    * DC_INV [#tm1]_
     * DCX [#tm1]_
     * NONE
 
-.. [#tm1] DCX is DC with an opposite polarity. Like NMRA modular layout track B which is wired left rail positive (+) and right rail negative (-)
+.. [#tm1] DC_INV / DCX is DC with an opposite polarity. Like NMRA modular layout track B which is wired left rail positive (+) and right rail negative (-)
 
 ----
 
@@ -468,11 +471,12 @@ How do you run a EX-CommandStation in DC (PWM) mode?
 
 Using |TM| with simple easy commands from a throttle or from a |serial monitor| we can change any insulated track A-H from DCC (PWM) to DC (PWM) and back in real time.
 
-  * Valid DCC modes are MAIN, PROG, and NONE
-  * Valid DC modes are DC, DCX, and NONE
-  * DCX is DC with an opposite polarity like NMRA modular layout track B which is wired left rail positive (+) and right rail negative (-)
+  * Valid DCC modes are ``MAIN``, ``MAIN_INV``, ``MAIN_AUTO``, ``PROG``, and ``NONE``
+  * Valid DC modes are ``DC``, ``DC_INV`` / ``DCX``, and ``NONE``
+  
+DC_INV / DCX is DC with an opposite polarity like NMRA modular layout track B which is wired left rail positive (+) and right rail negative (-)
 
-This allows a throttle on track B set to DCX to operate in forward and reverse correctly for west bound engines
+This allows a throttle on track B set to DC_INV / DCX to operate in forward and reverse correctly for west bound engines
 
 So, you can take a standard DC motor only loco's road number on the side of the loco and assign it to one or more of up to 8 tracks/districts/blocks labelled A thru H. Then enter that same number into a throttle and control that Address on each and every one of the assigned tracks.
 
@@ -537,8 +541,8 @@ The |Serial Monitor| will show current status, example; Track A as Main and Trac
 To change or configure the current track modes use the new command ``<= trackletter mode [address]>`` which has been added for Track Manager, where:
 
   * ``trackletter`` is A through H
-  * ``mode`` is one of MAIN, PROG, DC, DCX, or NONE (DCX is DC with opposite polarity)
-  * ``address`` is the Cab ID and is only required when specifying DC or DCX modes
+  * ``mode`` is one of MAIN, MAIN_INV, MAIN_AUTO, PROG, DC, DC_INV / DCX, or NONE (DCX is DC with opposite polarity)
+  * ``address`` is the Cab/Loco ID and is only required when specifying DC or DC_INV / DCX modes
 
 .. code-block:: c++
 
@@ -568,7 +572,7 @@ my.Automation.h file
     SET_TRACK(C, DC)
     SET_TRACK(D, DCX)
 
-Note that the Address to be used for a DC or DCX block must be set before the ``SET_TRACK`` command e.g.
+Note that the Address to be used for a DC or DC_INV / DCX block must be set before the ``SET_TRACK`` command e.g.
 
 .. code-block:: c++
 
@@ -600,9 +604,9 @@ In a |EX-R| Automation script we could assign a track mode to DC and wait for a 
   SETLOCO(1)
   SET_TRACK(A,DC) PRINT("District A DC")
   DONE
- AUTOMATION(504, "District A DCX")    // Alternate DCX track A Changed to Opposite Polarity
+ AUTOMATION(504, "District A DCX")    // Alternate DC_INV / DCX track A Changed to Opposite Polarity
   SETLOCO(1)
-  SET_TRACK(A,DCX) PRINT("District A DCX Opposite Polarity") // Track A Opposite Polarity DC    
+  SET_TRACK(A,DCX) PRINT("District A DC_INV/DCX Opposite Polarity") // Track A Opposite Polarity DC    
   DONE
  AUTOMATION(505, "District A NONE")    // A Track disabled
   SET_TRACK(A, NONE) PRINT ("District A disabled")
@@ -655,7 +659,7 @@ No DPDT Switches are required, all waveform mode switching is done by Track Mana
 EX-CommandStation with EXRAIL & TrackManager
 --------------------------------------------
 
-Cool thing is the new |EX-R| Automation(n) & Routes(n) work the same with DCC engines on MAIN tracks and the DC engines on DC or DCX tracks, along with the Sensors, Servos /Turnouts, Signals & MP3 Sound DFPlayer triggers with little or no script changes other than maybe the FWD(n) & REV (n) Speeds.
+Cool thing is the new |EX-R| Automation(n) & Routes(n) work the same with DCC engines on MAIN tracks and the DC engines on DC or DC_INV / DCX tracks, along with the Sensors, Servos /Turnouts, Signals & MP3 Sound DFPlayer triggers with little or no script changes other than maybe the FWD(n) & REV (n) Speeds.
 
 With the new DCC-EX direct WiFi Discovered Server you can connect |Engine Driver| & other WiThrottle app based throttles directly and have |EX-R| [Handoff] & [Set] buttons to run |EX-R| scripts from the throttles.
 
@@ -674,10 +678,10 @@ Track A and Track B with sidings;
 
 You can set each district separately as mode
 
-* DCC for MAIN, PROG or NONE
-* analogue for DC, DCX or NONE
+* DCC for MAIN, MAIN_INV, MAIN_AUTO, PROG or NONE
+* analogue for DC, DC_INV / DCX or NONE
 
-DCX is Opposite Polarity and is what you set Block B to when you want it in DC mode because it is wired to NMRA Modular DCC Standards L+, R-.
+DC_INV / DCX is Opposite Polarity and is what you set Block B to when you want it in DC mode because it is wired to NMRA Modular DCC Standards L+, R-.
 
 .. Using the TrackManager Function commands you can run the any layout as
 .. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -728,7 +732,7 @@ Example - EXRAIL Scripts running on Engine Driver App (Android)
 **DCC-EX TrackManager "Handoff" & "Set" buttons**
 
  - Scroll through & select track modes
- - Takes the current selected Active Throttle Engine and assigns that Address to the DC or DCX track
+ - Takes the current selected Active Throttle Engine and assigns that Address to the DC or DC_INV / DCX track
 
 .. figure:: /_static/images/track_manager/trackmanager_engine_driver_3.png
   :alt: Track Manager handoff

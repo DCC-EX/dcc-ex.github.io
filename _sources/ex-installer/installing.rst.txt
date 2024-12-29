@@ -488,15 +488,25 @@ Enabling this option will enable the TrackManager Config tab.
 
 The tracks (channels) on your motor driver can be configured in a variety of different ways.
 
-* MAIN - DCC main
-* PROG - DCC Programming Track
-* DC
-* DCX - DC with the positive/negative inverted
-* OFF
+* ``MAIN`` - DCC main
+* ``MAIN_INV`` - DCC main inverted
+* ``PROG`` - DCC Programming Track
+* ``DC``
+* ``DC_INV`` - DC with the positive/negative inverted
+* ``DCX`` - DC with the positive/negative inverted (same as DC_INV)
+* ``MAIN_AUTO`` - DCC Auto-reverser mode
+* ``EXT``
+* ``NONE``
+
+If the Command Station is configured as a booster (ESP32 microcontrollers only), then the channels can asl be configured as:
+
+* ``BOOST`` - Booster mode 
+* ``BOOST_INV`` - Booster mode inverted
+* ``BOOST_AUTO`` - Booster mode + Auto-reverser mode
 
 By default track (channel) **A** will default to ``MAIN`` and Track (channel) **B** to ``PROG``.
 
-When selecting ``DC`` or ``DCX`` modes, you can customer the associated loco/cab ID.
+When selecting ``DC`` or ``DCX`` / ``DC_INV`` modes, you can customer the associated loco/cab ID.
 
 Advanced Config
 ^^^^^^^^^^^^^^^

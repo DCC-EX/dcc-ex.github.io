@@ -1081,14 +1081,24 @@ There are numerious phone apps that can help you determine which channels are be
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 <p>The tracks (channels) on your motor driver can be configured in a variety of different ways.</p>
 <ul class="simple">
-<li><p>MAIN - DCC main</p></li>
-<li><p>PROG - DCC Programming Track</p></li>
-<li><p>DC</p></li>
-<li><p>DCX - DC with the positive/negative inverted</p></li>
-<li><p>OFF</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MAIN</span></code> - DCC main</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MAIN_INV</span></code> - DCC main inverted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PROG</span></code> - DCC Programming Track</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DC</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DC_INV</span></code> - DC with the positive/negative inverted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DCX</span></code> - DC with the positive/negative inverted (same as DC_INV)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MAIN_AUTO</span></code> - DCC Auto-reverser mode</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">EXT</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NONE</span></code></p></li>
+</ul>
+<p>If the Command Station is configured as a booster (ESP32 microcontrollers only), then the channels can asl be configured as:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BOOST</span></code> - Booster mode</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BOOST_INV</span></code> - Booster mode inverted</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BOOST_AUTO</span></code> - Booster mode + Auto-reverser mode</p></li>
 </ul>
 <p>By default track (channel) <strong>A</strong> will default to <code class="docutils literal notranslate"><span class="pre">MAIN</span></code> and Track (channel) <strong>B</strong> to <code class="docutils literal notranslate"><span class="pre">PROG</span></code>.</p>
-<p>When selecting <code class="docutils literal notranslate"><span class="pre">DC</span></code> or <code class="docutils literal notranslate"><span class="pre">DCX</span></code> modes, you can customer the associated loco/cab ID.</p>
+<p>When selecting <code class="docutils literal notranslate"><span class="pre">DC</span></code> or <code class="docutils literal notranslate"><span class="pre">DCX</span></code> / <code class="docutils literal notranslate"><span class="pre">DC_INV</span></code> modes, you can customer the associated loco/cab ID.</p>
 </section>
 <section id="advanced-config">
 <h5><a class="toc-backref" href="#id48" role="doc-backlink">Advanced Config</a><a class="headerlink" href="#advanced-config" title="Link to this heading"></a></h5>
@@ -1212,7 +1222,7 @@ There are numerious phone apps that can help you determine which channels are be
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f177a977550>
+    <jinja2.runtime.BlockReference object at 0x7f4724a1f970>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

@@ -129,18 +129,21 @@ Note:  Previously referred to as 'DC-District'.
   *Parameters:* |BR|
   |_| > **trackletter:** 'A' through 'H' represent one of the outputs of the/a motor shield. |BR|
   |_| > **mode:** one of  |BR|
-  |_| |_| |_| |_| • MAIN |BR|
-  |_| |_| |_| |_| • PROG |BR|
-  |_| |_| |_| |_| • DC |BR|
-  |_| |_| |_| |_| • DCX = DC reversed polarity |BR|
-  |_| |_| |_| |_| • NONE |BR|
-  |_| > **id:** the cab ID. *Required when specifying DC or DCX*
+  |_| |_| |_| |_| • ``MAIN`` |BR|
+  |_| |_| |_| |_| • ``MAIN_INV`` |BR|
+  |_| |_| |_| |_| • ``MAIN_AUTO`` |BR|
+  |_| |_| |_| |_| • ``PROG`` |BR|
+  |_| |_| |_| |_| • ``DC`` |BR|
+  |_| |_| |_| |_| • ``DC_INV`` = DC reversed polarity |BR|
+  |_| |_| |_| |_| • ``DCX`` = DC reversed polarity (same as DC_INV) |BR|
+  |_| |_| |_| |_| • ``NONE`` |BR|
+  |_| > **id:** the cab ID. *Required when specifying DC or DC_INV / DCX*
   
   *Response:* |BR|
   |_| (for each track/channel that has changed) ``<= trackletter state cab>`` |BR|
   |_|  |BR|
   |_| > **trackletter:** A-H |BR|
-  |_| > **state:**  PROG, MAIN DC, DCX |BR|
+  |_| > **state:**  PROG, MAIN, MAIN_INV, MAIN_AUTO, DC, DC_INV / DCX, NONE |BR|
   |_| > **cab:** cab(loco) equivalent to a fake DCC Address
 
   *Notes:*
@@ -156,7 +159,7 @@ Note:  Previously referred to as 'DC-District'.
   |_| for each track/channel supported by the motor shield ``<= trackletter state cab>`` |BR|
   |_|  |BR|
   |_| > **trackletter:** A-H |BR|
-  |_| > **state:** PROG, MAIN DC, DCX |BR|
+  |_| > **state:** PROG, MAIN, MAIN_INV, MAIN_AUTO, DC, DC_INV / DCX, NONE |BR|
   |_| > **cab:** cab(loco) equivalent to a fake DCC Address
 
 <onOff [track]> - Turn power on or off to the requested TrackManager track
@@ -175,12 +178,12 @@ Note:  Previously referred to as 'DC-District'.
     |_| ``<pOnOFF [track]>`` |BR|
 
 
-Change Frequency on DC/DCX TrackManager track
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Change Frequency on DC or DC_INV/DCX TrackManager track
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |NOT-IN-PROD-VERSION|
 
-When running in DC mode certain locomotives can be unresponsive at certain DC frequencies, a situation that is not found when running in DCC mode.  When in DC or DCX mode it is now possible to set different frequencies using Functions F29, F30 & F31.
+When running in DC mode certain locomotives can be unresponsive at certain DC frequencies, a situation that is not found when running in DCC mode.  When in DC or DC_INV / DCX mode it is now possible to set different frequencies using Functions F29, F30 & F31.
 
 The settings achievable vary slightly depending upon the processor running the Command Station but broadly follow the following:
 

@@ -50,6 +50,53 @@ Valid Modes are:
 
 .. [#tm1] DC_INV / DCX is DC with an opposite polarity. Like NMRA modular layout track B which is wired left rail positive (+) and right rail negative (-)
 
+
+.. flat-table::
+  :widths: auto
+  :header-rows: 1
+  :class: command-table
+
+  * - :cspan:`1` Option
+    - _INV
+    - _AUTO
+    - Notes
+
+  * - ``MAIN``
+    - ✓
+    - ✓
+    - ✓
+    -
+
+  * - ``PROG``
+    - ✓
+    - 
+    -
+    - 
+
+  * - ``DC``
+    - ✓
+    - ✓ [#tm2]_
+    - ✓
+    - Motor drivers with brake pin only
+
+  * - ``BOOST``
+    - ✓
+    - ✓
+    - ✓
+    - ESP32 microcontrollers only
+
+  * - ``EXT``
+    - ✓
+    - 
+    - Reserved for future use
+
+  * - ``NONE``
+    - ✓
+    - 
+    - 
+
+.. [#tm2] With special alias of ``DCX`` for ``DC_INV``
+
 ----
 
 Requirements (DCC and DC)

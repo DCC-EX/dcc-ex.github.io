@@ -53,13 +53,13 @@ Also allows joining the MAIN and PROG tracks together.
 
   *Parameters:* |BR|
   |_| > **onOff:** one of |BR|
-  |_| |_| |_| |_| - 1 = on |BR|
-  |_| |_| |_| |_| - 0 = off |BR|
+  |_| |_| |_| |_| • 1 = on |BR|
+  |_| |_| |_| |_| • 0 = off |BR|
   |_| > **track:** one of |BR|
-  |_| |_| |_| |_| - blank = Both Main and Programming Tracks  |BR|
-  |_| |_| |_| |_| - MAIN = Main track  |BR|
-  |_| |_| |_| |_| - PROG = Programming Track  |BR|
-  |_| |_| |_| |_| - JOIN = Join the Main and Programming tracks temporarily |BR|
+  |_| |_| |_| |_| • blank = Both Main and Programming Tracks  |BR|
+  |_| |_| |_| |_| • MAIN = Main track  |BR|
+  |_| |_| |_| |_| • PROG = Programming Track  |BR|
+  |_| |_| |_| |_| • JOIN = Join the Main and Programming tracks temporarily |BR|
 
   *Response:* 
     |_| The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes. |BR|
@@ -129,11 +129,11 @@ Note:  Previously referred to as 'DC-District'.
   *Parameters:* |BR|
   |_| > **trackletter:** 'A' through 'H' represent one of the outputs of the/a motor shield. |BR|
   |_| > **mode:** one of  |BR|
-  |_| |_| |_| |_| - MAIN |BR|
-  |_| |_| |_| |_| - PROG |BR|
-  |_| |_| |_| |_| - DC |BR|
-  |_| |_| |_| |_| - DCX = DC reversed polarity |BR|
-  |_| |_| |_| |_| - NONE |BR|
+  |_| |_| |_| |_| • MAIN |BR|
+  |_| |_| |_| |_| • PROG |BR|
+  |_| |_| |_| |_| • DC |BR|
+  |_| |_| |_| |_| • DCX = DC reversed polarity |BR|
+  |_| |_| |_| |_| • NONE |BR|
   |_| > **id:** the cab ID. *Required when specifying DC or DCX*
   
   *Response:* |BR|
@@ -166,8 +166,8 @@ Note:  Previously referred to as 'DC-District'.
 
   *Parameters:* |BR|
   |_| > **onOff:** one of |BR|
-  |_| |_| |_| |_| - 1 = on |BR|
-  |_| |_| |_| |_| - 0 = off |BR|
+  |_| |_| |_| |_| • 1 = on |BR|
+  |_| |_| |_| |_| • 0 = off |BR|
   |_| > **track:** one of tracks A - H |BR|
 
   *Response:* 
@@ -220,8 +220,8 @@ Cab (Loco) Commands
   |_| > **cab:** DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder (this has to be already programmed in the decoder) |BR|
   |_| > **reg:** not used. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.
   |_| > **speedbyte:** Speed in DCC speedstep format . |BR|
-  |_| |_| |_| |_| - reverse - 2-127 = speed 1-126, 0 = stop  |BR|
-  |_| |_| |_| |_| - forward - 130-255 = speed 1-126,  128 = stop |BR|
+  |_| |_| |_| |_| • reverse - 2-127 = speed 1-126, 0 = stop  |BR|
+  |_| |_| |_| |_| • forward - 130-255 = speed 1-126,  128 = stop |BR|
   |_| > **FunctiMap:** individual function states represented by the bits in a byte
   
   *Notes:*
@@ -239,8 +239,8 @@ Cab (Loco) Commands
   |_| > **cab:** DCC Address of the decoder/loco |BR|
   |_| > **speed:** 0-127 |BR|
   |_| > **dir:** one of |BR|
-  |_| |_| |_| |_| - 1=forward  |BR|
-  |_| |_| |_| |_| - 0=reverse
+  |_| |_| |_| |_| • 1=forward  |BR|
+  |_| |_| |_| |_| • 0=reverse
   
   *Response:* |BR|
   |_| The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. |BR|
@@ -248,8 +248,8 @@ Cab (Loco) Commands
   |_| ``<l cab reg speedByte functMap>`` |BR|
   |_| > **cab:** DCC Address of the decoder/loco |BR|
   |_| > **speedbyte:** Speed in DCC speedstep format . |BR|
-  |_| |_| |_| |_| - reverse - 2-127 = speed 1-126, 0 = stop  |BR|
-  |_| |_| |_| |_| - forward - 130-255 = speed 1-126,  128 = stop |BR|
+  |_| |_| |_| |_| • reverse - 2-127 = speed 1-126, 0 = stop  |BR|
+  |_| |_| |_| |_| • forward - 130-255 = speed 1-126,  128 = stop |BR|
   |_| > **FunctiMap:** individual function states represented by the the bits in a byte
 
   *Version Introduced: 4.1.1* 
@@ -277,8 +277,8 @@ Cab (Loco) Commands
   |_| > **cab:** DCC Address of the decoder/loco (short (1-127) or long (128-10293)) |BR|
   |_| > **funct:** 0-68 (Support for the RCN-212 Functions)) |BR|
   |_| > **state:**  |BR|
-  |_| |_| |_| |_| - 1=on  |BR|
-  |_| |_| |_| |_| - 0=off
+  |_| |_| |_| |_| • 1=on  |BR|
+  |_| |_| |_| |_| • 0=off
   
   *Response:* |BR|
   |_| The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question.
@@ -411,8 +411,8 @@ Cab (Loco) Commands
   |_| > **cab:** DCC Address of the decoder/loco |BR|
   |_| > **speed:** 0-127 |BR|
   |_| > **dir:** one of  |BR|
-  |_| |_| |_| |_| - 1=forward  |BR|
-  |_| |_| |_| |_| - 0=reverse
+  |_| |_| |_| |_| • 1=forward  |BR|
+  |_| |_| |_| |_| • 0=reverse
 
   *Response:* |BR|
   The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. |BR|
@@ -436,8 +436,8 @@ Cab (Loco) Commands
 
   *Parameters:* |BR|
   |_| > **cab:** one of |BR|
-  |_| |_| |_| |_| - blank = all locos  |BR|
-  |_| |_| |_| |_| - No. = Cab (loco) to forget
+  |_| |_| |_| |_| • blank = all locos  |BR|
+  |_| |_| |_| |_| • No. = Cab (loco) to forget
   
   *Response:* N/A
   
@@ -459,14 +459,14 @@ Cab (Loco) Commands
 
   *Parameters:* |BR|
   |_| > **speedsteps:** |BR|
-  |_| |_| |_| |_| - SPEED28 = use 28 speed steps |BR|
-  |_| |_| |_| |_| - SPEED128 = use 128 speed steps
+  |_| |_| |_| |_| • SPEED28 = use 28 speed steps |BR|
+  |_| |_| |_| |_| • SPEED128 = use 128 speed steps
   
   *Response:* |BR|
   |_| Response sent to the |Serial Monitor| only (not wifi clients). |BR|
   |_| One of: |BR|
-  |_| |_| |_| |_| - *28 Speedsteps* |BR|
-  |_| |_| |_| |_| - *128 Speedsteps*
+  |_| |_| |_| |_| • *28 Speedsteps* |BR|
+  |_| |_| |_| |_| • *128 Speedsteps*
 
 
 ----
@@ -537,8 +537,8 @@ For details on how to configure turnouts/points see: :ref:`reference/software/co
   |_| |BR|
   |_| > **id** - The numeric ID (0-32767) of the turnout to control. |BR|
   |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - 1 = Thrown, |BR|
-  |_| |_| |_| |_| - 0 = Closed
+  |_| |_| |_| |_| • 1 = Thrown, |BR|
+  |_| |_| |_| |_| • 0 = Closed
 
 |hr-dashed|
 
@@ -548,21 +548,21 @@ For details on how to configure turnouts/points see: :ref:`reference/software/co
   *Parameters:* |BR|
   |_| > **id:** identifier of the Turnout/Point |BR|
   |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - 1 = Throw, |BR|
-  |_| |_| |_| |_| - T = Throw, |BR|
-  |_| |_| |_| |_| - 0 = Close, |BR|
-  |_| |_| |_| |_| - C = Close, |BR|
-  |_| |_| |_| |_| - X = eXamine
+  |_| |_| |_| |_| • 1 = Throw, |BR|
+  |_| |_| |_| |_| • T = Throw, |BR|
+  |_| |_| |_| |_| • 0 = Close, |BR|
+  |_| |_| |_| |_| • C = Close, |BR|
+  |_| |_| |_| |_| • X = eXamine
   
   *Response:* |BR|
   |_| ``<H id state>`` |BR|
   |_| > **id:** one of |BR|
-  |_| |_| |_| |_| - identifier of the Turnout/Point, or  |BR|
-  |_| |_| |_| |_| - X if the command fails |BR|
+  |_| |_| |_| |_| • identifier of the Turnout/Point, or  |BR|
+  |_| |_| |_| |_| • X if the command fails |BR|
   |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - 1 = Thrown, |BR|
-  |_| |_| |_| |_| - 0 = Closed |BR|
-  |_| |_| |_| |_| - blank = command failed |BR|
+  |_| |_| |_| |_| • 1 = Thrown, |BR|
+  |_| |_| |_| |_| • 0 = Closed |BR|
+  |_| |_| |_| |_| • blank = command failed |BR|
   |_|  |BR|
   |_| *Example Responses:* |BR|
   |_| Response on throw/close: |BR|
@@ -600,12 +600,12 @@ For details on how to configure turnouts/points see: :ref:`reference/software/co
   |_| ``<jT id X|state |"[desc]">`` |BR|
   |_| > **id:** unique id of the Turnout/Point  |BR|
   |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - C = Closed |BR|
-  |_| |_| |_| |_| - T = Thrown |BR|
-  |_| |_| |_| |_| - X = unknown id |BR|
+  |_| |_| |_| |_| • C = Closed |BR|
+  |_| |_| |_| |_| • T = Thrown |BR|
+  |_| |_| |_| |_| • X = unknown id |BR|
   |_| > **desc:** one of  |BR|
-  |_| |_| |_| |_| - "desc" = description of the Turnout(Point) (including surrounding quotes) |BR|
-  |_| |_| |_| |_| - blank = unknown id |BR|
+  |_| |_| |_| |_| • "desc" = description of the Turnout(Point) (including surrounding quotes) |BR|
+  |_| |_| |_| |_| • blank = unknown id |BR|
   |_|  |BR|
   |_| *Example Responses:* |BR|
   |_| Response (id is defined): ``<jT id state "[desc]">`` |BR|
@@ -675,14 +675,14 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
   *Response:* |BR|
   |_| ``<I id position moving>`` |BR|
   |_| > **id:** one of |BR|
-  |_| |_| |_| |_| - identifier of the Turntable/traverser, or  |BR|
-  |_| |_| |_| |_| - X if the command fails |BR|
+  |_| |_| |_| |_| • identifier of the Turntable/traverser, or  |BR|
+  |_| |_| |_| |_| • X if the command fails |BR|
   |_| > **position:** one of |BR|
-  |_| |_| |_| |_| - position rotating to, or |BR|
-  |_| |_| |_| |_| - blank = command failed |BR|
+  |_| |_| |_| |_| • position rotating to, or |BR|
+  |_| |_| |_| |_| • blank = command failed |BR|
   |_| > **moving:** one of |BR|
-  |_| |_| |_| |_| - 0 (no feedback can be returned from a DCC turntable), or |BR|
-  |_| |_| |_| |_| - blank = command failed |BR|
+  |_| |_| |_| |_| • 0 (no feedback can be returned from a DCC turntable), or |BR|
+  |_| |_| |_| |_| • blank = command failed |BR|
   |_|  |BR|
   |_| *Example Responses:* |BR|
   |_| Response on rotate: |BR|
@@ -705,15 +705,15 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
   *Response:* |BR|
   |_| ``<I id position moving>`` |BR|
   |_| > **id:** one of |BR|
-  |_| |_| |_| |_| - identifier of the Turntable/traverser, or  |BR|
-  |_| |_| |_| |_| - X if the command fails, or a rotation/move is in progress |BR|
+  |_| |_| |_| |_| • identifier of the Turntable/traverser, or  |BR|
+  |_| |_| |_| |_| • X if the command fails, or a rotation/move is in progress |BR|
   |_| > **position:** one of |BR|
-  |_| |_| |_| |_| - position rotating to, or |BR|
-  |_| |_| |_| |_| - blank = command failed |BR|
+  |_| |_| |_| |_| • position rotating to, or |BR|
+  |_| |_| |_| |_| • blank = command failed |BR|
   |_| > **moving:** one of |BR|
-  |_| |_| |_| |_| - 1 - turntable is moving, or |BR|
-  |_| |_| |_| |_| - 0 - turntable is not moving, or |BR|
-  |_| |_| |_| |_| - blank = command failed |BR|
+  |_| |_| |_| |_| • 1 - turntable is moving, or |BR|
+  |_| |_| |_| |_| • 0 - turntable is not moving, or |BR|
+  |_| |_| |_| |_| • blank = command failed |BR|
   |_|  |BR|
   |_| *Example Responses:* |BR|
   |_| Response on rotate: |BR|
@@ -748,18 +748,18 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
   |_| ``<jO id type position position_count "[desc]">`` |BR|
   |_| > **id:** unique id of the turntable/traverser  |BR|
   |_| > **type:** one of |BR|
-  |_| |_| |_| |_| - 0 = DCC |BR|
-  |_| |_| |_| |_| - 1 = EX-Turntable |BR|
-  |_| |_| |_| |_| - X = unknown id or hidden |BR|
+  |_| |_| |_| |_| • 0 = DCC |BR|
+  |_| |_| |_| |_| • 1 = EX-Turntable |BR|
+  |_| |_| |_| |_| • X = unknown id or hidden |BR|
   |_| > **position:** one of |BR|
-  |_| |_| |_| |_| - index of the current position (0 - 48) |BR|
-  |_| |_| |_| |_| - blank = unknown or hidden id |BR|
+  |_| |_| |_| |_| • index of the current position (0 - 48) |BR|
+  |_| |_| |_| |_| • blank = unknown or hidden id |BR|
   |_| > **position_count:** one of |BR|
-  |_| |_| |_| |_| - 0 = number of defined positions, including home (0) |BR|
-  |_| |_| |_| |_| - blank = unknown or hidden id |BR|
+  |_| |_| |_| |_| • 0 = number of defined positions, including home (0) |BR|
+  |_| |_| |_| |_| • blank = unknown or hidden id |BR|
   |_| > **desc:** one of  |BR|
-  |_| |_| |_| |_| - "desc" = description of the turntable or traverser (including surrounding quotes) |BR|
-  |_| |_| |_| |_| - blank = unknown or hidden id |BR|
+  |_| |_| |_| |_| • "desc" = description of the turntable or traverser (including surrounding quotes) |BR|
+  |_| |_| |_| |_| • blank = unknown or hidden id |BR|
   |_|  |BR|
   |_| *Example Responses:* |BR|
   |_| Response (id is defined): ``<jO id type position position_count "[desc]">`` |BR|
@@ -780,14 +780,14 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
   |_| ``<jP id index angle "[desc]">`` |BR|
   |_| > **id:** unique id of the turntable/traverser  |BR|
   |_| > **index:** one of |BR|
-  |_| |_| |_| |_| - the position index (0 - 48) |BR|
-  |_| |_| |_| |_| - X = unknown or hidden id |BR|
+  |_| |_| |_| |_| • the position index (0 - 48) |BR|
+  |_| |_| |_| |_| • X = unknown or hidden id |BR|
   |_| > **angle:** one of |BR|
-  |_| |_| |_| |_| - the angle from home for the position (0 - 3600 to allow for partial angles) |BR|
-  |_| |_| |_| |_| - blank = unknown or hidden id |BR|
+  |_| |_| |_| |_| • the angle from home for the position (0 - 3600 to allow for partial angles) |BR|
+  |_| |_| |_| |_| • blank = unknown or hidden id |BR|
   |_| > **desc:** one of  |BR|
-  |_| |_| |_| |_| - "desc" = description of the position (including surrounding quotes) |BR|
-  |_| |_| |_| |_| - blank = unknown or hidden id |BR|
+  |_| |_| |_| |_| • "desc" = description of the position (including surrounding quotes) |BR|
+  |_| |_| |_| |_| • blank = unknown or hidden id |BR|
   |_|  |BR|
   |_| *Example Responses:* |BR|
   |_| Response (id is defined): ``<jO id index angle "[desc]">`` |BR|
@@ -833,8 +833,8 @@ Also see the `EXRAIL` section below for activating routes.
   |_| ``<jA id X|type |"desc">`` |BR|
   |_| > **id:** identifier of the Route/Automation |BR|
   |_| > **type:** one of |BR|
-  |_| |_| |_| |_| - 'R'= Route  |BR|
-  |_| |_| |_| |_| - 'A'=Automation |BR|
+  |_| |_| |_| |_| • 'R'= Route  |BR|
+  |_| |_| |_| |_| • 'A'=Automation |BR|
   |_| > **"desc":** Textual description of the route/automation always surrounded in quotes (") |BR|
   |_|  |BR|
   |_| *Example Responses:* |BR|
@@ -882,8 +882,8 @@ System Information
   |_| > **buildNumber:**  Command Station build number |BR|
   |_| > **id:** unique identifier for the Turnout/Point |BR|
   |_| > **state:** one of  |BR|
-  |_| |_| |_| |_| - 1=thrown  |BR|
-  |_| |_| |_| |_| - 0=Closed
+  |_| |_| |_| |_| • 1=thrown  |BR|
+  |_| |_| |_| |_| • 0=Closed
 
 |hr-dashed|
 
@@ -935,8 +935,8 @@ NOTE: Both the following commands do the same thing. Pick the one that works for
   |_| > **addr:** the primary address of the decoder controlling the turnout (0-511) |BR|
   |_| > **subaddr:** the subaddress of the decoder controlling this turnout (0-3) |BR|
   |_| > **activate:** one of  |BR|
-  |_| |_| |_| |_| - 0=off, deactivate, straight or Closed  |BR|
-  |_| |_| |_| |_| - 1=on, activate, turn or thrown
+  |_| |_| |_| |_| • 0=off, deactivate, straight or Closed  |BR|
+  |_| |_| |_| |_| • 1=on, activate, turn or thrown
   
   *Response:* ???
 
@@ -948,8 +948,8 @@ NOTE: Both the following commands do the same thing. Pick the one that works for
   *Parameters:* |BR|
   |_| > **linear_addr:** linear address of the decoder controlling this turnout (1-2044) |BR|
   |_| > **activate:** one of  |BR|
-  |_| |_| |_| |_| - 0=off, deactivate, straight or Closed  |BR|
-  |_| |_| |_| |_| - 1=on, activate, turn or thrown
+  |_| |_| |_| |_| • 0=off, deactivate, straight or Closed  |BR|
+  |_| |_| |_| |_| • 1=on, activate, turn or thrown
 
   *Response:* ???
 
@@ -1000,8 +1000,8 @@ Sensors
   |_| > **id:** identifier of the Sensor. (0-32767) |BR|
   |_| > **vpin:** pin number of the input to be controlled by the sensor object |BR|
   |_| > **pullup:** one of |BR|
-  |_| |_| |_| |_| - 1=Use pull-up resistor ACTIVE=LOW  |BR|
-  |_| |_| |_| |_| - 0=don't use pull-up resistor ACTIVE=HIGH |BR|
+  |_| |_| |_| |_| • 1=Use pull-up resistor ACTIVE=LOW  |BR|
+  |_| |_| |_| |_| • 0=don't use pull-up resistor ACTIVE=HIGH |BR|
   |_|  |BR|
   |_| e.g. |BR|
   |_| Response (successful) Repeated for each defined sensor: ``<Q id vpin pullup>`` |BR|
@@ -1192,8 +1192,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
   |_| ``<r cv value>`` |BR|
   |_| > **cv:** The number of the Configuration Variable memory location in the decoder to write to (1-1024) |BR|
   |_| > **value:** one of |BR|
-  |_| |_| |_| |_| - value of the CV |BR|
-  |_| |_| |_| |_| - -1: if the write failed
+  |_| |_| |_| |_| • value of the CV |BR|
+  |_| |_| |_| |_| • -1: if the write failed
 
   *Example:* ``<r 3450>`` shows that Loco with ID **3450** is on the programming track.
 
@@ -1205,8 +1205,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
   *Response:* |BR|
   |_| ``<r -cab>`` |BR|
   |_| > **cab:** |BR|
-  |_| |_| |_| |_| - DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder |BR|
-  |_| |_| |_| |_| - -1 = failed read |BR|
+  |_| |_| |_| |_| • DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder |BR|
+  |_| |_| |_| |_| • -1 = failed read |BR|
   |_|  |BR|
   |_| *Example Responses:* |BR|
   |_| Response (successful): **<r cab>** |BR|
@@ -1227,8 +1227,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
   |_| > **cv:** CV number |BR|
   |_| > **bit:** bit to verify in the CV |BR|
   |_| > **onOff:** one of |BR|
-  |_| |_| |_| |_| - 1=on  |BR|
-  |_| |_| |_| |_| - 0=off
+  |_| |_| |_| |_| • 1=on  |BR|
+  |_| |_| |_| |_| • 0=off
  
   *Response:* |BR|
   |_| Response (successful): **0 | 1** |BR|
@@ -1252,8 +1252,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
   |_| ``<v cv value>`` |BR|
   |_| > **cv:** CV number |BR|
   |_| > **value:** one of |BR|
-  |_| |_| |_| |_| - actual value of the CV |BR|
-  |_| |_| |_| |_| - -1: if the write failed
+  |_| |_| |_| |_| • actual value of the CV |BR|
+  |_| |_| |_| |_| • -1: if the write failed
 
   *Notes:*
 
@@ -1268,8 +1268,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
   |_| > **cv:** CV number |BR|
   |_| > **bit:** bit to change in the CV |BR|
   |_| > **onOff:** one of  |BR|
-  |_| |_| |_| |_| - 1=on  |BR|
-  |_| |_| |_| |_| - 0=off
+  |_| |_| |_| |_| • 1=on  |BR|
+  |_| |_| |_| |_| • 0=off
   
   *Response:* ???
 
@@ -1286,8 +1286,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
   |_| ``<w cv value>`` |BR|
   |_| > **cv:** CV number |BR|
   |_| > **value:** one of |BR|
-  |_| |_| |_| |_| - value CV was changed to |BR|
-  |_| |_| |_| |_| - -1: if the write failed
+  |_| |_| |_| |_| • value CV was changed to |BR|
+  |_| |_| |_| |_| • -1: if the write failed
 
 |hr-dashed|
 
@@ -1300,8 +1300,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
   *Response:* |BR|
   |_| ``<w address>`` |BR|
   |_| > **address:** one of |BR|
-  |_| |_| |_| |_| - DCC Address of the decoder/loco |BR|
-  |_| |_| |_| |_| - -1 = failed read |BR|
+  |_| |_| |_| |_| • DCC Address of the decoder/loco |BR|
+  |_| |_| |_| |_| • -1 = failed read |BR|
   |_|  |BR|
   |_| Response (successful): **<w cab>** |BR|
   |_| Response (fail): **<w -1>**
@@ -1610,11 +1610,11 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
   |_| > **thrownPos:** the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490 |BR|
   |_| > **closedPos:** the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490 |BR|
   |_| > **profile:** one of |BR|
-  |_| |_| |_| |_| - 0=Instant,  |BR|
-  |_| |_| |_| |_| - 1=Fast (0.5 sec),  |BR|
-  |_| |_| |_| |_| - 2=Medium (1 sec),  |BR|
-  |_| |_| |_| |_| - 3=Slow (2 sec) and  |BR|
-  |_| |_| |_| |_| - 4=Bounce (subject to revision)
+  |_| |_| |_| |_| • 0=Instant,  |BR|
+  |_| |_| |_| |_| • 1=Fast (0.5 sec),  |BR|
+  |_| |_| |_| |_| • 2=Medium (1 sec),  |BR|
+  |_| |_| |_| |_| • 3=Slow (2 sec) and  |BR|
+  |_| |_| |_| |_| • 4=Bounce (subject to revision)
   
   *Response:* |BR|
   |_| Successful: ``<O>`` |BR|
@@ -1652,11 +1652,11 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
   |_| > **vpin:** vpin to which the servo is attached |BR|
   |_| > **value:**  position to mve the servo to |BR|
   |_| > **profile:**  one of |BR|
-  |_| |_| |_| |_| - 0 = instant |BR|
-  |_| |_| |_| |_| - 1 = fast |BR|
-  |_| |_| |_| |_| - 2 = medium |BR|
-  |_| |_| |_| |_| - 3 = slow |BR|
-  |_| |_| |_| |_| - 4 = bounce
+  |_| |_| |_| |_| • 0 = instant |BR|
+  |_| |_| |_| |_| • 1 = fast |BR|
+  |_| |_| |_| |_| • 2 = medium |BR|
+  |_| |_| |_| |_| • 3 = slow |BR|
+  |_| |_| |_| |_| • 4 = bounce
   
   *Response:* N/A
 
@@ -1824,8 +1824,8 @@ To monitor one or more Arduino pins for sensor triggers, first define/edit/delet
   |_| > **id:** identifier of the Sensor (0-32767) (You pick the ID & they are shared between Turnouts, Sensors and Outputs) |BR|
   |_| > **vpin:** vpin of the input to be controlled by the sensor object For Arduino input pins, this is the same as the digital pin number. For servo inputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.|BR|
   |_| > **pullup:** one of  |BR|
-  |_| |_| |_| |_| - 1=Use pull-up resistor ACTIVE=LOW  |BR|
-  |_| |_| |_| |_| - 0=don't use pull-up resistor ACTIVE=HIGH
+  |_| |_| |_| |_| • 1=Use pull-up resistor ACTIVE=LOW  |BR|
+  |_| |_| |_| |_| • 0=don't use pull-up resistor ACTIVE=HIGH
   
   *Response:* |BR|
   |_| Successful: **<O>** |BR|
@@ -1920,14 +1920,14 @@ To have |EX-CS| utilise one or more Arduino pins as custom outputs, first define
   |_| > **iflag:** see below |BR|
   |_|  |BR|
   |_| iflag, bit 0: |BR|
-  |_| |_| |_| |_| - 0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW) |BR|
-  |_| |_| |_| |_| - 1 = inverted operation (ACTIVE=LOW / INACTIVE=HIGH) |BR|
+  |_| |_| |_| |_| • 0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW) |BR|
+  |_| |_| |_| |_| • 1 = inverted operation (ACTIVE=LOW / INACTIVE=HIGH) |BR|
   |_| iflag, bit 1: |BR|
-  |_| |_| |_| |_| - 0 = state of pin restored on power-up to either ACTIVE or INACTIVE depending on state before power-down. |BR|
-  |_| |_| |_| |_| - 1 = state of pin set on power-up, or when first created, to either ACTIVE of INACTIVE depending on IFLAG, bit 2 |BR|
+  |_| |_| |_| |_| • 0 = state of pin restored on power-up to either ACTIVE or INACTIVE depending on state before power-down. |BR|
+  |_| |_| |_| |_| • 1 = state of pin set on power-up, or when first created, to either ACTIVE of INACTIVE depending on IFLAG, bit 2 |BR|
   |_| iflag, bit 2:  |BR|
-  |_| |_| |_| |_| - 0 = state of pin set to INACTIVE upon power-up or when first created |BR|
-  |_| |_| |_| |_| - 1 = state of pin set to ACTIVE upon power-up or when first created
+  |_| |_| |_| |_| • 0 = state of pin set to INACTIVE upon power-up or when first created |BR|
+  |_| |_| |_| |_| • 1 = state of pin set to ACTIVE upon power-up or when first created
 
   *Response:* |BR|
   |_| Successful: ``<O>``  |BR|
@@ -1968,8 +1968,8 @@ To have |EX-CS| utilise one or more Arduino pins as custom outputs, first define
   *Parameters:* |BR|
   |_| > **id:** identifier of the output |BR|
   |_| > **state:** one of  |BR|
-  |_| |_| |_| |_| - 0= INACTIVE  |BR|
-  |_| |_| |_| |_| - 1= INACTIVE
+  |_| |_| |_| |_| • 0= INACTIVE  |BR|
+  |_| |_| |_| |_| • 1= INACTIVE
 
   *Response:* |BR|
   |_| Successful: ``<Y id state>`` |BR|
@@ -2036,8 +2036,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
   *Parameters:* |BR|
   |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - ON |BR|
-  |_| |_| |_| |_| - OFF
+  |_| |_| |_| |_| • ON |BR|
+  |_| |_| |_| |_| • OFF
 
   *Response:* |BR|
   |_| "Ack diag on" or "Ack diag off" |BR|
@@ -2054,8 +2054,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
   *Parameters:* |BR|
   |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - ON |BR|
-  |_| |_| |_| |_| - OFF
+  |_| |_| |_| |_| • ON |BR|
+  |_| |_| |_| |_| • OFF
   
   *Response:* N/A
 
@@ -2070,8 +2070,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
   *Parameters:* |BR|
   |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - ON |BR|
-  |_| |_| |_| |_| - OFF
+  |_| |_| |_| |_| • ON |BR|
+  |_| |_| |_| |_| • OFF
 
   *Response:* N/A 
   
@@ -2086,8 +2086,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
   *Parameters:* |BR|
   |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - ON |BR|
-  |_| |_| |_| |_| - OFF
+  |_| |_| |_| |_| • ON |BR|
+  |_| |_| |_| |_| • OFF
 
   *Response:* N/A
 
@@ -2098,8 +2098,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
   *Parameters:* |BR|
   |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - ON |BR|
-  |_| |_| |_| |_| - OFF
+  |_| |_| |_| |_| • ON |BR|
+  |_| |_| |_| |_| • OFF
 
   *Response:* N/A
   
@@ -2114,8 +2114,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
   *Parameters:* |BR|
   |_| > **state:** one of |BR|
-  |_| |_| |_| |_| - ON |BR|
-  |_| |_| |_| |_| - OFF
+  |_| |_| |_| |_| • ON |BR|
+  |_| |_| |_| |_| • OFF
 
   *Response:* N/A
 

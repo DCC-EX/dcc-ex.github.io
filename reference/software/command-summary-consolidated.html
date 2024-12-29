@@ -719,7 +719,7 @@
 <h4><a class="toc-backref" href="#id57" role="doc-backlink">&lt;onOff [track]&gt; - Turn power on or off to the MAIN and PROG tracks</a><a class="headerlink" href="#onoff-track-turn-power-on-or-off-to-the-main-and-prog-tracks" title="Link to this heading"></a></h4>
 <p>Also allows joining the MAIN and PROG tracks together.</p>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>onOff:</strong> one of <br />    - 1 = on <br />    - 0 = off <br /> &gt; <strong>track:</strong> one of <br />    - blank = Both Main and Programming Tracks  <br />    - MAIN = Main track  <br />    - PROG = Programming Track  <br />    - JOIN = Join the Main and Programming tracks temporarily <br /></p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>onOff:</strong> one of <br />    • 1 = on <br />    • 0 = off <br /> &gt; <strong>track:</strong> one of <br />    • blank = Both Main and Programming Tracks  <br />    • MAIN = Main track  <br />    • PROG = Programming Track  <br />    • JOIN = Join the Main and Programming tracks temporarily <br /></p>
 <dl class="simple">
 <dt><em>Response:</em></dt><dd><p> The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes. <br /> <code class="docutils literal notranslate"><span class="pre">&lt;pOnOFF</span> <span class="pre">[track]&gt;</span></code> <br /></p>
 </dd>
@@ -777,7 +777,7 @@
 <section id="trackletter-mode-cab-configure-track-manager">
 <h4><a class="toc-backref" href="#id61" role="doc-backlink">&lt;= trackletter mode [cab]&gt; - Configure Track Manager</a><a class="headerlink" href="#trackletter-mode-cab-configure-track-manager" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>trackletter:</strong> ‘A’ through ‘H’ represent one of the outputs of the/a motor shield. <br /> &gt; <strong>mode:</strong> one of  <br />    - MAIN <br />    - PROG <br />    - DC <br />    - DCX = DC reversed polarity <br />    - NONE <br /> &gt; <strong>id:</strong> the cab ID. <em>Required when specifying DC or DCX</em></p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>trackletter:</strong> ‘A’ through ‘H’ represent one of the outputs of the/a motor shield. <br /> &gt; <strong>mode:</strong> one of  <br />    • MAIN <br />    • PROG <br />    • DC <br />    • DCX = DC reversed polarity <br />    • NONE <br /> &gt; <strong>id:</strong> the cab ID. <em>Required when specifying DC or DCX</em></p>
 <p><em>Response:</em> <br /> (for each track/channel that has changed) <code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">trackletter</span> <span class="pre">state</span> <span class="pre">cab&gt;</span></code> <br /> <br /> &gt; <strong>trackletter:</strong> A-H <br /> &gt; <strong>state:</strong>  PROG, MAIN DC, DCX <br /> &gt; <strong>cab:</strong> cab(loco) equivalent to a fake DCC Address</p>
 <p><em>Notes:</em></p>
 <blockquote>
@@ -796,7 +796,7 @@
 <h4><a class="toc-backref" href="#id63" role="doc-backlink">&lt;onOff [track]&gt; - Turn power on or off to the requested TrackManager track</a><a class="headerlink" href="#onoff-track-turn-power-on-or-off-to-the-requested-trackmanager-track" title="Link to this heading"></a></h4>
 <p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>onOff:</strong> one of <br />    - 1 = on <br />    - 0 = off <br /> &gt; <strong>track:</strong> one of tracks A - H <br /></p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>onOff:</strong> one of <br />    • 1 = on <br />    • 0 = off <br /> &gt; <strong>track:</strong> one of tracks A - H <br /></p>
 <dl class="simple">
 <dt><em>Response:</em></dt><dd><p> The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes. <br /> <code class="docutils literal notranslate"><span class="pre">&lt;pOnOFF</span> <span class="pre">[track]&gt;</span></code> <br /></p>
 </dd>
@@ -835,7 +835,7 @@
 <h4><a class="toc-backref" href="#id65" role="doc-backlink">&lt;t cab&gt; - Request a deliberate update on the cab (loco) speed/functions</a><a class="headerlink" href="#t-cab-request-a-deliberate-update-on-the-cab-loco-speed-functions" title="Link to this heading"></a></h4>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco</p>
-<p><em>Response:</em> <br /> The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder (this has to be already programmed in the decoder) <br /> &gt; <strong>reg:</strong> not used. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit. &gt; <strong>speedbyte:</strong> Speed in DCC speedstep format . <br />    - reverse - 2-127 = speed 1-126, 0 = stop  <br />    - forward - 130-255 = speed 1-126,  128 = stop <br /> &gt; <strong>FunctiMap:</strong> individual function states represented by the bits in a byte</p>
+<p><em>Response:</em> <br /> The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder (this has to be already programmed in the decoder) <br /> &gt; <strong>reg:</strong> not used. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit. &gt; <strong>speedbyte:</strong> Speed in DCC speedstep format . <br />    • reverse - 2-127 = speed 1-126, 0 = stop  <br />    • forward - 130-255 = speed 1-126,  128 = stop <br /> &gt; <strong>FunctiMap:</strong> individual function states represented by the bits in a byte</p>
 <p><em>Notes:</em></p>
 <blockquote>
 <div><p>The <em>speedbyte</em> value is different to the <em>speed</em> sent, as it is an encoded (1,7 bits)  byte. <br />
@@ -847,8 +847,8 @@ This starts a reminder process for any external updates to the cab’s (loco’s
 <section id="t-cab-speed-dir-set-cab-loco-speed">
 <h4><a class="toc-backref" href="#id66" role="doc-backlink">&lt;t cab speed dir&gt; - Set Cab (Loco) Speed</a><a class="headerlink" href="#t-cab-speed-dir-set-cab-loco-speed" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>speed:</strong> 0-127 <br /> &gt; <strong>dir:</strong> one of <br />    - 1=forward  <br />    - 0=reverse</p>
-<p><em>Response:</em> <br /> The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>speedbyte:</strong> Speed in DCC speedstep format . <br />    - reverse - 2-127 = speed 1-126, 0 = stop  <br />    - forward - 130-255 = speed 1-126,  128 = stop <br /> &gt; <strong>FunctiMap:</strong> individual function states represented by the the bits in a byte</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>speed:</strong> 0-127 <br /> &gt; <strong>dir:</strong> one of <br />    • 1=forward  <br />    • 0=reverse</p>
+<p><em>Response:</em> <br /> The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>speedbyte:</strong> Speed in DCC speedstep format . <br />    • reverse - 2-127 = speed 1-126, 0 = stop  <br />    • forward - 130-255 = speed 1-126,  128 = stop <br /> &gt; <strong>FunctiMap:</strong> individual function states represented by the the bits in a byte</p>
 <p><em>Version Introduced: 4.1.1</em></p>
 <p><em>Notes:</em></p>
 <blockquote>
@@ -868,7 +868,7 @@ This starts a reminder process for any external updates to the cab’s (loco’s
 <section id="f-cab-funct-state-turn-loco-decoder-functions-on-or-off">
 <h4><a class="toc-backref" href="#id68" role="doc-backlink">&lt;F cab funct state&gt; - Turn loco decoder functions ON or OFF</a><a class="headerlink" href="#f-cab-funct-state-turn-loco-decoder-functions-on-or-off" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco (short (1-127) or long (128-10293)) <br /> &gt; <strong>funct:</strong> 0-68 (Support for the RCN-212 Functions)) <br /> &gt; <strong>state:</strong>  <br />    - 1=on  <br />    - 0=off</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco (short (1-127) or long (128-10293)) <br /> &gt; <strong>funct:</strong> 0-68 (Support for the RCN-212 Functions)) <br /> &gt; <strong>state:</strong>  <br />    • 1=on  <br />    • 0=off</p>
 <p><em>Response:</em> <br /> The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br /> refer to the &lt;t &gt; command above for details</p>
 <p><em>Notes:</em></p>
 <blockquote>
@@ -985,7 +985,7 @@ Add 8 for F12 ON
 <section id="t-reg-cab-speed-dir-set-cab-loco-speed-legacy-command-deprecated">
 <h4><a class="toc-backref" href="#id70" role="doc-backlink">&lt;t reg cab speed dir&gt; - Set Cab (Loco) Speed - Legacy command <span style="font-weight: bold; font-style: italic; color:red">Deprecated</span></a><a class="headerlink" href="#t-reg-cab-speed-dir-set-cab-loco-speed-legacy-command-deprecated" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>reg:</strong> not used <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>speed:</strong> 0-127 <br /> &gt; <strong>dir:</strong> one of  <br />    - 1=forward  <br />    - 0=reverse</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>reg:</strong> not used <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>speed:</strong> 0-127 <br /> &gt; <strong>dir:</strong> one of  <br />    • 1=forward  <br />    • 0=reverse</p>
 <p><em>Response:</em> <br />
 The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br /> refer to the &lt;t &gt; command above for details <br />
 Legacy response: <span style="font-weight: bold; font-style: italic; color:red">Deprecated</span> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;T</span> <span class="pre">reg</span> <span class="pre">speed</span> <span class="pre">dir&gt;</span></code> - do not rely on this response</p>
@@ -1001,7 +1001,7 @@ This starts a reminder process for any external updates to the cab’s (loco’s
 <section id="cab-remove-one-or-all-locos-from-reminders">
 <h4><a class="toc-backref" href="#id71" role="doc-backlink">&lt;- [cab]&gt; - Remove one or all locos from reminders</a><a class="headerlink" href="#cab-remove-one-or-all-locos-from-reminders" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>cab:</strong> one of <br />    - blank = all locos  <br />    - No. = Cab (loco) to forget</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>cab:</strong> one of <br />    • blank = all locos  <br />    • No. = Cab (loco) to forget</p>
 <p><em>Response:</em> N/A</p>
 <p><em>Notes:</em></p>
 <blockquote>
@@ -1019,8 +1019,8 @@ This starts a reminder process for any external updates to the cab’s (loco’s
 <section id="d-speedsteps-switch-between-28-and-128-speed-steps">
 <h4><a class="toc-backref" href="#id72" role="doc-backlink">&lt;D speedsteps&gt; - Switch between 28 and 128 speed steps</a><a class="headerlink" href="#d-speedsteps-switch-between-28-and-128-speed-steps" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>speedsteps:</strong> <br />    - SPEED28 = use 28 speed steps <br />    - SPEED128 = use 128 speed steps</p>
-<p><em>Response:</em> <br /> Response sent to the <a class="reference internal" href="../tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a> only (not wifi clients). <br /> One of: <br />    - <em>28 Speedsteps</em> <br />    - <em>128 Speedsteps</em></p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>speedsteps:</strong> <br />    • SPEED28 = use 28 speed steps <br />    • SPEED128 = use 128 speed steps</p>
+<p><em>Response:</em> <br /> Response sent to the <a class="reference internal" href="../tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a> only (not wifi clients). <br /> One of: <br />    • <em>28 Speedsteps</em> <br />    • <em>128 Speedsteps</em></p>
 </div></blockquote>
 </section>
 </section>
@@ -1070,15 +1070,15 @@ This starts a reminder process for any external updates to the cab’s (loco’s
 <section id="t-request-a-list-all-defined-turnouts-points">
 <h4><a class="toc-backref" href="#id75" role="doc-backlink">&lt;T&gt; - Request a list all defined turnouts/Points</a><a class="headerlink" href="#t-request-a-list-all-defined-turnouts-points" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Response:</em> <br /> Repeated for each defined Turnout/Point <br />  Response: <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">state&gt;</span></code> <br /> Response (fail): N/A <br /> Response (no defined turnouts/points): <code class="docutils literal notranslate"><span class="pre">X</span></code> <br /> <br /> &gt; <strong>id</strong> - The numeric ID (0-32767) of the turnout to control. <br /> &gt; <strong>state:</strong> one of <br />    - 1 = Thrown, <br />    - 0 = Closed</p>
+<div><p><em>Response:</em> <br /> Repeated for each defined Turnout/Point <br />  Response: <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">state&gt;</span></code> <br /> Response (fail): N/A <br /> Response (no defined turnouts/points): <code class="docutils literal notranslate"><span class="pre">X</span></code> <br /> <br /> &gt; <strong>id</strong> - The numeric ID (0-32767) of the turnout to control. <br /> &gt; <strong>state:</strong> one of <br />    • 1 = Thrown, <br />    • 0 = Closed</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="t-id-state-throw-or-close-a-defined-turnout-point">
 <h4><a class="toc-backref" href="#id76" role="doc-backlink">&lt;T id state&gt; - Throw or Close a defined turnout/point</a><a class="headerlink" href="#t-id-state-throw-or-close-a-defined-turnout-point" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> identifier of the Turnout/Point <br /> &gt; <strong>state:</strong> one of <br />    - 1 = Throw, <br />    - T = Throw, <br />    - 0 = Close, <br />    - C = Close, <br />    - X = eXamine</p>
-<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">state&gt;</span></code> <br /> &gt; <strong>id:</strong> one of <br />    - identifier of the Turnout/Point, or  <br />    - X if the command fails <br /> &gt; <strong>state:</strong> one of <br />    - 1 = Thrown, <br />    - 0 = Closed <br />    - blank = command failed <br /> <br /> <em>Example Responses:</em> <br /> Response on throw/close: <br />   Response (successful): <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">state&gt;</span></code> <br />   Response (fail): <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> <br /> Response on eXamine: <br />   Response (DCC Accessories): <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">address</span> <span class="pre">subaddress</span> <span class="pre">state&gt;</span></code> <br />   Response (Servos): <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">thrown_position</span> <span class="pre">closed_position</span> <span class="pre">profile</span> <span class="pre">state&gt;</span></code> <br />   Response (VPIN): <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">VPIN</span> <span class="pre">vpin</span> <span class="pre">state&gt;</span></code> <br />   Response (LCN): <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">LCN</span> <span class="pre">state&gt;</span></code> <br />   Response (fail/no such turnout): <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code></p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> identifier of the Turnout/Point <br /> &gt; <strong>state:</strong> one of <br />    • 1 = Throw, <br />    • T = Throw, <br />    • 0 = Close, <br />    • C = Close, <br />    • X = eXamine</p>
+<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">state&gt;</span></code> <br /> &gt; <strong>id:</strong> one of <br />    • identifier of the Turnout/Point, or  <br />    • X if the command fails <br /> &gt; <strong>state:</strong> one of <br />    • 1 = Thrown, <br />    • 0 = Closed <br />    • blank = command failed <br /> <br /> <em>Example Responses:</em> <br /> Response on throw/close: <br />   Response (successful): <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">state&gt;</span></code> <br />   Response (fail): <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> <br /> Response on eXamine: <br />   Response (DCC Accessories): <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">DCC</span> <span class="pre">address</span> <span class="pre">subaddress</span> <span class="pre">state&gt;</span></code> <br />   Response (Servos): <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">SERVO</span> <span class="pre">vpin</span> <span class="pre">thrown_position</span> <span class="pre">closed_position</span> <span class="pre">profile</span> <span class="pre">state&gt;</span></code> <br />   Response (VPIN): <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">VPIN</span> <span class="pre">vpin</span> <span class="pre">state&gt;</span></code> <br />   Response (LCN): <code class="docutils literal notranslate"><span class="pre">&lt;H</span> <span class="pre">id</span> <span class="pre">LCN</span> <span class="pre">state&gt;</span></code> <br />   Response (fail/no such turnout): <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code></p>
 <details class="summary-response-additional-details-click-to-show">
 <summary>Response - Additional Details: (click to show)</summary><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> : The numeric ID (0-32767) of the turnout to control.  <br /> (NOTE: IDs are shared between Turnouts/Points, Sensors and Outputs)</p></li>
@@ -1099,7 +1099,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <h4><a class="toc-backref" href="#id77" role="doc-backlink">&lt;J T id&gt; &lt;JT id&gt; - Request details of a specific Turnout/Point</a><a class="headerlink" href="#j-t-id-jt-id-request-details-of-a-specific-turnout-point" title="Link to this heading"></a></h4>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong>  unique id of the Turnout/Point</p>
-<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;jT</span> <span class="pre">id</span> <span class="pre">X|state</span> <span class="pre">|&quot;[desc]&quot;&gt;</span></code> <br /> &gt; <strong>id:</strong> unique id of the Turnout/Point  <br /> &gt; <strong>state:</strong> one of <br />    - C = Closed <br />    - T = Thrown <br />    - X = unknown id <br /> &gt; <strong>desc:</strong> one of  <br />    - “desc” = description of the Turnout(Point) (including surrounding quotes) <br />    - blank = unknown id <br /> <br /> <em>Example Responses:</em> <br /> Response (id is defined): <code class="docutils literal notranslate"><span class="pre">&lt;jT</span> <span class="pre">id</span> <span class="pre">state</span> <span class="pre">&quot;[desc]&quot;&gt;</span></code> <br /> Response (id not defined): <code class="docutils literal notranslate"><span class="pre">&lt;jT</span> <span class="pre">id</span> <span class="pre">X&gt;</span></code></p>
+<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;jT</span> <span class="pre">id</span> <span class="pre">X|state</span> <span class="pre">|&quot;[desc]&quot;&gt;</span></code> <br /> &gt; <strong>id:</strong> unique id of the Turnout/Point  <br /> &gt; <strong>state:</strong> one of <br />    • C = Closed <br />    • T = Thrown <br />    • X = unknown id <br /> &gt; <strong>desc:</strong> one of  <br />    • “desc” = description of the Turnout(Point) (including surrounding quotes) <br />    • blank = unknown id <br /> <br /> <em>Example Responses:</em> <br /> Response (id is defined): <code class="docutils literal notranslate"><span class="pre">&lt;jT</span> <span class="pre">id</span> <span class="pre">state</span> <span class="pre">&quot;[desc]&quot;&gt;</span></code> <br /> Response (id not defined): <code class="docutils literal notranslate"><span class="pre">&lt;jT</span> <span class="pre">id</span> <span class="pre">X&gt;</span></code></p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
@@ -1145,7 +1145,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <h4><a class="toc-backref" href="#id81" role="doc-backlink">&lt;I id position&gt; - Rotate a DCC turntable</a><a class="headerlink" href="#i-id-position-rotate-a-dcc-turntable" title="Link to this heading"></a></h4>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> - Identifier of the Turntable/traverser <br /> &gt; <strong>position:</strong> - Position to rotate to <br /></p>
-<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;I</span> <span class="pre">id</span> <span class="pre">position</span> <span class="pre">moving&gt;</span></code> <br /> &gt; <strong>id:</strong> one of <br />    - identifier of the Turntable/traverser, or  <br />    - X if the command fails <br /> &gt; <strong>position:</strong> one of <br />    - position rotating to, or <br />    - blank = command failed <br /> &gt; <strong>moving:</strong> one of <br />    - 0 (no feedback can be returned from a DCC turntable), or <br />    - blank = command failed <br /> <br /> <em>Example Responses:</em> <br /> Response on rotate: <br />   Response (successful): <code class="docutils literal notranslate"><span class="pre">&lt;I</span> <span class="pre">id</span> <span class="pre">position</span> <span class="pre">moving&gt;</span></code> <br />   Response (fail): <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> <br /></p>
+<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;I</span> <span class="pre">id</span> <span class="pre">position</span> <span class="pre">moving&gt;</span></code> <br /> &gt; <strong>id:</strong> one of <br />    • identifier of the Turntable/traverser, or  <br />    • X if the command fails <br /> &gt; <strong>position:</strong> one of <br />    • position rotating to, or <br />    • blank = command failed <br /> &gt; <strong>moving:</strong> one of <br />    • 0 (no feedback can be returned from a DCC turntable), or <br />    • blank = command failed <br /> <br /> <em>Example Responses:</em> <br /> Response on rotate: <br />   Response (successful): <code class="docutils literal notranslate"><span class="pre">&lt;I</span> <span class="pre">id</span> <span class="pre">position</span> <span class="pre">moving&gt;</span></code> <br />   Response (fail): <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> <br /></p>
 <p><em>Further information:</em> <br /> When a DCC accessory turntable is rotated or moved, no feedback is sent to <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>, and therefore the <strong>moving</strong> variable will always be ‘0’, and a second response will therefore never be sent to indicate the completion of a rotation or move, unlike how <a href="../../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> operates.</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
@@ -1154,7 +1154,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <h4><a class="toc-backref" href="#id82" role="doc-backlink">&lt;I id position activity&gt; - Rotate EX-Turntable</a><a class="headerlink" href="#i-id-position-activity-rotate-ex-turntable" title="Link to this heading"></a></h4>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> - Identifier of the Turntable/traverser <br /> &gt; <strong>position:</strong> - Position to rotate to <br /> &gt; <strong>activity:</strong> - The activity for EX-Turntable to perform (refer <a class="reference internal" href="../../ex-turntable/test-and-tune.html#ex-turntable-commands"><span class="std std-ref">Ex-Turntable commands</span></a>) <br /></p>
-<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;I</span> <span class="pre">id</span> <span class="pre">position</span> <span class="pre">moving&gt;</span></code> <br /> &gt; <strong>id:</strong> one of <br />    - identifier of the Turntable/traverser, or  <br />    - X if the command fails, or a rotation/move is in progress <br /> &gt; <strong>position:</strong> one of <br />    - position rotating to, or <br />    - blank = command failed <br /> &gt; <strong>moving:</strong> one of <br />    - 1 - turntable is moving, or <br />    - 0 - turntable is not moving, or <br />    - blank = command failed <br /> <br /> <em>Example Responses:</em> <br /> Response on rotate: <br />   Response (successful): <code class="docutils literal notranslate"><span class="pre">&lt;I</span> <span class="pre">id</span> <span class="pre">position</span> <span class="pre">moving&gt;</span></code> <br />   Response (fail): <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> <br /></p>
+<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;I</span> <span class="pre">id</span> <span class="pre">position</span> <span class="pre">moving&gt;</span></code> <br /> &gt; <strong>id:</strong> one of <br />    • identifier of the Turntable/traverser, or  <br />    • X if the command fails, or a rotation/move is in progress <br /> &gt; <strong>position:</strong> one of <br />    • position rotating to, or <br />    • blank = command failed <br /> &gt; <strong>moving:</strong> one of <br />    • 1 - turntable is moving, or <br />    • 0 - turntable is not moving, or <br />    • blank = command failed <br /> <br /> <em>Example Responses:</em> <br /> Response on rotate: <br />   Response (successful): <code class="docutils literal notranslate"><span class="pre">&lt;I</span> <span class="pre">id</span> <span class="pre">position</span> <span class="pre">moving&gt;</span></code> <br />   Response (fail): <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> <br /></p>
 <p><em>Further information:</em> <br /> When EX-Turntable commences rotating/moving, the device driver flags this using the <strong>moving</strong> variable above in the response (1 indicates moving, 0 indicates stationary), and when a rotation or move is complete, it will generate an additional response broadcast to indicate that the rotation or move has completed. Further to this, a new rotate/move command will error when a rotation or move is currently in progress.</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
@@ -1170,7 +1170,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <h4><a class="toc-backref" href="#id84" role="doc-backlink">&lt;J O id&gt; &lt;JO id&gt; - Request details of the specific turntable/traverser</a><a class="headerlink" href="#j-o-id-jo-id-request-details-of-the-specific-turntable-traverser" title="Link to this heading"></a></h4>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong>  unique id of the turntable/traverser</p>
-<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;jO</span> <span class="pre">id</span> <span class="pre">type</span> <span class="pre">position</span> <span class="pre">position_count</span> <span class="pre">&quot;[desc]&quot;&gt;</span></code> <br /> &gt; <strong>id:</strong> unique id of the turntable/traverser  <br /> &gt; <strong>type:</strong> one of <br />    - 0 = DCC <br />    - 1 = EX-Turntable <br />    - X = unknown id or hidden <br /> &gt; <strong>position:</strong> one of <br />    - index of the current position (0 - 48) <br />    - blank = unknown or hidden id <br /> &gt; <strong>position_count:</strong> one of <br />    - 0 = number of defined positions, including home (0) <br />    - blank = unknown or hidden id <br /> &gt; <strong>desc:</strong> one of  <br />    - “desc” = description of the turntable or traverser (including surrounding quotes) <br />    - blank = unknown or hidden id <br /> <br /> <em>Example Responses:</em> <br /> Response (id is defined): <code class="docutils literal notranslate"><span class="pre">&lt;jO</span> <span class="pre">id</span> <span class="pre">type</span> <span class="pre">position</span> <span class="pre">position_count</span> <span class="pre">&quot;[desc]&quot;&gt;</span></code> <br /> Response (id not defined): <code class="docutils literal notranslate"><span class="pre">&lt;jO</span> <span class="pre">id</span> <span class="pre">X&gt;</span></code></p>
+<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;jO</span> <span class="pre">id</span> <span class="pre">type</span> <span class="pre">position</span> <span class="pre">position_count</span> <span class="pre">&quot;[desc]&quot;&gt;</span></code> <br /> &gt; <strong>id:</strong> unique id of the turntable/traverser  <br /> &gt; <strong>type:</strong> one of <br />    • 0 = DCC <br />    • 1 = EX-Turntable <br />    • X = unknown id or hidden <br /> &gt; <strong>position:</strong> one of <br />    • index of the current position (0 - 48) <br />    • blank = unknown or hidden id <br /> &gt; <strong>position_count:</strong> one of <br />    • 0 = number of defined positions, including home (0) <br />    • blank = unknown or hidden id <br /> &gt; <strong>desc:</strong> one of  <br />    • “desc” = description of the turntable or traverser (including surrounding quotes) <br />    • blank = unknown or hidden id <br /> <br /> <em>Example Responses:</em> <br /> Response (id is defined): <code class="docutils literal notranslate"><span class="pre">&lt;jO</span> <span class="pre">id</span> <span class="pre">type</span> <span class="pre">position</span> <span class="pre">position_count</span> <span class="pre">&quot;[desc]&quot;&gt;</span></code> <br /> Response (id not defined): <code class="docutils literal notranslate"><span class="pre">&lt;jO</span> <span class="pre">id</span> <span class="pre">X&gt;</span></code></p>
 <p><em>Further information:</em> <br /> The turntable or traverser information does not include the list of defined positions, and this must be requested separated as outlined in the following section.</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
@@ -1179,7 +1179,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <h4><a class="toc-backref" href="#id85" role="doc-backlink">&lt;J P id&gt; &lt;JP id&gt; - Request all position details of the specified turntable/traverser</a><a class="headerlink" href="#j-p-id-jp-id-request-all-position-details-of-the-specified-turntable-traverser" title="Link to this heading"></a></h4>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong>  unique id of the Turnout/Point</p>
-<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;jP</span> <span class="pre">id</span> <span class="pre">index</span> <span class="pre">angle</span> <span class="pre">&quot;[desc]&quot;&gt;</span></code> <br /> &gt; <strong>id:</strong> unique id of the turntable/traverser  <br /> &gt; <strong>index:</strong> one of <br />    - the position index (0 - 48) <br />    - X = unknown or hidden id <br /> &gt; <strong>angle:</strong> one of <br />    - the angle from home for the position (0 - 3600 to allow for partial angles) <br />    - blank = unknown or hidden id <br /> &gt; <strong>desc:</strong> one of  <br />    - “desc” = description of the position (including surrounding quotes) <br />    - blank = unknown or hidden id <br /> <br /> <em>Example Responses:</em> <br /> Response (id is defined): <code class="docutils literal notranslate"><span class="pre">&lt;jO</span> <span class="pre">id</span> <span class="pre">index</span> <span class="pre">angle</span> <span class="pre">&quot;[desc]&quot;&gt;</span></code> <br /> Response (id not defined): <code class="docutils literal notranslate"><span class="pre">&lt;jO</span> <span class="pre">id</span> <span class="pre">X&gt;</span></code></p>
+<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;jP</span> <span class="pre">id</span> <span class="pre">index</span> <span class="pre">angle</span> <span class="pre">&quot;[desc]&quot;&gt;</span></code> <br /> &gt; <strong>id:</strong> unique id of the turntable/traverser  <br /> &gt; <strong>index:</strong> one of <br />    • the position index (0 - 48) <br />    • X = unknown or hidden id <br /> &gt; <strong>angle:</strong> one of <br />    • the angle from home for the position (0 - 3600 to allow for partial angles) <br />    • blank = unknown or hidden id <br /> &gt; <strong>desc:</strong> one of  <br />    • “desc” = description of the position (including surrounding quotes) <br />    • blank = unknown or hidden id <br /> <br /> <em>Example Responses:</em> <br /> Response (id is defined): <code class="docutils literal notranslate"><span class="pre">&lt;jO</span> <span class="pre">id</span> <span class="pre">index</span> <span class="pre">angle</span> <span class="pre">&quot;[desc]&quot;&gt;</span></code> <br /> Response (id not defined): <code class="docutils literal notranslate"><span class="pre">&lt;jO</span> <span class="pre">id</span> <span class="pre">X&gt;</span></code></p>
 </div></blockquote>
 </section>
 </section>
@@ -1207,7 +1207,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <h4><a class="toc-backref" href="#id87" role="doc-backlink">&lt;J A id&gt; &lt;JA id&gt; - Request information for a route/automation</a><a class="headerlink" href="#j-a-id-ja-id-request-information-for-a-route-automation" title="Link to this heading"></a></h4>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> identifier of the Route/Automation</p>
-<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;jA</span> <span class="pre">id</span> <span class="pre">X|type</span> <span class="pre">|&quot;desc&quot;&gt;</span></code> <br /> &gt; <strong>id:</strong> identifier of the Route/Automation <br /> &gt; <strong>type:</strong> one of <br />    - ‘R’= Route  <br />    - ‘A’=Automation <br /> &gt; <strong>“desc”:</strong> Textual description of the route/automation always surrounded in quotes (”) <br /> <br /> <em>Example Responses:</em> <br /> Response (successful): <code class="docutils literal notranslate"><span class="pre">&lt;jA</span> <span class="pre">id</span> <span class="pre">type</span> <span class="pre">&quot;desc&quot;&gt;</span></code> <br /> Response (fail - is not defined): <code class="docutils literal notranslate"><span class="pre">&lt;jA</span> <span class="pre">id</span> <span class="pre">X&gt;</span></code></p>
+<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;jA</span> <span class="pre">id</span> <span class="pre">X|type</span> <span class="pre">|&quot;desc&quot;&gt;</span></code> <br /> &gt; <strong>id:</strong> identifier of the Route/Automation <br /> &gt; <strong>type:</strong> one of <br />    • ‘R’= Route  <br />    • ‘A’=Automation <br /> &gt; <strong>“desc”:</strong> Textual description of the route/automation always surrounded in quotes (”) <br /> <br /> <em>Example Responses:</em> <br /> Response (successful): <code class="docutils literal notranslate"><span class="pre">&lt;jA</span> <span class="pre">id</span> <span class="pre">type</span> <span class="pre">&quot;desc&quot;&gt;</span></code> <br /> Response (fail - is not defined): <code class="docutils literal notranslate"><span class="pre">&lt;jA</span> <span class="pre">id</span> <span class="pre">X&gt;</span></code></p>
 </div></blockquote>
 </section>
 </section>
@@ -1233,7 +1233,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <section id="s-request-the-dcc-ex-version-and-hardware-info-along-with-listing-defined-turnouts">
 <h4><a class="toc-backref" href="#id89" role="doc-backlink">&lt;s&gt; - Request the DCC-EX version and hardware info, along with listing defined turnouts</a><a class="headerlink" href="#s-request-the-dcc-ex-version-and-hardware-info-along-with-listing-defined-turnouts" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;iDCCEX</span> <span class="pre">version</span> <span class="pre">/</span> <span class="pre">microprocessorType</span> <span class="pre">/</span> <span class="pre">MotorControllerType</span> <span class="pre">/</span> <span class="pre">buildNumber&gt;</span></code> <br /> (repeated for each defined Turnout/Point): <strong>&lt;H id state&gt;</strong> <br /> <br /> &gt; <strong>version:</strong> Command Station version <br /> &gt; <strong>microprocessorType:</strong>  microprocessor type (e.g. MEGA) <br /> &gt; <strong>MotorControllerType:</strong>  Motor controller type (e.g. STANDARD_MOTOR_SHIELD) <br /> &gt; <strong>buildNumber:</strong>  Command Station build number <br /> &gt; <strong>id:</strong> unique identifier for the Turnout/Point <br /> &gt; <strong>state:</strong> one of  <br />    - 1=thrown  <br />    - 0=Closed</p>
+<div><p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;iDCCEX</span> <span class="pre">version</span> <span class="pre">/</span> <span class="pre">microprocessorType</span> <span class="pre">/</span> <span class="pre">MotorControllerType</span> <span class="pre">/</span> <span class="pre">buildNumber&gt;</span></code> <br /> (repeated for each defined Turnout/Point): <strong>&lt;H id state&gt;</strong> <br /> <br /> &gt; <strong>version:</strong> Command Station version <br /> &gt; <strong>microprocessorType:</strong>  microprocessor type (e.g. MEGA) <br /> &gt; <strong>MotorControllerType:</strong>  Motor controller type (e.g. STANDARD_MOTOR_SHIELD) <br /> &gt; <strong>buildNumber:</strong>  Command Station build number <br /> &gt; <strong>id:</strong> unique identifier for the Turnout/Point <br /> &gt; <strong>state:</strong> one of  <br />    • 1=thrown  <br />    • 0=Closed</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
@@ -1272,7 +1272,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <section id="a-addr-subaddr-activate-control-an-accessory-decoder-with-address-and-subaddress">
 <h4><a class="toc-backref" href="#id91" role="doc-backlink">&lt;a addr subaddr activate&gt; - Control an Accessory Decoder with Address and Subaddress</a><a class="headerlink" href="#a-addr-subaddr-activate-control-an-accessory-decoder-with-address-and-subaddress" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>addr:</strong> the primary address of the decoder controlling the turnout (0-511) <br /> &gt; <strong>subaddr:</strong> the subaddress of the decoder controlling this turnout (0-3) <br /> &gt; <strong>activate:</strong> one of  <br />    - 0=off, deactivate, straight or Closed  <br />    - 1=on, activate, turn or thrown</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>addr:</strong> the primary address of the decoder controlling the turnout (0-511) <br /> &gt; <strong>subaddr:</strong> the subaddress of the decoder controlling this turnout (0-3) <br /> &gt; <strong>activate:</strong> one of  <br />    • 0=off, deactivate, straight or Closed  <br />    • 1=on, activate, turn or thrown</p>
 <p><em>Response:</em> ???</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
@@ -1280,7 +1280,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <section id="a-linear-addr-activate-control-an-accessory-decoder-with-linear-address">
 <h4><a class="toc-backref" href="#id92" role="doc-backlink">&lt;a linear_addr activate&gt; - Control an Accessory Decoder with linear address</a><a class="headerlink" href="#a-linear-addr-activate-control-an-accessory-decoder-with-linear-address" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>linear_addr:</strong> linear address of the decoder controlling this turnout (1-2044) <br /> &gt; <strong>activate:</strong> one of  <br />    - 0=off, deactivate, straight or Closed  <br />    - 1=on, activate, turn or thrown</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>linear_addr:</strong> linear address of the decoder controlling this turnout (1-2044) <br /> &gt; <strong>activate:</strong> one of  <br />    • 0=off, deactivate, straight or Closed  <br />    • 1=on, activate, turn or thrown</p>
 <p><em>Response:</em> ???</p>
 <p><hr class="hr-dashed" /></p>
 </div></blockquote>
@@ -1318,7 +1318,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <section id="s-request-a-list-of-all-defined-sensors">
 <h4><a class="toc-backref" href="#id95" role="doc-backlink">&lt;S&gt; - Request a list of all defined sensors</a><a class="headerlink" href="#s-request-a-list-of-all-defined-sensors" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Response:</em> <br /> Repeated for each defined sensor: <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">pullup&gt;</span></code> <br /> &gt; <strong>id:</strong> identifier of the Sensor. (0-32767) <br /> &gt; <strong>vpin:</strong> pin number of the input to be controlled by the sensor object <br /> &gt; <strong>pullup:</strong> one of <br />    - 1=Use pull-up resistor ACTIVE=LOW  <br />    - 0=don’t use pull-up resistor ACTIVE=HIGH <br /> <br /> e.g. <br /> Response (successful) Repeated for each defined sensor: <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">pullup&gt;</span></code> <br /> Response (fail): <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code></p>
+<div><p><em>Response:</em> <br /> Repeated for each defined sensor: <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">pullup&gt;</span></code> <br /> &gt; <strong>id:</strong> identifier of the Sensor. (0-32767) <br /> &gt; <strong>vpin:</strong> pin number of the input to be controlled by the sensor object <br /> &gt; <strong>pullup:</strong> one of <br />    • 1=Use pull-up resistor ACTIVE=LOW  <br />    • 0=don’t use pull-up resistor ACTIVE=HIGH <br /> <br /> e.g. <br /> Response (successful) Repeated for each defined sensor: <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">pullup&gt;</span></code> <br /> Response (fail): <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code></p>
 </div></blockquote>
 </section>
 </section>
@@ -1482,7 +1482,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <h4><a class="toc-backref" href="#id104" role="doc-backlink">&lt;R cv&gt; - Read Configuration Variables (CVs)</a><a class="headerlink" href="#r-cv-read-configuration-variables-cvs" title="Link to this heading"></a></h4>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>cv:</strong> CV number</p>
-<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code> <br /> &gt; <strong>cv:</strong> The number of the Configuration Variable memory location in the decoder to write to (1-1024) <br /> &gt; <strong>value:</strong> one of <br />    - value of the CV <br />    - -1: if the write failed</p>
+<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code> <br /> &gt; <strong>cv:</strong> The number of the Configuration Variable memory location in the decoder to write to (1-1024) <br /> &gt; <strong>value:</strong> one of <br />    • value of the CV <br />    • -1: if the write failed</p>
 <p><em>Example:</em> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">3450&gt;</span></code> shows that Loco with ID <strong>3450</strong> is on the programming track.</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
@@ -1490,7 +1490,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <section id="r-read-dcc-decoder-cab-address">
 <h4><a class="toc-backref" href="#id105" role="doc-backlink">&lt;R&gt; - Read DCC decoder (cab) address</a><a class="headerlink" href="#r-read-dcc-decoder-cab-address" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">-cab&gt;</span></code> <br /> &gt; <strong>cab:</strong> <br />    - DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder <br />    - -1 = failed read <br /> <br /> <em>Example Responses:</em> <br /> Response (successful): <strong>&lt;r cab&gt;</strong> <br /> Response (fail): <strong>&lt;r -1&gt;</strong></p>
+<div><p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;r</span> <span class="pre">-cab&gt;</span></code> <br /> &gt; <strong>cab:</strong> <br />    • DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder <br />    • -1 = failed read <br /> <br /> <em>Example Responses:</em> <br /> Response (successful): <strong>&lt;r cab&gt;</strong> <br /> Response (fail): <strong>&lt;r -1&gt;</strong></p>
 <p><em>Notes:</em></p>
 <blockquote>
 <div><p><strong>IMPORTANT:</strong> If the loco is on a consist, the address returned will be the consist address</p>
@@ -1502,7 +1502,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <section id="v-cv-bit-onoff-verify-read-bit-of-configuration-variable-cv-with-guessed-value">
 <h4><a class="toc-backref" href="#id106" role="doc-backlink">&lt;V cv bit onOff&gt; - Verify/Read bit of Configuration Variable (CV) with guessed value</a><a class="headerlink" href="#v-cv-bit-onoff-verify-read-bit-of-configuration-variable-cv-with-guessed-value" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>cv:</strong> CV number <br /> &gt; <strong>bit:</strong> bit to verify in the CV <br /> &gt; <strong>onOff:</strong> one of <br />    - 1=on  <br />    - 0=off</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>cv:</strong> CV number <br /> &gt; <strong>bit:</strong> bit to verify in the CV <br /> &gt; <strong>onOff:</strong> one of <br />    • 1=on  <br />    • 0=off</p>
 <p><em>Response:</em> <br /> Response (successful): <strong>0 | 1</strong> <br /> Response (fail): <strong>&lt;V -1&gt;</strong></p>
 <p><em>Notes:</em></p>
 <blockquote>
@@ -1515,7 +1515,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <h4><a class="toc-backref" href="#id107" role="doc-backlink">&lt;V cv value&gt; - Verify/Read of Configuration Variable (CV) with guessed value</a><a class="headerlink" href="#v-cv-value-verify-read-of-configuration-variable-cv-with-guessed-value" title="Link to this heading"></a></h4>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>cv:</strong> CV number <br /> &gt; <strong>value:</strong>  value to verify</p>
-<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;v</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code> <br /> &gt; <strong>cv:</strong> CV number <br /> &gt; <strong>value:</strong> one of <br />    - actual value of the CV <br />    - -1: if the write failed</p>
+<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;v</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code> <br /> &gt; <strong>cv:</strong> CV number <br /> &gt; <strong>value:</strong> one of <br />    • actual value of the CV <br />    • -1: if the write failed</p>
 <p><em>Notes:</em></p>
 <blockquote>
 <div><p>This command is designed to offer faster verification of the value held in a CV and can be used instead of the <code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> commands. Instead of reading a byte value or looking at each bit, it compares the byte to an expected value. It will attempt to verify the value first, and if it is successful, will return the value as if it was simply “read”. If the verify fails, it will perform a read byte command (see above) and return the value read.</p>
@@ -1526,7 +1526,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <section id="b-cv-bit-onoff-write-bit-to-configuration-variable-cv">
 <h4><a class="toc-backref" href="#id108" role="doc-backlink">&lt;B cv bit onOff&gt; - Write bit to Configuration Variable (CV)</a><a class="headerlink" href="#b-cv-bit-onoff-write-bit-to-configuration-variable-cv" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>cv:</strong> CV number <br /> &gt; <strong>bit:</strong> bit to change in the CV <br /> &gt; <strong>onOff:</strong> one of  <br />    - 1=on  <br />    - 0=off</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>cv:</strong> CV number <br /> &gt; <strong>bit:</strong> bit to change in the CV <br /> &gt; <strong>onOff:</strong> one of  <br />    • 1=on  <br />    • 0=off</p>
 <p><em>Response:</em> ???</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
@@ -1535,7 +1535,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <h4><a class="toc-backref" href="#id109" role="doc-backlink">&lt;W cv value &gt; - Write Configuration Variable (CV)</a><a class="headerlink" href="#w-cv-value-write-configuration-variable-cv" title="Link to this heading"></a></h4>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>cv:</strong> CV number <br /> &gt; <strong>value:</strong> value to change the CV to</p>
-<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;w</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code> <br /> &gt; <strong>cv:</strong> CV number <br /> &gt; <strong>value:</strong> one of <br />    - value CV was changed to <br />    - -1: if the write failed</p>
+<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;w</span> <span class="pre">cv</span> <span class="pre">value&gt;</span></code> <br /> &gt; <strong>cv:</strong> CV number <br /> &gt; <strong>value:</strong> one of <br />    • value CV was changed to <br />    • -1: if the write failed</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
@@ -1543,7 +1543,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <h4><a class="toc-backref" href="#id110" role="doc-backlink">&lt;W address&gt; - Write DCC address to cab (loco)</a><a class="headerlink" href="#w-address-write-dcc-address-to-cab-loco" title="Link to this heading"></a></h4>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>address:</strong> DCC Address of the decoder/loco</p>
-<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;w</span> <span class="pre">address&gt;</span></code> <br /> &gt; <strong>address:</strong> one of <br />    - DCC Address of the decoder/loco <br />    - -1 = failed read <br /> <br /> Response (successful): <strong>&lt;w cab&gt;</strong> <br /> Response (fail): <strong>&lt;w -1&gt;</strong></p>
+<p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;w</span> <span class="pre">address&gt;</span></code> <br /> &gt; <strong>address:</strong> one of <br />    • DCC Address of the decoder/loco <br />    • -1 = failed read <br /> <br /> Response (successful): <strong>&lt;w cab&gt;</strong> <br /> Response (fail): <strong>&lt;w -1&gt;</strong></p>
 <p><em>Notes:</em></p>
 <blockquote>
 <div><p>Writes, and then verifies, the address to decoder of an engine on the programming track. This involves clearing any consist and automatically setting a long or short address. This is an easy way to put a loco in a known state to test for issues like not responding to throttle commands when it is on the main track. <br /></p>
@@ -1781,7 +1781,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <section id="t-id-servo-vpin-thrownpos-closedpos-profile-define-turnout-point-servo-pwm-on-specified-vpin">
 <h4><a class="toc-backref" href="#id125" role="doc-backlink">&lt;T id SERVO vpin thrownPos closedPos profile&gt; - Define turnout/point servo (PWM) on specified vpin</a><a class="headerlink" href="#t-id-servo-vpin-thrownpos-closedpos-profile-define-turnout-point-servo-pwm-on-specified-vpin" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> unique Id for the servo <br /> &gt; <strong>vpin:</strong> vpin to which the servo is attached <br /> &gt; <strong>thrownPos:</strong> the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490 <br /> &gt; <strong>closedPos:</strong> the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490 <br /> &gt; <strong>profile:</strong> one of <br />    - 0=Instant,  <br />    - 1=Fast (0.5 sec),  <br />    - 2=Medium (1 sec),  <br />    - 3=Slow (2 sec) and  <br />    - 4=Bounce (subject to revision)</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> unique Id for the servo <br /> &gt; <strong>vpin:</strong> vpin to which the servo is attached <br /> &gt; <strong>thrownPos:</strong> the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490 <br /> &gt; <strong>closedPos:</strong> the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490 <br /> &gt; <strong>profile:</strong> one of <br />    • 0=Instant,  <br />    • 1=Fast (0.5 sec),  <br />    • 2=Medium (1 sec),  <br />    • 3=Slow (2 sec) and  <br />    • 4=Bounce (subject to revision)</p>
 <p><em>Response:</em> <br /> Successful: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code> <br /> Fail: <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code></p>
 <p><em>Example:</em> &lt;<code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">24</span> <span class="pre">SERVO</span> <span class="pre">100</span> <span class="pre">410</span> <span class="pre">205</span> <span class="pre">2&gt;</span></code> defines a servo turnout/point on the first PCA9685 pin, moving at medium speed between positions 205 and 410.</p>
 <p><em>Notes:</em></p>
@@ -1805,7 +1805,7 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
 <section id="d-servo-vpin-value-profile-set-servo-position-to-value-on-pin-vpin">
 <h4><a class="toc-backref" href="#id127" role="doc-backlink">&lt;D SERVO vpin value [profile]&gt; - Set servo position to value on pin vpin</a><a class="headerlink" href="#d-servo-vpin-value-profile-set-servo-position-to-value-on-pin-vpin" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>vpin:</strong> vpin to which the servo is attached <br /> &gt; <strong>value:</strong>  position to mve the servo to <br /> &gt; <strong>profile:</strong>  one of <br />    - 0 = instant <br />    - 1 = fast <br />    - 2 = medium <br />    - 3 = slow <br />    - 4 = bounce</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>vpin:</strong> vpin to which the servo is attached <br /> &gt; <strong>value:</strong>  position to mve the servo to <br /> &gt; <strong>profile:</strong>  one of <br />    • 0 = instant <br />    • 1 = fast <br />    • 2 = medium <br />    • 3 = slow <br />    • 4 = bounce</p>
 <p><em>Response:</em> N/A</p>
 <p><em>Notes:</em></p>
 <blockquote>
@@ -1924,7 +1924,7 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
 <section id="s-id-vpin-pullup-create-a-new-sensor-id">
 <h4><a class="toc-backref" href="#id133" role="doc-backlink">&lt;S id vpin pullup&gt; - Create a new sensor ID</a><a class="headerlink" href="#s-id-vpin-pullup-create-a-new-sensor-id" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> identifier of the Sensor (0-32767) (You pick the ID &amp; they are shared between Turnouts, Sensors and Outputs) <br /> &gt; <strong>vpin:</strong> vpin of the input to be controlled by the sensor object For Arduino input pins, this is the same as the digital pin number. For servo inputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.|BR| &gt; <strong>pullup:</strong> one of  <br />    - 1=Use pull-up resistor ACTIVE=LOW  <br />    - 0=don’t use pull-up resistor ACTIVE=HIGH</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> identifier of the Sensor (0-32767) (You pick the ID &amp; they are shared between Turnouts, Sensors and Outputs) <br /> &gt; <strong>vpin:</strong> vpin of the input to be controlled by the sensor object For Arduino input pins, this is the same as the digital pin number. For servo inputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module.|BR| &gt; <strong>pullup:</strong> one of  <br />    • 1=Use pull-up resistor ACTIVE=LOW  <br />    • 0=don’t use pull-up resistor ACTIVE=HIGH</p>
 <p><em>Response:</em> <br /> Successful: <strong>&lt;O&gt;</strong> <br /> Fail: <strong>&lt;X&gt;</strong> (e.g. out of memory)</p>
 <p><em>Notes:</em></p>
 <blockquote>
@@ -1991,7 +1991,7 @@ However, the default behaviour can be modified so that any pin can be forced to 
 <section id="z-id-vpin-iflag-creates-a-new-output-id-with-specified-pin-and-iflag-values">
 <h4><a class="toc-backref" href="#id137" role="doc-backlink">&lt;Z id vpin iflag&gt; - Creates a new output ID, with specified PIN and IFLAG values</a><a class="headerlink" href="#z-id-vpin-iflag-creates-a-new-output-id-with-specified-pin-and-iflag-values" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> identifier of the output <br /> &gt; <strong>vpin:</strong> the pin number of the output to be controlled by the output object. For Arduino output pins, this is the same as the digital pin number. For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module. <br /> &gt; <strong>iflag:</strong> see below <br /> <br /> iflag, bit 0: <br />    - 0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW) <br />    - 1 = inverted operation (ACTIVE=LOW / INACTIVE=HIGH) <br /> iflag, bit 1: <br />    - 0 = state of pin restored on power-up to either ACTIVE or INACTIVE depending on state before power-down. <br />    - 1 = state of pin set on power-up, or when first created, to either ACTIVE of INACTIVE depending on IFLAG, bit 2 <br /> iflag, bit 2:  <br />    - 0 = state of pin set to INACTIVE upon power-up or when first created <br />    - 1 = state of pin set to ACTIVE upon power-up or when first created</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> identifier of the output <br /> &gt; <strong>vpin:</strong> the pin number of the output to be controlled by the output object. For Arduino output pins, this is the same as the digital pin number. For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 116-131 for the second PCA9685 module, 164-179 for pins on the first MCP23017 GPIO expander module, and 180-195 for the second MCP23017 module. <br /> &gt; <strong>iflag:</strong> see below <br /> <br /> iflag, bit 0: <br />    • 0 = forward operation (ACTIVE=HIGH / INACTIVE=LOW) <br />    • 1 = inverted operation (ACTIVE=LOW / INACTIVE=HIGH) <br /> iflag, bit 1: <br />    • 0 = state of pin restored on power-up to either ACTIVE or INACTIVE depending on state before power-down. <br />    • 1 = state of pin set on power-up, or when first created, to either ACTIVE of INACTIVE depending on IFLAG, bit 2 <br /> iflag, bit 2:  <br />    • 0 = state of pin set to INACTIVE upon power-up or when first created <br />    • 1 = state of pin set to ACTIVE upon power-up or when first created</p>
 <p><em>Response:</em> <br /> Successful: <code class="docutils literal notranslate"><span class="pre">&lt;O&gt;</span></code>  <br /> Fail: <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> (e.g. out of memory).</p>
 <p><em>Notes:</em></p>
 <blockquote>
@@ -2019,7 +2019,7 @@ However, the default behaviour can be modified so that any pin can be forced to 
 <section id="z-id-state-sets-output-id-to-either-inactive-or-active-state">
 <h4><a class="toc-backref" href="#id140" role="doc-backlink">&lt;Z id state&gt; - Sets output ID to either INACTIVE or ACTIVE state</a><a class="headerlink" href="#z-id-state-sets-output-id-to-either-inactive-or-active-state" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> identifier of the output <br /> &gt; <strong>state:</strong> one of  <br />    - 0= INACTIVE  <br />    - 1= INACTIVE</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> identifier of the output <br /> &gt; <strong>state:</strong> one of  <br />    • 0= INACTIVE  <br />    • 1= INACTIVE</p>
 <p><em>Response:</em> <br /> Successful: <code class="docutils literal notranslate"><span class="pre">&lt;Y</span> <span class="pre">id</span> <span class="pre">state&gt;</span></code> <br /> Fail: <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> if output ID does not exist</p>
 <p><em>Notes:</em></p>
 <blockquote>
@@ -2087,7 +2087,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <section id="d-ack-state-enables-ack-diagnostics">
 <h4><a class="toc-backref" href="#id144" role="doc-backlink">&lt;D ACK state&gt; - Enables ACK diagnostics</a><a class="headerlink" href="#d-ack-state-enables-ack-diagnostics" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>state:</strong> one of <br />    - ON <br />    - OFF</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>state:</strong> one of <br />    • ON <br />    • OFF</p>
 <p><em>Response:</em> <br /> “Ack diag on” or “Ack diag off” <br /> Displayed on the serial monitor only.</p>
 <p><em>Notes:</em></p>
 <blockquote>
@@ -2099,7 +2099,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <section id="d-cmd-state-enables-command-parser-diagnostics">
 <h4><a class="toc-backref" href="#id145" role="doc-backlink">&lt;D CMD state&gt; - Enables Command Parser diagnostics</a><a class="headerlink" href="#d-cmd-state-enables-command-parser-diagnostics" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>state:</strong> one of <br />    - ON <br />    - OFF</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>state:</strong> one of <br />    • ON <br />    • OFF</p>
 <p><em>Response:</em> N/A</p>
 <p><em>Notes:</em></p>
 <blockquote>
@@ -2111,7 +2111,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <section id="d-ethernet-state-enables-ethernet-diagnostics">
 <h4><a class="toc-backref" href="#id146" role="doc-backlink">&lt;D ETHERNET state&gt; - Enables Ethernet diagnostics</a><a class="headerlink" href="#d-ethernet-state-enables-ethernet-diagnostics" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>state:</strong> one of <br />    - ON <br />    - OFF</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>state:</strong> one of <br />    • ON <br />    • OFF</p>
 <p><em>Response:</em> N/A</p>
 <p><em>Notes:</em></p>
 <blockquote>
@@ -2123,7 +2123,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <section id="d-lcn-state-enables-lcn-interface-diagnostics">
 <h4><a class="toc-backref" href="#id147" role="doc-backlink">&lt;D LCN state&gt; - Enables LCN interface diagnostics</a><a class="headerlink" href="#d-lcn-state-enables-lcn-interface-diagnostics" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>state:</strong> one of <br />    - ON <br />    - OFF</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>state:</strong> one of <br />    • ON <br />    • OFF</p>
 <p><em>Response:</em> N/A</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
@@ -2131,7 +2131,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <section id="d-wifi-state-enables-wifi-diagnostics">
 <h4><a class="toc-backref" href="#id148" role="doc-backlink">&lt;D WIFI state&gt; - Enables WiFi diagnostics</a><a class="headerlink" href="#d-wifi-state-enables-wifi-diagnostics" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>state:</strong> one of <br />    - ON <br />    - OFF</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>state:</strong> one of <br />    • ON <br />    • OFF</p>
 <p><em>Response:</em> N/A</p>
 <p><em>Notes:</em></p>
 <blockquote>
@@ -2143,7 +2143,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
 <section id="d-wit-state-enables-withrottle-diagnostics">
 <h4><a class="toc-backref" href="#id149" role="doc-backlink">&lt;D WIT state&gt; - Enables WiThrottle diagnostics</a><a class="headerlink" href="#d-wit-state-enables-withrottle-diagnostics" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>state:</strong> one of <br />    - ON <br />    - OFF</p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>state:</strong> one of <br />    • ON <br />    • OFF</p>
 <p><em>Response:</em> N/A</p>
 <p><em>Notes:</em></p>
 <blockquote>
@@ -2265,7 +2265,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f20860ee0e0>
+    <jinja2.runtime.BlockReference object at 0x7f7647af2200>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

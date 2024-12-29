@@ -1451,11 +1451,11 @@ Define a servo turnout/point. "active_angle" is for THROW, "inactive_angle" is f
 |_| > **active_angle** - the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490 |BR|
 |_| > **inactive_angle** - the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490 |BR|
 |_| > **profile** - one of |BR|
-|_| |_| |_| |_| - 0=Instant,  |BR|
-|_| |_| |_| |_| - 1=Fast (0.5 sec),  |BR|
-|_| |_| |_| |_| - 2=Medium (1 sec),  |BR|
-|_| |_| |_| |_| - 3=Slow (2 sec) and  |BR|
-|_| |_| |_| |_| - 4=Bounce (subject to revision) |BR|
+|_| |_| |_| |_| • 0=Instant,  |BR|
+|_| |_| |_| |_| • 1=Fast (0.5 sec),  |BR|
+|_| |_| |_| |_| • 2=Medium (1 sec),  |BR|
+|_| |_| |_| |_| • 3=Slow (2 sec) and  |BR|
+|_| |_| |_| |_| • 4=Bounce (subject to revision) |BR|
 |_| > **description** - The description that will be assigned to the turnout/point |BR|
   
 Refer to :doc:`/reference/hardware/servo-module` for more information.
@@ -2367,11 +2367,11 @@ Move an animation servo. *Do NOT use for Turnouts/points.*
 |_| > **id** - id of the servo to move |BR|
 |_| > **position** - position to move to |BR|
 |_| > **profile** - one of |BR|
-|_| |_| |_| |_| - Instant,  |BR|
-|_| |_| |_| |_| - Fast (0.5 sec),  |BR|
-|_| |_| |_| |_| - Medium (1 sec),  |BR|
-|_| |_| |_| |_| - Slow (2 sec) and  |BR|
-|_| |_| |_| |_| - Bounce (subject to revision) |BR|
+|_| |_| |_| |_| • Instant,  |BR|
+|_| |_| |_| |_| • Fast (0.5 sec),  |BR|
+|_| |_| |_| |_| • Medium (1 sec),  |BR|
+|_| |_| |_| |_| • Slow (2 sec) and  |BR|
+|_| |_| |_| |_| • Bounce (subject to revision) |BR|
 
 |hr-dashed|
 
@@ -2729,8 +2729,8 @@ Drive loco forward at DCC speed 0-127 (1=ESTOP)
 
 *Parameters:* |BR|
 |_| > **speed** - DCC speed (0-127) |BR|
-|_| |_| |_| |_| - 2-127 = speed 1-126, 0 = stop  |BR|
-|_| |_| |_| |_| - 1 = Estop
+|_| |_| |_| |_| • 2-127 = speed 1-126, 0 = stop  |BR|
+|_| |_| |_| |_| • 1 = Estop
 
 |hr-dashed|
 
@@ -2743,8 +2743,8 @@ Drive current loco in reverse at DCC speed 0-127 (1=ESTOP)
 
 *Parameters:* |BR|
 |_| > **speed** - DCC speed (0-127) |BR|
-|_| |_| |_| |_| - 2-127 = speed 1-126, 0 = stop  |BR|
-|_| |_| |_| |_| - 1 = Estop
+|_| |_| |_| |_| • 2-127 = speed 1-126, 0 = stop  |BR|
+|_| |_| |_| |_| • 1 = Estop
 
 |hr-dashed|
 
@@ -2757,8 +2757,8 @@ Drive loco in current direction at DCC speed
 
 *Parameters:* |BR|
 |_| > **speed** - DCC speed (0-127) |BR|
-|_| |_| |_| |_| - 2-127 = speed 1-126, 0 = stop  |BR|
-|_| |_| |_| |_| - 1 = Estop
+|_| |_| |_| |_| • 2-127 = speed 1-126, 0 = stop  |BR|
+|_| |_| |_| |_| • 1 = Estop
 
 |hr-dashed|
 
@@ -2910,13 +2910,13 @@ Configures the mode of the selected track, refer also to :doc:`/trackmanager/ind
 |_| > **track** - - The track to configure, valid options are A to H |BR|
 |_| > **mode** - - The mode to set the track to, |BR|
 |_| |_| |_| |_| valid options for |DCC| are: |BR|
-|_| |_| |_| |_| - ``MAIN`` or |BR|
-|_| |_| |_| |_| - ``PROG``, |BR|
+|_| |_| |_| |_| • ``MAIN`` or |BR|
+|_| |_| |_| |_| • ``PROG``, |BR|
 |_| |_| |_| |_| and valid options for |DC| are: |BR|
-|_| |_| |_| |_| -  ``DC`` |BR|
-|_| |_| |_| |_| - , ``DCX``. |BR|
+|_| |_| |_| |_| •  ``DC`` |BR|
+|_| |_| |_| |_| • , ``DCX``. |BR|
 |_| |_| |_| |_| If a track is unused, it can be set to: |BR| 
-|_| |_| |_| |_| - ``NONE``
+|_| |_| |_| |_| • ``NONE``
 
 When setting at track mode to either DC or DCX, you must use the ``SETLOCO( loco )`` command first to specify the loco ID that will be used for the DC track then SET_TRACK()
 

@@ -86,7 +86,7 @@ Bricks (Laptop Style)
    :scale: 25%
    :alt: Samsung brick
 
-https://www.amazon.com/Samsung-Monitor-SoulBay-SyncMaster-Notebook/dp/B07QLRBLWC/ |EXTERNAL-LINK|
+Note: this power supply is suitable for use, but the connector tip is not the directly plug-able into the |EX-CSB1-SHORT|.  You would need an adapter.  https://www.amazon.com/Samsung-Monitor-SoulBay-SyncMaster-Notebook/dp/B07QLRBLWC/ |EXTERNAL-LINK|
 
 Since many people have old laptop power supplies that can be 18-19.5V DC, you can use the diode or buck converter method listed below to reduce the voltage.
 

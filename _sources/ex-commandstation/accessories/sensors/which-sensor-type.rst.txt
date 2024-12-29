@@ -18,12 +18,15 @@ A common topic that arises in support chats in Discord is which sensor type to u
 
 There are a number of different advantages and disadvantages to the various sensor types which we aim to cover on this page.
 
-There are four types of sensors we will cover here:
+There are five types of sensors we will cover here:
 
 - Infrared sensors
 - Hall effect sensors
 - Block occupancy detectors
 - Proximity (and time-of-flight) sensors
+- Video Sensors
+
+----
 
 Infrared sensors
 ================
@@ -61,6 +64,8 @@ There are two different ways to have these configured:
 
 Refer to :doc:`/ex-commandstation/accessories/sensors/ir-sensor` for further information on infrared sensors.
 
+----
+
 Hall effect sensors
 ===================
 
@@ -88,6 +93,8 @@ Hall effect sensors consist of a hall effect device mounted between the track ra
 
   Refer to :ref:`reference/developers/hal:hal programming interface` for further information on using the interrupt pin.
 
+----
+
 Block occupancy detectors
 =========================
 
@@ -110,6 +117,8 @@ These typically work by detecting current being drawn through the track power wi
     - May require track wiring alterations
   * - 
     - Cannot detect the front or rear of a train, nor a specific point on a layout
+
+----
 
 Proximity sensors
 =================
@@ -137,3 +146,30 @@ There are various types of proximity sensors available, with the most commonly a
     - 
 
 Refer to :doc:`/ex-commandstation/accessories/sensors/vl53l0x-tof-sensor` for further information on the VL53L0X time-of-flight sensor.
+
+----
+
+Video Sensors
+==============
+
+Video sensors are a recent invention that monitor a large number of predefined points (or lines) to detect the presence of a locomotive or rolling stock at specific locations.  The current version of EX-SensorCAM can monitor up to 80 spots or up to 10 lines for detection of image changes.  It can also be used for human/cat intrusion detections.  
+
+A single sensorCAM camera looks for changes from a reference image of the spot (or line) and communicates with the Command Station via i2c cable.  Multiple CAM's can be used to cover wider areas. 
+
+**Advantages**
+
+* Can replace many of the sensors above
+* No layout wiring and hiding of discrete sensors required
+* Extremely easy to add or relocate sensors for automations
+* Replace multiple GPIO expanders
+* May use mirrors to see round corners. 
+
+**Disadvantages**
+
+* Initial setup is more complex
+* Suitable environment (e.g. lighting) conditions are essential
+* Can't see into tunnels, so user may need a mix of sensor types
+* Power-on requirements need consideration
+* Not currently suitable for exhibition layouts
+
+Refer to https://github.com/DCC-EX/EX-SensorCAM/ |EXTERNAL-LINK| for further information on sensorCAM.

@@ -643,18 +643,21 @@
 <li><p><a class="reference internal" href="#hall-effect-sensors" id="id2">Hall effect sensors</a></p></li>
 <li><p><a class="reference internal" href="#block-occupancy-detectors" id="id3">Block occupancy detectors</a></p></li>
 <li><p><a class="reference internal" href="#proximity-sensors" id="id4">Proximity sensors</a></p></li>
+<li><p><a class="reference internal" href="#video-sensors" id="id5">Video Sensors</a></p></li>
 </ul>
 </nav>
 </aside>
 <p>A common topic that arises in support chats in Discord is which sensor type to use in various scenarios.</p>
 <p>There are a number of different advantages and disadvantages to the various sensor types which we aim to cover on this page.</p>
-<p>There are four types of sensors we will cover here:</p>
+<p>There are five types of sensors we will cover here:</p>
 <ul class="simple">
 <li><p>Infrared sensors</p></li>
 <li><p>Hall effect sensors</p></li>
 <li><p>Block occupancy detectors</p></li>
 <li><p>Proximity (and time-of-flight) sensors</p></li>
+<li><p>Video Sensors</p></li>
 </ul>
+<hr class="docutils" />
 <section id="infrared-sensors">
 <h2><a class="toc-backref" href="#id1" role="doc-backlink">Infrared sensors</a><a class="headerlink" href="#infrared-sensors" title="Link to this heading"></a></h2>
 <p>Infrared sensors consist of a light emitting source and receiver to detect when an object passes over or through the beam of infrared light.</p>
@@ -697,6 +700,7 @@
 </div>
 <p>Refer to <a class="reference internal" href="ir-sensor.html"><span class="doc">Infrared or IR sensors</span></a> for further information on infrared sensors.</p>
 </section>
+<hr class="docutils" />
 <section id="hall-effect-sensors">
 <h2><a class="toc-backref" href="#id2" role="doc-backlink">Hall effect sensors</a><a class="headerlink" href="#hall-effect-sensors" title="Link to this heading"></a></h2>
 <p>Hall effect sensors consist of a hall effect device mounted between the track rails, and a suitable magnet located on the underside of locomotives and rolling stock.</p>
@@ -728,6 +732,7 @@
 <p>Refer to <a class="reference internal" href="../../../reference/developers/hal.html#hal-programming-interface"><span class="std std-ref">HAL Programming Interface</span></a> for further information on using the interrupt pin.</p>
 </div>
 </section>
+<hr class="docutils" />
 <section id="block-occupancy-detectors">
 <h2><a class="toc-backref" href="#id3" role="doc-backlink">Block occupancy detectors</a><a class="headerlink" href="#block-occupancy-detectors" title="Link to this heading"></a></h2>
 <p>Block occupancy detectors are quite commonly found in <a class="reference internal" href="../../../reference/hardware/dcc-vs-dc.html"><span class="doc">DC</span></a> layouts and have been a very popular method for detecting when a locomotive and/or rolling stock is occupying a <a class="reference internal" href="../../../reference/hardware/dcc-vs-dc.html"><span class="doc">DC</span></a> power district or a specific, isolated section of track.</p>
@@ -755,6 +760,7 @@
 </tbody>
 </table>
 </section>
+<hr class="docutils" />
 <section id="proximity-sensors">
 <h2><a class="toc-backref" href="#id4" role="doc-backlink">Proximity sensors</a><a class="headerlink" href="#proximity-sensors" title="Link to this heading"></a></h2>
 <p>Proximity sensors work by detecting objects within a specific distance range from the sensor, and are also able to measure the specific distance to objects, improving detection reliability.</p>
@@ -786,6 +792,29 @@
 </table>
 <p>Refer to <a class="reference internal" href="vl53l0x-tof-sensor.html"><span class="doc">VL53L0X Time of Flight Sensor</span></a> for further information on the VL53L0X time-of-flight sensor.</p>
 </section>
+<hr class="docutils" />
+<section id="video-sensors">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Video Sensors</a><a class="headerlink" href="#video-sensors" title="Link to this heading"></a></h2>
+<p>Video sensors are a recent invention that monitor a large number of predefined points (or lines) to detect the presence of a locomotive or rolling stock at specific locations.  The current version of EX-SensorCAM can monitor up to 80 spots or up to 10 lines for detection of image changes.  It can also be used for human/cat intrusion detections.</p>
+<p>A single sensorCAM camera looks for changes from a reference image of the spot (or line) and communicates with the Command Station via i2c cable.  Multiple CAM’s can be used to cover wider areas.</p>
+<p><strong>Advantages</strong></p>
+<ul class="simple">
+<li><p>Can replace many of the sensors above</p></li>
+<li><p>No layout wiring and hiding of discrete sensors required</p></li>
+<li><p>Extremely easy to add or relocate sensors for automations</p></li>
+<li><p>Replace multiple GPIO expanders</p></li>
+<li><p>May use mirrors to see round corners.</p></li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul class="simple">
+<li><p>Initial setup is more complex</p></li>
+<li><p>Suitable environment (e.g. lighting) conditions are essential</p></li>
+<li><p>Can’t see into tunnels, so user may need a mix of sensor types</p></li>
+<li><p>Power-on requirements need consideration</p></li>
+<li><p>Not currently suitable for exhibition layouts</p></li>
+</ul>
+<p>Refer to <a class="reference external" href="https://github.com/DCC-EX/EX-SensorCAM/">https://github.com/DCC-EX/EX-SensorCAM/</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> for further information on sensorCAM.</p>
+</section>
 </section>
 
 <div class="section ablog__blog_comments">
@@ -810,7 +839,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7ff99ac03850>
+    <jinja2.runtime.BlockReference object at 0x7f1777b24cd0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

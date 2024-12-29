@@ -2729,7 +2729,8 @@ Drive loco forward at DCC speed 0-127 (1=ESTOP)
 
 *Parameters:* |BR|
 |_| > **speed** - DCC speed (0-127) |BR|
-|_| |_| |_| |_| • 2-127 = speed 1-126, 0 = stop  |BR|
+|_| |_| |_| |_| • 2-127 = speed 1-126  |BR|
+|_| |_| |_| |_| • 0 = stop  |BR|
 |_| |_| |_| |_| • 1 = Estop
 
 |hr-dashed|
@@ -2743,7 +2744,8 @@ Drive current loco in reverse at DCC speed 0-127 (1=ESTOP)
 
 *Parameters:* |BR|
 |_| > **speed** - DCC speed (0-127) |BR|
-|_| |_| |_| |_| • 2-127 = speed 1-126, 0 = stop  |BR|
+|_| |_| |_| |_| • 2-127 = speed 1-126  |BR|
+|_| |_| |_| |_| • 0 = stop  |BR|
 |_| |_| |_| |_| • 1 = Estop
 
 |hr-dashed|
@@ -2757,7 +2759,8 @@ Drive loco in current direction at DCC speed
 
 *Parameters:* |BR|
 |_| > **speed** - DCC speed (0-127) |BR|
-|_| |_| |_| |_| • 2-127 = speed 1-126, 0 = stop  |BR|
+|_| |_| |_| |_| • 2-127 = speed 1-126  |BR|
+|_| |_| |_| |_| • 0 = stop  |BR|
 |_| |_| |_| |_| • 1 = Estop
 
 |hr-dashed|

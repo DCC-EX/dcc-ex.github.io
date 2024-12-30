@@ -198,7 +198,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/startup-config.html">Startup Configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/controllers.html">Choosing a Throttle (Controller) - Advanced</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/software/command-summary-consolidated.html">Native Commands Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../reference/software/command-summary-consolidated-diy__included.html">Native Commands Summary</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-commandstation/accessories/index.html">Adding and Controlling Accessories</a><ul>
@@ -511,10 +511,6 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/software/index.html">Software</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../reference/software/command-summary-consolidated.html">DCC-EX Native Commands Summary Reference</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../reference/software/index-dcpp-commands.html">DCC-EX Native Commands</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../reference/software/command-summary-consolidated.html">DCC-EX Native Commands Summary Reference</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="../throttles/native-protocol-library.html">DCC-EX Native command protocol library - DCCEXProtocol</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/software/programming-locos.html">Programming Locos (CVs)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../exrail/exrail-command-reference.html">EXRAIL Command Reference</a></li>
@@ -1085,7 +1081,19 @@
 <li><p>F31: Supersonic - 62500Hz</p></li>
 </ul>
 <p>Trial and error will be needed for specific locos that do not respond well to the defaults (low) frequency setting.</p>
-<p>Note that these functions are not cumulative - setting F30 overrides F29 and setting F31 overrides F29 &amp; F30.</p>
+<p><strong>Notes:</strong></p>
+<ul class="simple">
+<li><p>These functions are not cumulative - setting F30 overrides F29 and setting F31 overrides F29 &amp; F30.</p></li>
+<li><p>You need to activate the functions above once you have acquired the loco address that have assigned to the output. <br />  Specifically:</p>
+<ol class="arabic simple">
+<li><p>Set the output/track to DC mode with a specified loco address</p></li>
+<li><p>Acquire that loco address in your throttle app</p></li>
+<li><p>Make sure the loco is stopped</p></li>
+<li><p>Set the frequency by activating one of the functions above</p></li>
+</ol>
+</li>
+<li><p>You need to stop the loco (throttle to zero) before changing the frequency using the function buttons.</p></li>
+</ul>
 </section>
 </section>
 <hr class="docutils" />
@@ -1444,7 +1452,7 @@ Track A and Track B with sidings;</p>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7386d3d540>
+    <jinja2.runtime.BlockReference object at 0x7f50e2006950>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

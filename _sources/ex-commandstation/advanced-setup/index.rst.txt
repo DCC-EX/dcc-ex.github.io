@@ -199,7 +199,7 @@ DCC-EX Commands
 .. toctree::
   :maxdepth: 1
 
-  Native Commands Summary </reference/software/command-summary-consolidated>
+  Native Commands Summary </reference/software/command-summary-consolidated-diy__included>
 
 ----
 

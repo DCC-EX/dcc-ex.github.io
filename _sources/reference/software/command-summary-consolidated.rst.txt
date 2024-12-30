@@ -192,7 +192,19 @@ The settings achievable vary slightly depending upon the processor running the C
 |_| > **F30:** High frequency - 3400Hz |BR|
 |_| > **F31:** Supersonic - 62500Hz |BR|
 
-Note that these functions are not cumulative - setting F30 overrides F29 and setting F31 overrides F29 & F30.
+**Notes:**
+
+* These functions are not cumulative - setting F30 overrides F29 and setting F31 overrides F29 & F30.
+
+* You need to activate the functions above once you have acquired the loco address that have assigned to the output. |BR|  Specifically:
+
+  1) Set the output/track to DC mode with a specified loco address
+  2) Acquire that loco address in your throttle app
+  3) Make sure the loco is stopped
+  4) Set the frequency by activating one of the functions above
+
+* You need to stop the loco (throttle to zero) before changing the frequency using the function buttons.
+
 
 For details on setting F keys see "Turn Loco decoder functions ON or OFF" in `Cab (Loco) Commands`_ below.
 

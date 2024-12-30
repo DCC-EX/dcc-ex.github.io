@@ -1,5 +1,8 @@
 :orphan:
 
+.. this page is currently redundant   may be used later
+.. redirection in place
+
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
 .. include:: /include/include-reference.rst

@@ -13,7 +13,6 @@ Software
     :maxdepth: 1
 
     command-summary-consolidated
-    index-dcpp-commands
     /throttles/native-protocol-library
     programming-locos
     /exrail/exrail-command-reference

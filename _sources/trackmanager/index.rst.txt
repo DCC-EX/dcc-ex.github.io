@@ -451,7 +451,19 @@ Just acquire the loco number you have assigned to your DC Output. Then select on
 
 Trial and error will be needed for specific locos that do not respond well to the defaults (low) frequency setting.
 
-Note that these functions are not cumulative - setting F30 overrides F29 and setting F31 overrides F29 & F30.
+**Notes:**
+
+* These functions are not cumulative - setting F30 overrides F29 and setting F31 overrides F29 & F30.
+
+* You need to activate the functions above once you have acquired the loco address that have assigned to the output. |BR|  Specifically:
+
+  1) Set the output/track to DC mode with a specified loco address
+  2) Acquire that loco address in your throttle app
+  3) Make sure the loco is stopped
+  4) Set the frequency by activating one of the functions above
+
+* You need to stop the loco (throttle to zero) before changing the frequency using the function buttons.
+
 
 ----
 

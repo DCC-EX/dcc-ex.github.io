@@ -2965,10 +2965,12 @@ Configures the mode of the selected track, refer also to :doc:`/trackmanager/ind
   * - ``EXT``
     - ✓
     - 
+    -
     - Reserved for future use
 
   * - ``NONE``
     - ✓
+    -
     - 
     - 
 

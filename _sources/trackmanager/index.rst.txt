@@ -88,11 +88,13 @@ Valid Modes are:
   * - ``EXT``
     - ✓
     - 
+    -
     - Reserved for future use
 
   * - ``NONE``
     - ✓
     - 
+    -
     - 
 
 .. [#tm2] With special alias of ``DCX`` for ``DC_INV``

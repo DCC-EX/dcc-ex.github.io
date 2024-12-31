@@ -210,7 +210,7 @@ And no we're not using another Expensive DCC decoder under the table on each Tra
 
 .. note:: 
   
-  When specifying a DC or DC_INV / DCX loco ID, do not use one of your existing loco DCC addresses or road number IDs, otherwise a command sent to control a loco on that DC or DC_INV / DCX track will also operate your DCC Loco with the same address, unless you intentionally do so.
+  When specifying a ``DC`` or ``DC_INV`` / ``DCX`` loco ID, do not use one of your existing loco DCC addresses or road number IDs, otherwise a command sent to control a loco on that DC or DC_INV / DCX track will also operate your DCC Loco with the same address, unless you intentionally do so.
 
 ----
 

@@ -37,18 +37,19 @@ Valid Modes are:
   
     * MAIN
     * MAIN_INV
-    * MAIN_AUTO
+    * MAIN_AUTO [#TM2]_
     * PROG
     * NONE
     
   * :ref:`DC modes <trackmanager/index:changing a motor driver output to dc>`
   
     * DC
-    * DC_INV [#tm1]_
-    * DCX [#tm1]_
+    * DC_INV [#tm1]_ [#TM3]_
+    * DCX [#tm1]_ 
     * NONE
 
 .. [#tm1] DC_INV / DCX is DC with an opposite polarity. Like NMRA modular layout track B which is wired left rail positive (+) and right rail negative (-)
+
 
 
 .. flat-table::
@@ -64,7 +65,7 @@ Valid Modes are:
   * - ``MAIN``
     - ✓
     - ✓
-    - ✓
+    - ✓ [#TM2]_
     -
 
   * - ``PROG``
@@ -97,7 +98,8 @@ Valid Modes are:
     -
     - 
 
-.. [#tm2] With special alias of ``DCX`` for ``DC_INV``
+.. [#tm2] Deprecated alias of ``AUTO`` but only when preceeded by a sperate ``MAIN`` command.
+.. [#tm3] With special alias of ``DCX`` for ``DC_INV``
 
 ----
 

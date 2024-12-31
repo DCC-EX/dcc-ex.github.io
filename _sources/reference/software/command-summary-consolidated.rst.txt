@@ -131,24 +131,30 @@ Note:  Previously referred to as 'DC-District'.
   |_| > **mode:** one of  |BR|
   |_| |_| |_| |_| • ``MAIN`` |BR|
   |_| |_| |_| |_| • ``MAIN_INV`` |BR|
-  |_| |_| |_| |_| • ``MAIN_AUTO`` |BR|
+  |_| |_| |_| |_| • ``MAIN_AUTO`` [1]_ |BR|
   |_| |_| |_| |_| • ``PROG`` |BR|
   |_| |_| |_| |_| • ``DC`` |BR|
   |_| |_| |_| |_| • ``DC_INV`` = DC reversed polarity |BR|
-  |_| |_| |_| |_| • ``DCX`` = DC reversed polarity (same as DC_INV) |BR|
+  |_| |_| |_| |_| • ``DCX`` [2]_ = DC reversed polarity (same as DC_INV) |BR|
   |_| |_| |_| |_| • ``NONE`` |BR|
   |_| > **id:** the cab ID. *Required when specifying DC or DC_INV / DCX*
-  
+
+.. [1] Deprecated alias of ``AUTO`` but only when preceeded by a sperate ``MAIN`` command.
+.. [2] With special alias of ``DCX`` for ``DC_INV``
+
   *Response:* |BR|
   |_| (for each track/channel that has changed) ``<= trackletter state cab>`` |BR|
   |_|  |BR|
   |_| > **trackletter:** A-H |BR|
-  |_| > **state:**  PROG, MAIN, MAIN_INV, MAIN_AUTO, DC, DC_INV / DCX, NONE |BR|
-  |_| > **cab:** cab(loco) equivalent to a fake DCC Address
+  |_| > **state:** 'PROG', 'MAIN', 'MAIN_INV', 'MAIN A', 'DC', 'DCX', 'NONE' |BR|
+  |_| > **cab:** cab(loco) equivalent to a fake DCC Address for DC and DCX only
+
 
   *Notes:*
 
-    since only one channel can be PROG, changing a second channel to PROG, will force the other to OFF**
+  * Since only one channel can be PROG, changing a second channel to PROG, will force the other to ``NONE``
+  * The response to ``DC_INV`` is ``DCX``
+  * The response to ``DCC_MAIN`` is ``MAIN A``
 
 |hr-dashed|
 
@@ -159,8 +165,13 @@ Note:  Previously referred to as 'DC-District'.
   |_| for each track/channel supported by the motor shield ``<= trackletter state cab>`` |BR|
   |_|  |BR|
   |_| > **trackletter:** A-H |BR|
-  |_| > **state:** PROG, MAIN, MAIN_INV, MAIN_AUTO, DC, DC_INV / DCX, NONE |BR|
-  |_| > **cab:** cab(loco) equivalent to a fake DCC Address
+  |_| > **state:** 'PROG', 'MAIN', 'MAIN_INV', 'MAIN A', 'DC', 'DCX', 'NONE' |BR|
+  |_| > **cab:** cab(loco) equivalent to a fake DCC Address for DC and DCX only
+
+  *Notes:*
+
+  * A track set to ``DC_INV`` (DC inverted) will respond with ``DCX``
+  * A track set to ``MAIN_AUTO`` (DCC Auto reverser) will respond with ``MAIN A``
 
 <onOff [track]> - Turn power on or off to the requested TrackManager track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

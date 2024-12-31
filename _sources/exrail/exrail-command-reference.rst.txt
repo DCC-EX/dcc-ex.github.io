@@ -2941,7 +2941,7 @@ Configures the mode of the selected track, refer also to :doc:`/trackmanager/ind
   * - ``MAIN``
     - ✓
     - ✓
-    - ✓
+    - ✓ [2]_
     -
 
   * - ``PROG``
@@ -2975,7 +2975,7 @@ Configures the mode of the selected track, refer also to :doc:`/trackmanager/ind
     - 
 
 .. [1] With special alias of ``DCX`` for ``DC_INV``
-
+.. [2] Depricated alias of ``AUTO`` but only when preceeded by a sperate ``MAIN`` command.
 
 When setting at track mode to either ``DC`` or ``DC_INV`` / ``DCX``, you must use the ``SETLOCO( loco )`` command first to specify the loco ID that will be used for the DC track then SET_TRACK()
 

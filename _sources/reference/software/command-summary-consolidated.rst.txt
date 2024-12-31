@@ -1199,6 +1199,30 @@ WiFi Control
   *Response:* |BR|
   |_| All input and output from this point is the direct communication with the Wifi AT software this mode is ended by typing ! (exclamation mark).
 
+|hr-dashed|
+
+.. _native-command-c-wifi-ssid-password:
+
+``<C WIFI ssid password>`` - Connects to an existing WIFI network in STA mode
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|NEW-IN-V5-4-LOGO-SMALL|
+
+|NOT-IN-PROD-VERSION|
+
+  *Parameters:* |BR|
+  |_| > **ssid:** network to connect to |BR|
+  |_| > **password:** password to use
+  
+  *Response:* ???
+
+  *Example:* ???
+
+  *Notes:*
+
+    Valid only for ESP32 microcontrollers only (including the |EX-CSB1-SHORT|)
+
+
 ----
 
 EXRAIL

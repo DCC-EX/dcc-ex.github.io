@@ -91,7 +91,7 @@ There are number of excellent :doc:`phone apps and physical hardware devices </t
 
 .. warning:: 
    
-   This warning is only relevant to the DIY EX-CommandStation. **It is not relevant to the EX-CommandStation/Booster One Express.**
+   This warning is only relevant to the **DIY** EX-CommandStation. **It is not relevant to the EX-CommandStation/Booster One Express.**
 
    Be aware that the Espressif firmware shipped with *Duinopeak ESP8266 WiFi Expansion* and *ESP-01 or ESP-01S* devices :dcc-ex-red-bold:`probably will NOT work` with |EX-CS| out of the box.
 
@@ -106,8 +106,8 @@ There are number of excellent :doc:`phone apps and physical hardware devices </t
 Compatible WiFi Throttles
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. warning:: 
-   :class: warning-float-right
+.. important:: 
+   :class: important-float-right
    
    A limitation of the |Access Point Mode| that is recommended in the :doc:`/ex-commandstation/index` pages is that the |WiThrottle Server| of the |EX-CS| cannot be 'discovered'.  |Engine Driver| can *usually* guess it, but |WiThrottle| can't.  In |WiThrottle| you will need to type in the address.
 

@@ -72,8 +72,8 @@ To use WiFi, make sure you have a WiFi enabled |EX-CS| as described in the :doc:
 
   * It should find the |WiThrottle Server| in |JMRI| and automatically connect to it
 
-.. warning:: 
-   :class: warning-float-right
+.. important:: 
+   :class: important-float-right
 
    |wiThrottle Lite| (the free version) does not have the ``Track Power`` function. You will either need to purchase the full version, or you can :doc:`add a startup command </ex-commandstation/advanced-setup/startup-config>`. 
 

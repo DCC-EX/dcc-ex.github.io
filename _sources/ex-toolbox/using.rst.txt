@@ -56,7 +56,7 @@ Discovered Servers
   If the server does not appear in the recent list try one of the other two methods.  Your server not appearing in the recent list is not necessarily a problem and there can be a number of reasons why.
 
   
-.. warning::
+.. important::
 
    |EX-TB| can only connect *directly* to an |EX-CS| or JMRI's :ref:`'DCC++ over TCP Server'<ex-toolbox/using:connecting via jmri>`, however |JMRI|, the |EX-CS| and other devices and apps can, or do, advertise as "WiThrottle" mDNS services. EX-Toolbox cannot determine which are actually direct connections to an |EX-CS| or JMRI's :ref:`'DCC++ over TCP Server'<ex-toolbox/using:connecting via jmri>`.
 
@@ -575,7 +575,7 @@ Using *SerialToIPGUI* (For Microsoft Windows) (Recommended):
    * Enter the port of '2560' 
    * Click :guilabel:`connect`
 
-.. warning::
+.. important::
 
    This 'trick' only supports a single connection at a time.  So it is important that |JMRI| (if you are using it), or the |IDE serial monitor|, or anything else that might be using the COM (USB) port are shut down first.
 

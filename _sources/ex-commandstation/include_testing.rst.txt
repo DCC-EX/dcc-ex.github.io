@@ -235,8 +235,8 @@ Using WiThrottle (Apple iOS)
 
   * |WiThrottle| should then connect 
 
-.. warning:: 
-   :class: warning-float-right
+.. important:: 
+   :class: important-float-right
 
    |WiThrottle Lite| (the free version) does not have the ``Track Power`` function. You will either need to purchase the full version, or you can :doc:`add a startup command </ex-commandstation/advanced-setup/startup-config>`. 
 

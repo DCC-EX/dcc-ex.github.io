@@ -45,8 +45,8 @@ Hardware
 
 You will need to find or purchase:
 
-.. warning::
-  :class: warning-float-right
+.. important::
+  :class: important-float-right
 
   **Uno R4 is not supported!** |BR| If you choose to purchase an Arduino Uno (not recommended), it is vital that you purchase the **Revision 3 (R3)** version, :dcc-ex-red-bold:`not` the **Revision 4 (R4)** version.  The |EX-CS| :dcc-ex-red-bold:`cannot run` on the R4 version.  :doc:`See here from more informtion</news/posts/20230728>`.
 

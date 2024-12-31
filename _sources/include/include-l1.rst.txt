@@ -207,15 +207,15 @@
 ..
 .. |conductor-text| raw:: html
 
-  <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../begin/levels.html#conductor">Conductor</a>
+  <a style="font-weight: bold; font-style: italic; color: #00a3b9 !important;" href="../begin/levels.html#conductor">Conductor</a>
 ..
 .. |tinkerer-text| raw:: html
 
-  <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../begin/levels.html#tinkerer">Tinkerer</a>
+  <a style="font-weight: bold; font-style: italic; color: #00a3b9 !important;" href="../begin/levels.html#tinkerer">Tinkerer</a>
 ..
 .. |engineer-text| raw:: html
 
-  <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../begin/levels.html#engineer">Engineer</a>
+  <a style="font-weight: bold; font-style: italic; color: #00a3b9 !important;" href="../begin/levels.html#engineer">Engineer</a>
 ..
 .. ...............................................
 ..

@@ -68,7 +68,7 @@ Re-upload the EX-CommandStation software
 Using EX-Installer
 ------------------
 
-.. warning::
+.. important::
 
    If you are using |EX-I| **DO NOT** create or edit the myAutomation.h file in the EX-Installer installation folder (the folder the EX-Installer creates).
 

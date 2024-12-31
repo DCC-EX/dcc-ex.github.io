@@ -46,6 +46,8 @@ Also see `System Information`_ for retrieve command station power information.
 
 |hr-dashed|
 
+.. _native-command-onoff-track1:
+
 ``<onOff [track]>`` - Turn power on or off to the MAIN and PROG tracks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -83,10 +85,14 @@ Also allows joining the MAIN and PROG tracks together.
 
 |hr-dashed|
 
+.. _native-command-d-reset:
+
 ``<D RESET>`` - Re-boot the command Station
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* N/A
+
+.. _native-command-j-i:
 
 ``<J I> <JI>`` - Request current status
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -98,6 +104,8 @@ Also allows joining the MAIN and PROG tracks together.
     *Version Introduced: 4.2.19* 
 
 |hr-dashed|
+
+.. _native-command-j-g:
 
 ``<J G> <JG>`` - Request max current
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -122,6 +130,8 @@ Note:  Previously referred to as 'DC-District'.
     :class: in-this-section
 
 |hr-dashed|
+
+.. _native-command-equals-trackletter-mode-cab:
 
 ``<= trackletter mode [cab]>`` - Configure Track Manager 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -158,6 +168,8 @@ Note:  Previously referred to as 'DC-District'.
 
 |hr-dashed|
 
+.. _native-command-equals:
+
 ``<=>`` - Request the current Track Manager configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -174,6 +186,8 @@ Note:  Previously referred to as 'DC-District'.
   * A track set to ``MAIN_AUTO`` (DCC Auto reverser) will respond with ``MAIN A``
 
 |hr-dashed|
+
+.. _native-command-onoff-track2:
 
 ``<onOff [track]>`` - Turn power on or off to the requested TrackManager track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -240,6 +254,8 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
+.. _native-command-t-cab:
+
 ``<t cab>`` - Request a deliberate update on the cab (loco) speed/functions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -264,6 +280,8 @@ Cab (Loco) Commands
 
 
 |hr-dashed|
+
+.. _native-command-t-cab-speed-dir:
 
 ``<t cab speed dir>`` - Set Cab (Loco) Speed
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -294,6 +312,8 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
+.. _native-command-exclamation:
+
 ``<!>`` - Emergency Stop
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -302,6 +322,8 @@ Cab (Loco) Commands
   |_| Refer to the ``<t ..>`` command for details on this response.
 
 |hr-dashed|
+
+.. _native-command-f-cab-funct-state:
 
 ``<F cab funct state>`` - Turn loco decoder functions ON or OFF
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -332,6 +354,8 @@ Cab (Loco) Commands
     * ``<F 1330 1 1>`` Turns the horn ON for CAB 1330
 
 |hr-dashed|
+
+.. _native-command-f-cab-byte1-byte2:
 
 ``<f cab byte1 [byte2]>`` - Decoder Functions - Legacy command |DEPRECATED|
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -436,6 +460,8 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
+.. _native-command-t-reg-cab-speed-dir:
+
 ``<t reg cab speed dir>`` - Set Cab (Loco) Speed - Legacy command |DEPRECATED|
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -464,6 +490,8 @@ Cab (Loco) Commands
 
 |hr-dashed|
 
+.. _native-command-minus-cab:
+
 ``<- [cab]>`` - Remove one or all locos from reminders
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -486,6 +514,8 @@ Cab (Loco) Commands
     ``<->`` - Forgets all locos
 
 |hr-dashed|
+
+.. _native-command-d-speedsteps:
 
 ``<D speedsteps>`` - Switch between 28 and 128 speed steps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -514,6 +544,8 @@ Roster Commands
 
 |hr-dashed|
 
+.. _native-command-j-r:
+
 ``<J R>`` ``<JR>`` - Request the list defined Roster Entry IDs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -528,6 +560,8 @@ Roster Commands
   |_| Response (no roster exists): ``<jR>``
 
 |hr-dashed|
+
+.. _native-command-j-r-id:
 
 ``<J R id>`` ``<JR id>`` - Request details of a specific Roster Entry
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -559,6 +593,8 @@ For details on how to configure turnouts/points see: :ref:`reference/software/co
 
 |hr-dashed|
 
+.. _native-command-t:
+
 ``<T>`` - Request a list all defined turnouts/Points
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -574,6 +610,8 @@ For details on how to configure turnouts/points see: :ref:`reference/software/co
   |_| |_| |_| |_| • 0 = Closed
 
 |hr-dashed|
+
+.. _native-command-t-id-state:
 
 ``<T id state>`` - Throw or Close a defined turnout/point
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -623,6 +661,8 @@ For details on how to configure turnouts/points see: :ref:`reference/software/co
 
 |hr-dashed|
 
+.. _native-command-j-t-id:
+
 ``<J T id>`` ``<JT id>`` - Request details of a specific Turnout/Point
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -645,6 +685,8 @@ For details on how to configure turnouts/points see: :ref:`reference/software/co
   |_| Response (id not defined): ``<jT id X>``
 
 |hr-dashed|
+
+.. _native-command-j-t:
 
 ``<J T>`` ``<JT>`` - Request the list of defined turnout/Point IDs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -671,6 +713,8 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
 
 |hr-dashed|
 
+.. _native-command-i:
+
 ``<I>`` - Request a list all defined turntables/traversers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -685,6 +729,8 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
 
 |hr-dashed|
 
+.. _native-command-i-id:
+
 ``<I id>`` - Request position of the specified turntable/traverser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -697,6 +743,8 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
   |_| > **position** - The current position of the turntable |BR|
 
 |hr-dashed|
+
+.. _native-command-i-id-position:
 
 ``<I id position>`` - Rotate a DCC turntable
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -726,6 +774,8 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
   |_| When a DCC accessory turntable is rotated or moved, no feedback is sent to |EX-CS|, and therefore the **moving** variable will always be '0', and a second response will therefore never be sent to indicate the completion of a rotation or move, unlike how |EX-TT| operates.
 
 |hr-dashed|
+
+.. _native-command-i-id-position-activity:
 
 ``<I id position activity>`` - Rotate EX-Turntable
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -758,6 +808,8 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
 
 |hr-dashed|
 
+.. _native-command-j-o:
+
 ``<J O>`` ``<JO>`` - Request the list of defined turntables/traversers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -770,6 +822,8 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
   |_| Response (no defined Turnouts/Points): ``<jO>``
 
 |hr-dashed|
+
+.. _native-command-j-o-id:
 
 ``<J O id>`` ``<JO id>`` - Request details of the specific turntable/traverser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -802,6 +856,8 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
   |_| The turntable or traverser information does not include the list of defined positions, and this must be requested separated as outlined in the following section.
 
 |hr-dashed|
+
+.. _native-command-j-p-id:
 
 ``<J P id> <JP id>`` - Request all position details of the specified turntable/traverser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -842,6 +898,8 @@ Also see the `EXRAIL` section below for activating routes.
 
 |hr-dashed|
 
+.. _native-command-j-a:
+
 ``<J A>`` - Request a list of Automations/Routes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -855,6 +913,8 @@ Also see the `EXRAIL` section below for activating routes.
   |_| Response (fail): ??? |BR|
 
 |hr-dashed|
+
+.. _native-command-j-a-id:
 
 ``<J A id> <JA id>`` - Request information for a route/automation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -902,6 +962,8 @@ System Information
 
 |hr-dashed|
 
+.. _native-command-s-server-info:
+
 ``<s>`` - Request the DCC-EX version and hardware info, along with listing defined turnouts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -919,6 +981,8 @@ System Information
   |_| |_| |_| |_| • 0=Closed
 
 |hr-dashed|
+
+.. _native-command-hash:
 
 ``<#>`` - Request the number of supported cabs(locos)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -961,6 +1025,8 @@ NOTE: Both the following commands do the same thing. Pick the one that works for
 
 |hr-dashed|
 
+.. _native-command-a-addr-subaddr-activate:
+
 ``<a addr subaddr activate>`` - Control an Accessory Decoder with Address and Subaddress
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -975,6 +1041,8 @@ NOTE: Both the following commands do the same thing. Pick the one that works for
 
 |hr-dashed|
 
+.. _native-command-a-linear-addr-activate:
+
 ``<a linear_addr activate>`` - Control an Accessory Decoder with linear address
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -987,6 +1055,8 @@ NOTE: Both the following commands do the same thing. Pick the one that works for
   *Response:* ???
 
   |hr-dashed|
+
+.. _native-command-a-address-aspect:
 
 ``<A address aspect>`` - Command for DCC Extended Accessories.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1013,6 +1083,8 @@ Sensors
 
 |hr-dashed|
 
+.. _native-command-q:
+
 ``<Q>`` - Lists Status of all sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1024,6 +1096,8 @@ Sensors
   |_| Response (fail): N/A
 
 |hr-dashed|
+
+.. _native-command-s:
 
 ``<S>`` - Request a list of all defined sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1053,6 +1127,8 @@ Signals
 
 |hr-dashed|
 
+.. _native-command-slash-red:
+
 ``</ RED signalId>`` </ AMBER signalId> </ GREEN signalId> - Control a signal
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1075,6 +1151,8 @@ WiFi Control
 
 |hr-dashed|
 
+.. _native-command-plus-x:
+
 ``<+X>`` - Force the Command Station into "WiFi Connected" mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1095,6 +1173,8 @@ WiFi Control
 
 |hr-dashed|
 
+.. _native-command-plus-command:
+
 ``<+command>`` - Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1110,6 +1190,8 @@ WiFi Control
     Users familiar with the AT Command Set of WiFi board may enter commands directly into the |serial monitor| in real-time or as setup commands in the :doc:`mySetup.h file </ex-commandstation/advanced-setup/startup-config>`. This allows users to override the default WiFi connect sequence or to send any command to change a WiFi device setting.
 
 |hr-dashed|
+
+.. _native-command-plus:
 
 ``<+>`` - Switch to direct communication with WiFi AT processor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1136,6 +1218,8 @@ These commands require the optional |EX-FC| hardware to the installed along with
 
 |hr-dashed|
 
+.. _native-command-jc-minutes-speed:
+
 ``<JC minutes speed>`` - Start the fast clock with a specified time
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1152,6 +1236,8 @@ These commands require the optional |EX-FC| hardware to the installed along with
     ``<JC 375 4>`` Will set the fast clock time as 6:15am with the percieved speed factor of 1 minute every 15 seconds (4 times actual).
 
 |hr-dashed|
+
+.. _native-command-jc:
 
 ``<JC>`` - Request the fast clock current time
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1176,6 +1262,8 @@ Writing CVs - Program on the main
 
 |hr-dashed|
 
+.. _native-command-b:
+
 ``<b cab cv bit value>`` - Write Configuration Variable (CV) bit on main track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1188,6 +1276,8 @@ Writing CVs - Program on the main
   *Response:* ???
 
 |hr-dashed|
+
+.. _native-command-w:
 
 ``<w cab cv value>`` - Write Configuration Variable (CV) on main track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1214,6 +1304,8 @@ Reading/Writing Configuration Variables (CVs) - Programming track
 By design, for safety reasons, the NMRA specification prevents locos from responding to throttle or function commands while on the service track. A loco WILL NOT MOVE on the service track! Don't let the little 'jumps' you may see when you are programming a CV confuse you. The loco pulses the motor to give a jump in current that we read as an 'ACK' (acknowledgment), that causes some locos to stutter ahead slightly every time you read or write a CV.
 
 |hr-dashed|
+
+.. _native-command-r-cv:
 
 ``<R cv>`` - Read Configuration Variables (CVs)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1255,6 +1347,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
+.. _native-command-v-cv-bit-onoff:
+
 ``<V cv bit onOff>`` - Verify/Read bit of Configuration Variable (CV) with guessed value
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1276,6 +1370,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
+.. _native-command-v-cv-value:
+
 ``<V cv value>`` - Verify/Read of Configuration Variable (CV) with guessed value
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1296,6 +1392,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
+.. _native-command-b-cv-bit-onoff:
+
 ``<B cv bit onOff>`` - Write bit to Configuration Variable (CV)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1310,7 +1408,9 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
-``<W cv value >`` - Write Configuration Variable (CV)
+.. _native-command-w-cv-value:
+
+``<W cv value>`` - Write Configuration Variable (CV)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
@@ -1325,6 +1425,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
   |_| |_| |_| |_| • -1: if the write failed
 
 |hr-dashed|
+
+.. _native-command-w-address:
 
 ``<W address>`` - Write DCC address to cab (loco)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1347,20 +1449,32 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
+.. _native-command-p-register-hex:
+
 ``<P register hex1 hex2 [hex3 [hex4 [hex5]]]>`` - Writes a DCC packet to the PROG track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+  Writes a DCC packet of two, three, four, or five hexadecimal bytes to a register driving the selected track.
+
   *Parameters:* |BR|
-  |_| > **register:** an internal register number, from 0 through MAX_MAIN_REGISTERS (inclusive), to write (if REGISTER=0) or write and store (if REGISTER>**0) the packet |BR|
+  |_| > **register:** ignored |BR|
   |_| > **byte1:**  first hexadecimal byte in the packet |BR|
   |_| > **byte2:**  second hexadecimal byte in the packet |BR|
   |_| > **byte3:**  optional third hexadecimal byte in the packet |BR|
   |_| > **byte4:**  optional fourth hexadecimal byte in the packet |BR|
   |_| > **byte5:**  optional fifth hexadecimal byte in the packet
-  
-  *Response:* ???
+
+  *Response:* |BR|
+  |_| N/A
+
+  *Notes:*
+
+    register for backwards compat (can not be removed because number of arguments is unknown)
+
 
 |hr-dashed|
+
+.. _native-command-b-cv-bit-value-callbacknum-callbacksub:
 
 ``<B cv bit value callbacknum callbacksub>`` - :dcc-ex-red-bold-italic:`Deprecated, please use <W cv value> instead`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1376,6 +1490,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 
 |hr-dashed|
 
+.. _native-command-w-cv-bit-value-callbacknum-callbacksub:
+
 ``<W cv value callbacknum callbacksub>`` - :dcc-ex-red-bold-italic:`Deprecated, please use <w cv value> instead`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1388,6 +1504,8 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
   *Response:* ``<r callbacknum|callbacksub|cv value>``
 
 |hr-dashed|
+
+.. _native-command-r-cv-callbacknum-callbacksub:
 
 ``<R cv callbacknum callbacksub>`` - Read Configuration variable byte
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1417,6 +1535,8 @@ Write direct DCC packet
 
 |hr-dashed|
 
+.. _native-command-m-register-hex:
+
 ``<M register hex1 hex2 [hex3 [hex4 [hex5]]]>`` - Write a DCC packet the MAIN track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1436,28 +1556,6 @@ Write direct DCC packet
   *Notes:*
   
     register for backwards compat (can not be removed because number of arguments is unknown)
-    
-|hr-dashed|
-
-``<P register hex1 hex2 [hex3 [hex4 [hex5]]]>`` - Write a DCC packet the MAIN track
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  Writes a DCC packet of two, three, four, or five hexadecimal bytes to a register driving the selected track.
-
-  *Parameters:* |BR|
-  |_| > **register:** ignored |BR|
-  |_| > **byte1:**  first hexadecimal byte in the packet |BR|
-  |_| > **byte2:**  second hexadecimal byte in the packet |BR|
-  |_| > **byte3:**  optional third hexadecimal byte in the packet |BR|
-  |_| > **byte4:**  optional fourth hexadecimal byte in the packet |BR|
-  |_| > **byte5:**  optional fifth hexadecimal byte in the packet
-
-  *Response:* |BR|
-  |_| N/A
-
-  *Notes:*
-
-    register for backwards compat (can not be removed because number of arguments is unknown)
 
 ----
 
@@ -1470,6 +1568,8 @@ Programming track - Tuning
     :class: in-this-section
 
 |hr-dashed|
+
+.. _native-command-d-ack-limit-ma:
 
 ``<D ACK LIMIT mA>`` - Sets the ACK limit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1487,6 +1587,8 @@ Programming track - Tuning
 
 |hr-dashed|
 
+.. _native-command-d-ack-min-ms:
+
 ``<D ACK MIN µS>`` - Sets the ACK pulse minimum
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1503,6 +1605,8 @@ Programming track - Tuning
 
 |hr-dashed|
 
+.. _native-command-d-ack-max-ms:
+
 ``<D ACK MAX µS>`` - Sets the ACK pulse maximum
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1518,13 +1622,15 @@ Programming track - Tuning
 
 |hr-dashed|
 
-``<D ACK RETRY x>`` - Adjust ACK retries
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _native-command-d-ack-retry-num:
+
+``<D ACK RETRY num>`` - Adjust ACK retries
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   When reading/writing CVs, the program will try again upon failure.  The default is ``<D ACK RETRY 2>``, which means 3 attempts before a failure is reported.  Each of the unsuccessful attempts is reported in the |serial monitor| or JMRI monitor log.  The last unsuccessful attempt remains on the display if in use.  To reset the running total, send the command manually: ``<D ACK RETRY 2>``.
 
   *Parameters:* |BR|
-  |_| > **x:** Number of times to retry
+  |_| > **num:** Number of times to retry
   
   *Response:* N/A
 
@@ -1534,6 +1640,8 @@ Programming track - Tuning
     When combined with the ``<D ACK ON>`` Command, the ``<R>`` Command (with or without parameters) can be used for diagnostics, for example when you get a "-1" response. (See `Diagnosing Issues <https://github.com/DCC-EX/CommandStation-EX/wiki/Diagnosing-Issues>`_\ ** for more help)
 
 |hr-dashed|
+
+.. _native-command-d-progboost:
 
 ``<D PROGBOOST>`` - Override prog track limit while idle
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1569,6 +1677,8 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
+.. _native-command-t-id-dcc-addr-subaddr:
+
 ``<T id DCC addr subaddr>`` - Define turnout/point on a DCC Accessory Decoder with the specified address and subaddress
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1601,6 +1711,8 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
+.. _native-command-t-id-dcc-linearaddr:
+
 ``<T id DCC linearAddr>`` - Define turnout/point on a DCC Accessory Decoder with the specified linear address
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1613,6 +1725,8 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
   *Example:* ``<T 23 DCC 44>`` (corresponds to address 11 subaddress 3)
 
 |hr-dashed|
+
+.. _native-command-t-id-vpin-vpin:
 
 ``<T id VPIN vpin>`` - Define turnout/point output on specified vpin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1635,6 +1749,8 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
     This may be used for controlling Arduino digital output pins or pins on an I/O Extender.
 
 |hr-dashed|
+
+.. _native-command-t-id-servo-vpin:
 
 ``<T id SERVO vpin thrownPos closedPos profile>`` - Define turnout/point servo (PWM) on specified vpin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1668,6 +1784,8 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
+.. _native-command-t-id:
+
 ``<T id> - Deletes a turnout by Id``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1679,6 +1797,8 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
   |_| Fail: ``<X>``  (Id does not exist)
 
 |hr-dashed|
+
+.. _native-command-d-servo-vpin-value-profile:
 
 ``<D SERVO vpin value [profile]>`` - Set servo position to value on pin vpin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1701,6 +1821,8 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
 
 |hr-dashed|
 
+.. _native-command-t-id-addr-subaddr:
+
 ``<T id addr subaddr>`` - Define a turnout on a DCC Accessory Decoder with the specified address and subaddress - Legacy command |DEPRECATED|
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1714,6 +1836,8 @@ Turnouts may be in either of two states: Closed or Thrown. The turnout/point com
   *Version Deprecated:* ???
 
 |hr-dashed|
+
+.. _native-command-t-id-vpin-activepos-inactivepos:
 
 ``<T id vpin activePos inactivePos>`` - Define a turnout/point servo on specified vpin - Legacy command |DEPRECATED|
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1768,6 +1892,8 @@ It is anticipated that throttle developers will be able to "draw" turntables wit
 
 |hr-dashed|
 
+.. _native-command-t-id-dcc-home:
+
 ``<I id DCC home>`` - Define a DCC accessory turntable/traverser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1783,6 +1909,8 @@ It is anticipated that throttle developers will be able to "draw" turntables wit
   *Example:* ``<I 2 DCC 50>`` defines a DCC accessory turntable/traverser with a 5 degree home angle.
 
 |hr-dashed|
+
+.. _native-command-i-id-extt-vpin-home:
 
 ``<I id EXTT vpin home>`` - Define an EX-Turntable turntable/traverser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1800,6 +1928,8 @@ It is anticipated that throttle developers will be able to "draw" turntables wit
   *Example:* ``<I 2 EXTT 600 50>`` defines an EX-Turntable turntable/traverser at Vpin 600 with a 5 degree home angle.
 
 |hr-dashed|
+
+.. _native-command-i-id-add-position-value-angle:
 
 ``<I id ADD position value angle>`` - Add a position to a turntable/traverser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1854,6 +1984,8 @@ To monitor one or more Arduino pins for sensor triggers, first define/edit/delet
 
 |hr-dashed|
 
+.. _native-command-s-id-vpin-pullup:
+
 ``<S id vpin pullup>`` - Create a new sensor ID
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1875,6 +2007,8 @@ To monitor one or more Arduino pins for sensor triggers, first define/edit/delet
     It is worthwhile creating new IDs to define sensors, for JMRI, using vpin=id. It will simplify your life.
 
 |hr-dashed|
+
+.. _native-command-s-id:
 
 ``<S id>`` - Delete defined sensor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1899,6 +2033,8 @@ Depending on whether the physical sensor is acting as an "event-trigger" or a "d
 
 |hr-dashed|
 
+.. _native-command-slash-latch-vpin:
+
 ``</ LATCH vpin>`` - Lock sensor ON, preventing external influence
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1912,6 +2048,8 @@ Lock sensor ON, preventing external influence, valid IDs are in the range 0 - 25
   |_| Fail: ?
 
 |hr-dashed|
+
+.. _native-command-slash-unlatch-vpin:
 
 ``</ UNLATCH vpin>`` - Unlock sensor, returning to current external state
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1948,6 +2086,8 @@ To have |EX-CS| utilise one or more Arduino pins as custom outputs, first define
 
 |hr-dashed|
 
+.. _native-command-z-id-vpin-iflag:
+
 ``<Z id vpin iflag>`` - Creates a new output ID, with specified PIN and IFLAG values
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1978,6 +2118,8 @@ To have |EX-CS| utilise one or more Arduino pins as custom outputs, first define
 
 |hr-dashed|
 
+.. _native-command-z-id:
+
 ``<Z id>`` - Deletes definition of output ID
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1990,6 +2132,8 @@ To have |EX-CS| utilise one or more Arduino pins as custom outputs, first define
 
 |hr-dashed|
 
+.. _native-command-z:
+
 ``<Z>`` -Lists all defined output pins
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1998,6 +2142,8 @@ To have |EX-CS| utilise one or more Arduino pins as custom outputs, first define
   |_| Fail: ``<X>``  (e.g. ID does not exist)
 
 |hr-dashed|
+
+.. _native-command-z-id-state:
 
 ``<Z id state>`` - Sets output ID to either INACTIVE or ACTIVE state
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2035,12 +2181,16 @@ EEPROM Management (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
+.. _native-command-d-eeprom:
+
 ``<D EEPROM>`` - Diagnostic dump EEPROM contents
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* ???
 
 |hr-dashed|
+
+.. _native-command-e-erase:
 
 ``<e>`` - Erase ALL (turnouts, sensors, and outputs) from EEPROM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2049,6 +2199,8 @@ EEPROM Management (Configuring the EX-CommandStation)
   |_| ``<O>``
 
 |hr-dashed|
+
+.. _native-command-e-store:
 
 ``<E>`` - Store definitions to EEPROM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2068,6 +2220,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
+.. _native-command-d-ack-state:
+
 ``<D ACK state>`` - Enables ACK diagnostics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -2086,6 +2240,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
+.. _native-command-d-cmd-state:
+
 ``<D CMD state>`` - Enables Command Parser diagnostics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -2101,6 +2257,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
     When enabled, diagnostic messages will be shown on the the |serial monitor|.
 
 |hr-dashed|
+
+.. _native-command-d-ethernet-satet:
 
 ``<D ETHERNET state>`` - Enables Ethernet diagnostics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2118,6 +2276,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
+.. _native-command-d-lcn-state:
+
 ``<D LCN state>`` - Enables LCN interface diagnostics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -2129,6 +2289,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
   *Response:* N/A
 
 |hr-dashed|
+
+.. _native-command-d-wifi-state:
 
 ``<D WIFI state>`` - Enables WiFi diagnostics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2146,6 +2308,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
+.. _native-command-d-wit-state:
+
 ``<D WIT state>`` - Enables WiThrottle diagnostics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -2162,6 +2326,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
+.. _native-command-d-cabs:
+
 ``<D CABS>`` - Shows cab numbers and speed in reminder tables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -2170,6 +2336,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
   |_| Displayed on the serial monitor only.
 
 |hr-dashed|
+
+.. _native-command-d-hal-show:
 
 ``<D HAL SHOW>`` - Shows configured servo board and GPIO extender board config and used pins
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2188,6 +2356,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
     <* MCP23017 I2C:x21 Configured on Vpins:180-195 * >
 
 |hr-dashed|
+
+.. _native-command-d-ram:
 
 ``<D RAM>`` - Shows remaining RAM (Free Memory)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2208,12 +2378,7 @@ I/O (HAL) Diagnostics
 
 |hr-dashed|
 
-``<D HAL SHOW>`` - List HAL devices and allocated VPINs
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-  *Response:* ???
-
-|hr-dashed|
+.. _native-command-d-anin-vpin:
 
 ``<D ANIN vpin>`` - Read and display pin vpin's analogue value
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2224,6 +2389,8 @@ I/O (HAL) Diagnostics
   *Response:* ???
 
 |hr-dashed|
+
+.. _native-command-d-anout-vpin-value:
 
 ``<D ANOUT vpin value [param2]>`` - Write value to analogue vpin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2251,6 +2418,8 @@ Other Commands
     :class: in-this-section
 
 |hr-dashed|
+
+.. _native-command-c-cmd:
 
 ``<U cmd>`` - Is reserved for user commands (through user filter)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

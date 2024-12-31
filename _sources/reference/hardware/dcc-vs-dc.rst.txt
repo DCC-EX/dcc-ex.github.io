@@ -69,17 +69,20 @@ For detailed steps on how to use TrackManager to change track modes and settings
 Hardware Requirements
 ---------------------
 
-These requirements are only for operating DC locomotives. There is nothing to do in a pure DCC environment where no DC or analogue locomotives are run.
+These requirements are only for *operating DC locomotives*. There is nothing to do in a pure DCC environment where no DC or analogue locomotives are run.
 
-**Brake Pin:** In order for |TM| to operate in DC mode, the motor shield must have a brake pin defined in your “config.h” motor shield definition. There are a very limited number of motor boards that are suitable for use with DC mode, and any other motor boards are unsupported. The current list is available in :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`.
+**Brake Pin:** In order for |TM| to operate in DC mode, the motor shield must have a brake pin defined in your "config.h" motor shield definition. |BR| There are a very limited number of motor drivers that are known to be suitable for use with DC mode. The current list is available in :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`. Any other motor drivers, not explicitly listed, are not supported. 
 
-Do not attempt to connect two insulated tracks together and drive a DCC engine back and forth until someone bolder than you tries it first (or you've tested it).
+Note the |EX-CSB1-SHORT| *has* a brake pin and *is* therefore capable of supporting DC PWM.
 
 .. warning:: 
+  :class: warning-float-right
 
   Never drive a loco from an |EX-CS| controlled track or district to any other DCC or DC System.
 
-Some suggested precautions are to add 4 fuses on wires (-b +b, -a +a) to the |EX-CS| connections. Use 2A fuses for the standard L298P motor shield or 5A fuses for the larger motor boards.
+Do not attempt to connect two insulated tracks together and drive a DCC engine back and forth until someone bolder than you tries it first (or you've tested it).
+
+Some suggested precautions are to add 4 fuses on wires (-b +b, -a +a) to the |EX-CS| connections. Use 2A fuses for the standard L298P motor shield or 5A fuses for the larger motor drivers.
 
 |HR-DASHED|
 
@@ -217,13 +220,15 @@ And no we're not using another Expensive DCC decoder under the table on each Tra
 Hardware Requirements and Technical Notes
 =========================================
 
-.. note:: 
-
-  These requirements are only for operating DC locomotives. There is nothing to do in a pure DCC environment where no DC or analogue locomotives are run.
+These requirements are only for operating DC locomotives. There is nothing to do in a pure DCC environment where no DC or analogue locomotives are run.
 
 .. warning:: 
 
-  In order for |TM| to operate in DC mode, the motor shield must have a brake pin defined in your “config.h” motor shield definition. There are a very limited number of motor boards that are suitable for use with DC mode, and any other motor boards are unsupported. The current list is available in :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`.
+  In order for |TM| to operate in DC mode, the motor shield must have a brake pin defined in your "config.h" motor shield definition. 
+  
+  There are a very limited number of motor drivers that are known to be suitable for use with DC mode. The current list is available in :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`. Any other motor drivers, not explicitly listed, are not supported. 
+ 
+  Note the |EX-CSB1-SHORT| *has* a brake pin and *is* therefore capable of supporting DC PWM.
 
 Do not attempt to connect two insulated tracks together and drive a DCC engine back and forth until someone bolder than you tries it first (or you've tested it).
 
@@ -231,7 +236,7 @@ Do not attempt to connect two insulated tracks together and drive a DCC engine b
 
   Never drive a loco from an |EX-CS| controlled track or district to any other DCC or DC System.
 
-Some suggested precautions are to add 4 fuses on wires (-b +b, -a +a) to the |EX-CS| connections. Use 2A fuses for the standard L298P motor shield or 5A fuses for the larger motor boards.
+Some suggested precautions are to add 4 fuses on wires (-b +b, -a +a) to the |EX-CS| connections. Use 2A fuses for the standard L298P motor shield or 5A fuses for the larger motor drivers.
 
 ----
 

@@ -22,9 +22,9 @@ The nominal spec asks for 58us '1' bits and 100us '0' bits, with a few microseco
 For this to work, you need two things:
 
 * The signal pin for the track you want to have high accuracy must be a Timer1 pin
-* You must use the single signal pin configuration for your motor board
+* You must use the single signal pin configuration for your motor driver
 
-.. NOTE:: You do not have to do anything to enable High Accuracy Waveform Mode. If your motor board config meets the above two criteria, it will be enabled automatically and report that in the |serial monitor| boot log.
+.. NOTE:: You do not have to do anything to enable High Accuracy Waveform Mode. If your motor driver config meets the above two criteria, it will be enabled automatically and report that in the |serial monitor| boot log.
 
 The Motor Board Config
 ========================
@@ -69,7 +69,7 @@ However, an Uno's pins do not line up with this shield. In order to use high acc
 Inverter Circuit
 ================
 
-Some motor boards like the IBT_2 and Wingzine boards have two separate PWM inputs, usually labeled LPWM and RPWM for left and right PWM, or CW and CCW for clockwise and counter clockwise. The following circuit will take a single PWM signal from your Command Station, split it in two, and provide the inverted signal to the second PWM pin on 2 signal input motor boards.
+Some motor boards like the IBT_2 and Wingzine boards have two separate PWM inputs, usually labeled LPWM and RPWM for left and right PWM, or CW and CCW for clockwise and counter clockwise. The following circuit will take a single PWM signal from your Command Station, split it in two, and provide the inverted signal to the second PWM pin on 2 signal input motor drivers.
 
 .. figure:: /_static/images/motorboards/inverter1.jpg
    :alt: Transistor inverter circuit

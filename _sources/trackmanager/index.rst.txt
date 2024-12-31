@@ -124,7 +124,7 @@ To run DC locos with your |EX-CS| you will need:
 
 *No additional external DCC decoders are required for DC (PWM) track assignments, and a single* |EX-CS| *is the only hardware needed for full functionality.*
 
-Note: An additional suggested precaution is to add 4 fuses on wires (-b +b, -a +a) to the |EX-CS| connections. Use 2A fuses for the standard L298P motor shield or 5A fuses for the |EX-MS| and other the larger motor boards.
+Note: An additional suggested precaution is to add 4 fuses on wires (-b +b, -a +a) to the |EX-CS| connections. Use 2A fuses for the standard L298P motor shield or 5A fuses for the |EX-MS| and other the larger motor drivers.
 
 |HR-DASHED|
 
@@ -675,7 +675,7 @@ In a |EX-R| Automation script we could assign a track mode to DC and wait for a 
   SET_TRACK(A, NONE) PRINT ("District A disabled")
   DONE
  Copy and repeat AUTOMATION(506-510, District B  mode)
-  and create any additional combinations or tracks C - H as you add more motor boards.
+  and create any additional combinations or tracks C - H as you add more motor drivers.
 
 |HR-DASHED|
 

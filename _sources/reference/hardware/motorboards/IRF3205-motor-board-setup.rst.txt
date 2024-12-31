@@ -353,7 +353,7 @@ If you want to change your motor shield or create a definition for one that does
 
 For the Engineers, the definitions and implementation for motor board control are in the following files:
 
-  **MotorDrivers.h**  - Contains the definitions for all the currently supported motor boards
+  **MotorDrivers.h**  - Contains the definitions for all the currently supported motor drivers
   **MotorDriver.h** - Creates the "MotorDriver" C++ class that defines the data type for a motor controller
   **MotorDriver.cpp** - The routines that control the operation of a motor controller (Power, Current Sense, etc.)
 

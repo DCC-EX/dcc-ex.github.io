@@ -15,7 +15,7 @@ Motor Driver Configuration
     :depth: 2
     :local:
 
-|EX-CS| supports many different motor boards, you can select any of the pre-configured boards simply by choosing them from the motor board dropdown list in the installer, or by adding them with one line in your config.h file. If your board is not supported, these instructions will show you how to add it.
+|EX-CS| supports many different motor drivers, you can select any of the pre-configured boards simply by choosing them from the motor driver dropdown list in the installer, or by adding them with one line in your config.h file. If your board is not supported, these instructions will show you how to add it.
 
 .. note:: |EX-CS| does NOT require the transistor mixer/inverter circuit seen in many tutorials for boards like the L298N and IBT_2 that have separate PWM inputs, use two GPIO pins on the Arduino and connect directly to these boards. However, if you already have that circuit or want to use it in order to use one pin, you may. This will also allow you to use "high accuracy waveform" mode if you need it. See below for more information on high accuracy mode.
 
@@ -24,12 +24,12 @@ Configure Using the Installer
 
 A |Tinkerer-text| and even a |Conductor-text| should be comfortable with this option. 
 
-If you are using the |EX-I|, just select your board from the motor board drop down list. Make sure your other selections are correct, and then simply upload the changes to your |EX-CS|. 
+If you are using the |EX-I|, just select your board from the motor driver drop down list. Make sure your other selections are correct, and then simply upload the changes to your |EX-CS|. 
 
 Configure By Editing the config.h File
 ======================================
 
-Using the |Arduino IDE|, PlatformIO, or any other method for editing a file and uploading a sketch, you can add your motor board by editing the config.h file. Click here for a list of :doc:`Currently supported boards </reference/hardware/motor-boards>`
+Using the |Arduino IDE|, PlatformIO, or any other method for editing a file and uploading a sketch, you can add your motor driver by editing the config.h file. Click here for a list of :doc:`Currently supported boards </reference/hardware/motor-boards>`
 
 Open the config.h file in your editor. If this is the first time configuring your system, you may need to copy the "config.example.h" file and name the copy "config.h".
 
@@ -82,7 +82,7 @@ If your board is not in the list (remember many boards are considered a "STANDAR
 
    #define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD
 
-We are going to replace this with a new motor board definition and select it. Comment out the above line and replace it with something that looks like this:
+We are going to replace this with a new motor driver definition and select it. Comment out the above line and replace it with something that looks like this:
 
 .. code-block:: cpp
 
@@ -172,7 +172,7 @@ We use the senseFactor to calculate our current in milliAmps by just taking a ra
 
 You will also note that if you have the maximum of 2A flowing for this board (2000mA), that the pin reading will only be around 669. That isn't very close to 1023. That is because the Arduino Motor Shield actually only reports its maximum current of 2 Amps as 3.3V, not 5. That would let you use a 3.3V microcontroller with this motor shield.
 
-Many of the stand-alone (discrete) motor boards like the L298N or IBT_2 require a current sense resistor connected between the Command Station pin on the motor board and ground. This creates a voltage we can read by then connecting the pin to our Command Station analog pin (usually A0 or A1). This resistor needs to be very small, usually .15 to .25 ohms. We don't want a large voltage drop taking power away from our track (E = I * R, so 2 Amps at 1 Ohm would drop 2 Volts!). We also don't want to have to have a huge resistor (P = I * E, so 2V drop in the resistor times 2 Amps of current is 4 Watts!). But, you say, if the Arduino Motor Shield uses only a .15 Ohm resistor, that's only a voltage reading of 0 to .3 volts (.15 Ohms * 2 Amps). That is a very low reading for the Arduino to read! And that is why the motor shield has an op amp circuit that multiplies this voltage by 11 to bring it up to 3.3 Volts and put it in a range that an Arduino can read.
+Many of the stand-alone (discrete) motor drivers like the L298N or IBT_2 require a current sense resistor connected between the Command Station pin on the motor board and ground. This creates a voltage we can read by then connecting the pin to our Command Station analog pin (usually A0 or A1). This resistor needs to be very small, usually .15 to .25 ohms. We don't want a large voltage drop taking power away from our track (E = I * R, so 2 Amps at 1 Ohm would drop 2 Volts!). We also don't want to have to have a huge resistor (P = I * E, so 2V drop in the resistor times 2 Amps of current is 4 Watts!). But, you say, if the Arduino Motor Shield uses only a .15 Ohm resistor, that's only a voltage reading of 0 to .3 volts (.15 Ohms * 2 Amps). That is a very low reading for the Arduino to read! And that is why the motor shield has an op amp circuit that multiplies this voltage by 11 to bring it up to 3.3 Volts and put it in a range that an Arduino can read.
 
 .. warning:: Choose your current sense resistor or circuit carefully! You need to account for all the factors mentioned above, and you do not want to apply more than 5 Volts to any pin on an Arduino! (Be even more careful if you are using a 3.3V board).
 
@@ -186,7 +186,7 @@ Just Buy a Current Sense Board Instead
 
 A |Tinkerer-text| or |Conductor-text| who doesn't mind connecting a few jumper wires may like this option.
 
-This saves a lot of time and hassle (not to mention math), and also brings things into the realm of Tinkerer rather than just an Engineer. You also have the added benefit that the same current sense board can be used with lots of different motor boards. Many of these boards have a very simple current conversion factor because they output 1 Volt for 1 Amp! While discontinued, you can still find MAX471 boards for sale.
+This saves a lot of time and hassle (not to mention math), and also brings things into the realm of Tinkerer rather than just an Engineer. You also have the added benefit that the same current sense board can be used with lots of different motor drivers. Many of these boards have a very simple current conversion factor because they output 1 Volt for 1 Amp! While discontinued, you can still find MAX471 boards for sale.
 
 Where do I measure the current?
 -------------------------------

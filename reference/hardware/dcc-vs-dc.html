@@ -686,14 +686,15 @@
 </section>
 <section id="hardware-requirements">
 <h3><a class="toc-backref" href="#id10" role="doc-backlink">Hardware Requirements</a><a class="headerlink" href="#hardware-requirements" title="Link to this heading"></a></h3>
-<p>These requirements are only for operating DC locomotives. There is nothing to do in a pure DCC environment where no DC or analogue locomotives are run.</p>
-<p><strong>Brake Pin:</strong> In order for <span class="ex-suffix">TrackManager</span> to operate in DC mode, the motor shield must have a brake pin defined in your “config.h” motor shield definition. There are a very limited number of motor boards that are suitable for use with DC mode, and any other motor boards are unsupported. The current list is available in <a class="reference internal" href="motor-boards.html#trackmanager-dc-compatible-boards"><span class="std std-ref">TrackManager DC compatible boards</span></a>.</p>
-<p>Do not attempt to connect two insulated tracks together and drive a DCC engine back and forth until someone bolder than you tries it first (or you’ve tested it).</p>
-<div class="admonition warning">
+<p>These requirements are only for <em>operating DC locomotives</em>. There is nothing to do in a pure DCC environment where no DC or analogue locomotives are run.</p>
+<p><strong>Brake Pin:</strong> In order for <span class="ex-suffix">TrackManager</span> to operate in DC mode, the motor shield must have a brake pin defined in your “config.h” motor shield definition. <br /> There are a very limited number of motor drivers that are known to be suitable for use with DC mode. The current list is available in <a class="reference internal" href="motor-boards.html#trackmanager-dc-compatible-boards"><span class="std std-ref">TrackManager DC compatible boards</span></a>. Any other motor drivers, not explicitly listed, are not supported.</p>
+<p>Note the <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a> <em>has</em> a brake pin and <em>is</em> therefore capable of supporting DC PWM.</p>
+<div class="warning-float-right admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Never drive a loco from an <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> controlled track or district to any other DCC or DC System.</p>
 </div>
-<p>Some suggested precautions are to add 4 fuses on wires (-b +b, -a +a) to the <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> connections. Use 2A fuses for the standard L298P motor shield or 5A fuses for the larger motor boards.</p>
+<p>Do not attempt to connect two insulated tracks together and drive a DCC engine back and forth until someone bolder than you tries it first (or you’ve tested it).</p>
+<p>Some suggested precautions are to add 4 fuses on wires (-b +b, -a +a) to the <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> connections. Use 2A fuses for the standard L298P motor shield or 5A fuses for the larger motor drivers.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="technical-details">
@@ -807,20 +808,19 @@ And no we’re not using another Expensive DCC decoder under the table on each T
 <hr class="docutils" />
 <section id="hardware-requirements-and-technical-notes">
 <h2><a class="toc-backref" href="#id17" role="doc-backlink">Hardware Requirements and Technical Notes</a><a class="headerlink" href="#hardware-requirements-and-technical-notes" title="Link to this heading"></a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
 <p>These requirements are only for operating DC locomotives. There is nothing to do in a pure DCC environment where no DC or analogue locomotives are run.</p>
-</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>In order for <span class="ex-suffix">TrackManager</span> to operate in DC mode, the motor shield must have a brake pin defined in your “config.h” motor shield definition. There are a very limited number of motor boards that are suitable for use with DC mode, and any other motor boards are unsupported. The current list is available in <a class="reference internal" href="motor-boards.html#trackmanager-dc-compatible-boards"><span class="std std-ref">TrackManager DC compatible boards</span></a>.</p>
+<p>In order for <span class="ex-suffix">TrackManager</span> to operate in DC mode, the motor shield must have a brake pin defined in your “config.h” motor shield definition.</p>
+<p>There are a very limited number of motor drivers that are known to be suitable for use with DC mode. The current list is available in <a class="reference internal" href="motor-boards.html#trackmanager-dc-compatible-boards"><span class="std std-ref">TrackManager DC compatible boards</span></a>. Any other motor drivers, not explicitly listed, are not supported.</p>
+<p>Note the <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a> <em>has</em> a brake pin and <em>is</em> therefore capable of supporting DC PWM.</p>
 </div>
 <p>Do not attempt to connect two insulated tracks together and drive a DCC engine back and forth until someone bolder than you tries it first (or you’ve tested it).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Never drive a loco from an <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> controlled track or district to any other DCC or DC System.</p>
 </div>
-<p>Some suggested precautions are to add 4 fuses on wires (-b +b, -a +a) to the <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> connections. Use 2A fuses for the standard L298P motor shield or 5A fuses for the larger motor boards.</p>
+<p>Some suggested precautions are to add 4 fuses on wires (-b +b, -a +a) to the <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> connections. Use 2A fuses for the standard L298P motor shield or 5A fuses for the larger motor drivers.</p>
 </section>
 <hr class="docutils" />
 <section id="next-steps">
@@ -848,7 +848,7 @@ And no we’re not using another Expensive DCC decoder under the table on each T
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fcbf1d08f40>
+    <jinja2.runtime.BlockReference object at 0x7f8277196f50>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

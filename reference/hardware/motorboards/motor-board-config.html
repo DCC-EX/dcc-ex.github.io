@@ -655,7 +655,7 @@
 </ul>
 </nav>
 </aside>
-<p><a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> supports many different motor boards, you can select any of the pre-configured boards simply by choosing them from the motor board dropdown list in the installer, or by adding them with one line in your config.h file. If your board is not supported, these instructions will show you how to add it.</p>
+<p><a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> supports many different motor drivers, you can select any of the pre-configured boards simply by choosing them from the motor driver dropdown list in the installer, or by adding them with one line in your config.h file. If your board is not supported, these instructions will show you how to add it.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> does NOT require the transistor mixer/inverter circuit seen in many tutorials for boards like the L298N and IBT_2 that have separate PWM inputs, use two GPIO pins on the Arduino and connect directly to these boards. However, if you already have that circuit or want to use it in order to use one pin, you may. This will also allow you to use “high accuracy waveform” mode if you need it. See below for more information on high accuracy mode.</p>
@@ -663,11 +663,11 @@
 <section id="configure-using-the-installer">
 <h2><a class="toc-backref" href="#id1" role="doc-backlink">Configure Using the Installer</a><a class="headerlink" href="#configure-using-the-installer" title="Link to this heading"></a></h2>
 <p>A <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../../begin/levels.html#tinkerer">Tinkerer</a> and even a <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../../begin/levels.html#conductor">Conductor</a> should be comfortable with this option.</p>
-<p>If you are using the <a href="../../../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a>, just select your board from the motor board drop down list. Make sure your other selections are correct, and then simply upload the changes to your <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>.</p>
+<p>If you are using the <a href="../../../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a>, just select your board from the motor driver drop down list. Make sure your other selections are correct, and then simply upload the changes to your <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>.</p>
 </section>
 <section id="configure-by-editing-the-config-h-file">
 <h2><a class="toc-backref" href="#id2" role="doc-backlink">Configure By Editing the config.h File</a><a class="headerlink" href="#configure-by-editing-the-config-h-file" title="Link to this heading"></a></h2>
-<p>Using the <a class="reference internal" href="../../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">Arduino IDE</span></a>, PlatformIO, or any other method for editing a file and uploading a sketch, you can add your motor board by editing the config.h file. Click here for a list of <a class="reference internal" href="../motor-boards.html"><span class="doc">Currently supported boards</span></a></p>
+<p>Using the <a class="reference internal" href="../../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">Arduino IDE</span></a>, PlatformIO, or any other method for editing a file and uploading a sketch, you can add your motor driver by editing the config.h file. Click here for a list of <a class="reference internal" href="../motor-boards.html"><span class="doc">Currently supported boards</span></a></p>
 <p>Open the config.h file in your editor. If this is the first time configuring your system, you may need to copy the “config.example.h” file and name the copy “config.h”.</p>
 <p>Find this section in the file:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// DEFINE MOTOR_SHIELD_TYPE BELOW ACCORDING TO THE FOLLOWING TABLE:</span>
@@ -708,7 +708,7 @@
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define MOTOR_SHIELD_TYPE STANDARD_MOTOR_SHIELD</span>
 </pre></div>
 </div>
-<p>We are going to replace this with a new motor board definition and select it. Comment out the above line and replace it with something that looks like this:</p>
+<p>We are going to replace this with a new motor driver definition and select it. Comment out the above line and replace it with something that looks like this:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define MY_MOTOR_SHIELD F(&quot;MY_MOTOR_SHIELD&quot;),\</span>
 <span class="cp">  new MotorDriver(3, 12, UNUSED_PIN, UNUSED_PIN, A0, 2.99, 2000, UNUSED_PIN), \</span>
 <span class="cp">  new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 2.99, 2000, UNUSED_PIN)</span>
@@ -784,7 +784,7 @@
 <p>You may notice that we actually use 2.99 in our code. You caught us! Through experimentation and measurement, we tweak these values to be more accurate. Nothing is ever 100% as reported in a data sheet.</p>
 <p>We use the senseFactor to calculate our current in milliAmps by just taking a raw pin reading and multiplying it by this current senseFactor. Again using the Arduino Motor Shield values, if we got a reading of 300 (out of a possible value between 0 and 1023), that would be 300 * 2.99 or about 897mA.</p>
 <p>You will also note that if you have the maximum of 2A flowing for this board (2000mA), that the pin reading will only be around 669. That isn’t very close to 1023. That is because the Arduino Motor Shield actually only reports its maximum current of 2 Amps as 3.3V, not 5. That would let you use a 3.3V microcontroller with this motor shield.</p>
-<p>Many of the stand-alone (discrete) motor boards like the L298N or IBT_2 require a current sense resistor connected between the Command Station pin on the motor board and ground. This creates a voltage we can read by then connecting the pin to our Command Station analog pin (usually A0 or A1). This resistor needs to be very small, usually .15 to .25 ohms. We don’t want a large voltage drop taking power away from our track (E = I * R, so 2 Amps at 1 Ohm would drop 2 Volts!). We also don’t want to have to have a huge resistor (P = I * E, so 2V drop in the resistor times 2 Amps of current is 4 Watts!). But, you say, if the Arduino Motor Shield uses only a .15 Ohm resistor, that’s only a voltage reading of 0 to .3 volts (.15 Ohms * 2 Amps). That is a very low reading for the Arduino to read! And that is why the motor shield has an op amp circuit that multiplies this voltage by 11 to bring it up to 3.3 Volts and put it in a range that an Arduino can read.</p>
+<p>Many of the stand-alone (discrete) motor drivers like the L298N or IBT_2 require a current sense resistor connected between the Command Station pin on the motor board and ground. This creates a voltage we can read by then connecting the pin to our Command Station analog pin (usually A0 or A1). This resistor needs to be very small, usually .15 to .25 ohms. We don’t want a large voltage drop taking power away from our track (E = I * R, so 2 Amps at 1 Ohm would drop 2 Volts!). We also don’t want to have to have a huge resistor (P = I * E, so 2V drop in the resistor times 2 Amps of current is 4 Watts!). But, you say, if the Arduino Motor Shield uses only a .15 Ohm resistor, that’s only a voltage reading of 0 to .3 volts (.15 Ohms * 2 Amps). That is a very low reading for the Arduino to read! And that is why the motor shield has an op amp circuit that multiplies this voltage by 11 to bring it up to 3.3 Volts and put it in a range that an Arduino can read.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Choose your current sense resistor or circuit carefully! You need to account for all the factors mentioned above, and you do not want to apply more than 5 Volts to any pin on an Arduino! (Be even more careful if you are using a 3.3V board).</p>
@@ -796,7 +796,7 @@
 <section id="just-buy-a-current-sense-board-instead">
 <h3><a class="toc-backref" href="#id8" role="doc-backlink">Just Buy a Current Sense Board Instead</a><a class="headerlink" href="#just-buy-a-current-sense-board-instead" title="Link to this heading"></a></h3>
 <p>A <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../../begin/levels.html#tinkerer">Tinkerer</a> or <a style="font-weight: bold; font-style: italic; color: #00a3b9;" href="../../../begin/levels.html#conductor">Conductor</a> who doesn’t mind connecting a few jumper wires may like this option.</p>
-<p>This saves a lot of time and hassle (not to mention math), and also brings things into the realm of Tinkerer rather than just an Engineer. You also have the added benefit that the same current sense board can be used with lots of different motor boards. Many of these boards have a very simple current conversion factor because they output 1 Volt for 1 Amp! While discontinued, you can still find MAX471 boards for sale.</p>
+<p>This saves a lot of time and hassle (not to mention math), and also brings things into the realm of Tinkerer rather than just an Engineer. You also have the added benefit that the same current sense board can be used with lots of different motor drivers. Many of these boards have a very simple current conversion factor because they output 1 Volt for 1 Amp! While discontinued, you can still find MAX471 boards for sale.</p>
 </section>
 <section id="where-do-i-measure-the-current">
 <h3><a class="toc-backref" href="#id9" role="doc-backlink">Where do I measure the current?</a><a class="headerlink" href="#where-do-i-measure-the-current" title="Link to this heading"></a></h3>
@@ -844,7 +844,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fcbf2cbcfd0>
+    <jinja2.runtime.BlockReference object at 0x7f82735884f0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

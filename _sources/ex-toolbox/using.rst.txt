@@ -333,7 +333,7 @@ To access the Track Manager either:
 * Select 'Track Manager' from the Menu
 
 
-Track Manager allow you to change up to 8 channels (depending on the Motor Shield you are using)
+Track Manager allow you to change up to 8 channels (depending on the Motor Driver you are using)
 
 Each channel can be one of:
 
@@ -423,7 +423,7 @@ Current Meter
 
    EX-Toolbox Current Meter Screen
 
-The Current Status screen will show you the current values for up to eight channels on the motor shield on your |EX-CS|.
+The Current Status screen will show you the current values for up to eight channels on the motor driver on your |EX-CS|.
 
 To access the Current Meter screen either:
 

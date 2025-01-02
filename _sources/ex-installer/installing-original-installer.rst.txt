@@ -43,7 +43,7 @@ Requirements (for installing)
 * a |EX-CS|
 
   * Arduino Mega or Arduino Uno 
-  * Motor shield
+  * Motor Driver
   * optional WiFi shield or ethernet shield
   * optional LCD or oLED display
   
@@ -129,7 +129,7 @@ In the left side options pane, use the dropdown selector boxes to choose the fol
 
 1. Select your **Command Station Type** |BR| This should (almost always) be **'Command Station EX'**
 2. Select your **Arduino Board Type**
-3. Select your **Motor Shield** |BR|
+3. Select your **Motor Driver** |BR|
 4. Select your **COM Port** |BR| The installer will usually find it for you but check against the COM port your took note of earlier
 5. Check the checkbox for your networking method if you have a Network Shield or WiFi Shield installed
 6. Check the checkbox for your display type if using an LCD or OLED display

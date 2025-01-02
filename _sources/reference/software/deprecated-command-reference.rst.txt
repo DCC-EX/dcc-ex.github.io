@@ -72,7 +72,9 @@ Examples:
 
 .. note:: The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work. If you drive onto a programming track that is "joined" and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!
 
-.. note:: In some split motor shield hardware configurations JOIN will not be able to work.
+.. note:: 
+  
+  In some split |motor shield| hardware configurations JOIN will not be able to work.
 
 ``<c>`` Lower case c: Displays the instantaneous current on the MAIN Track
 

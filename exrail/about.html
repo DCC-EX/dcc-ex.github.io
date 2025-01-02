@@ -669,7 +669,7 @@
 <li><p>myAutomation.h is actually generating compiled code as an integral part of the Command Station. To have this file loaded separately at run time would require that the Command Station contained all the code necessary to read the file and interpret the contents. This would be a significant additional code burden on the Command Station (&gt;1000 lines of code) and also require huge amounts of precious RAM to store the interpreted version of the file because it cannot be written into flash memory at run time.</p></li>
 <li><p>By compiling the code on your pc, you have the advantage of the vast majority of syntax errors being detected by the compiler (albeit somewhat opaquely) rather than having to move the SDCard to the Command Station before discovering an issue.</p></li>
 <li><p>The current implementation requires no additional PC code/tool download or installation. If you are able to setup your Command Station, you already have everything you need to add your myAutomation.</p></li>
-<li><p>To implement an SD card solution requires a user to have access to the Command Station, which could involve climbing under their layout, opening the Command Station case if you have one, dismounting the motor shield to get access to the SDCard slot, potentially damaging the Command Station, the layout, or your body, etc. The card would have to be placed into a computer, an editor opened, the file edited and saved, and then the process reversed to get the SDCard back into the Command Station.</p></li>
+<li><p>To implement an SD card solution requires a user to have access to the Command Station, which could involve climbing under their layout, opening the Command Station case if you have one, dismounting the <abbr title="also referred to as a Motor Driver or Motor Board">Motor Shield</abbr> to get access to the SDCard slot, potentially damaging the Command Station, the layout, or your body, etc. The card would have to be placed into a computer, an editor opened, the file edited and saved, and then the process reversed to get the SDCard back into the Command Station.</p></li>
 </ol>
 <p>In contrast… with the current system: One takes the end of the USB cable that has been thoughtfully left connected to the Command Station and plugs it into ones laptop. The <a class="reference internal" href="../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">Arduino IDE</span></a> (or suitable alternative) is opened and the myAutomation.h files is edited. A SINGLE CLICK on the upload button is sufficient to save the file, check it for errors, upload to the Command Station and restart the Command Station.</p>
 <p>As more powerful processors become available and affordable, we may find other ways to handle saving settings and adding automations, but the current method, as you can see, is efficient, easy to use, and fast.</p>
@@ -698,7 +698,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f869715b1c0>
+    <jinja2.runtime.BlockReference object at 0x7fda54b072b0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

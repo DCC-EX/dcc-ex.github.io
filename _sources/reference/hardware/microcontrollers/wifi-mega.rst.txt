@@ -16,7 +16,7 @@ Mega+WiFi (Not recommended)
       :depth: 2
       :local:
 
-**A WiFi EX-CommandStation with just two boards**  (The Mega+WiFi board plus a Motor Shield)
+**A WiFi EX-CommandStation with just two boards**  (The Mega+WiFi board plus a |motor shield|)
 
 .. figure:: /_static/images/assembly/mega_wifi.png
    :alt: Mega WiFi
@@ -48,14 +48,14 @@ This is our tested and proven configuration
 
 * |EX-CS| 3.0.6 or greater
 * ATMega2560 + ESP8266 WiFi - Combo Board
-* Deek-Robot L298P Standard Motor Shield (or other :doc:`approved motor controller </reference/hardware/motor-boards>`)
-* 12-16V DC Laptop power supply to the Motor Shield (16V provides 14.5Vdc to the tracks for HO Gauge)*
+* Deek-Robot L298P |standard motor driver| (or other :doc:`approved motor controller </reference/hardware/motor-boards>`)
+* 12-16V DC Laptop power supply to the |motor shield| (16V provides 14.5Vdc to the tracks for HO Gauge)*
 * 7-9V DC power supply to the ATmega boards with a female 2.1mm power barrel plug
 * Android Smartphone with |Engine Driver| v2.28.123 or iOS Smartphone with WiThrottle
 * USB-A male to Micro USB-B cable
 * You will also need software provided in the links below and a toothpick or small jewellers screwdriver to be able to flip small switches.
 
-\* NOTE: The L298 Based motor drivers like the Arduino Motor Shield have a 1.5-2V voltage drop. More efficient boards do not have this issue. Be careful in choosing the correct voltage so that you don't put too much voltage on the track and potentially damage your decoders.
+\* NOTE: The L298 Based motor drivers like a |Standard Motor Driver| have a 1.5-2V voltage drop. More efficient boards do not have this issue. Be careful in choosing the correct voltage so that you don't put too much voltage on the track and potentially damage your decoders.
 
 What You Will Do
 ================

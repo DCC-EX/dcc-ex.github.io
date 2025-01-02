@@ -87,7 +87,7 @@ Then click on the "CommandStation-EX" sketch folder to open it. Scroll down to t
 Edit the config.h file (optional)
 ===================================
 
-If you are using the standard Arduino motor shield, and if optionally using one of the supported WiFi boards and want to connect directly to the |EX-CS| in Access Point Mode (AP) from your WiFi controller, there is nothing more to do! Just upload the software to the |EX-CS| in the next step.
+If you are using a |standard Motor Driver|, and if optionally using one of the supported WiFi boards and want to connect directly to the |EX-CS| in Access Point Mode (AP) from your WiFi controller, there is nothing more to do! Just upload the software to the |EX-CS| in the next step.
 
 If you are using a different motor driver (shield or board), or if you wish to connect your Command Station to your home network instead of having a separate access point, follow the instructions in the ``config.h`` file
 
@@ -96,7 +96,7 @@ If you want to take a look at this file or make a simple change, just open the f
 Select the board type and COM port
 ===================================
 
-Before you attempt this step, make sure that you have everything connected properly from the :doc:`assembly page </ex-commandstation/diy/assembly>`. And a final reminder to **make sure you cut the Vin trace** on the bottom of the Arduino Motor Shield. Ready? Proceed.
+Before you attempt this step, make sure that you have everything connected properly from the :doc:`assembly page </ex-commandstation/diy/assembly>`. And a final reminder to **make sure you cut the Vin trace** on the bottom of the |standard Motor Driver|. Ready? Proceed.
 
 Connect the computer to the Arduino with the USB cable. Note the 5V coming from your computer/Raspberry Pi is enough to power the Mega, since it bypasses the regulator that converts your 7-9V power supply down to 5V, and goes right to the 5V bus on the board. So don't be alarmed by lights on your Arduino.
 
@@ -167,7 +167,7 @@ Type in a command or two
 
 There is an entire language that |EX-CS| understands. We call this the DCC-EX API for "Application Programming Interface". If you are interested, the list of all the commands is here in the `DCC-EX Wiki <https://github.com/DCC-EX/CommandStation-EX/wiki>`_. Let's just try two commands to make sure everything is working.
 
-All |DCC-EX| commands begin with a ``<`` and end with a ``>``. In the command window, type ``<1>`` and press the ``send`` button, or Enter on your keyboard. Power should come on to the main track. You should see 2 red LEDs light on the "A" power output of the motor shield.
+All |DCC-EX| commands begin with a ``<`` and end with a ``>``. In the command window, type ``<1>`` and press the ``send`` button, or Enter on your keyboard. Power should come on to the main track. You should see 2 red LEDs light on the "A" power output of the |motor shield|.
 
 Now enter ``<s>`` (lowercase). You should see status information for your Command Station appear in the log.
 

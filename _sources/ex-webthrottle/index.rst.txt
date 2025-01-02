@@ -38,7 +38,7 @@ What you need to run EX-WebThrottle
 You don't need anything else to test it out and to run in emulator mode, just run it and play. To use it to run real trains you will need:
 
 * An |EX-CSB1|, |BR| or 
-* DIY |EX-CS| based on a Arduino Mega, Arduino Uno, or other compatible microcontroller with a compatible Motor Shield/Board
+* DIY |EX-CS| based on a Arduino Mega, Arduino Uno, or other compatible microcontroller with a compatible |Motor Shield|
 * Plus the |EX-CS| software already loaded
 
 Getting started
@@ -137,9 +137,9 @@ You should then be connected to the |EX-CS| and should see the response from the
 
 When the command station is ready to use you should see ``[i] EX-CommandStation is READY`` appear in the log.
 
-Now you are ready to run trains! Place your loco on the track and click the :guilabel:`Power` slider button to turn on power to your track (if not already on). You should see LEDs on your Arduino Motor Shield and an indication that your loco has power.
+Now you are ready to run trains! Place your loco on the track and click the :guilabel:`Power` slider button to turn on power to your track (if not already on). You should see LEDs on your Motor Driver and an indication that your loco has power.
 
-.. note:: Make sure you place the loco on the *MAIN* track, **not** the PROG track. Check your wiring. On an Arduino Motor Shield, Motor Output "A" should connect to your MAIN track and "B" to the PROGRAM track.
+.. note:: Make sure you place the loco on the *MAIN* track, **not** the PROG track. Check your wiring. On an  Motor Driver, Motor Output "A" should connect to your MAIN track and "B" to the PROGRAM track.
 
 .. figure:: /_static/images/ex-webthrottle/loco-id.png
    :alt: EX-WebThrottle - Loco ID
@@ -181,7 +181,7 @@ Issuing Direct Commands
 
 Once you are connected, you can also send commands directly to the |EX-CS|. 
 
-e.g. You can send the ``<s>`` command in the "direct command" textbox to get status information from your Command Station. To do this just enter ``s`` (without the quotes) and press the :guilabel:`Send` button. |BR| You should see ``<iDCC-EX...>`` returned in the log window with your version, type of Arduino, type of motor shield, and some other information.
+e.g. You can send the ``<s>`` command in the "direct command" textbox to get status information from your Command Station. To do this just enter ``s`` (without the quotes) and press the :guilabel:`Send` button. |BR| You should see ``<iDCC-EX...>`` returned in the log window with your version, type of Arduino, type of motor driver, and some other information.
 
 You can send any DCC-EX Native command in this way. 
 

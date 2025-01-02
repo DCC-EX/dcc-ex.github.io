@@ -26,18 +26,21 @@ How many power supplies you need depends on the type of |EX-CS| you have:
 
 1. If you have an |EX-CSB1-SHORT| then you only need **one (1) power supply**.
 
-2. If you have a **do-it-yourself (DIY)** |EX-CS| based of the Arduino Mega with a |EX-MS| motor shield, then you only need **one (1) power supplies**. One for the motor driver.  The motor driver will pass power to the Arduino.
+2. If you have a **do-it-yourself (DIY)** |EX-CS| based on the Arduino Mega with a |EX-MS| |motor shield|, then you only need **one (1) power supplies**. One for the motor driver.  The motor driver will pass power to the Arduino.
 
-3. If you have a **do-it-yourself (DIY)** |EX-CS| based of the Arduino Mega, ESP32 or Nucleo with a Standard motor shield, then you need **two (2) power supplies**. One for the Arduino and one for the motor driver.
+3. If you have a **do-it-yourself (DIY)** |EX-CS| based on the Arduino Mega with a |standard motor driver|, then you need **two (2) power supplies**. One for the Arduino and one for the motor driver.
 
-4. If you have a **do-it-yourself (DIY)** |EX-CS| based of the Arduino Uno, then only you need **one (1) power supply**. One for motor driver. Since the Uno must be connected to a PC or RPi to use, the Uno will be powered by the USB from the PC.
+4. If you have a **do-it-yourself (DIY)** |EX-CS| based on the Arduino Uno, then only you need **one (1) power supply**. One for motor driver. Since the Uno must be connected to a PC or RPi to use, the Uno will be powered by the USB from the PC.
+
+2. *Engineers Only!,* If you have a **do-it-yourself (DIY)** |EX-CS| based on the ESP32 or Nucleo with a |EX-MS| |motor shield|, then you only need **one (1) power supplies**. However since these board need only 3.3v, modifications to the boards need to be made to support this.
+
 
 |HR-DASHED|
 
 Why does the Mega/ESP32/Nucleo with Standard motor driver need two power supplies?
 ------------------------------------------------------------------------------------
 
-For Arduino Mega with Standard motor driver, you need at least two different voltages. The Arduino needs ~5vDC and the Motor driver needs significantly more voltage to provide power to the track (see below).
+For Arduino Mega with |standard motor driver|, you need at least two different voltages. The Arduino needs ~5vDC and the Motor driver needs significantly more voltage to provide power to the track (see below).
 
 Both your microcontroller (the Arduino) and the motor driver need power. While we recommend a 7-9 Volt, 1 Amp, DC power supply for an Arduino Uno or Mega, there are other ways to power it. 
 
@@ -52,13 +55,13 @@ The voltage requirement to the motor driver does not change based on how you pow
 Four Ways to Power the Microcontroller
 ======================================
 
-Note, this primarily applies to the Arduino Mega with a standard motor driver. (See the previous section.)
+Note, this primarily applies to the Arduino Mega with a |standard motor driver|. (See the previous section.)
 
 **Barrel Connector** - This is where we can connect our 7-9V DC supply. The power goes through a voltage regulator on the Arduino and converts the 7-9V to the 5V the board can use. You will still need a separate source of power for the motor controller.
 
 **USB Connector** - If you always will have a computer connected to your Command Station (for example when using |JMRI| or |EX-WT|), the 5V from your computer can power it. You won't need separate power supply in addition to the one you need for the motor controller. 
 
-Most USB ports can only supply 500 milliamps, and this input is protected by a 500mA polyfuse that resets when a short is removed, so be careful about adding anything that will draw current from the Command Station. A motor shield, a WiFi shield and a fan that draws 50mA should be fine.
+Most USB ports can only supply 500 milliamps, and this input is protected by a 500mA polyfuse that resets when a short is removed, so be careful about adding anything that will draw current from the Command Station. A |motor shield|, a WiFi shield and a fan that draws 50mA should be fine.
 
 Even if you don't have a laptop, you can use a 5V, 800mA or more USB power supply like a phone charger and connect it to the USB port.
 
@@ -110,10 +113,10 @@ Note that for purely |DC| operation, these voltages should probably be slightly 
 
 The voltage of the *power supply* you need will depend on the type of motor driver you have:
 
-* If you have a |EX-MS| or |EX-MS| the you *should not exceed* the values listed above. This is because the EX-MotorShield8874 does not drop voltage like the standard motor driver.
+* If you have a |EX-MS| or |EX-MS| the you *should not exceed* the values listed above. This is because the EX-MotorShield8874 does not drop voltage like the |standard motor driver|.
 
 
-* If you have a *standard motor shield**, then you generally will want a power supply between 1 and 2 volts higher than the voltage you want to have on the track. this is because the standard motor driver is inefficient and drops voltage.
+* If you have a |standard motor driver|, then you generally will want a power supply between 1 and 2 volts higher than the voltage you want to have on the track. this is because the |standard motor driver| is inefficient and drops voltage.
 
 |HR-DASHED|
 
@@ -123,7 +126,7 @@ The voltage of the *power supply* you need will depend on the type of motor driv
 
    Most larger scales/gauges will run higher voltages. For reference, Digitrax systems put the rails at around 14V and garden scale could be 18V. Do some homework to determine what voltage is best for your system.
 
-   Be aware that the motor controller you use will affect the actual voltage at the track. If you use the Arduino Motor Shield or any other L298 based shield or controller, you will have a 2V drop at the track. That means that if you use a 12V supply, there will be only 10V at the track. Many people prefer to use a 14.5V DC power supply with these boards. If you use any MOSFET based boards like the IBT_2 and the IRF3205 boards, there is a negligible voltage drop so 12V in will give you 12V at the track.
+   Be aware that the motor controller you use will affect the actual voltage at the track. If you use the |Standard Motor Driver| or any other L298 based shield or controller, you will have a 2V drop at the track. That means that if you use a 12V supply, there will be only 10V at the track. Many people prefer to use a 14.5V DC power supply with these boards. If you use any MOSFET based boards like the IBT_2 and the IRF3205 boards, there is a negligible voltage drop so 12V in will give you 12V at the track.
 
    If you have a power supply you wish to use, but it has an output voltage that is a few volts higher than you need, use either the diode or buck converter method listed below to reduce the voltage.
 
@@ -132,7 +135,13 @@ The voltage of the *power supply* you need will depend on the type of motor driv
 Amperage
 --------
 
-A 3A power supply will give you plenty of current to handle the maximum of 2A on channel A to the MAIN track (assuming you're using the Arduino motor shield or Pololu motor shield). Channel B for the programming track will only be used occasionally and does not need much current. In fact, it is limited to protect your trains (normally to 250mA). Running trains on main and programming a loco on Prog at the same time will be fine. The overcurrent limit set in the Command Station will automatically cut power if you go over that number of Amps. A rule of thumb is you can operate 3 to 5 N or HO sound locos on the 2A boards. For larger layouts with higher current requirements on the MAIN track and a motor driver that can handle those currents, you'll want power supply that can deliver that larger current. See :doc:`Motor Boards <motor-boards>` for more information about higher current motor controllers.
+For the |EX-MS| or |EX-CSB1-SHORT| a 5amp power supply will give you plenty of current to handle the maximum of 5amp on channel A to the MAIN track. Channel B for the programming track will only be used occasionally and does not need much current.  If you plan to use Channel B as a second MAIN power district, then you may want to go up to to 10amp power supply.
+
+For the |standard motor driver|, a 3amp power supply will give you plenty of current to handle the maximum of 2amp on channel A to the MAIN track. Channel B for the programming track will only be used occasionally and does not need much current. In fact, it is limited to protect your trains (normally to 250mA). 
+
+Running trains on main and programming a loco on Prog at the same time will be fine. The overcurrent limit set in the Command Station will automatically cut power if you go over that number of Amps. A rule of thumb is you can operate 3 to 5 N or HO sound locos on the 2A boards. 
+
+For larger layouts with higher current requirements on the MAIN track and a motor driver that can handle those currents, you'll want power supply that can deliver that larger current. See :doc:`Motor Boards <motor-boards>` for more information about higher current motor controllers.
 
 A device will only draw the current it needs. So whether you have a 2A power supply or a 20A power supply, if you setup only needs 1A, then both supplies will work just fine, but no sense paying for more than you need. And it is also worth noting that devices that can supply a large current can cause a large amount of damage if you don't have proper safety features installed like the overprotection feature of the Command Station AND fuses to the track.
 
@@ -297,7 +306,7 @@ Here is one example sold by DFRobot, click to follow the link: `20W 3A programma
 Using Diodes to Reduce Voltage
 ===============================
 
-If you are like us and save your old power adapters when you recycle old equipment, you may have old wall warts or power supplies laying around that are perfectly fine, but have too high a voltage. You can use diodes to easily step the voltage down to a usable level if you only need to drop a few volts. Silicon diodes drop .6 - .7 volts across them in a circuit at our currents. We can take advantage of this property to create a very inexpensive voltage step down circuit. Be careful to use the correct type of diode with the correct current rating. LEDs and signal diodes like a Schottky won't work for this. Diodes in the 1N5400 series will work perfectly for up to 3A. Simply connect however many diodes you need in series to drop the voltage. For example, a 6A1 diode will drop 0.7V. Putting 5 in series between the positive wire of the power supply and the input to the motor driver will therefor reduce an 18V power supply to 14.5V (18 - 3.5). If you use an Arduino Motor Shield or other L298 based motor driver with an additional 2V voltage drop, that will give you 12.7 at the track. Work out the math to provide the voltage your track needs.
+If you are like us and save your old power adapters when you recycle old equipment, you may have old wall warts or power supplies laying around that are perfectly fine, but have too high a voltage. You can use diodes to easily step the voltage down to a usable level if you only need to drop a few volts. Silicon diodes drop .6 - .7 volts across them in a circuit at our currents. We can take advantage of this property to create a very inexpensive voltage step down circuit. Be careful to use the correct type of diode with the correct current rating. LEDs and signal diodes like a Schottky won't work for this. Diodes in the 1N5400 series will work perfectly for up to 3A. Simply connect however many diodes you need in series to drop the voltage. For example, a 6A1 diode will drop 0.7V. Putting 5 in series between the positive wire of the power supply and the input to the motor driver will therefor reduce an 18V power supply to 14.5V (18 - 3.5). If you use an |Standard Motor Driver| or other L298 based motor driver with an additional 2V voltage drop, that will give you 12.7 at the track. Work out the math to provide the voltage your track needs.
 
 Needed:
 

@@ -58,7 +58,7 @@ You can walk into store and pick up a commercial Command Station in a box with c
 
 The |EX-CS| has two options, the first is Ready-To-Run and the second is Do-It-Yourself (DIY). The Ready-To-Run option is our |EX-CSB1-SHORT| which is a complete Command Station and/or Booster on one board. All you need is to plug your power supply into an outlet and connect the track outputs to you layout. It comes with software already installed and is the closest thing to what you would expect with a commercial "boxed" CS.
 
-The Do-It-Yourself option is where you purchase a microcontroller (such as an Arduino or Elegoo Mega), a motor shield (like the |EX-MS|, and optionally, a WiFi board (like the |EX-WS|). While we now have resellers that can supply a complete system or kit, most people purchase parts from different suppliers online. Parts can therefore take some time to arrive, and there is a little more work involved in sourcing and ensuring the quality of parts. So DIY in general it is not as plug-and-play as an |EX-CSB1-SHORT| or a commercial system.
+The Do-It-Yourself option is where you purchase a microcontroller (such as an Arduino or Elegoo Mega), a motor driver (like the |EX-MS|, and optionally, a WiFi board (like the |EX-WS|). While we now have resellers that can supply a complete system or kit, most people purchase parts from different suppliers online. Parts can therefore take some time to arrive, and there is a little more work involved in sourcing and ensuring the quality of parts. So DIY in general it is not as plug-and-play as an |EX-CSB1-SHORT| or a commercial system.
 
 |hr-dashed|
 

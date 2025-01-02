@@ -23,7 +23,7 @@ The Mega+WiFi is a board from China that combines an Arduino Mega design with an
 
    The DCC-EX team do not recommend the combined Mega2560 + WiFi due to the number of issues encountered in recent times.
 
-The advantage of this configuration is that with WiFI on the same board with the Microcontroller, you only need two boards. Your "stack" will have just the Mega+WiFi board with the Motor Shield on top. 
+The advantage of this configuration is that with WiFI on the same board with the Microcontroller, you only need two boards. Your "stack" will have just the Mega+WiFi board with the |motor shield| on top. 
 
 The disadvantage is that you will have to "flash" (upload new firmware) to the ESP chip on the board. This requires a computer, downloading a flash tool and a zipped data file, setting some switches, connecting the Mega+WiFi to the computer with a USB cable, and uploading the new firmware. 
 

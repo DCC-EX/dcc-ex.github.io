@@ -368,10 +368,10 @@ From top to bottom the pins are: `IO0`, `5V` (incorrectly labelled `IOREF` on th
 
 Using an Arduino Motor Shield R3 or clone
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-To avoid damaging the ESP32's analog inputs, the `IOREF` pin on must be bent outwards or cut so it will not go into the ESPDUINO-32 socket. Then use a jumper from the `3.3v` pin to `IOREF` on the motor shield itself.
+To avoid damaging the ESP32's analog inputs, the `IOREF` pin on must be bent outwards or cut so it will not go into the ESPDUINO-32 socket. Then use a jumper from the `3.3v` pin to `IOREF` on the |motor shield| itself.
 
 For DCC current sensing bend or cut the `A0` and `A1` pins because by default they are connected to `GPIO2` and `GPIO4` on the ESP32 which are not useable at the same time as WiFi.
-Instead, on the top of the Motor Shield connect `A0` to `A2` and `A1` to `A3` via jumpers. This will then automatically work when you select STANDARD_MOTOR_SHIELD as the MotorShield in config.h because the definition is in place when ESP32 is selected as the build target.
+Instead, on the top of the |motor shield| connect `A0` to `A2` and `A1` to `A3` via jumpers. This will then automatically work when you select STANDARD_MOTOR_SHIELD as the MotorShield in config.h because the definition is in place when ESP32 is selected as the build target.
 
 .. image:: /_static/images/esp32/espduino-32-motor-shield-fritzing.png
   :alt: MotorShield configuration for ESP32

@@ -275,9 +275,9 @@ However, when the bridge is rotated 180 degrees, the DCC phase/polarity must be 
 
 We will assume we are using a slip ring for this turntable's physical connection to the bridge track, and therefore we need to ensure that EX-Turntable's dual relay board is switched via the automatic phase switching capability.
 
-You will note in the diagram that the motor shield's positive (+) output is connected to the bottom rail of the yard track and each stall's track, along with the normally closed (NC) terminal of relay 1, and the normally open (NC) of relay 2.
+You will note in the diagram that the motor driver's positive (+) output is connected to the bottom rail of the yard track and each stall's track, along with the normally closed (NC) terminal of relay 1, and the normally open (NC) of relay 2.
 
-The motor shield's negative (-) output is connected to the top rail of each track, and the normally open (NO) terminal of relay 1, and normally closed (NC) of relay 2.
+The motor driver's negative (-) output is connected to the top rail of each track, and the normally open (NO) terminal of relay 1, and normally closed (NC) of relay 2.
 
 .. image:: ../_static/images/big-picture/stage5-ex-tt-wiring.png
   :alt: Turntable Wiring

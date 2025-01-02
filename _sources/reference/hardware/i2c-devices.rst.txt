@@ -155,7 +155,7 @@ The position of the |I2C| pins depends on what controller module you are using:
 
    Arduino Mega/Uno |I2C| pins
 
-Some motor shields come with header pins for the |I2C| connections, for example the Arduino motor shield and the DeekRobot equivalent.  The header pins are labelled, and are ringed in the images below.
+Some motor shields come with header pins for the |I2C| connections, for example the |Standard motor driver| and the DeekRobot equivalent.  The header pins are labelled, and are ringed in the images below.
 
 .. figure:: /_static/images/i2c/deek_robot.jpg
    :alt: Motor shield |I2C| pins
@@ -171,7 +171,7 @@ The next image shows an Arduino Mega and Deekrobot motor shield mounted in a 3D-
 
    Motor Shield |I2C| pins
 
-|I2C| devices are all effectively connected in parallel to the bus.  If you only have one device, you can just run a four-wire connector between the pins on the Arduino, or on the motor shield, if you have one, to the device.  Be sure to check that you connect SDA to SDA, SCL to SCL, Vcc to Vcc and GND to GND though - they are almost always in a different order on each device!  
+|I2C| devices are all effectively connected in parallel to the bus.  If you only have one device, you can just run a four-wire connector between the pins on the Arduino, or on the |motor shield|, if you have one, to the device.  Be sure to check that you connect SDA to SDA, SCL to SCL, Vcc to Vcc and GND to GND though - they are almost always in a different order on each device!  
 
 .. figure:: /_static/images/i2c/ArduinoMegaOLED.png
    :alt: Arduino Mega with OLED Display

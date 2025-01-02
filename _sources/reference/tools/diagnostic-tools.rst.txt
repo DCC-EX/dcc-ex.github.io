@@ -218,7 +218,7 @@ No need to make this yourself, simply buy it. You will need the following items.
 
 .. note:: Search for the best source. As usual, you can often find the hardware items from online stores or Amazon, but also find them cheaper on eBay or AliExpress  or BangGood direct from China.
 
-Any set of probes that will connect to the pins that are exposed between the Arduino and the Motor Shield will do, however we really like these "T" or "swept wing" probes. They are easy to hold and to open, can accept jumper wires from either side, and are pointed and use tiny hooks so they fit in tight spaces.
+Any set of probes that will connect to the pins that are exposed between the Arduino and the |motor shield| will do, however we really like these "T" or "swept wing" probes. They are easy to hold and to open, can accept jumper wires from either side, and are pointed and use tiny hooks so they fit in tight spaces.
 
 .. figure:: /_static/images/tools/logic_probes.jpg
    :align: center

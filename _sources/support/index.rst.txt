@@ -111,7 +111,7 @@ That will create a new 'ticket' channel like this...
 **At a minimum** you should also add details on the items you are using:
 
 * The type of micro controller (UNO, MEGA, ESP32, etc.)
-* The type of Motor Shield (Arduino Motor Shield Rev3, EX-MotorShield8874, etc.)
+* The type of |motor shield| (Arduino Motor Shield Rev3, EX-MotorShield8874, etc.)
 * The type of WiFi shield (none, Makerfabs WiFi Shield, etc.)
 * Which version of the |EX-CS| software (current Production release, Devel version xxxxx)
 * How you installed the software (|EX-I| , |Arduino IDE|, Microsoft Visual Code (VSC))

@@ -24,7 +24,7 @@ DCC & DC Technical Details
 
 Turn off, unplug the AC power cord, and disconnect your current DC transformer(s) / power supply(s) from the DC layout track to place in a box for safe keeping.
 
-You will instead be using a regulated DC (Laptop) 12-18 Vdc 3-5Amp power supply to your Motor Shield and or Motor Board (booster) to run all your DCC Locos and analogue DC Cabs on all your individual tracks/districts/blocks.
+You will instead be using a regulated DC (Laptop) 12-18 Vdc 3-5Amp power supply to your |motor shield| and or Motor Board (booster) to run all your DCC Locos and analogue DC Cabs on all your individual tracks/districts/blocks.
 
 You will be using DC (Pulse Width Modulation PWM) to drive the DC engines, Not DC Direct Current (-0 +16v).
 
@@ -36,14 +36,14 @@ You will be using DC (Pulse Width Modulation PWM) to drive the DC engines, Not D
 
 .. note:: 
 
-  These modes, (PWM) vs analogue DC are totally incompatible with one another and if crossed will result in magic smoke and a burned out motor shield and or USB connector. 
+  These modes, (PWM) vs analogue DC are totally incompatible with one another and if crossed will result in magic smoke and a burned out |motor shield| and or USB connector. 
 
  * DCC(PWM) is detected on a multimeter as an AC signal but in a square wave form, not as a sine wave
  * DC(PWM) is detected on a multimeter as a DC signal in a square wave form, not as a direct current wave
 
 The DC(PWM) track is Power supply dependent and needs a varying amount of 0 zero to maximum Vdc passed to the track of 12 or 16 or 18vdc, depending on whether they're N, HO or G scale engines.
 
-Note; The signal is detected as DC on this track, from 0Vdc to max +xxVdc depending on the Motor Shield DC power supply output. The DCC-EX 122.55Hz PWM DC motor signal allows for better functioning and better running than most competing systems.
+Note; The signal is detected as DC on this track, from 0Vdc to max +xxVdc depending on the |motor shield| DC power supply output. The DCC-EX 122.55Hz PWM DC motor signal allows for better functioning and better running than most competing systems.
 
 TrackManager DCC(PWM) vs. DC(PWM) wave forms
 =============================================

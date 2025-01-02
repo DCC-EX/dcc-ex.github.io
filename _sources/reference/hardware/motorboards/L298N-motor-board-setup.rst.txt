@@ -193,7 +193,7 @@ Save the file and then upload the entire sketch into the Command Station using t
 Using One Signal Pin With an Inverter circuit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This method uses 1 signal pin on the Arduino for each track and uses the standard motor driver definition. The advantage of this method is that it provides a slightly more accurate DCC waveform that might allow slightly better compatibility with really picky decoders, and you don't have to change the default motor board definition. The disadvantage is that you have to solder a 1 transistor, 2 resistor (or inverter chip) to invert the signal into the 2 inputs on the L298 board.
+This method uses 1 signal pin on the Arduino for each track and uses the |standard motor driver| definition. The advantage of this method is that it provides a slightly more accurate DCC waveform that might allow slightly better compatibility with really picky decoders, and you don't have to change the default motor board definition. The disadvantage is that you have to solder a 1 transistor, 2 resistor (or inverter chip) to invert the signal into the 2 inputs on the L298 board.
 
 Make the following Inverter circuit (You need 2 if you want MAIN and PROG):
 

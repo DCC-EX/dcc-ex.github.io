@@ -18,7 +18,7 @@ Arduino Nano (Not recommended)
       :depth: 1
       :local:
 
-The Arduino Nano is an Uno in disguise. It has the same processor, the same speed, the same (small) amount of memory. It's just small. The disadvantage is that you can't plug shields on top of it, but the benefit is that it can fit in a small box. You can always use all the same Uno shields, like the full-sized motor shield, you just have to solder or use wire jumpers to make the connections.
+The Arduino Nano is an Uno in disguise. It has the same processor, the same speed, the same (small) amount of memory. It's just small. The disadvantage is that you can't plug shields on top of it, but the benefit is that it can fit in a small box. You can always use all the same Uno shields, like the full-sized |motor shield|, you just have to solder or use wire jumpers to make the connections.
 
 .. NOTE:: Be sure to compare the Mega before using the Nano 
    
@@ -37,9 +37,9 @@ What You need
 **Hardware**
 
 * Arduino Nano (or clone)
-* Gravitech Nano Motor Shield (or clone, or any supported motor shield)
+* Gravitech Nano Motor Shield (or clone, or any supported |motor shield|)
 * 5V 1A Power Supply with Mini-USB for Arduino and Micro-USB for clones
-* 12-14.5V 3-5A Power Supply for the motor shield
+* 12-14.5V 3-5A Power Supply for the |motor shield|
 * Barrel Connector to Screw Terminal Adapter if using the Nano Motor Shield
 * Wire of the appropriate gauge for hookup
 * Computer to load the software (Windows, Mac, Linux, Raspberry Pi)

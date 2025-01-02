@@ -264,6 +264,26 @@
    
     :ref:`EX-Installer Device Monitor <ex-installer/testing:using the ex-installer device monitor>`
 ..
+.. |STANDARD MOTOR DRIVER| replace::
+   
+    :abbr:`Standard Motor Driver (Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.)`
+..
+.. |MOTOR DRIVER| replace::
+   
+    :abbr:`Motor Driver (also referred to as a Motor Shield or Motor Board)`
+..
+.. |MOTOR SHIELD| replace::
+   
+    :abbr:`Motor Shield (also referred to as a Motor Driver or Motor Board)`
+..
+.. |DIY| replace::
+   
+    :abbr:`DIY (Do-it-yourself)`
+..
+.. |RTR| replace::
+   
+    :abbr:`RTR (Ready-to-run / plug-and-play)`
+..
 .. |hr-dashed| raw:: html
 
    <hr class="hr-dashed" />

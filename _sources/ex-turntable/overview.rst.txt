@@ -150,7 +150,7 @@ In order to prevent short circuits, the phase (or polarity) of the bridge track 
 
 The critical aspect when using |EX-TT|/|EX-R| or a mechanical method to control the phase is to ensure the entry and exit tracks for each position are wired with the same phase or polarity. An auto reverser will allow out of phase layouts to work as it will always reverse on a short circuit.
 
-Consider the turntable starting in alignment with the entry and exit tracks, with everything wired in alignment so the +/- connections from the motor shield are connected to the same rail all the way along.
+Consider the turntable starting in alignment with the entry and exit tracks, with everything wired in alignment so the +/- connections from the |motor shield| are connected to the same rail all the way along.
 
 If we do not invert or reverse the phase, when it rotates 180 degrees, there will be an obvious issue!
 

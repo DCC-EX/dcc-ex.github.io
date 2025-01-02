@@ -19,7 +19,7 @@ Ethernet Boards
 
 To use Ethernet instead of WiFi, follow these simple steps:
 
-* Stick your Ethernet shield onto the stack with your Mega and Motor Shield
+* Stick your Ethernet shield onto the stack with your Mega and |motor shield|
 * Open your config.h file in your editor (like the |Arduino IDE|)
 * Uncomment the line ``"#define ENABLE_ETHERNET = true"`` by removing the "//" characters
 * Add "//" comment lines in front of ``"#define ENABLE_WIFI = true"`` (if it isn't already commented out).
@@ -72,7 +72,7 @@ This board is tested and works. It is less expensive than the Arduino brand-name
 Nano Ethernet Shield
 =====================
 
-This board actually works with an Arduino Nano, you can plug your Nano directly onto this board or create a stack with the matching motor shield. This board will work with an Uno or Mega also, but you have to connect it with jumpers.
+This board actually works with an Arduino Nano, you can plug your Nano directly onto this board or create a stack with the matching |motor shield|. This board will work with an Uno or Mega also, but you have to connect it with jumpers.
 
 .. image:: ../../_static/images/ethernet/nano_ethernet_shield.jpg
    :alt: Sunfounder Ethernet Shield

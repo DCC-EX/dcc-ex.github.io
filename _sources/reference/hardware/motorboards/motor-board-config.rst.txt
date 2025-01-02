@@ -124,7 +124,7 @@ As another example let's create a motor board definition or a board that require
 
 senseFactor = ((5/1024)/Board Volts/Amp)*1000 = ((.00488)/(1/1))*1000 = 4.88
 
-The second board will be an Arduino Motor Shield to use for programming. We already have the definition for the Standard Motor Shield, so we will leave the second MotorDriver line alone. Our new definition will look like this:
+The second board will be an Arduino Motor Shield to use for programming. We already have the definition for the |standard motor driver|, so we will leave the second MotorDriver line alone. Our new definition will look like this:
 
 .. code-block:: cpp
 

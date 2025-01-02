@@ -56,7 +56,7 @@ Requirements (for installing)
 To run |EX-I| you need:
 
 * A Windows, Linux or MacOS X **Computer**
-* An |EX-CS| (|EX-CSB1| or Arduino Mega/Uno + Motor shield+  optional WiFi shield)
+* An |EX-CS| (|EX-CSB1| or Arduino Mega/Uno + |Motor shield| +  optional WiFi shield)
 * A **USB cable** to connect your computer to the Microcontroller
 
 ----
@@ -293,7 +293,7 @@ Motor Driver
 
    EX-Installer - Configure Motor Driver
 
-You *must* select the motor driver type that you have installed.  The installer can't detect this, so you must select the correct board or the |EX-CS| may not work. If you have installed the recommended Motor Driver, select `STANDARD_MOTOR_SHIELD` if you purchased the **Arduino Motor Shield Rev3**, or `EX8874_SHIELD` if you purchased our **EX-MotorShield8874**.
+You *must* select the motor driver type that you have installed.  The installer can't detect this, so you must select the correct board or the |EX-CS| may not work. If you have installed the recommended Motor Driver, select `STANDARD_MOTOR_SHIELD` if you purchased a |standard Motor Driver|, or `EX8874_SHIELD` if you purchased our **EX-MotorShield8874**.
 
 .. sidebar:: Station Mode VS Access Point Mode
 

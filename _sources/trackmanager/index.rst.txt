@@ -119,12 +119,12 @@ DC Requirements
 To run DC locos with your |EX-CS| you will need:
 
 * An |EX-CS|.
-* A motor shield with a brake pin. |BR| (See the list of compatible boards at :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`.) |BR| (The |EX-CSB1-SHORT| and |EX-MS| have a brake pin.)
+* A |motor shield| with a brake pin. |BR| (See the list of compatible boards at :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`.) |BR| (The |EX-CSB1-SHORT| and |EX-MS| have a brake pin.)
 * A controller that can be used with the |EX-CS|.
 
 *No additional external DCC decoders are required for DC (PWM) track assignments, and a single* |EX-CS| *is the only hardware needed for full functionality.*
 
-Note: An additional suggested precaution is to add 4 fuses on wires (-b +b, -a +a) to the |EX-CS| connections. Use 2A fuses for the standard L298P motor shield or 5A fuses for the |EX-MS| and other the larger motor drivers.
+Note: An additional suggested precaution is to add 4 fuses on wires (-b +b, -a +a) to the |EX-CS| connections. Use 2A fuses for the |standard motor driver| or 5A fuses for the |EX-MS| and other the larger motor drivers.
 
 |HR-DASHED|
 

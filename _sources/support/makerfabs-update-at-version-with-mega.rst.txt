@@ -253,7 +253,7 @@ Step 7. Prepare your EX-CommandStation
 
 7.3 Remove TX-TX and RX-RX jumpers
 
-7.4 Assemble your EX-CommandStation setup including the Motor Shield and WiFi shield
+7.4 Assemble your EX-CommandStation setup including the |motor shield| and WiFi shield
 
 7.5 Connect the TX to RX and RX to TX pins as per the initial assembly instructions for the |EX-CS|
 

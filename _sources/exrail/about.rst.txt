@@ -57,7 +57,7 @@ From time to time, we are asked why we can't put automation scripts (the content
 
 4) The current implementation requires no additional PC code/tool download or installation. If you are able to setup your Command Station, you already have everything you need to add your myAutomation.
 
-5) To implement an SD card solution requires a user to have access to the Command Station, which could involve climbing under their layout, opening the Command Station case if you have one, dismounting the motor shield to get access to the SDCard slot, potentially damaging the Command Station, the layout, or your body, etc. The card would have to be placed into a computer, an editor opened, the file edited and saved, and then the process reversed to get the SDCard back into the Command Station.
+5) To implement an SD card solution requires a user to have access to the Command Station, which could involve climbing under their layout, opening the Command Station case if you have one, dismounting the |motor shield| to get access to the SDCard slot, potentially damaging the Command Station, the layout, or your body, etc. The card would have to be placed into a computer, an editor opened, the file edited and saved, and then the process reversed to get the SDCard back into the Command Station.
 
 In contrast... with the current system: One takes the end of the USB cable that has been thoughtfully left connected to the Command Station and plugs it into ones laptop. The |Arduino IDE| (or suitable alternative) is opened and the myAutomation.h files is edited. A SINGLE CLICK on the upload button is sufficient to save the file, check it for errors, upload to the Command Station and restart the Command Station. 
 

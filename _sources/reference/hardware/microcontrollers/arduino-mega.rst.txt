@@ -53,4 +53,4 @@ As these microprocessors are not plug compatible with the shields you will need 
 
 .. warning:: 
 
-   Note that if you purchase a 3.3v version of the Arduino Pro Mini you may need make wiring changes to your motor shield to protect the microcontroller as many of the aftermarket version of this board come with a know wiring fault.
+   Note that if you purchase a 3.3v version of the Arduino Pro Mini you may need make wiring changes to your |motor shield| to protect the microcontroller as many of the aftermarket version of this board come with a know wiring fault.

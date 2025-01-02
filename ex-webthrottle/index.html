@@ -670,7 +670,7 @@
 <p>You don’t need anything else to test it out and to run in emulator mode, just run it and play. To use it to run real trains you will need:</p>
 <ul class="simple">
 <li><p>An <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a>, <br /> or</p></li>
-<li><p>DIY <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> based on a Arduino Mega, Arduino Uno, or other compatible microcontroller with a compatible Motor Shield/Board</p></li>
+<li><p>DIY <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> based on a Arduino Mega, Arduino Uno, or other compatible microcontroller with a compatible <abbr title="also referred to as a Motor Driver or Motor Board">Motor Shield</abbr></p></li>
 <li><p>Plus the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> software already loaded</p></li>
 </ul>
 </section>
@@ -743,10 +743,10 @@
 <p>When using the serial connection, if the program finds any compatible devices, it will open a popup a window showing you a selection. It may show a line at the top such as “Arduino Mega 2560 (COM3)”. Your com port may vary. Click on your board to select it and then click the <span class="guilabel">Connect EX-CS</span> button.</p>
 <p>You should then be connected to the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> and should see the response from the Command Station in the log textbox of the debug console at the bottom of the throttle window. Make sure your debug console is open. If it isn’t, use the <span class="guilabel">Debug Console</span> slider button in the lower lower right to open it.</p>
 <p>When the command station is ready to use you should see <code class="docutils literal notranslate"><span class="pre">[i]</span> <span class="pre">EX-CommandStation</span> <span class="pre">is</span> <span class="pre">READY</span></code> appear in the log.</p>
-<p>Now you are ready to run trains! Place your loco on the track and click the <span class="guilabel">Power</span> slider button to turn on power to your track (if not already on). You should see LEDs on your Arduino Motor Shield and an indication that your loco has power.</p>
+<p>Now you are ready to run trains! Place your loco on the track and click the <span class="guilabel">Power</span> slider button to turn on power to your track (if not already on). You should see LEDs on your Motor Driver and an indication that your loco has power.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Make sure you place the loco on the <em>MAIN</em> track, <strong>not</strong> the PROG track. Check your wiring. On an Arduino Motor Shield, Motor Output “A” should connect to your MAIN track and “B” to the PROGRAM track.</p>
+<p>Make sure you place the loco on the <em>MAIN</em> track, <strong>not</strong> the PROG track. Check your wiring. On an  Motor Driver, Motor Output “A” should connect to your MAIN track and “B” to the PROGRAM track.</p>
 </div>
 <figure class="align-right" id="id6">
 <a class="reference internal image-reference" href="../_images/loco-id.png"><img alt="EX-WebThrottle - Loco ID" src="../_images/loco-id.png" style="width: 334.40000000000003px; height: 68.0px;" /></a>
@@ -776,7 +776,7 @@
 </figcaption>
 </figure>
 <p>Once you are connected, you can also send commands directly to the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>.</p>
-<p>e.g. You can send the <code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> command in the “direct command” textbox to get status information from your Command Station. To do this just enter <code class="docutils literal notranslate"><span class="pre">s</span></code> (without the quotes) and press the <span class="guilabel">Send</span> button. <br /> You should see <code class="docutils literal notranslate"><span class="pre">&lt;iDCC-EX...&gt;</span></code> returned in the log window with your version, type of Arduino, type of motor shield, and some other information.</p>
+<p>e.g. You can send the <code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> command in the “direct command” textbox to get status information from your Command Station. To do this just enter <code class="docutils literal notranslate"><span class="pre">s</span></code> (without the quotes) and press the <span class="guilabel">Send</span> button. <br /> You should see <code class="docutils literal notranslate"><span class="pre">&lt;iDCC-EX...&gt;</span></code> returned in the log window with your version, type of Arduino, type of motor driver, and some other information.</p>
 <p>You can send any DCC-EX Native command in this way.</p>
 </section>
 <hr class="docutils" />
@@ -939,7 +939,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f869bffd4e0>
+    <jinja2.runtime.BlockReference object at 0x7fda53bf2b60>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

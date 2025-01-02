@@ -71,7 +71,7 @@ Hardware Requirements
 
 These requirements are only for *operating DC locomotives*. There is nothing to do in a pure DCC environment where no DC or analogue locomotives are run.
 
-**Brake Pin:** In order for |TM| to operate in DC mode, the motor shield must have a brake pin defined in your "config.h" motor shield definition. |BR| There are a very limited number of motor drivers that are known to be suitable for use with DC mode. The current list is available in :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`. Any other motor drivers, not explicitly listed, are not supported. 
+**Brake Pin:** In order for |TM| to operate in DC mode, the |motor shield| must have a brake pin defined in your "config.h" |motor shield| definition. |BR| There are a very limited number of motor drivers that are known to be suitable for use with DC mode. The current list is available in :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`. Any other motor drivers, not explicitly listed, are not supported. 
 
 Note the |EX-CSB1-SHORT| *has* a brake pin and *is* therefore capable of supporting DC PWM.
 
@@ -82,7 +82,7 @@ Note the |EX-CSB1-SHORT| *has* a brake pin and *is* therefore capable of support
 
 Do not attempt to connect two insulated tracks together and drive a DCC engine back and forth until someone bolder than you tries it first (or you've tested it).
 
-Some suggested precautions are to add 4 fuses on wires (-b +b, -a +a) to the |EX-CS| connections. Use 2A fuses for the standard L298P motor shield or 5A fuses for the larger motor drivers.
+Some suggested precautions are to add 4 fuses on wires (-b +b, -a +a) to the |EX-CS| connections. Use 2A fuses for the |standard motor driver| or 5A fuses for the larger motor drivers.
 
 |HR-DASHED|
 
@@ -99,7 +99,7 @@ Technical details
 |EX-CS| **production version 5.0+** supports both DCC (PWM) and DC (PWM) Pulse Width Modulation modes as an *embedded standard feature*.
 TrackManager allows you to set up and operate up to eight separate dual insulated sections of track/districts in either DCC (PWM) and or DC (PWM) as tracks A - H.
 
-An Arduino Mega (with or without WiFi) and Standard L298P Motor Shield |EX-CS| has two ready to run Tracks (**A** & **B**) which can be configured as:
+An Arduino Mega (with or without WiFi) and |Standard Motor Driver|, |EX-CS| has two ready to run Tracks (**A** & **B**) which can be configured as:
 
   * DCC (PWM) modes MAIN for mainline tracks and PROG for a programming track
   * DC (PWM) modes for DC or DC_INV / DCX (opposite polarity)
@@ -113,7 +113,7 @@ One key difference to note in comparing DCC vs. DC is that in DCC mode, forward/
 
 Turn off, unplug the AC power cord, and disconnect your current DC transformer(s) / power supply(s) from the DC layout track to place in a box for safe keeping.
 
-You will instead be using a regulated DC (Laptop) 12-18 Vdc 3-5Amp power supply to your Motor Shield and or Motor Board (booster) to run all your DCC Locos and analogue DC Cabs on all your individual tracks/districts/blocks.
+You will instead be using a regulated DC (Laptop) 12-18 Vdc 3-5Amp power supply to your |motor shield| and or Motor Board (booster) to run all your DCC Locos and analogue DC Cabs on all your individual tracks/districts/blocks.
 
 You will be using DC (Pulse Width Modulation PWM) to drive the DC engines, Not DC Direct Current (-0 +16v).
 
@@ -167,14 +167,14 @@ Technical Information
 
   What a PWM waveform looks like
 
-These modes, (PWM) vs analogue DC are totally incompatible with one another and if crossed will result in magic smoke and a burned out motor shield and or USB connector. 
+These modes, (PWM) vs analogue DC are totally incompatible with one another and if crossed will result in magic smoke and a burned out |motor shield| and or USB connector. 
 
  * DCC(PWM) is detected on a multimeter as an AC signal but in a square wave form, not as a sine wave
  * DC(PWM) is detected on a multimeter as a DC signal in a square wave form, not as a direct current wave
 
 The DC(PWM) track is Power supply dependent and needs a varying amount of 0 zero to maximum Vdc passed to the track of 12 or 16 or 18vdc, depending on whether they're N, HO or G scale engines.
 
-Note; The signal is detected as DC on this track, from 0Vdc to max +xxVdc depending on the Motor Shield DC power supply output. The DCC-EX 122.55Hz PWM DC motor signal allows for better functioning and better running than most competing systems.
+Note; The signal is detected as DC on this track, from 0Vdc to max +xxVdc depending on the |motor shield| DC power supply output. The DCC-EX 122.55Hz PWM DC motor signal allows for better functioning and better running than most competing systems.
 
 TrackManager DCC(PWM) vs. DC(PWM) wave forms
 --------------------------------------------
@@ -224,7 +224,7 @@ These requirements are only for operating DC locomotives. There is nothing to do
 
 .. warning:: 
 
-  In order for |TM| to operate in DC mode, the motor shield must have a brake pin defined in your "config.h" motor shield definition. 
+  In order for |TM| to operate in DC mode, the |motor shield| must have a brake pin defined in your "config.h" |motor shield| definition. 
   
   There are a very limited number of motor drivers that are known to be suitable for use with DC mode. The current list is available in :ref:`reference/hardware/motor-boards:trackmanager dc compatible boards`. Any other motor drivers, not explicitly listed, are not supported. 
  
@@ -236,7 +236,7 @@ Do not attempt to connect two insulated tracks together and drive a DCC engine b
 
   Never drive a loco from an |EX-CS| controlled track or district to any other DCC or DC System.
 
-Some suggested precautions are to add 4 fuses on wires (-b +b, -a +a) to the |EX-CS| connections. Use 2A fuses for the standard L298P motor shield or 5A fuses for the larger motor drivers.
+Some suggested precautions are to add 4 fuses on wires (-b +b, -a +a) to the |EX-CS| connections. Use 2A fuses for the |Standard motor Driver| or 5A fuses for the larger motor drivers.
 
 ----
 

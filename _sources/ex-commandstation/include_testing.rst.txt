@@ -52,8 +52,8 @@ Using EX-WebThrottle
 Connect Everything:
 
 * Disconnect the |EX-CS| from the computer (that you used to load the software)
-* Connect wires from the MAIN Terminals of the motor shield (output A) to your **MAIN track**
-* Plug in the power supply for the motor shield **only**
+* Connect wires from the MAIN Terminals of the motor driver (output A) to your **MAIN track**
+* Plug in the power supply for the motor driver **only**
 * Reconnect the |EX-CS| to the computer
 * Wait for about 30 seconds for the Command Station to run through its startup sequence
 
@@ -86,12 +86,12 @@ Connect Everything:
 * Once you are connected, you can:   
   
   * Enter the ``<s>`` command in the "direct command" textbox to get status information from your Command Station. To do this just enter ``s`` (without the quotes) and press the SEND button. 
-  * You should see <iDCC++...> returned in the log window with your version, type of Arduino, type of motor shield, and some other information |BR| |BR|
+  * You should see <iDCC++...> returned in the log window with your version, type of Arduino, type of motor driver, and some other information |BR| |BR|
 
 * Now you are ready to run trains! |BR| |BR|
 * Place your loco on the **MAIN track**, a loco will NOT run on a programming track 
 * Click the :guilabel:`Power Slider` button to turn on power to your track
-* You should see lights on your Arduino Motor Shield or EX-MotorShield8874 and an indication that your loco has power
+* You should see lights on your |Standard Motor Driver| or |EX-MS| and an indication that your loco has power
 * Next go to the ``Locomotive ID`` textbox 
 * Enter the DCC address of your loco
 * Then press the :guilabel:`Acquire` button
@@ -99,7 +99,7 @@ Connect Everything:
 * The circular control or vertical slider (chosen by the throttle select slider) can be moved by clicking and holding down the mouse button and dragging, clicking at a spot where you want the throttle to move, or clicking the + and - buttons
 
 .. note:: 
-   If you did not see the LEDs light near the A and B outputs on the Motor Shield, try pushing down on the motor shield to make sure that the pins are properly seated into the Arduino. If that did not work, scroll down to the very bottom of this page and click on the 'Next' button for troubleshooting help.
+   If you did not see the LEDs light near the A and B outputs on the |Motor Shield|, try pushing down on the |motor shield| to make sure that the pins are properly seated into the Arduino. If that did not work, scroll down to the very bottom of this page and click on the 'Next' button for troubleshooting help.
 
 .. sidebar:: 
 
@@ -120,9 +120,9 @@ Using Engine Driver or WiThrottle - Requires WiFi
 Connect Everything:
 
 * Disconnect the |EX-CS| from the computer (that you used to load the software)
-* Connect the wires from the 'MAIN' terminals of the motor shield (output A) to your MAIN track
+* Connect the wires from the 'MAIN' terminals of the |motor shield| (output A) to your MAIN track
 * If you are using the DCC-EX |EX-MS|, plug in your single power supply to the shield
-* If you are using the Arduino Motor Shield, plug in the two power supplies (The one for the Arduino and the one for the motor shield). Make sure to not plug the higher voltage power supply into the Arduino by mistake
+* If you are using a |standard Motor Driver|, plug in the two power supplies (The one for the Arduino and the one for the |motor shield|). Make sure to not plug the higher voltage power supply into the Arduino by mistake
 * Wait for about 30 seconds for the Arduino to run through the initial startup sequence
 
 .. figure:: /_static/images/throttles/throttle_wifi_direct.png
@@ -194,7 +194,7 @@ You will need to install |Engine Driver| on your mobile device and then connect 
 See :doc:`Engine Driver Page </throttles/software/engine-driver>` for details on how to install and run |Engine Driver|.
 
 .. note:: 
-   If you did not see the LEDs near the A and B outputs light on the Motor Shield, try pushing down on the motor shield to make sure that the pins are properly seated into the Arduino. If that did not work, scroll down to the very bottom of this page and click on the 'Next' button for troubleshooting help.
+   If you did not see the LEDs near the A and B outputs light on the |Motor Shield|, try pushing down on the |motor shield| to make sure that the pins are properly seated into the Arduino. If that did not work, scroll down to the very bottom of this page and click on the 'Next' button for troubleshooting help.
 
 Using WiThrottle (Apple iOS)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^

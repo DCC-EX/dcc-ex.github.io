@@ -138,7 +138,7 @@ Using JMRI
     - Go to Question 3.
     - (a) Check which com port the EX-CommandStation is connected to. |BR| See :ref:`ex-commandstation/installer-diy:1. getting ready` for details on how to determine the correct com port.
 
-  * - 3. Can you turn the track power on?  |BR| Do the LEDs on the motor shield turn on?
+  * - 3. Can you turn the track power on?  |BR| Do the LEDs on the |motor shield| turn on?
     - Go to Question 4.
     - (a) Have you plugged in and turned on a 12-15v DC power supply into the motor board
       (b) Have you made sure the polarity of the power supply is correct. 
@@ -194,7 +194,7 @@ When Configured as an Access Point
     - (a) ToDo
       (b) ToDo
 
-  * - 6. Can you turn the track power on?  |BR| Do the LEDs on the motor shield turn on?
+  * - 6. Can you turn the track power on?  |BR| Do the LEDs on the |motor shield| turn on?
     - Go to Question 7.
     - (a) Have you plugged in and turned on a 12-15v DC power supply into the motor board
       (b) Have you made sure the polarity of the power supply is correct. 

@@ -14,9 +14,11 @@ Requirements
 
 * A DCC Enabled loco with a working Decoder
 * A separate section of track, a siding electrically isolated from the main track, or possibly a rolling road
-* A motor shield or motor driver with current sense capability
+* A |motor driver| with current sense capability
 
-.. NOTE:: The default EX-CommandStation with a dual output Arduino Motor shield has everything you need, a main track output, a programming track output, and a configuration that handles current sense for programming a loco on output B and current sense for overlimit detection on output A.
+.. NOTE:: 
+    
+    The default EX-CommandStation with a dual output |Standard Motor Driver| has everything you need, a main track output, a programming track output, and a configuration that handles current sense for programming a loco on output B and current sense for overlimit detection on output A.
 
 There are a number of ways you can program decoders with the |EX-CS| including:
 

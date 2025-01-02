@@ -71,7 +71,7 @@ Also allows joining the MAIN and PROG tracks together.
 
     The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work. If you drive onto a programming track that is "joined" and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!
 
-    In some split motor shield hardware configurations JOIN will not be able to work.
+    In some split |motor shield| hardware configurations JOIN will not be able to work.
 
   *Examples:* |BR|
   |_| all tracks off: ``<0>`` |BR|
@@ -133,7 +133,7 @@ Note:  Previously referred to as 'DC-District'.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
-  |_| > **trackletter:** 'A' through 'H' represent one of the outputs of the/a motor shield. |BR|
+  |_| > **trackletter:** 'A' through 'H' represent one of the outputs of the/a |motor shield|. |BR|
   |_| > **mode:** one of  |BR|
   |_| |_| |_| |_| • ``MAIN`` |BR|
   |_| |_| |_| |_| • ``MAIN_INV`` |BR|
@@ -170,7 +170,7 @@ Note:  Previously referred to as 'DC-District'.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
-  |_| for each track/channel supported by the motor shield ``<= trackletter state cab>`` |BR|
+  |_| for each track/channel supported by the |motor shield| ``<= trackletter state cab>`` |BR|
   |_|  |BR|
   |_| > **trackletter:** A-H |BR|
   |_| > **state:** 'PROG', 'MAIN', 'MAIN_INV', 'MAIN A', 'DC', 'DCX', 'NONE' |BR|

@@ -80,7 +80,7 @@ What you will need (for WiFi)
 
 **Either:**
 
-* A |EX-CS| - Command Station (CS) made from a **Mega** and an **Arduino Motor Shield**
+* A |EX-CS| - Command Station (CS) made from a **Mega** and a |standard Motor Driver|
 * One of the above WiFi boards
 * Two (2) Male to Female Jumpers (plus 3 more if you are using an ESP-01 or 01s)
 

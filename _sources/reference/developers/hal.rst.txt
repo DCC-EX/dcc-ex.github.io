@@ -376,7 +376,7 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
     continue until the |I2C| operation has completed).
   - The native |I2C| driver for the ATmega328, ATmega2560 and ATmega4809 based controllers supports use with interrupts 
     (for high |I2C| throughput) or without interrupts (to minimise impact on the DCC waveform, when generated through software 
-    interrupts, at the expense of |I2C| throughput).  On the Arduino Mega with the standard motor driver pin usage, the 
+    interrupts, at the expense of |I2C| throughput).  On the Arduino Mega with the |standard motor driver| pin usage, the 
     native |I2C| driver has no impact whatsoever on the DCC signal, with or without interrupts.
   - Performance figures:  With the current base device allocations of 32 x PCA9685 servo pins and 32 x MCP23017 GPIO pins, 
     the average loop time for the Command Station software (one throttle, no user actions, 16 sensors defined) is 120us.  During stress 

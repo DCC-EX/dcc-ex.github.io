@@ -54,7 +54,7 @@ To run |EX-I| you need:
     * Expressif ESP32
     * STMicroelectronicsm Nucleo/STM32
 
-  * a **motor shield**
+  * a **motor Driver**
   * optionally, a **WiFi shield** or ethernet shield
   * optionally, an **LCD or oLED display**
   

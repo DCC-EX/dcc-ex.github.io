@@ -29,7 +29,7 @@ For this to work, you need two things:
 The Motor Board Config
 ========================
 
-You will notice that your motor driver type is set in the *config.h* file. This line sets a standard motor shield compatible with the Arduino Motor Driver:
+You will notice that your motor driver type is set in the *config.h* file. This line sets a |standard motor driver| compatible with the Arduino Motor Driver:
 
 .. code-block:: cpp
 

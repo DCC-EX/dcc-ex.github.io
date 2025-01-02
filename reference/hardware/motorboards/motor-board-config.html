@@ -745,7 +745,7 @@
 <li><p>We will choose pin 9 for our second PWM pin</p></li>
 </ul>
 <p>senseFactor = ((5/1024)/Board Volts/Amp)*1000 = ((.00488)/(1/1))*1000 = 4.88</p>
-<p>The second board will be an Arduino Motor Shield to use for programming. We already have the definition for the Standard Motor Shield, so we will leave the second MotorDriver line alone. Our new definition will look like this:</p>
+<p>The second board will be an Arduino Motor Shield to use for programming. We already have the definition for the <abbr title="Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.">Standard Motor Driver</abbr>, so we will leave the second MotorDriver line alone. Our new definition will look like this:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define 2_PWM_MOTOR_BOARD F(&quot;2_PWM_MOTOR_BOARD&quot;),\</span>
 <span class="cp">  new MotorDriver(3, 12, 9, UNUSED_PIN, A0, 4.88, 5000, UNUSED_PIN), \</span>
 <span class="cp">  new MotorDriver(11, 13, UNUSED_PIN, UNUSED_PIN, A1, 2.99, 2000, UNUSED_PIN)</span>
@@ -844,7 +844,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f869cddded0>
+    <jinja2.runtime.BlockReference object at 0x7fda6c964430>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

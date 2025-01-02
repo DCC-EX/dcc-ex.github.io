@@ -675,8 +675,8 @@
 <p>Connect Everything:</p>
 <ul class="simple">
 <li><p>Disconnect the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> from the computer (that you used to load the software)</p></li>
-<li><p>Connect wires from the MAIN Terminals of the motor shield (output A) to your <strong>MAIN track</strong></p></li>
-<li><p>Plug in the power supply for the motor shield <strong>only</strong></p></li>
+<li><p>Connect wires from the MAIN Terminals of the motor driver (output A) to your <strong>MAIN track</strong></p></li>
+<li><p>Plug in the power supply for the motor driver <strong>only</strong></p></li>
 <li><p>Reconnect the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> to the computer</p></li>
 <li><p>Wait for about 30 seconds for the Command Station to run through its startup sequence</p></li>
 </ul>
@@ -708,13 +708,13 @@
 <li><p>Once you are connected, you can:</p>
 <ul>
 <li><p>Enter the <code class="docutils literal notranslate"><span class="pre">&lt;s&gt;</span></code> command in the “direct command” textbox to get status information from your Command Station. To do this just enter <code class="docutils literal notranslate"><span class="pre">s</span></code> (without the quotes) and press the SEND button.</p></li>
-<li><p>You should see &lt;iDCC++…&gt; returned in the log window with your version, type of Arduino, type of motor shield, and some other information <br /> <br /></p></li>
+<li><p>You should see &lt;iDCC++…&gt; returned in the log window with your version, type of Arduino, type of motor driver, and some other information <br /> <br /></p></li>
 </ul>
 </li>
 <li><p>Now you are ready to run trains! <br /> <br /></p></li>
 <li><p>Place your loco on the <strong>MAIN track</strong>, a loco will NOT run on a programming track</p></li>
 <li><p>Click the <span class="guilabel">Power Slider</span> button to turn on power to your track</p></li>
-<li><p>You should see lights on your Arduino Motor Shield or EX-MotorShield8874 and an indication that your loco has power</p></li>
+<li><p>You should see lights on your <abbr title="Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.">Standard Motor Driver</abbr> or <a href="../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a> and an indication that your loco has power</p></li>
 <li><p>Next go to the <code class="docutils literal notranslate"><span class="pre">Locomotive</span> <span class="pre">ID</span></code> textbox</p></li>
 <li><p>Enter the DCC address of your loco</p></li>
 <li><p>Then press the <span class="guilabel">Acquire</span> button</p></li>
@@ -723,7 +723,7 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you did not see the LEDs light near the A and B outputs on the Motor Shield, try pushing down on the motor shield to make sure that the pins are properly seated into the Arduino. If that did not work, scroll down to the very bottom of this page and click on the ‘Next’ button for troubleshooting help.</p>
+<p>If you did not see the LEDs light near the A and B outputs on the <abbr title="also referred to as a Motor Driver or Motor Board">Motor Shield</abbr>, try pushing down on the <abbr title="also referred to as a Motor Driver or Motor Board">Motor Shield</abbr> to make sure that the pins are properly seated into the Arduino. If that did not work, scroll down to the very bottom of this page and click on the ‘Next’ button for troubleshooting help.</p>
 </div>
 <aside class="sidebar">
 <p><a href="../ex-webthrottle/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span></a> is also a Progressive Web App (PWA). That means you can install it on your computer and run it right from your start menu! If you go into the <a href="../ex-webthrottle/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span></a> settings panel (click the 3 line “hamburger menu” at the top left), you will find a “Settings” menu. Click on “Apps” and then select “Install as an App”. You can now work offline and always find <a href="../ex-webthrottle/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span></a> with your other Apps!</p>
@@ -740,9 +740,9 @@
 <p>Connect Everything:</p>
 <ul class="simple">
 <li><p>Disconnect the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> from the computer (that you used to load the software)</p></li>
-<li><p>Connect the wires from the ‘MAIN’ terminals of the motor shield (output A) to your MAIN track</p></li>
+<li><p>Connect the wires from the ‘MAIN’ terminals of the <abbr title="also referred to as a Motor Driver or Motor Board">Motor Shield</abbr> (output A) to your MAIN track</p></li>
 <li><p>If you are using the DCC-EX <a href="../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a>, plug in your single power supply to the shield</p></li>
-<li><p>If you are using the Arduino Motor Shield, plug in the two power supplies (The one for the Arduino and the one for the motor shield). Make sure to not plug the higher voltage power supply into the Arduino by mistake</p></li>
+<li><p>If you are using a <abbr title="Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.">Standard Motor Driver</abbr>, plug in the two power supplies (The one for the Arduino and the one for the <abbr title="also referred to as a Motor Driver or Motor Board">Motor Shield</abbr>). Make sure to not plug the higher voltage power supply into the Arduino by mistake</p></li>
 <li><p>Wait for about 30 seconds for the Arduino to run through the initial startup sequence</p></li>
 </ul>
 <figure class="align-center" id="id3">
@@ -823,7 +823,7 @@
 <p>See <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver Page</span></a> for details on how to install and run <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you did not see the LEDs near the A and B outputs light on the Motor Shield, try pushing down on the motor shield to make sure that the pins are properly seated into the Arduino. If that did not work, scroll down to the very bottom of this page and click on the ‘Next’ button for troubleshooting help.</p>
+<p>If you did not see the LEDs near the A and B outputs light on the <abbr title="also referred to as a Motor Driver or Motor Board">Motor Shield</abbr>, try pushing down on the <abbr title="also referred to as a Motor Driver or Motor Board">Motor Shield</abbr> to make sure that the pins are properly seated into the Arduino. If that did not work, scroll down to the very bottom of this page and click on the ‘Next’ button for troubleshooting help.</p>
 </div>
 </section>
 <section id="using-withrottle-apple-ios">
@@ -936,7 +936,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f86ab2b13c0>
+    <jinja2.runtime.BlockReference object at 0x7fda53bf3280>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

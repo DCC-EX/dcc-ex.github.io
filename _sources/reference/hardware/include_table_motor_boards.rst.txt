@@ -31,7 +31,7 @@
     - 5
     - 
 
-  * - :doc:`Arduino Motor Shield R3</reference/hardware/motorboards/arduino-motor-shield>`
+  * - :doc:`Arduino Motor Shield R3</reference/hardware/motorboards/arduino-motor-shield>` [#b23]_ [#b24]_
     - Yes
     - Yes
     - Conductor
@@ -44,7 +44,7 @@
     - 1.3 - 1.5
     - 
 
-  * - :doc:`Deek-Robot Motor Shield</reference/hardware/motorboards/deek-robot-motor-shield>`
+  * - :doc:`Deek-Robot Motor Shield</reference/hardware/motorboards/deek-robot-motor-shield>` [#b24]_
     - Yes
     - Yes
     - Conductor
@@ -249,3 +249,4 @@
 .. [#b21] Per output
 .. [#b22] Requires modification of the board to stack the second board
 .. [#b23] Requires modification of the board to support Current Sense
+.. [#b24] The *Arduino Motor Shield R38* and the *Deek-Robot Motor Shield* are interchangeably referred to in this documentation as the *standard motor driver*

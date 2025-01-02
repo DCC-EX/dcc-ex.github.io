@@ -49,14 +49,14 @@ For a video on how to do this, click below: `Setting Up Your Command Station <ht
 1. Disable Power Sharing - Arduino to Motor Driver
 ==================================================
 
-**Arduino Motor Shield R3** Only!
+|standard Motor Driver| Only!
 
 .. warning:: 
    :class: warning-float-right
    
-   By default, the **Arduino Motor Shield R3** shares its power supply via the pins, with the power supply of the Arduino. *This can supply too much voltage to the Arduino.*
+   By default, the |standard Motor Driver| shares its power supply via the pins, with the power supply of the Arduino. *This can supply too much voltage to the Arduino.*
    
-   *If you do not cut this trace* or bend out the Vin, you could damage or destroy the Arduino if you apply more than 12V to the motor shield. |BR| In the same way, if you don't bypass Vin and use the 2 power supplies as recommended, they would be connected to each other which could also cause damage.
+   *If you do not cut this trace* or bend out the Vin, you could damage or destroy the Arduino if you apply more than 12V to the |motor shield|. |BR| In the same way, if you don't bypass Vin and use the 2 power supplies as recommended, they would be connected to each other which could also cause damage.
 
    Note: This is **not required** if you are using the **EX-MotorShield8874**.
 
@@ -74,7 +74,7 @@ You will need to turn the motor controller board upside down and do ONE of the f
 Cutting the Trace
 -----------------
 
-**Arduino Motor Shield R3** Only!  This is **not required** if you are using the **EX-MotorShield8874**.
+|standard Motor Driver| Only!  This is **not required** if you are using the **EX-MotorShield8874**.
 
 Standard Method
 ^^^^^^^^^^^^^^^
@@ -124,7 +124,7 @@ Here are some tips before you start:
 * There are outdented "tabs" on the opposite end of the board. They must point in the same direction.
 * The pin numbers on both boards must align (pin 1 goes to pin 1, gnd goes to gnd, etc).
 * With the power connectors to your right, align the pins facing you first (pins 0-12, aref, gnd, etc).
-* Look at the pins on the motor shield and make sure they are all straight and line up in a neat row.
+* Look at the pins on the |motor shield| and make sure they are all straight and line up in a neat row.
 
 Place both boards on the table with the power connector end facing in the same direction.
 
@@ -134,7 +134,7 @@ Place both boards on the table with the power connector end facing in the same d
 
    Properly orient the boards
 
-a. Did you remember to cut the trace on the motor shield? |BR| If not, see above. |BR| Otherwise, sight down both rows of pins on the motor board and make sure they are all straight. They should all line up in a row and not be bent in any plane, just like the teeth on a comb. If any look like the photo below, bend them with your fingers and/or needle nose pliers.
+a. Did you remember to cut the trace on the |motor shield|? |BR| If not, see above. |BR| Otherwise, sight down both rows of pins on the motor board and make sure they are all straight. They should all line up in a row and not be bent in any plane, just like the teeth on a comb. If any look like the photo below, bend them with your fingers and/or needle nose pliers.
 
 .. figure:: /_static/images/assembly/bent_pins.png
    :alt: bent pins
@@ -206,7 +206,7 @@ Check your work. Look under and through where the boards connect, make sure no p
 
 Make sure you have a power supply with the correct voltage and current rating. For help on selecting your power supply, please see :doc:`compatible Power Supplies </reference/hardware/power-supplies>`
 
-If you are using a "bench" or metal box type power supply, simply connect the DC output of the power supply to the DC input of the motor shield. Make sure that the positive screw terminal (+) is connected to the positive terminal (Vin) of the motor shield and the negative terminal (- or gnd) is connected to the negative (gnd) terminal of the motor shield.
+If you are using a "bench" or metal box type power supply, simply connect the DC output of the power supply to the DC input of the motor shield. Make sure that the positive screw terminal (+) is connected to the positive terminal (Vin) of the |motor shield| and the negative terminal (- or gnd) is connected to the negative (gnd) terminal of the |motor shield|.
 
 .. figure:: /_static/images/assembly/motor_power2b.jpg
    :alt: Power in to the Motor Shield
@@ -214,7 +214,7 @@ If you are using a "bench" or metal box type power supply, simply connect the DC
 
    Power in to the Motor Shield
 
-If you are using a laptop style "brick" power supply or an adapter that plugs into the wall (aka wall wart), use the barrel connector to screw terminal adapter to connect your power supply to the Vin and ground pins on the motor shield. Be careful to use the correct polarity. Make sure the positive terminal on the screw terminal adapter connects to the positive (+) on the motor shield and the negative terminal (- or gnd) connects to the negative terminal.
+If you are using a laptop style "brick" power supply or an adapter that plugs into the wall (aka wall wart), use the barrel connector to screw terminal adapter to connect your power supply to the Vin and ground pins on the |motor shield|. Be careful to use the correct polarity. Make sure the positive terminal on the screw terminal adapter connects to the positive (+) on the |motor shield| and the negative terminal (- or gnd) connects to the negative terminal.
 
 .. figure:: /_static/images/assembly/motor_power3.jpg
    :alt: Screw Terminal Adapter Power
@@ -235,7 +235,7 @@ If you don't have a screw terminal adapter, you can cut the end off your power s
 
    For the **EX-MotorShield8874** the output are reversed.  ``A`` is furthest from the barrel connector. ``B`` is closest to the barrel connector.
 
-There are two sets of output connectors on the motor shield, ``A`` and ``B``. A is the Main or Operations (also called 'Ops') track while ``B`` is the Programming or Service track. Connect twisted pair wire of the proper gauge to each track. 
+There are two sets of output connectors on the |motor shield|, ``A`` and ``B``. A is the Main or Operations (also called 'Ops') track while ``B`` is the Programming or Service track. Connect twisted pair wire of the proper gauge to each track. 
 
 Polarity (which wire is connected to which side of the track) is not not important here if you are using separate, completely isolated piece of track for PROG. *However* if you will be using a siding track that connects to your main track, make sure that the *connections for both tracks match*. 
 
@@ -299,4 +299,4 @@ See the :doc:`/ex-commandstation/diy/wifi-setup` page or click the 'Next' button
 
    **Power Supplies** - Why do we recommend a 7-9V power supply for the Mega when the manual says it can handle 12V or even 20V? Can't you just use one 12V power supply to power both of them? Short answer; NO. You want two supplies (or one supply that splits out 2 voltages). The Arduino Mega only needs around 7V to operate. Any voltage over that is wasted as heat and can burn out the regulator on the board. And most people want a minimum of 12V into the Motor Board, while many want 14V (for N and HO Scale). Where your Mega could run hot for a while with 12V, if 14V from the Motorboard was connected to the Mega, it would destroy it. Cut the trace and use 2 power supplies.
 
-   **Using a 5V Supply** - There is one more option for powering the Mega. If you have a 5V DC regulated power supply, you can bypass the barrel connector and the regulator and connect it directly to the 5V and Gnd pins on the Arduino. Do NOT connect anything to the barrel connector if you do this! You would still need to cut the Vin trace on the Motor Shield and use your separate power supply that plugs into the shield. For more information, see :doc:`Power Supplies </reference/hardware/power-supplies>`
+   **Using a 5V Supply** - There is one more option for powering the Mega. If you have a 5V DC regulated power supply, you can bypass the barrel connector and the regulator and connect it directly to the 5V and Gnd pins on the Arduino. Do NOT connect anything to the barrel connector if you do this! You would still need to cut the Vin trace on the |Motor Shield| and use your separate power supply that plugs into the shield. For more information, see :doc:`Power Supplies </reference/hardware/power-supplies>`

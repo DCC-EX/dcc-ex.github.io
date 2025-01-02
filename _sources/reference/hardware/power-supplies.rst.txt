@@ -26,7 +26,7 @@ How many power supplies you need depends on the type of |EX-CS| you have:
 
 1. If you have an |EX-CSB1-SHORT| then you only need **one (1) power supply**.
 
-2. If you have a **do-it-yourself (DIY)** |EX-CS| based of the Arduino Mega with a |EX-MS| motor shield, then you only need **one (1) power supplies**. One for motor driver.  The motor driver will pass power to the Arduino.
+2. If you have a **do-it-yourself (DIY)** |EX-CS| based of the Arduino Mega with a |EX-MS| motor shield, then you only need **one (1) power supplies**. One for the motor driver.  The motor driver will pass power to the Arduino.
 
 3. If you have a **do-it-yourself (DIY)** |EX-CS| based of the Arduino Mega, ESP32 or Nucleo with a Standard motor shield, then you need **two (2) power supplies**. One for the Arduino and one for the motor driver.
 
@@ -34,12 +34,14 @@ How many power supplies you need depends on the type of |EX-CS| you have:
 
 |HR-DASHED|
 
-Why does the Arduino Mega with Standard motor driver need two power supplies?
------------------------------------------------------------------------------
+Why does the Mega/ESP32/Nucleo with Standard motor driver need two power supplies?
+------------------------------------------------------------------------------------
 
-Well, you at least need two voltages. Both your microcontroller (the Arduino) and the motor driver need power. While we recommend a 7-9 Volt, 1 Amp, DC power supply for an Arduino Uno or Mega, there are other ways to power it. 
+For Arduino Mega with Standard motor driver, you need at least two different voltages. The Arduino needs ~5vDC and the Motor driver needs significantly more voltage to provide power to the track (see below).
 
-The voltage requirement to the motor driver does not change based on how you power your Arduino, you need the correct voltage and amperage for your gauge and layout.
+Both your microcontroller (the Arduino) and the motor driver need power. While we recommend a 7-9 Volt, 1 Amp, DC power supply for an Arduino Uno or Mega, there are other ways to power it. 
+
+The voltage requirement to the motor driver does not change based on how you power your Arduino, you need the correct voltage and amperage for your scale/gauge and layout.
 
 .. note:: 
    
@@ -54,16 +56,30 @@ Note, this primarily applies to the Arduino Mega with a standard motor driver. (
 
 **Barrel Connector** - This is where we can connect our 7-9V DC supply. The power goes through a voltage regulator on the Arduino and converts the 7-9V to the 5V the board can use. You will still need a separate source of power for the motor controller.
 
-**USB Connector** - If you always will have a computer connected to your Command Station (for example when using |JMRI| or |EX-WT|), the 5V from your computer can power it. You won't need separate power supply in addition to the one you need for the motor controller. Most USB ports can only supply 500 milliamps, and this input is protected by a 500mA polyfuse that resets when a short is removed, so be careful about adding anything that will draw current from the Command Station. A motor shield, a WiFi shield and a fan that draws 50mA should be fine. Even if you don't have a laptop, you can use a 5V, 800mA or more USB power supply like a phone charger and connect it to the USB port.
+**USB Connector** - If you always will have a computer connected to your Command Station (for example when using |JMRI| or |EX-WT|), the 5V from your computer can power it. You won't need separate power supply in addition to the one you need for the motor controller. 
 
-**Barrel Connector and USB at the same time?** You may wonder what happens if you have a 7-9V power supply connected to the barrel connector and plug your laptop into the USB port to use the |serial monitor|. The Uno and Mega actually have a conflict protection circuit. If you plug in a 7V or more power supply to the barrel connector, the Arduino automatically switches internally to use that power supply. So regardless of which connector you plug in first, if the barrel connector has a voltage 7V or greater applied to it, that is the voltage the Arduino will use and the USB connection will just provide communication signals.
+Most USB ports can only supply 500 milliamps, and this input is protected by a 500mA polyfuse that resets when a short is removed, so be careful about adding anything that will draw current from the Command Station. A motor shield, a WiFi shield and a fan that draws 50mA should be fine.
+
+Even if you don't have a laptop, you can use a 5V, 800mA or more USB power supply like a phone charger and connect it to the USB port.
+
+**Barrel Connector and USB at the same time?** You may wonder what happens if you have a 7-9V power supply connected to the barrel connector and plug your laptop into the USB port to use the |serial monitor|. 
+
+The Uno and Mega actually have a conflict protection circuit. If you plug in a 7V or more power supply to the barrel connector, the Arduino automatically switches internally to use that power supply. So regardless of which connector you plug in first, if the barrel connector has a voltage 7V or greater applied to it, that is the voltage the Arduino will use and the USB connection will just provide communication signals.
 
 **Vin pin** - You can connect a 7-9V DC power supply with jumper wires. The positive from the power supply goes to Vin and negative to any pin marked "gnd" for ground. This also uses the voltage regulator on the Arduino to convert your supply voltage to 5V. You will still need a separate power supply for the motor controller.
 
-**5V pin** - Engineers only! Arduino recommends against this. You can connect a good quality 5V power supply directly to the 5V pin and ground. You can NOT ever plug anything into the other power connectors if you connect power this way! This bypasses the voltage regulator on the board which means you can use more current. But it also connects voltage to the output of the 5V regulator. Be aware that there is no diode for reverse voltage protection and no fuse for overcurrent. Research this option before attempting it.
+**5V pin** - *Engineers only!* Arduino recommends against this. You can connect a good quality 5V power supply directly to the 5V pin and ground. 
+
+You can NOT ever plug anything into the other power connectors if you connect power this way! This bypasses the voltage regulator on the board which means you can use more current. But it also connects voltage to the output of the 5V regulator. 
+
+Be aware that there is no diode for reverse voltage protection and no fuse for overcurrent. Research this option before attempting it.
 
 
-.. warning:: We recommend only a 7-9V DC power supply for your Arduino because, despite what may be said on a specification sheet, anything over 5V is generates unnecessary heat in the voltage regulator on an Arduino. There is a 2V voltage drop in this regulator, so you need a minimum of 7 volts to power the board. 7-9 is perfect. If you used 12V and connected a WiFi board or other devices that also use the 5V power supply on the Arduino, the voltage regulator is likely to overheat.
+.. warning:: 
+   
+   We recommend only a 7-9V DC power supply for your Arduino because, despite what may be said on a specification sheet, anything over 5V is generates unnecessary heat in the voltage regulator on an Arduino.
+   
+    There is a 2V voltage drop in this regulator, so you need a minimum of 7 volts to power the board. 7-9 is perfect. If you used 12V and connected a WiFi board or other devices that also use the 5V power supply on the Arduino, the voltage regulator is likely to overheat.
 
 ----
 
@@ -80,29 +96,32 @@ Voltage
    
    :dcc-ex-red-bold-italic:`Applying a voltage above what a decoder was designed for may permanently damage it.`
 
-The voltage you need depends on the scale/gauge of the locos you intend to run, and motor driver you have.
+The voltage you need depends on the *scale/gauge of the locos* you intend to run, and the *motor driver* you have.
 
-As a rough guide you need a voltage *on the track* of...
+For |DCC|, as a rough guide you need a voltage *on the track* of...
 
-* **10v-12vDC** for Z scale
-* **10v-14vDC** for N scale
-* **14v-16vDC** for HO/OO scale
-* **18v-19vDC** for O scale
-* **20v-24vDC** for G scale
+* **10v-12vDC** for Z scale/gauge
+* **10v-14vDC** for N scale/gauge
+* **14v-16vDC** for HO/OO scale/gauge
+* **18v-19vDC** for O scale/gauge
+* **20v-24vDC** for G scale/gauge
+
+Note that for purely |DC| operation, these voltages should probably be slightly lower maximums.
 
 The voltage of the *power supply* you need will depend on the type of motor driver you have:
 
 * If you have a |EX-MS| or |EX-MS| the you *should not exceed* the values listed above. This is because the EX-MotorShield8874 does not drop voltage like the standard motor driver.
 
-* If you have a *standard motor shield**, then you generally will want a power supply between 1 and 2 volts higher than the voltage you want to have on the track. 
+
+* If you have a *standard motor shield**, then you generally will want a power supply between 1 and 2 volts higher than the voltage you want to have on the track. this is because the standard motor driver is inefficient and drops voltage.
 
 |HR-DASHED|
 
 **Additional Information**
 
-   N and Z scale layouts should run at at about 12V-14V to avoid damage to the motors. See this thread to learn more about the pros and cons of running at higher voltages at this `TrainBoard Thread <https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/>`_ |EXTERNAL-LINK| Another good link (along with just about anything written by Mark Gurries), is here: `Mark Gurries - Choosing the Right Booster <https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/boosters/choosing-the-right-booster>`_ |EXTERNAL-LINK|
+   N and Z scale/gauge layouts should run at at about 10V-14V to avoid damage to the motors. See this thread to learn more about the pros and cons of running at higher voltages at this `TrainBoard Thread <https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/>`_ |EXTERNAL-LINK| Another good link (along with just about anything written by Mark Gurries), is here: `Mark Gurries - Choosing the Right Booster <https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/boosters/choosing-the-right-booster>`_ |EXTERNAL-LINK|
 
-   Most larger scales will run higher voltages. For reference, Digitrax systems put the rails at around 14V and garden scale could be 18V. Do some homework to determine what voltage is best for your system.
+   Most larger scales/gauges will run higher voltages. For reference, Digitrax systems put the rails at around 14V and garden scale could be 18V. Do some homework to determine what voltage is best for your system.
 
    Be aware that the motor controller you use will affect the actual voltage at the track. If you use the Arduino Motor Shield or any other L298 based shield or controller, you will have a 2V drop at the track. That means that if you use a 12V supply, there will be only 10V at the track. Many people prefer to use a 14.5V DC power supply with these boards. If you use any MOSFET based boards like the IBT_2 and the IRF3205 boards, there is a negligible voltage drop so 12V in will give you 12V at the track.
 
@@ -178,7 +197,7 @@ https://www.amazon.com/Belker-5V-15V-Universal-Adapter-Speaker/dp/B015H0UPWU |EX
 Cage Power Supplies
 -------------------
 
-* The Meanwell LRS-100-15 power supply is a good choice for larger scales. It supplies 15V and 105W (that's 7 amps), so it is plenty for running two channels simultaneously. At only $18, it is an inexpensive and solid option.
+* The Meanwell LRS-100-15 power supply is a good choice for larger scales/gauges. It supplies 15V and 105W (that's 7 amps), so it is plenty for running two channels simultaneously. At only $18, it is an inexpensive and solid option.
 
 .. image:: /_static/images/power/meanwell-lrs100.png
    :scale: 100%
@@ -193,7 +212,7 @@ Cage Power Supplies
 Dual voltage power supplies
 ---------------------------
 
-With a dual voltage power supply, you can provide 12V for the motor controller and 5V for the Arduino. You may also be able to find higher voltage units if you need such as 14-15V if your scale trains require it.
+With a dual voltage power supply, you can provide 12V for the motor controller and 5V for the Arduino. You may also be able to find higher voltage units if you need such as 14-15V if your scale/gauge trains require it.
 
 * Mean Well Dual Voltage Power Supply (5V and 12V)
 

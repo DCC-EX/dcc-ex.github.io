@@ -11,7 +11,7 @@
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/dccex_theme.css?v=df3e6496" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/dccex_theme.css?v=6cd77179" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -800,7 +800,19 @@
 <p><strong>DO NOT</strong> connect power to BOTH the EX-MotorShield8874 barrel jack and the underlying Arduino motherboard via its DC barrel jack as you may damage your Arduino and/or EX-MotorShield8874!!</p>
 </div>
 <p>The EX-MotorShield8874’s DC barrel jack is the only power source required to power both the tracks and the <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> into which it is plugged. It supplies carefully regulated 7.2V DC power to the underlying Arduino R3 compatible motherboard via the VIN pin. This voltage is safely regulated down from the track power input to ensure Command Station motherboards will stay cool and work well. There is no need to power the Command Station via its barrel jack, or USB power. It is safe, however, to connect the USB cable as it will not create a conflict.</p>
-<p>We suggest 10-12VDC for Z &amp; N Scale, 14-16VDC for OO, HO, and 18-19VDC for O, or up to 24V for G scales because the EX-MotorShield8874 does not drop voltage like the standard L298 based motor shields. Note that good quality, fully-enclosed and double-insulated switch mode power supplies are best, and we suggest laptop power bricks as ideal in this role as they typically output 3-20A easily and safely.</p>
+<div class="warning-float-right admonition warning">
+<p class="admonition-title">Warning</p>
+<p>These are <em>common*</em> the upper limits of what most decoders will accept.  You should check the manual of you decoders to confirm what that accept and adjust down accordingly.</p>
+<p>Applying a voltage above what a decoder was designed for may permanently damage it.</p>
+</div>
+<p>Because the EX-MotorShield8874 does not drop voltage like the standard L298 based motor shields we suggest:</p>
+<ul class="simple">
+<li><p><strong>10v-14vDC</strong> for Z &amp; N Scale,</p></li>
+<li><p><strong>14v-16vDC</strong> for OO, HO,</p></li>
+<li><p><strong>18v-19vDC</strong> for O, or</p></li>
+<li><p>up to a max of <strong>24vDC</strong> for G scales</p></li>
+</ul>
+<p>Note that good quality, fully-enclosed and double-insulated switch mode power supplies are best, and we suggest laptop power bricks as ideal in this role as they typically output 3-20A easily and safely.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Please note that as the EX-MotorShield8874 can supply up to 5A of track power per channel, a power supply of more than 10A peak capacity is required to run both channels at full peak current and have power left for the Command Station.</p>
@@ -1088,7 +1100,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fbf71be9900>
+    <jinja2.runtime.BlockReference object at 0x7fbf42a300a0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

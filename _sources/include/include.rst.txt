@@ -28,7 +28,7 @@
 ..
 .. |NOT-IN-PROD-VERSION| raw:: html
    
-  <span style="color:red">This feature is not available in the current 'Production' version</span>
+  <span style="color:red">This feature is not available in the current 'Production' version</span> <br /> It is available in the 'development' (DEVEL) releases.
 ..
 .. |NEW-IN-V5| raw:: html
 

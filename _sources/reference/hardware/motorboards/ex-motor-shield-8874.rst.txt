@@ -133,7 +133,21 @@ The |EX-MS| accepts a standard 2.1mm inside diameter DC barrel jack for DC power
 
 The EX-MotorShield8874's DC barrel jack is the only power source required to power both the tracks and the |EX-CS| into which it is plugged. It supplies carefully regulated 7.2V DC power to the underlying Arduino R3 compatible motherboard via the VIN pin. This voltage is safely regulated down from the track power input to ensure Command Station motherboards will stay cool and work well. There is no need to power the Command Station via its barrel jack, or USB power. It is safe, however, to connect the USB cable as it will not create a conflict.
 
-We suggest 10-12VDC for Z & N Scale, 14-16VDC for OO, HO, and 18-19VDC for O, or up to 24V for G scales because the EX-MotorShield8874 does not drop voltage like the standard L298 based motor shields. Note that good quality, fully-enclosed and double-insulated switch mode power supplies are best, and we suggest laptop power bricks as ideal in this role as they typically output 3-20A easily and safely.
+.. warning:: 
+   :class: warning-float-right
+
+   These are *common** the upper limits of what most decoders will accept.  You should check the manual of you decoders to confirm what that accept and adjust down accordingly.  
+   
+   Applying a voltage above what a decoder was designed for may permanently damage it.
+
+Because the EX-MotorShield8874 does not drop voltage like the standard L298 based motor shields we suggest: 
+
+* **10v-14vDC** for Z & N Scale, 
+* **14v-16vDC** for OO, HO, 
+* **18v-19vDC** for O, or 
+* up to a max of **24vDC** for G scales 
+
+Note that good quality, fully-enclosed and double-insulated switch mode power supplies are best, and we suggest laptop power bricks as ideal in this role as they typically output 3-20A easily and safely.
 
 .. note::
    Please note that as the EX-MotorShield8874 can supply up to 5A of track power per channel, a power supply of more than 10A peak capacity is required to run both channels at full peak current and have power left for the Command Station.

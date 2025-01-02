@@ -757,7 +757,7 @@ nav.in-this-section ul.simple {
 
 nav.in-this-section p {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
-  font-style: italic;
+  /* font-style: italic; */
   font-size: 90%;
   margin-top: 0px !important;
   margin-bottom: 6px !important;

@@ -8,9 +8,8 @@ DCC Turntables/traversers
 
 |SUITABLE| |conductor|  |tinkerer| |engineer| |support-button|
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
-|NOT-IN-PROD-VERSION|
 
 .. sidebar:: 
 

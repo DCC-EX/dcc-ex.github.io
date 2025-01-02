@@ -100,8 +100,6 @@ Also allows joining the MAIN and PROG tracks together.
   *Response:* Repeated for each Channel/Track: ``<j I track current>`` |BR|
   |_| > **track:**  channel/track |BR|
   |_| > **current:** current in milliamps
-    
-    *Version Introduced: 4.2.19* 
 
 |hr-dashed|
 
@@ -114,8 +112,6 @@ Also allows joining the MAIN and PROG tracks together.
   |_| repeated for each Channel/Track: ``<j G track currentmax>`` |BR|
   |_| > **track:**  channel/track |BR|
   |_| > **currentmax:** current in milliamps
-    
-    *Version Introduced: 4.2.19*
 
 ----
 
@@ -192,9 +188,7 @@ Note:  Previously referred to as 'DC-District'.
 ``<onOff [track]>`` - Turn power on or off to the requested TrackManager track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
-
-|NOT-IN-PROD-VERSION|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
   *Parameters:* |BR|
   |_| > **onOff:** one of |BR|
@@ -211,9 +205,7 @@ Note:  Previously referred to as 'DC-District'.
 Change Frequency on DC or DC_INV/DCX TrackManager track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
-
-|NOT-IN-PROD-VERSION|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 When running in DC mode certain locomotives can be unresponsive at certain DC frequencies, a situation that is not found when running in DCC mode.  When in DC or DC_INV / DCX mode it is now possible to set different frequencies using Functions F29, F30 & F31.
 
@@ -302,8 +294,6 @@ Cab (Loco) Commands
   |_| |_| |_| |_| • reverse - 2-127 = speed 1-126, 0 = stop  |BR|
   |_| |_| |_| |_| • forward - 130-255 = speed 1-126,  128 = stop |BR|
   |_| > **FunctiMap:** individual function states represented by the the bits in a byte
-
-  *Version Introduced: 4.1.1* 
   
   *Notes:*
    
@@ -1197,18 +1187,16 @@ WiFi Control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
-  |_| All input and output from this point is the direct communication with the Wifi AT software this mode is ended by typing ! (exclamation mark).
+  |_| All input and output from this point is the direct communication with the WiFi AT software this mode is ended by typing ! (exclamation mark).
 
 |hr-dashed|
 
 .. _native-command-c-wifi-ssid-password:
 
-``<C WIFI ssid password>`` - Connects to an existing WIFI network in STA mode
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<C WIFI "ssid" "password">`` - Connects to an existing WIFI network in STA mode
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
-
-|NOT-IN-PROD-VERSION|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
   *Parameters:* |BR|
   |_| > **ssid:** network to connect to |BR|
@@ -1893,9 +1881,7 @@ If turnout definitions are stored in EEPROM, the turnout thrown/closed state is 
 Turntables/Traversers (Configuring the EX-CommandStation)
 ---------------------------------------------------------
 
-|NEW-IN-V5-4-LOGO-SMALL|
-
-|NOT-IN-PROD-VERSION|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 .. contents:: In This Section
     :depth: 4

@@ -11,7 +11,7 @@
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=df3e6496" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=6cd77179" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -740,9 +740,6 @@
 <span id="native-command-j-i"></span><h4><a class="toc-backref" href="#id63" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;J</span> <span class="pre">I&gt;</span> <span class="pre">&lt;JI&gt;</span></code> - Request current status</a><a class="headerlink" href="#j-i-ji-request-current-status" title="Link to this heading"></a></h4>
 <blockquote>
 <div><p><em>Response:</em> Repeated for each Channel/Track: <code class="docutils literal notranslate"><span class="pre">&lt;j</span> <span class="pre">I</span> <span class="pre">track</span> <span class="pre">current&gt;</span></code> <br /> &gt; <strong>track:</strong>  channel/track <br /> &gt; <strong>current:</strong> current in milliamps</p>
-<blockquote>
-<div><p><em>Version Introduced: 4.2.19</em></p>
-</div></blockquote>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
@@ -750,9 +747,6 @@
 <span id="native-command-j-g"></span><h4><a class="toc-backref" href="#id64" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;J</span> <span class="pre">G&gt;</span> <span class="pre">&lt;JG&gt;</span></code> - Request max current</a><a class="headerlink" href="#j-g-jg-request-max-current" title="Link to this heading"></a></h4>
 <blockquote>
 <div><p><em>Response:</em> <br /> repeated for each Channel/Track: <code class="docutils literal notranslate"><span class="pre">&lt;j</span> <span class="pre">G</span> <span class="pre">track</span> <span class="pre">currentmax&gt;</span></code> <br /> &gt; <strong>track:</strong>  channel/track <br /> &gt; <strong>currentmax:</strong> current in milliamps</p>
-<blockquote>
-<div><p><em>Version Introduced: 4.2.19</em></p>
-</div></blockquote>
 </div></blockquote>
 </section>
 </section>
@@ -808,8 +802,7 @@
 </section>
 <section id="onoff-track-turn-power-on-or-off-to-the-requested-trackmanager-track">
 <span id="native-command-onoff-track2"></span><h4><a class="toc-backref" href="#id67" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;onOff</span> <span class="pre">[track]&gt;</span></code> - Turn power on or off to the requested TrackManager track</a><a class="headerlink" href="#onoff-track-turn-power-on-or-off-to-the-requested-trackmanager-track" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../../news/posts/20230807.html"><img alt="New in Version 5.4" class="image-min-width-144" src="../../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a></p>
-<p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
+<p><a class="reference external" href="../../news/posts/20230807.html"><img alt="New in Version 5.4" class="image-min-width-144" src="../../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <br /> <span style="color:red">This feature is not available in the current 'Production' version</span> <br /> It is available in the 'development' (DEVEL) releases.</p>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>onOff:</strong> one of <br />    • 1 = on <br />    • 0 = off <br /> &gt; <strong>track:</strong> one of tracks A - H <br /></p>
 <dl class="simple">
@@ -821,8 +814,7 @@
 </section>
 <section id="change-frequency-on-dc-or-dc-inv-dcx-trackmanager-track">
 <h4><a class="toc-backref" href="#id68" role="doc-backlink">Change Frequency on DC or DC_INV/DCX TrackManager track</a><a class="headerlink" href="#change-frequency-on-dc-or-dc-inv-dcx-trackmanager-track" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../../news/posts/20230807.html"><img alt="New in Version 5.4" class="image-min-width-144" src="../../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a></p>
-<p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
+<p><a class="reference external" href="../../news/posts/20230807.html"><img alt="New in Version 5.4" class="image-min-width-144" src="../../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <br /> <span style="color:red">This feature is not available in the current 'Production' version</span> <br /> It is available in the 'development' (DEVEL) releases.</p>
 <p>When running in DC mode certain locomotives can be unresponsive at certain DC frequencies, a situation that is not found when running in DCC mode.  When in DC or DC_INV / DCX mode it is now possible to set different frequencies using Functions F29, F30 &amp; F31.</p>
 <p>The settings achievable vary slightly depending upon the processor running the Command Station but broadly follow the following:</p>
 <p> &gt; <strong>No Functions:</strong> Default - low frequency 131Hz <br /> &gt; <strong>F29:</strong> Mid frequency - 490Hz <br /> &gt; <strong>F30:</strong> High frequency - 3400Hz <br /> &gt; <strong>F31:</strong> Supersonic - 62500Hz <br /></p>
@@ -878,7 +870,6 @@ This starts a reminder process for any external updates to the cab’s (loco’s
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>speed:</strong> 0-127 <br /> &gt; <strong>dir:</strong> one of <br />    • 1=forward  <br />    • 0=reverse</p>
 <p><em>Response:</em> <br /> The following is not a direct response, but rather as a broadcast that will be triggered as a result of any throttle command being issued by any device for the cab(loc) in question. <br /> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;l</span> <span class="pre">cab</span> <span class="pre">reg</span> <span class="pre">speedByte</span> <span class="pre">functMap&gt;</span></code> <br /> &gt; <strong>cab:</strong> DCC Address of the decoder/loco <br /> &gt; <strong>speedbyte:</strong> Speed in DCC speedstep format . <br />    • reverse - 2-127 = speed 1-126, 0 = stop  <br />    • forward - 130-255 = speed 1-126,  128 = stop <br /> &gt; <strong>FunctiMap:</strong> individual function states represented by the the bits in a byte</p>
-<p><em>Version Introduced: 4.1.1</em></p>
 <p><em>Notes:</em></p>
 <blockquote>
 <div><p>The <em>speedbyte</em> value is different to the <em>speed</em> sent, as it is an encoded (1,7 bits)  byte. <br />
@@ -1379,7 +1370,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <li><p><a class="reference internal" href="#x-force-the-command-station-into-wifi-connected-mode" id="id101"><code class="docutils literal notranslate"><span class="pre">&lt;+X&gt;</span></code> - Force the Command Station into “WiFi Connected” mode</a></p></li>
 <li><p><a class="reference internal" href="#command-sends-at-commands-to-the-wifi-board-esp8266-esp32-etc" id="id102"><code class="docutils literal notranslate"><span class="pre">&lt;+command&gt;</span></code> - Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.)</a></p></li>
 <li><p><a class="reference internal" href="#switch-to-direct-communication-with-wifi-at-processor" id="id103"><code class="docutils literal notranslate"><span class="pre">&lt;+&gt;</span></code> - Switch to direct communication with WiFi AT processor</a></p></li>
-<li><p><a class="reference internal" href="#c-wifi-ssid-password-connects-to-an-existing-wifi-network-in-sta-mode" id="id104"><code class="docutils literal notranslate"><span class="pre">&lt;C</span> <span class="pre">WIFI</span> <span class="pre">ssid</span> <span class="pre">password&gt;</span></code> - Connects to an existing WIFI network in STA mode</a></p></li>
+<li><p><a class="reference internal" href="#c-wifi-ssid-password-connects-to-an-existing-wifi-network-in-sta-mode" id="id104"><code class="docutils literal notranslate"><span class="pre">&lt;C</span> <span class="pre">WIFI</span> <span class="pre">&quot;ssid&quot;</span> <span class="pre">&quot;password&quot;&gt;</span></code> - Connects to an existing WIFI network in STA mode</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
@@ -1417,14 +1408,13 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <section id="switch-to-direct-communication-with-wifi-at-processor">
 <span id="native-command-plus"></span><h4><a class="toc-backref" href="#id103" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;+&gt;</span></code> - Switch to direct communication with WiFi AT processor</a><a class="headerlink" href="#switch-to-direct-communication-with-wifi-at-processor" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Response:</em> <br /> All input and output from this point is the direct communication with the Wifi AT software this mode is ended by typing ! (exclamation mark).</p>
+<div><p><em>Response:</em> <br /> All input and output from this point is the direct communication with the WiFi AT software this mode is ended by typing ! (exclamation mark).</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="c-wifi-ssid-password-connects-to-an-existing-wifi-network-in-sta-mode">
-<span id="native-command-c-wifi-ssid-password"></span><h4><a class="toc-backref" href="#id104" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;C</span> <span class="pre">WIFI</span> <span class="pre">ssid</span> <span class="pre">password&gt;</span></code> - Connects to an existing WIFI network in STA mode</a><a class="headerlink" href="#c-wifi-ssid-password-connects-to-an-existing-wifi-network-in-sta-mode" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../../news/posts/20230807.html"><img alt="New in Version 5.4" class="image-min-width-144" src="../../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a></p>
-<p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
+<span id="native-command-c-wifi-ssid-password"></span><h4><a class="toc-backref" href="#id104" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;C</span> <span class="pre">WIFI</span> <span class="pre">&quot;ssid&quot;</span> <span class="pre">&quot;password&quot;&gt;</span></code> - Connects to an existing WIFI network in STA mode</a><a class="headerlink" href="#c-wifi-ssid-password-connects-to-an-existing-wifi-network-in-sta-mode" title="Link to this heading"></a></h4>
+<p><a class="reference external" href="../../news/posts/20230807.html"><img alt="New in Version 5.4" class="image-min-width-144" src="../../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <br /> <span style="color:red">This feature is not available in the current 'Production' version</span> <br /> It is available in the 'development' (DEVEL) releases.</p>
 <blockquote>
 <div><p><em>Parameters:</em> <br /> &gt; <strong>ssid:</strong> network to connect to <br /> &gt; <strong>password:</strong> password to use</p>
 <p><em>Response:</em> ???</p>
@@ -1879,8 +1869,7 @@ Profile defines the speed and style of movement: 0=Instant, 1=Fast (0.5 sec), 2=
 <hr class="docutils" />
 <section id="turntables-traversers-configuring-the-ex-commandstation">
 <h3><a class="toc-backref" href="#id53" role="doc-backlink">Turntables/Traversers (Configuring the EX-CommandStation)</a><a class="headerlink" href="#turntables-traversers-configuring-the-ex-commandstation" title="Link to this heading"></a></h3>
-<p><a class="reference external" href="../../news/posts/20230807.html"><img alt="New in Version 5.4" class="image-min-width-144" src="../../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a></p>
-<p><span style="color:red">This feature is not available in the current 'Production' version</span></p>
+<p><a class="reference external" href="../../news/posts/20230807.html"><img alt="New in Version 5.4" class="image-min-width-144" src="../../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <br /> <span style="color:red">This feature is not available in the current 'Production' version</span> <br /> It is available in the 'development' (DEVEL) releases.</p>
 <nav class="contents in-this-section local" id="id23">
 <p class="topic-title">In This Section</p>
 <ul class="simple">
@@ -2294,7 +2283,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fbf82d14730>
+    <jinja2.runtime.BlockReference object at 0x7fbf3c38bd00>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

@@ -805,7 +805,8 @@ Runs commands in IF block a random percentage of the time. This is handy for mor
 ``ROUTE_CAPTION( route_id, "caption" )`` - Change the label of the Route button
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
+
 
 Dynamically change the label of the Route button.
 
@@ -876,7 +877,7 @@ Dynamically change the label of the Route button.
 ``ROUTE_ACTIVE( route_id )`` - Activate a Route
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 Dynamically flag a Route as active.
 
@@ -892,7 +893,7 @@ See example in ROUTE_CAPTION.
 ``ROUTE_INACTIVE( route_id, caption )`` - Deactivate a Route
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 Dynamically flag a Route as inactive.
 
@@ -908,7 +909,7 @@ See example in ROUTE_CAPTION.
 ``ROUTE_HIDDEN( route_id )`` - Hide a Route from display
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 Dynamically hide a Route.
 
@@ -922,7 +923,7 @@ Dynamically hide a Route.
 ``ROUTE_DISABLED( route_id )`` - disable a Route
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 Dynamically disable a Route.
 
@@ -936,7 +937,7 @@ Dynamically disable a Route.
 ``STASH( stash_id )`` - Stashes the current loco/invert
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 *Parameters:* |BR|
 |_| > **stash_id** - id of the stash location to store the value (0-???) |BR|
@@ -954,7 +955,7 @@ Stashes/Stores the current loco/invert in the specified stash location.
 ``CLEAR_STASH( stash_id )`` - Zeroes the specified stash
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 Zeroes/Empties the specified stash location.
 
@@ -968,7 +969,7 @@ Zeroes/Empties the specified stash location.
 ``CLEAR_ALL_STASH`` - Zeroes all stashes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 Zeroes/Empties all stash locations.
 
@@ -982,7 +983,7 @@ Zeroes/Empties all stash locations.
 ``PICKUP_STASH( stash_id )`` - Retrieves and sets the loco/invert from the specified stash
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 Retrieves and sets the loco/invert from the specified stash location.
 
@@ -1144,7 +1145,7 @@ Create a HAL device in myAutomation.h rather than needing to use myHal.cpp
 ``HAL_IGNORE_DEFAULTS`` - Disable default MCP23017 and PCA9685 HAL devices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 Disable default MCP23017 and PCA9685 HAL devices
 
@@ -1220,7 +1221,7 @@ Define a DCC accessory signal. Control the colour or aspect of these via the def
 ``DCCX_SIGNAL( Address, redAspect, amberAspect, greenAspect )`` - Defines a signal (with id as dcc address)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| 
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 This defines a signal (with id same as dcc address) that can be operated
 by the RED/AMBER/GREEN commands.   In each case the command uses the signal address to refer to the signal and the aspect chosen depends on the use of the RED AMBER or GREEN command sent. Other aspects may be sent but will require the direct use of the ASPECT command.
@@ -1321,7 +1322,7 @@ Set defined signal to Red (See SIGNAL).
 ``ASPECT( address, aspect )`` - Command for DCC Extended Accessories
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 This command sends an extended accessory packet to the track, normally used to set
 a signal aspect. Aspect numbers are undefined as standards except for 0 which is
@@ -1561,7 +1562,7 @@ Throws a defined turnout/point.
 ``TOGGLE_TURNOUT( turnout_id )`` - Toggle a defined turnout/point between CLOSE/THROW
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 Toggles the state of the specified turnout/point between closed and thrown.
 
@@ -1643,7 +1644,7 @@ Detects a rotary encoder has changed position
 Turntable features
 ^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 .. contents:: In This Section
     :depth: 4
@@ -1795,7 +1796,7 @@ Sensors/Inputs - Reading and Responding
 ``JMRI_SENSOR(vpin [,count])`` - Creates <S> type sensors visible to JMRI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 This command causes the creation of |JMRI| <S> type sensors in a way that is simpler than repeating lines of <S> commands in mySetup.h.
 
@@ -2096,7 +2097,7 @@ Remove LATCH on sensor.
 ``ONBUTTON( vpin )`` - Event handler for debounced button presses
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 This new event handler is handy for mimic panel and other buttons that need to perform an action when a button is pressed, rather than having to create a sequence with a combination of ``AFTER`` and ``IF`` statements to debounce a button which quickly becomes very complicated.
 
@@ -2112,7 +2113,7 @@ Note that this works for active low buttons only.
 ``ONSENSOR( vpin )`` - Event handler for sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 A new event handler to perform actions when a sensor is activated. Like the other sensor triggers such as ``IF``, ``AT``, and ``AFTER``, a negative value can be used for an active high sensor.
 
@@ -2178,7 +2179,7 @@ Fade an LED on a servo driver to specified value taking specified time.
 ``BLINK( pin, onMs, offMs )`` - Blink an output pin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 This will start a pin/Vpin blinking until such time as it is ``SET``, ``RESET``, or set via a signal operation.
 
@@ -2210,7 +2211,7 @@ Send message to LCN Accessory Network.
 ``CONFIGURE_SERVO(vpin, pos1, pos2, profile)`` - Define LED's connected to PCA9685 boards
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 This command offers a more convenient way of defining an LED connected to a PCA9685 pin, instead of performing the HAL call in halSetup.h
 
@@ -2234,7 +2235,7 @@ This command offers a more convenient way of defining an LED connected to a PCA9
 ``NEOPIXEL( vpin, red, green, blue [,count] )`` - Controls the colour of attached Neopixel LEDs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 Controls the colour of one or more attached Neopixel LEDs
 
@@ -2256,7 +2257,7 @@ Controls the colour of one or more attached Neopixel LEDs
 ``NEOPIXEL_SIGNAL( signalid, red, green, blue )`` - Controls the colour of attached Neopixel LED
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 Controls the colour of one attached Neopixel LED
 
@@ -2277,7 +2278,7 @@ Controls the colour of one attached Neopixel LED
 ``ANOUT( vpin, value, param1, param2)`` - Analog output ??
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 .. todo: LOW - EXRAIL doco - ANOUT
 
@@ -2332,7 +2333,7 @@ Controls the colour of one attached Neopixel LED
 ``PLAY_SOUND( vpin, fileNumber, volume, ??? )`` - Play mp3 files from a Micro-SD card
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 Play mp3 files from a Micro-SD card, using a DFPlayer MP3 Module.
 
@@ -2597,7 +2598,7 @@ All these "ON" commands are event handlers that trigger a sequence of commands t
 ``XFTOGGLE( loco, func )`` - Toggle DCC function on specific loco
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 Toggle DCC function on loco with the specified DCC address.
 
@@ -2806,7 +2807,7 @@ Turn off the specified function for the current loco.
 ``FTOGGLE( func )`` - Toggle the state of a loco's function
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 Toggle off the specified function for the current loco.  i.e. Turn off if on, or on if off.
 
@@ -3348,7 +3349,7 @@ A a WiThrottle throttle will receive ``Hmtext``.
 ``MESSAGE( "msg" )`` - Writes a message to all clients
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 Writes a message to all serial throttles and all WiThrottle Clients.
 
@@ -3592,7 +3593,7 @@ If you are unsure on the impacts using anything in this section may have, please
 ``STEALTH( code )`` - include some C++ code in a ROUTE/SEQUENCE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 **SERIOUS ENGINEERS and ADVANCED C++ USERS ONLY**   |engineer| 
 
@@ -3628,7 +3629,7 @@ Syntax:
 ``STEALTH_GLOBAL( code )``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL|
+|NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 **SERIOUS ENGINEERS and ADVANCED C++ USERS ONLY**   |engineer| 
 

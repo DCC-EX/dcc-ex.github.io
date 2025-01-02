@@ -27,6 +27,9 @@ Please ensure to follow the standards below when creating or updating documentat
 Style Guidelines
 ----------------
 
+Expansions
+^^^^^^^^^^^
+
 * Every page (except a few pages like home, about, contact, etc.) MUST start with one or more level images (after the title) to indicate the intended base audience for the page. 
 * Where possible, use the expansions for the level images:
 
@@ -75,6 +78,9 @@ Style Guidelines
   * \|Station Mode\|
   * \|I2C\| (note this has no link, it simply replaces 'I2C' with |I2C|)
 
+Writing Style
+^^^^^^^^^^^^^^
+
 * Avoid abbreviations that would not be easily recognised by 'Conductors'.  
 
   * In particular *don't* use 'CS'.  Use the full name 'Command Station'
@@ -115,6 +121,7 @@ Style Guidelines
 * Use **\`\`\literal text blocks\`\`** when describing preference values  - ``literal text blocks``
 * Use **\:menuselection\:\`Menu \-\-\> Preferences \-\-\> ..\`** for menu descriptions - :menuselection:`Menu --> Preferences --> ..` 
 * Use **\:guilabel\:\`\GUI labels\`** for buttons  - :guilabel:`GUI labels`
+* Use **\:kbd\:\`\Key\`** for keyboard keys / key strokes  - :kbd:`Key`
 * For dates, use dd-mmm-yyyy or yyyy-mm-dd to avoid confusion with the way dates are uniquely written in the US. |BR|\ e.g. 2-Mar-2022 or 2022-3-2, not 2-3-2022 
 * Heading levels:
 
@@ -129,11 +136,15 @@ Style Guidelines
      * **\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'** for sub paragraphs
      * **\_\_\_\_\_\_\_\_\_\_\_\_** for sub-sub-paragraphs (hyphens)
 
+Tips
+^^^^
+
 * To force a :
 
   * Line break/new line use **\|BR\|**
   * Non-breaking space use **\|_\|**
   * Blank line use **\|** on its own line
   * Paragraph break that a 'float right' element must not be placed before a point use **\|force-break\|**  |BR| useful if the 'float right' element is being placed beside another 'float right' element, rather than below.
-
+  * To force a break **\|FORCE-BREAK\|**. Useful if you don't want a right floating image, note, warning, etc. to overlap the next text.
 * To add a horizontal line, use **\-\-\-\-** (four hyphens) on its own line
+* To add a dashed horizontal line, use **\|HR-DASHED|\`**.

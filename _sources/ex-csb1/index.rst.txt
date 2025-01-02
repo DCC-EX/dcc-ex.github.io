@@ -99,7 +99,7 @@ Units may be purchased from the following sources:
 
 .. include:: /purchasing/include__ex-csb1-pricing.rst
 
----- 
+|HR-HEAVY| 
 
 Next Steps
 ==========

@@ -26,7 +26,7 @@ How can I get one?
 
 .. include:: /purchasing/include__ex-csb1-pricing.rst
 
-----
+|HR-HEAVY|
 
 Next Steps
 ==========

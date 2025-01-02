@@ -82,6 +82,8 @@ A Throttle (Controller)
 
 14. You'll also need something to control your trains. |BR| There are several options. We will discuss these following the system setup, but the introductory configuration covered in the following pages lends itself to using a smart phone (Android or Apple iOS).
 
+|HR-HEAVY|
+
 Next Steps
 ==========
 

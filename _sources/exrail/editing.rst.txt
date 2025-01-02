@@ -95,7 +95,7 @@ Using the Arduino IDE
 
 The myAutomation.h file will be automatically loaded with the |EX-CS| software.
 
-----
+|HR-HEAVY|
 
 Next Steps - Objects
 ====================

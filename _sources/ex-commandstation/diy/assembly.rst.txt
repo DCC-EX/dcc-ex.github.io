@@ -262,7 +262,7 @@ If you have a power supply with bare wires, you can bypass the barrel connector 
 
 .. rst-class:: clearer
 
-----
+|HR-HEAVY|
 
 Next Steps - Install the WiFi board
 ===================================

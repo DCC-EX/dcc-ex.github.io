@@ -238,7 +238,7 @@ Do not attempt to connect two insulated tracks together and drive a DCC engine b
 
 Some suggested precautions are to add 4 fuses on wires (-b +b, -a +a) to the |EX-CS| connections. Use 2A fuses for the |Standard motor Driver| or 5A fuses for the larger motor drivers.
 
-----
+|HR-HEAVY|
 
 Next Steps
 ==========

@@ -454,7 +454,7 @@ New 4.1 SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
     SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for turnout/point 1, Thrown=Red, Close = Green
 
 
-----
+|HR-HEAVY|
 
 Next Steps - Creating Sequences
 ===============================

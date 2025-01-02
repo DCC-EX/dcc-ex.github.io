@@ -228,6 +228,8 @@ If you find that the default 45/225 degree angles aren't right for your layout, 
 
 If you have a layout that requires more control over when phase switching does and doesn't happen, you can configure manual phase switching, as outlined in :ref:`ex-turntable/test-and-tune:manual phase switching`.
 
+|HR-HEAVY|
+
 Next Steps
 ==========
 

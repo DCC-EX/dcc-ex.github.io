@@ -55,6 +55,7 @@ The |EX-FC| integration includes:
 
   **Adafruit** for the Adafruit GFX Library.
 
+|HR-HEAVY|
 
 Next Steps
 ==========

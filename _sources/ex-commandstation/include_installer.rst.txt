@@ -29,7 +29,7 @@ If you have purchased a |EX-CSB1| it will have come with the |EX-CS| software al
 .. note::
    This page is specifically intended for a |conductor-text| or |tinkerer-text| who has either:
 
-   - Purchased a ready-to-run (RTR) |EX-CSB1|, or 
+   - Purchased a ready-to-run (RTR) |EX-CSB1-SHORT|, or 
    - Assembled *just* the recommended do-it-yourself (DIY) hardware (including WiFi). 
 
    This page is as simplified version of the :doc:`/ex-installer/installing` page. If you are a |tinkerer-text| or |engineer-text| or have installed some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`Detailed Instructions </ex-installer/installing>` page for the full instructions.
@@ -153,7 +153,7 @@ If you already have the Arduino CLI installed, it is recommended that you refres
 .. hint:: 
    :class: hint-float-right-narrow
 
-   **Expressif ESP32** is required for the **EX-CSB1**
+   **Expressif ESP32** is required for the |EX-CSB1-SHORT|
 
 If you are using the |EX-CSB1-SHORT| or the recommended DIY Mega hardware, you should not need to adjust the other settings on this page.
 
@@ -213,7 +213,7 @@ If more than one device is found (on different USB ports), you will need to sele
 .. hint:: 
    :class: hint-float-right-narrow
 
-   For the EX-CSB1 select '**DCC-EX EX-CSB1**'
+   For the |EX-CSB1-SHORT| select '**DCC-EX EX-CSB1**'
 
 |EX-I| will attempt to work out what type of microprocessor you have connected, but some cases it will not be able to do so. (This is especially common with cheap clone devices.) 
 
@@ -305,7 +305,7 @@ Motor Driver
 .. hint:: 
    :class: hint-float-right-narrow
 
-   For the EX-CSB1 alone select '**EX-CSB1**' |BR| If you have the additional |EX-MS| select '**EXCSB1_WITH_EX8874**'
+   For the |EX-CSB1-SHORT| alone select '**EX-CSB1**' |BR| If you have the additional |EX-MS| select '**EXCSB1_WITH_EX8874**'
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_motor_shield.png
    :alt: EX-Installer - EX-CommandStation - Configure Motor Driver
@@ -326,6 +326,8 @@ You *must* select the motor driver type that you have installed.  The installer 
 
    You must choose one of these options now, but you can always come back later and re-load the software with a different option.
 
+|HR-DASHED|
+
 WiFi
 ~~~~
 
@@ -333,7 +335,7 @@ If you have installed and optional WiFi board, or are using a microcontroller bo
 
 You can configure the WiFi for EX-CommandStation two ways:
 
-* **Access Point mode** |BR| You can configure for EX-CommandStation to have its own, completely isolated, WiFi Network. This is referred to as *Access Point Mode*. (Most useful if your layout is away from the house, or you transport your layout frequently.) |BR| To enable, select ``Use my EX-CommandStation as an Access Point`` 
+* **Access Point mode** |BR| You can configure for EX-CommandStation to have its own, completely isolated, WiFi Network. This is referred to as *Access Point Mode*. (Most useful if your layout is away from the house, or you transport your layout frequently.) |BR| To enable, select ``Use my EX-CommandStation as an Access Point`` |BR| |BR|
 * **Station mode**  |BR| The EX-CommandStation can be setup so that it connects to your existing home WiFi Network. This is referred to as *Station Mode*. |BR| To enable, select  ``Connect my EX-CommandStation to my existing wireless network`` 
 
 Use my EX-CommandStation as an Access Point
@@ -399,7 +401,7 @@ Display Type
 .. hint:: 
    :class: tip-float-right-narrow
 
-   The EX-CSB1 will generally be supplied with a **OLED 128 X 64**
+   The |EX-CSB1-SHORT| will generally be supplied with a **OLED 128 X 64**
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_screen.png
    :alt: EX-Installer - EX-CommandStation - Configure Display Driver
@@ -418,7 +420,7 @@ Start with Power on
 .. hint:: 
    :class: tip-float-right-narrow
 
-   The EX-CSB1 will generally be supplied with this enabled
+   The |EX-CSB1-SHORT| will generally be supplied with this enabled
 
 Enabling this option will cause the |EX-CS| to automatically start with the track power on.  
 
@@ -427,7 +429,6 @@ If you don't enable this, you will need to turn the track power with you control
 |force-break|
 
 |HR-DASHED|
-
 
 'Compile and Load' screen
 -------------------------

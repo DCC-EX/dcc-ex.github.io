@@ -91,6 +91,8 @@ The complete list of supported stepper drivers and motors:
 * DRV8825/NEMA17
 * TMC2208/NEMA17
 
+|HR-HEAVY|
+
 Next Steps
 ==========
 

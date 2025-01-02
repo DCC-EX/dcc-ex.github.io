@@ -34,12 +34,14 @@ The |DCC-EX| |EX-CSB1-SHORT| comes ready to use out of the box and has the follo
 *	**Railsync DCC input** – enables booster mode, which with an optional |EX-R| script can be automatically engaged on receipt of a signal
 *	OLED screen – for diagnostics, status and information display
 
+|HR-HEAVY|
+
 Next Steps - Purchasing
 =======================
 
 See the :doc:`/ex-commandstation/rtr-purchasing` page or click the 'Next' button to see how to acquire your |EX-CSB1|.
 
-----
+|HR-HEAVY|
 
 Looking for some help with your EX-CSB1?
 ========================================

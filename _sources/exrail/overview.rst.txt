@@ -66,7 +66,7 @@ I have used C++ on Arduino's and Python/Jython on |JMRI| software to build Autom
 - I can create Automations, Routes, & Sequence scripts With |EX-R| on the Command Station and still access them from |JMRI| PanelPro and DecoderPro GUI buttons with a simple sendDCCmessage.py script pointer that passes them to the |EX-R| scripts on the Command Station, so I don't have to rewrite the script in Jython/Python.
 - |EX-R| is ten times easier to learn and use and is more flexible then the other methods.
 
-----
+|HR-HEAVY|
 
 Next Steps - myAutomation.h
 ===========================

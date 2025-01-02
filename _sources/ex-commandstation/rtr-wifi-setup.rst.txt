@@ -31,7 +31,7 @@ If you wish to run trains from your phone, tablet or other |WiThrottle protocol|
 
    |SUITABLE| |tinkerer| |engineer| |BR| Using *WiFi (OR Ethernet)* to talk between |JMRI| and |EX-CS| is complex, slow and functionally limited and, while it generally works, it is NOT SUPPORTED.
 
-----
+|HR-HEAVY|
 
 Next Steps
 ==========

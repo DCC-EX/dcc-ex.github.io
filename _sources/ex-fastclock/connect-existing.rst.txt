@@ -129,6 +129,7 @@ Connecting via |I2C| involves a HAL driver file to the |EX-CS| as well as adding
   In the function above  HH is the time as hours (24hr. clock) and MM is the minutes.
 * The CommandStation-EX will now poll the FastClock to request the time.  The frequency at which it does so is influenced by the clock speed (i.e. on a slow clock speed it polls less often).
 
+|HR-HEAVY|
 
 Next Steps
 ==========

@@ -304,7 +304,7 @@ Text
 
 Refer to the :doc:`/about/contributing/website/basic-rst` and :doc:`/about/contributing/website/style-guide` 
 
-----
+|HR-HEAVY|
 
 Next steps - ReStucturedText Basics
 ===================================

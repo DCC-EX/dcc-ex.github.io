@@ -186,7 +186,7 @@ Polarity (which wire is connected to which side of the track) is not not importa
 
 In other words, if you view one side of your main track as having a 'left' side and a 'right' side, and connect positive output A to the left side, connect the positive from the B side to the left side of the programming track. In electrical terms, we want both tracks to be "in phase" with each other. Here is the diagram from above repeated again for reference.
 
-----
+|HR-HEAVY|
 
 Next steps
 ==========

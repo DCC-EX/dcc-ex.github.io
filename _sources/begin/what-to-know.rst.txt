@@ -300,7 +300,7 @@ What is DCC++
 See the :doc:`/news/posts/20201001` news article for more information.
 
 
-----
+|HR-HEAVY|
 
 Next Steps
 ==========

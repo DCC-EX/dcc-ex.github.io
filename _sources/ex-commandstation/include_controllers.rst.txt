@@ -179,7 +179,7 @@ The simplest throttle option is to just use a throttle directly connected to the
 
 Basic use of |EX-WT| will be covered on the following :doc:`/ex-commandstation/testing-diy` page.  (For additional operating instructions see :doc:`how to use EX-WebThrottle </ex-webthrottle/index>`)
 
-----
+|HR-HEAVY|
 
 Next Steps - Testing your setup 
 ===============================

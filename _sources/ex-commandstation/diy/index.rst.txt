@@ -74,6 +74,8 @@ To actually run your model railroad you will need a few items:
 5. a **"Programming" track,** aka "Service" track - an isolated short section of track that you will use to program locomotives
 6. a **Train** - Specifically, a locomotive equipped with a DCC decoder (either a standard or sound decoder). Ideally, it should be a loco already proven to work on DCC. Otherwise, if you have a problem, you may not be able to tell if the problem is the decoder or the EX-CommandStation
 
+|HR-HEAVY|
+
 Next Steps - Purchasing Parts
 =============================
 

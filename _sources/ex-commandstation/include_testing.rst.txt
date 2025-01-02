@@ -261,7 +261,7 @@ See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how t
 
    We have repeated this in several places on the Website because it is such a common issue. The MAIN track is for running trains, the PROG (service track) is for programming your loco. **THE LOCO CANNOT RESPOND TO THROTTLE OR FUNCTION COMMANDS WHILE ON THE PROG TRACK** This is by design and part of the NMRA specification.
 
-----
+|HR-HEAVY|
 
 Next Steps - Run Your Trains
 ============================

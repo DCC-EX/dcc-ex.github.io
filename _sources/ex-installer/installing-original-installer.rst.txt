@@ -233,7 +233,7 @@ Once you have configured your options, press this button to compile all the sour
 
    If you have any difficulties check the :doc:`/support/ex-cs-troubleshooting` page for assistance.
 
-----
+|HR-HEAVY|
 
 Next Steps - Test your setup
 ============================

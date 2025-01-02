@@ -148,7 +148,7 @@ b. 'Manage Arduino CLI' screen
 
 This screen allows you to install or update the *Arduino Command Line Interface (CLI)*.
 
-We use the *Arduino Command Line Interface (CLI)* to upload the DCC-EX products to your Arduino.  The CLI eliminates the need to install the more daunting |Arduino IDE|.  EX-Installer is able to manage the installation and updating of the Arduino CLI for you at the click of a button.
+We use the *Arduino Command Line Interface (CLI)* to upload the DCC-EX products to your Arduino.  The CLI eliminates the need to install the more daunting |Arduino IDE|.  |EX-I| is able to manage the installation and updating of the Arduino CLI for you at the click of a button.
 
 If you have not installed the CLI previously you will see a :guilabel:`Install Arduino CLI` button. 
 
@@ -157,7 +157,7 @@ If have previously installed the CLI you will see a :guilabel:`Refresh Arduino C
 .. hint:: 
    :class: hint-float-right-narrow
 
-   **Expressif ESP32** is required for the **EX-CSB1**
+   **Expressif ESP32** is required for the |EX-CSB1-SHORT|
 
 If you are using an Espressif or STMicroelectronics device (including the |EX-CSB1-SHORT|, as opposed to the more common Uno or Mega based Arduinos, you will need to enable support for these by selecting the appropriate additional platform option.
 
@@ -223,7 +223,7 @@ If more than one device is found (on different USB ports), you will need to sele
 .. hint:: 
    :class: hint-float-right-narrow
 
-   For the EX-CSB1 select '**DCC-EX EX-CSB1**'
+   For the |EX-CSB1-SHORT| select '**DCC-EX EX-CSB1**'
 
 |EX-I| will attempt to work out what type of Arduino you have connected, but in some cases it will not be able to do so. (This is especially common with cheap clone devices.) 
 
@@ -268,7 +268,7 @@ i) 'Select EX-CommandStation Version' screen
 
 On this screen you need to select:
 
-* Which version of the EX-CommandStation software you wish to load
+* Which version of the **EX-CommandStation** software you wish to load
 * How you wish to configure the software
 
 Which Version
@@ -327,7 +327,7 @@ ii) 'Install EX-CommandStation' - Configuration screen
 
 Only if you have selected ``Configure options on the next screen`` on the previous screen will you be presented with this screen. 
 
-On this screen you can select some of the flexible and optional features of the |EX-CS|:abbr:
+On this screen you can select some of the flexible and optional features of the |EX-CS|:
 
 * Motor Driver type
 * LCD or oLED display
@@ -338,13 +338,15 @@ On this screen you can select some of the flexible and optional features of the 
 
 |force-break|
 
+|HR-DASHED|
+
 Motor Driver
 ^^^^^^^^^^^^
 
 .. hint:: 
    :class: hint-float-right-narrow
 
-   For the EX-CSB1 alone select '**EX-CSB1**' |BR| If you have the additional |EX-MS| select '**EXCSB1_WITH_EX8874**'
+   For the |EX-CSB1-SHORT| alone select '**EX-CSB1**' |BR| If you have the additional |EX-MS| select '**EXCSB1_WITH_EX8874**'
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_motor_shield.png
    :alt: EX-Installer - EX-CommandStation - Configure Motor Driver
@@ -370,13 +372,15 @@ These options are determined from the chosen version of |EX-CS|, and may include
 
 This list will change over time as new motor drivers are added, and any older ones no longer supported are removed.
 
+|HR-DASHED|
+
 Optional Display
 ^^^^^^^^^^^^^^^^
 
 .. hint:: 
    :class: tip-float-right-narrow
 
-   The EX-CSB1 will generally be supplied with a **OLED 128 X 64**
+   The |EX-CSB1-SHORT| will generally be supplied with a **OLED 128 X 64**
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_screen.png
    :alt: EX-Installer - EX-CommandStation - Configure Display Driver
@@ -407,7 +411,7 @@ If you have installed and optional WiFi board, or are using a microcontroller bo
 
 You can configure the WiFi for **EX-CommandStation** two ways:
 
-* **Access Point mode** |BR| You can configure for EX-CommandStation to have its own, completely isolated, WiFi Network. This is referred to as *Access Point Mode*. (Most useful if your layout is away from the house, or you transport your layout frequently, or do not want to give guests access to your home WiFi.) |BR| To enable, select ``Use my EX-CommandStation as an Access Point`` 
+* **Access Point mode** |BR| You can configure for EX-CommandStation to have its own, completely isolated, WiFi Network. This is referred to as *Access Point Mode*. (Most useful if your layout is away from the house, or you transport your layout frequently, or do not want to give guests access to your home WiFi.) |BR| To enable, select ``Use my EX-CommandStation as an Access Point`` |BR| |BR|
 * **Station mode**  |BR| The EX-CommandStation can be setup so that it connects to your existing home WiFi Network. This is referred to as *Station Mode*. |BR| To enable, select  ``Connect my EX-CommandStation to my existing wireless network`` 
 
 Use my EX-CommandStation as an Access Point
@@ -462,6 +466,8 @@ Connect my EX-CommandStation to my existing wireless network
 
       See the :doc:`/ex-commandstation/advanced-setup/supported-wifi/wifi-config` page for more detailed information on the the WiFi options.
 
+|HR-DASHED|
+
 I have Ethernet
 ^^^^^^^^^^^^^^^
 
@@ -469,17 +475,21 @@ If you have installed and Ethernet board, select this option.
 
 Note that it is not possible to have both WiFi and Ethernet enabled at the same time.
 
+|HR-DASHED|
+
 Start with power on
 ^^^^^^^^^^^^^^^^^^^
 
 .. hint:: 
    :class: tip-float-right-narrow
 
-   The EX-CSB1 will generally be supplied with this enabled
+   The |EX-CSB1-SHORT| will generally be supplied with this enabled
 
 Enabling this option will cause the |EX-CS| to automatically start with the track power on.  
 
 If you don't enable this, you will need to turn the track power with you controller, or with TrackManger automations.
+
+|HR-DASHED|
 
 Override current limit
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -606,6 +616,8 @@ If there are **no errors**, you can proceed to :doc:`testing your setup </ex-ins
 If there **are errors** or you are having difficulties check the :doc:`/support/ex-cs-troubleshooting` page for assistance.
 
 |force-break|
+
+|HR-DASHED|
 
 Backup
 ^^^^^^

@@ -175,6 +175,8 @@ Take a second jumper wire and connect it to any one of the Rx pins on the WiFi B
 
    Install the jumper wires
 
+|HR-HEAVY|
+
 Next Steps - Install the Software
 =================================
 

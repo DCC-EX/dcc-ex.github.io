@@ -136,16 +136,17 @@ The EX-MotorShield8874's DC barrel jack is the only power source required to pow
 .. warning:: 
    :class: warning-float-right
 
-   These are *common** the upper limits of what most decoders will accept.  You should check the manual of you decoders to confirm what that accept and adjust down accordingly.  
+   These are *common*, but not universal, upper limits of what decoders will accept.  You should check the manual of your decoders to confirm what they accept, and adjust the voltage down accordingly.  
    
-   Applying a voltage above what a decoder was designed for may permanently damage it.
+   :dcc-ex-red-bold-italic:`Applying a voltage above what a decoder was designed for may permanently damage it.`
 
 Because the EX-MotorShield8874 does not drop voltage like the standard L298 based motor shields we suggest: 
 
-* **10v-14vDC** for Z & N Scale, 
-* **14v-16vDC** for OO, HO, 
-* **18v-19vDC** for O, or 
-* up to a max of **24vDC** for G scales 
+* **10v-12vDC** for Z scale
+* **10v-14vDC** for N scale
+* **14v-16vDC** for HO/OO scale
+* **18v-19vDC** for O scale
+* **20v-24vDC** for G scale
 
 Note that good quality, fully-enclosed and double-insulated switch mode power supplies are best, and we suggest laptop power bricks as ideal in this role as they typically output 3-20A easily and safely.
 

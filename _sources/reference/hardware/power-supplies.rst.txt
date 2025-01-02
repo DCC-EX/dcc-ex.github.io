@@ -76,18 +76,19 @@ Voltage
 .. warning:: 
    :class: warning-float-right
 
-   These are *common* the upper limits of what most decoders will accept.  You should check the manual of you decoders to confirm what that accept and adjust down accordingly.  
+   These are *common*, but not universal, upper limits of what decoders will accept.  You should check the manual of your decoders to confirm what they accept, and adjust the voltage down accordingly.  
    
-   Applying a voltage above what a decoder was designed for may permanently damage it.
+   :dcc-ex-red-bold-italic:`Applying a voltage above what a decoder was designed for may permanently damage it.`
 
 The voltage you need depends on the scale/gauge of the locos you intend to run, and motor driver you have.
 
 As a rough guide you need a voltage *on the track* of...
 
-* **10v-14vDC** for Z & N Scale, 
-* **14v-16vDC** for OO, HO, 
-* **18v-19vDC** for O, or 
-* up to a max of **24vDC** for G scales 
+* **10v-12vDC** for Z scale
+* **10v-14vDC** for N scale
+* **14v-16vDC** for HO/OO scale
+* **18v-19vDC** for O scale
+* **20v-24vDC** for G scale
 
 The voltage of the *power supply* you need will depend on the type of motor driver you have:
 

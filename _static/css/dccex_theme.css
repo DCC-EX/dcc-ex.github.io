@@ -301,6 +301,7 @@ html[data-theme='dark'] .sd-card {
 
 html[data-theme='dark'] .dcclink a {
   background-color: #053a41 !important;
+  box-shadow: 0 2px 0 #676767 !important;
   box-shadow: none;
 }
 
@@ -319,6 +320,7 @@ html[data-theme='dark'] .dcclink a {
 
 html[data-theme='dark'] .dcclink-right a {
   background-color: #053a41 !important;
+  box-shadow: 0 2px 0 #676767 !important;
   box-shadow: none;
 }
 

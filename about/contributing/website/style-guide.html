@@ -10,7 +10,7 @@
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/dccex_theme.css?v=6cd77179" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/dccex_theme.css?v=a80a85e6" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -729,26 +729,26 @@
 <li><p>Keep sentences short.  Break them up where ever possible.</p></li>
 <li><p>Keep paragraphs short.  Break them up where practical.</p></li>
 <li><p>Keep paragraphs on the same topic. If the topic changes start a new paragraph.</p></li>
-<li><p>Do not start any page for a Conductor or Tinkerer with a technical explanation.  Put technical explanations at the end of the page or preferably in a separate dedicated page.</p></li>
-<li><p>If you have a number of sections that describe options; present them in list them first, before the sections, with an explanation as to why they are optional.  (i.e. a bullet list with hyperlinks to the headings.)</p></li>
+<li><p>Do not start any page for a Conductor or Tinkerer with a technical explanation.  Put technical explanations at the end of the page, or preferably in a separate dedicated page.  Make it clear the the technical explanation is not required reading (unless it is).</p></li>
+<li><p>If you have a number of sections that describe options; present them in list them first, before the sections, with an explanation as to why they are optional.  (i.e. a bullet list with hyperlinks to the headings.) <br /> Wherever possible, do so by using the <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">contents::</span></code> directive</p></li>
 <li><p>Where possible, avoid starting a section with a negative point of view.  i.e. Talk about the positives of what you are discussing first, before you delve into the negative or problematic aspects. <br /> e.g. Don’t start with “… This is not for Conductors…”, instead say “..This page is for Tinkerers … Conductors should…”.</p></li>
-<li><p>Use British/Australian/Canadian/Indian (pretty much every except the USA) spelling e.g. ‘colour’ not ‘color’.  <br />(Primarily because it is used in more English speaking countries)</p></li>
+<li><p>Use British/Australian/New Zealand/Canadian/Indian (pretty much every country except the USA) spelling e.g. ‘colour’ not ‘color’.  <br />(Primarily because it is used in more English speaking countries)</p></li>
 <li><p>Preferred Terms:</p>
 <ul class="simple">
-<li><p>Where logical, use <strong>“Motor Driver”</strong>, in preference to “Motor Shield”.  Do not use “Motor Board” or “Motorboard” <br /> Preferably use the expansions |Motor Driver| or |Motor Shield|.</p></li>
+<li><p>Where logical to do so, use <strong>“Motor Driver”</strong>, in preference to “Motor Shield”.  Do not use “Motor Board” or “Motorboard” <br /> Preferably use the expansions |Motor Driver| or |Motor Shield|.</p></li>
 <li><p>In general use <strong>‘train’</strong> or <strong>‘loco’</strong> instead of ‘locomotive’ or ‘engine’</p></li>
 <li><p>Use <strong>“Smart Phone”</strong> instead of ‘Cell Phone’ (US only term) or ‘Mobile Phone’ (just about everywhere else)</p></li>
 <li><p>Use <strong>Throttle</strong> or <strong>Throttle (controller)</strong> instead of ‘controller’ or ‘controller (throttle)’</p></li>
 </ul>
 </li>
-<li><p>Use railroad/railway terminology that is understandable by all English-speaking people. <br />Where there are clear differences from US to non-US terminology use both with a slash between and use the US version first. e.g. turnouts/points, consists/multiple units, switching/shunting.  (Only because the US term appears in apps like JMRI.)</p></li>
-<li><p>No full stop at the end of a numbered or unnumbered list</p></li>
+<li><p>Use railroad/railway terminology that is understandable by all English-speaking people. <br /> Where there are clear differences from US to non-US terminology use both with a slash between and use the US version first. e.g. turnouts/points, consists/multiple units, switching/shunting.  (Only because the US term appears in apps like JMRI.)</p></li>
+<li><p>No full stop at the end of a numbered or unnumbered list unless the points are each multi-sentence</p></li>
 <li><p>Numbered lists should generally only be used if they are describing a specific sequence, or the numbering is important to the text</p></li>
-<li><p>Use first person (you and your; not I, me, my or am) language</p></li>
+<li><p>Use second person (you and your; not I, me, my) language</p></li>
 <li><p>A string of nouns should be generally be sequenced in alphabetic order, unless it makes more sense within the context to display them in some other sequence</p></li>
 <li><p>Double quotes (”) should only be used for quoting text from people, documents or web sites</p></li>
 <li><p>No quotes around ‘Also See’ type references</p></li>
-<li><p>Avoid ‘(above)’ or ‘(below)’ in text.  Use hypertext links instead</p></li>
+<li><p>Avoid ‘(above)’ or ‘(below)’ in text.  Use hypertext :ref: links instead</p></li>
 <li><p><strong>``.. todo:: description…``</strong> means that it is still a work-in-process and needs to be updated.  It must be followed by descriptive text describing the issue to be fixed.  If you want to to show in the page you will need add a separate line.</p></li>
 <li><p>Use <strong>``literal text blocks``</strong> when describing preference values  - <code class="docutils literal notranslate"><span class="pre">literal</span> <span class="pre">text</span> <span class="pre">blocks</span></code></p></li>
 <li><p>Use <strong>:menuselection:`Menu --&gt; Preferences --&gt; ..`</strong> for menu descriptions - <span class="menuselection">Menu ‣ Preferences ‣ ..</span></p></li>
@@ -784,7 +784,6 @@
 <li><p>Non-breaking space use <strong>|_|</strong></p></li>
 <li><p>Blank line use <strong>|</strong> on its own line</p></li>
 <li><p>Paragraph break that a ‘float right’ element must not be placed before a point use <strong>|force-break|</strong>  <br /> useful if the ‘float right’ element is being placed beside another ‘float right’ element, rather than below.</p></li>
-<li><p>To force a break <strong>|FORCE-BREAK|</strong>. Useful if you don’t want a right floating image, note, warning, etc. to overlap the next text.</p></li>
 </ul>
 </li>
 <li><p>To add a horizontal line, use <strong>----</strong> (four hyphens) on its own line</p></li>
@@ -817,7 +816,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7ffb01271c60>
+    <jinja2.runtime.BlockReference object at 0x7fcce20bf940>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

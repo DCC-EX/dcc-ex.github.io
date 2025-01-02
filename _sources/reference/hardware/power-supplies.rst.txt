@@ -51,42 +51,68 @@ The voltage requirement to the motor driver does not change based on how you pow
 
 ----
 
-Four Ways to Power the Microcontroller
-======================================
+Powering the Microcontroller
+============================
 
 Note, this primarily applies to the Arduino Mega with a |standard motor driver|. (See the previous section.)
 
-**Barrel Connector** - This is where we can connect our 7-9V DC supply. The power goes through a voltage regulator on the Arduino and converts the 7-9V to the 5V the board can use. You will still need a separate source of power for the motor controller.
+.. contents:: The Four Ways to Power a Microcontroller
+    :depth: 1
+    :local:
+    :class: in-this-section
 
-**USB Connector** - If you always will have a computer connected to your Command Station (for example when using |JMRI| or |EX-WT|), the 5V from your computer can power it. You won't need separate power supply in addition to the one you need for the motor controller. 
+Barrel Connector
+----------------
+
+This is where we can connect our 7-9V DC supply. The power goes through a voltage regulator on the Arduino and converts the 7-9V to the 5V the board can use. You will still need a separate source of power for the motor controller.
+
+USB Connector
+-------------
+
+If you always will have a computer connected to your Command Station (for example when using |JMRI| or |EX-WT|), the 5V from your computer can power it. You won't need separate power supply in addition to the one you need for the motor controller. 
 
 Most USB ports can only supply 500 milliamps, and this input is protected by a 500mA polyfuse that resets when a short is removed, so be careful about adding anything that will draw current from the Command Station. A |motor shield|, a WiFi shield and a fan that draws 50mA should be fine.
 
 Even if you don't have a laptop, you can use a 5V, 800mA or more USB power supply like a phone charger and connect it to the USB port.
 
-**Barrel Connector and USB at the same time?** You may wonder what happens if you have a 7-9V power supply connected to the barrel connector and plug your laptop into the USB port to use the |serial monitor|. 
+.. warning:: 
+   :class: warning-float-right
+   
+   We recommend only a 7-9V DC power supply for your Arduino because, despite what may be said on a specification sheet, anything over 5V is generates unnecessary heat in the voltage regulator on an Arduino.
+   
+    There is a 2V voltage drop in this regulator, so you need a minimum of 7 volts to power the board. 7-9 is perfect. If you used 12V and connected a WiFi board or other devices that also use the 5V power supply on the Arduino, the voltage regulator is likely to overheat.
+
+Barrel Connector and USB at the same time
+-----------------------------------------
+
+You may wonder what happens if you have a 7-9V power supply connected to the barrel connector and plug your laptop into the USB port to use the |serial monitor|. 
 
 The Uno and Mega actually have a conflict protection circuit. If you plug in a 7V or more power supply to the barrel connector, the Arduino automatically switches internally to use that power supply. So regardless of which connector you plug in first, if the barrel connector has a voltage 7V or greater applied to it, that is the voltage the Arduino will use and the USB connection will just provide communication signals.
 
-**Vin pin** - You can connect a 7-9V DC power supply with jumper wires. The positive from the power supply goes to Vin and negative to any pin marked "gnd" for ground. This also uses the voltage regulator on the Arduino to convert your supply voltage to 5V. You will still need a separate power supply for the motor controller.
+Vin pin
+-------
 
-**5V pin** - *Engineers only!* Arduino recommends against this. You can connect a good quality 5V power supply directly to the 5V pin and ground. 
+You can connect a 7-9V DC power supply with jumper wires. The positive from the power supply goes to Vin and negative to any pin marked "gnd" for ground. This also uses the voltage regulator on the Arduino to convert your supply voltage to 5V. You will still need a separate power supply for the motor controller.
+
+5V pin
+------
+
+*Engineers only!* Arduino recommends against this. You can connect a good quality 5V power supply directly to the 5V pin and ground. 
 
 You can NOT ever plug anything into the other power connectors if you connect power this way! This bypasses the voltage regulator on the board which means you can use more current. But it also connects voltage to the output of the 5V regulator. 
 
 Be aware that there is no diode for reverse voltage protection and no fuse for overcurrent. Research this option before attempting it.
 
 
-.. warning:: 
-   
-   We recommend only a 7-9V DC power supply for your Arduino because, despite what may be said on a specification sheet, anything over 5V is generates unnecessary heat in the voltage regulator on an Arduino.
-   
-    There is a 2V voltage drop in this regulator, so you need a minimum of 7 volts to power the board. 7-9 is perfect. If you used 12V and connected a WiFi board or other devices that also use the 5V power supply on the Arduino, the voltage regulator is likely to overheat.
-
 ----
 
 Powering the Motor Driver
 =========================
+
+.. contents:: In this section
+    :depth: 1
+    :local:
+    :class: in-this-section
 
 Voltage
 -------
@@ -247,6 +273,11 @@ Using one power supply with cheap converters to power everything
 * Using this method, you select a power supply that can power the track (or your highest voltage devices) and deliver enough Amps to power everything you will connect to it. This includes the DC-DC downconverters (Buck Converters) that take your higher voltage and reduce it to 5V, 7V, 9V, etc. Note that most buck converters are also boost converters, then can take a lower voltage and raise it to a higher one. We will just cover the first option here.
 
 .. NOTE:: You will still need a wall voltage AC to 12-18V DC power supply with enough Amperage to handle what you want to power. Ex: You need 5A max to the track, are powering 2A worth of lights, and you have 2A of accessories. That is 9A. So you should get a 10A or greater power supply.
+
+.. contents:: In this section
+    :depth: 1
+    :local:
+    :class: in-this-section
 
 15V 13A Power Supplies
 -----------------------

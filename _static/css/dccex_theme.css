@@ -173,17 +173,17 @@ html[data-theme='dark'] .btn-neutral {
 .ex-prefix {
   font-weight: bold; 
   color: #00a3b9 !important; 
-  font-size: 110%;
+  font-size: 105%;
 }
 .ex-suffix {
   font-weight: bold; 
   color: #00353d !important;
-  font-size: 110%;
+  font-size: 105%;
 }
 html[data-theme='dark'] .ex-suffix {
   font-weight: bold; 
   color: #006979 !important;
-  font-size: 110%;
+  font-size: 105%;
 }
 
 /* main dcc-ex text only */
@@ -299,6 +299,11 @@ html[data-theme='dark'] .sd-card {
   border-radius: 5px;
 }
 
+html[data-theme='dark'] .dcclink a {
+  background-color: #053a41 !important;
+  box-shadow: none;
+}
+
 .dcclink-right a {
   background-color: #00a3b9ff !important;
   box-shadow: 0 2px 0 #00353dff;
@@ -310,6 +315,11 @@ html[data-theme='dark'] .sd-card {
   border-radius: 10px;
   float:right;
   margin: 0px 0px 0px 10px;
+}
+
+html[data-theme='dark'] .dcclink-right a {
+  background-color: #053a41 !important;
+  box-shadow: none;
 }
 
 .dcclink a:visited {
@@ -425,6 +435,15 @@ svg {
   width: 20%;
 }
 
+.important-float-right-narrow, .hint-float-right-narrow, .tip-float-right-narrow {
+  float: right;
+  width: 20%;
+}
+
+.hint-float-right-narrow p, .tip-float-right-narrow p {
+  font-size: 90% !important;
+}
+
 .code-block-float-right {
   float: right;
   width: 40%;
@@ -457,6 +476,10 @@ html[data-theme='dark'] .important {
 
 html[data-theme='dark'] .important p.admonition-title {
   background: #1abc9c !important;
+}
+
+html[data-theme='dark'] .hint .admonition-title {
+  background-color: #006a56 !important;
 }
 
 .important-float-right {

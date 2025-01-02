@@ -12,6 +12,10 @@ Install the Software
 
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button|
 
+.. rst-class:: dcclink
+
+   :ref:`Download EX-Installer <download/ex-commandstation:ex-Installer>`
+
 .. sidebar::
 
    .. contents:: On this page
@@ -146,7 +150,14 @@ If you have not installed the CLI previously you *must* have Arduino CLI install
 
 If you already have the Arduino CLI installed, it is recommended that you refresh it periodically (e.g. weekly) to ensure support for the various device details are kept up to date. To refresh the CLI, simply click the :guilabel:`Refresh Arduino CLI` button.
 
-If you are using the |EX-CSB1-SHORT| or the recommended DIY Mega hardware, you should not need to adjust the other settings on this page.  (The |EX-CSB1-SHORT| required the "Expressif ESP32" option to be enabled, which should be the default.)
+.. hint:: 
+   :class: hint-float-right-narrow
+
+   **Expressif ESP32** is required for the **EX-CSB1**
+
+If you are using the |EX-CSB1-SHORT| or the recommended DIY Mega hardware, you should not need to adjust the other settings on this page.
+
+The |EX-CSB1-SHORT| requires the ``Expressif ESP32`` option to be enabled. It should be enabled by default.
 
 Installing the CLI can take some time. Once the CLI is installed, To proceed, click the :guilabel:`Select your device` button.
 
@@ -199,7 +210,12 @@ If more than one device is found (on different USB ports), you will need to sele
 
    EX-Installer - Device - Selection
 
-|EX-I| will attempt to work out what type of Arduino you have connected, but some cases it will not be able to do so. (This is especially common with cheap clone devices.) 
+.. hint:: 
+   :class: hint-float-right-narrow
+
+   For the EX-CSB1 select '**DCC-EX EX-CSB1**'
+
+|EX-I| will attempt to work out what type of microprocessor you have connected, but some cases it will not be able to do so. (This is especially common with cheap clone devices.) 
 
 Check and select the appropriate board from the drop down list.
 
@@ -270,7 +286,7 @@ If you have selected ``Configure options on the next screen``, to proceed, click
 
    EX-Installer - EX-CommandStation Configuration screen
 
-On this screen you can select some of the flexible and optional features of the |EX-CS|:abbr:
+On this screen you can select some of the flexible and optional features of the |EX-CS|:
 
 * Motor Driver type
 * LCD or oLED display
@@ -285,6 +301,11 @@ Only the *Motor Driver* and *WiFi* will be covered on this page.  If you have in
 
 Motor Driver
 ~~~~~~~~~~~~
+
+.. hint:: 
+   :class: hint-float-right-narrow
+
+   For the EX-CSB1 alone select '**EX-CSB1**' |BR| If you have the additional |EX-MS| select '**EXCSB1_WITH_EX8874**'
 
 .. figure:: /_static/images/ex-installer/ex_cs_configure_motor_shield.png
    :alt: EX-Installer - EX-CommandStation - Configure Motor Driver
@@ -371,6 +392,42 @@ To proceed, click the :guilabel:`Compile and Load` button.
 |force-break|
 
 |HR-DASHED|
+
+Display Type
+~~~~~~~~~~~~
+
+.. hint:: 
+   :class: tip-float-right-narrow
+
+   The EX-CSB1 will generally be supplied with a **OLED 128 X 64**
+
+.. figure:: /_static/images/ex-installer/ex_cs_configure_screen.png
+   :alt: EX-Installer - EX-CommandStation - Configure Display Driver
+   :scale: 60%
+
+   EX-Installer - Configure Display Driver
+
+
+If you have installed and optional oLED or LED display, enable the ``I have a display`` option, which will present you with a drop down list to select the type of display you have.
+
+|HR-DASHED|
+
+Start with Power on
+~~~~~~~~~~~~~~~~~~~
+
+.. hint:: 
+   :class: tip-float-right-narrow
+
+   The EX-CSB1 will generally be supplied with this enabled
+
+Enabling this option will cause the |EX-CS| to automatically start with the track power on.  
+
+If you don't enable this, you will need to turn the track power with you controller, or with |EX-R| automations.
+
+|force-break|
+
+|HR-DASHED|
+
 
 'Compile and Load' screen
 -------------------------

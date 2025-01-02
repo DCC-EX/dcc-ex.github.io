@@ -98,25 +98,25 @@ Writing Style
 * Keep sentences short.  Break them up where ever possible.
 * Keep paragraphs short.  Break them up where practical.
 * Keep paragraphs on the same topic. If the topic changes start a new paragraph.
-* Do not start any page for a Conductor or Tinkerer with a technical explanation.  Put technical explanations at the end of the page or preferably in a separate dedicated page.
-* If you have a number of sections that describe options; present them in list them first, before the sections, with an explanation as to why they are optional.  (i.e. a bullet list with hyperlinks to the headings.) 
+* Do not start any page for a Conductor or Tinkerer with a technical explanation.  Put technical explanations at the end of the page, or preferably in a separate dedicated page.  Make it clear the the technical explanation is not required reading (unless it is).
+* If you have a number of sections that describe options; present them in list them first, before the sections, with an explanation as to why they are optional.  (i.e. a bullet list with hyperlinks to the headings.) |BR| Wherever possible, do so by using the ``.. contents::`` directive
 * Where possible, avoid starting a section with a negative point of view.  i.e. Talk about the positives of what you are discussing first, before you delve into the negative or problematic aspects. |BR| e.g. Don't start with "... This is not for Conductors...", instead say "..This page is for Tinkerers ... Conductors should...".
-* Use British/Australian/Canadian/Indian (pretty much every except the USA) spelling e.g. 'colour' not 'color'.  |br|\ (Primarily because it is used in more English speaking countries)
+* Use British/Australian/New Zealand/Canadian/Indian (pretty much every country except the USA) spelling e.g. 'colour' not 'color'.  |br|\ (Primarily because it is used in more English speaking countries)
 * Preferred Terms:
   
-  * Where logical, use **"Motor Driver"**, in preference to "Motor Shield".  Do not use "Motor Board" or "Motorboard" |BR| Preferably use the expansions \|Motor Driver\| or \|Motor Shield\|.
+  * Where logical to do so, use **"Motor Driver"**, in preference to "Motor Shield".  Do not use "Motor Board" or "Motorboard" |BR| Preferably use the expansions \|Motor Driver\| or \|Motor Shield\|.
   * In general use **'train'** or **'loco'** instead of 'locomotive' or 'engine'
   * Use **"Smart Phone"** instead of 'Cell Phone' (US only term) or 'Mobile Phone' (just about everywhere else)
   * Use **Throttle** or **Throttle (controller)** instead of 'controller' or 'controller (throttle)'
 
-*	Use railroad/railway terminology that is understandable by all English-speaking people. |BR|\ Where there are clear differences from US to non-US terminology use both with a slash between and use the US version first. e.g. turnouts/points, consists/multiple units, switching/shunting.  (Only because the US term appears in apps like JMRI.)
-*	No full stop at the end of a numbered or unnumbered list
+*	Use railroad/railway terminology that is understandable by all English-speaking people. |BR| Where there are clear differences from US to non-US terminology use both with a slash between and use the US version first. e.g. turnouts/points, consists/multiple units, switching/shunting.  (Only because the US term appears in apps like JMRI.)
+*	No full stop at the end of a numbered or unnumbered list unless the points are each multi-sentence
 *	Numbered lists should generally only be used if they are describing a specific sequence, or the numbering is important to the text
-* Use first person (you and your; not I, me, my or am) language
+* Use second person (you and your; not I, me, my) language
 *	A string of nouns should be generally be sequenced in alphabetic order, unless it makes more sense within the context to display them in some other sequence
 * Double quotes (") should only be used for quoting text from people, documents or web sites
 *	No quotes around 'Also See' type references
-*	Avoid '(above)' or '(below)' in text.  Use hypertext links instead
+*	Avoid '(above)' or '(below)' in text.  Use hypertext \:ref\: links instead
 *	**``.. todo:: description...``** means that it is still a work-in-process and needs to be updated.  It must be followed by descriptive text describing the issue to be fixed.  If you want to to show in the page you will need add a separate line. 
 * Use **\`\`\literal text blocks\`\`** when describing preference values  - ``literal text blocks``
 * Use **\:menuselection\:\`Menu \-\-\> Preferences \-\-\> ..\`** for menu descriptions - :menuselection:`Menu --> Preferences --> ..` 
@@ -145,6 +145,5 @@ Tips
   * Non-breaking space use **\|_\|**
   * Blank line use **\|** on its own line
   * Paragraph break that a 'float right' element must not be placed before a point use **\|force-break\|**  |BR| useful if the 'float right' element is being placed beside another 'float right' element, rather than below.
-  * To force a break **\|FORCE-BREAK\|**. Useful if you don't want a right floating image, note, warning, etc. to overlap the next text.
 * To add a horizontal line, use **\-\-\-\-** (four hyphens) on its own line
 * To add a dashed horizontal line, use **\|HR-DASHED|\`**.

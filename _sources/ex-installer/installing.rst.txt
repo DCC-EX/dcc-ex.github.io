@@ -14,6 +14,12 @@ Using EX-Installer - Detailed Instructions
 
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button| |githublink-ex-installer-button-small|
 
+.. rst-class:: dcclink
+
+   :ref:`Download EX-Installer <download/ex-commandstation:ex-Installer>`
+
+|force-break|
+
 .. sidebar::
 
    .. contents:: On this page
@@ -82,7 +88,7 @@ Download and Run EX-Installer
   
    **Antivirus Software** |BR| You *may* need to turn off your antivirus software before you try to install. |BR| Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
 
-* Download the **new** :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app. |BR| |BR|
+* Download :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app. |BR| |BR|
 * For **Microsoft Windows**:
   
   * Open the Windows *File Manager*
@@ -148,14 +154,19 @@ If you have not installed the CLI previously you will see a :guilabel:`Install A
 
 If have previously installed the CLI you will see a :guilabel:`Refresh Arduino CLI` button.
 
-.. note::
-   :class: note-float-right
+.. hint:: 
+   :class: hint-float-right-narrow
 
-   Enabling additional platforms will take more space on your hard drive and is likely to add several minutes to the installation process. Maybe grab a cup of tea or a coffee!
+   **Expressif ESP32** is required for the **EX-CSB1**
 
 If you are using an Espressif or STMicroelectronics device (including the |EX-CSB1-SHORT|, as opposed to the more common Uno or Mega based Arduinos, you will need to enable support for these by selecting the appropriate additional platform option.
 
 You *must* have Arduino CLI installed to proceed, simply click the :guilabel:`Install Arduino CLI` button if it is showing.
+
+.. note::
+   :class: note-float-right
+
+   Enabling additional platforms will take more space on your hard drive and is likely to add several minutes to the installation process. Maybe grab a cup of tea or a coffee!
 
 If you already have the Arduino CLI installed, it is recommended that you refresh it periodically (e.g. weekly) to ensure support for the various device details are kept up to date. To refresh the CLI, simply click the :guilabel:`Refresh Arduino CLI` button.
 
@@ -208,6 +219,11 @@ If more than one device is found (on different USB ports), you will need to sele
    :align: center
 
    EX-Installer - Device - Selection
+
+.. hint:: 
+   :class: hint-float-right-narrow
+
+   For the EX-CSB1 select '**DCC-EX EX-CSB1**'
 
 |EX-I| will attempt to work out what type of Arduino you have connected, but in some cases it will not be able to do so. (This is especially common with cheap clone devices.) 
 
@@ -325,6 +341,11 @@ On this screen you can select some of the flexible and optional features of the 
 Motor Driver
 ^^^^^^^^^^^^
 
+.. hint:: 
+   :class: hint-float-right-narrow
+
+   For the EX-CSB1 alone select '**EX-CSB1**' |BR| If you have the additional |EX-MS| select '**EXCSB1_WITH_EX8874**'
+
 .. figure:: /_static/images/ex-installer/ex_cs_configure_motor_shield.png
    :alt: EX-Installer - EX-CommandStation - Configure Motor Driver
    :scale: 60%
@@ -352,10 +373,14 @@ This list will change over time as new motor drivers are added, and any older on
 Optional Display
 ^^^^^^^^^^^^^^^^
 
+.. hint:: 
+   :class: tip-float-right-narrow
+
+   The EX-CSB1 will generally be supplied with a **OLED 128 X 64**
+
 .. figure:: /_static/images/ex-installer/ex_cs_configure_screen.png
    :alt: EX-Installer - EX-CommandStation - Configure Display Driver
    :scale: 60%
-   :align: center
 
    EX-Installer - Configure Display Driver
 
@@ -446,6 +471,11 @@ Note that it is not possible to have both WiFi and Ethernet enabled at the same 
 
 Start with power on
 ^^^^^^^^^^^^^^^^^^^
+
+.. hint:: 
+   :class: tip-float-right-narrow
+
+   The EX-CSB1 will generally be supplied with this enabled
 
 Enabling this option will cause the |EX-CS| to automatically start with the track power on.  
 

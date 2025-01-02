@@ -26,7 +26,7 @@ How many power supplies you need depends on the type of |EX-CS| you have:
 
 1. If you have an |EX-CSB1-SHORT| then you only need **one (1) power supply**.
 
-2. If you have a **do-it-yourself (DIY)** |EX-CS| based of the Arduino Mega with a |EX-MS| motor shield, then you need **two (2) power supplies**. One for the Arduino and one for the motor driver.
+2. If you have a **do-it-yourself (DIY)** |EX-CS| based of the Arduino Mega with a |EX-MS| motor shield, then you only need **one (1) power supplies**. One for motor driver.  The motor driver will pass power to the Arduino.
 
 3. If you have a **do-it-yourself (DIY)** |EX-CS| based of the Arduino Mega, ESP32 or Nucleo with a Standard motor shield, then you need **two (2) power supplies**. One for the Arduino and one for the motor driver.
 

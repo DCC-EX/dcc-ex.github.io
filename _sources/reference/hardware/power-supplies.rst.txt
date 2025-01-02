@@ -24,16 +24,15 @@ How many power supplies do I need?
 
 How many power supplies you need depends on the type of |EX-CS| you have:
 
-1. If you have an |EX-CSB1-SHORT| then you only need **one (1) power supply**.
+* If you have an |EX-CSB1-SHORT| then you only need **one (1) power supply**. |BR| |BR| 
 
-2. If you have a **do-it-yourself (DIY)** |EX-CS| based on the Arduino Mega with a |EX-MS| |motor shield|, then you only need **one (1) power supplies**. One for the motor driver.  The motor driver will pass power to the Arduino.
+* If you have a **do-it-yourself (DIY)** |EX-CS| based on the Arduino Mega with a |EX-MS| |motor shield|, then you only need **one (1) power supply**. One for the motor driver.  The motor driver will pass power to the Arduino. |BR| |BR|
 
-3. If you have a **do-it-yourself (DIY)** |EX-CS| based on the Arduino Mega with a |standard motor driver|, then you need **two (2) power supplies**. One for the Arduino and one for the motor driver.
+* If you have a **do-it-yourself (DIY)** |EX-CS| based on the Arduino Mega with a |standard motor driver|, then you need **two (2) power supplies**. One for the Arduino and one for the motor driver. |BR| |BR|
 
-4. If you have a **do-it-yourself (DIY)** |EX-CS| based on the Arduino Uno, then only you need **one (1) power supply**. One for motor driver. Since the Uno must be connected to a PC or RPi to use, the Uno will be powered by the USB from the PC.
+* If you have a **do-it-yourself (DIY)** |EX-CS| based on the Arduino Uno, then only you need **one (1) power supply**. One for motor driver. Since the Uno must be connected to a PC or RPi to use, the Uno will be powered by the USB from the PC. |BR| |BR|
 
-2. *Engineers Only!,* If you have a **do-it-yourself (DIY)** |EX-CS| based on the ESP32 or Nucleo with a |EX-MS| |motor shield|, then you only need **one (1) power supplies**. However since these board need only 3.3v, modifications to the boards need to be made to support this.
-
+* *Engineers Only!* If you have a **do-it-yourself (DIY)** |EX-CS| based on the ESP32 or Nucleo with a |EX-MS|, then you only need **one (1) power supply**. However since these board needs only 3.3v, modifications to the boards must to be made to support this.
 
 |HR-DASHED|
 
@@ -113,8 +112,7 @@ Note that for purely |DC| operation, these voltages should probably be slightly 
 
 The voltage of the *power supply* you need will depend on the type of motor driver you have:
 
-* If you have a |EX-MS| or |EX-MS| the you *should not exceed* the values listed above. This is because the EX-MotorShield8874 does not drop voltage like the |standard motor driver|.
-
+* If you have a |EX-MS| or |EX-MS| the you *should not exceed* the values listed above. This is because the EX-MotorShield8874 does not drop voltage like the |standard motor driver|. |BR| |BR|
 
 * If you have a |standard motor driver|, then you generally will want a power supply between 1 and 2 volts higher than the voltage you want to have on the track. this is because the |standard motor driver| is inefficient and drops voltage.
 

@@ -178,7 +178,13 @@ Bricks (Laptop Style)
    :scale: 25%
    :alt: Samsung brick
 
-Note: this power supply is suitable for use, but the connector tip is not the directly plug-able into the |EX-CSB1-SHORT|.  You would need an adapter.  https://www.amazon.com/Samsung-Monitor-SoulBay-SyncMaster-Notebook/dp/B07QLRBLWC/ |EXTERNAL-LINK|
+Note: this power supply is suitable for use in the USA, but the connector tip is not the directly plug-able into the |EX-CSB1-SHORT|.  You would need an adapter.  https://www.amazon.com/Samsung-Monitor-SoulBay-SyncMaster-Notebook/dp/B07QLRBLWC/ |EXTERNAL-LINK|
+
+Similar power supplies, suitable for use with the |EX-CSB1-SHORT| in the USA include:
+
+* 12vDC https://www.amazon.com/dp/B07GFFG1BQ?th=1 |EXTERNAL-LINK|
+
+* 15vDC https://www.amazon.com/dp/B08NVZQF3Q |EXTERNAL-LINK|
 
 Since many people have old laptop power supplies that can be 18-19.5V DC, you can use the diode or buck converter method listed below to reduce the voltage.
 
@@ -193,13 +199,13 @@ Adjustable Power Supplies
    :scale: 25%
    :alt: Belker_adjustable wall-wart
 
-https://www.amazon.com/dp/B07J6RC43S/ |EXTERNAL-LINK|
+Suitable for use in the USA - https://www.amazon.com/dp/B07J6RC43S/ |EXTERNAL-LINK|
 
 .. image:: /_static/images/power/belker_adjustable_45w.png
    :scale: 25%
    :alt: Belker_adjustable brick
 
-https://www.amazon.com/Belker-5V-15V-Universal-Adapter-Speaker/dp/B015H0UPWU |EXTERNAL-LINK|
+Suitable for use in the USA - https://www.amazon.com/Belker-5V-15V-Universal-Adapter-Speaker/dp/B015H0UPWU |EXTERNAL-LINK|
 
 |HR-DASHED|
 

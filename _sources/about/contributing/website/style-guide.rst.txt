@@ -104,7 +104,7 @@ Writing Style
 * Use British/Australian/Canadian/Indian (pretty much every except the USA) spelling e.g. 'colour' not 'color'.  |br|\ (Primarily because it is used in more English speaking countries)
 * Preferred Terms:
   
-  * Use **"Motor Driver"**, not "Motor Shield", "Motor Board", "Motorboard"
+  * Where logical, use **"Motor Driver"**, in preference to "Motor Shield".  Do not use "Motor Board" or "Motorboard" |BR| Preferably use the expansions \|Motor Driver\| or \|Motor Shield\|.
   * In general use **'train'** or **'loco'** instead of 'locomotive' or 'engine'
   * Use **"Smart Phone"** instead of 'Cell Phone' (US only term) or 'Mobile Phone' (just about everywhere else)
   * Use **Throttle** or **Throttle (controller)** instead of 'controller' or 'controller (throttle)'

@@ -235,6 +235,20 @@
       -  
       -  
 
+    * -  `HandCab <https://github.com/1fatgmc/HandCab/tree/main>`_
+      -  Free
+      -  WiFi
+      -  WiT
+      -  Device
+      -  DIY
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
     * -  :doc:`DccExController <hardware/dccexcontroller>`
       -  Free
       -  WiFi

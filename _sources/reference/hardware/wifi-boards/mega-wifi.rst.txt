@@ -8,20 +8,21 @@ Mega+WiFi Combo Board
 *********************
 
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button| 
-
-.. figure:: /_static/images/assembly/mega_wifi.png
-   :alt: Mega WiFi
-   :scale: 40%
-   :align: center
-
-The Mega+WiFi is a board from China that combines an Arduino Mega design with an on-board ESP8266 WiFi chip.
-
+   
 .. warning:: 
    :class: warning-float-right
 
    Buyer beware! There have been numerous reports of build quality issues with these clone boards, with poorly soldered USB connectors and issues getting wireless working two commonly reported issues.
 
    The DCC-EX team do not recommend the combined Mega2560 + WiFi due to the number of issues encountered in recent times.
+
+.. figure:: /_static/images/assembly/mega_wifi.png
+   :alt: Mega + WiFi Combo Board
+   :scale: 35%
+
+   Mega + WiFi Combo Board
+
+The Mega+WiFi is a board from China that combines an Arduino Mega design with an on-board ESP8266 WiFi chip.
 
 The advantage of this configuration is that with WiFI on the same board with the Microcontroller, you only need two boards. Your "stack" will have just the Mega+WiFi board with the |motor shield| on top. 
 

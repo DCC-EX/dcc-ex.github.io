@@ -9,16 +9,15 @@ L298N Motor Driver Setup
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
-.. warning:: 
-
-   This board is **not** compatible with |TM| DC mode.
-
 .. sidebar::
 
   .. contents:: On this page
     :depth: 1
     :local:
 
+.. warning:: 
+
+   This board is **not** compatible with |TM| DC mode.
 
 The L298N Motor board is the same H-Bridge on the Arduino Motor Shield. Here are the key differences:
 

@@ -51,7 +51,9 @@ For a video, click `Setting up WiFi <https://www.youtube.com/watch?v=N6TWR7fIl0A
 Wireless Connections
 =====================
 
-As mentioned in :doc:`WiFi Setup </ex-commandstation/diy/wifi-setup>`, there are two main reasons for wanting to use WiFi; to connect to |JMRI| without a USB cable, or to connect to a wireless throttle (controller) like the |Engine Driver| mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running |JMRI| to your Command Station, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. But if you have no alternative and need to replace the cable with wireless, we recommend the HC-12 serial wireless bridge boards which we cover on the :doc:`/reference/hardware/wifi-boards/hc12-bridge` page.
+As mentioned in :doc:`WiFi Setup </ex-commandstation/diy/wifi-setup>`, there are two main reasons for wanting to use WiFi; to connect to |JMRI| without a USB cable, or to connect to a wireless throttle (controller) like the |Engine Driver| mobile app. While it can work to simply use WiFi to replace the USB cable to connect the computer running |JMRI| to your Command Station, there are better ways and frankly, your electronics are usually under the benchwork, so just buy the right sized cable. 
+
+But if you have no alternative and need to replace the cable with wireless, we recommend the HC-12 serial wireless bridge boards which we cover on the :doc:`/reference/hardware/wifi-boards/hc12-bridge` page.
 
 That said, there are two main wireless technologies that let you send commands to your Command Station and control your trains:
 
@@ -87,7 +89,9 @@ There are two ways to configure the WiFi board connected to |EX-CS|: "Access Poi
 Access Point Mode
 -----------------
 
-In |Access Point| (AP) mode, the tiny ESP-WiFi chip acts as a very basic WiFi server and provides a small IP network for your throttle or for your computer running |JMRI| with the |WiThrottle Server| enabled. It acts much like your router does to let things connect directly to it (currently up to four connections). Using the Command Station in AP mode allows you to have a separate network so you can keep your layout network separate from your home network. This is the simplest way to enable a connection for a WiFi throttle.
+In |Access Point| (AP) mode, the tiny ESP-WiFi chip acts as a very basic WiFi server and provides a small IP network for your throttle or for your computer running |JMRI| with the |WiThrottle Server| enabled. It acts much like your router does to let things connect directly to it (currently up to four connections). 
+
+Using the Command Station in Access Point (AP) mode allows you to have a separate network so you can keep your layout network separate from your home network. This is the simplest way to enable a connection for a WiFi throttle.
 
 If you travel to shows, or take your setup to a friend's house, this allows for an autonomous, transportable system that does not need a connection to, and hopefully will not interfere with, other networks. 
 
@@ -96,7 +100,7 @@ If you travel to shows, or take your setup to a friend's house, this allows for 
 (Remember you can click on images to enlarge them)
 
 .. figure:: /_static/images/wifi/WiFi_softap_mode.png
-   :alt: AP Mode
+   :alt: Access Point (AP) Mode
    :scale: 50%
 
    Access Point Mode - Things connect to the WiFi Board
@@ -104,7 +108,9 @@ If you travel to shows, or take your setup to a friend's house, this allows for 
 Station Mode
 ------------
 
-|Station mode| allows you to connect the Command Station to your existing home network. The Command Station becomes a Station or Client rather than an |Access Point|. That means instead of being a host that manages the IP of the smartphone that runs your Throttle, it becomes a station that connects to your existing network just like any of the other computers or devices connected to your network. The Throttle then connects to the Command Station by finding its IP address on the network. You will have to find what IP address is assigned to the Command Station (see below). Alternately, you can define a static IP address in your router to assign to the Command Station.
+|Station mode| allows you to connect the Command Station to your existing home network. The Command Station becomes a Station or Client rather than an |Access Point|. That means instead of being a host that manages the IP of the smartphone that runs your Throttle, it becomes a station that connects to your existing network just like any of the other computers or devices connected to your network. 
+
+The Throttle then connects to the Command Station by finding its IP address on the network. You will have to find what IP address is assigned to the Command Station (see below). Alternately, you can define a static IP address in your router to assign to the Command Station.
 
 .. figure:: /_static/images/wifi/WiFi_station_mode.png
    :alt: Station Mode
@@ -121,7 +127,7 @@ Access Point Mode (Default - No Configuration Necessary)
 
 To use the default |Access Point mode|, you don't have to do anything other than connect an ESP8266 board as described in :doc:`WiFi Setup </ex-commandstation/diy/wifi-setup>`. 
 
-That's it! If there is no previously configured network in range, or the WiFi setup in your config.h file is still unconfigured, the default for |EX-CS| is AP mode. We find your WiFi board, no matter which of the extra serial ports you attached it to. |EX-CS| then accepts commands from WiFi throttles in either |WiThrottle Protocol| or |DCC-EX Native Commands|.
+That's it! If there is no previously configured network in range, or the WiFi setup in your config.h file is still unconfigured, the default for |EX-CS| is Access Point (AP) mode. We find your WiFi board, no matter which of the extra serial ports you attached it to. |EX-CS| then accepts commands from WiFi throttles in either |WiThrottle Protocol| or |DCC-EX Native Commands|.
 
 To see other configuration options you can set in your config.h file, see `WiFi Config Options`_ below.
 
@@ -136,7 +142,9 @@ You will need to know:
 
    If you wish to use a custom SSID in access point mode, you will need to set the WIFI_FORCE_AP option in config.h, see :ref:`ex-commandstation/advanced-setup/supported-wifi/wifi-config:#define wifi_force_ap`
 
-Whenever you connect a USB cable and open the |serial monitor|, you reset the program running on your Command Station. It will go through the bootup sequence again and try to connect to a network. If you did not setup a "Station Mode" configuration, or if that network is not in range, it will configure itself in AP mode. You will see this process by watching the |serial monitor| log window. Here are the important lines you need to look for. While the IP address is almost always 192.168.4.1, it could be different on your system. You are looking for the items in the blue box below that are highlighted in red. 
+Whenever you connect a USB cable and open the |serial monitor|, you reset the program running on your Command Station. It will go through the bootup sequence again and try to connect to a network. If you did not setup a "Station Mode" configuration, or if that network is not in range, it will configure itself in Access Point (AP) mode. You will see this process by watching the |serial monitor| log window. 
+
+Here are the important lines you need to look for. While the IP address is almost always 192.168.4.1, it could be different on your system. You are looking for the items in the blue box below that are highlighted in red. 
 
 .. figure:: /_static/images/wifi/ap_mode1.jpg
    :alt: IP Address
@@ -144,9 +152,9 @@ Whenever you connect a USB cable and open the |serial monitor|, you reset the pr
 
    Serial Monitor Log (click to enlarge)
 
-You will see the line that has ``AT+CIPSERVER=1,2560\r\r\nno change\r\n\r\nOK\r\n``, where 2560 is your port number
+You will see the line that has ``AT+CIPSERVER=1,2560\r\r\nno change\r\n\r\nOK\r\n``, where **2560** is your port number
 
-Next you will see ``+CIFSR:APIP,"192.168.4.1"``, where your IP address is 192.168.4.1.
+Next you will see ``+CIFSR:APIP,"192.168.4.1"``, where your IP address is **192.168.4.1**.
 
 APIP here stands for "Access Point IP Address". Your throttle is assigned an IP address in the same IP range, typically 192.168.4.10 to 15. As your |Access Point| is also your |EX-CS| this time, you connect your throttle to the |Access Point| IP.
 
@@ -169,9 +177,11 @@ You should see a new network that begins with "DCCEX" like this example: ``DCCEX
 
 Simply click on that network and connect to it on your mobile device. You will need to enter the password you specified in the config.h file. If you did not enter one, the default will be **PASS_xxxxxx** where "xxxxxx" are the same last 6 digits of your device's MAC address displayed in the SSID like this example: ``PASS_6e321b``
 
-.. note:: The last 6 letters and numbers of your AP name and default password will be specific to your WiFi board, and uniquely identify it. They are the last 6 letters of that device's MAC address. You can always find it in the log or by simply looking at the DCCEX_xxxxxx SSID name in your list of available networks.
+.. note:: The last 6 letters and numbers of your Access Point (AP) name and default password will be specific to your WiFi board, and uniquely identify it. They are the last 6 letters of that device's MAC address. You can always find it in the log or by simply looking at the DCCEX_xxxxxx SSID name in your list of available networks.
 
-Ignore the warning that may pop up telling you that "Internet may not be available". The Command Station is not connected to the internet, and you are connecting to the Command Station directly from your mobile device for the purpose of controlling trains, not surfing the web. Depending on the config and OS of your mobile device, you may still have internet access over mobile data through a cell tower connection. If you wish to use your home network internet (for example, if your data plan is expensive), turn off mobile data and see the section below on Station Mode to connect using your home network instead.
+Ignore the warning that may pop up telling you that "Internet may not be available". The Command Station is not connected to the internet, and you are connecting to the Command Station directly from your mobile device for the purpose of controlling trains, not surfing the web. Depending on the config and OS of your mobile device, you may still have internet access over mobile data through a cell tower connection. 
+
+If you wish to use your home network internet (for example, if your data plan is expensive), turn off mobile data and see the section below on Station Mode to connect using your home network instead.
 
 Once you are connected to the Command Station with your cell phone, you can run your WiFi Throttle app, enter the IP Address for the Server Address (**the default is usually 192.168.4.1, but it will be displayed in your serial monitor log if you are unsure**), enter **2560 for the port number**, and then select and acquire your loco by its address. If you don't know your loco address, see the ``<R>`` command in the :ref:`native-command-r` section of the Command Reference.
 
@@ -186,7 +196,7 @@ Once you are connected to the Command Station with your cell phone, you can run 
 
 **All this information appears in the startup log when connected using a serial monitor, in case you forget.**
 
-.. note:: If you experience dropped connections to the AP, turn off the Auto-connect feature on your phone to prevent it from randomly disconnecting from the AP and connecting to your home router because it thinks it's a better connection. You can also "Forget" the connection it wants to switch to and then manually connect to that network when you need it.
+.. note:: If you experience dropped connections to the AP, turn off the Auto-connect feature on your phone to prevent it from randomly disconnecting from the Access Point (AP) and connecting to your home router because it thinks it's a better connection. You can also "Forget" the connection it wants to switch to and then manually connect to that network when you need it.
 
 
 Connecting to your Network - Station Mode "STA" (edit config.h)
@@ -254,7 +264,9 @@ The following defines are all the possible network settings found the config.h f
 #define IP_PORT 2560
 --------------------
 
-**Default: 2560** - This is the port used to communicate with the WiFi board or Ethernet Shield. We use the default value of 2560 because that is the port |JMRI| uses. You can change this value if you would prefer it to be something else. You will need to enter this in software like |Engine Driver| in order to connect to the Command Station via networking.
+**Default: 2560** - This is the port used to communicate with the WiFi board or Ethernet Shield.
+
+You can change this value if you would prefer it to be something else. However, you will need to enter this in software like |Engine Driver| in order to connect to the Command Station via networking as |Engine Driver| will not be able to 'guess' it.
 
 #define ENABLE_WIFI true
 ------------------------
@@ -264,19 +276,23 @@ The following defines are all the possible network settings found the config.h f
 #define DONT_TOUCH_WIFI_CONF
 ----------------------------
 
-**Default: commented out** If uncommented, this tells the Command Station to NOT process any WiFi commands in the Command Station. If other WiFi defines are enabled, the Command Station will ignore them. With this command, you can leave #define ENABLE_WIFI true so that networking is active, but send no configuration commands to ESP8266. This allows you to enter your own AT commands to set up your WiFi however you want. To do this, you would enter <+> commands in the |serial monitor|, or add code to send these commands automatically.
+**Default: commented out** If uncommented, this tells the Command Station to NOT process any WiFi commands in the Command Station. If other WiFi defines are enabled, the Command Station will ignore them. With this command, you can leave #define ENABLE_WIFI true so that networking is active, but send no configuration commands to ESP8266. 
+
+This allows you to enter your own AT commands to set up your WiFi however you want. To do this, you would enter <+> commands in the |serial monitor|, or add code to send these commands automatically.
 
 #define WIFI_SSID "Your network name"
 -------------------------------------
 
-**Default: "Your network name"** - To connect to your Command Station as an AP (Access Point), do not change this setting. If you wish to connect to your home network instead, enter the SSID (network name) for that network. If you do NOT set the WIFI_SSID, the WiFi chip will first try to connect to the previously configured network, and if that fails, fall back to Access Point mode. The SSID of the AP will be automatically set to DCCEX_xxxxxx, where xxxxxx is the last 6 digits of the MAC address for the WiFi chip.
-Your SSID may not contain ``"`` (double quote, ASCII 0x22).
+**Default: "Your network name"** - To connect to your Command Station as an Access Point (AP), do not change this setting. If you wish to connect to your home network instead, enter the SSID (network name) for that network. 
+
+If you do NOT set the WIFI_SSID, the WiFi chip will first try to connect to the previously configured network, and if that fails, fall back to Access Point mode. The SSID of the Access Point (AP) will be automatically set to **DCCEX_xxxxxx**, where xxxxxx is the last 6 digits of the MAC address for the WiFi chip.
+Your SSID must not contain ``"`` (double quote, ASCII 0x22).
 
 #define WIFI_PASSWORD "Your network passwd"
 -------------------------------------------
 
-**Default: "Your network passwd"** - WIFI_PASSWORD is the network password for your home network, or if you want to change the password from default AP mode password to the AP password you want.  Your password may not contain ``"`` (double quote, ASCII 0x22).  
-If you don't change this setting and start up in AP mode instead, the default password is PASS_xxxxxx where xxxxxx is the last 6 digits of the MAX address for your ESP board.
+**Default: "Your network passwd"** - WIFI_PASSWORD is the network password for your home network, or if you want to change the password from default Access Point (AP) mode password to the Access Point (AP) password you want.  Your password must not contain ``"`` (double quote, ASCII 0x22).  
+If you don't change this setting and start up in Access Point (AP) mode instead, the default password is **PASS_xxxxxx** where xxxxxx is the last 6 digits of the MAX address for your ESP board.
 
 #define WIFI_HOSTNAME "dccex"
 -----------------------------
@@ -316,7 +332,7 @@ If you don't change this setting and start up in AP mode instead, the default pa
 Resetting Network Settings
 ===========================
 
-Once you enter a network SSID and password, the Command Station will always try to connect to it, even after removing the power and restarting. If you want to connect in AP mode, or your network credentials change, or you need to connect to a different network, you simply need to tell your WiFi board to clear the settings.
+Once you enter a network SSID and password, the Command Station will always try to connect to it, even after removing the power and restarting. If you want to connect in Access Point (AP) mode, or your network credentials change, or you need to connect to a different network, you simply need to tell your WiFi board to clear the settings.
 
 Clearing the ESP-WiFi SSID Settings
 -----------------------------------
@@ -325,8 +341,8 @@ Open your |serial monitor| and wait until the Command Station has gone through t
 
 You will then see an "Ok" message. The WiFi Settings are forgotten. However, if the last config.h used when you uploaded it to the Command Station had WiFi credentials in it, then as soon as your Command Station restarts, it will load and save those settings again. So...
 
-If you want to run in AP mode
------------------------------
+If you want to run in Access Point (AP) mode
+---------------------------------------------
 
 Edit the config.h, change your SSID and password lines back to default. It MUST look like the following. If it is anything else it will try to login with whatever you type there as credentials!
 
@@ -357,7 +373,7 @@ For reference, it may be helpful to know the sequence the Command Station uses t
 2. If we find a WiFi device, next check if ``#define DONT_TOUCH_WIFI_CONF`` is uncommented. If so, abort config attempts here - done.
 3. Next, if no SSID is configured, check if the ESP is configured in STATION mode already from a previous network connection. If so, try to connect to that network. If we connect, exit and start the Command Station, if not, go to step 4.
 4. Try to configure in STATION mode from values in the config.h file - done.
-5. If none of the above, set up as an AP with an SSID of DCCEX_xxxxxx and a password set in the config.h file. If unconfigured, the default will be PASS_xxxxxx (xxxxxx will be the last 6 characters of the device SSID & MAC address)
+5. If none of the above, set up as an Access Point (AP) with an SSID of **DCCEX_xxxxxx** and a password set in the config.h file. If unconfigured, the default will be **PASS_xxxxxx** (xxxxxx will be the last 6 characters of the device SSID & MAC address)
 
 Tips and Tricks
 =================
@@ -383,6 +399,6 @@ You are still going to have to go into your router, find the MAC address for you
 You can try these commands also. You must have a recent version of the firmware to support _DEF commands. If they don't work, try entering them without this suffix (Example: <+CIPAP> instead of <+CIPAP_DEF>)
 
 1. Forget your network settings by entering <+RESTORE>
-2. Enter ``<+CIPAP_DEF="192.168.5.1","192.168.5.1","255.255.255.0">`` to setup the AP with your IP address
+2. Enter ``<+CIPAP_DEF="192.168.5.1","192.168.5.1","255.255.255.0">`` to setup the Access Point (AP) with your IP address
 3. Enter ``<+CWDHCP_DEF=1,1>`` 
 4. Enter ``<+CWDHCPPS_DEF="1,10,"192.168.5.100","192.168.5.150">``

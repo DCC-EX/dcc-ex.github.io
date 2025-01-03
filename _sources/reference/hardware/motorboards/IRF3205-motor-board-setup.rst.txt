@@ -9,16 +9,16 @@ IRF3205 Motor Driver Setup
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
-.. warning:: 
-
-   This board is **not** compatible with |TM| DC mode.
-
 .. sidebar::
 
    .. contents:: On this page
       :depth: 2
       :local:
       
+.. warning:: 
+
+   This board is **not** compatible with |TM| DC mode.
+
 Dual Motor Driver Module H-bridge MOSFET IRF3205
 ------------------------------------------------
 

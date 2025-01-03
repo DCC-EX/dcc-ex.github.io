@@ -12,15 +12,15 @@ DCC-EX EX-MotorShield8874 RevA
 
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button| 
 
-.. note:: 
-
-   This board is compatible with |TM| DC mode.
-
 .. sidebar::
 
   .. contents:: On this page
     :depth: 3
     :local:
+
+.. note:: 
+
+   This board is compatible with |TM| DC mode.
 
 Designed in conjunction with the |DCC-EX| development team, the |EX-MS| is extremely simple to use with all current and future generations of |EX-CS| hardware. 
 

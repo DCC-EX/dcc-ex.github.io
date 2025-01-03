@@ -565,6 +565,61 @@ html[data-theme='dark'] .menuselection {
 
 /* *************************************** */
 
+/* .wy-menu-vertical li.current {
+  box-shadow: 0px 5px 10px #66666696;
+} */
+
+.wy-menu-vertical li.toctree-l2.current>a {
+  /* box-shadow: 0px 5px 10px #66666696; */
+  background-color: #d1d1d1;
+}
+
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3>a {
+  background-color: #bdbcbc !important;
+}
+
+li.toctree-l3>a.current {
+  font-style: italic !important;
+  color: #1e1e1e !important;
+}
+
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3>a.current {
+  background-color: #a3a3a3 !important;
+}
+
+/*   ***   */
+
+/* html[data-theme='dark'] .wy-menu-vertical li.current {
+  box-shadow: 0px 5px 10px #000000a1;
+} */
+
+html[data-theme='dark'] .wy-menu-vertical li.toctree-l1.current>a {
+  /* box-shadow: 0px 5px 10px ##141414; */
+  background-color: #141414 !important;
+}
+
+ 
+html[data-theme='dark'] .wy-menu-vertical li.toctree-l2.current>a {
+  /* box-shadow: 0px 5px 10px #66666696; */
+  background-color: #212121 !important;
+}
+
+
+html[data-theme='dark'] .wy-menu-vertical li.toctree-l2.current li.toctree-l3>a {
+  background-color: #2d2d2d !important;
+}
+
+html[data-theme='dark'] li.toctree-l3>a.current {
+  color: #d5d5d5 !important;
+}
+
+
+html[data-theme='dark'] .wy-menu-vertical li.toctree-l2.current li.toctree-l3>a.current {
+  background-color: #373737 !important;
+}
+
+/* *************************************** */
+
 .wy-table-responsive {
     margin-bottom: 12px !important;
     border-radius: 5px;
@@ -603,11 +658,16 @@ html[data-theme='dark'] .table-wrap-text td {
 
 .table-grid-homepage td, .table-list-homepage td {
   font-size: 80% !important;
-  color: #666666 !important;
+  color: #181818 !important;
   vertical-align:top !important;
   background-color: #ffffff00 !important;  
   border-style: none !important;
   border-width: 0px !important;
+  padding: 10px;
+}
+
+html[data-theme='dark'] .table-grid-homepage td, html[data-theme='dark'] .table-list-homepage td {
+  color: #ccc !important;
 }
 
 .table-wrap-text, .table-grid-homepage, .table-list-homepage { 

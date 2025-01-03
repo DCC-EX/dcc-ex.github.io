@@ -37,5 +37,4 @@ Hardware, Software, tools
    Native Commands Summary <software/command-summary-consolidated>
    /exrail/exrail-command-reference
    developers/index
-   accessories/index
    tools/index

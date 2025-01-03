@@ -12,16 +12,16 @@ Install the Software
 
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button|
 
-.. rst-class:: dcclink
-
-   :ref:`Download EX-Installer <download/ex-commandstation:ex-Installer>`
-
 .. sidebar::
 
    .. contents:: On this page
       :depth: 3
       :local:
     
+.. rst-class:: dcclink
+
+   :ref:`Download EX-Installer <download/ex-commandstation:ex-Installer>`
+
 Once you have assembled your do-it-yourself |EX-CS| hardware you need to load our software onto it to make it usable. |BR| To make it as simple as possible we have created the |EX-I| app.
 
 If you have purchased a |EX-CSB1| it will have come with the |EX-CS| software already installed.  You only need to look at this page if you want to change the default configuration. 

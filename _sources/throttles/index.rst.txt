@@ -61,10 +61,12 @@ Dedicated Hardware
 
 - :doc:`miniThrottle (Physical) <hardware/minithrottle>`
 - :doc:`WiTcontroller (Physical) <hardware/witcontroller>`
+- `HandCab (Physical) <https://github.com/1fatgmc/HandCab/tree/main>`_
 - :doc:`DccExController (Physical) <hardware/dccexcontroller>`
 - :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
 - :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
 - :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
+- See also :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
 Personal Computers
 ------------------
@@ -102,7 +104,7 @@ DCC-EX (DCC-EX Native Commands)
 - :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
 - :doc:`DCCpp CAB (Android) <software/dccpp-cab>`
 - :doc:`DccExController (Physical) <hardware/dccexcontroller>`
-- :doc:` DCC-EX Native command library - DCCEXProtocol <throttles/native-protocol-library>`
+- See also :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
 WiThrottle Protocol Based Throttles
 -----------------------------------
@@ -115,6 +117,7 @@ WiThrottle Protocol Based Throttles
 - :doc:`Train Driver (iOS) <software/train-driver>`
 - :doc:`miniThrottle (Physical) <hardware/minithrottle>`
 - :doc:`WiTcontroller (Physical) <hardware/witcontroller>`
+- `HandCab (Physical) <https://github.com/1fatgmc/HandCab/tree/main>`_
 - :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
 - :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
 

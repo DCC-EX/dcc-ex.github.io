@@ -7,7 +7,7 @@ Example - Turntable and traverser ROUTEs
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
-.. code-block:: 
+.. code-block:: cpp
 
   // On startup, ensure our turntable and traverser move automatically to the first position
   MOVETT(600, 114, Turn)

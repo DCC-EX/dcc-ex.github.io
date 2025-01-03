@@ -393,7 +393,7 @@ Note in the images below, Track A is the right hand green connector, and Track B
 
 Firstly, configure both Tracks as ``MAIN`` and turn track power on:
 
-.. code-block::
+.. code-block:: cpp
 
    <= A MAIN>
    <= B MAIN>
@@ -409,7 +409,7 @@ This should result in all four (4) yellow LEDs being lit:
 
 Next, configure Track A as ``DC``, turn power on again, and ensure that there is no throttle speed:
 
-.. code-block::
+.. code-block:: cpp
 
    <A= A DC 1>
    <1>
@@ -425,7 +425,7 @@ This should result in both Track B (left) LEDs being lit, but Track A (right) LE
 
 Set throttle speed for Track A using DCC address 1:
 
-.. code-block::
+.. code-block:: cpp
 
    <t 1 100 1>
 
@@ -439,7 +439,7 @@ This should result in both Track B (left) LEDs still being lit, and one Track A 
 
 Reverse the direction for Track A using DCC address 1:
 
-.. code-block:: 
+.. code-block:: cpp
 
    <t 1 100 0>
 
@@ -453,7 +453,7 @@ This should result in both Track B (left) LEDs still being lit, and the opposite
 
 Now configure Track B as ``DC`` with the same DCC address as Track A and power on:
 
-.. code-block::
+.. code-block:: cpp
 
    <= B DC 1>
    <1>
@@ -468,7 +468,7 @@ This should now result in one Track B (left) LED being lit, matching Track A's (
 
 Finally, change to the forward direction again:
 
-.. code-block:: 
+.. code-block:: cpp
 
    <t 1 100 1>
 

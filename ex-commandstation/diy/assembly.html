@@ -12,7 +12,7 @@
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=a010c375" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=3b1dd56d" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -652,7 +652,7 @@
 <aside class="clearer sidebar">
 <p class="sidebar-title">Optional configuration</p>
 <p><a class="reference external" href="../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <br /> For an Uno, Nano, or other microcontroller, please see <a class="reference internal" href="../../reference/hardware/microcontroller-boards.html"><span class="doc">Using a different microcontroller</span></a>.</p>
-<p>If you wish to use a different motor controller (for example to have more current to operate more trains and accessories), see <a class="reference internal" href="../../reference/hardware/motor-boards.html"><span class="doc">Motor Controllers</span></a></p>
+<p>If you wish to use a different <abbr title="also referred to as a 'Motor Controller', 'Motor Shield' or 'Motor Board'">Motor Driver</abbr> (for example to have more current to operate more trains and accessories), see <a class="reference internal" href="../../reference/hardware/motor-boards.html"><span class="doc">Motor Drivers</span></a></p>
 </aside>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/basic_setup_lg.jpg"><img alt="Command Station Setup" src="../../_images/basic_setup_lg.jpg" style="width: 500px;" /></a>
@@ -670,12 +670,12 @@
 <div class="warning-float-right admonition warning">
 <p class="admonition-title">Warning</p>
 <p>By default, the <abbr title="Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.">Standard Motor Driver</abbr> shares its power supply via the pins, with the power supply of the Arduino. <em>This can supply too much voltage to the Arduino.</em></p>
-<p><em>If you do not cut this trace</em> or bend out the Vin, you could damage or destroy the Arduino if you apply more than 12V to the <abbr title="also referred to as a Motor Driver or Motor Board">Motor Shield</abbr>. <br /> In the same way, if you don’t bypass Vin and use the 2 power supplies as recommended, they would be connected to each other which could also cause damage.</p>
+<p><em>If you do not cut this trace</em> or bend out the Vin, you could damage or destroy the Arduino if you apply more than 12V to the <abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr>. <br /> In the same way, if you don’t bypass Vin and use the 2 power supplies as recommended, they would be connected to each other which could also cause damage.</p>
 <p>Note: This is <strong>not required</strong> if you are using the <strong>EX-MotorShield8874</strong>.</p>
 </div>
-<p>We recommend you use two separate power supplies (or one power supply that can deliver two different voltages). One for the Arduino Mega, and the other for the Motor Controller to power your tracks.</p>
+<p>We recommend you use two separate power supplies (or one power supply that can deliver two different voltages). One for the Arduino Mega, and the other for the <abbr title="also referred to as a 'Motor Controller', 'Motor Shield' or 'Motor Board'">Motor Driver</abbr> to power your tracks.</p>
 <p>So <strong>BEFORE YOU BEGIN</strong> It is very important that isolate the power between the two devices.</p>
-<p>You will need to turn the motor controller board upside down and do ONE of the following:</p>
+<p>You will need to turn the <abbr title="also referred to as a 'Motor Controller', 'Motor Shield' or 'Motor Board'">Motor Driver</abbr> board upside down and do ONE of the following:</p>
 <ul class="simple">
 <li><p>Cut the Vin trace on the bottom of the board. <strong>(Recommended - described below)</strong> <br /> <em>or</em></p></li>
 <li><p>Bend out or cut off the Vin Pin</p></li>
@@ -724,7 +724,7 @@
 <li><p>There are outdented “tabs” on the opposite end of the board. They must point in the same direction.</p></li>
 <li><p>The pin numbers on both boards must align (pin 1 goes to pin 1, gnd goes to gnd, etc).</p></li>
 <li><p>With the power connectors to your right, align the pins facing you first (pins 0-12, aref, gnd, etc).</p></li>
-<li><p>Look at the pins on the <abbr title="also referred to as a Motor Driver or Motor Board">Motor Shield</abbr> and make sure they are all straight and line up in a neat row.</p></li>
+<li><p>Look at the pins on the <abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr> and make sure they are all straight and line up in a neat row.</p></li>
 </ul>
 <p>Place both boards on the table with the power connector end facing in the same direction.</p>
 <figure class="align-default" id="id4">
@@ -734,7 +734,7 @@
 </figcaption>
 </figure>
 <ol class="loweralpha simple">
-<li><p>Did you remember to cut the trace on the <abbr title="also referred to as a Motor Driver or Motor Board">Motor Shield</abbr>? <br /> If not, see above. <br /> Otherwise, sight down both rows of pins on the motor board and make sure they are all straight. They should all line up in a row and not be bent in any plane, just like the teeth on a comb. If any look like the photo below, bend them with your fingers and/or needle nose pliers.</p></li>
+<li><p>Did you remember to cut the trace on the <abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr>? <br /> If not, see above. <br /> Otherwise, sight down both rows of pins on the motor board and make sure they are all straight. They should all line up in a row and not be bent in any plane, just like the teeth on a comb. If any look like the photo below, bend them with your fingers and/or needle nose pliers.</p></li>
 </ol>
 <figure class="align-default" id="id5">
 <a class="reference internal image-reference" href="../../_images/bent_pins.png"><img alt="bent pins" src="../../_images/bent_pins.png" style="width: 375.0px; height: 275.25px;" /></a>
@@ -803,14 +803,14 @@
 <p>Make sure you have cut the trace on the motor control board. If not, see above first. Once you know the trace is cut, connect power to the motor board</p>
 </div>
 <p>Make sure you have a power supply with the correct voltage and current rating. For help on selecting your power supply, please see <a class="reference internal" href="../../reference/hardware/power-supplies.html"><span class="doc">compatible Power Supplies</span></a></p>
-<p>If you are using a “bench” or metal box type power supply, simply connect the DC output of the power supply to the DC input of the motor shield. Make sure that the positive screw terminal (+) is connected to the positive terminal (Vin) of the <abbr title="also referred to as a Motor Driver or Motor Board">Motor Shield</abbr> and the negative terminal (- or gnd) is connected to the negative (gnd) terminal of the <abbr title="also referred to as a Motor Driver or Motor Board">Motor Shield</abbr>.</p>
+<p>If you are using a “bench” or metal box type power supply, simply connect the DC output of the power supply to the DC input of the motor shield. Make sure that the positive screw terminal (+) is connected to the positive terminal (Vin) of the <abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr> and the negative terminal (- or gnd) is connected to the negative (gnd) terminal of the <abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr>.</p>
 <figure class="align-default" id="id10">
 <a class="reference internal image-reference" href="../../_images/motor_power2b.jpg"><img alt="Power in to the Motor Shield" src="../../_images/motor_power2b.jpg" style="width: 285.0px; height: 315.0px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig 84: </span><span class="caption-text">Power in to the Motor Shield</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>If you are using a laptop style “brick” power supply or an adapter that plugs into the wall (aka wall wart), use the barrel connector to screw terminal adapter to connect your power supply to the Vin and ground pins on the <abbr title="also referred to as a Motor Driver or Motor Board">Motor Shield</abbr>. Be careful to use the correct polarity. Make sure the positive terminal on the screw terminal adapter connects to the positive (+) on the <abbr title="also referred to as a Motor Driver or Motor Board">Motor Shield</abbr> and the negative terminal (- or gnd) connects to the negative terminal.</p>
+<p>If you are using a laptop style “brick” power supply or an adapter that plugs into the wall (aka wall wart), use the barrel connector to screw terminal adapter to connect your power supply to the Vin and ground pins on the <abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr>. Be careful to use the correct polarity. Make sure the positive terminal on the screw terminal adapter connects to the positive (+) on the <abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr> and the negative terminal (- or gnd) connects to the negative terminal.</p>
 <figure class="align-default" id="id11">
 <a class="reference internal image-reference" href="../../_images/motor_power3.jpg"><img alt="Screw Terminal Adapter Power" src="../../_images/motor_power3.jpg" style="width: 450.0px; height: 333.75px;" /></a>
 <figcaption>
@@ -827,7 +827,7 @@
 <p class="sidebar-title"><strong>EX-MotorShield8874</strong></p>
 <p>For the <strong>EX-MotorShield8874</strong> the output are reversed.  <code class="docutils literal notranslate"><span class="pre">A</span></code> is furthest from the barrel connector. <code class="docutils literal notranslate"><span class="pre">B</span></code> is closest to the barrel connector.</p>
 </aside>
-<p>There are two sets of output connectors on the <abbr title="also referred to as a Motor Driver or Motor Board">Motor Shield</abbr>, <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code>. A is the Main or Operations (also called ‘Ops’) track while <code class="docutils literal notranslate"><span class="pre">B</span></code> is the Programming or Service track. Connect twisted pair wire of the proper gauge to each track.</p>
+<p>There are two sets of output connectors on the <abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr>, <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code>. A is the Main or Operations (also called ‘Ops’) track while <code class="docutils literal notranslate"><span class="pre">B</span></code> is the Programming or Service track. Connect twisted pair wire of the proper gauge to each track.</p>
 <p>Polarity (which wire is connected to which side of the track) is not not important here if you are using separate, completely isolated piece of track for PROG. <em>However</em> if you will be using a siding track that connects to your main track, make sure that the <em>connections for both tracks match</em>.</p>
 <p>In other words, if you view one side of your main track as having a ‘left’ side and a ‘right’ side, and connect positive output A to the left side, connect the positive from the B side to the left side of the programming track. In electrical terms, we want both tracks to be “in phase” with each other. Here is the diagram from above repeated again for reference.</p>
 <figure class="align-default" id="id12">
@@ -858,10 +858,10 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>TECHNICAL NOTES</strong></p>
-<p><strong>Wire Gauge</strong> - The Arduino motor controller can only provide about 1.5 Amps of power (despite being rated for 2A), so 18 AWG wire is ample. If you use a different motor controller and deliver more current to your track, you may need thicker wire (lower number gauge).</p>
+<p><strong>Wire Gauge</strong> - The Arduino <abbr title="also referred to as a 'Motor Controller', 'Motor Shield' or 'Motor Board'">Motor Driver</abbr> can only provide about 1.5 Amps of power (despite being rated for 2A), so 18 AWG wire is ample. If you use a different <abbr title="also referred to as a 'Motor Controller', 'Motor Shield' or 'Motor Board'">Motor Driver</abbr> and deliver more current to your track, you may need thicker wire (lower number gauge).</p>
 <p>See the <a class="reference internal" href="../../reference/hardware/wire-gauge.html"><span class="doc">DCC Track Wiring Information</span></a> page for more information on wire gauges.</p>
 <p><strong>Power Supplies</strong> - Why do we recommend a 7-9V power supply for the Mega when the manual says it can handle 12V or even 20V? Can’t you just use one 12V power supply to power both of them? Short answer; NO. You want two supplies (or one supply that splits out 2 voltages). The Arduino Mega only needs around 7V to operate. Any voltage over that is wasted as heat and can burn out the regulator on the board. And most people want a minimum of 12V into the Motor Board, while many want 14V (for N and HO Scale). Where your Mega could run hot for a while with 12V, if 14V from the Motorboard was connected to the Mega, it would destroy it. Cut the trace and use 2 power supplies.</p>
-<p><strong>Using a 5V Supply</strong> - There is one more option for powering the Mega. If you have a 5V DC regulated power supply, you can bypass the barrel connector and the regulator and connect it directly to the 5V and Gnd pins on the Arduino. Do NOT connect anything to the barrel connector if you do this! You would still need to cut the Vin trace on the <abbr title="also referred to as a Motor Driver or Motor Board">Motor Shield</abbr> and use your separate power supply that plugs into the shield. For more information, see <a class="reference internal" href="../../reference/hardware/power-supplies.html"><span class="doc">Power Supplies</span></a></p>
+<p><strong>Using a 5V Supply</strong> - There is one more option for powering the Mega. If you have a 5V DC regulated power supply, you can bypass the barrel connector and the regulator and connect it directly to the 5V and Gnd pins on the Arduino. Do NOT connect anything to the barrel connector if you do this! You would still need to cut the Vin trace on the <abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr> and use your separate power supply that plugs into the shield. For more information, see <a class="reference internal" href="../../reference/hardware/power-supplies.html"><span class="doc">Power Supplies</span></a></p>
 </div>
 </section>
 </section>
@@ -888,7 +888,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fb15489ee90>
+    <jinja2.runtime.BlockReference object at 0x7fc7f120af20>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

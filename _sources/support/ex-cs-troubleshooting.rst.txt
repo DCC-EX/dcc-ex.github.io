@@ -79,11 +79,23 @@ Is it Plugged In, Is it Turned On?
 
 Yes, we need to start with the basics. 
 
-**If you are using the EX-MotorShield8874** - This paragraph is for the EX-MotorShield8874. If you have a different |motor shield|, see the next paragraph! |BR| You can connect your 12-18V DC (based on the scale of your locomotives) power supply directly to the barrel jack (power input) of the shield. |BR| Do not connect power to the Arduino and the |motor shield| at the same time! |BR| You should see the power indicator LED illuminate and power should flow down to the Arduino and illuminate its power LED indicator. If you don't see the power light on the Arduino, check that the shield is seated and making a good connection into the Arduino's sockets (called headers).
+**If you are using the EX-MotorShield8874** 
 
-* The EX-MotorShield8874 power supply should have at least a 2A rating. Ensure it is plugged into the wall.
+  This is for the |EX-MS| only. If you have a different |motor shield|, see the next section! 
 
-**If you are using the Arduino Motor Shield, Deek-Robot, or other compatible shield** - Make sure you have bent out the Vin pin (or cut the trace underneath the |motor shield|). You will need TWO power supplies, a 7-9V DC power supply to the Arduino and a 12-18V DC (based on the scale of your locomotives) power supply for the Motor Controller.
+  You can connect your 12-18V DC (based on the scale of your locomotives) power supply directly to the barrel jack (power input) of the shield. 
+  
+  Do not connect power to the Arduino and the |motor shield| at the same time! 
+  
+  You should see the power indicator LED illuminate and power should flow down to the Arduino and illuminate its power LED indicator. If you don't see the power light on the Arduino, check that the shield is seated and making a good connection into the Arduino's sockets (called headers).
+
+  The EX-MotorShield8874 power supply should have at least a 2A rating. Ensure it is plugged into the wall.
+
+**If you are using the Arduino Motor Shield, Deek-Robot, or other compatible shield** 
+
+  Make sure you have bent out the Vin pin (or cut the trace underneath the |motor shield|). 
+  
+  You will need TWO power supplies, a 7-9V DC power supply to the Arduino and a 12-18V DC (based on the scale of your locomotives) power supply for the |Motor Driver|.
 
 * Ensure the 7-9V DC power supply for the Arduino has at least 1 Amp. Anything less than 7 Volts and 1A will cause unreliable operation. Ensure that the |motor shield| power supply is rated for at least 2 Amps.
 

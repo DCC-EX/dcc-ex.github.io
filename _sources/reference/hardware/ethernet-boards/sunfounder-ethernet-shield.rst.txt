@@ -11,6 +11,6 @@ Sunfounder Ethernet Shield
 
 This board is tested and works. It is less expensive than the Arduino brand-name board and based on the Wiznet W5100 instead of the W5500. It must be the first shield in the stack because it uses the ICSP header pins.
 
-.. image:: /_static/images/ethernet/sunfounder_ethernet_shield.jpg
+.. image:: /_static/images/ethernet/sunfounder_ethernet_shield.png
    :alt: Sunfounder Ethernet Shield
    :scale: 25%

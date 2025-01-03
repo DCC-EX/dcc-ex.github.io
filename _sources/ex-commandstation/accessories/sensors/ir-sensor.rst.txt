@@ -93,28 +93,28 @@ If you are using |JMRi| and require these to be available as sensors, then they 
 
 As an example, we will configure an active low sensor connected to the available I/O pin 22 on the |EX-CS|, and another on the first pin of the first MCP23017 device which is Vpin 164.
 
-.. code-block:: 
+.. code-block:: cpp
 
   <S 22 22 1>
   <S 164 164 1>
 
 With these definitions, when an object comes close enough to activate a sensor in reflection mode, or interrupts the beam in beam break mode, the ``<Q id>`` response will be sent to |JMRi|:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <Q 22>
   <Q 164>
 
 Conversely, when the object is far enough away to not reflect the IR signal, or is no longer interrupting the beam in beam break mode, a ``<q id>`` message will be sent instead:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <q 22>
   <q 164>
 
 If these sensors are active high instead of active low, then they are configured as such:
 
-.. code-block::
+.. code-block:: cpp
 
    <S 22 22 0>
    <S 164 164 0>
@@ -132,7 +132,7 @@ When using active high sensors, adding a minus (-) sign in front of the sensor V
 
 Using pin 22 on our |EX-CS| and the first pin on the first default MCP23017 I/O expander at Vpin 164:
 
-.. code-block:: 
+.. code-block:: cpp
 
   AT(22)       // active low
   AT(164)      // active low

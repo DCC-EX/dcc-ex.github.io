@@ -176,7 +176,7 @@ The entire macro needs to be on a single line, hence the addition of the backsla
 
 Here's an example for driving single coil Rokuhan turnouts that require the coil to be activated for a very short time in order to CLOSE or THROW the turnout, which will be explained below.
 
-.. code-block::
+.. code-block:: cpp
 
   // Define a pulse time of 50ms to activate the coil
   #define PULSE 50

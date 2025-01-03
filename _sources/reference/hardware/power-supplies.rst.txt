@@ -64,12 +64,12 @@ Note, this primarily applies to the Arduino Mega with a |standard motor driver|.
 Barrel Connector
 ----------------
 
-This is where we can connect our 7-9V DC supply. The power goes through a voltage regulator on the Arduino and converts the 7-9V to the 5V the board can use. You will still need a separate source of power for the motor controller.
+This is where we can connect our 7-9V DC supply. The power goes through a voltage regulator on the Arduino and converts the 7-9V to the 5V the board can use. You will still need a separate source of power for the |motor driver|.
 
 USB Connector
 -------------
 
-If you always will have a computer connected to your Command Station (for example when using |JMRI| or |EX-WT|), the 5V from your computer can power it. You won't need separate power supply in addition to the one you need for the motor controller. 
+If you always will have a computer connected to your Command Station (for example when using |JMRI| or |EX-WT|), the 5V from your computer can power it. You won't need separate power supply in addition to the one you need for the |motor driver|. 
 
 Most USB ports can only supply 500 milliamps, and this input is protected by a 500mA polyfuse that resets when a short is removed, so be careful about adding anything that will draw current from the Command Station. A |motor shield|, a WiFi shield and a fan that draws 50mA should be fine.
 
@@ -92,7 +92,7 @@ The Uno and Mega actually have a conflict protection circuit. If you plug in a 7
 Vin pin
 -------
 
-You can connect a 7-9V DC power supply with jumper wires. The positive from the power supply goes to Vin and negative to any pin marked "gnd" for ground. This also uses the voltage regulator on the Arduino to convert your supply voltage to 5V. You will still need a separate power supply for the motor controller.
+You can connect a 7-9V DC power supply with jumper wires. The positive from the power supply goes to Vin and negative to any pin marked "gnd" for ground. This also uses the voltage regulator on the Arduino to convert your supply voltage to 5V. You will still need a separate power supply for the |motor driver|.
 
 5V pin
 ------
@@ -150,7 +150,7 @@ The voltage of the *power supply* you need will depend on the type of motor driv
 
    Most larger scales/gauges will run higher voltages. For reference, Digitrax systems put the rails at around 14V and garden scale could be 18V. Do some homework to determine what voltage is best for your system.
 
-   Be aware that the motor controller you use will affect the actual voltage at the track. If you use the |Standard Motor Driver| or any other L298 based shield or controller, you will have a 2V drop at the track. That means that if you use a 12V supply, there will be only 10V at the track. Many people prefer to use a 14.5V DC power supply with these boards. If you use any MOSFET based boards like the IBT_2 and the IRF3205 boards, there is a negligible voltage drop so 12V in will give you 12V at the track.
+   Be aware that the |motor driver| you use will affect the actual voltage at the track. If you use the |Standard Motor Driver| or any other L298 based shield or controller, you will have a 2V drop at the track. That means that if you use a 12V supply, there will be only 10V at the track. Many people prefer to use a 14.5V DC power supply with these boards. If you use any MOSFET based boards like the IBT_2 and the IRF3205 boards, there is a negligible voltage drop so 12V in will give you 12V at the track.
 
    If you have a power supply you wish to use, but it has an output voltage that is a few volts higher than you need, use either the diode or buck converter method listed below to reduce the voltage.
 
@@ -165,7 +165,7 @@ For the |standard motor driver|, a 3amp power supply will give you plenty of cur
 
 Running trains on main and programming a loco on Prog at the same time will be fine. The overcurrent limit set in the Command Station will automatically cut power if you go over that number of Amps. A rule of thumb is you can operate 3 to 5 N or HO sound locos on the 2A boards. 
 
-For larger layouts with higher current requirements on the MAIN track and a motor driver that can handle those currents, you'll want power supply that can deliver that larger current. See :doc:`Motor Boards <motor-boards>` for more information about higher current motor controllers.
+For larger layouts with higher current requirements on the MAIN track and a motor driver that can handle those currents, you'll want power supply that can deliver that larger current. See :doc:`Motor Drivers <motor-boards>` for more information about higher current |motor driver|.
 
 A device will only draw the current it needs. So whether you have a 2A power supply or a 20A power supply, if you setup only needs 1A, then both supplies will work just fine, but no sense paying for more than you need. And it is also worth noting that devices that can supply a large current can cause a large amount of damage if you don't have proper safety features installed like the overprotection feature of the Command Station AND fuses to the track.
 
@@ -251,7 +251,7 @@ Cage Power Supplies
 Dual voltage power supplies
 ---------------------------
 
-With a dual voltage power supply, you can provide 12V for the motor controller and 5V for the Arduino. You may also be able to find higher voltage units if you need such as 14-15V if your scale/gauge trains require it.
+With a dual voltage power supply, you can provide 12V for the |motor driver| and 5V for the Arduino. You may also be able to find higher voltage units if you need such as 14-15V if your scale/gauge trains require it.
 
 * Mean Well Dual Voltage Power Supply (5V and 12V)
 
@@ -282,7 +282,7 @@ Using one power supply with cheap converters to power everything
 15V 13A Power Supplies
 -----------------------
 
-Some options for a power supply are the **Meanwell SP-200-15** or the **ATOS-300-15**. They are 15V, 13A supplies. You can use 15V to the motor controller and use buck converters to step down the 15V to whatever voltages you need.
+Some options for a power supply are the **Meanwell SP-200-15** or the **ATOS-300-15**. They are 15V, 13A supplies. You can use 15V to the |motor driver| and use buck converters to step down the 15V to whatever voltages you need.
 
 .. image:: /_static/images/power/15v_13A_power_supply.jpg
    :scale: 50%
@@ -293,7 +293,7 @@ Here is a link to where you can find the `Meanwell SP-200-15 Power Supply <https
 Using Buck Converters
 -----------------------
 
-The following image shows how to connect buck converters. You start with a power supply with more voltage than the highest voltage you want to convert and with enough current to drive everything you want to power. This example shows a 15V supply that you can connect directly to the input to the motor controller which will in turn power your track. If you need to power 5V and 12V devices, you simply get 2 buck converters, connect them in parallel to the 15V output of your power supply (or to extra 15V outputs on the supply), and adjust each one to the voltage output you want. Then connect the converters to your 5V and 12V bus and connect your devices to the correct bus.
+The following image shows how to connect buck converters. You start with a power supply with more voltage than the highest voltage you want to convert and with enough current to drive everything you want to power. This example shows a 15V supply that you can connect directly to the input to the |motor driver| which will in turn power your track. If you need to power 5V and 12V devices, you simply get 2 buck converters, connect them in parallel to the 15V output of your power supply (or to extra 15V outputs on the supply), and adjust each one to the voltage output you want. Then connect the converters to your 5V and 12V bus and connect your devices to the correct bus.
 
 .. image:: /_static/images/power/using_buck_converters.png
    :scale: 70%

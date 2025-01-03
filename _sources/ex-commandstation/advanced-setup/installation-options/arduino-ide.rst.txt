@@ -51,7 +51,7 @@ Find the ZIP file on your computer and unzip it. You should now have a folder wi
 Copy the config.example.h file (or rename it)
 =============================================
 
-|DCC-EX| provides you with an example configuration file. This file holds settings that you can change for things like your choice of motor controller, WiFi login credentials, etc. Rather than a future update potentially causing you to lose any changes you make to your configuration, we give this file a different name and leave it up to you to edit if you need to. Simply rename this file to ``config.h``.
+|DCC-EX| provides you with an example configuration file. This file holds settings that you can change for things like your choice of |motor driver|, WiFi login credentials, etc. Rather than a future update potentially causing you to lose any changes you make to your configuration, we give this file a different name and leave it up to you to edit if you need to. Simply rename this file to ``config.h``.
 
 Run the Arduino IDE
 ====================

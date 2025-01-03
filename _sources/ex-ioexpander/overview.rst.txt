@@ -258,7 +258,7 @@ Once |EX-IO| has been configured as per the sections below, you can review the V
 
 This sample output is for EX-IOExpander on an Arduino Nano at the default 0x65 address and an Arduino Uno at 0x66:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <* EX-IOExpander I2C:x65 v0.0.14 Vpins 800-817  *>
   <* EX-IOExpander I2C:x66 v0.0.14: Vpins 820-835  *>

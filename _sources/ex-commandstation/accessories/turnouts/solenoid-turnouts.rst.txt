@@ -60,7 +60,7 @@ The voltage provided to "External Power" is the voltage required to operate the 
 
 Here is an example |EX-R| macro that will configure a virtual turnout, setting the correct pins for the two turnouts to operate correctly:
 
-.. code-block:: 
+.. code-block:: cpp
 
   #define PULSE 10    // Set the duration of the pulse to 10ms
 
@@ -98,7 +98,7 @@ The voltage provided to "External Power" is the voltage required to operate the 
 
 Here is an example |EX-R| macro that will configure a virtual turnout, setting the correct pins for the two turnouts to operate correctly (note it is identical to the single coil version, but renamed):
 
-.. code-block:: 
+.. code-block:: cpp
 
   #define PULSE 10    // Set the duration of the pulse to 10ms
 
@@ -158,7 +158,7 @@ The DUAL_SOLENOID_TURNOUT definition is:
 - desc - description
 - ali - alias that can be used for the turnout in EXRAIL
 
-.. code-block:: 
+.. code-block:: cpp
 
   #define PULSE 10 //10 mSec
   #define DUAL_SOLENOID_TURNOUT(id,pc,pt,desc,ali)\

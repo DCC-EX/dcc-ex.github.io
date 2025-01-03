@@ -22,7 +22,7 @@ Before proceeding with testing or any configuration, it's important to understan
 
 This is a debug or diagnostic command that can be executed via the serial terminal of the CommandStation:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <D TT vpin steps activity>
 
@@ -77,7 +77,7 @@ For the diagnostic command, "activity" needs to be defined as a number, whereas 
 
 Here's a quick example to demonstrate the difference between the diagnostic and |EX-R| commands, with both commands below rotating to step position 100:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <D TT 600 100 0>
   MOVETT(600, 100, Turn)
@@ -110,7 +110,7 @@ Similar to the |EX-CS| diagnostic command outlined previously and up until versi
 
 For example, sending the command ``<300 0>``/``<M 300 0>`` via the serial console will result in output similar to this:
 
-.. code-block:: 
+.. code-block:: cpp
 
   Received serial input: 300 0
   Test move 300 steps, activity ID 0
@@ -136,7 +136,7 @@ Firstly, power on |EX-TT|, followed by your CommandStation. By powering these on
 
 Referring again to :ref:`reference/developers/hal-config:adding a new device`, skip ahead to :ref:`reference/developers/hal-config:checking the driver`, and the output you're looking for to validate the |EX-TT| device driver is loaded and connected successfully is below:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <D HAL SHOW><* Arduino Vpins:2-69 *>
   <* PCA9685 I2C:x40 Configured on Vpins:100-115  *>
@@ -157,7 +157,7 @@ At power on, note that the turntable should have moved itself to the home positi
 
 This command should rotate the turntable 100 steps only:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <D TT 600 100 0>
 
@@ -166,7 +166,7 @@ This command should rotate the turntable a further 500 steps and active the phas
  - 500 is the difference between the existing 100 steps and target 600 steps
  - 600 steps is greater than the ~512 step/45 degree trigger position for phase inversion
 
-.. code-block:: 
+.. code-block:: cpp
 
   <D TT 600 600 0>
 
@@ -175,7 +175,7 @@ This next command should rotate the turntable in the reverse direction by 300 st
 - 300 is the difference between the existing 600 steps and target 300 steps, with the reverse direction being the shortest path there
 - 300 steps is less than the ~512 step/45 degree trigger position for phase inversion
 
-.. code-block:: 
+.. code-block:: cpp
 
   <D TT 600 300 0>
 
@@ -184,13 +184,13 @@ This command should rotate the turntable again in the reverse direction, and sho
 - 2000 steps is greater than the ~512 step/45 degree trigger position for phase inversion
 - It is also less than the ~2560 step/225 degree trigger position to revert the inversion
 
-.. code-block:: 
+.. code-block:: cpp
   
   <D TT 600 2000 1>
 
 Finally, this command will cause the turntable to once again find its home position:
 
-.. code-block:: 
+.. code-block:: cpp
   
   <D TT 600 0 2>
 
@@ -258,7 +258,7 @@ Example tuning commands
 
 To validate the above calculated positions, the following six diagnostic commands should be executed in the serial terminal of the CommandStation, which will allow you to visually inspect the alignment with your layout tracks and adjust accordingly:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <D TT 600 114 0>
   <D TT 600 227 0>
@@ -347,7 +347,7 @@ Once this has been done, you must explicitly define the phase switching to occur
 
 To use our example from above, the commands in :ref:`ex-turntable/test-and-tune:example tuning commands` would need to be modified to replicate the automatic phase switching as such:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <D TT 600 114 0>
   <D TT 600 227 0>
@@ -404,7 +404,7 @@ The default |I2C| address for the rotary encoder is 0x78, and you will need to c
 
 Note you can create the device using 1, 2, or 3 Vpins. If you create it with 2, you can send feedback to the rotary encoder Arduino to indicate if a turntable is moving, and when it has completed the movement. If you define 3 Vpins, you can tell the rotary encoder when a turntable has changed position also. Refer to the `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/overview.html>`__ |EXTERNAL-LINK| documentation for more information on this feature.
 
-.. code-block::
+.. code-block:: cpp
 
   #include "IO_RotaryEncoder.h"
 
@@ -428,7 +428,7 @@ Negative position numbers can be used as well as positive.
 
 For example, we could take the :ref:`big-picture/stage5/turntable-example:example - turntable routes` included in Stage 5 of the Big Picture and have these selected by a rotary encoder. The roundhouse stall positions would be rotating counter-clockwise which will have negative position values, whereas the yard connection has a positive value.
 
-.. code-block:: 
+.. code-block:: cpp
 
   // On startup, ensure our turntable moves automatically to the first position
   MOVETT(600, 114, Turn)
@@ -523,7 +523,7 @@ Basic DCC-EX native turntable definition and control
 
 In this example, a turntable with ID 600 is defined with our six positions as per the above examples, and disregarding the values of **home** and **angle**.
 
-.. code-block:: 
+.. code-block:: cpp
 
   <I 600 EXTT 600 0>
   <I 600 ADD 1 114 0>
@@ -535,7 +535,7 @@ In this example, a turntable with ID 600 is defined with our six positions as pe
 
 Assuming |EX-TT| was configured for automatic phase switching, these commands would be used to rotate it to position 1, then position 6, and then home:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <I 600 1 0>
   <I 600 6 0>
@@ -546,7 +546,7 @@ Operation with manual phase switching
 
 For the same scenario, but with manual phase switching, these commands would be used:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <I 600 1 0>
   <I 600 6 1>
@@ -559,7 +559,7 @@ The real beauty of this new object comes in the form of automation possibilities
 
 To define our turntable as above but in |EX-R|, it looks like this:
 
-.. code-block:: 
+.. code-block:: cpp
 
   HAL(EXTurntable,600,1,0x60)
   EXTT_TURNTABLE(1,600,0,"My EX-Turntable")
@@ -572,7 +572,7 @@ To define our turntable as above but in |EX-R|, it looks like this:
 
 Now, suppose we wish to turn a flashing light connected to Vpin 164 on whenever the turntable is is motion. This can be accomplished with our event handler:
 
-.. code-block:: 
+.. code-block:: cpp
 
   ONROTATE(600)
     SET(164)
@@ -584,7 +584,7 @@ This can be further enhanced with position specific options. Say we have roundho
 
 Stall 1's door is operated by enabling Vpin 164, 2 by Vpin 165, and 3 by Vpin 166. Sensors for each are at Vpins 167, 168, and 169 respectively.
 
-.. code-block:: 
+.. code-block:: cpp
 
   ONROTATE(600)
     IF_TTPOSITION(1)
@@ -629,7 +629,7 @@ Using these capabilities means any operation of the turntable will result in the
 
 For controlling the turntable, it is still possible to use the ``ROUTE()`` command for this, and utilising the new ``ROTATE()`` command:
 
-.. code-block:: 
+.. code-block:: cpp
 
   ROUTE(201, "Set for roundhouse stall 1")
     ROTATE(600,1,Turn)

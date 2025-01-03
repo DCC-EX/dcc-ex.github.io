@@ -30,7 +30,7 @@ This page describes the most common, recommended, configuration, but you will se
 
   |tinkerer| |engineer| |BR| For an Uno, Nano, or other microcontroller, please see :doc:`Using a different microcontroller </reference/hardware/microcontroller-boards>`. 
   
-  If you wish to use a different motor controller (for example to have more current to operate more trains and accessories), see :doc:`Motor Controllers </reference/hardware/motor-boards>`
+  If you wish to use a different |motor driver| (for example to have more current to operate more trains and accessories), see :doc:`Motor Drivers </reference/hardware/motor-boards>`
 
 .. figure:: /_static/images/assembly/basic_setup_lg.jpg
    :alt: Command Station Setup
@@ -60,11 +60,11 @@ For a video on how to do this, click below: `Setting Up Your Command Station <ht
 
    Note: This is **not required** if you are using the **EX-MotorShield8874**.
 
-We recommend you use two separate power supplies (or one power supply that can deliver two different voltages). One for the Arduino Mega, and the other for the Motor Controller to power your tracks. 
+We recommend you use two separate power supplies (or one power supply that can deliver two different voltages). One for the Arduino Mega, and the other for the |motor driver| to power your tracks. 
 
 So **BEFORE YOU BEGIN** It is very important that isolate the power between the two devices.
 
-You will need to turn the motor controller board upside down and do ONE of the following:
+You will need to turn the |motor driver| board upside down and do ONE of the following:
 
 - Cut the Vin trace on the bottom of the board. **(Recommended - described below)** |BR| *or*
 - Bend out or cut off the Vin Pin
@@ -293,7 +293,7 @@ See the :doc:`/ex-commandstation/diy/wifi-setup` page or click the 'Next' button
 
    **TECHNICAL NOTES**
 
-   **Wire Gauge** - The Arduino motor controller can only provide about 1.5 Amps of power (despite being rated for 2A), so 18 AWG wire is ample. If you use a different motor controller and deliver more current to your track, you may need thicker wire (lower number gauge).
+   **Wire Gauge** - The Arduino |motor driver| can only provide about 1.5 Amps of power (despite being rated for 2A), so 18 AWG wire is ample. If you use a different |motor driver| and deliver more current to your track, you may need thicker wire (lower number gauge).
 
    See the :doc:`/reference/hardware/wire-gauge` page for more information on wire gauges.
 

@@ -42,7 +42,7 @@ For example, in Microsoft Windows:
 * The file will open in the 'Notepad' app
 * Enter the commands you need to perform.  For Example:
 
-.. code-block:: none
+.. code-block:: cpp
   
   SETUP("<1>");  // Turn track power on at startup
 
@@ -95,13 +95,13 @@ Adding in the startup commands
 
 Within the new file that has been created, you can add in the commands that you wish the Command Station to run at startup. For example, if you need to run the following command each time your Command Station starts up: 
 
-.. code-block:: none
+.. code-block:: cpp
 
    <D ACK MIN 2600>
 
 Then you would need to enter into the `mySetup.h` file:
 
-.. code-block:: none
+.. code-block:: cpp
 
    SETUP("<D ACK MIN 2600>");
 
@@ -112,7 +112,7 @@ Adding in more than one startup command
 
 If you need to have multiple commands run at start up, you will need to enter each additional command on a new line, so a longer ``mySetup.h`` file could look like:
 
-.. code-block:: none
+.. code-block:: cpp
 
    SETUP("<D ACK MAX 9200>"); // Set ACK detection to allow pulses up to 9200uS
    SETUP("<D ACK LIMIT 60>"); // 60mA is the default
@@ -136,6 +136,6 @@ Automatically Turning Track Power on at Startup
 
 Adding this line to `mySetup.h` will cause the track power to turn on automatically when the |EX-CS| powers up.
 
-.. code-block:: none
+.. code-block:: cpp
   
   SETUP("<1>");  // Turn track power on at startup

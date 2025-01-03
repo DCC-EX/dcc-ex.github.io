@@ -50,19 +50,19 @@ ESP32-WROOM-32 boards tested
 
 The ESP32 development boards that have been tested include the WeMos D1 R32/ESPDUINO-32, the GRobotronics ESP32 DEVKIT V1, the OLIMEX ESP32 DEVKIT LIPO, and the LILYGO® TTGO T-Energy T18 V3.0 ESP32-WROVER-E development board. Note that although the last one is an ESP32-WROVER-E board, not the WROOM, it does appear to work for one user, but more testing is required.
 
-.. image:: /_static/images/esp32/espduino-32.jpg
+.. image:: /_static/images/esp32/espduino-32.png
   :alt: WeMos D1 R32/ESPDUINO-32 UNO form factor
   :scale: 25%
 
-.. image:: /_static/images/esp32/grobotronics-esp32-devkit-v1.jpeg
+.. image:: /_static/images/esp32/grobotronics-esp32-devkit-v1.png
   :alt: GRobotronics ESP32 DEVKIT V1
   :scale: 15%
 
-.. image:: /_static/images/esp32/olimex-esp32-devkit-lipo.jpeg
+.. image:: /_static/images/esp32/olimex-esp32-devkit-lipo.png
   :alt: Olimex ESP32 Devkit LiPo
   :scale: 25%
 
-.. image:: /_static/images/esp32/liligo-t18-v3-esp32-wrover.jpg
+.. image:: /_static/images/esp32/liligo-t18-v3-esp32-wrover.png
   :alt: LILYGO® TTGO T-Energy T18 V3.0 ESP32-WROVER-E
   :scale: 15%
 
@@ -72,7 +72,7 @@ WeMos D1 R32/ESPDUINO-32 board
 The recommended hardware for now is the WeMos D1 R32, also referred to as the ESPDUINO-32.
 This consists of an `ESP32-WROOM-32 <https://www.espressif.com/en/products/modules/esp32>`_ module mounted on a UNO form factor board with UNO R3 style connectors. Pictured here:
 
-.. image:: /_static/images/esp32/espduino-32.jpg
+.. image:: /_static/images/esp32/espduino-32.png
   :alt: ESPDUINO-32 UNO form factor
   :scale: 50%
 

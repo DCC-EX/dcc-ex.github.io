@@ -1628,7 +1628,7 @@ Detects a rotary encoder has changed position
 
 .. collapse:: For example: (click to show)
 
-  .. code-block:: 
+  .. code-block:: cpp
 
     ONCHANGE(700)     // If rotary encoder ID 700 change state do this sequence
       IFRE(700, 1)    // If rotary encoder ID 700 is at position 1, start ROUTE ID 123
@@ -1693,7 +1693,7 @@ The HAL creation will require the **vpin** and **i2c_address** parameters.
 
 Example creation and definition:
 
-.. code-block:: 
+.. code-block:: cpp
 
   HAL(EXTurntable,600,1,0x60)            // Create your EX-Turntable device driver
   EXTT_TURNTABLE(1,600,45,"My EX-Turntable")  // Create your EX-Turntable object to enable control
@@ -2188,7 +2188,7 @@ This will start a pin/Vpin blinking until such time as it is ``SET``, ``RESET``,
 |_| > **onMs** - time/duration for the pin to be on in milliseconds |BR|
 |_| > **offMs** - off time/duration in milliseconds
 
-  .. code-block:: 
+  .. code-block:: cpp
 
     BLINK(22, 500, 500) // Blink pin 22 at half second intervals
 

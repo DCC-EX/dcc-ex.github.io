@@ -172,21 +172,21 @@ If you are using |JMRi| and require these to be available as sensors, then they 
 
 To create sensors for our examples above, the commands would be as shown below, and for simplicity we keep the sensor ID the same as the vpin ID in use.
 
-.. code-block:: 
+.. code-block:: cpp
 
   <S 4000 4000 0>
   <S 4003 4003 0>
 
 With these definitions, when an object comes within 200mm of the sensors, a ``<Q id>`` message will be sent to all defined serial ports with the appropriate sensor ID:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <Q 4000>
   <Q 4003>
 
 Conversely, when an object moves more than 250mm from the sensors, a ``<q id>`` message will be sent instead:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <q 4000>
   <q 4003>
@@ -202,7 +202,7 @@ Using the standard digital sensor commands (AT, AFTER, ATTIMEOUT, IF, IFNOT, IFT
 
 For example:
 
-.. code-block:: 
+.. code-block:: cpp
 
   AT(4000)        // Will trigger when an object is within 200mm
   AFTER(4003)     // Will trigger 0.5s after an object moves 250mm away
@@ -217,7 +217,7 @@ With |EX-R|, you can also use the analogue sensor commands (ATGTE, ATLT, IFGTE, 
 
 For example:
 
-.. code-block:: 
+.. code-block:: cpp
 
   ATGTE(4000, 150)    // Will trigger when an object is 150mm or further away from the sensor
   ATLT(4003, 100)     // Will trigger when an object is less than 100mm away

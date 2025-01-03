@@ -550,7 +550,7 @@ You must remove any reference to including "IO_EXTurntable.h" as this file no lo
 
 To create your turntable device in "myAutomation.h", you are still required to create a device driver first with the `HAL()` command, followed by the `EXTT_TURNTABLE()` command:
 
-.. code-block:: 
+.. code-block:: cpp
 
   HAL(EXTurntable, vpin, 1, i2c_address)
   EXTT_TURNTABLE(id, vpin, home [, "description"])

@@ -69,14 +69,14 @@ To define these as DCC accessory turnouts/points, turnout/points 1 will be at li
 
 Therefore, the DCC-EX command to define these in the serial console is as follows:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <T 100 DCC 26 0>
   <T 101 DCC 26 1>
 
 In |EX-R|, we would add these lines to myAutomation.h, with aliases defined:
 
-.. code-block:: 
+.. code-block:: cpp
 
   ALIAS(TRN1, 100)
   ALIAS(TRN2, 101)
@@ -91,14 +91,14 @@ To define these same turnout/point IDs as pin turnouts/points instead, and using
 
 To define these in the serial console:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <T 100 VPIN 22>
   <T 101 VPIN 23>
 
 In |EX-R|, we would add these lines to myAutomation.h:
 
-.. code-block:: 
+.. code-block:: cpp
 
   ALIAS(TRN1, 100)
   ALIAS(TRN2, 101)
@@ -110,14 +110,14 @@ If we were instead to use an MCP23017 I/O expander, we would use Vpins instead o
 
 To define these in the serial console:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <T 100 VPIN 164>
   <T 101 VPIN 165>
 
 And again, in myAutomation.h for EXRAIL:
 
-.. code-block:: 
+.. code-block:: cpp
 
   ALIAS(TRN1, 100)
   ALIAS(TRN2, 101)
@@ -146,14 +146,14 @@ Throughout these pages, we will assume that the thrown servo position is 400, th
 
 Defining these in the serial console therefore would be:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <T 100 SERVO 100 400 100 3>
   <T 101 SERVO 101 400 100 3>
 
 Again, in myAutomation.h this becomes:
 
-.. code-block:: 
+.. code-block:: cpp
 
   ALIAS(TRN1, 100)
   ALIAS(TRN2, 101)
@@ -170,7 +170,7 @@ We don't need to explicitly define any sensor objects to work with |EX-R|, so we
 
 To use pins directly on our Mega2560, we would start at pin 24 (we used pins 22/23 for turnouts):
 
-.. code-block:: 
+.. code-block:: cpp
 
   ALIAS(SNS1_TRN1_APP, 24)       // Sensor 1, approaching turnout/point 1
   ALIAS(SNS2_MAIN_TRN1_EX, 25)   // Sensor 2, on the main track exiting turnout/point 1
@@ -180,7 +180,7 @@ To use pins directly on our Mega2560, we would start at pin 24 (we used pins 22/
 
 Moving these to our first MCP23017 I/O expander, these would start at Vpin 166 (we used Vpins 164/165 for turnouts/points):
 
-.. code-block:: 
+.. code-block:: cpp
 
   ALIAS(SNS1_TRN1_APP, 166)       // Sensor 1, approaching turnout/point 1
   ALIAS(SNS2_MAIN_TRN1_EX, 167)   // Sensor 2, on the main track exiting turnout/point 1
@@ -200,7 +200,7 @@ To use pin based signals, we require three pins per signal, and therefore nine p
 
 To define pin based signals directly on the Mega2560 with aliases for the control pins:
 
-.. code-block:: 
+.. code-block:: cpp
 
   ALIAS(SIG1_TRN1_APP, 30)       // Signal 1, approaching turnout/point 1
   ALIAS(SIG2_TRN2_GO, 33)        // Signal 2, proceed beyond turnout/point 2
@@ -212,7 +212,7 @@ To define pin based signals directly on the Mega2560 with aliases for the contro
 
 Moving these again to an MCP23017 I/O expander, these would start at Vpin 172, however this also overlaps to a second I/O expander by one pin:
 
-.. code-block:: 
+.. code-block:: cpp
 
   ALIAS(SIG1_TRN1_APP, 172)      // Signal 1, approaching turnout/point 1
   ALIAS(SIG2_TRN2_GO, 175)       // Signal 2, proceed beyond turnout/point 2
@@ -237,7 +237,7 @@ Allowing for servo based turnouts/points being used, we will start our signals f
 
 .. collapse:: Click to show/hide the code
 
-    .. code-block:: 
+    .. code-block:: cpp
 
       ALIAS(SIG1_TRN1_APP, 102)       // Signal 1, approaching turnout/point 1
       ALIAS(SIG2_TRN2_GO, 103)        // Signal 2, proceed beyond turnout/point 2
@@ -261,7 +261,7 @@ Block 1 is the approach to turnout/point 1, and can be used to prevent a train f
 
 We will use ID 1 for this, with an alias:
 
-.. code-block:: 
+.. code-block:: cpp
 
   ALIAS(BLK1_TRN1_APP, 1)
 
@@ -272,7 +272,7 @@ Block 2 consists of the section of the main track between turnouts/points 1 and 
 
 We will use ID 2 for this, with an alias:
 
-.. code-block:: 
+.. code-block:: cpp
 
   ALIAS(BLK2_MAIN_HOLD, 2)
 
@@ -283,7 +283,7 @@ Block 3 is for our station siding, ensuring no other trains can enter this block
 
 We will use ID 3 for this, with an alias:
 
-.. code-block:: 
+.. code-block:: cpp
 
   ALIAS(BLK3_STN, 3)
 
@@ -296,7 +296,7 @@ Note that block 4 on the diagram continues all the way to the beginning of block
 
 We will use ID 4 for this, with an alias:
 
-.. code-block:: 
+.. code-block:: cpp
 
   ALIAS(BLK4_TRN2_EX, 4)
 
@@ -331,7 +331,7 @@ If we omit that first ``DONE``, EXRAIL would automatically execute ``ROUTE(1, "M
 
 .. collapse:: Click to show/hide the code
 
-    .. code-block:: 
+    .. code-block:: cpp
 
       // Start up with turnouts/points closed and signals red
       CLOSE(TRN1)
@@ -366,7 +366,7 @@ The route is completed with a ``DONE`` to tell |EX-R| not to proceed any further
 
 .. collapse:: Click to show/hide the code
 
-    .. code-block:: 
+    .. code-block:: cpp
 
       ROUTE(1, "Main track")        // Select this route to just use the main track
         RED(SIG3_STN_EX)            // Set signal 3 red as it is not safe to exit the station siding
@@ -409,7 +409,7 @@ The route is completed with a ``DONE`` to tell EXRAIL not to proceed any further
 
 .. collapse:: Click to show/hide the code
 
-    .. code-block:: 
+    .. code-block:: cpp
 
       ROUTE(2, "Station siding")    // Select this route to use the station siding
         RED(SIG2_TRN2_GO)           // Set signal 2 red as it is not safe to proceed beyond turnout/point 2 on the main track
@@ -476,7 +476,7 @@ Once these activities have been done, we can tell our trains to start following 
 
 .. collapse:: Click to show/hide the code
 
-    .. code-block:: 
+    .. code-block:: cpp
 
       // Start up with turnouts/points closed and signals red
       CLOSE(TRN1)
@@ -515,7 +515,7 @@ As a result of executing the ``LATCH(CHOOSE_BLK2)``, the next train navigating t
 
 .. collapse:: Click to show/hide the code
 
-  .. code-block:: 
+  .. code-block:: cpp
 
       // Sequence to exit block 1, and choose whether to go to the station or continue on main
       SEQUENCE(BLK1_EXIT)
@@ -546,7 +546,7 @@ At this point, control of the train is handed over to the `moving from block 2 t
 
 .. collapse:: Click to show/hide the code
 
-  .. code-block:: 
+  .. code-block:: cpp
 
     // Sequence to go from block 1 to block 2
     SEQUENCE(BLK1_BLK2)
@@ -581,7 +581,7 @@ There is now a delay of 10 to 15 seconds while our passengers embark or disembar
 
 .. collapse:: Click to show/hide the code
 
-    .. code-block:: 
+    .. code-block:: cpp
 
       // Sequence to go from block 1 to block 3
       SEQUENCE(BLK1_BLK3)
@@ -622,7 +622,7 @@ Once done, train control is over to the `moving from block 4 to block 1 - the sp
 
 .. collapse:: Click to show/hide the code
 
-    .. code-block:: 
+    .. code-block:: cpp
 
       // Sequence to go from block 2 to block 4
       SEQUENCE(BLK2_BLK4)
@@ -653,7 +653,7 @@ Control is then handed over to the `moving from block 4 to block 1 - the speed r
 
 .. collapse:: Click to show/hide the code
 
-    .. code-block:: 
+    .. code-block:: cpp
 
       // Sequence to go from block 3 to block 4
       SEQUENCE(BLK3_BLK4)
@@ -684,7 +684,7 @@ Again, we start up with train 3 occupying block 4, and once train 1 has exited b
 
 .. collapse:: Click to show/hide the code
 
-    .. code-block:: 
+    .. code-block:: cpp
 
       // Sequence to move from block 4 back to block 1
       SEQUENCE(BLK4_BLK1)

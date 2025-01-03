@@ -11,7 +11,7 @@
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/dccex_theme.css?v=a010c375" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/dccex_theme.css?v=3b1dd56d" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -656,14 +656,16 @@
 </figure>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This board can supply a LOT of current. The maximum recommended current is 5A for N and HO scale
-<br /> This board can supply a whopping 43A, enough to cause a LOT of damage. To use this board, make sure you have fuses or circuit breakers connected in line with both rails. SOFTWARE ALONE CANNOT PROTECT YOU IN ALL CASES.</p>
+<p>This board can supply a LOT of current. The maximum recommended current is 5A for N and HO scale</p>
+<p><span class="dcc-ex-red-bold-italic">This board can supply a whopping 43A</span>, enough to cause a LOT of damage.</p>
+<p>To use this board, make sure you have fuses or circuit breakers connected in line with both rails. <em>SOFTWARE ALONE CANNOT PROTECT YOU IN ALL CASES.</em></p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This board is <strong>not</strong> compatible with <span class="ex-suffix">TrackManager</span> DC mode.</p>
 </div>
-<p>You will either need 2 of these or one of these and another board to run your programming track. Most people using this board use the Arduino Motor shield for the program track and add this board for MAIN. These boards can provide high current. We have built boosters using these boards. If the 2 Amps (really 1.5A) of the L298 boards or the 5 Amps of the <a href="../../../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a> aren’t enough for your track, this is one of the best options. IBT_2 is the manufacturer’s name for this board, BTS7960 is the model number of the H-Bridge chip used as the motor controller. The H-Bridge generates a clean wave form, has very low signal propagation delay and no significant voltage drop.</p>
+<p>You will either need 2 of these or one of these and another board to run your programming track. Most people using this board use the Arduino Motor shield for the program track and add this board for MAIN. These boards can provide high current. We have built boosters using these boards.</p>
+<p>If the 2 Amps (really 1.5A) of the L298 boards or the 5 Amps of the <a href="../../../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a> aren’t enough for your track, this is one of the best options. IBT_2 is the manufacturer’s name for this board, BTS7960 is the model number of the H-Bridge chip used as the <abbr title="also referred to as a 'Motor Controller', 'Motor Shield' or 'Motor Board'">Motor Driver</abbr>. The H-Bridge generates a clean wave form, has very low signal propagation delay and no significant voltage drop.</p>
 <p>Just search for “IBT 2 Motor Driver” or “IBT 2 H-Bridge”</p>
 <p>See the <a class="reference internal" href="#parts-list-ibt-2">Parts list (IBT_2)</a></p>
 <figure class="align-default" id="id5">
@@ -685,7 +687,7 @@
 <p>For this option, we assume that many of you may have started off with the Arduino Mega with Arduino Motor Shield (or clones) and are here because you are making the step up to something that can handle more current, and therefore more locos. We will cover two options for how to use your IBT_2 motor board:</p>
 <ol class="arabic simple">
 <li><p><strong>“Upgrade”</strong> - Using ONE output of your Arduino Motor Shield to control your PROG track and ONE IBT_2 board to run your MAIN track.</p></li>
-<li><p><strong>“Replace”</strong> - Using TWO IBT_2 boards to handle BOTH the MAIN and PROG tracks. You won’t need another motor controller. This is a Tinkerer or perhaps an Engineer option since it requires a little more knowledge and abilities.</p></li>
+<li><p><strong>“Replace”</strong> - Using TWO IBT_2 boards to handle BOTH the MAIN and PROG tracks. You won’t need another <abbr title="also referred to as a 'Motor Controller', 'Motor Shield' or 'Motor Board'">Motor Driver</abbr>. This is a Tinkerer or perhaps an Engineer option since it requires a little more knowledge and abilities.</p></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -698,7 +700,8 @@
 <h2><a class="toc-backref" href="#id9" role="doc-backlink">Which Option Should You Choose? (IBT_2)</a><a class="headerlink" href="#which-option-should-you-choose-ibt-2" title="Link to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>These options both use the “standard accuracy” waveform (This means the 1 and 0 pulses can vary a tiny bit from their 58 and 116uS duration). This is not a problem for virtually all decoders and would usually only be noticed by a sniffer checking the signal for accuracy (Like EX-DCCInspector). We use 2 GPIO pins to generate the DCC signal. This saves you from having to create a small 1 transistor and 2 resistor inverter circuit to only use 1 pin. If you want to use “high accuracy” mode because you need to free an Arduino pin or some other reason, and you like to solder, please see <a class="reference internal" href="high-accuracy.html"><span class="doc">High Accuracy Waveform Mode</span></a>.</p>
+<p>These options both use the “standard accuracy” waveform (This means the 1 and 0 pulses can vary a tiny bit from their 58 and 116uS duration). This is not a problem for virtually all decoders and would usually only be noticed by a sniffer checking the signal for accuracy (Like EX-DCCInspector).</p>
+<p>We use 2 GPIO pins to generate the DCC signal. This saves you from having to create a small 1 transistor and 2 resistor inverter circuit to only use 1 pin. If you want to use “high accuracy” mode because you need to free an Arduino pin or some other reason, and you like to solder, please see <a class="reference internal" href="high-accuracy.html"><span class="doc">High Accuracy Waveform Mode</span></a>.</p>
 </div>
 <section id="upgrade-ibt-2">
 <h3>Upgrade (IBT_2)<a class="headerlink" href="#upgrade-ibt-2" title="Link to this heading"></a></h3>
@@ -727,7 +730,8 @@
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Instead of bending out the current sense pin of the Arduino Motor Shield and using the same A0 pin for the IBT_2 current sense, we are using pin A5. Both outputs of the motor shield are still connected, we just don’t enable the A or main side. DO NOT try to use the A output of the motor shield! You will have no current sense and no short circuit protection.</p>
+<p>Instead of bending out the current sense pin of the Arduino Motor Shield and using the same A0 pin for the IBT_2 current sense, we are using pin A5.</p>
+<p>Both outputs of the motor shield are still connected, we just don’t enable the A or main side. DO NOT try to use the A output of the motor shield! You will have no current sense and no short circuit protection.</p>
 </div>
 </section>
 <section id="steps-upgrade">
@@ -777,7 +781,9 @@
 <p><span class="caption-number">Fig 164: </span><span class="caption-text">Wiring Schematic</span><a class="headerlink" href="#ibt2-wiring-schematic" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>It should look like following. Note we have included the Arduino Mega and have the Arduino Motor shield off to the side for reference. The motor shield would obviously normally be stacked on top of the Arduino. However, some people might not use the motor shield and instead will have another board to use for their programming track. In this case, they would connect the IBT_2 to the same pins directly on the Arduino microcontroller. Also note the jumper wiring that shows pin 4 or the Arduino connecting to pins 3 and 4 on the IBT_2 and A5 connected to pins 5 and 6. As with most of our diagrams, you can click on them to enlarge them.</p>
+<p>It should look like following. Note we have included the Arduino Mega and have the Arduino Motor shield off to the side for reference. The <abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr> would obviously normally be stacked on top of the Arduino.</p>
+<p>However, some people might not use the <abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr> and instead will have another board to use for their programming track. In this case, they would connect the IBT_2 to the same pins directly on the Arduino microcontroller.</p>
+<p>Also note the jumper wiring that shows pin 4 or the Arduino connecting to pins 3 and 4 on the IBT_2 and A5 connected to pins 5 and 6. As with most of our diagrams, you can click on them to enlarge them.</p>
 <figure class="align-default" id="id7">
 <a class="reference internal image-reference" href="../../../_images/ibt_2_wiring_fritz.png"><img alt="IBT_2 Wiring 2" src="../../../_images/ibt_2_wiring_fritz.png" style="width: 585.0px; height: 342.0px;" /></a>
 <figcaption>
@@ -910,20 +916,29 @@
 <p><span class="caption-number">Fig 166: </span><span class="caption-text">10k (103) current sense resistors</span><a class="headerlink" href="#ibt2-sense-resistors" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>The spec sheet of the BTS7960B states that the “expected” (aka nominal) value for the ratio of output current to the current reported at the current sense pin is 8500 to 1. That means if you have 1 Amp of output current you will get .176 mA of current at the Command Station pin. If we apply that through our 5k of resistance (V = I*R) we would see .588 Volts at the output connected to our Arduino analog pin. Since the response is linear, we get .588 Amps per Volt. If we have 3A of current to the track, we would have 1.75V. And for 5 Amps, the voltage would be 2.94V. So far, so good, BUT, the tolerance and difference between what is “expected” and what will pass as “acceptable” is huge. The 8500 ratio we expect can be as low as 3000 and has high as 14,000! This means that a 3A current can be reported as anything from 1V to 5V on the CS pin. But what happens at 5A on one of these boards? The answer is that you could have as much as 8.33V connected to your Arduino! In other words, <strong>You could destroy the analog input pin on your Arduino</strong>. Use a known current on your track and measure the current sense voltage for your board before connecting it to your command station.</p>
+<p>The spec sheet of the BTS7960B states that the “expected” (aka nominal) value for the ratio of output current to the current reported at the current sense pin is 8500 to 1. That means if you have 1 Amp of output current you will get .176 mA of current at the Command Station pin.</p>
+<p>If we apply that through our 5k of resistance (V = I*R) we would see .588 Volts at the output connected to our Arduino analog pin. Since the response is linear, we get .588 Amps per Volt. If we have 3A of current to the track, we would have 1.75V. And for 5 Amps, the voltage would be 2.94V. So far, so good, BUT, the tolerance and difference between what is “expected” and what will pass as “acceptable” is huge.</p>
+<p>The 8500 ratio we expect can be as low as 3000 and has high as 14,000! This means that a 3A current can be reported as anything from 1V to 5V on the CS pin.</p>
+<p>But what happens at 5A on one of these boards? <br /> The answer is that you could have as much as 8.33V connected to your Arduino! In other words, <strong>You could destroy the analog input pin on your Arduino</strong>.</p>
+<p>Use a known current on your track and measure the current sense voltage for your board before connecting it to your command station.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If you are going to use more than 3 Amps, you should add a 10k or less current sense resistor (R1) and a 5.1V Zener diode and a 220 Ohm series resistor protection circuit (D1 and R2). See the section above “Important Notes on Current Sensing”. An additional 10k resistor would give you .392 Volts per Amp and will require a small change to your sketch to adjust your current conversion factor (usually a value of 10). A 2.2k resistor would allow you to measure up to 10A, but the larger the current range, the less sensitivity and accuracy you can get. Besides, we should use boosters and power districts if we need more than 5 Amps, right? ;)</p>
+<p>If you are going to use more than 3 Amps, you should add a 10k or less current sense resistor (R1) and a 5.1V Zener diode and a 220 Ohm series resistor protection circuit (D1 and R2).</p>
+<p>See the section above “Important Notes on Current Sensing”.</p>
+<p>An additional 10k resistor would give you .392 Volts per Amp and will require a small change to your sketch to adjust your current conversion factor (usually a value of 10). A 2.2k resistor would allow you to measure up to 10A, but the larger the current range, the less sensitivity and accuracy you can get.</p>
+<p>Besides, we should use boosters and power districts if we need more than 5 Amps, right? ;)</p>
 </div>
 <section id="modifying-your-motor-board-definition-to-give-the-correct-current-sense-factor">
 <h3>Modifying Your Motor Board Definition To Give The Correct Current Sense Factor<a class="headerlink" href="#modifying-your-motor-board-definition-to-give-the-correct-current-sense-factor" title="Link to this heading"></a></h3>
-<p>If you add a parallel resistor to increase your current sensing range or find your readings are not correct, you will need to adjust your current sense factor. For an unmodified board, a value of 7 is usually good. If you add a 10k parallel resistor to get more current range, you probably need to change it to 10. If you can test with known resistance values to know exactly what voltage it reported to your analog pin for 2 or more currents, you can use a simple formula to calculate it. Everything you need to create your own motor board definition is here:</p>
+<p>If you add a parallel resistor to increase your current sensing range or find your readings are not correct, you will need to adjust your current sense factor. For an unmodified board, a value of 7 is usually good. If you add a 10k parallel resistor to get more current range, you probably need to change it to 10. If you can test with known resistance values to know exactly what voltage it reported to your analog pin for 2 or more currents, you can use a simple formula to calculate it.</p>
+<p>Everything you need to create your own motor board definition is here:</p>
 <p><a class="reference internal" href="motor-board-config.html#if-your-board-is-not-in-the-supported-list"><span class="std std-ref">Creating a Custom Motor Board Definition</span></a></p>
 </section>
 </section>
 <section id="using-external-current-sense">
 <h2><a class="toc-backref" href="#id13" role="doc-backlink">Using External Current Sense</a><a class="headerlink" href="#using-external-current-sense" title="Link to this heading"></a></h2>
-<p>Using an external current sense board instead of the onboard current sense included with the IBT_2 can give us a little more control over the sensitivity of our circuit (ability to read low currents such as one N scale loco sitting still on the track. Circuits and boards we tested are the MAX471 (up to 3A), the Pololu ACS724 (5A or 10A boards), and a 5A current sense transformer for use with one output wire wrapped through it going directly to the track.</p>
+<p>Using an external current sense board instead of the onboard current sense included with the IBT_2 can give us a little more control over the sensitivity of our circuit (ability to read low currents such as one N scale loco sitting still on the track.</p>
+<p>Circuits and boards we tested are the MAX471 (up to 3A), the Pololu ACS724 (5A or 10A boards), and a 5A current sense transformer for use with one output wire wrapped through it going directly to the track.</p>
 <div class="admonition-todo admonition" id="id3">
 <p class="admonition-title">Todo</p>
 <p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/426">LOW - Hardware</a> - Add help or point to a section for external current sense boards</p>
@@ -949,6 +964,7 @@ various sellers, prices and delivery methods. $7 to $14.
 Here is a pack of two:
 <a class="reference external" href="https://www.amazon.com/dp/B07TFB22H5/">https://www.amazon.com/dp/B07TFB22H5/</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;">
 $15.51 +tax; prime shipping</p>
+<p><hr class="hr-heavy" /></p>
 </section>
 <section id="tech-notes-ibt-2">
 <h2><a class="toc-backref" href="#id15" role="doc-backlink">Tech Notes (IBT_2)</a><a class="headerlink" href="#tech-notes-ibt-2" title="Link to this heading"></a></h2>
@@ -958,13 +974,14 @@ $15.51 +tax; prime shipping</p>
 <p><code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">MOTOR_SHIELD_TYPE</span> <span class="pre">[Motor</span> <span class="pre">Board</span> <span class="pre">Type]</span></code></p>
 <p>The default is “STANDARD_MOTOR_SHIELD” For Arduino and clone shields.</p>
 <p>If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the <a class="reference internal" href="motor-board-config.html"><span class="doc">Motor Board Config Section</span></a></p>
-<p>For the Engineers, the definitions and implementation for motor board control are in the following files:</p>
+<p>For the <a style="font-weight: bold; font-style: italic; color: #00a3b9 !important;" href="../../../begin/levels.html#engineer">Engineer</a>:</p>
 <blockquote>
-<div><p><strong>MotorDrivers.h</strong>  - Contains the definitions for all the currently supported motor drivers
-<strong>MotorDriver.h</strong> - Creates the “MotorDriver” C++ class that defines the data type for a motor controller
-<strong>MotorDriver.cpp</strong> - The routines that control the operation of a motor controller (Power, Current Sense, etc.)</p>
-</div></blockquote>
+<div><p>The definitions and implementation for motor board control are in the following files:</p>
+<p><strong>MotorDrivers.h</strong>  - Contains the definitions for all the currently supported motor drivers <br />
+<strong>MotorDriver.h</strong> - Creates the “MotorDriver” C++ class that defines the data type for a <abbr title="also referred to as a 'Motor Controller', 'Motor Shield' or 'Motor Board'">Motor Driver</abbr> <br />
+<strong>MotorDriver.cpp</strong> - The routines that control the operation of a <abbr title="also referred to as a 'Motor Controller', 'Motor Shield' or 'Motor Board'">Motor Driver</abbr> (Power, Current Sense, etc.)</p>
 <p>Normally you would never need to get into these files, we just mention them because it can be helpful to see the examples in the code if you want to learn more about how to customise your motor board definition or see how things work.</p>
+</div></blockquote>
 </section>
 <section id="ibt-2-schematic">
 <h3>IBT_2 schematic<a class="headerlink" href="#ibt-2-schematic" title="Link to this heading"></a></h3>
@@ -999,7 +1016,7 @@ $15.51 +tax; prime shipping</p>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fb16bb50a30>
+    <jinja2.runtime.BlockReference object at 0x7fc7e895c0d0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

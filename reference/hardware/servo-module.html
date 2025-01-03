@@ -11,7 +11,7 @@
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=a010c375" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=3b1dd56d" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -719,11 +719,11 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 <p>The SERVO_SIGNAL directive defines a servo based signal in EXRAIL to drive semaphore type signals as part of sequences or routes, or simply be set via a signal or similar.</p>
 <p>Similar to pin based signals, servo signals are controlled by the ID of the red pin only.</p>
 <p>Unlike servo based turnouts, there is no ID or description (they don’t appear in throttles), and they use the “Bounce” profile with no other options available at the present time:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">redpos</span><span class="p">,</span><span class="w"> </span><span class="n">amberpos</span><span class="p">,</span><span class="w"> </span><span class="n">greenpos</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>A simple example using the third control pins of the first PCA9685 connected to the CommandStation would be:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SERVO_SIGNAL(102, 400, 250, 100)
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="mi">102</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -841,20 +841,20 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
 <h3>Using these with EXRAIL<a class="headerlink" href="#using-these-with-exrail" title="Link to this heading"></a></h3>
 <p><a href="../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> includes the <code class="docutils literal notranslate"><span class="pre">FADE(vpin,</span> <span class="pre">value,</span> <span class="pre">ms)</span></code> command which can is used to adjust the LED’s brightness to the provided value over the time specified in milliseconds.</p>
 <p>The example below simulates a camp fire by continuously varying the LED brightness for random delay times, and this starts automatically when the <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> starts by using the <code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code> directive.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SEQUENCE(3)
-   AUTOSTART
-   FADE(101, 100, 50)   DELAYRANDOM(200,800) // Use an Amber or Red LED
-   FADE(101, 500, 30)   DELAYRANDOM(200,1000)
-   FADE(101,  75, 75)   DELAYRANDOM(200,400)
-   FADE(101, 750, 30)   DELAYRANDOM( 50,500)
-   FADE(101,  75,100)   DELAYRANDOM(100,1500)
-   FADE(101, 250,100)   DELAYRANDOM(100,600)
-   FADE(101, 2500, 5)   DELAYRANDOM( 50,250)
-   FADE(101,  75, 75)   DELAYRANDOM(200,1000)
-   FADE(101, 400, 30)   DELAYRANDOM( 50,600)
-   FADE(101,  75,100)   DELAYRANDOM(200,1500)
-   FADE(101, 1500,10)   DELAYRANDOM( 50,250)
-   FOLLOW(3)
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="w">   </span><span class="n">AUTOSTART</span>
+<span class="w">   </span><span class="n">FADE</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">)</span><span class="w">   </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">800</span><span class="p">)</span><span class="w"> </span><span class="c1">// Use an Amber or Red LED</span>
+<span class="w">   </span><span class="n">FADE</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">)</span><span class="w">   </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
+<span class="w">   </span><span class="n">FADE</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w">  </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">)</span><span class="w">   </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">400</span><span class="p">)</span>
+<span class="w">   </span><span class="n">FADE</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">750</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">)</span><span class="w">   </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span>
+<span class="w">   </span><span class="n">FADE</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w">  </span><span class="mi">75</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span><span class="w">   </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">1500</span><span class="p">)</span>
+<span class="w">   </span><span class="n">FADE</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span><span class="w">   </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">600</span><span class="p">)</span>
+<span class="w">   </span><span class="n">FADE</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">2500</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w">   </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="mi">250</span><span class="p">)</span>
+<span class="w">   </span><span class="n">FADE</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w">  </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">)</span><span class="w">   </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
+<span class="w">   </span><span class="n">FADE</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">)</span><span class="w">   </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="mi">600</span><span class="p">)</span>
+<span class="w">   </span><span class="n">FADE</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w">  </span><span class="mi">75</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span><span class="w">   </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">1500</span><span class="p">)</span>
+<span class="w">   </span><span class="n">FADE</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">1500</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span><span class="w">   </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="mi">250</span><span class="p">)</span>
+<span class="w">   </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -902,7 +902,7 @@ servo mounting bracket, were 3d-printed on a Creality Ender-3 printer.</p>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fb15952ea40>
+    <jinja2.runtime.BlockReference object at 0x7fc7e9347c10>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

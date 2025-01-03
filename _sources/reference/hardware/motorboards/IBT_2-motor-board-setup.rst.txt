@@ -24,13 +24,18 @@ IBT_2 BTS7960 Motor Board
 .. warning:: 
    
    This board can supply a LOT of current. The maximum recommended current is 5A for N and HO scale
-   |BR| This board can supply a whopping 43A, enough to cause a LOT of damage. To use this board, make sure you have fuses or circuit breakers connected in line with both rails. SOFTWARE ALONE CANNOT PROTECT YOU IN ALL CASES.
+   
+   :dcc-ex-red-bold-italic:`This board can supply a whopping 43A`, enough to cause a LOT of damage. 
+   
+   To use this board, make sure you have fuses or circuit breakers connected in line with both rails. *SOFTWARE ALONE CANNOT PROTECT YOU IN ALL CASES.*
 
 .. warning:: 
 
    This board is **not** compatible with |TM| DC mode.
 
-You will either need 2 of these or one of these and another board to run your programming track. Most people using this board use the Arduino Motor shield for the program track and add this board for MAIN. These boards can provide high current. We have built boosters using these boards. If the 2 Amps (really 1.5A) of the L298 boards or the 5 Amps of the |EX-MS| aren't enough for your track, this is one of the best options. IBT_2 is the manufacturer's name for this board, BTS7960 is the model number of the H-Bridge chip used as the motor controller. The H-Bridge generates a clean wave form, has very low signal propagation delay and no significant voltage drop.
+You will either need 2 of these or one of these and another board to run your programming track. Most people using this board use the Arduino Motor shield for the program track and add this board for MAIN. These boards can provide high current. We have built boosters using these boards. 
+
+If the 2 Amps (really 1.5A) of the L298 boards or the 5 Amps of the |EX-MS| aren't enough for your track, this is one of the best options. IBT_2 is the manufacturer's name for this board, BTS7960 is the model number of the H-Bridge chip used as the |motor driver|. The H-Bridge generates a clean wave form, has very low signal propagation delay and no significant voltage drop.
 
 Just search for "IBT 2 Motor Driver" or "IBT 2 H-Bridge"
 
@@ -43,7 +48,7 @@ See the `Parts list (IBT_2)`_
    IBT_2 Motor driver
 
 What You Will Need (IBT_2)
-================================
+==========================
 
 * An Arduino Mega or clone (or an Uno if you don't need WiFi or Ethernet)
 * An Arduino Motor Shield (or another board for your service track for the upgrade option)
@@ -55,7 +60,7 @@ What You Will Need (IBT_2)
 For this option, we assume that many of you may have started off with the Arduino Mega with Arduino Motor Shield (or clones) and are here because you are making the step up to something that can handle more current, and therefore more locos. We will cover two options for how to use your IBT_2 motor board:
 
 1. **"Upgrade"** - Using ONE output of your Arduino Motor Shield to control your PROG track and ONE IBT_2 board to run your MAIN track.
-2. **"Replace"** - Using TWO IBT_2 boards to handle BOTH the MAIN and PROG tracks. You won't need another motor controller. This is a Tinkerer or perhaps an Engineer option since it requires a little more knowledge and abilities.
+2. **"Replace"** - Using TWO IBT_2 boards to handle BOTH the MAIN and PROG tracks. You won't need another |motor driver|. This is a Tinkerer or perhaps an Engineer option since it requires a little more knowledge and abilities.
 
 .. Note:: We can't say it enough, this board can pump out some Amps. Be careful! Put fuses on the connection to each rail and limit the current to a safe level in your config.h file. We have a saying at |DCC-EX|, if you need more than 5 Amps to run locos, then you need to add power districts, not more Amps. The voltage to the track will be 2 to 3 volts higher using the same power supply than it is with Arduino type (L298) motor boards.
 
@@ -66,7 +71,11 @@ Anything with MOSFETS in them is more efficient than something with Bipolar Junc
 Which Option Should You Choose? (IBT_2)
 =========================================
 
-.. NOTE:: These options both use the "standard accuracy" waveform (This means the 1 and 0 pulses can vary a tiny bit from their 58 and 116uS duration). This is not a problem for virtually all decoders and would usually only be noticed by a sniffer checking the signal for accuracy (Like EX-DCCInspector). We use 2 GPIO pins to generate the DCC signal. This saves you from having to create a small 1 transistor and 2 resistor inverter circuit to only use 1 pin. If you want to use "high accuracy" mode because you need to free an Arduino pin or some other reason, and you like to solder, please see :doc:`High Accuracy Waveform Mode </reference/hardware/motorboards/high-accuracy>`.
+.. NOTE:: 
+   
+   These options both use the "standard accuracy" waveform (This means the 1 and 0 pulses can vary a tiny bit from their 58 and 116uS duration). This is not a problem for virtually all decoders and would usually only be noticed by a sniffer checking the signal for accuracy (Like EX-DCCInspector). 
+   
+   We use 2 GPIO pins to generate the DCC signal. This saves you from having to create a small 1 transistor and 2 resistor inverter circuit to only use 1 pin. If you want to use "high accuracy" mode because you need to free an Arduino pin or some other reason, and you like to solder, please see :doc:`High Accuracy Waveform Mode </reference/hardware/motorboards/high-accuracy>`.
 
 Upgrade (IBT_2)
 ----------------
@@ -100,7 +109,11 @@ What We Are Going To Do (Upgrade)
 * Optionally add a current sense resistor to the IBT_2
 * Change your motor board type in your config.h file
 
-.. WARNING:: Instead of bending out the current sense pin of the Arduino Motor Shield and using the same A0 pin for the IBT_2 current sense, we are using pin A5. Both outputs of the motor shield are still connected, we just don't enable the A or main side. DO NOT try to use the A output of the motor shield! You will have no current sense and no short circuit protection.
+.. WARNING:: 
+   
+   Instead of bending out the current sense pin of the Arduino Motor Shield and using the same A0 pin for the IBT_2 current sense, we are using pin A5. 
+      
+   Both outputs of the motor shield are still connected, we just don't enable the A or main side. DO NOT try to use the A output of the motor shield! You will have no current sense and no short circuit protection.
 
 Steps (Upgrade)
 -----------------
@@ -149,7 +162,11 @@ Here is a visual diagram. R1 (current sense modifier), R2 (diode current limiter
    Wiring Schematic
 
 
-It should look like following. Note we have included the Arduino Mega and have the Arduino Motor shield off to the side for reference. The motor shield would obviously normally be stacked on top of the Arduino. However, some people might not use the motor shield and instead will have another board to use for their programming track. In this case, they would connect the IBT_2 to the same pins directly on the Arduino microcontroller. Also note the jumper wiring that shows pin 4 or the Arduino connecting to pins 3 and 4 on the IBT_2 and A5 connected to pins 5 and 6. As with most of our diagrams, you can click on them to enlarge them.
+It should look like following. Note we have included the Arduino Mega and have the Arduino Motor shield off to the side for reference. The |motor shield| would obviously normally be stacked on top of the Arduino. 
+
+However, some people might not use the |motor shield| and instead will have another board to use for their programming track. In this case, they would connect the IBT_2 to the same pins directly on the Arduino microcontroller. 
+
+Also note the jumper wiring that shows pin 4 or the Arduino connecting to pins 3 and 4 on the IBT_2 and A5 connected to pins 5 and 6. As with most of our diagrams, you can click on them to enlarge them.
 
 .. figure:: /_static/images/motorboards/ibt_2_wiring_fritz.png
    :alt: IBT_2 Wiring 2
@@ -267,14 +284,32 @@ Please do the following to ensure you won't damage the Arduino, your layout, or 
    10k (103) current sense resistors
 
 
-The spec sheet of the BTS7960B states that the "expected" (aka nominal) value for the ratio of output current to the current reported at the current sense pin is 8500 to 1. That means if you have 1 Amp of output current you will get .176 mA of current at the Command Station pin. If we apply that through our 5k of resistance (V = I*R) we would see .588 Volts at the output connected to our Arduino analog pin. Since the response is linear, we get .588 Amps per Volt. If we have 3A of current to the track, we would have 1.75V. And for 5 Amps, the voltage would be 2.94V. So far, so good, BUT, the tolerance and difference between what is "expected" and what will pass as "acceptable" is huge. The 8500 ratio we expect can be as low as 3000 and has high as 14,000! This means that a 3A current can be reported as anything from 1V to 5V on the CS pin. But what happens at 5A on one of these boards? The answer is that you could have as much as 8.33V connected to your Arduino! In other words, **You could destroy the analog input pin on your Arduino**. Use a known current on your track and measure the current sense voltage for your board before connecting it to your command station.
+The spec sheet of the BTS7960B states that the "expected" (aka nominal) value for the ratio of output current to the current reported at the current sense pin is 8500 to 1. That means if you have 1 Amp of output current you will get .176 mA of current at the Command Station pin. 
 
-.. WARNING:: If you are going to use more than 3 Amps, you should add a 10k or less current sense resistor (R1) and a 5.1V Zener diode and a 220 Ohm series resistor protection circuit (D1 and R2). See the section above "Important Notes on Current Sensing". An additional 10k resistor would give you .392 Volts per Amp and will require a small change to your sketch to adjust your current conversion factor (usually a value of 10). A 2.2k resistor would allow you to measure up to 10A, but the larger the current range, the less sensitivity and accuracy you can get. Besides, we should use boosters and power districts if we need more than 5 Amps, right? ;)
+If we apply that through our 5k of resistance (V = I*R) we would see .588 Volts at the output connected to our Arduino analog pin. Since the response is linear, we get .588 Amps per Volt. If we have 3A of current to the track, we would have 1.75V. And for 5 Amps, the voltage would be 2.94V. So far, so good, BUT, the tolerance and difference between what is "expected" and what will pass as "acceptable" is huge. 
+
+The 8500 ratio we expect can be as low as 3000 and has high as 14,000! This means that a 3A current can be reported as anything from 1V to 5V on the CS pin. 
+
+But what happens at 5A on one of these boards? |BR| The answer is that you could have as much as 8.33V connected to your Arduino! In other words, **You could destroy the analog input pin on your Arduino**. 
+
+Use a known current on your track and measure the current sense voltage for your board before connecting it to your command station.
+
+.. WARNING:: 
+   
+   If you are going to use more than 3 Amps, you should add a 10k or less current sense resistor (R1) and a 5.1V Zener diode and a 220 Ohm series resistor protection circuit (D1 and R2). 
+   
+   See the section above "Important Notes on Current Sensing". 
+   
+   An additional 10k resistor would give you .392 Volts per Amp and will require a small change to your sketch to adjust your current conversion factor (usually a value of 10). A 2.2k resistor would allow you to measure up to 10A, but the larger the current range, the less sensitivity and accuracy you can get. 
+   
+   Besides, we should use boosters and power districts if we need more than 5 Amps, right? ;)
 
 Modifying Your Motor Board Definition To Give The Correct Current Sense Factor
 ---------------------------------------------------------------------------------
 
-If you add a parallel resistor to increase your current sensing range or find your readings are not correct, you will need to adjust your current sense factor. For an unmodified board, a value of 7 is usually good. If you add a 10k parallel resistor to get more current range, you probably need to change it to 10. If you can test with known resistance values to know exactly what voltage it reported to your analog pin for 2 or more currents, you can use a simple formula to calculate it. Everything you need to create your own motor board definition is here:
+If you add a parallel resistor to increase your current sensing range or find your readings are not correct, you will need to adjust your current sense factor. For an unmodified board, a value of 7 is usually good. If you add a 10k parallel resistor to get more current range, you probably need to change it to 10. If you can test with known resistance values to know exactly what voltage it reported to your analog pin for 2 or more currents, you can use a simple formula to calculate it. 
+
+Everything you need to create your own motor board definition is here:
 
 :ref:`Creating a Custom Motor Board Definition <reference/hardware/motorboards/motor-board-config:if your board is not in the supported list>`
 
@@ -282,7 +317,9 @@ If you add a parallel resistor to increase your current sensing range or find yo
 Using External Current Sense
 ==============================
 
-Using an external current sense board instead of the onboard current sense included with the IBT_2 can give us a little more control over the sensitivity of our circuit (ability to read low currents such as one N scale loco sitting still on the track. Circuits and boards we tested are the MAX471 (up to 3A), the Pololu ACS724 (5A or 10A boards), and a 5A current sense transformer for use with one output wire wrapped through it going directly to the track.
+Using an external current sense board instead of the onboard current sense included with the IBT_2 can give us a little more control over the sensitivity of our circuit (ability to read low currents such as one N scale loco sitting still on the track. 
+
+Circuits and boards we tested are the MAX471 (up to 3A), the Pololu ACS724 (5A or 10A boards), and a 5A current sense transformer for use with one output wire wrapped through it going directly to the track.
 
 .. TODO:: `LOW - Hardware <https://github.com/DCC-EX/dcc-ex.github.io/issues/426>`_ - Add help or point to a section for external current sense boards
 
@@ -312,6 +349,7 @@ Here is a pack of two:
 https://www.amazon.com/dp/B07TFB22H5/ |EXTERNAL-LINK|
 $15.51 +tax; prime shipping
 
+|HR-HEAVY|
 
 Tech Notes (IBT_2)
 ===================
@@ -327,13 +365,15 @@ The default is "STANDARD_MOTOR_SHIELD" For Arduino and clone shields.
 
 If you want to change your motor shield or create a definition for one that does not yet have built-in support, you can follow the simple instructions in the :doc:`Motor Board Config Section </reference/hardware/motorboards/motor-board-config>`
 
-For the Engineers, the definitions and implementation for motor board control are in the following files:
+For the |Engineer-TEXT|:
 
-  **MotorDrivers.h**  - Contains the definitions for all the currently supported motor drivers
-  **MotorDriver.h** - Creates the "MotorDriver" C++ class that defines the data type for a motor controller
-  **MotorDriver.cpp** - The routines that control the operation of a motor controller (Power, Current Sense, etc.)
+   The definitions and implementation for motor board control are in the following files:
 
-Normally you would never need to get into these files, we just mention them because it can be helpful to see the examples in the code if you want to learn more about how to customise your motor board definition or see how things work.
+   **MotorDrivers.h**  - Contains the definitions for all the currently supported motor drivers |BR|
+   **MotorDriver.h** - Creates the "MotorDriver" C++ class that defines the data type for a |motor driver| |BR|
+   **MotorDriver.cpp** - The routines that control the operation of a |motor driver| (Power, Current Sense, etc.)
+
+   Normally you would never need to get into these files, we just mention them because it can be helpful to see the examples in the code if you want to learn more about how to customise your motor board definition or see how things work.
 
 IBT_2 schematic
 ---------------

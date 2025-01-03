@@ -44,7 +44,7 @@ If you are already using |EX-R| and have a myAutomation.h, then just the add ``R
 
 Add a line that looks like:
 
-.. code-block:: 
+.. code-block:: cpp
    
    ROSTER(999,"Loco Name","F0/F1/*F2/F3/F4/F5/F6/F7/F8")
 
@@ -57,7 +57,7 @@ Where:
 
 Some more realistic examples might look like:
 
-.. code-block:: 
+.. code-block:: cpp
    
    ROSTER(3,"Eng 3","F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//") // Address = 3, Loco Name = Eng 3, Function keys F0-F10
    ROSTER(1224,"PE 1224","") // Motor Only Decoder, But use Engine Driver 'Preferences >In Phone Loco 'Sound'
@@ -74,7 +74,7 @@ If a function is not available leave the spot empty. (Don't even have the space 
 
 For example: 
 
-.. code-block:: 
+.. code-block:: cpp
 
    ROSTER(2825,"CN ES44AC","Headlight/Bell/*Horn/Coupler/Dynamic Brake///Flange Squeal/Startup & Shutdown")
 
@@ -82,7 +82,7 @@ Note the two missing text labels for positions F5 and F6. Engine Driver will ski
 
 Example of loco without sound:
 
-.. code-block:: 
+.. code-block:: cpp
 
    ROSTER(2405,"AT&SF 2-8-0 2405","Headlight")
 
@@ -95,13 +95,13 @@ Note that it only has FO (the Headlight) and not following slashes.
 
    Examples of naming Different Locos identical DCC Addresses. Notice the different Function values in the following two examples:
 
-   .. code-block:: 
+   .. code-block:: cpp
 
       ROSTER(4468,"LNER 4468","//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8")
 
    For example, you can add a "-2" to the Second Loco DCC Address and Name:
 
-   .. code-block:: 
+   .. code-block:: cpp
 
       ROSTER(4468-2,"LNER 4468-2","Lights/Steam/*L~Whistle/*S~Whistle/*Whistle2/DoorSlam/Whl Slip/Coal Shvl/BlwDown/SftyVlv/Injector/CylnCock/Brake/Blower/Grd Whistle/Coupler/Fireman/Chuff-Coast/Aux Lghts")
    

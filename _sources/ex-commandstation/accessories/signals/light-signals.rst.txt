@@ -67,7 +67,7 @@ This can be used with the ``ONAMBER(vpin)`` event handler to flash the amber asp
 
 For example, to have a signal using vpins 30 (Red), 31 (Amber), and 32 (Green) flash or blink amber when that aspect is set, you would create the signal and associated event handler in "myAutomation.h" like this:
 
-.. code-block:: 
+.. code-block:: cpp
 
   SIGNAL(30,31,32)      // Define the signal object
   ONAMBER(30)           // When amber aspect is activated
@@ -76,7 +76,7 @@ For example, to have a signal using vpins 30 (Red), 31 (Amber), and 32 (Green) f
 
 Further to this, if you wish to use both on and flashing/blinking amber, you can do so using an |EX-R| macro which can be activated as part of a route or sequence:
 
-.. code-block:: 
+.. code-block:: cpp
 
   // Macro to flash a signal's amber aspect - assumes amber is the next vpin from the red vpin
   #define FLASHAMBER(signal) \

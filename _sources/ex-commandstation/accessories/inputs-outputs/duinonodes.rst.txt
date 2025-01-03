@@ -61,7 +61,7 @@ In both scenarios, these are the required parameters:
 
 The valid formats for "myAutomation.h" are outlined below with examples:
 
-.. code-block:: 
+.. code-block:: cpp
 
   HAL(IO_DNIN8, firstVpin, numPins, clockPin, latchPin, dataPin)    // DNIN8 boards only
   HAL(IO_DNIN8K, firstVpin, numPins, clockPin, latchPin, dataPin)   // DNIN8K boards only

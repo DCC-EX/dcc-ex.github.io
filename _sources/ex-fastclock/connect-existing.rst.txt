@@ -32,7 +32,7 @@ Connecting via Serial is the simplest option if available.
 * Run a dupont cable from the TX pin on the arduino to a RX pin on the EX-CommandStation.  It is not usually necessary to run a cable from RX to the TX on the EX-CommandStation as  the FastClock is not receiving data back.
 * Find the Serial defines in the config.h file (or copy config.example.h to config.h if you dont have one), locate the following lines:
     
-    .. code-block:: 
+    .. code-block:: cpp
 
       //#define SERIAL1_COMMANDS
       //#define SERIAL2_COMMANDS
@@ -41,7 +41,7 @@ Connecting via Serial is the simplest option if available.
   and uncomment the appropriate one for the serial port you are using.
 * Add the following code to your Setup() function:
 
-.. code-block:: 
+.. code-block:: cpp
     
   Serial.begin(115200);
   while (!Serial) {
@@ -50,7 +50,7 @@ Connecting via Serial is the simplest option if available.
 
 * Include the following routine within your code:
   
-  .. code-block:: 
+  .. code-block:: cpp
 
     void SendTime(byte hour, byte mins, byte speed) {
 
@@ -61,7 +61,7 @@ Connecting via Serial is the simplest option if available.
 
 * Each time the time changes call the SendTime routine as follows:
   
-  .. code-block:: 
+  .. code-block:: cpp
 
     SendTime(HH, MM, clockSpeed);
 
@@ -76,14 +76,14 @@ Connecting via |I2C| involves a HAL driver file to the |EX-CS| as well as adding
 * In the |EX-CS| code copy the file myHal.cpp_example.txt to myHal.cpp.
 * Edit the file myHal.cpp and uncomment the following line near the beginning of the file
     
-  .. code-block:: 
+  .. code-block:: cpp
 
     //  #include "IO_EXFastClock.h"  // FastClock driver
 
 
 * Uncomment the following line near the end of the file
 
-  .. code-block:: 
+  .. code-block:: cpp
 
     //  EXFastClock::create(0x55);
   
@@ -96,14 +96,14 @@ Connecting via |I2C| involves a HAL driver file to the |EX-CS| as well as adding
 
   Near the top of the sketch:
 
-  .. code-block:: 
+  .. code-block:: cpp
 
     #include <Wire.h>
 
 
   Within your Setup():
 
-  .. code-block:: 
+  .. code-block:: cpp
 
     Wire.begin(I2CAddress);
     Wire.onRequest(TransmitTime);
@@ -111,7 +111,7 @@ Connecting via |I2C| involves a HAL driver file to the |EX-CS| as well as adding
 
   Add the following function within the sketch
 
-  .. code-block:: 
+  .. code-block:: cpp
 
     void TransmitTime() {
         // send the data over I2C

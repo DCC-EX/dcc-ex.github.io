@@ -109,7 +109,7 @@ Due to the HAL within |EX-CS|, the maximum number of steps per rotation the |EX-
 
 If your physical turntable involves gearing, for example a small spur gear on the stepper driving a large gear connected to the turntable or you have a stepper with an inbuilt gearbox, you will need to know the gear ratio, and multiply that by the number of steps per rotation of your stepper motor. This would give a resultant step per rotation count that needs to be no more than 32767 steps.
 
-.. code-block:: 
+.. code-block::
 
   # large gear teeth / # small gear teeth * stepper steps per rotation
 

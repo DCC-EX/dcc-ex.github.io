@@ -30,7 +30,7 @@ Once you've installed Git, you will need to set some variables to tell Git who y
 
 To do this, open a command prompt and run the following two commands, where ``user`` is your GitHub username, and ``email`` is the email address associated with your GitHub account (the same commands apply across all operating systems):
 
-.. code-block:: 
+.. code-block:: shell
 
   git config --global user.name <user>
   git config --global user.email <email>
@@ -85,7 +85,7 @@ The recommended approach to build a local preview is to use a virtual environmen
 
 If you wish, however, to manually install the packages, you can open a command prompt and run the following command:
 
-.. code-block:: 
+.. code-block:: shell
 
   pip install sphinx_rtd_theme==1.2.0 sphinx-toolbox install sphinx sphinxcontrib-spelling
 
@@ -161,7 +161,7 @@ Use VSCode for git
 
 If you wish to use VSCode as your default editor for Git, open a command prompt and run the following command:
 
-.. code-block:: 
+.. code-block:: shell
 
   git config --global core.editor "code --wait"
 

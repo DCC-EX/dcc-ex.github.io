@@ -11,7 +11,7 @@
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=a010c375" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=3b1dd56d" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -904,10 +904,10 @@ code into two source files (.SSD1306Ascii.h and SSD1306Ascii.cpp).</p></li>
 <li><p>Displays: Enable upper-case only mode for SSD1306Ascii, optionally reducing FLASH usage for font storage.</p></li>
 <li><p>Sensors/Turnouts/Outputs: Revise Turnout command handling to support new commands, e.g.</p>
 <blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;T id SERVO vpin activeposition inactiveposition profile&gt;
-&lt;T id DCC address subaddress&gt;  // address 1-512, subaddress 0-3
-&lt;T id DCC linearaddress&gt;         // linearaddress 1-2048
-&lt;T id VPIN pin&gt;
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="n">SERVO</span><span class="w"> </span><span class="n">vpin</span><span class="w"> </span><span class="n">activeposition</span><span class="w"> </span><span class="n">inactiveposition</span><span class="w"> </span><span class="n">profile</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="n">DCC</span><span class="w"> </span><span class="n">address</span><span class="w"> </span><span class="n">subaddress</span><span class="o">&gt;</span><span class="w">  </span><span class="c1">// address 1-512, subaddress 0-3</span>
+<span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="n">DCC</span><span class="w"> </span><span class="n">linearaddress</span><span class="o">&gt;</span><span class="w">         </span><span class="c1">// linearaddress 1-2048</span>
+<span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="n">VPIN</span><span class="w"> </span><span class="n">pin</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -1161,7 +1161,7 @@ servo’s range.</p></li>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fb16d220d30>
+    <jinja2.runtime.BlockReference object at 0x7fc7d734a260>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

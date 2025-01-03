@@ -9,7 +9,7 @@ Example - Full automation with servo based turnouts/points and signals with a PC
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
-.. code-block:: 
+.. code-block:: cpp
 
   // myAutomation.h for simple ROUTEs with servo based turnouts/points and signals, and sensors directly connected to the Mega2560.
 

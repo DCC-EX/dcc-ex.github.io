@@ -559,6 +559,10 @@ html[data-theme='dark'] .admonition-title {
   font-weight: 700;
 }
 
+html[data-theme='dark'] .menuselection {
+  color: black;
+}
+
 /* *************************************** */
 
 .wy-table-responsive {
@@ -800,22 +804,23 @@ nav.in-this-section {
   padding: 12px 12px 12px 12px !important;
   border-radius: 10px;
   margin: 0 0 12px 24px;
+  box-shadow: -5px 5px 10px #66666696;
 }
 
 html[data-theme='dark'] .rst-content .sidebar {
   background: #000000ff !important;
   border:#000000ff !important;
+  box-shadow: -5px 5px 10px #000000a1;
 }
 
 .sidebar-title {
-  border-radius: 10px;
+  border-radius: 10px 10px 0px 0px !important;
+  margin: -12px -12px 12px !important;
 }
 
 html[data-theme='dark'] .sidebar-title {
   background: #002735 !important;
 }
-
-
 
 
 /* news */

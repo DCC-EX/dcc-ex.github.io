@@ -168,7 +168,7 @@ You can issue |DCC-EX Native Commands| to the |EX-CS| to change the output modes
 
 2. Issue the following command. |BR| Note that in this example I am setting output B to be DCC MAIN.
 
-.. code-block:: c++
+.. code-block:: cpp
 
   <= B MAIN>
 
@@ -187,7 +187,7 @@ We will be adding some instructions the ``myAutomation.h`` file a re-uploading t
 2. This will take you to the ``Advanced Configuration`` page, where you will have two (or possibly more) edit regions. One will be labelled ``myAutomation.h``.
 3. in the ``myAutomation.h`` edit region you will need to type or copy the something like the following. |BR| Note that in this example I am setting output B to be DCC MAIN.
 
-.. code-block:: c++
+.. code-block:: cpp
 
  ROUTE(3, "Set Output B to DCC MAIN") // 3 is the sequence identifier  it must be unique
    SET_TRACK(B,MAIN)  // Set Track B to DCC MAIN

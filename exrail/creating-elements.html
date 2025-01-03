@@ -10,7 +10,7 @@
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=a010c375" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=3b1dd56d" />
       <link rel="stylesheet" type="text/css" href="../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -774,21 +774,21 @@
 </div></blockquote>
 <p>The <code class="docutils literal notranslate"><span class="pre">PIN_TURNOUT</span></code> command defines a pin operated turnout/point in <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a>, which will appear in <a class="reference internal" href="../reference/software/withrottle-vs-native-commands.html"><span class="doc">wiThrottle Protocol</span></a> apps, <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>, and <a class="reference internal" href="../throttles/software/jmri.html"><span class="doc">JMRI</span></a> in addition to being defined as a turnout/point within the CommandStation.</p>
 <p>When setting up a turnout/point where multiple pins are required for control, the <code class="docutils literal notranslate"><span class="pre">VIRTUAL_TURNOUT</span></code> command should be used along with a control sequence. This is commonly used to configure solenoid-based turnout motors.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#define PULSE 10    // Set the duration of the pulse to 10ms
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define PULSE 10    </span><span class="c1">// Set the duration of the pulse to 10ms</span>
 
-#define SINGLE_COIL_TURNOUT(t, p1, p2, p3, desc) \
-VIRTUAL_TURNOUT(t, desc) \
-DONE \
-ONCLOSE(t) \
-SET(p2) RESET(p3) \
-SET(p1) DELAY(PULSE) RESET(p1) \
-DONE
-ONTHROW(t) \
-RESET(p2) SET(p3) \
-SET(p1) DELAY(PULSE) RESET(p1) \
-DONE
+<span class="cp">#define SINGLE_COIL_TURNOUT(t, p1, p2, p3, desc) \</span>
+<span class="cp">VIRTUAL_TURNOUT(t, desc) \</span>
+<span class="cp">DONE \</span>
+<span class="cp">ONCLOSE(t) \</span>
+<span class="cp">SET(p2) RESET(p3) \</span>
+<span class="cp">SET(p1) DELAY(PULSE) RESET(p1) \</span>
+<span class="cp">DONE</span>
+<span class="n">ONTHROW</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="w"> </span>\
+<span class="n">RESET</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span><span class="w"> </span><span class="n">SET</span><span class="p">(</span><span class="n">p3</span><span class="p">)</span><span class="w"> </span>\
+<span class="n">SET</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span><span class="w"> </span><span class="n">DELAY</span><span class="p">(</span><span class="n">PULSE</span><span class="p">)</span><span class="w"> </span><span class="n">RESET</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span><span class="w"> </span>\
+<span class="n">DONE</span>
 
-SINGLE_COIL_TURNOUT(101, 22, 24, 26, &quot;Turnout 101&quot;)
+<span class="n">SINGLE_COIL_TURNOUT</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Turnout 101&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -873,7 +873,7 @@ SINGLE_COIL_TURNOUT(101, 22, 24, 26, &quot;Turnout 101&quot;)
 <p>The <code class="docutils literal notranslate"><span class="pre">SERVO_SIGNAL</span></code> directive defines a servo based signal in <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> to drive semaphore type signals as part of sequences or routes, or simply be set via a signal or similar.</p>
 <p>Similar to pin based signals, servo signals are controlled by the ID of the red pin only.</p>
 <p>Unlike servo based turnouts/points, there is no ID or description (they don’t appear in throttles), and they use the “Bounce” profile with no other options available at the present time:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">redpos</span><span class="p">,</span><span class="w"> </span><span class="n">amberpos</span><span class="p">,</span><span class="w"> </span><span class="n">greenpos</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="code-block-float-right highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example</span>
@@ -981,8 +981,8 @@ SINGLE_COIL_TURNOUT(101, 22, 24, 26, &quot;Turnout 101&quot;)
 <p>Signals setup on vpins 101, 102 … 115</p>
 <p>For each signal add a line in myAutomation.h in the form:</p>
 <p>SIGNAL(red_pin, amber_pin, green_pin)</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// always use the first red_pin as the signal_id for All signal color changes)
-SIGNAL(106, 0, 107) // Red, Amber, Green For turnout/point 1
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// always use the first red_pin as the signal_id for All signal color changes)</span>
+<span class="n">SIGNAL</span><span class="p">(</span><span class="mi">106</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">107</span><span class="p">)</span><span class="w"> </span><span class="c1">// Red, Amber, Green For turnout/point 1</span>
 </pre></div>
 </div>
 <p>Combine the two commands Servo_Turnout and Signal (New 4.1:)</p>
@@ -1023,7 +1023,7 @@ SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for turnout/point 1, Thrown=Red,
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fb16a4bdf90>
+    <jinja2.runtime.BlockReference object at 0x7fc7f0100eb0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

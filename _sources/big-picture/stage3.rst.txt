@@ -66,13 +66,13 @@ If you use different sensors that simply provide an active low or high output, t
 
   This is invalid:
 
-  .. code-block:: 
+  .. code-block:: cpp
 
     ALIAS(SNS1, -22)
 
   Instead, these use cases are valid:
 
-  .. code-block:: 
+  .. code-block:: cpp
 
     ALIAS(SNS1, 22)
 

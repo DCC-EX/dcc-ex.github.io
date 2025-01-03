@@ -21,7 +21,7 @@ The Bluetooth interface on ESP32 is not the primary serial interface, so it will
 
 You will need to enable ``SERIAL_BT_COMMANDS`` in your "config.h" file:
 
-.. code-block:: 
+.. code-block:: cpp
 
   #define SERIAL_BT_COMMANDS
 

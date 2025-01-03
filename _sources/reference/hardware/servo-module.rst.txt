@@ -114,13 +114,13 @@ Similar to pin based signals, servo signals are controlled by the ID of the red 
 
 Unlike servo based turnouts, there is no ID or description (they don't appear in throttles), and they use the "Bounce" profile with no other options available at the present time:
 
-.. code-block:: 
+.. code-block:: cpp
 
    SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
 
 A simple example using the third control pins of the first PCA9685 connected to the CommandStation would be:
 
-.. code-block:: 
+.. code-block:: cpp
 
    SERVO_SIGNAL(102, 400, 250, 100)
 
@@ -272,7 +272,7 @@ Using these with EXRAIL
 
 The example below simulates a camp fire by continuously varying the LED brightness for random delay times, and this starts automatically when the |EX-CS| starts by using the ``AUTOSTART`` directive.
 
-.. code-block:: 
+.. code-block:: cpp
 
    SEQUENCE(3)
       AUTOSTART

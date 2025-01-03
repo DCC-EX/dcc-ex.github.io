@@ -11,7 +11,7 @@
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/dccex_theme.css?v=a010c375" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/dccex_theme.css?v=3b1dd56d" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -1005,9 +1005,9 @@
 <p>All of these tests require a serial connection to your <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> and use interactive commands to change the active configuration. If you’re unsure on how to connect via a serial connection, refer to <a class="reference internal" href="../../tools/serial-monitor.html"><span class="doc">Using a Serial Monitor</span></a></p>
 <p>Note in the images below, Track A is the right hand green connector, and Track B is the left hand green connector.</p>
 <p>Firstly, configure both Tracks as <code class="docutils literal notranslate"><span class="pre">MAIN</span></code> and turn track power on:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;= A MAIN&gt;
-&lt;= B MAIN&gt;
-&lt;1&gt;
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;=</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">MAIN</span><span class="o">&gt;</span>
+<span class="o">&lt;=</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">MAIN</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>This should result in all four (4) yellow LEDs being lit:</p>
@@ -1018,9 +1018,9 @@
 </figcaption>
 </figure>
 <p>Next, configure Track A as <code class="docutils literal notranslate"><span class="pre">DC</span></code>, turn power on again, and ensure that there is no throttle speed:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;A= A DC 1&gt;
-&lt;1&gt;
-&lt;t 1 0 1&gt;
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">A</span><span class="o">=</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">DC</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">t</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>This should result in both Track B (left) LEDs being lit, but Track A (right) LEDs being off:</p>
@@ -1031,7 +1031,7 @@
 </figcaption>
 </figure>
 <p>Set throttle speed for Track A using DCC address 1:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;t 1 100 1&gt;
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">t</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>This should result in both Track B (left) LEDs still being lit, and one Track A (right) LED being lit:</p>
@@ -1042,7 +1042,7 @@
 </figcaption>
 </figure>
 <p>Reverse the direction for Track A using DCC address 1:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;t 1 100 0&gt;
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">t</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>This should result in both Track B (left) LEDs still being lit, and the opposite Track A (right) LED being lit:</p>
@@ -1053,8 +1053,8 @@
 </figcaption>
 </figure>
 <p>Now configure Track B as <code class="docutils literal notranslate"><span class="pre">DC</span></code> with the same DCC address as Track A and power on:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;= B DC 1&gt;
-&lt;1&gt;
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;=</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">DC</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>This should now result in one Track B (left) LED being lit, matching Track A’s (right) LED being lit:</p>
@@ -1065,7 +1065,7 @@
 </figcaption>
 </figure>
 <p>Finally, change to the forward direction again:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;t 1 100 1&gt;
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">t</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>This should now result in both Track B (left) and Track A (right) having the opposite LED being lit:</p>
@@ -1101,7 +1101,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fb15cb5ceb0>
+    <jinja2.runtime.BlockReference object at 0x7fc7dff1f730>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

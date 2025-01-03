@@ -270,11 +270,11 @@
 ..
 .. |MOTOR DRIVER| replace::
    
-    :abbr:`Motor Driver (also referred to as a Motor Shield or Motor Board)`
+    :abbr:`Motor Driver (also referred to as a 'Motor Controller', 'Motor Shield' or 'Motor Board')`
 ..
 .. |MOTOR SHIELD| replace::
    
-    :abbr:`Motor Shield (also referred to as a Motor Driver or Motor Board)`
+    :abbr:`Motor Shield (also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board')`
 ..
 .. |DIY| replace::
    

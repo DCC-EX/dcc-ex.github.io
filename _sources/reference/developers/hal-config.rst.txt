@@ -102,7 +102,7 @@ The list of active |I2C| addresses is shown on the serial output during startup.
 Note that the address does not necessarily tell you what the device is, since different modules may have the same default
 address.
 
-.. code-block::
+.. code-block:: 
 
   <* License GPLv3 fsf.org (c) dcc-ex.com *>
   <* I2C Device found at x20 *>    -- GPIO Extender device
@@ -128,7 +128,7 @@ Two MCP23017 modules are pre-configured, one is address 0x20 and uses VPINs 164-
 
 An input pin may be configured using the DCC-EX Sensor commands, as follows:
 
-.. code-block::
+.. code-block:: cpp
 
 	<S 201 164 1>  
 
@@ -136,7 +136,7 @@ This command associates sensor ID 201 with VPIN 164 (MCP23017 first pin) and ena
 
 When the sensor activates and deactivates, the following messages are sent by |EX-CS| over the serial output:
 
-.. code-block::
+.. code-block:: cpp
 
 	<Q 201>         -- Activation
 	<q 201>         -- Deactivation
@@ -157,7 +157,7 @@ Two PCA9685 modules are pre-configured, one is address 0x40 and uses VPINs 100-1
 
 A servo turnout may be configured using the DCC-EX Turnout commands, as follows:
 
-.. code-block::
+.. code-block:: cpp
 
 	<T 301 SERVO 100 410 205 2>		
   
@@ -172,10 +172,10 @@ However, I've found, with SG90 servos, that 102 to 490 gives a full servo sweep 
 *But use with care, as an attempt to position a servo outside of its range may 
 cause damage to the servo gearing, or to any layout components you have connected to the servo!*
 
-.. code-block::
+.. code-block:: cpp
 
-	<T 301 1>  -- Instructs the turnout to move to the 'thrown' position.
-	<T 301 0>  -- Instructs the turnout to move the the 'closed' position.
+	<T 301 1>  // Instructs the turnout to move to the 'thrown' position.
+	<T 301 0>  // Instructs the turnout to move the the 'closed' position.
 
 In EXRAIL, the servo can be controlled directly via the **SERVO(pin,position,profile)** or **SERVO2(pin,position,duration)** commands.
 	
@@ -219,7 +219,7 @@ If you need to locate a PCA/TCA9555 at 0x20 or 0x21, you will need to comment ou
 
 To configure an input pin using the DCC-EX Sensor commands, use the <S> command:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <S 801 211 1> or <S 801 211 0>
 
@@ -227,7 +227,7 @@ As per the notes above, the 0 or 1 for the pull-up is redundant as this is alway
 
 An output port may be configured using the DCC-EX Output commands, as follows:
 
-.. code-block:: 
+.. code-block:: cpp
   
   <Z 901 196 0>
 
@@ -355,13 +355,13 @@ Checking the Driver
 
 Start the |IDE serial monitor|, and set its speed to 115200 baud.  If you enter the following command:
 
-.. code-block:: none
+.. code-block:: cpp
 
   <D HAL SHOW>
 
 You will see a list of the configured devices, and among them should be the new device, as follows:
 
-.. code-block:: none
+.. code-block::
 
   <* Arduino Vpins:2-69 *>
   <* PCA9685 I2C:x40 Configured on Vpins:100-115 *>
@@ -377,7 +377,7 @@ The five VPINs, 1000 to 1004, allow the first five MP3 files on the Micro-SD car
 write to the pins as if they were real digital output pins on the Arduino.  For example, set up
 some outputs using the |IDE serial monitor|, by entering the following commands:
 
-.. code-block:: none
+.. code-block:: cpp
 
   <Z 1000 1000 0>
   <Z 1001 1001 0>
@@ -387,7 +387,7 @@ some outputs using the |IDE serial monitor|, by entering the following commands:
 
 Now you can trigger any of the five MP3 files by using one of the following commands:
 
-.. code-block:: none
+.. code-block:: cpp
 
   <Z 1000 1>
   <Z 1001 1>
@@ -399,7 +399,7 @@ To stop the player, use ``<Z 1000 0>`` etc.
 
 You may also control the player by writing to the first two VPINs as analogue output capable pins. Try the following commands:
 
-.. code-block:: none
+.. code-block:: cpp
 
   <D ANOUT 1000 5>        // play MP3 file number 5.
   <D ANOUT 1000 4 10>     // play MP3 file number 4 at low volume (10).
@@ -410,7 +410,7 @@ Note: The volume commands apply to the device, not to the specific MP3 files.
 
 You can also control the DFPlayer through EXRAIL, using commands like the following:
 
-.. code-block:: none
+.. code-block:: cpp
 
   SET(1000)             // Start playing first sound
   AT(-1000)             // Wait for playing to finish

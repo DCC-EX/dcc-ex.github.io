@@ -11,7 +11,7 @@
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=a010c375" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=3b1dd56d" />
       <link rel="stylesheet" type="text/css" href="../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -651,9 +651,9 @@
 <li><p>Run a dupont cable from the TX pin on the arduino to a RX pin on the EX-CommandStation.  It is not usually necessary to run a cable from RX to the TX on the EX-CommandStation as  the FastClock is not receiving data back.</p></li>
 <li><p>Find the Serial defines in the config.h file (or copy config.example.h to config.h if you dont have one), locate the following lines:</p>
 <blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>//#define SERIAL1_COMMANDS
-//#define SERIAL2_COMMANDS
-//#define SERIAL3_COMMANDS
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//#define SERIAL1_COMMANDS</span>
+<span class="c1">//#define SERIAL2_COMMANDS</span>
+<span class="c1">//#define SERIAL3_COMMANDS</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -661,25 +661,25 @@
 </li>
 <li><p>Add the following code to your Setup() function:</p></li>
 </ul>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Serial.begin(115200);
-while (!Serial) {
-; // wait for serial port to connect. Needed for native USB port only
-}
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">Serial</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="p">;</span><span class="w"> </span><span class="c1">// wait for serial port to connect. Needed for native USB port only</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <ul>
 <li><p>Include the following routine within your code:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>void SendTime(byte hour, byte mins, byte speed) {
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">SendTime</span><span class="p">(</span><span class="n">byte</span><span class="w"> </span><span class="n">hour</span><span class="p">,</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="n">mins</span><span class="p">,</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="n">speed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 
-  int itime = (hour * 60) + mins;
-  char buffer[20];
-  sprintf(buffer, &quot;&lt;JC %d %d&gt;&quot;, itime, speed);
-  Serial.println(buffer);
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">itime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">hour</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mins</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">buffer</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+<span class="w">  </span><span class="n">sprintf</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&lt;JC %d %d&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">itime</span><span class="p">,</span><span class="w"> </span><span class="n">speed</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">buffer</span><span class="p">);</span>
 </pre></div>
 </div>
 </li>
 <li><p>Each time the time changes call the SendTime routine as follows:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SendTime(HH, MM, clockSpeed);
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SendTime</span><span class="p">(</span><span class="n">HH</span><span class="p">,</span><span class="w"> </span><span class="n">MM</span><span class="p">,</span><span class="w"> </span><span class="n">clockSpeed</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>where HH = the hour, MM = minutes and clockSpeed = the fast speed (e.g. at spped 4, 15 seconds represents a minute).</p>
@@ -692,12 +692,12 @@ while (!Serial) {
 <ul>
 <li><p>In the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> code copy the file myHal.cpp_example.txt to myHal.cpp.</p></li>
 <li><p>Edit the file myHal.cpp and uncomment the following line near the beginning of the file</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>//  #include &quot;IO_EXFastClock.h&quot;  // FastClock driver
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//  #include &quot;IO_EXFastClock.h&quot;  // FastClock driver</span>
 </pre></div>
 </div>
 </li>
 <li><p>Uncomment the following line near the end of the file</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>//  EXFastClock::create(0x55);
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//  EXFastClock::create(0x55);</span>
 </pre></div>
 </div>
 <p>0x55 (decimal 85) is the default address but needs to match that in the FastClock code (see below).</p>
@@ -705,26 +705,26 @@ while (!Serial) {
 <li><p>Using Dupont connectors connect SDA/SCL/Gnd on the clock to SDA/SCL/Gnd on the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a></p></li>
 <li><p>Include the following code in your FastClock code:</p>
 <p>Near the top of the sketch:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#include &lt;Wire.h&gt;
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Wire.h&gt;</span>
 </pre></div>
 </div>
 <p>Within your Setup():</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Wire.begin(I2CAddress);
-Wire.onRequest(TransmitTime);
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Wire</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">I2CAddress</span><span class="p">);</span>
+<span class="n">Wire</span><span class="p">.</span><span class="n">onRequest</span><span class="p">(</span><span class="n">TransmitTime</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Add the following function within the sketch</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>void TransmitTime() {
-    // send the data over I2C
-    // send the time as &lt;mmmm&gt; as two bytes followed by clockspeed
-    int timetosend = (HH * 60) + MM;
-    byte TimeArray[2];
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">TransmitTime</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// send the data over I2C</span>
+<span class="w">    </span><span class="c1">// send the time as &lt;mmmm&gt; as two bytes followed by clockspeed</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">timetosend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">HH</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">MM</span><span class="p">;</span>
+<span class="w">    </span><span class="n">byte</span><span class="w"> </span><span class="n">TimeArray</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
 
-    TimeArray[0] = (timetosend &gt;&gt; 8);
-    TimeArray[1] = timetosend &amp; 0xFF;
-    Wire.write(TimeArray, 2);
-    Wire.write(clockSpeed);
-}
+<span class="w">    </span><span class="n">TimeArray</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">timetosend</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+<span class="w">    </span><span class="n">TimeArray</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">timetosend</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Wire</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">TimeArray</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Wire</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">clockSpeed</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>In the function above  HH is the time as hours (24hr. clock) and MM is the minutes.</p>
@@ -762,7 +762,7 @@ Wire.onRequest(TransmitTime);
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fb16c585300>
+    <jinja2.runtime.BlockReference object at 0x7fc7ef3d7fa0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

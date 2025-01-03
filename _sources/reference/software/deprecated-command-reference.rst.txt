@@ -93,7 +93,7 @@ Examples:
   *  ``C`` - Designator to signify this is a current meter (V would be for voltage)
   *  ``Milli`` - Unit of measure for external software with a meter like JMRI (Milli, Kilo, etc.)
   *  ``0`` - numbered parameter for external software (1,2,3, etc.)
-  *  ``max_ma`` - The maximum current handling of the motor controller in MilliAmps
+  *  ``max_ma`` - The maximum current handling of the |motor driver| in MilliAmps
   *  ``1`` - number parameter for external software (we use 2 parameters here, 0 and 1)
   *  ``trip_ma`` - The overcurrent limit that will trip the software circuit breaker in mA
     

@@ -11,7 +11,7 @@
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=a010c375" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=3b1dd56d" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -632,144 +632,144 @@
 <section id="example-full-automation-with-servo-based-turnouts-points-and-signals-with-a-pca9685-servo-module">
 <h1>Example - Full automation with servo based turnouts/points and signals with a PCA9685 servo module<a class="headerlink" href="#example-full-automation-with-servo-based-turnouts-points-and-signals-with-a-pca9685-servo-module" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../support/index.html#contact-support-options" title="Request help or support"><img src="../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// myAutomation.h for simple ROUTEs with servo based turnouts/points and signals, and sensors directly connected to the Mega2560.
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// myAutomation.h for simple ROUTEs with servo based turnouts/points and signals, and sensors directly connected to the Mega2560.</span>
 
-ALIAS(TRN1, 100)
-ALIAS(TRN2, 101)
-ALIAS(SNS1_TRN1_APP, 24)
-ALIAS(SNS2_MAIN_TRN1_EX, 25)
-ALIAS(SNS3_STN, 26)
-ALIAS(SNS4_MAIN_TRN2_APP, 27)
-ALIAS(SNS5_STN_TRN2_APP, 28)
-ALIAS(SNS6_TRN2_EX, 29)
-ALIAS(SIG1_TRN1_APP, 102)
-ALIAS(SIG2_TRN2_GO, 103)
-ALIAS(SIG3_STN_EX, 104)
-ALIAS(BLK1_TRN1_APP, 1)
-ALIAS(BLK2_MAIN_HOLD, 2)
-ALIAS(BLK3_STN, 3)
-ALIAS(BLK4_TRN2_EX, 4)
-ALIAS(BLK1_EXIT, 1)
-ALIAS(BLK1_BLK2, 2)
-ALIAS(BLK1_BLK3, 3)
-ALIAS(BLK2_BLK4, 4)
-ALIAS(BLK3_BLK4, 5)
-ALIAS(BLK4_BLK1, 6)
-ALIAS(CHOOSE_BLK2, 60)
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">TRN1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">TRN2</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS2_MAIN_TRN1_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS3_STN</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS4_MAIN_TRN2_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS5_STN_TRN2_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">SNS6_TRN2_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">29</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">102</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">,</span><span class="w"> </span><span class="mi">103</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">104</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">BLK1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">BLK2_MAIN_HOLD</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">BLK3_STN</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">BLK4_TRN2_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">BLK1_EXIT</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">BLK1_BLK2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">BLK1_BLK3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">BLK2_BLK4</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">BLK3_BLK4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">BLK4_BLK1</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">CHOOSE_BLK2</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span>
 
-SERVO_TURNOUT(TRN1, 100, 400, 100, Slow, &quot;Station entry&quot;)
-SERVO_TURNOUT(TRN2, 101, 400, 100, Slow, &quot;Station exit&quot;)
-SERVO_SIGNAL(SIG1_TRN1_APP, 400, 250, 100)
-SERVO_SIGNAL(SIG2_TRN2_GO, 400, 250, 100)
-SERVO_SIGNAL(SIG3_STN_EX, 400, 250, 100)
+<span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">TRN1</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station entry&quot;</span><span class="p">)</span>
+<span class="n">SERVO_TURNOUT</span><span class="p">(</span><span class="n">TRN2</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">Slow</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station exit&quot;</span><span class="p">)</span>
+<span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
+<span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
+<span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
 
-// Start up with turnouts/points closed and signals red
-CLOSE(TRN1)
-CLOSE(TRN2)
-RED(SIG1_TRN1_APP)
-RED(SIG2_TRN2_GO)
-RED(SIG3_STN_EX)
+<span class="c1">// Start up with turnouts/points closed and signals red</span>
+<span class="n">CLOSE</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span>
+<span class="n">CLOSE</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span>
+<span class="n">RED</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
+<span class="n">RED</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span>
+<span class="n">RED</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span>
 
-// Send three locos around our layout:
-RESERVE(BLK1_TRN1_APP)
-RESERVE(BLK2_MAIN_HOLD)
-RESERVE(BLK4_TRN2_EX)
-SENDLOCO(1, BLK1_EXIT)
-SENDLOCO(2, BLK2_BLK4)
-SENDLOCO(3, BLK4_BLK1)
+<span class="c1">// Send three locos around our layout:</span>
+<span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK1_TRN1_APP</span><span class="p">)</span>
+<span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK2_MAIN_HOLD</span><span class="p">)</span>
+<span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK4_TRN2_EX</span><span class="p">)</span>
+<span class="n">SENDLOCO</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">BLK1_EXIT</span><span class="p">)</span>
+<span class="n">SENDLOCO</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">BLK2_BLK4</span><span class="p">)</span>
+<span class="n">SENDLOCO</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">BLK4_BLK1</span><span class="p">)</span>
 
-// We need DONE to tell EXRAIL not to automatically proceed beyond definitions above
-DONE
+<span class="c1">// We need DONE to tell EXRAIL not to automatically proceed beyond definitions above</span>
+<span class="n">DONE</span>
 
-// Sequence to exit block 1, and choose whether to go to the station or continue on main
-SEQUENCE(BLK1_EXIT)
-  IF(CHOOSE_BLK2)
-    UNLATCH(CHOOSE_BLK2)
-    FOLLOW(BLK1_BLK2)
-  ELSE
-    LATCH(CHOOSE_BLK2)
-    FOLLOW(BLK1_BLK3)
-  ENDIF
+<span class="c1">// Sequence to exit block 1, and choose whether to go to the station or continue on main</span>
+<span class="n">SEQUENCE</span><span class="p">(</span><span class="n">BLK1_EXIT</span><span class="p">)</span>
+<span class="w">  </span><span class="n">IF</span><span class="p">(</span><span class="n">CHOOSE_BLK2</span><span class="p">)</span>
+<span class="w">    </span><span class="n">UNLATCH</span><span class="p">(</span><span class="n">CHOOSE_BLK2</span><span class="p">)</span>
+<span class="w">    </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK1_BLK2</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ELSE</span>
+<span class="w">    </span><span class="n">LATCH</span><span class="p">(</span><span class="n">CHOOSE_BLK2</span><span class="p">)</span>
+<span class="w">    </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK1_BLK3</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ENDIF</span>
 
-// Sequence to go from block 1 to block 2
-SEQUENCE(BLK1_BLK2)
-  RESERVE(BLK2_MAIN_HOLD)
-  IFTHROWN(TRN1)
-    AMBER(SIG1_TRN1_APP)
-    DELAY(2000)
-    RED(SIG1_TRN1_APP)
-    CLOSE(TRN1)
-    DELAY(2000)
-  ENDIF
-  GREEN(SIG1_TRN1_APP)
-  FWD(20)
-  AFTER(SNS2_MAIN_TRN1_EX)
-  FREE(BLK1_TRN1_APP)
-  FOLLOW(BLK2_BLK4)
+<span class="c1">// Sequence to go from block 1 to block 2</span>
+<span class="n">SEQUENCE</span><span class="p">(</span><span class="n">BLK1_BLK2</span><span class="p">)</span>
+<span class="w">  </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK2_MAIN_HOLD</span><span class="p">)</span>
+<span class="w">  </span><span class="n">IFTHROWN</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span>
+<span class="w">    </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
+<span class="w">    </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">    </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
+<span class="w">    </span><span class="n">CLOSE</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span>
+<span class="w">    </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ENDIF</span>
+<span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
+<span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="w">  </span><span class="n">AFTER</span><span class="p">(</span><span class="n">SNS2_MAIN_TRN1_EX</span><span class="p">)</span>
+<span class="w">  </span><span class="n">FREE</span><span class="p">(</span><span class="n">BLK1_TRN1_APP</span><span class="p">)</span>
+<span class="w">  </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK2_BLK4</span><span class="p">)</span>
 
-// Sequence to go from block 1 to block 3
-SEQUENCE(BLK1_BLK3)
-  RESERVE(BLK3_STN)
-  IFCLOSED(TRN1)
-    AMBER(SIG1_TRN1_APP)
-    DELAY(2000)
-    RED(SIG1_TRN1_APP)
-    THROW(TRN1)
-    DELAY(2000)
-  ENDIF
-  GREEN(SIG1_TRN1_APP)
-  FWD(10)
-  AT(SNS3_STN)
-  STOP
-  FREE(BLK1_TRN1_APP)
-  DELAYRANDOM(10000, 15000)
-  FWD(10)
-  AT(SNS5_STN_TRN2_APP)
-  FOLLOW(BLK3_BLK4)
+<span class="c1">// Sequence to go from block 1 to block 3</span>
+<span class="n">SEQUENCE</span><span class="p">(</span><span class="n">BLK1_BLK3</span><span class="p">)</span>
+<span class="w">  </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK3_STN</span><span class="p">)</span>
+<span class="w">  </span><span class="n">IFCLOSED</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span>
+<span class="w">    </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
+<span class="w">    </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">    </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
+<span class="w">    </span><span class="n">THROW</span><span class="p">(</span><span class="n">TRN1</span><span class="p">)</span>
+<span class="w">    </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ENDIF</span>
+<span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="n">SIG1_TRN1_APP</span><span class="p">)</span>
+<span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="n">SNS3_STN</span><span class="p">)</span>
+<span class="w">  </span><span class="n">STOP</span>
+<span class="w">  </span><span class="n">FREE</span><span class="p">(</span><span class="n">BLK1_TRN1_APP</span><span class="p">)</span>
+<span class="w">  </span><span class="n">DELAYRANDOM</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span><span class="w"> </span><span class="mi">15000</span><span class="p">)</span>
+<span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="n">SNS5_STN_TRN2_APP</span><span class="p">)</span>
+<span class="w">  </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK3_BLK4</span><span class="p">)</span>
 
-// Sequence to go from block 2 to block 4
-SEQUENCE(BLK2_BLK4)
-  RESERVE(BLK4_TRN2_EX)
-  IFTHROWN(TRN2)
-    AMBER(SIG2_TRN2_GO)
-    AMBER(SIG3_STN_EX)
-    DELAY(2000)
-    RED(SIG2_TRN2_GO)
-    RED(SIG3_STN_EX)
-    CLOSE(TRN2)
-    DELAY(2000)
-  ENDIF
-  GREEN(SIG2_TRN2_GO)
-  FWD(20)
-  AFTER(SNS4_MAIN_TRN2_APP)
-  FREE(BLK2_MAIN_HOLD)
-  FOLLOW(BLK4_BLK1)
+<span class="c1">// Sequence to go from block 2 to block 4</span>
+<span class="n">SEQUENCE</span><span class="p">(</span><span class="n">BLK2_BLK4</span><span class="p">)</span>
+<span class="w">  </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK4_TRN2_EX</span><span class="p">)</span>
+<span class="w">  </span><span class="n">IFTHROWN</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span>
+<span class="w">    </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span>
+<span class="w">    </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span>
+<span class="w">    </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">    </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span>
+<span class="w">    </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span>
+<span class="w">    </span><span class="n">CLOSE</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span>
+<span class="w">    </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ENDIF</span>
+<span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span>
+<span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="w">  </span><span class="n">AFTER</span><span class="p">(</span><span class="n">SNS4_MAIN_TRN2_APP</span><span class="p">)</span>
+<span class="w">  </span><span class="n">FREE</span><span class="p">(</span><span class="n">BLK2_MAIN_HOLD</span><span class="p">)</span>
+<span class="w">  </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK4_BLK1</span><span class="p">)</span>
 
-// Sequence to go from block 3 to block 4
-SEQUENCE(BLK3_BLK4)
-  RESERVE(BLK4_TRN2_EX)
-  IFCLOSED(TRN2)
-    AMBER(SIG2_TRN2_GO)
-    AMBER(SIG3_STN_EX)
-    DELAY(2000)
-    RED(SIG2_TRN2_GO)
-    RED(SIG3_STN_EX)
-    THROW(TRN2)
-    DELAY(2000)
-  ENDIF
-  GREEN(SIG3_STN_EX)
-  FWD(20)
-  AFTER(SNS5_STN_TRN2_APP)
-  FREE(BLK3_STN)
-  FOLLOW(BLK4_BLK1)
+<span class="c1">// Sequence to go from block 3 to block 4</span>
+<span class="n">SEQUENCE</span><span class="p">(</span><span class="n">BLK3_BLK4</span><span class="p">)</span>
+<span class="w">  </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK4_TRN2_EX</span><span class="p">)</span>
+<span class="w">  </span><span class="n">IFCLOSED</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span>
+<span class="w">    </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span>
+<span class="w">    </span><span class="n">AMBER</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span>
+<span class="w">    </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">    </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG2_TRN2_GO</span><span class="p">)</span>
+<span class="w">    </span><span class="n">RED</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span>
+<span class="w">    </span><span class="n">THROW</span><span class="p">(</span><span class="n">TRN2</span><span class="p">)</span>
+<span class="w">    </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ENDIF</span>
+<span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="n">SIG3_STN_EX</span><span class="p">)</span>
+<span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="w">  </span><span class="n">AFTER</span><span class="p">(</span><span class="n">SNS5_STN_TRN2_APP</span><span class="p">)</span>
+<span class="w">  </span><span class="n">FREE</span><span class="p">(</span><span class="n">BLK3_STN</span><span class="p">)</span>
+<span class="w">  </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK4_BLK1</span><span class="p">)</span>
 
-// Sequence to move from block 4 back to block 1
-SEQUENCE(BLK4_BLK1)
-  RESERVE(BLK1_TRN1_APP)
-  FWD(30)
-  AFTER(SNS1_TRN1_APP)
-  FREE(BLK4_TRN2_EX)
-  FOLLOW(BLK1_EXIT)
+<span class="c1">// Sequence to move from block 4 back to block 1</span>
+<span class="n">SEQUENCE</span><span class="p">(</span><span class="n">BLK4_BLK1</span><span class="p">)</span>
+<span class="w">  </span><span class="n">RESERVE</span><span class="p">(</span><span class="n">BLK1_TRN1_APP</span><span class="p">)</span>
+<span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="w">  </span><span class="n">AFTER</span><span class="p">(</span><span class="n">SNS1_TRN1_APP</span><span class="p">)</span>
+<span class="w">  </span><span class="n">FREE</span><span class="p">(</span><span class="n">BLK4_TRN2_EX</span><span class="p">)</span>
+<span class="w">  </span><span class="n">FOLLOW</span><span class="p">(</span><span class="n">BLK1_EXIT</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -796,7 +796,7 @@ SEQUENCE(BLK4_BLK1)
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fb153dfb040>
+    <jinja2.runtime.BlockReference object at 0x7fc7d7ffccd0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

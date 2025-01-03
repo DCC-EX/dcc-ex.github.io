@@ -11,7 +11,7 @@
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=a010c375" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=3b1dd56d" />
       <link rel="stylesheet" type="text/css" href="../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -773,29 +773,29 @@
 <p>Firstly, note the “#define”. This is a directive in C++ that tells the compiler to process all this when you compile and upload the CommandStation software.</p>
 <p>The entire macro needs to be on a single line, hence the addition of the backslash “\” at the end of each line in the macro, except after the final DONE. This backslash simply tells the compiler to treat these as the same line while allowing things to be more readable for us humans.</p>
 <p>Here’s an example for driving single coil Rokuhan turnouts that require the coil to be activated for a very short time in order to CLOSE or THROW the turnout, which will be explained below.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// Define a pulse time of 50ms to activate the coil
-#define PULSE 50
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Define a pulse time of 50ms to activate the coil</span>
+<span class="cp">#define PULSE 50</span>
 
-// Define a macro called ROKUHANTURNOUT which creates various objects and event handlers for turnouts
-// This macro:
-// Defines a pin turnout
-// Defines an alias
-// Sets the direction pin and sends the pulse for the CLOSE command
-// Resets the direction pin and sends the pulse for the THROW command
-#define ROKUHANTURNOUT(t, p1, p2, desc, ali) \
-PIN_TURNOUT(t, 0, desc) \
-ALIAS(ali, t) \
-DONE \
-ONCLOSE(t) \
-SET(p1) \
-SET(p2)DELAY(PULSE)RESET(p2) \
-DONE \
-ONTHROW(t) \
-RESET(p1) \
-SET(p2)DELAY(PULSE)RESET(p2) \
-DONE
+<span class="c1">// Define a macro called ROKUHANTURNOUT which creates various objects and event handlers for turnouts</span>
+<span class="c1">// This macro:</span>
+<span class="c1">// Defines a pin turnout</span>
+<span class="c1">// Defines an alias</span>
+<span class="c1">// Sets the direction pin and sends the pulse for the CLOSE command</span>
+<span class="c1">// Resets the direction pin and sends the pulse for the THROW command</span>
+<span class="cp">#define ROKUHANTURNOUT(t, p1, p2, desc, ali) \</span>
+<span class="cp">PIN_TURNOUT(t, 0, desc) \</span>
+<span class="cp">ALIAS(ali, t) \</span>
+<span class="cp">DONE \</span>
+<span class="cp">ONCLOSE(t) \</span>
+<span class="cp">SET(p1) \</span>
+<span class="cp">SET(p2)DELAY(PULSE)RESET(p2) \</span>
+<span class="cp">DONE \</span>
+<span class="cp">ONTHROW(t) \</span>
+<span class="cp">RESET(p1) \</span>
+<span class="cp">SET(p2)DELAY(PULSE)RESET(p2) \</span>
+<span class="cp">DONE</span>
 
-ROKUHANTURNOUT(105, 168, 176, &quot;Yard entrance&quot;, YD_E)  // Define the &quot;Yard entrance&quot; turnout with turnout ID 5 using MCP23017 pins 168/176, and create alias YD_E
+<span class="n">ROKUHANTURNOUT</span><span class="p">(</span><span class="mi">105</span><span class="p">,</span><span class="w"> </span><span class="mi">168</span><span class="p">,</span><span class="w"> </span><span class="mi">176</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Yard entrance&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">YD_E</span><span class="p">)</span><span class="w">  </span><span class="c1">// Define the &quot;Yard entrance&quot; turnout with turnout ID 5 using MCP23017 pins 168/176, and create alias YD_E</span>
 </pre></div>
 </div>
 <p>Typically, you would define a pin turnout with the PIN_TURNOUT command, however in this example we need a CLOSE or THROW sent to these turnouts to do more than just set a pin high or low, hence the need for the macro.</p>
@@ -842,7 +842,7 @@ ROKUHANTURNOUT(105, 168, 176, &quot;Yard entrance&quot;, YD_E)  // Define the &q
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fb15763d0c0>
+    <jinja2.runtime.BlockReference object at 0x7fc7f0a28a00>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

@@ -9,7 +9,7 @@ Example - ROUTEs with turnouts/signals on MCP23017 I/O expander Vpins
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
-.. code-block:: 
+.. code-block:: cpp
 
   // myAutomation.h for simple ROUTEs with pin based turnouts and signals via MCP23017 I/O expander Vpins.
 

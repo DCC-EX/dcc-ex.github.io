@@ -156,7 +156,7 @@ The ``PIN_TURNOUT`` command defines a pin operated turnout/point in |EX-R|, whic
 
 When setting up a turnout/point where multiple pins are required for control, the ``VIRTUAL_TURNOUT`` command should be used along with a control sequence. This is commonly used to configure solenoid-based turnout motors. 
 
-.. code-block:: 
+.. code-block:: cpp
 
   #define PULSE 10    // Set the duration of the pulse to 10ms
 
@@ -294,7 +294,7 @@ Similar to pin based signals, servo signals are controlled by the ID of the red 
 
 Unlike servo based turnouts/points, there is no ID or description (they don't appear in throttles), and they use the "Bounce" profile with no other options available at the present time:
 
-.. code-block:: 
+.. code-block:: cpp
 
    SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
 
@@ -438,7 +438,7 @@ For each signal add a line in myAutomation.h in the form:
 
 SIGNAL(red_pin, amber_pin, green_pin) 
 
-.. code-block:: 
+.. code-block:: cpp
 
     // always use the first red_pin as the signal_id for All signal color changes)
     SIGNAL(106, 0, 107) // Red, Amber, Green For turnout/point 1

@@ -11,7 +11,7 @@
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=a010c375" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=3b1dd56d" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -631,54 +631,54 @@
 <section id="example-turntable-routes">
 <h1>Example - Turntable ROUTEs<a class="headerlink" href="#example-turntable-routes" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../support/index.html#contact-support-options" title="Request help or support"><img src="../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>// On startup, ensure our turntable moves automatically to the first position
-MOVETT(600, 114, Turn)
-DONE
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// On startup, ensure our turntable moves automatically to the first position</span>
+<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">114</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">)</span>
+<span class="n">DONE</span>
 
-// Definition of the EX_TURNTABLE macro to correctly create the ROUTEs required for each position.
-// This includes RESERVE()/FREE() to protect any automation activities.
-//
-#define EX_TURNTABLE(route_id, reserve_id, vpin, steps, activity, desc) \
-  ROUTE(route_id, desc) \
-    RESERVE(reserve_id) \
-    MOVETT(vpin, steps, activity) \
-    WAITFOR(vpin) \
-    FREE(reserve_id) \
-    DONE
+<span class="c1">// Definition of the EX_TURNTABLE macro to correctly create the ROUTEs required for each position.</span>
+<span class="c1">// This includes RESERVE()/FREE() to protect any automation activities.</span>
+<span class="c1">//</span>
+<span class="cp">#define EX_TURNTABLE(route_id, reserve_id, vpin, steps, activity, desc) \</span>
+<span class="cp">  ROUTE(route_id, desc) \</span>
+<span class="cp">    RESERVE(reserve_id) \</span>
+<span class="cp">    MOVETT(vpin, steps, activity) \</span>
+<span class="cp">    WAITFOR(vpin) \</span>
+<span class="cp">    FREE(reserve_id) \</span>
+<span class="cp">    DONE</span>
 
-/**************************************************************************************************
-* TURNTABLE POSITION DEFINITIONS
-*************************************************************************************************/
-// EX_TURNTABLE(route_id, reserve_id, vpin, steps, activity, desc)
-//
-// route_id = A unique number for each defined route, the route is what appears in throttles
-// reserve_id = A unique reservation number (0 - 255) to ensure nothing interferes with automation
-// vpin = The Vpin defined for the Turntable-EX device driver, default is 600
-// steps = The target step position
-// activity = The activity performed for this ROUTE (Note do not enclose in quotes &quot;&quot;)
-// desc = Description that will appear in throttles (Must use quotes &quot;&quot;)
-//
-EX_TURNTABLE(TTRoute1, Turntable, 600, 114, Turn, &quot;Roundhouse stall 1&quot;)
-EX_TURNTABLE(TTRoute2, Turntable, 600, 228, Turn, &quot;Roundhouse stall 2&quot;)
-EX_TURNTABLE(TTRoute3, Turntable, 600, 344, Turn, &quot;Roundhouse stall 3&quot;)
-EX_TURNTABLE(TTRoute4, Turntable, 600, 459, Turn, &quot;Roundhouse stall 4&quot;)
-EX_TURNTABLE(TTRoute5, Turntable, 600, 573, Turn, &quot;Roundhouse stall 5&quot;)
-EX_TURNTABLE(TTRoute6, Turntable, 600, 688, Turn, &quot;Roundhouse stall 6&quot;)
-EX_TURNTABLE(TTRoute7, Turntable, 600, 2523, Turn, &quot;Yard connection&quot;)
-EX_TURNTABLE(TTRoute8, Turntable, 600, 0, Home, &quot;Home turntable&quot;)
+<span class="cm">/**************************************************************************************************</span>
+<span class="cm">* TURNTABLE POSITION DEFINITIONS</span>
+<span class="cm">*************************************************************************************************/</span>
+<span class="c1">// EX_TURNTABLE(route_id, reserve_id, vpin, steps, activity, desc)</span>
+<span class="c1">//</span>
+<span class="c1">// route_id = A unique number for each defined route, the route is what appears in throttles</span>
+<span class="c1">// reserve_id = A unique reservation number (0 - 255) to ensure nothing interferes with automation</span>
+<span class="c1">// vpin = The Vpin defined for the Turntable-EX device driver, default is 600</span>
+<span class="c1">// steps = The target step position</span>
+<span class="c1">// activity = The activity performed for this ROUTE (Note do not enclose in quotes &quot;&quot;)</span>
+<span class="c1">// desc = Description that will appear in throttles (Must use quotes &quot;&quot;)</span>
+<span class="c1">//</span>
+<span class="n">EX_TURNTABLE</span><span class="p">(</span><span class="n">TTRoute1</span><span class="p">,</span><span class="w"> </span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">114</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Roundhouse stall 1&quot;</span><span class="p">)</span>
+<span class="n">EX_TURNTABLE</span><span class="p">(</span><span class="n">TTRoute2</span><span class="p">,</span><span class="w"> </span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">228</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Roundhouse stall 2&quot;</span><span class="p">)</span>
+<span class="n">EX_TURNTABLE</span><span class="p">(</span><span class="n">TTRoute3</span><span class="p">,</span><span class="w"> </span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">344</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Roundhouse stall 3&quot;</span><span class="p">)</span>
+<span class="n">EX_TURNTABLE</span><span class="p">(</span><span class="n">TTRoute4</span><span class="p">,</span><span class="w"> </span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">459</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Roundhouse stall 4&quot;</span><span class="p">)</span>
+<span class="n">EX_TURNTABLE</span><span class="p">(</span><span class="n">TTRoute5</span><span class="p">,</span><span class="w"> </span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">573</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Roundhouse stall 5&quot;</span><span class="p">)</span>
+<span class="n">EX_TURNTABLE</span><span class="p">(</span><span class="n">TTRoute6</span><span class="p">,</span><span class="w"> </span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">688</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Roundhouse stall 6&quot;</span><span class="p">)</span>
+<span class="n">EX_TURNTABLE</span><span class="p">(</span><span class="n">TTRoute7</span><span class="p">,</span><span class="w"> </span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">2523</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Yard connection&quot;</span><span class="p">)</span>
+<span class="n">EX_TURNTABLE</span><span class="p">(</span><span class="n">TTRoute8</span><span class="p">,</span><span class="w"> </span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">Home</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Home turntable&quot;</span><span class="p">)</span>
 
-// Pre-defined aliases to ensure unique IDs are used.
-ALIAS(Turntable, 255)
+<span class="c1">// Pre-defined aliases to ensure unique IDs are used.</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">)</span>
 
-// Turntable ROUTE ID reservations, using &lt;? TTRouteX&gt; for uniqueness:
-ALIAS(TTRoute1)
-ALIAS(TTRoute2)
-ALIAS(TTRoute3)
-ALIAS(TTRoute4)
-ALIAS(TTRoute5)
-ALIAS(TTRoute6)
-ALIAS(TTRoute7)
-ALIAS(TTRoute8)
+<span class="c1">// Turntable ROUTE ID reservations, using &lt;? TTRouteX&gt; for uniqueness:</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">TTRoute1</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">TTRoute2</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">TTRoute3</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">TTRoute4</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">TTRoute5</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">TTRoute6</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">TTRoute7</span><span class="p">)</span>
+<span class="n">ALIAS</span><span class="p">(</span><span class="n">TTRoute8</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -705,7 +705,7 @@ ALIAS(TTRoute8)
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fb154747ee0>
+    <jinja2.runtime.BlockReference object at 0x7fc7db0c8670>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

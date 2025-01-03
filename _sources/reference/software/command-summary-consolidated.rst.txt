@@ -946,7 +946,7 @@ System Information
   |_| > **C**: Designator to signify this is a current meter (V would be for voltage) |BR|
   |_| > **"Milli"**: Unit of measure for external software with a meter like JMRI (Milli, Kilo, etc.) |BR|
   |_| > **"0":** numbered parameter for external software (1,2,3, etc.) |BR|
-  |_| > **max_ma**: The maximum current handling of the motor controller in MilliAmps |BR|
+  |_| > **max_ma**: The maximum current handling of the |motor driver| in MilliAmps |BR|
   |_| > **"1"**: number parameter for external software (we use 2 parameters here, 0 and 1) |BR|
   |_| > **trip_ma** - The overcurrent limit that will trip the software circuit breaker in mA
 
@@ -963,7 +963,7 @@ System Information
   |_|  |BR|
   |_| > **version:** Command Station version |BR|
   |_| > **microprocessorType:**  microprocessor type (e.g. MEGA) |BR|
-  |_| > **MotorControllerType:**  Motor controller type (e.g. STANDARD_MOTOR_SHIELD) |BR|
+  |_| > **MotorControllerType:**  |motor driver| type (e.g. STANDARD_MOTOR_SHIELD) |BR|
   |_| > **buildNumber:**  Command Station build number |BR|
   |_| > **id:** unique identifier for the Turnout/Point |BR|
   |_| > **state:** one of  |BR|
@@ -1956,21 +1956,21 @@ It is anticipated that throttle developers will be able to "draw" turntables wit
 
   *Example:* This example defines a DCC accessory device, with 3 positions:
   
-  .. code-block:: 
+  .. code-block:: cpp
 
-    ``<I 1 DCC 0>`` - defines a DCC accessory turntable/traverser with a 0 degree home angle.
-    ``<I 1 ADD 1 201 100>`` - adds position 1, which is at linear DCC address 201, and 10 degrees from home.
-    ``<I 1 ADD 2 202 450>`` - adds position 2, which is at linear DCC address 202, and 45 degrees from home.
-    ``<I 1 ADD 3 203 1900>`` - adds position 3, which is at linear DCC address 203, and 190 degrees from home.
+    <I 1 DCC 0>          // defines a DCC accessory turntable/traverser with a 0 degree home angle.
+    <I 1 ADD 1 201 100>  // adds position 1, which is at linear DCC address 201, and 10 degrees from home.
+    <I 1 ADD 2 202 450>  // adds position 2, which is at linear DCC address 202, and 45 degrees from home.
+    <I 1 ADD 3 203 1900> // adds position 3, which is at linear DCC address 203, and 190 degrees from home.
   
   *Example:* This example defines an EX-Turntable device, with 3 positions:
   
-  .. code-block:: 
+  .. code-block:: cpp
 
-    ``<I 2 EXTT 50>`` - defines an EX-Turntable turntable/traverser with a 5 degree home angle.
-    ``<I 2 ADD 1 200 100>`` - adds position 1, which is 200 steps from home, and 10 degrees from home.
-    ``<I 2 ADD 2 1500 450>`` - adds position 2, which is 1500 steps from home, and 45 degrees from home.
-    ``<I 2 ADD 3 8000 1900>`` - adds position 3, which is 8000 steps from home, and 190 degrees from home.
+    <I 2 EXTT 50>         // defines an EX-Turntable turntable/traverser with a 5 degree home angle.
+    <I 2 ADD 1 200 100>   // adds position 1, which is 200 steps from home, and 10 degrees from home.
+    <I 2 ADD 2 1500 450>  // adds position 2, which is 1500 steps from home, and 45 degrees from home.
+    <I 2 ADD 3 8000 1900> // adds position 3, which is 8000 steps from home, and 190 degrees from home.
 
 ----
 

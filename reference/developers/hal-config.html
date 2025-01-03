@@ -11,7 +11,7 @@
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=a010c375" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=3b1dd56d" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -736,13 +736,13 @@ When the sensor/switch activates, it usually connects the pin to GND, and the de
 the current stops flowing.  This is just the same as the Arduino digital GPIO pins.</p>
 <p>Two MCP23017 modules are pre-configured, one is address 0x20 and uses VPINs 164-179.  The second is address 0x21 and uses VPINs 180-195.</p>
 <p>An input pin may be configured using the DCC-EX Sensor commands, as follows:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;S 201 164 1&gt;
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">S</span><span class="w"> </span><span class="mi">201</span><span class="w"> </span><span class="mi">164</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>This command associates sensor ID 201 with VPIN 164 (MCP23017 first pin) and enables pull-up.</p>
 <p>When the sensor activates and deactivates, the following messages are sent by <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> over the serial output:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Q 201&gt;         -- Activation
-&lt;q 201&gt;         -- Deactivation
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Q</span><span class="w"> </span><span class="mi">201</span><span class="o">&gt;</span><span class="w">         </span><span class="o">--</span><span class="w"> </span><span class="n">Activation</span>
+<span class="o">&lt;</span><span class="n">q</span><span class="w"> </span><span class="mi">201</span><span class="o">&gt;</span><span class="w">         </span><span class="o">--</span><span class="w"> </span><span class="n">Deactivation</span>
 </pre></div>
 </div>
 </section>
@@ -756,7 +756,7 @@ on the bus.</p>
 of an external 5V power supply, to power the servo motors.  If this power isn’t connected and on, then the servos won’t move.</p>
 <p>Two PCA9685 modules are pre-configured, one is address 0x40 and uses VPINs 100-115.  The second is address 0x41 and uses VPINs 116-131.</p>
 <p>A servo turnout may be configured using the DCC-EX Turnout commands, as follows:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;T 301 SERVO 100 410 205 2&gt;
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">301</span><span class="w"> </span><span class="n">SERVO</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="mi">410</span><span class="w"> </span><span class="mi">205</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>This command associates turnout ID 301 with VPIN 100 (PCA9685 first pin).
@@ -768,8 +768,8 @@ The movement of the turnout is Medium speed (2).  The movement profile may be 0 
 However, I’ve found, with SG90 servos, that 102 to 490 gives a full servo sweep of nearly 180 degrees.
 <em>But use with care, as an attempt to position a servo outside of its range may
 cause damage to the servo gearing, or to any layout components you have connected to the servo!</em></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;T 301 1&gt;  -- Instructs the turnout to move to the &#39;thrown&#39; position.
-&lt;T 301 0&gt;  -- Instructs the turnout to move the the &#39;closed&#39; position.
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">301</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="w">  </span><span class="c1">// Instructs the turnout to move to the &#39;thrown&#39; position.</span>
+<span class="o">&lt;</span><span class="n">T</span><span class="w"> </span><span class="mi">301</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span><span class="w">  </span><span class="c1">// Instructs the turnout to move the the &#39;closed&#39; position.</span>
 </pre></div>
 </div>
 <p>In EXRAIL, the servo can be controlled directly via the <strong>SERVO(pin,position,profile)</strong> or <strong>SERVO2(pin,position,duration)</strong> commands.</p>
@@ -804,12 +804,12 @@ output VPINs from within <a href="../../ex-commandstation/index.html"><span clas
 </pre></div>
 </div>
 <p>To configure an input pin using the DCC-EX Sensor commands, use the &lt;S&gt; command:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;S 801 211 1&gt; or &lt;S 801 211 0&gt;
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">S</span><span class="w"> </span><span class="mi">801</span><span class="w"> </span><span class="mi">211</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="o">&lt;</span><span class="n">S</span><span class="w"> </span><span class="mi">801</span><span class="w"> </span><span class="mi">211</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>As per the notes above, the 0 or 1 for the pull-up is redundant as this is always on, but the &lt;S&gt; command requires the parameter to be set.</p>
 <p>An output port may be configured using the DCC-EX Output commands, as follows:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Z 901 196 0&gt;
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">901</span><span class="w"> </span><span class="mi">196</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </section>
@@ -912,7 +912,7 @@ Restart the Command Station and the new device will be configured at startup.</p
 <section id="checking-the-driver">
 <h3>Checking the Driver<a class="headerlink" href="#checking-the-driver" title="Link to this heading"></a></h3>
 <p>Start the <a class="reference internal" href="../tools/serial-monitor.html#connect-with-the-arduino-ide-serial-monitor"><span class="std std-ref">Arduino IDE Serial Monitor</span></a>, and set its speed to 115200 baud.  If you enter the following command:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D HAL SHOW&gt;
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">HAL</span><span class="w"> </span><span class="n">SHOW</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>You will see a list of the configured devices, and among them should be the new device, as follows:</p>
@@ -930,38 +930,38 @@ Restart the Command Station and the new device will be configured at startup.</p
 <p>The five VPINs, 1000 to 1004, allow the first five MP3 files on the Micro-SD card to be played directly.  You just need to
 write to the pins as if they were real digital output pins on the Arduino.  For example, set up
 some outputs using the <a class="reference internal" href="../tools/serial-monitor.html#connect-with-the-arduino-ide-serial-monitor"><span class="std std-ref">Arduino IDE Serial Monitor</span></a>, by entering the following commands:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Z 1000 1000 0&gt;
-&lt;Z 1001 1001 0&gt;
-&lt;Z 1002 1002 0&gt;
-&lt;Z 1003 1003 0&gt;
-&lt;Z 1004 1004 0&gt;
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">1001</span><span class="w"> </span><span class="mi">1001</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">1002</span><span class="w"> </span><span class="mi">1002</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">1003</span><span class="w"> </span><span class="mi">1003</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">1004</span><span class="w"> </span><span class="mi">1004</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>Now you can trigger any of the five MP3 files by using one of the following commands:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Z 1000 1&gt;
-&lt;Z 1001 1&gt;
-&lt;Z 1002 1&gt;
-&lt;Z 1003 1&gt;
-&lt;Z 1004 1&gt;
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">1001</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">1002</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">1003</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Z</span><span class="w"> </span><span class="mi">1004</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>To stop the player, use <code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">1000</span> <span class="pre">0&gt;</span></code> etc.</p>
 <p>You may also control the player by writing to the first two VPINs as analogue output capable pins. Try the following commands:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;D ANOUT 1000 5&gt;        // play MP3 file number 5.
-&lt;D ANOUT 1000 4 10&gt;     // play MP3 file number 4 at low volume (10).
-&lt;D ANOUT 1001 30&gt;       // set volume to maximum (range 0-30).
-&lt;D ANOUT 1001 10&gt;       // set volume to low.
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">ANOUT</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="mi">5</span><span class="o">&gt;</span><span class="w">        </span><span class="c1">// play MP3 file number 5.</span>
+<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">ANOUT</span><span class="w"> </span><span class="mi">1000</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">10</span><span class="o">&gt;</span><span class="w">     </span><span class="c1">// play MP3 file number 4 at low volume (10).</span>
+<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">ANOUT</span><span class="w"> </span><span class="mi">1001</span><span class="w"> </span><span class="mi">30</span><span class="o">&gt;</span><span class="w">       </span><span class="c1">// set volume to maximum (range 0-30).</span>
+<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">ANOUT</span><span class="w"> </span><span class="mi">1001</span><span class="w"> </span><span class="mi">10</span><span class="o">&gt;</span><span class="w">       </span><span class="c1">// set volume to low.</span>
 </pre></div>
 </div>
 <p>Note: The volume commands apply to the device, not to the specific MP3 files.</p>
 <p>You can also control the DFPlayer through EXRAIL, using commands like the following:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SET(1000)             // Start playing first sound
-AT(-1000)             // Wait for playing to finish
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SET</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span><span class="w">             </span><span class="c1">// Start playing first sound</span>
+<span class="n">AT</span><span class="p">(</span><span class="mi">-1000</span><span class="p">)</span><span class="w">             </span><span class="c1">// Wait for playing to finish</span>
 
-RESET(1000)           // Stop player
+<span class="n">RESET</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span><span class="w">           </span><span class="c1">// Stop player</span>
 
-SERVO(1000,4,Instant)      // Start playing 4th sound at volume level 10
-SERVO(1001,20,Instant)        // Set volume level to 20
+<span class="n">SERVO</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">Instant</span><span class="p">)</span><span class="w">      </span><span class="c1">// Start playing 4th sound at volume level 10</span>
+<span class="n">SERVO</span><span class="p">(</span><span class="mi">1001</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="n">Instant</span><span class="p">)</span><span class="w">        </span><span class="c1">// Set volume level to 20</span>
 </pre></div>
 </div>
 <p>Note: As per the standard SERVO commands, the last parameter is the name of a servo profile, not a number.</p>
@@ -991,7 +991,7 @@ SERVO(1001,20,Instant)        // Set volume level to 20
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fb165183520>
+    <jinja2.runtime.BlockReference object at 0x7fc7ee12e950>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

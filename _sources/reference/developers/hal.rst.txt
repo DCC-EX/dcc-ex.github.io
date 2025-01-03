@@ -330,7 +330,7 @@ and to improve the handling of Displays, Turnouts, Sensors and Outputs.
 - Displays: Enable upper-case only mode for SSD1306Ascii, optionally reducing FLASH usage for font storage.
 - Sensors/Turnouts/Outputs: Revise Turnout command handling to support new commands, e.g.
 
-    .. code-block:: none
+    .. code-block:: cpp
 
       <T id SERVO vpin activeposition inactiveposition profile>
       <T id DCC address subaddress>  // address 1-512, subaddress 0-3

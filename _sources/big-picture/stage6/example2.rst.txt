@@ -9,7 +9,7 @@ Example - ROUTEs with turnouts/signals on Mega2560 direct I/O pins
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
-.. code-block:: 
+.. code-block:: cpp
 
   // myAutomation.h for simple ROUTEs with pin turnouts/points and signals directly connected to the Mega2560.
 

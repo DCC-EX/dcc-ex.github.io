@@ -45,7 +45,7 @@ Arduino Network Shield 2
 
 There have been different revisions for the Arduino Network Shields, the main difference is the version of the WiFi chip on the board. The "2" board uses the Wiznet W5500, other versions used the older W5100 chip. The only supported chip currently is the W5500, but the other boards may work as well. The W5500 can handle 8 simultaneous socket connections while the W5100 can handle 4. These boards provide a network (IP) stack capable of both TCP and UDP. This board also has an SDCard which can be used for your own custom features or for storing settings with a possible future version of |EX-CS|.
 
-.. image:: ../../_static/images/ethernet/arduino_ethernet_shield_2.jpg
+.. image:: ../../_static/images/ethernet/arduino_ethernet_shield_2.png
    :alt: Arduino Ethernet Shield 2
    :scale: 85%
 
@@ -64,7 +64,7 @@ Sunfounder Ethernet Shield
 
 This board is tested and works. It is less expensive than the Arduino brand-name board and based on the Wiznet W5100 instead of the W5500. It must be the first shield in the stack because it uses the ICSP header pins.
 
-.. image:: ../../_static/images/ethernet/sunfounder_ethernet_shield.jpg
+.. image:: ../../_static/images/ethernet/sunfounder_ethernet_shield.png
    :alt: Sunfounder Ethernet Shield
    :scale: 25%
 
@@ -74,7 +74,7 @@ Nano Ethernet Shield
 
 This board actually works with an Arduino Nano, you can plug your Nano directly onto this board or create a stack with the matching |motor shield|. This board will work with an Uno or Mega also, but you have to connect it with jumpers.
 
-.. image:: ../../_static/images/ethernet/nano_ethernet_shield.jpg
+.. image:: ../../_static/images/ethernet/nano_ethernet_shield.png
    :alt: Sunfounder Ethernet Shield
    :scale: 25%
 

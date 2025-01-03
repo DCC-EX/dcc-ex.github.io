@@ -10,7 +10,7 @@
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/dccex_theme.css?v=a010c375" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/dccex_theme.css?v=3b1dd56d" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -704,23 +704,23 @@
 <h2><a class="toc-backref" href="#id9" role="doc-backlink">Sensor configuration for JMRI</a><a class="headerlink" href="#sensor-configuration-for-jmri" title="Link to this heading"></a></h2>
 <p>If you are using <a class="reference internal" href="../../../throttles/software/jmri.html"><span class="doc">JMRI</span></a> and require these to be available as sensors, then they can be configured via the DCC-EX <code class="docutils literal notranslate"><span class="pre">&lt;Z</span> <span class="pre">id</span> <span class="pre">vpin</span> <span class="pre">iflag&gt;</span></code> command.</p>
 <p>As an example, we will configure an active low sensor connected to the available I/O pin 22 on the <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>, and another on the first pin of the first MCP23017 device which is Vpin 164.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;S 22 22 1&gt;
-&lt;S 164 164 1&gt;
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">S</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">S</span><span class="w"> </span><span class="mi">164</span><span class="w"> </span><span class="mi">164</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>With these definitions, when an object comes close enough to activate a sensor in reflection mode, or interrupts the beam in beam break mode, the <code class="docutils literal notranslate"><span class="pre">&lt;Q</span> <span class="pre">id&gt;</span></code> response will be sent to <a class="reference internal" href="../../../throttles/software/jmri.html"><span class="doc">JMRI</span></a>:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Q 22&gt;
-&lt;Q 164&gt;
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Q</span><span class="w"> </span><span class="mi">22</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Q</span><span class="w"> </span><span class="mi">164</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>Conversely, when the object is far enough away to not reflect the IR signal, or is no longer interrupting the beam in beam break mode, a <code class="docutils literal notranslate"><span class="pre">&lt;q</span> <span class="pre">id&gt;</span></code> message will be sent instead:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;q 22&gt;
-&lt;q 164&gt;
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">q</span><span class="w"> </span><span class="mi">22</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">q</span><span class="w"> </span><span class="mi">164</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>If these sensors are active high instead of active low, then they are configured as such:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;S 22 22 0&gt;
-&lt;S 164 164 0&gt;
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">S</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">S</span><span class="w"> </span><span class="mi">164</span><span class="w"> </span><span class="mi">164</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>To ensure sensors are defined at startup, refer to <a class="reference internal" href="../../advanced-setup/startup-config.html"><span class="doc">Startup Configuration</span></a>.</p>
@@ -731,10 +731,10 @@
 <p>Therefore, you can simply use the standard digital sensor commands (AT, AFTER, ATTIMEOUT, IF, IFNOT, IFTIMEOUT) commands as per any other digital sensor.</p>
 <p>When using active high sensors, adding a minus (-) sign in front of the sensor Vpin is required.</p>
 <p>Using pin 22 on our <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> and the first pin on the first default MCP23017 I/O expander at Vpin 164:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AT(22)       // active low
-AT(164)      // active low
-AT(-22)      // active high
-AT(-164)     // active high
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AT</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span><span class="w">       </span><span class="c1">// active low</span>
+<span class="n">AT</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span><span class="w">      </span><span class="c1">// active low</span>
+<span class="n">AT</span><span class="p">(</span><span class="mi">-22</span><span class="p">)</span><span class="w">      </span><span class="c1">// active high</span>
+<span class="n">AT</span><span class="p">(</span><span class="mi">-164</span><span class="p">)</span><span class="w">     </span><span class="c1">// active high</span>
 </pre></div>
 </div>
 </section>
@@ -762,7 +762,7 @@ AT(-164)     // active high
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fb157601cf0>
+    <jinja2.runtime.BlockReference object at 0x7fc7d70bcd90>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

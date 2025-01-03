@@ -9,7 +9,7 @@ Example - Full automation with pin based turnouts and signals on Mega2560 direct
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
-.. code-block:: 
+.. code-block:: cpp
 
   // myAutomation.h for SEQUENCEs with pin turnouts/points, sensors, and signals directly connected to the Mega2560.
 

@@ -124,7 +124,7 @@ When you open the |IDE serial monitor| you will see at least one line sent out a
 
 At the top of the |IDE serial monitor| type ``<s>`` (lowercase "s") into the command textbox and press "Send". You should see:
 
-.. code-block::
+.. code-block:: cpp
 
    <iDCC-EX V-0.2.1 / MEGA / STANDARD_MOTOR_SHIELD G-9db6d36>
 

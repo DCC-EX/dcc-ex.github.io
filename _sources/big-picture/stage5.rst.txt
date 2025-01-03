@@ -595,7 +595,7 @@ EXRAIL ROUTEs for EX-Turntable
 
 Here is an example of what you can do to control an |EX-TT| via a ROUTE using |EX-R| (you will note this is based on the example provided in myEX-Turntable.example.h provided with the |EX-CS| software):
 
-.. code-block:: 
+.. code-block:: cpp
 
   // Definition of the EX_TURNTABLE macro to correctly create the ROUTEs required for each position.
   // This includes RESERVE()/FREE() to protect any automation activities.
@@ -615,7 +615,7 @@ Here is an example of what you can do to control an |EX-TT| via a ROUTE using |E
 
 Here's the explanation:
 
-.. code-block:: 
+.. code-block:: cpp
 
   #define EX_TURNTABLE...
 

@@ -48,7 +48,7 @@ This is our tested and proven configuration
 
 * |EX-CS| 3.0.6 or greater
 * ATMega2560 + ESP8266 WiFi - Combo Board
-* Deek-Robot L298P |standard motor driver| (or other :doc:`approved motor controller </reference/hardware/motor-boards>`)
+* Deek-Robot L298P |standard motor driver| (or other :doc:`approved motor driver </reference/hardware/motor-boards>`)
 * 12-16V DC Laptop power supply to the |motor shield| (16V provides 14.5Vdc to the tracks for HO Gauge)*
 * 7-9V DC power supply to the ATmega boards with a female 2.1mm power barrel plug
 * Android Smartphone with |Engine Driver| v2.28.123 or iOS Smartphone with WiThrottle
@@ -124,7 +124,7 @@ https://wiki.python.org/moin/BeginnersGuide/Download |EXTERNAL-LINK|
 
 Once you have Python installed, you will need to install esptool.py. Open a command prompt and use pip (or Homebrew on a macOS) to find and install it from the web:
 
-.. code-block::
+.. code-block:: shell
 
    $ pip install esptool
 
@@ -136,7 +136,7 @@ NOTE:with some Python installations that command may not work and you'll receive
 
 If you got an error about setuptools being missing, install setuptools with:
 
-.. code-block::
+.. code-block:: shell
 
    $ pip install setuptools
 

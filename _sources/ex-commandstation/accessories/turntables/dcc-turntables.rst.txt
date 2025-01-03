@@ -33,7 +33,7 @@ DCC-EX native command example
 
 To define a DCC accessory turntable with an ID of 201, starting at linear DCC address 201, and with a total of 10 positions, these DCC-EX native commands must be run (note we are not caring about the **home** or **angle** parameters):
 
-.. code-block:: 
+.. code-block:: cpp
 
   <I 201 DCC 0>           // This creates the turntable object
   <I 201 ADD 1 201 0>     // This adds position 1 with the DCC address 201
@@ -49,7 +49,7 @@ To define a DCC accessory turntable with an ID of 201, starting at linear DCC ad
 
 Once these are defined, it can be operated using the ``<I id position>`` command:
 
-.. code-block:: 
+.. code-block:: cpp
 
   <I 201 1>   - Rotate to the first position at linear address 201
   <I 201 10>  - Rotate to the last position at linear address 210
@@ -59,7 +59,7 @@ EXRAIL command example
 
 To repeat the above example using |EX-R| instead, these commands need to be added to "myAutomation.h", noting the addition of the **description** parameter not available using the native commands:
 
-.. code-block:: 
+.. code-block:: cpp
 
   DCC_TURNTABLE(201,0,"My DCC turntable")           // This creates the turntable object
   TT_ADDPOSITION(201,1,201,0,"Roundhouse stall 1")  // This adds position 1 with the DCC address 201
@@ -89,7 +89,7 @@ The limitation of DCC accessory turntables is the lack of feedback as to when a 
 
 For example, if you wish a warning light to be lit for the duration of a rotation, you could achieve this with the ``ONROTATE(ID)`` event handler:
 
-.. code-block:: 
+.. code-block:: cpp
 
   ONROTATE(201)     // This event triggers when turntable ID 201 is rotated
     SET(26)         // Turn the warning light on connected to pin 26

@@ -11,7 +11,7 @@
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=a010c375" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=3b1dd56d" />
       <link rel="stylesheet" type="text/css" href="../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -1821,14 +1821,14 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p>Detects a rotary encoder has changed position</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - The VPin the encoder is connected to <br /></p>
 <details class="summary-for-example-click-to-show">
-<summary>For example: (click to show)</summary><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ONCHANGE(700)     // If rotary encoder ID 700 change state do this sequence
-  IFRE(700, 1)    // If rotary encoder ID 700 is at position 1, start ROUTE ID 123
-    START(123)
-  ENDIF
-  IFRE(700, 2)    // If rotary encoder ID 700 is at position 2, start ROUTE ID 124
-    START(124)
-  ENDIF
-  DONE
+<summary>For example: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ONCHANGE</span><span class="p">(</span><span class="mi">700</span><span class="p">)</span><span class="w">     </span><span class="c1">// If rotary encoder ID 700 change state do this sequence</span>
+<span class="w">  </span><span class="n">IFRE</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w">    </span><span class="c1">// If rotary encoder ID 700 is at position 1, start ROUTE ID 123</span>
+<span class="w">    </span><span class="n">START</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ENDIF</span>
+<span class="w">  </span><span class="n">IFRE</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w">    </span><span class="c1">// If rotary encoder ID 700 is at position 2, start ROUTE ID 124</span>
+<span class="w">    </span><span class="n">START</span><span class="p">(</span><span class="mi">124</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ENDIF</span>
+<span class="w">  </span><span class="n">DONE</span>
 </pre></div>
 </div>
 </details><p><hr class="hr-dashed" /></p>
@@ -1855,8 +1855,8 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p>The HAL creation will require the <strong>vpin</strong> and <strong>i2c_address</strong> parameters.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>id</strong> - id of the turntable/traverser, valid IDs are 1 - 32767 <br /> &gt; <strong>vpin</strong> - id of the vpin where the <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> device is located <br /> &gt; <strong>i2c_address</strong> - the I<sup>2</sup>C address of the <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> device <br /> &gt; <strong>home_angle</strong> - the angle of the home position, valid angles are 0 - 3600</p>
 <p>Example creation and definition:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>HAL(EXTurntable,600,1,0x60)            // Create your EX-Turntable device driver
-EXTT_TURNTABLE(1,600,45,&quot;My EX-Turntable&quot;)  // Create your EX-Turntable object to enable control
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">HAL</span><span class="p">(</span><span class="n">EXTurntable</span><span class="p">,</span><span class="mi">600</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mh">0x60</span><span class="p">)</span><span class="w">            </span><span class="c1">// Create your EX-Turntable device driver</span>
+<span class="n">EXTT_TURNTABLE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">600</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="s">&quot;My EX-Turntable&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1">// Create your EX-Turntable object to enable control</span>
 </pre></div>
 </div>
 <p><hr class="hr-dashed" /></p>
@@ -2165,7 +2165,7 @@ EXTT_TURNTABLE(1,600,45,&quot;My EX-Turntable&quot;)  // Create your EX-Turntabl
 <p>This will start a pin/Vpin blinking until such time as it is <code class="docutils literal notranslate"><span class="pre">SET</span></code>, <code class="docutils literal notranslate"><span class="pre">RESET</span></code>, or set via a signal operation.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>pin</strong> -  pin/vpin of the LED <br /> &gt; <strong>onMs</strong> - time/duration for the pin to be on in milliseconds <br /> &gt; <strong>offMs</strong> - off time/duration in milliseconds</p>
 <blockquote>
-<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>BLINK(22, 500, 500) // Blink pin 22 at half second intervals
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">BLINK</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">)</span><span class="w"> </span><span class="c1">// Blink pin 22 at half second intervals</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -3108,7 +3108,7 @@ EXTT_TURNTABLE(1,600,45,&quot;My EX-Turntable&quot;)  // Create your EX-Turntabl
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fb1545c5780>
+    <jinja2.runtime.BlockReference object at 0x7fc7f13138e0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

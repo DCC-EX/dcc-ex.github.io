@@ -8,10 +8,11 @@ WiTcontroller (Physical)
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 WiTcontroller uses exactly the same hardware as the DccExController, but uses the |WITHROTTLE PROTOCOL| instead of the DCC-EX Native command protocol.
 

@@ -10,11 +10,12 @@ I/O Device Drivers and HAL
 |SUITABLE| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
-
+   .. contents:: On this page
+      :depth: 1
+      :local:
+      
 The DCC-EX controller has always had built-in support for turnout control, output control and input sensors attached to the Arduino pins.  However, you may 
 outgrow the built-in capabilities and want to access more output pins than the Arduino has available.  Or you may wish to attach servos to the controller
 for turnout control or for animating a layout component, such as the doors to an engine shed.  

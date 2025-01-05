@@ -10,10 +10,11 @@ Supported Motor Drivers
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button| 
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 
 |EX-CS| is compatible with a wide variety of motor drivers, also known as "dual H-bridges" and "motor shields". We've sorted them from least difficult to most difficult to use to help you decide what to use. When it comes to selecting a board, some considerations are size, whether it is a shield or needs to be connected with jumper wires, the amount of current you need, and whether it has current sensing capability built-in or if you have to supply it yourself.

@@ -8,10 +8,11 @@ About Us - Meet the Team
 *************************
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 Who is behind all this? And will they ever face justice? Who knows, but the following is a list of those names associated with taking over Gregg Berman's original DCC++ BaseStation Project, and rewriting/expanding it into |EX-CS| and the wider |DCC-EX| project. 
 

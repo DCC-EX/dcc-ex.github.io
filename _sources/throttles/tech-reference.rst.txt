@@ -10,10 +10,11 @@ Technical Reference for Throttle Developers
 |engineer|
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 3
-    :local:
+   .. contents:: On this page
+      :depth: 3
+      :local:
 
 This page is intended to capture relevant information to assist those who develop throttles compatible with |EX-CS| using the |DCC-EX Native Protocol|, not the |WITHROTTLE PROTOCOL|.
 

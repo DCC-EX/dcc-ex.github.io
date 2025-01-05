@@ -13,10 +13,11 @@ Purchasing Parts
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 This page explains what you will need to acquire to build a |EX-CS| using the recommended parts for a |conductor-text|.  
 

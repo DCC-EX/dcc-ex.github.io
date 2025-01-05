@@ -8,10 +8,11 @@ EX-IOExpander FAQ and Troubleshooting
 |SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-ioexpander-button-small|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 Frequently Asked Questions
 ==========================

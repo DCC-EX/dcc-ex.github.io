@@ -13,6 +13,7 @@ DCC & DC Technical Details
 
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
    .. contents:: On this page
       :depth: 2

@@ -9,10 +9,11 @@ Standards & technical references
 ************************************
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 Standards and technical references the |DCC-EX| components are build onto.
 

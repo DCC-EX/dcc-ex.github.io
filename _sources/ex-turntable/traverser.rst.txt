@@ -10,10 +10,11 @@ Traversers and Limited Rotation Turntables
 |SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-turntable-button-small|
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
   
 Overview
 =========

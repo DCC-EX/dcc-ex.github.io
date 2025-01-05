@@ -10,10 +10,11 @@ Configuration options
 |SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-turntable-button-small|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 |EX-TT| has a number of different configuration options available to customise the behaviour to suit your needs.
 

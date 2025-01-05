@@ -10,10 +10,11 @@ How it All Works Together
 |SUITABLE| |conductor| |tinkerer| |engineer|
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 A common topic that arises in Discord conversations is the question "How does it all fit together?"
 

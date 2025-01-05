@@ -10,10 +10,11 @@ HC-12 Wireless Bridge
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 .. todo:: `LOW - Hardware <https://github.com/DCC-EX/dcc-ex.github.io/issues/432>`_ - Update HC-12 wireless bridge page.
   

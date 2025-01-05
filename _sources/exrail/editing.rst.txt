@@ -9,7 +9,8 @@ Editing myAutomation.h
 
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button|
 
-.. sidebar:: 
+.. sidebar::
+   :class: sidebar-on-this-page 
 
    .. contents:: On this page
       :depth: 4

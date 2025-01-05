@@ -10,10 +10,11 @@ WiFi Connection
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 This page describes all the supported WiFi options of the |EX-CS|.  If you identify as an a |conductor-text| and have installed only the recommended hardware we suggest that you look at the guide on the :doc:`/ex-commandstation/diy/wifi-setup` page.
 

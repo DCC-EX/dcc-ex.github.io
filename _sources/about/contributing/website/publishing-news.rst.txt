@@ -10,10 +10,11 @@ Publishing DCC-EX News Posts
 |SUITABLE| |conductor| |tinkerer| |engineer|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 3
-    :local:
+   .. contents:: On this page
+      :depth: 3
+      :local:
 
 What is DCC-EX News?
 ====================

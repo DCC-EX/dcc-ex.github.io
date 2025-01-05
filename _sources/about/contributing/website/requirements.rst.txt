@@ -10,10 +10,11 @@ What You Need to Know/Learn
 |tinkerer| |engineer|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 We assume, since you got here, that you already have a computer up and running being either a Linux, macOS, or Windows machine, as well as a working internet connection and some disk space available. 
 

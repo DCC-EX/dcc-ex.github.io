@@ -13,6 +13,7 @@ Test Your Setup
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
    .. contents:: On this page
       :depth: 2

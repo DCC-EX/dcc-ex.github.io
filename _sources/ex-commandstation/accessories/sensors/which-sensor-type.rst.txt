@@ -9,10 +9,11 @@ Which sensor type to use?
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 A common topic that arises in support chats in Discord is which sensor type to use in various scenarios.
 

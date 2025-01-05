@@ -11,11 +11,12 @@ DCC Turntables/traversers
 |NEW-IN-V5-4-LOGO-SMALL| |BR| |NOT-IN-PROD-VERSION|
 
 
-.. sidebar:: 
+.. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 Defining DCC turntables/traversers
 ==================================

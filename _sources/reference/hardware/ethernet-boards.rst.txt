@@ -10,10 +10,11 @@ Ethernet Boards
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
    .. contents:: On this page
-    :depth: 1
-    :local:
+      :depth: 1
+      :local:
 
 |EX-CS| supports both wired and wireless network connections. We will discuss using a wired Ethernet connection here. To connect using a WiFi board, see the :doc:`WiFi Boards Section </reference/hardware/wifi-boards>`.
 

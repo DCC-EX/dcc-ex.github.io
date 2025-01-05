@@ -12,11 +12,12 @@ DCC-EX Native Command Detailed Reference
 
 |SUITABLE| |engineer| |support-button|
 
-.. sidebar:: 
+.. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 This is a detailed reference of just the major commands. For a summary version, including all commands, please see :doc:`DCC-EX Native Commands Summary Reference <command-summary-consolidated>`
 

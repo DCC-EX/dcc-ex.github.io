@@ -10,10 +10,11 @@ Articles and Videos
 *******************
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 The following are articles and videos created by people in and outside the |DCC-EX| project which you may find useful or interesting.
 

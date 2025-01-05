@@ -10,10 +10,11 @@ ReStructuredText Basics
 |SUITABLE| |conductor| |tinkerer| |engineer|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 4
-    :local:
+   .. contents:: On this page
+      :depth: 4
+      :local:
 
 This page aims to describe the basics of using ReStructuredText for the |DCC-EX| documentation/website to enhance the basic text.
 

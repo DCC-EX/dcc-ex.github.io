@@ -10,10 +10,11 @@ Default Pin/VPin Allocations and Recommendations
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 On this page, we aim to outline and summarise the various default and recommended pins (and vpins for I/O expanders) for use with various input and output devices for our primary supported microcontrollers and I/O devices and expanders. We will also include the default |I2C| addresses where appropriate.
 

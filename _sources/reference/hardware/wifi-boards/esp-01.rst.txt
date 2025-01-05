@@ -10,6 +10,7 @@ ESP-01 and ESP-01s
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
    .. contents:: On this page
       :depth: 1

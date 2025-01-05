@@ -10,6 +10,7 @@ TrackManager (DCC & DC)
 |SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-commandstation-button-small|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
    .. contents:: On this page
       :depth: 2

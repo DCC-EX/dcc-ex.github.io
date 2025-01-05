@@ -10,10 +10,11 @@ WiThrottle Protocol VS DCC-EX Native Commands
 |SUITABLE| |engineer| |support-button|
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 |EX-CS| supports both the **WiThrottle protocol** and the **DCC-EX Native protocol / commands**.
 

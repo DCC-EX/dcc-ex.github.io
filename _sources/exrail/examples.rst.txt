@@ -11,10 +11,11 @@ Example Objects and Sequences
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
 
    .. contents:: On this page
-     :depth: 2
-     :local:
+      :depth: 2
+      :local:
 
 A variety of |EX-R| sequences that illustrate function and usage of five objects are shown below. The :doc:`/big-picture/big-picture` section of this web site also contains a number of more elaborate and complex examples.
 

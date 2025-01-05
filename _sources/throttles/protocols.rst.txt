@@ -10,10 +10,11 @@ WiThrottle Server, Web Server, DCC-EX Native Protocol Explained
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button| 
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 There are several competing standards and ways to connect external software such as Throttles (Controllers) to the |EX-CS| directly or indirectly through |JMRI|. These standards are called "protocols" and the definition and instructions for how to implement them is called an API (Application Programming Interface). There is the |WiThrottle Protocol| API using a |WiThrottle Server|, the JMRI API using a Web Server, and the DCC-EX API using |DCC-EX Native Commands|. You need to know that the language your throttle uses will work with how you want to connect to your Command Station.
 

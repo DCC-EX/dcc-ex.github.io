@@ -10,10 +10,11 @@ I2C Displays
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 |EX-CS| supports both LCD and OLED to display status and other user-defined information. While a command station is typically hidden away under a layout, if you like the idea of a nice visual display for your panel, several different |I2C| displays will work. You can use either a 20 character by 2 line or 4 line LCD display, or an OLED display capable of up to 8 lines.
 

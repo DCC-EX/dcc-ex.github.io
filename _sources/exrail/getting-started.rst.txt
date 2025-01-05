@@ -10,10 +10,11 @@ Sequences - an Introduction
 |SUITABLE| |tinkerer| |engineer| |support-button| 
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 4
-    :local:
+   .. contents:: On this page
+      :depth: 4
+      :local:
 
 This page is a limited introduction to the |EX-R| automation sequences.  For more comprehensive information refer to the :doc:`/exrail/exrail-command-reference`.
 

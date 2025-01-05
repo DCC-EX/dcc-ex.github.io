@@ -282,7 +282,8 @@ html[data-theme='dark'] .rst-content table.docutils th {
 
 html[data-theme='dark'] .sd-card {
   background-color: #0000008a;
-  box-shadow: 0 0.5rem 1rem rgb(32 88 91 / 25%) !important;
+  /* box-shadow: 0 0.5rem 1rem rgb(32 88 91 / 25%) !important; */
+  box-shadow: 0px 0px 10px #343d3f !important;
 }
 
 
@@ -587,6 +588,10 @@ li.toctree-l3>a.current {
   background-color: #a3a3a3 !important;
 }
 
+.wy-menu-vertical li.toctree-l3.current li.toctree-l4>a.current {
+  background-color: #a3a3a3 !important;
+}
+
 /*   ***   */
 
 /* html[data-theme='dark'] .wy-menu-vertical li.current {
@@ -613,9 +618,20 @@ html[data-theme='dark'] li.toctree-l3>a.current {
   color: #d5d5d5 !important;
 }
 
-
 html[data-theme='dark'] .wy-menu-vertical li.toctree-l2.current li.toctree-l3>a.current {
   background-color: #373737 !important;
+}
+
+html[data-theme='dark'] li.toctree-l4>a.current {
+  background-color: #2d2d2d !important;
+}
+
+html[data-theme='dark'] .wy-menu-vertical li.toctree-l3.current li.toctree-l4>a {
+  background-color: #373737 !important;
+}
+
+html[data-theme='dark'] .wy-menu-vertical li.toctree-l3.current li.toctree-l4>a.current {
+  background-color: #3f3f3f !important;
 }
 
 /* *************************************** */
@@ -864,13 +880,10 @@ nav.in-this-section {
   padding: 12px 12px 12px 12px !important;
   border-radius: 10px;
   margin: 0 0 12px 24px;
-  box-shadow: -5px 5px 10px #66666696;
 }
 
-html[data-theme='dark'] .rst-content .sidebar {
-  background: #000000ff !important;
-  border:#000000ff !important;
-  box-shadow: -5px 5px 10px #000000a1;
+.sidebar-on-this-page {
+  box-shadow: -5px 5px 10px #000000a1 !important;
 }
 
 .sidebar-title {
@@ -882,6 +895,14 @@ html[data-theme='dark'] .sidebar-title {
   background: #002735 !important;
 }
 
+html[data-theme='dark'] .rst-content .sidebar {
+  background: #000000ff !important;
+  border:#000000ff !important;
+}
+
+html[data-theme='dark'] .sidebar-on-this-page {
+  box-shadow: 0px 0px 10px #343d3f !important;
+}
 
 /* news */
 section#dcc-ex-model-railroading aside p.sidebar-title {	

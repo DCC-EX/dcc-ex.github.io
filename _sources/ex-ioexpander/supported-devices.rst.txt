@@ -10,6 +10,7 @@ Supported Devices
 |SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-ioexpander-button-small|
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
   
   .. contents:: On this page
     :depth: 2

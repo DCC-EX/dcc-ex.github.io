@@ -13,6 +13,7 @@ Arduino Nano (Not recommended)
 **As of version 5.4.0, this is no longer a recommended option, see :doc:`/news/posts/20240328`**
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
    .. contents:: On this page
       :depth: 1

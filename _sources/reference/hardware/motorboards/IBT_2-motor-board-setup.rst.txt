@@ -10,6 +10,7 @@ IBT_2 BTS7960 Motor Board
 |SUITABLE| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
    .. contents:: On this page
       :depth: 1

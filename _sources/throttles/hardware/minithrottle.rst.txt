@@ -8,10 +8,11 @@ miniThrottle (Physical)
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 3
+      :local:
 
 A |EX-CS| and |JMRI| Throttle
 

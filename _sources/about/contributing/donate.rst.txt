@@ -10,10 +10,11 @@ Donate to Our Project
 |FORCE-BREAK|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 How We Use Donations
 ======================

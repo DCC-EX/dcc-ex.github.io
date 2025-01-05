@@ -14,19 +14,22 @@ Using EX-Installer - Detailed Instructions
 
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button| |githublink-ex-installer-button-small|
 
-.. rst-class:: dcclink
-
-   :ref:`Download EX-Installer <download/ex-commandstation:ex-Installer>`
-
 |force-break|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
    .. contents:: On this page
       :depth: 4
       :local:
 
-Once you have purchased or assembled your |EX-CS| hardware you need to load our software onto it to make it usable. |BR| To make it as simple as possible we have created the |EX-I| app.
+.. rst-class:: dcclink
+
+   :ref:`Download EX-Installer <download/ex-commandstation:ex-Installer>`
+
+Once you have assembled your do-it-yourself |EX-CS| hardware you need to load our software onto it to make it usable. |BR| To make it as simple as possible we have created the |EX-I| app.
+
+If you have purchased a |EX-CSB1| it will have come with the |EX-CS| software already installed.  You only need to look at this page if you want to change the default configuration. 
 
 .. note:: 
 
@@ -161,16 +164,18 @@ If have previously installed the CLI you will see a :guilabel:`Refresh Arduino C
 
 If you are using an Espressif or STMicroelectronics device (including the |EX-CSB1-SHORT|, as opposed to the more common Uno or Mega based Arduinos, you will need to enable support for these by selecting the appropriate additional platform option.
 
-You *must* have Arduino CLI installed to proceed, simply click the :guilabel:`Install Arduino CLI` button if it is showing.
-
 .. note::
-   :class: note-float-right
 
-   Enabling additional platforms will take more space on your hard drive and is likely to add several minutes to the installation process. Maybe grab a cup of tea or a coffee!
+   Enabling additional platforms *that you will not be using* will take more space on your hard drive and is likely to add several minutes to the installation process.
+
+You *must* have Arduino CLI installed to proceed, simply click the :guilabel:`Install Arduino CLI` button if it is showing.
 
 If you already have the Arduino CLI installed, it is recommended that you refresh it periodically (e.g. weekly) to ensure support for the various device details are kept up to date. To refresh the CLI, simply click the :guilabel:`Refresh Arduino CLI` button.
 
-Installing the CLI can take some time. Once the CLI is installed, To proceed, click the :guilabel:`Select your device` button.
+Installing the CLI can take some time.  Maybe grab a cup of tea or a coffee!
+
+Once the CLI is installed, To proceed, click the :guilabel:`Select your device` button. 
+
 
 |force-break|
 

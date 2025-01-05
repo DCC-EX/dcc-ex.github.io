@@ -7,11 +7,12 @@ Servo driven turnouts/points
 
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button|
 
-.. sidebar:: 
+.. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 While there is already a reasonable amount of information available for servo driven turnouts/points within our documentation, it is distributed among other pages, so this page will primarily be a central location pointing to the existing documentation, along with any other considerations that need to be taken into account that may not be covered elsewhere.
 

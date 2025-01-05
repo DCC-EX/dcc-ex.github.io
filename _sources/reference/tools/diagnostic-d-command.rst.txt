@@ -10,10 +10,11 @@ Diagnostics ``<D>`` Command
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 These commands either enable diagnostics or allow settings to be changed. There are a number of diagnostic facilities under the  ``<D>`` command, most are harmless but caution is advised.
 

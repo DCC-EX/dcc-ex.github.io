@@ -12,7 +12,7 @@
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=2ed312a0" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=966e29a9" />
       <link rel="stylesheet" type="text/css" href="../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -630,9 +630,8 @@
 <section id="using-ex-installer-detailed-instructions">
 <h1>Using EX-Installer - Detailed Instructions<a class="headerlink" href="#using-ex-installer-detailed-instructions" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../begin/levels.html#conductor"><img alt="Conductor Hat" src="../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../support/index.html#contact-support-options" title="Request help or support"><img src="../_static/images/buttons/support.png" style="height: 33px;" /></a> <a href="https://github.com/DCC-EX/EX-Installer/issues/new/choose" target="_blank" title="Create a bug report, request a new feature, or request help"><img src="../_static/images/buttons/github-bug.png" style="width: 169px;" /></a></p>
-<p class="dcclink"><a class="reference internal" href="../download/ex-commandstation.html#ex-installer"><span class="std std-ref">Download EX-Installer</span></a></p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
-<aside class="sidebar">
+<aside class="sidebar-on-this-page sidebar">
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
@@ -686,7 +685,9 @@
 </ul>
 </nav>
 </aside>
-<p>Once you have purchased or assembled your <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> hardware you need to load our software onto it to make it usable. <br /> To make it as simple as possible we have created the <a href="../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a> app.</p>
+<p class="dcclink"><a class="reference internal" href="../download/ex-commandstation.html#ex-installer"><span class="std std-ref">Download EX-Installer</span></a></p>
+<p>Once you have assembled your do-it-yourself <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> hardware you need to load our software onto it to make it usable. <br /> To make it as simple as possible we have created the <a href="../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a> app.</p>
+<p>If you have purchased a <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> it will have come with the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> software already installed.  You only need to look at this page if you want to change the default configuration.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you already have, or wish to create, your own custom config files, we recommend that you <a class="reference internal" href="managing-config-files.html"><span class="doc">read this page first</span></a>.</p>
@@ -803,13 +804,14 @@
 <p><strong>Expressif ESP32</strong> is required for the <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a></p>
 </div>
 <p>If you are using an Espressif or STMicroelectronics device (including the <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a>, as opposed to the more common Uno or Mega based Arduinos, you will need to enable support for these by selecting the appropriate additional platform option.</p>
-<p>You <em>must</em> have Arduino CLI installed to proceed, simply click the <span class="guilabel">Install Arduino CLI</span> button if it is showing.</p>
-<div class="note-float-right admonition note">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Enabling additional platforms will take more space on your hard drive and is likely to add several minutes to the installation process. Maybe grab a cup of tea or a coffee!</p>
+<p>Enabling additional platforms <em>that you will not be using</em> will take more space on your hard drive and is likely to add several minutes to the installation process.</p>
 </div>
+<p>You <em>must</em> have Arduino CLI installed to proceed, simply click the <span class="guilabel">Install Arduino CLI</span> button if it is showing.</p>
 <p>If you already have the Arduino CLI installed, it is recommended that you refresh it periodically (e.g. weekly) to ensure support for the various device details are kept up to date. To refresh the CLI, simply click the <span class="guilabel">Refresh Arduino CLI</span> button.</p>
-<p>Installing the CLI can take some time. Once the CLI is installed, To proceed, click the <span class="guilabel">Select your device</span> button.</p>
+<p>Installing the CLI can take some time.  Maybe grab a cup of tea or a coffee!</p>
+<p>Once the CLI is installed, To proceed, click the <span class="guilabel">Select your device</span> button.</p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 <p><hr class="hr-dashed" /></p>
 </section>
@@ -1241,7 +1243,7 @@ There are numerious phone apps that can help you determine which channels are be
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f0ddb563490>
+    <jinja2.runtime.BlockReference object at 0x7f4e613cf250>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

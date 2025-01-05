@@ -10,10 +10,11 @@ Folder and Page Structure
 |SUITABLE| |conductor| |tinkerer| |engineer|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 4
-    :local:
+   .. contents:: On this page
+      :depth: 4
+      :local:
 
 This page aims to describe the preferred general structure of how files (pages, images, downloads etc.) should be arranged and named, along with the preferred structure of the individual pages.
 
@@ -229,10 +230,11 @@ Pages with multiple headings should generally have a Table of Contents.  The dep
 .. code-block:: 
 
   .. sidebar::
+     :class: sidebar-on-this-page
 
-    .. contents:: On this page
-      :depth: 4
-      :local:
+     .. contents:: On this page
+        :depth: 4
+        :local:
 
 ----
 

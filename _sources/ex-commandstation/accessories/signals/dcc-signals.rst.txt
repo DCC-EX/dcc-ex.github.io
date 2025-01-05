@@ -9,11 +9,12 @@ DCC accessory signals
 
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button|
 
-.. sidebar:: 
+.. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 Important considerations for DCC accessory signals
 ==================================================

@@ -13,10 +13,11 @@ Diagnosing Basic Problems
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button| 
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 This page is intended to help you diagnose and fix some of the most common problems with the |EX-CS|.  If you have a more specific issue see the :doc:`ex-cs-troubleshooting` page.
 

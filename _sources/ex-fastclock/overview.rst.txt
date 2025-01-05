@@ -10,10 +10,11 @@ Overview
 |SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-fastclock-button-small|
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
   
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+     :depth: 2
+     :local:
 
 What is EX-FastClock?
 =====================

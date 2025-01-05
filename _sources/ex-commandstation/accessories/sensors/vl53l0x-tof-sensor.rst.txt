@@ -9,10 +9,11 @@ VL53L0X Time of Flight Sensor
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 Time of Flight (or ToF) sensors can provide a more reliable and accurate sensor than traditional IR sensors as they are not susceptible to interference from different and varying lighting conditions.
 

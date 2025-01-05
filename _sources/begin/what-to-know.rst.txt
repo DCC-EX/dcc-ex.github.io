@@ -11,10 +11,11 @@ Lets Get Started + Our Products
 *******************************
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 3
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 This page goes through some introductory information about our team and our products.  It also explores some common scenarios and answers some common questions. 
 

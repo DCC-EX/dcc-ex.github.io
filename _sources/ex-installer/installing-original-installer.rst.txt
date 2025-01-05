@@ -31,6 +31,7 @@ Using the Installer (Windows x32, MacOS or Linux)
   We hope to have a new version available soon.
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
    .. contents:: On this page
       :depth: 2

@@ -10,10 +10,11 @@ EX-CommandStation
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
    .. contents:: On this page
-     :depth: 2
-     :local:
+      :depth: 2
+      :local:
 
 .. note::
 	The |EX-CSB1| already comes with the |EX-CS| software installed. You can, however, use this page for instructions on how to upload a newer version, or upload your EXRAIL scripts

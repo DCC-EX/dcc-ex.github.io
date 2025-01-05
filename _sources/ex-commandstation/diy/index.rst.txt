@@ -10,23 +10,19 @@ Do-It-YourSelf - Getting Started
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 In order to get the most out of this website, we ask you at first to make 2 choices:
 
 1. To self-identify your **"level"** with regards to DCC-EX. |BR| If you have not chosen whether you are a |Conductor-text|, |Tinkerer-text|, or |Engineer-text|, please go to the :doc:`/begin/levels` page before proceeding further. |BR| |BR|
 
-2. Choose will be whether you want **"Ready-To-Run" (RTR)** path or the **"Do-It-Yourself" (DIY)** path. |BR| If you want the ready-to-run (RTR) path we suggest that you look at the :doc:`/ex-commandstation/rtr-index` page.
+2. Choose whether you want the **"Ready-To-Run" (RTR)** path or the **"Do-It-Yourself" (DIY)** path. |BR| If you want the ready-to-run (RTR) path we suggest that you look at the :doc:`/ex-commandstation/rtr-index` page.
 
 **If you are still interested the do-it-yourself (DIY) path then read on...**
-
-.. note:: 
-  :class: note-float-right-narrow
-
-  If you need a definition of what an |EX-CS| is, please see :ref:`ex-commandstation/index:what is ex-commandstation?`.
 
 You are here on the DIY path where you will build your own |EX-CS| from commonly available parts.
 

@@ -10,10 +10,11 @@ Stage 5 - Turntables & Traversers
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :local:
-    :depth: 2
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 A turntable can add significant interest to a layout, especially when involved in operations sessions, and when depicting realistic engine yards.
 

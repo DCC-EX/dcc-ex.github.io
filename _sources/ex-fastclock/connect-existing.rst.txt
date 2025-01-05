@@ -10,10 +10,11 @@ Configuration options
 |SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-fastclock-button-small|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 If you already have a FastCLock |EX-FC| has a number of couple of configuration options which allow you to connect your own clock to a |EX-CS|.
 

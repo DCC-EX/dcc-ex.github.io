@@ -10,10 +10,11 @@ Style Guide
 |SUITABLE| |conductor| |tinkerer| |engineer|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 This page aims to provide guidance for people contributing to the |DCC-EX| website on how to write individual pages to a) provide a better user experience, and b) be easier to maintain the documentation.
 

@@ -10,10 +10,11 @@ ESP32_Ant-01 Breakout and Development Board (ESP32)
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 .. image:: /_static/images/wifi/esp32_dev_board.jpg
     :alt: ESP32 dev board

@@ -7,11 +7,12 @@ Solenoid or coil turnouts/points
 
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button|
 
-.. sidebar:: 
+.. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 3
-    :local:
+   .. contents:: On this page
+      :depth: 3
+      :local:
 
 Important considerations for solenoid/coil turnouts/points
 ==========================================================

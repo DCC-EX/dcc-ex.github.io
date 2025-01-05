@@ -10,10 +10,11 @@ EX-CommandStation (Ready-to-Run or Do-It-Yourself)
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
    .. contents:: On this page
-      :local:
       :depth: 1
+      :local:
 
 What is EX-CommandStation?
 ==========================

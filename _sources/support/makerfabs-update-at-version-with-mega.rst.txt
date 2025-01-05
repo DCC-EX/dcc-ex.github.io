@@ -15,10 +15,11 @@ Makerfabs ESP8266 - Update AT Version with an Arduino Mega
 |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
    .. contents:: On this page
-      :local:
       :depth: 3
+      :local:
 
 Unfortunately many of the Espressif ESP8266 based WiFi Boards that are available for sale routinely come with versions of the firmware that simply do not work with |EX-CS|. The only boards guaranteed to work out of the box are the ones designed in a partnership between DCC-EX and Makerfabs. The board are the `EX-WifiShield 8266 <https://store.dcc-ex.com/products/EX-WiFiShield-8266-p625876731>`_ |EXTERNAL-LINK| available through our reseller network, and the `Makerfabs ESP8266 WiFi Shield <https://www.makerfabs.com/esp8266-wifi-shield.html>`_ |EXTERNAL-LINK|. If you have a Makerfabs shield that was made between May 2023 and October 2023, your board may have faulty firmware.
 

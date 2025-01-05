@@ -9,10 +9,11 @@ Infrared or IR sensors
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 Infrared based sensors are quite prevalent and "off the shelf" varieties are very simple to implement with |EX-CS| and also |EX-R| as they provide a simple digital on/off output which either set their output pin low or high depending on how they are designed.
 

@@ -10,10 +10,11 @@ EXRAIL Command Reference
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 |EX-CS| provides full automation and accessory control through the Extended Railroad Automation Instruction Language (|EX-R|).
 

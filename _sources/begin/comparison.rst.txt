@@ -13,10 +13,11 @@ Why DCC-EX? - Comparing EX-CommandStation to Commercial Systems
 ***************************************************************
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 3
-    :local:
+   .. contents:: On this page
+      :depth: 3
+      :local:
 
 Introduction
 ============

@@ -9,15 +9,16 @@ Overview and configuration
 
 |SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-ioexpander-button-small|
 
+.. sidebar:: 
+   :class: sidebar-on-this-page
+  
+   .. contents:: On this page
+      :depth: 2
+      :local:
+
 .. note:: 
 
   |EX-IO| is currently in its infancy and as such is considered to be in Alpha testing, so could (and likely will) change without notice, and possibly even be broken in some scenarios.
-
-.. sidebar:: 
-  
-  .. contents:: On this page
-    :depth: 2
-    :local:
 
 Introduction
 ============

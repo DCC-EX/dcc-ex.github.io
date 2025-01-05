@@ -10,11 +10,12 @@
 Ready-to-Run or Do-It-Yourself - Choose your Level
 **************************************************
 
-.. sidebar:: 
+.. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 Some of our products are *Ready-To-Run* (RTR) and some are more *Do-It-Yourself* (DIY). Model Railroad layouts can be as simple as a small circle that runs around a holiday display, to a fully automated club layout. 
 

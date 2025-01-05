@@ -10,10 +10,11 @@ Overview
 |SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-turntable-button-small|
 
 .. sidebar:: 
-  
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   :class: sidebar-on-this-page
+
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 What is EX-Turntable?
 =====================

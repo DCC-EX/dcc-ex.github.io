@@ -12,10 +12,11 @@ Throttles (Controllers)
 This page contains lists of compatible Throttles (Controllers) that currently support the |EX-CS|.  They are listed two ways:
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 
 * :ref:`By Client Technology <throttles/index:throttles - by client technology>`  (e.g. Android, iOS, Web Browser, PC)

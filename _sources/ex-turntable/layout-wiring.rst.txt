@@ -10,10 +10,11 @@ Layout Connections and Wiring
 |SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-turntable-button-small|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 1
-    :local:
+   .. contents:: On this page
+      :depth: 1
+      :local:
 
 On this page we hope to outline various different ways to connect your turntable to |EX-TT| and your layout to ensure correct DCC phase alignment with the surrounding tracks.
 

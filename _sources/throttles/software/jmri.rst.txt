@@ -8,10 +8,11 @@ JMRI (Java Model Railroad Interface)
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button| 
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 |JMRI| is quite a powerful suite of software applications, and can be as simple or as complex as you wish to make it.
 

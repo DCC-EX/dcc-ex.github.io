@@ -10,10 +10,11 @@ Choosing a Throttle (Controller) - Advanced
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
    .. contents:: On this page
-     :depth: 1
-     :local:
+      :depth: 1
+      :local:
 
 You need just two things that work together to operate your model railroad:
 

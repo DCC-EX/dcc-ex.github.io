@@ -10,10 +10,11 @@ Testing EX-IOExpander
 |SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-ioexpander-button-small|
 
 .. sidebar:: 
-  
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   :class: sidebar-on-this-page
+
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 Additional diagnostic and testing commands have been added to allow testing your |EX-IO| device independently of your |EX-CS|.
 

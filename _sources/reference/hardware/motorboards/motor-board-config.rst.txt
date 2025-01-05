@@ -10,10 +10,11 @@ Motor Driver Configuration
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. sidebar:: 
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-    :depth: 2
-    :local:
+   .. contents:: On this page
+      :depth: 2
+      :local:
 
 |EX-CS| supports many different motor drivers, you can select any of the pre-configured boards simply by choosing them from the motor driver dropdown list in the installer, or by adding them with one line in your config.h file. If your board is not supported, these instructions will show you how to add it.
 

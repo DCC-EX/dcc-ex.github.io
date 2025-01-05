@@ -11,9 +11,10 @@ DIY - Advanced Options
 |SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-commandstation-button-small|
 
 .. sidebar::
+   :class: sidebar-on-this-page
 
-  .. contents:: On this page
-      :depth: 2
+   .. contents:: On this page
+      :depth: 1
       :local:
 
 These pages describe the major supported hardware options for building a |EX-CS|, along with some guidance for some of the unsupported options. 

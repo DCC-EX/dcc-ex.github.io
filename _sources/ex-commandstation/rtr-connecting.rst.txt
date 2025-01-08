@@ -214,12 +214,12 @@ For more information about power supplies, including how to use one power supply
    :align: left
    :alt: 2.1mm screw terminal adapter
 
-   2.1mm Screw Terminal Adapter
+   2.1mm Screw |BR| Terminal Adapter
 
 .. figure:: /_static/images/power/12v-3A-brick.png
    :alt: 12V 3A brick power supply
-   :scale: 100%
-   :align: center
+   :scale: 80%
+   :align: right
 
    12V/3A Power Supply
 
@@ -344,7 +344,7 @@ If you have already used |Engine Driver|, you can run the wizard again at any ti
 .. figure:: /_static/images/engine_driver/ed_wizard_menu.png
    :alt: Engine Driver Intro/Setup Wizard
    :scale: 45%
-   :align: center
+   :align: right
 
    Engine Driver Intro/Setup Wizard
 
@@ -386,7 +386,7 @@ The |DCC-EX Native protocol| allows for more powerful, expanded capabilities whe
 .. figure:: /_static/images/engine_driver/ed_dcc_ex_protocol2.png
    :alt: DCC-EX Protocol Menu
    :scale: 45%
-   :align: center
+   :align: right
 
    DCC-EX Protocol Menu
 
@@ -425,7 +425,7 @@ Press the :guilabel:`select` button and enter the address for your loco. Here yo
 .. figure:: /_static/images/engine_driver/ed_select_addr2.png
    :alt: Acquire Loco by its Address
    :scale: 45%
-   :align: center
+   :align: right
 
    Acquire Loco by its address
 
@@ -469,7 +469,7 @@ Confirm startup
 
    EX-CSB1 Startup - OLED screen
 
-... todo XXX [insert link] Show and explain the startup screen. What goes here?
+.. todo XXX [insert link] Show and explain the startup screen. What goes here?
 
 At startup of the |EX-CSB1| the OLED screen shows useful information.
 

@@ -58,8 +58,7 @@ Connect Everything:
 * Reconnect the |EX-CS| to the computer
 * Wait for about 30 seconds for the Command Station to run through its startup sequence
 
-.. NOTE:: 
-   :class: note-float-right-narrow
+.. important:: 
 
    The programming track is for programming only. Make sure you are on the MAIN track if you expect your loco to move or respond to light or sound commands.
 
@@ -100,9 +99,9 @@ Connect Everything:
 * The circular control or vertical slider (chosen by the throttle select slider) can be moved by clicking and holding down the mouse button and dragging, clicking at a spot where you want the throttle to move, or clicking the + and - buttons
 
 .. note:: 
-   If you did not see the LEDs light near the A and B outputs on the |Motor Shield|, try pushing down on the |motor shield| to make sure that the pins are properly seated into the Arduino. If that did not work, scroll down to the very bottom of this page and click on the 'Next' button for troubleshooting help.
+   If you did not see the LEDs light up, near the A and B outputs on the |Motor Shield|, try pushing down on the |motor shield| to make sure that the pins are properly seated into the Arduino. If that did not work, scroll down to the very bottom of this page and click on the 'Next' button for troubleshooting help.
 
-.. sidebar:: 
+.. sidebar:: Progressive Web App (PWA)
 
     |EX-WT| is also a Progressive Web App (PWA). That means you can install it on your computer and run it right from your start menu! If you go into the |EX-WT| settings panel (click the 3 line "hamburger menu" at the top left), you will find a "Settings" menu. Click on "Apps" and then select "Install as an App". You can now work offline and always find |EX-WT| with your other Apps!
 
@@ -113,8 +112,8 @@ Click this link: :doc:`EX-WebThrottle </ex-webthrottle/index>` to run |EX-WT| ho
 Using Engine Driver or WiThrottle - Requires WiFi
 -------------------------------------------------
 
-.. NOTE:: 
-   :class: note-float-right
+.. important:: 
+   :class: important-float-right
 
    The programming track is for programming only. Make sure you are on the MAIN track if you expect your loco to move or respond to light or sound commands.
 
@@ -122,7 +121,8 @@ Connect Everything:
 
 * Disconnect the |EX-CS| from the computer (that you used to load the software)
 * Connect the wires from the 'MAIN' terminals of the |motor shield| (output A) to your MAIN track
-* If you are using the DCC-EX |EX-MS|, plug in your single power supply to the shield
+* If you are using a |EX-CSB1-SHORT|, plug in your single power supply to the board
+* If you are using a |EX-MS|, plug in your single power supply to the shield
 * If you are using a |standard Motor Driver|, plug in the two power supplies (The one for the Arduino and the one for the |motor shield|). Make sure to not plug the higher voltage power supply into the Arduino by mistake
 * Wait for about 30 seconds for the Arduino to run through the initial startup sequence
 
@@ -256,11 +256,11 @@ Using WiThrottle (Apple iOS)
 
 See :doc:`WiThrottle Page </throttles/software/withrottle>` for details on how to install and run |WiThrottle|.
 
-.. warning:: 
+.. important:: 
 
    **Locos Can't Respond to Throttle Commands on the Programming Track!**
 
-   We have repeated this in several places on the Website because it is such a common issue. The MAIN track is for running trains, the PROG (service track) is for programming your loco. **THE LOCO CANNOT RESPOND TO THROTTLE OR FUNCTION COMMANDS WHILE ON THE PROG TRACK** This is by design and part of the NMRA specification.
+   We have repeated this in multiple places on the Website because it is such a common issue. The MAIN track is for running trains, the PROG (service track) is for programming your loco. **THE LOCO CANNOT RESPOND TO THROTTLE OR FUNCTION COMMANDS WHILE ON THE PROG TRACK** This is by design and part of the NMRA DCC specification.
 
 |HR-HEAVY|
 

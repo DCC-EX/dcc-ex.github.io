@@ -11,7 +11,7 @@
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=966e29a9" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=0281c912" />
       <link rel="stylesheet" type="text/css" href="../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -705,21 +705,22 @@
 <p>There are number of excellent <a class="reference internal" href="../throttles/index.html"><span class="doc">phone apps and physical hardware devices</span></a> that can be used as a WiFi Throttle (Controller) for the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>.  On this page we are only going to cover two.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This warning is only relevant to the <strong>DIY</strong> EX-CommandStation. <strong>It is not relevant to the EX-CommandStation/Booster One Express.</strong></p>
+<p>This warning is only relevant to the <strong>DIY</strong> EX-CommandStation. <br />
+<strong>It is not relevant to the</strong> <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a>.</p>
 <p>Be aware that the Espressif firmware shipped with <em>Duinopeak ESP8266 WiFi Expansion</em> and <em>ESP-01 or ESP-01S</em> devices <span class="dcc-ex-red-bold">probably will NOT work</span> with <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> out of the box.</p>
 <p>The recommended <a class="reference internal" href="../reference/hardware/wifi-boards/makerfabs-esp8266.html"><span class="doc">Makerfabs ESP8266 WiFi Shield</span></a> is now shipping with the correct firmware version and <strong>will work</strong> with <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> <em>without modification</em>.</p>
-<p>If you see a WiFi network Name (SSID) of <code class="docutils literal notranslate"><span class="pre">DCCEX-SAYS-BROKEN-FIRMWARE</span></code> then you have one of the problematic AT firmware versions.  This can be corrected, but is probably beyond Conductor level and requires additional hardware.</p>
-<p>See <a class="reference internal" href="../support/wifi-at-version.html"><span class="doc">ESP8266 (WiFi Boards) - AT Version Issues and Solutions</span></a> for details on how to check the version and how to correct it if needed.</p>
+<p>If you see a WiFi network Name (SSID) of <code class="docutils literal notranslate"><span class="pre">DCCEX-SAYS-BROKEN-FIRMWARE</span></code> then you have one of the problematic AT firmware versions.  This can be corrected, but is probably beyond Conductor level and requires additional hardware.  <br />
+See <a class="reference internal" href="../support/wifi-at-version.html"><span class="doc">ESP8266 (WiFi Boards) - AT Version Issues and Solutions</span></a> for details on how to check the version and how to correct it if needed.</p>
 </div>
 <p><hr class="hr-dashed" /></p>
 <section id="compatible-wifi-throttles">
 <h4>Compatible WiFi Throttles<a class="headerlink" href="#compatible-wifi-throttles" title="Link to this heading"></a></h4>
 <div class="important-float-right admonition important">
 <p class="admonition-title">Important</p>
-<p>A limitation of the <a class="reference internal" href="advanced-setup/supported-wifi/wifi-config.html"><span class="doc">Access Point (AP) Mode</span></a> that is recommended in the <a class="reference internal" href="index.html"><span class="doc">EX-CommandStation (Ready-to-Run or Do-It-Yourself)</span></a> pages is that the <a class="reference internal" href="../reference/software/withrottle-vs-native-commands.html"><span class="doc">wiThrottle Server</span></a> of the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> cannot be ‘discovered’.  <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> can <em>usually</em> guess it, but <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> can’t.  In <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> you will need to type in the address.</p>
+<p>A limitation of <a class="reference internal" href="advanced-setup/supported-wifi/wifi-config.html"><span class="doc">Access Point (AP) Mode</span></a>, which is recommended in the <a class="reference internal" href="index.html"><span class="doc">EX-CommandStation (Ready-to-Run or Do-It-Yourself)</span></a> pages, is that the <a class="reference internal" href="../reference/software/withrottle-vs-native-commands.html"><span class="doc">wiThrottle Server</span></a> of the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> cannot be ‘discovered’.  <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> can <em>usually</em> guess it, but <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> can’t.  In <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> you will need to type in the address.</p>
 </div>
 <p>For more information on any of these throttles, you can click on their links below or see our <a class="reference internal" href="../throttles/index.html"><span class="doc">Throttles Page Index</span></a>.</p>
-<p>We will just cover two here. These two are a) free, or have a free version, b) are reasonably easy to get to work, and c) most people will already have a suitable phone to use:</p>
+<p>We will cover the use of just two here. These two are a) free, or have a free version, b) are reasonably easy to get to work, and c) most people will already have a suitable phone to use:</p>
 <p>If you have an Android phone use <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a>. <br /> If you have an Apple (iOS) phone use <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">WiThrottle</span></a>.</p>
 <p><hr class="hr-dashed" /></p>
 <section id="engine-driver-android-withrottle-wifi">
@@ -799,7 +800,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f4e741503a0>
+    <jinja2.runtime.BlockReference object at 0x7f590fdc8670>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

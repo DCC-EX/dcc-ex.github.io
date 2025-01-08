@@ -92,14 +92,14 @@ There are number of excellent :doc:`phone apps and physical hardware devices </t
 
 .. warning:: 
    
-   This warning is only relevant to the **DIY** EX-CommandStation. **It is not relevant to the EX-CommandStation/Booster One Express.**
+   This warning is only relevant to the **DIY** EX-CommandStation. |BR|
+   **It is not relevant to the** |EX-CSB1-SHORT|. 
 
    Be aware that the Espressif firmware shipped with *Duinopeak ESP8266 WiFi Expansion* and *ESP-01 or ESP-01S* devices :dcc-ex-red-bold:`probably will NOT work` with |EX-CS| out of the box.
 
    The recommended :doc:`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>` is now shipping with the correct firmware version and **will work** with |EX-CS| *without modification*.
 
-   If you see a WiFi network Name (SSID) of ``DCCEX-SAYS-BROKEN-FIRMWARE`` then you have one of the problematic AT firmware versions.  This can be corrected, but is probably beyond Conductor level and requires additional hardware.  
-
+   If you see a WiFi network Name (SSID) of ``DCCEX-SAYS-BROKEN-FIRMWARE`` then you have one of the problematic AT firmware versions.  This can be corrected, but is probably beyond Conductor level and requires additional hardware.  |BR| 
    See :doc:`/support/wifi-at-version` for details on how to check the version and how to correct it if needed.
 
 |hr-dashed|
@@ -110,11 +110,11 @@ Compatible WiFi Throttles
 .. important:: 
    :class: important-float-right
    
-   A limitation of the |Access Point Mode| that is recommended in the :doc:`/ex-commandstation/index` pages is that the |WiThrottle Server| of the |EX-CS| cannot be 'discovered'.  |Engine Driver| can *usually* guess it, but |WiThrottle| can't.  In |WiThrottle| you will need to type in the address.
+   A limitation of |Access Point Mode|, which is recommended in the :doc:`/ex-commandstation/index` pages, is that the |WiThrottle Server| of the |EX-CS| cannot be 'discovered'.  |Engine Driver| can *usually* guess it, but |WiThrottle| can't.  In |WiThrottle| you will need to type in the address.
 
 For more information on any of these throttles, you can click on their links below or see our :doc:`Throttles Page Index </throttles/index>`.
 
-We will just cover two here. These two are a) free, or have a free version, b) are reasonably easy to get to work, and c) most people will already have a suitable phone to use:
+We will cover the use of just two here. These two are a) free, or have a free version, b) are reasonably easy to get to work, and c) most people will already have a suitable phone to use:
 
 If you have an Android phone use :doc:`/throttles/software/engine-driver`. |br| If you have an Apple (iOS) phone use :doc:`/throttles/software/withrottle`.
 

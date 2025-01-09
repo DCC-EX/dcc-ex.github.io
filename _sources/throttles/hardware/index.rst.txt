@@ -19,4 +19,5 @@ Throttles (Hardware)
   mybluepillthrottle
   engine-driver-physical-knobs
   streamdeck 
+  lodi-con-wifi-throttle
   uwt50

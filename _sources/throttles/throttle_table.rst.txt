@@ -305,6 +305,20 @@
       -  
       -  
 
+    * -  :doc:`LoDi-Con WiFi Throttle </throttles/hardware/lodi-con-wifi-throttle>`
+      -  Paid
+      -  WiFi
+      -  WiT
+      -  Device
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
     * -  LocoNet-Compatible Throttles
       -  Free / Paid
       -  WiFi

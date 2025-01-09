@@ -66,6 +66,7 @@ Dedicated Hardware
 - :doc:`DccExController (Physical) <hardware/dccexcontroller>`
 - :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
 - :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
+- :doc:`LoDi-Con WiFi Throttle </throttles/hardware/lodi-con-wifi-throttle>`
 - :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 - See also :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
@@ -121,6 +122,7 @@ WiThrottle Protocol Based Throttles
 - `HandCab (Physical) <https://github.com/1fatgmc/HandCab/tree/main>`_
 - :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
 - :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
+- :doc:`LoDi-Con WiFi Throttle </throttles/hardware/lodi-con-wifi-throttle>`
 
 USB Based Throttles
 -------------------------------

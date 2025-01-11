@@ -87,4 +87,4 @@ To use WiFi, make sure you have a WiFi enabled |EX-CS| as described in the :doc:
 To use ThrottleCard, simply connect to any WiThrottle Protocol enabled command station including JMRI, DCC-EX, and various commercial offerings. 
 ThrottleCard can be used for free without a subscription to control the speed, direction, and functions of a single locomotive at a time, throw turnouts, and change the theme.
 
-Subscribe to Premium for $0.99/Month or $9.99/Year - 16% off - to unlock multiple throttles, multiple locomotives in a consist, game controllers, and to support the future development of additional, exciting features! We’ll even give you a week free to try it out.
+Subscribe to Premium for US$0.99/Month or US$9.99/Year - 16% off - to unlock multiple throttles, multiple locomotives in a consist, game controllers, and to support the future development of additional, exciting features! We'll even give you a week free to try it out.

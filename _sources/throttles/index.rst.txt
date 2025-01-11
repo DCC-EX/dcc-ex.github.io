@@ -50,8 +50,8 @@ Android (Phones and Tablets)
 Apple iOS (Phones and Tablets)
 ------------------------------
 
-- :doc:`Locontrol (iOS) <software/locontrol>`
 - :doc:`WiThrottle (iOS) <software/withrottle>`
+- :doc:`Locontrol (iOS) <software/locontrol>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`Train Driver (iOS) <software/train-driver>`
 - :doc:`ThrottleCard (iOS) <software/throttlecard>`

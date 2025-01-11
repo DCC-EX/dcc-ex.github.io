@@ -31,6 +31,7 @@ Apple iOS (Phones and Tablets)
 - :doc:`WiThrottle (iOS)<withrottle>`
 - :doc:`SRCP Client (iOS) <srcpclient>`
 - :doc:`Train Driver (iOS) <train-driver>`
+- :doc:`ThrottleCard (iOS) <throttlecard>`
 
 Personal Computers
 ------------------
@@ -58,6 +59,7 @@ Note: The Android throttle apps listed above can be made to made to run on Windo
     Locontrol (iOS) <locontrol>
     SRCP Client (iOS) <srcpclient>
     Train Driver (iOS) <train-driver>
+    ThrottleCard (iOS) <throttlecard>
     Train Throttle (Windows) <train-throttle>
     Android Apps on Windows <android-apps-on-windows>
     Railroad Automation (Windows) <railroad-automation>

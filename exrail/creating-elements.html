@@ -355,6 +355,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../throttles/software/locontrol.html">Locontrol (iOS)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../throttles/software/srcpclient.html">SRCP Client (iOS)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../throttles/software/train-driver.html">Train Driver (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../throttles/software/throttlecard.html">ThrottleCard (iOS)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../throttles/software/train-throttle.html">Train Throttle (Windows)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../throttles/software/android-apps-on-windows.html">Android Apps on Windows</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../throttles/software/railroad-automation.html">Railroad Automation (Windows)</a></li>
@@ -729,6 +730,19 @@
 </div>
 <p>Note that it only has FO (the Headlight) and not following slashes.</p>
 </div></blockquote>
+<p><strong>Default Function Settings</strong></p>
+<blockquote>
+<div><p>If you add a roster entry for DCC address zero (0) it will become the default for all manually acquired locos.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;Default&quot;</span><span class="p">,</span><span class="s">&quot;Lights/Bell/*Horn/F3/F4/F5/F6/F7/F8/F9/10/F11/F12/F13/F14/F15/F16/F17/F18/F19/F20/F21/F22/F23/F24/F25/F26/27/F28/F29/F30/F31&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Put an <code class="docutils literal notranslate"><span class="pre">*</span></code> ahead of any that you want momentary</p>
+<p>This is especially useful for European and British prototype sound decoders which sometimes use F1 and/or F2 for other purposes.</p>
+<p>For example, to make F2 default to latching you may want to add..</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROSTER</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;Default&quot;</span><span class="p">,</span><span class="s">&quot;Lights/Bell/F2/F3/F4/F5/F6/F7/F8/F9/10/F11/F12/F13/F14/F15/F16/F17/F18/F19/F20/F21/F22/F23/F24/F25/F26/27/F28/F29/F30/F31&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
 </section>
 <hr class="docutils" />
 <section id="adding-turnouts-points">
@@ -1019,7 +1033,7 @@ SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for turnout/point 1, Thrown=Red,
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7ff83d8d4f10>
+    <jinja2.runtime.BlockReference object at 0x7f1954c90520>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

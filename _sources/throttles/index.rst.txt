@@ -54,6 +54,7 @@ Apple iOS (Phones and Tablets)
 - :doc:`WiThrottle (iOS) <software/withrottle>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`Train Driver (iOS) <software/train-driver>`
+- :doc:`ThrottleCard (iOS) <software/throttlecard>`
 - :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
 
 
@@ -117,6 +118,7 @@ WiThrottle Protocol Based Throttles
 - :doc:`WiThrottle (iOS)<software/withrottle>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`Train Driver (iOS) <software/train-driver>`
+- :doc:`ThrottleCard (iOS) <software/throttlecard>`
 - :doc:`miniThrottle (Physical) <hardware/minithrottle>`
 - :doc:`WiTcontroller (Physical) <hardware/witcontroller>`
 - `HandCab (Physical) <https://github.com/1fatgmc/HandCab/tree/main>`_

@@ -109,6 +109,24 @@ The same again, with more text functions defined to represent a number of differ
 
    Note that it only has FO (the Headlight) and not following slashes.
 
+**Default Function Settings**
+
+   If you add a roster entry for DCC address zero (0) it will become the default for all manually acquired locos.
+
+   .. code-block:: cpp
+
+      ROSTER(0,"Default","Lights/Bell/*Horn/F3/F4/F5/F6/F7/F8/F9/10/F11/F12/F13/F14/F15/F16/F17/F18/F19/F20/F21/F22/F23/F24/F25/F26/27/F28/F29/F30/F31")
+
+   Put an ``*`` ahead of any that you want momentary
+
+   This is especially useful for European and British prototype sound decoders which sometimes use F1 and/or F2 for other purposes.
+
+   For example, to make F2 default to latching you may want to add.. 
+
+   .. code-block:: cpp
+
+      ROSTER(0,"Default","Lights/Bell/F2/F3/F4/F5/F6/F7/F8/F9/10/F11/F12/F13/F14/F15/F16/F17/F18/F19/F20/F21/F22/F23/F24/F25/F26/27/F28/F29/F30/F31")
+
 ----
 
 Adding Turnouts/Points

@@ -57,6 +57,8 @@ Add a Roster
 
 .. code-block:: cpp
    
+   // Sample default roster entry, if added (loco 0) it will become the default for all manually acquired locos
+   ROSTER(0,"Default","Lights/Bell/*Horn/F3/F4/F5/F6/F7/F8/F9/10/F11/F12/F13/F14/F15/F16/F17/F18/F19/F20/F21/F22/F23/F24/F25/F26/27/F28/F29/F30/F31")
    // Sample Engines with DCC decoders have from a few to many F-Keys
    ROSTER (  3,"Eng 3", "F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//") // Address 3, Eng 3, Function keys F0-F10
    ROSTER(1224,"PE 1224","") // Motor Only Decoder, But use Engine Driver 'Preferences >In Phone Loco 'Sound'

@@ -179,17 +179,17 @@
       -  
       -  
 
-    * -  :doc:`Train Driver <software/train-driver>`
-      -  Free
+    * -  :doc:`ThrottleCard <software/throttlecard>`
+      -  Free / Paid
       -  WiFi
-      -  Native / WiT
+      -  WiT
       -  App
       -  
       -  
       -  
       -  X
       -  
-      -  
+      -  X
       -  
       -  
 

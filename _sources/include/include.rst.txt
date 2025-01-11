@@ -204,6 +204,10 @@
 
     :doc:`wiThrottle Lite </throttles/software/withrottle>`
 ..
+.. |ThrottleCard| replace::
+
+    :doc:`ThrottleCard </throttles/software/throttlecard>`
+..
 .. |wiThrottle Protocol| replace::
 
     :doc:`wiThrottle Protocol </reference/software/withrottle-vs-native-commands>`

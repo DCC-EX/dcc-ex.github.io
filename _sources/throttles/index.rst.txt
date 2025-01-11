@@ -79,6 +79,7 @@ Personal Computers
 - :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
 - :doc:`Train Throttle <software/train-throttle>`
 - :doc:`Railroad Automation <software/railroad-automation>` *- Requires IoTT Red Hat*
+- :doc:`ThrottleCard (M1 Mac) <software/throttlecard>` *- Requires WiThrottle server*
 
 Note: The Android throttle apps listed above can be made to made to run on Windows PCs. See :doc:`Running Android apps on Microsoft Windows <software/android-apps-on-windows>`.
 

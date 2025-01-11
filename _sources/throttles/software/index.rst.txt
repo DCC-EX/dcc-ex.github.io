@@ -20,7 +20,7 @@ Android (Phones and Tablets)
 - :doc:`Engine Driver (Android)<engine-driver>`
 - :doc:`DCCpp CAB (android) <dccpp-cab>`
 - :doc:`Cab Engineer: DCC Throttle (Andriod) <cab-engineer>`
-- :doc:`DigiTrainsPro (Android) <digitrainspro>` *- Requires JMRI*
+- :doc:`DigiTrainsPro (Android, iOS, Windows) <digitrainspro>` *- Requires JMRI*
 - :doc:`RtDtive DCC++ (Android) <rtdrive-dccpp>`
 
 Apple iOS (Phones and Tablets)
@@ -28,7 +28,7 @@ Apple iOS (Phones and Tablets)
 
 - :doc:`ThrottleCard (iOS) <throttlecard>`
 - :doc:`Locontrol (iOS) <locontrol>` *- Requires JMRI*
-- :doc:`DigiTrainsPro (Android) <digitrainspro>` *- Requires JMRI*
+- :doc:`DigiTrainsPro (Android, iOS, Windows) <digitrainspro>` *- Requires JMRI*
 - :doc:`WiThrottle (iOS)<withrottle>`
 - :doc:`SRCP Client (iOS) <srcpclient>`
 - :doc:`Train Driver (iOS) <train-driver>`
@@ -40,7 +40,7 @@ Personal Computers
 - :doc:`EX-WebThrottle </ex-webthrottle/index>`  *(Web Browser)*
 - :doc:`JMRI (Windows, iOS, Linux) <jmri>`
 - :doc:`Train Throttle (Windows) <train-throttle>`
-- :doc:`DigiTrainsPro (Android) <digitrainspro>` *- Requires JMRI*
+- :doc:`DigiTrainsPro (Android, iOS, Windows) <digitrainspro>` *- Requires JMRI*
 - :doc:`Railroad Automation <railroad-automation>` *- Requires IoTT Red Hat*
 - :doc:`ThrottleCard (M1 Mac) <throttlecard>` *- Requires WiThrottle server*
 

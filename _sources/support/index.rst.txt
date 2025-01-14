@@ -27,9 +27,9 @@ The following pages provide these FAQs and troubleshooting guides, and the follo
   :maxdepth: 2
 
   index-ex-cs
+  troubleshooting-decoders
   ex-tt-troubleshooting
   ex-io-troubleshooting
-  troubleshooting-decoders
 
 ----
 

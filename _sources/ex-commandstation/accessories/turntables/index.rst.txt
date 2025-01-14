@@ -11,7 +11,7 @@ Turntables and traversers
 
 .. note:: 
 
-  This section focuses on functionality supporting turntables/traversers in the same manner as turnouts/points, by creating objects that can be advertised to and controlled by throttles in a similar way. |NOT-IN-PROD-VERSION|.
+  This section focuses on functionality supporting turntables/traversers in the same manner as turnouts/points, by creating objects that can be advertised to and controlled by throttles in a similar way..
 
 Turntables and traversers can add significant interest to your model railroad during operating sessions as well as providing space savings when used in conjunction with roundhouses and when used as staging yards.
 

@@ -189,7 +189,7 @@ Note:  Previously referred to as 'DC-District'.
 ``<onOff [track]>`` - Turn power on or off to the requested TrackManager track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK| |BR| |NOT-IN-PROD-VERSION|
+|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
 
   *Parameters:* |BR|
   |_| > **onOff:** one of |BR|
@@ -206,7 +206,7 @@ Note:  Previously referred to as 'DC-District'.
 Change Frequency on DC or DC_INV/DCX TrackManager track
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK| |BR| |NOT-IN-PROD-VERSION|
+|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
 
 When running in DC mode certain locomotives can be unresponsive at certain DC frequencies, a situation that is not found when running in DCC mode.  When in DC or DC_INV / DCX mode it is now possible to set different frequencies using Functions F29, F30 & F31.
 
@@ -1197,7 +1197,7 @@ WiFi Control
 ``<C WIFI "ssid" "password">`` - Connects to an existing WIFI network in STA mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK| |BR| |NOT-IN-PROD-VERSION|
+|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
 
   *Parameters:* |BR|
   |_| > **ssid:** network to connect to |BR|
@@ -1882,7 +1882,7 @@ If turnout definitions are stored in EEPROM, the turnout thrown/closed state is 
 Turntables/Traversers (Configuring the EX-CommandStation)
 ---------------------------------------------------------
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK| |BR| |NOT-IN-PROD-VERSION|
+|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
 
 .. contents:: In This Section
     :depth: 4

@@ -99,7 +99,7 @@ Controlling the turntable
 
 To control the turntable, the simplest method is using |EX-R| automation commands advertised as ROUTEs to the throttle of your choice.
 
-There is now the ability to control |EX-TT| as a turntable or traverser object, similar to how turnouts/points are controlled, via either DCC-EX native commands or |EX-R|, however |NOT-IN-PROD-VERSION|.
+There is now the ability to control |EX-TT| as a turntable or traverser object, similar to how turnouts/points are controlled, via either DCC-EX native commands or |EX-R|, however.
 
 Refer to the :ref:`ex-turntable/test-and-tune:testing, tuning, and control` page for more details on both methods of control available.
 

@@ -339,6 +339,11 @@ html[data-theme='dark'] .dcclink-right a {
   top: 5px;
 }
 
+html[data-theme='dark'] .dcclink a:active {
+  box-shadow: none !important;
+  top: 5px;
+}
+
 html[data-theme='dark'] .rst-content .guilabel {
   color: black;
 }

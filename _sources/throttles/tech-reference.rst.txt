@@ -254,7 +254,7 @@ Roster Information
 Turntables/Traversers
 ^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK| |BR| |NOT-IN-PROD-VERSION|
+|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
 
 A new feature has been added to support control of turntables/traversers from throttles, including the ability for throttles to "draw" turntable positions as defined to support graphical operation. If |EX-R| commands are used to define turntables and their associated positions, a description for the turntable as well as each position is able to be defined.
 

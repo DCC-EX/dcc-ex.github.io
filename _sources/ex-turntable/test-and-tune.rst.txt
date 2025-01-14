@@ -86,8 +86,6 @@ Here's a quick example to demonstrate the difference between the diagnostic and 
 Development version commands
 ----------------------------
 
-|NOT-IN-PROD-VERSION|
-
 For users keeping up with the |EX-CS| development releases, version 5.1.16 introduced a new turntable/traverser object, allowing for similar definition and control to that of turnouts/points.
 
 The existing methods of control for |EX-TT| using the native ``<D TT ...>`` command and ``MOVETT()`` |EX-R| command remain as-is, however there are now more complete methods of definition and control available.
@@ -512,8 +510,6 @@ For example, we could take the :ref:`big-picture/stage5/turntable-example:exampl
 
 NEW - Development version control of EX-Turntable
 =================================================
-
-|NOT-IN-PROD-VERSION|
 
 As mentioned previously, for users of the development version of |EX-CS|, version 5.1.16 introduces a new turntable object that can be used to define and control |EX-TT|.
 

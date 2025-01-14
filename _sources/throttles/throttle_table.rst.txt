@@ -194,16 +194,16 @@
       -  
 
     * -  :doc:`Train Throttle <software/train-throttle>`
-      -  Free
+      -  Free / Paid
       -  WiFi
       -  WiT
       -  App
       -  
       -  
       -  
-      -  
       -  X
-      -  
+      -  X
+      -  X
       -  
       -  
 
@@ -250,6 +250,20 @@
       -  
 
     * -  :doc:`DccExController <hardware/dccexcontroller>`
+      -  Free
+      -  WiFi
+      -  Native
+      -  Device
+      -  DIY
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  :doc:`EX-T3-WiFi <hardware/ex-t3-wifi>`
       -  Free
       -  WiFi
       -  Native

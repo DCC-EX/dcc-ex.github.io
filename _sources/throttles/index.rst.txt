@@ -68,6 +68,7 @@ Dedicated Hardware
 - :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
 - :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
 - :doc:`LoDi-Con WiFi Throttle </throttles/hardware/lodi-con-wifi-throttle>`
+- :doc:`EX-T3-WiFi (T3 = Tactile Touch Throttle) </throttles/hardware/ex-t3-wifi>`
 - :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 - See also :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
@@ -108,6 +109,7 @@ DCC-EX (DCC-EX Native Commands)
 - :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
 - :doc:`DCCpp CAB (Android) <software/dccpp-cab>`
 - :doc:`DccExController (Physical) <hardware/dccexcontroller>`
+- :doc:`EX-T3-WiFi (T3 = Tactile Touch Throttle) </throttles/hardware/ex-t3-wifi>`
 - See also :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
 WiThrottle Protocol Based Throttles

@@ -9,6 +9,22 @@ EX-WebThrottle
 
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button| 
 
+.. image:: /_static/images/throttles/icon_chrome.png
+   :alt: Chrome Logo
+   :scale: 100%
+   :align: left
+
+.. image:: /_static/images/throttles/icon_edge.png
+   :alt: Edge Logo
+   :scale: 11%
+   :align: left
+
+.. image:: /_static/images/throttles/icon_opera.png
+   :alt: Opera Logo
+   :scale: 13%
+   :align: left
+
+
 .. rst-class:: dcclink
 
    `Run Ex-WebThrottle Now <https://DCC-EX.github.io/WebThrottle-EX>`_

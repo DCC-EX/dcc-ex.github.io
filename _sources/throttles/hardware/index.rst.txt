@@ -20,4 +20,5 @@ Throttles (Hardware)
   engine-driver-physical-knobs
   streamdeck 
   lodi-con-wifi-throttle
+  ex-t3-wifi
   uwt50

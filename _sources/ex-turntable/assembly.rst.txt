@@ -543,8 +543,6 @@ Note there is no point in checking the driver at this stage as |EX-TT| is not co
 New development functionality and changes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NOT-IN-PROD-VERSION|
-
 If you are using the new developmental features for turntables and traversers available from development version 5.1.5 and on, there is one key change to the above.
 
 You must remove any reference to including "IO_EXTurntable.h" as this file no longer exists, and the device driver is included automatically.

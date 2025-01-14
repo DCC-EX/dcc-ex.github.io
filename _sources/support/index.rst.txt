@@ -29,6 +29,7 @@ The following pages provide these FAQs and troubleshooting guides, and the follo
   index-ex-cs
   ex-tt-troubleshooting
   ex-io-troubleshooting
+  troubleshooting-decoders
 
 ----
 

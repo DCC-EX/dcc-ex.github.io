@@ -76,10 +76,15 @@ To run |EX-I| you need:
 Getting Ready 
 =============
 
+.. warning:: 
+   :class: warning-float-right
+  
+   Close all other programs that might be using the USB port.  (Like the |Arduino IDE|, |EX-WT| or |JMRI|.)
+
 To begin with...
 
 * **Connect** your |EX-CS| **hardware** to your computer via USB. |BR| Make sure your USB Cable is connected from your computer to the EX-CommandStation. 
-* Make sure no other programs (like the |Arduino IDE| or |EX-WT|) are using the same USB port. (i.e. close them.)
+* Make sure no other programs (like the |Arduino IDE|, |EX-WT| or |JMRI|) are using the same USB port. (i.e. close them.)
 
 ----
 

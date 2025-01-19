@@ -64,17 +64,16 @@ Here is an example |EX-R| macro that will configure a virtual turnout, setting t
 .. code-block:: cpp
 
   #define PULSE 10    // Set the duration of the pulse to 10ms
-
-  #define SINGLE_COIL_TURNOUT(t, p1, p2, p3, desc) \
-  VIRTUAL_TURNOUT(t, desc) \
-  DONE \
-  ONCLOSE(t) \
-  SET(p2) RESET(p3) \
-  SET(p1) DELAY(PULSE) RESET(p1) \
+  #define SINGLE_COIL_TURNOUT(t, p1, p2, p3, desc)
+  VIRTUAL_TURNOUT(t, desc)
   DONE
-  ONTHROW(t) \
-  RESET(p2) SET(p3) \
-  SET(p1) DELAY(PULSE) RESET(p1) \
+  ONCLOSE(t)
+   SET(p2) RESET(p3)
+   SET(p1) DELAY(PULSE) RESET(p1)
+  DONE
+  ONTHROW(t)
+   RESET(p2) SET(p3)
+   SET(p1) DELAY(PULSE) RESET(p1)
   DONE
 
   SINGLE_COIL_TURNOUT(101, 22, 24, 26, "Turnout 101")
@@ -102,17 +101,16 @@ Here is an example |EX-R| macro that will configure a virtual turnout, setting t
 .. code-block:: cpp
 
   #define PULSE 10    // Set the duration of the pulse to 10ms
-
-  #define DUAL_COIL_TURNOUT(t, p1, p2, p3, desc) \
-  VIRTUAL_TURNOUT(t, desc) \
-  DONE \
-  ONCLOSE(t) \
-  SET(p2) RESET(p3) \
-  SET(p1) DELAY(PULSE) RESET(p1) \
+  #define DUAL_COIL_TURNOUT(t, p1, p2, p3, desc)
+  VIRTUAL_TURNOUT(t, desc)
   DONE
-  ONTHROW(t) \
-  RESET(p2) SET(p3) \
-  SET(p1) DELAY(PULSE) RESET(p1) \
+  ONCLOSE(t)
+   SET(p2) RESET(p3)
+   SET(p1) DELAY(PULSE) RESET(p1)
+  DONE
+   ONTHROW(t)
+   RESET(p2) SET(p3)
+   SET(p1) DELAY(PULSE) RESET(p1)
   DONE
 
   DUAL_COIL_TURNOUT(101, 22, 24, 26, "Turnout 101")
@@ -162,19 +160,19 @@ The DUAL_SOLENOID_TURNOUT definition is:
 .. code-block:: cpp
 
   #define PULSE 10 //10 mSec
-  #define DUAL_SOLENOID_TURNOUT(id,pc,pt,desc,ali)\
-  VIRTUAL_TURNOUT(id,desc)\
-  ALIAS(ali,id)\
-  DONE\
-  ONCLOSE(id)\
-  SET(pc)\
-  DELAY(PULSE)\
-  RESET(pc)\
-  DONE\
-  ONTHROW(id)\
-  SET(pt)\
-  DELAY(PULSE)\
-  RESET(pt)\
+  #define DUAL_SOLENOID_TURNOUT(id,pc,pt,desc,ali)
+  VIRTUAL_TURNOUT(id,desc)
+  ALIAS(ali,id)
+  DONE
+  ONCLOSE(id)
+   SET(pc)
+   DELAY(PULSE)
+   RESET(pc)
+  DONE
+  ONTHROW(id)
+   SET(pt)
+   DELAY(PULSE)
+   RESET(pt)
   DONE
 
   // Example use of this macro using first two pins on the first MCP23017 I/O expander

@@ -205,6 +205,15 @@ Note to manufacturers: This list is not designed in any way to disparage or favo
     - 3
     - No difficulties. On some decoders I have disabled all protocols but DCC, because I previously used a Märklin MobileStation they connected to automatically via mfx, but the decoders are also working perfectly with all enabled. If you should encounter problems, take a look at the CV reference section in the manual. Protocols other than DCC can be disabled with CV50.
 
+  * - ML-Train
+    - DRIVE-M with SUSI 4A [84004501]
+    - MFS
+    - Unknown
+    - N/A (bare wires)
+    - Default
+    - 3
+    - NMRA compliant, so works perfectly fine.
+
   * - SoundTrax
     - Tsunami2
     - MFS

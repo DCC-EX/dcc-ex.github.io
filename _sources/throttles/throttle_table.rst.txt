@@ -95,6 +95,20 @@
       -  
       -  X
 
+    * -  :doc:`DCC++ Throttle <software/dccpp-throttle>`
+      -  Free
+      -  BT
+      -  Native
+      -  App
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  X
+
     * -  :doc:`Cab Engineer: DCC Throttle <software/cab-engineer>`
       -  Free
       -  WiFi

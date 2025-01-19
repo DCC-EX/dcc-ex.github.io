@@ -46,6 +46,7 @@ Android (Phones and Tablets)
 - :doc:`Cab Engineer: DCC Throttle (Andriod) <software/cab-engineer>`
 - :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
 - :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
+- :doc:`DCC++ Throttle (Android) <software/dccpp-throttle>`
 
 Apple iOS (Phones and Tablets)
 ------------------------------
@@ -108,6 +109,7 @@ DCC-EX (DCC-EX Native Commands)
 - :doc:`JMRI <software/jmri>`
 - :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
 - :doc:`DCCpp CAB (Android) <software/dccpp-cab>`
+- :doc:`DCC++ Throttle (Android) <software/dccpp-throttle>`
 - :doc:`DccExController (Physical) <hardware/dccexcontroller>`
 - :doc:`EX-T3-WiFi (T3 = Tactile Touch Throttle) </throttles/hardware/ex-t3-wifi>`
 - See also :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`

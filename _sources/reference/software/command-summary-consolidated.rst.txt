@@ -62,17 +62,23 @@ Also allows joining the MAIN and PROG tracks together.
   |_| |_| |_| |_| • blank = Both Main and Programming Tracks  |BR|
   |_| |_| |_| |_| • MAIN = Main track  |BR|
   |_| |_| |_| |_| • PROG = Programming Track  |BR|
-  |_| |_| |_| |_| • JOIN = Join the Main and Programming tracks temporarily |BR|
+  |_| |_| |_| |_| • JOIN = Join the Main and Programming tracks temporarily |BR| Note: While ``<1 JOIN>`` is valid, ``<0 JOIN>`` is not. |BR|
 
   *Response:* 
-    |_| The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes. |BR|
-    |_| ``<pOnOFF [track]>`` |BR|
+
+    The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes.
+    
+    ``<pOnOFF [track]>`` |BR|
 
   *Notes:*
 
-    The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work. If you drive onto a programming track that is "joined" and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!
-
-    In some split |motor shield| hardware configurations JOIN will not be able to work.
+  * The use of the JOIN function allows the DCC signal for the MAIN track to also be sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output. 
+  
+    However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work. 
+  
+  * If you drive onto a programming track that is "joined" and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!
+  * In some split |motor shield| hardware configurations JOIN will not be able to work.
+  * While ``<1 JOIN>`` is valid, ``<0 JOIN>`` is not.
 
   *Examples:* |BR|
   |_| all tracks off: ``<0>`` |BR|

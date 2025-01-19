@@ -30,4 +30,7 @@ ESU LokPilot 5 decoder helper: outputs config and mapping.
 
 Finger-friendly navigation, swipe between lists and locomotives in cab.
 
+Main website and screenshots https://aleksandr.ru/my/dccppthrottle
+
 https://f-droid.org/en/packages/ru.aleksandr.dccppthrottle/
+

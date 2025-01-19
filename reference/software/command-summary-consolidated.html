@@ -715,16 +715,21 @@
 <span id="native-command-onoff-track1"></span><h4><a class="toc-backref" href="#id61" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;onOff</span> <span class="pre">[track]&gt;</span></code> - Turn power on or off to the MAIN and PROG tracks</a><a class="headerlink" href="#onoff-track-turn-power-on-or-off-to-the-main-and-prog-tracks" title="Link to this heading"></a></h4>
 <p>Also allows joining the MAIN and PROG tracks together.</p>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>onOff:</strong> one of <br />    • 1 = on <br />    • 0 = off <br /> &gt; <strong>track:</strong> one of <br />    • blank = Both Main and Programming Tracks  <br />    • MAIN = Main track  <br />    • PROG = Programming Track  <br />    • JOIN = Join the Main and Programming tracks temporarily <br /></p>
-<dl class="simple">
-<dt><em>Response:</em></dt><dd><p> The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes. <br /> <code class="docutils literal notranslate"><span class="pre">&lt;pOnOFF</span> <span class="pre">[track]&gt;</span></code> <br /></p>
-</dd>
-</dl>
-<p><em>Notes:</em></p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>onOff:</strong> one of <br />    • 1 = on <br />    • 0 = off <br /> &gt; <strong>track:</strong> one of <br />    • blank = Both Main and Programming Tracks  <br />    • MAIN = Main track  <br />    • PROG = Programming Track  <br />    • JOIN = Join the Main and Programming tracks temporarily <br /> Note: While <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code> is valid, <code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">JOIN&gt;</span></code> is not. <br /></p>
+<p><em>Response:</em></p>
 <blockquote>
-<div><p>The use of the JOIN function ensures that the DCC signal for the MAIN track is also sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output. However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work. If you drive onto a programming track that is “joined” and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!</p>
-<p>In some split <abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr> hardware configurations JOIN will not be able to work.</p>
+<div><p>The following is not a direct response, but rather a broadcast that will be triggered as a result of any power state changes.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;pOnOFF</span> <span class="pre">[track]&gt;</span></code> <br /></p>
 </div></blockquote>
+<p><em>Notes:</em></p>
+<ul>
+<li><p>The use of the JOIN function allows the DCC signal for the MAIN track to also be sent to the PROG track. This allows the prog track to act as a siding (or similar) in the main layout even though it is isolated electrically and connected to the programming track output.</p>
+<p>However, it is important that the prog track wiring be in the same phase as the main track i.e. when the left rail is high on MAIN, it is also high on PROG. You may have to swap the wires to your prog track to make this work.</p>
+</li>
+<li><p>If you drive onto a programming track that is “joined” and enter a programming command, the track will automatically switch to a programming track. If you use a compatible Throttle, you can then send the join command again and drive off the track onto the rest of your layout!</p></li>
+<li><p>In some split <abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr> hardware configurations JOIN will not be able to work.</p></li>
+<li><p>While <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code> is valid, <code class="docutils literal notranslate"><span class="pre">&lt;0</span> <span class="pre">JOIN&gt;</span></code> is not.</p></li>
+</ul>
 <p><em>Examples:</em> <br /> all tracks off: <code class="docutils literal notranslate"><span class="pre">&lt;0&gt;</span></code> <br /> all tracks on <code class="docutils literal notranslate"><span class="pre">&lt;1&gt;</span></code> <br /> join: <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code> <br />
 <em>Example Responses:</em> <br /> all tracks off: <code class="docutils literal notranslate"><span class="pre">&lt;p0&gt;</span></code> <br /> all tracks on <code class="docutils literal notranslate"><span class="pre">&lt;p1&gt;</span></code> <br /> join: <code class="docutils literal notranslate"><span class="pre">&lt;p1</span> <span class="pre">JOIN&gt;</span></code></p>
 </div></blockquote>
@@ -2283,7 +2288,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fe5d0a81930>
+    <jinja2.runtime.BlockReference object at 0x7f952eac5210>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

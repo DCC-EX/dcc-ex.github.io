@@ -16,7 +16,7 @@ Test Your Setup
    :class: sidebar-on-this-page
 
    .. contents:: On this page
-      :depth: 2
+      :depth: 3
       :local:
 
 This page is specifically intended for a |conductor-text| or |tinkerer-text| who has either:
@@ -222,24 +222,25 @@ Using WiThrottle (Apple iOS)
 
 * Start the |WiThrottle| App
 * |WiThrottle| will try to find the |WiThrottle Server| on the |EX-CS|
-* If you are using |Access Point Mode| 
 
-  * It should find the |WiThrottle Server| and automatically connect to it
+  * If you are using |Access Point Mode| 
 
-* If you are using |Station Mode| 
+    * It will *not* find the |WiThrottle Server| automatically
+    * You must enter:
+
+      * The IP Address: ``192.168.4.1``
+      * The Port: ``2560``
+
+    * |WiThrottle| should then connect 
+
+  * If you are using |Station Mode| 
   
-  * It will not find the |WiThrottle Server| automatically
-  * Enter:
-
-    * The IP Address: ``192.168.4.1``
-    * The Port: ``2560``
-
-  * |WiThrottle| should then connect 
+    * It should find the |WiThrottle Server| and automatically connect to it
 
 .. important:: 
    :class: important-float-right
 
-   |WiThrottle Lite| (the free version) does not have the ``Track Power`` function. You will either need to purchase the full version, or you can :doc:`add a startup command </ex-commandstation/advanced-setup/startup-config>`. 
+   |WiThrottle Lite| (the free version) does not have the ``Track Power`` function. You will either a) you need to purchase the full version, b) configure the power to turn on in |EX-I|, or c) you can :doc:`add a startup command </ex-commandstation/advanced-setup/startup-config>`.
 
 * You should then see the 'Address Screen'
 * Turn the track power on by selecting the 'settings' tab and clicking on the ``Track Power``

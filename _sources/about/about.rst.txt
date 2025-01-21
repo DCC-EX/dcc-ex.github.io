@@ -77,7 +77,7 @@ EX-Toolbox
 
 Developers
 
-* Peter Akers - Brisbane, QLD, Australia (flash62au)
+* Peter Akers - South East QLD, Australia (flash62au)
 
 EX-IOExpander
 ==============
@@ -130,7 +130,7 @@ Website
 Developers
 
 * Peter Cole - Brisbane, QLD, Australia (peteGSX)
-* Peter Akers - Brisbane, QLD, Australia (flash62au)
+* Peter Akers - South East QLD, Australia (flash62au)
 * Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
 * Mani Kumar - Bangalor, India (Mani / Mani Kumar)
 
@@ -189,4 +189,4 @@ Making sure this software works well with |EX-CS|
 * |Engine Driver| (ED)
   
   * M Steve Todd - USA (MSteveTodd)
-  * Peter Akers - Brisbane, QLD, Australia (flash62au)
+  * Peter Akers - South East QLD, Australia (flash62au)

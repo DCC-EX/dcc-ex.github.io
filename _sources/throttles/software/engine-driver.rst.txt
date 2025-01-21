@@ -119,11 +119,9 @@ Screenshots
 Operation
 ===========
 
-https://enginedriver.mstevetodd.com/operation |EXTERNAL-LINK|
+See https://enginedriver.mstevetodd.com/operation/getting_started.html |EXTERNAL-LINK|
 
-https://enginedriver.mstevetodd.com/videos |EXTERNAL-LINK|
-
-https://flash62au.github.io/EngineDriver_Home/operation/getting_started.html |EXTERNAL-LINK|
+and https://enginedriver.mstevetodd.com/videos/index.html |EXTERNAL-LINK|
 
 .. TODO:: `LOW - Software <https://github.com/DCC-EX/dcc-ex.github.io/issues/436>`_ - Give some setup tutorial here. Need a video to match since ED is the top used software
 

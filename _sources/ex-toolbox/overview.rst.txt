@@ -18,7 +18,7 @@ EX-Toolbox - Overview
 
 It is designed to function if your |EX-CS| is configured with WiFi (either Access Point mode or Station mode) or Ethernet. 
 
-It can't normally connect to a |EX-CS| through |JMRI|, however it is possible if you ``Load DCC++ over TCP Server`` in the DCC++ menu in |JMRI|, then connect |EX-TB| to the additional server that is presented.
+It can't normally connect to a |EX-CS| through |JMRI|, however it is possible if you ``Load DCC++ over TCP Server`` in the 'DCC-EX' menu in |JMRI|, then connect |EX-TB| to the additional server that is presented.
 
 It can't normally connect to a |EX-CS| though USB, however there some options that can allow this to work partly.  See :ref:`ex-toolbox/using:connecting via usb` for details.
 

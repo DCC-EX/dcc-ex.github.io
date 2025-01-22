@@ -267,8 +267,8 @@ Cab (Loco) Commands
   |_| ``<l cab reg speedByte functMap>`` |BR|
   |_| > **cab:** DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder (this has to be already programmed in the decoder) |BR|
   |_| > **reg:** not used. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.
-  |_| > **speedbyte:** Speed in DCC speedstep format . |BR|
-  |_| |_| |_| |_| • reverse - 2-127 = speed 1-126, 0 = stop  |BR|
+  |_| > **speedbyte:** Speed in DCC speedstep format |BR|
+  |_| |_| |_| |_| • reverse - 2-127 = speed 1-126, 0 = stop, 1 = Emergency Stop |BR|
   |_| |_| |_| |_| • forward - 130-255 = speed 1-126,  128 = stop |BR|
   |_| > **FunctiMap:** individual function states represented by the bits in a byte
   
@@ -287,7 +287,7 @@ Cab (Loco) Commands
 
   *Parameters:* |BR|
   |_| > **cab:** DCC Address of the decoder/loco |BR|
-  |_| > **speed:** 0-127 |BR|
+  |_| > **speed:** 0-127 or -1 for Emergency Stop|BR|
   |_| > **dir:** one of |BR|
   |_| |_| |_| |_| • 1=forward  |BR|
   |_| |_| |_| |_| • 0=reverse
@@ -297,8 +297,8 @@ Cab (Loco) Commands
   |_|  |BR|
   |_| ``<l cab reg speedByte functMap>`` |BR|
   |_| > **cab:** DCC Address of the decoder/loco |BR|
-  |_| > **speedbyte:** Speed in DCC speedstep format . |BR|
-  |_| |_| |_| |_| • reverse - 2-127 = speed 1-126, 0 = stop  |BR|
+  |_| > **speedbyte:** Speed in DCC speedstep format |BR|
+  |_| |_| |_| |_| • reverse - 2-127 = speed 1-126, 0 = stop, 1 = Emergency Stop |BR|
   |_| |_| |_| |_| • forward - 130-255 = speed 1-126,  128 = stop |BR|
   |_| > **FunctiMap:** individual function states represented by the the bits in a byte
   

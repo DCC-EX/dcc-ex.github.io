@@ -287,7 +287,7 @@ Cab (Loco) Commands
 
   *Parameters:* |BR|
   |_| > **cab:** DCC Address of the decoder/loco |BR|
-  |_| > **speed:** 0-127 or -1 for Emergency Stop|BR|
+  |_| > **speed:** 0-127 or -1 for Emergency Stop |BR|
   |_| > **dir:** one of |BR|
   |_| |_| |_| |_| • 1=forward  |BR|
   |_| |_| |_| |_| • 0=reverse

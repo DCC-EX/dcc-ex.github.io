@@ -269,7 +269,7 @@ Cab (Loco) Commands
   |_| > **reg:** not used. We no longer use this but need something here for compatibility with legacy systems. Enter any single digit.
   |_| > **speedbyte:** Speed in DCC speedstep format |BR|
   |_| |_| |_| |_| • reverse - 2-127 = speed 1-126, 0 = stop, 1 = Emergency Stop |BR|
-  |_| |_| |_| |_| • forward - 130-255 = speed 1-126,  128 = stop |BR|
+  |_| |_| |_| |_| • forward - 130-255 = speed 1-126,  128 = stop, 129 = Emergency Stop |BR|
   |_| > **FunctiMap:** individual function states represented by the bits in a byte
   
   *Notes:*
@@ -299,7 +299,7 @@ Cab (Loco) Commands
   |_| > **cab:** DCC Address of the decoder/loco |BR|
   |_| > **speedbyte:** Speed in DCC speedstep format |BR|
   |_| |_| |_| |_| • reverse - 2-127 = speed 1-126, 0 = stop, 1 = Emergency Stop |BR|
-  |_| |_| |_| |_| • forward - 130-255 = speed 1-126,  128 = stop |BR|
+  |_| |_| |_| |_| • forward - 130-255 = speed 1-126,  128 = stop, 129 = Emergency Stop |BR|
   |_| > **FunctiMap:** individual function states represented by the the bits in a byte
   
   *Notes:*

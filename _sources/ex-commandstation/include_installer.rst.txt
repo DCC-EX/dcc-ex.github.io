@@ -35,6 +35,10 @@ If you have purchased a |EX-CSB1| it will have come with the |EX-CS| software al
 
    This page is as simplified version of the :doc:`/ex-installer/installing` page. If you are a |tinkerer-text| or |engineer-text| or have installed some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`Detailed Instructions </ex-installer/installing>` page for the full instructions.
 
+.. warning::
+
+   We are currently investigating reports that the |EX-CSB1-SHORT| has problems uploading the software when using the USB3 ports on some PCs. Try a USB2 port if it doesn't work in a USB3 port. USB3 ports usually have blue internals, and USB2 are black.
+
 .. important::
    
    A word of caution on the *alternate approach* of using the |Arduino IDE| to install the software:

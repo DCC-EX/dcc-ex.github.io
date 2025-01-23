@@ -57,6 +57,7 @@ Apple iOS (Phones and Tablets)
 - :doc:`Train Driver (iOS) <software/train-driver>`
 - :doc:`ThrottleCard (iOS) <software/throttlecard>`
 - :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
+- :doc:`TrainNavigator (iOS) <software/trainnavigator>`
 
 
 Dedicated Hardware
@@ -112,6 +113,7 @@ DCC-EX (DCC-EX Native Commands)
 - :doc:`DCC++ Throttle (Android) <software/dccpp-throttle>`
 - :doc:`DccExController (Physical) <hardware/dccexcontroller>`
 - :doc:`EX-T3-WiFi (T3 = Tactile Touch Throttle) </throttles/hardware/ex-t3-wifi>`
+- :doc:`TrainNavigator (iOS) <software/trainnavigator>`
 - See also :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
 WiThrottle Protocol Based Throttles

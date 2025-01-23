@@ -221,6 +221,20 @@
       -  
       -  
 
+    * -  :doc:`TrainNavigator <software/trainnavigator>`
+      -  Free
+      -  WiFi
+      -  Native
+      -  App
+      -  
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+
     * -  :doc:`miniThrottle <hardware/minithrottle>`
       -  Free
       -  WiFi / USB

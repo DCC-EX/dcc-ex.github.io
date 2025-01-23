@@ -139,6 +139,11 @@ Note:  Previously referred to as 'DC-District'.
 ``<= trackletter mode [cab]>`` - Configure Track Manager 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. important::
+  :class: important-float-right
+
+  Whenever the track mode is changed, track power is automatically turned off.
+
   *Parameters:* |BR|
   |_| > **trackletter:** 'A' through 'H' represent one of the outputs of the/a |motor shield|. |BR|
   |_| > **mode:** one of  |BR|

@@ -102,6 +102,10 @@ Valid Modes are:
 .. [#tm2] Deprecated alias of ``AUTO`` but only when preceeded by a sperate ``MAIN`` command.
 .. [#tm3] With special alias of ``DCX`` for ``DC_INV``
 
+.. important::
+
+  Whenever the track mode is changed, track power is automatically turned off.  This is a safety precaution to prevent runaway locos.
+
 ----
 
 Requirements (DCC and DC)
@@ -138,6 +142,11 @@ If you are interested in the technical details of DC Pulse Width Modulation (PWM
 
 Changing a Motor Driver Output to a different DCC mode
 ======================================================
+
+.. important::
+  :class: important-float-right
+
+  Whenever the track mode is changed, track power is automatically turned off.  This is a safety precaution to prevent runaway locos.
 
 You can change any output of the Motor Driver either temporarily or permanently (every time the |EX-CS| starts).
 
@@ -230,6 +239,11 @@ Note the track power is immediately turn off anytime you change the track mode. 
 
 Changing a Motor Driver Output to DC
 ====================================
+
+.. important::
+  :class: important-float-right
+
+  Whenever the track mode is changed, track power is automatically turned off.
 
 You can change any output of the Motor Driver either temporarily or permanently (every time the |EX-CS| starts).
 

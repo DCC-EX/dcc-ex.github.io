@@ -1401,8 +1401,8 @@ All the below turnout/point definitions will define turnouts/points that are adv
 
 .. _turnout:
 
-``TURNOUT( id, addr, sub_addr [, "description"] )`` - Define a DCC accessory turnout/point
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``TURNOUT( id, addr, sub_addr [, "description"]|HIDDEN )`` - Define a DCC accessory turnout/point
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Define a DCC accessory turnout/point. Note that DCC linear addresses are not supported, and must be converted to address/subaddress in order to be defined. Refer to the :ref:`reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)` for help on these conversions. (or see TURNOUTL below).
 
@@ -1410,40 +1410,43 @@ Define a DCC accessory turnout/point. Note that DCC linear addresses are not sup
 |_| > **id** - identifier of the Turnout/Point |BR|
 |_| > **addr** - ranges from 0 to 511 |BR|
 |_| > **subaddr** - ranges from 0 to 3 |BR|
-|_| > **description** - The description that will be assigned to the turnout/point |BR|
+|_| > **description** - The description that will be assigned to the turnout/point, or |BR|
+|_| > *HIDDEN* - keyword - if used instead of the "description" the Turnout/point will not appear in the lists sent to throttle/controllers |BR|
 
 
 |hr-dashed|
 
 .. _turnoutl:
 
-``TURNOUTL( id, addr [, "description"] )`` - Define a DCC accessory turnout/point
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``TURNOUTL( id, addr [, "description"]|HIDDEN )`` - Define a DCC accessory turnout/point
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Define a DCC accessory turnout/point.  This command will convert a linear address to the address/subaddress format using the TURNOUT command above.
 
-Note when providing the name of the profile that the profile names are case sensitive, and must be written exactly as they appear (e.g. Bounce, not bounce or BOUNCE).
+Note when providing the name of the profile the profile names are case sensitive, and must be written exactly as they appear (e.g. Bounce, not bounce or BOUNCE).
 
 |hr-dashed|
 
 .. _pin_turnout:
 
-``PIN_TURNOUT( id, pin [, "description"] )`` - Define a pin operated turnout
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``PIN_TURNOUT( id, pin [, "description"]|HIDDEN )`` - Define a pin operated turnout
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Define a pin operated turnout. When sending a CLOSE command, the pin will be HIGH, and a THROW command will set the pin LOW.
 
 *Parameters:* |BR|
 |_| > **id** - unique Id for the servo |BR|
 |_| > **pin** - vpin to which the servo is attached |BR|
-|_| > **description** - The description that will be assigned to the turnout/point |BR|
+|_| > **description** - The description that will be assigned to the turnout/point, or |BR|
+|_| > *HIDDEN* - keyword - if used instead of the "description" the Turnout/point will not appear in the lists sent to throttle/controllers |BR|
+
 
 |hr-dashed|
 
 .. _servo_turnout:
 
-``SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"] )`` - Define a servo turnout/point 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``SERVO_TURNOUT( id, pin, active_angle, inactive_angle, profile [, "description"]|HIDDEN )`` - Define a servo turnout/point 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Define a servo turnout/point. "active_angle" is for THROW, "inactive_angle" is for CLOSE, and profile is one of Instant, Fast, Medium, Slow or Bounce (although clearly we don't recommend Bounce for turnouts/points!). 
 
@@ -1453,12 +1456,14 @@ Define a servo turnout/point. "active_angle" is for THROW, "inactive_angle" is f
 |_| > **active_angle** - the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490 |BR|
 |_| > **inactive_angle** - the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490 |BR|
 |_| > **profile** - one of |BR|
-|_| |_| |_| |_| • 0=Instant,  |BR|
-|_| |_| |_| |_| • 1=Fast (0.5 sec),  |BR|
-|_| |_| |_| |_| • 2=Medium (1 sec),  |BR|
-|_| |_| |_| |_| • 3=Slow (2 sec) and  |BR|
-|_| |_| |_| |_| • 4=Bounce (subject to revision) |BR|
-|_| > **description** - The description that will be assigned to the turnout/point |BR|
+|_| |_| |_| |_| • **0** = Instant,  |BR|
+|_| |_| |_| |_| • **1** = Fast (0.5 sec),  |BR|
+|_| |_| |_| |_| • **2** = Medium (1 sec),  |BR|
+|_| |_| |_| |_| • **3** = Slow (2 sec) and  |BR|
+|_| |_| |_| |_| • **4** = Bounce (subject to revision) |BR|
+|_| > **description** - The description that will be assigned to the turnout/point, or |BR|
+|_| > *HIDDEN* - keyword - if used instead of the "description" the Turnout/point will not appear in the lists sent to throttle/controllers |BR|
+
   
 Refer to :doc:`/reference/hardware/servo-module` for more information.
 
@@ -1466,8 +1471,8 @@ Refer to :doc:`/reference/hardware/servo-module` for more information.
 
 .. _virtual_turnout:
 
-``VIRTUAL_TURNOUT( id [, "description"] )`` - Define a virtual turnout, which is backed by another automation sequence
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``VIRTUAL_TURNOUT( id [, "description"]|HIDDEN )`` - Define a virtual turnout, which is backed by another automation sequence
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Define a virtual turnout, which is backed by another automation sequence. 
   
@@ -1475,7 +1480,8 @@ For a good example of this refer to :ref:`exrail/tips:realistic turnout sequence
 
 *Parameters:* |BR|
 |_| > **turnout_id** - The id of the turnout/point |BR|
-|_| > **description** - The description that will be assigned to the turnout/point |BR|
+|_| > **description** - The description that will be assigned to the turnout/point, or |BR|
+|_| > *HIDDEN* - keyword - if used instead of the "description" the Turnout/point will not appear in the lists sent to throttle/controllers |BR|
 
 |hr-dashed|
 

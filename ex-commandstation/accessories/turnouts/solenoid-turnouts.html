@@ -650,6 +650,11 @@
 </li>
 </ul>
 </li>
+<li><p><a class="reference internal" href="#notes-on-some-specific-hardware" id="id10">Notes on Some Specific Hardware</a></p>
+<ul>
+<li><p><a class="reference internal" href="#connecting-a-tortoise" id="id11">Connecting A Tortoise</a></p></li>
+</ul>
+</li>
 </ul>
 </nav>
 </aside>
@@ -778,7 +783,20 @@
 <span class="n">DUAL_SOLENOID_TURNOUT</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">164</span><span class="p">,</span><span class="mi">165</span><span class="p">,</span><span class="s">&quot;Example CDU turnout&quot;</span><span class="p">,</span><span class="n">EXAMPLE_TURNOUT</span><span class="p">)</span>
 </pre></div>
 </div>
+<p><hr class="hr-heavy" /></p>
 </section>
+</section>
+</section>
+<section id="notes-on-some-specific-hardware">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Notes on Some Specific Hardware</a><a class="headerlink" href="#notes-on-some-specific-hardware" title="Link to this heading"></a></h2>
+<section id="connecting-a-tortoise">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Connecting A Tortoise</a><a class="headerlink" href="#connecting-a-tortoise" title="Link to this heading"></a></h3>
+<p>A Tortoise is still a solenoid turnout/point motor that need a voltage applied for a certain amount of time and to reverse polarity to go in the other direction. They implement it as a stall motor, which means if you were willing to waste 15-20mA of current at idle, you can use a switch and it just stalls out at the end of travel. But now we get into the weeds about all the different ways you can control your Tortoise. The issue is that a command station can’t directly control things that require a lot of current or voltages higher than 5V or on the CSB1 3.3V. So we control a switch of some kind, like a relay or transistor, that CAN handle that load.</p>
+<p>The easiest solution costs you $60 from Jack Reagan at <a class="reference internal" href="../../../purchasing/dealers.html"><span class="doc">Smart Hobby LLC</span></a> which buys you a 16 output capacitive discharge board. You connect it to the I2C port on the CSB1, then a simple <a href="../../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> script he supplies goes in your myAutomation.h file and you are done. The turnouts/points would appear on an <a class="reference internal" href="../../../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> or <a class="reference internal" href="../../../throttles/software/jmri.html"><span class="doc">JMRI</span></a> and you just <code class="docutils literal notranslate"><span class="pre">THROW</span></code> and <code class="docutils literal notranslate"><span class="pre">CLOSE</span></code> them.</p>
+<p>You can add sensors and have the turnouts/points controlled by the route you want your trains to follow. Benefit here is that the Smart Hobby CS board can also control snap switches like Kato and any other single or dual coil switch machine that needs a strong, short, burst of energy. Jack also supports you so you can ask him the questions.</p>
+<p><em>Rosscoetrain</em> has a similar board and an accessory controller version. You define a <code class="docutils literal notranslate"><span class="pre">DCC_TURNOUT</span></code> and his controller does the rest since it acts like an 8 port DCC accessory decoder. It takes a DCC turnout command from the track. It also can control anything else that needs on/off power control such as LED lighting, motors, etc. Ross also provides support.</p>
+<p>A simple but less easy method is to use a DPDT relay and a MCP23017 port expander board (dirt cheap and also connects to the I2C port) or our <a href="../../../ex-ioexpander/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span></a> software running on a cheap processor like an Uno or Nano or Elegoo Mega. Define each turnout as a PIN_TURNOUT. This wastes 15-20mA or more of current for each one all the time since the power never gets shutoff. The way around that is to use a motor driver board to act as a solid state relay. Transistors on the board and an <a href="../../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> script control both the polarity switching and the duration of the voltage. We have those simple scripts, so you don’t need to know C++ or electronics to throw a turnout/point. People have used all sorts of cheap boards for this, including a motor board which has 4 MOSFET transistors on it Rosscoe’s board has.</p>
+<p>Regardless of which method you use, take a look at the documentation for <a href="../../../ex-ioexpander/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;IOExpander</span></a> since it has a lot built into it. And you can connect the Smart Hobby board and a lot of other things to it.</p>
 </section>
 </section>
 </section>
@@ -805,7 +823,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fdf00bcc130>
+    <jinja2.runtime.BlockReference object at 0x7f1f8be4f220>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

@@ -558,7 +558,14 @@ Additional technical information about |DC PWM| are explained on our :doc:`/refe
 DC Operation
 -------------
 
-When using |DC PWM| mode with the |EX-CSB1|, it is important to understand that this is mode does not produce the traditional varying of the DC voltage to control the speed of your locomotive. The speed of your train is controlled using a method called PWM (Pulse Width Modulation), so instead, the track always receives full voltage whenever the throttle is set above zero, just in pulses rather than continuously.
+When using |DC PWM| mode with the |EX-CSB1|, it is important to understand that this is mode does not produce the traditional varying of the DC voltage to control the speed of your locomotiv through a legacy Transformer(Cab).   The speed of your train is controlled using a method called PWM (Pulse Width Modulation), so instead, the track always receives full voltage whenever the throttle is set above zero, just in pulses rather than continuously.
+
+DCC-EX Command Station uses a throttle Cab address to control and drive a district/track with a Cab# from 1 to 10239.  So, you are controlling and driving a track with PWM and any analogue DC engine sitting on that DC district track rather than the engine itself.
+
+As appose to DCC which controls many locos on a DCC district directly through their individual DCC Address assigned to the decoder inside the engine.
+
+The visual effect to a Engineer is that he can have one throttle controlling both DC and DCC engines from the actual road number that appears on the side of the cab.   
+DC Cab# 667 riding on a separate DC district/track assigned 667, versus a DCC loco# 1225 running on a separate DCC Main line track with many other engines.
 
 .. TODO XXX - map of function number to frequency
 

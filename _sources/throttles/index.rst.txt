@@ -36,13 +36,12 @@ Throttles - By Client Technology
 Web Browser (Windows, OSX, Linux)
 ---------------------------------
 
-- :doc:`EX-Web-Throttle (Web Browser) </ex-webthrottle/index>`
+- :doc:`EX-Web-Throttle (Web Browser) </ex-webthrottle/index>` *recommended*
 
 Android (Phones and Tablets)
 ----------------------------
 
-- :doc:`Engine Driver (Android)<software/engine-driver>` |BR| |BR|
-
+- :doc:`Engine Driver (Android)<software/engine-driver>` *recommended*
 - :doc:`Cab Engineer: DCC Throttle (Andriod) <software/cab-engineer>`
 - :doc:`DCC++ Throttle (Android) <software/dccpp-throttle>`
 - :doc:`DCCpp CAB (android) <software/dccpp-cab>`
@@ -77,7 +76,7 @@ Dedicated Hardware
 Personal Computers
 ------------------
 
-- :doc:`EX-WebThrottle </ex-webthrottle/index>`  *(Web Browser)* |BR| |BR|
+- :doc:`EX-WebThrottle (Web Browser) </ex-webthrottle/index>` *recommended*
 - :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
 - :doc:`JMRI (Windows, iOS, Linux) <software/jmri>`
 - :doc:`Railroad Automation <software/railroad-automation>` *- Requires IoTT Red Hat*
@@ -103,38 +102,29 @@ General
 DCC-EX (DCC-EX Native Commands)
 -------------------------------
 
-- :doc:`EX-WebThrottle </ex-webthrottle/index>`  *(Web Browser)* |BR| |BR|
-
-- :doc:`Engine Driver (Android) <software/engine-driver>` |BR| |BR|
-
+- :doc:`EX-WebThrottle (Web Browser) </ex-webthrottle/index>`  *recommended*
+- :doc:`Engine Driver (Android) <software/engine-driver>`  *recommended*
 - :doc:`DCCpp CAB (Android) <software/dccpp-cab>`
 - :doc:`DCC++ Throttle (Android) <software/dccpp-throttle>`
-- :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>` |BR| |BR|
-
+- :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
-- :doc:`TrainNavigator (iOS) <software/trainnavigator>` |BR| |BR|
-
-- :doc:`JMRI (Win, macOS, Linux) <software/jmri>` |BR| |BR|
-
+- :doc:`TrainNavigator (iOS) <software/trainnavigator>`
+- :doc:`JMRI (Win, macOS, Linux) <software/jmri>`
 - :doc:`DccExController (Physical) <hardware/dccexcontroller>`
 - :doc:`EX-T3-WiFi (T3 = Tactile Touch Throttle) (Physical) </throttles/hardware/ex-t3-wifi>`
-- :doc:`miniThrottle (Physical) <hardware/minithrottle>`
-
+- :doc:`miniThrottle (Physical) <hardware/minithrottle>` |BR| |BR|
 - See also :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
 WiThrottle Protocol Based Throttles
 -----------------------------------
 
-- :doc:`Engine Driver (Android)<software/engine-driver>` |BR| |BR|
-
+- :doc:`Engine Driver (Android)<software/engine-driver>`  *recommended*
 - :doc:`Cab Engineer: DCC Throttle (Android) <software/cab-engineer>`
-
 - :doc:`Locontrol (iOS) <software/locontrol>`
 - :doc:`WiThrottle (iOS)<software/withrottle>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`Train Driver (iOS) <software/train-driver>`
 - :doc:`ThrottleCard (iOS) <software/throttlecard>` |BR| |BR|
-
 - :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
 - `HandCab (Physical) <https://github.com/1fatgmc/HandCab/tree/main>`_
 - :doc:`LoDi-Con WiFi Throttle (Physical) </throttles/hardware/lodi-con-wifi-throttle>`

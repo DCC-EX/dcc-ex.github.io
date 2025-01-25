@@ -55,11 +55,11 @@ Note: The Android throttle apps listed above can be made to made to run on Windo
     EX-Web-Throttle (Web Browser) </ex-webthrottle/index>
     jmri
     Engine Driver (Android) <engine-driver>
+    Cab Engineer: DCC Throttle (Android) <cab-engineer>
     DCCpp CAB (android) <dccpp-cab>
     DCC++ Throttle (android) <dccpp-throttle>
-    Cab Engineer: DCC Throttle (Android) <cab-engineer>
     DigiTrainsPro (Android, iOS, Windows) <digitrainspro>
-    RtDtive DCC++ (Android) <rtdrive-dccpp>
+    RtDrive DCC++ (Android) <rtdrive-dccpp>
     WiThrottle (iOS) <withrottle>
     Locontrol (iOS) <locontrol>
     SRCP Client (iOS) <srcpclient>
@@ -67,6 +67,6 @@ Note: The Android throttle apps listed above can be made to made to run on Windo
     ThrottleCard (iOS) <throttlecard>
     TrainNavigator (iOS) <trainnavigator>
     Train Throttle (Windows, Mac, iOS) <train-throttle>
-    Android Apps on Windows <android-apps-on-windows>
     Railroad Automation (Windows) <railroad-automation>
+    Android Apps on Windows <android-apps-on-windows>
  

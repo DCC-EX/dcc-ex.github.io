@@ -25,6 +25,20 @@
       -  M |BRxa| a |BRxa| c |BRxa| O |BRxa| S
       -  L |BRxa| i |BRxa| n |BRxa| u |BRxa| x
 
+    * -  :doc:`EX-WebThrottle </ex-webthrottle/index>`
+      -  Free
+      -  USB
+      -  Native / WiT
+      -  Web
+      -  
+      -  
+      -  
+      -  
+      -  X
+      -  X
+      -  X
+      -  X
+
     * -  :doc:`JMRI <software/jmri>`
       -  Free
       -  USB / WiFi [#t6]_
@@ -53,21 +67,21 @@
       -  X
       -  
 
-    * -  :doc:`EX-WebThrottle </ex-webthrottle/index>`
-      -  Free
-      -  USB
-      -  Native / WiT
-      -  Web
-      -  
-      -  
-      -  
-      -  
-      -  X
-      -  X
-      -  X
-      -  X
-
     * -  :doc:`Engine Driver <software/engine-driver>`
+      -  Free
+      -  WiFi
+      -  Native / Wit
+      -  App
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  X [#t3]_
+
+    * -  :doc:`Cab Engineer: DCC Throttle <software/cab-engineer>`
       -  Free
       -  WiFi
       -  Native
@@ -79,7 +93,7 @@
       -  
       -  
       -  
-      -  X [#t3]_
+      -  
 
     * -  :doc:`DCCpp CAB <software/dccpp-cab>`
       -  Free
@@ -108,20 +122,6 @@
       -  
       -  
       -  X
-
-    * -  :doc:`Cab Engineer: DCC Throttle <software/cab-engineer>`
-      -  Free
-      -  WiFi
-      -  Native
-      -  App
-      -  
-      -  
-      -  X
-      -  
-      -  
-      -  
-      -  
-      -  
 
     * -  :doc:`RtDtive DCC-EX <software/rtdrive-dccpp>`
       -  Free
@@ -154,20 +154,6 @@
     * -  :doc:`Locontrol <software/locontrol>`
       -  Free / Paid
       -  Net
-      -  WiT
-      -  App
-      -  
-      -  
-      -  
-      -  X
-      -  
-      -  
-      -  
-      -  
-
-    * -  :doc:`WiThrottle <software/withrottle>`
-      -  Free / Paid
-      -  WiFi
       -  WiT
       -  App
       -  
@@ -235,9 +221,23 @@
       -  
       -  
 
-    * -  :doc:`miniThrottle <hardware/minithrottle>`
+    * -  :doc:`WiThrottle <software/withrottle>`
+      -  Free / Paid
+      -  WiFi
+      -  WiT
+      -  App
+      -  
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+
+    * -  :doc:`DccExController <hardware/dccexcontroller>`
       -  Free
-      -  WiFi / USB
+      -  WiFi
       -  Native
       -  Device
       -  DIY
@@ -249,10 +249,24 @@
       -  
       -  
 
-    * -  :doc:`WiTcontroller <hardware/witcontroller>`
+    * -  :doc:`Elgato Stream Deck <hardware/streamdeck>`
+      -  Paid
+      -  WiFi
+      -  native
+      -  Device
+      -  PC/RPi
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  :doc:`EX-T3-WiFi <hardware/ex-t3-wifi>`
       -  Free
       -  WiFi
-      -  WiT
+      -  Native
       -  Device
       -  DIY
       -  X
@@ -277,12 +291,12 @@
       -  
       -  
 
-    * -  :doc:`DccExController <hardware/dccexcontroller>`
-      -  Free
+    * -  :doc:`LoDi-Con WiFi Throttle </throttles/hardware/lodi-con-wifi-throttle>`
+      -  Paid
       -  WiFi
-      -  Native
+      -  WiT
       -  Device
-      -  DIY
+      -  
       -  X
       -  
       -  
@@ -291,9 +305,9 @@
       -  
       -  
 
-    * -  :doc:`EX-T3-WiFi <hardware/ex-t3-wifi>`
+    * -  :doc:`miniThrottle <hardware/minithrottle>`
       -  Free
-      -  WiFi
+      -  WiFi / USB
       -  Native
       -  Device
       -  DIY
@@ -319,12 +333,12 @@
       -  
       -  
 
-    * -  :doc:`TCS UWT-50 <hardware/uwt50>` \& UWT-100
-      -  Paid
+    * -  :doc:`WiTcontroller <hardware/witcontroller>`
+      -  Free
       -  WiFi
       -  WiT
       -  Device
-      -  
+      -  DIY
       -  X
       -  
       -  
@@ -333,21 +347,7 @@
       -  
       -  
 
-    * -  :doc:`Elgato Stream Deck <hardware/streamdeck>`
-      -  Paid
-      -  WiFi
-      -  native
-      -  Device
-      -  PC/RPi
-      -  X
-      -  
-      -  
-      -  
-      -  
-      -  
-      -  
-
-    * -  :doc:`LoDi-Con WiFi Throttle </throttles/hardware/lodi-con-wifi-throttle>`
+    * -  :doc:`TCS UWT-50 <hardware/uwt50>` \& UWT-100
       -  Paid
       -  WiFi
       -  WiT

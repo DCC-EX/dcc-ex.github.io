@@ -41,47 +41,47 @@ Web Browser (Windows, OSX, Linux)
 Android (Phones and Tablets)
 ----------------------------
 
-- :doc:`Engine Driver (Android)<software/engine-driver>`
-- :doc:`DCCpp CAB (android) <software/dccpp-cab>`
+- :doc:`Engine Driver (Android)<software/engine-driver>` |BR| |BR|
+
 - :doc:`Cab Engineer: DCC Throttle (Andriod) <software/cab-engineer>`
+- :doc:`DCC++ Throttle (Android) <software/dccpp-throttle>`
+- :doc:`DCCpp CAB (android) <software/dccpp-cab>`
 - :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
 - :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
-- :doc:`DCC++ Throttle (Android) <software/dccpp-throttle>`
 
 Apple iOS (Phones and Tablets)
 ------------------------------
 
-- :doc:`WiThrottle (iOS) <software/withrottle>`
+- :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
 - :doc:`Locontrol (iOS) <software/locontrol>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`Train Driver (iOS) <software/train-driver>`
 - :doc:`ThrottleCard (iOS) <software/throttlecard>`
-- :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
 - :doc:`TrainNavigator (iOS) <software/trainnavigator>`
+- :doc:`WiThrottle (iOS) <software/withrottle>`
 
 
 Dedicated Hardware
 ------------------
 
-- :doc:`miniThrottle (Physical) <hardware/minithrottle>`
-- :doc:`WiTcontroller (Physical) <hardware/witcontroller>`
-- `HandCab (Physical) <https://github.com/1fatgmc/HandCab/tree/main>`_
 - :doc:`DccExController (Physical) <hardware/dccexcontroller>`
-- :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
 - :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
+- :doc:`EX-T3-WiFi (T3 = Tactile Touch Throttle) (physical) </throttles/hardware/ex-t3-wifi>`
+- `HandCab (Physical) <https://github.com/1fatgmc/HandCab/tree/main>`_
 - :doc:`LoDi-Con WiFi Throttle </throttles/hardware/lodi-con-wifi-throttle>`
-- :doc:`EX-T3-WiFi (T3 = Tactile Touch Throttle) </throttles/hardware/ex-t3-wifi>`
-- :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
+- :doc:`miniThrottle (Physical) <hardware/minithrottle>`
+- :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
+- :doc:`WiTcontroller (Physical) <hardware/witcontroller>` |BR| |BR|
 - See also :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
 Personal Computers
 ------------------
 
-- :doc:`EX-WebThrottle </ex-webthrottle/index>`  *(Web Browser)*
-- :doc:`JMRI (Windows, iOS, Linux) <software/jmri>`
+- :doc:`EX-WebThrottle </ex-webthrottle/index>`  *(Web Browser)* |BR| |BR|
 - :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
-- :doc:`Train Throttle <software/train-throttle>`
+- :doc:`JMRI (Windows, iOS, Linux) <software/jmri>`
 - :doc:`Railroad Automation <software/railroad-automation>` *- Requires IoTT Red Hat*
+- :doc:`Train Throttle <software/train-throttle>`
 - :doc:`ThrottleCard (M1 Mac) <software/throttlecard>` *- Requires WiThrottle server*
 
 Note: The Android throttle apps listed above can be made to made to run on Windows PCs. See :doc:`Running Android apps on Microsoft Windows <software/android-apps-on-windows>`.
@@ -103,41 +103,50 @@ General
 DCC-EX (DCC-EX Native Commands)
 -------------------------------
 
-- :doc:`EX-WebThrottle </ex-webthrottle/index>`
-- :doc:`Engine Driver (Android)<software/engine-driver>`
-- :doc:`SRCP Client (iOS) <software/srcpclient>`
-- :doc:`miniThrottle (Physical) <hardware/minithrottle>`
-- :doc:`JMRI <software/jmri>`
-- :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
+- :doc:`EX-WebThrottle </ex-webthrottle/index>`  *(Web Browser)* |BR| |BR|
+
+- :doc:`Engine Driver (Android) <software/engine-driver>` |BR| |BR|
+
 - :doc:`DCCpp CAB (Android) <software/dccpp-cab>`
 - :doc:`DCC++ Throttle (Android) <software/dccpp-throttle>`
+- :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>` |BR| |BR|
+
+- :doc:`SRCP Client (iOS) <software/srcpclient>`
+- :doc:`TrainNavigator (iOS) <software/trainnavigator>` |BR| |BR|
+
+- :doc:`JMRI (Win, macOS, Linux) <software/jmri>` |BR| |BR|
+
 - :doc:`DccExController (Physical) <hardware/dccexcontroller>`
-- :doc:`EX-T3-WiFi (T3 = Tactile Touch Throttle) </throttles/hardware/ex-t3-wifi>`
-- :doc:`TrainNavigator (iOS) <software/trainnavigator>`
+- :doc:`EX-T3-WiFi (T3 = Tactile Touch Throttle) (Physical) </throttles/hardware/ex-t3-wifi>`
+- :doc:`miniThrottle (Physical) <hardware/minithrottle>`
+
 - See also :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
 WiThrottle Protocol Based Throttles
 -----------------------------------
 
-- :doc:`Engine Driver (Android)<software/engine-driver>`
+- :doc:`Engine Driver (Android)<software/engine-driver>` |BR| |BR|
+
+- :doc:`Cab Engineer: DCC Throttle (Android) <software/cab-engineer>`
+
 - :doc:`Locontrol (iOS) <software/locontrol>`
-- :doc:`Cab Engineer: DCC Throttle (Andriod) <software/cab-engineer>`
 - :doc:`WiThrottle (iOS)<software/withrottle>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`Train Driver (iOS) <software/train-driver>`
-- :doc:`ThrottleCard (iOS) <software/throttlecard>`
-- :doc:`miniThrottle (Physical) <hardware/minithrottle>`
-- :doc:`WiTcontroller (Physical) <hardware/witcontroller>`
-- `HandCab (Physical) <https://github.com/1fatgmc/HandCab/tree/main>`_
-- :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
+- :doc:`ThrottleCard (iOS) <software/throttlecard>` |BR| |BR|
+
 - :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
-- :doc:`LoDi-Con WiFi Throttle </throttles/hardware/lodi-con-wifi-throttle>`
+- `HandCab (Physical) <https://github.com/1fatgmc/HandCab/tree/main>`_
+- :doc:`LoDi-Con WiFi Throttle (Physical) </throttles/hardware/lodi-con-wifi-throttle>`
+- :doc:`miniThrottle (Physical) <hardware/minithrottle>`
+- :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
+- :doc:`WiTcontroller (Physical) <hardware/witcontroller>`
 
 USB Based Throttles
 -------------------------------
 
 - :doc:`EX-WebThrottle </ex-webthrottle/index>`
-- :doc:`myBluePillThrottle <hardware/mybluepillthrottle>`
+- :doc:`myBluePillThrottle <hardware/mybluepillthrottle>` |BR| |BR|
 - Also see: :doc:`connect_wifi_throttle_via_usb`
 
 JMRI Web Server Based Throttles

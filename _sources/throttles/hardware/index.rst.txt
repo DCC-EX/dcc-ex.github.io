@@ -12,13 +12,13 @@ Throttles (Hardware)
 .. toctree::
   :maxdepth: 1
 
-  minithrottle
-  witcontroller
   dccexcontroller
-  handcab
-  mybluepillthrottle
   engine-driver-physical-knobs
-  streamdeck 
-  lodi-con-wifi-throttle
   ex-t3-wifi
+  handcab
+  lodi-con-wifi-throttle
+  minithrottle
+  mybluepillthrottle
+  witcontroller
+  streamdeck 
   uwt50

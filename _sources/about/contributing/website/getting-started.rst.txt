@@ -13,7 +13,7 @@ Documentation - Getting Started
    :class: sidebar-on-this-page
 
    .. contents:: On this page
-      :depth: 2
+      :depth: 3
       :local:
 
 This page aims to provide the information required to help people contribute to our documentation.
@@ -43,7 +43,7 @@ In order for GitHub pages to function correctly and automatically publish update
 
 In addition to this, rather than using the main or master branch, the default branch is called "sphinx", so any branches created for contributing to documentation must use this as the parent, and all pull requests must be submitted against this same branch.
 
----
+|HR-HEAVY|
 
 Procedure
 =========
@@ -53,47 +53,60 @@ Procedure overview
 
 There are a number of possible ways to do this but the instructions below rely on:
 
-1. Cloning the repository on the **GitHub website**
-2. Using **GitHub Desktop** to download the repository to your PC
-3. Opening the repository in **VSCode**
-4. Making your changes
-5. Previewing your changes on your PC
-6. Using **GitHub Desktop** to *push* your changes back to your clone of the Repository on GitHub
-7. Creating a *pull request* to send your changes for review
+After installing the required software (**GitHub Desktop** and **VSCode**)...
+
+One time only:
+
+   1. Cloning the repository on the **GitHub website**
+   2. Using **GitHub Desktop** to download the repository to your PC
+
+Ongoing:
+
+   3. Opening the repository in **VSCode**
+   4. Making your changes
+   5. Previewing your changes on your PC
+   6. Using **GitHub Desktop** to *push* your changes back to your clone of the Repository on GitHub
+   7. Creating a *pull request* to send your changes for review
 
 You will periodically need to update your repository:
 
- a. On the **GitHub website** create a pull request to get and changes from the original repository to your repository on GitHub website
- b. Use **GitHub Desktop** to pull the changes to your repository on your PC
+    a. On the **GitHub website** create a pull request to get and changes from the original repository to your repository on GitHub website
+    b. Use **GitHub Desktop** to pull the changes to your repository on your PC
+
+One time only
+-------------
 
 1. Cloning the repository on GitHub website
---------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. First you will need to create an account on Github if you don't already have one.
 2. Go to the original repository ``https://github.com/DCC-EX/dcc-ex.github.io``
-3. Click on the :guilabel:`Fork` button and create a new fork.  Do not alter the Repository name ``dcc-ex.github.io``
+3. Click on the :guilabel:`Fork` button and create a new fork.  (Do not alter the Repository name ``dcc-ex.github.io``.)
 
-You will now have a new fork located at ``https://github.com/<your_account_name>/dcc-ex.github.io``.  take note of this for the next step.
+You will now have a new fork located at ``https://github.com/<your_account_name>/dcc-ex.github.io``.  Take note of this for the next step.
 
 
 2. Download the repository to your PC with GitHib Desktop
----------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In **GitHub Desktop**:
 
 1. Select `File -> Clone Repository`
 2. Enter the name of you repository ``<your_account_name>/dcc-ex.github.io``
-3. select a location on your PC to store the repository.
-4. click :guilabel:`Clone`
-5. make sure that ``Sphinx`` is selected as the 'Current Branch'
+3. Select a location on your PC to store the repository.
+4. Click :guilabel:`Clone`
+5. Make sure that ``Sphinx`` is selected as the 'Current Branch'
 
 A copy of the repository should now be on the PC.
 
 You can open it in VSCode by selecting ``Repository -> Open in Visual Studio Code``
 
 
+Ongoing
+-------
+
 3. Open the repository in **VSCode**
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can open the repository in VSCode at any time by using ``File -> Open Folder`` and navigating to the folder you selected in step 2.
 
@@ -102,7 +115,7 @@ You can subsequently open the repository in VSCode using ``File -> Open Recent``
 You can subsequently open the repository in VSCode from **GitHub Desktop**.
 
 4. Make you changes
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 You can use the navigation tree on the left to find the file you want to change. Clicking on a file will open it in the edit window.
 
@@ -127,12 +140,28 @@ You can use the navigation tree on the left to find the file you want to change.
    While editing, be sure to save often, stage and commit your changes, and publish them. This way, should anything go wrong with your computer, your work will be saved in GitHub rather than be lost.
 
 5. Live previews
-----------------
+^^^^^^^^^^^^^^^^
 
-Providing you followed the installation guide for VSCode on the :doc:`/about/contributing/software` page accurately, there are three methods available for generating live previews as you are editing the reStructuredText code.
+Providing you followed the installation guide for VSCode on the :doc:`/about/contributing/software` page accurately, there are three methods available for generating previews as you are editing the reStructuredText code.
+
+Esbonio Language server
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This option uses the Esbonio Language server installed along with the reStructuredText extension. This option allows you to quickly preview a page you have been editing, as it continuously generates the preview in the background.
+
+To view the preview you can
+
+* click on the preview button on the top right, or
+* Press :guilabel:`<Ctrl>`` + :guilabel:`<Shift>` + :guilabel:`r` and it will open the live preview in a new tab in VSCode. In addition to this method, you can also press :guilabel:`<Ctrl>`` + :guilabel:`k` followed immediately by :guilabel:`<Ctrl>`` + :guilabel:`r`. 
+
+This will generate the live preview in a split pane within VSCode. Every time you save the page you are working on, the live preview will automatically update.
+
+The downside to using this method is that previews are only generated for pages you are actively editing, rather than the entire website. Therefore, prior to submitting any pull requests, it is essential that you follow the build process either as outlined below to emulate the GitHub Pages deployment, or in following section.
+
+This will ensure the entire website is still able to be built successfully after any updates.
 
 Emulate GitHub Pages deployment
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The recommended method for local previews of the website documentation is to emulate the GitHub Pages deployment process, as this will not only generate a preview of the content, but will also ensure the same versions of the various Python packages are used to generate the preview, which will highlight any functionality issues arising out of new or different versions.
 
@@ -149,19 +178,10 @@ Once the build of the website completes successfully, preview it locally by open
 
 This file can be found in the "docs\\_build\\html" folder within the "dcc-ex.github.io" folder.
 
-Esbonio Language server
-^^^^^^^^^^^^^^^^^^^^^^^
-
-The next option uses the Esbonio Language server installed along with the reStructuredText extension. This option allows you to quickly preview a page you have been editing, as it continuously generates the preview in the background.
-
-To view the preview, press <Ctrl> + <Shift> + "r" and it will open the live preview in a new tab in VSCode. In addition to this method, you can also press <Ctrl> + "k" followed immediately by <Ctrl> + "r" which will generate the live preview in a split pane within VSCode. Every time you save the page you are working on, the live preview will automatically update.
-
-The downside to using this method is that previews are only generated for pages you are actively editing, rather than the entire website. Therefore, prior to submitting any pull requests, it is essential that you follow the build process either as outlined above to emulate the GitHub Pages deployment, or in following section.
-
-This will ensure the entire website is still able to be built successfully after any updates.
-
 Local Sphinx build
-^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~
+
+.. :Important:: This requires manually installing a lot of extra libraries, so is not recommended, though is a lot faster than the previous option.
 
 To refresh the entire website while editing, it is necessary to run the equivalent commands that the GitHub publishing workflow runs to ensure no issues have been introduced.
 
@@ -177,14 +197,8 @@ Once the build of the website completes successfully, preview it locally by open
 
 This file can be found in the "docs\\_build\\html" folder within the "dcc-ex.github.io" folder.
 
-..
-   Submission Procedure
-   =====================
-
-   Once you are finished editing and are ready to have your updates published you will need to submit a pull request for one of the team members to approve and review.
-
 6. Push your changes to your GitHub repository
-----------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You will need to
 
@@ -202,7 +216,7 @@ In **GitHub Desktop**:
 
 
 7. Creating a *pull request* to send your changes for review
-------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Open the **GitHub website**
 2. open/select your repository ``https://github.com/<your_account_name>/dcc-ex.github.io``
@@ -210,8 +224,43 @@ In **GitHub Desktop**:
 On the 'code' page you should see "This branch is *x* commit(s) ahead of DCC-EX/dcc-ex.github.io:sphinx."
 
 3. click on the `x commit(s) ahead of` hyperlink
-4. click on the :guilabel:`Create pull request` button
-5. confirm or add tot he title and documentation fields
-6. clink on the :guilabel:`Create pull request` button
+5. confirm or add to the title and documentation fields
+6. click on the :guilabel:`Create pull request` button
 
 This creates a pull request to be reviewed by the documentation team
+
+
+Periodic
+---------
+
+To see the changes that other people have made to the original repository you need to periodically refresh your repository on both GitHub website and locally 
+
+a. Get any changes to your repository on GitHub website
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. Open the **GitHub website**
+2. open/select your repository ``https://github.com/<your_account_name>/dcc-ex.github.io``
+
+On the 'code' page you should see "This branch is *x* commit(s) behind DCC-EX/dcc-ex.github.io:sphinx."
+
+If does not say you are 'behind' there is nothing to do.  Stop here.
+
+If you are behind...
+
+3. click on the `x commit(s) behind` hyperlink
+5. Add to the title and/or documentation fields.  This does not matter so entering just ``Catchup`` is fine.
+6. click on the :guilabel:`Create pull request` button
+7. click on the :guilabel:`Merge pull request` button
+7. click on the :guilabel:`Confirm merge` button
+
+Any changes are now also in your repository on the GitHub website.
+
+
+b. Pull the changes to your repository on your PC
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In **GitHub Desktop**:
+
+1. click on the :guilabel:`Fetch origin` button`
+
+Any changes are now also in your repository on PC.

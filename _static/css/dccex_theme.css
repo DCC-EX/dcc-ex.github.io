@@ -560,13 +560,15 @@ html[data-theme='dark'] .admonition-title {
 
 /* *************************************** */
 
-.menuselection {
+.menuselection {  
+  border: 0px solid #ffffff00 !important;
+  background:#b9b9b940 !important;
   font-style: italic;
   font-weight: 700;
 }
 
 html[data-theme='dark'] .menuselection {
-  color: black;
+  color: white;
 }
 
 /* *************************************** */

@@ -3,9 +3,9 @@
 .. include:: /include/include-description.rst
 |EX-CONTRIBUTING-LOGO|
 
-***************
-Getting Started
-***************
+*******************************
+Documentation - Getting Started
+*******************************
 
 |SUITABLE| |conductor| |tinkerer| |engineer|
 
@@ -43,35 +43,96 @@ In order for GitHub pages to function correctly and automatically publish update
 
 In addition to this, rather than using the main or master branch, the default branch is called "sphinx", so any branches created for contributing to documentation must use this as the parent, and all pull requests must be submitted against this same branch.
 
-Cloning the repository
-----------------------
+---
 
-For this section, we are assuming that you are using VSCode with Git installed, allowing the built-in functionality for Git management in VSCode to work.
+Procedure
+=========
 
-To clone the documentation repository, and ensure you are on the correct branch, follow these steps:
+Procedure overview
+-------------------
 
-1. In VSCode, either click on the Source Control icon in the left pane, or press <Ctrl> + <Shift> + "g" + "g" (Yes, press "g" twice).
-2. Click the "Clone Repository" button.
-3. Enter the documentation repository URL "https://github.com/DCC-EX/dcc-ex.github.io" then press <Enter>.
-4. Select the appropriate folder on your hard drive to clone it to, then click "Select Repository Location".
-5. The clone will take a minute or two to complete depending on the speed of your computer and internet connection.
-6. Once complete, click "Open".
-7. At the bottom of the window, ensure that the branch "sphinx" is listed beside the Source Control icon.
-8. When you're ready to start editing, click the Source Control or press <Ctrl> + <Shift> +"g" + "g" again.
-9. Click the three dots "..." beside "SOURCE CONTROL" in bold text and select "Checkout to".
-10. Enter a new name for your branch, then click "Create new branch".
+There are a number of possible ways to do this but the instructions below rely on:
 
-At this point, any editing you do will be on a new branch linked to the parent "sphinx" branch.
+1. Cloning the repository on the **GitHub website**
+2. Using **GitHub Desktop** to download the repository to your PC
+3. Opening the repository in **VSCode**
+4. Making your changes
+5. Previewing your changes on your PC
+6. Using **GitHub Desktop** to *push* your changes back to your clone of the Repository on GitHub
+7. Creating a *pull request* to send your changes for review
 
-While editing, be sure to save often, stage and commit your changes, and publish them. This way, should anything go wrong with your computer, your work will be saved in GitHub rather than be lost.
+You will periodically need to update your repository:
 
-Live previews
-=============
+ a. On the **GitHub website** create a pull request to get and changes from the original repository to your repository on GitHub website
+ b. Use **GitHub Desktop** to pull the changes to your repository on your PC
+
+1. Cloning the repository on GitHub website
+--------------------------------------------
+
+1. First you will need to create an account on Github if you don't already have one.
+2. Go to the original repository ``https://github.com/DCC-EX/dcc-ex.github.io``
+3. Click on the :guilabel:`Fork` button and create a new fork.  Do not alter the Repository name ``dcc-ex.github.io``
+
+You will now have a new fork located at ``https://github.com/<your_account_name>/dcc-ex.github.io``.  take note of this for the next step.
+
+
+2. Download the repository to your PC with GitHib Desktop
+---------------------------------------------------------
+
+In **GitHub Desktop**:
+
+1. Select `File -> Clone Repository`
+2. Enter the name of you repository ``<your_account_name>/dcc-ex.github.io``
+3. select a location on your PC to store the repository.
+4. click :guilabel:`Clone`
+5. make sure that ``Sphinx`` is selected as the 'Current Branch'
+
+A copy of the repository should now be on the PC.
+
+You can open it in VSCode by selecting ``Repository -> Open in Visual Studio Code``
+
+
+3. Open the repository in **VSCode**
+------------------------------------
+
+You can open the repository in VSCode at any time by using ``File -> Open Folder`` and navigating to the folder you selected in step 2.
+
+You can subsequently open the repository in VSCode using ``File -> Open Recent`` and selecting the repository name.
+
+You can subsequently open the repository in VSCode from **GitHub Desktop**.
+
+4. Make you changes
+-------------------
+
+You can use the navigation tree on the left to find the file you want to change. Clicking on a file will open it in the edit window.
+
+.. 
+   For this section, we are assuming that you are using VSCode with Git installed, allowing the built-in functionality for Git management in VSCode to work.
+
+   To clone the documentation repository, and ensure you are on the correct branch, follow these steps:
+
+   1. In VSCode, either click on the Source Control icon in the left pane, or press <Ctrl> + <Shift> + "g" + "g" (Yes, press "g" twice).
+   2. Click the "Clone Repository" button.
+   3. Enter the documentation repository URL "https://github.com/DCC-EX/dcc-ex.github.io" then press <Enter>.
+   4. Select the appropriate folder on your hard drive to clone it to, then click "Select Repository Location".
+   5. The clone will take a minute or two to complete depending on the speed of your computer and internet connection.
+   6. Once complete, click "Open".
+   7. At the bottom of the window, ensure that the branch "sphinx" is listed beside the Source Control icon.
+   8. When you're ready to start editing, click the Source Control or press <Ctrl> + <Shift> +"g" + "g" again.
+   9. Click the three dots "..." beside "SOURCE CONTROL" in bold text and select "Checkout to".
+   10. Enter a new name for your branch, then click "Create new branch".
+
+   At this point, any editing you do will be on a new branch linked to the parent "sphinx" branch.
+
+   While editing, be sure to save often, stage and commit your changes, and publish them. This way, should anything go wrong with your computer, your work will be saved in GitHub rather than be lost.
+
+5. Live previews
+----------------
 
 Providing you followed the installation guide for VSCode on the :doc:`/about/contributing/software` page accurately, there are three methods available for generating live previews as you are editing the reStructuredText code.
 
 Emulate GitHub Pages deployment
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The recommended method for local previews of the website documentation is to emulate the GitHub Pages deployment process, as this will not only generate a preview of the content, but will also ensure the same versions of the various Python packages are used to generate the preview, which will highlight any functionality issues arising out of new or different versions.
 
@@ -89,7 +150,7 @@ Once the build of the website completes successfully, preview it locally by open
 This file can be found in the "docs\\_build\\html" folder within the "dcc-ex.github.io" folder.
 
 Esbonio Language server
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 The next option uses the Esbonio Language server installed along with the reStructuredText extension. This option allows you to quickly preview a page you have been editing, as it continuously generates the preview in the background.
 
@@ -100,7 +161,7 @@ The downside to using this method is that previews are only generated for pages 
 This will ensure the entire website is still able to be built successfully after any updates.
 
 Local Sphinx build
-------------------
+^^^^^^^^^^^^^^^^^^
 
 To refresh the entire website while editing, it is necessary to run the equivalent commands that the GitHub publishing workflow runs to ensure no issues have been introduced.
 
@@ -116,7 +177,41 @@ Once the build of the website completes successfully, preview it locally by open
 
 This file can be found in the "docs\\_build\\html" folder within the "dcc-ex.github.io" folder.
 
-Submission Procedure
-=====================
+..
+   Submission Procedure
+   =====================
 
-Once you are finished editing and are ready to have your updates published you will need to submit a pull request for one of the team members to approve and review.
+   Once you are finished editing and are ready to have your updates published you will need to submit a pull request for one of the team members to approve and review.
+
+6. Push your changes to your GitHub repository
+----------------------------------------------
+
+You will need to
+
+* Commit your changes
+* Push your changes
+
+In **GitHub Desktop**:
+
+* Open/select the repository
+* note and review the changes that have been made
+* Add a ``Summary`` of your changes
+* Add a ``Description`` of your changes, if the summary is not sufficient
+* click :guilabel:`Commit to Sphinx`
+* click :guilabel:`Push origin`
+
+
+7. Creating a *pull request* to send your changes for review
+------------------------------------------------------------
+
+1. Open the **GitHub website**
+2. open/select your repository ``https://github.com/<your_account_name>/dcc-ex.github.io``
+
+On the 'code' page you should see "This branch is *x* commit(s) ahead of DCC-EX/dcc-ex.github.io:sphinx."
+
+3. click on the `x commit(s) ahead of` hyperlink
+4. click on the :guilabel:`Create pull request` button
+5. confirm or add tot he title and documentation fields
+6. clink on the :guilabel:`Create pull request` button
+
+This creates a pull request to be reviewed by the documentation team

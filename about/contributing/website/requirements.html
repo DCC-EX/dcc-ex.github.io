@@ -36,7 +36,7 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Getting Started" href="getting-started.html" />
+    <link rel="next" title="Documentation - Getting Started" href="getting-started.html" />
     <link rel="prev" title="Contributing to the Documentation" href="index.html" />
 
      
@@ -583,7 +583,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../webthrottle.html">Contributing to EX-WebThrottle2</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Contributing to the Documentation</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">What You Need to Know/Learn</a></li>
-<li class="toctree-l4"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l4"><a class="reference internal" href="getting-started.html">Documentation - Getting Started</a></li>
 <li class="toctree-l4"><a class="reference internal" href="structure.html">Folder and Page Structure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="basic-rst.html">ReStructuredText Basics</a></li>
 <li class="toctree-l4"><a class="reference internal" href="style-guide.html">Style Guide</a></li>
@@ -658,19 +658,21 @@ reStructuredText is a markdown type language, for typesetting documents from web
 </section>
 <section id="git-github">
 <h3>Git &amp; GitHub<a class="headerlink" href="#git-github" title="Link to this heading"></a></h3>
-<p>You should have some knowledge about Git and GitHub, as we manage all of our documentation (as well as the development) there. Depending on the editing platform of your choice, you may get all the Git functionality you need. You may want to install GitHub Desktop or Sourcetree for getting a good idea on the state of the <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> documentation GitHub repository (dcc-ex.github.io).</p>
-<p>If you don’t have Git installed, now is as good a time as any, follow the instructions in the <a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Pro Git book</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
+<p>You should have some knowledge about Git and GitHub, as we manage all of our documentation (as well as the development) there. Depending on the editing platform of your choice, you may get all the Git functionality you need. You may want to install <strong>GitHub Desktop</strong> or Sourcetree for getting a good idea on the state of the <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> documentation GitHub repository (dcc-ex.github.io).</p>
+<p><strong>GitHub Desktop</strong> is used for the following instructions.</p>
 <p>Download <a class="reference external" href="https://desktop.github.com/">GitHub Desktop</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
-<p>Download <a class="reference external" href="https://www.sourcetreeapp.com/">SourceTree</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
+<p>Optional/alternate: Download <a class="reference external" href="https://www.sourcetreeapp.com/">SourceTree</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
+<p>For additional general instructions look at the <a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Pro Git book</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 </section>
 <section id="editing">
 <h3>Editing<a class="headerlink" href="#editing" title="Link to this heading"></a></h3>
 <p>You will also need to choose a text editor. Yes, any text editor will do, even the most simple one, but they will not provide editing help. We suggest you use the free VSCode (Visual Studio Code) which provides additional components that will make your editing easier with syntax highlighting, text snippets, and live preview of the rendering of the file, as well as integration with GitHub. Using a simple text editor will require you handling the Git integration yourself.</p>
+<p><strong>Visual Studio Code</strong> is used for the following instructions.</p>
 <p>Download VSCode <a class="reference external" href="https://code.visualstudio.com/download">here</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <p>Install the following extensions:</p>
 <ul class="simple">
-<li><p>reStructuredText by LeXtudio Inc.</p></li>
-<li><p>reStructuredText Syntax highlighting by Trond Snekvik.</p></li>
+<li><p><strong>reStructuredText Syntax highlighting</strong> by Trond Snekvik.</p></li>
+<li><p><strong>Esbonio</strong> by Swyddfa</p></li>
 </ul>
 <p>The final website will be rendered from the rst text files using Sphinx, which you also need to install with some options which you’ll find in the next paragraph.</p>
 <section id="vscode-rst-warnings">
@@ -690,9 +692,9 @@ reStructuredText is a markdown type language, for typesetting documents from web
 </section>
 <section id="id2">
 <h3>Sphinx<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
-<p>Sphinx is a transformation tool, taking rst formatted documents and turning them into a static html website, PDF, or LaTex documents.</p>
-<p>Sphinx needs Python v3, so if you don’t have python installed, it’s time to do this now.</p>
-<p>The simplest way to install Python on Windows is via the Microsoft Store. Install the latest version of Python 3 available.</p>
+<p><strong>Sphinx</strong> is a transformation tool, taking rst formatted documents and turning them into a static html website, PDF, or LaTex documents.</p>
+<p>Sphinx needs <strong>Python v3</strong>, so if you don’t have python installed, it’s time to do this now.</p>
+<p>The simplest way to install Python on Windows is via the Microsoft Store. Install the latest version of <strong>Python 3</strong> available.</p>
 <section id="live-preview">
 <h4>Live preview<a class="headerlink" href="#live-preview" title="Link to this heading"></a></h4>
 <p>The reStructuredText extension installed with VSCode allows live previewing of the web pages.</p>
@@ -703,12 +705,13 @@ reStructuredText is a markdown type language, for typesetting documents from web
 </section>
 <section id="images">
 <h3>Images<a class="headerlink" href="#images" title="Link to this heading"></a></h3>
-<p>We typically like compressed PNG files, but can take JPG as well. The resolution should be 72dpi and at least 600 pixels wide (maximum 1200). We can size the images using Sphinx to reduce them as necessary to fit where we need them on the page.</p>
+<p>We compressed PNG files with transparent backgrounds are preferred. JPG files can be used, but should be avoided.</p>
+<p>The resolution should be 72dpi and at least 600 pixels wide (maximum 1200). We can size the images using Sphinx to reduce them as necessary to fit where we need them on the page.</p>
 </section>
-<section id="graphs-schemas">
-<h3>Graphs &amp; Schemas<a class="headerlink" href="#graphs-schemas" title="Link to this heading"></a></h3>
-<p>Use draw.io to keep compatibility and allow group collaboration on the same document. Not everyone has access to Microsoft Visio. Export any schema or graph from draw.io in PNG format, with settings if possible as outlined above.</p>
-<p>— to be done graphviz to be added —</p>
+<section id="vector-drawings">
+<h3>Vector drawings<a class="headerlink" href="#vector-drawings" title="Link to this heading"></a></h3>
+<p>All vector original files <strong>MUST</strong> be in .SVG format and stored the <code class="docutils literal notranslate"><span class="pre">\image-artifacts</span></code> folder. Final versions can them be exported as .PNG files.</p>
+<p><strong>Inkscape</strong> is typically used to create the .SVG files, but <strong>draw.io</strong> and other apps can also be used.</p>
 </section>
 <section id="hidden-pages-not-ready-for-release">
 <h3>Hidden Pages (Not ready for release)<a class="headerlink" href="#hidden-pages-not-ready-for-release" title="Link to this heading"></a></h3>
@@ -744,7 +747,7 @@ reStructuredText is a markdown type language, for typesetting documents from web
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="Contributing to the Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="getting-started.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="getting-started.html" class="btn btn-neutral float-right" title="Documentation - Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -757,7 +760,7 @@ reStructuredText is a markdown type language, for typesetting documents from web
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f45c97109a0>
+    <jinja2.runtime.BlockReference object at 0x7f5a6d7f9660>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

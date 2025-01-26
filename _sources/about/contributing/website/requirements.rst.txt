@@ -40,25 +40,29 @@ reStructuredText `QuickReference Guide <https://docutils.sourceforge.io/docs/use
 Git & GitHub
 ------------
 
-You should have some knowledge about Git and GitHub, as we manage all of our documentation (as well as the development) there. Depending on the editing platform of your choice, you may get all the Git functionality you need. You may want to install GitHub Desktop or Sourcetree for getting a good idea on the state of the |EX-CS| documentation GitHub repository (dcc-ex.github.io).
+You should have some knowledge about Git and GitHub, as we manage all of our documentation (as well as the development) there. Depending on the editing platform of your choice, you may get all the Git functionality you need. You may want to install **GitHub Desktop** or Sourcetree for getting a good idea on the state of the |EX-CS| documentation GitHub repository (dcc-ex.github.io).  
 
-If you don't have Git installed, now is as good a time as any, follow the instructions in the `Pro Git book <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_ |EXTERNAL-LINK|
+**GitHub Desktop** is used for the following instructions.
 
 Download `GitHub Desktop <https://desktop.github.com/>`_ |EXTERNAL-LINK|
 
-Download `SourceTree <https://www.sourcetreeapp.com/>`_ |EXTERNAL-LINK|
+Optional/alternate: Download `SourceTree <https://www.sourcetreeapp.com/>`_ |EXTERNAL-LINK|
+
+For additional general instructions look at the `Pro Git book <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_ |EXTERNAL-LINK|
 
 Editing
 -------
 
 You will also need to choose a text editor. Yes, any text editor will do, even the most simple one, but they will not provide editing help. We suggest you use the free VSCode (Visual Studio Code) which provides additional components that will make your editing easier with syntax highlighting, text snippets, and live preview of the rendering of the file, as well as integration with GitHub. Using a simple text editor will require you handling the Git integration yourself.
 
+**Visual Studio Code** is used for the following instructions.
+
 Download VSCode `here <https://code.visualstudio.com/download>`_ |EXTERNAL-LINK|
 
 Install the following extensions:
 
-* reStructuredText by LeXtudio Inc.
-* reStructuredText Syntax highlighting by Trond Snekvik.
+* **reStructuredText Syntax highlighting** by Trond Snekvik.
+* **Esbonio** by Swyddfa
 
 The final website will be rendered from the rst text files using Sphinx, which you also need to install with some options which you'll find in the next paragraph.
 
@@ -84,11 +88,11 @@ Save and close the settings, and the irrelevant warnings should no longer bother
 Sphinx
 ------
 
-Sphinx is a transformation tool, taking rst formatted documents and turning them into a static html website, PDF, or LaTex documents.
+**Sphinx** is a transformation tool, taking rst formatted documents and turning them into a static html website, PDF, or LaTex documents.
 
-Sphinx needs Python v3, so if you don't have python installed, it's time to do this now.
+Sphinx needs **Python v3**, so if you don't have python installed, it's time to do this now.
 
-The simplest way to install Python on Windows is via the Microsoft Store. Install the latest version of Python 3 available.
+The simplest way to install Python on Windows is via the Microsoft Store. Install the latest version of **Python 3** available.
 
 Live preview
 ^^^^^^^^^^^^^^
@@ -104,14 +108,24 @@ Refer to the :doc:`/about/contributing/website/index` contributing page for more
 Images
 ------
 
-We typically like compressed PNG files, but can take JPG as well. The resolution should be 72dpi and at least 600 pixels wide (maximum 1200). We can size the images using Sphinx to reduce them as necessary to fit where we need them on the page.
+We compressed PNG files with transparent backgrounds are preferred. JPG files can be used, but should be avoided. 
 
-Graphs & Schemas
-----------------
+The resolution should be 72dpi and at least 600 pixels wide (maximum 1200). We can size the images using Sphinx to reduce them as necessary to fit where we need them on the page.
 
-Use draw.io to keep compatibility and allow group collaboration on the same document. Not everyone has access to Microsoft Visio. Export any schema or graph from draw.io in PNG format, with settings if possible as outlined above.
+Vector drawings
+---------------
 
---- to be done graphviz to be added ---
+All vector original files **MUST** be in .SVG format and stored the ``\image-artifacts`` folder. Final versions can them be exported as .PNG files.
+
+**Inkscape** is typically used to create the .SVG files, but **draw.io** and other apps can also be used.
+
+
+.. Graphs & Schemas
+.. ----------------
+
+.. Use draw.io to keep compatibility and allow group collaboration on the same document. Not everyone has access to Microsoft Visio. Export any schema or graph from draw.io in PNG format, with settings if possible as outlined above.
+
+.. --- to be done graphviz to be added ---
 
 Hidden Pages (Not ready for release)
 ------------------------------------

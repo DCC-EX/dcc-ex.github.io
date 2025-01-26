@@ -30,7 +30,7 @@ Posting new content is a simple matter of creating a reStructuredText formatted 
 
 Providing the correct template format is maintained, there is no need to edit anything outside of the individual file being created, and the website should build correctly once a PR is submitted and merged with the Sphinx branch of the repository.
 
-Local previews can still be generated as per :ref:`about/contributing/website/getting-started:live previews`.
+Local previews can still be generated as per :ref:`about/contributing/website/getting-started:5. live previews`.
 
 Using the post-template.txt template
 ====================================

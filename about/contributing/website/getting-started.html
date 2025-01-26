@@ -6,7 +6,7 @@
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Getting Started &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>Documentation - Getting Started &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
@@ -583,7 +583,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../webthrottle.html">Contributing to EX-WebThrottle2</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Contributing to the Documentation</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="requirements.html">What You Need to Know/Learn</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Getting Started</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Documentation - Getting Started</a></li>
 <li class="toctree-l4"><a class="reference internal" href="structure.html">Folder and Page Structure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="basic-rst.html">ReStructuredText Basics</a></li>
 <li class="toctree-l4"><a class="reference internal" href="style-guide.html">Style Guide</a></li>
@@ -615,7 +615,7 @@
           <li class="breadcrumb-item"><a href="../../index-contributing.html">Donating &amp; Contributing</a></li>
           <li class="breadcrumb-item"><a href="../index.html">Contributing - Helping the DCC-EX Team</a></li>
           <li class="breadcrumb-item"><a href="index.html">Contributing to the Documentation</a></li>
-      <li class="breadcrumb-item active">Getting Started</li>
+      <li class="breadcrumb-item active">Documentation - Getting Started</li>
   
     
       <li class="wy-breadcrumbs-aside">
@@ -630,8 +630,8 @@
            <div itemprop="articleBody">
              
 <p><a class="image-product-logo-float-right reference internal" href="../../../_images/product-logo-contributing.png"><img alt="Contributing" class="image-product-logo-float-right" src="../../../_images/product-logo-contributing.png" style="width: 320.0px; height: 64.0px;" /></a></p>
-<section id="getting-started">
-<h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h1>
+<section id="documentation-getting-started">
+<h1>Documentation - Getting Started<a class="headerlink" href="#documentation-getting-started" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../../../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../../../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../../begin/levels.html#conductor"><img alt="Conductor Hat" src="../../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <aside class="sidebar-on-this-page sidebar">
 <nav class="contents local" id="on-this-page">
@@ -641,17 +641,20 @@
 <li><p><a class="reference internal" href="#github-pages-sphinx-and-restructuredtext" id="id2">GitHub Pages, sphinx, and reStructuredText</a></p>
 <ul>
 <li><p><a class="reference internal" href="#github-repository-and-the-sphinx-branch" id="id3">GitHub repository and the sphinx branch</a></p></li>
-<li><p><a class="reference internal" href="#cloning-the-repository" id="id4">Cloning the repository</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#live-previews" id="id5">Live previews</a></p>
+<li><p><a class="reference internal" href="#procedure" id="id4">Procedure</a></p>
 <ul>
-<li><p><a class="reference internal" href="#emulate-github-pages-deployment" id="id6">Emulate GitHub Pages deployment</a></p></li>
-<li><p><a class="reference internal" href="#esbonio-language-server" id="id7">Esbonio Language server</a></p></li>
-<li><p><a class="reference internal" href="#local-sphinx-build" id="id8">Local Sphinx build</a></p></li>
+<li><p><a class="reference internal" href="#procedure-overview" id="id5">Procedure overview</a></p></li>
+<li><p><a class="reference internal" href="#cloning-the-repository-on-github-website" id="id6">1. Cloning the repository on GitHub website</a></p></li>
+<li><p><a class="reference internal" href="#download-the-repository-to-your-pc-with-githib-desktop" id="id7">2. Download the repository to your PC with GitHib Desktop</a></p></li>
+<li><p><a class="reference internal" href="#open-the-repository-in-vscode" id="id8">3. Open the repository in <strong>VSCode</strong></a></p></li>
+<li><p><a class="reference internal" href="#make-you-changes" id="id9">4. Make you changes</a></p></li>
+<li><p><a class="reference internal" href="#live-previews" id="id10">5. Live previews</a></p></li>
+<li><p><a class="reference internal" href="#push-your-changes-to-your-github-repository" id="id11">6. Push your changes to your GitHub repository</a></p></li>
+<li><p><a class="reference internal" href="#creating-a-pull-request-to-send-your-changes-for-review" id="id12">7. Creating a <em>pull request</em> to send your changes for review</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#submission-procedure" id="id9">Submission Procedure</a></p></li>
 </ul>
 </nav>
 </aside>
@@ -671,32 +674,68 @@
 <h3><a class="toc-backref" href="#id3" role="doc-backlink">GitHub repository and the sphinx branch</a><a class="headerlink" href="#github-repository-and-the-sphinx-branch" title="Link to this heading"></a></h3>
 <p>In order for GitHub pages to function correctly and automatically publish updated content, the content must be located in a specific repository named after the GitHub organisation, and therefore our website repository is <a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io">dcc-ex.github.io</a>.</p>
 <p>In addition to this, rather than using the main or master branch, the default branch is called “sphinx”, so any branches created for contributing to documentation must use this as the parent, and all pull requests must be submitted against this same branch.</p>
+<p>—</p>
 </section>
-<section id="cloning-the-repository">
-<h3><a class="toc-backref" href="#id4" role="doc-backlink">Cloning the repository</a><a class="headerlink" href="#cloning-the-repository" title="Link to this heading"></a></h3>
-<p>For this section, we are assuming that you are using VSCode with Git installed, allowing the built-in functionality for Git management in VSCode to work.</p>
-<p>To clone the documentation repository, and ensure you are on the correct branch, follow these steps:</p>
+</section>
+<section id="procedure">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Procedure</a><a class="headerlink" href="#procedure" title="Link to this heading"></a></h2>
+<section id="procedure-overview">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Procedure overview</a><a class="headerlink" href="#procedure-overview" title="Link to this heading"></a></h3>
+<p>There are a number of possible ways to do this but the instructions below rely on:</p>
 <ol class="arabic simple">
-<li><p>In VSCode, either click on the Source Control icon in the left pane, or press &lt;Ctrl&gt; + &lt;Shift&gt; + “g” + “g” (Yes, press “g” twice).</p></li>
-<li><p>Click the “Clone Repository” button.</p></li>
-<li><p>Enter the documentation repository URL “<a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io">https://github.com/DCC-EX/dcc-ex.github.io</a>” then press &lt;Enter&gt;.</p></li>
-<li><p>Select the appropriate folder on your hard drive to clone it to, then click “Select Repository Location”.</p></li>
-<li><p>The clone will take a minute or two to complete depending on the speed of your computer and internet connection.</p></li>
-<li><p>Once complete, click “Open”.</p></li>
-<li><p>At the bottom of the window, ensure that the branch “sphinx” is listed beside the Source Control icon.</p></li>
-<li><p>When you’re ready to start editing, click the Source Control or press &lt;Ctrl&gt; + &lt;Shift&gt; +”g” + “g” again.</p></li>
-<li><p>Click the three dots “…” beside “SOURCE CONTROL” in bold text and select “Checkout to”.</p></li>
-<li><p>Enter a new name for your branch, then click “Create new branch”.</p></li>
+<li><p>Cloning the repository on the <strong>GitHub website</strong></p></li>
+<li><p>Using <strong>GitHub Desktop</strong> to download the repository to your PC</p></li>
+<li><p>Opening the repository in <strong>VSCode</strong></p></li>
+<li><p>Making your changes</p></li>
+<li><p>Previewing your changes on your PC</p></li>
+<li><p>Using <strong>GitHub Desktop</strong> to <em>push</em> your changes back to your clone of the Repository on GitHub</p></li>
+<li><p>Creating a <em>pull request</em> to send your changes for review</p></li>
 </ol>
-<p>At this point, any editing you do will be on a new branch linked to the parent “sphinx” branch.</p>
-<p>While editing, be sure to save often, stage and commit your changes, and publish them. This way, should anything go wrong with your computer, your work will be saved in GitHub rather than be lost.</p>
+<p>You will periodically need to update your repository:</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>On the <strong>GitHub website</strong> create a pull request to get and changes from the original repository to your repository on GitHub website</p></li>
+<li><p>Use <strong>GitHub Desktop</strong> to pull the changes to your repository on your PC</p></li>
+</ol>
+</div></blockquote>
 </section>
+<section id="cloning-the-repository-on-github-website">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">1. Cloning the repository on GitHub website</a><a class="headerlink" href="#cloning-the-repository-on-github-website" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>First you will need to create an account on Github if you don’t already have one.</p></li>
+<li><p>Go to the original repository <code class="docutils literal notranslate"><span class="pre">https://github.com/DCC-EX/dcc-ex.github.io</span></code></p></li>
+<li><p>Click on the <span class="guilabel">Fork</span> button and create a new fork.  Do not alter the Repository name <code class="docutils literal notranslate"><span class="pre">dcc-ex.github.io</span></code></p></li>
+</ol>
+<p>You will now have a new fork located at <code class="docutils literal notranslate"><span class="pre">https://github.com/&lt;your_account_name&gt;/dcc-ex.github.io</span></code>.  take note of this for the next step.</p>
+</section>
+<section id="download-the-repository-to-your-pc-with-githib-desktop">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">2. Download the repository to your PC with GitHib Desktop</a><a class="headerlink" href="#download-the-repository-to-your-pc-with-githib-desktop" title="Link to this heading"></a></h3>
+<p>In <strong>GitHub Desktop</strong>:</p>
+<ol class="arabic simple">
+<li><p>Select <cite>File -&gt; Clone Repository</cite></p></li>
+<li><p>Enter the name of you repository <code class="docutils literal notranslate"><span class="pre">&lt;your_account_name&gt;/dcc-ex.github.io</span></code></p></li>
+<li><p>select a location on your PC to store the repository.</p></li>
+<li><p>click <span class="guilabel">Clone</span></p></li>
+<li><p>make sure that <code class="docutils literal notranslate"><span class="pre">Sphinx</span></code> is selected as the ‘Current Branch’</p></li>
+</ol>
+<p>A copy of the repository should now be on the PC.</p>
+<p>You can open it in VSCode by selecting <code class="docutils literal notranslate"><span class="pre">Repository</span> <span class="pre">-&gt;</span> <span class="pre">Open</span> <span class="pre">in</span> <span class="pre">Visual</span> <span class="pre">Studio</span> <span class="pre">Code</span></code></p>
+</section>
+<section id="open-the-repository-in-vscode">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">3. Open the repository in <strong>VSCode</strong></a><a class="headerlink" href="#open-the-repository-in-vscode" title="Link to this heading"></a></h3>
+<p>You can open the repository in VSCode at any time by using <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">-&gt;</span> <span class="pre">Open</span> <span class="pre">Folder</span></code> and navigating to the folder you selected in step 2.</p>
+<p>You can subsequently open the repository in VSCode using <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">-&gt;</span> <span class="pre">Open</span> <span class="pre">Recent</span></code> and selecting the repository name.</p>
+<p>You can subsequently open the repository in VSCode from <strong>GitHub Desktop</strong>.</p>
+</section>
+<section id="make-you-changes">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">4. Make you changes</a><a class="headerlink" href="#make-you-changes" title="Link to this heading"></a></h3>
+<p>You can use the navigation tree on the left to find the file you want to change. Clicking on a file will open it in the edit window.</p>
 </section>
 <section id="live-previews">
-<h2><a class="toc-backref" href="#id5" role="doc-backlink">Live previews</a><a class="headerlink" href="#live-previews" title="Link to this heading"></a></h2>
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">5. Live previews</a><a class="headerlink" href="#live-previews" title="Link to this heading"></a></h3>
 <p>Providing you followed the installation guide for VSCode on the <a class="reference internal" href="../software.html"><span class="doc">Recommended Software</span></a> page accurately, there are three methods available for generating live previews as you are editing the reStructuredText code.</p>
 <section id="emulate-github-pages-deployment">
-<h3><a class="toc-backref" href="#id6" role="doc-backlink">Emulate GitHub Pages deployment</a><a class="headerlink" href="#emulate-github-pages-deployment" title="Link to this heading"></a></h3>
+<h4>Emulate GitHub Pages deployment<a class="headerlink" href="#emulate-github-pages-deployment" title="Link to this heading"></a></h4>
 <p>The recommended method for local previews of the website documentation is to emulate the GitHub Pages deployment process, as this will not only generate a preview of the content, but will also ensure the same versions of the various Python packages are used to generate the preview, which will highlight any functionality issues arising out of new or different versions.</p>
 <p>Right now this can only be done on Windows until a suitable bash script is created for Linux.</p>
 <ol class="arabic simple">
@@ -711,14 +750,14 @@
 <p>This file can be found in the “docs\_build\html” folder within the “dcc-ex.github.io” folder.</p>
 </section>
 <section id="esbonio-language-server">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">Esbonio Language server</a><a class="headerlink" href="#esbonio-language-server" title="Link to this heading"></a></h3>
+<h4>Esbonio Language server<a class="headerlink" href="#esbonio-language-server" title="Link to this heading"></a></h4>
 <p>The next option uses the Esbonio Language server installed along with the reStructuredText extension. This option allows you to quickly preview a page you have been editing, as it continuously generates the preview in the background.</p>
 <p>To view the preview, press &lt;Ctrl&gt; + &lt;Shift&gt; + “r” and it will open the live preview in a new tab in VSCode. In addition to this method, you can also press &lt;Ctrl&gt; + “k” followed immediately by &lt;Ctrl&gt; + “r” which will generate the live preview in a split pane within VSCode. Every time you save the page you are working on, the live preview will automatically update.</p>
 <p>The downside to using this method is that previews are only generated for pages you are actively editing, rather than the entire website. Therefore, prior to submitting any pull requests, it is essential that you follow the build process either as outlined above to emulate the GitHub Pages deployment, or in following section.</p>
 <p>This will ensure the entire website is still able to be built successfully after any updates.</p>
 </section>
 <section id="local-sphinx-build">
-<h3><a class="toc-backref" href="#id8" role="doc-backlink">Local Sphinx build</a><a class="headerlink" href="#local-sphinx-build" title="Link to this heading"></a></h3>
+<h4>Local Sphinx build<a class="headerlink" href="#local-sphinx-build" title="Link to this heading"></a></h4>
 <p>To refresh the entire website while editing, it is necessary to run the equivalent commands that the GitHub publishing workflow runs to ensure no issues have been introduced.</p>
 <p>To build the website using Sphinx, follow these steps:</p>
 <ol class="arabic simple">
@@ -732,9 +771,38 @@
 <p>This file can be found in the “docs\_build\html” folder within the “dcc-ex.github.io” folder.</p>
 </section>
 </section>
-<section id="submission-procedure">
-<h2><a class="toc-backref" href="#id9" role="doc-backlink">Submission Procedure</a><a class="headerlink" href="#submission-procedure" title="Link to this heading"></a></h2>
-<p>Once you are finished editing and are ready to have your updates published you will need to submit a pull request for one of the team members to approve and review.</p>
+<section id="push-your-changes-to-your-github-repository">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">6. Push your changes to your GitHub repository</a><a class="headerlink" href="#push-your-changes-to-your-github-repository" title="Link to this heading"></a></h3>
+<p>You will need to</p>
+<ul class="simple">
+<li><p>Commit your changes</p></li>
+<li><p>Push your changes</p></li>
+</ul>
+<p>In <strong>GitHub Desktop</strong>:</p>
+<ul class="simple">
+<li><p>Open/select the repository</p></li>
+<li><p>note and review the changes that have been made</p></li>
+<li><p>Add a <code class="docutils literal notranslate"><span class="pre">Summary</span></code> of your changes</p></li>
+<li><p>Add a <code class="docutils literal notranslate"><span class="pre">Description</span></code> of your changes, if the summary is not sufficient</p></li>
+<li><p>click <span class="guilabel">Commit to Sphinx</span></p></li>
+<li><p>click <span class="guilabel">Push origin</span></p></li>
+</ul>
+</section>
+<section id="creating-a-pull-request-to-send-your-changes-for-review">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">7. Creating a <em>pull request</em> to send your changes for review</a><a class="headerlink" href="#creating-a-pull-request-to-send-your-changes-for-review" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Open the <strong>GitHub website</strong></p></li>
+<li><p>open/select your repository <code class="docutils literal notranslate"><span class="pre">https://github.com/&lt;your_account_name&gt;/dcc-ex.github.io</span></code></p></li>
+</ol>
+<p>On the ‘code’ page you should see “This branch is <em>x</em> commit(s) ahead of DCC-EX/dcc-ex.github.io:sphinx.”</p>
+<ol class="arabic simple" start="3">
+<li><p>click on the <cite>x commit(s) ahead of</cite> hyperlink</p></li>
+<li><p>click on the <span class="guilabel">Create pull request</span> button</p></li>
+<li><p>confirm or add tot he title and documentation fields</p></li>
+<li><p>clink on the <span class="guilabel">Create pull request</span> button</p></li>
+</ol>
+<p>This creates a pull request to be reviewed by the documentation team</p>
+</section>
 </section>
 </section>
 
@@ -760,7 +828,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f45c8d7be20>
+    <jinja2.runtime.BlockReference object at 0x7f5a6d7501f0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

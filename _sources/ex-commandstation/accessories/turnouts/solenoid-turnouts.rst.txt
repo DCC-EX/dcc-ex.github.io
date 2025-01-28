@@ -64,16 +64,16 @@ Here is an example |EX-R| macro that will configure a virtual turnout, setting t
 .. code-block:: cpp
 
   #define PULSE 10    // Set the duration of the pulse to 10ms
-  #define SINGLE_COIL_TURNOUT(t, p1, p2, p3, desc)
-  VIRTUAL_TURNOUT(t, desc)
-  DONE
-  ONCLOSE(t)
-   SET(p2) RESET(p3)
-   SET(p1) DELAY(PULSE) RESET(p1)
-  DONE
-  ONTHROW(t)
-   RESET(p2) SET(p3)
-   SET(p1) DELAY(PULSE) RESET(p1)
+  #define SINGLE_COIL_TURNOUT(t, p1, p2, p3, desc) \
+  VIRTUAL_TURNOUT(t, desc) \
+  DONE \
+  ONCLOSE(t) \
+   SET(p2) RESET(p3) \
+   SET(p1) DELAY(PULSE) RESET(p1) \
+  DONE \
+  ONTHROW(t) \
+   RESET(p2) SET(p3) \
+   SET(p1) DELAY(PULSE) RESET(p1) \
   DONE
 
   SINGLE_COIL_TURNOUT(101, 22, 24, 26, "Turnout 101")

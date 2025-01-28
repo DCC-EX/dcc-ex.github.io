@@ -691,17 +691,17 @@
 <p>The voltage provided to “External Power” is the voltage required to operate the turnouts/points, and will depend on the brand/model. Absolute maximum for the L293D is 36V DC.</p>
 <p>Here is an example <a href="../../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> macro that will configure a virtual turnout, setting the correct pins for the two turnouts to operate correctly:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#define PULSE 10    </span><span class="c1">// Set the duration of the pulse to 10ms</span>
-<span class="cp">#define SINGLE_COIL_TURNOUT(t, p1, p2, p3, desc)</span>
-<span class="n">VIRTUAL_TURNOUT</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">desc</span><span class="p">)</span>
-<span class="n">DONE</span>
-<span class="n">ONCLOSE</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-<span class="w"> </span><span class="n">SET</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span><span class="w"> </span><span class="n">RESET</span><span class="p">(</span><span class="n">p3</span><span class="p">)</span>
-<span class="w"> </span><span class="n">SET</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span><span class="w"> </span><span class="n">DELAY</span><span class="p">(</span><span class="n">PULSE</span><span class="p">)</span><span class="w"> </span><span class="n">RESET</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
-<span class="n">DONE</span>
-<span class="n">ONTHROW</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-<span class="w"> </span><span class="n">RESET</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span><span class="w"> </span><span class="n">SET</span><span class="p">(</span><span class="n">p3</span><span class="p">)</span>
-<span class="w"> </span><span class="n">SET</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span><span class="w"> </span><span class="n">DELAY</span><span class="p">(</span><span class="n">PULSE</span><span class="p">)</span><span class="w"> </span><span class="n">RESET</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
-<span class="n">DONE</span>
+<span class="cp">#define SINGLE_COIL_TURNOUT(t, p1, p2, p3, desc) \</span>
+<span class="cp">VIRTUAL_TURNOUT(t, desc) \</span>
+<span class="cp">DONE \</span>
+<span class="cp">ONCLOSE(t) \</span>
+<span class="cp"> SET(p2) RESET(p3) \</span>
+<span class="cp"> SET(p1) DELAY(PULSE) RESET(p1) \</span>
+<span class="cp">DONE \</span>
+<span class="cp">ONTHROW(t) \</span>
+<span class="cp"> RESET(p2) SET(p3) \</span>
+<span class="cp"> SET(p1) DELAY(PULSE) RESET(p1) \</span>
+<span class="cp">DONE</span>
 
 <span class="n">SINGLE_COIL_TURNOUT</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Turnout 101&quot;</span><span class="p">)</span>
 <span class="n">SINGLE_COIL_TURNOUT</span><span class="p">(</span><span class="mi">102</span><span class="p">,</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Turnout 102&quot;</span><span class="p">)</span>
@@ -823,7 +823,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f85e9c43d00>
+    <jinja2.runtime.BlockReference object at 0x7f2642d6c8e0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2025-01-29T05:12:00.434194+00:00</updated>
+  <updated>2025-01-29T05:26:09.865917+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.8">ABlog</generator>
@@ -21,9 +21,9 @@
 &lt;p&gt;#2.     &lt;strong&gt;Try a different serial port.&lt;/strong&gt; If you have multiple USB ports on your computer, try a different one. In particular, we have seen USB 3.0 ports that did not work when a USB 2.0 did.&lt;/p&gt;
 &lt;p&gt;#3.     &lt;strong&gt;Try a different computer.&lt;/strong&gt; Very few computers show the issue, so there is a good chance that if one computer does not work, a different one will. If you have a computer with a different operating system, like iOS vs. Windows, give that a try.&lt;/p&gt;
 &lt;p&gt;#4.     &lt;strong&gt;Insert a capacitor into the RESET and GND header pins.&lt;/strong&gt; If the issue is not a cable, then we can adjust a timing issue by adding a capacitor between RESET and GND. Find a 1 to 10uF capacitor. If it is a Tantalum or Electrolytic type, MAKE SURE TO USE THE CORRECT POLARITY. Note that on polarized capacitors, the positive leg is longer. There is also a “+” marking on Tantalum’s and a stripe on the negative side for Electrolytics. The pins are clearly labeled on the underside of the CSB1.&lt;/p&gt;
-&lt;img alt="Capacitors" class="align-center" src="https://dcc-ex.com/_images/capacitors.png" style="width: 378.90000000000003px; height: 261.90000000000003px;" /&gt;
+&lt;img alt="Capacitors" class="align-center" src="https://dcc-ex.com/_images/capacitors.png" style="width: 357.84999999999997px; height: 247.35px;" /&gt;
 &lt;p&gt;Here is a capacitor inserted into the correct pins in the header. For a permanent install, the capacitor can be soldered under the board between Reset and the closest GND solder point.&lt;/p&gt;
-&lt;img alt="Capacitors" class="align-center" src="https://dcc-ex.com/_images/capacitor_fix.png" style="width: 300.59999999999997px; height: 370.8px;" /&gt;
+&lt;img alt="Capacitors" class="align-center" src="https://dcc-ex.com/_images/capacitor_fix.png" style="width: 275.55px; height: 339.90000000000003px;" /&gt;
 &lt;p&gt;We are currently testing some changes that may lead to an update in EX-Installer and/or the EX-CSB1 to compensate for the issue. We need to make sure any hardware change does not affect anything else. It would not be good to be able to upload and then find your nice, shiny, Command Station won’t reboot into operating mode. If you have the issue and are a Tinkerer or an Engineer, you may be able to help us since no one on the development team has a problem computer. You could be a valuable resource to help us beta test the best solution.&lt;/p&gt;
 &lt;/section&gt;
 </content>

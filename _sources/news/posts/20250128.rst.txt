@@ -29,14 +29,14 @@ We have found that there are a small number of users who can have an issue when 
 
 .. image:: /_static/images/ex-csb1/capacitors.png
   :alt: Capacitors
-  :scale: 90%
+  :scale: 85%
   :align: center
 
 Here is a capacitor inserted into the correct pins in the header. For a permanent install, the capacitor can be soldered under the board between Reset and the closest GND solder point.
 
 .. image:: /_static/images/ex-csb1/capacitor_fix.png
   :alt: Capacitors
-  :scale: 60%
+  :scale: 55%
   :align: center
 
 We are currently testing some changes that may lead to an update in EX-Installer and/or the EX-CSB1 to compensate for the issue. We need to make sure any hardware change does not affect anything else. It would not be good to be able to upload and then find your nice, shiny, Command Station won’t reboot into operating mode. If you have the issue and are a Tinkerer or an Engineer, you may be able to help us since no one on the development team has a problem computer. You could be a valuable resource to help us beta test the best solution.

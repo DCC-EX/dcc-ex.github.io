@@ -2,16 +2,43 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2025-01-28T02:09:38.145320+00:00</updated>
+  <updated>2025-01-29T05:12:00.434194+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.8">ABlog</generator>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20250128.html</id>
+    <title>If you have an issue uploading to an EX-CSB1</title>
+    <updated>2025-01-28T00:00:00+00:00</updated>
+    <author>
+      <name>Fred Decker (FlightRisk)</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="if-you-have-an-issue-uploading-to-an-ex-csb1"&gt;
+
+&lt;p&gt;We have found that there are a small number of users who can have an issue when trying to update firmware or upload EXRAIL scripts to an EX-CSB1 Command Station (or any ESP32 based device). This seems to be an issue with some USB ports on some Windows machines, but no matter what operating system or computer you have (including a Raspberry Pi) please follow these instructions to fix the issue and report it to us along with what fixed it for you.&lt;/p&gt;
+&lt;p&gt;#1. &lt;strong&gt;Try a different cable.&lt;/strong&gt; Our number one issue is dodgy cables. Some USB cables are “charging only” and do not have all the pins inside connected to be able to transmit data. Even if you have a data cable, try another one anyway, preferably not one of the exact same brand. We have seen a surprising number of poor or invisibly damaged cables.&lt;/p&gt;
+&lt;p&gt;#2.     &lt;strong&gt;Try a different serial port.&lt;/strong&gt; If you have multiple USB ports on your computer, try a different one. In particular, we have seen USB 3.0 ports that did not work when a USB 2.0 did.&lt;/p&gt;
+&lt;p&gt;#3.     &lt;strong&gt;Try a different computer.&lt;/strong&gt; Very few computers show the issue, so there is a good chance that if one computer does not work, a different one will. If you have a computer with a different operating system, like iOS vs. Windows, give that a try.&lt;/p&gt;
+&lt;p&gt;#4.     &lt;strong&gt;Insert a capacitor into the RESET and GND header pins.&lt;/strong&gt; If the issue is not a cable, then we can adjust a timing issue by adding a capacitor between RESET and GND. Find a 1 to 10uF capacitor. If it is a Tantalum or Electrolytic type, MAKE SURE TO USE THE CORRECT POLARITY. Note that on polarized capacitors, the positive leg is longer. There is also a “+” marking on Tantalum’s and a stripe on the negative side for Electrolytics. The pins are clearly labeled on the underside of the CSB1.&lt;/p&gt;
+&lt;img alt="Capacitors" class="align-center" src="https://dcc-ex.com/_images/capacitors.png" style="width: 378.90000000000003px; height: 261.90000000000003px;" /&gt;
+&lt;p&gt;Here is a capacitor inserted into the correct pins in the header. For a permanent install, the capacitor can be soldered under the board between Reset and the closest GND solder point.&lt;/p&gt;
+&lt;img alt="Capacitors" class="align-center" src="https://dcc-ex.com/_images/capacitor_fix.png" style="width: 300.59999999999997px; height: 370.8px;" /&gt;
+&lt;p&gt;We are currently testing some changes that may lead to an update in EX-Installer and/or the EX-CSB1 to compensate for the issue. We need to make sure any hardware change does not affect anything else. It would not be good to be able to upload and then find your nice, shiny, Command Station won’t reboot into operating mode. If you have the issue and are a Tinkerer or an Engineer, you may be able to help us since no one on the development team has a problem computer. You could be a valuable resource to help us beta test the best solution.&lt;/p&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20250128.html" rel="alternate"/>
+    <summary>We have found that there are a small number of users who can have an issue when trying to update firmware or upload EXRAIL scripts to an EX-CSB1 Command Station (or any ESP32 based device). This seems to be an issue with some USB ports on some Windows machines, but no matter what operating system or computer you have (including a Raspberry Pi) please follow these instructions to fix the issue and report it to us along with what fixed it for you.</summary>
+    <category term="ex-commandstation" label="ex-commandstation"/>
+    <category term="ex-csb1" label="ex-csb1"/>
+    <published>2025-01-28T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>https://dcc-ex.com/news/posts/20241220.html</id>
     <title>DCC-EX Releases EX-CSB1 Ready to Run DCC CommandStation</title>
     <updated>2024-12-20T00:00:00+00:00</updated>
     <author>
-      <name>Paul Antoine</name>
+      <name>Fred Decker</name>
     </author>
     <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
 &lt;section id="dcc-ex-releases-ex-csb1-ready-to-run-dcc-commandstation"&gt;
@@ -72,7 +99,8 @@
 </content>
     <link href="https://dcc-ex.com/news/posts/20241220.html" rel="alternate"/>
     <summary>DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the second of our open source hardware products: the &lt;a href="../../ex-commandstation/rtr-index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&amp;thinsp;/&amp;thinsp;Booster One Express&lt;/span&gt;&lt;/a&gt; CommandStation and Booster, providing dual 5 amp DCC and DC PWM (pulse width modulation) output.</summary>
-    <category term="ex-commandstationex-csb1" label="ex-commandstation ex-csb1"/>
+    <category term="ex-commandstation" label="ex-commandstation"/>
+    <category term="ex-csb1" label="ex-csb1"/>
     <published>2024-12-20T00:00:00+00:00</published>
   </entry>
   <entry>

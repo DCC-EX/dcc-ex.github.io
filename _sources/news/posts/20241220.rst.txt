@@ -7,7 +7,7 @@
 :date: 20th December, 2024
 :author: Paul Antoine, Fred Decker
 :category: News, Release
-:tags: ex-commandstation ex-csb1
+:tags: ex-commandstation, ex-csb1
 :image: 0
 
 .. image:: /_static/images/logos/product-logo-news.png

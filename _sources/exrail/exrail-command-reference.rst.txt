@@ -3176,10 +3176,10 @@ Free previously reserved block.
 
 .. _ifreserve:
 
-``IFRESERVE( block )`` - Execut commnads if block is NOT reserved
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``IFRESERVE( block_id )`` - Execute commands if block is NOT reserved
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF
+If block is NOT reserved, reserve it and run commands in the IF block. Otherwise, skip to matching ENDIF
 
 *Parameters:* |BR|
 |_| > **block_id** - Block to test (0-255)

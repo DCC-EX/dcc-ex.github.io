@@ -999,7 +999,7 @@
 <li><p><a class="reference internal" href="#ifrandom"><span class="std std-ref">IFRANDOM( percent ) - Run commands a random percentage of the time</span></a></p></li>
 <li><p><a class="reference internal" href="#ifre"><span class="std std-ref">IFRE ( vpin, value ) - Test if a rotary encoder has been set to a value</span></a></p></li>
 <li><p><a class="reference internal" href="#ifred"><span class="std std-ref">IFRED( signal_id ) - Test if signal is red</span></a></p></li>
-<li><p><a class="reference internal" href="#ifreserve"><span class="std std-ref">IFRESERVE( block ) - Execut commnads if block is NOT reserved</span></a></p></li>
+<li><p><a class="reference internal" href="#ifreserve"><span class="std std-ref">IFRESERVE( block_id ) - Execute commands if block is NOT reserved</span></a></p></li>
 <li><p><a class="reference internal" href="#ifthrown"><span class="std std-ref">IFTHROWN( turnout_id ) - Test if a turnout/point is thrown</span></a></p></li>
 <li><p><a class="reference internal" href="#iftimeout"><span class="std std-ref">IFTIMEOUT - Tests if “timed out” flag has been set by an ATTIMEOUT() sensor reading attempt</span></a></p></li>
 <li><p><a class="reference internal" href="#ifttposition"><span class="std std-ref">IFTTPOSITION( id, position ) - Test if turntable/traverser is at a position</span></a></p></li>
@@ -2760,7 +2760,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <ul class="simple">
 <li><p><a class="reference internal" href="#reserve-block-id-reserve-a-block" id="id212"><code class="docutils literal notranslate"><span class="pre">RESERVE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Reserve a block</a></p></li>
 <li><p><a class="reference internal" href="#free-block-id-free-block" id="id213"><code class="docutils literal notranslate"><span class="pre">FREE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Free block</a></p></li>
-<li><p><a class="reference internal" href="#ifreserve-block-execut-commnads-if-block-is-not-reserved" id="id214"><code class="docutils literal notranslate"><span class="pre">IFRESERVE(</span> <span class="pre">block</span> <span class="pre">)</span></code> - Execut commnads if block is NOT reserved</a></p></li>
+<li><p><a class="reference internal" href="#ifreserve-block-id-execute-commands-if-block-is-not-reserved" id="id214"><code class="docutils literal notranslate"><span class="pre">IFRESERVE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Execute commands if block is NOT reserved</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
@@ -2776,9 +2776,9 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p><em>Parameters:</em> <br /> &gt; <strong>block_id</strong> - Block to free (0-255)</p>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="ifreserve-block-execut-commnads-if-block-is-not-reserved">
-<span id="ifreserve"></span><h4><a class="toc-backref" href="#id214" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFRESERVE(</span> <span class="pre">block</span> <span class="pre">)</span></code> - Execut commnads if block is NOT reserved</a><a class="headerlink" href="#ifreserve-block-execut-commnads-if-block-is-not-reserved" title="Link to this heading"></a></h4>
-<p>If block is NOT reserved, reserves it and run commands in IF block. Otherwise, skip to matching ENDIF</p>
+<section id="ifreserve-block-id-execute-commands-if-block-is-not-reserved">
+<span id="ifreserve"></span><h4><a class="toc-backref" href="#id214" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFRESERVE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Execute commands if block is NOT reserved</a><a class="headerlink" href="#ifreserve-block-id-execute-commands-if-block-is-not-reserved" title="Link to this heading"></a></h4>
+<p>If block is NOT reserved, reserve it and run commands in the IF block. Otherwise, skip to matching ENDIF</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>block_id</strong> - Block to test (0-255)</p>
 </section>
 </section>
@@ -3109,7 +3109,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f05e8f41060>
+    <jinja2.runtime.BlockReference object at 0x7ff84c3ae3b0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

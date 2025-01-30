@@ -16,12 +16,17 @@ WiTcontroller (Physical)
 
 WiTcontroller uses exactly the same hardware as the DccExController, but uses the |WITHROTTLE PROTOCOL| instead of the DCC-EX Native command protocol.
 
-From |Engine Driver|'s very own Peter Akers (flash62au on our Discord server), comes a physical hardware throttle using only 4 parts:
+From |Engine Driver|'s very own Peter Akers (flash62au on our Discord server), comes a physical hardware throttle using only 4 parts and a battery:
 
 * ESP32 with LiPo charger
-* rotary encoder
+* Rotary encoder
 * 3x4 keyboard
 * OLED Display
+
+Optionally you can add:
+
+* Up to 8 extra buttons
+* A battery monitor
 
 Files for a 3D printed case are also available.
 
@@ -74,22 +79,54 @@ Images
 
 Here is a connection diagram drawn in Frizing showing how to wire the parts together:
 
-.. image:: /_static/images/throttles/witcontroller_connect.png
-   :alt: WiTcontroller connection diagram
-   :scale: 10%
+.. figure:: /_static/images/throttles/witcontroller_pinouts.png
+   :alt: Basic WiTcontroller connection diagram
+   :scale: 30%
    :align: center
+
+   Basic WiTcontroller connection diagram
 
 Here are pictures showing parts placement inside the case:
 
-.. image:: /_static/images/throttles/witcontroller1.jpg
+.. figure:: /_static/images/throttles/witcontroller1.jpg
    :alt: WiTcontroller assembly
    :scale: 50%
    :align: left
 
-.. image:: /_static/images/throttles/witcontroller2.jpg
+   WiTcontroller assembly
+
+.. figure:: /_static/images/throttles/witcontroller2.jpg
    :alt: WitController in case
    :scale: 50%
    :align: left
+
+   WitController in case
+
+|_|
+
+Some build variations that are possible...
+
+.. figure:: /_static/images/throttles/witcontroller5.png
+   :alt: WiTcontroller Extra Butons
+   :scale: 85%
+   :align: center
+
+   WiTcontroller Extra Butons
+
+.. figure:: /_static/images/throttles/witcontroller3.jpg
+   :alt: WiTcontroller Extra Butons
+   :scale: 8%
+   :align: center
+
+   WiTcontroller Extra Butons
+
+.. figure:: /_static/images/throttles/witcontroller4.png
+   :alt: WiTcontroller Larger Screen
+   :scale: 85%
+   :align: center
+
+   WiTcontroller Larger Screen
+
 
 
 

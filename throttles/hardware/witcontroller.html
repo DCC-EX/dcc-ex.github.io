@@ -637,7 +637,11 @@
 <p class="topic-title">On this page</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#features" id="id7">Features</a></p></li>
-<li><p><a class="reference internal" href="#images" id="id8">Images</a></p></li>
+<li><p><a class="reference internal" href="#images" id="id8">Images</a></p>
+<ul>
+<li><p><a class="reference internal" href="#build-variations" id="id9">Build Variations</a></p></li>
+</ul>
+</li>
 </ul>
 </nav>
 </aside>
@@ -661,42 +665,88 @@
 <section id="features">
 <h2><a class="toc-backref" href="#id7" role="doc-backlink">Features</a><a class="headerlink" href="#features" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>provides a list of discovered SSIDs with the ability to choose one. When you select one:</p>
+<li><p>Provides a list of discovered SSIDs with the ability to choose one. When you select one:</p>
 <ul>
-<li><p>if it is one in your specified list, it will use that specified password</p></li>
-<li><p>if it is a <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> in Access Point mode, it will guess the password</p></li>
-<li><p>otherwise it will only connect if the password is blank</p></li>
+<li><p>If it is one in your specified list (in the sketch), it will use that specified password</p></li>
+<li><p>If it is a DCC++EX WiFi Command Station in access Point mode, it will guess the password</p></li>
+<li><p>Otherwise it will ask to enter the password (Use the rotary encoder to choose each character and the encoder button to select it.  * = backspace.  # = enter the password.)</p></li>
 </ul>
 </li>
 <li><p>Optionally provides a list of SSIDs with the specified passwords (in the sketch) to choose from</p></li>
-<li><p>Auto-connects to the first found <a class="reference internal" href="../../reference/software/withrottle-vs-native-commands.html"><span class="doc">wiThrottle Server</span></a> if only one found, otherwise:</p>
+<li><p>Auto-connects to the first found WiThrottle Protocol Server if only one found, otherwise</p>
 <ul>
-<li><p>asks which to connect to</p></li>
-<li><p>if none found will ask to enter the IP Address and Port</p></li>
-<li><p>Guesses the <a class="reference internal" href="../../reference/software/withrottle-vs-native-commands.html"><span class="doc">wiThrottle Server</span></a> IP address and Port for EX-CommandStation WiFi Access Point mode Command Stations</p></li>
+<li><p>Asks which to connect to</p></li>
+<li><p>If none found will ask to enter the IP Address and Port</p></li>
+<li><p>Guesses the WiThrottle IP address and Port for DCC++EX WiFi Access Point mode Command Stations</p></li>
+<li><p>Optionally can add a #define (a preference) to disable this auto connect feature</p></li>
 </ul>
 </li>
 <li><p>Rudimentary on-the-fly consists</p></li>
-<li><p>Assign commands directly to the 1-9 buttons (in the sketch)</p></li>
-<li><p>Command menu including:</p>
+<li><p>Assign commands directly to the 1-9 buttons (in the sketch) (see list below)</p>
 <ul>
-<li><p>Able to select and deselect locos</p>
+<li><p>This is done in config_button.h</p></li>
+<li><p>Latching / non-latching for the function is provided by the roster entry of WiThrottle server</p></li>
+</ul>
+</li>
+<li><p>Optionally use a potentiometer (pot) instead of the rotary encoder</p></li>
+<li><p>Optional ability to assign commands directly to the 1-11 additional buttons (in the sketch) (see list below)</p>
 <ul>
-<li><p>by their DCC address, via the keypad</p></li>
+<li><p>These are defined config_button.h</p></li>
+</ul>
+</li>
+<li><p>Command menu (see below for full list) including:</p>
+<ul>
+<li><p>Able to select and deselect locos:</p>
+<ul>
+<li><p>by their DCC address, via the keypad</p>
+<ul>
+<li><p>On NCE systems, a leading zero (0) will force a long address</p></li>
+</ul>
+</li>
 <li><p>from the first 50 locos in the roster</p></li>
 </ul>
 </li>
-<li><p>Able to throw/close turnouts/points</p></li>
-<li><p>Able to activate routes</p></li>
-<li><p>set/unset a multiplier for the rotary encoder</p></li>
+<li><p>Able to select multiple locos to create a consist</p>
+<ul>
+<li><p>Able to change the facing of the additional locos in the consists (via the ‘extra’ menu after selection)</p></li>
+</ul>
+</li>
+<li><p>Able to activate any function (0-31)</p>
+<ul>
+<li><p>Showing of the roster function labels (from the WiThrottle server if provided)</p></li>
+<li><p>Quick access to the functions by pressing #. Temporarily enabled via the Extras menu (or permanently enabled in config_button.h)</p></li>
+<li><p>Limited ability to configure which functions are sent to the first or all locos in a consist (defined in config_button.h)</p></li>
+</ul>
+</li>
+<li><p>Able to throw/close turnouts/points:</p>
+<ul>
+<li><p>from the address</p></li>
+<li><p>from the first 50 turnouts/points in the server list</p></li>
+</ul>
+</li>
+<li><p>Able to activate routes:</p>
+<ul>
+<li><p>from their address</p></li>
+<li><p>from the first 50 routes in the server list</p></li>
+</ul>
+</li>
+<li><p>Set/unset a multiplier for the rotary encoder</p></li>
 <li><p>Power Track On/Off</p></li>
 <li><p>Disconnect / Reconnect</p></li>
 <li><p>Put ESP32 in deep sleep and restart it</p></li>
+<li><p>Option to switch between Single Loco and Consist/MU (Drop before Acquire)</p></li>
+<li><p>Option to save the currently select locos (on multiple throttles) and have them automatically re-acquired on next connection.</p></li>
 </ul>
 </li>
-<li><p>limited dealing with unexpected disconnects.  It will throw you back to the WiThtottle Server selection screen.</p></li>
+<li><p>Option to have up to 6 command sequences executed on connection</p></li>
+<li><p>Option to automatically acquire a loco if there is only one loco in the roster</p></li>
+<li><p>Have up to 6 throttles, each with an unlimited number of locos in consist. Default is 2 throttles, which can be increased or decreased temporarily via the Extras menu (or permanently enabled in config_button.h)</p></li>
+<li><p>Limited dealing with unexpected disconnects.  It will throw you back to the WiThrottle Server selection screen.</p></li>
+<li><p>Boundary between short and long DCC addresses can be configured in config_buttons.h</p></li>
+<li><p>The default speed step (per encoder click) can be configured in config_buttons.h</p></li>
+<li><p>The controller will automatically shut down if no SSID is selected or entered in 4 minutes (to conserve the battery)</p></li>
 </ul>
-<p>NOTE: This is a Project and is therefore a work in progress and open source. New features are being added regularly.</p>
+<p>NOTE: This is an open source Project and is therefore always a work in progress. New features are being added regularly.</p>
 <p>Source code and instructions can be found on GitHub here: <a class="reference external" href="https://github.com/flash62au/WiTcontroller">https://github.com/flash62au/WiTcontroller</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 </section>
 <section id="images">
@@ -721,8 +771,10 @@
 <p><span class="caption-number">Fig 363: </span><span class="caption-text">WitController in case</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p> </p>
-<p>Some build variations that are possible…</p>
+<p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
+<section id="build-variations">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Build Variations</a><a class="headerlink" href="#build-variations" title="Link to this heading"></a></h3>
+<p>Some of the build variations that are possible…</p>
 <figure class="align-center" id="id4">
 <a class="reference internal image-reference" href="../../_images/witcontroller5.png"><img alt="WiTcontroller Extra Butons" src="../../_images/witcontroller5.png" style="width: 452.2px; height: 290.7px;" /></a>
 <figcaption>
@@ -741,6 +793,7 @@
 <p><span class="caption-number">Fig 366: </span><span class="caption-text">WiTcontroller Larger Screen</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
 </figcaption>
 </figure>
+</section>
 </section>
 </section>
 
@@ -766,7 +819,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f175e288b50>
+    <jinja2.runtime.BlockReference object at 0x7f2536add450>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

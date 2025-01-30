@@ -37,7 +37,9 @@ If you have purchased a |EX-CSB1| it will have come with the |EX-CS| software al
 
 .. warning::
 
-   We are currently investigating reports that the |EX-CSB1-SHORT| has problems uploading the software when using the USB3 ports on some PCs. Try a USB2 port if it doesn't work in a USB3 port. USB3 ports usually have blue internals, and USB2 are black.
+   We have found that there are a small number of users who can have an issue when trying to update firmware or upload EXRAIL scripts to an EX-CSB1 Command Station (or any ESP32 based device).
+
+   If you are having problems, look at our `uploading troubleshooting guide <https://dcc-ex.com/news/posts/20250128.html>`_.
 
 .. important:: 
 

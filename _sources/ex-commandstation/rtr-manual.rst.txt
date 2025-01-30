@@ -589,6 +589,13 @@ Uploading the Software (Changing the Configuration)
 
 .. TODO XXX - any reason you didn't you just copy my very carefully written Getting Started Guide content here??? PMA
 
+.. warning::
+   :class: warning-fload-right
+
+   We have found that there are a small number of users who can have an issue when trying to update firmware or upload EXRAIL scripts to an EX-CSB1 Command Station (or any ESP32 based device).
+
+   If you are having problems, look at our `uploading troubleshooting guide <https://dcc-ex.com/news/posts/20250128.html>`_.
+
 The |EX-CSB1| comes preloaded with the Command Station software, so you can start using it right out of the box. 
 
 However, if you wish to customise its configuration or update the software, you can easily do so by connecting the |EX-CSB1| to your computer via USB and follow the steps below to make any changes you need.

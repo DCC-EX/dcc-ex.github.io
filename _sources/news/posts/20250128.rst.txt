@@ -19,24 +19,33 @@ If you have an issue uploading to an EX-CSB1
 
 We have found that there are a small number of users who can have an issue when trying to update firmware or upload EXRAIL scripts to an EX-CSB1 Command Station (or any ESP32 based device). This seems to be an issue with some USB ports on some Windows machines, but no matter what operating system or computer you have (including a Raspberry Pi) please follow these instructions to fix the issue and report it to us along with what fixed it for you.
 
-#1. **Try a different cable.** Our number one issue is dodgy cables. Some USB cables are “charging only” and do not have all the pins inside connected to be able to transmit data. Even if you have a data cable, try another one anyway, preferably not one of the exact same brand. We have seen a surprising number of poor or invisibly damaged cables.
+#1. **Make sure you have a CH340 driver installed** Windows does not come with CH340 support. If this is the first time you have tried to use a device with a CH340 chip, you need to install the driver as shown in :ref:`ex-commandstation/rtr-manual:Step 2: Install the Required USB Drivers`
 
-#2.	**Try a different serial port.** If you have multiple USB ports on your computer, try a different one. In particular, we have seen USB 3.0 ports that did not work when a USB 2.0 did.
+#2. **Make sure you are connected to the correct com port** Some Windows machines can have a confusing array of com ports used internally, for Bluetooth, or for other connected devices. Check the Windows Device Manager to verify the port you select in the installer is the CH340 driver used by the CSB1. You can disconnect and reconnect the CSB1's USB cable and see the port disappear and re-appear. Here COM5 is the correct port:
 
-#3.	**Try a different computer.** Very few computers show the issue, so there is a good chance that if one computer does not work, a different one will. If you have a computer with a different operating system, like iOS vs. Windows, give that a try.
+.. image:: /_static/images/ex-csb1/dev_mgr_com_ports.png
+  :alt: Windows Device Manager COM Ports Image
+  :scale: 70%
+  :align: center
 
-#4.	**Insert a capacitor into the RESET and GND header pins.** If the issue is not a cable, then we can adjust a timing issue by adding a capacitor between RESET and GND. Find a 1 to 10uF capacitor. If it is a Tantalum or Electrolytic type, MAKE SURE TO USE THE CORRECT POLARITY. Note that on polarized capacitors, the positive leg is longer. There is also a "+" marking on Tantalum's and a stripe on the negative side for Electrolytics. The pins are clearly labeled on the underside of the CSB1.
+#3. **Try a different cable.** Our number one issue is dodgy cables. Some USB cables are “charging only” and do not have all the pins inside connected to be able to transmit data. Even if you have a data cable, try another one anyway, preferably not one of the exact same brand. We have seen a surprising number of poor quality or invisibly damaged cables.
+
+#4.	**Try a different USB port.** If you have multiple USB ports on your computer, try a different one. In particular, we have seen USB 3.0 ports that did not work when a USB 2.0 did or visa versa.
+
+#5.	**Try a different computer.** Very few computers show the issue, so there is a good chance that if one computer does not work, a different one will. If you have a computer with a different operating system, like Linux or MacOS, give that a try.
+
+#6.	**Insert a capacitor into the RESET and GND header pins.** If the issue is not remedied by any of the previous solutions, then we can fix it by adding a capacitor between RESET and GND. Find a 1 to 10uF capacitor. Ceramic capacitors are not polarized. If you use a Tantalum or Electrolytic type, MAKE SURE TO USE THE CORRECT POLARITY. Note that on polarized capacitors, the positive leg is longer. There is also a "+" marking on Tantalum's and a stripe on the negative side for Electrolytics. The pins are clearly labeled on the underside of the CSB1 to help you identify RESET and GND. GND is negative.
 
 .. image:: /_static/images/ex-csb1/capacitors.png
   :alt: Capacitors
-  :scale: 85%
+  :scale: 80%
   :align: center
 
 Here is a capacitor inserted into the correct pins in the header. For a permanent install, the capacitor can be soldered under the board between Reset and the closest GND solder point.
 
 .. image:: /_static/images/ex-csb1/capacitor_fix.png
   :alt: Capacitors
-  :scale: 55%
+  :scale: 50%
   :align: center
 
 We are currently testing some changes that may lead to an update in EX-Installer and/or the EX-CSB1 to compensate for the issue. We need to make sure any hardware change does not affect anything else. It would not be good to be able to upload and then find your nice, shiny, Command Station won’t reboot into operating mode. If you have the issue and are a Tinkerer or an Engineer, you may be able to help us since no one on the development team has a problem computer. You could be a valuable resource to help us beta test the best solution.

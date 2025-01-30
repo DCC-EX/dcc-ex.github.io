@@ -889,13 +889,19 @@
 <ol class="arabic simple">
 <li><p>Open the <strong>GitHub website</strong></p></li>
 <li><p>Open/select your repository <code class="docutils literal notranslate"><span class="pre">https://github.com/&lt;your_account_name&gt;/dcc-ex.github.io</span></code></p></li>
+<li><p>Click the <code class="docutils literal notranslate"><span class="pre">branches</span></code> link</p></li>
+<li><p>On ‘Branches’ page click <span class="guilabel">new Branch</span></p></li>
+<li><p>Give the new branch the name <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code></p></li>
+<li><p>Select a Source of <code class="docutils literal notranslate"><span class="pre">DCC-EX/dcc-ex.github.io</span></code> and <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code></p></li>
+<li><p>clich <span class="guilabel">Create New branch</span></p></li>
 <li><p>Open the <code class="docutils literal notranslate"><span class="pre">Settings</span></code> page</p></li>
 <li><p>Select <code class="docutils literal notranslate"><span class="pre">Pages</span></code> in the left navigation</p></li>
 <li><p>Choose <cite>Deploy from a branch</cite></p></li>
 <li><p>Choose <cite>gh-pages</cite> and <cite>root</cite></p></li>
 <li><p>Click <span class="guilabel">Save</span></p></li>
 </ol>
-<p>This takes time, every time you push any changes, but you will eventually be able to see your own version of the website at <code class="docutils literal notranslate"><span class="pre">https://&lt;your_account_name&gt;.github.io/dcc-ex.github.io/</span></code>.</p>
+<p>In theory that should be enough, but the last time we tried this we also needed to create a manual build action.  If you go to the ‘Actions’ page and you <em>can’t</em> see an action named <strong>‘Docs’</strong>, then contact the development ateam nd we will halp you create a manual build action. (Which for some unknown reason then shows the automatic ‘Docs’ action.)</p>
+<p>Building the pages and deplying takes time, every time you push any changes, but you will eventually be able to see your own version of the website at <code class="docutils literal notranslate"><span class="pre">https://&lt;your_account_name&gt;.github.io/dcc-ex.github.io/</span></code>.</p>
 <p>You can see the state of the processing of your changes by looking at the <code class="docutils literal notranslate"><span class="pre">Actions</span></code> page.  It will also tell you there if there are any errors.</p>
 </section>
 </section>
@@ -923,7 +929,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fabdfb94400>
+    <jinja2.runtime.BlockReference object at 0x7fd83a028b80>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

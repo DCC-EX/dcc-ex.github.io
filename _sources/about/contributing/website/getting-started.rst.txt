@@ -298,12 +298,19 @@ You can optionally, setup *github pages* from you own repository on the GitHub w
 
 1. Open the **GitHub website**
 2. Open/select your repository ``https://github.com/<your_account_name>/dcc-ex.github.io``
-3. Open the ``Settings`` page
-4. Select ``Pages`` in the left navigation
-5. Choose `Deploy from a branch`
-6. Choose `gh-pages` and `root`
-7. Click :guilabel:`Save`
+3. Click the ``branches`` link
+4. On 'Branches' page click :guilabel:`new Branch`
+5. Give the new branch the name ``gh-pages``
+6. Select a Source of ``DCC-EX/dcc-ex.github.io`` and ``gh-pages``
+7. clich :guilabel:`Create New branch`
+8. Open the ``Settings`` page
+9. Select ``Pages`` in the left navigation
+10. Choose `Deploy from a branch`
+11. Choose `gh-pages` and `root`
+12. Click :guilabel:`Save`
 
-This takes time, every time you push any changes, but you will eventually be able to see your own version of the website at ``https://<your_account_name>.github.io/dcc-ex.github.io/``.
+In theory that should be enough, but the last time we tried this we also needed to create a manual build action.  If you go to the 'Actions' page and you *can't* see an action named **'Docs'**, then contact the development ateam nd we will halp you create a manual build action. (Which for some unknown reason then shows the automatic 'Docs' action.)
+
+Building the pages and deplying takes time, every time you push any changes, but you will eventually be able to see your own version of the website at ``https://<your_account_name>.github.io/dcc-ex.github.io/``.
 
 You can see the state of the processing of your changes by looking at the ``Actions`` page.  It will also tell you there if there are any errors.

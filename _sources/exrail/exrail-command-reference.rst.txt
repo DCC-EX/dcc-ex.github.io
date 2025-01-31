@@ -36,13 +36,13 @@ Conventions used on this page
 - CAPITALISED words - These are EXRAIL commands and are case sensitive
 - lowercase words within brackets/braces ``()`` - These are EXRAIL parameters that must be provided, with multiple parameters separated by a comma ``,``, for example ``SEQUENCE(id)`` or ``DELAYRANDOM(min_delay, max_delay)``
 - Quoted ``"text"`` - Text within quote marks ``""`` are used as descriptions, and must include the quote characters, for example ``ROUTE(id, "description")`` becomes ``ROUTE(1, "This is the route description")``
-- Square brackets ``[]`` - Parameters within square brackets ``[]`` are optional and may be ommitted. If specifying these parameters, do not include the square brackets themselves, for example ``ALIAS(name[, value])`` becomes ``ALIAS(MY_ALIAS)`` or ``ALIAS(MY_ALIAS, 3)``
+- Square brackets ``[]`` - Parameters within square brackets ``[]`` are optional and may be omitted. If specifying these parameters, do not include the square brackets themselves, for example ``ALIAS(name[, value])`` becomes ``ALIAS(MY_ALIAS)`` or ``ALIAS(MY_ALIAS, 3)``
 - ``|`` - Use of the ``|`` character means you need to provide one of the provided options only, for example ``<D POWER ON|OFF>`` becomes either ``<D POWER ON>`` or ``<D POWER OFF>``
 
 Handy information
 -----------------
 
-- COMMANDS are case sensitive. i.e. they must be in uppercase. Text parameters you provide (aliases,  descriptions) are not
+- COMMANDS are case sensitive. i.e. they must be in uppercase. Text parameters that you provide (aliases,  descriptions) are not
 - *AUTOMATION*, *ROUTE*, and *SEQUENCE* use the same ID number space, so a ``FOLLOW(n)`` command can be used for any of them
 - Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by |I2C| expansion (as virtual pins or vpins).
 - Signals also refer directly to pins, and the signal ID (for RED/AMBER/GREEN) is always the same as the RED signal pin
@@ -56,7 +56,7 @@ Handy information
 
   - AUTOMATION, ROUTE, and SEQUENCE IDs
   - Turnout/Point IDs
-  - Vpins - Includes physical pins on the CommandStation, virtual pins (Vpins) on I/O expander modules, and virtual pins that have no physical presence
+  - Vpins - Includes physical pins on the EX-CommandStation, virtual pins (Vpins) on I/O expander modules, and virtual pins that have no physical presence
   - Virtual block IDs as used in RESERVE/FREE
 
   Therefore, you can have an AUTOMATION, a turnout/point, a Vpin, and a virtual block all defined with the same ID without issue as these will not relate to each other. This is probably a great reason to consider aliases to avoid confusion.
@@ -105,7 +105,7 @@ On this page, you will see various references to the use of ``DONE``, ``ENDIF``,
 AT(vpin) or AFTER(vpin [,debounceTime]) versus IF(vpin)
 -----------------------------------------------------------------------------
 
-When defining conditions, the behaviour of ``AT()`` and ``AFTER()`` is quite different to using conditional ``IF()`` statements.
+When defining conditions, the behavior of ``AT()`` and ``AFTER()`` is quite different to using conditional ``IF()`` statements.
 
 This applies to all directives starting with ``AT``, ``AFTER``, and ``IF``.
 
@@ -159,7 +159,7 @@ These commands can be run interactively via the serial console or over Ethernet/
 ``<D EXRAIL state>`` - Enable or disable EXRAIL sequence logging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When the CommandStation is connected to a |serial monitor|, |EX-R| sequence logging can be turned on or off (Enabled or Disabled).
+When the |EX-CS| is connected to a |serial monitor|, |EX-R| sequence logging can be turned on or off (Enabled or Disabled).
 
   .. collapse:: For example: (click to show)
 
@@ -230,10 +230,14 @@ Starts a new task to send a loco onto a Route, or activate a non-loco Animation 
 
 |hr-dashed|
 
-``</ KILL task_id>`` - Kills a currently running sequence
+``</ KILL task_id>`` - Kills a currently running process
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Kills a currently running sequence task by ID
+Kills a currently running process by ID
+
+.. note::
+  - task_id is an internally generated ID separate from any of the user defined IDs
+  - the KILL command should only be used when you understand the internals of the exrail task system.  It is not designed to be used in normal running.
 
 |hr-dashed|
 
@@ -281,7 +285,7 @@ If you simply need a unique identifier for an object used internally to the sequ
 
 REMEMBER: IDs for RESERVE/FREE, LATCH/UNLATCH, and pins must be explicitly defined.
 
-To put this another way, if you connect an LED to pin 23 and want to turn it on and off, you have to explicitly set its pin number, so `ALIAS(TOWER_LED, 23)` lets you equate "23" to TOWER_LED. But if you created a route to run your train around an oval, you don't really need to set the number or even know it. Just use `ALIAS(OVAL)` and let EX assign a number internally. If you ever wanted to know what number it assigns, you can enter `<? OVAL>` from the serial monitor with the Command Station running and it will tell you next to "Opcode=". Since this "hash", as it is called, is generated by the alias name word, it is always unique and always the same for that word even if you have not created the alias yet. Fun fact, "OVAL" will always equal 27500.
+To put this another way, if you connect an LED to pin 23 and want to turn it on and off, you have to explicitly set its pin number, so `ALIAS(TOWER_LED, 23)` lets you equate "23" to TOWER_LED. But if you created a route to run your train around an oval, you don't really need to set the number or even know it. Just use `ALIAS(OVAL)` and let EX assign a number internally. If you ever wanted to know what number it assigns, you can enter `<? OVAL>` from the serial monitor with the |EX-CS| running and it will tell you next to "Opcode=". Since this "hash", as it is called, is generated by the alias name word, it is always unique and always the same for that word even if you have not created the alias yet. Fun fact, "OVAL" will always equal 27500.
 
 Alias naming rules:
 
@@ -311,7 +315,7 @@ Alias naming rules:
       ALIAS(COAL_YARD_PIN, 25)
       PIN_TURNOUT(COAL_YARD, COAL_YARD_PIN, "Coal Yard")
 
-    Note that you could have used the command `ALIAS(COAL_YARD, 1)` in the example above to explicitly set the number, but unless you have a reason to use specific numbers, let the Command Station do it for you. 
+    Note that you could have used the command `ALIAS(COAL_YARD, 1)` in the example above to explicitly set the number, but unless you have a reason to use specific numbers, let the |EX-CS| do it for you. 
 
     In this simple example, aliases seem like overkill, however consider the case where you need to have the "Coal Yard" turnout/point closed or thrown in various different automation sequences, and you will soon see why it's easier to understand you're throwing the COAL_YARD turnout/point rather than turnout/point ID 12345.
 
@@ -469,7 +473,7 @@ Scripts/Sequences - Types and Control
 
 .. _autostart:
 
-``AUTOSTART`` - Automatically start sequence at this point during Command Station startup
+``AUTOSTART`` - Automatically start sequence at this point during EX-CommandStation startup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A sequence is automatically started at this point during startup.
@@ -592,15 +596,15 @@ Return to the calling sequence when completed (no DONE required).
 
     AUTOMATION(21, "Station loop")    // Our station loop sequence
       FWD(30)
-      AT(101)                         // At station 1 entrance sensor, call our sequence
+      AT(101)                         // At station 1 entrance sensor, call our "Station sequence"
       CALL(22)
-      AT(102)                         // At station 2 entrance sensor, call our sequence
+      AT(102)                         // At station 2 entrance sensor, call our "Station sequence"
       CALL(22)
-      AT(103)                         // At station 3 entrance sensor, call our sequence
+      AT(103)                         // At station 3 entrance sensor, call our "Station sequence"
       CALL(22)
-      AT(104)                         // At station 4 entrance sensor, call our sequence
+      AT(104)                         // At station 4 entrance sensor, call our "Station sequence"
       CALL(22)
-      FOLLOW(21)                      // Keep looping through the stations (see FOLLOW command reference below)
+      FOLLOW(21)                      // Keep looping through the "Station loop" automation (see FOLLOW command reference below)
 
     SEQUENCE(22, "Station sequence")  // Our station sequence
       FON(2)                         // Blow the horn
@@ -819,7 +823,7 @@ Dynamically change the label of the Route button.
 
   .. code-block:: cpp
 
-    // setup 4 'routes'to switch between tracks/districts between PROG, MAIN and DC
+    // setup 4 'routes' to switch between tracks/districts between PROG, MAIN and DC
     ROUTE(500,"1.Trk: A main, B prog")
         SET_TRACK(A,MAIN)
         SET_TRACK(B,PROG)
@@ -1371,7 +1375,7 @@ Define an event handler for when a signal is set to the red aspect.
 
   .. code-block:: cpp
 
-    SIGNAL(25, 26, 27)                // Active low red/amber/green signal using pins 25/26/27 directly on the CommandStation.
+    SIGNAL(25, 26, 27)                // Active low red/amber/green signal using pins 25/26/27 directly on the EX-CommandStation.
     SIGNALH(164 ,0, 165)              // Active high red/green signal using the first two pins of an MCP23017 I/O expander module.
     SERVO_SIGNAL(101, 100, 250, 400)  // Servo based signal using the first PCA9685 servo module.
 
@@ -1857,7 +1861,7 @@ If sensor activated or latched, continue. Otherwise skip to ELSE or matching END
 *Parameters:* |BR|
 |_| > **vpin** - vpin (or alias) of the sensor to test
 
-See the :ref:`Condititional Statments section <exrail_conditional_statements>` for more information on IF ... ELSE ... ENDIF commands.
+See the :ref:`Conditional Statements section <exrail_conditional_statements>` for more information on IF ... ELSE ... ENDIF commands.
 
 |hr-dashed|
 
@@ -1869,7 +1873,7 @@ If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or mat
 *Parameters:* |BR|
 |_| > **vpin** - vpin (or alias) of the sensor to test
 
-See the :ref:`Condititional Statments section <exrail_conditional_statements>` for more information on IF ... ELSE ... ENDIF commands.
+See the :ref:`Conditional Statements section <exrail_conditional_statements>` for more information on IF ... ELSE ... ENDIF commands.
 
 |hr-dashed|
 
@@ -1953,13 +1957,13 @@ Test if analog pin reading is less than value (<).
 
   .. code-block:: cpp
 
-    IF(25)          // If sensor on the Command Station pin 25 is activated, set a signal red, wait 10 seconds, then close a turnout/point.
+    IF(25)          // If sensor on the EX-CommandStation pin 25 is activated, set a signal red, wait 10 seconds, then close a turnout/point.
       RED(101)
       DELAY(10)
       CLOSE(200)
     ENDIF
 
-    IFNOT(26)       // If sensor on the Command Station pin 26 is not activated, keep our pedestrian crossing light at 102 green, else set it red.
+    IFNOT(26)       // If sensor on the EX-CommandStation pin 26 is not activated, keep our pedestrian crossing light at 102 green, else set it red.
       GREEN(102)
     ELSE
       RED(102)
@@ -2983,7 +2987,7 @@ Configures the mode of the selected track, refer also to :doc:`/trackmanager/ind
     - 
 
 .. [1] With special alias of ``DCX`` for ``DC_INV``
-.. [2] Deprecated alias of ``AUTO`` but only when preceeded by a sperate ``MAIN`` command.
+.. [2] Deprecated alias of ``AUTO`` but only when preceded by a separate ``MAIN`` command.
 
 When setting at track mode to either ``DC`` or ``DC_INV`` / ``DCX``, you must use the ``SETLOCO( loco )`` command first to specify the loco ID that will be used for the DC track then SET_TRACK()
 
@@ -3035,7 +3039,7 @@ Configures the power setting of the selected track, refer also to :doc:`/trackma
 
 Configures the frequency setting of the selected track.
 
-The settings achievable vary slightly depending upon the processor running the Command Station but broadly follow the following:
+The settings achievable vary slightly depending upon the processor running the |EX-CS| but broadly follow the following:
 
 *Parameters:* |BR|
 |_| > **track** - - The track to configure, valid options are A to H |BR|
@@ -3088,7 +3092,7 @@ Note:  AFTEROVERLOAD is only relevant when used within and ONOVERLOAD.... DONE s
 
 |hr-dashed|
 
-The power calculation routines within |DCC-EX| will check for shorts and overloads and will change the state of the power produced by the MotorDriver board to protect both it and locos from damage.  This is usually eveident by the LED's on the MotorDriver board flashing.  However some users may wish to see some physical notifcation of these events.  This can now be achieved with EXRAIL and the ONOVERLOAD event.
+The power calculation routines within |DCC-EX| will check for shorts and overloads and will change the state of the power produced by the MotorDriver board to protect both it and locos from damage.  This is usually evident by the LED's on the MotorDriver board flashing.  However some users may wish to see some physical notification of these events.  This can now be achieved with EXRAIL and the ONOVERLOAD event.
 
 
 .. collapse:: For example: (click to show)
@@ -3109,7 +3113,7 @@ The power calculation routines within |DCC-EX| will check for shorts and overloa
           SCREEN(2,0, "                  ")   // Clear the screen message
     DONE
 
-  If the user wishes to turn off power whilst he/she investigates the problem, then this can be achieved using the second example below.  POWEROFF can be used, but this will turn off powere to all tracks.  Power to the track with the problem can be turned off with a TrackManager command.  However in order to execute the AFTEROVERLOAD routine it is necessary to have a reset routine.
+  If the user wishes to turn off power whilst he/she investigates the problem, then this can be achieved using the second example below.  POWEROFF can be used, but this will turn off power to all tracks.  Power to the track with the problem can be turned off with a TrackManager command.  However in order to execute the AFTEROVERLOAD routine it is necessary to have a reset routine.
 
   .. code-block:: cpp
 
@@ -3127,7 +3131,7 @@ The power calculation routines within |DCC-EX| will check for shorts and overloa
           SCREEN(2,0, "                  ")
     DONE
 
-    // The following turns the poweron and allows the AFTEROVERLOAD to run
+    // The following turns the power on and allows the AFTEROVERLOAD to run
     // This could also be achieved with a physical button and AFTER(pin) in place of ROUTE()
     ROUTE(12,"Reset A")
       SCREEN(2,0,"                  ")
@@ -3367,8 +3371,8 @@ A |DCC-EX| throttle will receive a broadcast ``<m "text">``, and a WiThrottle th
 
 ----
 
-CommandStation Functions
-------------------------
+EX-CommandStation Functions
+-----------------------------
 
 .. contents:: In This Section
   :depth: 4
@@ -3640,6 +3644,6 @@ Syntax:
 
 **SERIOUS ENGINEERS and ADVANCED C++ USERS ONLY**   |engineer| 
 
-Inserts code such as static variables and functions that may be utilised by multiple ``STEALTH`` operations.
+Inserts code such as static variables and functions that may be utilized by multiple ``STEALTH`` operations.
 
 Please use this option with great care, and you will need to be an advanced C++ user to make use of this command.  If in doubt ask for assistance.

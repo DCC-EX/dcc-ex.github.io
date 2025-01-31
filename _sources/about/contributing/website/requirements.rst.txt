@@ -26,7 +26,7 @@ Documentation
 ==============
 
 If you concentrate on documentation, no additional hardware requirements exist. Keep reading on, but be reassured if you don't feel comfortable with the following don't worry, we will find a way to have you contributing by other means.
-Just go to the Contact Us section, and we will find a way of getting you on board, or help you out getting things set up.
+Just go to the :doc:`/support/contact-us` page, and we will find a way of getting you on board, or help you out getting things set up.
 
 reStructuredText
 ----------------
@@ -108,7 +108,7 @@ Refer to the :doc:`/about/contributing/website/index` contributing page for more
 Images
 ------
 
-We compressed PNG files with transparent backgrounds are preferred. JPG files can be used, but should be avoided. 
+Compressed PNG files with transparent backgrounds are preferred. JPG files can be used, but should be avoided. 
 
 The resolution should be 72dpi and at least 600 pixels wide (maximum 1200). We can size the images using Sphinx to reduce them as necessary to fit where we need them on the page.
 

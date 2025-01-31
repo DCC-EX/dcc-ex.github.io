@@ -677,7 +677,7 @@
 <li><p><a class="reference internal" href="#system" id="id56">System</a></p>
 <ul>
 <li><p><a class="reference internal" href="#communication-and-display-functions" id="id57">Communication and Display Functions</a></p></li>
-<li><p><a class="reference internal" href="#commandstation-functions" id="id58">CommandStation Functions</a></p></li>
+<li><p><a class="reference internal" href="#ex-commandstation-functions" id="id58">EX-CommandStation Functions</a></p></li>
 <li><p><a class="reference internal" href="#layout-command-control-lcc" id="id59">Layout Command Control (LCC)</a></p></li>
 </ul>
 </li>
@@ -705,14 +705,14 @@
 <li><p>CAPITALISED words - These are EXRAIL commands and are case sensitive</p></li>
 <li><p>lowercase words within brackets/braces <code class="docutils literal notranslate"><span class="pre">()</span></code> - These are EXRAIL parameters that must be provided, with multiple parameters separated by a comma <code class="docutils literal notranslate"><span class="pre">,</span></code>, for example <code class="docutils literal notranslate"><span class="pre">SEQUENCE(id)</span></code> or <code class="docutils literal notranslate"><span class="pre">DELAYRANDOM(min_delay,</span> <span class="pre">max_delay)</span></code></p></li>
 <li><p>Quoted <code class="docutils literal notranslate"><span class="pre">&quot;text&quot;</span></code> - Text within quote marks <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> are used as descriptions, and must include the quote characters, for example <code class="docutils literal notranslate"><span class="pre">ROUTE(id,</span> <span class="pre">&quot;description&quot;)</span></code> becomes <code class="docutils literal notranslate"><span class="pre">ROUTE(1,</span> <span class="pre">&quot;This</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">route</span> <span class="pre">description&quot;)</span></code></p></li>
-<li><p>Square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code> - Parameters within square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code> are optional and may be ommitted. If specifying these parameters, do not include the square brackets themselves, for example <code class="docutils literal notranslate"><span class="pre">ALIAS(name[,</span> <span class="pre">value])</span></code> becomes <code class="docutils literal notranslate"><span class="pre">ALIAS(MY_ALIAS)</span></code> or <code class="docutils literal notranslate"><span class="pre">ALIAS(MY_ALIAS,</span> <span class="pre">3)</span></code></p></li>
+<li><p>Square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code> - Parameters within square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code> are optional and may be omitted. If specifying these parameters, do not include the square brackets themselves, for example <code class="docutils literal notranslate"><span class="pre">ALIAS(name[,</span> <span class="pre">value])</span></code> becomes <code class="docutils literal notranslate"><span class="pre">ALIAS(MY_ALIAS)</span></code> or <code class="docutils literal notranslate"><span class="pre">ALIAS(MY_ALIAS,</span> <span class="pre">3)</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">|</span></code> - Use of the <code class="docutils literal notranslate"><span class="pre">|</span></code> character means you need to provide one of the provided options only, for example <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">POWER</span> <span class="pre">ON|OFF&gt;</span></code> becomes either <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">POWER</span> <span class="pre">ON&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">POWER</span> <span class="pre">OFF&gt;</span></code></p></li>
 </ul>
 </section>
 <section id="handy-information">
 <h3><a class="toc-backref" href="#id32" role="doc-backlink">Handy information</a><a class="headerlink" href="#handy-information" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>COMMANDS are case sensitive. i.e. they must be in uppercase. Text parameters you provide (aliases,  descriptions) are not</p></li>
+<li><p>COMMANDS are case sensitive. i.e. they must be in uppercase. Text parameters that you provide (aliases,  descriptions) are not</p></li>
 <li><p><em>AUTOMATION</em>, <em>ROUTE</em>, and <em>SEQUENCE</em> use the same ID number space, so a <code class="docutils literal notranslate"><span class="pre">FOLLOW(n)</span></code> command can be used for any of them</p></li>
 <li><p>Sensors and outputs used by AT/AFTER/SET/RESET/LATCH/UNLATCH/SERVO/IF/IFNOT refer directly to Arduino pins, and those handled by I<sup>2</sup>C expansion (as virtual pins or vpins).</p></li>
 <li><p>Signals also refer directly to pins, and the signal ID (for RED/AMBER/GREEN) is always the same as the RED signal pin</p></li>
@@ -726,7 +726,7 @@
 <ul class="simple">
 <li><p>AUTOMATION, ROUTE, and SEQUENCE IDs</p></li>
 <li><p>Turnout/Point IDs</p></li>
-<li><p>Vpins - Includes physical pins on the CommandStation, virtual pins (Vpins) on I/O expander modules, and virtual pins that have no physical presence</p></li>
+<li><p>Vpins - Includes physical pins on the EX-CommandStation, virtual pins (Vpins) on I/O expander modules, and virtual pins that have no physical presence</p></li>
 <li><p>Virtual block IDs as used in RESERVE/FREE</p></li>
 </ul>
 <p>Therefore, you can have an AUTOMATION, a turnout/point, a Vpin, and a virtual block all defined with the same ID without issue as these will not relate to each other. This is probably a great reason to consider aliases to avoid confusion.</p>
@@ -771,7 +771,7 @@
 </section>
 <section id="at-vpin-or-after-vpin-debouncetime-versus-if-vpin">
 <h3><a class="toc-backref" href="#id34" role="doc-backlink">AT(vpin) or AFTER(vpin [,debounceTime]) versus IF(vpin)</a><a class="headerlink" href="#at-vpin-or-after-vpin-debouncetime-versus-if-vpin" title="Link to this heading"></a></h3>
-<p>When defining conditions, the behaviour of <code class="docutils literal notranslate"><span class="pre">AT()</span></code> and <code class="docutils literal notranslate"><span class="pre">AFTER()</span></code> is quite different to using conditional <code class="docutils literal notranslate"><span class="pre">IF()</span></code> statements.</p>
+<p>When defining conditions, the behavior of <code class="docutils literal notranslate"><span class="pre">AT()</span></code> and <code class="docutils literal notranslate"><span class="pre">AFTER()</span></code> is quite different to using conditional <code class="docutils literal notranslate"><span class="pre">IF()</span></code> statements.</p>
 <p>This applies to all directives starting with <code class="docutils literal notranslate"><span class="pre">AT</span></code>, <code class="docutils literal notranslate"><span class="pre">AFTER</span></code>, and <code class="docutils literal notranslate"><span class="pre">IF</span></code>.</p>
 <p>When using <code class="docutils literal notranslate"><span class="pre">AT()</span></code> or <code class="docutils literal notranslate"><span class="pre">AFTER()</span></code>, this is a blocking activity, meaning the sequence of activities will not progress beyond this particular directive unless the condition is met.</p>
 <p>When using <code class="docutils literal notranslate"><span class="pre">IF</span></code> conditional statements, these will not block if the condition is not met, allowing the sequence of activities to continue.</p>
@@ -811,7 +811,7 @@
 <li><p><a class="reference internal" href="#resume-resume-all-exrail-automation-activities" id="id64"><code class="docutils literal notranslate"><span class="pre">&lt;/RESUME&gt;</span></code> - Resume <strong>ALL</strong> EXRAIL automation activities</a></p></li>
 <li><p><a class="reference internal" href="#display-exrail-running-task-information" id="id65"><code class="docutils literal notranslate"><span class="pre">&lt;/&gt;</span></code> - Display EXRAIL running task information</a></p></li>
 <li><p><a class="reference internal" href="#start-loco-addr-route-id-start-route-optionally-using-specified-loco" id="id66"><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">START</span> <span class="pre">[loco_addr]</span> <span class="pre">route_id&gt;</span></code> - Start route, optionally using specified loco</a></p></li>
-<li><p><a class="reference internal" href="#kill-task-id-kills-a-currently-running-sequence" id="id67"><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">KILL</span> <span class="pre">task_id&gt;</span></code> - Kills a currently running sequence</a></p></li>
+<li><p><a class="reference internal" href="#kill-task-id-kills-a-currently-running-process" id="id67"><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">KILL</span> <span class="pre">task_id&gt;</span></code> - Kills a currently running process</a></p></li>
 <li><p><a class="reference internal" href="#reserve-block-id-manually-reserves-a-virtual-track-block" id="id68"><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">RESERVE</span> <span class="pre">block_id&gt;</span></code> - Manually reserves a virtual track Block</a></p></li>
 <li><p><a class="reference internal" href="#free-block-id-manually-frees-a-virtual-track-block" id="id69"><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">FREE</span> <span class="pre">block_id&gt;</span></code> - Manually frees a virtual track Block</a></p></li>
 <li><p><a class="reference internal" href="#latch-vpin-lock-sensor-on-preventing-external-influence" id="id70"><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">LATCH</span> <span class="pre">vpin&gt;</span></code> - Lock sensor ON, preventing external influence</a></p></li>
@@ -823,7 +823,7 @@
 <p><hr class="hr-dashed" /></p>
 <section id="d-exrail-state-enable-or-disable-exrail-sequence-logging">
 <h4><a class="toc-backref" href="#id62" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">EXRAIL</span> <span class="pre">state&gt;</span></code> - Enable or disable EXRAIL sequence logging</a><a class="headerlink" href="#d-exrail-state-enable-or-disable-exrail-sequence-logging" title="Link to this heading"></a></h4>
-<p>When the CommandStation is connected to a <a class="reference internal" href="../reference/tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a>, <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> sequence logging can be turned on or off (Enabled or Disabled).</p>
+<p>When the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> is connected to a <a class="reference internal" href="../reference/tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a>, <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> sequence logging can be turned on or off (Enabled or Disabled).</p>
 <blockquote>
 <div><details class="summary-for-example-click-to-show">
 <summary>For example: (click to show)</summary><p>Example output from <a class="reference internal" href="examples.html#point-to-point-shuttle"><span class="std std-ref">Point to Point Shuttle</span></a> running SEQUENCE(13) with loco ID 18:</p>
@@ -882,9 +882,16 @@
 <p>Starts a new task to send a loco onto a Route, or activate a non-loco Animation or Sequence.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="kill-task-id-kills-a-currently-running-sequence">
-<h4><a class="toc-backref" href="#id67" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">KILL</span> <span class="pre">task_id&gt;</span></code> - Kills a currently running sequence</a><a class="headerlink" href="#kill-task-id-kills-a-currently-running-sequence" title="Link to this heading"></a></h4>
-<p>Kills a currently running sequence task by ID</p>
+<section id="kill-task-id-kills-a-currently-running-process">
+<h4><a class="toc-backref" href="#id67" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;/</span> <span class="pre">KILL</span> <span class="pre">task_id&gt;</span></code> - Kills a currently running process</a><a class="headerlink" href="#kill-task-id-kills-a-currently-running-process" title="Link to this heading"></a></h4>
+<p>Kills a currently running process by ID</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>task_id is an internally generated ID separate from any of the user defined IDs</p></li>
+<li><p>the KILL command should only be used when you understand the internals of the exrail task system.  It is not designed to be used in normal running.</p></li>
+</ul>
+</div>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="reserve-block-id-manually-reserves-a-virtual-track-block">
@@ -917,7 +924,7 @@
 <p>This is a simple substitution that lets you have readable names for things in your sequence. For example, instead of having to remember the VPin a turnout/point is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.</p>
 <p>If you simply need a unique identifier for an object used internally to the sequence, such as a turnout/point, route, automation, or sequence, you don’t even need to provide an ID, <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> will generate one automatically when you omit the value parameter. We recommend using this for all your routes, sequences, and other internal objects so you don’t have to try to remember or keep a list of numbers you’ve used. This also prevents you from assigning the same number to more than one object.</p>
 <p>REMEMBER: IDs for RESERVE/FREE, LATCH/UNLATCH, and pins must be explicitly defined.</p>
-<p>To put this another way, if you connect an LED to pin 23 and want to turn it on and off, you have to explicitly set its pin number, so <cite>ALIAS(TOWER_LED, 23)</cite> lets you equate “23” to TOWER_LED. But if you created a route to run your train around an oval, you don’t really need to set the number or even know it. Just use <cite>ALIAS(OVAL)</cite> and let EX assign a number internally. If you ever wanted to know what number it assigns, you can enter <cite>&lt;? OVAL&gt;</cite> from the serial monitor with the Command Station running and it will tell you next to “Opcode=”. Since this “hash”, as it is called, is generated by the alias name word, it is always unique and always the same for that word even if you have not created the alias yet. Fun fact, “OVAL” will always equal 27500.</p>
+<p>To put this another way, if you connect an LED to pin 23 and want to turn it on and off, you have to explicitly set its pin number, so <cite>ALIAS(TOWER_LED, 23)</cite> lets you equate “23” to TOWER_LED. But if you created a route to run your train around an oval, you don’t really need to set the number or even know it. Just use <cite>ALIAS(OVAL)</cite> and let EX assign a number internally. If you ever wanted to know what number it assigns, you can enter <cite>&lt;? OVAL&gt;</cite> from the serial monitor with the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> running and it will tell you next to “Opcode=”. Since this “hash”, as it is called, is generated by the alias name word, it is always unique and always the same for that word even if you have not created the alias yet. Fun fact, “OVAL” will always equal 27500.</p>
 <p>Alias naming rules:</p>
 <ul class="simple">
 <li><p><strong>Must not</strong> be an existing EXRAIL command name or other reserved word.</p></li>
@@ -939,7 +946,7 @@
 <span class="n">PIN_TURNOUT</span><span class="p">(</span><span class="n">COAL_YARD</span><span class="p">,</span><span class="w"> </span><span class="n">COAL_YARD_PIN</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Coal Yard&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Note that you could have used the command <cite>ALIAS(COAL_YARD, 1)</cite> in the example above to explicitly set the number, but unless you have a reason to use specific numbers, let the Command Station do it for you.</p>
+<p>Note that you could have used the command <cite>ALIAS(COAL_YARD, 1)</cite> in the example above to explicitly set the number, but unless you have a reason to use specific numbers, let the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> do it for you.</p>
 <p>In this simple example, aliases seem like overkill, however consider the case where you need to have the “Coal Yard” turnout/point closed or thrown in various different automation sequences, and you will soon see why it’s easier to understand you’re throwing the COAL_YARD turnout/point rather than turnout/point ID 12345.</p>
 </details></div></blockquote>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
@@ -963,7 +970,7 @@
 <li><p><a class="reference internal" href="#attimeout1"><span class="std std-ref">ATTIMOUT1 ( vpin, value ) - TBA</span></a></p></li>
 <li><p><a class="reference internal" href="#attimeout2"><span class="std std-ref">ATTIMOUT2 ( vpin, value ) - TBA</span></a></p></li>
 <li><p><a class="reference internal" href="#automation"><span class="std std-ref">AUTOMATION( id, &quot;description&quot; ) - Define an automation, advertised to throttles/clients</span></a></p></li>
-<li><p><a class="reference internal" href="#autostart"><span class="std std-ref">AUTOSTART - Automatically start sequence at this point during Command Station startup</span></a></p></li>
+<li><p><a class="reference internal" href="#autostart"><span class="std std-ref">AUTOSTART - Automatically start sequence at this point during EX-CommandStation startup</span></a></p></li>
 <li><p><a class="reference internal" href="#blink"><span class="std std-ref">BLINK( pin, onMs, offMs ) - Blink an output pin</span></a></p></li>
 <li><p><a class="reference internal" href="#call"><span class="std std-ref">CALL( id ) - Branch to a separate sequence</span></a></p></li>
 <li><p><a class="reference internal" href="#clear-all-stash"><span class="std std-ref">CLEAR_ALL_STASH - Zeroes all stashes</span></a></p></li>
@@ -1086,7 +1093,7 @@
 <nav class="contents in-this-section local" id="id1">
 <p class="topic-title">In This Section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#autostart-automatically-start-sequence-at-this-point-during-command-station-startup" id="id72"><code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code> - Automatically start sequence at this point during Command Station startup</a></p></li>
+<li><p><a class="reference internal" href="#autostart-automatically-start-sequence-at-this-point-during-ex-commandstation-startup" id="id72"><code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code> - Automatically start sequence at this point during EX-CommandStation startup</a></p></li>
 <li><p><a class="reference internal" href="#automation-id-description-define-an-automation-advertised-to-throttles-clients" id="id73"><code class="docutils literal notranslate"><span class="pre">AUTOMATION(</span> <span class="pre">id,</span> <span class="pre">&quot;description&quot;</span> <span class="pre">)</span></code> - Define an automation, advertised to throttles/clients</a></p></li>
 <li><p><a class="reference internal" href="#route-id-description-define-a-route-advertised-to-throttles-clients" id="id74"><code class="docutils literal notranslate"><span class="pre">ROUTE(</span> <span class="pre">id,</span> <span class="pre">&quot;description&quot;</span> <span class="pre">)</span></code> - Define a route, advertised to throttles/clients</a></p></li>
 <li><p><a class="reference internal" href="#sequence-id-a-general-purpose-sequence-not-advertised-to-throttles-clients" id="id75"><code class="docutils literal notranslate"><span class="pre">SEQUENCE(</span> <span class="pre">id</span> <span class="pre">)</span></code> - A general purpose sequence, not advertised to throttles/clients</a></p></li>
@@ -1116,8 +1123,8 @@
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
-<section id="autostart-automatically-start-sequence-at-this-point-during-command-station-startup">
-<span id="autostart"></span><h4><a class="toc-backref" href="#id72" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code> - Automatically start sequence at this point during Command Station startup</a><a class="headerlink" href="#autostart-automatically-start-sequence-at-this-point-during-command-station-startup" title="Link to this heading"></a></h4>
+<section id="autostart-automatically-start-sequence-at-this-point-during-ex-commandstation-startup">
+<span id="autostart"></span><h4><a class="toc-backref" href="#id72" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AUTOSTART</span></code> - Automatically start sequence at this point during EX-CommandStation startup</a><a class="headerlink" href="#autostart-automatically-start-sequence-at-this-point-during-ex-commandstation-startup" title="Link to this heading"></a></h4>
 <p>A sequence is automatically started at this point during startup.</p>
 <p>If you have previously relied on the implied AUTOSTART to run things immediately,  as of Version 5.0 you must now add this explicitly to the beginning of myAutomation.h</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
@@ -1179,15 +1186,15 @@
 <p>You could write a very long AUTOMATION sequence to do this, or you could write the sound SEQUENCE once, then call it at each station:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">AUTOMATION</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station loop&quot;</span><span class="p">)</span><span class="w">    </span><span class="c1">// Our station loop sequence</span>
 <span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
-<span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w">                         </span><span class="c1">// At station 1 entrance sensor, call our sequence</span>
+<span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w">                         </span><span class="c1">// At station 1 entrance sensor, call our &quot;Station sequence&quot;</span>
 <span class="w">  </span><span class="n">CALL</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
-<span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span><span class="w">                         </span><span class="c1">// At station 2 entrance sensor, call our sequence</span>
+<span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span><span class="w">                         </span><span class="c1">// At station 2 entrance sensor, call our &quot;Station sequence&quot;</span>
 <span class="w">  </span><span class="n">CALL</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
-<span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">103</span><span class="p">)</span><span class="w">                         </span><span class="c1">// At station 3 entrance sensor, call our sequence</span>
+<span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">103</span><span class="p">)</span><span class="w">                         </span><span class="c1">// At station 3 entrance sensor, call our &quot;Station sequence&quot;</span>
 <span class="w">  </span><span class="n">CALL</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
-<span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">104</span><span class="p">)</span><span class="w">                         </span><span class="c1">// At station 4 entrance sensor, call our sequence</span>
+<span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">104</span><span class="p">)</span><span class="w">                         </span><span class="c1">// At station 4 entrance sensor, call our &quot;Station sequence&quot;</span>
 <span class="w">  </span><span class="n">CALL</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
-<span class="w">  </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span><span class="w">                      </span><span class="c1">// Keep looping through the stations (see FOLLOW command reference below)</span>
+<span class="w">  </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span><span class="w">                      </span><span class="c1">// Keep looping through the &quot;Station loop&quot; automation (see FOLLOW command reference below)</span>
 
 <span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Station sequence&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1">// Our station sequence</span>
 <span class="w">  </span><span class="n">FON</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w">                         </span><span class="c1">// Blow the horn</span>
@@ -1320,7 +1327,7 @@
 <p>Dynamically change the label of the Route button.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>route_id</strong> - id of the route to change <br /> &gt; <strong>caption</strong> - text to replace on the route ‘button’ label</p>
 <details class="summary-for-example-click-to-show">
-<summary>For example: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// setup 4 &#39;routes&#39;to switch between tracks/districts between PROG, MAIN and DC</span>
+<summary>For example: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// setup 4 &#39;routes&#39; to switch between tracks/districts between PROG, MAIN and DC</span>
 <span class="n">ROUTE</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="s">&quot;1.Trk: A main, B prog&quot;</span><span class="p">)</span>
 <span class="w">    </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">MAIN</span><span class="p">)</span>
 <span class="w">    </span><span class="n">SET_TRACK</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">PROG</span><span class="p">)</span>
@@ -1661,7 +1668,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p><em>Parameters:</em> <br /> &gt; <strong>signal_id</strong> - id (or alias) of the virtual signal to set <br /></p>
 <p><hr class="hr-dashed" /></p>
 <details class="summary-signal-example-click-to-show">
-<summary>Signal example: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SIGNAL</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="p">)</span><span class="w">                </span><span class="c1">// Active low red/amber/green signal using pins 25/26/27 directly on the CommandStation.</span>
+<summary>Signal example: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SIGNAL</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="p">)</span><span class="w">                </span><span class="c1">// Active low red/amber/green signal using pins 25/26/27 directly on the EX-CommandStation.</span>
 <span class="n">SIGNALH</span><span class="p">(</span><span class="mi">164</span><span class="w"> </span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">165</span><span class="p">)</span><span class="w">              </span><span class="c1">// Active high red/green signal using the first two pins of an MCP23017 I/O expander module.</span>
 <span class="n">SERVO_SIGNAL</span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">)</span><span class="w">  </span><span class="c1">// Servo based signal using the first PCA9685 servo module.</span>
 
@@ -1959,14 +1966,14 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <h4><a class="toc-backref" href="#id149" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IF(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - If sensor activated or latched, continue</a><a class="headerlink" href="#if-vpin-if-sensor-activated-or-latched-continue" title="Link to this heading"></a></h4>
 <p>If sensor activated or latched, continue. Otherwise skip to ELSE or matching ENDIF.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - vpin (or alias) of the sensor to test</p>
-<p>See the <a class="reference internal" href="#exrail-conditional-statements"><span class="std std-ref">Condititional Statments section</span></a> for more information on IF … ELSE … ENDIF commands.</p>
+<p>See the <a class="reference internal" href="#exrail-conditional-statements"><span class="std std-ref">Conditional Statements section</span></a> for more information on IF … ELSE … ENDIF commands.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="ifnot-vpin-if-sensor-not-activated-and-not-latched-continue">
 <h4><a class="toc-backref" href="#id150" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFNOT(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - If sensor NOT activated and NOT latched, continue</a><a class="headerlink" href="#ifnot-vpin-if-sensor-not-activated-and-not-latched-continue" title="Link to this heading"></a></h4>
 <p>If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or matching ENDIF.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - vpin (or alias) of the sensor to test</p>
-<p>See the <a class="reference internal" href="#exrail-conditional-statements"><span class="std std-ref">Condititional Statments section</span></a> for more information on IF … ELSE … ENDIF commands.</p>
+<p>See the <a class="reference internal" href="#exrail-conditional-statements"><span class="std std-ref">Conditional Statements section</span></a> for more information on IF … ELSE … ENDIF commands.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="iftimeout-tests-if-timed-out-flag-has-been-set-by-an-attimeout-sensor-reading-attempt">
@@ -2008,13 +2015,13 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <div><p>All the <cite>IFGTE()</cite>, <cite>IFLT()</cite>, <cite>ATGTE()`and `ATLT()</cite> commands read the analog value from an analog input pin (A0 - A5 on an Arduino Mega) or an analog input from an I/O expander module. Valid values are defined by the capability of the analog to digital converter in use.</p>
 </div></blockquote>
 <details class="summary-sensor-examples-click-to-show">
-<summary>Sensor examples: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">IF</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="w">          </span><span class="c1">// If sensor on the Command Station pin 25 is activated, set a signal red, wait 10 seconds, then close a turnout/point.</span>
+<summary>Sensor examples: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">IF</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span><span class="w">          </span><span class="c1">// If sensor on the EX-CommandStation pin 25 is activated, set a signal red, wait 10 seconds, then close a turnout/point.</span>
 <span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
 <span class="w">  </span><span class="n">DELAY</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
 <span class="n">ENDIF</span>
 
-<span class="n">IFNOT</span><span class="p">(</span><span class="mi">26</span><span class="p">)</span><span class="w">       </span><span class="c1">// If sensor on the Command Station pin 26 is not activated, keep our pedestrian crossing light at 102 green, else set it red.</span>
+<span class="n">IFNOT</span><span class="p">(</span><span class="mi">26</span><span class="p">)</span><span class="w">       </span><span class="c1">// If sensor on the EX-CommandStation pin 26 is not activated, keep our pedestrian crossing light at 102 green, else set it red.</span>
 <span class="w">  </span><span class="n">GREEN</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
 <span class="n">ELSE</span>
 <span class="w">  </span><span class="n">RED</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
@@ -2638,7 +2645,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 </aside>
 <aside class="footnote brackets" id="id17" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id14">2</a><span class="fn-bracket">]</span></span>
-<p>Deprecated alias of <code class="docutils literal notranslate"><span class="pre">AUTO</span></code> but only when preceeded by a sperate <code class="docutils literal notranslate"><span class="pre">MAIN</span></code> command.</p>
+<p>Deprecated alias of <code class="docutils literal notranslate"><span class="pre">AUTO</span></code> but only when preceded by a separate <code class="docutils literal notranslate"><span class="pre">MAIN</span></code> command.</p>
 </aside>
 </aside>
 <p>When setting at track mode to either <code class="docutils literal notranslate"><span class="pre">DC</span></code> or <code class="docutils literal notranslate"><span class="pre">DC_INV</span></code> / <code class="docutils literal notranslate"><span class="pre">DCX</span></code>, you must use the <code class="docutils literal notranslate"><span class="pre">SETLOCO(</span> <span class="pre">loco</span> <span class="pre">)</span></code> command first to specify the loco ID that will be used for the DC track then SET_TRACK()</p>
@@ -2678,7 +2685,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <span id="setfreq"></span><h4><a class="toc-backref" href="#id209" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SETFREQ(</span> <span class="pre">track,</span> <span class="pre">frequency</span> <span class="pre">)</span></code> - Enable a specific frequency</a><a class="headerlink" href="#setfreq-track-frequency-enable-a-specific-frequency" title="Link to this heading"></a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">DC</span></code> or <code class="docutils literal notranslate"><span class="pre">DC_INV</span></code> / <code class="docutils literal notranslate"><span class="pre">DCX</span></code> track settings only.</p>
 <p>Configures the frequency setting of the selected track.</p>
-<p>The settings achievable vary slightly depending upon the processor running the Command Station but broadly follow the following:</p>
+<p>The settings achievable vary slightly depending upon the processor running the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> but broadly follow the following:</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>track</strong> - - The track to configure, valid options are A to H <br /> &gt; <strong>frequency</strong> - - The frequency to set for this track <br />   &gt;valid options are: <br />    &gt; <strong>0</strong> - Default - low frequency 131Hz <br />    &gt; <strong>1</strong> - Mid frequency - 490Hz <br />    &gt; <strong>2</strong> - High frequency - 3400Hz <br />    &gt; <strong>3</strong> - Supersonic - 62500Hz <br /></p>
 <p>Trial and error will be needed for specific locos that do not respond well to the defaults (low) frequency setting.</p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
@@ -2709,7 +2716,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p>Note:  AFTEROVERLOAD is only relevant when used within and ONOVERLOAD…. DONE structure.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>track</strong> - - The track to configure, valid options are A to H</p>
 <p><hr class="hr-dashed" /></p>
-<p>The power calculation routines within <a href="../index.html"><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span></a> will check for shorts and overloads and will change the state of the power produced by the MotorDriver board to protect both it and locos from damage.  This is usually eveident by the LED’s on the MotorDriver board flashing.  However some users may wish to see some physical notifcation of these events.  This can now be achieved with EXRAIL and the ONOVERLOAD event.</p>
+<p>The power calculation routines within <a href="../index.html"><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span></a> will check for shorts and overloads and will change the state of the power produced by the MotorDriver board to protect both it and locos from damage.  This is usually evident by the LED’s on the MotorDriver board flashing.  However some users may wish to see some physical notification of these events.  This can now be achieved with EXRAIL and the ONOVERLOAD event.</p>
 <details class="summary-for-example-click-to-show">
 <summary>For example: (click to show)</summary><p>This first example shows a warning message to an attached screen with an LED being illuminated to warn the user of the overload.  Once the overload is cleared the AFTEROVERLOAD code is run automatically.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ONOVERLOAD</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="w">       </span><span class="c1">// the EXRAIL statement to control the event.</span>
@@ -2725,7 +2732,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <span class="n">DONE</span>
 </pre></div>
 </div>
-<p>If the user wishes to turn off power whilst he/she investigates the problem, then this can be achieved using the second example below.  POWEROFF can be used, but this will turn off powere to all tracks.  Power to the track with the problem can be turned off with a TrackManager command.  However in order to execute the AFTEROVERLOAD routine it is necessary to have a reset routine.</p>
+<p>If the user wishes to turn off power whilst he/she investigates the problem, then this can be achieved using the second example below.  POWEROFF can be used, but this will turn off power to all tracks.  Power to the track with the problem can be turned off with a TrackManager command.  However in order to execute the AFTEROVERLOAD routine it is necessary to have a reset routine.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// This is the event triggered by an overload.  AFTEROVERLOAD cannot be triggered whilst power is OFF.</span>
 <span class="n">ONOVERLOAD</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 <span class="w">  </span><span class="n">SCREEN</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;OVERLOAD A POWEROFF&quot;</span><span class="p">)</span>
@@ -2740,7 +2747,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <span class="w">      </span><span class="n">SCREEN</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;                  &quot;</span><span class="p">)</span>
 <span class="n">DONE</span>
 
-<span class="c1">// The following turns the poweron and allows the AFTEROVERLOAD to run</span>
+<span class="c1">// The following turns the power on and allows the AFTEROVERLOAD to run</span>
 <span class="c1">// This could also be achieved with a physical button and AFTER(pin) in place of ROUTE()</span>
 <span class="n">ROUTE</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="s">&quot;Reset A&quot;</span><span class="p">)</span>
 <span class="w">  </span><span class="n">SCREEN</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;                  &quot;</span><span class="p">)</span>
@@ -2889,8 +2896,8 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 </section>
 </section>
 <hr class="docutils" />
-<section id="commandstation-functions">
-<h3><a class="toc-backref" href="#id58" role="doc-backlink">CommandStation Functions</a><a class="headerlink" href="#commandstation-functions" title="Link to this heading"></a></h3>
+<section id="ex-commandstation-functions">
+<h3><a class="toc-backref" href="#id58" role="doc-backlink">EX-CommandStation Functions</a><a class="headerlink" href="#ex-commandstation-functions" title="Link to this heading"></a></h3>
 <nav class="contents in-this-section local" id="id21">
 <p class="topic-title">In This Section</p>
 <ul class="simple">
@@ -3080,7 +3087,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <span id="stealth-global"></span><h4><code class="docutils literal notranslate"><span class="pre">STEALTH_GLOBAL(</span> <span class="pre">code</span> <span class="pre">)</span></code><a class="headerlink" href="#stealth-global-code" title="Link to this heading"></a></h4>
 <p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p><strong>SERIOUS ENGINEERS and ADVANCED C++ USERS ONLY</strong>   <a class="reference external" href="../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
-<p>Inserts code such as static variables and functions that may be utilised by multiple <code class="docutils literal notranslate"><span class="pre">STEALTH</span></code> operations.</p>
+<p>Inserts code such as static variables and functions that may be utilized by multiple <code class="docutils literal notranslate"><span class="pre">STEALTH</span></code> operations.</p>
 <p>Please use this option with great care, and you will need to be an advanced C++ user to make use of this command.  If in doubt ask for assistance.</p>
 </section>
 </section>
@@ -3109,7 +3116,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f253706afb0>
+    <jinja2.runtime.BlockReference object at 0x7f807fb91e10>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

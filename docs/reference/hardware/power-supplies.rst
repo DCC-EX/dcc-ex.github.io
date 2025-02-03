@@ -26,7 +26,6 @@ The power supply is one of the most important parts of your setup. You need to s
 * :ref:`reference/hardware/power-supplies:Bricks (Laptop Style)`
 * :ref:`reference/hardware/power-supplies:Adjustable Power Supplies`
 * :ref:`reference/hardware/power-supplies:Cage Power Supplies`
-* :ref:`reference/hardware/power-supplies:Dual voltage power supplies`
 * :ref:`reference/hardware/power-supplies:Using one power supply with cheap converters to power everything`
 * :ref:`reference/hardware/power-supplies:Using Buck Converters`
 * :ref:`reference/hardware/power-supplies:Using Diodes to Reduce Voltage`
@@ -123,30 +122,9 @@ https://www.amazon.com/Belker-5V-15V-Universal-Adapter-Speaker/dp/B015H0UPWU
 Cage Power Supplies
 ======================
 
-* The Meanwell LRS-100-15 power supply is a good choice for larger scales. It supplies 15V and 105W (that's 7 amps), so it is plenty for running two channels simultaneously. At only $18, it is an inexpensive and solid option.
+* While there are cage power supplies on the market, most of them do not fullfill the electrical requiremets for running a model railroad since the rails are an open conductor. Such installations require a double insulated power supply. In addition to that, a cage power supply should not be operated without protective and grounded housing.
 
-.. image:: /_static/images/meanwell-lrs100.jpg
-   :scale: 100%
-   :alt: Meanwell
-
-`See on Digi-Key <https://www.digikey.com/product-detail/en/mean-well-usa-inc/LRS-100-15/1866-3313-ND/7705005>`_
-
-.. warning:: For the Meanwell LRS-100-15 you will need to do your own mains wiring. If you don't have experience with this get a friend who does or hire an electrician to do it for you. **MAINS POWER IS DANGEROUS!**
-
-Dual voltage power supplies
-=============================
-
-With a dual voltage power supply, you can provide 12V for the motor controller and 5V for the Arduino. You may also be able to find higher voltage units if you need such as 14-15V if your scale trains require it.
-
-* Mean Well Dual Voltage Power Supply (5V and 12V)
-
-.. image:: /_static/images/meanwell_rd125A.jpg
-   :scale: 100%
-   :alt: Mean Well RD125A Dual voltage power supply
-
-`See on Amazon <https://www.amzn.com/B005T9FF4I/>`_
-
-.. warning:: For the Meanwell RD125A, you will need to do your own mains wiring. If you don't have experience with this get a friend who does or hire an electrician to do it for you. **MAINS POWER IS DANGEROUS!**
+.. warning:: For cage power supplies you will need to do your own mains wiring. If you don't have experience with this get a friend who does or hire an electrician to do it for you. **MAINS POWER IS DANGEROUS!**
 
 Using one power supply with cheap converters to power everything 
 =====================================================================

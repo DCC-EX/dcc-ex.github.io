@@ -1593,7 +1593,7 @@ Must be proceeded by an <code class="docutils literal notranslate"><span class="
 </section>
 <section id="dccx-signal-address-redaspect-amberaspect-greenaspect-defines-a-signal-with-id-as-dcc-address">
 <span id="dccex-signal"></span><h4><a class="toc-backref" href="#id109" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">DCCX_SIGNAL(</span> <span class="pre">Address,</span> <span class="pre">redAspect,</span> <span class="pre">amberAspect,</span> <span class="pre">greenAspect</span> <span class="pre">)</span></code> - Defines a signal (with id as dcc address)</a><a class="headerlink" href="#dccx-signal-address-redaspect-amberaspect-greenaspect-defines-a-signal-with-id-as-dcc-address" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a> <br />-IN-V5-4-LOGO-SMALL-DARK|</p>
+<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>This defines a signal (with id same as dcc address) that can be operated
 by the RED/AMBER/GREEN commands.   In each case the command uses the signal address to refer to the signal and the aspect chosen depends on the use of the RED AMBER or GREEN command sent. Other aspects may be sent but will require the direct use of the ASPECT command.</p>
 <p>The IFRED/IFAMBER/IFGREEN  and ONRED/ONAMBER/ONGREEN commands continue to operate as for any other signal type. It is important to be aware that use of the ASPECT (see below) or &lt;A&gt; commands will correctly set the IF flags and call the ON handlers if ASPECT is used to set one of the three aspects defined in the DCCX_SIGNAL command.</p>
@@ -1644,7 +1644,7 @@ by the RED/AMBER/GREEN commands.   In each case the command uses the signal addr
 </section>
 <section id="aspect-address-aspect-command-for-dcc-extended-accessories">
 <span id="aspect"></span><h4><a class="toc-backref" href="#id117" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ASPECT(</span> <span class="pre">address,</span> <span class="pre">aspect</span> <span class="pre">)</span></code> - Command for DCC Extended Accessories</a><a class="headerlink" href="#aspect-address-aspect-command-for-dcc-extended-accessories" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a> <br />-IN-V5-4-LOGO-SMALL-DARK| <br />-IN-V5-4-LOGO-SMALL-DARK|</p>
+<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>This command sends an extended accessory packet to the track, normally used to set
 a signal aspect. Aspect numbers are undefined as standards except for 0 which is
 always considered a stop.  The exact aspect codes to be used must be determined from the documentation for the accessory decoder in use.</p>
@@ -1780,7 +1780,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 </section>
 <section id="toggle-turnout-turnout-id-toggle-a-defined-turnout-point-between-close-throw">
 <span id="toggle-turnout"></span><h4><a class="toc-backref" href="#id132" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">TOGGLE_TURNOUT(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code> - Toggle a defined turnout/point between CLOSE/THROW</a><a class="headerlink" href="#toggle-turnout-turnout-id-toggle-a-defined-turnout-point-between-close-throw" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a> <br />-IN-V5-4-LOGO-SMALL-DARK| <br />-IN-V5-4-LOGO-SMALL-DARK|</p>
+<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>Toggles the state of the specified turnout/point between closed and thrown.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>turnout_id</strong> - The id of the turnout/point to throw <br /></p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
@@ -1843,7 +1843,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 </section>
 <section id="turntable-features">
 <h4><a class="toc-backref" href="#id136" role="doc-backlink">Turntable features</a><a class="headerlink" href="#turntable-features" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a> <br />-IN-V5-4-LOGO-SMALL-DARK|</p>
+<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p><hr class="hr-dashed" /></p>
 <p>All the below turntable/traverser definitions will define turntables/traversers that are advertised to throttles that understand them, unless the HIDDEN keyword is used.</p>
 <p>To fully define a turntable/traverser object, you need to define the object first, and then one or more positions.</p>
@@ -2392,14 +2392,12 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <section id="xfon-cab-func-send-dcc-function-on-to-specific-cab">
 <span id="xfon"></span><h4><a class="toc-backref" href="#id185" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">XFON(</span> <span class="pre">cab,</span> <span class="pre">func</span> <span class="pre">)`</span></code> - Send DCC function ON to specific cab</a><a class="headerlink" href="#xfon-cab-func-send-dcc-function-on-to-specific-cab" title="Link to this heading"></a></h4>
 <p>Send DCC function ON to specific cab (e.g. coach lights) <em>Not for Loco use - use FON instead!</em></p>
-<p>All these “ON” commands are event handlers that trigger a sequence of commands to run when the event occurs. These can vary from the most basic tasks such as setting signals when turnouts are closed or thrown, to triggering complete automation sequences via a DCC accessory decoder.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>cab</strong> - DCC address of your loco <br /> &gt; <strong>func</strong> - Function number (0-31)</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="xfoff-cab-func-send-dcc-function-off-to-specific-cab">
 <span id="xfoff"></span><h4><a class="toc-backref" href="#id186" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">XFOFF(</span> <span class="pre">cab,</span> <span class="pre">func</span> <span class="pre">)</span></code> - Send DCC function OFF to specific cab</a><a class="headerlink" href="#xfoff-cab-func-send-dcc-function-off-to-specific-cab" title="Link to this heading"></a></h4>
 <p>Send DCC function OFF to specific cab (e.g. coach lights) Not for Loco use - use FON instead!</p>
-<p>All these “ON” commands are event handlers that trigger a sequence of commands to run when the event occurs. These can vary from the most basic tasks such as setting signals when turnouts are closed or thrown, to triggering complete automation sequences via a DCC accessory decoder.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>cab</strong> - DCC address of your loco <br /> &gt; <strong>func</strong> - Function number (0-31)</p>
 <p><hr class="hr-dashed" /></p>
 </section>
@@ -3116,7 +3114,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f807fb91e10>
+    <jinja2.runtime.BlockReference object at 0x7fcea25bb670>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

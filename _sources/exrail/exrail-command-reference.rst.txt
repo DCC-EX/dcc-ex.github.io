@@ -370,8 +370,6 @@ Alphabetic Command List
   * :ref:`ENDIF`
   * :ref:`ENDTASK`
   * :ref:`ESTOP`
-  * :ref:`EXRAIL_CONDITIONAL_STATEMENTS`
-  * :ref:`EXRAIL_MESSAGE`
   * :ref:`EXTT_TURNTABLE`
   * :ref:`FADE`
   * :ref:`FOFF`
@@ -445,8 +443,6 @@ Alphabetic Command List
   * :ref:`PRINT`
   * :ref:`RANDWAIT`
   * :ref:`READ_LOCO`
-  * READ_LOCO1
-  * READ_LOCO2
   * :ref:`RED`
   * :ref:`RESERVE`
   * :ref:`RESET`

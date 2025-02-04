@@ -330,33 +330,50 @@ Alphabetic Command List
 
   * :ref:`ACOF`
   * :ref:`ACON`
+  * :ref:`ACTIVATE`
+  * :ref:`ACTIVATEL`
   * :ref:`AFTER`
   * :ref:`AFTEROVERLOAD`
   * :ref:`AMBER`
+  * :ref:`ANOUT`
   * :ref:`ASPECT`
   * :ref:`AT`
   * :ref:`ATGTE`
   * :ref:`ATLT`
+  * :ref:`ATTIMEOUT`
   * :ref:`ATTIMEOUT1`
   * :ref:`ATTIMEOUT2`
   * :ref:`AUTOMATION`
   * :ref:`AUTOSTART`
   * :ref:`BLINK`
+  * :ref:`BROADCAST`
   * :ref:`CALL`
   * :ref:`CLEAR_ALL_STASH`
   * :ref:`CLEAR_STASH`
   * :ref:`CLOSE`
+  * :ref:`CONFIG_SERVO`
   * :ref:`DCCACTIVATE`
+  * :ref:`DCCEX_SIGNAL`
+  * :ref:`DCC_SIGNAL`
   * :ref:`DCC_TURNTABLE`
+  * :ref:`DEACTIVATE`
+  * :ref:`DEACTIVATEL`
   * :ref:`DELAY`
   * :ref:`DELAYMINS`
   * :ref:`DELAYMS`
+  * :ref:`DELAYRANDOM`
+  * :ref:`DISABLE_PROG`
+  * :ref:`DONE`
   * :ref:`DRIVE`
   * :ref:`ELSE`
   * :ref:`ENDEXRAIL`
   * :ref:`ENDIF`
   * :ref:`ENDTASK`
+  * :ref:`ESTOP`
+  * :ref:`EXRAIL_CONDITIONAL_STATEMENTS`
+  * :ref:`EXRAIL_MESSAGE`
   * :ref:`EXTT_TURNTABLE`
+  * :ref:`FADE`
   * :ref:`FOFF`
   * :ref:`FOLLOW`
   * :ref:`FON`
@@ -365,6 +382,8 @@ Alphabetic Command List
   * :ref:`FTOGGLE`
   * :ref:`FWD`
   * :ref:`GREEN`
+  * :ref:`EXRAIL_HAL`
+  * :ref:`HAL_IGNORE_DEFAULTS`
   * :ref:`IF`
   * :ref:`IFAMBER`
   * :ref:`IFCLOSED`
@@ -381,21 +400,31 @@ Alphabetic Command List
   * :ref:`IFTIMEOUT`
   * :ref:`IFTTPOSITION`
   * :ref:`INVERT_DIRECTION`
+  * :ref:`IO_NO_HAL`
+  * :ref:`JMRI_SENSOR`
   * :ref:`JOIN`
   * :ref:`KILLALL`
   * :ref:`LATCH`
   * :ref:`LCC`
   * :ref:`LCCX`
+  * :ref:`LCD`
+  * :ref:`LCN`
+  * :ref:`MESSAGE`
+  * :ref:`MOVETT`
   * :ref:`NEOPIXEL`
+  * :ref:`NEOPIXEL_SIGNAL`
   * :ref:`ONACOF`
   * :ref:`ONACON`
   * :ref:`ONACTIVATE`
+  * :ref:`ONACTIVATEL`
   * :ref:`ONAMBER`
   * :ref:`ONBUTTON`
   * :ref:`ONCHANGE`
+  * :ref:`ONCLOCKMINS`
   * :ref:`ONCLOCKTIME`
   * :ref:`ONCLOSE`
   * :ref:`ONDEACTIVATE`
+  * :ref:`ONDEACTIVATEL`
   * :ref:`ONGREEN`
   * :ref:`ONLCC`
   * :ref:`ONOVERLOAD`
@@ -405,14 +434,17 @@ Alphabetic Command List
   * :ref:`ONTHROW`
   * :ref:`ONTIME`
   * PAD
+  * :ref:`PARSE`
   * :ref:`PAUSE`
   * :ref:`PICKUP_STASH`
   * :ref:`PIN_TURNOUT`
+  * :ref:`PLAYSOUND`
   * :ref:`POM`
   * :ref:`POWEROFF`
   * :ref:`POWERON`
   * :ref:`PRINT`
   * :ref:`RANDWAIT`
+  * :ref:`READ_LOCO`
   * READ_LOCO1
   * READ_LOCO2
   * :ref:`RED`
@@ -423,32 +455,52 @@ Alphabetic Command List
   * :ref:`REV`
   * :ref:`ROSTER`
   * :ref:`ROTATE`
+  * :ref:`ROTATE_DCC`
   * :ref:`ROUTE`
   * :ref:`ROUTE_ACTIVE`
+  * :ref:`ROUTE_CAPTION`
   * :ref:`ROUTE_DISABLED`
   * :ref:`ROUTE_HIDDEN`
   * :ref:`ROUTE_INACTIVE`
+  * :ref:`SCREEN`
   * :ref:`SENDLOCO`
   * :ref:`SEQUENCE`
+  * :ref:`SERIAL`
+  * :ref:`SERIAL1`
+  * :ref:`SERIAL2`
+  * :ref:`SERIAL3`
+  * :ref:`SERIAL4`
+  * :ref:`SERIAL5`
+  * :ref:`SERIAL6`
   * :ref:`SERVO`
+  * :ref:`SERVO2`
+  * :ref:`SERVO_SIGNAL`
   * :ref:`SERVO_TURNOUT`
   * :ref:`SET`
-  * :ref:`SET_POWER`
-  * :ref:`SET_TRACK`
   * :ref:`SETFREQ`
   * :ref:`SETLOCO`
+  * :ref:`SET_POWER`
+  * :ref:`SET_TRACK`
   * :ref:`SIGNAL`
+  * :ref:`SIGNALH`
   * :ref:`SPEED`
   * :ref:`START`
   * :ref:`STASH`
+  * :ref:`STEALTH`
+  * :ref:`STEALTH_GLOBAL`
+  * :ref:`STOP`
   * :ref:`THROW`
   * :ref:`TOGGLE_TURNOUT`
   * :ref:`TT_ADDPOSITION`
   * :ref:`TURNOUT`
+  * :ref:`TURNOUTL`
   * :ref:`UNJOIN`
   * :ref:`UNLATCH`
+  * :ref:`VIRTUAL_SIGNAL`
+  * :ref:`VIRTUAL_TURNOUT`
   * :ref:`WAITFOR`
   * :ref:`WAITFORTT`
+  * :ref:`EXRAIL_WITHROTTLE`
   * :ref:`XFOFF`
   * :ref:`XFON`
   * :ref:`XFTOGGLE`
@@ -1116,7 +1168,7 @@ Create and manage HAL device objects
 
 |hr-dashed|
 
-.. _hal:
+.. _exrail_hal: 
 
 ``HAL( device, parameters )`` - Create a HAL device in myAutomation.h
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3335,14 +3387,14 @@ Writes direct to Serial6.
 
 |hr-dashed|
 
-.. _withrottle:
+.. _exrail_withrottle: 
 
 ``WITHROTTLE( "msg" )`` - Writes a message to WiThrottle clients
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Writes a message to WiThrottle clients (alias of ``PRINT``)
 
-A a WiThrottle throttle will receive ``Hmtext``.
+A WiThrottle controller will receive ``Hmmsg``.
 
 *Parameters:* |BR|
 |_| > **msg** - message to write

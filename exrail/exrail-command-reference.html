@@ -960,33 +960,50 @@
 <summary>Full Alphabetic list of commands: (click to show)</summary><ul class="simple">
 <li><p><a class="reference internal" href="#acof"><span class="std std-ref">ACOF(eventid) - TBA</span></a></p></li>
 <li><p><a class="reference internal" href="#acon"><span class="std std-ref">ACON(eventid) - TBA</span></a></p></li>
+<li><p><a class="reference internal" href="#activate"><span class="std std-ref">ACTIVATE( addr, sub_addr ) - Sends a DCC accessory packet with value 1</span></a></p></li>
+<li><p><a class="reference internal" href="#activatel"><span class="std std-ref">ACTIVATEL( linear ) - Sends a DCC accessory packet with value 1 to a linear address</span></a></p></li>
 <li><p><a class="reference internal" href="#after"><span class="std std-ref">AFTER( vpin [,debounce_time] ) - Halt command execution until the sensor is cleared</span></a></p></li>
 <li><p><a class="reference internal" href="#afteroverload"><span class="std std-ref">AFTEROVERLOAD( track ) - Event handler for when an Overload clears</span></a></p></li>
 <li><p><a class="reference internal" href="#amber"><span class="std std-ref">AMBER( signal_id ) - Set a defined signal to Amber</span></a></p></li>
+<li><p><a class="reference internal" href="#anout"><span class="std std-ref">ANOUT( vpin, value, param1, param2) - Analog output ??</span></a></p></li>
 <li><p><a class="reference internal" href="#aspect"><span class="std std-ref">ASPECT( address, aspect ) - Command for DCC Extended Accessories</span></a></p></li>
 <li><p><a class="reference internal" href="#at"><span class="std std-ref">AT( vpin ) - Halt command execution until the sensor is set</span></a></p></li>
 <li><p><a class="reference internal" href="#atgte"><span class="std std-ref">ATGTE( vpin, value ) - Waits for an analog pin to reach a value</span></a></p></li>
 <li><p><a class="reference internal" href="#atlt"><span class="std std-ref">ATLT ( vpin, value ) - Waits for an analog pin to go below a value</span></a></p></li>
+<li><p><a class="reference internal" href="#attimeout"><span class="std std-ref">ATTIMEOUT( vpin, timeout_ms ) - Causes a sequence to wait until either a sensor is active/triggered, or if the timer runs out</span></a></p></li>
 <li><p><a class="reference internal" href="#attimeout1"><span class="std std-ref">ATTIMOUT1 ( vpin, value ) - TBA</span></a></p></li>
 <li><p><a class="reference internal" href="#attimeout2"><span class="std std-ref">ATTIMOUT2 ( vpin, value ) - TBA</span></a></p></li>
 <li><p><a class="reference internal" href="#automation"><span class="std std-ref">AUTOMATION( id, &quot;description&quot; ) - Define an automation, advertised to throttles/clients</span></a></p></li>
 <li><p><a class="reference internal" href="#autostart"><span class="std std-ref">AUTOSTART - Automatically start sequence at this point during EX-CommandStation startup</span></a></p></li>
 <li><p><a class="reference internal" href="#blink"><span class="std std-ref">BLINK( pin, onMs, offMs ) - Blink an output pin</span></a></p></li>
+<li><p><a class="reference internal" href="#broadcast"><span class="std std-ref">BROADCAST( &quot;msg&quot; ) - Broadcast to all throttles/JMRI on serial and WiFi</span></a></p></li>
 <li><p><a class="reference internal" href="#call"><span class="std std-ref">CALL( id ) - Branch to a separate sequence</span></a></p></li>
 <li><p><a class="reference internal" href="#clear-all-stash"><span class="std std-ref">CLEAR_ALL_STASH - Zeroes all stashes</span></a></p></li>
 <li><p><a class="reference internal" href="#clear-stash"><span class="std std-ref">CLEAR_STASH( stash_id ) - Zeroes the specified stash</span></a></p></li>
 <li><p><a class="reference internal" href="#close"><span class="std std-ref">CLOSE( turnout_id ) - Close a turnout/point</span></a></p></li>
+<li><p><a class="reference internal" href="#config-servo"><span class="std std-ref">CONFIGURE_SERVO(vpin, pos1, pos2, profile) - Define LED’s connected to PCA9685 boards</span></a></p></li>
 <li><p><a class="reference internal" href="#dccactivate"><span class="std std-ref">DCCACTIVATE( addr, sub_addr ) - TBA</span></a></p></li>
+<li><p><a class="reference internal" href="#dccex-signal"><span class="std std-ref">DCCX_SIGNAL( Address, redAspect, amberAspect, greenAspect ) - Defines a signal (with id as dcc address)</span></a></p></li>
+<li><p><a class="reference internal" href="#dcc-signal"><span class="std std-ref">DCC_SIGNAL( id, addr, sub_addr ) - Define a DCC accessory signal</span></a></p></li>
 <li><p><a class="reference internal" href="#dcc-turntable"><span class="std std-ref">DCC_TURNTABLE( id, home_angle, [, &quot;description&quot;] ) - Define a DCC accessory turntable/traverser</span></a></p></li>
+<li><p><a class="reference internal" href="#deactivate"><span class="std std-ref">DEACTIVATE( addr, sub_addr ) - Sends a DCC accessory packet with value 0</span></a></p></li>
+<li><p><a class="reference internal" href="#deactivatel"><span class="std std-ref">DEACTIVATEL( addr ) - Sends a DCC accessory packet with value 0 to a linear address</span></a></p></li>
 <li><p><a class="reference internal" href="#delay"><span class="std std-ref">DELAY( delay ) - Delay the sequence a number of milliseconds</span></a></p></li>
 <li><p><a class="reference internal" href="#delaymins"><span class="std std-ref">DELAYMINS( delay ) - Delay the sequence a number of minutes</span></a></p></li>
 <li><p><a class="reference internal" href="#delayms"><span class="std std-ref">DELAYMS( delay ) - Delay the sequence a number of milliseconds</span></a></p></li>
+<li><p><a class="reference internal" href="#delayrandom"><span class="std std-ref">DELAYRANDOM( min_delay, max_delay ) - Delay a random period of time</span></a></p></li>
+<li><p><a class="reference internal" href="#disable-prog"><span class="std std-ref">DISABLE_PROG - Disable programming to save RAM/Flash</span></a></p></li>
+<li><p><a class="reference internal" href="#done"><span class="std std-ref">DONE - Completes a Sequence/Route/Animation/Event, or any other automation</span></a></p></li>
 <li><p><a class="reference internal" href="#drive"><span class="std std-ref">DRIVE ( vpin ) - TBA</span></a></p></li>
 <li><p><a class="reference internal" href="#else"><span class="std std-ref">ELSE - Alternate logic to any IF related command returning False</span></a></p></li>
 <li><p><a class="reference internal" href="#endexrail"><span class="std std-ref">ENDEXRAIL - TBA</span></a></p></li>
 <li><p><a class="reference internal" href="#endif"><span class="std std-ref">ENDIF - Required to end an IF/IFNOT/etc.</span></a></p></li>
 <li><p><a class="reference internal" href="#endtask"><span class="std std-ref">ENDTASK - Completes a Sequence/Route/Animation/Event, or any other automation</span></a></p></li>
+<li><p><a class="reference internal" href="#estop"><span class="std std-ref">ESTOP - Emergency stops all locomotives</span></a></p></li>
+<li><p><a class="reference internal" href="#exrail-conditional-statements"><span class="std std-ref">Conditional Statements</span></a></p></li>
+<li><p><a class="reference internal" href="#exrail-message"><span class="std std-ref">MESSAGE( &quot;msg&quot; ) - Writes a message to all clients</span></a></p></li>
 <li><p><a class="reference internal" href="#extt-turntable"><span class="std std-ref">EXTT_TURNTABLE( id, vpin, home_angle, [, &quot;description&quot;] ) - Define an EX-Turntable turntable/traverser</span></a></p></li>
+<li><p><a class="reference internal" href="#fade"><span class="std std-ref">FADE( pin, value, ms ) - Fade an LED</span></a></p></li>
 <li><p><a class="reference internal" href="#foff"><span class="std std-ref">FOFF( func ) - Turn off loco function</span></a></p></li>
 <li><p><a class="reference internal" href="#follow"><span class="std std-ref">FOLLOW( sequence_id ) - Branch or Follow a specified sequence</span></a></p></li>
 <li><p><a class="reference internal" href="#fon"><span class="std std-ref">FON( func ) - Turn on loco function</span></a></p></li>
@@ -995,6 +1012,8 @@
 <li><p><a class="reference internal" href="#ftoggle"><span class="std std-ref">FTOGGLE( func ) - Toggle the state of a loco’s function</span></a></p></li>
 <li><p><a class="reference internal" href="#fwd"><span class="std std-ref">FWD( speed ) - Drive loco forward at DCC speed</span></a></p></li>
 <li><p><a class="reference internal" href="#green"><span class="std std-ref">GREEN( signal_id ) - Set a defined signal to GREEN</span></a></p></li>
+<li><p><a class="reference internal" href="#exrail-hal"><span class="std std-ref">HAL( device, parameters ) - Create a HAL device in myAutomation.h</span></a></p></li>
+<li><p><a class="reference internal" href="#hal-ignore-defaults"><span class="std std-ref">HAL_IGNORE_DEFAULTS - Disable default MCP23017 and PCA9685 HAL devices</span></a></p></li>
 <li><p><a class="reference internal" href="#if"><span class="std std-ref">IF ( vpin ) … ELSE … ENDIF  - Execute commands if the conditions are met</span></a></p></li>
 <li><p><a class="reference internal" href="#ifamber"><span class="std std-ref">IFAMBER( signal_id ) - Test if signal is amber</span></a></p></li>
 <li><p><a class="reference internal" href="#ifclosed"><span class="std std-ref">IFCLOSED( turnout_id ) - Test if a turnout/point is closed</span></a></p></li>
@@ -1011,21 +1030,31 @@
 <li><p><a class="reference internal" href="#iftimeout"><span class="std std-ref">IFTIMEOUT - Tests if “timed out” flag has been set by an ATTIMEOUT() sensor reading attempt</span></a></p></li>
 <li><p><a class="reference internal" href="#ifttposition"><span class="std std-ref">IFTTPOSITION( id, position ) - Test if turntable/traverser is at a position</span></a></p></li>
 <li><p><a class="reference internal" href="#invert-direction"><span class="std std-ref">INVERT_DIRECTION - Switches FWD/REV meaning for loco</span></a></p></li>
+<li><p><a class="reference internal" href="#io-no-hal"><span class="std std-ref">IO_NO_HAL - Reduce FLASH footprint when HAL features not required</span></a></p></li>
+<li><p><a class="reference internal" href="#jmri-sensor"><span class="std std-ref">JMRI_SENSOR(vpin [,count]) - Creates &lt;S&gt; type sensors visible to JMRI</span></a></p></li>
 <li><p><a class="reference internal" href="#join"><span class="std std-ref">JOIN - Join PROG and MAIN track outputs</span></a></p></li>
 <li><p><a class="reference internal" href="#killall"><span class="std std-ref">KILLALL - Kills all running  activities</span></a></p></li>
 <li><p><a class="reference internal" href="#latch"><span class="std std-ref">LATCH( vpin ) - Latches a sensor on</span></a></p></li>
 <li><p><a class="reference internal" href="#lcc"><span class="std std-ref">LCC(eventid) - TBA</span></a></p></li>
 <li><p><a class="reference internal" href="#lccx"><span class="std std-ref">LCCX(senderid,eventid) - TBA</span></a></p></li>
+<li><p><a class="reference internal" href="#lcd"><span class="std std-ref">LCD( row, &quot;msg&quot; ) - Write message on LCD/OLED</span></a></p></li>
+<li><p><a class="reference internal" href="#lcn"><span class="std std-ref">LCN( &quot;msg&quot; ) - Send message to LCN Accessory Network</span></a></p></li>
+<li><p><a class="reference internal" href="#message"><span class="std std-ref">MESSAGE( &quot;msg&quot; ) - Writes a message to all clients</span></a></p></li>
+<li><p><a class="reference internal" href="#movett"><span class="std std-ref">MOVETT( id, steps, activity ) - Move a  to a step position and perform an activity</span></a></p></li>
 <li><p><a class="reference internal" href="#neopixel"><span class="std std-ref">NEOPIXEL( vpin, red, green, blue [,count] ) - Controls the colour of attached Neopixel LEDs</span></a></p></li>
+<li><p><a class="reference internal" href="#neopixel-signal"><span class="std std-ref">NEOPIXEL_SIGNAL( signalid, red, green, blue ) - Controls the colour of attached Neopixel LED</span></a></p></li>
 <li><p><a class="reference internal" href="#onacof"><span class="std std-ref">ONACOF(eventid) - TBA</span></a></p></li>
 <li><p><a class="reference internal" href="#onacon"><span class="std std-ref">ONACON(eventid) - TBA</span></a></p></li>
 <li><p><a class="reference internal" href="#onactivate"><span class="std std-ref">ONACTIVATE( addr, sub_addr ) - Event handler for 2 part DCC accessory packet value 1</span></a></p></li>
+<li><p><a class="reference internal" href="#onactivatel"><span class="std std-ref">ONACTIVATEL( linear ) - Event handler for linear DCC accessory packet value 1</span></a></p></li>
 <li><p><a class="reference internal" href="#onamber"><span class="std std-ref">ONAMBER( signal_id) - Define event handler for when a signal is set to the amber</span></a></p></li>
 <li><p><a class="reference internal" href="#onbutton"><span class="std std-ref">ONBUTTON( vpin ) - Event handler for debounced button presses</span></a></p></li>
 <li><p><a class="reference internal" href="#onchange"><span class="std std-ref">ONCHANGE( vpin ) - Detects a rotary encoder has changed position</span></a></p></li>
+<li><p><a class="reference internal" href="#onclockmins"><span class="std std-ref">ONCLOCKMINS( mins ) - Event handler to be repeated the same time every hour</span></a></p></li>
 <li><p><a class="reference internal" href="#onclocktime"><span class="std std-ref">ONCLOCKTIME( hours, mins ) - Event handler for when the specified clock time is reached</span></a></p></li>
 <li><p><a class="reference internal" href="#onclose"><span class="std std-ref">ONCLOSE( turnout_id ) - Event handler for when a turnout/point is closed</span></a></p></li>
 <li><p><a class="reference internal" href="#ondeactivate"><span class="std std-ref">ONDEACTIVATE( addr, sub_addr ) - Event handler for 2 part DCC accessory packet value 0</span></a></p></li>
+<li><p><a class="reference internal" href="#ondeactivatel"><span class="std std-ref">ONDEACTIVATEL( linear ) - Event handler for linear DCC accessory packet value 0</span></a></p></li>
 <li><p><a class="reference internal" href="#ongreen"><span class="std std-ref">ONGREEN( signal_id) - Define event handler for when a signal is set to the green</span></a></p></li>
 <li><p><a class="reference internal" href="#onlcc"><span class="std std-ref">ONLCC(sender, eventid) - TBA</span></a></p></li>
 <li><p><a class="reference internal" href="#onoverload"><span class="std std-ref">ONOVERLOAD( track ) - Event handler for when an Overload occurs</span></a></p></li>
@@ -1035,14 +1064,17 @@
 <li><p><a class="reference internal" href="#onthrow"><span class="std std-ref">ONTHROW( turnout_id ) - Event handler for when a turnout/point is thrown</span></a></p></li>
 <li><p><a class="reference internal" href="#ontime"><span class="std std-ref">ONTIME( value ) - Event handler for when the specified time is reached</span></a></p></li>
 <li><p>PAD</p></li>
+<li><p><a class="reference internal" href="#parse"><span class="std std-ref">PARSE( &quot;msg&quot; ) - Allows parsing of a DCC-EX API command via myAutomation.h</span></a></p></li>
 <li><p><a class="reference internal" href="#pause"><span class="std std-ref">PAUSE - E-STOP all locos and PAUSE all other EXRAIL tasks</span></a></p></li>
 <li><p><a class="reference internal" href="#pickup-stash"><span class="std std-ref">PICKUP_STASH( stash_id ) - Retrieves and sets the loco/invert from the specified stash</span></a></p></li>
 <li><p><a class="reference internal" href="#pin-turnout"><span class="std std-ref">PIN_TURNOUT( turnout_id, pin [, &quot;description&quot;]|HIDDEN ) - Define a pin operated turnout</span></a></p></li>
+<li><p><a class="reference internal" href="#playsound"><span class="std std-ref">PLAY_SOUND( vpin, fileNumber, volume, ??? ) - Play mp3 files from a Micro-SD card</span></a></p></li>
 <li><p><a class="reference internal" href="#pom"><span class="std std-ref">POM( cv, value ) - Program CV value on main</span></a></p></li>
 <li><p><a class="reference internal" href="#poweroff"><span class="std std-ref">POWEROFF - Power off track</span></a></p></li>
 <li><p><a class="reference internal" href="#poweron"><span class="std std-ref">POWERON - Power on track and UNJOIN</span></a></p></li>
 <li><p><a class="reference internal" href="#print"><span class="std std-ref">PRINT( &quot;msg&quot; ) - Print diagnostic message to Serial Monitor</span></a></p></li>
 <li><p><a class="reference internal" href="#randwait"><span class="std std-ref">RANDWAIT( ??? ) - TBA</span></a></p></li>
+<li><p><a class="reference internal" href="#read-loco"><span class="std std-ref">READ_LOCO - Read loco ID from prog track</span></a></p></li>
 <li><p>READ_LOCO1</p></li>
 <li><p>READ_LOCO2</p></li>
 <li><p><a class="reference internal" href="#red"><span class="std std-ref">RED( signal_id ) - Set defined signal to Red</span></a></p></li>
@@ -1053,32 +1085,52 @@
 <li><p><a class="reference internal" href="#rev"><span class="std std-ref">REV( speed ) - Drive loco in reverse at DCC speed</span></a></p></li>
 <li><p><a class="reference internal" href="#roster"><span class="std std-ref">ROSTER( loco, &quot;name&quot;, &quot;func_map&quot; ) - Provide roster info for a specified loco</span></a></p></li>
 <li><p><a class="reference internal" href="#rotate"><span class="std std-ref">ROTATE( id, position, activity ) - Rotate an EX-Turntable turntable/traverser</span></a></p></li>
+<li><p><a class="reference internal" href="#rotate-dcc"><span class="std std-ref">ROTATE_DCC( id, position ) - Rotate a DCC accessory turntable/traverser</span></a></p></li>
 <li><p><a class="reference internal" href="#route"><span class="std std-ref">ROUTE( id, &quot;description&quot; ) - Define a route, advertised to throttles/clients</span></a></p></li>
 <li><p><a class="reference internal" href="#route-active"><span class="std std-ref">ROUTE_ACTIVE( route_id ) - Activate a Route</span></a></p></li>
+<li><p><a class="reference internal" href="#route-caption"><span class="std std-ref">ROUTE_CAPTION( route_id, &quot;caption&quot; ) - Change the label of the Route button</span></a></p></li>
 <li><p><a class="reference internal" href="#route-disabled"><span class="std std-ref">ROUTE_DISABLED( route_id ) - disable a Route</span></a></p></li>
 <li><p><a class="reference internal" href="#route-hidden"><span class="std std-ref">ROUTE_HIDDEN( route_id ) - Hide a Route from display</span></a></p></li>
 <li><p><a class="reference internal" href="#route-inactive"><span class="std std-ref">ROUTE_INACTIVE( route_id, caption ) - Deactivate a Route</span></a></p></li>
+<li><p><a class="reference internal" href="#screen"><span class="std std-ref">SCREEN( display, row, &quot;msg&quot; ) - Writes a message to a display</span></a></p></li>
 <li><p><a class="reference internal" href="#sendloco"><span class="std std-ref">SENDLOCO( loco, route ) - Start route/sequence with a specified loco</span></a></p></li>
 <li><p><a class="reference internal" href="#sequence"><span class="std std-ref">SEQUENCE( id ) - A general purpose sequence, not advertised to throttles/clients</span></a></p></li>
+<li><p><a class="reference internal" href="#serial"><span class="std std-ref">SERIAL( &quot;msg&quot; ) - Writes direct to Serial</span></a></p></li>
+<li><p><a class="reference internal" href="#serial1"><span class="std std-ref">SERIAL1( &quot;msg&quot; ) - Writes direct to Serial1</span></a></p></li>
+<li><p><a class="reference internal" href="#serial2"><span class="std std-ref">SERIAL2( &quot;msg&quot; ) - Writes direct to Serial2</span></a></p></li>
+<li><p><a class="reference internal" href="#serial3"><span class="std std-ref">SERIAL3( &quot;msg&quot; ) - Writes direct to Serial3</span></a></p></li>
+<li><p><a class="reference internal" href="#serial4"><span class="std std-ref">SERIAL4( &quot;msg&quot; ) - Writes direct to Serial4</span></a></p></li>
+<li><p><a class="reference internal" href="#serial5"><span class="std std-ref">SERIAL5( &quot;msg&quot; ) - Writes direct to Serial5</span></a></p></li>
+<li><p><a class="reference internal" href="#serial6"><span class="std std-ref">SERIAL6( &quot;msg&quot; ) - Writes direct to Serial6</span></a></p></li>
 <li><p><a class="reference internal" href="#servo"><span class="std std-ref">SERVO( id, position, profile ) - Move an animation servo</span></a></p></li>
+<li><p><a class="reference internal" href="#servo2"><span class="std std-ref">SERVO2( id, position, duration ) - Move an animation servo taking duration</span></a></p></li>
+<li><p><a class="reference internal" href="#servo-signal"><span class="std std-ref">SERVO_SIGNAL( vpin, red_pos, amber_pos, green_pos ) - Define a servo based signal</span></a></p></li>
 <li><p><a class="reference internal" href="#servo-turnout"><span class="std std-ref">SERVO_TURNOUT( turnout_id, pin, active_angle, inactive_angle, profile [, &quot;description&quot;]|HIDDEN ) - Define a servo turnout/point</span></a></p></li>
 <li><p><a class="reference internal" href="#set"><span class="std std-ref">SET( pin [,count] ) - Set an output pin HIGH</span></a></p></li>
-<li><p><a class="reference internal" href="#set-power"><span class="std std-ref">SET_POWER( track, ON/OFF ) - Enable/Disable power on a track</span></a></p></li>
-<li><p><a class="reference internal" href="#set-track"><span class="std std-ref">SET_TRACK( track, mode ) - Configures the mode of a track</span></a></p></li>
 <li><p><a class="reference internal" href="#setfreq"><span class="std std-ref">SETFREQ( track, frequency ) - Enable a specific frequency</span></a></p></li>
 <li><p><a class="reference internal" href="#setloco"><span class="std std-ref">SETLOCO( loco ) - Set the loco address for this task</span></a></p></li>
+<li><p><a class="reference internal" href="#set-power"><span class="std std-ref">SET_POWER( track, ON/OFF ) - Enable/Disable power on a track</span></a></p></li>
+<li><p><a class="reference internal" href="#set-track"><span class="std std-ref">SET_TRACK( track, mode ) - Configures the mode of a track</span></a></p></li>
 <li><p><a class="reference internal" href="#signal"><span class="std std-ref">SIGNAL( red_pin, amber_pin, green_pin ) - Define a pin based signal</span></a></p></li>
+<li><p><a class="reference internal" href="#signalh"><span class="std std-ref">SIGNALH( red_pin, amber_pin, green_pin ) - Define a pin based signal with active high pins</span></a></p></li>
 <li><p><a class="reference internal" href="#speed"><span class="std std-ref">SPEED( speed ) - Drive loco in current direction at DCC speed</span></a></p></li>
 <li><p><a class="reference internal" href="#start"><span class="std std-ref">START( id ) - Execute a route or sequence</span></a></p></li>
 <li><p><a class="reference internal" href="#stash"><span class="std std-ref">STASH( stash_id ) - Stashes the current loco/invert</span></a></p></li>
+<li><p><a class="reference internal" href="#stealth"><span class="std std-ref">STEALTH( code ) - include some C++ code in a ROUTE/SEQUENCE</span></a></p></li>
+<li><p><a class="reference internal" href="#stealth-global"><span class="std std-ref">STEALTH_GLOBAL( code )</span></a></p></li>
+<li><p><a class="reference internal" href="#stop"><span class="std std-ref">STOP - Set loco speed to 0</span></a></p></li>
 <li><p><a class="reference internal" href="#throw"><span class="std std-ref">THROW( turnout_id ) - Throw a turnout/point</span></a></p></li>
 <li><p><a class="reference internal" href="#toggle-turnout"><span class="std std-ref">TOGGLE_TURNOUT( turnout_id ) - Toggle a defined turnout/point between CLOSE/THROW</span></a></p></li>
 <li><p><a class="reference internal" href="#tt-addposition"><span class="std std-ref">TT_ADDPOSITION( id, position_id, value, angle [, &quot;description&quot;] ) - Add a turntable position</span></a></p></li>
 <li><p><a class="reference internal" href="#turnout"><span class="std std-ref">TURNOUT( turnout_id, addr, sub_addr [, &quot;description&quot;]|HIDDEN ) - Define a DCC accessory turnout/point</span></a></p></li>
+<li><p><a class="reference internal" href="#turnoutl"><span class="std std-ref">TURNOUTL( turnout_id, addr [, &quot;description&quot;]|HIDDEN ) - Define a DCC accessory turnout/point</span></a></p></li>
 <li><p><a class="reference internal" href="#unjoin"><span class="std std-ref">UNJOIN - Disconnect prog track from main</span></a></p></li>
 <li><p><a class="reference internal" href="#unlatch"><span class="std std-ref">UNLATCH( vpin ) - Remove LATCH on sensor</span></a></p></li>
+<li><p><a class="reference internal" href="#virtual-signal"><span class="std std-ref">VIRTUAL_SIGNAL( id ) - Define a virtual signal</span></a></p></li>
+<li><p><a class="reference internal" href="#virtual-turnout"><span class="std std-ref">VIRTUAL_TURNOUT( turnout_id [, &quot;description&quot;]|HIDDEN ) - Define a virtual turnout, which is backed by another automation sequence</span></a></p></li>
 <li><p><a class="reference internal" href="#waitfor"><span class="std std-ref">WAITFOR( pin ) - Wait for a servo motion to complete prior to continuing</span></a></p></li>
 <li><p><a class="reference internal" href="#waitfortt"><span class="std std-ref">WAITFORTT( id ) - Wait for EX-Turntable turntable/traverser to complete a rotation</span></a></p></li>
+<li><p><a class="reference internal" href="#exrail-withrottle"><span class="std std-ref">WITHROTTLE( &quot;msg&quot; ) - Writes a message to WiThrottle clients</span></a></p></li>
 <li><p><a class="reference internal" href="#xfoff"><span class="std std-ref">XFOFF( cab, func ) - Send DCC function OFF to specific cab</span></a></p></li>
 <li><p><a class="reference internal" href="#xfon"><span class="std std-ref">XFON( cab, func )` - Send DCC function ON to specific cab</span></a></p></li>
 <li><p><a class="reference internal" href="#xftoggle"><span class="std std-ref">XFTOGGLE( loco, func ) - Toggle DCC function on specific loco</span></a></p></li>
@@ -1517,7 +1569,7 @@ Must be proceeded by an <code class="docutils literal notranslate"><span class="
 <h3><a class="toc-backref" href="#id42" role="doc-backlink">Create and manage HAL device objects</a><a class="headerlink" href="#create-and-manage-hal-device-objects" title="Link to this heading"></a></h3>
 <p><hr class="hr-dashed" /></p>
 <section id="hal-device-parameters-create-a-hal-device-in-myautomation-h">
-<span id="hal"></span><h4><code class="docutils literal notranslate"><span class="pre">HAL(</span> <span class="pre">device,</span> <span class="pre">parameters</span> <span class="pre">)</span></code> - Create a HAL device in myAutomation.h<a class="headerlink" href="#hal-device-parameters-create-a-hal-device-in-myautomation-h" title="Link to this heading"></a></h4>
+<span id="exrail-hal"></span><h4><code class="docutils literal notranslate"><span class="pre">HAL(</span> <span class="pre">device,</span> <span class="pre">parameters</span> <span class="pre">)</span></code> - Create a HAL device in myAutomation.h<a class="headerlink" href="#hal-device-parameters-create-a-hal-device-in-myautomation-h" title="Link to this heading"></a></h4>
 <p>Create a HAL device in myAutomation.h rather than needing to use myHal.cpp</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>device</strong> - device <br /> &gt; <strong>parameters</strong> -  as needed <br /></p>
 <details class="summary-for-example-click-to-show">
@@ -2879,9 +2931,9 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="withrottle-msg-writes-a-message-to-withrottle-clients">
-<span id="withrottle"></span><h4><a class="toc-backref" href="#id226" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">WITHROTTLE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to WiThrottle clients</a><a class="headerlink" href="#withrottle-msg-writes-a-message-to-withrottle-clients" title="Link to this heading"></a></h4>
+<span id="exrail-withrottle"></span><h4><a class="toc-backref" href="#id226" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">WITHROTTLE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to WiThrottle clients</a><a class="headerlink" href="#withrottle-msg-writes-a-message-to-withrottle-clients" title="Link to this heading"></a></h4>
 <p>Writes a message to WiThrottle clients (alias of <code class="docutils literal notranslate"><span class="pre">PRINT</span></code>)</p>
-<p>A a WiThrottle throttle will receive <code class="docutils literal notranslate"><span class="pre">Hmtext</span></code>.</p>
+<p>A WiThrottle controller will receive <code class="docutils literal notranslate"><span class="pre">Hmmsg</span></code>.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>msg</strong> - message to write</p>
 <p><hr class="hr-dashed" /></p>
 </section>
@@ -3114,7 +3166,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fd0047d0eb0>
+    <jinja2.runtime.BlockReference object at 0x7f377209c790>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

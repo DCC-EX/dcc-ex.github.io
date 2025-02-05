@@ -35,7 +35,7 @@ EX-CommandStation
 
 Lead Developer
 
-* Chris Harlow - Bournemouth, UK (UKBloke)
+* Chris Harlow - Nottingham, UK (UKBloke)
 
 Developers
 

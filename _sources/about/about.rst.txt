@@ -43,7 +43,6 @@ Developers
 * Neil McKechnie -  Worcestershire, UK
 * Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
 * Herb Morton - Kingwood, Texas, USA (Ash++)
-* Peter Cole - Brisbane, QLD, Australia (peteGSX)
 
 EX-Installer 
 ===============
@@ -59,7 +58,7 @@ EX-WebThrottle
 Developers
 
 * Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
-* Peter Cole - Brisbane, QLD, Australia (peteGSX)
+* Peter Akers - South East QLD, Australia (flash62au)
 * Mani Kumar - Bangalor, India (Mani / Mani Kumar)
 * Matt Hu - Somewhere in Europe
 
@@ -108,6 +107,14 @@ Developers
 
 * Barry Daniel- Gold Coast, Australia (BarryD)
 
+DCCEXProtocol
+=============
+
+Developers
+
+* Peter Akers - South East QLD, Australia (flash62au)
+* Peter Cole - Brisbane, QLD, Australia (peteGSX)
+* Chris Harlow - Nottingham, UK (UKBloke)
 
 DCC++ Classic
 ==============
@@ -129,12 +136,10 @@ Website
 
 Developers
 
-* Peter Cole - Brisbane, QLD, Australia (peteGSX)
 * Peter Akers - South East QLD, Australia (flash62au)
+* Peter Cole - Brisbane, QLD, Australia (peteGSX)
 * Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
 * Mani Kumar - Bangalor, India (Mani / Mani Kumar)
-
-
 
 Hardware / Electronics
 =========================

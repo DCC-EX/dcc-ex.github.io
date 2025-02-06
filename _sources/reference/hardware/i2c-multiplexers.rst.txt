@@ -127,8 +127,8 @@ To configure the PWM and GPIO modules hanging off the mulitplexor on the other s
   //   Number of VPINs
   //   I2C address of module
 
-  HAL(PCA9685, 100, 16, {I2CMux_0, SubBus_01, 0x40)
-  HAL(PCA9685, 116, 16, {I2CMux_0, SubBus_01, 0x41)
+  HAL(PCA9685, 100, 16, {I2CMux_0, SubBus_01}, 0x40)
+  HAL(PCA9685, 116, 16, {I2CMux_0, SubBus_01}, 0x41)
 
   //==============================================================================
   // The following directive defines an MCP23017 16-port I2C GPIO Extender module.
@@ -139,7 +139,7 @@ To configure the PWM and GPIO modules hanging off the mulitplexor on the other s
   //   I2C address of module
   //   Vpin for interrupt (optional)
 
-  HAL(MCP23017, 196, 16, {I2CMux_0, SubBus_03, 0x20)
+  HAL(MCP23017, 196, 16, {I2CMux_0, SubBus_03}, 0x20)
 
 .. note::
    Note that any currently supported |I2C| device can be connected to any port of any multiplexer, provided they are declared in "myAutomation.h" with the HAL() macro, with the correct addressing for multiplexer and sub-bus. It is probably easiest to connect all the |I2C| devices to your multiplexers and let |EX-CS| probe for the them and any devices off each sub-bus, so you can use the console output to guide you in creating the HAL() macro declarations for "myAutomation.h".

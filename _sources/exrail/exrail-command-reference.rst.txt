@@ -2383,26 +2383,28 @@ Controls the colour of one attached Neopixel LED
       //      LCD(4, "")       // Clear LCD/OLED line 
       //      FOLLOW(1)         // Go back to start
 
-      // DFPlayer::create(10000, 10, Serial1);
+      // in myHAL.cpp file use
+       // DFPlayer::create(10000, 10, Serial1);
+      // or within myAutomation.h file use
+       // HAL (DFPlayer, 10000, 10, Serial1)
 
 |hr-dashed|
 
 .. _playsound:
 
-``PLAY_SOUND( vpin, fileNumber, volume, ??? )`` - Play mp3 files from a Micro-SD card
+``PLAYSOUND( vpin, fileNumber, volume )`` - Play mp3 files from a Micro-SD card
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
 
-Play mp3 files from a Micro-SD card, using a DFPlayer MP3 Module.
+EXRAIL Function to Play mp3 files from a Micro-SD card, using a DFPlayer MP3 Module.
 
 Alias of ANOUT.
 
 *Parameters:* |BR|
-|_| > **vpin** - first VPIN allocated |BR|
-|_| > **fileNumber** - number of VPINs allocated |BR|
+|_| > **vpin** - VPIN allocated as DFPLayer |BR|
+|_| > **fileNumber** - Play the File# |BR|
 |_| > **volume** - volume (0-30) |BR|
-|_| > **???** - ??? TBA |BR|
 
 ----
 

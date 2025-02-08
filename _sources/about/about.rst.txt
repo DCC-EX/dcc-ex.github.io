@@ -112,9 +112,9 @@ DCCEXProtocol
 
 Developers
 
-* Peter Akers - South East QLD, Australia (flash62au)
 * Peter Cole - Brisbane, QLD, Australia (peteGSX)
 * Chris Harlow - Nottingham, UK (UKBloke)
+* Peter Akers - South East QLD, Australia (flash62au)
 
 DCC++ Classic
 ==============

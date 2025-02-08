@@ -3,9 +3,9 @@
 .. include:: /include/include-ex-cs.rst
 |EX-CS-LOGO|
 
-**************************************************
-EX-CommandStation (Ready-to-Run or Do-It-Yourself)
-**************************************************
+**********************************************************************************
+EX-CommandStation |BR| |small-start| (Ready-to-Run or Do-It-Yourself) |small-end|
+**********************************************************************************
 
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button|
 

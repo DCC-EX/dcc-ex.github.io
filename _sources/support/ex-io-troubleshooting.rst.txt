@@ -1,9 +1,9 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 .. include:: /include/include-description.rst
-*************************************
-EX-IOExpander FAQ and Troubleshooting
-*************************************
+******************************************
+EX-IOExpander |BR| FAQ and Troubleshooting
+******************************************
 
 |SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-ioexpander-button-small|
 

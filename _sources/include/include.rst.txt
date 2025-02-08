@@ -15,6 +15,14 @@
 .. role:: dcc-ex-text-size-60pct
 .. role:: dcc-ex-text-size-200pct
 ..
+.. |small-start| raw:: html
+
+    <span style="font-size: 75%">
+..
+.. |small-end| raw:: html
+
+    </span>
+..
 .. |_| unicode:: 0xA0
   :trim:
 ..

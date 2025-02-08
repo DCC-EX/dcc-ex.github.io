@@ -3,9 +3,9 @@
 .. include:: /include/include-description.rst
 |EX-TT-LOGO|
 
-************************************
-EX-Turntable FAQ and Troubleshooting
-************************************
+*****************************************
+EX-Turntable |BR| FAQ and Troubleshooting
+*****************************************
 
 |SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-turntable-button-small|
 

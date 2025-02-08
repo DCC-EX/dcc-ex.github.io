@@ -1139,7 +1139,7 @@ Must be proceeded by an ``IF()`` somewhere in the preceding commands.
 Halt the execution of the current block of commands until the sensor is set.
 
 *Parameters:* |BR|
-|_| > **vpin** - vpin (or alias) of the sensor to check |BR|
+|_| > **vpin** - pin/vpin of the sensor to check |BR|
 
 |hr-dashed|
 
@@ -1151,7 +1151,7 @@ Halt the execution of the current block of commands until the sensor is set.
 Halt the execution of the current block of commands until the sensor is cleared.
 
 *Parameters:* |BR|
-|_| > **vpin** - vpin (or alias) of the sensor to check |BR|
+|_| > **vpin** - pin/vpin of the sensor to check |BR|
 |_| > **debounce_time** -  optional debounce time (default 500mS) |BR|
 
 ----
@@ -1225,9 +1225,9 @@ Signal Objects - Definition and Control
 Define a pin based signal, which requires three active low pins to be defined to correspond with red, amber, and green lights. Active low means they are activated when the associated pins are set to 0V or ground.
 
 *Parameters:* |BR|
-|_| > **red_pin** - vpin of the red LED. Also defines the signal_id. |BR|
-|_| > **amber_pin** - vpin of the amber LED |BR|
-|_| > **green_pin** - vpin of the green LED |BR|
+|_| > **red_pin** - pin/vpin of the red LED. Also defines the signal_id. |BR|
+|_| > **amber_pin** - pin/vpin of the amber LED |BR|
+|_| > **green_pin** - pin/vpin of the green LED |BR|
 
 |hr-dashed|
 
@@ -1241,9 +1241,9 @@ As above to define a pin based signal, but with active high pins instead. Active
 For both the SIGNAL/SIGNALH commands, signal colour is set using the pin defined for the red pin. If the signal only has two colours (e.g. RED/GREEN), set the unused colour's pin to 0.
 
 *Parameters:* |BR|
-|_| > **red_pin** - vpin of the red LED. Also defines the signal_id. |BR|
-|_| > **amber_pin** - vpin of the amber LED |BR|
-|_| > **green_pin** - vpin of the green LED |BR|
+|_| > **red_pin** - pin/vpin of the red LED. Also defines the signal_id. |BR|
+|_| > **amber_pin** - pin/vpin of the amber LED |BR|
+|_| > **green_pin** - pin/vpin of the green LED |BR|
 
 |hr-dashed|
 
@@ -1255,7 +1255,7 @@ For both the SIGNAL/SIGNALH commands, signal colour is set using the pin defined
 Define a servo based signal, such as semaphore signals. Each position is an angle to turn the servo to, similar to the SERVO/SERVO2 commands, and SERVO_TURNOUT
 
 *Parameters:* |BR|
-|_| > **vpin** - vpin of the servo |BR|
+|_| > **vpin** - pin/vpin of the servo |BR|
 |_| > **red_pos** - position to move the servo to for a red signal |BR|
 |_| > **amber_pos** - position to move the servo to for a amber signal |BR|
 |_| > **green_pos** - position to move the servo to for a green signal |BR|
@@ -1294,7 +1294,7 @@ Direct use of other aspects does not affect the signal flags. ASPECT and <A> can
 Define a virtual signal, which is backed by another automation sequence
 
 *Parameters:* |BR|
-|_| > **id** - id (or alias) of the virtual signal |BR|
+|_| > **id** - id of the virtual signal |BR|
 
 |hr-dashed|
 
@@ -1306,7 +1306,7 @@ Define a virtual signal, which is backed by another automation sequence
 Test if signal is red.
 
 *Parameters:* |BR|
-|_| > **signal_id** - id (or alias) of the virtual signal to test |BR|
+|_| > **signal_id** - id of the virtual signal to test |BR|
 
 |hr-dashed|
 
@@ -1318,7 +1318,7 @@ Test if signal is red.
 Test if signal is amber
 
 *Parameters:* |BR|
-|_| > **signal_id** - id (or alias) of the virtual signal to test |BR|
+|_| > **signal_id** - id of the virtual signal to test |BR|
 
 |hr-dashed|
 
@@ -1330,7 +1330,7 @@ Test if signal is amber
 Test if signal is green
 
 *Parameters:* |BR|
-|_| > **signal_id** - id (or alias) of the virtual signal to test |BR|
+|_| > **signal_id** - id of the virtual signal to test |BR|
 
 |hr-dashed|
 
@@ -1342,7 +1342,7 @@ Test if signal is green
 Set a defined signal to GREEN (see SIGNAL).
 
 *Parameters:* |BR|
-|_| > **signal_id** - id (or alias) of the virtual signal to set |BR|
+|_| > **signal_id** - id of the virtual signal to set |BR|
 
 |hr-dashed|
 
@@ -1354,7 +1354,7 @@ Set a defined signal to GREEN (see SIGNAL).
 Set a defined signal to Amber (See SIGNAL).
 
 *Parameters:* |BR|
-|_| > **signal_id** - id (or alias) of the virtual signal to set |BR|
+|_| > **signal_id** - id of the virtual signal to set |BR|
 
 |hr-dashed|
 
@@ -1391,7 +1391,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 Define an event handler for when a signal is set to the green aspect.
 
 *Parameters:* |BR|
-|_| > **signal_id** - id (or alias) of the virtual signal to set |BR|
+|_| > **signal_id** - id of the virtual signal to set |BR|
 
 |hr-dashed|
 
@@ -1403,7 +1403,7 @@ Define an event handler for when a signal is set to the green aspect.
 Define an event handler for when a signal is set to the amber aspect.
 
 *Parameters:* |BR|
-|_| > **signal_id** - id (or alias) of the virtual signal to set |BR|
+|_| > **signal_id** - id of the virtual signal to set |BR|
 
 |hr-dashed|
 
@@ -1488,7 +1488,7 @@ Define a pin operated turnout. When sending a CLOSE command, the pin will be HIG
 
 *Parameters:* |BR|
 |_| > **turnout_id** - unique Id for the turnout/point servo |BR|
-|_| > **pin** - vpin to which the servo is attached |BR|
+|_| > **pin** - pin/vpin to which the servo is attached |BR|
 |_| > **description** - The description that will be assigned to the turnout/point, or |BR|
 |_| > *HIDDEN* - keyword - if used instead of the "description" the Turnout/point will not appear in the lists sent to throttle/controllers |BR|
 
@@ -1874,7 +1874,7 @@ This command causes the creation of |JMRI| <S> type sensors in a way that is sim
 A sequence will not progress until a sensor has been triggered.
 
 *Parameters:* |BR|
-|_| > **vpin** - vpin (or alias) of the sensor to test
+|_| > **vpin** - pin/vpin of the sensor to test
 
 |hr-dashed|
 
@@ -1884,7 +1884,7 @@ A sequence will not progress until a sensor has been triggered.
 A sequence will not progress until after a sensor has been triggered and then is off for 0.5 seconds.
 
 *Parameters:* |BR|
-|_| > **vpin** - vpin (or alias) of the sensor to test
+|_| > **vpin** - pin/vpin of the sensor to test
 
 |hr-dashed|
 
@@ -1896,7 +1896,7 @@ A sequence will not progress until after a sensor has been triggered and then is
 A sequence will not progress until either a sensor is active/triggered, or if the timer runs out. It then continues and sets a testable "timed out" flag (see ``IFTIMEOUT``).
 
 *Parameters:* |BR|
-|_| > **vpin** - vpin (or alias) of the sensor to test |BR|
+|_| > **vpin** - pin/vpin of the sensor to test |BR|
 |_| > **timeout_ms** - time/duration to wait for in milliseconds
 
 |hr-dashed|
@@ -1907,7 +1907,7 @@ A sequence will not progress until either a sensor is active/triggered, or if th
 If sensor activated or latched, continue. Otherwise skip to ELSE or matching ENDIF.
 
 *Parameters:* |BR|
-|_| > **vpin** - vpin (or alias) of the sensor to test
+|_| > **vpin** - pin/vpin of the sensor to test
 
 See the :ref:`Conditional Statements section <exrail_conditional_statements>` for more information on IF ... ELSE ... ENDIF commands.
 
@@ -1919,7 +1919,7 @@ See the :ref:`Conditional Statements section <exrail_conditional_statements>` fo
 If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or matching ENDIF.
 
 *Parameters:* |BR|
-|_| > **vpin** - vpin (or alias) of the sensor to test
+|_| > **vpin** - pin/vpin of the sensor to test
 
 See the :ref:`Conditional Statements section <exrail_conditional_statements>` for more information on IF ... ELSE ... ENDIF commands.
 
@@ -1956,7 +1956,7 @@ Note that with the sensor commands `IF()`, `IFNOT()`, `IFTIMEOUT()`, `AT()`, `AT
 Waits for an analog pin to reach the specified value.
 
 *Parameters:* |BR|
-|_| > **vpin** - analogue pin. vpin (or alias) of the sensor to test |BR|
+|_| > **vpin** - analogue pin of the sensor to test |BR|
 |_| > **value** - value to test against
 
 |hr-dashed|
@@ -1969,7 +1969,7 @@ Waits for an analog pin to reach the specified value.
 Waits for an analog pin to go below the specified value.
 
 *Parameters:* |BR|
-|_| > **vpin** - analogue pin. vpin (or alias) of the sensor to test |BR|
+|_| > **vpin** - analogue pin of the sensor to test |BR|
 |_| > **value** - value to test against
 
 |hr-dashed|
@@ -1982,7 +1982,7 @@ Waits for an analog pin to go below the specified value.
 Test if analog pin reading is greater than or equal to value (>=).
 
 *Parameters:* |BR|
-|_| > **vpin** - analogue pin. vpin (or alias) of the sensor to test |BR|
+|_| > **vpin** - analogue pin of the sensor to test |BR|
 |_| > **value** - value to test against
 
 |hr-dashed|
@@ -1995,7 +1995,7 @@ Test if analog pin reading is greater than or equal to value (>=).
 Test if analog pin reading is less than value (<).
 
 *Parameters:* |BR|
-|_| > **vpin** - Analogue pin. vpin (or alias) of the sensor to test |BR|
+|_| > **vpin** - analogue pin of the sensor to test |BR|
 |_| > **value** - value to test against
 
   All the `IFGTE()`, `IFLT()`, `ATGTE()`and `ATLT()` commands read the analog value from an analog input pin (A0 - A5 on an Arduino Mega) or an analog input from an I/O expander module. Valid values are defined by the capability of the analog to digital converter in use.
@@ -2029,8 +2029,6 @@ Test if analog pin reading is less than value (<).
 
 |force-break|
 
-LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used to trigger a virtual sensor to act as a state flag for EXRAIL. As this effects the state of a sensor, it can be tested via IF/IFNOT and will also work with AT/AFTER.
-
 |hr-dashed|
 
 .. _attimeout1:
@@ -2043,7 +2041,7 @@ LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used
 Waits for ???.
 
 *Parameters:* |BR|
-|_| > **vpin** - analogue pin. vpin (or alias) of the sensor to test |BR|
+|_| > **vpin** - analogue pin of the sensor to test |BR|
 |_| > **value** - value to test against
 
 |hr-dashed|
@@ -2058,7 +2056,7 @@ Waits for ???.
 Waits for ???.
 
 *Parameters:* |BR|
-|_| > **vpin** - analogue pin. vpin (or alias) of the sensor to test |BR|
+|_| > **vpin** - analogue pin of the sensor to test |BR|
 |_| > **value** - value to test against
 
 
@@ -2074,7 +2072,7 @@ Waits for ???.
 ???
 
 *Parameters:* |BR|
-|_| > **vpin** - analogue pin. vpin (or alias) of the sensor to ???
+|_| > **vpin** - analogue pin of the sensor to ???
 
 |hr-dashed|
 
@@ -2086,7 +2084,7 @@ Waits for ???.
 Latches a sensor on (Sensors 0-255 only).
 
 *Parameters:* |BR|
-|_| > **vpin** - vpin (or alias) of the sensor to unlatch
+|_| > **vpin** - pin/vpin of the sensor to latch
 
 See UNLATCH() for examples.
 
@@ -2100,7 +2098,7 @@ See UNLATCH() for examples.
 Remove LATCH on sensor.
 
 *Parameters:* |BR|
-|_| > **vpin** - vpin (or alias) of the sensor to unlatch
+|_| > **vpin** - pin/vpin of the sensor to unlatch
 
 .. collapse:: For example: (click to show)
 
@@ -2149,6 +2147,9 @@ Remove LATCH on sensor.
         ENDIF
       DONE // will also stop loco
 
+
+LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used to trigger a virtual sensor to act as a state flag for EXRAIL. As this effects the state of a sensor, it can be tested via IF/IFNOT and will also work with AT/AFTER.
+
 |hr-dashed|
 
 .. _onbutton:
@@ -2163,7 +2164,7 @@ This new event handler is handy for mimic panel and other buttons that need to p
 Note that this works for active low buttons only.
 
 *Parameters:* |BR|
-|_| > **vpin** - vpin to test
+|_| > **vpin** - pin/vpin to test
 
 |hr-dashed|
 
@@ -2177,7 +2178,7 @@ Note that this works for active low buttons only.
 A new event handler to perform actions when a sensor is activated. Like the other sensor triggers such as ``IF``, ``AT``, and ``AFTER``, a negative value can be used for an active high sensor.
 
 *Parameters:* |BR|
-|_| > **vpin** - vpin (or alias) of the sensor to test
+|_| > **vpin** - pin/vpin of the sensor to test
 
 |force-break|
 
@@ -2195,39 +2196,39 @@ Output and LED control
 
 .. _set:
 
-``SET( pin [,count] )`` - Set an output pin HIGH
+``SET( vpin [,count] )`` - Set an output pin HIGH
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Set output pin (set to HIGH)
 
 *Parameters:* |BR|
-|_| > **pin** - The first pin number connected that you which to change |BR|
+|_| > **vpin** - The first pin number connected that you which to change |BR|
 |_| > **count** - optional number of pins to change, starting from and including **pin**. Default is one
 
 |hr-dashed|
 
 .. _reset:
 
-``RESET( pin [,count] )`` - Reset output pin
+``RESET( vpin [,count] )`` - Reset output pin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Reset output pin (set to LOW)
 
 *Parameters:* |BR|
-|_| > **pin** - The first pin number connected that you which to change |BR|
+|_| > **vpin** - The first pin number connected that you which to change |BR|
 |_| > **count** - optional number of pins to change, starting from and including **pin**. Default is one
 
 |hr-dashed|
 
 .. _fade:
 
-``FADE( pin, value, ms )`` - Fade an LED
+``FADE( vpin, value, ms )`` - Fade an LED
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Fade an LED on a servo driver to specified value taking specified time.
 
 *Parameters:* |BR|
-|_| > **pin** -  pin/vpin of the LED |BR|
+|_| > **vpin** -  pin of the LED |BR|
 |_| > **value** - value to fade the pin to |BR|
 |_| > **ms** - duration taken to get to the value in milliseconds
 
@@ -2235,7 +2236,7 @@ Fade an LED on a servo driver to specified value taking specified time.
 
 .. _blink:
 
-``BLINK( pin, onMs, offMs )`` - Blink an output pin
+``BLINK( vpin, onMs, offMs )`` - Blink an output pin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
@@ -2243,7 +2244,7 @@ Fade an LED on a servo driver to specified value taking specified time.
 This will start a pin/Vpin blinking until such time as it is ``SET``, ``RESET``, or set via a signal operation.
 
 *Parameters:* |BR|
-|_| > **pin** -  pin/vpin of the LED |BR|
+|_| > **vpin** -  pin of the LED |BR|
 |_| > **onMs** - time/duration for the pin to be on in milliseconds |BR|
 |_| > **offMs** - off time/duration in milliseconds
 

@@ -975,7 +975,7 @@
 <li><p><a class="reference internal" href="#attimeout2"><span class="std std-ref">ATTIMOUT2 ( vpin, value ) - TBA</span></a></p></li>
 <li><p><a class="reference internal" href="#automation"><span class="std std-ref">AUTOMATION( id, &quot;description&quot; ) - Define an automation, advertised to throttles/clients</span></a></p></li>
 <li><p><a class="reference internal" href="#autostart"><span class="std std-ref">AUTOSTART - Automatically start sequence at this point during EX-CommandStation startup</span></a></p></li>
-<li><p><a class="reference internal" href="#blink"><span class="std std-ref">BLINK( pin, onMs, offMs ) - Blink an output pin</span></a></p></li>
+<li><p><a class="reference internal" href="#blink"><span class="std std-ref">BLINK( vpin, onMs, offMs ) - Blink an output pin</span></a></p></li>
 <li><p><a class="reference internal" href="#broadcast"><span class="std std-ref">BROADCAST( &quot;msg&quot; ) - Broadcast to all throttles/JMRI on serial and WiFi</span></a></p></li>
 <li><p><a class="reference internal" href="#call"><span class="std std-ref">CALL( id ) - Branch to a separate sequence</span></a></p></li>
 <li><p><a class="reference internal" href="#clear-all-stash"><span class="std std-ref">CLEAR_ALL_STASH - Zeroes all stashes</span></a></p></li>
@@ -1001,7 +1001,7 @@
 <li><p><a class="reference internal" href="#endtask"><span class="std std-ref">ENDTASK - Completes a Sequence/Route/Animation/Event, or any other automation</span></a></p></li>
 <li><p><a class="reference internal" href="#estop"><span class="std std-ref">ESTOP - Emergency stops all locomotives</span></a></p></li>
 <li><p><a class="reference internal" href="#extt-turntable"><span class="std std-ref">EXTT_TURNTABLE( id, vpin, home_angle, [, &quot;description&quot;] ) - Define an EX-Turntable turntable/traverser</span></a></p></li>
-<li><p><a class="reference internal" href="#fade"><span class="std std-ref">FADE( pin, value, ms ) - Fade an LED</span></a></p></li>
+<li><p><a class="reference internal" href="#fade"><span class="std std-ref">FADE( vpin, value, ms ) - Fade an LED</span></a></p></li>
 <li><p><a class="reference internal" href="#foff"><span class="std std-ref">FOFF( func ) - Turn off loco function</span></a></p></li>
 <li><p><a class="reference internal" href="#follow"><span class="std std-ref">FOLLOW( sequence_id ) - Branch or Follow a specified sequence</span></a></p></li>
 <li><p><a class="reference internal" href="#fon"><span class="std std-ref">FON( func ) - Turn on loco function</span></a></p></li>
@@ -1075,7 +1075,7 @@
 <li><p><a class="reference internal" href="#read-loco"><span class="std std-ref">READ_LOCO - Read loco ID from prog track</span></a></p></li>
 <li><p><a class="reference internal" href="#red"><span class="std std-ref">RED( signal_id ) - Set defined signal to Red</span></a></p></li>
 <li><p><a class="reference internal" href="#reserve"><span class="std std-ref">RESERVE( block_id ) - Reserve a block</span></a></p></li>
-<li><p><a class="reference internal" href="#reset"><span class="std std-ref">RESET( pin [,count] ) - Reset output pin</span></a></p></li>
+<li><p><a class="reference internal" href="#reset"><span class="std std-ref">RESET( vpin [,count] ) - Reset output pin</span></a></p></li>
 <li><p><a class="reference internal" href="#resume"><span class="std std-ref">RESUME - Resume all paused tasks, including loco movement</span></a></p></li>
 <li><p><a class="reference internal" href="#return"><span class="std std-ref">RETURN - Return to the calling sequence when completed</span></a></p></li>
 <li><p><a class="reference internal" href="#rev"><span class="std std-ref">REV( speed ) - Drive loco in reverse at DCC speed</span></a></p></li>
@@ -1102,7 +1102,7 @@
 <li><p><a class="reference internal" href="#servo2"><span class="std std-ref">SERVO2( id, position, duration ) - Move an animation servo taking duration</span></a></p></li>
 <li><p><a class="reference internal" href="#servo-signal"><span class="std std-ref">SERVO_SIGNAL( vpin, red_pos, amber_pos, green_pos ) - Define a servo based signal</span></a></p></li>
 <li><p><a class="reference internal" href="#servo-turnout"><span class="std std-ref">SERVO_TURNOUT( turnout_id, pin, active_angle, inactive_angle, profile [, &quot;description&quot;]|HIDDEN ) - Define a servo turnout/point</span></a></p></li>
-<li><p><a class="reference internal" href="#set"><span class="std std-ref">SET( pin [,count] ) - Set an output pin HIGH</span></a></p></li>
+<li><p><a class="reference internal" href="#set"><span class="std std-ref">SET( vpin [,count] ) - Set an output pin HIGH</span></a></p></li>
 <li><p><a class="reference internal" href="#setfreq"><span class="std std-ref">SETFREQ( track, frequency ) - Enable a specific frequency</span></a></p></li>
 <li><p><a class="reference internal" href="#setloco"><span class="std std-ref">SETLOCO( loco ) - Set the loco address for this task</span></a></p></li>
 <li><p><a class="reference internal" href="#set-power"><span class="std std-ref">SET_POWER( track, ON/OFF ) - Enable/Disable power on a track</span></a></p></li>
@@ -1548,13 +1548,13 @@ Must be proceeded by an <code class="docutils literal notranslate"><span class="
 <section id="at-vpin-halt-command-execution-until-the-sensor-is-set">
 <span id="at"></span><h4><a class="toc-backref" href="#id103" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AT(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - Halt command execution until the sensor is set</a><a class="headerlink" href="#at-vpin-halt-command-execution-until-the-sensor-is-set" title="Link to this heading"></a></h4>
 <p>Halt the execution of the current block of commands until the sensor is set.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - vpin (or alias) of the sensor to check <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to check <br /></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="after-vpin-debounce-time-halt-command-execution-until-the-sensor-is-cleared">
 <span id="after"></span><h4><a class="toc-backref" href="#id104" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AFTER(</span> <span class="pre">vpin</span> <span class="pre">[,debounce_time]</span> <span class="pre">)</span></code> - Halt command execution until the sensor is cleared</a><a class="headerlink" href="#after-vpin-debounce-time-halt-command-execution-until-the-sensor-is-cleared" title="Link to this heading"></a></h4>
 <p>Halt the execution of the current block of commands until the sensor is cleared.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - vpin (or alias) of the sensor to check <br /> &gt; <strong>debounce_time</strong> -  optional debounce time (default 500mS) <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to check <br /> &gt; <strong>debounce_time</strong> -  optional debounce time (default 500mS) <br /></p>
 </section>
 </section>
 </section>
@@ -1619,20 +1619,20 @@ Must be proceeded by an <code class="docutils literal notranslate"><span class="
 <section id="signal-red-pin-amber-pin-green-pin-define-a-pin-based-signal">
 <span id="signal"></span><h4><a class="toc-backref" href="#id105" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SIGNAL(</span> <span class="pre">red_pin,</span> <span class="pre">amber_pin,</span> <span class="pre">green_pin</span> <span class="pre">)</span></code> - Define a pin based signal</a><a class="headerlink" href="#signal-red-pin-amber-pin-green-pin-define-a-pin-based-signal" title="Link to this heading"></a></h4>
 <p>Define a pin based signal, which requires three active low pins to be defined to correspond with red, amber, and green lights. Active low means they are activated when the associated pins are set to 0V or ground.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>red_pin</strong> - vpin of the red LED. Also defines the signal_id. <br /> &gt; <strong>amber_pin</strong> - vpin of the amber LED <br /> &gt; <strong>green_pin</strong> - vpin of the green LED <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>red_pin</strong> - pin/vpin of the red LED. Also defines the signal_id. <br /> &gt; <strong>amber_pin</strong> - pin/vpin of the amber LED <br /> &gt; <strong>green_pin</strong> - pin/vpin of the green LED <br /></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="signalh-red-pin-amber-pin-green-pin-define-a-pin-based-signal-with-active-high-pins">
 <span id="signalh"></span><h4><a class="toc-backref" href="#id106" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SIGNALH(</span> <span class="pre">red_pin,</span> <span class="pre">amber_pin,</span> <span class="pre">green_pin</span> <span class="pre">)</span></code> - Define a pin based signal with active high pins</a><a class="headerlink" href="#signalh-red-pin-amber-pin-green-pin-define-a-pin-based-signal-with-active-high-pins" title="Link to this heading"></a></h4>
 <p>As above to define a pin based signal, but with active high pins instead. Active high means they are activated when the associated pins are set to 5V (or 3.3V if using a 3.3V device).</p>
 <p>For both the SIGNAL/SIGNALH commands, signal colour is set using the pin defined for the red pin. If the signal only has two colours (e.g. RED/GREEN), set the unused colour’s pin to 0.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>red_pin</strong> - vpin of the red LED. Also defines the signal_id. <br /> &gt; <strong>amber_pin</strong> - vpin of the amber LED <br /> &gt; <strong>green_pin</strong> - vpin of the green LED <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>red_pin</strong> - pin/vpin of the red LED. Also defines the signal_id. <br /> &gt; <strong>amber_pin</strong> - pin/vpin of the amber LED <br /> &gt; <strong>green_pin</strong> - pin/vpin of the green LED <br /></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="servo-signal-vpin-red-pos-amber-pos-green-pos-define-a-servo-based-signal">
 <span id="servo-signal"></span><h4><a class="toc-backref" href="#id107" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERVO_SIGNAL(</span> <span class="pre">vpin,</span> <span class="pre">red_pos,</span> <span class="pre">amber_pos,</span> <span class="pre">green_pos</span> <span class="pre">)</span></code> - Define a servo based signal</a><a class="headerlink" href="#servo-signal-vpin-red-pos-amber-pos-green-pos-define-a-servo-based-signal" title="Link to this heading"></a></h4>
 <p>Define a servo based signal, such as semaphore signals. Each position is an angle to turn the servo to, similar to the SERVO/SERVO2 commands, and SERVO_TURNOUT</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - vpin of the servo <br /> &gt; <strong>red_pos</strong> - position to move the servo to for a red signal <br /> &gt; <strong>amber_pos</strong> - position to move the servo to for a amber signal <br /> &gt; <strong>green_pos</strong> - position to move the servo to for a green signal <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the servo <br /> &gt; <strong>red_pos</strong> - position to move the servo to for a red signal <br /> &gt; <strong>amber_pos</strong> - position to move the servo to for a amber signal <br /> &gt; <strong>green_pos</strong> - position to move the servo to for a green signal <br /></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="dcc-signal-id-addr-sub-addr-define-a-dcc-accessory-signal">
@@ -1651,37 +1651,37 @@ by the RED/AMBER/GREEN commands.   In each case the command uses the signal addr
 <section id="virtual-signal-id-define-a-virtual-signal">
 <span id="virtual-signal"></span><h4><a class="toc-backref" href="#id110" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">VIRTUAL_SIGNAL(</span> <span class="pre">id</span> <span class="pre">)</span></code> - Define a virtual signal</a><a class="headerlink" href="#virtual-signal-id-define-a-virtual-signal" title="Link to this heading"></a></h4>
 <p>Define a virtual signal, which is backed by another automation sequence</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>id</strong> - id (or alias) of the virtual signal <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>id</strong> - id of the virtual signal <br /></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="ifred-signal-id-test-if-signal-is-red">
 <span id="ifred"></span><h4><a class="toc-backref" href="#id111" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFRED(</span> <span class="pre">signal_id</span> <span class="pre">)</span></code> - Test if signal is red</a><a class="headerlink" href="#ifred-signal-id-test-if-signal-is-red" title="Link to this heading"></a></h4>
 <p>Test if signal is red.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>signal_id</strong> - id (or alias) of the virtual signal to test <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>signal_id</strong> - id of the virtual signal to test <br /></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="ifamber-signal-id-test-if-signal-is-amber">
 <span id="ifamber"></span><h4><a class="toc-backref" href="#id112" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFAMBER(</span> <span class="pre">signal_id</span> <span class="pre">)</span></code> - Test if signal is amber</a><a class="headerlink" href="#ifamber-signal-id-test-if-signal-is-amber" title="Link to this heading"></a></h4>
 <p>Test if signal is amber</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>signal_id</strong> - id (or alias) of the virtual signal to test <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>signal_id</strong> - id of the virtual signal to test <br /></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="ifgreen-signal-id-test-if-signal-is-green">
 <span id="ifgreen"></span><h4><a class="toc-backref" href="#id113" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFGREEN(</span> <span class="pre">signal_id</span> <span class="pre">)</span></code> - Test if signal is green</a><a class="headerlink" href="#ifgreen-signal-id-test-if-signal-is-green" title="Link to this heading"></a></h4>
 <p>Test if signal is green</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>signal_id</strong> - id (or alias) of the virtual signal to test <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>signal_id</strong> - id of the virtual signal to test <br /></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="green-signal-id-set-a-defined-signal-to-green">
 <span id="green"></span><h4><a class="toc-backref" href="#id114" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">GREEN(</span> <span class="pre">signal_id</span> <span class="pre">)</span></code> - Set a defined signal to GREEN</a><a class="headerlink" href="#green-signal-id-set-a-defined-signal-to-green" title="Link to this heading"></a></h4>
 <p>Set a defined signal to GREEN (see SIGNAL).</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>signal_id</strong> - id (or alias) of the virtual signal to set <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>signal_id</strong> - id of the virtual signal to set <br /></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="amber-signal-id-set-a-defined-signal-to-amber">
 <span id="amber"></span><h4><a class="toc-backref" href="#id115" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AMBER(</span> <span class="pre">signal_id</span> <span class="pre">)</span></code> - Set a defined signal to Amber</a><a class="headerlink" href="#amber-signal-id-set-a-defined-signal-to-amber" title="Link to this heading"></a></h4>
 <p>Set a defined signal to Amber (See SIGNAL).</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>signal_id</strong> - id (or alias) of the virtual signal to set <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>signal_id</strong> - id of the virtual signal to set <br /></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="red-signal-id-set-defined-signal-to-red">
@@ -1701,13 +1701,13 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <section id="ongreen-signal-id-define-event-handler-for-when-a-signal-is-set-to-the-green">
 <span id="ongreen"></span><h4><a class="toc-backref" href="#id118" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONGREEN(</span> <span class="pre">signal_id)</span></code> - Define event handler for when a signal is set to the green</a><a class="headerlink" href="#ongreen-signal-id-define-event-handler-for-when-a-signal-is-set-to-the-green" title="Link to this heading"></a></h4>
 <p>Define an event handler for when a signal is set to the green aspect.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>signal_id</strong> - id (or alias) of the virtual signal to set <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>signal_id</strong> - id of the virtual signal to set <br /></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="onamber-signal-id-define-event-handler-for-when-a-signal-is-set-to-the-amber">
 <span id="onamber"></span><h4><a class="toc-backref" href="#id119" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONAMBER(</span> <span class="pre">signal_id)</span></code> - Define event handler for when a signal is set to the amber</a><a class="headerlink" href="#onamber-signal-id-define-event-handler-for-when-a-signal-is-set-to-the-amber" title="Link to this heading"></a></h4>
 <p>Define an event handler for when a signal is set to the amber aspect.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>signal_id</strong> - id (or alias) of the virtual signal to set <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>signal_id</strong> - id of the virtual signal to set <br /></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="onred-signal-id-define-event-handler-for-when-a-signal-is-set-to-the-red-aspect">
@@ -1767,7 +1767,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <section id="pin-turnout-turnout-id-pin-description-hidden-define-a-pin-operated-turnout">
 <span id="pin-turnout"></span><h4><a class="toc-backref" href="#id123" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">PIN_TURNOUT(</span> <span class="pre">turnout_id,</span> <span class="pre">pin</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]|HIDDEN</span> <span class="pre">)</span></code> - Define a pin operated turnout</a><a class="headerlink" href="#pin-turnout-turnout-id-pin-description-hidden-define-a-pin-operated-turnout" title="Link to this heading"></a></h4>
 <p>Define a pin operated turnout. When sending a CLOSE command, the pin will be HIGH, and a THROW command will set the pin LOW.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>turnout_id</strong> - unique Id for the turnout/point servo <br /> &gt; <strong>pin</strong> - vpin to which the servo is attached <br /> &gt; <strong>description</strong> - The description that will be assigned to the turnout/point, or <br /> &gt; <em>HIDDEN</em> - keyword - if used instead of the “description” the Turnout/point will not appear in the lists sent to throttle/controllers <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>turnout_id</strong> - unique Id for the turnout/point servo <br /> &gt; <strong>pin</strong> - pin/vpin to which the servo is attached <br /> &gt; <strong>description</strong> - The description that will be assigned to the turnout/point, or <br /> &gt; <em>HIDDEN</em> - keyword - if used instead of the “description” the Turnout/point will not appear in the lists sent to throttle/controllers <br /></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="servo-turnout-turnout-id-pin-active-angle-inactive-angle-profile-description-hidden-define-a-servo-turnout-point">
@@ -1995,32 +1995,32 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <section id="at-vpin-causes-a-sequence-to-wait-until-a-sensor-is-active-triggered">
 <h4><a class="toc-backref" href="#id146" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AT(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - Causes a sequence to wait until a sensor is active/triggered</a><a class="headerlink" href="#at-vpin-causes-a-sequence-to-wait-until-a-sensor-is-active-triggered" title="Link to this heading"></a></h4>
 <p>A sequence will not progress until a sensor has been triggered.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - vpin (or alias) of the sensor to test</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to test</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="after-vpin-causes-a-sequence-to-wait-until-after-a-sensor-has-been-triggered">
 <h4><a class="toc-backref" href="#id147" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AFTER(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - Causes a sequence to wait until after a sensor has been triggered</a><a class="headerlink" href="#after-vpin-causes-a-sequence-to-wait-until-after-a-sensor-has-been-triggered" title="Link to this heading"></a></h4>
 <p>A sequence will not progress until after a sensor has been triggered and then is off for 0.5 seconds.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - vpin (or alias) of the sensor to test</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to test</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="attimeout-vpin-timeout-ms-causes-a-sequence-to-wait-until-either-a-sensor-is-active-triggered-or-if-the-timer-runs-out">
 <span id="attimeout"></span><h4><a class="toc-backref" href="#id148" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ATTIMEOUT(</span> <span class="pre">vpin,</span> <span class="pre">timeout_ms</span> <span class="pre">)</span></code> - Causes a sequence to wait until either a sensor is active/triggered, or if the timer runs out</a><a class="headerlink" href="#attimeout-vpin-timeout-ms-causes-a-sequence-to-wait-until-either-a-sensor-is-active-triggered-or-if-the-timer-runs-out" title="Link to this heading"></a></h4>
 <p>A sequence will not progress until either a sensor is active/triggered, or if the timer runs out. It then continues and sets a testable “timed out” flag (see <code class="docutils literal notranslate"><span class="pre">IFTIMEOUT</span></code>).</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - vpin (or alias) of the sensor to test <br /> &gt; <strong>timeout_ms</strong> - time/duration to wait for in milliseconds</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to test <br /> &gt; <strong>timeout_ms</strong> - time/duration to wait for in milliseconds</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="if-vpin-if-sensor-activated-or-latched-continue">
 <h4><a class="toc-backref" href="#id149" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IF(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - If sensor activated or latched, continue</a><a class="headerlink" href="#if-vpin-if-sensor-activated-or-latched-continue" title="Link to this heading"></a></h4>
 <p>If sensor activated or latched, continue. Otherwise skip to ELSE or matching ENDIF.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - vpin (or alias) of the sensor to test</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to test</p>
 <p>See the <a class="reference internal" href="#exrail-conditional-statements"><span class="std std-ref">Conditional Statements section</span></a> for more information on IF … ELSE … ENDIF commands.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="ifnot-vpin-if-sensor-not-activated-and-not-latched-continue">
 <h4><a class="toc-backref" href="#id150" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFNOT(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - If sensor NOT activated and NOT latched, continue</a><a class="headerlink" href="#ifnot-vpin-if-sensor-not-activated-and-not-latched-continue" title="Link to this heading"></a></h4>
 <p>If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or matching ENDIF.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - vpin (or alias) of the sensor to test</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to test</p>
 <p>See the <a class="reference internal" href="#exrail-conditional-statements"><span class="std std-ref">Conditional Statements section</span></a> for more information on IF … ELSE … ENDIF commands.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
@@ -2040,25 +2040,25 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <section id="atgte-vpin-value-waits-for-an-analog-pin-to-reach-a-value">
 <span id="atgte"></span><h4><a class="toc-backref" href="#id152" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ATGTE(</span> <span class="pre">vpin,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Waits for an analog pin to reach a value</a><a class="headerlink" href="#atgte-vpin-value-waits-for-an-analog-pin-to-reach-a-value" title="Link to this heading"></a></h4>
 <p>Waits for an analog pin to reach the specified value.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin. vpin (or alias) of the sensor to test <br /> &gt; <strong>value</strong> - value to test against</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to test <br /> &gt; <strong>value</strong> - value to test against</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="atlt-vpin-value-waits-for-an-analog-pin-to-go-below-a-value">
 <span id="atlt"></span><h4><a class="toc-backref" href="#id153" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ATLT</span> <span class="pre">(</span> <span class="pre">vpin,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Waits for an analog pin to go below a value</a><a class="headerlink" href="#atlt-vpin-value-waits-for-an-analog-pin-to-go-below-a-value" title="Link to this heading"></a></h4>
 <p>Waits for an analog pin to go below the specified value.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin. vpin (or alias) of the sensor to test <br /> &gt; <strong>value</strong> - value to test against</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to test <br /> &gt; <strong>value</strong> - value to test against</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="ifgte-vpin-value-test-if-analog-pin-reading-is-greater-than-or-equal-to-value">
 <span id="ifgte"></span><h4><a class="toc-backref" href="#id154" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFGTE(</span> <span class="pre">vpin,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Test if analog pin reading is greater than or equal to value</a><a class="headerlink" href="#ifgte-vpin-value-test-if-analog-pin-reading-is-greater-than-or-equal-to-value" title="Link to this heading"></a></h4>
 <p>Test if analog pin reading is greater than or equal to value (&gt;=).</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin. vpin (or alias) of the sensor to test <br /> &gt; <strong>value</strong> - value to test against</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to test <br /> &gt; <strong>value</strong> - value to test against</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="iflt-vpin-value-test-if-analog-pin-reading-is-less-than-value">
 <span id="iflt"></span><h4><a class="toc-backref" href="#id155" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFLT(</span> <span class="pre">vpin,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Test if analog pin reading is less than value</a><a class="headerlink" href="#iflt-vpin-value-test-if-analog-pin-reading-is-less-than-value" title="Link to this heading"></a></h4>
 <p>Test if analog pin reading is less than value (&lt;).</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - Analogue pin. vpin (or alias) of the sensor to test <br /> &gt; <strong>value</strong> - value to test against</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to test <br /> &gt; <strong>value</strong> - value to test against</p>
 <blockquote>
 <div><p>All the <cite>IFGTE()</cite>, <cite>IFLT()</cite>, <cite>ATGTE()`and `ATLT()</cite> commands read the analog value from an analog input pin (A0 - A5 on an Arduino Mega) or an analog input from an I/O expander module. Valid values are defined by the capability of the analog to digital converter in use.</p>
 </div></blockquote>
@@ -2087,38 +2087,37 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 </pre></div>
 </div>
 </details><p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
-<p>LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used to trigger a virtual sensor to act as a state flag for EXRAIL. As this effects the state of a sensor, it can be tested via IF/IFNOT and will also work with AT/AFTER.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="attimout1-vpin-value-tba">
 <span id="attimeout1"></span><h4><a class="toc-backref" href="#id156" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ATTIMOUT1</span> <span class="pre">(</span> <span class="pre">vpin,</span> <span class="pre">value</span> <span class="pre">)</span></code> - TBA</a><a class="headerlink" href="#attimout1-vpin-value-tba" title="Link to this heading"></a></h4>
 <p>Waits for ???.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin. vpin (or alias) of the sensor to test <br /> &gt; <strong>value</strong> - value to test against</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to test <br /> &gt; <strong>value</strong> - value to test against</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="attimout2-vpin-value-tba">
 <span id="attimeout2"></span><h4><a class="toc-backref" href="#id157" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ATTIMOUT2</span> <span class="pre">(</span> <span class="pre">vpin,</span> <span class="pre">value</span> <span class="pre">)</span></code> - TBA</a><a class="headerlink" href="#attimout2-vpin-value-tba" title="Link to this heading"></a></h4>
 <p>Waits for ???.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin. vpin (or alias) of the sensor to test <br /> &gt; <strong>value</strong> - value to test against</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to test <br /> &gt; <strong>value</strong> - value to test against</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="drive-vpin-tba">
 <span id="drive"></span><h4><a class="toc-backref" href="#id158" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">DRIVE</span> <span class="pre">(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - TBA</a><a class="headerlink" href="#drive-vpin-tba" title="Link to this heading"></a></h4>
 <p>???</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin. vpin (or alias) of the sensor to ???</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to ???</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="latch-vpin-latches-a-sensor-on">
 <span id="latch"></span><h4><a class="toc-backref" href="#id159" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">LATCH(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - Latches a sensor on</a><a class="headerlink" href="#latch-vpin-latches-a-sensor-on" title="Link to this heading"></a></h4>
 <p>Latches a sensor on (Sensors 0-255 only).</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - vpin (or alias) of the sensor to unlatch</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to latch</p>
 <p>See UNLATCH() for examples.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="unlatch-vpin-remove-latch-on-sensor">
 <span id="unlatch"></span><h4><a class="toc-backref" href="#id160" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">UNLATCH(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - Remove LATCH on sensor</a><a class="headerlink" href="#unlatch-vpin-remove-latch-on-sensor" title="Link to this heading"></a></h4>
 <p>Remove LATCH on sensor.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - vpin (or alias) of the sensor to unlatch</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to unlatch</p>
 <details class="summary-for-example-click-to-show">
 <summary>For example: (click to show)</summary><p>In this example, LATCH/UNLATCH is used to toggle between two different activities each time the ROUTE is selected in a WiThrottle:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">TURNOUT</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bay to Shed&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// DCC turnout/point with linear address 117</span>
@@ -2160,21 +2159,22 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <span class="n">DONE</span><span class="w"> </span><span class="c1">// will also stop loco</span>
 </pre></div>
 </div>
-</details><p><hr class="hr-dashed" /></p>
+</details><p>LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used to trigger a virtual sensor to act as a state flag for EXRAIL. As this effects the state of a sensor, it can be tested via IF/IFNOT and will also work with AT/AFTER.</p>
+<p><hr class="hr-dashed" /></p>
 </section>
 <section id="onbutton-vpin-event-handler-for-debounced-button-presses">
 <span id="onbutton"></span><h4><a class="toc-backref" href="#id161" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONBUTTON(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - Event handler for debounced button presses</a><a class="headerlink" href="#onbutton-vpin-event-handler-for-debounced-button-presses" title="Link to this heading"></a></h4>
 <p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>This new event handler is handy for mimic panel and other buttons that need to perform an action when a button is pressed, rather than having to create a sequence with a combination of <code class="docutils literal notranslate"><span class="pre">AFTER</span></code> and <code class="docutils literal notranslate"><span class="pre">IF</span></code> statements to debounce a button which quickly becomes very complicated.</p>
 <p>Note that this works for active low buttons only.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - vpin to test</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin to test</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="onsensor-vpin-event-handler-for-sensors">
 <span id="onsensor"></span><h4><a class="toc-backref" href="#id162" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONSENSOR(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - Event handler for sensors</a><a class="headerlink" href="#onsensor-vpin-event-handler-for-sensors" title="Link to this heading"></a></h4>
 <p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>A new event handler to perform actions when a sensor is activated. Like the other sensor triggers such as <code class="docutils literal notranslate"><span class="pre">IF</span></code>, <code class="docutils literal notranslate"><span class="pre">AT</span></code>, and <code class="docutils literal notranslate"><span class="pre">AFTER</span></code>, a negative value can be used for an active high sensor.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - vpin (or alias) of the sensor to test</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to test</p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
 </section>
@@ -2184,10 +2184,10 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <nav class="contents in-this-section local" id="id8">
 <p class="topic-title">In This Section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#set-pin-count-set-an-output-pin-high" id="id163"><code class="docutils literal notranslate"><span class="pre">SET(</span> <span class="pre">pin</span> <span class="pre">[,count]</span> <span class="pre">)</span></code> - Set an output pin HIGH</a></p></li>
-<li><p><a class="reference internal" href="#reset-pin-count-reset-output-pin" id="id164"><code class="docutils literal notranslate"><span class="pre">RESET(</span> <span class="pre">pin</span> <span class="pre">[,count]</span> <span class="pre">)</span></code> - Reset output pin</a></p></li>
-<li><p><a class="reference internal" href="#fade-pin-value-ms-fade-an-led" id="id165"><code class="docutils literal notranslate"><span class="pre">FADE(</span> <span class="pre">pin,</span> <span class="pre">value,</span> <span class="pre">ms</span> <span class="pre">)</span></code> - Fade an LED</a></p></li>
-<li><p><a class="reference internal" href="#blink-pin-onms-offms-blink-an-output-pin" id="id166"><code class="docutils literal notranslate"><span class="pre">BLINK(</span> <span class="pre">pin,</span> <span class="pre">onMs,</span> <span class="pre">offMs</span> <span class="pre">)</span></code> - Blink an output pin</a></p></li>
+<li><p><a class="reference internal" href="#set-vpin-count-set-an-output-pin-high" id="id163"><code class="docutils literal notranslate"><span class="pre">SET(</span> <span class="pre">vpin</span> <span class="pre">[,count]</span> <span class="pre">)</span></code> - Set an output pin HIGH</a></p></li>
+<li><p><a class="reference internal" href="#reset-vpin-count-reset-output-pin" id="id164"><code class="docutils literal notranslate"><span class="pre">RESET(</span> <span class="pre">vpin</span> <span class="pre">[,count]</span> <span class="pre">)</span></code> - Reset output pin</a></p></li>
+<li><p><a class="reference internal" href="#fade-vpin-value-ms-fade-an-led" id="id165"><code class="docutils literal notranslate"><span class="pre">FADE(</span> <span class="pre">vpin,</span> <span class="pre">value,</span> <span class="pre">ms</span> <span class="pre">)</span></code> - Fade an LED</a></p></li>
+<li><p><a class="reference internal" href="#blink-vpin-onms-offms-blink-an-output-pin" id="id166"><code class="docutils literal notranslate"><span class="pre">BLINK(</span> <span class="pre">vpin,</span> <span class="pre">onMs,</span> <span class="pre">offMs</span> <span class="pre">)</span></code> - Blink an output pin</a></p></li>
 <li><p><a class="reference internal" href="#lcn-msg-send-message-to-lcn-accessory-network" id="id167"><code class="docutils literal notranslate"><span class="pre">LCN(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Send message to LCN Accessory Network</a></p></li>
 <li><p><a class="reference internal" href="#configure-servo-vpin-pos1-pos2-profile-define-led-s-connected-to-pca9685-boards" id="id168"><code class="docutils literal notranslate"><span class="pre">CONFIGURE_SERVO(vpin,</span> <span class="pre">pos1,</span> <span class="pre">pos2,</span> <span class="pre">profile)</span></code> - Define LED’s connected to PCA9685 boards</a></p></li>
 <li><p><a class="reference internal" href="#neopixel-vpin-red-green-blue-count-controls-the-colour-of-attached-neopixel-leds" id="id169"><code class="docutils literal notranslate"><span class="pre">NEOPIXEL(</span> <span class="pre">vpin,</span> <span class="pre">red,</span> <span class="pre">green,</span> <span class="pre">blue</span> <span class="pre">[,count]</span> <span class="pre">)</span></code> - Controls the colour of attached Neopixel LEDs</a></p></li>
@@ -2197,29 +2197,29 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
-<section id="set-pin-count-set-an-output-pin-high">
-<span id="set"></span><h4><a class="toc-backref" href="#id163" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SET(</span> <span class="pre">pin</span> <span class="pre">[,count]</span> <span class="pre">)</span></code> - Set an output pin HIGH</a><a class="headerlink" href="#set-pin-count-set-an-output-pin-high" title="Link to this heading"></a></h4>
+<section id="set-vpin-count-set-an-output-pin-high">
+<span id="set"></span><h4><a class="toc-backref" href="#id163" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SET(</span> <span class="pre">vpin</span> <span class="pre">[,count]</span> <span class="pre">)</span></code> - Set an output pin HIGH</a><a class="headerlink" href="#set-vpin-count-set-an-output-pin-high" title="Link to this heading"></a></h4>
 <p>Set output pin (set to HIGH)</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>pin</strong> - The first pin number connected that you which to change <br /> &gt; <strong>count</strong> - optional number of pins to change, starting from and including <strong>pin</strong>. Default is one</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - The first pin number connected that you which to change <br /> &gt; <strong>count</strong> - optional number of pins to change, starting from and including <strong>pin</strong>. Default is one</p>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="reset-pin-count-reset-output-pin">
-<span id="reset"></span><h4><a class="toc-backref" href="#id164" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">RESET(</span> <span class="pre">pin</span> <span class="pre">[,count]</span> <span class="pre">)</span></code> - Reset output pin</a><a class="headerlink" href="#reset-pin-count-reset-output-pin" title="Link to this heading"></a></h4>
+<section id="reset-vpin-count-reset-output-pin">
+<span id="reset"></span><h4><a class="toc-backref" href="#id164" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">RESET(</span> <span class="pre">vpin</span> <span class="pre">[,count]</span> <span class="pre">)</span></code> - Reset output pin</a><a class="headerlink" href="#reset-vpin-count-reset-output-pin" title="Link to this heading"></a></h4>
 <p>Reset output pin (set to LOW)</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>pin</strong> - The first pin number connected that you which to change <br /> &gt; <strong>count</strong> - optional number of pins to change, starting from and including <strong>pin</strong>. Default is one</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - The first pin number connected that you which to change <br /> &gt; <strong>count</strong> - optional number of pins to change, starting from and including <strong>pin</strong>. Default is one</p>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="fade-pin-value-ms-fade-an-led">
-<span id="fade"></span><h4><a class="toc-backref" href="#id165" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">FADE(</span> <span class="pre">pin,</span> <span class="pre">value,</span> <span class="pre">ms</span> <span class="pre">)</span></code> - Fade an LED</a><a class="headerlink" href="#fade-pin-value-ms-fade-an-led" title="Link to this heading"></a></h4>
+<section id="fade-vpin-value-ms-fade-an-led">
+<span id="fade"></span><h4><a class="toc-backref" href="#id165" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">FADE(</span> <span class="pre">vpin,</span> <span class="pre">value,</span> <span class="pre">ms</span> <span class="pre">)</span></code> - Fade an LED</a><a class="headerlink" href="#fade-vpin-value-ms-fade-an-led" title="Link to this heading"></a></h4>
 <p>Fade an LED on a servo driver to specified value taking specified time.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>pin</strong> -  pin/vpin of the LED <br /> &gt; <strong>value</strong> - value to fade the pin to <br /> &gt; <strong>ms</strong> - duration taken to get to the value in milliseconds</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> -  pin of the LED <br /> &gt; <strong>value</strong> - value to fade the pin to <br /> &gt; <strong>ms</strong> - duration taken to get to the value in milliseconds</p>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="blink-pin-onms-offms-blink-an-output-pin">
-<span id="blink"></span><h4><a class="toc-backref" href="#id166" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">BLINK(</span> <span class="pre">pin,</span> <span class="pre">onMs,</span> <span class="pre">offMs</span> <span class="pre">)</span></code> - Blink an output pin</a><a class="headerlink" href="#blink-pin-onms-offms-blink-an-output-pin" title="Link to this heading"></a></h4>
+<section id="blink-vpin-onms-offms-blink-an-output-pin">
+<span id="blink"></span><h4><a class="toc-backref" href="#id166" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">BLINK(</span> <span class="pre">vpin,</span> <span class="pre">onMs,</span> <span class="pre">offMs</span> <span class="pre">)</span></code> - Blink an output pin</a><a class="headerlink" href="#blink-vpin-onms-offms-blink-an-output-pin" title="Link to this heading"></a></h4>
 <p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>This will start a pin/Vpin blinking until such time as it is <code class="docutils literal notranslate"><span class="pre">SET</span></code>, <code class="docutils literal notranslate"><span class="pre">RESET</span></code>, or set via a signal operation.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>pin</strong> -  pin/vpin of the LED <br /> &gt; <strong>onMs</strong> - time/duration for the pin to be on in milliseconds <br /> &gt; <strong>offMs</strong> - off time/duration in milliseconds</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> -  pin of the LED <br /> &gt; <strong>onMs</strong> - time/duration for the pin to be on in milliseconds <br /> &gt; <strong>offMs</strong> - off time/duration in milliseconds</p>
 <blockquote>
 <div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">BLINK</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">)</span><span class="w"> </span><span class="c1">// Blink pin 22 at half second intervals</span>
 </pre></div>
@@ -3165,7 +3165,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f01340c7760>
+    <jinja2.runtime.BlockReference object at 0x7efbf9685cf0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

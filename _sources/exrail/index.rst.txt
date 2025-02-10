@@ -4,7 +4,7 @@
 |EX-R-LOGO|
 
 ************************************************************
-EXRAIL (Automation/Animation)
+EXRAIL |BR| |small-start| Automation & Animation |small-end|
 ************************************************************
 
 |SUITABLE| |tinkerer| |engineer| |support-button|

@@ -134,8 +134,8 @@ You can subsequently open the repository in VSCode using :menuselection:`File --
 
 You can subsequently open the repository in VSCode from **GitHub Desktop**.
 
-4. Make you changes
-^^^^^^^^^^^^^^^^^^^
+4. Make your changes
+^^^^^^^^^^^^^^^^^^^^
 
 You can use the navigation tree on the left to find the file you want to change. Clicking on a file will open it in the edit window.
 

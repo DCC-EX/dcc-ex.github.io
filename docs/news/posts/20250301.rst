@@ -27,7 +27,8 @@ New features and enhancements
 Just check out this list of features and enhancements added since our last release:
 
 - Turntables can now be operated from throttles just like turnouts, including new |EX-R| commands for automation of turntable movement
-- Auto reverser and booster mode for the |EX-CSB1| and ESP32 platform
+- Auto reverser mode for all platforms
+- Booster mode for the |EX-CSB1| and ESP32 platforms
 - Delay can be added to the startup of |EX-CS| to allow peripheral devices to boot or start first
 - Various HAL enhancements, including our native, non-blocking |I2C| capability for the STM32F4xx family of Nucleo platforms
 - Run DC locos with variable DC PWM frequency support in TrackManager, using DCC function keys 29 - 31 to set the desired frequency while running
@@ -35,10 +36,11 @@ Just check out this list of features and enhancements added since our last relea
 - Run up to 10 WiFi Throttles simultaneously (even more when using JMRI)
 - Extended DCC consist support
 - Support for EX-Fastclock
-- EX-SensorCam support built-in
+- Supoort for EX-SensorCam for low cost camera based occupancy detection
 - Support for TCA8418 Keyboard encoder pad with up to 80 keys/buttons (HAL)
 - Support for TM1638 board with 8 buttons, 8 LEDs and an 8 digit 7-segment display (HAL)
-- Support for I2C Dfplayer sound device (HAL)
+- Support for I2C DFPlayer sound device (HAL)
+- Support for Adafruit NeoDriver I2C adapter board (Adafruit Product ID 5766) to drive NeoPixel/WS2811/WS2812 addressable RGB and WRGB LEDs and driver ICs for individual LEDs (HAL)
 
 New |EX-R| specific commands and enhancements:
 
@@ -64,11 +66,13 @@ New |EX-R| specific commands and enhancements:
 Changes to supported hardware platforms
 ---------------------------------------
 
-We continue to recommend the tried and true Arduino Mega2560 as our preferred and recommended hardware platform for |EX-CS|, with the Uno and Nano backing it up as alternatives, albeit with less I/O and resources available compared with the Mega2560. We have seen some quality issues with the cheaper end of the clone variants of these boards. In general genuine Arduino and Elegoo clones remain our recommendations, but the genuine Arduino Mega is quite expensive given its performance.
+We continue to recommend the tried and true Arduino Mega2560 as our preferred and recommended easy DIY hardware platform for |EX-CS|. We have seen some quality issues with the cheaper end of the clone variants of these boards. In general genuine Arduino and Elegoo clones remain our recommendations, but the genuine Arduino Mega is quite expensive given its performance.
 
-Along with our :doc:`/news/posts/20230807` announcement back in August 2023, we also announced some new Beta hardware platforms including the ESP32-WROOM and select STMicroelectronics Nucleo STM32F4xx family boards. These boards are now largely moving into full support as they have proven to be reliable and provide a lot more "bang for your buck" in terms of capabilities and future proofing your |EX-CS| with the continuing new features being added.
+However we strongly recommend our new |EX-CSB1| platform based on the ESP32-WROOM for its ease of use, flexibility of roles as Command Station or Booster, and ability to support up to 4 DCC/DC PWM outputs with ease. Anyone not familiar with electronics, or simply time-poor and wanting to spend their precious modelling time building layouts and running trains should consider the |EX-CSB1|.
 
-Moving forwards, we **highly recommend new users seriously consider these newer, more powerful ESP32 or Nucleo boards** as the pricing is competitive even compared with clone Mega2560 options, and as they have much more RAM they will scale to be able to animate and automate much larger layouts and allow you to keep up with the development of the |DCC-EX| ecosystem.
+In our :doc:`/news/posts/20230807` announcement back in August 2023, we announced new 32-bit Beta hardware platforms including the ESP32-WROOM and select STMicroelectronics Nucleo STM32F4xx family boards. These boards are now largely moving into full support as they have proven to be reliable and provide a lot more "bang for your buck" in terms of capabilities and future proofing your |EX-CS| with the continuing new features being added.
+
+Moving forwards, we **highly recommend advanced DIY users seriously consider these newer, more powerful ESP32 or Nucleo boards** as the pricing is competitive even compared with clone Mega2560 options, and as they have much more RAM they will scale to be able to animate and automate much larger layouts and allow you to keep up with the development of the |DCC-EX| ecosystem.
 
 The **Arduino UNO and Nano**, however, are **no longer recommended** as fully capable platforms as they are just too limited in terms of RAM and FLASH resources and capability to fit all of the |DCC-EX| feature set. They therefore will not work with some of our newest features such as :doc:`/trackmanager/index` or |I2C| connectivity. |DCC-EX| does allow users to turn off features such that UNOs and Nanos can still be handy as dedicated programming only devices with |JMRi| or for simple Christmas layouts of course, but don't expect to be using any of our newest or resource hungry features on these devices. They can also be re-purposed as versatile and affordable |I2C| accessory devices with our new |EX-IO|, as they can provide a mix of digital GPIO, PWM output, and analog inputs on a single board.
 

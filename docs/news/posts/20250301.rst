@@ -17,7 +17,9 @@
 Announcing EX-CommandStation 5.4.0
 ==================================
 
-The |DCC-EX| team are excited to announce a new Production release of |EX-CS| with version 5.4.0 being made available today. As usual, this release includes a raft of **new features and enhancements** to bring even more capability and joy to your digital model railroading experience! We're also announcing changes to our **supported hardware platforms**.
+The |DCC-EX| team are excited to announce a new Production release of |EX-CS| with version 5.4.0 being made available today. This release adds significant **new features and enhancements** including new automation and animation features, to enhance your digital model railroading experience! We're also announcing changes to our **supported hardware platforms**. This release includes all of the new features and bug fixes from development versions v5.1.0 to v5.4.4
+
+To update your |EX-CS| please use |EX-I|, but if you want the zip file, you can find it here: XXX Insert Link
 
 New features and enhancements
 -----------------------------
@@ -25,11 +27,18 @@ New features and enhancements
 Just check out this list of features and enhancements added since our last release:
 
 - Turntables can now be operated from throttles just like turnouts, including new |EX-R| commands for automation of turntable movement
-- Auto reverser and booster mode for the ESP32 platform is in Beta
+- Auto reverser and booster mode for the |EX-CSB1| and ESP32 platform
 - Delay can be added to the startup of |EX-CS| to allow peripheral devices to boot or start first
 - Various HAL enhancements, including our native, non-blocking |I2C| capability for the STM32F4xx family of Nucleo platforms
-- Variable DC frequency support in TrackManager, using DCC function keys 29 - 31 to set the desired frequency whilst running
+- Run DC locos with variable DC PWM frequency support in TrackManager, using DCC function keys 29 - 31 to set the desired frequency while running
 - Broadcasting of route/automation state changes to throttles
+- Run up to 10 WiFi Throttles simultaneously (even more when using JMRI)
+- Extended DCC consist support
+- Support for EX-Fastclock
+- EX-SensorCam support built-in
+- Support for TCA8418 Keyboard encoder pad with up to 80 keys/buttons (HAL)
+- Support for TM1638 board with 8 buttons, 8 LEDs and an 8 digit 7-segment display (HAL)
+- Support for I2C Dfplayer sound device (HAL)
 
 New |EX-R| specific commands and enhancements:
 
@@ -37,6 +46,15 @@ New |EX-R| specific commands and enhancements:
 - **JMRI_SENSOR(vpin [,count])** - creates <s> type sensors visible to jmri
 - Blinking/flashing vpin and amber signal - **BLINK( pin, onms, offms )** - blink an output pin
 - New **ONBUTTON( vpin )** - event handler for debounced button presses and **ONSENSOR( sensor_id )** - event handler for sensors
+- New **XFWD** set current loco direction to forward
+- New **XREV** set current loco direction to reverse
+- New Set/Reset multiple pins at once with **SET( vpin [,count] )** and **RESET( vpiin [,count])**
+- Added a debounce timeout to the AFTER command with **AFTER( vpin [,debounce_time] )**
+- New **ONBUTTON** Event to report when a button connected to a pin or vpin is pressed
+- New **ONSENSOR** Event to report when a watched sensor is triggered
+- New Neopixel support with the **NEOPIXEL( vpin, red, green, blue [,count] )** and **NEOPIXEL_SIGNAL( signalid, red, green, blue )**  commands
+- JMRI_SENSOR(vpin [,count]) - Creates <S> type sensors visible to JMRI
+- New **STASH( stash_id )** Command to stash (save) the current loco/invert state
 
 - Compile time checks for:
    - duplicate or missing automation/route IDs

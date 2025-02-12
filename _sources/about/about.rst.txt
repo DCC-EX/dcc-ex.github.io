@@ -58,7 +58,6 @@ EX-WebThrottle
 Developers
 
 * Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
-* Peter Akers - South East QLD, Australia (flash62au)
 * Mani Kumar - Bangalor, India (Mani / Mani Kumar)
 * Matt Hu - Somewhere in Europe
 
@@ -76,7 +75,7 @@ EX-Toolbox
 
 Developers
 
-* Peter Akers - South East QLD, Australia (flash62au)
+* Not Maintained
 
 EX-IOExpander
 ==============
@@ -114,7 +113,6 @@ Developers
 
 * Peter Cole - Brisbane, QLD, Australia (peteGSX)
 * Chris Harlow - Nottingham, UK (UKBloke)
-* Peter Akers - South East QLD, Australia (flash62au)
 
 DCC++ Classic
 ==============
@@ -136,7 +134,6 @@ Website
 
 Developers
 
-* Peter Akers - South East QLD, Australia (flash62au)
 * Peter Cole - Brisbane, QLD, Australia (peteGSX)
 * Fred Decker - Holly Springs, North Carolina, USA (FlightRisk)
 * Mani Kumar - Bangalor, India (Mani / Mani Kumar)

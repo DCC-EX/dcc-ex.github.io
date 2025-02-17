@@ -63,7 +63,19 @@ New |EX-R| specific commands and enhancements:
    - LATCH and RESERVE IDs out of range
    - speeds out of range
 
-Changes to supported hardware platforms
+New Platforms Supported
+--------------------------
+
+* Expressif ESP32-D0WD based platforms
+  * EX-CommandStation / Booster One (EX-CSB1)
+  * ESPDuino32 (with modifications)
+* STMicroelectronics STM32F4xx platforms (especially the Nucleo-64 and Nucleo-144)
+  * Nucleo-F411RE
+  * Nucleo-F446RE
+  * Nucleo-F446ZE
+  * Nucleo-F429ZI/F439ZI
+
+Changes to supported hardware platformsD
 ---------------------------------------
 
 We continue to recommend the tried and true Arduino Mega2560 as our preferred and recommended easy DIY hardware platform for |EX-CS|. We have seen some quality issues with the cheaper end of the clone variants of these boards. In general genuine Arduino and Elegoo clones remain our recommendations, but the genuine Arduino Mega is quite expensive given its performance.

@@ -57,6 +57,7 @@ New |EX-R| specific commands and enhancements:
 - New Neopixel support with the **NEOPIXEL( vpin, red, green, blue [,count] )** and **NEOPIXEL_SIGNAL( signalid, red, green, blue )**  commands
 - JMRI_SENSOR(vpin [,count]) - Creates <S> type sensors visible to JMRI
 - New **STASH( stash_id )** Command to stash (save) the current loco/invert state
+- New **STEALTH( C++ code )** Command to allow inclusion of C++ code, however this is only for very advanced users and must be used with extreme care
 
 - Compile time checks for:
    - duplicate or missing automation/route IDs
@@ -64,18 +65,18 @@ New |EX-R| specific commands and enhancements:
    - speeds out of range
 
 New Platforms Supported
---------------------------
+-----------------------
 
-* Expressif ESP32-D0WD based platforms
+* Expressif ESP32-D0WD based platforms with builtin WiFi for up to 10 throttles
   * EX-CommandStation / Booster One (EX-CSB1)
   * ESPDuino32 (with modifications)
-* STMicroelectronics STM32F4xx platforms (especially the Nucleo-64 and Nucleo-144)
+* STMicroelectronics STM32F4xx platforms, specifically the STM32F4xx family in the Nucleo-64 and Nucleo-144 series
   * Nucleo-F411RE
   * Nucleo-F446RE
   * Nucleo-F446ZE
-  * Nucleo-F429ZI/F439ZI
+  * Nucleo-F429ZI/F439ZI with builtin Ethernet
 
-Changes to supported hardware platformsD
+Changes to supported hardware platforms
 ---------------------------------------
 
 We continue to recommend the tried and true Arduino Mega2560 as our preferred and recommended easy DIY hardware platform for |EX-CS|. We have seen some quality issues with the cheaper end of the clone variants of these boards. In general genuine Arduino and Elegoo clones remain our recommendations, but the genuine Arduino Mega is quite expensive given its performance.

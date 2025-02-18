@@ -36,7 +36,7 @@ Just check out this list of features and enhancements added since our last relea
 - Run up to 10 WiFi Throttles simultaneously on the new EX-CSB1 and ESP32 based platforms (even more when using JMRI)
 - Extended DCC consist support
 - Support for EX-Fastclock
-- Supoort for EX-SensorCam for low cost camera based occupancy detection
+- Supoort for `EX-SensorCam <https://dcc-ex.com/news/posts/20240215.html>`_ for low cost camera based occupancy detection
 - Support for TCA8418 Keyboard encoder pad with up to 80 keys/buttons (HAL)
 - Support for TM1638 board with 8 buttons, 8 LEDs and an 8 digit 7-segment display (HAL)
 - Support for I2C DFPlayer sound device (HAL)
@@ -50,7 +50,7 @@ New |EX-R| specific commands and enhancements:
 - New **ONBUTTON( vpin )** - event handler for debounced button presses and **ONSENSOR( sensor_id )** - event handler for sensors
 - New **XFWD( loco )** set specified loco direction to forward
 - New **XREV( loco )** set specified loco direction to reverse
-- New Set/Reset multiple pins at once with **SET( vpin [,count] )** and **RESET( vpiin [,count])**
+- New Set/Reset multiple pins at once with **SET( vpin [,count] )** and **RESET( vpin [,count])**
 - Added a debounce timeout to the AFTER command with **AFTER( vpin [,debounce_time] )**
 - New **ONBUTTON** Event to report when a button connected to a pin or vpin is pressed
 - New **ONSENSOR** Event to report when a watched sensor is triggered
@@ -132,8 +132,7 @@ Note these all require |JMRi| v5.7 or later AND |DCC-EX| v5.4.0 or later.
 
 - 'Roster Export to DCC-EX' - the ability to press a button and have your complete |JMRi| Engine Roster shown in a window which you can then copy into your DCC-EX Roster
 - |DCC-EX| 'Virtual LCD Displays' on |JMRi| to see data about your |EX-CS| and additional user data without having to have physical LCDs or OLEDs connected to your command station
-- Monitor, Send Command, and Config Base Station now multi-connection-aware
-- Config Base Station now available as Startup action in Preferences
+- DCC++ Traffic Monitor and Send DCC++ Command multi-connection-aware
 - New 'Open Meter' pane in Preferences -> Set Up -> Add -> Perform action -> 'Open Meters'
 - DCC++ Current Meter now automatically tracks & displays active current draw on Main A
 - Sample script (SendDCCppMessages.py) to easily send DCCpp commmands to run |EX-R| scripts directly from |JMRi|

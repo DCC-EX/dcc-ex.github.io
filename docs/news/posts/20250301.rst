@@ -33,7 +33,7 @@ Just check out this list of features and enhancements added since our last relea
 - Various HAL enhancements, including our native, non-blocking |I2C| capability for the STM32F4xx family of Nucleo platforms
 - Run DC locos with variable DC PWM frequency support in TrackManager, using DCC function keys 29 - 31 to set the desired frequency while running
 - Broadcasting of route/automation state changes to throttles
-- Run up to 10 WiFi Throttles simultaneously (even more when using JMRI)
+- Run up to 10 WiFi Throttles simultaneously on the new EX-CSB1 and ESP32 based platforms (even more when using JMRI)
 - Extended DCC consist support
 - Support for EX-Fastclock
 - Supoort for EX-SensorCam for low cost camera based occupancy detection
@@ -45,17 +45,16 @@ Just check out this list of features and enhancements added since our last relea
 New |EX-R| specific commands and enhancements:
 
 - Various new ROUTE related commands - See :ref:`exrail/exrail-command-reference:scripts/sequences - types and control`
-- **JMRI_SENSOR(vpin [,count])** - creates <s> type sensors visible to jmri
-- Blinking/flashing vpin and amber signal - **BLINK( pin, onms, offms )** - blink an output pin
+- **JMRI_SENSOR(vpin [,count])** - Creates <S> type sensors visible to JMRI
+- Blinking/flashing vpin and amber signal - **BLINK( pin, onms, offms )** - blink an output pin for on time in milliseconds and off time in milliseconds
 - New **ONBUTTON( vpin )** - event handler for debounced button presses and **ONSENSOR( sensor_id )** - event handler for sensors
-- New **XFWD** set current loco direction to forward
-- New **XREV** set current loco direction to reverse
+- New **XFWD( loco )** set specified loco direction to forward
+- New **XREV( loco )** set specified loco direction to reverse
 - New Set/Reset multiple pins at once with **SET( vpin [,count] )** and **RESET( vpiin [,count])**
 - Added a debounce timeout to the AFTER command with **AFTER( vpin [,debounce_time] )**
 - New **ONBUTTON** Event to report when a button connected to a pin or vpin is pressed
 - New **ONSENSOR** Event to report when a watched sensor is triggered
 - New Neopixel support with the **NEOPIXEL( vpin, red, green, blue [,count] )** and **NEOPIXEL_SIGNAL( signalid, red, green, blue )**  commands
-- JMRI_SENSOR(vpin [,count]) - Creates <S> type sensors visible to JMRI
 - New **STASH( stash_id )** Command to stash (save) the current loco/invert state
 - New **STEALTH( C++ code )** Command to allow inclusion of C++ code, however this is only for very advanced users and must be used with extreme care
 
@@ -67,14 +66,16 @@ New |EX-R| specific commands and enhancements:
 New Platforms Supported
 -----------------------
 
-* Expressif ESP32-D0WD based platforms with builtin WiFi for up to 10 throttles
-  * EX-CommandStation / Booster One (EX-CSB1)
-  * ESPDuino32 (with modifications)
-* STMicroelectronics STM32F4xx platforms, specifically the STM32F4xx family in the Nucleo-64 and Nucleo-144 series
-  * Nucleo-F411RE
-  * Nucleo-F446RE
-  * Nucleo-F446ZE
-  * Nucleo-F429ZI/F439ZI with builtin Ethernet
+All of the new platforms supported are 32-bit microcontrollers using the newer 3.3v logic level standard, and thus best equipped with the EX-MotorShield8874 due to its 3v3 friendly design.
+
+- Espressif ESP32-D0WD based platforms with builtin WiFi for up to 10 throttles:
+   - |EX-CSB1| (EX-CSB1) with up to 4 DCC/DC PWM outputs
+   - ESPDuino32 (with modifications) a DIY option
+- STMicroelectronics STM32F4xx family of microcontrollers in the Nucleo-64 and Nucleo-144 form factors, and these models:
+   - Nucleo-F411RE
+   - Nucleo-F446RE
+   - Nucleo-F446ZE
+   - Nucleo-F429ZI/F439ZI with builtin Ethernet
 
 Changes to supported hardware platforms
 ---------------------------------------

@@ -402,7 +402,7 @@ To do this, follow the instructions on the `official Espressif guide <https://es
 When using VS Code and PlatformIO it will auto-configure from the entry in the platformio.ini file when you select the ESP32 target to be built.
 
 .. note::
-    The ESP32 board package version 2.0.0 or greater is required.
+    The ESP32 board package version 2.0.17 is required.
 
 Microchip SAMD21 series
 =======================

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2025-02-24T10:12:41.568174+00:00</updated>
+  <updated>2025-02-24T22:41:08.889931+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.8">ABlog</generator>
@@ -41,7 +41,7 @@
     <title>DCC-EX Releases EX-CSB1 Ready to Run DCC CommandStation</title>
     <updated>2024-12-20T00:00:00+00:00</updated>
     <author>
-      <name>Paul Antoine</name>
+      <name>Fred Decker</name>
     </author>
     <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
 &lt;section id="dcc-ex-releases-ex-csb1-ready-to-run-dcc-commandstation"&gt;

@@ -53,7 +53,7 @@ If you have purchased a |EX-CSB1| it will have come with the |EX-CS| software al
 
 ----
 
-**Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi)**
+**Instructions for Windows, Mac OS X, and Linux**
 
 ----
 

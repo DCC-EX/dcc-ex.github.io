@@ -2,10 +2,117 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2025-02-25T01:44:54.937516+00:00</updated>
+  <updated>2025-03-01T12:23:51.183976+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.8">ABlog</generator>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20250301.html</id>
+    <title>Announcing EX-CommandStation 5.4.0</title>
+    <updated>2025-03-01T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="announcing-ex-commandstation-5-4-0"&gt;
+
+&lt;p&gt;The &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team are excited to announce a new Production release of &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; with version 5.4.0 being made available today. As usual, this release includes a raft of &lt;strong&gt;new features and enhancements&lt;/strong&gt; to bring even more capability and joy to your digital model railroading experience! We’re also announcing changes to our &lt;strong&gt;supported hardware platforms&lt;/strong&gt;.&lt;/p&gt;
+&lt;section id="new-features-and-enhancements"&gt;
+&lt;h2&gt;New features and enhancements&lt;/h2&gt;
+&lt;p&gt;Just check out this list of features and enhancements added since our last release:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Turntables can now be operated from throttles just like turnouts, including new &lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt; commands for automation of turntable movement&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Auto reverser and booster mode for the ESP32 platform is in Beta&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Delay can be added to the startup of &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; to allow peripheral devices to boot or start first&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Various HAL enhancements, including our native, non-blocking I&lt;sup&gt;2&lt;/sup&gt;C capability for the STM32F4xx family of Nucleo platforms&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Variable DC frequency support in TrackManager, using DCC function keys 29 - 31 to set the desired frequency whilst running&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Broadcasting of route/automation state changes to throttles&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;New &lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt; specific commands and enhancements:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Various new ROUTE related commands - See &lt;a class="reference internal" href="exrail/exrail-command-reference.html#scripts-sequences-types-and-control"&gt;&lt;span class="std std-ref"&gt;Scripts/Sequences - Types and Control&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;JMRI_SENSOR(vpin [,count])&lt;/strong&gt; - creates &amp;lt;s&amp;gt; type sensors visible to jmri&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Blinking/flashing vpin and amber signal - &lt;strong&gt;BLINK( pin, onms, offms )&lt;/strong&gt; - blink an output pin&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;New &lt;strong&gt;ONBUTTON( vpin )&lt;/strong&gt; - event handler for debounced button presses and &lt;strong&gt;ONSENSOR( sensor_id )&lt;/strong&gt; - event handler for sensors&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;dl class="simple"&gt;
+&lt;dt&gt;Compile time checks for:&lt;/dt&gt;&lt;dd&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;duplicate or missing automation/route IDs&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;LATCH and RESERVE IDs out of range&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;speeds out of range&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="changes-to-supported-hardware-platforms"&gt;
+&lt;h2&gt;Changes to supported hardware platforms&lt;/h2&gt;
+&lt;p&gt;We continue to recommend the tried and true Arduino Mega2560 as our preferred and recommended hardware platform for &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt;, with the Uno and Nano backing it up as alternatives, albeit with less I/O and resources available compared with the Mega2560. We have seen some quality issues with the cheaper end of the clone variants of these boards. In general genuine Arduino and Elegoo clones remain our recommendations, but the genuine Arduino Mega is quite expensive given its performance.&lt;/p&gt;
+&lt;p&gt;Along with our &lt;a class="reference internal" href="news/posts/20230807.html"&gt;&lt;span class="doc"&gt;Version 5 is here!&lt;/span&gt;&lt;/a&gt; announcement back in August 2023, we also announced some new Beta hardware platforms including the ESP32-WROOM and select STMicroelectronics Nucleo STM32F4xx family boards. These boards are now largely moving into full support as they have proven to be reliable and provide a lot more “bang for your buck” in terms of capabilities and future proofing your &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; with the continuing new features being added.&lt;/p&gt;
+&lt;p&gt;Moving forwards, we &lt;strong&gt;highly recommend new users seriously consider these newer, more powerful ESP32 or Nucleo boards&lt;/strong&gt; as the pricing is competitive even compared with clone Mega2560 options, and as they have much more RAM they will scale to be able to animate and automate much larger layouts and allow you to keep up with the development of the &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; ecosystem.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;Arduino UNO and Nano&lt;/strong&gt;, however, are &lt;strong&gt;no longer recommended&lt;/strong&gt; as fully capable platforms as they are just too limited in terms of RAM and FLASH resources and capability to fit all of the &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; feature set. They therefore will not work with some of our newest features such as &lt;a class="reference internal" href="trackmanager/index.html"&gt;&lt;span class="doc"&gt;TrackManager (DCC &amp;amp; DC)&lt;/span&gt;&lt;/a&gt; or I&lt;sup&gt;2&lt;/sup&gt;C connectivity. &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; does allow users to turn off features such that UNOs and Nanos can still be handy as dedicated programming only devices with &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; or for simple Christmas layouts of course, but don’t expect to be using any of our newest or resource hungry features on these devices. They can also be re-purposed as versatile and affordable I&lt;sup&gt;2&lt;/sup&gt;C accessory devices with our new &lt;a href="../../ex-ioexpander/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;IOExpander&lt;/span&gt;&lt;/a&gt;, as they can provide a mix of digital GPIO, PWM output, and analog inputs on a single board.&lt;/p&gt;
+&lt;p&gt;We now have a larger number of core platforms to support so need to rationalise our support of some legacy platforms. Also, a number of previously supported platforms are no longer available to the primary &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team for testing and validation. As a result, we are announcing the &lt;strong&gt;deprecation of support for some platforms&lt;/strong&gt;, and these will no longer function with &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; when we release our next major version 6.0.0. Support for these right now is limited to ensuring the software compiles, as no testing is possible by the team.&lt;/p&gt;
+&lt;p&gt;Read below for a summary of the changes to our supported hardware platforms.&lt;/p&gt;
+&lt;section id="supported-and-recommended-platforms"&gt;
+&lt;h3&gt;Supported and recommended platforms&lt;/h3&gt;
+&lt;p&gt;New users should choose one of these platforms to make use of all features and capabilities.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="reference/hardware/microcontrollers/arduino-mega.html"&gt;&lt;span class="doc"&gt;Arduino Mega (Recommended)&lt;/span&gt;&lt;/a&gt; genuine Arduino Mega 2560 R3, and good quality clones - continues as supported and recommended, but RAM is limited for large layouts with lots of accessories and/or animations or automations&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;(link to new page here) ESP32 moves from Beta into full support - note this is for devices using the &lt;strong&gt;ESP32-WROOM (ESP32-D0WD) CPU only&lt;/strong&gt;, other ESP32 variants such as C3, S3, etc. are not supported at this time and may never be due to hardware limitations&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;(link to new page here) STMicroelectronics Nucleo boards in the STM32F4xx family move from Beta into full support for DCC only - note that DC mode and Ethernet support for these is still in Beta&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="no-longer-recommended-platforms"&gt;
+&lt;h3&gt;No longer recommended platforms&lt;/h3&gt;
+&lt;p&gt;No new features will be available for these, but they can still be handy for dedicated programming or small demo layouts. Note that an ESPduino32 has the same format as an Uno, is probably less expensive, and has full capabilities including WiFi.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="reference/hardware/microcontrollers/arduino-uno.html"&gt;&lt;span class="doc"&gt;Arduino Uno (Not recommended)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="reference/hardware/microcontrollers/nano.html"&gt;&lt;span class="doc"&gt;Arduino Nano (Not recommended)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="deprecated-platforms"&gt;
+&lt;h3&gt;Deprecated platforms&lt;/h3&gt;
+&lt;p&gt;The team no longer has hardware to test these boards, so we ensure the software compiles for them only, and no testing is performed. They will be removed when we release 6.0.0.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="reference/hardware/microcontrollers/nano-every.html"&gt;&lt;span class="doc"&gt;Nano Every (Deprecated)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="reference/hardware/microcontrollers/teensy.html"&gt;&lt;span class="doc"&gt;Teensy (Deprecated)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Arduino Mega328&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Arduino Uno WiFi R2&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;SAMD21&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Arduino M0&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="jmri-specific-updates"&gt;
+&lt;h2&gt;JMRI specific updates&lt;/h2&gt;
+&lt;p&gt;Given there are a lot of &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; users who also utilise &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt;, we figured it was worthwhile outlining some more specific updates centred around &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; and the interoperability with it.&lt;/p&gt;
+&lt;p&gt;Note these all require &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; v5.7 or later AND &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; v5.4.0 or later.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;‘Roster Export to DCC-EX’ - the ability to press a button and have your complete &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; Engine Roster shown in a window which you can then copy into your DCC-EX Roster&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; ‘Virtual LCD Displays’ on &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; to see data about your &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; and additional user data without having to have physical LCDs or OLEDs connected to your command station&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Monitor, Send Command, and Config Base Station now multi-connection-aware&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Config Base Station now available as Startup action in Preferences&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;New ‘Open Meter’ pane in Preferences -&amp;gt; Set Up -&amp;gt; Add -&amp;gt; Perform action -&amp;gt; ‘Open Meters’&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;DCC++ Current Meter now automatically tracks &amp;amp; displays active current draw on Main A&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sample script (SendDCCppMessages.py) to easily send DCCpp commmands to run &lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt; scripts directly from &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Throttles now default to Forward instead of Reverse&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Handles new locoState reply to sync Speed, Dir and F-keys&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Throttle commands and replies added to simulator&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;New servo and vpin turnout messages now supported&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Automatic population of the &lt;a class="reference internal" href="throttles/software/jmri.html"&gt;&lt;span class="doc"&gt;JMRI&lt;/span&gt;&lt;/a&gt; Sensor pane by using the new &lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt; JMRI_SENSOR function&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Store definitions as properties in created objects&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Improved CV read speeds by including startVal feature&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;DCCppOverTCP server now forwards all messages&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20250301.html" rel="alternate"/>
+    <summary>The &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team are excited to announce a new Production release of &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; with version 5.4.0 being made available today. As usual, this release includes a raft of new features and enhancements to bring even more capability and joy to your digital model railroading experience! We’re also announcing changes to our supported hardware platforms.</summary>
+    <category term="ex-commandstation" label="ex-commandstation"/>
+    <category term="release" label="release"/>
+    <published>2025-03-01T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>https://dcc-ex.com/news/posts/20250128.html</id>
     <title>If you have an issue uploading to an EX-CSB1</title>

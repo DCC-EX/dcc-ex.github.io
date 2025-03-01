@@ -14,7 +14,7 @@
   :scale: 40%
   :class: image-product-logo-float-right
 
-Announcing EX-CommandStation 5.4.0
+Announcing EX-CommandStation 5.4.6
 ==================================
 
 The |DCC-EX| team are excited to announce a new Production release of |EX-CS| with version 5.4.0 being made available today. As usual, this release includes a raft of **new features and enhancements** to bring even more capability and joy to your digital model railroading experience! We're also announcing changes to our **supported hardware platforms**.

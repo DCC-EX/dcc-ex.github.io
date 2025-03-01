@@ -1640,7 +1640,7 @@ Turntable/Traverser Objects - Definition and Control
     :local:
     :class: in-this-section
 
-Also refer to :ref:`ex-turntable/test-and-tune:exrail automation`.
+Also refer to :ref:`ex-turntable/test-and-tune:exrail definition and control`.
 
 |hr-dashed|
 
@@ -1809,7 +1809,7 @@ Rotate an EX-Turntable turntable/traverser at the specified **id** to the specif
 *Parameters:* |BR|
 |_| > **id** - id of the turntable/traverser, valid IDs are (1 - 32767) |BR|
 |_| > **position** - position to rotate to, valid positions are (1 - 48) |BR|
-|_| > **activity** - refer to :ref:`ex-turntable/test-and-tune:ex-turntable commands`, using the "EXRAIL activity" column
+|_| > **activity** - refer to :ref:`ex-turntable/test-and-tune:ex-turntable activity reference`, using the "EXRAIL activity" column
 
 |hr-dashed|
 

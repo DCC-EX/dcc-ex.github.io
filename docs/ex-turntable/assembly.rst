@@ -1,6 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 .. include:: /include/include-ex-tt.rst
+
 |EX-TT-LOGO|
 
 ****************
@@ -9,15 +10,25 @@ Assembly & Setup
 
 |SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-turntable-button-small|
 
+Assembly
+========
+
+.. warning:: 
+
+  As per the warning on the :doc:`/ex-turntable/purchasing` page, these instructions are primarily about using the UNL2003/28BYJ-48 stepper driver and motor combination. While these are inexpensive and easy to obtain, there have been many reports of these having various quality issues, primarily relating to "slop" in the gear mechanism of the stepper motor.
+
+  As a result, we highly recommend using a NEMA17 and two wire stepper driver such as the A4988, DRV8825, or TMC2208 instead. The instructions on these pages are largely the same, with some changes to the wiring connections required as outlined in :ref:`ex-turntable/assembly:using a two wire stepper driver (e.g. a4988/drv8825/tmc2208)`.
+
+  If you do continue to use a ULN2003/28BYJ-48 combination and have issues with accuracy, consider enforcing single direction rotation to help mitigate this by enabling either the :ref:`ex-turntable/configure:rotate_forward_only` or :ref:`ex-turntable/configure:rotate_reverse_only` configuration setting.
+
+  As time allows, we will update the images and instructions to focus on this new recommendation.
+
 .. sidebar:: 
    :class: sidebar-on-this-page
 
    .. contents:: On this page
       :depth: 3
       :local:
-
-Assembly
-========
 
 For assembly, we will assume the default ULN2003/28BYJ-48 combo is in use with an Arduino Nano V3, a standard 3 pin Arduino compatible hall effect sensor, and a dual relay board.
 
@@ -125,7 +136,7 @@ For those using a NEMA17 or similar stepper motor with a two wire type driver (e
     - A3 (not connected)
     - A3 S (not connected)
 
-Note when using an A4988 stepper driver, you must connect the RESET (RST) and SLEEP (SLP) pins together.
+**Note when using an A4988 stepper driver, you must connect the RESET (RST) and SLEEP (SLP) pins together.**
 
 .. note:: 
 
@@ -452,7 +463,7 @@ First start and automatic calibration
 
 .. note:: 
 
-  If you have loaded the code too soon, and the automatic calibration has succeeded and recorded an inaccurate step count, then have no fear as there is a command you can run on the CommandStation to reinitiate the calibration sequence which is outlined in the :ref:`ex-turntable/test-and-tune:ex-turntable commands` section.
+  If you have loaded the code too soon, and the automatic calibration has succeeded and recorded an inaccurate step count, then have no fear as there is a command you can run on the CommandStation to reinitiate the calibration sequence which is outlined in the :ref:`ex-turntable/test-and-tune:testing ex-turntable` section.
 
   As of v0.5.0-Beta and up to version 0.6.0, you can also execute the command ``<0 3>`` in the serial console to initiate the calibration sequence. In version 0.7.0 you can execute ``<C>`` instead to intiate the sequence.
 
@@ -508,7 +519,7 @@ Add manually
 
 .. note:: 
 
-  As mentioned previously, your CommandStation needs to be running |EX-CS| version 5.0.0 or later.
+  As mentioned previously, your CommandStation needs to be running |EX-CS| version 5.0.0 or later (preferably at least 5.4.0).
 
   If you receive compile errors that the file "IO_EXTurntable.h" is missing when attempting to upload the CommandStation software later in this process, this indicates you are using the incorrect version of |EX-CS|.
 
@@ -518,15 +529,8 @@ Before you will be able to test or use |EX-TT|, you need to configure the |EX-CS
 
 This requires creating or editing the myAutomation.h file in the |EX-CS| code and uploading it to your CommandStation.
 
-.. tip:: 
-
-  It is helpful to have a high level understanding of how device drivers and the HAL works in the CommandStation as explained on the :doc:`/reference/developers/hal-config` page. However, if that page is more information than you require at this point, then follow the steps below to add the required |EX-TT| device driver and device.
-
-You will need to include the |EX-TT| device driver file "IO_EXTurntable.h" and add a ``HAL()`` command to create the device:
-
 .. code-block:: cpp
 
-  #include "IO_EXTurntable.h"     // Include the device driver
   HAL(EXTurntable, 600, 1, 0x60)  // Create the device
 
 In the device setup above, there are three parameters provided, but only two may need to change in your environment if you have other devices that may conflict with these two settings:
@@ -534,27 +538,9 @@ In the device setup above, there are three parameters provided, but only two may
 - VPIN=600 - This is the default virtual pin (Vpin) ID that is used to send |EX-TT| commands to. Vpin IDs need to be unique, so if this ID is used elsewhere, change as necessary (refer :ref:`reference/developers/hal:overview`).
 - |I2C| address=0x60 - This is the default address on the |I2C| bus that the |EX-TT| is configured to use. This address also needs to be unique, so change this also if it is in use elsewhere, both in "myAutomation.h" and in "config.h" in the |EX-TT| software.
 
-If you already have an existing "myAutomation.h" file, then you simply need to add these entries in the appropriate sections of your existing file, noting that the "#include" needs to be before ``HAL()``.
+If you already have an existing "myAutomation.h" file, then you simply need to add this entry in the appropriate section of your existing file.
 
 Follow the rest of the directions for :ref:`reference/developers/hal-config:adding a new device` all the way through to the :ref:`reference/developers/hal-config:upload the new version of the software` step to upload your newly configured CommandStation.
-
-Note there is no point in checking the driver at this stage as |EX-TT| is not connected, and will show as "OFFLINE".
-
-New development functionality and changes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If you are using the new developmental features for turntables and traversers available from development version 5.1.5 and on, there is one key change to the above.
-
-You must remove any reference to including "IO_EXTurntable.h" as this file no longer exists, and the device driver is included automatically.
-
-To create your turntable device in "myAutomation.h", you are still required to create a device driver first with the `HAL()` command, followed by the `EXTT_TURNTABLE()` command:
-
-.. code-block:: cpp
-
-  HAL(EXTurntable, vpin, 1, i2c_address)
-  EXTT_TURNTABLE(id, vpin, home [, "description"])
-
-For complete information, refer to :ref:`ex-turntable/test-and-tune:development version commands`.
 
 9. Connect EX-Turntable to your EX-CommandStation
 -------------------------------------------------

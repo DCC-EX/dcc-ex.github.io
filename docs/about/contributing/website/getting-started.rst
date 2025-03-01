@@ -294,22 +294,28 @@ Additional
 Your own github pages
 ---------------------
 
-You can optionally, setup *github pages* from you own repository on the GitHub website.  This allows you make changes that *other people* can view before creating a pull request.
+You can, optionally, setup *github pages* from you own repository on the GitHub website.  This allows you to make changes that *other people* can view before creating a pull request.
 
-1. Open the **GitHub website**
-2. Open/select your repository ``https://github.com/<your_account_name>/dcc-ex.github.io``
-3. Click the ``branches`` link
-4. On 'Branches' page click :guilabel:`new Branch`
-5. Give the new branch the name ``gh-pages``
-6. Select a Source of ``DCC-EX/dcc-ex.github.io`` and ``gh-pages``
-7. clich :guilabel:`Create New branch`
-8. Open the ``Settings`` page
-9. Select ``Pages`` in the left navigation
-10. Choose `Deploy from a branch`
-11. Choose `gh-pages` and `root`
-12. Click :guilabel:`Save`
+1. Fork the "dcc-ex.github.io" repository, ensure the ``Copy the sphinx branch only`` box is selected.
+2. In your forked repository settings, navigate to Settings -> Actions -> General and ensure ``Allow all actions and reusable workflows`` is selected.
+3. Set up VSCode for your forked repository as outlined above.
+4. Create a new, orphaned branch called ``gh-pages`` using the command line; **you cannot do this in VSCode or in your browser**. Open a command prompt (or bash shell) and change into the directory containing your cloned fork then run the following commands:
 
-In theory that should be enough, but the last time we tried this we also needed to create a manual build action.  If you go to the 'Actions' page and you *can't* see an action named **'Docs'**, then contact the development team nd we will halp you create a manual build action. (Which for some unknown reason then shows the automatic 'Docs' action.)
+.. code-block:: 
+
+  git checkout --orphan gh-pages
+  # Use Windows Explorer, macOS Finder, or whatever method you prefer and delete all files and folders within the directory.
+  # It must be completely empty aside from the hidden .git folder before proceeding.
+  echo "My DCC-EX Documentation Fork" > index.html
+  git add .
+  git commit -a -m "First commit"
+  git push origin gh-pages
+
+5. At this point, review "Actions" in your forked repository and you should see the ``pages build and deployment`` job run, allowing you to preview the temporary "index.html" once complete.
+6. Review the Settings -> Pages tab and click the ``Visit site`` button to open your GitHub Pages generated content in a new browser tab, and you should see the basic "My DCC-EX Documentation Fork".
+7. If at this point in time the only action in the "Actions" tab is "pages-build-deployment", click the "..." beside the latest run and select ``Delete workflow run``.
+8. You should now see a big green button ``I understand my workflows, go ahead and enable them``. Click this button, which will show all the available actions as forked from the DCC-EX repository.
+9. Now, each time you commit and push to your fork's sphinx branch or merge a pull request to it, it should automatically build a new pages deployment and publish it.
 
 Building the pages and deplying takes time, every time you push any changes, but you will eventually be able to see your own version of the website at ``https://<your_account_name>.github.io/dcc-ex.github.io/``.
 

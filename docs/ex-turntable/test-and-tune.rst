@@ -1,11 +1,12 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 .. include:: /include/include-ex-tt.rst
+
 |EX-TT-LOGO|
 
-*****************************
+****************************
 Testing, Tuning, and Control
-*****************************
+****************************
 
 |SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-turntable-button-small|
 
@@ -15,109 +16,25 @@ Testing, Tuning, and Control
    .. contents:: On this page
       :depth: 2
       :local:
-  
-Ex-Turntable commands
-=====================
 
-Before proceeding with testing or any configuration, it's important to understand the two commands available for controlling |EX-TT|.
+Testing EX-Turntable
+====================
 
-This is a debug or diagnostic command that can be executed via the serial terminal of the CommandStation:
+Before attempting to configure your |EX-TT| in the |EX-CS| software, it is recommended to perform some initial testing to make sure it functions as it should.
 
-.. code-block:: cpp
+Once you have performed this testing, you will be familiar with the commands that will help you tune the steps required to achieve proper track alignment between your turntable bridge and the surrounding tracks, and can then configure |EX-CS| to operate |EX-TT| reliably.
 
-  <D TT vpin steps activity>
+It is recommended to perform testing via the |EX-TT| serial console first using the commands in the next section, and then test using the |EX-CS| diagnostic command. Using the diagnostic command is also the recommended method to perform tuning, as it replicates what the turntable object (and/or |EX-R|) will use to operate the turntable.
 
-This is the |EX-R| command to be included in myAutomation.h:
+.. important:: 
+  For all references to "steps", this is the number of steps from the home position, not the number of steps the turntable has to travel.
 
-.. code-block:: cpp
+EX-Turntable interactive serial console commands
+------------------------------------------------
 
-  MOVETT(vpin, steps, activity)
+While the ability to test |EX-TT| directly via the serial console was introduced in 0.5.0, this section covers the commands as of version 0.7.0. We highly recommend updating the |EX-TT| software if you are not running the latest. **Note** that this command is available when connected to the |EX-TT| serial console, **not** the |EX-CS| serial console.
 
-For both of these commands, "vpin" is as defined in your "myAutomation.h" file, and "steps" is the number of steps from the home position, not the number of steps the turntable has to travel.
-
-For the diagnostic command, "activity" needs to be defined as a number, whereas for the |EX-R| command, this is defined as text based on the table below. Sound confusing? The reason for using text in the |EX-R| command is to make your automation sequences more "human-friendly" when reading what they do later. It's much easier for us humans to remember words rather than numbers.
-
-.. list-table::
-    :widths: auto
-    :header-rows: 1
-    :class: command-table
-
-    * - Diagnostic activity
-      - EXRAIL activity
-      - Description
-    * - 0
-      - Turn
-      - Turn to the desired step position
-    * - 1
-      - Turn_PInvert
-      - Turn to the desired step position and invert the phase/polarity (required for manual phase switching only)
-    * - 2
-      - Home
-      - Activate the homing process, ignores the provided step position
-    * - 3
-      - Calibrate
-      - Activate the automatic calibration process, ignores the provided step position
-    * - 4
-      - LED_On
-      - Turns the LED on, ignores the provided step position
-    * - 5
-      - LED_Slow
-      - Sets the LED to a slow blink, ignores the provided step position
-    * - 6
-      - LED_Fast
-      - Sets the LED to a fast blink, ignores the provided step position
-    * - 7
-      - LED_Off
-      - Turns the LED off, ignores the provided step position
-    * - 8
-      - Acc_On
-      - Turns the accessory output on, ignores the provided step position
-    * - 9
-      - Acc_Off
-      - Turns the accessory output off, ignores the provided step position
-
-Here's a quick example to demonstrate the difference between the diagnostic and |EX-R| commands, with both commands below rotating to step position 100:
-
-.. code-block:: cpp
-
-  <D TT 600 100 0>
-  MOVETT(600, 100, Turn)
-
-Development version commands
-----------------------------
-
-For users keeping up with the |EX-CS| development releases, version 5.1.16 introduced a new turntable/traverser object, allowing for similar definition and control to that of turnouts/points.
-
-The existing methods of control for |EX-TT| using the native ``<D TT ...>`` command and ``MOVETT()`` |EX-R| command remain as-is, however there are now more complete methods of definition and control available.
-
-When tuning positions, using ``<D TT ...>`` as outlined on this page is still the simplest method for understanding accurate step counts to align with positions.
-
-For defining the new turntable/traverser objects with |DCC-EX| native commands, refer to :ref:`reference/software/command-summary-consolidated:turntables/traversers (configuring the ex-commandstation)`, and for controlling them, refer to :ref:`reference/software/command-summary-consolidated:turntables/traversers`.
-
-For the new commands available to define and control these objects with |EX-R|, refer to :ref:`exrail/exrail-command-reference:turntable/traverser objects - definition and control`.
-
-Note that as per the existing commands, the above table for the various activities is still relevant, with the native ``<I ...>`` command requiring numeric activities as per the first column, and |EX-R| ``ROTATE()`` command requiring the named activities as per the second column.
-
-For further information on using this new functionality, some examples are included at the bottom of this page in the section :ref:`ex-turntable/test-and-tune:new - development version control of ex-turntable`.
-
-Interactive Serial console commands
------------------------------------
-
-As of version 0.5.0-Beta, the ability to test |EX-TT| directly via the serial console has been introduced.
-
-Similar to the |EX-CS| diagnostic command outlined previously and up until version 0.7.0, the syntax is ``<steps activity>``, where again steps is the number of steps from the home position to move to, and activity is as per the previous table. Note that also like the diagnostic command, this needs to be a number. In version 0.7.0, this changes to ``<M steps activity>``.
-
-For example, sending the command ``<300 0>``/``<M 300 0>`` via the serial console will result in output similar to this:
-
-.. code-block:: cpp
-
-  Received serial input: 300 0
-  Test move 300 steps, activity ID 0
-  Received notification to move to step postion 300
-  Position steps: 300, Auto phase switch - moving 300 steps
-  Setting phase switch flag to: 0
-
-In version 0.7.0, a number of other interactive serial console commands have also been added. This is the complete list:
+These are the interactive serial console commands available:
 
 - ``<C>`` - Initiate the calibration sequence
 - ``<D>`` - Enable/disable debug output to the serial console
@@ -128,12 +45,32 @@ In version 0.7.0, a number of other interactive serial console commands have als
 - ``<T>`` - Enter/exit sensor testing mode, and requires a restart if exiting
 - ``<V>`` - Display the startup information in the serial console
 
-Testing EX-Turntable
-====================
+To test your |EX-TT| is functional, use the command ``<M steps activity>``.
 
-Firstly, power on |EX-TT|, followed by your CommandStation. By powering these on in that order, you will ensure that |EX-TT| is available prior to the CommandStation trying to load the device driver, otherwise it will consider the device as "OFFLINE", and commands will fail.
+For example, sending the command ``<M 300 0>`` via the serial console will result in output similar to this:
 
-Referring again to :ref:`reference/developers/hal-config:adding a new device`, skip ahead to :ref:`reference/developers/hal-config:checking the driver`, and the output you're looking for to validate the |EX-TT| device driver is loaded and connected successfully is below:
+.. code-block:: cpp
+
+  Received serial input: 300 0
+  Test move 300 steps, activity ID 0
+  Received notification to move to step postion 300
+  Position steps: 300, Auto phase switch - moving 300 steps
+  Setting phase switch flag to: 0
+
+If you are seeing unexpected results, use the ``<V>`` command to show the startup information which will display the calibrated full turn step count to validate calibration worked as expected. If the step count is unexpected, use the ``<C>`` command to force calibration to run again.
+
+Further information on the "activity" parameter is outlined in the :ref:`ex-turntable/test-and-tune:ex-turntable activity reference` section.
+
+Testing with the EX-CommandStation diagnostic command
+-----------------------------------------------------
+
+Once you have verified |EX-TT| is functioning as expected, move on to testing with the |EX-CS| diagnostic command ``<D TT vpin steps activity>``.
+
+Ensure |EX-TT| was powered on before |EX-CS|. By powering these on in that order, you will ensure that |EX-TT| is available prior to the CommandStation trying to load the device driver, otherwise it will consider the device as "OFFLINE", and commands will fail.
+
+**Note** that these commands are available when connected to the |EX-CS| serial console, **not** the |EX-TT| serial console.
+
+Referring to :ref:`reference/developers/hal-config:adding a new device`, skip ahead to :ref:`reference/developers/hal-config:checking the driver`, and the output you're looking for to validate the |EX-TT| device driver is loaded and connected successfully is below:
 
 .. code-block:: cpp
 
@@ -193,9 +130,9 @@ Finally, this command will cause the turntable to once again find its home posit
   
   <D TT 600 0 2>
 
-.. todo:: `LOW - Add a video demonstrating diagnostic commands <https://github.com/DCC-EX/dcc-ex.github.io/issues/439>`_ |EXTERNAL-LINK|
+Providing these tests have completed successfully, you are now ready to tune the turntable positions for your layout and configure your |EX-TT| ready for operation.
 
-Providing these tests have completed successfully, you are now ready to tune the turntable positions for your layout in preparation for defining the |EX-R| configuration and putting |EX-TT| to good use.
+Further information on the "activity" parameter is outlined in the :ref:`ex-turntable/test-and-tune:ex-turntable activity reference` section.
 
 Tuning your turntable positions
 ================================
@@ -277,258 +214,33 @@ At this point, you should be able to apply the above calculations to your own la
 
 Use appropriate diagnostic commands to test and tune each position for that perfect alignment, and providing your layout is functional, you should be able to drive a locomotive on and off your turntable in each position.
 
-Advertising positions to Engine Driver and WiThrottle applications
-===================================================================
+Configuring your turntable
+==========================
 
-Now that you have defined all of your turntable positions with appropriate phase/polarity switching, it's time to get these advertised to |Engine Driver| and |WiThrottle| applications.
+|NEW-IN-V5-4|
 
-The method to advertise these is to use **EXRAIL's** ROUTE function with the MOVETT command, which will ensure all of your defined turntable positions appear in the |Engine Driver| and |WiThrottle| Routes sections.
+As mentioned previously, we recommend using |EX-CS| version 5.4.0 or later to make use of the new turntable object along with the new |EX-R| commands.
 
-If this is your first experience with |EX-R| and the "myAutomation.h" file, familiarise yourself with |EX-R| by reading through :doc:`/exrail/index`.
+Note that the previous |EX-R| commands are still valid and will work, however all examples on this page have been updated to reflect the new commands.
 
-Pay particular attention to the various mentions of ROUTE and the associated examples.
+For full details on using the new commands available, refer to :ref:`reference/software/command-summary-consolidated:turntables/traversers (configuring the ex-commandstation)` and :ref:`reference/software/command-summary-consolidated:turntables/traversers`, and also the |EX-R| commands in :ref:`exrail/exrail-command-reference:turntable/traverser objects - definition and control` and :ref:`exrail/exrail-command-reference:turntable features`.
 
-There are two highly recommended additions to using just these ROUTEs:
-
-1. Utilise **EXRAIL's** virtual ``RESERVE()`` and ``FREE()`` functions to ensure that while you are operating your turntable, nothing else can interfere with it. This is not so important during manual operation, however if you want to add any other automation (say, turning a warning light on), you will need these to ensure the relevant automation activities are not interrupted should you choose another turntable position prior to the first move completing.
-2. Utilise aliases to make things human friendly, and we have also provided 30 pre-defined aliases for the ROUTE IDs to ensure there will be no conflicts, as all IDs must be unique.
-
-To define the required turntable positions in the example six position turntable from above, you will need to have this content added to your "myAutomation.h" file. Note that we recommend adding an additional ROUTE to activate the homing process.
-
-.. tip:: 
-
-  .. image:: /_static/images/level_icons/conductor.png
-    :alt: Conductor Level
-    :scale: 40%
-    :align: left
-  
-  To make this as simple as possible, we have included "myTurntable-EX.example.h" with the CommandStation-EX software containing an example automation macro with some pre-defined positions based on the example above as a starting point. Feel free to either copy or rename this to "myAutomation.h" and use it.
-
-That's it! Once you have created "myAutomation.h" and uploaded it to your CommandStation as per the process on the :doc:`/exrail/index` page, the routes for each turntable position should automatically be visible in |Engine Driver| and |WiThrottle| applications.
-
-My turntable moves on startup!
-------------------------------
-
-There is one "catch" with the above "myAutomation.h" example. When your CommandStation starts up and |EX-R| starts, it will automatically execute everything in "myAutomation.h" up until the first "DONE" statement it encounters.
-
-In this scenario, that means on startup, the turntable will automatically move to position 1.
-
-If you wish to leave the turntable at the home position on startup, you can simply comment out the first MOVETT() command:
-
-.. code-block:: cpp
-
-  MOVETT(600, 114, Turn)        <<== This line here    
-  // MOVETT(600, 114 Turn)      <<== Becomes this, add // to comment lines out
-
-In a similar manner, if you prefer the turntable starts at some other position, you can accomplish this by simply changing the steps in that same MOVETT() command:
-
-.. code-block:: cpp
-
-  MOVETT(600, 167, Turn)            // Default moves to position one, edit this line to look like the below
-  MOVETT(600, 2386, Turn)           // Move instead to position six
-
-Manual phase switching
-=======================
-
-So far, all the examples, testing, and tuning have relied on automatic phase switching.
-
-There may be times where manual phase switching is required, whether due to awkward track wiring, layouts that have tracks at angles that make it hard to determine the correct angles at which to automatically switch the phase, or (in an upcoming release) when traversers are used rather than traditional turntables, that don't actually required phase switching at all.
-
-To enable manual phase switching, you must edit "config.h" and set :ref:`ex-turntable/configure:phase_switching` to "MANUAL".
-
-Once this has been done, you must explicitly define the phase switching to occur as a part of the diagnostic or |EX-R| command for every step position that requires an inverted phase.
-
-.. note:: 
-
-  The phase switch command (1 for the diagnostic command, Turn_PInvert for |EX-R|) does not continue to invert the phase each time that command is sent, the command simply tells |EX-TT| whether or not to activate the phase inversion relays.
-
-  Therefore, for every position that requires the phase to be inverted, you must send the invert command (1/Turn_PInvert). For every position that requires the phase to be maintained, you must send just the turn command (0/Turn).
-
-To use our example from above, the commands in :ref:`ex-turntable/test-and-tune:example tuning commands` would need to be modified to replicate the automatic phase switching as such:
-
-.. code-block:: cpp
-
-  <D TT 600 114 0>
-  <D TT 600 227 0>
-  <D TT 600 341 0>
-  <D TT 600 2159 1>
-  <D TT 600 2273 1>
-  <D TT 600 2386 1>
-
-The EXRAIL equivalent to the above would be:
-
-.. code-block:: cpp
-
-  MOVETT(600, 114, Turn)
-  MOVETT(600, 227, Turn)
-  MOVETT(600, 341, Turn)
-  MOVETT(600, 2159, Turn_PInvert)
-  MOVETT(600, 2273, Turn_PInvert)
-  MOVETT(600, 2386, Turn_PInvert)
-
-.. danger:: 
-
-  If you do not explicitly send the activity command to invert the phase, and the turntable orientation results with the phase out of alignment with the surrounding tracks, this will result in a short circuit when a locomotive attempts to enter or exit the turntable bridge track.
-
-Controlling EX-Turntable with a rotary encoder
-==============================================
-
-It is possible to use a rotary encoder to select turntable positions if desired, which is handy for use with mimic panels and so forth.
-
-There is an additional device driver available "IO_RotaryEncoder.h" which can be used with the rotary encoder software installed on a separate Arduino Nano or Uno that has the rotary encoder and an OLED display connected to it.
-
-In a similar manner to |EX-TT| itself, the rotary encoder Arduino connects to the |EX-CS| via |I2C|.
-
-.. note:: 
-
-  The rotary encoder software is not official DCC-EX software and is maintained separately. The device driver and EXRAIL commands are included with |EX-CS| as of version 5.0.0.
-
-  This section will focus on enabling and using the device driver. For the rotary encoder software documentation including installation and configuration, refer to the project page `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/overview.html>`__ |EXTERNAL-LINK|.
-
-Required software
------------------
-
-The rotary encoder software can be downloaded from:
-
-.. rst-class:: dcclink
-
-  `dcc-ex-rotary-encoder GitHub repository <https://github.com/peteGSX-Projects/dcc-ex-rotary-encoder>`_ |EXTERNAL-LINK|
-
-To utilise this rotary encoder, you must be running version 5.0.0 or later of |EX-CS|.
-
-Enabling the device driver
---------------------------
-
-The default |I2C| address for the rotary encoder is 0x78, and you will need to create the device in "myAutomation.h" on your |EX-CS|.
-
-Note you can create the device using 1, 2, or 3 Vpins. If you create it with 2, you can send feedback to the rotary encoder Arduino to indicate if a turntable is moving, and when it has completed the movement. If you define 3 Vpins, you can tell the rotary encoder when a turntable has changed position also. Refer to the `DCC-EX Rotary Encoder <https://petegsx-projects.github.io/rotary-encoder/overview.html>`__ |EXTERNAL-LINK| documentation for more information on this feature.
-
-.. code-block:: cpp
-
-  #include "IO_RotaryEncoder.h"
-
-  HAL(RotaryEncoder, 700, 1, 0x78)  // 1 pin for control only
-  HAL(RotaryEncoder, 700, 2, 0x78)  // 2 pins for control and feedback
-  HAL(RotaryEncoder, 700, 3, 0x78)  // 3 pins for control, feedback, and sending positions back to the rotary encoder
-
-You need to follow the same process as :ref:`ex-turntable/assembly:8. add the ex-turntable device driver to ex-commandstation` to load the updated software on your |EX-CS|.
-
-EXRAIL automation
-------------------
-
-There are two |EX-R| commands available for using the rotary encoder:
-
-- ``ONCHANGE(vpin)`` - Event handler that is activated when a position change is sent
-- ``IFRE(vpin, position)`` - A test to see if the rotary encoder is at a specific position
-
-These two commands can be combined in a sequence to respond to the various rotary encoder positions.
-
-Negative position numbers can be used as well as positive.
-
-For example, we could take the :ref:`big-picture/stage5/turntable-example:example - turntable routes` included in Stage 5 of the Big Picture and have these selected by a rotary encoder. The roundhouse stall positions would be rotating counter-clockwise which will have negative position values, whereas the yard connection has a positive value.
-
-.. code-block:: cpp
-
-  // On startup, ensure our turntable moves automatically to the first position
-  MOVETT(600, 114, Turn)
-  DONE
-
-  // Definition of the EX_TURNTABLE macro to correctly create the ROUTEs required for each position.
-  // This includes RESERVE()/FREE() to protect any automation activities.
-  //
-  #define EX_TURNTABLE(route_id, reserve_id, vpin, steps, activity, desc) \
-    ROUTE(route_id, desc) \
-      RESERVE(reserve_id) \
-      MOVETT(vpin, steps, activity) \
-      WAITFOR(vpin) \
-      FREE(reserve_id) \
-      DONE
-
-  /**************************************************************************************************
-  * TURNTABLE POSITION DEFINITIONS
-  *************************************************************************************************/
-  // EX_TURNTABLE(route_id, reserve_id, vpin, steps, activity, desc)
-  //
-  // route_id = A unique number for each defined route, the route is what appears in throttles
-  // reserve_id = A unique reservation number (0 - 255) to ensure nothing interferes with automation
-  // vpin = The Vpin defined for the Turntable-EX device driver, default is 600
-  // steps = The target step position
-  // activity = The activity performed for this ROUTE (Note do not enclose in quotes "")
-  // desc = Description that will appear in throttles (Must use quotes "")
-  //
-  EX_TURNTABLE(TTRoute1, Turntable, 600, 114, Turn, "Roundhouse stall 1")
-  EX_TURNTABLE(TTRoute2, Turntable, 600, 228, Turn, "Roundhouse stall 2")
-  EX_TURNTABLE(TTRoute3, Turntable, 600, 344, Turn, "Roundhouse stall 3")
-  EX_TURNTABLE(TTRoute4, Turntable, 600, 459, Turn, "Roundhouse stall 4")
-  EX_TURNTABLE(TTRoute5, Turntable, 600, 573, Turn, "Roundhouse stall 5")
-  EX_TURNTABLE(TTRoute6, Turntable, 600, 688, Turn, "Roundhouse stall 6")
-  EX_TURNTABLE(TTRoute7, Turntable, 600, 2523, Turn, "Yard connection")
-  EX_TURNTABLE(TTRoute8, Turntable, 600, 0, Home, "Home turntable")
-
-  // Pre-defined aliases to ensure unique IDs are used.
-  ALIAS(Turntable, 255)
-
-  // Turntable ROUTE ID reservations, using <? TTRouteX> for uniqueness:
-  ALIAS(TTRoute1)
-  ALIAS(TTRoute2)
-  ALIAS(TTRoute3)
-  ALIAS(TTRoute4)
-  ALIAS(TTRoute5)
-  ALIAS(TTRoute6)
-  ALIAS(TTRoute7)
-  ALIAS(TTRoute8)
-
-  /**************************************************************************************************
-  * Rotary encoder sequence to select the turntable positions
-  *************************************************************************************************/
-  ONCHANGE(700)
-    IFRE(700, -6)
-      START(TTRoute1)
-    ENDIF
-    IFRE(700, -5)
-      START(TTRoute2)
-    ENDIF
-    IFRE(700, -4)
-      START(TTRoute3)
-    ENDIF
-    IFRE(700, -3)
-      START(TTRoute4)
-    ENDIF
-    IFRE(700, -2)
-      START(TTRoute5)
-    ENDIF
-    IFRE(700, -1)
-      START(TTRoute6)
-    ENDIF
-    IFRE(700, 7)
-      START(TTRoute7)
-    ENDIF
-    IFRE(700, 0)
-      START(TTRoute8)
-    ENDIF
-  DONE
-
-NEW - Development version control of EX-Turntable
-=================================================
-
-As mentioned previously, for users of the development version of |EX-CS|, version 5.1.16 introduces a new turntable object that can be used to define and control |EX-TT|.
-
-Here are some examples for defining a turntable as per the examples above, but using the new turntable object in both native commands, and |EX-R|.
+For simplicity, the examples below use the same step counts as calculated in the tuning section above.
 
 Basic DCC-EX native turntable definition and control
 ----------------------------------------------------
 
-In this example, a turntable with ID 600 is defined with our six positions as per the above examples, and disregarding the values of **home** and **angle**.
+In this example, a turntable with ID 1 is defined with our six positions as per the tuning examples, and disregarding the values of **home** and **angle**.
 
 .. code-block:: cpp
 
-  <I 600 EXTT 600 0>
-  <I 600 ADD 1 114 0>
-  <I 600 ADD 2 227 0>
-  <I 600 ADD 3 341 0>
-  <I 600 ADD 4 2159 0>
-  <I 600 ADD 5 2273 0>
-  <I 600 ADD 6 2386 0>
+  <I 1 EXTT 600 0>
+  <I 1 ADD 1 114 0>
+  <I 1 ADD 2 227 0>
+  <I 1 ADD 3 341 0>
+  <I 1 ADD 4 2159 0>
+  <I 1 ADD 5 2273 0>
+  <I 1 ADD 6 2386 0>
 
 Assuming |EX-TT| was configured for automatic phase switching, these commands would be used to rotate it to position 1, then position 6, and then home:
 
@@ -560,20 +272,20 @@ To define our turntable as above but in |EX-R|, it looks like this:
 
   HAL(EXTurntable,600,1,0x60)
   EXTT_TURNTABLE(1,600,0,"My EX-Turntable")
-  TT_ADDPOSITION(600,1,114,0,"Roundhouse stall 1")
-  TT_ADDPOSITION(600,2,227,0,"Roundhouse stall 2")
-  TT_ADDPOSITION(600,3,341,0,"Roundhouse stall 3")
-  TT_ADDPOSITION(600,4,2159,0,"Reverse to stall 1")
-  TT_ADDPOSITION(600,5,2273,0,"Reverse to stall 2")
-  TT_ADDPOSITION(600,6,2386,0,"Reverse to stall 3")
+  TT_ADDPOSITION(1,1,114,0,"Roundhouse stall 1")
+  TT_ADDPOSITION(1,2,227,0,"Roundhouse stall 2")
+  TT_ADDPOSITION(1,3,341,0,"Roundhouse stall 3")
+  TT_ADDPOSITION(1,4,2159,0,"Reverse to stall 1")
+  TT_ADDPOSITION(1,5,2273,0,"Reverse to stall 2")
+  TT_ADDPOSITION(1,6,2386,0,"Reverse to stall 3")
 
 Now, suppose we wish to turn a flashing light connected to Vpin 164 on whenever the turntable is is motion. This can be accomplished with our event handler:
 
 .. code-block:: cpp
 
-  ONROTATE(600)
+  ONROTATE(1)
     SET(164)
-    WAITFORTT(600)
+    WAITFORTT(1)
     RESET(164)
   DONE
 
@@ -583,23 +295,23 @@ Stall 1's door is operated by enabling Vpin 164, 2 by Vpin 165, and 3 by Vpin 16
 
 .. code-block:: cpp
 
-  ONROTATE(600)
-    IF_TTPOSITION(1)
+  ONROTATE(1)
+    IF_TTPOSITION(1,1)
       CALL(101)
     ENDIF
-    IF_TTPOSITION(2)
+    IF_TTPOSITION(1,2)
       CALL(102)
     ENDIF
-    IF_TTPOSITION(3)
+    IF_TTPOSITION(1,3)
       CALL(103)
     ENDIF
-    IF_TTPOSITION(4)
+    IF_TTPOSITION(1,4)
       CALL(101)
     ENDIF
-    IF_TTPOSITION(5)
+    IF_TTPOSITION(1,5)
       CALL(102)
     ENDIF
-    IF_TTPOSITION(6)
+    IF_TTPOSITION(1,6)
       CALL(103)
     ENDIF
   DONE
@@ -629,5 +341,155 @@ For controlling the turntable, it is still possible to use the ``ROUTE()`` comma
 .. code-block:: cpp
 
   ROUTE(201, "Set for roundhouse stall 1")
-    ROTATE(600,1,Turn)
+    ROTATE(1,1,Turn)
   DONE
+
+Advertising positions to Engine Driver and WiThrottle applications
+===================================================================
+
+At the time of writing, neither |Engine Driver| or the |WiThrottle| protocol is aware of the new turntable object, and we are not aware of other throttle software being written to take advantage of this yet aside from the DCCEXTurntableController project.
+
+Until such time as throttle software is updated to take advantage of this, using the |EX-R| ``ROUTE()`` command is still required to advertise turntable positions.
+
+Once throttle developers start implementing support for the native turnable object, any configured turntables will automatically be advertised to throttle software, enabling direct control without needing to add routes to enable this.
+
+If this is your first experience with |EX-R| and the "myAutomation.h" file, familiarise yourself with |EX-R| by reading through :doc:`/exrail/index`, paying particular attention to the various mentions of ROUTE and the associated examples.
+
+It is highly recommended  to utilise the virtual ``RESERVE()`` and ``FREE()`` functions to ensure that while you are operating your turntable, nothing else can interfere with it. This is not so important during manual operation, however if you want to add any other automation (say, turning a warning light on), you will need these to ensure the relevant automation activities are not interrupted should you choose another turntable position prior to the first move completing.
+
+To define the required turntable positions in the example six position turntable from above, you will need to have this content added to your "myAutomation.h" file. Note that we recommend adding an additional ROUTE to activate the homing process.
+
+.. tip:: 
+
+  .. image:: /_static/images/level_icons/conductor.png
+    :alt: Conductor Level
+    :scale: 40%
+    :align: left
+  
+  To make this as simple as possible, we have included "myTurntable-EX.example.h" with the CommandStation-EX software containing an example automation macro with some pre-defined positions based on the example above as a starting point. Feel free to either copy or rename this to "myAutomation.h" and use it.
+
+For example, the ``ROUTE()`` for the first position in our tuning example might look like this:
+
+.. code-block:: cpp
+
+  ROUTE(100, "Roundhouse Stall 1")
+    RESERVE(255)
+    ROTATE(1)
+    WATIFORTT(1)
+    FREE(255)
+  DONE
+
+That's it! Once you have created "myAutomation.h" and uploaded it to your CommandStation as per the process on the :doc:`/exrail/index` page, the routes for each turntable position should automatically be visible in |Engine Driver| and |WiThrottle| applications.
+
+Manual phase switching
+=======================
+
+So far, all the examples, testing, and tuning have relied on automatic phase switching.
+
+There may be times where manual phase switching is required, whether due to awkward track wiring, layouts that have tracks at angles that make it hard to determine the correct angles at which to automatically switch the phase, or when traversers are used rather than traditional turntables, that don't actually required phase switching at all.
+
+To enable manual phase switching, you must edit "config.h" and set :ref:`ex-turntable/configure:phase_switching` to "MANUAL".
+
+Once this has been done, you must explicitly define the phase switching to occur as a part of the diagnostic or |EX-R| command for every step position that requires an inverted phase.
+
+.. warning:: 
+
+  If you have enabled manual phase switching, you **must** specify the correct activity with every command.
+
+  This means for every position that requires the phase to be inverted, you must send the invert activity (1/Turn_PInvert). For every position that requires the phase to be maintained, you must send just the turn activity (0/Turn).
+
+To use our tuning example again, the commands in :ref:`ex-turntable/test-and-tune:example tuning commands` would need to be modified to replicate the automatic phase switching as such:
+
+.. code-block:: cpp
+
+  <D TT 600 114 0>
+  <D TT 600 227 0>
+  <D TT 600 341 0>
+  <D TT 600 2159 1>
+  <D TT 600 2273 1>
+  <D TT 600 2386 1>
+
+The |EX-R| equivalent to the above would be:
+
+.. code-block:: cpp
+
+  ROTATE(1, 1, Turn)
+  ROTATE(1, 2, Turn)
+  ROTATE(1, 3, Turn)
+  ROTATE(1, 4, Turn_PInvert)
+  ROTATE(1, 5, Turn_PInvert)
+  ROTATE(1, 6, Turn_PInvert)
+
+.. danger:: 
+
+  If you do not explicitly send the activity command to invert the phase, and the turntable orientation results with the phase out of alignment with the surrounding tracks, this will result in a short circuit when a locomotive attempts to enter or exit the turntable bridge track.
+
+Controlling EX-Turntable with DCC-EX Turntable Controller
+=========================================================
+
+.. note:: 
+
+  This software is not official |DCC-EX| software and is maintained separately.
+
+There is another project available enabling use of a rotary encoder and round LCD that operates as a throttle to control a |DCC-EX| turntable. This makes use of the new turntable object, using the defined angles to display the various positions on the display.
+
+This software has been written to use either an STM32F411CEU6 Blackpill or Espressif ESP32 WROOM connected via serial to the |EX-CS|, or also as a WiFi client if using the ESP32 option.
+
+As this software uses the new turntable object, you must be running version 5.4.0 or later of |EX-CS|.
+
+This also means you needn't create a ``ROUTE()`` for each turntable position, as the turntable object will autmoatically be available to the controller once the objects have been created as outlined in :ref:`ex-turntable/test-and-tune:configuring your turntable`.
+
+For DCC-EX Turntable Controller software documentation including installation and configuration, refer to the project page `DCC-EX Turntable Controller <https://petegsx-projects.github.io/dccex-turntable-controller/index.html>`__ |EXTERNAL-LINK|.
+
+Required software
+-----------------
+
+The rotary encoder software can be downloaded from:
+
+.. rst-class:: dcclink
+
+  `DCCEXTurntableController GitHub repository <https://github.com/peteGSX-Projects/DCCEXTurntableController>`_ |EXTERNAL-LINK|
+
+EX-Turntable activity reference
+===============================
+
+You will note that both interactive and |EX-R| commands have an "activity" parameter. When using interactive serial console commands either via |EX-TT| or |EX-CS|, "activity" needs to be defined as a number, whereas for the |EX-R| command, this is defined as text based on the table below. Refer to this table to know which activity to use. In most instances, you will likely just use "0" or "Turn" when operating |EX-TT|.
+
+.. list-table::
+    :widths: auto
+    :header-rows: 1
+    :class: command-table
+
+    * - Diagnostic activity
+      - EXRAIL activity
+      - Description
+    * - 0
+      - Turn
+      - Turn to the desired step position
+    * - 1
+      - Turn_PInvert
+      - Turn to the desired step position and invert the phase/polarity (required for manual phase switching only)
+    * - 2
+      - Home
+      - Activate the homing process, ignores the provided step position
+    * - 3
+      - Calibrate
+      - Activate the automatic calibration process, ignores the provided step position
+    * - 4
+      - LED_On
+      - Turns the LED on, ignores the provided step position
+    * - 5
+      - LED_Slow
+      - Sets the LED to a slow blink, ignores the provided step position
+    * - 6
+      - LED_Fast
+      - Sets the LED to a fast blink, ignores the provided step position
+    * - 7
+      - LED_Off
+      - Turns the LED off, ignores the provided step position
+    * - 8
+      - Acc_On
+      - Turns the accessory output on, ignores the provided step position
+    * - 9
+      - Acc_Off
+      - Turns the accessory output off, ignores the provided step position

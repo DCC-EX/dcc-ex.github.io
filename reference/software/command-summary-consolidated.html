@@ -570,7 +570,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About Us and the Project</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../about/about.html">Meet the Team</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/licence.html">Licence &amp; Attributions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/roadmap.html">DCC-EX 2023 Roadmap</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../about/index-contributing.html">Donating &amp; Contributing</a><ul>
@@ -591,6 +590,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../about/contributing/website/publishing-news.html">Publishing DCC-EX News Posts</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/contributing/release-process.html">Versioning and the Release Process</a></li>
 </ul>
 </li>
 </ul>
@@ -1181,7 +1181,7 @@ servo outputs and I/O expanders, it is the pin number defined for the HAL device
 <section id="i-id-position-activity-rotate-ex-turntable">
 <span id="native-command-i-id-position-activity"></span><h4><a class="toc-backref" href="#id86" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">&lt;I</span> <span class="pre">id</span> <span class="pre">position</span> <span class="pre">activity&gt;</span></code> - Rotate EX-Turntable</a><a class="headerlink" href="#i-id-position-activity-rotate-ex-turntable" title="Link to this heading"></a></h4>
 <blockquote>
-<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> - Identifier of the Turntable/traverser <br /> &gt; <strong>position:</strong> - Position to rotate to <br /> &gt; <strong>activity:</strong> - The activity for EX-Turntable to perform (refer <a class="reference internal" href="../../ex-turntable/test-and-tune.html#ex-turntable-commands"><span class="std std-ref">Ex-Turntable commands</span></a>) <br /></p>
+<div><p><em>Parameters:</em> <br /> &gt; <strong>id:</strong> - Identifier of the Turntable/traverser <br /> &gt; <strong>position:</strong> - Position to rotate to <br /> &gt; <strong>activity:</strong> - The activity for EX-Turntable to perform (refer <a class="reference internal" href="../../ex-turntable/test-and-tune.html#ex-turntable-activity-reference"><span class="std std-ref">EX-Turntable activity reference</span></a>) <br /></p>
 <p><em>Response:</em> <br /> <code class="docutils literal notranslate"><span class="pre">&lt;I</span> <span class="pre">id</span> <span class="pre">position</span> <span class="pre">moving&gt;</span></code> <br /> &gt; <strong>id:</strong> one of <br />    • identifier of the Turntable/traverser, or  <br />    • X if the command fails, or a rotation/move is in progress <br /> &gt; <strong>position:</strong> one of <br />    • position rotating to, or <br />    • blank = command failed <br /> &gt; <strong>moving:</strong> one of <br />    • 1 - turntable is moving, or <br />    • 0 - turntable is not moving, or <br />    • blank = command failed <br /> <br /> <em>Example Responses:</em> <br /> Response on rotate: <br />   Response (successful): <code class="docutils literal notranslate"><span class="pre">&lt;I</span> <span class="pre">id</span> <span class="pre">position</span> <span class="pre">moving&gt;</span></code> <br />   Response (fail): <code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> <br /></p>
 <p><em>Further information:</em> <br /> When EX-Turntable commences rotating/moving, the device driver flags this using the <strong>moving</strong> variable above in the response (1 indicates moving, 0 indicates stationary), and when a rotation or move is complete, it will generate an additional response broadcast to indicate that the rotation or move has completed. Further to this, a new rotate/move command will error when a rotation or move is currently in progress.</p>
 </div></blockquote>
@@ -2291,7 +2291,7 @@ You can also <strong>ERASE everything (turnouts, sensors, and outputs)</strong> 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f620a427d60>
+    <jinja2.runtime.BlockReference object at 0x7ff93bb908b0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

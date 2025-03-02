@@ -1,6 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l2.rst
 .. include:: /include/include-description.rst
+
 |EX-CONTRIBUTING-LOGO| |donate-button|
 
 **************************************
@@ -20,3 +21,4 @@ Here you'll find all the necessary resources and information for contributing to
   development
   webthrottle
   website/index
+  release-process

@@ -785,7 +785,7 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
   *Parameters:* |BR|
   |_| > **id:** - Identifier of the Turntable/traverser |BR|
   |_| > **position:** - Position to rotate to |BR|
-  |_| > **activity:** - The activity for EX-Turntable to perform (refer :ref:`ex-turntable/test-and-tune:ex-turntable commands`) |BR|
+  |_| > **activity:** - The activity for EX-Turntable to perform (refer :ref:`ex-turntable/test-and-tune:ex-turntable activity reference`) |BR|
   
   *Response:* |BR|
   |_| ``<I id position moving>`` |BR|

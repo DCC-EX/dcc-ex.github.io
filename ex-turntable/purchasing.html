@@ -570,7 +570,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../about/index.html">About Us and the Project</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../about/about.html">Meet the Team</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../about/licence.html">Licence &amp; Attributions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../about/roadmap.html">DCC-EX 2023 Roadmap</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../about/index-contributing.html">Donating &amp; Contributing</a><ul>
@@ -591,6 +590,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../about/contributing/website/publishing-news.html">Publishing DCC-EX News Posts</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../about/contributing/release-process.html">Versioning and the Release Process</a></li>
 </ul>
 </li>
 </ul>
@@ -652,8 +652,8 @@
 <section id="what-you-need-for-ex-turntable">
 <h2><a class="toc-backref" href="#id1" role="doc-backlink">What you need for EX-Turntable</a><a class="headerlink" href="#what-you-need-for-ex-turntable" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>An <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> running version 5.0.0 or later</p></li>
-<li><p>An Arduino microcontroller (tested on Nano V3, both old and new bootloader, an Uno R3 should also work)</p></li>
+<li><p>An <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> running version 5.0.0 or later (preferably at least 5.4.0)</p></li>
+<li><p>An Arduino microcontroller (tested on Nano V3, both old and new bootloader, and an Uno R3 should also work)</p></li>
 <li><p>A supported stepper motor driver and stepper motor (see list below)</p></li>
 <li><p>A hall effect (or similar) sensor for homing, which needs to be digital/unipolar such as an A3144 or 44E (or equivalent), and a HC-020K optical sensor is also an appropriate alternative here</p></li>
 <li><p>A suitable power supply - note that your chosen stepper driver/motor will dictate this, see note below</p></li>
@@ -662,6 +662,13 @@
 <li><p>A USB cable to connect the Arduino to a PC to load the software</p></li>
 <li><p><em>Optional:</em> A dual relay board (or similar) if you wish to use the phase switching capability (see <a class="reference internal" href="overview.html#important-phase-or-polarity-switching"><span class="std std-ref">Important! Phase (or polarity) switching</span></a>)</p></li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Both this and the following assembly page are primarily about using the UNL2003/28BYJ-48 stepper driver and motor combination. While these are inexpensive and easy to obtain, there have been many reports of these having various quality issues, primarily relating to “slop” in the gear mechanism of the stepper motor.</p>
+<p>As a result, we highly recommend using a NEMA17 and two wire stepper driver such as the A4988, DRV8825, or TMC2208 instead. The instructions on these pages are largely the same, with some changes to the wiring connections required as outlined in <a class="reference internal" href="assembly.html#using-a-two-wire-stepper-driver-e-g-a4988-drv8825-tmc2208"><span class="std std-ref">Using a two wire stepper driver (e.g. A4988/DRV8825/TMC2208)</span></a>.</p>
+<p>If you do continue to use a ULN2003/28BYJ-48 combination and have issues with accuracy, consider enforcing single direction rotation to help mitigate this by enabling either the <a class="reference internal" href="configure.html#rotate-forward-only"><span class="std std-ref">ROTATE_FORWARD_ONLY</span></a> or <a class="reference internal" href="configure.html#rotate-reverse-only"><span class="std std-ref">ROTATE_REVERSE_ONLY</span></a> configuration setting.</p>
+<p>As time allows, we will update the images and instructions to focus on this new recommendation.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you wish to make use of the traverser feature, there is further information on what is required to enable this on the <a class="reference internal" href="traverser.html"><span class="doc">Traversers and Limited Rotation Turntables</span></a> page.</p>
@@ -675,7 +682,7 @@
 <section id="power-supplies">
 <h3><a class="toc-backref" href="#id2" role="doc-backlink">Power supplies</a><a class="headerlink" href="#power-supplies" title="Link to this heading"></a></h3>
 <p>Choosing the right power supply for your Arduino and stepper motor is important to get right.</p>
-<p>If you are using the default ULN2003/28BYJ-48 it is technically possible to power the driver and stepper directly from the 5V output on an Arduino, however this is not recommended and should be avoided.</p>
+<p>If you are using the default ULN2003/28BYJ-48 it is technically possible to power the driver and stepper directly from the 5V output on an Arduino, however this is <strong>not recommended</strong> and should be avoided.</p>
 <p>Given that this combo requires 5V, you can use a single, regulated 5V DC power supply rated for at least 500mA to power both the Arduino and the ULN2003/28BYJ-48.</p>
 <p>Note that if you use the right Arduino Nano prototyping shield, it will likely have a LM317 voltage regulator supplied by the DC power jack. In this instance, you can use a 7 to 9V 500mA+ DC power supply to provide power, and it will be safe to connect the ULN2003 5V to a 5V output on the prototyping shield.</p>
 <p>For other steppers such as the NEMA17 that require 12V DC, you will need either two separate power supplies, or a DC-DC converter to provide a lower voltage to the Arduino. Note that the NEMA17 steppers have a considerably higher current rating, so the power supply will need to be rated at 1.5A or higher.</p>
@@ -683,7 +690,7 @@
 </section>
 <section id="supported-stepper-drivers-and-motors">
 <h2><a class="toc-backref" href="#id3" role="doc-backlink">Supported stepper drivers and motors</a><a class="headerlink" href="#supported-stepper-drivers-and-motors" title="Link to this heading"></a></h2>
-<p>The default configuration of <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> is for the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination. These steppers are used in a myriad of applications, are inexpensive, and will be suitable for most smaller scale turntable applications.</p>
+<p>The default configuration of <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> is for the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination.</p>
 <aside class="sidebar">
 <p class="sidebar-title">Unsupported stepper drivers and motors</p>
 <p><a class="reference external" href="../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
@@ -730,7 +737,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f620a7a3e80>
+    <jinja2.runtime.BlockReference object at 0x7ff94e9b3f10>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

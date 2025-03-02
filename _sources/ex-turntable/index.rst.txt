@@ -1,11 +1,12 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 .. include:: /include/include-ex-tt.rst
+
 |EX-TT-LOGO|
 
-************************************
+************
 EX-Turntable
-************************************
+************
 
 |SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-turntable-button-small|
 

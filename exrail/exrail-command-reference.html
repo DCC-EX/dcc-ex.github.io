@@ -570,7 +570,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../about/index.html">About Us and the Project</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../about/about.html">Meet the Team</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../about/licence.html">Licence &amp; Attributions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../about/roadmap.html">DCC-EX 2023 Roadmap</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../about/index-contributing.html">Donating &amp; Contributing</a><ul>
@@ -591,6 +590,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../about/contributing/website/publishing-news.html">Publishing DCC-EX News Posts</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../about/contributing/release-process.html">Versioning and the Release Process</a></li>
 </ul>
 </li>
 </ul>
@@ -1854,7 +1854,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <li><p><a class="reference internal" href="#waitfortt-id-wait-for-ex-turntable-turntable-traverser-to-complete-a-rotation" id="id144"><code class="docutils literal notranslate"><span class="pre">WAITFORTT(</span> <span class="pre">id</span> <span class="pre">)</span></code> - Wait for EX-Turntable turntable/traverser to complete a rotation</a></p></li>
 </ul>
 </nav>
-<p>Also refer to <a class="reference internal" href="../ex-turntable/test-and-tune.html#exrail-automation"><span class="std std-ref">EXRAIL automation</span></a>.</p>
+<p>Also refer to <a class="reference internal" href="../ex-turntable/test-and-tune.html#exrail-definition-and-control"><span class="std std-ref">EXRAIL definition and control</span></a>.</p>
 <p><hr class="hr-dashed" /></p>
 <section id="movett-id-steps-activity-move-a-ex-tt-to-a-step-position-and-perform-an-activity">
 <span id="movett"></span><h4><a class="toc-backref" href="#id133" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">MOVETT(</span> <span class="pre">id,</span> <span class="pre">steps,</span> <span class="pre">activity</span> <span class="pre">)</span></code> - Move a <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> to a step position and perform an activity</a><a class="headerlink" href="#movett-id-steps-activity-move-a-ex-tt-to-a-step-position-and-perform-an-activity" title="Link to this heading"></a></h4>
@@ -1938,7 +1938,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <section id="rotate-id-position-activity-rotate-an-ex-turntable-turntable-traverser">
 <span id="rotate"></span><h4><a class="toc-backref" href="#id142" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ROTATE(</span> <span class="pre">id,</span> <span class="pre">position,</span> <span class="pre">activity</span> <span class="pre">)</span></code> - Rotate an EX-Turntable turntable/traverser</a><a class="headerlink" href="#rotate-id-position-activity-rotate-an-ex-turntable-turntable-traverser" title="Link to this heading"></a></h4>
 <p>Rotate an EX-Turntable turntable/traverser at the specified <strong>id</strong> to the specified <strong>position</strong>, and perform <strong>activity</strong>.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>id</strong> - id of the turntable/traverser, valid IDs are (1 - 32767) <br /> &gt; <strong>position</strong> - position to rotate to, valid positions are (1 - 48) <br /> &gt; <strong>activity</strong> - refer to <a class="reference internal" href="../ex-turntable/test-and-tune.html#ex-turntable-commands"><span class="std std-ref">Ex-Turntable commands</span></a>, using the “EXRAIL activity” column</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>id</strong> - id of the turntable/traverser, valid IDs are (1 - 32767) <br /> &gt; <strong>position</strong> - position to rotate to, valid positions are (1 - 48) <br /> &gt; <strong>activity</strong> - refer to <a class="reference internal" href="../ex-turntable/test-and-tune.html#ex-turntable-activity-reference"><span class="std std-ref">EX-Turntable activity reference</span></a>, using the “EXRAIL activity” column</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="rotate-dcc-id-position-rotate-a-dcc-accessory-turntable-traverser">
@@ -3165,7 +3165,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f621cab18a0>
+    <jinja2.runtime.BlockReference object at 0x7ff93cc27910>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

@@ -62,7 +62,7 @@ The following information is highlighted for |EX-CS|:
 Sending commands
 ^^^^^^^^^^^^^^^^
 
-You can send any supported command to your device by typing it into the "Enter command" box and clicking the "Send" button. Refer to the :doc:`/reference/software/command-summary-consolidated` for the list of available commands. This will also work for the |EX-TT| :ref:`ex-turntable/test-and-tune:interactive serial console commands` and |EX-IO| :doc:`/ex-ioexpander/index` commands.
+You can send any supported command to your device by typing it into the "Enter command" box and clicking the "Send" button. Refer to the :doc:`/reference/software/command-summary-consolidated` for the list of available commands. This will also work for the |EX-TT| :ref:`ex-turntable/test-and-tune:ex-turntable interactive serial console commands` and |EX-IO| :doc:`/ex-ioexpander/index` commands.
 
 Saving startup or serial console logs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

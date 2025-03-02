@@ -1,6 +1,7 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 .. include:: /include/include-ex-tt.rst
+
 |EX-TT-LOGO|
 
 *********
@@ -19,13 +20,15 @@ Overview
 What is EX-Turntable?
 =====================
 
-|EX-TT| is a fully integrated turntable controller, using an additional Arduino (Nano or Uno) microcontroller to drive a stepper driver to rotate a turntable and align the bridge track with the surrounding layout tracks. An Arduino Nano or Uno are suitable microcontrollers for |EX-TT|.
+|EX-TT| is a fully integrated turntable controller, using an additional Arduino (Nano or Uno) microcontroller to drive a stepper motor that rotates a turntable to align the bridge track with the surrounding layout tracks.
 
-The aim is to keep things as simple as possible, and to maintain alignment with the categories of our users as defined in our :doc:`/begin/levels` guide for |EX-CS| (|conductor-text|, |tinkerer-text|, and |engineer-text|).
+While we aim to keep things simple, please note that there are complexities in setting up a turntable that tend to make |EX-TT| more in the realm of the |tinkerer-text| level user.
 
-However, there are complexities in setting up a turntable that tend to make |EX-TT| more in the realm of the |tinkerer-text| level user, even when using the ubiquitous ULN2003/28BYJ-48 stepper driver and motor combination that are readily available.
+|NEW-IN-V5-4|
 
-To make full use of |EX-TT|, you will need a basic understanding of :doc:`EXRAIL </exrail/index>` automation, but we'll share the details and some examples to help with this.
+To make things easier, a turntable object is now available to define and control both |EX-TT| and DCC controlled turntables, which also allows throttle developers to implement direct control of turntables if they so wish. More information on how to use this with |EX-TT| is on the :doc:`/ex-turntable/test-and-tune` page.
+
+It's highly recommended running the latest of both |EX-CS| and |EX-TT| to ensure feature parity with the two, and ensure you have the latest bug fixes and so forth.
 
 .. note::
 
@@ -69,7 +72,6 @@ The |EX-TT| integration includes:
 How Does It Work?
 =================
 
-
 .. sidebar:: Full step, half step, and other modes
 
   Stepper motor drivers typically support more than one mode for driving stepper motors. This simply means that they can be turned less than one complete step, allowing more granular control of positioning, resulting in higher precision, and much smoother operation. For example, the DRV8825 can drive 1/32 of a step, talk about smooooth!
@@ -88,20 +90,11 @@ Once the home position is determined, the various positions on your layout are d
 
 The command used to move to these positions simply sends the number of steps to |EX-TT|, which calculates the steps required in order to move the least number of steps to the desired position, meaning it will rotate either clockwise or counter clockwise depending which is the shortest distance.
 
-That's pretty much as simple as it gets. These step positions are defined in myAutomation.h (part of |EX-R|), which will be described in further detail below, including how to ensure these are advertised to WiThrottle applications.
-
 .. tip:: 
 
   It's recommended that the home position does not align with a specific layout connection track to ensure that each time |EX-TT| powers on, it automatically triggers the homing activity to occur, ensuring it starts in a consistent location each time for the highest accuracy.
 
-Controlling the turntable
--------------------------
-
-To control the turntable, the simplest method is using |EX-R| automation commands advertised as ROUTEs to the throttle of your choice.
-
-There is now the ability to control |EX-TT| as a turntable or traverser object, similar to how turnouts/points are controlled, via either DCC-EX native commands or |EX-R|, however.
-
-Refer to the :ref:`ex-turntable/test-and-tune:testing, tuning, and control` page for more details on both methods of control available.
+Refer to the :doc:`/ex-turntable/test-and-tune` page for details on how to configure and control |EX-TT|.
 
 Considerations when using geared steppers, turntables, and/or microsteps
 ------------------------------------------------------------------------

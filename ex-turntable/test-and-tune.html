@@ -570,7 +570,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../about/index.html">About Us and the Project</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../about/about.html">Meet the Team</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../about/licence.html">Licence &amp; Attributions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../about/roadmap.html">DCC-EX 2023 Roadmap</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../about/index-contributing.html">Donating &amp; Contributing</a><ul>
@@ -591,6 +590,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../about/contributing/website/publishing-news.html">Publishing DCC-EX News Posts</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../about/contributing/release-process.html">Versioning and the Release Process</a></li>
 </ul>
 </li>
 </ul>
@@ -639,55 +639,387 @@
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#ex-turntable-commands" id="id2">Ex-Turntable commands</a></p>
+<li><p><a class="reference internal" href="#testing-ex-turntable" id="id1">Testing EX-Turntable</a></p>
 <ul>
-<li><p><a class="reference internal" href="#development-version-commands" id="id3">Development version commands</a></p></li>
-<li><p><a class="reference internal" href="#interactive-serial-console-commands" id="id4">Interactive Serial console commands</a></p></li>
+<li><p><a class="reference internal" href="#ex-turntable-interactive-serial-console-commands" id="id2">EX-Turntable interactive serial console commands</a></p></li>
+<li><p><a class="reference internal" href="#testing-with-the-ex-commandstation-diagnostic-command" id="id3">Testing with the EX-CommandStation diagnostic command</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#testing-ex-turntable" id="id5">Testing EX-Turntable</a></p></li>
-<li><p><a class="reference internal" href="#tuning-your-turntable-positions" id="id6">Tuning your turntable positions</a></p>
+<li><p><a class="reference internal" href="#tuning-your-turntable-positions" id="id4">Tuning your turntable positions</a></p>
 <ul>
-<li><p><a class="reference internal" href="#determine-the-positions" id="id7">Determine the positions</a></p></li>
-<li><p><a class="reference internal" href="#example-tuning-commands" id="id8">Example tuning commands</a></p></li>
-<li><p><a class="reference internal" href="#apply-to-your-layout" id="id9">Apply to your layout</a></p></li>
+<li><p><a class="reference internal" href="#determine-the-positions" id="id5">Determine the positions</a></p></li>
+<li><p><a class="reference internal" href="#example-tuning-commands" id="id6">Example tuning commands</a></p></li>
+<li><p><a class="reference internal" href="#apply-to-your-layout" id="id7">Apply to your layout</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#advertising-positions-to-engine-driver-and-withrottle-applications" id="id10">Advertising positions to Engine Driver and WiThrottle applications</a></p>
+<li><p><a class="reference internal" href="#configuring-your-turntable" id="id8">Configuring your turntable</a></p>
 <ul>
-<li><p><a class="reference internal" href="#my-turntable-moves-on-startup" id="id11">My turntable moves on startup!</a></p></li>
+<li><p><a class="reference internal" href="#basic-dcc-ex-native-turntable-definition-and-control" id="id9">Basic DCC-EX native turntable definition and control</a></p></li>
+<li><p><a class="reference internal" href="#exrail-definition-and-control" id="id10">EXRAIL definition and control</a></p></li>
 </ul>
 </li>
+<li><p><a class="reference internal" href="#advertising-positions-to-engine-driver-and-withrottle-applications" id="id11">Advertising positions to Engine Driver and WiThrottle applications</a></p></li>
 <li><p><a class="reference internal" href="#manual-phase-switching" id="id12">Manual phase switching</a></p></li>
-<li><p><a class="reference internal" href="#controlling-ex-turntable-with-a-rotary-encoder" id="id13">Controlling EX-Turntable with a rotary encoder</a></p>
+<li><p><a class="reference internal" href="#controlling-ex-turntable-with-dcc-ex-turntable-controller" id="id13">Controlling EX-Turntable with DCC-EX Turntable Controller</a></p>
 <ul>
 <li><p><a class="reference internal" href="#required-software" id="id14">Required software</a></p></li>
-<li><p><a class="reference internal" href="#enabling-the-device-driver" id="id15">Enabling the device driver</a></p></li>
-<li><p><a class="reference internal" href="#exrail-automation" id="id16">EXRAIL automation</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#new-development-version-control-of-ex-turntable" id="id17">NEW - Development version control of EX-Turntable</a></p>
-<ul>
-<li><p><a class="reference internal" href="#basic-dcc-ex-native-turntable-definition-and-control" id="id18">Basic DCC-EX native turntable definition and control</a></p></li>
-<li><p><a class="reference internal" href="#exrail-definition-and-control" id="id19">EXRAIL definition and control</a></p></li>
-</ul>
-</li>
+<li><p><a class="reference internal" href="#ex-turntable-activity-reference" id="id15">EX-Turntable activity reference</a></p></li>
 </ul>
 </nav>
 </aside>
-<section id="ex-turntable-commands">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">Ex-Turntable commands</a><a class="headerlink" href="#ex-turntable-commands" title="Link to this heading"></a></h2>
-<p>Before proceeding with testing or any configuration, it’s important to understand the two commands available for controlling <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a>.</p>
-<p>This is a debug or diagnostic command that can be executed via the serial terminal of the CommandStation:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="n">vpin</span><span class="w"> </span><span class="n">steps</span><span class="w"> </span><span class="n">activity</span><span class="o">&gt;</span>
+<section id="testing-ex-turntable">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Testing EX-Turntable</a><a class="headerlink" href="#testing-ex-turntable" title="Link to this heading"></a></h2>
+<p>Before attempting to configure your <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> in the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> software, it is recommended to perform some initial testing to make sure it functions as it should.</p>
+<p>Once you have performed this testing, you will be familiar with the commands that will help you tune the steps required to achieve proper track alignment between your turntable bridge and the surrounding tracks, and can then configure <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> to operate <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> reliably.</p>
+<p>It is recommended to perform testing via the <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> serial console first using the commands in the next section, and then test using the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> diagnostic command. Using the diagnostic command is also the recommended method to perform tuning, as it replicates what the turntable object (and/or <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a>) will use to operate the turntable.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>For all references to “steps”, this is the number of steps from the home position, not the number of steps the turntable has to travel.</p>
+</div>
+<section id="ex-turntable-interactive-serial-console-commands">
+<h3><a class="toc-backref" href="#id2" role="doc-backlink">EX-Turntable interactive serial console commands</a><a class="headerlink" href="#ex-turntable-interactive-serial-console-commands" title="Link to this heading"></a></h3>
+<p>While the ability to test <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> directly via the serial console was introduced in 0.5.0, this section covers the commands as of version 0.7.0. We highly recommend updating the <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> software if you are not running the latest. <strong>Note</strong> that this command is available when connected to the <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> serial console, <strong>not</strong> the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> serial console.</p>
+<p>These are the interactive serial console commands available:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;C&gt;</span></code> - Initiate the calibration sequence</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> - Enable/disable debug output to the serial console</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> - Erase the EEPROM contents, which will force calibration to occur at next startup</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;H&gt;</span></code> - Initiate homing</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;M</span> <span class="pre">steps</span> <span class="pre">activity&gt;</span></code> - Initiate a move to the provided step count with the specified activity</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> - Initiate a reboot (note with the old bootloader Nano this will not function correctly)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code> - Enter/exit sensor testing mode, and requires a restart if exiting</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;V&gt;</span></code> - Display the startup information in the serial console</p></li>
+</ul>
+<p>To test your <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> is functional, use the command <code class="docutils literal notranslate"><span class="pre">&lt;M</span> <span class="pre">steps</span> <span class="pre">activity&gt;</span></code>.</p>
+<p>For example, sending the command <code class="docutils literal notranslate"><span class="pre">&lt;M</span> <span class="pre">300</span> <span class="pre">0&gt;</span></code> via the serial console will result in output similar to this:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Received</span><span class="w"> </span><span class="n">serial</span><span class="w"> </span><span class="n">input</span><span class="o">:</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">Test</span><span class="w"> </span><span class="n">move</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="n">steps</span><span class="p">,</span><span class="w"> </span><span class="n">activity</span><span class="w"> </span><span class="n">ID</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">Received</span><span class="w"> </span><span class="n">notification</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">move</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="n">postion</span><span class="w"> </span><span class="mi">300</span>
+<span class="n">Position</span><span class="w"> </span><span class="n">steps</span><span class="o">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="n">Auto</span><span class="w"> </span><span class="n">phase</span><span class="w"> </span><span class="k">switch</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">moving</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="n">steps</span>
+<span class="n">Setting</span><span class="w"> </span><span class="n">phase</span><span class="w"> </span><span class="k">switch</span><span class="w"> </span><span class="n">flag</span><span class="w"> </span><span class="n">to</span><span class="o">:</span><span class="w"> </span><span class="mi">0</span>
 </pre></div>
 </div>
-<p>This is the <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> command to be included in myAutomation.h:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MOVETT</span><span class="p">(</span><span class="n">vpin</span><span class="p">,</span><span class="w"> </span><span class="n">steps</span><span class="p">,</span><span class="w"> </span><span class="n">activity</span><span class="p">)</span>
+<p>If you are seeing unexpected results, use the <code class="docutils literal notranslate"><span class="pre">&lt;V&gt;</span></code> command to show the startup information which will display the calibrated full turn step count to validate calibration worked as expected. If the step count is unexpected, use the <code class="docutils literal notranslate"><span class="pre">&lt;C&gt;</span></code> command to force calibration to run again.</p>
+<p>Further information on the “activity” parameter is outlined in the <a class="reference internal" href="#ex-turntable-activity-reference"><span class="std std-ref">EX-Turntable activity reference</span></a> section.</p>
+</section>
+<section id="testing-with-the-ex-commandstation-diagnostic-command">
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">Testing with the EX-CommandStation diagnostic command</a><a class="headerlink" href="#testing-with-the-ex-commandstation-diagnostic-command" title="Link to this heading"></a></h3>
+<p>Once you have verified <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> is functioning as expected, move on to testing with the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> diagnostic command <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">TT</span> <span class="pre">vpin</span> <span class="pre">steps</span> <span class="pre">activity&gt;</span></code>.</p>
+<p>Ensure <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> was powered on before <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>. By powering these on in that order, you will ensure that <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> is available prior to the CommandStation trying to load the device driver, otherwise it will consider the device as “OFFLINE”, and commands will fail.</p>
+<p><strong>Note</strong> that these commands are available when connected to the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> serial console, <strong>not</strong> the <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> serial console.</p>
+<p>Referring to <a class="reference internal" href="../reference/developers/hal-config.html#adding-a-new-device"><span class="std std-ref">Adding a New Device</span></a>, skip ahead to <a class="reference internal" href="../reference/developers/hal-config.html#checking-the-driver"><span class="std std-ref">Checking the Driver</span></a>, and the output you’re looking for to validate the <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> device driver is loaded and connected successfully is below:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">HAL</span><span class="w"> </span><span class="n">SHOW</span><span class="o">&gt;&lt;*</span><span class="w"> </span><span class="n">Arduino</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">2-69</span><span class="w"> </span><span class="o">*&gt;</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="n">PCA9685</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="n">x40</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">100-115</span><span class="w">  </span><span class="o">*&gt;</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="n">PCA9685</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="n">x41</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">116-131</span><span class="w"> </span><span class="n">OFFLINE</span><span class="w"> </span><span class="o">*&gt;</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="n">MCP23017</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="n">x20</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">164-179</span><span class="w"> </span><span class="n">OFFLINE</span><span class="w"> </span><span class="o">*&gt;</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="n">MCP23017</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="n">x21</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">180-195</span><span class="w"> </span><span class="n">OFFLINE</span><span class="w"> </span><span class="o">*&gt;</span>
+<span class="o">&lt;*</span><span class="w"> </span><span class="n">EX</span><span class="o">-</span><span class="n">Turntable</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="n">x60</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">600-600</span><span class="w">  </span><span class="o">*&gt;</span><span class="w">          </span><span class="o">&lt;&lt;==</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">important</span><span class="w"> </span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">EX</span><span class="o">-</span><span class="n">TT</span><span class="o">|</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">connected</span><span class="o">!</span>
 </pre></div>
 </div>
-<p>For both of these commands, “vpin” is as defined in your “myAutomation.h” file, and “steps” is the number of steps from the home position, not the number of steps the turntable has to travel.</p>
-<p>For the diagnostic command, “activity” needs to be defined as a number, whereas for the <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> command, this is defined as text based on the table below. Sound confusing? The reason for using text in the <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> command is to make your automation sequences more “human-friendly” when reading what they do later. It’s much easier for us humans to remember words rather than numbers.</p>
+<p>If there is an “OFFLINE” at the end of the <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> line, it indicates something is not quite right. Refer to <a class="reference internal" href="../support/ex-tt-troubleshooting.html#ex-turntable-showing-as-offline-with-d-hal-show"><span class="std std-ref">EX-Turntable showing as offline with &lt;D HAL SHOW&gt;</span></a>.</p>
+<p>At power on, note that the turntable should have moved itself to the home position, so all commands below assume this is the case.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For all testing and tuning below, it is assumed that the default option for automatic phase switching is enabled, and that the default ULN2003/28BYJ-48 stepper driver and motor combination is in use in half step mode, which is ~4096 steps per revolution.</p>
+<p>For automatic phase switching, this should translate to ~512 steps for the 45 degree phase switch trigger point, and ~2560 steps for the 225 degree revert trigger point.</p>
+</div>
+<p>This command should rotate the turntable 100 steps only:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>This command should rotate the turntable a further 500 steps and active the phase inversion relays:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>500 is the difference between the existing 100 steps and target 600 steps</p></li>
+<li><p>600 steps is greater than the ~512 step/45 degree trigger position for phase inversion</p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>This next command should rotate the turntable in the reverse direction by 300 steps and deactivate the phase inversion relays:</p>
+<ul class="simple">
+<li><p>300 is the difference between the existing 600 steps and target 300 steps, with the reverse direction being the shortest path there</p></li>
+<li><p>300 steps is less than the ~512 step/45 degree trigger position for phase inversion</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>This command should rotate the turntable again in the reverse direction, and should also activate the phase inversion relays:</p>
+<ul class="simple">
+<li><p>2000 steps is greater than the ~512 step/45 degree trigger position for phase inversion</p></li>
+<li><p>It is also less than the ~2560 step/225 degree trigger position to revert the inversion</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">2000</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Finally, this command will cause the turntable to once again find its home position:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Providing these tests have completed successfully, you are now ready to tune the turntable positions for your layout and configure your <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> ready for operation.</p>
+<p>Further information on the “activity” parameter is outlined in the <a class="reference internal" href="#ex-turntable-activity-reference"><span class="std std-ref">EX-Turntable activity reference</span></a> section.</p>
+</section>
+</section>
+<section id="tuning-your-turntable-positions">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Tuning your turntable positions</a><a class="headerlink" href="#tuning-your-turntable-positions" title="Link to this heading"></a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To determine your starting positions, you will need the full turn step count as recorded in <a class="reference internal" href="assembly.html#first-start-and-automatic-calibration"><span class="std std-ref">First start and automatic calibration</span></a>.</p>
+</div>
+<p>To tune your turntable positions, you will need to calculate the number of steps from the home position the turntable needs to rotate in order to reach the desired position. By default, the turntable will turn in a clockwise direction (as demonstrated by the homing activity).</p>
+<section id="determine-the-positions">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Determine the positions</a><a class="headerlink" href="#determine-the-positions" title="Link to this heading"></a></h3>
+<p>At this point, you should either have a layout you’re fitting <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> into, or a layout design that you’re working to, with the various turntable connection tracks defined.</p>
+<p>The simplest way to devise the approximate number of steps for each turntable position is to calculate these based on the degrees each step will turn.</p>
+<p>For the default <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> configuration with the ULN2003/28BYJ-48 stepper driver/motor combo in half step mode, this should give a step count close to 4096 for a single 360 degree rotation, which means each step is ~0.088 degrees of movement (360/4096 = 0.088).</p>
+<p>Therefore, to determine the number of steps required to turn a certain number of degrees, use the formula “steps = degrees/degrees per step”. To turn 10 degrees requires ~114 steps (10 / 0.088 = 113.64).</p>
+<p>In this example, for simplicity, we will devise the steps required for a six position turntable, with position 1 being 10 degrees from the home position, position 2 a further 10 degrees, position 3 a further 10 degrees again, and positions 4 through 6 being 180 degrees from the first three positions.</p>
+<a class="reference internal image-reference" href="../_images/six-pos-example-degrees.png"><img alt="Six Position Example" src="../_images/six-pos-example-degrees.png" style="width: 436.79999999999995px; height: 342.29999999999995px;" /></a>
+<p>Therefore, using our formula, the starting point for each position will be:</p>
+<table class="command-table docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Position</p></th>
+<th class="head"><p>Degrees from home</p></th>
+<th class="head"><p>Steps from home</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>10</p></td>
+<td><p>114</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>20</p></td>
+<td><p>227</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>30</p></td>
+<td><p>341</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>190</p></td>
+<td><p>2159</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>200</p></td>
+<td><p>2273</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>210</p></td>
+<td><p>2386</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-tuning-commands">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Example tuning commands</a><a class="headerlink" href="#example-tuning-commands" title="Link to this heading"></a></h3>
+<p>To validate the above calculated positions, the following six diagnostic commands should be executed in the serial terminal of the CommandStation, which will allow you to visually inspect the alignment with your layout tracks and adjust accordingly:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">114</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">227</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">341</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">2159</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">2273</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">2386</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>If you find any of these positions are slightly out of alignment, simply adjust the step count as appropriate to compensate.</p>
+<p>Note that due to the automatic phase inversion, the last three positions will automatically active the phase inversion relays due to being within the 45 to 225 degree angles that activates phase inversion.</p>
+</section>
+<section id="apply-to-your-layout">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Apply to your layout</a><a class="headerlink" href="#apply-to-your-layout" title="Link to this heading"></a></h3>
+<p>At this point, you should be able to apply the above calculations to your own layout and come up with the step count required for each position.</p>
+<p>Use appropriate diagnostic commands to test and tune each position for that perfect alignment, and providing your layout is functional, you should be able to drive a locomotive on and off your turntable in each position.</p>
+</section>
+</section>
+<section id="configuring-your-turntable">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Configuring your turntable</a><a class="headerlink" href="#configuring-your-turntable" title="Link to this heading"></a></h2>
+<p><span class="new-in-v5-4">New in version 5.4 </span></p>
+<p>As mentioned previously, we recommend using <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> version 5.4.0 or later to make use of the new turntable object along with the new <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> commands.</p>
+<p>Note that the previous <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> commands are still valid and will work, however all examples on this page have been updated to reflect the new commands.</p>
+<p>For full details on using the new commands available, refer to <a class="reference internal" href="../reference/software/command-summary-consolidated.html#turntables-traversers-configuring-the-ex-commandstation"><span class="std std-ref">Turntables/Traversers (Configuring the EX-CommandStation)</span></a> and <a class="reference internal" href="../reference/software/command-summary-consolidated.html#turntables-traversers"><span class="std std-ref">Turntables/Traversers</span></a>, and also the <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> commands in <a class="reference internal" href="../exrail/exrail-command-reference.html#turntable-traverser-objects-definition-and-control"><span class="std std-ref">Turntable/Traverser Objects - Definition and Control</span></a> and <a class="reference internal" href="../exrail/exrail-command-reference.html#turntable-features"><span class="std std-ref">Turntable features</span></a>.</p>
+<p>For simplicity, the examples below use the same step counts as calculated in the tuning section above.</p>
+<section id="basic-dcc-ex-native-turntable-definition-and-control">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Basic DCC-EX native turntable definition and control</a><a class="headerlink" href="#basic-dcc-ex-native-turntable-definition-and-control" title="Link to this heading"></a></h3>
+<p>In this example, a turntable with ID 1 is defined with our six positions as per the tuning examples, and disregarding the values of <strong>home</strong> and <strong>angle</strong>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">EXTT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">114</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">227</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">341</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">2159</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">2273</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">2386</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Assuming <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> was configured for automatic phase switching, these commands would be used to rotate it to position 1, then position 6, and then home:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<section id="operation-with-manual-phase-switching">
+<h4>Operation with manual phase switching<a class="headerlink" href="#operation-with-manual-phase-switching" title="Link to this heading"></a></h4>
+<p>For the same scenario, but with manual phase switching, these commands would be used:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="exrail-definition-and-control">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">EXRAIL definition and control</a><a class="headerlink" href="#exrail-definition-and-control" title="Link to this heading"></a></h3>
+<p>The real beauty of this new object comes in the form of automation possibilities with <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a>, as there is now an event handler <code class="docutils literal notranslate"><span class="pre">ONROTATE()</span></code> along with a position test command <code class="docutils literal notranslate"><span class="pre">IF_TTPOSITION()</span></code> and a new <code class="docutils literal notranslate"><span class="pre">WAITFORTT()</span></code> command to really enhance the possibilities of what can be accomplished when turntable/traverser activities occur.</p>
+<p>To define our turntable as above but in <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a>, it looks like this:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">HAL</span><span class="p">(</span><span class="n">EXTurntable</span><span class="p">,</span><span class="mi">600</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mh">0x60</span><span class="p">)</span>
+<span class="n">EXTT_TURNTABLE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">600</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;My EX-Turntable&quot;</span><span class="p">)</span>
+<span class="n">TT_ADDPOSITION</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">114</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;Roundhouse stall 1&quot;</span><span class="p">)</span>
+<span class="n">TT_ADDPOSITION</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">227</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;Roundhouse stall 2&quot;</span><span class="p">)</span>
+<span class="n">TT_ADDPOSITION</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">341</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;Roundhouse stall 3&quot;</span><span class="p">)</span>
+<span class="n">TT_ADDPOSITION</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2159</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;Reverse to stall 1&quot;</span><span class="p">)</span>
+<span class="n">TT_ADDPOSITION</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2273</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;Reverse to stall 2&quot;</span><span class="p">)</span>
+<span class="n">TT_ADDPOSITION</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">2386</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;Reverse to stall 3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now, suppose we wish to turn a flashing light connected to Vpin 164 on whenever the turntable is is motion. This can be accomplished with our event handler:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ONROTATE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">  </span><span class="n">SET</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
+<span class="w">  </span><span class="n">WAITFORTT</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">  </span><span class="n">RESET</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
+<span class="n">DONE</span>
+</pre></div>
+</div>
+<p>This can be further enhanced with position specific options. Say we have roundhouse doors that need to be opened when their position is selected, and closed after the loco has entered the stall.</p>
+<p>Stall 1’s door is operated by enabling Vpin 164, 2 by Vpin 165, and 3 by Vpin 166. Sensors for each are at Vpins 167, 168, and 169 respectively.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ONROTATE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">  </span><span class="n">IF_TTPOSITION</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="n">CALL</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ENDIF</span>
+<span class="w">  </span><span class="n">IF_TTPOSITION</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="n">CALL</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ENDIF</span>
+<span class="w">  </span><span class="n">IF_TTPOSITION</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="w">    </span><span class="n">CALL</span><span class="p">(</span><span class="mi">103</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ENDIF</span>
+<span class="w">  </span><span class="n">IF_TTPOSITION</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="w">    </span><span class="n">CALL</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ENDIF</span>
+<span class="w">  </span><span class="n">IF_TTPOSITION</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="w">    </span><span class="n">CALL</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ENDIF</span>
+<span class="w">  </span><span class="n">IF_TTPOSITION</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="w">    </span><span class="n">CALL</span><span class="p">(</span><span class="mi">103</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ENDIF</span>
+<span class="n">DONE</span>
+
+<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
+<span class="w">  </span><span class="n">SET</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
+<span class="w">  </span><span class="n">AFTER</span><span class="p">(</span><span class="mi">167</span><span class="p">)</span>
+<span class="w">  </span><span class="n">RESET</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
+<span class="n">RETURN</span>
+
+<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
+<span class="w">  </span><span class="n">SET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span>
+<span class="w">  </span><span class="n">AFTER</span><span class="p">(</span><span class="mi">168</span><span class="p">)</span>
+<span class="w">  </span><span class="n">RESET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span>
+<span class="n">RETURN</span>
+
+<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">103</span><span class="p">)</span>
+<span class="w">  </span><span class="n">SET</span><span class="p">(</span><span class="mi">166</span><span class="p">)</span>
+<span class="w">  </span><span class="n">AFTER</span><span class="p">(</span><span class="mi">169</span><span class="p">)</span>
+<span class="w">  </span><span class="n">RESET</span><span class="p">(</span><span class="mi">166</span><span class="p">)</span>
+<span class="n">RETURN</span>
+</pre></div>
+</div>
+<p>Using these capabilities means any operation of the turntable will result in the roundhouse stall doors opening, and then closing once the loco has entered and passed over the appropriate sensor.</p>
+<p>For controlling the turntable, it is still possible to use the <code class="docutils literal notranslate"><span class="pre">ROUTE()</span></code> command for this, and utilising the new <code class="docutils literal notranslate"><span class="pre">ROTATE()</span></code> command:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">201</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Set for roundhouse stall 1&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ROTATE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">Turn</span><span class="p">)</span>
+<span class="n">DONE</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="advertising-positions-to-engine-driver-and-withrottle-applications">
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Advertising positions to Engine Driver and WiThrottle applications</a><a class="headerlink" href="#advertising-positions-to-engine-driver-and-withrottle-applications" title="Link to this heading"></a></h2>
+<p>At the time of writing, neither <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> or the <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> protocol is aware of the new turntable object, and we are not aware of other throttle software being written to take advantage of this yet aside from the DCCEXTurntableController project.</p>
+<p>Until such time as throttle software is updated to take advantage of this, using the <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> <code class="docutils literal notranslate"><span class="pre">ROUTE()</span></code> command is still required to advertise turntable positions.</p>
+<p>Once throttle developers start implementing support for the native turnable object, any configured turntables will automatically be advertised to throttle software, enabling direct control without needing to add routes to enable this.</p>
+<p>If this is your first experience with <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> and the “myAutomation.h” file, familiarise yourself with <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> by reading through <a class="reference internal" href="../exrail/index.html"><span class="doc">EXRAIL   Automation &amp; Animation </span></a>, paying particular attention to the various mentions of ROUTE and the associated examples.</p>
+<p>It is highly recommended  to utilise the virtual <code class="docutils literal notranslate"><span class="pre">RESERVE()</span></code> and <code class="docutils literal notranslate"><span class="pre">FREE()</span></code> functions to ensure that while you are operating your turntable, nothing else can interfere with it. This is not so important during manual operation, however if you want to add any other automation (say, turning a warning light on), you will need these to ensure the relevant automation activities are not interrupted should you choose another turntable position prior to the first move completing.</p>
+<p>To define the required turntable positions in the example six position turntable from above, you will need to have this content added to your “myAutomation.h” file. Note that we recommend adding an additional ROUTE to activate the homing process.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<a class="reference internal image-reference" href="../_images/conductor.png"><img alt="Conductor Level" class="align-left" src="../_images/conductor.png" style="width: 48.0px; height: 48.0px;" /></a>
+<p>To make this as simple as possible, we have included “myTurntable-EX.example.h” with the CommandStation-EX software containing an example automation macro with some pre-defined positions based on the example above as a starting point. Feel free to either copy or rename this to “myAutomation.h” and use it.</p>
+</div>
+<p>For example, the <code class="docutils literal notranslate"><span class="pre">ROUTE()</span></code> for the first position in our tuning example might look like this:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Roundhouse Stall 1&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">RESERVE</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ROTATE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">  </span><span class="n">WATIFORTT</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">  </span><span class="n">FREE</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span>
+<span class="n">DONE</span>
+</pre></div>
+</div>
+<p>That’s it! Once you have created “myAutomation.h” and uploaded it to your CommandStation as per the process on the <a class="reference internal" href="../exrail/index.html"><span class="doc">EXRAIL   Automation &amp; Animation </span></a> page, the routes for each turntable position should automatically be visible in <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> and <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> applications.</p>
+</section>
+<section id="manual-phase-switching">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Manual phase switching</a><a class="headerlink" href="#manual-phase-switching" title="Link to this heading"></a></h2>
+<p>So far, all the examples, testing, and tuning have relied on automatic phase switching.</p>
+<p>There may be times where manual phase switching is required, whether due to awkward track wiring, layouts that have tracks at angles that make it hard to determine the correct angles at which to automatically switch the phase, or when traversers are used rather than traditional turntables, that don’t actually required phase switching at all.</p>
+<p>To enable manual phase switching, you must edit “config.h” and set <a class="reference internal" href="configure.html#phase-switching"><span class="std std-ref">PHASE_SWITCHING</span></a> to “MANUAL”.</p>
+<p>Once this has been done, you must explicitly define the phase switching to occur as a part of the diagnostic or <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> command for every step position that requires an inverted phase.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you have enabled manual phase switching, you <strong>must</strong> specify the correct activity with every command.</p>
+<p>This means for every position that requires the phase to be inverted, you must send the invert activity (1/Turn_PInvert). For every position that requires the phase to be maintained, you must send just the turn activity (0/Turn).</p>
+</div>
+<p>To use our tuning example again, the commands in <a class="reference internal" href="#example-tuning-commands"><span class="std std-ref">Example tuning commands</span></a> would need to be modified to replicate the automatic phase switching as such:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">114</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">227</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">341</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">2159</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">2273</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">2386</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> equivalent to the above would be:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROTATE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">)</span>
+<span class="n">ROTATE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">)</span>
+<span class="n">ROTATE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">)</span>
+<span class="n">ROTATE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">Turn_PInvert</span><span class="p">)</span>
+<span class="n">ROTATE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">Turn_PInvert</span><span class="p">)</span>
+<span class="n">ROTATE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="n">Turn_PInvert</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>If you do not explicitly send the activity command to invert the phase, and the turntable orientation results with the phase out of alignment with the surrounding tracks, this will result in a short circuit when a locomotive attempts to enter or exit the turntable bridge track.</p>
+</div>
+</section>
+<section id="controlling-ex-turntable-with-dcc-ex-turntable-controller">
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Controlling EX-Turntable with DCC-EX Turntable Controller</a><a class="headerlink" href="#controlling-ex-turntable-with-dcc-ex-turntable-controller" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This software is not official <a href="../index.html"><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span></a> software and is maintained separately.</p>
+</div>
+<p>There is another project available enabling use of a rotary encoder and round LCD that operates as a throttle to control a <a href="../index.html"><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span></a> turntable. This makes use of the new turntable object, using the defined angles to display the various positions on the display.</p>
+<p>This software has been written to use either an STM32F411CEU6 Blackpill or Espressif ESP32 WROOM connected via serial to the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>, or also as a WiFi client if using the ESP32 option.</p>
+<p>As this software uses the new turntable object, you must be running version 5.4.0 or later of <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>.</p>
+<p>This also means you needn’t create a <code class="docutils literal notranslate"><span class="pre">ROUTE()</span></code> for each turntable position, as the turntable object will autmoatically be available to the controller once the objects have been created as outlined in <a class="reference internal" href="#configuring-your-turntable"><span class="std std-ref">Configuring your turntable</span></a>.</p>
+<p>For DCC-EX Turntable Controller software documentation including installation and configuration, refer to the project page <a class="reference external" href="https://petegsx-projects.github.io/dccex-turntable-controller/index.html">DCC-EX Turntable Controller</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;">.</p>
+<section id="required-software">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Required software</a><a class="headerlink" href="#required-software" title="Link to this heading"></a></h3>
+<p>The rotary encoder software can be downloaded from:</p>
+<p class="dcclink"><a class="reference external" href="https://github.com/peteGSX-Projects/DCCEXTurntableController">DCCEXTurntableController GitHub repository</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
+</section>
+</section>
+<section id="ex-turntable-activity-reference">
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">EX-Turntable activity reference</a><a class="headerlink" href="#ex-turntable-activity-reference" title="Link to this heading"></a></h2>
+<p>You will note that both interactive and <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> commands have an “activity” parameter. When using interactive serial console commands either via <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> or <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>, “activity” needs to be defined as a number, whereas for the <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> command, this is defined as text based on the table below. Refer to this table to know which activity to use. In most instances, you will likely just use “0” or “Turn” when operating <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a>.</p>
 <table class="command-table docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Diagnostic activity</p></th>
@@ -738,469 +1070,6 @@
 </tr>
 </tbody>
 </table>
-<p>Here’s a quick example to demonstrate the difference between the diagnostic and <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> commands, with both commands below rotating to step position 100:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">)</span>
-</pre></div>
-</div>
-<section id="development-version-commands">
-<h3><a class="toc-backref" href="#id3" role="doc-backlink">Development version commands</a><a class="headerlink" href="#development-version-commands" title="Link to this heading"></a></h3>
-<p>For users keeping up with the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> development releases, version 5.1.16 introduced a new turntable/traverser object, allowing for similar definition and control to that of turnouts/points.</p>
-<p>The existing methods of control for <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> using the native <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">TT</span> <span class="pre">...&gt;</span></code> command and <code class="docutils literal notranslate"><span class="pre">MOVETT()</span></code> <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> command remain as-is, however there are now more complete methods of definition and control available.</p>
-<p>When tuning positions, using <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">TT</span> <span class="pre">...&gt;</span></code> as outlined on this page is still the simplest method for understanding accurate step counts to align with positions.</p>
-<p>For defining the new turntable/traverser objects with <a href="../index.html"><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span></a> native commands, refer to <a class="reference internal" href="../reference/software/command-summary-consolidated.html#turntables-traversers-configuring-the-ex-commandstation"><span class="std std-ref">Turntables/Traversers (Configuring the EX-CommandStation)</span></a>, and for controlling them, refer to <a class="reference internal" href="../reference/software/command-summary-consolidated.html#turntables-traversers"><span class="std std-ref">Turntables/Traversers</span></a>.</p>
-<p>For the new commands available to define and control these objects with <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a>, refer to <a class="reference internal" href="../exrail/exrail-command-reference.html#turntable-traverser-objects-definition-and-control"><span class="std std-ref">Turntable/Traverser Objects - Definition and Control</span></a>.</p>
-<p>Note that as per the existing commands, the above table for the various activities is still relevant, with the native <code class="docutils literal notranslate"><span class="pre">&lt;I</span> <span class="pre">...&gt;</span></code> command requiring numeric activities as per the first column, and <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> <code class="docutils literal notranslate"><span class="pre">ROTATE()</span></code> command requiring the named activities as per the second column.</p>
-<p>For further information on using this new functionality, some examples are included at the bottom of this page in the section <a class="reference internal" href="#new-development-version-control-of-ex-turntable"><span class="std std-ref">NEW - Development version control of EX-Turntable</span></a>.</p>
-</section>
-<section id="interactive-serial-console-commands">
-<h3><a class="toc-backref" href="#id4" role="doc-backlink">Interactive Serial console commands</a><a class="headerlink" href="#interactive-serial-console-commands" title="Link to this heading"></a></h3>
-<p>As of version 0.5.0-Beta, the ability to test <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> directly via the serial console has been introduced.</p>
-<p>Similar to the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> diagnostic command outlined previously and up until version 0.7.0, the syntax is <code class="docutils literal notranslate"><span class="pre">&lt;steps</span> <span class="pre">activity&gt;</span></code>, where again steps is the number of steps from the home position to move to, and activity is as per the previous table. Note that also like the diagnostic command, this needs to be a number. In version 0.7.0, this changes to <code class="docutils literal notranslate"><span class="pre">&lt;M</span> <span class="pre">steps</span> <span class="pre">activity&gt;</span></code>.</p>
-<p>For example, sending the command <code class="docutils literal notranslate"><span class="pre">&lt;300</span> <span class="pre">0&gt;</span></code>/<code class="docutils literal notranslate"><span class="pre">&lt;M</span> <span class="pre">300</span> <span class="pre">0&gt;</span></code> via the serial console will result in output similar to this:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Received</span><span class="w"> </span><span class="n">serial</span><span class="w"> </span><span class="n">input</span><span class="o">:</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="mi">0</span>
-<span class="n">Test</span><span class="w"> </span><span class="n">move</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="n">steps</span><span class="p">,</span><span class="w"> </span><span class="n">activity</span><span class="w"> </span><span class="n">ID</span><span class="w"> </span><span class="mi">0</span>
-<span class="n">Received</span><span class="w"> </span><span class="n">notification</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">move</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="n">postion</span><span class="w"> </span><span class="mi">300</span>
-<span class="n">Position</span><span class="w"> </span><span class="n">steps</span><span class="o">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="n">Auto</span><span class="w"> </span><span class="n">phase</span><span class="w"> </span><span class="k">switch</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">moving</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="n">steps</span>
-<span class="n">Setting</span><span class="w"> </span><span class="n">phase</span><span class="w"> </span><span class="k">switch</span><span class="w"> </span><span class="n">flag</span><span class="w"> </span><span class="n">to</span><span class="o">:</span><span class="w"> </span><span class="mi">0</span>
-</pre></div>
-</div>
-<p>In version 0.7.0, a number of other interactive serial console commands have also been added. This is the complete list:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;C&gt;</span></code> - Initiate the calibration sequence</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;D&gt;</span></code> - Enable/disable debug output to the serial console</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;E&gt;</span></code> - Erase the EEPROM contents, which will force calibration to occur at next startup</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;H&gt;</span></code> - Initiate homing</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;M</span> <span class="pre">steps</span> <span class="pre">activity&gt;</span></code> - Initiate a move to the provided step count with the specified activity</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;R&gt;</span></code> - Initiate a reboot (note with the old bootloader Nano this will not function correctly)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;T&gt;</span></code> - Enter/exit sensor testing mode, and requires a restart if exiting</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;V&gt;</span></code> - Display the startup information in the serial console</p></li>
-</ul>
-</section>
-</section>
-<section id="testing-ex-turntable">
-<h2><a class="toc-backref" href="#id5" role="doc-backlink">Testing EX-Turntable</a><a class="headerlink" href="#testing-ex-turntable" title="Link to this heading"></a></h2>
-<p>Firstly, power on <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a>, followed by your CommandStation. By powering these on in that order, you will ensure that <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> is available prior to the CommandStation trying to load the device driver, otherwise it will consider the device as “OFFLINE”, and commands will fail.</p>
-<p>Referring again to <a class="reference internal" href="../reference/developers/hal-config.html#adding-a-new-device"><span class="std std-ref">Adding a New Device</span></a>, skip ahead to <a class="reference internal" href="../reference/developers/hal-config.html#checking-the-driver"><span class="std std-ref">Checking the Driver</span></a>, and the output you’re looking for to validate the <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> device driver is loaded and connected successfully is below:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">HAL</span><span class="w"> </span><span class="n">SHOW</span><span class="o">&gt;&lt;*</span><span class="w"> </span><span class="n">Arduino</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">2-69</span><span class="w"> </span><span class="o">*&gt;</span>
-<span class="o">&lt;*</span><span class="w"> </span><span class="n">PCA9685</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="n">x40</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">100-115</span><span class="w">  </span><span class="o">*&gt;</span>
-<span class="o">&lt;*</span><span class="w"> </span><span class="n">PCA9685</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="n">x41</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">116-131</span><span class="w"> </span><span class="n">OFFLINE</span><span class="w"> </span><span class="o">*&gt;</span>
-<span class="o">&lt;*</span><span class="w"> </span><span class="n">MCP23017</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="n">x20</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">164-179</span><span class="w"> </span><span class="n">OFFLINE</span><span class="w"> </span><span class="o">*&gt;</span>
-<span class="o">&lt;*</span><span class="w"> </span><span class="n">MCP23017</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="n">x21</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">180-195</span><span class="w"> </span><span class="n">OFFLINE</span><span class="w"> </span><span class="o">*&gt;</span>
-<span class="o">&lt;*</span><span class="w"> </span><span class="n">EX</span><span class="o">-</span><span class="n">Turntable</span><span class="w"> </span><span class="n">I2C</span><span class="o">:</span><span class="n">x60</span><span class="w"> </span><span class="n">Configured</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Vpins</span><span class="o">:</span><span class="mi">600-600</span><span class="w">  </span><span class="o">*&gt;</span><span class="w">          </span><span class="o">&lt;&lt;==</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">important</span><span class="w"> </span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">EX</span><span class="o">-</span><span class="n">TT</span><span class="o">|</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">connected</span><span class="o">!</span>
-</pre></div>
-</div>
-<p>If there is an “OFFLINE” at the end of the <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> line, it indicates something is not quite right. Refer to <a class="reference internal" href="../support/ex-tt-troubleshooting.html#ex-turntable-showing-as-offline-with-d-hal-show"><span class="std std-ref">EX-Turntable showing as offline with &lt;D HAL SHOW&gt;</span></a>.</p>
-<p>At power on, note that the turntable should have moved itself to the home position, so all commands below assume this is the case.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For all testing and tuning below, it is assumed that the default option for automatic phase switching is enabled, and that the default ULN2003/28BYJ-48 stepper driver and motor combination is in use in half step mode, which is ~4096 steps per revolution.</p>
-<p>For automatic phase switching, this should translate to ~512 steps for the 45 degree phase switch trigger point, and ~2560 steps for the 225 degree revert trigger point.</p>
-</div>
-<p>This command should rotate the turntable 100 steps only:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<p>This command should rotate the turntable a further 500 steps and active the phase inversion relays:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>500 is the difference between the existing 100 steps and target 600 steps</p></li>
-<li><p>600 steps is greater than the ~512 step/45 degree trigger position for phase inversion</p></li>
-</ul>
-</div></blockquote>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<p>This next command should rotate the turntable in the reverse direction by 300 steps and deactivate the phase inversion relays:</p>
-<ul class="simple">
-<li><p>300 is the difference between the existing 600 steps and target 300 steps, with the reverse direction being the shortest path there</p></li>
-<li><p>300 steps is less than the ~512 step/45 degree trigger position for phase inversion</p></li>
-</ul>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<p>This command should rotate the turntable again in the reverse direction, and should also activate the phase inversion relays:</p>
-<ul class="simple">
-<li><p>2000 steps is greater than the ~512 step/45 degree trigger position for phase inversion</p></li>
-<li><p>It is also less than the ~2560 step/225 degree trigger position to revert the inversion</p></li>
-</ul>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">2000</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<p>Finally, this command will cause the turntable to once again find its home position:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/439">LOW - Add a video demonstrating diagnostic commands</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
-</div>
-<p>Providing these tests have completed successfully, you are now ready to tune the turntable positions for your layout in preparation for defining the <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> configuration and putting <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> to good use.</p>
-</section>
-<section id="tuning-your-turntable-positions">
-<h2><a class="toc-backref" href="#id6" role="doc-backlink">Tuning your turntable positions</a><a class="headerlink" href="#tuning-your-turntable-positions" title="Link to this heading"></a></h2>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>To determine your starting positions, you will need the full turn step count as recorded in <a class="reference internal" href="assembly.html#first-start-and-automatic-calibration"><span class="std std-ref">First start and automatic calibration</span></a>.</p>
-</div>
-<p>To tune your turntable positions, you will need to calculate the number of steps from the home position the turntable needs to rotate in order to reach the desired position. By default, the turntable will turn in a clockwise direction (as demonstrated by the homing activity).</p>
-<section id="determine-the-positions">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">Determine the positions</a><a class="headerlink" href="#determine-the-positions" title="Link to this heading"></a></h3>
-<p>At this point, you should either have a layout you’re fitting <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> into, or a layout design that you’re working to, with the various turntable connection tracks defined.</p>
-<p>The simplest way to devise the approximate number of steps for each turntable position is to calculate these based on the degrees each step will turn.</p>
-<p>For the default <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> configuration with the ULN2003/28BYJ-48 stepper driver/motor combo in half step mode, this should give a step count close to 4096 for a single 360 degree rotation, which means each step is ~0.088 degrees of movement (360/4096 = 0.088).</p>
-<p>Therefore, to determine the number of steps required to turn a certain number of degrees, use the formula “steps = degrees/degrees per step”. To turn 10 degrees requires ~114 steps (10 / 0.088 = 113.64).</p>
-<p>In this example, for simplicity, we will devise the steps required for a six position turntable, with position 1 being 10 degrees from the home position, position 2 a further 10 degrees, position 3 a further 10 degrees again, and positions 4 through 6 being 180 degrees from the first three positions.</p>
-<a class="reference internal image-reference" href="../_images/six-pos-example-degrees.png"><img alt="Six Position Example" src="../_images/six-pos-example-degrees.png" style="width: 436.79999999999995px; height: 342.29999999999995px;" /></a>
-<p>Therefore, using our formula, the starting point for each position will be:</p>
-<table class="command-table docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Position</p></th>
-<th class="head"><p>Degrees from home</p></th>
-<th class="head"><p>Steps from home</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>10</p></td>
-<td><p>114</p></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p>20</p></td>
-<td><p>227</p></td>
-</tr>
-<tr class="row-even"><td><p>3</p></td>
-<td><p>30</p></td>
-<td><p>341</p></td>
-</tr>
-<tr class="row-odd"><td><p>4</p></td>
-<td><p>190</p></td>
-<td><p>2159</p></td>
-</tr>
-<tr class="row-even"><td><p>5</p></td>
-<td><p>200</p></td>
-<td><p>2273</p></td>
-</tr>
-<tr class="row-odd"><td><p>6</p></td>
-<td><p>210</p></td>
-<td><p>2386</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="example-tuning-commands">
-<h3><a class="toc-backref" href="#id8" role="doc-backlink">Example tuning commands</a><a class="headerlink" href="#example-tuning-commands" title="Link to this heading"></a></h3>
-<p>To validate the above calculated positions, the following six diagnostic commands should be executed in the serial terminal of the CommandStation, which will allow you to visually inspect the alignment with your layout tracks and adjust accordingly:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">114</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">227</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">341</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">2159</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">2273</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">2386</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<p>If you find any of these positions are slightly out of alignment, simply adjust the step count as appropriate to compensate.</p>
-<p>Note that due to the automatic phase inversion, the last three positions will automatically active the phase inversion relays due to being within the 45 to 225 degree angles that activates phase inversion.</p>
-</section>
-<section id="apply-to-your-layout">
-<h3><a class="toc-backref" href="#id9" role="doc-backlink">Apply to your layout</a><a class="headerlink" href="#apply-to-your-layout" title="Link to this heading"></a></h3>
-<p>At this point, you should be able to apply the above calculations to your own layout and come up with the step count required for each position.</p>
-<p>Use appropriate diagnostic commands to test and tune each position for that perfect alignment, and providing your layout is functional, you should be able to drive a locomotive on and off your turntable in each position.</p>
-</section>
-</section>
-<section id="advertising-positions-to-engine-driver-and-withrottle-applications">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Advertising positions to Engine Driver and WiThrottle applications</a><a class="headerlink" href="#advertising-positions-to-engine-driver-and-withrottle-applications" title="Link to this heading"></a></h2>
-<p>Now that you have defined all of your turntable positions with appropriate phase/polarity switching, it’s time to get these advertised to <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> and <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> applications.</p>
-<p>The method to advertise these is to use <strong>EXRAIL’s</strong> ROUTE function with the MOVETT command, which will ensure all of your defined turntable positions appear in the <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> and <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> Routes sections.</p>
-<p>If this is your first experience with <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> and the “myAutomation.h” file, familiarise yourself with <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> by reading through <a class="reference internal" href="../exrail/index.html"><span class="doc">EXRAIL   Automation &amp; Animation </span></a>.</p>
-<p>Pay particular attention to the various mentions of ROUTE and the associated examples.</p>
-<p>There are two highly recommended additions to using just these ROUTEs:</p>
-<ol class="arabic simple">
-<li><p>Utilise <strong>EXRAIL’s</strong> virtual <code class="docutils literal notranslate"><span class="pre">RESERVE()</span></code> and <code class="docutils literal notranslate"><span class="pre">FREE()</span></code> functions to ensure that while you are operating your turntable, nothing else can interfere with it. This is not so important during manual operation, however if you want to add any other automation (say, turning a warning light on), you will need these to ensure the relevant automation activities are not interrupted should you choose another turntable position prior to the first move completing.</p></li>
-<li><p>Utilise aliases to make things human friendly, and we have also provided 30 pre-defined aliases for the ROUTE IDs to ensure there will be no conflicts, as all IDs must be unique.</p></li>
-</ol>
-<p>To define the required turntable positions in the example six position turntable from above, you will need to have this content added to your “myAutomation.h” file. Note that we recommend adding an additional ROUTE to activate the homing process.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<a class="reference internal image-reference" href="../_images/conductor.png"><img alt="Conductor Level" class="align-left" src="../_images/conductor.png" style="width: 48.0px; height: 48.0px;" /></a>
-<p>To make this as simple as possible, we have included “myTurntable-EX.example.h” with the CommandStation-EX software containing an example automation macro with some pre-defined positions based on the example above as a starting point. Feel free to either copy or rename this to “myAutomation.h” and use it.</p>
-</div>
-<p>That’s it! Once you have created “myAutomation.h” and uploaded it to your CommandStation as per the process on the <a class="reference internal" href="../exrail/index.html"><span class="doc">EXRAIL   Automation &amp; Animation </span></a> page, the routes for each turntable position should automatically be visible in <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> and <a class="reference internal" href="../throttles/software/withrottle.html"><span class="doc">wiThrottle</span></a> applications.</p>
-<section id="my-turntable-moves-on-startup">
-<h3><a class="toc-backref" href="#id11" role="doc-backlink">My turntable moves on startup!</a><a class="headerlink" href="#my-turntable-moves-on-startup" title="Link to this heading"></a></h3>
-<p>There is one “catch” with the above “myAutomation.h” example. When your CommandStation starts up and <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> starts, it will automatically execute everything in “myAutomation.h” up until the first “DONE” statement it encounters.</p>
-<p>In this scenario, that means on startup, the turntable will automatically move to position 1.</p>
-<p>If you wish to leave the turntable at the home position on startup, you can simply comment out the first MOVETT() command:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">114</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">)</span><span class="w">        </span><span class="o">&lt;&lt;==</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="n">here</span>
-<span class="c1">// MOVETT(600, 114 Turn)      &lt;&lt;== Becomes this, add // to comment lines out</span>
-</pre></div>
-</div>
-<p>In a similar manner, if you prefer the turntable starts at some other position, you can accomplish this by simply changing the steps in that same MOVETT() command:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">167</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">)</span><span class="w">            </span><span class="c1">// Default moves to position one, edit this line to look like the below</span>
-<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">2386</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">)</span><span class="w">           </span><span class="c1">// Move instead to position six</span>
-</pre></div>
-</div>
-</section>
-</section>
-<section id="manual-phase-switching">
-<h2><a class="toc-backref" href="#id12" role="doc-backlink">Manual phase switching</a><a class="headerlink" href="#manual-phase-switching" title="Link to this heading"></a></h2>
-<p>So far, all the examples, testing, and tuning have relied on automatic phase switching.</p>
-<p>There may be times where manual phase switching is required, whether due to awkward track wiring, layouts that have tracks at angles that make it hard to determine the correct angles at which to automatically switch the phase, or (in an upcoming release) when traversers are used rather than traditional turntables, that don’t actually required phase switching at all.</p>
-<p>To enable manual phase switching, you must edit “config.h” and set <a class="reference internal" href="configure.html#phase-switching"><span class="std std-ref">PHASE_SWITCHING</span></a> to “MANUAL”.</p>
-<p>Once this has been done, you must explicitly define the phase switching to occur as a part of the diagnostic or <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> command for every step position that requires an inverted phase.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The phase switch command (1 for the diagnostic command, Turn_PInvert for <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a>) does not continue to invert the phase each time that command is sent, the command simply tells <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> whether or not to activate the phase inversion relays.</p>
-<p>Therefore, for every position that requires the phase to be inverted, you must send the invert command (1/Turn_PInvert). For every position that requires the phase to be maintained, you must send just the turn command (0/Turn).</p>
-</div>
-<p>To use our example from above, the commands in <a class="reference internal" href="#example-tuning-commands"><span class="std std-ref">Example tuning commands</span></a> would need to be modified to replicate the automatic phase switching as such:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">114</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">227</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">341</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">2159</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">2273</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">D</span><span class="w"> </span><span class="n">TT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">2386</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<p>The EXRAIL equivalent to the above would be:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">114</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">)</span>
-<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">227</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">)</span>
-<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">341</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">)</span>
-<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">2159</span><span class="p">,</span><span class="w"> </span><span class="n">Turn_PInvert</span><span class="p">)</span>
-<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">2273</span><span class="p">,</span><span class="w"> </span><span class="n">Turn_PInvert</span><span class="p">)</span>
-<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">2386</span><span class="p">,</span><span class="w"> </span><span class="n">Turn_PInvert</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>If you do not explicitly send the activity command to invert the phase, and the turntable orientation results with the phase out of alignment with the surrounding tracks, this will result in a short circuit when a locomotive attempts to enter or exit the turntable bridge track.</p>
-</div>
-</section>
-<section id="controlling-ex-turntable-with-a-rotary-encoder">
-<h2><a class="toc-backref" href="#id13" role="doc-backlink">Controlling EX-Turntable with a rotary encoder</a><a class="headerlink" href="#controlling-ex-turntable-with-a-rotary-encoder" title="Link to this heading"></a></h2>
-<p>It is possible to use a rotary encoder to select turntable positions if desired, which is handy for use with mimic panels and so forth.</p>
-<p>There is an additional device driver available “IO_RotaryEncoder.h” which can be used with the rotary encoder software installed on a separate Arduino Nano or Uno that has the rotary encoder and an OLED display connected to it.</p>
-<p>In a similar manner to <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> itself, the rotary encoder Arduino connects to the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> via I<sup>2</sup>C.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The rotary encoder software is not official DCC-EX software and is maintained separately. The device driver and EXRAIL commands are included with <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> as of version 5.0.0.</p>
-<p>This section will focus on enabling and using the device driver. For the rotary encoder software documentation including installation and configuration, refer to the project page <a class="reference external" href="https://petegsx-projects.github.io/rotary-encoder/overview.html">DCC-EX Rotary Encoder</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;">.</p>
-</div>
-<section id="required-software">
-<h3><a class="toc-backref" href="#id14" role="doc-backlink">Required software</a><a class="headerlink" href="#required-software" title="Link to this heading"></a></h3>
-<p>The rotary encoder software can be downloaded from:</p>
-<p class="dcclink"><a class="reference external" href="https://github.com/peteGSX-Projects/dcc-ex-rotary-encoder">dcc-ex-rotary-encoder GitHub repository</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
-<p>To utilise this rotary encoder, you must be running version 5.0.0 or later of <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>.</p>
-</section>
-<section id="enabling-the-device-driver">
-<h3><a class="toc-backref" href="#id15" role="doc-backlink">Enabling the device driver</a><a class="headerlink" href="#enabling-the-device-driver" title="Link to this heading"></a></h3>
-<p>The default I<sup>2</sup>C address for the rotary encoder is 0x78, and you will need to create the device in “myAutomation.h” on your <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>.</p>
-<p>Note you can create the device using 1, 2, or 3 Vpins. If you create it with 2, you can send feedback to the rotary encoder Arduino to indicate if a turntable is moving, and when it has completed the movement. If you define 3 Vpins, you can tell the rotary encoder when a turntable has changed position also. Refer to the <a class="reference external" href="https://petegsx-projects.github.io/rotary-encoder/overview.html">DCC-EX Rotary Encoder</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> documentation for more information on this feature.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IO_RotaryEncoder.h&quot;</span>
-
-<span class="n">HAL</span><span class="p">(</span><span class="n">RotaryEncoder</span><span class="p">,</span><span class="w"> </span><span class="mi">700</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x78</span><span class="p">)</span><span class="w">  </span><span class="c1">// 1 pin for control only</span>
-<span class="n">HAL</span><span class="p">(</span><span class="n">RotaryEncoder</span><span class="p">,</span><span class="w"> </span><span class="mi">700</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mh">0x78</span><span class="p">)</span><span class="w">  </span><span class="c1">// 2 pins for control and feedback</span>
-<span class="n">HAL</span><span class="p">(</span><span class="n">RotaryEncoder</span><span class="p">,</span><span class="w"> </span><span class="mi">700</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mh">0x78</span><span class="p">)</span><span class="w">  </span><span class="c1">// 3 pins for control, feedback, and sending positions back to the rotary encoder</span>
-</pre></div>
-</div>
-<p>You need to follow the same process as <a class="reference internal" href="assembly.html#add-the-ex-turntable-device-driver-to-ex-commandstation"><span class="std std-ref">8. Add the EX-Turntable device driver to EX-CommandStation</span></a> to load the updated software on your <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>.</p>
-</section>
-<section id="exrail-automation">
-<h3><a class="toc-backref" href="#id16" role="doc-backlink">EXRAIL automation</a><a class="headerlink" href="#exrail-automation" title="Link to this heading"></a></h3>
-<p>There are two <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> commands available for using the rotary encoder:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ONCHANGE(vpin)</span></code> - Event handler that is activated when a position change is sent</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">IFRE(vpin,</span> <span class="pre">position)</span></code> - A test to see if the rotary encoder is at a specific position</p></li>
-</ul>
-<p>These two commands can be combined in a sequence to respond to the various rotary encoder positions.</p>
-<p>Negative position numbers can be used as well as positive.</p>
-<p>For example, we could take the <a class="reference internal" href="../big-picture/stage5/turntable-example.html#example-turntable-routes"><span class="std std-ref">Example - Turntable ROUTEs</span></a> included in Stage 5 of the Big Picture and have these selected by a rotary encoder. The roundhouse stall positions would be rotating counter-clockwise which will have negative position values, whereas the yard connection has a positive value.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// On startup, ensure our turntable moves automatically to the first position</span>
-<span class="n">MOVETT</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">114</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">)</span>
-<span class="n">DONE</span>
-
-<span class="c1">// Definition of the EX_TURNTABLE macro to correctly create the ROUTEs required for each position.</span>
-<span class="c1">// This includes RESERVE()/FREE() to protect any automation activities.</span>
-<span class="c1">//</span>
-<span class="cp">#define EX_TURNTABLE(route_id, reserve_id, vpin, steps, activity, desc) \</span>
-<span class="cp">  ROUTE(route_id, desc) \</span>
-<span class="cp">    RESERVE(reserve_id) \</span>
-<span class="cp">    MOVETT(vpin, steps, activity) \</span>
-<span class="cp">    WAITFOR(vpin) \</span>
-<span class="cp">    FREE(reserve_id) \</span>
-<span class="cp">    DONE</span>
-
-<span class="cm">/**************************************************************************************************</span>
-<span class="cm">* TURNTABLE POSITION DEFINITIONS</span>
-<span class="cm">*************************************************************************************************/</span>
-<span class="c1">// EX_TURNTABLE(route_id, reserve_id, vpin, steps, activity, desc)</span>
-<span class="c1">//</span>
-<span class="c1">// route_id = A unique number for each defined route, the route is what appears in throttles</span>
-<span class="c1">// reserve_id = A unique reservation number (0 - 255) to ensure nothing interferes with automation</span>
-<span class="c1">// vpin = The Vpin defined for the Turntable-EX device driver, default is 600</span>
-<span class="c1">// steps = The target step position</span>
-<span class="c1">// activity = The activity performed for this ROUTE (Note do not enclose in quotes &quot;&quot;)</span>
-<span class="c1">// desc = Description that will appear in throttles (Must use quotes &quot;&quot;)</span>
-<span class="c1">//</span>
-<span class="n">EX_TURNTABLE</span><span class="p">(</span><span class="n">TTRoute1</span><span class="p">,</span><span class="w"> </span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">114</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Roundhouse stall 1&quot;</span><span class="p">)</span>
-<span class="n">EX_TURNTABLE</span><span class="p">(</span><span class="n">TTRoute2</span><span class="p">,</span><span class="w"> </span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">228</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Roundhouse stall 2&quot;</span><span class="p">)</span>
-<span class="n">EX_TURNTABLE</span><span class="p">(</span><span class="n">TTRoute3</span><span class="p">,</span><span class="w"> </span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">344</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Roundhouse stall 3&quot;</span><span class="p">)</span>
-<span class="n">EX_TURNTABLE</span><span class="p">(</span><span class="n">TTRoute4</span><span class="p">,</span><span class="w"> </span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">459</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Roundhouse stall 4&quot;</span><span class="p">)</span>
-<span class="n">EX_TURNTABLE</span><span class="p">(</span><span class="n">TTRoute5</span><span class="p">,</span><span class="w"> </span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">573</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Roundhouse stall 5&quot;</span><span class="p">)</span>
-<span class="n">EX_TURNTABLE</span><span class="p">(</span><span class="n">TTRoute6</span><span class="p">,</span><span class="w"> </span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">688</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Roundhouse stall 6&quot;</span><span class="p">)</span>
-<span class="n">EX_TURNTABLE</span><span class="p">(</span><span class="n">TTRoute7</span><span class="p">,</span><span class="w"> </span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">2523</span><span class="p">,</span><span class="w"> </span><span class="n">Turn</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Yard connection&quot;</span><span class="p">)</span>
-<span class="n">EX_TURNTABLE</span><span class="p">(</span><span class="n">TTRoute8</span><span class="p">,</span><span class="w"> </span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">Home</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Home turntable&quot;</span><span class="p">)</span>
-
-<span class="c1">// Pre-defined aliases to ensure unique IDs are used.</span>
-<span class="n">ALIAS</span><span class="p">(</span><span class="n">Turntable</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">)</span>
-
-<span class="c1">// Turntable ROUTE ID reservations, using &lt;? TTRouteX&gt; for uniqueness:</span>
-<span class="n">ALIAS</span><span class="p">(</span><span class="n">TTRoute1</span><span class="p">)</span>
-<span class="n">ALIAS</span><span class="p">(</span><span class="n">TTRoute2</span><span class="p">)</span>
-<span class="n">ALIAS</span><span class="p">(</span><span class="n">TTRoute3</span><span class="p">)</span>
-<span class="n">ALIAS</span><span class="p">(</span><span class="n">TTRoute4</span><span class="p">)</span>
-<span class="n">ALIAS</span><span class="p">(</span><span class="n">TTRoute5</span><span class="p">)</span>
-<span class="n">ALIAS</span><span class="p">(</span><span class="n">TTRoute6</span><span class="p">)</span>
-<span class="n">ALIAS</span><span class="p">(</span><span class="n">TTRoute7</span><span class="p">)</span>
-<span class="n">ALIAS</span><span class="p">(</span><span class="n">TTRoute8</span><span class="p">)</span>
-
-<span class="cm">/**************************************************************************************************</span>
-<span class="cm">* Rotary encoder sequence to select the turntable positions</span>
-<span class="cm">*************************************************************************************************/</span>
-<span class="n">ONCHANGE</span><span class="p">(</span><span class="mi">700</span><span class="p">)</span>
-<span class="w">  </span><span class="n">IFRE</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="w"> </span><span class="mi">-6</span><span class="p">)</span>
-<span class="w">    </span><span class="n">START</span><span class="p">(</span><span class="n">TTRoute1</span><span class="p">)</span>
-<span class="w">  </span><span class="n">ENDIF</span>
-<span class="w">  </span><span class="n">IFRE</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="w"> </span><span class="mi">-5</span><span class="p">)</span>
-<span class="w">    </span><span class="n">START</span><span class="p">(</span><span class="n">TTRoute2</span><span class="p">)</span>
-<span class="w">  </span><span class="n">ENDIF</span>
-<span class="w">  </span><span class="n">IFRE</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="w"> </span><span class="mi">-4</span><span class="p">)</span>
-<span class="w">    </span><span class="n">START</span><span class="p">(</span><span class="n">TTRoute3</span><span class="p">)</span>
-<span class="w">  </span><span class="n">ENDIF</span>
-<span class="w">  </span><span class="n">IFRE</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="w"> </span><span class="mi">-3</span><span class="p">)</span>
-<span class="w">    </span><span class="n">START</span><span class="p">(</span><span class="n">TTRoute4</span><span class="p">)</span>
-<span class="w">  </span><span class="n">ENDIF</span>
-<span class="w">  </span><span class="n">IFRE</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="w"> </span><span class="mi">-2</span><span class="p">)</span>
-<span class="w">    </span><span class="n">START</span><span class="p">(</span><span class="n">TTRoute5</span><span class="p">)</span>
-<span class="w">  </span><span class="n">ENDIF</span>
-<span class="w">  </span><span class="n">IFRE</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span>
-<span class="w">    </span><span class="n">START</span><span class="p">(</span><span class="n">TTRoute6</span><span class="p">)</span>
-<span class="w">  </span><span class="n">ENDIF</span>
-<span class="w">  </span><span class="n">IFRE</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span>
-<span class="w">    </span><span class="n">START</span><span class="p">(</span><span class="n">TTRoute7</span><span class="p">)</span>
-<span class="w">  </span><span class="n">ENDIF</span>
-<span class="w">  </span><span class="n">IFRE</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="w">    </span><span class="n">START</span><span class="p">(</span><span class="n">TTRoute8</span><span class="p">)</span>
-<span class="w">  </span><span class="n">ENDIF</span>
-<span class="n">DONE</span>
-</pre></div>
-</div>
-</section>
-</section>
-<section id="new-development-version-control-of-ex-turntable">
-<h2><a class="toc-backref" href="#id17" role="doc-backlink">NEW - Development version control of EX-Turntable</a><a class="headerlink" href="#new-development-version-control-of-ex-turntable" title="Link to this heading"></a></h2>
-<p>As mentioned previously, for users of the development version of <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>, version 5.1.16 introduces a new turntable object that can be used to define and control <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a>.</p>
-<p>Here are some examples for defining a turntable as per the examples above, but using the new turntable object in both native commands, and <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a>.</p>
-<section id="basic-dcc-ex-native-turntable-definition-and-control">
-<h3><a class="toc-backref" href="#id18" role="doc-backlink">Basic DCC-EX native turntable definition and control</a><a class="headerlink" href="#basic-dcc-ex-native-turntable-definition-and-control" title="Link to this heading"></a></h3>
-<p>In this example, a turntable with ID 600 is defined with our six positions as per the above examples, and disregarding the values of <strong>home</strong> and <strong>angle</strong>.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="n">EXTT</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">114</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">227</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">341</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">2159</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">2273</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="n">ADD</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">2386</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<p>Assuming <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> was configured for automatic phase switching, these commands would be used to rotate it to position 1, then position 6, and then home:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<section id="operation-with-manual-phase-switching">
-<h4>Operation with manual phase switching<a class="headerlink" href="#operation-with-manual-phase-switching" title="Link to this heading"></a></h4>
-<p>For the same scenario, but with manual phase switching, these commands would be used:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">I</span><span class="w"> </span><span class="mi">600</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-</section>
-</section>
-<section id="exrail-definition-and-control">
-<h3><a class="toc-backref" href="#id19" role="doc-backlink">EXRAIL definition and control</a><a class="headerlink" href="#exrail-definition-and-control" title="Link to this heading"></a></h3>
-<p>The real beauty of this new object comes in the form of automation possibilities with <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a>, as there is now an event handler <code class="docutils literal notranslate"><span class="pre">ONROTATE()</span></code> along with a position test command <code class="docutils literal notranslate"><span class="pre">IF_TTPOSITION()</span></code> and a new <code class="docutils literal notranslate"><span class="pre">WAITFORTT()</span></code> command to really enhance the possibilities of what can be accomplished when turntable/traverser activities occur.</p>
-<p>To define our turntable as above but in <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a>, it looks like this:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">HAL</span><span class="p">(</span><span class="n">EXTurntable</span><span class="p">,</span><span class="mi">600</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mh">0x60</span><span class="p">)</span>
-<span class="n">EXTT_TURNTABLE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">600</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;My EX-Turntable&quot;</span><span class="p">)</span>
-<span class="n">TT_ADDPOSITION</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">114</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;Roundhouse stall 1&quot;</span><span class="p">)</span>
-<span class="n">TT_ADDPOSITION</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">227</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;Roundhouse stall 2&quot;</span><span class="p">)</span>
-<span class="n">TT_ADDPOSITION</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">341</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;Roundhouse stall 3&quot;</span><span class="p">)</span>
-<span class="n">TT_ADDPOSITION</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2159</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;Reverse to stall 1&quot;</span><span class="p">)</span>
-<span class="n">TT_ADDPOSITION</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2273</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;Reverse to stall 2&quot;</span><span class="p">)</span>
-<span class="n">TT_ADDPOSITION</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">2386</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s">&quot;Reverse to stall 3&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Now, suppose we wish to turn a flashing light connected to Vpin 164 on whenever the turntable is is motion. This can be accomplished with our event handler:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ONROTATE</span><span class="p">(</span><span class="mi">600</span><span class="p">)</span>
-<span class="w">  </span><span class="n">SET</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
-<span class="w">  </span><span class="n">WAITFORTT</span><span class="p">(</span><span class="mi">600</span><span class="p">)</span>
-<span class="w">  </span><span class="n">RESET</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
-<span class="n">DONE</span>
-</pre></div>
-</div>
-<p>This can be further enhanced with position specific options. Say we have roundhouse doors that need to be opened when their position is selected, and closed after the loco has entered the stall.</p>
-<p>Stall 1’s door is operated by enabling Vpin 164, 2 by Vpin 165, and 3 by Vpin 166. Sensors for each are at Vpins 167, 168, and 169 respectively.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ONROTATE</span><span class="p">(</span><span class="mi">600</span><span class="p">)</span>
-<span class="w">  </span><span class="n">IF_TTPOSITION</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="w">    </span><span class="n">CALL</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
-<span class="w">  </span><span class="n">ENDIF</span>
-<span class="w">  </span><span class="n">IF_TTPOSITION</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="w">    </span><span class="n">CALL</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
-<span class="w">  </span><span class="n">ENDIF</span>
-<span class="w">  </span><span class="n">IF_TTPOSITION</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="w">    </span><span class="n">CALL</span><span class="p">(</span><span class="mi">103</span><span class="p">)</span>
-<span class="w">  </span><span class="n">ENDIF</span>
-<span class="w">  </span><span class="n">IF_TTPOSITION</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-<span class="w">    </span><span class="n">CALL</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
-<span class="w">  </span><span class="n">ENDIF</span>
-<span class="w">  </span><span class="n">IF_TTPOSITION</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="w">    </span><span class="n">CALL</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
-<span class="w">  </span><span class="n">ENDIF</span>
-<span class="w">  </span><span class="n">IF_TTPOSITION</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
-<span class="w">    </span><span class="n">CALL</span><span class="p">(</span><span class="mi">103</span><span class="p">)</span>
-<span class="w">  </span><span class="n">ENDIF</span>
-<span class="n">DONE</span>
-
-<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span>
-<span class="w">  </span><span class="n">SET</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
-<span class="w">  </span><span class="n">AFTER</span><span class="p">(</span><span class="mi">167</span><span class="p">)</span>
-<span class="w">  </span><span class="n">RESET</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span>
-<span class="n">RETURN</span>
-
-<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">102</span><span class="p">)</span>
-<span class="w">  </span><span class="n">SET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span>
-<span class="w">  </span><span class="n">AFTER</span><span class="p">(</span><span class="mi">168</span><span class="p">)</span>
-<span class="w">  </span><span class="n">RESET</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span>
-<span class="n">RETURN</span>
-
-<span class="n">SEQUENCE</span><span class="p">(</span><span class="mi">103</span><span class="p">)</span>
-<span class="w">  </span><span class="n">SET</span><span class="p">(</span><span class="mi">166</span><span class="p">)</span>
-<span class="w">  </span><span class="n">AFTER</span><span class="p">(</span><span class="mi">169</span><span class="p">)</span>
-<span class="w">  </span><span class="n">RESET</span><span class="p">(</span><span class="mi">166</span><span class="p">)</span>
-<span class="n">RETURN</span>
-</pre></div>
-</div>
-<p>Using these capabilities means any operation of the turntable will result in the roundhouse stall doors opening, and then closing once the loco has entered and passed over the appropriate sensor.</p>
-<p>For controlling the turntable, it is still possible to use the <code class="docutils literal notranslate"><span class="pre">ROUTE()</span></code> command for this, and utilising the new <code class="docutils literal notranslate"><span class="pre">ROTATE()</span></code> command:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">201</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Set for roundhouse stall 1&quot;</span><span class="p">)</span>
-<span class="w">  </span><span class="n">ROTATE</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">Turn</span><span class="p">)</span>
-<span class="n">DONE</span>
-</pre></div>
-</div>
-</section>
 </section>
 </section>
 
@@ -1226,7 +1095,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f621d028520>
+    <jinja2.runtime.BlockReference object at 0x7ff93d71bdf0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

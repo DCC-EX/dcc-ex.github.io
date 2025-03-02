@@ -568,7 +568,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About Us and the Project</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../about/about.html">Meet the Team</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/licence.html">Licence &amp; Attributions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/roadmap.html">DCC-EX 2023 Roadmap</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../about/index-contributing.html">Donating &amp; Contributing</a><ul>
@@ -589,6 +588,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../about/contributing/website/publishing-news.html">Publishing DCC-EX News Posts</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/contributing/release-process.html">Versioning and the Release Process</a></li>
 </ul>
 </li>
 </ul>
@@ -630,7 +630,7 @@
 <h1>Announcing EX-Turntable 0.7.0<a class="headerlink" href="#announcing-ex-turntable-0-7-0" title="Link to this heading"></a></h1>
 <p>The <a href="../../index.html"><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span></a> team is pleased to share the next Beta version of <a href="../../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> with version 0.7.0 being released today. Please be aware that there are some changes in this version that may impact configuration options set, particularly for those using two wire stepper drivers such as the A4988, DRV8825, or TMC2208. Users with ULN2003 stepper drivers should not be impacted. <strong>NOTE</strong> If you are using the STEPPER_DRIVER option <code class="docutils literal notranslate"><span class="pre">A4988_INV</span></code> you will need to edit your configuration file, please see <a class="reference internal" href="../../ex-turntable/configure.html#stepper-driver"><span class="std std-ref">STEPPER_DRIVER</span></a> and <a class="reference internal" href="../../ex-turntable/configure.html#invert-enable"><span class="std std-ref">INVERT_ENABLE</span></a> for more information.</p>
 <p>An often requested feature has been added in this release, enabling single direction rotation to cater for stepper motors and/or gearboxes that have a lot of slop. Refer to <a class="reference internal" href="../../ex-turntable/configure.html#rotate-forward-only"><span class="std std-ref">ROTATE_FORWARD_ONLY</span></a> and <a class="reference internal" href="../../ex-turntable/configure.html#rotate-reverse-only"><span class="std std-ref">ROTATE_REVERSE_ONLY</span></a> for more information on how to enable this.</p>
-<p>In addition, the interactive serial console commands to <a href="../../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> have been expanded significantly, allowing for various testing, debug, display, and other options to be enabled or disabled via the serial console. Note that the test move command <code class="docutils literal notranslate"><span class="pre">&lt;steps</span> <span class="pre">activity&gt;</span></code> has been altered also as a result. Refer to <a class="reference internal" href="../../ex-turntable/test-and-tune.html#interactive-serial-console-commands"><span class="std std-ref">Interactive Serial console commands</span></a> for the complete list of commands and what they do.</p>
+<p>In addition, the interactive serial console commands to <a href="../../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> have been expanded significantly, allowing for various testing, debug, display, and other options to be enabled or disabled via the serial console. Note that the test move command <code class="docutils literal notranslate"><span class="pre">&lt;steps</span> <span class="pre">activity&gt;</span></code> has been altered also as a result. Refer to <a class="reference internal" href="../../ex-turntable/test-and-tune.html#ex-turntable-interactive-serial-console-commands"><span class="std std-ref">EX-Turntable interactive serial console commands</span></a> for the complete list of commands and what they do.</p>
 <p>Here is the summary of the changes in this release:</p>
 <ul class="simple">
 <li><p>Fix bug where enabling sensor testing or debug output prevents compiling</p></li>
@@ -697,7 +697,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f621364e590>
+    <jinja2.runtime.BlockReference object at 0x7ff9369c3e20>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

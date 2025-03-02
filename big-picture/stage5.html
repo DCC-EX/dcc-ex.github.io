@@ -570,7 +570,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../about/index.html">About Us and the Project</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../about/about.html">Meet the Team</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../about/licence.html">Licence &amp; Attributions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../about/roadmap.html">DCC-EX 2023 Roadmap</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../about/index-contributing.html">Donating &amp; Contributing</a><ul>
@@ -591,6 +590,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../about/contributing/website/publishing-news.html">Publishing DCC-EX News Posts</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../about/contributing/release-process.html">Versioning and the Release Process</a></li>
 </ul>
 </li>
 </ul>
@@ -822,7 +822,7 @@
 <p>We’ll use some basic mathematics to tune our turntable and traverser positions, however in a real layout, some experimentation will be required for fine tuning to ensure proper track alignment.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When tuning positions, you can use the <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">TT</span> <span class="pre">vpin</span> <span class="pre">steps</span> <span class="pre">activity&gt;</span></code> diagnostic command as outlined in <a class="reference internal" href="../ex-turntable/test-and-tune.html#tuning-your-turntable-positions"><span class="std std-ref">Tuning your turntable positions</span></a> to test and refine these for perfect track alignment between the turntable bridge track and the surrounding tracks. You can also use the direct EX-Turntable serial testing command <code class="docutils literal notranslate"><span class="pre">&lt;steps</span> <span class="pre">activity&gt;</span></code>/<code class="docutils literal notranslate"><span class="pre">&lt;M</span> <span class="pre">steps</span> <span class="pre">activity&gt;</span></code> as covered in <a class="reference internal" href="../ex-turntable/test-and-tune.html#interactive-serial-console-commands"><span class="std std-ref">Interactive Serial console commands</span></a>.</p>
+<p>When tuning positions, you can use the <code class="docutils literal notranslate"><span class="pre">&lt;D</span> <span class="pre">TT</span> <span class="pre">vpin</span> <span class="pre">steps</span> <span class="pre">activity&gt;</span></code> diagnostic command as outlined in <a class="reference internal" href="../ex-turntable/test-and-tune.html#tuning-your-turntable-positions"><span class="std std-ref">Tuning your turntable positions</span></a> to test and refine these for perfect track alignment between the turntable bridge track and the surrounding tracks. You can also use the direct EX-Turntable serial testing command <code class="docutils literal notranslate"><span class="pre">&lt;M</span> <span class="pre">steps</span> <span class="pre">activity&gt;</span></code> as covered in <a class="reference internal" href="../ex-turntable/test-and-tune.html#ex-turntable-interactive-serial-console-commands"><span class="std std-ref">EX-Turntable interactive serial console commands</span></a>.</p>
 <p>We will be using the same steps per revolution number throughout this page (4097) for both the turntable and traverser, and are keeping this consistent with the examples in the <a href="../ex-turntable/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Turntable</span></a> documentation for simplicity.</p>
 <p>If the calculations below seem too complicated, then you are free to figure the step positions out however suits you, and you can always just use experimentation with the diagnostic command to determine the correct positions.</p>
 <p>However, when it comes to DCC phase/polarity switching, it’s important to get this right in order to prevent short circuits when locos enter and exit the turntable bridge track.</p>
@@ -1286,7 +1286,7 @@ Turntable homed successfully
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f621dd55300>
+    <jinja2.runtime.BlockReference object at 0x7ff9361097b0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

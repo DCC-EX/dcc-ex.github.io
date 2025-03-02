@@ -1,11 +1,12 @@
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 .. include:: /include/include-ex-tt.rst
+
 |EX-TT-LOGO|
 
-*******************************************
+******************************************
 Traversers and Limited Rotation Turntables
-*******************************************
+******************************************
 
 |SUITABLE| |tinkerer| |engineer| |support-button| |githublink-ex-turntable-button-small|
 
@@ -17,7 +18,7 @@ Traversers and Limited Rotation Turntables
       :local:
   
 Overview
-=========
+========
 
 |EX-TT| has the ability to cater for both horizontal and vertical traversers, as well as turntables that do not rotate a full 360 degrees.
 

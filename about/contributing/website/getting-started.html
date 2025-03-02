@@ -569,7 +569,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../index.html">About Us and the Project</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../about.html">Meet the Team</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../licence.html">Licence &amp; Attributions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../roadmap.html">DCC-EX 2023 Roadmap</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index-contributing.html">Donating &amp; Contributing</a><ul class="current">
@@ -590,6 +589,7 @@
 <li class="toctree-l4"><a class="reference internal" href="publishing-news.html">Publishing DCC-EX News Posts</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../release-process.html">Versioning and the Release Process</a></li>
 </ul>
 </li>
 </ul>
@@ -885,22 +885,29 @@
 <h2><a class="toc-backref" href="#id18" role="doc-backlink">Additional</a><a class="headerlink" href="#additional" title="Link to this heading"></a></h2>
 <section id="your-own-github-pages">
 <h3><a class="toc-backref" href="#id19" role="doc-backlink">Your own github pages</a><a class="headerlink" href="#your-own-github-pages" title="Link to this heading"></a></h3>
-<p>You can optionally, setup <em>github pages</em> from you own repository on the GitHub website.  This allows you make changes that <em>other people</em> can view before creating a pull request.</p>
+<p>You can, optionally, setup <em>github pages</em> from you own repository on the GitHub website.  This allows you to make changes that <em>other people</em> can view before creating a pull request.</p>
 <ol class="arabic simple">
-<li><p>Open the <strong>GitHub website</strong></p></li>
-<li><p>Open/select your repository <code class="docutils literal notranslate"><span class="pre">https://github.com/&lt;your_account_name&gt;/dcc-ex.github.io</span></code></p></li>
-<li><p>Click the <code class="docutils literal notranslate"><span class="pre">branches</span></code> link</p></li>
-<li><p>On ‘Branches’ page click <span class="guilabel">new Branch</span></p></li>
-<li><p>Give the new branch the name <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code></p></li>
-<li><p>Select a Source of <code class="docutils literal notranslate"><span class="pre">DCC-EX/dcc-ex.github.io</span></code> and <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code></p></li>
-<li><p>clich <span class="guilabel">Create New branch</span></p></li>
-<li><p>Open the <code class="docutils literal notranslate"><span class="pre">Settings</span></code> page</p></li>
-<li><p>Select <code class="docutils literal notranslate"><span class="pre">Pages</span></code> in the left navigation</p></li>
-<li><p>Choose <cite>Deploy from a branch</cite></p></li>
-<li><p>Choose <cite>gh-pages</cite> and <cite>root</cite></p></li>
-<li><p>Click <span class="guilabel">Save</span></p></li>
+<li><p>Fork the “dcc-ex.github.io” repository, ensure the <code class="docutils literal notranslate"><span class="pre">Copy</span> <span class="pre">the</span> <span class="pre">sphinx</span> <span class="pre">branch</span> <span class="pre">only</span></code> box is selected.</p></li>
+<li><p>In your forked repository settings, navigate to Settings -&gt; Actions -&gt; General and ensure <code class="docutils literal notranslate"><span class="pre">Allow</span> <span class="pre">all</span> <span class="pre">actions</span> <span class="pre">and</span> <span class="pre">reusable</span> <span class="pre">workflows</span></code> is selected.</p></li>
+<li><p>Set up VSCode for your forked repository as outlined above.</p></li>
+<li><p>Create a new, orphaned branch called <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> using the command line; <strong>you cannot do this in VSCode or in your browser</strong>. Open a command prompt (or bash shell) and change into the directory containing your cloned fork then run the following commands:</p></li>
 </ol>
-<p>In theory that should be enough, but the last time we tried this we also needed to create a manual build action.  If you go to the ‘Actions’ page and you <em>can’t</em> see an action named <strong>‘Docs’</strong>, then contact the development team nd we will halp you create a manual build action. (Which for some unknown reason then shows the automatic ‘Docs’ action.)</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git checkout --orphan gh-pages
+# Use Windows Explorer, macOS Finder, or whatever method you prefer and delete all files and folders within the directory.
+# It must be completely empty aside from the hidden .git folder before proceeding.
+echo &quot;My DCC-EX Documentation Fork&quot; &gt; index.html
+git add .
+git commit -a -m &quot;First commit&quot;
+git push origin gh-pages
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>At this point, review “Actions” in your forked repository and you should see the <code class="docutils literal notranslate"><span class="pre">pages</span> <span class="pre">build</span> <span class="pre">and</span> <span class="pre">deployment</span></code> job run, allowing you to preview the temporary “index.html” once complete.</p></li>
+<li><p>Review the Settings -&gt; Pages tab and click the <code class="docutils literal notranslate"><span class="pre">Visit</span> <span class="pre">site</span></code> button to open your GitHub Pages generated content in a new browser tab, and you should see the basic “My DCC-EX Documentation Fork”.</p></li>
+<li><p>If at this point in time the only action in the “Actions” tab is “pages-build-deployment”, click the “…” beside the latest run and select <code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">workflow</span> <span class="pre">run</span></code>.</p></li>
+<li><p>You should now see a big green button <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">understand</span> <span class="pre">my</span> <span class="pre">workflows,</span> <span class="pre">go</span> <span class="pre">ahead</span> <span class="pre">and</span> <span class="pre">enable</span> <span class="pre">them</span></code>. Click this button, which will show all the available actions as forked from the DCC-EX repository.</p></li>
+<li><p>Now, each time you commit and push to your fork’s sphinx branch or merge a pull request to it, it should automatically build a new pages deployment and publish it.</p></li>
+</ol>
 <p>Building the pages and deplying takes time, every time you push any changes, but you will eventually be able to see your own version of the website at <code class="docutils literal notranslate"><span class="pre">https://&lt;your_account_name&gt;.github.io/dcc-ex.github.io/</span></code>.</p>
 <p>You can see the state of the processing of your changes by looking at the <code class="docutils literal notranslate"><span class="pre">Actions</span></code> page.  It will also tell you there if there are any errors.</p>
 </section>
@@ -929,7 +936,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f62065372b0>
+    <jinja2.runtime.BlockReference object at 0x7ff939f892a0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

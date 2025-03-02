@@ -21,7 +21,7 @@ The |DCC-EX| team is pleased to share the next Beta version of |EX-TT| with vers
 
 An often requested feature has been added in this release, enabling single direction rotation to cater for stepper motors and/or gearboxes that have a lot of slop. Refer to :ref:`ex-turntable/configure:rotate_forward_only` and :ref:`ex-turntable/configure:rotate_reverse_only` for more information on how to enable this.
 
-In addition, the interactive serial console commands to |EX-TT| have been expanded significantly, allowing for various testing, debug, display, and other options to be enabled or disabled via the serial console. Note that the test move command ``<steps activity>`` has been altered also as a result. Refer to :ref:`ex-turntable/test-and-tune:interactive serial console commands` for the complete list of commands and what they do.
+In addition, the interactive serial console commands to |EX-TT| have been expanded significantly, allowing for various testing, debug, display, and other options to be enabled or disabled via the serial console. Note that the test move command ``<steps activity>`` has been altered also as a result. Refer to :ref:`ex-turntable/test-and-tune:ex-turntable interactive serial console commands` for the complete list of commands and what they do.
 
 Here is the summary of the changes in this release:
 

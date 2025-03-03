@@ -50,6 +50,10 @@ Handy information
 - All IDs used in commands and functions will be numbers, or an ALIAS name if configured
 - Most IDs simply need to be unique, however RESERVE/FREE and LATCH/UNLATCH must be in the range 0 - 255
 
+.. warning:: 
+
+  You must avoid using these characters in all descriptions: ``<``, ``>``, ``"`` as these are part of the |DCC-EX| protocol and are likely to prevent descriptions showing up in |JMRi| and other throttle software/clients.
+
 .. note:: 
 
   There are four uses of ID numbers in EXRAIL:

@@ -1338,13 +1338,13 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
   |_| > **cv:** CV number
 
   *Response:* |BR|
-  |_| ``<r cv value>`` |BR|
-  |_| > **cv:** The number of the Configuration Variable memory location in the decoder to write to (1-1024) |BR|
+  |_| ``<v cv value>`` |BR|
+  |_| > **cv:** The number of the Configuration Variable memory location in the decoder (1-1024) |BR|
   |_| > **value:** one of |BR|
   |_| |_| |_| |_| • value of the CV |BR|
   |_| |_| |_| |_| • -1: if the write failed
 
-  *Example:* ``<r 3450>`` shows that Loco with ID **3450** is on the programming track.
+  *Example:* ``<v 1 3>`` shows that the value ``3`` is stored in CV ``1``.
 
 |hr-dashed|
 

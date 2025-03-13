@@ -1,0 +1,62 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+.. include:: /include/include-news.rst
+
+:blogpost: true
+:date: 13 March, 2025
+:author: peteGSX
+:category: News
+:tags: release, dcc-ex, news, dccexprotocol
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+|NATIVE-PROTOCOL_LIBRARY-LOGO|
+
+Announcing DCCEXProtocol Library 1.2.0
+======================================
+
+We've released the latest version of the |DCC-EXP| library version 1.2.0 today.
+
+This release adds the ability to read/write CVs on both the main and programming tracks:
+
+- handOffLoco(locoAddress, automationId)
+
+  - Use this to send a loco to an EXRAIL automation.
+  - You must enable retrieving routes, and the automationId must match a valid EXRAIL automation ID to work.
+
+- readCV(cv) and validateCV(cv, value)
+
+  - Read or validate a CV for a loco on the programming track.
+  - The associated delegate method to implement is receivedValidateCV(int cv, int value) as both return the same response.
+
+- writeLocoAddress(address)
+
+  - Write the provided address to a loco on the programming track.
+  - The associated delegate method to implement is receivedWriteLoco(int address).
+
+- validateCVBit(cv, bit, value)
+
+  - Validate the specified bit of a CV for a loco on the programming track.
+  - The associated delegate method to implement is receivedValidateCVBit(int cv, int bit, int value).
+
+- writeCV(cv, value)
+
+  - Write a CV to a loco on the programming track.
+  - The associated delegate method to implement is receivedWriteCV(int cv, int value).
+
+- writeCVBit(cv, bit, value)
+
+  - Write the specified value to the specified bit of a CV to a loco on the programming track.
+  - There is no delegate method to implement for the response for this due to parser limitations, and we recommend writing full CVs.
+
+- writeCVOnMain(address, cv, value)
+
+  - Write to the specified CV to the specified loco on the main track.
+
+- writeCVBitOnMain(address, cv, bit, value)
+
+  - Write to the specified bit and CV to the specified loco on the main track.

@@ -2,10 +2,81 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2025-03-12T21:01:47.513123+00:00</updated>
+  <updated>2025-03-13T22:23:03.995421+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.8">ABlog</generator>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20250313.html</id>
+    <title>Announcing DCCEXProtocol Library 1.2.0</title>
+    <updated>2025-03-13T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;p&gt;&lt;img alt="DCC-EX Native Protocol Library" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-native-protocol-library.png" style="width: 320.0px; height: 64.0px;" /&gt;&lt;/p&gt;
+&lt;section id="announcing-dccexprotocol-library-1-2-0"&gt;
+
+&lt;p&gt;We’ve released the latest version of the &lt;a href="../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCCEX&lt;/span&gt;&lt;span class="dccex-prefix"&gt;Protocol&lt;/span&gt;&lt;/a&gt; library version 1.2.0 today.&lt;/p&gt;
+&lt;p&gt;This release adds the ability to read/write CVs on both the main and programming tracks:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;handOffLoco(locoAddress, automationId)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Use this to send a loco to an EXRAIL automation.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You must enable retrieving routes, and the automationId must match a valid EXRAIL automation ID to work.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;readCV(cv) and validateCV(cv, value)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Read or validate a CV for a loco on the programming track.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The associated delegate method to implement is receivedValidateCV(int cv, int value) as both return the same response.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;writeLocoAddress(address)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Write the provided address to a loco on the programming track.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The associated delegate method to implement is receivedWriteLoco(int address).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;validateCVBit(cv, bit, value)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Validate the specified bit of a CV for a loco on the programming track.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The associated delegate method to implement is receivedValidateCVBit(int cv, int bit, int value).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;writeCV(cv, value)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Write a CV to a loco on the programming track.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The associated delegate method to implement is receivedWriteCV(int cv, int value).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;writeCVBit(cv, bit, value)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Write the specified value to the specified bit of a CV to a loco on the programming track.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;There is no delegate method to implement for the response for this due to parser limitations, and we recommend writing full CVs.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;writeCVOnMain(address, cv, value)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Write to the specified CV to the specified loco on the main track.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;writeCVBitOnMain(address, cv, bit, value)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Write to the specified bit and CV to the specified loco on the main track.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20250313.html" rel="alternate"/>
+    <summary>DCC-EX Native Protocol Library</summary>
+    <category term="dcc-ex" label="dcc-ex"/>
+    <category term="dccexprotocol" label="dccexprotocol"/>
+    <category term="news" label="news"/>
+    <category term="release" label="release"/>
+    <published>2025-03-13T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>https://dcc-ex.com/news/posts/20250301.html</id>
     <title>Announcing EX-CommandStation 5.4.0</title>

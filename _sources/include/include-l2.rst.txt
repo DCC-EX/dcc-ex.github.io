@@ -66,7 +66,7 @@
 ..
 .. |DCC-EXP| raw:: html
 
-  <a href="../index.html"><span class="dccex-suffix">DCCEX</span><span class="dccex-prefix">Protocol</span></a>
+  <a href="../../throttles/native-protocol-library.html"><span class="dccex-suffix">DCCEX</span><span class="dccex-prefix">Protocol</span></a>
 ..
 .. ................................................
 ..

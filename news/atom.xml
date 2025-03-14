@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2025-03-14T06:41:11.303781+00:00</updated>
+  <updated>2025-03-14T08:48:51.414804+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.8">ABlog</generator>
@@ -17,7 +17,7 @@
 &lt;p&gt;&lt;img alt="DCC-EX Native Protocol Library" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-native-protocol-library.png" style="width: 320.0px; height: 64.0px;" /&gt;&lt;/p&gt;
 &lt;section id="announcing-dccexprotocol-library-1-2-0"&gt;
 
-&lt;p&gt;We’ve released the latest version of the &lt;a href="../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCCEX&lt;/span&gt;&lt;span class="dccex-prefix"&gt;Protocol&lt;/span&gt;&lt;/a&gt; library version 1.2.0 today.&lt;/p&gt;
+&lt;p&gt;We’ve released the latest version of the &lt;a href="../../throttles/native-protocol-library.html"&gt;&lt;span class="dccex-suffix"&gt;DCCEX&lt;/span&gt;&lt;span class="dccex-prefix"&gt;Protocol&lt;/span&gt;&lt;/a&gt; library version 1.2.0 today.&lt;/p&gt;
 &lt;p&gt;This release adds the ability to read/write CVs on both the main and programming tracks:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;handOffLoco(locoAddress, automationId)&lt;/p&gt;

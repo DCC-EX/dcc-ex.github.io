@@ -153,7 +153,7 @@ CV Programming (Operation Mode)
 
    EX-Toolbox CV Programming (Operation Mode) Screen
 
-Operation Mode CV Programming is available form the 'CV Programming' screen, when 'Program on Main (Operation Mode)' is selected in the drop down list at the top of the screen.
+Operation Mode CV Programming is available from the 'CV Programming' screen, when 'Program on Main (Operation Mode)' is selected in the drop down list at the top of the screen.
 
 Operation Mode CV Programming ONLY allows you to *Write* CVs.
 
@@ -497,14 +497,33 @@ View log
 
 Accessed from any of the main screens via :menuselection:`Menu --> View Log`.
 
-This screen allows you to view the internal Engine Driver log of events.
-This is sometimes useful for analysing problems.
+This screen allows you to view the internal EX-Toolbox log of events. (referend to as  'logcat').
 
 The option to `Start recording to file` creates a user-accessible file that can be sent to the |EX-TB| app developers to assist you in resolving a problem.
-The file will be located on your mobile phone at:
-Internal storage ``/Android/data/dcc_ex.toolbox/files`` |br|\ and will be named something like: ``logcat9999999999999.txt``
 
-Enable the preference to include the timestamp on each line of the log.
+The file will be located on your Android device/phone at:
+Internal storage ``/Android/data/dcc_ex.ex_toolbox/files`` |br|\ and will be named something like: ``logcat9999999999999.txt``
+
+Optionally enable the preference to include the timestamp on each line of the log.
+
+Saving a Log File
+-----------------
+
+To record a log file in |EX-TB|....
+
+1. Start |EX-TB|.
+2. From the menu, select :guilabel:`View Log`
+3. Click :guilabel:`Start recording to a file`
+4. Click :guilabel:`Close``
+5. Attempt whatever is causing the problem a few times
+6. Exit |EX-TB|
+7. Connect a USB cable to your device/phone and PC 
+8. Allow access if the device/phone asks.
+9. In some versions of Android you may also need to change the connection type on the device/phone from 'charging' to 'file transfer'
+10. Open a file manager and find the connected device/phone
+11. Browse down to the folder ...\Internal shared storage\Android\data\dcc_ex.ex_toolbox\files
+12. Find the most recent file that looks like ``logcatxxxxxxxxxxxxx.txt``     e.g. logcat1699833098998.txt
+13. Attach that file to a message in discord using the :guilabel:`+` button on the row of the message content```
 
 
 About
@@ -523,7 +542,7 @@ This screen displays
 Connecting via JMRI
 ===================
 
-|EX-TB| can't normally connect to a |EX-CS| through |JMRI|, however it is possible if you ``Load DCC== over TCP Server`` in the 'DCC-EX' menu in |JMRI|, then connect |EX-TB| to the additional server that is presented.
+|EX-TB| can't normally connect to a |EX-CS| through |JMRI|, however it is possible if you ``Load DCC++ over TCP Server`` in the 'DCC-EX' menu in |JMRI|, then connect |EX-TB| to the additional server that is presented in Connection screen. It will be the same name as your JMRI Railroad name, but will have " [DCC-EX]" appended to it.
 
 ----
 

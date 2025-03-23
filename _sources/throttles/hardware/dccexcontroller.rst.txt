@@ -14,6 +14,10 @@ DccEXcontroller (Physical)
       :depth: 3
       :local:
 
+.. note::
+
+  While this contoller code remains fully functional, support for DccEXcontroller has been discontinued.
+
 DccExController uses exactly the same hardware as the WiTcontroller, but uses the DCC-EX Native command protocol instead of the |WITHROTTLE PROTOCOL|.
 
 From |Engine Driver|'s very own Peter Akers (flash62au on our Discord server), comes a physical hardware throttle using only 4 parts:
@@ -64,8 +68,6 @@ Features
   * Put ESP32 in deep sleep and restart it
 
 * limited dealing with unexpected disconnects.  It will throw you back to the Server selection screen.
-
-NOTE: This is a Project and is therefore a work in progress and open source. New features are being added regularly.
 
 Source code and instructions can be found on GitHub here: https://github.com/flash62au/DccExController |EXTERNAL-LINK|
 

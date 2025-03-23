@@ -47,6 +47,7 @@ Android (Phones and Tablets)
 - :doc:`DCCpp CAB (android) <software/dccpp-cab>`
 - :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
 - :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
+- :doc:`DCC-EX CAB (iOS and Android) <software/dccex-cab>`
 
 Apple iOS (Phones and Tablets)
 ------------------------------
@@ -57,20 +58,21 @@ Apple iOS (Phones and Tablets)
 - :doc:`Train Driver (iOS) <software/train-driver>`
 - :doc:`ThrottleCard (iOS) <software/throttlecard>`
 - :doc:`TrainNavigator (iOS) <software/trainnavigator>`
+- :doc:`DCC-EX CAB (iOS and Android) <software/dccex-cab>`
 - :doc:`WiThrottle (iOS) <software/withrottle>`
 
 
 Dedicated Hardware
 ------------------
 
-- :doc:`DccExController (Physical) <hardware/dccexcontroller>`
 - :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
 - :doc:`EX-T3-WiFi (T3 = Tactile Touch Throttle) (physical) </throttles/hardware/ex-t3-wifi>`
 - `HandCab (Physical) <https://github.com/1fatgmc/HandCab/tree/main>`_
 - :doc:`LoDi-Con WiFi Throttle </throttles/hardware/lodi-con-wifi-throttle>`
 - :doc:`miniThrottle (Physical) <hardware/minithrottle>`
 - :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
-- :doc:`WiTcontroller (Physical) <hardware/witcontroller>` |BR| |BR|
+- :doc:`WiTcontroller (Physical) <hardware/witcontroller>`
+- :doc:`DccExController (Physical) <hardware/dccexcontroller>`  - Support Discontinued |BR| |BR|
 - See also :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
 Personal Computers
@@ -105,14 +107,15 @@ DCC-EX (DCC-EX Native Commands)
 - :doc:`EX-WebThrottle (Web Browser) </ex-webthrottle/index>`  *recommended*
 - :doc:`Engine Driver (Android) <software/engine-driver>`  *recommended*
 - :doc:`DCCpp CAB (Android) <software/dccpp-cab>`
+- :doc:`DCC-EX CAB (iOS and Android) <software/dccex-cab>`
 - :doc:`DCC++ Throttle (Android) <software/dccpp-throttle>`
 - :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`TrainNavigator (iOS) <software/trainnavigator>`
 - :doc:`JMRI (Win, macOS, Linux) <software/jmri>`
-- :doc:`DccExController (Physical) <hardware/dccexcontroller>`
 - :doc:`EX-T3-WiFi (T3 = Tactile Touch Throttle) (Physical) </throttles/hardware/ex-t3-wifi>`
 - :doc:`miniThrottle (Physical) <hardware/minithrottle>` |BR| |BR|
+- :doc:`DccExController (Physical) <hardware/dccexcontroller>`  - Support Discontinued
 - See also :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
 WiThrottle Protocol Based Throttles

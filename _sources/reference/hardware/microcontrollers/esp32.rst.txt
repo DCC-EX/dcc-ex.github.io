@@ -104,8 +104,8 @@ From top to bottom the pins are: `IO0`, `5V` (incorrectly labelled `IOREF` on th
   :scale: 10%
 
 
-Using an Arduino Motor Shield R3 or clone
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Using an Arduino Motor Shield R3
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 To avoid damaging the ESP32's analog inputs, the `IOREF` pin on must be bent outwards or cut so it will not go into the ESPDUINO-32 socket. Then use a jumper from the `3.3v` pin to `IOREF` on the |motor shield| itself.
 
 For DCC current sensing bend or cut the `A0` and `A1` pins because by default they are connected to `GPIO2` and `GPIO4` on the ESP32 which are not useable at the same time as WiFi.
@@ -114,6 +114,27 @@ Instead, on the top of the |motor shield| connect `A0` to `A2` and `A1` to `A3` 
 .. image:: /_static/images/esp32/espduino-32-motor-shield-fritzing.png
   :alt: MotorShield configuration for ESP32
   :scale: 50%
+
+Additional information on the use of L298 Clone motor shields 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Bend the IOREF pin and jumper to the 3.3v pin, as is done for the Genuine Arduino Motor Shield R3. |BR|
+For current sensing, bend the A0 and A1 pins.  Current sensing will use A2 and A3, but clone motor shields require modifications. |BR|
+|_| > Add voltage divider resistors. |BR|
+|_| |_| Track A - - 5k/20k MAIN |BR|
+|_| |_| |_| |_| 5k - A0-A2 |BR|
+|_| |_| |_| |_| 20k - GND-A2 |BR|
+|_| |_| Track B - - 5K/20K/100K PROG |BR|
+|_| |_| |_| |_| 5k - A1-A3 |BR|
+|_| |_| |_| |_| 20k - GND-A3 |BR|
+|_| |_| |_| |_| 100k - 3v3-A3 |BR|
+|_| > The voltage divider resistor circuit is also utilizing the Schottky diodes present on pins A2 and A3 to limit ADC input voltage. |BR|
+|_| > Note:  the 100k resistor provides a voltage boost, which will result in overcurrent issues on the 
+programming track.  You can use <D PROGBOOST> to forego the 250mA trip current, or update the 
+code in MotorDriver.h
+
+.. image:: /_static/images/esp32/espduino-32-L298-voltage-divider.png
+  :alt: L298 motor shield - voltage divider resistors
+  :scale: 15%
 
 Using a |DCC-EX| EX-MotorShield8874
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -134,16 +155,17 @@ Building DCC-EX for ESP32
 
 The easiest way of building DCC-EX for the ESP32 is via EX-Installer by selecting the ESP32 option. Click here for :doc:`EX-Installer installation instructions </ex-commandstation/installer-diy>`.
 
-Adding ESP32 support to the Arduino IDE
-----------------------------------------
-
-In order to compile for the Espressif ESP32 platforms, you will need to add the board definitions to the |Arduino IDE|. To do this, follow the instructions on the `official Espressif guide <https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide>`_.
-
 Adding ESP32 support to VS Code and PlatformIO
 ----------------------------------------------
 
 When using VS Code and PlatformIO it will auto-configure from the entry in the platformio.ini file when you select the ESP32 target to be built.
 
-.. note::
-    The ESP32 board package version 2.0.17 is required.
+Adding ESP32 support to the Arduino IDE
+----------------------------------------
 
+In order to compile for the Espressif ESP32 platforms, you will need to add the board definitions to the |Arduino IDE|. To do this, follow the instructions on the `official Espressif guide <https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide>`_.
+
+.. note::
+  
+  ESP32 Espressif boards package version 2.0.17 is required. |BR|
+  Select board:  ESP32 Dev module 

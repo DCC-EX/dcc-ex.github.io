@@ -1539,6 +1539,15 @@ For a good example of this refer to :ref:`exrail/tips:realistic turnout sequence
 |_| > **description** - The description that will be assigned to the turnout/point, or |BR|
 |_| > *HIDDEN* - keyword - if used instead of the "description" the Turnout/point will not appear in the lists sent to throttle/controllers |BR|
 
+.. collapse:: For example: (click to show)
+
+  .. code-block:: cpp
+
+    TURNOUT(100, 26, 0, "Coal Yard")                  // DCC accessory turnout at linear address 101.
+    PIN_TURNOUT(101, 164, "Switching Yard")           // Pin turnout on an MCP23017 I/O expander module.
+    SERVO_TURNOUT(102, 102, 400, 100, Slow, HIDDEN)   // A servo turnout on a PCA9685 servo module that is hidden from throttles.
+    VIRTUAL_TURNOUT(103, "Lumber Yard")               // A virtual turnout which will trigger an automation sequence when CLOSE or THROW is sent.
+
 |hr-dashed|
 
 .. _ifclosed:
@@ -1608,15 +1617,6 @@ Throws a defined turnout/point.
 
 *Parameters:* |BR|
 |_| > **turnout_id** - The id of the turnout/point to throw |BR|
-
-.. collapse:: For example: (click to show)
-
-  .. code-block:: cpp
-
-    TURNOUT(100, 26, 0, "Coal Yard")                  // DCC accessory turnout at linear address 101.
-    PIN_TURNOUT(101, 164, "Switching Yard")           // Pin turnout on an MCP23017 I/O expander module.
-    SERVO_TURNOUT(102, 102, 400, 100, Slow, HIDDEN)   // A servo turnout on a PCA9685 servo module that is hidden from throttles.
-    VIRTUAL_TURNOUT(103, "Lumber Yard")               // A virtual turnout which will trigger an automation sequence when CLOSE or THROW is sent.
 
 |hr-dashed|
 

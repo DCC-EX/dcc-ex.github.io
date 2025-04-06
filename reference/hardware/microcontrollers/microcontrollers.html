@@ -885,11 +885,12 @@ Note however that there are some hardware issues to be aware of, and to remedy b
 <a class="reference internal image-reference" href="../../../_images/espduino-32-resistor.jpg"><img alt="ESPDUINO-32 resister modification, underside of PCB" src="../../../_images/espduino-32-resistor.jpg" style="width: 400.0px; height: 300.0px;" /></a>
 <p>From top to bottom the pins are: <cite>IO0</cite>, <cite>5V</cite> (incorrectly labelled <cite>IOREF</cite> on this board, so not Arduino UNO R3 compliant), <cite>RESET</cite>, <cite>3.3V</cite>, <cite>5V</cite>, <cite>GND</cite>, <cite>GND</cite>, <cite>VIN</cite> as seen here:</p>
 <a class="reference internal image-reference" href="../../../_images/espduino-32-header-closeup.jpg"><img alt="ESPDUINO-32 power header closeup, component side" src="../../../_images/espduino-32-header-closeup.jpg" style="width: 300.0px; height: 400.0px;" /></a>
-<section id="using-an-arduino-motor-shield-r3-or-clone">
-<h4>Using an Arduino Motor Shield R3 or clone<a class="headerlink" href="#using-an-arduino-motor-shield-r3-or-clone" title="Link to this heading"></a></h4>
+<section id="using-an-arduino-motor-shield-r3">
+<h4>Using an Arduino Motor Shield R3<a class="headerlink" href="#using-an-arduino-motor-shield-r3" title="Link to this heading"></a></h4>
 <p>To avoid damaging the ESP32’s analog inputs, the <cite>IOREF</cite> pin on must be bent outwards or cut so it will not go into the ESPDUINO-32 socket. Then use a jumper from the <cite>3.3v</cite> pin to <cite>IOREF</cite> on the <abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr> itself.</p>
-<p>For DCC current sensing bend or cut the <cite>A0</cite> and <cite>A1</cite> pins because by default they are connected to <cite>GPIO2</cite> and <cite>GPIO4</cite> on the ESP32 which are not useable at the same time as WiFi.
-Instead, on the top of the <abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr> connect <cite>A0</cite> to <cite>A2</cite> and <cite>A1</cite> to <cite>A3</cite> via jumpers. This will then automatically work when you select STANDARD_MOTOR_SHIELD as the MotorShield in config.h because the definition is in place when ESP32 is selected as the build target.</p>
+<p>For DCC current sensing bend or cut the <cite>A0</cite> and <cite>A1</cite> pins because by default they are connected to <cite>GPIO2</cite> and <cite>GPIO4</cite> on the ESP32 which are not useable at the same time as WiFi. <br />
+Instead, on the top of the <abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr> connect <cite>A0</cite> to <cite>A2</cite> and <cite>A1</cite> to <cite>A3</cite> via jumpers. This will then automatically work when you select STANDARD_MOTOR_SHIELD as the MotorShield in config.h because the definition is in place when ESP32 is selected as the build target. <br />
+&gt; Note:  L298 Clone motor shields require a voltage divider circuit.  <a class="reference internal" href="esp32.html#additional-information-on-the-use-of-l298-clone-motor-shields"><span class="std std-ref">Link to further detail.</span></a></p>
 <a class="reference internal image-reference" href="../../../_images/espduino-32-motor-shield-fritzing.png"><img alt="MotorShield configuration for ESP32" src="../../../_images/espduino-32-motor-shield-fritzing.png" style="width: 270.0px; height: 213.0px;" /></a>
 </section>
 <section id="using-a-dcc-ex-ex-motorshield8874">
@@ -1006,7 +1007,7 @@ Instead, on the top of the <abbr title="also referred to as a 'Motor Controller'
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fea1c3e4610>
+    <jinja2.runtime.BlockReference object at 0x7f20f16d25f0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

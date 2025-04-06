@@ -72,7 +72,7 @@ A simplified representation of what the dual (PWM) signals might look like throu
 Additional Notes
 ================
 
-This is not zero (0) stretching. We do not support the zero stretching address function, found on Digitrax and Lenz command Stations on purpose. The constant dual DCC electrical signal may damage certain types of older DC motors if left on for a long time.|BR| **So never put a DC locomotive on a DCC track.**
+This is not zero (0) stretching. We do not support the zero stretching address function, found on Digitrax and Lenz command Stations on purpose. The constant dual DCC electrical signal may damage certain types of older DC motors if left on for a long time. |BR| **So never put a DC locomotive on a DCC track.**
 
 Unlike Digitrax and Lenz 0 Zero stretching DCC (PWM) signal which leaves the engine lit up and humming loudly with the throttle and engine at 0 speed, because it is receiving a Dual DCC(PWM) aka AC signal, while the |EX-CS| TrackManager is dead quiet and at rest at 0 speed.
 

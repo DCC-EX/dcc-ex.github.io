@@ -1,44 +1,41 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta content="DCC-EX DCC DCC++ EX DCC++EX" name="keywords" />
 <meta content="DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout." name="description" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Using a Serial Monitor &mdash; DCC-EX Model Railroading  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=0b880bd3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=c0a7eb24" />
-      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=bfd9ebc6" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/reference/tools/serial-monitor.html" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-        <script src="../../_static/js/platform.js?v=e56cde4b"></script>
-        <script src="../../_static/js/extra.js?v=3424c10e"></script>
-        <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
-        <script src="../../_static/dark_mode_js/theme_switcher.js?v=a2af87b2"></script>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="../../_static/js/platform.js?v=e56cde4b"></script>
+      <script src="../../_static/js/extra.js?v=3424c10e"></script>
+      <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Diagnostic d Commands" href="index-diagnostics-d.html" />
-    <link rel="prev" title="Diagnostic Tools" href="index.html" />
-
+    <link rel="prev" title="Diagnostic Tools" href="index.html" /> 
      
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
@@ -49,17 +46,14 @@
 
       gtag('config', 'G-L5X0KNBF0W');
       </script>
-  
-
+   
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../news/atom.xml"
   title="DCC-EX News"
 />
-
-
-
+  
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -628,8 +622,7 @@
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
-<p><a class="image-product-logo-float-right reference internal" href="../../_images/product-logo-reference.png"><img alt="Reference" class="image-product-logo-float-right" src="../../_images/product-logo-reference.png" style="width: 320.0px; height: 64.0px;" /></a></p>
+              <p><a class="image-product-logo-float-right reference internal" href="../../_images/product-logo-reference.png"><img alt="Reference" class="image-product-logo-float-right" src="../../_images/product-logo-reference.png" style="width: 320.0px; height: 64.0px;" /></a></p>
 <section id="using-a-serial-monitor">
 <h1>Using a Serial Monitor<a class="headerlink" href="#using-a-serial-monitor" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#conductor"><img alt="Conductor Hat" src="../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../support/index.html#contact-support-options" title="Request help or support"><img src="../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
@@ -686,7 +679,8 @@
 <h3>Run the Arduino IDE<a class="headerlink" href="#run-the-arduino-ide" title="Link to this heading"></a></h3>
 <p>Start the <a class="reference internal" href="../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">Arduino IDE</span></a>. You should see something like this:</p>
 <figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="../../_images/arduino_ide.jpg"><img alt="Arduino IDE" src="../../_images/arduino_ide.jpg" style="width: 576.0px; height: 536.4px;" /></a>
+<a class="reference internal image-reference" href="../../_images/arduino_ide.jpg"><img alt="Arduino IDE" src="../../_images/arduino_ide.jpg" style="width: 576.0px; height: 536.4px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig 387: </span><span class="caption-text">Arduino IDE</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
@@ -696,7 +690,8 @@
 <h3>Select the Correct COM Port<a class="headerlink" href="#select-the-correct-com-port" title="Link to this heading"></a></h3>
 <p>Select “Port” and find the port on your computer that recognises the Arduino. If you don’t see a port listed there and are using a clone board, you may have to install a driver for a CH340 USB chip that is on these boards: see here <a class="reference external" href="https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all">Drivers for the CH340</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <figure class="align-default" id="id2">
-<a class="reference internal image-reference" href="../../_images/board_port_mega.jpg"><img alt="Select the COM Port" src="../../_images/board_port_mega.jpg" style="width: 720.0px; height: 261.90000000000003px;" /></a>
+<a class="reference internal image-reference" href="../../_images/board_port_mega.jpg"><img alt="Select the COM Port" src="../../_images/board_port_mega.jpg" style="width: 720.0px; height: 261.90000000000003px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig 388: </span><span class="caption-text">Select the correct COM Port</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
@@ -706,14 +701,16 @@
 <h3>Open the Serial Monitor<a class="headerlink" href="#open-the-serial-monitor" title="Link to this heading"></a></h3>
 <p>The <a class="reference internal" href="../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">Arduino IDE</span></a> has a built in <a class="reference internal" href="#"><span class="doc">Serial Monitor</span></a>. That means that in addition to uploading updates to your Command Station, we can interact with the Command Station. Select “Tools -&gt; Serial Monitor”, or click on the “serial monitor” icon near the upper right of the window.</p>
 <figure class="align-default" id="id3">
-<a class="reference internal image-reference" href="../../_images/arduino_ide2.jpg"><img alt="Open the Serial Monitor" src="../../_images/arduino_ide2.jpg" style="width: 488.7px; height: 497.7px;" /></a>
+<a class="reference internal image-reference" href="../../_images/arduino_ide2.jpg"><img alt="Open the Serial Monitor" src="../../_images/arduino_ide2.jpg" style="width: 488.7px; height: 497.7px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig 389: </span><span class="caption-text">Open the Serial Monitor</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Make sure the <strong>baud rate at the lower right of the window is set to “115200”</strong>. This is the data communication speed, equivalent to 115.2kb/s! <strong>Make sure the dropdown next to that says “Both NL &amp; CR”</strong>. That makes sure you send a ‘new line’ command and ‘carriage return’ which the Arduino expects.</p>
 <figure class="align-default" id="id4">
-<a class="reference internal image-reference" href="../../_images/serial_monitor.jpg"><img alt="Serial Monitor" src="../../_images/serial_monitor.jpg" style="width: 579.6px; height: 454.5px;" /></a>
+<a class="reference internal image-reference" href="../../_images/serial_monitor.jpg"><img alt="Serial Monitor" src="../../_images/serial_monitor.jpg" style="width: 579.6px; height: 454.5px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig 390: </span><span class="caption-text">Serial Monitor - Note line ending and baud rate settings!</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
 </figcaption>
@@ -759,8 +756,7 @@
 </section>
 
 <div class="section ablog__blog_comments">
-  
-  
+   
 </div>
 
            </div>
@@ -780,7 +776,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f60ceb26ad0>
+    <jinja2.runtime.BlockReference object at 0x7f1f5f3d3c40>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

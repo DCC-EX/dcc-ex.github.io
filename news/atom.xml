@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2025-04-16T11:35:21.317011+00:00</updated>
+  <updated>2025-04-28T05:47:25.355507+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.io/" version="0.11.8">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.io/" version="0.11.12">ABlog</generator>
   <entry>
     <id>https://dcc-ex.com/news/posts/20250313.html</id>
     <title>Announcing DCCEXProtocol Library 1.2.0</title>
@@ -69,7 +69,7 @@
 &lt;/ul&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20250313.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20250313.html"/>
     <summary>DCC-EX Native Protocol Library</summary>
     <category term="dcc-ex" label="dcc-ex"/>
     <category term="dccexprotocol" label="dccexprotocol"/>
@@ -178,7 +178,7 @@
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20250301.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20250301.html"/>
     <summary>The &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team are excited to announce a new Production release of &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; with version 5.4.0 being made available today. As usual, this release includes a raft of new features and enhancements to bring even more capability and joy to your digital model railroading experience! We’re also announcing changes to our supported hardware platforms.</summary>
     <category term="ex-commandstation" label="ex-commandstation"/>
     <category term="release" label="release"/>
@@ -208,7 +208,7 @@
 &lt;p&gt;We are currently testing some changes that may lead to an update in EX-Installer and/or the EX-CSB1 to compensate for the issue. We need to make sure any hardware change does not affect anything else. It would not be good to be able to upload and then find your nice, shiny, Command Station won’t reboot into operating mode. If you have the issue and are a Tinkerer or an Engineer, you may be able to help us since no one on the development team has a problem computer. You could be a valuable resource to help us beta test the best solution.&lt;/p&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20250128.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20250128.html"/>
     <summary>We have found that there are a small number of users who can have an issue when trying to update firmware or upload EXRAIL scripts to an EX-CSB1 Command Station (or any ESP32 based device). This seems to be an issue with some USB ports on some Windows machines, but no matter what operating system or computer you have (including a Raspberry Pi) please follow these instructions to fix the issue and report it to us along with what fixed it for you.</summary>
     <category term="ex-commandstation" label="ex-commandstation"/>
     <category term="ex-csb1" label="ex-csb1"/>
@@ -278,7 +278,7 @@
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20241220.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20241220.html"/>
     <summary>DCC-EX, a global contributor to DCC open source software for model railroading, is proud to announce the second of our open source hardware products: the &lt;a href="../../ex-commandstation/rtr-index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&amp;thinsp;/&amp;thinsp;Booster One Express&lt;/span&gt;&lt;/a&gt; CommandStation and Booster, providing dual 5 amp DCC and DC PWM (pulse width modulation) output.</summary>
     <category term="ex-commandstation" label="ex-commandstation"/>
     <category term="ex-csb1" label="ex-csb1"/>
@@ -320,7 +320,7 @@
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20240911.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20240911.html"/>
     <summary>This has become a frequently asked question so we decided to create an article dedicated to the answer.</summary>
     <category term="ex-commandstation" label="ex-commandstation"/>
     <published>2024-09-11T00:00:00+00:00</published>
@@ -346,7 +346,7 @@
 &lt;/ul&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20240307.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20240307.html"/>
     <summary>The &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team is pleased to announce another new release of &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt; (version 0.0.18). As always, we encourage all users to download this new version of the installer to take advantage of the bug fixes and new features available.</summary>
     <category term="ex-installer" label="ex-installer"/>
     <published>2024-03-07T00:00:00+00:00</published>
@@ -381,7 +381,7 @@
 &lt;/ul&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20240226.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20240226.html"/>
     <summary>The &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team is pleased to share the next Beta version of &lt;a href="../../ex-turntable/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;&lt;/a&gt; with version 0.7.0 being released today. Please be aware that there are some changes in this version that may impact configuration options set, particularly for those using two wire stepper drivers such as the A4988, DRV8825, or TMC2208. Users with ULN2003 stepper drivers should not be impacted. NOTE If you are using the STEPPER_DRIVER option A4988_INV you will need to edit your configuration file, please see ex-turntable/configure:stepper_driver and ex-turntable/configure:invert_enable for more information.</summary>
     <category term="ex-turntable" label="ex-turntable"/>
     <category term="release" label="release"/>
@@ -406,7 +406,7 @@
 &lt;p&gt;You can also discuss this in the #ex-sensorcam channel in our &lt;a class="reference external" href="https://discord.gg/y2sB4Fp"&gt;Discord Server&lt;/a&gt;.&lt;/p&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20240215.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20240215.html"/>
     <summary>Are you struggling to figure out how to neatly run a myriad of cables around your layout to cater for dozens (or more) of sensors? Struggling to find ways to neatly integrate and hide sensors in and around your track? Well struggle no more, EX-SensorCAM is here!</summary>
     <category term="ex-sensorcam" label="ex-sensorcam"/>
     <published>2024-02-15T00:00:00+00:00</published>
@@ -435,7 +435,7 @@
 &lt;/ul&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20240214.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20240214.html"/>
     <summary>Firstly, we wish all our users a rather belated Happy New Year as we present our first DCC-EX News article for 2024! The news today is we have released an updated version of our &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt; (version 0.0.17).</summary>
     <category term="ex-installer" label="ex-installer"/>
     <published>2024-02-14T00:00:00+00:00</published>
@@ -458,7 +458,7 @@
 &lt;p&gt;For documentation on how to implement and use the library, refer to the &lt;a class="reference external" href="https://dcc-ex.com/DCCEXProtocol/index.html"&gt;DCCEXProtocol documentation&lt;/a&gt;.&lt;/p&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20231207.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20231207.html"/>
     <summary>The &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team are proud to announce that we’ve released the very first version of our brand spanking new DCCEXProtocol Arduino Library! This has been written to make life easier for those wishing to write software for throttles or other clients that need to communicate with &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; using our native command API.</summary>
     <category term="dcc-ex" label="dcc-ex"/>
     <category term="dccexprotocol" label="dccexprotocol"/>
@@ -506,7 +506,7 @@
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20230917.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20230917.html"/>
     <summary>Since our original announcement back on the 2nd of July 2023, &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt; has continued to be improved with both enhancements and bug fixes. Originally announced at version 0.0.12, this new announcement has &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt; at version 0.0.16, with quite a difference between these two releases!</summary>
     <category term="ex-installer" label="ex-installer"/>
     <published>2023-09-17T00:00:00+00:00</published>
@@ -527,7 +527,7 @@
 &lt;p&gt;The old exInstaller has now been made a public archive, and no further development will occur.&lt;/p&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20230911.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20230911.html"/>
     <summary>Today, we bid a fond farewell to the old exInstaller, used successfully by many a user to load our flagship product &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; onto Arduino devices around the world and enable DCC control of many model railroading layouts.</summary>
     <category term="ex-installer" label="ex-installer"/>
     <published>2023-09-11T00:00:00+00:00</published>
@@ -610,7 +610,7 @@
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20230807.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20230807.html"/>
     <summary>&lt;span class="new-in-v5"&gt;New in version 5 &lt;/span&gt; Yep, that’s right, the much anticipated &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; version 5 release is here at last! This is a huge release, adding significant new features like &lt;span class="ex-suffix"&gt;TrackManager&lt;/span&gt;, enhancing existing capabilities, introducing new and enhanced I/O support, along with other associated products such as &lt;a href="../../ex-fastclock/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;FastClock&lt;/span&gt;&lt;/a&gt;, &lt;a href="../../ex-turntable/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Turntable&lt;/span&gt;&lt;/a&gt;, and &lt;a href="../../ex-ioexpander/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;IOExpander&lt;/span&gt;&lt;/a&gt;.</summary>
     <category term="new-in-version-5" label="new-in-version-5"/>
     <category term="news" label="news"/>
@@ -637,7 +637,7 @@
 &lt;p&gt;All that said, we would still enjoy being able to run on Arduino boards whenever possible. As mentioned above, we are open to working with anyone with the time and talent who thinks they can port our software to these new boards. We can provide direction, code snippets, code reviews, and access to the team. In the meantime, we encourage everyone to take a look at our list of &lt;a class="reference external" href="https://dcc-ex.com/ex-commandstation/advanced-setup/supported-microcontrollers/index.html#supported-microcontrollers"&gt;Supported Microcontrollers&lt;/a&gt;&lt;/p&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20230728.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20230728.html"/>
     <summary>DCC-EX has no plans to support the Uno R4 or Giga at this time. For an explanation as to why it does not make sense for us to support these boards (at least right now), continue reading.</summary>
     <category term="dcc-ex" label="dcc-ex"/>
     <category term="ex-commandstation" label="ex-commandstation"/>
@@ -664,14 +664,14 @@
 &lt;p&gt;For instructions on how to get the new &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt; and how to use it, head over to the &lt;a class="reference internal" href="ex-installer/index.html"&gt;&lt;span class="doc"&gt;EX-Installer&lt;/span&gt;&lt;/a&gt; page.&lt;/p&gt;
 &lt;img alt="New version" src="https://dcc-ex.com/_images/new-version.png" style="width: 401.0px; height: 319.5px;" /&gt;
 &lt;aside class="footnote-list brackets"&gt;
-&lt;aside class="footnote brackets" id="id2" role="note"&gt;
+&lt;aside class="footnote brackets" id="id2" role="doc-footnote"&gt;
 &lt;span class="label"&gt;&lt;span class="fn-bracket"&gt;[&lt;/span&gt;&lt;a role="doc-backlink" href="#id1"&gt;1&lt;/a&gt;&lt;span class="fn-bracket"&gt;]&lt;/span&gt;&lt;/span&gt;
 &lt;p&gt;For Windows users with generic or clone Arduino devices, you will still need to install suitable USB to serial drivers (e.g. CH340/341) as the Arduino CLI only provides drivers for genuine Arduino devices.&lt;/p&gt;
 &lt;/aside&gt;
 &lt;/aside&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20230702.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20230702.html"/>
     <summary>Yes, that’s right, the &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team is announcing we have an updated &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt;!</summary>
     <category term="ex-installer" label="ex-installer"/>
     <category term="news" label="news"/>
@@ -704,7 +704,7 @@
 &lt;p&gt;DCC-EX Website will have further documentation for the EX-MotorShield8874, and extended support in software will be included in the upcoming EX-CommandStation v5.0 release scheduled for late May 2023.&lt;/p&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20230515.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20230515.html"/>
     <summary>&lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt;, a global contributor to DCC open source software for model railroading, is proud to announce the first of our open source hardware products: the &lt;a href="../../reference/hardware/motorboards/ex-motor-shield-8874.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;MotorShield8874&lt;/span&gt;&lt;/a&gt;, providing dual 5 amp DCC and DC PWM (pulse width modulation) output for &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt;.</summary>
     <category term="ex-commandstationex-motorshield8874" label="ex-commandstation ex-motorshield8874"/>
     <published>2023-05-15T00:00:00+00:00</published>
@@ -726,7 +726,7 @@
 &lt;p&gt;&lt;strong&gt;Look for some major new features soon in version 5.0!&lt;/strong&gt;&lt;/p&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20230409.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20230409.html"/>
     <summary>We’re excited to announce the final version 4 release of &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; before we move to version 5!</summary>
     <category term="ex-commandstation" label="ex-commandstation"/>
     <category term="production" label="production"/>
@@ -766,7 +766,7 @@
 &lt;p&gt;Some of the above new features and fixes are currently undocumented which we will fix in the coming weeks. In the meantime, feel free to jump onto Discord and chat with the developers and keep up to date (&lt;a class="reference internal" href="support/contact-us.html"&gt;&lt;span class="doc"&gt;Contact Us&lt;/span&gt;&lt;/a&gt;).&lt;/p&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20230327.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20230327.html"/>
     <summary>We are full steam ahead to a v5.0 release, making sure what’s in there is well tested to the limits of our resources, and has documentation available as we go.</summary>
     <category term="ex-commandstation" label="ex-commandstation"/>
     <category term="ex-ioexpander" label="ex-ioexpander"/>
@@ -804,7 +804,7 @@
 &lt;p&gt;We look forward to sharing more news and information with you all!&lt;/p&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20230309.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20230309.html"/>
     <summary>Yep, that’s right, the DCC-EX team are now publishing updates regularly with our new “DCC-EX News” feed!</summary>
     <category term="dcc-ex" label="dcc-ex"/>
     <category term="news" label="news"/>
@@ -833,7 +833,7 @@
 &lt;/ul&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20230309a.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20230309a.html"/>
     <summary>&lt;a href="../../ex-toolbox/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Toolbox&lt;/span&gt;&lt;/a&gt; is a free, open source, Android app to help setup and configure your EX-CommandStation.</summary>
     <category term="ex-toolbox" label="ex-toolbox"/>
     <published>2023-03-09T00:00:00+00:00</published>
@@ -926,7 +926,7 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 &lt;/div&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20221029.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20221029.html"/>
     <summary>The DCC-EX Team is pleased to release CommandStation-EX v4.1.2 as a Production Release for the general public.
 This release is a Minor release with many significant EXRAIL enhancements and new automation features in addition to some bug fixes.
 The team continues improving the architecture of DCC++EX to make it more flexible and optimizing the code to get more performance from the Arduino (and other) microprocessors. This release includes all of the Point Releases from v4.0.1 to v4.1.2.</summary>
@@ -956,7 +956,7 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 &lt;/div&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20221023.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20221023.html"/>
     <summary>23 October 2022 - 21:00 USA - Eastern Standard Time</summary>
     <category term="ex-commandstation" label="ex-commandstation"/>
     <published>2022-10-23T00:00:00+00:00</published>
@@ -1009,7 +1009,7 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20220801.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20220801.html"/>
     <summary>In order to better fit with our mission and provide a more clear and consistant image as our offerings expand, we have changed our name from ‘DCC++ EX’ to &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt;, dropping the ‘++’.</summary>
     <category term="dcc-ex" label="dcc-ex"/>
     <published>2022-08-01T00:00:00+00:00</published>
@@ -1037,7 +1037,7 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 &lt;/div&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20220201a.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20220201a.html"/>
     <summary>What’s New in Version 4.0</summary>
     <category term="ex-commandstation" label="ex-commandstation"/>
     <published>2022-02-01T00:00:00+00:00</published>
@@ -1074,7 +1074,7 @@ The team continues improving the architecture of DCC++EX to make it more flexibl
 &lt;p&gt;&lt;a class="reference external" href="/_static/documents/press_release_v40.pdf"&gt;PDF version of this pressser for download&lt;/a&gt;&lt;/p&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20220201.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20220201.html"/>
     <summary>Announcing version 4.0 of its EX-CommandStation software with EXRAIL automation and accessory control.</summary>
     <category term="ex-commandstation" label="ex-commandstation"/>
     <published>2022-02-01T00:00:00+00:00</published>
@@ -1171,7 +1171,7 @@ October 2020&lt;/p&gt;
 &lt;/section&gt;
 &lt;/section&gt;
 </content>
-    <link href="https://dcc-ex.com/news/posts/20201001.html" rel="alternate"/>
+    <link href="https://dcc-ex.com/news/posts/20201001.html"/>
     <summary>Everything you loved is still there…</summary>
     <category term="ex-commandstationdcc-exdcc++" label="ex-commandstation dcc-ex dcc++"/>
     <published>2020-10-01T00:00:00+00:00</published>

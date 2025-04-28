@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta content="DCC-EX DCC DCC++ EX DCC++EX" name="keywords" />
 <meta content="An EX-CommandStation is a simple, but powerful, DCC Command Station which you assemble yourself using widely available Arduino boards. [DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout.]" name="description" />
 <meta content="EX-CommandStation EX-CS Command Station" name="keywords" />
@@ -9,38 +11,33 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adding WiFi &mdash; DCC-EX Model Railroading  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=0b880bd3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=c0a7eb24" />
-      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=bfd9ebc6" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/ex-commandstation/diy/wifi-setup.html" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-        <script src="../../_static/js/platform.js?v=e56cde4b"></script>
-        <script src="../../_static/js/extra.js?v=3424c10e"></script>
-        <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
-        <script src="../../_static/dark_mode_js/theme_switcher.js?v=a2af87b2"></script>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="../../_static/js/platform.js?v=e56cde4b"></script>
+      <script src="../../_static/js/extra.js?v=3424c10e"></script>
+      <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Install the Software" href="../installer-diy.html" />
-    <link rel="prev" title="Initial Assembly" href="assembly.html" />
-
+    <link rel="prev" title="Initial Assembly" href="assembly.html" /> 
      
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
@@ -51,17 +48,14 @@
 
       gtag('config', 'G-L5X0KNBF0W');
       </script>
-  
-
+   
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../news/atom.xml"
   title="DCC-EX News"
 />
-
-
-
+  
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -630,8 +624,7 @@
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
-<p><a class="image-product-logo-float-right reference internal" href="../../_images/product-logo-ex-commandstation.png"><img alt="EX-CommandStation" class="image-product-logo-float-right" src="../../_images/product-logo-ex-commandstation.png" style="width: 320.0px; height: 64.0px;" /></a></p>
+              <p><a class="image-product-logo-float-right reference internal" href="../../_images/product-logo-ex-commandstation.png"><img alt="EX-CommandStation" class="image-product-logo-float-right" src="../../_images/product-logo-ex-commandstation.png" style="width: 320.0px; height: 64.0px;" /></a></p>
 <section id="adding-wifi">
 <h1>Adding WiFi<a class="headerlink" href="#adding-wifi" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#conductor"><img alt="Conductor Hat" src="../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../support/index.html#contact-support-options" title="Request help or support"><img src="../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
@@ -698,7 +691,8 @@
 <p>Most boards based on the ESP8266 should work with the <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>. However, with all the variations and software versions out there this is the one that we recommend for people starting out with <a href="../../index.html"><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span></a>.</p>
 <p>We like this board here at <a href="../../index.html"><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span></a>. It is simple, inexpensive, easy to use, and it works.</p>
 <figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="../../_images/wifi_jumpers1.jpg"><img alt="Makerfabs ESP-8266 WiFi Shield" src="../../_images/wifi_jumpers1.jpg" style="width: 450.0px; height: 340.5px;" /></a>
+<a class="reference internal image-reference" href="../../_images/wifi_jumpers1.jpg"><img alt="Makerfabs ESP-8266 WiFi Shield" src="../../_images/wifi_jumpers1.jpg" style="width: 450.0px; height: 340.5px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig 87: </span><span class="caption-text">Makerfabs ESP8266 WiFi Shield</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
@@ -708,7 +702,8 @@
 <h3>Remove the plastic jumpers<a class="headerlink" href="#remove-the-plastic-jumpers" title="Link to this heading"></a></h3>
 <p>Note the two black plastic jumpers: we need to remove both of them. You can pull them off with your fingers or needle nose pliers and either stick them in a drawer or move them to the side by having them connect via one side to any of the row of Rx pins. The other end of the connector will just hang out over the WiFi Board.</p>
 <figure class="align-default" id="id2">
-<a class="reference internal image-reference" href="../../_images/wifi_pins.jpg"><img alt="Remove the plastic jumpers" src="../../_images/wifi_pins.jpg" style="width: 450.0px; height: 435.75px;" /></a>
+<a class="reference internal image-reference" href="../../_images/wifi_pins.jpg"><img alt="Remove the plastic jumpers" src="../../_images/wifi_pins.jpg" style="width: 450.0px; height: 435.75px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig 88: </span><span class="caption-text">Remove the plastic jumpers</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
@@ -719,7 +714,8 @@
 <p>Turn the board so that the tab end is to the left and the power connectors on the other boards are to the right. You will be looking at the left side of the shield. Align it so that the pins align starting with the tab end of the boards. The Rx, Tx, 2, 3, 4, 5, 6, 7 pins on the <abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr> line up with the 0 through 7 pins on the Makerfabs WiFi Board.</p>
 <p>Start to get this row partially seated so all the pins are lined up with the holes. Note that there are more holes than pins. The two header holes closest to the power connectors will be empty.</p>
 <figure class="align-default" id="id3">
-<a class="reference internal image-reference" href="../../_images/wifi_seat1.jpg"><img alt="Get the left side pins aligned" src="../../_images/wifi_seat1.jpg" style="width: 450.0px; height: 300.0px;" /></a>
+<a class="reference internal image-reference" href="../../_images/wifi_seat1.jpg"><img alt="Get the left side pins aligned" src="../../_images/wifi_seat1.jpg" style="width: 450.0px; height: 300.0px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig 89: </span><span class="caption-text">Get the left side pins aligned</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
 </figcaption>
@@ -730,13 +726,15 @@
 <p>Now do the the other side. If all the pins are straight and lined up properly, hold both sides of the board and press it together gently (<a class="reference internal" href="#wifi-right-side-pins-aligned"><span class="std std-numref">Fig 90:</span></a>).</p>
 <p>Note that the pins are quite long and will not go all the way into the header. You should have even more of the pins showing between the bottom of the WiFi board and the top of the header on the Motor Board than between the Motor Board and the Arduino. This is normal (see <a class="reference internal" href="#wifi-fully-seated-boards"><span class="std std-numref">Fig 91:</span></a>).</p>
 <figure class="align-default" id="wifi-right-side-pins-aligned">
-<a class="reference internal image-reference" href="../../_images/wifi_seat2a.jpg"><img alt="Get the right side pins aligned" src="../../_images/wifi_seat2a.jpg" style="width: 450.0px; height: 300.0px;" /></a>
+<a class="reference internal image-reference" href="../../_images/wifi_seat2a.jpg"><img alt="Get the right side pins aligned" src="../../_images/wifi_seat2a.jpg" style="width: 450.0px; height: 300.0px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig 90: </span><span class="caption-text">Get the right side pins aligned</span><a class="headerlink" href="#wifi-right-side-pins-aligned" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="wifi-fully-seated-boards">
-<a class="reference internal image-reference" href="../../_images/wifi_seat_full.jpg"><img alt="Fully seated boards" src="../../_images/wifi_seat_full.jpg" style="width: 450.0px; height: 306.0px;" /></a>
+<a class="reference internal image-reference" href="../../_images/wifi_seat_full.jpg"><img alt="Fully seated boards" src="../../_images/wifi_seat_full.jpg" style="width: 450.0px; height: 306.0px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig 91: </span><span class="caption-text">Fully seated boards</span><a class="headerlink" href="#wifi-fully-seated-boards" title="Link to this image"></a></p>
 </figcaption>
@@ -755,7 +753,8 @@
 <p>Take a jumper wire and connect it to any one of the Tx pins on the WiFi Board, and connect the other end to the Rx1 pin on the mega (pin 19).</p>
 <p>Take a second jumper wire and connect it to any one of the Rx pins on the WiFi Board and connect the other end to Tx1 on the mega (pin 18).</p>
 <figure class="align-default" id="id4">
-<a class="reference internal image-reference" href="../../_images/wifi_jumpers2.png"><img alt="Install the Jumper wires" src="../../_images/wifi_jumpers2.png" style="width: 450.0px; height: 317.25px;" /></a>
+<a class="reference internal image-reference" href="../../_images/wifi_jumpers2.png"><img alt="Install the Jumper wires" src="../../_images/wifi_jumpers2.png" style="width: 450.0px; height: 317.25px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig 92: </span><span class="caption-text">Install the jumper wires</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
 </figcaption>
@@ -770,8 +769,7 @@
 </section>
 
 <div class="section ablog__blog_comments">
-  
-  
+   
 </div>
 
            </div>
@@ -791,7 +789,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f60d8d42cb0>
+    <jinja2.runtime.BlockReference object at 0x7f1f761d6dd0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

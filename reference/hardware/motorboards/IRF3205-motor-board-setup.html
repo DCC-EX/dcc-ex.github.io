@@ -1,45 +1,42 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta content="DCC-EX DCC DCC++ EX DCC++EX" name="keywords" />
 <meta content="Hardware that works with EX-CommandStations or other DCC-EX products. [DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout.]" name="description" />
 <meta content="Hardware EX-CommandStations Third Party Products Suppliers" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IRF3205 Motor Driver Setup &mdash; DCC-EX Model Railroading  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/dccex_theme.css?v=0b880bd3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/general.css?v=c0a7eb24" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css?v=bfd9ebc6" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/dark_mode_css/dark.css?v=70edf1c7" />
 
   
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="canonical" href="https://dcc-ex.com/reference/hardware/motorboards/IRF3205-motor-board-setup.html" />
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
-        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
-        <script src="../../../_static/js/platform.js?v=e56cde4b"></script>
-        <script src="../../../_static/js/extra.js?v=3424c10e"></script>
-        <script src="../../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
-        <script src="../../../_static/dark_mode_js/theme_switcher.js?v=a2af87b2"></script>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="../../../_static/js/platform.js?v=e56cde4b"></script>
+      <script src="../../../_static/js/extra.js?v=3424c10e"></script>
+      <script src="../../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Pololu MC33926" href="pololu-mc33926.html" />
-    <link rel="prev" title="L298N Motor Driver Setup" href="L298N-motor-board-setup.html" />
-
+    <link rel="prev" title="L298N Motor Driver Setup" href="L298N-motor-board-setup.html" /> 
      
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
@@ -50,17 +47,14 @@
 
       gtag('config', 'G-L5X0KNBF0W');
       </script>
-  
-
+   
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../../news/atom.xml"
   title="DCC-EX News"
 />
-
-
-
+  
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -630,8 +624,7 @@
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
-<p><a class="image-product-logo-float-right reference internal" href="../../../_images/product-logo-ex-commandstation.png"><img alt="EX-CommandStation" class="image-product-logo-float-right" src="../../../_images/product-logo-ex-commandstation.png" style="width: 320.0px; height: 64.0px;" /></a></p>
+              <p><a class="image-product-logo-float-right reference internal" href="../../../_images/product-logo-ex-commandstation.png"><img alt="EX-CommandStation" class="image-product-logo-float-right" src="../../../_images/product-logo-ex-commandstation.png" style="width: 320.0px; height: 64.0px;" /></a></p>
 <section id="irf3205-motor-driver-setup">
 <h1>IRF3205 Motor Driver Setup<a class="headerlink" href="#irf3205-motor-driver-setup" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../../../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../../../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../../support/index.html#contact-support-options" title="Request help or support"><img src="../../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
@@ -687,7 +680,8 @@
 <h2><a class="toc-backref" href="#id23" role="doc-backlink">Dual Motor Driver Module H-bridge MOSFET IRF3205</a><a class="headerlink" href="#dual-motor-driver-module-h-bridge-mosfet-irf3205" title="Link to this heading"></a></h2>
 <p><a class="reference external" href="../../../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../../../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../../support/index.html#contact-support-options" title="Request help or support"><img src="../../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
 <figure class="align-default" id="id21">
-<a class="reference internal image-reference" href="../../../_images/3205_motor_board.png"><img alt="IRF3205 Motor Board" src="../../../_images/3205_motor_board.png" style="width: 292.5px; height: 226.0px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/3205_motor_board.png"><img alt="IRF3205 Motor Board" src="../../../_images/3205_motor_board.png" style="width: 292.5px; height: 226.0px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig 159: </span><span class="caption-text">IRF3205 Motor Board</span><a class="headerlink" href="#id21" title="Link to this image"></a></p>
 </figcaption>
@@ -712,7 +706,8 @@
 </ul>
 <p>See the <a class="reference internal" href="#parts-list-irf3205"><span class="std std-ref">Parts List (IRF3205)</span></a></p>
 <figure class="align-default" id="id22">
-<a class="reference internal image-reference" href="../../../_images/15A_Dual_HBridge.png"><img alt="15A Dual H-Bridge" src="../../../_images/15A_Dual_HBridge.png" style="width: 280.0px; height: 280.0px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/15A_Dual_HBridge.png"><img alt="15A Dual H-Bridge" src="../../../_images/15A_Dual_HBridge.png" style="width: 280.0px; height: 280.0px;" />
+</a>
 <figcaption>
 <p><span class="caption-number">Fig 160: </span><span class="caption-text">15A Dual H-Bridge</span><a class="headerlink" href="#id22" title="Link to this image"></a></p>
 </figcaption>
@@ -805,13 +800,15 @@
 </tbody>
 </table>
 <p>Here is a visual diagram. See <a class="reference internal" href="#important-notes-on-current-sensing"><span class="std std-ref">Important Notes on Current Sensing</span></a>. Click to enlarge:</p>
-<a class="reference internal image-reference" href="../../../_images/IRF3205_w_arduino_fritz.png"><img alt="IRF3205 Wiring Diagram" class="align-center" src="../../../_images/IRF3205_w_arduino_fritz.png" style="width: 874.0px; height: 375.06px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/IRF3205_w_arduino_fritz.png"><img alt="IRF3205 Wiring Diagram" class="align-center" src="../../../_images/IRF3205_w_arduino_fritz.png" style="width: 874.0px; height: 375.06px;" />
+</a>
 <p>It should look like following. Note we have included the Arduino Mega and have the Arduino Motor shield off to the side for reference. The motor shield would obviously normally be stacked on top of the Arduino. However, some people might not use the motor shield and instead will have another board to use for their programming track. In this case, they would connect the IRF3205 (TODO: What does this mean? Did I mean to connect this other board to those pins or the IRF3205?? Fix this in the IBT_2 board page also) to the same pins on the Arduino microcontroller. As with most of our diagrams, you can click on them to enlarge them. )</p>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">Todo</p>
 <p>LOW - Mention fuses here? Another diagram?</p>
 </div>
-<a class="reference internal image-reference" href="../../../_images/IRF3205_w_arduino.png"><img alt="IRF3205 Wiring Schematic" class="align-center" src="../../../_images/IRF3205_w_arduino.png" style="width: 786.8px; height: 422.79999999999995px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/IRF3205_w_arduino.png"><img alt="IRF3205 Wiring Schematic" class="align-center" src="../../../_images/IRF3205_w_arduino.png" style="width: 786.8px; height: 422.79999999999995px;" />
+</a>
 <ol class="arabic simple" start="6">
 <li><p>Configure the IRF3205 board type in the config.h file.</p></li>
 </ol>
@@ -929,9 +926,11 @@ Note: TODO: finish this. How do know phase?</p>
 </table>
 <p>It should look like following graphical image. Note we have included the Arduino Mega and have the Arduino Motor shield off to the side for reference. The motor shield would obviously normally be stacked on top of the Arduino. However, some people might not use the motor shield and instead will have another board to use for their programming track. In this case, they would connect the IRF3205 directly to the same pins on the Arduino microcontroller. Please use fuses on BOTH wires of the output to your MAIN track. As with most of our diagrams, you can click on them to enlarge them.</p>
 <p>Here is a wiring diagram. See <a class="reference internal" href="#important-notes-on-current-sensing"><span class="std std-ref">Important Notes on Current Sensing</span></a> below. Click on images to enlarge them:</p>
-<a class="reference internal image-reference" href="../../../_images/IRF3205_w_arduino_fritz.png"><img alt="IRF3205 Wiring Diagram" src="../../../_images/IRF3205_w_arduino_fritz.png" style="width: 690.0px; height: 296.09999999999997px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/IRF3205_w_arduino_fritz.png"><img alt="IRF3205 Wiring Diagram" src="../../../_images/IRF3205_w_arduino_fritz.png" style="width: 690.0px; height: 296.09999999999997px;" />
+</a>
 <p>Pay attention to board labels, not their position on this drawing. Your current sensor may have its connections wired differently! Here is a schematic image to help clarify the wiring.</p>
-<a class="reference internal image-reference" href="../../../_images/IRF3205_w_arduino.png"><img alt="IRF3205 Wiring Schematic" src="../../../_images/IRF3205_w_arduino.png" style="width: 562.0px; height: 302.0px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/IRF3205_w_arduino.png"><img alt="IRF3205 Wiring Schematic" src="../../../_images/IRF3205_w_arduino.png" style="width: 562.0px; height: 302.0px;" />
+</a>
 <p>If you want to use more than 5A (but we recommend not to), there are changes you need to make to the hardware AND to the config.h settings. See TODO: link to section below.</p>
 <div class="admonition-todo admonition" id="id5">
 <p class="admonition-title">Todo</p>
@@ -1035,7 +1034,8 @@ Upload the sketch to your Arduino. If you need help on how to upload a sketch, s
 <p class="admonition-title">Todo</p>
 <p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/427">MEDIUM - Hardware</a> - this is wrong - IRF3205 15A Motor Board schematic</p>
 </div>
-<a class="reference internal image-reference" href="../../../_images/IBT_2_schematic.jpg"><img alt="../../../_images/IBT_2_schematic.jpg" src="../../../_images/IBT_2_schematic.jpg" style="width: 525.0px; height: 237.5px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/IBT_2_schematic.jpg"><img alt="../../../_images/IBT_2_schematic.jpg" src="../../../_images/IBT_2_schematic.jpg" style="width: 525.0px; height: 237.5px;" />
+</a>
 </section>
 <section id="keeping-your-tracks-in-phase">
 <h2><a class="toc-backref" href="#id40" role="doc-backlink">Keeping Your tracks in Phase</a><a class="headerlink" href="#keeping-your-tracks-in-phase" title="Link to this heading"></a></h2>
@@ -1082,8 +1082,7 @@ $24.40 +tax; prime shipping</p>
 </section>
 
 <div class="section ablog__blog_comments">
-  
-  
+   
 </div>
 
            </div>
@@ -1103,7 +1102,7 @@ $24.40 +tax; prime shipping</p>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f60dc3740a0>
+    <jinja2.runtime.BlockReference object at 0x7f1f616fe410>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

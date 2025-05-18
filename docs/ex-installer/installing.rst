@@ -53,7 +53,7 @@ If you have purchased a |EX-CSB1| it will have come with the |EX-CS| software al
 
 ----
 
-**Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi)**
+**Instructions for Windows, Mac OS X, and Linux**
 
 Requirements (for installing)
 ==============================
@@ -63,20 +63,20 @@ To run |EX-I| you need:
 * a Microsoft Windows, Apple MacOS or Linux based **computer**
 * |EX-CS| **hardware**, comprising of:
 
+  * a |DCC-EX| |EX-CSB1|
+
+   or
+
   * an **Arduino microprocessor**, based on any of:
     
-    * Arduino Mega, Arduino Uno or Nano
+    * Arduino Mega
     * Expressif ESP32
-    * STMicroelectronicsm Nucleo/STM32
+    * STMicroelectronics Nucleo/STM32
 
   * a **motor Driver**
   * optionally, a **WiFi shield** or ethernet shield
   * optionally, an **LCD or oLED display**
   
-  or
-
-  * an |EX-CSB1|
-
 * a **USB cable** to connect your computer to the Microcontroller   
 
 Getting Ready 
@@ -106,8 +106,43 @@ Download and Run EX-Installer
 * For **Microsoft Windows**:
   
   * Open the Windows *File Manager*
-  * Find the folder in which the **EX-Installer-Win64.exe** or **EX-Installer-Win32.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
-  * **Run** ``EX-Installer-Win64.exe`` (or **EX-Installer-Win32.exe**) |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern.  |BR| |BR|
+  * Find the folder in which the **EX-Installer-Setup-Win64.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
+  * **Run** ``EX-Installer-Setup-Win64.exe`` (or **EX-Installer-Win32.exe**) |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern.  |BR| |BR|
+
+.. figure:: /_static/images/ex-installer/ex-installer-setup-1.png
+   :alt: EX-Installer - Welcome
+   :scale: 55%
+   :align: left
+
+   Install EX-Installer - License Agreement
+
+.. figure:: /_static/images/ex-installer/ex-installer-setup-2.png
+   :alt: EX-Installer - Welcome
+   :scale: 55%
+   :align: left
+
+   Install EX-Installer - Select Additional Tasks
+
+.. figure:: /_static/images/ex-installer/ex-installer-setup-3.png
+   :alt: EX-Installer - Welcome
+   :scale: 55%
+   :align: left
+
+   Install EX-Installer - Ready to Install
+
+.. figure:: /_static/images/ex-installer/ex-installer-setup-4.png
+   :alt: EX-Installer - Welcome
+   :scale: 55%
+   :align: left
+
+   Install EX-Installer - Installing
+
+.. figure:: /_static/images/ex-installer/ex-installer-setup-5.png
+   :alt: EX-Installer - Welcome
+   :scale: 55%
+   :align: left
+
+   Install EX-Installer - Completing
 
 .. important:: 
    :class: important-float-right

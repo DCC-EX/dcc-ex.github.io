@@ -9,10 +9,8 @@ function getNewLink() {
 	needed = "not supported";
 	switch (platform.os.family) {
 		case "Windows":
-			if (platform.os.architecture == 32) {
-				needed = "Win32.exe";
-			} else if (platform.os.architecture == 64) {
-				needed = "Win64.exe";
+			if (platform.os.architecture == 64) {
+				needed = "Setup-Win64.exe";
 			}
 			break;
 		case "Red Hat":
@@ -34,7 +32,7 @@ function getNewLink() {
 		alert("OS Version not supported at this time");
 		return;
 	} else {
-		window.open("https://github.com/DCC-EX/EX-Installer/raw/main/dist/EX-Installer-"+needed, "_blank");
+		window.open("https://github.com/DCC-EX/EX-Installer/releases/latest/download/EX-Installer-"+needed, "_blank");
 	}
 }
 

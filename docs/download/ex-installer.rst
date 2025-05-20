@@ -27,13 +27,13 @@ EX-Installer
 
          `For Linux x64 <https://github.com/DCC-EX/EX-Installer/releases/latest/download/EX-Installer-Linux64>`_
 
-This is the new version of the |EX-I|.  
+This is the new version of |EX-I|.  
 
 Clicking on the link below will automatically find the correct version of the installer for your Computer and Operating system (Windows, Apple, Linux) and download it.
 
 This downloads a self contained app that can automatically load the software from your computer to your Arduino or other supported board. Click here for :doc:`EX-Installer installation instructions </ex-commandstation/installer-diy>`.
 
-*Note* that the new |EX-I| will unfortunately not work on Windows 7.
+**Note** |EX-I| will is only supported on 64bit Windows 10/11, and will not work on Windows 7 or 32bit versions.
 
 .. raw:: html 
 

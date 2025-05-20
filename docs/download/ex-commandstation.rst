@@ -22,68 +22,28 @@ EX-CommandStation
 
 Welcome to the |EX-CS| download page. You have several choices:
 
-* **[RECOMMENDED]** If you are a |conductor-text|, or you just want an easy installer to do the work for you, go to the `ex-Installer`_ section.
-* If you are a |tinkerer-text| the `ex-Installer`_ is still the recommended solution, but if would like to download a zip file and install the firmware using the |Arduino IDE| or |VSC|, go to the `Latest EX-CommandStation Official Release`_ section.
-* To get the latest unreleased development version, go to the `Latest EX-CommandStation Unreleased Development Version`_ (or use the `ex-Installer`_ ).
+* **[RECOMMENDED]** If you are a |conductor-text|, or you just want an easy installer to do the work for you, go to the :doc:`/download/ex-installer` page.
+* If you are a |tinkerer-text| the :doc:`/download/ex-installer` is still the recommended solution, but if would like to download a zip file and install the firmware using the |Arduino IDE| or |VSC|, go to the `Latest EX-CommandStation Official Release`_ section.
+* To get the latest unreleased development version, go to the `Latest EX-CommandStation Unreleased Development Version`_ (or use |EX-I| ).
 * If you are an |engineer-text| or developer, and want to clone the repository onto your computer, go to the `EX-CommandStation Repository (project source files)`_ section.
 * If you're still looking for the old, and unsupported, |BSC|, go to the `BaseStation-Classic`_ section.
 
 ----
 
-|EX-I-LOGO-SMALL|
-
-EX-Installer
-=============
-
-.. note:: 
-   :class: note-float-right
-
-   If you have any difficulties with the automated installer link try these:
-
-      .. rst-class:: dcclink
-
-         `For Windows x64 <https://github.com/DCC-EX/EX-Installer/raw/main/dist/EX-Installer-Win64.exe>`_
-
-      .. rst-class:: dcclink
-
-         `For Windows x32 <https://github.com/DCC-EX/EX-Installer/raw/main/dist/EX-Installer-Win32.exe>`_
-
-         `For MacOS / OSX <https://github.com/DCC-EX/EX-Installer/raw/main/dist/EX-Installer-macOS>`_
-
-      .. rst-class:: dcclink
-
-         `For Linux x64 <https://github.com/DCC-EX/EX-Installer/raw/main/dist/EX-Installer-Linux64>`_
-
-This is the new version of the |EX-I|.  
-
-Clicking on the link below will automatically find the correct version of the installer for your Computer and Operating system (Windows, Apple, Linux) and download it.
-
-This downloads a self contained app that can automatically load the software from your computer to your Arduino or other supported board. Click here for :doc:`EX-Installer installation instructions </ex-commandstation/installer-diy>`.
-
-*Note* that the new |EX-I| will unfortunately not work on Windows 7.
-
-.. raw:: html 
-
-   <p class="dcclink"><a onclick="getNewLink()"><span class="problematic">Automated Installer</span></a></p>
-
-|force-break|
-
-----
-
 |EX-CS-LOGO-SMALL|
+
+.. important:: 
+
+   We **STRONGLY RECOMMEND** downloading and using :doc:`/download/ex-installer` to install the software, especially for |conductor-text| and |tinkerer-text| users.
+   
+   While it is possible install the software using the |Arduino IDE|, we *seriously* **DO NOT RECOMMEND IT**. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.
+
+   |EX-I| will meet 100% of the needs of a |conductor-text| or |tinkerer-text| with considerably less effort.
 
 Manually loading the software
 =============================
 
 If you plan to use the the |Arduino IDE| or |VSC| to configure your |EX-CS| you can use the links below to download the appropriate version.
-
-.. important:: 
-
-   A word of caution on using the |Arduino IDE| to install the software:
-
-   While it is possible install the software using the |Arduino IDE|, we *seriously* **DO NOT RECOMMEND IT** for a |conductor-text| or |tinkerer-text|. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.
-
-   The |EX-I| will meet 100% of the needs of a |conductor-text| or |tinkerer-text| with considerably less effort. 
 
 Latest EX-CommandStation Official Release
 -----------------------------------------

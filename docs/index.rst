@@ -34,7 +34,7 @@ DCC-EX Model Railroading
     
     .. rst-class:: dcclink
 
-      :dcc-ex-text-size-60pct:`Automated:` :ref:`EX-Installer <download/ex-commandstation:EX-Installer>` 
+      :dcc-ex-text-size-60pct:`Automated:` :doc:`EX-Installer <download/ex-installer>` 
       
       :dcc-ex-text-size-60pct:`Manual:` :ref:`Prod <download/ex-commandstation:latest ex-commandstation official release>` , :ref:`Devel <download/ex-commandstation:latest ex-commandstation unreleased development version>`
 

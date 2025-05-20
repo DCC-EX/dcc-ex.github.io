@@ -14,11 +14,15 @@ EX-Installer
 
 If... 
 
-* You have DIY assembled your |EX-CS| hardware you need to load our software onto it make is usable.
-
-* You purchased an |EX-CSB1| you wish to reload our software to enable additional features.
+* You have DIY assembled your |EX-CS| hardware you need to load our software onto it to make it usable.
+* You purchased an |EX-CSB1| and you wish to reload our software to enable additional features.
+* You need to load |EX-IO| or |EX-TT| onto your device.
 
 Then, to make it as simple as possible, we have created the |EX-I| program.
+
+.. rst-class:: dcclink
+
+   :doc:`Download EX-Installer </download/ex-installer>`
 
 To use the |EX-I| program click 'Next' or follow these links:
 

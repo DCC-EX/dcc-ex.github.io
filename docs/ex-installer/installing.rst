@@ -1,5 +1,3 @@
-:orphan:
-
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 .. include:: /include/include-ex-i.rst
@@ -25,7 +23,7 @@ Using EX-Installer - Detailed Instructions
 
 .. rst-class:: dcclink
 
-   :ref:`Download EX-Installer <download/ex-commandstation:ex-Installer>`
+   :doc:`Download EX-Installer </download/ex-installer>`
 
 Once you have assembled your do-it-yourself |EX-CS| hardware you need to load our software onto it to make it usable. |BR| To make it as simple as possible we have created the |EX-I| app.
 
@@ -102,7 +100,7 @@ Download and Run EX-Installer
   
    **Antivirus Software** |BR| You *may* need to turn off your antivirus software before you try to install. |BR| Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
 
-* Download :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app. |BR| |BR|
+* Download :doc:`/download/ex-installer`. |BR| |BR|
 * For **Microsoft Windows**:
   
   * Open the Windows *File Manager*

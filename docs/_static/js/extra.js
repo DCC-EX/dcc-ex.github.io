@@ -10,7 +10,7 @@ function getNewLink() {
 	switch (platform.os.family) {
 		case "Windows":
 			if (platform.os.architecture == 64) {
-				needed = "Setup-Win64.exe";
+				needed = "Win64.exe";
 			}
 			break;
 		case "Red Hat":
@@ -55,10 +55,8 @@ function getLink(needed = "nope") {
             needed = "not supported";
             switch (platform.os.family) {
                 case "Windows":
-                    if (platform.os.architecture == 32) {
-                        needed = "win-x86";
-                    } else if (platform.os.architecture == 64) {
-                        needed = "win-x64";
+                    if (platform.os.architecture == 64) {
+                        needed = "Win64.exe";
                     }
                     break;
                 case "Red Hat":

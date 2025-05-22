@@ -10,7 +10,7 @@
 Using EX-Installer - Detailed Instructions
 ******************************************
 
-|SUITABLE| |conductor| |tinkerer| |engineer| |support-button| |githublink-ex-installer-button-small|
+|SUITABLE| |conductor| |tinkerer| |support-button| |githublink-ex-installer-button-small|
 
 |force-break|
 
@@ -18,7 +18,7 @@ Using EX-Installer - Detailed Instructions
    :class: sidebar-on-this-page
 
    .. contents:: On this page
-      :depth: 4
+      :depth: 2
       :local:
 
 .. rst-class:: dcclink
@@ -29,23 +29,11 @@ Once you have assembled your do-it-yourself |EX-CS| hardware you need to load ou
 
 If you have purchased a |EX-CSB1| it will have come with the |EX-CS| software already installed.  You only need to look at this page if you want to change the default configuration. 
 
-.. note:: 
-
-   If you already have, or wish to create, your own custom config files, we recommend that you :doc:`read this page first <managing-config-files>`.
-
 .. warning::
 
    We have found that there are a small number of users who can have an issue when trying to update firmware or upload EXRAIL scripts to an EX-CSB1 Command Station (or any ESP32 based device).
 
    If you are having problems, look at our `uploading troubleshooting guide <https://dcc-ex.com/news/posts/20250128.html>`_.
-
-.. important:: 
-
-   A word of caution on the *alternate approach* of using the |Arduino IDE| to install the software:
-
-   While it is possible install the software using the |Arduino IDE|, we *seriously* **DO NOT RECOMMEND IT** for a |conductor-text| or |tinkerer-text|. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.
-
-   The |EX-I| described below will meet 100% of the needs of a |conductor-text| or |tinkerer-text| with considerably less effort. 
 
 |force-break|
 
@@ -61,7 +49,7 @@ To run |EX-I| you need:
 * a Microsoft Windows, Apple MacOS or Linux based **computer**
 * |EX-CS| **hardware**, comprising of:
 
-  * a |DCC-EX| |EX-CSB1|
+  * a |DCC-EX| |EX-CSB1| (EX-CSB1)
 
    or
 
@@ -77,35 +65,26 @@ To run |EX-I| you need:
   
 * a **USB cable** to connect your computer to the Microcontroller   
 
-Getting Ready 
-=============
+Download and Install EX-Installer
+=================================
+
+As of |EX-I| version 0.0.21, Windows users will need to run an install process for |EX-I| rather than just downloading the executable file. This should prevent the majority of antivirus software programs quarantining it. Linux and macOS users can continue to just download and run it as normal at this stage.
 
 .. warning:: 
-   :class: warning-float-right
-  
-   Close all other programs that might be using the USB port.  (Like the |Arduino IDE|, |EX-WT| or |JMRI|.)
-
-To begin with...
-
-* **Connect** your |EX-CS| **hardware** to your computer via USB. |BR| Make sure your USB Cable is connected from your computer to the EX-CommandStation. 
-* Make sure no other programs (like the |Arduino IDE|, |EX-WT| or |JMRI|) are using the same USB port. (i.e. close them.)
-
-----
-
-Download and Run EX-Installer 
-=============================
-
-.. warning:: 
-   :class: warning-float-right
   
    **Antivirus Software** |BR| You *may* need to turn off your antivirus software before you try to install. |BR| Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
 
-* Download :doc:`/download/ex-installer`. |BR| |BR|
-* For **Microsoft Windows**:
-  
-  * Open the Windows *File Manager*
-  * Find the folder in which the **EX-Installer-Setup-Win64.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
-  * **Run** ``EX-Installer-Setup-Win64.exe`` (or **EX-Installer-Win32.exe**) |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern.  |BR| |BR|
+* If you haven't done so already, download |EX-I|:
+
+.. rst-class:: dcclink
+
+   :doc:`Download EX-Installer </download/ex-installer>`
+
+* For Linux and macOS users, skip to :ref:`ex-installer/installing:getting ready`
+* Windows users must continue to install |EX-I| with the steps below.
+* Open the Windows *Explorer*
+* Find the folder in which the **EX-Installer-Setup-Win64.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
+* **Run** ``EX-Installer-Setup-Win64.exe`` (or **EX-Installer-Win32.exe**) |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern.  |BR| |BR|
 
 .. figure:: /_static/images/ex-installer/ex-installer-setup-1.png
    :alt: EX-Installer - Welcome
@@ -142,10 +121,42 @@ Download and Run EX-Installer
 
    Install EX-Installer - Completing
 
+|force-break|
+
+----
+
+Getting Ready
+=============
+
+.. warning:: 
+   :class: warning-float-right
+  
+   Close all other programs that might be using the USB port.  (Like the |Arduino IDE|, |EX-WT| or |JMRI|.)
+
+To begin with...
+
+* **Connect** your |EX-CS| **hardware** to your computer via USB. |BR| Make sure your USB Cable is connected from your computer to the EX-CommandStation. 
+* Make sure no other programs (like the |Arduino IDE|, |EX-WT| or |JMRI|) are using the same USB port. (i.e. close them.)
+
+.. note:: 
+
+   If you already have, or wish to create, your own custom config files, we recommend that you :doc:`read this page first <managing-config-files>`.
+
+----
+
+Run EX-Installer 
+================
+
 .. important:: 
    :class: important-float-right
    
    EX-Installer creates a folder (<home>\\ex-installer) to hold the information it needs. :dcc-ex-red-bold:`Do not directly modify anything in this folder` as it a) will be overwritten or deleted by the installer at any time, and b) will cause the installer to fail to load.
+
+* For **Microsoft Windows**:
+  
+  * Open the Windows *File Manager*
+  * Find the folder in which the **EX-Installer-Setup-Win64.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
+  * **Run** ``EX-Installer-Setup-Win64.exe`` (or **EX-Installer-Win32.exe**) |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern.  |BR| |BR|
 
 * For **Apple macOS**:
 

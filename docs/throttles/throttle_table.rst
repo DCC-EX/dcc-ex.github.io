@@ -235,6 +235,20 @@
       -  
       -  
 
+    * -  :doc:`DCC-EX CAB <software/dccex-cab>`
+      -  Paid
+      -  WiFi
+      -  Native
+      -  App
+      -  
+      -  
+      -  X
+      -  X
+      -  
+      -  
+      -  
+      -  X
+
     * -  :doc:`DccExController <hardware/dccexcontroller>`
       -  Free
       -  WiFi

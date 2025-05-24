@@ -64,6 +64,10 @@
 
   <span class="ex-suffix">TrackManager</span>
 ..
+.. |DCC-EXP| raw:: html
+
+  <a href="../../throttles/native-protocol-library.html"><span class="dccex-suffix">DCCEX</span><span class="dccex-prefix">Protocol</span></a>
+..
 .. ................................................
 ..
 .. |EX-CSB1-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-csb1.png

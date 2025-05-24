@@ -106,12 +106,12 @@ This is the process to create a new, untagged release:
 If, instead, you need to create a release for an existing tag, this is the process:
 
 1. Navigate to the GitHub repository in your favourite browser.
-3. Click ``Tags`` in the code window and locate the tag this release should be associated with.
-4. Download the source code associated with the tag from the ``Assets`` section.
-5. Click ``Create release from tag``.
-6. Create the appropriate .zip and .tar.gz archive files as outlined in :ref:`about/contributing/release-process:archive file structure` using your favourite archiving software and the source code as downloaded in step 4.
-7. Enter an appropriate title and add some release information, ideally linking to release notes, a |DCC-EX| news article, or some other reference containing details.
-8. For a Development release, untick ``Set as the latest release`` and tick ``Set as a pre-release``.
-9. For a Production release, tick ``Set as the latest release`` provided it is indeed the latest release.
-10. Attach both archive files.
-11. Click ``Publish release``.
+2. Click ``Tags`` in the code window and locate the tag this release should be associated with.
+3. Download the source code associated with the tag from the ``Assets`` section.
+4. Click ``Create release from tag``.
+5. Create the appropriate .zip and .tar.gz archive files as outlined in :ref:`about/contributing/release-process:archive file structure` using your favourite archiving software and the source code as downloaded in step 3.
+6. Enter an appropriate title and add some release information, ideally linking to release notes, a |DCC-EX| news article, or some other reference containing details.
+7. For a Development release, untick ``Set as the latest release`` and tick ``Set as a pre-release``.
+8. For a Production release, tick ``Set as the latest release`` provided it is indeed the latest release.
+9. Attach both archive files created in step 5.
+10. Click ``Publish release``.

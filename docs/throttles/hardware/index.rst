@@ -12,7 +12,6 @@ Throttles (Hardware)
 .. toctree::
   :maxdepth: 1
 
-  dccexcontroller
   engine-driver-physical-knobs
   ex-t3-wifi
   handcab
@@ -22,3 +21,4 @@ Throttles (Hardware)
   witcontroller
   streamdeck 
   uwt50
+  dccexcontroller

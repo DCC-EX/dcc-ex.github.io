@@ -204,7 +204,8 @@ Stacking EX-MotorShield8874s
 
 This is **definitely** advanced Tinkerer/Engineer level work. Do **not** attempt it without some confidence you know what you are doing electronically. Future revisions of the EX-MotorShield8874 will look at alternative ways to expand the number of DCC districts.
 
-This article covers both stacking an Arduino Motor Shield R3 (or clone) and an EX-MotorShield8874, and stacking two EX-MotorShield8874s.
+This article covers both stacking an Arduino Motor Shield R3 and an EX-MotorShield8874, and stacking two EX-MotorShield8874s. |BR|
+> Note that L298 clone motor shields can be used on 5V Mega, etc., but require modification for use with 3.3V ESP32-WROOM and Nucleo-F4.  :ref:`Link to further detail. <reference/hardware/microcontrollers/esp32:Additional information on the use of L298 Clone motor shields>`
 
 Stacking an Arduino Motor Shield R3 and EX-MotorShield8874
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

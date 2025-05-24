@@ -5,6 +5,8 @@
 
 # runs only on haba's deploy:
 type -p afslog > /dev/null && afslog
+type -p klist > /dev/null && klist
+test -f `echo $KRB5CCNAME  | sed s/FILE://1` && ls -l `echo $KRB5CCNAME  | sed s/FILE://1`
 
 # here is the real start
 ##########################
@@ -18,22 +20,22 @@ fi
 
 # activate prepared venv
 . venv/bin/activate
+set -x
+while sleep 60 && touch ../run/timestamp; do
 
-while sleep 1; do
+    git fetch --dry-run 2>&1 | cut -c 26- | awk ' $2 == "->" && $1 != "gh-pages" { print "touch ../branch/"$1"/update-me"}' | bash
 
-    git fetch --dry-run 2>&1 | awk ' $4 != "" { print "touch ../branch/"$2"/update-me"}' | bash
-
-    for DIR in ../branch/*/update-me ; do
+    for DIR in `ls -d ../branch/*/update-me 2>/dev/null`  ; do
 	BRANCH=`echo $DIR | awk -F/ '{print $3}'`
 	#BRANCH=`git branch | egrep '^\*' | sed 's/. //1'`
-	git checkout "$BRANCH"
-	git pull
-	pip3 install -r requirements.txt || exit 255
-	sphinx-build -M html docs/. "../branch/$BRANCH/" -W --keep-going 2>&1 | cat > "../branch/$BRANCH/lastrun.log"
+	git checkout "$BRANCH"                                           2>&1 | cat > "../branch/$BRANCH/lastrun.log"
+	git pull                                                         2>&1 | cat >> "../branch/$BRANCH/lastrun.log"
+	pip3 install -r requirements.txt                                 2>&1 | cat >> "../branch/$BRANCH/lastrun.log"
+	sphinx-build -M html docs/. "../branch/$BRANCH/" -W --keep-going --write-all --fresh-env 2>&1 | cat >> "../branch/$BRANCH/lastrun.log"
 	rm "../branch/$BRANCH/update-me"
     done
     # still in testing, break here
-    break
+    # break
 done
 
 #deactivate venv

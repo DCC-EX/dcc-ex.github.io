@@ -63,7 +63,7 @@ You can have the command references for |DCC-EX| shown through the Script Output
    
 .. rst-class:: dcclink
 
-   `DCC-EX + JMRI Custom GUI Buttons SetUp </_static/documents/DCC-EX_4.1_JMRI_Script+Button_Instructions.pdf>`_
+   `DCC-EX + JMRI Custom GUI Buttons SetUp </_static/documents/DCC-EX_4.1_JMRI_Script%20Button_Instructions.pdf>`_
 
 .. rst-class:: clearer
 

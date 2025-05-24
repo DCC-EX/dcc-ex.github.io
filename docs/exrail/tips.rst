@@ -173,7 +173,7 @@ The way to implement this is as follows:
 
 Firstly, note the "#define". This is a directive in C++ that tells the compiler to process all this when you compile and upload the CommandStation software.
 
-The entire macro needs to be on a single line, hence the addition of the backslash "\\" at the end of each line in the macro, except after the final DONE. This backslash simply tells the compiler to treat these as the same line while allowing things to be more readable for us humans.
+The entire macro needs to be on a single line, hence the addition of the backslash "\\" at the end of each line in the macro, except after the last line. This backslash simply tells the compiler to treat these as the same line while allowing things to be more readable for us humans.
 
 Here's an example for driving single coil Rokuhan turnouts that require the coil to be activated for a very short time in order to CLOSE or THROW the turnout, which will be explained below.
 
@@ -191,7 +191,6 @@ Here's an example for driving single coil Rokuhan turnouts that require the coil
   #define ROKUHANTURNOUT(t, p1, p2, desc, ali) \
   PIN_TURNOUT(t, 0, desc) \
   ALIAS(ali, t) \
-  DONE \
   ONCLOSE(t) \
   SET(p1) \
   SET(p2)DELAY(PULSE)RESET(p2) \

@@ -23,6 +23,7 @@ Android (Phones and Tablets)
 - :doc:`Cab Engineer: DCC Throttle (Andriod) <cab-engineer>`
 - :doc:`DigiTrainsPro (Android, iOS, Windows) <digitrainspro>` *- Requires JMRI*
 - :doc:`RtDtive DCC++ (Android) <rtdrive-dccpp>`
+- :doc:`DCC-EX CAB (iOS and Android) <dccex-cab>`
 
 Apple iOS (Phones and Tablets)
 ------------------------------
@@ -34,6 +35,7 @@ Apple iOS (Phones and Tablets)
 - :doc:`Train Driver (iOS) <train-driver>`
 - :doc:`Train Throttle (iOS) <train-throttle>`
 - :doc:`TrainNavigator (iOS) <trainnavigator>`
+- :doc:`DCC-EX CAB (iOS and Android) <dccex-cab>`
 - :doc:`WiThrottle (iOS)<withrottle>`
 
 Personal Computers
@@ -57,6 +59,7 @@ Note: The Android throttle apps listed above can be made to made to run on Windo
     jmri
     Cab Engineer: DCC Throttle (Android) <cab-engineer>
     DCCpp CAB (android) <dccpp-cab>
+    DCC-EX CAB (Android and iOS) <dccex-cab>
     DCC++ Throttle (android) <dccpp-throttle>
     DigiTrainsPro (Android, iOS, Windows) <digitrainspro>
     Locontrol (iOS) <locontrol>

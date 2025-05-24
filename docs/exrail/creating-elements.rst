@@ -34,7 +34,11 @@ The process for creating these objects consists of:
 
 .. note:: 
 
-   COMMANDS are case sensitive. i.e. they must be in uppercase. Text parameters you provide (aliases,  descriptions) are not
+   COMMANDS are case sensitive. i.e. they must be in uppercase. Text parameters you provide (aliases,  descriptions) are not.
+
+.. warning::
+
+   You must avoid using these characters in all descriptions: ``<``, ``>``, ``"`` as these are part of the |DCC-EX| protocol and are likely to prevent descriptions showing up in |JMRi| and other throttle software/clients.
 
 ----
 

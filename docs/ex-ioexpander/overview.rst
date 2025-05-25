@@ -54,7 +54,7 @@ In addition, you will require the |EX-IO| software which can be found here:
 
   `EX-IOExpander Github Repository <https://github.com/DCC-EX/EX-IOExpander>`_ |EXTERNAL-LINK|
 
-Both of these can be installed via |EX-I|, see :doc:`/ex-installer/installing` and :ref:`ex-ioexpander/overview:installation via ex-installer`.
+Both of these can be installed via |EX-I|, see :doc:`/ex-installer/installing` and :ref:`ex-ioexpander/overview:install ex-ioexpander with ex-installer`.
 
 Hardware requirements
 =====================
@@ -116,8 +116,8 @@ Configuration changes for |EX-IO| are made by editing a "myConfig.h" file or wri
 Software installation process
 -----------------------------
 
-Installation via EX-Installer
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Install EX-IOExpander with EX-Installer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |EX-I| can be used to install both |EX-CS| and |EX-IO|. The process is the same for both, with the exception of the configuration options, therefore we will only outline the configuration options here. Refer to :doc:`/ex-installer/installing` for the full documentation on using |EX-I|.
 

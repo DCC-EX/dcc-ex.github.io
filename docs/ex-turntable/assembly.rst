@@ -333,8 +333,8 @@ To validate the hall effect sensor is connected correctly, put a magnet in close
 
   Please read through this entire section prior to loading any software onto your Arduino. It is also recommended that the turntable is able to trigger the homing sensor correctly to ensure the automatic calibration works correctly at first startup.
 
-Installing with EX-Installer
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Install EX-Turntable with EX-Installer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |EX-I| can be used to install both |EX-CS| and |EX-TT|. The process is the same for both, with the exception of the configuration options, therefore we will only outline the configuration options here. Refer to :doc:`/ex-installer/installing` for the full documentation on using |EX-I|.
 

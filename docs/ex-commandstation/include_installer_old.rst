@@ -1,3 +1,5 @@
+:orphan:
+
 .. include:: /include/include.rst
 .. include:: /include/include-l1.rst
 .. include:: /include/include-ex-cs.rst
@@ -19,14 +21,236 @@ Install the Software
       :depth: 3
       :local:
     
-Download and Run EX-Installer 
+.. rst-class:: dcclink
+
+   :ref:`Download EX-Installer <download/ex-commandstation:ex-Installer>`
+
+Once you have assembled your do-it-yourself |EX-CS| hardware you need to load our software onto it to make it usable. |BR| To make it as simple as possible we have created the |EX-I| app.
+
+If you have purchased a |EX-CSB1| it will have come with the |EX-CS| software already installed.  You only need to look at this page if you want to change the default configuration. 
+
+.. note::
+   This page is specifically intended for a |conductor-text| or |tinkerer-text| who has either:
+
+   - Purchased a ready-to-run (RTR) |EX-CSB1-SHORT|, or 
+   - Assembled *just* the recommended do-it-yourself (DIY) hardware (including WiFi). 
+
+   This page is as simplified version of the :doc:`/ex-installer/installing` page. If you are a |tinkerer-text| or |engineer-text| or have installed some of the additional, or different, hardware from that recommended for a |conductor-text| then we suggest that you look at the :doc:`Detailed Instructions </ex-installer/installing>` page for the full instructions.
+
+.. warning::
+
+   We have found that there are a small number of users who can have an issue when trying to update firmware or upload EXRAIL scripts to an EX-CSB1 Command Station (or any ESP32 based device).
+
+   If you are having problems, look at our `uploading troubleshooting guide <https://dcc-ex.com/news/posts/20250128.html>`_.
+
+.. important::
+   
+   A word of caution on the *alternate approach* of using the |Arduino IDE| to install the software:
+
+   While it is possible install the software using the |Arduino IDE|, we *seriously* **DO NOT RECOMMEND IT** for a |conductor-text| or |tinkerer-text|. It is an order of magnitude more complex, much slower, and with a very high probability of getting something wrong unless you really know what you are doing.
+
+   The |EX-I| described below will meet 100% of the needs of a |conductor-text| or |tinkerer-text| with considerably less effort. 
+
+|force-break|
+
+----
+
+**Instructions for Windows, Mac OS X, and Linux**
+
+----
+
+Requirements (for installing)
 =============================
 
-If you haven't done so already, you will need to start by downloading and running |EX-I|.
+.. sidebar:: **USB Cable**
+   
+   Make sure your USB Cable is connected from your computer to the |EX-CS|. Make sure no other programs (like the |Arduino IDE|) are using the same USB port.
 
-Refer to :doc:`/ex-installer/installing` for details on how to download, install, and run |EX-I|.
+To run |EX-I| you need:
 
-Once you are ready to install |EX-CS|, continue with this page.
+* A Windows, Linux or MacOS X **Computer**
+* An |EX-CS| (|EX-CSB1| or Arduino Mega/Uno + |Motor shield| +  optional WiFi shield)
+* A **USB cable** to connect your computer to the Microcontroller
+
+----
+
+1. Getting Ready 
+================
+
+To begin with...
+
+* **Connect** your |EX-CS| **hardware** to your computer via USB. |BR| Make sure your USB Cable is connected from your computer to the EX-CommandStation. 
+* Make sure no other programs (like the |Arduino IDE| or |EX-WT|) are using the same USB port. (i.e. close them.)
+
+----
+
+2. Download and Run EX-Installer 
+================================
+
+.. warning::
+   :class: warning-float-right
+   
+   **Antivirus Software** |BR| You *may* need to turn off your antivirus software before you try to install. |BR| Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
+
+* Download the :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app. |BR| |BR|
+
+* For **Microsoft Windows**:
+
+  * Open the Windows *File Manager*
+  * Find the folder in which the **EX-Installer-Win64.exe** or **EX-Installer-Win32.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
+  * **Run** ``EX-Installer-Win64.exe`` or **EX-Installer-Win32.exe** or **EX-Installer-Win32.exe** |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern. |BR| |BR|
+
+.. important:: 
+   :class: important-float-right
+   
+   EX-Installer creates a folder (<home>\\ex-installer) to hold the information it needs. :dcc-ex-red-bold:`Do not directly modify anything in this folder` as it a) will be overwritten or deleted by the installer at any time, and b) will cause the installer to fail to load.
+
+* For **Apple macOS**:
+
+  * Open a terminal window and navigate to the that folder that you downloaded the file to.  e.g.: |BR| ``cd Downloads``
+  * Enter the following command to tell the OS that it is an executable: |BR| ``chmod +x EX-Installer-macOS``
+  * **Run the installer with** the following command: |BR| ``./EX-Installer-macOS`` |BR| |BR|
+
+* For **Linux**:
+
+  * Right-click on the file, go to Properties, then the Permissions tab, and check "Allow executing file as program"
+  * Open a terminal window and navigate to that folder
+  * **Run the installer with** the following command: ``./EX-Installer-Linux64`` |BR| |BR|
+
+----
+
+**You will be presented with the following screen...**
+
+
+3. Installer Screens
+====================
+
+The 'EX-Installer Welcome' screen
+---------------------------------
+
+.. figure:: /_static/images/ex-installer/welcome.png
+   :alt: EX-Installer - Welcome
+   :scale: 40%
+   :align: left
+
+This screen provides some basic information about the process of loading the Software.
+
+To proceed, click the :guilabel:`Manage Arduino CLI` button.
+
+|force-break|
+
+|HR-DASHED|
+
+'Manage Arduino CLI' screen
+---------------------------
+
+.. figure:: /_static/images/ex-installer/manage_cli.png
+   :alt: EX-Installer - Manage CLI
+   :scale: 40%
+   :align: left
+
+   EX-Installer - Welcome screen
+
+This screen allows you to install or update the *Arduino Command Line Interface (CLI)*.
+
+We use the *Arduino Command Line Interface (CLI)* to upload the DCC-EX products to your Arduino.
+
+If you have not installed the CLI previously you *must* have Arduino CLI installed to proceed, simply click the :guilabel:`Install Arduino CLI` button if it is showing.
+
+If you already have the Arduino CLI installed, it is recommended that you refresh it periodically (e.g. weekly) to ensure support for the various device details are kept up to date. To refresh the CLI, simply click the :guilabel:`Refresh Arduino CLI` button.
+
+.. hint:: 
+   :class: hint-float-right-narrow
+
+   **Expressif ESP32** is required for the |EX-CSB1-SHORT|
+
+If you are using the |EX-CSB1-SHORT| or the recommended DIY Mega hardware, you should not need to adjust the other settings on this page.
+
+The |EX-CSB1-SHORT| requires the ``Expressif ESP32`` option to be enabled. It should be enabled by default.
+
+Installing the CLI can take some time. Once the CLI is installed, To proceed, click the :guilabel:`Select your device` button.
+
+|force-break|
+
+|HR-DASHED|
+
+'Select Your Device' screen
+---------------------------
+
+.. figure:: /_static/images/ex-installer/select_device.png
+   :alt: EX-Installer - Select Device
+   :scale: 40%
+   :align: left
+
+   EX-Installer - Device screen
+
+On this screen you will need to |BR| a) select the type of device you wish to load the |EX-CS| software onto, and |BR| b) the USB port you have connected the device to on your computer.
+
+|EX-I| will attempt to work out both of these for you, but it may need assistance.
+
+Click on the :guilabel:`Scan for Devices` button. 
+
+No Devices Found
+~~~~~~~~~~~~~~~~
+
+After you have clicked on the :guilabel:`Scan for Devices` button, if you see **No devices found** to means that you either a) have not connected the device to the computer, or b) the device was not recognised by the computer.
+
+If you have not connected the device, connect it now then click the :guilabel:`Scan for Devices` button again.
+
+If the device *is* connected but not found refer to the :doc:`/support/ex-cs-diagnose` page for assistance.
+
+
+Multiple Devices Found
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: /_static/images/ex-installer/select_device_multiple_devices.png
+   :alt: EX-Installer - Select Device - Multiple Devices
+   :scale: 50%
+   :align: center
+
+   EX-Installer - Device - Multiple Devices
+
+If more than one device is found (on different USB ports), you will need to select which one you wish to load the software on to.
+
+.. figure:: /_static/images/ex-installer/select_device_selection.png
+   :alt: EX-Installer - Select Device - Selection
+   :scale: 50%
+   :align: center
+
+   EX-Installer - Device - Selection
+
+.. hint:: 
+   :class: hint-float-right-narrow
+
+   For the |EX-CSB1-SHORT| select '**DCC-EX EX-CSB1**'
+
+|EX-I| will attempt to work out what type of microprocessor you have connected, but some cases it will not be able to do so. (This is especially common with cheap clone devices.) 
+
+Check and select the appropriate board from the drop down list.
+
+Once you have a port and device type selected, to proceed, click the :guilabel:`Select product to install` button.
+
+|force-break|
+
+|HR-DASHED|
+
+'Select the Product to Install' screen
+--------------------------------------
+
+.. figure:: /_static/images/ex-installer/select_product.png
+   :alt: EX-Installer - Select Product
+   :scale: 40%
+   :align: left
+
+   EX-Installer - Product Screen
+
+Currently only the |EX-CS| product can be installed by the |EX-I|.
+
+Click on the |EX-CS| logo to proceed.
+
+|force-break|
+
+|HR-DASHED|
 
 'Select EX-CommandStation Version' screen
 -----------------------------------------

@@ -31,7 +31,7 @@ platformdirs==4.3.7
 pyenchant==3.2.2
 Pygments==2.19.1
 python-dateutil==2.9.0.post0
-requests==2.32.3
+requests==2.32.4
 ruamel.yaml==0.18.10
 ruamel.yaml.clib==0.2.12
 six==1.17.0

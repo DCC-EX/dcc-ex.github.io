@@ -102,7 +102,7 @@ Also allows joining the MAIN and PROG tracks together.
 .. _native-command-j-i:
 
 ``<J I> <JI>`` - Request current values list
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:*
   |_| ``<jI [cA cB cC ...]>`` |BR|
@@ -114,7 +114,7 @@ Also allows joining the MAIN and PROG tracks together.
 .. _native-command-j-g:
 
 ``<J G> <JG>`` - Request max current list
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:*
   |_| ``<jG [mA mB mC ...]>`` |BR|

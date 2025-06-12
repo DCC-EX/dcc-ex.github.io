@@ -99,6 +99,8 @@ Also allows joining the MAIN and PROG tracks together.
 
   *Response:* N/A
 
+|hr-dashed|
+
 .. _native-command-j-i:
 
 ``<J I> <JI>`` - Request current values list
@@ -107,9 +109,6 @@ Also allows joining the MAIN and PROG tracks together.
   *Response:*
   |_| ``<jI [cA cB cC ...]>`` |BR|
   |_| > **c:** Raw current value for each defined Track, in milliAmps |BR|
-  |_|  |BR|
-
-|hr-dashed|
 
 .. _native-command-j-g:
 
@@ -119,7 +118,6 @@ Also allows joining the MAIN and PROG tracks together.
   *Response:*
   |_| ``<jG [mA mB mC ...]>`` |BR|
   |_| > **m:** Raw current trip value for each defined Track, in milliAmps |BR|
-  |_|  |BR|
 
 ----
 

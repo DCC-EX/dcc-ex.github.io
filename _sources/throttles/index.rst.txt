@@ -48,6 +48,7 @@ Android (Phones and Tablets)
 - :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
 - :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
 - :doc:`DCC-EX CAB (iOS and Android) <software/dccex-cab>`
+- :doc:`WiThrottle Cab (iOS and Android) <software/withrottle-cab>`
 
 Apple iOS (Phones and Tablets)
 ------------------------------
@@ -59,6 +60,7 @@ Apple iOS (Phones and Tablets)
 - :doc:`ThrottleCard (iOS) <software/throttlecard>`
 - :doc:`TrainNavigator (iOS) <software/trainnavigator>`
 - :doc:`DCC-EX CAB (iOS and Android) <software/dccex-cab>`
+- :doc:`WiThrottle Cab (iOS and Android) <software/withrottle-cab>`
 - :doc:`WiThrottle (iOS) <software/withrottle>`
 
 
@@ -124,6 +126,7 @@ WiThrottle Protocol Based Throttles
 - :doc:`Engine Driver (Android)<software/engine-driver>`  *recommended*
 - :doc:`Cab Engineer: DCC Throttle (Android) <software/cab-engineer>`
 - :doc:`Locontrol (iOS) <software/locontrol>`
+- :doc:`WiThrottle Cab (iOS and Android) <software/withrottle-cab>`
 - :doc:`WiThrottle (iOS)<software/withrottle>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`Train Driver (iOS) <software/train-driver>`

@@ -99,26 +99,25 @@ Also allows joining the MAIN and PROG tracks together.
 
   *Response:* N/A
 
+|hr-dashed|
+
 .. _native-command-j-i:
 
-``<J I> <JI>`` - Request current status
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<J I> <JI>`` - Request current values list
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Response:* Repeated for each Channel/Track: ``<j I track current>`` |BR|
-  |_| > **track:**  channel/track |BR|
-  |_| > **current:** current in milliamps
-
-|hr-dashed|
+  *Response:*
+  |_| ``<jI [cA cB cC ...]>`` |BR|
+  |_| > **c:** Raw current value for each defined Track, in milliAmps |BR|
 
 .. _native-command-j-g:
 
-``<J G> <JG>`` - Request max current
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<J G> <JG>`` - Request max current list
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Response:* |BR|
-  |_| repeated for each Channel/Track: ``<j G track currentmax>`` |BR|
-  |_| > **track:**  channel/track |BR|
-  |_| > **currentmax:** current in milliamps
+  *Response:*
+  |_| ``<jG [mA mB mC ...]>`` |BR|
+  |_| > **m:** Raw current trip value for each defined Track, in milliAmps |BR|
 
 ----
 

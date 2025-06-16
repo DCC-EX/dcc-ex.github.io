@@ -88,7 +88,7 @@ If you wish, however, to manually install the packages, you can open a command p
 
 .. code-block:: shell
 
-  pip install sphinx_rtd_theme==1.2.0 sphinx-toolbox install sphinx sphinxcontrib-spelling
+  pip install sphinx_rtd_theme==1.2.0 sphinx-toolbox sphinx sphinxcontrib-spelling
 
 Recommended editor (VSCode)
 ============================

@@ -526,7 +526,7 @@ The |EX-CSB1| is set to operate in |DCC| mode by default. If you want to switch 
 Booster Mode
 --------------
 
-The |EX-CSB1| as the name implies can operate as a Command Station or a Booster. See [insert link] for instructions on how to use the EX-CSB1 as a booster.
+The |EX-CSB1| as the name implies can operate as a Command Station or a Booster. See :doc:`EX-CS as a booster page <rtr-booster>` for instructions on how to use the EX-CSB1 as a booster.
 
 |HR-DASHED|
 

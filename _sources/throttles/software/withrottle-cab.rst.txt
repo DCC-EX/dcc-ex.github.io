@@ -19,11 +19,11 @@ WiThrottle Cab
 
 This is an Android and iOS App. 
 
-WiThrottle Cab is the number one application that turns your devices into handheld controllers for your model railroad.
+WiThrottle Cab is an application that turns your devices into handheld controllers for your model railroad.
 
 With WiThrottle Cab, you can follow your trains around your layout without worrying about plugging and unplugging a wired device as you move along. Using a wireless network connection and WiThrottle command stations connected to the network, WiThrottle Cab can be used to run trains and control signals, turnouts, and other accessories that are configured in the command station.
 
-You can find it in the Google Play Store: `DCC-EX CAB Android App <https://play.google.com/store/apps/details?id=com.gothicmaestro.withrottlecab>`_ |EXTERNAL-LINK|
+You can find it in the Google Play Store: `WiThrottle Cab Android App <https://play.google.com/store/apps/details?id=com.gothicmaestro.withrottlecab>`_ |EXTERNAL-LINK|
 
-You can find it in the Apple App Store: `DCC-EX CAB iOS App <https://apps.apple.com/us/app/withrottle-cab/id6746695618>`_ |EXTERNAL-LINK|
+You can find it in the Apple App Store: `WiThrottle Cab iOS App <https://apps.apple.com/us/app/withrottle-cab/id6746695618>`_ |EXTERNAL-LINK|
 

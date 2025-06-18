@@ -31,7 +31,7 @@ Designed by the |DCC-EX| development team, the |EX-CSB1| replaces up to 3 differ
 What is the EX-CSB1?
 ====================
 
-The |EX-CSB1| is the first fully integrated DCC Command Station with |DC PWM| and Booster mode capabilities developed by the DCC-EX Team. This versatile board can function as a complete Command Station with USB or WiFi connectivity or serve as a stand-alone booster, making it an ideal addition to any layout, including those using non-DCC-EX systems.
+The |EX-CSB1| is the first fully integrated DCC Command Station with |DC PWM| and |Booster Mode| capabilities developed by the DCC-EX Team. This versatile board can function as a complete Command Station with USB or WiFi connectivity or serve as a stand-alone booster, making it an ideal addition to any layout, including those using non-DCC-EX systems.
 
 Key Features:
   * All-in-one DCC Command Station/Booster: Compatible with |DCC| and capable of |DC PWM| output
@@ -44,7 +44,7 @@ Key Features:
   * Accessory Support: Qwiic/STEMMA QT 3.3V, compatible I2C connector and extra I2C pin headers for all your accessories
   * Pre-Installed with |DCC-EX| |EX-CS| Software from most suppliers
   * Auto-Reverser capability assignable to each DCC output independently
-  * RailSync DCC input for automatic booster mode engagement under software control (|EX-R|)
+  * RailSync DCC input for automatic |Booster Mode| engagement under software control (|EX-R|)
   * OLED Display: Bundled graphical display for status and diagnostics, with support for additional displays
 
 Benefits include: 
@@ -60,7 +60,7 @@ Benefits include:
 
 The **EX-CSB1's** robust, single-PCB design includes integrated MOSFET motor drivers from Texas Instruments, providing up to 5A peak power per track output. This allows for simultaneous operation of multiple trains with reduced power consumption and heat generation compared to traditional systems.
 
-With its dual role as a command station or booster, the |EX-CSB1-SHORT| can be strategically placed around a layout, seamlessly switching to booster mode upon detecting a RailSync input signal. This feature is particularly useful for modular layouts, ensuring smooth operation across different sections once joined together and slaved to a master DCC signal. Distributing power around the layout also reduces the cost of heavy copper lines to carry the DCC signal that would otherwise be needed with centralised power.
+With its dual role as a command station or booster, the |EX-CSB1-SHORT| can be strategically placed around a layout, seamlessly switching to |Booster Mode| upon detecting a RailSync input signal. This feature is particularly useful for modular layouts, ensuring smooth operation across different sections once joined together and slaved to a master DCC signal. Distributing power around the layout also reduces the cost of heavy copper lines to carry the DCC signal that would otherwise be needed with centralised power.
 
 An additional |DCC-EX| |EX-MS| can be inserted onto the command station board to provide two more |DCC| or |DC PWM| outputs with the same performance characteristics and output mode flexibility.
 

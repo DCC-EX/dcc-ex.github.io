@@ -13,7 +13,7 @@ Choosing a Throttle (Controller) - Advanced
    :class: sidebar-on-this-page
 
    .. contents:: On this page
-      :depth: 1
+      :depth: 2
       :local:
 
 You need just two things that work together to operate your model railroad:
@@ -118,53 +118,81 @@ Here are your connections, just a computer running a chromium-based browser, a U
 
 For operating instructions see :doc:`how to use EX-WebThrottle </ex-webthrottle/index>`
 
-|
+|HR-DASHED|
+
+Phone/Tablet Throttle Apps
+--------------------------
+
+There are many phone and tablet apps that can be used as throttles. Some of them connect directly to the |EX-CS|, while others connect to a computer running |JMRI|, which in turn connects to the Command Station via a USB cable. The following is a list of some of the most popular throttle apps that work with the |EX-CS|.
 
 Engine Driver (Android | WiThrottle | WiFi)
---------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Engine Driver is a throttle app for your phone that can control multiple locos and your turnouts/points. It uses an interface called "|WiThrottle Protocol|" (for WiFi Throttle). any |WiThrottle Protocol| compatible throttle will work with the |EX-CS|. There are two ways to connect it; the first method is by connecting directly to the Command Station via WiFi. You will need a WiFi board connected to the Command Station (see WiFi Setup :doc:`WiFi Setup </ex-commandstation/advanced-setup/supported-connections/wifi-setup>`).
+.. note::
+  :class: note-float-right
 
-The second method is to use |JMRI| and connect |Engine Driver| (ED) to the computer running |JMRI|. That computer would then connect to the Command Station via a USB cable (normally) or via a Wireless USB Bridge. The computer running |JMRI| can be just about any type of computer: PC, Mac, or Raspberry Pi. However, most operators like the Pi option because it is inexpensive, small, can mount under the layout, and has a free image file that you can flash to a Micro-SD card and have a full |JMRI| setup with WiFi with virtually no fuss.
+  Engine Driver uses either an interface called "|WiThrottle Protocol|" (for WiFi Throttle), or |DCC-EX Native Protocol| to connect to the |EX-CS| over WiFi. Any |WiThrottle Protocol| or |DCC-EX Native Protocol| compatible throttle will work with the |EX-CS|. 
+
+|Engine Driver| is a throttle app for your phone that can control multiple locos and your turnouts/points. 
+
+There are two ways to connect it:
+
+* The first method is by connecting directly to the Command Station via WiFi. You will need a WiFi board connected to the Command Station (see WiFi Setup :doc:`WiFi Setup </ex-commandstation/advanced-setup/supported-connections/wifi-setup>`).
+
+* The second method is to use |JMRI| and connect |Engine Driver| (ED) to the computer running |JMRI|. That computer would then connect to the Command Station via a USB cable (normally) or via a Wireless USB Bridge. The computer running |JMRI| can be just about any type of computer: PC, Mac, or Raspberry Pi. However, most operators like the Pi option because it is inexpensive, small, can mount under the layout, and has a free image file that you can flash to a Micro-SD card and have a full |JMRI| setup with WiFi with virtually no fuss.
 
 See :doc:`Engine Driver Page </throttles/software/engine-driver>`
 
-
-DCCpp CAB (Android | DCC-EX Native Commands | WiFi, Bluetooth)
---------------------------------------------------------------
-
-DCCpp CAB is a throttle that natively speaks the |DCC-EX Native Commands|. It can connect via WiFi or Bluetooth! If you don't need software like |JMRI| running on a computer, DCCpp CAB lets you connect directly to the |EX-CS|.
-
-See :doc:`DCCpp CAB Page </throttles/software/dccpp-cab>`
-
 WiThrottle (iOS | WiThrottle | WiFi)
--------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |WiThrottle| is an app for iPhones and iPads. It can connect directly to the |EX-CS| like |Engine Driver| does, or connect to |JMRI| on a computer and then have |JMRI| connect to the Command Station via a USB cable.
 
 See :doc:`WiThrottle Page </throttles/software/withrottle>`
 
+DCCpp CAB (Android | DCC-EX Native Commands | WiFi, Bluetooth)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+DCCpp CAB is a throttle that natively speaks the |DCC-EX Native Commands|. It can connect via WiFi or Bluetooth! If you don't need software like |JMRI| running on a computer, DCCpp CAB lets you connect directly to the |EX-CS|.
+
+See :doc:`DCCpp CAB Page </throttles/software/dccpp-cab>`
+
 Locontrol (iOS | JMRI Web Server, DCC-EX Native Commands | WiFi)
-----------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Locontrol is a beautiful and functional throttle that uses the |JMRI| Web Server to connect. Soon it will be able to connect directly to the |EX-CS| by using the |DCC-EX Native Commands| set.
 
 See :doc:`Locontrol Page </throttles/software/locontrol>`
 
 DigiTrainsPro (Android, iOS, Windows | WiThrottle, DCC-EX Native Commands | WiFi)
----------------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This is the only throttle with a Windows App. It also has a beautiful user interface. Soon it will be able to speak directly to |EX-CS| using our command language.
 
 See :doc:`DigiTrainsPro Page </throttles/software/digitrainspro>`
 
 SRCPClient (iOS | WiThrottle, DCC-EX Native Commands | WiFi)
-------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Operate up to 3 locos from your iOS device. It supports both |WiThrottle Protocol| AND the DCC-EX Native Commands.
+Operate up to 3 locos from your iOS device. It supports both |WiThrottle Protocol| AND the |DCC-EX Native Protocol|.
 
 See :doc:`SRCPClient Page </throttles/software/srcpclient>`
 
+Complete List of Apps
+^^^^^^^^^^^^^^^^^^^^^^
+
+There are many other apps that can be used as throttles. See the :doc:`Throttles Page Index </throttles/index>` for a complete list of apps that work with the |EX-CS|.
+
+|HR-DASHED|
+
+Hardware Devices
+-----------------
+
+There are many Do-It-Yourself (DIY) and commercial hardware devices that can be used as throttles. Some of them connect directly to the |EX-CS|, while others connect to a computer running |JMRI|, which in turn connects to the Command Station via a USB cable.
+
+See the :doc:`Throttles Page Index </throttles/index>` for a complete list of hardware devices that work with the |EX-CS|.
+
+|HR-DASHED|
 
 JMRI
 ------

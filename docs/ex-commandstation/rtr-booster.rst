@@ -5,9 +5,9 @@
 .. include:: /include/include-ex-csb1.rst
 |EX-CS-LOGO|
 
-************************
-EX-CSB1 as a DCC Booster
-************************
+***************************************
+EX-CSB1 as a DCC Booster (Booster Mode)
+***************************************
 
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button|
 

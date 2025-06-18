@@ -556,9 +556,9 @@ The tracks (channels) on your motor driver can be configured in a variety of dif
 
 If the Command Station is configured as a booster (ESP32 microcontrollers only), then the channels can asl be configured as:
 
-* ``BOOST`` - Booster mode 
-* ``BOOST_INV`` - Booster mode inverted
-* ``BOOST_AUTO`` - Booster mode + Auto-reverser mode
+* ``BOOST`` - |Booster Mode| 
+* ``BOOST_INV`` - |Booster Mode| inverted
+* ``BOOST_AUTO`` - |Booster Mode| + Auto-reverser mode
 
 By default track (channel) **A** will default to ``MAIN`` and Track (channel) **B** to ``PROG``.
 

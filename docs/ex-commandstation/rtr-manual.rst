@@ -21,7 +21,7 @@ EX-CSB1 Operating Manual
 
 |EX-CSB1|
 
-The |EX-CSB1-SHORT| is the first fully integrated DCC Command Station with |DC PWM| and Booster mode capabilities developed by the DCC-EX Team. 
+The |EX-CSB1-SHORT| is the first fully integrated DCC Command Station with |DC PWM| and |Booster Mode| capabilities developed by the DCC-EX Team. 
 
 This versatile board can function as a complete Command Station with USB or WiFi connectivity or serve as a stand-alone booster, making it an ideal addition to any layout, including those using non-DCC-EX systems.
 
@@ -159,7 +159,7 @@ RailSync Connector
 
    Railsync Connector
 
-This is a standard Railsync input and is labelled "Booster In" on the top of the board. Connecting a RailSync output from a Command Station or Booster will automatically switch the EXCSB1 to booster mode on receipt of an input signal when the |EX-CSB1-SHORT| is running the appropriate |EX-R| script. 
+This is a standard Railsync input and is labelled "Booster In" on the top of the board. Connecting a RailSync output from a Command Station or Booster will automatically switch the EXCSB1 to |Booster Mode| on receipt of an input signal when the |EX-CSB1-SHORT| is running the appropriate |EX-R| script. 
 
 Again be sure to wire the DCC outputs to power districts with consistent phasing. Any voltage between 5V and 26V at the input will work. The Digitrax specification is from 12V to 26V. See `the DCCWiki article on RailSync <https://dccwiki.com/LocoNet_and_RailSync_Voltages>`_ |EXTERNAL-LINK|
 

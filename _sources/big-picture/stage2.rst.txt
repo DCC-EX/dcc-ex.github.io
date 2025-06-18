@@ -164,11 +164,11 @@ Add images for your locos (Engine Driver only)
 Engine Driver
 -------------
 
-There are three ways to load & store your Locomotive Icon Image in Engine Driver 2.32.142 and above.
+There are three ways to load & store your Locomotive Icon Image in |Engine Driver| 2.32.142 and above.
 
 1. **Automatically from your existing JMRI Roster & Media**
   
-  If you have a WiThrottle Server that does support loco images:
+  If you have a |WiThrottle Server| that does support loco images:
 
   * Start |JMRI| and capture and load your images into JMRI Roster & Media panel as normal
   * Start the |WiThrottle server|.

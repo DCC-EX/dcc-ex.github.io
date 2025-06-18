@@ -73,8 +73,8 @@ Run a train on your WiFi enabled EX-CommandStation
 
 If when you assembled your |EX-CS| with one of the common configuration options, then you will have a WiFi enabled Command Station, which will allow to run your trains with a smart phone. We are only going to cover two common options here:
 
-* Engine Driver - For Android phones
-* WiThrottle - for Apple iOS phones
+* |Engine Driver| - For Android phones
+* |WiThrottle| - for Apple iOS phones
 
 Engine Driver (Android)
 -----------------------
@@ -129,7 +129,7 @@ wiThrottle (iOS)
 .. note::
   :class: note-float-right
 
-  The free version of WiThrottle ('WiThrottle Lite') only controls one loco at a time and does not offer turnout control or DCC track power control. (Note: EX-CommandStation can be configured to automatically turn the track power on. See the :ref:`EXRAIL examples <exrail/examples:Turn Track Power On at Startup>`.)
+  The free version of |WiThrottle| ('|WiThrottle Lite|') only controls one loco at a time and *does not* offer turnout control or DCC track power control. (Note: EX-CommandStation can be configured to automatically turn the track power on. See the :ref:`EXRAIL examples <exrail/examples:Turn Track Power On at Startup>`.)
   
   The paid version WiThrottle can control multiple locos, can create and control consists, can control turnouts and routes, and can control DCC track power.
 
@@ -155,8 +155,8 @@ wiThrottle (iOS)
   * It will not find the |WiThrottle Server| automatically
   * Enter:
 
-    * The IP Address: 192.168.4.1
-    * The Port: 2560
+    * The IP Address: ``192.168.4.1``
+    * The Port: ``2560``
 
   * |WiThrottle| should then connect 
 
@@ -187,8 +187,8 @@ Run a train on your JMRI connected EX-CommandStation
 If when you assembled your |EX-CS| configurated to Connect to |JMRI|, then you will have the ability to connect to your Command Station directly (using |JMRI|) to run your trains, or you can use smart phone. We are only going to cover three common options here:
 
 * |JMRI| - PC (Windows, Apple OSX, Linux) 
-* Engine Driver - For Android phones
-* WiThrottle - for Apple iOS phones
+* |Engine Driver| - For Android phones
+* |WiThrottle| - for Apple iOS phones
 
 JMRI (PC)
 ---------
@@ -206,7 +206,7 @@ JMRI (PC)
 Engine Driver (via JMRI)
 ------------------------
 
-Before |Engine Driver| or |WiThrottle| can be run via |JMRI|, the |JMRI| WiThrottle server must be started.  It can be started manually by :menuselection:`menu --> actions --> start withrottle server` or be configured to start automatically whenever JMRI is started
+Before |Engine Driver| or |WiThrottle| can be run via |JMRI|, the |JMRI| WiThrottle Server must be started.  It can be started manually by :menuselection:`menu --> actions --> start withrottle server` or be configured to start automatically whenever JMRI is started
 :menuselection:`menu --> edit --> preferences --> start up --> add --> perform action --> start withrottle server`` then save, exit, restart JMRI. A WiThrottle server window should open showing WiThrottle server is running.
 
 * Open the network settings on your phone
@@ -223,7 +223,7 @@ Before |Engine Driver| or |WiThrottle| can be run via |JMRI|, the |JMRI| WiThrot
    * The four red LEDs on the Motor board will turn on
    * Click :guilabel:`Back`
 
-* back on the 'Throttle screen'
+* Back on the 'Throttle screen'
 
   * Click one of the :guilabel:`Select` buttons
   
@@ -243,9 +243,9 @@ WiThrottle (via JMRI)
 .. note:: 
   :class: note-float-right
 
-  The free version of WiThrottle ('WiThrottle Lite') only controls one loco at a time and does not offer turnout control or DCC track power control. (Note: |JMRI| can be configured to automatically turn the track power on.)
+  The free version of |WiThrottle| ('|WiThrottle Lite|') only controls one loco at a time and does not offer turnout control or DCC track power control. (Note: |JMRI| can be configured to automatically turn the track power on.)
   
-  The paid version WiThrottle can control multiple locos, can create and control consists, can control turnouts and routes, and can control DCC track power.
+  The paid version |WiThrottle| can control multiple locos, can create and control consists, can control turnouts and routes, and can control DCC track power.
 
 Before |Engine Driver| or |WiThrottle| can be run via |JMRI|, the JMRI WiThrottle server must be started.  It can be started manually by :menuselection:`menu --> actions --> start withrottle server` or be configured to start automatically whenever |JMRI| is started
 :menuselection:`menu --> edit --> preferences --> start up --> add --> perform action --> start withrottle server`` then save, exit, restart |JMRI|. A WiThrottle server window should open showing WiThrottle server is running.
@@ -311,7 +311,7 @@ wiThrottle (Multiple Trains)
 .. note:: 
   :class: note-float-right
 
-  The free version of |WiThrottle| (WiThrottle Lite) does not provide any options for running multiple trains or Consisted / Multiple Unit trains.  You need to purchase the paid/full version.
+  The free version of |WiThrottle| ('|WiThrottle Lite|') does not provide any options for running multiple trains or Consisted / Multiple Unit trains.  You need to purchase the paid/full version.
 
 .. todo:: `LOW - Stage 1 <https://github.com/DCC-EX/dcc-ex.github.io/issues/415>`_ |EXTERNAL-LINK| - WiThrottle - Multiple Trains
 

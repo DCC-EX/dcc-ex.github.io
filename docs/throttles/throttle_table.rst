@@ -182,7 +182,7 @@
     * -  :doc:`ThrottleCard <software/throttlecard>`
       -  Free / Paid
       -  WiFi
-      -  WiT
+      -  Native / WiT
       -  App
       -  
       -  

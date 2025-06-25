@@ -114,6 +114,7 @@ DCC-EX (DCC-EX Native Commands)
 - :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`TrainNavigator (iOS) <software/trainnavigator>`
+- :doc:`ThrottleCard (iOS) <software/throttlecard>`
 - :doc:`JMRI (Win, macOS, Linux) <software/jmri>`
 - :doc:`EX-T3-WiFi (T3 = Tactile Touch Throttle) (Physical) </throttles/hardware/ex-t3-wifi>`
 - :doc:`miniThrottle (Physical) <hardware/minithrottle>` |BR| |BR|

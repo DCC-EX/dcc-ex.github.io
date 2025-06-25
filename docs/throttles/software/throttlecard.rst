@@ -68,8 +68,7 @@ Screenshots
 
 .. image:: /_static/images/throttles/throttlecard3.jpeg
    :alt: ThrottleCard Screenshot 3
-   :width: 400px
-   :align: center
+   :width: 500px
 
 ..
    The next line is trying to avoid a duplicate label name since many files may have a requirements section

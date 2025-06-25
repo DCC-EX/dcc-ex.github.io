@@ -60,15 +60,16 @@ Screenshots
 
 .. image:: /_static/images/throttles/throttlecard1.jpeg
    :alt: ThrottleCard Screenshot 1
-   :scale: 50%
+   :width: 300px
 
 .. image:: /_static/images/throttles/throttlecard2.jpeg
    :alt: ThrottleCard Screenshot 2
-   :scale: 50%
+   :width: 300px
 
 .. image:: /_static/images/throttles/throttlecard3.jpeg
    :alt: ThrottleCard Screenshot 3
-   :scale: 50%
+   :width: 400px
+   :align: center
 
 ..
    The next line is trying to avoid a duplicate label name since many files may have a requirements section

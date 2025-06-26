@@ -22,6 +22,14 @@ To configure the |EX-CSB1| as a DCC Booster, you will need to install the |EX-CS
       SET_TRACK(B,"BOOST")
       DONE
 
+You also need to add these two lines to the config.h:
+
+
+  .. code-block::
+
+   #define WIFI_LED 33
+   #define BOOSTER_INPUT 32
+
 If you are using an |EX-CSB1| with a |EX-MS| as your booster you will need to add the following commands to the myConfiguration.h file:
 
   .. code-block::

@@ -53,14 +53,14 @@ If you have purchased a |EX-CSB1| it will have come with the |EX-CS| software al
 
 ----
 
-**Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi)**
+**Instructions for Windows, Mac OS X, and Linux**
 
 Requirements (for installing)
 ==============================
 
 To run |EX-I| you need:
 
-* a Microsoft Windows, Apple MacOS or Linux based **computer**
+* a Microsoft Windows, Apple MacOS or Linux based **computer** - **Note this will not run on Raspberry Pi**
 * |EX-CS| **hardware**, comprising of:
 
   * an **Arduino microprocessor**, based on any of:

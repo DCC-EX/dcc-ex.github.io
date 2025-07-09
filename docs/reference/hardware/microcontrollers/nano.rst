@@ -43,7 +43,7 @@ What You need
 * 12-14.5V 3-5A Power Supply for the |motor shield|
 * Barrel Connector to Screw Terminal Adapter if using the Nano Motor Shield
 * Wire of the appropriate gauge for hookup
-* Computer to load the software (Windows, Mac, Linux, Raspberry Pi)
+* Computer to load the software (Windows, Mac, Linux)
 
 Software
 ========

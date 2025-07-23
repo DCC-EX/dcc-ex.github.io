@@ -191,7 +191,7 @@
       -  
       -  X
       -  
-      -  
+      -  X
 
     * -  :doc:`Train Throttle <software/train-throttle>`
       -  Free / Paid

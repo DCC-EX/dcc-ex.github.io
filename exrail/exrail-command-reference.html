@@ -995,9 +995,10 @@
 <li><p><a class="reference internal" href="#done"><span class="std std-ref">DONE - Completes a Sequence/Route/Animation/Event, or any other automation</span></a></p></li>
 <li><p><a class="reference internal" href="#drive"><span class="std std-ref">DRIVE ( vpin ) - TBA</span></a></p></li>
 <li><p><a class="reference internal" href="#else"><span class="std std-ref">ELSE - Alternate logic to any IF related command returning False</span></a></p></li>
-<li><p><a class="reference internal" href="#endexrail"><span class="std std-ref">ENDEXRAIL - TBA</span></a></p></li>
+<li><p><a class="reference internal" href="#endexrail"><span class="std std-ref">ENDEXRAIL - Deprecated - Do not use</span></a></p></li>
 <li><p><a class="reference internal" href="#endif"><span class="std std-ref">ENDIF - Required to end an IF/IFNOT/etc.</span></a></p></li>
 <li><p><a class="reference internal" href="#endtask"><span class="std std-ref">ENDTASK - Completes a Sequence/Route/Animation/Event, or any other automation</span></a></p></li>
+<li><p><a class="reference internal" href="#exrail"><span class="std std-ref">EXRAIL - Deprecated - Do not use</span></a></p></li>
 <li><p><a class="reference internal" href="#estop"><span class="std std-ref">ESTOP - Emergency stops all locomotives</span></a></p></li>
 <li><p><a class="reference internal" href="#extt-turntable"><span class="std std-ref">EXTT_TURNTABLE( id, vpin, home_angle, [, &quot;description&quot;] ) - Define an EX-Turntable turntable/traverser</span></a></p></li>
 <li><p><a class="reference internal" href="#fade"><span class="std std-ref">FADE( vpin, value, ms ) - Fade an LED</span></a></p></li>
@@ -2953,11 +2954,12 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <li><p><a class="reference internal" href="#poweroff-power-off-track" id="id229"><code class="docutils literal notranslate"><span class="pre">POWEROFF</span></code> - Power off track</a></p></li>
 <li><p><a class="reference internal" href="#join-join-prog-and-main-track-outputs" id="id230"><code class="docutils literal notranslate"><span class="pre">JOIN</span></code> - Join PROG and MAIN track outputs</a></p></li>
 <li><p><a class="reference internal" href="#unjoin-disconnect-prog-track-from-main" id="id231"><code class="docutils literal notranslate"><span class="pre">UNJOIN</span></code> - Disconnect prog track from main</a></p></li>
-<li><p><a class="reference internal" href="#endexrail-tba" id="id232"><code class="docutils literal notranslate"><span class="pre">ENDEXRAIL</span></code> - TBA</a></p></li>
-<li><p><a class="reference internal" href="#killall-kills-all-running-ex-r-activities" id="id233"><code class="docutils literal notranslate"><span class="pre">KILLALL</span></code> - Kills all running <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> activities</a></p></li>
-<li><p><a class="reference internal" href="#parse-msg-allows-parsing-of-a-dcc-ex-api-command-via-myautomation-h" id="id234"><code class="docutils literal notranslate"><span class="pre">PARSE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Allows parsing of a DCC-EX API command via myAutomation.h</a></p></li>
-<li><p><a class="reference internal" href="#disable-prog-disable-programming-to-save-ram-flash" id="id235"><code class="docutils literal notranslate"><span class="pre">DISABLE_PROG</span></code> - Disable programming to save RAM/Flash</a></p></li>
-<li><p><a class="reference internal" href="#io-no-hal-reduce-flash-footprint-when-hal-features-not-required" id="id236"><code class="docutils literal notranslate"><span class="pre">IO_NO_HAL</span></code> - Reduce FLASH footprint when HAL features not required</a></p></li>
+<li><p><a class="reference internal" href="#endexrail-deprecated-do-not-use" id="id232"><code class="docutils literal notranslate"><span class="pre">ENDEXRAIL</span></code> - Deprecated - Do not use</a></p></li>
+<li><p><a class="reference internal" href="#exrail-deprecated-do-not-use" id="id233"><code class="docutils literal notranslate"><span class="pre">EXRAIL</span></code> - Deprecated - Do not use</a></p></li>
+<li><p><a class="reference internal" href="#killall-kills-all-running-ex-r-activities" id="id234"><code class="docutils literal notranslate"><span class="pre">KILLALL</span></code> - Kills all running <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> activities</a></p></li>
+<li><p><a class="reference internal" href="#parse-msg-allows-parsing-of-a-dcc-ex-api-command-via-myautomation-h" id="id235"><code class="docutils literal notranslate"><span class="pre">PARSE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Allows parsing of a DCC-EX API command via myAutomation.h</a></p></li>
+<li><p><a class="reference internal" href="#disable-prog-disable-programming-to-save-ram-flash" id="id236"><code class="docutils literal notranslate"><span class="pre">DISABLE_PROG</span></code> - Disable programming to save RAM/Flash</a></p></li>
+<li><p><a class="reference internal" href="#io-no-hal-reduce-flash-footprint-when-hal-features-not-required" id="id237"><code class="docutils literal notranslate"><span class="pre">IO_NO_HAL</span></code> - Reduce FLASH footprint when HAL features not required</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
@@ -2985,31 +2987,36 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p><em>Parameters:</em> <br /> &gt; none</p>
 <p><hr class="hr-dashed" /></p>
 </section>
-<section id="endexrail-tba">
-<span id="endexrail"></span><h4><a class="toc-backref" href="#id232" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ENDEXRAIL</span></code> - TBA</a><a class="headerlink" href="#endexrail-tba" title="Link to this heading"></a></h4>
-<p><em>Parameters:</em> <br /> &gt; none</p>
+<section id="endexrail-deprecated-do-not-use">
+<span id="endexrail"></span><h4><a class="toc-backref" href="#id232" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ENDEXRAIL</span></code> - Deprecated - Do not use</a><a class="headerlink" href="#endexrail-deprecated-do-not-use" title="Link to this heading"></a></h4>
+<p>Deprecated - Do not use</p>
+<p><hr class="hr-dashed" /></p>
+</section>
+<section id="exrail-deprecated-do-not-use">
+<span id="exrail"></span><h4><a class="toc-backref" href="#id233" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">EXRAIL</span></code> - Deprecated - Do not use</a><a class="headerlink" href="#exrail-deprecated-do-not-use" title="Link to this heading"></a></h4>
+<p>Deprecated - Do not use</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="killall-kills-all-running-ex-r-activities">
-<span id="killall"></span><h4><a class="toc-backref" href="#id233" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">KILLALL</span></code> - Kills all running <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> activities</a><a class="headerlink" href="#killall-kills-all-running-ex-r-activities" title="Link to this heading"></a></h4>
+<span id="killall"></span><h4><a class="toc-backref" href="#id234" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">KILLALL</span></code> - Kills all running <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> activities</a><a class="headerlink" href="#killall-kills-all-running-ex-r-activities" title="Link to this heading"></a></h4>
 <p>Kills all running <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> activities</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="parse-msg-allows-parsing-of-a-dcc-ex-api-command-via-myautomation-h">
-<span id="parse"></span><h4><a class="toc-backref" href="#id234" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">PARSE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Allows parsing of a DCC-EX API command via myAutomation.h</a><a class="headerlink" href="#parse-msg-allows-parsing-of-a-dcc-ex-api-command-via-myautomation-h" title="Link to this heading"></a></h4>
+<span id="parse"></span><h4><a class="toc-backref" href="#id235" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">PARSE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Allows parsing of a DCC-EX API command via myAutomation.h</a><a class="headerlink" href="#parse-msg-allows-parsing-of-a-dcc-ex-api-command-via-myautomation-h" title="Link to this heading"></a></h4>
 <p>Allows parsing of a DCC-EX API command via myAutomation.h.  This allows you to include Native DCC-EX Cammands in myAutomation.h where there is no equivalent EXRAIL command.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>msg</strong> - message to parse</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="disable-prog-disable-programming-to-save-ram-flash">
-<span id="disable-prog"></span><h4><a class="toc-backref" href="#id235" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">DISABLE_PROG</span></code> - Disable programming to save RAM/Flash</a><a class="headerlink" href="#disable-prog-disable-programming-to-save-ram-flash" title="Link to this heading"></a></h4>
+<span id="disable-prog"></span><h4><a class="toc-backref" href="#id236" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">DISABLE_PROG</span></code> - Disable programming to save RAM/Flash</a><a class="headerlink" href="#disable-prog-disable-programming-to-save-ram-flash" title="Link to this heading"></a></h4>
 <p>Disable programming to save RAM/Flash.</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="io-no-hal-reduce-flash-footprint-when-hal-features-not-required">
-<span id="io-no-hal"></span><h4><a class="toc-backref" href="#id236" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IO_NO_HAL</span></code> - Reduce FLASH footprint when HAL features not required</a><a class="headerlink" href="#io-no-hal-reduce-flash-footprint-when-hal-features-not-required" title="Link to this heading"></a></h4>
+<span id="io-no-hal"></span><h4><a class="toc-backref" href="#id237" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IO_NO_HAL</span></code> - Reduce FLASH footprint when HAL features not required</a><a class="headerlink" href="#io-no-hal-reduce-flash-footprint-when-hal-features-not-required" title="Link to this heading"></a></h4>
 <p>To reduce FLASH footprint when HAL features not required.</p>
 <p>Note: The HAL is disabled by default on Nano and Uno platforms, because of limited flash space.</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
@@ -3022,18 +3029,18 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <nav class="contents in-this-section local" id="id22">
 <p class="topic-title">In This Section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#onlcc-sender-eventid-tba" id="id237"><code class="docutils literal notranslate"><span class="pre">ONLCC(sender,</span> <span class="pre">eventid)</span></code> - TBA</a></p></li>
-<li><p><a class="reference internal" href="#lcc-eventid-tba" id="id238"><code class="docutils literal notranslate"><span class="pre">LCC(eventid)</span></code> - TBA</a></p></li>
-<li><p><a class="reference internal" href="#lccx-senderid-eventid-tba" id="id239"><code class="docutils literal notranslate"><span class="pre">LCCX(senderid,eventid)</span></code> - TBA</a></p></li>
-<li><p><a class="reference internal" href="#acon-eventid-tba" id="id240"><code class="docutils literal notranslate"><span class="pre">ACON(eventid)</span></code> - TBA</a></p></li>
-<li><p><a class="reference internal" href="#acof-eventid-tba" id="id241"><code class="docutils literal notranslate"><span class="pre">ACOF(eventid)</span></code> - TBA</a></p></li>
-<li><p><a class="reference internal" href="#onacon-eventid-tba" id="id242"><code class="docutils literal notranslate"><span class="pre">ONACON(eventid)</span></code> - TBA</a></p></li>
-<li><p><a class="reference internal" href="#onacof-eventid-tba" id="id243"><code class="docutils literal notranslate"><span class="pre">ONACOF(eventid)</span></code> - TBA</a></p></li>
+<li><p><a class="reference internal" href="#onlcc-sender-eventid-tba" id="id238"><code class="docutils literal notranslate"><span class="pre">ONLCC(sender,</span> <span class="pre">eventid)</span></code> - TBA</a></p></li>
+<li><p><a class="reference internal" href="#lcc-eventid-tba" id="id239"><code class="docutils literal notranslate"><span class="pre">LCC(eventid)</span></code> - TBA</a></p></li>
+<li><p><a class="reference internal" href="#lccx-senderid-eventid-tba" id="id240"><code class="docutils literal notranslate"><span class="pre">LCCX(senderid,eventid)</span></code> - TBA</a></p></li>
+<li><p><a class="reference internal" href="#acon-eventid-tba" id="id241"><code class="docutils literal notranslate"><span class="pre">ACON(eventid)</span></code> - TBA</a></p></li>
+<li><p><a class="reference internal" href="#acof-eventid-tba" id="id242"><code class="docutils literal notranslate"><span class="pre">ACOF(eventid)</span></code> - TBA</a></p></li>
+<li><p><a class="reference internal" href="#onacon-eventid-tba" id="id243"><code class="docutils literal notranslate"><span class="pre">ONACON(eventid)</span></code> - TBA</a></p></li>
+<li><p><a class="reference internal" href="#onacof-eventid-tba" id="id244"><code class="docutils literal notranslate"><span class="pre">ONACOF(eventid)</span></code> - TBA</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
 <section id="onlcc-sender-eventid-tba">
-<span id="onlcc"></span><h4><a class="toc-backref" href="#id237" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONLCC(sender,</span> <span class="pre">eventid)</span></code> - TBA</a><a class="headerlink" href="#onlcc-sender-eventid-tba" title="Link to this heading"></a></h4>
+<span id="onlcc"></span><h4><a class="toc-backref" href="#id238" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONLCC(sender,</span> <span class="pre">eventid)</span></code> - TBA</a><a class="headerlink" href="#onlcc-sender-eventid-tba" title="Link to this heading"></a></h4>
 <div class="admonition-todo admonition" id="id23">
 <p class="admonition-title">Todo</p>
 <p>LOW - EXRAIL doco - ONLCC</p>
@@ -3042,7 +3049,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="lcc-eventid-tba">
-<span id="lcc"></span><h4><a class="toc-backref" href="#id238" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">LCC(eventid)</span></code> - TBA</a><a class="headerlink" href="#lcc-eventid-tba" title="Link to this heading"></a></h4>
+<span id="lcc"></span><h4><a class="toc-backref" href="#id239" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">LCC(eventid)</span></code> - TBA</a><a class="headerlink" href="#lcc-eventid-tba" title="Link to this heading"></a></h4>
 <div class="admonition-todo admonition" id="id24">
 <p class="admonition-title">Todo</p>
 <p>LOW - EXRAIL doco - LCC</p>
@@ -3051,7 +3058,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="lccx-senderid-eventid-tba">
-<span id="lccx"></span><h4><a class="toc-backref" href="#id239" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">LCCX(senderid,eventid)</span></code> - TBA</a><a class="headerlink" href="#lccx-senderid-eventid-tba" title="Link to this heading"></a></h4>
+<span id="lccx"></span><h4><a class="toc-backref" href="#id240" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">LCCX(senderid,eventid)</span></code> - TBA</a><a class="headerlink" href="#lccx-senderid-eventid-tba" title="Link to this heading"></a></h4>
 <div class="admonition-todo admonition" id="id25">
 <p class="admonition-title">Todo</p>
 <p>LOW - EXRAIL doco - LCCX</p>
@@ -3060,7 +3067,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="acon-eventid-tba">
-<span id="acon"></span><h4><a class="toc-backref" href="#id240" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ACON(eventid)</span></code> - TBA</a><a class="headerlink" href="#acon-eventid-tba" title="Link to this heading"></a></h4>
+<span id="acon"></span><h4><a class="toc-backref" href="#id241" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ACON(eventid)</span></code> - TBA</a><a class="headerlink" href="#acon-eventid-tba" title="Link to this heading"></a></h4>
 <div class="admonition-todo admonition" id="id26">
 <p class="admonition-title">Todo</p>
 <p>LOW - EXRAIL doco - ACON</p>
@@ -3069,7 +3076,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="acof-eventid-tba">
-<span id="acof"></span><h4><a class="toc-backref" href="#id241" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ACOF(eventid)</span></code> - TBA</a><a class="headerlink" href="#acof-eventid-tba" title="Link to this heading"></a></h4>
+<span id="acof"></span><h4><a class="toc-backref" href="#id242" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ACOF(eventid)</span></code> - TBA</a><a class="headerlink" href="#acof-eventid-tba" title="Link to this heading"></a></h4>
 <div class="admonition-todo admonition" id="id27">
 <p class="admonition-title">Todo</p>
 <p>LOW - EXRAIL doco - ACOF</p>
@@ -3078,7 +3085,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="onacon-eventid-tba">
-<span id="onacon"></span><h4><a class="toc-backref" href="#id242" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONACON(eventid)</span></code> - TBA</a><a class="headerlink" href="#onacon-eventid-tba" title="Link to this heading"></a></h4>
+<span id="onacon"></span><h4><a class="toc-backref" href="#id243" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONACON(eventid)</span></code> - TBA</a><a class="headerlink" href="#onacon-eventid-tba" title="Link to this heading"></a></h4>
 <div class="admonition-todo admonition" id="id28">
 <p class="admonition-title">Todo</p>
 <p>LOW - EXRAIL doco - OACON</p>
@@ -3087,7 +3094,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="onacof-eventid-tba">
-<span id="onacof"></span><h4><a class="toc-backref" href="#id243" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONACOF(eventid)</span></code> - TBA</a><a class="headerlink" href="#onacof-eventid-tba" title="Link to this heading"></a></h4>
+<span id="onacof"></span><h4><a class="toc-backref" href="#id244" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONACOF(eventid)</span></code> - TBA</a><a class="headerlink" href="#onacof-eventid-tba" title="Link to this heading"></a></h4>
 <div class="admonition-todo admonition" id="id29">
 <p class="admonition-title">Todo</p>
 <p>LOW - EXRAIL doco - ONACOF</p>
@@ -3163,7 +3170,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f724b768400>
+    <jinja2.runtime.BlockReference object at 0x7ff8df5bc9d0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

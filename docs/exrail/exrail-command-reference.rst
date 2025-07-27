@@ -373,6 +373,7 @@ Alphabetic Command List
   * :ref:`ENDEXRAIL`
   * :ref:`ENDIF`
   * :ref:`ENDTASK`
+  * :ref:`EXRAIL`
   * :ref:`ESTOP`
   * :ref:`EXTT_TURNTABLE`
   * :ref:`FADE`
@@ -3482,13 +3483,19 @@ Disconnect PROG output from MAIN output.
 
 .. _endexrail:
 
-``ENDEXRAIL`` - TBA
+``ENDEXRAIL`` - Deprecated - Do not use
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. todo: LOW - EXRAIL doco - ENDEXRAIL
+Deprecated - Do not use
 
-*Parameters:* |BR|
-|_| > none
+|hr-dashed|
+
+.. _exrail:
+
+``EXRAIL`` - Deprecated - Do not use
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Deprecated - Do not use
 
 |hr-dashed|
 

@@ -222,7 +222,7 @@
       -  
 
     * -  :doc:`WiThrottle <software/withrottle>`
-      -  Free / Paid
+      -  Free [#t7]_ / Paid
       -  WiFi
       -  WiT
       -  App
@@ -250,7 +250,7 @@
       -  X
 
     * -  :doc:`DCC Commander <software/dcc-commander>`
-      -  Free [#t7]_ / Paid
+      -  Free [#t8]_ / Paid
       -  WiFi
       -  Native
       -  App
@@ -440,5 +440,5 @@
 .. [#t4] Note: The Android throttle apps listed above can be made to made to run on Windows PCs. See :doc:`Running Android apps on Microsoft Windows <software/android-apps-on-windows>`.
 .. [#t5] JMRI is a suite of applications.  This table only refers the Web based throttle component of JMRI.  To use the Web throttle you will need to be running the JMRI suite of applications on a PC (Windows, OSX or Linux) or RPi. e.g. **Decoder Pro** or **Panel Pro**.
 .. [#t6] Connecting JMRI to an EX-CommandStation over WiFi works, but is not recommended and is not supported 
-.. [#t7] Free version is advertisement supported and time limited. Paid version is ad-free.
-
+.. [#t7] Free version is functionally limited. (No track power control, only one throttle and no consists/MUs.)
+.. [#t8] Free version is advertisement supported and time limited.

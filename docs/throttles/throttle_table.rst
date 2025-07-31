@@ -249,6 +249,20 @@
       -  
       -  X
 
+    * -  :doc:`DCC Commander <software/dcc-commander>`
+      -  Free / Paid
+      -  WiFi
+      -  Native
+      -  App
+      -  
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  X
+
     * -  :doc:`WiThrottle Cab <software/withrottle-cab>`
       -  Paid
       -  WiFi

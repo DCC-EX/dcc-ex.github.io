@@ -62,7 +62,7 @@ Apple iOS (Phones and Tablets)
 - :doc:`DCC-EX CAB (iOS and Android) <software/dccex-cab>`
 - :doc:`WiThrottle Cab (iOS and Android) <software/withrottle-cab>`
 - :doc:`WiThrottle (iOS) <software/withrottle>`
-
+- :doc:`DCC Commander (iOS) <software/dcc-commander>`
 
 Dedicated Hardware
 ------------------
@@ -116,8 +116,9 @@ DCC-EX (DCC-EX Native Commands)
 - :doc:`TrainNavigator (iOS) <software/trainnavigator>`
 - :doc:`JMRI (Win, macOS, Linux) <software/jmri>`
 - :doc:`EX-T3-WiFi (T3 = Tactile Touch Throttle) (Physical) </throttles/hardware/ex-t3-wifi>`
-- :doc:`miniThrottle (Physical) <hardware/minithrottle>` |BR| |BR|
-- :doc:`DccExController (Physical) <hardware/dccexcontroller>`  - Support Discontinued
+- :doc:`miniThrottle (Physical) <hardware/minithrottle>`
+- :doc:`DCC Commander (iOS) <software/dcc-commander>` |BR| |BR|
+- :doc:`DccExController (Physical) <hardware/dccexcontroller>`  - Support Discontinued |BR| |BR|
 - See also :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
 WiThrottle Protocol Based Throttles

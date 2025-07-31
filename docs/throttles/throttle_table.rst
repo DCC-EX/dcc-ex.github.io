@@ -403,6 +403,20 @@
       -  
       -  
 
+    * -  `ESU Mobile Control Pro <https://www.esu.eu/en/products/digital-control/mobile-control-pro/>`_
+      -  Paid
+      -  WiFi
+      -  WiT / Native [#t9]_
+      -  Device
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  X [#t9]_
+
     * -  LocoNet-Compatible Throttles
       -  Free / Paid
       -  WiFi
@@ -423,7 +437,7 @@
   BT = Bluetooth |BRxa|
   Free = No additional cost for full functionality. |BRxa|
   Paid = Payment required for any usage. |BRxa|
-  Free/Paid = Both Free and Paid versions are available. The free version has limited features. |BRxa|
+  Free/Paid = Both Free and Paid versions are available. The free version usually has limited features. |BRxa|
   Native = Uses the DCC-EX Native protocol/commands. [#t1]_ |BRxa|
   WiT = Uses the WiThrottle protocol. [#t1]_ |BRxa|
   Web = Requires the use of a Web Browser. |BRxa|
@@ -442,3 +456,4 @@
 .. [#t6] Connecting JMRI to an EX-CommandStation over WiFi works, but is not recommended and is not supported 
 .. [#t7] Free version is functionally limited. (No track power control, only one throttle and no consists/MUs.)
 .. [#t8] Free version is advertisement supported and time limited.
+.. [#t9] ESU Mobile Control Pro is an Android device with additional hardware, so can also run the :doc:`Engine Driver <software/engine-driver>` app. As such it can use the DCC-EX Native protocol when connected to a DCC-EX Command Station. It uses the WiThrottle protocol when connected to a WiThrottle server. When using Engine Driver and the Native Protocol it is capable of CV programming.

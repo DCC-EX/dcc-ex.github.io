@@ -70,6 +70,7 @@ Dedicated Hardware
 - :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
 - :doc:`EX-T3-WiFi (T3 = Tactile Touch Throttle) (physical) </throttles/hardware/ex-t3-wifi>`
 - `HandCab (Physical) <https://github.com/1fatgmc/HandCab/tree/main>`_
+- `ESU Mobile Control Pro (Physical) <https://www.esu.eu/en/products/digital-control/mobile-control-pro/>`_
 - :doc:`LoDi-Con WiFi Throttle </throttles/hardware/lodi-con-wifi-throttle>`
 - :doc:`miniThrottle (Physical) <hardware/minithrottle>`
 - :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
@@ -80,12 +81,12 @@ Dedicated Hardware
 Personal Computers
 ------------------
 
-- :doc:`EX-WebThrottle (Web Browser) </ex-webthrottle/index>` *recommended*
+- :doc:`EX-WebThrottle (Windows, MacOS, Linux) </ex-webthrottle/index>` *recommended*
 - :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
-- :doc:`JMRI (Windows, iOS, Linux) <software/jmri>`
+- :doc:`JMRI (Windows, MacOS, Linux) <software/jmri>`
 - :doc:`Railroad Automation <software/railroad-automation>` *- Requires IoTT Red Hat*
-- :doc:`Train Throttle <software/train-throttle>`
-- :doc:`ThrottleCard (M1 Mac) <software/throttlecard>` *- Requires WiThrottle server*
+- :doc:`Train Throttle (Windows, iOS) <software/train-throttle>`
+- :doc:`ThrottleCard (MacOS, iOS) <software/throttlecard>` *- Requires WiThrottle server*
 
 Note: The Android throttle apps listed above can be made to made to run on Windows PCs. See :doc:`Running Android apps on Microsoft Windows <software/android-apps-on-windows>`.
 
@@ -116,9 +117,9 @@ DCC-EX (DCC-EX Native Commands)
 - :doc:`TrainNavigator (iOS) <software/trainnavigator>`
 - :doc:`JMRI (Win, macOS, Linux) <software/jmri>`
 - :doc:`EX-T3-WiFi (T3 = Tactile Touch Throttle) (Physical) </throttles/hardware/ex-t3-wifi>`
-- :doc:`miniThrottle (Physical) <hardware/minithrottle>`
+- :doc:`miniThrottle (Physical DIY) <hardware/minithrottle>`
 - :doc:`DCC Commander (iOS) <software/dcc-commander>` |BR| |BR|
-- :doc:`DccExController (Physical) <hardware/dccexcontroller>`  - Support Discontinued |BR| |BR|
+- :doc:`DccExController (Physical DIY) <hardware/dccexcontroller>`  - Support Discontinued |BR| |BR|
 - See also :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
 WiThrottle Protocol Based Throttles
@@ -133,23 +134,24 @@ WiThrottle Protocol Based Throttles
 - :doc:`Train Driver (iOS) <software/train-driver>`
 - :doc:`ThrottleCard (iOS) <software/throttlecard>` |BR| |BR|
 - :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
-- `HandCab (Physical) <https://github.com/1fatgmc/HandCab/tree/main>`_
+- `HandCab (Physical DIY) <https://github.com/1fatgmc/HandCab/tree/main>`_
+- `ESU Mobile Control Pro (Physical) <https://www.esu.eu/en/products/digital-control/mobile-control-pro/>`_
 - :doc:`LoDi-Con WiFi Throttle (Physical) </throttles/hardware/lodi-con-wifi-throttle>`
-- :doc:`miniThrottle (Physical) <hardware/minithrottle>`
-- :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
-- :doc:`WiTcontroller (Physical) <hardware/witcontroller>`
+- :doc:`miniThrottle (Physical DIY) <hardware/minithrottle>`
+- :doc:`TCS UWT-50 (Physical DIY) <hardware/uwt50>`
+- :doc:`WiTcontroller (Physical DIY) <hardware/witcontroller>`
 
 USB Based Throttles
 -------------------------------
 
-- :doc:`EX-WebThrottle </ex-webthrottle/index>`
-- :doc:`myBluePillThrottle <hardware/mybluepillthrottle>` |BR| |BR|
+- :doc:`EX-WebThrottle (Windows, MacOS, Linux) </ex-webthrottle/index>`
+- :doc:`myBluePillThrottle (Physical DIY) <hardware/mybluepillthrottle>` |BR| |BR|
 - Also see: :doc:`connect_wifi_throttle_via_usb`
 
 JMRI Web Server Based Throttles
 -------------------------------
 
-- :doc:`DigiTrainsPro (Android) <software/digitrainspro>`
+- :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>`
 
 ----
 

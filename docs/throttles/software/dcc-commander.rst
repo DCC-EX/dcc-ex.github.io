@@ -12,7 +12,7 @@ DCC Commander
    :scale: 30%
    :align: left
 
-Control your model railroad via a DCC-EX Command Station* using the DCC Commander App on your iOS device.
+Control your model railroad via a DCC-EX EX-CommandStation using the DCC Commander App on your iOS device.
 
 - Control up to 10 throttles on a single screen in landscape mode
 - Control a single throttle in portrait mode (just rotate your device)
@@ -22,6 +22,9 @@ Control your model railroad via a DCC-EX Command Station* using the DCC Commande
 - Configurable product settings to allow customization of software momentum, visible throttle count, and other application features
 - Help page to simplify usage of DCC Commander
 - Free, full-featured product, available to use for 3 hours after watching an advertisement. Alternately, you can subscribe (either Monthly or Annually) to remove advertisements
+
+You can find it in the App Store: `DCC Commander <https://apps.apple.com/us/app/dcc-commander/id6498150761>`_ |EXTERNAL-LINK|
+
 
 DCC Commander Subscription:
 

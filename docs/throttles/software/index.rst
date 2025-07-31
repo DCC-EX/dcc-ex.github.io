@@ -74,5 +74,6 @@ Note: The Android throttle apps listed above can be made to made to run on Windo
     TrainNavigator (iOS) <trainnavigator>
     Train Throttle (Windows, Mac, iOS) <train-throttle>
     WiThrottle (iOS) <withrottle>
+    DCC Commander (iOS) <dcc-commander>
     Android Apps on Windows <android-apps-on-windows>
  

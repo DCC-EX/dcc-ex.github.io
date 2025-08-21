@@ -375,7 +375,7 @@ For example, the ``ROUTE()`` for the first position in our tuning example might 
   ROUTE(100, "Roundhouse Stall 1")
     RESERVE(255)
     ROTATE(1, 1, Turn)
-    WATIFORTT(1)
+    WAITFORTT(1)
     FREE(255)
   DONE
 

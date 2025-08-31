@@ -13,7 +13,7 @@ EX-CSB1 as a DCC Booster (Booster Mode)
 
 The |EX-CSB1| can be configured as a DCC Booster.  As a booster it can take input from any DCC Command Station, not just an |EX-CS|, to provide additional two power districts to your layout.  With the addition of a |EX-MS|, it can provide up to 4 power districts.
 
-To configure the |EX-CSB1| as a DCC Booster, you will need to install the |EX-CS| software on it with the addition of the following commands to the ``myConfiguration.h`` file:
+To configure the |EX-CSB1| as a DCC Booster, you will need to install the |EX-CS| software on it with the addition of the following commands to the ``myAutomation.h`` file:
 
   .. code-block::
 
@@ -22,7 +22,7 @@ To configure the |EX-CSB1| as a DCC Booster, you will need to install the |EX-CS
       SET_TRACK(B,"BOOST")
       DONE
 
-If you are using an |EX-CSB1| with a |EX-MS| as your booster you will need to add the following commands to the myConfiguration.h file:
+If you are using an |EX-CSB1| with a |EX-MS| as your booster you will need to add the following commands to the myAutomation.h file:
 
   .. code-block::
 

@@ -948,8 +948,8 @@ See example in ROUTE_CAPTION.
 
 .. _route_inactive:
 
-``ROUTE_INACTIVE( route_id, caption )`` - Deactivate a Route
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``ROUTE_INACTIVE( route_id )`` - Deactivate a Route
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
 

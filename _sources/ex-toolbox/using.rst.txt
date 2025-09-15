@@ -293,6 +293,45 @@ Notes:
 
 ----
 
+Speedometer
+===========
+
+.. figure:: /_static/images/ex-toolbox/speedometer.png
+   :alt: Speedometer Screen
+   :scale: 40%
+   :align: right
+
+   EX-Toolbox Speedometer Screen
+
+The Speedometer allows you to calulate the scale speed of a loco as it passes two defined sensors.  The sensors can be of any type, but must be configured in your |EX-CS| and be a known (any) distance apart.
+
+1. Define you sensors in the |EX-CS| configuration, and note their numbers.
+2. Measure the distance between the sensors.
+3. Open the Speedometer screen in |EX-TB|.
+4. Enter the two sensor numbers.
+5. Enter the distance between the sensors, and select the Scale.
+6. Put the loco you want to measure on the track before the first sensor.
+7. Start the loco moving.
+
+The Speedometer will display the speed as the loco after it passes the second sensor.
+
+The speed and times will automatically reset after 10 seconds, but you can overide this by clicking the :guilabel:`Start` button.  Or you can change the delay period.
+
+To check the speed in the opposite direction, simply reverse the sensor numbers, using the :guilabel:`Swap` button.
+
+The Speedometer will remember the last used sensors and distance between sessions.
+
+Example configuration of two IR sensors in ``mySetup.h``
+
+.. code-block:: cpp
+
+   SETUP("<S 22 22 1>");  // Infrared Or Optical Sensor {S22} on pin 22
+   SETUP("<S 23 23 1>");  // Infrared Or Optical Sensor {S23} on pin 23
+
+|force-break|
+
+----
+
 Loco Status
 ===========
 

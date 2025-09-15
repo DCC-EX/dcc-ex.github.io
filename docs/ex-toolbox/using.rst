@@ -314,8 +314,18 @@ The Speedometer allows you to calulate the scale speed of a loco as it passes tw
 7. Start the loco moving.
 The Speedometer will display the speed as the loco after it passes the second sensor.
 
+The speed and times will automatically reset after 10 seconds, but you can overide this by clicking the :guilabel:`Start` button.  Or you can change the delay period.
+
 To check the speed in the opposite direction, simply reverse the sensor numbers, using the :guilabel:`Swap` button.
 
+The Speedometer will remember the last used sensors and distance between sessions.
+
+Example configuration of two IR sensors in ``mySetup.h``
+
+.. code-block:: cpp
+
+   SETUP("<S 22 22 1>");  // Infrared Or Optical Sensor {S22} on pin 22
+   SETUP("<S 23 23 1>");  // Infrared Or Optical Sensor {S23} on pin 23
 
 |force-break|
 

@@ -312,6 +312,7 @@ The Speedometer allows you to calulate the scale speed of a loco as it passes tw
 5. Enter the distance between the sensors, and select the Scale.
 6. Put the loco you want to measure on the track before the first sensor.
 7. Start the loco moving.
+
 The Speedometer will display the speed as the loco after it passes the second sensor.
 
 The speed and times will automatically reset after 10 seconds, but you can overide this by clicking the :guilabel:`Start` button.  Or you can change the delay period.

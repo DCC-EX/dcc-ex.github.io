@@ -40,6 +40,10 @@ The process for creating these objects consists of:
 
    You must avoid using these characters in all descriptions: ``<``, ``>``, ``"`` as these are part of the |DCC-EX| protocol and are likely to prevent descriptions showing up in |JMRi| and other throttle software/clients.
 
+.. warning::
+
+   Do not waste your time asking ChatGPT, Copilot or Gemini to create EXRAIL scripts.   They do not understand EXRAIL and will get it wrong 100% of the time.
+
 ----
 
 Adding a Roster

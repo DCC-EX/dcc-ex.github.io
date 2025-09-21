@@ -19,6 +19,10 @@ Tips and Techniques
 Below are some tips and techniques you can implement to get the most out of |EX-R|.
 
 
+.. warning::
+
+   Do not waste your time asking ChatGPT, Copilot or Gemini to create EXRAIL scripts.   They do not understand EXRAIL and will get it wrong 100% of the time.
+
 Comments
 ========
 

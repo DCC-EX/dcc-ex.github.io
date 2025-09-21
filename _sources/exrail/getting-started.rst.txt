@@ -22,6 +22,10 @@ Before You start, generally you will need to have created some Key Objects (e.g.
 
 For a full list of keywords, see :doc:`/exrail/exrail-command-reference`.  Only a subset are described on this page.
 
+.. warning::
+
+   Do not waste your time asking ChatGPT, Copilot or Gemini to create EXRAIL scripts.   They do not understand EXRAIL and will get it wrong 100% of the time.
+
 Types of Sequence
 =================
 

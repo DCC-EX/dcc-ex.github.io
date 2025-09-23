@@ -176,7 +176,7 @@ redirects = {
     "developer-reference/api": "../reference/developers/api.html",
     "developer-reference/index": "../reference/developers/index.html",
     "developer-reference/tech-reference": "../reference/developers/index.html",
-    "donate": "/about/contributing/donate.html",
+    "donate": "https://dcc-ex.com/about/contributing/donate.html",
     "download/commandstation": "ex-commandstation.html",
     "download/dcc-inspector-ex": "ex-dccinspector.html",
     "download/documents": "index.html",

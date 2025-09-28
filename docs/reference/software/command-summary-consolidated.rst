@@ -1090,10 +1090,11 @@ Sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
-  |_| Repeat for each defined sensor: ``<q id>`` |BR|
+  |_| Repeated for each defined sensor: ``<q id>`` or ``<Q id>``|BR| 
   |_|  |BR|
   |_| e.g. |BR|
-  |_| Response (successful) Repeat for each defined sensor: ``<q id>`` |BR|
+  |_| Response (successful) Repeated for each inactive defined sensor: ``<q id>`` |BR|
+  |_| Response (successful) Repeated for each active defined sensor: ``<Q id>`` |BR|
   |_| Response (fail): N/A
 
 |hr-dashed|

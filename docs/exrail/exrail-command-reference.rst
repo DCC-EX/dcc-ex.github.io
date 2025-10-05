@@ -282,6 +282,8 @@ Refer to the LATCH/UNLATCH commands in the :ref:`exrail/exrail-command-reference
 Aliases
 -------
 
+.. _ALIAS:
+
 ``ALIAS( name[, value] )`` - Assigns name to a value
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -342,6 +344,7 @@ Alphabetic Command List
   * :ref:`ACTIVATEL`
   * :ref:`AFTER`
   * :ref:`AFTEROVERLOAD`
+  * :ref:`ALIAS`
   * :ref:`AMBER`
   * :ref:`ANOUT`
   * :ref:`ASPECT`

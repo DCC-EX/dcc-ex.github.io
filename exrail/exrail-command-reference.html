@@ -923,7 +923,7 @@
 <section id="aliases">
 <h3><a class="toc-backref" href="#id36" role="doc-backlink">Aliases</a><a class="headerlink" href="#aliases" title="Link to this heading"></a></h3>
 <section id="alias-name-value-assigns-name-to-a-value">
-<h4><code class="docutils literal notranslate"><span class="pre">ALIAS(</span> <span class="pre">name[,</span> <span class="pre">value]</span> <span class="pre">)</span></code> - Assigns name to a value<a class="headerlink" href="#alias-name-value-assigns-name-to-a-value" title="Link to this heading"></a></h4>
+<span id="alias"></span><h4><code class="docutils literal notranslate"><span class="pre">ALIAS(</span> <span class="pre">name[,</span> <span class="pre">value]</span> <span class="pre">)</span></code> - Assigns name to a value<a class="headerlink" href="#alias-name-value-assigns-name-to-a-value" title="Link to this heading"></a></h4>
 <p>Aliases assigns names to values. They can go anywhere in the sequence. If a value is not assigned, a unique ID will be assigned based on the alias “name” text.</p>
 <p>This is a simple substitution that lets you have readable names for things in your sequence. For example, instead of having to remember the VPin a turnout/point is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.</p>
 <p>If you simply need a unique identifier for an object used internally to the sequence, such as a turnout/point, route, automation, or sequence, you don’t even need to provide an ID, <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> will generate one automatically when you omit the value parameter. We recommend using this for all your routes, sequences, and other internal objects so you don’t have to try to remember or keep a list of numbers you’ve used. This also prevents you from assigning the same number to more than one object.</p>
@@ -968,6 +968,7 @@
 <li><p><a class="reference internal" href="#activatel"><span class="std std-ref">ACTIVATEL( linear ) - Sends a DCC accessory packet with value 1 to a linear address</span></a></p></li>
 <li><p><a class="reference internal" href="#after"><span class="std std-ref">AFTER( vpin [,debounce_time] ) - Halt command execution until the sensor is cleared</span></a></p></li>
 <li><p><a class="reference internal" href="#afteroverload"><span class="std std-ref">AFTEROVERLOAD( track ) - Event handler for when an Overload clears</span></a></p></li>
+<li><p><a class="reference internal" href="#alias"><span class="std std-ref">ALIAS( name[, value] ) - Assigns name to a value</span></a></p></li>
 <li><p><a class="reference internal" href="#amber"><span class="std std-ref">AMBER( signal_id ) - Set a defined signal to Amber</span></a></p></li>
 <li><p><a class="reference internal" href="#anout"><span class="std std-ref">ANOUT( vpin, value, param1, param2) - Analog output ??</span></a></p></li>
 <li><p><a class="reference internal" href="#aspect"><span class="std std-ref">ASPECT( address, aspect ) - Command for DCC Extended Accessories</span></a></p></li>
@@ -3175,7 +3176,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f63bb0c9ba0>
+    <jinja2.runtime.BlockReference object at 0x7fbeb2a38880>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

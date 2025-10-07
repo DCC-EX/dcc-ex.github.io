@@ -19,7 +19,7 @@ In the United States serving USA, Canada, \& Mexico
 
 |HR-DASHEDxa|
 
-.. image:: /_static/images/icons/flag_can60px.jpg
+.. image:: /_static/images/icons/flag_can60px.png
    :alt: Canada Flag
    :scale: 70%
    :align: left

@@ -19,6 +19,21 @@ In the United States serving USA, Canada, \& Mexico
 
 |HR-DASHEDxa|
 
+.. image:: /_static/images/icons/flag_can60px.png
+   :alt: Canada Flag
+   :scale: 70%
+   :align: left
+
+In the Canada serving Canada, \& The US
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. rst-class:: clearer
+
+
+* `Narrow Gauge Model Railway Supply Canada <https://ngmrsc.ca/>`_ |EXTERNAL-LINKxa|
+
+|HR-DASHEDxa|
+
 .. image:: /_static/images/icons/flag_uk60px.jpg
    :alt: UK Flag
    :scale: 70%

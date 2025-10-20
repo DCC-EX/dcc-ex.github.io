@@ -51,7 +51,7 @@ For a video on how to do this, click below: `Setting Up Your Command Station <ht
 
 .. note::
 
-   |standard Motor Driver| Only!  This is **not required** if you are using the **EX-MotorShield8874**.
+   |standard Motor Driver| Only!  This is **not required** if you are using the |EX-MS|.
 
 .. warning:: 
    :class: warning-float-right
@@ -60,7 +60,7 @@ For a video on how to do this, click below: `Setting Up Your Command Station <ht
    
    *If you do not cut this trace* or bend out the Vin, you could damage or destroy the Arduino if you apply more than 12V to the |motor shield|. |BR| In the same way, if you don't bypass Vin and use the 2 power supplies as recommended, they would be connected to each other which could also cause damage.
 
-   Note: This is **not required** if you are using the **EX-MotorShield8874**.
+   Note: This is **not required** if you are using the |EX-MS|.
 
 We recommend you use two separate power supplies (or one power supply that can deliver two different voltages). One for the Arduino Mega, and the other for the |motor driver| to power your tracks. 
 
@@ -78,7 +78,7 @@ Cutting the Trace
 
 .. note::
 
-   |standard Motor Driver| Only!  This is **not required** if you are using the **EX-MotorShield8874**.
+   |standard Motor Driver| Only!  This is **not required** if you are using the |EX-MS|.
 
 Standard Method
 ^^^^^^^^^^^^^^^

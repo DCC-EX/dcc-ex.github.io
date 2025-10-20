@@ -49,7 +49,9 @@ For a video on how to do this, click below: `Setting Up Your Command Station <ht
 1. Disable Power Sharing - Arduino to Motor Driver
 ==================================================
 
-|standard Motor Driver| Only!
+.. note::
+
+   |standard Motor Driver| Only!  This is **not required** if you are using the **EX-MotorShield8874**.
 
 .. warning:: 
    :class: warning-float-right
@@ -74,7 +76,9 @@ You will need to turn the |motor driver| board upside down and do ONE of the fol
 Cutting the Trace
 -----------------
 
-|standard Motor Driver| Only!  This is **not required** if you are using the **EX-MotorShield8874**.
+.. note::
+
+   |standard Motor Driver| Only!  This is **not required** if you are using the **EX-MotorShield8874**.
 
 Standard Method
 ^^^^^^^^^^^^^^^

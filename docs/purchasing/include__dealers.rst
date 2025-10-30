@@ -24,7 +24,7 @@ In the United States serving USA, Canada, \& Mexico
    :scale: 70%
    :align: left
 
-In Canada serving Canada, \& The US
+In Canada serving Canada and the United States
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. rst-class:: clearer

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2025-10-30T18:02:20.808548+00:00</updated>
+  <updated>2025-10-30T18:56:51.862556+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.12">ABlog</generator>
@@ -248,8 +248,8 @@
 &lt;p&gt;&lt;hr class="hr-dashed" /&gt;&lt;/p&gt;
 &lt;img alt="Canada Flag" class="align-left" src="https://dcc-ex.com/_images/flag_can60px.png" style="width: 42.0px; height: 21.0px;" /&gt;
 &lt;/section&gt;
-&lt;section id="in-canada-serving-canada-the-us"&gt;
-&lt;h3&gt;In Canada serving Canada, &amp;amp; The US&lt;/h3&gt;
+&lt;section id="in-canada-serving-canada-and-the-united-states"&gt;
+&lt;h3&gt;In Canada serving Canada and the United States&lt;/h3&gt;
 &lt;ul class="clearer simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://ngmrsc.ca/"&gt;Narrow Gauge Model Railway Supply Canada&lt;/a&gt; &lt;img src="https://dcc-ex.com/_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;

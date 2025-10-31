@@ -1109,7 +1109,7 @@
 <li><p><a class="reference internal" href="#servo-signal"><span class="std std-ref">SERVO_SIGNAL( vpin, red_pos, amber_pos, green_pos ) - Define a servo based signal</span></a></p></li>
 <li><p><a class="reference internal" href="#servo-turnout"><span class="std std-ref">SERVO_TURNOUT( turnout_id, pin, active_angle, inactive_angle, profile [, &quot;description&quot;]|HIDDEN ) - Define a servo turnout/point</span></a></p></li>
 <li><p><a class="reference internal" href="#set"><span class="std std-ref">SET( vpin [,count] ) - Set an output pin HIGH</span></a></p></li>
-<li><p><a class="reference internal" href="#setfreq"><span class="std std-ref">SETFREQ( track, frequency ) - Enable a specific frequency</span></a></p></li>
+<li><p><a class="reference internal" href="#setfreq"><span class="std std-ref">SETFREQ( frequency ) - Enable a specific frequency</span></a></p></li>
 <li><p><a class="reference internal" href="#setloco"><span class="std std-ref">SETLOCO( loco ) - Set the loco address for this task</span></a></p></li>
 <li><p><a class="reference internal" href="#set-power"><span class="std std-ref">SET_POWER( track, ON/OFF ) - Enable/Disable power on a track</span></a></p></li>
 <li><p><a class="reference internal" href="#set-track"><span class="std std-ref">SET_TRACK( track, mode ) - Configures the mode of a track</span></a></p></li>
@@ -2638,7 +2638,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <ul class="simple">
 <li><p><a class="reference internal" href="#set-track-track-mode-configures-the-mode-of-a-track" id="id207"><code class="docutils literal notranslate"><span class="pre">SET_TRACK(</span> <span class="pre">track,</span> <span class="pre">mode</span> <span class="pre">)</span></code> - Configures the mode of a track</a></p></li>
 <li><p><a class="reference internal" href="#set-power-track-on-off-enable-disable-power-on-a-track" id="id208"><code class="docutils literal notranslate"><span class="pre">SET_POWER(</span> <span class="pre">track,</span> <span class="pre">ON/OFF</span> <span class="pre">)</span></code> - Enable/Disable power on a track</a></p></li>
-<li><p><a class="reference internal" href="#setfreq-track-frequency-enable-a-specific-frequency" id="id209"><code class="docutils literal notranslate"><span class="pre">SETFREQ(</span> <span class="pre">track,</span> <span class="pre">frequency</span> <span class="pre">)</span></code> - Enable a specific frequency</a></p></li>
+<li><p><a class="reference internal" href="#setfreq-frequency-enable-a-specific-frequency" id="id209"><code class="docutils literal notranslate"><span class="pre">SETFREQ(</span> <span class="pre">frequency</span> <span class="pre">)</span></code> - Enable a specific frequency</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
@@ -2736,14 +2736,27 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 </pre></div>
 </div>
 </details></section>
-<section id="setfreq-track-frequency-enable-a-specific-frequency">
-<span id="setfreq"></span><h4><a class="toc-backref" href="#id209" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SETFREQ(</span> <span class="pre">track,</span> <span class="pre">frequency</span> <span class="pre">)</span></code> - Enable a specific frequency</a><a class="headerlink" href="#setfreq-track-frequency-enable-a-specific-frequency" title="Link to this heading"></a></h4>
+<section id="setfreq-frequency-enable-a-specific-frequency">
+<span id="setfreq"></span><h4><a class="toc-backref" href="#id209" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SETFREQ(</span> <span class="pre">frequency</span> <span class="pre">)</span></code> - Enable a specific frequency</a><a class="headerlink" href="#setfreq-frequency-enable-a-specific-frequency" title="Link to this heading"></a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">DC</span></code> or <code class="docutils literal notranslate"><span class="pre">DC_INV</span></code> / <code class="docutils literal notranslate"><span class="pre">DCX</span></code> track settings only.</p>
-<p>Configures the frequency setting of the selected track.</p>
+<p>Configures the frequency setting of the selected loco.</p>
 <p>The settings achievable vary slightly depending upon the processor running the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> but broadly follow the following:</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>track</strong> - - The track to configure, valid options are A to H <br /> &gt; <strong>frequency</strong> - - The frequency to set for this track <br />   &gt;valid options are: <br />    &gt; <strong>0</strong> - Default - low frequency 131Hz <br />    &gt; <strong>1</strong> - Mid frequency - 490Hz <br />    &gt; <strong>2</strong> - High frequency - 3400Hz <br />    &gt; <strong>3</strong> - Supersonic - 62500Hz <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>frequency</strong> - - The frequency to set for the current loco <br />   &gt;valid options are: <br />    &gt; <strong>0</strong> - Default - low frequency 131Hz <br />    &gt; <strong>1</strong> - Mid frequency - 490Hz <br />    &gt; <strong>2</strong> - High frequency - 3400Hz <br />    &gt; <strong>3</strong> - Supersonic - 62500Hz <br /></p>
 <p>Trial and error will be needed for specific locos that do not respond well to the defaults (low) frequency setting.</p>
-<p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
+<details class="summary-for-example-click-to-show">
+<summary>For example: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Set track A to be a DC track with loco ID 1 and power on, and track B to be a DCC programming track</span>
+<span class="n">ROUTE</span><span class="p">(</span><span class="mi">504</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DC loco 10 to DCFREQ 1&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="n">SETFREQ</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">DONE</span>
+<span class="n">ROUTE</span><span class="p">(</span><span class="mi">505</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DC loco 10 to DCFREQ 2&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="n">SETFREQ</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">DONE</span>
+<span class="n">ROUTE</span><span class="p">(</span><span class="mi">506</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DC loco 10 to DCFREQ 3&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="n">SETLOCO</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="n">SETFREQ</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">DONE</span>
+</pre></div>
+</div>
+</details><p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
 </section>
 <hr class="docutils" />
@@ -3176,7 +3189,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f320aa00f40>
+    <jinja2.runtime.BlockReference object at 0x7f7c3589f7f0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

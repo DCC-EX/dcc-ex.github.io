@@ -664,12 +664,15 @@
 <hr class="docutils" />
 <section id="disable-power-sharing-arduino-to-motor-driver">
 <h2><a class="toc-backref" href="#id13" role="doc-backlink">1. Disable Power Sharing - Arduino to Motor Driver</a><a class="headerlink" href="#disable-power-sharing-arduino-to-motor-driver" title="Link to this heading"></a></h2>
-<p><abbr title="Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.">Standard Motor Driver</abbr> Only!</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><abbr title="Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.">Standard Motor Driver</abbr> Only!  This is <strong>not required</strong> if you are using the <a href="../../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a>.</p>
+</div>
 <div class="warning-float-right admonition warning">
 <p class="admonition-title">Warning</p>
 <p>By default, the <abbr title="Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.">Standard Motor Driver</abbr> shares its power supply via the pins, with the power supply of the Arduino. <em>This can supply too much voltage to the Arduino.</em></p>
 <p><em>If you do not cut this trace</em> or bend out the Vin, you could damage or destroy the Arduino if you apply more than 12V to the <abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr>. <br /> In the same way, if you don’t bypass Vin and use the 2 power supplies as recommended, they would be connected to each other which could also cause damage.</p>
-<p>Note: This is <strong>not required</strong> if you are using the <strong>EX-MotorShield8874</strong>.</p>
+<p>Note: This is <strong>not required</strong> if you are using the <a href="../../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a>.</p>
 </div>
 <p>We recommend you use two separate power supplies (or one power supply that can deliver two different voltages). One for the Arduino Mega, and the other for the <abbr title="also referred to as a 'Motor Controller', 'Motor Shield' or 'Motor Board'">Motor Driver</abbr> to power your tracks.</p>
 <p>So <strong>BEFORE YOU BEGIN</strong> It is very important that isolate the power between the two devices.</p>
@@ -680,7 +683,10 @@
 </ul>
 <section class="clearer" id="cutting-the-trace">
 <h3>Cutting the Trace<a class="headerlink" href="#cutting-the-trace" title="Link to this heading"></a></h3>
-<p><abbr title="Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.">Standard Motor Driver</abbr> Only!  This is <strong>not required</strong> if you are using the <strong>EX-MotorShield8874</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><abbr title="Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.">Standard Motor Driver</abbr> Only!  This is <strong>not required</strong> if you are using the <a href="../../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a>.</p>
+</div>
 <section id="standard-method">
 <h4>Standard Method<a class="headerlink" href="#standard-method" title="Link to this heading"></a></h4>
 <p>Cut the trace indicated in the picture with a razor blade or x-acto knife. 2 or 3 firm scratches through the trace should do it. Do not cut too deep. Both a magnifier and an ohmmeter would be helpful here. The little vertical line in between the two solder pads is the scratch mark from where we cut through the little solder trace.</p>
@@ -897,7 +903,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f3221b6d960>
+    <jinja2.runtime.BlockReference object at 0x7f7c504e6800>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

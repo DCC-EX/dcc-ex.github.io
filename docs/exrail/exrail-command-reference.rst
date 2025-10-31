@@ -3091,18 +3091,17 @@ Configures the power setting of the selected track, refer also to :doc:`/trackma
 
 .. _setfreq:
 
-``SETFREQ( track, frequency )`` - Enable a specific frequency
+``SETFREQ( frequency )`` - Enable a specific frequency
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ``DC`` or ``DC_INV`` / ``DCX`` track settings only.
 
-Configures the frequency setting of the selected track.
+Configures the frequency setting of the selected loco.
 
 The settings achievable vary slightly depending upon the processor running the |EX-CS| but broadly follow the following:
 
 *Parameters:* |BR|
-|_| > **track** - - The track to configure, valid options are A to H |BR|
-|_| > **frequency** - - The frequency to set for this track |BR|
+|_| > **frequency** - - The frequency to set for the current loco |BR|
 |_| |_| |_|>valid options are: |BR|
 |_| |_| |_| |_|> **0** - Default - low frequency 131Hz |BR|
 |_| |_| |_| |_|> **1** - Mid frequency - 490Hz |BR|
@@ -3110,6 +3109,21 @@ The settings achievable vary slightly depending upon the processor running the |
 |_| |_| |_| |_|> **3** - Supersonic - 62500Hz |BR|
 
 Trial and error will be needed for specific locos that do not respond well to the defaults (low) frequency setting.
+
+.. collapse:: For example: (click to show)
+
+  .. code-block:: cpp
+
+    // Set track A to be a DC track with loco ID 1 and power on, and track B to be a DCC programming track
+    ROUTE(504, "DC loco 10 to DCFREQ 1")
+      SETLOCO(10) SETFREQ(1)
+    DONE
+    ROUTE(505, "DC loco 10 to DCFREQ 2")
+      SETLOCO(10) SETFREQ(2)
+    DONE
+    ROUTE(506, "DC loco 10 to DCFREQ 3")
+      SETLOCO(10) SETFREQ(3)
+    DONE
 
 |force-break|
 

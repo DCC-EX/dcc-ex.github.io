@@ -516,6 +516,28 @@ At startup of the |EX-CSB1| the OLED screen shows useful information.
 
 |HR-DASHED|
 
+Adding an EX-8874 Motor Shield
+------------------------------
+
+You can add an |EX-MS| to the |EX-CSB1| to increase the number of outputs from 2 to 4.
+
+Note that the |EX-I| does not have a simple way to configure the additional outputs so you will need to use the :doc:`TrackManager </trackmanager/index>` feature to configure the outputs as needed in `myAutomation.h` in the `Advanced Configuration` page of |EX-I|.
+
+For example, to always set outputs C and D to be the second and third DCC MAIN outputs, you would create a AUTOSTART sequence that sets both outputs C and D to DCC MAIN mode in `myAutomation.h`.
+
+.. code-block::
+
+   AUTOSTART 
+      SET_TRACK(A,MAIN)
+      SET_TRACK(B,PROG)
+      SET_TRACK(C,MAIN)
+      SET_TRACK(D,MAIN)
+      POWEROFF
+   DONE
+
+
+|HR-DASHED|
+
 DCC Operation
 ---------------
 

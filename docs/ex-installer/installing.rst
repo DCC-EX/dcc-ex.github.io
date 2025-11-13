@@ -397,6 +397,8 @@ You *must* select the motor driver type that you have installed.  The installer 
 
 These options are determined from the chosen version of |EX-CS|, and may include:
 
+* EX-CSB1
+* EX-CSB1_WITH_EX8874
 * STANDARD_MOTOR_SHIELD
 * EX8874_SHIELD
 * POLOLU_MOTOR_SHIELD
@@ -409,6 +411,24 @@ These options are determined from the chosen version of |EX-CS|, and may include
 * NANOEVERY_EXAMPLE
 
 This list will change over time as new motor drivers are added, and any older ones no longer supported are removed.
+
+.. note:: 
+
+   If you have added a an |EX-MS| to the |EX-CSB1|...
+
+   |EX-I| does not have a simple way to configure the additional outputs so you will need to use the :doc:`TrackManager </trackmanager/index>` feature to configure the outputs as needed in `myAutomation.h` in the `Advanced Configuration` page of |EX-I|.
+
+   For example, to always set outputs C and D to be the second and third DCC MAIN outputs, you would create a AUTOSTART sequence that sets both outputs C and D to DCC MAIN mode in `myAutomation.h`.
+
+   .. code-block::
+
+      AUTOSTART 
+         SET_TRACK(A,MAIN)
+         SET_TRACK(B,PROG)
+         SET_TRACK(C,MAIN)
+         SET_TRACK(D,MAIN)
+         POWEROFF
+      DONE
 
 |HR-DASHED|
 

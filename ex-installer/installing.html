@@ -1004,6 +1004,8 @@
 <p>You <em>must</em> select the motor driver type that you have installed.  The installer can’t detect this, so you must select the correct board or the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> may not work.</p>
 <p>These options are determined from the chosen version of <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>, and may include:</p>
 <ul class="simple">
+<li><p>EX-CSB1</p></li>
+<li><p>EX-CSB1_WITH_EX8874</p></li>
 <li><p>STANDARD_MOTOR_SHIELD</p></li>
 <li><p>EX8874_SHIELD</p></li>
 <li><p>POLOLU_MOTOR_SHIELD</p></li>
@@ -1016,6 +1018,21 @@
 <li><p>NANOEVERY_EXAMPLE</p></li>
 </ul>
 <p>This list will change over time as new motor drivers are added, and any older ones no longer supported are removed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you have added a an <a href="../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a> to the <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a>…</p>
+<p><a href="../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a> does not have a simple way to configure the additional outputs so you will need to use the <a class="reference internal" href="../trackmanager/index.html"><span class="doc">TrackManager</span></a> feature to configure the outputs as needed in <cite>myAutomation.h</cite> in the <cite>Advanced Configuration</cite> page of <a href="../ex-installer/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;Installer</span></a>.</p>
+<p>For example, to always set outputs C and D to be the second and third DCC MAIN outputs, you would create a AUTOSTART sequence that sets both outputs C and D to DCC MAIN mode in <cite>myAutomation.h</cite>.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>AUTOSTART
+   SET_TRACK(A,MAIN)
+   SET_TRACK(B,PROG)
+   SET_TRACK(C,MAIN)
+   SET_TRACK(D,MAIN)
+   POWEROFF
+DONE
+</pre></div>
+</div>
+</div>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="optional-display">
@@ -1303,7 +1320,7 @@ There are numerious phone apps that can help you determine which channels are be
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7c4e0ce1d0>
+    <jinja2.runtime.BlockReference object at 0x7f1eef8210c0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

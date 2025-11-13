@@ -18,8 +18,8 @@ To configure the |EX-CSB1| as a DCC Booster, you will need to install the |EX-CS
   .. code-block::
 
    AUTOSTART
-      SET_TRACK(A,"BOOST")
-      SET_TRACK(B,"BOOST")
+      SET_TRACK(A,BOOST)
+      SET_TRACK(B,BOOST)
       DONE
 
 If you are using an |EX-CSB1| with a |EX-MS| as your booster you will need to add the following commands to the myAutomation.h file:
@@ -27,10 +27,10 @@ If you are using an |EX-CSB1| with a |EX-MS| as your booster you will need to ad
   .. code-block::
 
    AUTOSTART
-      SET_TRACK(A,"BOOST")
-      SET_TRACK(B,"BOOST")
-      SET_TRACK(C,"BOOST")
-      SET_TRACK(D,"BOOST")
+      SET_TRACK(A,BOOST)
+      SET_TRACK(B,BOOST)
+      SET_TRACK(C,BOOST)
+      SET_TRACK(D,BOOST)
       DONE
 
 You also need to add these two lines to the ``config.h`` file:

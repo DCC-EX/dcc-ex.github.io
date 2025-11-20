@@ -20,7 +20,7 @@ In this and following examples, the previous example comments have been removed 
 
 By adding more sensors, the shuttle can be made more realistic, slowing down at station approach and making sounds.
 
-.. code-block:: cpp
+.. code-block::
 
     Dogbath                                                  Catflap
     ||============================================================||

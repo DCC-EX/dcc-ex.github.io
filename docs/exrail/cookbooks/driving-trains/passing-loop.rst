@@ -20,12 +20,12 @@ A passing loop shuttle involving two trains with a passing loop can be controlle
 
 If we have a layout like this:
 
-.. code-block:: cpp
+.. code-block::
 
               164           166
               |             |              Turnout2
-    Dogbath ||====[1]=====\====[4]===<<=========\
-                          \===[2]===>>==========\========[3]==========|| Catflap
+    Dogbath ||════[1]═════╦═══[4]═══<<═════════╗
+                          ╚═══[2]═══>>═════════╩═════════[3]══════════|| Catflap
                         Turnout1            |                      |
                                             167                    165
 

@@ -694,13 +694,6 @@
 <h1>NeoPixel Support<a class="headerlink" href="#neopixel-support" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../../../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../../../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../../support/index.html#contact-support-options" title="Request help or support"><img src="../../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
 <p>The IO_NeoPixel.h driver supports the adafruit neopixel seesaw board. It turns each pixel into an individual VPIN which can be given a colour and turned on or off using the the <code class="docutils literal notranslate"><span class="pre">NEOPIXEL</span></code> <a href="../../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> macro. EXRAIL SIGNALS can also drive a single pixel signal or multiple separate pixels.</p>
-<p>See also:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="neopixels.html">Setting neopixels</a></li>
-<li class="toctree-l1"><a class="reference internal" href="signals.html">Neopixel signals</a></li>
-</ul>
-</div>
 <section id="defining-the-hardware-driver">
 <h2>Defining the hardware driver<a class="headerlink" href="#defining-the-hardware-driver" title="Link to this heading"></a></h2>
 <p>Add a driver definition in myAutomation.h for each adafruit I<sup>2</sup>C driver.</p>
@@ -708,7 +701,7 @@
 </pre></div>
 </div>
 <p>Where mode is selected from the various pixel string types which have varying colour order or refresh frequency. For MOST strings this mode will be NEO_GRB but for others refer to the comments in IO_NeoPixel.h</p>
-<p>If omitted the node and <code class="docutils literal notranslate"><span class="pre">i2caddress</span></code> default to NEO_GRB, 0x60.</p>
+<p>If omitted the mode and <code class="docutils literal notranslate"><span class="pre">i2caddress</span></code> default to <code class="docutils literal notranslate"><span class="pre">NEO_GRB</span></code>, <code class="docutils literal notranslate"><span class="pre">0x60</span></code>.</p>
 <p>For example:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">HAL</span><span class="p">(</span><span class="n">NeoPixel</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
 </pre></div>
@@ -718,6 +711,14 @@
 </pre></div>
 </div>
 <p>This is a NeoPixel driver on i2c address 0x61.</p>
+<hr class="docutils" />
+<p>See also:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="neopixels.html">Setting neopixels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="signals.html">Neopixel signals</a></li>
+</ul>
+</div>
 </section>
 </section>
 
@@ -742,7 +743,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f4968c9cbb0>
+    <jinja2.runtime.BlockReference object at 0x7f8c3f074b50>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

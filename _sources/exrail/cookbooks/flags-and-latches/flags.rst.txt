@@ -17,7 +17,7 @@ Flags, Counters and Bitmaps
       :local:
 
 These are implemented by a software-only driver that mimics a set of VPINs that can be used for both digital and analogue values.  
-Unlike sensors and leds, these VPINs are both INPUT and OUTPUT  These can be used in many ways:
+Unlike sensors and leds, these VPINs are both **INPUT** and **OUTPUT**  These can be used in many ways:
 
 - As a simple digital flag to assist in inter-thread communication.
 - A flag or value that can be set from commands and tested in |EX-R|.(e.g. to stop a sequence)
@@ -40,7 +40,7 @@ e.g. ``HAL(Bitmap,1000,20)``  creates pins 1000..1019
 Use as flags
 =================
 
-When used as a digital flag, these pins can be changed or tested with the basic digital pin commands common to all VPINs.  SET, RESET, BLINK, IF, ONBUTTON, ONSENSOR and so forth. Serial commands operate in the same way.  
+When used as a digital flag, these pins can be changed or tested with the basic digital pin commands common to all VPINs.  ``SET``, ``RESET``, ``BLINK``, ``IF``, ``ONBUTTON``, ``ONSENSOR`` and so forth. Serial commands operate in the same way.  
 
 Use as counters
 =================

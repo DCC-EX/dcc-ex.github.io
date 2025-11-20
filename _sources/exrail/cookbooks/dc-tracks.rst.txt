@@ -24,7 +24,7 @@ Using a **ROUTE** or other sequence, you can set a track to the correct |DC| pol
       SETLOCO(123)
       SET_TRACK(A,DC)
       SET_POWER(A,ON)
-      DONE
+    DONE
 
 Modes ``DC`` or ``DCX`` are only different in that the polarity is reversed. This will be important if you have, for example, a double track mainline which is normally wired in opposite polarity so that 'forward' is clockwise on one track and anticlockwise on the other.
 To drive over a junction between the two, the 'to' track must be switched in polarity to match the 'from' track.
@@ -40,6 +40,6 @@ For example:
       SET_POWER(A,ON)
       SET_POWER(B,ON)
       THROW(6) // throw the crossover turnout(s)
-      DONE
+    DONE
 
-See also the `facing turnouts</exrail/cookbooks/turnouts/facing-turnouts>` cookbook.
+See also the `facing turnouts </exrail/cookbooks/turnouts/facing-turnouts>` cookbook.

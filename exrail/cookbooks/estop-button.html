@@ -693,10 +693,12 @@
 <section id="emergency-stop-button">
 <h1>Emergency stop button<a class="headerlink" href="#emergency-stop-button" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../support/index.html#contact-support-options" title="Request help or support"><img src="../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
-<p><code class="docutils literal notranslate"><span class="pre">ONBUTTON(173)</span></code> will start a sequence at this point when a button on vpin 173 is pressed.
-The <code class="docutils literal notranslate"><span class="pre">ESTOPALL</span></code> command will stop all locos and inform all throttles.
-The <code class="docutils literal notranslate"><span class="pre">DONE</span></code> command completes/terminates the process started by ONBUTTON.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">173</span><span class="p">)</span><span class="w"> </span><span class="n">ESTOPALL</span><span class="w"> </span><span class="n">DONE</span>
+<p><code class="docutils literal notranslate"><span class="pre">ONBUTTON(173)</span></code> will start a sequence at this point when a button on vpin 173 is pressed.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ESTOPALL</span></code> command will stop all locos and inform all throttles.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">DONE</span></code> command completes/terminates the process started by <code class="docutils literal notranslate"><span class="pre">ONBUTTON</span></code>.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ONBUTTON</span><span class="p">(</span><span class="mi">173</span><span class="p">)</span>
+<span class="w">  </span><span class="n">ESTOPALL</span>
+<span class="n">DONE</span>
 </pre></div>
 </div>
 </section>
@@ -722,7 +724,7 @@ The <code class="docutils literal notranslate"><span class="pre">DONE</span></co
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f4964d557b0>
+    <jinja2.runtime.BlockReference object at 0x7f8c3a792fb0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

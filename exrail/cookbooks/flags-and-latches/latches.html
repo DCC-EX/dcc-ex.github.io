@@ -700,14 +700,15 @@
 <p>Because of these limitations, it is recommended that you use the much simpler <a class="reference internal" href="flags.html"><span class="doc">Flags, Counters and Bitmaps</span></a> feature which provides virtual VPINs that can be set, reset and tested without the limitations of <code class="docutils literal notranslate"><span class="pre">LATCH</span></code>.</p>
 <p>For example:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">HAL</span><span class="p">(</span><span class="n">Bitmap</span><span class="p">,</span><span class="mi">800</span><span class="p">,</span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="c1">// create flags 800..815</span>
+
 <span class="n">ROUTE</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span><span class="s">&quot;Shed lights&quot;</span><span class="p">)</span>
-<span class="n">IF</span><span class="p">(</span><span class="mi">800</span><span class="p">)</span><span class="w">  </span><span class="c1">// is the light on?</span>
+<span class="w">  </span><span class="n">IF</span><span class="p">(</span><span class="mi">800</span><span class="p">)</span><span class="w">  </span><span class="c1">// is the light on?</span>
 <span class="w">   </span><span class="n">RESET</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span><span class="w">  </span><span class="c1">// lights off</span>
 <span class="w">   </span><span class="n">RESET</span><span class="p">(</span><span class="mi">800</span><span class="p">)</span>
-<span class="n">ELSE</span><span class="w">  </span><span class="c1">// light is off</span>
+<span class="w">  </span><span class="n">ELSE</span><span class="w">  </span><span class="c1">// light is off</span>
 <span class="w">   </span><span class="n">SET</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span><span class="w">  </span><span class="c1">// lights on</span>
 <span class="w">   </span><span class="n">SET</span><span class="p">(</span><span class="mi">800</span><span class="p">)</span>
-<span class="n">ENDIF</span>
+<span class="w">  </span><span class="n">ENDIF</span>
 <span class="n">DONE</span>
 </pre></div>
 </div>
@@ -735,7 +736,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f494f0097b0>
+    <jinja2.runtime.BlockReference object at 0x7f8c225de6b0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

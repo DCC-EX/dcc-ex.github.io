@@ -696,17 +696,19 @@
 <p><a class="reference external" href="../../../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../../../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../../support/index.html#contact-support-options" title="Request help or support"><img src="../../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
 <p><a href="../../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> contains a number of basic commands to drive locos and control their functions such as lights and sounds.</p>
 <p>Its important to understand that <a href="../../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> has “tasks”. A task may be driving loco 3 using sequence(555) while another task is driving loco 7 using a the same or a different sequence. That is why the driving commands below do not refer to the loco address, they take the address from the task executing the sequence.</p>
-<p>The loco associated with a task can be set with a <cite>SETLOCO(locoid)</cite> executed within the task, or it can be automatically assigned from a throttle using a hand-off to an [AUTOMATION](?AUTOMATION).</p>
-<p>All driving speeds are in the range 0 to 127 where 0 is a normal stop (where a loco’s decoder will usually stop gently as if the driver were applying the brakes) and speed 1 is an emergency stop where the loco will stop immediately without any semblance of momentum. The same speed range applies for DC and when running with 28 speed steps.</p>
+<p>The loco associated with a task can be set with a <cite>SETLOCO(locoid)</cite> executed within the task, or it can be automatically assigned from a throttle using a hand-off to an <a class="reference internal" href="../../getting-started.html"><span class="doc">AUTOMATION</span></a>.</p>
+<p>All driving speeds are in the range 0 to 127 where 0 is a normal stop (where a loco’s decoder will usually stop gently as if the driver were applying the brakes) and speed 1 is an emergency stop where the loco will stop immediately without any semblance of momentum. The same speed range applies for DC and when running with 28 speed steps.
+i.e. <br /> <strong>speed</strong> - DCC speed (0-127) <br />    • <code class="docutils literal notranslate"><span class="pre">2-127</span></code> = actual speed 1-126  <br />    • <code class="docutils literal notranslate"><span class="pre">0</span></code> = stop  <br />    • <code class="docutils literal notranslate"><span class="pre">1</span></code> = Estop</p>
+<p>The basic driving commands are:</p>
 <ul class="simple">
-<li><p><cite>FWD(speed)</cite> will start the loco moving forward at the given speed.</p></li>
-<li><p><cite>REV(speed)</cite> will start the loco moving in reverse at the given speed.</p></li>
-<li><p><cite>SPEED(speed)</cite> alters the loc speed without changing the direction.</p></li>
-<li><p><cite>STOP</cite> is the same as SPEED(0)</p></li>
-<li><p><cite>ESTOP</cite> is the same as SPEED(1)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FWD(speed)</span></code> will start the loco moving forward at the given speed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">REV(speed)</span></code> will start the loco moving in reverse at the given speed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SPEED(speed)</span></code> alters the loc speed without changing the direction.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">STOP</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">SPEED(0)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ESTOP</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">SPEED(1)</span></code></p></li>
 </ul>
-<p>Bear in mind that FWD(0) and REV(0) are not quite the same thing as it will affect the loco lights (if the loco has direction changing lights fitted) and may involve sound effects if the loco simulates the driver changing the reversing gear.</p>
-<p>Usually, a sequence being used to drive a loco will include <cite>AT(vpin)</cite> commands to continue until a given sensor is detected.</p>
+<p>Bear in mind that <code class="docutils literal notranslate"><span class="pre">FWD(0)</span></code> and <code class="docutils literal notranslate"><span class="pre">REV(0)</span></code> are not quite the same thing as it will affect the loco lights (if the loco has direction changing lights fitted) and may involve sound effects if the loco simulates the driver changing the reversing gear.</p>
+<p>Usually, a sequence being used to drive a loco will include <code class="docutils literal notranslate"><span class="pre">AT(vpin)</span></code> commands to continue until a given sensor is detected.</p>
 </section>
 
 <div class="section ablog__blog_comments">
@@ -730,7 +732,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f49641b21d0>
+    <jinja2.runtime.BlockReference object at 0x7f8c3d5d1c30>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

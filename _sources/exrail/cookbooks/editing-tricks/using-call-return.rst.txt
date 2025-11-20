@@ -17,19 +17,19 @@ Where you want to use the same sequence of commands from several places in other
       CALL(911)
       THROW(1)
       CLOSE(2)
-      DONE
+    DONE
 
     ROUTE(2,"Platform B to mainline")
       CALL(911)
       CLOSE(1)
       CLOSE(2)
-      DONE
+    DONE
 
     SEQUENCE(911)
       SERVO(123,100,Slow)  // move the cow out of the way
       PLAYSOUND(500,3) // Make it Moo
       DELAYRANDOM(5000,10000) // make the route wait 5 to 10 seconds
-      RETURN      // return to the calling sequence
+    RETURN      // return to the calling sequence
 
 Notes
 =====

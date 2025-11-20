@@ -49,14 +49,14 @@ So, the sequence starting from Dogbath, going to Catflap will look like this:
       THROW(1)   // set the turnout so we will enter the loop correctly
       FWD(40)    // move off
       AT(167)    // we are in the West>East loop
-      FREE(1)    // we are no longer in block 1
-      RESERVE(3) // This will stop loco if 3 not yet free, and wait.
-      CLOSE(2)   // set turnout to exit loop
-      FWD(40)    // must resume speed if we were stopped.
+        FREE(1)    // we are no longer in block 1
+        RESERVE(3) // This will stop loco if 3 not yet free, and wait.
+        CLOSE(2)   // set turnout to exit loop
+        FWD(40)    // must resume speed if we were stopped.
       AT(165)    // when we get to Catflap
-      STOP
-      FREE(2)    // we are not in loop
-      FOLLOW(101) // now follow the Catflap -> Dogbath sequence
+        STOP
+        FREE(2)    // we are not in loop
+    FOLLOW(101) // now follow the Catflap -> Dogbath sequence
 
 And the Catflap to Dogbath sequence will be a similar logic but in reverse and with different sensors etc.
 
@@ -68,18 +68,18 @@ And the Catflap to Dogbath sequence will be a similar logic but in reverse and w
       THROW(2)   // set the turnout so we will enter the loop correctly
       REV(40)    // move off backwards 
       AT(166)    // we are in the E->W loop
-      FREE(3)    // we are no longer in block 3
-      RESERVE(1) // This will stop loco if 3 not yet free, and wait.
-      CLOSE(1)   // set turnout to exit loop
-      REV(40)    // must resume speed if we were stopped.
+        FREE(3)    // we are no longer in block 3
+        RESERVE(1) // This will stop loco if 3 not yet free, and wait.
+        CLOSE(1)   // set turnout to exit loop
+        REV(40)    // must resume speed if we were stopped.
       AT(164)    // when we get to Dogbath
-      STOP
-      FREE(4)    // we are not in loop
+        STOP
+        FREE(4)    // we are not in loop
     FOLLOW(101) // now follow the Dogbath-Catflap sequence 
 
 Notice that you don't drive into an area of the track without first reserving the corresponding block, and you must remember to free it once you have safely left. Also the script above assumes that a train can cause the turnout to change quickly enough if it reaches a sensor in the loop and doesn't need to stop, this can be alleviated if you throw/close the turnout behind you as you reach your loop sensor so that the other train does not need to worry about any slow turnout movement.
 
-Please bear in mind that your turnout geometry may be different. The diagram is for two right-hand turnouts, you may have used a left/right pair so modify the THROW/CLOSE statements above to suit.
+Please bear in mind that your turnout geometry may be different. The diagram is for two right-hand turnouts, you may have used a left/right pair so modify the ``THROW``/``CLOSE`` statements above to suit.
 
 Starting the shuttle
 ======================
@@ -108,7 +108,7 @@ Handling facing trains
 
 If your two trains start facing each other from opposite ends of the loop, you must allow for this change otherwise the train starting at Catflap will be told to reverse when leaving, this is embarrassing to say the least.
 
-The INVERT_DIRECTION command tells |EX-R| to invert the FWD/REV commands for the current loco in the current task. Rather than duplicate both sequences with different direction commands, or litter them with IFLOCO checks, we can alter the startup to apply this invert to the task running loco 4 before starting at Catflap.
+The INVERT_DIRECTION command tells |EX-R| to invert the ``FWD``/``REV`` commands for the current loco in the current task. Rather than duplicate both sequences with different direction commands, or litter them with ``IFLOCO`` checks, we can alter the startup to apply this invert to the task running loco 4 before starting at Catflap.
 
 Note that |EX-R| is running a separate task for each loco.
 

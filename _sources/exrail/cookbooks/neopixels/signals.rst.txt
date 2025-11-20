@@ -26,7 +26,7 @@ For separate pixels, the colours should be established at startup and a normal `
       NEOPIXEL(1011,128,128,0)
       NEOPIXEL(1012,0,255,0)
       RED(1010)  // force signal state otherwise all 3 lights will be on
-      DONE
+    DONE
 
 For signals with 1 neopixel, the ``NEOPIXEL_SIGNAL`` macro will create a signal on one vpin with three separate colours
 

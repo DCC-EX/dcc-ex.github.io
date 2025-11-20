@@ -40,7 +40,7 @@ Now we can create a virtual turnout that will be seen by the throttles and speci
      CLOSE(1001) // close the real turnout 
      DELAY(5000)
      GREEN(501) // set approach signal
-     DONE
+   DONE
    
    ONTHROW(100)
      RED(501)  // set approach signal
@@ -49,4 +49,4 @@ Now we can create a virtual turnout that will be seen by the throttles and speci
      THROW(1001) // throw the real turnout 
      DELAY(5000)
      GREEN(505) // set approach signal
-     DONE
+   DONE

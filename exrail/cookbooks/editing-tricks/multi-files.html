@@ -694,8 +694,8 @@
 <section id="multiple-files-in-exrail">
 <h1>Multiple Files in EXRAIL<a class="headerlink" href="#multiple-files-in-exrail" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../../../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../../../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../../support/index.html#contact-support-options" title="Request help or support"><img src="../../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
-<p><a href="../../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> commands are read by the compiler only from the file <code class="docutils literal notranslate"><span class="pre">myAutomation.h</span></code>, the absence of a file with this name means no <a href="../../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> code is loaded into the command station.
-However, it is simple to partition <code class="docutils literal notranslate"><span class="pre">myAutomation.h</span></code> into separate files for the convenience of editing. For example myTurnouts.h, myRoster.h and so on. By ensuring all the files start with “my” it avoids issues with name clashes or Git.</p>
+<p><a href="../../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> commands are read by the compiler only from the file <code class="docutils literal notranslate"><span class="pre">myAutomation.h</span></code>. The absence of a file with this name means no <a href="../../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> code is loaded into the command station.</p>
+<p>However, it is simple to partition <code class="docutils literal notranslate"><span class="pre">myAutomation.h</span></code> into separate files for the convenience of editing. For example <code class="docutils literal notranslate"><span class="pre">myTurnouts.h</span></code>, <code class="docutils literal notranslate"><span class="pre">myRoster.h</span></code> and so on. By ensuring all the files start with “my” it avoids issues with name clashes or Git.</p>
 <p>To include your additional files, use the c++ preprocessor <code class="docutils literal notranslate"><span class="pre">#include</span></code> control in <code class="docutils literal notranslate"><span class="pre">myAutomation.h</span></code> to insert the file contents exactly as if you had typed them into <code class="docutils literal notranslate"><span class="pre">myAutomation.h</span></code></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Include my roster file</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;myRoster.h&quot;</span>
@@ -729,7 +729,7 @@ However, it is simple to partition <code class="docutils literal notranslate"><s
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f4969257760>
+    <jinja2.runtime.BlockReference object at 0x7f8c3e64d2a0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

@@ -31,5 +31,5 @@ These lines can be added to ``myAutomation.h`` to define tracks as needed.
 ``POWERON`` will set MAIN tracks ON.  
 
 Other track modes require the ``SET_POWER`` command, for each track.  |BR|
-     |_| |_| [Example: Set a track to DC](./dc-tracks.md)  |BR|
+     |_| |_| :doc:`Example: Set a track to DC <dc-tracks>`  |BR|
      |_| |_| |_| |_| **NOTE:** The use of the ``SET_LOCO`` command for DC mode tracks.

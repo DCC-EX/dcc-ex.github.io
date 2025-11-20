@@ -730,14 +730,14 @@ Dogbath ||════[1]═════╦═══[4]═══&lt;&lt;══�
 <span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">   </span><span class="c1">// set the turnout so we will enter the loop correctly</span>
 <span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span><span class="w">    </span><span class="c1">// move off</span>
 <span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">167</span><span class="p">)</span><span class="w">    </span><span class="c1">// we are in the West&gt;East loop</span>
-<span class="w">  </span><span class="n">FREE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">    </span><span class="c1">// we are no longer in block 1</span>
-<span class="w">  </span><span class="n">RESERVE</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="c1">// This will stop loco if 3 not yet free, and wait.</span>
-<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w">   </span><span class="c1">// set turnout to exit loop</span>
-<span class="w">  </span><span class="n">FWD</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span><span class="w">    </span><span class="c1">// must resume speed if we were stopped.</span>
+<span class="w">    </span><span class="n">FREE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">    </span><span class="c1">// we are no longer in block 1</span>
+<span class="w">    </span><span class="n">RESERVE</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="c1">// This will stop loco if 3 not yet free, and wait.</span>
+<span class="w">    </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w">   </span><span class="c1">// set turnout to exit loop</span>
+<span class="w">    </span><span class="n">FWD</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span><span class="w">    </span><span class="c1">// must resume speed if we were stopped.</span>
 <span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">165</span><span class="p">)</span><span class="w">    </span><span class="c1">// when we get to Catflap</span>
-<span class="w">  </span><span class="n">STOP</span>
-<span class="w">  </span><span class="n">FREE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w">    </span><span class="c1">// we are not in loop</span>
-<span class="w">  </span><span class="n">FOLLOW</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w"> </span><span class="c1">// now follow the Catflap -&gt; Dogbath sequence</span>
+<span class="w">    </span><span class="n">STOP</span>
+<span class="w">    </span><span class="n">FREE</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w">    </span><span class="c1">// we are not in loop</span>
+<span class="n">FOLLOW</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w"> </span><span class="c1">// now follow the Catflap -&gt; Dogbath sequence</span>
 </pre></div>
 </div>
 <p>And the Catflap to Dogbath sequence will be a similar logic but in reverse and with different sensors etc.</p>
@@ -747,18 +747,18 @@ Dogbath ||════[1]═════╦═══[4]═══&lt;&lt;══�
 <span class="w">  </span><span class="n">THROW</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w">   </span><span class="c1">// set the turnout so we will enter the loop correctly</span>
 <span class="w">  </span><span class="n">REV</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span><span class="w">    </span><span class="c1">// move off backwards</span>
 <span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">166</span><span class="p">)</span><span class="w">    </span><span class="c1">// we are in the E-&gt;W loop</span>
-<span class="w">  </span><span class="n">FREE</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w">    </span><span class="c1">// we are no longer in block 3</span>
-<span class="w">  </span><span class="n">RESERVE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="c1">// This will stop loco if 3 not yet free, and wait.</span>
-<span class="w">  </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">   </span><span class="c1">// set turnout to exit loop</span>
-<span class="w">  </span><span class="n">REV</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span><span class="w">    </span><span class="c1">// must resume speed if we were stopped.</span>
+<span class="w">    </span><span class="n">FREE</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w">    </span><span class="c1">// we are no longer in block 3</span>
+<span class="w">    </span><span class="n">RESERVE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="c1">// This will stop loco if 3 not yet free, and wait.</span>
+<span class="w">    </span><span class="n">CLOSE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w">   </span><span class="c1">// set turnout to exit loop</span>
+<span class="w">    </span><span class="n">REV</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span><span class="w">    </span><span class="c1">// must resume speed if we were stopped.</span>
 <span class="w">  </span><span class="n">AT</span><span class="p">(</span><span class="mi">164</span><span class="p">)</span><span class="w">    </span><span class="c1">// when we get to Dogbath</span>
-<span class="w">  </span><span class="n">STOP</span>
-<span class="w">  </span><span class="n">FREE</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w">    </span><span class="c1">// we are not in loop</span>
+<span class="w">    </span><span class="n">STOP</span>
+<span class="w">    </span><span class="n">FREE</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w">    </span><span class="c1">// we are not in loop</span>
 <span class="n">FOLLOW</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="w"> </span><span class="c1">// now follow the Dogbath-Catflap sequence</span>
 </pre></div>
 </div>
 <p>Notice that you don’t drive into an area of the track without first reserving the corresponding block, and you must remember to free it once you have safely left. Also the script above assumes that a train can cause the turnout to change quickly enough if it reaches a sensor in the loop and doesn’t need to stop, this can be alleviated if you throw/close the turnout behind you as you reach your loop sensor so that the other train does not need to worry about any slow turnout movement.</p>
-<p>Please bear in mind that your turnout geometry may be different. The diagram is for two right-hand turnouts, you may have used a left/right pair so modify the THROW/CLOSE statements above to suit.</p>
+<p>Please bear in mind that your turnout geometry may be different. The diagram is for two right-hand turnouts, you may have used a left/right pair so modify the <code class="docutils literal notranslate"><span class="pre">THROW</span></code>/<code class="docutils literal notranslate"><span class="pre">CLOSE</span></code> statements above to suit.</p>
 </section>
 <section id="starting-the-shuttle">
 <h2><a class="toc-backref" href="#id3" role="doc-backlink">Starting the shuttle</a><a class="headerlink" href="#starting-the-shuttle" title="Link to this heading"></a></h2>
@@ -783,7 +783,7 @@ Dogbath ||════[1]═════╦═══[4]═══&lt;&lt;══�
 <section id="handling-facing-trains">
 <h2><a class="toc-backref" href="#id4" role="doc-backlink">Handling facing trains</a><a class="headerlink" href="#handling-facing-trains" title="Link to this heading"></a></h2>
 <p>If your two trains start facing each other from opposite ends of the loop, you must allow for this change otherwise the train starting at Catflap will be told to reverse when leaving, this is embarrassing to say the least.</p>
-<p>The INVERT_DIRECTION command tells <a href="../../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> to invert the FWD/REV commands for the current loco in the current task. Rather than duplicate both sequences with different direction commands, or litter them with IFLOCO checks, we can alter the startup to apply this invert to the task running loco 4 before starting at Catflap.</p>
+<p>The INVERT_DIRECTION command tells <a href="../../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> to invert the <code class="docutils literal notranslate"><span class="pre">FWD</span></code>/<code class="docutils literal notranslate"><span class="pre">REV</span></code> commands for the current loco in the current task. Rather than duplicate both sequences with different direction commands, or litter them with <code class="docutils literal notranslate"><span class="pre">IFLOCO</span></code> checks, we can alter the startup to apply this invert to the task running loco 4 before starting at Catflap.</p>
 <p>Note that <a href="../../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> is running a separate task for each loco.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;Start Dogbath-Catflap&quot;</span><span class="p">)</span>
 <span class="w">  </span><span class="n">FREEALL</span><span class="w">   </span><span class="c1">// Make sure all reserves are cleared</span>
@@ -827,7 +827,7 @@ Dogbath ||════[1]═════╦═══[4]═══&lt;&lt;══�
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f496a2604c0>
+    <jinja2.runtime.BlockReference object at 0x7f8c3a76d330>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

@@ -9,6 +9,8 @@ Driving Trains
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
+The following cookbooks are currently available related to driving trains with |EX-R|:
+
 .. toctree::
    :maxdepth: 2
 

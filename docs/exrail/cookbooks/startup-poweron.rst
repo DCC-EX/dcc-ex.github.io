@@ -26,4 +26,4 @@ Alternatively, you can power tracks individually
     AUTOSTART
       SET_POWER(A,ON)
       SET_POWER(D,ON)
-      DONE
+    DONE

@@ -50,7 +50,7 @@ The ``ONSENSOR(x)`` sequence is started when an input vpin changes state between
         PRINT("Sensor 176 gone LOW")
         RED(110)  // set signal
       ENDIF
-      DONE
+    DONE
 
 Note: Switches are not suitable for controlling turnouts because the command station cant reach out a finger and change the switch position when the turnout is changed from a throttle or some other |EX-R| script. (Unless of course, you are into animating a servo to do just that!)
 
@@ -58,11 +58,18 @@ You can toggle a turnout with a single button
 
 .. code-block:: cpp
 
-    ONBUTTON(172) TOGGLE_TURNOUT(7) DONE
+    ONBUTTON(172)
+      TOGGLE_TURNOUT(7)
+    DONE
 
 Or have 2 buttons
 
 .. code-block:: cpp
 
-    ONBUTTON(172) THROW(7) DONE
-    ONBUTTON(173) CLOSE(7) DONE
+    ONBUTTON(172) 
+      THROW(7)
+    DONE
+    
+    ONBUTTON(173)
+      CLOSE(7)
+    DONE

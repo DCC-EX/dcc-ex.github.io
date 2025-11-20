@@ -9,6 +9,8 @@ Editing - Tips and Tricks
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
+The following tips and tricks |EX-R| cookbooks are currently available:
+
 .. toctree::
    :maxdepth: 2
 

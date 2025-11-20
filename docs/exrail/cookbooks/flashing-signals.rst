@@ -35,7 +35,9 @@ A signal that always blinks amber could be done like this:
 .. code-block:: cpp
 
    SIGNALH(130,131,132)
-   ONAMBER(130) BLINK(131,500,500) 
+   
+   ONAMBER(130) 
+     BLINK(131,500,500) 
    DONE
 
 The ``RED`` or ``GREEN`` calls will turn off the amber pin and that will stop the blink automatically.

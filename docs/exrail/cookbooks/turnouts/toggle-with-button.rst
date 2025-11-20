@@ -13,4 +13,6 @@ A turnout/point of any type can be toggled by a button or sensor of any type.
 
 .. code-block:: cpp
 
-    ONBUTTON(173) TOGGLE_TURNOUT(6) DONE
+    ONBUTTON(173)
+      TOGGLE_TURNOUT(6)
+    DONE

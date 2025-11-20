@@ -16,7 +16,7 @@ TM1638 Buttons, leds and 7 segment display
       :depth: 1
       :local:
 
-CAUTION: This boards require several GPIO pins on the Command Station but as speed is unimportant, these 3 may be VPINS on another hardware expander such as an MCP23017.
+CAUTION: This boards require several GPIO pins on the Command Station but as speed is unimportant, these 3 may be VPINS on another hardware expander such as an :doc:`MCP23017 </reference/hardware/gpio-module>`.
 
 The TM1638 board provides a very cheap way of implementing 8 buttons, 8 leds and an 8 digit 7segment display in a package requiring just 5 Dupont wires (vcc, gnd + 3 GPIO pins) from the command station without soldering.
 
@@ -32,7 +32,7 @@ Creates VPINs 500-507 And describes the VPINs used to connect the clk,dio,stb pi
 
 Setting each of the VPINs will control the associated LED (using for example SET, RESET or BLINK in |EX-R| or ``<z 500> <z -501>``  from a command).
 
-Unlike most pins, you can also read the same pin number and get the button state, using |EX-R| IF/AT/ONBUTTON etc.
+Unlike most pins, you can also read the same pin number and get the button state, using |EX-R| ``IF``/``AT``/``ONBUTTON`` etc.
 
 All the following examples assume you are using VPIN 500 as the first, leftmost,  led/button on the TM1638 board.
 

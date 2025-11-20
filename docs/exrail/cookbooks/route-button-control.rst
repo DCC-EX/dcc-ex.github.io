@@ -79,27 +79,27 @@ Two separate routes example
 This example has two "routes" to control lights, but only one of them will be visible at a time so we dont need a flag.
 Each route will have the default "Set" button.
 
-.. code-block::
+.. code-block:: cpp
 
     ROUTE(600,"Shed lights on")
       SET(120)
       ROUTE_HIDDEN(600) // hide self
       ROUTE_INACTIVE(601) // reveal off 
-      DONE
+    DONE
 
     ROUTE(601,"Shed lights off")
       RESET(120)
       ROUTE_HIDDEN(601)
       ROUTE_INACTIVE(600)
-      DONE
+    DONE
       
     AUTOSTART
-        ROUTE_HIDDEN(601)  // shed lights are off already
-      DONE
+      ROUTE_HIDDEN(601)  // shed lights are off already
+    DONE
 
 |EX-R| has the full set of route setting and testing commands which should be self explanitory once the above simple examples have been understood. Each route can only be in one of the 4 states.
 
-.. code-block::
+.. code-block:: cpp
   
   IFROUTE_INACTIVE(route_id)
   IFROUTE_ACTIVE(route_id)

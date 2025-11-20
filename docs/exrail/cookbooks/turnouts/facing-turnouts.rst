@@ -20,5 +20,10 @@ All turnout/point definitions in |EX-R| allow for a text description to be shown
     TURNOUTL(1,101,"Cross inner to outer")
     TURNOUTL(2,102,HIDDEN)
 
-    ONTHROW(1) THROW(2) DONE
-    ONCLOSE(1) CLOSE(2) DONE
+    ONTHROW(1) 
+      THROW(2)
+    DONE
+    
+    ONCLOSE(1)
+      CLOSE(2)
+    DONE

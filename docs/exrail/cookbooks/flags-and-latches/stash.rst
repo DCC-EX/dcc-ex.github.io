@@ -9,7 +9,7 @@ Using STASH to remember where locos are parked
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
-STASH is used for scenarios where it is helpful to relate a loco id to where it is parked. For example a fiddle yard may have 10 tracks and it's much easier for the operator to select a train to depart by using the track number, or pressing a button relating to that track, rather than by knowing the loco id which may be difficult to see.
+``STASH`` is used for scenarios where it is helpful to relate a loco id to where it is parked. For example a fiddle yard may have 10 tracks and it's much easier for the operator to select a train to depart by using the track number, or pressing a button relating to that track, rather than by knowing the loco id which may be difficult to see.
 
 Automated yard parking can use the stash to determine which tracks are empty without the need for block occupancy detectors.
 

@@ -13,10 +13,10 @@ Time Control
    :class: sidebar-on-this-page
 
    .. contents:: On this page
-      :depth: 1
+      :depth: 2
       :local:
   
-The Command Station has additional commands added to |EX-R| allow events to be controlled by a |EX-FC|.
+The Command Station has additional commands added to |EX-R| allow events to be controlled by a |EX-FC| if connected.
 
 Time Command
 ===============
@@ -36,7 +36,7 @@ This is an event based command and will activate a sequence of commands until a 
       ....
       .... Do some stuff
       ....
-      DONE
+    DONE
 
 Sequences built this way can only be run via a clock command.  If it was required to have a sequence that could be run for Engine Driver for example, then this could be operated by a clock command as below:
 

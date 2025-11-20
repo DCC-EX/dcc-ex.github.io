@@ -22,7 +22,7 @@ Define DCC based turnouts using |EX-R|.
 
 - ``id`` = Unique turnout ID within the CommandStation. All other turnout commands will refer to this turnout by this id.
 - ``address`` = the DCC address that the turnout decoder is listening to |BR| or |BR| ``shortAddress,subAddress`` - the alternative form of the same address.
-- ``description`` = A human-friendly description of the turnout that will appear in WiThrottle apps and Engine Driver. Note that this must be enclosed in quotes ``""``. In some cases the HIDDEN keyword can be used here to prevent the turnout being visible to the throttles.
+- ``description`` = A human-friendly description of the turnout that will appear in WiThrottle apps and Engine Driver. Note that this must be enclosed in quotes ``""``. In some cases the ``HIDDEN`` keyword can be used here to prevent the turnout being visible to the throttles.
 
 For example:
 

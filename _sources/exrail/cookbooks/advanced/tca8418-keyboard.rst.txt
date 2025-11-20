@@ -9,9 +9,9 @@ TCA8418 keyboard scanner
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
-The TCA8418 IC from Texas Instruments is a low cost and very capable GPIO and keyboard scanner. Used as a keyboard scanner, it has 8 rows of 10 columns of IO pins which allow encoding of up to 80 buttons. The IC is available on an Adafruit board with Qwiic I2C interconnect called the [Adafruit TCA8418 Keypad Matrix and GPIO Expander Breakout](https://www.adafruit.com/product/4918).
+The TCA8418 IC from Texas Instruments is a low cost and very capable GPIO and keyboard scanner. Used as a keyboard scanner, it has 8 rows of 10 columns of IO pins which allow encoding of up to 80 buttons. The IC is available on an Adafruit board with Qwiic |I2C| interconnect called the [Adafruit TCA8418 Keypad Matrix and GPIO Expander Breakout](https://www.adafruit.com/product/4918).
 
-The great advantage of this IC is that the keyboard scanning is done continuously, and it has a 10-element event queue, so even if you don't get to the interrupt immediately, keypress and release events will be held for you. Since it's I2C its very easy to use with any DCC-EX command station.
+The great advantage of this IC is that the keyboard scanning is done continuously, and it has a 10-element event queue, so even if you don't get to the interrupt immediately, keypress and release events will be held for you. Since it's |I2C| its very easy to use with any DCC-EX command station.
 
 The TCA8418 driver presently configures the IC in the full 8x10 keyboard scanning mode, and then maps each key down/key up event to the state of a single vpin for extremely easy use from within EX-RAIL and JMRI as each key looks like an individual sensor.
 

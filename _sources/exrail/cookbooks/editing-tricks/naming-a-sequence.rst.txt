@@ -9,7 +9,7 @@ Naming sequences for easy commands
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
-The DCC-EX command
+The |DCC-EX| command...
 
 .. code-block:: cpp
 

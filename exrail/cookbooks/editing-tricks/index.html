@@ -9,7 +9,7 @@
 <meta content="EXRAIL Automation Sequences Scripting Language" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Advanced &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>Editing - Tips and Tricks &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -36,7 +36,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Multiple Files in EXRAIL" href="multi-files.html" />
-    <link rel="prev" title="Passing loop shuttle" href="../driving-trains/passing-loop.html" /> 
+    <link rel="prev" title="Trainbrains Devices" href="../various-devices/trainbrains.html" /> 
      
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
@@ -289,7 +289,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../getting-started.html">Sequences - an Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tips.html">Tips and Techniques</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html">EXRAIL Cookbooks</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Cookbooks</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../vpins.html">Virtual Bitmap device pins (VPINs)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../animation-sensors.html">Buttons and Switches</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dc-tracks.html">Set a track to DC</a></li>
@@ -300,14 +300,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../startup-poweron.html">Startup power</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../startup-set-track.html">Startup - Define Tracks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../timecontrol.html">Time Control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../advanced/index.html">Advanced</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../advanced/display-locos-on-oled.html">Display Loco speeds on OLED (Advanced)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../advanced/analog-sensors.html">Analog sensors</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../advanced/command-filter.html">Command Filters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../advanced/tca8418-keyboard.html">TCA8418 keyboard scanner</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../advanced/passing-locos-between-sequences.html">Passing locos between sequences</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="../driving-trains/index.html">Driving Trains</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../driving-trains/basic.html">Basic driving functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../driving-trains/functions.html">Loco Functions</a></li>
@@ -315,14 +307,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../driving-trains/simple-shuttle.html">Simple shuttle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../driving-trains/improved-shuttle.html">Improved shuttle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../driving-trains/passing-loop.html">Passing loop shuttle</a></li>
-</ul>
-</li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Advanced</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="multi-files.html">Multiple Files in <a href="../../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a></a></li>
-<li class="toctree-l4"><a class="reference internal" href="multiple-command-stations.html">Maintaining multiple command stations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="naming-a-sequence.html">Naming sequences for easy commands</a></li>
-<li class="toctree-l4"><a class="reference internal" href="using-call-return.html">Using CALL and RETURN</a></li>
-<li class="toctree-l4"><a class="reference internal" href="using-macros.html">Using C++ Macros</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../flags-and-latches/index.html">Flags and Latches</a><ul>
@@ -345,10 +329,26 @@
 <li class="toctree-l4"><a class="reference internal" href="../turnouts/toggle-with-button.html">Toggle turnouts/points with button or sensor</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../various-devices/index.html">Various Devices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../advanced/index.html">Advanced EXRAIL Sequences</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../advanced/display-locos-on-oled.html">Display Loco speeds on OLED (Advanced)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../advanced/analog-sensors.html">Analog Sensors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../advanced/command-filter.html">Command Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../advanced/tca8418-keyboard.html">TCA8418 keyboard scanner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../advanced/passing-locos-between-sequences.html">Passing locos between sequences</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../various-devices/index.html">Supporting Various Additional Devices</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../various-devices/duinoNodes.html">Lew’s Duino Gear boards</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../various-devices/tm-1638.html">TM1638 Buttons, leds and 7 segment display</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../various-devices/trainbrains.html">Trainbrains Devices</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Editing - Tips and Tricks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="multi-files.html">Multiple Files in EXRAIL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="multiple-command-stations.html">Maintaining multiple command stations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="naming-a-sequence.html">Naming sequences for easy commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="using-call-return.html">Using CALL and RETURN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="using-macros.html">Using C++ Macros</a></li>
 </ul>
 </li>
 </ul>
@@ -675,8 +675,8 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../index.html">EXRAIL <br /> <span style="font-size: 75%"> Automation &amp; Animation </span></a></li>
-          <li class="breadcrumb-item"><a href="../index.html">EXRAIL Cookbooks</a></li>
-      <li class="breadcrumb-item active">Advanced</li>
+          <li class="breadcrumb-item"><a href="../index.html">Cookbooks</a></li>
+      <li class="breadcrumb-item active">Editing - Tips and Tricks</li>
   
     
       <li class="wy-breadcrumbs-aside">
@@ -690,12 +690,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
               <p><a class="image-product-logo-float-right reference internal" href="../../../_images/product-logo-exrail.png"><img alt="EXRAIL" class="image-product-logo-float-right" src="../../../_images/product-logo-exrail.png" style="width: 320.0px; height: 64.0px;" /></a></p>
-<section id="advanced">
-<h1>Advanced<a class="headerlink" href="#advanced" title="Link to this heading"></a></h1>
+<section id="editing-tips-and-tricks">
+<h1>Editing - Tips and Tricks<a class="headerlink" href="#editing-tips-and-tricks" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../../../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../../../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../../support/index.html#contact-support-options" title="Request help or support"><img src="../../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="multi-files.html">Multiple Files in <a href="../../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a></a></li>
+<li class="toctree-l1"><a class="reference internal" href="multi-files.html">Multiple Files in EXRAIL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="multiple-command-stations.html">Maintaining multiple command stations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="naming-a-sequence.html">Naming sequences for easy commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using-call-return.html">Using CALL and RETURN</a><ul>
@@ -714,7 +714,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../driving-trains/passing-loop.html" class="btn btn-neutral float-left" title="Passing loop shuttle" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../various-devices/trainbrains.html" class="btn btn-neutral float-left" title="Trainbrains Devices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="multi-files.html" class="btn btn-neutral float-right" title="Multiple Files in EXRAIL" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
@@ -728,7 +728,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fe12af20a30>
+    <jinja2.runtime.BlockReference object at 0x7f49622da050>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

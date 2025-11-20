@@ -59,7 +59,7 @@ Sequences built this way can only be run via a clock command.  If it was require
         FOFF(1)
     DONE
 
-This event could either be run by the clock or could be selected at will from |Engine Driver|.  To stop the Command Station from running timed commands to switch to manual running, simply pause the clock.
+This event could either be run by the clock or could be selected at will from |Engine Driver|.  To stop the |EX-CS| from running timed commands to switch to manual running, simply pause the clock.
 
 Repeating Time events
 -----------------------

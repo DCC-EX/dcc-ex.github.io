@@ -18,7 +18,7 @@ Virtual Bitmap device pins (VPINs)
 
 A VPIN is an Arduino pin number that has been extended to include pins on external devices or expanders.
 
-By giving external device pins unique VPIN numbers, the vast majority of the pin manipulation required by the user is controlled the same way regardless of whether the pin is an actual Arduino pin on the main CPU, an expander pin over i2c perhaps behind a multiplexer, a virtual pin or even a software-only pin simulation.
+By giving external device pins unique VPIN numbers, the vast majority of the pin manipulation required by the user is controlled the same way regardless of whether the pin is an actual Arduino pin on the main CPU, an expander pin over |I2C| perhaps behind a multiplexer, a virtual pin or even a software-only pin simulation.
 
 The vast majority of VPINs are either output (e.g. LEDs and servos) or input (e.g. buttons and sensors) but rarely both.  
 
@@ -40,9 +40,9 @@ For Example
     HAL(MCP23017, 180, 16, 0x21) 
 
 
-This would create VPINs 100 to 115 to represent the 16 servo outputs on the first [PCA9685](?PCA9685) servo control board at I2C address 0x40 and VPINs 164 to 179 on the first [MCP23017](?MCP23017) i/o expander.  
+This would create VPINs 100 to 115 to represent the 16 servo outputs on the first :doc:`PCA9685 </reference/hardware/servo-module>` servo control board at |I2C| address 0x40 and VPINs 164 to 179 on the first :doc:`MCP23017 </reference/hardware/gpio-module>` i/o expander.  
 VPINs for two PCA9685 and two MCP23017 are pre-defined, except for PCA9685 used with Nucleo-144.  
-Refer to wiring details and fuller list of [supported I2C devices](#) elsewhere.
+Refer to wiring details and fuller list of :doc:`supported I2C devices </reference/hardware/index-i2c>` elsewhere.
 
 Using OUTPUT VPINS
 =====================
@@ -77,9 +77,9 @@ For example:
 
 ``ONSENSOR(200)`` triggers when a sensor changes state. This is less useful and you need to use ``IF(200)`` to see what state the sensor has changed to.
 
-Other more advanced commands are available, see cookbooks.
+Other more advanced commands are available, see :doc:`cookbooks </exrail/cookbooks/index>`.
 
 Using INPUT/OUTPUT VPINs
 ==========================
 
-Bitmap pins are software flags with no actual hardware implementation. They can be used as INPUT and OUTPUT and thus can be used as flags between |EX-R| processes.  See `Bitmaps </exrail/cookbooks/flags-and-latches/flags>`.
+Bitmap pins are software flags with no actual hardware implementation. They can be used as *INPUT* and *OUTPUT* and thus can be used as flags between |EX-R| processes.  See :doc:`Bitmaps </exrail/cookbooks/flags-and-latches/flags>`.

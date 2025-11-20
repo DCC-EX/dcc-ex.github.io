@@ -51,7 +51,7 @@ Using buttons and LEDs
 Using the 7 Segment display
 ============================
 
-The 8 digit display can be treated as 8 separate digits (left most being the same VPIN as the leftmost button and led) or be written to in sections of any length. Writing uses the existing analogue interface to the common HAL but is awkward to use directly.  To make this easier from |EX-R|, a SEG7 macro provides a remapping to the [ANOUT](?ANOUT) facility that makes more sense.
+The 8 digit display can be treated as 8 separate digits (left most being the same VPIN as the leftmost button and led) or be written to in sections of any length. Writing uses the existing analogue interface to the common HAL but is awkward to use directly.  To make this easier from |EX-R|, a SEG7 macro provides a remapping to the **ANOUT** facility that makes more sense.
 
 .. code-block:: cpp
 

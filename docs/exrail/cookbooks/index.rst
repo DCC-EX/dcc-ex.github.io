@@ -9,27 +9,39 @@ Cookbooks
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
-The |EX-R| Cookbooks provide step-by-step instructions for building various |DCC-EX| based accessories and components for your model railroad.
+The |EX-R| Cookbooks provide step-by-step instructions for building various |DCC-EX| based sequences and components for your model railroad.
 
 The following cookbooks are currently available:
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
 
-    vpins
-    animation-sensors
-    dc-tracks
-    estop-button
-    flashing-signals
-    roster-similar-locos
-    route-button-control
     startup-poweron
     startup-set-track
-    timecontrol
-    driving-trains/index
-    flags-and-latches/index
-    neopixels/index
-    turnouts/index
-    advanced/index
-    various-devices/index
+    dc-tracks
+    roster-similar-locos
     editing-tricks/index
+
+.. toctree::
+    :maxdepth: 2
+
+    driving-trains/index
+    turnouts/index
+    route-button-control
+    vpins
+    animation-sensors
+    estop-button
+
+.. toctree::
+    :maxdepth: 2
+
+    neopixels/index
+    flashing-signals
+    flags-and-latches/index
+
+.. toctree::
+    :maxdepth: 2
+
+    advanced/index
+    timecontrol
+    various-devices/index

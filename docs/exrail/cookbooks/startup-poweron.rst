@@ -4,7 +4,7 @@
 |EX-R-LOGO|
 
 **************************************
-Startup power
+Power On at Startup
 **************************************
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
@@ -17,7 +17,9 @@ You can configure |EX-R| to power on at startup by using
 
 .. code-block:: cpp
   
-    AUTOSTART POWERON DONE
+    AUTOSTART 
+      POWERON 
+    DONE
 
 Alternatively, you can power tracks individually
 

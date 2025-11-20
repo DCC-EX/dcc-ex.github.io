@@ -4,17 +4,17 @@
 |EX-R-LOGO|
 
 **************************************
-Startup - Define Tracks
+Define Track Modes at Startup
 **************************************
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
-By default the Command station will start with  
+By default the Command station will start with: 
 
 - Track A - ``MAIN``  
 - Track B - ``PROG``
 
-These lines can be added to ``myAutomation.h`` to define tracks as needed.
+The following lines can be added to ``myAutomation.h`` to define tracks as needed.
 
 .. code-block:: cpp
   

@@ -4,12 +4,12 @@
 |EX-R-LOGO|
 
 ********************************
-EXRAIL Cookbooks
+Cookbooks
 ********************************
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
-The EXRAIL Cookbooks provide step-by-step instructions for building various DCC-EX based accessories and components for your model railroad.
+The |EX-R| Cookbooks provide step-by-step instructions for building various |DCC-EX| based accessories and components for your model railroad.
 
 The following cookbooks are currently available:
 
@@ -26,10 +26,10 @@ The following cookbooks are currently available:
     startup-poweron
     startup-set-track
     timecontrol
-    advanced/index
     driving-trains/index
-    editing-tricks/index
     flags-and-latches/index
     neopixels/index
     turnouts/index
+    advanced/index
     various-devices/index
+    editing-tricks/index

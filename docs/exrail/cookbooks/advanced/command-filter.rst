@@ -34,7 +34,7 @@ The following code, added to myAutomation.h like any other |EX-R| code, gives a 
 - The filter function can inspect or modify the opcode and parameters, make changes and return. If the opcode is set to 0, the caller will assume that the filter has completely handled the command and will not check it further.  
 - Output directed to the stream parameter will be transmitted back to the originating throttle. If no output is expected then casting to void is a good way of eliminating the "unused parameter" compiler warning.
 - the ``<U>`` and ``<u>`` opcodes are reserved for use by users. They will not clash with any future DCC-EX commands.  
-- Although this is a conventional c++ function, the use of STEALTH_GLOBAL in |EX-R| avoids the need to #include a vast array of weird and wonderful API and memory management definitions.
+- Although this is a conventional c++ function, the use of ``STEALTH_GLOBAL`` in |EX-R| avoids the need to #include a vast array of weird and wonderful API and memory management definitions.
 - To recognize keyword parameters (e.g ``<1 MAIN>``) you would test using the _hk suffix like this
 
 .. code-block:: cpp

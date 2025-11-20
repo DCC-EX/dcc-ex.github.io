@@ -4,14 +4,14 @@
 |EX-R-LOGO|
 
 ********************************
-Analog sensors
+Analog Sensors
 ********************************
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
 Sensors that read analog values are comparatively rare for model railway use but are sometimes used to detect a binary state depending on the current detected by a sensor.
 
-`DS1113 <https://www.ti.com/product/ADS1113>`_ and `ADS1114 <https://www.ti.com/product/ADS1113>`_ are restricted to 1 input.  `ADS1115 <https://www.ti.com/product/ADS1115>`_ has 4 way multiplexer which allows any of four input pins to be read by its ADC.
+`DS1113 <https://www.ti.com/product/ADS1113>`_ |EXTERNAL-LINK| and `ADS1114 <https://www.ti.com/product/ADS1113>`_ |EXTERNAL-LINK| are restricted to 1 input.  `ADS1115 <https://www.ti.com/product/ADS1115>`_ |EXTERNAL-LINK| has 4 way multiplexer which allows any of four input pins to be read by its ADC.
 
 The ADS111x is set up so that the maximum input voltage of 5V (when Vss=5V) gives a reading of 32767*(5.0/6.144) = 26666.
 

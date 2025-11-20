@@ -4,7 +4,7 @@
 |EX-R-LOGO|
 
 ********************************
-Advanced
+Editing - Tips and Tricks
 ********************************
 
 |SUITABLE| |tinkerer| |engineer| |support-button|

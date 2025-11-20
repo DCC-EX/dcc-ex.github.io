@@ -16,12 +16,12 @@ Buttons and Switches
       :depth: 1
       :local:
 
-Buttons and switches are connected to an input vpin, usually on an expander such as an [MCP23017](?MCP23017) which provides a number of input or output pins.
+Buttons and switches are connected to an input vpin, usually on an expander such as an :doc:`MCP23017 </reference/hardware/gpio-module>` which provides a number of input or output pins.
 
 Detecting a button press
 =========================
 
-The ONBUTTON(x) sequence is started when the vpin x is made HIGH by a button press or other sensor being triggered.
+The ``ONBUTTON(x)`` sequence is started when the vpin x is made HIGH by a button press or other sensor being triggered.
 
 .. code-block:: cpp
 
@@ -33,7 +33,7 @@ The ONBUTTON(x) sequence is started when the vpin x is made HIGH by a button pre
       GREEN(130) // set a signal
       DONE
 
-Repeated pressing of the button will be ignored until the DONE has completed.
+Repeated pressing of the button will be ignored until the ``DONE`` has completed.
 
 Detecting a switch change
 ==========================

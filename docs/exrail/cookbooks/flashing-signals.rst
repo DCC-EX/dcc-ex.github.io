@@ -43,7 +43,7 @@ The ``RED`` or ``GREEN`` calls will turn off the amber pin and that will stop th
 Amber and Flashing Amber
 
 
-A signal that has normal ``AMBER` and flashing ``AMBER`` could be done by creating a new macro to implement a ``FLAMBER(signalid)`` command
+A signal that has normal ``AMBER`` and flashing ``AMBER`` could be done by creating a new macro to implement a ``FLAMBER(signalid)`` command
 
 .. code-block:: cpp
 

@@ -14,7 +14,7 @@ The command
 - ``SET_TRACK(t,mode)`` is used to change the way a track is used.  
 - ``SET_POWER(t, ON)``  - track is OFF following mode change.
 
-Using a ROUTE or other sequence, you can set a track to the correct DC polarity and specify the loco address that the throttle will use to drive the loco on that track.
+Using a |ROUTE| or other sequence, you can set a track to the correct |DC| polarity and specify the loco address that the throttle will use to drive the loco on that track.
 
 (The throttle doesn't need to know that you are using DC.)
 
@@ -26,7 +26,7 @@ Using a ROUTE or other sequence, you can set a track to the correct DC polarity 
       SET_POWER(A,ON)
       DONE
 
-Modes DC or DCX are only different in that the polarity is reversed. This will be important if you have, for example, a double track mainline which is normally wired in opposite polarity so that 'forward' is clockwise on one track and anticlockwise on the other.
+Modes ``DC`` or ``DCX`` are only different in that the polarity is reversed. This will be important if you have, for example, a double track mainline which is normally wired in opposite polarity so that 'forward' is clockwise on one track and anticlockwise on the other.
 To drive over a junction between the two, the 'to' track must be switched in polarity to match the 'from' track.
 
 For example:

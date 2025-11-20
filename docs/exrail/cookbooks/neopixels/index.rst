@@ -22,7 +22,7 @@ See also:
 Defining the hardware driver
 ============================
 
-Add a driver definition in myAutomation.h for each adafruit I2C driver.
+Add a driver definition in myAutomation.h for each adafruit |I2C| driver.
 
 .. code-block:: cpp
 
@@ -30,7 +30,7 @@ Add a driver definition in myAutomation.h for each adafruit I2C driver.
 
 Where mode is selected from the various pixel string types which have varying colour order or refresh frequency. For MOST strings this mode will be NEO_GRB but for others refer to the comments in IO_NeoPixel.h
 
-If omitted the node and i2caddress default to NEO_GRB, 0x60.
+If omitted the node and ``i2caddress`` default to NEO_GRB, 0x60.
 
 For example:
 
@@ -38,7 +38,7 @@ For example:
 
    HAL(NeoPixel,1000,20)
 
-This is a NeoPixel driver defaulting to I2C aqddress 0x60 for a GRB pixel string. Pixels are given vpin numbers from 1000 to 1019.
+This is a NeoPixel driver defaulting to |I2C| address 0x60 for a GRB pixel string. Pixels are given vpin numbers from 1000 to 1019.
 
 .. code-block:: cpp
     

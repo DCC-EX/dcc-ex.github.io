@@ -11,14 +11,14 @@ Display Loco speeds on OLED (Advanced)
 
 The following example creates a C++ function to display loco details on an OLED screen. By using a generic HAL driver, the function can be invoked repeatedly according to a time delay.
 
-BEWARE that code like this is sensitive to many restrictions such as time taken and memory use. It is also subject to version changes in some of the internal dcc-ex routines so is only given here as an example.
+**BEWARE** that code like this is sensitive to many restrictions such as time taken and memory use. It is also subject to version changes in some of the internal dcc-ex routines so is only given here as an example.
 
-|EX-R| macros cannot be used inside STEALTH sections. Users using STEALTH and STEALTH_GLOBAL are expected to understand the implications and the C++ language features used and the need to avoid any lengthy process.
+|EX-R| macros cannot be used inside STEALTH sections. Users using ``STEALTH`` and ``STEALTH_GLOBAL`` are expected to understand the implications and the C++ language features used and the need to avoid any lengthy process.
 
-The STEALTH_GLOBAL macro allows the creation of C++ functions within the command station environment.
+The ``STEALTH_GLOBAL`` macro allows the creation of C++ functions within the command station environment.
 This function displays the first 8 locos in the DCC speed reminders table on LCD/OLED screen 2.
 
-Notice that it will only update one OLED row per call, and will not update the row if the speed byte has not changed. This is because OLED updates are very "expensive" in terms of cpu time and I2C traffic volumes and attempting to do too much in one call can cause blocking of other more important functions.
+Notice that it will only update one OLED row per call, and will not update the row if the speed byte has not changed. This is because OLED updates are very "expensive" in terms of cpu time and |I2C| traffic volumes and attempting to do too much in one call can cause blocking of other more important functions.
 
 .. code-block:: cpp
 

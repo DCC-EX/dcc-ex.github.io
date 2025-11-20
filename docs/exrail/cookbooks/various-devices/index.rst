@@ -3,9 +3,9 @@
 .. include:: /include/include-ex-r.rst
 |EX-R-LOGO|
 
-************************************
-Various Devices
-************************************
+***************************************
+Supporting Various Additional Devices
+***************************************
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 

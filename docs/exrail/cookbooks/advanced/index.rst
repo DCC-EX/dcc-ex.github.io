@@ -4,7 +4,7 @@
 |EX-R-LOGO|
 
 ********************************
-Advanced
+Advanced EXRAIL Sequences
 ********************************
 
 |SUITABLE| |tinkerer| |engineer| |support-button|

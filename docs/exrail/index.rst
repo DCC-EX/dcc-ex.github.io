@@ -28,5 +28,6 @@ Click 'Next' to explore the possibilities of |EX-R|.
     getting-started
     examples
     tips
+    cookbooks/index
     exrail-command-reference
     about

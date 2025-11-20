@@ -14,7 +14,7 @@ The command
 - ``SET_TRACK(t,mode)`` is used to change the way a track is used.  
 - ``SET_POWER(t, ON)``  - track is OFF following mode change.
 
-Using a |ROUTE| or other sequence, you can set a track to the correct |DC| polarity and specify the loco address that the throttle will use to drive the loco on that track.
+Using a **ROUTE** or other sequence, you can set a track to the correct |DC| polarity and specify the loco address that the throttle will use to drive the loco on that track.
 
 (The throttle doesn't need to know that you are using DC.)
 

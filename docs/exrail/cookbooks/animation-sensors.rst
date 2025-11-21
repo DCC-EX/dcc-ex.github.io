@@ -31,7 +31,7 @@ The ``ONBUTTON(x)`` sequence is started when the vpin x is made HIGH by a button
       DELAY(4000)  // wait 
       THROW(3) // throw turnout 3 
       GREEN(130) // set a signal
-      DONE
+    DONE
 
 Repeated pressing of the button will be ignored until the ``DONE`` has completed.
 

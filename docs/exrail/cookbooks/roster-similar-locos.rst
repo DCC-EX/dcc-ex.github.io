@@ -4,7 +4,7 @@
 |EX-R-LOGO|
 
 **************************************
-Roster for Similar Sound Locos
+Roster Entries for Similar Sound Locos
 **************************************
 
 |SUITABLE| |tinkerer| |engineer| |support-button|

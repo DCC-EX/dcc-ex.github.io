@@ -4,7 +4,7 @@
 |EX-R-LOGO|
 
 **************************************
-Signals with flashing
+Signals with flashing (Blink)
 **************************************
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
@@ -16,7 +16,10 @@ Signals with flashing
       :depth: 1
       :local:
 
-Flashing is achieved with the command
+Blinking Signals
+==================
+
+Blinking is achieved with the command:
 
 .. code-block:: cpp
    
@@ -25,9 +28,9 @@ Flashing is achieved with the command
 
 which will start a vpin blinking until such time as it is ``SET``, ``RESET`` or set by a signal operation such as ``RED``, ``AMBER``, ``GREEN``.
 
-BLINK returns immediately, the blinking is autonomous.
+``BLINK`` returns immediately, the blinking is autonomous.
 
-Always blink AMBER
+Always Blink AMBER
 ========================
 
 A signal that always blinks amber could be done like this:

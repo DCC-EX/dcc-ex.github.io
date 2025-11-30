@@ -4,7 +4,7 @@
 |EX-R-LOGO|
 
 **************************************
-Route button control
+Manipulating Route Buttons
 **************************************
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
@@ -15,6 +15,9 @@ Route button control
    .. contents:: On this page
       :depth: 1
       :local:
+
+Hiding, disabling, and re-captioning route buttons
+==================================================
 
 Route buttons appear on the throttle and can be controlled from |EX-R| to hide, disable or recaption the button. Everything here applies equally to AUTOMATIONs.
 

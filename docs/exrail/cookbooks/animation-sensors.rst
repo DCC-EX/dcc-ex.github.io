@@ -31,14 +31,14 @@ The ``ONBUTTON(x)`` sequence is started when the vpin x is made HIGH by a button
       DELAY(4000)  // wait 
       THROW(3) // throw turnout 3 
       GREEN(130) // set a signal
-      DONE
+    DONE
 
 Repeated pressing of the button will be ignored until the ``DONE`` has completed.
 
 Detecting a switch change
 ==========================
 
-The ``ONSENSOR(x)`` sequence is started when an input vpin changes state between HIGH and LOW. You will probabaly need to check the state inside the sequence using an ``IF(x)`` command.
+The ``ONSENSOR(x)`` sequence is started when an input vpin changes state between **HIGH** and **LOW**. You will probabaly need to check the state inside the sequence using an ``IF(x)`` command.
 
 .. code-block:: cpp
 

@@ -2948,10 +2948,6 @@ Sends DCC speed to an abritary loco in reverse direction
 
 .. _xfon:
 
-|hr-dashed|
-
-.. _xfon:
-
 ``XFON( cab, func )``` - Send DCC function ON to specific cab
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -2988,8 +2984,6 @@ Toggle DCC function on loco with the specified DCC address.
 *Parameters:* |BR|
 |_| > **loco** - DCC address of your loco |BR|
 |_| > **func** - Function number (0-31)
-
-.. _xftoggle:
 
 .. _xpom:
 

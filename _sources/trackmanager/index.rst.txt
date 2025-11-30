@@ -205,7 +205,7 @@ We will be adding some instructions the ``myAutomation.h`` file a re-uploading t
 
 4. Then Load the Command Station software as normal (on the next page)
 
-Note the track power is immediately turn off anytime you change the track mode. you may wish to add ``SET_POWER( track, ON/OFF )`` after the ``SET_TRACK()`` command. e.g. ``SET_POWER(B ON)``.
+Note the track power is immediately turn off anytime you change the track mode. you may wish to add ``SET_POWER( track, ON/OFF )`` after the ``SET_TRACK()`` command. e.g. ``SET_POWER(B, ON)``.
 
 |HR-DASHED|
 

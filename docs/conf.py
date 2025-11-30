@@ -45,6 +45,7 @@ extensions = [
     'ablog',
     'sphinx.ext.intersphinx',
     'sphinx_design',
+    'sphinx_rtd_theme',
     'sphinx_rtd_dark_mode',
     'sphinx_reredirects',
     # 'sphinx_last_updated_by_git',

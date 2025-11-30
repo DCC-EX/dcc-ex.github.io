@@ -381,6 +381,7 @@ Alphabetic Command List
   * :ref:`ENDIF`
   * :ref:`ENDTASK`
   * :ref:`EXRAIL`
+  * :ref:`EXRAIL_WITHROTTLE`
   * :ref:`ESTOP`
   * :ref:`EXTT_TURNTABLE`
   * :ref:`FADE`
@@ -508,10 +509,14 @@ Alphabetic Command List
   * :ref:`VIRTUAL_TURNOUT`
   * :ref:`WAITFOR`
   * :ref:`WAITFORTT`
-  * :ref:`EXRAIL_WITHROTTLE`
   * :ref:`XFOFF`
   * :ref:`XFON`
   * :ref:`XFTOGGLE`
+  * :ref:`XFWD`
+  * :ref:`XPOM`
+  * :ref:`XREV`
+  * :ref:`XRESTORE_SPEED`
+  * :ref:`XSAVE_SPEED`
 
 
 |force-break|
@@ -2635,47 +2640,6 @@ Sends a DCC accessory packet with value 0 to a linear address
 |_| > **Sub_addr** - sub-address ???
 
 
-|hr-dashed|
-
-.. _xfon:
-
-``XFON( cab, func )``` - Send DCC function ON to specific cab
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Send DCC function ON to specific cab (e.g. coach lights) *Not for Loco use - use FON instead!*
-
-*Parameters:* |BR|
-|_| > **cab** - DCC address of your loco |BR|
-|_| > **func** - Function number (0-31)
-
-|hr-dashed|
-
-.. _xfoff:
-
-``XFOFF( cab, func )`` - Send DCC function OFF to specific cab
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Send DCC function OFF to specific cab (e.g. coach lights) Not for Loco use - use FON instead!
-
-*Parameters:* |BR|
-|_| > **cab** - DCC address of your loco |BR|
-|_| > **func** - Function number (0-31)
-
-|hr-dashed|
-
-.. _xftoggle:
-
-``XFTOGGLE( loco, func )`` - Toggle DCC function on specific loco
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
-
-Toggle DCC function on loco with the specified DCC address.
-
-*Parameters:* |BR|
-|_| > **loco** - DCC address of your loco |BR|
-|_| > **func** - Function number (0-31)
-
 ----
 
 EX-FastClock Event Handlers
@@ -2946,6 +2910,124 @@ If the specified loco ID is defined for this sequence, perform the defined activ
         // Define activities here e.g. blow horn or whistle
       ENDIF
       DONE
+
+|hr-dashed|
+
+.. _xfwd:
+
+``XFWD( loco, speed )`` - Sends DCC speed to a loco in forward direction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Sends DCC speed to an abritary loco in forward direction
+
+*Parameters:* |BR|
+|_| > **loco** - DCC address of your loco |BR|
+|_| > **speed** - DCC speed (0-127) |BR|
+|_| |_| |_| |_| • 2-127 = speed 1-126  |BR|
+|_| |_| |_| |_| • 0 = stop  |BR|
+|_| |_| |_| |_| • 1 = Estop
+
+
+|hr-dashed|
+
+.. _xrev:
+
+``XREV( loco, speed )`` - Sends DCC speed to a loco in reverse direction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Sends DCC speed to an abritary loco in reverse direction
+
+*Parameters:* |BR|
+|_| > **loco** - DCC address of your loco |BR|
+|_| > **speed** - DCC speed (0-127) |BR|
+|_| |_| |_| |_| • 2-127 = speed 1-126  |BR|
+|_| |_| |_| |_| • 0 = stop  |BR|
+|_| |_| |_| |_| • 1 = Estop
+
+|hr-dashed|
+
+.. _xfon:
+
+|hr-dashed|
+
+.. _xfon:
+
+``XFON( cab, func )``` - Send DCC function ON to specific cab
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Send DCC function ON to specific cab (e.g. coach lights) *Not for Loco use - use FON instead!*
+
+*Parameters:* |BR|
+|_| > **cab** - DCC address of your loco |BR|
+|_| > **func** - Function number (0-31)
+
+|hr-dashed|
+
+.. _xfoff:
+
+``XFOFF( cab, func )`` - Send DCC function OFF to specific cab
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Send DCC function OFF to specific cab (e.g. coach lights) Not for Loco use - use FON instead!
+
+*Parameters:* |BR|
+|_| > **cab** - DCC address of your loco |BR|
+|_| > **func** - Function number (0-31)
+
+|hr-dashed|
+
+.. _xftoggle:
+
+``XFTOGGLE( loco, func )`` - Toggle DCC function on specific loco
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
+
+Toggle DCC function on loco with the specified DCC address.
+
+*Parameters:* |BR|
+|_| > **loco** - DCC address of your loco |BR|
+|_| > **func** - Function number (0-31)
+
+.. _xftoggle:
+
+.. _xpom:
+
+``XPOM( loco, cv, value )`` - Write CV value to specified loco on main
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Write CV value to specified loco on main. (PoM)
+
+*Parameters:* |BR|
+|_| > **loco** - DCC address of your loco |BR|
+|_| > **cv** - cv to change |BR|
+|_| > **value** - value to write
+
+|force-break|
+
+|hr-dashed|
+
+.. _xsave_speed:
+
+``XSAVE_SPEED( loco )`` - Saves the current speed of a loco
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Saves the current speed of a loco.
+
+*Parameters:* |BR|
+|_| > **loco** - DCC address of your loco
+
+|hr-dashed|
+
+.. _xrestore_speed:
+
+``XRESTORE_SPEED( loco )`` - Restores the saved speed of a loco
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Restores the saved speed of a loco
+
+*Parameters:* |BR|
+|_| > **loco** - DCC address of your loco
 
 |force-break|
 

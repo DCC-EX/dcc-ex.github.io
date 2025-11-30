@@ -36,7 +36,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="About and History" href="about.html" />
-    <link rel="prev" title="Using C++ Macros" href="cookbooks/editing-tricks/using-macros.html" /> 
+    <link rel="prev" title="Trainbrains Devices" href="cookbooks/various-devices/trainbrains.html" /> 
      
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
@@ -290,16 +290,18 @@
 <li class="toctree-l2"><a class="reference internal" href="examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tips.html">Tips and Techniques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cookbooks/index.html">Cookbooks</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="cookbooks/vpins.html">Virtual Bitmap device pins (VPINs)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cookbooks/animation-sensors.html">Buttons and Switches</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cookbooks/startup-poweron.html">Power On at Startup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cookbooks/startup-set-track.html">Define Track Modes at Startup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cookbooks/dc-tracks.html">Set a track to DC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cookbooks/estop-button.html">Emergency stop button</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cookbooks/flashing-signals.html">Signals with flashing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cookbooks/roster-similar-locos.html">Roster for Similar Sound Locos</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cookbooks/route-button-control.html">Route button control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cookbooks/startup-poweron.html">Startup power</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cookbooks/startup-set-track.html">Startup - Define Tracks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cookbooks/timecontrol.html">Time Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cookbooks/roster-similar-locos.html">Roster Entries for Similar Sound Locos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cookbooks/editing-tricks/index.html">Editing - Tips and Tricks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cookbooks/editing-tricks/multi-files.html">Multiple Files in EXRAIL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cookbooks/editing-tricks/multiple-command-stations.html">Maintaining multiple command stations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cookbooks/editing-tricks/naming-a-sequence.html">Naming sequences for easy commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cookbooks/editing-tricks/using-call-return.html">Using CALL and RETURN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cookbooks/editing-tricks/using-macros.html">Using C++ Macros</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="cookbooks/driving-trains/index.html">Driving Trains</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="cookbooks/driving-trains/basic.html">Basic driving functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cookbooks/driving-trains/functions.html">Loco Functions</a></li>
@@ -307,17 +309,6 @@
 <li class="toctree-l4"><a class="reference internal" href="cookbooks/driving-trains/simple-shuttle.html">Simple shuttle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cookbooks/driving-trains/improved-shuttle.html">Improved shuttle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cookbooks/driving-trains/passing-loop.html">Passing loop shuttle</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="cookbooks/flags-and-latches/index.html">Flags and Latches</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="cookbooks/flags-and-latches/flags.html">Flags, Counters and Bitmaps</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cookbooks/flags-and-latches/latches.html">Latches</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cookbooks/flags-and-latches/stash.html">Using STASH to remember where locos are parked</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="cookbooks/neopixels/index.html">NeoPixel Support</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="cookbooks/neopixels/neopixels.html">Setting neopixels</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cookbooks/neopixels/signals.html">Neopixel signals</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="cookbooks/turnouts/index.html">Turnouts/Points</a><ul>
@@ -329,6 +320,22 @@
 <li class="toctree-l4"><a class="reference internal" href="cookbooks/turnouts/toggle-with-button.html">Toggle turnouts/points with button or sensor</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="cookbooks/route-button-control.html">Manipulating Route Buttons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cookbooks/vpins.html">Virtual Bitmap device pins (VPINs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cookbooks/animation-sensors.html">Buttons and Switches</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cookbooks/estop-button.html">Emergency stop button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cookbooks/neopixels/index.html">NeoPixel Support</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cookbooks/neopixels/neopixels.html">Setting neopixels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cookbooks/neopixels/signals.html">Neopixel signals</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cookbooks/flashing-signals.html">Signals with flashing (Blink)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cookbooks/flags-and-latches/index.html">Flags and Latches</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cookbooks/flags-and-latches/flags.html">Flags, Counters and Bitmaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cookbooks/flags-and-latches/latches.html">Latches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cookbooks/flags-and-latches/stash.html">Using STASH to remember where locos are parked</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="cookbooks/advanced/index.html">Advanced EXRAIL Sequences</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="cookbooks/advanced/display-locos-on-oled.html">Display Loco speeds on OLED (Advanced)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cookbooks/advanced/analog-sensors.html">Analog Sensors</a></li>
@@ -337,18 +344,11 @@
 <li class="toctree-l4"><a class="reference internal" href="cookbooks/advanced/passing-locos-between-sequences.html">Passing locos between sequences</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="cookbooks/timecontrol.html">Time Control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cookbooks/various-devices/index.html">Supporting Various Additional Devices</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="cookbooks/various-devices/duinoNodes.html">Lew’s Duino Gear boards</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cookbooks/various-devices/tm-1638.html">TM1638 Buttons, leds and 7 segment display</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cookbooks/various-devices/trainbrains.html">Trainbrains Devices</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="cookbooks/editing-tricks/index.html">Editing - Tips and Tricks</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="cookbooks/editing-tricks/multi-files.html">Multiple Files in EXRAIL</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cookbooks/editing-tricks/multiple-command-stations.html">Maintaining multiple command stations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cookbooks/editing-tricks/naming-a-sequence.html">Naming sequences for easy commands</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cookbooks/editing-tricks/using-call-return.html">Using CALL and RETURN</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cookbooks/editing-tricks/using-macros.html">Using C++ Macros</a></li>
 </ul>
 </li>
 </ul>
@@ -1069,6 +1069,7 @@
 <li><p><a class="reference internal" href="#endif"><span class="std std-ref">ENDIF - Required to end an IF/IFNOT/etc.</span></a></p></li>
 <li><p><a class="reference internal" href="#endtask"><span class="std std-ref">ENDTASK - Completes a Sequence/Route/Animation/Event, or any other automation</span></a></p></li>
 <li><p><a class="reference internal" href="#exrail"><span class="std std-ref">EXRAIL - Deprecated - Do not use</span></a></p></li>
+<li><p><a class="reference internal" href="#exrail-withrottle"><span class="std std-ref">WITHROTTLE( &quot;msg&quot; ) - Writes a message to WiThrottle clients</span></a></p></li>
 <li><p><a class="reference internal" href="#estop"><span class="std std-ref">ESTOP - Emergency stops all locomotives</span></a></p></li>
 <li><p><a class="reference internal" href="#extt-turntable"><span class="std std-ref">EXTT_TURNTABLE( id, vpin, home_angle, [, &quot;description&quot;] ) - Define an EX-Turntable turntable/traverser</span></a></p></li>
 <li><p><a class="reference internal" href="#fade"><span class="std std-ref">FADE( vpin, value, ms ) - Fade an LED</span></a></p></li>
@@ -1196,10 +1197,14 @@
 <li><p><a class="reference internal" href="#virtual-turnout"><span class="std std-ref">VIRTUAL_TURNOUT( turnout_id [, &quot;description&quot;]|HIDDEN ) - Define a virtual turnout, which is backed by another automation sequence</span></a></p></li>
 <li><p><a class="reference internal" href="#waitfor"><span class="std std-ref">WAITFOR( pin ) - Wait for a servo motion to complete prior to continuing</span></a></p></li>
 <li><p><a class="reference internal" href="#waitfortt"><span class="std std-ref">WAITFORTT( id ) - Wait for EX-Turntable turntable/traverser to complete a rotation</span></a></p></li>
-<li><p><a class="reference internal" href="#exrail-withrottle"><span class="std std-ref">WITHROTTLE( &quot;msg&quot; ) - Writes a message to WiThrottle clients</span></a></p></li>
 <li><p><a class="reference internal" href="#xfoff"><span class="std std-ref">XFOFF( cab, func ) - Send DCC function OFF to specific cab</span></a></p></li>
 <li><p><a class="reference internal" href="#xfon"><span class="std std-ref">XFON( cab, func )` - Send DCC function ON to specific cab</span></a></p></li>
 <li><p><a class="reference internal" href="#xftoggle"><span class="std std-ref">XFTOGGLE( loco, func ) - Toggle DCC function on specific loco</span></a></p></li>
+<li><p><a class="reference internal" href="#xfwd"><span class="std std-ref">XFWD( loco, speed ) - Sends DCC speed to a loco in forward direction</span></a></p></li>
+<li><p><a class="reference internal" href="#xpom"><span class="std std-ref">XPOM( loco, cv, value ) - Write CV value to specified loco on main</span></a></p></li>
+<li><p><a class="reference internal" href="#xrev"><span class="std std-ref">XREV( loco, speed ) - Sends DCC speed to a loco in reverse direction</span></a></p></li>
+<li><p><a class="reference internal" href="#xrestore-speed"><span class="std std-ref">XRESTORE_SPEED( loco ) - Restores the saved speed of a loco</span></a></p></li>
+<li><p><a class="reference internal" href="#xsave-speed"><span class="std std-ref">XSAVE_SPEED( loco ) - Saves the current speed of a loco</span></a></p></li>
 </ul>
 </details><p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
@@ -1441,7 +1446,6 @@
 </section>
 <section id="route-caption-route-id-caption-change-the-label-of-the-route-button">
 <span id="route-caption"></span><h4><a class="toc-backref" href="#id90" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ROUTE_CAPTION(</span> <span class="pre">route_id,</span> <span class="pre">&quot;caption&quot;</span> <span class="pre">)</span></code> - Change the label of the Route button</a><a class="headerlink" href="#route-caption-route-id-caption-change-the-label-of-the-route-button" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>Dynamically change the label of the Route button.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>route_id</strong> - id of the route to change <br /> &gt; <strong>caption</strong> - text to replace on the route ‘button’ label</p>
 <details class="summary-for-example-click-to-show">
@@ -1501,7 +1505,6 @@
 </section>
 <section id="route-active-route-id-activate-a-route">
 <span id="route-active"></span><h4><a class="toc-backref" href="#id91" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ROUTE_ACTIVE(</span> <span class="pre">route_id</span> <span class="pre">)</span></code> - Activate a Route</a><a class="headerlink" href="#route-active-route-id-activate-a-route" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>Dynamically flag a Route as active.</p>
 <p>See example in ROUTE_CAPTION.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>route_id</strong> - id of the route to activate <br /></p>
@@ -1509,7 +1512,6 @@
 </section>
 <section id="route-inactive-route-id-deactivate-a-route">
 <span id="route-inactive"></span><h4><a class="toc-backref" href="#id92" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ROUTE_INACTIVE(</span> <span class="pre">route_id</span> <span class="pre">)</span></code> - Deactivate a Route</a><a class="headerlink" href="#route-inactive-route-id-deactivate-a-route" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>Dynamically flag a Route as inactive.</p>
 <p>See example in ROUTE_CAPTION.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>route_id</strong> - id of the route to deactivate <br /></p>
@@ -1517,21 +1519,18 @@
 </section>
 <section id="route-hidden-route-id-hide-a-route-from-display">
 <span id="route-hidden"></span><h4><a class="toc-backref" href="#id93" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ROUTE_HIDDEN(</span> <span class="pre">route_id</span> <span class="pre">)</span></code> - Hide a Route from display</a><a class="headerlink" href="#route-hidden-route-id-hide-a-route-from-display" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>Dynamically hide a Route.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>route_id</strong> - id of the route to hide <br /></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="route-disabled-route-id-disable-a-route">
 <span id="route-disabled"></span><h4><a class="toc-backref" href="#id94" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ROUTE_DISABLED(</span> <span class="pre">route_id</span> <span class="pre">)</span></code> - disable a Route</a><a class="headerlink" href="#route-disabled-route-id-disable-a-route" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>Dynamically disable a Route.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>route_id</strong> - id of the route to disable <br /></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="stash-stash-id-stashes-the-current-loco-invert">
 <span id="stash"></span><h4><a class="toc-backref" href="#id95" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">STASH(</span> <span class="pre">stash_id</span> <span class="pre">)</span></code> - Stashes the current loco/invert</a><a class="headerlink" href="#stash-stash-id-stashes-the-current-loco-invert" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p><em>Parameters:</em> <br /> &gt; <strong>stash_id</strong> - id of the stash location to store the value (0-???) <br /></p>
 <p>Stashes/Stores the current loco/invert in the specified stash location.</p>
 <div class="admonition note">
@@ -1542,21 +1541,18 @@
 </section>
 <section id="clear-stash-stash-id-zeroes-the-specified-stash">
 <span id="clear-stash"></span><h4><a class="toc-backref" href="#id96" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">CLEAR_STASH(</span> <span class="pre">stash_id</span> <span class="pre">)</span></code> - Zeroes the specified stash</a><a class="headerlink" href="#clear-stash-stash-id-zeroes-the-specified-stash" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>Zeroes/Empties the specified stash location.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>stash_id</strong> - id of the stash location to store the value (0-???) <br /></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="clear-all-stash-zeroes-all-stashes">
 <span id="clear-all-stash"></span><h4><a class="toc-backref" href="#id97" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">CLEAR_ALL_STASH</span></code> - Zeroes all stashes</a><a class="headerlink" href="#clear-all-stash-zeroes-all-stashes" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>Zeroes/Empties all stash locations.</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="pickup-stash-stash-id-retrieves-and-sets-the-loco-invert-from-the-specified-stash">
 <span id="pickup-stash"></span><h4><a class="toc-backref" href="#id98" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">PICKUP_STASH(</span> <span class="pre">stash_id</span> <span class="pre">)</span></code> - Retrieves and sets the loco/invert from the specified stash</a><a class="headerlink" href="#pickup-stash-stash-id-retrieves-and-sets-the-loco-invert-from-the-specified-stash" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>Retrieves and sets the loco/invert from the specified stash location.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>stash_id</strong> - id of the stash location to store the value (0-???) <br /></p>
 <p><hr class="hr-dashed" /></p>
@@ -1656,7 +1652,6 @@ Must be proceeded by an <code class="docutils literal notranslate"><span class="
 </section>
 <section id="hal-ignore-defaults-disable-default-mcp23017-and-pca9685-hal-devices">
 <span id="hal-ignore-defaults"></span><h4><code class="docutils literal notranslate"><span class="pre">HAL_IGNORE_DEFAULTS</span></code> - Disable default MCP23017 and PCA9685 HAL devices<a class="headerlink" href="#hal-ignore-defaults-disable-default-mcp23017-and-pca9685-hal-devices" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>Disable default MCP23017 and PCA9685 HAL devices</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
 </section>
@@ -1711,7 +1706,6 @@ Must be proceeded by an <code class="docutils literal notranslate"><span class="
 </section>
 <section id="dccx-signal-address-redaspect-amberaspect-greenaspect-defines-a-signal-with-id-as-dcc-address">
 <span id="dccex-signal"></span><h4><a class="toc-backref" href="#id109" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">DCCX_SIGNAL(</span> <span class="pre">Address,</span> <span class="pre">redAspect,</span> <span class="pre">amberAspect,</span> <span class="pre">greenAspect</span> <span class="pre">)</span></code> - Defines a signal (with id as dcc address)</a><a class="headerlink" href="#dccx-signal-address-redaspect-amberaspect-greenaspect-defines-a-signal-with-id-as-dcc-address" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>This defines a signal (with id same as dcc address) that can be operated
 by the RED/AMBER/GREEN commands.   In each case the command uses the signal address to refer to the signal and the aspect chosen depends on the use of the RED AMBER or GREEN command sent. Other aspects may be sent but will require the direct use of the ASPECT command.</p>
 <p>The IFRED/IFAMBER/IFGREEN  and ONRED/ONAMBER/ONGREEN commands continue to operate as for any other signal type. It is important to be aware that use of the ASPECT (see below) or &lt;A&gt; commands will correctly set the IF flags and call the ON handlers if ASPECT is used to set one of the three aspects defined in the DCCX_SIGNAL command.</p>
@@ -1762,7 +1756,6 @@ by the RED/AMBER/GREEN commands.   In each case the command uses the signal addr
 </section>
 <section id="aspect-address-aspect-command-for-dcc-extended-accessories">
 <span id="aspect"></span><h4><a class="toc-backref" href="#id117" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ASPECT(</span> <span class="pre">address,</span> <span class="pre">aspect</span> <span class="pre">)</span></code> - Command for DCC Extended Accessories</a><a class="headerlink" href="#aspect-address-aspect-command-for-dcc-extended-accessories" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>This command sends an extended accessory packet to the track, normally used to set
 a signal aspect. Aspect numbers are undefined as standards except for 0 which is
 always considered a stop.  The exact aspect codes to be used must be determined from the documentation for the accessory decoder in use.</p>
@@ -1898,7 +1891,6 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 </section>
 <section id="toggle-turnout-turnout-id-toggle-a-defined-turnout-point-between-close-throw">
 <span id="toggle-turnout"></span><h4><a class="toc-backref" href="#id132" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">TOGGLE_TURNOUT(</span> <span class="pre">turnout_id</span> <span class="pre">)</span></code> - Toggle a defined turnout/point between CLOSE/THROW</a><a class="headerlink" href="#toggle-turnout-turnout-id-toggle-a-defined-turnout-point-between-close-throw" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>Toggles the state of the specified turnout/point between closed and thrown.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>turnout_id</strong> - The id of the turnout/point to throw <br /></p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
@@ -1961,7 +1953,6 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 </section>
 <section id="turntable-features">
 <h4><a class="toc-backref" href="#id136" role="doc-backlink">Turntable features</a><a class="headerlink" href="#turntable-features" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p><hr class="hr-dashed" /></p>
 <p>All the below turntable/traverser definitions will define turntables/traversers that are advertised to throttles that understand them, unless the HIDDEN keyword is used.</p>
 <p>To fully define a turntable/traverser object, you need to define the object first, and then one or more positions.</p>
@@ -2053,7 +2044,6 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p><hr class="hr-dashed" /></p>
 <section id="jmri-sensor-vpin-count-creates-s-type-sensors-visible-to-jmri">
 <span id="jmri-sensor"></span><h4><a class="toc-backref" href="#id145" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">JMRI_SENSOR(vpin</span> <span class="pre">[,count])</span></code> - Creates &lt;S&gt; type sensors visible to JMRI</a><a class="headerlink" href="#jmri-sensor-vpin-count-creates-s-type-sensors-visible-to-jmri" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>This command causes the creation of <a class="reference internal" href="../throttles/software/jmri.html"><span class="doc">JMRI</span></a> &lt;S&gt; type sensors in a way that is simpler than repeating lines of &lt;S&gt; commands in mySetup.h.</p>
 <ul class="simple">
 <li><p>JMRI_SENSOR(100)   is equivalent to &lt;S 100 100 1&gt;</p></li>
@@ -2234,7 +2224,6 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 </section>
 <section id="onbutton-vpin-event-handler-for-debounced-button-presses">
 <span id="onbutton"></span><h4><a class="toc-backref" href="#id161" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONBUTTON(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - Event handler for debounced button presses</a><a class="headerlink" href="#onbutton-vpin-event-handler-for-debounced-button-presses" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>This new event handler is handy for mimic panel and other buttons that need to perform an action when a button is pressed, rather than having to create a sequence with a combination of <code class="docutils literal notranslate"><span class="pre">AFTER</span></code> and <code class="docutils literal notranslate"><span class="pre">IF</span></code> statements to debounce a button which quickly becomes very complicated.</p>
 <p>Note that this works for active low buttons only.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin to test</p>
@@ -2242,7 +2231,6 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 </section>
 <section id="onsensor-vpin-event-handler-for-sensors">
 <span id="onsensor"></span><h4><a class="toc-backref" href="#id162" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONSENSOR(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - Event handler for sensors</a><a class="headerlink" href="#onsensor-vpin-event-handler-for-sensors" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>A new event handler to perform actions when a sensor is activated. Like the other sensor triggers such as <code class="docutils literal notranslate"><span class="pre">IF</span></code>, <code class="docutils literal notranslate"><span class="pre">AT</span></code>, and <code class="docutils literal notranslate"><span class="pre">AFTER</span></code>, a negative value can be used for an active high sensor.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to test</p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
@@ -2287,7 +2275,6 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 </section>
 <section id="blink-vpin-onms-offms-blink-an-output-pin">
 <span id="blink"></span><h4><a class="toc-backref" href="#id166" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">BLINK(</span> <span class="pre">vpin,</span> <span class="pre">onMs,</span> <span class="pre">offMs</span> <span class="pre">)</span></code> - Blink an output pin</a><a class="headerlink" href="#blink-vpin-onms-offms-blink-an-output-pin" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>This will start a pin/Vpin blinking until such time as it is <code class="docutils literal notranslate"><span class="pre">SET</span></code>, <code class="docutils literal notranslate"><span class="pre">RESET</span></code>, or set via a signal operation.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> -  pin of the LED <br /> &gt; <strong>onMs</strong> - time/duration for the pin to be on in milliseconds <br /> &gt; <strong>offMs</strong> - off time/duration in milliseconds</p>
 <blockquote>
@@ -2305,7 +2292,6 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 </section>
 <section id="configure-servo-vpin-pos1-pos2-profile-define-led-s-connected-to-pca9685-boards">
 <span id="config-servo"></span><h4><a class="toc-backref" href="#id168" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">CONFIGURE_SERVO(vpin,</span> <span class="pre">pos1,</span> <span class="pre">pos2,</span> <span class="pre">profile)</span></code> - Define LED’s connected to PCA9685 boards</a><a class="headerlink" href="#configure-servo-vpin-pos1-pos2-profile-define-led-s-connected-to-pca9685-boards" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>This command offers a more convenient way of defining an LED connected to a PCA9685 pin, instead of performing the HAL call in halSetup.h</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - The VPin the LED is connected to, e.g. 101 for the second pin on the first PCA9685 servo module <br /> &gt; <strong>pos1</strong> - The desired intensity (brightness) of the LED when turned on, with 0 being off, and 4095 being 100%) <br /> &gt; <strong>pos2</strong> - The desired intensity (brightness) of the LED when turned off <br /> &gt; <strong>profile</strong> - the required profile <br /></p>
 <p><em>Examples:</em> <br /> previously in mySetup.h you would have used: <br /> IODevice::configureServo(112,2437,0,PCA9685::NoPowerOff); <br /> Now in myAutomation.h use: <br /> <br /> CONFIGURE_SERVO(111, 2437, 0, PCA9685::NoPowerOff)</p>
@@ -2313,7 +2299,6 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 </section>
 <section id="neopixel-vpin-red-green-blue-count-controls-the-colour-of-attached-neopixel-leds">
 <span id="neopixel"></span><h4><a class="toc-backref" href="#id169" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">NEOPIXEL(</span> <span class="pre">vpin,</span> <span class="pre">red,</span> <span class="pre">green,</span> <span class="pre">blue</span> <span class="pre">[,count]</span> <span class="pre">)</span></code> - Controls the colour of attached Neopixel LEDs</a><a class="headerlink" href="#neopixel-vpin-red-green-blue-count-controls-the-colour-of-attached-neopixel-leds" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>Controls the colour of one or more attached Neopixel LEDs</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - The VPin the first Neopixel connected that you which to change|BR| &gt; <strong>red</strong> - The desired red colour value (0-255) <br /> &gt; <strong>green</strong> - The desired red colour value (0-255) <br /> &gt; <strong>blue</strong> - The desired red colour value (0-255) <br /> &gt; <strong>count</strong> - number of Neopixels to change, starting from and including <strong>vpin</strong>. Default is one <br /></p>
 <p><em>Examples:</em> <br /> NEOPIXEL(100,255,255,255,10)  // set 10 Neopixels LEDs to white starting at vpin 100</p>
@@ -2321,7 +2306,6 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 </section>
 <section id="neopixel-signal-signalid-red-green-blue-controls-the-colour-of-attached-neopixel-led">
 <span id="neopixel-signal"></span><h4><a class="toc-backref" href="#id170" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">NEOPIXEL_SIGNAL(</span> <span class="pre">signalid,</span> <span class="pre">red,</span> <span class="pre">green,</span> <span class="pre">blue</span> <span class="pre">)</span></code> - Controls the colour of attached Neopixel LED</a><a class="headerlink" href="#neopixel-signal-signalid-red-green-blue-controls-the-colour-of-attached-neopixel-led" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>Controls the colour of one attached Neopixel LED</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>signalid</strong> - The VPin the first Neopixel connected that you which to change|BR| &gt; <strong>red</strong> - The desired red colour value (0-255) <br /> &gt; <strong>green</strong> - The desired red colour value (0-255) <br /> &gt; <strong>blue</strong> - The desired red colour value (0-255) <br /></p>
 <p><em>Examples:</em> <br /> NEOPIXEL_SIGNAL(100,255,255,255)  // set one Neopixel LED to white</p>
@@ -2329,7 +2313,6 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 </section>
 <section id="anout-vpin-value-param1-param2-analog-output">
 <span id="anout"></span><h4><a class="toc-backref" href="#id171" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ANOUT(</span> <span class="pre">vpin,</span> <span class="pre">value,</span> <span class="pre">param1,</span> <span class="pre">param2)</span></code> - Analog output ??</a><a class="headerlink" href="#anout-vpin-value-param1-param2-analog-output" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - first VPIN allocated <br /> &gt; <strong>value</strong> - ??? <br /> &gt; <strong>param1</strong> - ??? <br /> &gt; <strong>param2</strong> - ??? <br /></p>
 <p><em>Examples:</em> <br /> ANOUT(10000,23,0,0) // will play the 23rd mp3 file. <br /> ANOUT(10000,23,30,0) // will do the same thing, as well as setting the volume to 30 (maximum value).</p>
 <details class="summary-for-example-click-to-show">
@@ -2370,7 +2353,6 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 </section>
 <section id="playsound-vpin-filenumber-volume-play-mp3-files-from-a-micro-sd-card">
 <span id="playsound"></span><h4><a class="toc-backref" href="#id172" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">PLAYSOUND(</span> <span class="pre">vpin,</span> <span class="pre">fileNumber,</span> <span class="pre">volume</span> <span class="pre">)</span></code> - Play mp3 files from a Micro-SD card</a><a class="headerlink" href="#playsound-vpin-filenumber-volume-play-mp3-files-from-a-micro-sd-card" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p>EXRAIL Function to Play mp3 files from a Micro-SD card, using a DFPlayer MP3 Module.</p>
 <p>Alias of ANOUT.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - VPIN allocated as DFPLayer <br /> &gt; <strong>fileNumber</strong> - Play the File# <br /> &gt; <strong>volume</strong> - volume (0-30) <br /></p>
@@ -2448,9 +2430,6 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <li><p><a class="reference internal" href="#deactivate-addr-sub-addr-sends-a-dcc-accessory-packet-with-value-0" id="id182"><code class="docutils literal notranslate"><span class="pre">DEACTIVATE(</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">)</span></code> - Sends a DCC accessory packet with value 0</a></p></li>
 <li><p><a class="reference internal" href="#deactivatel-addr-sends-a-dcc-accessory-packet-with-value-0-to-a-linear-address" id="id183"><code class="docutils literal notranslate"><span class="pre">DEACTIVATEL(</span> <span class="pre">addr</span> <span class="pre">)</span></code> - Sends a DCC accessory packet with value 0 to a linear address</a></p></li>
 <li><p><a class="reference internal" href="#dccactivate-addr-sub-addr-tba" id="id184"><code class="docutils literal notranslate"><span class="pre">DCCACTIVATE(</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">)</span></code> - TBA</a></p></li>
-<li><p><a class="reference internal" href="#xfon-cab-func-send-dcc-function-on-to-specific-cab" id="id185"><code class="docutils literal notranslate"><span class="pre">XFON(</span> <span class="pre">cab,</span> <span class="pre">func</span> <span class="pre">)`</span></code> - Send DCC function ON to specific cab</a></p></li>
-<li><p><a class="reference internal" href="#xfoff-cab-func-send-dcc-function-off-to-specific-cab" id="id186"><code class="docutils literal notranslate"><span class="pre">XFOFF(</span> <span class="pre">cab,</span> <span class="pre">func</span> <span class="pre">)</span></code> - Send DCC function OFF to specific cab</a></p></li>
-<li><p><a class="reference internal" href="#xftoggle-loco-func-toggle-dcc-function-on-specific-loco" id="id187"><code class="docutils literal notranslate"><span class="pre">XFTOGGLE(</span> <span class="pre">loco,</span> <span class="pre">func</span> <span class="pre">)</span></code> - Toggle DCC function on specific loco</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
@@ -2508,25 +2487,6 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <section id="dccactivate-addr-sub-addr-tba">
 <span id="dccactivate"></span><h4><a class="toc-backref" href="#id184" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">DCCACTIVATE(</span> <span class="pre">addr,</span> <span class="pre">sub_addr</span> <span class="pre">)</span></code> - TBA</a><a class="headerlink" href="#dccactivate-addr-sub-addr-tba" title="Link to this heading"></a></h4>
 <p><em>Parameters:</em> <br /> &gt; <strong>addr</strong> - DCC address ??? <br /> &gt; <strong>Sub_addr</strong> - sub-address ???</p>
-<p><hr class="hr-dashed" /></p>
-</section>
-<section id="xfon-cab-func-send-dcc-function-on-to-specific-cab">
-<span id="xfon"></span><h4><a class="toc-backref" href="#id185" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">XFON(</span> <span class="pre">cab,</span> <span class="pre">func</span> <span class="pre">)`</span></code> - Send DCC function ON to specific cab</a><a class="headerlink" href="#xfon-cab-func-send-dcc-function-on-to-specific-cab" title="Link to this heading"></a></h4>
-<p>Send DCC function ON to specific cab (e.g. coach lights) <em>Not for Loco use - use FON instead!</em></p>
-<p><em>Parameters:</em> <br /> &gt; <strong>cab</strong> - DCC address of your loco <br /> &gt; <strong>func</strong> - Function number (0-31)</p>
-<p><hr class="hr-dashed" /></p>
-</section>
-<section id="xfoff-cab-func-send-dcc-function-off-to-specific-cab">
-<span id="xfoff"></span><h4><a class="toc-backref" href="#id186" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">XFOFF(</span> <span class="pre">cab,</span> <span class="pre">func</span> <span class="pre">)</span></code> - Send DCC function OFF to specific cab</a><a class="headerlink" href="#xfoff-cab-func-send-dcc-function-off-to-specific-cab" title="Link to this heading"></a></h4>
-<p>Send DCC function OFF to specific cab (e.g. coach lights) Not for Loco use - use FON instead!</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>cab</strong> - DCC address of your loco <br /> &gt; <strong>func</strong> - Function number (0-31)</p>
-<p><hr class="hr-dashed" /></p>
-</section>
-<section id="xftoggle-loco-func-toggle-dcc-function-on-specific-loco">
-<span id="xftoggle"></span><h4><a class="toc-backref" href="#id187" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">XFTOGGLE(</span> <span class="pre">loco,</span> <span class="pre">func</span> <span class="pre">)</span></code> - Toggle DCC function on specific loco</a><a class="headerlink" href="#xftoggle-loco-func-toggle-dcc-function-on-specific-loco" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
-<p>Toggle DCC function on loco with the specified DCC address.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>loco</strong> - DCC address of your loco <br /> &gt; <strong>func</strong> - Function number (0-31)</p>
 </section>
 </section>
 <hr class="docutils" />
@@ -2535,27 +2495,27 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <nav class="contents in-this-section local" id="id11">
 <p class="topic-title">In This Section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#ontime-value-event-handler-for-when-the-specified-time-is-reached" id="id188"><code class="docutils literal notranslate"><span class="pre">ONTIME(</span> <span class="pre">value</span> <span class="pre">)</span></code> - Event handler for when the specified time is reached</a></p></li>
-<li><p><a class="reference internal" href="#onclocktime-hours-mins-event-handler-for-when-the-specified-clock-time-is-reached" id="id189"><code class="docutils literal notranslate"><span class="pre">ONCLOCKTIME(</span> <span class="pre">hours,</span> <span class="pre">mins</span> <span class="pre">)</span></code> - Event handler for when the specified clock time is reached</a></p></li>
-<li><p><a class="reference internal" href="#onclockmins-mins-event-handler-to-be-repeated-the-same-time-every-hour" id="id190"><code class="docutils literal notranslate"><span class="pre">ONCLOCKMINS(</span> <span class="pre">mins</span> <span class="pre">)</span></code> - Event handler to be repeated the same time every hour</a></p></li>
+<li><p><a class="reference internal" href="#ontime-value-event-handler-for-when-the-specified-time-is-reached" id="id185"><code class="docutils literal notranslate"><span class="pre">ONTIME(</span> <span class="pre">value</span> <span class="pre">)</span></code> - Event handler for when the specified time is reached</a></p></li>
+<li><p><a class="reference internal" href="#onclocktime-hours-mins-event-handler-for-when-the-specified-clock-time-is-reached" id="id186"><code class="docutils literal notranslate"><span class="pre">ONCLOCKTIME(</span> <span class="pre">hours,</span> <span class="pre">mins</span> <span class="pre">)</span></code> - Event handler for when the specified clock time is reached</a></p></li>
+<li><p><a class="reference internal" href="#onclockmins-mins-event-handler-to-be-repeated-the-same-time-every-hour" id="id187"><code class="docutils literal notranslate"><span class="pre">ONCLOCKMINS(</span> <span class="pre">mins</span> <span class="pre">)</span></code> - Event handler to be repeated the same time every hour</a></p></li>
 </ul>
 </nav>
 <p>Also refer to <a class="reference internal" href="../ex-fastclock/cs-commands.html#controlling-exrail-by-time"><span class="std std-ref">Controlling EXRAIL by Time</span></a>.</p>
 <p><hr class="hr-dashed" /></p>
 <section id="ontime-value-event-handler-for-when-the-specified-time-is-reached">
-<span id="ontime"></span><h4><a class="toc-backref" href="#id188" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONTIME(</span> <span class="pre">value</span> <span class="pre">)</span></code> - Event handler for when the specified time is reached</a><a class="headerlink" href="#ontime-value-event-handler-for-when-the-specified-time-is-reached" title="Link to this heading"></a></h4>
+<span id="ontime"></span><h4><a class="toc-backref" href="#id185" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONTIME(</span> <span class="pre">value</span> <span class="pre">)</span></code> - Event handler for when the specified time is reached</a><a class="headerlink" href="#ontime-value-event-handler-for-when-the-specified-time-is-reached" title="Link to this heading"></a></h4>
 <p>Event handler for when the specified time is reached</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>value</strong> - value to test against</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="onclocktime-hours-mins-event-handler-for-when-the-specified-clock-time-is-reached">
-<span id="onclocktime"></span><h4><a class="toc-backref" href="#id189" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONCLOCKTIME(</span> <span class="pre">hours,</span> <span class="pre">mins</span> <span class="pre">)</span></code> - Event handler for when the specified clock time is reached</a><a class="headerlink" href="#onclocktime-hours-mins-event-handler-for-when-the-specified-clock-time-is-reached" title="Link to this heading"></a></h4>
+<span id="onclocktime"></span><h4><a class="toc-backref" href="#id186" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONCLOCKTIME(</span> <span class="pre">hours,</span> <span class="pre">mins</span> <span class="pre">)</span></code> - Event handler for when the specified clock time is reached</a><a class="headerlink" href="#onclocktime-hours-mins-event-handler-for-when-the-specified-clock-time-is-reached" title="Link to this heading"></a></h4>
 <p>Event handler for when the specified clock time is reached</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>hour</strong> - hour to test against <br /> &gt; <strong>minute</strong> - minute to test against</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="onclockmins-mins-event-handler-to-be-repeated-the-same-time-every-hour">
-<span id="onclockmins"></span><h4><a class="toc-backref" href="#id190" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONCLOCKMINS(</span> <span class="pre">mins</span> <span class="pre">)</span></code> - Event handler to be repeated the same time every hour</a><a class="headerlink" href="#onclockmins-mins-event-handler-to-be-repeated-the-same-time-every-hour" title="Link to this heading"></a></h4>
+<span id="onclockmins"></span><h4><a class="toc-backref" href="#id187" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONCLOCKMINS(</span> <span class="pre">mins</span> <span class="pre">)</span></code> - Event handler to be repeated the same time every hour</a><a class="headerlink" href="#onclockmins-mins-event-handler-to-be-repeated-the-same-time-every-hour" title="Link to this heading"></a></h4>
 <p>Event handler to be repeated the same time every hour</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>minute</strong> - minute to test against</p>
 </section>
@@ -2569,111 +2529,118 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <nav class="contents in-this-section local" id="id12">
 <p class="topic-title">In This Section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#estop-emergency-stops-all-locomotives" id="id191"><code class="docutils literal notranslate"><span class="pre">ESTOP</span></code> - Emergency stops all locomotives</a></p></li>
-<li><p><a class="reference internal" href="#setloco-loco-set-the-loco-address-for-this-task" id="id192"><code class="docutils literal notranslate"><span class="pre">SETLOCO(</span> <span class="pre">loco</span> <span class="pre">)</span></code> - Set the loco address for this task</a></p></li>
-<li><p><a class="reference internal" href="#sendloco-loco-route-start-route-sequence-with-a-specified-loco" id="id193"><code class="docutils literal notranslate"><span class="pre">SENDLOCO(</span> <span class="pre">loco,</span> <span class="pre">route</span> <span class="pre">)</span></code> - Start route/sequence with a specified loco</a></p></li>
-<li><p><a class="reference internal" href="#read-loco-read-loco-id-from-prog-track" id="id194"><code class="docutils literal notranslate"><span class="pre">READ_LOCO</span></code> - Read loco ID from prog track</a></p></li>
-<li><p><a class="reference internal" href="#fwd-speed-drive-loco-forward-at-dcc-speed" id="id195"><code class="docutils literal notranslate"><span class="pre">FWD(</span> <span class="pre">speed</span> <span class="pre">)</span></code> - Drive loco forward at DCC speed</a></p></li>
-<li><p><a class="reference internal" href="#rev-speed-drive-loco-in-reverse-at-dcc-speed" id="id196"><code class="docutils literal notranslate"><span class="pre">REV(</span> <span class="pre">speed</span> <span class="pre">)</span></code> - Drive loco in reverse at DCC speed</a></p></li>
-<li><p><a class="reference internal" href="#speed-speed-drive-loco-in-current-direction-at-dcc-speed" id="id197"><code class="docutils literal notranslate"><span class="pre">SPEED(</span> <span class="pre">speed</span> <span class="pre">)</span></code> - Drive loco in current direction at DCC speed</a></p></li>
-<li><p><a class="reference internal" href="#stop-set-loco-speed-to-0" id="id198"><code class="docutils literal notranslate"><span class="pre">STOP</span></code> - Set loco speed to 0</a></p></li>
-<li><p><a class="reference internal" href="#fon-func-turn-on-loco-function" id="id199"><code class="docutils literal notranslate"><span class="pre">FON(</span> <span class="pre">func</span> <span class="pre">)</span></code> - Turn on loco function</a></p></li>
-<li><p><a class="reference internal" href="#foff-func-turn-off-loco-function" id="id200"><code class="docutils literal notranslate"><span class="pre">FOFF(</span> <span class="pre">func</span> <span class="pre">)</span></code> - Turn off loco function</a></p></li>
-<li><p><a class="reference internal" href="#ftoggle-func-toggle-the-state-of-a-loco-s-function" id="id201"><code class="docutils literal notranslate"><span class="pre">FTOGGLE(</span> <span class="pre">func</span> <span class="pre">)</span></code> - Toggle the state of a loco’s function</a></p></li>
-<li><p><a class="reference internal" href="#invert-direction-switches-fwd-rev-meaning-for-loco" id="id202"><code class="docutils literal notranslate"><span class="pre">INVERT_DIRECTION</span></code> - Switches FWD/REV meaning for loco</a></p></li>
-<li><p><a class="reference internal" href="#roster-loco-name-func-map-provide-roster-info-for-a-specified-loco" id="id203"><code class="docutils literal notranslate"><span class="pre">ROSTER(</span> <span class="pre">loco,</span> <span class="pre">&quot;name&quot;,</span> <span class="pre">&quot;func_map&quot;</span> <span class="pre">)</span></code> - Provide roster info for a specified loco</a></p></li>
-<li><p><a class="reference internal" href="#pom-cv-value-program-cv-value-on-main" id="id204"><code class="docutils literal notranslate"><span class="pre">POM(</span> <span class="pre">cv,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Program CV value on main</a></p></li>
-<li><p><a class="reference internal" href="#ifloco-loco-perform-commands-if-the-specified-loco-id-is-defined-for-this-sequence" id="id205"><code class="docutils literal notranslate"><span class="pre">IFLOCO(</span> <span class="pre">loco</span> <span class="pre">)</span></code> - perform commands if the specified loco ID is defined for this sequence</a></p></li>
-<li><p><a class="reference internal" href="#forget-forget-the-loco-in-the-running-automation-sequence" id="id206"><code class="docutils literal notranslate"><span class="pre">FORGET</span></code> - Forget the loco in the running automation/sequence</a></p></li>
+<li><p><a class="reference internal" href="#estop-emergency-stops-all-locomotives" id="id188"><code class="docutils literal notranslate"><span class="pre">ESTOP</span></code> - Emergency stops all locomotives</a></p></li>
+<li><p><a class="reference internal" href="#setloco-loco-set-the-loco-address-for-this-task" id="id189"><code class="docutils literal notranslate"><span class="pre">SETLOCO(</span> <span class="pre">loco</span> <span class="pre">)</span></code> - Set the loco address for this task</a></p></li>
+<li><p><a class="reference internal" href="#sendloco-loco-route-start-route-sequence-with-a-specified-loco" id="id190"><code class="docutils literal notranslate"><span class="pre">SENDLOCO(</span> <span class="pre">loco,</span> <span class="pre">route</span> <span class="pre">)</span></code> - Start route/sequence with a specified loco</a></p></li>
+<li><p><a class="reference internal" href="#read-loco-read-loco-id-from-prog-track" id="id191"><code class="docutils literal notranslate"><span class="pre">READ_LOCO</span></code> - Read loco ID from prog track</a></p></li>
+<li><p><a class="reference internal" href="#fwd-speed-drive-loco-forward-at-dcc-speed" id="id192"><code class="docutils literal notranslate"><span class="pre">FWD(</span> <span class="pre">speed</span> <span class="pre">)</span></code> - Drive loco forward at DCC speed</a></p></li>
+<li><p><a class="reference internal" href="#rev-speed-drive-loco-in-reverse-at-dcc-speed" id="id193"><code class="docutils literal notranslate"><span class="pre">REV(</span> <span class="pre">speed</span> <span class="pre">)</span></code> - Drive loco in reverse at DCC speed</a></p></li>
+<li><p><a class="reference internal" href="#speed-speed-drive-loco-in-current-direction-at-dcc-speed" id="id194"><code class="docutils literal notranslate"><span class="pre">SPEED(</span> <span class="pre">speed</span> <span class="pre">)</span></code> - Drive loco in current direction at DCC speed</a></p></li>
+<li><p><a class="reference internal" href="#stop-set-loco-speed-to-0" id="id195"><code class="docutils literal notranslate"><span class="pre">STOP</span></code> - Set loco speed to 0</a></p></li>
+<li><p><a class="reference internal" href="#fon-func-turn-on-loco-function" id="id196"><code class="docutils literal notranslate"><span class="pre">FON(</span> <span class="pre">func</span> <span class="pre">)</span></code> - Turn on loco function</a></p></li>
+<li><p><a class="reference internal" href="#foff-func-turn-off-loco-function" id="id197"><code class="docutils literal notranslate"><span class="pre">FOFF(</span> <span class="pre">func</span> <span class="pre">)</span></code> - Turn off loco function</a></p></li>
+<li><p><a class="reference internal" href="#ftoggle-func-toggle-the-state-of-a-loco-s-function" id="id198"><code class="docutils literal notranslate"><span class="pre">FTOGGLE(</span> <span class="pre">func</span> <span class="pre">)</span></code> - Toggle the state of a loco’s function</a></p></li>
+<li><p><a class="reference internal" href="#invert-direction-switches-fwd-rev-meaning-for-loco" id="id199"><code class="docutils literal notranslate"><span class="pre">INVERT_DIRECTION</span></code> - Switches FWD/REV meaning for loco</a></p></li>
+<li><p><a class="reference internal" href="#roster-loco-name-func-map-provide-roster-info-for-a-specified-loco" id="id200"><code class="docutils literal notranslate"><span class="pre">ROSTER(</span> <span class="pre">loco,</span> <span class="pre">&quot;name&quot;,</span> <span class="pre">&quot;func_map&quot;</span> <span class="pre">)</span></code> - Provide roster info for a specified loco</a></p></li>
+<li><p><a class="reference internal" href="#pom-cv-value-program-cv-value-on-main" id="id201"><code class="docutils literal notranslate"><span class="pre">POM(</span> <span class="pre">cv,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Program CV value on main</a></p></li>
+<li><p><a class="reference internal" href="#ifloco-loco-perform-commands-if-the-specified-loco-id-is-defined-for-this-sequence" id="id202"><code class="docutils literal notranslate"><span class="pre">IFLOCO(</span> <span class="pre">loco</span> <span class="pre">)</span></code> - perform commands if the specified loco ID is defined for this sequence</a></p></li>
+<li><p><a class="reference internal" href="#xfwd-loco-speed-sends-dcc-speed-to-a-loco-in-forward-direction" id="id203"><code class="docutils literal notranslate"><span class="pre">XFWD(</span> <span class="pre">loco,</span> <span class="pre">speed</span> <span class="pre">)</span></code> - Sends DCC speed to a loco in forward direction</a></p></li>
+<li><p><a class="reference internal" href="#xrev-loco-speed-sends-dcc-speed-to-a-loco-in-reverse-direction" id="id204"><code class="docutils literal notranslate"><span class="pre">XREV(</span> <span class="pre">loco,</span> <span class="pre">speed</span> <span class="pre">)</span></code> - Sends DCC speed to a loco in reverse direction</a></p></li>
+<li><p><a class="reference internal" href="#xfon-cab-func-send-dcc-function-on-to-specific-cab" id="id205"><code class="docutils literal notranslate"><span class="pre">XFON(</span> <span class="pre">cab,</span> <span class="pre">func</span> <span class="pre">)`</span></code> - Send DCC function ON to specific cab</a></p></li>
+<li><p><a class="reference internal" href="#xfoff-cab-func-send-dcc-function-off-to-specific-cab" id="id206"><code class="docutils literal notranslate"><span class="pre">XFOFF(</span> <span class="pre">cab,</span> <span class="pre">func</span> <span class="pre">)</span></code> - Send DCC function OFF to specific cab</a></p></li>
+<li><p><a class="reference internal" href="#xftoggle-loco-func-toggle-dcc-function-on-specific-loco" id="id207"><code class="docutils literal notranslate"><span class="pre">XFTOGGLE(</span> <span class="pre">loco,</span> <span class="pre">func</span> <span class="pre">)</span></code> - Toggle DCC function on specific loco</a></p></li>
+<li><p><a class="reference internal" href="#xpom-loco-cv-value-write-cv-value-to-specified-loco-on-main" id="id208"><code class="docutils literal notranslate"><span class="pre">XPOM(</span> <span class="pre">loco,</span> <span class="pre">cv,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Write CV value to specified loco on main</a></p></li>
+<li><p><a class="reference internal" href="#xsave-speed-loco-saves-the-current-speed-of-a-loco" id="id209"><code class="docutils literal notranslate"><span class="pre">XSAVE_SPEED(</span> <span class="pre">loco</span> <span class="pre">)</span></code> - Saves the current speed of a loco</a></p></li>
+<li><p><a class="reference internal" href="#xrestore-speed-loco-restores-the-saved-speed-of-a-loco" id="id210"><code class="docutils literal notranslate"><span class="pre">XRESTORE_SPEED(</span> <span class="pre">loco</span> <span class="pre">)</span></code> - Restores the saved speed of a loco</a></p></li>
+<li><p><a class="reference internal" href="#forget-forget-the-loco-in-the-running-automation-sequence" id="id211"><code class="docutils literal notranslate"><span class="pre">FORGET</span></code> - Forget the loco in the running automation/sequence</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
 <section id="estop-emergency-stops-all-locomotives">
-<span id="estop"></span><h4><a class="toc-backref" href="#id191" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ESTOP</span></code> - Emergency stops all locomotives</a><a class="headerlink" href="#estop-emergency-stops-all-locomotives" title="Link to this heading"></a></h4>
+<span id="estop"></span><h4><a class="toc-backref" href="#id188" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ESTOP</span></code> - Emergency stops all locomotives</a><a class="headerlink" href="#estop-emergency-stops-all-locomotives" title="Link to this heading"></a></h4>
 <p>Emergency stops all locomotives.</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="setloco-loco-set-the-loco-address-for-this-task">
-<span id="setloco"></span><h4><a class="toc-backref" href="#id192" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SETLOCO(</span> <span class="pre">loco</span> <span class="pre">)</span></code> - Set the loco address for this task</a><a class="headerlink" href="#setloco-loco-set-the-loco-address-for-this-task" title="Link to this heading"></a></h4>
+<span id="setloco"></span><h4><a class="toc-backref" href="#id189" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SETLOCO(</span> <span class="pre">loco</span> <span class="pre">)</span></code> - Set the loco address for this task</a><a class="headerlink" href="#setloco-loco-set-the-loco-address-for-this-task" title="Link to this heading"></a></h4>
 <p>Set the loco address for this sequence.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>loco</strong> - DCC address of your loco</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="sendloco-loco-route-start-route-sequence-with-a-specified-loco">
-<span id="sendloco"></span><h4><a class="toc-backref" href="#id193" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SENDLOCO(</span> <span class="pre">loco,</span> <span class="pre">route</span> <span class="pre">)</span></code> - Start route/sequence with a specified loco</a><a class="headerlink" href="#sendloco-loco-route-start-route-sequence-with-a-specified-loco" title="Link to this heading"></a></h4>
+<span id="sendloco"></span><h4><a class="toc-backref" href="#id190" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SENDLOCO(</span> <span class="pre">loco,</span> <span class="pre">route</span> <span class="pre">)</span></code> - Start route/sequence with a specified loco</a><a class="headerlink" href="#sendloco-loco-route-start-route-sequence-with-a-specified-loco" title="Link to this heading"></a></h4>
 <p>Start a new task send a specified loco along a specified route/sequence</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>loco</strong> - DCC address of your loco <br /> &gt; <strong>route</strong> - route to execute using the specified loco</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="read-loco-read-loco-id-from-prog-track">
-<span id="read-loco"></span><h4><a class="toc-backref" href="#id194" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">READ_LOCO</span></code> - Read loco ID from prog track</a><a class="headerlink" href="#read-loco-read-loco-id-from-prog-track" title="Link to this heading"></a></h4>
+<span id="read-loco"></span><h4><a class="toc-backref" href="#id191" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">READ_LOCO</span></code> - Read loco ID from prog track</a><a class="headerlink" href="#read-loco-read-loco-id-from-prog-track" title="Link to this heading"></a></h4>
 <p>Read the loco ID from prog track.</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="fwd-speed-drive-loco-forward-at-dcc-speed">
-<span id="fwd"></span><h4><a class="toc-backref" href="#id195" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">FWD(</span> <span class="pre">speed</span> <span class="pre">)</span></code> - Drive loco forward at DCC speed</a><a class="headerlink" href="#fwd-speed-drive-loco-forward-at-dcc-speed" title="Link to this heading"></a></h4>
+<span id="fwd"></span><h4><a class="toc-backref" href="#id192" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">FWD(</span> <span class="pre">speed</span> <span class="pre">)</span></code> - Drive loco forward at DCC speed</a><a class="headerlink" href="#fwd-speed-drive-loco-forward-at-dcc-speed" title="Link to this heading"></a></h4>
 <p>Drive loco forward at DCC speed 0-127 (1=ESTOP)</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>speed</strong> - DCC speed (0-127) <br />    • 2-127 = speed 1-126  <br />    • 0 = stop  <br />    • 1 = Estop</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="rev-speed-drive-loco-in-reverse-at-dcc-speed">
-<span id="rev"></span><h4><a class="toc-backref" href="#id196" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">REV(</span> <span class="pre">speed</span> <span class="pre">)</span></code> - Drive loco in reverse at DCC speed</a><a class="headerlink" href="#rev-speed-drive-loco-in-reverse-at-dcc-speed" title="Link to this heading"></a></h4>
+<span id="rev"></span><h4><a class="toc-backref" href="#id193" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">REV(</span> <span class="pre">speed</span> <span class="pre">)</span></code> - Drive loco in reverse at DCC speed</a><a class="headerlink" href="#rev-speed-drive-loco-in-reverse-at-dcc-speed" title="Link to this heading"></a></h4>
 <p>Drive current loco in reverse at DCC speed 0-127 (1=ESTOP)</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>speed</strong> - DCC speed (0-127) <br />    • 2-127 = speed 1-126  <br />    • 0 = stop  <br />    • 1 = Estop</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="speed-speed-drive-loco-in-current-direction-at-dcc-speed">
-<span id="speed"></span><h4><a class="toc-backref" href="#id197" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SPEED(</span> <span class="pre">speed</span> <span class="pre">)</span></code> - Drive loco in current direction at DCC speed</a><a class="headerlink" href="#speed-speed-drive-loco-in-current-direction-at-dcc-speed" title="Link to this heading"></a></h4>
+<span id="speed"></span><h4><a class="toc-backref" href="#id194" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SPEED(</span> <span class="pre">speed</span> <span class="pre">)</span></code> - Drive loco in current direction at DCC speed</a><a class="headerlink" href="#speed-speed-drive-loco-in-current-direction-at-dcc-speed" title="Link to this heading"></a></h4>
 <p>Drive loco in current direction at DCC speed</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>speed</strong> - DCC speed (0-127) <br />    • 2-127 = speed 1-126  <br />    • 0 = stop  <br />    • 1 = Estop</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="stop-set-loco-speed-to-0">
-<span id="stop"></span><h4><a class="toc-backref" href="#id198" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">STOP</span></code> - Set loco speed to 0</a><a class="headerlink" href="#stop-set-loco-speed-to-0" title="Link to this heading"></a></h4>
+<span id="stop"></span><h4><a class="toc-backref" href="#id195" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">STOP</span></code> - Set loco speed to 0</a><a class="headerlink" href="#stop-set-loco-speed-to-0" title="Link to this heading"></a></h4>
 <p>Set the current loco speed to 0 (same as SPEED(0))</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="fon-func-turn-on-loco-function">
-<span id="fon"></span><h4><a class="toc-backref" href="#id199" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">FON(</span> <span class="pre">func</span> <span class="pre">)</span></code> - Turn on loco function</a><a class="headerlink" href="#fon-func-turn-on-loco-function" title="Link to this heading"></a></h4>
+<span id="fon"></span><h4><a class="toc-backref" href="#id196" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">FON(</span> <span class="pre">func</span> <span class="pre">)</span></code> - Turn on loco function</a><a class="headerlink" href="#fon-func-turn-on-loco-function" title="Link to this heading"></a></h4>
 <p>Turn on the specified function for the current loco.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>func</strong> - Function number (0-31)</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="foff-func-turn-off-loco-function">
-<span id="foff"></span><h4><a class="toc-backref" href="#id200" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">FOFF(</span> <span class="pre">func</span> <span class="pre">)</span></code> - Turn off loco function</a><a class="headerlink" href="#foff-func-turn-off-loco-function" title="Link to this heading"></a></h4>
+<span id="foff"></span><h4><a class="toc-backref" href="#id197" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">FOFF(</span> <span class="pre">func</span> <span class="pre">)</span></code> - Turn off loco function</a><a class="headerlink" href="#foff-func-turn-off-loco-function" title="Link to this heading"></a></h4>
 <p>Turn off the specified function for the current loco.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>func</strong> - Function number (0-31)</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="ftoggle-func-toggle-the-state-of-a-loco-s-function">
-<span id="ftoggle"></span><h4><a class="toc-backref" href="#id201" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">FTOGGLE(</span> <span class="pre">func</span> <span class="pre">)</span></code> - Toggle the state of a loco’s function</a><a class="headerlink" href="#ftoggle-func-toggle-the-state-of-a-loco-s-function" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
+<span id="ftoggle"></span><h4><a class="toc-backref" href="#id198" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">FTOGGLE(</span> <span class="pre">func</span> <span class="pre">)</span></code> - Toggle the state of a loco’s function</a><a class="headerlink" href="#ftoggle-func-toggle-the-state-of-a-loco-s-function" title="Link to this heading"></a></h4>
 <p>Toggle off the specified function for the current loco.  i.e. Turn off if on, or on if off.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>func</strong> - Function number (0-31)</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="invert-direction-switches-fwd-rev-meaning-for-loco">
-<span id="invert-direction"></span><h4><a class="toc-backref" href="#id202" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">INVERT_DIRECTION</span></code> - Switches FWD/REV meaning for loco</a><a class="headerlink" href="#invert-direction-switches-fwd-rev-meaning-for-loco" title="Link to this heading"></a></h4>
+<span id="invert-direction"></span><h4><a class="toc-backref" href="#id199" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">INVERT_DIRECTION</span></code> - Switches FWD/REV meaning for loco</a><a class="headerlink" href="#invert-direction-switches-fwd-rev-meaning-for-loco" title="Link to this heading"></a></h4>
 <p>Switches FWD/REV meaning for the current loco.</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="roster-loco-name-func-map-provide-roster-info-for-a-specified-loco">
-<span id="roster"></span><h4><a class="toc-backref" href="#id203" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ROSTER(</span> <span class="pre">loco,</span> <span class="pre">&quot;name&quot;,</span> <span class="pre">&quot;func_map&quot;</span> <span class="pre">)</span></code> - Provide roster info for a specified loco</a><a class="headerlink" href="#roster-loco-name-func-map-provide-roster-info-for-a-specified-loco" title="Link to this heading"></a></h4>
+<span id="roster"></span><h4><a class="toc-backref" href="#id200" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ROSTER(</span> <span class="pre">loco,</span> <span class="pre">&quot;name&quot;,</span> <span class="pre">&quot;func_map&quot;</span> <span class="pre">)</span></code> - Provide roster info for a specified loco</a><a class="headerlink" href="#roster-loco-name-func-map-provide-roster-info-for-a-specified-loco" title="Link to this heading"></a></h4>
 <p><em>Parameters:</em> <br /> &gt; <strong>loco</strong> - DCC address of your loco &gt; <strong>name</strong> - the name of this loco that will appear in the throttle apps. Enclosed in quotes (”) <br /> &gt; <strong>funct_map</strong> - the names that you want to see for the functions specific to this loco separated by forward slashes (“/”). All enclosed in quotes (”) <br />    Note that if the function is ‘momentary’ rather than ‘latching’ (On/Off) then start the function label with a asterisk (*). The most common example of this is the Horn/Whistle which is commonly on F2. <br /></p>
 <p><em>Examples:</em> <br /> ROSTER (  3,”Eng 3”, “F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//”) // Address 3, Eng 3, Function keys F0-F10 <br /> ROSTER(1224,”PE 1224”,””) // Motor Only Decoder <br /> ROSTER(1225,”PE 1225”,”Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute”) <br /> ROSTER(4468,”LNER 4468”,”//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8”)</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="pom-cv-value-program-cv-value-on-main">
-<span id="pom"></span><h4><a class="toc-backref" href="#id204" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">POM(</span> <span class="pre">cv,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Program CV value on main</a><a class="headerlink" href="#pom-cv-value-program-cv-value-on-main" title="Link to this heading"></a></h4>
+<span id="pom"></span><h4><a class="toc-backref" href="#id201" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">POM(</span> <span class="pre">cv,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Program CV value on main</a><a class="headerlink" href="#pom-cv-value-program-cv-value-on-main" title="Link to this heading"></a></h4>
 <p>Program CV value on main, must be proceeded by setting the loco ID with <code class="docutils literal notranslate"><span class="pre">SETLOCO(</span> <span class="pre">loco</span> <span class="pre">)</span></code></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="ifloco-loco-perform-commands-if-the-specified-loco-id-is-defined-for-this-sequence">
-<span id="ifloco"></span><h4><a class="toc-backref" href="#id205" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFLOCO(</span> <span class="pre">loco</span> <span class="pre">)</span></code> - perform commands if the specified loco ID is defined for this sequence</a><a class="headerlink" href="#ifloco-loco-perform-commands-if-the-specified-loco-id-is-defined-for-this-sequence" title="Link to this heading"></a></h4>
+<span id="ifloco"></span><h4><a class="toc-backref" href="#id202" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFLOCO(</span> <span class="pre">loco</span> <span class="pre">)</span></code> - perform commands if the specified loco ID is defined for this sequence</a><a class="headerlink" href="#ifloco-loco-perform-commands-if-the-specified-loco-id-is-defined-for-this-sequence" title="Link to this heading"></a></h4>
 <p>If the specified loco ID is defined for this sequence, perform the defined activities</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>loco</strong> - DCC Address of the loco to test against</p>
 <details class="summary-for-example-click-to-show">
@@ -2685,11 +2652,59 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <span class="w">  </span><span class="n">DONE</span>
 </pre></div>
 </div>
-</details><p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
+</details><p><hr class="hr-dashed" /></p>
+</section>
+<section id="xfwd-loco-speed-sends-dcc-speed-to-a-loco-in-forward-direction">
+<span id="xfwd"></span><h4><a class="toc-backref" href="#id203" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">XFWD(</span> <span class="pre">loco,</span> <span class="pre">speed</span> <span class="pre">)</span></code> - Sends DCC speed to a loco in forward direction</a><a class="headerlink" href="#xfwd-loco-speed-sends-dcc-speed-to-a-loco-in-forward-direction" title="Link to this heading"></a></h4>
+<p>Sends DCC speed to an abritary loco in forward direction</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>loco</strong> - DCC address of your loco <br /> &gt; <strong>speed</strong> - DCC speed (0-127) <br />    • 2-127 = speed 1-126  <br />    • 0 = stop  <br />    • 1 = Estop</p>
+<p><hr class="hr-dashed" /></p>
+</section>
+<section id="xrev-loco-speed-sends-dcc-speed-to-a-loco-in-reverse-direction">
+<span id="xrev"></span><h4><a class="toc-backref" href="#id204" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">XREV(</span> <span class="pre">loco,</span> <span class="pre">speed</span> <span class="pre">)</span></code> - Sends DCC speed to a loco in reverse direction</a><a class="headerlink" href="#xrev-loco-speed-sends-dcc-speed-to-a-loco-in-reverse-direction" title="Link to this heading"></a></h4>
+<p>Sends DCC speed to an abritary loco in reverse direction</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>loco</strong> - DCC address of your loco <br /> &gt; <strong>speed</strong> - DCC speed (0-127) <br />    • 2-127 = speed 1-126  <br />    • 0 = stop  <br />    • 1 = Estop</p>
+<p><hr class="hr-dashed" /></p>
+</section>
+<section id="xfon-cab-func-send-dcc-function-on-to-specific-cab">
+<span id="xfon"></span><h4><a class="toc-backref" href="#id205" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">XFON(</span> <span class="pre">cab,</span> <span class="pre">func</span> <span class="pre">)`</span></code> - Send DCC function ON to specific cab</a><a class="headerlink" href="#xfon-cab-func-send-dcc-function-on-to-specific-cab" title="Link to this heading"></a></h4>
+<p>Send DCC function ON to specific cab (e.g. coach lights) <em>Not for Loco use - use FON instead!</em></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>cab</strong> - DCC address of your loco <br /> &gt; <strong>func</strong> - Function number (0-31)</p>
+<p><hr class="hr-dashed" /></p>
+</section>
+<section id="xfoff-cab-func-send-dcc-function-off-to-specific-cab">
+<span id="xfoff"></span><h4><a class="toc-backref" href="#id206" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">XFOFF(</span> <span class="pre">cab,</span> <span class="pre">func</span> <span class="pre">)</span></code> - Send DCC function OFF to specific cab</a><a class="headerlink" href="#xfoff-cab-func-send-dcc-function-off-to-specific-cab" title="Link to this heading"></a></h4>
+<p>Send DCC function OFF to specific cab (e.g. coach lights) Not for Loco use - use FON instead!</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>cab</strong> - DCC address of your loco <br /> &gt; <strong>func</strong> - Function number (0-31)</p>
+<p><hr class="hr-dashed" /></p>
+</section>
+<section id="xftoggle-loco-func-toggle-dcc-function-on-specific-loco">
+<span id="xftoggle"></span><h4><a class="toc-backref" href="#id207" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">XFTOGGLE(</span> <span class="pre">loco,</span> <span class="pre">func</span> <span class="pre">)</span></code> - Toggle DCC function on specific loco</a><a class="headerlink" href="#xftoggle-loco-func-toggle-dcc-function-on-specific-loco" title="Link to this heading"></a></h4>
+<p>Toggle DCC function on loco with the specified DCC address.</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>loco</strong> - DCC address of your loco <br /> &gt; <strong>func</strong> - Function number (0-31)</p>
+</section>
+<section id="xpom-loco-cv-value-write-cv-value-to-specified-loco-on-main">
+<span id="xpom"></span><h4><a class="toc-backref" href="#id208" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">XPOM(</span> <span class="pre">loco,</span> <span class="pre">cv,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Write CV value to specified loco on main</a><a class="headerlink" href="#xpom-loco-cv-value-write-cv-value-to-specified-loco-on-main" title="Link to this heading"></a></h4>
+<p>Write CV value to specified loco on main. (PoM)</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>loco</strong> - DCC address of your loco <br /> &gt; <strong>cv</strong> - cv to change <br /> &gt; <strong>value</strong> - value to write</p>
+<p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
+<p><hr class="hr-dashed" /></p>
+</section>
+<section id="xsave-speed-loco-saves-the-current-speed-of-a-loco">
+<span id="xsave-speed"></span><h4><a class="toc-backref" href="#id209" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">XSAVE_SPEED(</span> <span class="pre">loco</span> <span class="pre">)</span></code> - Saves the current speed of a loco</a><a class="headerlink" href="#xsave-speed-loco-saves-the-current-speed-of-a-loco" title="Link to this heading"></a></h4>
+<p>Saves the current speed of a loco.</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>loco</strong> - DCC address of your loco</p>
+<p><hr class="hr-dashed" /></p>
+</section>
+<section id="xrestore-speed-loco-restores-the-saved-speed-of-a-loco">
+<span id="xrestore-speed"></span><h4><a class="toc-backref" href="#id210" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">XRESTORE_SPEED(</span> <span class="pre">loco</span> <span class="pre">)</span></code> - Restores the saved speed of a loco</a><a class="headerlink" href="#xrestore-speed-loco-restores-the-saved-speed-of-a-loco" title="Link to this heading"></a></h4>
+<p>Restores the saved speed of a loco</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>loco</strong> - DCC address of your loco</p>
+<p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="forget-forget-the-loco-in-the-running-automation-sequence">
-<span id="forget"></span><h4><a class="toc-backref" href="#id206" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">FORGET</span></code> - Forget the loco in the running automation/sequence</a><a class="headerlink" href="#forget-forget-the-loco-in-the-running-automation-sequence" title="Link to this heading"></a></h4>
+<span id="forget"></span><h4><a class="toc-backref" href="#id211" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">FORGET</span></code> - Forget the loco in the running automation/sequence</a><a class="headerlink" href="#forget-forget-the-loco-in-the-running-automation-sequence" title="Link to this heading"></a></h4>
 <p>Forget the loco in the running automation/sequence</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
 </section>
@@ -2700,14 +2715,14 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <nav class="contents in-this-section local" id="id13">
 <p class="topic-title">In This Section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#set-track-track-mode-configures-the-mode-of-a-track" id="id207"><code class="docutils literal notranslate"><span class="pre">SET_TRACK(</span> <span class="pre">track,</span> <span class="pre">mode</span> <span class="pre">)</span></code> - Configures the mode of a track</a></p></li>
-<li><p><a class="reference internal" href="#set-power-track-on-off-enable-disable-power-on-a-track" id="id208"><code class="docutils literal notranslate"><span class="pre">SET_POWER(</span> <span class="pre">track,</span> <span class="pre">ON/OFF</span> <span class="pre">)</span></code> - Enable/Disable power on a track</a></p></li>
-<li><p><a class="reference internal" href="#setfreq-frequency-enable-a-specific-frequency" id="id209"><code class="docutils literal notranslate"><span class="pre">SETFREQ(</span> <span class="pre">frequency</span> <span class="pre">)</span></code> - Enable a specific frequency</a></p></li>
+<li><p><a class="reference internal" href="#set-track-track-mode-configures-the-mode-of-a-track" id="id212"><code class="docutils literal notranslate"><span class="pre">SET_TRACK(</span> <span class="pre">track,</span> <span class="pre">mode</span> <span class="pre">)</span></code> - Configures the mode of a track</a></p></li>
+<li><p><a class="reference internal" href="#set-power-track-on-off-enable-disable-power-on-a-track" id="id213"><code class="docutils literal notranslate"><span class="pre">SET_POWER(</span> <span class="pre">track,</span> <span class="pre">ON/OFF</span> <span class="pre">)</span></code> - Enable/Disable power on a track</a></p></li>
+<li><p><a class="reference internal" href="#setfreq-frequency-enable-a-specific-frequency" id="id214"><code class="docutils literal notranslate"><span class="pre">SETFREQ(</span> <span class="pre">frequency</span> <span class="pre">)</span></code> - Enable a specific frequency</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
 <section id="set-track-track-mode-configures-the-mode-of-a-track">
-<span id="set-track"></span><h4><a class="toc-backref" href="#id207" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SET_TRACK(</span> <span class="pre">track,</span> <span class="pre">mode</span> <span class="pre">)</span></code> - Configures the mode of a track</a><a class="headerlink" href="#set-track-track-mode-configures-the-mode-of-a-track" title="Link to this heading"></a></h4>
+<span id="set-track"></span><h4><a class="toc-backref" href="#id212" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SET_TRACK(</span> <span class="pre">track,</span> <span class="pre">mode</span> <span class="pre">)</span></code> - Configures the mode of a track</a><a class="headerlink" href="#set-track-track-mode-configures-the-mode-of-a-track" title="Link to this heading"></a></h4>
 <p>Configures the mode of the selected track, refer also to <a class="reference internal" href="../trackmanager/index.html"><span class="doc">TrackManager (DCC &amp; DC)</span></a></p>
 <p><em>Parameters:</em> <br /> &gt; <strong>track</strong> - - The track to configure, valid options are A to H <br /> &gt; <strong>mode</strong> - - The mode to set the track to, <br />    valid options for <a class="reference internal" href="../reference/hardware/dcc-vs-dc.html"><span class="doc">DCC</span></a> are: <br />    • <code class="docutils literal notranslate"><span class="pre">MAIN</span></code> or <br />    • <code class="docutils literal notranslate"><span class="pre">MAIN_INV</span></code> or <br />    • <code class="docutils literal notranslate"><span class="pre">MAIN_AUTO</span></code> or <br />    • <code class="docutils literal notranslate"><span class="pre">PROG</span></code>, <br />    and valid options for <a class="reference internal" href="../reference/hardware/dcc-vs-dc.html"><span class="doc">DC</span></a> are: <br />    •  <code class="docutils literal notranslate"><span class="pre">DC</span></code> or <br />    •  <code class="docutils literal notranslate"><span class="pre">DC_INV</span></code> or <br />    •  <code class="docutils literal notranslate"><span class="pre">DCX</span></code> (same as DC_INV). <br />    If a track is unused, it can be set to: <br />    • <code class="docutils literal notranslate"><span class="pre">NONE</span></code>, <br />    If the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> is confgured as a Booster (ESP32 Microcontrollers only), it can be set to: <br />    • <code class="docutils literal notranslate"><span class="pre">BOOST</span></code> or <br />    • <code class="docutils literal notranslate"><span class="pre">BOOST_INV</span></code> or <br />    • <code class="docutils literal notranslate"><span class="pre">BOOST_AUTO</span></code>. <br /></p>
 <table class="command-table docutils align-default">
@@ -2784,7 +2799,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 </div>
 </details></section>
 <section id="set-power-track-on-off-enable-disable-power-on-a-track">
-<span id="set-power"></span><h4><a class="toc-backref" href="#id208" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SET_POWER(</span> <span class="pre">track,</span> <span class="pre">ON/OFF</span> <span class="pre">)</span></code> - Enable/Disable power on a track</a><a class="headerlink" href="#set-power-track-on-off-enable-disable-power-on-a-track" title="Link to this heading"></a></h4>
+<span id="set-power"></span><h4><a class="toc-backref" href="#id213" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SET_POWER(</span> <span class="pre">track,</span> <span class="pre">ON/OFF</span> <span class="pre">)</span></code> - Enable/Disable power on a track</a><a class="headerlink" href="#set-power-track-on-off-enable-disable-power-on-a-track" title="Link to this heading"></a></h4>
 <p>Configures the power setting of the selected track, refer also to <a class="reference internal" href="../trackmanager/index.html"><span class="doc">TrackManager (DCC &amp; DC)</span></a></p>
 <dl class="simple">
 <dt><em>Parameters:</em> <br /></dt><dd><p> &gt; <strong>track</strong> - - The track to configure, valid options are A to H <br /> &gt; <strong>ON/OFF</strong> - - Turn the power ON or OFF for this track <br /></p>
@@ -2801,7 +2816,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 </div>
 </details></section>
 <section id="setfreq-frequency-enable-a-specific-frequency">
-<span id="setfreq"></span><h4><a class="toc-backref" href="#id209" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SETFREQ(</span> <span class="pre">frequency</span> <span class="pre">)</span></code> - Enable a specific frequency</a><a class="headerlink" href="#setfreq-frequency-enable-a-specific-frequency" title="Link to this heading"></a></h4>
+<span id="setfreq"></span><h4><a class="toc-backref" href="#id214" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SETFREQ(</span> <span class="pre">frequency</span> <span class="pre">)</span></code> - Enable a specific frequency</a><a class="headerlink" href="#setfreq-frequency-enable-a-specific-frequency" title="Link to this heading"></a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">DC</span></code> or <code class="docutils literal notranslate"><span class="pre">DC_INV</span></code> / <code class="docutils literal notranslate"><span class="pre">DCX</span></code> track settings only.</p>
 <p>Configures the frequency setting of the selected loco.</p>
 <p>The settings achievable vary slightly depending upon the processor running the <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> but broadly follow the following:</p>
@@ -2829,13 +2844,13 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <nav class="contents in-this-section local" id="id18">
 <p class="topic-title">In This Section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#onoverload-track-event-handler-for-when-an-overload-occurs" id="id210"><code class="docutils literal notranslate"><span class="pre">ONOVERLOAD(</span> <span class="pre">track</span> <span class="pre">)</span></code> - Event handler for when an Overload occurs</a></p></li>
-<li><p><a class="reference internal" href="#afteroverload-track-event-handler-for-when-an-overload-clears" id="id211"><code class="docutils literal notranslate"><span class="pre">AFTEROVERLOAD(</span> <span class="pre">track</span> <span class="pre">)</span></code> - Event handler for when an Overload clears</a></p></li>
+<li><p><a class="reference internal" href="#onoverload-track-event-handler-for-when-an-overload-occurs" id="id215"><code class="docutils literal notranslate"><span class="pre">ONOVERLOAD(</span> <span class="pre">track</span> <span class="pre">)</span></code> - Event handler for when an Overload occurs</a></p></li>
+<li><p><a class="reference internal" href="#afteroverload-track-event-handler-for-when-an-overload-clears" id="id216"><code class="docutils literal notranslate"><span class="pre">AFTEROVERLOAD(</span> <span class="pre">track</span> <span class="pre">)</span></code> - Event handler for when an Overload clears</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
 <section id="onoverload-track-event-handler-for-when-an-overload-occurs">
-<span id="onoverload"></span><h4><a class="toc-backref" href="#id210" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONOVERLOAD(</span> <span class="pre">track</span> <span class="pre">)</span></code> - Event handler for when an Overload occurs</a><a class="headerlink" href="#onoverload-track-event-handler-for-when-an-overload-occurs" title="Link to this heading"></a></h4>
+<span id="onoverload"></span><h4><a class="toc-backref" href="#id215" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONOVERLOAD(</span> <span class="pre">track</span> <span class="pre">)</span></code> - Event handler for when an Overload occurs</a><a class="headerlink" href="#onoverload-track-event-handler-for-when-an-overload-occurs" title="Link to this heading"></a></h4>
 <blockquote>
 <div><p>Creates an event handler for the selected track, to be executed when the MotorDriver routines detect and overload. Refer also to <a class="reference internal" href="../trackmanager/index.html"><span class="doc">TrackManager (DCC &amp; DC)</span></a></p>
 </div></blockquote>
@@ -2843,7 +2858,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="afteroverload-track-event-handler-for-when-an-overload-clears">
-<span id="afteroverload"></span><h4><a class="toc-backref" href="#id211" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AFTEROVERLOAD(</span> <span class="pre">track</span> <span class="pre">)</span></code> - Event handler for when an Overload clears</a><a class="headerlink" href="#afteroverload-track-event-handler-for-when-an-overload-clears" title="Link to this heading"></a></h4>
+<span id="afteroverload"></span><h4><a class="toc-backref" href="#id216" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AFTEROVERLOAD(</span> <span class="pre">track</span> <span class="pre">)</span></code> - Event handler for when an Overload clears</a><a class="headerlink" href="#afteroverload-track-event-handler-for-when-an-overload-clears" title="Link to this heading"></a></h4>
 <p>Creates a complementary event handler for the selected track, to be executed when the MotorDriver routines indicate the overload is cleared. Refer also to <a class="reference internal" href="../trackmanager/index.html"><span class="doc">TrackManager (DCC &amp; DC)</span></a></p>
 <p>Note:  AFTEROVERLOAD is only relevant when used within and ONOVERLOAD…. DONE structure.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>track</strong> - - The track to configure, valid options are A to H</p>
@@ -2897,26 +2912,26 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <nav class="contents in-this-section local" id="id19">
 <p class="topic-title">In This Section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#reserve-block-id-reserve-a-block" id="id212"><code class="docutils literal notranslate"><span class="pre">RESERVE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Reserve a block</a></p></li>
-<li><p><a class="reference internal" href="#free-block-id-free-block" id="id213"><code class="docutils literal notranslate"><span class="pre">FREE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Free block</a></p></li>
-<li><p><a class="reference internal" href="#ifreserve-block-id-execute-commands-if-block-is-not-reserved" id="id214"><code class="docutils literal notranslate"><span class="pre">IFRESERVE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Execute commands if block is NOT reserved</a></p></li>
+<li><p><a class="reference internal" href="#reserve-block-id-reserve-a-block" id="id217"><code class="docutils literal notranslate"><span class="pre">RESERVE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Reserve a block</a></p></li>
+<li><p><a class="reference internal" href="#free-block-id-free-block" id="id218"><code class="docutils literal notranslate"><span class="pre">FREE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Free block</a></p></li>
+<li><p><a class="reference internal" href="#ifreserve-block-id-execute-commands-if-block-is-not-reserved" id="id219"><code class="docutils literal notranslate"><span class="pre">IFRESERVE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Execute commands if block is NOT reserved</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
 <section id="reserve-block-id-reserve-a-block">
-<span id="reserve"></span><h4><a class="toc-backref" href="#id212" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">RESERVE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Reserve a block</a><a class="headerlink" href="#reserve-block-id-reserve-a-block" title="Link to this heading"></a></h4>
+<span id="reserve"></span><h4><a class="toc-backref" href="#id217" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">RESERVE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Reserve a block</a><a class="headerlink" href="#reserve-block-id-reserve-a-block" title="Link to this heading"></a></h4>
 <p>Reserve a block (0-255). If already reserved, current loco will STOP and sequence waits for block to become free</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>block_id</strong> - Block to reserve (0-255)</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="free-block-id-free-block">
-<span id="free"></span><h4><a class="toc-backref" href="#id213" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">FREE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Free block</a><a class="headerlink" href="#free-block-id-free-block" title="Link to this heading"></a></h4>
+<span id="free"></span><h4><a class="toc-backref" href="#id218" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">FREE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Free block</a><a class="headerlink" href="#free-block-id-free-block" title="Link to this heading"></a></h4>
 <p>Free previously reserved block.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>block_id</strong> - Block to free (0-255)</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="ifreserve-block-id-execute-commands-if-block-is-not-reserved">
-<span id="ifreserve"></span><h4><a class="toc-backref" href="#id214" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFRESERVE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Execute commands if block is NOT reserved</a><a class="headerlink" href="#ifreserve-block-id-execute-commands-if-block-is-not-reserved" title="Link to this heading"></a></h4>
+<span id="ifreserve"></span><h4><a class="toc-backref" href="#id219" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFRESERVE(</span> <span class="pre">block_id</span> <span class="pre">)</span></code> - Execute commands if block is NOT reserved</a><a class="headerlink" href="#ifreserve-block-id-execute-commands-if-block-is-not-reserved" title="Link to this heading"></a></h4>
 <p>If block is NOT reserved, reserve it and run commands in the IF block. Otherwise, skip to matching ENDIF</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>block_id</strong> - Block to test (0-255)</p>
 </section>
@@ -2930,98 +2945,97 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <nav class="contents in-this-section local" id="id20">
 <p class="topic-title">In This Section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#lcd-row-msg-write-message-on-lcd-oled" id="id215"><code class="docutils literal notranslate"><span class="pre">LCD(</span> <span class="pre">row,</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Write message on LCD/OLED</a></p></li>
-<li><p><a class="reference internal" href="#screen-display-row-msg-writes-a-message-to-a-display" id="id216"><code class="docutils literal notranslate"><span class="pre">SCREEN(</span> <span class="pre">display,</span> <span class="pre">row,</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to a display</a></p></li>
-<li><p><a class="reference internal" href="#broadcast-msg-broadcast-to-all-throttles-jmri-on-serial-and-wifi" id="id217"><code class="docutils literal notranslate"><span class="pre">BROADCAST(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Broadcast to all throttles/JMRI on serial and WiFi</a></p></li>
-<li><p><a class="reference internal" href="#print-msg-print-diagnostic-message-to-serial-monitor" id="id218"><code class="docutils literal notranslate"><span class="pre">PRINT(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Print diagnostic message to Serial Monitor</a></p></li>
-<li><p><a class="reference internal" href="#serial-msg-writes-direct-to-serial" id="id219"><code class="docutils literal notranslate"><span class="pre">SERIAL(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial</a></p></li>
-<li><p><a class="reference internal" href="#serial1-msg-writes-direct-to-serial1" id="id220"><code class="docutils literal notranslate"><span class="pre">SERIAL1(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial1</a></p></li>
-<li><p><a class="reference internal" href="#serial2-msg-writes-direct-to-serial2" id="id221"><code class="docutils literal notranslate"><span class="pre">SERIAL2(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial2</a></p></li>
-<li><p><a class="reference internal" href="#serial3-msg-writes-direct-to-serial3" id="id222"><code class="docutils literal notranslate"><span class="pre">SERIAL3(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial3</a></p></li>
-<li><p><a class="reference internal" href="#serial4-msg-writes-direct-to-serial4" id="id223"><code class="docutils literal notranslate"><span class="pre">SERIAL4(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial4</a></p></li>
-<li><p><a class="reference internal" href="#serial5-msg-writes-direct-to-serial5" id="id224"><code class="docutils literal notranslate"><span class="pre">SERIAL5(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial5</a></p></li>
-<li><p><a class="reference internal" href="#serial6-msg-writes-direct-to-serial6" id="id225"><code class="docutils literal notranslate"><span class="pre">SERIAL6(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial6</a></p></li>
-<li><p><a class="reference internal" href="#withrottle-msg-writes-a-message-to-withrottle-clients" id="id226"><code class="docutils literal notranslate"><span class="pre">WITHROTTLE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to WiThrottle clients</a></p></li>
-<li><p><a class="reference internal" href="#message-msg-writes-a-message-to-all-clients" id="id227"><code class="docutils literal notranslate"><span class="pre">MESSAGE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to all clients</a></p></li>
+<li><p><a class="reference internal" href="#lcd-row-msg-write-message-on-lcd-oled" id="id220"><code class="docutils literal notranslate"><span class="pre">LCD(</span> <span class="pre">row,</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Write message on LCD/OLED</a></p></li>
+<li><p><a class="reference internal" href="#screen-display-row-msg-writes-a-message-to-a-display" id="id221"><code class="docutils literal notranslate"><span class="pre">SCREEN(</span> <span class="pre">display,</span> <span class="pre">row,</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to a display</a></p></li>
+<li><p><a class="reference internal" href="#broadcast-msg-broadcast-to-all-throttles-jmri-on-serial-and-wifi" id="id222"><code class="docutils literal notranslate"><span class="pre">BROADCAST(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Broadcast to all throttles/JMRI on serial and WiFi</a></p></li>
+<li><p><a class="reference internal" href="#print-msg-print-diagnostic-message-to-serial-monitor" id="id223"><code class="docutils literal notranslate"><span class="pre">PRINT(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Print diagnostic message to Serial Monitor</a></p></li>
+<li><p><a class="reference internal" href="#serial-msg-writes-direct-to-serial" id="id224"><code class="docutils literal notranslate"><span class="pre">SERIAL(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial</a></p></li>
+<li><p><a class="reference internal" href="#serial1-msg-writes-direct-to-serial1" id="id225"><code class="docutils literal notranslate"><span class="pre">SERIAL1(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial1</a></p></li>
+<li><p><a class="reference internal" href="#serial2-msg-writes-direct-to-serial2" id="id226"><code class="docutils literal notranslate"><span class="pre">SERIAL2(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial2</a></p></li>
+<li><p><a class="reference internal" href="#serial3-msg-writes-direct-to-serial3" id="id227"><code class="docutils literal notranslate"><span class="pre">SERIAL3(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial3</a></p></li>
+<li><p><a class="reference internal" href="#serial4-msg-writes-direct-to-serial4" id="id228"><code class="docutils literal notranslate"><span class="pre">SERIAL4(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial4</a></p></li>
+<li><p><a class="reference internal" href="#serial5-msg-writes-direct-to-serial5" id="id229"><code class="docutils literal notranslate"><span class="pre">SERIAL5(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial5</a></p></li>
+<li><p><a class="reference internal" href="#serial6-msg-writes-direct-to-serial6" id="id230"><code class="docutils literal notranslate"><span class="pre">SERIAL6(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial6</a></p></li>
+<li><p><a class="reference internal" href="#withrottle-msg-writes-a-message-to-withrottle-clients" id="id231"><code class="docutils literal notranslate"><span class="pre">WITHROTTLE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to WiThrottle clients</a></p></li>
+<li><p><a class="reference internal" href="#message-msg-writes-a-message-to-all-clients" id="id232"><code class="docutils literal notranslate"><span class="pre">MESSAGE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to all clients</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
 <section id="lcd-row-msg-write-message-on-lcd-oled">
-<span id="lcd"></span><h4><a class="toc-backref" href="#id215" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">LCD(</span> <span class="pre">row,</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Write message on LCD/OLED</a><a class="headerlink" href="#lcd-row-msg-write-message-on-lcd-oled" title="Link to this heading"></a></h4>
+<span id="lcd"></span><h4><a class="toc-backref" href="#id220" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">LCD(</span> <span class="pre">row,</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Write message on LCD/OLED</a><a class="headerlink" href="#lcd-row-msg-write-message-on-lcd-oled" title="Link to this heading"></a></h4>
 <p>Write message on LCD/OLED, if fitted.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>row</strong> - row of the LED/OLD to write the message <br /> &gt; <strong>msg</strong> - message to write</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="screen-display-row-msg-writes-a-message-to-a-display">
-<span id="screen"></span><h4><a class="toc-backref" href="#id216" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SCREEN(</span> <span class="pre">display,</span> <span class="pre">row,</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to a display</a><a class="headerlink" href="#screen-display-row-msg-writes-a-message-to-a-display" title="Link to this heading"></a></h4>
+<span id="screen"></span><h4><a class="toc-backref" href="#id221" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SCREEN(</span> <span class="pre">display,</span> <span class="pre">row,</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to a display</a><a class="headerlink" href="#screen-display-row-msg-writes-a-message-to-a-display" title="Link to this heading"></a></h4>
 <p>Writes a message to the specified display on the specified row.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>display</strong> - which display to write to ??? <br /> &gt; <strong>row</strong> - row of the LED/OLD to write the message <br /> &gt; <strong>msg</strong> - message to write</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="broadcast-msg-broadcast-to-all-throttles-jmri-on-serial-and-wifi">
-<span id="broadcast"></span><h4><a class="toc-backref" href="#id217" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">BROADCAST(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Broadcast to all throttles/JMRI on serial and WiFi</a><a class="headerlink" href="#broadcast-msg-broadcast-to-all-throttles-jmri-on-serial-and-wifi" title="Link to this heading"></a></h4>
+<span id="broadcast"></span><h4><a class="toc-backref" href="#id222" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">BROADCAST(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Broadcast to all throttles/JMRI on serial and WiFi</a><a class="headerlink" href="#broadcast-msg-broadcast-to-all-throttles-jmri-on-serial-and-wifi" title="Link to this heading"></a></h4>
 <p>Broadcast to all throttles/JMRI on serial and WiFi</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>msg</strong> - message to broadcast</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="print-msg-print-diagnostic-message-to-serial-monitor">
-<span id="print"></span><h4><a class="toc-backref" href="#id218" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">PRINT(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Print diagnostic message to Serial Monitor</a><a class="headerlink" href="#print-msg-print-diagnostic-message-to-serial-monitor" title="Link to this heading"></a></h4>
+<span id="print"></span><h4><a class="toc-backref" href="#id223" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">PRINT(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Print diagnostic message to Serial Monitor</a><a class="headerlink" href="#print-msg-print-diagnostic-message-to-serial-monitor" title="Link to this heading"></a></h4>
 <p>Write a diagnostic message to the <a class="reference internal" href="../reference/tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a>.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>msg</strong> - message to write</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="serial-msg-writes-direct-to-serial">
-<span id="serial"></span><h4><a class="toc-backref" href="#id219" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial</a><a class="headerlink" href="#serial-msg-writes-direct-to-serial" title="Link to this heading"></a></h4>
+<span id="serial"></span><h4><a class="toc-backref" href="#id224" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial</a><a class="headerlink" href="#serial-msg-writes-direct-to-serial" title="Link to this heading"></a></h4>
 <p>Writes direct to Serial (Serial0/USB)</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>msg</strong> - message to write</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="serial1-msg-writes-direct-to-serial1">
-<span id="serial1"></span><h4><a class="toc-backref" href="#id220" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL1(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial1</a><a class="headerlink" href="#serial1-msg-writes-direct-to-serial1" title="Link to this heading"></a></h4>
+<span id="serial1"></span><h4><a class="toc-backref" href="#id225" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL1(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial1</a><a class="headerlink" href="#serial1-msg-writes-direct-to-serial1" title="Link to this heading"></a></h4>
 <p>Writes direct to Serial1.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>msg</strong> - message to write</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="serial2-msg-writes-direct-to-serial2">
-<span id="serial2"></span><h4><a class="toc-backref" href="#id221" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL2(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial2</a><a class="headerlink" href="#serial2-msg-writes-direct-to-serial2" title="Link to this heading"></a></h4>
+<span id="serial2"></span><h4><a class="toc-backref" href="#id226" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL2(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial2</a><a class="headerlink" href="#serial2-msg-writes-direct-to-serial2" title="Link to this heading"></a></h4>
 <p>Writes direct to Serial2.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>msg</strong> - message to write</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="serial3-msg-writes-direct-to-serial3">
-<span id="serial3"></span><h4><a class="toc-backref" href="#id222" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL3(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial3</a><a class="headerlink" href="#serial3-msg-writes-direct-to-serial3" title="Link to this heading"></a></h4>
+<span id="serial3"></span><h4><a class="toc-backref" href="#id227" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL3(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial3</a><a class="headerlink" href="#serial3-msg-writes-direct-to-serial3" title="Link to this heading"></a></h4>
 <p>Writes direct to Serial3.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>msg</strong> - message to write</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="serial4-msg-writes-direct-to-serial4">
-<span id="serial4"></span><h4><a class="toc-backref" href="#id223" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL4(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial4</a><a class="headerlink" href="#serial4-msg-writes-direct-to-serial4" title="Link to this heading"></a></h4>
+<span id="serial4"></span><h4><a class="toc-backref" href="#id228" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL4(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial4</a><a class="headerlink" href="#serial4-msg-writes-direct-to-serial4" title="Link to this heading"></a></h4>
 <p>Writes direct to Serial4.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>msg</strong> - message to write</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="serial5-msg-writes-direct-to-serial5">
-<span id="serial5"></span><h4><a class="toc-backref" href="#id224" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL5(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial5</a><a class="headerlink" href="#serial5-msg-writes-direct-to-serial5" title="Link to this heading"></a></h4>
+<span id="serial5"></span><h4><a class="toc-backref" href="#id229" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL5(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial5</a><a class="headerlink" href="#serial5-msg-writes-direct-to-serial5" title="Link to this heading"></a></h4>
 <p>Writes direct to Serial5.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>msg</strong> - message to write</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="serial6-msg-writes-direct-to-serial6">
-<span id="serial6"></span><h4><a class="toc-backref" href="#id225" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL6(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial6</a><a class="headerlink" href="#serial6-msg-writes-direct-to-serial6" title="Link to this heading"></a></h4>
+<span id="serial6"></span><h4><a class="toc-backref" href="#id230" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERIAL6(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes direct to Serial6</a><a class="headerlink" href="#serial6-msg-writes-direct-to-serial6" title="Link to this heading"></a></h4>
 <p>Writes direct to Serial6.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>msg</strong> - message to write</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="withrottle-msg-writes-a-message-to-withrottle-clients">
-<span id="exrail-withrottle"></span><h4><a class="toc-backref" href="#id226" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">WITHROTTLE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to WiThrottle clients</a><a class="headerlink" href="#withrottle-msg-writes-a-message-to-withrottle-clients" title="Link to this heading"></a></h4>
+<span id="exrail-withrottle"></span><h4><a class="toc-backref" href="#id231" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">WITHROTTLE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to WiThrottle clients</a><a class="headerlink" href="#withrottle-msg-writes-a-message-to-withrottle-clients" title="Link to this heading"></a></h4>
 <p>Writes a message to WiThrottle clients (alias of <code class="docutils literal notranslate"><span class="pre">PRINT</span></code>)</p>
 <p>A WiThrottle controller will receive <code class="docutils literal notranslate"><span class="pre">Hmmsg</span></code>.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>msg</strong> - message to write</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="message-msg-writes-a-message-to-all-clients">
-<span id="message"></span><span id="exrail-message"></span><h4><a class="toc-backref" href="#id227" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">MESSAGE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to all clients</a><a class="headerlink" href="#message-msg-writes-a-message-to-all-clients" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
+<span id="message"></span><span id="exrail-message"></span><h4><a class="toc-backref" href="#id232" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">MESSAGE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Writes a message to all clients</a><a class="headerlink" href="#message-msg-writes-a-message-to-all-clients" title="Link to this heading"></a></h4>
 <p>Writes a message to all serial throttles and all WiThrottle Clients.</p>
 <p>A <a href="../index.html"><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span></a> throttle will receive a broadcast <code class="docutils literal notranslate"><span class="pre">&lt;m</span> <span class="pre">&quot;text&quot;&gt;</span></code>, and a WiThrottle throttle will receive <code class="docutils literal notranslate"><span class="pre">Hmtext</span></code>.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>msg</strong> - message to write</p>
@@ -3033,73 +3047,73 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <nav class="contents in-this-section local" id="id21">
 <p class="topic-title">In This Section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#poweron-power-on-track-and-unjoin" id="id228"><code class="docutils literal notranslate"><span class="pre">POWERON</span></code> - Power on track and UNJOIN</a></p></li>
-<li><p><a class="reference internal" href="#poweroff-power-off-track" id="id229"><code class="docutils literal notranslate"><span class="pre">POWEROFF</span></code> - Power off track</a></p></li>
-<li><p><a class="reference internal" href="#join-join-prog-and-main-track-outputs" id="id230"><code class="docutils literal notranslate"><span class="pre">JOIN</span></code> - Join PROG and MAIN track outputs</a></p></li>
-<li><p><a class="reference internal" href="#unjoin-disconnect-prog-track-from-main" id="id231"><code class="docutils literal notranslate"><span class="pre">UNJOIN</span></code> - Disconnect prog track from main</a></p></li>
-<li><p><a class="reference internal" href="#endexrail-deprecated-do-not-use" id="id232"><code class="docutils literal notranslate"><span class="pre">ENDEXRAIL</span></code> - Deprecated - Do not use</a></p></li>
-<li><p><a class="reference internal" href="#exrail-deprecated-do-not-use" id="id233"><code class="docutils literal notranslate"><span class="pre">EXRAIL</span></code> - Deprecated - Do not use</a></p></li>
-<li><p><a class="reference internal" href="#killall-kills-all-running-ex-r-activities" id="id234"><code class="docutils literal notranslate"><span class="pre">KILLALL</span></code> - Kills all running <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> activities</a></p></li>
-<li><p><a class="reference internal" href="#parse-msg-allows-parsing-of-a-dcc-ex-api-command-via-myautomation-h" id="id235"><code class="docutils literal notranslate"><span class="pre">PARSE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Allows parsing of a DCC-EX API command via myAutomation.h</a></p></li>
-<li><p><a class="reference internal" href="#disable-prog-disable-programming-to-save-ram-flash" id="id236"><code class="docutils literal notranslate"><span class="pre">DISABLE_PROG</span></code> - Disable programming to save RAM/Flash</a></p></li>
-<li><p><a class="reference internal" href="#io-no-hal-reduce-flash-footprint-when-hal-features-not-required" id="id237"><code class="docutils literal notranslate"><span class="pre">IO_NO_HAL</span></code> - Reduce FLASH footprint when HAL features not required</a></p></li>
+<li><p><a class="reference internal" href="#poweron-power-on-track-and-unjoin" id="id233"><code class="docutils literal notranslate"><span class="pre">POWERON</span></code> - Power on track and UNJOIN</a></p></li>
+<li><p><a class="reference internal" href="#poweroff-power-off-track" id="id234"><code class="docutils literal notranslate"><span class="pre">POWEROFF</span></code> - Power off track</a></p></li>
+<li><p><a class="reference internal" href="#join-join-prog-and-main-track-outputs" id="id235"><code class="docutils literal notranslate"><span class="pre">JOIN</span></code> - Join PROG and MAIN track outputs</a></p></li>
+<li><p><a class="reference internal" href="#unjoin-disconnect-prog-track-from-main" id="id236"><code class="docutils literal notranslate"><span class="pre">UNJOIN</span></code> - Disconnect prog track from main</a></p></li>
+<li><p><a class="reference internal" href="#endexrail-deprecated-do-not-use" id="id237"><code class="docutils literal notranslate"><span class="pre">ENDEXRAIL</span></code> - Deprecated - Do not use</a></p></li>
+<li><p><a class="reference internal" href="#exrail-deprecated-do-not-use" id="id238"><code class="docutils literal notranslate"><span class="pre">EXRAIL</span></code> - Deprecated - Do not use</a></p></li>
+<li><p><a class="reference internal" href="#killall-kills-all-running-ex-r-activities" id="id239"><code class="docutils literal notranslate"><span class="pre">KILLALL</span></code> - Kills all running <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> activities</a></p></li>
+<li><p><a class="reference internal" href="#parse-msg-allows-parsing-of-a-dcc-ex-api-command-via-myautomation-h" id="id240"><code class="docutils literal notranslate"><span class="pre">PARSE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Allows parsing of a DCC-EX API command via myAutomation.h</a></p></li>
+<li><p><a class="reference internal" href="#disable-prog-disable-programming-to-save-ram-flash" id="id241"><code class="docutils literal notranslate"><span class="pre">DISABLE_PROG</span></code> - Disable programming to save RAM/Flash</a></p></li>
+<li><p><a class="reference internal" href="#io-no-hal-reduce-flash-footprint-when-hal-features-not-required" id="id242"><code class="docutils literal notranslate"><span class="pre">IO_NO_HAL</span></code> - Reduce FLASH footprint when HAL features not required</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
 <section id="poweron-power-on-track-and-unjoin">
-<span id="poweron"></span><h4><a class="toc-backref" href="#id228" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">POWERON</span></code> - Power on track and UNJOIN</a><a class="headerlink" href="#poweron-power-on-track-and-unjoin" title="Link to this heading"></a></h4>
+<span id="poweron"></span><h4><a class="toc-backref" href="#id233" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">POWERON</span></code> - Power on track and UNJOIN</a><a class="headerlink" href="#poweron-power-on-track-and-unjoin" title="Link to this heading"></a></h4>
 <p>Turn the track power on and UNJOIN if currently joined.</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="poweroff-power-off-track">
-<span id="poweroff"></span><h4><a class="toc-backref" href="#id229" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">POWEROFF</span></code> - Power off track</a><a class="headerlink" href="#poweroff-power-off-track" title="Link to this heading"></a></h4>
+<span id="poweroff"></span><h4><a class="toc-backref" href="#id234" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">POWEROFF</span></code> - Power off track</a><a class="headerlink" href="#poweroff-power-off-track" title="Link to this heading"></a></h4>
 <p>Turn the track power off.</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="join-join-prog-and-main-track-outputs">
-<span id="join"></span><h4><a class="toc-backref" href="#id230" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">JOIN</span></code> - Join PROG and MAIN track outputs</a><a class="headerlink" href="#join-join-prog-and-main-track-outputs" title="Link to this heading"></a></h4>
+<span id="join"></span><h4><a class="toc-backref" href="#id235" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">JOIN</span></code> - Join PROG and MAIN track outputs</a><a class="headerlink" href="#join-join-prog-and-main-track-outputs" title="Link to this heading"></a></h4>
 <p>Join PROG and MAIN track outputs to send the same MAIN DCC signal.</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="unjoin-disconnect-prog-track-from-main">
-<span id="unjoin"></span><h4><a class="toc-backref" href="#id231" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">UNJOIN</span></code> - Disconnect prog track from main</a><a class="headerlink" href="#unjoin-disconnect-prog-track-from-main" title="Link to this heading"></a></h4>
+<span id="unjoin"></span><h4><a class="toc-backref" href="#id236" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">UNJOIN</span></code> - Disconnect prog track from main</a><a class="headerlink" href="#unjoin-disconnect-prog-track-from-main" title="Link to this heading"></a></h4>
 <p>Disconnect PROG output from MAIN output.</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="endexrail-deprecated-do-not-use">
-<span id="endexrail"></span><h4><a class="toc-backref" href="#id232" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ENDEXRAIL</span></code> - Deprecated - Do not use</a><a class="headerlink" href="#endexrail-deprecated-do-not-use" title="Link to this heading"></a></h4>
+<span id="endexrail"></span><h4><a class="toc-backref" href="#id237" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ENDEXRAIL</span></code> - Deprecated - Do not use</a><a class="headerlink" href="#endexrail-deprecated-do-not-use" title="Link to this heading"></a></h4>
 <p>Deprecated - Do not use</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="exrail-deprecated-do-not-use">
-<span id="exrail"></span><h4><a class="toc-backref" href="#id233" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">EXRAIL</span></code> - Deprecated - Do not use</a><a class="headerlink" href="#exrail-deprecated-do-not-use" title="Link to this heading"></a></h4>
+<span id="exrail"></span><h4><a class="toc-backref" href="#id238" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">EXRAIL</span></code> - Deprecated - Do not use</a><a class="headerlink" href="#exrail-deprecated-do-not-use" title="Link to this heading"></a></h4>
 <p>Deprecated - Do not use</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="killall-kills-all-running-ex-r-activities">
-<span id="killall"></span><h4><a class="toc-backref" href="#id234" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">KILLALL</span></code> - Kills all running <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> activities</a><a class="headerlink" href="#killall-kills-all-running-ex-r-activities" title="Link to this heading"></a></h4>
+<span id="killall"></span><h4><a class="toc-backref" href="#id239" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">KILLALL</span></code> - Kills all running <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> activities</a><a class="headerlink" href="#killall-kills-all-running-ex-r-activities" title="Link to this heading"></a></h4>
 <p>Kills all running <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> activities</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="parse-msg-allows-parsing-of-a-dcc-ex-api-command-via-myautomation-h">
-<span id="parse"></span><h4><a class="toc-backref" href="#id235" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">PARSE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Allows parsing of a DCC-EX API command via myAutomation.h</a><a class="headerlink" href="#parse-msg-allows-parsing-of-a-dcc-ex-api-command-via-myautomation-h" title="Link to this heading"></a></h4>
+<span id="parse"></span><h4><a class="toc-backref" href="#id240" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">PARSE(</span> <span class="pre">&quot;msg&quot;</span> <span class="pre">)</span></code> - Allows parsing of a DCC-EX API command via myAutomation.h</a><a class="headerlink" href="#parse-msg-allows-parsing-of-a-dcc-ex-api-command-via-myautomation-h" title="Link to this heading"></a></h4>
 <p>Allows parsing of a DCC-EX API command via myAutomation.h.  This allows you to include Native DCC-EX Cammands in myAutomation.h where there is no equivalent EXRAIL command.</p>
 <p><em>Parameters:</em> <br /> &gt; <strong>msg</strong> - message to parse</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="disable-prog-disable-programming-to-save-ram-flash">
-<span id="disable-prog"></span><h4><a class="toc-backref" href="#id236" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">DISABLE_PROG</span></code> - Disable programming to save RAM/Flash</a><a class="headerlink" href="#disable-prog-disable-programming-to-save-ram-flash" title="Link to this heading"></a></h4>
+<span id="disable-prog"></span><h4><a class="toc-backref" href="#id241" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">DISABLE_PROG</span></code> - Disable programming to save RAM/Flash</a><a class="headerlink" href="#disable-prog-disable-programming-to-save-ram-flash" title="Link to this heading"></a></h4>
 <p>Disable programming to save RAM/Flash.</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="io-no-hal-reduce-flash-footprint-when-hal-features-not-required">
-<span id="io-no-hal"></span><h4><a class="toc-backref" href="#id237" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IO_NO_HAL</span></code> - Reduce FLASH footprint when HAL features not required</a><a class="headerlink" href="#io-no-hal-reduce-flash-footprint-when-hal-features-not-required" title="Link to this heading"></a></h4>
+<span id="io-no-hal"></span><h4><a class="toc-backref" href="#id242" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IO_NO_HAL</span></code> - Reduce FLASH footprint when HAL features not required</a><a class="headerlink" href="#io-no-hal-reduce-flash-footprint-when-hal-features-not-required" title="Link to this heading"></a></h4>
 <p>To reduce FLASH footprint when HAL features not required.</p>
 <p>Note: The HAL is disabled by default on Nano and Uno platforms, because of limited flash space.</p>
 <p><em>Parameters:</em> <br /> &gt; none</p>
@@ -3112,18 +3126,18 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <nav class="contents in-this-section local" id="id22">
 <p class="topic-title">In This Section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#onlcc-sender-eventid-tba" id="id238"><code class="docutils literal notranslate"><span class="pre">ONLCC(sender,</span> <span class="pre">eventid)</span></code> - TBA</a></p></li>
-<li><p><a class="reference internal" href="#lcc-eventid-tba" id="id239"><code class="docutils literal notranslate"><span class="pre">LCC(eventid)</span></code> - TBA</a></p></li>
-<li><p><a class="reference internal" href="#lccx-senderid-eventid-tba" id="id240"><code class="docutils literal notranslate"><span class="pre">LCCX(senderid,eventid)</span></code> - TBA</a></p></li>
-<li><p><a class="reference internal" href="#acon-eventid-tba" id="id241"><code class="docutils literal notranslate"><span class="pre">ACON(eventid)</span></code> - TBA</a></p></li>
-<li><p><a class="reference internal" href="#acof-eventid-tba" id="id242"><code class="docutils literal notranslate"><span class="pre">ACOF(eventid)</span></code> - TBA</a></p></li>
-<li><p><a class="reference internal" href="#onacon-eventid-tba" id="id243"><code class="docutils literal notranslate"><span class="pre">ONACON(eventid)</span></code> - TBA</a></p></li>
-<li><p><a class="reference internal" href="#onacof-eventid-tba" id="id244"><code class="docutils literal notranslate"><span class="pre">ONACOF(eventid)</span></code> - TBA</a></p></li>
+<li><p><a class="reference internal" href="#onlcc-sender-eventid-tba" id="id243"><code class="docutils literal notranslate"><span class="pre">ONLCC(sender,</span> <span class="pre">eventid)</span></code> - TBA</a></p></li>
+<li><p><a class="reference internal" href="#lcc-eventid-tba" id="id244"><code class="docutils literal notranslate"><span class="pre">LCC(eventid)</span></code> - TBA</a></p></li>
+<li><p><a class="reference internal" href="#lccx-senderid-eventid-tba" id="id245"><code class="docutils literal notranslate"><span class="pre">LCCX(senderid,eventid)</span></code> - TBA</a></p></li>
+<li><p><a class="reference internal" href="#acon-eventid-tba" id="id246"><code class="docutils literal notranslate"><span class="pre">ACON(eventid)</span></code> - TBA</a></p></li>
+<li><p><a class="reference internal" href="#acof-eventid-tba" id="id247"><code class="docutils literal notranslate"><span class="pre">ACOF(eventid)</span></code> - TBA</a></p></li>
+<li><p><a class="reference internal" href="#onacon-eventid-tba" id="id248"><code class="docutils literal notranslate"><span class="pre">ONACON(eventid)</span></code> - TBA</a></p></li>
+<li><p><a class="reference internal" href="#onacof-eventid-tba" id="id249"><code class="docutils literal notranslate"><span class="pre">ONACOF(eventid)</span></code> - TBA</a></p></li>
 </ul>
 </nav>
 <p><hr class="hr-dashed" /></p>
 <section id="onlcc-sender-eventid-tba">
-<span id="onlcc"></span><h4><a class="toc-backref" href="#id238" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONLCC(sender,</span> <span class="pre">eventid)</span></code> - TBA</a><a class="headerlink" href="#onlcc-sender-eventid-tba" title="Link to this heading"></a></h4>
+<span id="onlcc"></span><h4><a class="toc-backref" href="#id243" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONLCC(sender,</span> <span class="pre">eventid)</span></code> - TBA</a><a class="headerlink" href="#onlcc-sender-eventid-tba" title="Link to this heading"></a></h4>
 <div class="admonition-todo admonition" id="id23">
 <p class="admonition-title">Todo</p>
 <p>LOW - EXRAIL doco - ONLCC</p>
@@ -3132,7 +3146,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="lcc-eventid-tba">
-<span id="lcc"></span><h4><a class="toc-backref" href="#id239" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">LCC(eventid)</span></code> - TBA</a><a class="headerlink" href="#lcc-eventid-tba" title="Link to this heading"></a></h4>
+<span id="lcc"></span><h4><a class="toc-backref" href="#id244" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">LCC(eventid)</span></code> - TBA</a><a class="headerlink" href="#lcc-eventid-tba" title="Link to this heading"></a></h4>
 <div class="admonition-todo admonition" id="id24">
 <p class="admonition-title">Todo</p>
 <p>LOW - EXRAIL doco - LCC</p>
@@ -3141,7 +3155,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="lccx-senderid-eventid-tba">
-<span id="lccx"></span><h4><a class="toc-backref" href="#id240" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">LCCX(senderid,eventid)</span></code> - TBA</a><a class="headerlink" href="#lccx-senderid-eventid-tba" title="Link to this heading"></a></h4>
+<span id="lccx"></span><h4><a class="toc-backref" href="#id245" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">LCCX(senderid,eventid)</span></code> - TBA</a><a class="headerlink" href="#lccx-senderid-eventid-tba" title="Link to this heading"></a></h4>
 <div class="admonition-todo admonition" id="id25">
 <p class="admonition-title">Todo</p>
 <p>LOW - EXRAIL doco - LCCX</p>
@@ -3150,7 +3164,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="acon-eventid-tba">
-<span id="acon"></span><h4><a class="toc-backref" href="#id241" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ACON(eventid)</span></code> - TBA</a><a class="headerlink" href="#acon-eventid-tba" title="Link to this heading"></a></h4>
+<span id="acon"></span><h4><a class="toc-backref" href="#id246" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ACON(eventid)</span></code> - TBA</a><a class="headerlink" href="#acon-eventid-tba" title="Link to this heading"></a></h4>
 <div class="admonition-todo admonition" id="id26">
 <p class="admonition-title">Todo</p>
 <p>LOW - EXRAIL doco - ACON</p>
@@ -3159,7 +3173,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="acof-eventid-tba">
-<span id="acof"></span><h4><a class="toc-backref" href="#id242" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ACOF(eventid)</span></code> - TBA</a><a class="headerlink" href="#acof-eventid-tba" title="Link to this heading"></a></h4>
+<span id="acof"></span><h4><a class="toc-backref" href="#id247" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ACOF(eventid)</span></code> - TBA</a><a class="headerlink" href="#acof-eventid-tba" title="Link to this heading"></a></h4>
 <div class="admonition-todo admonition" id="id27">
 <p class="admonition-title">Todo</p>
 <p>LOW - EXRAIL doco - ACOF</p>
@@ -3168,7 +3182,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="onacon-eventid-tba">
-<span id="onacon"></span><h4><a class="toc-backref" href="#id243" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONACON(eventid)</span></code> - TBA</a><a class="headerlink" href="#onacon-eventid-tba" title="Link to this heading"></a></h4>
+<span id="onacon"></span><h4><a class="toc-backref" href="#id248" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONACON(eventid)</span></code> - TBA</a><a class="headerlink" href="#onacon-eventid-tba" title="Link to this heading"></a></h4>
 <div class="admonition-todo admonition" id="id28">
 <p class="admonition-title">Todo</p>
 <p>LOW - EXRAIL doco - OACON</p>
@@ -3177,7 +3191,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="onacof-eventid-tba">
-<span id="onacof"></span><h4><a class="toc-backref" href="#id244" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONACOF(eventid)</span></code> - TBA</a><a class="headerlink" href="#onacof-eventid-tba" title="Link to this heading"></a></h4>
+<span id="onacof"></span><h4><a class="toc-backref" href="#id249" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONACOF(eventid)</span></code> - TBA</a><a class="headerlink" href="#onacof-eventid-tba" title="Link to this heading"></a></h4>
 <div class="admonition-todo admonition" id="id29">
 <p class="admonition-title">Todo</p>
 <p>LOW - EXRAIL doco - ONACOF</p>
@@ -3195,7 +3209,6 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <p>If you are unsure on the impacts using anything in this section may have, please reach out to the <a href="../index.html"><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span></a> team via the methods listed on our <a class="reference internal" href="../support/contact-us.html"><span class="doc">Contact Us</span></a> page.</p>
 <section id="stealth-code-include-some-c-code-in-a-route-sequence">
 <span id="stealth"></span><h4><code class="docutils literal notranslate"><span class="pre">STEALTH(</span> <span class="pre">code</span> <span class="pre">)</span></code> - include some C++ code in a ROUTE/SEQUENCE<a class="headerlink" href="#stealth-code-include-some-c-code-in-a-route-sequence" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p><strong>SERIOUS ENGINEERS and ADVANCED C++ USERS ONLY</strong>   <a class="reference external" href="../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <p>Permits a certain level of C++ code to be embedded as a single step in an EXRAIL sequence.</p>
 <p>Please use this option with great care.  If in doubt ask for assistance.</p>
@@ -3223,7 +3236,6 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 </section>
 <section id="stealth-global-code">
 <span id="stealth-global"></span><h4><code class="docutils literal notranslate"><span class="pre">STEALTH_GLOBAL(</span> <span class="pre">code</span> <span class="pre">)</span></code><a class="headerlink" href="#stealth-global-code" title="Link to this heading"></a></h4>
-<p><a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-light" src="../_images/new_in_version_5_4.png" style="width: 238.79999999999998px; height: 47.699999999999996px;" /></a> <a class="reference external" href="../news/posts/20230807.html"><img alt="New In Version 5.4" class="image-min-width-144 show-dark" src="../_images/new_in_version_5_4_dark.png" style="width: 240.0px; height: 48.0px;" /></a></p>
 <p><strong>SERIOUS ENGINEERS and ADVANCED C++ USERS ONLY</strong>   <a class="reference external" href="../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <p>Inserts code such as static variables and functions that may be utilized by multiple <code class="docutils literal notranslate"><span class="pre">STEALTH</span></code> operations.</p>
 <p>Please use this option with great care, and you will need to be an advanced C++ user to make use of this command.  If in doubt ask for assistance.</p>
@@ -3239,7 +3251,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="cookbooks/editing-tricks/using-macros.html" class="btn btn-neutral float-left" title="Using C++ Macros" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cookbooks/various-devices/trainbrains.html" class="btn btn-neutral float-left" title="Trainbrains Devices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="about.html" class="btn btn-neutral float-right" title="About and History" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
@@ -3253,7 +3265,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f14ceb0a440>
+    <jinja2.runtime.BlockReference object at 0x7f58e753c6a0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

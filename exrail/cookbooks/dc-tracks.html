@@ -35,8 +35,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Emergency stop button" href="estop-button.html" />
-    <link rel="prev" title="Buttons and Switches" href="animation-sensors.html" /> 
+    <link rel="next" title="Roster Entries for Similar Sound Locos" href="roster-similar-locos.html" />
+    <link rel="prev" title="Define Track Modes at Startup" href="startup-set-track.html" /> 
      
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
@@ -290,16 +290,18 @@
 <li class="toctree-l2"><a class="reference internal" href="../examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tips.html">Tips and Techniques</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Cookbooks</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="vpins.html">Virtual Bitmap device pins (VPINs)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="animation-sensors.html">Buttons and Switches</a></li>
+<li class="toctree-l3"><a class="reference internal" href="startup-poweron.html">Power On at Startup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="startup-set-track.html">Define Track Modes at Startup</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Set a track to DC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="estop-button.html">Emergency stop button</a></li>
-<li class="toctree-l3"><a class="reference internal" href="flashing-signals.html">Signals with flashing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="roster-similar-locos.html">Roster for Similar Sound Locos</a></li>
-<li class="toctree-l3"><a class="reference internal" href="route-button-control.html">Route button control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="startup-poweron.html">Startup power</a></li>
-<li class="toctree-l3"><a class="reference internal" href="startup-set-track.html">Startup - Define Tracks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="timecontrol.html">Time Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="roster-similar-locos.html">Roster Entries for Similar Sound Locos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing-tricks/index.html">Editing - Tips and Tricks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="editing-tricks/multi-files.html">Multiple Files in EXRAIL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="editing-tricks/multiple-command-stations.html">Maintaining multiple command stations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="editing-tricks/naming-a-sequence.html">Naming sequences for easy commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="editing-tricks/using-call-return.html">Using CALL and RETURN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="editing-tricks/using-macros.html">Using C++ Macros</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="driving-trains/index.html">Driving Trains</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="driving-trains/basic.html">Basic driving functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="driving-trains/functions.html">Loco Functions</a></li>
@@ -307,17 +309,6 @@
 <li class="toctree-l4"><a class="reference internal" href="driving-trains/simple-shuttle.html">Simple shuttle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="driving-trains/improved-shuttle.html">Improved shuttle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="driving-trains/passing-loop.html">Passing loop shuttle</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="flags-and-latches/index.html">Flags and Latches</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="flags-and-latches/flags.html">Flags, Counters and Bitmaps</a></li>
-<li class="toctree-l4"><a class="reference internal" href="flags-and-latches/latches.html">Latches</a></li>
-<li class="toctree-l4"><a class="reference internal" href="flags-and-latches/stash.html">Using STASH to remember where locos are parked</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="neopixels/index.html">NeoPixel Support</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="neopixels/neopixels.html">Setting neopixels</a></li>
-<li class="toctree-l4"><a class="reference internal" href="neopixels/signals.html">Neopixel signals</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="turnouts/index.html">Turnouts/Points</a><ul>
@@ -329,6 +320,22 @@
 <li class="toctree-l4"><a class="reference internal" href="turnouts/toggle-with-button.html">Toggle turnouts/points with button or sensor</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="route-button-control.html">Manipulating Route Buttons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vpins.html">Virtual Bitmap device pins (VPINs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation-sensors.html">Buttons and Switches</a></li>
+<li class="toctree-l3"><a class="reference internal" href="estop-button.html">Emergency stop button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="neopixels/index.html">NeoPixel Support</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="neopixels/neopixels.html">Setting neopixels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="neopixels/signals.html">Neopixel signals</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="flashing-signals.html">Signals with flashing (Blink)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flags-and-latches/index.html">Flags and Latches</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="flags-and-latches/flags.html">Flags, Counters and Bitmaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flags-and-latches/latches.html">Latches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flags-and-latches/stash.html">Using STASH to remember where locos are parked</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="advanced/index.html">Advanced EXRAIL Sequences</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="advanced/display-locos-on-oled.html">Display Loco speeds on OLED (Advanced)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="advanced/analog-sensors.html">Analog Sensors</a></li>
@@ -337,18 +344,11 @@
 <li class="toctree-l4"><a class="reference internal" href="advanced/passing-locos-between-sequences.html">Passing locos between sequences</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="timecontrol.html">Time Control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="various-devices/index.html">Supporting Various Additional Devices</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="various-devices/duinoNodes.html">Lew’s Duino Gear boards</a></li>
 <li class="toctree-l4"><a class="reference internal" href="various-devices/tm-1638.html">TM1638 Buttons, leds and 7 segment display</a></li>
 <li class="toctree-l4"><a class="reference internal" href="various-devices/trainbrains.html">Trainbrains Devices</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="editing-tricks/index.html">Editing - Tips and Tricks</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="editing-tricks/multi-files.html">Multiple Files in EXRAIL</a></li>
-<li class="toctree-l4"><a class="reference internal" href="editing-tricks/multiple-command-stations.html">Maintaining multiple command stations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="editing-tricks/naming-a-sequence.html">Naming sequences for easy commands</a></li>
-<li class="toctree-l4"><a class="reference internal" href="editing-tricks/using-call-return.html">Using CALL and RETURN</a></li>
-<li class="toctree-l4"><a class="reference internal" href="editing-tricks/using-macros.html">Using C++ Macros</a></li>
 </ul>
 </li>
 </ul>
@@ -693,11 +693,8 @@
 <section id="set-a-track-to-dc">
 <h1>Set a track to DC<a class="headerlink" href="#set-a-track-to-dc" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../support/index.html#contact-support-options" title="Request help or support"><img src="../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
-<p>The command</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">SET_TRACK(t,mode)</span></code> is used to change the way a track is used.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">SET_POWER(t,</span> <span class="pre">ON)</span></code>  - track is OFF following mode change.</p></li>
-</ul>
+<p>The command: <code class="docutils literal notranslate"><span class="pre">SET_TRACK(t,mode)</span></code> is used to change the way a track is used.</p>
+<p>Note: The track is OFF following mode change, so you can use the <code class="docutils literal notranslate"><span class="pre">SET_POWER(t,</span> <span class="pre">ON)</span></code> command to power the track after setting the mode.</p>
 <p>Using a <strong>ROUTE</strong> or other sequence, you can set a track to the correct <a class="reference internal" href="../../reference/hardware/dcc-vs-dc.html"><span class="doc">DC</span></a> polarity and specify the loco address that the throttle will use to drive the loco on that track.</p>
 <p>(The throttle doesn’t need to know that you are using DC.)</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ROUTE</span><span class="p">(</span><span class="mi">77</span><span class="p">,</span><span class="s">&quot;Set track A to DC for loco 123&quot;</span><span class="p">)</span>
@@ -730,8 +727,8 @@ To drive over a junction between the two, the ‘to’ track must be switched in
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="animation-sensors.html" class="btn btn-neutral float-left" title="Buttons and Switches" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="estop-button.html" class="btn btn-neutral float-right" title="Emergency stop button" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="startup-set-track.html" class="btn btn-neutral float-left" title="Define Track Modes at Startup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="roster-similar-locos.html" class="btn btn-neutral float-right" title="Roster Entries for Similar Sound Locos" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -744,7 +741,7 @@ To drive over a junction between the two, the ‘to’ track must be switched in
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f14d3c24550>
+    <jinja2.runtime.BlockReference object at 0x7f58e2a56e00>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

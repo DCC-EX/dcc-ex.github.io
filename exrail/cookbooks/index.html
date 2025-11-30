@@ -35,7 +35,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Virtual Bitmap device pins (VPINs)" href="vpins.html" />
+    <link rel="next" title="Power On at Startup" href="startup-poweron.html" />
     <link rel="prev" title="Tips and Techniques" href="../tips.html" /> 
      
       <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -290,16 +290,18 @@
 <li class="toctree-l2"><a class="reference internal" href="../examples.html">Example Objects and Sequences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tips.html">Tips and Techniques</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Cookbooks</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="vpins.html">Virtual Bitmap device pins (VPINs)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="animation-sensors.html">Buttons and Switches</a></li>
+<li class="toctree-l3"><a class="reference internal" href="startup-poweron.html">Power On at Startup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="startup-set-track.html">Define Track Modes at Startup</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dc-tracks.html">Set a track to DC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="estop-button.html">Emergency stop button</a></li>
-<li class="toctree-l3"><a class="reference internal" href="flashing-signals.html">Signals with flashing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="roster-similar-locos.html">Roster for Similar Sound Locos</a></li>
-<li class="toctree-l3"><a class="reference internal" href="route-button-control.html">Route button control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="startup-poweron.html">Startup power</a></li>
-<li class="toctree-l3"><a class="reference internal" href="startup-set-track.html">Startup - Define Tracks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="timecontrol.html">Time Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="roster-similar-locos.html">Roster Entries for Similar Sound Locos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing-tricks/index.html">Editing - Tips and Tricks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="editing-tricks/multi-files.html">Multiple Files in EXRAIL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="editing-tricks/multiple-command-stations.html">Maintaining multiple command stations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="editing-tricks/naming-a-sequence.html">Naming sequences for easy commands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="editing-tricks/using-call-return.html">Using CALL and RETURN</a></li>
+<li class="toctree-l4"><a class="reference internal" href="editing-tricks/using-macros.html">Using C++ Macros</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="driving-trains/index.html">Driving Trains</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="driving-trains/basic.html">Basic driving functions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="driving-trains/functions.html">Loco Functions</a></li>
@@ -307,17 +309,6 @@
 <li class="toctree-l4"><a class="reference internal" href="driving-trains/simple-shuttle.html">Simple shuttle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="driving-trains/improved-shuttle.html">Improved shuttle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="driving-trains/passing-loop.html">Passing loop shuttle</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="flags-and-latches/index.html">Flags and Latches</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="flags-and-latches/flags.html">Flags, Counters and Bitmaps</a></li>
-<li class="toctree-l4"><a class="reference internal" href="flags-and-latches/latches.html">Latches</a></li>
-<li class="toctree-l4"><a class="reference internal" href="flags-and-latches/stash.html">Using STASH to remember where locos are parked</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="neopixels/index.html">NeoPixel Support</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="neopixels/neopixels.html">Setting neopixels</a></li>
-<li class="toctree-l4"><a class="reference internal" href="neopixels/signals.html">Neopixel signals</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="turnouts/index.html">Turnouts/Points</a><ul>
@@ -329,6 +320,22 @@
 <li class="toctree-l4"><a class="reference internal" href="turnouts/toggle-with-button.html">Toggle turnouts/points with button or sensor</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="route-button-control.html">Manipulating Route Buttons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vpins.html">Virtual Bitmap device pins (VPINs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation-sensors.html">Buttons and Switches</a></li>
+<li class="toctree-l3"><a class="reference internal" href="estop-button.html">Emergency stop button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="neopixels/index.html">NeoPixel Support</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="neopixels/neopixels.html">Setting neopixels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="neopixels/signals.html">Neopixel signals</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="flashing-signals.html">Signals with flashing (Blink)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flags-and-latches/index.html">Flags and Latches</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="flags-and-latches/flags.html">Flags, Counters and Bitmaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flags-and-latches/latches.html">Latches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="flags-and-latches/stash.html">Using STASH to remember where locos are parked</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="advanced/index.html">Advanced EXRAIL Sequences</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="advanced/display-locos-on-oled.html">Display Loco speeds on OLED (Advanced)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="advanced/analog-sensors.html">Analog Sensors</a></li>
@@ -337,18 +344,11 @@
 <li class="toctree-l4"><a class="reference internal" href="advanced/passing-locos-between-sequences.html">Passing locos between sequences</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="timecontrol.html">Time Control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="various-devices/index.html">Supporting Various Additional Devices</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="various-devices/duinoNodes.html">Lew’s Duino Gear boards</a></li>
 <li class="toctree-l4"><a class="reference internal" href="various-devices/tm-1638.html">TM1638 Buttons, leds and 7 segment display</a></li>
 <li class="toctree-l4"><a class="reference internal" href="various-devices/trainbrains.html">Trainbrains Devices</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="editing-tricks/index.html">Editing - Tips and Tricks</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="editing-tricks/multi-files.html">Multiple Files in EXRAIL</a></li>
-<li class="toctree-l4"><a class="reference internal" href="editing-tricks/multiple-command-stations.html">Maintaining multiple command stations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="editing-tricks/naming-a-sequence.html">Naming sequences for easy commands</a></li>
-<li class="toctree-l4"><a class="reference internal" href="editing-tricks/using-call-return.html">Using CALL and RETURN</a></li>
-<li class="toctree-l4"><a class="reference internal" href="editing-tricks/using-macros.html">Using C++ Macros</a></li>
 </ul>
 </li>
 </ul>
@@ -692,28 +692,110 @@
 <section id="cookbooks">
 <h1>Cookbooks<a class="headerlink" href="#cookbooks" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="../../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../support/index.html#contact-support-options" title="Request help or support"><img src="../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
-<p>The <a href="../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> Cookbooks provide step-by-step instructions for building various <a href="../../index.html"><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span></a> based accessories and components for your model railroad.</p>
+<p>The <a href="../../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> Cookbooks provide step-by-step instructions for building various <a href="../../index.html"><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span></a> based sequences and components for your model railroad.</p>
 <p>The following cookbooks are currently available:</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="vpins.html">Virtual Bitmap device pins (VPINs)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="animation-sensors.html">Buttons and Switches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup-poweron.html">Power On at Startup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="startup-set-track.html">Define Track Modes at Startup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dc-tracks.html">Set a track to DC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="estop-button.html">Emergency stop button</a></li>
-<li class="toctree-l1"><a class="reference internal" href="flashing-signals.html">Signals with flashing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="roster-similar-locos.html">Roster for Similar Sound Locos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="route-button-control.html">Route button control</a></li>
-<li class="toctree-l1"><a class="reference internal" href="startup-poweron.html">Startup power</a></li>
-<li class="toctree-l1"><a class="reference internal" href="startup-set-track.html">Startup - Define Tracks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="timecontrol.html">Time Control</a></li>
-<li class="toctree-l1"><a class="reference internal" href="driving-trains/index.html">Driving Trains</a></li>
-<li class="toctree-l1"><a class="reference internal" href="flags-and-latches/index.html">Flags and Latches</a></li>
-<li class="toctree-l1"><a class="reference internal" href="neopixels/index.html">NeoPixel Support</a></li>
-<li class="toctree-l1"><a class="reference internal" href="turnouts/index.html">Turnouts/Points</a></li>
-<li class="toctree-l1"><a class="reference internal" href="advanced/index.html">Advanced EXRAIL Sequences</a></li>
-<li class="toctree-l1"><a class="reference internal" href="various-devices/index.html">Supporting Various Additional Devices</a></li>
-<li class="toctree-l1"><a class="reference internal" href="editing-tricks/index.html">Editing - Tips and Tricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="roster-similar-locos.html">Roster Entries for Similar Sound Locos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editing-tricks/index.html">Editing - Tips and Tricks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="editing-tricks/multi-files.html">Multiple Files in EXRAIL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing-tricks/multiple-command-stations.html">Maintaining multiple command stations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing-tricks/naming-a-sequence.html">Naming sequences for easy commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing-tricks/using-call-return.html">Using CALL and RETURN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editing-tricks/using-macros.html">Using C++ Macros</a></li>
 </ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="driving-trains/index.html">Driving Trains</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="driving-trains/basic.html">Basic driving functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="driving-trains/functions.html">Loco Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="driving-trains/automations.html">AUTOMATIONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="driving-trains/simple-shuttle.html">Simple shuttle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="driving-trains/improved-shuttle.html">Improved shuttle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="driving-trains/passing-loop.html">Passing loop shuttle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="turnouts/index.html">Turnouts/Points</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="turnouts/defining-dcc-turnouts.html">Defining DCC turnouts/points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="turnouts/defining-pin-turnouts.html">Defining PIN turnouts/points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="turnouts/defining-servo-turnouts.html">Defining Servo turnouts/points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="turnouts/facing-turnouts.html">Facing turnouts/points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="turnouts/animated-turnouts.html">Animated Turnouts/Points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="turnouts/toggle-with-button.html">Toggle turnouts/points with button or sensor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="route-button-control.html">Manipulating Route Buttons</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="route-button-control.html#hiding-disabling-and-re-captioning-route-buttons">Hiding, disabling, and re-captioning route buttons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="route-button-control.html#simple-light-switch-route">Simple light switch route</a></li>
+<li class="toctree-l2"><a class="reference internal" href="route-button-control.html#changing-button-captions">Changing button captions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="route-button-control.html#two-separate-routes-example">Two separate routes example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vpins.html">Virtual Bitmap device pins (VPINs)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vpins.html#creating-virtual-pins">Creating virtual pins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpins.html#using-output-vpins">Using OUTPUT VPINS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpins.html#using-input-vpins">Using INPUT VPINs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpins.html#using-input-output-vpins">Using INPUT/OUTPUT VPINs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="animation-sensors.html">Buttons and Switches</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="animation-sensors.html#detecting-a-button-press">Detecting a button press</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animation-sensors.html#detecting-a-switch-change">Detecting a switch change</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="estop-button.html">Emergency stop button</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="neopixels/index.html">NeoPixel Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="neopixels/index.html#defining-the-hardware-driver">Defining the hardware driver</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flashing-signals.html">Signals with flashing (Blink)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flashing-signals.html#blinking-signals">Blinking Signals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flashing-signals.html#always-blink-amber">Always Blink AMBER</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flags-and-latches/index.html">Flags and Latches</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flags-and-latches/flags.html">Flags, Counters and Bitmaps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flags-and-latches/latches.html">Latches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flags-and-latches/stash.html">Using STASH to remember where locos are parked</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="advanced/index.html">Advanced EXRAIL Sequences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advanced/display-locos-on-oled.html">Display Loco speeds on OLED (Advanced)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/analog-sensors.html">Analog Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/command-filter.html">Command Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/tca8418-keyboard.html">TCA8418 keyboard scanner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/passing-locos-between-sequences.html">Passing locos between sequences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="timecontrol.html">Time Control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="timecontrol.html#time-command">Time Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="various-devices/index.html">Supporting Various Additional Devices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="various-devices/duinoNodes.html">Lew’s Duino Gear boards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="various-devices/tm-1638.html">TM1638 Buttons, leds and 7 segment display</a></li>
+<li class="toctree-l2"><a class="reference internal" href="various-devices/trainbrains.html">Trainbrains Devices</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not waste your time asking ChatGPT, Copilot or Gemini to create EXRAIL scripts.   They do not understand EXRAIL and will get it wrong 100% of the time.</p>
 </div>
 </section>
 
@@ -725,7 +807,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../tips.html" class="btn btn-neutral float-left" title="Tips and Techniques" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="vpins.html" class="btn btn-neutral float-right" title="Virtual Bitmap device pins (VPINs)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="startup-poweron.html" class="btn btn-neutral float-right" title="Power On at Startup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -738,7 +820,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f14cf840310>
+    <jinja2.runtime.BlockReference object at 0x7f58f5a702e0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

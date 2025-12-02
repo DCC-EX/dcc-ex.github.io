@@ -559,11 +559,11 @@ Cab (Loco) Commands
 
   *Examples:*
 
-    `<m 3 0>`   sets loco 3 to no momentum.
-    `<m 3 21>`   sets loco 3 to 21 mS/step.
+    `<m 3 0>`   sets loco 3 to no momentum. |BR|
+    `<m 3 21>`   sets loco 3 to 21 mS/step. |BR|
     `<m 3 21 42>`   sets loco 3 to 21 mS/step accelerating and 42 mS/step when decelerating.
 
-    `<m LINEAR>` - acceleration is uniform up to selected throttle speed.
+    `<m LINEAR>` - acceleration is uniform up to selected throttle speed. |BR|
     `<m POWER>`  - acceleration depends on difference between loco speed and selected throttle speed.
 
 ----

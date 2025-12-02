@@ -532,6 +532,39 @@ Cab (Loco) Commands
   |_| |_| |_| |_| • *28 Speedsteps* |BR|
   |_| |_| |_| |_| • *128 Speedsteps*
 
+|hr-dashed|
+
+.. _native-command-m-momentum:
+
+``<m [type] | [cab acceleration [deceleration]]>`` - set the momentum of a loco
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| either |br|
+  |_| |_| > **cab:** DCC Address |BR|
+  |_| |_| > **acceleration:** |BR|
+  |_| |_| > **decelertaion:** |BR|
+  |_| or |br|
+  |_| |_| > **type:** |BR|
+  |_| |_| |_| one of `LINEAR` or `POWER`
+  
+  *Response:* |BR|
+  |_| none
+
+  The momentum calculation is based on the difference in throttle setting and actual speed. For example, the time taken to reach speed 50 from a standing start would be less if the throttle were set to speed 100, thus increasing the acceleration.
+
+  *Notes:*
+
+    Setting Momentum 7,14,21 etc is similar in effect to setting a decoder CV03/CV04 to 1,2,3.
+
+  *Examples:*
+
+    `<m 3 0>`   sets loco 3 to no momentum. |BR|
+    `<m 3 21>`   sets loco 3 to 21 mS/step. |BR|
+    `<m 3 21 42>`   sets loco 3 to 21 mS/step accelerating and 42 mS/step when decelerating.
+
+    `<m LINEAR>` - acceleration is uniform up to selected throttle speed. |BR|
+    `<m POWER>`  - acceleration depends on difference between loco speed and selected throttle speed.
 
 ----
 

@@ -421,6 +421,7 @@ Alphabetic Command List
   * :ref:`LCD`
   * :ref:`LCN`
   * :ref:`MESSAGE`
+  * :ref:`MOMENTUM`
   * :ref:`MOVETT`
   * :ref:`NEOPIXEL`
   * :ref:`NEOPIXEL_SIGNAL`
@@ -2764,6 +2765,25 @@ Set the current loco speed to 0 (same as SPEED(0))
 |_| > none
 
 |hr-dashed|
+
+.. _momentum:
+
+``MOMENTUM( accel [,decel])`` - Set loco momentum
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Set the current loco's momentum.
+
+*Parameters:* |BR|
+|_| > **accel** - acceleration (in milliseconds) |BR|
+|_| > **accel** - acceleration (in milliseconds) |BR|
+|_| |_| |_| |_| • if decel is not specified, it will be set to the same value as accel
+
+Setting Momentum 7,14,21 etc is similar in effect to setting a decoder CV03/CV04 to 1,2,3.
+
+As an additional option, the momentum calculation is based on the difference in throttle setting and actual speed. For example, the time taken to reach speed 50 from a standing start would be less if the throttle were set to speed 100, thus increasing the acceleration.
+
+|hr-dashed|
+
 
 .. _fon:
 

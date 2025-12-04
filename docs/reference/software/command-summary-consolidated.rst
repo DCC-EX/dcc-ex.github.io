@@ -546,7 +546,9 @@ Cab (Loco) Commands
   |_| |_| > **decelertaion:** |BR|
   |_| or |br|
   |_| |_| > **type:** |BR|
-  |_| |_| |_| one of `LINEAR` or `POWER`
+  |_| |_| |_| One of: |BR|
+  |_| |_| |_| |_| • `LINEAR` |BR|
+  |_| |_| |_| |_| • `POWER`
   
   *Response:* |BR|
   |_| none

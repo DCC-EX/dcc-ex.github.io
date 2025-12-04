@@ -72,13 +72,21 @@ Handy information
 Correct use of DONE, ENDIF, and FOLLOW() statements
 ---------------------------------------------------
 
-Every |EX-R| automation/route/sequence, event handler, and conditional statement must be terminated by one of these three directives.
+Every |EX-R| automation/route/sequence, event handler, and conditional statement should\* be terminated by one of these three directives.
 
 On this page, you will see various references to the use of ``DONE``, ``ENDIF``, and ``FOLLOW()`` which can be confusing, so refer to this quick list to help understand the context in which each of these should be used:
 
 - Every conditional statement (all directives starting with the word ``IF``) must be terminated by ``ENDIF``
 - Every group of commands within a ROUTE, AUTOMATION, or SEQUENCE must be terminated by either ``DONE`` or ``FOLLOW(id)``
 - Every event handler (all directives starting with the word ``ON``) must be terminated by ``DONE``
+
+.. note::
+
+  \* There are exceptions to this rule.
+  
+  EXRAIL is not a block structured language except for ``IF``/``ELSE``/``ENDIF``.  Therefor a ``SEQUENCE`` can be used without a ``DONE`` statement in certain situations.
+
+  For example when using ``FOLLOW`` to continuously loop back to a ``SEQUENCE``.  In this case the ``FOLLOW`` is being used like an old fashioned 'GOTO' statement to create a continuous loop.
 
 .. collapse:: For example: (click to show)
 
@@ -120,6 +128,8 @@ This applies to all directives starting with ``AT``, ``AFTER``, and ``IF``.
 When using ``AT()`` or ``AFTER()``, this is a blocking activity, meaning the sequence of activities will not progress beyond this particular directive unless the condition is met.
 
 When using ``IF`` conditional statements, these will not block if the condition is not met, allowing the sequence of activities to continue.
+
+Note: A negative value for a ``vpin`` can be used for an active high sensor.
 
 .. collapse:: For example: (click to show)
 
@@ -1078,8 +1088,11 @@ Perform the following block of commands if the specified sensor is active.
 Optionally be followed by an ``ELSE`` somewhere in the following commands. 
 Must be followed by an ``ENDIF`` somewhere in the following commands. 
 
+Note: A negative value for a ``vpin`` can be used for an active high sensor.
+
 *Parameters:* |BR|
 |_| > **vpin** - vpin (or alias) of the sensor to check |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 Also see ``IFNOT()``, ``IFRED()``, ``IFAMBER()``, ``IFGREEN()``, ``IFCLOSED()``, ``IFTHROWN()``, ``IFRANDOM()``, ``IFTTPOSITION()``, ``IFRE()``, ``IFTIMEOUT()``, ``IFGTE()``, ``IFLT()``, ``IFLOCO()``, ``IFRESERVE()``
 
@@ -1095,8 +1108,11 @@ Perform the following block of commands if the specified sensor is not active.
 Optionally be followed by an ``ELSE`` somewhere in the following commands. 
 Must be followed by an ``ENDIF`` somewhere in the following commands. 
 
+Note: A negative value for a ``vpin`` can be used for an active high sensor.
+
 *Parameters:* |BR|
 |_| > **vpin** - vpin (or alias) of the sensor to check |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 |hr-dashed|
 
@@ -1139,6 +1155,7 @@ Halt the execution of the current block of commands until the sensor is set.
 
 *Parameters:* |BR|
 |_| > **vpin** - pin/vpin of the sensor to check |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 |hr-dashed|
 
@@ -1151,6 +1168,7 @@ Halt the execution of the current block of commands until the sensor is cleared.
 
 *Parameters:* |BR|
 |_| > **vpin** - pin/vpin of the sensor to check |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.|BR|
 |_| > **debounce_time** -  optional debounce time (default 500mS) |BR|
 
 ----
@@ -1253,6 +1271,7 @@ Define a servo based signal, such as semaphore signals. Each position is an angl
 
 *Parameters:* |BR|
 |_| > **vpin** - pin/vpin of the servo |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.|BR|
 |_| > **red_pos** - position to move the servo to for a red signal |BR|
 |_| > **amber_pos** - position to move the servo to for a amber signal |BR|
 |_| > **green_pos** - position to move the servo to for a green signal |BR|
@@ -1662,6 +1681,7 @@ Test if a rotary encoder has been set to the specified value
 
 *Parameters:* |BR|
 |_| > **vpin** - The VPin the encoder is connected to |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.|BR|
 |_| > **value** - value to test |BR|
 
 |hr-dashed|
@@ -1675,6 +1695,7 @@ Detects a rotary encoder has changed position
 
 *Parameters:* |BR|
 |_| > **vpin** - The VPin the encoder is connected to |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 .. collapse:: For example: (click to show)
 
@@ -1861,7 +1882,8 @@ This command causes the creation of |JMRI| <S> type sensors in a way that is sim
 A sequence will not progress until a sensor has been triggered.
 
 *Parameters:* |BR|
-|_| > **vpin** - pin/vpin of the sensor to test
+|_| > **vpin** - pin/vpin of the sensor to test |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 |hr-dashed|
 
@@ -1871,7 +1893,8 @@ A sequence will not progress until a sensor has been triggered.
 A sequence will not progress until after a sensor has been triggered and then is off for 0.5 seconds.
 
 *Parameters:* |BR|
-|_| > **vpin** - pin/vpin of the sensor to test
+|_| > **vpin** - pin/vpin of the sensor to test|BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 |hr-dashed|
 
@@ -1884,6 +1907,7 @@ A sequence will not progress until either a sensor is active/triggered, or if th
 
 *Parameters:* |BR|
 |_| > **vpin** - pin/vpin of the sensor to test |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.|BR|
 |_| > **timeout_ms** - time/duration to wait for in milliseconds
 
 |hr-dashed|
@@ -1894,7 +1918,8 @@ A sequence will not progress until either a sensor is active/triggered, or if th
 If sensor activated or latched, continue. Otherwise skip to ELSE or matching ENDIF.
 
 *Parameters:* |BR|
-|_| > **vpin** - pin/vpin of the sensor to test
+|_| > **vpin** - pin/vpin of the sensor to test|BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 See the :ref:`Conditional Statements section <exrail_conditional_statements>` for more information on IF ... ELSE ... ENDIF commands.
 
@@ -1906,7 +1931,8 @@ See the :ref:`Conditional Statements section <exrail_conditional_statements>` fo
 If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or matching ENDIF.
 
 *Parameters:* |BR|
-|_| > **vpin** - pin/vpin of the sensor to test
+|_| > **vpin** - pin/vpin of the sensor to test|BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 See the :ref:`Conditional Statements section <exrail_conditional_statements>` for more information on IF ... ELSE ... ENDIF commands.
 
@@ -1944,6 +1970,7 @@ Waits for an analog pin to reach the specified value.
 
 *Parameters:* |BR|
 |_| > **vpin** - analogue pin of the sensor to test |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.|BR|
 |_| > **value** - value to test against
 
 |hr-dashed|
@@ -1957,6 +1984,7 @@ Waits for an analog pin to go below the specified value.
 
 *Parameters:* |BR|
 |_| > **vpin** - analogue pin of the sensor to test |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.|BR|
 |_| > **value** - value to test against
 
 |hr-dashed|
@@ -1970,6 +1998,7 @@ Test if analog pin reading is greater than or equal to value (>=).
 
 *Parameters:* |BR|
 |_| > **vpin** - analogue pin of the sensor to test |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.|BR|
 |_| > **value** - value to test against
 
 |hr-dashed|
@@ -1983,6 +2012,7 @@ Test if analog pin reading is less than value (<).
 
 *Parameters:* |BR|
 |_| > **vpin** - analogue pin of the sensor to test |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.|BR|
 |_| > **value** - value to test against
 
   All the `IFGTE()`, `IFLT()`, `ATGTE()`and `ATLT()` commands read the analog value from an analog input pin (A0 - A5 on an Arduino Mega) or an analog input from an I/O expander module. Valid values are defined by the capability of the analog to digital converter in use.
@@ -2029,6 +2059,7 @@ Waits for ???.
 
 *Parameters:* |BR|
 |_| > **vpin** - analogue pin of the sensor to test |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.|BR|
 |_| > **value** - value to test against
 
 |hr-dashed|
@@ -2044,6 +2075,7 @@ Waits for ???.
 
 *Parameters:* |BR|
 |_| > **vpin** - analogue pin of the sensor to test |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.|BR|
 |_| > **value** - value to test against
 
 
@@ -2059,7 +2091,8 @@ Waits for ???.
 ???
 
 *Parameters:* |BR|
-|_| > **vpin** - analogue pin of the sensor to ???
+|_| > **vpin** - analogue pin of the sensor to ???|BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 |hr-dashed|
 
@@ -2149,7 +2182,8 @@ This new event handler is handy for mimic panel and other buttons that need to p
 Note that this works for active low buttons only.
 
 *Parameters:* |BR|
-|_| > **vpin** - pin/vpin to test
+|_| > **vpin** - pin/vpin to test|BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 |hr-dashed|
 
@@ -2161,7 +2195,8 @@ Note that this works for active low buttons only.
 A new event handler to perform actions when a sensor is activated. Like the other sensor triggers such as ``IF``, ``AT``, and ``AFTER``, a negative value can be used for an active high sensor.
 
 *Parameters:* |BR|
-|_| > **vpin** - pin/vpin of the sensor to test
+|_| > **vpin** - pin/vpin of the sensor to test|BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 |force-break|
 

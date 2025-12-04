@@ -802,13 +802,19 @@
 </section>
 <section id="correct-use-of-done-endif-and-follow-statements">
 <h3><a class="toc-backref" href="#id33" role="doc-backlink">Correct use of DONE, ENDIF, and FOLLOW() statements</a><a class="headerlink" href="#correct-use-of-done-endif-and-follow-statements" title="Link to this heading"></a></h3>
-<p>Every <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> automation/route/sequence, event handler, and conditional statement must be terminated by one of these three directives.</p>
+<p>Every <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> automation/route/sequence, event handler, and conditional statement should* be terminated by one of these three directives.</p>
 <p>On this page, you will see various references to the use of <code class="docutils literal notranslate"><span class="pre">DONE</span></code>, <code class="docutils literal notranslate"><span class="pre">ENDIF</span></code>, and <code class="docutils literal notranslate"><span class="pre">FOLLOW()</span></code> which can be confusing, so refer to this quick list to help understand the context in which each of these should be used:</p>
 <ul class="simple">
 <li><p>Every conditional statement (all directives starting with the word <code class="docutils literal notranslate"><span class="pre">IF</span></code>) must be terminated by <code class="docutils literal notranslate"><span class="pre">ENDIF</span></code></p></li>
 <li><p>Every group of commands within a ROUTE, AUTOMATION, or SEQUENCE must be terminated by either <code class="docutils literal notranslate"><span class="pre">DONE</span></code> or <code class="docutils literal notranslate"><span class="pre">FOLLOW(id)</span></code></p></li>
 <li><p>Every event handler (all directives starting with the word <code class="docutils literal notranslate"><span class="pre">ON</span></code>) must be terminated by <code class="docutils literal notranslate"><span class="pre">DONE</span></code></p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>* There are exceptions to this rule.</p>
+<p>EXRAIL is not a block structured language except for <code class="docutils literal notranslate"><span class="pre">IF</span></code>/<code class="docutils literal notranslate"><span class="pre">ELSE</span></code>/<code class="docutils literal notranslate"><span class="pre">ENDIF</span></code>.  Therefor a <code class="docutils literal notranslate"><span class="pre">SEQUENCE</span></code> can be used without a <code class="docutils literal notranslate"><span class="pre">DONE</span></code> statement in certain situations.</p>
+<p>For example when using <code class="docutils literal notranslate"><span class="pre">FOLLOW</span></code> to continuously loop back to a <code class="docutils literal notranslate"><span class="pre">SEQUENCE</span></code>.  In this case the <code class="docutils literal notranslate"><span class="pre">FOLLOW</span></code> is being used like an old fashioned ‘GOTO’ statement to create a continuous loop.</p>
+</div>
 <details class="summary-for-example-click-to-show">
 <summary>For example: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Valid use of a ROUTE with a nested IF statement</span>
 <span class="n">ROUTE</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -843,6 +849,7 @@
 <p>This applies to all directives starting with <code class="docutils literal notranslate"><span class="pre">AT</span></code>, <code class="docutils literal notranslate"><span class="pre">AFTER</span></code>, and <code class="docutils literal notranslate"><span class="pre">IF</span></code>.</p>
 <p>When using <code class="docutils literal notranslate"><span class="pre">AT()</span></code> or <code class="docutils literal notranslate"><span class="pre">AFTER()</span></code>, this is a blocking activity, meaning the sequence of activities will not progress beyond this particular directive unless the condition is met.</p>
 <p>When using <code class="docutils literal notranslate"><span class="pre">IF</span></code> conditional statements, these will not block if the condition is not met, allowing the sequence of activities to continue.</p>
+<p>Note: A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.</p>
 <details class="summary-for-example-click-to-show">
 <summary>For example: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Use of AT() to prevent doing anything until a sensor is activated</span>
 <span class="c1">// This sequence will continue to run until the sensor is activated, in which case those activities will be performed, and it will end</span>
@@ -1584,7 +1591,8 @@
 <p>Perform the following block of commands if the specified sensor is active.</p>
 <p>Optionally be followed by an <code class="docutils literal notranslate"><span class="pre">ELSE</span></code> somewhere in the following commands.
 Must be followed by an <code class="docutils literal notranslate"><span class="pre">ENDIF</span></code> somewhere in the following commands.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - vpin (or alias) of the sensor to check <br /></p>
+<p>Note: A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - vpin (or alias) of the sensor to check <br />    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.</p>
 <p>Also see <code class="docutils literal notranslate"><span class="pre">IFNOT()</span></code>, <code class="docutils literal notranslate"><span class="pre">IFRED()</span></code>, <code class="docutils literal notranslate"><span class="pre">IFAMBER()</span></code>, <code class="docutils literal notranslate"><span class="pre">IFGREEN()</span></code>, <code class="docutils literal notranslate"><span class="pre">IFCLOSED()</span></code>, <code class="docutils literal notranslate"><span class="pre">IFTHROWN()</span></code>, <code class="docutils literal notranslate"><span class="pre">IFRANDOM()</span></code>, <code class="docutils literal notranslate"><span class="pre">IFTTPOSITION()</span></code>, <code class="docutils literal notranslate"><span class="pre">IFRE()</span></code>, <code class="docutils literal notranslate"><span class="pre">IFTIMEOUT()</span></code>, <code class="docutils literal notranslate"><span class="pre">IFGTE()</span></code>, <code class="docutils literal notranslate"><span class="pre">IFLT()</span></code>, <code class="docutils literal notranslate"><span class="pre">IFLOCO()</span></code>, <code class="docutils literal notranslate"><span class="pre">IFRESERVE()</span></code></p>
 <p><hr class="hr-dashed" /></p>
 </section>
@@ -1593,7 +1601,8 @@ Must be followed by an <code class="docutils literal notranslate"><span class="p
 <p>Perform the following block of commands if the specified sensor is not active.</p>
 <p>Optionally be followed by an <code class="docutils literal notranslate"><span class="pre">ELSE</span></code> somewhere in the following commands.
 Must be followed by an <code class="docutils literal notranslate"><span class="pre">ENDIF</span></code> somewhere in the following commands.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - vpin (or alias) of the sensor to check <br /></p>
+<p>Note: A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - vpin (or alias) of the sensor to check <br />    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="else-alternate-logic-to-any-if-related-command-returning-false">
@@ -1615,13 +1624,13 @@ Must be proceeded by an <code class="docutils literal notranslate"><span class="
 <section id="at-vpin-halt-command-execution-until-the-sensor-is-set">
 <span id="at"></span><h4><a class="toc-backref" href="#id103" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AT(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - Halt command execution until the sensor is set</a><a class="headerlink" href="#at-vpin-halt-command-execution-until-the-sensor-is-set" title="Link to this heading"></a></h4>
 <p>Halt the execution of the current block of commands until the sensor is set.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to check <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to check <br />    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="after-vpin-debounce-time-halt-command-execution-until-the-sensor-is-cleared">
 <span id="after"></span><h4><a class="toc-backref" href="#id104" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AFTER(</span> <span class="pre">vpin</span> <span class="pre">[,debounce_time]</span> <span class="pre">)</span></code> - Halt command execution until the sensor is cleared</a><a class="headerlink" href="#after-vpin-debounce-time-halt-command-execution-until-the-sensor-is-cleared" title="Link to this heading"></a></h4>
 <p>Halt the execution of the current block of commands until the sensor is cleared.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to check <br /> &gt; <strong>debounce_time</strong> -  optional debounce time (default 500mS) <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to check <br />    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.|BR| &gt; <strong>debounce_time</strong> -  optional debounce time (default 500mS) <br /></p>
 </section>
 </section>
 </section>
@@ -1698,7 +1707,7 @@ Must be proceeded by an <code class="docutils literal notranslate"><span class="
 <section id="servo-signal-vpin-red-pos-amber-pos-green-pos-define-a-servo-based-signal">
 <span id="servo-signal"></span><h4><a class="toc-backref" href="#id107" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERVO_SIGNAL(</span> <span class="pre">vpin,</span> <span class="pre">red_pos,</span> <span class="pre">amber_pos,</span> <span class="pre">green_pos</span> <span class="pre">)</span></code> - Define a servo based signal</a><a class="headerlink" href="#servo-signal-vpin-red-pos-amber-pos-green-pos-define-a-servo-based-signal" title="Link to this heading"></a></h4>
 <p>Define a servo based signal, such as semaphore signals. Each position is an angle to turn the servo to, similar to the SERVO/SERVO2 commands, and SERVO_TURNOUT</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the servo <br /> &gt; <strong>red_pos</strong> - position to move the servo to for a red signal <br /> &gt; <strong>amber_pos</strong> - position to move the servo to for a amber signal <br /> &gt; <strong>green_pos</strong> - position to move the servo to for a green signal <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the servo <br />    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.|BR| &gt; <strong>red_pos</strong> - position to move the servo to for a red signal <br /> &gt; <strong>amber_pos</strong> - position to move the servo to for a amber signal <br /> &gt; <strong>green_pos</strong> - position to move the servo to for a green signal <br /></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="dcc-signal-id-addr-sub-addr-define-a-dcc-accessory-signal">
@@ -1932,13 +1941,13 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <section id="ifre-vpin-value-test-if-a-rotary-encoder-has-been-set-to-a-value">
 <span id="ifre"></span><h4><a class="toc-backref" href="#id134" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFRE</span> <span class="pre">(</span> <span class="pre">vpin,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Test if a rotary encoder has been set to a value</a><a class="headerlink" href="#ifre-vpin-value-test-if-a-rotary-encoder-has-been-set-to-a-value" title="Link to this heading"></a></h4>
 <p>Test if a rotary encoder has been set to the specified value</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - The VPin the encoder is connected to <br /> &gt; <strong>value</strong> - value to test <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - The VPin the encoder is connected to <br />    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.|BR| &gt; <strong>value</strong> - value to test <br /></p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="onchange-vpin-detects-a-rotary-encoder-has-changed-position">
 <span id="onchange"></span><h4><a class="toc-backref" href="#id135" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONCHANGE(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - Detects a rotary encoder has changed position</a><a class="headerlink" href="#onchange-vpin-detects-a-rotary-encoder-has-changed-position" title="Link to this heading"></a></h4>
 <p>Detects a rotary encoder has changed position</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - The VPin the encoder is connected to <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - The VPin the encoder is connected to <br />    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.</p>
 <details class="summary-for-example-click-to-show">
 <summary>For example: (click to show)</summary><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ONCHANGE</span><span class="p">(</span><span class="mi">700</span><span class="p">)</span><span class="w">     </span><span class="c1">// If rotary encoder ID 700 change state do this sequence</span>
 <span class="w">  </span><span class="n">IFRE</span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w">    </span><span class="c1">// If rotary encoder ID 700 is at position 1, start ROUTE ID 123</span>
@@ -2056,32 +2065,32 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <section id="at-vpin-causes-a-sequence-to-wait-until-a-sensor-is-active-triggered">
 <h4><a class="toc-backref" href="#id146" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AT(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - Causes a sequence to wait until a sensor is active/triggered</a><a class="headerlink" href="#at-vpin-causes-a-sequence-to-wait-until-a-sensor-is-active-triggered" title="Link to this heading"></a></h4>
 <p>A sequence will not progress until a sensor has been triggered.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to test</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to test <br />    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="after-vpin-causes-a-sequence-to-wait-until-after-a-sensor-has-been-triggered">
 <h4><a class="toc-backref" href="#id147" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">AFTER(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - Causes a sequence to wait until after a sensor has been triggered</a><a class="headerlink" href="#after-vpin-causes-a-sequence-to-wait-until-after-a-sensor-has-been-triggered" title="Link to this heading"></a></h4>
 <p>A sequence will not progress until after a sensor has been triggered and then is off for 0.5 seconds.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to test</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to test|BR|    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="attimeout-vpin-timeout-ms-causes-a-sequence-to-wait-until-either-a-sensor-is-active-triggered-or-if-the-timer-runs-out">
 <span id="attimeout"></span><h4><a class="toc-backref" href="#id148" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ATTIMEOUT(</span> <span class="pre">vpin,</span> <span class="pre">timeout_ms</span> <span class="pre">)</span></code> - Causes a sequence to wait until either a sensor is active/triggered, or if the timer runs out</a><a class="headerlink" href="#attimeout-vpin-timeout-ms-causes-a-sequence-to-wait-until-either-a-sensor-is-active-triggered-or-if-the-timer-runs-out" title="Link to this heading"></a></h4>
 <p>A sequence will not progress until either a sensor is active/triggered, or if the timer runs out. It then continues and sets a testable “timed out” flag (see <code class="docutils literal notranslate"><span class="pre">IFTIMEOUT</span></code>).</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to test <br /> &gt; <strong>timeout_ms</strong> - time/duration to wait for in milliseconds</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to test <br />    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.|BR| &gt; <strong>timeout_ms</strong> - time/duration to wait for in milliseconds</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="if-vpin-if-sensor-activated-or-latched-continue">
 <h4><a class="toc-backref" href="#id149" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IF(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - If sensor activated or latched, continue</a><a class="headerlink" href="#if-vpin-if-sensor-activated-or-latched-continue" title="Link to this heading"></a></h4>
 <p>If sensor activated or latched, continue. Otherwise skip to ELSE or matching ENDIF.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to test</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to test|BR|    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.</p>
 <p>See the <a class="reference internal" href="#exrail-conditional-statements"><span class="std std-ref">Conditional Statements section</span></a> for more information on IF … ELSE … ENDIF commands.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="ifnot-vpin-if-sensor-not-activated-and-not-latched-continue">
 <h4><a class="toc-backref" href="#id150" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFNOT(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - If sensor NOT activated and NOT latched, continue</a><a class="headerlink" href="#ifnot-vpin-if-sensor-not-activated-and-not-latched-continue" title="Link to this heading"></a></h4>
 <p>If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or matching ENDIF.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to test</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to test|BR|    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.</p>
 <p>See the <a class="reference internal" href="#exrail-conditional-statements"><span class="std std-ref">Conditional Statements section</span></a> for more information on IF … ELSE … ENDIF commands.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
@@ -2101,25 +2110,25 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <section id="atgte-vpin-value-waits-for-an-analog-pin-to-reach-a-value">
 <span id="atgte"></span><h4><a class="toc-backref" href="#id152" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ATGTE(</span> <span class="pre">vpin,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Waits for an analog pin to reach a value</a><a class="headerlink" href="#atgte-vpin-value-waits-for-an-analog-pin-to-reach-a-value" title="Link to this heading"></a></h4>
 <p>Waits for an analog pin to reach the specified value.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to test <br /> &gt; <strong>value</strong> - value to test against</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to test <br />    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.|BR| &gt; <strong>value</strong> - value to test against</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="atlt-vpin-value-waits-for-an-analog-pin-to-go-below-a-value">
 <span id="atlt"></span><h4><a class="toc-backref" href="#id153" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ATLT</span> <span class="pre">(</span> <span class="pre">vpin,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Waits for an analog pin to go below a value</a><a class="headerlink" href="#atlt-vpin-value-waits-for-an-analog-pin-to-go-below-a-value" title="Link to this heading"></a></h4>
 <p>Waits for an analog pin to go below the specified value.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to test <br /> &gt; <strong>value</strong> - value to test against</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to test <br />    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.|BR| &gt; <strong>value</strong> - value to test against</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="ifgte-vpin-value-test-if-analog-pin-reading-is-greater-than-or-equal-to-value">
 <span id="ifgte"></span><h4><a class="toc-backref" href="#id154" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFGTE(</span> <span class="pre">vpin,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Test if analog pin reading is greater than or equal to value</a><a class="headerlink" href="#ifgte-vpin-value-test-if-analog-pin-reading-is-greater-than-or-equal-to-value" title="Link to this heading"></a></h4>
 <p>Test if analog pin reading is greater than or equal to value (&gt;=).</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to test <br /> &gt; <strong>value</strong> - value to test against</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to test <br />    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.|BR| &gt; <strong>value</strong> - value to test against</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="iflt-vpin-value-test-if-analog-pin-reading-is-less-than-value">
 <span id="iflt"></span><h4><a class="toc-backref" href="#id155" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">IFLT(</span> <span class="pre">vpin,</span> <span class="pre">value</span> <span class="pre">)</span></code> - Test if analog pin reading is less than value</a><a class="headerlink" href="#iflt-vpin-value-test-if-analog-pin-reading-is-less-than-value" title="Link to this heading"></a></h4>
 <p>Test if analog pin reading is less than value (&lt;).</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to test <br /> &gt; <strong>value</strong> - value to test against</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to test <br />    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.|BR| &gt; <strong>value</strong> - value to test against</p>
 <blockquote>
 <div><p>All the <cite>IFGTE()</cite>, <cite>IFLT()</cite>, <cite>ATGTE()`and `ATLT()</cite> commands read the analog value from an analog input pin (A0 - A5 on an Arduino Mega) or an analog input from an I/O expander module. Valid values are defined by the capability of the analog to digital converter in use.</p>
 </div></blockquote>
@@ -2153,19 +2162,19 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <section id="attimout1-vpin-value-tba">
 <span id="attimeout1"></span><h4><a class="toc-backref" href="#id156" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ATTIMOUT1</span> <span class="pre">(</span> <span class="pre">vpin,</span> <span class="pre">value</span> <span class="pre">)</span></code> - TBA</a><a class="headerlink" href="#attimout1-vpin-value-tba" title="Link to this heading"></a></h4>
 <p>Waits for ???.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to test <br /> &gt; <strong>value</strong> - value to test against</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to test <br />    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.|BR| &gt; <strong>value</strong> - value to test against</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="attimout2-vpin-value-tba">
 <span id="attimeout2"></span><h4><a class="toc-backref" href="#id157" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ATTIMOUT2</span> <span class="pre">(</span> <span class="pre">vpin,</span> <span class="pre">value</span> <span class="pre">)</span></code> - TBA</a><a class="headerlink" href="#attimout2-vpin-value-tba" title="Link to this heading"></a></h4>
 <p>Waits for ???.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to test <br /> &gt; <strong>value</strong> - value to test against</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to test <br />    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.|BR| &gt; <strong>value</strong> - value to test against</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="drive-vpin-tba">
 <span id="drive"></span><h4><a class="toc-backref" href="#id158" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">DRIVE</span> <span class="pre">(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - TBA</a><a class="headerlink" href="#drive-vpin-tba" title="Link to this heading"></a></h4>
 <p>???</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to ???</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - analogue pin of the sensor to ???|BR|    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="latch-vpin-latches-a-sensor-on">
@@ -2227,13 +2236,13 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <span id="onbutton"></span><h4><a class="toc-backref" href="#id161" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONBUTTON(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - Event handler for debounced button presses</a><a class="headerlink" href="#onbutton-vpin-event-handler-for-debounced-button-presses" title="Link to this heading"></a></h4>
 <p>This new event handler is handy for mimic panel and other buttons that need to perform an action when a button is pressed, rather than having to create a sequence with a combination of <code class="docutils literal notranslate"><span class="pre">AFTER</span></code> and <code class="docutils literal notranslate"><span class="pre">IF</span></code> statements to debounce a button which quickly becomes very complicated.</p>
 <p>Note that this works for active low buttons only.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin to test</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin to test|BR|    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="onsensor-vpin-event-handler-for-sensors">
 <span id="onsensor"></span><h4><a class="toc-backref" href="#id162" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">ONSENSOR(</span> <span class="pre">vpin</span> <span class="pre">)</span></code> - Event handler for sensors</a><a class="headerlink" href="#onsensor-vpin-event-handler-for-sensors" title="Link to this heading"></a></h4>
 <p>A new event handler to perform actions when a sensor is activated. Like the other sensor triggers such as <code class="docutils literal notranslate"><span class="pre">IF</span></code>, <code class="docutils literal notranslate"><span class="pre">AT</span></code>, and <code class="docutils literal notranslate"><span class="pre">AFTER</span></code>, a negative value can be used for an active high sensor.</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to test</p>
+<p><em>Parameters:</em> <br /> &gt; <strong>vpin</strong> - pin/vpin of the sensor to test|BR|    A negative value for a <code class="docutils literal notranslate"><span class="pre">vpin</span></code> can be used for an active high sensor.</p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
 </section>
@@ -3275,7 +3284,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f1f672c9f60>
+    <jinja2.runtime.BlockReference object at 0x7f56ad81bc40>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

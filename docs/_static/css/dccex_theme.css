@@ -113,6 +113,15 @@ html[data-theme='dark'] .wy-nav-content a:visited {
 .wy-breadcrumbs {
   font-family: Roboto,Helvetica,Arial,sans-serif !important;
   font-size: 80% !important;
+  vertical-align: top;
+}
+
+.wy-breadcrumbs >li {
+  vertical-align: top;
+}
+
+.breadcrumb {
+  vertical-align: top;
 }
 
 .wy-side-nav-search>a img.logo {

@@ -505,6 +505,8 @@ Alphabetic Command List
   * :ref:`SIGNALH`
   * :ref:`SPEED`
   * :ref:`START`
+  * :ref:`START_SEND`
+  * :ref:`START_SHARED`
   * :ref:`STASH`
   * :ref:`STEALTH`
   * :ref:`STEALTH_GLOBAL`
@@ -766,6 +768,30 @@ Resume all paused tasks, including loco movement.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Start a new task to execute a route or sequence.
+
+*Parameters:* |BR|
+|_| > **id** - id for the sequence/route/automation to branch to
+
+|hr-dashed|
+
+.. _start_send:
+
+``START_SEND( id )`` - Execute a route or sequence and send the current loco
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Starts a new task at the given route/animation/sequence and send the current loco to it. Remove loco from current task.
+
+*Parameters:* |BR|
+|_| > **id** - id for the sequence/route/automation to branch to
+
+|hr-dashed|
+
+.. _start_shared:
+
+``START_SHARED( id )`` - Execute a route or sequence and pass the current loco
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Starts a new task at the given route/animation/sequence and share the current loco with it.
 
 *Parameters:* |BR|
 |_| > **id** - id for the sequence/route/automation to branch to

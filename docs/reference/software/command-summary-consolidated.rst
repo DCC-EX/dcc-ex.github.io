@@ -918,6 +918,21 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
   |_| Response (id is defined): ``<jO id index angle "[desc]">`` |BR|
   |_| Response (id not defined): ``<jO id X>``
 
+|hr-dashed|
+
+.. _native-command-d-tt-vpin-steps-activity:
+
+``<D TT vpin steps [activity]>`` - Test turntable
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **vpin:** |br|
+  |_| > **steps:** ??? |br|
+  |_| > **activity** optional - ??? |br| 
+  
+  *Response:* |BR|
+  |_| TBA
+
 ----
 
 Routes/Automations
@@ -2339,6 +2354,60 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
+.. _native-command-d-ack-limit-value:
+
+``<D ACK LIMIT value>`` - Set ACK detection limit mA
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **value:** in mA
+
+  *Response:* |BR|
+  |_| TBA
+
+|hr-dashed|
+
+.. _native-command-d-ack-min-max-value:
+
+``<D ACK minmax value [MS]>`` - Set ACK minimum or maximum duration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **minmax:**  one of |BR|
+  |_| |_| |_| |_| • ``MIN`` |BR|
+  |_| |_| |_| |_| • ``MAX`` |BR|
+  |_| > **value:** in microseconds unless "MS" is specified |BR|
+  |_| > **MS:** optional keyword to specify milliseconds
+
+  *Response:* |BR|
+  |_| TBA
+
+|hr-dashed|
+
+.. _native-command-d-ack-retry-value:
+
+``<D ACK RETRY value>`` - Set ACK retry count
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **value:** Retry count
+
+  *Response:* |BR|
+  |_| TBA
+
+|hr-dashed|
+
+.. _native-command-d-cabs:
+
+``<D CABS>`` - Shows cab numbers and speed in reminder tables
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Response:* |BR|
+  |_| "Used=xxx, max=yyy" |BR|
+  |_| Displayed on the serial monitor only.
+
+|hr-dashed|
+
 .. _native-command-d-cmd-state:
 
 ``<D CMD state>`` - Enables Command Parser diagnostics
@@ -2425,14 +2494,17 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-.. _native-command-d-cabs:
+.. _native-command-d-websocket-state:
 
-``<D CABS>`` - Shows cab numbers and speed in reminder tables
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<DWEBSOCKET state>`` - Enable Websocket diagnostics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Response:* |BR|
-  |_| "Used=xxx, max=yyy" |BR|
-  |_| Displayed on the serial monitor only.
+  *Parameters:* |BR|
+  |_| > **state:** one of |BR|
+  |_| |_| |_| |_| • ON |BR|
+  |_| |_| |_| |_| • OFF
+
+  *Response:* N/A
 
 |hr-dashed|
 
@@ -2453,6 +2525,16 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
     <* PCA9685 I2C:x41 Configured on Vpins:116-131 OFFLINE * > |BR|
     <* MCP23017 I2C:x20 Configured on Vpins:164-179 * > |BR|
     <* MCP23017 I2C:x21 Configured on Vpins:180-195 * >
+
+|hr-dashed|
+
+.. _native-command-d-hal-reset:
+
+``<D HAL RESET>`` - Reset all HAL devices
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Response:* |BR|
+  |_| TBA
 
 |hr-dashed|
 

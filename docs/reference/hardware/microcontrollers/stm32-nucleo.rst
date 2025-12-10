@@ -99,7 +99,7 @@ We've compiled this simple summary table to help with this:
     - 3
     - No
     - Low cost, fast, fewer serial ports
-    - `411RE <https://os.mbed.com/platforms/st-nucleo-f411re/>`_
+    - `F411RE <https://os.mbed.com/platforms/st-nucleo-f411re/>`_
   * - Nucleo-F446RE
     - 64
     - Supported & Recommended
@@ -144,7 +144,7 @@ We've compiled this simple summary table to help with this:
     - No
     - Fastest
     - `F446ZE <https://os.mbed.com/platforms/st-nucleo-f446ze/>`_
-  * - Nucleo-F429ZH
+  * - Nucleo-F429ZI
     - 144
     - Supported & Recommended
     - 2.0MB
@@ -155,7 +155,7 @@ We've compiled this simple summary table to help with this:
     - Ethernet 10/100
     - Ethernet builtin, fastest, NO LONGER AVAILABLE
     - `F429ZI <https://os.mbed.com/platforms/st-nucleo-f429zi/>`_
-  * - Nucleo-F439ZH
+  * - Nucleo-F439ZI
     - 144
     - Supported & Recommended
     - 2.0MB

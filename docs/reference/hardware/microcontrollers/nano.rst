@@ -10,7 +10,7 @@ Arduino Nano (Not recommended)
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
-**As of version 5.4.0, this is no longer a recommended option, see :doc:`/news/posts/20240328`**
+**As of version 5.4.0, this is no longer a recommended option, see** :doc:`/news/posts/20250301`
 
 .. sidebar::
    :class: sidebar-on-this-page

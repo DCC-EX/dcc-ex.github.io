@@ -10,7 +10,7 @@ Teensy (Deprecated)
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
-**As of version 5.4.0, this is now deprecated, see :doc:`/news/posts/20240328`**
+**As of version 5.4.0, this is now deprecated, see** :doc:`/news/posts/20250301`
 
 The Teensy 3.x/4.x Series by PJRC are next generation ARM-based microcontrollers. They have loads of RAM, a faster clock speed and a host of add-ons. 
 

@@ -33,6 +33,7 @@ Current list of Microcontrollers
     /reference/hardware/microcontrollers/wifi-mega
     /reference/hardware/microcontrollers/nano-every
     /reference/hardware/microcontrollers/teensy
+    /reference/hardware/microcontrollers/samd21
 
 Choosing a microcontroller
 ==========================

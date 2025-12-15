@@ -84,7 +84,7 @@ The team no longer has hardware to test these boards, so we ensure the software 
 - :doc:`/reference/hardware/microcontrollers/teensy`
 - Arduino Mega328
 - Arduino Uno WiFi R2
-- SAMD21
+- :doc:`/reference/hardware/microcontrollers/samd21`
 - Arduino M0
 
 JMRI specific updates

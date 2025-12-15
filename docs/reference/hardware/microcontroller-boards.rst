@@ -27,9 +27,9 @@ Current list of Microcontrollers
     /reference/hardware/microcontrollers/arduino-mega
     /reference/hardware/microcontrollers/esp32
     /reference/hardware/microcontrollers/stm32-nucleo
+    /reference/hardware/microcontrollers/microcontrollers
     /reference/hardware/microcontrollers/arduino-uno
     /reference/hardware/microcontrollers/nano
-    /reference/hardware/microcontrollers/microcontrollers
     /reference/hardware/microcontrollers/wifi-mega
     /reference/hardware/microcontrollers/nano-every
     /reference/hardware/microcontrollers/teensy

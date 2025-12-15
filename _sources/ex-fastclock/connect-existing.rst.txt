@@ -32,25 +32,25 @@ Connecting via Serial is the simplest option if available.
 
 * Run a dupont cable from the TX pin on the arduino to a RX pin on the EX-CommandStation.  It is not usually necessary to run a cable from RX to the TX on the EX-CommandStation as  the FastClock is not receiving data back.
 * Find the Serial defines in the config.h file (or copy config.example.h to config.h if you dont have one), locate the following lines:
-    
-    .. code-block:: cpp
 
-      //#define SERIAL1_COMMANDS
-      //#define SERIAL2_COMMANDS
-      //#define SERIAL3_COMMANDS
+  .. code-block:: cpp
+
+    //#define SERIAL1_COMMANDS
+    //#define SERIAL2_COMMANDS
+    //#define SERIAL3_COMMANDS
   
   and uncomment the appropriate one for the serial port you are using.
 * Add the following code to your Setup() function:
 
-.. code-block:: cpp
-    
-  Serial.begin(115200);
-  while (!Serial) {
-  ; // wait for serial port to connect. Needed for native USB port only
-  }
+  .. code-block:: cpp
+
+    Serial.begin(115200);
+    while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB port only
+    }
 
 * Include the following routine within your code:
-  
+
   .. code-block:: cpp
 
     void SendTime(byte hour, byte mins, byte speed) {
@@ -61,7 +61,7 @@ Connecting via Serial is the simplest option if available.
       Serial.println(buffer);
 
 * Each time the time changes call the SendTime routine as follows:
-  
+
   .. code-block:: cpp
 
     SendTime(HH, MM, clockSpeed);

@@ -45,18 +45,18 @@ The appeal of the SAMD21 series is their relatively high performance, low cost a
 SAMD21G18 boards tested
 =======================
 
-So far, the Arduino Zero, SparkFun SAMD21 Dev Breakout, Sparkfun RedBoard Turbo, and SAMD21 M0 Mini (originally RobotDyn, but clones exist too) have been tested. The Arduino Zero, and both Sparkfun boards are more conveniently in the UNO R3 form factor:
+So far, the Arduino Zero, SparkFun SAMD21 Dev Breakout, SparkFun RedBoard Turbo, and SAMD21 M0 Mini (originally RobotDyn, but clones exist too) have been tested. The Arduino Zero, and both SparkFun boards are more conveniently in the UNO R3 form factor:
 
 .. image:: /_static/images/samd21/arduino_zero.jpeg
   :alt: Arduino Zero
   :scale: 12%
 
 .. image:: /_static/images/samd21/samd21_dev_breakout.jpeg
-  :alt: Sparkfun SAMD21 Dev Breakout
+  :alt: SparkFun SAMD21 Dev Breakout
   :scale: 25%
 
 .. image:: /_static/images/samd21/redboard_turbo.jpeg
-  :alt: Sparkfun RedBoard Turbo
+  :alt: SparkFun RedBoard Turbo
   :scale: 30%
 
 .. image:: /_static/images/samd21/robotdyn_m0_mini.jpeg
@@ -64,7 +64,7 @@ So far, the Arduino Zero, SparkFun SAMD21 Dev Breakout, Sparkfun RedBoard Turbo,
   :scale: 25%
 
 .. note::
-  Please note that the barrel jack on the Sparkfun SAMD21 Dev Breakout is not fitted by the factory and the board itself **CANNOT handle more than 6VDC**. We strongly suggest you triple-check voltages before using this connector. It may give less scope for error to stick to powering the board via the Micro-USB connector for power. |BR| |BR| Note also that the |DCC-EX| EX-MotorShield8874's onboard regulator is by default set **too high** for the SAMD21 Dev Breakout at 7.2VDC. Adjustments to resistor R206 will be needed to lower the output to a safe 6V instead.
+  Please note that the barrel jack on the SparkFun SAMD21 Dev Breakout is not fitted by the factory and the board itself **CANNOT handle more than 6VDC**. We strongly suggest you triple-check voltages before using this connector. It may give less scope for error to stick to powering the board via the Micro-USB connector for power. |BR| |BR| Note also that the |DCC-EX| EX-MotorShield8874's onboard regulator is by default set **too high** for the SAMD21 Dev Breakout at 7.2VDC. Adjustments to resistor R206 will be needed to lower the output to a safe 6V instead.
 
 Dropped character on USB CDC fix
 ================================
@@ -97,7 +97,7 @@ And replace it with:
   // optional timeout code here
   };
 
-For boards such as the Sparfun SAMD21 Dev Breakout or Redboard Turbo, you will need to look in the Sparkfun directories for the appropriate USBCore.cpp file to alter, for example:
+For boards such as the SparkFun SAMD21 Dev Breakout or Redboard Turbo, you will need to look in the SparkFun directories for the appropriate USBCore.cpp file to alter, for example:
 
 - For PlatformIO this is: .platformio/packages/framework-arduino-samd/cores/arduino/USB/USBCore.cpp
 - For |Arduino IDE| this is: Arduino15/packages/SparkFun/hardware/samd/1.8.3/cores/arduino/USBCore.cpp

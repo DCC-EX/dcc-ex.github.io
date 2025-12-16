@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2025-12-16T19:24:32.213756+00:00</updated>
+  <updated>2025-12-16T19:26:46.400249+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.12">ABlog</generator>
@@ -149,7 +149,7 @@
 &lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="reference/hardware/microcontrollers/teensy.html"&gt;&lt;span class="doc"&gt;Teensy (Deprecated)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Arduino Mega328&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Arduino Uno WiFi R2&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;SAMD21&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="reference/hardware/microcontrollers/samd21.html"&gt;&lt;span class="doc"&gt;Microchip SAMD21 (Deprecated)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Arduino M0&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/section&gt;
@@ -559,7 +559,7 @@
 &lt;h2&gt;EX-CommandStation features, fixes, and enhancements&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;span class="ex-suffix"&gt;TrackManager&lt;/span&gt; - Run both DC and DCC trains from the same controller and switch your tracks between DC and DCC modes live, see &lt;a class="reference internal" href="trackmanager/index.html"&gt;&lt;span class="doc"&gt;TrackManager (DCC &amp;amp; DC)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Beta support for new, 32 bit microcontrollers including ESP32 WROOM and some STMicroelectronics Nucleo, see &lt;a class="reference internal" href="reference/hardware/microcontrollers/microcontrollers.html"&gt;&lt;span class="doc"&gt;Beta microcontrollers - SAMD&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Beta support for new, 32 bit microcontrollers including ESP32 WROOM and some STMicroelectronics Nucleo, see &lt;a class="reference internal" href="reference/hardware/microcontrollers/microcontrollers.html"&gt;&lt;span class="doc"&gt;Beta microcontrollers&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Extensive optimisation of HIGHMEM useage to free up PROGMEM below the 64kb and increase the useful life of the AVR Mega2560 platform&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Add option to disable programming to allow limited platforms such as the Arduino Uno to run limited &lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt; scripts&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Add support for our new fast clock &lt;a href="../../ex-fastclock/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;FastClock&lt;/span&gt;&lt;/a&gt;, see &lt;a class="reference internal" href="ex-fastclock/index.html"&gt;&lt;span class="doc"&gt;EX-FastClock&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;

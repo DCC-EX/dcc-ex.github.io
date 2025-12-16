@@ -10,7 +10,7 @@ Nano Every (Deprecated)
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
-**As of version 5.4.0, this is now deprecated, see :doc:`/news/posts/20240328`**
+**As of version 5.4.0, this is now deprecated, see** :doc:`/news/posts/20250301`
 
 .. image:: /_static/images/microcontrollers/nanoevery_box.jpg
    :alt: Arduino

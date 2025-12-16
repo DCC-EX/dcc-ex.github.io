@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2025-12-15T19:27:11.832548+00:00</updated>
+  <updated>2025-12-16T19:24:32.213756+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.12">ABlog</generator>
@@ -128,9 +128,9 @@
 &lt;h3&gt;Supported and recommended platforms&lt;/h3&gt;
 &lt;p&gt;New users should choose one of these platforms to make use of all features and capabilities.&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="reference/hardware/microcontrollers/arduino-mega.html"&gt;&lt;span class="doc"&gt;Arduino Mega (Recommended)&lt;/span&gt;&lt;/a&gt; genuine Arduino Mega 2560 R3, and good quality clones - continues as supported and recommended, but RAM is limited for large layouts with lots of accessories and/or animations or automations&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;(link to new page here) ESP32 moves from Beta into full support - note this is for devices using the &lt;strong&gt;ESP32-WROOM (ESP32-D0WD) CPU only&lt;/strong&gt;, other ESP32 variants such as C3, S3, etc. are not supported at this time and may never be due to hardware limitations&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;(link to new page here) STMicroelectronics Nucleo boards in the STM32F4xx family move from Beta into full support for DCC only - note that DC mode and Ethernet support for these is still in Beta&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="reference/hardware/microcontrollers/arduino-mega.html"&gt;&lt;span class="doc"&gt;Genuine Arduino Mega 2560 R3&lt;/span&gt;&lt;/a&gt;, and good quality clones - continues as supported and recommended, but RAM is limited for large layouts with lots of accessories and/or animations or automations&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="reference/hardware/microcontrollers/esp32.html"&gt;&lt;span class="doc"&gt;ESP32&lt;/span&gt;&lt;/a&gt; moves from Beta into full support - note this is for devices using the &lt;strong&gt;ESP32-WROOM (ESP32-D0WD) CPU only&lt;/strong&gt;, other ESP32 variants such as C3, S3, etc. are not supported at this time and may never be due to hardware limitations&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="reference/hardware/microcontrollers/stm32-nucleo.html"&gt;&lt;span class="doc"&gt;STMicroelectronics Nucleo&lt;/span&gt;&lt;/a&gt; boards in the STM32F4xx family move from Beta into full support for DCC only - note that DC mode and Ethernet support for these is still in Beta&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/section&gt;
 &lt;section id="no-longer-recommended-platforms"&gt;

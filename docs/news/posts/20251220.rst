@@ -1,0 +1,28 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+.. include:: /include/include-news.rst
+
+:blogpost: true
+:date: 20 December, 2025
+:author: peteGSX
+:category: News
+:tags: dcc-ex, news
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+New documentation coming soon!
+==============================
+
+Coming soon! A new, refreshed take on our documentation aimed at making it easier for people to get up and running with DCC-EX.
+
+While our website and included documentation has continued to evolve and morph with our products over the years, the pace of development continues to outpace the ability to maintain the documentation.
+
+What's missing is easy to consume documentation that helps our newest, least experienced users get up and running quickly with DCC-EX so they can enjoy running their trains.
+
+With this in mind, we've decided to refresh our documentation from the ground up. You'll still find it in the same place on our [website](https://dcc-ex.com), but it will have a new look.
+
+This current documentation will be retained as [legacy documentation](https://dcc-ex.com/legacy-docs/), with our more technical reference documentation being incorporated as time allows.

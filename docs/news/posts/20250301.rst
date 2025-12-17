@@ -14,7 +14,7 @@
   :scale: 40%
   :class: image-product-logo-float-right
 
-Announcing EX-CommandStation 5.4.0
+Announcing EX-CommandStation 5.4.6
 ==================================
 
 The |DCC-EX| team are excited to announce a new Production release of |EX-CS| with version 5.4.0 being made available today. As usual, this release includes a raft of **new features and enhancements** to bring even more capability and joy to your digital model railroading experience! We're also announcing changes to our **supported hardware platforms**.
@@ -63,9 +63,9 @@ Supported and recommended platforms
 
 New users should choose one of these platforms to make use of all features and capabilities.
 
-- :doc:`/reference/hardware/microcontrollers/arduino-mega` genuine Arduino Mega 2560 R3, and good quality clones - continues as supported and recommended, but RAM is limited for large layouts with lots of accessories and/or animations or automations
-- (link to new page here) ESP32 moves from Beta into full support - note this is for devices using the **ESP32-WROOM (ESP32-D0WD) CPU only**, other ESP32 variants such as C3, S3, etc. are not supported at this time and may never be due to hardware limitations
-- (link to new page here) STMicroelectronics Nucleo boards in the STM32F4xx family move from Beta into full support for DCC only - note that DC mode and Ethernet support for these is still in Beta
+- :doc:`Genuine Arduino Mega 2560 R3 </reference/hardware/microcontrollers/arduino-mega>`, and good quality clones - continues as supported and recommended, but RAM is limited for large layouts with lots of accessories and/or animations or automations
+- :doc:`ESP32 </reference/hardware/microcontrollers/esp32>` moves from Beta into full support - note this is for devices using the **ESP32-WROOM (ESP32-D0WD) CPU only**, other ESP32 variants such as C3, S3, etc. are not supported at this time and may never be due to hardware limitations
+- :doc:`STMicroelectronics Nucleo </reference/hardware/microcontrollers/stm32-nucleo>` boards in the STM32F4xx family move from Beta into full support for DCC only - note that DC mode and Ethernet support for these is still in Beta
 
 No longer recommended platforms
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -84,7 +84,7 @@ The team no longer has hardware to test these boards, so we ensure the software 
 - :doc:`/reference/hardware/microcontrollers/teensy`
 - Arduino Mega328
 - Arduino Uno WiFi R2
-- SAMD21
+- :doc:`/reference/hardware/microcontrollers/samd21`
 - Arduino M0
 
 JMRI specific updates

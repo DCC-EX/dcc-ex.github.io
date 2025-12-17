@@ -127,20 +127,10 @@ and https://enginedriver.mstevetodd.com/videos/index.html |EXTERNAL-LINK|
 
 ----
 
-Using a Bluetooth Controller
-=============================
-This is the one Steve Todd uses himself on a lanyard. It leaves both hands free for paperwork and uncoupling and is light enough to simply let go of when you need both hands. Here are his optimised settings. His preferred settings are listed in the note below. You can use these as a start and customise them for your own use:
+Using a Bluetooth Gamepad Controller
+====================================
 
-.. image:: /_static/images/throttles/bt_controller1.jpg
-   :alt: Bluetooth Lanyard Controller
-   :scale: 50%
-   :align: center
-
-`Wireless Bluetooth Gamepad/Joystick Controller <https://www.amazon.com/Wireless-Gamepad-Bluetooth-Controller-Shutter/dp/B07WFH2HB9>`_ |EXTERNAL-LINK|
-
-|
-
-And here is another Bluetooth controller that provides extra function buttons and you can hold by placing your finger in the ring.
+Here is one of a number of Bluetooth controllers that provides extra function buttons and you can hold by placing your finger in the ring and using the buttons and DPAD.
 
 .. image:: /_static/images/throttles/bt_controller2.jpg
    :alt: Ring Shape Hand Controller
@@ -157,6 +147,8 @@ And here is another Bluetooth controller that provides extra function buttons an
    :alt: Engine Driver Conductor View
    :scale: 15%
    :align: center
+
+More information is available on the `Engine Driver <https://enginedriver.mstevetodd.com/operation/gamepads.html#example-gamepads&gsc.tab=0l>`_ |EXTERNAL-LINK| site.
 
 Adding a Physical Dial (Knob) 
 ==============================

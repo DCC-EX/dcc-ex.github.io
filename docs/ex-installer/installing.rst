@@ -53,14 +53,14 @@ If you have purchased a |EX-CSB1| it will have come with the |EX-CS| software al
 
 ----
 
-**Instructions for Windows, Mac OS X, and Linux (including the Raspberry Pi)**
+**Instructions for Windows, Mac OS X, and Linux**
 
 Requirements (for installing)
 ==============================
 
 To run |EX-I| you need:
 
-* a Microsoft Windows, Apple MacOS or Linux based **computer**
+* a Microsoft Windows, Apple MacOS or Linux based **computer** - **Note this will not run on Raspberry Pi**
 * |EX-CS| **hardware**, comprising of:
 
   * an **Arduino microprocessor**, based on any of:
@@ -102,33 +102,55 @@ Download and Run EX-Installer
   
    **Antivirus Software** |BR| You *may* need to turn off your antivirus software before you try to install. |BR| Sometimes our software gets blocked by antivirus apps. If you see any errors on the install screen, this is usually the issue.
 
-* Download :ref:`EX-Installer <download/ex-commandstation:ex-Installer>` app. |BR| |BR|
-* For **Microsoft Windows**:
+Download EX-Installer
+----------------------
+
+.. rst-class:: dcclink
+
+   :ref:`Download EX-Installer <download/ex-commandstation:ex-Installer>`
+
+|HR-DASHED|
+
+Run EX-Installer
+-----------------
+
+
+For Microsoft Windows
+~~~~~~~~~~~~~~~~~~~~~
   
   * Open the Windows *File Manager*
   * Find the folder in which the **EX-Installer-Win64.exe** or **EX-Installer-Win32.exe** was saved. |BR| Generally this will default to downloading to the *downloads* folder but your browser may be configured differently.
   * **Run** ``EX-Installer-Win64.exe`` (or **EX-Installer-Win32.exe**) |BR| |BR| Note: depending on the configuration of your computer the '.exe' may or may not appear. This is not of concern.  |BR| |BR|
+
+For Apple macOS
+~~~~~~~~~~~~~~~~
+
+  * Open a terminal window and navigate to the that folder that you downloaded the file to.  e.g.: |BR| ``cd Downloads``
+  * Enter the following command to tell the OS that it is an executable: |BR| ``chmod +x EX-Installer-macOS``
+  * **Run the installer with** the following command: |BR| ``./EX-Installer-macOS`` |BR| |BR|
+
+.. note:: 
+   :class: note-float-right
+   
+   A 64bit version of Linux is required to run the EX-Installer. The Raspberry Pi is 32bit so not supported by the EX-Installer.
+
+For Linux
+~~~~~~~~~~
+
+  * Right-click on the file, go to Properties, then the Permissions tab, and check "Allow executing file as program"
+  * Open a terminal window and navigate to that folder
+  * **Run the installer with** the following command: |BR| ``./EX-Installer-Linux64`` |BR| |BR|
+
+|HR-DASHED|
 
 .. important:: 
    :class: important-float-right
    
    EX-Installer creates a folder (<home>\\ex-installer) to hold the information it needs. :dcc-ex-red-bold:`Do not directly modify anything in this folder` as it a) will be overwritten or deleted by the installer at any time, and b) will cause the installer to fail to load.
 
-* For **Apple macOS**:
-
-  * Open a terminal window and navigate to the that folder that you downloaded the file to.  e.g.: |BR| ``cd Downloads``
-  * Enter the following command to tell the OS that it is an executable: |BR| ``chmod +x EX-Installer-macOS``
-  * **Run the installer with** the following command: |BR| ``./EX-Installer-macOS`` |BR| |BR|
-
-* For **Linux**:
-
-  * Right-click on the file, go to Properties, then the Permissions tab, and check "Allow executing file as program"
-  * Open a terminal window and navigate to that folder
-  * **Run the installer with** the following command: |BR| ``./EX-Installer-Linux64`` |BR| |BR|
-
-----
-
 **You will be presented with the following screen...**
+
+|HR-DASHED|
 
 a. The 'EX-Installer Welcome' screen
 ------------------------------------
@@ -375,6 +397,8 @@ You *must* select the motor driver type that you have installed.  The installer 
 
 These options are determined from the chosen version of |EX-CS|, and may include:
 
+* EX-CSB1
+* EX-CSB1_WITH_EX8874
 * STANDARD_MOTOR_SHIELD
 * EX8874_SHIELD
 * POLOLU_MOTOR_SHIELD
@@ -387,6 +411,24 @@ These options are determined from the chosen version of |EX-CS|, and may include
 * NANOEVERY_EXAMPLE
 
 This list will change over time as new motor drivers are added, and any older ones no longer supported are removed.
+
+.. note:: 
+
+   If you have added a an |EX-MS| to the |EX-CSB1|...
+
+   |EX-I| does not have a simple way to configure the additional outputs so you will need to use the :doc:`TrackManager </trackmanager/index>` feature to configure the outputs as needed in `myAutomation.h` in the `Advanced Configuration` page of |EX-I|.
+
+   For example, to always set outputs C and D to be the second and third DCC MAIN outputs, you would create a AUTOSTART sequence that sets both outputs C and D to DCC MAIN mode in `myAutomation.h`.
+
+   .. code-block::
+
+      AUTOSTART 
+         SET_TRACK(A,MAIN)
+         SET_TRACK(B,PROG)
+         SET_TRACK(C,MAIN)
+         SET_TRACK(D,MAIN)
+         POWEROFF
+      DONE
 
 |HR-DASHED|
 
@@ -556,9 +598,9 @@ The tracks (channels) on your motor driver can be configured in a variety of dif
 
 If the Command Station is configured as a booster (ESP32 microcontrollers only), then the channels can asl be configured as:
 
-* ``BOOST`` - Booster mode 
-* ``BOOST_INV`` - Booster mode inverted
-* ``BOOST_AUTO`` - Booster mode + Auto-reverser mode
+* ``BOOST`` - |Booster Mode| 
+* ``BOOST_INV`` - |Booster Mode| inverted
+* ``BOOST_AUTO`` - |Booster Mode| + Auto-reverser mode
 
 By default track (channel) **A** will default to ``MAIN`` and Track (channel) **B** to ``PROG``.
 

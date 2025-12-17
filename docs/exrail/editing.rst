@@ -52,6 +52,10 @@ And type your script in.
 
 |
 
+.. warning::
+
+   Do not waste your time asking ChatGPT, Copilot or Gemini to create EXRAIL scripts.   They do not understand EXRAIL and will get it wrong 100% of the time.
+
 Content
 =======
 

@@ -25,6 +25,10 @@ See Also:
 - :doc:`Introduction to EXRAIL <getting-started>` 
 - :doc:`/exrail/examples`
 
+.. warning::
+
+   Do not waste your time asking ChatGPT, Copilot or Gemini to create EXRAIL scripts.   They do not understand EXRAIL and will get it wrong 100% of the time.
+
 ----
 
 Introductory Information
@@ -68,13 +72,21 @@ Handy information
 Correct use of DONE, ENDIF, and FOLLOW() statements
 ---------------------------------------------------
 
-Every |EX-R| automation/route/sequence, event handler, and conditional statement must be terminated by one of these three directives.
+Every |EX-R| automation/route/sequence, event handler, and conditional statement should\* be terminated by one of these three directives.
 
 On this page, you will see various references to the use of ``DONE``, ``ENDIF``, and ``FOLLOW()`` which can be confusing, so refer to this quick list to help understand the context in which each of these should be used:
 
 - Every conditional statement (all directives starting with the word ``IF``) must be terminated by ``ENDIF``
 - Every group of commands within a ROUTE, AUTOMATION, or SEQUENCE must be terminated by either ``DONE`` or ``FOLLOW(id)``
 - Every event handler (all directives starting with the word ``ON``) must be terminated by ``DONE``
+
+.. note::
+
+  \* There are exceptions to this rule.
+  
+  EXRAIL is not a block structured language except for ``IF``/``ELSE``/``ENDIF``.  Therefor a ``SEQUENCE`` can be used without a ``DONE`` statement in certain situations.
+
+  For example when using ``FOLLOW`` to continuously loop back to a ``SEQUENCE``.  In this case the ``FOLLOW`` is being used like an old fashioned 'GOTO' statement to create a continuous loop.
 
 .. collapse:: For example: (click to show)
 
@@ -116,6 +128,8 @@ This applies to all directives starting with ``AT``, ``AFTER``, and ``IF``.
 When using ``AT()`` or ``AFTER()``, this is a blocking activity, meaning the sequence of activities will not progress beyond this particular directive unless the condition is met.
 
 When using ``IF`` conditional statements, these will not block if the condition is not met, allowing the sequence of activities to continue.
+
+Note: A negative value for a ``vpin`` can be used for an active high sensor.
 
 .. collapse:: For example: (click to show)
 
@@ -278,6 +292,8 @@ Refer to the LATCH/UNLATCH commands in the :ref:`exrail/exrail-command-reference
 Aliases
 -------
 
+.. _ALIAS:
+
 ``ALIAS( name[, value] )`` - Assigns name to a value
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -338,6 +354,7 @@ Alphabetic Command List
   * :ref:`ACTIVATEL`
   * :ref:`AFTER`
   * :ref:`AFTEROVERLOAD`
+  * :ref:`ALIAS`
   * :ref:`AMBER`
   * :ref:`ANOUT`
   * :ref:`ASPECT`
@@ -373,6 +390,8 @@ Alphabetic Command List
   * :ref:`ENDEXRAIL`
   * :ref:`ENDIF`
   * :ref:`ENDTASK`
+  * :ref:`EXRAIL`
+  * :ref:`EXRAIL_WITHROTTLE`
   * :ref:`ESTOP`
   * :ref:`EXTT_TURNTABLE`
   * :ref:`FADE`
@@ -412,6 +431,7 @@ Alphabetic Command List
   * :ref:`LCD`
   * :ref:`LCN`
   * :ref:`MESSAGE`
+  * :ref:`MOMENTUM`
   * :ref:`MOVETT`
   * :ref:`NEOPIXEL`
   * :ref:`NEOPIXEL_SIGNAL`
@@ -485,6 +505,8 @@ Alphabetic Command List
   * :ref:`SIGNALH`
   * :ref:`SPEED`
   * :ref:`START`
+  * :ref:`START_SEND`
+  * :ref:`START_SHARED`
   * :ref:`STASH`
   * :ref:`STEALTH`
   * :ref:`STEALTH_GLOBAL`
@@ -500,10 +522,14 @@ Alphabetic Command List
   * :ref:`VIRTUAL_TURNOUT`
   * :ref:`WAITFOR`
   * :ref:`WAITFORTT`
-  * :ref:`EXRAIL_WITHROTTLE`
   * :ref:`XFOFF`
   * :ref:`XFON`
   * :ref:`XFTOGGLE`
+  * :ref:`XFWD`
+  * :ref:`XPOM`
+  * :ref:`XREV`
+  * :ref:`XRESTORE_SPEED`
+  * :ref:`XSAVE_SPEED`
 
 
 |force-break|
@@ -748,6 +774,30 @@ Start a new task to execute a route or sequence.
 
 |hr-dashed|
 
+.. _start_send:
+
+``START_SEND( id )`` - Execute a route or sequence and send the current loco
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Starts a new task at the given route/animation/sequence and send the current loco to it. Remove loco from current task.
+
+*Parameters:* |BR|
+|_| > **id** - id for the sequence/route/automation to branch to
+
+|hr-dashed|
+
+.. _start_shared:
+
+``START_SHARED( id )`` - Execute a route or sequence and pass the current loco
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Starts a new task at the given route/animation/sequence and share the current loco with it.
+
+*Parameters:* |BR|
+|_| > **id** - id for the sequence/route/automation to branch to
+
+|hr-dashed|
+
 .. _delay:
 
 ``DELAY( delay )`` - Delay the sequence a number of milliseconds
@@ -862,9 +912,6 @@ Runs commands in IF block a random percentage of the time. This is handy for mor
 ``ROUTE_CAPTION( route_id, "caption" )`` - Change the label of the Route button
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
-
-
 Dynamically change the label of the Route button.
 
 *Parameters:* |BR|
@@ -934,8 +981,6 @@ Dynamically change the label of the Route button.
 ``ROUTE_ACTIVE( route_id )`` - Activate a Route
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
-
 Dynamically flag a Route as active.
 
 See example in ROUTE_CAPTION.
@@ -947,10 +992,8 @@ See example in ROUTE_CAPTION.
 
 .. _route_inactive:
 
-``ROUTE_INACTIVE( route_id, caption )`` - Deactivate a Route
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
+``ROUTE_INACTIVE( route_id )`` - Deactivate a Route
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Dynamically flag a Route as inactive.
 
@@ -966,8 +1009,6 @@ See example in ROUTE_CAPTION.
 ``ROUTE_HIDDEN( route_id )`` - Hide a Route from display
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
-
 Dynamically hide a Route.
 
 *Parameters:* |BR|
@@ -980,8 +1021,6 @@ Dynamically hide a Route.
 ``ROUTE_DISABLED( route_id )`` - disable a Route
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
-
 Dynamically disable a Route.
 
 *Parameters:* |BR|
@@ -993,8 +1032,6 @@ Dynamically disable a Route.
 
 ``STASH( stash_id )`` - Stashes the current loco/invert
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
 
 *Parameters:* |BR|
 |_| > **stash_id** - id of the stash location to store the value (0-???) |BR|
@@ -1012,8 +1049,6 @@ Stashes/Stores the current loco/invert in the specified stash location.
 ``CLEAR_STASH( stash_id )`` - Zeroes the specified stash
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
-
 Zeroes/Empties the specified stash location.
 
 *Parameters:* |BR|
@@ -1026,8 +1061,6 @@ Zeroes/Empties the specified stash location.
 ``CLEAR_ALL_STASH`` - Zeroes all stashes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
-
 Zeroes/Empties all stash locations.
 
 *Parameters:* |BR|
@@ -1039,8 +1072,6 @@ Zeroes/Empties all stash locations.
 
 ``PICKUP_STASH( stash_id )`` - Retrieves and sets the loco/invert from the specified stash
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
 
 Retrieves and sets the loco/invert from the specified stash location.
 
@@ -1083,8 +1114,11 @@ Perform the following block of commands if the specified sensor is active.
 Optionally be followed by an ``ELSE`` somewhere in the following commands. 
 Must be followed by an ``ENDIF`` somewhere in the following commands. 
 
+Note: A negative value for a ``vpin`` can be used for an active high sensor.
+
 *Parameters:* |BR|
 |_| > **vpin** - vpin (or alias) of the sensor to check |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 Also see ``IFNOT()``, ``IFRED()``, ``IFAMBER()``, ``IFGREEN()``, ``IFCLOSED()``, ``IFTHROWN()``, ``IFRANDOM()``, ``IFTTPOSITION()``, ``IFRE()``, ``IFTIMEOUT()``, ``IFGTE()``, ``IFLT()``, ``IFLOCO()``, ``IFRESERVE()``
 
@@ -1100,8 +1134,11 @@ Perform the following block of commands if the specified sensor is not active.
 Optionally be followed by an ``ELSE`` somewhere in the following commands. 
 Must be followed by an ``ENDIF`` somewhere in the following commands. 
 
+Note: A negative value for a ``vpin`` can be used for an active high sensor.
+
 *Parameters:* |BR|
 |_| > **vpin** - vpin (or alias) of the sensor to check |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 |hr-dashed|
 
@@ -1144,6 +1181,7 @@ Halt the execution of the current block of commands until the sensor is set.
 
 *Parameters:* |BR|
 |_| > **vpin** - pin/vpin of the sensor to check |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 |hr-dashed|
 
@@ -1156,6 +1194,7 @@ Halt the execution of the current block of commands until the sensor is cleared.
 
 *Parameters:* |BR|
 |_| > **vpin** - pin/vpin of the sensor to check |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.|BR|
 |_| > **debounce_time** -  optional debounce time (default 500mS) |BR|
 
 ----
@@ -1201,8 +1240,6 @@ Create a HAL device in myAutomation.h rather than needing to use myHal.cpp
 
 ``HAL_IGNORE_DEFAULTS`` - Disable default MCP23017 and PCA9685 HAL devices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
 
 Disable default MCP23017 and PCA9685 HAL devices
 
@@ -1260,6 +1297,7 @@ Define a servo based signal, such as semaphore signals. Each position is an angl
 
 *Parameters:* |BR|
 |_| > **vpin** - pin/vpin of the servo |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.|BR|
 |_| > **red_pos** - position to move the servo to for a red signal |BR|
 |_| > **amber_pos** - position to move the servo to for a amber signal |BR|
 |_| > **green_pos** - position to move the servo to for a green signal |BR|
@@ -1277,8 +1315,6 @@ Define a DCC accessory signal. Control the colour or aspect of these via the def
 
 ``DCCX_SIGNAL( Address, redAspect, amberAspect, greenAspect )`` - Defines a signal (with id as dcc address)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
 
 This defines a signal (with id same as dcc address) that can be operated
 by the RED/AMBER/GREEN commands.   In each case the command uses the signal address to refer to the signal and the aspect chosen depends on the use of the RED AMBER or GREEN command sent. Other aspects may be sent but will require the direct use of the ASPECT command.
@@ -1378,8 +1414,6 @@ Set defined signal to Red (See SIGNAL).
 
 ``ASPECT( address, aspect )`` - Command for DCC Extended Accessories
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
 
 This command sends an extended accessory packet to the track, normally used to set
 a signal aspect. Aspect numbers are undefined as standards except for 0 which is
@@ -1625,8 +1659,6 @@ Throws a defined turnout/point.
 ``TOGGLE_TURNOUT( turnout_id )`` - Toggle a defined turnout/point between CLOSE/THROW
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
-
 Toggles the state of the specified turnout/point between closed and thrown.
 
 *Parameters:* |BR|
@@ -1675,6 +1707,7 @@ Test if a rotary encoder has been set to the specified value
 
 *Parameters:* |BR|
 |_| > **vpin** - The VPin the encoder is connected to |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.|BR|
 |_| > **value** - value to test |BR|
 
 |hr-dashed|
@@ -1688,6 +1721,7 @@ Detects a rotary encoder has changed position
 
 *Parameters:* |BR|
 |_| > **vpin** - The VPin the encoder is connected to |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 .. collapse:: For example: (click to show)
 
@@ -1706,8 +1740,6 @@ Detects a rotary encoder has changed position
 
 Turntable features
 ^^^^^^^^^^^^^^^^^^
-
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
 
 .. contents:: In This Section
     :depth: 4
@@ -1859,8 +1891,6 @@ Sensors/Inputs - Reading and Responding
 ``JMRI_SENSOR(vpin [,count])`` - Creates <S> type sensors visible to JMRI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
-
 This command causes the creation of |JMRI| <S> type sensors in a way that is simpler than repeating lines of <S> commands in mySetup.h.
 
 - JMRI_SENSOR(100)   is equivalent to <S 100 100 1>
@@ -1878,7 +1908,8 @@ This command causes the creation of |JMRI| <S> type sensors in a way that is sim
 A sequence will not progress until a sensor has been triggered.
 
 *Parameters:* |BR|
-|_| > **vpin** - pin/vpin of the sensor to test
+|_| > **vpin** - pin/vpin of the sensor to test |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 |hr-dashed|
 
@@ -1888,7 +1919,8 @@ A sequence will not progress until a sensor has been triggered.
 A sequence will not progress until after a sensor has been triggered and then is off for 0.5 seconds.
 
 *Parameters:* |BR|
-|_| > **vpin** - pin/vpin of the sensor to test
+|_| > **vpin** - pin/vpin of the sensor to test|BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 |hr-dashed|
 
@@ -1901,6 +1933,7 @@ A sequence will not progress until either a sensor is active/triggered, or if th
 
 *Parameters:* |BR|
 |_| > **vpin** - pin/vpin of the sensor to test |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.|BR|
 |_| > **timeout_ms** - time/duration to wait for in milliseconds
 
 |hr-dashed|
@@ -1911,7 +1944,8 @@ A sequence will not progress until either a sensor is active/triggered, or if th
 If sensor activated or latched, continue. Otherwise skip to ELSE or matching ENDIF.
 
 *Parameters:* |BR|
-|_| > **vpin** - pin/vpin of the sensor to test
+|_| > **vpin** - pin/vpin of the sensor to test|BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 See the :ref:`Conditional Statements section <exrail_conditional_statements>` for more information on IF ... ELSE ... ENDIF commands.
 
@@ -1923,7 +1957,8 @@ See the :ref:`Conditional Statements section <exrail_conditional_statements>` fo
 If sensor NOT activated and NOT latched, continue. Otherwise skip to ELSE or matching ENDIF.
 
 *Parameters:* |BR|
-|_| > **vpin** - pin/vpin of the sensor to test
+|_| > **vpin** - pin/vpin of the sensor to test|BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 See the :ref:`Conditional Statements section <exrail_conditional_statements>` for more information on IF ... ELSE ... ENDIF commands.
 
@@ -1961,6 +1996,7 @@ Waits for an analog pin to reach the specified value.
 
 *Parameters:* |BR|
 |_| > **vpin** - analogue pin of the sensor to test |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.|BR|
 |_| > **value** - value to test against
 
 |hr-dashed|
@@ -1974,6 +2010,7 @@ Waits for an analog pin to go below the specified value.
 
 *Parameters:* |BR|
 |_| > **vpin** - analogue pin of the sensor to test |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.|BR|
 |_| > **value** - value to test against
 
 |hr-dashed|
@@ -1987,6 +2024,7 @@ Test if analog pin reading is greater than or equal to value (>=).
 
 *Parameters:* |BR|
 |_| > **vpin** - analogue pin of the sensor to test |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.|BR|
 |_| > **value** - value to test against
 
 |hr-dashed|
@@ -2000,6 +2038,7 @@ Test if analog pin reading is less than value (<).
 
 *Parameters:* |BR|
 |_| > **vpin** - analogue pin of the sensor to test |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.|BR|
 |_| > **value** - value to test against
 
   All the `IFGTE()`, `IFLT()`, `ATGTE()`and `ATLT()` commands read the analog value from an analog input pin (A0 - A5 on an Arduino Mega) or an analog input from an I/O expander module. Valid values are defined by the capability of the analog to digital converter in use.
@@ -2046,6 +2085,7 @@ Waits for ???.
 
 *Parameters:* |BR|
 |_| > **vpin** - analogue pin of the sensor to test |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.|BR|
 |_| > **value** - value to test against
 
 |hr-dashed|
@@ -2061,6 +2101,7 @@ Waits for ???.
 
 *Parameters:* |BR|
 |_| > **vpin** - analogue pin of the sensor to test |BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.|BR|
 |_| > **value** - value to test against
 
 
@@ -2076,7 +2117,8 @@ Waits for ???.
 ???
 
 *Parameters:* |BR|
-|_| > **vpin** - analogue pin of the sensor to ???
+|_| > **vpin** - analogue pin of the sensor to ???|BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 |hr-dashed|
 
@@ -2161,14 +2203,13 @@ LATCH/UNLATCH can be used to maintain the state of a sensor, or can also be used
 ``ONBUTTON( vpin )`` - Event handler for debounced button presses
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
-
 This new event handler is handy for mimic panel and other buttons that need to perform an action when a button is pressed, rather than having to create a sequence with a combination of ``AFTER`` and ``IF`` statements to debounce a button which quickly becomes very complicated.
 
 Note that this works for active low buttons only.
 
 *Parameters:* |BR|
-|_| > **vpin** - pin/vpin to test
+|_| > **vpin** - pin/vpin to test|BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 |hr-dashed|
 
@@ -2177,12 +2218,11 @@ Note that this works for active low buttons only.
 ``ONSENSOR( vpin )`` - Event handler for sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
-
 A new event handler to perform actions when a sensor is activated. Like the other sensor triggers such as ``IF``, ``AT``, and ``AFTER``, a negative value can be used for an active high sensor.
 
 *Parameters:* |BR|
-|_| > **vpin** - pin/vpin of the sensor to test
+|_| > **vpin** - pin/vpin of the sensor to test|BR|
+|_| |_| |_| |_| A negative value for a ``vpin`` can be used for an active high sensor.
 
 |force-break|
 
@@ -2243,8 +2283,6 @@ Fade an LED on a servo driver to specified value taking specified time.
 ``BLINK( vpin, onMs, offMs )`` - Blink an output pin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
-
 This will start a pin/Vpin blinking until such time as it is ``SET``, ``RESET``, or set via a signal operation.
 
 *Parameters:* |BR|
@@ -2275,8 +2313,6 @@ Send message to LCN Accessory Network.
 ``CONFIGURE_SERVO(vpin, pos1, pos2, profile)`` - Define LED's connected to PCA9685 boards
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
-
 This command offers a more convenient way of defining an LED connected to a PCA9685 pin, instead of performing the HAL call in halSetup.h
 
 *Parameters:* |BR|
@@ -2299,8 +2335,6 @@ This command offers a more convenient way of defining an LED connected to a PCA9
 ``NEOPIXEL( vpin, red, green, blue [,count] )`` - Controls the colour of attached Neopixel LEDs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
-
 Controls the colour of one or more attached Neopixel LEDs
 
 *Parameters:* |BR|
@@ -2321,8 +2355,6 @@ Controls the colour of one or more attached Neopixel LEDs
 ``NEOPIXEL_SIGNAL( signalid, red, green, blue )`` - Controls the colour of attached Neopixel LED
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
-
 Controls the colour of one attached Neopixel LED
 
 *Parameters:* |BR|
@@ -2341,8 +2373,6 @@ Controls the colour of one attached Neopixel LED
 
 ``ANOUT( vpin, value, param1, param2)`` - Analog output ??
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
 
 .. todo: LOW - EXRAIL doco - ANOUT
 
@@ -2399,8 +2429,6 @@ Controls the colour of one attached Neopixel LED
 
 ``PLAYSOUND( vpin, fileNumber, volume )`` - Play mp3 files from a Micro-SD card
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
 
 EXRAIL Function to Play mp3 files from a Micro-SD card, using a DFPlayer MP3 Module.
 
@@ -2627,47 +2655,6 @@ Sends a DCC accessory packet with value 0 to a linear address
 |_| > **Sub_addr** - sub-address ???
 
 
-|hr-dashed|
-
-.. _xfon:
-
-``XFON( cab, func )``` - Send DCC function ON to specific cab
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Send DCC function ON to specific cab (e.g. coach lights) *Not for Loco use - use FON instead!*
-
-*Parameters:* |BR|
-|_| > **cab** - DCC address of your loco |BR|
-|_| > **func** - Function number (0-31)
-
-|hr-dashed|
-
-.. _xfoff:
-
-``XFOFF( cab, func )`` - Send DCC function OFF to specific cab
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Send DCC function OFF to specific cab (e.g. coach lights) Not for Loco use - use FON instead!
-
-*Parameters:* |BR|
-|_| > **cab** - DCC address of your loco |BR|
-|_| > **func** - Function number (0-31)
-
-|hr-dashed|
-
-.. _xftoggle:
-
-``XFTOGGLE( loco, func )`` - Toggle DCC function on specific loco
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
-
-Toggle DCC function on loco with the specified DCC address.
-
-*Parameters:* |BR|
-|_| > **loco** - DCC address of your loco |BR|
-|_| > **func** - Function number (0-31)
-
 ----
 
 EX-FastClock Event Handlers
@@ -2840,6 +2827,25 @@ Set the current loco speed to 0 (same as SPEED(0))
 
 |hr-dashed|
 
+.. _momentum:
+
+``MOMENTUM( accel [,decel])`` - Set loco momentum
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Set the current loco's momentum.
+
+*Parameters:* |BR|
+|_| > **accel** - acceleration (in milliseconds) |BR|
+|_| > **accel** - acceleration (in milliseconds) |BR|
+|_| |_| |_| |_| • if decel is not specified, it will be set to the same value as accel
+
+Setting Momentum 7,14,21 etc is similar in effect to setting a decoder CV03/CV04 to 1,2,3.
+
+As an additional option, the momentum calculation is based on the difference in throttle setting and actual speed. For example, the time taken to reach speed 50 from a standing start would be less if the throttle were set to speed 100, thus increasing the acceleration.
+
+|hr-dashed|
+
+
 .. _fon:
 
 ``FON( func )`` - Turn on loco function
@@ -2868,8 +2874,6 @@ Turn off the specified function for the current loco.
 
 ``FTOGGLE( func )`` - Toggle the state of a loco's function
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
 
 Toggle off the specified function for the current loco.  i.e. Turn off if on, or on if off.
 
@@ -2938,6 +2942,116 @@ If the specified loco ID is defined for this sequence, perform the defined activ
         // Define activities here e.g. blow horn or whistle
       ENDIF
       DONE
+
+|hr-dashed|
+
+.. _xfwd:
+
+``XFWD( loco, speed )`` - Sends DCC speed to a loco in forward direction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Sends DCC speed to an abritary loco in forward direction
+
+*Parameters:* |BR|
+|_| > **loco** - DCC address of your loco |BR|
+|_| > **speed** - DCC speed (0-127) |BR|
+|_| |_| |_| |_| • 2-127 = speed 1-126  |BR|
+|_| |_| |_| |_| • 0 = stop  |BR|
+|_| |_| |_| |_| • 1 = Estop
+
+
+|hr-dashed|
+
+.. _xrev:
+
+``XREV( loco, speed )`` - Sends DCC speed to a loco in reverse direction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Sends DCC speed to an abritary loco in reverse direction
+
+*Parameters:* |BR|
+|_| > **loco** - DCC address of your loco |BR|
+|_| > **speed** - DCC speed (0-127) |BR|
+|_| |_| |_| |_| • 2-127 = speed 1-126  |BR|
+|_| |_| |_| |_| • 0 = stop  |BR|
+|_| |_| |_| |_| • 1 = Estop
+
+|hr-dashed|
+
+.. _xfon:
+
+``XFON( cab, func )``` - Send DCC function ON to specific cab
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Send DCC function ON to specific cab (e.g. coach lights) *Not for Loco use - use FON instead!*
+
+*Parameters:* |BR|
+|_| > **cab** - DCC address of your loco |BR|
+|_| > **func** - Function number (0-31)
+
+|hr-dashed|
+
+.. _xfoff:
+
+``XFOFF( cab, func )`` - Send DCC function OFF to specific cab
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Send DCC function OFF to specific cab (e.g. coach lights) Not for Loco use - use FON instead!
+
+*Parameters:* |BR|
+|_| > **cab** - DCC address of your loco |BR|
+|_| > **func** - Function number (0-31)
+
+|hr-dashed|
+
+.. _xftoggle:
+
+``XFTOGGLE( loco, func )`` - Toggle DCC function on specific loco
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Toggle DCC function on loco with the specified DCC address.
+
+*Parameters:* |BR|
+|_| > **loco** - DCC address of your loco |BR|
+|_| > **func** - Function number (0-31)
+
+.. _xpom:
+
+``XPOM( loco, cv, value )`` - Write CV value to specified loco on main
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Write CV value to specified loco on main. (PoM)
+
+*Parameters:* |BR|
+|_| > **loco** - DCC address of your loco |BR|
+|_| > **cv** - cv to change |BR|
+|_| > **value** - value to write
+
+|force-break|
+
+|hr-dashed|
+
+.. _xsave_speed:
+
+``XSAVE_SPEED( loco )`` - Saves the current speed of a loco
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Saves the current speed of a loco.
+
+*Parameters:* |BR|
+|_| > **loco** - DCC address of your loco
+
+|hr-dashed|
+
+.. _xrestore_speed:
+
+``XRESTORE_SPEED( loco )`` - Restores the saved speed of a loco
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Restores the saved speed of a loco
+
+*Parameters:* |BR|
+|_| > **loco** - DCC address of your loco
 
 |force-break|
 
@@ -3083,18 +3197,17 @@ Configures the power setting of the selected track, refer also to :doc:`/trackma
 
 .. _setfreq:
 
-``SETFREQ( track, frequency )`` - Enable a specific frequency
+``SETFREQ( frequency )`` - Enable a specific frequency
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ``DC`` or ``DC_INV`` / ``DCX`` track settings only.
 
-Configures the frequency setting of the selected track.
+Configures the frequency setting of the selected loco.
 
 The settings achievable vary slightly depending upon the processor running the |EX-CS| but broadly follow the following:
 
 *Parameters:* |BR|
-|_| > **track** - - The track to configure, valid options are A to H |BR|
-|_| > **frequency** - - The frequency to set for this track |BR|
+|_| > **frequency** - - The frequency to set for the current loco |BR|
 |_| |_| |_|>valid options are: |BR|
 |_| |_| |_| |_|> **0** - Default - low frequency 131Hz |BR|
 |_| |_| |_| |_|> **1** - Mid frequency - 490Hz |BR|
@@ -3102,6 +3215,21 @@ The settings achievable vary slightly depending upon the processor running the |
 |_| |_| |_| |_|> **3** - Supersonic - 62500Hz |BR|
 
 Trial and error will be needed for specific locos that do not respond well to the defaults (low) frequency setting.
+
+.. collapse:: For example: (click to show)
+
+  .. code-block:: cpp
+
+    // Set track A to be a DC track with loco ID 1 and power on, and track B to be a DCC programming track
+    ROUTE(504, "DC loco 10 to DCFREQ 1")
+      SETLOCO(10) SETFREQ(1)
+    DONE
+    ROUTE(505, "DC loco 10 to DCFREQ 2")
+      SETLOCO(10) SETFREQ(2)
+    DONE
+    ROUTE(506, "DC loco 10 to DCFREQ 3")
+      SETLOCO(10) SETFREQ(3)
+    DONE
 
 |force-break|
 
@@ -3411,8 +3539,6 @@ A WiThrottle controller will receive ``Hmmsg``.
 ``MESSAGE( "msg" )`` - Writes a message to all clients
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
-
 Writes a message to all serial throttles and all WiThrottle Clients.
 
 A |DCC-EX| throttle will receive a broadcast ``<m "text">``, and a WiThrottle throttle will receive ``Hmtext``.
@@ -3482,13 +3608,19 @@ Disconnect PROG output from MAIN output.
 
 .. _endexrail:
 
-``ENDEXRAIL`` - TBA
+``ENDEXRAIL`` - Deprecated - Do not use
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. todo: LOW - EXRAIL doco - ENDEXRAIL
+Deprecated - Do not use
 
-*Parameters:* |BR|
-|_| > none
+|hr-dashed|
+
+.. _exrail:
+
+``EXRAIL`` - Deprecated - Do not use
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Deprecated - Do not use
 
 |hr-dashed|
 
@@ -3655,8 +3787,6 @@ If you are unsure on the impacts using anything in this section may have, please
 ``STEALTH( code )`` - include some C++ code in a ROUTE/SEQUENCE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
-
 **SERIOUS ENGINEERS and ADVANCED C++ USERS ONLY**   |engineer| 
 
 Permits a certain level of C++ code to be embedded as a single step in an EXRAIL sequence.
@@ -3690,8 +3820,6 @@ Syntax:
 
 ``STEALTH_GLOBAL( code )``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-|NEW-IN-V5-4-LOGO-SMALL| |NEW-IN-V5-4-LOGO-SMALL-DARK|
 
 **SERIOUS ENGINEERS and ADVANCED C++ USERS ONLY**   |engineer| 
 

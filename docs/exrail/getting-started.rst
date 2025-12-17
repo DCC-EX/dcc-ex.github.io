@@ -22,6 +22,10 @@ Before You start, generally you will need to have created some Key Objects (e.g.
 
 For a full list of keywords, see :doc:`/exrail/exrail-command-reference`.  Only a subset are described on this page.
 
+.. warning::
+
+   Do not waste your time asking ChatGPT, Copilot or Gemini to create EXRAIL scripts.   They do not understand EXRAIL and will get it wrong 100% of the time.
+
 Types of Sequence
 =================
 
@@ -105,7 +109,7 @@ For example:
       CLOSE(7)     // close turnout/point 7
       DELAY(5000)  // 5 second wait
       GREEN(92)    // signal 92 to Green
-      DONE
+    DONE
 
 |force-break|
 
@@ -168,7 +172,7 @@ Event Triggered Sequence Types
       RED(24)     // signal 24 to red
       DELAY(2000) // wait 2 seconds
       GREEN(27)   // signal 27 to green
-      DONE
+    DONE
 
 Sequences that are triggered when 'events' occur, include:
 
@@ -233,7 +237,7 @@ There are a substantial number of commands that you can explore in the :doc:`/ex
       RED(24)     // signal 24 to red
       DELAY(2000) // wait 2 seconds
       GREEN(27)   // signal 27 to green
-      DONE
+    DONE
 
 Turnout/Point commands include:
 
@@ -273,7 +277,7 @@ Signal related commands include:
       REV(30)     // move backwards at DCC speed 50
       DELAY(5000) // run for 5 seconds
       STOP        // stop the train 
-      FOLLOW(4)   // repeat forever
+    FOLLOW(4)   // repeat forever
 
 Loco related commands include:
 
@@ -339,12 +343,12 @@ Conditionals have the structure:
    SEQUENCE(85)
       DELAY(100)     // check every 0.1 of a second
       AT(35)         // monitor push button 35
-      IFCLOSED(105)  // check the state of turnout/point 105
-         THROW(105)  // if closed THROW Turnout/Point 105
-      ELSE
-         CLOSE(105)  // if closed CLOSE Turnout/Point 105
-      ENDIF 
-      FOLLOW(85)     // repeat forever
+        IFCLOSED(105)  // check the state of turnout/point 105
+          THROW(105)  // if closed THROW Turnout/Point 105
+        ELSE
+          CLOSE(105)  // if closed CLOSE Turnout/Point 105
+        ENDIF 
+        FOLLOW(85)     // repeat forever
 
 .. code-block:: cpp
 
@@ -481,7 +485,7 @@ There are a number of delay type commands that you can explore in the :doc:`/exr
       REV(30)     // move backwards at DCC speed 50
       DELAY(5000, 20000) // run for between 5 to 20 seconds (random)
       STOP        // stop the train 
-      FOLLOW(5)   // repeat forever
+    FOLLOW(5)   // repeat forever
 
 .. list-table::
     :widths: auto
@@ -625,7 +629,7 @@ Here for example is a launch sequence that has no predefined locos but allows lo
    GREEN(27) // show green light to user
    JOIN      // connect prog track to main
    START(12) // send loco off along route 12
-   FOLLOW(99) // keep doing this for another launch
+  FOLLOW(99) // keep doing this for another launch
 
 The READ_LOCO reads the loco address from the PROG track and the current route takes on that loco. By altering the script slightly and adding another sensor, it's possible to detect which way the loco sets off and switch the code logic to send it in the correct direction by using the ``INVERT_DIRECTION`` instruction so that this locos FWD and REV commands are reversed. (easily done with diesels!)
 

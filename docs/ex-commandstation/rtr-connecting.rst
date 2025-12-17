@@ -108,8 +108,12 @@ These are the most basic steps to get you up and running.  If you need more help
 
    **4. Connect Your Controller (Throttle) App to the 'dccex' Server**
 
-      * Launch your throttle app.
+      * Launch your throttle app. [3]_
       * In your throttle app, connect to the ``dccex`` server.
+
+      .. [3] |WiThrottle|, and some other apps, will require you to enter the IP address and port of the server manually.  
+         |BR| The IP address is usually ``192.168.4.1`` when using Access Point mode, and the port is ``2560``.  
+         |BR| Refer to your app's documentation for details on how to enter these settings.
 
    **5. Acquire a Loco in Your Controller (Throttle) App**
 
@@ -512,6 +516,28 @@ At startup of the |EX-CSB1| the OLED screen shows useful information.
 
 |HR-DASHED|
 
+Adding an EX-8874 Motor Shield
+------------------------------
+
+You can add an |EX-MS| to the |EX-CSB1| to increase the number of outputs from 2 to 4.
+
+Note that the |EX-I| does not have a simple way to configure the additional outputs so you will need to use the :doc:`TrackManager </trackmanager/index>` feature to configure the outputs as needed in `myAutomation.h` in the `Advanced Configuration` page of |EX-I|.
+
+For example, to always set outputs C and D to be the second and third DCC MAIN outputs, you would create a AUTOSTART sequence that sets both outputs C and D to DCC MAIN mode in `myAutomation.h`.
+
+.. code-block::
+
+   AUTOSTART 
+      SET_TRACK(A,MAIN)
+      SET_TRACK(B,PROG)
+      SET_TRACK(C,MAIN)
+      SET_TRACK(D,MAIN)
+      POWEROFF
+   DONE
+
+
+|HR-DASHED|
+
 DCC Operation
 ---------------
 
@@ -522,7 +548,7 @@ The |EX-CSB1| is set to operate in |DCC| mode by default. If you want to switch 
 Booster Mode
 --------------
 
-The |EX-CSB1| as the name implies can operate as a Command Station or a Booster. See [insert link] for instructions on how to use the EX-CSB1 as a booster.
+The |EX-CSB1| as the name implies can operate as a Command Station or a Booster. See :doc:`EX-CS as a booster page <rtr-booster>` for instructions on how to use the EX-CSB1 as a booster.
 
 |HR-DASHED|
 

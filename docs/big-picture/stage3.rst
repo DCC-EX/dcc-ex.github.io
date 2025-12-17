@@ -158,7 +158,7 @@ The valid parameters are:
 - active_angle = The angle to which the servo will move when the turnout/point is thrown (refer below for further detailed information).
 - inactive_angle = The angle to which the servo will move when the turnout/point is closed (refer below for further detailed information).
 - profile = There are five profiles to choose from that determine the speed at which a turnout/point will move: Instant, Fast, Medium, Slow, and Bounce (note we don't recommend Bounce for a turnout/point definition).
-- description = A human-friendly description of the turnout/point that will appear in WiThrottle apps and |Engine Driver|. Note that this must be enclosed in quotes "".
+- description = A human-friendly description of the turnout/point that will appear in |WiThrottle protocol| apps including |Engine Driver|. Note that this must be enclosed in quotes "".
 
 An example definition for a servo connected to the second control pins of the first PCA9685 connected to the CommandStation, using the slow profile for prototypical operation:
 

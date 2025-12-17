@@ -38,7 +38,11 @@ The process for creating these objects consists of:
 
 .. warning::
 
-   You must avoid using these characters in all descriptions: ``<``, ``>``, ``"`` as these are part of the |DCC-EX| protocol and are likely to prevent descriptions showing up in |JMRi| and other throttle software/clients.
+   You must avoid using these characters in all descriptions: ``<``, ``>``, ``"`` as these are part of the |DCC-EX| protocol and are likely to prevent descriptions showing up in |JMRI| and other throttle software/clients.
+
+.. warning::
+
+   Do not waste your time asking ChatGPT, Copilot or Gemini to create EXRAIL scripts.   They do not understand EXRAIL and will get it wrong 100% of the time.
 
 ----
 
@@ -64,13 +68,13 @@ Where:
 * **999** - is the DCC address of your loco
 * **My Loco Name** - is anything you want to see as the name of this loco in the throttle apps
 * **F0 F1 F3 ... F27**. - are the names that you want to see for the functions specific to this loco
-* **\*F2** - note that if the function is 'momentary' rather than 'latching' (On/Off) then start the function label with a asterisk (\*).  The most common example of this is the Horn/Whistle which is commonly on F2.
+* **\*F2** - note that if the function is 'momentary' (only on while the button is held down) rather than 'latching' then start the function label with a asterisk (\*).  The most common example of this is the Horn/Whistle which is commonly on F2 for decoders for US prototype locos.
 
 Some more realistic examples might look like:
 
 .. code-block:: cpp
    
-   ROSTER (  3,"Eng 3", "F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//") // Address 3, Eng 3, Function keys F0-F10
+   ROSTER(3,"Eng 3", "F0/F1/*F2/*F3/F4/F5/F6/F7/Mute/F9//") // Address 3, Eng 3, Function keys F0-F10
    ROSTER(1224,"PE 1224","") // Motor Only Decoder, But use Engine Driver 'Preferences >In Phone Loco 'Sound'
    ROSTER(1225,"PE 1225","Lights/Bell/*Whistle/*Short Whistle/Steam/On-Time/FX6 Bell Whistle/Dim Light/Mute")
    ROSTER(4468,"LNER 4468","//Snd On/*Whistle/*Whistle2/Brake/F5 Drain/Coal Shvl/Guard-Squeal/Loaded/Coastng/Injector/Shunt-Door ~Opn-Cls/Couplng/BrakeVlv/Sfty Vlv/Shunting/BrkSql Off/No Momentm/Aux3/Fade Out/F22 Res/F23/Res//Aux 5/Aux6/Aux7/Aux 8")
@@ -187,12 +191,12 @@ When setting up a turnout/point where multiple pins are required for control, th
   VIRTUAL_TURNOUT(t, desc) \
   DONE \
   ONCLOSE(t) \
-  SET(p2) RESET(p3) \
-  SET(p1) DELAY(PULSE) RESET(p1) \
-  DONE
+    SET(p2) RESET(p3) \
+    SET(p1) DELAY(PULSE) RESET(p1) \
+  DONE \
   ONTHROW(t) \
-  RESET(p2) SET(p3) \
-  SET(p1) DELAY(PULSE) RESET(p1) \
+    RESET(p2) SET(p3) \
+    SET(p1) DELAY(PULSE) RESET(p1) \
   DONE
 
   SINGLE_COIL_TURNOUT(101, 22, 24, 26, "Turnout 101")
@@ -362,11 +366,11 @@ The valid parameters are:
 
    // Example
    AT(164)
-   SERVO(101, 400, Fast)
+      SERVO(101, 400, Fast)
    DONE
 
    AFTER(164)
-   SERVO(101, 100, Slow)
+      SERVO(101, 100, Slow)
    DONE
 
    /* As an example, consider a lineside worker that needs to be moved away 

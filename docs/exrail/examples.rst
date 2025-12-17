@@ -46,8 +46,8 @@ Another approach for powering up the track is to assign a speed to a loco in a s
   // of the code in the myAutomation.h file thus the sequence is run each time 
   // the EX-CommandStation boots up.
   AUTOSTART       // required in version 5 or later
-  SETLOCO(9999)   // select loco 9999
-  SPEED(0)        // set the speed to 0.  This will turn the track power on
+   SETLOCO(9999)   // select loco 9999
+   SPEED(0)        // set the speed to 0.  This will turn the track power on
   DONE
 
 
@@ -107,7 +107,7 @@ The |EX-R| instructions to do this might look like
    ROUTE(1,"Coal Yard exit")
      THROW(1)
      CLOSE(7)
-     DONE
+   DONE
 
 Or you can write it like this
 
@@ -123,7 +123,7 @@ Or add comments
    ROUTE(1,"Coal Yard exit")     // appears in the throttle
      THROW(1)   // throw turnout onto coal yard siding
      CLOSE(7)   // close turnout for engine shed
-     DONE    // that's all folks!
+   DONE    // that's all folks!
 
 Of course, you may want to add signals, and time delays
 
@@ -138,7 +138,7 @@ Of course, you may want to add signals, and time delays
       CLOSE(7)
       DELAY(5000)  // this is a 5 second wait
       GREEN(25)
-      DONE
+   DONE
 
 
 Automating Signals with Turnouts
@@ -154,14 +154,14 @@ automatically switch an adjacent facing turnout. Use an ``ONTHROW`` or ``ONCLOSE
       RED(22)
       DELAY(2000)
       GREEN(25)
-      DONE
+   DONE
 
    ONCLOSE(8)  // When turnout 8 is closed
      CLOSE(9)
      RED(25)
      DELAY(2000)
      GREEN(22)
-     DONE
+   DONE
 
 
 Automating various non-track items 
@@ -178,7 +178,7 @@ This normally takes place in a timed loop, for example alternate flashing of a f
      SET(165)   // swap the lights   
      RESET(164) 
      DELAY(500)   // wait 0.5 seconds
-     FOLLOW(66)  // follow sequence 66 continuously
+   FOLLOW(66)  // follow sequence 66 continuously
      
 Note, however, that this sequence will not start automatically: it must be started during the startup process (see later) using ``START(66)``.
 
@@ -201,11 +201,11 @@ Using an ``AUTOMATION`` keyword means that this automation will appear in the th
    AUTOMATION(4,"Round in circles")
       FWD(50)   // move forward at DCC speed 50 (out of 127)
       AT(40)     // when you get to sensor on pin (40)
-      STOP      // stop the train 
-      DELAYRANDOM(5000,20000) // delay somewhere between 5 and 20 seconds
-      FWD(30)   // start a bit slower
-      AFTER(40)  // until sensor on pin 40 has been passed
-      FOLLOW(4) // and continue to follow the automation
+         STOP      // stop the train 
+         DELAYRANDOM(5000,20000) // delay somewhere between 5 and 20 seconds
+         FWD(30)   // start a bit slower
+         AFTER(40)  // until sensor on pin 40 has been passed
+         FOLLOW(4) // and continue to follow the automation
 
 The instructions are followed in sequence by the loco given to it; the ``AT`` command just leaves the loco running until that sensor is detected.
 
@@ -224,14 +224,14 @@ Adding a station signal to the loop script is extremely simple, but it does requ
    AUTOMATION(4,"Round in circles")
       FWD(50)   // move forward at DCC speed 50 (out of 127)
       AT(40)    // when you get to sensor on pin (40)
-      STOP      // Stop the train 
-      DELAYRANDOM(5000,20000) // delay somewhere between 5 and 20 seconds
-      GREEN(22)    // set signal #22 to Green
-      DELAY(2500)  // This is not Formula1!
-      FWD(30)    // start a bit slower
-      AFTER(40)  // until sensor on pin 40 has been passed
-      RED(22)    // set signal #22 to Red
-      FOLLOW(4)  // and continue to follow the automation
+         STOP      // Stop the train 
+         DELAYRANDOM(5000,20000) // delay somewhere between 5 and 20 seconds
+         GREEN(22)    // set signal #22 to Green
+         DELAY(2500)  // This is not Formula1!
+         FWD(30)    // start a bit slower
+         AFTER(40)  // until sensor on pin 40 has been passed
+         RED(22)    // set signal #22 to Red
+         FOLLOW(4)  // and continue to follow the automation
 
 Point to Point Shuttle
 ======================
@@ -261,12 +261,12 @@ Notice that the sensors at A and B are near the ends of the track (allowing for 
       DELAYRANDOM(10000,20000) // random wait between 10 and 20 seconds
       FWD(50)
       AT(42) // sensor 42 is at the far end of platform B
-      STOP
-      DELAY(15000)
-      REV(20) // Reverse at DCC speed 20 (out of 127)
+         STOP
+         DELAY(15000)
+         REV(20) // Reverse at DCC speed 20 (out of 127)
       AT(41) // far end of platform A
-      STOP
-      FOLLOW(13) // follows sequence 13 again… forever
+         STOP
+         FOLLOW(13) // follows sequence 13 again… forever
 
 
 Note a SEQUENCE is exactly the same as an AUTOMATION except that it does NOT appear in the throttle.
@@ -309,14 +309,14 @@ Assuming that you have defined your turnouts as per :ref:`exrail/exrail-command-
       CLOSE(2)
       FWD(30)
       AT(42) // sensor 42 is at the far end of platform B
-      STOP
-      DELAY(15000)
-      THROW(2)
-      THROW(1)
-      REV(20)
+         STOP
+         DELAY(15000)
+         THROW(2)
+         THROW(1)
+         REV(20)
       AT(41)
-      STOP
-      FOLLOW(11) // follows sequence 11 again… forever
+         STOP
+         FOLLOW(11) // follows sequence 11 again… forever
 
  
 All well and good for one loco, but with 2 (or even 3) on this track we need some rules. The principle behind this is
@@ -351,17 +351,17 @@ So… lets take a look at the routes now. For convenience I have used route numb
       AFTER(43) // Once we have reached AND passed sensor 43
       FREE(1) // we no longer occupy block 1
       AT(44) // When we get to sensor 44
-      FOLLOW(23) // follow route from block 2 to block 3
+         FOLLOW(23) // follow route from block 2 to block 3
    
    SEQUENCE(23) // Travel from block 2 to block 3
       RESERVE(3) // will STOP if block 3 occupied
       CLOSE(2) // Now we have the block, we can set turnouts
       FWD(20) // we may or may not have stopped at the RESERVE
       AT(42) // sensor 2 is at the far end of platform B
-      STOP
-      FREE(2)
-      DELAY(15000)
-      FOLLOW(34)
+         STOP
+         FREE(2)
+         DELAY(15000)
+         FOLLOW(34)
    
    SEQUENCE(34) // you get the idea
       RESERVE(4)
@@ -370,16 +370,16 @@ So… lets take a look at the routes now. For convenience I have used route numb
       AFTER(45)
       FREE(3)
       AT(46)
-      FOLLOW(41)
+         FOLLOW(41)
    
    SEQUENCE(41)
       RESERVE(1)
       THROW(1)
       REV(20)
       AT(41)
-      STOP
-      FREE(4)
-      FOLLOW(12) // follows Route 12 again… forever
+         STOP
+         FREE(4)
+         FOLLOW(12) // follows Route 12 again… forever
 
 
 Does that look long? Worried about memory on your Arduino…. Well the script above takes about 100 BYTES of program memory and no dynamic SRAM!

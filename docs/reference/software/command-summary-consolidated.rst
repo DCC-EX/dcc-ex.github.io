@@ -99,26 +99,25 @@ Also allows joining the MAIN and PROG tracks together.
 
   *Response:* N/A
 
+|hr-dashed|
+
 .. _native-command-j-i:
 
-``<J I> <JI>`` - Request current status
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<J I> <JI>`` - Request current values list
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Response:* Repeated for each Channel/Track: ``<j I track current>`` |BR|
-  |_| > **track:**  channel/track |BR|
-  |_| > **current:** current in milliamps
-
-|hr-dashed|
+  *Response:*
+  |_| ``<jI [cA cB cC ...]>`` |BR|
+  |_| > **c:** Raw current value for each defined Track, in milliAmps |BR|
 
 .. _native-command-j-g:
 
-``<J G> <JG>`` - Request max current
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<J G> <JG>`` - Request max current list
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Response:* |BR|
-  |_| repeated for each Channel/Track: ``<j G track currentmax>`` |BR|
-  |_| > **track:**  channel/track |BR|
-  |_| > **currentmax:** current in milliamps
+  *Response:*
+  |_| ``<jG [mA mB mC ...]>`` |BR|
+  |_| > **m:** Raw current trip value for each defined Track, in milliAmps |BR|
 
 ----
 
@@ -533,6 +532,41 @@ Cab (Loco) Commands
   |_| |_| |_| |_| • *28 Speedsteps* |BR|
   |_| |_| |_| |_| • *128 Speedsteps*
 
+|hr-dashed|
+
+.. _native-command-m-momentum:
+
+``<m [type] | [cab acceleration [deceleration]]>`` - set the momentum of a loco
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| either |br|
+  |_| |_| > **cab:** DCC Address |BR|
+  |_| |_| > **acceleration:** |BR|
+  |_| |_| > **decelertaion:** |BR|
+  |_| or |br|
+  |_| |_| > **type:** |BR|
+  |_| |_| |_| One of: |BR|
+  |_| |_| |_| |_| • `LINEAR` |BR|
+  |_| |_| |_| |_| • `POWER`
+  
+  *Response:* |BR|
+  |_| none
+
+  The momentum calculation is based on the difference in throttle setting and actual speed. For example, the time taken to reach speed 50 from a standing start would be less if the throttle were set to speed 100, thus increasing the acceleration.
+
+  *Notes:*
+
+    Setting Momentum 7,14,21 etc is similar in effect to setting a decoder CV03/CV04 to 1,2,3.
+
+  *Examples:*
+
+    `<m 3 0>`   sets loco 3 to no momentum. |BR|
+    `<m 3 21>`   sets loco 3 to 21 mS/step. |BR|
+    `<m 3 21 42>`   sets loco 3 to 21 mS/step accelerating and 42 mS/step when decelerating.
+
+    `<m LINEAR>` - acceleration is uniform up to selected throttle speed. |BR|
+    `<m POWER>`  - acceleration depends on difference between loco speed and selected throttle speed.
 
 ----
 
@@ -884,6 +918,21 @@ For details on how to configure turntables/traversers see: :ref:`reference/softw
   |_| Response (id is defined): ``<jO id index angle "[desc]">`` |BR|
   |_| Response (id not defined): ``<jO id X>``
 
+|hr-dashed|
+
+.. _native-command-d-tt-vpin-steps-activity:
+
+``<D TT vpin steps [activity]>`` - Test turntable
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **vpin:** |br|
+  |_| > **steps:** ??? |br|
+  |_| > **activity** optional - ??? |br| 
+  
+  *Response:* |BR|
+  |_| TBA
+
 ----
 
 Routes/Automations
@@ -1091,10 +1140,11 @@ Sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
-  |_| Repeat for each defined sensor: ``<q id>`` |BR|
+  |_| Repeated for each defined sensor: ``<q id>`` or ``<Q id>``|BR| 
   |_|  |BR|
   |_| e.g. |BR|
-  |_| Response (successful) Repeat for each defined sensor: ``<q id>`` |BR|
+  |_| Response (successful) Repeated for each inactive defined sensor: ``<q id>`` |BR|
+  |_| Response (successful) Repeated for each active defined sensor: ``<Q id>`` |BR|
   |_| Response (fail): N/A
 
 |hr-dashed|
@@ -2304,6 +2354,60 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
+.. _native-command-d-ack-limit-value:
+
+``<D ACK LIMIT value>`` - Set ACK detection limit mA
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **value:** in mA
+
+  *Response:* |BR|
+  |_| TBA
+
+|hr-dashed|
+
+.. _native-command-d-ack-min-max-value:
+
+``<D ACK minmax value [MS]>`` - Set ACK minimum or maximum duration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **minmax:**  one of |BR|
+  |_| |_| |_| |_| • ``MIN`` |BR|
+  |_| |_| |_| |_| • ``MAX`` |BR|
+  |_| > **value:** in microseconds unless "MS" is specified |BR|
+  |_| > **MS:** optional keyword to specify milliseconds
+
+  *Response:* |BR|
+  |_| TBA
+
+|hr-dashed|
+
+.. _native-command-d-ack-retry-value:
+
+``<D ACK RETRY value>`` - Set ACK retry count
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Parameters:* |BR|
+  |_| > **value:** Retry count
+
+  *Response:* |BR|
+  |_| TBA
+
+|hr-dashed|
+
+.. _native-command-d-cabs:
+
+``<D CABS>`` - Shows cab numbers and speed in reminder tables
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Response:* |BR|
+  |_| "Used=xxx, max=yyy" |BR|
+  |_| Displayed on the serial monitor only.
+
+|hr-dashed|
+
 .. _native-command-d-cmd-state:
 
 ``<D CMD state>`` - Enables Command Parser diagnostics
@@ -2390,14 +2494,17 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 |hr-dashed|
 
-.. _native-command-d-cabs:
+.. _native-command-d-websocket-state:
 
-``<D CABS>`` - Shows cab numbers and speed in reminder tables
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<DWEBSOCKET state>`` - Enable Websocket diagnostics
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  *Response:* |BR|
-  |_| "Used=xxx, max=yyy" |BR|
-  |_| Displayed on the serial monitor only.
+  *Parameters:* |BR|
+  |_| > **state:** one of |BR|
+  |_| |_| |_| |_| • ON |BR|
+  |_| |_| |_| |_| • OFF
+
+  *Response:* N/A
 
 |hr-dashed|
 
@@ -2418,6 +2525,16 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
     <* PCA9685 I2C:x41 Configured on Vpins:116-131 OFFLINE * > |BR|
     <* MCP23017 I2C:x20 Configured on Vpins:164-179 * > |BR|
     <* MCP23017 I2C:x21 Configured on Vpins:180-195 * >
+
+|hr-dashed|
+
+.. _native-command-d-hal-reset:
+
+``<D HAL RESET>`` - Reset all HAL devices
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Response:* |BR|
+  |_| TBA
 
 |hr-dashed|
 

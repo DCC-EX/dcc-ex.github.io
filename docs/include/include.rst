@@ -296,6 +296,10 @@
    
     :abbr:`RTR (Ready-to-run / plug-and-play)`
 ..
+.. |Booster Mode| replace::
+
+    :doc:`Booster Mode </ex-commandstation/rtr-booster>`
+..
 .. |hr-dashed| raw:: html
 
    <hr class="hr-dashed" />

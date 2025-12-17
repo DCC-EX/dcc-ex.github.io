@@ -14,7 +14,7 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-import sphinx_rtd_theme
+# import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
@@ -45,6 +45,7 @@ extensions = [
     'ablog',
     'sphinx.ext.intersphinx',
     'sphinx_design',
+    'sphinx_rtd_theme',
     'sphinx_rtd_dark_mode',
     'sphinx_reredirects',
     # 'sphinx_last_updated_by_git',
@@ -176,6 +177,7 @@ redirects = {
     "developer-reference/api": "../reference/developers/api.html",
     "developer-reference/index": "../reference/developers/index.html",
     "developer-reference/tech-reference": "../reference/developers/index.html",
+    "donate": "https://dcc-ex.com/about/contributing/donate.html",
     "download/commandstation": "ex-commandstation.html",
     "download/dcc-inspector-ex": "ex-dccinspector.html",
     "download/documents": "index.html",

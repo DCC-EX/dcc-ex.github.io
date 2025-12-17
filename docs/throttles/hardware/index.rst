@@ -22,3 +22,4 @@ Throttles (Hardware)
   streamdeck 
   uwt50
   dccexcontroller
+  simple-throttle

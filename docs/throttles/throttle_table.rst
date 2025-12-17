@@ -291,6 +291,20 @@
       -  
       -  
 
+    * -  :doc:`DCC-EX Simple Throttle <hardware/simple-throttle>`
+      -  Free
+      -  WiFi
+      -  Native
+      -  Device
+      -  DIY
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
     * -  :doc:`Elgato Stream Deck <hardware/streamdeck>`
       -  Paid
       -  WiFi

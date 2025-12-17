@@ -75,6 +75,7 @@ Dedicated Hardware
 - :doc:`miniThrottle (Physical) <hardware/minithrottle>`
 - :doc:`TCS UWT-50 (Physical) <hardware/uwt50>`
 - :doc:`WiTcontroller (Physical) <hardware/witcontroller>`
+- :doc:`DCC-EX Simple Throttler (Physical) <hardware/simple-throttle>` |BR| |BR|
 - :doc:`DccExController (Physical) <hardware/dccexcontroller>`  - Support Discontinued |BR| |BR|
 - See also :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
@@ -119,6 +120,7 @@ DCC-EX (DCC-EX Native Commands)
 - :doc:`EX-T3-WiFi (T3 = Tactile Touch Throttle) (Physical) </throttles/hardware/ex-t3-wifi>`
 - :doc:`miniThrottle (Physical DIY) <hardware/minithrottle>`
 - :doc:`DCC Commander (iOS) <software/dcc-commander>` |BR| |BR|
+- :doc:`DCC-EX Simple Throttler (Physical) <hardware/simple-throttle>` |BR| |BR|
 - :doc:`DccExController (Physical DIY) <hardware/dccexcontroller>`  - Support Discontinued |BR| |BR|
 - See also :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 

@@ -21,8 +21,10 @@ Coming soon! A new, refreshed take on our documentation aimed at making it easie
 
 While our website and included documentation has continued to evolve and morph with our products over the years, the pace of development continues to outpace the ability to maintain the documentation.
 
-What's missing is easy to consume documentation that helps our newest, least experienced users get up and running quickly with DCC-EX so they can enjoy running their trains.
+For those of you who have been using our products for years, you've no doubt noticed that there is a lot of detailed, highly technical information available which is great for those who know what they're doing, but it's very hard to comprehend for new people, especially those who just want to plug in their new EX-CSB1 and enjoy running their trains.
 
-With this in mind, we've decided to refresh our documentation from the ground up. You'll still find it in the same place on our [website](https://dcc-ex.com), but it will have a new look.
+With this in mind, we've decided to refresh our documentation from the ground up. You'll still find it in the same place on our [website](https://dcc-ex.com), but it will have a new look and the initial primary focus will be on enabling those people who are new to DCC-EX and need to get started.
 
-This current documentation will be retained as [legacy documentation](https://dcc-ex.com/legacy-docs/), with our more technical reference documentation being incorporated as time allows.
+It's equally important we don't lose all the detailed knowledge gained over the years, so the current documentation will be retained as [legacy documentation](https://dcc-ex.com/legacy-docs/). Over time, we will incorporate this into the refreshed documentation also.
+
+I'd also like to say a huge thanks to those who have contributed so much time and effort into the documentation over the years and continue to do so, it is greatly appreciated!

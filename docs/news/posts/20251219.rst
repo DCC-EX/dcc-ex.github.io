@@ -3,7 +3,7 @@
 .. include:: /include/include-news.rst
 
 :blogpost: true
-:date: 17 December, 2025
+:date: 19 December, 2025
 :author: peteGSX
 :category: News
 :tags: dcc-ex, news
@@ -23,8 +23,8 @@ While our website and included documentation has continued to evolve and morph w
 
 For those of you who have been using our products for years, you've no doubt noticed that there is a lot of detailed, highly technical information available which is great for those who know what they're doing, but it's very hard to comprehend for new people, especially those who just want to plug in their new EX-CSB1 and enjoy running their trains.
 
-With this in mind, we've decided to refresh our documentation from the ground up. You'll still find it in the same place on our [website](https://dcc-ex.com), but it will have a new look and the initial primary focus will be on enabling those people who are new to DCC-EX and need to get started.
+With this in mind, we've decided to refresh our documentation from the ground up. You'll still find it in the same place on the `DCC-EX website <https://dcc-ex.com>`_, but it will have a new look and the initial primary focus will be on enabling those people who are new to DCC-EX and need to get started.
 
-It's equally important we don't lose all the detailed knowledge gained over the years, so the current documentation will be retained as [legacy documentation](https://dcc-ex.com/legacy-docs/). Over time, we will incorporate this into the refreshed documentation also.
+It's equally important we don't lose all the detailed knowledge gained over the years, so the current documentation will be retained as the `DCC-EX legacy documentation <https://dcc-ex.com/legacy-docs/>`_. Over time, we will incorporate this into the refreshed documentation also.
 
-I'd also like to say a huge thanks to those who have contributed so much time and effort into the documentation over the years and continue to do so, it is greatly appreciated!
+We'd also like to say a huge thanks to those who have contributed so much time and effort into the documentation over the years and continue to do so, it is greatly appreciated!

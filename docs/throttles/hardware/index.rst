@@ -23,3 +23,4 @@ Throttles (Hardware)
   uwt50
   dccexcontroller
   simple-throttle
+  wifred

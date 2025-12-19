@@ -362,7 +362,7 @@
       -  
 
     * -  :doc:`miniThrottle <hardware/minithrottle>`
-      -  Free
+      -  Open Source
       -  WiFi / USB
       -  Native
       -  Device
@@ -376,7 +376,7 @@
       -  
 
     * -  :doc:`myBluePillThrottle7 <hardware/mybluepillthrottle>`
-      -  Free
+      -  Open Source
       -  Serial
       -  Native
       -  Device
@@ -390,7 +390,21 @@
       -  
 
     * -  :doc:`WiTcontroller <hardware/witcontroller>`
-      -  Free
+      -  Open Source
+      -  WiFi
+      -  WiT
+      -  Device
+      -  DIY
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+      -  
+
+    * -  :doc:`wiFred <hardware/wifred>`
+      -  Open Source
       -  WiFi
       -  WiT
       -  Device
@@ -452,6 +466,7 @@
   Free = No additional cost for full functionality. |BRxa|
   Paid = Payment required for any usage. |BRxa|
   Free/Paid = Both Free and Paid versions are available. The free version usually has limited features. |BRxa|
+  Open Source = Source code is available to view, modify and build your own. |BRxa| However the hardware to build it is not free. |BRxa|
   Native = Uses the DCC-EX Native protocol/commands. [#t1]_ |BRxa|
   WiT = Uses the WiThrottle protocol. [#t1]_ |BRxa|
   Web = Requires the use of a Web Browser. |BRxa|

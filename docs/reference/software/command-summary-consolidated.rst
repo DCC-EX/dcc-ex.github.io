@@ -990,14 +990,14 @@ Also see the `EXRAIL` section below for activating routes.
 
 .. _native-command-equals-start:
 
-``</ start id [cab]>`` - Start an EXRAIL Sequence 
+``</ start [cab] id>`` - Start an EXRAIL Sequence 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   Start an EXRAIL sequence (route or automation).
 
   *Parameters:* |BR|
-  |_| > **id:** Id of the Sequence |BR|
-  |_| > **cab** Optional. DCC address of the loco/cab to 'send' on the automation
+  |_| > **cab** Optional. DCC address of the loco/cab to 'send' on the automation |BR|
+  |_| > **id:** Id of the Sequence
 
   *Response:* |BR|
   |_| none

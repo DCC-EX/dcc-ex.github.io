@@ -1004,7 +1004,7 @@ Also see the `EXRAIL` section below for activating routes.
 
 |hr-dashed|
 
-.. _native-command-equals-kill
+.. _native-command-equals-kill:
 
 ``</ kill id>`` - Kill an EXRAIL Sequence 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

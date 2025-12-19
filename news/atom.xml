@@ -2,10 +2,34 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2025-12-19T11:02:09.975447+00:00</updated>
+  <updated>2025-12-19T19:12:33.922520+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.12">ABlog</generator>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20251219.html</id>
+    <title>New documentation coming soon!</title>
+    <updated>2025-12-19T00:00:00+00:00</updated>
+    <author>
+      <name>peteGSX</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="new-documentation-coming-soon"&gt;
+
+&lt;p&gt;Coming soon! A new, refreshed take on our documentation aimed at making it easier for people to get up and running with DCC-EX.&lt;/p&gt;
+&lt;p&gt;While our website and included documentation has continued to evolve and morph with our products over the years, the pace of development continues to outpace the ability to maintain the documentation.&lt;/p&gt;
+&lt;p&gt;For those of you who have been using our products for years, you’ve no doubt noticed that there is a lot of detailed, highly technical information available which is great for those who know what they’re doing, but it’s very hard to comprehend for new people, especially those who just want to plug in their new EX-CSB1 and enjoy running their trains.&lt;/p&gt;
+&lt;p&gt;With this in mind, we’ve decided to refresh our documentation from the ground up. You’ll still find it in the same place on the &lt;a class="reference external" href="https://dcc-ex.com"&gt;DCC-EX website&lt;/a&gt;, but it will have a new look and the initial primary focus will be on enabling those people who are new to DCC-EX and need to get started.&lt;/p&gt;
+&lt;p&gt;It’s equally important we don’t lose all the detailed knowledge gained over the years, so the current documentation will be retained as the &lt;a class="reference external" href="https://dcc-ex.com/legacy-docs/"&gt;DCC-EX legacy documentation&lt;/a&gt;. Over time, we will incorporate this into the refreshed documentation also.&lt;/p&gt;
+&lt;p&gt;We’d also like to say a huge thanks to those who have contributed so much time and effort into the documentation over the years and continue to do so, it is greatly appreciated!&lt;/p&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20251219.html"/>
+    <summary>Coming soon! A new, refreshed take on our documentation aimed at making it easier for people to get up and running with DCC-EX.</summary>
+    <category term="dcc-ex" label="dcc-ex"/>
+    <category term="news" label="news"/>
+    <published>2025-12-19T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>https://dcc-ex.com/news/posts/20250313.html</id>
     <title>Announcing DCCEXProtocol Library 1.2.0</title>
@@ -79,13 +103,13 @@
   </entry>
   <entry>
     <id>https://dcc-ex.com/news/posts/20250301.html</id>
-    <title>Announcing EX-CommandStation 5.4.0</title>
+    <title>Announcing EX-CommandStation 5.4.6</title>
     <updated>2025-03-01T00:00:00+00:00</updated>
     <author>
       <name>peteGSX</name>
     </author>
     <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
-&lt;section id="announcing-ex-commandstation-5-4-0"&gt;
+&lt;section id="announcing-ex-commandstation-5-4-6"&gt;
 
 &lt;p&gt;The &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team are excited to announce a new Production release of &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; with version 5.4.0 being made available today. As usual, this release includes a raft of &lt;strong&gt;new features and enhancements&lt;/strong&gt; to bring even more capability and joy to your digital model railroading experience! We’re also announcing changes to our &lt;strong&gt;supported hardware platforms&lt;/strong&gt;.&lt;/p&gt;
 &lt;section id="new-features-and-enhancements"&gt;

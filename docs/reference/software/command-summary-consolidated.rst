@@ -985,6 +985,41 @@ Also see the `EXRAIL` section below for activating routes.
   |_| Response (successful): ``<jA id type "desc">`` |BR|
   |_| Response (fail - is not defined): ``<jA id X>``
 
+
+|hr-dashed|
+
+.. _native-command-equals-start:
+
+``</ START [cab] id>`` - Start an EXRAIL Sequence 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Start an EXRAIL sequence (route or automation).
+
+  *Parameters:* |BR|
+  |_| > **cab** Optional. DCC address of the loco/cab to 'send' on the automation |BR|
+  |_| > **id:** Id of the Sequence
+
+  *Response:* |BR|
+  |_| none
+
+|hr-dashed|
+
+.. _native-command-equals-kill:
+
+``</ KILL id>`` - Kill an EXRAIL Sequence 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  Stop the execution of one or all EXRAIL sequences (route or automation).
+
+  *Parameters:* |BR|
+  |_| > **id:** Either: |BR|
+  |_| |_| |_| The id of the Sequence, or |BR|
+  |_| |_| |_| ``ALL`` = Kill all sequences 
+
+  *Response:* |BR|
+  |_| none
+
+
 ----
 
 System Information

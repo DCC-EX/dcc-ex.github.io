@@ -990,7 +990,7 @@ Also see the `EXRAIL` section below for activating routes.
 
 .. _native-command-equals-start:
 
-``</ start [cab] id>`` - Start an EXRAIL Sequence 
+``</ START [cab] id>`` - Start an EXRAIL Sequence 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   Start an EXRAIL sequence (route or automation).
@@ -1006,7 +1006,7 @@ Also see the `EXRAIL` section below for activating routes.
 
 .. _native-command-equals-kill:
 
-``</ kill id>`` - Kill an EXRAIL Sequence 
+``</ KILL id>`` - Kill an EXRAIL Sequence 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   Stop the execution of one or all EXRAIL sequences (route or automation).

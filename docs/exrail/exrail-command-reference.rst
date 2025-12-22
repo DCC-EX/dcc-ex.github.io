@@ -798,6 +798,21 @@ Starts a new task at the given route/animation/sequence and share the current lo
 
 |hr-dashed|
 
+.. _sendloco:
+
+``SENDLOCO( loco, route )`` - Start route/sequence with a specified loco 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Start a new task send a specified loco along a specified route/sequence.
+
+The sequence is started in parallel to the current sequence, so the current sequence continues immediately after the SENDLOCO() command.
+
+*Parameters:* |BR|
+|_| > **loco** - DCC address of your loco |BR|
+|_| > **route** - route to execute using the specified loco
+
+|hr-dashed|
+
 .. _delay:
 
 ``DELAY( delay )`` - Delay the sequence a number of milliseconds
@@ -2742,19 +2757,6 @@ Set the loco address for this sequence.
 
 *Parameters:* |BR|
 |_| > **loco** - DCC address of your loco 
-
-|hr-dashed|
-
-.. _sendloco:
-
-``SENDLOCO( loco, route )`` - Start route/sequence with a specified loco 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Start a new task send a specified loco along a specified route/sequence
-
-*Parameters:* |BR|
-|_| > **loco** - DCC address of your loco |BR|
-|_| > **route** - route to execute using the specified loco
 
 |hr-dashed|
 

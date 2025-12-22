@@ -89,6 +89,16 @@ h6, .h6 {
   color: #00a3b9ff !important;
 }
 
+.top-nav-div {
+  display:block;
+  margin-bottom: 5px !important;
+}
+.top-nav-text {
+  color: #00a3b9ff !important;
+  font-family: Audiowide,Helvetica,Arial,sans-serif !important;
+  font-size: 80% !important; 
+}
+
 .wy-nav-top {
   background:#00a3b9ff !important;
   font-size: 80% !important; 
@@ -1164,4 +1174,7 @@ html[data-theme='dark'] .show-dark {
   /* div.topOfPage {
     display:block;
   } */
+   .top-nav-div {
+    display:none;
+   }
 }

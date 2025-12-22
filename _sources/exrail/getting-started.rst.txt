@@ -595,7 +595,7 @@ Following commands (e.g. ``SPEED (50)`` ) will be directed at the loco chosen.
 Referencing Loco Functions
 --------------------------
 
-You can use ``FON( function_no )`` and ``FOFF( function_no )`` to activate and deactivate loco functions… eg sound horn.  The loco that the command will be directed to will be the one previously chosen using ``SETLOCO( loco_dcc_address )`` or ``SENDLOCO( ( loco_dcc_address, route_id )``.
+You can use ``FON( function_no )`` and ``FOFF( function_no )`` to activate and deactivate loco functions… eg sound horn.  The loco that the command will be directed to will be the one previously chosen using ``SETLOCO( loco_dcc_address )`` or ``SENDLOCO( loco_dcc_address, route_id )``.
 
 Referencing Sensors
 -------------------

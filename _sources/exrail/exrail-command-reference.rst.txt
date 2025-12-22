@@ -26,6 +26,7 @@ See Also:
 - :doc:`/exrail/examples`
 
 .. warning::
+  :class: warning-no-clear
 
    Do not waste your time asking ChatGPT, Copilot or Gemini to create EXRAIL scripts.   They do not understand EXRAIL and will get it wrong 100% of the time.
 
@@ -626,6 +627,12 @@ Completes a Sequence/Route/Animation/Event handler, and any other automation def
 *Parameters:* |BR|
 |_| > none
 
+.. Note::
+
+  You do not need to use ``DONE`` if you are using ``FOLLOW(id)`` or ``RETURN`` to end the sequence, as these also indicate the end of the sequence.
+
+  The currently selected loco will stop moving unless you have used a ``FOLLOW(id)`` or ``RETURN`` to pass control to another sequence. |BR| To prevent this use ``SETLOCO(0)`` before the ``DONE`` statement to deselect the current loco.
+
 |hr-dashed|
 
 .. _endtask:
@@ -647,7 +654,7 @@ Completes a Sequence/Route/Animation/Event handler, and any other automation def
 ``CALL( id )`` - Branch to a separate sequence
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Branch to a separate sequence, which will need to RETURN when complete.
+Branch to a separate sequence, which will need to `RETURN` when complete. The current sequence is paused until the called sequence has completed.
 
 *Parameters:* |BR|
 |_| > **id** - id for the sequence/route/automation to branch to
@@ -705,7 +712,9 @@ Return to the calling sequence when completed (no DONE required).
 ``FOLLOW( sequence_id )`` - Branch or Follow a specified sequence
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Branch or Follow a specified sequence. This lets us do clever things like performing a different sequence depending on whether a turnout/point is CLOSED or THROWN, as well as simple things such as the example above where we keep looping through the same sequence.
+Branch or Follow a specified sequence. The current sequence ends and control is passed to the specified sequence.
+
+This lets us do clever things like performing a different sequence depending on whether a turnout/point is CLOSED or THROWN, as well as simple things such as the example above where we keep looping through the same sequence.
 
 *Parameters:* |BR|
 |_| > **sequence_id** - id for the sequence/route/automation to branch to
@@ -795,6 +804,21 @@ Starts a new task at the given route/animation/sequence and share the current lo
 
 *Parameters:* |BR|
 |_| > **id** - id for the sequence/route/automation to branch to
+
+|hr-dashed|
+
+.. _sendloco:
+
+``SENDLOCO( loco, route )`` - Start route/sequence with a specified loco 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Start a new task send a specified loco along a specified route/sequence.
+
+The sequence is started in parallel to the current sequence, so the current sequence continues immediately after the SENDLOCO() command, without waiting for the new sequence to complete.
+
+*Parameters:* |BR|
+|_| > **loco** - DCC address of your loco |BR|
+|_| > **route** - route to execute using the specified loco
 
 |hr-dashed|
 
@@ -2742,19 +2766,6 @@ Set the loco address for this sequence.
 
 *Parameters:* |BR|
 |_| > **loco** - DCC address of your loco 
-
-|hr-dashed|
-
-.. _sendloco:
-
-``SENDLOCO( loco, route )`` - Start route/sequence with a specified loco 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Start a new task send a specified loco along a specified route/sequence
-
-*Parameters:* |BR|
-|_| > **loco** - DCC address of your loco |BR|
-|_| > **route** - route to execute using the specified loco
 
 |hr-dashed|
 

@@ -26,6 +26,7 @@ See Also:
 - :doc:`/exrail/examples`
 
 .. warning::
+  :class: warning-no-clear
 
    Do not waste your time asking ChatGPT, Copilot or Gemini to create EXRAIL scripts.   They do not understand EXRAIL and will get it wrong 100% of the time.
 

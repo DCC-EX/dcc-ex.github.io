@@ -94,9 +94,12 @@ h6, .h6 {
   margin-bottom: 5px !important;
 }
 .top-nav-text {
-  color: #00a3b9ff !important;
+  color: #006979 !important;
   font-family: Audiowide,Helvetica,Arial,sans-serif !important;
   font-size: 80% !important; 
+}
+.top-nav-text a:visited {
+  color: #006979 !important;
 }
 
 .wy-nav-top {
@@ -114,10 +117,10 @@ h6, .h6 {
 }
 
 html[data-theme='dark'] .wy-nav-content a {
-	color: #96d7ff !important;
+	color: #00a3b9  !important;
 }
 html[data-theme='dark'] .wy-nav-content a:visited {
-	color: #249ee8 !important;
+	color: #00a3b9  !important;
 }
 
 .wy-breadcrumbs {

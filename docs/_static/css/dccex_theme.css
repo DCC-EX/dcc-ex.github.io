@@ -442,6 +442,10 @@ svg {
   width: 60%;
 }
 
+.warning-no-clear {
+  clear: none !important;
+}
+
 .note-float-right {
   float: right;
   width: 40%;

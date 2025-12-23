@@ -7,4 +7,6 @@ EX-T3-WiFi (T3 = Tactile Touch Throttle)
 
 |SUITABLE| |engineer| |support-button|
 
+WiFi throttle for DCC-EX Command Stations
+
 see: https://github.com/DCC-EX/EX-T3-WiFi?tab=readme-ov-file

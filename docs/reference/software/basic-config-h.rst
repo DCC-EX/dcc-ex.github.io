@@ -26,6 +26,8 @@ If you are using the EX-Installer, the important options will be automatically m
 
 These options should be coded in the file `config.h` which will be automatically included in the compilation process.
 
+.. _basic-config-h-motor-shield:
+
 Motor shield definition (Mandatory)
 ------------------------------------
 
@@ -112,6 +114,8 @@ It is not valid to enable Ethernet and WiFi at the same time.
 .. code-block:: cpp
 
    #define ENABLE_ETHERNET true
+
+.. _basic-config-h-lcd-oled-support:
 
 LCD/OLED support
 -----------------

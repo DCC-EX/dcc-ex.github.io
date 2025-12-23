@@ -27,7 +27,7 @@ These options should be coded in the file `config.h` which will be automatically
 Non-standard Motor Shields
 --------------------------
 
-See also: :ref:`Motor Shield basic config.h <reference/software/reference/software/basic-config-h:motor shield definition (mandatory)>`
+See also: :ref:`Motor Shield basic config.h <basic-config-h-motor-shield>`
 
 Further pre-defined shield names can be found in the code file MotorDrivers.h although their presence there does not necessarily mean that we can provide support for issues.
 
@@ -100,7 +100,7 @@ TCP/IP Advanced settings
 LCD/OLED support
 -----------------
 
-See also: :ref:`LCD/OLED basic config.h <reference/software/reference/software/basic-config-h:lcd/oled support>`
+See also: :ref:`LCD/OLED basic config.h <basic-config-h-lcd-oled-support>`
 
 In order to avoid wasting memory the current scroll buffer is limited to 8 lines.  Some users wishing to display additional information such as TrackManager power states have requested additional rows aware of the warning that this will take extra RAM.  if you wish to include additional rows
 

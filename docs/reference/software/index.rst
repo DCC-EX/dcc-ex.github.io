@@ -12,6 +12,8 @@ Software
 .. toctree::
     :maxdepth: 1
 
+    basic-config-h
+    advanced-config-h
     command-summary-consolidated
     /throttles/native-protocol-library
     programming-locos

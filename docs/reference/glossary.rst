@@ -28,7 +28,7 @@ Glossary
     * - Consist |BR| Multiple Unit
       - Multiple locos hauling a singe train. see https://dccwiki.com/Multiple_Unit_Consisting |EXTERNAL-LINK|
     * - Cab
-      - A Cab can refer to a throttle (or controller) as well as a loco or locomotive |BR| In the context of DCC-EX commands, `cab` refers to a loco
+      - A Cab can refer to a throttle (or controller) as well as a loco or locomotive |BR| In the context of DCC-EX commands, `cab` refers to a loco's/Decoder's DCC Address
     * - DC
       - Direct Current
     * - DCC
@@ -47,10 +47,12 @@ Glossary
       - Native protocol used by the |EX-CS| in preference to the WitThrottle protocol.  This is the preferred protocol for communication with the Command Station as it is considerably more powerful and comprehensive.  This was originally developed for the now defunct DCC++ project, hence it is still referred to in JMRI as 'DCC++', but have been considerably enhanced since then.
     * - Station (STA) Mode
       - Station Mode allows you to connect the Command Station to your existing home network. |BR| The Command Station becomes a Station or Client rather than an Access Point. |BR| That means instead of being a host that manages the IP of the smartphone that runs your Throttle, it becomes a station that connects to your existing network just like any of the other computers or devices connected to your network. The Throttle then connects to the Command Station by finding its IP address on the network. |BR| :doc:`Refer here for more information. </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
-    * - Switching |BR| Shunting
+    * - Switching [1]_ |BR| Shunting [2]_
       - The process of moving individual carriages to/from specific locations on yards or sidings.
-    * - Turnouts |BR| Points
+    * - Turnouts [1]_ |BR| Points [2]_
       - A mechanical device to guide a train from one track to another
+    * - Switch [1]_
+      - A switch is another term for a turnout, but may also refer to a physical electronic switch (as in a light switch).
     * - USB
       - Universal Serial Bus
     * - Visual Studio Code (VSC)
@@ -60,5 +62,11 @@ Glossary
     * - WiThrottle Protocol
       - A proprietary protocol developed by Brett Hoffman
     * - WiThrottle Server
-      - A piece of software that listens and acts on WiThrottle commands |BR| |EX-CS| contains a WiThrottle Server, as does |JMRi|
+      - A piece of software that listens and acts on WiThrottle commands |BR| |EX-CS| contains a WiThrottle Server, as does |JMRI|
+    * - roster
+      - 
+    * - VPIN
+      - A VPIN is an Arduino pin number that has been extended to include pins on external devices or expanders. Once the mapping of VPIN numbers to devices has been done, the commands that set or test pins do not have to care how the electronics works.
 
+.. [1] Term primariarly used in North American railroading.
+.. [2] Term used in most of the rest of the English speaking world. (British origin)

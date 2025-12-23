@@ -63,10 +63,10 @@ Glossary
       - A proprietary protocol developed by Brett Hoffman
     * - WiThrottle Server
       - A piece of software that listens and acts on WiThrottle commands |BR| |EX-CS| contains a WiThrottle Server, as does |JMRI|
-    * - roster
-      - 
+    * - Roster
+      - A roster is a list of locomotives that are known in advance by the command station so that DCC addresses, name, and functions can be used by throttles to configure buttons etc.
     * - VPIN
       - A VPIN is an Arduino pin number that has been extended to include pins on external devices or expanders. Once the mapping of VPIN numbers to devices has been done, the commands that set or test pins do not have to care how the electronics works.
 
 .. [1] Term primariarly used in North American railroading.
-.. [2] Term used in most of the rest of the English speaking world. (British origin)
+.. [2] Term used in most of the English speaking world other than North America. (British/United Kingdom origin)

@@ -51,7 +51,7 @@ Glossary
       - The process of moving individual carriages to/from specific locations on yards or sidings.
     * - Turnouts [#g1]_ |BR| Points [#g2]_
       - A mechanical device to guide a train from one track to another
-    * - Switch [#g2]_
+    * - Switch [#g1]_
       - A switch is another term for a turnout, but may also refer to a physical electronic switch (as in a light switch).
     * - USB
       - Universal Serial Bus

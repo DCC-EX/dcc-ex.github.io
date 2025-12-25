@@ -235,6 +235,19 @@ We will be adding some instructions the ``myAutomation.h`` file a re-uploading t
 
 Note the track power is immediately turn off anytime you change the track mode. you may wish to add ``SET_POWER( track, ON/OFF )`` after the ``SET_TRACK()`` command. e.g. ``SET_POWER(B ON)``.
 
+|HR-DASHED|
+
+Auto Reverser (DCC)
+--------------------
+
+Using ``MAIN_AUTO`` mode, the specified output will act as a DCC Auto Reverser. i.e. The phase of the DCC signal on the track will be automatically reversed when a short circuit or overload is detected.
+
+To permanently set an output to be an Auto Reverser every time the |EX-CS| starts up, follow the same instructions as for creating a Route above, but use ``MAIN_AUTO`` instead of ``MAIN`` or ``PROG``. For example:
+
+.. code-block:: cpp
+
+  SET_TRACK(B,MAIN_AUTO)  // Set Track B to DCC MAIN_AUTO
+
 ----
 
 Changing a Motor Driver Output to DC

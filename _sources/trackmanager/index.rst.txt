@@ -78,7 +78,7 @@ Valid Modes are:
   * - ``DC``
     - ✓
     - ✓ [#tm2]_
-    - ✓
+    - 
     - Motor drivers with brake pin only
 
   * - ``BOOST``

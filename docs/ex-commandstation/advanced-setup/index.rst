@@ -194,6 +194,17 @@ These tend to be aimed more at the |tinkerer-text| and |engineer-text| levels.
 
 ----
 
+Manual Configuration of the EX-CommandStation
+===============================================
+
+.. toctree::
+    :maxdepth: 1
+    
+    /reference/software/basic-config-h
+    /reference/software/advanced-config-h    
+
+----
+
 DCC-EX Commands
 ===============
 

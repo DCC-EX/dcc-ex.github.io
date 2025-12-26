@@ -49,10 +49,6 @@ Valid Modes are:
     * DCX [#tm1]_ 
     * NONE
 
-.. [#tm1] DC_INV / DCX is DC with an opposite polarity. Like NMRA modular layout track B which is wired left rail positive (+) and right rail negative (-)
-
-
-
 .. flat-table::
   :widths: auto
   :header-rows: 1
@@ -99,7 +95,8 @@ Valid Modes are:
     -
     - 
 
-.. [#tm2] Deprecated alias of ``AUTO`` but only when preceeded by a sperate ``MAIN`` command.
+.. [#tm1] ``DC_INV`` / ``DCX`` is DC with an opposite polarity. Like NMRA modular layout track B which is wired left rail positive (+) and right rail negative (-)
+.. [#tm2] Replaces the deprecated alias of ``AUTO`` which required that it was preceeded by a separate ``MAIN`` command.
 .. [#tm3] With special alias of ``DCX`` for ``DC_INV``
 
 .. important::

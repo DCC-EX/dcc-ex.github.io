@@ -95,13 +95,16 @@ DCC-EX Model Railroading
    :caption: Products
 
    ex-commandstation/index
-   ex-installer/index
-   ex-webthrottle/index
    EX-CSB1 Express <ex-csb1/index>
    EX-MotorShield8874 <reference/hardware/motorboards/ex-motor-shield-8874>
    EX-WiFiShield-8266 <reference/hardware/wifi-boards/ex-wifi-shield-8266>
-   ex-dccinspector/index
+   ex-installer/index
+   ex-webthrottle/index
    ex-toolbox/index
+   ex-turntable/index
+   ex-ioexpander/index
+   ex-fastclock/index
+   ex-dccinspector/index
 
 .. toctree::
    :hidden:
@@ -110,9 +113,6 @@ DCC-EX Model Railroading
 
    exrail/index
    trackmanager/index
-   ex-turntable/index
-   ex-ioexpander/index
-   ex-fastclock/index
 
 .. toctree::
    :hidden:
@@ -145,17 +145,18 @@ DCC-EX Model Railroading
    :caption: Detailed Information
 
    reference/index
-   under-development/index
    projects/index
 
-.. toctree::
-   :hidden:
-   :maxdepth: 4
-   :caption: External References
+..   under-development/index
 
-   external-references/index
-   external-references/standards
-   reference/accessories/index
+.. .. toctree::
+..   :hidden:
+..   :maxdepth: 4
+..  :caption: External References
+
+..   external-references/index
+..   external-references/standards
+..   reference/accessories/index
 
 .. toctree::
    :hidden:

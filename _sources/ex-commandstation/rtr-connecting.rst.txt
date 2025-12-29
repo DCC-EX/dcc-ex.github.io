@@ -28,15 +28,17 @@ These instructions are for DCC locomotives. For more detailed information, to co
 What You Will Need
 ==================
 
-* An |EX-CSB1| [#c1]_
-* A **Power supply** (12V - 16V DC see :ref:`Power Supplies <reference/hardware/power-supplies:power supplies>`)
+* An |EX-CSB1| [1]_
+* A **Power supply** (12V - 16V DC see :ref:`Power Supplies <reference/hardware/power-supplies:power supplies>`) [2]_
 * A **DCC loco** (If you are here to run DC locos, please go to the :doc:`/trackmanager/index` page.)
 * Some **Track**
 * **16 to 28AWG/1.5mm^2 Wire**, preferably in 2 colours with 1/8"/6mm insulation stripped (and wire tinned if stranded)
 * Jeweller's **flat bladed screwdriver** (1.5 - 2mm blade)
 * A **WiFi capable smart device** like a phone or tablet to control your trains (aka a "Throttle")
 
- .. [#c1] While not required for normal use, a PC is required a) to initially install the software on a DIY system, b) is optional for making a USB connection and using programs like |EX-WT| or |JMRI|, and c) to update/add |EX-R| Scripts to the |EX-CS| or make other changes to its configuration. |BR| A USB connection also provides a connection to a "serial monitor" to generate logs and diagnose issues. But more on that later.
+ .. [1] While not required for normal use, a PC is required a) to initially install the software on a DIY system, b) is optional for making a USB connection and using programs like |EX-WT| or |JMRI|, and c) to update/add |EX-R| Scripts to the |EX-CS| or make other changes to its configuration. |BR| A USB connection also provides a connection to a "serial monitor" to generate logs and diagnose issues. But more on that later.
+
+.. [2] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 ----
 
@@ -94,7 +96,9 @@ These are the most basic steps to get you up and running.  If you need more help
 
       The |EX-CSB1-SHORT| has a 2.1mm x 5.5mm power jack. Connect this to an appropriate DC power supply.
 
-      For N and HO scale you would normally use a 12V to 15V DC power supply, but be sure to check the manual for your loco/decoder combination for the correct voltage. 
+      For N and HO scale you would normally use a 12V to 16V DC power supply [3]_, but be sure to check the manual for your loco/decoder combination for the correct voltage. 
+
+      .. [3] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
    **3. Connect Your Smart Device(Phone) to the 'DCCEX_xxxxx' WiFi Network**
 
@@ -102,16 +106,16 @@ These are the most basic steps to get you up and running.  If you need more help
 
       * Open the Wifi Settings in your smart device.
       * Select the WiFi network in your smart device WiFi settings named ``DCCEX_xxxxxx``, and use the corresponding password ``PASS_xxxxxx`` (where **xxxxxx** is identical in each case) which is shown on your EX-CSB1's OLED display.
-      * Tell your smart device not to worry about there being no Internet connection. [2]_
+      * Tell your smart device not to worry about there being no Internet connection. [4]_
 
-      .. [2] You also may need to tell your smart device to not automatically connect to your default WiFi network or it might keep trying to reconnect to that instead
+      .. [4] You also may need to tell your smart device to not automatically connect to your default WiFi network or it might keep trying to reconnect to that instead
 
    **4. Connect Your Controller (Throttle) App to the 'dccex' Server**
 
-      * Launch your throttle app. [3]_
+      * Launch your throttle app. [5]_
       * In your throttle app, connect to the ``dccex`` server.
 
-      .. [3] |WiThrottle|, and some other apps, will require you to enter the IP address and port of the server manually.  
+      .. [5] |WiThrottle|, and some other apps, will require you to enter the IP address and port of the server manually.  
          |BR| The IP address is usually ``192.168.4.1`` when using Access Point mode, and the port is ``2560``.  
          |BR| Refer to your app's documentation for details on how to enter these settings.
 
@@ -123,6 +127,7 @@ These are the most basic steps to get you up and running.  If you need more help
    **6. Run Trains**
 
       * Run/control the loco
+
 
 These quick tips may have been be enough to get your running, but step by step instructions follow below.
 
@@ -209,9 +214,11 @@ Power Connection
 
 The |EX-CSB1-SHORT| has a 2.1mm x 5.5mm power jack. If you already have a power supply with bare wires, you can use an optional 2.1mm x 5.5mm screw terminal block adapter. 
 
-For N and HO scale you would normally use a 12V to 15V DC power supply, but be sure to check the manual for your loco/decoder combination for the correct voltage. 
+For N you would normally use a 12V to 14V power supply and HO scale you would normally use a 12V to 16V DC power supply, but be sure to check the manual for your loco/decoder combination for the correct voltage [6]_. 
 
 For more information about power supplies, including how to use one power supply to supply all the different voltages on your layout, see :ref:`Power Supplies <reference/hardware/power-supplies:power supplies>`. 
+
+.. [6] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 .. figure:: /_static/images/power/2_1mm_screw_terminal_adapter.png
    :scale: 40%
@@ -239,9 +246,12 @@ To fully power the |EX-CSB1|, just plug your power supply into the mains power (
 
 Make sure your power supply matches the needs of your setup: the voltage should be between 12V and 25V DC, depending on the scale of your locomotives, and it should provide at least 2A of current with good over-current performance and voltage stability. 
 
-To get the most out of your |EX-CSB1-SHORT| we suggest using a modern switching power supply with 4A or more. For Z scale, 12V is usually enough, but for N, HO, and OO scales, we recommend using between 14V and 16V DC. 
+To get the most out of your |EX-CSB1-SHORT| we suggest using a modern switching power supply with 4A or more. For Z scale, 12V is usually enough, but for N we recommend using between 12 and 14V, and for HO/OO scales we recommend using between 14V and 16V DC [7]_. 
 
 It's important that your DC power is well-regulated which is why we suggest a modern switch-mode power supply with double insulation and strong overload protection.
+
+.. [7] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
+
 
 .. figure:: /_static/images/ex-csb1/csb1_barrel_insert.png
    :alt: Inserting barrel plug

@@ -50,11 +50,13 @@ This is our tested and proven configuration
 * |EX-CS| 3.0.6 or greater
 * ATMega2560 + ESP8266 WiFi - Combo Board
 * Deek-Robot L298P |standard motor driver| (or other :doc:`approved motor driver </reference/hardware/motor-boards>`)
-* 12-16V DC Laptop power supply to the |motor shield| (16V provides 14.5Vdc to the tracks for HO Gauge)*
+* 12-16V [1]_ DC Laptop power supply to the |motor shield| (16V provides 14.5Vdc to the tracks for HO Gauge)*
 * 7-9V DC power supply to the ATmega boards with a female 2.1mm power barrel plug
 * Android Smartphone with |Engine Driver| v2.28.123 or iOS Smartphone with WiThrottle
 * USB-A male to Micro USB-B cable
 * You will also need software provided in the links below and a toothpick or small jewellers screwdriver to be able to flip small switches.
+
+.. [1] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 \* NOTE: The L298 Based motor drivers like a |Standard Motor Driver| have a 1.5-2V voltage drop. More efficient boards do not have this issue. Be careful in choosing the correct voltage so that you don't put too much voltage on the track and potentially damage your decoders.
 

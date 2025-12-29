@@ -137,7 +137,9 @@ Don't unplug the serial cable yet!
 Plug in your power adapters
 =============================
 
-You should already have the 7-9V adapter plugged into the Arduino, and the 13-14V adapter plugged into the motor driver. Now you can plug both of them into the power socket. Nothing should happen. Be sure that nothing bad happens, like smoke rising from the board or the boards getting hot. If anything seems wrong, unplug the power adapters immediately.
+You should already have the 7-9V adapter plugged into the Arduino, and the 12-16V [1]_ adapter plugged into the motor driver. Now you can plug both of them into the power socket. Nothing should happen. Be sure that nothing bad happens, like smoke rising from the board or the boards getting hot. If anything seems wrong, unplug the power adapters immediately.
+
+.. [1] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 Use the Serial Monitor to do a quick test
 ==========================================

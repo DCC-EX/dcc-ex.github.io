@@ -13,7 +13,7 @@
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=6a383f36" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/dccex_theme.css?v=8b90fff6" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -717,51 +717,51 @@
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#how-many-power-supplies-do-i-need" id="id2">How many power supplies do I need?</a></p>
+<li><p><a class="reference internal" href="#how-many-power-supplies-do-i-need" id="id5">How many power supplies do I need?</a></p>
 <ul>
-<li><p><a class="reference internal" href="#why-does-the-mega-esp32-nucleo-with-standard-motor-driver-need-two-power-supplies" id="id3">Why does the Mega/ESP32/Nucleo with Standard motor driver need two power supplies?</a></p></li>
+<li><p><a class="reference internal" href="#why-does-the-mega-esp32-nucleo-with-standard-motor-driver-need-two-power-supplies" id="id6">Why does the Mega/ESP32/Nucleo with Standard motor driver need two power supplies?</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#powering-the-microcontroller" id="id4">Powering the Microcontroller</a></p>
+<li><p><a class="reference internal" href="#powering-the-microcontroller" id="id7">Powering the Microcontroller</a></p>
 <ul>
-<li><p><a class="reference internal" href="#barrel-connector" id="id5">Barrel Connector</a></p></li>
-<li><p><a class="reference internal" href="#usb-connector" id="id6">USB Connector</a></p></li>
-<li><p><a class="reference internal" href="#barrel-connector-and-usb-at-the-same-time" id="id7">Barrel Connector and USB at the same time</a></p></li>
-<li><p><a class="reference internal" href="#vin-pin" id="id8">Vin pin</a></p></li>
-<li><p><a class="reference internal" href="#v-pin" id="id9">5V pin</a></p></li>
+<li><p><a class="reference internal" href="#barrel-connector" id="id8">Barrel Connector</a></p></li>
+<li><p><a class="reference internal" href="#usb-connector" id="id9">USB Connector</a></p></li>
+<li><p><a class="reference internal" href="#barrel-connector-and-usb-at-the-same-time" id="id10">Barrel Connector and USB at the same time</a></p></li>
+<li><p><a class="reference internal" href="#vin-pin" id="id11">Vin pin</a></p></li>
+<li><p><a class="reference internal" href="#v-pin" id="id12">5V pin</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#powering-the-motor-driver" id="id10">Powering the Motor Driver</a></p>
+<li><p><a class="reference internal" href="#powering-the-motor-driver" id="id13">Powering the Motor Driver</a></p>
 <ul>
-<li><p><a class="reference internal" href="#voltage" id="id11">Voltage</a></p></li>
-<li><p><a class="reference internal" href="#amperage" id="id12">Amperage</a></p></li>
+<li><p><a class="reference internal" href="#voltage" id="id14">Voltage</a></p></li>
+<li><p><a class="reference internal" href="#amperage" id="id15">Amperage</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#types-of-power-supply" id="id13">Types of Power Supply</a></p>
+<li><p><a class="reference internal" href="#types-of-power-supply" id="id16">Types of Power Supply</a></p>
 <ul>
-<li><p><a class="reference internal" href="#wall-warts" id="id14">Wall Warts</a></p></li>
-<li><p><a class="reference internal" href="#bricks-laptop-style" id="id15">Bricks (Laptop Style)</a></p></li>
-<li><p><a class="reference internal" href="#adjustable-power-supplies" id="id16">Adjustable Power Supplies</a></p></li>
-<li><p><a class="reference internal" href="#cage-power-supplies" id="id17">Cage Power Supplies</a></p></li>
+<li><p><a class="reference internal" href="#wall-warts" id="id17">Wall Warts</a></p></li>
+<li><p><a class="reference internal" href="#bricks-laptop-style" id="id18">Bricks (Laptop Style)</a></p></li>
+<li><p><a class="reference internal" href="#adjustable-power-supplies" id="id19">Adjustable Power Supplies</a></p></li>
+<li><p><a class="reference internal" href="#cage-power-supplies" id="id20">Cage Power Supplies</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#using-one-power-supply-with-cheap-converters-to-power-everything" id="id18">Using one power supply with cheap converters to power everything</a></p>
+<li><p><a class="reference internal" href="#using-one-power-supply-with-cheap-converters-to-power-everything" id="id21">Using one power supply with cheap converters to power everything</a></p>
 <ul>
-<li><p><a class="reference internal" href="#v-13a-power-supplies" id="id19">15V 13A Power Supplies</a></p></li>
-<li><p><a class="reference internal" href="#using-buck-converters" id="id20">Using Buck Converters</a></p></li>
-<li><p><a class="reference internal" href="#high-power-buck-converters" id="id21">High Power Buck Converters</a></p></li>
-<li><p><a class="reference internal" href="#pack-of-buck-regular-converters" id="id22">4 Pack of Buck Regular Converters</a></p></li>
-<li><p><a class="reference internal" href="#cheap-buck-converter-with-display-5" id="id23">Cheap Buck Converter with Display $5</a></p></li>
+<li><p><a class="reference internal" href="#v-13a-power-supplies" id="id22">15V 13A Power Supplies</a></p></li>
+<li><p><a class="reference internal" href="#using-buck-converters" id="id23">Using Buck Converters</a></p></li>
+<li><p><a class="reference internal" href="#high-power-buck-converters" id="id24">High Power Buck Converters</a></p></li>
+<li><p><a class="reference internal" href="#pack-of-buck-regular-converters" id="id25">4 Pack of Buck Regular Converters</a></p></li>
+<li><p><a class="reference internal" href="#cheap-buck-converter-with-display-5" id="id26">Cheap Buck Converter with Display $5</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#using-diodes-to-reduce-voltage" id="id24">Using Diodes to Reduce Voltage</a></p></li>
+<li><p><a class="reference internal" href="#using-diodes-to-reduce-voltage" id="id27">Using Diodes to Reduce Voltage</a></p></li>
 </ul>
 </nav>
 </aside>
 <p>The power supply is one of the most important parts of your setup. You need to select a clean, filtered power supply that can supply the correct voltage and deliver the amount of current required by your devices.</p>
 <p><hr class="hr-dashed" /></p>
 <section id="how-many-power-supplies-do-i-need">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">How many power supplies do I need?</a><a class="headerlink" href="#how-many-power-supplies-do-i-need" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">How many power supplies do I need?</a><a class="headerlink" href="#how-many-power-supplies-do-i-need" title="Link to this heading"></a></h2>
 <p>How many power supplies you need depends on the type of <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> you have:</p>
 <ul class="simple">
 <li><p>If you have an <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a> then you only need <strong>one (1) power supply</strong>. <br /> <br /></p></li>
@@ -772,7 +772,7 @@
 </ul>
 <p><hr class="hr-dashed" /></p>
 <section id="why-does-the-mega-esp32-nucleo-with-standard-motor-driver-need-two-power-supplies">
-<h3><a class="toc-backref" href="#id3" role="doc-backlink">Why does the Mega/ESP32/Nucleo with Standard motor driver need two power supplies?</a><a class="headerlink" href="#why-does-the-mega-esp32-nucleo-with-standard-motor-driver-need-two-power-supplies" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Why does the Mega/ESP32/Nucleo with Standard motor driver need two power supplies?</a><a class="headerlink" href="#why-does-the-mega-esp32-nucleo-with-standard-motor-driver-need-two-power-supplies" title="Link to this heading"></a></h3>
 <p>For Arduino Mega with <abbr title="Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.">Standard Motor Driver</abbr>, you need at least two different voltages. The Arduino needs ~5vDC and the Motor driver needs significantly more voltage to provide power to the track (see below).</p>
 <p>Both your microcontroller (the Arduino) and the motor driver need power. While we recommend a 7-9 Volt, 1 Amp, DC power supply for an Arduino Uno or Mega, there are other ways to power it.</p>
 <p>The voltage requirement to the motor driver does not change based on how you power your Arduino, you need the correct voltage and amperage for your scale/gauge and layout.</p>
@@ -784,24 +784,24 @@
 </section>
 <hr class="docutils" />
 <section id="powering-the-microcontroller">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink">Powering the Microcontroller</a><a class="headerlink" href="#powering-the-microcontroller" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Powering the Microcontroller</a><a class="headerlink" href="#powering-the-microcontroller" title="Link to this heading"></a></h2>
 <p>Note, this primarily applies to the Arduino Mega with a <abbr title="Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.">Standard Motor Driver</abbr>. (See the previous section.)</p>
 <nav class="contents in-this-section local" id="the-four-ways-to-power-a-microcontroller">
 <p class="topic-title">The Four Ways to Power a Microcontroller</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#barrel-connector" id="id25">Barrel Connector</a></p></li>
-<li><p><a class="reference internal" href="#usb-connector" id="id26">USB Connector</a></p></li>
-<li><p><a class="reference internal" href="#barrel-connector-and-usb-at-the-same-time" id="id27">Barrel Connector and USB at the same time</a></p></li>
-<li><p><a class="reference internal" href="#vin-pin" id="id28">Vin pin</a></p></li>
-<li><p><a class="reference internal" href="#v-pin" id="id29">5V pin</a></p></li>
+<li><p><a class="reference internal" href="#barrel-connector" id="id28">Barrel Connector</a></p></li>
+<li><p><a class="reference internal" href="#usb-connector" id="id29">USB Connector</a></p></li>
+<li><p><a class="reference internal" href="#barrel-connector-and-usb-at-the-same-time" id="id30">Barrel Connector and USB at the same time</a></p></li>
+<li><p><a class="reference internal" href="#vin-pin" id="id31">Vin pin</a></p></li>
+<li><p><a class="reference internal" href="#v-pin" id="id32">5V pin</a></p></li>
 </ul>
 </nav>
 <section id="barrel-connector">
-<h3><a class="toc-backref" href="#id25" role="doc-backlink">Barrel Connector</a><a class="headerlink" href="#barrel-connector" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id28" role="doc-backlink">Barrel Connector</a><a class="headerlink" href="#barrel-connector" title="Link to this heading"></a></h3>
 <p>This is where we can connect our 7-9V DC supply. The power goes through a voltage regulator on the Arduino and converts the 7-9V to the 5V the board can use. You will still need a separate source of power for the <abbr title="also referred to as a 'Motor Controller', 'Motor Shield' or 'Motor Board'">Motor Driver</abbr>.</p>
 </section>
 <section id="usb-connector">
-<h3><a class="toc-backref" href="#id26" role="doc-backlink">USB Connector</a><a class="headerlink" href="#usb-connector" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id29" role="doc-backlink">USB Connector</a><a class="headerlink" href="#usb-connector" title="Link to this heading"></a></h3>
 <p>If you always will have a computer connected to your Command Station (for example when using <a class="reference internal" href="../../throttles/software/jmri.html"><span class="doc">JMRI</span></a> or <a href="../../ex-webthrottle/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;WebThrottle</span></a>), the 5V from your computer can power it. You won’t need separate power supply in addition to the one you need for the <abbr title="also referred to as a 'Motor Controller', 'Motor Shield' or 'Motor Board'">Motor Driver</abbr>.</p>
 <p>Most USB ports can only supply 500 milliamps, and this input is protected by a 500mA polyfuse that resets when a short is removed, so be careful about adding anything that will draw current from the Command Station. A <abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr>, a WiFi shield and a fan that draws 50mA should be fine.</p>
 <p>Even if you don’t have a laptop, you can use a 5V, 800mA or more USB power supply like a phone charger and connect it to the USB port.</p>
@@ -814,16 +814,16 @@
 </div>
 </section>
 <section id="barrel-connector-and-usb-at-the-same-time">
-<h3><a class="toc-backref" href="#id27" role="doc-backlink">Barrel Connector and USB at the same time</a><a class="headerlink" href="#barrel-connector-and-usb-at-the-same-time" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id30" role="doc-backlink">Barrel Connector and USB at the same time</a><a class="headerlink" href="#barrel-connector-and-usb-at-the-same-time" title="Link to this heading"></a></h3>
 <p>You may wonder what happens if you have a 7-9V power supply connected to the barrel connector and plug your laptop into the USB port to use the <a class="reference internal" href="../tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a>.</p>
 <p>The Uno and Mega actually have a conflict protection circuit. If you plug in a 7V or more power supply to the barrel connector, the Arduino automatically switches internally to use that power supply. So regardless of which connector you plug in first, if the barrel connector has a voltage 7V or greater applied to it, that is the voltage the Arduino will use and the USB connection will just provide communication signals.</p>
 </section>
 <section id="vin-pin">
-<h3><a class="toc-backref" href="#id28" role="doc-backlink">Vin pin</a><a class="headerlink" href="#vin-pin" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id31" role="doc-backlink">Vin pin</a><a class="headerlink" href="#vin-pin" title="Link to this heading"></a></h3>
 <p>You can connect a 7-9V DC power supply with jumper wires. The positive from the power supply goes to Vin and negative to any pin marked “gnd” for ground. This also uses the voltage regulator on the Arduino to convert your supply voltage to 5V. You will still need a separate power supply for the <abbr title="also referred to as a 'Motor Controller', 'Motor Shield' or 'Motor Board'">Motor Driver</abbr>.</p>
 </section>
 <section id="v-pin">
-<h3><a class="toc-backref" href="#id29" role="doc-backlink">5V pin</a><a class="headerlink" href="#v-pin" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id32" role="doc-backlink">5V pin</a><a class="headerlink" href="#v-pin" title="Link to this heading"></a></h3>
 <p><em>Engineers only!</em> Arduino recommends against this. You can connect a good quality 5V power supply directly to the 5V pin and ground.</p>
 <p>You can NOT ever plug anything into the other power connectors if you connect power this way! This bypasses the voltage regulator on the board which means you can use more current. But it also connects voltage to the output of the 5V regulator.</p>
 <p>Be aware that there is no diode for reverse voltage protection and no fuse for overcurrent. Research this option before attempting it.</p>
@@ -831,16 +831,16 @@
 </section>
 <hr class="docutils" />
 <section id="powering-the-motor-driver">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Powering the Motor Driver</a><a class="headerlink" href="#powering-the-motor-driver" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Powering the Motor Driver</a><a class="headerlink" href="#powering-the-motor-driver" title="Link to this heading"></a></h2>
 <nav class="contents in-this-section local" id="in-this-section">
 <p class="topic-title">In this section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#voltage" id="id30">Voltage</a></p></li>
-<li><p><a class="reference internal" href="#amperage" id="id31">Amperage</a></p></li>
+<li><p><a class="reference internal" href="#voltage" id="id33">Voltage</a></p></li>
+<li><p><a class="reference internal" href="#amperage" id="id34">Amperage</a></p></li>
 </ul>
 </nav>
 <section id="voltage">
-<h3><a class="toc-backref" href="#id30" role="doc-backlink">Voltage</a><a class="headerlink" href="#voltage" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id33" role="doc-backlink">Voltage</a><a class="headerlink" href="#voltage" title="Link to this heading"></a></h3>
 <div class="warning-float-right admonition warning">
 <p class="admonition-title">Warning</p>
 <p>These are <em>common</em>, but not universal, upper limits of what decoders will accept.  You should check the manual of your decoders to confirm what they accept, and adjust the voltage down accordingly.</p>
@@ -864,15 +864,22 @@
 <p><hr class="hr-dashed" /></p>
 <p><strong>Additional Information</strong></p>
 <blockquote>
-<div><p>N and Z scale/gauge layouts should run at at about 10V-14V to avoid damage to the motors. See this thread to learn more about the pros and cons of running at higher voltages at this <a class="reference external" href="https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/">TrainBoard Thread</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> Another good link (along with just about anything written by Mark Gurries), is here: <a class="reference external" href="https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/boosters/choosing-the-right-booster">Mark Gurries - Choosing the Right Booster</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
-<p>Most larger scales/gauges will run higher voltages. For reference, Digitrax systems put the rails at around 14V and garden scale could be 18V. Do some homework to determine what voltage is best for your system.</p>
+<div><p>N and Z scale/gauge layouts should run at at about 10V-14V <a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> to avoid damage to the motors. See this thread to learn more about the pros and cons of running at higher voltages at this <a class="reference external" href="https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/">TrainBoard Thread</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> Another good link (along with just about anything written by Mark Gurries), is here: <a class="reference external" href="https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/boosters/choosing-the-right-booster">Mark Gurries - Choosing the Right Booster</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
+<p>Most larger scales/gauges will run higher voltage <a class="footnote-reference brackets" href="#id3" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. For reference, Digitrax systems put the rails at around 14V and garden scale could be 18V. Do some homework to determine what voltage is best for your system.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id3" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
+<p>The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the <a class="reference internal" href="#powering-the-motor-driver"><span class="std std-ref">Powering the Motor Driver</span></a> for more information.</p>
+</aside>
+</aside>
 <p>Be aware that the <abbr title="also referred to as a 'Motor Controller', 'Motor Shield' or 'Motor Board'">Motor Driver</abbr> you use will affect the actual voltage at the track. If you use the <abbr title="Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.">Standard Motor Driver</abbr> or any other L298 based shield or controller, you will have a 2V drop at the track. That means that if you use a 12V supply, there will be only 10V at the track. Many people prefer to use a 14.5V DC power supply with these boards. If you use any MOSFET based boards like the IBT_2 and the IRF3205 boards, there is a negligible voltage drop so 12V in will give you 12V at the track.</p>
 <p>If you have a power supply you wish to use, but it has an output voltage that is a few volts higher than you need, use either the diode or buck converter method listed below to reduce the voltage.</p>
 </div></blockquote>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="amperage">
-<h3><a class="toc-backref" href="#id31" role="doc-backlink">Amperage</a><a class="headerlink" href="#amperage" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id34" role="doc-backlink">Amperage</a><a class="headerlink" href="#amperage" title="Link to this heading"></a></h3>
 <p>For the <a href="../../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a> or <a href="../../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a> a 5amp power supply will give you plenty of current to handle the maximum of 5amp on channel A to the MAIN track. Channel B for the programming track will only be used occasionally and does not need much current.  If you plan to use Channel B as a second MAIN power district, then you may want to go up to to 10amp power supply.</p>
 <p>For the <abbr title="Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.">Standard Motor Driver</abbr>, a 3amp power supply will give you plenty of current to handle the maximum of 2amp on channel A to the MAIN track. Channel B for the programming track will only be used occasionally and does not need much current. In fact, it is limited to protect your trains (normally to 250mA).</p>
 <p>Running trains on main and programming a loco on Prog at the same time will be fine. The overcurrent limit set in the Command Station will automatically cut power if you go over that number of Amps. A rule of thumb is you can operate 3 to 5 N or HO sound locos on the 2A boards.</p>
@@ -886,9 +893,9 @@
 </section>
 <hr class="docutils" />
 <section id="types-of-power-supply">
-<h2><a class="toc-backref" href="#id13" role="doc-backlink">Types of Power Supply</a><a class="headerlink" href="#types-of-power-supply" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id16" role="doc-backlink">Types of Power Supply</a><a class="headerlink" href="#types-of-power-supply" title="Link to this heading"></a></h2>
 <section id="wall-warts">
-<h3><a class="toc-backref" href="#id14" role="doc-backlink">Wall Warts</a><a class="headerlink" href="#wall-warts" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">Wall Warts</a><a class="headerlink" href="#wall-warts" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Wall warts are a good choice for beginners and those not comfortable with mains wiring. You can get a 12V, 3A, relatively small one for around $8 US.</p></li>
 </ul>
@@ -897,7 +904,7 @@
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="bricks-laptop-style">
-<h3><a class="toc-backref" href="#id15" role="doc-backlink">Bricks (Laptop Style)</a><a class="headerlink" href="#bricks-laptop-style" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">Bricks (Laptop Style)</a><a class="headerlink" href="#bricks-laptop-style" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>You can also find plenty of laptop type “brick” power supplies. They come in ranges from 12V to 19.5V and 3-5 Amps.</p></li>
 </ul>
@@ -918,7 +925,7 @@
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="adjustable-power-supplies">
-<h3><a class="toc-backref" href="#id16" role="doc-backlink">Adjustable Power Supplies</a><a class="headerlink" href="#adjustable-power-supplies" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id19" role="doc-backlink">Adjustable Power Supplies</a><a class="headerlink" href="#adjustable-power-supplies" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>These have a selector switch to choose the voltage. Be careful to get a model that can deliver the current you need at the voltage you want. Sometimes the maximum output current will vary depending on the voltage selected.</p></li>
 </ul>
@@ -931,7 +938,7 @@
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="cage-power-supplies">
-<h3><a class="toc-backref" href="#id17" role="doc-backlink">Cage Power Supplies</a><a class="headerlink" href="#cage-power-supplies" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id20" role="doc-backlink">Cage Power Supplies</a><a class="headerlink" href="#cage-power-supplies" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>While there are cage power supplies on the market, most of them do not fullfill the electrical requiremets for running a model railroad since the rails are an open conductor. Such installations require a double insulated power supply. In addition to that, a cage power supply should not be operated without protective and grounded housing.</p></li>
 </ul>
@@ -943,7 +950,7 @@
 </section>
 <hr class="docutils" />
 <section id="using-one-power-supply-with-cheap-converters-to-power-everything">
-<h2><a class="toc-backref" href="#id18" role="doc-backlink">Using one power supply with cheap converters to power everything</a><a class="headerlink" href="#using-one-power-supply-with-cheap-converters-to-power-everything" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id21" role="doc-backlink">Using one power supply with cheap converters to power everything</a><a class="headerlink" href="#using-one-power-supply-with-cheap-converters-to-power-everything" title="Link to this heading"></a></h2>
 <p><strong>Tinkerers and Engineers</strong></p>
 <ul class="simple">
 <li><p>Using this method, you select a power supply that can power the track (or your highest voltage devices) and deliver enough Amps to power everything you will connect to it. This includes the DC-DC downconverters (Buck Converters) that take your higher voltage and reduce it to 5V, 7V, 9V, etc. Note that most buck converters are also boost converters, then can take a lower voltage and raise it to a higher one. We will just cover the first option here.</p></li>
@@ -952,31 +959,31 @@
 <p class="admonition-title">Note</p>
 <p>You will still need a wall voltage AC to 12-18V DC power supply with enough Amperage to handle what you want to power. Ex: You need 5A max to the track, are powering 2A worth of lights, and you have 2A of accessories. That is 9A. So you should get a 10A or greater power supply.</p>
 </div>
-<nav class="contents in-this-section local" id="id1">
+<nav class="contents in-this-section local" id="id4">
 <p class="topic-title">In this section</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#v-13a-power-supplies" id="id32">15V 13A Power Supplies</a></p></li>
-<li><p><a class="reference internal" href="#using-buck-converters" id="id33">Using Buck Converters</a></p></li>
-<li><p><a class="reference internal" href="#high-power-buck-converters" id="id34">High Power Buck Converters</a></p></li>
-<li><p><a class="reference internal" href="#pack-of-buck-regular-converters" id="id35">4 Pack of Buck Regular Converters</a></p></li>
-<li><p><a class="reference internal" href="#cheap-buck-converter-with-display-5" id="id36">Cheap Buck Converter with Display $5</a></p></li>
+<li><p><a class="reference internal" href="#v-13a-power-supplies" id="id35">15V 13A Power Supplies</a></p></li>
+<li><p><a class="reference internal" href="#using-buck-converters" id="id36">Using Buck Converters</a></p></li>
+<li><p><a class="reference internal" href="#high-power-buck-converters" id="id37">High Power Buck Converters</a></p></li>
+<li><p><a class="reference internal" href="#pack-of-buck-regular-converters" id="id38">4 Pack of Buck Regular Converters</a></p></li>
+<li><p><a class="reference internal" href="#cheap-buck-converter-with-display-5" id="id39">Cheap Buck Converter with Display $5</a></p></li>
 </ul>
 </nav>
 <section id="v-13a-power-supplies">
-<h3><a class="toc-backref" href="#id32" role="doc-backlink">15V 13A Power Supplies</a><a class="headerlink" href="#v-13a-power-supplies" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id35" role="doc-backlink">15V 13A Power Supplies</a><a class="headerlink" href="#v-13a-power-supplies" title="Link to this heading"></a></h3>
 <p>Some options for a power supply are the <strong>Meanwell SP-200-15</strong> or the <strong>ATOS-300-15</strong>. They are 15V, 13A supplies. You can use 15V to the <abbr title="also referred to as a 'Motor Controller', 'Motor Shield' or 'Motor Board'">Motor Driver</abbr> and use buck converters to step down the 15V to whatever voltages you need.</p>
 <a class="reference internal image-reference" href="../../_images/15v_13A_power_supply.jpg"><img alt="15V 20A supply" src="../../_images/15v_13A_power_supply.jpg" style="width: 250.0px; height: 250.0px;" />
 </a>
 <p>Here is a link to where you can find the <a class="reference external" href="https://www.walmart.com/ip/NEW-Mean-Well-15Vdc-PFC-Power-Supply-SP-200-15/628549676?wmlspartner=wlpa&amp;selectedSellerId=844">Meanwell SP-200-15 Power Supply</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 </section>
 <section id="using-buck-converters">
-<h3><a class="toc-backref" href="#id33" role="doc-backlink">Using Buck Converters</a><a class="headerlink" href="#using-buck-converters" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id36" role="doc-backlink">Using Buck Converters</a><a class="headerlink" href="#using-buck-converters" title="Link to this heading"></a></h3>
 <p>The following image shows how to connect buck converters. You start with a power supply with more voltage than the highest voltage you want to convert and with enough current to drive everything you want to power. This example shows a 15V supply that you can connect directly to the input to the <abbr title="also referred to as a 'Motor Controller', 'Motor Shield' or 'Motor Board'">Motor Driver</abbr> which will in turn power your track. If you need to power 5V and 12V devices, you simply get 2 buck converters, connect them in parallel to the 15V output of your power supply (or to extra 15V outputs on the supply), and adjust each one to the voltage output you want. Then connect the converters to your 5V and 12V bus and connect your devices to the correct bus.</p>
 <a class="reference internal image-reference" href="../../_images/using_buck_converters.png"><img alt="Using Buck Converters" src="../../_images/using_buck_converters.png" style="width: 644.0px; height: 493.49999999999994px;" />
 </a>
 </section>
 <section id="high-power-buck-converters">
-<h3><a class="toc-backref" href="#id34" role="doc-backlink">High Power Buck Converters</a><a class="headerlink" href="#high-power-buck-converters" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id37" role="doc-backlink">High Power Buck Converters</a><a class="headerlink" href="#high-power-buck-converters" title="Link to this heading"></a></h3>
 <p>These come in different sizes. Show here is a 2A and a 6A Version. You can look for “60W 6A Adjustable Voltage Regulator with Cooling Fan”, or “DC to DC 5.5V-30V to 0.5V-30V Power Supply Module”. Or just “Buck Boost Voltage Converter”. The bigger unit usually comes with a fan. A model number is a <strong>“ZK-DP60”</strong>.</p>
 <a class="reference internal image-reference" href="../../_images/35W_4A_variable_buck_w_display.jpg"><img alt="35W 4A 5-24v Buck Power Supply" src="../../_images/35W_4A_variable_buck_w_display.jpg" style="width: 250.4px; height: 237.8px;" />
 </a>
@@ -985,14 +992,14 @@
 <p><strong>One example from Amazon</strong>, click to follow the link: <a class="reference external" href="https://www.amazon.com/DROK-5-5-30V-Adjustable-Regulator-Converter/dp/B07VNDGFT6/">5 to 30V Adjustable regulator converter</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 </section>
 <section id="pack-of-buck-regular-converters">
-<h3><a class="toc-backref" href="#id35" role="doc-backlink">4 Pack of Buck Regular Converters</a><a class="headerlink" href="#pack-of-buck-regular-converters" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id38" role="doc-backlink">4 Pack of Buck Regular Converters</a><a class="headerlink" href="#pack-of-buck-regular-converters" title="Link to this heading"></a></h3>
 <a class="reference internal image-reference" href="../../_images/4_pack_buck_converters.jpg"><img alt="4 pack of buck converters" src="../../_images/4_pack_buck_converters.jpg" style="width: 330.0px; height: 300.74px;" />
 </a>
 <p>These are Input Voltage: DC 4-38V, error ±0.1V. Output Voltage: DC 1.25V to 36V at 5A.</p>
 <p><a class="reference external" href="https://www.amazon.com/dp/B079N9BFZC">https://www.amazon.com/dp/B079N9BFZC</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 </section>
 <section id="cheap-buck-converter-with-display-5">
-<h3><a class="toc-backref" href="#id36" role="doc-backlink">Cheap Buck Converter with Display $5</a><a class="headerlink" href="#cheap-buck-converter-with-display-5" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id39" role="doc-backlink">Cheap Buck Converter with Display $5</a><a class="headerlink" href="#cheap-buck-converter-with-display-5" title="Link to this heading"></a></h3>
 <a class="reference internal image-reference" href="../../_images/20W_DC_buck.jpg"><img alt="20W DC Buck converter with display" src="../../_images/20W_DC_buck.jpg" style="width: 270.0px; height: 180.0px;" />
 </a>
 <p>This is a push button programmable 20W adjustable DC-DC buck converter module with digital display. It is based on LM2596 3A step-down voltage regulator and supports an input of 0~40V DC to an output of 1.25 to 37V with an accuracy of ± 0.05V.</p>
@@ -1000,7 +1007,7 @@
 </section>
 </section>
 <section id="using-diodes-to-reduce-voltage">
-<h2><a class="toc-backref" href="#id24" role="doc-backlink">Using Diodes to Reduce Voltage</a><a class="headerlink" href="#using-diodes-to-reduce-voltage" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id27" role="doc-backlink">Using Diodes to Reduce Voltage</a><a class="headerlink" href="#using-diodes-to-reduce-voltage" title="Link to this heading"></a></h2>
 <p>If you are like us and save your old power adapters when you recycle old equipment, you may have old wall warts or power supplies laying around that are perfectly fine, but have too high a voltage. You can use diodes to easily step the voltage down to a usable level if you only need to drop a few volts. Silicon diodes drop .6 - .7 volts across them in a circuit at our currents. We can take advantage of this property to create a very inexpensive voltage step down circuit. Be careful to use the correct type of diode with the correct current rating. LEDs and signal diodes like a Schottky won’t work for this. Diodes in the 1N5400 series will work perfectly for up to 3A. Simply connect however many diodes you need in series to drop the voltage. For example, a 6A1 diode will drop 0.7V. Putting 5 in series between the positive wire of the power supply and the input to the motor driver will therefor reduce an 18V power supply to 14.5V (18 - 3.5). If you use an <abbr title="Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.">Standard Motor Driver</abbr> or other L298 based motor driver with an additional 2V voltage drop, that will give you 12.7 at the track. Work out the math to provide the voltage your track needs.</p>
 <p>Needed:</p>
 <p>5 6A1 Diodes (1N5401 can work also)
@@ -1030,7 +1037,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fe326b89c30>
+    <jinja2.runtime.BlockReference object at 0x7f8728cf6410>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

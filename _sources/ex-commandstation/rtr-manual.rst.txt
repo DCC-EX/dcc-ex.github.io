@@ -68,7 +68,9 @@ The |EX-CSB1-SHORT| normally comes with a barrel jack for compatibility with mos
 
 Be careful since some power supplies have a 2.5mm inner hole which is likely to be too loose. The barrel jack input power is reverse voltage protected. This supplies a 5V switching regulator for all electronics on the board including a 3.3V regulator for 3.3V components, an optional |EX-MS| stacked on top, and power out to the track. 
 
-While it is capable of 10v-25v operation, it is best to choose a suitable track voltage for your scale. Typically this is 12-15v for N scale, and 14-16v for HO scale. With help in choosing your power supply or using one with bare wires instead of a barrel connector, see `Powering the EX-CSB1`_ below.
+While it is capable of 10v-25v operation, it is best to choose a suitable track voltage for your scale [1]_. Typically this is 12-14v for N scale, and 14-16v for HO scale. With help in choosing your power supply or using one with bare wires instead of a barrel connector, see `Powering the EX-CSB1`_ below.
+
+.. [1] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 |FORCE-BREAK|
 
@@ -381,7 +383,9 @@ To power up the |EX-CSB1-SHORT|, just plug your power supply into the mains powe
 
    12V Power Supply
 
-To get the most out of your |EX-CSB1-SHORT|, we suggest using a modern switching power supply with 4A or more. For Z scale, 12V is usually enough, but for N, HO, and OO scales, we recommend using between 14V and 16V DC. It's important that your DC power is well-regulated which is why we suggest a modern switch-mode power supply with double insulation and strong overload protection.
+To get the most out of your |EX-CSB1-SHORT|, we suggest using a modern switching power supply with 4A or more. For Z scale, 12V is usually enough, but for N, HO, and OO scales, we recommend using between 14V and 16V DC [2]_. It's important that your DC power is well-regulated which is why we suggest a modern switch-mode power supply with double insulation and strong overload protection.
+
+.. [2] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 .. NOTE:: Your power supply can be rated at *or above* the specified Amperage rating. You must not exceed the voltage rating of your device, but a little extra current is ok, since the |EX-CSB1-SHORT| will only use as much as it needs. However, remember that both voltage and current can be dangerous.
 
@@ -406,10 +410,10 @@ What you will need
 * **A throttle** (You can use your phone or a computer - see below)
 * 16 to 28AWG/1.5mm^2 **Wire**
 * A Jeweller's flat bladed **screwdriver** (1.5 - 2mm blade)
-* A laptop or other **computer** [#pc1]_
+* A laptop or other **computer** [3]_
 * A **USB cable** with one end a USB-C for the EX-CSB1, and the other to suit your PC*
 
-.. [#pc1] Optional for connecting connecting to a computer for |EX-WT|, |JMRI| and to reload the |EX-CS| software.
+.. [3] Optional for connecting connecting to a computer for |EX-WT|, |JMRI| and to reload the |EX-CS| software.
 
 Start with all power disconnected
 ----------------------------------

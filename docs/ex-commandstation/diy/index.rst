@@ -63,12 +63,16 @@ To actually run your model railroad you will need a few items:
 2. a **Throttle (Controller)** - Something to control your trains with.  |BR| Such as our |EX-WT|, or other apps like |JMRI|, |Engine Driver|, |WiThrottle|, etc.
 3. Power - The Arduino and the |Motor shield| need to be powered separately, so 
  
-  - a **9-14v DC power supply** for the |motor shield| to the track, and 
-  - a **5-9v DC power supply** for the Arduino
+  - a **12-16v DC power supply** [1]_ for the |motor shield| to the track, and 
+  - a **7-9v DC power supply** for the Arduino
 
 4. a **"Main" track,** aka "Operations" track - most people already have this: it's your layout!
 5. a **"Programming" track,** aka "Service" track - an isolated short section of track that you will use to program locomotives
 6. a **Train** - Specifically, a locomotive equipped with a DCC decoder (either a standard or sound decoder). Ideally, it should be a loco already proven to work on DCC. Otherwise, if you have a problem, you may not be able to tell if the problem is the decoder or the EX-CommandStation
+
+|HR-DASHED|
+
+.. [1] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 |HR-HEAVY|
 

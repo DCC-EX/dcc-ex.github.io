@@ -147,9 +147,11 @@ The voltage of the *power supply* you need will depend on the type of motor driv
 
 **Additional Information**
 
-   N and Z scale/gauge layouts should run at at about 10V-14V to avoid damage to the motors. See this thread to learn more about the pros and cons of running at higher voltages at this `TrainBoard Thread <https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/>`_ |EXTERNAL-LINK| Another good link (along with just about anything written by Mark Gurries), is here: `Mark Gurries - Choosing the Right Booster <https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/boosters/choosing-the-right-booster>`_ |EXTERNAL-LINK|
+   N and Z scale/gauge layouts should run at at about 10V-14V [1]_ to avoid damage to the motors. See this thread to learn more about the pros and cons of running at higher voltages at this `TrainBoard Thread <https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/>`_ |EXTERNAL-LINK| Another good link (along with just about anything written by Mark Gurries), is here: `Mark Gurries - Choosing the Right Booster <https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/boosters/choosing-the-right-booster>`_ |EXTERNAL-LINK|
 
-   Most larger scales/gauges will run higher voltages. For reference, Digitrax systems put the rails at around 14V and garden scale could be 18V. Do some homework to determine what voltage is best for your system.
+   Most larger scales/gauges will run higher voltage [1]_. For reference, Digitrax systems put the rails at around 14V and garden scale could be 18V. Do some homework to determine what voltage is best for your system.
+
+   .. [1] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
    Be aware that the |motor driver| you use will affect the actual voltage at the track. If you use the |Standard Motor Driver| or any other L298 based shield or controller, you will have a 2V drop at the track. That means that if you use a 12V supply, there will be only 10V at the track. Many people prefer to use a 14.5V DC power supply with these boards. If you use any MOSFET based boards like the IBT_2 and the IRF3205 boards, there is a negligible voltage drop so 12V in will give you 12V at the track.
 

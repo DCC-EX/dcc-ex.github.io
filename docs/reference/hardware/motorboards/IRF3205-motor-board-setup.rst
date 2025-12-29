@@ -46,10 +46,12 @@ What You Will Need (IRF3205)
 * An IRF3205 15A motor board
 * Version 3.1.2 or later of the |EX-CS| Software
 * A 7-9V DC Power supply for the Mega
-* A 12-18V DC (depending on train scale) power supply rated for the current you need (we recommend 5A)
+* A 12-18V DC [1]_ (depending on train scale) power supply rated for the current you need (we recommend 5A)
 * 2 5A fuses and fuse holders
 * A separate current sense board like one based on the ACS724 chip (or just depend on the 5A fuses)
 * Some Jumper Wires
+
+.. [1] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 See the :ref:`reference/hardware/motorboards/IRF3205-motor-board-setup:Parts list (IRF3205)`
 

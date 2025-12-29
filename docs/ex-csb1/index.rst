@@ -39,7 +39,7 @@ Key Features:
   * Advanced Hardware: Utilizes an ESP32 microcontroller with dual |DCC| or |DC PWM| 5A outputs, including variable current limit control
   * Expandable Outputs: Can accept a |DCC-EX| |EX-MS| for two additional |DCC|/|DC PWM| outputs, providing power to four total districts. Multiple **EX-CSB1s** can be added as boosters around the layout.
   * Protection & Safety: Software programmable over-current protection, and hardware over-current, over-temperature and reverse voltage protection
-  * Versatile Power Supply: Operates with a single 12V to 25V power supply that powers the entire system
+  * Versatile Power Supply: Operates with a single 12v to 25v power supply that powers the entire system
   * USB-C Interface: For easy software updates, connection to |EX-WT| or |JMRI|, and logging/debugging
   * Accessory Support: Qwiic/STEMMA QT 3.3V, compatible I2C connector and extra I2C pin headers for all your accessories
   * Pre-Installed with |DCC-EX| |EX-CS| Software from most suppliers

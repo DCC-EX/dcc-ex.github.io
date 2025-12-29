@@ -68,9 +68,9 @@ The |EX-CSB1-SHORT| normally comes with a barrel jack for compatibility with mos
 
 Be careful since some power supplies have a 2.5mm inner hole which is likely to be too loose. The barrel jack input power is reverse voltage protected. This supplies a 5V switching regulator for all electronics on the board including a 3.3V regulator for 3.3V components, an optional |EX-MS| stacked on top, and power out to the track. 
 
-While it is capable of 10v-25v operation, it is best to choose a suitable track voltage for your scale [1]_. Typically this is 12-14v for N scale, and 14-16v for HO scale. With help in choosing your power supply or using one with bare wires instead of a barrel connector, see `Powering the EX-CSB1`_ below.
+While it is capable of 10-25v operation, it is best to choose a suitable track voltage for your scale [1]_. Typically this is 12-14v for N scale, and 14-16v for HO scale. With help in choosing your power supply or using one with bare wires instead of a barrel connector, see `Powering the EX-CSB1`_ below.
 
-.. [1] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
+.. [1] The voltage you need for the |Motor Driver| depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 |FORCE-BREAK|
 
@@ -163,7 +163,7 @@ RailSync Connector
 
 This is a standard Railsync input and is labelled "Booster In" on the top of the board. Connecting a RailSync output from a Command Station or Booster will automatically switch the EXCSB1 to |Booster Mode| on receipt of an input signal when the |EX-CSB1-SHORT| is running the appropriate |EX-R| script. 
 
-Again be sure to wire the DCC outputs to power districts with consistent phasing. Any voltage between 5V and 26V at the input will work. The Digitrax specification is from 12V to 26V. See `the DCCWiki article on RailSync <https://dccwiki.com/LocoNet_and_RailSync_Voltages>`_ |EXTERNAL-LINK|
+Again be sure to wire the DCC outputs to power districts with consistent phasing. Any voltage between 5V and 26V at the input will work. The Digitrax specification is from 12v to 26v. See `the DCCWiki article on RailSync <https://dccwiki.com/LocoNet_and_RailSync_Voltages>`_ |EXTERNAL-LINK|
 
 |FORCE-BREAK|
 
@@ -374,18 +374,18 @@ Powering the EX-CSB1
 
 The |EX-CSB1| has a 2.1mm x 5.5mm power jack. If you already have a power supply with bare wires, you can use an optional 2.1mm x 5.5mm screw terminal block adapter. For more information about power supplies, including how to use one power supply to supply all the different voltages on your layout, see :ref:`Power Supplies <reference/hardware/power-supplies:power supplies>`.
 
-To power up the |EX-CSB1-SHORT|, just plug your power supply into the mains power (aka wall outlet) and connect the barrel end to the Command Station. Make sure your power supply matches the needs of your setup: the voltage should be between 12V and 25V DC, depending on the scale of your locomotives, and it should provide at least 2A of current with good over-current performance and voltage stability.
+To power up the |EX-CSB1-SHORT|, just plug your power supply into the mains power (aka wall outlet) and connect the barrel end to the Command Station. Make sure your power supply matches the needs of your setup: the voltage should be between 12v and 25v DC, depending on the scale of your locomotives, and it should provide at least 2A of current with good over-current performance and voltage stability.
 
 .. figure:: /_static/images/power/12v-3A-brick.png
-   :alt: 12V brick power supply
+   :alt: 12v brick power supply
    :scale: 100%
    :align: right
 
-   12V Power Supply
+   12v Power Supply
 
-To get the most out of your |EX-CSB1-SHORT|, we suggest using a modern switching power supply with 4A or more. For Z scale, 12V is usually enough, but for N, HO, and OO scales, we recommend using between 14V and 16V DC [2]_. It's important that your DC power is well-regulated which is why we suggest a modern switch-mode power supply with double insulation and strong overload protection.
+To get the most out of your |EX-CSB1-SHORT|, we suggest using a modern switching power supply with 4A or more. For Z scale, 12v is usually enough, but for N, HO, and OO scales, we recommend using between 14v and 16v DC [2]_. It's important that your DC power is well-regulated which is why we suggest a modern switch-mode power supply with double insulation and strong overload protection.
 
-.. [2] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
+.. [2] The voltage you need for the |Motor Driver| depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 .. NOTE:: Your power supply can be rated at *or above* the specified Amperage rating. You must not exceed the voltage rating of your device, but a little extra current is ok, since the |EX-CSB1-SHORT| will only use as much as it needs. However, remember that both voltage and current can be dangerous.
 
@@ -404,7 +404,7 @@ What you will need
 --------------------
 
 * **An EX-CSB1 Command Station**
-* **A Power supply** (12V - 16V DC see :ref:`Power Supplies <reference/hardware/power-supplies:power supplies>`)
+* **A Power supply** (12-16v DC see :ref:`Power Supplies <reference/hardware/power-supplies:power supplies>`)
 * **A DCC loco** (DC can work also)
 * **Track**
 * **A throttle** (You can use your phone or a computer - see below)

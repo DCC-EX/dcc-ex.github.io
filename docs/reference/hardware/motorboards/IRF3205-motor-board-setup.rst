@@ -45,13 +45,13 @@ What You Will Need (IRF3205)
 * An Arduino Motor Shield (If you are upgrading or already have an Arduino Motor Shield)
 * An IRF3205 15A motor board
 * Version 3.1.2 or later of the |EX-CS| Software
-* A 7-9V DC Power supply for the Mega
-* A 12-18V DC [1]_ (depending on train scale) power supply rated for the current you need (we recommend 5A)
+* A 7-9v DC Power supply for the Mega
+* A 12-18v DC [1]_ (depending on train scale) power supply rated for the current you need (we recommend 5A)
 * 2 5A fuses and fuse holders
 * A separate current sense board like one based on the ACS724 chip (or just depend on the 5A fuses)
 * Some Jumper Wires
 
-.. [1] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
+.. [1] The voltage you need for the |Motor Driver| depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 See the :ref:`reference/hardware/motorboards/IRF3205-motor-board-setup:Parts list (IRF3205)`
 
@@ -68,7 +68,7 @@ We assume that many of you may have started off with the Arduino Mega with Ardui
 
 .. Note:: We can't say it enough, this board can pump out some Amps. Be careful! Put fuses on the connection to each rail and limit the trip (short circuit) current to a safe level in your config.h file. We have a saying at DCC-EX, if you need more than 5 Amps to run locos, then you need to add power districts, not more Amps.
 
-The IRF3205 is actually the part number of the transistors on the board, N-Channel Power MOSFETS specifically. It takes 4 of them to make one full H-Bridge circuit to control one track. This board has 2 sets of 4 for 2 H-Bridges. You may find other boards that use this transistor, but this guide only covers the 15A Dual H-Bridge pictured above. Anything with MOSFETS in them is more efficient than something with Bipolar Junction Transistors (BJTs) like the L298 on the Arduino and Deek Robot Motor Shields. That means **there is no voltage drop to the tracks** like there is for those boards. Keep that in mind because that means **there can be an extra 2 to 3 volts to your track**. Your trains will run faster than they did before and things could overheat if they were able to handle the 12V reaching the track from a 14.5V power supply, but don't like the full 14+ volts.
+The IRF3205 is actually the part number of the transistors on the board, N-Channel Power MOSFETS specifically. It takes 4 of them to make one full H-Bridge circuit to control one track. This board has 2 sets of 4 for 2 H-Bridges. You may find other boards that use this transistor, but this guide only covers the 15A Dual H-Bridge pictured above. Anything with MOSFETS in them is more efficient than something with Bipolar Junction Transistors (BJTs) like the L298 on the Arduino and Deek Robot Motor Shields. That means **there is no voltage drop to the tracks** like there is for those boards. Keep that in mind because that means **there can be an extra 2 to 3 volts to your track**. Your trains will run faster than they did before and things could overheat if they were able to handle the 12v reaching the track from a 14.5V power supply, but don't like the full 14+ volts.
 
 Which Option Should You Choose? (IRF3205)
 ===========================================

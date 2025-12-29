@@ -58,7 +58,7 @@ For a video on how to do this, click below: `Setting Up Your Command Station <ht
    
    By default, the |standard Motor Driver| shares its power supply via the pins, with the power supply of the Arduino. *This can supply too much voltage to the Arduino.*
    
-   *If you do not cut this trace* or bend out the Vin, you could damage or destroy the Arduino if you apply more than 12V to the |motor shield|. |BR| In the same way, if you don't bypass Vin and use the 2 power supplies as recommended, they would be connected to each other which could also cause damage.
+   *If you do not cut this trace* or bend out the Vin, you could damage or destroy the Arduino if you apply more than 12v to the |motor shield|. |BR| In the same way, if you don't bypass Vin and use the 2 power supplies as recommended, they would be connected to each other which could also cause damage.
 
    Note: This is **not required** if you are using the |EX-MS|.
 
@@ -301,8 +301,8 @@ See the :doc:`/ex-commandstation/diy/wifi-setup` page or click the 'Next' button
 
    See the :doc:`/reference/hardware/wire-gauge` page for more information on wire gauges.
 
-   **Power Supplies** - Why do we recommend a 7-9V power supply for the Mega when the manual says it can handle 12V or even 20V? Can't you just use one 12V power supply to power both of them? Short answer; NO. You want two supplies (or one supply that splits out 2 voltages). The Arduino Mega only needs around 7V to operate. Any voltage over that is wasted as heat and can burn out the regulator on the board. And most people want a minimum of 12V into the Motor Board [1]_, while many want 14V (for N and HO Scale). Where your Mega could run hot for a while with 12V, if 14V from the Motorboard was connected to the Mega, it would destroy it. Cut the trace and use 2 power supplies.
+   **Power Supplies** - Why do we recommend a 7-9V power supply for the Mega when the manual says it can handle 12v or even 20V? Can't you just use one 12v power supply to power both of them? Short answer; NO. You want two supplies (or one supply that splits out 2 voltages). The Arduino Mega only needs around 7V to operate. Any voltage over that is wasted as heat and can burn out the regulator on the board. And most people want a minimum of 12v into the Motor Board [1]_, while many want 14v (for N and HO Scale). Where your Mega could run hot for a while with 12v, if 14v from the Motorboard was connected to the Mega, it would destroy it. Cut the trace and use 2 power supplies.
 
-   .. [1] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
+   .. [1] The voltage you need for the |Motor Driver| depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
    **Using a 5V Supply** - There is one more option for powering the Mega. If you have a 5V DC regulated power supply, you can bypass the barrel connector and the regulator and connect it directly to the 5V and Gnd pins on the Arduino. Do NOT connect anything to the barrel connector if you do this! You would still need to cut the Vin trace on the |Motor Shield| and use your separate power supply that plugs into the shield. For more information, see :doc:`Power Supplies </reference/hardware/power-supplies>`

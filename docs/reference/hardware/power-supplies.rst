@@ -81,7 +81,7 @@ Even if you don't have a laptop, you can use a 5V, 800mA or more USB power suppl
    
    We recommend only a 7-9V DC power supply for your Arduino because, despite what may be said on a specification sheet, anything over 5V is generates unnecessary heat in the voltage regulator on an Arduino.
    
-    There is a 2V voltage drop in this regulator, so you need a minimum of 7 volts to power the board. 7-9 is perfect. If you used 12V and connected a WiFi board or other devices that also use the 5V power supply on the Arduino, the voltage regulator is likely to overheat.
+    There is a 2v voltage drop in this regulator, so you need a minimum of 7 volts to power the board. 7-9 is perfect. If you used 12v and connected a WiFi board or other devices that also use the 5V power supply on the Arduino, the voltage regulator is likely to overheat.
 
 Barrel Connector and USB at the same time
 -----------------------------------------
@@ -147,13 +147,13 @@ The voltage of the *power supply* you need will depend on the type of motor driv
 
 **Additional Information**
 
-   N and Z scale/gauge layouts should run at at about 10V-14V [1]_ to avoid damage to the motors. See this thread to learn more about the pros and cons of running at higher voltages at this `TrainBoard Thread <https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/>`_ |EXTERNAL-LINK| Another good link (along with just about anything written by Mark Gurries), is here: `Mark Gurries - Choosing the Right Booster <https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/boosters/choosing-the-right-booster>`_ |EXTERNAL-LINK|
+   N and Z scale/gauge layouts should run at at about 10-14v [1]_ to avoid damage to the motors. See this thread to learn more about the pros and cons of running at higher voltages at this `TrainBoard Thread <https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/>`_ |EXTERNAL-LINK| Another good link (along with just about anything written by Mark Gurries), is here: `Mark Gurries - Choosing the Right Booster <https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/boosters/choosing-the-right-booster>`_ |EXTERNAL-LINK|
 
-   Most larger scales/gauges will run higher voltage [1]_. For reference, Digitrax systems put the rails at around 14V and garden scale could be 18V. Do some homework to determine what voltage is best for your system.
+   Most larger scales/gauges will run higher voltage [1]_. For reference, Digitrax systems put the rails at around 14v and garden scale could be 18v. Do some homework to determine what voltage is best for your system.
 
-   .. [1] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
+   .. [1] The voltage you need for the |Motor Driver| depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
-   Be aware that the |motor driver| you use will affect the actual voltage at the track. If you use the |Standard Motor Driver| or any other L298 based shield or controller, you will have a 2V drop at the track. That means that if you use a 12V supply, there will be only 10V at the track. Many people prefer to use a 14.5V DC power supply with these boards. If you use any MOSFET based boards like the IBT_2 and the IRF3205 boards, there is a negligible voltage drop so 12V in will give you 12V at the track.
+   Be aware that the |motor driver| you use will affect the actual voltage at the track. If you use the |Standard Motor Driver| or any other L298 based shield or controller, you will have a 2V drop at the track. That means that if you use a 12v supply, there will be only 10v at the track. Many people prefer to use a 14.5V DC power supply with these boards. If you use any MOSFET based boards like the IBT_2 and the IRF3205 boards, there is a negligible voltage drop so 12v in will give you 12v at the track.
 
    If you have a power supply you wish to use, but it has an output voltage that is a few volts higher than you need, use either the diode or buck converter method listed below to reduce the voltage.
 
@@ -182,24 +182,24 @@ Types of Power Supply
 Wall Warts
 ----------
 
-* Wall warts are a good choice for beginners and those not comfortable with mains wiring. You can get a 12V, 3A, relatively small one for around $8 US. 
+* Wall warts are a good choice for beginners and those not comfortable with mains wiring. You can get a 12v, 3A, relatively small one for around $8 US. 
 
 .. image:: /_static/images/power/12v-3A-wall-wart-sm.png
    :scale: 100%
-   :alt: 12V Wall Wart
+   :alt: 12v Wall Wart
 
 |HR-DASHED|
 
 Bricks (Laptop Style)
 ---------------------
 
-* You can also find plenty of laptop type "brick" power supplies. They come in ranges from 12V to 19.5V and 3-5 Amps.
+* You can also find plenty of laptop type "brick" power supplies. They come in ranges from 12v to 19.5v and 3-5 Amps.
 
 .. image:: /_static/images/power/12v-3A-brick.png
    :scale: 100%
-   :alt: 12V 3A Brick Power Supply
+   :alt: 12v 3A Brick Power Supply
 
-* This is a good 14V, 3A unit
+* This is a good 14v, 3A unit
 
 .. image:: /_static/images/power/samsung_brick.png
    :scale: 25%
@@ -273,7 +273,7 @@ Here is a link to where you can find the `Meanwell SP-200-15 Power Supply <https
 Using Buck Converters
 -----------------------
 
-The following image shows how to connect buck converters. You start with a power supply with more voltage than the highest voltage you want to convert and with enough current to drive everything you want to power. This example shows a 15V supply that you can connect directly to the input to the |motor driver| which will in turn power your track. If you need to power 5V and 12V devices, you simply get 2 buck converters, connect them in parallel to the 15V output of your power supply (or to extra 15V outputs on the supply), and adjust each one to the voltage output you want. Then connect the converters to your 5V and 12V bus and connect your devices to the correct bus.
+The following image shows how to connect buck converters. You start with a power supply with more voltage than the highest voltage you want to convert and with enough current to drive everything you want to power. This example shows a 15V supply that you can connect directly to the input to the |motor driver| which will in turn power your track. If you need to power 5v and 12v devices, you simply get 2 buck converters, connect them in parallel to the 15V output of your power supply (or to extra 15V outputs on the supply), and adjust each one to the voltage output you want. Then connect the converters to your 5v and 12v bus and connect your devices to the correct bus.
 
 .. image:: /_static/images/power/using_buck_converters.png
    :scale: 70%

@@ -16,6 +16,7 @@ These pages are notes and guides for how to connect and configure each specific 
 .. .. toctree::
 ..     :maxdepth: 1
 
+..     EX-MotorShield8874 - 5A [RECOMMENDED] </reference/hardware/motorboards/ex-motor-shield-8874>
 ..     Arduino Motor Shield - 1.5A [RECOMMENDED] </reference/hardware/motorboards/arduino-motor-shield>
 ..     Deek-Robot - 1.5A [RECOMMENDED] </reference/hardware/motorboards/deek-robot-motor-shield>
 ..     /reference/hardware/motorboards/L298N-motor-board-setup

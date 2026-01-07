@@ -49,7 +49,7 @@ You will need to find or purchase:
 .. important::
   :class: important-float-right
 
-  **Uno R4 is not supported!** |BR| If you choose to purchase an Arduino Uno (not recommended), it is vital that you purchase the **Revision 3 (R3)** version, :dcc-ex-red-bold:`not` the **Revision 4 (R4)** version.  The |EX-CS| :dcc-ex-red-bold:`cannot run` on the R4 version.  :doc:`See here from more informtion</news/posts/20230728>`.
+  **Uno R4 is not supported!** |BR| If you choose to purchase an Arduino Uno (not recommended), it is vital that you purchase the **Revision 3 (R3)** version, :dcc-ex-red-bold:`not` the **Revision 4 (R4)** version.  The |EX-CS| :dcc-ex-red-bold:`cannot run` on the R4 version.  :doc:`See here for more information</news/posts/20230728>`.
 
 #. a supported **Arduino board** |BR| We recommend the `Elegoo Mega 2560 <https://www.amazon.com/ELEGOO-ATmega2560-ATMEGA16U2-Projects-Compliant/dp/B01H4ZLZLQ/>`_ |BR| |BR|
 #. a supported **Motor Driver**  |BR| We recommend either our own :doc:`EX-MotorShield8874 </reference/hardware/motorboards/ex-motor-shield-8874>` or the `Arduino Motor Shield Rev3 <https://store.arduino.cc/collections/shields/products/arduino-motor-shield-rev3>`_ |BR| |BR|

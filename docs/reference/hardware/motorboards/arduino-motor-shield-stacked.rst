@@ -5,9 +5,9 @@
 .. include:: /include/include-hardware.rst
 |EX-CS-LOGO|
 
-*****************************
-Stacked Arduino Motor Shields
-*****************************
+********************************
+Stacking Arduino Motor Shields
+********************************
 
 |SUITABLE| |engineer| |support-button| 
 

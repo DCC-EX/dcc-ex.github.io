@@ -1,4 +1,4 @@
-﻿ablog==0.11.12
+ablog==0.11.12
 alabaster==1.0.0
 apeye==1.4.1
 apeye-core==1.1.5
@@ -59,7 +59,7 @@ sphinx-tabs==3.4.5
 sphinx-toolbox==3.5.0
 tabulate==0.9.0
 typing_extensions==4.13.2
-urllib3==2.4.0
+urllib3==2.6.3
 watchdog==6.0.0
 webencodings==0.5.1
 # sphinx_last_updated_by_git==0.3.6

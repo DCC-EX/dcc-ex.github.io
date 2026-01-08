@@ -114,10 +114,11 @@ One key difference to note in comparing DCC vs. DC is that in DCC mode, forward/
 
 Turn off, unplug the AC power cord, and disconnect your current DC transformer(s) / power supply(s) from the DC layout track to place in a box for safe keeping.
 
-You will instead be using a regulated DC (Laptop) 12-18 Vdc 3-5Amp power supply to your |motor shield| and or Motor Board (booster) to run all your DCC Locos and analogue DC Cabs on all your individual tracks/districts/blocks.
+You will instead be using a regulated DC (Laptop) 12-16v DC 3-5Amp power supply [1]_ to your |motor shield| and or Motor Board (booster) to run all your DCC Locos and analogue DC Cabs on all your individual tracks/districts/blocks.
 
 You will be using DC (Pulse Width Modulation PWM) to drive the DC engines, Not DC Direct Current (-0 +16v).
 
+.. [1] The voltage you need for the |Motor Driver| depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 DC Operation
 -------------

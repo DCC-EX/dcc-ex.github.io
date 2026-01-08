@@ -488,10 +488,10 @@ Sensors (Input) Commands
 and other devices. 
 Physical sensors can be of any type (infrared, magnetic, mechanical...).  They may be configured to pull-up or not.  
 When configured for pull-up, the input is connected (within the CS) to 
-+5V via a resistor.  This sort of input is suited to sensors that have two wires (a switch or relay contacts, or a device with an 'open collector' or 'open drain' output.
++5v via a resistor.  This sort of input is suited to sensors that have two wires (a switch or relay contacts, or a device with an 'open collector' or 'open drain' output.
 Some sensors may be sensitive to the pull-up resistor and not operate as expected - in this case you can turn off the pull-up.
 
-The sensor is considered INACTIVE when at +5V potential, and ACTIVE when the pin is pulled down to 0V.
+The sensor is considered INACTIVE when at +5v potential, and ACTIVE when the pin is pulled down to 0V.
 
 To ensure proper voltage levels, some part of the Sensor circuitry MUST be tied back to the same ground as used by the Arduino.  
 

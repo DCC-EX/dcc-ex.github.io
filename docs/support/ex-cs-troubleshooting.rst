@@ -84,19 +84,23 @@ Yes, we need to start with the basics.
 
   This is for the |EX-MS| only. If you have a different |motor shield|, see the next section! 
 
-  You can connect your 12-18V DC (based on the scale of your locomotives) power supply directly to the barrel jack (power input) of the shield. 
+  You can connect your 12-16v DC (based on the scale of your locomotives) power supply [1]_ directly to the barrel jack (power input) of the shield. 
   
   Do not connect power to the Arduino and the |motor shield| at the same time! 
   
   You should see the power indicator LED illuminate and power should flow down to the Arduino and illuminate its power LED indicator. If you don't see the power light on the Arduino, check that the shield is seated and making a good connection into the Arduino's sockets (called headers).
 
   The EX-MotorShield8874 power supply should have at least a 2A rating. Ensure it is plugged into the wall.
+  
+  .. [1] The voltage you need for the |Motor Driver| depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 **If you are using the Arduino Motor Shield, Deek-Robot, or other compatible shield** 
 
   Make sure you have bent out the Vin pin (or cut the trace underneath the |motor shield|). 
   
-  You will need TWO power supplies, a 7-9V DC power supply to the Arduino and a 12-18V DC (based on the scale of your locomotives) power supply for the |Motor Driver|.
+  You will need TWO power supplies, a 7-9V DC power supply to the Arduino and a 12-16v DC (based on the scale of your locomotives) power supply [2]_ for the |Motor Driver|.
+
+  .. [2] The voltage you need for the |Motor Driver| depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 * Ensure the 7-9V DC power supply for the Arduino has at least 1 Amp. Anything less than 7 Volts and 1A will cause unreliable operation. Ensure that the |motor shield| power supply is rated for at least 2 Amps.
 
@@ -151,7 +155,7 @@ Testing the DCC signal
 
 Now the fun part -- we are going to test the generation of the DCC signal itself.  
 
-The easiest way to do this is using a Multi-meter that can read AC voltage. You can measure that 12V DC is going INTO the |motor shield|, but you have to use the **AC setting** to measure the bipolar square wave signal at the output. With one lead of either probe connected to one track and the other probe connected to the other track, you should read an AC voltage in the range of 15-24V depending on your input voltage and a few other factors. An N-Scale track with 12V DC input to the |motor shield| is usually around 14VAC. If you read zero volts or a very small AC voltage (1V or less) then either you are still using the DC setting on your meter, or there is something wrong with your wiring, |motor shield|, or config.h settings.
+The easiest way to do this is using a Multi-meter that can read AC voltage. You can measure that 12v DC is going INTO the |motor shield|, but you have to use the **AC setting** to measure the bipolar square wave signal at the output. With one lead of either probe connected to one track and the other probe connected to the other track, you should read an AC voltage in the range of 15-24V depending on your input voltage and a few other factors. An N-Scale track with 12v DC input to the |motor shield| is usually around 14vAC. If you read zero volts or a very small AC voltage (1V or less) then either you are still using the DC setting on your meter, or there is something wrong with your wiring, |motor shield|, or config.h settings.
 
 Loco Programming Issues (-1 or JMRI 308 error)
 ===============================================

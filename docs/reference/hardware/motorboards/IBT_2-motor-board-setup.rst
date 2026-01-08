@@ -67,7 +67,7 @@ For this option, we assume that many of you may have started off with the Arduin
 
 The IBT_2 uses N-Channel Power MOSFETS (a type of Transistor) inside its 2 BTS7960B Integrated Circuits. Each of those ICs makes is just a half H-Bridge circuit, it takes two of them to make the full H-Bridge. Don't be confused, each of these boards can only handle one track. The Arduino board is a DUAL full H-Bridge, that is how it can handle 2 tracks. 
 
-Anything with MOSFETS in them is more efficient than something with Bipolar Junction Transistors (BJTs) like the L298 on the Arduino and Deek Robot Motor Shields. That means **there is no voltage drop to the tracks** like there is for those boards. Keep that in mind because that means **there can be an extra 2 to 3 volts to your track**. Your trains will run faster than they did before and things could overheat if they were able to handle the 12V reaching the track from a 14.5V power supply, but don't like the full 14+ volts.
+Anything with MOSFETS in them is more efficient than something with Bipolar Junction Transistors (BJTs) like the L298 on the Arduino and Deek Robot Motor Shields. That means **there is no voltage drop to the tracks** like there is for those boards. Keep that in mind because that means **there can be an extra 2 to 3 volts to your track**. Your trains will run faster than they did before and things could overheat if they were able to handle the 12v reaching the track from a 14.5V power supply, but don't like the full 14+ volts.
 
 Which Option Should You Choose? (IBT_2)
 =========================================
@@ -273,7 +273,7 @@ Important Notes on Current Sensing (IBT_2)
 Please do the following to ensure you won't damage the Arduino, your layout, or yourself:
 
 * Test your board to see what voltage it reports for 2 or 3 different currents and extrapolate to make sure that at your required current, example 5A, the current sense output does not produce more than 5V.
-* Use a 5.1V zener diode (D1) and current limiting resistor (R2). This should be 220 Ohms, which will protect you from 5.2V to at least 12V of over voltage at the Arduino analog pin. The Diode can be 5V or 5.1V like a 1N4733A, 1N5231B, etc. Note that after 3.5V the response is no longer linear when using the diode, so you you may want to design your system to output its current sense range between 0 and 4V and use 5V as the over limit setting.
+* Use a 5.1v zener diode (D1) and current limiting resistor (R2). This should be 220 Ohms, which will protect you from 5.2V to at least 12v of over voltage at the Arduino analog pin. The Diode can be 5V or 5.1V like a 1N4733A, 1N5231B, etc. Note that after 3.5v the response is no longer linear when using the diode, so you you may want to design your system to output its current sense range between 0 and 4V and use 5V as the over limit setting.
 * Check your board for at least 2 resistors that are labelled "103", you will need a magnifier or to take a picture with your phone and zoom in. 103 = 10k (10 followed by 3 zeros). These are the second from the left resistor in each bank of 4 (R5 and R6). See :numref:`ibt2-sense-resistors`. When we tie the two Command Station outputs together, that gives us 5k of resistance from which to measure a voltage drop and convert that to current. If you added another 10k resistor (R1) in parallel with the others, that would give you 3.3k which reduces the voltage to the Arduino analog pin to be able to measure higher currents.
 * Put a 5A fuse on each output leg going to your track.
 

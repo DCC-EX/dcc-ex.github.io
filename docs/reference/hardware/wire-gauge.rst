@@ -19,7 +19,7 @@ DCC Track Wiring Information
 Why is Wire Size Important?
 ============================
 
-Voltage, current, and resistance to that current are all interrelated and described by the Ohm's law formula, Voltage = Current * Resistance (V=IR). The thinner the wire, the more resistance it has. As you can see from the formula, if your wire had a .5 Ohm resistance and there was 5 Amps flowing through it, you would lose... we're waiting. Get out your calculator... Yes, 2.5 Volts. If you only started with say, 12V, that would leave you with only 9.5 to run your trains. And that lost energy is wasted as heat. This is an exaggerated example, but you get the idea.
+Voltage, current, and resistance to that current are all interrelated and described by the Ohm's law formula, Voltage = Current * Resistance (V=IR). The thinner the wire, the more resistance it has. As you can see from the formula, if your wire had a .5 Ohm resistance and there was 5 Amps flowing through it, you would lose... we're waiting. Get out your calculator... Yes, 2.5 Volts. If you only started with say, 12v, that would leave you with only 9.5 to run your trains. And that lost energy is wasted as heat. This is an exaggerated example, but you get the idea.
 
 There can be a lot of wiring on a complicated layout, here are the main areas that require wiring, they are often different wire sizes.
 

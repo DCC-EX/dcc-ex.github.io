@@ -164,7 +164,7 @@ Some motor shields come with header pins for the |I2C| connections, for example 
 
    Motor Shield |I2C| pins
 
-The next image shows an Arduino Mega and Deekrobot motor shield mounted in a 3D-printed 6-inch rack case, with one set of |I2C| pins connected to an OLED display on the front of the case, and one set of |I2C| pins connected to two external connectors at the rear of the case.  The orange wires connect four LEDs (with current-limiting series resistors) that provide panel indications of incoming 5V and 14V power, and of outgoing DCC power to the Main and Programming tracks.  I've also mounted a small self-adhesive aluminium heat sink onto the L298P device.
+The next image shows an Arduino Mega and Deekrobot motor shield mounted in a 3D-printed 6-inch rack case, with one set of |I2C| pins connected to an OLED display on the front of the case, and one set of |I2C| pins connected to two external connectors at the rear of the case.  The orange wires connect four LEDs (with current-limiting series resistors) that provide panel indications of incoming 5v and 14v power, and of outgoing DCC power to the Main and Programming tracks.  I've also mounted a small self-adhesive aluminium heat sink onto the L298P device.
 
 .. figure:: /_static/images/i2c/deekrobot_motor_shield.jpg
    :alt: Motor shield |I2C| pins

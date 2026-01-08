@@ -72,7 +72,7 @@ To actually run your model railroad you will need a few items:
 
 |HR-DASHED|
 
-.. [1] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
+.. [1] The voltage you need for the |Motor Driver| depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 |HR-HEAVY|
 

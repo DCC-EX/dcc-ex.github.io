@@ -102,7 +102,7 @@ As an initial check we recommend you should try to connect to your EX-CommandSta
 
   * - 3. When you click the power on slider, it should say power on. |BR| Do the 4 LEDs on the motor board turn on and stay on?
     - Go to Question 4.
-    - (a) Have you plugged in and turned on a 12-15v DC power supply into the motor board
+    - (a) Have you plugged in and turned on a 12-16v DC power supply [1]_ into the motor board
       (b) Have you made sure the polarity of the power supply is correct.
 
       |br| Do the 4 LEDs on the motor board turn on briefly, then turn off?
@@ -114,6 +114,10 @@ As an initial check we recommend you should try to connect to your EX-CommandSta
     - Congratulations, your |EX-CS| is essentially working.
     - (a) Wrong loco DCC Address selected.
       (b) loco is not DCC decoder equipped.  (You will likely hear a humming coming from the loco. If you do remove it from the track urgently, the loco may be being damaged.)
+
+|HR-DASHED|
+
+.. [1] The voltage you need for the |Motor Driver| depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 |
 
@@ -141,7 +145,7 @@ Using JMRI
 
   * - 3. Can you turn the track power on?  |BR| Do the LEDs on the |motor shield| turn on?
     - Go to Question 4.
-    - (a) Have you plugged in and turned on a 12-15v DC power supply into the motor board
+    - (a) Have you plugged in and turned on a 12-16v DC power supply [2]_ into the motor board
       (b) Have you made sure the polarity of the power supply is correct. 
 
   * - 4. When you open a throttle window in |JMRI|, select a loco and move the throttle, does the loco move?
@@ -149,6 +153,10 @@ Using JMRI
     - (a) Have you connected the track to the 'MAIN' outputs of the Motor Board.  |BR| |JMRI| cannot directly control trains on the 'PROGRAMMING' outputs without using additional commands. See :ref:`support/ex-cs-troubleshooting:cannot drive a locomotive` for more information.
       (b) Wrong loco DCC Address selected.
       (c) loco is not DCC decoder equipped.  (You will likely hear a humming coming from the loco. If you do remove it from the track urgently, the loco is being damaged.)
+
+|HR-DASHED|
+
+.. [2] The voltage you need for the |Motor Driver| depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 |
 
@@ -197,7 +205,7 @@ When Configured as an Access Point
 
   * - 6. Can you turn the track power on?  |BR| Do the LEDs on the |motor shield| turn on?
     - Go to Question 7.
-    - (a) Have you plugged in and turned on a 12-15v DC power supply into the motor board
+    - (a) Have you plugged in and turned on a 12-16v DC power supply [3]_ into the motor board
       (b) Have you made sure the polarity of the power supply is correct. 
 
   * - 7. When select a loco in the throttle app and move the throttle, does the loco move?
@@ -205,6 +213,10 @@ When Configured as an Access Point
     - (a) Have you connected the track to the 'MAIN' outputs of the Motor Board.  |BR| You cannot directly control trains on the 'PROGRAMMING' outputs without using additional commands which can be done in |Engine Driver| but not other WiFi throttle apps (Use the :guilabel:`Request Loco ID` button in |Engine Driver|.) |BR| recommend that the MAIN outputs be used to run a layout.
       (b) Wrong loco DCC Address selected.
       (c) loco is not DCC decoder equipped.  (You will likely hear a humming coming from the loco. If you do remove it from the track urgently, the loco is being damaged.)
+
+|HR-DASHED|
+
+.. [3] The voltage you need for the |Motor Driver| depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 |
 

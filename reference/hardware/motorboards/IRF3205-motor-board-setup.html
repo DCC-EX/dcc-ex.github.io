@@ -784,8 +784,8 @@
 <li><p>An Arduino Motor Shield (If you are upgrading or already have an Arduino Motor Shield)</p></li>
 <li><p>An IRF3205 15A motor board</p></li>
 <li><p>Version 3.1.2 or later of the <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> Software</p></li>
-<li><p>A 7-9V DC Power supply for the Mega</p></li>
-<li><p>A 12-18V DC <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> (depending on train scale) power supply rated for the current you need (we recommend 5A)</p></li>
+<li><p>A 7-9v DC Power supply for the Mega</p></li>
+<li><p>A 12-18v DC <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> (depending on train scale) power supply rated for the current you need (we recommend 5A)</p></li>
 <li><p>2 5A fuses and fuse holders</p></li>
 <li><p>A separate current sense board like one based on the ACS724 chip (or just depend on the 5A fuses)</p></li>
 <li><p>Some Jumper Wires</p></li>
@@ -793,7 +793,7 @@
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id2" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the <a class="reference internal" href="../power-supplies.html#powering-the-motor-driver"><span class="std std-ref">Powering the Motor Driver</span></a> for more information.</p>
+<p>The voltage you need for the <a class="reference internal" href="../motor-boards.html"><span class="doc">Motor Driver</span></a> depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the <a class="reference internal" href="../power-supplies.html#powering-the-motor-driver"><span class="std std-ref">Powering the Motor Driver</span></a> for more information.</p>
 </aside>
 </aside>
 <p>See the <a class="reference internal" href="#parts-list-irf3205"><span class="std std-ref">Parts List (IRF3205)</span></a></p>
@@ -813,7 +813,7 @@
 <p class="admonition-title">Note</p>
 <p>We can’t say it enough, this board can pump out some Amps. Be careful! Put fuses on the connection to each rail and limit the trip (short circuit) current to a safe level in your config.h file. We have a saying at DCC-EX, if you need more than 5 Amps to run locos, then you need to add power districts, not more Amps.</p>
 </div>
-<p>The IRF3205 is actually the part number of the transistors on the board, N-Channel Power MOSFETS specifically. It takes 4 of them to make one full H-Bridge circuit to control one track. This board has 2 sets of 4 for 2 H-Bridges. You may find other boards that use this transistor, but this guide only covers the 15A Dual H-Bridge pictured above. Anything with MOSFETS in them is more efficient than something with Bipolar Junction Transistors (BJTs) like the L298 on the Arduino and Deek Robot Motor Shields. That means <strong>there is no voltage drop to the tracks</strong> like there is for those boards. Keep that in mind because that means <strong>there can be an extra 2 to 3 volts to your track</strong>. Your trains will run faster than they did before and things could overheat if they were able to handle the 12V reaching the track from a 14.5V power supply, but don’t like the full 14+ volts.</p>
+<p>The IRF3205 is actually the part number of the transistors on the board, N-Channel Power MOSFETS specifically. It takes 4 of them to make one full H-Bridge circuit to control one track. This board has 2 sets of 4 for 2 H-Bridges. You may find other boards that use this transistor, but this guide only covers the 15A Dual H-Bridge pictured above. Anything with MOSFETS in them is more efficient than something with Bipolar Junction Transistors (BJTs) like the L298 on the Arduino and Deek Robot Motor Shields. That means <strong>there is no voltage drop to the tracks</strong> like there is for those boards. Keep that in mind because that means <strong>there can be an extra 2 to 3 volts to your track</strong>. Your trains will run faster than they did before and things could overheat if they were able to handle the 12v reaching the track from a 14.5V power supply, but don’t like the full 14+ volts.</p>
 </section>
 <section id="which-option-should-you-choose-irf3205">
 <h3><a class="toc-backref" href="#id27" role="doc-backlink">Which Option Should You Choose? (IRF3205)</a><a class="headerlink" href="#which-option-should-you-choose-irf3205" title="Link to this heading"></a></h3>
@@ -1194,7 +1194,7 @@ $24.40 +tax; prime shipping</p>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f872a1c3e20>
+    <jinja2.runtime.BlockReference object at 0x7f05b0e51450>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

@@ -40,10 +40,12 @@ What You need
 * Arduino Nano (or clone)
 * Gravitech Nano Motor Shield (or clone, or any supported |motor shield|)
 * 5V 1A Power Supply with Mini-USB for Arduino and Micro-USB for clones
-* 12-14.5V 3-5A Power Supply for the |motor shield|
+* 12-14.5V 3-5A Power Supply [1]_ for the |motor shield|
 * Barrel Connector to Screw Terminal Adapter if using the Nano Motor Shield
 * Wire of the appropriate gauge for hookup
 * Computer to load the software (Windows, Mac, Linux)
+
+.. [1] The voltage you need for the |Motor Driver| depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 Software
 ========

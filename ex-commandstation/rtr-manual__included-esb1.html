@@ -817,11 +817,11 @@
 </figure>
 <p>The <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a> normally comes with a barrel jack for compatibility with most laptop-type power supplies that use a 2.1mm inner hole diameter and a 5.5mm outer shank diameter.</p>
 <p>Be careful since some power supplies have a 2.5mm inner hole which is likely to be too loose. The barrel jack input power is reverse voltage protected. This supplies a 5V switching regulator for all electronics on the board including a 3.3V regulator for 3.3V components, an optional <a href="../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a> stacked on top, and power out to the track.</p>
-<p>While it is capable of 10v-25v operation, it is best to choose a suitable track voltage for your scale <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. Typically this is 12-14v for N scale, and 14-16v for HO scale. With help in choosing your power supply or using one with bare wires instead of a barrel connector, see <a class="reference internal" href="#powering-the-ex-csb1">Powering the EX-CSB1</a> below.</p>
+<p>While it is capable of 10-25v operation, it is best to choose a suitable track voltage for your scale <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. Typically this is 12-14v for N scale, and 14-16v for HO scale. With help in choosing your power supply or using one with bare wires instead of a barrel connector, see <a class="reference internal" href="#powering-the-ex-csb1">Powering the EX-CSB1</a> below.</p>
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id2" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the <a class="reference internal" href="../reference/hardware/power-supplies.html#powering-the-motor-driver"><span class="std std-ref">Powering the Motor Driver</span></a> for more information.</p>
+<p>The voltage you need for the <a class="reference internal" href="../reference/hardware/motor-boards.html"><span class="doc">Motor Driver</span></a> depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the <a class="reference internal" href="../reference/hardware/power-supplies.html#powering-the-motor-driver"><span class="std std-ref">Powering the Motor Driver</span></a> for more information.</p>
 </aside>
 </aside>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
@@ -893,7 +893,7 @@
 </figcaption>
 </figure>
 <p>This is a standard Railsync input and is labelled “Booster In” on the top of the board. Connecting a RailSync output from a Command Station or Booster will automatically switch the EXCSB1 to <a class="reference internal" href="rtr-booster.html"><span class="doc">Booster Mode</span></a> on receipt of an input signal when the <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a> is running the appropriate <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> script.</p>
-<p>Again be sure to wire the DCC outputs to power districts with consistent phasing. Any voltage between 5V and 26V at the input will work. The Digitrax specification is from 12V to 26V. See <a class="reference external" href="https://dccwiki.com/LocoNet_and_RailSync_Voltages">the DCCWiki article on RailSync</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
+<p>Again be sure to wire the DCC outputs to power districts with consistent phasing. Any voltage between 5V and 26V at the input will work. The Digitrax specification is from 12v to 26v. See <a class="reference external" href="https://dccwiki.com/LocoNet_and_RailSync_Voltages">the DCCWiki article on RailSync</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <p><div style="display:block; box-sizing: border-box; clear: both;"> </div></p>
 </section>
 <section id="oled-i2c-header">
@@ -1066,19 +1066,19 @@
 </figcaption>
 </figure>
 <p>The <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation&thinsp;/&thinsp;Booster One Express</span></a> has a 2.1mm x 5.5mm power jack. If you already have a power supply with bare wires, you can use an optional 2.1mm x 5.5mm screw terminal block adapter. For more information about power supplies, including how to use one power supply to supply all the different voltages on your layout, see <a class="reference internal" href="../reference/hardware/power-supplies.html#power-supplies"><span class="std std-ref">Power Supplies</span></a>.</p>
-<p>To power up the <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a>, just plug your power supply into the mains power (aka wall outlet) and connect the barrel end to the Command Station. Make sure your power supply matches the needs of your setup: the voltage should be between 12V and 25V DC, depending on the scale of your locomotives, and it should provide at least 2A of current with good over-current performance and voltage stability.</p>
+<p>To power up the <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a>, just plug your power supply into the mains power (aka wall outlet) and connect the barrel end to the Command Station. Make sure your power supply matches the needs of your setup: the voltage should be between 12v and 25v DC, depending on the scale of your locomotives, and it should provide at least 2A of current with good over-current performance and voltage stability.</p>
 <figure class="align-right" id="id33">
-<a class="reference internal image-reference" href="../_images/12v-3A-brick.png"><img alt="12V brick power supply" src="../_images/12v-3A-brick.png" style="width: 244.0px; height: 218.0px;" />
+<a class="reference internal image-reference" href="../_images/12v-3A-brick.png"><img alt="12v brick power supply" src="../_images/12v-3A-brick.png" style="width: 244.0px; height: 218.0px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig 328: </span><span class="caption-text">12V Power Supply</span><a class="headerlink" href="#id33" title="Link to this image"></a></p>
+<p><span class="caption-number">Fig 328: </span><span class="caption-text">12v Power Supply</span><a class="headerlink" href="#id33" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>To get the most out of your <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a>, we suggest using a modern switching power supply with 4A or more. For Z scale, 12V is usually enough, but for N, HO, and OO scales, we recommend using between 14V and 16V DC <a class="footnote-reference brackets" href="#id5" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. It’s important that your DC power is well-regulated which is why we suggest a modern switch-mode power supply with double insulation and strong overload protection.</p>
+<p>To get the most out of your <a href="../ex-commandstation/rtr-index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CSB1</span></a>, we suggest using a modern switching power supply with 4A or more. For Z scale, 12v is usually enough, but for N, HO, and OO scales, we recommend using between 14v and 16v DC <a class="footnote-reference brackets" href="#id5" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. It’s important that your DC power is well-regulated which is why we suggest a modern switch-mode power supply with double insulation and strong overload protection.</p>
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id5" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">2</a><span class="fn-bracket">]</span></span>
-<p>The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the <a class="reference internal" href="../reference/hardware/power-supplies.html#powering-the-motor-driver"><span class="std std-ref">Powering the Motor Driver</span></a> for more information.</p>
+<p>The voltage you need for the <a class="reference internal" href="../reference/hardware/motor-boards.html"><span class="doc">Motor Driver</span></a> depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the <a class="reference internal" href="../reference/hardware/power-supplies.html#powering-the-motor-driver"><span class="std std-ref">Powering the Motor Driver</span></a> for more information.</p>
 </aside>
 </aside>
 <div class="admonition note">
@@ -1095,7 +1095,7 @@
 <h3><a class="toc-backref" href="#id40" role="doc-backlink">What you will need</a><a class="headerlink" href="#what-you-will-need" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p><strong>An EX-CSB1 Command Station</strong></p></li>
-<li><p><strong>A Power supply</strong> (12V - 16V DC see <a class="reference internal" href="../reference/hardware/power-supplies.html#power-supplies"><span class="std std-ref">Power Supplies</span></a>)</p></li>
+<li><p><strong>A Power supply</strong> (12-16v DC see <a class="reference internal" href="../reference/hardware/power-supplies.html#power-supplies"><span class="std std-ref">Power Supplies</span></a>)</p></li>
 <li><p><strong>A DCC loco</strong> (DC can work also)</p></li>
 <li><p><strong>Track</strong></p></li>
 <li><p><strong>A throttle</strong> (You can use your phone or a computer - see below)</p></li>
@@ -1504,7 +1504,7 @@ If issues persist, refer to the troubleshooting guides on the DCC-EX website.</p
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f87418197b0>
+    <jinja2.runtime.BlockReference object at 0x7f05c17cbd30>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

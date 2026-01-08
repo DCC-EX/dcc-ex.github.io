@@ -25,9 +25,11 @@ DCC & DC Technical Details
 
 Turn off, unplug the AC power cord, and disconnect your current DC transformer(s) / power supply(s) from the DC layout track to place in a box for safe keeping.
 
-You will instead be using a regulated DC (Laptop) 12-18 Vdc 3-5Amp power supply to your |motor shield| and or Motor Board (booster) to run all your DCC Locos and analogue DC Cabs on all your individual tracks/districts/blocks.
+You will instead be using a regulated DC (Laptop) 12-16v DC 3-5Amp power supply [1]_ to your |motor shield| and or Motor Board (booster) to run all your DCC Locos and analogue DC Cabs on all your individual tracks/districts/blocks.
 
-You will be using DC (Pulse Width Modulation PWM) to drive the DC engines, Not DC Direct Current (-0 +16v).
+You will be using DC (Pulse Width Modulation PWM) to drive the DC engines, Not DC Direct Current (0 to +16v).  Note that because of that, the maximum voltage of the power supply is applied to the track all the time, and the speed is controlled by varying the duty cycle of the PWM signal.  
+
+.. [1] The voltage you need for the |Motor Driver| depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 .. figure:: /_static/images/track_manager/DCCpwm_DCCpwm_AC_DC.png
   :alt: Waveform Comparison
@@ -72,8 +74,12 @@ A simplified representation of what the dual (PWM) signals might look like throu
 Additional Notes
 ================
 
-This is not zero (0) stretching. We do not support the zero stretching address function, found on Digitrax and Lenz command Stations on purpose. The constant dual DCC electrical signal may damage certain types of older DC motors if left on for a long time. |BR| **So never put a DC locomotive on a DCC track.**
+* This is not zero (0) stretching. We do not support the zero stretching address function, found on Digitrax and Lenz command Stations on purpose. The constant dual DCC electrical signal may damage certain types of older DC motors if left on for a long time. |BR| **So never put a DC locomotive on a DCC track.**
 
-Unlike Digitrax and Lenz 0 Zero stretching DCC (PWM) signal which leaves the engine lit up and humming loudly with the throttle and engine at 0 speed, because it is receiving a Dual DCC(PWM) aka AC signal, while the |EX-CS| TrackManager is dead quiet and at rest at 0 speed.
+  Unlike Digitrax and Lenz 0 Zero stretching DCC (PWM) signal which leaves the engine lit up and humming loudly with the throttle and engine at 0 speed, because it is receiving a Dual DCC(PWM) aka AC signal, while the |EX-CS| TrackManager is dead quiet and at rest at 0 speed.
 
-One key difference to note in comparing DCC vs. DC is that in DCC mode, forward/reverse is determined by the DCC decoder, not the track, whereas in DC mode the direction is dependent upon the track polarity.
+* One key difference to note in comparing DCC vs. DC is that in DCC mode, forward/reverse is determined by the DCC decoder, not the track, whereas in DC mode the direction is dependent upon the track polarity.
+
+* With PWM, the maximum voltage of the power supply is applied to the track all the time in a series of 'pulses' and the speed is controlled by varying the duty cycle of the PWM signal.   
+
+  As a result, when using DC you should avoid using a power supply that exceeds the recommended voltages for your scale of locomotives.  e.g. 12v or less for Z. 14v for N. 16v for HO. 18v for G scale.

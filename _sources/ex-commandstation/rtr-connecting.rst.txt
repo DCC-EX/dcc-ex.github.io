@@ -29,7 +29,7 @@ What You Will Need
 ==================
 
 * An |EX-CSB1| [1]_
-* A **Power supply** (12V - 16V DC see :ref:`Power Supplies <reference/hardware/power-supplies:power supplies>`) [2]_
+* A **Power supply** (12-16v DC see :ref:`Power Supplies <reference/hardware/power-supplies:power supplies>`) [2]_
 * A **DCC loco** (If you are here to run DC locos, please go to the :doc:`/trackmanager/index` page.)
 * Some **Track**
 * **16 to 28AWG/1.5mm^2 Wire**, preferably in 2 colours with 1/8"/6mm insulation stripped (and wire tinned if stranded)
@@ -38,7 +38,7 @@ What You Will Need
 
  .. [1] While not required for normal use, a PC is required a) to initially install the software on a DIY system, b) is optional for making a USB connection and using programs like |EX-WT| or |JMRI|, and c) to update/add |EX-R| Scripts to the |EX-CS| or make other changes to its configuration. |BR| A USB connection also provides a connection to a "serial monitor" to generate logs and diagnose issues. But more on that later.
 
-.. [2] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
+.. [2] The voltage you need for the |Motor Driver| depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 ----
 
@@ -96,9 +96,9 @@ These are the most basic steps to get you up and running.  If you need more help
 
       The |EX-CSB1-SHORT| has a 2.1mm x 5.5mm power jack. Connect this to an appropriate DC power supply.
 
-      For N and HO scale you would normally use a 12V to 16V DC power supply [3]_, but be sure to check the manual for your loco/decoder combination for the correct voltage. 
+      For N and HO scale you would normally use a 12v to 16v DC power supply [3]_, but be sure to check the manual for your loco/decoder combination for the correct voltage. 
 
-      .. [3] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
+      .. [3] The voltage you need for the |Motor Driver| depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
    **3. Connect Your Smart Device(Phone) to the 'DCCEX_xxxxx' WiFi Network**
 
@@ -214,11 +214,11 @@ Power Connection
 
 The |EX-CSB1-SHORT| has a 2.1mm x 5.5mm power jack. If you already have a power supply with bare wires, you can use an optional 2.1mm x 5.5mm screw terminal block adapter. 
 
-For N you would normally use a 12V to 14V power supply and HO scale you would normally use a 12V to 16V DC power supply, but be sure to check the manual for your loco/decoder combination for the correct voltage [6]_. 
+For N you would normally use a 12v to 14v power supply and HO scale you would normally use a 12v to 16v DC power supply, but be sure to check the manual for your loco/decoder combination for the correct voltage [6]_. 
 
 For more information about power supplies, including how to use one power supply to supply all the different voltages on your layout, see :ref:`Power Supplies <reference/hardware/power-supplies:power supplies>`. 
 
-.. [6] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
+.. [6] The voltage you need for the |Motor Driver| depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 .. figure:: /_static/images/power/2_1mm_screw_terminal_adapter.png
    :scale: 40%
@@ -228,11 +228,11 @@ For more information about power supplies, including how to use one power supply
    2.1mm Screw |BR| Terminal Adapter
 
 .. figure:: /_static/images/power/12v-3A-brick.png
-   :alt: 12V 3A brick power supply
+   :alt: 12v 3A brick power supply
    :scale: 80%
    :align: right
 
-   12V/3A Power Supply
+   12v/3A Power Supply
 
 |force-break|
 
@@ -244,13 +244,13 @@ Connect Track Input Power
 
 To fully power the |EX-CSB1|, just plug your power supply into the mains power (aka wall outlet) and connect the barrel end to the Command Station. 
 
-Make sure your power supply matches the needs of your setup: the voltage should be between 12V and 25V DC, depending on the scale of your locomotives, and it should provide at least 2A of current with good over-current performance and voltage stability. 
+Make sure your power supply matches the needs of your setup: the voltage should be between 12v and 25v DC, depending on the scale of your locomotives [7]_, and it should provide at least 2A of current with good over-current performance and voltage stability. 
 
-To get the most out of your |EX-CSB1-SHORT| we suggest using a modern switching power supply with 4A or more. For Z scale, 12V is usually enough, but for N we recommend using between 12 and 14V, and for HO/OO scales we recommend using between 14V and 16V DC [7]_. 
+To get the most out of your |EX-CSB1-SHORT| we suggest using a modern switching power supply with 4A or more. For Z scale, 12v is usually enough, but for N we recommend using between 12v and 14v, and for HO/OO scales we recommend using between 14v and 16v DC [7]_. 
 
 It's important that your DC power is well-regulated which is why we suggest a modern switch-mode power supply with double insulation and strong overload protection.
 
-.. [7] The voltage you need for the motor driver depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltaage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
+.. [7] The voltage you need for the |Motor Driver| depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
 
 .. figure:: /_static/images/ex-csb1/csb1_barrel_insert.png

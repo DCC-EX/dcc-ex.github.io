@@ -777,7 +777,7 @@
 <p>We can’t say it enough, this board can pump out some Amps. Be careful! Put fuses on the connection to each rail and limit the current to a safe level in your config.h file. We have a saying at <a href="../../../index.html"><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span></a>, if you need more than 5 Amps to run locos, then you need to add power districts, not more Amps. The voltage to the track will be 2 to 3 volts higher using the same power supply than it is with Arduino type (L298) motor boards.</p>
 </div>
 <p>The IBT_2 uses N-Channel Power MOSFETS (a type of Transistor) inside its 2 BTS7960B Integrated Circuits. Each of those ICs makes is just a half H-Bridge circuit, it takes two of them to make the full H-Bridge. Don’t be confused, each of these boards can only handle one track. The Arduino board is a DUAL full H-Bridge, that is how it can handle 2 tracks.</p>
-<p>Anything with MOSFETS in them is more efficient than something with Bipolar Junction Transistors (BJTs) like the L298 on the Arduino and Deek Robot Motor Shields. That means <strong>there is no voltage drop to the tracks</strong> like there is for those boards. Keep that in mind because that means <strong>there can be an extra 2 to 3 volts to your track</strong>. Your trains will run faster than they did before and things could overheat if they were able to handle the 12V reaching the track from a 14.5V power supply, but don’t like the full 14+ volts.</p>
+<p>Anything with MOSFETS in them is more efficient than something with Bipolar Junction Transistors (BJTs) like the L298 on the Arduino and Deek Robot Motor Shields. That means <strong>there is no voltage drop to the tracks</strong> like there is for those boards. Keep that in mind because that means <strong>there can be an extra 2 to 3 volts to your track</strong>. Your trains will run faster than they did before and things could overheat if they were able to handle the 12v reaching the track from a 14.5V power supply, but don’t like the full 14+ volts.</p>
 </section>
 <section id="which-option-should-you-choose-ibt-2">
 <h2><a class="toc-backref" href="#id9" role="doc-backlink">Which Option Should You Choose? (IBT_2)</a><a class="headerlink" href="#which-option-should-you-choose-ibt-2" title="Link to this heading"></a></h2>
@@ -991,7 +991,7 @@
 <p>Please do the following to ensure you won’t damage the Arduino, your layout, or yourself:</p>
 <ul class="simple">
 <li><p>Test your board to see what voltage it reports for 2 or 3 different currents and extrapolate to make sure that at your required current, example 5A, the current sense output does not produce more than 5V.</p></li>
-<li><p>Use a 5.1V zener diode (D1) and current limiting resistor (R2). This should be 220 Ohms, which will protect you from 5.2V to at least 12V of over voltage at the Arduino analog pin. The Diode can be 5V or 5.1V like a 1N4733A, 1N5231B, etc. Note that after 3.5V the response is no longer linear when using the diode, so you you may want to design your system to output its current sense range between 0 and 4V and use 5V as the over limit setting.</p></li>
+<li><p>Use a 5.1v zener diode (D1) and current limiting resistor (R2). This should be 220 Ohms, which will protect you from 5.2V to at least 12v of over voltage at the Arduino analog pin. The Diode can be 5V or 5.1V like a 1N4733A, 1N5231B, etc. Note that after 3.5v the response is no longer linear when using the diode, so you you may want to design your system to output its current sense range between 0 and 4V and use 5V as the over limit setting.</p></li>
 <li><p>Check your board for at least 2 resistors that are labelled “103”, you will need a magnifier or to take a picture with your phone and zoom in. 103 = 10k (10 followed by 3 zeros). These are the second from the left resistor in each bank of 4 (R5 and R6). See <a class="reference internal" href="#ibt2-sense-resistors"><span class="std std-numref">Fig 166:</span></a>. When we tie the two Command Station outputs together, that gives us 5k of resistance from which to measure a voltage drop and convert that to current. If you added another 10k resistor (R1) in parallel with the others, that would give you 3.3k which reduces the voltage to the Arduino analog pin to be able to measure higher currents.</p></li>
 <li><p>Put a 5A fuse on each output leg going to your track.</p></li>
 </ul>
@@ -1102,7 +1102,7 @@ $15.51 +tax; prime shipping</p>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f872e14b700>
+    <jinja2.runtime.BlockReference object at 0x7f05a47af1c0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

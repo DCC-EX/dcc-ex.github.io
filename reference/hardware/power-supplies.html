@@ -846,6 +846,7 @@
 <p>These are <em>common</em>, but not universal, upper limits of what decoders will accept.  You should check the manual of your decoders to confirm what they accept, and adjust the voltage down accordingly.</p>
 <p><span class="dcc-ex-red-bold-italic">Applying a voltage above what a decoder was designed for may permanently damage it.</span></p>
 </div>
+<p><strong>Voltage - on the track</strong></p>
 <p>The voltage you need depends on the <em>scale/gauge of the locos</em> you intend to run, and the <em>motor driver</em> you have.</p>
 <p>For <a class="reference internal" href="dcc-vs-dc.html"><span class="doc">DCC</span></a>, as a rough guide you need a voltage <em>on the track</em> of…</p>
 <ul class="simple">
@@ -855,22 +856,23 @@
 <li><p><strong>18v-19vDC</strong> for O scale/gauge</p></li>
 <li><p><strong>20v-24vDC</strong> for G scale/gauge</p></li>
 </ul>
-<p>Note that for purely <a class="reference internal" href="dcc-vs-dc.html"><span class="doc">DC</span></a> operation, these voltages should probably be slightly lower maximums.</p>
+<p>Note that for purely <a class="reference internal" href="dcc-vs-dc.html"><span class="doc">DC</span></a> operation, these voltages should  be slightly lower maximums as the track will get the full voltage, in pulses, all the time.</p>
+<p><strong>Power Supply Voltage</strong></p>
 <p>The voltage of the <em>power supply</em> you need will depend on the type of motor driver you have:</p>
 <ul class="simple">
 <li><p>If you have a <a href="../../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a> or <a href="../../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a> the you <em>should not exceed</em> the values listed above. This is because the EX-MotorShield8874 does not drop voltage like the <abbr title="Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.">Standard Motor Driver</abbr>. <br /> <br /></p></li>
-<li><p>If you have a <abbr title="Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.">Standard Motor Driver</abbr>, then you generally will want a power supply between 1 and 2 volts higher than the voltage you want to have on the track. this is because the <abbr title="Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.">Standard Motor Driver</abbr> is inefficient and drops voltage.</p></li>
+<li><p>If you have a <abbr title="Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.">Standard Motor Driver</abbr>, then you generally will want a power supply between <strong>1 and 2 volts higher</strong> than the voltage you want to have on the track. this is because the <abbr title="Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.">Standard Motor Driver</abbr> is inefficient and drops voltage.</p></li>
 </ul>
 <p><hr class="hr-dashed" /></p>
 <p><strong>Additional Information</strong></p>
 <blockquote>
-<div><p>N and Z scale/gauge layouts should run at at about 10-14v <a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> to avoid damage to the motors. See this thread to learn more about the pros and cons of running at higher voltages at this <a class="reference external" href="https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/">TrainBoard Thread</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> Another good link (along with just about anything written by Mark Gurries), is here: <a class="reference external" href="https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/boosters/choosing-the-right-booster">Mark Gurries - Choosing the Right Booster</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
+<div><p>N and Z scale/gauge layouts should run at at about 10-14v <a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> (at the track) to avoid damage to the motors. See this thread to learn more about the pros and cons of running at higher voltages at this <a class="reference external" href="https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/">TrainBoard Thread</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> Another good link (along with just about anything written by Mark Gurries), is here: <a class="reference external" href="https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/boosters/choosing-the-right-booster">Mark Gurries - Choosing the Right Booster</a> <img src="../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"></p>
 <p>Most larger scales/gauges will run higher voltage <a class="footnote-reference brackets" href="#id3" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. For reference, Digitrax systems put the rails at around 14v and garden scale could be 18v. Do some homework to determine what voltage is best for your system.</p>
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id3" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
-<p>The voltage you need for the <a class="reference internal" href="motor-boards.html"><span class="doc">Motor Driver</span></a> depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the <a class="reference internal" href="#powering-the-motor-driver"><span class="std std-ref">Powering the Motor Driver</span></a> for more information.</p>
+<p>The voltage you need for the <a class="reference internal" href="motor-boards.html"><span class="doc">Motor Driver</span></a> depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. <br /> See the <a class="reference internal" href="#powering-the-motor-driver"><span class="std std-ref">Powering the Motor Driver</span></a> for more information.</p>
 </aside>
 </aside>
 <p>Be aware that the <abbr title="also referred to as a 'Motor Controller', 'Motor Shield' or 'Motor Board'">Motor Driver</abbr> you use will affect the actual voltage at the track. If you use the <abbr title="Either the 'Arduino Motor Shield R38' or 'Deek-Robot Motor Shield'.">Standard Motor Driver</abbr> or any other L298 based shield or controller, you will have a 2V drop at the track. That means that if you use a 12v supply, there will be only 10v at the track. Many people prefer to use a 14.5V DC power supply with these boards. If you use any MOSFET based boards like the IBT_2 and the IRF3205 boards, there is a negligible voltage drop so 12v in will give you 12v at the track.</p>
@@ -1037,7 +1039,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f2e74fd3460>
+    <jinja2.runtime.BlockReference object at 0x7fa6475757e0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

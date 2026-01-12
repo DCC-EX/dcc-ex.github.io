@@ -25,13 +25,13 @@ I use the A2 and A3 sensor pins instead of the  A4 and A5, just a personal prefe
 
 .. figure:: /_static/images/motorboards/stacked_motor_shield_1.png
    :alt: Stacked Arduino Motor Shields 1
-   :scale: 80%
+   :scale: 100%
 
    Stacked Arduino Motor Shields 1
 
 .. figure:: /_static/images/motorboards/stacked_motor_shield_2.png
    :alt: Stacked Arduino Motor Shields 2
-   :scale: 80%
+   :scale: 70%
 
    Stacked Arduino Motor Shields 2
 
@@ -39,7 +39,7 @@ Short single wire jumpers are preferred, and that is the DFPLayer mini MP3 sound
 
 .. figure:: /_static/images/motorboards/stacked_motor_shield_3.png
    :alt: Stacked Arduino Motor Shields 3
-   :scale: 80%
+   :scale: 70%
 
    Stacked Arduino Motor Shields 3
 

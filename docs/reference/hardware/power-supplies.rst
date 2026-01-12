@@ -125,6 +125,8 @@ Voltage
    
    :dcc-ex-red-bold-italic:`Applying a voltage above what a decoder was designed for may permanently damage it.`
 
+**Voltage - on the track**
+
 The voltage you need depends on the *scale/gauge of the locos* you intend to run, and the *motor driver* you have.
 
 For |DCC|, as a rough guide you need a voltage *on the track* of...
@@ -135,23 +137,25 @@ For |DCC|, as a rough guide you need a voltage *on the track* of...
 * **18v-19vDC** for O scale/gauge
 * **20v-24vDC** for G scale/gauge
 
-Note that for purely |DC| operation, these voltages should probably be slightly lower maximums.
+Note that for purely |DC| operation, these voltages should  be slightly lower maximums as the track will get the full voltage, in pulses, all the time.
+
+**Power Supply Voltage**
 
 The voltage of the *power supply* you need will depend on the type of motor driver you have:
 
 * If you have a |EX-MS| or |EX-MS| the you *should not exceed* the values listed above. This is because the EX-MotorShield8874 does not drop voltage like the |standard motor driver|. |BR| |BR|
 
-* If you have a |standard motor driver|, then you generally will want a power supply between 1 and 2 volts higher than the voltage you want to have on the track. this is because the |standard motor driver| is inefficient and drops voltage.
+* If you have a |standard motor driver|, then you generally will want a power supply between **1 and 2 volts higher** than the voltage you want to have on the track. this is because the |standard motor driver| is inefficient and drops voltage.
 
 |HR-DASHED|
 
 **Additional Information**
 
-   N and Z scale/gauge layouts should run at at about 10-14v [1]_ to avoid damage to the motors. See this thread to learn more about the pros and cons of running at higher voltages at this `TrainBoard Thread <https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/>`_ |EXTERNAL-LINK| Another good link (along with just about anything written by Mark Gurries), is here: `Mark Gurries - Choosing the Right Booster <https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/boosters/choosing-the-right-booster>`_ |EXTERNAL-LINK|
+   N and Z scale/gauge layouts should run at at about 10-14v [1]_ (at the track) to avoid damage to the motors. See this thread to learn more about the pros and cons of running at higher voltages at this `TrainBoard Thread <https://www.trainboard.com/highball/index.php?threads/dcc-voltage-and-n-scale-locomotives.56342/>`_ |EXTERNAL-LINK| Another good link (along with just about anything written by Mark Gurries), is here: `Mark Gurries - Choosing the Right Booster <https://sites.google.com/site/markgurries/dcc-welcome-page/advanced-topics/boosters/choosing-the-right-booster>`_ |EXTERNAL-LINK|
 
    Most larger scales/gauges will run higher voltage [1]_. For reference, Digitrax systems put the rails at around 14v and garden scale could be 18v. Do some homework to determine what voltage is best for your system.
 
-   .. [1] The voltage you need for the |Motor Driver| depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
+   .. [1] The voltage you need for the |Motor Driver| depends on the scale/gauge of the layout you are using. Bigger is not always better. Too high a voltage can damage your locos. |BR| See the :ref:`reference/hardware/power-supplies:powering the motor driver` for more information.  
 
    Be aware that the |motor driver| you use will affect the actual voltage at the track. If you use the |Standard Motor Driver| or any other L298 based shield or controller, you will have a 2V drop at the track. That means that if you use a 12v supply, there will be only 10v at the track. Many people prefer to use a 14.5V DC power supply with these boards. If you use any MOSFET based boards like the IBT_2 and the IRF3205 boards, there is a negligible voltage drop so 12v in will give you 12v at the track.
 

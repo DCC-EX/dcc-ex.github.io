@@ -51,7 +51,8 @@ h4, .h4 {
   color: #00353d !important;
   /* font-size: 130% !important; */
   font-size: 120% !important;
-  text-shadow: 1px 1px #ffffff78;
+  text-shadow: 1px 1px #ffffff78;  
+  line-height: 140%;
 }
 html[data-theme='dark'] h4, .h4 {
   color: #00a3b9ff !important;

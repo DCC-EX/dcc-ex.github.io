@@ -13,7 +13,7 @@
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=8b90fff6" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/dccex_theme.css?v=d5d3beb8" />
       <link rel="stylesheet" type="text/css" href="../_static/css/big_picture_theme.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/sphinx_design_overrides.css?v=de8b2a37" />
       <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
@@ -1898,7 +1898,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <section id="servo-turnout-turnout-id-pin-active-angle-inactive-angle-profile-description-hidden-define-a-servo-turnout-point">
 <span id="servo-turnout"></span><h4><a class="toc-backref" href="#id127" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERVO_TURNOUT(</span> <span class="pre">turnout_id,</span> <span class="pre">pin,</span> <span class="pre">active_angle,</span> <span class="pre">inactive_angle,</span> <span class="pre">profile</span> <span class="pre">[,</span> <span class="pre">&quot;description&quot;]|HIDDEN</span> <span class="pre">)</span></code> - Define a servo turnout/point</a><a class="headerlink" href="#servo-turnout-turnout-id-pin-active-angle-inactive-angle-profile-description-hidden-define-a-servo-turnout-point" title="Link to this heading"></a></h4>
 <p>Define a servo turnout/point. “active_angle” is for THROW, “inactive_angle” is for CLOSE, and profile is one of Instant, Fast, Medium, Slow or Bounce (although clearly we don’t recommend Bounce for turnouts/points!).</p>
-<p><em>Parameters:</em> <br /> &gt; <strong>turnout_id</strong> - unique Id for the turnout/point servo <br /> &gt; <strong>pin</strong> - vpin to which the servo is attached <br /> &gt; <strong>active_angle</strong> - the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490 <br /> &gt; <strong>inactive_angle</strong> - the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490 <br /> &gt; <strong>profile</strong> - one of <br />    • <strong>0</strong> = Instant,  <br />    • <strong>1</strong> = Fast (0.5 sec),  <br />    • <strong>2</strong> = Medium (1 sec),  <br />    • <strong>3</strong> = Slow (2 sec) and  <br />    • <strong>4</strong> = Bounce (subject to revision) <br /> &gt; <strong>description</strong> - The description that will be assigned to the turnout/point, or <br /> &gt; <em>HIDDEN</em> - keyword - if used instead of the “description” the Turnout/point will not appear in the lists sent to throttle/controllers <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>turnout_id</strong> - unique Id for the turnout/point servo <br /> &gt; <strong>pin</strong> - vpin to which the servo is attached <br /> &gt; <strong>active_angle</strong> - the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490 <br /> &gt; <strong>inactive_angle</strong> - the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490 <br /> &gt; <strong>profile</strong> - one of <br />    • <strong>Instant</strong> = Instant,  <br />    • <strong>Fast</strong> = Fast (0.5 sec),  <br />    • <strong>Medium</strong> = Medium (1 sec),  <br />    • <strong>Slow</strong> = Slow (2 sec) and  <br />    • <strong>Bounce</strong> = Bounce (subject to revision) <br /> &gt; <strong>description</strong> - The description that will be assigned to the turnout/point, or <br /> &gt; <em>HIDDEN</em> - keyword - if used instead of the “description” the Turnout/point will not appear in the lists sent to throttle/controllers <br /></p>
 <p>Refer to <a class="reference internal" href="../reference/hardware/servo-module.html"><span class="doc">Connecting a Servo Module</span></a> for more information.</p>
 <p><hr class="hr-dashed" /></p>
 </section>
@@ -2435,7 +2435,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
 <section id="servo-id-position-profile-move-an-animation-servo">
 <span id="servo"></span><h4><a class="toc-backref" href="#id176" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">SERVO(</span> <span class="pre">id,</span> <span class="pre">position,</span> <span class="pre">profile</span> <span class="pre">)</span></code> - Move an animation servo</a><a class="headerlink" href="#servo-id-position-profile-move-an-animation-servo" title="Link to this heading"></a></h4>
 <p>Move an animation servo. <em>Do NOT use for Turnouts/points.</em></p>
-<p><em>Parameters:</em> <br /> &gt; <strong>id</strong> - id of the servo to move <br /> &gt; <strong>position</strong> - position to move to <br /> &gt; <strong>profile</strong> - one of <br />    • Instant,  <br />    • Fast (0.5 sec),  <br />    • Medium (1 sec),  <br />    • Slow (2 sec) and  <br />    • Bounce (subject to revision) <br /></p>
+<p><em>Parameters:</em> <br /> &gt; <strong>id</strong> - id of the servo to move <br /> &gt; <strong>position</strong> - position to move to <br /> &gt; <strong>profile</strong> - one of <br />    • <strong>Instant</strong> = Instant,  <br />    • <strong>Fast</strong> = Fast (0.5 sec),  <br />    • <strong>Medium</strong> = Medium (1 sec),  <br />    • <strong>Slow</strong> = Slow (2 sec) and  <br />    • <strong>Bounce</strong> = Bounce (subject to revision)</p>
 <p><hr class="hr-dashed" /></p>
 </section>
 <section id="servo2-id-position-duration-move-an-animation-servo-taking-duration">
@@ -3329,7 +3329,7 @@ always considered a stop.  The exact aspect codes to be used must be determined 
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fa647690040>
+    <jinja2.runtime.BlockReference object at 0x7efee8544a90>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

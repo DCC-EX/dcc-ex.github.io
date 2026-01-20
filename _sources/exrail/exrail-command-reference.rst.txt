@@ -1570,11 +1570,11 @@ Define a servo turnout/point. "active_angle" is for THROW, "inactive_angle" is f
 |_| > **active_angle** - the PWM value corresponding to the servo position for THROWN state, normally in the range 102 to 490 |BR|
 |_| > **inactive_angle** - the PWM value corresponding to the servo position for CLOSED state, normally in the range 102 to 490 |BR|
 |_| > **profile** - one of |BR|
-|_| |_| |_| |_| • **0** = Instant,  |BR|
-|_| |_| |_| |_| • **1** = Fast (0.5 sec),  |BR|
-|_| |_| |_| |_| • **2** = Medium (1 sec),  |BR|
-|_| |_| |_| |_| • **3** = Slow (2 sec) and  |BR|
-|_| |_| |_| |_| • **4** = Bounce (subject to revision) |BR|
+|_| |_| |_| |_| • **Instant** = Instant,  |BR|
+|_| |_| |_| |_| • **Fast** = Fast (0.5 sec),  |BR|
+|_| |_| |_| |_| • **Medium** = Medium (1 sec),  |BR|
+|_| |_| |_| |_| • **Slow** = Slow (2 sec) and  |BR|
+|_| |_| |_| |_| • **Bounce** = Bounce (subject to revision) |BR|
 |_| > **description** - The description that will be assigned to the turnout/point, or |BR|
 |_| > *HIDDEN* - keyword - if used instead of the "description" the Turnout/point will not appear in the lists sent to throttle/controllers |BR|
 
@@ -2486,11 +2486,11 @@ Move an animation servo. *Do NOT use for Turnouts/points.*
 |_| > **id** - id of the servo to move |BR|
 |_| > **position** - position to move to |BR|
 |_| > **profile** - one of |BR|
-|_| |_| |_| |_| • Instant,  |BR|
-|_| |_| |_| |_| • Fast (0.5 sec),  |BR|
-|_| |_| |_| |_| • Medium (1 sec),  |BR|
-|_| |_| |_| |_| • Slow (2 sec) and  |BR|
-|_| |_| |_| |_| • Bounce (subject to revision) |BR|
+|_| |_| |_| |_| • **Instant** = Instant,  |BR|
+|_| |_| |_| |_| • **Fast** = Fast (0.5 sec),  |BR|
+|_| |_| |_| |_| • **Medium** = Medium (1 sec),  |BR|
+|_| |_| |_| |_| • **Slow** = Slow (2 sec) and  |BR|
+|_| |_| |_| |_| • **Bounce** = Bounce (subject to revision)
 
 |hr-dashed|
 

@@ -31,7 +31,7 @@
     - 5
     - 
 
-  * - :doc:`Arduino Motor Shield R3</reference/hardware/motorboards/arduino-motor-shield>` [#b23]_ [#b24]_
+  * - :doc:`Arduino Motor Shield R3</reference/hardware/motorboards/arduino-motor-shield>` [#b24]_
     - Yes
     - Yes
     - Conductor

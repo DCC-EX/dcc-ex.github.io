@@ -717,37 +717,37 @@
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#what-is-a-motor-driver" id="id13">What is a Motor Driver?</a></p></li>
-<li><p><a class="reference internal" href="#current-list-of-boards" id="id14">Current list of boards</a></p>
+<li><p><a class="reference internal" href="#what-is-a-motor-driver" id="id14">What is a Motor Driver?</a></p></li>
+<li><p><a class="reference internal" href="#current-list-of-boards" id="id15">Current list of boards</a></p>
 <ul>
-<li><p><a class="reference internal" href="#trackmanager-dc-compatible-boards" id="id15">TrackManager DC compatible boards</a></p></li>
-<li><p><a class="reference internal" href="#easy-to-use-boards" id="id16">Easy to use boards</a></p></li>
-<li><p><a class="reference internal" href="#intermediate-boards" id="id17">Intermediate boards</a></p></li>
-<li><p><a class="reference internal" href="#expert-level-boards" id="id18">Expert Level Boards</a></p></li>
-<li><p><a class="reference internal" href="#incompatible-boards" id="id19">Incompatible boards</a></p></li>
-<li><p><a class="reference internal" href="#other-boards" id="id20">Other boards</a></p></li>
+<li><p><a class="reference internal" href="#trackmanager-dc-compatible-boards" id="id16">TrackManager DC compatible boards</a></p></li>
+<li><p><a class="reference internal" href="#easy-to-use-boards" id="id17">Easy to use boards</a></p></li>
+<li><p><a class="reference internal" href="#intermediate-boards" id="id18">Intermediate boards</a></p></li>
+<li><p><a class="reference internal" href="#expert-level-boards" id="id19">Expert Level Boards</a></p></li>
+<li><p><a class="reference internal" href="#incompatible-boards" id="id20">Incompatible boards</a></p></li>
+<li><p><a class="reference internal" href="#other-boards" id="id21">Other boards</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#configuring-motor-drivers" id="id21">Configuring Motor Drivers</a></p></li>
-<li><p><a class="reference internal" href="#high-accuracy-waveform" id="id22">High Accuracy Waveform</a></p></li>
+<li><p><a class="reference internal" href="#configuring-motor-drivers" id="id22">Configuring Motor Drivers</a></p></li>
+<li><p><a class="reference internal" href="#high-accuracy-waveform" id="id23">High Accuracy Waveform</a></p></li>
 </ul>
 </nav>
 </aside>
 <p><a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> is compatible with a wide variety of motor drivers, also known as “dual H-bridges” and “motor shields”. We’ve sorted them from least difficult to most difficult to use to help you decide what to use. When it comes to selecting a board, some considerations are size, whether it is a shield or needs to be connected with jumper wires, the amount of current you need, and whether it has current sensing capability built-in or if you have to supply it yourself.</p>
 <p>If you have trouble finding a particular board from the list, try searching based on it’s name or the type of chip on the board and the terms “H-Bridge” or “<abbr title="also referred to as a 'Motor Controller', 'Motor Driver' or Motor Board'">Motor Shield</abbr>”. There are often many places that sell these, especially the Chinese sites like AliExpress and Banggood.</p>
 <p><strong>TL;DR</strong> (aka short version): We currently recommend the <a href="../../index.html"><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span></a> EX-MotorShield8874, and the Arduino Motor Shield R3 or a supported clone like the Deek-Robot.</p>
-<figure class="align-default" id="id11">
+<figure class="align-default" id="id12">
 <a class="reference internal image-reference" href="../../_images/ex_motorshield8874.png"><img alt="DCC-EX EX-MotorShield8874 RevA" src="../../_images/ex_motorshield8874.png" style="width: 345.0px; height: 272.4px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig 135: </span><span class="caption-text">DCC-EX EX-MotorShield8874 RevA</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
+<p><span class="caption-number">Fig 135: </span><span class="caption-text">DCC-EX EX-MotorShield8874 RevA</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<figure class="align-default" id="id12">
+<figure class="align-default" id="id13">
 <a class="reference internal image-reference" href="../../_images/deek-robot_motor_shield.png"><img alt="Deek Robot Motor Shield" src="../../_images/deek-robot_motor_shield.png" style="width: 503.99999999999994px; height: 439.59999999999997px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig 136: </span><span class="caption-text">Deek Robot Motor Shield</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
+<p><span class="caption-number">Fig 136: </span><span class="caption-text">Deek Robot Motor Shield</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <div class="admonition note">
@@ -755,7 +755,7 @@
 <p>Where appropriate, we have used the terms “single” and “dual” to indicate on the non-shield type boards, which ones have just a single H-Bridge for one track and which ones have two. A single H-Bridge board will power your main track, but you will then need another board of some kind to connect to your programming track</p>
 </div>
 <section id="what-is-a-motor-driver">
-<h2><a class="toc-backref" href="#id13" role="doc-backlink">What is a Motor Driver?</a><a class="headerlink" href="#what-is-a-motor-driver" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">What is a Motor Driver?</a><a class="headerlink" href="#what-is-a-motor-driver" title="Link to this heading"></a></h2>
 <p>A motor driver (aka ‘motor controller’, aka ‘motor shield’, aka ‘motor board’) is just a high voltage, high current switch. While initially designed to power electric motors, we use it to create the DCC signal to the track in a clever misapplication of technology. Normally, a pulse width modulated (PWM) signal would be applied to a motor with the PWM pin to control speed and the direction pin would switch the voltage from positive to negative to control the motor spin direction. Instead, we send full DC track voltage to the PWM pin and switch the direction pin at the DCC frequency (around 8000 times a second) to generate the bi-polar square wave. In this way, we use the 5V DC (or 3.3V) microcontroller output to switch the voltage from separate 12-16v DC power supply <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> connected to the <abbr title="also referred to as a 'Motor Controller', 'Motor Shield' or 'Motor Board'">Motor Driver</abbr>, and create a pulse train signal of 1’s and 0’s that a mobile decoder can interpret as commands.</p>
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id2" role="doc-footnote">
@@ -765,7 +765,7 @@
 </aside>
 </section>
 <section id="current-list-of-boards">
-<h2><a class="toc-backref" href="#id14" role="doc-backlink">Current list of boards</a><a class="headerlink" href="#current-list-of-boards" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">Current list of boards</a><a class="headerlink" href="#current-list-of-boards" title="Link to this heading"></a></h2>
 <p>In this section we outline the various details that we know of related to each of the different boards that we’ve either tested, or know to work based on user feedback.</p>
 <p>We’ve compiled this simple summary table to help with this:</p>
 <table class="command-table docutils align-default">
@@ -798,12 +798,12 @@
 <td><p>5</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="motorboards/arduino-motor-shield.html"><span class="doc">Arduino Motor Shield R3</span></a> <a class="footnote-reference brackets" href="#b23" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#b24" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="motorboards/arduino-motor-shield.html"><span class="doc">Arduino Motor Shield R3</span></a> <a class="footnote-reference brackets" href="#b24" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Conductor</p></td>
 <td><p>UNO / Mega</p></td>
-<td><p>No</p></td>
+<td><p>Yes <a class="footnote-reference brackets" href="#b25" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
@@ -816,7 +816,7 @@
 <td><p>Yes</p></td>
 <td><p>Conductor</p></td>
 <td><p>UNO / Mega</p></td>
-<td><p>No</p></td>
+<td><p>Yes <a class="footnote-reference brackets" href="#b25" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a></p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
 <td><p>Yes</p></td>
@@ -934,8 +934,8 @@
 <td><p>Engineer</p></td>
 <td><p>UNO / Mega</p></td>
 <td><p>No</p></td>
-<td><p>Yes <a class="footnote-reference brackets" href="#b23" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></p></td>
 <td><p>Yes <a class="footnote-reference brackets" href="#b23" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></p></td>
+<td><p>Yes <a class="footnote-reference brackets" href="#b23" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></p></td>
 <td><p>No</p></td>
 <td><p>2</p></td>
 <td><p>2</p></td>
@@ -1028,17 +1028,22 @@
 </aside>
 <aside class="footnote brackets" id="b23" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id6">1</a>,<a role="doc-backlink" href="#id9">2</a>,<a role="doc-backlink" href="#id10">3</a>)</span>
+<span class="backrefs">(<a role="doc-backlink" href="#id10">1</a>,<a role="doc-backlink" href="#id11">2</a>)</span>
 <p>Requires modification of the board to support Current Sense</p>
 </aside>
 <aside class="footnote brackets" id="b24" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id7">1</a>,<a role="doc-backlink" href="#id8">2</a>)</span>
+<span class="backrefs">(<a role="doc-backlink" href="#id6">1</a>,<a role="doc-backlink" href="#id8">2</a>)</span>
 <p>The <em>Arduino Motor Shield R38</em> and the <em>Deek-Robot Motor Shield</em> are interchangeably referred to in this documentation as the <em>standard motor driver</em></p>
+</aside>
+<aside class="footnote brackets" id="b25" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id7">1</a>,<a role="doc-backlink" href="#id9">2</a>)</span>
+<p>Can be stacked, but it is complicated. See <a class="reference internal" href="motorboards/arduino-motor-shield-stacked.html"><span class="doc">Stacking Arduino Motor Shields</span></a></p>
 </aside>
 </aside>
 <section id="trackmanager-dc-compatible-boards">
-<h3><a class="toc-backref" href="#id15" role="doc-backlink">TrackManager DC compatible boards</a><a class="headerlink" href="#trackmanager-dc-compatible-boards" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">TrackManager DC compatible boards</a><a class="headerlink" href="#trackmanager-dc-compatible-boards" title="Link to this heading"></a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>There are specific pin and hardware requirements in order to support DC mode in <span class="ex-suffix">TrackManager</span>. Use of any other board than this short list for DC mode is unsupported by the <a href="../../index.html"><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span></a> team.</p>
@@ -1053,7 +1058,7 @@
 </ul>
 </section>
 <section id="easy-to-use-boards">
-<h3><a class="toc-backref" href="#id16" role="doc-backlink">Easy to use boards</a><a class="headerlink" href="#easy-to-use-boards" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">Easy to use boards</a><a class="headerlink" href="#easy-to-use-boards" title="Link to this heading"></a></h3>
 <p><a class="reference external" href="../../begin/levels.html#conductor"><img alt="Conductor Hat" src="../../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a></p>
 <div class="toctree-wrapper compound">
 <ul>
@@ -1067,7 +1072,7 @@
 </div>
 </section>
 <section id="intermediate-boards">
-<h3><a class="toc-backref" href="#id17" role="doc-backlink">Intermediate boards</a><a class="headerlink" href="#intermediate-boards" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">Intermediate boards</a><a class="headerlink" href="#intermediate-boards" title="Link to this heading"></a></h3>
 <p><a class="reference external" href="../../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../support/index.html#contact-support-options" title="Request help or support"><img src="../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
 <p>These boards require wiring.</p>
 <div class="toctree-wrapper compound">
@@ -1081,7 +1086,7 @@
 </div>
 </section>
 <section id="expert-level-boards">
-<h3><a class="toc-backref" href="#id18" role="doc-backlink">Expert Level Boards</a><a class="headerlink" href="#expert-level-boards" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id19" role="doc-backlink">Expert Level Boards</a><a class="headerlink" href="#expert-level-boards" title="Link to this heading"></a></h3>
 <p><a class="reference external" href="../../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../support/index.html#contact-support-options" title="Request help or support"><img src="../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
 <p>These boards require you to add your own config to the config.h file, and may not have good current sensing. That said, if you buy a separate current sense board, we particularly like the IBT_2 board (though you will need 2 of them or some other board for the programming track)</p>
 <div class="toctree-wrapper compound">
@@ -1094,7 +1099,7 @@
 </div>
 </section>
 <section id="incompatible-boards">
-<h3><a class="toc-backref" href="#id19" role="doc-backlink">Incompatible boards</a><a class="headerlink" href="#incompatible-boards" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id20" role="doc-backlink">Incompatible boards</a><a class="headerlink" href="#incompatible-boards" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>VNH2SP30 - SparkFun Monster Moto and others. It can’t switch fast enough to generate a reliable DCC signal</p></li>
 <li><p>IFX9202ED - Infineon Dual H-Bridge. Can’t switch fast enough.</p></li>
@@ -1104,7 +1109,7 @@
 </ul>
 </section>
 <section id="other-boards">
-<h3><a class="toc-backref" href="#id20" role="doc-backlink">Other boards</a><a class="headerlink" href="#other-boards" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id21" role="doc-backlink">Other boards</a><a class="headerlink" href="#other-boards" title="Link to this heading"></a></h3>
 <p><a class="reference external" href="../../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../support/index.html#contact-support-options" title="Request help or support"><img src="../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
 <p>While not fully supported and tested, other boards can potentially be used. Look for the following criteria:</p>
 <ul class="simple">
@@ -1121,7 +1126,7 @@
 </section>
 </section>
 <section id="configuring-motor-drivers">
-<h2><a class="toc-backref" href="#id21" role="doc-backlink">Configuring Motor Drivers</a><a class="headerlink" href="#configuring-motor-drivers" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id22" role="doc-backlink">Configuring Motor Drivers</a><a class="headerlink" href="#configuring-motor-drivers" title="Link to this heading"></a></h2>
 <p><a class="reference external" href="../../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../support/index.html#contact-support-options" title="Request help or support"><img src="../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
 <p>If your board is not in the list of supported motor driver types, or if you need to make changes or have more information about how motor drivers are configured in <a href="../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>, see:</p>
 <div class="toctree-wrapper compound">
@@ -1131,7 +1136,7 @@
 </div>
 </section>
 <section id="high-accuracy-waveform">
-<h2><a class="toc-backref" href="#id22" role="doc-backlink">High Accuracy Waveform</a><a class="headerlink" href="#high-accuracy-waveform" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id23" role="doc-backlink">High Accuracy Waveform</a><a class="headerlink" href="#high-accuracy-waveform" title="Link to this heading"></a></h2>
 <p><a class="reference external" href="../../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../support/index.html#contact-support-options" title="Request help or support"><img src="../../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
 <p>If you’re experiencing issues with specific decoders and all attempts to get them working are failing, you may need to enable the high accuracy waveform functionality (providing your motor driver supports it).</p>
 <div class="toctree-wrapper compound">
@@ -1163,7 +1168,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f48b45a4370>
+    <jinja2.runtime.BlockReference object at 0x7fef3de51720>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

@@ -36,7 +36,7 @@
     - Yes
     - Conductor
     - UNO / Mega
-    - No
+    - Yes [#b25]_
     - Yes
     - Yes
     - Yes
@@ -49,7 +49,7 @@
     - Yes
     - Conductor
     - UNO / Mega
-    - No
+    - Yes [#b25]_
     - Yes
     - Yes
     - Yes
@@ -250,3 +250,4 @@
 .. [#b22] Requires modification of the board to stack the second board
 .. [#b23] Requires modification of the board to support Current Sense
 .. [#b24] The *Arduino Motor Shield R38* and the *Deek-Robot Motor Shield* are interchangeably referred to in this documentation as the *standard motor driver*
+.. [#b25] Can be stacked, but it is complicated. See :doc:`/reference/hardware/motorboards/arduino-motor-shield-stacked`

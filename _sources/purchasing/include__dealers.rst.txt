@@ -30,7 +30,7 @@ In Canada serving Canada and the United States
 .. rst-class:: clearer
 
 
-* `Narrow Gauge Model Railway Supply Canada <https://ngmrsc.ca/>`_ |EXTERNAL-LINKxa|
+* `DCC Supply Canada <https://dccsc.ca/>`_ |EXTERNAL-LINKxa|
 
 |HR-DASHEDxa|
 

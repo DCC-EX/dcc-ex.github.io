@@ -45,6 +45,12 @@ Using |Engine Driver| direct WiFi connection in a unedited TrackManager and |EX-
 * `DCC-EX Command Station with EXRAIL & TrackManager Part 1 <https://m.youtube.com/watch?v=q58SyQ0eA7c>`_ |EXTERNAL-LINK|
 * `DCC-EX Command Station with EXRAIL & TrackManager Part 2 <https://m.youtube.com/watch?v=-W-5n19eDOk>`_ |EXTERNAL-LINK|
 
+
+Chris Percival
+--------------
+
+* `Model Railroad Automation using DCC EX EX Installer <https://www.youtube.com/watch?v=vecUyk5UnCg>`_ |EXTERNAL-LINK|  |BR| an introduction to using the |EX-I| and creating automation scripts with it.
+
 DriverDTrains
 -------------
 

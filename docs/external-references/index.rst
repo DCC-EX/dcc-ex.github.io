@@ -45,7 +45,6 @@ Using |Engine Driver| direct WiFi connection in a unedited TrackManager and |EX-
 * `DCC-EX Command Station with EXRAIL & TrackManager Part 1 <https://m.youtube.com/watch?v=q58SyQ0eA7c>`_ |EXTERNAL-LINK|
 * `DCC-EX Command Station with EXRAIL & TrackManager Part 2 <https://m.youtube.com/watch?v=-W-5n19eDOk>`_ |EXTERNAL-LINK|
 
-
 Chris Percival
 --------------
 
@@ -61,6 +60,13 @@ Sumner Patterson
 ----------------
 
 * 09 Feb 2025 - DC and DCC - `TrackManager Demo 3 <https://youtu.be/IWxa5MopC9o>`_ |EXTERNAL-LINK|
+
+Luca Dentella
+-------------
+
+* `EX-CSB1, the command station for DCC-EX <https://youtu.be/wEtRo8Qh9J4?si=Fk65-capXqcda0ql>`_
+* `Let's learn together - DCCEX advanced <https://www.youtube.com/watch?v=Jz0pqcfHnLo&t=9s>`_
+* `Let's learn together - WiFi DCC Command Station with DCCEX <https://youtu.be/9tfvIxm-94o?si=0hzHfw3W3lnY8aAC>`_
 
 Toms Trains and Things
 ----------------------

@@ -1175,7 +1175,7 @@ Sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
-  |_| Repeated for each defined sensor: ``<q id>`` or ``<Q id>``|BR| 
+  |_| Repeated for each defined sensor: ``<q id>`` or ``<Q id>``|BR|
   |_|  |BR|
   |_| e.g. |BR|
   |_| Response (successful) Repeated for each inactive defined sensor: ``<q id>`` |BR|
@@ -2644,4 +2644,28 @@ Other Commands
   |_| > **cmd:** user defined command
   
   *Response:* N/A
+
+---
+
+Broadcasts with no equivalent commands
+--------------------------------------
+
+.. contents:: In This Section
+    :depth: 4
+    :local:
+    :class: in-this-section
+
+|hr-dashed|
+
+.. _native-command-m-message:
+
+``<m message>`` - Broadcast message to all connected native protocol clients
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Response:* |BR|
+  |_| ``<m message>``
+
+  *Examples*
+
+    <m This is a message to display>
 

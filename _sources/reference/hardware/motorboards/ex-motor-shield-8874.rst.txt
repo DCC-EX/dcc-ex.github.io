@@ -61,7 +61,7 @@ The EX-Motorshield8874 is pin compatible with the original Arduino Motor Shield 
   
 The |EX-MS| is based on two DRV8874 H-bridge motor drivers with integrated current sensing from Texas Instruments (TI). It is used to drive inductive loads like relays, solenoids, DC and stepping motors, as well as provide the DCC signal and power to the model railroad tracks.
 
-Powering of Arduino boards is possible due to the on board DC/DC buck converter, supporting a wide input supply range from 9 to 30V. The reverse polarity protection prevents damage to the circuit and its components in case the power supply is accidentally connected backwards.
+Powering of Arduino boards is possible due to the on board DC/DC buck converter, supporting a wide input supply range from 9 to 25V. The reverse polarity protection prevents damage to the circuit and its components in case the power supply is accidentally connected backwards.
 
 The board's 5V and 3V3 friendly design makes it suitable for a broad range of Arduino compatible platforms, with an override that compensates for designs with incomplete support (such as an incorrect IORef voltage).
 
@@ -121,7 +121,7 @@ Shown here are examples of the shield plugged into Mega+WiFi, Nucleo-F411RE:
 1. Connect DC Power to Motor Driver
 ------------------------------------
 
-The |EX-MS| accepts a standard 2.1mm inside diameter DC barrel jack for DC power, with centre pin positive, and polarity protected for your safety. Acceptable voltages for correct DCC operation include 10-24VDC, but the shield can cope with 9-30VDC.
+The |EX-MS| accepts a standard 2.1mm inside diameter DC barrel jack for DC power, with centre pin positive, and polarity protected for your safety. Acceptable voltages for correct DCC operation include 10-24VDC, but the shield can cope with 9-25VDC.
 
 .. figure:: /_static/images/motorboards/ex_motorshield8874_purple_megawifi.png
    :alt: DCC-EX EX-MotorShield8874 on Mega+WiFi with power and track connectors

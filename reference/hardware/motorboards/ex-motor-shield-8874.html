@@ -794,7 +794,7 @@
 <li><p>Optional OLED header to connect a display directly to the shield</p></li>
 </ul>
 <p>The <a href="../../../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a> is based on two DRV8874 H-bridge motor drivers with integrated current sensing from Texas Instruments (TI). It is used to drive inductive loads like relays, solenoids, DC and stepping motors, as well as provide the DCC signal and power to the model railroad tracks.</p>
-<p>Powering of Arduino boards is possible due to the on board DC/DC buck converter, supporting a wide input supply range from 9 to 30V. The reverse polarity protection prevents damage to the circuit and its components in case the power supply is accidentally connected backwards.</p>
+<p>Powering of Arduino boards is possible due to the on board DC/DC buck converter, supporting a wide input supply range from 9 to 25V. The reverse polarity protection prevents damage to the circuit and its components in case the power supply is accidentally connected backwards.</p>
 <p>The board’s 5V and 3V3 friendly design makes it suitable for a broad range of Arduino compatible platforms, with an override that compensates for designs with incomplete support (such as an incorrect IORef voltage).</p>
 <p>This Shield features a status LED for supply, which provides a visual indication of the power supply status in addition to LEDs to show each side of the A and B power outputs.</p>
 </section>
@@ -887,7 +887,7 @@
 </figure>
 <section id="connect-dc-power-to-motor-driver">
 <h3><a class="toc-backref" href="#id26" role="doc-backlink">1. Connect DC Power to Motor Driver</a><a class="headerlink" href="#connect-dc-power-to-motor-driver" title="Link to this heading"></a></h3>
-<p>The <a href="../../../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a> accepts a standard 2.1mm inside diameter DC barrel jack for DC power, with centre pin positive, and polarity protected for your safety. Acceptable voltages for correct DCC operation include 10-24VDC, but the shield can cope with 9-30VDC.</p>
+<p>The <a href="../../../reference/hardware/motorboards/ex-motor-shield-8874.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;MotorShield8874</span></a> accepts a standard 2.1mm inside diameter DC barrel jack for DC power, with centre pin positive, and polarity protected for your safety. Acceptable voltages for correct DCC operation include 10-24VDC, but the shield can cope with 9-25VDC.</p>
 <figure class="align-default" id="id7">
 <a class="reference internal image-reference" href="../../../_images/ex_motorshield8874_purple_megawifi.png"><img alt="DCC-EX EX-MotorShield8874 on Mega+WiFi with power and track connectors" src="../../../_images/ex_motorshield8874_purple_megawifi.png" style="width: 402.5px; height: 188.4px;" />
 </a>
@@ -1213,7 +1213,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fcb5545d900>
+    <jinja2.runtime.BlockReference object at 0x7f2fef55c850>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

@@ -2,10 +2,159 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2026-04-09T03:20:13.614060+00:00</updated>
+  <updated>2026-05-03T08:37:27.814618+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.12">ABlog</generator>
+  <entry>
+    <id>https://dcc-ex.com/news/posts/20260501.html</id>
+    <title>Announcing EX-CommandStation 5.6.0</title>
+    <updated>2026-05-01T00:00:00+00:00</updated>
+    <author>
+      <name>Paul Antoine</name>
+    </author>
+    <content type="html">&lt;img alt="DCC-EX News" class="image-product-logo-float-right" src="https://dcc-ex.com/_images/product-logo-news.png" style="width: 320.0px; height: 64.0px;" /&gt;
+&lt;section id="announcing-ex-commandstation-5-6-0"&gt;
+
+&lt;p&gt;The &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team are excited to announce a new Production release of &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; with version 5.6.0 being made available today. This release adds significant &lt;strong&gt;new features and enhancements&lt;/strong&gt; including new automation and animation features, to enhance your digital model railroading experience! We’re also announcing changes to our &lt;strong&gt;supported hardware platforms&lt;/strong&gt;. This release includes all of the new features and bug fixes from development versions v5.5.0 to v5.6.0&lt;/p&gt;
+&lt;p&gt;To update your &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; please use &lt;a href="../../ex-installer/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;Installer&lt;/span&gt;&lt;/a&gt; where you can. Further installation options can be found below.&lt;/p&gt;
+&lt;section id="new-features-and-enhancements"&gt;
+&lt;h2&gt;New features and enhancements&lt;/h2&gt;
+&lt;p&gt;Just check out this list of features and enhancements added since our last release:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Beta support for Nucleo-144 boards, specifically the Ethernet-equipped F429ZI and F439ZI&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Discontinued support for UNO and Nano Arduino platforms, due to both RAM and FLASH limitations on these models. The version 5.4.x series is the last series that supports UNO and Nano Arduino platforms.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add Booster mode support for the EX-CSB1, enabling DCC waveform replication out of up to 4 DCC outputs on an EX-CSB1&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add Sniffer mode support for the EX-CSB1, enabling merging of DCC commands from any legacy DCC command station, with the DCC packet queue on the EX-CSB1&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add further I2C device support, including: Adafruit NeoDriver board for driving NeoPixels and WS2811 compatible RGB LED strings up to 500 LEDs per device, DS1307 Real Time Clock, SC16IS752 single and dual UART driving DFPlayer modules&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add Momentum feature for the Command Station, that does not rely on CV values, and can operate on DCC or DC driven locos&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add Consist feature for the Command Station, that does not rely on CV values. All throttle commands to the nominated lead loco are sent to the remaining locos in the consist&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;RailCom cutout implemented on mega2560 with EX8874 motor shield, support for ESP32 and STM32 platforms is under development&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;DCC packet queue (DCC packet sending optimization and added 5ms gap due to new RCN requiremet)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;EXRAIL compile time checking of errors in EXRAIL code, looking for duplicate and missing IDs for automation, routes, and sequences, and calls, latches and reserves that are out of range, and speeds out of range&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Dynamic allocation of loco table entries&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ESP32 can turn wifi off, which may be useful when used in Booster mode, or when only managed via its USB port (JMRI etc.)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Number of active mobile decoders tuned dynamically according to available RAM&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="new-dcc-ex-native-commands-specific-commands-and-enhancements"&gt;
+&lt;h2&gt;New &lt;a class="reference internal" href="reference/software/withrottle-vs-native-commands.html"&gt;&lt;span class="doc"&gt;DCC-EX Native Commands&lt;/span&gt;&lt;/a&gt; specific commands and enhancements:&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;R LOCOID and R CONSIST&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&amp;#64; for LCD&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;^ for consist&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;k and K for block enter/exit&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;m for momentum&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;!P !R !Q (estop functions)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;y sound controls&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;JM stash functions&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A send extended accessory signal aspect packets&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;o NeoPixel/RGB LED control&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="enhancements-to-the-ex-r-scripting-language"&gt;
+&lt;h2&gt;Enhancements to the &lt;a href="../../exrail/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;RAIL&lt;/span&gt;&lt;/a&gt; scripting language:&lt;/h2&gt;
+&lt;p&gt;For details on these changes and new commands, refer to the documentation.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;STASH&lt;/span&gt;&lt;/code&gt; command to save a loco&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ROUTE_DISABLED&lt;/span&gt;&lt;/code&gt; macro&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;STEALTH&lt;/span&gt;&lt;/code&gt; macro to allow arbitrary C++ code to be embedded as a single step in an exrail sequence. Serious engineers only.  &lt;a style="font-weight: bold; font-style: italic; color: #00a3b9 !important;" href="../../begin/levels.html#engineer"&gt;Engineer&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;STEALTH_GLOBAL&lt;/span&gt;&lt;/code&gt; macro to insert code such as static variables and functions that may be utilised by multiple STEALTH operations. ADVANCED C++ users only. &lt;a style="font-weight: bold; font-style: italic; color: #00a3b9 !important;" href="../../begin/levels.html#engineer"&gt;Engineer&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;HAL_IGNORE_DEFAULTS&lt;/span&gt;&lt;/code&gt; macro to turn off the built-in default I2C device definitions&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;JMRI_SENSOR&lt;/span&gt;&lt;/code&gt; macro can now create an entire range of sensor IDs&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;CONFIGURE_SERVO&lt;/span&gt;&lt;/code&gt; macro as a more convenient means of configuring servos in myAutomation.h&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ASPECT&lt;/span&gt;&lt;/code&gt; macro to set aspect on a DCC accessory signal&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;DCCX_SIGNAL&lt;/span&gt;&lt;/code&gt; macro for definining a signal&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;BLINK&lt;/span&gt;&lt;/code&gt; command to blink a vpin in a pattern defined by the milliseconds it will be on and off&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;FTOGGLE&lt;/span&gt;&lt;/code&gt; command to toggle a function on the current loco&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;XFTOGGLE&lt;/span&gt;&lt;/code&gt; command to toggle a function on the nominated loco&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;TOGGLE_TURNOUT&lt;/span&gt;&lt;/code&gt; toggles the nominated turnout&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ONBUTTON&lt;/span&gt;&lt;/code&gt; macro to start a task once a button input passes the debounce criteria&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ONSENSOR&lt;/span&gt;&lt;/code&gt; macro to start a task based on a sensor change&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;NEOPIXEL&lt;/span&gt;&lt;/code&gt; macro to control NeoPixels/RGB LEDs&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;NEOPIXEL_SIGNAL&lt;/span&gt;&lt;/code&gt; macro to control single NeoPixel/RGB LED signals&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="bug-fixes-and-optimizations"&gt;
+&lt;h2&gt;Bug fixes and optimizations:&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;ESP32 packet generation could miss packets&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;DFPlayer bugs fixed&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;STM32 DCC waveform gaps fixed&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ESP32 WIFI AP mode was not always selected when requested&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="known-issues"&gt;
+&lt;h2&gt;Known Issues&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Installer v0.20 does not support some CSB1 specific &lt;cite&gt;config.h&lt;/cite&gt; options: BOOSTER_INPUT, WIFI_LED&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Installer v0.20 does not support some nucleo boards, but support is coming in v0.21&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="changes-to-supported-hardware-platforms"&gt;
+&lt;h2&gt;Changes to supported hardware platforms&lt;/h2&gt;
+&lt;p&gt;We continue to recommend the tried and true Arduino Mega2560 as our preferred and recommended easy DIY hardware platform for &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt;. We have seen some quality issues with the cheaper end of the clone variants of these boards. In general genuine Arduino and Elegoo clones remain our recommendations, but the genuine Arduino Mega is quite expensive given its performance.&lt;/p&gt;
+&lt;p&gt;However we strongly recommend our new &lt;a href="../../ex-commandstation/rtr-index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&amp;thinsp;/&amp;thinsp;Booster One Express&lt;/span&gt;&lt;/a&gt; platform based on the ESP32-WROOM for its ease of use, flexibility of roles as Command Station or Booster, and ability to support up to 4 DCC/DC PWM outputs with ease. Anyone not familiar with electronics, or simply time-poor and wanting to spend their precious modelling time building layouts and running trains should consider the &lt;a href="../../ex-commandstation/rtr-index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&amp;thinsp;/&amp;thinsp;Booster One Express&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;Arduino UNO and Nano&lt;/strong&gt;, however, are &lt;strong&gt;no longer supported&lt;/strong&gt; as of this release. They are just too limited in terms of RAM and FLASH resources and capability to fit all of the &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; feature set. The v5.4.0 relaase was the last release to support these platforms, and they will continue to work with that version, but no new features will be added for them, and they are not recommended for new users.&lt;/p&gt;
+&lt;p&gt;Read below for a summary of the changes to our supported hardware platforms.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="supported-and-recommended-platforms"&gt;
+&lt;h2&gt;Supported and recommended platforms&lt;/h2&gt;
+&lt;p&gt;New users should choose one of these platforms to make use of all features and capabilities.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="reference/hardware/microcontrollers/arduino-mega.html"&gt;&lt;span class="doc"&gt;Arduino Mega (Recommended)&lt;/span&gt;&lt;/a&gt; genuine Arduino Mega 2560 R3, and good quality clones - continues as supported and recommended, but RAM is limited for large layouts with lots of accessories and/or animations or automations&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="ex-csb1/index.html"&gt;&lt;span class="doc"&gt;&lt;/span&gt;&lt;/a&gt; EX-CSB1 board based on the ESP32-WROOM - new RTR recommended platform, with more RAM and FLASH than the Mega, and support for up to 4 DCC/DC PWM outputs&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference internal" href="reference/hardware/microcontrollers/esp32.html"&gt;&lt;span class="doc"&gt;ESP32 (Recommended)&lt;/span&gt;&lt;/a&gt; based boards, such as the ESP32-WROOM-32 - new recommended DIY platform, with more RAM and FLASH than the Mega&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="how-to-install-or-update-to-v5-6-0"&gt;
+&lt;h2&gt;How to Install or Update to v5.6.0?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;We recommend using our current v0.20 installer, or v0.21 or later when available, to install or upgrade to this release for the CSB1 and Mega platforms&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We have an EX-Installer update coming (v0.21) which will also handle the additional Nucleo options. In the meantime, we recommend Visual Studio Code with PlatformIO for those, and most other DIY options.&lt;/p&gt;
+&lt;p&gt;Other ways are shown below for your reference.&lt;/p&gt;
+&lt;section id="get-the-source-code-from-github-with-github-desktop"&gt;
+&lt;h3&gt;Get the source code from GitHub with GitHub Desktop:&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Install GitHub Desktop using this URL: &lt;a class="reference external" href="https://desktop.github.com/download/"&gt;https://desktop.github.com/download/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Select Clone Repository from the File menu&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Click on the URL tab&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Paste in the DCC-EX EX-CommandStation URL: &lt;a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX.git"&gt;https://github.com/DCC-EX/CommandStation-EX.git&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Select a folder for the Local Path into which the repository will be cloned, use a final folder name of CommandStation-EX if you intend to use the Arduino IDE, or anything you like if using Visual Studio Code and PlatformIO&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Click Clone&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Once downloaded, choose v5.6.0-Prod in the Current Branch drop-down&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You may then open the Arduino IDE and point it at the CommandStation-EX folder, or Visual studio code (GitHub Desktop can launch VSC for you.)&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="get-the-source-code-directly-from-within-visual-studio-code"&gt;
+&lt;h3&gt;Get the source code directly from within Visual Studio Code:&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;open a new window and using the “Clone Git Repository” option in the welcome screen, and pasting in the URL above&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;you can then select the folder into which to clone, and once downloaded, choose v5.6.0-Prod in the Current Branch drop-down&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/section&gt;
+&lt;section id="get-the-source-code-from-github-with-git-from-command-line"&gt;
+&lt;h3&gt;Get the source code from GitHub with git from command line:&lt;/h3&gt;
+&lt;div class="highlight-none notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/DCC-EX/CommandStation-EX.git
+cd CommandStation-EX
+git checkout v5.6.0-Prod
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;If you already have git in use, a &lt;cite&gt;git pull&lt;/cite&gt; command is needed to update your local files, and then the last command above to checkout the tag (or branch) you want to use.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section id="get-the-source-code-from-the-archive-files"&gt;
+&lt;h3&gt;Get the source code from the archive files:&lt;/h3&gt;
+&lt;p&gt;The archive files are availale for download at &lt;a class="reference external" href="https://github.com/DCC-EX/CommandStation-EX/releases/tag/v5.6.0-Prod"&gt;https://github.com/DCC-EX/CommandStation-EX/releases/tag/v5.6.0-Prod&lt;/a&gt; Please choose one of the first two, the zip or tar.gz, not the last two which are autogenerated by github and contain the wrong directory name.&lt;/p&gt;
+&lt;p&gt;Be sure to unpack in a new folder, not over the top of an old install.&lt;/p&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://dcc-ex.com/news/posts/20260501.html"/>
+    <summary>The &lt;a href="../../index.html"&gt;&lt;span class="dccex-suffix"&gt;DCC-&lt;/span&gt;&lt;span class="dccex-prefix"&gt;EX&lt;/span&gt;&lt;/a&gt; team are excited to announce a new Production release of &lt;a href="../../ex-commandstation/index.html"&gt;&lt;span class="ex-prefix"&gt;EX&lt;/span&gt;&lt;span class="ex-suffix"&gt;&amp;#8209;CommandStation&lt;/span&gt;&lt;/a&gt; with version 5.6.0 being made available today. This release adds significant new features and enhancements including new automation and animation features, to enhance your digital model railroading experience! We’re also announcing changes to our supported hardware platforms. This release includes all of the new features and bug fixes from development versions v5.5.0 to v5.6.0</summary>
+    <category term="ex-commandstation" label="ex-commandstation"/>
+    <category term="release" label="release"/>
+    <published>2026-05-01T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>https://dcc-ex.com/news/posts/20251219.html</id>
     <title>New documentation coming soon!</title>

@@ -39,6 +39,7 @@ Apple iOS (Phones and Tablets)
 - :doc:`DCC-EX CAB (iOS and Android) <dccex-cab>`
 - :doc:`WiThrottle Cab (iOS and Android) <withrottle-cab>`
 - :doc:`WiThrottle (iOS)<withrottle>`
+- :doc:`Signal Cab (iOS) <signal-cab>`
 
 Personal Computers
 ------------------
@@ -74,6 +75,7 @@ Note: The Android throttle apps listed above can be made to made to run on Windo
     TrainNavigator (iOS) <trainnavigator>
     Train Throttle (Windows, Mac, iOS) <train-throttle>
     WiThrottle (iOS) <withrottle>
+    Signal Cab (iOS) <signal-cab>
     DCC Commander (iOS) <dcc-commander>
     Android Apps on Windows <android-apps-on-windows>
  

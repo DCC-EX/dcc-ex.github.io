@@ -1,0 +1,170 @@
+.. include:: /include/include.rst
+.. include:: /include/include-l2.rst
+.. include:: /include/include-news.rst
+
+:blogpost: true
+:date: 1 May 2026
+:author: Paul Antoine
+:category: Release
+:tags: release, ex-commandstation
+:image: 0
+
+.. image:: /_static/images/logos/product-logo-news.png
+  :alt: DCC-EX News
+  :scale: 40%
+  :class: image-product-logo-float-right
+
+Announcing EX-CommandStation 5.6.0
+==================================
+
+The |DCC-EX| team are excited to announce a new Production release of |EX-CS| with version 5.6.0 being made available today. This release adds significant **new features and enhancements** including new automation and animation features, to enhance your digital model railroading experience! We're also announcing changes to our **supported hardware platforms**. This release includes all of the new features and bug fixes from development versions v5.5.0 to v5.6.0
+
+To update your |EX-CS| please use |EX-I| where you can. Further installation options can be found below.
+
+New features and enhancements
+-----------------------------
+
+Just check out this list of features and enhancements added since our last release:
+
+- Beta support for Nucleo-144 boards, specifically the Ethernet-equipped F429ZI and F439ZI
+- Discontinued support for UNO and Nano Arduino platforms, due to both RAM and FLASH limitations on these models. The version 5.4.x series is the last series that supports UNO and Nano Arduino platforms.
+- Add Booster mode support for the EX-CSB1, enabling DCC waveform replication out of up to 4 DCC outputs on an EX-CSB1
+- Add Sniffer mode support for the EX-CSB1, enabling merging of DCC commands from any legacy DCC command station, with the DCC packet queue on the EX-CSB1
+- Add further I2C device support, including: Adafruit NeoDriver board for driving NeoPixels and WS2811 compatible RGB LED strings up to 500 LEDs per device, DS1307 Real Time Clock, SC16IS752 single and dual UART driving DFPlayer modules
+
+- Add Momentum feature for the Command Station, that does not rely on CV values, and can operate on DCC or DC driven locos
+- Add Consist feature for the Command Station, that does not rely on CV values. All throttle commands to the nominated lead loco are sent to the remaining locos in the consist
+- RailCom cutout implemented on mega2560 with EX8874 motor shield, support for ESP32 and STM32 platforms is under development
+- DCC packet queue (DCC packet sending optimization and added 5ms gap due to new RCN requiremet)
+- EXRAIL compile time checking of errors in EXRAIL code, looking for duplicate and missing IDs for automation, routes, and sequences, and calls, latches and reserves that are out of range, and speeds out of range
+- Dynamic allocation of loco table entries
+- ESP32 can turn wifi off, which may be useful when used in Booster mode, or when only managed via its USB port (JMRI etc.)
+- Number of active mobile decoders tuned dynamically according to available RAM
+
+New |DCC-EX Native commands| specific commands and enhancements:
+----------------------------------------------------------------
+
+- R LOCOID and R CONSIST
+- @ for LCD
+- ^ for consist
+- k and K for block enter/exit
+- m for momentum
+- !P !R !Q (estop functions)
+- y sound controls
+- JM stash functions
+- A send extended accessory signal aspect packets
+- o NeoPixel/RGB LED control
+
+Enhancements to the |EX-R| scripting language:
+----------------------------------------------
+
+For details on these changes and new commands, refer to the documentation.
+
+- Add ``STASH`` command to save a loco
+- Add ``ROUTE_DISABLED`` macro
+- Add ``STEALTH`` macro to allow arbitrary C++ code to be embedded as a single step in an exrail sequence. Serious engineers only.  |engineer-text|
+- Add ``STEALTH_GLOBAL`` macro to insert code such as static variables and functions that may be utilised by multiple STEALTH operations. ADVANCED C++ users only. |engineer-text|
+- Add ``HAL_IGNORE_DEFAULTS`` macro to turn off the built-in default I2C device definitions
+- Add ``JMRI_SENSOR`` macro can now create an entire range of sensor IDs
+- Add ``CONFIGURE_SERVO`` macro as a more convenient means of configuring servos in myAutomation.h
+- Add ``ASPECT`` macro to set aspect on a DCC accessory signal
+- Add ``DCCX_SIGNAL`` macro for definining a signal
+- Add ``BLINK`` command to blink a vpin in a pattern defined by the milliseconds it will be on and off
+- Add ``FTOGGLE`` command to toggle a function on the current loco
+- Add ``XFTOGGLE`` command to toggle a function on the nominated loco
+- Add ``TOGGLE_TURNOUT`` toggles the nominated turnout
+- Add ``ONBUTTON`` macro to start a task once a button input passes the debounce criteria
+- Add ``ONSENSOR`` macro to start a task based on a sensor change
+- Add ``NEOPIXEL`` macro to control NeoPixels/RGB LEDs
+- Add ``NEOPIXEL_SIGNAL`` macro to control single NeoPixel/RGB LED signals
+
+Bug fixes and optimizations:
+----------------------------
+
+- ESP32 packet generation could miss packets
+- DFPlayer bugs fixed
+- STM32 DCC waveform gaps fixed
+- ESP32 WIFI AP mode was not always selected when requested
+
+Known Issues
+------------
+
+- Installer v0.20 does not support some CSB1 specific `config.h` options: BOOSTER_INPUT, WIFI_LED
+- Installer v0.20 does not support some nucleo boards, but support is coming in v0.21
+
+
+Changes to supported hardware platforms
+---------------------------------------
+
+We continue to recommend the tried and true Arduino Mega2560 as our preferred and recommended easy DIY hardware platform for |EX-CS|. We have seen some quality issues with the cheaper end of the clone variants of these boards. In general genuine Arduino and Elegoo clones remain our recommendations, but the genuine Arduino Mega is quite expensive given its performance.
+
+However we strongly recommend our new |EX-CSB1| platform based on the ESP32-WROOM for its ease of use, flexibility of roles as Command Station or Booster, and ability to support up to 4 DCC/DC PWM outputs with ease. Anyone not familiar with electronics, or simply time-poor and wanting to spend their precious modelling time building layouts and running trains should consider the |EX-CSB1|.
+
+The **Arduino UNO and Nano**, however, are **no longer supported** as of this release. They are just too limited in terms of RAM and FLASH resources and capability to fit all of the |DCC-EX| feature set. The v5.4.0 relaase was the last release to support these platforms, and they will continue to work with that version, but no new features will be added for them, and they are not recommended for new users.
+
+Read below for a summary of the changes to our supported hardware platforms.
+
+Supported and recommended platforms
+-----------------------------------
+
+New users should choose one of these platforms to make use of all features and capabilities.
+
+- :doc:`EX-CSB1 </ex-csb1/index>` custom board designed by the |DCC-EX| team, based on the ESP32-WROOM - new Ready-to-Run recommended platform, with more RAM and FLASH than the Arduino Mega, and support for up to 4 DCC/DC PWM outputs |conductor-text| |tinkerer-text| |engineer-text|
+- :doc:`Arduino Mega 2560 R3 </reference/hardware/microcontrollers/arduino-mega>` - easiest DIY solution continues as supported and recommended, but RAM is limited for large layouts with lots of accessories and/or animations or automations |tinkerer-text| |engineer-text|
+- :doc:`ESP32-based boards </reference/hardware/microcontrollers/esp32>` such as the ESP32 devkit, ESPduino32 etc. - more advanced DIY platform, with more RAM and FLASH than the Mega |engineer-text|
+- :doc:`STM32 Nucleo-144 F429ZI and F439ZI </reference/hardware/microcontrollers/stm32-nucleo>` - new beta supported DIY platform, with more RAM and FLASH than the Arduino Mega, and Ethernet connectivity option. |engineer-text|
+
+How to Install or Update to v5.6.0?
+-----------------------------------
+
+**We recommend using our current v0.20 installer, or v0.21 or later when available, to install or upgrade to this release for the CSB1 and Mega platforms**
+
+We have an EX-Installer update coming (v0.21) which will also handle the additional Nucleo options. In the meantime, we recommend Visual Studio Code with PlatformIO for those, and most other DIY options.
+
+Other ways are shown below for your reference.
+
+Get the source code from GitHub with GitHub Desktop:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Install GitHub Desktop using this URL: https://desktop.github.com/download/
+- Select Clone Repository from the File menu
+- Click on the URL tab
+- Paste in the DCC-EX EX-CommandStation URL: https://github.com/DCC-EX/CommandStation-EX.git
+- Select a folder for the Local Path into which the repository will be cloned, use a final folder name of CommandStation-EX if you intend to use the Arduino IDE, or anything you like if using Visual Studio Code and PlatformIO
+- Click Clone
+- Once downloaded, choose v5.6.0-Prod in the Current Branch drop-down
+- copy any custom configuration files you want to keep from your old install (config.h, myAutomation.h, mySetup.h, etc.) into the new folder
+
+You may then open the Arduino IDE and point it at the CommandStation-EX folder, or Visual studio code (GitHub Desktop can launch VSC for you.)
+
+Get the source code directly from within Visual Studio Code:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Existing Visual Studio Code users can sync their local repository with the remote one and select the new branch directly from the Current Branch drop-down in the bottom left of the window. This will not overwrite your existing custom configuration files (config.h, myAutomation.h, mySetup.h, etc.)
+
+For new Visual Studio Code users, you can clone the repository directly from within Visual Studio Code as follows:
+
+- open a new window and using the "Clone Git Repository" option in the welcome screen, and pasting in the URL above
+- you can then select the folder into which to clone, and once downloaded, choose v5.6.0-Prod in the Current Branch drop-down
+
+Get the source code from GitHub with git using the command line:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For those comfortable with using git on the command line and where git is already installed, you can use the following commands to clone the repository and checkout the v5.6.0-Prod tag:
+
+.. code-block::
+
+  git clone https://github.com/DCC-EX/CommandStation-EX.git
+  cd CommandStation-EX
+  git checkout v5.6.0-Prod
+
+Be sure to copy any custom configuration files you want to keep from your old install (config.h, myAutomation.h, mySetup.h, etc.) into the new folder.
+
+If you already have an older copy of |ex-cs| in use that you want to update, a `git pull` command is needed to update your local files, and then issue the checkout command above to checkout the tag (or branch) you want to use. The git pull will not overwrite your custom configuration files.
+
+Get the source code from the archive files:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The GitHub Release archive files are available for download at https://github.com/DCC-EX/CommandStation-EX/releases/tag/v5.6.0-Prod Please choose one of the first two, the zip or tar.gz, not the last two which are autogenerated by github and contain the wrong directory name.
+
+Be sure to unpack in a new folder, not over the top of an old install, and to copy over any custom configuration files you want to keep from your old install (config.h, myAutomation.h, mySetup.h, etc.) into the new folder. If using the Arduino IDE, be sure to rename the new folder CommandStation-EX before opening it in the IDE. If using Visual Studio Code with PlatformIO, you can name the folder anything you like and simply open it.

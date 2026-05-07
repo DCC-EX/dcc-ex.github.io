@@ -182,7 +182,7 @@
     * -  :doc:`ThrottleCard <software/throttlecard>`
       -  Free / Paid
       -  WiFi
-      -  WiT
+      -  Native / WiT
       -  App
       -  
       -  
@@ -190,6 +190,20 @@
       -  X
       -  
       -  X
+      -  
+      -  X
+
+    * -  :doc:`Signal Cab <software/signal-cab>`
+      -  Paid
+      -  WiFi
+      -  Native / WiT
+      -  App
+      -  
+      -  
+      -  
+      -  X
+      -  
+      -  
       -  
       -  X
 

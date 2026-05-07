@@ -63,6 +63,7 @@ Apple iOS (Phones and Tablets)
 - :doc:`WiThrottle Cab (iOS and Android) <software/withrottle-cab>`
 - :doc:`WiThrottle (iOS) <software/withrottle>`
 - :doc:`DCC Commander (iOS) <software/dcc-commander>`
+- :doc:`Signal Cab (iOS) <software/signal-cab>`
 
 Dedicated Hardware
 ------------------
@@ -121,6 +122,7 @@ DCC-EX (DCC-EX Native Commands)
 - :doc:`EX-T3-WiFi (T3 = Tactile Touch Throttle) (Physical) </throttles/hardware/ex-t3-wifi>`
 - :doc:`miniThrottle (Physical DIY) <hardware/minithrottle>`
 - :doc:`DCC Commander (iOS) <software/dcc-commander>`
+- :doc:`Signal Cab (iOS) <software/signal-cab>`
 - :doc:`DCC-EX Simple Throttler (Physical) <hardware/simple-throttle>`
 - :doc:`DccExController (Physical DIY) <hardware/dccexcontroller>`  - Support Discontinued |BR| |BR|
 - See also :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
@@ -135,7 +137,8 @@ WiThrottle Protocol Based Throttles
 - :doc:`WiThrottle (iOS)<software/withrottle>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`Train Driver (iOS) <software/train-driver>`
-- :doc:`ThrottleCard (iOS) <software/throttlecard>` |BR| |BR|
+- :doc:`ThrottleCard (iOS) <software/throttlecard>`
+- :doc:`Signal Cab (iOS) <software/signal-cab>` |BR| |BR|
 - :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
 - `HandCab (Physical DIY) <https://github.com/1fatgmc/HandCab/tree/main>`_
 - `ESU Mobile Control Pro (Physical) <https://www.esu.eu/en/products/digital-control/mobile-control-pro/>`_

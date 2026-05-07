@@ -1440,20 +1440,59 @@ By design, for safety reasons, the NMRA specification prevents locos from respon
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
-  |_| ``<r -cab>`` |BR|
-  |_| > **cab:** |BR|
+  |_| ``<r address>`` |BR|
+  |_| > **address:** |BR|
   |_| |_| |_| |_| • DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder |BR|
   |_| |_| |_| |_| • -1 = failed read |BR|
   |_|  |BR|
   |_| *Example Responses:* |BR|
-  |_| Response (successful): **<r cab>** |BR|
+  |_| Response (successful): **<r 3>** |BR|
   |_| Response (fail): **<r -1>**
 
   *Notes:*
 
-    **IMPORTANT:** If the loco is on a consist, the address returned will be the consist address
+    **IMPORTANT:** If the loco is in a consist (CV19), the address returned will be the consist address.
 
     When combined with the ``<D ACK ON>`` Command, the ``<R>`` Command (with or without parameters) can be used for diagnostics, for example when you get a "-1" response. (See `Diagnosing Issues <https://github.com/DCC-EX/CommandStation-EX/wiki/Diagnosing-Issues>`_\ ** for more help)
+
+|hr-dashed|
+
+.. _native-command-r-locoid:
+
+``<R LOCOID>`` - Read DCC decoder (cab) address
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Response:* |BR|
+  |_| ``<r LOCOID address>`` |BR|
+  |_| > **address:** |BR|
+  |_| |_| |_| |_| • DCC Address of the decoder/loco. The short (1-127) or long (128-10293) address of the engine decoder |BR|
+  |_| |_| |_| |_| • -1 = failed read |BR|
+  |_|  |BR|
+  |_| *Example Responses:* |BR|
+  |_| Response (successful): **<r LOCOID 3>** |BR|
+  |_| Response (fail): **<r LOCOID -1>**
+
+  *Notes:*
+
+    **IMPORTANT:** Unlike `<R>` If the loco is in a consist, the address returned will be the actual address.
+
+
+|hr-dashed|
+
+.. _native-command-r-consist:
+
+``<R CONSIST>`` - Read DCC decoder consist (CV19) address
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  *Response:* |BR|
+  |_| ``<r CONSIST address>`` |BR|
+  |_| > **address:** |BR|
+  |_| |_| |_| |_| • DCC Consost (CV19)Address of the decoder/loco. |BR|
+  |_| |_| |_| |_| • -1 = failed read |BR|
+  |_|  |BR|
+  |_| *Example Responses:* |BR|
+  |_| Response (successful): **<r CONSIST 3>** |BR|
+  |_| Response (fail): **<r CONSIST -1>**
 
 |hr-dashed|
 

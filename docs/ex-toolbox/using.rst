@@ -46,22 +46,34 @@ Other than the very first time you start |EX-TB|, when the app opens you will be
 On the 'Connection' screen there are three ways you can select a |EX-CS| to connect to:
 
   - IP Address and Port
-  - Discovered Servers
+  - Discovered Servers (including via a USB connection)
   - Recent servers
 
 Discovered Servers
 ------------------
 
-  This is the most common way to connect. If the server you want to connect to is in the list, simply click on it and you will be taken to the 'CV-Programming' screen.
+*Wifi*
 
-  If the server does not appear in the recent list try one of the other two methods.  Your server not appearing in the recent list is not necessarily a problem and there can be a number of reasons why.
+This is the most common way to connect. If the server you want to connect to is in the list, simply click on it and you will be taken to the 'CV-Programming' screen.
 
-  
+If the server does not appear in the recent list try one of the other two methods.  Your server not appearing in the recent list is not necessarily a problem and there can be a number of reasons why.
+
 .. important::
 
    |EX-TB| can only connect *directly* to an |EX-CS| or JMRI's :ref:`'DCC++ over TCP Server'<ex-toolbox/using:connecting via jmri>`, however |JMRI|, the |EX-CS| and other devices and apps can, or do, advertise as "WiThrottle" mDNS services. EX-Toolbox cannot determine which are actually direct connections to an |EX-CS| or JMRI's :ref:`'DCC++ over TCP Server'<ex-toolbox/using:connecting via jmri>`.
 
    So... just because a server is in this list, doesn't mean that |EX-TB| will be able to connect to it.
+
+*Direct USB*
+
+As of Version 0.1.35, the discovered server list will also include an entry `DCC-EX-USB-OTG` if you have a |EX-CS| connected directly to your phone or tablet using a USB on-the-go (OTG) cable.  
+
+.. Note:: 
+   
+   The direct USB connection is only supported on Android devices that support USB on-the-go (OTG).
+
+   In general USB-C to the USB-C cables are automatically OTG, but if you are using a USB-C to USB-A cable, you will need to check that the cable supports OTG.  If it doesn't, the `DCC-EX-USB-OTG` entry won't appear in the discovered server list.
+
 
 |HR-DASHED|
 

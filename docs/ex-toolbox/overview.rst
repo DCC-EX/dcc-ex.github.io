@@ -16,7 +16,9 @@ EX-Toolbox - Overview
 
 |EX-TB| is a free, open source, Android app to help setup and configure your |EX-CS|. It is intended for setup, configuration, debugging you Command Station rather than continuous use.
 
-It is designed to function if your |EX-CS| is configured with WiFi (either Access Point mode or Station mode) or Ethernet. 
+It is primarily designed to function if your |EX-CS| is configured with WiFi (either Access Point mode or Station mode) or Ethernet.
+
+As of version 0.1.35, it can also connect directly from an Android device to a |EX-CS| through a USB cable. 
 
 It can't normally connect to a |EX-CS| through |JMRI|, however it is possible if you ``Load DCC++ over TCP Server`` in the 'DCC-EX' menu in |JMRI|, then connect |EX-TB| to the additional server that is presented.
 

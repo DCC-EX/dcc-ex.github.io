@@ -309,3 +309,9 @@ Next Steps
 To learn more about a specific product, click on one of the links above.
 
 For how to buy a *ready-to-run (RTR)* or build your own *do-it-yourself (DIY)* |EX-CS| station, click 'Next' or proceed to the :doc:`Ex-Command Station Page </ex-commandstation/index>`.
+
+.. toctree::
+   :hidden:
+   :maxdepth: 4
+
+   levels

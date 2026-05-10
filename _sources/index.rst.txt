@@ -86,68 +86,49 @@ DCC-EX Model Railroading
    :hidden:
    :maxdepth: 4
 
-   begin/what-to-know
-   begin/levels
+   GETTING STARTED<begin/what-to-know>
+   
+.. toctree::
+   :hidden:
+   :maxdepth: 4
+
+   OUR PRODUCTS<products>
 
 .. toctree::
    :hidden:
    :maxdepth: 4
-   :caption: Products
 
-   ex-commandstation/index
-   EX-CSB1 Express <ex-csb1/index>
-   EX-MotorShield8874 <reference/hardware/motorboards/ex-motor-shield-8874>
-   EX-WiFiShield-8266 <reference/hardware/wifi-boards/ex-wifi-shield-8266>
-   ex-installer/index
-   ex-webthrottle/index
-   ex-toolbox/index
-   ex-turntable/index
-   ex-ioexpander/index
-   ex-fastclock/index
-   ex-dccinspector/index
+   EXRAIL & TRACK MANAGER<add-ons>
 
 .. toctree::
    :hidden:
    :maxdepth: 4
-   :caption: EX-CommandStation Add-Ons
 
-   exrail/index
-   trackmanager/index
+   THROTTLES (CONTROLLERS)<throttles/index>
 
 .. toctree::
    :hidden:
    :maxdepth: 4
-   :caption: Support & Info
 
-   support/index
-   throttles/index
-   big-picture/index
+   SUPPORT & INFO<support-and-info>
 
 .. toctree::
    :hidden:
    :maxdepth: 4
-   :caption: Downloads
 
-   download/index
-
-.. toctree::
-   :hidden:
-   :maxdepth: 4
-   :caption: Purchasing & Merchandise
-
-   purchasing/dealers
-   reference/accessories/index
-   merchandise/index
+   DOWNLOADS<download/index>
 
 .. toctree::
    :hidden:
    :maxdepth: 4
-   :caption: Detailed Information
 
-   reference/index
-   projects/index
+   PURCHASING & MERCHANDISE<purchasing-and-merchandise>
 
-..   under-development/index
+.. toctree::
+   :hidden:
+   :maxdepth: 4
+
+   DETAILED INFORMATION<reference/index>
 
 .. .. toctree::
 ..   :hidden:
@@ -161,8 +142,6 @@ DCC-EX Model Railroading
 .. toctree::
    :hidden:
    :maxdepth: 4
-   :caption: The DCC-EX Project
 
-   About Us and the Project<about/index>
-   about/index-contributing
+   THE DCC-EX PROJECT<about/index>
 

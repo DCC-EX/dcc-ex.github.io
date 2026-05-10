@@ -46,3 +46,4 @@ External References
    :maxdepth: 1
 
    /external-references/standards
+   /projects/index

@@ -724,22 +724,23 @@
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#espressif-esp32-series" id="id1">Espressif ESP32 series</a></p>
+<li><p><a class="reference internal" href="#espressif-esp32-series" id="id2">Espressif ESP32 series</a></p>
 <ul>
-<li><p><a class="reference internal" href="#esp32-wroom-32-boards-tested" id="id2">ESP32-WROOM-32 boards tested</a></p></li>
-<li><p><a class="reference internal" href="#wemos-d1-r32-espduino-32-board" id="id3">WeMos D1 R32/ESPDUINO-32 board</a></p></li>
-<li><p><a class="reference internal" href="#hardware-setup-notes-for-a-wemos-d1-r32-espduino-32-ex-cs" id="id4">Hardware setup notes for a WeMos D1 R32/ESPDUINO-32 <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a></a></p></li>
-<li><p><a class="reference internal" href="#wemos-d1-r32-espduino-32-with-microsoft-windows-ch340-drivers" id="id5">WeMos D1 R32/ESPDUINO-32 with Microsoft Windows - CH340 drivers</a></p></li>
-<li><p><a class="reference internal" href="#building-dcc-ex-for-esp32" id="id6">Building DCC-EX for ESP32</a></p></li>
-<li><p><a class="reference internal" href="#adding-esp32-support-to-vs-code-and-platformio" id="id7">Adding ESP32 support to VS Code and PlatformIO</a></p></li>
-<li><p><a class="reference internal" href="#adding-esp32-support-to-the-arduino-ide" id="id8">Adding ESP32 support to the Arduino IDE</a></p></li>
+<li><p><a class="reference internal" href="#esp32-wroom-32-boards-tested" id="id3">ESP32-WROOM-32 boards tested</a></p></li>
+<li><p><a class="reference internal" href="#known-working-boards" id="id4">Known Working Boards</a></p></li>
+<li><p><a class="reference internal" href="#wemos-d1-r32-espduino-32-board" id="id5">WeMos D1 R32/ESPDUINO-32 board</a></p></li>
+<li><p><a class="reference internal" href="#hardware-setup-notes-for-a-wemos-d1-r32-espduino-32-ex-cs" id="id6">Hardware setup notes for a WeMos D1 R32/ESPDUINO-32 <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a></a></p></li>
+<li><p><a class="reference internal" href="#wemos-d1-r32-espduino-32-with-microsoft-windows-ch340-drivers" id="id7">WeMos D1 R32/ESPDUINO-32 with Microsoft Windows - CH340 drivers</a></p></li>
+<li><p><a class="reference internal" href="#building-dcc-ex-for-esp32" id="id8">Building DCC-EX for ESP32</a></p></li>
+<li><p><a class="reference internal" href="#adding-esp32-support-to-vs-code-and-platformio" id="id9">Adding ESP32 support to VS Code and PlatformIO</a></p></li>
+<li><p><a class="reference internal" href="#adding-esp32-support-to-the-arduino-ide" id="id10">Adding ESP32 support to the Arduino IDE</a></p></li>
 </ul>
 </li>
 </ul>
 </nav>
 </aside>
 <section id="espressif-esp32-series">
-<h2><a class="toc-backref" href="#id1" role="doc-backlink">Espressif ESP32 series</a><a class="headerlink" href="#espressif-esp32-series" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Espressif ESP32 series</a><a class="headerlink" href="#espressif-esp32-series" title="Link to this heading"></a></h2>
 <p>Espressif have for some years now made impressive WiFi and Bluetooth capable microcontroller modules. DCC-EX has made use of their original ESP8266 offering as the means to provide WiFi capability to the EX-CS.</p>
 <p>Espressif’s newer ESP32 range has either WiFi alone or WiFi and Bluetooth capability built in. Espressif’s product naming is not the easiest to follow, but DCC-EX has been ported to the original ESP32-WROOM-D0WD module, which has the following capabilities:</p>
 <ul class="simple">
@@ -760,13 +761,13 @@
 <li><p>To generate a clean DCC signal you need to program the special RMT hardware, normally used for IR remote controls</p></li>
 <li><p>Once we had done this, the DCC signal was very good</p></li>
 </ul>
-<p>The port is currently in very active beta testing, and is for the most part very reliable. At present, the hardware modifications needed for the ESPduino32 and connectivity challenges with the various Devkit modules makes the hardware for tinkerers and engineers only.</p>
+<p>The port is for the most part very reliable. At present, the hardware modifications needed for the ESPduino32 and connectivity challenges with the various Devkit modules makes the hardware for tinkerers and engineers only.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>DCC-EX can only run on the ESP32-WROOM-32 module, and none of the other ESP32 modules (S2, S3, C3 etc.) are supported at present. This is because other ESP32 modules do not have the necessary RMT hardware, or do not have enough such hardware to run DCC-EX.</p>
 </div>
 <section id="esp32-wroom-32-boards-tested">
-<h3><a class="toc-backref" href="#id2" role="doc-backlink">ESP32-WROOM-32 boards tested</a><a class="headerlink" href="#esp32-wroom-32-boards-tested" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">ESP32-WROOM-32 boards tested</a><a class="headerlink" href="#esp32-wroom-32-boards-tested" title="Link to this heading"></a></h3>
 <p>The ESP32 development boards that have been tested include the WeMos D1 R32/ESPDUINO-32, the GRobotronics ESP32 DEVKIT V1, the OLIMEX ESP32 DEVKIT LIPO, and the LILYGO® TTGO T-Energy T18 V3.0 ESP32-WROVER-E development board. Note that although the last one is an ESP32-WROVER-E board, not the WROOM, it does appear to work for one user, but more testing is required.</p>
 <a class="reference internal image-reference" href="../../../_images/espduino-32.png"><img alt="WeMos D1 R32/ESPDUINO-32 UNO form factor" src="../../../_images/espduino-32.png" style="width: 99.5px; height: 134.0px;" />
 </a>
@@ -777,9 +778,20 @@
 <a class="reference internal image-reference" href="../../../_images/liligo-t18-v3-esp32-wrover.png"><img alt="LILYGO® TTGO T-Energy T18 V3.0 ESP32-WROVER-E" src="../../../_images/liligo-t18-v3-esp32-wrover.png" style="width: 54.0px; height: 144.6px;" />
 </a>
 </section>
+<section id="known-working-boards">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Known Working Boards</a><a class="headerlink" href="#known-working-boards" title="Link to this heading"></a></h3>
+<p>Our new, currently incomplete, web site has additional information on the following boards:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://dcc-ex.com/mkdocs-test/reference/esp32/esp32-ex8874/">WeMos D1 R32 + EX8874</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;">.  Also described in the WeMos D1 R32/ESPDUINO-32 section below.</p></li>
+<li><p><a class="reference external" href="https://dcc-ex.com/mkdocs-test/reference/esp32/esp32-acebott/">ACEBOTT ESP32 Max v1.0 + EX8874</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> This requires fewer hardware modifications than the WeMos D1 R32.</p></li>
+<li><p><a class="reference external" href="https://dcc-ex.com/mkdocs-test/reference/esp32/esp32-keyestudio/">Keyestudio IOT ESP32 PLUS Development Board + EX8874</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> This requires fewer hardware modifications than the WeMos D1 R32.</p></li>
+<li><p><a class="reference external" href="https://dcc-ex.com/mkdocs-test/reference/esp32/esp32-l298/">ESP32 + L298 Shields (Genuine Arduino R3)</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> Also described in the Additional information on the use of L298 Clone motor shields section below.</p></li>
+</ul>
+</section>
 <section id="wemos-d1-r32-espduino-32-board">
-<h3><a class="toc-backref" href="#id3" role="doc-backlink">WeMos D1 R32/ESPDUINO-32 board</a><a class="headerlink" href="#wemos-d1-r32-espduino-32-board" title="Link to this heading"></a></h3>
-<p>The recommended hardware for now is the WeMos D1 R32, also referred to as the ESPDUINO-32.
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">WeMos D1 R32/ESPDUINO-32 board</a><a class="headerlink" href="#wemos-d1-r32-espduino-32-board" title="Link to this heading"></a></h3>
+<p>(Also refer to <a class="reference external" href="https://dcc-ex.com/mkdocs-test/reference/esp32/esp32-ex8874/">WeMos D1 R32 + EX8874</a> <img src="../../../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"> on the new web site.)</p>
+<p>The initial hardware supported was the WeMos D1 R32, also referred to as the ESPDUINO-32.
 This consists of an <a class="reference external" href="https://www.espressif.com/en/products/modules/esp32">ESP32-WROOM-32</a> module mounted on a UNO form factor board with UNO R3 style connectors. Pictured here:</p>
 <a class="reference internal image-reference" href="../../../_images/espduino-32.png"><img alt="ESPDUINO-32 UNO form factor" src="../../../_images/espduino-32.png" style="width: 199.0px; height: 268.0px;" />
 </a>
@@ -794,7 +806,7 @@ Note however that there are some hardware issues to be aware of, and to remedy b
 <p>All these issues can be fixed with a soldering iron and/or a jumper but that’s not what one expects from a released product.</p>
 </section>
 <section id="hardware-setup-notes-for-a-wemos-d1-r32-espduino-32-ex-cs">
-<h3><a class="toc-backref" href="#id4" role="doc-backlink">Hardware setup notes for a WeMos D1 R32/ESPDUINO-32 <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a></a><a class="headerlink" href="#hardware-setup-notes-for-a-wemos-d1-r32-espduino-32-ex-cs" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Hardware setup notes for a WeMos D1 R32/ESPDUINO-32 <a href="../../../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a></a><a class="headerlink" href="#hardware-setup-notes-for-a-wemos-d1-r32-espduino-32-ex-cs" title="Link to this heading"></a></h3>
 <p>To fix the IO0 pin voltage, install a resistor of between 250 to 300 Ohms between 3.3V and IO0 to pull it back down to 3.3V. This is easiest to do on the back side of the board, like so:</p>
 <a class="reference internal image-reference" href="../../../_images/espduino-32-resistor.jpg"><img alt="ESPDUINO-32 resister modification, underside of PCB" src="../../../_images/espduino-32-resistor.jpg" style="width: 400.0px; height: 300.0px;" />
 </a>
@@ -826,19 +838,19 @@ code in MotorDriver.h</p>
 </section>
 </section>
 <section id="wemos-d1-r32-espduino-32-with-microsoft-windows-ch340-drivers">
-<h3><a class="toc-backref" href="#id5" role="doc-backlink">WeMos D1 R32/ESPDUINO-32 with Microsoft Windows - CH340 drivers</a><a class="headerlink" href="#wemos-d1-r32-espduino-32-with-microsoft-windows-ch340-drivers" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">WeMos D1 R32/ESPDUINO-32 with Microsoft Windows - CH340 drivers</a><a class="headerlink" href="#wemos-d1-r32-espduino-32-with-microsoft-windows-ch340-drivers" title="Link to this heading"></a></h3>
 <p>When using the WeMos D1 R32/ESPDUINO-32 board with Microsoft Windows, you will need to install the CH340 USB drivers in order to be able to upload software to it and use the <a class="reference internal" href="../../tools/serial-monitor.html"><span class="doc">Serial Monitor</span></a> in either PlatformIO or the <a class="reference internal" href="../../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">Arduino IDE</span></a>.</p>
 </section>
 <section id="building-dcc-ex-for-esp32">
-<h3><a class="toc-backref" href="#id6" role="doc-backlink">Building DCC-EX for ESP32</a><a class="headerlink" href="#building-dcc-ex-for-esp32" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Building DCC-EX for ESP32</a><a class="headerlink" href="#building-dcc-ex-for-esp32" title="Link to this heading"></a></h3>
 <p>The easiest way of building DCC-EX for the ESP32 is via EX-Installer by selecting the ESP32 option. Click here for <a class="reference internal" href="../../../ex-commandstation/installer-diy.html"><span class="doc">EX-Installer installation instructions</span></a>.</p>
 </section>
 <section id="adding-esp32-support-to-vs-code-and-platformio">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">Adding ESP32 support to VS Code and PlatformIO</a><a class="headerlink" href="#adding-esp32-support-to-vs-code-and-platformio" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Adding ESP32 support to VS Code and PlatformIO</a><a class="headerlink" href="#adding-esp32-support-to-vs-code-and-platformio" title="Link to this heading"></a></h3>
 <p>When using VS Code and PlatformIO it will auto-configure from the entry in the platformio.ini file when you select the ESP32 target to be built.</p>
 </section>
 <section id="adding-esp32-support-to-the-arduino-ide">
-<h3><a class="toc-backref" href="#id8" role="doc-backlink">Adding ESP32 support to the Arduino IDE</a><a class="headerlink" href="#adding-esp32-support-to-the-arduino-ide" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Adding ESP32 support to the Arduino IDE</a><a class="headerlink" href="#adding-esp32-support-to-the-arduino-ide" title="Link to this heading"></a></h3>
 <p>In order to compile for the Espressif ESP32 platforms, you will need to add the board definitions to the <a class="reference internal" href="../../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html"><span class="doc">Arduino IDE</span></a>. To do this, follow the instructions on the <a class="reference external" href="https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide">official Espressif guide</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -870,7 +882,7 @@ Select board:  ESP32 Dev module</p>
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fd72fcfeaa0>
+    <jinja2.runtime.BlockReference object at 0x7f8c91776ec0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

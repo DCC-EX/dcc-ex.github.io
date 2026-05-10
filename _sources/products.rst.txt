@@ -49,9 +49,9 @@ Our *open source* hardware products currently include:
     :header-rows: 0
 
     * - |EX-CSB1-LOGO-SMALL| 
-      - Our ready-to-run |DCC| & |DC| command station / booster for controlling your model railroad
+      - Our ready-to-run |DCC| & |DC| command station / booster |BR| for controlling your model railroad
     * - |EX-MS-LOGO-SMALL| 
-      - Our dual 5A output |motor shield| for DIY command stations and adding additional power districts to the |EX-CSB1-SHORT|
+      - Our dual 5A output |motor shield| for DIY command stations |BR| and adding additional power districts to the |EX-CSB1-SHORT|
     * - |EX-WS-LOGO-SMALL| 
       - Our WiFi add-on board for DIY command stations
 

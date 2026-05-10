@@ -41,7 +41,7 @@ The appeal of the ESP32 series is that they are very compact and come with WiFi 
 - To generate a clean DCC signal you need to program the special RMT hardware, normally used for IR remote controls
 - Once we had done this, the DCC signal was very good
 
-The port is currently in very active beta testing, and is for the most part very reliable. At present, the hardware modifications needed for the ESPduino32 and connectivity challenges with the various Devkit modules makes the hardware for tinkerers and engineers only.
+The port is for the most part very reliable. At present, the hardware modifications needed for the ESPduino32 and connectivity challenges with the various Devkit modules makes the hardware for tinkerers and engineers only.
 
 .. note:: 
   DCC-EX can only run on the ESP32-WROOM-32 module, and none of the other ESP32 modules (S2, S3, C3 etc.) are supported at present. This is because other ESP32 modules do not have the necessary RMT hardware, or do not have enough such hardware to run DCC-EX.
@@ -67,10 +67,22 @@ The ESP32 development boards that have been tested include the WeMos D1 R32/ESPD
   :alt: LILYGO® TTGO T-Energy T18 V3.0 ESP32-WROVER-E
   :scale: 15%
 
+Known Working Boards
+--------------------
+
+Our new, currently incomplete, web site has additional information on the following boards:
+
+* `WeMos D1 R32 + EX8874 <https://dcc-ex.com/mkdocs-test/reference/esp32/esp32-ex8874/>`_ |EXTERNAL-LINK|.  Also described in the WeMos D1 R32/ESPDUINO-32 section below.
+* `ACEBOTT ESP32 Max v1.0 + EX8874 <https://dcc-ex.com/mkdocs-test/reference/esp32/esp32-acebott/>`_ |EXTERNAL-LINK| This requires fewer hardware modifications than the WeMos D1 R32.
+* `Keyestudio IOT ESP32 PLUS Development Board + EX8874 <https://dcc-ex.com/mkdocs-test/reference/esp32/esp32-keyestudio/>`_ |EXTERNAL-LINK| This requires fewer hardware modifications than the WeMos D1 R32.
+* `ESP32 + L298 Shields (Genuine Arduino R3) <https://dcc-ex.com/mkdocs-test/reference/esp32/esp32-l298/>`_ |EXTERNAL-LINK| Also described in the Additional information on the use of L298 Clone motor shields section below.
+
 WeMos D1 R32/ESPDUINO-32 board
 ------------------------------
 
-The recommended hardware for now is the WeMos D1 R32, also referred to as the ESPDUINO-32.
+(Also refer to `WeMos D1 R32 + EX8874 <https://dcc-ex.com/mkdocs-test/reference/esp32/esp32-ex8874/>`_ |EXTERNAL-LINK| on the new web site.)
+
+The initial hardware supported was the WeMos D1 R32, also referred to as the ESPDUINO-32.
 This consists of an `ESP32-WROOM-32 <https://www.espressif.com/en/products/modules/esp32>`_ module mounted on a UNO form factor board with UNO R3 style connectors. Pictured here:
 
 .. image:: /_static/images/esp32/espduino-32.png

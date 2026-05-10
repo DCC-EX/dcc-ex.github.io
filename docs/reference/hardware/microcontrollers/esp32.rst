@@ -75,9 +75,7 @@ Our new, currently incomplete, web site has additional information on the follow
 * `WeMos D1 R32 + EX8874 <https://dcc-ex.com/mkdocs-test/reference/esp32/esp32-ex8874/>`_ |EXTERNAL-LINK|.  Also described in the WeMos D1 R32/ESPDUINO-32 section below.
 * `ACEBOTT ESP32 Max v1.0 + EX8874 <https://dcc-ex.com/mkdocs-test/reference/esp32/esp32-acebott/>`_ |EXTERNAL-LINK| This requires fewer hardware modifications than the WeMos D1 R32.
 * `Keyestudio IOT ESP32 PLUS Development Board + EX8874 <https://dcc-ex.com/mkdocs-test/reference/esp32/esp32-keyestudio/>`_ |EXTERNAL-LINK| This requires fewer hardware modifications than the WeMos D1 R32.
-* `ESP32 + L298 Shields (Genuine Arduino R3) <https://dcc-ex.com/mkdocs-test/reference/esp32/esp32-l298/>`_ |EXTERNAL-LINK|
-
-Genuine Arduino Motor Shield R3`
+* `ESP32 + L298 Shields (Genuine Arduino R3) <https://dcc-ex.com/mkdocs-test/reference/esp32/esp32-l298/>`_ |EXTERNAL-LINK| Also described in the Additional information on the use of L298 Clone motor shields section below.
 
 WeMos D1 R32/ESPDUINO-32 board
 ------------------------------

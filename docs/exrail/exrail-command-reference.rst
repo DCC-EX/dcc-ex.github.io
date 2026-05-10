@@ -18,12 +18,18 @@ EXRAIL Command Reference
 
 |EX-CS| provides full automation and accessory control through the Extended Railroad Automation Instruction Language (|EX-R|).
 
-This page includes a reference for all available |EX-R| commands.
+This page includes a reference for most available |EX-R| commands.
+
+
+.. note::
+
+   Also refer to our new, currently incomplete, web site for additional information on the commands described here: `DCC-EX Command Station Native Commands <https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/command-list/>`_ |EXTERNAL-LINK|. Some commands that have only been added recently may not be covered on this page, but may be included on the new web site page.
 
 See Also:
 
 - :doc:`Introduction to EXRAIL <getting-started>` 
 - :doc:`/exrail/examples`
+- `DCC-EX Command Station Native Commands <https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/command-list/>`_ |EXTERNAL-LINK|
 
 .. warning::
   :class: warning-no-clear

@@ -14,7 +14,7 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-import sphinx_rtd_theme
+# import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
@@ -38,7 +38,7 @@ extensions = [
     # 'sphinx.ext.ifconfig',
     # 'sphinx.ext.viewcode',
     # 'sphinx.ext.graphviz',
-    # 'sphinx_sitemap',
+    'sphinx_sitemap',
     # 'sphinx.ext.inheritance_diagram',
     'sphinxcontrib.spelling',
     'sphinx_toolbox.collapse',

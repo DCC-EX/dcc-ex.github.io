@@ -45,6 +45,4 @@ External References
 .. toctree::
    :maxdepth: 1
 
-   /external-references/index
    /external-references/standards
-   accessories/index

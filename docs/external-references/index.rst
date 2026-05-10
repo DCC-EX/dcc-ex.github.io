@@ -49,6 +49,7 @@ Chris Percival
 --------------
 
 * `Model Railroad Automation using DCC EX EX Installer <https://www.youtube.com/watch?v=vecUyk5UnCg>`_ |EXTERNAL-LINK|  |BR| an introduction to using the |EX-I| and creating automation scripts with it.
+* Chris has created a `series of videos on using DCC-EX for model railroad automation <https://www.youtube.com/@ModelRailroadAutomationDCC-EX>`_ |EXTERNAL-LINK|
 
 DriverDTrains
 -------------

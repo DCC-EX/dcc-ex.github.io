@@ -148,6 +148,12 @@
       :class: image-min-width-144
       :target: ./reference/hardware/motorboards/ex-motor-shield-8874.html
 ..
+.. |EX-WS-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-wifishield8266.png
+      :alt: EX-WiFiShield 8266
+      :scale: 30%
+      :class: image-min-width-144
+      :target: ./reference/hardware/wifi-boards/makerfabs-esp8266.html
+..
 .. |TRACKMANAGER-LOGO-SMALL| image:: /_static/images/logos/product-logo-trackmanager.png
       :alt: DCC-EX TrackManager
       :scale: 30%

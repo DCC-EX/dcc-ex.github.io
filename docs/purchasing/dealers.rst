@@ -7,13 +7,6 @@
 DCC-EX Official Dealers / Resellers
 ************************************
 
-.. sidebar::
-   :class: sidebar-on-this-page
-
-   .. contents:: On this page
-      :depth: 1
-      :local:
-
 With the ever increasing demand for hardware that is guaranteed to be |DCC-EX| compatible, and the uptake of |EX-CS| by more |CONDUCTOR-TEXT| level users, we are striving to make the |DCC-EX| ecosystem more accessible.
 
 As part of that, and starting with the release of the |EX-MS|, we have a number of official |DCC-EX| dealers that can supply various different hardware devices as well as complete |EX-CS| systems.

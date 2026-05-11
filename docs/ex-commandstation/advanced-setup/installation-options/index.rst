@@ -23,8 +23,5 @@ There are three options available to install |EX-CS|:
 
    The |EX-I| will meet 100% of the needs of a |conductor-text| or |tinkerer-text| with considerably less effort. 
 
-.. toctree::
-    :maxdepth: 1
-    
-    Install using EX-Installer </ex-installer/index>
-    Install using Arduino IDE <arduino-ide>
+* :doc:`Install using EX-Installer </ex-installer/index>`
+* :doc:`Install using Arduino IDE <arduino-ide>`

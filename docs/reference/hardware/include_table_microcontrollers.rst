@@ -9,7 +9,7 @@
     - R |BRxa| e |BRxa| c |BRxa| o |BRxa| m |BRxa| m |BRxa| e |BRxa| n |BRxa| d |BRxa| e |BRxa| d
     - S |BRxa| u |BRxa| p |BRxa| p |BRxa| o |BRxa| r |BRxa| t |BRxa| e |BRxa| d
     - Level
-    - Shield |BRxa| Format
+    - S |BRxa| h |BRxa| i |BRxa| e |BRxa| l |BRxa| d |BRxa| [#mc10]_
     - HAL |BRxa| / |BRxa| |I2Cxa|
     - E |BRxa| E |BRxa| P |BRxa| R |BRxa| O |BRxa| M
     - EX- |BRxa| RAIL |BRxa| Sup- |BRxa| port
@@ -17,13 +17,13 @@
     - D C |BRxa| Sup- |BRxa| port
     - W |BRxa| i |BRxa| F |BRxa| i
     - Wifi |BRxa| # |BRxa| Con- |BRxa| nect-  |BRxa| ions |BRxa| [#mc9]_
-    - Comments / Notes |_xa| |_xa| |_xa| |_xa| |_xa| |_xa| |_xa| |_xa| |_xa| |_xa| 
+    - Comments / Notes |_xa| |_xa| |_xa| |_xa| |_xa| |_xa| |_xa| |_xa| |_xa|
 
   * - EX-CSB1
     - Yes
     - Yes
     - Conductor
-    - UNO / Mega
+    - Mega
     - Yes
     - Yes
     - Yes
@@ -38,7 +38,7 @@
     - Yes
     - Yes
     - Conductor
-    - UNO / Mega
+    - UNO
     - Yes
     - Yes
     - Yes
@@ -52,7 +52,7 @@
     - Yes
     - Yes
     - Tinkerer
-    - \-
+    - UNO
     - Yes [#mc5]_
     - No
     - Yes
@@ -60,13 +60,13 @@
     - Yes [#mc2]_
     - Yes
     - ~11      
-    - Inexpensive and includes both WiFi and Bluetooth connectivity, limited in I/O pins
+    - Inexpensive and includes both WiFi and Bluetooth connectivity, limited in I/O pins. Most require hardware modifications to work.
 
   * - :doc:`STM32 Nucleo</reference/hardware/microcontrollers/stm32-nucleo>`
     - Yes
     - Yes
     - Tinkerer
-    - \-
+    - UNO
     - Yes
     - No
     - Yes
@@ -76,11 +76,11 @@
     - 4
     - Lots of memory and 32 bit architecture, still in the convenient Uno form factor but with more I/O pins
 
-  * - Arduino :doc:`Uno R3</reference/hardware/microcontrollers/arduino-uno>`
+  * - Arduino :doc:`Uno R3</reference/hardware/microcontrollers/arduino-uno>` [#mc11]_
     - No
     - Yes
     - Tinkerer
-    - UNO / Mega
+    - UNO
     - No
     - Yes
     - Limit- |BRxa| ed [#mc3]_
@@ -96,7 +96,7 @@
     - :cspan:`8` \-
     - :dcc-ex-red-bold-italic:`Different architecture to the R3. Will never be supported.`
 
-  * - Arduino :doc:`Nano</reference/hardware/microcontrollers/nano>`
+  * - Arduino :doc:`Nano</reference/hardware/microcontrollers/nano>` [#mc11]_
     - No
     - Yes
     - Tinkerer
@@ -114,7 +114,7 @@
     - No [#mc6]_
     - Yes
     - Tinkerer
-    - UNO / Mega
+    - Mega
     - Yes
     - Yes
     - Yes
@@ -174,4 +174,6 @@
 .. [#mc6] While the Mega+WiFi boards seem like a good option and are based on our well-known, stable Mega2560 platform, there are many reports of quality issues with these, so buyer beware, and use of these is not recommended
 .. [#mc7] The core development team no longer have access to these, and testing is limited to ensuring the software compiles for the board type
 .. [#mc8] The core Arduino library has a bug affecting serial console output which can be patched but renders the device unsuited for future development until fixed in the main Arduino core library for SAMD21
-.. [#mc9] Direct WiFi connections.  If connected via JMRI, more are are supported
+.. [#mc9] Number of *direct* WiFi connections.  If connected via JMRI, more are are supported
+.. [#mc10] If the board supports stackable shields.  UNO, Mega = Supports both Uno/Mega shields, \- = no shield format 
+.. [#mc11] Requires the use of JMRI.

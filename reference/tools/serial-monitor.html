@@ -183,12 +183,6 @@
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/installation-options/index.html">Installation Options</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="../../ex-installer/index.html">Install using EX-Installer</a><ul>
-<li class="toctree-l6"><a class="reference internal" href="../../ex-installer/installing.html">Using EX-Installer</a></li>
-<li class="toctree-l6"><a class="reference internal" href="../../ex-installer/testing.html">Testing your installation</a></li>
-<li class="toctree-l6"><a class="reference internal" href="../../ex-installer/managing-config-files.html">Managing config files</a></li>
-</ul>
-</li>
 <li class="toctree-l5"><a class="reference internal" href="../../ex-commandstation/advanced-setup/installation-options/arduino-ide.html">Install using Arduino IDE</a></li>
 </ul>
 </li>
@@ -196,7 +190,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../../ex-commandstation/advanced-setup/controllers.html">Choosing a Throttle (Controller) - Advanced</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../software/basic-config-h.html">Basic config.h settings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../software/advanced-config-h.html">Advanced config.h settings</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../software/command-summary-consolidated.html">Native Commands Summary</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/accessories/index.html">Adding and Controlling Accessories</a><ul>
@@ -268,8 +261,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../ex-commandstation/rtr-manual__included-esb1.html">EX-CSB1 Operating Manual</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../hardware/motorboards/ex-motor-shield-8874.html">EX-MotorShield8874</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../hardware/wifi-boards/ex-wifi-shield-8266.html">EX-WiFiShield-8266</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/motorboards/ex-motor-shield-8874_2.html">EX-MotorShield8874</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/wifi-boards/ex-wifi-shield-8266_2.html">EX-WiFiShield-8266</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ex-installer/index.html">EX-Installer</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-installer/installing.html">Using EX-Installer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../ex-installer/testing.html">Testing your installation</a></li>
@@ -773,7 +766,7 @@
 <a class="reference internal image-reference" href="../../_images/arduino_ide.jpg"><img alt="Arduino IDE" src="../../_images/arduino_ide.jpg" style="width: 576.0px; height: 536.4px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig 390: </span><span class="caption-text">Arduino IDE</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+<p><span class="caption-number">Fig 403: </span><span class="caption-text">Arduino IDE</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -784,7 +777,7 @@
 <a class="reference internal image-reference" href="../../_images/board_port_mega.jpg"><img alt="Select the COM Port" src="../../_images/board_port_mega.jpg" style="width: 720.0px; height: 261.90000000000003px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig 391: </span><span class="caption-text">Select the correct COM Port</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+<p><span class="caption-number">Fig 404: </span><span class="caption-text">Select the correct COM Port</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -795,7 +788,7 @@
 <a class="reference internal image-reference" href="../../_images/arduino_ide2.jpg"><img alt="Open the Serial Monitor" src="../../_images/arduino_ide2.jpg" style="width: 488.7px; height: 497.7px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig 392: </span><span class="caption-text">Open the Serial Monitor</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+<p><span class="caption-number">Fig 405: </span><span class="caption-text">Open the Serial Monitor</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Make sure the <strong>baud rate at the lower right of the window is set to “115200”</strong>. This is the data communication speed, equivalent to 115.2kb/s! <strong>Make sure the dropdown next to that says “Both NL &amp; CR”</strong>. That makes sure you send a ‘new line’ command and ‘carriage return’ which the Arduino expects.</p>
@@ -803,7 +796,7 @@
 <a class="reference internal image-reference" href="../../_images/serial_monitor.jpg"><img alt="Serial Monitor" src="../../_images/serial_monitor.jpg" style="width: 579.6px; height: 454.5px;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig 393: </span><span class="caption-text">Serial Monitor - Note line ending and baud rate settings!</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+<p><span class="caption-number">Fig 406: </span><span class="caption-text">Serial Monitor - Note line ending and baud rate settings!</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Opening the <a class="reference internal" href="#"><span class="doc">Serial Monitor</span></a> always resets the Arduino board. Therefore, you should see a startup (boot) log immediately display in the window. If you have a Network shield or WiFi shield connected, you will see the Command Station setup its AP, or connect to your network if you gave it your credentials. If you don’t have a network, that’s fine; the Command Station will sense that, the network test will fail, but everything else will be working as it should.</p>
@@ -867,7 +860,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f8c99c1ada0>
+    <jinja2.runtime.BlockReference object at 0x7fdec8bd1030>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

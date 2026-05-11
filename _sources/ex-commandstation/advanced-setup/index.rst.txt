@@ -208,10 +208,7 @@ Manual Configuration of the EX-CommandStation
 DCC-EX Commands
 ===============
 
-.. toctree::
-  :maxdepth: 1
-
-  Native Commands Summary </reference/software/command-summary-consolidated>
+  :doc:`Native Commands Summary </reference/software/command-summary-consolidated>`
 
 ----
 

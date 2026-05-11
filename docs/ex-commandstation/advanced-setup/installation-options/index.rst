@@ -11,8 +11,8 @@ Installation Options
 
 There are three options available to install |EX-CS|:
 
-* |EX-I| is aimed at the |conductor-text| or |tinkerer-text| level user utilising the recommended hardware, and is the simplest option to get |EX-CS| installed and running.
-* The |Arduino IDE| is more aimed at the |engineer-text| level user who is using different hardware options or requires a level of customisation not available in |EX-I|.
+* |EX-I| is aimed at the |conductor-text| or |tinkerer-text| level user utilising the recommended hardware, and is the simplest option to get |EX-CS| installed and running. |BR| |BR|
+* The |Arduino IDE| is more aimed at the |engineer-text| level user who is using different hardware options or requires a level of customisation not available in |EX-I|. |BR| |BR|
 * **Microsoft Visual Studio Code** (VSC) is more aimed at the |engineer-text| level user who is using different hardware options or requires a level of customisation not available in |EX-I|. It better that the |Arduino IDE| in most respects but takes a bit more effort to setup initially. We don't cover this option on these pages.
 
 .. important::
@@ -25,3 +25,11 @@ There are three options available to install |EX-CS|:
 
 * :doc:`Install using EX-Installer </ex-installer/index>`
 * :doc:`Install using Arduino IDE <arduino-ide>`
+
+
+.. toctree::
+    :hidden:
+    :maxdepth: 1
+    
+    Install using Arduino IDE <arduino-ide>
+

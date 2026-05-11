@@ -1,3 +1,4 @@
+.. include:: /include/include_x.rst
 .. include:: /include/include-l3_x.rst
 
 |SUITABLEx| |conductorx| |tinkererx| |engineerx| |support-buttonx| 
@@ -44,7 +45,7 @@ Assembly with EX-MotorShield8874
 
 Assembly instructions to come! But the short version is to just connect the shield on top of your Motor Shield and connect the included jumpers from any one of the Tx row of pins to Rx1 on the Mega and a jumper from any of the Rx row pins to the Tx1 header on the Mega.
 
-|HR-HEAVY|
+|HR-HEAVYx|
 
 Next steps
 ==========

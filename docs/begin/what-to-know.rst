@@ -39,6 +39,35 @@ What is DCC-EX?
 Our Free and Open Source Products
 =================================
 
+Our Open Source Hardware
+------------------------
+
+Our *open source* hardware products currently include:
+
+.. list-table::
+    :widths: 33 33 33
+    :header-rows: 0
+    :class: table-grid-homepage
+
+    * - |EX-CSB1-LOGO-SMALL|
+      - |EX-MS-LOGO-SMALL|
+      - |EX-WS-LOGO-SMALL|
+    * - Our ready-to-run |DCC| & |DC| command station / booster for controlling your model railroad. Preloaded with our |EX-CS| software.
+      - Our dual 5A output |motor shield| for DIY command stations and adding additional power districts to the |EX-CSB1-SHORT|
+      - Our WiFi add-on board for DIY command stations
+
+.. list-table::
+    :widths: 50 50
+    :header-rows: 0
+    :class: table-list-homepage
+
+    * - |EX-CSB1-LOGO-SMALL| 
+      - Our ready-to-run |DCC| & |DC| command station / booster for controlling your model railroad. Preloaded with our |EX-CS| software.
+    * - |EX-MS-LOGO-SMALL| 
+      - Our dual 5A output |motor shield| for DIY command stations and adding additional power districts to the |EX-CSB1-SHORT|
+    * - |EX-WS-LOGO-SMALL| 
+      - Our WiFi add-on board for DIY command stations
+
 Our Free, Open Source Software
 ------------------------------
 
@@ -91,35 +120,6 @@ Our *free*, *open source* software products currently include:
       -  A FastClock to enable time based events
     * - |EX-TB-LOGO-SMALL| 
       -  An Android app to help configure your EX-CommandStation
-
-Our Open Source Hardware
-------------------------
-
-Our *open source* hardware products currently include:
-
-.. list-table::
-    :widths: 33 33 33
-    :header-rows: 0
-    :class: table-grid-homepage
-
-    * - |EX-CSB1-LOGO-SMALL|
-      - |EX-MS-LOGO-SMALL|
-      - |EX-WS-LOGO-SMALL|
-    * - Our ready-to-run |DCC| & |DC| command station / booster for controlling your model railroad
-      - Our dual 5A output |motor shield| for DIY command stations and adding additional power districts to the |EX-CSB1-SHORT|
-      - Our WiFi add-on board for DIY command stations
-
-.. list-table::
-    :widths: 50 50
-    :header-rows: 0
-    :class: table-list-homepage
-
-    * - |EX-CSB1-LOGO-SMALL| 
-      - Our ready-to-run |DCC| & |DC| command station / booster for controlling your model railroad
-    * - |EX-MS-LOGO-SMALL| 
-      - Our dual 5A output |motor shield| for DIY command stations and adding additional power districts to the |EX-CSB1-SHORT|
-    * - |EX-WS-LOGO-SMALL| 
-      - Our WiFi add-on board for DIY command stations
 
 ----
 

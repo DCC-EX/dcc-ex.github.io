@@ -4,8 +4,6 @@
 
 |EX-MS-LOGO| |donate-button|
 
-.. index:: 8874, EX-MotorShield
-
 ******************************
 DCC-EX EX-MotorShield8874 RevA
 ******************************

@@ -31,6 +31,7 @@ The following cookbooks are currently available:
     vpins
     animation-sensors
     estop-button
+    overload-messsage
 
 .. toctree::
     :maxdepth: 2

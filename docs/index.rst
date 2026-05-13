@@ -98,7 +98,7 @@ DCC-EX Model Railroading
    :hidden:
    :maxdepth: 4
 
-   EXRAIL & TRACK MANAGER<add-ons>
+   PURCHASING & MERCHANDISE<purchasing-and-merchandise>
 
 .. toctree::
    :hidden:
@@ -110,25 +110,19 @@ DCC-EX Model Railroading
    :hidden:
    :maxdepth: 4
 
-   SUPPORT & INFO<support-and-info>
+   SUPPORT, INFO & IDEAS<support-and-info>
 
 .. toctree::
    :hidden:
    :maxdepth: 4
 
-   DOWNLOADS<download/index>
+   EXRAIL & TRACK MANAGER<add-ons>
 
 .. toctree::
    :hidden:
    :maxdepth: 4
 
-   PURCHASING & MERCHANDISE<purchasing-and-merchandise>
-
-.. toctree::
-   :hidden:
-   :maxdepth: 4
-
-   DETAILED INFORMATION<reference/index>
+   REFERENCE & DETAILED INFO<reference/index>
 
 .. .. toctree::
 ..   :hidden:
@@ -138,6 +132,12 @@ DCC-EX Model Railroading
 ..   external-references/index
 ..   external-references/standards
 ..   reference/accessories/index
+
+.. toctree::
+   :hidden:
+   :maxdepth: 4
+
+   DOWNLOADS<download/index>
 
 .. toctree::
    :hidden:

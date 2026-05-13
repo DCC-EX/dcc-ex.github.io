@@ -27,6 +27,9 @@ Objects:
 - Active low IR sensors connected to Mega2560 I/O pins 40 through 46
 - An active low push button on Mega2560 I/O pin 30
 
+
+Also see the :doc:`/exrail/cookbooks/index` for a collection of step-by-step instructions for building various |EX-R| based sequences and components for your model railroad.
+
 ----
 
 Turn Track Power On at Startup

@@ -5,12 +5,11 @@
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta content="DCC-EX DCC DCC++ EX DCC++EX" name="keywords" />
-<meta content="An EX-CommandStation is a simple, but powerful, DCC Command Station which you assemble yourself using widely available Arduino boards. [DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout.]" name="description" />
-<meta content="EX-CommandStation EX-CS Command Station" name="keywords" />
-<meta content="EX-CommandStation Command Station diagnosing Issues Troubleshooting" name="keywords" />
+<meta content="Throttles (apps and devices) that can be used on EX-CommandStations. [DCC-EX is a team of dedicated enthusiasts producing, easy to use, affordable, do-it-yourself, open source, DCC solutions to allow you to run your complete model railroad layout.]" name="description" />
+<meta content="Throttles Controllers WiFi" name="keywords" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Frequently Asked Questions (FAQ) &mdash; DCC-EX Model Railroading  documentation</title>
+  <title>WiThrottle protocol library - WiThrottleProtocol &mdash; DCC-EX Model Railroading  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -22,7 +21,7 @@
 
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-    <link rel="canonical" href="https://dcc-ex.com/support/ex-cs-faq.html" />
+    <link rel="canonical" href="https://dcc-ex.com/throttles/withrottle-protocol-library.html" />
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=5929fcd5"></script>
@@ -36,8 +35,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Diagnosing Basic Problems" href="ex-cs-diagnose.html" />
-    <link rel="prev" title="EX-CommandStation" href="index-ex-cs.html" /> 
+    <link rel="next" title="WiThrottle Protocol VS DCC-EX Native Commands" href="../reference/software/withrottle-vs-native-commands.html" />
+    <link rel="prev" title="DCC-EX Native Commands Summary Reference" href="../reference/software/command-summary-consolidated.html" /> 
      
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5X0KNBF0W"></script>
@@ -106,7 +105,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/installer-rtr.html">Install the Software</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/controllers-rtr.html">Choosing a Throttle (Controller)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/testing-rtr.html">Test Your Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ex-cs-troubleshooting__included-rtr.html">Troubleshooting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../support/ex-cs-troubleshooting__included-rtr.html">Troubleshooting</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/rtr-manual.html">EX-CSB1 Operating Manual</a></li>
 </ul>
 </li>
@@ -117,8 +116,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/installer-diy.html">Install the Software</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/controllers-diy.html">Choosing a Throttle (Controller)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/testing-diy.html">Test Your Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ex-cs-troubleshooting__included-diy.html">Troubleshooting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wifi-at-version.html">ESP8266 (WiFi Boards) - AT Version Issues and Solutions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../support/ex-cs-troubleshooting__included-diy.html">Troubleshooting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../support/wifi-at-version.html">ESP8266 (WiFi Boards) - AT Version Issues and Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/advanced-setup/index.html">DIY - Advanced Options</a><ul>
@@ -169,7 +168,7 @@
 <li class="toctree-l5"><a class="reference internal" href="../reference/hardware/wifi-boards/esp-01.html">ESP-01 and ESP-01s</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../reference/hardware/wifi-boards/mega-wifi.html">Mega+WiFi Combo Board</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-wifi/wifi-config.html">WiFi Configuration</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wifi-at-version.html">ESP8266 (WiFi Boards) - AT Version Issues and Solutions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../support/wifi-at-version.html">ESP8266 (WiFi Boards) - AT Version Issues and Solutions</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="../ex-commandstation/advanced-setup/supported-ethernet/index.html">Supported Ethernet Boards</a><ul>
@@ -226,7 +225,7 @@
 <li class="toctree-l6"><a class="reference internal" href="../ex-ioexpander/supported-devices.html">Supported Devices</a></li>
 <li class="toctree-l6"><a class="reference internal" href="../ex-ioexpander/testing.html">Testing EX-IOExpander</a></li>
 <li class="toctree-l6"><a class="reference internal" href="../ex-ioexpander/other-devices.html">Using other devices</a></li>
-<li class="toctree-l6"><a class="reference internal" href="ex-io-troubleshooting.html">EX-IOExpander <br /> FAQ and Troubleshooting</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../support/ex-io-troubleshooting.html">EX-IOExpander <br /> FAQ and Troubleshooting</a></li>
 </ul>
 </li>
 <li class="toctree-l5"><a class="reference internal" href="../ex-commandstation/accessories/inputs-outputs/duinonodes.html">Lew’s Duino Gear duinoNodes</a></li>
@@ -243,7 +242,7 @@
 <li class="toctree-l6"><a class="reference internal" href="../ex-turntable/test-and-tune.html">Testing, Tuning, and Control</a></li>
 <li class="toctree-l6"><a class="reference internal" href="../ex-turntable/layout-wiring.html">Layout Connections and Wiring</a></li>
 <li class="toctree-l6"><a class="reference internal" href="../ex-turntable/configure.html">Configuration options</a></li>
-<li class="toctree-l6"><a class="reference internal" href="ex-tt-troubleshooting.html">EX-Turntable <br /> FAQ and Troubleshooting</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../support/ex-tt-troubleshooting.html">EX-Turntable <br /> FAQ and Troubleshooting</a></li>
 <li class="toctree-l6"><a class="reference internal" href="../ex-turntable/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 </ul>
 </li>
@@ -259,7 +258,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/installer-esb1.html">Install the Software</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/controllers-esb1.html">Choosing a Throttle (Controller)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/testing-esb1.html">Test Your Setup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ex-cs-troubleshooting__included-esb1.html">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/ex-cs-troubleshooting__included-esb1.html">Troubleshooting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-commandstation/rtr-manual__included-esb1.html">EX-CSB1 Operating Manual</a></li>
 </ul>
 </li>
@@ -284,7 +283,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../ex-turntable/test-and-tune.html">Testing, Tuning, and Control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-turntable/layout-wiring.html">Layout Connections and Wiring</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-turntable/configure.html">Configuration options</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ex-tt-troubleshooting.html">EX-Turntable <br /> FAQ and Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/ex-tt-troubleshooting.html">EX-Turntable <br /> FAQ and Troubleshooting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-turntable/traverser.html">Traversers and Limited Rotation Turntables</a></li>
 </ul>
 </li>
@@ -293,7 +292,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../ex-ioexpander/supported-devices.html">Supported Devices</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-ioexpander/testing.html">Testing EX-IOExpander</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../ex-ioexpander/other-devices.html">Using other devices</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ex-io-troubleshooting.html">EX-IOExpander <br /> FAQ and Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/ex-io-troubleshooting.html">EX-IOExpander <br /> FAQ and Troubleshooting</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ex-fastclock/index.html">EX-FastClock</a><ul>
@@ -320,67 +319,67 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../throttles/index.html">THROTTLES (CONTROLLERS)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../throttles/protocols.html">WiThrottle Server, Web Server, DCC-EX Native Protocol Explained</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../throttles/software/index.html">Throttles (Software)</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">THROTTLES (CONTROLLERS)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="protocols.html">WiThrottle Server, Web Server, DCC-EX Native Protocol Explained</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software/index.html">Throttles (Software)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ex-webthrottle/index.html">EX-Web-Throttle (Web Browser)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/software/engine-driver.html">Engine Driver (Android)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/software/jmri.html">JMRI (Java Model Railroad Interface)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/software/throttlecard.html">ThrottleCard (iOS)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/software/cab-engineer.html">Cab Engineer: DCC Throttle (Android)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/software/dccpp-cab.html">DCCpp CAB (android)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/software/dccex-cab.html">DCC-EX CAB (Android and iOS)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/software/withrottle-cab.html">WiThrottle Cab (Android and iOS)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/software/dccpp-throttle.html">DCC++ Throttle (android)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/software/digitrainspro.html">DigiTrainsPro (Android, iOS, Windows)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/software/locontrol.html">Locontrol (iOS)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/software/railroad-automation.html">Railroad Automation (Windows)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/software/rtdrive-dccpp.html">RtDrive DCC++ (Android)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/software/srcpclient.html">SRCP Client (iOS)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/software/train-driver.html">Train Driver (iOS)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/software/trainnavigator.html">TrainNavigator (iOS)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/software/train-throttle.html">Train Throttle (Windows, Mac, iOS)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/software/withrottle.html">WiThrottle (iOS)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/software/signal-cab.html">Signal Cab (iOS)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/software/dcc-commander.html">DCC Commander (iOS)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/software/android-apps-on-windows.html">Android Apps on Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software/engine-driver.html">Engine Driver (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software/jmri.html">JMRI (Java Model Railroad Interface)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software/throttlecard.html">ThrottleCard (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software/cab-engineer.html">Cab Engineer: DCC Throttle (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software/dccpp-cab.html">DCCpp CAB (android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software/dccex-cab.html">DCC-EX CAB (Android and iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software/withrottle-cab.html">WiThrottle Cab (Android and iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software/dccpp-throttle.html">DCC++ Throttle (android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software/digitrainspro.html">DigiTrainsPro (Android, iOS, Windows)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software/locontrol.html">Locontrol (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software/railroad-automation.html">Railroad Automation (Windows)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software/rtdrive-dccpp.html">RtDrive DCC++ (Android)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software/srcpclient.html">SRCP Client (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software/train-driver.html">Train Driver (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software/trainnavigator.html">TrainNavigator (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software/train-throttle.html">Train Throttle (Windows, Mac, iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software/withrottle.html">WiThrottle (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software/signal-cab.html">Signal Cab (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software/dcc-commander.html">DCC Commander (iOS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="software/android-apps-on-windows.html">Android Apps on Windows</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../throttles/hardware/index.html">Throttles (Hardware)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/engine-driver-physical-knobs.html">Adding a Physical Dial/Knob to Engine Driver</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/ex-t3-wifi.html">EX-T3-WiFi (T3 = Tactile Touch Throttle)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/handcab.html">HandCab (Physical)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/lodi-con-wifi-throttle.html">LoDi-Con WiFi Throttle</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/mybluepillthrottle.html">myBluePillThrottle (Physical)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/uwt50.html">TCS UWT-50 &amp; UWT-100 WiFi Throttles (Physical)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/dccexcontroller.html">DccEXcontroller (Physical)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/simple-throttle.html">DCC-EX Simple Throttle (Physical)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/wifred.html">WiFred (Physical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/index.html">Throttles (Hardware)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware/engine-driver-physical-knobs.html">Adding a Physical Dial/Knob to Engine Driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/ex-t3-wifi.html">EX-T3-WiFi (T3 = Tactile Touch Throttle)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/handcab.html">HandCab (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/lodi-con-wifi-throttle.html">LoDi-Con WiFi Throttle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/mybluepillthrottle.html">myBluePillThrottle (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/streamdeck.html">Elgato Stream Deck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/uwt50.html">TCS UWT-50 &amp; UWT-100 WiFi Throttles (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/dccexcontroller.html">DccEXcontroller (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/simple-throttle.html">DCC-EX Simple Throttle (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/wifred.html">WiFred (Physical)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../throttles/connect_wifi_throttle_via_usb.html">Connecting WiFi Throttles via USB</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../throttles/tech-reference.html">Technical Reference for Throttle Developers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../throttles/native-protocol-library.html">DCC-EX Native command library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="connect_wifi_throttle_via_usb.html">Connecting WiFi Throttles via USB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tech-reference.html">Technical Reference for Throttle Developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="native-protocol-library.html">DCC-EX Native command library</a></li>
 </ul>
 </li>
 </ul>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../support-and-info.html">SUPPORT, INFO &amp; IDEAS</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Troubleshooting &amp; Getting Help</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="index-ex-cs.html">EX-CommandStation</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Frequently Asked Questions (FAQ)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ex-cs-diagnose.html">Diagnosing Basic Problems</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ex-cs-troubleshooting.html">Troubleshooting</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../support-and-info.html">SUPPORT, INFO &amp; IDEAS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../support/index.html">Troubleshooting &amp; Getting Help</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../support/index-ex-cs.html">EX-CommandStation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../support/ex-cs-faq.html">Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../support/ex-cs-diagnose.html">Diagnosing Basic Problems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../support/ex-cs-troubleshooting.html">Troubleshooting</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="troubleshooting-decoders.html">Troubleshooting Decoders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ex-tt-troubleshooting.html">EX-Turntable <br /> FAQ and Troubleshooting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ex-io-troubleshooting.html">EX-IOExpander <br /> FAQ and Troubleshooting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="contact-us.html">Contact Us</a></li>
-<li class="toctree-l3"><a class="reference internal" href="create-ticket.html">Submit a Support Ticket</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/troubleshooting-decoders.html">Troubleshooting Decoders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/ex-tt-troubleshooting.html">EX-Turntable <br /> FAQ and Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/ex-io-troubleshooting.html">EX-IOExpander <br /> FAQ and Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/contact-us.html">Contact Us</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../support/create-ticket.html">Submit a Support Ticket</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../external-references/index.html">Articles and Videos</a></li>
@@ -492,8 +491,8 @@
 </ul>
 </li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">REFERENCE &amp; DETAILED INFO</a><ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../reference/index.html">REFERENCE &amp; DETAILED INFO</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../reference/hardware/index.html">Hardware Options</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/microcontroller-boards.html">Microcontroller Boards</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../reference/hardware/microcontrollers/arduino-mega.html">Arduino Mega (Recommended)</a></li>
@@ -571,21 +570,21 @@
 <li class="toctree-l3"><a class="reference internal" href="../reference/hardware/power-supplies.html">Power Supplies</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/software/index.html">Software</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="../reference/software/index.html">Software</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../reference/software/basic-config-h.html">Basic config.h settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/software/advanced-config-h.html">Advanced config.h settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/software/programming-locos.html">Programming Locos (CVs)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/software/command-summary-consolidated.html">DCC-EX Native Commands Summary Reference</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../exrail/exrail-command-reference.html">EXRAIL Command Reference</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/native-protocol-library.html">DCC-EX Native command protocol library - DCCEXProtocol</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/withrottle-protocol-library.html">WiThrottle protocol library - WiThrottleProtocol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="native-protocol-library.html">DCC-EX Native command protocol library - DCCEXProtocol</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">WiThrottle protocol library - WiThrottleProtocol</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/software/withrottle-vs-native-commands.html">WiThrottle Protocol VS DCC-EX Native Commands</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/software/command-summary-consolidated.html">Native Commands Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../exrail/exrail-command-reference.html">EXRAIL Command Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/developers/index.html">Developer and API reference</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/tech-reference.html">Technical Reference for Throttle Developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tech-reference.html">Technical Reference for Throttle Developers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/developers/api.html">DCC-EX Native API Reference</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/developers/hal.html">DCC-EX HAL Architecture</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../reference/developers/hal-config.html">I/O Device Drivers and HAL</a></li>
@@ -610,9 +609,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../external-references/standards.html">Standards &amp; technical references</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../projects/index.html">Related Projects</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../projects/railsnail-bluetooth.html">RailSnail’s Complete Bluetooth EX-CommandStation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/minithrottle.html">miniThrottle (Physical)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../throttles/hardware/streamdeck.html">Elgato Stream Deck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/minithrottle.html">miniThrottle (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/witcontroller.html">WiTcontroller (Physical)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hardware/streamdeck.html">Elgato Stream Deck</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../projects/ProMiniAir_Transmitter_w_CommandStation.html">Battery Power, Radio Control: ProMiniAir Transmitter Integrated with a WiFi-equipped <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> (PMA Tx/WCS)</a></li>
 </ul>
 </li>
@@ -681,9 +680,9 @@
     <a class="top-nav-text" href="../purchasing/dealers.html">Purchasing</a> ·
     <a class="top-nav-text" href="../ex-installer/index.html">Installing</a> ·
     <a class="top-nav-text" href="../ex-commandstation/diy/index.html">Self Build</a> ·
-    <a class="top-nav-text" href="../throttles/index.html">Throttles</a> ·
+    <a class="top-nav-text" href="index.html">Throttles</a> ·
     <a class="top-nav-text" href="/news.html">News</a> ·
-    <a class="top-nav-text" href="index.html">Support</a> ·
+    <a class="top-nav-text" href="../support/index.html">Support</a> ·
     <a class="top-nav-text" href="../about/index-contributing.html">Donations</a> ·
     <a class="top-nav-text" href="../reference/index.html">Reference</a> ·
     <a class="top-nav-text" href="../about/index.html">About Us</a> ·
@@ -694,14 +693,13 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../support-and-info.html">Support, Throttles &amp; Other Information</a></li>
-          <li class="breadcrumb-item"><a href="index.html">Troubleshooting &amp; Getting Help</a></li>
-          <li class="breadcrumb-item"><a href="index-ex-cs.html">EX-CommandStation</a></li>
-      <li class="breadcrumb-item active">Frequently Asked Questions (FAQ)</li>
+          <li class="breadcrumb-item"><a href="../reference/index.html">Reference</a></li>
+          <li class="breadcrumb-item"><a href="../reference/software/index.html">Software</a></li>
+      <li class="breadcrumb-item active">WiThrottle protocol library - WiThrottleProtocol</li>
   
     
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/support/ex-cs-faq.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/DCC-EX/dcc-ex.github.io/blob/sphinx/docs/throttles/withrottle-protocol-library.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   
 
@@ -710,30 +708,12 @@
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-              <p><a class="image-product-logo-float-right reference internal" href="../_images/product-logo-ex-commandstation.png"><img alt="EX-CommandStation" class="image-product-logo-float-right" src="../_images/product-logo-ex-commandstation.png" style="width: 320.0px; height: 64.0px;" /></a></p>
-<section id="frequently-asked-questions-faq">
-<h1>Frequently Asked Questions (FAQ)<a class="headerlink" href="#frequently-asked-questions-faq" title="Link to this heading"></a></h1>
-<p><a class="reference external" href="../../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#conductor"><img alt="Conductor Hat" src="../_images/conductor-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../../support/index.html#contact-support-options" title="Request help or support"><img src="../../_static/images/buttons/support.png" style="height: 33px;" /></a> |</p>
-<p>This is a list of <strong>Frequently Asked Questions</strong> that we answer on our various support channels:</p>
-<table class="command-table docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Question</p></th>
-<th class="head"><p>Answer</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Can I run a loco on the programming track?</p></td>
-<td><p>Yes, by issuing the command <code class="docutils literal notranslate"><span class="pre">&lt;1</span> <span class="pre">JOIN&gt;</span></code> via the serial console.  <br /> This is intended to be temporary, for running a loco from a programming track onto your layout, not for normal running of the layout. <br /> <br /> (In <a class="reference internal" href="../throttles/software/engine-driver.html"><span class="doc">Engine Driver</span></a> you can <span class="guilabel">Request Loco ID</span> which will also temporarily allow the loco to be driven from the programming track. see <a class="reference internal" href="../throttles/driveaway.html"><span class="doc">Using the “DriveAway(tm)” Feature</span></a> for more information.)</p></td>
-</tr>
-<tr class="row-odd"><td><p>Why Can’t I Put an EXRAIL Script on an SDCard?</p></td>
-<td><p>Being able to read an SD card on the Arduino platforms requires a significant amount of code because there is no operating system or file system which we would take for granted on a PC. We simply don’t have enough free memory on an Arduino to hold that code. <br /> <br /> See <a class="reference internal" href="../exrail/about.html#why-can-t-i-put-a-script-on-an-sdcard"><span class="std std-ref">Why Can’t I Put a Script on an SDCard?</span></a> for more information.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p><a class="reference external" href="https://github.com/DCC-EX/dcc-ex.github.io/issues/434">LOW - More FAQs to follow</a></p>
-</div>
+              <section id="withrottle-protocol-library-withrottleprotocol">
+<h1>WiThrottle protocol library - WiThrottleProtocol<a class="headerlink" href="#withrottle-protocol-library-withrottleprotocol" title="Link to this heading"></a></h1>
+<p><a class="reference external" href="../begin/levels.html#levels-of-difficulty-or-technical-complexity"><img alt="Suitable For Level:" src="../_images/level-suitable-for.png" style="width: 110.4px; height: 36.0px;" /></a> <a class="reference external" href="../begin/levels.html#tinkerer"><img alt="Propeller Beanie" src="../_images/tinkerer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a class="reference external" href="../begin/levels.html#engineer"><img alt="Engineer Hat" src="../_images/engineer-level.png" style="width: 135.6px; height: 36.0px;" /></a> <a href="../support/index.html#contact-support-options" title="Request help or support"><img src="../_static/images/buttons/support.png" style="height: 33px;" /></a></p>
+<p>A WiThrottle protocol library is available to help develop throttle apps on Arduino (primarily ESP32) hardware.</p>
+<p>The library implements the WiThrottle protocol (as used in many commands Staions including the <a href="../index.html"><span class="dccex-suffix">DCC-</span><span class="dccex-prefix">EX</span></a> <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a>, JMRI, LnWi), allowing a device to connect to the server and act as a client (such as a hardware based throttle).</p>
+<p>Details of the library, including instructions and examples, <a class="reference external" href="https://github.com/flash62au/WiThrottleProtocol">is available here</a> <img src="../_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;">.</p>
 </section>
 
 <div class="section ablog__blog_comments">
@@ -743,8 +723,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index-ex-cs.html" class="btn btn-neutral float-left" title="EX-CommandStation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ex-cs-diagnose.html" class="btn btn-neutral float-right" title="Diagnosing Basic Problems" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../reference/software/command-summary-consolidated.html" class="btn btn-neutral float-left" title="DCC-EX Native Commands Summary Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../reference/software/withrottle-vs-native-commands.html" class="btn btn-neutral float-right" title="WiThrottle Protocol VS DCC-EX Native Commands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -757,7 +737,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7fe0c15379a0>
+    <jinja2.runtime.BlockReference object at 0x7fe0a8532650>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

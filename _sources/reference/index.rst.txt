@@ -9,22 +9,7 @@ Reference
 
 |SUITABLE| |conductor| |tinkerer| |engineer| |support-button| 
 
-Glossary
-========
 
-.. toctree::
-   :maxdepth: 1
-
-   glossary
-
-Videos
-======
-
-.. toctree::
-   :maxdepth: 1
-
-   videos/index
- 
 Hardware, Software, tools
 =========================
 
@@ -47,3 +32,11 @@ External References
 
    /external-references/standards
    /projects/index
+
+Glossary
+========
+
+.. toctree::
+   :maxdepth: 1
+
+   glossary

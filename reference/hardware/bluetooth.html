@@ -325,6 +325,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../ex-webthrottle/index.html">EX-Web-Throttle (Web Browser)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../throttles/software/engine-driver.html">Engine Driver (Android)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../throttles/software/jmri.html">JMRI (Java Model Railroad Interface)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/throttlecard.html">ThrottleCard (iOS)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../throttles/software/cab-engineer.html">Cab Engineer: DCC Throttle (Android)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../throttles/software/dccpp-cab.html">DCCpp CAB (android)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../throttles/software/dccex-cab.html">DCC-EX CAB (Android and iOS)</a></li>
@@ -336,7 +337,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../../throttles/software/rtdrive-dccpp.html">RtDrive DCC++ (Android)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../throttles/software/srcpclient.html">SRCP Client (iOS)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../throttles/software/train-driver.html">Train Driver (iOS)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../throttles/software/throttlecard.html">ThrottleCard (iOS)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../throttles/software/trainnavigator.html">TrainNavigator (iOS)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../throttles/software/train-throttle.html">Train Throttle (Windows, Mac, iOS)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../throttles/software/withrottle.html">WiThrottle (iOS)</a></li>
@@ -493,16 +493,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">REFERENCE &amp; DETAILED INFO</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../glossary.html">Glossary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../videos/index.html">Videos</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Hardware Options</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="index-decoder.html">Decoders</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="decoder-list.html">List of Tested Decoders</a></li>
-<li class="toctree-l4"><a class="reference internal" href="decoder-notes.html">Decoder Notes</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="wire-gauge.html">DCC Track Wiring Information</a></li>
-<li class="toctree-l3"><a class="reference internal" href="power-supplies.html">Power Supplies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="microcontroller-boards.html">Microcontroller Boards</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="microcontrollers/arduino-mega.html">Arduino Mega (Recommended)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="microcontrollers/esp32.html">ESP32 (Recommended)</a></li>
@@ -570,6 +561,13 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="accessory-controllers.html">Accessory Controllers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index-decoder.html">Decoders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="decoder-list.html">List of Tested Decoders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="decoder-notes.html">Decoder Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="wire-gauge.html">DCC Track Wiring Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="power-supplies.html">Power Supplies</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../software/index.html">Software</a><ul>
@@ -579,6 +577,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../software/command-summary-consolidated.html">DCC-EX Native Commands Summary Reference</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../exrail/exrail-command-reference.html">EXRAIL Command Reference</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../throttles/native-protocol-library.html">DCC-EX Native command protocol library - DCCEXProtocol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../throttles/withrottle-protocol-library.html">WiThrottle protocol library - WiThrottleProtocol</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../software/withrottle-vs-native-commands.html">WiThrottle Protocol VS DCC-EX Native Commands</a></li>
 </ul>
 </li>
@@ -616,6 +615,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../projects/ProMiniAir_Transmitter_w_CommandStation.html">Battery Power, Radio Control: ProMiniAir Transmitter Integrated with a WiFi-equipped <a href="../ex-commandstation/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">&#8209;CommandStation</span></a> (PMA Tx/WCS)</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 </li>
 </ul>
@@ -747,7 +747,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7ff8ea90cc10>
+    <jinja2.runtime.BlockReference object at 0x7fe0a34e6e90>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

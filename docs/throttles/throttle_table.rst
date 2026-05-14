@@ -480,7 +480,7 @@
   Free = No additional cost for full functionality. |BRxa|
   Paid = Payment required for any usage. |BRxa|
   Free/Paid = Both Free and Paid versions are available. The free version usually has limited features. |BRxa|
-  Open Source = Source code is available to view, modify and build your own. |BRxa| However the hardware to build it is not free. |BRxa|
+  Open Source = Designs and Source code are available to view, modify and build your own. |BRxa| However the hardware to build it is not free. |BRxa|
   Native = Uses the DCC-EX Native protocol/commands. [#t1]_ |BRxa|
   WiT = Uses the WiThrottle protocol. [#t1]_ |BRxa|
   Web = Requires the use of a Web Browser. |BRxa|

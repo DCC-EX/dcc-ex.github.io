@@ -16,10 +16,18 @@ Articles and Videos
       :depth: 2
       :local:
 
+
+
 The following are articles and videos created by people in and outside the |DCC-EX| project which you may find useful or interesting.
 
 Videos
 ======
+
+DCC-EX YouTube Channel
+----------------------
+
+Please visit our YouTube Channel at `www.youtube.com/c/DCCEX <https://www.youtube.com/c/DCCEX>`_ |EXTERNAL-LINK|
+
 
 Jimmy from 'DIY and Digital Railroad'
 -------------------------------------

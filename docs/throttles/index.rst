@@ -53,11 +53,11 @@ Android (Phones and Tablets)
 Apple iOS (Phones and Tablets)
 ------------------------------
 
+- :doc:`ThrottleCard (iOS) <software/throttlecard>`
 - :doc:`DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
 - :doc:`Locontrol (iOS) <software/locontrol>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`Train Driver (iOS) <software/train-driver>`
-- :doc:`ThrottleCard (iOS) <software/throttlecard>`
 - :doc:`TrainNavigator (iOS) <software/trainnavigator>`
 - :doc:`DCC-EX CAB (iOS and Android) <software/dccex-cab>`
 - :doc:`WiThrottle Cab (iOS and Android) <software/withrottle-cab>`
@@ -112,6 +112,7 @@ DCC-EX (DCC-EX Native Commands)
 
 - :doc:`EX-WebThrottle (Web Browser) </ex-webthrottle/index>`  *recommended*
 - :doc:`Engine Driver (Android) <software/engine-driver>`  *recommended*
+- :doc:`ThrottleCard (iOS) <software/throttlecard>`
 - :doc:`DCCpp CAB (Android) <software/dccpp-cab>`
 - :doc:`DCC-EX CAB (iOS and Android) <software/dccex-cab>`
 - :doc:`DCC++ Throttle (Android) <software/dccpp-throttle>`
@@ -131,13 +132,13 @@ WiThrottle Protocol Based Throttles
 -----------------------------------
 
 - :doc:`Engine Driver (Android)<software/engine-driver>`  *recommended*
+- :doc:`ThrottleCard (iOS) <software/throttlecard>`
 - :doc:`Cab Engineer: DCC Throttle (Android) <software/cab-engineer>`
 - :doc:`Locontrol (iOS) <software/locontrol>`
 - :doc:`WiThrottle Cab (iOS and Android) <software/withrottle-cab>`
 - :doc:`WiThrottle (iOS)<software/withrottle>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`Train Driver (iOS) <software/train-driver>`
-- :doc:`ThrottleCard (iOS) <software/throttlecard>`
 - :doc:`Signal Cab (iOS) <software/signal-cab>` |BR| |BR|
 - :doc:`Elgato Stream Deck (Physical) <hardware/streamdeck>`
 - `HandCab (Physical DIY) <https://github.com/1fatgmc/HandCab/tree/main>`_

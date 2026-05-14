@@ -31,6 +31,11 @@ If you wish to run trains from your phone, tablet or other |WiThrottle protocol|
 
    |SUITABLE| |tinkerer| |engineer| |BR| Using *WiFi (OR Ethernet)* to talk between |JMRI| and |EX-CS| is complex, slow and functionally limited and, while it generally works, it is NOT SUPPORTED.
 
+.. note:: 
+
+   |SUITABLE| |tinkerer| |engineer| |BR| For the |EX-CSB1-SHORT| and DIY ESP32 based Command Stations, the Expermental / Develpment (DEVEL) versions of the software from 5.7.0 ignore the WiFi configuration in the config.h file.  see `WiFi configuration (CSB1 or ESP32 ONLY) <https://dcc-ex.com/mkdocs-test/products/ex-commandstation/config-wifi-esp32/>`_ for more information.
+
+
 |HR-HEAVY|
 
 Next Steps

@@ -472,6 +472,10 @@ You can configure the WiFi for **EX-CommandStation** two ways:
 * **Access Point mode** |BR| You can configure for EX-CommandStation to have its own, completely isolated, WiFi Network. This is referred to as *Access Point Mode*. (Most useful if your layout is away from the house, or you transport your layout frequently, or do not want to give guests access to your home WiFi.) |BR| To enable, select ``Use my EX-CommandStation as an Access Point`` |BR| |BR|
 * **Station mode**  |BR| The EX-CommandStation can be setup so that it connects to your existing home WiFi Network. This is referred to as *Station Mode*. |BR| To enable, select  ``Connect my EX-CommandStation to my existing wireless network`` 
 
+.. note:: 
+
+   |SUITABLE| |tinkerer| |engineer| |BR| For the |EX-CSB1-SHORT| and DIY ESP32 based Command Stations, the Experimental / Develpment (DEVEL) versions of the software from 5.7.0 ignore the WiFi configuration in the config.h file.  see `WiFi configuration (CSB1 or ESP32 ONLY) <https://dcc-ex.com/mkdocs-test/products/ex-commandstation/config-wifi-esp32/>`_ for more information.
+
 Use my EX-CommandStation as an Access Point
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

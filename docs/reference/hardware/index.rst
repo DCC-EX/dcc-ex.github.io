@@ -7,15 +7,6 @@
 Hardware
 ********
 
-|SUITABLE| |conductor| |tinkerer| |engineer| |support-button| 
-
-.. toctree::
-    :maxdepth: 1
-    
-    index-decoder
-    wire-gauge
-    power-supplies
-
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
 .. toctree::
@@ -44,3 +35,11 @@ Motor Board List
 
 .. include:: include_table_motor_boards.rst
 
+|SUITABLE| |conductor| |tinkerer| |engineer| |support-button| 
+
+.. toctree::
+    :maxdepth: 1
+    
+    index-decoder
+    wire-gauge
+    power-supplies

@@ -35,4 +35,5 @@ EXRAIL and Native Commands
     command-summary-consolidated
     /exrail/exrail-command-reference
     /throttles/native-protocol-library
+    /throttles/withrottle-protocol-library
     withrottle-vs-native-commands

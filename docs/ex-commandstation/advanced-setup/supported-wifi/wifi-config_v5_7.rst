@@ -34,7 +34,7 @@ From version 5.7.0, config.h options for WiFi configuration in ``config.h`` igno
 
 It is now necessary to use the new WiFi configuration method, which involves connecting to the |EX-CS| *after you have flashed the firmware.*  You do so by connecting to the |EX-CS| via USB or by connecting to the WiFi Access Point network of the CS. (Note that the WiFi Access Point network approach has limitations.)
 
-The advantage of this is that it is independent of the flashing process, and will remeber your WiFi settings across firmware updates and changes.
+The advantage of this is that it is independent of the flashing process, and will remember your WiFi settings across firmware updates and changes.
 
 You can configuring WiFi settings through:
 
@@ -65,9 +65,11 @@ The are some additional settings that are not mode but effect the wifi connectio
 Accessing via USB vs WiFi
 ==========================
 
-Only **Station (STA) mode** can be changed over WiFi. 
+Only **Station (STA) mode** and the **HOSTNAME** can be changed over WiFi. 
 
-**Access Point (AP)** mode changes require a serial connection.
+**Access Point (AP)** mode changes require a serial/USB connection.
+
+----
 
 Changing the settings
 ======================
@@ -105,9 +107,9 @@ EX-Toolbox
 
 1. Connect your PC to the |EX-TB| via USB or Wifi.  See :doc:`EX-Toolbox </ex-toolbox/using>` for more details.
 
-2. go to the ``WiFi Setup`` page from the menu or the toolbar buttons and follow the same steps as outlined for the |EX-WT| above.
+2. Go to the ``WiFi Setup`` page from the menu or the toolbar buttons and follow the same steps as outlined for the |EX-WT| above.
 
-Note: Only **Station (STA) mode** can be changed over WiFi. **Access Point (AP)** mode changes require a USB connection.
+Note: Only **Station (STA) mode** and the **HOSTNAME** can be changed over WiFi. **Access Point (AP) mode** changes require a USB connection.
 
 In every case above, the Command Station will restart to apply the new settings. You will need to reconnecting to the Command Station in the |EX-TB| interface.
 
@@ -120,14 +122,15 @@ The process for configuring WiFi settings using the serial monitor or device mon
 
 In every case below, the Command Station will restart to apply the new settings. You will need to reconnecting to the Command Station in the app's interface.
 
-Changing to Station Mode¶
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Changing to Station Mode
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 i.e. your home router.  You will need to issue the command:
 
-```cpp
-<C WIFI "routerSSID" "routerPassword">
-```
+.. code-block:: cpp
+
+   <C WIFI "routerSSID" "routerPassword">
+
 e.g. Sets the STA mode to connect to a router with SSID "routerSSID" and password 
 
 The command station will attempt to connect to this network immediately, and on each rerstart. If it fails to connect, it will revert to AP mode.
@@ -137,18 +140,19 @@ Changing the Access Point settings
 
 To give the Access point a specific name and a password that will not be revealed on the OLED use the command:
 
-```cpp
-<C WIFI AP "MyCSB1" "SpamWonderfulSpam">
-```
+.. code-block:: cpp
+
+   <C WIFI AP "MyCSB1" "SpamWonderfulSpam">
+
 e.g. Sets the AP name to "MyCSB1" and the password to "SpamWonderfulSpam":
 
 The AP mode password must be at least 8 characters long.
 
 The default channel is set to "11". If you need to use an alternate channel (we recommend using only 1,6, or 11) you may change it with the command:
 
-```cpp
-<C WIFI AP "MyCSB1" "SpamWonderfulSpam" 6>
-```
+.. code-block:: cpp
+
+   <C WIFI AP "MyCSB1" "SpamWonderfulSpam" 6>
 
 Use a phone WiFi analyser app to see which channels are relatively quiet in your area. 
 
@@ -157,26 +161,26 @@ Hidden Access Point mode
 
 In some environments you may want to hide the SSID from phones scanning for access points. If you do hide the SSID, it is still possible to connect by entering the SSID manually on the phone/tablet.
 
-```cpp
-<C WIFI HIDDENAP "MyCSB1" "SpamWonderfulSpam" 6>
-```
+.. code-block:: cpp
+
+   <C WIFI HIDDENAP "MyCSB1" "SpamWonderfulSpam" 6>
 
 Configuring the Host Name
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The default hostname "DCCEX" but you can change this if you have more than one CS on your network to make them show up with different names. Host names containing "DCCEX" are more readily found by WiFi throttles. 
 
-```cpp
-<C WIFI HOSTNAME "DCCEX-MYCSB1">
-```
+.. code-block:: cpp
+   
+   <C WIFI HOSTNAME "DCCEX-MYCSB1">
 
 e.g. Sets the hostname to "DCCEX-MYCSB1":
 
 Clearing WiFi settings
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-```cpp
-<C WIFI DEFAULT>
-```
+.. code-block:: cpp
+
+   <C WIFI DEFAULT>
 
 WiFi will revert to the internally generated ssid and password.

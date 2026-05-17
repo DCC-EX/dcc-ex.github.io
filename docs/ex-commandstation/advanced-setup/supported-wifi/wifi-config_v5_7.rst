@@ -28,11 +28,11 @@ Also see `WiFi configuration (CSB1 or ESP32 ONLY) <https://dcc-ex.com/mkdocs-tes
 Background
 ===========
 
-Prior to version 5.7.0, WiFi configuration for |EX-CS| was done through options in the ``config.h`` file. This method required users to modify the firmware source code and recompile it for their specific WiFi settings, which could be cumbersome and error-prone.
+Prior to version 5.7.0, WiFi configuration for |EX-CS| was done through options in the ``config.h`` file. This method required users to modify the firmware (by editing `config.h``) and recompile it for their specific WiFi settings.
 
-From version 5.7.0, config.h options for WiFi configuration in ``config.h`` are *ignored* by the CSB1 or ESP32 EX-CommandStations.  
+From version 5.7.0, WiFi configuration options in ``config.h`` are *ignored* by the CSB1 or ESP32 EX-CommandStations.  
 
-It is now necessary to use the new WiFi configuration method, which involves connecting to the |EX-CS| *after you have flashed the firmware.*  You do so by connecting to the |EX-CS| via USB or by connecting to the WiFi Access Point network of the CS. (Note that the WiFi Access Point network approach has limitations.)
+It is now necessary to use a new WiFi configuration method, which involves connecting to the |EX-CS| *after you have flashed the firmware.*  You do so by connecting to the |EX-CS| via USB or by connecting to the WiFi Access Point network of the CS. (Note that the WiFi Access Point network approach has limitations. See below.)
 
 The advantage of this is that it is independent of the flashing process, and will remember your WiFi settings across firmware updates and changes.
 
@@ -70,8 +70,8 @@ There are some additional settings that are not modes but effect the wifi connec
 
 ----
 
-Using USB vs WiFi
-==================
+Using USB vs WiFi - Limitations of WiFi
+=========================================
 
 Only **Station (STA) mode** and the **HOSTNAME** can be changed over WiFi.
 
@@ -104,13 +104,14 @@ Using EX-WebThrotttle
 
      This is useful if you have more than one |EX-CS| on your network to make them show up with different names.
 
-.. warning::
-
-   In every case above, the Command Station will restart to apply the new settings. You will need to reconnecting to the Command Station in the |EX-WT| interface.
-
 **Resetting the Wifi settings**
 
 The :guilabel:`Reset WiFi Settings` button on the WiFi Setup page will reset all WiFi settings to their default values. This will cause the Command Station to restart and create its own WiFi network in Access Point mode with the default SSID and password.
+
+.. note::
+
+   In every case above, the Command Station will restart to apply the new settings. You will need to reconnect to the Command Station in the |EX-WT| interface.
+
 
 |HR-DASHED|
 
@@ -126,7 +127,9 @@ Using EX-Toolbox
 
 Note: Only **Station (STA) mode** and the **HOSTNAME** can be changed over WiFi. **Access Point (AP) mode** changes require a USB connection.
 
-In every case above, the Command Station will restart to apply the new settings. You will need to reconnecting to the Command Station in the |EX-TB| interface.
+.. note::
+
+   In every case above, the Command Station will restart to apply the new settings. You will need to reconnect to the Command Station in the |EX-TB| interface.
 
 |HR-DASHED|
 
@@ -135,7 +138,10 @@ Using EX-Installer, Arduino IDE, VSC, throttle apps
 
 The process for configuring WiFi settings using the serial monitor or device monitor on any of the EX-Installer, Arduino IDE, VSC or WiFi throttle apps are esentially the same.
 
-In every case below, the Command Station will restart to apply the new settings. You will need to reconnecting to the Command Station in the app's interface.
+
+.. note::
+
+   In every case below, the Command Station will restart to apply the new settings. You will need to reconnect to the Command Station in the app's interface.
 
 Changing to Station Mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

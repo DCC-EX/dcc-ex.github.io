@@ -474,7 +474,7 @@ You can configure the WiFi for **EX-CommandStation** two ways:
 
 .. note:: 
 
-   |SUITABLE| |tinkerer| |engineer| |BR| For the |EX-CSB1-SHORT| and DIY ESP32 based Command Stations, the Experimental / Develpment (DEVEL) versions of the software from 5.7.0 ignore the WiFi configuration in the config.h file.  see `WiFi configuration (CSB1 or ESP32 ONLY) <https://dcc-ex.com/mkdocs-test/products/ex-commandstation/config-wifi-esp32/>`_ for more information.
+   |SUITABLE| |tinkerer| |engineer| |BR| For the |EX-CSB1-SHORT| and DIY ESP32 based Command Stations, the Experimental / Development (DEVEL) versions of the software from 5.7.0 ignore the WiFi configuration in the config.h file.  see `WiFi configuration (CSB1 or ESP32 ONLY) <https://dcc-ex.com/mkdocs-test/products/ex-commandstation/config-wifi-esp32/>`_ for more information.
 
 Use my EX-CommandStation as an Access Point
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

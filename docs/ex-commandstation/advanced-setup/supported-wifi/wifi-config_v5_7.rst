@@ -54,7 +54,7 @@ WiFi on the |EX-CS| has two operating modes:
 
 * **Station (STA) mode** means the command station connects to your WiFi router and appears as a device on that network. If the WiFi is configured for STA mode, but fails to connect to your router, it will fall back to AP mode in much the same way as smart plugs, lights etc.
 
-The are some additional settings that are not mode but effect the wifi connection:
+The are some additional settings that are not modes but effect the wifi connection:
 
 * **Hidden AP mode**: When enabled, the Command Station's WiFi network will not be visible in the list of available networks on devices. This can enhance security by making it less obvious to potential attackers, but it also means that users will need to manually enter the network name (SSID) to connect.
 

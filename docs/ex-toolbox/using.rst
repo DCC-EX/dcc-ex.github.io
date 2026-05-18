@@ -499,6 +499,73 @@ You can manually restart the readings with the :guilabel:`Start` button.  This w
 
 ----
 
+WiFi Setup
+=================
+
+(The WiFi Settings screen is only available when connected to EX-CommandStation version 5.7.0 and above.)
+
+Prior to version 5.7.0, WiFi configuration for |EX-CS| was done through options in the ``config.h`` file. This method required users to modify the firmware (by editing ``config.h``) and recompile it for their specific WiFi settings.
+
+From version 5.7.0, it is necessary to use a new WiFi configuration method, which involves connecting to the |EX-CS| *after you have flashed the firmware.*  You do so by connecting to the |EX-CS| via USB or by connecting to the WiFi Access Point network of the CS and issuing a set of new commands. 
+
+See the :doc:`/ex-commandstation/advanced-setup/supported-wifi/wifi-config_v5_7` page for more details.
+
+|EX-TB| provides a screen to allow you to issue the necessary commands to change the WiFi settings of your |EX-CS|.
+
+.. figure:: /_static/images/ex-toolbox/wifi_setup_sta_mode.png
+   :alt: WiFi Settings Screen - STA mode
+   :scale: 20%
+   :align: right
+
+   EX-Toolbox WiFi Settings Screen - STA Mode
+
+Station Mode
+-------------
+
+Station Mode WiFi configuration is available from the 'WiFi Setup' screen, when 'WiFi Station Mode' is selected in the drop down list at the top of the screen.
+
+The Station Mode WiFi configuration allows you to set the `SSID` and `password` of the WiFi network that your |EX-CS| will connect to, and also allows you to set the `hostname` of the |EX-CS| on that network.
+
+To change the *Station Mode* enter a `SSID` (the name of the network), and a `password` of at least 8 characters and presse either the :guilabel:`Set Station` button for a permanent change, or the :guilabel:`Set Temp` button for a temporary change.
+
+To change the *hostname* enter the hostname and press the :guilabel:`Set Hostname` button.
+
+|force-break|
+
+.. figure:: /_static/images/ex-toolbox/wifi_setup_ap_mode.png
+   :alt: WiFi Settings Screen - AP mode
+   :scale: 20%
+   :align: right
+
+   EX-Toolbox WiFi Settings Screen - AP Mode
+
+Access Point Mode
+-----------------
+
+Access Point Mode WiFi configuration is available from the 'WiFi Setup' screen, when 'WiFi Access Point Mode' is selected in the drop down list at the top of the screen.
+
+The Access Point Mode WiFi configuration allows you to set the `SSID`, `password` and optional `Channel` of the WiFi Access Point network that your |EX-CS| will create, and also allows you to set the `hostname` of the |EX-CS| on that network.
+
+.. note::
+
+   The 'Access Point' mode buttons will not become avaliable if you are connected to the |EX-CS| via WiFi, as you can't change the Access Point mode settings over WiFi.  You need to be connected via USB to change the Access Point mode settings.
+
+To change the *Access Point* enter a `SSID` (the name of the network), and a `Password` of at least 8 characters and press the :guilabel:`Set Access Point` button.
+
+To change the *hostname* enter the hostname and press the :guilabel:`Set Hostname` button.
+
+|HR-DASHED|
+
+.. note::
+
+   In every case above where you press one of the buttons, the Command Station will restart to apply the new settings. You will need to reconnect to the Command Station.
+
+See the :doc:`/ex-commandstation/advanced-setup/supported-wifi/wifi-config_v5_7` page for more details on the meaning of these settings.
+
+|force-break|
+
+----
+
 Secondary Screens
 =================
 

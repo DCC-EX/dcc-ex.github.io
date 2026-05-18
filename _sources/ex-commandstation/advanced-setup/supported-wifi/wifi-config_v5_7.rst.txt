@@ -5,9 +5,9 @@
 .. include:: /include/include-ex-cs.rst
 |EX-CS-LOGO|
 
-************************************
-WiFi Configuration for version 5.7+
-************************************
+*************************************
+WiFi Configuration for version 5.7.0+
+*************************************
 
 |SUITABLE| |tinkerer| |engineer| |support-button|
 
@@ -28,11 +28,11 @@ Also see `WiFi configuration (CSB1 or ESP32 ONLY) <https://dcc-ex.com/mkdocs-tes
 Background
 ===========
 
-Prior to version 5.7.0, WiFi configuration for |EX-CS| was done through options in the ``config.h`` file. This method required users to modify the firmware (by editing `config.h``) and recompile it for their specific WiFi settings.
+Prior to version 5.7.0, WiFi configuration for |EX-CS| was done through options in the ``config.h`` file. This method required users to modify the firmware (by editing ``config.h``) and recompile it for their specific WiFi settings.
 
 From version 5.7.0, WiFi configuration options in ``config.h`` are *ignored* by the CSB1 or ESP32 EX-CommandStations.  
 
-It is now necessary to use a new WiFi configuration method, which involves connecting to the |EX-CS| *after you have flashed the firmware.*  You do so by connecting to the |EX-CS| via USB or by connecting to the WiFi Access Point network of the CS. (Note that the WiFi Access Point network approach has limitations. See below.)
+It is now necessary to use a new WiFi configuration method, which involves connecting to the |EX-CS| *after you have flashed the firmware.*  You do so by connecting to the |EX-CS| via USB or by connecting to the WiFi Access Point network of the CS and issuing a set of new commands. (Note that the WiFi Access Point network approach has limitations. See below.)
 
 The advantage of this is that it is independent of the flashing process, and will remember your WiFi settings across firmware updates and changes.
 
@@ -56,7 +56,7 @@ WiFi on the |EX-CS| has two possible operating modes:
 
 There are some additional settings that are not modes but effect the wifi connection:
 
-* **Channel**: If you need to use an alternate channel in Access Point mode(we recommend using only 1,6, or 11) you may change it.
+* **Channel**: If you need to use an alternate channel in Access Point mode (we recommend using only 1,6, or 11) you may change it.
 
 * **Hidden AP mode**: If enabled, the Command Station's WiFi network will not be visible in the list of available networks on devices. This can enhance security by making it less obvious to potential attackers, but it also means that users will need to manually enter the network name (SSID) to connect.
 
@@ -72,6 +72,8 @@ There are some additional settings that are not modes but effect the wifi connec
 
 Using USB vs WiFi - Limitations of WiFi
 =========================================
+
+There are significant limitations to be aware of when configuring WiFi settings over WiFi compared to using a USB connection:
 
 Only **Station (STA) mode** and the **HOSTNAME** can be changed over WiFi.
 

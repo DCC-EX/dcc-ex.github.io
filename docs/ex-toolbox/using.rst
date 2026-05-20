@@ -66,7 +66,7 @@ If the server does not appear in the recent list try one of the other two method
 
 *Direct USB*
 
-As of Version 0.1.35, the discovered server list will also include an entry 'DCC-EX-USB-OTG' if you have a |EX-CS| connected directly to your phone or tablet using a USB on-the-go (OTG) cable.  
+As of Version 0.1.35 of |EX-TB|, the discovered server list will also include an entry 'DCC-EX-USB-OTG' if you have a |EX-CS| connected directly to your phone or tablet using a USB on-the-go (OTG) cable.
 
 .. Note:: 
    

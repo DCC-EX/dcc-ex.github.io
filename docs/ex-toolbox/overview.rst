@@ -47,3 +47,4 @@ With |EX-TB| you can perform:
 * Speedometer (requires two sensors on the EX‑CommandStation)
 * Roster list
 * NeoPixel Setup
+* WiFi setup ( |EX-CS| version 5.7.0 and later)

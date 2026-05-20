@@ -29,6 +29,7 @@ Welcome to the home of |EX-TB|, an Android app to help setup and configure your 
 * Speedometer (requires two sensors on the EX‑CommandStation)
 * Roster list
 * NeoPixel Setup
+* WiFi setup ( |EX-CS| version 5.7.0 and later)
 
 .. toctree::
   :maxdepth: 1

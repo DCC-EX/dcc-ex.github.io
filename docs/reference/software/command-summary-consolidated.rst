@@ -963,8 +963,8 @@ Also see the `EXRAIL` section below for activating routes.
   |_| > **id?:** identifier of the Route/Automation(s) |BR|
   |_|  |BR|
   |_| *Example Responses:* |BR|
-  |_| Response (successful turnouts/point exist): ``<jA id0 id1 id2 ..>`` |BR|
-  |_| Response (successful turnouts/point don't exist): ``<jA.>`` |BR|
+  |_| Response (successful - turnouts/points exist): ``<jA id0 id1 id2 ..>`` |BR|
+  |_| Response (successful - turnouts/points don't exist): ``<jA>`` |BR|
   |_| Response (fail): ??? |BR|
 
 |hr-dashed|

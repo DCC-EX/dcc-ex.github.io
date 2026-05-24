@@ -15,4 +15,5 @@ This page holds related projects by some of our team members and users. If you h
     /throttles/hardware/witcontroller
     /throttles/hardware/streamdeck
     ProMiniAir_Transmitter_w_CommandStation
+    g-scale-dcc-ex
     

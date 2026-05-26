@@ -23,6 +23,13 @@ Below are some tips and techniques you can implement to get the most out of |EX-
 
    Do not waste your time asking ChatGPT, Copilot or Gemini to create EXRAIL scripts.   They do not understand EXRAIL and will get it wrong 100% of the time.
 
+Numbers and Leading Zeros
+==========================
+
+**Do not use leading zeros for any numbers!**
+  
+Any number with a leading zero will be treated as an octal number, so for example ``ALIAS(MY_ALIAS, 010)`` will assign the value of ``8`` to MY_ALIAS, not ``10``. This is a common mistake that can lead to very confusing behavior if you don't know about it. Always use numbers without leading zeros, for example ``ALIAS(MY_ALIAS, 10)`` to assign the value of 10 to MY_ALIAS.
+
 Comments
 ========
 

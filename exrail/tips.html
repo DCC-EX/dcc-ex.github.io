@@ -717,12 +717,13 @@
 <nav class="contents local" id="on-this-page">
 <p class="topic-title">On this page</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#comments" id="id1">Comments</a></p></li>
-<li><p><a class="reference internal" href="#aliases-user-friendly-names-for-any-ids" id="id2">Aliases - User Friendly Names for any Ids</a></p></li>
-<li><p><a class="reference internal" href="#parameters-with-arithmetic" id="id3">Parameters with Arithmetic</a></p></li>
-<li><p><a class="reference internal" href="#including-sub-files" id="id4">Including sub-files</a></p></li>
-<li><p><a class="reference internal" href="#realistic-turnout-sequences" id="id5">Realistic turnout sequences</a></p></li>
-<li><p><a class="reference internal" href="#make-your-own-exrail-macro-or-command" id="id6">Make your own EXRAIL macro or command</a></p></li>
+<li><p><a class="reference internal" href="#numbers-and-leading-zeros" id="id1">Numbers and Leading Zeros</a></p></li>
+<li><p><a class="reference internal" href="#comments" id="id2">Comments</a></p></li>
+<li><p><a class="reference internal" href="#aliases-user-friendly-names-for-any-ids" id="id3">Aliases - User Friendly Names for any Ids</a></p></li>
+<li><p><a class="reference internal" href="#parameters-with-arithmetic" id="id4">Parameters with Arithmetic</a></p></li>
+<li><p><a class="reference internal" href="#including-sub-files" id="id5">Including sub-files</a></p></li>
+<li><p><a class="reference internal" href="#realistic-turnout-sequences" id="id6">Realistic turnout sequences</a></p></li>
+<li><p><a class="reference internal" href="#make-your-own-exrail-macro-or-command" id="id7">Make your own EXRAIL macro or command</a></p></li>
 </ul>
 </nav>
 </aside>
@@ -731,8 +732,13 @@
 <p class="admonition-title">Warning</p>
 <p>Do not waste your time asking ChatGPT, Copilot or Gemini to create EXRAIL scripts.   They do not understand EXRAIL and will get it wrong 100% of the time.</p>
 </div>
+<section id="numbers-and-leading-zeros">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Numbers and Leading Zeros</a><a class="headerlink" href="#numbers-and-leading-zeros" title="Link to this heading"></a></h2>
+<p><strong>Do not use leading zeros for any numbers!</strong></p>
+<p>Any number with a leading zero will be treated as an octal number, so for example <code class="docutils literal notranslate"><span class="pre">ALIAS(MY_ALIAS,</span> <span class="pre">010)</span></code> will assign the value of <code class="docutils literal notranslate"><span class="pre">8</span></code> to MY_ALIAS, not <code class="docutils literal notranslate"><span class="pre">10</span></code>. This is a common mistake that can lead to very confusing behavior if you don’t know about it. Always use numbers without leading zeros, for example <code class="docutils literal notranslate"><span class="pre">ALIAS(MY_ALIAS,</span> <span class="pre">10)</span></code> to assign the value of 10 to MY_ALIAS.</p>
+</section>
 <section id="comments">
-<h2><a class="toc-backref" href="#id1" role="doc-backlink">Comments</a><a class="headerlink" href="#comments" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Comments</a><a class="headerlink" href="#comments" title="Link to this heading"></a></h2>
 <p>Comments can be very helpful if you need to go back at a later time to make changes to your sequences, to help you remember what you did or why you did it.</p>
 <p>You can add comments to myAutomation.h in two ways:</p>
 <ul class="simple">
@@ -741,7 +747,7 @@
 </ul>
 </section>
 <section id="aliases-user-friendly-names-for-any-ids">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">Aliases - User Friendly Names for any Ids</a><a class="headerlink" href="#aliases-user-friendly-names-for-any-ids" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Aliases - User Friendly Names for any Ids</a><a class="headerlink" href="#aliases-user-friendly-names-for-any-ids" title="Link to this heading"></a></h2>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">ALIAS()</span></code> command in your script to make IDs a bit more human friendly, and easier to refer to later.</p>
 <p><code class="docutils literal notranslate"><span class="pre">ALIAS(</span> <span class="pre">name[,</span> <span class="pre">value]</span> <span class="pre">)</span></code> Aliases assigns names to values. They can go anywhere in the script. If a value is not assigned, a unique ID will be assigned based on the alias “name” text.</p>
 <p>This is a simple substitution that lets you have readable names for things in your script. For example, instead of having to remember the VPin a turnout/point is connected to, give the pin number an alias and refer to it by that name. You can use this to name routes, values, pin numbers, or anything you need.</p>
@@ -774,7 +780,7 @@
 </ul>
 </section>
 <section id="parameters-with-arithmetic">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">Parameters with Arithmetic</a><a class="headerlink" href="#parameters-with-arithmetic" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Parameters with Arithmetic</a><a class="headerlink" href="#parameters-with-arithmetic" title="Link to this heading"></a></h2>
 <p>Any parameter for an <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> command that takes numbers can be replaced with an c++ arithmetic calculation, as long as that calculation can be resolved at compile/load time.  (e.g.  + - * /  &gt;&gt; &lt;&lt; &amp;  | ! ~ and even ?: )</p>
 <p>This can be useful if you have a block of related IDs or VPINs and you don’t wish to give each an ALIAS.</p>
 <div class="code-block-float-right highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ALIAS</span><span class="p">(</span><span class="n">Platform</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">)</span>
@@ -786,7 +792,7 @@
 </div>
 </section>
 <section id="including-sub-files">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink">Including sub-files</a><a class="headerlink" href="#including-sub-files" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Including sub-files</a><a class="headerlink" href="#including-sub-files" title="Link to this heading"></a></h2>
 <p>If you find your myAutomation.h file becoming quite lengthy and cumbersome to scroll through and keep track of, you can break your items up into multiple smaller files, and include those in your myAutomation.h file instead.</p>
 <p>There are some rules that apply in this scenario:</p>
 <ul class="simple">
@@ -813,7 +819,7 @@
 </div>
 </section>
 <section id="realistic-turnout-sequences">
-<h2><a class="toc-backref" href="#id5" role="doc-backlink">Realistic turnout sequences</a><a class="headerlink" href="#realistic-turnout-sequences" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Realistic turnout sequences</a><a class="headerlink" href="#realistic-turnout-sequences" title="Link to this heading"></a></h2>
 <p>Let’s say you want to create a turnout that is connected to some signals and you want a more realistic sequence with time delays as if the signalman has to move from lever to lever. This can be readily achieved in <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> but you really want the turnout to appear normal in your throttle. To do this you can create two complimentary turnout definitions:</p>
 <ol class="arabic simple">
 <li><p>An invisible turnout definition which actually controls the turnout hardware. This can be a pin, servo, DCC, or whatever technology, but is created using the HIDDEN keyword (see example below) instead of a description. This will not show up in throttles or be shown to <a class="reference internal" href="../throttles/software/jmri.html"><span class="doc">JMRI</span></a>.</p></li>
@@ -844,7 +850,7 @@
 <p>A virtual turnout may be used in any circumstance where the turnout process is handled in <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> rather than the normal process, for example a solenoid turnout requiring a pin or relay to be manipulated.</p>
 </section>
 <section id="make-your-own-exrail-macro-or-command">
-<h2><a class="toc-backref" href="#id6" role="doc-backlink">Make your own EXRAIL macro or command</a><a class="headerlink" href="#make-your-own-exrail-macro-or-command" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Make your own EXRAIL macro or command</a><a class="headerlink" href="#make-your-own-exrail-macro-or-command" title="Link to this heading"></a></h2>
 <p>One of the cunning features of <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> is enabling users to define macros, or what is effectively your very own <a href="../exrail/index.html"><span class="ex-prefix">EX</span><span class="ex-suffix">RAIL</span></a> command.</p>
 <p>To do this, you’re actually making use of some C++ code in addition to the clever programming in DCC-EX.</p>
 <p>(Yes, we just called ourselves cunning and clever. Our talent is superseded only by our modesty ;) )</p>
@@ -926,7 +932,7 @@
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
-    <jinja2.runtime.BlockReference object at 0x7f7a692ecfd0>
+    <jinja2.runtime.BlockReference object at 0x7f2269e92cb0>
     <div class="topOfPage">
     <button onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;" class="topOfPageBtn" id="topOfPageBtn" title="Go to top">Top</button>
     </div>

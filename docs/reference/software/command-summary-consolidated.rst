@@ -33,6 +33,50 @@ Conventions used on this page
 - \| - Use of the \| character means you need to provide one of the provided options only, for example ``<0|1 MAIN|PROG|JOIN>`` becomes either ``<0 MAIN>`` or ``<1 MAIN>``
 - ``0|1`` DIRECTION: 1=forward, 0=reverse.
 
+Common Elements / Parameters
+============================
+
+The following are element / parameters that are common across multiple commands and are described here for ease of reference.
+
+
+.. flat-table::
+    :widths: auto
+    :header-rows: 1
+    :class: command-table
+
+    * - Parameter
+      - Description
+
+    * - **cab** or |BR| **loco**
+      - The short (1-127) or long (128-10293) address of the engine decoder. |BR|
+        (This has to be already programmed in the decoder.) |BR|
+        Note: DCC-EX commands do not distinguish between short and long DCC addresses, so you can use the same command format for both.
+
+    * - **speed**
+      - 0-127 or -1 for Emergency Stop
+
+    * - **dir** or |BR| **direction**
+      - One of |BR|
+        - 1=forward  |BR|
+        - 0=reverse
+
+    * - **speedByte**
+      - Speed in DCC speedstep format. This is an encoded (1-7 bits) byte. |BR|
+        The single value incorporates both speed and direction, with the following values: |BR|
+        - reverse - 2-127 = speed 1-126, 0 = stop, 1 = Emergency Stop |BR|
+        - forward - 130-255 = speed 1-126,  128 = stop, 129 = Emergency Stop |BR|
+
+    * - **id**
+      - The numeric ID (0-32767) assigned to an element to control. |BR|
+        *ids* are generally unique within the element type, but not across element types. |BR|
+        (NOTE: *ids* are shared between Turnouts/Points, Sensors and Outputs) 
+
+    * - **vpin**
+      - Generally, the pin number of the physical input or output GPIO to receive information from or to control. |BR|
+        *vpins* are normally assigned to an *id* to use in subsequent commands. |BR| |BR|
+        For GPIOs on the microcontroller, this is the same as the pin number.  For servo outputs and I/O expanders, it is the pin number defined for the HAL device (if present), for example 100-115 for servos attached to the first PCA9685 Servo Controller module, 200-215 for the second PCA9685 Servo Controller module, 300-315 for the first PCA9685 I/O Expander module, and 400-415 for the second PCA9685 I/O Expander module.     
+
+
 ----
 
 Controlling the EX-CommandStation
@@ -158,7 +202,7 @@ Note:  Previously referred to as 'DC-District'.
   |_| |_| |_| |_| • ``DC_INV`` = DC reversed polarity |BR|
   |_| |_| |_| |_| • ``DCX`` [2]_ = DC reversed polarity (same as DC_INV) |BR|
   |_| |_| |_| |_| • ``NONE`` |BR|
-  |_| > **id:** the cab ID. *Required when specifying DC or DC_INV / DCX*
+  |_| > **id:** the cab (loco) ID. *Required when specifying DC or DC_INV / DCX*
 
   .. [1] Deprecated alias of ``AUTO`` but only when preceeded by a sperate ``MAIN`` command.
   .. [2] With special alias of ``DCX`` for ``DC_INV``
@@ -363,7 +407,7 @@ Cab (Loco) Commands
 .. _native-command-f-cab-byte1-byte2:
 
 ``<f cab byte1 [byte2]>`` - Decoder Functions - Legacy command |DEPRECATED|
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Parameters:* |BR|
   |_| > **cab:** DCC Address of the decoder/loco |BR|
@@ -448,7 +492,7 @@ Cab (Loco) Commands
 
       **To set functions F21-F28 on=(1) or off=(0):** ``<f cab byte1 [byte2]>``
 
-      * **f** = (lower case f) This command is for a CAB function.
+      * **f** = (lower case f) This command is for a CAB (loco) function.
       * **byte1** = 223
       * **byte2** = F21*1 + F22*2 + F23*4 + F24*8 + F25*16 + F26*32 + F27*64 + F28*128
 
@@ -1000,7 +1044,7 @@ Also see the `EXRAIL` section below for activating routes.
   Start an EXRAIL sequence (route or automation).
 
   *Parameters:* |BR|
-  |_| > **cab** Optional. DCC address of the loco/cab to 'send' on the automation |BR|
+  |_| > **cab** Optional. DCC address of the cab (loco) to 'send' on the automation |BR|
   |_| > **id:** Id of the Sequence
 
   *Response:* |BR|
@@ -1083,7 +1127,7 @@ System Information
   
   *Notes:*
   
-    This will display the number of available cab slots. This will typically be **<# 20>**, **<# 30>**, or **<# 50>** depending on how much memory your |EX-CS| has available.
+    This will display the number of available cab (loco) slots. This will typically be **<# 20>**, **<# 30>**, or **<# 50>** depending on how much memory your |EX-CS| has available.
     
     This is a design limit based on the memory limitations of the particular hardware and a compromise with other features that require memory such as WiFI. If you need more slots and are comfortable with code changes you can adjust this by changing MAX_LOCOS in "DCC.h", knowing that each new slot will take approximately 8 bytes of memory. The **<D RAM>** command will display the amount of free memory. If you fill the available slots, the "Forget Locos" command (**<- [CAB]>**) will free up unused locos. Currently there is no automatic purging of unused locos.
 
@@ -2477,8 +2521,8 @@ Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
 .. _native-command-d-cabs:
 
-``<D CABS>`` - Shows cab numbers and speed in reminder tables
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+``<D CABS>`` - Shows cab (loco) numbers and speed in reminder tables
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   *Response:* |BR|
   |_| "Used=xxx, max=yyy" |BR|

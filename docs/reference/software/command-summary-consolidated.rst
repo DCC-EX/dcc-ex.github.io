@@ -111,6 +111,14 @@ Also allows joining the MAIN and PROG tracks together.
   |_| |_| |_| |_| • MAIN = Main track  |BR|
   |_| |_| |_| |_| • PROG = Programming Track  |BR|
   |_| |_| |_| |_| • JOIN = Join the Main and Programming tracks temporarily |BR| Note: While ``<1 JOIN>`` is valid, ``<0 JOIN>`` is not. |BR|
+  |_| |_| |_| |_| • A = Track A |BR|
+  |_| |_| |_| |_| • B = Track B |BR|
+  |_| |_| |_| |_| • C = Track C |BR|
+  |_| |_| |_| |_| • D = Track D |BR|
+  |_| |_| |_| |_| • E = Track E |BR|
+  |_| |_| |_| |_| • F = Track F |BR|
+  |_| |_| |_| |_| • G = Track G |BR|
+  |_| |_| |_| |_| • H = Track H |BR|
 
   *Response:* 
 

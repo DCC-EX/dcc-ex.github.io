@@ -97,7 +97,7 @@ Also see `System Information`_ for retrieve command station power information.
 
 .. _native-command-onoff-track1:
 
-``<onOff [track]>`` - Turn power on or off to the MAIN and PROG tracks
+``<onOff [track]>`` - Turn power on or off to all or specific tracks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Also allows joining the MAIN and PROG tracks together.

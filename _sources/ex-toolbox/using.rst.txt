@@ -74,6 +74,18 @@ As of Version 0.1.35 of |EX-TB|, the discovered server list will also include an
 
    In general USB-C to the USB-C cables are automatically OTG, but if you are using a USB-C to USB-A cable, you will need to check that the cable supports OTG.  If it doesn't, the 'DCC-EX-USB-OTG' entry won't appear in the discovered server list.
 
+|HR-DASHED|
+
+.. figure:: /_static/images/ex-toolbox/usb_utg_prompt.png
+   :alt: USB OTG
+   :scale: 25%
+   :align: right
+
+   EX-Toolbox USB OTG Prompt
+
+.. Note:: 
+   
+   Anytime you connect any USB device to your phone or tablet, you will likely get a pop up asking if you want to allow |EX-TB| to access the USB.  IF you connect devices other that an |EX-CS| to your phone or tablet, just cancel the pop up, but if you only connect an |EX-CS| you can check the box to always open |EX-TB|.
 
 |HR-DASHED|
 

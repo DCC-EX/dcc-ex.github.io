@@ -291,6 +291,20 @@
       -  
       -  
 
+ * -  :doc:`CabForward <software/cabforward>`
+      -  Free / Paid
+      -  WiFi
+      -  Native
+      -  App
+      -  
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  X
+
     * -  :doc:`DccExController <hardware/dccexcontroller>`
       -  Free
       -  WiFi

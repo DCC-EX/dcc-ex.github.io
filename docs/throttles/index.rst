@@ -64,6 +64,7 @@ Apple iOS (Phones and Tablets)
 - :doc:`WiThrottle (iOS) <software/withrottle>`
 - :doc:`DCC Commander (iOS) <software/dcc-commander>`
 - :doc:`Signal Cab (iOS) <software/signal-cab>`
+- :doc:`CabForward (iOS) <software/cabforward>`
 
 Dedicated Hardware
 ------------------
@@ -90,6 +91,7 @@ Personal Computers
 - :doc:`Railroad Automation <software/railroad-automation>` *- Requires IoTT Red Hat*
 - :doc:`Train Throttle (Windows, iOS) <software/train-throttle>`
 - :doc:`ThrottleCard (MacOS, iOS) <software/throttlecard>` *- Requires WiThrottle server*
+- :doc:`CabForward (MacOS) <software/cabforward>`
 
 Note: The Android throttle apps listed above can be made to made to run on Windows PCs. See :doc:`Running Android apps on Microsoft Windows <software/android-apps-on-windows>`.
 
@@ -125,6 +127,7 @@ DCC-EX (DCC-EX Native Commands)
 - :doc:`DCC Commander (iOS) <software/dcc-commander>`
 - :doc:`Signal Cab (iOS) <software/signal-cab>`
 - :doc:`DCC-EX Simple Throttler (Physical) <hardware/simple-throttle>`
+- :doc:`CabForward (iOS) <software/cabforward>`
 - :doc:`DccExController (Physical DIY) <hardware/dccexcontroller>`  - Support Discontinued |BR| |BR|
 - See also :doc:`DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 

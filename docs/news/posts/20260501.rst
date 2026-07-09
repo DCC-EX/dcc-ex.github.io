@@ -21,16 +21,38 @@ The |DCC-EX| team are excited to announce a new Production release of |EX-CS| wi
 
 To update your |EX-CS| please use |EX-I| where you can. Further installation options can be found below.
 
+
+Changes to supported hardware platforms
+---------------------------------------
+
+We continue to recommend the tried and true Arduino Mega2560 as our preferred and recommended easy DIY hardware platform for |EX-CS|. We have seen some quality issues with the cheaper end of the clone variants of these boards. In general genuine Arduino and Elegoo clones remain our recommendations, but the genuine Arduino Mega is quite expensive given its performance.
+
+However we strongly recommend our new |EX-CSB1| platform based on the Espressif ESP32-WROOM for its ease of use, flexibility of roles as Command Station or Booster, and ability to support up to 4 DCC/DC PWM outputs with ease. Anyone not familiar with electronics, or simply time-poor and wanting to spend their precious modelling time building layouts and running trains should consider the new ready to run |EX-CSB1|.
+
+The **Arduino UNO and Nano**, however, are **no longer supported** as of this release. They are just too limited in terms of RAM and FLASH resources and capability to fit all of the |DCC-EX| feature set. The v5.4.0 relaase was the last release to support these platforms, and they will continue to work with that version, but no new features will be added for them, and they are not recommended for new users.
+
+Read below for a summary of the changes to our supported hardware platforms.
+
+Supported and recommended platforms
+-----------------------------------
+
+New users should choose one of these platforms to make use of all features and capabilities.
+
+- :doc:`EX-CSB1 </ex-csb1/index>` custom board designed by the |DCC-EX| team, based on the Espressif ESP32-WROOM - new Ready-to-Run recommended platform, with more RAM and FLASH than the Arduino Mega, and support for up to 4 DCC/DC PWM outputs |conductor-text| |tinkerer-text| |engineer-text|
+- :doc:`Arduino Mega 2560 R3 </reference/hardware/microcontrollers/arduino-mega>` - easiest DIY solution continues as supported and recommended, but RAM is limited for large layouts with lots of accessories and/or animations or automations |tinkerer-text| |engineer-text|
+- :doc:`Espressif  ESP32-based boards </reference/hardware/microcontrollers/esp32>` such as the ESP32 devkit, ESPduino32 etc. - more advanced DIY platform, with more RAM and FLASH than the Mega |engineer-text|
+- :doc:`STMicroelectronics STM32 Nucleo-144 F429ZI and F439ZI </reference/hardware/microcontrollers/stm32-nucleo>` - new beta supported DIY platform, with more RAM and FLASH than the Arduino Mega, and Ethernet connectivity option. |engineer-text|
+
 New features and enhancements
 -----------------------------
 
 Just check out this list of features and enhancements added since our last release:
 
-- Beta support for Nucleo-144 boards, specifically the Ethernet-equipped F429ZI and F439ZI
+- Beta support for STMicroelectronics STM32 Nucleo-144 boards, specifically the Ethernet-equipped F429ZI and F439ZI
 - Discontinued support for UNO and Nano Arduino platforms, due to both RAM and FLASH limitations on these models. The version 5.4.x series is the last series that supports UNO and Nano Arduino platforms.
-- Add Booster mode support for the EX-CSB1, enabling DCC waveform replication out of up to 4 DCC outputs on an EX-CSB1
+- Add Booster mode support for the EX-CSB1, enabling DCC waveform replication out of up to 4 DCC separate track outputs on an EX-CSB1
 - Add Sniffer mode support for the EX-CSB1, enabling merging of DCC commands from any legacy DCC command station, with the DCC packet queue on the EX-CSB1
-- Add further I2C device support, including: Adafruit NeoDriver board for driving NeoPixels and WS2811 compatible RGB LED strings up to 500 LEDs per device, DS1307 Real Time Clock, SC16IS752 single and dual UART driving DFPlayer modules
+- Add further Accessory I2C device support, including: Adafruit NeoDriver board for driving NeoPixels and WS2811 compatible RGB LED strings up to 500 LEDs per device,a new DS1307 Real Time Clock, and new SC16IS752 single and dual UART driving multiple MP3 DFPlayer modules
 
 - Add Momentum feature for the Command Station, that does not rely on CV values, and can operate on DCC or DC driven locos
 - Add Consist feature for the Command Station, that does not rely on CV values. All throttle commands to the nominated lead loco are sent to the remaining locos in the consist
@@ -38,10 +60,10 @@ Just check out this list of features and enhancements added since our last relea
 - DCC packet queue (DCC packet sending optimization and added 5ms gap due to new RCN requiremet)
 - EXRAIL compile time checking of errors in EXRAIL code, looking for duplicate and missing IDs for automation, routes, and sequences, and calls, latches and reserves that are out of range, and speeds out of range
 - Dynamic allocation of loco table entries
-- ESP32 can turn wifi off, which may be useful when used in Booster mode, or when only managed via its USB port (JMRI etc.)
+- EX-CSB1 based on ESP32 can turn wifi off, which may be useful when used in Booster mode, or when only managed via its USB port (JMRI etc.)
 - Number of active mobile decoders tuned dynamically according to available RAM
 
-New |DCC-EX Native commands| specific commands and enhancements:
+New |DCC-EX Native commands| specific commands and enhancements to the DCC-EX protocol:
 ----------------------------------------------------------------
 
 - R LOCOID and R CONSIST
@@ -60,64 +82,43 @@ Enhancements to the |EX-R| scripting language:
 
 For details on these changes and new commands, refer to the documentation.
 
-- Add ``STASH`` command to save a loco
+- Add ``STASH`` command to save a loco 
 - Add ``ROUTE_DISABLED`` macro
 - Add ``STEALTH`` macro to allow arbitrary C++ code to be embedded as a single step in an exrail sequence. Serious engineers only.  |engineer-text|
 - Add ``STEALTH_GLOBAL`` macro to insert code such as static variables and functions that may be utilised by multiple STEALTH operations. ADVANCED C++ users only. |engineer-text|
-- Add ``HAL_IGNORE_DEFAULTS`` macro to turn off the built-in default I2C device definitions
-- Add ``JMRI_SENSOR`` macro can now create an entire range of sensor IDs
+- Add ``HAL_IGNORE_DEFAULTS`` macro to turn off the standard built-in default I2C accessory device definitions
+- Add ``JMRI_SENSOR`` macro can now create an entire range of sensor IDs with only a single function line.
 - Add ``CONFIGURE_SERVO`` macro as a more convenient means of configuring servos in myAutomation.h
 - Add ``ASPECT`` macro to set aspect on a DCC accessory signal
 - Add ``DCCX_SIGNAL`` macro for definining a signal
 - Add ``BLINK`` command to blink a vpin in a pattern defined by the milliseconds it will be on and off
-- Add ``FTOGGLE`` command to toggle a function on the current loco
-- Add ``XFTOGGLE`` command to toggle a function on the nominated loco
-- Add ``TOGGLE_TURNOUT`` toggles the nominated turnout
-- Add ``ONBUTTON`` macro to start a task once a button input passes the debounce criteria
+- Add ``FTOGGLE`` command to toggle a desired function on the current loco 
+- Add ``XFTOGGLE`` command to toggle a function on the nominated loco maybe parked in a staging yard or siding
+- Add ``TOGGLE_TURNOUT`` toggles the nominated turnout i.e. closed/throw & thrown/close
+- Add ``ONBUTTON`` macro to start a task once a mimic panel button input passes the debounce criteria
 - Add ``ONSENSOR`` macro to start a task based on a sensor change
-- Add ``NEOPIXEL`` macro to control NeoPixels/RGB LEDs
-- Add ``NEOPIXEL_SIGNAL`` macro to control single NeoPixel/RGB LED signals
+- Add ``NEOPIXEL`` macro to control NeoPixels/RGB LEDs for scenic lighing effects.
+- Add ``NEOPIXEL_SIGNAL`` macro to control single NeoPixel/RGB LED signals for Aspect Signals or for point tunout LED red/green on a mimic panel
 
 Bug fixes and optimizations:
 ----------------------------
 
-- ESP32 packet generation could miss packets
-- DFPlayer bugs fixed
-- STM32 DCC waveform gaps fixed
+- DFPlayer MP3 Sound device bugs fixed
+- Espressif ESP32 packet generation could miss packets
 - ESP32 WIFI AP mode was not always selected when requested
+- STMicroelectronics STM32 DCC waveform gaps fixed
 
 Known Issues
 ------------
 
-- Installer v0.20 does not support some CSB1 specific `config.h` options: BOOSTER_INPUT, WIFI_LED
-- Installer v0.20 does not support some nucleo boards, but support is coming in v0.21
+- EX-Installer v0.20 does not support some CSB1 specific `config.h` options: BOOSTER_INPUT, WIFI_LED
+- EX-Installer v0.20 does not support some nucleo boards, but support is coming in v0.21
 
-
-Changes to supported hardware platforms
----------------------------------------
-
-We continue to recommend the tried and true Arduino Mega2560 as our preferred and recommended easy DIY hardware platform for |EX-CS|. We have seen some quality issues with the cheaper end of the clone variants of these boards. In general genuine Arduino and Elegoo clones remain our recommendations, but the genuine Arduino Mega is quite expensive given its performance.
-
-However we strongly recommend our new |EX-CSB1| platform based on the ESP32-WROOM for its ease of use, flexibility of roles as Command Station or Booster, and ability to support up to 4 DCC/DC PWM outputs with ease. Anyone not familiar with electronics, or simply time-poor and wanting to spend their precious modelling time building layouts and running trains should consider the |EX-CSB1|.
-
-The **Arduino UNO and Nano**, however, are **no longer supported** as of this release. They are just too limited in terms of RAM and FLASH resources and capability to fit all of the |DCC-EX| feature set. The v5.4.0 relaase was the last release to support these platforms, and they will continue to work with that version, but no new features will be added for them, and they are not recommended for new users.
-
-Read below for a summary of the changes to our supported hardware platforms.
-
-Supported and recommended platforms
------------------------------------
-
-New users should choose one of these platforms to make use of all features and capabilities.
-
-- :doc:`EX-CSB1 </ex-csb1/index>` custom board designed by the |DCC-EX| team, based on the ESP32-WROOM - new Ready-to-Run recommended platform, with more RAM and FLASH than the Arduino Mega, and support for up to 4 DCC/DC PWM outputs |conductor-text| |tinkerer-text| |engineer-text|
-- :doc:`Arduino Mega 2560 R3 </reference/hardware/microcontrollers/arduino-mega>` - easiest DIY solution continues as supported and recommended, but RAM is limited for large layouts with lots of accessories and/or animations or automations |tinkerer-text| |engineer-text|
-- :doc:`ESP32-based boards </reference/hardware/microcontrollers/esp32>` such as the ESP32 devkit, ESPduino32 etc. - more advanced DIY platform, with more RAM and FLASH than the Mega |engineer-text|
-- :doc:`STM32 Nucleo-144 F429ZI and F439ZI </reference/hardware/microcontrollers/stm32-nucleo>` - new beta supported DIY platform, with more RAM and FLASH than the Arduino Mega, and Ethernet connectivity option. |engineer-text|
 
 How to Install or Update to v5.6.0?
 -----------------------------------
 
-**We recommend using our current v0.20 installer, or v0.21 or later when available, to install or upgrade to this release for the CSB1 and Mega platforms**
+**We recommend using our current v0.20 EX-installer, or v0.21 or later when available, to install or upgrade to this release for the CSB1 and Mega platforms**
 
 We have an EX-Installer update coming (v0.21) which will also handle the additional Nucleo options. In the meantime, we recommend Visual Studio Code with PlatformIO for those, and most other DIY options.
 

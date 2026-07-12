@@ -15,27 +15,49 @@ The |EX-CSB1| can be configured as a DCC Booster.  As a booster it can take inpu
 
 To configure the |EX-CSB1| as a DCC Booster, you will need to install the |EX-CS| software on it with the addition of the following commands to the ``myAutomation.h`` file:
 
-  .. code-block::
+  .. code-block:: cpp
 
-   AUTOSTART
-      SET_TRACK(A,BOOST)
-      SET_TRACK(B,BOOST)
+      AUTOSTART
+      PRINT("Auto Booster Mode")
+      SET_TRACK(A, MAIN)
+      SET_TRACK(B, MAIN)
+      SET_POWER(A, OFF)
+      SET_POWER(B, OFF)
+      LCD(4, "BOOSTER OFF")
+      PRINT("Waiting for RAILSYNC")
       DONE
 
-If you are using an |EX-CSB1| with a |EX-MS| as your booster you will need to add the following commands to the myAutomation.h file:
-
-  .. code-block::
-
-   AUTOSTART
-      SET_TRACK(A,BOOST)
-      SET_TRACK(B,BOOST)
-      SET_TRACK(C,BOOST)
-      SET_TRACK(D,BOOST)
+      //   BOOSTER_INPUT pin requires define in config.h
+      ONRAILSYNCON
+      RESERVE(111)
+      SET_TRACK(A, BOOST)
+      SET_POWER(A, ON)
+      PRINT("RAILSYNC ON TRACK A BOOST")
+      SET_TRACK(B, BOOST)
+      SET_POWER(B, ON)
+      FREE(111)
+      PRINT("RAILSYNC ON TRACK B BOOST")
+      LCD(4, "BOOSTER A B ON")
       DONE
+
+      ONRAILSYNCOFF
+      RESERVE(111)
+      SET_TRACK(A, MAIN)
+      SET_TRACK(B, MAIN)
+      SET_POWER(A, OFF)
+      SET_POWER(B, OFF)
+      FREE(111)
+      LCD(4, "BOOSTER OFF")
+      PRINT("RAILSYNC OFF")
+      DONE
+
+.. note:: 
+
+   If you are using an |EX-CSB1| with a |EX-MS| as your booster add the commands for tracks **C** and **D** to the ``myAutomation.h`` file.
 
 You also need to add these two lines to the ``config.h`` file:
 
-  .. code-block::
+  .. code-block:: cpp
 
    #define WIFI_LED 33
    #define BOOSTER_INPUT 32

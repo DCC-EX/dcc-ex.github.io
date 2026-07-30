@@ -361,7 +361,7 @@ Alphabetic Command List
 
 .. collapse:: Full Alphabetic list of commands: (click to show)
 
-  Also refer to our new, currently incomplete, web site for additional information on the commands described here: `DCC-EX Command Station Native Commands <https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/command-list/>`_ |EXTERNAL-LINK|. Some commands that have only been added recently may not be covered on this page, but may be included on the new web site page.
+  |BR| Also refer to our new, currently incomplete, web site for additional information on the commands described here: `DCC-EX Command Station Native Commands <https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/command-list/>`_ |EXTERNAL-LINK|. Some commands that have only been added recently may not be covered on this page, but may be included on the new web site page.
 
   * :ref:`ACOF`
   * :ref:`ACON`

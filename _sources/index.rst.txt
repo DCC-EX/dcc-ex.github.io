@@ -38,6 +38,14 @@ DCC-EX Model Railroading
       
       :dcc-ex-text-size-60pct:`Manual:` :ref:`Prod <download/ex-commandstation:latest ex-commandstation official release>` , :ref:`Devel <download/ex-commandstation:latest ex-commandstation unreleased development version>`
 
+    |BR| |HR-HEAVY|
+
+    .. raw:: html
+
+      <span class="sd-card-header">New DCC-EX Website</span>
+    
+    Preview our new, but currently incomplete, `website <https://dcc-ex.com/mkdocs-test>`_ for additional information.
+
   .. grid-item-card:: 
     :columns: 12 12 12 7
     :class-card: sd-shadow-md sd-rounded-3 sd-width-auto

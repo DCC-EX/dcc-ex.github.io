@@ -96,7 +96,13 @@ Our *free*, *open source* software products currently include:
     * - A separate DCC packet sniffing tool
       - A FastClock to enable time based events
       - An Android app to help configure your EX-CommandStation
-
+    * - |EX-SC-LOGO-SMALL| 
+      -
+      -
+    * - A camera-based sensor system to replace multiple trackside sensors
+      -
+      -
+    
 .. list-table::
     :widths: 50 50
     :header-rows: 0
@@ -120,6 +126,8 @@ Our *free*, *open source* software products currently include:
       -  A FastClock to enable time based events
     * - |EX-TB-LOGO-SMALL| 
       -  An Android app to help configure your EX-CommandStation
+    * - |EX-SC-LOGO-SMALL| 
+      -  A camera-based sensor system to replace multiple trackside sensors
 
 ----
 

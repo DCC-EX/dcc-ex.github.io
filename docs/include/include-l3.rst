@@ -154,6 +154,12 @@
       :class: image-min-width-144
       :target: ../../../trackmanager/index.html
 ..
+.. |EX-SC-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-sensorcam.png
+      :alt: EX-SensorCAM
+      :scale: 30%
+      :class: image-min-width-144
+      :target: ../../../ex-sensorcam/index.html
+..
 .. |NEW-IN-V5-LOGO-SMALL| image:: /_static/images/logos/new_in_version_5.png
       :alt: New in Version 5
       :scale: 30%

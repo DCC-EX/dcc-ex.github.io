@@ -148,7 +148,7 @@
       :class: image-min-width-144
       :target: ../../../reference/hardware/motorboards/ex-motor-shield-8874.html
 ..
-.. |EX-SC-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-sensorcam.png
+.. |EX-SC-LOGO-SMALLx| image:: /_static/images/logos/product-logo-ex-sensorcam.png
       :alt: EX-SensorCAM
       :scale: 30%
       :class: image-min-width-144

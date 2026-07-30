@@ -154,6 +154,12 @@
       :class: image-min-width-144
       :target: ./reference/hardware/wifi-boards/makerfabs-esp8266.html
 ..
+.. |EX-SC-LOGO-SMALL| image:: /_static/images/logos/product-logo-ex-sensorcam.png
+      :alt: EX-SensorCAM
+      :scale: 30%
+      :class: image-min-width-144
+      :target: ./ex-sensorcam/index.html
+..
 .. |TRACKMANAGER-LOGO-SMALL| image:: /_static/images/logos/product-logo-trackmanager.png
       :alt: DCC-EX TrackManager
       :scale: 30%

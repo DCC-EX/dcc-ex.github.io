@@ -109,6 +109,11 @@
       :scale: 40%
       :class: image-product-logo-float-right
 ..
+.. |EX-SC-LOGO| image:: /_static/images/logos/product-logo-ex-sensorcam.png
+      :alt: EX-SensorCAM
+      :scale: 40%
+      :class: image-product-logo-float-right
+..
 .. ................................................
 ..
 .. |EX-BP-LOGO| image:: /_static/images/logos/product-logo-bigpicture.png

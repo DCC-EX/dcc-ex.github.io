@@ -49,6 +49,8 @@ Our *free*, *open source* software products currently include:
       - A simple web browser based throttle for your command station
     * - |EX-TT-LOGO-SMALL| 
       - A separate stepper based turntable controller
+    * - |EX-SC-LOGO-SMALL| 
+      - Use a single camera to replace up to 80 trackside sensors and detectors
     * - |EX-IO-LOGO-SMALL| 
       - Use additional microcontrollers to expand I/O port capability
     * - |EX-DCCI-LOGO-SMALL| 
@@ -80,6 +82,7 @@ For how to buy a *ready-to-run (RTR)* or build your own *do-it-yourself (DIY)* |
    ex-webthrottle/index
    ex-toolbox/index
    ex-turntable/index
+   ex-sensorcam/index
    ex-ioexpander/index
    ex-fastclock/index
    ex-dccinspector/index

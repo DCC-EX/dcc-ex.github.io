@@ -579,21 +579,33 @@ html[data-theme='dark'] .admonition-todo p.admonition-title {
   border-radius: 5px;
 }
 
-.warning {
+.warning, .seealso {
   border-radius: 5px;
+  clear: none !important;
 }
 html[data-theme='dark'] .warning {
   background: #37270c !important;
   border-radius: 5px;
 }
-.admonition-title {
+.warning .admonition-title {
   border-radius: 5px 5px 0px 0px ;
+  background: #e98126 !important;
 }
-html[data-theme='dark'] .admonition-title {
+html[data-theme='dark'] .warning .admonition-title {
   background: #ff8a00 !important;
   border-radius: 5px 5px 0px 0px ;
   color: black;
 }
+
+html[data-theme='dark'] .seealso {
+  background: #021a15 !important;
+  border-radius: 5px;
+}
+.seealso .admonition-title {
+  border-radius: 5px 5px 0px 0px ;
+  background: #006b79 !important;
+}
+
 
 /* *************************************** */
 

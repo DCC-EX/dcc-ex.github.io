@@ -47,6 +47,11 @@ The following cookbooks are currently available:
     timecontrol
     various-devices/index
 
+.. seealso::
+
+   Also refer to our new, currently incomplete, web site for additional cookbooks: `DCC-EX Command Station Native Commands <https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookbooks/>`_ |EXTERNAL-LINK|. 
+
+
 .. warning::
 
    Do not waste your time asking ChatGPT, Copilot or Gemini to create EXRAIL scripts.   They do not understand EXRAIL and will get it wrong 100% of the time.

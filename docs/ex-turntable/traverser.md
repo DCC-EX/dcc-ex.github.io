@@ -40,9 +40,8 @@ is primarily due to the additional complexity of ensuring the mechanical
 aspects of the traverser are taken into consideration such as the home
 and limit sensors.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 This page has been written as an addendum to the general \|EX-TT\|
@@ -190,9 +189,8 @@ from the beginning of the \`#define TURNTABLE_EX_MODE TRAVERSER\`:
 If you need to make any other adjustments to cater for using different
 stepper driver/motor combinations, this is the time to do so also.
 
-:::: tip
-::: title
-Tip
+:!!! tip "::: title
+Tip"
 :::
 
 If you are using a mechanism that results in anything other than a 1:1
@@ -287,9 +285,8 @@ both HOME and LIMIT sensors work correctly, you can finish assembling
 your traverser with the stepper and proceed with the automatic
 calibration.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Remember! The HOME sensor must be activated when the stepper rotates in
@@ -318,7 +315,7 @@ Turntable homed successfully
 CALIBRATION: Phase 1, homing...
 Turntable already homed
 CALIBRATION: Phase 2, finding limit switch...
-CALIBRATION: Phase 3, counting limit steps...                           <<== Third phase to ensure full step count is reached prior to limit sensor
+CALIBRATION: Phase 3, counting limit steps.
 CALIBRATION: Completed, storing full turn step count: 2508              <<== Step count to record
 EX-Turntable has been calibrated for 2508 steps per revolution
 Manual phase switching enabled

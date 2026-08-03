@@ -40,9 +40,8 @@ architecture and memory limits that are available, and it\'s important
 to understand the various techniques in use to support this and avoid
 adding any dependencies that would compromise this approach.
 
-:::: tip
-::: title
-Tip
+:!!! tip "::: title
+Tip"
 :::
 
 Anyone wishing to read our code is welcome, and we will do our best to

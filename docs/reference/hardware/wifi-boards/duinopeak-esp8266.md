@@ -21,9 +21,8 @@ signal is on the Tx/Rx pins. This is a minor issue and does not affect
 normal operation since you won\'t have anything connected to the USB
 port.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 This is just a carrier board for an ESP-01 or 01s. You will still need

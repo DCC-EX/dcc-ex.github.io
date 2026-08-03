@@ -154,9 +154,8 @@ Volts to connect to an Arduino. It turns out a diode, a resistor and an
 optoisolator (aka optocoupler) are all you need for the job! However, to
 do it right, we do recommend a few other components.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 While you could substitute other optoisolator chips and get mixed
@@ -300,9 +299,8 @@ many suppliers. eBay and AliExpress are good sources:
   (FREE)](https://github.com/littleyoda/sigrok-DCC-Protocoll/archive/master.zip)
   \|EXTERNAL-LINK\|
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Search for the best source. As usual, you can often find the hardware

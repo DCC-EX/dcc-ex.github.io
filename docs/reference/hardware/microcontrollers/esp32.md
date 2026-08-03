@@ -51,9 +51,8 @@ modifications needed for the ESPduino32 and connectivity challenges with
 the various Devkit modules makes the hardware for tinkerers and
 engineers only.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 DCC-EX can only run on the ESP32-WROOM-32 module, and none of the other
@@ -232,9 +231,8 @@ add the board definitions to the \|Arduino IDE\|. To do this, follow the
 instructions on the [official Espressif
 guide](https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide).
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 ESP32 Espressif boards package version 2.0.17 is required. \|BR\| Select

@@ -30,8 +30,8 @@ To monitor a vpin like this for a binary decision
 ``` cpp
 AUTOSTART SEQUENCE(99)
 ATGTE(300,1000) // wait intil vpin 300 reaches 1000 or greater
-... do something
+.
 ATGTE(300,950) // wait until it drops back below 950
-.. do something else
+
 FOLLOW(99) // continue monitoring
 ```

@@ -118,9 +118,8 @@ build Automation sequences. I now use \|EX-R\| instead because:
 
 \|HR-HEAVY\|
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Do not waste your time asking ChatGPT, Copilot or Gemini to create

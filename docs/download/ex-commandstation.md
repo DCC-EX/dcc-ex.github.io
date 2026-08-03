@@ -11,9 +11,8 @@ On this page
 :::
 ::::
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 The \|EX-CSB1\| already comes with the \|EX-CS\| software installed. You
@@ -128,9 +127,8 @@ The \|EX-I\| will meet 100% of the needs of a \|conductor-text\| or
 
 ### Latest EX-CommandStation Official Release
 
-::::: note
-::: title
-Note
+::!!! note "::: title
+Note"
 :::
 
 On the releases page, select the most recent version and download the
@@ -154,9 +152,8 @@ page](https://github.com/DCC-EX/CommandStation-EX/releases)
 
 ### Latest EX-CommandStation Unreleased Development Version
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 The link below is to the \"devel\" branch in GitHub. You can use the
@@ -193,9 +190,8 @@ Version](https://github.com/DCC-EX/CommandStation-EX/tree/devel)
 
 ### EX-CommandStation Repository (project source files)
 
-::::: note
-::: title
-Note
+::!!! note "::: title
+Note"
 :::
 
 The link below will take you the the EX-CommandStation GitHub
@@ -223,9 +219,8 @@ dcclink
 
 ## BaseStation-Classic
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 BaseStation-Classic (the original DCC++) is no longer maintained or

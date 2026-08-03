@@ -46,7 +46,7 @@ Folders *follow* the basic structure:
 - Folder name
   - index.rst
   - getting-started.rst or overview.rst
-  - \... .rst (as needed)
+  - \.
 
 Every folder SHOULD have a \'index.rst\' file which is the primary
 navigation point for the pages in the folder \|BR\| There are exceptions
@@ -98,7 +98,7 @@ For example, the meta tags for levels.rst are:
 Example
 
 ``` rst
-.. meta::
+
 :keywords: Levels Conductor Tinkerer Engineer
 ```
 :::
@@ -120,9 +120,9 @@ For example:
 Example
 
 ``` rst
-.. include:: /include/include.rst
-.. include:: /include/include-l2.rst
-.. include:: /include/include-description.rst
+--8<-- "/include/include.md"
+--8<-- "/include/include-l2.md"
+--8<-- "/include/include-description.md"
 ```
 :::
 
@@ -149,9 +149,9 @@ For example:
 Example
 
 ``` rst
-.. include:: /include/include.rst
-.. include:: /include/include-l3.rst
-.. include:: /include/include-description.rst
+--8<-- "/include/include.md"
+--8<-- "/include/include-l3.md"
+--8<-- "/include/include-description.md"
 |EX-CS-LOGO|
 
 ***************************************
@@ -210,11 +210,11 @@ headings that contains the graphic and the text.
 Only if really necessary use image tags:
 
 ``` 
-.. image:: /_static/images/conductor.png
+![](/_static/images/conductor.png)
   :alt: Conductor Level
   :scale: 40%
 
-.. image:: /_static/images/conductor-level.png
+![](/_static/images/conductor-level.png)
   :alt: Conductor Level 
   :scale: 40%
 ```
@@ -253,10 +253,10 @@ Pages with multiple headings should generally have a Table of Contents.
 The depth of the table is a subjective decision.
 
 ``` 
-.. sidebar::
+
    :class: sidebar-on-this-page
 
-   .. contents:: On this page
+   
       :depth: 4
       :local:
 ```

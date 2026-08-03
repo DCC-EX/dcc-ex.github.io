@@ -72,9 +72,8 @@ version of it. Motor Drivers such as the Deek Robot can be modified
 readily enough. We will document this, but in the meantime ask on the
 Discord server.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Some devices such as the ESP01 WiFi board and HC05/06 Bluetooth boards

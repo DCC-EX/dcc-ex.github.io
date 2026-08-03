@@ -34,9 +34,8 @@ We currently support various displays:
 - OLED displays in .96\" and 1.3\" formats based on SSD1306 and SH1106
   display controllers
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Do NOT modify any code related to displays without contacting us. We use
@@ -53,9 +52,8 @@ clock (SCL)) to send text to the display. Without this board, we
 wouldn\'t have enough pins, especially on an Uno, to use a display. The
 OLED displays natively support \|I2C\| and can be wired directly.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 You MUST make sure to order TWO (2) parts for your LCD Displays. You
@@ -96,9 +94,8 @@ Adafruit 0.96\" 128x64 OLED, and Makerfocus 128x32 .91\" OLED.
 
 ## Connecting an LCD Display
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 \|I2C\| displays come in all shapes and sizes, and often have variations
@@ -133,9 +130,8 @@ female jumper wires:
 4.  Connect SCL on the Arduino (pin 21 on the Mega, pin 17 on the Uno)
     to SCL on the backpack
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Look closely on the Uno or Mega for markings, including on the inside or
@@ -216,9 +212,8 @@ Uncomment or edit the appropriate line for your display type.
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 As this requires modifying part of the \|EX-CS\| software, exercise

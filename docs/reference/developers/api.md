@@ -18,9 +18,8 @@ inherited from the original DCC++ code base, and therefore there are
 some noted exceptions to the syntax, however all new commands and
 responses must conform to the correct syntax.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Legacy commands and responses that do not comply with this documented

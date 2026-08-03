@@ -58,9 +58,8 @@ The voltage requirement to the motor driver does not change based on how
 you power your Arduino, you need the correct voltage and amperage for
 your scale/gauge and layout.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 It is possible to get multiple voltages from one power supply. How to do
@@ -274,9 +273,8 @@ current can cause a large amount of damage if you don\'t have proper
 safety features installed like the overprotection feature of the Command
 Station AND fuses to the track.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 If you think you need more that 5 Amps to your track, you should
@@ -354,9 +352,8 @@ Suitable for use in the USA -
   insulated power supply. In addition to that, a cage power supply
   should not be operated without protective and grounded housing.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 For cage power supplies you will need to do your own mains wiring. If
@@ -378,9 +375,8 @@ electrician to do it for you. **MAINS POWER IS DANGEROUS!**
   boost converters, then can take a lower voltage and raise it to a
   higher one. We will just cover the first option here.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 You will still need a wall voltage AC to 12-18V DC power supply with

@@ -75,7 +75,7 @@ JMRI\'s
 `'DCC++ over TCP Server'<ex-toolbox/using:connecting via jmri>`{.interpreted-text
 role="ref"}.
 
-So\... just because a server is in this list, doesn\'t mean that
+So\.
 \|EX-TB\| will be able to connect to it.
 ::::
 
@@ -85,9 +85,8 @@ As of Version 0.1.35 of \|EX-TB\|, the discovered server list will also
 include an entry \'DCC-EX-USB-OTG\' if you have a \|EX-CS\| connected
 directly to your phone or tablet using a USB on-the-go (OTG) cable.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 The direct USB connection is only supported on Android devices that
@@ -107,9 +106,8 @@ alt="USB OTG" />
 <figcaption>EX-Toolbox USB OTG Prompt</figcaption>
 </figure>
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Anytime you connect any USB device to your phone or tablet, you will
@@ -702,9 +700,8 @@ The Access Point Mode WiFi configuration allows you to set the
 \|EX-CS\| will create, and also allows you to set the
 [hostname]{.title-ref} of the \|EX-CS\| on that network.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 The \'Access Point\' mode buttons will not become avaliable if you are
@@ -722,9 +719,8 @@ To change the *hostname* enter the hostname and press the
 
 \|HR-DASHED\|
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 In every case above where you press one of the buttons, the Command
@@ -771,9 +767,8 @@ the CV-Programming Screen.
 If the *Power Action Bar button* is enabled, simply click on it to turn
 track power on or off.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 You can also optionally enable the Power Button on the Action bar in the

@@ -17,8 +17,8 @@ Voltage, current, and resistance to that current are all interrelated
 and described by the Ohm\'s law formula, Voltage = Current \* Resistance
 (V=IR). The thinner the wire, the more resistance it has. As you can see
 from the formula, if your wire had a .5 Ohm resistance and there was 5
-Amps flowing through it, you would lose\... we\'re waiting. Get out your
-calculator\... Yes, 2.5 Volts. If you only started with say, 12v, that
+Amps flowing through it, you would lose\.
+calculator\.
 would leave you with only 9.5 to run your trains. And that lost energy
 is wasted as heat. This is an exaggerated example, but you get the idea.
 
@@ -43,9 +43,8 @@ main bus just for your locos. More on that later.
 to 100ft (30m) for HO. 24 gauge (.205mm^2^) stranded wire for short
 feeder wires from the bus to short sections of track around the layout.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 In the USA the smaller the number, the bigger the wire!
@@ -149,7 +148,7 @@ from the tracks. But there are a few reasons why you may want to expand
 your system to have a separate bus for accessories.
 
 **1. Efficiency** - The Command station already has a lot to do if you
-are running a lot of locos. While you could run 10, 20\... even 50
+are running a lot of locos. While you could run 10, 20\.
 trains or more, each train can get only so many commands per second. If
 you are running in a club situation and if you add a lot of accessories,
 you could find a short delay before a train responds to something like

@@ -414,9 +414,8 @@ In This Section
 
 **Recommended approach**
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Some people have experienced problems with v3.8.5 of the flash download
@@ -445,9 +444,8 @@ video.)
 
 #### Correcting the Makerfabs ESP8266 WiFi Shield With an Arduino Mega
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 The instructions on the following page have been proven to work on Linux

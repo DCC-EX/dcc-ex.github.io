@@ -21,9 +21,8 @@ benefit is that it can fit in a small box. You can always use all the
 same Uno shields, like the full-sized \|motor shield\|, you just have to
 solder or use wire jumpers to make the connections.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Be sure to compare the Mega before using the Nano
@@ -63,9 +62,8 @@ Supported
 `ESP8266 WiFi Option </reference/hardware/wifi-boards>`{.interpreted-text
 role="doc"}
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Before you order a Nano, be sure whether the headers are soldered or
@@ -101,9 +99,8 @@ The Gravitech is available from RobotShop and direct from Gravitech for
 \$29 US plus shipping. The Chinese clone costs between \$9 and \$18
 (shipping included) from sources like AliExpress, eBay, Amazon, etc.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 There is a slight difference in the brand name Gravitech board and the

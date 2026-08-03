@@ -4,9 +4,8 @@
 
 \|SUITABLE\| \|engineer\| \|support-button\|
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 This board is **not** compatible with \|TM\| DC mode.
@@ -39,9 +38,8 @@ Solder one end of a 1.5 ohm, 3 watt resistor to each of these same
 header pins, and the other end to the corresponding black header pin
 (ground). Once done, your board now has current sense capability.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Check your work!

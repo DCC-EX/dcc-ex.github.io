@@ -103,9 +103,8 @@ For more boards you may be able to use, see the
 `WiFi Boards Section </reference/hardware/wifi-boards>`{.interpreted-text
 role="doc"}
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 While the recommended *Makerfabs ESP8266 WiFi Shield* is now shipping
@@ -173,9 +172,8 @@ which port it is connected to. See the detailed instructions here:
 `WiFi Configuration </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`{.interpreted-text
 role="doc"}
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 LOGIN PASSWORD - If you use \|Access Point Mode\|, you must connect your
@@ -194,9 +192,8 @@ making changes to the basic setup, navigate to
 `Command Station Downloads </download/ex-commandstation>`{.interpreted-text
 role="doc"} to load firmware onto the Command Station.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 You may run into an ESP-01s board that has the wrong firmware on it.

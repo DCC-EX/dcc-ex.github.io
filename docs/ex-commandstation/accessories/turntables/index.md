@@ -4,9 +4,8 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 This section focuses on functionality supporting turntables/traversers

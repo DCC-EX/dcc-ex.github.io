@@ -30,9 +30,8 @@ clicking the second button:
 
 \|support-button-large\| \|githublink-ex-turntable-button\|
 
-:::: tip
-::: title
-Tip
+:!!! tip "::: title
+Tip"
 :::
 
 Keep an eye out for the same button at the top of the other pages.

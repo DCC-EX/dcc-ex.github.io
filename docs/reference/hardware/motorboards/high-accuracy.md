@@ -35,9 +35,8 @@ For this to work, you need two things:
   Timer1 pin
 - You must use the single signal pin configuration for your motor driver
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 You do not have to do anything to enable High Accuracy Waveform Mode. If

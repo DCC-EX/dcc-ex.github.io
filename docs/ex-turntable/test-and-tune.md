@@ -123,9 +123,8 @@ role="ref"}.
 At power on, note that the turntable should have moved itself to the
 home position, so all commands below assume this is the case.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 For all testing and tuning below, it is assumed that the default option
@@ -197,9 +196,8 @@ role="ref"} section.
 
 ## Tuning your turntable positions
 
-:::: tip
-::: title
-Tip
+:!!! tip "::: title
+Tip"
 :::
 
 To determine your starting positions, you will need the full turn step
@@ -477,9 +475,8 @@ turntable from above, you will need to have this content added to your
 \"myAutomation.h\" file. Note that we recommend adding an additional
 ROUTE to activate the homing process.
 
-:::: tip
-::: title
-Tip
+:!!! tip "::: title
+Tip"
 :::
 
 ![Conductor Level](/_static/images/level_icons/conductor.png){.align-left}
@@ -528,9 +525,8 @@ Once this has been done, you must explicitly define the phase switching
 to occur as a part of the diagnostic or \|EX-R\| command for every step
 position that requires an inverted phase.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 If you have enabled manual phase switching, you **must** specify the
@@ -580,9 +576,8 @@ locomotive attempts to enter or exit the turntable bridge track.
 
 ## Controlling EX-Turntable with DCC-EX Turntable Controller
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 This software is not official \|DCC-EX\| software and is maintained

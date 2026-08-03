@@ -1616,9 +1616,8 @@ slightly every time you read or write a CV.
 
 ### Write direct DCC packet
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 THESE ARE FOR DEBUGGING AND TESTING PURPOSES ONLY. DO NOT USE UNLESS YOU

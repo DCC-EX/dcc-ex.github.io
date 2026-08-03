@@ -58,12 +58,12 @@ configurations which appeared awkward to me, despite my years of
 programming in dozens of languages.
 
 It seemed to me that basing an automation on block occupancy detection
-leaves a lot of complex technical problems to be solved... and wanting
+leaves a lot of complex technical problems to be solved.
 to be cheap, I didn\'t want to invest in a range of block occupancy
 detectors, or ABC braking modules, which are all very well on circular
 layouts, but not good at complex crossings or single line operations
 with passing places. Also, I didn\'t want the automation to be an
-obvious cycle of movements... some random timings and decisions need to
+obvious cycle of movements.
 be introduced so that two trains don\'t always arrive at the same place
 in the same order, nor go on the same journey in a predictable cycle.
 
@@ -115,7 +115,7 @@ benefit. For you Engineers and advanced Tinkerers:
     opened, the file edited and saved, and then the process reversed to
     get the SDCard back into the Command Station.
 
-In contrast\... with the current system: One takes the end of the USB
+In contrast\.
 cable that has been thoughtfully left connected to the Command Station
 and plugs it into ones laptop. The \|Arduino IDE\| (or suitable
 alternative) is opened and the myAutomation.h files is edited. A SINGLE

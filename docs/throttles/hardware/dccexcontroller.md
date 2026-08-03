@@ -9,9 +9,8 @@ On this page
 :::
 ::::
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 While this contoller code remains fully functional, support for

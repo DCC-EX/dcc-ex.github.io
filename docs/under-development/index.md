@@ -35,9 +35,8 @@ To obtain the development branch code, refer to
 `download/ex-commandstation:latest ex-commandstation unreleased development version`{.interpreted-text
 role="ref"}
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 With v5 being a brand new release, there\'s nothing to see here just
@@ -53,9 +52,8 @@ clicking the second button:
 
 \|support-button-large\| \|githublink-ex-commandstation-button-small\|
 
-:::: tip
-::: title
-Tip
+:!!! tip "::: title
+Tip"
 :::
 
 Keep an eye out for the same button at the top of the other pages.

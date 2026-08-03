@@ -55,9 +55,8 @@ Station](https://www.youtube.com/watch?v=N6TWR7fIl0A&t=5s)
 
 ## 1. Disable Power Sharing - Arduino to Motor Driver
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 \|standard Motor Driver\| Only! This is **not required** if you are
@@ -102,9 +101,8 @@ clearer
 
 ### Cutting the Trace
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 \|standard Motor Driver\| Only! This is **not required** if you are
@@ -372,9 +370,8 @@ the WiFi shield to your \|EX-CS\|.
 
 \|force-break\|
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 **TECHNICAL NOTES**

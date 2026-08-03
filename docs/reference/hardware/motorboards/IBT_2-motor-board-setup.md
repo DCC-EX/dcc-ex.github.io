@@ -13,9 +13,8 @@ On this page
 
 ![IBT_2 Board](/_static/images/motorboards/ibt_2_bts7960.png)
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 This board can supply a LOT of current. The maximum recommended current
@@ -29,9 +28,8 @@ connected in line with both rails. *SOFTWARE ALONE CANNOT PROTECT YOU IN
 ALL CASES.*
 ::::
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 This board is **not** compatible with \|TM\| DC mode.
@@ -81,9 +79,8 @@ use your IBT_2 motor board:
     Tinkerer or perhaps an Engineer option since it requires a little
     more knowledge and abilities.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 We can\'t say it enough, this board can pump out some Amps. Be careful!
@@ -111,9 +108,8 @@ supply, but don\'t like the full 14+ volts.
 
 ## Which Option Should You Choose? (IBT_2)
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 These options both use the \"standard accuracy\" waveform (This means
@@ -192,9 +188,8 @@ role="doc"}
 - Optionally add a current sense resistor to the IBT_2
 - Change your motor board type in your config.h file
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Instead of bending out the current sense pin of the Arduino Motor Shield
@@ -285,9 +280,8 @@ most of our diagrams, you can click on them to enlarge them.
 ![Wiring visual
 layout](/_static/images/motorboards/ibt_2_wiring_fritz.png){alt="IBT_2 Wiring 2"}
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 We are going to edit your config.h file. If this is your first time
@@ -346,9 +340,8 @@ should protect your layout.
 - Optionally add current sense resistors to the IBT_2
 - Change your motor board type in your config.h file
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 You will need some form of current sense if you wish to program locos
@@ -412,9 +405,8 @@ IBT_2 for your PROG track:
 
 ## Important Notes on Current Sensing (IBT_2)
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Make sure your board has the expected current sensing resistors (see
@@ -480,9 +472,8 @@ words, **You could destroy the analog input pin on your Arduino**.
 Use a known current on your track and measure the current sense voltage
 for your board before connecting it to your command station.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 If you are going to use more than 3 Amps, you should add a 10k or less

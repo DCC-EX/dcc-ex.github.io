@@ -62,9 +62,8 @@ There are two different ways to have these configured:
   point on a layout                   
   -----------------------------------------------------------------------
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 There are options for using modulation or sending data streams via
@@ -102,9 +101,8 @@ locomotives and rolling stock.
   attached)                           
   -----------------------------------------------------------------------
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 It\'s been observed that the reliability of hall effect sensors can be

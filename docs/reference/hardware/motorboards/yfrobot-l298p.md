@@ -4,9 +4,8 @@
 
 \|conductor\|
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 This board is **not** compatible with \|TM\| DC mode.
@@ -42,9 +41,8 @@ Pinout for reference:
 | Current Sense MAIN - A0
 | Current Senst PROG - A1
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 This configuration uses the normal accuracy waveform to avoid having to

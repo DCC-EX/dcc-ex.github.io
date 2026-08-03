@@ -11,9 +11,8 @@ On this page
 :::
 ::::
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 This board is **not** compatible with \|TM\| DC mode.
@@ -74,9 +73,8 @@ yourself, you will need:
 - 18 Guage hookup wire
 - 2 Male to Male Arduino jumper wires (dupont connectors)
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 If you will only be using this board for the programming track and

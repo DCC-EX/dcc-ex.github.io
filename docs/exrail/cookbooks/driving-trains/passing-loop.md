@@ -35,7 +35,7 @@ this example, we don\'t care which train enters the loop first or how it
 affects the other train. We define (in our minds) the block numbers
 which are shown in `[x]` above. There is no need for track breaks or
 other electronics, just the sensors so a train driver can say \"When I
-get to the buffers.. STOP!\"
+get to the buffers
 
 For example, a train leaving Dogbath is already occupying `[1]` but it
 must reserve `[2]` before departing in case the other train has been

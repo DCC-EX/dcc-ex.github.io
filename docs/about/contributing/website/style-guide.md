@@ -103,12 +103,12 @@ consistent.
   in list them first, before the sections, with an explanation as to why
   they are optional. (i.e. a bullet list with hyperlinks to the
   headings.) \|BR\| Wherever possible, do so by using the
-  `.. contents::` directive
+  `
 - Where possible, avoid starting a section with a negative point of
   view. i.e. Talk about the positives of what you are discussing first,
   before you delve into the negative or problematic aspects. \|BR\| e.g.
-  Don\'t start with \"\... This is not for Conductors\...\", instead say
-  \"..This page is for Tinkerers \... Conductors should\...\".
+  Don\'t start with \"\.
+  \"..This page is for Tinkerers \.
 - Use British/Australian/New Zealand/Canadian/Indian (pretty much every
   country except the USA) spelling e.g. \'colour\' not \'color\'.
   \|br\|(Primarily because it is used in more English speaking
@@ -143,7 +143,7 @@ consistent.
 - No quotes around \'Also See\' type references
 - Avoid \'(above)\' or \'(below)\' in text. Use hypertext :ref: links
   instead
-- **\`\`.. todo:: description\...\`\`** means that it is still a
+- **\`\`
   work-in-process and needs to be updated. It must be followed by
   descriptive text describing the issue to be fixed. If you want to to
   show in the page you will need add a separate line.

@@ -129,9 +129,8 @@ using the buttons and DPAD.
 [AliExpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20220515220821&isPremium=y&SearchText=%22r1%22+bluetooth+game+controller&spm=a2g0o.productlist.1000002.0)
 \|EXTERNAL-LINK\|
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 From Steve: I set speedsteps to 10, change amount to 1, repeat delay to

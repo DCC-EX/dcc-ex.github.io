@@ -25,7 +25,7 @@ lights. This can be done with the commands:
 For example:
 
 ``` cpp
-... while driving...
+.
    AT(189)   // passing tunnel
       FON(0)    // loco lights on
       FON(8)    // make like a boy-racer  
@@ -34,5 +34,5 @@ For example:
       FOFF(8)   // pretend we didn't do that
       FOFF(0)   // loco lights off
       XFOFF(3001,0) // carriage lights off
-... and so on
+.
 ```

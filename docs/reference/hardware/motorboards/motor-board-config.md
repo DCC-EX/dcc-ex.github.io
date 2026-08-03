@@ -17,9 +17,8 @@ dropdown list in the installer, or by adding them with one line in your
 config.h file. If your board is not supported, these instructions will
 show you how to add it.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 \|EX-CS\| does NOT require the transistor mixer/inverter circuit seen in
@@ -97,9 +96,8 @@ and paste its name over the STANDARD_MOTOR_SHIELD:
 That\'s all you need to do. Make your change and then upload the sketch
 to your Arduino.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 If your board is not a shield that plugs onto your Arduino, then you are
@@ -223,9 +221,8 @@ role="doc"}.
 
 ## Current Sense and Sense factor
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 It is VERY important to connect some form of current sensing! Without
@@ -249,9 +246,8 @@ command if current sense is not working, just as you would for POM
 (programming on main), but you will receive no acknowledgement from the
 loco, and you will have no way to read CVs.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 The DCC-EX team may be able to help you find the correct settings for
@@ -321,9 +317,8 @@ Arduino to read! And that is why the motor shield has an op amp circuit
 that multiplies this voltage by 11 to bring it up to 3.3 Volts and put
 it in a range that an Arduino can read.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Choose your current sense resistor or circuit carefully! You need to

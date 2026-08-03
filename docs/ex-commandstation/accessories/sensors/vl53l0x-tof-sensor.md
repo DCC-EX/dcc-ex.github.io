@@ -50,9 +50,8 @@ Connecting a single device is a simple matter of connecting the SDA and
 SCL pins to the SDA and SCL pins of your \|EX-CS\|, or your \|I2C\| bus
 if you have multiple other devices connected.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 If the device\'s XSHUT pin is not connected, then it is very prone to
@@ -157,9 +156,8 @@ void halSetup() {
 
 ### Configuring multiple devices
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 When using multiple devices, do not configure any device to use the
@@ -278,9 +276,8 @@ AFTER(4003)     // Will trigger 0.5s after an object moves 250mm away
 sensor commands ATGTE, ATLT, IFGTE, IFLT
 :::
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Using a VL53L0X with EXRAIL\'s analogue sensor commands has not been

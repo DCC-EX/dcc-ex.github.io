@@ -13,9 +13,8 @@ option. See the
 `Mega+WiFi page </reference/hardware/wifi-boards/mega-wifi>`{.interpreted-text
 role="doc"}
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 While the recommended
@@ -47,9 +46,8 @@ role="doc"}
 /reference/hardware/wifi-boards/hc12-bridge
 :::
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 This is NOT to make a connection to \|JMRI\|. Use a USB cable instead.

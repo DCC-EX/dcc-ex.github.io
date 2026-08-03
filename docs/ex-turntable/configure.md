@@ -382,9 +382,8 @@ default in turntable mode is to set this delay to 0.
 
 \|SUITABLE\| tinkerer\| \|engineer\| \|support-button\|
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 We have chosen a few common stepper driver/motor combinations to be on

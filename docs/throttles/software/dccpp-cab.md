@@ -54,9 +54,8 @@ clearer
 
 ## Operation {#dccpp-operation}
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 A Mega is required for using the WiFi connection, but an Uno or Nano

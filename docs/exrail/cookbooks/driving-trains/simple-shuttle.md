@@ -25,7 +25,7 @@ Dogbath                                                  Catflap
 This illustrates an important aspect of \|EX-R\| driving. The sequence
 is only interested in one sensor at a time, there is no case for logic
 that says \"Oh wait! Sensor 164 has been hit, how do I know which loco
-it was and which way it was going\... and was it the loco that hit it or
+it was and which way it was going\.
 the end of the reversing train..\"
 
 If you are using magnet-operated sensors that only detect the loco, you

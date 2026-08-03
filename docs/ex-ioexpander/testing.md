@@ -72,9 +72,8 @@ the physical pin each Vpin is mapped to.
 
 `<T>` - Issue this command to to display which test mode is in progress.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Testing disables I2C connectivity to your \|EX-CS\|, so it is best to

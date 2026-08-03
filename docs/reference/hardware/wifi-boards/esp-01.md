@@ -75,9 +75,8 @@ IO pins from 5V to 3.3. We highly recommend these little boards. In
 breadboard adapter. The other two boards have the regulator and logic
 level shifters.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 About current requirements: While we at \|DCC-EX\| Labs have had success
@@ -94,9 +93,8 @@ id="esp-01s-adapters" alt="ESP-01s Adapters" />
 <figcaption>ESP-01 Breakout Boards</figcaption>
 </figure>
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 The ESP8266 chips are designed for 3.3V. DO NOT TRY TO CONNECT THEM TO

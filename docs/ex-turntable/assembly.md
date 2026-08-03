@@ -7,9 +7,8 @@
 
 ## Assembly
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 As per the warning on the `/ex-turntable/purchasing`{.interpreted-text
@@ -112,9 +111,8 @@ like this, with the rest remaining the same as the table above:
 **Note when using an A4988 stepper driver, you must connect the RESET
 (RST) and SLEEP (SLP) pins together.**
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 When utilising a two wire driver such as the A4988, DRV8825, or TMC2208,
@@ -277,9 +275,8 @@ onboard LED should light up.
 
 ### 7. Load the EX-Turntable software
 
-:::: tip
-::: title
-Tip
+:!!! tip "::: title
+Tip"
 :::
 
 Please read through this entire section prior to loading any software
@@ -440,9 +437,8 @@ defining the use of \"A4988\" by removing `//`:
 // #define INVERT_STEP                <--- Version 0.7.0 on
 ```
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 If operating EX-Turntable does not disable the stepper driver after
@@ -456,9 +452,8 @@ from version 0.7.0, you will need to enable the \"INVERT_ENABLE\" option
 
 #### First start and automatic calibration
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 If you have loaded the code too soon, and the automatic calibration has
@@ -541,9 +536,8 @@ myAutomation.h</figcaption>
 
 #### Add manually
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 As mentioned previously, your CommandStation needs to be running

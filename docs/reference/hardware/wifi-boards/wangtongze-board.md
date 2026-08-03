@@ -68,9 +68,8 @@ If these 2 transistors are labelled \"JIY\" you are lucky and the board
 will work with no modifications. If they are labelled \"J3Y\", you have
 two choices to get this to work:
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 As per the red rectangle in the image below, you will need to bend out

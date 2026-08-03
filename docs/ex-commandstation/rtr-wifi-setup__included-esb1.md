@@ -44,9 +44,8 @@ by choosing either **Access Point** mode or **Station** mode.
 
 \|HR-DASHED\|
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|BR\| Using *WiFi (OR Ethernet)*
@@ -54,9 +53,8 @@ to talk between \|JMRI\| and \|EX-CS\| is complex, slow and functionally
 limited and, while it generally works, it is NOT SUPPORTED.
 ::::
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|BR\| For the \|EX-CSB1-SHORT\|

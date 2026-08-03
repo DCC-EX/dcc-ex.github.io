@@ -50,9 +50,8 @@ used by PCA9685 Servo Modules, and therefore any attempt to use this
 address can create issues. We therefore suggest you set all of your
 multiplexers into the range 0x71-77.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 \|EX-CS\| will only scan for multiplexers in the address range 0x71-77,
@@ -183,9 +182,8 @@ HAL(PCA9685, 116, 16, {I2CMux_0, SubBus_01, 0x41})
 HAL(MCP23017, 196, 16, {I2CMux_0, SubBus_03, 0x20})
 ```
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Note that any currently supported \|I2C\| device can be connected to any

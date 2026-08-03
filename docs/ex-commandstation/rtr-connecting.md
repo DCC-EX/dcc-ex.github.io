@@ -54,9 +54,8 @@ it)](/_static/images/ex-csb1/csb1_render_layout_top.png){alt="DCC-EX EX-CSB1 Exp
 A full explanation of the board is available in the
 `manual </ex-commandstation/rtr-manual>`{.interpreted-text role="doc"}.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 **Start with all power disconnected!!**
@@ -224,9 +223,8 @@ alt="Wires properly inserted" />
 <figcaption>Wires properly inserted and plug inserted</figcaption>
 </figure>
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 The power connection to your track will be either wires you solder

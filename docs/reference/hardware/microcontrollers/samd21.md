@@ -38,9 +38,8 @@ the Embedded Debugger (EBDG) of the original Arduino Zero design.
 The appeal of the SAMD21 series is their relatively high performance,
 low cost and low power consumption.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 A strong limitation however is that their GPIO are 3v3 compatible
@@ -66,9 +65,8 @@ are more conveniently in the UNO R3 form factor:
 
 ![RobotDyn M0 Mini](/_static/images/samd21/robotdyn_m0_mini.jpeg)
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Please note that the barrel jack on the SparkFun SAMD21 Dev Breakout is
@@ -137,9 +135,8 @@ USBCore.cpp file to alter, for example:
 - For \|Arduino IDE\| this is:
   Arduino15/packages/SparkFun/hardware/samd/1.8.3/cores/arduino/USBCore.cpp
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 You will need to do this every time the SAMD Arduino core code is

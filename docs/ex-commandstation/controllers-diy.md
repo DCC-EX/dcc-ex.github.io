@@ -113,9 +113,8 @@ There are number of excellent
 role="doc"} that can be used as a WiFi Throttle (Controller) for the
 \|EX-CS\|. On this page we are only going to cover two.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 This warning is only relevant to the **DIY** EX-CommandStation. \|BR\|

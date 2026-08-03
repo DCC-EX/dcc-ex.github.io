@@ -77,7 +77,7 @@ These are the *key* broadcast responses that should be understood:
 These broadcast responses should be understood if your controller deals
 with turnouts/points and sensors:
 
-- `<H id [DCC|SERVO|VPIN|LCN] ... [0|1]>` - When turnouts are
+- `<H id [DCC|SERVO|VPIN|LCN] .
   closed/thrown, this response is broadcast (see
   `reference/software/command-summary-consolidated:turnouts/points`{.interpreted-text
   role="ref"})
@@ -204,9 +204,8 @@ T=thrown or C=closed.
 >   state is closed.
 > - `<jT 17 X>` - Indicates turnout unknown (or possibly hidden.)
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 It is still the throttles responsibility to monitor the status
@@ -214,9 +213,8 @@ broadcasts. Also note that turnouts marked in EXRAIL with the HIDDEN
 keyword instead of a \"description\" will NOT show up in these commands.
 ::::
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 *Note from the author:* The existing broadcast is messy and needs

@@ -11,9 +11,8 @@ On this page
 :::
 ::::
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 This board is **not** compatible with \|TM\| DC mode.
@@ -25,9 +24,8 @@ This board is **not** compatible with \|TM\| DC mode.
 
 ![IRF3205 Motor Board](/_static/images/motorboards/3205_motor_board.png)
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 This board can supply a LOT of current. The maximum recommended current
@@ -84,9 +82,8 @@ IRF3205 motor board:
     driver\|. This is a Tinkerer or perhaps an Engineer option since it
     requires a little more knowledge and abilities.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 We can\'t say it enough, this board can pump out some Amps. Be careful!
@@ -112,9 +109,8 @@ don\'t like the full 14+ volts.
 
 ### Which Option Should You Choose? (IRF3205)
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 This board can use the \"High Accuracy Waveform\" option since it uses
@@ -195,9 +191,8 @@ manage both tracks.
 - Add a current sense board and fuses (or just fuses for Engineers)
 - Change your motor board type in your config.h file
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Instead of bending out the current sense pin of the Arduino Motor Shield
@@ -268,9 +263,8 @@ LOW - Mention fuses here? Another diagram?
 
 6.  Configure the IRF3205 board type in the config.h file.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 We are going to edit your config.h file. If this is your first time
@@ -332,9 +326,8 @@ role="ref"}
 
 ### Replacing (Use both IRF3205 outputs to control MAIN and PROG)
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 This option requires a small external current sense board wired in
@@ -383,9 +376,8 @@ more wires from the \"MOTOR2\" terminals to your PROG track.
 LOW - See Gauge
 :::
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 It is important that the phase of the signal to your PROG and MAIN
@@ -453,9 +445,8 @@ See TODO: link to section below.
 LOW - link to section below.
 :::
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 We are going to edit your config.h file. If this is your first time
@@ -519,9 +510,8 @@ Finish this section
 
 ### Important Notes on Current Sensing
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 You MUST have current sensing if you want to read or write settings to
@@ -668,18 +658,16 @@ Hardware](https://github.com/DCC-EX/dcc-ex.github.io/issues/427) - See
 the PDF file IRF3205_mega_ACS724 in trains folder to include here
 :::
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 If you intend to use more than 5A of current though this board, we
 recommend using heat sinks.
 ::::
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Heat sinks must be insulated! The metal tabs on the transistors are

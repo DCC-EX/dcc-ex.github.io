@@ -183,9 +183,8 @@ the `Power`{.interpreted-text role="guilabel"} slider button to turn on
 power to your track (if not already on). You should see LEDs on your
 Motor Driver and an indication that your loco has power.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Make sure you place the loco on the *MAIN* track, **not** the PROG
@@ -262,9 +261,8 @@ connecting to a real one, click on the `Serial` dropdown button and
 select `Emulator` to run in emulator mode, then follow to instructions
 above from `Connect`.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Not all Command Station functions are fully supported in the emulator
@@ -355,9 +353,8 @@ effect will appear in the log.
 You can use the `Common CVs` drop list to select a CV. The approprate
 value will be put into the [CV Number]{.title-ref}\` field on selection.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Programming on the Main (PoM) is not currently supported directly,
@@ -377,9 +374,8 @@ any other computer, unless exported and imported into that computer. The
 `Use of this is not recommended as it may not be available in the new version of EX-Toolbox currently being developed.`{.interpreted-text
 role="dcc-ex-red-bold-italic"}
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 This is very different to the roster that can be stored in the \|EX-CS\|
@@ -399,9 +395,8 @@ computer. The \'functions maps\' cannot be accessed by any mobile device
 `Use of this is not recommended as it may not be available in the new version of EX-Toolbox currently being developed.`{.interpreted-text
 role="dcc-ex-red-bold-italic"}
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 This is very different to the functions stored with roster entries that

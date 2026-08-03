@@ -35,9 +35,8 @@ It\'s highly recommended running the latest of both \|EX-CS\| and
 \|EX-TT\| to ensure feature parity with the two, and ensure you have the
 latest bug fixes and so forth.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 \|EX-TT\| is in public Beta testing, and as such, we encourage regular
@@ -79,9 +78,8 @@ The \|EX-TT\| integration includes:
 - An LED and accessory output to control turntable specific automations
   (e.g. flashing warning light)
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Credit where credit is due!
@@ -127,9 +125,8 @@ number of steps in a single rotation, the easier it will be to get
 perfect alignment between the turntable and your layout, and this also
 typically translates to smoother rotation.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 You don\'t actually need to know the number of steps required to make a
@@ -155,9 +152,8 @@ the least number of steps to the desired position, meaning it will
 rotate either clockwise or counter clockwise depending which is the
 shortest distance.
 
-:::: tip
-::: title
-Tip
+:!!! tip "::: title
+Tip"
 :::
 
 It\'s recommended that the home position does not align with a specific
@@ -192,9 +188,8 @@ stepper in half step mode with 4096 steps per revolution, this would
 result in 40960 steps per revolution with this gearing, meaning
 \|EX-TT\| will not be able to successfully address a full rotation.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Given a stepper motor needs to complete an entire, single step (or

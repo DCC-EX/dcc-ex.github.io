@@ -39,9 +39,8 @@ signal.
 ![Waveform
 Comparison](/_static/images/track_manager/DCCpwm_DCCpwm_AC_DC.png)
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 These modes, (PWM) vs analogue DC are totally incompatible with one
@@ -70,9 +69,8 @@ like through the track:
 
 ![DCC PWM signal](/_static/images/track_manager/dcc-and-dc-on-track.png)
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Note on PWM frequency

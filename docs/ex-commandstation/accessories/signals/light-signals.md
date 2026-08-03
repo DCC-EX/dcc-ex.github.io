@@ -38,9 +38,8 @@ The commands available are:
 - `SIGNALH(red_pin, amber_pin, green_pin)` - set the aspect by setting
   the appropriate pin high
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 The `SIGNAL(...)` function is used with LED\'s that have the anode + leg

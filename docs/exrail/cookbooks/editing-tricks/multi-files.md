@@ -26,5 +26,5 @@ you had typed them into `myAutomation.h`
 #include "myCowOnElectricFence.h"
 ```
 
-A note to hardened C++ programmers\... do not be tempted to add include
+A note to hardened C++ programmers\.
 guards to your .h files.

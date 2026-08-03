@@ -172,9 +172,8 @@ values. This will cause the Command Station to restart and create its
 own WiFi network in Access Point mode with the default SSID and
 password.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 In every case above, the Command Station will restart to apply the new
@@ -201,9 +200,8 @@ Temporary STA mode and Hostname.
 Note: Only **Station (STA) mode** and the **HOSTNAME** can be changed
 over WiFi. **Access Point (AP) mode** changes require a USB connection.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 In every case above, the Command Station will restart to apply the new
@@ -219,9 +217,8 @@ The process for configuring WiFi settings using the serial monitor or
 device monitor on any of the EX-Installer, Arduino IDE, VSC or WiFi
 throttle apps are esentially the same.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 In every case below, the Command Station will restart to apply the new

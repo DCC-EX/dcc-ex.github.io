@@ -29,9 +29,8 @@ WiFi](https://www.youtube.com/watch?v=N6TWR7fIl0A&t=5s).
 
 > <iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 ![Tinkerer Icon](/_static/images/level_icons/tinkerer.png){.align-left}
@@ -156,9 +155,8 @@ If you travel to shows, or take your setup to a friend\'s house, this
 allows for an autonomous, transportable system that does not need a
 connection to, and hopefully will not interfere with, other networks.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 In this mode there is no connection to the Internet for any of the
@@ -226,9 +224,8 @@ You will need to know:
   password.) Its default is **PASS_xxxxxx** where the x\'s are the last
   6 digits of your device\' MAC address)
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 All of this information is displayed in the startup log if you connect
@@ -268,9 +265,8 @@ assigned an IP address in the same IP range, typically 192.168.4.10 to
 15. As your \|Access Point\| is also your \|EX-CS\| this time, you
 connect your throttle to the \|Access Point\| IP.
 
-:::: tip
-::: title
-Tip
+:!!! tip "::: title
+Tip"
 :::
 
 Remember to enter IP xxx.xxx.x.xx and port xxxx numbers correctly into
@@ -305,9 +301,8 @@ If you did not enter one, the default will be **PASS_xxxxxx** where
 \"xxxxxx\" are the same last 6 digits of your device\'s MAC address
 displayed in the SSID like this example: `PASS_6e321b`
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 The last 6 letters and numbers of your Access Point (AP) name and
@@ -337,9 +332,8 @@ you don\'t know your loco address, see the `<R>` command in the
 `native-command-r`{.interpreted-text role="ref"} section of the Command
 Reference.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Your Mobile Throttle function keys are user defined default function
@@ -359,9 +353,8 @@ engine roster function keys.
 **All this information appears in the startup log when connected using a
 serial monitor, in case you forget.**
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 If you experience dropped connections to the AP, turn off the

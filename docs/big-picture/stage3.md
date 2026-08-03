@@ -49,9 +49,8 @@ accessories, refer to the
 `reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)`{.interpreted-text
 role="ref"}.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 When going through the various examples where we define DCC
@@ -76,9 +75,8 @@ output, then there should be no change required to the various
 automation sequences provided, except using a negative \"-\" for the
 sensor pin ID if the sensors are active high instead of active low.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 When defining aliases for sensors, you cannot specify a negative number

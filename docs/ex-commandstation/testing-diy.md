@@ -125,9 +125,8 @@ dcclink
   dragging, clicking at a spot where you want the throttle to move, or
   clicking the + and - buttons
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 If you did not see the LEDs light up, near the A and B outputs on the
@@ -270,9 +269,8 @@ See
 `Engine Driver Page </throttles/software/engine-driver>`{.interpreted-text
 role="doc"} for details on how to install and run \|Engine Driver\|.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 If you did not see the LEDs near the A and B outputs light on the

@@ -12,9 +12,8 @@ orphan
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-installer-button-small\|
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 The instructions on this page refer to the *original* installer. This is
@@ -27,9 +26,8 @@ As of the 11th September 2023, this original installer is now a public
 archive, meaning no further development will occur.
 ::::
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Please be advised that our \|EX-I\| currently does not work reliably on
@@ -279,9 +277,8 @@ the ports so it can find your device.
 Once you have configured your options, press this button to compile all
 the source code and upload it to your Command Station.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 If you have any difficulties check the
@@ -293,9 +290,8 @@ assistance.
 
 ## Next Steps - Test your setup
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 The programming track is for programming only. Make sure you are on the

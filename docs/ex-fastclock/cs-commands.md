@@ -29,7 +29,7 @@ as follows:
 ONCLOCKTIME(06,15) 
   SETLOCO(7309) 
   ....
-  .... Do some stuff
+  ..
   ....
   DONE
 ```
@@ -82,7 +82,7 @@ ONCLOCKMINS(15)
 
   RESET(1000)           // Stop player 
   ....
-  .... Do some other stuff
+  ..
   ....
   DONE
 ```
@@ -100,7 +100,7 @@ from Engine Driver by configuring them as follows:
 >
 >   RESET(1000)           // Stop player 
 >   ....
->   .... Do some other stuff
+>   ..
 >   ....
 > DONE
 > ```

@@ -187,9 +187,8 @@ immediately.
 
 ## Use the Serial Monitor to do a quick test
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 The programming track (PROG) is for programming only. Make sure you are

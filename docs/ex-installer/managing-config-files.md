@@ -53,9 +53,8 @@ The **myAutomation.h** file can contain any customisations, including:
 This can be created manually, or by the \|EX-I\| if you select the
 [Create MyAutomation.h]{.title-ref} option.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Using **myAutomation.h** does use more progmem as it uses \|EX-R\|.

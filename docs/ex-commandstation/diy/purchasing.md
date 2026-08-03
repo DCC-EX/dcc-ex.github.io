@@ -111,9 +111,8 @@ role="doc"}.
 
 \|HR-DASHED\|
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 You can also find more detailed hardware information in the

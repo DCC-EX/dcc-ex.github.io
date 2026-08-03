@@ -40,9 +40,8 @@ git config --global user.name <user>
 git config --global user.email <email>
 ```
 
-:::: tip
-::: title
-Tip
+:!!! tip "::: title
+Tip"
 :::
 
 If using our [recommended editor (vscode)](#recommended-editor-vscode),
@@ -85,9 +84,8 @@ documentation](https://docs.espressif.com/projects/arduino-esp32/en/latest/insta
 
 ## Python 3.x
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 If you won\'t be contributing to the website documentation, you can skip

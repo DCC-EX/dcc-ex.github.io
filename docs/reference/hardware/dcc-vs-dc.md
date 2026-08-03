@@ -272,9 +272,8 @@ like through the track:
 
 ![DCC PWM signal](/_static/images/track_manager/dcc-and-dc-on-track.png)
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Note on PWM frequency
@@ -314,9 +313,8 @@ This is all done through a single \|EX-CS\|. And no we\'re not using
 another Expensive DCC decoder under the table on each
 Track/District/Block to address that section of track.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 When specifying a `DC` or `DC_INV` / `DCX` loco ID, do not use one of
@@ -334,9 +332,8 @@ These requirements are only for operating DC locomotives. There is
 nothing to do in a pure DCC environment where no DC or analogue
 locomotives are run.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 In order for \|TM\| to operate in DC mode, the \|motor shield\| must
@@ -357,9 +354,8 @@ Do not attempt to connect two insulated tracks together and drive a DCC
 engine back and forth until someone bolder than you tries it first (or
 you\'ve tested it).
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Never drive a loco from an \|EX-CS\| controlled track or district to any

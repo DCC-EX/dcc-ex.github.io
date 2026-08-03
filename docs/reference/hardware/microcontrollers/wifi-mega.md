@@ -38,9 +38,8 @@ chip on one board. Our guess is that like many boards made in China,
 this is only made by one or two factories, but sold under several names.
 Search for WiFi+Mega or ATmega2560+ESP8266.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Buyer beware! There have been numerous reports of build quality issues
@@ -83,9 +82,8 @@ too much voltage on the track and potentially damage your decoders.
     chip
 3.  Setup your Throttle
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 This board uses a Micro-USB connector instead of the USB-B printer type
@@ -277,9 +275,8 @@ id="flasher-settings-screen" alt="Flasher Settings Screen" />
 <figcaption aria-hidden="true">Flasher Settings Screen</figcaption>
 </figure>
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 These settings are for the ESP8266EX chip on the Mega+Wifi, you may need
@@ -448,9 +445,8 @@ barrel jack.
   last 6 characters of your WiFi chip\'s MAC address. Use the password
   \"PASS_xxxxxx\" where the x\'s are the same 6 characters.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 You MUST either forget your local network or turn off \"auto-reconnect\"
@@ -473,9 +469,8 @@ IP/Port connection again.
 You should have a direct Throttle connection to the \|EX-CS\| 3.0.5+
 Standalone WiFi Command Station Via your home router.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 This is an Operations only config, the \|Engine Driver\| Power button

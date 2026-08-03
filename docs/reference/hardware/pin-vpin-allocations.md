@@ -97,9 +97,8 @@ microcontrollers. The pins are grouped as such:
 
 ## I/O expanders
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 If using an \|I2C\| LCD display with the PCF8574 backpack, it is
@@ -318,9 +317,8 @@ role="doc"} for further information.
 
 ### EX-Turntable
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 \|EX-TT\| is in Beta testing, however the device driver is unlikely to

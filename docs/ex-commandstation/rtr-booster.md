@@ -53,9 +53,8 @@ to the `myAutomation.h` file:
 > DONE
 > ```
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 If you are using an \|EX-CSB1\| with a \|EX-MS\| as your booster add the
@@ -81,9 +80,8 @@ the \|EX-CSB1\| Booster. If you use the output to the booster, as well
 as to a block of track, a short or overload on that block will cause the
 \|EX-CSB1\| Booster to also kill power to all of its outputs.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 The outputs can be configured as:

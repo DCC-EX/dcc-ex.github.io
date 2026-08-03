@@ -35,9 +35,8 @@ Commands](https://dcc-ex.com/mkdocs-test/products/ex-commandstation/exrail/cookb
 \|EXTERNAL-LINK\|.
 :::
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Do not waste your time asking ChatGPT, Copilot or Gemini to create

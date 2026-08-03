@@ -24,9 +24,8 @@ role="doc"} page for the full list of WiFi options.
 
 ------------------------------------------------------------------------
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 While the recommended

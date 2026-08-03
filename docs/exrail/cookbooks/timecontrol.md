@@ -30,7 +30,7 @@ is as follows:
 ONCLOCKTIME(06,15) 
   SETLOCO(7309) 
   ....
-  .... Do some stuff
+  ..
   ....
 DONE
 ```
@@ -81,7 +81,7 @@ ONCLOCKMINS(15)
   AT(-1000)             // Wait for playing to finish
   RESET(1000)           // Stop player 
   ....
-  .... Do some other stuff
+  ..
   ....
 DONE
 ```
@@ -99,7 +99,7 @@ SEQUENCE(10)
 
   RESET(1000)           // Stop player 
   ....
-  .... Do some other stuff
+  ..
   ....
 DONE
 ```

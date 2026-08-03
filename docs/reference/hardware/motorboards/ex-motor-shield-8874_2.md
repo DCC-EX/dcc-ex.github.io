@@ -12,9 +12,8 @@ On this page
 :::
 ::::
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 This board is compatible with \|TMx\| DC mode.
@@ -90,9 +89,8 @@ to control a motor. We needed higher current capacity to power more
 motors/trains and have little to no voltage drop due to advanced MOSFET
 driver technology.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 The \|EX-MSx\| was created through the gracious support and design
@@ -156,9 +154,8 @@ but the shield can cope with 9-25VDC.
 ![DCC-EX EX-MotorShield8874 on Mega+WiFi with power and track
 connectors](/_static/images/motorboards/ex_motorshield8874_purple_megawifi.png)
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 **DO NOT** connect power to BOTH the EX-MotorShield8874 barrel jack and
@@ -201,9 +198,8 @@ Note that good quality, fully-enclosed and double-insulated switch mode
 power supplies are best, and we suggest laptop power bricks as ideal in
 this role as they typically output 3-20A easily and safely.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Please note that as the EX-MotorShield8874 can supply up to 5A of track
@@ -212,9 +208,8 @@ required to run both channels at full peak current and have power left
 for the Command Station.
 ::::
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 If you are just just testing your Arduino (not trying to power the track

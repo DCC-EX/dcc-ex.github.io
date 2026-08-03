@@ -29,9 +29,8 @@ In addition, we are also adding a horizontal staging traverser that will
 allow for six complete trains to be staged off the layout ready for
 action.
 
-:::: tip
-::: title
-Tip
+:!!! tip "::: title
+Tip"
 :::
 
 In preparation for adding an \|EX-TT\| to your layout, you\'ll need to
@@ -71,9 +70,8 @@ At the end of this stage, we expect you will have learnt the following:
 
 ## Add an EX-Turntable to your EX-CommandStation
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 All configuration items have been updated in line with \|EX-TT\| release
@@ -158,7 +156,7 @@ required to add the turntable.
 
 //==========================================================================
 // The function halSetup() is invoked from CS if it exists within the build.
-// The setup calls are included between the open and close braces "{ ... }".
+// The setup calls are included between the open and close braces "{ .
 // Comments (lines preceded by "//") are optional.
 //==========================================================================
 
@@ -197,9 +195,8 @@ positions for both.
   `/ex-turntable/traverser`{.interpreted-text role="doc"} page have been
   taken into account
 
-:::: tip
-::: title
-Tip
+:!!! tip "::: title
+Tip"
 :::
 
 It is highly recommended to make use of the
@@ -281,7 +278,7 @@ required to add both the turntable and traverser.
 
 //==========================================================================
 // The function halSetup() is invoked from CS if it exists within the build.
-// The setup calls are included between the open and close braces "{ ... }".
+// The setup calls are included between the open and close braces "{ .
 // Comments (lines preceded by "//") are optional.
 //==========================================================================
 
@@ -309,9 +306,8 @@ We\'ll use some basic mathematics to tune our turntable and traverser
 positions, however in a real layout, some experimentation will be
 required for fine tuning to ensure proper track alignment.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 When tuning positions, you can use the `<D TT vpin steps activity>`
@@ -375,9 +371,8 @@ position.
 
 ### Calculating EX-Turntable positions and DCC phase/polarity switching
 
-:::: tip
-::: title
-Tip
+:!!! tip "::: title
+Tip"
 :::
 
 It\'s a great idea at this point to understand the importance of DCC
@@ -389,9 +384,8 @@ role="ref"} and
 role="ref"} for details.
 ::::
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 When outlining turntable positions and angles at which DCC phase
@@ -533,9 +527,8 @@ down to the nearest full number):
 
 ### Tuning the traverser
 
-:::: tip
-::: title
-Tip
+:!!! tip "::: title
+Tip"
 :::
 
 Now is a great time to revisit the

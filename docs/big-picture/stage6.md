@@ -161,9 +161,8 @@ Finally, to define these same turnouts/points as servo based
 turnouts/points, these would be connected to a PCA9685 servo module, and
 our first module starts at Vpin ID 100.
 
-:::: tip
-::: title
-Tip
+:!!! tip "::: title
+Tip"
 :::
 
 Remember! Servo angles will be unique to your layout, and probably even
@@ -180,9 +179,8 @@ Throughout these pages, we will assume that the thrown servo position is
 400, the closed servo position is 100, and we will use the \"Slow\"
 profile.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 You will note below that our turnout ID 100 matches the first PCA9685
@@ -292,9 +290,8 @@ To define servo based signals, these only require one Vpin per signal
 along with specifying the servo angle for the red, amber, and green
 positions.
 
-:::: tip
-::: title
-Tip
+:!!! tip "::: title
+Tip"
 :::
 
 Remember! Servo angles will be unique to your layout, and probably even
@@ -612,9 +609,8 @@ As mentioned in the introduction, we can enable fully automated running
 of up to three trains on this layout by breaking it into four virtual
 blocks.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Remember, these are virtual blocks, and do not necessarily need to be
@@ -864,9 +860,8 @@ Once done, train control is over to the [moving from block 4 to block
 1 - the speed run](#moving-from-block-4-to-block-1---the-speed-run)
 sequence.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Note that we start with train 2 occupying block 2, and train 3 occupying

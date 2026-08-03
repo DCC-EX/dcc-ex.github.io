@@ -31,18 +31,16 @@ The process for creating these objects consists of:
   about the object
 - Re-uploading the software to the \|EX-CS\|
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 COMMANDS are case sensitive. i.e. they must be in uppercase. Text
 parameters you provide (aliases, descriptions) are not.
 ::::
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 You must avoid using these characters in all descriptions: `<`, `>`, `"`
@@ -50,9 +48,8 @@ as these are part of the \|DCC-EX\| protocol and are likely to prevent
 descriptions showing up in \|JMRI\| and other throttle software/clients.
 ::::
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Do not waste your time asking ChatGPT, Copilot or Gemini to create
@@ -91,7 +88,7 @@ Where:
 - **999** - is the DCC address of your loco
 - **My Loco Name** - is anything you want to see as the name of this
   loco in the throttle apps
-- **F0 F1 F3 \... F27**. - are the names that you want to see for the
+- **F0 F1 F3 \.
   functions specific to this loco
 - **\*F2** - note that if the function is \'momentary\' (only on while
   the button is held down) rather than \'latching\' then start the
@@ -487,7 +484,7 @@ working position (no one wants to rush back to work right?). */
 On the Mega2560 Processor board:
 
 Place IR Infrared or Optical Sensor\'s Output wire on Dpins 22, 23, 24
-\... 49. Plus one wire to GND and a third wire to 5v.
+\.
 
 ![IR Sensor connected to Arduino mega](/_static/images/ir-sensor/mega-with-ir-sensor.png)
 
@@ -507,7 +504,7 @@ You don\'t actually require anything special to be added to
 myAutomation.h in advance of using them in an sequence.
 
 Handling sensors in sequences is made easy because \|EX-R\| throws away
-the concept of interrupts ("oh... sensor 22 has been detected... which
+the concept of interrupts ("oh.
 loco was that and whatever do I do now?") and instead has the sequences
 work on the basis of "do nothing, maintain speed until sensor 22
 triggers, and then carry on in the script".
@@ -534,7 +531,7 @@ number negative, the sensor state is inverted. e.g. `AT(-22)`.
 
 Sensors with ID\'s 0 to 255 may be LATCHED/UNLATCHED in your script. If
 a sensor is latched on by the script, it can only be set off by the
-script... so `AT(22) LATCH(22)` for example effectively latches the
+script.
 sensor 22 on when detected once.
 
 Sensor polling by \|JMRI\| is independent of this, and may continue if
@@ -566,7 +563,7 @@ and made available to for use as pin numbers 100-115.
 
 On the PCA9685 Servo Signal Board:
 
-- Connect individual LEDs on vpins 101, 102 \... 115 as needed
+- Connect individual LEDs on vpins 101, 102 \.
 - Only use the -Gnd and Output+ vpins, NOT the center 5v pin
 
 ### Configure myAutomation.h - Signals
@@ -574,7 +571,7 @@ On the PCA9685 Servo Signal Board:
 The myAutomation.h file needs to be altered so that the \|EX-CS\| knows
 about each Signal.
 
-Signals setup on vpins 101, 102 \... 115
+Signals setup on vpins 101, 102 \.
 
 For each signal add a line in myAutomation.h in the form:
 

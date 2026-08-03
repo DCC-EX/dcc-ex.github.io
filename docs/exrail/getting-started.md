@@ -27,9 +27,8 @@ For a full list of keywords, see
 `/exrail/exrail-command-reference`{.interpreted-text role="doc"}. Only a
 subset are described on this page.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Do not waste your time asking ChatGPT, Copilot or Gemini to create
@@ -37,9 +36,8 @@ EXRAIL scripts. They do not understand EXRAIL and will get it wrong 100%
 of the time.
 ::::
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 **Do not use leading zeros for any numbers!**
@@ -128,9 +126,8 @@ Sequential execution of sequences is supported. i.e. One sequence can
 invoke another sequence, including itself using the `FOLLOW(id)` or
 `CALL(id)` commands.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 COMMANDS are case sensitive. i.e. they must be in uppercase. Text
@@ -408,7 +405,7 @@ SEQUENCE(85)
 
 ``` cpp
 ...
-IFxxx( id_or_condition, ... )  // where xxx is the type of 'IF' command (see below)
+IFxxx( id_or_condition, .
   <commands to execute if the conditions are met>
   ...
 ENDIF
@@ -630,7 +627,7 @@ chosen.
 ### Referencing Loco Functions
 
 You can use `FON( function_no )` and `FOFF( function_no )` to activate
-and deactivate loco functions... eg sound horn. The loco that the
+and deactivate loco functions.
 command will be directed to will be the one previously chosen using
 `SETLOCO( loco_dcc_address )` or
 `SENDLOCO( loco_dcc_address, route_id )`.
@@ -644,7 +641,7 @@ etc.
 
 Sensors with ID\'s 0 to 255 may be LATCHED/UNLATCHED in your script. If
 a sensor is latched on by the script, it can only be set off by the
-script... so `AT(5) LATCH(5)` for example effectively latches the sensor
+script.
 5 on when detected once.
 
 Sensor polling by \|JMRI\| is independent of this, and may continue if

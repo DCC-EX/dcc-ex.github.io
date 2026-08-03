@@ -38,9 +38,8 @@ To make full use of \|EX-FC\|, you will need a basic understanding of
 `EXRAIL </exrail/index>`{.interpreted-text role="doc"} automation, but
 we\'ll share the details and some examples to help with this.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 \|EX-FC\| is in public Beta testing, and as such, we encourage regular
@@ -60,9 +59,8 @@ The \|EX-FC\| integration includes:
   \|Engine Driver\|
 - Debug output to \|serial monitor\|
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Credit where credit is due!

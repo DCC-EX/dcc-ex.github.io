@@ -50,9 +50,8 @@ will need to wire the appropriate pins manually as per the diagram below
 ![Mega Pro Mini - Wiring motor shield and
 ESP-01](/_static/images/microcontrollers/mega_2560_pro_mini_with_standard_motor_shield.png)
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Note that if you purchase a 3.3v version of the Arduino Pro Mini you may

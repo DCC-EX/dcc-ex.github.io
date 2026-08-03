@@ -71,9 +71,8 @@ of 800, so you will need to review the Vpin map displayed in the
 The Arduino Pro Mini comes in two variations; a 3.3V running at 8MHz,
 and a 5V running at 16MHz.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 The 8MHz 3.3V Pro Mini is not 5V tolerant
@@ -174,9 +173,8 @@ role="ref"}.
 
 ## STMicroelectronics NUCLEO-F411RE
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Support for the F411RE is experimental at best right now. While the
@@ -201,9 +199,8 @@ Numerous I/O pins are connected to other devices or perform multiple
 functions which result in pin conflicts, so the only pins included are
 those that are able to successfully be set to input mode on startup.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 PC13 has a switch (blue button) with pullup resistor attached, so this
@@ -251,9 +248,8 @@ In addition, PA5 is the green LED.
 
 ## STMicroelectronics NUCLEO-F412ZG
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Support for the F412ZG is experimental at best right now. While the
@@ -276,9 +272,8 @@ Numerous I/O pins are connected to other devices or perform multiple
 functions which result in pin conflicts, so the only pins included are
 those that are able to successfully be set to input mode on startup.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 PC13 has a switch (blue button) with pullup resistor attached, so this
@@ -356,9 +351,8 @@ red LED.
 
 ## Arduino Zero (or SAMD based clone)
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 The Arduino Zero (and SAMD based clones) are 3v3 only and **are not 5V
@@ -393,9 +387,8 @@ normally, no actual I/O testing has been performed.
 
 ## STMicroelectronics STM32F103C8T6 (Bluepill)
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Support for the STM32F103C8T6 Bluepill is experimental at best right
@@ -445,9 +438,8 @@ MBED](https://os.mbed.com/users/hudakz/code/STM32F103C8T6_Hello/)
 
 \|tinkerer\| \|engineer\|
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 When considering adding new devices to \|EX-IO\|, be sure to take into

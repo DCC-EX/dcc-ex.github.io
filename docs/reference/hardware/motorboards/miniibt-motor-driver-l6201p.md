@@ -4,9 +4,8 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 This board is **not** compatible with \|TM\| DC mode.

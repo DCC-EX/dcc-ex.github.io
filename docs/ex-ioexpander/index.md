@@ -4,9 +4,8 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 \|EX-IO\| is currently in its infancy and as such is considered to be in
@@ -37,9 +36,8 @@ clicking the second button:
 
 \|support-button-large\| \|githublink-ex-ioexpander-button\|
 
-:::: tip
-::: title
-Tip
+:!!! tip "::: title
+Tip"
 :::
 
 Keep an eye out for the same button at the top of the other pages.

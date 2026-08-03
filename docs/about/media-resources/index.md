@@ -71,9 +71,9 @@ an Operational Dispatcher Station to manage the Track Ids and
 assignments on a 32\" monitor!
 
 Tip. For those who intend on using more than one instance of Engine
-Driver, as shown in the screenshot above\... Create the first instance;
+Driver, as shown in the screenshot above\.
 install ED and then customize preferences, including server, throttles
-and so on.. Then replicate the initial instance for as many Android-ED
+and so on
 throttles desired.
 
 In addition to operating a model railroad, the BlueStacks-Engine Driver

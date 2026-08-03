@@ -35,9 +35,8 @@ RevA](/_static/images/motorboards/ex_motorshield8874.png)
 ![Deek Robot Motor
 Shield](/_static/images/motorboards/deek-robot_motor_shield.png)
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Where appropriate, we have used the terms \"single\" and \"dual\" to
@@ -321,9 +320,8 @@ We\'ve compiled this simple summary table to help with this:
 
 ### TrackManager DC compatible boards
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 There are specific pin and hardware requirements in order to support DC
@@ -430,9 +428,8 @@ used. Look for the following criteria:
 - Look for an Arduino shield form factor to eliminate wiring (not
   required but preferred)
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Current capabilities of these boards, especially the boards based on the

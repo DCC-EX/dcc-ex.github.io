@@ -25,9 +25,8 @@ the tools you\'ll need to making the pull request. These steps are:
 
 ## Developer tools
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 You may want to have a look at our page on

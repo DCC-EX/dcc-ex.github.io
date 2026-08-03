@@ -12,9 +12,8 @@ On this page
 :::
 ::::
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 \|EX-IO\| is currently in its infancy and as such is considered to be in
@@ -52,9 +51,8 @@ variable brightness LEDs.
 This page provides the general overview of \|EX-IO\|, as well as
 outlining the configuration options available.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Credits
@@ -109,9 +107,8 @@ enabled or disabled.
 Pins capable of both digital and analogue can be used for either
 purpose.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 To ensure the devices start with I/O pins in the safest possible state,
@@ -155,9 +152,8 @@ role="doc"} page.
 For experimenting with different values for servo angles, we highly
 recommend trying out `/ex-toolbox/index`{.interpreted-text role="doc"}.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 When using servos or fading LEDs with \|EX-IO\|, you *must use the
@@ -271,9 +267,8 @@ Be aware that this address will override any address defined in
 \"myConfig.h\", and if using these devices, you do not need a
 \"myConfig.h\" file at all for normal operation.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Using the reboot `<Z>` command on an Arduino Nano with the old
@@ -298,9 +293,8 @@ configured address, with an additional command to reboot the device:
 
 ### Pin/Vpin allocation
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 It has been reported that on non-genuine Arduino Uno devices (and
@@ -317,9 +311,8 @@ the pins available for use are outlined on the
 Vpins are allocated by the \|EX-CS\| device driver in ascending order
 according to the device map on this page.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 When the \|EX-IO\| device receives its configuration from the \|EX-CS\|,

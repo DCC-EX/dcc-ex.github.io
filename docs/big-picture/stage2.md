@@ -49,7 +49,7 @@ Where:
 - **999** - is the DCC address of your loco
 - **Loco Name** - is anything you want to see as the name of this loco
   in the throttle apps
-- **F0 F1 F3 \... F27**. - are the names that you want to see for the
+- **F0 F1 F3 \.
   functions specific to this loco
 - **\*F2** - note that if the function is \'momentary\' rather than
   \'latching\' (On/Off) then start the function label with a asterisk
@@ -128,9 +128,8 @@ More information on the config files can be found on the
 `/ex-installer/managing-config-files`{.interpreted-text role="doc"}
 page.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Never edit any files in the EX-Installer folder. Editing any files in
@@ -171,7 +170,7 @@ The Roster will be automatically loaded with the \|EX-CS\| software.
 
 \|EX-CS\| does not natively support roster images, however several of
 the throttle (controller) apps allow you to do so. Only one will be
-explored here\... Engine Driver.
+explored here\.
 
 ### Engine Driver
 

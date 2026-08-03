@@ -11,9 +11,8 @@
   main track, or possibly a rolling road
 - A \|motor driver\| with current sense capability
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 The default EX-CommandStation with a dual output \|Standard Motor

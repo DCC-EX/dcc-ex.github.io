@@ -51,9 +51,9 @@ destination heading text as the link text.
 Example
 
 ``` rst
-:ref:`Internal - Different Page Heading`
+[Internal - Different Page Heading`
 
-:ref:`some other text to appear in the page <Internal - Different Page Heading>`
+:ref:`some other text to appear in the page ](Internal - Different Page Heading.md)
 ```
 :::
 
@@ -63,15 +63,20 @@ Sphinx cross-references are used for internal links. This ensures they
 are correct and by default will use the destination heading text as the
 link text.
 
-To link to a different page use `:doc:`:
+To link to a different page use `[:
 
 ::: admonition
 Example
 
-``` rst
-:doc:`/reference/hardware/motor-boards`
+](:
 
-:doc:`some other text to appear in the page </reference/hardware/motor-boards>`
+::: admonition
+Example
+
+.md)`` rst
+[/reference/hardware/motor-boards](/reference/hardware/motor-boards.md)
+
+[some other text to appear in the page </reference/hardware/motor-boards>](some other text to appear in the page </reference/hardware/motor-boards>.md)
 ```
 :::
 
@@ -80,7 +85,7 @@ file path, without the .rst suffix. Absolute are generally safer.
 
 ### Internal - To a Sub Heading of a Different Page
 
-To link to a position within a page use `:ref:`. A reST label can be
+To link to a position within a page use `[. A reST label can be
 used as the reference, but on the \|DCC-EX\| website headings are made
 available to use as references:
 
@@ -105,7 +110,7 @@ Alternative text can be used for the link:
 Example
 
 ``` rst
-:ref:`WiFi configuration <advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup>`
+:ref:`WiFi configuration ](advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup.md)
 ```
 
 `WiFi configuration <reference/hardware/microcontrollers/wifi-mega:Short Version of Network Setup>`{.interpreted-text
@@ -152,7 +157,7 @@ Example
 ``` rst
 Link to the `DCC-EX home page`_.
 
-.. _DCC-EX home page: https://dcc-ex.com/index.html
+
 ```
 
 Link to the [DCC-EX home page](https://dcc-ex.com/index.html).
@@ -161,13 +166,13 @@ Link to the [DCC-EX home page](https://dcc-ex.com/index.html).
 ### Downloads or Important Links
 
 Download buttons are created using the `dcclink` class, added using the
-`.. rst-class::` directive:
+`
 
 :::: admonition
 Example
 
 ``` rst
-.. rst-class:: dcclink
+
 
    `Official Release page <https://github.com/DCC-EX/CommandStation-EX/releases>`_
 ```
@@ -195,7 +200,7 @@ or (float right)\...
 Example
 
 ``` rst
-.. rst-class:: dcclink-right
+
 
    `Official Release page <https://github.com/DCC-EX/CommandStation-EX/releases>`_
 ```
@@ -210,7 +215,7 @@ and are relatively easy to update, use the `list-table` reStructuredText
 directive.
 
 ``` 
-.. list-table::
+
   :widths: auto
   :header-rows: 1
   :class: command-table
@@ -272,7 +277,7 @@ markdown style table becomes quite cumbersome compared with
 
 ### Including images
 
-Include images with the `.. image::` and `.. figure::` directives.
+Include images with the `![](`) and `![](`) directives.
 Horizontal positioning using the `:align:` option needs a bit of care.
 
 Where possible e.g. if just presenting a single image, either don\'t use
@@ -285,7 +290,7 @@ yourself.
 
 A single `|` adds an additional blank line before the next paragraph in
 the output; before a heading, or if a blank line is not wanted use
-`.. rst-class:: clearer`.
+`
 
 The expansion `\|force-break\|` will create blank line that CANNOT be
 overlapped with \'FloatRight\' element (e.g. an image, note or warning.)
@@ -332,9 +337,8 @@ The simplest options for generating SVG images are
 [draw.io](https://app.diagrams.net/) or
 [Inkscape](https://inkscape.org/).
 
-:::: tip
-::: title
-Tip
+:!!! tip "::: title
+Tip"
 :::
 
 Note that draw.io\'s native format is XML, with SVG as an export format,
@@ -350,7 +354,7 @@ further details when available.
 To include the SVG file, use the `raw:: html` directive:
 
 ``` 
-.. raw:: html
+
   :file: ../_static/images/image.svg
 ```
 
@@ -386,9 +390,9 @@ SVG image\'s ID tag as per the below, or you can implement a
 reStructuredText container element with an associated class.
 
 ``` 
-.. container:: svg-override
 
-  .. raw:: html
+
+  
     :file: ../_static/images/image.svg
 ```
 
@@ -436,16 +440,16 @@ For example, here is the code used to allow people to download the very
 handy DCC accessory decoder conversion spreadsheet.
 
 ``` rst
-.. image:: ../../_static/documents/acc_conv_sheet_thumbnail.png
+![](../../_static/documents/acc_conv_sheet_thumbnail.png)
   :alt: Accessory conversion sheet thumbnail
   :scale: 30%
   :align: left
 
-.. rst-class:: dcclink
+
 
   `Stationary Decoder Address Table </_static/documents/DCCpp-stationary-decoder-addresses.xlsx>`_
 
-.. rst-class:: clearer
+
 ```
 
 That code ends up looking like this:
@@ -463,7 +467,7 @@ Table](/_static/documents/DCCpp-stationary-decoder-addresses.xlsx)
 clearer
 :::
 
-Note the final `.. rst-class:: clearer` is required to ensure any
+Note the final `
 following content is below the linked document.
 
 ## Image Artifacts / Original Grpahics
@@ -502,11 +506,10 @@ directly in a toctree.
 
 You can hide notes or searchable placeholders by putting placing the
 text on a line with a space above and below and preceding it with two
-period and a space, for example `.. This is a hidden comment`.
+period and a space, for example `
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Remember to perform a

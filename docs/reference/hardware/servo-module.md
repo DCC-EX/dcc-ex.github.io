@@ -241,9 +241,8 @@ the intensity of the LEDs. The intensity of the LEDs can vary from 0
 
 ![LED](../../_static/images/accessories/led.png)
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Credit to Joe Haydu for following up and summarising this info for us.
@@ -391,9 +390,8 @@ Digital Converter), which can measure from 0 to 4095, 4096 (100%) is
 20ms pulse length and 0 (0%) is 0ms pulse length. We convert 4095 to
 100% since you can\'t represent the value 4096 in 12 bits.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 It is a bit difficult finding datasheets for different servos. For the
@@ -403,9 +401,8 @@ the command station in mySetup.h or via command with \"\<T id SERVO vpin
 thrownPos closedPos profile\>\".
 ::::
 
-:::: tip
-::: title
-Tip
+:!!! tip "::: title
+Tip"
 :::
 
 Keep a spare slot (we recommend 100) open on your first PCA9685 board so

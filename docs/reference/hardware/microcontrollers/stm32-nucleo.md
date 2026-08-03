@@ -97,9 +97,8 @@ range in prices as of this is \$US11 for the low-end Nucleo-64 models to
 available globally from Mouser, Digi-Key, Farnell/Element14, and ST
 Microelectronics directly.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 While the F429ZI is supported and recommended, ST Microelectronics has
@@ -114,9 +113,8 @@ Windows, you will need to install their STLink USB drivers in order to
 be able to upload software to them and use the \|serial monitor\| in
 either PlatformIO or the \|Arduino IDE\|.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 You should install these drivers before plugging your NUCLEO device in

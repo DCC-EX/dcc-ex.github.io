@@ -115,9 +115,8 @@ the Wifi Board and connect the other end to Tx1 on the mega (pin 18).
 ![Install the jumper
 wires](/_static/images/assembly/wifi_jumpers2.png){alt="Install the Jumper wires"}
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 The screen printing on the board may make it hard to see which pins are

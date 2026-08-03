@@ -21,7 +21,7 @@ This is made possible by using upper case quoted sequence names with the
 ``` cpp
 SEQUENCE("BEER"_hk)  
   PRINT("BEER sequence started")
-  ... and so on
+  .
 ```
 
 The name must be specified in upper case but it can be started by the

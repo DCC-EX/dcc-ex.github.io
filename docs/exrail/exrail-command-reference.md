@@ -91,9 +91,8 @@ of the time.
 - Most IDs simply need to be unique, however RESERVE/FREE and
   LATCH/UNLATCH must be in the range 0 - 255
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 You must avoid using these characters in all descriptions: `<`, `>`, `"`
@@ -101,9 +100,8 @@ as these are part of the \|DCC-EX\| protocol and are likely to prevent
 descriptions showing up in \|JMRI\| and other throttle software/clients.
 ::::
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 **Do not use leading zeros for any numbers!**
@@ -116,9 +114,8 @@ without leading zeros, for example `ALIAS(MY_ALIAS, 10)` to assign the
 value of 10 to MY_ALIAS.
 ::::
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 There are four uses of ID numbers in EXRAIL:
@@ -153,9 +150,8 @@ used:
 - Every event handler (all directives starting with the word `ON`) must
   be terminated by `DONE`
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 \* There are exceptions to this rule.
@@ -349,9 +345,8 @@ Animation or Sequence.
 
 Kills a currently running process by ID
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 \- task_id is an internally generated ID separate from any of the user
@@ -773,9 +768,8 @@ elsewhere in the \|EX-R\| documentation.
 
 *Parameters:* \|BR\| \|\_\| \> none
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 You do not need to use `DONE` if you are using `FOLLOW(id)` or `RETURN`
@@ -1170,9 +1164,8 @@ to store the value (0-???) \|BR\|
 
 Stashes/Stores the current loco/invert in the specified stash location.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 \|EX-R\| has the ability to switch the DCC direction meaning of FWD and
@@ -1238,7 +1231,7 @@ role="ref"}.
 
 \|hr-dashed\|
 
-#### `IF ( vpin )` \... ELSE \... ENDIF - Execute commands if the conditions are met {#if}
+#### `IF ( vpin )` \.
 
 Perform the following block of commands if the specified sensor is
 active.
@@ -1259,7 +1252,7 @@ Also see `IFNOT()`, `IFRED()`, `IFAMBER()`, `IFGREEN()`, `IFCLOSED()`,
 
 \|hr-dashed\|
 
-#### `IFNOT ( vpin )` \... ELSE \... ENDIF - Execute commands if the conditions are NOT met {#ifnot}
+#### `IFNOT ( vpin )` \.
 
 Perform the following block of commands if the specified sensor is not
 active.
@@ -1289,7 +1282,7 @@ be followed by an `ENDIF` somewhere in the following commands.
 
 #### `ENDIF` - Required to end an IF/IFNOT/etc. {#endif}
 
-Required to end an IF/IFNOT/etc. (Used in all IF.. functions).
+Required to end an IF/IFNOT/etc. (Used in all IF
 
 Optionally be proceeded by an `ELSE` somewhere in the preceding
 commands. Must be proceeded by an `IF()` somewhere in the preceding
@@ -1769,9 +1762,8 @@ the specified activity.
 \|\_\| \> **steps** - The step position to move to \|BR\| \|\_\| \>
 **activity** - The activity to perform \|BR\|
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 From version 5.4.0, we highly recommend using our new
@@ -2024,7 +2016,7 @@ be used for an active high sensor.
 
 See the
 `Conditional Statements section <exrail_conditional_statements>`{.interpreted-text
-role="ref"} for more information on IF \... ELSE \... ENDIF commands.
+role="ref"} for more information on IF \.
 
 \|hr-dashed\|
 
@@ -2039,7 +2031,7 @@ be used for an active high sensor.
 
 See the
 `Conditional Statements section <exrail_conditional_statements>`{.interpreted-text
-role="ref"} for more information on IF \... ELSE \... ENDIF commands.
+role="ref"} for more information on IF \.
 
 \|hr-dashed\|
 
@@ -2243,7 +2235,7 @@ ROUTE(1,"Shuttle")
 FOLLOW(2)   // this line is not actully needed
 
 SEQUENCE(2)
-  .... move loco etc
+  ..
   IF(99) 
     FOLLOW(2) 
   ENDIF
@@ -3114,7 +3106,7 @@ executed when the MotorDriver routines indicate the overload is cleared.
 Refer also to `/trackmanager/index`{.interpreted-text role="doc"}
 
 Note: AFTEROVERLOAD is only relevant when used within and
-ONOVERLOAD\.... DONE structure.
+ONOVERLOAD\..
 
 *Parameters:* \|BR\| \|\_\| \> **track** - - The track to configure,
 valid options are A to H
@@ -3536,7 +3528,7 @@ Please use this option with great care. If in doubt ask for assistance.
 
 Syntax:
 
-: STEALTH( .. C++ code ..)
+: STEALTH( 
 
 ::: collapse
 For example: (click to show)

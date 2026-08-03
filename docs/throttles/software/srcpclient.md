@@ -46,9 +46,8 @@ iOS](https://www.io-expert.com/srcpclientios/index.html)
 
 ## Operation {#srcpclient-operation}
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 A Mega is required for using the WiFi connection

@@ -364,7 +364,7 @@ to imagine 4 separate mini routes, each passing from one block to the
 next. Then we can chain them together to form a full route, but also
 start from any block.
 
-So... lets take a look at the routes now. For convenience I have used
+So.
 route numbers that help remind us what the route is for.
 
 ``` cpp
@@ -407,7 +407,7 @@ SEQUENCE(41)
       FOLLOW(12) // follows Route 12 again… forever
 ```
 
-Does that look long? Worried about memory on your Arduino.... Well the
+Does that look long? Worried about memory on your Arduino..
 script above takes about 100 BYTES of program memory and no dynamic
 SRAM!
 
@@ -418,7 +418,7 @@ Notice that there is a common theme to this...
 - RESERVE where you want to go. If you are moving and the reserve fails,
   your loco will STOP and the reserve waits for the block to become
   available. \*These waits and the manual WAITS do not block the Arduino
-  process... DCC and the other locos continue to follow their routes!
+  process.
 - Set the points to enter the reserved area. Do this ASAP, as you may be
   still moving towards them.
 - Set any signals.
@@ -441,9 +441,8 @@ suitable position and set them going. We need to have a starting
 position for each loco, and reserve the block(s) it needs to keep other
 trains from crashing into it.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 This EXRAIL version isn\'t ready to handle locos randomly placed on the

@@ -35,9 +35,8 @@ On this page
   `ex-turntable/overview:important! phase (or polarity) switching`{.interpreted-text
   role="ref"})
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Both this and the following assembly page are primarily about using the
@@ -65,9 +64,8 @@ As time allows, we will update the images and instructions to focus on
 this new recommendation.
 ::::
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 If you wish to make use of the traverser feature, there is further

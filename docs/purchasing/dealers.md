@@ -14,9 +14,8 @@ different hardware devices as well as complete \|EX-CS\| systems.
 The dealers listed on this page work with the \|DCC-EX\| team to ensure
 these devices are compatible.
 
-:::: tip
-::: title
-Tip
+:!!! tip "::: title
+Tip"
 :::
 
 If you are not in any of these countries, be aware that each dealer can

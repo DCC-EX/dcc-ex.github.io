@@ -74,9 +74,8 @@ able to initiate communications on the bus. The bus may also have a
 number of SLAVE devices. The slave only speaks when it is spoken to by a
 Master.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 The \|I2C\| standard allows for multi-master buses in which two or more
@@ -89,9 +88,8 @@ length. \|I2C\| addresses are generally written in hex format, in the
 range 0x00 (0) to 0x7F (127). For example, a GPIO Expander device might
 have an address of 0x20, and an OLED display may be 0x3F.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 The addresses in the ranges 0x00 to 0x0f and 0x78 to 0x7f are reserved,
@@ -116,7 +114,7 @@ Most \|I2C\| devices allow the address to be selected by adding or
 removing (or moving) jumpers. In some cases the jumpers are fitted on
 selector pins on the module, and the jumpers can be readily moved to
 select the address. For example, the MCP23017 can have address 0x20,
-0x21, 0x22, \... up to 0x27, by three jumpers. The PCA9685 has a
+0x21, 0x22, \.
 whopping six jumpers, allowing the address to be selected from 0x40 up
 to 0x7F (although addresses 0x78 to 0x7F should not generally be used).
 Some modules, like the PCA9685, use solder jumpers, which are pairs of
@@ -373,9 +371,8 @@ Check the PCB tracks from the SDA and SCL pin connectors; one side of
 each resistors will be connected to one of these, and the other side of
 both will be connected to the Vcc supply.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 IMPORTANT: When you desolder the resistors, ensure that you don\'t leave

@@ -30,9 +30,8 @@ Shield](https://www.makerfabs.com/esp8266-wifi-shield.html)
 \|EXTERNAL-LINK\|. If you have a Makerfabs shield that was made between
 May 2023 and October 2023, your board may have faulty firmware.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 The instructions on this page have been proven to work on Linux PCs, so

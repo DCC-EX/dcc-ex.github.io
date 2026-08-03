@@ -174,7 +174,7 @@ toctree
 
 You can hide notes or searchable placeholders by putting placing the
 text on a line with a space above and below and preceding it with two
-period and a space, ex: \".. This is a hidden comment\"
+period and a space, ex: \"
 
 ### Summary
 

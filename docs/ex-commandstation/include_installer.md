@@ -29,9 +29,8 @@ If you have purchased a \|EX-CSB1\| it will have come with the \|EX-CS\|
 software already installed. You only need to look at this page if you
 want to change the default configuration.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 This page is specifically intended for a \|conductor-text\| or
@@ -50,9 +49,8 @@ the additional, or different, hardware from that recommended for a
 role="doc"} page for the full instructions.
 ::::
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 We have found that there are a small number of users who can have an
@@ -460,9 +458,8 @@ You can configure the WiFi for EX-CommandStation two ways:
   *Station Mode*. \|BR\| To enable, select
   `Connect my EX-CommandStation to my existing wireless network`
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|BR\| For the \|EX-CSB1-SHORT\|
@@ -534,9 +531,8 @@ for more information.
 To proceed, click the `Compile and Load`{.interpreted-text
 role="guilabel"} button.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 See the

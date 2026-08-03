@@ -14,9 +14,8 @@ On this page
 Below are some tips and techniques you can implement to get the most out
 of \|EX-R\|.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Do not waste your time asking ChatGPT, Copilot or Gemini to create

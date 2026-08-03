@@ -36,9 +36,8 @@ If you have purchased a \|EX-CSB1\| it will have come with the \|EX-CS\|
 software already installed. You only need to look at this page if you
 want to change the default configuration.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 If you already have, or wish to create, your own custom config files, we
@@ -47,9 +46,8 @@ recommend that you
 role="doc"}.
 ::::
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 We have found that there are a small number of users who can have an
@@ -264,9 +262,8 @@ the \|EX-CSB1-SHORT\|, as opposed to the more common Uno or Mega based
 Arduinos, you will need to enable support for these by selecting the
 appropriate additional platform option.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Enabling additional platforms *that you will not be using* will take
@@ -518,9 +515,8 @@ may include:
 This list will change over time as new motor drivers are added, and any
 older ones no longer supported are removed.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 If you have added a an \|EX-MS\| to the \|EX-CSB1\|\...
@@ -601,9 +597,8 @@ You can configure the WiFi for **EX-CommandStation** two ways:
   *Station Mode*. \|BR\| To enable, select
   `Connect my EX-CommandStation to my existing wireless network`
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|BR\| For the \|EX-CSB1-SHORT\|
@@ -673,8 +668,7 @@ for more information.
 > Additionally, if you choose, you may customise the WiFi hostname, or
 > leave it as the default \"dccex\".
 >
-> :::: note
-> ::: title
+> :!!! note "> ::: title
 > Note
 > :::
 >
@@ -696,7 +690,7 @@ the same time.
 \|HR-DASHED\|
 
 ##### Start with power on
-
+"
 :::: {.hint .tip-float-right-narrow}
 ::: title
 Hint

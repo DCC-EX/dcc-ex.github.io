@@ -473,9 +473,8 @@ enough, but for N, HO, and OO scales, we recommend using between 14v and
 is why we suggest a modern switch-mode power supply with double
 insulation and strong overload protection.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Your power supply can be rated at *or above* the specified Amperage
@@ -648,8 +647,7 @@ password shown on the OLED to begin running trains immediately!
 You have nothing further to do to start using your DCC-EX \|EX-CSB1\|.
 You can remove the protective cover on the OLED if you wish.
 
-> :::: note
-> ::: title
+> :!!! note "> ::: title
 > Note
 > :::
 >
@@ -751,7 +749,7 @@ find instructions on how to do that on the
 ------------------------------------------------------------------------
 
 ## Uploading the Software (Changing the Configuration)
-
+"
 :::: {.warning .warning-fload-right}
 ::: title
 Warning

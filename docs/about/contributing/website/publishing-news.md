@@ -48,9 +48,9 @@ other posts.
 The content of the file should start like this:
 
 ``` 
-.. include:: /include/include.rst
-.. include:: /include/include-l2.rst
-.. include:: /include/include-description.rst
+--8<-- "/include/include.md"
+--8<-- "/include/include-l2.md"
+--8<-- "/include/include-description.md"
 
 :blogpost: true
 :date: <date in format day month, year e.g. 8 March, 2023>
@@ -60,7 +60,7 @@ The content of the file should start like this:
 :excerpt: 1
 :image: 0
 
-.. image:: /_static/images/logos/product-logo-news.png
+![](/_static/images/logos/product-logo-news.png)
   :alt: DCC-EX News
   :scale: 40%
   :class: image-product-logo-float-right
@@ -96,9 +96,8 @@ be updated for each post.
   `about/contributing/website/publishing-news:Valid categories and tags`{.interpreted-text
   role="ref"})
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 Give careful consideration to the date of the post compared to your time
@@ -108,7 +107,7 @@ Australia where this author is located), the post will not be displayed
 as it is considered in the future.
 
 All other metadata/RST directives must remain intact as provided in the
-template, including the \".. include\" lines, [:blogpost:]{.title-ref},
+template, including the \"
 [:excerpt:]{.title-ref}, [:image:]{.title-ref}, and the logo image
 directive.
 ::::

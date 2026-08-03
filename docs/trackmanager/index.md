@@ -573,9 +573,8 @@ locos just as easily as DCC locos. Throttle Compatibility:
 > - Other wired throttles to operate your DCC layout and your DC layout,
 >   either separately or a simultaneous combination of the two modes
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 Never drive a loco, DC or DCC, from an \|EX-CS\| controlled track or
@@ -666,9 +665,8 @@ the same layout is a very simple swap.
 ![DC Layout - 2 Blocks -
 EX-CSB1](/_static/images/layouts/dc-layout-2.png){alt="DC Layout - 2 Blocks"}
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 The ready-to-run \|EX-CSB1-SHORT\| and the do-it-yourself \|EX-CS\|
@@ -827,9 +825,8 @@ or
 <= B NONE>      // Set track B disabled, like a staging yard when it gets too noisy.
 ```
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 You would then enter your Engine address on the throttle of 1234 and

@@ -37,9 +37,8 @@ them, along with the available methods to control them.
 types (such as the Walthers 90\' and 130\' motorised turntables) and our
 very own \|EX-TT\|.
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 This section focuses on functionality supporting turntables/traversers
@@ -104,9 +103,8 @@ role="ref"}.
 
 ## DCC accessory turntables
 
-:::: note
-::: title
-Note
+:!!! note "::: title
+Note"
 :::
 
 As the author of these pages and the new turntable functionality has no

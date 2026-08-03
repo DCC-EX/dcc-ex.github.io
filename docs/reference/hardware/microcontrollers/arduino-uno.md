@@ -22,9 +22,8 @@ Setting up the UNO is essentially the same as setting up a Mega, so
 refer to the `/ex-commandstation/diy/assembly`{.interpreted-text
 role="doc"} page for information on setting up this microcontroller.
 
-:::: warning
-::: title
-Warning
+:!!! warning "::: title
+Warning"
 :::
 
 **Uno R4 is not supported** \|BR\| If you choose to purchase an Arduino

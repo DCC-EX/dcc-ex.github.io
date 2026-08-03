@@ -2,9 +2,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -42,7 +42,7 @@ DecoderPro Script Output Window.
 You can also add user defined ATC Automatic Throttle Control Jython.py
 scripts to GUI buttons on DecoderPro and PanelPro main menus.
 
-![DCC-EX JMRI scripts](/_static/images/jmri/DCCEX_JMRI_Script_windows1.jpg){.align-left}
+![DCC-EX JMRI scripts](/_static/images/jmri/DCCEX_JMRI_Script_windows1.jpg)
 
 ::: rst-class
 dcclink
@@ -64,7 +64,7 @@ in JMRI and assign them to buttons. You can have the command references
 for \|DCC-EX\| shown through the Script Output Window in DecoderPro as
 seen above.
 
-![DCC-EX JMRI script install instructions](/_static/images/icons/pdf_logo_sm.png){.align-left}
+![DCC-EX JMRI script install instructions](/_static/images/icons/pdf_logo_sm.png)
 
 ::: rst-class
 dcclink
@@ -82,7 +82,7 @@ clearer
 For a more extensive overview of setting up \|EX-CS\| with JMRI
 DecoderPro please download and review
 
-![EX-CS & JMRI Getting Started Guide](/_static/images/icons/pdf_logo_sm.png){.align-left}
+![EX-CS & JMRI Getting Started Guide](/_static/images/icons/pdf_logo_sm.png)
 
 ::: rst-class
 dcclink
@@ -102,7 +102,7 @@ clearer
 
 DCC Manufacture Decoder Identification
 
-![DCC Shortcuts Card Thumbnail](../../_static/documents/dcc_shortcuts_card_thumbnail.png){.align-left}
+![DCC Shortcuts Card Thumbnail](../../_static/documents/dcc_shortcuts_card_thumbnail.png)
 
 ::: rst-class
 dcclink
@@ -123,7 +123,7 @@ have a decoder to a switch that uses it, this table can come in handy.
 Credit to Tom Busza for putting this together for \|JMRi\| and
 \|DCC-EX\| users!
 
-![Accessory conversion sheet thumbnail](../../_static/documents/acc_conv_sheet_thumbnail.png){.align-left}
+![Accessory conversion sheet thumbnail](../../_static/documents/acc_conv_sheet_thumbnail.png)
 
 ::: rst-class
 dcclink

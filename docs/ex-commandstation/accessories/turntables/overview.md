@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -78,13 +78,11 @@ and can have human-friendly descriptions associated with them.
 
 For information on using the `<I ...>` commands to define objects, refer
 to
-`reference/software/command-summary-consolidated:turntables/traversers (configuring the ex-commandstation)`{.interpreted-text
-role="ref"}.
+`reference/software/command-summary-consolidated:turntables/traversers (configuring the ex-commandstation)`.
 
 For information on using the \|EX-R\| commands in \"myAutomation.h\"
 refer to the
-`exrail/exrail-command-reference:turntable/traverser objects - definition and control`{.interpreted-text
-role="ref"}.
+`exrail/exrail-command-reference:turntable/traverser objects - definition and control`.
 
 ### Controlling turntables/traversers
 
@@ -92,14 +90,12 @@ As per defining the objects, turntables/traversers can also be
 controlled by both native \|DCC-EX\| commands and \|EX-R\|.
 
 Refer to
-`reference/software/command-summary-consolidated:turntables/traversers`{.interpreted-text
-role="ref"} for information pertaining to controlling these devices, as
+`reference/software/command-summary-consolidated:turntables/traversers` for information pertaining to controlling these devices, as
 well as for what throttle developers can use to enable control of these
 from throttles.
 
 For \|EX-R\| commands, refer to
-`exrail/exrail-command-reference:turntable/traverser objects - definition and control`{.interpreted-text
-role="ref"}.
+`exrail/exrail-command-reference:turntable/traverser objects - definition and control`.
 
 ## DCC accessory turntables
 
@@ -144,7 +140,7 @@ turntable object to define and control turntables/traversers using it.
 While it\'s recommended to review the entire updated \|EX-TT\|
 documentation inline with these changes, the important updates related
 to the new definition and control methods are on the
-`/ex-turntable/test-and-tune`{.interpreted-text role="doc"} page.
+`/ex-turntable/test-and-tune` page.
 
 ## Read on for more\...
 

@@ -36,11 +36,9 @@ The \|EX-I\| will meet 100% of the needs of a \|conductor-text\| or
 \|tinkerer-text\| with considerably less effort.
 ::::
 
-- `Install using EX-Installer </ex-installer/index>`{.interpreted-text
-  role="doc"}
-- `Install using Arduino IDE <arduino-ide>`{.interpreted-text
-  role="doc"}
+- `Install using EX-Installer </ex-installer/index>`
+- `Install using Arduino IDE <arduino-ide>`
 
-::: {.toctree hidden="" maxdepth="1"}
+::: 
 Install using Arduino IDE \<arduino-ide\>
 :::

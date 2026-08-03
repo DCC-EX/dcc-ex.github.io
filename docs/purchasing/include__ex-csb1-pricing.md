@@ -21,5 +21,4 @@ and in Australia starting from **\$AU190**.
 
 Prices typically do not include tax and shipping.
 
-`Click here for ordering in quantity of if you wish to become a official reseller </purchasing/become-a-dealer>`{.interpreted-text
-role="doc"}.
+`Click here for ordering in quantity of if you wish to become a official reseller </purchasing/become-a-dealer>`.

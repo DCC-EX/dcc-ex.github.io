@@ -2,7 +2,7 @@
 
 \|tinkerer\|
 
-![Bluetooth Command Station](/_static/images/bluetooth/ex-bluetooth-1.png){.align-center}
+![Bluetooth Command Station](/_static/images/bluetooth/ex-bluetooth-1.png)
 
 UK User Chris (Railsnail) has created a great project you can build that
 will give you a complete \|EX-CS\| that includes:
@@ -15,14 +15,13 @@ will give you a complete \|EX-CS\| that includes:
 
 You may have already seen the instructions for using WiFi for connecting
 a Controller to your Command Station
-(`WiFi Setup </ex-commandstation/diy/wifi-setup>`{.interpreted-text
-role="doc"}), but many people have expressed the desire to use
+(`WiFi Setup </ex-commandstation/diy/wifi-setup>[), but many people have expressed the desire to use
 Bluetooth. For all the power and convenience there is when using your
 local area network, the fact is that it is complex. Debugging network
 issues can be a pain. While there are more WiFi Throttle options to
 connect to \|EX-CS\|, there are still plenty of Bluetooth solutions such
 as DCCpp CAB. See our
-`Throttle Section </throttles/index>`{.interpreted-text role="doc"} for
+`Throttle Section ](/throttles/index.md) for
 more information.
 
 This version is Bluetooth connected meaning that your railway layout may
@@ -38,7 +37,7 @@ The whole CommandStation is powered by one DC power supply (+15v DC)
 fitted with a 5.5mm x 2.1mm DC plug. A buck converter module (LM2596)
 reduces the input voltage to 7.5V DC to power the Arduino Mega2560.
 
-![Bluetooth Command Station Internals](/_static/images/bluetooth/ex-bluetooth-2.png){.align-left}
+![Bluetooth Command Station Internals](/_static/images/bluetooth/ex-bluetooth-2.png)
 
 For complete details and purchasing options, see:
 

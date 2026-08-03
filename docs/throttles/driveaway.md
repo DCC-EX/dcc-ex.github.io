@@ -8,9 +8,9 @@ orphan
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -22,8 +22,7 @@ A new feature enhancement with a Arduino Mega 2560 +WiFi enabled
 Android smartphone.
 
 Place a DCC Engine on a programming track spur or siding, use \|Engine
-Driver\| WiFi throttle `Request Loco ID`{.interpreted-text
-role="guilabel"} to automatically acquire & load the loco# into the
+Driver\| WiFi throttle `Request Loco ID` to automatically acquire & load the loco# into the
 \|Engine Driver\| Throttle, then just throttle-up and \"Drive Away\"
 onto the main line tracks.
 
@@ -33,7 +32,7 @@ Place any DCC Engine onto a insulated Programming track setup as spur or
 siding connected with dual plastic joiners to the Main layout track. On
 \|Engine Driver\| WiFi Throttle, touch \"Select\" loco as normal, choose
 \"Request Loco ID\" radio dial and press
-`Request Loco ID`{.interpreted-text role="guilabel"} button, it
+`Request Loco ID` button, it
 automatically acquires & loads the loco# into the \|Engine Driver\| WiFi
 Throttle, then sets and Joins the Programming track as a Mainline DCC
 signal, then you just throttle-up and \"Drive Away\" onto the main line
@@ -98,13 +97,11 @@ Throttle Apps.
 
 ### Sample WiFi Throttle App \"Discovered Servers\"
 
-> "DCC-EX" {Direct WiFi connected to the Command Station}
+> "DCC-EX" 
 >
-> \"My JMRI Railroad" {JMRI WiFI connected via WiThrottle Server on a PC
-> or Mac}
+> \"My JMRI Railroad" 
 >
-> \"RPi JMRI Railroad" {JMRI WiFI connected via WiThrottle Server on
-> Raspberry Pi}
+> \"RPi JMRI Railroad" 
 
 Our new multicast Dynamic Network Server (mDNS) enhancement allows us to
 display the available WiFi Server connections to a \|EX-CS\|. Choosing
@@ -112,7 +109,7 @@ one allows your WiFi Throttle App to connect to and load Server Rosters
 and function keys to your throttle from Either the \|EX-CS\|, Or from
 \|JMRI\| Engine Roster.
 
-![Engine Driver Discovered Servers](/_static/images/jmri/engine_driver_discovered_servers.png){.align-left}
+![Engine Driver Discovered Servers](/_static/images/jmri/engine_driver_discovered_servers.png)
 
 ## New EX-CommandStation 4.0 EXRAIL \"Roster\" Feature
 
@@ -144,25 +141,25 @@ Sample Roster entry in myAutomation.h file
   ROSTER(667, "NH 667","")// Analog DC Engine with no F-Keys
 ```
 
-![Engine Driver EX-CommandStation Server Roster](/_static/images/jmri/engine_driver_dcc-ex_server_roster.png){.align-left}
+![Engine Driver EX-CommandStation Server Roster](/_static/images/jmri/engine_driver_dcc-ex_server_roster.png)
 
-![ED & EX-CommandStation with DC & DCC Throttles](/_static/images/jmri/ed_and_dcc-ex_with_dc_and_dcc_throttles.png){.align-left}
+![ED & EX-CommandStation with DC & DCC Throttles](/_static/images/jmri/ed_and_dcc-ex_with_dc_and_dcc_throttles.png)
 
 ## Current JMRI Engine Rosters
 
 By choosing "My JMRI Railroad" or "RPi JMRI Railroad" from discovered
 servers an \|Engine Driver\| or \|WiThrottle\| is then connected via a
-{PC, Mac or Pi} \|JMRI\| \|WiThrottle Server\| to the \|EX-CS\| and the
+ \|JMRI\| \|WiThrottle Server\| to the \|EX-CS\| and the
 \|JMRI\| Engine Roster & function keys are loaded to your WiFi Throttle
 App.
 
-Please be sure your \|JMRI\| device {Windows, Mac iOS or Raspberry Pi}
+Please be sure your \|JMRI\| device 
 for \|JMRI\| \|WiThrottle Server\| is signed on and connected to the
 same WiFi SSID Name and Password as your WiFi Throttles and then you can
 choose the JMRI Railroad name or directly enter the \|JMRI\|
 \|WiThrottle Server\| IP address: port# displayed into your \|Engine
 Driver\| & \|WiThrottle\| Apps.
 
-![Engine Driver JMRI Server Roster](/_static/images/jmri/engine_driver_jmri_server_roster.png){.align-left}
+![Engine Driver JMRI Server Roster](/_static/images/jmri/engine_driver_jmri_server_roster.png)
 
-![Engine Driver & EX-CommandStation](/_static/images/jmri/engine_driver_and_dcc-ex.png){.align-left}
+![Engine Driver & EX-CommandStation](/_static/images/jmri/engine_driver_and_dcc-ex.png)

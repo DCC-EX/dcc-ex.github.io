@@ -2,16 +2,16 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
 
-![Android Logo](/_static/images/throttles/icon_android.png){.align-left}
+![Android Logo](/_static/images/throttles/icon_android.png)
 
-![Android Logo](/_static/images/throttles/engine_driver_logo.png){.align-left}
+![Android Logo](/_static/images/throttles/engine_driver_logo.png)
 
 **Engine Driver** (ED) is an Android App that uses the \|WiThrottle
 Protocol\| *or* the \|DCC-EX Native Commands\| to connect directly to
@@ -20,17 +20,16 @@ Server via WiFi using the \|WiThrottle Protocol\|.
 
 If you wish to connect Engine Driver directly to \|EX-CS\|, you need to
 add a WiFi option to your \|EX-CS\| as explained here:
-`WiFi Setup </ex-commandstation/diy/wifi-setup>`{.interpreted-text
-role="doc"}.
+`WiFi Setup </ex-commandstation/diy/wifi-setup>`.
 
 If you wish to connect Engine Driver to \|JMRI\|, you need to start the
 \|WiThrottle Server\| and (optionally[^1]) the Web Server in JMRI on the
 computer running \|JMRI\|. The \|JMRI\| computer must be connected to
 the \|EX-CS\| using a USB cable.
 
-## Platforms {#ed-platforms}
+## Platforms 
 
-![Android Logo](/_static/images/throttles/icon_android.png){.align-left}
+![Android Logo](/_static/images/throttles/icon_android.png)
 
 [Get \'Engine Driver Throttle\' from the Google Play
 Store](https://play.google.com/store/apps/details?id=jmri.enginedriver)
@@ -45,7 +44,7 @@ Home](https://flash62au.github.io/EngineDriver_Home/index.html)
 
 > <iframe width="336" height="189" src="https://www.youtube.com/embed/N6TWR7fIl0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Standard Features (all WiThrottle servers) {#ed-features}
+## Standard Features (all WiThrottle servers) 
 
 - Control one to six locomotives or consists
 - Speed and direction control
@@ -57,20 +56,20 @@ Home](https://flash62au.github.io/EngineDriver_Home/index.html)
   Stations
 - \'Roster Server\' download Engine ID\'s & function keys from the
   Command Station
-- \'Virtual Engine Sounds\' {Bell, Horn, Short Horn, Mute} for motor
+- \'Virtual Engine Sounds\'  for motor
   only decoders, on first two throttles
 - Able to use inexpensive Bluetooth gamepads for tactile control
 - Multiple theme, colours and throttle layout options
 
 ## EX-CommandStation Specific or Advantageous Features
 
-- DCC-EX EXRAIL Automation {Handoff}, Route {Set} and EXRAIL Command
+- DCC-EX EXRAIL Automation , Route  and EXRAIL Command
   function buttons
 - Able to select local images for roster locos
 - New \'Request Loco ID\' & \'Drive Away\' feature from a Program track
   onto Mainline track with \|EX-CS\|
 
-`/throttles/driveaway`{.interpreted-text role="doc"}
+`/throttles/driveaway`
 
 ## EX-CommandStation Specific Features - when using the DCC-EX Native Protocol
 
@@ -81,24 +80,23 @@ Home](https://flash62au.github.io/EngineDriver_Home/index.html)
 - TrackManager control - able to change the type and state of each
   Track/Channel (e.g DCC and DC))
 
-`/throttles/software/engine-driver-native-protocol`{.interpreted-text
-role="doc"}
+`/throttles/software/engine-driver-native-protocol`
 
-## Screenshots {#ed-screenshots}
+## Screenshots 
 
-![Engine Driver Main Screen](/_static/images/throttles/ed1.png){.align-left}
+![Engine Driver Main Screen](/_static/images/throttles/ed1.png)
 
-![Engine Driver 2](/_static/images/throttles/ed2.png){.align-left}
+![Engine Driver 2](/_static/images/throttles/ed2.png)
 
-![Engine Driver 3](/_static/images/throttles/ed3.png){.align-left}
+![Engine Driver 3](/_static/images/throttles/ed3.png)
 
-![Engine Driver 4](/_static/images/throttles/ed4.png){.align-left}
+![Engine Driver 4](/_static/images/throttles/ed4.png)
 
 ::: rst-class
 clearer
 :::
 
-## Operation {#ed-operation}
+## Operation 
 
 See <https://enginedriver.mstevetodd.com/operation/getting_started.html>
 \|EXTERNAL-LINK\|
@@ -121,7 +119,7 @@ Here is one of a number of Bluetooth controllers that provides extra
 function buttons and you can hold by placing your finger in the ring and
 using the buttons and DPAD.
 
-![Ring Shape Hand Controller](/_static/images/throttles/bt_controller2.jpg){.align-center}
+![Ring Shape Hand Controller](/_static/images/throttles/bt_controller2.jpg)
 
 [Walmart](https://www.walmart.com/ip/Gamepad-Ring-Shape-Wireless-VR-Joystick-Rechargeable-Bluetooth-compatible-V4-0-Game-Controller/443871148?wmlspartner=wlpa&selectedSellerId=101036302)
 \|EXTERNAL-LINK\|
@@ -142,7 +140,7 @@ switching/yard speed, 3 is mainline. If I\'m at home, I put the
 Conductor view in the web and I have my work for each location.
 ::::
 
-![Engine Driver Conductor View](/_static/images/throttles/ed_conductor_view1.png){.align-center}
+![Engine Driver Conductor View](/_static/images/throttles/ed_conductor_view1.png)
 
 More information is available on the [Engine
 Driver](https://enginedriver.mstevetodd.com/operation/gamepads.html#example-gamepads&gsc.tab=0l)
@@ -151,8 +149,7 @@ Driver](https://enginedriver.mstevetodd.com/operation/gamepads.html#example-game
 ## Adding a Physical Dial (Knob)
 
 It is possible to easily add a rotary dial (knob) to \|Engine Driver\|.
-see `/throttles/hardware/engine-driver-physical-knobs`{.interpreted-text
-role="doc"} for more information.
+see `/throttles/hardware/engine-driver-physical-knobs` for more information.
 
 ## Recording a log file in EngineDriver
 
@@ -164,8 +161,8 @@ To record a log file in EngineDriver:
 
 1.  Start ED.
 2.  From the menu, select `View Log`
-3.  Click `Start recording to a file`{.interpreted-text role="guilabel"}
-4.  Click `Close`{.interpreted-text role="guilabel"}
+3.  Click `Start recording to a file`
+4.  Click `Close`
 5.  Attempt whatever is causing the problem a few times
 6.  Exit ED
 7.  Connect a USB cable to your phone and PC

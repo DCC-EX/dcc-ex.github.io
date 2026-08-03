@@ -19,7 +19,7 @@ Click \'Next\' to explore the possibilities of \|EX-R\|.
 
 ------------------------------------------------------------------------
 
-::: {.toctree maxdepth="1"}
+::: 
 overview editing creating-elements getting-started examples tips
 cookbooks/index exrail-command-reference about
 :::

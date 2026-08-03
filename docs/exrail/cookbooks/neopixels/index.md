@@ -43,6 +43,6 @@ This is a NeoPixel driver on i2c address 0x61.
 
 See also:
 
-::: {.toctree maxdepth="1"}
+::: 
 neopixels signals
 :::

@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -126,12 +126,10 @@ the \|EX-R\| commands in \"myAutomation.h\". This has the advantage that
 they will automatically be created each time you turn your \|EX-CS\| on.
 
 For information on using the `<T ...>` commands, refer to the
-`/reference/software/command-summary-consolidated`{.interpreted-text
-role="doc"}.
+`/reference/software/command-summary-consolidated`.
 
 For information on using the \|EX-R\| commands in \"myAutomation.h\"
-refer to the `/exrail/exrail-command-reference`{.interpreted-text
-role="doc"}.
+refer to the `/exrail/exrail-command-reference`.
 
 ## Turnout/point control, hardware, and configuration
 

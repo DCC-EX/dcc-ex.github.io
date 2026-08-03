@@ -22,5 +22,4 @@ install below.
 
 ![Flashtree Motor Shield](/_static/images/motorboards/flashtree.png)
 
-`Install the Flashtree (same as Deek-Robot) Motor Shield </ex-commandstation/diy/assembly>`{.interpreted-text
-role="doc"}
+`Install the Flashtree (same as Deek-Robot) Motor Shield </ex-commandstation/diy/assembly>`

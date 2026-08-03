@@ -32,8 +32,7 @@ enhancements.
 ::::
 
 To obtain the development branch code, refer to
-`download/ex-commandstation:latest ex-commandstation unreleased development version`{.interpreted-text
-role="ref"}
+`download/ex-commandstation:latest ex-commandstation unreleased development version`
 
 :!!! note "::: title
 Note"

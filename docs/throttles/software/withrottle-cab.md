@@ -2,9 +2,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-![Android Logo](/_static/images/throttles/icon_android.png){.align-left}
+![Android Logo](/_static/images/throttles/icon_android.png)
 
-![iOS Logo](/_static/images/throttles/icon_ios.png){.align-left}
+![iOS Logo](/_static/images/throttles/icon_ios.png)
 
 This is an Android and iOS App.
 

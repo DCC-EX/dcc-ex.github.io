@@ -5,9 +5,9 @@
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-fastclock-button-small\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -110,7 +110,7 @@ clock is not running may be selected manually from Engine Driver.
 
 NB: See the following page for details on running sound files.
 
-`/reference/developers/hal-config`{.interpreted-text role="doc"}
+`/reference/developers/hal-config`
 
 ## Testing Timed Sequences
 

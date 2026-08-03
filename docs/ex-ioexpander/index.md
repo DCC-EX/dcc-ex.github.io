@@ -22,7 +22,7 @@ without having to run a lot of wires back to the command station. This
 is accomplished by using just two \|I2C\| bus wires to connect to one or
 many micro controllers running the \|EX-IO\| software.
 
-::: {.toctree hidden="" maxdepth="1"}
+::: 
 overview supported-devices testing other-devices
 /support/ex-io-troubleshooting
 :::

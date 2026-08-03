@@ -4,17 +4,16 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
 
 Buttons and switches are connected to an input vpin, usually on an
 expander such as an
-`MCP23017 </reference/hardware/gpio-module>`{.interpreted-text
-role="doc"} which provides a number of input or output pins.
+`MCP23017 </reference/hardware/gpio-module>` which provides a number of input or output pins.
 
 ## Detecting a button press
 

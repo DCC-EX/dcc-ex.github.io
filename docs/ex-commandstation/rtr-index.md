@@ -49,8 +49,7 @@ has the following features:
 
 ## Next Steps - Purchasing
 
-See the `/ex-commandstation/rtr-purchasing`{.interpreted-text
-role="doc"} page or click the \'Next\' button to see how to acquire your
+See the `/ex-commandstation/rtr-purchasing` page or click the \'Next\' button to see how to acquire your
 \|EX-CSB1\|.
 
 \|HR-HEAVY\|
@@ -71,7 +70,7 @@ Tip"
 Keep an eye out for the same button at the top of the other pages.
 ::::
 
-::: {.toctree hidden="" maxdepth="1"}
+::: 
 rtr-purchasing rtr-connecting rtr-wifi-setup
 /ex-commandstation/installer-rtr /ex-commandstation/controllers-rtr
 /ex-commandstation/testing-rtr

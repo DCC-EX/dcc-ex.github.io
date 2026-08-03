@@ -12,16 +12,15 @@
                         does to let things connect directly to it (currently up to four connections). \|BR\| Using the Command Station in AP
                         mode allows you to have a separate network so you can keep your layout network separate from your home network.
                         \|BR\|
-                        `Refer here for more information. </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`{.interpreted-text
-                        role="doc"}
+                        `Refer here for more information. </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
 
   Arduino IDE           A free app running on your PC, specifically designed to install software onto Arduino microprocessors. \|BR\|
                         <https://www.arduino.cc/en/software> \|EXTERNAL-LINK\|
 
   BaseStation-Classic   The original inexpensive Command Station based on the Arduino platform by Gregg Berman.
-  \|BR\| DCC++          `This is no longer maintained or supported by the DCC-EX Team`{.interpreted-text role="dcc-ex-red-bold-italic"}.
+  \|BR\| DCC++          [This is no longer maintained or supported by the DCC-EX Team`.
   (Original)            \|BR\| \|EX-CS\| is a completely new build which maintains backward compatibility with the original DCC++. \|BR\| See
-                        `DCC++ VS DCC-EX? <../../news/posts/20201001>`{.interpreted-text role="doc"} for more information
+                        `DCC++ VS DCC-EX? ](../../news/posts/20201001.md) for more information
 
   Base Station \|BR\|   See <https://dccwiki.com/Command_Station> \|EXTERNAL-LINK\|
   Command Station       
@@ -33,7 +32,7 @@
   Multiple Unit         
 
   Cab                   A Cab can refer to a throttle (or controller) as well as a loco or locomotive \|BR\| In the context of DCC-EX
-                        commands, [cab]{.title-ref} refers to a loco\'s/Decoder\'s DCC Address
+                        commands, [cab] refers to a loco\'s/Decoder\'s DCC Address
 
   DC                    Direct Current
 
@@ -41,7 +40,7 @@
                         <https://dccwiki.com/NMRA/NMRA_Standards> \|EXTERNAL-LINK\|
 
   Engine Driver \|BR\|  Android app for controlling DCC locos using the WiThrottle Protocol \|BR\| See
-  Engine Driver         `/throttles/software/engine-driver`{.interpreted-text role="doc"}
+  Engine Driver         `/throttles/software/engine-driver`
   Throttle              
 
   DCC++ Commands \|BR\| Old name for the DCC-EX Native Commands / DCC-EX Native Protocol. \|BR\| Some references to this still remain for
@@ -50,7 +49,7 @@
   DCC++ API             
 
   DCC-EX Native         New name for the DCC++ Commands/Protocol/API. \|BR\| Refer to
-  Commands \|BR\|       `/reference/software/command-summary-consolidated`{.interpreted-text role="doc"} for details.
+  Commands \|BR\|       `/reference/software/command-summary-consolidated` for details.
   DCC-EX Native         
   Protocol \|BR\|       
   DCC-EX Native API     
@@ -58,7 +57,7 @@
   JMRI                  [Java Model Railroad Interface](https://www.jmri.org/)
 
   Motor Driver          Same as \"Motor Shield\" \"Motor Board\" \"Motorboard\" \|BR\| See
-                        `/reference/hardware/motor-boards`{.interpreted-text role="doc"}
+                        `/reference/hardware/motor-boards`
 
   Native Protocol /     Native protocol used by the \|EX-CS\| in preference to the WitThrottle protocol. This is the preferred protocol for
   Native DCC-EX         communication with the Command Station as it is considerably more powerful and comprehensive. This was originally
@@ -70,8 +69,7 @@
                         IP of the smartphone that runs your Throttle, it becomes a station that connects to your existing network just like
                         any of the other computers or devices connected to your network. The Throttle then connects to the Command Station by
                         finding its IP address on the network. \|BR\|
-                        `Refer here for more information. </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`{.interpreted-text
-                        role="doc"}
+                        `Refer here for more information. </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
 
   Switching[^1] \|BR\|  The process of moving individual carriages to/from specific locations on yards or sidings.
   Shunting[^2]          
@@ -87,7 +85,7 @@
   (VSC)                 \|BR\| <https://code.visualstudio.com/> \|EXTERNAL-LINK\|
 
   WiThrottle            1\. Trademark owned by Brett Hoffman \|BR\|2. proprietary iOS app developed by Brett Hoffman. See
-                        `/throttles/software/withrottle`{.interpreted-text role="doc"}
+                        `/throttles/software/withrottle`
 
   WiThrottle Protocol   A proprietary protocol developed by Brett Hoffman
 

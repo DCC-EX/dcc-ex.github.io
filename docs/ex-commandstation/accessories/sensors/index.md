@@ -11,9 +11,5 @@ on your layout, or to trigger simple things such as road crossings.
 There is quite a variety of sensors available, and we aim to outline
 options here that we know work with \|EX-CS\|.
 
-::: {.toctree maxdepth="1
-
-which-sensor-type
-ir-sensor
-vl53l0x-tof-sensor"}
+::: 
 :::

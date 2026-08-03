@@ -5,9 +5,9 @@
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-turntable-button-small\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -29,7 +29,7 @@ To make things easier, a turntable object is now available to define and
 control both \|EX-TT\| and DCC controlled turntables, which also allows
 throttle developers to implement direct control of turntables if they so
 wish. More information on how to use this with \|EX-TT\| is on the
-`/ex-turntable/test-and-tune`{.interpreted-text role="doc"} page.
+`/ex-turntable/test-and-tune` page.
 
 It\'s highly recommended running the latest of both \|EX-CS\| and
 \|EX-TT\| to ensure feature parity with the two, and ensure you have the
@@ -42,7 +42,7 @@ Note"
 \|EX-TT\| is in public Beta testing, and as such, we encourage regular
 feedback on the success or otherwise of both the software and
 documentation. Please reach out via any of our
-`/support/contact-us`{.interpreted-text role="doc"} methods and help us
+`/support/contact-us` methods and help us
 get \|EX-TT\| as easy to use and reliable as possible.
 
 For a current overview of all outstanding feature requests or
@@ -55,9 +55,9 @@ project](https://github.com/orgs/DCC-EX/projects/7/views/1)
 ::: sidebar
 **Supported stepper drivers and motors**
 
-![Tinkerer Level](/_static/images/level_icons/tinkerer.png){.align-left}
+![Tinkerer Level](/_static/images/level_icons/tinkerer.png)
 
-![Engineer Level](/_static/images/level_icons/engineer.png){.align-right}
+![Engineer Level](/_static/images/level_icons/engineer.png)
 
 Using other pre-defined, supported stepper drivers and motors are
 achievable at the \|tinkerer-text\| level, but may enter into
@@ -133,8 +133,7 @@ You don\'t actually need to know the number of steps required to make a
 full rotation as this is calculated by \|EX-TT\| the first time it
 starts up and performs the calibration sequence. You will see the number
 displayed in the serial console as outlined in
-`ex-turntable/assembly:first start and automatic calibration`{.interpreted-text
-role="ref"}.
+`ex-turntable/assembly:first start and automatic calibration`.
 ::::
 
 In \|EX-TT\|, at startup, the turntable will rotate until such time as
@@ -162,7 +161,7 @@ automatically triggers the homing activity to occur, ensuring it starts
 in a consistent location each time for the highest accuracy.
 ::::
 
-Refer to the `/ex-turntable/test-and-tune`{.interpreted-text role="doc"}
+Refer to the `/ex-turntable/test-and-tune`
 page for details on how to configure and control \|EX-TT\|.
 
 ### Considerations when using geared steppers, turntables, and/or microsteps
@@ -226,12 +225,11 @@ For example, if you had a step per revolution count of 60000 after
 calculating your gear ratio, you would set a gearing factor of 2,
 meaning all step counts configured in \|EX-CS\| are 30000 or less (60000
 / 2), allowing for control of this configuration. Refer to
-`ex-turntable/configure:stepper_gearing_factor`{.interpreted-text
-role="ref"} for how to configure this option.
+`ex-turntable/configure:stepper_gearing_factor` for how to configure this option.
 
 If you have a need to set a gearing factor higher than 1, you will
 likely also need to adjust the
-`ex-turntable/configure:sanity_steps`{.interpreted-text role="ref"}
+`ex-turntable/configure:sanity_steps`
 option to allow the calibration process to still function, as by default
 it will stop at 10000 steps.
 
@@ -348,16 +346,14 @@ The above outlines how the default automatic phase switching works with
 
 If you find that the default 45/225 degree angles aren\'t right for your
 layout, then this can be modified in \"config.h\" which is created in
-`/ex-commandstation/installer-diy`{.interpreted-text role="doc"}, and
+`/ex-commandstation/installer-diy`, and
 the configuration parameter is outlined here:
-`ex-turntable/configure:phase_switch_angle`{.interpreted-text
-role="ref"}.
+`ex-turntable/configure:phase_switch_angle`.
 
 If you have a layout that requires more control over when phase
 switching does and doesn\'t happen, you can configure manual phase
 switching, as outlined in
-`ex-turntable/test-and-tune:manual phase switching`{.interpreted-text
-role="ref"}.
+`ex-turntable/test-and-tune:manual phase switching`.
 
 \|HR-HEAVY\|
 

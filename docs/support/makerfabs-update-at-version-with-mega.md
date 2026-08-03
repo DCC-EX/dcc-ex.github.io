@@ -2,7 +2,7 @@ orphan
 
 : 
 
-::: {.meta keywords="WiFi setup Espressif AT version"}
+::: 
 :::
 
 \|EX-CS-LOGO\|
@@ -11,9 +11,9 @@ orphan
 
 \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="3" local=""}
+::: 
 On this page
 :::
 ::::
@@ -37,8 +37,7 @@ Warning"
 The instructions on this page have been proven to work on Linux PCs, so
 will probably work on macOS PCs (Apple), however attempts to get them to
 work on **Microsoft Windows PCs**
-`have so far been unsuccessful`{.interpreted-text
-role="dcc-ex-red-bold"}.
+`have so far been unsuccessful`.
 ::::
 
 ## Introduction
@@ -77,8 +76,7 @@ is to use our \|EX-I\| which will automatically download it if you
 select the appropriate options.
 
 1.1. If you have not already installed the \|EX-I\|, download the
-`EX-Installer <download/ex-commandstation:ex-Installer>`{.interpreted-text
-role="ref"} app.
+`EX-Installer <download/ex-commandstation:ex-Installer>` app.
 
 1.2. Use the EX-Installer and run it
 
@@ -111,10 +109,10 @@ fails (if you do not have an ESP32).
 
 > - Connect your Arduino Mega to the PC with a USB cable
 > - On the \"Manage the Arduino CLI\" page make sure the [Expressif
->   ESP32]{.title-ref} option is enabled
-> - Click `Select your device`{.interpreted-text role="guilabel"}
+>   ESP32] option is enabled
+> - Click `Select your device`
 > - Select `ESP32 Dev Kit`
-> - Click `Select product to install`{.interpreted-text role="guilabel"}
+> - Click `Select product to install`
 
 1.4. Now the `esptool` will be installed on your computer \|br\| It is
 important to be aware of where will be, as this is needed in later
@@ -157,14 +155,14 @@ not already)
 
 > ![Stacked Mega and Wifi Shield - Jumpers. \|BR\| Note: White and Black
 > wires will be loose are this
-> point](/_static/images/wifi/mega-for-flashing-makerfabs-wifi-3.png){alt="Stacked Mega and WiFi Shield - Jumpers"}
+> point](/_static/images/wifi/mega-for-flashing-makerfabs-wifi-3.png)
 >
 > *Alternate*
 >
 > ![Stacked Mega and Wifi Shield - Using the small, simple jumpers/plugs
 > that came with the shield. \|BR\| Note: the White and Black wires will
 > be loose are this
-> point](/_static/images/wifi/mega-for-flashing-makerfabs-wifi-3-simple-jumpers.png){alt="Stacked Mega and WiFi Shield - Simple Jumpers"}
+> point](/_static/images/wifi/mega-for-flashing-makerfabs-wifi-3-simple-jumpers.png)
 
 \|hr-dashed\|
 
@@ -179,7 +177,7 @@ to the Arduino
 selection
 
 4.4 Open the Device Monitor by clicking on
-`View Device Monitor`{.interpreted-text role="guilabel"}
+`View Device Monitor`
 
 4.5 Reset the ESP8266 by \"touching\" one of the jumper wires to `Reset`
 pad on the ESP8266
@@ -193,7 +191,7 @@ pad on the ESP8266
 > `Reset` is only \"touch\".
 
 4.6 Close the device monitor and installer
-`(Important)`{.interpreted-text role="dcc-ex-red-bold"}.
+`(Important)`.
 
 \|hr-dashed\|
 
@@ -205,17 +203,15 @@ Make sure the Installer has been closed before continuing.
 
 > For Windows
 >
-> > - click `Start Menu`{.interpreted-text role="guilabel"}
+> > - click `Start Menu`
 > >
-> > - Type `cmd` and press the `Enter`{.interpreted-text
-> >   role="guilabel"} key
+> > - Type `cmd` and press the `Enter` key
 > >
 > > - Go to the folder you downloaded the `ESP8266_1MB_AT1_7.bin` file
 > >   to (normally \'Downloads\') by entering:
 > >
-> >   > `c:` `Enter`{.interpreted-text role="guilabel"} \|BR\|
-> >   > `cd \user\<username>\downloads` `Enter`{.interpreted-text
-> >   > role="guilabel"} \|br\| (Replace `<username>` with your username
+> >   > `c:` `Enter` \|BR\|
+> >   > `cd \user\<username>\downloads` `Enter` \|br\| (Replace `<username>` with your username
 > >   > on the PC)
 >
 > For Apple macOS
@@ -227,23 +223,22 @@ Make sure the Installer has been closed before continuing.
 > > - Go to the folder you downloaded the `ESP8266_1MB_AT1_7.bin` file
 > >   to by entering:
 > >
-> >   > `cd ~\Downloads` `Enter`{.interpreted-text role="guilabel"}
+> >   > `cd ~\Downloads` `Enter`
 >
 > For Linux
 >
 > > - On Ubuntu, you can hit `ctrl+alt+T` together to open a terminal.
 > >   \|br\| Or right-click anywhere on the desktop and select
 > >   `Open in Terminal` which will open the terminal with the desktop
-> >   folder selected. \|br\| Or press the `Windows`{.interpreted-text
-> >   role="guilabel"} key and type `terminal`
+> >   folder selected. \|br\| Or press the `Windows` key and type `terminal`
 > >
 > > - Go to the folder you downloaded the `ESP8266_1MB_AT1_7.bin` file
 > >   to by entering:
 > >
-> >   > `cd ~\Downloads` `Enter`{.interpreted-text role="guilabel"}
+> >   > `cd ~\Downloads` `Enter`
 
 5.2 Prepare the long command line. (but **don\'t** press
-`Enter`{.interpreted-text role="guilabel"} yet)
+`Enter` yet)
 
 > For `ESPTOOL` and `PORTNAME` insert values from the steps above
 >
@@ -265,7 +260,7 @@ Make sure the Installer has been closed before continuing.
 > to the \"P\" in \"ESP-12F\". \|BR\| The `Reset` pad is the top pad on
 > the left, closest to the resister labelled \"R6\".
 
-5.4 Press `enter`{.interpreted-text role="guilabel"} on the above
+5.4 Press `enter` on the above
 command line.
 
 > You should see `connecting` and dots and dashes.
@@ -301,7 +296,7 @@ other jumper to `GPIO0` pad)
 
 6.1 Connect according to 4.x above
 
-6.2 Type AT+GMR and `Send`{.interpreted-text role="guilabel"}\`
+6.2 Type AT+GMR and `Send`\`
 
 6.2 Your shield should answer with the new 1.7.4 version number.
 
@@ -325,7 +320,7 @@ instructions for the \|EX-CS\|
 > Remember: The wires are crossed.
 >
 > ![Install the jumper
-> wires](/_static/images/assembly/wifi_jumpers2.png){alt="Install the Jumper wires"}
+> wires](/_static/images/assembly/wifi_jumpers2.png)
 
 7.6 If you have not already done so, run the \|EX-I\| and configure your
 \|EX-CS\| to use the WiFi shield. \|BR\| Note: this is not necessary if

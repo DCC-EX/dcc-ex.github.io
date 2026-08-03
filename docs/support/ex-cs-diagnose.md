@@ -1,4 +1,4 @@
-::: {.meta keywords="EX-CommandStation Command Station diagnosing Issues Troubleshooting"}
+::: 
 :::
 
 \|EX-CS-LOGO\|
@@ -7,16 +7,16 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
 
 This page is intended to help you diagnose and fix some of the most
 common problems with the \|EX-CS\|. If you have a more specific issue
-see the `ex-cs-troubleshooting`{.interpreted-text role="doc"} page.
+see the `ex-cs-troubleshooting` page.
 
 Depending on how you have your EX-CommandStation configured, the steps
 to diagnose problems are different:
@@ -42,8 +42,7 @@ Either using the \|EX-I\| or the \|Arduino IDE\|.
 | Question                  | If Yes      | If No - Possible reasons                                      |
 +===========================+=============+===============================================================+
 | \"Failed to upload        | Go to       | (a) Have you selected the correct COM port? \|BR\| See        |
-| because uploading         | Question 2. |     `ex-installer/installing:getting ready`{.interpreted-text |
-| error:\"                  |             |     role="ref"} for information on finding the correct COM    |
+| because uploading         | Question 2. |     `ex-installer/installing:getting ready` for information on finding the correct COM    |
 |                           |             |     port.                                                     |
 |                           |             | (b) Have you selected the correct Arduino board type?         |
 +---------------------------+-------------+---------------------------------------------------------------+
@@ -162,8 +161,7 @@ Using JMRI
 |     preferences?          |                  |                                                                                 |
 +---------------------------+------------------+---------------------------------------------------------------------------------+
 | 2.  Have you selected the | Go to Question   | (a) Check which com port the EX-CommandStation is connected to. \|BR\| See      |
-|     correct COM port?     | 3.               |     `ex-commandstation/installer-diy:1. getting ready`{.interpreted-text        |
-|                           |                  |     role="ref"} for details on how to determine the correct com port.           |
+|     correct COM port?     | 3.               |     `ex-commandstation/installer-diy:1. getting ready` for details on how to determine the correct com port.           |
 +---------------------------+------------------+---------------------------------------------------------------------------------+
 | 3.  Can you turn the      | Go to Question   | (a) Have you plugged in and turned on a 12-16v DC power supply[^2] into the     |
 |     track power on?       | 4.               |     motor board                                                                 |
@@ -174,8 +172,7 @@ Using JMRI
 | 4.  When you open a       | Congratulations, | (a) Have you connected the track to the \'MAIN\' outputs of the Motor Board.    |
 |     throttle window in    | your \|EX-CS\|   |     \|BR\| \|JMRI\| cannot directly control trains on the \'PROGRAMMING\'       |
 |     \|JMRI\|, select a    | is essentially   |     outputs without using additional commands. See                              |
-|     loco and move the     | working.         |     `support/ex-cs-troubleshooting:cannot drive a locomotive`{.interpreted-text |
-|     throttle, does the    |                  |     role="ref"} for more information.                                           |
+|     loco and move the     | working.         |     `support/ex-cs-troubleshooting:cannot drive a locomotive` for more information.                                           |
 |     loco move?            |                  | (b) Wrong loco DCC Address selected.                                            |
 |                           |                  | (c) loco is not DCC decoder equipped. (You will likely hear a humming coming    |
 |                           |                  |     from the loco. If you do remove it from the track urgently, the loco is     |
@@ -216,8 +213,7 @@ Using JMRI
 |                                    |                                              | (b) ToDo                                |
 +------------------------------------+----------------------------------------------+-----------------------------------------+
 | 3.  The WiFi network name appears  | See                                          | Go to Question 4                        |
-|     as                             | `/support/wifi-at-version`{.interpreted-text |                                         |
-|     \"DCCEX-SAYS-BROKEN-FIRMWARE\" | role="doc"} for details.                     |                                         |
+|     as                             | `/support/wifi-at-version` for details.                     |                                         |
 |     or \"UPDATE_ESP_FIRMWARE\"     |                                              |                                         |
 +------------------------------------+----------------------------------------------+-----------------------------------------+
 | 4.  Can your phone connect the     | Go to Question 5                             | (a) ToDo                                |
@@ -250,8 +246,7 @@ Using JMRI
 |                                    |                                              |     be done in \|Engine Driver\| but    |
 |                                    |                                              |     not other WiFi throttle apps (Use   |
 |                                    |                                              |     the                                 |
-|                                    |                                              |     `Request Loco ID`{.interpreted-text |
-|                                    |                                              |     role="guilabel"} button in \|Engine |
+|                                    |                                              |     `Request Loco ID` button in \|Engine |
 |                                    |                                              |     Driver\|.) \|BR\| recommend that    |
 |                                    |                                              |     the MAIN outputs be used to run a   |
 |                                    |                                              |     layout.                             |
@@ -310,8 +305,7 @@ Using JMRI
 |                           |                  |     be done in \|Engine Driver\| but    |
 |                           |                  |     not other WiFi throttle apps (Use   |
 |                           |                  |     the                                 |
-|                           |                  |     `Request Loco ID`{.interpreted-text |
-|                           |                  |     role="guilabel"} button in \|Engine |
+|                           |                  |     `Request Loco ID` button in \|Engine |
 |                           |                  |     Driver\|.) \|BR\| recommend that    |
 |                           |                  |     the MAIN outputs be used to run a   |
 |                           |                  |     layout.                             |
@@ -327,19 +321,16 @@ Using JMRI
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.
 
 [^2]: The voltage you need for the [\|Motor
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.
 
 [^3]: The voltage you need for the [\|Motor
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.

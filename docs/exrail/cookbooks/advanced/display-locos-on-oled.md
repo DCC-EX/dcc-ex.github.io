@@ -29,16 +29,7 @@ other more important functions.
 
 ``` cpp
 STEALTH_GLOBAL(
-  void updateLocoScreen() {
-    const byte loco_slots=8;
-    static byte current_slot=loco_slots-1;
-    static byte shown_speed[loco_slots]; // remember whats already shown
-    static bool first_call=true;
-
-    if (first_call) {
-      first_call=false;
-      for (int i=0; i<loco_slots; i++) shown_speed[i]=127;
-    }
+  void updateLocoScreen() 
 
     // switch to next row
     current_slot= (current_slot + 1) % loco_slots;

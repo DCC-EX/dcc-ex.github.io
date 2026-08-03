@@ -2,9 +2,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -47,8 +47,7 @@ console, use the appropriate one of these commands:
   accessory decoders to control the servos
 
 Refer to
-`reference/software/command-summary-consolidated:turnouts/points (configuring the ex-commandstation)`{.interpreted-text
-role="ref"} for details on these commands.
+`reference/software/command-summary-consolidated:turnouts/points (configuring the ex-commandstation)` for details on these commands.
 
 To define servo based turnouts using \|EX-R\| (whether or not they are
 to be automated) via the \"myAutomation.h\" file, use the appropriate
@@ -64,12 +63,10 @@ command that the profile names are case sensitive, and must be written
 exactly as they appear in the reference (e.g. Slow, not slow or SLOW).
 
 Refer to
-`exrail/exrail-command-reference:turnout/point objects - definition and control`{.interpreted-text
-role="ref"} for details on these commands, along with
-`exrail/examples:defining servo turnouts`{.interpreted-text role="ref"},
-`/big-picture/stage3`{.interpreted-text role="doc"}, and
-`exrail/creating-elements:adding turnouts/points`{.interpreted-text
-role="ref"} for some further information and examples.
+`exrail/exrail-command-reference:turnout/point objects - definition and control` for details on these commands, along with
+`exrail/examples:defining servo turnouts`,
+`/big-picture/stage3`, and
+`exrail/creating-elements:adding turnouts/points` for some further information and examples.
 
 ## Connecting the hardware
 
@@ -79,4 +76,4 @@ your layout.
 
 For servos controlled by a servo module connected to your \|EX-CS\|,
 sufficient information should be available on the
-`/reference/hardware/servo-module`{.interpreted-text role="doc"} page.
+`/reference/hardware/servo-module` page.

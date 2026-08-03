@@ -1,4 +1,4 @@
-::: {.meta keywords="EX-CommandStation Command Station diagnosing Issues Troubleshooting"}
+::: 
 :::
 
 \|EX-CS-LOGO\|
@@ -7,9 +7,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -19,7 +19,7 @@ issues encountered with \|EX-CS\|.
 
 If you have just purchased your \|EX-CSB1\| or assembled your \|EX-CS\|
 and it is not working as expected, we recommend you start with the
-`/support/ex-cs-diagnose`{.interpreted-text role="doc"} page.
+`/support/ex-cs-diagnose` page.
 
 ------------------------------------------------------------------------
 
@@ -27,18 +27,17 @@ and it is not working as expected, we recommend you start with the
 
 ### Cannot drive a locomotive
 
-::: {.flat-table .command-table widths="30 70" header-rows="1"}
+::: 
 - - Symptoms
   - Common Causes and solutions
-- - `3`{.interpreted-text role="rspan"} Locomotive doesn\'t respond to
+- - `3` Locomotive doesn\'t respond to
     throttle settings
   - (a) Track power has not been turned on \|BR\| - Issue `<1>` in the
-        serial console, or use the `Power`{.interpreted-text
-        role="guilabel"} button in \|Engine Driver\| or \|JMRI\| or the
+        serial console, or use the `Power` button in \|Engine Driver\| or \|JMRI\| or the
         power slider in \|EX-WT\|.
 - - (b) Locomotive is on the PROGRAMMING track \|BR\| - Issue `<1 JOIN>`
         in the serial console, or use the
-        `Request Loco ID`{.interpreted-text role="guilabel"} button in
+        `Request Loco ID` button in
         \|Engine Driver\|.
 - - (c) Power has not been supplied to the motor board \|BR\| - Check to
         ensure power supply is connected securely with the correct
@@ -49,10 +48,10 @@ and it is not working as expected, we recommend you start with the
 
 ### Cannot connect to the EX-CommandStation over WiFi
 
-::: {.flat-table .command-table widths="30 70" header-rows="1"}
+::: 
 - - Symptoms
   - Common Causes
-- - `4`{.interpreted-text role="rspan"} CommandStation does not appear
+- - `4` CommandStation does not appear
     in the available WiThrottle server list in \|Engine Driver\| or
     \|WiThrottle\| apps. \|BR\| \|BR\| Manually entering the expected IP
     address and port does not successfully connect
@@ -68,11 +67,11 @@ and it is not working as expected, we recommend you start with the
         \|BR\| - The Rx pin of the WiFi shield must connect to the Tx
         pin on the CommandStation, and Tx to the Rx pin
 - - (d) ESP8266 has the wrong AT version. \|BR\| - See the
-        `/support/wifi-at-version`{.interpreted-text role="doc"} page
+        `/support/wifi-at-version` page
         for details on how to check and correct if needed.
 - - (e) The WiFi network name appears as \"DCCEX-SAYS-BROKEN-FIRMWARE\"
         or \"UPDATE_ESP_FIRMWARE\". \|BR\| - See the
-        `/support/wifi-at-version`{.interpreted-text role="doc"} page
+        `/support/wifi-at-version` page
         for details on how to check and correct if needed.
 :::
 
@@ -128,16 +127,14 @@ We are going to use the \|Arduino IDE\| for this section. If you are
 unfamiliar with the \|Arduino IDE\| or do not yet have it installed, see
 the section about how to use the \|Arduino IDE\| to install the
 \|EX-CS\| software here:
-`Using the |Arduino IDE| </ex-commandstation/advanced-setup/installation-options/arduino-ide>`{.interpreted-text
-role="doc"}, or just download the Legacy IDE 1.8.19 version here:
+`Using the |Arduino IDE| </ex-commandstation/advanced-setup/installation-options/arduino-ide>`, or just download the Legacy IDE 1.8.19 version here:
 [Arduino IDE](https://www.arduino.cc/en/software) \|EXTERNAL-LINK\|.
 Scroll down to find the 1.8.19 version.
 
 1.  Remove the \|motor shield\| \-\--we are going to test just the
     Arduino first.
 2.  Download and install the most current version of
-    `EX-CommandStation <download/ex-commandstation:Latest EX-CommandStation Official Release>`{.interpreted-text
-    role="ref"}
+    `EX-CommandStation <download/ex-commandstation:Latest EX-CommandStation Official Release>`
 3.  Open the \|Serial Monitor\| Window in the \|Arduino IDE\| and
     establish communication with the Arduino. You will need to set the
     serial data rate to `115200 baud` and make sure you have set
@@ -221,8 +218,7 @@ If you are using a 3.3V board for your CS, like a Nucleo or ESPDuino32,
 then these voltages will be 3.3V and 1.65V DC.
 
 There is more information about the pins and how they are used on the
-`Motor Driver Configuration </reference/hardware/motorboards/motor-board-config>`{.interpreted-text
-role="doc"} page.
+`Motor Driver Configuration </reference/hardware/motorboards/motor-board-config>` page.
 
 If you still need help, please find us on [The DCC-EX
 Discord](https://discord.gg/y2sB4Fp) \|EXTERNAL-LINK\| or send an email
@@ -267,13 +263,11 @@ following:
     matches that pin.
 3.  **Out of spec. decoder (most likely)** - You will need to run a test
     and then modify a setting or two. Please go to the
-    `Diagnostic \<D ACK\> </reference/tools/diagnostic-d-ack-command>`{.interpreted-text
-    role="doc"}. Send us your log.
+    `Diagnostic \<D ACK\> </reference/tools/diagnostic-d-ack-command>`. Send us your log.
 
 If you continue to have issues reading decoders on the programming track
 with multiple different decoders, it\'s worthwhile reviewing the
-`/reference/hardware/motorboards/motor-board-config`{.interpreted-text
-role="doc"} page, especially all information relating to current
+`/reference/hardware/motorboards/motor-board-config` page, especially all information relating to current
 sensing. If current sensing is not configured and functioning correctly,
 you will not be able to read any decoders via the programming track.
 
@@ -281,12 +275,10 @@ you will not be able to read any decoders via the programming track.
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.
 
 [^2]: The voltage you need for the [\|Motor
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.

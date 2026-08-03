@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -67,13 +67,11 @@ Important
 :::
 
 \|EX-TB\| can only connect *directly* to an \|EX-CS\| or JMRI\'s
-`'DCC++ over TCP Server'<ex-toolbox/using:connecting via jmri>`{.interpreted-text
-role="ref"}, however \|JMRI\|, the \|EX-CS\| and other devices and apps
+`'DCC++ over TCP Server'<ex-toolbox/using:connecting via jmri>`, however \|JMRI\|, the \|EX-CS\| and other devices and apps
 can, or do, advertise as \"WiThrottle\" mDNS services. EX-Toolbox cannot
 determine which are actually direct connections to an \|EX-CS\| or
 JMRI\'s
-`'DCC++ over TCP Server'<ex-toolbox/using:connecting via jmri>`{.interpreted-text
-role="ref"}.
+`'DCC++ over TCP Server'<ex-toolbox/using:connecting via jmri>`.
 
 So\.
 \|EX-TB\| will be able to connect to it.
@@ -133,7 +131,7 @@ connected to it in the past.
 ### IP Address and Port
 
 Type in the **IP address** and **Port** of the \|EX-CS\| and press
-`Connect`{.interpreted-text role="guilabel"}.
+`Connect`.
 
 To find your EX-CommandStation\'s IP address and Port refer you original
 setup or, if you have a OLED screen on your command station the details
@@ -191,17 +189,17 @@ On this screen you can:
 - issue \<\> commands to the \|EX-CS\|
 
 To read the DCC Address of the decoder click the
-`Read`{.interpreted-text role="guilabel"} button on the DCC Address row.
+`Read` button on the DCC Address row.
 
 To write a DCC Address to the decoder, enter the address and click the
-`Write`{.interpreted-text role="guilabel"} button on the DCC Address
+`Write` button on the DCC Address
 row.
 
 To read a CV of the decoder, enter the CV number and click the
-`Read`{.interpreted-text role="guilabel"} button on the CV row.
+`Read` button on the CV row.
 
 To write a CV value to the decoder, enter the CV number, enter the value
-and click the `Write`{.interpreted-text role="guilabel"} button on the
+and click the `Write` button on the
 CV row.
 
 If you select a \'common CV value\' it will enter the CV number into the
@@ -244,7 +242,7 @@ On this screen you can:
 
 To write a CV value to the decoder, enter the DCC Address of the
 decoder, enter the CV number, enter the value and click the
-`Write`{.interpreted-text role="guilabel"} button on the CV row.
+`Write` button on the CV row.
 
 If you select a \'common CV value\' it will enter the CV number into the
 field. From there follow the instructions above for writing the CV.
@@ -265,8 +263,7 @@ See below for issuing DCC-EX commands.
 On several of the screens in \|EX-TB\| you can issue native DCC-EX `<>`
 commands to your \|EX-CS\|.
 
-Enter the command you want to send, and click `Send`{.interpreted-text
-role="guilabel"}.
+Enter the command you want to send, and click `Send`.
 
 The command you send, and any responses from the command station will be
 shown below.
@@ -274,8 +271,8 @@ shown below.
 If you select a \'common command value\' it will enter the command the
 field. From there follow the instructions above for issuing the command.
 
-You can use the `Next`{.interpreted-text role="guilabel"} and
-`Prior`{.interpreted-text role="guilabel"} buttons to retrieve
+You can use the `Next` and
+`Prior` buttons to retrieve
 previously issues commands.
 
 \|force-break\|
@@ -324,7 +321,7 @@ To access the Speed Matching either:
 > necessarily the one that will be run in the lead position. \|BR\| i.e.
 > Test your locos on their default settings first, and find the slowest.
 >
-> The low speed test uses a speed setting of [5]{.title-ref} (0-126). If
+> The low speed test uses a speed setting of [5] (0-126). If
 > your locos don\'t start moving at that setting it would be advisable
 > to adjust Low speed setting and/or the Kick Start of the \'Master\'
 > first.
@@ -358,7 +355,7 @@ To access the Speed Matching either:
 
 1.  Open \|EX-TB\| and go to the Speed Matching screen.
 2.  Put the/a second (non-master) loco on the `PROG` track. (see Notes)
-3.  Click `Read -PROG trk`{.interpreted-text role="guilabel"}.
+3.  Click `Read -PROG trk`.
 
 > This reads 8 CV values, including the loco address and CV29, and loads
 > them in to the fields, with a 3 second delay between each read. \|BR\|
@@ -367,34 +364,34 @@ To access the Speed Matching either:
 
 4.  Put the \'Master\' on the `MAIN` track (the loop of track), along
     with the \'Second\' loco.
-5.  Enter the [DCC address]{.title-ref} of the Master.
-6.  Click the Low `Set Speed`{.interpreted-text role="guilabel"} button.
+5.  Enter the [DCC address] of the Master.
+6.  Click the Low `Set Speed` button.
 7.  Watch and adjust the speeds of the Second loco in relation the
     Master, util they run at the same speed:
 
 > If the \'Second\' is too slow, either:
 >
-> > a)  Edit and increase the [Low]{.title-ref} value and click
-> >     `Write`{.interpreted-text role="guilabel"}.
-> > b)  Click the `+`{.interpreted-text role="guilabel"} button.
+> > a)  Edit and increase the [Low] value and click
+> >     `Write`.
+> > b)  Click the `+` button.
 >
 > If the \'Second\' is too fast, either:
 >
-> > a)  Edit and decrease the [Low]{.title-ref} value and click
-> >     `Write`{.interpreted-text role="guilabel"}.
-> > b)  Click the `-`{.interpreted-text role="guilabel"} button.
+> > a)  Edit and decrease the [Low] value and click
+> >     `Write`.
+> > b)  Click the `-` button.
 
 8.  Repeat for the \'Mid\' Speed.
 9.  Repeat for the \'High\' Speed.
 10. Adjust the decoder momentum (Acceleration/Deceleration) and [Kick
-    Start]{.title-ref} as needed. Test by starting and stopping the
+    Start] as needed. Test by starting and stopping the
     locos from the three different speeds.
 11. If you have more locos to match, repeat from step 2.
 
 ### Notes:
 
-> 1.  By default, the `+`{.interpreted-text role="guilabel"} and
->     `-`{.interpreted-text role="guilabel"} buttons change the CV
+> 1.  By default, the `+` and
+>     `-` buttons change the CV
 >     values by 1. You can change this step amount by editing the
 >     \'Step\' field. \|BR\| e.g. When I start on a loco, I normally
 >     have the Step at 10. When it gets closer to a match I change the
@@ -440,11 +437,10 @@ The Speedometer will display the speed as the loco after it passes the
 second sensor.
 
 The speed and times will automatically reset after 10 seconds, but you
-can overide this by clicking the `Start`{.interpreted-text
-role="guilabel"} button. Or you can change the delay period.
+can overide this by clicking the `Start` button. Or you can change the delay period.
 
 To check the speed in the opposite direction, simply reverse the sensor
-numbers, using the `Swap`{.interpreted-text role="guilabel"} button.
+numbers, using the `Swap` button.
 
 The Speedometer will remember the last used sensors and distance between
 sessions.
@@ -452,8 +448,8 @@ sessions.
 Example configuration of two IR sensors in `mySetup.h`
 
 ``` cpp
-SETUP("<S 22 22 1>");  // Infrared Or Optical Sensor {S22} on pin 22
-SETUP("<S 23 23 1>");  // Infrared Or Optical Sensor {S23} on pin 23
+SETUP("<S 22 22 1>");  // Infrared Or Optical Sensor  on pin 22
+SETUP("<S 23 23 1>");  // Infrared Or Optical Sensor  on pin 23
 ```
 
 \|force-break\|
@@ -510,7 +506,7 @@ Each channel can be one of:
 - `OFF`
 
 Select the value you want for the channels and click
-`Set`{.interpreted-text role="guilabel"}
+`Set`
 
 Note. If you select `DC` or `DCX` you must select a DCC address for the
 channel before pressing `Set`. What ever address you select, selecting
@@ -550,8 +546,7 @@ On the Servo motor screen,
 - Test the Close, Mid, Throw positions by pressing the appropriate
   button. The servo will move to that position.
 - Fine adjust any of the three positions by using the
-  `+`{.interpreted-text role="guilabel"} or `-`{.interpreted-text
-  role="guilabel"} buttons \|BR\| The servo will gradually move.
+  `+` or `-` buttons \|BR\| The servo will gradually move.
 - when you are happy, record the three values
 
 \|EX-TB\| remembers the servos that you have changed (up to 10) in this
@@ -584,7 +579,7 @@ When the screen opens the first 100 sensors found will be shown.
 Activity on the sensors will be shown on the screen. Scroll down to if
 needed.
 
-The `Watch`{.interpreted-text role="guilabel"} button is generally not
+The `Watch` button is generally not
 needed, but will force \|EX-TB\| to check the available sensors on the
 \|EX-CS\| again.
 
@@ -621,11 +616,9 @@ For each channel the following is shown:
 The readings start as soon as you open the screen and are paused as soon
 as you exit the screen. The readings are taken every three seconds.
 
-You can manually stop the readings with the `Stop`{.interpreted-text
-role="guilabel"} button.
+You can manually stop the readings with the `Stop` button.
 
-You can manually restart the readings with the `Start`{.interpreted-text
-role="guilabel"} button. This will also clear the \'Highest\' values.
+You can manually restart the readings with the `Start` button. This will also clear the \'Highest\' values.
 
 \|force-break\|
 
@@ -648,8 +641,7 @@ or by connecting to the WiFi Access Point network of the CS and issuing
 a set of new commands.
 
 See the
-`/ex-commandstation/advanced-setup/supported-wifi/wifi-config_v5_7`{.interpreted-text
-role="doc"} page for more details.
+`/ex-commandstation/advanced-setup/supported-wifi/wifi-config_v5_7` page for more details.
 
 \|EX-TB\| provides a screen to allow you to issue the necessary commands
 to change the WiFi settings of your \|EX-CS\|.
@@ -667,18 +659,17 @@ screen, when \'WiFi Station Mode\' is selected in the drop down list at
 the top of the screen.
 
 The Station Mode WiFi configuration allows you to set the
-[SSID]{.title-ref} and [password]{.title-ref} of the WiFi network that
+[SSID] and [password] of the WiFi network that
 your \|EX-CS\| will connect to, and also allows you to set the
-[hostname]{.title-ref} of the \|EX-CS\| on that network.
+[hostname] of the \|EX-CS\| on that network.
 
-To change the *Station Mode* enter a [SSID]{.title-ref} (the name of the
-network), and a [password]{.title-ref} of at least 8 characters and
-presse either the `Set Station`{.interpreted-text role="guilabel"}
-button for a permanent change, or the `Set Temp`{.interpreted-text
-role="guilabel"} button for a temporary change.
+To change the *Station Mode* enter a [SSID] (the name of the
+network), and a [password] of at least 8 characters and
+presse either the `Set Station`
+button for a permanent change, or the `Set Temp` button for a temporary change.
 
 To change the *hostname* enter the hostname and press the
-`Set Hostname`{.interpreted-text role="guilabel"} button.
+`Set Hostname` button.
 
 \|force-break\|
 
@@ -695,10 +686,10 @@ Setup\' screen, when \'WiFi Access Point Mode\' is selected in the drop
 down list at the top of the screen.
 
 The Access Point Mode WiFi configuration allows you to set the
-[SSID]{.title-ref}, [password]{.title-ref} and optional
-[Channel]{.title-ref} of the WiFi Access Point network that your
+[SSID], [password] and optional
+[Channel] of the WiFi Access Point network that your
 \|EX-CS\| will create, and also allows you to set the
-[hostname]{.title-ref} of the \|EX-CS\| on that network.
+[hostname] of the \|EX-CS\| on that network.
 
 :!!! note "::: title
 Note"
@@ -710,12 +701,12 @@ Point mode settings over WiFi. You need to be connected via USB to
 change the Access Point mode settings.
 ::::
 
-To change the *Access Point* enter a [SSID]{.title-ref} (the name of the
-network), and a [Password]{.title-ref} of at least 8 characters and
-press the `Set Access Point`{.interpreted-text role="guilabel"} button.
+To change the *Access Point* enter a [SSID] (the name of the
+network), and a [Password] of at least 8 characters and
+press the `Set Access Point` button.
 
 To change the *hostname* enter the hostname and press the
-`Set Hostname`{.interpreted-text role="guilabel"} button.
+`Set Hostname` button.
 
 \|HR-DASHED\|
 
@@ -729,8 +720,7 @@ reconnect to the Command Station.
 ::::
 
 See the
-`/ex-commandstation/advanced-setup/supported-wifi/wifi-config_v5_7`{.interpreted-text
-role="doc"} page for more details on the meaning of these settings.
+`/ex-commandstation/advanced-setup/supported-wifi/wifi-config_v5_7` page for more details on the meaning of these settings.
 
 \|force-break\|
 
@@ -758,10 +748,10 @@ There are two ways to turn the Track Power on/off:
 - Power Action Bar button - needs to be enable in the preferences
 
 The *Power Screen* can be accessed from the
-`Menu --> Power`{.interpreted-text role="menuselection"}. This will open
+`Menu --> Power`. This will open
 the Power Screen where there is a simple button that to turn the power
-on or off. Use the `Close`{.interpreted-text role="guilabel"} button or
-Android\'s `Back`{.interpreted-text role="guilabel"} button to return to
+on or off. Use the `Close` button or
+Android\'s `Back` button to return to
 the CV-Programming Screen.
 
 If the *Power Action Bar button* is enabled, simply click on it to turn
@@ -786,12 +776,12 @@ bars (≡).
 ### View log
 
 Accessed from any of the main screens via
-`Menu --> View Log`{.interpreted-text role="menuselection"}.
+`Menu --> View Log`.
 
 This screen allows you to view the internal EX-Toolbox log of events.
 (referend to as \'logcat\').
 
-The option to [Start recording to file]{.title-ref} creates a
+The option to [Start recording to file] creates a
 user-accessible file that can be sent to the \|EX-TB\| app developers to
 assist you in resolving a problem.
 
@@ -807,9 +797,9 @@ of the log.
 To record a log file in \|EX-TB\|\....
 
 1.  Start \|EX-TB\|.
-2.  From the menu, select `View Log`{.interpreted-text role="guilabel"}
-3.  Click `Start recording to a file`{.interpreted-text role="guilabel"}
-4.  Click `Close`{.interpreted-text role="guilabel"}\`
+2.  From the menu, select `View Log`
+3.  Click `Start recording to a file`
+4.  Click `Close`\`
 5.  Attempt whatever is causing the problem a few times
 6.  Exit \|EX-TB\|
 7.  Connect a USB cable to your device/phone and PC
@@ -823,7 +813,7 @@ To record a log file in \|EX-TB\|\....
 12. Find the most recent file that looks like `logcatxxxxxxxxxxxxx.txt`
     e.g. logcat1699833098998.txt
 13. Attach that file to a message in discord using the
-    `+`{.interpreted-text role="guilabel"} button on the row of the
+    `+` button on the row of the
     message content\`\`\`
 
 ### About
@@ -889,7 +879,7 @@ Using *SerialToIPGUI* (For Microsoft Windows) (Recommended):
 > - start SerialToIPGUI
 > - Select the correct COM port for the command station
 > - Enter the port of \'2560\'
-> - Click `Start`{.interpreted-text role="guilabel"}
+> - Click `Start`
 >
 > Once started\...
 >
@@ -897,7 +887,7 @@ Using *SerialToIPGUI* (For Microsoft Windows) (Recommended):
 > - Enter the IP address of your PC (The one running socat or
 >   SerialToIPGUI)
 > - Enter the port of \'2560\'
-> - Click `connect`{.interpreted-text role="guilabel"}
+> - Click `connect`
 
 :::: important
 ::: title
@@ -944,5 +934,4 @@ change above.
 Although\|EX-TB\| is an Android app, it is possible to run it on windows
 PCs.
 
-See the `/throttles/software/android-apps-on-windows`{.interpreted-text
-role="doc"} page for more information.
+See the `/throttles/software/android-apps-on-windows` page for more information.

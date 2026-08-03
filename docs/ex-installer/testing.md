@@ -1,4 +1,4 @@
-::: {.meta keywords="EX-CommandStation Command Station EX-Installer Testing"}
+::: 
 :::
 
 # Testing your installation
@@ -6,9 +6,9 @@
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-installer-button-small\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -63,12 +63,9 @@ The following information is highlighted for \|EX-CS\|:
 
 You can send any supported command to your device by typing it into the
 \"Enter command\" box and clicking the \"Send\" button. Refer to the
-`/reference/software/command-summary-consolidated`{.interpreted-text
-role="doc"} for the list of available commands. This will also work for
+`/reference/software/command-summary-consolidated` for the list of available commands. This will also work for
 the \|EX-TT\|
-`ex-turntable/test-and-tune:ex-turntable interactive serial console commands`{.interpreted-text
-role="ref"} and \|EX-IO\| `/ex-ioexpander/index`{.interpreted-text
-role="doc"} commands.
+`ex-turntable/test-and-tune:ex-turntable interactive serial console commands` and \|EX-IO\| `/ex-ioexpander/index` commands.
 
 ### Saving startup or serial console logs
 
@@ -97,7 +94,7 @@ file for some reason, you can copy and paste the text instead.
 
 This page is a brief introduction to using the \|IDE Serial Monitor\|.
 For additional information see the
-`/reference/tools/serial-monitor`{.interpreted-text role="doc"} page.
+`/reference/tools/serial-monitor` page.
 
 To test with the \|IDE Serial Monitor\|, download the \|Arduino IDE\|
 from the following link and install it on your computer.
@@ -107,12 +104,12 @@ from the following link and install it on your computer.
 To do a quick test, open the Arduino application:
 
 ![The Arduino
-IDE](/_static/images/installer/arduino_ide.jpg){alt="Arduino IDE"}
+IDE](/_static/images/installer/arduino_ide.jpg)
 
 - Select \"Tools -\> Serial Monitor\" from the \|Arduino IDE\| menu
 
 ![Open the Serial Monitor from the Tools
-Menu](/_static/images/installer/arduino_ide2.jpg){alt="Open the Serial Monitor"}
+Menu](/_static/images/installer/arduino_ide2.jpg)
 
 You will see the following screen:
 
@@ -131,7 +128,7 @@ into the command textbox and press \"Send\". You should see:
 
 ``` cpp
 <iDCC-EX V-0.2.1 / MEGA / STANDARD_MOTOR_SHIELD G-9db6d36>
-```
+[``
 
 This is the \"status\" command and reports your version, types of boards
 you are using, and a build number.
@@ -141,15 +138,14 @@ fact, you could use the \|IDE serial monitor\| to test any of the DCC-EX
 API (application programming interface) commands. Please see the [DCC-EX
 Wiki](https://github.com/DCC-EX/CommandStation-EX/wiki) for a list of
 commands or for additional information on using the \|IDE serial
-monitor\| see the `/reference/tools/serial-monitor`{.interpreted-text
-role="doc"} page.
+monitor\| see the `/reference/tools/serial-monitor` page.
 
 ## Using EX-WebThrottle
 
 ![EX-WebThrottle](/_static/images/installer/exwebthrottle.jpg)
 
 Click this link:
-`EX-WebThrottle </ex-webthrottle/index>`{.interpreted-text role="doc"}
+`EX-WebThrottle ](/ex-webthrottle/index.md)
 to run EX-WebThrottle hosted on our site, or visit
 [GitHub](https://github.com/DCC-EX/WebThrottle-EX) to get the latest
 version to run on your computer.

@@ -4,16 +4,16 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
 
 A variety of \|EX-R\| sequences that illustrate function and usage of
 five objects are shown below. The
-`/big-picture/big-picture`{.interpreted-text role="doc"} section of this
+`/big-picture/big-picture` section of this
 web site also contains a number of more elaborate and complex examples.
 
 Objects:
@@ -26,7 +26,7 @@ Objects:
 - Active low IR sensors connected to Mega2560 I/O pins 40 through 46
 - An active low push button on Mega2560 I/O pin 30
 
-Also see the `/exrail/cookbooks/index`{.interpreted-text role="doc"} for
+Also see the `/exrail/cookbooks/index` for
 a collection of step-by-step instructions for building various \|EX-R\|
 based sequences and components for your model railroad.
 
@@ -193,7 +193,7 @@ Start with something as simple as a single loop of track with a station
 and a sensor (connected to pin 40 for this example) at the point where
 you want the train to stop.
 
-![Simple example 4](/_static/images/exrail/Example_4_diagram.png){.align-center}
+![Simple example 4](/_static/images/exrail/Example_4_diagram.png)
 
 Using an `AUTOMATION` keyword means that this automation will appear in
 the throttle so you can drive the train manually, and then hand it over
@@ -250,7 +250,7 @@ AUTOMATION(4,"Round in circles")
 
 Consider a single line, shuttling between stations A and B.
 
-![Simple example 4](/_static/images/exrail/Example_6_diagram.png){.align-center}
+![Simple example 4](/_static/images/exrail/Example_6_diagram.png)
 
 Starting from Station A, the steps may be something like:
 
@@ -315,11 +315,10 @@ So what about routes that cross or share single lines (passing places
 etc)? Let\'s add a passing place between A and B. S= Sensors, T=Turnout
 number. So now our route looks like this:
 
-![Simple example 4](/_static/images/exrail/Example_7a_diagram.png){.align-center}
+![Simple example 4](/_static/images/exrail/Example_7a_diagram.png)
 
 Assuming that you have defined your turnouts as per
-`exrail/exrail-command-reference:turnout/point objects - definition and control`{.interpreted-text
-role="ref"}
+`exrail/exrail-command-reference:turnout/point objects - definition and control`
 
 ``` cpp
 SEQUENCE(11)
@@ -352,7 +351,7 @@ need some rules. The principle behind this is
 So we will need some extra sensors (hardware required) and some logical
 blocks (all in the mind!):
 
-![Simple example 4](/_static/images/exrail/Example_7b_diagram.png){.align-center}
+![Simple example 4](/_static/images/exrail/Example_7b_diagram.png)
 
 ::: todo
 [LOW - Fix sensor IDs in diagram to match
@@ -517,8 +516,7 @@ are reversed. (easily done with diesels!)
 The previous pages have only been a small taste of what is possible with
 \|EX-R\|.
 
-To continue to learn more about it, click the `Next`{.interpreted-text
-role="guilabel"} button to see some more
-`/exrail/tips`{.interpreted-text role="doc"}, and you can also see the
-`/exrail/exrail-command-reference`{.interpreted-text role="doc"} to
+To continue to learn more about it, click the `Next` button to see some more
+`/exrail/tips`, and you can also see the
+`/exrail/exrail-command-reference` to
 explore the full capabilities.

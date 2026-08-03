@@ -14,7 +14,7 @@ Read on through the following sections to understand which accessory
 items can be added, how they are physically connected, and how they can
 be controlled or responded to.
 
-::: {.toctree maxdepth="1"}
+::: 
 turnouts/index signals/index sensors/index inputs-outputs/index
 animation turntables/index
 :::

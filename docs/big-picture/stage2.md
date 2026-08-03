@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -116,7 +116,7 @@ The \|EX-I\| can make use of the config files from a \'saved\' location.
 > then `Compile and load` the software.
 >
 > After the load finishes you will be asked to \'backup/save\' the
-> config files. Say [Yes]{.title-ref} and put them in a folder well away
+> config files. Say [Yes] and put them in a folder well away
 > from the EX-Installer folder. You can can then make direct edits to
 > the file there, and when you next run \|EX-I\|, it asks if you want to
 > use existing config files. Just point it to where you saved and edited
@@ -125,7 +125,7 @@ The \|EX-I\| can make use of the config files from a \'saved\' location.
 > The Roster will be automatically loaded with the \|EX-CS\| software.
 
 More information on the config files can be found on the
-`/ex-installer/managing-config-files`{.interpreted-text role="doc"}
+`/ex-installer/managing-config-files`
 page.
 
 :!!! warning "::: title
@@ -162,7 +162,7 @@ The \|EX-I\| described below will meet 100% of the needs of a
 2.  Run the \|Arduino IDE\|
 3.  Open the `CommandStation-EX` folder
 4.  Select the Board, COM port etc. as before
-5.  click `Upload`{.interpreted-text role="guilabel"}
+5.  click `Upload`
 
 The Roster will be automatically loaded with the \|EX-CS\| software.
 
@@ -227,14 +227,13 @@ There are three ways to load & store your Locomotive Icon Image in
 
 > - In the **Roster List** on the Select Loco screen
 >   - Long press on the loco
->   - press the `New Image`{.interpreted-text role="guilabel"} button,
+>   - press the `New Image` button,
 >     which will launch the Android system\'s default app for choosing
 >     images
 >   - find and select an image
->   - click `Save`{.interpreted-text role="guilabel"} \|BR\|\|BR\|You
->     can replace an image with the `New Image`{.interpreted-text
->     role="guilabel"} button or remove it with the
->     `Remove`{.interpreted-text role="guilabel"} button
+>   - click `Save` \|BR\|\|BR\|You
+>     can replace an image with the `New Image` button or remove it with the
+>     `Remove` button
 
 **General Notes on the Local Loco Icons:**
 

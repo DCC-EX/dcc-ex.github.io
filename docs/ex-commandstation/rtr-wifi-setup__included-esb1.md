@@ -13,8 +13,7 @@ The \|EX-CSB1\| comes with WiFi onboard.
 \|EX-CSB1-SHORT\| directly via WiFi is to do so indirectly through
 \|JMRI\|. To do this you use a USB cable instead. This is described on
 the
-`/ex-commandstation/advanced-setup/supported-connections/jmri`{.interpreted-text
-role="doc"} page.
+`/ex-commandstation/advanced-setup/supported-connections/jmri` page.
 :::
 
 The WiFi on your \|EX-CSB1-SHORT\| allows connection up to 10 WiFi
@@ -24,8 +23,7 @@ computer and another software controller.
 However, use use of WiFi is optional. If you wish to simply use your
 computer connected via a USB cable to the \|EX-CSB1-SHORT\| with the
 \|JMRI\| application (or similar), you can
-`skip ahead to the next page </ex-commandstation/installer-rtr>`{.interpreted-text
-role="doc"}.
+`skip ahead to the next page </ex-commandstation/installer-rtr>`.
 
 If you wish to run trains from your phone, tablet or other \|WiThrottle
 protocol\| devices connected directly to the \|EX-CSB1-SHORT\| over

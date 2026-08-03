@@ -14,7 +14,7 @@ driver to rotate a turntable and align the bridge track with the
 surrounding layout tracks. An Arduino Nano or Uno are suitable
 microcontrollers for \|EX-TT\|.
 
-::: {.toctree maxdepth="1"}
+::: 
 overview purchasing assembly test-and-tune layout-wiring configure
 /support/ex-tt-troubleshooting traverser
 :::

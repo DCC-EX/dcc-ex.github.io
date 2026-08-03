@@ -13,8 +13,7 @@ NEOPIXEL([-]vpin, red, green, blue [,count])
 
 - `vpin` = pin number of the individual pixel in the range defined by
   the
-  `HAL(NeoPixel...) <exrail/exrail-command-reference:create and manage hal device objects>`{.interpreted-text
-  role="ref"}.
+  `HAL(NeoPixel...) <exrail/exrail-command-reference:create and manage hal device objects>`.
 - `red` = 0..255 intensity of the red channel
 - `green` = 0..255 intensity of the green channel
 - `blue` = 0..255 intensity of the blue channel

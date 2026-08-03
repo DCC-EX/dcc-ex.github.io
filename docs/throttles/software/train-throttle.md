@@ -2,9 +2,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-![Windows Logo](/_static/images/throttles/icon_windows.png){.align-left}
+![Windows Logo](/_static/images/throttles/icon_windows.png)
 
-![iOS Logo](/_static/images/throttles/icon_ios.png){.align-left}
+![iOS Logo](/_static/images/throttles/icon_ios.png)
 
 Train Throttle is a fully featured client for the JMRI WiThrottle
 server, which allows you to control your DCC equipped model trains.

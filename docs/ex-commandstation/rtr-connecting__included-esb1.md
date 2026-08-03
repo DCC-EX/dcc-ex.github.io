@@ -8,9 +8,9 @@ EXCSB1, EX-CSB1
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="4" local=""}
+::: 
 On this page
 :::
 ::::
@@ -25,16 +25,15 @@ ready.
 These instructions are for DCC locomotives. For more detailed
 information, to configure for running DC trains, or to use different
 throttles like \|EX-WT\| or \|JMRI\|, see the
-`EX-CSB1 Operating Manual <rtr-manual>`{.interpreted-text role="doc"}
+[EX-CSB1 Operating Manual ](rtr-manual.md)
 
 ## What You Will Need
 
 - An \|EX-CSB1\|[^1]
 - A **Power supply** (12-16v DC see
-  `Power Supplies <reference/hardware/power-supplies:power supplies>`{.interpreted-text
-  role="ref"})[^2]
+  `Power Supplies <reference/hardware/power-supplies:power supplies>[)[^2]
 - A **DCC loco** (If you are here to run DC locos, please go to the
-  `/trackmanager/index`{.interpreted-text role="doc"} page.)
+  `/trackmanager/index` page.)
 - Some **Track**
 - **16 to 28AWG/1.5mm\^2 Wire**, preferably in 2 colours with 1/8\"/6mm
   insulation stripped (and wire tinned if stranded)
@@ -49,10 +48,10 @@ throttles like \|EX-WT\| or \|JMRI\|, see the
 ## Board Layout
 
 ![EX-CSB1 top (click image to enlarge
-it)](/_static/images/ex-csb1/csb1_render_layout_top.png){alt="DCC-EX EX-CSB1 Express"}
+it)](/_static/images/ex-csb1/csb1_render_layout_top.png)
 
 A full explanation of the board is available in the
-`manual </ex-commandstation/rtr-manual>`{.interpreted-text role="doc"}.
+`manual ](/ex-commandstation/rtr-manual.md).
 
 :!!! warning "::: title
 Warning"
@@ -102,7 +101,7 @@ greater detail.
 
 > **1. Connect your EX-CSB1 to your track**
 >
-> > Connect your main track to the `A` **MAIN** output to your Command
+> > Connect your main track to the [A` **MAIN** output to your Command
 > > Station.
 >
 > **2. Connect power to your EX-CSB1**
@@ -162,7 +161,7 @@ to test your Command Station.
 To alter this default configuration of \|DCC\| outputs, or for \|DC\|
 Mode, you would need to configure outputs with a \|TM\| command in the
 `mySetup.h` file or by creatine a \'Route\'. See the
-`TrackManager page </trackmanager/index>`{.interpreted-text role="doc"}
+`TrackManager page ](/trackmanager/index.md)
 for details.
 
 <figure class="align-center">
@@ -181,7 +180,7 @@ stray outside the screw terminals and cause a short circuit.
 ::: sidebar
 **Wire gauge**
 
-See `/reference/hardware/wire-gauge`{.interpreted-text role="doc"} for
+See `/reference/hardware/wire-gauge` for
 more information or wire gauge.
 :::
 
@@ -258,13 +257,12 @@ voltage[^6].
 
 For more information about power supplies, including how to use one
 power supply to supply all the different voltages on your layout, see
-`Power Supplies <reference/hardware/power-supplies:power supplies>`{.interpreted-text
-role="ref"}.
+`Power Supplies <reference/hardware/power-supplies:power supplies>`.
 
 <figure class="align-left">
 <img src="/_static/images/power/2_1mm_screw_terminal_adapter.png"
 alt="2.1mm screw terminal adapter" />
-<figcaption>2.1mm Screw <span>|BR|</span> Terminal Adapter</figcaption>
+<figcaption>2.1mm Screw <span>**BR**</span> Terminal Adapter</figcaption>
 </figure>
 
 <figure class="align-right">
@@ -311,8 +309,7 @@ However, for safety, track output power will be off by default when you
 first plug in the \|EX-CSB1-SHORT\|. This is to prevent power from
 accidentally being applied to your layout before everything is ready. If
 you prefer, you can change this default setting in the
-`Startup Configuration </ex-commandstation/advanced-setup/startup-config>`{.interpreted-text
-role="doc"}.
+`Startup Configuration </ex-commandstation/advanced-setup/startup-config>`.
 
 <figure class="align-center">
 <img src="/_static/images/ex-csb1/csb1_power_barrel.png"
@@ -327,8 +324,7 @@ WiFi connection information.
 If you do not have a display, you will need to connect a \|serial
 monitor\| to see the status, but this is not essential for ongoing use
 of the system. (See:
-`Using a Serial Monitor </reference/tools/serial-monitor>`{.interpreted-text
-role="doc"}).
+`Using a Serial Monitor </reference/tools/serial-monitor>`).
 
 <figure class="align-center">
 <img src="/_static/images/ex-csb1/csb1_oled.png"
@@ -360,8 +356,7 @@ though it is a broadly similar process when using any other throttle app
 on a Smart device.
 
 For a USB Connection with \|EX-WT\| or \|JMRI\| and a computer, please
-see the full `CSB1 operating manual <rtr-manual>`{.interpreted-text
-role="doc"}.
+see the full `CSB1 operating manual <rtr-manual>`.
 
 **Access Point (AP) mode** creates a separate WiFi network on the
 Command Station itself, whereas **Station (STA) mode** allows the
@@ -371,8 +366,7 @@ network. We have the \|EX-CSB1-SHORT\| set to default to **Access Point
 quickly.
 
 To configure your \|EX-CSB1-SHORT\| to connect to your home network, see
-`WiFi Configuration </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`{.interpreted-text
-role="doc"}.
+`WiFi Configuration </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`.
 
 The WiFi LED will illuminate once WiFi is configured and ready as an
 Access Point (or Station if reconfigured for STA mode.)
@@ -509,15 +503,14 @@ Once you have connected to your command station, the next screen will
 display the throttle controls. They will be greyed out until you select
 a loco to control.
 
-Press the `select`{.interpreted-text role="guilabel"} button and enter
+Press the `select` button and enter
 the address for your loco. Here you can see we are acquiring loco
-[3]{.title-ref} (the default address for almost all locos as they come
+[3] (the default address for almost all locos as they come
 from the box).
 
 > (Once you are happy that your \|EX-CS\| is fully functioning you can
 > change the DCC address of your locos using
-> `these instructions<throttles/software/engine-driver-native-protocol:read and write dcc addresses on the programming track>`{.interpreted-text
-> role="ref"}.)
+> `these instructions<throttles/software/engine-driver-native-protocol:read and write dcc addresses on the programming track>`.)
 
 <figure class="align-left">
 <img src="/_static/images/engine_driver/ed_select_addr.png"
@@ -591,16 +584,16 @@ outputs from 2 to 4.
 
 Note that the \|EX-I\| does not have a simple way to configure the
 additional outputs so you will need to use the
-`TrackManager </trackmanager/index>`{.interpreted-text role="doc"}
+[TrackManager ](/trackmanager/index.md)
 feature to configure the outputs as needed in
-[myAutomation.h]{.title-ref} in the [Advanced Configuration]{.title-ref}
+[myAutomation.h] in the [Advanced Configuration]
 page of \|EX-I\|.
 
 For example, to always set outputs C and D to be the second and third
 DCC MAIN outputs, you would create a AUTOSTART sequence that sets both
-outputs C and D to DCC MAIN mode in [myAutomation.h]{.title-ref}.
+outputs C and D to DCC MAIN mode in [myAutomation.h].
 
-``` 
+[`` 
 AUTOSTART 
    SET_TRACK(A,MAIN)
    SET_TRACK(B,PROG)
@@ -617,21 +610,20 @@ DONE
 The \|EX-CSB1\| is set to operate in \|DCC\| mode by default. If you
 want to switch to any of the outputs to \|DC\| mode, you can find
 instructions on how to do that on the
-`TrackManager page </trackmanager/index>`{.interpreted-text role="doc"}.
+`TrackManager page ](/trackmanager/index.md).
 
 \|HR-DASHED\|
 
 ### Booster Mode
 
 The \|EX-CSB1\| as the name implies can operate as a Command Station or
-a Booster. See `EX-CS as a booster page <rtr-booster>`{.interpreted-text
-role="doc"} for instructions on how to use the EX-CSB1 as a booster.
+a Booster. See `EX-CS as a booster page <rtr-booster>` for instructions on how to use the EX-CSB1 as a booster.
 
 \|HR-DASHED\|
 
 ### Full EX-CSB1 Operating Manual
 
-`rtr-manual`{.interpreted-text role="doc"} [design
+`rtr-manual` [design
 files](https://github.com/DCC-EX/EX-CSB1) \|EXTERNAL-LINK\|
 
 \|HR-HEAVY\|
@@ -642,22 +634,22 @@ If you are happy with the default configuration of your \|EX-CSB1\|
 there is nothing more you need to do.
 
 If you want to change the way the WiFi is configured, just click next or
-go the `rtr-wifi-setup`{.interpreted-text role="doc"} page.
+go the `rtr-wifi-setup` page.
 
 If you want to look at some other options to use as a controller
 (throttle) then have a look at the
-`/ex-commandstation/controllers-rtr`{.interpreted-text role="doc"} page.
+`/ex-commandstation/controllers-rtr` page.
 
 If you want to add a roster, turnout/points, routes or automations look
-at the `/exrail/index`{.interpreted-text role="doc"} page.
+at the `/exrail/index` page.
 
 [^1]: While not required for normal use, a PC is required a) to
     initially install the software on a DIY system, b) is optional for
     making a USB connection and using programs like
-    [\|EX-WT\|](##SUBST##|EX-WT|) or [\|JMRI\|](##SUBST##|JMRI|), and c)
-    to update/add [\|EX-R\|](##SUBST##|EX-R|) Scripts to the
-    [\|EX-CS\|](##SUBST##|EX-CS|) or make other changes to its
-    configuration. [\|BR\|](##SUBST##|BR|) A USB connection also
+    [\|EX-WT\|](##SUBST##**EX-WT**) or [\|JMRI\|](##SUBST##**JMRI**), and c)
+    to update/add [\|EX-R\|](##SUBST##**EX-R**) Scripts to the
+    [\|EX-CS\|](##SUBST##**EX-CS**) or make other changes to its
+    configuration. [\|BR\|](##SUBST##**BR**) A USB connection also
     provides a connection to a \"serial monitor\" to generate logs and
     diagnose issues. But more on that later.
 
@@ -665,15 +657,13 @@ at the `/exrail/index`{.interpreted-text role="doc"} page.
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.
 
 [^3]: The voltage you need for the [\|Motor
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.
 
 [^4]: You also may need to tell your smart device to not automatically
     connect to your default WiFi network or it might keep trying to
@@ -681,28 +671,25 @@ at the `/exrail/index`{.interpreted-text role="doc"} page.
 
 [^5]: [\|WiThrottle\|](##SUBST##|WiThrottle|), and some other apps, will
     require you to enter the IP address and port of the server manually.
-    [\|BR\|](##SUBST##|BR|) The IP address is usually `192.168.4.1` when
+    [\|BR\|](##SUBST##**BR**) The IP address is usually `192.168.4.1` when
     using Access Point mode, and the port is `2560`.
-    [\|BR\|](##SUBST##|BR|) Refer to your app\'s documentation for
+    [\|BR\|](##SUBST##**BR**) Refer to your app\'s documentation for
     details on how to enter these settings.
 
 [^6]: The voltage you need for the [\|Motor
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.
 
 [^7]: The voltage you need for the [\|Motor
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.
 
 [^8]: The voltage you need for the [\|Motor
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.

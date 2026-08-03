@@ -1,4 +1,4 @@
-::: {.meta keywords="EX-CommandStation Command Station EX-Installer"}
+::: 
 :::
 
 \|EX-I-LOGO\|
@@ -8,9 +8,9 @@
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-installer-button-small\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="4" local=""}
+::: 
 On this page
 :::
 ::::
@@ -20,7 +20,7 @@ On this page
 \|EX-CS\| uses three main config files that allow you to modify aspects
 of the command station to suit your needs. These files are:
 
-::: {.contents .in-this-section depth="1" local=""}
+::: 
 :::
 
 Note: the *case* of characters the names is very important.
@@ -51,7 +51,7 @@ The **myAutomation.h** file can contain any customisations, including:
 - Turntables (Not available in the current \'Release\' version)
 
 This can be created manually, or by the \|EX-I\| if you select the
-[Create MyAutomation.h]{.title-ref} option.
+[Create MyAutomation.h] option.
 
 :!!! note "::: title
 Note"
@@ -85,29 +85,28 @@ Note: if you are just starting out this is the recommended approach.
 
 - Run \|EX-I\| following the instructions
 - in the **\'Install EX-CommandStation\'** screen, make sure you select
-  [Create MyAutomation.h]{.title-ref} and [advanced config]{.title-ref}
+  [Create MyAutomation.h] and [advanced config]
   along with any other options you need for your Command Station.
-- Click the `Advanced Config`{.interpreted-text role="guilabel"} button
+- Click the `Advanced Config` button
   you will be shown the **\'Advanced Configuration\'** Screen where you
   can make additional edits to **config.h** and **myAutomation.h**
 - On the **\'Load EX-CommandStation\'** screen, after you click
-  `Load`{.interpreted-text role="guilabel"} and the software has
+  `Load` and the software has
   finished loading, you will see a
-  `Backup config files`{.interpreted-text role="guilabel"} button.
+  `Backup config files` button.
 - Click on the button and follow select or create a folder backup your
   files.
-  `This MUST NOT be inside any of the folders created by the installer.`{.interpreted-text
-  role="dcc-ex-red-bold-italic"}
+  `This MUST NOT be inside any of the folders created by the installer.`
 
 The next time you run \|EX-I\|
 
 - On the **\'Select EX-CommandStation version\'** screen, select the
   version you wish to install.
-- Then select [Use my existing config files]{.title-ref} and locate the
+- Then select [Use my existing config files] and locate the
   files you saved as a backup previously. \|BR\| Select any of the files
   you backed up. (Even though you select only one file, all the files
   will be included.)
-- Then click `Advanced Config`{.interpreted-text role="guilabel"},
+- Then click `Advanced Config`,
 - Follow the instructions above for the **\'Advanced Configuration\'**
   screen and the following steps.
 
@@ -120,27 +119,25 @@ instructions below if needed.
 Any app that can edit plain text files can be used.
 
 - Create or select a folder to store the files.
-  `This MUST NOT be inside any of the folders created by the installer.`{.interpreted-text
-  role="dcc-ex-red-bold-italic"}\`
-- Copy [config-sample.h]{.title-ref} from github or the \|EX-I\| install
+  `This MUST NOT be inside any of the folders created by the installer.`\`
+- Copy [config-sample.h] from github or the \|EX-I\| install
   folders.
-- Rename [config-sample.h]{.title-ref} to [config.h]{.title-ref} and
+- Rename [config-sample.h] to [config.h] and
   edit as needed
-- If needed, create [myAutomation.h]{.title-ref} and edit as needed
-- If needed, create [mySetup.h]{.title-ref} and edit as needed
+- If needed, create [myAutomation.h] and edit as needed
+- If needed, create [mySetup.h] and edit as needed
 - Run \|EX-I\| following the instructions.
 - On the **\'Select EX-CommandStation version\'** select the version you
   wish to install.
-- Then select [Use my existing config files]{.title-ref} and locate the
+- Then select [Use my existing config files] and locate the
   files you saved as a backup previously, and select any of the files
   you backed up. (Even though you select only one file, all the files
   will be included.)
-- Then click `Advanced Config`{.interpreted-text role="guilabel"}
+- Then click `Advanced Config`
 - Continue to the **\'Load Configuration\'** screen and load the
   software
 
 If you had previously used the \|Arduino IDE\| or VSC to create custom
 config files, you can use these files, either from where you originally
 created them, or you can copy them to a separate folder.
-`As long as that folder IS NOT inside any of the folders created by the installer.`{.interpreted-text
-role="dcc-ex-red-bold-italic"}
+`As long as that folder IS NOT inside any of the folders created by the installer.`

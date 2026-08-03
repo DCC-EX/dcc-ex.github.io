@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -37,22 +37,19 @@ For Example
 HAL(PCA9685, 100, 16, 0x40) 
 HAL(PCA9685, 116, 16, 0x41) 
 HAL(PCA9685, 132, 16, 0x42) 
-HAL(PCA9685, 148, 16, {I2CMux_0,SubBus_4,0x43})
+HAL(PCA9685, 148, 16, )
 
 HAL(MCP23017, 164, 16, 0x20) 
 HAL(MCP23017, 180, 16, 0x21) 
 ```
 
 This would create VPINs 100 to 115 to represent the 16 servo outputs on
-the first `PCA9685 </reference/hardware/servo-module>`{.interpreted-text
-role="doc"} servo control board at \|I2C\| address 0x40 and VPINs 164 to
+the first `PCA9685 </reference/hardware/servo-module>` servo control board at \|I2C\| address 0x40 and VPINs 164 to
 179 on the first
-`MCP23017 </reference/hardware/gpio-module>`{.interpreted-text
-role="doc"} i/o expander. VPINs for two PCA9685 and two MCP23017 are
+`MCP23017 </reference/hardware/gpio-module>` i/o expander. VPINs for two PCA9685 and two MCP23017 are
 pre-defined, except for PCA9685 used with Nucleo-144. Refer to wiring
 details and fuller list of
-`supported I2C devices </reference/hardware/index-i2c>`{.interpreted-text
-role="doc"} elsewhere.
+`supported I2C devices </reference/hardware/index-i2c>` elsewhere.
 
 ## Using OUTPUT VPINS
 
@@ -68,7 +65,7 @@ this case).
 Blinking is stopped by a SET or RESET of the pin.
 
 Serial commands can set HIGH/LOW values to VPINs using
-`<z 180> <z -180>` as for any digital output.
+`<z 180> <z -180>[ as for any digital output.
 
 ## Using INPUT VPINs
 
@@ -95,12 +92,11 @@ useful and you need to use `IF(200)` to see what state the sensor has
 changed to.
 
 Other more advanced commands are available, see
-`cookbooks </exrail/cookbooks/index>`{.interpreted-text role="doc"}.
+`cookbooks ](/exrail/cookbooks/index.md).
 
 ## Using INPUT/OUTPUT VPINs
 
 Bitmap pins are software flags with no actual hardware implementation.
 They can be used as *INPUT* and *OUTPUT* and thus can be used as flags
 between \|EX-R\| processes. See
-`Bitmaps </exrail/cookbooks/flags-and-latches/flags>`{.interpreted-text
-role="doc"}.
+`Bitmaps </exrail/cookbooks/flags-and-latches/flags>`.

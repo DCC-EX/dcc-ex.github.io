@@ -1,4 +1,4 @@
-::: {.flat-table .command-table widths="auto" header-rows="1"}
+::: 
 - - Type / Brand \|\_xa\| \|\_xa\| \|\_xa\| \|\_xa\| \|\_xa\|
   - R \|BRxa\| e \|BRxa\| c \|BRxa\| o \|BRxa\| m \|BRxa\| m \|BRxa\| e
     \|BRxa\| n \|BRxa\| d \|BRxa\| e \|BRxa\| d
@@ -31,8 +31,7 @@
   - \~11
   - This is our stable, well supported platform
 - - Arduino
-    `Mega2560</reference/hardware/microcontrollers/arduino-mega>`{.interpreted-text
-    role="doc"}
+    `Mega2560</reference/hardware/microcontrollers/arduino-mega>`
   - Yes
   - Yes
   - Conductor
@@ -45,8 +44,7 @@
   - yes[^4]
   - 4
   - This is our stable, well supported platform
-- - `ESP32-WROOM</reference/hardware/microcontrollers/esp32>`{.interpreted-text
-    role="doc"}
+- - `ESP32-WROOM</reference/hardware/microcontrollers/esp32>`
   - Yes
   - Yes
   - Tinkerer
@@ -60,8 +58,7 @@
   - \~11
   - Inexpensive and includes both WiFi and Bluetooth connectivity,
     limited in I/O pins. Most require hardware modifications to work.
-- - `STM32 Nucleo</reference/hardware/microcontrollers/stm32-nucleo>`{.interpreted-text
-    role="doc"}
+- - `STM32 Nucleo</reference/hardware/microcontrollers/stm32-nucleo>`
   - Yes
   - Yes
   - Tinkerer
@@ -76,8 +73,7 @@
   - Lots of memory and 32 bit architecture, still in the convenient Uno
     form factor but with more I/O pins
 - - Arduino
-    `Uno R3</reference/hardware/microcontrollers/arduino-uno>`{.interpreted-text
-    role="doc"}[^11]
+    `Uno R3</reference/hardware/microcontrollers/arduino-uno>`[^11]
   - No
   - Yes
   - Tinkerer
@@ -93,13 +89,11 @@
     with JMRI
 - - Arduino Uno R4
   - \-
-  - `No`{.interpreted-text role="dcc-ex-red-bold-italic"}
-  - `8`{.interpreted-text role="cspan"} -
-  - `Different architecture to the R3. Will never be supported.`{.interpreted-text
-    role="dcc-ex-red-bold-italic"}
+  - `No`
+  - `8` -
+  - `Different architecture to the R3. Will never be supported.`
 - - Arduino
-    `Nano</reference/hardware/microcontrollers/nano>`{.interpreted-text
-    role="doc"}[^14]
+    `Nano</reference/hardware/microcontrollers/nano>`[^14]
   - No
   - Yes
   - Tinkerer
@@ -113,8 +107,7 @@
   - \-
   - Similar to Uno, but without the convenient Uno footprint
 - - Arduino
-    `Mega+WiFi</reference/hardware/microcontrollers/wifi-mega>`{.interpreted-text
-    role="doc"}
+    `Mega+WiFi</reference/hardware/microcontrollers/wifi-mega>`
   - No[^17]
   - Yes
   - Tinkerer
@@ -141,8 +134,7 @@
   - Yes[^22]
   - 4
   - Limited support only, will be removed in 6.0.0
-- - `Nano Every</reference/hardware/microcontrollers/nano-every>`{.interpreted-text
-    role="doc"}
+- - `Nano Every</reference/hardware/microcontrollers/nano-every>`
   - No
   - Dep- \|BRxa\| re- \|BRxa\| cat- \|BRxa\| ed \|BRxa\|[^23]
   - Engineer
@@ -155,8 +147,7 @@
   - Yes[^25]
   - 4
   - Limited support only, will be removed in 6.0.0
-- - `Teensy</reference/hardware/microcontrollers/teensy>`{.interpreted-text
-    role="doc"}
+- - `Teensy</reference/hardware/microcontrollers/teensy>`
   - No
   - Dep- \|BRxa\| re- \|BRxa\| cat- \|BRxa\| ed \|BRxa\|[^26]
   - Engineer
@@ -178,35 +169,28 @@
     are are supported
 
 [^3]: Requires a supported motor driver that supports
-    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`{.interpreted-text
-    role="ref"}
+    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`
 
 [^4]: Requires an additional
-    `Ethernet <reference/hardware/ethernet-boards:ethernet boards>`{.interpreted-text
-    role="ref"} or
-    `WiFi <reference/hardware/wifi-boards:wifi boards>`{.interpreted-text
-    role="ref"} shield
+    `Ethernet <reference/hardware/ethernet-boards:ethernet boards>` or
+    `WiFi <reference/hardware/wifi-boards:wifi boards>` shield
 
 [^5]: HAL/[\|I2Cxa\|](##SUBST##|I2Cxa|) connectivity is only available
     via the blocking Arduino Wire library at present
 
 [^6]: Requires a supported motor driver that supports
-    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`{.interpreted-text
-    role="ref"}
+    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`
 
 [^7]: Requires a supported motor driver that supports
-    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`{.interpreted-text
-    role="ref"}
+    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`
 
 [^8]: Features and support in Beta testing can and will change
     regularly, be sure to keep up to date with developments on our
     [Discord server](https://discord.gg/y2sB4Fp)
 
 [^9]: Requires an additional
-    `Ethernet <reference/hardware/ethernet-boards:ethernet boards>`{.interpreted-text
-    role="ref"} or
-    `WiFi <reference/hardware/wifi-boards:wifi boards>`{.interpreted-text
-    role="ref"} shield
+    `Ethernet <reference/hardware/ethernet-boards:ethernet boards>` or
+    `WiFi <reference/hardware/wifi-boards:wifi boards>` shield
 
 [^10]: Features and support in Beta testing can and will change
     regularly, be sure to keep up to date with developments on our
@@ -218,8 +202,7 @@
     and programming
 
 [^13]: Requires a supported motor driver that supports
-    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`{.interpreted-text
-    role="ref"}
+    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`
 
 [^14]: Requires the use of JMRI.
 
@@ -227,8 +210,7 @@
     and programming
 
 [^16]: Requires a supported motor driver that supports
-    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`{.interpreted-text
-    role="ref"}
+    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`
 
 [^17]: While the Mega+WiFi boards seem like a good option and are based
     on our well-known, stable Mega2560 platform, there are many reports
@@ -236,8 +218,7 @@
     not recommended
 
 [^18]: Requires a supported motor driver that supports
-    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`{.interpreted-text
-    role="ref"}
+    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`
 
 [^19]: The core development team no longer have access to these, and
     testing is limited to ensuring the software compiles for the board
@@ -249,28 +230,22 @@
     SAMD21
 
 [^21]: Requires a supported motor driver that supports
-    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`{.interpreted-text
-    role="ref"}
+    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`
 
 [^22]: Requires an additional
-    `Ethernet <reference/hardware/ethernet-boards:ethernet boards>`{.interpreted-text
-    role="ref"} or
-    `WiFi <reference/hardware/wifi-boards:wifi boards>`{.interpreted-text
-    role="ref"} shield
+    `Ethernet <reference/hardware/ethernet-boards:ethernet boards>` or
+    `WiFi <reference/hardware/wifi-boards:wifi boards>` shield
 
 [^23]: The core development team no longer have access to these, and
     testing is limited to ensuring the software compiles for the board
     type
 
 [^24]: Requires a supported motor driver that supports
-    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`{.interpreted-text
-    role="ref"}
+    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`
 
 [^25]: Requires an additional
-    `Ethernet <reference/hardware/ethernet-boards:ethernet boards>`{.interpreted-text
-    role="ref"} or
-    `WiFi <reference/hardware/wifi-boards:wifi boards>`{.interpreted-text
-    role="ref"} shield
+    `Ethernet <reference/hardware/ethernet-boards:ethernet boards>` or
+    `WiFi <reference/hardware/wifi-boards:wifi boards>` shield
 
 [^26]: The core development team no longer have access to these, and
     testing is limited to ensuring the software compiles for the board
@@ -280,11 +255,8 @@
     via the blocking Arduino Wire library at present
 
 [^28]: Requires a supported motor driver that supports
-    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`{.interpreted-text
-    role="ref"}
+    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`
 
 [^29]: Requires an additional
-    `Ethernet <reference/hardware/ethernet-boards:ethernet boards>`{.interpreted-text
-    role="ref"} or
-    `WiFi <reference/hardware/wifi-boards:wifi boards>`{.interpreted-text
-    role="ref"} shield
+    `Ethernet <reference/hardware/ethernet-boards:ethernet boards>` or
+    `WiFi <reference/hardware/wifi-boards:wifi boards>` shield

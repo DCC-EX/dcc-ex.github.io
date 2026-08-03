@@ -2,14 +2,14 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
 
-![iOS Logo](/_static/images/throttles/icon_ios.png){.align-left}
+![iOS Logo](/_static/images/throttles/icon_ios.png)
 
 This iOS App is simply beautiful, but you would expect this from a team
 of talented people consisting of an artist/graphic designer, an iOS
@@ -23,7 +23,7 @@ Store](https://apps.apple.com/us/app/locontrol-dcc-controller/id1473757920)
 
 ![Locontrol Screenshot 1](/_static/images/throttles/locontrol1.jpg)
 
-## Features {#locontrol-features}
+## Features 
 
 - Make videos and take pictures while controlling your locos
 - Easy to use through your locomotive list

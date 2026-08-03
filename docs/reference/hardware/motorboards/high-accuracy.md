@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -113,11 +113,10 @@ take a single PWM signal from your Command Station, split it in two, and
 provide the inverted signal to the second PWM pin on 2 signal input
 motor drivers.
 
-![](/_static/images/motorboards/inverter1.jpg){alt="Transistor inverter circuit"}
+![](/_static/images/motorboards/inverter1.jpg)
 
 You will also have to make sure that you use a motor board definition
 that uses pin 11, 12, or 13 for the output signal on a Mega, or pin 9 or
 10 for an Uno or Nano. For information about how to do this, see the
 section on
-`Creating a motor board definition <reference/hardware/motorboards/motor-board-config:If Your Board is in the Supported List>`{.interpreted-text
-role="ref"}.
+`Creating a motor board definition <reference/hardware/motorboards/motor-board-config:If Your Board is in the Supported List>`.

@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -15,9 +15,8 @@ This page aims to outline what\'s required for those who wish to
 contribute to software development.
 
 If you haven\'t done so already, make sure you are familiar with how we
-use `/about/contributing/github`{.interpreted-text role="doc"} and are
-familiar with our `/about/contributing/software`{.interpreted-text
-role="doc"}.
+use `/about/contributing/github` and are
+familiar with our `/about/contributing/software`.
 
 ## Bug fixes, features, and releases
 

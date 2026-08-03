@@ -1,13 +1,13 @@
-::: {.meta keywords="Complexity Levels Conductor Tinkerer Engineer"}
+::: 
 :::
 
 \|donate-button\|
 
 # Ready-to-Run or Do-It-Yourself - Choose your Level
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -37,36 +37,33 @@ the levels below and see which one you most identify with. (A
 
 ## Levels of Difficulty or Technical Complexity
 
-![Conductor Hat](/_static/images/level_icons/conductor-level.png){.align-right}
+![Conductor Hat](/_static/images/level_icons/conductor-level.png)
 
 ### Conductor
 
 \|force-break\|
 
   --------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------
-  ![Conductor Hat](/_static/images/level_icons/conductor.png){.image-min-width-72   **The \'simple\' path** \|BR\| \|BR\| A \|Conductor-text\|, for the most part, just wants to enjoy operating trains. \|BR\|
-  .image-min-width-72 width="144px"}                                                You could be someone new to trains or picking it up after a long absence, or you could be someone coming from running
+  ![Conductor Hat](/_static/images/level_icons/conductor.png)                                                You could be someone new to trains or picking it up after a long absence, or you could be someone coming from running
                                                                                     \|DC\| and looking to switch over to \|DCC\|. This is also the perfect place for someone who just wants something that
                                                                                     works without much tinkering. In short, a \|Conductor-text\| wants to drive trains and doesn\'t want to have to deal with
                                                                                     the details of the hardware or software involved. \|BR\| \|BR\| We\'ll show you how to purchase a ready-to-run (RTR)
                                                                                     Command Station or put one together from parts and use a free Throttle (Controller) to run trains. We\'ll have you up and
                                                                                     running in just a few minutes. This path will keep things simple. \|BR\| \|BR\| We recommend that you
-                                                                                    `start Here and choose either the ready-to-run (RTR) or DIY Command Station </ex-commandstation/index>`{.interpreted-text
-                                                                                    role="doc"}.
+                                                                                    `start Here and choose either the ready-to-run (RTR) or DIY Command Station </ex-commandstation/index>`.
 
   --------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------
 
-![Propeller Beanie](/_static/images/level_icons/tinkerer-level.png){.align-right}
+![Propeller Beanie](/_static/images/level_icons/tinkerer-level.png)
 
 ### Tinkerer
 
 \|force-break\|
 
   ----------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------
-  ![Propeller Beanie](/_static/images/level_icons/tinkerer.png){.image-min-width-72   **The \'a bit more complex\' path** \|BR\| \|BR\| A \|Tinkerer-text\| likes the joy of building things
-  .image-min-width-72 width="144px"}                                                  themselves. \|BR\| They may not have an Engineering Degree, but they know how to connect a jumper wire
+  ![Propeller Beanie](/_static/images/level_icons/tinkerer.png)                                                  themselves. \|BR\| They may not have an Engineering Degree, but they know how to connect a jumper wire
                                                                                       and possibly use a soldering iron. They don\'t have a problem opening something like the \|Arduino
                                                                                       IDE\| to change settings in a configuration file and upload it back to their Command Station. A
                                                                                       Tinkerer wants to do more with model trains, like using different motor drivers or getting into more
@@ -74,23 +71,21 @@ the levels below and see which one you most identify with. (A
                                                                                       provide more options over the Conductor path, and cover things like expanding your system and using the
                                                                                       \|JMRI\| software (Java Model Railroad Interface) for more advanced control of your locomotives and
                                                                                       your track. \|BR\| \|BR\| We also recommend that you
-                                                                                      `start here to purchase or build your EX-CommandStation </ex-commandstation/index>`{.interpreted-text
-                                                                                      role="doc"} if you have not already done so, but look out for the \|Tinkerer-text\| notes on the pages
+                                                                                      `start here to purchase or build your EX-CommandStation </ex-commandstation/index>` if you have not already done so, but look out for the \|Tinkerer-text\| notes on the pages
                                                                                       to see other options.
 
   ----------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------
 
-![Engineer Hat](/_static/images/level_icons/engineer-level.png){.align-right}
+![Engineer Hat](/_static/images/level_icons/engineer-level.png)
 
 ### Engineer
 
 \|force-break\|
 
   ------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------
-  ![Engineer Hat](/_static/images/level_icons/engineer.png){.image-min-width-72   **The \'highly technical\' path** \|BR\| \|BR\| An \|Engineer-text\| is a little more versed in
-  .image-min-width-72 width="144px"}                                              computers and/or electronics. \|BR\| They have a desire to dig a little deeper into how things
+  ![Engineer Hat](/_static/images/level_icons/engineer.png)                                              computers and/or electronics. \|BR\| They have a desire to dig a little deeper into how things
                                                                                   work. They can understand the basics of computer code and can look at the \|DCC-EX\| software and
                                                                                   perhaps make simple changes to user files. They may also want to help with offering their talents
                                                                                   to the project! They are not averse to experimenting with things to make something work. These are
@@ -98,8 +93,7 @@ the levels below and see which one you most identify with. (A
                                                                                   benchwork. \|BR\| \|BR\| This path will offer more technical information and cover more in depth
                                                                                   topics like accessory control, sensors, and customizing the \|EX-CS\|. \|BR\| \|BR\| We also
                                                                                   recommend that you
-                                                                                  `start here to buy or build your EX-CommandStation </ex-commandstation/index>`{.interpreted-text
-                                                                                  role="doc"} if you have not already done so, but look out for the \|Tinkerer-text\| and
+                                                                                  `start here to buy or build your EX-CommandStation </ex-commandstation/index>` if you have not already done so, but look out for the \|Tinkerer-text\| and
                                                                                   \|Engineer-text\| notes on the pages to see other options.
 
   ------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------
@@ -113,8 +107,7 @@ Keep these definitions in mind as you proceed through this website.
 To learn more about how to buy a *ready-to-run (RTR)* or build your own
 *do-it-yourself (DIY)* \|EX-CS\| station, click \'Next\' or proceed to
 the
-`Ex-Command Station Page </ex-commandstation/index>`{.interpreted-text
-role="doc"}.
+`Ex-Command Station Page </ex-commandstation/index>`.
 
 ------------------------------------------------------------------------
 

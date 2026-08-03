@@ -2,7 +2,7 @@
 
 \|conductor\| \|tinkerer\| \|engineer\|
 
-![Signal Cab Logo](/_static/images/throttles/signal_cab_logo.png){.align-left}
+![Signal Cab Logo](/_static/images/throttles/signal_cab_logo.png)
 
 [Signal Cab](https://signalcab.com) \|EXTERNAL-LINK\| is a modern DCC
 controller for iPhone and iPad, built by model railroaders for model
@@ -12,7 +12,7 @@ decoders, and control track power, all from your iOS device.
 
 Please visit their website: <https://signalcab.com> \|EXTERNAL-LINK\|
 
-## Features {#signal-cab-features}
+## Features 
 
 **Throttle & Control**
 
@@ -79,10 +79,9 @@ Please visit their website: <https://signalcab.com> \|EXTERNAL-LINK\|
 - Tactile haptic feedback on the throttle
 - Designed for iPhone and iPad
 
-## Requirements {#signal-cab-requirements}
+## Requirements 
 
 - An \|EX-CS\| with WiFi enabled
 - An iOS device (iPhone or iPad) running iOS 15 or later
 - WiFi connectivity --- see
-  `Wifi Setup </ex-commandstation/diy/wifi-setup>`{.interpreted-text
-  role="doc"}
+  `Wifi Setup </ex-commandstation/diy/wifi-setup>`

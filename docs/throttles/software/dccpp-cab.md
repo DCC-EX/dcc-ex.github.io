@@ -2,14 +2,14 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
 
-![Android Logo](/_static/images/throttles/icon_android.png){.align-left}
+![Android Logo](/_static/images/throttles/icon_android.png)
 
 This is an Android App (with plans for iOS) from Spain. One of the major
 benefits of DCCpp CAB is that it speaks the \|DCC-EX Native Commands\|
@@ -24,7 +24,7 @@ And the website here: [DCCpp Android Cab Infotrokik
 Blog](http://lamaquetade.infotronikblog.com/dccppcab/dccppcab_index.html)
 \|EXTERNAL-LINK\|
 
-## Features {#dccpp-features}
+## Features 
 
 - Speaks the \|DCC-EX Native Commands\| natively
 - Connect via WiFi *or* Bluetooth
@@ -33,26 +33,25 @@ Blog](http://lamaquetade.infotronikblog.com/dccppcab/dccppcab_index.html)
 
 ## Screenshots
 
-![Dccpp CAB Screenshot 2](/_static/images/throttles/dccpp2.jpg){.align-left}
+![Dccpp CAB Screenshot 2](/_static/images/throttles/dccpp2.jpg)
 
-![Dccpp CAB Screenshot 3](/_static/images/throttles/dccpp3.jpg){.align-left}
+![Dccpp CAB Screenshot 3](/_static/images/throttles/dccpp3.jpg)
 
 ::: rst-class
 clearer
 :::
 
-## Requirements {#dccpp-requirements}
+## Requirements 
 
 - A \|EX-CS\| (Mega based for WiFi or Mega or Uno/Nano based for
   Bluetooth)
 - An Android Cell Phone or Tablet
 - A WiFi Shield (or other ESP8622 solution) if you want to connect using
   WiFi
-  `Wifi Setup Page </ex-commandstation/diy/wifi-setup>`{.interpreted-text
-  role="doc"}
+  `Wifi Setup Page </ex-commandstation/diy/wifi-setup>`
 - An HC-06 Board if you want to connect using Bluetooth
 
-## Operation {#dccpp-operation}
+## Operation 
 
 :!!! note "::: title
 Note"
@@ -66,8 +65,7 @@ will work with the Bluetooth connection.
 
 To use WiFi, make sure you have a WiFi enabled Command Station as
 described in the
-`Wifi Setup </ex-commandstation/diy/wifi-setup>`{.interpreted-text
-role="doc"} section.
+`Wifi Setup </ex-commandstation/diy/wifi-setup>` section.
 
 We have not tested the WiFi implementation yet
 

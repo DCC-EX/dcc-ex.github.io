@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -35,15 +35,14 @@ Tip"
 
 In preparation for adding an \|EX-TT\| to your layout, you\'ll need to
 understand the concepts outlined on the
-`/ex-turntable/overview`{.interpreted-text role="doc"} page, paying
+`/ex-turntable/overview` page, paying
 particular attention to the section on polarity or phase switching
-(`ex-turntable/overview:important! phase (or polarity) switching`{.interpreted-text
-role="ref"}), as we will be using automatic phase switching for the
+(`ex-turntable/overview:important! phase (or polarity) switching`), as we will be using automatic phase switching for the
 turntable.
 
 Further to this, you\'ll also need to understand the differences
 required for traverser mode as outlined on the
-`/ex-turntable/traverser`{.interpreted-text role="doc"} page. We will
+`/ex-turntable/traverser` page. We will
 not require phase switching for the traverser, as any locos on the
 traverser will not be rotating 180 degrees.
 
@@ -91,12 +90,10 @@ device drivers with the correct configuration to our \|EX-CS\|.
 *For the purposes of this exercise, we will assume:*
 
 - Everything needed from the
-  `/ex-turntable/purchasing`{.interpreted-text role="doc"} page is
+  `/ex-turntable/purchasing` page is
   available
 - All steps up to and including
-  `ex-turntable/assembly:7. load the ex-turntable software`{.interpreted-text
-  role="ref"} on the `/ex-turntable/assembly`{.interpreted-text
-  role="doc"} page have been completed
+  `ex-turntable/assembly:7. load the ex-turntable software` on the `/ex-turntable/assembly` page have been completed
 
 At this point, based on the assumptions above, our \|EX-TT\| should be
 configured ready to add to our \|EX-CS\|.
@@ -131,15 +128,13 @@ be added to our \|EX-CS\|, we need to get it connected ready for action.
 
 Firstly, our \|EX-CS\| needs to be prepared by ensuring the \|EX-TT\|
 device driver is loaded. This is covered in
-`ex-turntable/assembly:8. add the ex-turntable device driver to ex-commandstation`{.interpreted-text
-role="ref"}.
+`ex-turntable/assembly:8. add the ex-turntable device driver to ex-commandstation`.
 
 Next, we need to connect \|EX-TT\| to our \|EX-CS\| which requires a
 connection to the \|I2C\| interface, and it\'s a good idea to make sure
 \|EX-TT\| is turned on before \|EX-CS\| to ensure it\'s detected
 successfully at startup. This is covered in
-`ex-turntable/assembly:9. connect ex-turntable to your ex-commandstation`{.interpreted-text
-role="ref"}.
+`ex-turntable/assembly:9. connect ex-turntable to your ex-commandstation`.
 
 Expand \"myHal.cpp\" to see the \|EX-CS\| HAL configuration file
 required to add the turntable.
@@ -156,13 +151,7 @@ required to add the turntable.
 
 //==========================================================================
 // The function halSetup() is invoked from CS if it exists within the build.
-// The setup calls are included between the open and close braces "{ .
-// Comments (lines preceded by "//") are optional.
-//==========================================================================
-
-void halSetup() {
-  EXTurntable::create(600, 1, 0x60);
-}
+// The setup calls are included between the open and close braces "
 
 #endif
 ```
@@ -172,8 +161,7 @@ void halSetup() {
 
 Once we have prepared our \|EX-CS\| and connected \|EX-TT\|, they then
 need to be turned on with the connection validated as per
-`ex-turntable/test-and-tune:testing ex-turntable`{.interpreted-text
-role="ref"}.
+`ex-turntable/test-and-tune:testing ex-turntable`.
 
 Now, we are ready to move on to adding the traverser, then tuning the
 positions for both.
@@ -183,16 +171,13 @@ positions for both.
 *For the purposes of this exercise, we will assume:*
 
 - Everything needed from the
-  `/ex-turntable/purchasing`{.interpreted-text role="doc"} page
+  `/ex-turntable/purchasing` page
   including the considerations as outlined in
-  `ex-turntable/traverser:what you need for traverser mode`{.interpreted-text
-  role="ref"} is available
+  `ex-turntable/traverser:what you need for traverser mode` is available
 - All steps up to and including
-  `ex-turntable/assembly:6. connect power and test`{.interpreted-text
-  role="ref"} on the `/ex-turntable/assembly`{.interpreted-text
-  role="doc"} page have been completed
+  `ex-turntable/assembly:6. connect power and test` on the `/ex-turntable/assembly` page have been completed
 - All changes required as outlined on the
-  `/ex-turntable/traverser`{.interpreted-text role="doc"} page have been
+  `/ex-turntable/traverser` page have been
   taken into account
 
 :!!! tip "::: title
@@ -200,8 +185,7 @@ Tip"
 :::
 
 It is highly recommended to make use of the
-`ex-turntable/traverser:sensor testing mode`{.interpreted-text
-role="ref"} to validate both the home and limit sensors are working
+`ex-turntable/traverser:sensor testing mode` to validate both the home and limit sensors are working
 correctly when in traverser mode.
 ::::
 
@@ -215,8 +199,7 @@ To achieve this, we will be using the \|I2C\| address `0x61` and will be
 assigning the Vpin `601`.
 
 So, in order to complete
-`ex-turntable/assembly:7. load the ex-turntable software`{.interpreted-text
-role="ref"}, the value for `I2C_ADDRESS` in the \"config.h\" file needs
+`ex-turntable/assembly:7. load the ex-turntable software`, the value for `I2C_ADDRESS` in the \"config.h\" file needs
 to be changed to `0x61`, and of course the `TURNTABLE_EX_MODE` needs to
 be set to `TRAVERSER`.
 
@@ -224,8 +207,7 @@ As we are continuing to use the default ULN2003/28BYJ-48 stepper driver
 and motor combo for our traverser, nothing else needs to change.
 
 Once we have noted these changes, we can proceed with
-`ex-turntable/assembly:7. load the ex-turntable software`{.interpreted-text
-role="ref"}, using the updated values in the \"config.h\" file.
+`ex-turntable/assembly:7. load the ex-turntable software`, using the updated values in the \"config.h\" file.
 
 Expand \"config.h\" to see the \|EX-TT\| configuration file for the
 traverser, noting we have removed all comments for brevity.
@@ -259,8 +241,7 @@ the turntable.
 
 As per the turntable section, these changes need to be incorporated into
 the process outlined in
-`ex-turntable/assembly:8. add the ex-turntable device driver to ex-commandstation`{.interpreted-text
-role="ref"} in order to add the traverser device driver to our
+`ex-turntable/assembly:8. add the ex-turntable device driver to ex-commandstation` in order to add the traverser device driver to our
 \|EX-CS\|.
 
 Expand \"myHal.cpp\" to see the \|EX-CS\| HAL configuration file
@@ -278,14 +259,7 @@ required to add both the turntable and traverser.
 
 //==========================================================================
 // The function halSetup() is invoked from CS if it exists within the build.
-// The setup calls are included between the open and close braces "{ .
-// Comments (lines preceded by "//") are optional.
-//==========================================================================
-
-void halSetup() {
-  EXTurntable::create(600, 1, 0x60);  // This is our turntable device
-  EXTurntable::create(601, 1, 0x61);  // This is our traverser device
-}
+// The setup calls are included between the open and close braces "
 
 #endif
 ```
@@ -295,8 +269,7 @@ void halSetup() {
 
 Once we have prepared our \|EX-CS\| and connected \|EX-TT\|, they then
 need to be turned on with the connection validated as per
-`ex-turntable/test-and-tune:testing ex-turntable`{.interpreted-text
-role="ref"}.
+`ex-turntable/test-and-tune:testing ex-turntable`.
 
 Now, we are ready to move on to tuning the positions.
 
@@ -312,13 +285,11 @@ Note"
 
 When tuning positions, you can use the `<D TT vpin steps activity>`
 diagnostic command as outlined in
-`ex-turntable/test-and-tune:tuning your turntable positions`{.interpreted-text
-role="ref"} to test and refine these for perfect track alignment between
+`ex-turntable/test-and-tune:tuning your turntable positions` to test and refine these for perfect track alignment between
 the turntable bridge track and the surrounding tracks. You can also use
 the direct EX-Turntable serial testing command `<M steps activity>` as
 covered in
-`ex-turntable/test-and-tune:ex-turntable interactive serial console commands`{.interpreted-text
-role="ref"}.
+`ex-turntable/test-and-tune:ex-turntable interactive serial console commands`.
 
 We will be using the same steps per revolution number throughout this
 page (4097) for both the turntable and traverser, and are keeping this
@@ -341,8 +312,7 @@ Before attempting any tuning, the first thing we need to obtain is the
 steps per revolution for both our turntable and traverser.
 
 Ideally these should have been noted in
-`ex-turntable/assembly:7. load the ex-turntable software`{.interpreted-text
-role="ref"}, however this value can also be obtained by monitoring the
+`ex-turntable/assembly:7. load the ex-turntable software`, however this value can also be obtained by monitoring the
 \|EX-TT\| serial console on startup where the steps per revolution are
 reported along with the other configuration details.
 
@@ -378,10 +348,8 @@ Tip"
 It\'s a great idea at this point to understand the importance of DCC
 phase/polarity and how switching/reversing it works with \|EX-TT\|.
 Refer to
-`ex-turntable/overview:important! phase (or polarity) switching`{.interpreted-text
-role="ref"} and
-`ex-turntable/overview:how does this work with ex-turntable?`{.interpreted-text
-role="ref"} for details.
+`ex-turntable/overview:important! phase (or polarity) switching` and
+`ex-turntable/overview:how does this work with ex-turntable?` for details.
 ::::
 
 :!!! note "::: title
@@ -474,8 +442,7 @@ area representing the 180 degrees in which the phase will be inverted.
 
 This means, for our turntable \|EX-TT\|, we will need to update
 \"config.h\" and repeat
-`ex-turntable/assembly:7. load the ex-turntable software`{.interpreted-text
-role="ref"}.
+`ex-turntable/assembly:7. load the ex-turntable software`.
 
 Expand \"config.h\" to see the updated \|EX-TT\| configuration file for
 the turntable, noting we have removed all comments for brevity.
@@ -508,8 +475,7 @@ Since we know the angles of our positions as outlined when considering
 our DCC phase switching, we can now calculate the step counts required
 for the turntable bridge to align with these positions. We will use the
 formula outlined in
-`ex-turntable/test-and-tune:determine the positions`{.interpreted-text
-role="ref"} to calculate these step counts (full rotation step count /
+`ex-turntable/test-and-tune:determine the positions` to calculate these step counts (full rotation step count /
 360 degrees \* position in degrees).
 
 Using this formula results in these step counts (noting we round up or
@@ -532,10 +498,9 @@ Tip"
 :::
 
 Now is a great time to revisit the
-`/ex-turntable/traverser`{.interpreted-text role="doc"} page, and in
+`/ex-turntable/traverser` page, and in
 particular the section on
-`ex-turntable/traverser:considerations - turntable vs. traverser`{.interpreted-text
-role="ref"}.
+`ex-turntable/traverser:considerations - turntable vs. traverser`.
 ::::
 
 One key item to note with a traverser vs. a turntable is that we don\'t
@@ -651,8 +616,7 @@ a route definition that is advertised to \|wiThrottle\| apps and
 route from the route list, and \|EX-R\| and \|EX-TT\| will do their
 things, rotating or moving to the provided position. This is also
 covered in
-`ex-turntable/test-and-tune:advertising positions to engine driver and WiThrottle applications`{.interpreted-text
-role="ref"}.
+`ex-turntable/test-and-tune:advertising positions to engine driver and WiThrottle applications`.
 
 Controlling your \|EX-TT\| this way also allows you to incorporate other
 automated activities associated with turntable or traverser movements,
@@ -774,6 +738,6 @@ traverser mode added as well.
 As per our our \|EX-R\| routes explanation, these are based on the
 \"myEX-Turntable.example.h\" included with the \|EX-CS\| software.
 
-::: {.toctree maxdepth="1"}
+::: 
 stage5/turntable-example stage5/traverser-example
 :::

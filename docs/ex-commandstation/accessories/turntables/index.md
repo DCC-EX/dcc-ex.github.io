@@ -21,9 +21,5 @@ yards.
 Read on through these pages to understand how turntables and traversers
 can be integrated into and operated with your \|EX-CS\|.
 
-::: {.toctree maxdepth="1
-
-overview
-dcc-turntables
-/ex-turntable/index"}
+::: 
 :::

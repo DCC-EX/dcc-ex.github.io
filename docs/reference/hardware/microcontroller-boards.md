@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -18,7 +18,7 @@ compatible microcontrollers, and some ARM based boards such as the
 Teensy range. Out of the box, it is compatible with the following
 boards:
 
-::: {.toctree maxdepth="1"}
+::: 
 /reference/hardware/microcontrollers/arduino-mega
 /reference/hardware/microcontrollers/esp32
 /reference/hardware/microcontrollers/stm32-nucleo
@@ -48,7 +48,7 @@ the Mega2560 and the newer generation ESP32 and STMicroelectronics
 Nucleo, so we\'re not looking to add more in the immediate future.
 
 Note the Arduino Giga and Arduino Uno R4 are still not on our roadmap as
-per our `/news/posts/20230728`{.interpreted-text role="doc"} News
+per our `/news/posts/20230728` News
 announcement.
 
 ## Notes on 3v3 vs 5V microcontrollers
@@ -112,10 +112,9 @@ ports and more GPIO pins and are just a better way to go for the future.
 **Arduino Uno R4** - Despite the name, this is not simply a new release
 of the tried and true Arduino Uno platform, and is a major redesign
 using a totally different CPU architecture and is expensive. Refer to
-the `/news/posts/20230728`{.interpreted-text role="doc"} News article.
+the `/news/posts/20230728` News article.
 
 **Arduino Giga** - Like the above Uno R4, this is not just an enhanced
 version of our recommended Arduino Mega2560 but rather an entirely new
 (and also very expensive) board that just happens to share the same
-footprint. Refer to the `/news/posts/20230728`{.interpreted-text
-role="doc"} News article.
+footprint. Refer to the `/news/posts/20230728` News article.

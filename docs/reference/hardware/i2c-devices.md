@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -24,17 +24,16 @@ There are various drivers already available for you to use:
 
 - \|I2C\|-connected Displays (LCD, OLED);
 - support for
-  `multiple LCD/OLED displays <reference/hardware/i2c-displays:configuring additional displays>`{.interpreted-text
-  role="ref"};
+  `multiple LCD/OLED displays <reference/hardware/i2c-displays:configuring additional displays>`;
 - \|I2C\|-connected GPIO Expanders (MCP23017, MPC23008, PCF8574);
 - \|I2C\|-connected Servo Controller (PCA9685);
 - \|I2C\|-connected laser proximity detector (Time-of-Flight) (VL53L0X);
 - \|I2C\|-connected Analogue input modules (ADS111x);
-- `/reference/hardware/i2c-multiplexers`{.interpreted-text role="doc"}
+- `/reference/hardware/i2c-multiplexers`
   support (TCA9547, TCA9548);
 - Serial-port-connected DFPlayer MP3 player;
 - Ultrasound proximity detector (HC-SR04);
-- `/ex-ioexpander/index`{.interpreted-text role="doc"}
+- `/ex-ioexpander/index`
 
 and others.
 
@@ -190,7 +189,7 @@ configure is sitting on a port of a multiplexer. Don\'t worry though if
 you\'re not using a multiplexer because all your old configurations will
 continue to work as is.
 
-See `/reference/hardware/i2c-multiplexers`{.interpreted-text role="doc"}
+See `/reference/hardware/i2c-multiplexers`
 for information on how to use these devices.
 
 ## Connector Styles
@@ -228,7 +227,7 @@ connectors, they are a different size and are not interchangeable.
 
 ![From left-to-right, JST-XH connectors, Dupont connector shells, Dupont
 cable, and Grove converter
-cable.](/_static/images/i2c/connectors.jpg){alt="JST-XH, Dupont, and Grove connectors"}
+cable.](/_static/images/i2c/connectors.jpg)
 
 Newer microcontrollers are using miniature JST-PH fine-pitch STEMMA QT
 or Qwiic standard for \|I2C\| connection for 3.3v based systems. These
@@ -257,7 +256,7 @@ for example the \|Standard motor driver\| and the DeekRobot equivalent.
 The header pins are labelled, and are ringed in the images below.
 
 ![Motor Shield \|I2C\|
-pins](/_static/images/i2c/deek_robot.jpg){alt="Motor shield |I2C| pins"}
+pins](/_static/images/i2c/deek_robot.jpg)
 
 The next image shows an Arduino Mega and Deekrobot motor shield mounted
 in a 3D-printed 6-inch rack case, with one set of \|I2C\| pins connected
@@ -269,7 +268,7 @@ DCC power to the Main and Programming tracks. I\'ve also mounted a small
 self-adhesive aluminium heat sink onto the L298P device.
 
 ![Motor Shield \|I2C\|
-pins](/_static/images/i2c/deekrobot_motor_shield.jpg){alt="Motor shield |I2C| pins"}
+pins](/_static/images/i2c/deekrobot_motor_shield.jpg)
 
 \|I2C\| devices are all effectively connected in parallel to the bus. If
 you only have one device, you can just run a four-wire connector between
@@ -279,10 +278,10 @@ Vcc to Vcc and GND to GND though - they are almost always in a different
 order on each device!
 
 ![Connecting an OLED Display to an Arduino
-Mega](/_static/images/i2c/ArduinoMegaOLED.png){alt="Arduino Mega with OLED Display"}
+Mega](/_static/images/i2c/ArduinoMegaOLED.png)
 
 ![Connecting a PCA9685 Servo Controller to an Arduino
-Mega](/_static/images/i2c/ArduinoMegaServo.png){alt="Arduino Mega with one servo controllers"}
+Mega](/_static/images/i2c/ArduinoMegaServo.png)
 
 If you have more than one device, then there are a few options open to
 you. Some modules (PCA9685 and PCF8574 for example) have \|I2C\| pins at
@@ -292,7 +291,7 @@ multiple devices, subject to the restrictions described in sections for
 Cabling and Pull-ups.
 
 ![Connecting Two Servo
-Controllers](/_static/images/i2c/ArduinoMega2xServo.png){alt="Arduino Mega with two servo controllers"}
+Controllers](/_static/images/i2c/ArduinoMega2xServo.png)
 
 Alternatively, you can use an \|I2C\| hub, which you can purchase
 ([SeeedStudio do one](https://www.seeedstudio.com/Grove-I2C-Hub.html),
@@ -314,14 +313,14 @@ four-way socket header connected in parallel, into which an OLED display
 is fitted for testing.
 
 ![Home-brew \|I2C\| Hub, on Vero Stripboard (strips running
-left-to-right)](/_static/images/i2c/i2chub.jpg){alt="Home-brew |I2C| Passive Hub"}
+left-to-right)](/_static/images/i2c/i2chub.jpg)
 
 If you just want a temporary hookup for multiple \|I2C\| devices, then
 you can use a small piece of breadboard. The board shown has space for
 five Dupont connectors in each half row.
 
 ![\|I2C\| Hub on
-Breadboard](/_static/images/i2c/breadboard-hub.jpg){alt="Bread-board based |I2C| Passive Hub"}
+Breadboard](/_static/images/i2c/breadboard-hub.jpg)
 
 ## Pull-ups
 
@@ -362,10 +361,10 @@ As examples of where to find the pull-up resistors, take a look at the
 figures below:
 
 ![Location of Pull-up Resistors for PCA9685 Module (ringed in
-red)](/_static/images/i2c/pca9685_pullups.jpg){alt="PCA9685 pull-up resistors"}
+red)](/_static/images/i2c/pca9685_pullups.jpg)
 
 ![Location of Pull-up Resistors for PCF8574 Module (ringed in
-red)](/_static/images/i2c/pcf8574_pullups.jpg){alt="PCF8574 pull-up resistors"}
+red)](/_static/images/i2c/pcf8574_pullups.jpg)
 
 Check the PCB tracks from the SDA and SCL pin connectors; one side of
 each resistors will be connected to one of these, and the other side of

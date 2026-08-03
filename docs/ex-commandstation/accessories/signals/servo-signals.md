@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -63,8 +63,7 @@ connected to the first row of headers on the PCA9685 module, using the
 \"Bounce\" profile.
 
 For more information on servo modules and servos, refer to the
-information on the `/reference/hardware/servo-module`{.interpreted-text
-role="doc"} page.
+information on the `/reference/hardware/servo-module` page.
 
 ### What if I don\'t have three aspect signals?
 
@@ -92,12 +91,10 @@ flexible piano wire.
 ![Servo mount to operate a Semaphore Signal](/_static/images/i2c/SemaphoreSignal.jpg)
 
 For more information on servo modules and servos, refer to the
-information on the `/reference/hardware/servo-module`{.interpreted-text
-role="doc"} page.
+information on the `/reference/hardware/servo-module` page.
 
 ## Controlling semaphore or servo signals
 
 Controlling semaphore/servo signals is exactly the same as light
 signals, skip to
-`/ex-commandstation/accessories/signals/signal-control`{.interpreted-text
-role="doc"} for information on controlling signals.
+`/ex-commandstation/accessories/signals/signal-control` for information on controlling signals.

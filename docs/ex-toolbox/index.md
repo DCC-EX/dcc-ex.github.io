@@ -7,7 +7,7 @@
 Welcome to the home of \|EX-TB\|, an Android app to help setup and
 configure your \|EX-CS\|.
 
-![EX-Toolbox](/_static/images/ex-toolbox/ex_toolbox_icon.png){.align-right}
+![EX-Toolbox](/_static/images/ex-toolbox/ex_toolbox_icon.png)
 
 \|EX-TB\| is a standalone android app that can:
 
@@ -24,7 +24,7 @@ configure your \|EX-CS\|.
 - NeoPixel Setup
 - WiFi setup ( \|EX-CS\| version 5.7.0 and later)
 
-::: {.toctree maxdepth="1"}
+::: 
 overview using
 :::
 

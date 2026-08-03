@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -14,13 +14,12 @@ On this page
 Sometimes, you may want to configure your \|EX-CS\| with settings which
 are not otherwise saved by the Command Station when restarted. For
 example the
-`ACK min <reference/tools/diagnostic-d-ack-command:\<D ACK LIMIT mA\>>`{.interpreted-text
-role="ref"} for the Hornby R7150 Decoder (which seemed to need its
-minimum ACK pulse duration limit set to [2600µS]{.title-ref} to be
+`ACK min <reference/tools/diagnostic-d-ack-command:\<D ACK LIMIT mA\>>` for the Hornby R7150 Decoder (which seemed to need its
+minimum ACK pulse duration limit set to [2600µS] to be
 recognised).
 
 To automatically run commands at start up, you can create a new file
-called [mySetup.h]{.title-ref} to contain these commands.
+called [mySetup.h] to contain these commands.
 
 How you create the file will depend on how you load the \|EX-CS\|
 software onto your Arduino.
@@ -32,22 +31,22 @@ software onto your Arduino.
 
 ## If you are using EX-Installer
 
-You need to create a text file in the [CommandStation-EX]{.title-ref}
+You need to create a text file in the [CommandStation-EX]
 folder below where you uncompressed the \|EX-I\| files, and rename it to
-[mySetup.h]{.title-ref}
+[mySetup.h]
 
 For example, in Microsoft Windows:
 
-- Open the [File Explorer]{.title-ref} app
+- Open the [File Explorer] app
 - Navigate to where you unzipped the \|EX-I\| files that you downloaded
   from this site.
-- Open the [CommandStation-EX]{.title-ref} sub-folder
+- Open the [CommandStation-EX] sub-folder
 - In the \'Home\' tab, click `New Item` and then `Text Document`
-- Replace the name with [mySetup.h]{.title-ref} and press `Enter` It
+- Replace the name with [mySetup.h] and press `Enter` It
   will warn you about chnaging the extension (the bit after the \'.\').
   Click `yes`.
 - \[Right click\] on the new file, and select
-  `Open With --> Notepad`{.interpreted-text role="menuselection"}
+  `Open With --> Notepad`
 - The file will open in the \'Notepad\' app
 - Enter the commands you need to perform. For Example:
 
@@ -55,18 +54,18 @@ For example, in Microsoft Windows:
 SETUP("<1>");  // Turn track power on at startup
 ```
 
-- Select `File --> Exit`{.interpreted-text role="menuselection"}. \|BR\|
+- Select `File --> Exit`. \|BR\|
   It will ask you the save the file. Click `Save`
 - You now need to upload the software using the \|EX-I\| just the same
   as you originally did (
-  `/ex-commandstation/installer-diy`{.interpreted-text role="doc"})
+  `/ex-commandstation/installer-diy`)
 
 See examples and information below for adding multiple instructions to
-[mySetup.h]{.title-ref}.
+[mySetup.h].
 
-If you need to change the [mySetup.h]{.title-ref} later, simply find the
+If you need to change the [mySetup.h] later, simply find the
 file you created above, then \[Right click\] on it, and select
-`Open With --> Notepad`{.interpreted-text role="menuselection"}. Then
+`Open With --> Notepad`. Then
 follow the remaining steps.
 
 ------------------------------------------------------------------------
@@ -74,8 +73,7 @@ follow the remaining steps.
 ## If you are using the Arduino IDE
 
 This will need to be done in the
-`/ex-commandstation/advanced-setup/installation-options/arduino-ide`{.interpreted-text
-role="doc"}, so first make sure you have followed these steps to load up
+`/ex-commandstation/advanced-setup/installation-options/arduino-ide`, so first make sure you have followed these steps to load up
 the \|Arduino IDE\|.
 
 :::: important
@@ -98,21 +96,20 @@ The \|EX-I\| will meet 100% of the needs of a \|conductor-text\| or
 ### Create a new tab
 
 First you will need to add a new file, just like the
-`config.h file <ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)>`{.interpreted-text
-role="ref"}. Create a new tab using the following menu option.
+`config.h file <ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)>`. Create a new tab using the following menu option.
 
 ![Creating a new tab in the Arduino
-IDE](/_static/images/arduino-ide/arduino_ide_newtab.jpg){alt="Arduino IDE New Tab"}
+IDE](/_static/images/arduino-ide/arduino_ide_newtab.jpg)
 
 ### Creating the mySetup.h file
 
 At the bottom of the \|Arduino IDE\| window, a yellow bar will appear
-asking for a [Name for new file]{.title-ref}, here make sure to enter
+asking for a [Name for new file], here make sure to enter
 `mySetup.h` (case sensitive, so upper case S in setup) and click `OK` to
 create the new file.
 
 ![Choosing a file name for the new
-file](/_static/images/arduino-ide/arduino_ide_mysetup.jpg){alt="Arduino IDE New Tab"}
+file](/_static/images/arduino-ide/arduino_ide_mysetup.jpg)
 
 ### Adding in the startup commands
 
@@ -125,7 +122,7 @@ up:
 <D ACK MIN 2600>
 ```
 
-Then you would need to enter into the [mySetup.h]{.title-ref} file:
+Then you would need to enter into the [mySetup.h] file:
 
 ``` cpp
 SETUP("<D ACK MIN 2600>");
@@ -154,8 +151,7 @@ it easier to remember why you added these start up commands.
 
 Finally, upload the code to the Arduino as you would do during the
 standard
-`Arduino IDE Setup <ex-commandstation/advanced-setup/installation-options/arduino-ide:Upload the software>`{.interpreted-text
-role="ref"}. Restart the Command Station and these commands will have
+`Arduino IDE Setup <ex-commandstation/advanced-setup/installation-options/arduino-ide:Upload the software>`. Restart the Command Station and these commands will have
 run at start up.
 
 ------------------------------------------------------------------------
@@ -164,7 +160,7 @@ run at start up.
 
 ### Automatically Turning Track Power on at Startup
 
-Adding this line to [mySetup.h]{.title-ref} will cause the track power
+Adding this line to [mySetup.h] will cause the track power
 to turn on automatically when the \|EX-CS\| powers up.
 
 ``` cpp

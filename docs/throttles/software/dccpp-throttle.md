@@ -2,14 +2,14 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
 
-![Android Logo](/_static/images/throttles/icon_android.png){.align-left}
+![Android Logo](/_static/images/throttles/icon_android.png)
 
 Application to drive DCC-EX command station via Bluetooth Rich set of
 features to control model railroad layout: - Locomotives library and

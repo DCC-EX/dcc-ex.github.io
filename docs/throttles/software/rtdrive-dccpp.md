@@ -2,7 +2,7 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-![Android Logo](/_static/images/throttles/icon_android.png){.align-left}
+![Android Logo](/_static/images/throttles/icon_android.png)
 
 [ANDROID - Get it from the Google Play
 Store](https://play.google.com/store/apps/details?id=net.rt2c.rtdrivedcc&hl=en_AU&gl=US)

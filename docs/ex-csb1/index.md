@@ -10,7 +10,7 @@ EXCSB1, EX-CSB1
 
 :::: sidebar
 
-::: {.contents depth="3" local=""}
+::: 
 On this page
 :::
 ::::
@@ -22,7 +22,7 @@ outputs, integrated programming track capability, and built-in fast WiFi
 for throttle control connections.
 
 ![EX-CSB1 CommandStation /
-Booster](/_static/images/ex-csb1/csb1_render_drop_shadow.png){alt="DCC-EX EX-CSB1"}
+Booster](/_static/images/ex-csb1/csb1_render_drop_shadow.png)
 
 \|HR-DASHED\|
 
@@ -78,7 +78,7 @@ Benefits include:
     outputs to different modes (DC/DCC/PROG/Auto-Reverse), with proper
     NMRA current limits
 
-![DCC-EX EX-CSB1](/_static/images/ex-csb1/ti_8874.jpeg){.align-right}
+![DCC-EX EX-CSB1](/_static/images/ex-csb1/ti_8874.jpeg)
 
 The **EX-CSB1\'s** robust, single-PCB design includes integrated MOSFET
 motor drivers from Texas Instruments, providing up to 5A peak power per
@@ -154,12 +154,10 @@ Units may be purchased from the following sources:
 
 ## Next Steps
 
-- `Getting started with the EX-CSB1 </ex-commandstation/rtr-connecting>`{.interpreted-text
-  role="doc"}
-- `EX-CSB1 Operating Manual </ex-commandstation/rtr-manual>`{.interpreted-text
-  role="doc"}
+- `Getting started with the EX-CSB1 </ex-commandstation/rtr-connecting>`
+- `EX-CSB1 Operating Manual </ex-commandstation/rtr-manual>`
 
-::: {.toctree hidden="" maxdepth="1"}
+::: 
 /ex-commandstation/rtr-connecting\_\_included-esb1
 /ex-commandstation/rtr-wifi-setup\_\_included-esb1
 /ex-commandstation/installer-esb1 /ex-commandstation/controllers-esb1

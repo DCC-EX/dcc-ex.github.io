@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -63,7 +63,7 @@ VPin a turnout/point is connected to, give the pin number an alias and
 refer to it by that name. You can use this to name routes, values, pin
 numbers, or anything you need.
 
-``` {.cpp .code-block-float-right}
+``` 
 //example
 ALIAS(COAL_YARD_TURNOUT,19)
 ALIAS(COAL_YARD_SIGNAL_3,27)
@@ -81,8 +81,7 @@ ROUTE(1,"Coal yard exit")
    GREEN(COAL_YARD_SIGNAL_3)
 ```
 
-Refer to `exrail/exrail-command-reference:aliases`{.interpreted-text
-role="ref"} for more information.
+Refer to `exrail/exrail-command-reference:aliases` for more information.
 
 Alias names:
 
@@ -105,7 +104,7 @@ even ?: )
 This can be useful if you have a block of related IDs or VPINs and you
 don\'t wish to give each an ALIAS.
 
-``` {.cpp .code-block-float-right}
+``` 
 ALIAS(Platform, 600)
 ...
 IF(Platform)

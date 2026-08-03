@@ -1,4 +1,4 @@
-::: {.meta keywords="EX-CommandStation Command Station EX-Installer"}
+::: 
 :::
 
 \|EX-I-LOGO\|
@@ -19,7 +19,7 @@ program.
 
 To use the \|EX-I\| program click \'Next\' or follow these links:
 
-::: {.toctree maxdepth="1"}
+::: 
 Using EX-Installer \<installing\> testing Managing config files
 \<managing-config-files\>
 :::

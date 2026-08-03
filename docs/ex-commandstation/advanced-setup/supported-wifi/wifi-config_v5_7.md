@@ -8,9 +8,9 @@ orphan
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -20,7 +20,7 @@ Version 5.7.0 is currently in the experimental / development (DEVEL)
 phase and is not recommended for general users.
 
 If you are using an earlier version, please see
-`WiFi Config  <wifi-config>`{.interpreted-text role="doc"}.
+[WiFi Config  ](wifi-config.md).
 
 Also see [WiFi configuration (CSB1 or ESP32
 ONLY)](https://dcc-ex.com/mkdocs-test/products/ex-commandstation/config-wifi-esp32/#configuring-the-host-name)
@@ -127,12 +127,11 @@ modify these critical settings.
 1.  Connect your PC to the \|EX-CS\| via USB. Open the \|EX-WT\| and
     select the appropriate COM port for your \|EX-CS\|. You should see
     the current WiFi settings displayed in the interface. See
-    `EX-WebThrottle </ex-webthrottle/index>`{.interpreted-text
-    role="doc"} for more details.
+    `EX-WebThrottle </ex-webthrottle/index>[ for more details.
 2.  Go to the `Wifi Setup` page from the menu or the toolbar buttons.
     - To set the **Access Point (AP) mode**, enter the SSID and password
       for the Command Station\'s WiFi network and click the
-      `Set Access Point`{.interpreted-text role="guilabel"} button. You
+      `Set Access Point` button. You
       can optional set a channel for the AP mode, but it is not
       required, and generally not recommended.
 
@@ -141,7 +140,7 @@ modify these critical settings.
 
       To set the **Station (STA) mode**, enter the SSID and password for
       your existing WiFi network (eg your home router) and click the
-      `Set Station Mode`{.interpreted-text role="guilabel"} button. The
+      `Set Station Mode` button. The
       Command Station will attempt to connect to the specified WiFi
       network. If the connection is successful, it will operate in
       Station mode. If the connection fails, it will revert to Access
@@ -149,7 +148,7 @@ modify these critical settings.
 
     - To set the **Temporary Station (STA) mode**, enter the SSID and
       password for your existing WiFi network and click the
-      `Set Temporary Station Mode`{.interpreted-text role="guilabel"}
+      `Set Temporary Station Mode`
       button. The Command Station will attempt to connect to the
       specified WiFi network.
 
@@ -157,7 +156,7 @@ modify these critical settings.
       If the connection fails, it will revert to Access Point mode.
 
     - To set the **Hostname**, enter the desired hostname and click the
-      `Set Hostname`{.interpreted-text role="guilabel"} button. The
+      `Set Hostname` button. The
       Command Station will update its hostname, which will be visible in
       your Throttle app when connected to the appropriate network.
 
@@ -166,7 +165,7 @@ modify these critical settings.
 
 **Resetting the Wifi settings**
 
-The `Reset WiFi Settings`{.interpreted-text role="guilabel"} button on
+The `Reset WiFi Settings` button on
 the WiFi Setup page will reset all WiFi settings to their default
 values. This will cause the Command Station to restart and create its
 own WiFi network in Access Point mode with the default SSID and
@@ -192,7 +191,7 @@ same as in the \|EX-WT\|, with the same options for AP mode, STA mode,
 Temporary STA mode and Hostname.
 
 1.  Connect your PC to the \|EX-TB\| via USB or Wifi. See
-    `EX-Toolbox </ex-toolbox/using>`{.interpreted-text role="doc"} for
+    `EX-Toolbox ](/ex-toolbox/using.md) for
     more details.
 2.  Go to the `WiFi Setup` page from the menu or the toolbar buttons and
     follow the same steps as outlined for the \|EX-WT\| above.

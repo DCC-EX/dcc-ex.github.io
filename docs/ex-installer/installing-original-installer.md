@@ -2,7 +2,7 @@ orphan
 
 : 
 
-::: {.meta keywords="EX-CommandStation Command Station EX-Installer"}
+::: 
 :::
 
 \|EX-I-LOGO\|
@@ -19,7 +19,7 @@ Warning"
 The instructions on this page refer to the *original* installer. This is
 no longer recommended for use on Microsoft Windows x64 computers.
 
-Use the `new EX-Installer <installing>`{.interpreted-text role="doc"}
+Use the [new EX-Installer ](installing.md)
 instead for Microsoft Windows x64 computers.
 
 As of the 11th September 2023, this original installer is now a public
@@ -35,15 +35,14 @@ Linux or macOS which is a known issue.
 
 For Linux users we recommend using the \|Arduino IDE\|. You can find
 instructions on the
-`/ex-commandstation/advanced-setup/installation-options/arduino-ide`{.interpreted-text
-role="doc"} page.
+`/ex-commandstation/advanced-setup/installation-options/arduino-ide` page.
 
 We hope to have a new version available soon.
 ::::
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -70,7 +69,7 @@ using the same USB port.
 
 **(for Windows, Mac OS X, and Linux (including the Raspberry Pi))**
 
-:::: {.warning .warning-float-right}
+:::: 
 ::: title
 Warning
 :::
@@ -99,8 +98,7 @@ this is usually the issue.
 ## 2. Download and Run EX-Installer
 
 - Download the
-  `EX-Installer <download/ex-commandstation:ex-Installer>`{.interpreted-text
-  role="ref"} app \|BR\| depending on your computer\'s operating system
+  `EX-Installer <download/ex-commandstation:ex-Installer>` app \|BR\| depending on your computer\'s operating system
   it will automatically determine the version you need and download it
 - Find the folder in which the Installer was saved. \|BR\| Generally
   this will default to downloading to the *downloads* folder but your
@@ -118,7 +116,7 @@ this is usually the issue.
 
 ## 3. The EX-Installer Window
 
-:::: {.warning .warning-float-right}
+:::: 
 ::: title
 Warning
 :::
@@ -131,7 +129,7 @@ before you try to select anything in the drop down menus.
 ::::
 
 ![Installer
-Window](/_static/images/installer/installer.png){alt="EX-Installer"}
+Window](/_static/images/installer/installer.png)
 
 There will be a lot of information appearing in the log window, which
 can help us debug things if anything goes wrong. The installer needs to
@@ -164,7 +162,7 @@ function on the same hardware a \|BSC\|.
 6.  Check the checkbox for your display type if using an LCD or OLED
     display
 7.  Check the Free Mem warning if you need to diagnose memory issues
-8.  Press the `Compile and Upload`{.interpreted-text role="guilabel"}
+8.  Press the `Compile and Upload`
     button
 
 #### WiFi Checkbox
@@ -193,7 +191,7 @@ router using \"Station Mode\"), then check this box. You will then need
 to enter your credentials to login to your network just like you would
 from any of your other WiFi devices:
 
-![Wifi Options](/_static/images/installer/wifi.png){alt="WiFi Options"}
+![Wifi Options](/_static/images/installer/wifi.png)
 
 - **WiFi SSID** - The name of your home network.
 - **WiFi Password** - The password required to connect to your home
@@ -244,8 +242,7 @@ will see the following options you can edit for your display:
 - **LCD Rows** - The number of horizontal rows or lines on your display
 
 For more information about using displays, see
-`I2C Displays </reference/hardware/i2c-displays>`{.interpreted-text
-role="doc"}
+`I2C Displays </reference/hardware/i2c-displays>`
 
 #### OLED CheckBox
 
@@ -260,8 +257,7 @@ the following options you can edit for your display:
   pixels on your display
 
 For more information about using displays, see
-`I2C Displays </reference/hardware/i2c-displays>`{.interpreted-text
-role="doc"}
+`I2C Displays </reference/hardware/i2c-displays>`
 
 #### Refresh Ports Button
 
@@ -272,7 +268,7 @@ the ports so it can find your device.
 
 ### Compile and Upload
 
-`Compile and Upload`{.interpreted-text role="guilabel"} **Button**
+`Compile and Upload` **Button**
 
 Once you have configured your options, press this button to compile all
 the source code and upload it to your Command Station.
@@ -282,7 +278,7 @@ Note"
 :::
 
 If you have any difficulties check the
-`/support/ex-cs-troubleshooting`{.interpreted-text role="doc"} page for
+`/support/ex-cs-troubleshooting` page for
 assistance.
 ::::
 

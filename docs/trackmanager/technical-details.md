@@ -9,9 +9,9 @@ orphan
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-commandstation-button-small\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -119,5 +119,4 @@ The known PWM frequencies are:
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.

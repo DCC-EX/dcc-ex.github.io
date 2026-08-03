@@ -19,8 +19,7 @@ The direct connection is provided by simply connecting to \|EX-CS\| via
 the USB interface.
 
 If you are using \|JMRi\|, refer to the
-`/ex-commandstation/advanced-setup/supported-connections/jmri`{.interpreted-text
-role="doc"} page.
+`/ex-commandstation/advanced-setup/supported-connections/jmri` page.
 
 If you\'re using a throttle with a physical serial interface, this may
 require connecting directly to the Tx/Rx pins on the \|EX-CS\|, but the

@@ -2,9 +2,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -60,8 +60,7 @@ XSHUT, then it\'s best to tie it to +5V.
 ::::
 
 Once connected, you will need to configure the device driver as per
-`ex-commandstation/accessories/sensors/vl53l0x-tof-sensor:configuring a single device`{.interpreted-text
-role="ref"}.
+`ex-commandstation/accessories/sensors/vl53l0x-tof-sensor:configuring a single device`.
 
 ![Mega2560 with VL53L0X](/_static/images/vl53l0x/mega2560-single-vl53l0x.png)
 
@@ -76,8 +75,7 @@ have each device addressed separately.
 
 Once connected, you will need to configure the device driver for each
 device as per
-`ex-commandstation/accessories/sensors/vl53l0x-tof-sensor:configuring multiple devices`{.interpreted-text
-role="ref"}.
+`ex-commandstation/accessories/sensors/vl53l0x-tof-sensor:configuring multiple devices`.
 
 ![Mega2560 two VL53L0Xs](/_static/images/vl53l0x/mega2560-dual-vl53l0x.png)
 
@@ -125,134 +123,7 @@ in \"myHal.cpp\":
 ``` cpp
 ...
 
-void halSetup() {
-  VL53L0X::create(firstVpin, nPins, i2cAddress, lowThreshold, highThreshold);
-  ...
-```
-
-Where:
-
-- firstVpin is an available vpin reserved for reading the device
-- nPins is 1, 2 or 3
-- i2cAddress is the \|I2C\| address of the device (normally 0x29 -
-  should be no need to change this for a single device)
-- lowThreshold is the distance at which the digital vpin state is set to
-  1 (in mm)
-- highThreshold is the distance at which the digital vpin state is set
-  to 0 (in mm)
-
-For example, this entry configures a device on vpin 4000 using the
-default address of 0x29. A digital read of this vpin will return a 1 if
-an object is within 200mm, and will return a 0 if an object moves more
-than 250mm from the sensor:
-
-``` cpp
-...
-
-void halSetup() {
-  VL53L0X::create(4000, 3, 0x29, 200, 250);
-  ...
-```
-
-### Configuring multiple devices
-
-:!!! note "::: title
-Note"
-:::
-
-When using multiple devices, do not configure any device to use the
-default \|I2C\| address of 0x29, as this address needs to be free in
-order to configure each device on startup.
-::::
-
-If you have more than one module, then you will need to specify a
-digital vpin (Arduino digital output or I/O expander pin) which you
-connect to the module\'s XSHUT pin. When the device driver starts, the
-XSHUT pin is set LOW to turn the module off. Once all VL53L0X modules
-are turned off, the driver works through each module in turn by setting
-XSHUT to HIGH to turn the module on, then writes the module\'s desired
-\|I2C\| address. In this way, many VL53L0X modules can be connected to
-the one \|I2C\| bus, each one using a distinct \|I2C\| address.
-
-Each device needs its own specific entry in \"myHal.cpp\", and requires
-an additional argument to specify the digital vpin that connects to the
-device\'s XSHUT pin.
-
-``` cpp
-...
-
-void halSetup() {
-  VL53L0X::create(firstVpin, nPins, i2cAddress, lowThreshold, highThreshold, xshutPin);
-  ...
-```
-
-Where:
-
-- firstVpin is an available vpin reserved for reading the device
-- nPins is 1, 2 or 3
-- i2cAddress is the address of the device (normally 0x29 - should be no
-  need to change this for a single device)
-- lowThreshold is the distance at which the digital vpin state is set to
-  1 (in mm)
-- highThreshold is the distance at which the digital vpin state is set
-  to 0 (in mm)
-- xshutPin is the vpin number corresponding to either a direct I/O pin
-  or an I/O pin on an I/O expander
-
-For example, these entries configure two devices on vpins 4000 and 4003,
-with \|I2C\| addresses 0x30 and 0x31. The device at 0x30 is connected
-directly to an Arduino Mega2560\'s digital pin 22, and the device at
-0x31 is connected to the first digital I/O pin of the first MCP23017
-device at vpin 164. A digital read of each of the device\'s vpins will
-return a 1 if an object is within 200mm, and will return a 0 if an
-object moves more than 250mm from the sensor:
-
-Note the second sensor starts at vpin 4003 as the first sensor consumes
-vpins 4000, 4001, and 4002.
-
-``` cpp
-...
-
-void halSetup() {
-  VL53L0X::create(4000, 3, 0x30, 200, 250, 22);
-  VL53L0X::create(4003, 3, 0x31, 200, 250, 164);
-  ...
-```
-
-## Sensor configuration for JMRI
-
-If you are using \|JMRi\| and require these to be available as sensors,
-then they can be configured via the DCC-EX `<Z id vpin iflag>` command.
-
-To create sensors for our examples above, the commands would be as shown
-below, and for simplicity we keep the sensor ID the same as the vpin ID
-in use.
-
-``` cpp
-<S 4000 4000 0>
-<S 4003 4003 0>
-```
-
-With these definitions, when an object comes within 200mm of the
-sensors, a `<Q id>` message will be sent to all defined serial ports
-with the appropriate sensor ID:
-
-``` cpp
-<Q 4000>
-<Q 4003>
-```
-
-Conversely, when an object moves more than 250mm from the sensors, a
-`<q id>` message will be sent instead:
-
-``` cpp
-<q 4000>
-<q 4003>
-```
-
-To ensure sensors are defined at startup, refer to
-`/ex-commandstation/advanced-setup/startup-config`{.interpreted-text
-role="doc"}.
+void halSetup() .
 
 ## EXRAIL integration
 

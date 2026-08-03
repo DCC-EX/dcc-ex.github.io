@@ -19,7 +19,7 @@
 - See the special note about the Mega+WiFi board below for a board that
   has the microcontroller and WiFi already on one board.
 
-See the `/ex-commandstation/diy/assembly`{.interpreted-text role="doc"}
+See the `/ex-commandstation/diy/assembly`
 page for information on setting up this microcontroller.
 
 ![Arduino Mega

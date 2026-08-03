@@ -1,4 +1,4 @@
-::: {.meta keywords="WiFi setup"}
+::: 
 :::
 
 \|EX-CS-LOGO\|
@@ -7,9 +7,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents local="" depth="1"}
+::: 
 On this page
 :::
 ::::
@@ -19,8 +19,7 @@ to install *just* the recommended hardware. If you are a
 \|tinkerer-text\| or \|engineer-text\| or want to install some of the
 additional, or different, hardware from that recommended for a
 \|conductor-text\| then we suggest that you look at the
-`/ex-commandstation/advanced-setup/supported-connections/wifi-setup`{.interpreted-text
-role="doc"} page for the full list of WiFi options.
+`/ex-commandstation/advanced-setup/supported-connections/wifi-setup` page for the full list of WiFi options.
 
 ------------------------------------------------------------------------
 
@@ -29,19 +28,16 @@ Warning"
 :::
 
 While the recommended
-`EX-WiFiShield 8266 </reference/hardware/wifi-boards/makerfabs-esp8266>`{.interpreted-text
-role="doc"} and
-`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>`{.interpreted-text
-role="doc"} is now shipping with the correct firmware version and **will
+`EX-WiFiShield 8266 </reference/hardware/wifi-boards/makerfabs-esp8266>` and
+`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>` is now shipping with the correct firmware version and **will
 work** with \|EX-CS\| *without modification*, please be aware that the
 Espressif firmware shipped with *Duinopeak ESP8266 WiFi Expansion* and
-*ESP-01 or ESP-01S* devices `will probably NOT work`{.interpreted-text
-role="dcc-ex-red-bold"} with \|EX-CS\| out of the box.
+*ESP-01 or ESP-01S* devices `will probably NOT work` with \|EX-CS\| out of the box.
 
 This can be corrected, but is probably beyond Conductor level and
 requires additional hardware.
 
-See `/support/wifi-at-version`{.interpreted-text role="doc"} for details
+See `/support/wifi-at-version` for details
 on how to check the version and how to correct it if needed.
 ::::
 
@@ -52,8 +48,7 @@ computer and another software controller.
 However, WiFi is optional. If you wish to simply use your computer
 connected via a USB cable to the \|EX-CS\| using the \|JMRI\|
 application (or similar), you can
-`skip ahead to the next page </ex-commandstation/installer-diy>`{.interpreted-text
-role="doc"}.
+`skip ahead to the next page </ex-commandstation/installer-diy>`.
 
 ::: rst-class
 clearer
@@ -66,8 +61,7 @@ clearer
 directly via WiFi is to do so indirectly through \|JMRI\|. To do this,
 you don\'t need a WiFi board. You only need to use a USB cable instead.
 This is described on the
-`/ex-commandstation/advanced-setup/supported-connections/jmri`{.interpreted-text
-role="doc"} page.
+`/ex-commandstation/advanced-setup/supported-connections/jmri` page.
 :::
 
 There are many ways to add WiFi to your Command Station. **We will cover
@@ -105,8 +99,7 @@ involved, then you **should follow the instructions below**.
 > based \|EX-WT\|. So, if you intend to run trains from a PC, or by only
 > using a web browser, \|JMRI\|, Rocrail, or similar, then **YOU DO NOT
 > NEED WiFi ON THE CS**. If this the case you can
-> `skip ahead to the next page </ex-commandstation/installer-diy>`{.interpreted-text
-> role="doc"}.
+> `skip ahead to the next page </ex-commandstation/installer-diy>`.
 
 \|force-break\|
 
@@ -137,8 +130,7 @@ clearer
 
 **Alternate WiFi boards** \|br\| For more boards you can be to used, see
 the
-`WiFi Boards Section </reference/hardware/wifi-boards>`{.interpreted-text
-role="doc"}
+`WiFi Boards Section </reference/hardware/wifi-boards>`
 :::
 
 Most boards based on the ESP8266 should work with the \|EX-CS\|.
@@ -149,10 +141,10 @@ We like this board here at \|DCC-EX\|. It is simple, inexpensive, easy
 to use, and it works.
 
 ![Makerfabs ESP8266 WiFi
-Shield](/_static/images/assembly/wifi_jumpers1.jpg){alt="Makerfabs ESP-8266 WiFi Shield"}
+Shield](/_static/images/assembly/wifi_jumpers1.jpg)
 
 Installing the board follows the same procedure in the previous section
-on `assembly`{.interpreted-text role="doc"}. Start by noting the tab end
+on `assembly`. Start by noting the tab end
 of the board and align it with the tab end of the motor board. You will
 stack this board on top to make a three board stack.
 
@@ -186,13 +178,13 @@ aligned](/_static/images/assembly/wifi_seat1.jpg)
 
 Now do the the other side. If all the pins are straight and lined up
 properly, hold both sides of the board and press it together gently
-(`wifi-right-side-pins-aligned`{.interpreted-text role="numref"}).
+(`wifi-right-side-pins-aligned`).
 
 Note that the pins are quite long and will not go all the way into the
 header. You should have even more of the pins showing between the bottom
 of the WiFi board and the top of the header on the Motor Board than
 between the Motor Board and the Arduino. This is normal (see
-`wifi-fully-seated-boards`{.interpreted-text role="numref"}).
+`wifi-fully-seated-boards`).
 
 <figure>
 <img src="/_static/images/assembly/wifi_seat2a.jpg"
@@ -231,7 +223,7 @@ connected to the Tx pin of the ESP8266. ALL of the pins in the row
 marked Rx (the row closest to the middle of the board) are connected to
 the Rx pin on the ESP8266.
 
-:::: {.note .note-float-right}
+:::: 
 ::: title
 Note
 :::
@@ -250,12 +242,12 @@ Take a second jumper wire and connect it to any one of the Rx pins on
 the WiFi Board and connect the other end to Tx1 on the mega (pin 18).
 
 ![Install the jumper
-wires](/_static/images/assembly/wifi_jumpers2.png){alt="Install the Jumper wires"}
+wires](/_static/images/assembly/wifi_jumpers2.png)
 
 \|HR-HEAVY\|
 
 ## Next Steps - Install the Software
 
-See the `/ex-commandstation/installer-diy`{.interpreted-text role="doc"}
+See the `/ex-commandstation/installer-diy`
 page or click the \'Next\' button to learn how to install the software
 on your \|EX-CS\|.

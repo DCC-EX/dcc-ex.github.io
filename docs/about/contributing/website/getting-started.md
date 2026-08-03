@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="3" local=""}
+::: 
 On this page
 :::
 ::::
@@ -16,18 +16,14 @@ contribute to our documentation.
 
 If what is outlined in this page is too involved, and you simply wish to
 provide some content that we can add, clarify, or update, then simply
-get in touch with us via the `/support/index`{.interpreted-text
-role="doc"} page and we can help you out.
+get in touch with us via the `/support/index` page and we can help you out.
 
 ## Required Software
 
-Refer to the `/about/contributing/software`{.interpreted-text
-role="doc"} page, in particular the section related to
-`about/contributing/software:Python 3.x`{.interpreted-text role="ref"},
-`GitHub Desktop <about/contributing/software:other handy git software>`{.interpreted-text
-role="ref"} and
-`VSCode <about/contributing/software:Recommended editor (VSCode)>`{.interpreted-text
-role="ref"} for the software necessary to contribute to the
+Refer to the `/about/contributing/software` page, in particular the section related to
+`about/contributing/software:Python 3.x`,
+`GitHub Desktop <about/contributing/software:other handy git software>` and
+`VSCode <about/contributing/software:Recommended editor (VSCode)>` for the software necessary to contribute to the
 documentation.
 
 ## GitHub Pages, Sphinx, and reStructuredText
@@ -48,9 +44,8 @@ Guide](https://docutils.sourceforge.io/docs/user/rst/quickref.html)
 here.
 
 If you haven\'t done so already, make sure you are familiar with how we
-use `/about/contributing/github`{.interpreted-text role="doc"} and are
-familiar with our `/about/contributing/software`{.interpreted-text
-role="doc"}.
+use `/about/contributing/github` and are
+familiar with our `/about/contributing/software`.
 
 ### GitHub repository and the sphinx branch
 
@@ -75,7 +70,7 @@ requests must be submitted against this same branch.
 
 Ideally the documentation cycle would look like this..
 
-![](/_static/images/github/github_doc_cycle1.png){alt="Ideal GitHub Documentation Cycle"}
+![](/_static/images/github/github_doc_cycle1.png)
 
 Changes to the original would be pulled down from the original
 repository directly to your local (PC) repository. You would push your
@@ -87,7 +82,7 @@ extremely cumbersome to do so.
 
 *So instead a slightly longer approach is described below\...*
 
-![](/_static/images/github/github_doc_cycle2.png){alt="GitHub Documentation Cycle"}
+![](/_static/images/github/github_doc_cycle2.png)
 
 Changes to the original would be pulled down from the original
 repository to your GitHub website repository with a *Pull Request*. You
@@ -130,7 +125,7 @@ You will periodically need to update your repository:
     already have one.
 2.  Go to the original repository
     `https://github.com/DCC-EX/dcc-ex.github.io`
-3.  Click on the `Fork`{.interpreted-text role="guilabel"} button and
+3.  Click on the `Fork` button and
     create a new fork. (Do not alter the Repository name
     `dcc-ex.github.io`.)
 
@@ -142,12 +137,11 @@ this for the next step.
 
 In **GitHub Desktop**:
 
-1.  Select `File --> Clone Repository`{.interpreted-text
-    role="menuselection"}
+1.  Select `File --> Clone Repository`
 2.  Enter the name of you repository
     `<your_account_name>/dcc-ex.github.io`
 3.  Select a location on your PC to store the repository.
-4.  Click `Clone`{.interpreted-text role="guilabel"}
+4.  Click `Clone`
 5.  Make sure that `Sphinx` is selected as the \'Current Branch\'
 
 A copy of the repository should now be on the PC.
@@ -160,11 +154,11 @@ You can open it in VSCode by selecting
 #### 3. Open the repository in VSCode
 
 You can open the repository in VSCode at any time by using
-`File --> Open Folder`{.interpreted-text role="menuselection"} and
+`File --> Open Folder` and
 navigating to the folder you selected in step 2.
 
 You can subsequently open the repository in VSCode using
-`File --> Open Recent`{.interpreted-text role="menuselection"} and
+`File --> Open Recent` and
 selecting the repository name.
 
 You can subsequently open the repository in VSCode from **GitHub
@@ -178,7 +172,7 @@ change. Clicking on a file will open it in the edit window.
 #### 5. Live previews
 
 Providing you followed the installation guide for VSCode on the
-`/about/contributing/software`{.interpreted-text role="doc"} page
+`/about/contributing/software` page
 accurately, there are three methods available for generating previews as
 you are editing the reStructuredText code.
 
@@ -192,14 +186,13 @@ the background.
 To view the preview you can
 
 - click on the preview button on the top right, or
-- Press `<Ctrl>`{.interpreted-text role="guilabel"}[ +
-  :guilabel:]{.title-ref}\<Shift\>\` + `r`{.interpreted-text
-  role="guilabel"} and it will open the live preview in a new tab in
+- Press `<Ctrl>`[ +
+  :guilabel:]\<Shift\>\` + `r` and it will open the live preview in a new tab in
   VSCode. In addition to this method, you can also press
-  `<Ctrl>`{.interpreted-text role="guilabel"}[ +
-  :guilabel:\`k]{.title-ref} followed immediately by
-  `<Ctrl>`{.interpreted-text role="guilabel"}[ +
-  :guilabel:\`r]{.title-ref}.
+  `<Ctrl>`[ +
+  :guilabel:\`k] followed immediately by
+  `<Ctrl>`[ +
+  :guilabel:\`r].
 
 This will generate the live preview in a split pane within VSCode. Every
 time you save the page you are working on, the live preview will
@@ -280,8 +273,8 @@ In **GitHub Desktop**:
 - note and review the changes that have been made
 - Add a `Summary` of your changes
 - Add a `Description` of your changes, if the summary is not sufficient
-- click `Commit to Sphinx`{.interpreted-text role="guilabel"}
-- click `Push origin`{.interpreted-text role="guilabel"}
+- click `Commit to Sphinx`
+- click `Push origin`
 
 #### 7. Creating a *pull request* to send your changes for review
 
@@ -292,10 +285,9 @@ In **GitHub Desktop**:
 On the \'code\' page you should see \"This branch is *x* commit(s) ahead
 of DCC-EX/dcc-ex.github.io:sphinx.\"
 
-3.  Click on the [x commit(s) ahead of]{.title-ref} hyperlink
+3.  Click on the [x commit(s) ahead of] hyperlink
 4.  Confirm or add to the title and documentation fields
-5.  Click on the `Create pull request`{.interpreted-text
-    role="guilabel"} button
+5.  Click on the `Create pull request` button
 
 This creates a pull request to be reviewed by the documentation team
 
@@ -318,14 +310,13 @@ If does not say you are \'behind\' there is nothing to do. Stop here.
 
 If you are behind\...
 
-3.  Click on the [x commit(s) behind]{.title-ref} hyperlink
+3.  Click on the [x commit(s) behind] hyperlink
 4.  Add to the title and/or documentation fields. This does not matter
     so entering just `Catchup` is fine.
-5.  Click on the `Create pull request`{.interpreted-text
-    role="guilabel"} button
-6.  Click on the `Merge pull request`{.interpreted-text role="guilabel"}
+5.  Click on the `Create pull request` button
+6.  Click on the `Merge pull request`
     button
-7.  Click on the `Confirm merge`{.interpreted-text role="guilabel"}
+7.  Click on the `Confirm merge`
     button
 
 Any changes are now also in your repository on the GitHub website.
@@ -334,7 +325,7 @@ Any changes are now also in your repository on the GitHub website.
 
 In **GitHub Desktop**:
 
-1.  Click on the `Fetch origin`{.interpreted-text role="guilabel"}
+1.  Click on the `Fetch origin`
     button\`
 
 Any changes are now also in your repository on PC.

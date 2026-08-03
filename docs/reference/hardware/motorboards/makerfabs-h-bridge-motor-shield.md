@@ -12,8 +12,7 @@ This board is **not** compatible with \|TM\| DC mode.
 ::::
 
 **THIS BOARD HAS NO CURRENT SENSE!** Refer to the
-`reference/hardware/motorboards/motor-board-config:current sense and sense factor`{.interpreted-text
-role="ref"} section for further information.
+`reference/hardware/motorboards/motor-board-config:current sense and sense factor` section for further information.
 
 The higher current capability and efficient power MOSFETs, make this
 board a good choice if you are running more than 3-5 locos.

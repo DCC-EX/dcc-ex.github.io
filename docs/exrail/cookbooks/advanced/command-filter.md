@@ -13,16 +13,7 @@ code, gives a basic example.
 
 ``` cpp
 STEALTH_GLOBAL(
-  void myFilter(Print * stream, byte & opcode, byte & paramCount, int16_t p[]) {
-    (void)stream;
-    // use command <U locoid> to display name from roster
-    if (opcode == 'U' && paramCount == 1) {
-      auto locoId=p[0];
-      auto name=RMFT2::getRosterName(locoId);
-      if (!name) return; // caller will <X> this
-      opcode=0; // caller can now ignore this
-      StringFormatter::lcd(0, F("Loco %d name %S"), locoId, name);
-    }
+  void myFilter(Print * stream, byte & opcode, byte & paramCount, int16_t p[]) 
   }
 )
 ```
@@ -45,7 +36,7 @@ STEALTH_GLOBAL(
   `STEALTH_GLOBAL` in \|EX-R\| avoids the need to #include a vast array
   of weird and wonderful API and memory management definitions.
 - To recognize keyword parameters (e.g `<1 MAIN>`) you would test using
-  the [hk]{#hk} suffix like this
+  the [hk] suffix like this
 
 ``` cpp
 if (opcode == '1' && paramCount == 1 && p[0] == "MAIN"_hk) 

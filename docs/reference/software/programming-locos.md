@@ -40,14 +40,13 @@ interface for all your programming needs.
 
 For a quick intro to setting up roster entries in \|JMRi\| and changing
 basic items such as the decoder address, refer to
-`big-picture/stage1:jmri (programming decoders)`{.interpreted-text
-role="ref"}.
+`big-picture/stage1:jmri (programming decoders)`.
 
 When launching \|JMRi\| DecoderPro, you will see your list of roster
 entries by default.
 
 To make changes to your decoder settings, select the loco you wish to
-program, then click the `Program`{.interpreted-text role="guilabel"}
+program, then click the `Program`
 button to launch the programming dialog.
 
 - To set basic items such as the decoder address and speed steps, use
@@ -64,14 +63,14 @@ button to launch the programming dialog.
 When you\'re finished editing, you need to write the changes to the
 decoder. To do so, there are four options:
 
-- `Write changes on sheet`{.interpreted-text role="guilabel"} - use this
+- `Write changes on sheet` - use this
   if you\'ve only made a few changes on one tab
-- `Write full sheet`{.interpreted-text role="guilabel"} - use this if
+- `Write full sheet` - use this if
   you\'re not sure if all settings on the tab are already set or not, it
   will take a little longer to write
-- `Write changes on all sheets`{.interpreted-text role="guilabel"} - use
+- `Write changes on all sheets` - use
   this if you\'ve made changes on multiple tabs
-- `Write all sheets`{.interpreted-text role="guilabel"} - use this if
+- `Write all sheets` - use this if
   you want to ensure every setting on every tab is written, noting this
   will take some time to write
 
@@ -88,17 +87,14 @@ still has the best decoder programming functionality by far.
 
 To assist you in setting up a \|EX-CS\| & \|JMRI\| DecoderPro
 Programming Station please download and follow the
-`reference/downloads/documents:comprehensive dcc-ex & jmri decoderpro getting started guide pdf`{.interpreted-text
-role="ref"}.
+`reference/downloads/documents:comprehensive dcc-ex & jmri decoderpro getting started guide pdf`.
 
 ## Programming CVs with EX-Toolbox app
 
 Refer to the
-`EX-Toolbox page <ex-toolbox/using:cv programming>`{.interpreted-text
-role="ref"} for information on how to program CVs with EX-Toolbox app.
+`EX-Toolbox page <ex-toolbox/using:cv programming>` for information on how to program CVs with EX-Toolbox app.
 
 ## Programming CVs with Engine Driver app
 
 Refer to the
-`/throttles/software/engine-driver-native-protocol`{.interpreted-text
-role="doc"} page for information on how to program CVs with \|ED\|.
+`/throttles/software/engine-driver-native-protocol` page for information on how to program CVs with \|ED\|.

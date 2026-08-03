@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -47,7 +47,7 @@ Welcome to the \|EX-CS\| download page. You have several choices:
 
 ## EX-Installer
 
-:::: {.note .note-float-right}
+:::: 
 ::: title
 Note
 :::
@@ -89,8 +89,7 @@ Linux) and download it.
 This downloads a self contained app that can automatically load the
 software from your computer to your Arduino or other supported board.
 Click here for
-`EX-Installer installation instructions </ex-commandstation/installer-diy>`{.interpreted-text
-role="doc"}.
+`EX-Installer installation instructions </ex-commandstation/installer-diy>`.
 
 *Note* that the new \|EX-I\| will unfortunately not work on Windows 7.
 
@@ -138,8 +137,7 @@ The zip/tar file contains the Arduino Sketch file for \|EX-CS\|. You
 will need either the \|Arduino IDE\| or the PlatformIO development
 environment in order to upload it to your microcontroller board. Click
 here for
-`Arduino IDE installation instructions </ex-commandstation/advanced-setup/installation-options/arduino-ide>`{.interpreted-text
-role="doc"}.
+`Arduino IDE installation instructions </ex-commandstation/advanced-setup/installation-options/arduino-ide>`.
 
 ::: rst-class
 dcclink
@@ -200,8 +198,7 @@ the green button to get a clone link or to download the zip file. We
 have made sure that you can still use the \|Arduino IDE\| if you like,
 but we recommend developers use the PlatformIO development environment.
 See the
-`Contributing Page </about/contributing/index>`{.interpreted-text
-role="doc"} for more information.
+`Contributing Page </about/contributing/index>` for more information.
 
 ::: rst-class
 dcclink
@@ -231,8 +228,7 @@ We recommend using the newer \|EX-CS\| as it will run on the same
 hardware and is maintained and supported.
 
 The new \|EX-I\|
-`does not provide an option to install BaseStation-Classic`{.interpreted-text
-role="dcc-ex-red-bold"} so if you wish to install it you will need to
+`does not provide an option to install BaseStation-Classic` so if you wish to install it you will need to
 use the \|Arduino IDE\| or \|VSC\| and download the links below.
 
 > ::: rst-class

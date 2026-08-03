@@ -10,21 +10,21 @@ railroad.
 
 The following cookbooks are currently available:
 
-::: {.toctree maxdepth="2"}
+::: 
 startup-poweron startup-set-track dc-tracks roster-similar-locos
 editing-tricks/index
 :::
 
-::: {.toctree maxdepth="2"}
+::: 
 driving-trains/index turnouts/index route-button-control vpins
 animation-sensors estop-button overload-messsage
 :::
 
-::: {.toctree maxdepth="2"}
+::: 
 neopixels/index flashing-signals flags-and-latches/index
 :::
 
-::: {.toctree maxdepth="2"}
+::: 
 advanced/index timecontrol various-devices/index
 :::
 

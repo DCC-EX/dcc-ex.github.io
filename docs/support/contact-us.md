@@ -7,8 +7,7 @@
 ## Recommended Way To Contact Us
 
 The best way to reach us is on our
-`Discord Server <support/index:preferred option - discord>`{.interpreted-text
-role="ref"}.
+`Discord Server <support/index:preferred option - discord>`.
 
 Usually there is a team member online to help with your issue in
 English, German and French, and if not you\'ll get a response within a

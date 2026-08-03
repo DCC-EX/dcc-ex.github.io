@@ -4,7 +4,7 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-![Bluetooth Logo](/_static/images/bluetooth/bluetooth.png){.align-left}
+![Bluetooth Logo](/_static/images/bluetooth/bluetooth.png)
 
 You can connect a Bluetooth module to a spare serial port on your
 \|EX-CS\| to enable Bluetooth connectivity from a single throttle or
@@ -18,7 +18,7 @@ instead.
 Refer to the following pages for the various supported Bluetooth options
 available.
 
-::: {.toctree maxdepth="1"}
+::: 
 /reference/hardware/bluetooth/hc-05-06
 /reference/hardware/bluetooth/esp32-bluetooth
 :::

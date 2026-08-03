@@ -4,11 +4,11 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-![Chrome Logo](/_static/images/throttles/icon_chrome.png){.align-left}
+![Chrome Logo](/_static/images/throttles/icon_chrome.png)
 
-![Edge Logo](/_static/images/throttles/icon_edge.png){.align-left}
+![Edge Logo](/_static/images/throttles/icon_edge.png)
 
-![Opera Logo](/_static/images/throttles/icon_opera.png){.align-left}
+![Opera Logo](/_static/images/throttles/icon_opera.png)
 
 ::: rst-class
 dcclink
@@ -18,9 +18,9 @@ dcclink
 
 \|force-break\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -47,7 +47,7 @@ mode, just run it and play. To use it to run real trains you will need:
 
 ## Getting started
 
-:::: {.note .note-float-right}
+:::: 
 ::: title
 Note
 :::
@@ -96,7 +96,7 @@ work offline and always find \|EX-WT\| with your other Apps!
 
 ## Download
 
-:::: {.note .note-float-right}
+:::: 
 ::: title
 Note
 :::
@@ -160,26 +160,25 @@ dropdown as is.
 ![EX-WebThrottle - Connect
 button](/_static/images/ex-webthrottle/connect-button.png)
 
-Next, click on the `Connect EX-CS`{.interpreted-text role="guilabel"}
+Next, click on the `Connect EX-CS`
 button.
 
 When using the serial connection, if the program finds any compatible
 devices, it will open a popup a window showing you a selection. It may
 show a line at the top such as \"Arduino Mega 2560 (COM3)\". Your com
 port may vary. Click on your board to select it and then click the
-`Connect EX-CS`{.interpreted-text role="guilabel"} button.
+`Connect EX-CS` button.
 
 You should then be connected to the \|EX-CS\| and should see the
 response from the Command Station in the log textbox of the debug
 console at the bottom of the throttle window. Make sure your debug
-console is open. If it isn\'t, use the `Debug Console`{.interpreted-text
-role="guilabel"} slider button in the lower lower right to open it.
+console is open. If it isn\'t, use the `Debug Console` slider button in the lower lower right to open it.
 
 When the command station is ready to use you should see
 `[i] EX-CommandStation is READY` appear in the log.
 
 Now you are ready to run trains! Place your loco on the track and click
-the `Power`{.interpreted-text role="guilabel"} slider button to turn on
+the `Power` slider button to turn on
 power to your track (if not already on). You should see LEDs on your
 Motor Driver and an indication that your loco has power.
 
@@ -198,8 +197,8 @@ alt="EX-WebThrottle - Loco ID" />
 <figcaption aria-hidden="true">EX-WebThrottle - Loco ID</figcaption>
 </figure>
 
-Next go to the [Loco ID]{.title-ref} textbox and enter the DCC Address
-of your loco and press the `Acquire`{.interpreted-text role="guilabel"}
+Next go to the [Loco ID] textbox and enter the DCC Address
+of your loco and press the `Acquire`
 (right arrow in a circle) button.
 
 You should now have full control over your loco.
@@ -226,8 +225,8 @@ will display in the log window if it is open
 The circular control or vertical slider (chosen by the throttle select
 slider) can be moved by clicking and holding down the mouse button and
 dragging, clicking at a spot where you want the throttle to move, or
-clicking the `+`{.interpreted-text role="guilabel"} and
-`-`{.interpreted-text role="guilabel"} buttons.
+clicking the `+` and
+`-` buttons.
 
 ------------------------------------------------------------------------
 
@@ -245,8 +244,7 @@ Once you are connected, you can also send commands directly to the
 
 e.g. You can send the `<s>` command in the \"direct command\" textbox to
 get status information from your Command Station. To do this just enter
-`s` (without the quotes) and press the `Send`{.interpreted-text
-role="guilabel"} button. \|BR\| You should see `<iDCC-EX...>` returned
+`s` (without the quotes) and press the `Send` button. \|BR\| You should see `<iDCC-EX...>` returned
 in the log window with your version, type of Arduino, type of motor
 driver, and some other information.
 
@@ -284,7 +282,7 @@ Once connected to a \|EX-CS\|, The **Routes/Automation** page allows you
 to activate any of the Routes or Automations that have been stored in
 your \|EX-CS\|, if any.
 
-Clicking the `Set`{.interpreted-text role="guilabel"} button on a
+Clicking the `Set` button on a
 Route/Automation will activate it.
 
 \|force-break\|
@@ -302,8 +300,8 @@ Once connected to a \|EX-CS\|, The **Turnouts/Points** page allows you
 to throw or close any of the Turnouts/Points that have been stored in
 your \|EX-CS\|, if any.
 
-Clicking either the `Throw`{.interpreted-text role="guilabel"} or
-`Close`{.interpreted-text role="guilabel"} buttons on a Turnout/Point
+Clicking either the `Throw` or
+`Close` buttons on a Turnout/Point
 will change it.
 
 \|force-break\|
@@ -328,30 +326,29 @@ before you can use these features.
 **Decoder Address**
 
 To read a decoder address, place your loco on the PROG track and press
-`Read Address`{.interpreted-text role="guilabel"}. If Successful, the
+`Read Address`. If Successful, the
 Address will be loaded in the `DCC Address` Field. If unsuccessful, a
 message to that effect will appear in the log.
 
 To write a decoder address, place you loco on the PROG track, enter the
 desired address into the `DCC Address` field and press
-`Write Address`{.interpreted-text role="guilabel"}. If Successful or
+`Write Address`. If Successful or
 unsuccessful, a message to that effect will appear in the log.
 
 **CV**
 
 To read a CV, place your loco on the PROG track and press
-`Read CV`{.interpreted-text role="guilabel"}. If Successful, the Value
+`Read CV`. If Successful, the Value
 of the CV will be loaded in the `CV Value` field. If unsuccessful, a
 message to that effect will appear in the log.
 
 To write a decoder address, place you loco on the PROG track, enter the
 desired CV into the `CV Numver` field, the desired value into the
-`CV Value` field and press `Write CV`{.interpreted-text
-role="guilabel"}. If Successful or unsuccessful, a message to that
+`CV Value` field and press `Write CV`. If Successful or unsuccessful, a message to that
 effect will appear in the log.
 
 You can use the `Common CVs` drop list to select a CV. The approprate
-value will be put into the [CV Number]{.title-ref}\` field on selection.
+value will be put into the [CV Number]\` field on selection.
 
 :!!! note "::: title
 Note"
@@ -371,8 +368,7 @@ This is stored in the individual PC/computer, and cannot be accessed by
 any other computer, unless exported and imported into that computer. The
 \'roster\' cannot be accessed by any mobile device (phone app).
 
-`Use of this is not recommended as it may not be available in the new version of EX-Toolbox currently being developed.`{.interpreted-text
-role="dcc-ex-red-bold-italic"}
+`Use of this is not recommended as it may not be available in the new version of EX-Toolbox currently being developed.`
 
 :!!! note "::: title
 Note"
@@ -392,8 +388,7 @@ accessed by any other computer, unless exported and imported into that
 computer. The \'functions maps\' cannot be accessed by any mobile device
 (phone app).
 
-`Use of this is not recommended as it may not be available in the new version of EX-Toolbox currently being developed.`{.interpreted-text
-role="dcc-ex-red-bold-italic"}
+`Use of this is not recommended as it may not be available in the new version of EX-Toolbox currently being developed.`
 
 :!!! note "::: title
 Note"
@@ -437,8 +432,7 @@ one of these options:
 
 #### Storage
 
-`Use of this is not recommended as it may not be available in the new version currently being developed.`{.interpreted-text
-role="dcc-ex-red-bold-italic"}\`
+`Use of this is not recommended as it may not be available in the new version currently being developed.`\`
 
 - Export App data
 - Import App data
@@ -455,7 +449,7 @@ role="dcc-ex-red-bold-italic"}\`
 If you want to really delve into how this works and help us improve it
 with your comments or your development skills, please contact us. You
 can also read through our
-`/about/contributing/webthrottle`{.interpreted-text role="doc"} page for
+`/about/contributing/webthrottle` page for
 info on preparing to view and contribute to the code.
 
 To load the Chrome DevTools to look at logging and be able to manually

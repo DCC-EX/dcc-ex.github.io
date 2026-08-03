@@ -4,25 +4,20 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
 
-- `reference/tools/diagnostic-d-ack-command:\<D ACK ON\>`{.interpreted-text
-  role="ref"} - Turn on Loco acknowledgement diagnostics
-- `reference/tools/diagnostic-d-ack-command:\<D ACK LIMIT mA\>`{.interpreted-text
-  role="ref"} - Override ACK processing mA pulse size
-- `reference/tools/diagnostic-d-ack-command:\<D ACK MIN µS\>`{.interpreted-text
-  role="ref"} - Override ACK processing minimum pulse width
-- `reference/tools/diagnostic-d-ack-command:\<D ACK MAX µS\>`{.interpreted-text
-  role="ref"} - Override ACK processing max pulse width
-- `reference/tools/diagnostic-d-ack-command:\<D PROGBOOST\>`{.interpreted-text
-  role="ref"} - Override 250mA prog track limit while idle.
+- `reference/tools/diagnostic-d-ack-command:\<D ACK ON\>` - Turn on Loco acknowledgement diagnostics
+- `reference/tools/diagnostic-d-ack-command:\<D ACK LIMIT mA\>` - Override ACK processing mA pulse size
+- `reference/tools/diagnostic-d-ack-command:\<D ACK MIN µS\>` - Override ACK processing minimum pulse width
+- `reference/tools/diagnostic-d-ack-command:\<D ACK MAX µS\>` - Override ACK processing max pulse width
+- `reference/tools/diagnostic-d-ack-command:\<D PROGBOOST\>` - Override 250mA prog track limit while idle.
 
-## \<D ACK ON\> {#D ACK ON}
+## \<D ACK ON\> 
 
 If you encounter problems with ACKs from the Decoder (Reading or Writing
 CVs) and you want help, the DCC-EX support team will ask you to provide
@@ -66,7 +61,7 @@ V0 cv=8 bit=1 ACK-OK after 34mS max=573/1713mA pulse=6844uS
 V0 cv=8 bit=0 NO-ACK after 145mS max=14/41mA pulse=0uS
 VB cv=8 value=145 ACK-OK after 34mS max=639/1910mA pulse=6848uS
 Callback(145)
-<r1|1|8 145>
+<r1**1**8 145>
 ```
 
 Your output may show different formatting with respect to linefeeds.
@@ -130,7 +125,7 @@ To turn off the ack diagnostics use any parameter that is not \"ON\" or
 
 Diag messages off.
 
-## \<D ACK LIMIT mA\> {#D ACK LIMIT}
+## \<D ACK LIMIT mA\> 
 
 The Ack current limit is set according to the DCC standard(s) of 60mA.
 Most decoders send a quick back and forth current pulse to the motor to
@@ -154,10 +149,9 @@ would set the limit to 100mA (less sensitive).
 The custom ack limit will be effective until you restart the Command
 Station (it will not \"stick\" in EEPROM). If you wish to permanently
 set the ACK LIMIT, you may enter it as a command in the
-`mySetup.h </ex-commandstation/advanced-setup/startup-config>`{.interpreted-text
-role="doc"} file.
+`mySetup.h </ex-commandstation/advanced-setup/startup-config>` file.
 
-## \<D ACK MIN µS\>[]{#D ACK MIN} {#D ACK MAX}
+## \<D ACK MIN µS\>[] 
 
 ## \<D ACK MAX µS\>
 
@@ -189,7 +183,7 @@ like this:
 <D ACK MAX 10500>
 ```
 
-## \<D PROGBOOST\> {#D ACK PROGBOOST}
+## \<D PROGBOOST\> 
 
 `<D PROGBOOST>` - Override 250mA prog track limit while idle.
 
@@ -204,8 +198,7 @@ reset.
 ## Making the Changes Permanent
 
 To make these settings permanent, you can create a
-`Startup Configuration </ex-commandstation/advanced-setup/startup-config>`{.interpreted-text
-role="doc"} by adding or editing an existing *mySetup.h*. You simply add
+`Startup Configuration </ex-commandstation/advanced-setup/startup-config>` by adding or editing an existing *mySetup.h*. You simply add
 the appropriate commands in the correct format and upload the Command
 Station software again. Click on the link in this paragraph for detailed
 instructions.

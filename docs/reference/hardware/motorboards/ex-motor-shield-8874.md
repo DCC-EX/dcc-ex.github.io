@@ -9,9 +9,9 @@
 \|SUITABLEx\| \|conductorx\| \|tinkererx\| \|engineerx\|
 \|support-buttonx\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="3" local=""}
+::: 
 On this page
 :::
 ::::
@@ -176,7 +176,7 @@ Station motherboards will stay cool and work well. There is no need to
 power the Command Station via its barrel jack, or USB power. It is safe,
 however, to connect the USB cable as it will not create a conflict.
 
-:::: {.warning .warning-float-right}
+:::: 
 ::: title
 Warning
 :::
@@ -185,8 +185,7 @@ These are *common*, but not universal, upper limits of what decoders
 will accept. You should check the manual of your decoders to confirm
 what they accept, and adjust the voltage down accordingly.
 
-`Applying a voltage above what a decoder was designed for may permanently damage it.`{.interpreted-text
-role="dcc-ex-red-bold-italic"}
+`Applying a voltage above what a decoder was designed for may permanently damage it.`
 ::::
 
 Because the EX-MotorShield8874 does not drop voltage like the standard
@@ -267,14 +266,13 @@ for reference.
 
 ## Next steps
 
-See the `/ex-commandstation/diy/wifi-setup`{.interpreted-text
-role="doc"} page to learn how to connect the WiFi shield to your
+See the `/ex-commandstation/diy/wifi-setup` page to learn how to connect the WiFi shield to your
 \|EX-CSx\|, or *alternatively* connect a controller like \|JMRIx\| or
 our \|EX-WTx\| by using the serial cable to connect between your
 computer and the \|EX-CSx\| as outlined in the
-`ex-installer/installing:getting ready`{.interpreted-text role="ref"}
+`ex-installer/installing:getting ready`
 section of the \|EX-Ix\| page. Note that when configuring the
-EX-CommandStation you will want to select [EX8874_SHIELD]{.title-ref} as
+EX-CommandStation you will want to select [EX8874_SHIELD] as
 the motor board during configuration.
 
 ------------------------------------------------------------------------
@@ -292,8 +290,7 @@ This article covers both stacking an Arduino Motor Shield R3 and an
 EX-MotorShield8874, and stacking two EX-MotorShield8874s. \|BRx\| \>
 Note that L298 clone motor shields can be used on 5V Mega, etc., but
 require modification for use with 3.3V ESP32-WROOM and Nucleo-F4.
-`Link to further detail. <reference/hardware/microcontrollers/esp32:Additional information on the use of L298 Clone motor shields>`{.interpreted-text
-role="ref"}
+`Link to further detail. <reference/hardware/microcontrollers/esp32:Additional information on the use of L298 Clone motor shields>`
 
 #### Stacking an Arduino Motor Shield R3 and EX-MotorShield8874
 
@@ -302,7 +299,7 @@ already have an Arduino Motor Shield R3 or clone.
 
 We are going to leave the Arduino Motor Shield R3 in the same
 configuration as recommended on the
-`/ex-commandstation/diy/assembly`{.interpreted-text role="doc"} page and
+`/ex-commandstation/diy/assembly` page and
 as such it is worth doing this first and testing all is well before
 proceeding if this is a new install.
 
@@ -314,7 +311,7 @@ On the EX-MotorShield8874 you need to alter the Pin Assignment pads (NB:
 the following is fine for Mega and Nucleo/STM32 motherboards, but is
 **not** ideal for ESPDuino32 motherboards):
 
-![](/_static/images/motorboards/ex_motorshield8874_pin_assignment_pads.jpg){alt="DCC-EX EX-MotorShield8874 RevA Pin Assignment Pads"}
+![](/_static/images/motorboards/ex_motorshield8874_pin_assignment_pads.jpg)
 
 - Cut the PWM (EN) jumpers for both Driver A and Driver B, and solder
   bridge the right hand ALT pads
@@ -334,8 +331,7 @@ Motor Shield R3.
 
 Add **one** of the following motor driver definitions to your config.h
 file (if uncertain, read
-`this description </reference/hardware/motorboards/motor-board-config>`{.interpreted-text
-role="doc"} first):
+`this description </reference/hardware/motorboards/motor-board-config>` first):
 
 Find this section in the file:
 
@@ -395,7 +391,7 @@ disconnected from the VIN pin at least, and preferably also disabled to
 save a little power consumption and lower the RF noise. It also needs to
 have all of its IO pins used to communicate with the \|EX-CSx\|
 re-routed to alternate pins and an additional motor driver entry created
-in [config.h]{.title-ref}
+in [config.h]
 
 The documentation has the [jumpers described on
 GitHub](https://github.com/DCC-EX/EX-MotorShield8874#power-configuration-pcb-jumpers)
@@ -404,18 +400,18 @@ But to be VERY clear, you must CUT the regulator to VIN pin on the top
 of the PCB which is not labelled on the original version, but has been
 labelled on later versions:
 
-![](/_static/images/motorboards/ex_motorshield8874_vreg_vin_pad.jpg){alt="DCC-EX EX-MotorShield8874 RevA Vreg output to VIN pad"}
+![](/_static/images/motorboards/ex_motorshield8874_vreg_vin_pad.jpg)
 
 Then you should also cut the \"Regulator Enable\" trace on the bottom of
 the board:
 
-![](/_static/images/motorboards/ex_motorshield8874_vreg_enable_pad.jpg){alt="DCC-EX EX-MotorShield8874 RevA Vreg EMABLE pad"}
+![](/_static/images/motorboards/ex_motorshield8874_vreg_enable_pad.jpg)
 
 On the top board you then need to alter the Pin Assignment pads (NB:
 this is for Mega and Nucleo/STM32 motherboards, but is **not** ideal for
 ESPDuino32 motherboards):
 
-![](/_static/images/motorboards/ex_motorshield8874_pin_assignment_pads.jpg){alt="DCC-EX EX-MotorShield8874 RevA Pin Assignment Pads"}
+![](/_static/images/motorboards/ex_motorshield8874_pin_assignment_pads.jpg)
 
 - Cut the PWM (EN) jumpers for both Driver A and Driver B, and solder
   bridge the right hand ALT pads
@@ -444,8 +440,7 @@ available digital input pin on the motherboard you are using.
 
 Add **one** of the following motor driver definitions to your config.h
 file (if uncertain, read
-`this description </reference/hardware/motorboards/motor-board-config>`{.interpreted-text
-role="doc"} first):
+`this description </reference/hardware/motorboards/motor-board-config>` first):
 
 Find this section in the file:
 
@@ -491,7 +486,7 @@ new MotorDriver( 2, 10, UNUSED_PIN, 7, A2, 1.27, 5000, YOUR_PIN_A), \
 new MotorDriver( 5,  4, UNUSED_PIN, 6, A3, 1.27, 5000, YOUR_PIN_B)
 ```
 
-Where [YOUR_PIN_A]{.title-ref} and [YOUR_PIN_B]{.title-ref} are the pins
+Where [YOUR_PIN_A] and [YOUR_PIN_B] are the pins
 you have jumpered to the Sense pins for channel A and B respectively on
 the top EX-MotorShield8874.
 
@@ -547,7 +542,7 @@ EX-MotorShield8874 is operating correctly once configured.
 All of these tests require a serial connection to your \|EX-CSx\| and
 use interactive commands to change the active configuration. If you\'re
 unsure on how to connect via a serial connection, refer to
-`/reference/tools/serial-monitor`{.interpreted-text role="doc"}
+`/reference/tools/serial-monitor`
 
 Note in the images below, Track A is the right hand green connector, and
 Track B is the left hand green connector.
@@ -563,7 +558,7 @@ Firstly, configure both Tracks as `MAIN` and turn track power on:
 This should result in all four (4) yellow LEDs being lit:
 
 ![Tracks A and B configured as `MAIN` with power
-on](/_static/images/ex-motorshield8874/tracks-a-b-main-poweron.jpg){alt="Tracks A/B Main"}
+on](/_static/images/ex-motorshield8874/tracks-a-b-main-poweron.jpg)
 
 Next, configure Track A as `DC`, turn power on again, and ensure that
 there is no throttle speed:
@@ -578,7 +573,7 @@ This should result in both Track B (left) LEDs being lit, but Track A
 (right) LEDs being off:
 
 ![Track A `DC`, B `MAIN`, no
-throttle](/_static/images/ex-motorshield8874/tracks-a-dc-b-main-nothrottle.jpg){alt="Track A DC/B Main no throttle"}
+throttle](/_static/images/ex-motorshield8874/tracks-a-dc-b-main-nothrottle.jpg)
 
 Set throttle speed for Track A using DCC address 1:
 
@@ -590,7 +585,7 @@ This should result in both Track B (left) LEDs still being lit, and one
 Track A (right) LED being lit:
 
 ![Track A `DC`, B `MAIN`, with forward
-throttle](/_static/images/ex-motorshield8874/tracks-a-dc-b-main-throttle.jpg){alt="Track A DC/B Main throttle"}
+throttle](/_static/images/ex-motorshield8874/tracks-a-dc-b-main-throttle.jpg)
 
 Reverse the direction for Track A using DCC address 1:
 
@@ -602,7 +597,7 @@ This should result in both Track B (left) LEDs still being lit, and the
 opposite Track A (right) LED being lit:
 
 ![Track A `DC`, B `MAIN`, with reverse
-throttle](/_static/images/ex-motorshield8874/tracks-a-dc-b-main-throttlerev.jpg){alt="Track A DC/B Main throttle reversed"}
+throttle](/_static/images/ex-motorshield8874/tracks-a-dc-b-main-throttlerev.jpg)
 
 Now configure Track B as `DC` with the same DCC address as Track A and
 power on:
@@ -616,7 +611,7 @@ This should now result in one Track B (left) LED being lit, matching
 Track A\'s (right) LED being lit:
 
 ![Track A `DC`, B `DC`, with reverse
-throttle](/_static/images/ex-motorshield8874/tracks-a-dc-b-dc-throttlerev.jpg){alt="Track A DC/B DC throttle reversed"}
+throttle](/_static/images/ex-motorshield8874/tracks-a-dc-b-dc-throttlerev.jpg)
 
 Finally, change to the forward direction again:
 
@@ -628,4 +623,4 @@ This should now result in both Track B (left) and Track A (right) having
 the opposite LED being lit:
 
 ![Track A `DC`, B `DC`, with forward
-throttle](/_static/images/ex-motorshield8874/tracks-a-dc-b-dc-throttle.jpg){alt="Track A DC/B DC throttle forward"}
+throttle](/_static/images/ex-motorshield8874/tracks-a-dc-b-dc-throttle.jpg)

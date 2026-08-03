@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="3" local=""}
+::: 
 On this page
 :::
 ::::
@@ -33,8 +33,7 @@ website should build correctly once a PR is submitted and merged with
 the Sphinx branch of the repository.
 
 Local previews can still be generated as per
-`about/contributing/website/getting-started:5. live previews`{.interpreted-text
-role="ref"}.
+`about/contributing/website/getting-started:5. live previews`.
 
 ## Using the post-template.txt template
 
@@ -66,35 +65,33 @@ The content of the file should start like this:
   :class: image-product-logo-float-right
 
 Post title
-==========
+---
 
 A catchy one-liner here to get people's interest, and this will show on the front page and in RSS/Atom feeds.
 
 The rest of the content goes here.
 
-Feel free to use our product shortcuts such as |DCC-EX|, |EX-CS|, |EX-TT|, |EX-R|, |EX-IO|, |EX-DCCI|, |EX-FC|.
+Feel free to use our product shortcuts such as **DCC-EX**, **EX-CS**, **EX-TT**, **EX-R**, **EX-IO**, **EX-DCCI**, **EX-FC**.
 ```
 
 ### Updating the metadata (date, author, category, tags)
 
-The [:date:]{.title-ref}, [:author:]{.title-ref},
-[:category:]{.title-ref}, and [:tags:]{.title-ref} metadata fields must
+The [:date:], [:author:],
+[:category:], and [:tags:] metadata fields must
 be updated for each post.
 
-- [:date:]{.title-ref} - Add the date of the post e.g. [:date: 8 March,
-  2023]{.title-ref}
-- [:author]{.title-ref} - Your Discord or GitHub username, or full name
-  if you\'re comfortable with that e.g. [:author: peteGSX]{.title-ref}
-  or [:author: Peter Cole]{.title-ref}
-- [:category:]{.title-ref} - One or more categories the post falls into,
-  can be a comma separated list e.g. [:category: News]{.title-ref} or
-  [:category: News, Release]{.title-ref} (see
-  `about/contributing/website/publishing-news:Valid categories and tags`{.interpreted-text
-  role="ref"})
-- [:tags:]{.title-ref} - One or more tags related to the post e.g.
-  [:tags: release, ex-commandstation]{.title-ref} (see
-  `about/contributing/website/publishing-news:Valid categories and tags`{.interpreted-text
-  role="ref"})
+- [:date:] - Add the date of the post e.g. [:date: 8 March,
+  2023]
+- [:author] - Your Discord or GitHub username, or full name
+  if you\'re comfortable with that e.g. [:author: peteGSX]
+  or [:author: Peter Cole]
+- [:category:] - One or more categories the post falls into,
+  can be a comma separated list e.g. [:category: News] or
+  [:category: News, Release] (see
+  `about/contributing/website/publishing-news:Valid categories and tags`)
+- [:tags:] - One or more tags related to the post e.g.
+  [:tags: release, ex-commandstation] (see
+  `about/contributing/website/publishing-news:Valid categories and tags`)
 
 :!!! note "::: title
 Note"
@@ -108,7 +105,7 @@ as it is considered in the future.
 
 All other metadata/RST directives must remain intact as provided in the
 template, including the \"
-[:excerpt:]{.title-ref}, [:image:]{.title-ref}, and the logo image
+[:excerpt:], [:image:], and the logo image
 directive.
 ::::
 

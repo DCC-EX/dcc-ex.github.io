@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -94,13 +94,13 @@ any, \|I2C\| devices are attached.
 <* License GPLv3 fsf.org (c) dcc-ex.com *>
 <* I2C Device found at 0x3D, OLED Display? *>
 <* I2C Device found at 0x71, I2C Mux? *>
-<* I2C Device found at {I2CMux_0,SubBus_0,0x3C}, OLED Display? *>
-<* I2C Device found at {I2CMux_0,SubBus_0,0x60}, ?? *>
-<* I2C Device found at {I2CMux_0,SubBus_1,0x40}, PWM? *>
-<* I2C Device found at {I2CMux_0,SubBus_1,0x41}, PWM? *>
-<* I2C Device found at {I2CMux_0,SubBus_3,0x20}, GPIO Expander? *>
-<* I2C Device found at {I2CMux_0,SubBus_4,0x3C}, OLED Display? *>
-<* I2C Device found at {I2CMux_0,SubBus_5,0x3C}, OLED Display? *>
+<* I2C Device found at , OLED Display? *>
+<* I2C Device found at , ?? *>
+<* I2C Device found at , PWM? *>
+<* I2C Device found at , PWM? *>
+<* I2C Device found at , GPIO Expander? *>
+<* I2C Device found at , OLED Display? *>
+<* I2C Device found at , OLED Display? *>
 <* 128x64 OLED display configured on I2C:0x3d *>
 <* LCD0:DCC-EX v4.2.34 *>
 <* LCD1:Lic GPLv3 *>
@@ -123,12 +123,12 @@ where to find them. So for the example above, we need to add lines to
 // Create a 128x32 OLED display device as display number 1 
 // (line 0 is written by EXRAIL 'SCREEN(1, 0, "text")').
 
-HAL(HALDisplay<OLED>, 1, {SubBus_4, 0x3c}, 128, 64)
+HAL(HALDisplay<OLED>, 1, , 128, 64)
 
 // Create a 128x32 OLED display device as display number 2
 // (line 0 is written by EXRAIL 'SCREEN(2, 0, "text")').
 
-HAL(HALDisplay<OLED>, 2, {SubBus_5, 0x3c}, 128, 64)
+HAL(HALDisplay<OLED>, 2, , 128, 64)
 ```
 
 As you can see from the comments in this code, both of these displays
@@ -143,12 +143,12 @@ So that declaration looks like this in \"myAutomation.h\":
 // Create a 128x32 OLED display device as display number 1 
 // (line 0 is written by EXRAIL 'SCREEN(1, 0, "text")').
 
-HAL(HALDisplay<OLED>, 1, {I2CMux_0, SubBus_4, 0x3c}, 128, 64)
+HAL(HALDisplay<OLED>, 1, , 128, 64)
 
 // Create a 128x32 OLED display device as display number 2
 // (line 0 is written by EXRAIL 'SCREEN(2, 0, "text")').
 
-HAL(HALDisplay<OLED>, 2, {I2CMux_0, SubBus_5, 0x3c}, 128, 64)
+HAL(HALDisplay<OLED>, 2, , 128, 64)
 ```
 
 As you can see, things can get quite complex, but this also means it is
@@ -167,8 +167,8 @@ other sub-buses, you would need something like the following in
 //   Number of VPINs
 //   I2C address of module
 
-HAL(PCA9685, 100, 16, {I2CMux_0, SubBus_01, 0x40})
-HAL(PCA9685, 116, 16, {I2CMux_0, SubBus_01, 0x41})
+HAL(PCA9685, 100, 16, )
+HAL(PCA9685, 116, 16, )
 
 //==============================================================================
 // The following directive defines an MCP23017 16-port I2C GPIO Extender module.
@@ -179,7 +179,7 @@ HAL(PCA9685, 116, 16, {I2CMux_0, SubBus_01, 0x41})
 //   I2C address of module
 //   Vpin for interrupt (optional)
 
-HAL(MCP23017, 196, 16, {I2CMux_0, SubBus_03, 0x20})
+HAL(MCP23017, 196, 16, )
 ```
 
 :!!! note "::: title

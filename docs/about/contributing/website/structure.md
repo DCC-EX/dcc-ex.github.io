@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="4" local=""}
+::: 
 On this page
 :::
 ::::
@@ -31,12 +31,9 @@ categories:
 
 - [Folders](#folders)
 - [Pages](#pages)
-- `about/contributing/website/basic-rst:Image Types`{.interpreted-text
-  role="ref"}
-- `about/contributing/website/basic-rst:Documents / Files`{.interpreted-text
-  role="ref"}
-- `about/contributing/website/basic-rst:Image Artifacts / Original Grpahics`{.interpreted-text
-  role="ref"} (used to create the images, but not part of the
+- `about/contributing/website/basic-rst:Image Types`
+- `about/contributing/website/basic-rst:Documents / Files`
+- `about/contributing/website/basic-rst:Image Artifacts / Original Grpahics` (used to create the images, but not part of the
   documentation)
 
 ## Folders
@@ -72,11 +69,9 @@ Pages *generally* follow the basic structure:
     Contents](#on-this-page---table-of-contents) (on longer pages with
     multiple headings)
   - [Page Content](#page-content)
-    - `about/contributing/website/structure:page heading`{.interpreted-text
-      role="ref"}
+    - `about/contributing/website/structure:page heading`
     - Description or purpose of the page
-    - `Other headings <about/contributing/website/structure:page heading>`{.interpreted-text
-      role="ref"}
+    - `Other headings <about/contributing/website/structure:page heading>`
       - Text, links, images, etc.
       - \...
     - Next Steps Heading (if it is part of sequence of pages this is
@@ -126,7 +121,7 @@ Example
 ```
 :::
 
-:::: {.note .note-float-right}
+:::: 
 ::: title
 Note
 :::
@@ -152,7 +147,7 @@ Example
 --8<-- "/include/include.md"
 --8<-- "/include/include-l3.md"
 --8<-- "/include/include-description.md"
-|EX-CS-LOGO|
+**EX-CS-LOGO**
 
 ***************************************
 ```
@@ -177,7 +172,7 @@ See below for more information about heading.
 
 ### Level logos
 
-On our `/begin/levels`{.interpreted-text role="doc"} page, we refer to
+On our `/begin/levels` page, we refer to
 Conductor, Tinkerer, and Engineer level users, and where possible, we
 should be using these logos to help users understand what level the
 documentation is targeted at.
@@ -219,11 +214,9 @@ Only if really necessary use image tags:
   :scale: 40%
 ```
 
-Refer to `about/contributing/website/basic-rst:images`{.interpreted-text
-role="ref"} below for details on how to include images, and set the
+Refer to `about/contributing/website/basic-rst:images` below for details on how to include images, and set the
 scale as appropriate. A good example of the use of the different types
-of logos is the \|EX-TT\| `/ex-turntable/assembly`{.interpreted-text
-role="doc"} page.
+of logos is the \|EX-TT\| `/ex-turntable/assembly` page.
 
 ------------------------------------------------------------------------
 
@@ -269,12 +262,9 @@ Page content can include:
 
 - [Headings and Sub Headings](#headings-and-sub-headings)
 - [Text](#text)
-- `about/contributing/website/basic-rst:Links / Hyperlinks`{.interpreted-text
-  role="ref"}
-- `about/contributing/website/basic-rst:Tables`{.interpreted-text
-  role="ref"}
-- `about/contributing/website/basic-rst:images`{.interpreted-text
-  role="ref"}
+- `about/contributing/website/basic-rst:Links / Hyperlinks`
+- `about/contributing/website/basic-rst:Tables`
+- `about/contributing/website/basic-rst:images`
 
 After the heading, the page should start with an explanation of the
 purpose of the page.
@@ -331,9 +321,8 @@ text of the heading text.
 
 #### Text
 
-Refer to the `/about/contributing/website/basic-rst`{.interpreted-text
-role="doc"} and
-`/about/contributing/website/style-guide`{.interpreted-text role="doc"}
+Refer to the `/about/contributing/website/basic-rst` and
+`/about/contributing/website/style-guide`
 
 \|HR-HEAVY\|
 

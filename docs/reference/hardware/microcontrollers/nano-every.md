@@ -5,11 +5,11 @@
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
 **As of version 5.4.0, this is now deprecated, see**
-`/news/posts/20250301`{.interpreted-text role="doc"}
+`/news/posts/20250301`
 
-![Arduino](/_static/images/microcontrollers/nanoevery_box.jpg){.align-left}
+![Arduino](/_static/images/microcontrollers/nanoevery_box.jpg)
 
-![Arduino](/_static/images/microcontrollers/nanoevery1.jpg){.align-left}
+![Arduino](/_static/images/microcontrollers/nanoevery1.jpg)
 
 ::: rst-class
 clearer

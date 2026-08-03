@@ -4,7 +4,7 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-::: {.toctree maxdepth="1"}
+::: 
 microcontroller-boards pin-vpin-allocations motor-boards wifi-boards
 ethernet-boards bluetooth index-i2c accessory-controllers
 :::
@@ -13,7 +13,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
 
 ## Microcontroller List
 
-::: {.flat-table .command-table widths="auto" header-rows="1"}
+::: 
 - - Type / Brand \|\_xa\| \|\_xa\| \|\_xa\| \|\_xa\| \|\_xa\|
   - R \|BRxa\| e \|BRxa\| c \|BRxa\| o \|BRxa\| m \|BRxa\| m \|BRxa\| e
     \|BRxa\| n \|BRxa\| d \|BRxa\| e \|BRxa\| d
@@ -46,8 +46,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - \~11
   - This is our stable, well supported platform
 - - Arduino
-    `Mega2560</reference/hardware/microcontrollers/arduino-mega>`{.interpreted-text
-    role="doc"}
+    `Mega2560</reference/hardware/microcontrollers/arduino-mega>`
   - Yes
   - Yes
   - Conductor
@@ -60,8 +59,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - yes[^4]
   - 4
   - This is our stable, well supported platform
-- - `ESP32-WROOM</reference/hardware/microcontrollers/esp32>`{.interpreted-text
-    role="doc"}
+- - `ESP32-WROOM</reference/hardware/microcontrollers/esp32>`
   - Yes
   - Yes
   - Tinkerer
@@ -75,8 +73,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - \~11
   - Inexpensive and includes both WiFi and Bluetooth connectivity,
     limited in I/O pins. Most require hardware modifications to work.
-- - `STM32 Nucleo</reference/hardware/microcontrollers/stm32-nucleo>`{.interpreted-text
-    role="doc"}
+- - `STM32 Nucleo</reference/hardware/microcontrollers/stm32-nucleo>`
   - Yes
   - Yes
   - Tinkerer
@@ -91,8 +88,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - Lots of memory and 32 bit architecture, still in the convenient Uno
     form factor but with more I/O pins
 - - Arduino
-    `Uno R3</reference/hardware/microcontrollers/arduino-uno>`{.interpreted-text
-    role="doc"}[^11]
+    `Uno R3</reference/hardware/microcontrollers/arduino-uno>`[^11]
   - No
   - Yes
   - Tinkerer
@@ -108,13 +104,11 @@ ethernet-boards bluetooth index-i2c accessory-controllers
     with JMRI
 - - Arduino Uno R4
   - \-
-  - `No`{.interpreted-text role="dcc-ex-red-bold-italic"}
-  - `8`{.interpreted-text role="cspan"} -
-  - `Different architecture to the R3. Will never be supported.`{.interpreted-text
-    role="dcc-ex-red-bold-italic"}
+  - `No`
+  - `8` -
+  - `Different architecture to the R3. Will never be supported.`
 - - Arduino
-    `Nano</reference/hardware/microcontrollers/nano>`{.interpreted-text
-    role="doc"}[^14]
+    `Nano</reference/hardware/microcontrollers/nano>`[^14]
   - No
   - Yes
   - Tinkerer
@@ -128,8 +122,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - \-
   - Similar to Uno, but without the convenient Uno footprint
 - - Arduino
-    `Mega+WiFi</reference/hardware/microcontrollers/wifi-mega>`{.interpreted-text
-    role="doc"}
+    `Mega+WiFi</reference/hardware/microcontrollers/wifi-mega>`
   - No[^17]
   - Yes
   - Tinkerer
@@ -156,8 +149,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - Yes[^22]
   - 4
   - Limited support only, will be removed in 6.0.0
-- - `Nano Every</reference/hardware/microcontrollers/nano-every>`{.interpreted-text
-    role="doc"}
+- - `Nano Every</reference/hardware/microcontrollers/nano-every>`
   - No
   - Dep- \|BRxa\| re- \|BRxa\| cat- \|BRxa\| ed \|BRxa\|[^23]
   - Engineer
@@ -170,8 +162,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - Yes[^25]
   - 4
   - Limited support only, will be removed in 6.0.0
-- - `Teensy</reference/hardware/microcontrollers/teensy>`{.interpreted-text
-    role="doc"}
+- - `Teensy</reference/hardware/microcontrollers/teensy>`
   - No
   - Dep- \|BRxa\| re- \|BRxa\| cat- \|BRxa\| ed \|BRxa\|[^26]
   - Engineer
@@ -190,7 +181,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
 
 ## Motor Board List
 
-::: {.flat-table .command-table widths="auto" header-rows="1"}
+::: 
 - - Type / Brand \|\_xb\| \|\_xb\| \|\_xb\| \|\_xb\| \|\_xb\| \|\_xb\|
     \|\_xb\| \|\_xb\| \|\_xb\| \|\_xb\|
   - R \|BRxb\| e \|BRxb\| c \|BRxb\| o \|BRxb\| m \|BRxb\| m \|BRxb\| e
@@ -211,8 +202,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - Comments / Notes \|\_xb\| \|\_xb\| \|\_xb\| \|\_xb\| \|\_xb\|
     \|\_xb\| \|\_xb\| \|\_xb\| \|\_xb\| \|\_xb\| \|\_xb\| \|\_xb\|
     \|\_xb\| \|\_xb\| \|\_xb\|
-- - `DCC-EX EX-MotorShield8874 RevA</reference/hardware/motorboards/ex-motor-shield-8874>`{.interpreted-text
-    role="doc"}
+- - `DCC-EX EX-MotorShield8874 RevA</reference/hardware/motorboards/ex-motor-shield-8874>`
   - Yes
   - Yes
   - Conductor
@@ -224,8 +214,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - 2
   - 5
   - 
-- - `Arduino Motor Shield R3</reference/hardware/motorboards/arduino-motor-shield>`{.interpreted-text
-    role="doc"}[^33]
+- - `Arduino Motor Shield R3</reference/hardware/motorboards/arduino-motor-shield>`[^33]
   - Yes
   - Yes
   - Conductor
@@ -237,8 +226,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - 2
   - 1.3 - 1.5
   - 
-- - `Deek-Robot Motor Shield</reference/hardware/motorboards/deek-robot-motor-shield>`{.interpreted-text
-    role="doc"}[^35]
+- - `Deek-Robot Motor Shield</reference/hardware/motorboards/deek-robot-motor-shield>`[^35]
   - Yes
   - Yes
   - Conductor
@@ -250,8 +238,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - 2
   - 1.3 - 1.5
   - 
-- - `Flashtree Motor Shield</reference/hardware/motorboards/flashtree-motor-shield>`{.interpreted-text
-    role="doc"}
+- - `Flashtree Motor Shield</reference/hardware/motorboards/flashtree-motor-shield>`
   - No
   - Yes
   - Tinkerer
@@ -263,8 +250,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - 2
   - 1.3 - 1.5
   - 
-- - `DIY More L298NH</reference/hardware/motorboards/diy-more-l298nh-motor-shield>`{.interpreted-text
-    role="doc"}
+- - `DIY More L298NH</reference/hardware/motorboards/diy-more-l298nh-motor-shield>`
   - No
   - Yes
   - Tinkerer
@@ -276,8 +262,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - 2
   - 2
   - 
-- - `YFRobot L298P</reference/hardware/motorboards/yfrobot-l298p>`{.interpreted-text
-    role="doc"}
+- - `YFRobot L298P</reference/hardware/motorboards/yfrobot-l298p>`
   - No
   - Yes
   - Tinkerer
@@ -289,8 +274,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - 2
   - 2
   - 
-- - `L298N (dual)</reference/hardware/motorboards/L298N-motor-board-setup>`{.interpreted-text
-    role="doc"}
+- - `L298N (dual)</reference/hardware/motorboards/L298N-motor-board-setup>`
   - No
   - Yes
   - Engineer
@@ -302,8 +286,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - 2
   - 2
   - It doesn\'t have current sense
-- - `Dual Module H-bridge MOSFET IRF3205</reference/hardware/motorboards/IRF3205-motor-board-setup>`{.interpreted-text
-    role="doc"}
+- - `Dual Module H-bridge MOSFET IRF3205</reference/hardware/motorboards/IRF3205-motor-board-setup>`
   - No
   - Yes
   - Tinkerer
@@ -315,8 +298,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - 2
   - 15
   - 
-- - `Pololu MC33926</reference/hardware/motorboards/pololu-mc33926>`{.interpreted-text
-    role="doc"}
+- - `Pololu MC33926</reference/hardware/motorboards/pololu-mc33926>`
   - No
   - Yes
   - Tinkerer
@@ -329,8 +311,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - 3
   - current sense is not acceptable. We recommend using an external
     current sense board like the MAX471
-- - `MiniIBT L6201P (single)</reference/hardware/motorboards/miniibt-motor-driver-l6201p>`{.interpreted-text
-    role="doc"}
+- - `MiniIBT L6201P (single)</reference/hardware/motorboards/miniibt-motor-driver-l6201p>`
   - No
   - Yes
   - Tinkerer
@@ -342,8 +323,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - 1
   - 5
   - 
-- - `BTS7960 IBT_2 (single)</reference/hardware/motorboards/IBT_2-motor-board-setup>`{.interpreted-text
-    role="doc"}
+- - `BTS7960 IBT_2 (single)</reference/hardware/motorboards/IBT_2-motor-board-setup>`
   - No
   - Yes
   - Tinkerer
@@ -355,8 +335,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - 1
   - 43
   - 
-- - `Keyes/Fundumoto ("Beeper Board")</reference/hardware/motorboards/keyes-fundumoto>`{.interpreted-text
-    role="doc"}
+- - `Keyes/Fundumoto ("Beeper Board")</reference/hardware/motorboards/keyes-fundumoto>`
   - No
   - Yes
   - Engineer
@@ -368,8 +347,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - 2
   - 2
   - 
-- - `Makerfabs H-Bridge</reference/hardware/motorboards/makerfabs-h-bridge-motor-shield>`{.interpreted-text
-    role="doc"}
+- - `Makerfabs H-Bridge</reference/hardware/motorboards/makerfabs-h-bridge-motor-shield>`
   - No
   - Yes
   - Engineer
@@ -381,8 +359,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - 2
   - 8
   - 
-- - `Velleman KA03/VMA03</reference/hardware/motorboards/velleman-ka03-kit-vma03>`{.interpreted-text
-    role="doc"}
+- - `Velleman KA03/VMA03</reference/hardware/motorboards/velleman-ka03-kit-vma03>`
   - No
   - Yes
   - Engineer
@@ -394,8 +371,7 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - 2
   - 2
   - 
-- - `DFRobot 2x2A DC Motor Shield (DRI0009)</reference/hardware/motorboards/dfrobot-2x2a-dc-motor-shield>`{.interpreted-text
-    role="doc"}
+- - `DFRobot 2x2A DC Motor Shield (DRI0009)</reference/hardware/motorboards/dfrobot-2x2a-dc-motor-shield>`
   - No
   - Yes
   - Engineer
@@ -409,37 +385,37 @@ ethernet-boards bluetooth index-i2c accessory-controllers
   - 
 - - VNH2SP30 - SparkFun Monster Moto and others
   - \-
-  - `No`{.interpreted-text role="dcc-ex-red-bold-italic"}
-  - `7`{.interpreted-text role="cspan"} -
+  - `No`
+  - `7` -
   - Does not work. It can\'t switch fast enough to generate a reliable
     DCC signal
 - - IFX9202ED - Infineon Dual H-Bridge
   - \-
-  - `No`{.interpreted-text role="dcc-ex-red-bold-italic"}
-  - `7`{.interpreted-text role="cspan"} -
+  - `No`
+  - `7` -
   - Does not work. Can\'t switch fast enough.
 - - DFRobot Romeo V2
   - \-
-  - `No`{.interpreted-text role="dcc-ex-red-bold-italic"}
+  - `No`
   - Engineer
-  - `6`{.interpreted-text role="cspan"} -
+  - `6` -
   - Well, an Engineer could perhaps get this one to work.
 - - Kuman Board (and any L293D based boards)
   - \-
-  - `No`{.interpreted-text role="dcc-ex-red-bold-italic"}
-  - `7`{.interpreted-text role="cspan"} -
+  - `No`
+  - `7` -
   - Does not work. Not enough current.
 - - Pololu TB9051FTG based motor shield
   - \-
-  - `No`{.interpreted-text role="dcc-ex-red-bold-italic"}
-  - `7`{.interpreted-text role="cspan"} -
+  - `No`
+  - `7` -
   - Does not work. It can\'t switch fast enough to generate a reliable
     DCC signal
 :::
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-::: {.toctree maxdepth="1"}
+::: 
 index-decoder wire-gauge power-supplies
 :::
 
@@ -450,35 +426,28 @@ index-decoder wire-gauge power-supplies
     are are supported
 
 [^3]: Requires a supported motor driver that supports
-    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`{.interpreted-text
-    role="ref"}
+    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`
 
 [^4]: Requires an additional
-    `Ethernet <reference/hardware/ethernet-boards:ethernet boards>`{.interpreted-text
-    role="ref"} or
-    `WiFi <reference/hardware/wifi-boards:wifi boards>`{.interpreted-text
-    role="ref"} shield
+    `Ethernet <reference/hardware/ethernet-boards:ethernet boards>` or
+    `WiFi <reference/hardware/wifi-boards:wifi boards>` shield
 
 [^5]: HAL/[\|I2Cxa\|](##SUBST##|I2Cxa|) connectivity is only available
     via the blocking Arduino Wire library at present
 
 [^6]: Requires a supported motor driver that supports
-    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`{.interpreted-text
-    role="ref"}
+    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`
 
 [^7]: Requires a supported motor driver that supports
-    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`{.interpreted-text
-    role="ref"}
+    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`
 
 [^8]: Features and support in Beta testing can and will change
     regularly, be sure to keep up to date with developments on our
     [Discord server](https://discord.gg/y2sB4Fp)
 
 [^9]: Requires an additional
-    `Ethernet <reference/hardware/ethernet-boards:ethernet boards>`{.interpreted-text
-    role="ref"} or
-    `WiFi <reference/hardware/wifi-boards:wifi boards>`{.interpreted-text
-    role="ref"} shield
+    `Ethernet <reference/hardware/ethernet-boards:ethernet boards>` or
+    `WiFi <reference/hardware/wifi-boards:wifi boards>` shield
 
 [^10]: Features and support in Beta testing can and will change
     regularly, be sure to keep up to date with developments on our
@@ -490,8 +459,7 @@ index-decoder wire-gauge power-supplies
     and programming
 
 [^13]: Requires a supported motor driver that supports
-    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`{.interpreted-text
-    role="ref"}
+    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`
 
 [^14]: Requires the use of JMRI.
 
@@ -499,8 +467,7 @@ index-decoder wire-gauge power-supplies
     and programming
 
 [^16]: Requires a supported motor driver that supports
-    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`{.interpreted-text
-    role="ref"}
+    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`
 
 [^17]: While the Mega+WiFi boards seem like a good option and are based
     on our well-known, stable Mega2560 platform, there are many reports
@@ -508,8 +475,7 @@ index-decoder wire-gauge power-supplies
     not recommended
 
 [^18]: Requires a supported motor driver that supports
-    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`{.interpreted-text
-    role="ref"}
+    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`
 
 [^19]: The core development team no longer have access to these, and
     testing is limited to ensuring the software compiles for the board
@@ -521,28 +487,22 @@ index-decoder wire-gauge power-supplies
     SAMD21
 
 [^21]: Requires a supported motor driver that supports
-    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`{.interpreted-text
-    role="ref"}
+    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`
 
 [^22]: Requires an additional
-    `Ethernet <reference/hardware/ethernet-boards:ethernet boards>`{.interpreted-text
-    role="ref"} or
-    `WiFi <reference/hardware/wifi-boards:wifi boards>`{.interpreted-text
-    role="ref"} shield
+    `Ethernet <reference/hardware/ethernet-boards:ethernet boards>` or
+    `WiFi <reference/hardware/wifi-boards:wifi boards>` shield
 
 [^23]: The core development team no longer have access to these, and
     testing is limited to ensuring the software compiles for the board
     type
 
 [^24]: Requires a supported motor driver that supports
-    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`{.interpreted-text
-    role="ref"}
+    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`
 
 [^25]: Requires an additional
-    `Ethernet <reference/hardware/ethernet-boards:ethernet boards>`{.interpreted-text
-    role="ref"} or
-    `WiFi <reference/hardware/wifi-boards:wifi boards>`{.interpreted-text
-    role="ref"} shield
+    `Ethernet <reference/hardware/ethernet-boards:ethernet boards>` or
+    `WiFi <reference/hardware/wifi-boards:wifi boards>` shield
 
 [^26]: The core development team no longer have access to these, and
     testing is limited to ensuring the software compiles for the board
@@ -552,14 +512,11 @@ index-decoder wire-gauge power-supplies
     via the blocking Arduino Wire library at present
 
 [^28]: Requires a supported motor driver that supports
-    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`{.interpreted-text
-    role="ref"}
+    `TrackManager <trackmanager/index:trackmanager technical details and detailed instructions>`
 
 [^29]: Requires an additional
-    `Ethernet <reference/hardware/ethernet-boards:ethernet boards>`{.interpreted-text
-    role="ref"} or
-    `WiFi <reference/hardware/wifi-boards:wifi boards>`{.interpreted-text
-    role="ref"} shield
+    `Ethernet <reference/hardware/ethernet-boards:ethernet boards>` or
+    `WiFi <reference/hardware/wifi-boards:wifi boards>` shield
 
 [^30]: CV Programming
 
@@ -572,16 +529,14 @@ index-decoder wire-gauge power-supplies
     *standard motor driver*
 
 [^34]: Can be stacked, but it is complicated. See
-    `/reference/hardware/motorboards/arduino-motor-shield-stacked`{.interpreted-text
-    role="doc"}
+    `/reference/hardware/motorboards/arduino-motor-shield-stacked`
 
 [^35]: The *Arduino Motor Shield R38* and the *Deek-Robot Motor Shield*
     are interchangeably referred to in this documentation as the
     *standard motor driver*
 
 [^36]: Can be stacked, but it is complicated. See
-    `/reference/hardware/motorboards/arduino-motor-shield-stacked`{.interpreted-text
-    role="doc"}
+    `/reference/hardware/motorboards/arduino-motor-shield-stacked`
 
 [^37]: Requires modification of the board to support Current Sense
 

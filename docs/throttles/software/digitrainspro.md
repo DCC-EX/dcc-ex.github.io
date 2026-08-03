@@ -2,18 +2,18 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
 
-![Android Logo](/_static/images/throttles/icon_android.png){.align-left}
+![Android Logo](/_static/images/throttles/icon_android.png)
 
-![Apple iOS Logo](/_static/images/throttles/icon_ios.png){.align-left}
+![Apple iOS Logo](/_static/images/throttles/icon_ios.png)
 
-![Windows Logo](/_static/images/throttles/icon_windows.png){.align-left}
+![Windows Logo](/_static/images/throttles/icon_windows.png)
 
 Currently, DigitTrainsPro works with \|EX-CS\| through \|JMRI\|. You use
 JMRI\'s Web Server for the connection. However, we are working with the
@@ -32,7 +32,7 @@ Store](https://play.google.com/store/apps/details?id=digitrainspro.digitrainspro
 Store](https://apps.apple.com/us/app/digitrainspro/id1481937310)
 \|EXTERNAL-LINK\|
 
-## Features {#digitrains-features}
+## Features 
 
 - Runs on Android, IOS, Windows 10 Desktop, Tablet and Mobile.
 - Connects to JMRI using their Web Server or *soon* will be able to
@@ -45,17 +45,17 @@ Store](https://apps.apple.com/us/app/digitrainspro/id1481937310)
 - Function control
 - CV Programming
 
-## Screenshots {#digitrains-screenshots}
+## Screenshots 
 
-![DigiTrainsPro Main Screen](/_static/images/throttles/digitrainspro1.png){.align-left}
+![DigiTrainsPro Main Screen](/_static/images/throttles/digitrainspro1.png)
 
-![DigiTrainsPro Windows Setup Screen](/_static/images/throttles/digitrainspro2.png){.align-left}
+![DigiTrainsPro Windows Setup Screen](/_static/images/throttles/digitrainspro2.png)
 
 ::: rst-class
 clearer
 :::
 
-## Requirements {#digitrains-requirements}
+## Requirements 
 
 - An Android, IOS, Windows 10 (Desktop, Tablet and Mobile) device
 - Command Station (WiFi if you want to connect directly)

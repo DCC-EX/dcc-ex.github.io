@@ -2,7 +2,7 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-![iOS Logo](/_static/images/throttles/icon_ios.png){.align-left}
+![iOS Logo](/_static/images/throttles/icon_ios.png)
 
 Control your model railroad via a DCC-EX EX-CommandStation using the DCC
 Commander App on your iOS device.

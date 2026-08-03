@@ -4,7 +4,7 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-::: {.toctree maxdepth="2"}
+::: 
 documents
 :::
 
@@ -12,6 +12,6 @@ documents
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-::: {.toctree maxdepth="2"}
+::: 
 schematics
 :::

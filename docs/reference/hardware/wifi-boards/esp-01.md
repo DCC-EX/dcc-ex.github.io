@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -20,25 +20,24 @@ the 01s, but either will work.
 
 ![ESP-01s](/_static/images/assembly/esp-01s_2.png)
 
-:::: {.warning .warning-float-right}
+:::: 
 ::: title
 Warning
 :::
 
 Please be aware that the Espressif firmware shipped with *Duinopeak
 ESP8266 WiFi Expansion* and *ESP-01 or ESP-01S* devices
-`will probably NOT work`{.interpreted-text role="dcc-ex-red-bold"} with
+`will probably NOT work` with
 \|EX-CS\| out of the box.
 
 (Note: The recommended
-`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>`{.interpreted-text
-role="doc"} is now shipping with the correct firmware version and **will
+`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>` is now shipping with the correct firmware version and **will
 work** with \|EX-CS\| *without modification*).
 
 This can be corrected, but is probably beyond Conductor level and
 requires additional hardware.
 
-See `/support/wifi-at-version`{.interpreted-text role="doc"} for details
+See `/support/wifi-at-version` for details
 on how to check the version and how to correct it if needed.
 ::::
 
@@ -51,7 +50,7 @@ you can find the same pins on the motor board to get the 3.3V and Gnd to
 power the ESP8266.
 
 ![Wiring an ESP-01s to a
-Mega](/_static/images/assembly/esp8266_mega.png){alt="ESP-8266 Wiring to a Mega"}
+Mega](/_static/images/assembly/esp8266_mega.png)
 
 **Wiring**
 

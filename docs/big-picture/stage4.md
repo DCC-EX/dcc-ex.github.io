@@ -16,18 +16,17 @@ Throughout these pages we will be using \|EX-R\| functionality
 extensively, not just for automation, but also to define the various
 objects in use, and therefore we highly recommend being familiar with at
 least the basics of \|EX-R\|, so it would be best to read through the
-`/exrail/getting-started`{.interpreted-text role="doc"} page prior to
+`/exrail/getting-started` page prior to
 going any further.
 
 We will also be outlining the equivalent DCC-EX commands for items where
 relevant, so it can be handy to refer to the
-`/reference/software/command-summary-consolidated`{.interpreted-text
-role="doc"} where necessary.
+`/reference/software/command-summary-consolidated` where necessary.
 
 ## Overview of EXRAIL automations
 
 The \|EX-R\| sequences are described in detail in the
-`/exrail/index`{.interpreted-text role="doc"} pages, which we recommend
+`/exrail/index` pages, which we recommend
 that you read. We won\'t repeat all that information here, but as
 introduction\...
 
@@ -49,14 +48,14 @@ possible to design complex sequences with multiple outcomes which can
 drive your trains, operate your turnouts/points and signals, and react
 to events on your layout.
 
-See the `/exrail/examples`{.interpreted-text role="doc"} page and the
+See the `/exrail/examples` page and the
 following pages in this section for examples of what is possible.
 
 ### Structure of a \'Sequence\'
 
 In general, sequences follow the basic structure:
 
-``` {.cpp .code-block-float-right}
+``` 
 // Example
 ROUTE(1,"Coal Yard exit")
    RED(77)      // signal 77 to Red

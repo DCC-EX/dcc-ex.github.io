@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -41,8 +41,7 @@ Native Commands\| manually. Our \|EX-WT\|, \|JMRI\| and throttles
 send commands in DCC-EX Native format.
 
 Refer to
-`this list <throttles/index:dcc-ex (dcc-ex native commands)>`{.interpreted-text
-role="ref"} for the Throttles (Controllers) that are known to support
+`this list <throttles/index:dcc-ex (dcc-ex native commands)>` for the Throttles (Controllers) that are known to support
 the DCC-EX Native Protocol.
 
 ## The WiThrottle Server
@@ -74,8 +73,7 @@ is bi-lingual, we speak DCC-EX AND \|WiThrottle Protocol\|! Apps like
 WiThrottle format.
 
 Refer to
-`this list <throttles/index:wiThrottle Protocol Based Throttles>`{.interpreted-text
-role="ref"} for the Throttles (Controllers) that are known to support
+`this list <throttles/index:wiThrottle Protocol Based Throttles>` for the Throttles (Controllers) that are known to support
 the \|WITHROTTLE PROTOCOL\|.
 
 ## The JMRI WEB Server
@@ -89,8 +87,7 @@ throttle that uses the WEB Server, you connect your throttle to that via
 WiFi, and then connect to \|EX-CS\| with a USB or Serial connection.
 
 Refer to
-`this list <throttles/index:JMRI Web Server Based Throttles>`{.interpreted-text
-role="ref"} for the Throttles (Controllers) that are known to support
+`this list <throttles/index:JMRI Web Server Based Throttles>` for the Throttles (Controllers) that are known to support
 the JMRI Web Server Protocol.
 
 ## A Note about WiFi Dropped Connections
@@ -108,5 +105,4 @@ settings in your config.h file to connect to your home network as a
 client instead running as an AP, and then have your throttle devices
 find the Command Station by its IP Address on your home network. You can
 find out more about that in
-`Wifi Setup </ex-commandstation/diy/wifi-setup>`{.interpreted-text
-role="doc"}
+`Wifi Setup </ex-commandstation/diy/wifi-setup>`

@@ -1,18 +1,17 @@
-::: {.flat-table .command-table widths="auto" header-rows="3"}
-- - `2`{.interpreted-text role="rspan"} Name \|\_xa\| \|\_xa\| \|\_xa\|
+::: 
+- - `2` Name \|\_xa\| \|\_xa\| \|\_xa\|
     \|\_xa\| \|\_xa\| \|\_xa\| \|\_xa\| \|\_xa\| \|\_xa\| \|\_xa\|
     \|\_xa\|
-  - `2`{.interpreted-text role="rspan"} Licence
-  - `2`{.interpreted-text role="rspan"} Inter- \|BRxa\| face
-  - `1`{.interpreted-text role="rspan"} `1`{.interpreted-text
-    role="cspan"} Technology
-  - `2`{.interpreted-text role="rspan"} Also \|BRxa\| Requ- \|BRxa\|
+  - `2` Licence
+  - `2` Inter- \|BRxa\| face
+  - `1` `1` Technology
+  - `2` Also \|BRxa\| Requ- \|BRxa\|
     ires[^1]
-  - `5`{.interpreted-text role="cspan"} Format
-  - `2`{.interpreted-text role="rspan"} CV \|BRxa\| Pro- \|BRxa\| gram-
+  - `5` Format
+  - `2` CV \|BRxa\| Pro- \|BRxa\| gram-
     \|BRxa\| ming
-- - `2`{.interpreted-text role="cspan"} Mobile
-  - `2`{.interpreted-text role="cspan"} PC
+- - `2` Mobile
+  - `2` PC
 - - P \|BRxa\| r \|BRxa\| o \|BRxa\| t \|BRxa\| o \|BRxa\| c \|BRxa\| o
     \|BRxa\| l \|BRxa\|[^2]
   - UI
@@ -24,8 +23,7 @@
   - W \|BRxa\| i \|BRxa\| n
   - M \|BRxa\| a \|BRxa\| c \|BRxa\| O \|BRxa\| S
   - L \|BRxa\| i \|BRxa\| n \|BRxa\| u \|BRxa\| x
-- - `EX-WebThrottle </ex-webthrottle/index>`{.interpreted-text
-    role="doc"}
+- - `EX-WebThrottle </ex-webthrottle/index>[
   - Free
   - USB
   - Native / WiT
@@ -38,7 +36,7 @@
   - X
   - X
   - X
-- - `JMRI <software/jmri>`{.interpreted-text role="doc"}
+- - `JMRI ](software/jmri.md)
   - Free
   - USB / WiFi[^4]
   - Native
@@ -51,8 +49,7 @@
   - X
   - X
   - X
-- - `Railroad Automation <software/railroad-automation>`{.interpreted-text
-    role="doc"}
+- - `Railroad Automation <software/railroad-automation>`
   - Free
   - WiFi / LocoNet
   - LocoNet
@@ -65,8 +62,7 @@
   - X
   - X
   - 
-- - `Engine Driver <software/engine-driver>`{.interpreted-text
-    role="doc"}
+- - `Engine Driver <software/engine-driver>`
   - Free
   - WiFi
   - Native / Wit
@@ -79,8 +75,7 @@
   - 
   - 
   - X[^6]
-- - `Cab Engineer: DCC Throttle <software/cab-engineer>`{.interpreted-text
-    role="doc"}
+- - `Cab Engineer: DCC Throttle <software/cab-engineer>[
   - Free
   - WiFi
   - Native
@@ -93,7 +88,7 @@
   - 
   - 
   - 
-- - `DCCpp CAB <software/dccpp-cab>`{.interpreted-text role="doc"}
+- - `DCCpp CAB ](software/dccpp-cab.md)
   - Free
   - WiFi / BT
   - Native
@@ -106,8 +101,7 @@
   - 
   - 
   - X
-- - `DCC++ Throttle <software/dccpp-throttle>`{.interpreted-text
-    role="doc"}
+- - `DCC++ Throttle <software/dccpp-throttle>`
   - Free
   - BT
   - Native
@@ -120,8 +114,7 @@
   - 
   - 
   - X
-- - `RtDtive DCC-EX <software/rtdrive-dccpp>`{.interpreted-text
-    role="doc"}
+- - `RtDtive DCC-EX <software/rtdrive-dccpp>`
   - Free
   - WiFi
   - Native
@@ -134,8 +127,7 @@
   - 
   - 
   - X
-- - `DigiTrainsPro <software/digitrainspro>`{.interpreted-text
-    role="doc"}
+- - `DigiTrainsPro <software/digitrainspro>[
   - Free / Paid
   - WiFi
   - JMRI Web
@@ -148,7 +140,7 @@
   - 
   - 
   - 
-- - `Locontrol <software/locontrol>`{.interpreted-text role="doc"}
+- - `Locontrol ](software/locontrol.md)
   - Free / Paid
   - Net
   - WiT
@@ -161,7 +153,7 @@
   - 
   - 
   - 
-- - `SRCP Client <software/srcpclient>`{.interpreted-text role="doc"}
+- - [SRCP Client ](software/srcpclient.md)
   - Free
   - WiFi
   - Native
@@ -174,7 +166,7 @@
   - 
   - 
   - 
-- - `ThrottleCard <software/throttlecard>`{.interpreted-text role="doc"}
+- - [ThrottleCard ](software/throttlecard.md)
   - Free / Paid
   - WiFi
   - Native / WiT
@@ -187,7 +179,7 @@
   - X
   - 
   - X
-- - `Signal Cab <software/signal-cab>`{.interpreted-text role="doc"}
+- - [Signal Cab ](software/signal-cab.md)
   - Paid
   - WiFi
   - Native / WiT
@@ -200,8 +192,7 @@
   - 
   - 
   - X
-- - `Train Throttle <software/train-throttle>`{.interpreted-text
-    role="doc"}
+- - `Train Throttle <software/train-throttle>`
   - Free / Paid
   - WiFi
   - WiT
@@ -214,8 +205,7 @@
   - X
   - 
   - 
-- - `TrainNavigator <software/trainnavigator>`{.interpreted-text
-    role="doc"}
+- - `TrainNavigator <software/trainnavigator>[
   - Free
   - WiFi
   - Native
@@ -228,7 +218,7 @@
   - 
   - 
   - 
-- - `WiThrottle <software/withrottle>`{.interpreted-text role="doc"}
+- - `WiThrottle ](software/withrottle.md)
   - Free[^7] / Paid
   - WiFi
   - WiT
@@ -241,7 +231,7 @@
   - 
   - 
   - 
-- - `DCC-EX CAB <software/dccex-cab>`{.interpreted-text role="doc"}
+- - [DCC-EX CAB ](software/dccex-cab.md)
   - Paid
   - WiFi
   - Native
@@ -254,8 +244,7 @@
   - 
   - 
   - X
-- - `DCC Commander <software/dcc-commander>`{.interpreted-text
-    role="doc"}
+- - `DCC Commander <software/dcc-commander>`
   - Free[^8] / Paid
   - WiFi
   - Native
@@ -268,8 +257,7 @@
   - 
   - 
   - X
-- - `WiThrottle Cab <software/withrottle-cab>`{.interpreted-text
-    role="doc"}
+- - `WiThrottle Cab <software/withrottle-cab>`
   - Paid
   - WiFi
   - Native
@@ -282,8 +270,7 @@
   - 
   - 
   - 
-- - `DccExController <hardware/dccexcontroller>`{.interpreted-text
-    role="doc"}
+- - `DccExController <hardware/dccexcontroller>`
   - Free
   - WiFi
   - Native
@@ -296,8 +283,7 @@
   - 
   - 
   - 
-- - `DCC-EX Simple Throttle <hardware/simple-throttle>`{.interpreted-text
-    role="doc"}
+- - `DCC-EX Simple Throttle <hardware/simple-throttle>`
   - Free
   - WiFi
   - Native
@@ -310,8 +296,7 @@
   - 
   - 
   - 
-- - `Elgato Stream Deck <hardware/streamdeck>`{.interpreted-text
-    role="doc"}
+- - `Elgato Stream Deck <hardware/streamdeck>[
   - Paid
   - WiFi
   - native
@@ -324,7 +309,7 @@
   - 
   - 
   - 
-- - `EX-T3-WiFi <hardware/ex-t3-wifi>`{.interpreted-text role="doc"}
+- - `EX-T3-WiFi ](hardware/ex-t3-wifi.md)
   - Free
   - WiFi
   - Native
@@ -350,8 +335,7 @@
   - 
   - 
   - 
-- - `LoDi-Con WiFi Throttle </throttles/hardware/lodi-con-wifi-throttle>`{.interpreted-text
-    role="doc"}
+- - `LoDi-Con WiFi Throttle </throttles/hardware/lodi-con-wifi-throttle>[
   - Paid
   - WiFi
   - WiT
@@ -364,7 +348,7 @@
   - 
   - 
   - 
-- - `miniThrottle <hardware/minithrottle>`{.interpreted-text role="doc"}
+- - `miniThrottle ](hardware/minithrottle.md)
   - Open Source
   - WiFi / USB
   - Native
@@ -377,8 +361,7 @@
   - 
   - 
   - 
-- - `myBluePillThrottle7 <hardware/mybluepillthrottle>`{.interpreted-text
-    role="doc"}
+- - `myBluePillThrottle7 <hardware/mybluepillthrottle>`
   - Open Source
   - Serial
   - Native
@@ -391,8 +374,7 @@
   - 
   - 
   - 
-- - `WiTcontroller <hardware/witcontroller>`{.interpreted-text
-    role="doc"}
+- - `WiTcontroller <hardware/witcontroller>[
   - Open Source
   - WiFi
   - WiT
@@ -405,7 +387,7 @@
   - 
   - 
   - 
-- - `wiFred <hardware/wifred>`{.interpreted-text role="doc"}
+- - `wiFred ](hardware/wifred.md)
   - Open Source
   - WiFi
   - WiT
@@ -418,7 +400,7 @@
   - 
   - 
   - 
-- - `TCS UWT-50 <hardware/uwt50>`{.interpreted-text role="doc"} &
+- - [TCS UWT-50 ](hardware/uwt50.md) &
     UWT-100
   - Paid
   - WiFi
@@ -484,13 +466,11 @@
     \'build\' the device.
 
 [^2]: See
-    `/reference/software/withrottle-vs-native-commands`{.interpreted-text
-    role="doc"}.
+    `/reference/software/withrottle-vs-native-commands`.
 
 [^3]: Note: The Android throttle apps listed above can be made to made
     to run on Windows PCs. See
-    `Running Android apps on Microsoft Windows <software/android-apps-on-windows>`{.interpreted-text
-    role="doc"}.
+    `Running Android apps on Microsoft Windows <software/android-apps-on-windows>`.
 
 [^4]: Connecting JMRI to an EX-CommandStation over WiFi works, but is
     not recommended and is not supported
@@ -510,32 +490,27 @@
 
 [^9]: ESU Mobile Control Pro is an Android device with additional
     hardware, so can also run the
-    `Engine Driver <software/engine-driver>`{.interpreted-text
-    role="doc"} app. As such it can use the DCC-EX Native protocol when
+    `Engine Driver <software/engine-driver>` app. As such it can use the DCC-EX Native protocol when
     connected to a DCC-EX Command Station. It uses the WiThrottle
     protocol when connected to a WiThrottle server. When using Engine
     Driver and the Native Protocol it is capable of CV programming.
 
 [^10]: ESU Mobile Control Pro is an Android device with additional
     hardware, so can also run the
-    `Engine Driver <software/engine-driver>`{.interpreted-text
-    role="doc"} app. As such it can use the DCC-EX Native protocol when
+    `Engine Driver <software/engine-driver>` app. As such it can use the DCC-EX Native protocol when
     connected to a DCC-EX Command Station. It uses the WiThrottle
     protocol when connected to a WiThrottle server. When using Engine
     Driver and the Native Protocol it is capable of CV programming.
 
 [^11]: ESU Mobile Control Pro is an Android device with additional
     hardware, so can also run the
-    `Engine Driver <software/engine-driver>`{.interpreted-text
-    role="doc"} app. As such it can use the DCC-EX Native protocol when
+    `Engine Driver <software/engine-driver>` app. As such it can use the DCC-EX Native protocol when
     connected to a DCC-EX Command Station. It uses the WiThrottle
     protocol when connected to a WiThrottle server. When using Engine
     Driver and the Native Protocol it is capable of CV programming.
 
 [^12]: See
-    `/reference/software/withrottle-vs-native-commands`{.interpreted-text
-    role="doc"}.
+    `/reference/software/withrottle-vs-native-commands`.
 
 [^13]: See
-    `/reference/software/withrottle-vs-native-commands`{.interpreted-text
-    role="doc"}.
+    `/reference/software/withrottle-vs-native-commands`.

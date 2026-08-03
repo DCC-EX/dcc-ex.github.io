@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -20,14 +20,10 @@ with your trains and accessories. We will list some of the most helpful
 tools here including where to buy them assembled or how to build them
 yourself.
 
-- `reference/tools/diagnostic-tools:Sniffer vs. Analyzer`{.interpreted-text
-  role="ref"}
-- `reference/tools/diagnostic-tools:DCC Sniffer (packet analyzer)`{.interpreted-text
-  role="ref"}
-- `reference/tools/diagnostic-tools:Logic Analyzer/Decoder`{.interpreted-text
-  role="ref"}
-- `reference/tools/diagnostic-tools:DCC Track Phase Detector`{.interpreted-text
-  role="ref"}
+- `reference/tools/diagnostic-tools:Sniffer vs. Analyzer`
+- `reference/tools/diagnostic-tools:DCC Sniffer (packet analyzer)`
+- `reference/tools/diagnostic-tools:Logic Analyzer/Decoder`
+- `reference/tools/diagnostic-tools:DCC Track Phase Detector`
 
 ## Sniffer vs. Analyzer
 
@@ -38,14 +34,13 @@ the track to read the data packets and display them as the human
 readable DCC commands on a serial monitor. It is also sometimes called a
 \"PACKET analyzer\" which shouldn\'t be confused with \"LOGIC analyzer\"
 in the next section. We recommend using our
-`EX-DCCInspector </download/ex-dccinspector>`{.interpreted-text
-role="doc"} sketch.
+`EX-DCCInspector </download/ex-dccinspector>` sketch.
 
 ![Example outputs of a DCC Sniffer below. Click on any of the images to
 view them full size.\
-![Example Sniffer Output 1](/_static/images/tools/sniffer_out1.png){.align-left}\
-![Example Sniffer Output 2](/_static/images/tools/sniffer_out2.jpg){.align-left}\
-![Example Sniffer Output 3](/_static/images/tools/sniffer_out3.png){.align-left}](/_static/images/pixel.png){alt="Example outputs of a DCC Sniffer below. Click on any of the images to view them full size."}
+![Example Sniffer Output 1](/_static/images/tools/sniffer_out1.png)\
+![Example Sniffer Output 2](/_static/images/tools/sniffer_out2.jpg)\
+![Example Sniffer Output 3](/_static/images/tools/sniffer_out3.png)](/_static/images/pixel.png)
 
 ::: rst-class
 clearer
@@ -73,8 +68,7 @@ alt="DCC Signal Analyzer output" />
 
 Well it isn\'t quite a turnkey solution, but it\'s close. You need this
 shield and an Arduino Uno or Mega and then to download our free
-`DCCInspector-EX </download/ex-dccinspector>`{.interpreted-text
-role="doc"} file and upload it to your microcontroller with the
+`DCCInspector-EX </download/ex-dccinspector>` file and upload it to your microcontroller with the
 \|Arduino IDE\|. This is really a well-designed board. It is not only a
 packet sniffer, but can also be used as a decoder with different
 software. It has a wealth of configuration options and can even deliver
@@ -92,8 +86,7 @@ Sniffer/Decoder Board</figcaption>
 **It costs about \$30 US.**
 
 And since it is a shield, you just stick it on top of an Uno or Mega,
-upload `EX-DCCInspector </download/ex-dccinspector>`{.interpreted-text
-role="doc"}, connect two jumpers to your track, connect the Arduino to
+upload `EX-DCCInspector </download/ex-dccinspector>`, connect two jumpers to your track, connect the Arduino to
 your laptop USB and open your serial monitor and you are done.
 
 **\* Wiring and more info goes here**\*
@@ -108,8 +101,7 @@ or ESP32 if you connect to the signal pin of the \|EX-CS\| instead of to
 the track.
 
 You will need to upload our
-`EX-DCCInspector </download/ex-dccinspector>`{.interpreted-text
-role="doc"} software to whatever microcontroller you choose.
+`EX-DCCInspector </download/ex-dccinspector>` software to whatever microcontroller you choose.
 
 <figure class="align-center">
 <img src="/_static/images/tools/sniffer_block_diag.png"
@@ -140,8 +132,7 @@ some Teensy\'s) and seeing only positive going pulses. You jumper wires
 directly to your command station logic-level direction signal pin to the
 input pin on your sniffer and from GND to GND on both devices. (DO NOT
 WIRE TO THE MOTOR BOARD OUTPUTS!!) See the
-`EX-DCCInspector </download/ex-dccinspector>`{.interpreted-text
-role="doc"} download page for which pins to use.
+`EX-DCCInspector </download/ex-dccinspector>` download page for which pins to use.
 
 ##### Connect to the track
 

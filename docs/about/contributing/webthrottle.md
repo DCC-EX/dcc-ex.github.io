@@ -6,7 +6,7 @@
 
 :::: sidebar
 
-::: {.contents depth="3" local=""}
+::: 
 On this page
 :::
 ::::
@@ -30,8 +30,8 @@ Note"
 :::
 
 You may want to have a look at our page on
-`/about/contributing/software`{.interpreted-text role="doc"} and also
-our page on `/about/contributing/github`{.interpreted-text role="doc"}
+`/about/contributing/software` and also
+our page on `/about/contributing/github`
 if you\'ve never used git or GitHub before
 ::::
 
@@ -41,8 +41,7 @@ EX-WebThrottle2. You can download it from Microsoft\'s website
 waiting for it to install, you can be getting a local copy of the code.
 
 Once you have downloaded VSCode and installed it, open VSCode then click
-`File --> Open Workspace from file...`{.interpreted-text
-role="menuselection"} then find your local copy of the code and select
+`File --> Open Workspace from file...` then find your local copy of the code and select
 \"EX-WebThrottle2.code-workspace\". Once VSCode has loaded the
 workspace, you should see a popup in the bottom right asking you if you
 want to install the recommended extensions. It\'s recommended you
@@ -62,10 +61,10 @@ You\'ll need to set up Volar to handle TypeScript, instead of the built
 in TypeScript extension. To do this, follow these steps:
 
 1.  Open the command palette
-    (`View --> Command Palette`{.interpreted-text role="menuselection"})
+    (`View --> Command Palette`)
 2.  Run Extensions: Show Built-in Extensions command
 3.  Find TypeScript and JavaScript Language Features, right click and
-    select [Disable (Workspace)]{.title-ref}
+    select [Disable (Workspace)]
 4.  Reload VSCode, and then open any vue file to trigger Volar
     activation (no longer need in 0.28.4).
 
@@ -75,7 +74,7 @@ Again, you can download it from their website
 the LTS version of Node.
 
 Once Node is installed, open a terminal in VSCode
-(`Terminal --> New terminal`{.interpreted-text role="menuselection"})
+(`Terminal --> New terminal`)
 and run the following command to install all the dependencies:
 
 ``` shell
@@ -135,8 +134,7 @@ current release, you can use the same naming scheme but branch from
 
 It doesn\'t really matter how you work in your fork, just make sure you
 open your pull request to the right branch (discussed further down in
-`about/contributing/webthrottle:opening a pull request`{.interpreted-text
-role="ref"}).
+`about/contributing/webthrottle:opening a pull request`).
 
 ### Commits
 

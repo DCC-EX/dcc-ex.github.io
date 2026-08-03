@@ -2,16 +2,16 @@ orphan
 
 : 
 
-::: {.meta keywords="Commercial Systems Comparison"}
+::: 
 :::
 
 \|donate-button\|
 
 # Why DCC-EX? - Comparing EX-CommandStation to Commercial Systems
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="3" local=""}
+::: 
 On this page
 :::
 ::::
@@ -34,7 +34,7 @@ corporate structure, and more local purchasing options. (See below.)
 
 This page will compare the following areas in broad generic terms:
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 Areas of Comparison
 :::
 
@@ -133,7 +133,7 @@ with \|EX-CS\|, but that is an additional item to build or purchase.
 Note that there are multiple inexpensive physical throttle designs that
 you can build yourself. There is a list of throttles that work with
 \|EX-CS\| in our
-`throttles/index:throttles (controllers)`{.interpreted-text role="ref"}
+`throttles/index:throttles (controllers)`
 section.
 
 \|hr-dashed\|

@@ -5,11 +5,11 @@
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
 **As of version 5.4.0, this is no longer a recommended option, see**
-`/news/posts/20250301`{.interpreted-text role="doc"}
+`/news/posts/20250301`
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -30,8 +30,7 @@ Be sure to compare the Mega before using the Nano
 
 Validate none of the limitations of a Nano will prevent you using
 features you will need by reading through the section on
-`ex-commandstation/advanced-setup/index:microcontrollers`{.interpreted-text
-role="ref"}.
+`ex-commandstation/advanced-setup/index:microcontrollers`.
 
 ![Arduino Nano](/_static/images/microcontrollers/nano.png)
 
@@ -52,15 +51,13 @@ role="ref"}.
 ## Software
 
 - See
-  `Command Station Download Page </download/ex-commandstation>`{.interpreted-text
-  role="doc"}
+  `Command Station Download Page </download/ex-commandstation>`
 - A Controller (aka Throttle or CAB). More on this below.
 
 ## Optional Hardware
 
 Supported
-`ESP8266 WiFi Option </reference/hardware/wifi-boards>`{.interpreted-text
-role="doc"}
+`ESP8266 WiFi Option </reference/hardware/wifi-boards>`
 
 :!!! note "::: title
 Note"
@@ -144,5 +141,4 @@ shield you can connect to an Uno or Mega.
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.

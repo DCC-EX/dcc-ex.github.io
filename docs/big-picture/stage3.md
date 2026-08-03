@@ -22,8 +22,7 @@ layout, and possibly even be unique to each particular turnout/point or
 signal, depending on how they are mounted and physically connected.
 
 We provide some handy documentation on how to evaluate the correct
-angles on our `/reference/hardware/servo-module`{.interpreted-text
-role="doc"} page.
+angles on our `/reference/hardware/servo-module` page.
 
 ### Turnout/point object IDs
 
@@ -35,8 +34,7 @@ defined with the same ID, meaning the same \|EX-R\| sequences will
 apply, no matter how the objects are defined.
 
 For further information on IDs used in \|EX-R\|, refer to the
-`exrail/exrail-command-reference:handy information`{.interpreted-text
-role="ref"} section of the \|EX-R\| reference page.
+`exrail/exrail-command-reference:handy information` section of the \|EX-R\| reference page.
 
 ### DCC addresses
 
@@ -46,8 +44,7 @@ commence at the linear DCC address 101, which starts at an address of
 
 For help understanding linear vs. address/sub address formatting of DCC
 accessories, refer to the
-`reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)`{.interpreted-text
-role="ref"}.
+`reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)`.
 
 :!!! note "::: title
 Note"
@@ -107,7 +104,7 @@ IF(-SNS1)         // If activie high sensor 1 is triggered
 ::: sidebar
 
 You can also refer to
-`/reference/hardware/servo-module`{.interpreted-text role="doc"} for
+`/reference/hardware/servo-module` for
 more information.
 :::
 
@@ -147,14 +144,14 @@ will be accessed using pin number 100.
 Once you\'ve made all of the connections, apply power to the Arduino.
 
 Then, in the \|Serial Monitor\|, enter the command [\<D SERVO 100
-450\>]{.title-ref}. The servo should move, as long as it isn\'t (by some
+450\>]. The servo should move, as long as it isn\'t (by some
 fluke) already in that position.
 
-Enter [\<D SERVO 100 110\>]{.title-ref} and this time it should
+Enter [\<D SERVO 100 110\>] and this time it should
 definitely move. For the last parameter (servo position) you can use any
 value between about 105 and 490.
 
-Try [\<D SERVO 100 450 3\>]{.title-ref} and the servo should move slowly
+Try [\<D SERVO 100 450 3\>] and the servo should move slowly
 back.
 
 You can use the servo to control turnouts, semaphore signals, engine
@@ -229,7 +226,7 @@ SERVO_TURNOUT(200, 101, 450, 110, Slow, "Example slow turnout/point definition")
 ::: sidebar
 
 Alternate is to use a
-`/reference/hardware/gpio-module`{.interpreted-text role="doc"}
+`/reference/hardware/gpio-module`
 :::
 
 IR sensors typically require three connections: 5V (or VCC), Ground, and
@@ -262,8 +259,7 @@ Use in automation as AT(DpinNo) or AT(-DpinNo)
 ::: sidebar
 
 You can also refer to
-`exrail/exrail-command-reference:virtual block control`{.interpreted-text
-role="ref"} for more information.
+`exrail/exrail-command-reference:virtual block control` for more information.
 :::
 
 Blocks in \|EX-R\| are a virtual concept only, and they do not relate in

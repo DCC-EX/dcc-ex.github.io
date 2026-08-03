@@ -3,9 +3,9 @@
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-ioexpander-button-small\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -17,7 +17,7 @@ channels:
 
   Question                                            Answer
   --------------------------------------------------- --------------------------------------------------------------------------------------------------------------------
-  What microcontrollers can be used with \|EX-IO\|?   At present, Arduino Nano, Uno, and Mega2560 (see `/ex-ioexpander/supported-devices`{.interpreted-text role="doc"})
+  What microcontrollers can be used with \|EX-IO\|?   At present, Arduino Nano, Uno, and Mega2560 (see `/ex-ioexpander/supported-devices`)
 
 ## Troubleshooting tips
 
@@ -37,10 +37,9 @@ issues encountered with \|EX-IO\|.
 |                                  |   in myHal.cpp on \|EX-CS\| and myConfig.h on \|EX-IO\|                       |
 |                                  | | Incorrect number of digital/analogue pins defined - ensure the pins defined |
 |                                  |   in myHal.cpp are valid according to                                         |
-|                                  |   `/ex-ioexpander/supported-devices`{.interpreted-text role="doc"}            |
+|                                  |   `/ex-ioexpander/supported-devices`            |
 |                                  | | \|I2C\| clock speed issue, define slower clock speed in myHal.cpp:          |
-|                                  |   `reference/hardware/i2c-devices:changing the clock speed`{.interpreted-text |
-|                                  |   role="ref"}                                                                 |
+|                                  |   `reference/hardware/i2c-devices:changing the clock speed`                                                                 |
 +----------------------------------+-------------------------------------------------------------------------------+
 | Digital pin 13 is always low in  | On non-genuine Uno devices (possibly Nano also), the onboard LED can cause    |
 | input mode                       | this behaviour when pullups are enabled, with a suggested workaround of       |

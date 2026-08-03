@@ -2,7 +2,7 @@
 
 \|conductor\| \|tinkerer\| \|engineer\|
 
-![iOS Logo](/_static/images/throttles/icon_ios.png){.align-left}
+![iOS Logo](/_static/images/throttles/icon_ios.png)
 
 [Get it on the Apple App
 Store](https://apps.apple.com/au/app/train-driver/id1558334503)

@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="3" local=""}
+::: 
 On this page
 :::
 ::::
@@ -14,19 +14,18 @@ On this page
 **Advanced config.h settings for Command Station builds**
 
 The basic Motor Shield, WiFi and Ethernet settings are covered in detail
-in `/reference/software/basic-config-h`{.interpreted-text role="doc"}
+in `/reference/software/basic-config-h`
 
 The following additional settings are for special cases and are not
 normally created automatically by the EX-Installer.
 
-These options should be coded in the file [config.h]{.title-ref} which
+These options should be coded in the file [config.h] which
 will be automatically included in the compilation process.
 
 ## Non-standard Motor Shields
 
 See also:
-`Motor Shield basic config.h <basic-config-h-motor-shield>`{.interpreted-text
-role="ref"}
+`Motor Shield basic config.h <basic-config-h-motor-shield>`
 
 Further pre-defined shield names can be found in the code file
 MotorDrivers.h although their presence there does not necessarily mean
@@ -78,7 +77,7 @@ cautious and your trains do not need full current.
 ```
 
 - DONT_TOUCH_WIFI_CONF means WIFI config will be done with the
-  [\<+\>]{.title-ref} commands and this sketch will not change anything
+  [\<+\>] commands and this sketch will not change anything
   over AT commands and the other [WIFI]()\* defines do not have any
   effect.
 
@@ -100,7 +99,7 @@ cautious and your trains do not need full current.
   have the router assign an address using DHCP.
 
 ``` cpp
-#define IP_ADDRESS { 192, 168, 1, 200 }
+#define IP_ADDRESS 
 ```
 
 - MAX_NUM_TCP_CLIENTS: If you on STM32 Ethernet (and only there) want
@@ -115,8 +114,7 @@ cautious and your trains do not need full current.
 ## LCD/OLED support
 
 See also:
-`LCD/OLED basic config.h <basic-config-h-lcd-oled-support>`{.interpreted-text
-role="ref"}
+`LCD/OLED basic config.h <basic-config-h-lcd-oled-support>`
 
 In order to avoid wasting memory the current scroll buffer is limited to
 8 lines. Some users wishing to display additional information such as
@@ -209,9 +207,9 @@ If you have issues with that the direction of the accessory commands is
 reversed (for example when converting from another CS to DCC-EX) then
 you can use this to reverse the sense of all accessory commands sent
 over DCC-EX. This #define likewise inverts the behaviour of the
-[\<a\>]{.title-ref} command for triggering DCC Accessory Decoders, so
-that [\<a addr subaddr 0\>]{.title-ref} generates a DCC packet with D=1
-(close turnout) and [\<a addr subaddr 1\>]{.title-ref} generates D=0
+[\<a\>] command for triggering DCC Accessory Decoders, so
+that [\<a addr subaddr 0\>] generates a DCC packet with D=1
+(close turnout) and [\<a addr subaddr 1\>] generates D=0
 (throw turnout).
 
 ``` cpp
@@ -301,7 +299,7 @@ take commands from and ESP32 via serial at 9600 baud from GPIO17 (TX)
 and GPIO16 (RX, currently unused).
 
 The number defined is the DCC address for which speed controls are sent
-to the sabertooth controller [as_well]{#as_well}\_. Default: Undefined.
+to the sabertooth controller [as_well]\_. Default: Undefined.
 
 ``` cpp
 #define SABERTOOTH 1

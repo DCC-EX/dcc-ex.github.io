@@ -19,16 +19,16 @@ The driver follows a simple design pattern. It doesn\'t need to
 implement all of the pattern, if you don\'t implement a particular bit
 then a default will be used instead.
 
-- Creation - a [create()]{.title-ref} function and constructor are
+- Creation - a [create()] function and constructor are
   required;
-- Initialisation - a [\_begin()]{.title-ref} function is written
+- Initialisation - a [\_begin()] function is written
   (optional);
-- Background operations - a [\_loop()]{.title-ref} function is written
+- Background operations - a [\_loop()] function is written
   (optional);
-- Operations - you can optionally supply any of [\_write()]{.title-ref}
-  (digital) function, [\_writeAnalogue()]{.title-ref} function,
-  [\_read()]{.title-ref} (digital) function and
-  [\_readAnalogue()]{.title-ref} function.
+- Operations - you can optionally supply any of [\_write()]
+  (digital) function, [\_writeAnalogue()] function,
+  [\_read()] (digital) function and
+  [\_readAnalogue()] function.
 
 Here is a template for a HAL driver, showing these elements:
 
@@ -39,51 +39,16 @@ Here is a template for a HAL driver, showing these elements:
 #include "IODevice.h"
 #include "DIAG.h"  // for DIAG calls
 
-class MyDevice: public IODevice { 
-public:
-  // Constructor
-  MyDevice(VPIN firstVpin, int nPins) {
-    _firstVpin = firstVpin;
-    _nPins = min(nPins,16);
-    // Other object initialisation here
-    // ...
-    addDevice(this);
-  }
-  static void create(VPIN firstVpin, int nPins, uint8_t i2cAddress) {
-    new MyDevice(firstVpin, nPins);
-  }
+class MyDevice: public IODevice 
+  static void create(VPIN firstVpin, int nPins, uint8_t i2cAddress) 
 private:
-  void _begin() override {
-    // Initialise device
-    // ...
-  }
-  void _loop(unsigned long currentMicros) override {
-    // Regular operations, e.g. acquire data
-    // ...
-    delayUntil(currentMicros + 10*1000UL);  // 10ms till next entry
-  }
-  int _readAnalogue(VPIN vpin) override {
-    // Return acquired data value, e.g. 
-    int pin = vpin - _firstVpin;
-    return _value[pin];
-  }
-  int _read(VPIN vpin) override {
-    // Return acquired data value, e.g.
-    int pin = vpin - _firstVpin;
-    return _value[pin];
-  }
-  void write(VPIN vpin, int value) override {
-    // Do something with value , e.g. write to device.
-    // ...
-  }
-  void writeAnalogue(VPIN vpin, int value) override {
-    // Do something with value, e.g. write to device.
-    // ...
-  }
-  void _display() override {
-    DIAG(F("MyDevice Configured on Vpins:%d-%d %S"), _firstVpin, _firstVpin+_nPins-1,
-      _deviceState == DEVSTATE_FAILED ? F("OFFLINE") : F(""));
-  }
+  void _begin() override 
+  void _loop(unsigned long currentMicros) override 
+  int _readAnalogue(VPIN vpin) override 
+  int _read(VPIN vpin) override 
+  void write(VPIN vpin, int value) override 
+  void writeAnalogue(VPIN vpin, int value) override 
+  void _display() override 
   uint16_t _value[16];
 };
 #endif // IO_MYDEVICE_H
@@ -95,7 +60,7 @@ but you will see a few different ways of handling devices.
 ## Performance
 
 One thing to be aware of is the time that the functions you write will
-take to execute. If you have a [read]{#read}() function that polls a
+take to execute. If you have a [read]() function that polls a
 device, waits for a calculation to be performed and then reads a result,
 it may, for example, take some milliseconds to complete. During this
 time, nothing else in \|EX-CS\| is able to run (apart from interrupt
@@ -108,10 +73,10 @@ It is recommended, that:
 
 - Wherever possible, the driver should not wait or delay.
 - If possible, data acquisition should be done in the
-  [\_loop()]{.title-ref} function, so that the [\_read()]{.title-ref}
-  and [\_readAnalogue()]{.title-ref} functions just return the latest
+  [\_loop()] function, so that the [\_read()]
+  and [\_readAnalogue()] functions just return the latest
   value acquired.
 - Where possible, non-blocking operations should be performed (e.g. in
-  i2c) so that an operation can be set up in one [\_loop()]{.title-ref}
-  entry, and its status be checked in subsequent [\_loop()]{.title-ref}
+  i2c) so that an operation can be set up in one [\_loop()]
+  entry, and its status be checked in subsequent [\_loop()]
   entries for completion.

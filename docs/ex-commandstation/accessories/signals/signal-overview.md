@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -67,8 +67,7 @@ All control of light signals is performed by the pin defined as the
 \"Red\" aspect.
 
 Continue to
-`/ex-commandstation/accessories/signals/light-signals`{.interpreted-text
-role="doc"} for details on how to define and connect light signals.
+`/ex-commandstation/accessories/signals/light-signals` for details on how to define and connect light signals.
 
 ### Semaphore (or servo) signals
 
@@ -85,8 +84,7 @@ pin, moving the servo to the specified angle according to the chosen
 aspect.
 
 Continue to
-`/ex-commandstation/accessories/signals/servo-signals`{.interpreted-text
-role="doc"} for details on how to define and connect semaphore/servo
+`/ex-commandstation/accessories/signals/servo-signals` for details on how to define and connect semaphore/servo
 signals.
 
 ### DCC accessory signals
@@ -96,5 +94,4 @@ defines and controls signals as DCC accessory items, and these can be
 operated the same as any other DCC accessory.
 
 Continue to
-`/ex-commandstation/accessories/signals/dcc-signals`{.interpreted-text
-role="doc"} for considerations and options for DCC accessory signals.
+`/ex-commandstation/accessories/signals/dcc-signals` for considerations and options for DCC accessory signals.

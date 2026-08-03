@@ -6,7 +6,7 @@
 
 By default the Command station will start with:
 
-- Track A - `MAIN`
+- Track A - [MAIN`
 - Track B - `PROG`
 
 The following lines can be added to `myAutomation.h` to define tracks as
@@ -29,6 +29,6 @@ DONE
 Other track modes require the `SET_POWER` command, for each track. \|BR\|
 
 : \|\_\| \|\_\|
-  `Example: Set a track to DC <dc-tracks>`{.interpreted-text role="doc"}
+  `Example: Set a track to DC ](dc-tracks.md)
   \|BR\| \|\_\| \|\_\| \|\_\| \|\_\| **NOTE:** The use of the `SET_LOCO`
   command for DC mode tracks.

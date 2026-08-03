@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -74,7 +74,7 @@ pins. Though there are 16 of them.
 
 ### 20 x 4 LCD with backpack
 
-![](/_static/images/display/lcd_20x4_backpack.jpg){alt="20 x 4 LCD"}
+![](/_static/images/display/lcd_20x4_backpack.jpg)
 
 ![16 x 2 LCD](/_static/images/display/lcd_16x2_backpack.jpg)
 
@@ -170,12 +170,12 @@ OLED](/_static/images/display/mega-with-i2c-oled.png)
 
 You can also connect the display to the motor shield\'s \|I2C\| headers.
 
-![](/_static/images/display/mega-with-i2c-oled-twi.png){alt="Mega2560 with |I2C| OLED"}
+![](/_static/images/display/mega-with-i2c-oled-twi.png)
 
 ### Reconfigure your Command Station to use a single display
 
 If installing with \|EX-I\|, refer to
-`ex-installer/installing:optional display`{.interpreted-text role="ref"}
+`ex-installer/installing:optional display`
 to configure a single display with your \|EX-CS\|.
 
 If you are using the \|Arduino IDE\| or VSCode with PlatformIO, you will
@@ -295,5 +295,4 @@ HALDisplay<LiquidCrystal>::create(2, 0x27, 20, 4);
 As you can see from the comments in this code, both of these displays
 can now be written to from \|EX-R\| using the `SCREEN()` directive. See
 the \|EX-R\|
-`exrail/exrail-command-reference:communication and display functions`{.interpreted-text
-role="ref"} for more information.
+`exrail/exrail-command-reference:communication and display functions` for more information.

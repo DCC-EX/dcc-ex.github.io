@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="3" local=""}
+::: 
 On this page
 :::
 ::::
@@ -14,7 +14,7 @@ On this page
 ## Microchip SAMD21 series
 
 **As of version 5.4.0, this is now deprecated, see**
-`/news/posts/20250301`{.interpreted-text role="doc"}
+`/news/posts/20250301`
 
 Microchip\'s SAMD21 series of ARM Cortex-M0+ enabled microcontrollers
 offer significantly more resources than the Mega. The Arduino Zero uses
@@ -122,9 +122,7 @@ copy/paste):
 
 And replace it with: :
 
-    while (usbd.epBank1IsReady(ep) && !usbd.epBank1IsTransferComplete(ep)) {
-    // optional timeout code here
-    };
+    while (usbd.epBank1IsReady(ep) && !usbd.epBank1IsTransferComplete(ep)) ;
 
 For boards such as the SparkFun SAMD21 Dev Breakout or Redboard Turbo,
 you will need to look in the SparkFun directories for the appropriate

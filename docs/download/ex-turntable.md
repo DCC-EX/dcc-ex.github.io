@@ -10,7 +10,7 @@ turntable bridge.
 
 You can now use \|EX-I\| to download and install \|EX-TT\|.
 
-:::: {.note .note-float-right}
+:::: 
 ::: title
 Note
 :::
@@ -50,8 +50,7 @@ Linux) and download it.
 This downloads a self contained app that can automatically load the
 software from your computer to your Arduino or other supported board.
 Click here for
-`EX-Installer installation instructions </ex-commandstation/installer-diy>`{.interpreted-text
-role="doc"}.
+`EX-Installer installation instructions </ex-commandstation/installer-diy>`.
 
 <p class="dcclink"><a onclick="getNewLink()"><span class="problematic">Automated Installer</span></a></p>
 

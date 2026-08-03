@@ -15,11 +15,5 @@ signals can also be controlled.
 This section will focus on the types of signals supported by \|EX-CS\|
 with the common hardware configurations required to support them.
 
-::: {.toctree maxdepth="1
-
-signal-overview
-light-signals
-servo-signals
-dcc-signals
-signal-control"}
+::: 
 :::

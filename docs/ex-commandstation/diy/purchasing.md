@@ -1,4 +1,4 @@
-::: {.meta keywords="purchasing"}
+::: 
 :::
 
 \|EX-CS-LOGO\|
@@ -7,9 +7,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -37,48 +37,41 @@ installed on a computer.
 variety of different hardware that you might also consider
 
 To help choose a suitable microcontroller, try our handy new table here:
-`reference/hardware/microcontroller-boards:choosing a microcontroller`{.interpreted-text
-role="ref"}
+`reference/hardware/microcontroller-boards:choosing a microcontroller`
 
 - Supported
-  `Arduino boards </reference/hardware/microcontroller-boards>`{.interpreted-text
-  role="doc"}
+  `Arduino boards </reference/hardware/microcontroller-boards>`
 - Supported
-  `motor shields </reference/hardware/motor-boards>`{.interpreted-text
-  role="doc"}
+  `motor shields </reference/hardware/motor-boards>`
 - Supported
-  `ESP8266 WiFi shield </reference/hardware/wifi-boards>`{.interpreted-text
-  role="doc"}
+  `ESP8266 WiFi shield </reference/hardware/wifi-boards>`
 - Supported
-  `Ethernet shield </reference/hardware/ethernet-boards>`{.interpreted-text
-  role="doc"}
+  `Ethernet shield </reference/hardware/ethernet-boards>`
 :::
 
 ### Hardware
 
 You will need to find or purchase:
 
-:::: {.important .important-float-right}
+:::: 
 ::: title
 Important
 :::
 
 **Uno R4 is not supported!** \|BR\| If you choose to purchase an Arduino
 Uno (not recommended), it is vital that you purchase the **Revision 3
-(R3)** version, `not`{.interpreted-text role="dcc-ex-red-bold"} the
+(R3)** version, `not` the
 **Revision 4 (R4)** version. The \|EX-CS\|
-`cannot run`{.interpreted-text role="dcc-ex-red-bold"} on the R4
+`cannot run` on the R4
 version.
-`See here for more information</news/posts/20230728>`{.interpreted-text
-role="doc"}.
+`See here for more information</news/posts/20230728>`.
 ::::
 
 1.  a supported **Arduino board** \|BR\| We recommend the [Elegoo Mega
     2560](https://www.amazon.com/ELEGOO-ATmega2560-ATMEGA16U2-Projects-Compliant/dp/B01H4ZLZLQ/)
     \|BR\| \|BR\|
 2.  a supported **Motor Driver** \|BR\| We recommend either our own
-    `EX-MotorShield8874 </reference/hardware/motorboards/ex-motor-shield-8874>`{.interpreted-text
-    role="doc"} or the [Arduino Motor Shield
+    `EX-MotorShield8874 </reference/hardware/motorboards/ex-motor-shield-8874>` or the [Arduino Motor Shield
     Rev3](https://store.arduino.cc/collections/shields/products/arduino-motor-shield-rev3)
     \|BR\| \|BR\|
 3.  a supported **WiFi shield** \|BR\| We recommend the [EX-WiFi Shield
@@ -87,8 +80,7 @@ role="doc"}.
     \|BR\|
 4.  Two (2) Male to Female **Jumpers leads** \|BR\| \|BR\|
 5.  a 12-16v DC
-    `power supply </reference/hardware/power-supplies>`{.interpreted-text
-    role="doc"}[^1] for the \|motor shield\| \|BR\| We recommend [12v
+    `power supply </reference/hardware/power-supplies>`[^1] for the \|motor shield\| \|BR\| We recommend [12v
     5Amp Power Supply for the
     Track](https://www.amazon.com/LEDMO-Power-Supply-Transformers-Adapter/dp/B01461MOGQ/)
     for Z and N Scale with the \|EX-MS\| \|BR\| \|BR\|
@@ -116,7 +108,7 @@ Note"
 :::
 
 You can also find more detailed hardware information in the
-`/reference/hardware/index`{.interpreted-text role="doc"} section. Check
+`/reference/hardware/index` section. Check
 our list of dealers to find some products locally to you.
 ::::
 
@@ -128,8 +120,7 @@ Our \|EX-I\| app is recommended for most users as it automatically
 downloads and installs the required software.
 
 13. See the
-    `Command Station download page </download/ex-commandstation>`{.interpreted-text
-    role="doc"} to download a copy to your computer.
+    `Command Station download page </download/ex-commandstation>` to download a copy to your computer.
 
 ### A Throttle (Controller)
 
@@ -148,8 +139,7 @@ Click the \'Next\' button to see how to assemble your \|EX-CS\|.
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.
 
 [^2]: **Wire Gauge** - The standard Arduino/Deek [\|Motor
     Driver\|](##SUBST##|Motor Driver|) can only provide about 1.5 Amps

@@ -45,4 +45,4 @@ DONE
 ```
 
 See also the [facing turnouts
-\</exrail/cookbooks/turnouts/facing-turnouts\>]{.title-ref} cookbook.
+\</exrail/cookbooks/turnouts/facing-turnouts\>] cookbook.

@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -33,8 +33,7 @@ website](https://www.jmri.org/help/en/package/jmri/jmrit/withrottle/Protocol.sht
 
 For detailed information on the various commands and responses available
 with \|EX-CS\|, refer to the
-`/reference/software/command-summary-consolidated`{.interpreted-text
-role="doc"} page.
+`/reference/software/command-summary-consolidated` page.
 
 ## 1. API Client definition
 
@@ -153,8 +152,7 @@ Due to legacy code and backwards compatibility requirements, there are
 two OPCODES that expect hexadecimal parameter values.
 
 These are the `<M>` and `<P>` commands documented in the
-`reference/software/command-summary-consolidated:write direct dcc packet`{.interpreted-text
-role="ref"} section of the Command Reference.
+`reference/software/command-summary-consolidated:write direct dcc packet` section of the Command Reference.
 
 ## Appendix B. Suggested parameter parsing sequence
 

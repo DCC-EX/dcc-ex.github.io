@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -41,7 +41,7 @@ page as the process is automated directly from the code.
   optional and may be omitted, and if specifying these parameters, do
   not include the square brackets themselves
 - \| - Use of the \| character means you need to provide one of the
-  provided options only, for example `<0|1 MAIN|PROG|JOIN>` becomes
+  provided options only, for example `<0|1 MAIN**PROG**JOIN>` becomes
   either `<0 MAIN>` or `<1 MAIN>`
 - `0|1` DIRECTION: 1=forward, 0=reverse.
 
@@ -50,7 +50,7 @@ page as the process is automated directly from the code.
 The following are element / parameters that are common across multiple
 commands and are described here for ease of reference.
 
-::: {.flat-table .command-table widths="auto" header-rows="1"}
+::: 
 - - Parameter
   - Description
 - - **cab** or \|BR\| **loco**
@@ -95,7 +95,7 @@ commands and are described here for ease of reference.
 
 ### Power Management
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In this Section
 :::
 
@@ -104,7 +104,7 @@ station power information.
 
 \|hr-dashed\|
 
-#### `<onOff [track]>` - Turn power on or off to all or specific tracks {#native-command-onoff-track1}
+#### `<onOff [track]>` - Turn power on or off to all or specific tracks 
 
 Also allows joining the MAIN and PROG tracks together.
 
@@ -160,18 +160,18 @@ Also allows joining the MAIN and PROG tracks together.
 
 \|hr-dashed\|
 
-#### `<D RESET>` - Re-boot the command Station {#native-command-d-reset}
+#### `<D RESET>` - Re-boot the command Station 
 
 > *Response:* N/A
 
 \|hr-dashed\|
 
-#### `<J I> <JI>` - Request current values list {#native-command-j-i}
+#### `<J I> <JI>` - Request current values list 
 
 > *Response:* \|\_\| `<jI [cA cB cC ...]>` \|BR\| \|\_\| \> **c:** Raw
 > current value for each defined Track, in milliAmps \|BR\|
 
-#### `<J G> <JG>` - Request max current list {#native-command-j-g}
+#### `<J G> <JG>` - Request max current list 
 
 > *Response:* \|\_\| `<jG [mA mB mC ...]>` \|BR\| \|\_\| \> **m:** Raw
 > current trip value for each defined Track, in milliAmps \|BR\|
@@ -182,15 +182,15 @@ Also allows joining the MAIN and PROG tracks together.
 
 Note: Previously referred to as \'DC-District\'.
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
 \|hr-dashed\|
 
-#### `<= trackletter mode [cab]>` - Configure Track Manager {#native-command-equals-trackletter-mode-cab}
+#### `<= trackletter mode [cab]>` - Configure Track Manager 
 
-:::: {.important .important-float-right}
+:::: 
 ::: title
 Important
 :::
@@ -225,7 +225,7 @@ ID. *Required when specifying DC or DC_INV / DCX*
 
 \|hr-dashed\|
 
-#### `<=>` - Request the current Track Manager configuration {#native-command-equals}
+#### `<=>` - Request the current Track Manager configuration 
 
 > *Response:* \|BR\| \|\_\| for each track/channel supported by the
 > \|motor shield\| `<= trackletter state cab>` \|BR\| \|\_\| \|BR\|
@@ -242,7 +242,7 @@ ID. *Required when specifying DC or DC_INV / DCX*
 
 \|hr-dashed\|
 
-#### `<onOff [track]>` - Turn power on or off to the requested TrackManager track {#native-command-onoff-track2}
+#### `<onOff [track]>` - Turn power on or off to the requested TrackManager track 
 
 > *Parameters:* \|BR\| \|\_\| \> **onOff:** one of \|BR\| \|\_\| \|\_\|
 > \|\_\| \|\_\| • 1 = on \|BR\| \|\_\| \|\_\| \|\_\| \|\_\| • 0 = off
@@ -293,13 +293,13 @@ SET_FREQ is available to select the frequency within automations/routes.
 
 ### Cab (Loco) Commands
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
 \|hr-dashed\|
 
-#### `<t cab>` - Request a deliberate update on the cab (loco) speed/functions {#native-command-t-cab}
+#### `<t cab>` - Request a deliberate update on the cab (loco) speed/functions 
 
 > *Parameters:* \|BR\| \|\_\| \> **cab:** DCC Address of the
 > decoder/loco
@@ -327,7 +327,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<t cab speed dir>` - Set Cab (Loco) Speed {#native-command-t-cab-speed-dir}
+#### `<t cab speed dir>` - Set Cab (Loco) Speed 
 
 > *Parameters:* \|BR\| \|\_\| \> **cab:** DCC Address of the
 > decoder/loco \|BR\| \|\_\| \> **speed:** 0-127 or -1 for Emergency
@@ -354,7 +354,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<!>` - Emergency Stop {#native-command-exclamation}
+#### `<!>` - Emergency Stop 
 
 > *Response:* \|BR\| \|\_\| Repeated for each loco in the reminders list
 > `<l cab reg speedByte functMap>` \|BR\| \|\_\| Refer to the `<t ..>`
@@ -362,7 +362,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<F cab funct state>` - Turn loco decoder functions ON or OFF {#native-command-f-cab-funct-state}
+#### `<F cab funct state>` - Turn loco decoder functions ON or OFF 
 
 > *Parameters:* \|BR\| \|\_\| \> **cab:** DCC Address of the
 > decoder/loco (short (1-127) or long (128-10293)) \|BR\| \|\_\| \>
@@ -397,7 +397,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<f cab byte1 [byte2]>` - Decoder Functions - Legacy command \|DEPRECATED\| {#native-command-f-cab-byte1-byte2}
+#### `<f cab byte1 [byte2]>` - Decoder Functions - Legacy command \|DEPRECATED\| 
 
 > *Parameters:* \|BR\| \|\_\| \> **cab:** DCC Address of the
 > decoder/loco \|BR\| \|\_\| \> **byte1 byte2:** DCC function bytes as
@@ -453,7 +453,7 @@ In This Section
 > - **byte2** = omitted
 >
 > **To set functions F9-F12 on=(1) or off=(0):** [\<f cab byte1
-> \[byte2\]\>]{.title-ref}\`
+> \[byte2\]\>]\`
 >
 > - f = (lower case f) This command is for a CAB,s function.
 >
@@ -503,7 +503,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<t reg cab speed dir>` - Set Cab (Loco) Speed - Legacy command \|DEPRECATED\| {#native-command-t-reg-cab-speed-dir}
+#### `<t reg cab speed dir>` - Set Cab (Loco) Speed - Legacy command \|DEPRECATED\| 
 
 > *Parameters:* \|BR\| \|\_\| \> **reg:** not used \|BR\| \|\_\| \>
 > **cab:** DCC Address of the decoder/loco \|BR\| \|\_\| \> **speed:**
@@ -528,7 +528,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<- [cab]>` - Remove one or all locos from reminders {#native-command-minus-cab}
+#### `<- [cab]>` - Remove one or all locos from reminders 
 
 > *Parameters:* \|BR\| \|\_\| \> **cab:** one of \|BR\| \|\_\| \|\_\|
 > \|\_\| \|\_\| • blank = all locos \|BR\| \|\_\| \|\_\| \|\_\| \|\_\| •
@@ -557,7 +557,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<D speedsteps>` - Switch between 28 and 128 speed steps {#native-command-d-speedsteps}
+#### `<D speedsteps>` - Switch between 28 and 128 speed steps 
 
 > *Parameters:* \|BR\| \|\_\| \> **speedsteps:** \|BR\| \|\_\| \|\_\|
 > \|\_\| \|\_\| • SPEED28 = use 28 speed steps \|BR\| \|\_\| \|\_\|
@@ -570,14 +570,14 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<m [type] | [cab acceleration [deceleration]]>` - set the momentum of a loco {#native-command-m-momentum}
+#### `<m [type] | [cab acceleration [deceleration]]>` - set the momentum of a loco 
 
 > *Parameters:* \|BR\| \|\_\| either \|br\| \|\_\| \|\_\| \> **cab:**
 > DCC Address \|BR\| \|\_\| \|\_\| \> **acceleration:** \|BR\| \|\_\|
 > \|\_\| \> **decelertaion:** \|BR\| \|\_\| or \|br\| \|\_\| \|\_\| \>
 > **type:** \|BR\| \|\_\| \|\_\| \|\_\| One of: \|BR\| \|\_\| \|\_\|
-> \|\_\| \|\_\| • [LINEAR]{.title-ref} \|BR\| \|\_\| \|\_\| \|\_\|
-> \|\_\| • [POWER]{.title-ref}
+> \|\_\| \|\_\| • [LINEAR] \|BR\| \|\_\| \|\_\| \|\_\|
+> \|\_\| • [POWER]
 >
 > *Response:* \|BR\| \|\_\| none
 >
@@ -593,13 +593,13 @@ In This Section
 >
 > *Examples:*
 >
-> > [\<m 3 0\>]{.title-ref} sets loco 3 to no momentum. \|BR\| [\<m 3
-> > 21\>]{.title-ref} sets loco 3 to 21 mS/step. \|BR\| [\<m 3 21
-> > 42\>]{.title-ref} sets loco 3 to 21 mS/step accelerating and 42
+> > [\<m 3 0\>] sets loco 3 to no momentum. \|BR\| [\<m 3
+> > 21\>] sets loco 3 to 21 mS/step. \|BR\| [\<m 3 21
+> > 42\>] sets loco 3 to 21 mS/step accelerating and 42
 > > mS/step when decelerating.
 > >
-> > [\<m LINEAR\>]{.title-ref} - acceleration is uniform up to selected
-> > throttle speed. \|BR\| [\<m POWER\>]{.title-ref} - acceleration
+> > [\<m LINEAR\>] - acceleration is uniform up to selected
+> > throttle speed. \|BR\| [\<m POWER\>] - acceleration
 > > depends on difference between loco speed and selected throttle
 > > speed.
 
@@ -607,13 +607,13 @@ In This Section
 
 ### Roster Commands
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
 \|hr-dashed\|
 
-#### `<J R>` `<JR>` - Request the list defined Roster Entry IDs {#native-command-j-r}
+#### `<J R>` `<JR>` - Request the list defined Roster Entry IDs 
 
 > *Parameters:* N/A \|BR\|
 >
@@ -626,7 +626,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<J R id>` `<JR id>` - Request details of a specific Roster Entry {#native-command-j-r-id}
+#### `<J R id>` `<JR id>` - Request details of a specific Roster Entry 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** unique id of the Cab/s (Loco/s)
 > in the roster
@@ -645,17 +645,16 @@ In This Section
 
 ### Turnouts/Points
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
 For details on how to configure turnouts/points see:
-`reference/software/command-summary-consolidated:turnouts/points (configuring the ex-commandstation)`{.interpreted-text
-role="ref"}
+`reference/software/command-summary-consolidated:turnouts/points (configuring the ex-commandstation)`
 
 \|hr-dashed\|
 
-#### `<T>` - Request a list all defined turnouts/Points {#native-command-t}
+#### `<T>` - Request a list all defined turnouts/Points 
 
 > *Response:* \|BR\| \|\_\| Repeated for each defined Turnout/Point
 > \|BR\| \|\_\| \|\_\| Response: `<H id state>` \|BR\| \|\_\| Response
@@ -667,7 +666,7 @@ role="ref"}
 
 \|hr-dashed\|
 
-#### `<T id state>` - Throw or Close a defined turnout/point {#native-command-t-id-state}
+#### `<T id state>` - Throw or Close a defined turnout/point 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** identifier of the Turnout/Point
 > \|BR\| \|\_\| \> **state:** one of \|BR\| \|\_\| \|\_\| \|\_\| \|\_\|
@@ -722,7 +721,7 @@ role="ref"}
 
 \|hr-dashed\|
 
-#### `<J T id>` `<JT id>` - Request details of a specific Turnout/Point {#native-command-j-t-id}
+#### `<J T id>` `<JT id>` - Request details of a specific Turnout/Point 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** unique id of the Turnout/Point
 >
@@ -739,7 +738,7 @@ role="ref"}
 
 \|hr-dashed\|
 
-#### `<J T>` `<JT>` - Request the list of defined turnout/Point IDs {#native-command-j-t}
+#### `<J T>` `<JT>` - Request the list of defined turnout/Point IDs 
 
 > *Response:* \|\_\| `<jT [id1 id2 id3 ...]>` \|BR\| \|\_\| \> **id:**
 > unique id of the Turnout/s(Point/s) \|BR\| \|\_\| \|BR\| \|\_\|
@@ -751,17 +750,16 @@ role="ref"}
 
 ### Turntables/Traversers
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
 For details on how to configure turntables/traversers see:
-`reference/software/command-summary-consolidated:turntables/traversers (configuring the ex-commandstation)`{.interpreted-text
-role="ref"}
+`reference/software/command-summary-consolidated:turntables/traversers (configuring the ex-commandstation)`
 
 \|hr-dashed\|
 
-#### `<I>` - Request a list all defined turntables/traversers {#native-command-i}
+#### `<I>` - Request a list all defined turntables/traversers 
 
 > *Response:* \|BR\| \|\_\| Repeated for each defined Turtable/traverser
 > \|BR\| \|\_\| \|\_\| Response: `<I id position>` \|BR\| \|\_\|
@@ -772,7 +770,7 @@ role="ref"}
 
 \|hr-dashed\|
 
-#### `<I id>` - Request position of the specified turntable/traverser {#native-command-i-id}
+#### `<I id>` - Request position of the specified turntable/traverser 
 
 > *Response:* \|BR\| \|\_\| Response: `<I id position>` \|BR\| \|\_\|
 > Response (fail): N/A \|BR\| \|\_\| Response (no defined
@@ -782,7 +780,7 @@ role="ref"}
 
 \|hr-dashed\|
 
-#### `<I id position>` - Rotate a DCC turntable {#native-command-i-id-position}
+#### `<I id position>` - Rotate a DCC turntable 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** - Identifier of the
 > Turntable/traverser \|BR\| \|\_\| \> **position:** - Position to
@@ -809,14 +807,13 @@ role="ref"}
 
 \|hr-dashed\|
 
-#### `<I id position activity>` - Rotate EX-Turntable {#native-command-i-id-position-activity}
+#### `<I id position activity>` - Rotate EX-Turntable 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** - Identifier of the
 > Turntable/traverser \|BR\| \|\_\| \> **position:** - Position to
 > rotate to \|BR\| \|\_\| \> **activity:** - The activity for
 > EX-Turntable to perform (refer
-> `ex-turntable/test-and-tune:ex-turntable activity reference`{.interpreted-text
-> role="ref"}) \|BR\|
+> `ex-turntable/test-and-tune:ex-turntable activity reference`) \|BR\|
 >
 > *Response:* \|BR\| \|\_\| `<I id position moving>` \|BR\| \|\_\| \>
 > **id:** one of \|BR\| \|\_\| \|\_\| \|\_\| \|\_\| • identifier of the
@@ -842,7 +839,7 @@ role="ref"}
 
 \|hr-dashed\|
 
-#### `<J O>` `<JO>` - Request the list of defined turntables/traversers {#native-command-j-o}
+#### `<J O>` `<JO>` - Request the list of defined turntables/traversers 
 
 > *Response:* \|\_\| `<jO [id1 id2 id3 ...]>` \|BR\| \|\_\| \> **id:**
 > unique id of the turntable(s)/traverser(s) \|BR\| \|\_\| \|BR\| \|\_\|
@@ -852,7 +849,7 @@ role="ref"}
 
 \|hr-dashed\|
 
-#### `<J O id>` `<JO id>` - Request details of the specific turntable/traverser {#native-command-j-o-id}
+#### `<J O id>` `<JO id>` - Request details of the specific turntable/traverser 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** unique id of the
 > turntable/traverser
@@ -882,7 +879,7 @@ role="ref"}
 
 \|hr-dashed\|
 
-#### `<J P id> <JP id>` - Request all position details of the specified turntable/traverser {#native-command-j-p-id}
+#### `<J P id> <JP id>` - Request all position details of the specified turntable/traverser 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** unique id of the Turnout/Point
 >
@@ -903,7 +900,7 @@ role="ref"}
 
 \|hr-dashed\|
 
-#### `<D TT vpin steps [activity]>` - Test turntable {#native-command-d-tt-vpin-steps-activity}
+#### `<D TT vpin steps [activity]>` - Test turntable 
 
 > *Parameters:* \|BR\| \|\_\| \> **vpin:** \|br\| \|\_\| \> **steps:**
 > ??? \|br\| \|\_\| \> **activity** optional - ??? \|br\|
@@ -914,18 +911,18 @@ role="ref"}
 
 ### Routes/Automations
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
 For details on how to configure routes/automations see:
-`/exrail/exrail-command-reference`{.interpreted-text role="doc"}
+`/exrail/exrail-command-reference`
 
-Also see the [EXRAIL]{.title-ref} section below for activating routes.
+Also see the [EXRAIL] section below for activating routes.
 
 \|hr-dashed\|
 
-#### `<J A>` - Request a list of Automations/Routes {#native-command-j-a}
+#### `<J A>` - Request a list of Automations/Routes 
 
 > *Response:* \|BR\| \|\_\| `<jA [id0 id1 id2 ..]>` \|BR\| \|\_\| \>
 > **id?:** identifier of the Route/Automation(s) \|BR\| \|\_\| \|BR\|
@@ -936,7 +933,7 @@ Also see the [EXRAIL]{.title-ref} section below for activating routes.
 
 \|hr-dashed\|
 
-#### `<J A id> <JA id>` - Request information for a route/automation {#native-command-j-a-id}
+#### `<J A id> <JA id>` - Request information for a route/automation 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** identifier of the
 > Route/Automation
@@ -952,7 +949,7 @@ Also see the [EXRAIL]{.title-ref} section below for activating routes.
 
 \|hr-dashed\|
 
-#### `</ START [cab] id>` - Start an EXRAIL Sequence {#native-command-equals-start}
+#### `</ START [cab] id>` - Start an EXRAIL Sequence 
 
 > Start an EXRAIL sequence (route or automation).
 >
@@ -964,7 +961,7 @@ Also see the [EXRAIL]{.title-ref} section below for activating routes.
 
 \|hr-dashed\|
 
-#### `</ KILL id>` - Kill an EXRAIL Sequence {#native-command-equals-kill}
+#### `</ KILL id>` - Kill an EXRAIL Sequence 
 
 > Stop the execution of one or all EXRAIL sequences (route or
 > automation).
@@ -979,7 +976,7 @@ Also see the [EXRAIL]{.title-ref} section below for activating routes.
 
 ### System Information
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
@@ -1003,7 +1000,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<s>` - Request the DCC-EX version and hardware info, along with listing defined turnouts {#native-command-s-server-info}
+#### `<s>` - Request the DCC-EX version and hardware info, along with listing defined turnouts 
 
 > *Response:* \|BR\| \|\_\|
 > `<iDCCEX version / microprocessorType / MotorControllerType / buildNumber>`
@@ -1019,7 +1016,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<#>` - Request the number of supported cabs(locos) {#native-command-hash}
+#### `<#>` - Request the number of supported cabs(locos) 
 
 > *Response:* \|BR\| \|\_\| `<# noCabs>` \|BR\| \|\_\| \> **noCabs:**
 > maximum number of Cabs(Locos) supported by the command station
@@ -1044,7 +1041,7 @@ In This Section
 
 ### DCC Accessories
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
@@ -1078,15 +1075,14 @@ on the expected linear address, try adding and subtracting 4 to see if
 it works. Or use the address/subaddress versions of the commands.
 
 Here is a spreadsheet in .XLSX format to help you:
-`reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)`{.interpreted-text
-role="ref"}.
+`reference/downloads/documents:stationary decoder address table (xlsx spreadsheet)`.
 
 NOTE: Both the following commands do the same thing. Pick the one that
 works for your needs.
 
 \|hr-dashed\|
 
-#### `<a addr subaddr activate>` - Control an Accessory Decoder with Address and Subaddress {#native-command-a-addr-subaddr-activate}
+#### `<a addr subaddr activate>` - Control an Accessory Decoder with Address and Subaddress 
 
 > *Parameters:* \|BR\| \|\_\| \> **addr:** the primary address of the
 > decoder controlling the turnout (0-511) \|BR\| \|\_\| \> **subaddr:**
@@ -1099,7 +1095,7 @@ works for your needs.
 
 \|hr-dashed\|
 
-#### `<a linear_addr activate>` - Control an Accessory Decoder with linear address {#native-command-a-linear-addr-activate}
+#### `<a linear_addr activate>` - Control an Accessory Decoder with linear address 
 
 > *Parameters:* \|BR\| \|\_\| \> **linear_addr:** linear address of the
 > decoder controlling this turnout (1-2044) \|BR\| \|\_\| \>
@@ -1111,7 +1107,7 @@ works for your needs.
 >
 > \|hr-dashed\|
 
-#### `<A address aspect>` - Command for DCC Extended Accessories. {#native-command-a-address-aspect}
+#### `<A address aspect>` - Command for DCC Extended Accessories. 
 
 This command sends an extended accessory packet to the track, normally
 used to set a signal aspect. Aspect numbers are undefined as sdtandards
@@ -1128,13 +1124,13 @@ except for 0 which is always considered a stop.
 
 ### Sensors
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
 \|hr-dashed\|
 
-#### `<Q>` - Lists Status of all sensors {#native-command-q}
+#### `<Q>` - Lists Status of all sensors 
 
 > *Response:* \|BR\| \|\_\| Repeated for each defined sensor: `<q id>`
 > or `<Q id>`\|BR\| \|\_\| \|BR\| \|\_\| e.g. \|BR\| \|\_\| Response
@@ -1144,7 +1140,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<S>` - Request a list of all defined sensors {#native-command-s}
+#### `<S>` - Request a list of all defined sensors 
 
 > *Response:* \|BR\| \|\_\| Repeated for each defined sensor:
 > `<Q id vpin pullup>` \|BR\| \|\_\| \> **id:** identifier of the
@@ -1160,13 +1156,13 @@ In This Section
 
 ### Signals
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
 \|hr-dashed\|
 
-#### `</ RED signalId>` \</ AMBER signalId\> \</ GREEN signalId\> - Control a signal {#native-command-slash-red}
+#### `</ RED signalId>` \</ AMBER signalId\> \</ GREEN signalId\> - Control a signal 
 
 > *Parameters:* \|BR\| \|\_\| \> **signalId:** defined red Vpin of the
 > signal to control
@@ -1179,13 +1175,13 @@ In This Section
 
 ### WiFi Control
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
 \|hr-dashed\|
 
-#### `<+X>` - Force the Command Station into \"WiFi Connected\" mode {#native-command-plus-x}
+#### `<+X>` - Force the Command Station into \"WiFi Connected\" mode 
 
 > A special command to force the \"connected\" flag (WiFi Connected
 > Mode) to on inside the Command Station so that our loop will start
@@ -1204,8 +1200,7 @@ In This Section
 >
 > *Notes:*
 >
-> > `DCC-EX WiFi Configuration </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`{.interpreted-text
-> > role="doc"}
+> > `DCC-EX WiFi Configuration </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
 > >
 > > [Espressif AT Command Set PDF File (Exressif makes the
 > > ESP8266)](https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf)
@@ -1213,7 +1208,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<+command>` - Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.) {#native-command-plus-command}
+#### `<+command>` - Sends AT+ commands to the WiFi board (ESP8266, ESP32, etc.) 
 
 > *Parameters:* \|BR\| \|\_\| \> **command:** what you want to append
 > after AT+ and send to the AT processor.
@@ -1227,13 +1222,12 @@ In This Section
 > > Users familiar with the AT Command Set of WiFi board may enter
 > > commands directly into the \|serial monitor\| in real-time or as
 > > setup commands in the
-> > `mySetup.h file </ex-commandstation/advanced-setup/startup-config>`{.interpreted-text
-> > role="doc"}. This allows users to override the default WiFi connect
+> > `mySetup.h file </ex-commandstation/advanced-setup/startup-config>`. This allows users to override the default WiFi connect
 > > sequence or to send any command to change a WiFi device setting.
 
 \|hr-dashed\|
 
-#### `<+>` - Switch to direct communication with WiFi AT processor {#native-command-plus}
+#### `<+>` - Switch to direct communication with WiFi AT processor 
 
 > *Response:* \|BR\| \|\_\| All input and output from this point is the
 > direct communication with the WiFi AT software this mode is ended by
@@ -1241,7 +1235,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<C WIFI "ssid" "password">` - Connects to an existing WIFI network in STA mode {#native-command-c-wifi-ssid-password}
+#### `<C WIFI "ssid" "password">` - Connects to an existing WIFI network in STA mode 
 
 > *Parameters:* \|BR\| \|\_\| \> **ssid:** network to connect to \|BR\|
 > \|\_\| \> **password:** password to use
@@ -1259,21 +1253,20 @@ In This Section
 
 ### EXRAIL
 
-Refer to the `/exrail/exrail-command-reference`{.interpreted-text
-role="doc"} for these.
+Refer to the `/exrail/exrail-command-reference` for these.
 
 ### EX-FastClock
 
 These commands require the optional \|EX-FC\| hardware to the installed
 along with the \|EX-CS\| to function.
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
 \|hr-dashed\|
 
-#### `<JC minutes speed>` - Start the fast clock with a specified time {#native-command-jc-minutes-speed}
+#### `<JC minutes speed>` - Start the fast clock with a specified time 
 
 > *Parameters:* \|BR\| \|\_\| **minutes:** = time in minutes since
 > midnight. i.e. (hours \* 60) + mins \|BR\| \|\_\| **speed:** = the
@@ -1291,7 +1284,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<JC>` - Request the fast clock current time {#native-command-jc}
+#### `<JC>` - Request the fast clock current time 
 
 > *Response:* `<jC minutes>` \|BR\| \|\_\| where \|BR\| \|\_\|
 > **minutes:** = time in minutes since midnight. i.e. (hours \* 60) +
@@ -1303,13 +1296,13 @@ In This Section
 
 ### Writing CVs - Program on the main
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
 \|hr-dashed\|
 
-#### `<b cab cv bit value>` - Write Configuration Variable (CV) bit on main track {#native-command-b}
+#### `<b cab cv bit value>` - Write Configuration Variable (CV) bit on main track 
 
 > *Parameters:* \|BR\| \|\_\| \> **cab:** DCC Address of the
 > decoder/loco. The short (1-127) or long (128-10293) address of the
@@ -1323,7 +1316,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<w cab cv value>` - Write Configuration Variable (CV) on main track {#native-command-w}
+#### `<w cab cv value>` - Write Configuration Variable (CV) on main track 
 
 > *Parameters:* \|BR\| \|\_\| \> **cab:** DCC Address of the
 > decoder/loco. The short (1-127) or long (128-10293) address of the
@@ -1338,7 +1331,7 @@ In This Section
 
 ### Reading/Writing Configuration Variables (CVs) - Programming track
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
@@ -1354,7 +1347,7 @@ slightly every time you read or write a CV.
 
 \|hr-dashed\|
 
-#### `<R cv>` - Read Configuration Variables (CVs) {#native-command-r-cv}
+#### `<R cv>` - Read Configuration Variables (CVs) 
 
 > *Parameters:* \|BR\| \|\_\| \> **cv:** CV number
 >
@@ -1370,7 +1363,7 @@ slightly every time you read or write a CV.
 
 \|hr-dashed\|
 
-#### `<R>` - Read DCC decoder (cab) address {#native-command-r}
+#### `<R>` - Read DCC decoder (cab) address 
 
 > *Response:* \|BR\| \|\_\| `<r address>` \|BR\| \|\_\| \> **address:**
 > \|BR\| \|\_\| \|\_\| \|\_\| \|\_\| • DCC Address of the decoder/loco.
@@ -1392,7 +1385,7 @@ slightly every time you read or write a CV.
 
 \|hr-dashed\|
 
-#### `<R LOCOID>` - Read DCC decoder (cab) address {#native-command-r-locoid}
+#### `<R LOCOID>` - Read DCC decoder (cab) address 
 
 > *Response:* \|BR\| \|\_\| `<r LOCOID address>` \|BR\| \|\_\| \>
 > **address:** \|BR\| \|\_\| \|\_\| \|\_\| \|\_\| • DCC Address of the
@@ -1404,12 +1397,12 @@ slightly every time you read or write a CV.
 >
 > *Notes:*
 >
-> > **IMPORTANT:** Unlike [\<R\>]{.title-ref} If the loco is in a
+> > **IMPORTANT:** Unlike [\<R\>] If the loco is in a
 > > consist, the address returned will be the actual address.
 
 \|hr-dashed\|
 
-#### `<R CONSIST>` - Read DCC decoder consist (CV19) address {#native-command-r-consist}
+#### `<R CONSIST>` - Read DCC decoder consist (CV19) address 
 
 > *Response:* \|BR\| \|\_\| `<r CONSIST address>` \|BR\| \|\_\| \>
 > **address:** \|BR\| \|\_\| \|\_\| \|\_\| \|\_\| • DCC Consost
@@ -1420,7 +1413,7 @@ slightly every time you read or write a CV.
 
 \|hr-dashed\|
 
-#### `<V cv bit onOff>` - Verify/Read bit of Configuration Variable (CV) with guessed value {#native-command-v-cv-bit-onoff}
+#### `<V cv bit onOff>` - Verify/Read bit of Configuration Variable (CV) with guessed value 
 
 > *Parameters:* \|BR\| \|\_\| \> **cv:** CV number \|BR\| \|\_\| \>
 > **bit:** bit to verify in the CV \|BR\| \|\_\| \> **onOff:** one of
@@ -1449,7 +1442,7 @@ slightly every time you read or write a CV.
 
 \|hr-dashed\|
 
-#### `<V cv value>` - Verify/Read of Configuration Variable (CV) with guessed value {#native-command-v-cv-value}
+#### `<V cv value>` - Verify/Read of Configuration Variable (CV) with guessed value 
 
 > *Parameters:* \|BR\| \|\_\| \> **cv:** CV number \|BR\| \|\_\| \>
 > **value:** value to verify
@@ -1475,20 +1468,20 @@ slightly every time you read or write a CV.
 
 \|hr-dashed\|
 
-#### `<B cv bit onOff>` - Write bit to Configuration Variable (CV) {#native-command-b-cv-bit-onoff}
+#### `<B cv bit onOff>` - Write bit to Configuration Variable (CV) 
 
 > *Parameters:* \|BR\| \|\_\| \> **cv:** CV number \|BR\| \|\_\| \>
 > **bit:** bit to change in the CV \|BR\| \|\_\| \> **onOff:** one of
 > \|BR\| \|\_\| \|\_\| \|\_\| \|\_\| • 1=on \|BR\| \|\_\| \|\_\| \|\_\|
 > \|\_\| • 0=off
 >
-> *Response:* \|BR\| \|\_\| `<r0|0|cv bit onOff>` \|BR\| \|\_\| \>
+> *Response:* \|BR\| \|\_\| `<r0**0**cv bit onOff>` \|BR\| \|\_\| \>
 > **cv:** CV number \|BR\| \|\_\| \> **bit:** bit changed \|BR\| \|\_\|
 > \> **onOff:** one of \|BR\| \|\_\| \|\_\| \|\_\| \|\_\| • 0\|1 \|BR\|
 > \|\_\| \|\_\| \|\_\| \|\_\| • -1: if the write failed
 >
-> *Example:* `<r0|0|1 3 1>` shows that the value `1` was written to bit
-> `3` of CV `1`. \|BR\| *Example:* `<r0|0|1 3 -1>` shows that writing to
+> *Example:* `<r0**0**1 3 1>` shows that the value `1` was written to bit
+> `3` of CV `1`. \|BR\| *Example:* `<r0**0**1 3 -1>` shows that writing to
 > bit `3` of CV `1` failed.
 >
 > *Notes:*
@@ -1498,7 +1491,7 @@ slightly every time you read or write a CV.
 
 \|hr-dashed\|
 
-#### `<W cv value>` - Write Configuration Variable (CV) {#native-command-w-cv-value}
+#### `<W cv value>` - Write Configuration Variable (CV) 
 
 > *Parameters:* \|BR\| \|\_\| \> **cv:** CV number \|BR\| \|\_\| \>
 > **value:** value to change the CV to
@@ -1513,7 +1506,7 @@ slightly every time you read or write a CV.
 
 \|hr-dashed\|
 
-#### `<W address>` - Write DCC address to cab (loco) {#native-command-w-address}
+#### `<W address>` - Write DCC address to cab (loco) 
 
 > *Parameters:* \|BR\| \|\_\| \> **address:** DCC Address of the
 > decoder/loco
@@ -1534,7 +1527,7 @@ slightly every time you read or write a CV.
 
 \|hr-dashed\|
 
-#### `<P register hex1 hex2 [hex3 [hex4 [hex5]]]>` - Writes a DCC packet to the PROG track {#native-command-p-register-hex}
+#### `<P register hex1 hex2 [hex3 [hex4 [hex5]]]>` - Writes a DCC packet to the PROG track 
 
 > Writes a DCC packet of two, three, four, or five hexadecimal bytes to
 > a register driving the selected track.
@@ -1555,7 +1548,7 @@ slightly every time you read or write a CV.
 
 \|hr-dashed\|
 
-#### `<B cv bit value callbacknum callbacksub>` - `Deprecated, please use <W cv value> instead`{.interpreted-text role="dcc-ex-red-bold-italic"} {#native-command-b-cv-bit-value-callbacknum-callbacksub}
+#### `<B cv bit value callbacknum callbacksub>` - `Deprecated, please use <W cv value> instead` 
 
 > *Parameters:* \|BR\| \|\_\| \> **cv:** The number of the Configuration
 > Variable memory location in the decoder to write to (1-1024 ). \|BR\|
@@ -1574,7 +1567,7 @@ slightly every time you read or write a CV.
 
 \|hr-dashed\|
 
-#### `<W cv value callbacknum callbacksub>` - `Deprecated, please use <w cv value> instead`{.interpreted-text role="dcc-ex-red-bold-italic"} {#native-command-w-cv-bit-value-callbacknum-callbacksub}
+#### `<W cv value callbacknum callbacksub>` - `Deprecated, please use <w cv value> instead` 
 
 > *Parameters:* \|BR\| \|\_\| \> **cv:** The number of the Configuration
 > Variable memory location in the decoder to write to (1-1024 ). \|BR\|
@@ -1591,7 +1584,7 @@ slightly every time you read or write a CV.
 
 \|hr-dashed\|
 
-#### `<R cv callbacknum callbacksub>` - Read Configuration variable byte {#native-command-r-cv-callbacknum-callbacksub}
+#### `<R cv callbacknum callbacksub>` - Read Configuration variable byte 
 
 > *Parameters:* \|BR\| \|\_\| \> **cv:** The number of the Configuration
 > Variable memory location in the decoder to write to (1-1024 ). \|BR\|
@@ -1625,13 +1618,13 @@ KNOW HOW TO CONSTRUCT NMRA DCC PACKETS - YOU CAN INADVERTENTLY
 RE-PROGRAM YOUR ENGINE DECODER
 ::::
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
 \|hr-dashed\|
 
-#### `<M register hex1 hex2 [hex3 [hex4 [hex5]]]>` - Write a DCC packet the MAIN track {#native-command-m-register-hex}
+#### `<M register hex1 hex2 [hex3 [hex4 [hex5]]]>` - Write a DCC packet the MAIN track 
 
 > Writes a DCC packet of two, three, four, or five hexadecimal bytes to
 > a register driving the selected track.
@@ -1654,13 +1647,13 @@ In This Section
 
 ### Programming track - Tuning
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
 \|hr-dashed\|
 
-#### `<D ACK LIMIT mA>` - Sets the ACK limit {#native-command-d-ack-limit-ma}
+#### `<D ACK LIMIT mA>` - Sets the ACK limit 
 
 > Use this command to override the minimum milliamps (mA) required to
 > detect the ACK pulse, e.g. `<D ACK LIMIT 30>` means a minimum 30mA
@@ -1682,7 +1675,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<D ACK MIN µS>` - Sets the ACK pulse minimum {#native-command-d-ack-min-ms}
+#### `<D ACK MIN µS>` - Sets the ACK pulse minimum 
 
 > As above, however overriding the maximum amount of time for a pulse,
 > e.g. `<D ACK MAX 20000>` means a pulse up to 20ms would be accepted.
@@ -1704,7 +1697,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<D ACK MAX µS>` - Sets the ACK pulse maximum {#native-command-d-ack-max-ms}
+#### `<D ACK MAX µS>` - Sets the ACK pulse maximum 
 
 > Use this command to override the minimum amount of time in
 > microseconds (uS) the pulse needs to be active for, e.g.
@@ -1718,7 +1711,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<D ACK RETRY num>` - Adjust ACK retries {#native-command-d-ack-retry-num}
+#### `<D ACK RETRY num>` - Adjust ACK retries 
 
 > When reading/writing CVs, the program will try again upon failure. The
 > default is `<D ACK RETRY 2>`, which means 3 attempts before a failure
@@ -1741,7 +1734,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<D PROGBOOST>` - Override prog track limit while idle {#native-command-d-progboost}
+#### `<D PROGBOOST>` - Override prog track limit while idle 
 
 > By default, the programming track has a current limit enabled of
 > 250mA, so any programming activities requiring more than this value
@@ -1767,7 +1760,7 @@ In This Section
 
 ### Turnouts/Points (Configuring the EX-CommandStation)
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
@@ -1792,7 +1785,7 @@ and `0` for `Close` or `Closed`.
 
 \|hr-dashed\|
 
-#### `<T id DCC addr subaddr>` - Define turnout/point on a DCC Accessory Decoder with the specified address and subaddress {#native-command-t-id-dcc-addr-subaddr}
+#### `<T id DCC addr subaddr>` - Define turnout/point on a DCC Accessory Decoder with the specified address and subaddress 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** identifier of the Turnout/Point
 > \|BR\| \|\_\| \> **addr:** ranges from 0 to 511 \|BR\| \|\_\| \>
@@ -1828,7 +1821,7 @@ and `0` for `Close` or `Closed`.
 
 \|hr-dashed\|
 
-#### `<T id DCC linearAddr>` - Define turnout/point on a DCC Accessory Decoder with the specified linear address {#native-command-t-id-dcc-linearaddr}
+#### `<T id DCC linearAddr>` - Define turnout/point on a DCC Accessory Decoder with the specified linear address 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** identifier of the Turnout/Point
 > \|BR\| \|\_\| \> **linearAddr:** ranges from 1 (address 1/subaddress
@@ -1840,7 +1833,7 @@ and `0` for `Close` or `Closed`.
 
 \|hr-dashed\|
 
-#### `<T id VPIN vpin>` - Define turnout/point output on specified vpin {#native-command-t-id-vpin-vpin}
+#### `<T id VPIN vpin>` - Define turnout/point output on specified vpin 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** unique Id for the servo \|BR\|
 > \|\_\| \> **vpin:** vpin to which the servo is attached
@@ -1861,7 +1854,7 @@ and `0` for `Close` or `Closed`.
 
 \|hr-dashed\|
 
-#### `<T id SERVO vpin thrownPos closedPos profile>` - Define turnout/point servo (PWM) on specified vpin {#native-command-t-id-servo-vpin}
+#### `<T id SERVO vpin thrownPos closedPos profile>` - Define turnout/point servo (PWM) on specified vpin 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** unique Id for the servo \|BR\|
 > \|\_\| \> **vpin:** vpin to which the servo is attached \|BR\| \|\_\|
@@ -1896,7 +1889,7 @@ and `0` for `Close` or `Closed`.
 
 \|hr-dashed\|
 
-#### `<T id> - Deletes a turnout by Id` {#native-command-t-id}
+#### `<T id> - Deletes a turnout by Id` 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** unique Id for the servod
 >
@@ -1905,7 +1898,7 @@ and `0` for `Close` or `Closed`.
 
 \|hr-dashed\|
 
-#### `<D SERVO vpin value [profile]>` - Set servo position to value on pin vpin {#native-command-d-servo-vpin-value-profile}
+#### `<D SERVO vpin value [profile]>` - Set servo position to value on pin vpin 
 
 > *Parameters:* \|BR\| \|\_\| \> **vpin:** vpin to which the servo is
 > attached \|BR\| \|\_\| \> **value:** position to mve the servo to
@@ -1923,7 +1916,7 @@ and `0` for `Close` or `Closed`.
 
 \|hr-dashed\|
 
-#### `<T id addr subaddr>` - Define a turnout on a DCC Accessory Decoder with the specified address and subaddress - Legacy command \|DEPRECATED\| {#native-command-t-id-addr-subaddr}
+#### `<T id addr subaddr>` - Define a turnout on a DCC Accessory Decoder with the specified address and subaddress - Legacy command \|DEPRECATED\| 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** identifier of the Turnout/Point
 > \|BR\| \|\_\| \> **addr:** ??? \|BR\| \|\_\| \> **subaddr:** ???
@@ -1934,7 +1927,7 @@ and `0` for `Close` or `Closed`.
 
 \|hr-dashed\|
 
-#### `<T id vpin activePos inactivePos>` - Define a turnout/point servo on specified vpin - Legacy command \|DEPRECATED\| {#native-command-t-id-vpin-activepos-inactivepos}
+#### `<T id vpin activePos inactivePos>` - Define a turnout/point servo on specified vpin - Legacy command \|DEPRECATED\| 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** identifier of the Turnout/Point
 > \|BR\| \|\_\| \> **vpin:** vpin of the input to be controlled by the
@@ -1975,7 +1968,7 @@ CommandStation.
 
 ### Turntables/Traversers (Configuring the EX-CommandStation)
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
@@ -2010,7 +2003,7 @@ appropriate angle.
 
 \|hr-dashed\|
 
-#### `<I id DCC home>` - Define a DCC accessory turntable/traverser {#native-command-t-id-dcc-home}
+#### `<I id DCC home>` - Define a DCC accessory turntable/traverser 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** unique Id for the
 > turntable/traverser (1 - 32767) \|BR\| \|\_\| \> **home:** angle of
@@ -2024,7 +2017,7 @@ appropriate angle.
 
 \|hr-dashed\|
 
-#### `<I id EXTT vpin home>` - Define an EX-Turntable turntable/traverser {#native-command-i-id-extt-vpin-home}
+#### `<I id EXTT vpin home>` - Define an EX-Turntable turntable/traverser 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** unique Id for the
 > turntable/traverser (1 - 32767) \|BR\| \|\_\| \> **vpin:** the Vpin of
@@ -2040,7 +2033,7 @@ appropriate angle.
 
 \|hr-dashed\|
 
-#### `<I id ADD position value angle>` - Add a position to a turntable/traverser {#native-command-i-id-add-position-value-angle}
+#### `<I id ADD position value angle>` - Add a position to a turntable/traverser 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** id of the turntable/traverser
 > the position is being added to \|BR\| \|\_\| \> **position:** position
@@ -2075,7 +2068,7 @@ appropriate angle.
 
 ### Sensors (Configuring the EX-CommandStation)
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
@@ -2110,7 +2103,7 @@ the `<S>` command:
 
 \|hr-dashed\|
 
-#### `<S id vpin pullup>` - Create a new sensor ID {#native-command-s-id-vpin-pullup}
+#### `<S id vpin pullup>` - Create a new sensor ID 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** identifier of the Sensor
 > (0-32767) (You pick the ID & they are shared between Turnouts, Sensors
@@ -2137,7 +2130,7 @@ the `<S>` command:
 
 \|hr-dashed\|
 
-#### `<S id>` - Delete defined sensor {#native-command-s-id}
+#### `<S id>` - Delete defined sensor 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** identifier of the Sensor
 > (0-32767)
@@ -2171,7 +2164,7 @@ the `<q id>` return and only react to `<Q id>` triggers.
 
 \|hr-dashed\|
 
-#### `</ LATCH vpin>` - Lock sensor ON, preventing external influence {#native-command-slash-latch-vpin}
+#### `</ LATCH vpin>` - Lock sensor ON, preventing external influence 
 
 Lock sensor ON, preventing external influence, valid IDs are in the
 range 0 - 255.
@@ -2183,7 +2176,7 @@ range 0 - 255.
 
 \|hr-dashed\|
 
-#### `</ UNLATCH vpin>` - Unlock sensor, returning to current external state {#native-command-slash-unlatch-vpin}
+#### `</ UNLATCH vpin>` - Unlock sensor, returning to current external state 
 
 Unlock sensor, returning to current external state, valid IDs are in the
 range 0 - 255.
@@ -2194,14 +2187,13 @@ range 0 - 255.
 > *Response:* \|BR\| \|\_\| Successful: ? \|BR\| \|\_\| Fail: ?
 
 Refer to the LATCH/UNLATCH commands in the
-`exrail/exrail-command-reference:sensors/inputs - reading and responding`{.interpreted-text
-role="ref"} section below for further details.
+`exrail/exrail-command-reference:sensors/inputs - reading and responding` section below for further details.
 
 ------------------------------------------------------------------------
 
 ### Outputs (Configuring the EX-CommandStation)
 
-::: {.contents .in-this-section depth="5" local=""}
+::: 
 In This Section
 :::
 
@@ -2225,7 +2217,7 @@ used with no pre-definition required.
 
 \|hr-dashed\|
 
-#### `<z vpin> or <z -vpin>` - Control an output pin; no setup required {#native-command-lower-z-vpin-activate}
+#### `<z vpin> or <z -vpin>` - Control an output pin; no setup required 
 
 > *Parameters for the lowercase z command:* \|BR\| \|\_\| \> **vpin:**
 > the pin or vpin number of the output \|BR\| \|\_\| \|\_\| \|\_\|
@@ -2236,7 +2228,7 @@ used with no pre-definition required.
 
 \|hr-dashed\|
 
-#### `<Z id vpin iflag>` - Creates a new output ID, with specified PIN and IFLAG values {#native-command-z-id-vpin-iflag}
+#### `<Z id vpin iflag>` - Creates a new output ID, with specified PIN and IFLAG values 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** identifier of the output \|BR\|
 > \|\_\| \> **vpin:** the pin number of the output to be controlled by
@@ -2272,7 +2264,7 @@ used with no pre-definition required.
 
 \|hr-dashed\|
 
-#### `<Z id>` - Deletes definition of output ID {#native-command-z-id}
+#### `<Z id>` - Deletes definition of output ID 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** identifier of the output to
 > delete
@@ -2282,7 +2274,7 @@ used with no pre-definition required.
 
 \|hr-dashed\|
 
-#### `<Z>` -Lists all defined output pins {#native-command-z}
+#### `<Z>` -Lists all defined output pins 
 
 > *Response:* \|BR\| \|\_\| Successful: `<Y id vpin iflag state>`
 > repeated for each defined output pin \|BR\| \|\_\| Fail: `<X>` (e.g.
@@ -2290,7 +2282,7 @@ used with no pre-definition required.
 
 \|hr-dashed\|
 
-#### `<Z id state>` - Sets output ID to either INACTIVE or ACTIVE state {#native-command-z-id-state}
+#### `<Z id state>` - Sets output ID to either INACTIVE or ACTIVE state 
 
 > *Parameters:* \|BR\| \|\_\| \> **id:** identifier of the output \|BR\|
 > \|\_\| \> **state:** one of \|BR\| \|\_\| \|\_\| \|\_\| \|\_\| • 0=
@@ -2323,25 +2315,25 @@ stored in the EEPROM by invoking the `<e>` (lower case e) command.
 
 ### EEPROM Management (Configuring the EX-CommandStation)
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
 \|hr-dashed\|
 
-#### `<D EEPROM>` - Diagnostic dump EEPROM contents {#native-command-d-eeprom}
+#### `<D EEPROM>` - Diagnostic dump EEPROM contents 
 
 > *Response:* ???
 
 \|hr-dashed\|
 
-#### `<e>` - Erase ALL (turnouts, sensors, and outputs) from EEPROM {#native-command-e-erase}
+#### `<e>` - Erase ALL (turnouts, sensors, and outputs) from EEPROM 
 
 > *Response:* \|BR\| \|\_\| `<O>`
 
 \|hr-dashed\|
 
-#### `<E>` - Store definitions to EEPROM {#native-command-e-store}
+#### `<E>` - Store definitions to EEPROM 
 
 > *Response:* \|BR\| \|\_\| `<O>`
 
@@ -2349,13 +2341,13 @@ In This Section
 
 ### Diagnostic Programming Commands (Configuring the EX-CommandStation)
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
 \|hr-dashed\|
 
-#### `<D ACK state>` - Enables ACK diagnostics {#native-command-d-ack-state}
+#### `<D ACK state>` - Enables ACK diagnostics 
 
 > *Parameters:* \|BR\| \|\_\| \> **state:** one of \|BR\| \|\_\| \|\_\|
 > \|\_\| \|\_\| • ON \|BR\| \|\_\| \|\_\| \|\_\| \|\_\| • OFF
@@ -2370,7 +2362,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<D ACK LIMIT value>` - Set ACK detection limit mA {#native-command-d-ack-limit-value}
+#### `<D ACK LIMIT value>` - Set ACK detection limit mA 
 
 > *Parameters:* \|BR\| \|\_\| \> **value:** in mA
 >
@@ -2378,7 +2370,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<D ACK minmax value [MS]>` - Set ACK minimum or maximum duration {#native-command-d-ack-min-max-value}
+#### `<D ACK minmax value [MS]>` - Set ACK minimum or maximum duration 
 
 > *Parameters:* \|BR\| \|\_\| \> **minmax:** one of \|BR\| \|\_\| \|\_\|
 > \|\_\| \|\_\| • `MIN` \|BR\| \|\_\| \|\_\| \|\_\| \|\_\| • `MAX`
@@ -2389,7 +2381,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<D ACK RETRY value>` - Set ACK retry count {#native-command-d-ack-retry-value}
+#### `<D ACK RETRY value>` - Set ACK retry count 
 
 > *Parameters:* \|BR\| \|\_\| \> **value:** Retry count
 >
@@ -2397,14 +2389,14 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<D CABS>` - Shows cab (loco) numbers and speed in reminder tables {#native-command-d-cabs}
+#### `<D CABS>` - Shows cab (loco) numbers and speed in reminder tables 
 
 > *Response:* \|BR\| \|\_\| \"Used=xxx, max=yyy\" \|BR\| \|\_\|
 > Displayed on the serial monitor only.
 
 \|hr-dashed\|
 
-#### `<D CMD state>` - Enables Command Parser diagnostics {#native-command-d-cmd-state}
+#### `<D CMD state>` - Enables Command Parser diagnostics 
 
 > *Parameters:* \|BR\| \|\_\| \> **state:** one of \|BR\| \|\_\| \|\_\|
 > \|\_\| \|\_\| • ON \|BR\| \|\_\| \|\_\| \|\_\| \|\_\| • OFF
@@ -2418,7 +2410,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<D ETHERNET state>` - Enables Ethernet diagnostics {#native-command-d-ethernet-satet}
+#### `<D ETHERNET state>` - Enables Ethernet diagnostics 
 
 > *Parameters:* \|BR\| \|\_\| \> **state:** one of \|BR\| \|\_\| \|\_\|
 > \|\_\| \|\_\| • ON \|BR\| \|\_\| \|\_\| \|\_\| \|\_\| • OFF
@@ -2432,7 +2424,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<D LCN state>` - Enables LCN interface diagnostics {#native-command-d-lcn-state}
+#### `<D LCN state>` - Enables LCN interface diagnostics 
 
 > *Parameters:* \|BR\| \|\_\| \> **state:** one of \|BR\| \|\_\| \|\_\|
 > \|\_\| \|\_\| • ON \|BR\| \|\_\| \|\_\| \|\_\| \|\_\| • OFF
@@ -2441,21 +2433,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<D WIFI state>` - Enables WiFi diagnostics {#native-command-d-wifi-state}
-
-> *Parameters:* \|BR\| \|\_\| \> **state:** one of \|BR\| \|\_\| \|\_\|
-> \|\_\| \|\_\| • ON \|BR\| \|\_\| \|\_\| \|\_\| \|\_\| • OFF
->
-> *Response:* N/A
->
-> *Notes:*
->
-> > When enabled, diagnostic messages will be shown on the the \|serial
-> > monitor\|.
-
-\|hr-dashed\|
-
-#### `<D WIT state>` - Enables WiThrottle diagnostics {#native-command-d-wit-state}
+#### `<D WIFI state>` - Enables WiFi diagnostics 
 
 > *Parameters:* \|BR\| \|\_\| \> **state:** one of \|BR\| \|\_\| \|\_\|
 > \|\_\| \|\_\| • ON \|BR\| \|\_\| \|\_\| \|\_\| \|\_\| • OFF
@@ -2469,7 +2447,21 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<DWEBSOCKET state>` - Enable Websocket diagnostics {#native-command-d-websocket-state}
+#### `<D WIT state>` - Enables WiThrottle diagnostics 
+
+> *Parameters:* \|BR\| \|\_\| \> **state:** one of \|BR\| \|\_\| \|\_\|
+> \|\_\| \|\_\| • ON \|BR\| \|\_\| \|\_\| \|\_\| \|\_\| • OFF
+>
+> *Response:* N/A
+>
+> *Notes:*
+>
+> > When enabled, diagnostic messages will be shown on the the \|serial
+> > monitor\|.
+
+\|hr-dashed\|
+
+#### `<DWEBSOCKET state>` - Enable Websocket diagnostics 
 
 > *Parameters:* \|BR\| \|\_\| \> **state:** one of \|BR\| \|\_\| \|\_\|
 > \|\_\| \|\_\| • ON \|BR\| \|\_\| \|\_\| \|\_\| \|\_\| • OFF
@@ -2478,7 +2470,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<D HAL SHOW>` - Shows configured servo board and GPIO extender board config and used pins {#native-command-d-hal-show}
+#### `<D HAL SHOW>` - Shows configured servo board and GPIO extender board config and used pins 
 
 > *Response:* \|BR\| \|\_\| List the configured I/O drivers in the
 > Hardware Abstraction Layer (HAL). This command is available from
@@ -2496,13 +2488,13 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<D HAL RESET>` - Reset all HAL devices {#native-command-d-hal-reset}
+#### `<D HAL RESET>` - Reset all HAL devices 
 
 > *Response:* \|BR\| \|\_\| TBA
 
 \|hr-dashed\|
 
-#### `<D RAM>` - Shows remaining RAM (Free Memory) {#native-command-d-ram}
+#### `<D RAM>` - Shows remaining RAM (Free Memory) 
 
 > *Response:* \|BR\| \|\_\| \"Free memory=xxxx\" \|BR\| \|\_\| Displayed
 > on the \|serial monitor\| only.
@@ -2511,13 +2503,13 @@ In This Section
 
 ### I/O (HAL) Diagnostics
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
 \|hr-dashed\|
 
-#### `<D ANIN vpin>` - Read and display pin vpin\'s analogue value {#native-command-d-anin-vpin}
+#### `<D ANIN vpin>` - Read and display pin vpin\'s analogue value 
 
 > *Parameters:* \|BR\| \|\_\| \> **vpin:** ??
 >
@@ -2525,7 +2517,7 @@ In This Section
 
 \|hr-dashed\|
 
-#### `<D ANOUT vpin value [param2]>` - Write value to analogue vpin {#native-command-d-anout-vpin-value}
+#### `<D ANOUT vpin value [param2]>` - Write value to analogue vpin 
 
 Write value to analogue pin vpin, supplying param2 to the driver.
 
@@ -2540,13 +2532,13 @@ Write value to analogue pin vpin, supplying param2 to the driver.
 
 ### Other Commands
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
 \|hr-dashed\|
 
-#### `<U cmd>` - Is reserved for user commands (through user filter) {#native-command-c-cmd}
+#### `<U cmd>` - Is reserved for user commands (through user filter) 
 
 > *Parameters:* \|BR\| \|\_\| \> **cmd:** user defined command
 >
@@ -2556,13 +2548,13 @@ In This Section
 
 ### Broadcasts with no equivalent commands
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
 \|hr-dashed\|
 
-#### `<m message>` - Broadcast message to all connected native protocol clients {#native-command-m-message}
+#### `<m message>` - Broadcast message to all connected native protocol clients 
 
 > *Response:* \|BR\| \|\_\| `<m message>`
 >

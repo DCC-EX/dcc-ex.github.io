@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -54,8 +54,7 @@ encoders in your locos.
 When the \|DCC-EX\| team designed the **DCC-EX** \|EX-CS\| they found
 the \|WITHROTTLE PROTOCOL\| too limiting and came up with a new protocol
 referred to originally as **DCC++** but later as
-`DCC-EX Native Protocol or DCC-EX Native Commands </reference/software/command-summary-consolidated>`{.interpreted-text
-role="doc"}.
+`DCC-EX Native Protocol or DCC-EX Native Commands </reference/software/command-summary-consolidated>`.
 
 \|Engine Driver\|, \|EX-WT\|, \|JMRI\| and a few other apps can use the
 more powerful **DCC-EX Native Protocol** when connecting to a **DCC-EX**
@@ -83,5 +82,4 @@ Native Commands** it is worthwhile doing so. However if you can\'t then
 the **WiThrottle protocol** is just fine for running the average layout.
 
 You can refer the
-`throttle/controller table <throttles/index:table - throttles by technology>`{.interpreted-text
-role="ref"} to see which controllers support **DCC-EX Native Commands**.
+`throttle/controller table <throttles/index:table - throttles by technology>` to see which controllers support **DCC-EX Native Commands**.

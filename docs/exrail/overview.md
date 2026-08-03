@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -25,18 +25,12 @@ To begin, let\'s define a few terms:
 
 **OBJECT** - Things / devices on your layout that you want to interact
 with. these include:
-`Your locos <exrail/creating-elements:adding a roster>`{.interpreted-text
-role="ref"},
-`Turnouts/Points <exrail/creating-elements:adding the hardware - servo turnouts/points>`{.interpreted-text
-role="ref"},
-`semaphores/Signals <exrail/creating-elements:adding the hardware - signals>`{.interpreted-text
-role="ref"},
-`Servo based Animations <exrail/creating-elements:configure myautomation.h - servos for signals an animations>`{.interpreted-text
-role="ref"},
-`Sensors <exrail/creating-elements:adding the hardware - sensors>`{.interpreted-text
-role="ref"} and
-`Signals (Lights) <exrail/creating-elements:configure myautomation.h - signals>`{.interpreted-text
-role="ref"}.
+`Your locos <exrail/creating-elements:adding a roster>`,
+`Turnouts/Points <exrail/creating-elements:adding the hardware - servo turnouts/points>`,
+`semaphores/Signals <exrail/creating-elements:adding the hardware - signals>`,
+`Servo based Animations <exrail/creating-elements:configure myautomation.h - servos for signals an animations>`,
+`Sensors <exrail/creating-elements:adding the hardware - sensors>` and
+`Signals (Lights) <exrail/creating-elements:configure myautomation.h - signals>[.
 
 **SEQUENCE** - Simply a list of things to be done in order. These things
 might be to actually drive a train around, or merely to set some
@@ -55,7 +49,7 @@ train away, following each step listed in the sequence.
 
 Most people wanting to do animations or run trains through an automated
 route will use a SEQUENCE, but those with
-`throttles </throttles/index>`{.interpreted-text role="doc"} that
+`throttles ](/throttles/index.md) that
 support it (\|engine driver\|, \|EX-WT\|) can add routes and
 automations. Both of these terms are just tags that let throttles with
 this feature automatically assign sequences to control buttons.
@@ -129,6 +123,6 @@ of the time.
 
 ## Next Steps - myAutomation.h
 
-See the `editing`{.interpreted-text role="doc"} page or click the
+See the `editing` page or click the
 \'Next\' button to learn how to edit the file which will contain your
 automation sequences.

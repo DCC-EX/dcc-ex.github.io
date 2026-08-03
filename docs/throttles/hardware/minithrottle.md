@@ -4,7 +4,7 @@
 
 A \|EX-CS\| and \|JMRI\| Throttle
 
-![Android Logo](/_static/images/throttles/minithrottle1.jpg){.align-left}
+![Android Logo](/_static/images/throttles/minithrottle1.jpg)
 
 Note, this is a \"project\" type throttle and requires the user to
 construct it to their specifications

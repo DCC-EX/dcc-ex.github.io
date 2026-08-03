@@ -16,7 +16,7 @@ However its is sometimes more convenient to code a sequence so that it
 can be started by name.
 
 This is made possible by using upper case quoted sequence names with the
-[hk]{#hk} suffix.
+[hk] suffix.
 
 ``` cpp
 SEQUENCE("BEER"_hk)  

@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -39,8 +39,7 @@ in the context of a complete layout.
 
 This is the complete layout we will build up to in stages:
 
-![RMFT Complete](/_static/images/big-picture/rmft-complete.png){.responsive-image
-.responsive-image}
+![RMFT Complete](/_static/images/big-picture/rmft-complete.png)
 
 These are the various concepts and components we will cover:
 

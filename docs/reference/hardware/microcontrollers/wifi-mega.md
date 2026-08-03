@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -57,8 +57,7 @@ This is our tested and proven configuration
 - \|EX-CS\| 3.0.6 or greater
 - ATMega2560 + ESP8266 WiFi - Combo Board
 - Deek-Robot L298P \|standard motor driver\| (or other
-  `approved motor driver </reference/hardware/motor-boards>`{.interpreted-text
-  role="doc"})
+  `approved motor driver </reference/hardware/motor-boards>`)
 - 12-16v DC Laptop power supply[^1] to the \|motor shield\| (16v
   provides 14.5vDC to the tracks for HO Gauge)\*
 - 7-9V DC power supply to the ATmega boards with a female 2.1mm power
@@ -245,7 +244,7 @@ NOTE: It may take a few seconds to open while you see a black cmd window
 - press \[Developer Mode\] button
 - Press \[ESP8266 Download Tool\] button
 
-![Flasher Tool Buttons](/_static/images/wifi/download_tool_dev_mode.jpg){.align-left}
+![Flasher Tool Buttons](/_static/images/wifi/download_tool_dev_mode.jpg)
 
 <figure class="align-left">
 <img src="/_static/images/wifi/download_tool_esp8266.jpg"
@@ -261,8 +260,8 @@ clearer
 
 - Click on the each file button (the \"\...\" buttons) and find the bin
   files you extracted.
-- Follow `flasher-settings-screen`{.interpreted-text role="numref"} and
-  pay close attention setting up the Exact [\*.bin]{.title-ref} Files &
+- Follow `flasher-settings-screen` and
+  pay close attention setting up the Exact [\*.bin] Files &
   locations 0xYYYYYYYY
 - Make sure to check all the file checkboxes to the left of the filled
   in file names
@@ -294,8 +293,7 @@ successfully and it closes the port.
 - Disconnect the USB cable.
 
 Skip ahead to
-`reference/hardware/microcontrollers/wifi-mega:e. Set the switches for run/sketch mode`{.interpreted-text
-role="ref"}
+`reference/hardware/microcontrollers/wifi-mega:e. Set the switches for run/sketch mode`
 
 ##### With esptool.py
 
@@ -359,19 +357,15 @@ install again.
 Download and install \|EX-CS\| from by using the Automated exInstaller
 or using the \|Arduino IDE\| by choosing one of the links below.
 
-`How to install using the installer </ex-commandstation/installer-diy>`{.interpreted-text
-role="doc"}
+`How to install using the installer </ex-commandstation/installer-diy>`
 
-`How to install using the Arduino IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`{.interpreted-text
-role="doc"}
+`How to install using the Arduino IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`
 
-`I know what I'm doing, just point me to the downloads page! </download/ex-commandstation>`{.interpreted-text
-role="doc"}
+`I know what I'm doing, just point me to the downloads page! </download/ex-commandstation>`
 
 ### Long Version of Network Setup
 
-`Long/Detailed Network Setup HERE </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`{.interpreted-text
-role="doc"}
+`Long/Detailed Network Setup HERE </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
 
 All settings are in the config.h file in your EX-CommandStation folder.
 If you don\'t have a config.h, rename config.example.h to config.h.
@@ -384,7 +378,7 @@ OFF (8 doesn\'t matter)**
 - If using the installer, just check the WiFi check box and leave SSID
   and password alone
 - If using the \|Arduino IDE\|,Make sure you didn\'t put \"//\" in front
-  of the [#define ENABLE_WIFI true]{.title-ref} line in your config.h
+  of the [#define ENABLE_WIFI true] line in your config.h
   file
 - No additional changes required, Leave SSID & Passwd alone
 - Your ESP-WiFi chip will assign a SSID as `DCCEX_xxxxxx` and
@@ -402,9 +396,9 @@ OFF (8 doesn\'t matter)**
   the Arduino IDE program then
 - Open, then Edit & change the new config.h file to your local or home
   Router\'s SSID & Password.
-  - Change [#define WIFI_SSID \"Your network name\"]{.title-ref} to the
+  - Change [#define WIFI_SSID \"Your network name\"] to the
     name of your local network.
-  - Change [#define WIFI_PASSWORD \"Your network passwd\"]{.title-ref}
+  - Change [#define WIFI_PASSWORD \"Your network passwd\"]
     to the password for your network.
 
 ## 4. Compile and Re-upload EX-CommandStation software to the Arduino
@@ -432,7 +426,7 @@ barrel jack.
 - It should show the ATMega2560 & ESP8266 WiFi communicating and
   assigning a xxx.xxx.x.xxx IP Address and Port 2560 to the new
   \|EX-CS\|.
-- You should see [++ Wifi Setup CONNECTED ++]{.title-ref}
+- You should see [++ Wifi Setup CONNECTED ++]
 
 ## 6. Connect your Phone as a Throttle (Controller)
 
@@ -535,5 +529,4 @@ Station!**
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.

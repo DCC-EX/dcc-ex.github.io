@@ -4,22 +4,20 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
 
 (This does not include servos driven from track connected DCC decoders.
-See `/exrail/cookbooks/turnouts/defining-dcc-turnouts`{.interpreted-text
-role="doc"})
+See `/exrail/cookbooks/turnouts/defining-dcc-turnouts`)
 
 ## Important considerations for servo operation
 
 Servo turnouts/points are driven through a
-`PCA9685 </reference/hardware/servo-module>`{.interpreted-text
-role="doc"} servo control board or an \|EX-IO\|.
+`PCA9685 </reference/hardware/servo-module>` servo control board or an \|EX-IO\|.
 
 Test, test, test your servo parameters prior to connecting to an actual
 turnout/point. If you have defined angles that exceed the physical
@@ -54,8 +52,7 @@ SERVO_TURNOUT(id, vpin, active_angle, inactive_angle, profile, "description")
   commands will refer to this turnout by this id.
 - `pin` = The ID of the pin the servo is connected to, which would
   typically be the VPin ID of the
-  `PCA9685 </reference/hardware/servo-module>`{.interpreted-text
-  role="doc"} controller board.
+  `PCA9685 </reference/hardware/servo-module>` controller board.
 - `active_angle` = The angle to which the servo will move when the
   turnout is thrown (This is a value passed to the servo drtiver, it is
   not in degrees).
@@ -71,8 +68,7 @@ SERVO_TURNOUT(id, vpin, active_angle, inactive_angle, profile, "description")
 
 An example definition for a servo connected to the second control pins
 of the first
-`PCA9685 </reference/hardware/servo-module>`{.interpreted-text
-role="doc"} connected to the CommandStation, using the slow profile for
+`PCA9685 </reference/hardware/servo-module>` connected to the CommandStation, using the slow profile for
 prototypical operation:
 
 ``` cpp

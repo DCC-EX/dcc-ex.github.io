@@ -4,7 +4,7 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-An `AUTOMATION </exrail/getting-started>`{.interpreted-text role="doc"}
+An [AUTOMATION ](/exrail/getting-started.md)
 is a sequence of \|EX-R\| commands used to drive a loco.
 
 By creating an AUTOMATION in \|EX-R\|, your throttle/controller app will

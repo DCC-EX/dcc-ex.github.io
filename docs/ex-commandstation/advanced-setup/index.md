@@ -5,9 +5,9 @@
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-commandstation-button-small\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -21,7 +21,7 @@ suitable for a \|conductor-text\|.
 
 If however, you identify as a \|conductor-text\| and only wish to
 install the recommended hardware we suggest that you look at the
-simplified `/ex-commandstation/index`{.interpreted-text role="doc"}
+simplified `/ex-commandstation/index`
 page.
 
 \|HR-DASHED\|
@@ -66,7 +66,7 @@ quality control issues, and numerous users have had poor experiences
 getting this to function correctly. While this option is supported, it
 is definitely *buyer beware!*
 
-::: {.toctree maxdepth="2"}
+::: 
 /reference/hardware/microcontroller-boards
 :::
 
@@ -81,7 +81,7 @@ recommended Arduino and Deek-Robot motor shields.
 However, if you need more current than these can provide, then you need
 to consider the IBT_2 or IRF3205 options.
 
-::: {.toctree maxdepth="2"}
+::: 
 /reference/hardware/motor-boards
 :::
 
@@ -98,7 +98,7 @@ personal choices of how you wish to interact with it.
 To facilitate a variety of these choices, there are four ways to
 connect:
 
-::: {.contents .in-this-section depth="1" local=""}
+::: 
 Connection Options
 :::
 
@@ -113,8 +113,7 @@ won\'t require any other connection method to be available.
 
 Note for Uno and Nano users, this is your only option for connectivity
 as mentioned in
-`ex-commandstation/advanced-setup/index:microcontrollers`{.interpreted-text
-role="ref"}.
+`ex-commandstation/advanced-setup/index:microcontrollers`.
 
 If you are using a physical throttle that requires a serial connection,
 then this is also the appropriate connection option, although your
@@ -134,7 +133,7 @@ To use WiFi, you will need something other than an Uno or Nano with a
 connected WiFi shield or board. Follow the links below to understand the
 supported options.
 
-::: {.toctree maxdepth="2"}
+::: 
 supported-connections/index supported-wifi/index
 :::
 
@@ -144,13 +143,13 @@ If you prefer a physical network connection, you will need an Ethernet
 shield or board to provide a network connection for \|wiThrottle\| apps
 or \|Engine Driver\| to connect to.
 
-::: {.toctree maxdepth="2"}
+::: 
 supported-ethernet/index
 :::
 
 ### Bluetooth
 
-::: {.toctree maxdepth="1"}
+::: 
 /reference/hardware/bluetooth
 :::
 
@@ -165,8 +164,7 @@ depending on your preference.
 These can display various items such as the version, IP address (if
 using WiFi or Ethernet), as well as some user configurable parameters.
 
-refer to `/reference/hardware/i2c-displays`{.interpreted-text
-role="doc"}
+refer to `/reference/hardware/i2c-displays`
 
 ------------------------------------------------------------------------
 
@@ -187,7 +185,7 @@ The \|Arduino IDE\| requires some software to be installed on your
 computer, however due to the flexibility this provides can be a better
 alternative than \|EX-I\|.
 
-::: {.toctree maxdepth="2"}
+::: 
 installation-options/index
 :::
 
@@ -202,7 +200,7 @@ modification to ensure any changed parameters persist after the
 \|EX-CS\| is shutdown or restarted. These changes are usually as a
 result of a conversation with the developers.
 
-::: {.toctree maxdepth="1"}
+::: 
 startup-config
 :::
 
@@ -218,7 +216,7 @@ controller.
 These tend to be aimed more at the \|tinkerer-text\| and
 \|engineer-text\| levels.
 
-::: {.toctree maxdepth="2"}
+::: 
 controllers
 :::
 
@@ -226,7 +224,7 @@ controllers
 
 ## Manual Configuration of the EX-CommandStation
 
-::: {.toctree maxdepth="1"}
+::: 
 /reference/software/basic-config-h /reference/software/advanced-config-h
 :::
 
@@ -234,8 +232,7 @@ controllers
 
 ## DCC-EX Commands
 
-> `Native Commands Summary </reference/software/command-summary-consolidated>`{.interpreted-text
-> role="doc"}
+> `Native Commands Summary </reference/software/command-summary-consolidated>`
 
 ------------------------------------------------------------------------
 
@@ -251,5 +248,5 @@ are found and fixed, and better ways of doing things are discovered, so
 it\'s best to keep up to date with any discussions via our [Discord
 server](https://discord.gg/PuPnNMp8Qf) \|EXTERNAL-LINK\|.
 
-Refer to `/under-development/index`{.interpreted-text role="doc"} for
+Refer to `/under-development/index` for
 more information.

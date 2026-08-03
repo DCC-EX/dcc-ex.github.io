@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -71,7 +71,7 @@ work based on user feedback.
 
 We\'ve compiled this simple summary table to help with this:
 
-::: {.flat-table .command-table widths="auto" header-rows="1"}
+::: 
 - - Type / Brand \|\_xb\| \|\_xb\| \|\_xb\| \|\_xb\| \|\_xb\| \|\_xb\|
     \|\_xb\| \|\_xb\| \|\_xb\| \|\_xb\|
   - R \|BRxb\| e \|BRxb\| c \|BRxb\| o \|BRxb\| m \|BRxb\| m \|BRxb\| e
@@ -92,8 +92,7 @@ We\'ve compiled this simple summary table to help with this:
   - Comments / Notes \|\_xb\| \|\_xb\| \|\_xb\| \|\_xb\| \|\_xb\|
     \|\_xb\| \|\_xb\| \|\_xb\| \|\_xb\| \|\_xb\| \|\_xb\| \|\_xb\|
     \|\_xb\| \|\_xb\| \|\_xb\|
-- - `DCC-EX EX-MotorShield8874 RevA</reference/hardware/motorboards/ex-motor-shield-8874>`{.interpreted-text
-    role="doc"}
+- - `DCC-EX EX-MotorShield8874 RevA</reference/hardware/motorboards/ex-motor-shield-8874>`
   - Yes
   - Yes
   - Conductor
@@ -105,8 +104,7 @@ We\'ve compiled this simple summary table to help with this:
   - 2
   - 5
   - 
-- - `Arduino Motor Shield R3</reference/hardware/motorboards/arduino-motor-shield>`{.interpreted-text
-    role="doc"}[^5]
+- - `Arduino Motor Shield R3</reference/hardware/motorboards/arduino-motor-shield>`[^5]
   - Yes
   - Yes
   - Conductor
@@ -118,8 +116,7 @@ We\'ve compiled this simple summary table to help with this:
   - 2
   - 1.3 - 1.5
   - 
-- - `Deek-Robot Motor Shield</reference/hardware/motorboards/deek-robot-motor-shield>`{.interpreted-text
-    role="doc"}[^7]
+- - `Deek-Robot Motor Shield</reference/hardware/motorboards/deek-robot-motor-shield>`[^7]
   - Yes
   - Yes
   - Conductor
@@ -131,8 +128,7 @@ We\'ve compiled this simple summary table to help with this:
   - 2
   - 1.3 - 1.5
   - 
-- - `Flashtree Motor Shield</reference/hardware/motorboards/flashtree-motor-shield>`{.interpreted-text
-    role="doc"}
+- - `Flashtree Motor Shield</reference/hardware/motorboards/flashtree-motor-shield>`
   - No
   - Yes
   - Tinkerer
@@ -144,8 +140,7 @@ We\'ve compiled this simple summary table to help with this:
   - 2
   - 1.3 - 1.5
   - 
-- - `DIY More L298NH</reference/hardware/motorboards/diy-more-l298nh-motor-shield>`{.interpreted-text
-    role="doc"}
+- - `DIY More L298NH</reference/hardware/motorboards/diy-more-l298nh-motor-shield>`
   - No
   - Yes
   - Tinkerer
@@ -157,8 +152,7 @@ We\'ve compiled this simple summary table to help with this:
   - 2
   - 2
   - 
-- - `YFRobot L298P</reference/hardware/motorboards/yfrobot-l298p>`{.interpreted-text
-    role="doc"}
+- - `YFRobot L298P</reference/hardware/motorboards/yfrobot-l298p>`
   - No
   - Yes
   - Tinkerer
@@ -170,8 +164,7 @@ We\'ve compiled this simple summary table to help with this:
   - 2
   - 2
   - 
-- - `L298N (dual)</reference/hardware/motorboards/L298N-motor-board-setup>`{.interpreted-text
-    role="doc"}
+- - `L298N (dual)</reference/hardware/motorboards/L298N-motor-board-setup>`
   - No
   - Yes
   - Engineer
@@ -183,8 +176,7 @@ We\'ve compiled this simple summary table to help with this:
   - 2
   - 2
   - It doesn\'t have current sense
-- - `Dual Module H-bridge MOSFET IRF3205</reference/hardware/motorboards/IRF3205-motor-board-setup>`{.interpreted-text
-    role="doc"}
+- - `Dual Module H-bridge MOSFET IRF3205</reference/hardware/motorboards/IRF3205-motor-board-setup>`
   - No
   - Yes
   - Tinkerer
@@ -196,8 +188,7 @@ We\'ve compiled this simple summary table to help with this:
   - 2
   - 15
   - 
-- - `Pololu MC33926</reference/hardware/motorboards/pololu-mc33926>`{.interpreted-text
-    role="doc"}
+- - `Pololu MC33926</reference/hardware/motorboards/pololu-mc33926>`
   - No
   - Yes
   - Tinkerer
@@ -210,8 +201,7 @@ We\'ve compiled this simple summary table to help with this:
   - 3
   - current sense is not acceptable. We recommend using an external
     current sense board like the MAX471
-- - `MiniIBT L6201P (single)</reference/hardware/motorboards/miniibt-motor-driver-l6201p>`{.interpreted-text
-    role="doc"}
+- - `MiniIBT L6201P (single)</reference/hardware/motorboards/miniibt-motor-driver-l6201p>`
   - No
   - Yes
   - Tinkerer
@@ -223,8 +213,7 @@ We\'ve compiled this simple summary table to help with this:
   - 1
   - 5
   - 
-- - `BTS7960 IBT_2 (single)</reference/hardware/motorboards/IBT_2-motor-board-setup>`{.interpreted-text
-    role="doc"}
+- - `BTS7960 IBT_2 (single)</reference/hardware/motorboards/IBT_2-motor-board-setup>`
   - No
   - Yes
   - Tinkerer
@@ -236,8 +225,7 @@ We\'ve compiled this simple summary table to help with this:
   - 1
   - 43
   - 
-- - `Keyes/Fundumoto ("Beeper Board")</reference/hardware/motorboards/keyes-fundumoto>`{.interpreted-text
-    role="doc"}
+- - `Keyes/Fundumoto ("Beeper Board")</reference/hardware/motorboards/keyes-fundumoto>`
   - No
   - Yes
   - Engineer
@@ -249,8 +237,7 @@ We\'ve compiled this simple summary table to help with this:
   - 2
   - 2
   - 
-- - `Makerfabs H-Bridge</reference/hardware/motorboards/makerfabs-h-bridge-motor-shield>`{.interpreted-text
-    role="doc"}
+- - `Makerfabs H-Bridge</reference/hardware/motorboards/makerfabs-h-bridge-motor-shield>`
   - No
   - Yes
   - Engineer
@@ -262,8 +249,7 @@ We\'ve compiled this simple summary table to help with this:
   - 2
   - 8
   - 
-- - `Velleman KA03/VMA03</reference/hardware/motorboards/velleman-ka03-kit-vma03>`{.interpreted-text
-    role="doc"}
+- - `Velleman KA03/VMA03</reference/hardware/motorboards/velleman-ka03-kit-vma03>`
   - No
   - Yes
   - Engineer
@@ -275,8 +261,7 @@ We\'ve compiled this simple summary table to help with this:
   - 2
   - 2
   - 
-- - `DFRobot 2x2A DC Motor Shield (DRI0009)</reference/hardware/motorboards/dfrobot-2x2a-dc-motor-shield>`{.interpreted-text
-    role="doc"}
+- - `DFRobot 2x2A DC Motor Shield (DRI0009)</reference/hardware/motorboards/dfrobot-2x2a-dc-motor-shield>`
   - No
   - Yes
   - Engineer
@@ -290,30 +275,30 @@ We\'ve compiled this simple summary table to help with this:
   - 
 - - VNH2SP30 - SparkFun Monster Moto and others
   - \-
-  - `No`{.interpreted-text role="dcc-ex-red-bold-italic"}
-  - `7`{.interpreted-text role="cspan"} -
+  - `No`
+  - `7` -
   - Does not work. It can\'t switch fast enough to generate a reliable
     DCC signal
 - - IFX9202ED - Infineon Dual H-Bridge
   - \-
-  - `No`{.interpreted-text role="dcc-ex-red-bold-italic"}
-  - `7`{.interpreted-text role="cspan"} -
+  - `No`
+  - `7` -
   - Does not work. Can\'t switch fast enough.
 - - DFRobot Romeo V2
   - \-
-  - `No`{.interpreted-text role="dcc-ex-red-bold-italic"}
+  - `No`
   - Engineer
-  - `6`{.interpreted-text role="cspan"} -
+  - `6` -
   - Well, an Engineer could perhaps get this one to work.
 - - Kuman Board (and any L293D based boards)
   - \-
-  - `No`{.interpreted-text role="dcc-ex-red-bold-italic"}
-  - `7`{.interpreted-text role="cspan"} -
+  - `No`
+  - `7` -
   - Does not work. Not enough current.
 - - Pololu TB9051FTG based motor shield
   - \-
-  - `No`{.interpreted-text role="dcc-ex-red-bold-italic"}
-  - `7`{.interpreted-text role="cspan"} -
+  - `No`
+  - `7` -
   - Does not work. It can\'t switch fast enough to generate a reliable
     DCC signal
 :::
@@ -333,22 +318,17 @@ For users wishing to use the new \|TM\| DC feature, there are a very
 limited number of boards available for use, and only this list of boards
 is supported:
 
-- `/reference/hardware/motorboards/ex-motor-shield-8874`{.interpreted-text
-  role="doc"}
-- `/reference/hardware/motorboards/arduino-motor-shield`{.interpreted-text
-  role="doc"}
-- `/reference/hardware/motorboards/deek-robot-motor-shield`{.interpreted-text
-  role="doc"}
-- `/reference/hardware/motorboards/flashtree-motor-shield`{.interpreted-text
-  role="doc"}
-- `/reference/hardware/motorboards/diy-more-l298nh-motor-shield`{.interpreted-text
-  role="doc"}
+- `/reference/hardware/motorboards/ex-motor-shield-8874`
+- `/reference/hardware/motorboards/arduino-motor-shield`
+- `/reference/hardware/motorboards/deek-robot-motor-shield`
+- `/reference/hardware/motorboards/flashtree-motor-shield`
+- `/reference/hardware/motorboards/diy-more-l298nh-motor-shield`
 
 ### Easy to use boards
 
 \|conductor\|
 
-::: {.toctree maxdepth="1"}
+::: 
 DCC-EX EX-MotorShield8874 - 5A \[RECOMMENDED\]
 \</reference/hardware/motorboards/ex-motor-shield-8874\> Arduino Motor
 Shield - 1.5A \[RECOMMENDED\]
@@ -367,7 +347,7 @@ L298P - 2A \</reference/hardware/motorboards/yfrobot-l298p\>
 
 These boards require wiring.
 
-::: {.toctree maxdepth="1"}
+::: 
 L298N (dual) - 2A
 \</reference/hardware/motorboards/L298N-motor-board-setup\> Dual Module
 H-bridge MOSFET IRF3205 - 15A
@@ -388,7 +368,7 @@ and may not have good current sensing. That said, if you buy a separate
 current sense board, we particularly like the IBT_2 board (though you
 will need 2 of them or some other board for the programming track)
 
-::: {.toctree maxdepth="1"}
+::: 
 Keyes/Fundumoto (\"Beeper Board\") - 2A
 \</reference/hardware/motorboards/keyes-fundumoto\> Makerfabs H-Bridge -
 8A \</reference/hardware/motorboards/makerfabs-h-bridge-motor-shield\>
@@ -403,8 +383,7 @@ DC Motor Shield (DRI0009) - 2A
 - VNH2SP30 - SparkFun Monster Moto and others. It can\'t switch fast
   enough to generate a reliable DCC signal
 - IFX9202ED - Infineon Dual H-Bridge. Can\'t switch fast enough.
-- `/reference/hardware/motorboards/dfrobot-romeo-v2`{.interpreted-text
-  role="doc"} - Well, an Engineer could perhaps get this one to work.
+- `/reference/hardware/motorboards/dfrobot-romeo-v2` - Well, an Engineer could perhaps get this one to work.
 - Kuman Board (and any L293D based boards) - not enough current.
 - Pololu TB9051FTG based motor shield. It can\'t switch fast enough to
   generate a reliable DCC signal. [Product
@@ -447,7 +426,7 @@ If your board is not in the list of supported motor driver types, or if
 you need to make changes or have more information about how motor
 drivers are configured in \|EX-CS\|, see:
 
-::: {.toctree maxdepth="1"}
+::: 
 Motor Driver Configuration Guide
 \</reference/hardware/motorboards/motor-board-config\>
 :::
@@ -461,7 +440,7 @@ to get them working are failing, you may need to enable the high
 accuracy waveform functionality (providing your motor driver supports
 it).
 
-::: {.toctree maxdepth="1"}
+::: 
 High Accuracy Waveform Guide
 \</reference/hardware/motorboards/high-accuracy\>
 :::
@@ -470,8 +449,7 @@ High Accuracy Waveform Guide
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.
 
 [^2]: CV Programming
 
@@ -484,16 +462,14 @@ High Accuracy Waveform Guide
     *standard motor driver*
 
 [^6]: Can be stacked, but it is complicated. See
-    `/reference/hardware/motorboards/arduino-motor-shield-stacked`{.interpreted-text
-    role="doc"}
+    `/reference/hardware/motorboards/arduino-motor-shield-stacked`
 
 [^7]: The *Arduino Motor Shield R38* and the *Deek-Robot Motor Shield*
     are interchangeably referred to in this documentation as the
     *standard motor driver*
 
 [^8]: Can be stacked, but it is complicated. See
-    `/reference/hardware/motorboards/arduino-motor-shield-stacked`{.interpreted-text
-    role="doc"}
+    `/reference/hardware/motorboards/arduino-motor-shield-stacked`
 
 [^9]: Requires modification of the board to support Current Sense
 

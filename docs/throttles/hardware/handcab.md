@@ -2,7 +2,7 @@
 
 \|tinkerer\| \|engineer\|
 
-![HandCab](/_static/images/throttles/handcab.jpg){.align-left}
+![HandCab](/_static/images/throttles/handcab.jpg)
 
 HandCab is a throttle that mimics the real thing closer than operating
 your trains with a knob or slider. It has large throttle, brake and

@@ -4,27 +4,27 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="4" local=""}
+::: 
 On this page
 :::
 ::::
 
 This page is a limited introduction to the \|EX-R\| automation
 sequences. For more comprehensive information refer to the
-`/exrail/exrail-command-reference`{.interpreted-text role="doc"}.
+[/exrail/exrail-command-reference`.
 
 Before You start, generally you will need to have created some Key
 Objects (e.g. Turnouts/Points, Sensors, Signals) before you start
 writing sequences. Refer to the previous page
-(`creating-elements`{.interpreted-text role="doc"}) for creating and
+(`creating-elements`) for creating and
 adding those Objects. Note that these objects don\'t have to be listed
 in the myAutomation.h file before the sequence in which you use it, but
 it is good practice to do so.
 
 For a full list of keywords, see
-`/exrail/exrail-command-reference`{.interpreted-text role="doc"}. Only a
+`/exrail/exrail-command-reference`. Only a
 subset are described on this page.
 
 :!!! warning "::: title
@@ -97,7 +97,7 @@ There are four types of Sequence:
 
 Most people wanting to do animations or run trains through an automated
 route will use a SEQUENCE, but those with
-`throttles </throttles/index>`{.interpreted-text role="doc"} that
+`throttles ](/throttles/index.md) that
 support it (\|engine driver\|, \|EX-WT\|) can add routes and
 automations. Both of these terms are just tags that let throttles with
 this feature automatically assign sequences to control buttons.
@@ -161,7 +161,7 @@ In general, sequences follow the basic structure:
 
 For example:
 
-``` {.cpp .code-block-float-right}
+``` 
 // Example
 ROUTE(1,"Coal Yard exit")    // unique sequence-id = 1
    RED(77)      // signal 77 to Red
@@ -195,11 +195,11 @@ activate them on your throttles (e.g. \|engine driver\| or
 
   ----------------------------------- -------------------------------------------------
   `AUTOMATION( id, “description” )`   Start a Automation Sequence and creates a
-                                      WiThrottles {Handoff} button to automatically
+                                      WiThrottles  button to automatically
                                       send a train along.
 
   `ROUTE( id, “description” )`        Start of a Route Sequence and creates a
-                                      WiThrottles {Set} button to manual drive the
+                                      WiThrottles  button to manual drive the
                                       train along
   ----------------------------------- -------------------------------------------------
 
@@ -220,7 +220,7 @@ following form:
 
 #### Event Triggered Sequence Types
 
-``` {.cpp .code-block-float-right}
+``` 
 // Example
 ONTHROW(8)     // When turnout 8 is thrown,
    THROW(9)    // throw the facing turnout
@@ -237,7 +237,7 @@ Sequences that are triggered when \'events\' occur, include:
   ONTHROW( turnout_id )   Event handler for turnout thrown
   ----------------------- ----------------------------------
 
-See the `/exrail/exrail-command-reference`{.interpreted-text role="doc"}
+See the `/exrail/exrail-command-reference`
 for additional Event Triggered Sequence types, and additional
 information on these types.
 
@@ -245,7 +245,7 @@ information on these types.
 
 ### Automatically Running a Sequence at Power Up
 
-:::: {.note .note-float-right}
+:::: 
 ::: title
 Note
 :::
@@ -275,8 +275,7 @@ The commands fall into some basic categories:
 - [Actions](#action-commands-getting-exrail-to-do-something) - Commands
   that \'do\' something
 - [Flow Control Commands](#sequence-flow-flow-control-commands)
-  - `Conditionals <getting-started-conditionals>`{.interpreted-text
-    role="ref"} & [Branching](#branching) - Commands that change the
+  - `Conditionals <getting-started-conditionals>` & [Branching](#branching) - Commands that change the
     flow/order in which the commands are executed
   - [Delays & Waits](#delays-waits) - Commands that change the timing of
     the execution of the commands
@@ -291,10 +290,10 @@ created and defined, like turnouts/points, signals, servos, turntables,
 blocks and locos.
 
 There are a substantial number of commands that you can explore in the
-`/exrail/exrail-command-reference`{.interpreted-text role="doc"}. We
+`/exrail/exrail-command-reference`. We
 will look at just a few here.
 
-``` {.cpp .code-block-float-right}
+``` 
 // Example
 ONTHROW(8)     // When turnout 8 is thrown,
    THROW(9)    // throw the facing turnout
@@ -319,7 +318,7 @@ Signal related commands include:
   GREEN( signal_id )   Set a defined signal to GREEN (see SIGNAL)
   -------------------- ---------------------------------------------
 
-``` {.cpp .code-block-float-right}
+``` 
 // Example
 AUTOMATION(4,"Back and Forward")
    AUTOSTART   // start this immediately the system powers up
@@ -347,7 +346,7 @@ Turntable related commands include:
   MOVETT( vpin, steps, activity )   Move a turntable the number of steps relative to home, and perform the activity (refer EX-Turntable documentation)
   --------------------------------- --------------------------------------------------------------------------------------------------------------------
 
-See the `/exrail/exrail-command-reference`{.interpreted-text role="doc"}
+See the `/exrail/exrail-command-reference`
 for additional commands and additional information on these commands.
 
 \|hr-dashed\|
@@ -361,8 +360,7 @@ of the sequence.
 However there are a number of ways that the processing of a sequence can
 be changed:
 
-- `Conditionals <getting-started-conditionals>`{.interpreted-text
-  role="ref"}
+- `Conditionals <getting-started-conditionals>`
 
 - 
 
@@ -378,7 +376,7 @@ be changed:
 The timing of the execution of the commands can be altered as well with
 \'Delay\' and \'Wait\' type commands.
 
-::: {#getting-started-conditionals}
+::: 
 \|hr-dashed\|
 :::
 
@@ -389,7 +387,7 @@ only executed if the specified conditions are met.
 
 Conditionals have the structure:
 
-``` {.cpp .code-block-float-right}
+``` 
 // Example 
 // - Toggle a turnout/point based on a push button
 SEQUENCE(85)
@@ -460,7 +458,7 @@ Other Conditionals:
   IFTIMEOUT             Tests if "timed out" flag has been set by an ATTIMEOUT sensor reading attempt
   --------------------- -------------------------------------------------------------------------------------------------------
 
-see the `/exrail/exrail-command-reference`{.interpreted-text role="doc"}
+see the `/exrail/exrail-command-reference`
 for additional information.
 
 \|hr-dashed\|
@@ -500,10 +498,10 @@ with \'Delay\' or \'Wait\' type commands. i.e. they don\'t happen
 immediately on completion of the previous command.
 
 There are a number of delay type commands that you can explore in the
-`/exrail/exrail-command-reference`{.interpreted-text role="doc"}. We
+`/exrail/exrail-command-reference`. We
 will look at just a few here.
 
-``` {.cpp .code-block-float-right}
+``` 
 // Example
 AUTOMATION(5,"Back and Forward - Random")
    FWD(50)     // move forward at DCC speed 50
@@ -534,7 +532,7 @@ AUTOMATION(5,"Back and Forward - Random")
 #### Command Station Commands
 
 There are a substantial number of commands that you can explore in the
-`/exrail/exrail-command-reference`{.interpreted-text role="doc"}. We
+`/exrail/exrail-command-reference`. We
 will look at just a few here.
 
 ``` cpp
@@ -554,7 +552,7 @@ SEQUENCE(99)
   READ_LOCO   Read loco ID from Prog track
   ----------- -----------------------------------------------------------------------------------
 
-See the `/exrail/exrail-command-reference`{.interpreted-text role="doc"}
+See the `/exrail/exrail-command-reference`
 for additional Command Station Commands and additional information on
 the commands shown here.
 
@@ -584,7 +582,7 @@ a PIN_TURNOUT sends a \"throw\" or \"close\" (5V or 0V signal) to a pin
 on the Arduino, and a SERVO_TURNOUT sends an \|I2C\| serial command to a
 servo board connected to your servos.
 
-See the `/exrail/exrail-command-reference`{.interpreted-text role="doc"}
+See the `/exrail/exrail-command-reference`
 for TURNOUT, PIN_TURNOUT and SERVO_TURNOUT definitions.
 
 ### Referencing Signals
@@ -604,7 +602,7 @@ RED/GREEN only signal may be created with a zero amber pin.
 
 ### Referencing Locos
 
-``` {.cpp .code-block-float-right}
+``` 
 //Example
 SEQUENCE(98)  
   SETLOCO(9999)   // select loco 9999
@@ -688,5 +686,5 @@ are reversed. (easily done with diesels!)
 
 ## Next Steps - Examples
 
-See the `examples`{.interpreted-text role="doc"} page or click the
+See the `examples` page or click the
 \'Next\' button to see some concrete examples of automation sequences.

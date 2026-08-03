@@ -4,6 +4,6 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-::: {.toctree maxdepth="1"}
+::: 
 suppliers-full-cs suppliers-cases
 :::

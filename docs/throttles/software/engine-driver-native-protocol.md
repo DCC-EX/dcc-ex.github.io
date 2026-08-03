@@ -6,14 +6,14 @@ orphan
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
 
-![Android Logo](/_static/images/throttles/engine_driver_logo.png){.align-left}
+![Android Logo](/_static/images/throttles/engine_driver_logo.png)
 
 By default, **Engine Driver** (ED) uses the \|WiThrottle Protocol\| to
 talk to all types of Command Station.
@@ -90,11 +90,11 @@ To read and write DCC addresses on the Programming Track select
 \"Programming Track (Service Mode)\" in the Action pulldown.
 
 To read the address, put your loco on the programming track and click
-the `Read`{.interpreted-text role="guilabel"} button on the same line as
+the `Read` button on the same line as
 the \'DCC Address\' label.
 
 To write a new address, enter the address in the \'DCC Address\' field
-and click `Write`{.interpreted-text role="guilabel"}
+and click `Write`
 
 ### Read and write CVs of decoders on the Programming Track
 
@@ -102,12 +102,11 @@ To read and write CVs of decoders on the Programming Track select
 \"Programming Track (Service Mode)\" in the Action pulldown.
 
 To read a CV, put your loco on the programming track, enter the CV
-number into the \'CV\' field, and click the `Read`{.interpreted-text
-role="guilabel"} button on the same line as the \'CV\' label.
+number into the \'CV\' field, and click the `Read` button on the same line as the \'CV\' label.
 
 To write a new CV value, enter the CV number into the \'CV\' field,
 enter the new value in the \'Value\' field and click
-`Write`{.interpreted-text role="guilabel"}
+`Write`
 
 Optionally, you can use the \'NRMA CVs\' pulldown to select a common CV
 from a list. This just enters the appropriate CV number in the \'CV\'
@@ -123,8 +122,7 @@ can only write CVs of a specified loco (DCC Address).
 
 To write a new CV value, enter the DCC address of the loco you want to
 change, enter the CV number into the \'CV\' field, enter the new value
-in the \'Value\' field and click `Write`{.interpreted-text
-role="guilabel"}
+in the \'Value\' field and click `Write`
 
 Optionally, you can use the \'NRMA CVs\' pulldown to select a common CV
 from a list. This just enters the appropriate CV number in the \'CV\'
@@ -137,15 +135,14 @@ Action pulldown. (it is available for all)
 
 To issue a command to the \|EX-CS\| end the command in the \'DCC-EX
 Cmd\' field, without the opening and closing angle brackets (i.e. Don\'t
-enter \'\<\' or \'\>\'), then click `Send`{.interpreted-text
-role="guilabel"}
+enter \'\<\' or \'\>\'), then click `Send`
 
 Optionally, you can use the \'Common CMDs\' pulldown to select a command
 from a list. This just enters the appropriate command in the \'DC-EX
 Cmd\' field.
 
-Optional, you can use the `Prior`{.interpreted-text role="guilabel"} and
-`Next`{.interpreted-text role="guilabel"} buttons to reissue previously
+Optional, you can use the `Prior` and
+`Next` buttons to reissue previously
 issued commands.
 
 ### TrackManager control
@@ -173,7 +170,7 @@ one of the states above. (Except `EXT` and `BOOST` which can only be
 changed in the Command Station config. )
 
 To change the simply select the state in the pulldown in the desired
-track (or tracks) and click `Set`{.interpreted-text role="guilabel"}
+track (or tracks) and click `Set`
 
 Note that if you select `DC` or `DC reversed polarity (DC_INV / DCX)`
 you *must* also enter the Address that the track should respond to.

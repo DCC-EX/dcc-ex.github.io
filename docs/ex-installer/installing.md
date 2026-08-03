@@ -2,7 +2,7 @@ orphan
 
 : 
 
-::: {.meta keywords="EX-CommandStation Command Station EX-Installer"}
+::: 
 :::
 
 \|EX-I-LOGO\|
@@ -14,9 +14,9 @@ orphan
 
 \|force-break\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="4" local=""}
+::: 
 On this page
 :::
 ::::
@@ -24,8 +24,7 @@ On this page
 ::: rst-class
 dcclink
 
-`Download EX-Installer <download/ex-commandstation:ex-Installer>`{.interpreted-text
-role="ref"}
+`Download EX-Installer <download/ex-commandstation:ex-Installer>`
 :::
 
 Once you have assembled your do-it-yourself \|EX-CS\| hardware you need
@@ -42,8 +41,7 @@ Note"
 
 If you already have, or wish to create, your own custom config files, we
 recommend that you
-`read this page first <managing-config-files>`{.interpreted-text
-role="doc"}.
+`read this page first <managing-config-files>`.
 ::::
 
 :!!! warning "::: title
@@ -107,7 +105,7 @@ To run \|EX-I\| you need:
 
 ## Getting Ready
 
-:::: {.warning .warning-float-right}
+:::: 
 ::: title
 Warning
 :::
@@ -128,7 +126,7 @@ To begin with\...
 
 ## Download and Run EX-Installer
 
-:::: {.warning .warning-float-right}
+:::: 
 ::: title
 Warning
 :::
@@ -144,8 +142,7 @@ this is usually the issue.
 ::: rst-class
 dcclink
 
-`Download EX-Installer <download/ex-commandstation:ex-Installer>`{.interpreted-text
-role="ref"}
+`Download EX-Installer <download/ex-commandstation:ex-Installer>`
 :::
 
 \|HR-DASHED\|
@@ -173,7 +170,7 @@ role="ref"}
 > - **Run the installer with** the following command: \|BR\|
 >   `./EX-Installer-macOS` \|BR\| \|BR\|
 
-:::: {.note .note-float-right}
+:::: 
 ::: title
 Note
 :::
@@ -192,15 +189,14 @@ Raspberry Pi is 32bit so not supported by the EX-Installer.
 
 \|HR-DASHED\|
 
-:::: {.important .important-float-right}
+:::: 
 ::: title
 Important
 :::
 
 EX-Installer creates a folder (\<home\>\\ex-installer) to hold the
 information it needs.
-`Do not directly modify anything in this folder`{.interpreted-text
-role="dcc-ex-red-bold"} as it a) will be overwritten or deleted by the
+`Do not directly modify anything in this folder` as it a) will be overwritten or deleted by the
 installer at any time, and b) will cause the installer to fail to load.
 ::::
 
@@ -219,8 +215,7 @@ alt="EX-Installer - Welcome" />
 This screen provides some basic information about the process of loading
 the Software.
 
-To proceed, click the `Manage Arduino CLI`{.interpreted-text
-role="guilabel"} button.
+To proceed, click the `Manage Arduino CLI` button.
 
 \|force-break\|
 
@@ -244,12 +239,12 @@ installation and updating of the Arduino CLI for you at the click of a
 button.
 
 If you have not installed the CLI previously you will see a
-`Install Arduino CLI`{.interpreted-text role="guilabel"} button.
+`Install Arduino CLI` button.
 
 If have previously installed the CLI you will see a
-`Refresh Arduino CLI`{.interpreted-text role="guilabel"} button.
+`Refresh Arduino CLI` button.
 
-:::: {.hint .hint-float-right-narrow}
+:::: 
 ::: title
 Hint
 :::
@@ -272,20 +267,20 @@ the installation process.
 ::::
 
 You *must* have Arduino CLI installed to proceed, simply click the
-`Install Arduino CLI`{.interpreted-text role="guilabel"} button if it is
+`Install Arduino CLI` button if it is
 showing.
 
 If you already have the Arduino CLI installed, it is recommended that
 you refresh it periodically (e.g. weekly) to ensure support for the
 various device details are kept up to date. To refresh the CLI, simply
-click the `Refresh Arduino CLI`{.interpreted-text role="guilabel"}
+click the `Refresh Arduino CLI`
 button.
 
 Installing the CLI can take some time. Maybe grab a cup of tea or a
 coffee!
 
 Once the CLI is installed, To proceed, click the
-`Select your device`{.interpreted-text role="guilabel"} button.
+`Select your device` button.
 
 \|force-break\|
 
@@ -316,10 +311,10 @@ recognised by the computer.
 #### No Devices Found
 
 If you have not connected the device, connect it now then click the
-`Scan for Devices`{.interpreted-text role="guilabel"} button again.
+`Scan for Devices` button again.
 
 If the device *is* connected but not found refer to the
-`/support/ex-cs-diagnose`{.interpreted-text role="doc"} page for
+`/support/ex-cs-diagnose` page for
 assistance.
 
 #### Multiple Devices Found
@@ -340,7 +335,7 @@ alt="EX-Installer - Select Device - Selection" />
 <figcaption>EX-Installer - Device - Selection</figcaption>
 </figure>
 
-:::: {.hint .hint-float-right-narrow}
+:::: 
 ::: title
 Hint
 :::
@@ -355,7 +350,7 @@ especially common with cheap clone devices.)
 Check and select the appropriate board from the drop down list.
 
 Once you have a port and device type selected, to proceed, click the
-`Select product to install`{.interpreted-text role="guilabel"} button.
+`Select product to install` button.
 
 \|force-break\|
 
@@ -428,21 +423,20 @@ files</figcaption>
 If you select `Use my existing configuration files` you will be prompted
 to find the folder where the configuration files are located:
 
-- Click the `Browse`{.interpreted-text role="guilabel"} button and
+- Click the `Browse` button and
   navigate through your computer\'s folders and files to select the
   location containing your existing configuration files
 - Select one of the files in the folder and click the
-  `Open`{.interpreted-text role="guilabel"} button to select it
+  `Open` button to select it
 - The chosen folder will be displayed
 
 \|FORCE-BREAK\|
 
 If you have selected `Configure options on the next screen`, to proceed,
-click the `Configure EX-CommandStation`{.interpreted-text
-role="guilabel"} button.
+click the `Configure EX-CommandStation` button.
 
 If you have selected `Use my existing configuration files`, to proceed,
-click the `Advanced Config`{.interpreted-text role="guilabel"} button.
+click the `Advanced Config` button.
 In this case you will be presented with the \'Advanced Config\' screen.
 
 \|force-break\|
@@ -477,7 +471,7 @@ of the \|EX-CS\|:
 
 ##### Motor Driver
 
-:::: {.hint .hint-float-right-narrow}
+:::: 
 ::: title
 Hint
 :::
@@ -523,14 +517,14 @@ If you have added a an \|EX-MS\| to the \|EX-CSB1\|\...
 
 \|EX-I\| does not have a simple way to configure the additional outputs
 so you will need to use the
-`TrackManager </trackmanager/index>`{.interpreted-text role="doc"}
+[TrackManager ](/trackmanager/index.md)
 feature to configure the outputs as needed in
-[myAutomation.h]{.title-ref} in the [Advanced Configuration]{.title-ref}
+[myAutomation.h] in the [Advanced Configuration]
 page of \|EX-I\|.
 
 For example, to always set outputs C and D to be the second and third
 DCC MAIN outputs, you would create a AUTOSTART sequence that sets both
-outputs C and D to DCC MAIN mode in [myAutomation.h]{.title-ref}.
+outputs C and D to DCC MAIN mode in [myAutomation.h].
 
 ``` 
 AUTOSTART 
@@ -547,7 +541,7 @@ DONE
 
 ##### Optional Display
 
-:::: {.hint .tip-float-right-narrow}
+:::: 
 ::: title
 Hint
 :::
@@ -557,7 +551,7 @@ The \|EX-CSB1-SHORT\| will generally be supplied with a **OLED 128 X
 ::::
 
 ![EX-Installer - Configure Display
-Driver](/_static/images/ex-installer/ex_cs_configure_screen.png){alt="EX-Installer - EX-CommandStation - Configure Display Driver"}
+Driver](/_static/images/ex-installer/ex_cs_configure_screen.png)
 
 If you have installed and optional oLED or LED display, enable the
 `I have a display` option, which will present you with a drop down list
@@ -619,7 +613,7 @@ for more information.
 > <figcaption>EX-Installer - Configure WiFi - Access Point</figcaption>
 > </figure>
 >
-> :::: {.note .note-float-right}
+> :::: 
 > ::: title
 > Note
 > :::
@@ -629,8 +623,7 @@ for more information.
 > apps that can help you determine which channels are being used by
 > other networks. For Android, *\'Wifi Analyzer\'* is one that works.
 > For iOS *\'Netspot\'* is suitable
-> `(you don't need to purchase WiPry device they mention)`{.interpreted-text
-> role="dcc-ex-text-size-60pct"}.
+> `(you don't need to purchase WiPry device they mention)`.
 > ::::
 >
 > If `Use my EX-CommandStation as an Access Point` is selected, two
@@ -673,8 +666,7 @@ for more information.
 > :::
 >
 > See the
-> `/ex-commandstation/advanced-setup/supported-wifi/wifi-config`{.interpreted-text
-> role="doc"} page for more detailed information on the the WiFi
+> `/ex-commandstation/advanced-setup/supported-wifi/wifi-config` page for more detailed information on the the WiFi
 > options.
 > ::::
 
@@ -691,7 +683,7 @@ the same time.
 
 ##### Start with power on
 "
-:::: {.hint .tip-float-right-narrow}
+:::: 
 ::: title
 Hint
 :::
@@ -790,11 +782,11 @@ myAutomation.h file will not be generated if it is not required, which
 saves memory on your \|EX-CS\| device.
 
 Unless you have selected *Advanced Config*, to proceed, click the
-`Compile and Load`{.interpreted-text role="guilabel"} button. See *iv*
+`Compile and Load` button. See *iv*
 below.
 
 If you have selected *Advanced Config*, to proceed, click the
-`Advanced Config`{.interpreted-text role="guilabel"} button. See *iii*
+`Advanced Config` button. See *iii*
 below.
 
 \|force-break\|
@@ -829,8 +821,7 @@ Note that if you did not enable any options requiring myAutomation.h,
 and did not enable `Create myAutomation.h`, you will only be able to
 edit config.h on this screen.
 
-To proceed, click the `Compile and Load`{.interpreted-text
-role="guilabel"} button. See *iv* below.
+To proceed, click the `Compile and Load` button. See *iv* below.
 
 \|force-break\|
 
@@ -842,16 +833,15 @@ alt="EX-Installer - Load" />
 <figcaption>EX-Installer - Compile and Load Screen</figcaption>
 </figure>
 
-To proceed, click the `Load`{.interpreted-text role="guilabel"} button.
+To proceed, click the `Load` button.
 
 Results are shown in the lower half of the screen.
 
 If there are **no errors**, you can proceed to
-`testing your setup </ex-installer/testing>`{.interpreted-text
-role="doc"}.
+`testing your setup </ex-installer/testing>`.
 
 If there **are errors** or you are having difficulties check the
-`/support/ex-cs-troubleshooting`{.interpreted-text role="doc"} page for
+`/support/ex-cs-troubleshooting` page for
 assistance.
 
 \|force-break\|
@@ -862,7 +852,7 @@ assistance.
 
 After loading the software onto your device, you can optionally copy the
 generated configuration files to a folder of your choice as a backup by
-clicking the `Backup config files`{.interpreted-text role="guilabel"}
+clicking the `Backup config files`
 button.
 
 <figure class="align-center">
@@ -901,14 +891,13 @@ When clicking this button, the \|Device Monitor\| window will open,
 allowing you to interact with your device by sending commands and
 viewing the serial console output.
 
-![Device Monitor](/_static/images/ex-installer/device-monitor.png){.align-center}
+![Device Monitor](/_static/images/ex-installer/device-monitor.png)
 
 | 
 
 For further details on using \|Device Monitor\|, continue on to the next
 page with the \'Next\' button, or go straight to
-`ex-installer/testing:using the ex-installer device monitor`{.interpreted-text
-role="ref"}.
+`ex-installer/testing:using the ex-installer device monitor`.
 
 \|force-break\|
 
@@ -916,7 +905,7 @@ role="ref"}.
 
 ## Next Steps - Test your setup
 
-:::: {.important .important-float-right}
+:::: 
 ::: title
 Important
 :::
@@ -926,7 +915,7 @@ main track if you expect your loco to move or respond to light or sound
 commands.
 ::::
 
-See the `/ex-installer/testing`{.interpreted-text role="doc"} page or
+See the `/ex-installer/testing` page or
 click the \'Next\' button to learn how to test and use your \|EX-CS\|.
 
 \|force-break\|

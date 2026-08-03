@@ -7,29 +7,25 @@
 This page contains lists of compatible Throttles (Controllers) that
 currently support the \|EX-CS\|. They are listed two ways:
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
 
-- `By Client Technology <throttles/index:throttles - by client technology>`{.interpreted-text
-  role="ref"} (e.g. Android, iOS, Web Browser, PC)
-- `By Communication Technology <throttles/index:throttles - by communication technology>`{.interpreted-text
-  role="ref"} (e.g. \|DCC-EX Native Commands\|, \|WITHROTTLE PROTOCOL\|)
+- `By Client Technology <throttles/index:throttles - by client technology>` (e.g. Android, iOS, Web Browser, PC)
+- `By Communication Technology <throttles/index:throttles - by communication technology>` (e.g. \|DCC-EX Native Commands\|, \|WITHROTTLE PROTOCOL\|)
 
 For an more introductory overview of throttles and how to choose one,
 please read the
-`Getting Started - Throttles Page </ex-commandstation/controllers-diy>`{.interpreted-text
-role="doc"}
+`Getting Started - Throttles Page </ex-commandstation/controllers-diy>`
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
 For additional options for throttles and how to choose one, please read
 the
-`Advanced Options - Throttles Page </ex-commandstation/advanced-setup/controllers>`{.interpreted-text
-role="doc"}
+`Advanced Options - Throttles Page </ex-commandstation/advanced-setup/controllers>`
 
 ------------------------------------------------------------------------
 
@@ -37,95 +33,62 @@ role="doc"}
 
 ### Web Browser (Windows, OSX, Linux)
 
-- `EX-Web-Throttle (Web Browser) </ex-webthrottle/index>`{.interpreted-text
-  role="doc"} *recommended*
+- `EX-Web-Throttle (Web Browser) </ex-webthrottle/index>` *recommended*
 
 ### Android (Phones and Tablets)
 
-- `Engine Driver (Android)<software/engine-driver>`{.interpreted-text
-  role="doc"} *recommended*
-- `Cab Engineer: DCC Throttle (Andriod) <software/cab-engineer>`{.interpreted-text
-  role="doc"}
-- `DCC++ Throttle (Android) <software/dccpp-throttle>`{.interpreted-text
-  role="doc"}
-- `DCCpp CAB (android) <software/dccpp-cab>`{.interpreted-text
-  role="doc"}
-- `DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>`{.interpreted-text
-  role="doc"} *- Requires JMRI*
-- `RtDtive DCC++ (Android) <software/rtdrive-dccpp>`{.interpreted-text
-  role="doc"}
-- `DCC-EX CAB (iOS and Android) <software/dccex-cab>`{.interpreted-text
-  role="doc"}
-- `WiThrottle Cab (iOS and Android) <software/withrottle-cab>`{.interpreted-text
-  role="doc"}
+- `Engine Driver (Android)<software/engine-driver>` *recommended*
+- `Cab Engineer: DCC Throttle (Andriod) <software/cab-engineer>`
+- `DCC++ Throttle (Android) <software/dccpp-throttle>`
+- `DCCpp CAB (android) <software/dccpp-cab>`
+- `DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
+- `RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
+- `DCC-EX CAB (iOS and Android) <software/dccex-cab>`
+- `WiThrottle Cab (iOS and Android) <software/withrottle-cab>`
 
 ### Apple iOS (Phones and Tablets)
 
-- `ThrottleCard (iOS) <software/throttlecard>`{.interpreted-text
-  role="doc"}
-- `DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>`{.interpreted-text
-  role="doc"} *- Requires JMRI*
-- `Locontrol (iOS) <software/locontrol>`{.interpreted-text role="doc"}
-- `SRCP Client (iOS) <software/srcpclient>`{.interpreted-text
-  role="doc"}
-- `Train Driver (iOS) <software/train-driver>`{.interpreted-text
-  role="doc"}
-- `TrainNavigator (iOS) <software/trainnavigator>`{.interpreted-text
-  role="doc"}
-- `DCC-EX CAB (iOS and Android) <software/dccex-cab>`{.interpreted-text
-  role="doc"}
-- `WiThrottle Cab (iOS and Android) <software/withrottle-cab>`{.interpreted-text
-  role="doc"}
-- `WiThrottle (iOS) <software/withrottle>`{.interpreted-text role="doc"}
-- `DCC Commander (iOS) <software/dcc-commander>`{.interpreted-text
-  role="doc"}
-- `Signal Cab (iOS) <software/signal-cab>`{.interpreted-text role="doc"}
+- `ThrottleCard (iOS) <software/throttlecard>`
+- `DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>[ *- Requires JMRI*
+- `Locontrol (iOS) ](software/locontrol.md)
+- `SRCP Client (iOS) <software/srcpclient>`
+- `Train Driver (iOS) <software/train-driver>`
+- `TrainNavigator (iOS) <software/trainnavigator>`
+- `DCC-EX CAB (iOS and Android) <software/dccex-cab>`
+- `WiThrottle Cab (iOS and Android) <software/withrottle-cab>[
+- `WiThrottle (iOS) ](software/withrottle.md)
+- `DCC Commander (iOS) <software/dcc-commander>[
+- `Signal Cab (iOS) ](software/signal-cab.md)
 
 ### Dedicated Hardware
 
-- `Elgato Stream Deck (Physical) <hardware/streamdeck>`{.interpreted-text
-  role="doc"}
-- `EX-T3-WiFi (T3 = Tactile Touch Throttle) (physical) </throttles/hardware/ex-t3-wifi>`{.interpreted-text
-  role="doc"}
+- `Elgato Stream Deck (Physical) <hardware/streamdeck>`
+- `EX-T3-WiFi (T3 = Tactile Touch Throttle) (physical) </throttles/hardware/ex-t3-wifi>`
 - [HandCab (Physical)](https://github.com/1fatgmc/HandCab/tree/main)
 - [ESU Mobile Control Pro
   (Physical)](https://www.esu.eu/en/products/digital-control/mobile-control-pro/)
-- `LoDi-Con WiFi Throttle </throttles/hardware/lodi-con-wifi-throttle>`{.interpreted-text
-  role="doc"}
-- `miniThrottle (Physical) <hardware/minithrottle>`{.interpreted-text
-  role="doc"}
-- `TCS UWT-50 (Physical) <hardware/uwt50>`{.interpreted-text role="doc"}
-- `WiTcontroller (Physical) <hardware/witcontroller>`{.interpreted-text
-  role="doc"}
-- `DCC-EX Simple Throttler (Physical) <hardware/simple-throttle>`{.interpreted-text
-  role="doc"}
-- `wiFred (Physical DIY) <hardware/wifred>`{.interpreted-text
-  role="doc"}
-- `DccExController (Physical) <hardware/dccexcontroller>`{.interpreted-text
-  role="doc"} - Support Discontinued \|BR\| \|BR\|
+- `LoDi-Con WiFi Throttle </throttles/hardware/lodi-con-wifi-throttle>`
+- `miniThrottle (Physical) <hardware/minithrottle>[
+- `TCS UWT-50 (Physical) ](hardware/uwt50.md)
+- `WiTcontroller (Physical) <hardware/witcontroller>`
+- `DCC-EX Simple Throttler (Physical) <hardware/simple-throttle>`
+- `wiFred (Physical DIY) <hardware/wifred>`
+- `DccExController (Physical) <hardware/dccexcontroller>` - Support Discontinued \|BR\| \|BR\|
 - See also
-  `DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`{.interpreted-text
-  role="doc"}
+  `DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
 ### Personal Computers
 
-- `EX-WebThrottle (Windows, MacOS, Linux) </ex-webthrottle/index>`{.interpreted-text
-  role="doc"} *recommended*
-- `DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>`{.interpreted-text
-  role="doc"} *- Requires JMRI*
-- `JMRI (Windows, MacOS, Linux) <software/jmri>`{.interpreted-text
-  role="doc"}
-- `Railroad Automation <software/railroad-automation>`{.interpreted-text
-  role="doc"} *- Requires IoTT Red Hat*
-- `Train Throttle (Windows, iOS) <software/train-throttle>`{.interpreted-text
-  role="doc"}
-- `ThrottleCard (MacOS, iOS) <software/throttlecard>`{.interpreted-text
-  role="doc"} *- Requires WiThrottle server*
+- `EX-WebThrottle (Windows, MacOS, Linux) </ex-webthrottle/index>` *recommended*
+- `DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>` *- Requires JMRI*
+- `JMRI (Windows, MacOS, Linux) <software/jmri>`
+- `Railroad Automation <software/railroad-automation>` *- Requires IoTT Red Hat*
+- `Train Throttle (Windows, iOS) <software/train-throttle>`
+- `ThrottleCard (MacOS, iOS) <software/throttlecard>` *- Requires WiThrottle server*
 
 Note: The Android throttle apps listed above can be made to made to run
 on Windows PCs. See
-`Running Android apps on Microsoft Windows <software/android-apps-on-windows>`{.interpreted-text
-role="doc"}.
+`Running Android apps on Microsoft Windows <software/android-apps-on-windows>`.
 
 ------------------------------------------------------------------------
 
@@ -137,114 +100,80 @@ is substantially better that the others.
 
 ### General
 
-- `WiThrottle Server, Web Server, DCC-EX Native Commands Explained <protocols>`{.interpreted-text
-  role="doc"}
-- `connect_wifi_throttle_via_usb`{.interpreted-text role="doc"}
+- `WiThrottle Server, Web Server, DCC-EX Native Commands Explained <protocols>`
+- `connect_wifi_throttle_via_usb`
 
 ### DCC-EX (DCC-EX Native Commands)
 
-- `EX-WebThrottle (Web Browser) </ex-webthrottle/index>`{.interpreted-text
-  role="doc"} *recommended*
-- `Engine Driver (Android) <software/engine-driver>`{.interpreted-text
-  role="doc"} *recommended*
-- `ThrottleCard (iOS) <software/throttlecard>`{.interpreted-text
-  role="doc"}
-- `DCCpp CAB (Android) <software/dccpp-cab>`{.interpreted-text
-  role="doc"}
-- `DCC-EX CAB (iOS and Android) <software/dccex-cab>`{.interpreted-text
-  role="doc"}
-- `DCC++ Throttle (Android) <software/dccpp-throttle>`{.interpreted-text
-  role="doc"}
-- `RtDtive DCC++ (Android) <software/rtdrive-dccpp>`{.interpreted-text
-  role="doc"}
-- `SRCP Client (iOS) <software/srcpclient>`{.interpreted-text
-  role="doc"}
-- `TrainNavigator (iOS) <software/trainnavigator>`{.interpreted-text
-  role="doc"}
-- `JMRI (Win, macOS, Linux) <software/jmri>`{.interpreted-text
-  role="doc"}
-- `EX-T3-WiFi (T3 = Tactile Touch Throttle) (Physical) </throttles/hardware/ex-t3-wifi>`{.interpreted-text
-  role="doc"}
-- `miniThrottle (Physical DIY) <hardware/minithrottle>`{.interpreted-text
-  role="doc"}
-- `DCC Commander (iOS) <software/dcc-commander>`{.interpreted-text
-  role="doc"}
-- `Signal Cab (iOS) <software/signal-cab>`{.interpreted-text role="doc"}
-- `DCC-EX Simple Throttler (Physical) <hardware/simple-throttle>`{.interpreted-text
-  role="doc"}
-- `DccExController (Physical DIY) <hardware/dccexcontroller>`{.interpreted-text
-  role="doc"} - Support Discontinued \|BR\| \|BR\|
+- `EX-WebThrottle (Web Browser) </ex-webthrottle/index>` *recommended*
+- `Engine Driver (Android) <software/engine-driver>` *recommended*
+- `ThrottleCard (iOS) <software/throttlecard>`
+- `DCCpp CAB (Android) <software/dccpp-cab>`
+- `DCC-EX CAB (iOS and Android) <software/dccex-cab>`
+- `DCC++ Throttle (Android) <software/dccpp-throttle>`
+- `RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
+- `SRCP Client (iOS) <software/srcpclient>`
+- `TrainNavigator (iOS) <software/trainnavigator>`
+- `JMRI (Win, macOS, Linux) <software/jmri>`
+- `EX-T3-WiFi (T3 = Tactile Touch Throttle) (Physical) </throttles/hardware/ex-t3-wifi>`
+- `miniThrottle (Physical DIY) <hardware/minithrottle>`
+- `DCC Commander (iOS) <software/dcc-commander>[
+- `Signal Cab (iOS) ](software/signal-cab.md)
+- `DCC-EX Simple Throttler (Physical) <hardware/simple-throttle>`
+- `DccExController (Physical DIY) <hardware/dccexcontroller>` - Support Discontinued \|BR\| \|BR\|
 - See also
-  `DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`{.interpreted-text
-  role="doc"}
+  `DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
 ### WiThrottle Protocol Based Throttles
 
-- `Engine Driver (Android)<software/engine-driver>`{.interpreted-text
-  role="doc"} *recommended*
-- `ThrottleCard (iOS) <software/throttlecard>`{.interpreted-text
-  role="doc"}
-- `Cab Engineer: DCC Throttle (Android) <software/cab-engineer>`{.interpreted-text
-  role="doc"}
-- `Locontrol (iOS) <software/locontrol>`{.interpreted-text role="doc"}
-- `WiThrottle Cab (iOS and Android) <software/withrottle-cab>`{.interpreted-text
-  role="doc"}
-- `WiThrottle (iOS)<software/withrottle>`{.interpreted-text role="doc"}
-- `SRCP Client (iOS) <software/srcpclient>`{.interpreted-text
-  role="doc"}
-- `Train Driver (iOS) <software/train-driver>`{.interpreted-text
-  role="doc"}
-- `Signal Cab (iOS) <software/signal-cab>`{.interpreted-text role="doc"}
+- `Engine Driver (Android)<software/engine-driver>` *recommended*
+- `ThrottleCard (iOS) <software/throttlecard>`
+- `Cab Engineer: DCC Throttle (Android) <software/cab-engineer>[
+- `Locontrol (iOS) ](software/locontrol.md)
+- `WiThrottle Cab (iOS and Android) <software/withrottle-cab>[
+- `WiThrottle (iOS)](software/withrottle.md)
+- `SRCP Client (iOS) <software/srcpclient>`
+- `Train Driver (iOS) <software/train-driver>[
+- `Signal Cab (iOS) ](software/signal-cab.md)
   \|BR\| \|BR\|
-- `Elgato Stream Deck (Physical) <hardware/streamdeck>`{.interpreted-text
-  role="doc"}
+- `Elgato Stream Deck (Physical) <hardware/streamdeck>`
 - [HandCab (Physical DIY)](https://github.com/1fatgmc/HandCab/tree/main)
 - [ESU Mobile Control Pro
   (Physical)](https://www.esu.eu/en/products/digital-control/mobile-control-pro/)
-- `LoDi-Con WiFi Throttle (Physical) </throttles/hardware/lodi-con-wifi-throttle>`{.interpreted-text
-  role="doc"}
-- `miniThrottle (Physical DIY) <hardware/minithrottle>`{.interpreted-text
-  role="doc"}
-- `TCS UWT-50 (Physical DIY) <hardware/uwt50>`{.interpreted-text
-  role="doc"}
-- `WiTcontroller (Physical DIY) <hardware/witcontroller>`{.interpreted-text
-  role="doc"}
-- `wiFred (Physical DIY) <hardware/wifred>`{.interpreted-text
-  role="doc"}
+- `LoDi-Con WiFi Throttle (Physical) </throttles/hardware/lodi-con-wifi-throttle>`
+- `miniThrottle (Physical DIY) <hardware/minithrottle>`
+- `TCS UWT-50 (Physical DIY) <hardware/uwt50>`
+- `WiTcontroller (Physical DIY) <hardware/witcontroller>`
+- `wiFred (Physical DIY) <hardware/wifred>`
 
 ### USB Based Throttles
 
-- `EX-WebThrottle (Windows, MacOS, Linux) </ex-webthrottle/index>`{.interpreted-text
-  role="doc"}
-- `myBluePillThrottle (Physical DIY) <hardware/mybluepillthrottle>`{.interpreted-text
-  role="doc"} \|BR\| \|BR\|
-- Also see: `connect_wifi_throttle_via_usb`{.interpreted-text
-  role="doc"}
+- `EX-WebThrottle (Windows, MacOS, Linux) </ex-webthrottle/index>`
+- `myBluePillThrottle (Physical DIY) <hardware/mybluepillthrottle>` \|BR\| \|BR\|
+- Also see: `connect_wifi_throttle_via_usb`
 
 ### JMRI Web Server Based Throttles
 
-- `DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>`{.interpreted-text
-  role="doc"}
+- `DigiTrainsPro (Android, iOS, Windows) <software/digitrainspro>`
 
 ------------------------------------------------------------------------
 
 ## Table - Throttles by Technology
 
-::: {.flat-table .command-table widths="auto" header-rows="3"}
-- - `2`{.interpreted-text role="rspan"} Name \|\_xa\| \|\_xa\| \|\_xa\|
+::: 
+- - `2` Name \|\_xa\| \|\_xa\| \|\_xa\|
     \|\_xa\| \|\_xa\| \|\_xa\| \|\_xa\| \|\_xa\| \|\_xa\| \|\_xa\|
     \|\_xa\|
-  - `2`{.interpreted-text role="rspan"} Licence
-  - `2`{.interpreted-text role="rspan"} Inter- \|BRxa\| face
-  - `1`{.interpreted-text role="rspan"} `1`{.interpreted-text
-    role="cspan"} Technology
-  - `2`{.interpreted-text role="rspan"} Also \|BRxa\| Requ- \|BRxa\|
+  - `2` Licence
+  - `2` Inter- \|BRxa\| face
+  - `1` `1` Technology
+  - `2` Also \|BRxa\| Requ- \|BRxa\|
     ires[^1]
-  - `5`{.interpreted-text role="cspan"} Format
-  - `2`{.interpreted-text role="rspan"} CV \|BRxa\| Pro- \|BRxa\| gram-
+  - `5` Format
+  - `2` CV \|BRxa\| Pro- \|BRxa\| gram-
     \|BRxa\| ming
-- - `2`{.interpreted-text role="cspan"} Mobile
-  - `2`{.interpreted-text role="cspan"} PC
+- - `2` Mobile
+  - `2` PC
 - - P \|BRxa\| r \|BRxa\| o \|BRxa\| t \|BRxa\| o \|BRxa\| c \|BRxa\| o
     \|BRxa\| l \|BRxa\|[^2]
   - UI
@@ -256,8 +185,7 @@ is substantially better that the others.
   - W \|BRxa\| i \|BRxa\| n
   - M \|BRxa\| a \|BRxa\| c \|BRxa\| O \|BRxa\| S
   - L \|BRxa\| i \|BRxa\| n \|BRxa\| u \|BRxa\| x
-- - `EX-WebThrottle </ex-webthrottle/index>`{.interpreted-text
-    role="doc"}
+- - `EX-WebThrottle </ex-webthrottle/index>[
   - Free
   - USB
   - Native / WiT
@@ -270,7 +198,7 @@ is substantially better that the others.
   - X
   - X
   - X
-- - `JMRI <software/jmri>`{.interpreted-text role="doc"}
+- - `JMRI ](software/jmri.md)
   - Free
   - USB / WiFi[^4]
   - Native
@@ -283,8 +211,7 @@ is substantially better that the others.
   - X
   - X
   - X
-- - `Railroad Automation <software/railroad-automation>`{.interpreted-text
-    role="doc"}
+- - `Railroad Automation <software/railroad-automation>`
   - Free
   - WiFi / LocoNet
   - LocoNet
@@ -297,8 +224,7 @@ is substantially better that the others.
   - X
   - X
   - 
-- - `Engine Driver <software/engine-driver>`{.interpreted-text
-    role="doc"}
+- - `Engine Driver <software/engine-driver>`
   - Free
   - WiFi
   - Native / Wit
@@ -311,8 +237,7 @@ is substantially better that the others.
   - 
   - 
   - X[^6]
-- - `Cab Engineer: DCC Throttle <software/cab-engineer>`{.interpreted-text
-    role="doc"}
+- - `Cab Engineer: DCC Throttle <software/cab-engineer>[
   - Free
   - WiFi
   - Native
@@ -325,7 +250,7 @@ is substantially better that the others.
   - 
   - 
   - 
-- - `DCCpp CAB <software/dccpp-cab>`{.interpreted-text role="doc"}
+- - `DCCpp CAB ](software/dccpp-cab.md)
   - Free
   - WiFi / BT
   - Native
@@ -338,8 +263,7 @@ is substantially better that the others.
   - 
   - 
   - X
-- - `DCC++ Throttle <software/dccpp-throttle>`{.interpreted-text
-    role="doc"}
+- - `DCC++ Throttle <software/dccpp-throttle>`
   - Free
   - BT
   - Native
@@ -352,8 +276,7 @@ is substantially better that the others.
   - 
   - 
   - X
-- - `RtDtive DCC-EX <software/rtdrive-dccpp>`{.interpreted-text
-    role="doc"}
+- - `RtDtive DCC-EX <software/rtdrive-dccpp>`
   - Free
   - WiFi
   - Native
@@ -366,8 +289,7 @@ is substantially better that the others.
   - 
   - 
   - X
-- - `DigiTrainsPro <software/digitrainspro>`{.interpreted-text
-    role="doc"}
+- - `DigiTrainsPro <software/digitrainspro>[
   - Free / Paid
   - WiFi
   - JMRI Web
@@ -380,7 +302,7 @@ is substantially better that the others.
   - 
   - 
   - 
-- - `Locontrol <software/locontrol>`{.interpreted-text role="doc"}
+- - `Locontrol ](software/locontrol.md)
   - Free / Paid
   - Net
   - WiT
@@ -393,7 +315,7 @@ is substantially better that the others.
   - 
   - 
   - 
-- - `SRCP Client <software/srcpclient>`{.interpreted-text role="doc"}
+- - [SRCP Client ](software/srcpclient.md)
   - Free
   - WiFi
   - Native
@@ -406,7 +328,7 @@ is substantially better that the others.
   - 
   - 
   - 
-- - `ThrottleCard <software/throttlecard>`{.interpreted-text role="doc"}
+- - [ThrottleCard ](software/throttlecard.md)
   - Free / Paid
   - WiFi
   - Native / WiT
@@ -419,7 +341,7 @@ is substantially better that the others.
   - X
   - 
   - X
-- - `Signal Cab <software/signal-cab>`{.interpreted-text role="doc"}
+- - [Signal Cab ](software/signal-cab.md)
   - Paid
   - WiFi
   - Native / WiT
@@ -432,8 +354,7 @@ is substantially better that the others.
   - 
   - 
   - X
-- - `Train Throttle <software/train-throttle>`{.interpreted-text
-    role="doc"}
+- - `Train Throttle <software/train-throttle>`
   - Free / Paid
   - WiFi
   - WiT
@@ -446,8 +367,7 @@ is substantially better that the others.
   - X
   - 
   - 
-- - `TrainNavigator <software/trainnavigator>`{.interpreted-text
-    role="doc"}
+- - `TrainNavigator <software/trainnavigator>[
   - Free
   - WiFi
   - Native
@@ -460,7 +380,7 @@ is substantially better that the others.
   - 
   - 
   - 
-- - `WiThrottle <software/withrottle>`{.interpreted-text role="doc"}
+- - `WiThrottle ](software/withrottle.md)
   - Free[^7] / Paid
   - WiFi
   - WiT
@@ -473,7 +393,7 @@ is substantially better that the others.
   - 
   - 
   - 
-- - `DCC-EX CAB <software/dccex-cab>`{.interpreted-text role="doc"}
+- - [DCC-EX CAB ](software/dccex-cab.md)
   - Paid
   - WiFi
   - Native
@@ -486,8 +406,7 @@ is substantially better that the others.
   - 
   - 
   - X
-- - `DCC Commander <software/dcc-commander>`{.interpreted-text
-    role="doc"}
+- - `DCC Commander <software/dcc-commander>`
   - Free[^8] / Paid
   - WiFi
   - Native
@@ -500,8 +419,7 @@ is substantially better that the others.
   - 
   - 
   - X
-- - `WiThrottle Cab <software/withrottle-cab>`{.interpreted-text
-    role="doc"}
+- - `WiThrottle Cab <software/withrottle-cab>`
   - Paid
   - WiFi
   - Native
@@ -514,8 +432,7 @@ is substantially better that the others.
   - 
   - 
   - 
-- - `DccExController <hardware/dccexcontroller>`{.interpreted-text
-    role="doc"}
+- - `DccExController <hardware/dccexcontroller>`
   - Free
   - WiFi
   - Native
@@ -528,8 +445,7 @@ is substantially better that the others.
   - 
   - 
   - 
-- - `DCC-EX Simple Throttle <hardware/simple-throttle>`{.interpreted-text
-    role="doc"}
+- - `DCC-EX Simple Throttle <hardware/simple-throttle>`
   - Free
   - WiFi
   - Native
@@ -542,8 +458,7 @@ is substantially better that the others.
   - 
   - 
   - 
-- - `Elgato Stream Deck <hardware/streamdeck>`{.interpreted-text
-    role="doc"}
+- - `Elgato Stream Deck <hardware/streamdeck>[
   - Paid
   - WiFi
   - native
@@ -556,7 +471,7 @@ is substantially better that the others.
   - 
   - 
   - 
-- - `EX-T3-WiFi <hardware/ex-t3-wifi>`{.interpreted-text role="doc"}
+- - `EX-T3-WiFi ](hardware/ex-t3-wifi.md)
   - Free
   - WiFi
   - Native
@@ -582,8 +497,7 @@ is substantially better that the others.
   - 
   - 
   - 
-- - `LoDi-Con WiFi Throttle </throttles/hardware/lodi-con-wifi-throttle>`{.interpreted-text
-    role="doc"}
+- - `LoDi-Con WiFi Throttle </throttles/hardware/lodi-con-wifi-throttle>[
   - Paid
   - WiFi
   - WiT
@@ -596,7 +510,7 @@ is substantially better that the others.
   - 
   - 
   - 
-- - `miniThrottle <hardware/minithrottle>`{.interpreted-text role="doc"}
+- - `miniThrottle ](hardware/minithrottle.md)
   - Open Source
   - WiFi / USB
   - Native
@@ -609,8 +523,7 @@ is substantially better that the others.
   - 
   - 
   - 
-- - `myBluePillThrottle7 <hardware/mybluepillthrottle>`{.interpreted-text
-    role="doc"}
+- - `myBluePillThrottle7 <hardware/mybluepillthrottle>`
   - Open Source
   - Serial
   - Native
@@ -623,8 +536,7 @@ is substantially better that the others.
   - 
   - 
   - 
-- - `WiTcontroller <hardware/witcontroller>`{.interpreted-text
-    role="doc"}
+- - `WiTcontroller <hardware/witcontroller>[
   - Open Source
   - WiFi
   - WiT
@@ -637,7 +549,7 @@ is substantially better that the others.
   - 
   - 
   - 
-- - `wiFred <hardware/wifred>`{.interpreted-text role="doc"}
+- - `wiFred ](hardware/wifred.md)
   - Open Source
   - WiFi
   - WiT
@@ -650,7 +562,7 @@ is substantially better that the others.
   - 
   - 
   - 
-- - `TCS UWT-50 <hardware/uwt50>`{.interpreted-text role="doc"} &
+- - [TCS UWT-50 ](hardware/uwt50.md) &
     UWT-100
   - Paid
   - WiFi
@@ -715,12 +627,10 @@ is substantially better that the others.
 
 ## Reference
 
-- `Technical Reference for Throttle Developers <tech-reference>`{.interpreted-text
-  role="doc"}
-- `DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`{.interpreted-text
-  role="doc"}
+- `Technical Reference for Throttle Developers <tech-reference>`
+- `DCC-EX Native command library - DCCEXProtocol </throttles/native-protocol-library>`
 
-::: {.toctree maxdepth="3" hidden=""}
+::: 
 protocols software/index hardware/index connect_wifi_throttle_via_usb
 tech-reference DCC-EX Native command library
 \</throttles/native-protocol-library\>
@@ -731,13 +641,11 @@ tech-reference DCC-EX Native command library
     \'build\' the device.
 
 [^2]: See
-    `/reference/software/withrottle-vs-native-commands`{.interpreted-text
-    role="doc"}.
+    `/reference/software/withrottle-vs-native-commands`.
 
 [^3]: Note: The Android throttle apps listed above can be made to made
     to run on Windows PCs. See
-    `Running Android apps on Microsoft Windows <software/android-apps-on-windows>`{.interpreted-text
-    role="doc"}.
+    `Running Android apps on Microsoft Windows <software/android-apps-on-windows>`.
 
 [^4]: Connecting JMRI to an EX-CommandStation over WiFi works, but is
     not recommended and is not supported
@@ -757,32 +665,27 @@ tech-reference DCC-EX Native command library
 
 [^9]: ESU Mobile Control Pro is an Android device with additional
     hardware, so can also run the
-    `Engine Driver <software/engine-driver>`{.interpreted-text
-    role="doc"} app. As such it can use the DCC-EX Native protocol when
+    `Engine Driver <software/engine-driver>` app. As such it can use the DCC-EX Native protocol when
     connected to a DCC-EX Command Station. It uses the WiThrottle
     protocol when connected to a WiThrottle server. When using Engine
     Driver and the Native Protocol it is capable of CV programming.
 
 [^10]: ESU Mobile Control Pro is an Android device with additional
     hardware, so can also run the
-    `Engine Driver <software/engine-driver>`{.interpreted-text
-    role="doc"} app. As such it can use the DCC-EX Native protocol when
+    `Engine Driver <software/engine-driver>` app. As such it can use the DCC-EX Native protocol when
     connected to a DCC-EX Command Station. It uses the WiThrottle
     protocol when connected to a WiThrottle server. When using Engine
     Driver and the Native Protocol it is capable of CV programming.
 
 [^11]: ESU Mobile Control Pro is an Android device with additional
     hardware, so can also run the
-    `Engine Driver <software/engine-driver>`{.interpreted-text
-    role="doc"} app. As such it can use the DCC-EX Native protocol when
+    `Engine Driver <software/engine-driver>` app. As such it can use the DCC-EX Native protocol when
     connected to a DCC-EX Command Station. It uses the WiThrottle
     protocol when connected to a WiThrottle server. When using Engine
     Driver and the Native Protocol it is capable of CV programming.
 
 [^12]: See
-    `/reference/software/withrottle-vs-native-commands`{.interpreted-text
-    role="doc"}.
+    `/reference/software/withrottle-vs-native-commands`.
 
 [^13]: See
-    `/reference/software/withrottle-vs-native-commands`{.interpreted-text
-    role="doc"}.
+    `/reference/software/withrottle-vs-native-commands`.

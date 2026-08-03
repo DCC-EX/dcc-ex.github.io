@@ -4,32 +4,31 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
 
-:::: {.warning .warning-float-right}
+:::: 
 ::: title
 Warning
 :::
 
 Please be aware that the Espressif firmware shipped with *Duinopeak
 ESP8266 WiFi Expansion*, *ESP-01 or ESP-01S* and *WangTongze* devices
-`will probably NOT work`{.interpreted-text role="dcc-ex-red-bold"} with
+`will probably NOT work` with
 \|EX-CS\| out of the box.
 
 (Note: The recommended
-`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>`{.interpreted-text
-role="doc"} is now shipping with the correct firmware version and **will
+`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>` is now shipping with the correct firmware version and **will
 work** with \|EX-CS\| *without modification*).
 
 This can be corrected, but is probably beyond Conductor level and
 requires additional hardware.
 
-See `/support/wifi-at-version`{.interpreted-text role="doc"} for details
+See `/support/wifi-at-version` for details
 on how to check the version and how to correct it if needed.
 ::::
 
@@ -90,7 +89,7 @@ this page.
     Arduino will be fine as is.
 
 ![Using Jumpers Directly to the Debug
-Header](/_static/images/wifi/wangtongze_jumpered.jpg){alt="WangTongze Jumpering to the debug header"}
+Header](/_static/images/wifi/wangtongze_jumpered.jpg)
 
 And here is a voltage divider with just two resistors you can use as a
 signal level shifter circuit:

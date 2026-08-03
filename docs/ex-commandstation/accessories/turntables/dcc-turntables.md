@@ -4,9 +4,9 @@
 
 \|NEW-IN-V5-4-LOGO-SMALL\| \|NEW-IN-V5-4-LOGO-SMALL-DARK\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::

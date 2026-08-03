@@ -21,7 +21,7 @@ nosearch
   - Support for newer generation microcontrollers
   - Fast clock support
   - Additional automation and animation features with \|EX-R\|
-  - See `/under-development/index`{.interpreted-text role="doc"}
+  - See `/under-development/index`
 - Add additional connection methods to \|EX-IO\| beyond \|I2C\|
 
 ## Looking ahead

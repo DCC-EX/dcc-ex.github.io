@@ -1,4 +1,4 @@
-::: {.meta keywords="EX-Installer"}
+::: 
 :::
 
 \|EX-CS-LOGO\|
@@ -7,9 +7,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="3" local=""}
+::: 
 On this page
 :::
 ::::
@@ -17,8 +17,7 @@ On this page
 ::: rst-class
 dcclink
 
-`Download EX-Installer <download/ex-commandstation:ex-Installer>`{.interpreted-text
-role="ref"}
+`Download EX-Installer <download/ex-commandstation:ex-Installer>`
 :::
 
 Once you have assembled your do-it-yourself \|EX-CS\| hardware you need
@@ -41,12 +40,11 @@ This page is specifically intended for a \|conductor-text\| or
   (including WiFi).
 
 This page is as simplified version of the
-`/ex-installer/installing`{.interpreted-text role="doc"} page. If you
+`/ex-installer/installing` page. If you
 are a \|tinkerer-text\| or \|engineer-text\| or have installed some of
 the additional, or different, hardware from that recommended for a
 \|conductor-text\| then we suggest that you look at the
-`Detailed Instructions </ex-installer/installing>`{.interpreted-text
-role="doc"} page for the full instructions.
+`Detailed Instructions </ex-installer/installing>` page for the full instructions.
 ::::
 
 :!!! warning "::: title
@@ -120,7 +118,7 @@ To begin with\...
 
 ## 2. Download and Run EX-Installer
 
-:::: {.warning .warning-float-right}
+:::: 
 ::: title
 Warning
 :::
@@ -132,8 +130,7 @@ this is usually the issue.
 ::::
 
 - Download the
-  `EX-Installer <download/ex-commandstation:ex-Installer>`{.interpreted-text
-  role="ref"} app. \|BR\| \|BR\|
+  `EX-Installer <download/ex-commandstation:ex-Installer>` app. \|BR\| \|BR\|
 - For **Microsoft Windows**:
   - Open the Windows *File Manager*
   - Find the folder in which the **EX-Installer-Win64.exe** or
@@ -145,15 +142,14 @@ this is usually the issue.
     configuration of your computer the \'.exe\' may or may not appear.
     This is not of concern. \|BR\| \|BR\|
 
-:::: {.important .important-float-right}
+:::: 
 ::: title
 Important
 :::
 
 EX-Installer creates a folder (\<home\>\\ex-installer) to hold the
 information it needs.
-`Do not directly modify anything in this folder`{.interpreted-text
-role="dcc-ex-red-bold"} as it a) will be overwritten or deleted by the
+`Do not directly modify anything in this folder` as it a) will be overwritten or deleted by the
 installer at any time, and b) will cause the installer to fail to load.
 ::::
 
@@ -187,8 +183,7 @@ alt="EX-Installer - Welcome" />
 This screen provides some basic information about the process of loading
 the Software.
 
-To proceed, click the `Manage Arduino CLI`{.interpreted-text
-role="guilabel"} button.
+To proceed, click the `Manage Arduino CLI` button.
 
 \|force-break\|
 
@@ -210,16 +205,16 @@ products to your Arduino.
 
 If you have not installed the CLI previously you *must* have Arduino CLI
 installed to proceed, simply click the
-`Install Arduino CLI`{.interpreted-text role="guilabel"} button if it is
+`Install Arduino CLI` button if it is
 showing.
 
 If you already have the Arduino CLI installed, it is recommended that
 you refresh it periodically (e.g. weekly) to ensure support for the
 various device details are kept up to date. To refresh the CLI, simply
-click the `Refresh Arduino CLI`{.interpreted-text role="guilabel"}
+click the `Refresh Arduino CLI`
 button.
 
-:::: {.hint .hint-float-right-narrow}
+:::: 
 ::: title
 Hint
 :::
@@ -234,8 +229,7 @@ The \|EX-CSB1-SHORT\| requires the `Expressif ESP32` option to be
 enabled. It should be enabled by default.
 
 Installing the CLI can take some time. Once the CLI is installed, To
-proceed, click the `Select your device`{.interpreted-text
-role="guilabel"} button.
+proceed, click the `Select your device` button.
 
 \|force-break\|
 
@@ -256,21 +250,20 @@ have connected the device to on your computer.
 \|EX-I\| will attempt to work out both of these for you, but it may need
 assistance.
 
-Click on the `Scan for Devices`{.interpreted-text role="guilabel"}
+Click on the `Scan for Devices`
 button.
 
 #### No Devices Found
 
-After you have clicked on the `Scan for Devices`{.interpreted-text
-role="guilabel"} button, if you see **No devices found** to means that
+After you have clicked on the `Scan for Devices` button, if you see **No devices found** to means that
 you either a) have not connected the device to the computer, or b) the
 device was not recognised by the computer.
 
 If you have not connected the device, connect it now then click the
-`Scan for Devices`{.interpreted-text role="guilabel"} button again.
+`Scan for Devices` button again.
 
 If the device *is* connected but not found refer to the
-`/support/ex-cs-diagnose`{.interpreted-text role="doc"} page for
+`/support/ex-cs-diagnose` page for
 assistance.
 
 #### Multiple Devices Found
@@ -291,7 +284,7 @@ alt="EX-Installer - Select Device - Selection" />
 <figcaption>EX-Installer - Device - Selection</figcaption>
 </figure>
 
-:::: {.hint .hint-float-right-narrow}
+:::: 
 ::: title
 Hint
 :::
@@ -306,7 +299,7 @@ especially common with cheap clone devices.)
 Check and select the appropriate board from the drop down list.
 
 Once you have a port and device type selected, to proceed, click the
-`Select product to install`{.interpreted-text role="guilabel"} button.
+`Select product to install` button.
 
 \|force-break\|
 
@@ -356,12 +349,11 @@ make advanced configuration changes, select
 `Configure options on the next screen`
 
 If you do want to manually make advanced configuration changes, see the
-`/ex-installer/installing`{.interpreted-text role="doc"} page for
+`/ex-installer/installing` page for
 instructions on how to enable them.
 
 If you have selected `Configure options on the next screen`, to proceed,
-click the `Configure EX-CommandStation`{.interpreted-text
-role="guilabel"} button.
+click the `Configure EX-CommandStation` button.
 
 \|force-break\|
 
@@ -388,14 +380,14 @@ of the \|EX-CS\|:
 
 Only the *Motor Driver* and *WiFi* will be covered on this page. If you
 have installed different hardware to that recommended, see the
-`/ex-installer/installing`{.interpreted-text role="doc"} page for
+`/ex-installer/installing` page for
 instructions on all the available configuration options.
 
 \|force-break\|
 
 #### Motor Driver
 
-:::: {.hint .hint-float-right-narrow}
+:::: 
 ::: title
 Hint
 :::
@@ -413,8 +405,8 @@ alt="EX-Installer - EX-CommandStation - Configure Motor Driver" />
 You *must* select the motor driver type that you have installed. The
 installer can\'t detect this, so you must select the correct board or
 the \|EX-CS\| may not work. If you have installed the recommended Motor
-Driver, select [STANDARD_MOTOR_SHIELD]{.title-ref} if you purchased a
-\|standard Motor Driver\|, or [EX8874_SHIELD]{.title-ref} if you
+Driver, select [STANDARD_MOTOR_SHIELD] if you purchased a
+\|standard Motor Driver\|, or [EX8874_SHIELD] if you
 purchased our **EX-MotorShield8874**.
 
 ::: sidebar
@@ -480,7 +472,7 @@ for more information.
 > <figcaption>EX-Installer - Configure WiFi - Access Point</figcaption>
 > </figure>
 >
-> :::: {.note .note-float-right}
+> :::: 
 > ::: title
 > Note
 > :::
@@ -490,8 +482,7 @@ for more information.
 > apps that can help you determine which channels are being used by
 > other networks. For Android, *\'Wifi Analyzer\'* is one that works.
 > For iOS *\'Netspot\'* is suitable
-> `(you don't need to purchase WiPry device they mention)`{.interpreted-text
-> role="dcc-ex-text-size-60pct"}.
+> `(you don't need to purchase WiPry device they mention)`.
 > ::::
 >
 > If `Use my EX-CommandStation as an Access Point` is selected, two
@@ -528,16 +519,14 @@ for more information.
 >
 > *WiFi Password* is the password for your home network.
 
-To proceed, click the `Compile and Load`{.interpreted-text
-role="guilabel"} button.
+To proceed, click the `Compile and Load` button.
 
 :!!! note "::: title
 Note"
 :::
 
 See the
-`/ex-commandstation/advanced-setup/supported-wifi/wifi-config`{.interpreted-text
-role="doc"} page if you wish to find more detailed information on the
+`/ex-commandstation/advanced-setup/supported-wifi/wifi-config` page if you wish to find more detailed information on the
 the WiFi options.
 ::::
 
@@ -547,7 +536,7 @@ the WiFi options.
 
 #### Display Type
 
-:::: {.hint .tip-float-right-narrow}
+:::: 
 ::: title
 Hint
 :::
@@ -557,7 +546,7 @@ The \|EX-CSB1-SHORT\| will generally be supplied with a **OLED 128 X
 ::::
 
 ![EX-Installer - Configure Display
-Driver](/_static/images/ex-installer/ex_cs_configure_screen.png){alt="EX-Installer - EX-CommandStation - Configure Display Driver"}
+Driver](/_static/images/ex-installer/ex_cs_configure_screen.png)
 
 If you have installed and optional oLED or LED display, enable the
 `I have a display` option, which will present you with a drop down list
@@ -567,7 +556,7 @@ to select the type of display you have.
 
 #### Start with Power on
 
-:::: {.hint .tip-float-right-narrow}
+:::: 
 ::: title
 Hint
 :::
@@ -593,16 +582,15 @@ alt="EX-Installer - Load" />
 <figcaption>EX-Installer - Compile and Load Screen</figcaption>
 </figure>
 
-To proceed, click the `Load`{.interpreted-text role="guilabel"} button.
+To proceed, click the `Load` button.
 
 Results are shown in the lower half of the screen.
 
 If there are **no errors**, you can proceed to
-`testing your setup </ex-commandstation/controllers-diy>`{.interpreted-text
-role="doc"}.
+`testing your setup </ex-commandstation/controllers-diy>`.
 
 If there **are errors** or you are having difficulties check the
-`/support/ex-cs-troubleshooting`{.interpreted-text role="doc"} page for
+`/support/ex-cs-troubleshooting` page for
 assistance.
 
 \|force-break\|
@@ -611,7 +599,7 @@ assistance.
 
 ## Next Steps - Selecting a Throttle (Controller)
 
-:::: {.important .important-float-right}
+:::: 
 ::: title
 Important
 :::
@@ -621,8 +609,7 @@ main track if you expect your loco to move or respond to light or sound
 commands.
 ::::
 
-See the `/ex-commandstation/controllers-diy`{.interpreted-text
-role="doc"} page or click the \'Next\' button to learn how to select a
+See the `/ex-commandstation/controllers-diy` page or click the \'Next\' button to learn how to select a
 throttle (controller) suitable to test and use your \|EX-CS\|.
 
 \|force-break\|

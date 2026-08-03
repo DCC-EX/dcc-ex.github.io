@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -17,12 +17,12 @@ make 2 choices:
 1.  To self-identify your **\"level\"** with regards to DCC-EX. \|BR\|
     If you have not chosen whether you are a \|Conductor-text\|,
     \|Tinkerer-text\|, or \|Engineer-text\|, please go to the
-    `/begin/levels`{.interpreted-text role="doc"} page before proceeding
+    `/begin/levels` page before proceeding
     further. \|BR\| \|BR\|
 2.  Choose whether you want the **\"Ready-To-Run\" (RTR)** path or the
     **\"Do-It-Yourself\" (DIY)** path. \|BR\| If you want the
     ready-to-run (RTR) path we suggest that you look at the
-    `/ex-commandstation/rtr-index`{.interpreted-text role="doc"} page.
+    `/ex-commandstation/rtr-index` page.
 
 **If you are still interested the do-it-yourself (DIY) path then read
 on\...**
@@ -91,13 +91,13 @@ alt="Engine Driver" />
 
 ## Next Steps - Purchasing Parts
 
-See the `purchasing`{.interpreted-text role="doc"} page or click the
+See the `purchasing` page or click the
 \'Next\' button to see what you need to acquire to create your
 \|EX-CS\|.
 
 ------------------------------------------------------------------------
 
-::: {.toctree hidden=""}
+::: 
 purchasing assembly wifi-setup ../installer-diy.rst
 ../controllers-diy.rst ../testing-diy.rst
 /support/ex-cs-troubleshooting\_\_included-diy /support/wifi-at-version
@@ -106,11 +106,10 @@ purchasing assembly wifi-setup ../installer-diy.rst
 [^1]: The Instructions on the following pages assume that that you will
     use a WiFi Shield.
 
-[^2]: Requires [\|JMRI\|](##SUBST##|JMRI|) installed on a computer.
+[^2]: Requires [\|JMRI\|](##SUBST##**JMRI**) installed on a computer.
 
 [^3]: The voltage you need for the [\|Motor
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.

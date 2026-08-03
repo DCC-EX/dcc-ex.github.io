@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -204,8 +204,7 @@ within the CommandStation.
 ::: sidebar
 
 You can also refer to
-`/ex-commandstation/accessories/turnouts/solenoid-turnouts`{.interpreted-text
-role="doc"} for more information.
+`/ex-commandstation/accessories/turnouts/solenoid-turnouts` for more information.
 :::
 
 If you have installed turnouts/points using simple pin control, you can
@@ -253,7 +252,7 @@ SINGLE_COIL_TURNOUT(101, 22, 24, 26, "Turnout 101")
 ::: sidebar
 
 You can also refer to
-`/reference/hardware/servo-module`{.interpreted-text role="doc"} for
+`/reference/hardware/servo-module` for
 more information.
 :::
 
@@ -294,14 +293,14 @@ will be accessed using pin number 100.
 Once you\'ve made all of the connections, apply power to the Arduino.
 
 Then, in the \|serial monitor\|, enter the command [\<D SERVO 100
-450\>]{.title-ref}. The servo should move, as long as it isn\'t (by some
+450\>]. The servo should move, as long as it isn\'t (by some
 fluke) already in that position.
 
-Enter [\<D SERVO 100 110\>]{.title-ref} and this time it should
+Enter [\<D SERVO 100 110\>] and this time it should
 definitely move. For the last parameter (servo position) you can use any
 value between about 105 and 490.
 
-Try [\<D SERVO 100 450 3\>]{.title-ref} and the servo should move slowly
+Try [\<D SERVO 100 450 3\>] and the servo should move slowly
 back.
 
 You can use the servo to control turnouts/points, semaphore signals,
@@ -346,7 +345,7 @@ following syntax:
 SERVO_TURNOUT(id, pin, active_angle, inactive_angle, profile [, "description"])
 ```
 
-``` {.cpp .code-block-float-right}
+``` 
 // Example
 SERVO_TURNOUT(200, 101, 450, 110, Slow, "Example slow turnout/point definition")
 
@@ -407,7 +406,7 @@ other options available at the present time:
 SERVO_SIGNAL(vpin, redpos, amberpos, greenpos)
 ```
 
-``` {.cpp .code-block-float-right}
+``` 
 // Example
 SERVO_SIGNAL(102, 400, 250, 100)
 
@@ -454,7 +453,7 @@ The valid parameters are:
 - **duration** = The time (in milliseconds (ms)) for the servo to be
   actively rotating.
 
-``` {.cpp .code-block-float-right}
+``` 
 // Example
 AT(164)
    SERVO(101, 400, Fast)
@@ -489,8 +488,7 @@ Place IR Infrared or Optical Sensor\'s Output wire on Dpins 22, 23, 24
 ![IR Sensor connected to Arduino mega](/_static/images/ir-sensor/mega-with-ir-sensor.png)
 
 If you need more sensors then there are available pins on the Mega, you
-use one or more `/reference/hardware/gpio-module`{.interpreted-text
-role="doc"}
+use one or more `/reference/hardware/gpio-module`
 
 ![IR Sensor connected to Arduino mega via IO Expander](/_static/images/ir-sensor/mega-with-io-expander-and-ir-sensor.png)
 
@@ -514,7 +512,7 @@ the Hardware Abstraction Layer. For a Mega onboard GPIO pin, this is the
 same as the digital pin number. Other pin ranges refer to I/O expanders
 etc.
 
-:::: {.note .note-float-right}
+:::: 
 ::: title
 Note
 :::
@@ -596,5 +594,5 @@ SERVO_SIGNAL(106, 400, 0, 205) //  Red vpin 106 for turnout/point 1, Thrown=Red,
 
 ## Next Steps - Creating Sequences
 
-See the `getting-started`{.interpreted-text role="doc"} page or click
+See the `getting-started` page or click
 the \'Next\' button to learn how to create automation sequences.

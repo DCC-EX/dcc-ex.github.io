@@ -5,9 +5,9 @@
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-fastclock-button-small\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -44,88 +44,13 @@ Connecting via Serial is the simplest option if available.
 
   ``` cpp
   Serial.begin(115200);
-  while (!Serial) {
-  ; // wait for serial port to connect. Needed for native USB port only
-  }
+  while (!Serial) 
   ```
 
 - Include the following routine within your code:
 
   ``` cpp
-  void SendTime(byte hour, byte mins, byte speed) {
-
-    int itime = (hour * 60) + mins;
-    char buffer[20];
-    sprintf(buffer, "<JC %d %d>", itime, speed);
-    Serial.println(buffer);
-  ```
-
-- Each time the time changes call the SendTime routine as follows:
-
-  ``` cpp
-  SendTime(HH, MM, clockSpeed);
-  ```
-
-  where HH = the hour, MM = minutes and clockSpeed = the fast speed
-  (e.g. at spped 4, 15 seconds represents a minute).
-
-### Connecting via I2C
-
-Connecting via \|I2C\| involves a HAL driver file to the \|EX-CS\| as
-well as adding some code to the existing FastClock code. Follow the
-following steps:
-
-- In the \|EX-CS\| code copy the file myHal.cpp_example.txt to
-  myHal.cpp.
-
-- Edit the file myHal.cpp and uncomment the following line near the
-  beginning of the file
-
-  ``` cpp
-  //  #include "IO_EXFastClock.h"  // FastClock driver
-  ```
-
-- Uncomment the following line near the end of the file
-
-  ``` cpp
-  //  EXFastClock::create(0x55);
-  ```
-
-  0x55 (decimal 85) is the default address but needs to match that in
-  the FastClock code (see below).
-
-- Using Dupont connectors connect SDA/SCL/Gnd on the clock to
-  SDA/SCL/Gnd on the \|EX-CS\|
-
-- Include the following code in your FastClock code:
-
-  Near the top of the sketch:
-
-  ``` cpp
-  #include <Wire.h>
-  ```
-
-  Within your Setup():
-
-  ``` cpp
-  Wire.begin(I2CAddress);
-  Wire.onRequest(TransmitTime);
-  ```
-
-  Add the following function within the sketch
-
-  ``` cpp
-  void TransmitTime() {
-      // send the data over I2C
-      // send the time as <mmmm> as two bytes followed by clockspeed
-      int timetosend = (HH * 60) + MM;
-      byte TimeArray[2];
-
-      TimeArray[0] = (timetosend >> 8);
-      TimeArray[1] = timetosend & 0xFF;
-      Wire.write(TimeArray, 2);
-      Wire.write(clockSpeed);      
-  }
+  void SendTime(byte hour, byte mins, byte speed) 
   ```
 
   In the function above HH is the time as hours (24hr. clock) and MM is

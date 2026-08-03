@@ -14,9 +14,9 @@ commands below do not refer to the loco address, they take the address
 from the task executing the sequence.
 
 The loco associated with a task can be set with a
-[SETLOCO(locoid)]{.title-ref} executed within the task, or it can be
+[SETLOCO(locoid)] executed within the task, or it can be
 automatically assigned from a throttle using a hand-off to an
-`AUTOMATION </exrail/getting-started>`{.interpreted-text role="doc"}.
+[AUTOMATION ](/exrail/getting-started.md).
 
 All driving speeds are in the range 0 to 127 where 0 is a normal stop
 (where a loco\'s decoder will usually stop gently as if the driver were

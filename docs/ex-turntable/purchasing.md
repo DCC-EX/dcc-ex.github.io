@@ -5,9 +5,9 @@
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-turntable-button-small\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -32,8 +32,7 @@ On this page
 - A USB cable to connect the Arduino to a PC to load the software
 - *Optional:* A dual relay board (or similar) if you wish to use the
   phase switching capability (see
-  `ex-turntable/overview:important! phase (or polarity) switching`{.interpreted-text
-  role="ref"})
+  `ex-turntable/overview:important! phase (or polarity) switching`)
 
 :!!! warning "::: title
 Warning"
@@ -49,16 +48,13 @@ As a result, we highly recommend using a NEMA17 and two wire stepper
 driver such as the A4988, DRV8825, or TMC2208 instead. The instructions
 on these pages are largely the same, with some changes to the wiring
 connections required as outlined in
-`ex-turntable/assembly:using a two wire stepper driver (e.g. a4988/drv8825/tmc2208)`{.interpreted-text
-role="ref"}.
+`ex-turntable/assembly:using a two wire stepper driver (e.g. a4988/drv8825/tmc2208)`.
 
 If you do continue to use a ULN2003/28BYJ-48 combination and have issues
 with accuracy, consider enforcing single direction rotation to help
 mitigate this by enabling either the
-`ex-turntable/configure:rotate_forward_only`{.interpreted-text
-role="ref"} or
-`ex-turntable/configure:rotate_reverse_only`{.interpreted-text
-role="ref"} configuration setting.
+`ex-turntable/configure:rotate_forward_only` or
+`ex-turntable/configure:rotate_reverse_only` configuration setting.
 
 As time allows, we will update the images and instructions to focus on
 this new recommendation.
@@ -70,7 +66,7 @@ Note"
 
 If you wish to make use of the traverser feature, there is further
 information on what is required to enable this on the
-`/ex-turntable/traverser`{.interpreted-text role="doc"} page.
+`/ex-turntable/traverser` page.
 ::::
 
 ![Nano V3](/_static/images/ex-turntable/nano-v3.png)
@@ -126,8 +122,7 @@ ULN2003/28BYJ-48 stepper driver and motor combination.
 > CommandStation-EX.
 >
 > Refer to
-> `ex-turntable/configure:defining custom stepper drivers`{.interpreted-text
-> role="ref"} for more details.
+> `ex-turntable/configure:defining custom stepper drivers` for more details.
 :::
 
 However, it is very easy to use one of several other common stepper

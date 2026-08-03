@@ -1,4 +1,4 @@
-::: {.meta keywords="WiFi setup Espressif AT version"}
+::: 
 :::
 
 \|EX-CS-LOGO\|
@@ -7,9 +7,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="3" local=""}
+::: 
 On this page
 :::
 ::::
@@ -26,8 +26,7 @@ logo on the bottom and display version 1.1 or later.
 
 ## Which is correct version of the AT firmware
 
-`ONLY Version 1.7.4 is known to work reliably.`{.interpreted-text
-role="dcc-ex-text-size-200pct"}
+`ONLY Version 1.7.4 is known to work reliably.`
 
 That means all versions both before or after 1.7.4 are *not* suitable.
 So don\'t be fooled in thinking that if it has a version later than that
@@ -59,10 +58,8 @@ and correct it if necessary.
 
 There are two basic ways that you can check:
 
-- `AFTER you load the EX-CommandStation software <support/wifi-at-version:Checking AFTER you load the EX-CommandStation software>`{.interpreted-text
-  role="ref"}
-- `BEFORE you load the EX-CommandStation software <support/wifi-at-version:Checking BEFORE you load the EX-CommandStation software>`{.interpreted-text
-  role="ref"}
+- `AFTER you load the EX-CommandStation software <support/wifi-at-version:Checking AFTER you load the EX-CommandStation software>`
+- `BEFORE you load the EX-CommandStation software <support/wifi-at-version:Checking BEFORE you load the EX-CommandStation software>`
 
 ------------------------------------------------------------------------
 
@@ -76,12 +73,9 @@ either the \|EX-I\| or **Arduino IDE** (whichever you used to upload the
 You can check the AT version two ways. Which is best for you depends on
 how you loaded the \|EX-CS\| software:
 
-- `Using EX-Installer <support/wifi-at-version:Checking the AT version using EX-Installer>`{.interpreted-text
-  role="ref"}
-- `Using EX-WebThrottle <support/wifi-at-version:Checking the AT version using EX-WebThrottle>`{.interpreted-text
-  role="ref"}
-- `Using the Arduino IDE <support/wifi-at-version:Checking the AT version with the Arduino IDE>`{.interpreted-text
-  role="ref"}
+- `Using EX-Installer <support/wifi-at-version:Checking the AT version using EX-Installer>`
+- `Using EX-WebThrottle <support/wifi-at-version:Checking the AT version using EX-WebThrottle>`
+- `Using the Arduino IDE <support/wifi-at-version:Checking the AT version with the Arduino IDE>`
 
 \|hr-dashed\|
 
@@ -91,8 +85,7 @@ Once you have successfully loaded the \|EX-CS\| software:
 
 1.  Click back through the pages of the \|EX-I\| till you get to the
     \'Select your Device\' screen
-2.  Click on the `View device monitor`{.interpreted-text
-    role="guilabel"} button \|BR\| A new window will open and a lot of
+2.  Click on the `View device monitor` button \|BR\| A new window will open and a lot of
     text will appear
 3.  You need to look for a line that will have a section highlighted in
     green
@@ -100,12 +93,11 @@ Once you have successfully loaded the \|EX-CS\| software:
 e.g. `AT version:1.7.4.0(May 11 2020 19:13:04)`
 
 Alternately, you can enter the command `<+GMR>` and click
-`Send`{.interpreted-text role="guilabel"}. A similar line will be shown.
+`Send`. A similar line will be shown.
 
 If it says **anything other than** 1.7.4 in that line, then you have the
 wrong version you will need to
-`follow the instructions at the end of this page <support/wifi-at-version:What to do if you have the wrong AT Firmware version>`{.interpreted-text
-role="ref"} to correct it.
+`follow the instructions at the end of this page <support/wifi-at-version:What to do if you have the wrong AT Firmware version>` to correct it.
 
 \|hr-dashed\|
 
@@ -115,7 +107,7 @@ Once you have successfully loaded the \|EX-CS\| software
 
 1.  Close EX-Installer (Or the \|Arduino IDE\| if you used it)
 2.  Open [EX-WebThrottle](https://dcc-ex.com/WebThrottle-EX/)
-3.  Click the `Connect EX-CS`{.interpreted-text role="guilabel"} button
+3.  Click the `Connect EX-CS` button
     and select the COM port that you used to load the software onto the
     \|EX-CS\|
 4.  look at the log that will appear at the bottom of the screen
@@ -125,12 +117,11 @@ Once you have successfully loaded the \|EX-CS\| software
 e.g. `AT version:1.7.4.0(May 11 2020 19:13:04)`
 
 Alternately, you can enter the command `<+GMR>` and click
-`Send`{.interpreted-text role="guilabel"}. A similar line will be shown.
+`Send`. A similar line will be shown.
 
 If it says **anything other than** 1.7.4 in that line, then you have the
 wrong version you will need to
-`follow the instructions at the end of this page <support/wifi-at-version:What to do if you have the wrong AT Firmware version>`{.interpreted-text
-role="ref"} to correct it.
+`follow the instructions at the end of this page <support/wifi-at-version:What to do if you have the wrong AT Firmware version>` to correct it.
 
 \|hr-dashed\|
 
@@ -147,12 +138,11 @@ successfully loaded the \|EX-CS\| software:
 e.g. `AT version:1.7.4.0(May 11 2020 19:13:04)`
 
 Alternately, you can enter the command `<+GMR>` and click
-`Send`{.interpreted-text role="guilabel"}. A similar line will be shown.
+`Send`. A similar line will be shown.
 
 If it says **anything other than** 1.7.4 in that line, then you have the
 wrong version you will need to
-`follow the instructions at the end of this page <support/wifi-at-version:What to do if you have the wrong AT Firmware version>`{.interpreted-text
-role="ref"} to correct it.
+`follow the instructions at the end of this page <support/wifi-at-version:What to do if you have the wrong AT Firmware version>` to correct it.
 
 \|hr-heavy\|
 
@@ -161,14 +151,10 @@ role="ref"} to correct it.
 How to check before you load the \|EX-CS\| software will depend on which
 WiFi shield or board you are using:
 
-- `ESP-01 or ESP-01s <support/wifi-at-version:Checking the AT version of a ESP-01 or ESP-01s>`{.interpreted-text
-  role="ref"}
-- `Makerfabs ESP8266 Wifi Shield <support/wifi-at-version:Checking the AT version of a Makerfabs ESP8266 Wifi Shield>`{.interpreted-text
-  role="ref"}
-- `Duinopeak ESP8266 WiFi Expansion board <support/wifi-at-version:Checking the AT version of a Duinopeak ESP8266 WiFi Expansion Board>`{.interpreted-text
-  role="ref"}
-- `Mega+WiF board <support/wifi-at-version:Checking the AT version of a Mega+WiFi>`{.interpreted-text
-  role="ref"}
+- `ESP-01 or ESP-01s <support/wifi-at-version:Checking the AT version of a ESP-01 or ESP-01s>`
+- `Makerfabs ESP8266 Wifi Shield <support/wifi-at-version:Checking the AT version of a Makerfabs ESP8266 Wifi Shield>`
+- `Duinopeak ESP8266 WiFi Expansion board <support/wifi-at-version:Checking the AT version of a Duinopeak ESP8266 WiFi Expansion Board>`
+- `Mega+WiF board <support/wifi-at-version:Checking the AT version of a Mega+WiFi>`
 
 ------------------------------------------------------------------------
 
@@ -187,8 +173,7 @@ or ESP-01s:
 
 ##### Checking the AT version of a ESP-01 with a USB Serial Adapter
 
-![CH340G USB to TTL(serial) Converter](/_static/images/esp-01/CH340G-USB-to-TTL(serial)-converter.png){.image-float-right
-.image-float-right}
+![CH340G USB to TTL(serial) Converter](/_static/images/esp-01/CH340G-USB-to-TTL(serial)-converter.png)
 
 1.  Connect the ESP01 to the serial adapter with the instructions on
     here: <https://remotexy.com/en/help/esp8266-firmware-update>
@@ -200,18 +185,15 @@ or ESP-01s:
 4.  Select **Tools** -\> **Serial monitor** from the menus
 5.  Select baud: `115200` and `Both NL & CR`
 6.  A new pane will open at the bottom of the IDE window will open
-7.  Enter the command `AT+RST` and click `Send`{.interpreted-text
-    role="guilabel"}.
-8.  Enter the command `AT+GMR` and click `Send`{.interpreted-text
-    role="guilabel"}.
+7.  Enter the command `AT+RST` and click `Send`.
+8.  Enter the command `AT+GMR` and click `Send`.
 
 It will reply with something like
 `AT version:1.7.4.0(May 11 2020 19:13:04)`
 
 If it says **anything other than** 1.7.4 in that line, then you have the
 wrong version you will need to
-`follow the instructions at the end of this page <support/wifi-at-version:What to do if you have the wrong AT Firmware version>`{.interpreted-text
-role="ref"} to correct it.
+`follow the instructions at the end of this page <support/wifi-at-version:What to do if you have the wrong AT Firmware version>` to correct it.
 
 \|hr-dashed\|
 
@@ -219,17 +201,14 @@ role="ref"} to correct it.
 
 ::: todo
 [Checking AT version with a USB to TTL CH340G Converter Module Adapter
-prior to upload]{.title-ref}
+prior to upload]
 :::
 
-![Early ESP-01 USB adapter](/_static/images/esp-01/USB-to-ESP-01-adapter-early.png){.image-float-right
-.image-float-right}
+![Early ESP-01 USB adapter](/_static/images/esp-01/USB-to-ESP-01-adapter-early.png)
 
-![ESP-01 USB adapter](/_static/images/esp-01/USB-to-ESP-01-adapter.png){.image-float-right
-.image-float-right}
+![ESP-01 USB adapter](/_static/images/esp-01/USB-to-ESP-01-adapter.png)
 
-![ESP-01s USB adapter](/_static/images/esp-01/USB-to-ESP-01s-adapter.png){.image-float-right
-.image-float-right}
+![ESP-01s USB adapter](/_static/images/esp-01/USB-to-ESP-01s-adapter.png)
 
 1.  Connect the ESP01 to the adapter
 2.  Plug the adapter it the PC
@@ -237,36 +216,32 @@ prior to upload]{.title-ref}
 4.  Select **Tools** -\> **Serial monitor** from the menus
 5.  Select baud: `115200` and `Both NL & CR`
 6.  A new pane will open at the bottom of the IDE window will open
-7.  Enter the command `AT+RST` and click `Send`{.interpreted-text
-    role="guilabel"}.
-8.  Enter the command `AT+GMR` and click `Send`{.interpreted-text
-    role="guilabel"}.
+7.  Enter the command `AT+RST` and click `Send`.
+8.  Enter the command `AT+GMR` and click `Send`.
 
 It will reply with something like
 `AT version:1.7.4.0(May 11 2020 19:13:04)`
 
 If it says **anything other than** 1.7.4 in that line, then you have the
 wrong version you will need to
-`follow the instructions at the end of this page <support/wifi-at-version:What to do if you have the wrong AT Firmware version>`{.interpreted-text
-role="ref"} to correct it.
+`follow the instructions at the end of this page <support/wifi-at-version:What to do if you have the wrong AT Firmware version>` to correct it.
 
 \|hr-dashed\|
 
 ##### Checking the AT version of a ESP-01 a with a Arduino Uno
 
 ::: todo
-[Checking AT version with a Arduino Uno prior to upload]{.title-ref}
+[Checking AT version with a Arduino Uno prior to upload]
 :::
 
 ------------------------------------------------------------------------
 
 #### Checking the AT version of a Makerfabs ESP8266 WiFi Shield
 
-![Makefabs ESP8266 WiFi Shield](/_static/images/wifi/makerfabs-esp8266-wifi-shield.png){.image-float-right
-.image-float-right}
+![Makefabs ESP8266 WiFi Shield](/_static/images/wifi/makerfabs-esp8266-wifi-shield.png)
 
 ::: todo
-[Checking AT version ESP8266 Wifi Shield prior to upload]{.title-ref}
+[Checking AT version ESP8266 Wifi Shield prior to upload]
 :::
 
 \|force-break\|
@@ -275,12 +250,11 @@ role="ref"} to correct it.
 
 #### Checking the AT version of a Duinopeak ESP8266 WiFi Expansion Board
 
-![Duinopeak ESP8266 WiFi Expansion Board](/_static/images/wifi/duinopeak.png){.image-float-right
-.image-float-right}
+![Duinopeak ESP8266 WiFi Expansion Board](/_static/images/wifi/duinopeak.png)
 
 ::: todo
 [Checking AT version ESP8266 WiFi Expansion Board prior to
-upload]{.title-ref}
+upload]
 :::
 
 \|force-break\|
@@ -289,11 +263,10 @@ upload]{.title-ref}
 
 #### Checking the AT version of a Mega+WiFi
 
-![Mega + WiFi](/_static/images/assembly/mega_wifi.png){.image-float-right
-.image-float-right}
+![Mega + WiFi](/_static/images/assembly/mega_wifi.png)
 
 ::: todo
-[Checking AT version Mega+WiFi prior to upload]{.title-ref}
+[Checking AT version Mega+WiFi prior to upload]
 :::
 
 \|force-break\|
@@ -307,18 +280,13 @@ upload]{.title-ref}
 The steps necessary to correct the AT version will depend on your
 hardware:
 
-- `ESP-01 or ESP-01s <support/wifi-at-version:Correcting the AT version on a ESP-01>`{.interpreted-text
-  role="ref"}
-- `Makerfabs ESP8266 Wifi Shield <support/wifi-at-version:Correcting the AT version on a Makerfabs ESP8266 Wifi Shield>`{.interpreted-text
-  role="ref"}
-- `Duinopeak ESP8266 WiFi Expansion board <support/wifi-at-version:Correcting the AT version on a Duinopeak ESP8266 WiFi Expansion Board>`{.interpreted-text
-  role="ref"}
-- `Mega+WiF board <support/wifi-at-version:Correcting the AT version on a Mega+WiFi>`{.interpreted-text
-  role="ref"}
+- `ESP-01 or ESP-01s <support/wifi-at-version:Correcting the AT version on a ESP-01>`
+- `Makerfabs ESP8266 Wifi Shield <support/wifi-at-version:Correcting the AT version on a Makerfabs ESP8266 Wifi Shield>`
+- `Duinopeak ESP8266 WiFi Expansion board <support/wifi-at-version:Correcting the AT version on a Duinopeak ESP8266 WiFi Expansion Board>`
+- `Mega+WiF board <support/wifi-at-version:Correcting the AT version on a Mega+WiFi>`
 
 We strongly recommend upgrading or downgrading to the \"NonOS AT\"
-version 1.7.4 available on our `/download/esp8266`{.interpreted-text
-role="doc"} download page **prior** to reaching out for support from the
+version 1.7.4 available on our `/download/esp8266` download page **prior** to reaching out for support from the
 team.
 
 ------------------------------------------------------------------------
@@ -332,7 +300,7 @@ hardware. One of following is required:
 - A USB to TTL CH340G Converter Module Adapter
 - An Arduino Uno
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
@@ -340,8 +308,7 @@ In This Section
 
 #### Correcting a ESP-01 with a USB Serial Adapter
 
-![CH340G USB to TTL(serial) Converter](/_static/images/esp-01/CH340G-USB-to-TTL(serial)-converter.png){.image-float-right
-.image-float-right}
+![CH340G USB to TTL(serial) Converter](/_static/images/esp-01/CH340G-USB-to-TTL(serial)-converter.png)
 
 See <https://remotexy.com/en/help/esp8266-firmware-update/>
 \|EXTERNAL-LINK\|
@@ -355,14 +322,11 @@ See <https://remotexy.com/en/help/esp8266-firmware-update/>
 Correcting a ESP-01 or ESP-01s with a USB to TTL CH340G Converter Module
 Adapter
 
-![Early ESP-01 USB adapter](/_static/images/esp-01/USB-to-ESP-01-adapter-early.png){.image-float-right
-.image-float-right}
+![Early ESP-01 USB adapter](/_static/images/esp-01/USB-to-ESP-01-adapter-early.png)
 
-![ESP-01 USB adapter](/_static/images/esp-01/USB-to-ESP-01-adapter.png){.image-float-right
-.image-float-right}
+![ESP-01 USB adapter](/_static/images/esp-01/USB-to-ESP-01-adapter.png)
 
-![ESP-01s USB adapter](/_static/images/esp-01/USB-to-ESP-01s-adapter.png){.image-float-right
-.image-float-right}
+![ESP-01s USB adapter](/_static/images/esp-01/USB-to-ESP-01s-adapter.png)
 
 The early/normal boards needs to be modified to be able to temporarily
 connect GND to GPIO 0.
@@ -395,8 +359,7 @@ Or <https://remotexy.com/en/help/esp8266-firmware-update/>
 
 ### Correcting the AT version on a Makerfabs ESP8266 Wifi Shield
 
-![Makefabs ESP8266 WiFi Shield](/_static/images/wifi/makerfabs-esp8266-wifi-shield.png){.image-float-right
-.image-float-right}
+![Makefabs ESP8266 WiFi Shield](/_static/images/wifi/makerfabs-esp8266-wifi-shield.png)
 
 There are **two** options for correcting the AT version on a Makerfabs
 ESP8266 Wifi Shield:
@@ -404,7 +367,7 @@ ESP8266 Wifi Shield:
 - With a USB to TTL Converter Module Adapter (recommended)
 - With an Arduino Mega
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In This Section
 :::
 
@@ -451,8 +414,7 @@ Warning"
 The instructions on the following page have been proven to work on Linux
 PCs, so will probably work on macOS PCs (Apple), however attempts to get
 them to work on **Microsoft Windows PCs**
-`have so far been unsuccessful`{.interpreted-text
-role="dcc-ex-red-bold"}. We need to do more testing. If you have an
+`have so far been unsuccessful`. We need to do more testing. If you have an
 issue with this method, simply purchase a USB to TTL converter module
 and use the recommended process in the previous heading. This should not
 be an issue for most people since they will have the DCC-EX EX-WiFi
@@ -461,8 +423,7 @@ process should that be required in the future.
 ::::
 
 Flashing the ESP8266 WiFi Shield
-`using an Arduino Mega is covered here </support/makerfabs-update-at-version-with-mega>`{.interpreted-text
-role="doc"}.
+`using an Arduino Mega is covered here </support/makerfabs-update-at-version-with-mega>`.
 
 \|force-break\|
 
@@ -470,12 +431,11 @@ role="doc"}.
 
 ### Correcting the AT version on a Duinopeak ESP8266 WiFi Expansion Board
 
-![Duinopeak ESP8266 WiFi Expansion Board](/_static/images/wifi/duinopeak.png){.image-float-right
-.image-float-right}
+![Duinopeak ESP8266 WiFi Expansion Board](/_static/images/wifi/duinopeak.png)
 
 ::: todo
 [Correcting AT version Duinopeak ESP8266 WiFi Expansion
-Board]{.title-ref}
+Board]
 :::
 
 \|force-break\|
@@ -484,11 +444,9 @@ Board]{.title-ref}
 
 ### Correcting the AT version on a Mega+WiFi
 
-![Mega + WiFi](/_static/images/assembly/mega_wifi.png){.image-float-right
-.image-float-right}
+![Mega + WiFi](/_static/images/assembly/mega_wifi.png)
 
 Flashing the ESP8266 chip on a Mega+WiFi is covered in detail
-`here </reference/hardware/microcontrollers/wifi-mega>`{.interpreted-text
-role="doc"}.
+`here </reference/hardware/microcontrollers/wifi-mega>`.
 
 \|force-break\|

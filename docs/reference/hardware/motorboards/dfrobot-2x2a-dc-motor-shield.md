@@ -12,8 +12,7 @@ This board is **not** compatible with \|TM\| DC mode.
 ::::
 
 **THIS BOARD HAS NO CURRENT SENSE!** Refer to the
-`reference/hardware/motorboards/motor-board-config:current sense and sense factor`{.interpreted-text
-role="ref"} section for further information.
+`reference/hardware/motorboards/motor-board-config:current sense and sense factor` section for further information.
 
 This is another L298 based board with inadequate cooling. Fan and/or
 heat sink recommended. Max current realistically 1.3A. This board has NO

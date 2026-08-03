@@ -1,6 +1,6 @@
 # Suppliers / Resellers List
 
-![USA Flag](/_static/images/icons/flag_us60px.png){.align-left}
+![USA Flag](/_static/images/icons/flag_us60px.png)
 
 ## In the United States serving USA, Canada, & Mexico
 
@@ -13,7 +13,7 @@ clearer
 
 \|HR-DASHEDxa\|
 
-![Canada Flag](/_static/images/icons/flag_can60px.png){.align-left}
+![Canada Flag](/_static/images/icons/flag_can60px.png)
 
 ## In Canada serving Canada and the United States
 
@@ -25,7 +25,7 @@ clearer
 
 \|HR-DASHEDxa\|
 
-![UK Flag](/_static/images/icons/flag_uk60px.jpg){.align-left}
+![UK Flag](/_static/images/icons/flag_uk60px.jpg)
 
 ## In England serving the UK
 
@@ -41,7 +41,7 @@ clearer
 
 \|HR-DASHEDxa\|
 
-![Austria Flag](/_static/images/icons/flag_austria60px.png){.align-left}
+![Austria Flag](/_static/images/icons/flag_austria60px.png)
 
 ## In Austria serving the European Union (EU)
 
@@ -54,7 +54,7 @@ clearer
 
 \|HR-DASHEDxa\|
 
-![Australia Flag](/_static/images/icons/flag_australia60px.png){.align-left}
+![Australia Flag](/_static/images/icons/flag_australia60px.png)
 
 ## In Australia serving AU, NZ, and APAC
 

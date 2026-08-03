@@ -1,4 +1,4 @@
-::: {.meta keywords="Products"}
+::: 
 :::
 
 \|donate-button\|
@@ -27,6 +27,6 @@ available for free to all users of our command stations.
 To learn more about a specific feature, click on one of the following
 links.
 
-::: {.toctree maxdepth="1"}
+::: 
 exrail/index trackmanager/index
 :::

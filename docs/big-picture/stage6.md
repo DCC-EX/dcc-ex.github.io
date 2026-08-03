@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -66,7 +66,7 @@ defined objects and alias. Again, all your existing sequences, routes,
 etc. should remain unchanged.
 
 For more information on aliases, refer to
-`exrail/exrail-command-reference:aliases`{.interpreted-text role="ref"}.
+`exrail/exrail-command-reference:aliases`.
 
 ## Turnouts/Points
 
@@ -75,10 +75,8 @@ allow trains to enter and exit the station siding, or continue along the
 main track.
 
 For further reading on turnouts/points, you can refer to the
-`exrail/exrail-command-reference:turnout/point objects - definition and control`{.interpreted-text
-role="ref"} section of the \|EX-R\| reference and
-`reference/software/command-summary-consolidated:turnouts/points (configuring the ex-commandstation)`{.interpreted-text
-role="ref"} in the DCC-EX Command reference.
+`exrail/exrail-command-reference:turnout/point objects - definition and control` section of the \|EX-R\| reference and
+`reference/software/command-summary-consolidated:turnouts/points (configuring the ex-commandstation)` in the DCC-EX Command reference.
 
 ### Turnout/Point definitions
 
@@ -167,9 +165,7 @@ Tip"
 
 Remember! Servo angles will be unique to your layout, and probably even
 unique to individual turnouts/points, so be sure you read the blurb on
-`big-picture/stage3:tuning servo positions`{.interpreted-text
-role="ref"} and the `/reference/hardware/servo-module`{.interpreted-text
-role="doc"} page.
+`big-picture/stage3:tuning servo positions` and the `/reference/hardware/servo-module` page.
 
 Please don\'t blindly copy/paste the servo angles listed here and expect
 them to \"just work\".
@@ -296,9 +292,7 @@ Tip"
 
 Remember! Servo angles will be unique to your layout, and probably even
 unique to individual signals, so be sure you read the blurb on
-`big-picture/stage3:tuning servo positions`{.interpreted-text
-role="ref"} and the `/reference/hardware/servo-module`{.interpreted-text
-role="doc"} page.
+`big-picture/stage3:tuning servo positions` and the `/reference/hardware/servo-module` page.
 
 Please don\'t blindly copy/paste the servo angles listed here and expect
 them to \"just work\".
@@ -587,8 +581,7 @@ Now it\'s time to display the full automation capabilities by setting
 our layout up for fully automated control of your trains.
 
 You will note that these are somewhat similar to
-`exrail/examples:multiple inter-connected trains`{.interpreted-text
-role="ref"}, updated to suit the specifics of the RMFT layout.
+`exrail/examples:multiple inter-connected trains`, updated to suit the specifics of the RMFT layout.
 
 To setup for these fully automated sequences, we need to ensure our
 trains are placed in the below positions, noting that \|EX-R\| has no
@@ -617,8 +610,7 @@ Remember, these are virtual blocks, and do not necessarily need to be
 electrically isolated from each other. Don\'t confuse isolated blocks of
 track or block occupancy detection with these virtual blocks. For
 further background, refer to
-`exrail/exrail-command-reference:virtual block control`{.interpreted-text
-role="ref"}.
+`exrail/exrail-command-reference:virtual block control`.
 ::::
 
 When reading through the sections below on the logic, it helps to keep
@@ -693,8 +685,7 @@ state of a pin (either real or virtual) which can then be tested by an
 \"CHOOSE_BLK2\") to be latched and unlatched, as this pin does not exist
 on the Mega2560, nor does it exist on any of our I/O expander boards.
 Further reading on `LATCH()` and `UNLATCH()` can be found in the
-`exrail/exrail-command-reference:sensors/inputs - reading and responding`{.interpreted-text
-role="ref"} section of the EXRAIL reference.
+`exrail/exrail-command-reference:sensors/inputs - reading and responding` section of the EXRAIL reference.
 
 When our CommandStation starts up, virtual pin 60 will not be set, and
 therefore evaluating the IF() statement `IF(CHOOSE_BLK2)` will return
@@ -1002,24 +993,17 @@ are:
 
 ## Complete myAutomation.h examples
 
-- `ROUTEs with DCC accessory turnouts/points and signals on Mega2560 direct I/O pins<stage6/example1>`{.interpreted-text
-  role="doc"}
-- `ROUTEs with turnouts/points/signals on Mega2560 direct I/O pins <stage6/example2>`{.interpreted-text
-  role="doc"}
-- `ROUTEs with turnouts/points/signals on MCP23017 I/O expander Vpins <stage6/example3>`{.interpreted-text
-  role="doc"}
-- `ROUTEs with servo based turnouts/points/signals on a PCA9685 servo module <stage6/example4>`{.interpreted-text
-  role="doc"}
-- `Full automation with pin based turnouts/points and signals on Mega2560 direct I/O pins <stage6/example5>`{.interpreted-text
-  role="doc"}
-- `Full automation with pin based turnouts/points and signals on MCP23017 I/O expander Vpins <stage6/example6>`{.interpreted-text
-  role="doc"}
-- `Full automation with servo based turnouts/points and signals with a PCA9685 servo module <stage6/example7>`{.interpreted-text
-  role="doc"}
+- `ROUTEs with DCC accessory turnouts/points and signals on Mega2560 direct I/O pins<stage6/example1>`
+- `ROUTEs with turnouts/points/signals on Mega2560 direct I/O pins <stage6/example2>`
+- `ROUTEs with turnouts/points/signals on MCP23017 I/O expander Vpins <stage6/example3>`
+- `ROUTEs with servo based turnouts/points/signals on a PCA9685 servo module <stage6/example4>`
+- `Full automation with pin based turnouts/points and signals on Mega2560 direct I/O pins <stage6/example5>`
+- `Full automation with pin based turnouts/points and signals on MCP23017 I/O expander Vpins <stage6/example6>`
+- `Full automation with servo based turnouts/points and signals with a PCA9685 servo module <stage6/example7>`
 
 | 
 
-::: {.toctree hidden="" maxdepth="1"}
+::: 
 Example 1 ROUTEs with turnouts/points/signals \<stage6/example1\>
 Example 2 ROUTEs with turnouts/points/signals \<stage6/example2\>
 Example 3 ROUTEs with turnouts/points/signals \<stage6/example3\>

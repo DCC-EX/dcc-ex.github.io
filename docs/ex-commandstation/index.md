@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -35,7 +35,7 @@ Control (\|DCC\|) standards, including:
 <figure class="align-right">
 <img src="/_static/images/ex-csb1/csb1_render_drop_shadow.png"
 alt="EX-CommandStation" />
-<figcaption>RTR EX-CSB1 <span>|BR|</span> Command Station /
+<figcaption>RTR EX-CSB1 <span>**BR**</span> Command Station /
 Booster</figcaption>
 </figure>
 
@@ -67,8 +67,7 @@ alt="EX-CommandStation" />
 
 It also supports:
 
-- `Direct Current (DC) </reference/hardware/dcc-vs-dc>`{.interpreted-text
-  role="doc"} locomotive control using Pulse Width Modulation (PWM)
+- `Direct Current (DC) </reference/hardware/dcc-vs-dc>` locomotive control using Pulse Width Modulation (PWM)
 
 ------------------------------------------------------------------------
 
@@ -78,12 +77,10 @@ To get started, simply choose your path.
 
 > Whether you are a \|Conductor-text\|, \|Tinkerer-text\|, or
 > \|Engineer-text\|, most people will choose the easy,
-> `Ready-To-Run</ex-commandstation/rtr-index>`{.interpreted-text
-> role="doc"} (RTR), option and purchase an \|EX-CSB1\|.
+> `Ready-To-Run</ex-commandstation/rtr-index>` (RTR), option and purchase an \|EX-CSB1\|.
 >
 > Some Tinkerers and Engineers may opt to go the
-> `Do-It-Yourself</ex-commandstation/diy/index>`{.interpreted-text
-> role="doc"} (DIY) route by purchasing separate components (or a kit),
+> `Do-It-Yourself</ex-commandstation/diy/index>` (DIY) route by purchasing separate components (or a kit),
 > connecting it together themselves, and installing the \|EX-CS\|
 > software.
 >
@@ -105,10 +102,8 @@ To get started, simply choose your path.
   ----------------- ------------------------------------------------------------------
   \|conductor\|     If you are just starting on the \|DCC-EX\| journey we recommend
                     you start with the \|BR\|
-                    `Ready-to-Run</ex-commandstation/rtr-index>`{.interpreted-text
-                    role="doc"} (RTR) page though feel free to try the
-                    `Do-It-Yourself</ex-commandstation/diy/index>`{.interpreted-text
-                    role="doc"} (DIY) path.
+                    `Ready-to-Run</ex-commandstation/rtr-index>` (RTR) page though feel free to try the
+                    `Do-It-Yourself</ex-commandstation/diy/index>` (DIY) path.
 
   ----------------- ------------------------------------------------------------------
 
@@ -117,16 +112,13 @@ To get started, simply choose your path.
   ----------------- ------------------------------------------------------------------
   \|tinkerer\|      If you are just starting on the \|DCC-EX\| journey we also
   \|BR\| \|BR\|     recommend you start with the \|BR\|
-  \|engineer\|      `Ready-to-Run</ex-commandstation/rtr-index>`{.interpreted-text
-                    role="doc"} (RTR) or
-                    `Do-It-Yourself</ex-commandstation/diy/index>`{.interpreted-text
-                    role="doc"} (DIY). \|BR\| But if you wish to discover more you may
+  \|engineer\|      `Ready-to-Run</ex-commandstation/rtr-index>` (RTR) or
+                    `Do-It-Yourself</ex-commandstation/diy/index>` (DIY). \|BR\| But if you wish to discover more you may
                     want to look at the
-                    `/ex-commandstation/advanced-setup/index`{.interpreted-text
-                    role="doc"} pages for additional options that may be of interest.
+                    `/ex-commandstation/advanced-setup/index` pages for additional options that may be of interest.
 
   ----------------- ------------------------------------------------------------------
 
-::: {.toctree maxdepth="1" hidden=""}
+::: 
 rtr-index diy/index advanced-setup/index accessories/index
 :::

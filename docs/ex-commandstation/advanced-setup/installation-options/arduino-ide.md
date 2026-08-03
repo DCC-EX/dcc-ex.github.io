@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -36,7 +36,7 @@ The \|EX-I\| will meet 100% of the needs of a \|conductor-text\| or
 ::::
 
 Those on the \|Engineer-text\| path (see
-`/begin/levels`{.interpreted-text role="doc"}) may want to make changes
+`/begin/levels`) may want to make changes
 to the code, or just learn more about how the \|EX-CS\| software works.
 At a minimum, you may need to change options in the \'config.h\' file,
 or use the IDE\'s \"Serial Monitor\" to monitor your Command Station,
@@ -101,7 +101,7 @@ like the \"User Command Override\" feature, high current motor boards,
 etc. But for now, and for most users, this will be all you need.
 
 ![Find the CommandStation-EX.ino
-file](/_static/images/arduino-ide/commandstation-ex.jpg){alt="Find the CommandStation-EX.ino File"}
+file](/_static/images/arduino-ide/commandstation-ex.jpg)
 
 ## Edit the config.h file (optional)
 
@@ -129,8 +129,7 @@ editing window. If you are sure of your changes, make sure to click on
 
 Before you attempt this step, make sure that you have everything
 connected properly from the
-`assembly page </ex-commandstation/diy/assembly>`{.interpreted-text
-role="doc"}. And a final reminder to **make sure you cut the Vin trace**
+`assembly page </ex-commandstation/diy/assembly>`. And a final reminder to **make sure you cut the Vin trace**
 on the bottom of the \|standard Motor Driver\|. Ready? Proceed.
 
 Connect the computer to the Arduino with the USB cable. Note the 5V
@@ -143,7 +142,7 @@ From the \"Tools\" menu select the \"Board\" menu, then \"Arduino AVR
 boards\", and then \"Arduino Mega or Mega 2560\".
 
 ![Select your board
-type](/_static/images/arduino-ide/board_type_mega.jpg){alt="Select Arduino Mega"}
+type](/_static/images/arduino-ide/board_type_mega.jpg)
 
 Then select \"Processor\" and make sure it says \"ATMega2560\"
 
@@ -155,7 +154,7 @@ CH340](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all)
 \|EXTERNAL-LINK\|
 
 ![Select the correct COM
-Port](/_static/images/arduino-ide/board_port_mega.jpg){alt="Select the COM Port"}
+Port](/_static/images/arduino-ide/board_port_mega.jpg)
 
 ## Upload the software
 
@@ -163,7 +162,7 @@ Click on the Upload button near the top left. It is a circle with a
 right arrow, next to the Compile button that looks like a check mark.
 
 ![Upload the Command Station Software to the
-Arduino](/_static/images/arduino-ide/upload_arrow.jpg){alt="Upload the CS Software to the Arduino"}
+Arduino](/_static/images/arduino-ide/upload_arrow.jpg)
 
 The \|Arduino IDE\| will go through a compile process which will build
 all the files into an application the Arduino can run, and then upload
@@ -249,8 +248,7 @@ Turn off the power to the track by sending `<0>` to the CS. That is a
   non-programming commands on the PROG track!**
 
 **Now run EX-WebThrottle** directly from our
-`EX-WebThrottle web page </ex-webthrottle/index>`{.interpreted-text
-role="doc"}. As described on that page, ensure that you are using Chrome
+`EX-WebThrottle web page </ex-webthrottle/index>`. As described on that page, ensure that you are using Chrome
 version 89 or above. Note that you can run the throttle from your
 browser, and/or install it locally from its own menu.
 
@@ -274,5 +272,4 @@ Video](https://www.youtube.com/watch?v=BkgsEOjxWaU).
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.

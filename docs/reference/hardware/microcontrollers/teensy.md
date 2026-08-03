@@ -5,7 +5,7 @@
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
 **As of version 5.4.0, this is now deprecated, see**
-`/news/posts/20250301`{.interpreted-text role="doc"}
+`/news/posts/20250301`
 
 The Teensy 3.x/4.x Series by PJRC are next generation ARM-based
 microcontrollers. They have loads of RAM, a faster clock speed and a
@@ -21,19 +21,19 @@ There are several versions 3.2, 3.5, 3.6, 4.0, 4.1. with the biggest
 difference being the size/number of pins. You can also purchase the
 boards with or without the headers soldered on.
 
-![Teensy 3.2](/_static/images/microcontrollers/teensy_3_2.jpg){.align-center}
+![Teensy 3.2](/_static/images/microcontrollers/teensy_3_2.jpg)
 
 The above is a Teensy 3.2 compared to a quarter. Below is a Teensy 3.6
 if you need more GPIO pins
 
-![Teensy 3.6](/_static/images/microcontrollers/teensy_3_6.png){.align-center}
+![Teensy 3.6](/_static/images/microcontrollers/teensy_3_6.png)
 
 There are even expansion boards to add WiFi and Ethernet. There is a
 Mega form factor board available to allow you to use 3.3V shields.
 
-![Teensy Ethernet](/_static/images/microcontrollers/teensy41_ethernet2.jpg){.align-left}
+![Teensy Ethernet](/_static/images/microcontrollers/teensy41_ethernet2.jpg)
 
-![Teensy WiFi Expansion Board](/_static/images/microcontrollers/teensy_4_expansion_brd.jpg){.align-left}
+![Teensy WiFi Expansion Board](/_static/images/microcontrollers/teensy_4_expansion_brd.jpg)
 
 ::: rst-class
 clearer
@@ -74,8 +74,7 @@ apply:
 
 - Teensys are strictly 3.3V, so you have to be careful that anything
   connected to the GPIO ports is also 3.3V (see also
-  `other 3.3v microcontrollers </reference/hardware/microcontrollers/microcontrollers>`{.interpreted-text
-  role="doc"})
+  `other 3.3v microcontrollers </reference/hardware/microcontrollers/microcontrollers>`)
 - Teensy 3.x models are all now considered \"legacy\" products by PCJR
   and marked \"Not recommended for new designs or projects\", with only
   Teensy 4.0/4.1 recommended by PCJR

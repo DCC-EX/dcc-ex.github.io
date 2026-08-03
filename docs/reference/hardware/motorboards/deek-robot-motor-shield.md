@@ -18,5 +18,4 @@ Often cheaper. Supports 2A per channel, but can deliver realistically
 ![Deek-Robot Motor
 Shield](/_static/images/motorboards/deek-robot_motor_shield.png)
 
-`Install the Deek-Robot Motor Shield </ex-commandstation/diy/assembly>`{.interpreted-text
-role="doc"}
+`Install the Deek-Robot Motor Shield </ex-commandstation/diy/assembly>`

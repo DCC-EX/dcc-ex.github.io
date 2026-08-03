@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -48,14 +48,14 @@ will be accessed using pin number 100.
 Once you\'ve made all of the connections, apply power to the Arduino.
 
 Then, in the \|Serial Monitor\|, enter the command [\<D SERVO 100
-450\>]{.title-ref}. The servo should move, as long as it isn\'t (by some
+450\>]. The servo should move, as long as it isn\'t (by some
 fluke) already in that position.
 
-Enter [\<D SERVO 100 110\>]{.title-ref} and this time it should
+Enter [\<D SERVO 100 110\>] and this time it should
 definitely move. For the last parameter (servo position) you can use any
 value between about 105 and 490.
 
-Try [\<D SERVO 100 450 3\>]{.title-ref} and the servo should move slowly
+Try [\<D SERVO 100 450 3\>] and the servo should move slowly
 back.
 
 You can use the servo to control turnouts, semaphore signals, engine
@@ -225,9 +225,9 @@ animation accessory servo \'Railfan Walking\'.
 AUTOSTART
 SEQUENCE(35)  // When panel button on Mega Dpin 35 is pressed alternate between the two positions taking 10 seconds
 AFTER(35)
- SERVO2(105, 490, 10000)  PRINT("Railfan Walking Back To Annex") // Walk Counter-Clockwise {Thrown}
+ SERVO2(105, 490, 10000)  PRINT("Railfan Walking Back To Annex") // Walk Counter-Clockwise 
 AFTER(35)
- SERVO2(105, 110, 10000)  PRINT("Railfan Walking To Train") // Walk Clockwise {Close}
+ SERVO2(105, 110, 10000)  PRINT("Railfan Walking To Train") // Walk Clockwise 
 FOLLOW(35)
 ```
 
@@ -254,8 +254,7 @@ LEDs can be connected with either the anode (positive) or cathode
 (negative) to the PWM pin of the PCA9685, and to set the required
 intensity for the LED, you will need to add a configuration setting to
 your \"mySetup.h\" file. Refer to
-`/ex-commandstation/advanced-setup/startup-config`{.interpreted-text
-role="doc"} for further information on this file.
+`/ex-commandstation/advanced-setup/startup-config` for further information on this file.
 
 If connecting the anode (positive) side of the LED to the PWM pin, the
 cathode (negative) side connects to the ground pin, and you do not need
@@ -310,8 +309,7 @@ they can be added to the Turnout Table by defining these as outputs also
 in \"mySetup.h\".
 
 An output is defined by using the `<Z id vpin iflag>` command. Refer to
-`reference/software/command-summary-consolidated:outputs (configuring the ex-commandstation)`{.interpreted-text
-role="ref"} for further information on this command.
+`reference/software/command-summary-consolidated:outputs (configuring the ex-commandstation)` for further information on this command.
 
 This command will associate the provided output ID with the LED
 connected to the VPin as defined in the configuration commands in the
@@ -407,7 +405,7 @@ Tip"
 
 Keep a spare slot (we recommend 100) open on your first PCA9685 board so
 that you can test servo positions with the [\<D SERVO
-\...\>]{.title-ref} command to connect your servos to and get the exact
+\...\>] command to connect your servos to and get the exact
 positions you need.
 ::::
 

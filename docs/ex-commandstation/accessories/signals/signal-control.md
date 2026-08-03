@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -23,7 +23,7 @@ associated with the signal, and so this vpin is used.
 ### Interactive control with DCC-EX commands
 
 Once your light or servo signals have been defined in myAutomation.h,
-you can use the \|DCC-EX\| native command `</ RED|AMBER|GREEN vpin>` to
+you can use the \|DCC-EX\| native command `</ RED**AMBER**GREEN vpin>` to
 control them interactively via the \|EX-CS\| serial console.
 
 You simple run one of these commands, providing the defined red vpin as
@@ -65,9 +65,8 @@ DONE
 ```
 
 For further information on controlling signals refer to
-`exrail/exrail-command-reference:signal objects - definition and control`{.interpreted-text
-role="ref"}, and for some examples refer to
-`/big-picture/index`{.interpreted-text role="doc"}.
+`exrail/exrail-command-reference:signal objects - definition and control`, and for some examples refer to
+`/big-picture/index`.
 
 ### Signal event handlers
 
@@ -106,9 +105,8 @@ DONE
   signal 101 to amber to warn approaching trains.
 
 For further information on controlling signals refer to
-`exrail/exrail-command-reference:signal objects - definition and control`{.interpreted-text
-role="ref"}, and for some examples refer to
-`/big-picture/index`{.interpreted-text role="doc"}.
+`exrail/exrail-command-reference:signal objects - definition and control`, and for some examples refer to
+`/big-picture/index`.
 
 ## Controlling DCC accessory signals
 
@@ -148,8 +146,7 @@ DONE
 
 For further information on controlling DCC accessories including signals
 refer to
-`exrail/exrail-command-reference:dcc accessory decoder control`{.interpreted-text
-role="ref"}.
+`exrail/exrail-command-reference:dcc accessory decoder control`.
 
 ### DCC accessory event handlers
 
@@ -195,8 +192,7 @@ DONE
 
 For further information on controlling DCC accessories including signals
 refer to
-`exrail/exrail-command-reference:dcc accessory decoder control`{.interpreted-text
-role="ref"}.
+`exrail/exrail-command-reference:dcc accessory decoder control`.
 
 ## Controlling signals with more than three aspects
 

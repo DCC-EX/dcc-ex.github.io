@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -23,7 +23,7 @@ PlatformIO, etc). This means that you already have all the tools you
 will need, and there is nothing else to download or install. The method
 of creating your script file is described in the next section.
 
-:::: {.note .note-float-right}
+:::: 
 ::: title
 Note
 :::

@@ -6,9 +6,9 @@ AKA Makerfabs ESP8266 WiFi Shield
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 
@@ -18,16 +18,15 @@ is designed to work out of the box. Make sure to purchase from DCC-EX or
 any of our dealers or standard parts suppliers.
 
 If for any reason you wish to update the firmware in the future, pleas
-see `/support/wifi-at-version`{.interpreted-text role="doc"} for details
+see `/support/wifi-at-version` for details
 on how to check the version and how to change it.
 ::::
 
 ![Makerfabs ESP8266 WiFi
-Shield](/_static/images/assembly/wifi_jumpers1.jpg){alt="Makerfabs ESP-8266 WiFi Shield"}
+Shield](/_static/images/assembly/wifi_jumpers1.jpg)
 
 Installing the board follows the same procedure in the
-`section on assembly </ex-commandstation/diy/assembly>`{.interpreted-text
-role="doc"}. Start by noting the tab end of the board and align it with
+`section on assembly </ex-commandstation/diy/assembly>`. Start by noting the tab end of the board and align it with
 the tab end of the motor board. You will stack this board on top to make
 a three board stack.
 
@@ -61,13 +60,11 @@ aligned](/_static/images/assembly/wifi_seat1.jpg)
 
 Now do the the other side. If all the pins are straight and lined up
 properly, hold both sides of the board and press it together gently
-(`wifi-right-side-pins-aligned-advanced`{.interpreted-text
-role="numref"}). Note that the pins are quite long and will not go all
+(`wifi-right-side-pins-aligned-advanced`). Note that the pins are quite long and will not go all
 the way into the header. You should have even more of the pins showing
 between the bottom of the WiFi board and the top of the header on the
 Motor Board than between the Motor Board and the Arduino. This is normal
-(see `wifi-fully-seated-boards-advanced`{.interpreted-text
-role="numref"}).
+(see `wifi-fully-seated-boards-advanced`).
 
 <figure>
 <img src="/_static/images/assembly/wifi_seat2a.jpg"
@@ -113,7 +110,7 @@ Take a second jumper wire and connect it to any one of the Rx pins on
 the Wifi Board and connect the other end to Tx1 on the mega (pin 18).
 
 ![Install the jumper
-wires](/_static/images/assembly/wifi_jumpers2.png){alt="Install the Jumper wires"}
+wires](/_static/images/assembly/wifi_jumpers2.png)
 
 :!!! note "::: title
 Note"

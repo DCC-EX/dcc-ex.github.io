@@ -2,9 +2,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -49,14 +49,13 @@ for action:
 
 To select and control a loco from here, you need to:
 
-- Ensure track power is turned on using the `Power`{.interpreted-text
-  role="guilabel"} button at the top of the window, or selecting \"Power
+- Ensure track power is turned on using the `Power` button at the top of the window, or selecting \"Power
   On\" from the \"Power\" menu
 - Type the address of your loco in the \"Address Panel\" then press the
-  `Set`{.interpreted-text role="guilabel"} button
+  `Set` button
 - You can now use the throttle slider, forward, reverse,
-  `Idle`{.interpreted-text role="guilabel"}, and
-  `STOP!`{.interpreted-text role="guilabel"} buttons to control your
+  `Idle`, and
+  `STOP!` buttons to control your
   loco
 - Use the buttons in the \"Function Panel\" to control your various loco
   functions also
@@ -70,8 +69,7 @@ and running in a forward direction at 25% speed:
 
 If you would like to utilise the combined power of EX-CommandStation &
 JMRI DecoderPro Programming Station, please download and review the
-`reference/downloads/documents:comprehensive dcc-ex & jmri decoderpro getting started guide pdf`{.interpreted-text
-role="ref"}.
+`reference/downloads/documents:comprehensive dcc-ex & jmri decoderpro getting started guide pdf`.
 
 ## Further reading
 

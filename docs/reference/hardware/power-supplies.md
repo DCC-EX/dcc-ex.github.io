@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -64,8 +64,7 @@ Note"
 
 It is possible to get multiple voltages from one power supply. How to do
 that is covered below in the
-`reference/hardware/power-supplies:Using one power supply with cheap converters to power everything`{.interpreted-text
-role="ref"}.
+[reference/hardware/power-supplies:Using one power supply with cheap converters to power everything`.
 ::::
 
 ------------------------------------------------------------------------
@@ -75,7 +74,7 @@ role="ref"}.
 Note, this primarily applies to the Arduino Mega with a \|standard motor
 driver\|. (See the previous section.)
 
-::: {.contents .in-this-section depth="1" local=""}
+::: 
 The Four Ways to Power a Microcontroller
 :::
 
@@ -102,7 +101,7 @@ should be fine.
 Even if you don\'t have a laptop, you can use a 5V, 800mA or more USB
 power supply like a phone charger and connect it to the USB port.
 
-:::: {.warning .warning-float-right}
+:::: 
 ::: title
 Warning
 :::
@@ -156,13 +155,13 @@ fuse for overcurrent. Research this option before attempting it.
 
 ## Powering the Motor Driver
 
-::: {.contents .in-this-section depth="1" local=""}
+::: 
 In this section
 :::
 
 ### Voltage
 
-:::: {.warning .warning-float-right}
+:::: 
 ::: title
 Warning
 :::
@@ -171,8 +170,7 @@ These are *common*, but not universal, upper limits of what decoders
 will accept. You should check the manual of your decoders to confirm
 what they accept, and adjust the voltage down accordingly.
 
-`Applying a voltage above what a decoder was designed for may permanently damage it.`{.interpreted-text
-role="dcc-ex-red-bold-italic"}
+`Applying a voltage above what a decoder was designed for may permanently damage it.`
 ::::
 
 **Voltage - on the track**
@@ -262,7 +260,7 @@ thumb is you can operate 3 to 5 N or HO sound locos on the 2A boards.
 For larger layouts with higher current requirements on the MAIN track
 and a motor driver that can handle those currents, you\'ll want power
 supply that can deliver that larger current. See
-`Motor Drivers <motor-boards>`{.interpreted-text role="doc"} for more
+`Motor Drivers ](motor-boards.md) for more
 information about higher current \|motor driver\|.
 
 A device will only draw the current it needs. So whether you have a 2A
@@ -386,7 +384,7 @@ accessories. That is 9A. So you should get a 10A or greater power
 supply.
 ::::
 
-::: {.contents .in-this-section depth="1" local=""}
+::: 
 In this section
 :::
 
@@ -499,13 +497,11 @@ of power, times 7 that is 14 Watts of heat!
 [^1]: The voltage you need for the [\|Motor
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
-    voltage can damage your locos. [\|BR\|](##SUBST##|BR|) See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    voltage can damage your locos. [\|BR\|](##SUBST##**BR**) See the
+    `reference/hardware/power-supplies:powering the motor driver` for more information.
 
 [^2]: The voltage you need for the [\|Motor
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
-    voltage can damage your locos. [\|BR\|](##SUBST##|BR|) See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    voltage can damage your locos. [\|BR\|](##SUBST##**BR**) See the
+    `reference/hardware/power-supplies:powering the motor driver` for more information.

@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -340,7 +340,7 @@ very simple include files can be added. Consequently, only a limited
 number of the DCC-EX API function can be used from here.
 
 Create a \'myHal.cpp\' file and add a function definition
-`void halSetup(){ };`. Within this function you can add any executable
+`void halSetup();`. Within this function you can add any executable
 code. Outside the function, you can declare variables and add include
 files to allow other functions to be invoked. For example:
 
@@ -348,12 +348,7 @@ files to allow other functions to be invoked. For example:
 > #include "IODevice.h"
 > #include "Turnouts.h"
 >
-> void halSetup() {
->   // Servo controller on I2C addr 0x41
->   PCA9685::create(300, 16, 0x41);
->   // Define servo on first pin
->   ServoTurnout::create(10, 300, 420 210, 0);
-> }
+> void halSetup() 
 > ```
 
 The `create()` function allocates memory for the device at run-time. As
@@ -368,10 +363,7 @@ at compile-time.
 > // Servo controller on I2C addr 0x41
 > PCA9685 pwmModule1(300, 16, 0x41);
 >
-> void halSetup() {
->   // Define servo on first pin
->   ServoTurnout::create(10, 300, 420 210, 0);
-> }
+> void halSetup() 
 > ```
 
 Because the myHal.cpp module is a self-contained C++ module,
@@ -607,7 +599,7 @@ the handling of Displays, Turnouts, Sensors and Outputs.
   been instructed to turn on an input pull-up). Additional parameter has
   been added which identifies the function being performed, e.g. 1=Servo
   config, 2=Pullup on/off etc. Thus, the device\'s
-  [configure]{#configure} method validates that the requested
+  [configure] method validates that the requested
   configuration function is supported, or rejects it.
 
 - HAL: Normally the Sensor class issues cyclic read request using
@@ -698,11 +690,7 @@ the handling of Displays, Turnouts, Sensors and Outputs.
 
   > ``` cpp
   > #include "IO_HCSR04.h"
-  > void halSetup() {
-  >   ...
-  >   HCSR04::create(vpin, triggerPin, echoPin, onThreshold, offThreshold);
-  >   ...
-  > }
+  > void halSetup() 
   > ```
 
   where triggerPin and echoPin are the Arduino pins connected to the
@@ -718,11 +706,7 @@ the handling of Displays, Turnouts, Sensors and Outputs.
 
   > ``` cpp
   > #include "IO_AnalogueInputs.h"
-  > void halSetup() {
-  >   ...
-  >   ADS111x::create(firstVpin, nPins, i2cAddress);
-  >   ...
-  > }
+  > void halSetup() 
   > ```
 
 ## Future Enhancements

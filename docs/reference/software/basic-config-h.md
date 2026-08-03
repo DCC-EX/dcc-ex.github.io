@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="3" local=""}
+::: 
 On this page
 :::
 ::::
@@ -23,13 +23,13 @@ setting before that.
 If you are using the EX-Installer, the important options will be
 automatically managed and configured. There are several more advanced
 options covered in the
-`/reference/software/advanced-config-h`{.interpreted-text role="doc"}
+`/reference/software/advanced-config-h`
 but these should not trouble the vast majority of users.
 
-These options should be coded in the file [config.h]{.title-ref} which
+These options should be coded in the file [config.h] which
 will be automatically included in the compilation process.
 
-## Motor shield definition (Mandatory) {#basic-config-h-motor-shield}
+## Motor shield definition (Mandatory) 
 
 ``` cpp
 #define MOTOR_SHIELD_TYPE typeName
@@ -87,11 +87,11 @@ WiFi has two operating modes:
 The WiFi chip will first try to connect to the previously configured
 network and if that fails fall back to Access Point mode.
 
-The SSID of the AP will be automatically set to [DCCEX\_\*]{.title-ref}
-where the [\*]{.title-ref} part is taken from an internal device number
-(for example [DCCEX_12b7c]{.title-ref}) to try and avoid duplications.
-The password will be set to [PASS\_\*]{.title-ref} where the
-[\*]{.title-ref} part matches the generated SSID name.
+The SSID of the AP will be automatically set to [DCCEX\_\*]
+where the [\*] part is taken from an internal device number
+(for example [DCCEX_12b7c]) to try and avoid duplications.
+The password will be set to [PASS\_\*] where the
+[\*] part matches the generated SSID name.
 
 ### Setup AP (Access Point) advanced mode
 
@@ -135,7 +135,7 @@ It is not valid to enable Ethernet and WiFi at the same time.
 #define ENABLE_ETHERNET true
 ```
 
-## LCD/OLED support {#basic-config-h-lcd-oled-support}
+## LCD/OLED support 
 
 The LCD feature requires an I2C enabled LCD screen using a Hitachi
 HD44780 controller and a commonly available PCF8574 based I2C

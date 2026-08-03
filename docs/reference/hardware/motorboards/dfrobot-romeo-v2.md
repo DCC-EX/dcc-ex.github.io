@@ -16,8 +16,7 @@ This board is **not** compatible with \|TM\| DC mode.
 ::::
 
 **THIS BOARD HAS NO CURRENT SENSE!** Refer to the
-`reference/hardware/motorboards/motor-board-config:current sense and sense factor`{.interpreted-text
-role="ref"} section for further information.
+`reference/hardware/motorboards/motor-board-config:current sense and sense factor` section for further information.
 
 On the surface, this seems like a great idea, an Arduino and \|motor
 driver\| on one board. It is a very thin surface ;) While we don\'t

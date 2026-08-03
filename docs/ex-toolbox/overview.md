@@ -4,7 +4,7 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-![EX-Toolbox](/_static/images/ex-toolbox/ex_toolbox_icon.png){.align-right}
+![EX-Toolbox](/_static/images/ex-toolbox/ex_toolbox_icon.png)
 
 \|EX-TB\| is a free, open source, Android app to help setup and
 configure your \|EX-CS\|. It is intended for setup, configuration,
@@ -22,8 +22,7 @@ As of version 0.1.35, it can also connect directly from an Android
 device to a \|EX-CS\| through a USB cable.
 
 There are additional options to connect to an \|EX-CS\| though USB via a
-PC. See `ex-toolbox/using:connecting via usb`{.interpreted-text
-role="ref"} for details.
+PC. See `ex-toolbox/using:connecting via usb` for details.
 
 \|EX-TB\| is installed on you phone or tablet from the Play Store.
 
@@ -35,8 +34,7 @@ role="ref"} for details.
 Although \|EX-TB\| is an Android app, it is possible to run it on
 windows PCs.
 
-See the `/throttles/software/android-apps-on-windows`{.interpreted-text
-role="doc"} page for more information.
+See the `/throttles/software/android-apps-on-windows` page for more information.
 :::
 
 With \|EX-TB\| you can perform:

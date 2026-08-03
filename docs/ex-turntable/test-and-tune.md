@@ -5,9 +5,9 @@
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-turntable-button-small\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -82,8 +82,7 @@ count to validate calibration worked as expected. If the step count is
 unexpected, use the `<C>` command to force calibration to run again.
 
 Further information on the \"activity\" parameter is outlined in the
-`ex-turntable/test-and-tune:ex-turntable activity reference`{.interpreted-text
-role="ref"} section.
+`ex-turntable/test-and-tune:ex-turntable activity reference` section.
 
 ### Testing with the EX-CommandStation diagnostic command
 
@@ -100,10 +99,8 @@ consider the device as \"OFFLINE\", and commands will fail.
 \|EX-CS\| serial console, **not** the \|EX-TT\| serial console.
 
 Referring to
-`reference/developers/hal-config:adding a new device`{.interpreted-text
-role="ref"}, skip ahead to
-`reference/developers/hal-config:checking the driver`{.interpreted-text
-role="ref"}, and the output you\'re looking for to validate the
+`reference/developers/hal-config:adding a new device`, skip ahead to
+`reference/developers/hal-config:checking the driver`, and the output you\'re looking for to validate the
 \|EX-TT\| device driver is loaded and connected successfully is below:
 
 ``` cpp
@@ -112,13 +109,12 @@ role="ref"}, and the output you\'re looking for to validate the
 <* PCA9685 I2C:x41 Configured on Vpins:116-131 OFFLINE *>
 <* MCP23017 I2C:x20 Configured on Vpins:164-179 OFFLINE *>
 <* MCP23017 I2C:x21 Configured on Vpins:180-195 OFFLINE *>
-<* EX-Turntable I2C:x60 Configured on Vpins:600-600  *>          <<== This is the important line, |EX-TT| is connected!
+<* EX-Turntable I2C:x60 Configured on Vpins:600-600  *>          <<== This is the important line, **EX-TT** is connected!
 ```
 
 If there is an \"OFFLINE\" at the end of the \|EX-TT\| line, it
 indicates something is not quite right. Refer to
-`support/ex-tt-troubleshooting:ex-turntable showing as offline with \<d hal show\>`{.interpreted-text
-role="ref"}.
+`support/ex-tt-troubleshooting:ex-turntable showing as offline with \<d hal show\>`.
 
 At power on, note that the turntable should have moved itself to the
 home position, so all commands below assume this is the case.
@@ -191,8 +187,7 @@ tune the turntable positions for your layout and configure your
 \|EX-TT\| ready for operation.
 
 Further information on the \"activity\" parameter is outlined in the
-`ex-turntable/test-and-tune:ex-turntable activity reference`{.interpreted-text
-role="ref"} section.
+`ex-turntable/test-and-tune:ex-turntable activity reference` section.
 
 ## Tuning your turntable positions
 
@@ -202,8 +197,7 @@ Tip"
 
 To determine your starting positions, you will need the full turn step
 count as recorded in
-`ex-turntable/assembly:first start and automatic calibration`{.interpreted-text
-role="ref"}.
+`ex-turntable/assembly:first start and automatic calibration`.
 ::::
 
 To tune your turntable positions, you will need to calculate the number
@@ -297,14 +291,10 @@ however all examples on this page have been updated to reflect the new
 commands.
 
 For full details on using the new commands available, refer to
-`reference/software/command-summary-consolidated:turntables/traversers (configuring the ex-commandstation)`{.interpreted-text
-role="ref"} and
-`reference/software/command-summary-consolidated:turntables/traversers`{.interpreted-text
-role="ref"}, and also the \|EX-R\| commands in
-`exrail/exrail-command-reference:turntable/traverser objects - definition and control`{.interpreted-text
-role="ref"} and
-`exrail/exrail-command-reference:turntable features`{.interpreted-text
-role="ref"}.
+`reference/software/command-summary-consolidated:turntables/traversers (configuring the ex-commandstation)` and
+`reference/software/command-summary-consolidated:turntables/traversers`, and also the \|EX-R\| commands in
+`exrail/exrail-command-reference:turntable/traverser objects - definition and control` and
+`exrail/exrail-command-reference:turntable features`.
 
 For simplicity, the examples below use the same step counts as
 calculated in the tuning section above.
@@ -459,7 +449,7 @@ to add routes to enable this.
 
 If this is your first experience with \|EX-R\| and the
 \"myAutomation.h\" file, familiarise yourself with \|EX-R\| by reading
-through `/exrail/index`{.interpreted-text role="doc"}, paying particular
+through `/exrail/index`, paying particular
 attention to the various mentions of ROUTE and the associated examples.
 
 It is highly recommended to utilise the virtual `RESERVE()` and `FREE()`
@@ -479,7 +469,7 @@ ROUTE to activate the homing process.
 Tip"
 :::
 
-![Conductor Level](/_static/images/level_icons/conductor.png){.align-left}
+![Conductor Level](/_static/images/level_icons/conductor.png)
 
 To make this as simple as possible, we have included
 \"myTurntable-EX.example.h\" with the CommandStation-EX software
@@ -502,7 +492,7 @@ DONE
 
 That\'s it! Once you have created \"myAutomation.h\" and uploaded it to
 your CommandStation as per the process on the
-`/exrail/index`{.interpreted-text role="doc"} page, the routes for each
+`/exrail/index` page, the routes for each
 turntable position should automatically be visible in \|Engine Driver\|
 and \|WiThrottle\| applications.
 
@@ -518,7 +508,7 @@ the phase, or when traversers are used rather than traditional
 turntables, that don\'t actually required phase switching at all.
 
 To enable manual phase switching, you must edit \"config.h\" and set
-`ex-turntable/configure:phase_switching`{.interpreted-text role="ref"}
+`ex-turntable/configure:phase_switching`
 to \"MANUAL\".
 
 Once this has been done, you must explicitly define the phase switching
@@ -539,8 +529,7 @@ activity (0/Turn).
 ::::
 
 To use our tuning example again, the commands in
-`ex-turntable/test-and-tune:example tuning commands`{.interpreted-text
-role="ref"} would need to be modified to replicate the automatic phase
+`ex-turntable/test-and-tune:example tuning commands` would need to be modified to replicate the automatic phase
 switching as such:
 
 ``` cpp
@@ -599,8 +588,7 @@ version 5.4.0 or later of \|EX-CS\|.
 This also means you needn\'t create a `ROUTE()` for each turntable
 position, as the turntable object will autmoatically be available to the
 controller once the objects have been created as outlined in
-`ex-turntable/test-and-tune:configuring your turntable`{.interpreted-text
-role="ref"}.
+`ex-turntable/test-and-tune:configuring your turntable`.
 
 For DCC-EX Turntable Controller software documentation including
 installation and configuration, refer to the project page [DCC-EX

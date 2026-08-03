@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="4" local=""}
+::: 
 On this page
 :::
 ::::
@@ -93,11 +93,10 @@ available to use as references:
 Example
 
 ``` rst
-:ref:`reference/hardware/motorboards/motor-board-config:configure using the installer`
+[reference/hardware/motorboards/motor-board-config:configure using the installer`
 ```
 
-`reference/hardware/motorboards/motor-board-config:configure using the installer`{.interpreted-text
-role="ref"}
+`reference/hardware/motorboards/motor-board-config:configure using the installer`
 :::
 
 The reference is the full name of the document (the absolute path
@@ -113,8 +112,7 @@ Example
 :ref:`WiFi configuration ](advanced-setup/supported-microcontrollers/wifi-mega:Short Version of Network Setup.md)
 ```
 
-`WiFi configuration <reference/hardware/microcontrollers/wifi-mega:Short Version of Network Setup>`{.interpreted-text
-role="ref"}
+`WiFi configuration ](reference/hardware/microcontrollers/wifi-mega:Short Version of Network Setup.md)
 :::
 
 ### External
@@ -375,10 +373,7 @@ images to be responsive by including the overall \"svg\" CSS directive
 in our CSS theme (dccex_theme.css):
 
 ``` 
-svg {
-  max-width: 100%;
-  height: auto;
-}
+svg 
 ```
 
 This will ensure your SVG image\'s size is no larger than the width of
@@ -399,10 +394,7 @@ reStructuredText container element with an associated class.
 You would then need to add an appropriate CSS class to the theme:
 
 ``` 
-.svg-override {
-  width: 50%;
-  height: 50%;
-}
+.svg-override 
 ```
 
 If your SVG image contains an ID tag, you can simply use this \"id\"
@@ -416,10 +408,7 @@ To then ensure the SVG only occupies 50% of the page, this is added to
 the CSS theme:
 
 ``` 
-#svg-css-entry {
-  width: 50%;
-  height: 50%;
-}
+#svg-css-entry 
 ```
 
 Going any further into the details and options of controlling SVGs via
@@ -454,7 +443,7 @@ handy DCC accessory decoder conversion spreadsheet.
 
 That code ends up looking like this:
 
-![Accessory conversion sheet thumbnail](../../../_static/documents/acc_conv_sheet_thumbnail.png){.align-left}
+![Accessory conversion sheet thumbnail](../../../_static/documents/acc_conv_sheet_thumbnail.png)
 
 ::: rst-class
 dcclink
@@ -513,8 +502,7 @@ Note"
 :::
 
 Remember to perform a
-`about/contributing/website/getting-started:Local sphinx build`{.interpreted-text
-role="ref"} prior to submitting any pull requests.
+`about/contributing/website/getting-started:Local sphinx build` prior to submitting any pull requests.
 ::::
 
 At this point, go to GitHub and issue a pull request for your branch to

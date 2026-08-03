@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -119,13 +119,11 @@ This is the process to create a new, untagged release:
 2.  Download the ZIP of the repository by clicking the `Code` button and
     selecting `Download ZIP`.
 3.  Create the appropriate .zip and .tar.gz archive files as outlined in
-    `about/contributing/release-process:archive file structure`{.interpreted-text
-    role="ref"} using your favourite archiving software.
+    `about/contributing/release-process:archive file structure` using your favourite archiving software.
 4.  Navigate to the Releases tab in GitHub and click
     `Draft new release`.
 5.  Create the new tag based on
-    `about/contributing/release-process:software versioning`{.interpreted-text
-    role="ref"}.
+    `about/contributing/release-process:software versioning`.
 6.  Enter an appropriate title and add some release information, ideally
     linking to release notes, a \|DCC-EX\| news article, or some other
     reference containing details.
@@ -146,8 +144,7 @@ the process:
     section.
 4.  Click `Create release from tag`.
 5.  Create the appropriate .zip and .tar.gz archive files as outlined in
-    `about/contributing/release-process:archive file structure`{.interpreted-text
-    role="ref"} using your favourite archiving software and the source
+    `about/contributing/release-process:archive file structure` using your favourite archiving software and the source
     code as downloaded in step 3.
 6.  Enter an appropriate title and add some release information, ideally
     linking to release notes, a \|DCC-EX\| news article, or some other

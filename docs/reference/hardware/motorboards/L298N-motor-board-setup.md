@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -91,12 +91,12 @@ or cut a trace on the back of the board and insert the resistors there.
     following two options:
 
 ![Lift or cut chip legs on
-front](/_static/images/motorboards/l298_board4.jpg){alt="L298N lift legs to solder CS resistors"}
+front](/_static/images/motorboards/l298_board4.jpg)
 
 or\...
 
 ![Cut traces and solder on
-back](/_static/images/motorboards/l298nbackmodify.png){alt="L298N cut traces to install CS resistors"}
+back](/_static/images/motorboards/l298nbackmodify.png)
 
 #### Lifting Or Cutting Chip Legs Option
 
@@ -166,8 +166,7 @@ to the correct pins on the Arduino. The only disadvantage to this method
 is that is uses an extra pin (though there are plenty of spare pins on a
 Mega), and it uses the standard accuracy waveform. Standard accuracy is
 fine for almost all cases, but you can read more on the
-`High Accuracy Waveform Mode</reference/hardware/motorboards/high-accuracy>`{.interpreted-text
-role="doc"}
+`High Accuracy Waveform Mode</reference/hardware/motorboards/high-accuracy>`
 
 Your second choice is to make a small inverter circuit (using 1 FET, IC,
 or transistor) to connect to the standard signal pin on the Command
@@ -184,8 +183,7 @@ accuracy DCC waveform. The advantage of this method is that you don\'t
 have to wire a transistor and 2 resistors to create an inverter circuit.
 The disadvantage is you use an extra pin for each track output and you
 get the standard accuracy waveform. See
-`High Accuracy Waveform Mode</reference/hardware/motorboards/high-accuracy>`{.interpreted-text
-role="doc"} to see if you really need it.
+`High Accuracy Waveform Mode</reference/hardware/motorboards/high-accuracy>` to see if you really need it.
 
 To wire the board, connect the pins according to the following diagram.
 A table is included as well. This pin usage, with all the pins lined up
@@ -193,7 +191,7 @@ between boards, allows the use of a ribbon cable to make things a bit
 more neat:
 
 ![L298N 2 signal pin, 2 track wiring
-diagram](/_static/images/motorboards/l298_wiring_2inputs_2tracks.png){alt="L298N Motor driver wiring diagram"}
+diagram](/_static/images/motorboards/l298_wiring_2inputs_2tracks.png)
 
 +---------------+-----------------------------+
 | > Arduino     | > L298N                     |
@@ -240,8 +238,7 @@ with this:
 
 Save the file and then upload the entire sketch into the Command Station
 using the \|Arduino IDE\| as explained in
-`Installing Using the Arduino IDE</ex-commandstation/advanced-setup/installation-options/arduino-ide>`{.interpreted-text
-role="doc"}
+`Installing Using the Arduino IDE</ex-commandstation/advanced-setup/installation-options/arduino-ide>`
 
 #### Using One Signal Pin With an Inverter circuit
 
@@ -301,8 +298,7 @@ line is in your config.h:
 
 Save the file if you needed to add this line and then upload the entire
 sketch into the Command Station using the Arduino IDE as explained in
-`Installing Using the Arduino IDE</ex-commandstation/advanced-setup/installation-options/arduino-ide>`{.interpreted-text
-role="doc"}
+`Installing Using the Arduino IDE</ex-commandstation/advanced-setup/installation-options/arduino-ide>`
 
 ### Method 2: Using An External Current Sense Board
 

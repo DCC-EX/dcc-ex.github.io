@@ -1,4 +1,4 @@
-::: {.meta keywords="Assembly"}
+::: 
 :::
 
 \|EX-CS-LOGO\|
@@ -9,7 +9,7 @@
 
 :::: sidebar
 
-::: {.contents local="" depth="1"}
+::: 
 On this page
 :::
 ::::
@@ -21,7 +21,7 @@ will see some breakouts on the right of the page the covers some of the
 many optional configurations.
 
 **For this install, you\'ll need the items listed on the**
-`/ex-commandstation/diy/purchasing`{.interpreted-text role="doc"}
+`/ex-commandstation/diy/purchasing`
 **page.**
 
 ::: rst-class
@@ -33,18 +33,15 @@ clearer
 
 \|tinkerer\| \|engineer\| \|BR\| For an Uno, Nano, or other
 microcontroller, please see
-`Using a different microcontroller </reference/hardware/microcontroller-boards>`{.interpreted-text
-role="doc"}.
+`Using a different microcontroller </reference/hardware/microcontroller-boards>`.
 
 If you wish to use a different \|motor driver\| (for example to have
 more current to operate more trains and accessories), see
-`Motor Drivers </reference/hardware/motor-boards>`{.interpreted-text
-role="doc"}
+`Motor Drivers </reference/hardware/motor-boards>`
 :::
 
 ![basic setup (click to enlarge
-picture)](/_static/images/assembly/basic_setup_lg.jpg){alt="Command Station Setup"
-width="500px"}
+picture)](/_static/images/assembly/basic_setup_lg.jpg)
 
 For a video on how to do this, click below: [Setting Up Your Command
 Station](https://www.youtube.com/watch?v=N6TWR7fIl0A&t=5s)
@@ -63,7 +60,7 @@ Note"
 using the \|EX-MS\|.
 ::::
 
-:::: {.warning .warning-float-right}
+:::: 
 ::: title
 Warning
 :::
@@ -118,7 +115,7 @@ little vertical line in between the two solder pads is the scratch mark
 from where we cut through the little solder trace.
 
 ![Cutting the Vin trace (click to
-enlarge)](/_static/images/assembly/motor_shield_vin2.jpg){alt="Cut Vin trace on Arduino motor shield"}
+enlarge)](/_static/images/assembly/motor_shield_vin2.jpg)
 
 If you have an ohmmeter, touch your probes to each side of the trace
 pads and make sure the resistance reading is infinite. In other words,
@@ -132,7 +129,7 @@ instead of connecting to the header in the Arduino, it rides on the
 outside of the header.
 
 ![Bending out the Pin (click to
-enlarge)](/_static/images/motorboards/bend_pin1.jpg){alt="Bend out the Vin pin on the Arduino motor shield"}
+enlarge)](/_static/images/motorboards/bend_pin1.jpg)
 
 #### Alternate Method 2
 
@@ -144,7 +141,7 @@ with the hole it normally would go into when seated on the Arduino.
 
 ## 2. Connect the Motor Driver
 
-:::: {.warning .warning-float-right}
+:::: 
 ::: title
 Warning
 :::
@@ -172,7 +169,7 @@ Place both boards on the table with the power connector end facing in
 the same direction.
 
 ![Properly orient the
-boards](/_static/images/assembly/mega_and_motor_shield.png){alt="Align Mega and Motor Shield"}
+boards](/_static/images/assembly/mega_and_motor_shield.png)
 
 a.  Did you remember to cut the trace on the \|motor shield\|? \|BR\| If
     not, see above. \|BR\| Otherwise, sight down both rows of pins on
@@ -181,7 +178,7 @@ a.  Did you remember to cut the trace on the \|motor shield\|? \|BR\| If
     on a comb. If any look like the photo below, bend them with your
     fingers and/or needle nose pliers.
 
-![Bent pins](/_static/images/assembly/bent_pins.png){alt="bent pins"}
+![Bent pins](/_static/images/assembly/bent_pins.png)
 
 b.  Line up the pins on the side of the board closest to the USB with
     the header connector on the Mega first. \|BR\| You want to line up
@@ -192,21 +189,21 @@ b.  Line up the pins on the side of the board closest to the USB with
     sockets.
 
 ![Line up left side
-first](/_static/images/assembly/seat1.jpg){alt="Line up the pins"}
+first](/_static/images/assembly/seat1.jpg)
 
 c.  Just align them and start to push them in but don\'t push them all
     the way. \|BR\| Use your fingers to try to push the pins to get them
     to all go into the holes.
 
 ![Get all the pins
-started](/_static/images/assembly/seat2.jpg){alt="Push the pins partway in"}
+started](/_static/images/assembly/seat2.jpg)
 
 d.  Do the same on the other side. \|BR\| Get all the pins aligned and
     start to press gently to get them into the holes. Notice on this
     side, you have more holes than you do pins. This is normal.
 
 ![Start the other
-side](/_static/images/assembly/seat_reverse1.jpg){alt="Line up the other side"}
+side](/_static/images/assembly/seat_reverse1.jpg)
 
 e.  Now, being careful to not bend any pins gently press, using a
     rocking motion if you need to, in order to get the motor board to
@@ -214,9 +211,9 @@ e.  Now, being careful to not bend any pins gently press, using a
     put the pins in any further. Don\'t force anything.
 
 ![Gently press the boards
-together](/_static/images/assembly/seat_press.jpg){alt="Press together"}
+together](/_static/images/assembly/seat_press.jpg)
 
-:::: {.note .note-float-right}
+:::: 
 ::: title
 Note
 :::
@@ -231,7 +228,7 @@ or take diagonal cutters and carefully trim the ends of the pins a bit.
 f.  The boards should be seated. Note the pins are longer than the
     headers. It is normal for you to see a few millimetres of the pins
     between the bottom of the motor board and the top of the headers.
-    `boards-fully-seated`{.interpreted-text role="ref"} shows the boards
+    `boards-fully-seated` shows the boards
     as they look properly seated.
 
 <figure>
@@ -250,7 +247,7 @@ outside of the headers.
 
 **But don\'t plug it in yet!**
 
-:::: {.warning .warning-float-right}
+:::: 
 ::: title
 Warning
 :::
@@ -262,8 +259,7 @@ board
 
 Make sure you have a power supply with the correct voltage and current
 rating. For help on selecting your power supply, please see
-`compatible Power Supplies </reference/hardware/power-supplies>`{.interpreted-text
-role="doc"}
+`compatible Power Supplies </reference/hardware/power-supplies>`
 
 If you are using a \"bench\" or metal box type power supply, simply
 connect the DC output of the power supply to the DC input of the motor
@@ -284,7 +280,7 @@ connects to the positive (+) on the \|motor shield\| and the negative
 terminal (- or gnd) connects to the negative terminal.
 
 ![Screw Terminal Adapter to Motor
-Shield](/_static/images/assembly/motor_power3.jpg){alt="Screw Terminal Adapter Power"}
+Shield](/_static/images/assembly/motor_power3.jpg)
 
 If you don\'t have a screw terminal adapter, you can cut the end off
 your power supply and strip the wires. The outer wire braid is usually
@@ -323,7 +319,7 @@ phase\" with each other. Here is the diagram from above repeated again
 for reference.
 
 ![Out to Main and Program
-tracks](/_static/images/assembly/motor_power2b.jpg){alt="Main and Prog Out to track"}
+tracks](/_static/images/assembly/motor_power2b.jpg)
 
 ------------------------------------------------------------------------
 
@@ -337,8 +333,7 @@ may be able to avoid having a second power supply if you will always
 have a computer connected to your \|EX-CS\| (for example to run
 \|EX-WT\| or \|JMRI\|. There is also a way to use a 5V power supply.
 Please read
-`Power Supplies </reference/hardware/power-supplies>`{.interpreted-text
-role="doc"} to help you find what will work best for you).
+`Power Supplies </reference/hardware/power-supplies>` to help you find what will work best for you).
 :::
 
 Connect the 2.5mm barrel connector from your separate 7-9V DC power
@@ -356,16 +351,15 @@ clearer
 
 ## Next Steps - Install the WiFi board
 
-::: {.sidebar .sidebar-float-right}
+::: 
 
 \|conductor\| \|BR\| You can *alternately* connect a controller like
 \|JMRI\| or our \|EX-WT\| by using the serial cable to connect between
 your computer and the \|EX-CS\|. If so, skip to
-`/ex-commandstation/installer-diy`{.interpreted-text role="doc"}.
+`/ex-commandstation/installer-diy`.
 :::
 
-See the `/ex-commandstation/diy/wifi-setup`{.interpreted-text
-role="doc"} page or click the \'Next\' button to learn how to connect
+See the `/ex-commandstation/diy/wifi-setup` page or click the \'Next\' button to learn how to connect
 the WiFi shield to your \|EX-CS\|.
 
 \|force-break\|
@@ -381,7 +375,7 @@ Amps of power (despite being rated for 2A), so 18 AWG wire is ample. If
 you use a different \|motor driver\| and deliver more current to your
 track, you may need thicker wire (lower number gauge).
 
-See the `/reference/hardware/wire-gauge`{.interpreted-text role="doc"}
+See the `/reference/hardware/wire-gauge`
 page for more information on wire gauges.
 
 **Power Supplies** - Why do we recommend a 7-9V power supply for the
@@ -402,13 +396,11 @@ pins on the Arduino. Do NOT connect anything to the barrel connector if
 you do this! You would still need to cut the Vin trace on the \|Motor
 Shield\| and use your separate power supply that plugs into the shield.
 For more information, see
-`Power Supplies </reference/hardware/power-supplies>`{.interpreted-text
-role="doc"}
+`Power Supplies </reference/hardware/power-supplies>`
 ::::
 
 [^1]: The voltage you need for the [\|Motor
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.

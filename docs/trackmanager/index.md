@@ -5,9 +5,9 @@
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-commandstation-button-small\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -35,24 +35,22 @@ not just DCC.
 
 Valid Modes are:
 
-> - `DCC modes <trackmanager/index:changing a motor driver output to a different dcc mode>`{.interpreted-text
->   role="ref"}
+> - `DCC modes <trackmanager/index:changing a motor driver output to a different dcc mode>`
 >   - MAIN
 >   - MAIN_INV
 >   - MAIN_AUTO[#TM2](##NOTE###TM2)
 >   - PROG
 >   - NONE
-> - `DC modes <trackmanager/index:changing a motor driver output to dc>`{.interpreted-text
->   role="ref"}
+> - `DC modes <trackmanager/index:changing a motor driver output to dc>`
 >   - DC
 >   - DC_INV[^1][#TM3](##NOTE###TM3)
 >   - DCX[^2]
 >   - NONE
 
-::: {.flat-table .command-table widths="auto" header-rows="1"}
-- - `1`{.interpreted-text role="cspan"} Option
-  - [INV]{#inv}
-  - [AUTO]{#auto}
+::: 
+- - `1` Option
+  - [INV]
+  - [AUTO]
   - Notes
 - - `MAIN`
   - [x]
@@ -112,8 +110,7 @@ To run DC locos with your \|EX-CS\| you will need:
 - An \|EX-CS\|.
 - A \|motor shield\| with a brake pin. \|BR\| (See the list of
   compatible boards at
-  `reference/hardware/motor-boards:trackmanager dc compatible boards`{.interpreted-text
-  role="ref"}.) \|BR\| (The \|EX-CSB1-SHORT\| and \|EX-MS\| have a brake
+  `reference/hardware/motor-boards:trackmanager dc compatible boards`.) \|BR\| (The \|EX-CSB1-SHORT\| and \|EX-MS\| have a brake
   pin.)
 - A controller that can be used with the \|EX-CS\|.
 
@@ -132,13 +129,13 @@ drivers.
 
 If you are interested in the technical details of DC Pulse Width
 Modulation (PWM) visit our
-`/reference/hardware/dcc-vs-dc`{.interpreted-text role="doc"} page.
+`/reference/hardware/dcc-vs-dc` page.
 
 ------------------------------------------------------------------------
 
 ## Changing a Motor Driver Output to a different DCC mode
 
-:::: {.important .important-float-right}
+:::: 
 ::: title
 Important
 :::
@@ -150,7 +147,7 @@ off. This is a safety precaution to prevent runaway locos.
 You can change any output of the Motor Driver either temporarily or
 permanently (every time the \|EX-CS\| starts).
 
-::: {.contents .in-this-section depth="1" local=""}
+::: 
 In this Section
 :::
 
@@ -200,7 +197,7 @@ re-uploading the Command Station software your \|EX-CS\|.
 1.  Re-run the \|EX-I\| selecting the options you would normally choose,
     but of the last page before loading you also select
     `Advanced Config`, before clicking the
-    `Advanced Config`{.interpreted-text role="guilabel"} button.
+    `Advanced Config` button.
 2.  This will take you to the `Advanced Configuration` page, where you
     will have two (or possibly more) edit regions. One will be labelled
     `myAutomation.h`.
@@ -243,7 +240,7 @@ re-uploading the Command Station software your \|EX-CS\|.
 1.  Re-run the \|EX-I\| selecting the options you would normally choose,
     but of the last page before loading you also select
     `Advanced Config`, before clicking the
-    `Advanced Config`{.interpreted-text role="guilabel"} button.
+    `Advanced Config` button.
 2.  This will take you to the `Advanced Configuration` page, where you
     will have two (or possibly more) edit regions. One will be labelled
     `myAutomation.h`.
@@ -284,7 +281,7 @@ SET_TRACK(B,MAIN_AUTO)  // Set Track B to DCC MAIN_AUTO
 
 ## Changing a Motor Driver Output to DC
 
-:::: {.important .important-float-right}
+:::: 
 ::: title
 Important
 :::
@@ -296,7 +293,7 @@ off.
 You can change any output of the Motor Driver either temporarily or
 permanently (every time the \|EX-CS\| starts).
 
-::: {.contents .in-this-section depth="1" local=""}
+::: 
 In this Section
 :::
 
@@ -311,7 +308,7 @@ In the case on DCC, you select the individual DCC address of the loco
 and you control just that loco regardless of how many other DCC locos
 are on the track.
 
-:::: {.note .note-float-right}
+:::: 
 ::: title
 Note
 :::
@@ -349,12 +346,10 @@ DC:
 
 \|Engine Driver\| has specific TrackManager features that allow you to
 alter the output modes. See the
-`throttles/software/engine-driver-native-protocol:trackmanager control`{.interpreted-text
-role="ref"} Engine Driver page for details.
+`throttles/software/engine-driver-native-protocol:trackmanager control` Engine Driver page for details.
 
 \|EX-TB\| has specific TrackManager features that allow you to alter the
-output modes. See the `ex-toolbox/using:track manager`{.interpreted-text
-role="ref"} page for details.
+output modes. See the `ex-toolbox/using:track manager` page for details.
 
 \|HR-DASHED\|
 
@@ -395,7 +390,7 @@ re-uploading the Command Station software your \|EX-CS\|.
 2.  Next re-run the \|EX-I\| selecting the options you would normally
     choose, but of the last page before loading you also select
     `Advanced Config`, before clicking the
-    `Advanced Config`{.interpreted-text role="guilabel"} button.
+    `Advanced Config` button.
 3.  This will take you to the `Advanced Configuration` page, where you
     will have two (or possibly more) edit regions. One will be labelled
     `myAutomation.h`.
@@ -415,7 +410,7 @@ ROUTE(1, "Set Output B to DC 1225") // 1 is the sequence identifier  it must be 
 
 Note that this will make the output DC if you activate the route in you
 controller. See
-`trackmanager/index:controlling a dc loco`{.interpreted-text role="ref"}
+`trackmanager/index:controlling a dc loco`
 for more information.
 
 Note the track power is immediately turn off anytime you change the
@@ -441,7 +436,7 @@ re-uploading the Command Station software your \|EX-CS\|.
 2.  Next re-run the \|EX-I\| selecting the options you would normally
     choose, but of the last page before loading you also select
     `Advanced Config`, before clicking the
-    `Advanced Config`{.interpreted-text role="guilabel"} button.
+    `Advanced Config` button.
 3.  This will take you to the `Advanced Configuration` page, where you
     will have two (or possibly more) edit regions. One will be labelled
     `myAutomation.h`.
@@ -460,7 +455,7 @@ AUTOMATION(2, "Set Output B to DC") // 2 is the sequence identifier  it must be 
 
 Note that this will make the output DC if you activate the route in you
 controller. See
-`trackmanager/index:controlling a dc loco`{.interpreted-text role="ref"}
+`trackmanager/index:controlling a dc loco`
 for more information.
 
 Note the track power is immediately turn off anytime you change the
@@ -494,7 +489,7 @@ re-uploading the Command Station software your \|EX-CS\|.
 2.  Next re-run the \|EX-I\| selecting the options you would normally
     choose, but of the last page before loading you also select
     `Advanced Config`, before clicking the
-    `Advanced Config`{.interpreted-text role="guilabel"} button.
+    `Advanced Config` button.
 3.  This will take you to the `Advanced Configuration` page, where you
     will have two (or possibly more) edit regions. One will be labelled
     `myAutomation.h`.
@@ -527,7 +522,7 @@ While the process to control a loco is exactly the same as a DCC loco,
 the process to select it will vary depending on *how* you configured the
 Motor Driver Output to be DC.
 
-::: {.contents .in-this-section depth="1" local=""}
+::: 
 In this Section
 :::
 
@@ -622,7 +617,7 @@ well to the defaults (low) frequency setting.
 
 ## Replacing or Integrating Into Your Current Layout
 
-:::: {.warning .warning-float-right}
+:::: 
 ::: title
 Warning
 :::
@@ -657,13 +652,13 @@ Below is an example of a very simple DC layout with two DC
 controllers/transformers, with one for each track.
 
 ![DC Layout - 2 Blocks - DC
-controllers/transformers](/_static/images/layouts/dc-layout-1.png){alt="DC Layout - 2 Blocks"}
+controllers/transformers](/_static/images/layouts/dc-layout-1.png)
 
 With an \|EX-CS\| with both outputs set to \|DC PWM\|, the wiring for
 the same layout is a very simple swap.
 
 ![DC Layout - 2 Blocks -
-EX-CSB1](/_static/images/layouts/dc-layout-2.png){alt="DC Layout - 2 Blocks"}
+EX-CSB1](/_static/images/layouts/dc-layout-2.png)
 
 :!!! warning "::: title
 Warning"
@@ -720,8 +715,7 @@ assigned tracks.
 
 We do not support Zero stretching / zero stretch address function, found
 on Digitrax and Lenz command Stations. See the
-\'`reference/hardware/dcc-vs-dc:this is not zero stretching`{.interpreted-text
-role="ref"}\' section for more information.
+\'`reference/hardware/dcc-vs-dc:this is not zero stretching`\' section for more information.
 :::
 
 Place any analogue DC loco/engine on a TrackManager DC assigned track
@@ -994,7 +988,7 @@ L+, R-.
 >   Decoder
 
 ![Track Manager - Engine Driver
-1](/_static/images/track_manager/trackmanager_engine_driver_1.png){alt="Track Manager ED 1"}
+1](/_static/images/track_manager/trackmanager_engine_driver_1.png)
 
 **DCC-EX Commands, scroll-able**
 
@@ -1008,7 +1002,7 @@ Manager](/_static/images/track_manager/trackmanager_engine_driver_2.png)
 >   Address to the DC or DC_INV / DCX track
 
 ![Track Manager - Engine Driver
-handoff](/_static/images/track_manager/trackmanager_engine_driver_3.png){alt="Track Manager handoff"}
+handoff](/_static/images/track_manager/trackmanager_engine_driver_3.png)
 
 **Engine Driver DCC-EX Native mode**
 
@@ -1016,7 +1010,7 @@ handoff](/_static/images/track_manager/trackmanager_engine_driver_3.png){alt="Tr
 > - With \|DCC-EX\| Cmd Line & \|Serial monitor\|
 
 ![Track Manager - Engine Driver DCC-EX native
-mode](/_static/images/track_manager/trackmanager_engine_driver_4.png){alt="Track Manager DCC-EX native mode"}
+mode](/_static/images/track_manager/trackmanager_engine_driver_4.png)
 
 **Engine Driver DCC-EX Native mode**
 
@@ -1024,18 +1018,18 @@ mode](/_static/images/track_manager/trackmanager_engine_driver_4.png){alt="Track
 > - TrackManager District B DC 667
 
 ![Engine Driver - Track Manager
-A/B](/_static/images/track_manager/trackmanager_engine_driver_5.png){alt="Track Manager A/B"}
+A/B](/_static/images/track_manager/trackmanager_engine_driver_5.png)
 
 **Engine Driver EXRAIL Automation \[Handoff\] and FX special effects
 buttons**
 
 ![Track Manager - Engine Driver
-handoff](/_static/images/track_manager/trackmanager_engine_driver_6.png){alt="Track Manager handoff"}
+handoff](/_static/images/track_manager/trackmanager_engine_driver_6.png)
 
 **FX Special Effects \[Set\] continued and Route \[Set\] buttons**
 
 ![Track Manager - Engine Driver
-handoff/set](/_static/images/track_manager/trackmanager_engine_driver_7.png){alt="Track Manager handoff/set"}
+handoff/set](/_static/images/track_manager/trackmanager_engine_driver_7.png)
 
 \|HR-DASHED\|
 

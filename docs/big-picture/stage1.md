@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -24,9 +24,8 @@ on the four options most commonly used with \|EX-CS\|: \|EX-WT\|,
 \|Engine Driver\|, \|WiThrottle\|, and \|JMRi\|.
 
 For other throttle options, refer to the
-`/ex-commandstation/advanced-setup/controllers`{.interpreted-text
-role="doc"} page for further information on choosing a throttle, and you
-can also refer to the `/throttles/index`{.interpreted-text role="doc"}
+`/ex-commandstation/advanced-setup/controllers` page for further information on choosing a throttle, and you
+can also refer to the `/throttles/index`
 section for more information on the various throttle options available.
 
 ## What to expect to learn from stage 1
@@ -53,11 +52,11 @@ worry about any network connections to get your first train running on
 your layout.
 
 While there is a lot more detail on the
-`/ex-webthrottle/index`{.interpreted-text role="doc"} page, we will give
+`/ex-webthrottle/index` page, we will give
 you a very quick start guide here to get a single train running with
 your \|EX-CS\|.
 
-Firstly, launch `EX-WebThrottle`{.interpreted-text role="guilabel"} in
+Firstly, launch `EX-WebThrottle` in
 your Chromium based web browser (Google Chrome, Microsoft Edge, or
 Opera).
 
@@ -72,19 +71,15 @@ get your train running:
 
 - Ensure your \|EX-CS\| is connected to your computer via the USB cable
 - In the top right corner, ensure \"Serial\" is selected from the pull
-  down menu, then click the `Connect DCC++ EX`{.interpreted-text
-  role="guilabel"} button
+  down menu, then click the `Connect DCC++ EX` button
 - A pop up window should appear, prompting you to choose your COM port
-- Select the COM port then click the `Connect`{.interpreted-text
-  role="guilabel"} button, and the button in the top right corner should
-  change to `Disconnect DCC++ EX`{.interpreted-text role="guilabel"}
+- Select the COM port then click the `Connect` button, and the button in the top right corner should
+  change to `Disconnect DCC++ EX`
   with a green circle to the left
-- Turn track power on with the `Power`{.interpreted-text
-  role="guilabel"} button
+- Turn track power on with the `Power` button
 - Type the DCC address of your loco into the \"Locomotive ID\" text box,
-  then click the `>`{.interpreted-text role="guilabel"} button to set it
-- You can now use the throttle slider or `+`{.interpreted-text
-  role="guilabel"} and `-`{.interpreted-text role="guilabel"} buttons to
+  then click the `>` button to set it
+- You can now use the throttle slider or `+` and `-` buttons to
   set the speed, and the slider in the centre of the screen to set
   forward, reverse, stop, or EStop
 - The function buttons to the right can also be used to set the various
@@ -141,33 +136,32 @@ only going to cover two common options here:
 - Turn on the power to the track via the menu
 
   > - (The three dots or bars) then \'Power\'. Then click the
-  >   `power`{.interpreted-text role="guilabel"} button till it goes
+  >   `power` button till it goes
   >   green. (May require more than one click)
   > - The two red LEDs, for the main track, on the Motor board will turn
   >   on
-  > - Click `Back`{.interpreted-text role="guilabel"}
+  > - Click `Back`
 
 - back on the \'Throttle screen\'
 
-  - Click one of the `Select`{.interpreted-text role="guilabel"} buttons
+  - Click one of the `Select` buttons
 
 - This will have taken you to the \'Select Loco screen\'
 
   - Enter the DCC Address of the loco you put on the track
   - Select `Short` or `Long` (normally if the address is less than 127,
     it will automatically assume it is short)
-  - Click `Aquire`{.interpreted-text role="guilabel"}
+  - Click `Aquire`
 
 - Back on the \'Throttle screen\' you can now use the sliders to move
   your train.
 
 See
-`Engine Driver Page </throttles/software/engine-driver>`{.interpreted-text
-role="doc"} for details on how to install and run \|Engine Driver\|.
+`Engine Driver Page </throttles/software/engine-driver>` for details on how to install and run \|Engine Driver\|.
 
 ### wiThrottle (iOS)
 
-:::: {.note .note-float-right}
+:::: 
 ::: title
 Note
 :::
@@ -176,8 +170,7 @@ The free version of \|WiThrottle\| (\'\|WiThrottle Lite\|\') only
 controls one loco at a time and *does not* offer turnout control or DCC
 track power control. (Note: EX-CommandStation can be configured to
 automatically turn the track power on. See the
-`EXRAIL examples <exrail/examples:Turn Track Power On at Startup>`{.interpreted-text
-role="ref"}.)
+`EXRAIL examples <exrail/examples:Turn Track Power On at Startup>`.)
 
 The paid version WiThrottle can control multiple locos, can create and
 control consists, can control turnouts and routes, and can control DCC
@@ -236,7 +229,7 @@ track power.
 - Select `Long` or `Short` (normally if the address is less than 127, it
   should be a \'Short\' address.)
 
-- Click the `Set`{.interpreted-text role="guilabel"} button
+- Click the `Set` button
 
 - The address should appear in the green box at the top left.
 
@@ -244,8 +237,7 @@ track power.
 
 - You can now use the sliders to move your train
 
-See `WiThrottle Page </throttles/software/withrottle>`{.interpreted-text
-role="doc"} for details on how to install and run \|WiThrottle\|.
+See `WiThrottle Page </throttles/software/withrottle>` for details on how to install and run \|WiThrottle\|.
 
 ------------------------------------------------------------------------
 
@@ -265,22 +257,20 @@ smart phone. We are only going to cover three common options here:
 - open **DecoderPro**
 - Menu -\> Actions -\> New Throttle
 - Turn on the power to the track via the button on the toolbar
-  - Click the `Power`{.interpreted-text role="guilabel"} button till it
+  - Click the `Power` button till it
     turns green
 - Enter the DCC Address of the loco you put on the track in the field in
   the Address Panel
-- Click `Set`{.interpreted-text role="guilabel"}
+- Click `Set`
 - you can now use the sliders to move your train
 
 ### Engine Driver (via JMRI)
 
 Before \|Engine Driver\| or \|WiThrottle\| can be run via \|JMRI\|, the
 \|JMRI\| WiThrottle Server must be started. It can be started manually
-by `menu --> actions --> start withrottle server`{.interpreted-text
-role="menuselection"} or be configured to start automatically whenever
+by `menu --> actions --> start withrottle server` or be configured to start automatically whenever
 JMRI is started
-`menu --> edit --> preferences --> start up --> add --> perform action --> start withrottle server`{.interpreted-text
-role="menuselection"}\` then save, exit, restart JMRI. A WiThrottle
+`menu --> edit --> preferences --> start up --> add --> perform action --> start withrottle server`\` then save, exit, restart JMRI. A WiThrottle
 server window should open showing WiThrottle server is running.
 
 - Open the network settings on your phone
@@ -304,32 +294,31 @@ server window should open showing WiThrottle server is running.
 - Turn on the power to the track via the Menu
 
   > - (The three dots or bars) then \'Power\'. Then click the
-  >   `Power`{.interpreted-text role="guilabel"} button till it goes
+  >   `Power` button till it goes
   >   green. (may require more than one click.)
   > - The four red LEDs on the Motor board will turn on
-  > - Click `Back`{.interpreted-text role="guilabel"}
+  > - Click `Back`
 
 - Back on the \'Throttle screen\'
 
-  - Click one of the `Select`{.interpreted-text role="guilabel"} buttons
+  - Click one of the `Select` buttons
 
 - This will have taken you to the \'Select Loco screen\'
 
   - Enter the DCC Address of the loco you put on the track
   - Select `Short` or `Long` (normally if the address is less than 127,
     it will automatically assume it is short)
-  - Click `Aquire`{.interpreted-text role="guilabel"}
+  - Click `Aquire`
 
 - Back on the \'Throttle screen\' you can now use the sliders to move
   your train.
 
 See
-`Engine Driver Page </throttles/software/engine-driver>`{.interpreted-text
-role="doc"} for details on how to install and run \|Engine Driver\|.
+`Engine Driver Page </throttles/software/engine-driver>` for details on how to install and run \|Engine Driver\|.
 
 ### WiThrottle (via JMRI)
 
-:::: {.note .note-float-right}
+:::: 
 ::: title
 Note
 :::
@@ -346,11 +335,9 @@ DCC track power.
 
 Before \|Engine Driver\| or \|WiThrottle\| can be run via \|JMRI\|, the
 JMRI WiThrottle server must be started. It can be started manually by
-`menu --> actions --> start withrottle server`{.interpreted-text
-role="menuselection"} or be configured to start automatically whenever
+`menu --> actions --> start withrottle server` or be configured to start automatically whenever
 \|JMRI\| is started
-`menu --> edit --> preferences --> start up --> add --> perform action --> start withrottle server`{.interpreted-text
-role="menuselection"}\` then save, exit, restart \|JMRI\|. A WiThrottle
+`menu --> edit --> preferences --> start up --> add --> perform action --> start withrottle server`\` then save, exit, restart \|JMRI\|. A WiThrottle
 server window should open showing WiThrottle server is running.
 
 - Open the network settings on your phone
@@ -380,7 +367,7 @@ server window should open showing WiThrottle server is running.
 - Select `Long` or `Short` (normally if the address is less than 127, it
   should be a \'Short\' address.)
 
-- Click the `Set`{.interpreted-text role="guilabel"} button
+- Click the `Set` button
 
 - The address should appear in the green box at the top left.
 
@@ -388,8 +375,7 @@ server window should open showing WiThrottle server is running.
 
 - You can now use the sliders to move your train
 
-See `WiThrottle Page </throttles/software/withrottle>`{.interpreted-text
-role="doc"} for details on how to install and run \|WiThrottle\|.
+See `WiThrottle Page </throttles/software/withrottle>` for details on how to install and run \|WiThrottle\|.
 
 ------------------------------------------------------------------------
 
@@ -408,14 +394,12 @@ Layout that has more than one throttle on it.
 
 Use the `Throttle Screen Layout` preference to select a layout that
 supports more than one throttle
-(`menu --> Preferences --> Throttle Screen Appearance Preferences --> Throttle Screen Layout`{.interpreted-text
-role="menuselection"}). The numbers in brackets after the Layout name
+(`menu --> Preferences --> Throttle Screen Appearance Preferences --> Throttle Screen Layout`). The numbers in brackets after the Layout name
 are the number of throttles that the layout supports.
 
 Where a layout supports a range of throttles, select the number that you
 want to show with the `Number of Throttles` preference
-(`menu --> Preferences --> Throttle Screen Appearance Preferences --> Number of Throttles`{.interpreted-text
-role="menuselection"}).
+(`menu --> Preferences --> Throttle Screen Appearance Preferences --> Number of Throttles`).
 
 See the [Throttle Screen Appearance
 Preferences](https://flash62au.github.io/EngineDriver_Home/configuration/preferences.html#throttle-screen-appearance-preferences)
@@ -427,7 +411,7 @@ offers.
 
 Adding additional locos to the Consist / Multiple Unit train is
 identical to the process of selecting a single loco. Simply click on the
-`Select`{.interpreted-text role="guilabel"} button, which will be
+`Select` button, which will be
 showing the name or address of any locos already selected.
 
 After selecting each additional loco, the Consist Edit screen will be
@@ -439,7 +423,7 @@ shown. This allows you to:
 
 ### wiThrottle (Multiple Trains)
 
-:::: {.note .note-float-right}
+:::: 
 ::: title
 Note
 :::
@@ -464,11 +448,11 @@ programming DCC decoders, but it requires that you connect to the
 
 There are three Android apps that can program decoders:
 
-- `/ex-toolbox/index`{.interpreted-text role="doc"} can program decoders
+- `/ex-toolbox/index` can program decoders
   over WiFi or Ethernet.
-- `/throttles/software/engine-driver`{.interpreted-text role="doc"} can
+- `/throttles/software/engine-driver` can
   program decoders over WiFi or Ethernet.
-- `/throttles/software/rtdrive-dccpp`{.interpreted-text role="doc"} can
+- `/throttles/software/rtdrive-dccpp` can
   program decoders but it is not particularly user friendly to do so.
 
 We also recommend using \|JMRi\| DecoderPro for programming decoders. It
@@ -541,9 +525,9 @@ programming track.
 This is the process to create your first roster entry and set the
 desired DCC decoder address:
 
-- Click the `New Loco`{.interpreted-text role="guilabel"} button on the
+- Click the `New Loco` button on the
   menu bar at the top of the screen
-- Click the `Read type from decoder`{.interpreted-text role="guilabel"}
+- Click the `Read type from decoder`
   button at the bottom of the screen
 - The most appropriate decoder should automatically be detected and
   selected automatically (multiple matches may be made, so select the
@@ -552,24 +536,23 @@ desired DCC decoder address:
   pane should appear to the right of the decoder list
 - Enter the desired name in \"Roster ID\", enter the desired DCC address
   in the \"Active Address\" box, then click the
-  `Write`{.interpreted-text role="guilabel"} button to write the new
+  `Write` button to write the new
   address to the decoder
 - An \"OK\" should appear in the bottom left corner to indicate the
   write was successful
-- Click `Save`{.interpreted-text role="guilabel"} to save your roster
+- Click `Save` to save your roster
   entry, and then either close the window or repeat the process for
   other locos
 
 Once your roster entries are populated, if you forget which loco was
 programmed with what, place your loco on the programming track and click
-the `Identify`{.interpreted-text role="guilabel"} button on the top
+the `Identify` button on the top
 menu. DecoderPro will detect the decoder settings and, if they match an
 existing roster entry, this will be displayed.
 
 To make further programming changes to your decoders, simply select the
 roster entry, make sure \"Programming Track\" is selected in the bottom
-right corner, then click the `Program`{.interpreted-text
-role="guilabel"} button which will open the full programming dialogue
+right corner, then click the `Program` button which will open the full programming dialogue
 window.
 
 For further information on programming in service mode, see [Service
@@ -592,7 +575,7 @@ Using POM only changes the loco you have selected, not all locos on the
 track. Which is why you must select a loco first. (Unlike the
 programming track where it changes everything on it)
 
-:::: {.warning .warning-float-right}
+:::: 
 ::: title
 Warning
 :::
@@ -601,28 +584,27 @@ You can theoretically change the DCC address using POM, but *only short
 addresses* (below 127) and some decoders don\'t even allow that.
 ::::
 
-- Use the `Power`{.interpreted-text role="guilabel"} button at the top
+- Use the `Power` button at the top
   of the window to turn track power on
-- Click the `New Loco`{.interpreted-text role="guilabel"} button on the
+- Click the `New Loco` button on the
   menu bar at the top of the screen
 - Unlike the service mode process above, you will need to manually
   select which decoder is installed in the loco
 - Once the decoder is selected, the \"Create Basic Roster Entry\" pane
   should appear to the right of the decoder list
 - Enter the desired name in \"Roster ID\", enter the current DCC address
-  in the \"Active Address\" box, then click the `Save`{.interpreted-text
-  role="guilabel"} to save your roster entry, then close the \"New
+  in the \"Active Address\" box, then click the `Save` to save your roster entry, then close the \"New
   Loco\" window
 - To set the desired DCC address, select the correct roster entry *(See
   Warning)*
 - Select \"Programming on Main\", then click the
-  `Program`{.interpreted-text role="guilabel"} button
+  `Program` button
 - Click the \"Basic\" tab, set the desired DCC address in the \"Active
   Address\" text box, then click the
-  `Write changes on sheet`{.interpreted-text role="guilabel"} button
+  `Write changes on sheet` button
   *(See Warning)*
 - Close the \"Program\" window and when prompted, click the
-  `Save and close`{.interpreted-text role="guilabel"} button
+  `Save and close` button
 
 For further information on programming on the main track, see [Ops Mode
 Programming](https://www.jmri.org/help/en/manual/DecoderPro3/Programmer_OpsMode.shtml)

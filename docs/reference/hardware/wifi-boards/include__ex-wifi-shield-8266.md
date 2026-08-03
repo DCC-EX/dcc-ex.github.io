@@ -1,16 +1,16 @@
 \|SUITABLEx\| \|conductorx\| \|tinkererx\| \|engineerx\|
 \|support-buttonx\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
 
 Designed in conjunction with the \|DCC-EXx\| development team\...
 
-![EX-WiFiShield-8266 front](/_static/images/wifi/exwifi5.png){.align-left}
+![EX-WiFiShield-8266 front](/_static/images/wifi/exwifi5.png)
 
 # Overview
 
@@ -40,7 +40,7 @@ Dimensions: 2.1\"(53mm) \* 1.9\"(47mm) \* .9\"(23mm)
 # How can I get one?
 
 Units may be purchased from the sources you can find here:
-`/purchasing/dealers`{.interpreted-text role="doc"}
+`/purchasing/dealers`
 
 # Assembly with EX-MotorShield8874
 
@@ -53,12 +53,11 @@ any of the Rx row pins to the Tx1 header on the Mega.
 
 # Next steps
 
-See the `/ex-commandstation/diy/wifi-setup`{.interpreted-text
-role="doc"} page to learn how to connect the WiFi shield to your
+See the `/ex-commandstation/diy/wifi-setup` page to learn how to connect the WiFi shield to your
 \|EX-CSx\|, or *alternatively* connect a controller like \|JMRIx\| or
 our \|EX-WTx\| by using the serial cable to connect between your
 computer and the \|EX-CSx\| as outlined in the
-`ex-installer/installing:getting ready`{.interpreted-text role="ref"}
+`ex-installer/installing:getting ready`
 section of the \|EX-Ix\| page. Note that when configuring the
-EX-CommandStation you will want to select [EX8874_SHIELD]{.title-ref} as
+EX-CommandStation you will want to select [EX8874_SHIELD] as
 the motor board during configuration.

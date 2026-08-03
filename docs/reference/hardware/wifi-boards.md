@@ -10,31 +10,27 @@ mind you can also purchase a Mega+WiFi board online that has both a Mega
 clone and an ESP8266 built onto the same board. However, you will have
 to upload new firmware to that board, so that would be a Tinkerer
 option. See the
-`Mega+WiFi page </reference/hardware/wifi-boards/mega-wifi>`{.interpreted-text
-role="doc"}
+`Mega+WiFi page </reference/hardware/wifi-boards/mega-wifi>`
 
 :!!! warning "::: title
 Warning"
 :::
 
 While the recommended
-`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>`{.interpreted-text
-role="doc"} is now shipping with the correct firmware version and **will
+`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>` is now shipping with the correct firmware version and **will
 work** with \|EX-CS\| *without modification*, please be aware that the
 Espressif firmware shipped with *Duinopeak ESP8266 WiFi Expansion* and
-*ESP-01 or ESP-01S* devices `will probably NOT work`{.interpreted-text
-role="dcc-ex-red-bold"} with \|EX-CS\| out of the box.
+*ESP-01 or ESP-01S* devices `will probably NOT work` with \|EX-CS\| out of the box.
 
-> See `/support/wifi-at-version`{.interpreted-text role="doc"} for
+> See `/support/wifi-at-version` for
 > details on how to check the version and how to correct it if needed.
 ::::
 
 For more information on how to configure your Command Station to use the
 boards below, see
-`Wifi Setup </ex-commandstation/diy/wifi-setup>`{.interpreted-text
-role="doc"}
+`Wifi Setup </ex-commandstation/diy/wifi-setup>`
 
-::: {.toctree maxdepth="1"}
+::: 
 /reference/hardware/wifi-boards/ex-wifi-shield-8266
 /reference/hardware/wifi-boards/makerfabs-esp8266
 /reference/hardware/wifi-boards/duinopeak-esp8266

@@ -1,4 +1,4 @@
-::: {.meta keywords="Decoders diagnosing Issues Troubleshooting"}
+::: 
 :::
 
 \|EX-CS-LOGO\|
@@ -17,5 +17,4 @@ and you may may need to alter the Command Station setting to read from
 or write to these decoders.
 
 See
-`Diagnostic Commands </reference/tools/diagnostic-d-ack-command>`{.interpreted-text
-role="doc"} for information on how to.
+`Diagnostic Commands </reference/tools/diagnostic-d-ack-command>` for information on how to.

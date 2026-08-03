@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -15,14 +15,13 @@ This page describes the software configuration options for using WiFi to
 connect your \|EX-CS\| (CS) wirelessly to \|JMRI\| or a wireless
 throttle like \|Engine Driver\|. For information on how to connect your
 hardware, go to
-`WiFi Setup </ex-commandstation/diy/wifi-setup>`{.interpreted-text
-role="doc"}.
+`WiFi Setup </ex-commandstation/diy/wifi-setup>`.
 
 As mentioned in the above link, you will need the following to proceed:
 
 - A \|EX-CS\| with Motor Driver
 - A WiFi board (for Bluetooth configuration, see
-  `/reference/hardware/bluetooth`{.interpreted-text role="doc"})
+  `/reference/hardware/bluetooth`)
 
 For a video, click [Setting up
 WiFi](https://www.youtube.com/watch?v=N6TWR7fIl0A&t=5s).
@@ -33,39 +32,37 @@ WiFi](https://www.youtube.com/watch?v=N6TWR7fIl0A&t=5s).
 Note"
 :::
 
-![Tinkerer Icon](/_static/images/level_icons/tinkerer.png){.align-left}
+![Tinkerer Icon](/_static/images/level_icons/tinkerer.png)
 
 If using a separate ESP instead of a shield, this becomes tinkerer
 level.
 ::::
 
-:::: {.warning .warning-float-right}
+:::: 
 ::: title
 Warning
 :::
 
 Please be aware that the Espressif firmware shipped with *Duinopeak
 ESP8266 WiFi Expansion* and *ESP-01 or ESP-01S* devices
-`will probably NOT work`{.interpreted-text role="dcc-ex-red-bold"} with
+`will probably NOT work` with
 \|EX-CS\| out of the box.
 
 (Note: The recommended
-`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>`{.interpreted-text
-role="doc"} is now shipping with the correct firmware version and **will
+`Makerfabs ESP8266 WiFi Shield </reference/hardware/wifi-boards/makerfabs-esp8266>` is now shipping with the correct firmware version and **will
 work** with \|EX-CS\| *without modification*).
 
 This can be corrected, but is probably beyond Conductor level and
 requires additional hardware.
 
-See `/support/wifi-at-version`{.interpreted-text role="doc"} for details
+See `/support/wifi-at-version` for details
 on how to check the version and how to correct it if needed.
 ::::
 
 ## Wireless Connections
 
 As mentioned in
-`WiFi Setup </ex-commandstation/diy/wifi-setup>`{.interpreted-text
-role="doc"}, there are two main reasons for wanting to use WiFi; to
+`WiFi Setup </ex-commandstation/diy/wifi-setup>`, there are two main reasons for wanting to use WiFi; to
 connect to \|JMRI\| without a USB cable, or to connect to a wireless
 throttle (controller) like the \|Engine Driver\| mobile app. While it
 can work to simply use WiFi to replace the USB cable to connect the
@@ -76,8 +73,7 @@ buy the right sized cable.
 But if you have no alternative and need to replace the cable with
 wireless, we recommend the HC-12 serial wireless bridge boards which we
 cover on the
-`/reference/hardware/wifi-boards/hc12-bridge`{.interpreted-text
-role="doc"} page.
+`/reference/hardware/wifi-boards/hc12-bridge` page.
 
 That said, there are two main wireless technologies that let you send
 commands to your Command Station and control your trains:
@@ -88,7 +84,7 @@ commands to your Command Station and control your trains:
 Your particular controller hardware (a separate controller or your cell
 phone) may be able to use either or both depending on the controller you
 choose. This tutorial covers WiFi configuration, for Bluetooth see
-`/reference/hardware/bluetooth`{.interpreted-text role="doc"}.
+`/reference/hardware/bluetooth`.
 
 ## Connection Type: Direct to Command Station or through JMRI
 
@@ -167,7 +163,7 @@ network to allow a direct connection to your throttles (controller).
 (Remember you can click on images to enlarge them)
 
 ![Access Point Mode - Things connect to the WiFi
-Board](/_static/images/wifi/WiFi_softap_mode.png){alt="Access Point (AP) Mode"}
+Board](/_static/images/wifi/WiFi_softap_mode.png)
 
 ### Station Mode
 
@@ -185,7 +181,7 @@ a static IP address in your router to assign to the Command Station.
 
 ![Station Mode - Things connect to the router and find the WiFi board by
 its IP
-address](/_static/images/wifi/WiFi_station_mode.png){alt="Station Mode"}
+address](/_static/images/wifi/WiFi_station_mode.png)
 
 Images are courtesy of
 [NodeMCU](https://nodemcu.readthedocs.io/en/latest/modules/wifi/). You
@@ -200,8 +196,7 @@ documentation](https://www.jmri.org/help/en/html/hardware/dccpp/index.shtml)
 
 To use the default \|Access Point mode\|, you don\'t have to do anything
 other than connect an ESP8266 board as described in
-`WiFi Setup </ex-commandstation/diy/wifi-setup>`{.interpreted-text
-role="doc"}.
+`WiFi Setup </ex-commandstation/diy/wifi-setup>`.
 
 That\'s it! If there is no previously configured network in range, or
 the WiFi setup in your config.h file is still unconfigured, the default
@@ -234,8 +229,7 @@ also appear on the optional LCD or OLED display.
 
 If you wish to use a custom SSID in access point mode, you will need to
 set the WIFI_FORCE_AP option in config.h, see
-`ex-commandstation/advanced-setup/supported-wifi/wifi-config:#define wifi_force_ap`{.interpreted-text
-role="ref"}
+`ex-commandstation/advanced-setup/supported-wifi/wifi-config:#define wifi_force_ap`
 ::::
 
 Whenever you connect a USB cable and open the \|serial monitor\|, you
@@ -251,7 +245,7 @@ are looking for the items in the blue box below that are highlighted in
 red.
 
 ![Serial Monitor Log (click to
-enlarge)](/_static/images/wifi/ap_mode1.jpg){alt="IP Address"}
+enlarge)](/_static/images/wifi/ap_mode1.jpg)
 
 You will see the line that has
 `AT+CIPSERVER=1,2560\r\r\nno change\r\n\r\nOK\r\n`, where **2560** is
@@ -329,7 +323,7 @@ Address (**the default is usually 192.168.4.1, but it will be displayed
 in your serial monitor log if you are unsure**), enter **2560 for the
 port number**, and then select and acquire your loco by its address. If
 you don\'t know your loco address, see the `<R>` command in the
-`native-command-r`{.interpreted-text role="ref"} section of the Command
+`native-command-r` section of the Command
 Reference.
 
 :!!! note "::: title
@@ -379,12 +373,11 @@ slower, and with a very high probability of getting something wrong
 unless you really know what you are doing.
 
 Just run \|EX-I\| and
-`select your required WiFi settings <ex-installer/installing:wifi>`{.interpreted-text
-role="ref"}.
+`select your required WiFi settings <ex-installer/installing:wifi>`.
 ::::
 
 In order to connect to your home network, you must open the
-[config.h]{.title-ref} file and enter your login credentials, unless you
+[config.h] file and enter your login credentials, unless you
 have already entered your credentials earlier via the automated
 \|EX-I\|.
 
@@ -394,7 +387,7 @@ open the project.
 
 Look for these lines in the file:
 
-``` {.cpp caption="Station Mode Configuration"}
+``` 
 /////////////////////////////////////////////////////////////////////////////////////
 //
 // NOTE: Only supported on Arduino Mega
@@ -440,7 +433,7 @@ to \"config.h\".
 
 | [#define IP_PORT 2560](#define-ip_port-2560)
 | [#define ENABLE_WIFI true](#define-enable_wifi-true)
-| [#define DONT_TOUCH_WIFI_CONF]{.title-ref}
+| [#define DONT_TOUCH_WIFI_CONF]
 | [#define WIFI_SSID \"Your network
   name\"](#define-wifi_ssid-your-network-name)
 | [#define WIFI_PASSWORD \"Your network
@@ -449,10 +442,8 @@ to \"config.h\".
 | [#define WIFI_CONNECT_TIMEOUT
   14000](#define-wifi_connect_timeout-14000)
 | [#define ENABLE_ETHERNET true](#define-enable_ethernet-true)
-| [#define IP_ADDRESS { 192, 168, 1, 200
-  }](#define-ip_address-192-168-1-200)
-| [#define MAC_ADDRESS { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEF
-  }](#define-mac_address-0xde-0xad-0xbe-0xef-0xfe-0xef)
+| [#define IP_ADDRESS ](#define-ip_address-192-168-1-200)
+| [#define MAC_ADDRESS ](#define-mac_address-0xde-0xad-0xbe-0xef-0xfe-0xef)
 
 ### #define IP_PORT 2560
 
@@ -535,7 +526,7 @@ Ethernet Shield & cable (not WiFi, see above for that). You will also
 need to install the Arduino Ethernet Library on whichever IDE you use to
 compile and upload your sketch.
 
-### #define IP_ADDRESS { 192, 168, 1, 200 }
+### #define IP_ADDRESS 
 
 **Default: commented out** - Uncomment this line if you wish to use a
 static IP address, otherwise the Command Station will use DHCP to
@@ -545,7 +536,7 @@ IP, you will also have to configure this IP in your router.
 **Note** - this is only valid when using Ethernet, and does not apply to
 WiFi.
 
-### #define MAC_ADDRESS { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xEF }
+### #define MAC_ADDRESS 
 
 **Default: commented out** - This is for Ethernet only! Ethernet shields
 do not normally come with a defined MAC address. We give you two, and
@@ -653,7 +644,7 @@ network will assign that IP to your Command Station when the Command
 Station asks for one.
 
 You can try these commands also. You must have a recent version of the
-firmware to support [DEF]{#def} commands. If they don\'t work, try
+firmware to support [DEF] commands. If they don\'t work, try
 entering them without this suffix (Example: \<+CIPAP\> instead of
 \<+CIPAP_DEF\>)
 

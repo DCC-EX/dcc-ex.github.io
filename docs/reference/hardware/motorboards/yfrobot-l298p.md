@@ -26,8 +26,7 @@ and play!**
 ![YFRobot L298P Motor Driver
 Shield](/_static/images/motorboards/yfrobot1.png)
 
-`Install the YFRobot Motor Shield (similar to Deek-Robot) </ex-commandstation/diy/assembly>`{.interpreted-text
-role="doc"}
+`Install the YFRobot Motor Shield (similar to Deek-Robot) </ex-commandstation/diy/assembly>`
 
 **Remember to select YFROBOT_MOTOR_SHIELD in your config.h file or from
 the motor board dropdown if using EX-Installer**
@@ -52,8 +51,7 @@ to D5 and D6 on the shield. For information about high-accuracy mode,
 See:
 ::::
 
-`High Accuracy Waveform <reference/hardware/motorboards/motor-board-config:Using High Accuracy Waveform Mode>`{.interpreted-text
-role="ref"}
+`High Accuracy Waveform <reference/hardware/motorboards/motor-board-config:Using High Accuracy Waveform Mode>`
 
 ::: todo
 [LOW -

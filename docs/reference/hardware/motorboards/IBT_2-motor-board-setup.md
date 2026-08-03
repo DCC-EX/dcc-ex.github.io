@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -20,8 +20,7 @@ Warning"
 This board can supply a LOT of current. The maximum recommended current
 is 5A for N and HO scale
 
-`This board can supply a whopping 43A`{.interpreted-text
-role="dcc-ex-red-bold-italic"}, enough to cause a LOT of damage.
+`This board can supply a whopping 43A`, enough to cause a LOT of damage.
 
 To use this board, make sure you have fuses or circuit breakers
 connected in line with both rails. *SOFTWARE ALONE CANNOT PROTECT YOU IN
@@ -123,8 +122,7 @@ having to create a small 1 transistor and 2 resistor inverter circuit to
 only use 1 pin. If you want to use \"high accuracy\" mode because you
 need to free an Arduino pin or some other reason, and you like to
 solder, please see
-`High Accuracy Waveform Mode </reference/hardware/motorboards/high-accuracy>`{.interpreted-text
-role="doc"}.
+`High Accuracy Waveform Mode </reference/hardware/motorboards/high-accuracy>`.
 ::::
 
 ### Upgrade (IBT_2)
@@ -175,8 +173,7 @@ For this installation we are going to assume you already have a working
 Command Station or at least have all the parts you need as listed above.
 
 If you need instructions on how to install the Arduino Motor Shield, see
-`Arduino Motor Shield Assembly </ex-commandstation/diy/assembly>`{.interpreted-text
-role="doc"}
+`Arduino Motor Shield Assembly </ex-commandstation/diy/assembly>`
 
 ### What We Are Going To Do (Upgrade)
 
@@ -217,7 +214,7 @@ shield! You will have no current sense and no short circuit protection.
     keep the phase of the DCC signal in sync between power districts.
 4.  Option - You may need to connect or solder a 10k or smaller resistor
     between pin 5 or 6 and ground on the IBT_2 (shown as R1 in
-    `ibt2-wiring-schematic`{.interpreted-text role="numref"}). There
+    `ibt2-wiring-schematic`). There
     should already be a 10k resistor on each chip (double check the
     values on your board!), which gives us a resistance of 5k when we
     connect both current sense outputs together. See the notes below for
@@ -278,7 +275,7 @@ to pins 3 and 4 on the IBT_2 and A5 connected to pins 5 and 6. As with
 most of our diagrams, you can click on them to enlarge them.
 
 ![Wiring visual
-layout](/_static/images/motorboards/ibt_2_wiring_fritz.png){alt="IBT_2 Wiring 2"}
+layout](/_static/images/motorboards/ibt_2_wiring_fritz.png)
 
 :!!! note "::: title
 Note"
@@ -315,8 +312,7 @@ can copy and paste IBT_2_WITH_ARDUINO to replace STANDARD_MOTOR_SHIELD
 
 Upload the sketch to your Arduino. If you need help on how to upload a
 sketch, see
-`Getting Started </ex-commandstation/index>`{.interpreted-text
-role="doc"}
+`Getting Started </ex-commandstation/index>`
 
 Please see [Important Notes on Current Sensing
 (IBT_2)](#important-notes-on-current-sensing-ibt_2).
@@ -434,7 +430,7 @@ layout, or yourself:
   you will need a magnifier or to take a picture with your phone and
   zoom in. 103 = 10k (10 followed by 3 zeros). These are the second from
   the left resistor in each bank of 4 (R5 and R6). See
-  `ibt2-sense-resistors`{.interpreted-text role="numref"}. When we tie
+  `ibt2-sense-resistors`. When we tie
   the two Command Station outputs together, that gives us 5k of
   resistance from which to measure a voltage drop and convert that to
   current. If you added another 10k resistor (R1) in parallel with the
@@ -504,8 +500,7 @@ currents, you can use a simple formula to calculate it.
 
 Everything you need to create your own motor board definition is here:
 
-`Creating a Custom Motor Board Definition <reference/hardware/motorboards/motor-board-config:if your board is not in the supported list>`{.interpreted-text
-role="ref"}
+`Creating a Custom Motor Board Definition <reference/hardware/motorboards/motor-board-config:if your board is not in the supported list>`
 
 ## Using External Current Sense
 
@@ -563,8 +558,7 @@ The default is \"STANDARD_MOTOR_SHIELD\" For Arduino and clone shields.
 If you want to change your motor shield or create a definition for one
 that does not yet have built-in support, you can follow the simple
 instructions in the
-`Motor Board Config Section </reference/hardware/motorboards/motor-board-config>`{.interpreted-text
-role="doc"}
+`Motor Board Config Section </reference/hardware/motorboards/motor-board-config>`
 
 For the \|Engineer-TEXT\|:
 
@@ -597,8 +591,7 @@ Driver](../../../_static/documents/bts7960-motor-driver.pdf)
 > There are two ways to monitor motor board current, one is at the input
 > of the board and the other is at the output. We will cover both of
 > these methods in the
-> `advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Important Notes on Current Sensing (IBT_2)`{.interpreted-text
-> role="ref"} section.
+> `advanced-setup/supported-motorboards/IBT_2-motor-board-setup:Important Notes on Current Sensing (IBT_2)` section.
 >
 > Also, mention \"high accuracy mode\" and include the circuit for that.
 

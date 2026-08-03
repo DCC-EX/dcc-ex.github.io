@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -40,8 +40,7 @@ managing.
 ## The following commands turn ON(1) or OFF(0) various diagnostic traces
 
 `<D ACK ON|OFF>` trace DCC ACK processing when reading/writing on the
-prog track. See `diagnostic-d-ack-command`{.interpreted-text
-role="doc"}.
+prog track. See `diagnostic-d-ack-command`.
 
 `<D CMD ON|OFF>` trace received \|JMRI\| commands.
 

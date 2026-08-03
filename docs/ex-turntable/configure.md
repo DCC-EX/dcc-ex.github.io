@@ -5,9 +5,9 @@
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-turntable-button-small\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -25,7 +25,7 @@ I2C_ADDRESS 0x60).
 
 ### I2C_ADDRESS
 
-[Default: 0x60]{.title-ref}
+[Default: 0x60]
 
 This is the address that \|EX-TT\| will occupy on the \|I2C\| bus. The
 default address has been chosen as it is not expected to conflict with
@@ -41,9 +41,9 @@ CommandStation by ensuring each has its own unique \|I2C\| address.
 
 ### TURNTABLE_EX_MODE
 
-[Default: TURNTABLE]{.title-ref}
+[Default: TURNTABLE]
 
-[Valid values: TURNTABLE, TRAVERSER]{.title-ref}
+[Valid values: TURNTABLE, TRAVERSER]
 
 This option can be used to enable support for horizontal or vertical
 traversers, as well as limited rotation turntables that cannot rotate a
@@ -54,7 +54,7 @@ limit sensors are functioning correctly.
 
 ### SENSOR_TESTING
 
-[Default: disabled]{.title-ref}
+[Default: disabled]
 
 To enable sensor testing, uncomment this line by removing the \"//\"
 from in front of \"#define\".
@@ -68,9 +68,9 @@ TRAVERSER mode.
 
 ### HOME_SENSOR_ACTIVE_STATE
 
-[Default: LOW]{.title-ref}
+[Default: LOW]
 
-[Valid values: LOW, HIGH]{.title-ref}
+[Valid values: LOW, HIGH]
 
 This is the state that the homing sensor reports to \|EX-TT\| when
 activated. Use LOW for sensors that activate by pulling the sensor
@@ -78,9 +78,9 @@ output to ground, and HIGH for sensors that pull the output to 5V.
 
 ### LIMIT_SENSOR_ACTIVE_STATE
 
-[Default: LOW]{.title-ref}
+[Default: LOW]
 
-[Valid values: LOW, HIGH]{.title-ref}
+[Valid values: LOW, HIGH]
 
 This is the state that the limit sensor reports to \|EX-TT\| when
 activated. Use LOW for sensors that activate by pulling the sensor
@@ -90,9 +90,9 @@ The limit sensor is only used when \|EX-TT\| is set to TRAVERSER mode.
 
 ### RELAY_ACTIVE_STATE
 
-[Default: HIGH]{.title-ref}
+[Default: HIGH]
 
-[Valid values: HIGH, LOW]{.title-ref}
+[Valid values: HIGH, LOW]
 
 This is the state that the phase inversion relays need to be set to in
 order to activate, or invert the phase. Use HIGH for relays that require
@@ -101,9 +101,9 @@ to activate.
 
 ### PHASE_SWITCHING
 
-[Default: AUTO]{.title-ref}
+[Default: AUTO]
 
-[Valid values: AUTO, MANUAL]{.title-ref}
+[Valid values: AUTO, MANUAL]
 
 When set to AUTO, phase switching happens automatically as the turntable
 rotates. The point at which phase inversion happens is determined by the
@@ -112,9 +112,9 @@ degrees later.
 
 ### PHASE_SWITCH_ANGLE
 
-[Default: 45]{.title-ref}
+[Default: 45]
 
-[Valid values: 0 - 179]{.title-ref}
+[Valid values: 0 - 179]
 
 This is the angle in degrees that the turntable needs to rotate away
 from the home position in order to trigger DCC phase inversion by
@@ -124,9 +124,9 @@ inversion relays.
 
 ### STEPPER_DRIVER
 
-[Default: ULN2003_HALF_CW]{.title-ref}
+[Default: ULN2003_HALF_CW]
 
-[Valid values:]{.title-ref}
+[Valid values:]
 
 - ULN2003_HALF_CW - ULN2003 stepper driver with a 28BYJ-48 motor,
   configured for half step mode defaulting to a clockwise rotation
@@ -153,7 +153,7 @@ Removed in version 0.7.0:
   NEMA17 motor, with the driver\'s enable pin inverted
 
 In version 0.7.0, simply use the `A4988` option above, and enable the
-`ex-turntable/configure:invert_enable`{.interpreted-text role="ref"}
+`ex-turntable/configure:invert_enable`
 option below to achieve the same result. This change is due to no longer
 needing to modify the AccelStepper library. For version 0.6.0 and
 earlier, you will need to use `A4988_INV` to invert the enable pin.
@@ -162,7 +162,7 @@ earlier, you will need to use `A4988_INV` to invert the enable pin.
 
 **Requires EX-Turntable version 0.7.0 or later**
 
-[Default: disabled]{.title-ref}
+[Default: disabled]
 
 When defined, this inverts the state of the DIR pin for two wire drivers
 such as the A4988, DRV8825, and TMC2208. This is likely required when
@@ -175,7 +175,7 @@ This has no effect if using the ULN2003.
 
 **Requires EX-Turntable version 0.7.0 or later**
 
-[Default: disabled]{.title-ref}
+[Default: disabled]
 
 When defined, this inverts the state of the STEP pin for two wire
 drivers such as the A4988, DRV8825, and TMC2208. We have not come across
@@ -188,7 +188,7 @@ This has no effect if using the ULN2003.
 
 **Requires EX-Turntable version 0.7.0 or later**
 
-[Default: disabled]{.title-ref}
+[Default: disabled]
 
 When defined, this inverts the state of the EN pin for two wire drivers
 such as the A4988, DRV8825, and TMC2208. This is likely required if you
@@ -199,14 +199,13 @@ hand.
 
 If in previous versions of \|EX-TT\| the `A4988_INV` stepper driver was
 defined, this option must be enabled instead, along with defining the
-`A4988` `ex-turntable/configure:stepper_driver`{.interpreted-text
-role="ref"} option.
+`A4988` `ex-turntable/configure:stepper_driver` option.
 
 This has no effect if using the ULN2003.
 
 ### DISABLE_OUTPUTS_IDLE
 
-[Default: enabled]{.title-ref}
+[Default: enabled]
 
 When defined, this option will ensure that the stepper driver outputs
 are disabled when the stepper stops rotating. This can prevent stepper
@@ -217,18 +216,18 @@ before the \"#define\".
 
 ### STEPPER_MAX_SPEED
 
-[Default: 200]{.title-ref}
+[Default: 200]
 
-[Valid values: 1 - 1000]{.title-ref}
+[Valid values: 1 - 1000]
 
 This is the maximum speed that the turntable will rotate at, in steps
 per second.
 
 ### STEPPER_ACCELERATION
 
-[Default: 25]{.title-ref}
+[Default: 25]
 
-[Valid values: \> 0]{.title-ref}
+[Valid values: \> 0]
 
 The acceleration rate of the turntable, which is defined as steps per
 second, per second. This is what gives \|EX-TT\| a more prototypical
@@ -238,9 +237,9 @@ acceleration/deceleration rate when rotating.
 
 **Requires EX-Turntable version 0.6.0 or later**
 
-[Default: 1]{.title-ref}
+[Default: 1]
 
-[Valid values: 1 - 10]{.title-ref}
+[Valid values: 1 - 10]
 
 Step counts sent from \|EX-CS\| will be multiplied by this number,
 allowing for larger gear ratios and small microsteps that result in a
@@ -248,14 +247,14 @@ steps per revolution of greater than 32767. The maximum number after
 multiplication is 4,294,967,295.
 
 Note you will likely need to increase
-`ex-turntable/configure:sanity_steps`{.interpreted-text role="ref"} if
+`ex-turntable/configure:sanity_steps` if
 you have to define a gearing factor higher than 1.
 
 ### ROTATE_FORWARD_ONLY
 
 **Requires EX-Turntable version 0.7.0 or later**
 
-[Default: disabled]{.title-ref}
+[Default: disabled]
 
 When enabled, the stepper motor will only rotate in the forward
 direction for any provided step count, and will not rotate in the
@@ -268,7 +267,7 @@ introduces slop, and helps ensure accuracy as a result.
 
 **Requires EX-Turntable version 0.7.0 or later**
 
-[Default: disabled]{.title-ref}
+[Default: disabled]
 
 When enabled, the stepper motor will only rotate in the reverse
 direction for any provided step count, and will not rotate in the
@@ -279,9 +278,9 @@ introduces slop, and helps ensure accuracy as a result.
 
 ### LED_FAST
 
-[Default: 100]{.title-ref}
+[Default: 100]
 
-[Valid values: 0 to long time]{.title-ref}
+[Valid values: 0 to long time]
 
 This is the time in milliseconds that the LED is on and off when the set
 to a fast blink. With the default, it will be on for 100ms, then off for
@@ -289,9 +288,9 @@ to a fast blink. With the default, it will be on for 100ms, then off for
 
 ### LED_SLOW
 
-[Default: 500]{.title-ref}
+[Default: 500]
 
-[Valid values: 0 to long time]{.title-ref}
+[Valid values: 0 to long time]
 
 This is the time in milliseconds that the LED is on and off when the set
 to a slow blink. With the default, it will be on for 500ms, then off for
@@ -303,7 +302,7 @@ to a slow blink. With the default, it will be on for 500ms, then off for
 
 ### DEBUG
 
-[Default: Disabled]{.title-ref}
+[Default: Disabled]
 
 If debug level output is requested as part of a support ticket or when
 troubleshooting in general, uncomment this line by removing the \"//\"
@@ -311,9 +310,9 @@ from in front of \"#define\".
 
 ### SANITY_STEPS
 
-[Default: 10000 (Disabled)]{.title-ref}
+[Default: 10000 (Disabled)]
 
-[Valid values: 1 to 2147483647]{.title-ref}
+[Valid values: 1 to 2147483647]
 
 This is the maximum number of steps the stepper motor will move during
 homing and calibration before flagging a failure.
@@ -325,9 +324,9 @@ the calibration process to succeed.
 
 ### HOME_SENSITIVITY
 
-[Default: 150 (Disabled)]{.title-ref}
+[Default: 150 (Disabled)]
 
-[Valid values: 1 to 65535]{.title-ref}
+[Valid values: 1 to 65535]
 
 This is the minimum number of steps required for the turntable to rotate
 away from the homing sensor before it deactivates, which is used during
@@ -340,9 +339,9 @@ the calibration process to succeed.
 
 ### FULL_STEP_COUNT
 
-[Default: 4096 (Disabled)]{.title-ref}
+[Default: 4096 (Disabled)]
 
-[Valid values: 1 to 2147483647]{.title-ref}
+[Valid values: 1 to 2147483647]
 
 If for some reason the automatic calibration sequence is not recording
 the correct number of steps required for a full 360 degree rotation, or
@@ -361,11 +360,11 @@ will be overridden at the next startup unless this option is disabled.
 
 ### DEBOUNCE_DELAY
 
-[Default: 10 (Disabled)]{.title-ref} - TRAVERSER mode
+[Default: 10 (Disabled)] - TRAVERSER mode
 
-[Default: 0 (Disabled)]{.title-ref} - TURNTABLE mode
+[Default: 0 (Disabled)] - TURNTABLE mode
 
-[Valid values: 0 to 50]{.title-ref} (any higher and you will compromise
+[Valid values: 0 to 50] (any higher and you will compromise
 the response time of the limit sensors)
 
 When using mechanical switches as HOME and LIMIT sensors, it is often
@@ -407,7 +406,7 @@ custom entry in \"config.h\" to allow \|EX-TT\| to work correctly.
 
 To do this, you will need to add a valid AccelStepper() definition with
 the appropriate parameters provided, and this entry needs to be defined
-as your [STEPPER_DRIVER]{.title-ref} option.
+as your [STEPPER_DRIVER] option.
 
 The list of parameters required are documented on the
 [AccelStepper](http://www.airspayce.com/mikem/arduino/AccelStepper/)
@@ -427,8 +426,8 @@ the AccelStepper documentation, as there is no longer a need to modify
 the library to work with \|EX-TT\|.
 
 To add this to \"config.h\", add your new definition **before** the
-[STEPPER_DRIVER]{.title-ref} line, and update
-[STEPPER_DRIVER]{.title-ref} to use your definition, and ensure all
+[STEPPER_DRIVER] line, and update
+[STEPPER_DRIVER] to use your definition, and ensure all
 standard options are commented out:
 
 ``` cpp

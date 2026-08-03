@@ -11,8 +11,8 @@ specific to the \|EX-CS\|.
 
 If you have just assembled your \|EX-CS\| and it is not working as
 expected, we recommend you start with the
-`/support/ex-cs-diagnose`{.interpreted-text role="doc"} page.
+`/support/ex-cs-diagnose` page.
 
-::: {.toctree maxdepth="2"}
+::: 
 ex-cs-faq ex-cs-diagnose ex-cs-troubleshooting
 :::

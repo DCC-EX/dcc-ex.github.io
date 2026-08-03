@@ -23,5 +23,4 @@ Arduino version.
 Website](https://www.diymore.cc/products/replace-l298p-for-arduino-uno-r3-dual-channel-dc-motor-driver-shield-expansion-board-l298nh-module-driving-module-mega2560-one)
 \|EXTERNAL-LINK\|
 
-`Install the DIY More Motor Shield (same as Deek-Robot) </ex-commandstation/diy/assembly>`{.interpreted-text
-role="doc"}
+`Install the DIY More Motor Shield (same as Deek-Robot) </ex-commandstation/diy/assembly>`

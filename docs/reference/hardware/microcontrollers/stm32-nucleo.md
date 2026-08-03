@@ -5,9 +5,9 @@
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-commandstation-button-small\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="3" local=""}
+::: 
 On this page
 :::
 ::::
@@ -415,8 +415,7 @@ SERIAL3  Rx=PD6, Tx=PD5  -- UART2   Serial2  D52,D53
 ![NUCLEO F429ZI and FZ439ZI
 pins](/_static/images/nucleo/nucleo-F429ZI-FZ439ZI-pins.png)
 
-`This file </reference/hardware/microcontrollers/pin_use_table_F446ZE_F429ZI_20240402.pdf>`{.interpreted-text
-role="download"} identifies how pins were assigned for 10 tracks on
+`This file </reference/hardware/microcontrollers/pin_use_table_F446ZE_F429ZI_20240402.pdf>` identifies how pins were assigned for 10 tracks on
 F4x9ZI, F446ZE or F413ZH. EX-CommandStation can presently use 8 tracks.
 Pins not used in track definitions are available for use as accessory
 pins

@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -47,12 +47,11 @@ device, and allows for a simple way to share your startup or serial
 console logs with the \|DCC-EX\| team.
 
 For details, refer to
-`ex-installer/testing:using the ex-installer device monitor`{.interpreted-text
-role="ref"}.
+`ex-installer/testing:using the ex-installer device monitor`.
 
 ## Connect with the Arduino IDE Serial Monitor
 
-:::: {.important .important-float-right}
+:::: 
 ::: title
 Important
 :::
@@ -62,8 +61,7 @@ RECOMMEND IT** for a \|conductor-text\| or \|tinkerer-text\|. It is an
 order of magnitude more complex and much slower.
 
 Just run \|EX-I\| and
-`open the serial monitor in the EX-Installer <ex-installer/testing:using the ex-installer device monitor>`{.interpreted-text
-role="ref"}.
+`open the serial monitor in the EX-Installer <ex-installer/testing:using the ex-installer device monitor>`.
 ::::
 
 **What You Will Need**
@@ -97,7 +95,7 @@ CH340](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all)
 \|EXTERNAL-LINK\|
 
 ![Select the correct COM
-Port](/_static/images/arduino-ide/board_port_mega.jpg){alt="Select the COM Port"}
+Port](/_static/images/arduino-ide/board_port_mega.jpg)
 
 ### Open the Serial Monitor
 
@@ -116,7 +114,7 @@ CR\"**. That makes sure you send a \'new line\' command and \'carriage
 return\' which the Arduino expects.
 
 ![Serial Monitor - Note line ending and baud rate
-settings!](/_static/images/installer/serial_monitor.jpg){alt="Serial Monitor"}
+settings!](/_static/images/installer/serial_monitor.jpg)
 
 Opening the \|Serial Monitor\| always resets the Arduino board.
 Therefore, you should see a startup (boot) log immediately display in
@@ -131,8 +129,7 @@ but everything else will be working as it should.
 There is an entire language that \|EX-CS\| understands. We call this the
 DCC-EX API for \"Application Programming Interface\". If you are
 interested, the list of all the commands is here in the
-`/reference/software/command-summary-consolidated`{.interpreted-text
-role="doc"}. Let\'s just try two commands to make sure everything is
+`/reference/software/command-summary-consolidated`. Let\'s just try two commands to make sure everything is
 working.
 
 All DCC-EX commands begin with a `<` and end with a `>`. In the command

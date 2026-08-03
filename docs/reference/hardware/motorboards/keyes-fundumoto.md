@@ -12,8 +12,7 @@ This board is **not** compatible with \|TM\| DC mode.
 ::::
 
 **THIS BOARD HAS NO CURRENT SENSE!** Refer to the
-`reference/hardware/motorboards/motor-board-config:current sense and sense factor`{.interpreted-text
-role="ref"} section for further information.
+`reference/hardware/motorboards/motor-board-config:current sense and sense factor` section for further information.
 
 You have to lift two traces and solder 2 resistors and use 2 jumpers to
 the current sense pins. This board is immediately recognizable because

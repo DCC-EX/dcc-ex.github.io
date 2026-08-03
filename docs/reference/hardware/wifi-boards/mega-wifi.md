@@ -4,7 +4,7 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.warning .warning-float-right}
+:::: 
 ::: title
 Warning
 :::
@@ -36,6 +36,5 @@ A \|Conductor-text\| should be able to follow the instructions, but
 Tinkerers may feel more comfortable. It takes about 15-20 minutes from
 start to finish (read, download, unzip, flash, done).
 
-`Click on this link</reference/hardware/microcontrollers/wifi-mega>`{.interpreted-text
-role="doc"} for detailed instructions on exactly how to configure and
+`Click on this link</reference/hardware/microcontrollers/wifi-mega>` for detailed instructions on exactly how to configure and
 use a Mega+WiFi board.

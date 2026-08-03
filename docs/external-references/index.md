@@ -1,11 +1,11 @@
-::: {.meta description="Articles and videos created by people in and outside the |DCC-EX| project which you may find useful or interesting"}
+::: 
 :::
 
 # Articles and Videos
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::

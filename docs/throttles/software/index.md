@@ -6,66 +6,51 @@
 
 ## Web Browser (Windows, OSX, Linux)
 
-- `EX-Web-Throttle (Web Browser) </ex-webthrottle/index>`{.interpreted-text
-  role="doc"} *recommended*
+- `EX-Web-Throttle (Web Browser) </ex-webthrottle/index>[ *recommended*
 
 ## Android (Phones and Tablets)
 
-- `Engine Driver (Android)<engine-driver>`{.interpreted-text role="doc"}
+- `Engine Driver (Android)](engine-driver.md)
   *recommended*
-- `DCC++ Throttle (Android) <dccpp-throttle>`{.interpreted-text
-  role="doc"}
-- `DCCpp CAB (android) <dccpp-cab>`{.interpreted-text role="doc"}
-- `Cab Engineer: DCC Throttle (Andriod) <cab-engineer>`{.interpreted-text
-  role="doc"}
-- `DigiTrainsPro (Android, iOS, Windows) <digitrainspro>`{.interpreted-text
-  role="doc"} *- Requires JMRI*
-- `RtDtive DCC++ (Android) <rtdrive-dccpp>`{.interpreted-text
-  role="doc"}
-- `DCC-EX CAB (iOS and Android) <dccex-cab>`{.interpreted-text
-  role="doc"}
-- `WiThrottle Cab (iOS and Android) <withrottle-cab>`{.interpreted-text
-  role="doc"}
+- `DCC++ Throttle (Android) <dccpp-throttle>[
+- `DCCpp CAB (android) ](dccpp-cab.md)
+- `Cab Engineer: DCC Throttle (Andriod) <cab-engineer>`
+- `DigiTrainsPro (Android, iOS, Windows) <digitrainspro>` *- Requires JMRI*
+- `RtDtive DCC++ (Android) <rtdrive-dccpp>`
+- `DCC-EX CAB (iOS and Android) <dccex-cab>`
+- `WiThrottle Cab (iOS and Android) <withrottle-cab>`
 
 ## Apple iOS (Phones and Tablets)
 
-- `DigiTrainsPro (Android, iOS, Windows) <digitrainspro>`{.interpreted-text
-  role="doc"} *- Requires JMRI*
-- `ThrottleCard (iOS) <throttlecard>`{.interpreted-text role="doc"}
-- `Locontrol (iOS) <locontrol>`{.interpreted-text role="doc"} *-
+- `DigiTrainsPro (Android, iOS, Windows) <digitrainspro>[ *- Requires JMRI*
+- `ThrottleCard (iOS) ](throttlecard.md)
+- [Locontrol (iOS) ](locontrol.md) *-
   Requires JMRI*
-- `SRCP Client (iOS) <srcpclient>`{.interpreted-text role="doc"}
-- `Train Driver (iOS) <train-driver>`{.interpreted-text role="doc"}
-- `Train Throttle (iOS) <train-throttle>`{.interpreted-text role="doc"}
-- `TrainNavigator (iOS) <trainnavigator>`{.interpreted-text role="doc"}
-- `DCC-EX CAB (iOS and Android) <dccex-cab>`{.interpreted-text
-  role="doc"}
-- `WiThrottle Cab (iOS and Android) <withrottle-cab>`{.interpreted-text
-  role="doc"}
-- `WiThrottle (iOS)<withrottle>`{.interpreted-text role="doc"}
-- `Signal Cab (iOS) <signal-cab>`{.interpreted-text role="doc"}
+- [SRCP Client (iOS) ](srcpclient.md)
+- [Train Driver (iOS) ](train-driver.md)
+- [Train Throttle (iOS) ](train-throttle.md)
+- [TrainNavigator (iOS) ](trainnavigator.md)
+- `DCC-EX CAB (iOS and Android) <dccex-cab>`
+- `WiThrottle Cab (iOS and Android) <withrottle-cab>[
+- `WiThrottle (iOS)](withrottle.md)
+- [Signal Cab (iOS) ](signal-cab.md)
 
 ## Personal Computers
 
-- `EX-WebThrottle (Web Browser) </ex-webthrottle/index>`{.interpreted-text
-  role="doc"} *recommended*
-- `JMRI (Windows, iOS, Linux) <jmri>`{.interpreted-text role="doc"}
+- `EX-WebThrottle (Web Browser) </ex-webthrottle/index>[ *recommended*
+- `JMRI (Windows, iOS, Linux) ](jmri.md)
   *recommended*
-- `DigiTrainsPro (Android, iOS, Windows) <digitrainspro>`{.interpreted-text
-  role="doc"} *- Requires JMRI*
-- `Railroad Automation <railroad-automation>`{.interpreted-text
-  role="doc"} *- Requires IoTT Red Hat*
-- `ThrottleCard (M1 Mac) <throttlecard>`{.interpreted-text role="doc"}
+- `DigiTrainsPro (Android, iOS, Windows) <digitrainspro>` *- Requires JMRI*
+- `Railroad Automation <railroad-automation>[ *- Requires IoTT Red Hat*
+- `ThrottleCard (M1 Mac) ](throttlecard.md)
   *- Requires WiThrottle server*
-- `Train Throttle (Mac, Windows) <train-throttle>`{.interpreted-text
-  role="doc"} *- Requires WiThrottle server*
+- `Train Throttle (Mac, Windows) <train-throttle>` *- Requires WiThrottle server*
 
 Note: The Android throttle apps listed above can be made to made to run
 on Windows PCs. See
-`Running Android apps on Microsoft Windows <android-apps-on-windows>`{.interpreted-text
-role="doc"}.
+`Running Android apps on Microsoft Windows <android-apps-on-windows>`.
 
-::: {.toctree maxdepth="1" hidden=""}
+::: 
 EX-Web-Throttle (Web Browser) \</ex-webthrottle/index\> Engine Driver
 (Android) \<engine-driver\> jmri ThrottleCard (iOS) \<throttlecard\> Cab
 Engineer: DCC Throttle (Android) \<cab-engineer\> DCCpp CAB (android)

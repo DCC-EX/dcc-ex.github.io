@@ -1,11 +1,11 @@
-::: {.meta description="Standards and technical references the |DCC-EX| components are build onto."}
+::: 
 :::
 
 # Standards & technical references
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::

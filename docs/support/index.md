@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -22,7 +22,7 @@ The following pages provide these FAQs and troubleshooting guides, and
 the following sections on this page outline how to get help if these
 don\'t resolve the issue.
 
-::: {.toctree maxdepth="2"}
+::: 
 index-ex-cs troubleshooting-decoders ex-tt-troubleshooting
 ex-io-troubleshooting
 :::
@@ -34,7 +34,7 @@ ex-io-troubleshooting
 There are several different ways to get in contact with the team and
 obtain help and support for \|DCC-EX\|.
 
-::: {.contents .in-this-section depth="1" local=""}
+::: 
 In This Section
 :::
 
@@ -74,29 +74,29 @@ Instructions:
 1.  Follow this link <https://discord.gg/y2sB4Fp>
 2.  click `Register` on the sign in-page
 
-![](/_static/images/discord/discord-sign-in.png){alt="Discord Sign-in"}
+![](/_static/images/discord/discord-sign-in.png)
 
 3.  Fill in your details, click `Continue` and follow the instructions
 
-![](/_static/images/discord/discord-register.png){alt="Discord Register"}
+![](/_static/images/discord/discord-register.png)
 
 4.  Choose which channels you are interested in. \|BR\| If you are
     unsure, just select the first option
     `Get help to setup an EX-CommandStation`.
 
-![](/_static/images/discord/discord-customise.png){alt="Discord Customise"}
+![](/_static/images/discord/discord-customise.png)
 
 5.  Go to the `Open-a-ticket` channel
 
-![](/_static/images/discord/discord-open-a-ticket-channel.png){alt="Discord open-a-ticket Channel"}
+![](/_static/images/discord/discord-open-a-ticket-channel.png)
 
 6.  Click the red ticket button (the bottom one)
 
-![](/_static/images/discord/discord-open-a-ticket.png){alt="Discord open-a-ticket"}
+![](/_static/images/discord/discord-open-a-ticket.png)
 
 That will create a new \'ticket\' channel like this\...
 
-![](/_static/images/discord/discord-ticket.png){alt="Discord ticket"}
+![](/_static/images/discord/discord-ticket.png)
 
 7.  Enter an explanation of your issue or query into the `message` at
     the bottom of the screen. Please add as much detail as possible.
@@ -164,6 +164,6 @@ project team* use TrainBoard, so this approach is **not recommended**.
 [DCC++ EX TrainBoard
 Forum](https://www.trainboard.com/highball/index.php?forums/dcc.177/)
 
-::: {.toctree maxdepth="1"}
+::: 
 contact-us create-ticket
 :::

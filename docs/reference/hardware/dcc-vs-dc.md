@@ -8,9 +8,9 @@ orphan
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -92,7 +92,7 @@ Auto-Reverser mode.
 
 For detailed steps on how to use TrackManager to change track modes and
 settings, check out the
-`TrackManager page </trackmanager/index>`{.interpreted-text role="doc"}.
+[TrackManager page ](/trackmanager/index.md).
 
 \|HR-DASHED\|
 
@@ -107,14 +107,13 @@ shield\| must have a brake pin defined in your \"config.h\" \|motor
 shield\| definition. \|BR\| There are a very limited number of motor
 drivers that are known to be suitable for use with DC mode. The current
 list is available in
-`reference/hardware/motor-boards:trackmanager dc compatible boards`{.interpreted-text
-role="ref"}. Any other motor drivers, not explicitly listed, are not
+`reference/hardware/motor-boards:trackmanager dc compatible boards`. Any other motor drivers, not explicitly listed, are not
 supported.
 
 Note the \|EX-CSB1-SHORT\| *has* a brake pin and *is* therefore capable
 of supporting DC PWM.
 
-:::: {.warning .warning-float-right}
+:::: 
 ::: title
 Warning
 :::
@@ -342,8 +341,7 @@ definition.
 
 There are a very limited number of motor drivers that are known to be
 suitable for use with DC mode. The current list is available in
-`reference/hardware/motor-boards:trackmanager dc compatible boards`{.interpreted-text
-role="ref"}. Any other motor drivers, not explicitly listed, are not
+`reference/hardware/motor-boards:trackmanager dc compatible boards`. Any other motor drivers, not explicitly listed, are not
 supported.
 
 Note the \|EX-CSB1-SHORT\| *has* a brake pin and *is* therefore capable
@@ -370,12 +368,11 @@ Driver\| or 5A fuses for the larger motor drivers.
 
 ## Next Steps
 
-Visit the `/trackmanager/index`{.interpreted-text role="doc"} page to
+Visit the `/trackmanager/index` page to
 see how you can use DC PWM on you \|EX-CS\|.
 
 [^1]: The voltage you need for the [\|Motor
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.

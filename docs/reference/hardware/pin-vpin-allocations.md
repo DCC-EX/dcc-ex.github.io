@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -107,8 +107,7 @@ you need to either not use any other devices at this address, change the
 PCF8574 address to 0x3F (if possible), or replace it. OLEDs typically
 use address 0x3C, so should not cause issues.
 
-Refer to `/reference/hardware/i2c-displays`{.interpreted-text
-role="doc"} for further information.
+Refer to `/reference/hardware/i2c-displays` for further information.
 ::::
 
 ### MCP23017 digital I/O expander
@@ -122,10 +121,8 @@ default.
 Two devices are defined by default.
 
 Refer to
-`reference/developers/hal-config:mcp23017 modules`{.interpreted-text
-role="ref"} and
-`reference/developers/hal:hal programming interface`{.interpreted-text
-role="ref"} for further information.
+`reference/developers/hal-config:mcp23017 modules` and
+`reference/developers/hal:hal programming interface` for further information.
 
 +-----------------+------------+---------------------------------------+
 | \|I2C\| address | VPin range | Comments                              |
@@ -170,12 +167,10 @@ resolved automatically at startup.
 
 Note also the potential conflict with an LCD at \|I2C\| address 0x27 as
 per
-`reference/hardware/pin-vpin-allocations:mcp23017 digital i/o expander`{.interpreted-text
-role="ref"}.
+`reference/hardware/pin-vpin-allocations:mcp23017 digital i/o expander`.
 
 Refer to
-`reference/developers/hal:hal programming interface`{.interpreted-text
-role="ref"} for further information.
+`reference/developers/hal:hal programming interface` for further information.
 
 When adding MCP23008s, select an unused VPin that allows a total of 8
 consecutive numbers for all I/O pins.
@@ -209,8 +204,7 @@ MCP23017 devices at these addresses, but this conflict should be
 resolved automatically at startup.
 
 Refer to
-`reference/developers/hal:hal programming interface`{.interpreted-text
-role="ref"} for further information.
+`reference/developers/hal:hal programming interface` for further information.
 
 When adding PCF8574s, select an unused VPin that allows a total of 8
 consecutive numbers for all I/O pins.
@@ -242,10 +236,8 @@ default.
 Two devices are defined by default.
 
 Refer to
-`reference/developers/hal-config:pca9685 modules`{.interpreted-text
-role="ref"} and
-`reference/developers/hal:hal programming interface`{.interpreted-text
-role="ref"} for further information.
+`reference/developers/hal-config:pca9685 modules` and
+`reference/developers/hal:hal programming interface` for further information.
 
   \|I2C\| address   VPin range   Comments
   ----------------- ------------ ---------------------------------------------------------------------------------
@@ -275,7 +267,7 @@ available address can be used.
 The device driver name is \"IO_EXIOExpander.h\" and is included by
 default.
 
-Refer to `/ex-ioexpander/index`{.interpreted-text role="doc"} for
+Refer to `/ex-ioexpander/index` for
 further information.
 
 When adding EX-IOExpander devices, select an unused VPin that allows for
@@ -301,8 +293,7 @@ The device driver name is \"IO_VL53L0X.h\" and will need to be included
 in \"myAutomation.h\" or \"myHal.cpp\".
 
 Refer to
-`/ex-commandstation/accessories/sensors/vl53l0x-tof-sensor`{.interpreted-text
-role="doc"} for further information.
+`/ex-commandstation/accessories/sensors/vl53l0x-tof-sensor` for further information.
 
   ----------------------- ---------------------- ------------ -------------------------------------------------------------------------------------------------------
   \|I2C\| address range   Suggested first VPin   VPin count   Comments
@@ -331,7 +322,7 @@ this address is configurable by the software.
 The device driver name is \"IO_EXTurntable.h\" and will need to be
 included in \"myAutomation.h\" or \"myHal.cpp\".
 
-Refer to `/ex-turntable/index`{.interpreted-text role="doc"} for further
+Refer to `/ex-turntable/index` for further
 information.
 
   ------------------------------------------------------- ---------------- ------------ ----------------------------------------------------------------------------------------

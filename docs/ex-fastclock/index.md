@@ -12,7 +12,7 @@ additional Arduino Uno microcontroller and a plug-in shield type TFT
 touch screen. The commands built into the DCC_EX Command Station make it
 possible to also integrate an existing microcontroller based fast clock.
 
-::: {.toctree maxdepth="1"}
+::: 
 overview hardware connect-existing cs-commands
 :::
 

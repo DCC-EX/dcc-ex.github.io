@@ -1,4 +1,4 @@
-::: {.meta keywords="Products"}
+::: 
 :::
 
 \|donate-button\|
@@ -25,7 +25,7 @@ Our *open source* hardware products currently include:
                                       command stations
   ----------------------------------- -----------------------------------
 
-See the `Purchasing <purchasing/dealers>`{.interpreted-text role="doc"}
+See the [Purchasing ](purchasing/dealers.md)
 page for information on how to buy our hardware products.
 
 ## Our Free, Open Source Software
@@ -35,8 +35,7 @@ Our *free*, *open source* software products currently include:
   ----------------------------------- ---------------------------------------------------------------------------------
   \|EX-CS-LOGO-SMALL\|                Our \|DCC\| & \|DC\| command station software for controlling your model
                                       railroad. \|BR\|
-                                      `For a ready-to-run version of the EX-CommandStation see our`{.interpreted-text
-                                      role="dcc-ex-text-size-60pct"} \|EX-CSB1-SHORT\|
+                                      `For a ready-to-run version of the EX-CommandStation see our` \|EX-CSB1-SHORT\|
 
   \|EX-I-LOGO-SMALL\|                 Our user friendly command station software installer
 
@@ -65,10 +64,9 @@ To learn more about a specific product, click on one of the links above.
 
 For how to buy a *ready-to-run (RTR)* or build your own *do-it-yourself
 (DIY)* \|EX-CS\| station, click \'Next\' or proceed to the
-`Ex-Command Station Page </ex-commandstation/index>`{.interpreted-text
-role="doc"}.
+`Ex-Command Station Page </ex-commandstation/index>`.
 
-::: {.toctree hidden="" maxdepth="4" caption="Products"}
+::: 
 ex-commandstation/index EX-CSB1 Express \<ex-csb1/index\>
 EX-MotorShield8874
 \<reference/hardware/motorboards/ex-motor-shield-8874_2\>

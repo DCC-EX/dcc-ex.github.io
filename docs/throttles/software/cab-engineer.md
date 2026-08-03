@@ -2,9 +2,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -16,9 +16,9 @@ you connect to the computer running \|JMRI\| via WiFi and connect the
 \|JMRI\| computer to the Command Station using a USB cable. If you
 connect Cab Engineer directly to \|EX-CS\|, you will to add a WiFi
 option to your \|EX-CS\| as explained here:
-`/ex-commandstation/diy/wifi-setup`{.interpreted-text role="doc"}.
+`/ex-commandstation/diy/wifi-setup`.
 
-![Android Logo](/_static/images/throttles/icon_android.png){.align-left}
+![Android Logo](/_static/images/throttles/icon_android.png)
 
 | 
 
@@ -29,7 +29,7 @@ Please visit Ralf at the Alf Labs Website:
 HERE](https://play.google.com/store/apps/details?id=com.alflabs.dcccab)
 \|EXTERNAL-LINK\|
 
-## Features {#ce-features}
+## Features 
 
 - Select loco by address or from the \|JMRI\| roster if connected to
   \|JMRI\|
@@ -37,7 +37,7 @@ HERE](https://play.google.com/store/apps/details?id=com.alflabs.dcccab)
 - 13 DCC functions (F0-F12)
 - Turnout control
 
-## Screenshots {#ce-screenshots}
+## Screenshots 
 
 ![Cab Engineer 1](/_static/images/throttles/cab_engineer_screen3.jpg)
 

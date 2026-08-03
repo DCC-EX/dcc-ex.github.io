@@ -5,9 +5,9 @@
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-turntable-button-small\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -108,8 +108,7 @@ issues encountered with \|EX-TT\|.
 +==================================+===============================================================================================+
 | | \<D HAL SHOW\> reports         | | EX-Turntable is not powered on, or was powered on after the CommandStation                  |
 |   EX-Turntable as OFFLINE        | | The \|I2C\| interfaces are not connected correctly, refer to                                |
-| | EX-Turntable does not respond  |   `ex-turntable/assembly:9. connect ex-turntable to your ex-commandstation`{.interpreted-text |
-|   to EXRAIL or diagnostic        |   role="ref"}                                                                                 |
+| | EX-Turntable does not respond  |   `ex-turntable/assembly:9. connect ex-turntable to your ex-commandstation`                                                                                 |
 |   commands                       | | The \|I2C\| address in EX-Turntable\'s config.h does not match the address in the           |
 |                                  |   CommandStation\'s myHal.cpp file                                                            |
 +----------------------------------+-----------------------------------------------------------------------------------------------+

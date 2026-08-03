@@ -4,9 +4,9 @@
 
 \|tinkerer\| \|engineer\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -28,7 +28,7 @@ If you concentrate on documentation, no additional hardware requirements
 exist. Keep reading on, but be reassured if you don\'t feel comfortable
 with the following don\'t worry, we will find a way to have you
 contributing by other means. Just go to the
-`/support/contact-us`{.interpreted-text role="doc"} page, and we will
+`/support/contact-us` page, and we will
 find a way of getting you on board, or help you out getting things set
 up.
 
@@ -140,8 +140,7 @@ Note, however, that the Esbonio server will only generate live previews
 of the pages you are actively editing, and therefore it will not give
 you a complete updated view of the entire website.
 
-Refer to the `/about/contributing/website/index`{.interpreted-text
-role="doc"} contributing page for more info on generating reliable local
+Refer to the `/about/contributing/website/index` contributing page for more info on generating reliable local
 previews.
 
 ### Images

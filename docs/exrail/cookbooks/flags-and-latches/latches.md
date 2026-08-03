@@ -8,8 +8,7 @@ Latches were first introduced into \|EX-R\| as a way of latching a
 sensor value or pushbutton on, so that once detected it could be checked
 later and not suffer from bouncing. This use is comparatively rare and
 has generally been superseded by the more recent
-`ONBUTTON </exrail/exrail-command-reference>`{.interpreted-text
-role="doc"} event handler.
+`ONBUTTON </exrail/exrail-command-reference>` event handler.
 
 Latches were also used as a way of setting a flag that could be read
 later, for example to remember whether a light had been switched on by a
@@ -24,8 +23,7 @@ but below the artificial software limit (63 on a UNO, 255 on bigger
 CPUs) for various flags in routes and automations.
 
 Because of these limitations, it is recommended that you use the much
-simpler `/exrail/cookbooks/flags-and-latches/flags`{.interpreted-text
-role="doc"} feature which provides virtual VPINs that can be set, reset
+simpler `/exrail/cookbooks/flags-and-latches/flags` feature which provides virtual VPINs that can be set, reset
 and tested without the limitations of `LATCH`.
 
 For example:

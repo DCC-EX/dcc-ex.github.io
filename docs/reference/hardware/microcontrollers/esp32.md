@@ -5,9 +5,9 @@
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-commandstation-button-small\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -115,10 +115,8 @@ Pictured here:
 ![ESPDUINO-32 UNO form factor](/_static/images/esp32/espduino-32.png)
 
 Sharing the same form factor as the Arduino UNO it can make use of the
-`Arduino Motor Shield R3 </reference/hardware/motorboards/arduino-motor-shield>`{.interpreted-text
-role="doc"} or the
-`Deek-Robot Motor Shield </reference/hardware/motorboards/deek-robot-motor-shield>`{.interpreted-text
-role="doc"}. Note however that there are some hardware issues to be
+`Arduino Motor Shield R3 </reference/hardware/motorboards/arduino-motor-shield>` or the
+`Deek-Robot Motor Shield </reference/hardware/motorboards/deek-robot-motor-shield>`. Note however that there are some hardware issues to be
 aware of, and to remedy before using this board.
 
 It is a bit frustrating to find the following obvious hardware errors in
@@ -142,27 +140,27 @@ to do on the back side of the board, like so:
 
 ![ESPDUINO-32 resister modification, underside of PCB](/_static/images/esp32/espduino-32-resistor.jpg)
 
-From top to bottom the pins are: [IO0]{.title-ref}, [5V]{.title-ref}
-(incorrectly labelled [IOREF]{.title-ref} on this board, so not Arduino
-UNO R3 compliant), [RESET]{.title-ref}, [3.3V]{.title-ref},
-[5V]{.title-ref}, [GND]{.title-ref}, [GND]{.title-ref},
-[VIN]{.title-ref} as seen here:
+From top to bottom the pins are: [IO0], [5V]
+(incorrectly labelled [IOREF] on this board, so not Arduino
+UNO R3 compliant), [RESET], [3.3V],
+[5V], [GND], [GND],
+[VIN] as seen here:
 
 ![ESPDUINO-32 power header closeup, component side](/_static/images/esp32/espduino-32-header-closeup.jpg)
 
 #### Using an Arduino Motor Shield R3
 
-To avoid damaging the ESP32\'s analog inputs, the [IOREF]{.title-ref}
+To avoid damaging the ESP32\'s analog inputs, the [IOREF]
 pin on must be bent outwards or cut so it will not go into the
-ESPDUINO-32 socket. Then use a jumper from the [3.3v]{.title-ref} pin to
-[IOREF]{.title-ref} on the \|motor shield\| itself.
+ESPDUINO-32 socket. Then use a jumper from the [3.3v] pin to
+[IOREF] on the \|motor shield\| itself.
 
-For DCC current sensing bend or cut the [A0]{.title-ref} and
-[A1]{.title-ref} pins because by default they are connected to
-[GPIO2]{.title-ref} and [GPIO4]{.title-ref} on the ESP32 which are not
+For DCC current sensing bend or cut the [A0] and
+[A1] pins because by default they are connected to
+[GPIO2] and [GPIO4] on the ESP32 which are not
 useable at the same time as WiFi. Instead, on the top of the \|motor
-shield\| connect [A0]{.title-ref} to [A2]{.title-ref} and
-[A1]{.title-ref} to [A3]{.title-ref} via jumpers. This will then
+shield\| connect [A0] to [A2] and
+[A1] to [A3] via jumpers. This will then
 automatically work when you select STANDARD_MOTOR_SHIELD as the
 MotorShield in config.h because the definition is in place when ESP32 is
 selected as the build target.
@@ -216,8 +214,7 @@ PlatformIO or the \|Arduino IDE\|.
 
 The easiest way of building DCC-EX for the ESP32 is via EX-Installer by
 selecting the ESP32 option. Click here for
-`EX-Installer installation instructions </ex-commandstation/installer-diy>`{.interpreted-text
-role="doc"}.
+`EX-Installer installation instructions </ex-commandstation/installer-diy>`.
 
 ### Adding ESP32 support to VS Code and PlatformIO
 

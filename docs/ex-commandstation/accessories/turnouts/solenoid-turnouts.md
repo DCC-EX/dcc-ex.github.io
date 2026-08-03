@@ -2,9 +2,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="3" local=""}
+::: 
 On this page
 :::
 ::::
@@ -33,12 +33,11 @@ the serial console, use the appropriate one of these commands:
 - `<T id VPIN vpin>` - use this command when using a turnout/point
   controller that uses a single pin, whether connected directly to your
   \|EX-CS\| or via an I/O expander device
-- `<T id DCC linear_address>` - use this command when using DCC
+- `<T id DCC linear_address>[ - use this command when using DCC
   accessory decoders to control the turnout/point
 
 Refer to
-`reference/software/command-summary-consolidated:turnouts/points (configuring the ex-commandstation)`{.interpreted-text
-role="ref"} for details on these commands.
+`reference/software/command-summary-consolidated:turnouts/points (configuring the ex-commandstation)` for details on these commands.
 
 To define solenoid/coil based turnouts using \|EX-R\| (whether or not
 they are to be automated) via the \"myAutomation.h\" file, use the
@@ -54,10 +53,8 @@ appropriate one of these commands:
   when using DCC accessory decoders to control the servos
 
 Refer to
-`exrail/exrail-command-reference:turnout/point objects - definition and control`{.interpreted-text
-role="ref"} for details on these commands, along with
-`exrail/creating-elements:adding turnouts/points`{.interpreted-text
-role="ref"} for some further information and examples.
+`exrail/exrail-command-reference:turnout/point objects - definition and control` for details on these commands, along with
+`exrail/creating-elements:adding turnouts/points` for some further information and examples.
 
 ## Connecting and controlling the hardware
 
@@ -252,7 +249,7 @@ So we control a switch of some kind, like a relay or transistor, that
 CAN handle that load.
 
 The easiest solution costs you \$60 from Jack Reagan at
-`Smart Hobby LLC </purchasing/dealers>`{.interpreted-text role="doc"}
+`Smart Hobby LLC ](/purchasing/dealers.md)
 which buys you a 16 output capacitive discharge board. You connect it to
 the I2C port on the CSB1, then a simple \|EX-R\| script he supplies goes
 in your myAutomation.h file and you are done. The turnouts/points would

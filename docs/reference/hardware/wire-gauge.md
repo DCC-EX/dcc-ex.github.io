@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -37,7 +37,7 @@ all your lights, servos, switches and other accessories. Optionally, you
 may want to have a separate bus for accessory control and reserve the
 main bus just for your locos. More on that later.
 
-![thumbs-up icon](/_static/images/icons/thumb_up.png){.align-left}
+![thumbs-up icon](/_static/images/icons/thumb_up.png)
 
 **Rule of Thumb:** 14 gauge (2.08mm^2^) solid core wire for main bus up
 to 100ft (30m) for HO. 24 gauge (.205mm^2^) stranded wire for short

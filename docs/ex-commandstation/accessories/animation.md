@@ -36,5 +36,5 @@ There are endless possibilities and your imagination really is the only
 limitation of \|EX-R\|!
 
 For further information and some examples of implementation, refer to
-`/exrail/index`{.interpreted-text role="doc"} and
-`/big-picture/index`{.interpreted-text role="doc"}.
+`/exrail/index` and
+`/big-picture/index`.

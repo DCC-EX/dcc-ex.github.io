@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -94,7 +94,7 @@ this step.
 
 All website documentation is written in reStructuredText format and
 built using sphinx, which is outlined on our
-`/about/contributing/website/index`{.interpreted-text role="doc"} page.
+`/about/contributing/website/index` page.
 
 In order to correctly preview changes to the website documentation
 locally on your computer before publishing to the website, you will need
@@ -110,14 +110,13 @@ Python on Windows](https://docs.python.org/3/using/windows.html)
 \|EXTERNAL-LINK\|.
 
 Note that you will need to ensure Python is added to your
-[PATH]{.title-ref} environment variable which is outlined on that page
+[PATH] environment variable which is outlined on that page
 also.
 
 The recommended approach to build a local preview is to use a virtual
 environment that replicates the GitHub pages deployment process, which
 is outlined in
-`about/contributing/website/getting-started:Emulate GitHub Pages deployment`{.interpreted-text
-role="ref"}.
+`about/contributing/website/getting-started:Emulate GitHub Pages deployment`.
 
 If you wish, however, to manually install the packages, you can open a
 command prompt and run the following command:
@@ -176,8 +175,7 @@ then reopen VSCode, and upon reopening VSCode, you should be prompted in
 the bottom right hand corner to install the Esbonio language server. It
 is recommended you do so now.
 
-Refer to the `/about/contributing/website/index`{.interpreted-text
-role="doc"} contribution page for more info on generating reliable local
+Refer to the `/about/contributing/website/index` contribution page for more info on generating reliable local
 previews.
 
 ### Recommended configuration options

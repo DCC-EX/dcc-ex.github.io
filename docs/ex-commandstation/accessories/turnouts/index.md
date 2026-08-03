@@ -13,9 +13,5 @@ users understand which is the best option for their layout and
 Read on through these pages to understand what turnouts or points are
 along with how to connect them to and control them from your \|EX-CS\|.
 
-::: {.toctree maxdepth="1
-
-overview
-servo-turnouts
-solenoid-turnouts"}
+::: 
 :::

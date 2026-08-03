@@ -30,10 +30,10 @@ running on your computer, here are two great solutions
 Trains can be run using a Chromium-based browser (Chrome or Edge) and a
 USB cable from the computer to the \|EX-CS\|
 
-![](/_static/images/installer/exwebthrottle.jpg){alt="EX-WebThrottle"}
+![](/_static/images/installer/exwebthrottle.jpg)
 
 Instructions for using EX-WebThrottle here:
-`/ex-commandstation/testing-diy`{.interpreted-text role="doc"}
+`/ex-commandstation/testing-diy`
 
 ### Engine Driver
 
@@ -62,7 +62,7 @@ Store and run on a computer via BlueStacks, no phone necessary.
 The following image is a Windows computer running multiple \"instances\"
 of Engine Driver on the same computer.
 
-![Engine Driver on BlueStack](/_static/images/media-resources/engine_driver_windows_pc_via_bluestack.jpg){.align-right}
+![Engine Driver on BlueStack](/_static/images/media-resources/engine_driver_windows_pc_via_bluestack.jpg)
 
 All ED screens function the same as on the Android Smartphone except
 they are running on your computer. You can even \"swipe\" the screens

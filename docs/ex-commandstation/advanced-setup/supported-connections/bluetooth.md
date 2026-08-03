@@ -13,4 +13,4 @@ single connection, you can use Bluetooth connectivity. This also allows
 serial port.
 
 For details on the options available for using Bluetooth, refer to the
-`/reference/hardware/bluetooth`{.interpreted-text role="doc"} section.
+`/reference/hardware/bluetooth` section.

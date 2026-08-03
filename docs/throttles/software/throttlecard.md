@@ -2,14 +2,14 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
 
-![iOS Logo](/_static/images/throttles/icon_ios.png){.align-left}
+![iOS Logo](/_static/images/throttles/icon_ios.png)
 
 Take control of your model railroad with this elegantly designed app
 that brings vintage charm to modern model train control. Whether you\'re
@@ -27,10 +27,9 @@ You can find it in the App Store:
 \|EXTERNAL-LINK\|
 
 For more information more information about these protocols, see
-`WiThrottle Server, Web Server, DCC-EX Native Commands Explained </throttles/protocols>`{.interpreted-text
-role="doc"}
+`WiThrottle Server, Web Server, DCC-EX Native Commands Explained </throttles/protocols>`
 
-## Features {#throttlecard-features}
+## Features 
 
 - Control multiple trains simultaneously with intuitive multi-throttle
   support
@@ -50,26 +49,24 @@ role="doc"}
 With many more exciting features (including route support, native DCC-EX
 support, and a few surprises) in the roadmap!
 
-## Screenshots {#throttlecard-screenshots}
+## Screenshots 
 
 ![ThrottleCard Screenshot 1](/_static/images/throttles/throttlecard1.jpeg)
 
 ![ThrottleCard Screenshot 2](/_static/images/throttles/throttlecard2.jpeg)
 
-## Requirements {#throttlecard-requirements}
+## Requirements 
 
 - A \|EX-CS\| (Mega based for WiFi)
 - An iOS/macOS device including iPhone, iPad or M1 Mac
 - A WiFi Shield (or other ESP8622 solution) if you want to connect using
   WiFi
-  `Wifi Setup </ex-commandstation/diy/wifi-setup>`{.interpreted-text
-  role="doc"}
+  `Wifi Setup </ex-commandstation/diy/wifi-setup>`
 
-## Operation {#throttlecard-operation}
+## Operation 
 
 To use WiFi, make sure you have a WiFi enabled \|EX-CS\| as described in
-the `Wifi Setup </ex-commandstation/diy/wifi-setup>`{.interpreted-text
-role="doc"} section.
+the `Wifi Setup </ex-commandstation/diy/wifi-setup>` section.
 
 - Open the network settings on your phone
 - Change to same network of the PC that \|JMRI\| or your \|WiThrottle

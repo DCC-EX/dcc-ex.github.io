@@ -5,9 +5,9 @@
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-fastclock-button-small\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -35,7 +35,7 @@ the code for an Uno based Clock it should be possible for
 have a working clock that they wish to integrate to \|EX-CS\|.
 
 To make full use of \|EX-FC\|, you will need a basic understanding of
-`EXRAIL </exrail/index>`{.interpreted-text role="doc"} automation, but
+[EXRAIL ](/exrail/index.md) automation, but
 we\'ll share the details and some examples to help with this.
 
 :!!! note "::: title
@@ -45,7 +45,7 @@ Note"
 \|EX-FC\| is in public Beta testing, and as such, we encourage regular
 feedback on the success or otherwise of both the software and
 documentation. Please reach out via any of our
-`/support/contact-us`{.interpreted-text role="doc"} methods and help us
+`/support/contact-us` methods and help us
 get \|EX-FC\| as easy to use and reliable as possible.
 ::::
 

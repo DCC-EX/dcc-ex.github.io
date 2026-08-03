@@ -5,9 +5,9 @@
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-ioexpander-button-small\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -62,8 +62,8 @@ diagnostic output.
 
 `<T S vpin value profile>` - Issue this command to test a servo or LED
 dimming. The value is as per
-`ex-ioexpander/overview:servo control`{.interpreted-text role="ref"} or
-`ex-ioexpander/overview:led dimming`{.interpreted-text role="ref"}, and
+`ex-ioexpander/overview:servo control` or
+`ex-ioexpander/overview:led dimming`, and
 profile is a number from 0 (instant) to 4 (bounce), and 128 to correctly
 dim an LED. For example, `<T S 0 600 4>` will \"bounce\" a servo on the
 first vpin, and `<T S 2 255 128>` will set an LED to full brightness.

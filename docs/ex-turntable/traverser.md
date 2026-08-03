@@ -5,9 +5,9 @@
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-turntable-button-small\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -53,8 +53,7 @@ documentation also.
 ### What you need for traverser mode
 
 The same components outlined in
-`ex-turntable/purchasing:what you need for ex-turntable`{.interpreted-text
-role="ref"} apply in traverser mode, with two likely exceptions:
+`ex-turntable/purchasing:what you need for ex-turntable` apply in traverser mode, with two likely exceptions:
 
 1.  Home and limit sensors: Given the need for positive stops at each
     end\'s limit of travel, be it vertical, horizontal, or restricting
@@ -116,13 +115,12 @@ You will need to take these considerations into account, and ensure the
 sensors are connected in the correct order.
 
 For a method to test and validate this, see
-`ex-turntable/traverser:sensor testing mode`{.interpreted-text
-role="ref"} below.
+`ex-turntable/traverser:sensor testing mode` below.
 
 ## Assembly
 
 General assembly is as per the
-`/ex-turntable/assembly`{.interpreted-text role="doc"} page, with the
+`/ex-turntable/assembly` page, with the
 aforementioned limit sensor being connected to the Arduino\'s pin 2.
 
 Refer to the connection summary below, which makes the assumption that
@@ -131,8 +129,8 @@ DCC phase switching is not required.
 If using micro switches for the home and limit sensors, the best way is
 to connect the common terminal of the switch to ground, and the normally
 open (NO) terminal to the Arduino\'s pin. This allows the default
-\"config.h\" setting for [HOME_SENSOR_ACTIVE_STATE]{.title-ref} and
-[LIMIT_SENSOR_ACTIVE_STATE]{.title-ref} to remain unchanged as \"LOW\".
+\"config.h\" setting for [HOME_SENSOR_ACTIVE_STATE] and
+[LIMIT_SENSOR_ACTIVE_STATE] to remain unchanged as \"LOW\".
 
 It is recommended not to fully assemble the traverser with the stepper
 motor until such time as you have validated the correct rotational
@@ -143,7 +141,7 @@ connected correctly and functional.
 
 Summary table of all connections required during assembly:
 
-![Traverser Assembly Fritzing](/_static/images/ex-turntable/traverser-assembly.png){.align-right}
+![Traverser Assembly Fritzing](/_static/images/ex-turntable/traverser-assembly.png)
 
   Device Pin                        Arduino Pin   Nano Shield Pin
   --------------------------------- ------------- ---------------------
@@ -164,15 +162,14 @@ Summary table of all connections required during assembly:
 ## Loading EX-Turntable for traverser mode
 
 Prepare to load the software as per
-`ex-turntable/assembly:7. load the ex-turntable software`{.interpreted-text
-role="ref"}, and ensure \"config.h\" has been created by copying or
+`ex-turntable/assembly:7. load the ex-turntable software`, and ensure \"config.h\" has been created by copying or
 renaming \"config.example.h\".
 
 There is also an example \"config.traverser.h\" file included with the
 software that can be renamed to \"config.h\" instead.
 
 Edit \"config.h\", add \"//\" at the beginning of the [#define
-TURNTABLE_EX_MODE TURNTABLE]{.title-ref} line, and remove the \"//\"
+TURNTABLE_EX_MODE TURNTABLE] line, and remove the \"//\"
 from the beginning of the \`#define TURNTABLE_EX_MODE TRAVERSER\`:
 
 ``` cpp
@@ -195,7 +192,7 @@ Tip"
 
 If you are using a mechanism that results in anything other than a 1:1
 gear ratio (e.g. using a lead screw), you may need to consider updating
-the [SANITY_STEPS]{.title-ref} setting in \"config.h\".
+the [SANITY_STEPS] setting in \"config.h\".
 
 This setting defaults to 10000 steps and is used to prevent a stepper
 turning indefinitely when attempting to find HOME or LIMIT. If the gear
@@ -203,8 +200,7 @@ ratio results in a step count greater than 10000, the calibration
 sequence will fail to complete, and updating this setting to a
 sufficently high step count will solve that issue.
 
-Refer to `ex-turntable/configure:sanity_steps`{.interpreted-text
-role="ref"}.
+Refer to `ex-turntable/configure:sanity_steps`.
 ::::
 
 Once \"config.h\" is updated, you can continue to load the software onto
@@ -226,8 +222,8 @@ disabled.
 
 To enable SENSOR_TESTING mode, you will need to edit \"config.h\" again,
 and this time remove the \"//\" from the beginning of the [#define
-SENSOR_TESTING]{.title-ref}[ line (Refer to
-:ref:\`ex-turntable/configure:sensor_testing]{.title-ref} to enable
+SENSOR_TESTING][ line (Refer to
+:ref:\`ex-turntable/configure:sensor_testing] to enable
 sensor testing mode.):
 
 ``` cpp
@@ -265,16 +261,16 @@ Limit sensor DEACTIVATED
 
 If the sensors report an inverted status (ie. ACIVATED when they are
 DEACTIVATED), then you likely need to review
-[HOME_SENSOR_ACTIVE_STATE]{.title-ref} and
-[LIMIT_SENSOR_ACTIVE_STATE]{.title-ref} in \"config.h\". If the sensors
-connect to ground when activated, they must be set to [LOW]{.title-ref},
-if they connect to 5V they must be set to [HIGH]{.title-ref}.
+[HOME_SENSOR_ACTIVE_STATE] and
+[LIMIT_SENSOR_ACTIVE_STATE] in \"config.h\". If the sensors
+connect to ground when activated, they must be set to [LOW],
+if they connect to 5V they must be set to [HIGH].
 
 If activating HOME activates LIMIT or vice versa, then swap the Arduino
 pin connections. HOME connects to pin 5, LIMIT connects to pin 2.
 
 When sensor testing is complete, you can add the \"//\" back in front of
-the [#define SENSOR_TESTING]{.title-ref} line in \"config.h\" to disable
+the [#define SENSOR_TESTING] line in \"config.h\" to disable
 SENSOR_TESTING mode, and re-load the software to revert to normal
 \|EX-TT\| operations.
 
@@ -328,6 +324,6 @@ Turntable homed successfully
 Now that you have enabled traverser mode in \|EX-TT\|, confirmed your
 HOME and LIMIT sensors are operating correctly, and calibration has
 completed, you can return to
-`/ex-turntable/test-and-tune`{.interpreted-text role="doc"} as the
+`/ex-turntable/test-and-tune` as the
 tuning steps and control commands are the same in both turntable and
 traverser modes.

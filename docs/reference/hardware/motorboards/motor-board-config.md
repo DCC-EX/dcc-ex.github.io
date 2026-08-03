@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -44,8 +44,7 @@ then simply upload the changes to your \|EX-CS\|.
 Using the \|Arduino IDE\|, PlatformIO, or any other method for editing a
 file and uploading a sketch, you can add your motor driver by editing
 the config.h file. Click here for a list of
-`Currently supported boards </reference/hardware/motor-boards>`{.interpreted-text
-role="doc"}
+`Currently supported boards </reference/hardware/motor-boards>`
 
 Open the config.h file in your editor. If this is the first time
 configuring your system, you may need to copy the \"config.example.h\"
@@ -72,7 +71,7 @@ You will see a list of supported boards with their type and the
 
 ### If Your Board is in the Supported List
 
-:::: {.note .note-float-right}
+:::: 
 ::: title
 Note
 :::
@@ -216,8 +215,7 @@ for which you want the higher accuracy, you need to make sure that the
 signal pin is one of the timer pins on the board. For a Mega, those are
 pins 11, 12 and 13. For an Uno, they are 9 and 10. For more info on how
 this works, see
-`High Accuracy Waveform Mode </reference/hardware/motorboards/high-accuracy>`{.interpreted-text
-role="doc"}.
+`High Accuracy Waveform Mode </reference/hardware/motorboards/high-accuracy>`.
 
 ## Current Sense and Sense factor
 
@@ -340,8 +338,7 @@ sure to set your motor board tripCurrent value to 5000, and be sure that
 the voltage from your motor board sense resistor/circuit does not exceed
 the Arduino pin input of 5V. For each motor board we test, we provide
 what you need to know on the page for that device. See the
-`Advanced Setup Section </ex-commandstation/advanced-setup/supported-motorboards/index>`{.interpreted-text
-role="doc"} for more info.
+`Advanced Setup Section </ex-commandstation/advanced-setup/supported-motorboards/index>` for more info.
 
 ### Just Buy a Current Sense Board Instead
 
@@ -416,5 +413,4 @@ report the current accurately.
 
 For details and instructions on how to connect and configure non-Arduino
 Motor Shield boards and their clones, see the
-`Supported Motorboards Setup Notes </ex-commandstation/advanced-setup/supported-motorboards/index>`{.interpreted-text
-role="doc"}.
+`Supported Motorboards Setup Notes </ex-commandstation/advanced-setup/supported-motorboards/index>`.

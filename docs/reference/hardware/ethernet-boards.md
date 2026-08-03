@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -14,8 +14,7 @@ On this page
 \|EX-CS\| supports both wired and wireless network connections. We will
 discuss using a wired Ethernet connection here. To connect using a WiFi
 board, see the
-`WiFi Boards Section </reference/hardware/wifi-boards>`{.interpreted-text
-role="doc"}.
+`WiFi Boards Section </reference/hardware/wifi-boards>`.
 
 To use Ethernet instead of WiFi, follow these simple steps:
 
@@ -27,21 +26,17 @@ To use Ethernet instead of WiFi, follow these simple steps:
 - Add \"//\" comment lines in front of `"#define ENABLE_WIFI = true"`
   (if it isn\'t already commented out).
 
-::: {.toctree maxdepth="1"}
+::: 
 /reference/hardware/ethernet-boards/arduino-ethernet-shield-2
 /reference/hardware/ethernet-boards/wiznet-wiz850io
 /reference/hardware/ethernet-boards/sunfounder-ethernet-shield
 /reference/hardware/ethernet-boards/nano-ethernet-shield
 :::
 
-- `reference/hardware/ethernet-boards:Arduino Network Shield 2`{.interpreted-text
-  role="ref"} **\[RECOMMENDED\]**
-- `reference/hardware/ethernet-boards:Wiznet WIZ850IO`{.interpreted-text
-  role="ref"}
-- `reference/hardware/ethernet-boards:Sunfounder Ethernet Shield`{.interpreted-text
-  role="ref"}
-- `reference/hardware/ethernet-boards:Nano Ethernet Shield`{.interpreted-text
-  role="ref"}
+- `reference/hardware/ethernet-boards:Arduino Network Shield 2` **\[RECOMMENDED\]**
+- `reference/hardware/ethernet-boards:Wiznet WIZ850IO`
+- `reference/hardware/ethernet-boards:Sunfounder Ethernet Shield`
+- `reference/hardware/ethernet-boards:Nano Ethernet Shield`
 
 ## Arduino Network Shield 2
 

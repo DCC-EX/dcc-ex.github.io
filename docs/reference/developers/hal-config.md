@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -36,9 +36,9 @@ one or more VPINs associated with it.
 When \|EX-CS\| code needs to write to an Arduino digital output pin, the
 output is uniquely identified by a pin number. The Arduino Mega has
 digital I/O pin numbers ranging up to 69. For example, you may set up an
-Output in \|EX-CS\| using the [\<Z 1 40 0\>]{.title-ref} command (id=1,
-pin=40). Then the command [\<Z 1 1\>]{.title-ref} will set pin 40 HIGH
-and [\<Z 1 0\>]{.title-ref} will set pin 40 LOW.
+Output in \|EX-CS\| using the [\<Z 1 40 0\>] command (id=1,
+pin=40). Then the command [\<Z 1 1\>] will set pin 40 HIGH
+and [\<Z 1 0\>] will set pin 40 LOW.
 
 The HAL extends this model to other devices. If you want to write to a
 digital output pin on an external GPIO Extender Module, then you do
@@ -55,9 +55,9 @@ appropriate position.
 
 The same principle applies to Sensors (inputs). You can configure a
 sensor object on \|EX-CS\| by using the command [\<S 2 40
-1\>]{.title-ref} command (id=2, pin=40, pull-up=enabled). When pin 40 is
-connected to 0V (ground), a message [\<Q 2\>]{.title-ref} is generated,
-and when it is disconnected, [\<q 2\>]{.title-ref} is generated. But if
+1\>] command (id=2, pin=40, pull-up=enabled). When pin 40 is
+connected to 0V (ground), a message [\<Q 2\>] is generated,
+and when it is disconnected, [\<q 2\>] is generated. But if
 you have an MCP23017 GPIO Extender module connected up, and you replace
 the pin number 40 with 164 (the number of the first pin on the
 MCP23017), then you will get the messages when the MCP23017 pin is
@@ -113,7 +113,7 @@ a device with a matching address will respond. Each device attached to
 the bus should have a unique address.
 
 ![Example \|I2C\| Bus Topology with Arduino Mega and Three \|I2C\|
-modules](../../_static/images/i2c/i2cbus.png){alt="|I2C| Bus Topology"}
+modules](../../_static/images/i2c/i2cbus.png)
 
 ### Pull-Ups
 
@@ -266,7 +266,7 @@ modules:
 - HC-SR04 - Ultrasound \'sonar\' range sensor. Its VPIN activates when a
   reflecting object is within a defined distance of the sensor.
 - EX-Turntable - Integrated, stepper motor based turntable controller,
-  refer to `/ex-turntable/index`{.interpreted-text role="doc"}.
+  refer to `/ex-turntable/index`.
 
 ### Notes on the PCA9555/TCA9555 I2C GPIO Extenders
 
@@ -352,27 +352,25 @@ appear at the beginning of the list of files in the \|Arduino IDE\|.
 ## Adding A New Device Configuration File
 
 This will need to be done in the
-`Arduino-IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`{.interpreted-text
-role="doc"}, so first make sure you have followed these steps to load up
+`Arduino-IDE </ex-commandstation/advanced-setup/installation-options/arduino-ide>`, so first make sure you have followed these steps to load up
 the \|Arduino IDE\|.
 
 ### Create a new tab
 
 First you will need to add a new file, just like the
-`config.h file <ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)>`{.interpreted-text
-role="ref"}. Create a new tab using the following menu option.
+`config.h file <ex-commandstation/advanced-setup/installation-options/arduino-ide:Copy the config.example.h file (or rename it)>`. Create a new tab using the following menu option.
 
 ![Creating a new tab in the Arduino
-IDE](/_static/images/arduino-ide/arduino_ide_newtab.jpg){alt="Arduino IDE New Tab"}
+IDE](/_static/images/arduino-ide/arduino_ide_newtab.jpg)
 
 ### Creating the myHal.cpp file
 
 At the bottom of the \|Arduino IDE\| window, a yellow bar will appear
-asking for a [Name for new file]{.title-ref}, here make sure to enter
+asking for a [Name for new file], here make sure to enter
 `myHal.cpp` and click `OK` to create the new file.
 
 ![Choosing a file name for the new file, use
-`myHal.cpp`](/_static/images/i2c/arduino_ide_myHal.jpg){alt="Arduino IDE New Tab"}
+`myHal.cpp`](/_static/images/i2c/arduino_ide_myHal.jpg)
 
 ### Adding in the configuration commands
 
@@ -383,10 +381,7 @@ lines:
 ``` cpp
 #include "IODevice.h"
 
-void halSetup() {
-  // Insert your commands here...
-
-}
+void halSetup() 
 ```
 
 Suppose you want to add a driver for the DFPlayer MP3 Player. This
@@ -400,7 +395,7 @@ on the DFPlayer. Connect a small speaker to the pins SPK1 and SPK2 on
 the DFPlayer, and that\'s the hardware set up.
 
 ![Arduino Mega with
-DFPlayer](../../_static/images/hal/dfplayer.png){alt="Arduino Mega with DFplayer"}
+DFPlayer](../../_static/images/hal/dfplayer.png)
 
 Copy a few MP3 files to a Micro-SD card. The order in which you copy
 them is important, as the first file copied is referenced as file 1, the
@@ -420,7 +415,7 @@ Add the following line to the top of the `myHal.cpp` file:
 
 This makes the driver software for the DFPlayer known to the compiler.
 Now add the following line within the curly braces of the
-`halSetup() { }` function definition:
+`halSetup() ` function definition:
 
 ``` cpp
 DFPlayer::create(1000, 5, Serial3);
@@ -436,18 +431,14 @@ The file contents should now look like:
 #include "IODevice.h"
 #include "IO_DFPlayer.h"
 
-void halSetup() {
-  // Insert your commands here...
-  DFPlayer::create(1000, 5, Serial3);
-}
+void halSetup() 
 ```
 
 ### Upload the new version of the software
 
 Finally, upload the code to the Arduino as you would do during the
 standard
-`Arduino IDE Setup <ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software>`{.interpreted-text
-role="ref"}. Restart the Command Station and the new device will be
+`Arduino IDE Setup <ex-commandstation/advanced-setup/installation-options/arduino-ide:upload the software>`. Restart the Command Station and the new device will be
 configured at startup.
 
 ### Checking the Driver

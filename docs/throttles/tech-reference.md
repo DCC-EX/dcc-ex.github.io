@@ -4,9 +4,9 @@
 
 \|engineer\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="3" local=""}
+::: 
 On this page
 :::
 ::::
@@ -16,7 +16,7 @@ who develop throttles compatible with \|EX-CS\| using the \|DCC-EX
 Native Protocol\|, not the \|WITHROTTLE PROTOCOL\|.
 
 This page should be read in conjunction with the
-`/reference/developers/api`{.interpreted-text role="doc"} in order to
+`/reference/developers/api` in order to
 understand how to send and parse \|DCC-EX\| API commands correctly, and
 ignore any irrelevant commands.
 
@@ -25,10 +25,9 @@ ignore any irrelevant commands.
 For anyone developing a throttle or controller application, these
 considerations should be taken into account:
 
-- Refer to the `/reference/developers/api`{.interpreted-text role="doc"}
+- Refer to the `/reference/developers/api`
 - Refer to the
-  `/reference/software/command-summary-consolidated`{.interpreted-text
-  role="doc"}
+  `/reference/software/command-summary-consolidated`
 - A throttle/controller MUST accept and ignore anything it does not
   understand
 - Track power state has three possible states: On, Off, and Unknown
@@ -61,38 +60,31 @@ appropriately to **broadcasts** sent from the \|DCC-EX\| API.
 
 These are the *key* broadcast responses that should be understood:
 
-- `<p X [MAIN|PROG|JOIN]>` - When a throttle issues a track power
+- `<p X [MAIN**PROG**JOIN]>` - When a throttle issues a track power
   command, this response is sent as a broadcast (see
-  `reference/software/command-summary-consolidated:power management`{.interpreted-text
-  role="ref"})
+  `reference/software/command-summary-consolidated:power management`)
 - `<r address>` - When a loco address is read on the programming track,
   the address is sent as a broadcast (see
-  `reference/software/command-summary-consolidated:reading/writing configuration variables (cvs) - programming track`{.interpreted-text
-  role="ref"})
+  `reference/software/command-summary-consolidated:reading/writing configuration variables (cvs) - programming track`)
 - `<l cabid slot speed/dir func>` - When throttles send loco commands,
   this is sent as a broadcast (see
-  `reference/software/command-summary-consolidated:cab (loco) commands`{.interpreted-text
-  role="ref"})
+  `reference/software/command-summary-consolidated:cab (loco) commands`)
 
 These broadcast responses should be understood if your controller deals
 with turnouts/points and sensors:
 
-- `<H id [DCC|SERVO|VPIN|LCN] .
+- `<H id [DCC**SERVO**VPIN|LCN] .
   closed/thrown, this response is broadcast (see
-  `reference/software/command-summary-consolidated:turnouts/points`{.interpreted-text
-  role="ref"})
+  `reference/software/command-summary-consolidated:turnouts/points`)
 - `<[q|Q] id>` - When sensors are deactivated/activated, this response
   is broadcast (see
-  `reference/software/command-summary-consolidated:sensors`{.interpreted-text
-  role="ref"})
+  `reference/software/command-summary-consolidated:sensors`)
 - `<m "text">` - **New in 5.4.0** - A message can be sent to all
   throttles using \|EX-R\| (see
-  `MESSAGE( "msg" ) - Writes a message to all clients <exrail_message>`{.interpreted-text
-  role="ref"})
+  `MESSAGE( "msg" ) - Writes a message to all clients <exrail_message>`)
 - `<i id position moving>` - **New in 5.4.0** - Broadcasts if the new
   turntable/traverser objects are implemented (see
-  `reference/software/command-summary-consolidated:turntables/traversers`{.interpreted-text
-  role="ref"}).
+  `reference/software/command-summary-consolidated:turntables/traversers`).
 
 ### Working with track power states
 
@@ -109,8 +101,7 @@ The throttle should only flag the power state as On or Off when either:
 
 Key throttle specific commands are summarised here, refer below for
 elaboration on the details with examples. Refer to the
-`/reference/software/command-summary-consolidated`{.interpreted-text
-role="doc"} for detailed information.
+`/reference/software/command-summary-consolidated` for detailed information.
 
   Command                   Response                                                      Description
   ------------------------- ------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------
@@ -132,8 +123,7 @@ role="doc"} for detailed information.
 ### Additional Details
 
 Refer to the
-`/reference/software/command-summary-consolidated`{.interpreted-text
-role="doc"} for detailed information on these commands.
+`/reference/software/command-summary-consolidated` for detailed information on these commands.
 
 #### Setting cab (loco) status
 
@@ -258,10 +248,10 @@ This broadcast is in the format:
 
 `<jB id param>` where:
 
-- [id]{.title-ref} is the ID of the route or automation (obtained via
+- [id] is the ID of the route or automation (obtained via
   the `<JA>` commands above)
 
-- [param]{.title-ref} is one of the following:
+- [param] is one of the following:
 
   - 0 - indicates the route/automation is currently inactive
   - 1 - indicates the route/automation is currently active
@@ -277,8 +267,7 @@ This broadcast is in the format:
     label/description should be set to \"Route 13\"
 
 To see how these are implemented in \|EX-R\|, refer to
-`exrail/exrail-command-reference:flow control`{.interpreted-text
-role="ref"}.
+`exrail/exrail-command-reference:flow control`.
 
 ##### What\'s the difference?
 

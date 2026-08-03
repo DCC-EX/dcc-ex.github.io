@@ -5,9 +5,9 @@
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-ioexpander-button-small\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -80,17 +80,15 @@ Repository](https://github.com/DCC-EX/EX-IOExpander) \|EXTERNAL-LINK\|
 :::
 
 Both of these can be installed via \|EX-I\|, see
-`/ex-installer/installing`{.interpreted-text role="doc"} and
-`ex-ioexpander/overview:installation via ex-installer`{.interpreted-text
-role="ref"}.
+`/ex-installer/installing` and
+`ex-ioexpander/overview:installation via ex-installer`.
 
 ## Hardware requirements
 
 \|EX-IO\| needs a dedicated microcontroller connected to the \|I2C\| bus
 of your \|EX-CS\|.
 
-Refer to `/ex-ioexpander/supported-devices`{.interpreted-text
-role="doc"} for the currently supported microcontrollers, which includes
+Refer to `/ex-ioexpander/supported-devices` for the currently supported microcontrollers, which includes
 details on the pins and features available for use.
 
 The device driver and \|EX-IO\| software are being written in such a way
@@ -146,11 +144,10 @@ determine the correct values for your servos. Note that using
 analogWrite() and direct hardware PWM pins is not an ideal scenario for
 operating servos, so we would recommend considering if there is a better
 solution for your needs. We outline which pins have hardware PWM support
-available on the `/ex-ioexpander/supported-devices`{.interpreted-text
-role="doc"} page.
+available on the `/ex-ioexpander/supported-devices` page.
 
 For experimenting with different values for servo angles, we highly
-recommend trying out `/ex-toolbox/index`{.interpreted-text role="doc"}.
+recommend trying out `/ex-toolbox/index`.
 
 :!!! warning "::: title
 Warning"
@@ -175,7 +172,7 @@ reset due to brownouts in the power supply. A capacitor in the realm of
 1000uF is recommended. It is not sufficient to power the servos from the
 USB interface, and an external 5V power supply must be used in the same
 way as outlined on the
-`/reference/hardware/servo-module`{.interpreted-text role="doc"} page.
+`/reference/hardware/servo-module` page.
 ::::
 
 ### LED dimming
@@ -197,7 +194,7 @@ Configuration changes for \|EX-IO\| are made by editing a \"myConfig.h\"
 file or writing to EEPROM if supported. An example
 \"myConfig.example.h\" file is included that can be copied and edited to
 suit. The only configuration item you should really need to consider is
-`ex-ioexpander/overview:i2c_address`{.interpreted-text role="ref"}.
+`ex-ioexpander/overview:i2c_address`.
 
 ### Software installation process
 
@@ -206,7 +203,7 @@ suit. The only configuration item you should really need to consider is
 \|EX-I\| can be used to install both \|EX-CS\| and \|EX-IO\|. The
 process is the same for both, with the exception of the configuration
 options, therefore we will only outline the configuration options here.
-Refer to `/ex-installer/installing`{.interpreted-text role="doc"} for
+Refer to `/ex-installer/installing` for
 the full documentation on using \|EX-I\|.
 
 When you reach the \"Select Product\" screen, select \|EX-IO\|.
@@ -307,7 +304,7 @@ external 1K pullup resistor to 5V for this pin if this is experienced.
 When configuring your chosen \|EX-IO\| device, you need to know the
 total number of available pins, and the capability of each. Details of
 the pins available for use are outlined on the
-`/ex-ioexpander/supported-devices`{.interpreted-text role="doc"} page.
+`/ex-ioexpander/supported-devices` page.
 Vpins are allocated by the \|EX-CS\| device driver in ascending order
 according to the device map on this page.
 
@@ -334,7 +331,7 @@ some pins:
 
 This results in 18 pins total, with 2 pins (A6/A7) only available as
 analogue inputs, resulting in our pin counts and Vpin to pin map as seen
-on the `/ex-ioexpander/supported-devices`{.interpreted-text role="doc"}
+on the `/ex-ioexpander/supported-devices`
 page:
 
   ----------------------- ----
@@ -429,8 +426,7 @@ Similarly, you can create the device directly in \"myAutomation.h\" with
 the command `HAL(EXIOExpander, vpin, npins, address)`, using the same
 variables listed above.
 
-Refer to the `/ex-ioexpander/supported-devices`{.interpreted-text
-role="doc"} page to see the available pin numbers for each of the
+Refer to the `/ex-ioexpander/supported-devices` page to see the available pin numbers for each of the
 supported devices.
 
 In the examples below, we will configure an Arduino Nano at address
@@ -440,11 +436,7 @@ is what provides the output seen in the previous section).
 Using \"myHal.cpp\":
 
 ``` cpp
-void halSetup() {
-  ...
-  EXIOExpander::create(800, 18, 0x65);
-  EXIOExpander::create(820, 16, 0x66);
-}
+void halSetup() 
 ```
 
 Using \"myAutomation.h\":
@@ -487,8 +479,7 @@ are encountered.
 
 You can also configure this via the serial console using the `<D>`
 command (see
-`ex-ioexpander/testing:diagnostic commands`{.interpreted-text
-role="ref"}).
+`ex-ioexpander/testing:diagnostic commands`).
 
 ### DIAG_CONFIG_DELAY
 
@@ -499,7 +490,7 @@ role="ref"}).
 #define DIAG_CONFIG_DELAY 5
 ```
 
-When `ex-ioexpander/overview:diag`{.interpreted-text role="ref"} is
+When `ex-ioexpander/overview:diag` is
 enabled, the configuration of each pin is displayed continuously to be
 able to monitor the configuration and state of each pin. By default,
 this will display every 5 seconds. This configuration item allows the
@@ -507,8 +498,7 @@ delay between updates to be increased or decreased.
 
 You can also configure this via the serial console using the `<D delay>`
 command (see
-`ex-ioexpander/testing:diagnostic commands`{.interpreted-text
-role="ref"}).
+`ex-ioexpander/testing:diagnostic commands`).
 
 ### TEST_MODE
 
@@ -537,8 +527,7 @@ last one defined will take effect.
 It is preferable, however, to use the testing commands available in the
 serial console.
 
-Refer to `ex-ioexpander/testing:testing commands`{.interpreted-text
-role="ref"} for details of what test each option enables and the
+Refer to `ex-ioexpander/testing:testing commands` for details of what test each option enables and the
 associated serial commands.
 
 ### DISABLE_I2C_PULLUPS
@@ -553,8 +542,7 @@ associated serial commands.
 In cases where multiple \|I2C\| devices exist on the same bus, the
 pullup resistors may cause issues with reliability even the resultant
 resistance across all devices is too low (see
-`reference/hardware/i2c-devices:pull-ups`{.interpreted-text
-role="ref"}).
+`reference/hardware/i2c-devices:pull-ups`).
 
 In these instances, if the \|EX-IO\| device does not have physical,
 external pullup resistors, the internal software pullups can be disabled

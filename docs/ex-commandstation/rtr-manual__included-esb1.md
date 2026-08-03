@@ -8,9 +8,9 @@ EXCSB1, EX-CSB1
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -34,7 +34,7 @@ Important
 
 If you are setting up your \|EX-CSB1-SHORT\| for the first time we
 recommend that you look at the
-`/ex-commandstation/rtr-connecting`{.interpreted-text role="doc"} page
+`/ex-commandstation/rtr-connecting` page
 first.
 ::::
 
@@ -45,13 +45,13 @@ first.
 ## Board layout
 
 ![EX-CSB1 top (click image to enlarge
-it)](/_static/images/ex-csb1/csb1_render_layout_top.png){alt="DCC-EX EX-CSB1 Express"}
+it)](/_static/images/ex-csb1/csb1_render_layout_top.png)
 
 \|FORCE-BREAK\|
 
 ### On the Board
 
-::: {.contents .in-this-section depth="1" local=""}
+::: 
 In this Section
 :::
 
@@ -102,7 +102,7 @@ power from any interruptions to track power due to overload for example.
 The USB port is also very useful for connecting a \|serial monitor\| to
 test the command station and view logging information in real time to
 aid in fault finding. See
-`/reference/tools/serial-monitor`{.interpreted-text role="doc"}
+`/reference/tools/serial-monitor`
 
 \|FORCE-BREAK\|
 
@@ -111,7 +111,7 @@ aid in fault finding. See
 <figure class="align-right">
 <img src="/_static/images/ex-csb1/pluggable_connectors.png"
 alt="Pluggable Track Output Connectors" />
-<figcaption>Pluggable Track <span>|BR|</span> Output
+<figcaption>Pluggable Track <span>**BR**</span> Output
 Connectors</figcaption>
 </figure>
 
@@ -130,7 +130,7 @@ You should keep the phase of the tracks aligned, so if a train crosses
 from one power district to another it doesn\'t intentionally cause a
 short (unless it\'s a reversing loop and you have assigned that output
 to have Auto-Reverse capability.) See:
-`/ex-installer/managing-config-files`{.interpreted-text role="doc"}.
+`/ex-installer/managing-config-files`.
 
 Power to each output can be controlled together or individually. Correct
 wired gauge for the screw terminals is 16 to 28AWG (1.5mm\^2). Be sure
@@ -153,8 +153,7 @@ your throttle issues the power-on command.
 You can also configure the \|EX-CSB1-SHORT\| to start with power on
 using a mySetup.h or myAutomation.h file, or by selecting one of the
 options in \|EX-I\|. See the
-`EX -Installer page <ex-installer/installing:start with power on>`{.interpreted-text
-role="ref"} for more information on how to change this behaviour.
+`EX -Installer page <ex-installer/installing:start with power on>` for more information on how to change this behaviour.
 
 For \|DC PWM\| mode operation, when power is on, ONE LED will light for
 each direction. That is, forward will light one LED and when you select
@@ -178,8 +177,7 @@ purchasing from discount sites that often wire them incorrectly. For
 example, red should always be positive power and black is negative DC or
 \"GND\".
 
-`IMPORTANT: The voltage for this connector is ALWAYS 3.3V!`{.interpreted-text
-role="dcc-ex-red-bold-italic"}\`
+`IMPORTANT: The voltage for this connector is ALWAYS 3.3V!`\`
 
 \|FORCE-BREAK\|
 
@@ -224,7 +222,7 @@ Make absolutely sure that any display you purchase to connect directly
 to the header has its pins in the correct order! The correct order is
 GND, V+, SCL, SDA and is different than other OLED connectors on the
 board. For more information see:
-`/reference/hardware/i2c-devices`{.interpreted-text role="doc"}.
+`/reference/hardware/i2c-devices`.
 
 \|FORCE-BREAK\|
 
@@ -249,7 +247,7 @@ The \|EX-CSB1-SHORT\| is a 3.3V device, so all the I2C connectors only
 supply 3.3V unlike the Arduino Mega. Keep that in mind if you are
 upgrading from a DIY Arduino Command Station to a 3.3V device like the
 EX-CSB1 and are connecting I2C devices. For more information see:
-`/reference/hardware/i2c-devices`{.interpreted-text role="doc"}.
+`/reference/hardware/i2c-devices`.
 
 \|FORCE-BREAK\|
 
@@ -349,8 +347,7 @@ districts for a total of 4. Any of the 4 outputs can be used for any
 combination of **DCC MAIN**, **DCC PROG**, or **DC PWM**. You must
 enable the extra board from the EX-Installer or your config.h file for a
 manual install. See the
-`ex-commandstation/rtr-manual:adding an ex-motorshield 8874`{.interpreted-text
-role="ref"} section of this document.
+`ex-commandstation/rtr-manual:adding an ex-motorshield 8874` section of this document.
 
 \|FORCE-BREAK\|
 
@@ -405,7 +402,7 @@ There are 2 solder pad jumpers on the EX-CSB1 labelled \"i2c\".
 <figure class="align-right">
 <img src="/_static/images/ex-csb1/unpopulated_power_pins.png"
 alt="Unpopulated Power Pads" />
-<figcaption>Unpopulated <span>|BR|</span> Power Pads</figcaption>
+<figcaption>Unpopulated <span>**BR**</span> Power Pads</figcaption>
 </figure>
 
 These unpopulated solder pads are used internally for testing and can
@@ -442,7 +439,7 @@ and/or servo boards to connect your accessories.
 <figure class="align-right">
 <img src="/_static/images/ex-csb1/2_1mm_screw_terminal_adapter.png"
 alt="2.1mm screw terminal adapter" />
-<figcaption>2.1mm Screw <span>|BR|</span> Terminal Adapter</figcaption>
+<figcaption>2.1mm Screw <span>**BR**</span> Terminal Adapter</figcaption>
 </figure>
 
 The \|EX-CSB1\| has a 2.1mm x 5.5mm power jack. If you already have a
@@ -450,8 +447,7 @@ power supply with bare wires, you can use an optional 2.1mm x 5.5mm
 screw terminal block adapter. For more information about power supplies,
 including how to use one power supply to supply all the different
 voltages on your layout, see
-`Power Supplies <reference/hardware/power-supplies:power supplies>`{.interpreted-text
-role="ref"}.
+`Power Supplies <reference/hardware/power-supplies:power supplies>`.
 
 To power up the \|EX-CSB1-SHORT\|, just plug your power supply into the
 mains power (aka wall outlet) and connect the barrel end to the Command
@@ -492,8 +488,7 @@ However, for safety, track power will be off by default when you first
 plug in the \|EX-CSB1-SHORT\|. This is to prevent power from
 accidentally being applied to your layout before everything is ready.
 See the
-`EX -Installer page <ex-installer/installing:start with power on>`{.interpreted-text
-role="ref"} for more information on how to change this behaviour.
+`EX -Installer page <ex-installer/installing:start with power on>` for more information on how to change this behaviour.
 
 \|HR-HEAVY\|
 
@@ -503,8 +498,7 @@ role="ref"} for more information on how to change this behaviour.
 
 - **An EX-CSB1 Command Station**
 - **A Power supply** (12-16v DC see
-  `Power Supplies <reference/hardware/power-supplies:power supplies>`{.interpreted-text
-  role="ref"})
+  `Power Supplies <reference/hardware/power-supplies:power supplies>`)
 - **A DCC loco** (DC can work also)
 - **Track**
 - **A throttle** (You can use your phone or a computer - see below)
@@ -552,8 +546,7 @@ The \|EX-CSB1\| is set to operate in DCC mode by default.
 
 ### Optional DC Operation
 
-Refer to `ex-commandstation/rtr-manual:dc operation`{.interpreted-text
-role="ref"} section for information.
+Refer to `ex-commandstation/rtr-manual:dc operation` section for information.
 
 \|HR-DASHED\|
 
@@ -567,8 +560,7 @@ MAIN output initially to test your Command Station. To alter this
 default configuration of \|DCC\| outputs, or for \|DC\| Mode, you would
 need to configure outputs with a TrackManager command in the mySetup.h
 file or via Routes. See
-`the TrackManager page </trackmanager/index>`{.interpreted-text
-role="doc"}
+`the TrackManager page </trackmanager/index>`
 
 The pluggable male screw terminals accept to 16 to 28 AWG/1.5mm\^2 gauge
 solid or stranded wire. If you use stranded, we recommend \"tinning\"
@@ -577,7 +569,7 @@ wire whiskers don\'t stray outside the screw terminals and cause a short
 circuit. Larger wire can handle more current and provide less
 resistance. 18-22 AWG is a good start. Keep your wires short by mounting
 the CS close to the track. See the
-`/reference/hardware/wire-gauge`{.interpreted-text role="doc"} page for
+`/reference/hardware/wire-gauge` page for
 more information on wire gauge.
 
 Unscrew both screw terminals with a flat blade jeweller\'s screwdriver.
@@ -595,8 +587,7 @@ should see status information on the display including the
 
 If you do not have a display or your display is not working, you will
 need to connect a
-`serial monitor </reference/tools/serial-monitor>`{.interpreted-text
-role="doc"}.
+`serial monitor </reference/tools/serial-monitor>`.
 
 The \|EX-CSB1\| will power up in WiFi Access Point mode as configured
 out of the box, with a Wifi network SSID of `DCCEX_xxxxxx` and password
@@ -632,7 +623,7 @@ smartphone or tablet, and/or on a PC using \|EX-WT\| with the PC plugged
 into the EX-CSB1\'s USB-C port. Detailed instructions are here
 <https://dcc-ex.com/ex-commandstation/controllers.html#choosing-a-throttle-controller>
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In this Section
 :::
 
@@ -689,8 +680,7 @@ connection. And last, the display will show status information.
 
 Begin by running \|EX-WT\| by [clicking this
 link](https://dcc-ex.github.io/WebThrottle-EX). Detailed instructions
-are available on the `/ex-webthrottle/index`{.interpreted-text
-role="doc"} page.
+are available on the `/ex-webthrottle/index` page.
 
 ------------------------------------------------------------------------
 
@@ -700,10 +690,10 @@ The EX-CSB1 is set to operate in \|DCC\| mode by default. You can switch
 to any of the outputs to \|DC PWM\| mode.
 
 The process to change the outputs to \|DC\| are described in detail in
-the `/trackmanager/index`{.interpreted-text role="doc"} page.
+the `/trackmanager/index` page.
 
 Additional technical information about \|DC PWM\| are explained on our
-`/reference/hardware/dcc-vs-dc`{.interpreted-text role="doc"}.
+`/reference/hardware/dcc-vs-dc`.
 
 \|HR-DASHED\|
 
@@ -740,7 +730,7 @@ The \|EX-CSB1\| is set to operate in \|DCC\| mode by default.
 
 If you want to switch to any of the outputs to \|DC PWM\| mode, you can
 find instructions on how to do that on the
-`/trackmanager/index`{.interpreted-text role="doc"} page.
+`/trackmanager/index` page.
 
 ------------------------------------------------------------------------
 
@@ -750,7 +740,7 @@ find instructions on how to do that on the
 
 ## Uploading the Software (Changing the Configuration)
 "
-:::: {.warning .warning-fload-right}
+:::: 
 ::: title
 Warning
 :::
@@ -771,7 +761,7 @@ software, you can easily do so by connecting the \|EX-CSB1\| to your
 computer via USB and follow the steps below to make any changes you
 need.
 
-::: {.contents .in-this-section depth="2" local=""}
+::: 
 In this Section
 :::
 
@@ -807,8 +797,7 @@ for detailed instructions.
 ##### Step 3: Download and Run the EX-Installer program
 
 Download and run the \|EX-I\| program on your computer following the
-instructions on the `/ex-commandstation/installer-rtr`{.interpreted-text
-role="doc"} page.
+instructions on the `/ex-commandstation/installer-rtr` page.
 
 ### Changing the Configuration
 
@@ -816,12 +805,11 @@ On subsequent connections of your \|EX-CSB1\| to you PC loading the
 drivers will be automatic.
 
 You only need to run the \|EX-I\| program on your computer following the
-instructions on the `/ex-commandstation/installer-rtr`{.interpreted-text
-role="doc"} page.
+instructions on the `/ex-commandstation/installer-rtr` page.
 
 As the \|EX-I\| program is updated periodically, it is worth checking
 from time-to-time to see if there is a new version by checking the
-`/ex-installer/index`{.interpreted-text role="doc"} page.
+`/ex-installer/index` page.
 
 ### Uploading EXRAIL Scripts
 
@@ -833,7 +821,7 @@ configure it. \|EX-R\| will then run automatically on \|EX-CS\| startup,
 trigger manually, or on occurrence of the specified events.
 
 To find out more about \|EX-R\| and how to add them to your \|EX-CSB1\|
-see the `/exrail/index`{.interpreted-text role="doc"} page.
+see the `/exrail/index` page.
 
 ### Factory Reset
 
@@ -871,8 +859,7 @@ on the \|EX-CSB1-SHORT\|.
 ##### Visit the DCC-EX Website
 
 Go to the
-`official DCC-EX website </ex-installer/installing>`{.interpreted-text
-role="doc"}.
+`official DCC-EX website </ex-installer/installing>`.
 
 ##### Save the Installer
 
@@ -889,7 +876,7 @@ to run it.
 ##### Follow the On-Screen Instructions
 
 Following the instructions on the
-`/ex-commandstation/installer-rtr`{.interpreted-text role="doc"} page.
+`/ex-commandstation/installer-rtr` page.
 
 \|EX-I\| will guide you through the reinstallation process. During this
 process, the existing software on the \|EX-CSB1\| will be overwritten
@@ -930,13 +917,12 @@ as expected.
 
 There are a number ways to open a \|serial monitor\| to the \|EX-CSB1\|.
 They are discussed on the
-`/reference/tools/serial-monitor`{.interpreted-text role="doc"} page,
+`/reference/tools/serial-monitor` page,
 and any are acceptable.
 
 To discuss just one of those options, which will likely be the easiest
 to do if you have recently installed the Command Station software using
-\|EX-I\|. Simply click the `Serial Monitor`{.interpreted-text
-role="guilabel"} button when the the \|EX-CSB1-SHORT\| is connected via
+\|EX-I\|. Simply click the `Serial Monitor` button when the the \|EX-CSB1-SHORT\| is connected via
 USB to your PC.
 
 \|HR-DASHED\|
@@ -951,7 +937,7 @@ USB Connection to JMRI
 
 ### Connecting Optional Devices and Accessories
 
-::: {.contents .in-this-section depth="4" local=""}
+::: 
 In this Section
 :::
 
@@ -1060,23 +1046,21 @@ need to add a booster.
 
 ## Additional information
 
-- `/ex-commandstation/rtr-connecting`{.interpreted-text role="doc"}
-- `/ex-commandstation/rtr-purchasing`{.interpreted-text role="doc"}
+- `/ex-commandstation/rtr-connecting`
+- `/ex-commandstation/rtr-purchasing`
 
 [^1]: The voltage you need for the [\|Motor
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.
 
 [^2]: The voltage you need for the [\|Motor
     Driver\|](##SUBST##|Motor Driver|) depends on the scale/gauge of the
     layout you are using. Bigger is not always better. Too high a
     voltage can damage your locos. See the
-    `reference/hardware/power-supplies:powering the motor driver`{.interpreted-text
-    role="ref"} for more information.
+    `reference/hardware/power-supplies:powering the motor driver` for more information.
 
 [^3]: Optional for connecting connecting to a computer for
-    [\|EX-WT\|](##SUBST##|EX-WT|), [\|JMRI\|](##SUBST##|JMRI|) and to
-    reload the [\|EX-CS\|](##SUBST##|EX-CS|) software.
+    [\|EX-WT\|](##SUBST##**EX-WT**), [\|JMRI\|](##SUBST##**JMRI**) and to
+    reload the [\|EX-CS\|](##SUBST##**EX-CS**) software.

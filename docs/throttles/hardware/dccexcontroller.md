@@ -2,9 +2,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="3" local=""}
+::: 
 On this page
 :::
 ::::
@@ -74,10 +74,10 @@ Source code and instructions can be found on GitHub here:
 Here is a connection diagram drawn in Frizing showing how to wire the
 parts together:
 
-![WiTcontroller connection diagram](/_static/images/throttles/witcontroller_connect.png){.align-center}
+![WiTcontroller connection diagram](/_static/images/throttles/witcontroller_connect.png)
 
 Here are pictures showing parts placement inside the case:
 
-![WiTcontroller assembly](/_static/images/throttles/witcontroller1.jpg){.align-left}
+![WiTcontroller assembly](/_static/images/throttles/witcontroller1.jpg)
 
-![WitController in case](/_static/images/throttles/witcontroller2.jpg){.align-left}
+![WitController in case](/_static/images/throttles/witcontroller2.jpg)

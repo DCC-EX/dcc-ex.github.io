@@ -5,9 +5,9 @@
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 \|githublink-ex-ioexpander-button-small\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -21,8 +21,7 @@ configuration is necessary on the \|EX-IO\| device itself (aside from
 the \|I2C\| address of course).
 
 All allocation of pins is done via the device driver (see
-`ex-ioexpander/overview:ex-commandstation device driver`{.interpreted-text
-role="ref"}).
+`ex-ioexpander/overview:ex-commandstation device driver`).
 
 All Vpins outlined on this page assume use of the default starting Vpin
 of 800, so you will need to review the Vpin map displayed in the
@@ -79,8 +78,7 @@ The 8MHz 3.3V Pro Mini is not 5V tolerant
 ::::
 
 The Pro Mini uses an identical pin map to the
-`ex-ioexpander/supported-devices:arduino nano`{.interpreted-text
-role="ref"}.
+`ex-ioexpander/supported-devices:arduino nano`.
 
 | 
 
@@ -543,16 +541,14 @@ macro definition and the device specific pin map.
 Files should be named according to the platform and CPU type e.g.
 \"arduino_avr_nano.h\" or \"arduino_nucleo_f412zg.h\".
 
-As per `ex-ioexpander/overview:pin/vpin allocation`{.interpreted-text
-role="ref"}, Vpins are allocated to physical pins in ascending order.
+As per `ex-ioexpander/overview:pin/vpin allocation`, Vpins are allocated to physical pins in ascending order.
 
 These are the considerations when defining the pin map:
 
 - All pins available for use must be represented in a logical order to
   provide the simplest user experience
 - The capability for each pin must be provided according to the
-  `ex-ioexpander/supported-devices:pin capability table`{.interpreted-text
-  role="ref"}
+  `ex-ioexpander/supported-devices:pin capability table`
 - The number of defined pins must match \"TOTAL_PINS\" as defined in
   \"defines.h\"
 - The number of pins defined with PWM capability must match
@@ -561,8 +557,7 @@ These are the considerations when defining the pin map:
 Further to this, if the microcontroller utilises internal \|I2C\| pullup
 resistors rather than external, physical resistors, then the \|I2C\|
 pins can be defined to allow these to be disabled via \"myConfig.h\"
-(see `ex-ioexpander/overview:disable_i2c_pullups`{.interpreted-text
-role="ref"}).
+(see `ex-ioexpander/overview:disable_i2c_pullups`).
 
 To use the Arduino Uno as the example, the file \"arduino_avr_uno.h\"
 would be created with these contents:
@@ -575,10 +570,9 @@ would be created with these contents:
 #include "globals.h"
 
 #define BOARD_TYPE F("Uno")
-pinDefinition pinMap[TOTAL_PINS] = {
-  {2,DIO},{3,DIOP},{4,DIO},{5,DIOP},{6,DIOP},{7,DIO},
-  {8,DIO},{9,DIOP},{10,DIOP},{11,DIOP},{12,DIO},{13,DIO},
-  {A0,AIDIO},{A1,AIDIO},{A2,AIDIO},{A3,AIDIO},
+pinDefinition pinMap[TOTAL_PINS] = ,,,,,,
+  ,,,,,,
+  ,,,,
 };
 #define I2C_SDA A4
 #define I2C_SCL A5

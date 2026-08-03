@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -14,7 +14,7 @@ On this page
 This page describes all the supported WiFi options of the \|EX-CS\|. If
 you identify as an a \|conductor-text\| and have installed only the
 recommended hardware we suggest that you look at the guide on the
-`/ex-commandstation/diy/wifi-setup`{.interpreted-text role="doc"} page.
+`/ex-commandstation/diy/wifi-setup` page.
 
 ------------------------------------------------------------------------
 
@@ -23,15 +23,14 @@ Throttles DIRECTLY to the \|EX-CS\|, eliminating the need for a computer
 and another software controller. However, WiFi is optional. If you wish
 to simply use your computer connected via a USB cable to to the Command
 Station using something like \|JMRI\|, you can
-`skip ahead to the next page </ex-commandstation/installer-diy>`{.interpreted-text
-role="doc"}.
+`skip ahead to the next page </ex-commandstation/installer-diy>[.
 
 There are many ways to add WiFi to your Command Station. We will cover
 four supported methods here.
 
 You should be able to apply what you learn here to using other boards,
 but you can ask us for help using any of the contact links on our
-`Support Page </support/index>`{.interpreted-text role="doc"} if you
+`Support Page ](/support/index.md) if you
 have a question.
 
 Note that you can click on any of the images to make them larger.
@@ -100,8 +99,7 @@ this list of known tested, working hardware. We will add more over time.
   jumpers)](https://www.amzn.com/B00O34AGSU/) \|EXTERNAL-LINK\|
 
 For more boards you may be able to use, see the
-`WiFi Boards Section </reference/hardware/wifi-boards>`{.interpreted-text
-role="doc"}
+`WiFi Boards Section </reference/hardware/wifi-boards>`
 
 :!!! warning "::: title
 Warning"
@@ -111,19 +109,18 @@ While the recommended *Makerfabs ESP8266 WiFi Shield* is now shipping
 with the correct firmware version and **will work** with \|EX-CS\|
 *without modification*, please be aware that the Espressif firmware
 shipped with *Duinopeak ESP8266 WiFi Expansion* and *ESP-01 or ESP-01S*
-devices `will probably NOT work`{.interpreted-text
-role="dcc-ex-red-bold"} with \|EX-CS\| out of the box.
+devices `will probably NOT work` with \|EX-CS\| out of the box.
 
 This can be corrected, but is probably beyond Conductor level and
 requires additional hardware.
 
-See `/support/wifi-at-version`{.interpreted-text role="doc"} for details
+See `/support/wifi-at-version` for details
 on how to check the version and how to correct it if needed.
 ::::
 
 ## What you will need (for WiFi)
 
-:::: {.note .note-float-right}
+:::: 
 ::: title
 Note
 :::
@@ -152,14 +149,10 @@ being shared.
 
 ## Supported Boards
 
-- `Makerfabs ESP8266 WiFi Shield (recommended) </reference/hardware/wifi-boards/makerfabs-esp8266>`{.interpreted-text
-  role="doc"}
-- `Duinopeak ESP8266 WiFi Expansion Board </reference/hardware/wifi-boards/duinopeak-esp8266>`{.interpreted-text
-  role="doc"}
-- `ESP-01 and ESP-01s </reference/hardware/wifi-boards/esp-01>`{.interpreted-text
-  role="doc"}
-- `Mega+WiFi Combo Board </reference/hardware/wifi-boards/mega-wifi>`{.interpreted-text
-  role="doc"}
+- `Makerfabs ESP8266 WiFi Shield (recommended) </reference/hardware/wifi-boards/makerfabs-esp8266>`
+- `Duinopeak ESP8266 WiFi Expansion Board </reference/hardware/wifi-boards/duinopeak-esp8266>`
+- `ESP-01 and ESP-01s </reference/hardware/wifi-boards/esp-01>`
+- `Mega+WiFi Combo Board </reference/hardware/wifi-boards/mega-wifi>`
 
 ## Install the Software
 
@@ -169,8 +162,7 @@ the \|EX-CS\| as an Access Point (AP) and connect a \|WiThrottle
 Protocol\| compatible CAB (\|Engine Driver\|). The next time you power
 up the Command Station, it will automatically find your WiFi board and
 which port it is connected to. See the detailed instructions here:
-`WiFi Configuration </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`{.interpreted-text
-role="doc"}
+`WiFi Configuration </ex-commandstation/advanced-setup/supported-wifi/wifi-config>`
 
 :!!! note "::: title
 Note"
@@ -189,8 +181,7 @@ instruction.
 
 If you are setting up your Command Station for the first time, or are
 making changes to the basic setup, navigate to
-`Command Station Downloads </download/ex-commandstation>`{.interpreted-text
-role="doc"} to load firmware onto the Command Station.
+`Command Station Downloads </download/ex-commandstation>` to load firmware onto the Command Station.
 
 :!!! note "::: title
 Note"

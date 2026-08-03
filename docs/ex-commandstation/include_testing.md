@@ -1,4 +1,4 @@
-::: {.meta keywords="Testing"}
+::: 
 :::
 
 \|EX-CS-LOGO\|
@@ -7,9 +7,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="3" local=""}
+::: 
 On this page
 :::
 ::::
@@ -49,8 +49,7 @@ alt="EX-WebThrottle" />
 
 \|tinkerer\| \|engineer\| \|BR\| Additional options (throttles) for
 testing and diagnosing issues are available and is described in the
-`/ex-commandstation/advanced-setup/controllers`{.interpreted-text
-role="doc"} page if needed .
+`/ex-commandstation/advanced-setup/controllers` page if needed .
 :::
 
 Connect Everything:
@@ -75,7 +74,7 @@ commands.
 ::::
 
 ![EX-WebThrottle
-screen](/_static/images/installer/exwebthrottle.jpg){alt="EX-WebThrottle"}
+screen](/_static/images/installer/exwebthrottle.jpg)
 
 - Click this link and it will load a web page from our server that will
   run the web throttle on your PC
@@ -88,13 +87,13 @@ dcclink
 :::
 
 - Click on the \"Serial\" dropdown button and select \"Serial\"
-- Click on the `Connect EX-CS`{.interpreted-text role="guilabel"} button
+- Click on the `Connect EX-CS` button
 - If the program finds a compatible device,
   - It will open a popup a window showing you a selection. \|BR\| It may
     show a line at the top such as \"Arduino Mega 2560 (COM3)\". (The
     COM port will vary)
   - Click on your board to select it
-  - Then click the `Connect EX-CS`{.interpreted-text role="guilabel"}
+  - Then click the `Connect EX-CS`
     button
 - You should then be connected to the \|EX-CS\| and should see the
   response from the Command Station in the log textbox of the debug
@@ -112,13 +111,13 @@ dcclink
 - Now you are ready to run trains! \|BR\| \|BR\|
 - Place your loco on the **MAIN track**, a loco will NOT run on a
   programming track
-- Click the `Power Slider`{.interpreted-text role="guilabel"} button to
+- Click the [Power Slider` button to
   turn on power to your track
 - You should see lights on your \|Standard Motor Driver\| or \|EX-MS\|
   and an indication that your loco has power
 - Next go to the `Locomotive ID` textbox
 - Enter the DCC address of your loco
-- Then press the `Acquire`{.interpreted-text role="guilabel"} button
+- Then press the `Acquire` button
 - You should now have full control over your loco
 - The circular control or vertical slider (chosen by the throttle select
   slider) can be moved by clicking and holding down the mouse button and
@@ -148,7 +147,7 @@ and always find \|EX-WT\| with your other Apps!
 :::
 
 Click this link:
-`EX-WebThrottle </ex-webthrottle/index>`{.interpreted-text role="doc"}
+`EX-WebThrottle ](/ex-webthrottle/index.md)
 to run \|EX-WT\| hosted on our site, or visit
 [GitHub](https://github.com/DCC-EX/WebThrottle-EX) \|EXTERNAL-LINK\| to
 get the latest version to run on your computer.
@@ -157,7 +156,7 @@ get the latest version to run on your computer.
 
 ### Using Engine Driver or WiThrottle - Requires WiFi
 
-:::: {.important .important-float-right}
+:::: 
 ::: title
 Important
 :::
@@ -219,13 +218,13 @@ your trains.
     - Use your normal home SSID (Network name) and Password to connect
       to the network
 
-:::: {.note .note-float-right}
+:::: 
 ::: title
 Note
 :::
 
 If you have any difficulties check the
-`/support/ex-cs-troubleshooting`{.interpreted-text role="doc"} page for
+`/support/ex-cs-troubleshooting` page for
 assistance.
 ::::
 
@@ -246,28 +245,27 @@ assistance.
 - Turn on the power to the track via the Menu
 
   > - (The three dots or bars) then \'Power\'. Then click the
-  >   `Power`{.interpreted-text role="guilabel"} button till it goes
+  >   `Power` button till it goes
   >   green. (may require more than one click)
   > - The four red LEDs on the Motor board will turn on
-  > - Click `Back`{.interpreted-text role="guilabel"}
+  > - Click `Back`
 
 - Back on the \'Throttle screen\'
 
-  - Click one of the `Select`{.interpreted-text role="guilabel"} buttons
+  - Click one of the `Select` buttons
 
 - This will have taken you to the \'Select Loco screen\'
 
   - Enter the DCC Address of the loco you put on the track
   - Select `Short` or `Long` (normally if the address is less than 127,
     it will automatically assume it is short)
-  - Click `Aquire`{.interpreted-text role="guilabel"}
+  - Click `Aquire`
 
 - Back on the \'Throttle screen\' you can now use the sliders to move
   your train on the MAIN track.
 
 See
-`Engine Driver Page </throttles/software/engine-driver>`{.interpreted-text
-role="doc"} for details on how to install and run \|Engine Driver\|.
+`Engine Driver Page </throttles/software/engine-driver>` for details on how to install and run \|Engine Driver\|.
 
 :!!! note "::: title
 Note"
@@ -282,13 +280,13 @@ work, scroll down to the very bottom of this page and click on the
 
 #### Using WiThrottle (Apple iOS)
 
-:::: {.note .note-float-right}
+:::: 
 ::: title
 Note
 :::
 
 If you have any difficulties check the
-`/support/ex-cs-troubleshooting`{.interpreted-text role="doc"} page for
+`/support/ex-cs-troubleshooting` page for
 assistance.
 ::::
 
@@ -319,7 +317,7 @@ assistance.
     - It should find the \|WiThrottle Server\| and automatically connect
       to it
 
-:::: {.important .important-float-right}
+:::: 
 ::: title
 Important
 :::
@@ -327,8 +325,7 @@ Important
 \|WiThrottle Lite\| (the free version) does not have the `Track Power`
 function. You will either a) you need to purchase the full version, b)
 configure the power to turn on in \|EX-I\|, or c) you can
-`add a startup command </ex-commandstation/advanced-setup/startup-config>`{.interpreted-text
-role="doc"}.
+`add a startup command </ex-commandstation/advanced-setup/startup-config>`.
 ::::
 
 - You should then see the \'Address Screen\'
@@ -346,7 +343,7 @@ role="doc"}.
 - Select `Long` or `Short` (normally if the address is less than 127, it
   should be a \'Short\' address.)
 
-- Click the `Set`{.interpreted-text role="guilabel"} button
+- Click the `Set` button
 
 - The address should appear in the green box at the top left.
 
@@ -354,8 +351,7 @@ role="doc"}.
 
 - You can now use the sliders to move your train on the MAIN track
 
-See `WiThrottle Page </throttles/software/withrottle>`{.interpreted-text
-role="doc"} for details on how to install and run \|WiThrottle\|.
+See `WiThrottle Page </throttles/software/withrottle>` for details on how to install and run \|WiThrottle\|.
 
 :::: important
 ::: title
@@ -377,13 +373,10 @@ design and part of the NMRA DCC specification.
 
 *You now should have everything you need to run your trains.*
 
-We suggest that you look at the `/big-picture/index`{.interpreted-text
-role="doc"} to get some additional guidance on running trains and the
+We suggest that you look at the `/big-picture/index` to get some additional guidance on running trains and the
 additional capabilities of \|DCC-EX\| that you may prove of interest.
 
 You might also like to look at the other
-`Throttles (Controllers) </ex-commandstation/advanced-setup/controllers>`{.interpreted-text
-role="doc"} that are available.
+`Throttles (Controllers) </ex-commandstation/advanced-setup/controllers>` that are available.
 
-If you are still having difficulties click `Next`{.interpreted-text
-role="guilabel"} below.
+If you are still having difficulties click `Next` below.

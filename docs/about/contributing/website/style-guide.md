@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -150,12 +150,11 @@ consistent.
 - Use **\`\`literal text blocks\`\`** when describing preference
   values - `literal text blocks`
 - Use **:menuselection:\`Menu \--\> Preferences \--\> ..\`** for menu
-  descriptions - `Menu --> Preferences --> ..`{.interpreted-text
-  role="menuselection"}
+  descriptions - `Menu --> Preferences --> ..`
 - Use **:guilabel:\`GUI labels\`** for buttons -
-  `GUI labels`{.interpreted-text role="guilabel"}
+  `GUI labels`
 - Use **:kbd:\`Key\`** for keyboard keys / key strokes -
-  `Key`{.interpreted-text role="kbd"}
+  `Key`
 - For dates, use dd-mmm-yyyy or yyyy-mm-dd to avoid confusion with the
   way dates are uniquely written in the US. \|BR\|e.g. 2-Mar-2022 or
   2022-3-2, not 2-3-2022

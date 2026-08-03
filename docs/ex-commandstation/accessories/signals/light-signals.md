@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -177,5 +177,4 @@ off, and green is on.
 
 Controlling light signals is exactly the same as semaphore or servo
 signals, skip to
-`/ex-commandstation/accessories/signals/signal-control`{.interpreted-text
-role="doc"} for information on controlling signals.
+`/ex-commandstation/accessories/signals/signal-control` for information on controlling signals.

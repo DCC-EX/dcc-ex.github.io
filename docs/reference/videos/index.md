@@ -11,5 +11,4 @@ orphan
   \|EXTERNAL-LINK\|
 
 Also see
-`video contributions by external parties </external-references/index>`{.interpreted-text
-role="doc"}
+`video contributions by external parties </external-references/index>`

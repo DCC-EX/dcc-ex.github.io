@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -20,7 +20,7 @@ railroad:
 ## The EX-CommandStation
 
 The Command Station is covered in the
-`Getting Started <index>`{.interpreted-text role="doc"} section, and is
+[Getting Started ](index.md) section, and is
 usually an Arduino microcontroller and a motor driver. The Command
 Station accepts instructions from a controller and generates packets
 that are transmitted to your track.
@@ -64,7 +64,7 @@ the \|EX-CS\|. You need a Command Station with a WiFi Shield or other
 type of WiFi board, or a Bluetooth board and a throttle that supports
 Bluetooth. Here is an image that represents a direct connection.
 
-![WiFi Throttle Direct to Command Station](/_static/images/throttles/throttle_wifi_direct.png){.align-center}
+![WiFi Throttle Direct to Command Station](/_static/images/throttles/throttle_wifi_direct.png)
 
 | 
 
@@ -75,7 +75,7 @@ An equally simple way to connect from your wireless device to the
 need a Command Station with a WiFi Shield or other type of WiFi board.
 Here is an image that represents a indirect connection.
 
-![WiFi Throttle indirect to Command Station](/_static/images/throttles/throttle_wifi_indirect.png){.align-center}
+![WiFi Throttle indirect to Command Station](/_static/images/throttles/throttle_wifi_indirect.png)
 
 | 
 
@@ -88,7 +88,7 @@ usually the \|WiThrottle Server\| or Web Server Interface. Here is an
 image that shows connecting wirelessly to \|JMRI\|, and connecting
 \|JMRI\| via a USB cable to the Command Station.
 
-![WiFi Throttle to JMRI and JMRI to CS with USB cable](/_static/images/throttles/throttle_wifi_jmri.png){.align-center}
+![WiFi Throttle to JMRI and JMRI to CS with USB cable](/_static/images/throttles/throttle_wifi_jmri.png)
 
 | 
 
@@ -99,8 +99,7 @@ Station; the \|DCC-EX Native Commands\|, \|WiThrottle Protocol\| command
 language, and via the \|JMRI\| Web Server command language. For an
 explanation of what these terms mean, and what that means to you, please
 see
-`Protocols: WiThrottle, DCC-EX Native Commands, and Web Servers Explained </throttles/protocols>`{.interpreted-text
-role="doc"}. \|EX-CS\| natively understands our own \|DCC-EX Native
+`Protocols: WiThrottle, DCC-EX Native Commands, and Web Servers Explained </throttles/protocols>[. \|EX-CS\| natively understands our own \|DCC-EX Native
 Commands\| and the \|WiThrottle Protocol\| API, and will work with a
 direct connection to these throttles. However, you can connect throttles
 to the computer running \|JMRI\|, and use \|JMRI\| as the middleware to
@@ -116,7 +115,7 @@ all the time.
 
 For more information on any of these throttles, you can click on their
 links below or see our
-`Throttles Page Index </throttles/index>`{.interpreted-text role="doc"}.
+`Throttles Page Index ](/throttles/index.md).
 
 ### Our EX-WebThrottle (DCC-EX \| USB/Serial)
 
@@ -129,18 +128,17 @@ connection, but we will cover that later in the Wireless USB Bridge
 section. Below is a picture of \|EX-WT\| with the side menu open. You
 can click on the image to see it full size.
 
-![EX-WebThrottle](/_static/images/throttles/webthrottle1.jpg){.align-center}
+![EX-WebThrottle](/_static/images/throttles/webthrottle1.jpg)
 
 | 
 
 Here are your connections, just a computer running a chromium-based
 browser, a USB cable, and your \|EX-CS\|.
 
-![EX-WebThrottle](/_static/images/throttles/webthrottle_setup.png){.align-center}
+![EX-WebThrottle](/_static/images/throttles/webthrottle_setup.png)
 
 For operating instructions see
-`how to use EX-WebThrottle </ex-webthrottle/index>`{.interpreted-text
-role="doc"}
+`how to use EX-WebThrottle </ex-webthrottle/index>`
 
 \|HR-DASHED\|
 
@@ -154,7 +152,7 @@ throttle apps that work with the \|EX-CS\|.
 
 #### Engine Driver (Android \| WiThrottle \| WiFi)
 
-:::: {.note .note-float-right}
+:::: 
 ::: title
 Note
 :::
@@ -174,8 +172,7 @@ There are two ways to connect it:
 - The first method is by connecting directly to the Command Station via
   WiFi. You will need a WiFi board connected to the Command Station (see
   WiFi Setup
-  `WiFi Setup </ex-commandstation/advanced-setup/supported-connections/wifi-setup>`{.interpreted-text
-  role="doc"}).
+  `WiFi Setup </ex-commandstation/advanced-setup/supported-connections/wifi-setup>`).
 - The second method is to use \|JMRI\| and connect \|Engine Driver\|
   (ED) to the computer running \|JMRI\|. That computer would then
   connect to the Command Station via a USB cable (normally) or via a
@@ -187,8 +184,7 @@ There are two ways to connect it:
   virtually no fuss.
 
 See
-`Engine Driver Page </throttles/software/engine-driver>`{.interpreted-text
-role="doc"}
+`Engine Driver Page </throttles/software/engine-driver>`
 
 #### WiThrottle (iOS \| WiThrottle \| WiFi)
 
@@ -197,8 +193,7 @@ to the \|EX-CS\| like \|Engine Driver\| does, or connect to \|JMRI\| on
 a computer and then have \|JMRI\| connect to the Command Station via a
 USB cable.
 
-See `WiThrottle Page </throttles/software/withrottle>`{.interpreted-text
-role="doc"}
+See `WiThrottle Page </throttles/software/withrottle>`
 
 #### DCCpp CAB (Android \| DCC-EX Native Commands \| WiFi, Bluetooth)
 
@@ -207,8 +202,7 @@ Commands\|. It can connect via WiFi or Bluetooth! If you don\'t need
 software like \|JMRI\| running on a computer, DCCpp CAB lets you connect
 directly to the \|EX-CS\|.
 
-See `DCCpp CAB Page </throttles/software/dccpp-cab>`{.interpreted-text
-role="doc"}
+See `DCCpp CAB Page </throttles/software/dccpp-cab>`
 
 #### Locontrol (iOS \| JMRI Web Server, DCC-EX Native Commands \| WiFi)
 
@@ -216,8 +210,7 @@ Locontrol is a beautiful and functional throttle that uses the \|JMRI\|
 Web Server to connect. Soon it will be able to connect directly to the
 \|EX-CS\| by using the \|DCC-EX Native Commands\| set.
 
-See `Locontrol Page </throttles/software/locontrol>`{.interpreted-text
-role="doc"}
+See `Locontrol Page </throttles/software/locontrol>`
 
 #### DigiTrainsPro (Android, iOS, Windows \| WiThrottle, DCC-EX Native Commands \| WiFi)
 
@@ -226,21 +219,19 @@ user interface. Soon it will be able to speak directly to \|EX-CS\|
 using our command language.
 
 See
-`DigiTrainsPro Page </throttles/software/digitrainspro>`{.interpreted-text
-role="doc"}
+`DigiTrainsPro Page </throttles/software/digitrainspro>`
 
 #### SRCPClient (iOS \| WiThrottle, DCC-EX Native Commands \| WiFi)
 
 Operate up to 3 locos from your iOS device. It supports both
 \|WiThrottle Protocol\| AND the \|DCC-EX Native Protocol\|.
 
-See `SRCPClient Page </throttles/software/srcpclient>`{.interpreted-text
-role="doc"}
+See `SRCPClient Page </throttles/software/srcpclient>[
 
 #### Complete List of Apps
 
 There are many other apps that can be used as throttles. See the
-`Throttles Page Index </throttles/index>`{.interpreted-text role="doc"}
+`Throttles Page Index ](/throttles/index.md)
 for a complete list of apps that work with the \|EX-CS\|.
 
 \|HR-DASHED\|
@@ -252,8 +243,7 @@ can be used as throttles. Some of them connect directly to the
 \|EX-CS\|, while others connect to a computer running \|JMRI\|, which in
 turn connects to the Command Station via a USB cable.
 
-See the `Throttles Page Index </throttles/index>`{.interpreted-text
-role="doc"} for a complete list of hardware devices that work with the
+See the `Throttles Page Index </throttles/index>[ for a complete list of hardware devices that work with the
 \|EX-CS\|.
 
 \|HR-DASHED\|
@@ -329,7 +319,7 @@ Controllers](https://github.com/DCC-EX/dcc-ex.github.io/issues/416)
 :::
 
 For more information about all the throttles, see the
-`Throttles Section </throttles/index>`{.interpreted-text role="doc"}\>
+`Throttles Section ](/throttles/index.md)\>
 
 ## 2 Wires to Arduino serial port
 
@@ -339,8 +329,7 @@ connection. This would be a common option for DIY throttles based on
 other Arduino platforms.
 
 This is also the same method when using HC05/06 Bluetooth devices, as
-outlined in `/reference/hardware/bluetooth/hc-05-06`{.interpreted-text
-role="doc"}.
+outlined in `/reference/hardware/bluetooth/hc-05-06`.
 
 If connecting to serial ports other than the default (e.g. serial port 0
 on the Mega2560), you will need to enable API commands for that specific

@@ -2,9 +2,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -73,8 +73,7 @@ available on eBay or AliExpress.
 ::::
 
 Refer to
-`/ex-commandstation/accessories/sensors/ir-sensor`{.interpreted-text
-role="doc"} for further information on infrared sensors.
+`/ex-commandstation/accessories/sensors/ir-sensor` for further information on infrared sensors.
 
 ------------------------------------------------------------------------
 
@@ -111,8 +110,7 @@ interrupt capability rather than simply letting the polling cycles
 detect the sensor changes.
 
 Refer to
-`reference/developers/hal:hal programming interface`{.interpreted-text
-role="ref"} for further information on using the interrupt pin.
+`reference/developers/hal:hal programming interface` for further information on using the interrupt pin.
 ::::
 
 ------------------------------------------------------------------------
@@ -174,8 +172,7 @@ as the VL53L0X.
   -----------------------------------------------------------------------
 
 Refer to
-`/ex-commandstation/accessories/sensors/vl53l0x-tof-sensor`{.interpreted-text
-role="doc"} for further information on the VL53L0X time-of-flight
+`/ex-commandstation/accessories/sensors/vl53l0x-tof-sensor` for further information on the VL53L0X time-of-flight
 sensor.
 
 ------------------------------------------------------------------------

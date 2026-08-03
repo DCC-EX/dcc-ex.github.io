@@ -4,9 +4,9 @@
 
 \|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="1" local=""}
+::: 
 On this page
 :::
 ::::
@@ -75,7 +75,7 @@ repository.
 ## Contacting the team
 
 To get in contact with the team, refer to our
-`/support/index`{.interpreted-text role="doc"} page.
+`/support/index` page.
 
 ## Managing code and our website
 

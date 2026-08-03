@@ -2,9 +2,9 @@
 
 \|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
 
-:::: {.sidebar .sidebar-on-this-page}
+:::: 
 
-::: {.contents depth="2" local=""}
+::: 
 On this page
 :::
 ::::
@@ -129,8 +129,8 @@ typically this simply involves connecting the output pin to an available
 I/O pin either directly on \|EX-CS\| or alternatively to an I/O pin on
 an I/O extender device such as an MCP23017 or \|EX-IO\|.
 
-Refer to `/reference/hardware/gpio-module`{.interpreted-text role="doc"}
-and `/ex-ioexpander/index`{.interpreted-text role="doc"} for more
+Refer to `/reference/hardware/gpio-module`
+and `/ex-ioexpander/index` for more
 information.
 
 ## Sensor configuration for JMRI
@@ -174,8 +174,7 @@ configured as such:
 ```
 
 To ensure sensors are defined at startup, refer to
-`/ex-commandstation/advanced-setup/startup-config`{.interpreted-text
-role="doc"}.
+`/ex-commandstation/advanced-setup/startup-config`.
 
 ## EXRAIL integration
 

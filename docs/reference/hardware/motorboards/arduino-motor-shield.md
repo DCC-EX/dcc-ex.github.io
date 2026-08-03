@@ -24,14 +24,12 @@ Schematics are available on the [Arduino
 website](https://docs.arduino.cc/resources/schematics/A000079-schematics.pdf)
 \|EXTERNAL-LINK\|.
 
-`Install the Arduino Motor Shield </ex-commandstation/diy/assembly>`{.interpreted-text
-role="doc"}
+`Install the Arduino Motor Shield </ex-commandstation/diy/assembly>`
 
 ------------------------------------------------------------------------
 
 ## Stacking two Standard Motor Shields
 
 See
-`Stacking Arduino Motor Shields </reference/hardware/motorboards/arduino-motor-shield-stacked>`{.interpreted-text
-role="doc"} for information on stacking two standard Arduino Motor
+`Stacking Arduino Motor Shields </reference/hardware/motorboards/arduino-motor-shield-stacked>` for information on stacking two standard Arduino Motor
 Shields to get 4 motor outputs.

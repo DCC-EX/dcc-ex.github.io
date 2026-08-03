@@ -1,1 +1,0 @@
-.. include:: rtr-manual.rst

@@ -1,0 +1,90 @@
+\|EX-REF-LOGO\|
+
+# List of Tested Decoders
+
+\|SUITABLE\| \|conductor\| \|tinkerer\| \|engineer\| \|support-button\|
+
+We often receive reports on DCC multifunction decoders via Discord and
+our support channels as well as requests for help when things don\'t
+quite work \"out of the box\".
+
+As a result, we\'ve started compiling a list of decoders that we\'ve
+experienced with a view to helping people get up and running quicker
+with their DCC layouts.
+
+The table below is a growing list of multifunction decoders we\'ve had
+reasons to support or test for ourselves with various supporting
+information, and a rating from one to three stars on how easy it is to
+use and program them.
+
+If you wish to add to this list, please fill out the DCC Decoder
+Feedback form and provide the details as per the table below.
+
+::: rst-class
+dcclink
+
+[DCC Decoder
+Feedback](https://github.com/DCC-EX/dcc-ex.github.io/issues/new/choose/)
+:::
+
+- Brand - The brand/manufacturer of the decoder.
+- Model - The specific model or part number of the decoder.
+- Type:
+  - MF - Multifunction.
+  - MFS - Multifunction with sound.
+  - ACC - Accessory.
+  - SND - Sound only.
+- Firmware - The specific version of firmware on the decoder when
+  tested.
+- Connector:
+  - NEM651.
+  - NEM652.
+  - 21MTC.
+  - PLUX8/12/16/22.
+  - N/A (bare wires).
+- ACK Settings - Specific settings to enable correct ACK behaviour for
+  service mode programming.
+- Rating:
+  - Rating is out of 3, purely from the perspective of compatibility and
+    ease of use getting them working and programming specifically with
+    \|EX-CS\|. No consideration is given to how easy or complicated
+    these are to install as the use cases vary too widely.
+  - 1/3 - Can be quite difficult or complicated to get working or
+    testing had inconsistent results.
+  - 2/3 - Works as expected, with some extra effort required such as
+    unique ACK settings.
+  - 3/3 - Works exactly as expected.
+- Comments - Any other relevant information discovered during testing or
+  support tickets.
+
+Note to manufacturers: This list is not designed in any way to disparage
+or favour specific manufacturers, and is simply a factual observation of
+what the DCC-EX team have noted while helping people get up and running
+with various DCC decoders.
+
+  --------------- ------------------------------------------------------------------------------------------------------------------------------------- ----------- ----------------------- ------------------------------ --------------------- -------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Brand           Model \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\|   Type        Firmware                Connector                      ACK \|BR\| Settings   Rating   Comments \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\| \|\_\|
+  Bachmann        4 Function decoder (36-550)                                                                                                           MF          Man. Version 46         N/A (bare wires)               Default               2.5      Still a degree of uncertainty as to the full capabilities of this decoder this decoder
+  D&H             PD10MU                                                                                                                                MF          3.12                    N/A (bare wires)               Default               3        Works perfectly, was my first decoder tested with DCC++EX. Reported it because I couldn\'t find this decoder in the list yet.
+  Decoderwerk     30402/30801                                                                                                                           ACC         Default                 Screw terminal                 Default               3        I can recommend them, because they are very simple, easy to use, small (4cm x 7cm(4-out) / 11cm(8-out)) and in comparison to the ones from Märklin very cheap.
+  Digitrax        DH126D                                                                                                                                MF          Default for 2021/2022   JST-9                          Default               3        I have noticed that these decoders switch on the rear light at power on with no commands, which can be a useful behaviour for troubleshooting. They run nicely as installed. The learning curve I had on the 1st was entirely using DCC-EX + JMRI to configure them, additional installations and changes have been smooth. \|BR\| DH126D is meant to be an economy decoder with fewer functions and features than the DH166D. \|BR\| 1st and 2nd in November of 2022, 3rd was installed in December 2023.
+  Digitrax        DH166D                                                                                                                                MF          51                      N/A (bare wires)               Default               3        Worked exactly as expected. No problems with programming or operation
+  Digitrax        SDXH167D                                                                                                                              MFS         Factory new 2023/2024   JST-9 + 10 pin sound harness   Default               2.5      Good responses to standard commands. Loading sound projects requires proprietary interface
+  Digitrax        SDXH186MT                                                                                                                             MFS         New in 2021             21MTC                          Default               2.5      Half point deduction due to fewer options
+  ESU             LokPilot V3.0 Micro                                                                                                                   MF          128                     NEM651                         Default               3        Worked out-of-the-box
+  ESU             LokPilot V4.0 Micro                                                                                                                   MF          4.6.9134                NEM651                         Default               3        Worked out-of-the-box
+  ESU             Lokpilot 4 21MTC                                                                                                                      MF          Unknown                 21MTC                          Default               3        Worked as expected out of the box. CV setup easily via programming track.
+  ESU             Lokpilot 5 59610                                                                                                                      MF          Unknown                 NEM652                         Default               3        As expected no problems connecting to DCC-EX CS. Biggest advantage with this decoder is multi-format. DCC, MM, M4 (mfx), DC and AC analogue (same feedback from 2 users).
+  Kuehn           N25-P                                                                                                                                 MF                                  NEM651                         Default               3        Worked out-of-the-box
+  LaisDCC         860011                                                                                                                                Accessory   Unknown                 N/A (bare wires)               Default               3        Using this in an unpowered loco B unit to provide lighting functions to mimic the powered unit. Works exactly as expected.
+  LaisDCC         860015                                                                                                                                MF          Unknown                 NEXT18                         Default               3        Worked as expected. This is in the powered A unit that complements the unpowered B unit
+  Märklin         m83                                                                                                                                   ACC         Default                 Screw terminal                 Default               2        
+  Märklin         MSD3/MLD3                                                                                                                             MFS / MF    Various versions/ages   Märklin standard               Default               3        No difficulties. On some decoders I have disabled all protocols but DCC, because I previously used a Märklin MobileStation they connected to automatically via mfx, but the decoders are also working perfectly with all enabled. If you should encounter problems, take a look at the CV reference section in the manual. Protocols other than DCC can be disabled with CV50.
+  ML-Train        DRIVE-M with SUSI 4A \[84004501\]                                                                                                     MFS         Unknown                 N/A (bare wires)               Default               3        NMRA compliant, so works perfectly fine.
+  SoundTrax       Tsunami2                                                                                                                              MFS         New in 2020             Unknown                        Default               2.5      Installed in Athearn Genesis OEM SD70ACe (ATHG01943). Half point deduction due to ACK being low.
+  TCS             1527 WOW 121 Diesel + GEN-MB1 Motherboard w/KA2                                                                                       MFS         New in 2020             21MTC                          D ACK MAX 9200        2.5      Half point deduction due to non-standard method for indexed CVs, and increased ACK pulse time. \|
+  Train-O-Matic   Lokommander 2 Micro                                                                                                                   MF          3 9 240 (2010221)       NEM651                         Default               3        Worked out-of-the-box
+  ZIMO            MX617N                                                                                                                                MF          37.9                    NEM651                         Default               3        Worked out-of-the-box
+  --------------- ------------------------------------------------------------------------------------------------------------------------------------- ----------- ----------------------- ------------------------------ --------------------- -------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  : Decoder List

@@ -1,0 +1,242 @@
+# Site information
+site_name: DCC-EX Model Train Control, Animation, and Automation
+site_url: https://dcc-ex.com/
+site_description: Conversion of old website content to new format
+repo_url: https://github.com/explorer495/dcc-ex.github.io
+repo_name: GitHub
+edit_uri: edit/site-update/docs/
+
+# Validation options
+validation:
+  links:
+    absolute_links: relative_to_docs
+    anchors: warn
+    unrecognized_links: warn
+
+# Theme configuration
+theme:
+  name: material
+  custom_dir: overrides
+  favicon: _static/images/logos/favicon.ico
+  logo: _static/images/logos/logo_with_border.png
+  language: en
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - content.code.select # Select for code blocks
+    - content.code.copy # Copy button for code blocks
+    - content.code.annotate # Annotate code blocks
+    - content.tooltips # Add tooltips
+    - header.autohide # Autohide header on longer pages
+    - navigation.footer # Show previous/next buttons in footer
+    - navigation.path
+    # - navigation.sections
+    - navigation.tabs # Top level navigation on header for tabs
+    # - navigation.tabs.sticky # Make the tabs navigation sticky when scrolling
+    - navigation.top # Show back to top button when scrolling up
+    - navigation.tracking # Auto update URL in address bar
+    - navigation.indexes # Enable section indexes
+    - navigation.instant
+    - navigation.instant.progress
+    - search.highlight # Highlight search results
+    - search.share # Enable share button for copying search links
+    - search.suggest # Provide search suggestions
+    - toc.follow # Auto scroll sidebar to show active anchor
+  palette:
+    - scheme: dccex-light
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: dccex-dark
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+# Extra CSS attributes for colour scheme etc.
+extra_css:
+  - _static/css/dccex_theme.css
+
+# Extra JavaScript
+extra_javascript:
+  - _static/scripts/search-helper.js
+  - _static/scripts/platform.js
+  - _static/scripts/ex-installer-run-helper.js
+  - _static/scripts/clickable-cards.js
+  - _static/scripts/legacy-docs-new-tab.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/discord # Discord link in footer
+      link: https://discord.gg/y2sB4Fp
+      name: Join us on Discord
+  # consent: # Deal with cookies we may use related to Google analytics etc.
+  #   actions:
+  #     - accept
+  #     - manage
+  #     - reject
+  #   title: Who likes cookies?
+  #   description: >-
+  #     We use delicious cookies to monitor repeated visits and preferences, primarily to measure the effectiveness of our
+  #     documentation and whether users find what they're looking for.
+  #     With your consent, we'd like to keep making our documentation better.
+
+# Navigation structure
+# This is provided by the awesome-nav plugin instead (see .nav.yml in each directory)
+# nav:
+#   - Home: 'index.md'
+
+# Plugins
+plugins:
+  - search: # Material client-side search using Lunr.js
+      separator: '[,;\$\|\-\.\s\[\]\(\)\{\}"]+'
+  - git-revision-date-localized # Auto date each page from last Git commit
+  - awesome-nav # Enable awesome-nav plugin to support dynamic page structure
+  - blog: # Enable built-in blog
+      blog_dir: news
+      blog_toc: true
+      post_dir: "{blog}/articles"
+      post_date_format: medium
+      post_excerpt: required
+      post_url_date_format:  yyyy/MM
+      archive: false
+      categories: true
+      categories_toc: true
+      categories_allowed:
+        - General DCC-EX News
+        - EX-CommandStation
+        - EX-Installer
+        - EX-IOExpander
+        - EX-Turntable
+        - EX-FastClock
+        - EX-DCCInspector
+        - EX-CSB1
+        - EX-Motorshield8874
+        - EX-WiFiShield8266
+        - DCCEXProtocol
+  - rss: # Enable RSS feed for the blog/DCC-EX News articles
+      match_path: "news/articles/.*"
+      date_from_meta:
+        as_creation: "date"
+        as_update: "git"
+        datetime_format: "%Y-%m-%d"
+      feed_description: Latest news and updates from the DCC-EX team
+      feed_title: DCC-EX News
+      image: _static/images/logos/favicon.ico
+      pretty_print: true
+  - open-in-new-tab: # Automatically causes external links to open in a new tab, and shows an arrow icon
+      add_icon: true
+  - meta # Enable using .meta.yml to set metadata on all docs in a directory
+  - scoped-nav # Enable scoped navigation to update previous/next buttons correctly
+  - latest-news: # Enable including the latest news excerpts in markdown
+      count: 3
+      list-class: news-headline-list
+  - redirects:
+      redirect_maps:
+        'throttles/cv-programming.md': 'products/ex-commandstation/loco-programming/index.md'
+        'enhance/rosters.md': 'products/ex-commandstation/exrail/exrail-objects-introduction.md#adding-a-roster'
+        'enhance/turnouts.md': 'products/ex-commandstation/exrail/exrail-objects-introduction.md#adding-turnoutspoints'
+        'enhance/routes.md': 'products/ex-commandstation/exrail/exrail-sequences-introduction.md'
+        'enhance/trackmanager.md': 'products/ex-commandstation/trackmanager/index.md'
+        'reference/exrail-command-reference.md': 'products/ex-commandstation/exrail/command-list.md'
+        'reference/serial-commands/exrail-command-reference.md': 'products/ex-commandstation/exrail/command-list.md'
+        'reference/serial-command-basics.md': 'reference/serial-commands/index.md'
+        'reference/serial-command-list.md': 'reference/serial-commands/serial-command-list.md'
+
+        'reference/esp32/esp32-acebott.md': 'reference/microcontrollers/esp32/esp32-acebott.md'
+        'reference/esp32/esp32-ex8874.md': 'reference/microcontrollers/esp32/esp32-ex8874.md'
+        'reference/esp32/esp32-keyestudio.md': 'reference/microcontrollers/esp32/esp32-keyestudio.md'
+        'reference/esp32/esp32-l298-shield.md': 'reference/microcontrollers/esp32/esp32-l298-shield.md'
+        'reference/esp32/ioref-incorrect-voltage-fix_not_in_nav.md': 'reference/microcontrollers/esp32/ioref-incorrect-voltage-fix_not_in_nav.md'
+
+        'reference/ex-csb1/csb1-errors-faq.md': 'reference/microcontrollers/ex-csb1/csb1-errors-faq.md'
+        'reference/ex-csb1/csb1-technical.md': 'reference/microcontrollers/ex-csb1/csb1-technical.md'
+
+        'reference/nucleo/nucleo-64-ex8874.md': 'reference/microcontrollers/nucleo/nucleo-64-ex8874.md'
+        'reference/nucleo/nucleo-64-wifi.md': 'reference/microcontrollers/nucleo/nucleo-64-wifi.md'
+        'reference/nucleo/nucleo-144-ex8874.md': 'reference/microcontrollers/nucleo/nucleo-144-ex8874.md'
+        'reference/nucleo/nucleo-144-pin-reference.md': 'reference/microcontrollers/nucleo/nucleo-144-pin-reference.md'
+        'reference/nucleo/nucleo-144-wifi.md': 'reference/microcontrollers/nucleo/nucleo-144-wifi.md'
+        'reference/nucleo/nucleo-debug.md': 'reference/microcontrollers/nucleo/nucleo-debug.md'
+        'reference/nucleo/nucleo-drivers.md': 'reference/microcontrollers/nucleo/nucleo-drivers.md'
+        'reference/nucleo/nucleo-firmware.md': 'reference/microcontrollers/nucleo/nucleo-firmware.md'
+        'reference/nucleo/nucleo-power.md': 'reference/microcontrollers/nucleo/nucleo-power.md'
+
+# Build-only hooks live in mkdocsbuild.yml so mkdocs serve does not loop.
+
+# Copyright info
+copyright: |
+  &copy; 2025 <a href="https://dcc-ex.com/" target="_blank" rel="noopener">DCC-EX</a>
+
+# Markdown extensions to enhance content
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list # Enabled setting attributes in markdown eg. image width
+  - def_list # Enable definition/descriptions lists, required by ezglossary
+  - md_in_html # Enable markdown in embedded HTML
+  - pymdownx.betterem # Improved detection for emphasis in text
+  - pymdownx.blocks.caption # Enable captions for images, tables, and code blocks
+  - pymdownx.details
+  - pymdownx.caret # Enable sub/superscript
+  - pymdownx.tilde # Enable strikethrough
+  - pymdownx.mark # Enable highlight
+  - pymdownx.extra # markdown in div
+  - pymdownx.emoji: # Enable emojis
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.highlight: # Syntax highlighting of code
+      anchor_linenums: false
+      pygments_lang_class: true
+  - pymdownx.superfences: # Enhanced code blocks
+      custom_fences:
+        - name: mermaid # Enable Mermaid JS diagrams
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist: # Task list with checkbox capability
+      custom_checkbox: true
+      clickable_checkbox: true
+  - toc: # Table of Contents extension
+      permalink: true # Add a permanent link to headings
+  - footnotes # Standard footnotes
+
+watch:
+  - snippets
+  - docs
+
+not_in_nav:
+  '**/*_not_in_nav.md'
+
+# List of other extensions to experiment with
+  # - admonition # For callouts (Note, Warning, Tip, etc.)
+  # - attr_list # For adding attributes to Markdown elements (e.g., for custom styles)
+  # - def_list
+  # - md_in_html # Allows Markdown syntax inside raw HTML blocks
+  # - footnotes # Standard footnotes
+  # - pymdownx.details # For collapsible content blocks (e.g., accordions)
+  # - pymdownx.caret # For superscript (e.g., I^2^C)
+  # - pymdownx.tilde # For subscript (e.g., H~2~O)
+  # - pymdownx.mark # For highlighting text ==like this==
+  # - pymdownx.critic # For revision markups
+  # - pymdownx.superfences: # Enhanced code blocks
+  #     custom_fences:
+  #       - name: mermaid # For diagrams using Mermaid-JS syntax
+  #         class: mermaid
+  #         format: !!python/name:mermaid2.fence_mermaid_custom
+  # - pymdownx.tabbed: # For creating tabbed content
+  #     alternate_style: true
+  # - pymdownx.highlight: # For syntax highlighting of code
+  #     anchor_linenums: true
+  #     line_spans: __span
+  #     pygments_lang_class: true
+  # - pymdownx.inlinehilite # For inline code highlighting
+  # - pymdownx.snippets # For including content from other files (simple includes)
+  # - toc: # Table of Contents extension
+  #     permalink: true # Add a permanent link to headings

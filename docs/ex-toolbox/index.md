@@ -1,0 +1,47 @@
+\|EX-TB-LOGO\|
+
+# EX-Toolbox
+
+\|SUITABLE\| \|tinkerer\| \|engineer\| \|support-button\|
+
+Welcome to the home of \|EX-TB\|, an Android app to help setup and
+configure your \|EX-CS\|.
+
+![EX-Toolbox](/_static/images/ex-toolbox/ex_toolbox_icon.png)
+
+\|EX-TB\| is a standalone android app that can:
+
+- CV Programming in the programming track (Service Mode)
+- CV Programming in the main track (Operation Mode)
+- Servo motor testing and adjustment
+- Sensor testing
+- Current Meter
+- Track Manager
+- Loco status (all active locos)
+- Assist with Loco Speed Matching
+- Speedometer (requires two sensors on the EX‑CommandStation)
+- Roster list
+- NeoPixel Setup
+- WiFi setup ( \|EX-CS\| version 5.7.0 and later)
+
+::: 
+overview using
+:::
+
+------------------------------------------------------------------------
+
+## Looking for some help with EX-Toolbox?
+
+To find out how to request assistance click the first button below. To
+raise a bug report, feature request, support request, or submit Beta
+test results, feel free to use our handy GitHub templates accessible by
+clicking the second button:
+
+\|support-button-large\| \|githublink-ex-fastclock-button\|
+
+:!!! tip "::: title
+Tip"
+:::
+
+Keep an eye out for the same button at the top of the other pages.
+::::

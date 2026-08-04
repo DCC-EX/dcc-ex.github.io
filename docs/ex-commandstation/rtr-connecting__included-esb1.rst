@@ -1,1 +1,0 @@
-.. include:: rtr-connecting.rst

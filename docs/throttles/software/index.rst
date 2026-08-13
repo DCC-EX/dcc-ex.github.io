@@ -31,6 +31,7 @@ Apple iOS (Phones and Tablets)
 
 - :doc:`DigiTrainsPro (Android, iOS, Windows) <digitrainspro>` *- Requires JMRI*
 - :doc:`ThrottleCard (iOS) <throttlecard>`
+- :doc:`LocoLink (iOS and iPadOS) <locolink>`
 - :doc:`Locontrol (iOS) <locontrol>` *- Requires JMRI*
 - :doc:`SRCP Client (iOS) <srcpclient>`
 - :doc:`Train Driver (iOS) <train-driver>`
@@ -47,6 +48,7 @@ Personal Computers
 - :doc:`EX-WebThrottle (Web Browser) </ex-webthrottle/index>`  *recommended*
 - :doc:`JMRI (Windows, iOS, Linux) <jmri>`  *recommended*
 - :doc:`DigiTrainsPro (Android, iOS, Windows) <digitrainspro>` *- Requires JMRI*
+- :doc:`LocoLink (Windows and Mac) <locolink>`
 - :doc:`Railroad Automation <railroad-automation>` *- Requires IoTT Red Hat*
 - :doc:`ThrottleCard (M1 Mac) <throttlecard>` *- Requires WiThrottle server*
 - :doc:`Train Throttle (Mac, Windows) <train-throttle>` *- Requires WiThrottle server*
@@ -68,6 +70,7 @@ Note: The Android throttle apps listed above can be made to made to run on Windo
     DCC++ Throttle (android) <dccpp-throttle>
     DigiTrainsPro (Android, iOS, Windows) <digitrainspro>
     Locontrol (iOS) <locontrol>
+    LocoLink (Windows, Mac, iOS and iPadOS) <locolink>
     Railroad Automation (Windows) <railroad-automation>
     RtDrive DCC++ (Android) <rtdrive-dccpp>
     SRCP Client (iOS) <srcpclient>
@@ -78,4 +81,3 @@ Note: The Android throttle apps listed above can be made to made to run on Windo
     Signal Cab (iOS) <signal-cab>
     DCC Commander (iOS) <dcc-commander>
     Android Apps on Windows <android-apps-on-windows>
- 

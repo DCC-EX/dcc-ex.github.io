@@ -1,5 +1,5 @@
 EXRAIL compiler and resource usage
-=================================
+==================================
 
 EXRAIL expands ``myAutomation.h`` into a byte-coded route table and lookup tables during firmware compilation. The route table is stored in flash. At startup, routes and event handlers are indexed in RAM, and each active sequence has an ``RMFT2`` task object.
 

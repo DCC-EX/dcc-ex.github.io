@@ -118,7 +118,6 @@ DCC-EX (DCC-EX Native Commands)
 - :doc:`DCC-EX CAB (iOS and Android) <software/dccex-cab>`
 - :doc:`DCC++ Throttle (Android) <software/dccpp-throttle>`
 - :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
-- `Vector Throttle (Android) <https://railworksstudio.com/vector/>`_
 - :doc:`SRCP Client (iOS) <software/srcpclient>`
 - :doc:`TrainNavigator (iOS) <software/trainnavigator>`
 - :doc:`JMRI (Win, macOS, Linux) <software/jmri>`

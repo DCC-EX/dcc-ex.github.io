@@ -238,7 +238,7 @@
     * -  `Vector Throttle <https://railworksstudio.com/vector/>`_
       -  Paid
       -  WiFi
-      -  Native / Wit
+      -  Wit
       -  App
       -  
       -  

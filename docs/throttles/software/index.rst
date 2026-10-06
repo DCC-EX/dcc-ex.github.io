@@ -20,7 +20,7 @@ Android (Phones and Tablets)
 - :doc:`Engine Driver (Android)<engine-driver>` *recommended*
 - :doc:`DCC++ Throttle (Android) <dccpp-throttle>`
 - :doc:`DCCpp CAB (android) <dccpp-cab>`
-- :doc:`Cab Engineer: DCC Throttle (Andriod) <cab-engineer>`
+- :doc:`Cab Engineer: DCC Throttle (Android) <cab-engineer>`
 - :doc:`DigiTrainsPro (Android, iOS, Windows) <digitrainspro>` *- Requires JMRI*
 - :doc:`RtDtive DCC++ (Android) <rtdrive-dccpp>`
 - :doc:`DCC-EX CAB (iOS and Android) <dccex-cab>`
@@ -31,7 +31,7 @@ Apple iOS (Phones and Tablets)
 ------------------------------
 
 - :doc:`DigiTrainsPro (Android, iOS, Windows) <digitrainspro>` *- Requires JMRI*
-- :doc:`ThrottleCard (iOS) <throttlecard>`
+- :doc:`ThrottleCard (iOS) <throttlecard>` *recommended*
 - :doc:`Locontrol (iOS) <locontrol>` *- Requires JMRI*
 - :doc:`SRCP Client (iOS) <srcpclient>`
 - :doc:`Train Driver (iOS) <train-driver>`

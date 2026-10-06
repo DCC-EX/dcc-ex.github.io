@@ -25,6 +25,7 @@ Android (Phones and Tablets)
 - :doc:`RtDtive DCC++ (Android) <rtdrive-dccpp>`
 - :doc:`DCC-EX CAB (iOS and Android) <dccex-cab>`
 - :doc:`WiThrottle Cab (iOS and Android) <withrottle-cab>`
+- `Vector Throttle <https://railworksstudio.com/vector/>`_
 
 Apple iOS (Phones and Tablets)
 ------------------------------

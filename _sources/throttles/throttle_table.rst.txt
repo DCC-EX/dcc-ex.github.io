@@ -235,6 +235,20 @@
       -  
       -  
 
+    * -  `Vector Throttle <https://railworksstudio.com/vector/>`_
+      -  Paid
+      -  WiFi
+      -  Wit
+      -  App
+      -  
+      -  
+      -  X
+      -  
+      -  
+      -  
+      -  
+      -  
+
     * -  :doc:`WiThrottle <software/withrottle>`
       -  Free [#t7]_ / Paid
       -  WiFi

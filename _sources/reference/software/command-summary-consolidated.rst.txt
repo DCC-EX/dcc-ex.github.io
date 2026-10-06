@@ -20,7 +20,7 @@ This page describes all the |DCC-EX Native commands| that the |EX-CS| supports.
 
 .. seealso::
 
-   Also refer to our new, currently incomplete, web site for additional information on the commands described here: `DCC-EX Command Station Native Commands <https://dcc-ex.com/mkdocs-test/reference/serial-commands/>`_ |EXTERNAL-LINK|. Some commands that have only been added recently *may not be covered on this page*, but may be included on the new web site page as the process is automated directly from the code.
+   Also refer to our new, currently incomplete, web site for additional information on the commands described here: `DCC-EX Command Station Native Commands <https://dcc-ex.com/mkdocs-test/reference/serial-command-list/>`_ |EXTERNAL-LINK|. Some commands that have only been added recently *may not be covered on this page*, but may be included on the new web site page as the process is automated directly from the code.
 
 Conventions used on this page
 =============================

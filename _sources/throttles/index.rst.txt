@@ -49,6 +49,7 @@ Android (Phones and Tablets)
 - :doc:`RtDtive DCC++ (Android) <software/rtdrive-dccpp>`
 - :doc:`DCC-EX CAB (iOS and Android) <software/dccex-cab>`
 - :doc:`WiThrottle Cab (iOS and Android) <software/withrottle-cab>`
+- `Vector Throttle <https://railworksstudio.com/vector/>`_
 
 Apple iOS (Phones and Tablets)
 ------------------------------
@@ -112,7 +113,7 @@ DCC-EX (DCC-EX Native Commands)
 
 - :doc:`EX-WebThrottle (Web Browser) </ex-webthrottle/index>`  *recommended*
 - :doc:`Engine Driver (Android) <software/engine-driver>`  *recommended*
-- :doc:`ThrottleCard (iOS) <software/throttlecard>`
+- :doc:`ThrottleCard (iOS) <software/throttlecard>`  *recommended*
 - :doc:`DCCpp CAB (Android) <software/dccpp-cab>`
 - :doc:`DCC-EX CAB (iOS and Android) <software/dccex-cab>`
 - :doc:`DCC++ Throttle (Android) <software/dccpp-throttle>`
@@ -132,9 +133,10 @@ WiThrottle Protocol Based Throttles
 -----------------------------------
 
 - :doc:`Engine Driver (Android)<software/engine-driver>`  *recommended*
-- :doc:`ThrottleCard (iOS) <software/throttlecard>`
+- :doc:`ThrottleCard (iOS) <software/throttlecard>`  *recommended*
 - :doc:`Cab Engineer: DCC Throttle (Android) <software/cab-engineer>`
 - :doc:`Locontrol (iOS) <software/locontrol>`
+- `Vector Throttle (Android) <https://railworksstudio.com/vector/>`_
 - :doc:`WiThrottle Cab (iOS and Android) <software/withrottle-cab>`
 - :doc:`WiThrottle (iOS)<software/withrottle>`
 - :doc:`SRCP Client (iOS) <software/srcpclient>`

@@ -30,7 +30,7 @@ In Canada serving Canada and the United States
 .. rst-class:: clearer
 
 
-* `DCC Supply Canada <https://dccsc.ca/>`_ |EXTERNAL-LINKxa|
+* `DCC Supply Canada <https://dccsc.ca/?utm_source=dcc-ex&utm_medium=referral&utm_campaign=reseller>`_ |EXTERNAL-LINKxa|
 
 |HR-DASHEDxa|
 

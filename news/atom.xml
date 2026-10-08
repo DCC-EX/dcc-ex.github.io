@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://dcc-ex.com</id>
   <title>DCC-EX News</title>
-  <updated>2026-10-06T21:14:35.410444+00:00</updated>
+  <updated>2026-10-08T16:55:56.210325+00:00</updated>
   <link href="https://dcc-ex.com"/>
   <link href="https://dcc-ex.com/news/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.12">ABlog</generator>
@@ -430,7 +430,7 @@ git checkout v5.6.0-Prod
 &lt;section id="in-canada-serving-canada-and-the-united-states"&gt;
 &lt;h3&gt;In Canada serving Canada and the United States&lt;/h3&gt;
 &lt;ul class="clearer simple"&gt;
-&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://dccsc.ca/"&gt;DCC Supply Canada&lt;/a&gt; &lt;img src="https://dcc-ex.com/_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://dccsc.ca/?utm_source=dcc-ex&amp;amp;utm_medium=referral&amp;amp;utm_campaign=reseller"&gt;DCC Supply Canada&lt;/a&gt; &lt;img src="https://dcc-ex.com/_static/images/external-link.svg" style="width: 16px; height: 16px; margin-top: -3px;"&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;hr class="hr-dashed" /&gt;&lt;/p&gt;
 &lt;img alt="UK Flag" class="align-left" src="https://dcc-ex.com/_images/flag_uk60px.jpg" style="width: 42.0px; height: 21.0px;" /&gt;
